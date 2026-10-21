@@ -1,0 +1,41 @@
+{
+  "snapshot_utc": "2026-10-21T05:55:00Z",
+  "window_start": "2026-10-21",
+  "window_end": "2026-10-22",
+  "timezone_note": "All fixture times are shown exactly as published by the league, with the league's own time-zone label. No conversion is applied.",
+  "model_version": "1.0.0",
+  "params": {
+    "nhl_shrink_games": 12,
+    "nhl_home_goals": 0.25,
+    "nhl_logistic_scale": 1.2,
+    "nhl_total_sd": 1.7,
+    "nhl_league_total": 6.0,
+    "nba_home_points": 2.5,
+    "nba_logistic_scale": 11.0,
+    "high_edge": 0.13,
+    "medium_edge": 0.06,
+    "min_games_for_high": 7,
+    "min_prediction_words": 30
+  },
+  "params_note": "Every parameter is a stated assumption, not a fitted value from bookmaker prices. Changing one changes every price on the site; the build records the version used.",
+  "excluded_sports": [
+    "Soccer",
+    "Football",
+    "Boxing",
+    "UFC",
+    "MMA",
+    "American football",
+    "Hurling",
+    "Horse racing",
+    "Cycling",
+    "Gaelic football",
+    "Specials"
+  ],
+  "method": "Ratings come only from official league tables: goals for and against per game (NHL) pulled toward the league mean by a stated shrinkage, plus a fixed home edge, converted to a win probability with a logistic curve. Prices are no-vig fair odds derived from that probability. No bookmaker price is read, stored or reproduced.",
+  "limits": [
+    "The NHL sample is 7-11 games per club, so ratings are heavily shrunk toward the mean.",
+    "The NBA sample is zero games, so every NBA line is an explicit baseline.",
+    "No line is originated for a market when its inputs are missing; the cell stays blank and is flagged.",
+    "Prices are fair odds with no margin and are not betting advice."
+  ]
+}

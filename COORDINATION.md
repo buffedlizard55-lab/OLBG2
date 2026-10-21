@@ -17,9 +17,9 @@ Shared task board for the OLBG research desk. Read this before starting any work
 | --- | --- | --- | --- | --- |
 | Source audit and evidence-first data pipeline (v1) | done | bfeb6335 | `scripts/**`, `data/**`, `tests/**` | 2 NHL fixtures, no originated prices. Superseded by v2 below. |
 | Dashboard, category pages, review page (v1) | done | bfeb6335 | `site/**`, `.github/**` | Static Pages site, published from `main` root. |
-| Full eligible-sports schedule and original line coverage | in progress | 4a778bb7 | `data/**`, `scripts/**`, `research/**` | Exhaustive inventory of the eligible OLBG slate for 2026-10-21/22, official schedule cross-checks, documented line model. |
-| Site v2 (sport pages, methodology, sources, flagged page) | in progress | 4a778bb7 | `site/**`, `tests/**`, `.github/**` | Rebuild around the v2 data model. |
-| Integration, re-verification, PR and Pages deploy | in progress | 4a778bb7 | `README.md`, `COORDINATION.md`, `index.html` | Single active session, so integration is done here after the data and site tasks. |
+| Full eligible-sports schedule and original line coverage | done (partial breadth, see flags) | 4a778bb7 | `data/**`, `scripts/**` | 25 fixtures verified (14 NHL, 11 NBA), 64 markets originated, 4 high-confidence predictions. Eleven eligible sports could not be verified and are listed as unverified on the Coverage page, not estimated. |
+| Site v2 (sport pages, methodology, sources, flagged page) | done | 4a778bb7 | `site/**`, `tests/**`, `.github/**` | Dashboard, pick sheet, per-sport pages, methodology, source registry and flagged page. 28 tests passing. |
+| Integration, re-verification, PR and Pages deploy | in progress | 4a778bb7 | `README.md`, `COORDINATION.md`, `index.html` | Single active session; integration performed here after the data and site tasks. PR link and deploy result recorded below once complete. |
 
 ## Requests and handoffs
 
@@ -40,7 +40,24 @@ Shared task board for the OLBG research desk. Read this before starting any work
 - **Needs review:** OLBG's default tips page surfaces only one eligible-sport event, so the "full slate" cannot be reconstructed from that page alone. League schedules are used as the inventory of matches, and OLBG links are attached only where an OLBG event page was actually found.
 - **Limits:** ratings use a small 2026-27 sample (7-11 games per NHL club); NBA has essentially no 2026-27 sample. Prices are model fair odds, not market prices, and no vig is applied. Nothing here is betting advice.
 
+## v2 verification log — 2026-10-21 UTC
+
+- **NHL fixture inventory.** `nhl.com/schedule/2026-10-21` shows 2 games and `nhl.com/schedule/2026-10-22` shows 12 (NBA-style week view: 12 in the Oct 22 table). The 12th Oct 22 game, DET @ VAN (id 2026020165), was missing from the truncated first read of that page and was confirmed separately on the Vancouver club schedule (`api-web.nhle.com/v1/club-schedule/VAN/week/2026-10-19`). All 14 rows carry their own gamecenter URL.
+- **NHL inputs.** All 32 clubs taken from `nhl.com/standings`, which states it is current as of Oct 21, 1:13 AM EDT. Every row was checked for GP = W + L + OT; the build enforces that identity.
+- **NHL evidence packs.** Gamecenter pages read individually for PHI @ BUF, NSH @ BOS, WPG @ DAL and MIN @ CGY. Each prediction's facts were transcribed from those pages: team rates, players to watch, goalie lines, last-10 results and venue.
+- **NBA.** All 11 games on Oct 21 with tip times from `nba.com/games?date=2026-10-21`; MIL @ WAS also opened individually to confirm date, time and arena. `nba.com/standings` shows the season is 0-1 games old, which is why NBA lines are baseline.
+- **Baseball.** `statsapi.mlb.com` schedule for the date returns `totalGames: 0`; no row published.
+- **Build checks.** `python -m unittest discover -s tests` (28 tests) and `python scripts/build.py`. Tests cover the model invariants, every validation rule, local link resolution, insecure-link rejection, and that every published fixture carries its official link.
+- **Limits.** Ratings rest on a 7-11 game NHL sample; NBA has none. Prices are no-vig fair odds, not market prices, and no rated value has been back-tested.
+
+### Irregularities logged this session
+
+- NHL's own properties disagree on games played and records for some clubs; the standings table (timestamped, internally consistent with the published rates) is used. Detail in `data/flagged.json` (`flag-nhl-gp`).
+- OLBG's default tips page surfaces only one eligible-sport event, so OLBG cannot be used as the slate inventory.
+- OLBG times for the two Oct 21 NHL games remain 19:37 against the league's 7:30 PM EDT.
+
 ## Integration and publication
 
-- v1 PR: https://github.com/buffedlizard55-lab/OLBG2/pull/1 (merged). v2 PR and Pages deployment result recorded here when complete.
+- v1 PR: https://github.com/buffedlizard55-lab/OLBG2/pull/1 (merged).
+- v2 branch: `arena/4a778bb7-olbg2`. v2 PR and merge result recorded here when complete.
 - GitHub Pages publishes the `main` branch root in legacy mode; the root `index.html` redirects to `site/index.html`. CI validates the source data, the tests and the generated HTML.

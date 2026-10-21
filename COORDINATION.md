@@ -673,3 +673,30 @@ Gates after rebuild: `scripts/model.py` 35 fixtures / 33 originated / 4 high; `s
 Rules for this session: no value is published unless an official source confirms it; failures are
 flagged, not filled. Prior layers' data files are not hand-edited; generated HTML is regenerated
 only through its own script.
+
+**Merge note (c8711d36 integration):** session `dd14fcfd` independently merged the identical Survey-navigation change as PR #27 while this branch was in CI. On merging `origin/main`, this session took their `scripts/build_site.py` version (same link, same label) and regenerated the root pages, so no duplicate work remains; R3 is credited to both.
+
+## Current session `arena/dd14fcfd-olbg2` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Make the existing 130-event survey discoverable from the root dashboard | in progress | `arena/dd14fcfd-olbg2` | `scripts/build_site.py`, generated root HTML, `COORDINATION.md` |
+
+Claim is limited to root-dashboard navigation; the survey dataset and its generated pages remain owned by their prior contribution. Validation will run the survey integrity gate, both site builds, and unit tests.
+
+### Completion — `arena/dd14fcfd-olbg2`
+
+The root dashboard now links directly to `survey/index.html` in both the primary navigation and footer; the link is emitted by `scripts/build_site.py` and appears on all generated root pages. This makes the existing 130-event inventory and its sport/category pages discoverable without changing survey data or prior sources.
+
+Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no broken links); `python3 scripts/survey_verify.py` passed (all 130 inventory entries and 335 rows integrity checks, 24 scanned content pages, all internal links resolve); `python3 -m unittest discover -s tests -v` passed (28 tests). No new factual claims or sports data were introduced.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Root-dashboard Survey navigation | done | `arena/dd14fcfd-olbg2` | `scripts/build_site.py`, root generated HTML, `COORDINATION.md` |
+
+| Item | Value |
+|---|---|
+| Follow-up PR | [#27](https://github.com/buffedlizard55-lab/OLBG2/pull/27) |
+| Merge result | Merged 2026-10-21 06:41:09 UTC; merge commit `e5ad112b41d4df167026fd9429310d2335dc4727` |
+| Validate Pages content | Run `39556956109` success |
+| GitHub Pages deployment | Run `39556955856` success, including deploy job |

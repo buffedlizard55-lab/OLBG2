@@ -1,7 +1,7 @@
 {
   "meta": {
     "purpose": "Everything that could not be confirmed from an official source, every value deliberately left blank, and every irregularity found while reverse-engineering OLBG. Nothing here blocks publication; it is the reviewer's queue.",
-    "count": 18,
+    "count": 20,
     "resolved_count": 2,
     "note": "Two items (F01, F02) were closed on 2026-10-21 by session db99ed90 from official feeds; they are listed separately under 'Closed since the first capture' so the open count stays honest."
   },
@@ -58,8 +58,8 @@
       "id": "F09",
       "severity": "high",
       "category": "Coverage gap",
-      "item": "Sports not surveyed in this capture",
-      "detail": "Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not captured before the session closed. Absence from this site is NOT evidence that OLBG lists no events for them.",
+      "item": "Six sports were not surveyed at all in this capture",
+      "detail": "Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not opened in this capture, so nothing is claimed about them either way. Handball and Volleyball have since been surveyed (F21, F22). Absence from this site is NOT evidence that OLBG lists no events for a sport.",
       "source": "https://www.olbg.com/sitemap-betting-tips.xml"
     },
     {
@@ -149,6 +149,22 @@
       "item": "OLBG's NHL pages list only 2 of the 14 NHL games in the window",
       "detail": "Both https://www.olbg.com/betting-tips/Ice_Hockey/13 and https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13 return only the two 21 October games (event_id 199897 PHI@BUF and 199896 FLA@OTT, each with a single Game Totals tip) plus four European club fixtures. The twelve 22 October NHL games are not listed even though the league schedule and the club feeds confirm them. That is why 12 of the 14 NHL rows carry no OLBG event link: the link is left out rather than constructed.",
       "source": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+    },
+    {
+      "id": "F21",
+      "severity": "high",
+      "category": "Coverage gap",
+      "item": "Handball — events exist, none published",
+      "detail": "OLBG's handball hub listed at least fifteen events on the first page segment, almost all EHF Champions League ties on 21-22 October: RK Zagreb v PSG Handball (event_id 12053), Veszprem v Fuchse Berlin (12055), Nantes v HC Vardar (12050), Kolstad v SC Magdeburg (12048), Aalborg v RK Celje (12044) and FC Barcelona v Montpellier, plus Swedish and Danish league games. The hub groups every event under 'All Handball / All Events', states no competition, and renders times in the viewer's timezone (see F12). No official EHF fixture list or standings table could be read in this capture, so no fixture is published and no line is originated: both a confirmed pairing and a verified strength input would be required.",
+      "source": "https://www.olbg.com/betting-tips/Handball/20"
+    },
+    {
+      "id": "F22",
+      "severity": "high",
+      "category": "Coverage gap",
+      "item": "Volleyball — events exist, none published",
+      "detail": "OLBG's volleyball hub listed at least fifteen events on the first page segment across Polish PlusLiga (LUK Lublin v Trefl Gdansk, Warta Zawiercie v Kedzierzyn Kozle, Slepsk Suwalki v GKS Katowice), the German Bundesliga (WWK Volleys Munchen v VfB Friedrichshafen, Netzhoppers KW v Helios Grizzlys Giesen) and Italian women's Serie A1 (Bergamo v Milano, Novara v Marignano), with match-winner and set-score markets. The hub labels no competition for the event and no official league table was captured, so no volleyball fixture is published as verified and no line is originated.",
+      "source": "https://www.olbg.com/betting-tips/Volleyball/21"
     }
   ],
   "resolved": [

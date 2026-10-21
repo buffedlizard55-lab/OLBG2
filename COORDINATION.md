@@ -349,3 +349,38 @@ renders in the viewer's zone and states none.
 | Merge | recorded below |
 | Pages deploy | recorded below |
 
+### Publish record — PR #19 (NHL slate)
+
+| Item | Value |
+|---|---|
+| Pull request | [#19](https://github.com/buffedlizard55-lab/OLBG2/pull/19) — "Complete the NHL slate: 14/14 games, F01 and F02 closed" |
+| Merge | merged to `main`, merge commit `c828e53`, after one sync merge (`5bcb0ee`) because PRs #16–#18 landed while CI ran. Only `picks.html` conflicted, and it was resolved by regenerating from the merged data rather than hand-editing |
+| Deploy | `Validate Pages content` 39550395204 success · `pages build and deployment` success · `gh api .../pages` → `built` |
+| Live check | `sports/ice-hockey.html` renders Utah @ Seattle with all six prices and the three Sharks markets; `flagged.html` renders the closed-items section |
+
+### Coverage survey — handball and volleyball (2026-10-21 06:45 UTC)
+
+`F09` said eight sports "were not surveyed". Two of them now have been, and the result is a finding rather than a
+silence:
+
+| Sport | What OLBG lists | Why nothing is published |
+|---|---|---|
+| Handball | ≥15 events on the first page segment, mostly EHF Champions League on 21–22 Oct (Zagreb v PSG 12053, Veszprem v Fuchse Berlin 12055, Nantes v Vardar 12050, Kolstad v Magdeburg 12048), plus Swedish and Danish league games | Hub groups everything under `All Handball / All Events`, names no competition, and no official EHF fixture list or table could be read in the capture |
+| Volleyball | ≥15 events: Polish PlusLiga, German Bundesliga, Italian women's Serie A1, Dutch and Finnish women's fixtures; markets are match winner and set score | Same: no competition label, no official league table captured |
+
+Both are recorded as F21 and F22 with the hub URL as their source. `F09` now names the six sports that genuinely were
+not opened: Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League. The client-side table counts events
+"at least fifteen" rather than a total, because the hubs are paged and the full list was not enumerated — a number we
+did not verify is not a number we publish.
+
+### Current state of the deliverable
+
+| Item | Value |
+|---|---|
+| Fixtures | 35 verified (NHL 14, NBA 11, URC 8, ICC 2) |
+| Lines originated | 33 — all NHL games now carry money line, puck line and total |
+| High-confidence picks | 4, each with a sourced write-up of 92–110 words |
+| Review queue | 20 open + 2 closed, every row with a source link |
+| Sports covered | 4 of 17 with published fixtures; handball and volleyball surveyed without publication; 6 not opened |
+| Build | 9 pages, 0 broken links, 28 desk tests green, generated output byte-stable |
+

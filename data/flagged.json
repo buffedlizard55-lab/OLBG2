@@ -59,7 +59,7 @@
       "severity": "high",
       "category": "Coverage gap",
       "item": "Six sports were not surveyed at all in this capture",
-      "detail": "Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not opened in this capture, so nothing is claimed about them either way. Handball and Volleyball have since been surveyed (F21, F22). Absence from this site is NOT evidence that OLBG lists no events for a sport.",
+      "detail": "Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not opened in this capture, so nothing is claimed about them either way. Handball is now published with originated lines on sports/handball.html (F21 closed); Volleyball is surveyed but not yet lined (F22). Absence from this site is NOT evidence that OLBG lists no events for a sport.",
       "source": "https://www.olbg.com/sitemap-betting-tips.xml"
     },
     {
@@ -77,14 +77,6 @@
       "item": "Cricket — fixtures verified, no line",
       "detail": "Two fixtures were confirmed on the ICC official match list (Afghanistan v Bangladesh ODI; New Zealand v India T20I). The ICC team-ranking table rendered empty, so no strength input existed and no line was originated.",
       "source": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi"
-    },
-    {
-      "id": "F12",
-      "severity": "medium",
-      "category": "OLBG irregularity",
-      "item": "OLBG displayed times do not map to one timezone",
-      "detail": "OLBG renders clock times in the viewer's timezone and never states the zone. The same two NHL fixtures (PHI@BUF, FLA@OTT, both 23:30Z) rendered as 'Tomorrow 00:37' in one fetch and 'Today 19:37' in another about an hour later - the same instant, once in UK time and once in US Eastern. NBA events show the same offset: OLBG 19:10 against the NBA's 19:00 ET tip. The dataset stores OLBG strings verbatim and takes authoritative times from the league feed, never from OLBG.",
-      "source": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4"
     },
     {
       "id": "F13",
@@ -151,14 +143,6 @@
       "source": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
     },
     {
-      "id": "F21",
-      "severity": "high",
-      "category": "Coverage gap",
-      "item": "Handball — events exist, none published",
-      "detail": "OLBG's handball hub listed at least fifteen events on the first page segment, almost all EHF Champions League ties on 21-22 October: RK Zagreb v PSG Handball (event_id 12053), Veszprem v Fuchse Berlin (12055), Nantes v HC Vardar (12050), Kolstad v SC Magdeburg (12048), Aalborg v RK Celje (12044) and FC Barcelona v Montpellier, plus Swedish and Danish league games. The hub groups every event under 'All Handball / All Events', states no competition, and renders times in the viewer's timezone (see F12). No official EHF fixture list or standings table could be read in this capture, so no fixture is published and no line is originated: both a confirmed pairing and a verified strength input would be required.",
-      "source": "https://www.olbg.com/betting-tips/Handball/20"
-    },
-    {
       "id": "F22",
       "severity": "high",
       "category": "Coverage gap",
@@ -173,6 +157,30 @@
       "item": "Greyhounds and Gaelic Football — scope differs between layers",
       "detail": "The brief's exclusion list names neither sport, so this dashboard keeps both in scope (scripts/config.py; OLBG ids 25 and 28) while the survey layer excluded both as racing/football-family judgements (its flag F-03). Session c8711d36 reviewed both positions on 2026-10-21 and kept the brief-literal reading: both remain in scope here, but no fixture is published for either until an official fixture source is verified (Gaelic club fixtures: F07). See research/refresh-c8711d36.md and data/refresh/refresh.json (R-SCOPE).",
       "source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    },
+    {
+      "id": "F24",
+      "severity": "medium",
+      "category": "Data irregularity",
+      "item": "OLBG renders fixture times in US Eastern time, not site-local time",
+      "detail": "On the handball hub, OLBG showed 'HC Zagreb vs PSG Handball' as 'Today 12:45'. The official EHF match page for the same fixture publishes 18:45 CEST on 21 October 2026, which is 16:45 UTC and 12:45 in US Eastern daylight time. The six-hour gap is explained by that offset, so OLBG's listed_time is a viewer-timezone rendering and must not be read as the venue's local start time. This also explains the earlier survey finding about conflicting OLBG times. No OLBG time is published in this layer; all handball start times come from EHF.",
+      "source": "https://www.olbg.com/betting-tips/Handball/20"
+    },
+    {
+      "id": "F25",
+      "severity": "low",
+      "category": "Naming divergence",
+      "item": "OLBG club names differ from EHF registered names for the same handball fixtures",
+      "detail": "OLBG lists 'RK Zagreb', 'KS Kielce', 'PSG Handball', 'Skanderborg Handbold' and 'Veszprem'; EHF registers the same clubs as 'HC Zagreb', 'Industria Kielce', 'Paris Saint-Germain', 'SAH - Aarhus' and 'One Veszprém HC'. Because the pairing cannot be matched on exact names, no OLBG event link is attached to any handball row on this site. The corresponding OLBG event ids are recorded in research/handball-ehf-73620ec4.md for manual review.",
+      "source": "https://www.olbg.com/betting-tips/Handball/20"
+    },
+    {
+      "id": "F26",
+      "severity": "low",
+      "category": "Unverified value",
+      "item": "Handball venues blank on 11 of 12 fixtures",
+      "detail": "The EHF fixtures listing does not publish venues. One match detail page (HC Zagreb v Paris Saint-Germain) was opened and confirms 'Arena Zagreb' as the venue; that value is published. The other eleven venues are left blank rather than inferred from club sites.",
+      "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
     }
   ],
   "resolved": [
@@ -197,6 +205,26 @@
       "closed_at": "2026-10-21T06:10:00Z",
       "closed_by": "session db99ed90",
       "evidence": "Same endpoint as the rest of the team table; only the team filter differs."
+    },
+    {
+      "id": "F21",
+      "category": "Coverage gap",
+      "item": "Handball — events exist, none published",
+      "detail": "OLBG's handball hub listed at least fifteen events on the first page segment, almost all EHF Champions League ties on 21-22 October: RK Zagreb v PSG Handball (event_id 12053), Veszprem v Fuchse Berlin (12055), Nantes v HC Vardar (12050), Kolstad v SC Magdeburg (12048), Aalborg v RK Celje (12044) and FC Barcelona v Montpellier, plus Swedish and Danish league games. The hub groups every event under 'All Handball / All Events', states no competition, and renders times in the viewer's timezone (see F12). No official EHF fixture list or standings table could be read in this capture, so no fixture is published and no line is originated: both a confirmed pairing and a verified strength input would be required.",
+      "source": "https://www.olbg.com/betting-tips/Handball/20",
+      "closed_at": "2026-10-21",
+      "closed_by": "session arena/73620ec4-olbg2",
+      "evidence": "12 EHF Champions League Men round-5 fixtures on 21-22 October 2026 were verified against the official EHF matches page and the official group standings, and all 12 now carry originated match-winner, handicap and match-total lines (45 markets) plus three high-confidence predictions. See sports/handball.html."
+    },
+    {
+      "id": "F12",
+      "category": "OLBG irregularity",
+      "item": "OLBG displayed times do not map to one timezone",
+      "detail": "OLBG renders clock times in the viewer's timezone and never states the zone. The same two NHL fixtures (PHI@BUF, FLA@OTT, both 23:30Z) rendered as 'Tomorrow 00:37' in one fetch and 'Today 19:37' in another about an hour later - the same instant, once in UK time and once in US Eastern. NBA events show the same offset: OLBG 19:10 against the NBA's 19:00 ET tip. The dataset stores OLBG strings verbatim and takes authoritative times from the league feed, never from OLBG.",
+      "source": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4",
+      "closed_at": "2026-10-21",
+      "closed_by": "session arena/73620ec4-olbg2",
+      "evidence": "Explained in F24: OLBG renders each event's start time in the viewer's timezone, not the venue's. HC Zagreb v PSG shows as '12:45' on OLBG and 18:45 CEST on the official EHF page, which is 12:45 in US Eastern daylight time. OLBG times are therefore unusable as local kick-off times; this layer takes all start times from the official competition pages."
     }
   ]
 }

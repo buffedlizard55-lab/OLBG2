@@ -30,3 +30,7 @@ Updated the root dashboard builder and regenerated its root pages to:
 - Root evidence-status page: <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
 
 This was a copy/evidence review. No new sporting fact was marked verified, and the published fixture list is still not exhaustive or automatically refreshed.
+
+## Follow-up after PR #39
+
+A concurrent integration added Handball and expanded the root snapshot from 35 to 47 stored rows. The evidence-limit wording was reapplied to the merged builder, preserving the Handball data and its pages; current generated counts should be read from the dashboard, not the historical 35-row observation above. This follow-up still does not re-verify the underlying Handball or earlier sporting facts.

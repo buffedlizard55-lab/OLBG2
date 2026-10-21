@@ -16,11 +16,28 @@ The official-source provenance audit (`python3 scripts/official_source_audit.py`
 
 | Layer | Entry point | Snapshot contents (not an external verification claim) |
 |---|---|---|
-| **Root dashboard** | [`index.html`](index.html) | 35 stored match rows, 33 originated-line records, 4 written high-confidence picks; 21 open and 2 closed review items at the recorded snapshot. Built by `scripts/model.py` and `scripts/build_site.py`. |
+| **Root dashboard** | [`index.html`](index.html) | 47 stored match rows, 45 originated-line records, 9 written high-confidence picks; 22 open and 4 closed review items at the recorded snapshot. Built by `scripts/model.py` and `scripts/build_site.py`. |
 | **Evidence desk** | [`site/index.html`](site/index.html) | Separate NHL/NBA layer with 25 stored fixture rows and 64 market records, plus its own source register and flags. Built by `scripts/engine.py` and `scripts/build.py`. |
 | **Sport survey** | [`survey/index.html`](survey/index.html) | 130 OLBG-discovered inventory entries across its 15-sport taxonomy; 11 originated lines, 2 written predictions, and a separate review queue. The inventory rows are not all officially fixture-verified. |
 
 These are dated snapshots, not an automatically refreshed feed. Prior captures span 18–21 October 2026; the builders regenerate pages from checked-in data but do not retrieve new schedules. Recheck every event and source before treating it as upcoming or using its model output.
+
+## Handball addition (2026-10-21 07:06–07:45 UTC)
+
+The root dashboard now carries the twelve EHF Champions League Men round-5 fixtures of 21–22 October 2026.
+Each pairing, date and published throw-off time was read from the official EHF match centre
+(<https://ehfcl.eurohandball.com/men/2026-27/matches/>), and each club's group-phase wins, draws, losses, goals
+for and goals against came from the official standings on the same site
+(<https://ehfcl.eurohandball.com/men/2026-27/standings/>). All twelve were lined (three-way match winner,
+handicap and match total; 84 prices) and five high-confidence picks carry written predictions with per-fact
+source links. The line-by-line table and the irregularities found are in
+[`research/handball-ehf-73620ec4.md`](research/handball-ehf-73620ec4.md).
+
+Handball is therefore a fifth covered sport in the root layer (Ice Hockey, Basketball, Rugby Union, Cricket,
+Handball). The other twelve in-scope sports remain uncovered there and are listed individually on the
+[Flagged for Review](flagged.html) page; the dashboard's own coverage table shows this layer's rows, its lines
+and the survey's event count for every one of the 17 sports. This addition does not change the survey layer,
+the evidence desk or any earlier session's files.
 
 ## Cross-layer scope and overlap
 

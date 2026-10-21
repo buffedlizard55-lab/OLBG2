@@ -1,7 +1,8 @@
 {
   "meta": {
     "capture_window_utc": "2026-10-21T05:10:00Z to 2026-10-21T05:45:00Z",
-    "policy": "Only official league, governing-body or publisher sources are used to confirm a value. OLBG is used only for event discovery and market vocabulary, never as an odds or result source."
+    "policy": "Only official league, governing-body or publisher sources are used to confirm a value. OLBG is used only for event discovery and market vocabulary, never as an odds or result source.",
+    "second_capture_window_utc": "2026-10-21T07:06:00Z to 2026-10-21T07:40:00Z (handball, EHF Champions League Men)"
   },
   "sources": [
     {
@@ -250,7 +251,7 @@
       "publisher": "OLBG",
       "type": "Discovery",
       "url": "https://www.olbg.com/betting-tips/Handball/20",
-      "used_for": "Handball hub: event list, ids, market vocabulary, competition grouping.",
+      "used_for": "Handball hub: event list, ids, market vocabulary, competition grouping. Also the source of the timezone-rendering finding (F24) and the club-name divergence (F25). No handball price, probability or result is taken from OLBG.",
       "official": false
     },
     {
@@ -260,6 +261,22 @@
       "url": "https://www.olbg.com/betting-tips/Volleyball/21",
       "used_for": "Volleyball hub: event list, ids, market vocabulary, competition grouping.",
       "official": false
+    },
+    {
+      "id": "S33",
+      "publisher": "EHF (European Handball Federation)",
+      "type": "Official competition site",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+      "used_for": "EHF Champions League Men 2026/27 fixtures: date, throw-off time with timezone label, match id and detail link for the 12 round-5 matches on 21-22 October 2026.",
+      "official": true
+    },
+    {
+      "id": "S34",
+      "publisher": "EHF (European Handball Federation)",
+      "type": "Official standings",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "used_for": "Group A-F standings before round 5: games played, wins, draws, losses, goals for, goals against, goal difference and points for all 24 clubs. This is the only strength input for the handball model.",
+      "official": true
     }
   ]
 }

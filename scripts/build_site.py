@@ -19,11 +19,15 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import config  # noqa: E402  (scope list, used for the coverage sentence)
+
 SPORTS = {
     "Ice Hockey": {"slug": "ice-hockey", "blurb": "NHL schedule snapshot; the model uses stored team goal-rate inputs, not freshly revalidated here."},
     "Basketball": {"slug": "basketball", "blurb": "NBA schedule snapshot; the model uses stored 2025-26 season inputs as a prior, not freshly revalidated here."},
     "Rugby Union": {"slug": "rugby-union", "blurb": "URC Round 4 snapshot; the model uses stored table inputs, not freshly revalidated here."},
     "Cricket": {"slug": "cricket", "blurb": "ICC match-list snapshot; no line was produced because this model's required strength input is absent."},
+    "Handball": {"slug": "handball", "blurb": "EHF Champions League Men round 5 snapshot; the model uses stored table inputs, not freshly revalidated here."},
 }
 
 NAV = [
@@ -152,6 +156,68 @@ def inputs_block(m):
     return f'<span class="small"><b>{E(m["home"]["name"])}</b>: {E(fmt(h))}<br><b>{E(m["away"]["name"])}</b>: {E(fmt(a))}</span>'
 
 
+# Survey-layer coverage, read from its own data files so the dashboard cannot drift from it.
+SURVEY_SPORTS = {
+    "Tennis": "tennis", "Basketball": "basketball", "Golf": "golf", "Cricket": "cricket",
+    "Snooker": "snooker", "Rugby Union": "rugby_union", "Rugby League": "rugby_league",
+    "Baseball": "baseball", "Ice Hockey": "ice_hockey", "Motor Racing": "motor_racing",
+    "Darts": "darts", "Handball": "handball", "Volleyball": "volleyball",
+    "Aussie Rules": "aussie_rules", "eSports": "esports",
+}
+
+
+def survey_counts() -> dict:
+    """Number of OLBG events the coverage survey recorded per sport (0 if none)."""
+    counts = {}
+    for sport, slug in SURVEY_SPORTS.items():
+        path = os.path.join(DATA, "survey", "events", f"{slug}.json")
+        try:
+            with open(path) as fh:
+                counts[sport] = len(json.load(fh))
+        except (OSError, ValueError):
+            counts[sport] = None
+    return counts
+
+
+def coverage_table(matches):
+    """One row for every in-scope sport: what this layer published, what the survey found."""
+    survey = survey_counts()
+    root = {}
+    for m in matches["matches"]:
+        entry = root.setdefault(m["sport"], {"fixtures": 0, "lined": 0})
+        entry["fixtures"] += 1
+        entry["lined"] += 1 if m["line_status"] == "originated" else 0
+
+    rows = []
+    for sport in sorted(config.INCLUDED_SPORTS):
+        mine = root.get(sport, {"fixtures": 0, "lined": 0})
+        events = survey.get(sport)
+        if mine["lined"]:
+            status, cls = "Lines originated here", "b-high"
+        elif mine["fixtures"]:
+            status, cls = "Stored rows, no line", "b-med"
+        elif events:
+            status, cls = "Surveyed, no line", "b-med"
+        elif events == 0:
+            status, cls = "No entry captured in survey", "b-low"
+        else:
+            status, cls = "Not surveyed", "b-unv"
+        links = []
+        if sport in SPORTS:
+            links.append(f'<a href="sports/{SPORTS[sport]["slug"]}.html">our page</a>')
+        if sport in SURVEY_SPORTS:
+            links.append(f'<a href="survey/sports/{SURVEY_SPORTS[sport]}.html">survey page</a>')
+        rows.append(f"""<tr>
+          <td><b>{E(sport)}</b></td>
+          <td>{mine["fixtures"] or "—"}</td>
+          <td>{mine["lined"] or "—"}</td>
+          <td>{events if events is not None else "—"}</td>
+          <td><span class="badge {cls}">{E(status)}</span></td>
+          <td class="small">{" · ".join(links) or '<span class="muted">flagged only</span>'}</td>
+        </tr>""")
+    return "".join(rows)
+
+
 def build_index(matches, preds, flagged):
     c = matches["counts"]
     sport_cards = []
@@ -172,7 +238,7 @@ def build_index(matches, preds, flagged):
 <section class="hero">
   <h1>Schedule research, independent lines, and evidence status.</h1>
   <p class="lede">A dated, partial research snapshot of OLBG event listings and selected league schedules. Source links are provided where captured, but they do not mean every fixture or input was independently re-checked in this audit. Model prices and confidence are estimates. See the <a href="integration.html">evidence-status review</a> for verification limits and unresolved items.</p>
-  <p class="meta">Capture window 2026-10-21 05:12–05:25 UTC · {c['total']} stored rows · {c['originated']} originated-line records ·
+  <p class="meta">Dated captures · {c['total']} stored rows · {c['originated']} originated-line records ·
   {c['high']} model-labeled high-confidence picks · {len(flagged['items'])} open review items</p>
 </section>
 
@@ -184,8 +250,14 @@ def build_index(matches, preds, flagged):
 </div>
 
 <h2 class="section">Sports covered</h2>
-<p class="section-sub">This root snapshot contains four sports and is not exhaustive. The separate <a href="survey/index.html">sport survey</a> provides a broader OLBG taxonomy inventory, with its own scope and verification limitations. Absence here is not evidence that OLBG lists no events.</p>
+<p class="section-sub">This root snapshot publishes rows for {len(SPORTS)} sports under its own scope. The root's 17-sport scope differs from the survey's 15-sport interpretation; the disagreement remains flagged. Neither layer is an exhaustive live OLBG feed.</p>
 <div class="grid sports">{''.join(sport_cards)}</div>
+
+<h2 class="section">Root scope coverage</h2>
+<p class="section-sub">The table compares the root configuration with stored survey counts; the layers have different scope decisions and known overlaps. Counts are not a combined unique-event total, and "not surveyed" describes our capture only, not OLBG.</p>
+<div class="panel"><div class="table-scroll"><table>
+<thead><tr><th>Sport</th><th>Our fixtures</th><th>Lines originated</th><th>Survey events</th><th>Status</th><th>Pages</th></tr></thead>
+<tbody>{coverage_table(matches)}</tbody></table></div></div>
 
 <h2 class="section">Snapshot event rows</h2>
 <p class="section-sub">Filter by sport, model label or team. Rows include available source references; a linked official-site page is not proof that its contents were independently re-checked for every row. OLBG event links appear only where the pairing matched exactly.</p>
@@ -223,16 +295,16 @@ def build_index(matches, preds, flagged):
 <details>
   <summary>What "confidence" means here</summary>
   <p>Confidence grades are model classifications based on recorded sample size and model probability; they are
-  not probabilities that have been independently validated, nor a guarantee of outcome. The thresholds are
-  described in <a href="methodology.html">Methodology</a>. Evidence gaps and limits on factual verification
-  are listed in <a href="integration.html">Evidence status</a>.</p>
+  not probabilities that have been independently validated, nor a guarantee of outcome. Sport-specific thresholds
+  are described in <a href="methodology.html">Methodology</a>. Evidence gaps are listed in
+  <a href="integration.html">Evidence status</a>.</p>
 </details>
 <details>
   <summary>Sports we could not cover in this capture</summary>
-  <p>This root snapshot covers only four sports and is not an exhaustive OLBG inventory. A separate
-  <a href="survey/index.html">sport survey</a> records additional listings, but its inventory also has
-  unresolved official-source verification gaps. Check the <a href="flagged.html">root review queue</a> and
-  <a href="survey/flagged.html">survey review queue</a>; absence from either capture is not evidence OLBG has no event.</p>
+  <p>This root layer is partial. The separate <a href="survey/index.html">sport survey</a> records additional
+  listings, but its inventory also has unresolved official-source verification gaps. Review both the
+  <a href="flagged.html">root queue</a> and <a href="survey/flagged.html">survey queue</a>; absence from either capture is
+  not evidence that OLBG has no event.</p>
 </details>
 
 <script>
@@ -312,7 +384,7 @@ def build_sport_page(sport, matches, preds):
   <p class="lede">{E(meta['blurb'])}</p>
   <p class="meta">{len(rows)} stored rows · {lined} with originated lines · {len(high)} model-labeled high picks</p>
 </section>
-<div class="note info">Prices on this page are outputs of this project's models, not bookmaker prices. The inputs shown below are from the checked-in snapshot; source links do not establish that every input or fixture was independently re-checked. Blank values and known evidence gaps are listed in <a href="../flagged.html">Flagged for review</a> and the <a href="../integration.html">evidence-status review</a>.</div>
+<div class="note info">Prices on this page are outputs of this project's models, not bookmaker prices. Inputs come from the checked-in snapshot; source links do not establish that every input or fixture was independently re-checked. See <a href="../flagged.html">Flagged for review</a> and <a href="../integration.html">Evidence status</a>.</div>
 {''.join(cards)}
 <p class="small muted" style="margin-top:22px"><a href="../index.html">← Back to dashboard</a></p>
 """
@@ -359,7 +431,7 @@ def build_picks(matches, preds):
 <thead><tr><th>Sport</th><th>Match</th><th>Selection</th><th>Model %</th><th>Our price</th><th>Confidence</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div></div>
 
-<div class="note">The cricket rows have no originated line because the checked-in snapshot does not provide the strength inputs used by this model. This is a limit of this model/data snapshot, not evidence that no official rating or market exists. NBA totals are also omitted because the model's required scoring inputs are not present.</div>
+<div class="note">Cricket rows have no originated line because this snapshot does not contain the strength input required by this model; that does not establish that no official rating or market exists. NBA totals are omitted because the model's required scoring inputs are not present.</div>
 """
     return page("Picks & predictions", "picks.html", body, "Model-labeled selections with cited narratives; factual support requires review.")
 
@@ -395,7 +467,7 @@ def build_flagged(flagged, matches):
 <section class="hero">
   <h1>Flagged for review</h1>
   <p class="lede">Known review items recorded during collection and later audits: blank model values, source conflicts,
-  and evidence gaps. This queue is not a guarantee that every published claim or every irregularity has been found.
+  and evidence gaps. This queue is not a guarantee that every published claim or irregularity has been found.
   See <a href="integration.html">Evidence status</a> for cross-layer limitations.</p>
   <p class="meta">{len(items)} open items · {len(resolved)} closed since the first capture · {len(blanks)} blank or unoriginated values</p>
 </section>
@@ -419,7 +491,8 @@ def build_flagged(flagged, matches):
 <ul>
 <li>Read the ATP rankings and PDC Order of Merit from a browser-rendered page so tennis and darts can be lined.</li>
 <li>Confirm the Gaelic football club fixtures on the relevant county board sites before publishing them.</li>
-<li>Survey the six sports that were not opened at all (Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League); handball and volleyball are already surveyed and recorded as F21 and F22.</li>
+<li>Originate lines for volleyball, tennis, darts, snooker and the remaining sports from their own governing-body tables; handball closed in this session, volleyball remains flagged as F22.</li>
+<li>Review the OLBG timezone finding (F24) and the handball club-name divergence (F25) before attaching any OLBG event link to a handball row.</li>
 </ul></details>
 """
     return page("Flagged for review", "flagged.html", body, "Unverified, blank and irregular items with source links.")
@@ -430,7 +503,7 @@ def build_methodology(matches):
     body = f"""
 <section class="hero">
   <h1>Methodology</h1>
-  <p class="lede">How the stored inputs are transformed into model lines and labels, and what the checks do and do not establish. This page documents the model; it is not a claim that each source page or sporting fact has been independently re-verified.</p>
+  <p class="lede">How stored inputs are transformed into model lines and labels, and what the checks do and do not establish. This documents the model; it does not claim each source page or sporting fact was independently re-verified.</p>
 </section>
 
 <h2 class="section">1. Scope</h2>
@@ -458,8 +531,8 @@ fact without explicit confirmation as unverified rather than assuming that the l
 
 <h2 class="section">4. The models</h2>
 <h3>Ice Hockey (NHL)</h3>
-<p>A multiplicative Poisson attack/defence model on season-to-date goals, with empirical-Bayes shrinkage because
-only 7–11 games have been played.</p>
+<p>A multiplicative Poisson attack/defence model on the goals-per-game inputs stored in this snapshot, with
+empirical-Bayes shrinkage. The underlying statistics are not freshly revalidated by this audit.</p>
 <pre><code>league_avg = mean(goals for per game) over all 32 teams
 w          = gp / (gp + {p['nhl_shrink_k']})
 attack_i   = 1 + w * ((gf_i / gp_i) / league_avg - 1)
@@ -473,8 +546,8 @@ total line = nearest half-point to lambda_home + lambda_away</code></pre>
 line-setting parameters, not sourced facts. They are recorded in every NHL row.</p>
 
 <h3>Basketball (NBA)</h3>
-<p>The 2026-27 season is one game old and every team playing on 21 October was 0-0, so the completed 2025-26
-season is used as a prior, shrunk 25% toward .500.</p>
+<p>The model uses stored 2025-26 records as a prior, shrunk 25% toward .500. The underlying standings values
+and the description of the current season are not freshly revalidated by this audit.</p>
 <pre><code>raw      = wins / (wins + losses)            # 2025-26
 shrunk   = 0.75 * raw + 0.25 * 0.5
 rating   = logit(shrunk)
@@ -499,6 +572,23 @@ total    = expected_home + expected_away, nearest half-point</code></pre>
 <p>Every price is <code>round(1 / (p * 1.04), 2)</code>, clamped to 1.05–12.00. That is a fair price plus a 4%
 theoretical margin. <b>These are not bookmaker prices and were not compared to any bookmaker.</b></p>
 
+<h3>Handball (EHF Champions League Men)</h3>
+<p>The model uses the stored group-phase goals-for and goals-against inputs, shrinks them toward its competition
+mean, then converts the estimates into a joint Poisson score grid. The source values and round count are not
+freshly revalidated by this copy audit:</p>
+<pre><code>league_gf  = sum(goals for) / sum(games played) over all 24 clubs
+w          = gp / (gp + {p['handball_shrink_k']})
+attack_i   = 1 + w * ((gf_i / gp_i) / league_gf - 1)
+defence_i  = 1 + w * ((ga_i / gp_i) / league_ga - 1)
+exp_home   = league_gf * attack_home * defence_away + {p['handball_home_goals']} / 2
+exp_away   = league_gf * attack_away * defence_home - {p['handball_home_goals']} / 2
+P(result)  = sum of Poisson(i; exp_home) * Poisson(j; exp_away) over the matching scores</code></pre>
+<p>Match winner is three-way (draw included). Handicap uses a half-goal line set just beyond the expected
+margin, and match total uses a half-goal line just below the expected total, so no bet can push. Prices apply a
+{p['handball_overround']:.0%} theoretical margin to the model probability; no bookmaker price is used anywhere.
+A handball pick is graded <b>high</b> only when the model gives it at least 70% and both clubs have played four
+or more group games, <b>medium</b> from 58%, and <b>low</b> below that.</p>
+
 <h2 class="section">5. Confidence rules</h2>
 <table>
 <thead><tr><th>Sport</th><th>High</th><th>Medium</th><th>Low</th></tr></thead>
@@ -511,19 +601,19 @@ theoretical margin. <b>These are not bookmaker prices and were not compared to a
 "high" would be a confidence trick, not a prediction.</p>
 
 <h2 class="section">6. Predictions</h2>
-<p>Written predictions are attached to the model-labeled high picks and include citations, but a citation link alone
+<p>Written predictions are attached to model-labeled high picks and include citations, but a citation link alone
 is not proof that its page supports the associated claim. The current cross-layer audit did not freshly verify every
-fact in these narratives. Treat the existing prose as unverified where not checked against an official source; see
-<a href="integration.html">Evidence status</a> and open each cited page before relying on a statement. No automated
+fact in these narratives. Treat existing prose as unverified where not checked against an official source; see
+<a href="integration.html">Evidence status</a> and open cited pages before relying on a statement. No automated
 gate checks the factual content of prediction text.</p>
 
 <h2 class="section">7. Provenance</h2>
-  <p>URLs and collection notes are recorded in <code>research/collection-log.md</code>; raw response captures are not
+<p>URLs and collection notes are recorded in <code>research/collection-log.md</code>; raw response captures are not
 uniformly archived. The machine-readable dataset is <a href="data/matches.json">data/matches.json</a>; regenerate it
 with <code>python3 scripts/model.py</code> and rebuild this site with <code>python3 scripts/build_site.py</code>.
 The builder checks structure, local links, and prediction length, not factual content of the linked pages.</p>
 """
-    return page("Methodology", "methodology.html", body, "Line origination formulas, confidence rules and verification process.")
+    return page("Methodology", "methodology.html", body, "Model formulas and confidence rules; factual verification coverage is limited and flagged.")
 
 
 def build_sources(sources, matches):
@@ -550,9 +640,9 @@ def build_sources(sources, matches):
   <p class="meta">{len(sources['sources'])} sources · {len(per_source)} of them are cited directly by a published fixture row</p>
 </section>
 <div class="panel"><div class="table-scroll"><table>
-<thead><tr><th>ID</th><th>Publisher</th><th>Type</th><th>URL</th><th>Used for</th></tr></thead>
+<thead><tr><th>ID</th><th>Publisher</th><th>Type</th><th>URL</th><th>Recorded purpose</th></tr></thead>
 <tbody>{rows}</tbody></table></div></div>
-<div class="note">Capture window 2026-10-21 05:12–05:25 UTC. Pages change; a reviewer re-checking later may see
+<div class="note">Capture windows 2026-10-21 05:12–05:25 UTC and 07:06–07:40 UTC (EHF handball). Pages change; a reviewer re-checking later may see
 different numbers, especially on the NHL and NBA standings pages, which update after every game.</div>
 """
     return page("Sources", "sources.html", body, "Source register with recorded purpose; linked content is not automatically verified.")
@@ -607,6 +697,7 @@ def main():
     for path, content in pages.items():
         full = os.path.join(ROOT, path)
         os.makedirs(os.path.dirname(full), exist_ok=True)
+        content = "\n".join(line.rstrip() for line in content.splitlines()) + "\n"
         with open(full, "w") as fh:
             fh.write(content)
 

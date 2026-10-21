@@ -779,3 +779,11 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 | GitHub Pages deployment | Run `39557166195` — build and deploy jobs succeeded |
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` and `https://buffedlizard55-lab.github.io/OLBG2/survey/` both fetched successfully; root includes Survey navigation |
 | Deployment warning | GitHub Actions emitted Node.js 20/runner-image deprecation notices; all jobs succeeded, non-blocking |
+
+## Session `arena/18eca832-olbg2` — official-source integrity audit
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published survey source classification without modifying shared datasets or generated pages | in progress | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, append-only `COORDINATION.md` |
+
+The fixed Arena branch is used rather than creating a session-named branch. This claim does not assert any new fixture verification.

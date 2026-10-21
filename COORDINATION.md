@@ -721,7 +721,7 @@ No sporting value was marked newly verified from this read-only audit. Generated
 
 Before the second push, `git pull --rebase origin main` fetched PRs #27–#28 and conflicted only in the append-only coordination ledger: the upstream Survey-navigation completion and this session's original claim had both appended at EOF. Resolved additively, retaining the complete upstream `arena/dd14fcfd-olbg2` record and this session's claim; no files or changes were discarded. The upstream branch had already added Survey to the root navigation, so audit finding R4 is now marked resolved in `research/independent-audit-9b76e3ea.md`. The final audit record and this conflict note remain append-only.
 
-Second sync: main advanced through PR #31 during CI. Preserved both appended coordination records and the independent audit file; no code or data conflicts.
+Second sync: before pushing the post-merge ledger update, `git pull --rebase origin main` fetched PR #29 and conflicted only at the append-only end of `COORDINATION.md` (upstream's sync note versus this session's PR #31 publish record). Resolved by retaining both complete sections. No code, data, or generated outputs conflicted or were discarded.
 ### Publish record — independent audit
 
 | Item | Value |

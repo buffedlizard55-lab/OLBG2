@@ -49,6 +49,9 @@ PARAMS = {
     "urc_home_points": 3.0,          # home advantage in points
     "urc_margin_sigma": 13.0,        # logistic scale for rugby margins
     "urc_overround": 0.04,
+    "handball_shrink_k": 3.0,       # only four group games played -> strong shrinkage
+    "handball_home_goals": 0.8,     # our home-court assumption, in goals, split +/-0.4 per side
+    "handball_overround": 0.04,
     "nhl_min_gp_high": 7,
     "nhl_min_gp_medium": 5,
 }
@@ -128,6 +131,14 @@ def confidence_for(sport: str, p: float, min_gp: int | None) -> str:
     if sport == "Basketball":
         # Current season sample is zero; only last season's prior exists.
         return "medium" if p >= 0.68 else "low"
+    if sport == "Handball":
+        # Four group games per side is a thin sample, so high is reserved for clear favourites.
+        if min_gp is not None and min_gp >= 4:
+            if p >= 0.70:
+                return "high"
+            if p >= 0.58:
+                return "medium"
+        return "low"
     if sport == "Rugby Union":
         # Three rounds played -> never above medium.
         return "medium" if p >= 0.62 else "low"
@@ -389,6 +400,144 @@ def build_urc(data: dict) -> list[dict]:
     return rows
 
 
+def handball_grid(lam_home: float, lam_away: float, nmax: int | None = None):
+    """Joint Poisson score grid for a handball match (independent goals).
+
+    Handball scores average around 30 goals a side, so the grid is sized from the
+    rates rather than a fixed small bound, and the joint mass is renormalised.
+    Without that, truncating the tail silently shifts every probability.
+    """
+    if nmax is None:
+        nmax = int(max(lam_home, lam_away) * 3) + 20
+    ph, pa = poisson_grid(lam_home, nmax), poisson_grid(lam_away, nmax)
+    norm = sum(ph) * sum(pa)
+    return [(i, j, ph[i] * pa[j] / norm) for i in range(nmax + 1) for j in range(nmax + 1)]
+
+
+def handball_outcomes(lam_home: float, lam_away: float) -> dict:
+    """Return three-way and derivative market probabilities from the score grid."""
+    grid = handball_grid(lam_home, lam_away)
+    p_home = sum(p for i, j, p in grid if i > j)
+    p_draw = sum(p for i, j, p in grid if i == j)
+    p_away = sum(p for i, j, p in grid if i < j)
+    return {"home": p_home, "draw": p_draw, "away": p_away, "grid": grid}
+
+
+def build_handball(data: dict) -> list[dict]:
+    """Originate EHF Champions League lines from the official group standings.
+
+    Strength input: goals for and goals against per game inside this season's group
+    phase, shrunk toward the competition mean with w = gp / (gp + k) because only
+    four rounds have been played. Nothing here reads a bookmaker price.
+    """
+    rows = []
+    teams = data["teams"]
+    gp_total = sum(t["gp"] for t in teams.values())
+    league_gf = sum(t["gf"] for t in teams.values()) / gp_total
+    league_ga = sum(t["ga"] for t in teams.values()) / gp_total
+    league_avg = (league_gf + league_ga) / 2
+    k = PARAMS["handball_shrink_k"]
+
+    def shrink(ratio: float, gp: int) -> float:
+        w = gp / (gp + k)
+        return 1.0 + w * (ratio - 1.0)
+
+    for fx in data["fixtures"]:
+        h, a = teams[fx["home"]], teams[fx["away"]]
+        h_atk = league_gf * shrink((h["gf"] / h["gp"]) / league_gf, h["gp"])
+        h_def = league_ga * shrink((h["ga"] / h["gp"]) / league_ga, h["gp"])
+        a_atk = league_gf * shrink((a["gf"] / a["gp"]) / league_gf, a["gp"])
+        a_def = league_ga * shrink((a["ga"] / a["gp"]) / league_ga, a["gp"])
+        home_edge = PARAMS["handball_home_goals"] / 2
+        exp_h = h_atk * (a_def / league_ga) + home_edge
+        exp_a = a_atk * (h_def / league_gf) - home_edge
+
+        probs = handball_outcomes(exp_h, exp_a)
+        grid = probs["grid"]
+        margin = exp_h - exp_a
+        total = exp_h + exp_a
+
+        home_line = math.copysign(math.floor(abs(margin)) + 0.5, -margin) if margin != 0 else -0.5
+        p_cover_home = sum(p for i, j, p in grid if (i - j) + home_line > 0)
+        total_line = math.floor(total) + 0.5
+        p_over = sum(p for i, j, p in grid if (i + j) > total_line)
+
+        p_pick = max(probs["home"], probs["away"])
+        side = "home" if probs["home"] >= probs["away"] else "away"
+        min_gp = min(h["gp"], a["gp"])
+        conf = confidence_for("Handball", p_pick, min_gp)
+        ov = PARAMS["handball_overround"]
+        team_name = h["name"] if side == "home" else a["name"]
+
+        rows.append({
+            "id": fx["id"],
+            "sport": "Handball",
+            "competition": f'{data["meta"]["competition"]} — {data["meta"]["phase"]} (Group {h["group"]})',
+            "home": {"code": None, "name": h["name"]},
+            "away": {"code": None, "name": a["name"]},
+            "start_display": f'{fx["date"]} {fx["time_local"]} {fx["timezone"]}',
+            "start_utc": fx["start_utc"],
+            "start_note": data["meta"]["time_note"],
+            "venue": fx.get("venue"),
+            "fixture_source": {"name": data["meta"]["source_name"], "url": data["meta"]["source_url"]},
+            "data_source": {
+                "name": "EHF Champions League Men official group standings",
+                "url": data["meta"]["standings_url"],
+                "captured_at": data["meta"]["captured_at"],
+            },
+            "ehf_match_url": fx["detail_url"],
+            "olbg_event_url": None,
+            "line_status": "originated",
+            "params": {key: PARAMS[key] for key in ("handball_shrink_k", "handball_home_goals", "handball_overround")},
+            "model": {
+                "league_goals_for_per_team_game": round(league_gf, 2),
+                "league_goals_against_per_team_game": round(league_ga, 2),
+                "expected_home_goals": round(exp_h, 2),
+                "expected_away_goals": round(exp_a, 2),
+                "expected_margin_home": round(margin, 2),
+                "expected_total": round(total, 2),
+                "p_draw": round(probs["draw"], 4),
+            },
+            "inputs": {
+                "home": {"gp": h["gp"], "record": f'{h["w"]}-{h["d"]}-{h["l"]}', "gf": h["gf"], "ga": h["ga"],
+                         "gf_pg": round(h["gf"] / h["gp"], 2), "ga_pg": round(h["ga"] / h["gp"], 2), "pts": h["pts"]},
+                "away": {"gp": a["gp"], "record": f'{a["w"]}-{a["d"]}-{a["l"]}', "gf": a["gf"], "ga": a["ga"],
+                         "gf_pg": round(a["gf"] / a["gp"], 2), "ga_pg": round(a["ga"] / a["gp"], 2), "pts": a["pts"]},
+                "note": "Group-phase record and goal totals as published by EHF before round 5.",
+            },
+            "markets": [
+                {"market": "Match winner", "selection": h["name"], "line": None,
+                 "probability": round(probs["home"], 4), "price": price(probs["home"], ov)},
+                {"market": "Match winner", "selection": "Draw", "line": None,
+                 "probability": round(probs["draw"], 4), "price": price(probs["draw"], ov)},
+                {"market": "Match winner", "selection": a["name"], "line": None,
+                 "probability": round(probs["away"], 4), "price": price(probs["away"], ov)},
+                {"market": "Handicap", "selection": f'{h["name"]} {home_line:+.1f}', "line": home_line,
+                 "probability": round(p_cover_home, 4), "price": price(p_cover_home, ov)},
+                {"market": "Handicap", "selection": f'{a["name"]} {-home_line:+.1f}', "line": -home_line,
+                 "probability": round(1 - p_cover_home, 4), "price": price(1 - p_cover_home, ov)},
+                {"market": "Match total", "selection": f"Over {total_line}", "line": total_line,
+                 "probability": round(p_over, 4), "price": price(p_over, ov)},
+                {"market": "Match total", "selection": f"Under {total_line}", "line": total_line,
+                 "probability": round(1 - p_over, 4), "price": price(1 - p_over, ov)},
+            ],
+            "markets_not_originated": [
+                {"market": "Player props (top scorer, goalkeeper saves)",
+                 "reason": "EHF publishes player statistics only after a match; no pre-match player market input was verified."},
+            ],
+            "pick": {
+                "market": "Match winner",
+                "selection": team_name,
+                "side": side,
+                "probability": round(p_pick, 4),
+                "price": price(p_pick, ov),
+                "confidence": conf,
+            },
+            "confidence": conf,
+        })
+    return rows
+
+
 def build_other(fixtures: dict) -> list[dict]:
     rows = []
     for fx in fixtures["other_verified"]["cricket"]:
@@ -422,12 +571,14 @@ def main() -> None:
     nhl_in = json.load(open(os.path.join(INPUTS, "nhl_teams.json")))
     nba_in = json.load(open(os.path.join(INPUTS, "nba_teams.json")))
     urc_in = json.load(open(os.path.join(INPUTS, "urc.json")))
+    handball_in = json.load(open(os.path.join(INPUTS, "handball_ehf.json")))
     fixtures = json.load(open(os.path.join(INPUTS, "fixtures.json")))
 
     matches = []
     matches += build_nhl(nhl_in["teams"], fixtures["nhl"])
     matches += build_nba(nba_in["teams"], fixtures["nba"])
     matches += build_urc(urc_in)
+    matches += build_handball(handball_in)
     matches += build_other(fixtures)
     matches.sort(key=lambda m: (m["sport"], m["start_display"] or ""))
 

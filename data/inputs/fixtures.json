@@ -1,7 +1,8 @@
 {
   "meta": {
     "snapshot_utc": "2026-10-21T05:15:00Z",
-    "note": "Fixtures verified against the official league / governing-body source named in each row. OLBG event links are recorded only where the pairing on the OLBG hub page matches the official pairing exactly."
+    "note": "Fixtures verified against the official league / governing-body source named in each row. OLBG event links are recorded only where the pairing on the OLBG hub page matches the official pairing exactly.",
+    "inputs_captured_at": "2026-10-21T05:25:00Z"
   },
   "nhl": {
     "source_name": "NHL official schedule / score API",
@@ -117,7 +118,7 @@
         "game_id": 2026020163
       }
     ],
-    "note": "source_url is a template; each row cites the date-specific score feed (\u2026/score/YYYY-MM-DD)."
+    "note": "source_url is a template; each row cites the date-specific score feed (…/score/YYYY-MM-DD)."
   },
   "nba": {
     "source_name": "NBA official games page",

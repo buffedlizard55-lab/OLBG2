@@ -651,11 +651,24 @@ byte-identically (`git diff --exit-code` clean), so the root dashboard is not br
 
 | # | Task | Status | Owner | File scope (non-overlapping) |
 |---|---|---|---|---|
-| R1 | Re-verify baseline (tests, survey gate, builds) | in progress | `c8711d36` | read-only |
-| R2 | Attempt to close open gaps from official sources only: ICC rankings (F11), ATP/WTA rankings (F04), San Jose Sharks goal totals (desk cross-scope request), NBA PF/PA for totals (F10) | unclaimed→in progress | `c8711d36` | `research/refresh-c8711d36.md`, `data/refresh/**` (new namespace) |
-| R3 | Add Survey link to root dashboard navigation (ca1d5677 integration request 1) | in progress | `c8711d36` | `scripts/build_site.py`, regenerated root HTML |
-| R4 | Record scope decision on Greyhounds/Gaelic Football divergence (survey F-03 vs dashboard config) as flagged, not silently changed | in progress | `c8711d36` | `data/flagged.json` append-only, `research/refresh-c8711d36.md` |
-| R5 | Final integration: rebuild all layers, verify no broken links, PR to main, merge, confirm Pages | in progress | `c8711d36` | shared outputs (integration session) |
+| R1 | Re-verify baseline (tests, survey gate, builds) | done | `c8711d36` | read-only |
+| R2 | Attempt to close open gaps from official sources only | done | `c8711d36` | `research/refresh-c8711d36.md`, `data/refresh/**` |
+| R3 | Add Survey link to root dashboard navigation (ca1d5677 integration request 1) | done | `c8711d36` | `scripts/build_site.py`, regenerated root HTML |
+| R4 | Scope decision on Greyhounds/Gaelic Football divergence, flagged not silently changed | done | `c8711d36` | `data/flagged.json` (F23, append-only) |
+| R5 | Final integration: rebuild, verify, PR, merge, confirm Pages | done (record below) | `c8711d36` | shared outputs (integration session) |
+
+### Results (c8711d36)
+
+| Check | Official source | Outcome |
+|---|---|---|
+| San Jose Sharks totals | https://api-web.nhle.com/v1/standings/now (2026-10-20) | **Verified** 10 GP, 27 GF / 35 GA — matches desk layer; root 26/34 is the stats-API convention, diff = 1 shootout win (F19). Desk cross-scope request closed, no data change. |
+| ICC ODI rankings | https://www.icc-cricket.com/rankings/team-rankings/mens/odi | Table still renders empty; fixtures confirmed. **F11 stays open.** |
+| ATP rankings | https://www.atptour.com/en/rankings/singles | Table client-rendered, not extracted. **F04 stays open.** |
+| Survey discoverability | — | Root nav + footer now link `survey/index.html` (ca1d5677 request 1 closed). |
+| Scope divergence | Brief + OLBG sitemap ids 25/28 | Both sports stay in scope (brief-literal); flagged **F23**. |
+
+Gates after rebuild: `scripts/model.py` 35 fixtures / 33 originated / 4 high; `scripts/build_site.py`
+9 pages, 0 broken links; `scripts/build.py` desk 25 fixtures; unit tests 28 pass; `survey_verify.py` all green.
 
 Rules for this session: no value is published unless an official source confirms it; failures are
 flagged, not filled. Prior layers' data files are not hand-edited; generated HTML is regenerated

@@ -864,3 +864,11 @@ Updated the README to distinguish stored snapshot rows from officially verified 
 Verification: `python3 -m unittest discover -s tests -v` (36 passed); `python3 scripts/build.py` (25 fixtures); `python3 scripts/build_site.py` (10 pages, 35 fixtures, 0 broken links); `python3 scripts/survey_build.py` and `python3 scripts/survey_verify.py` (24 pages, 130 inventory rows, 11 lines, 2 predictions, 21 flags; all structural checks passed); `python3 scripts/integration_audit.py` (0 local-link errors); `python3 scripts/official_source_audit.py` (130 inventory rows without official fixture-source fields; 11/15 prediction-fact URLs outside its candidate official-domain allowlist; classification is not content verification). `git diff --check` passed. No sporting data changed.
 
 Follow-up sync note: a second `git pull --rebase origin main` tried replaying the already-pushed original claim commit and conflicted in `COORDINATION.md`. The rebase was aborted without discarding changes. The current branch already contained `origin/main` and, after merging the remote session branch, contained `origin/arena/e3c5f898-olbg2`; the subsequent push advanced that remote branch by fast-forward. The claim, README update, both concurrent publish records, and completion entry are retained.
+
+## Claim — session `arena/e3c5f898-olbg2` follow-up (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Remove universal official-verification claims from the root dashboard and expose snapshot limits | in progress | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `research/root-dashboard-copy-audit-e3c5f898.md`, append-only `COORDINATION.md` |
+
+A live Pages spot-check after PR #38 showed the root dashboard still says all 35 fixtures were verified and every row's official source was checked, while the integration audit documents only limited spot-checks. This follow-up changes presentation and preserves row-level URLs; it does not change fixture data, line values, confidence, or predictions, and will not claim fresh official verification.

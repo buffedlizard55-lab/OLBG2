@@ -756,3 +756,12 @@ No sporting value was marked newly verified from this read-only audit. Generated
 Before the second push, `git pull --rebase origin main` fetched PRs #27–#28 and conflicted only in the append-only coordination ledger: the upstream Survey-navigation completion and this session's original claim had both appended at EOF. Resolved additively, retaining the complete upstream `arena/dd14fcfd-olbg2` record and this session's claim; no files or changes were discarded. The upstream branch had already added Survey to the root navigation, so audit finding R4 is now marked resolved in `research/independent-audit-9b76e3ea.md`. The final audit record and this conflict note remain append-only.
 
 Second sync: main advanced through PR #31 during CI. Preserved both appended coordination records and the independent audit file; no code or data conflicts.
+
+### Publish record (c8711d36)
+
+| Item | Value |
+|---|---|
+| PR | https://github.com/buffedlizard55-lab/OLBG2/pull/30 |
+| Merge | MERGED 2026-10-21T06:44:42Z, merge commit `56d0a1168542c583fca33f5c9b136f8e9bc4ebd5` |
+| Pages | Build `39557334322` success; latest Pages build status `built` on `56d0a11`; live flagged page shows 21 open items incl. F23 |
+| Concurrent merges handled | PR #27 (dd14fcfd, identical Survey nav — theirs adopted) and PR #29/#32 (8103ccb6/9b76e3ea integration audit) merged from `origin/main` twice; only COORDINATION.md conflicted, both records kept, generated pages rebuilt (10 pages, 0 broken links) |

@@ -819,3 +819,14 @@ The fixed Arena branch is used rather than creating a session-named branch. This
 | Read-only official-source integrity audit | done; findings need review | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, `COORDINATION.md` |
 
 Audit: 130/130 survey inventory rows lack an explicit official fixture source; 11/15 prediction fact citations are outside a conservative official-domain allowlist. Domain classification is not content verification. See [audit and manual-review links](research/official-source-audit-18eca832.md). No match values or generated pages were changed. `python3 -m unittest discover -s tests -q`: 36 passed. The inventory and unsupported narrative evidence remain **needs review**; no claims of exhaustive coverage or official verification are made.
+
+### Publish record — session `arena/8f07248b-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#35](https://github.com/buffedlizard55-lab/OLBG2/pull/35) |
+| Merge | Merged 2026-10-21 07:07:14 UTC; merge commit `b9c107116ecc51768ee3dfd2b7d6a0bf9359e987` |
+| Pull request validation | Run `39559753810` — success |
+| Main validation | Run `39559794895` — success |
+| GitHub Pages | Build/deploy run `39559793578` — build and deploy jobs succeeded |
+| Irregularities | Non-blocking Node.js 20 deprecation / Ubuntu runner migration notices; all jobs succeeded. |

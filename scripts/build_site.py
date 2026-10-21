@@ -19,11 +19,15 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import config  # noqa: E402  (scope list, used for the coverage sentence)
+
 SPORTS = {
     "Ice Hockey": {"slug": "ice-hockey", "blurb": "NHL — lines originated from this season's official team goal rates."},
     "Basketball": {"slug": "basketball", "blurb": "NBA — lines originated from the completed 2025-26 season as a prior."},
     "Rugby Union": {"slug": "rugby-union", "blurb": "United Rugby Championship Round 4 — lines from the official league table."},
     "Cricket": {"slug": "cricket", "blurb": "ICC-listed internationals — fixtures verified, lines deliberately not originated."},
+    "Handball": {"slug": "handball", "blurb": "EHF Champions League Men round 5 — lines from the official group standings."},
 }
 
 NAV = [
@@ -174,7 +178,7 @@ def build_index(matches, preds, flagged):
   <p class="lede">A reverse-engineered view of OLBG's sports coverage: every fixture re-checked against the
   official league or governing body, every price originated here from verified data, and every gap left blank
   and flagged rather than guessed.</p>
-  <p class="meta">Capture window 2026-10-21 05:12–05:25 UTC · {c['total']} fixtures · {c['originated']} with originated lines ·
+  <p class="meta">Capture windows 2026-10-21 05:12–05:25 UTC and 07:06–07:40 UTC · {c['total']} fixtures · {c['originated']} with originated lines ·
   {c['high']} high-confidence picks · {len(flagged['items'])} open review items</p>
 </section>
 
@@ -186,7 +190,7 @@ def build_index(matches, preds, flagged):
 </div>
 
 <h2 class="section">Sports covered</h2>
-<p class="section-sub">Thirteen of OLBG's seventeen included sports are not covered in this release. Each one is listed on the flagged page with the reason — absence here is not evidence that OLBG lists no events.</p>
+<p class="section-sub">{len(SPORTS)} of OLBG's {len(config.INCLUDED_SPORTS)} included sports are covered in this release; the other {len(config.INCLUDED_SPORTS) - len(SPORTS)} are listed on the flagged page with the reason — absence here is not evidence that OLBG lists no events.</p>
 <div class="grid sports">{''.join(sport_cards)}</div>
 
 <h2 class="section">All fixtures</h2>
@@ -351,7 +355,8 @@ def build_picks(matches, preds):
 <section class="hero">
   <h1>Picks and predictions</h1>
   <p class="lede">One selection per fixture, graded by how decisive the model is and how much verified data backs it.
-  Written predictions exist only for high-confidence picks — {len(preds['predictions'])} NHL games in this release.</p>
+  Written predictions exist only for high-confidence picks — {len(preds['predictions'])} selections across the covered
+  sports in this release.</p>
   <p class="meta">{len(preds['predictions'])} written predictions · {matches['counts']['high']} high · {matches['counts']['medium']} medium · {matches['counts']['low']} low</p>
 </section>
 
@@ -425,7 +430,8 @@ def build_flagged(flagged, matches):
 <ul>
 <li>Read the ATP rankings and PDC Order of Merit from a browser-rendered page so tennis and darts can be lined.</li>
 <li>Confirm the Gaelic football club fixtures on the relevant county board sites before publishing them.</li>
-<li>Survey the six sports that were not opened at all (Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League); handball and volleyball are already surveyed and recorded as F21 and F22.</li>
+<li>Originate lines for volleyball, tennis, darts, snooker and the remaining sports from their own governing-body tables; handball closed in this session, volleyball remains flagged as F22.</li>
+<li>Review the OLBG timezone finding (F24) and the handball club-name divergence (F25) before attaching any OLBG event link to a handball row.</li>
 </ul></details>
 """
     return page("Flagged for review", "flagged.html", body, "Unverified, blank and irregular items with source links.")
@@ -504,6 +510,22 @@ total    = expected_home + expected_away, nearest half-point</code></pre>
 <p>Every price is <code>round(1 / (p * 1.04), 2)</code>, clamped to 1.05–12.00. That is a fair price plus a 4%
 theoretical margin. <b>These are not bookmaker prices and were not compared to any bookmaker.</b></p>
 
+<h3>Handball (EHF Champions League Men)</h3>
+<p>Goals for and against per game inside the current group phase, shrunk toward the competition mean because
+only four rounds have been played, then converted into a joint Poisson score grid:</p>
+<pre><code>league_gf  = sum(goals for) / sum(games played) over all 24 clubs
+w          = gp / (gp + {p['handball_shrink_k']})
+attack_i   = 1 + w * ((gf_i / gp_i) / league_gf - 1)
+defence_i  = 1 + w * ((ga_i / gp_i) / league_ga - 1)
+exp_home   = league_gf * attack_home * defence_away + {p['handball_home_goals']} / 2
+exp_away   = league_gf * attack_away * defence_home - {p['handball_home_goals']} / 2
+P(result)  = sum of Poisson(i; exp_home) * Poisson(j; exp_away) over the matching scores</code></pre>
+<p>Match winner is three-way (draw included). Handicap uses a half-goal line set just beyond the expected
+margin, and match total uses a half-goal line just below the expected total, so no bet can push. Prices apply a
+{p['handball_overround']:.0%} theoretical margin to the model probability; no bookmaker price is used anywhere.
+A handball pick is graded <b>high</b> only when the model gives it at least 70% and both clubs have played four
+or more group games, <b>medium</b> from 58%, and <b>low</b> below that.</p>
+
 <h2 class="section">5. Confidence rules</h2>
 <table>
 <thead><tr><th>Sport</th><th>High</th><th>Medium</th><th>Low</th></tr></thead>
@@ -558,7 +580,7 @@ def build_sources(sources, matches):
 <div class="panel"><div class="table-scroll"><table>
 <thead><tr><th>ID</th><th>Publisher</th><th>Type</th><th>URL</th><th>Used for</th></tr></thead>
 <tbody>{rows}</tbody></table></div></div>
-<div class="note">Capture window 2026-10-21 05:12–05:25 UTC. Pages change; a reviewer re-checking later may see
+<div class="note">Capture windows 2026-10-21 05:12–05:25 UTC and 07:06–07:40 UTC (EHF handball). Pages change; a reviewer re-checking later may see
 different numbers, especially on the NHL and NBA standings pages, which update after every game.</div>
 """
     return page("Sources", "sources.html", body, "Official and discovery sources with what each one verified.")

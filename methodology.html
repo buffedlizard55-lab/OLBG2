@@ -88,6 +88,22 @@ total    = expected_home + expected_away, nearest half-point</code></pre>
 <p>Every price is <code>round(1 / (p * 1.04), 2)</code>, clamped to 1.05–12.00. That is a fair price plus a 4%
 theoretical margin. <b>These are not bookmaker prices and were not compared to any bookmaker.</b></p>
 
+<h3>Handball (EHF Champions League Men)</h3>
+<p>Goals for and against per game inside the current group phase, shrunk toward the competition mean because
+only four rounds have been played, then converted into a joint Poisson score grid:</p>
+<pre><code>league_gf  = sum(goals for) / sum(games played) over all 24 clubs
+w          = gp / (gp + 3.0)
+attack_i   = 1 + w * ((gf_i / gp_i) / league_gf - 1)
+defence_i  = 1 + w * ((ga_i / gp_i) / league_ga - 1)
+exp_home   = league_gf * attack_home * defence_away + 0.8 / 2
+exp_away   = league_gf * attack_away * defence_home - 0.8 / 2
+P(result)  = sum of Poisson(i; exp_home) * Poisson(j; exp_away) over the matching scores</code></pre>
+<p>Match winner is three-way (draw included). Handicap uses a half-goal line set just beyond the expected
+margin, and match total uses a half-goal line just below the expected total, so no bet can push. Prices apply a
+4% theoretical margin to the model probability; no bookmaker price is used anywhere.
+A handball pick is graded <b>high</b> only when the model gives it at least 70% and both clubs have played four
+or more group games, <b>medium</b> from 58%, and <b>low</b> below that.</p>
+
 <h2 class="section">5. Confidence rules</h2>
 <table>
 <thead><tr><th>Sport</th><th>High</th><th>Medium</th><th>Low</th></tr></thead>

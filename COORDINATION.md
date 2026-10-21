@@ -8,6 +8,7 @@ Session identifier: `arena/7043ea94-olbg2` (the Arena branch is fixed; no other 
 
 ## Handoff / activity log
 
+- Request to integration owner/session `bfeb6335`: consider adding the official schedule entry-point links and scope caveats documented below to the published category/reference pages when integrating further sport coverage. This session did not edit the merged `site/**`, `data/**`, or main-branch Pages workflow.
 - 2026-10-21 — Inspected the repository; it initially contained only `README.md`, with no prior coordination board or other claimed tasks. Created this board, claimed the dashboard/source-verification framework scope, committed the claim (`3dab71c`), and pushed it to `arena/7043ea94-olbg2`. `git pull --rebase origin arena/7043ea94-olbg2` initially could not find a remote ref because the branch had not yet been pushed; the immediate push created the remote branch successfully.
 - 2026-10-21 — Built a responsive static dashboard with Overview, Sports Coverage, five sport-detail pages, Markets & Lines, Methodology, and Flagged for Review. Added a Pages Actions workflow and a dependency-free local-link/page check. No event/market tables were published because no match-level record was verified.
 - 2026-10-21 — Ran `python3 scripts/check_site.py` and `git diff --check`; both passed. Link checker found all local page/assets links and required files; there are no data tables requiring row-level source audit. External first-party references below were opened directly during research.

@@ -782,6 +782,91 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 
 ---
 
+# Session `arena/8f07248b-olbg2` — independent content integrity check
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published fixture/market/prediction evidence coverage and report actionable integrity gaps; no edits to shared data or generated pages | in progress | `arena/8f07248b-olbg2` | `research/integrity-audit-8f07248b.md`, append-only `COORDINATION.md` |
+
+Scope is deliberately disjoint from active integration work (`scripts/build_site.py`, `scripts/integration_audit.py`, generated pages and CI). This is a static structural/evidence-link audit; it will not mark sports facts verified without checking official sources. No fixture data will be added or modified.
+
+### Completion — `arena/8f07248b-olbg2`
+
+Independent structural/evidence-link audit is complete. Report: [`research/integrity-audit-8f07248b.md`](research/integrity-audit-8f07248b.md). Scope remained disjoint from integration code, shared data, and generated pages. Findings: 0/130 survey inventory records have a per-row official fixture-source field (they carry OLBG discovery provenance); survey narrative citation tests establish URL presence but not publisher authority; and the 35-match core count is 33 originated + 2 unoriginated (with confidence counts 4 high, 10 medium, 19 low, 2 unverified).
+
+Verification performed: `python3 scripts/survey_verify.py` passed (24 generated pages, 335 rows, 130 events = 11 modelled + 119 flagged, 2 predictions; deterministic rebuild); `python3 -m unittest discover -s tests -v` passed (33 tests). No external sporting facts were newly verified, no factual data or generated pages were changed. These findings are non-blocking and should remain visible for review; the static validators must not be presented as exhaustive official-source verification.
+
+The initial `git pull --rebase origin arena/8f07248b-olbg2` returned “couldn't find remote ref” because this branch was not yet published. Claim commit is local. Per the fixed Arena branch constraint, work remains on this branch; no other branch was created or used.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Independent evidence-integrity check and report | done | `arena/8f07248b-olbg2` | `research/integrity-audit-8f07248b.md`, `COORDINATION.md` |
+
+---
+
+## Session `arena/18eca832-olbg2` — official-source integrity audit
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published survey source classification without modifying shared datasets or generated pages | in progress | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, append-only `COORDINATION.md` |
+
+The fixed Arena branch is used rather than creating a session-named branch. This claim does not assert any new fixture verification.
+
+### Completion — `arena/18eca832-olbg2`
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Read-only official-source integrity audit | done; findings need review | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, `COORDINATION.md` |
+
+Audit: 130/130 survey inventory rows lack an explicit official fixture source; 11/15 prediction fact citations are outside a conservative official-domain allowlist. Domain classification is not content verification. See [audit and manual-review links](research/official-source-audit-18eca832.md). No match values or generated pages were changed. `python3 -m unittest discover -s tests -q`: 36 passed. The inventory and unsupported narrative evidence remain **needs review**; no claims of exhaustive coverage or official verification are made.
+
+### Publish record — session `arena/8f07248b-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#35](https://github.com/buffedlizard55-lab/OLBG2/pull/35) |
+| Merge | Merged 2026-10-21 07:07:14 UTC; merge commit `b9c107116ecc51768ee3dfd2b7d6a0bf9359e987` |
+| Pull request validation | Run `39559753810` — success |
+| Main validation | Run `39559794895` — success |
+| GitHub Pages | Build/deploy run `39559793578` — build and deploy jobs succeeded |
+| Irregularities | Non-blocking Node.js 20 deprecation / Ubuntu runner migration notices; all jobs succeeded. |
+
+---
+
+### Publish record — `arena/18eca832-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#34](https://github.com/buffedlizard55-lab/OLBG2/pull/34) |
+| Merge | Merged 2026-10-21 07:06:12 UTC, commit `ff8a057e0f622edf01b3059bd9f8469d64fbfc47` |
+| Validation | GitHub Actions `39559633597`: success |
+| GitHub Pages | Build/deploy run `39559676469`: success, both build and deploy jobs |
+| Outstanding | Source provenance issues remain needs review; this audit did not update published rows or verify factual claims. |
+
+## Claim — session `arena/e3c5f898-olbg2` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Correct repository README claims that overstate official verification, coverage, and cross-layer uniqueness | in progress | `arena/e3c5f898-olbg2` | `README.md`, append-only `COORDINATION.md` |
+
+This is a documentation-only correction based on the existing integration review and the official-source provenance audit added by session `arena/18eca832`. No sporting facts, fixtures, prices, or generated pages will be changed. The board records claims from those prior audits; this session does not independently verify any external sporting fact.
+
+Rebase/push note: syncing with `origin/main` brought in PR #34's publish record. Rebasing rewrote the already-pushed claim commit, so the subsequent push was rejected as non-fast-forward. The original remote branch was fetched and merged; this append-only ledger conflict was resolved by retaining the PR #34 publish record and the current session's single claim/completion entry. No code or data was discarded.
+
+### Completion — session `arena/e3c5f898-olbg2`
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Correct README claims that overstated official verification, coverage, and cross-layer uniqueness | done | `arena/e3c5f898-olbg2` | `README.md`, `COORDINATION.md` |
+
+Updated the README to distinguish stored snapshot rows from officially verified fixtures; state the survey's documented source-field gaps and the limits of domain classification; describe root/survey scope differences and known cross-layer overlaps; and avoid presenting the inventory as a live, complete, or deduplicated OLBG slate. The descriptions were checked against `integration.html`, `research/official-source-audit-18eca832.md`, `scripts/official_source_audit.py`, `data/survey/sports.json`, and the existing README counts. This was an internal-documentation audit only: no external sports fact was newly verified, and no match, market, prediction, model, or generated page was changed.
+
+Verification: `python3 -m unittest discover -s tests -v` (36 passed); `python3 scripts/build.py` (25 fixtures); `python3 scripts/build_site.py` (10 pages, 35 fixtures, 0 broken links); `python3 scripts/survey_build.py` and `python3 scripts/survey_verify.py` (24 pages, 130 inventory rows, 11 lines, 2 predictions, 21 flags; all structural checks passed); `python3 scripts/integration_audit.py` (0 local-link errors); `python3 scripts/official_source_audit.py` (130 inventory rows without official fixture-source fields; 11/15 prediction-fact URLs outside its candidate official-domain allowlist; classification is not content verification). `git diff --check` passed. No sporting data changed.
+
+Follow-up sync note: a second `git pull --rebase origin main` tried replaying the already-pushed original claim commit and conflicted in `COORDINATION.md`. The rebase was aborted without discarding changes. The current branch already contained `origin/main` and, after merging the remote session branch, contained `origin/arena/e3c5f898-olbg2`; the subsequent push advanced that remote branch by fast-forward. The claim, README update, both concurrent publish records, and completion entry are retained.
+
+---
+
 # Session `arena/73620ec4-olbg2` — new-sport coverage and final integration (2026-10-21 from 07:05 UTC)
 
 **Session ID:** `arena/73620ec4-olbg2` · **Branch:** `arena/73620ec4-olbg2` (branch name fixed by the environment)
@@ -865,3 +950,19 @@ The handball score grid initially truncated at 45 goals and silently lost about 
 mass (an 8.74-goal expected margin showed a 41.7% cover probability on a −8.5 line). The grid is now sized from
 the rates and renormalised; the corrected figure is published. This is recorded here rather than quietly fixed
 because it shows how a plausible-looking price can be wrong without any source error.
+
+### Concurrent-merge record (2026-10-21 08:05 UTC)
+
+While this branch was in CI, PRs #34–#38 from sessions `18eca832`, `8f07248b` and `e3c5f898` merged to `main`.
+`gh pr merge 39` refused ("merge commit cannot be cleanly created"), so `origin/main` was merged into this branch
+with no rebase (a rebase would have replayed other sessions' commits).
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `COORDINATION.md` | add/add at EOF — their audit ledgers vs this session's section | Their file taken verbatim, this session's complete section re-appended below it. Nothing removed. |
+| `README.md` | Their evidence-caveat rewrite vs this session's handball edits | **Their rewrite taken as the base**; only the root-dashboard row counts were updated (47/45/9, 22 open, 4 closed) and one handball section inserted. `git diff origin/main -- README.md` shows additions only. |
+| `research/integrity-audit-8f07248b.md`, `research/official-source-audit-18eca832.md`, `scripts/official_source_audit.py`, `tests/test_official_source_audit.py` | none | Taken as-is from `main` and re-verified in this branch. |
+
+After the merge: 36 unit tests pass (up from 33, the three new ones are the concurrent session's), all three
+builds and the survey gate pass, `integration_audit.py` reports 0 local link errors, and
+`official_source_audit.py` runs green. No other session's work was discarded.

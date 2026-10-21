@@ -12,21 +12,20 @@ The repository holds two published layers, both live:
 | Layer | Entry point | What it is |
 |---|---|---|
 | **Slate dashboard** | `/index.html` | 35 verified fixtures · 33 originated lines · 4 high-confidence predictions · 20 open review items (2 closed). Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
-| **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 8 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
+| **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 9 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
 
 Both layers are live and independent. The root dashboard was contributed by the `42fb7792` session; the
 `4a778bb7` session rebuilt the `site/` layer, which had previously been the two-fixture audit. Each layer states
 its own snapshot and scope, and neither reuses a bookmaker price.
 
-The two layers differ in breadth and depth and **do not share a fixture file**. Where they overlap (NHL, NBA) they
-were verified against the same league sources but originate lines with different models, so their prices differ.
-Treat each page's own numbers as the authoritative statement of that page's method; the method pages are the
-contract.
+The two layers differ in breadth and depth and **do not share a fixture file**. Where they overlap — 14 NHL games
+and 11 NBA games appear in both — the fixtures were verified against the same league sources, but each layer
+originates its own prices from its own model, so the prices differ. Treat each page's own numbers as the
+authoritative statement of that page's method.
 
-> Integration note (2026-10-21): the merge that combined these layers preserved the root dashboard and its
-> pipeline byte-for-byte apart from the navigation label (`Prior audit` → `Evidence desk v2`) and a footer link.
-> `scripts/build.py`, `tests/**` and `site/**` now belong to the evidence desk; the older two-fixture audit data
-> remains at `data/events.json` for provenance and is no longer built by either pipeline.
+`data/events.json` is the 14-game NHL capture behind the desk layer: per-team form, the last ten results, a
+16-category coverage board and eight source/flag records. It is an analysis input, not a third site — `report.py`
+prints a league-wide table from it, and the published desk pages are built from `data/desk/*.json`.
 
 ## What is in the dashboard release (capture window 2026-10-21 05:12–05:25 UTC)
 

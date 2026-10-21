@@ -1,0 +1,1326 @@
+{
+  "meta": {
+    "generated_by": "scripts/live_model.py",
+    "session": "arena/d4b9d560-olbg2",
+    "overround": 0.04,
+    "fixtures": 11,
+    "lines_originated": 33,
+    "picks": 11,
+    "high_confidence": 4
+  },
+  "rows": [
+    {
+      "id": "urc-292616",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-30",
+      "time": "15:45 local",
+      "home": "CON",
+      "away": "LEI",
+      "home_name": "Connacht Rugby",
+      "away_name": "Leinster Rugby",
+      "venue": "Dexcom Stadium",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "pf": 56,
+          "pa": 84,
+          "pts": 5,
+          "form": "LWL",
+          "pos": 14
+        },
+        "away": {
+          "pl": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "pf": 75,
+          "pa": 58,
+          "pts": 8,
+          "form": "LLW",
+          "pos": 10
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 18.6,
+        "expected_away_points": 21.9,
+        "expected_margin": -3.3,
+        "expected_total": 40.5,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "CON": {
+              "probability": 0.3768,
+              "decimal": 2.55,
+              "american": "+155"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "LEI": {
+              "probability": 0.4982,
+              "decimal": 1.93,
+              "american": "-108"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "LEI": -3.5,
+            "CON": 3.5
+          },
+          "options": {
+            "LEI": {
+              "probability": 0.5039,
+              "decimal": 1.91,
+              "american": "-110"
+            },
+            "CON": {
+              "probability": 0.4961,
+              "decimal": 1.94,
+              "american": "-107"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 40.5,
+          "options": {
+            "over": {
+              "probability": 0.4994,
+              "decimal": 1.93,
+              "american": "-108"
+            },
+            "under": {
+              "probability": 0.5006,
+              "decimal": 1.92,
+              "american": "-109"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "LEI",
+        "label": "Leinster Rugby to win the match",
+        "probability": 0.4982,
+        "decimal": 1.93,
+        "american": "-108",
+        "confidence": "low",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": null
+    },
+    {
+      "id": "urc-292617",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-30",
+      "time": "15:45 local",
+      "home": "GLA",
+      "away": "LIO",
+      "home_name": "Glasgow Warriors",
+      "away_name": "10bet Lions",
+      "venue": "Scotstoun Stadium",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 2,
+          "d": 1,
+          "l": 0,
+          "pf": 95,
+          "pa": 72,
+          "pts": 13,
+          "form": "WDW",
+          "pos": 2
+        },
+        "away": {
+          "pl": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "pf": 77,
+          "pa": 102,
+          "pts": 9,
+          "form": "WWL",
+          "pos": 7
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 45.9,
+        "expected_away_points": 18.7,
+        "expected_margin": 27.2,
+        "expected_total": 64.6,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "GLA": {
+              "probability": 0.8088,
+              "decimal": 1.19,
+              "american": "-530"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "LIO": {
+              "probability": 0.0662,
+              "decimal": 14.52,
+              "american": "+1352"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "GLA": -27.5,
+            "LIO": 27.5
+          },
+          "options": {
+            "GLA": {
+              "probability": 0.4937,
+              "decimal": 1.95,
+              "american": "-106"
+            },
+            "LIO": {
+              "probability": 0.5063,
+              "decimal": 1.9,
+              "american": "-111"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 64.5,
+          "options": {
+            "over": {
+              "probability": 0.5026,
+              "decimal": 1.91,
+              "american": "-110"
+            },
+            "under": {
+              "probability": 0.4974,
+              "decimal": 1.93,
+              "american": "-107"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "GLA",
+        "label": "Glasgow Warriors to win the match",
+        "probability": 0.8088,
+        "decimal": 1.19,
+        "american": "-530",
+        "confidence": "high",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": {
+        "fixture_id": "urc-292617",
+        "selection": "Glasgow Warriors to win the match",
+        "confidence": "high",
+        "facts_used": [
+          "Glasgow Warriors: 2nd in the URC table, 13 points, 3 played, 2 wins 1 draw 0 losses, 95 points for and 72 against, form W-D-W",
+          "Glasgow beat Connacht 36-19 at Scotstoun Stadium on 9 October 2026",
+          "10bet Lions: 7th, 9 points, 2 wins 0 draws 1 loss, 77 points for and 102 against, form W-W-L",
+          "10bet Lions lost 15-57 away to the Vodacom Bulls at Loftus Versfeld on 10 October 2026",
+          "Fixture: Friday 30 October 2026, 15:45 local, Scotstoun Stadium"
+        ],
+        "text": "Glasgow Warriors are unbeaten through three rounds, sitting second on 13 points after outscoring Connacht 36-19 at Scotstoun in their last outing, and that same ground hosts this one. The 10bet Lions arrive with 102 points already conceded, the second-worst defensive record in the table, and fresh from being beaten 57-15 at Loftus Versfeld. Backing Glasgow on the match-winner market looks the sound play.",
+        "words": 64
+      }
+    },
+    {
+      "id": "urc-292618",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-31",
+      "time": "08:45 local",
+      "home": "STO",
+      "away": "ULS",
+      "home_name": "DHL Stormers",
+      "away_name": "Ulster Rugby",
+      "venue": "DHL Stadium",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "pf": 81,
+          "pa": 54,
+          "pts": 11,
+          "form": "WLW",
+          "pos": 4
+        },
+        "away": {
+          "pl": 3,
+          "w": 0,
+          "d": 2,
+          "l": 1,
+          "pf": 88,
+          "pa": 93,
+          "pts": 8,
+          "form": "LDD",
+          "pos": 11
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 36.7,
+        "expected_away_points": 15.3,
+        "expected_margin": 21.4,
+        "expected_total": 52.1,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "STO": {
+              "probability": 0.7618,
+              "decimal": 1.26,
+              "american": "-382"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "ULS": {
+              "probability": 0.1132,
+              "decimal": 8.5,
+              "american": "+750"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "STO": -21.5,
+            "ULS": 21.5
+          },
+          "options": {
+            "STO": {
+              "probability": 0.4982,
+              "decimal": 1.93,
+              "american": "-108"
+            },
+            "ULS": {
+              "probability": 0.5018,
+              "decimal": 1.92,
+              "american": "-109"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 52.5,
+          "options": {
+            "over": {
+              "probability": 0.4871,
+              "decimal": 1.97,
+              "american": "-103"
+            },
+            "under": {
+              "probability": 0.5129,
+              "decimal": 1.87,
+              "american": "-114"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "STO",
+        "label": "DHL Stormers to win the match",
+        "probability": 0.7618,
+        "decimal": 1.26,
+        "american": "-382",
+        "confidence": "high",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": {
+        "fixture_id": "urc-292618",
+        "selection": "DHL Stormers to win the match",
+        "confidence": "high",
+        "facts_used": [
+          "DHL Stormers: 4th, 11 points, 3 played, 2 wins 1 loss, 81 points for and only 54 against, form W-L-W",
+          "Stormers beat the Hollywoodbets Sharks 39-22 at DHL Stadium on 10 October 2026",
+          "Ulster: 11th, 8 points, 0 wins 2 draws 1 loss, 88 for and 93 against, form L-D-D",
+          "Ulster drew 26-26 with Munster at Affidea Stadium on 10 October 2026",
+          "Fixture: Saturday 31 October 2026, 08:45 local, DHL Stadium"
+        ],
+        "text": "Ulster are still searching for a first win of the campaign, their three rounds producing two draws and a defeat, most recently a 26-26 stalemate with Munster. The DHL Stormers have conceded just 54 points in three matches, the tightest defence in the division, and put 39 past the Sharks in Cape Town last time out. With the Stormers at home in Cape Town again, the Stormers to win is the selection.",
+        "words": 72
+      }
+    },
+    {
+      "id": "urc-292619",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-31",
+      "time": "11:00 local",
+      "home": "BUL",
+      "away": "SCA",
+      "home_name": "Vodacom Bulls",
+      "away_name": "Scarlets",
+      "venue": "Loftus Versfeld",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "pf": 126,
+          "pa": 54,
+          "pts": 11,
+          "form": "WLW",
+          "pos": 3
+        },
+        "away": {
+          "pl": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "pf": 68,
+          "pa": 85,
+          "pts": 7,
+          "form": "LLW",
+          "pos": 12
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 50.2,
+        "expected_away_points": 10.8,
+        "expected_margin": 39.5,
+        "expected_total": 61.0,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "BUL": {
+              "probability": 0.8586,
+              "decimal": 1.12,
+              "american": "-835"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "SCA": {
+              "probability": 0.0164,
+              "decimal": 58.79,
+              "american": "+5779"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "BUL": -39.5,
+            "SCA": 39.5
+          },
+          "options": {
+            "BUL": {
+              "probability": 0.4992,
+              "decimal": 1.93,
+              "american": "-108"
+            },
+            "SCA": {
+              "probability": 0.5008,
+              "decimal": 1.92,
+              "american": "-109"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 60.5,
+          "options": {
+            "over": {
+              "probability": 0.5146,
+              "decimal": 1.87,
+              "american": "-115"
+            },
+            "under": {
+              "probability": 0.4854,
+              "decimal": 1.98,
+              "american": "-102"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "BUL",
+        "label": "Vodacom Bulls to win the match",
+        "probability": 0.8586,
+        "decimal": 1.12,
+        "american": "-835",
+        "confidence": "high",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": {
+        "fixture_id": "urc-292619",
+        "selection": "Vodacom Bulls to win the match",
+        "confidence": "high",
+        "facts_used": [
+          "Vodacom Bulls: 3rd, 11 points, 3 played, 2 wins 1 loss, 126 points for and 54 against, points difference +72, 19 tries scored",
+          "Bulls beat the 10bet Lions 57-15 at Loftus Versfeld on 10 October 2026",
+          "Scarlets: 12th, 7 points, 1 win 2 losses, 68 for and 85 against, form L-L-W",
+          "Scarlets beat Benetton 27-26 at Parc y Scarlets on 10 October 2026",
+          "Fixture: Saturday 31 October 2026, 11:00 local, Loftus Versfeld"
+        ],
+        "text": "The Vodacom Bulls have scored 126 points in three rounds, 19 of them tries, and hold a plus-72 points difference that no other club in the table comes close to, having thumped the Lions 57-15 in Pretoria. The Scarlets have won one of three, squeaking past Benetton by a single point at home, and now travel to Loftus Versfeld. Bulls to win the match is the pick.",
+        "words": 67
+      }
+    },
+    {
+      "id": "urc-292620",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-31",
+      "time": "11:00 local",
+      "home": "BEN",
+      "away": "EDI",
+      "home_name": "Benetton Rugby",
+      "away_name": "Edinburgh Rugby",
+      "venue": "Stadio Monigo",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 0,
+          "d": 1,
+          "l": 2,
+          "pf": 64,
+          "pa": 68,
+          "pts": 5,
+          "form": "DLL",
+          "pos": 15
+        },
+        "away": {
+          "pl": 3,
+          "w": 3,
+          "d": 0,
+          "l": 0,
+          "pf": 80,
+          "pa": 54,
+          "pts": 14,
+          "form": "WWW",
+          "pos": 1
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 19.5,
+        "expected_away_points": 18.3,
+        "expected_margin": 1.2,
+        "expected_total": 37.7,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "BEN": {
+              "probability": 0.4598,
+              "decimal": 2.09,
+              "american": "+109"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "EDI": {
+              "probability": 0.4152,
+              "decimal": 2.32,
+              "american": "+132"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "BEN": -1.5,
+            "EDI": 1.5
+          },
+          "options": {
+            "BEN": {
+              "probability": 0.494,
+              "decimal": 1.95,
+              "american": "-106"
+            },
+            "EDI": {
+              "probability": 0.506,
+              "decimal": 1.9,
+              "american": "-111"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 37.5,
+          "options": {
+            "over": {
+              "probability": 0.5066,
+              "decimal": 1.9,
+              "american": "-111"
+            },
+            "under": {
+              "probability": 0.4934,
+              "decimal": 1.95,
+              "american": "-105"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "BEN",
+        "label": "Benetton Rugby to win the match",
+        "probability": 0.4598,
+        "decimal": 2.09,
+        "american": "+109",
+        "confidence": "low",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": null
+    },
+    {
+      "id": "urc-292621",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-31",
+      "time": "13:30 local",
+      "home": "MUN",
+      "away": "SHA",
+      "home_name": "Munster Rugby",
+      "away_name": "Hollywoodbets Sharks",
+      "venue": "Thomond Park",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "pf": 72,
+          "pa": 74,
+          "pts": 9,
+          "form": "LWD",
+          "pos": 9
+        },
+        "away": {
+          "pl": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "pf": 89,
+          "pa": 83,
+          "pts": 10,
+          "form": "WWL",
+          "pos": 5
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 30.1,
+        "expected_away_points": 23.1,
+        "expected_margin": 7.0,
+        "expected_total": 53.3,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "MUN": {
+              "probability": 0.5642,
+              "decimal": 1.7,
+              "american": "-142"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "SHA": {
+              "probability": 0.3108,
+              "decimal": 3.09,
+              "american": "+209"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "MUN": -7.5,
+            "SHA": 7.5
+          },
+          "options": {
+            "MUN": {
+              "probability": 0.4903,
+              "decimal": 1.96,
+              "american": "-104"
+            },
+            "SHA": {
+              "probability": 0.5097,
+              "decimal": 1.89,
+              "american": "-113"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 53.5,
+          "options": {
+            "over": {
+              "probability": 0.4925,
+              "decimal": 1.95,
+              "american": "-105"
+            },
+            "under": {
+              "probability": 0.5075,
+              "decimal": 1.89,
+              "american": "-112"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "MUN",
+        "label": "Munster Rugby to win the match",
+        "probability": 0.5642,
+        "decimal": 1.7,
+        "american": "-142",
+        "confidence": "medium",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": null
+    },
+    {
+      "id": "urc-292622",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-31",
+      "time": "13:30 local",
+      "home": "DRA",
+      "away": "ZEB",
+      "home_name": "Dragons RFC",
+      "away_name": "Zebre Parma",
+      "venue": "Rodney Parade",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "pf": 88,
+          "pa": 83,
+          "pts": 9,
+          "form": "DWL",
+          "pos": 8
+        },
+        "away": {
+          "pl": 3,
+          "w": 0,
+          "d": 0,
+          "l": 3,
+          "pf": 52,
+          "pa": 116,
+          "pts": 1,
+          "form": "LLL",
+          "pos": 16
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 48.1,
+        "expected_away_points": 13.5,
+        "expected_margin": 34.6,
+        "expected_total": 61.6,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "DRA": {
+              "probability": 0.8453,
+              "decimal": 1.14,
+              "american": "-727"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "ZEB": {
+              "probability": 0.0297,
+              "decimal": 32.34,
+              "american": "+3134"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "DRA": -34.5,
+            "ZEB": 34.5
+          },
+          "options": {
+            "DRA": {
+              "probability": 0.5022,
+              "decimal": 1.91,
+              "american": "-109"
+            },
+            "ZEB": {
+              "probability": 0.4978,
+              "decimal": 1.93,
+              "american": "-107"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 61.5,
+          "options": {
+            "over": {
+              "probability": 0.5023,
+              "decimal": 1.91,
+              "american": "-109"
+            },
+            "under": {
+              "probability": 0.4977,
+              "decimal": 1.93,
+              "american": "-107"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "DRA",
+        "label": "Dragons RFC to win the match",
+        "probability": 0.8453,
+        "decimal": 1.14,
+        "american": "-727",
+        "confidence": "high",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": {
+        "fixture_id": "urc-292622",
+        "selection": "Dragons RFC to win the match",
+        "confidence": "high",
+        "facts_used": [
+          "Dragons RFC: 8th, 9 points, 3 played, 1 win 1 draw 1 loss, 88 points for and 83 against, form D-W-L",
+          "Dragons lost 31-38 at Rodney Parade to the Ospreys on 9 October 2026",
+          "Zebre Parma: 16th and bottom, 1 point, 3 played, 0 wins 3 losses, 52 for and 116 against, points difference -64, form L-L-L",
+          "Zebre lost 12-29 at Stadio Sergio Lanfranchi to Edinburgh on 10 October 2026",
+          "Fixture: Saturday 31 October 2026, 13:30 local, Rodney Parade"
+        ],
+        "text": "Zebre Parma sit bottom of the table on a single point, their three matches all defeats and their minus-64 points difference the worst in the championship, the latest a 12-29 home loss to Edinburgh. Dragons RFC have nine points from three rounds and put 31 points on the board in their last outing at Rodney Parade, where this fixture is played. Dragons RFC to win the match is the selection here.",
+        "words": 71
+      }
+    },
+    {
+      "id": "urc-292623",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "date": "2026-10-31",
+      "time": "15:45 local",
+      "home": "OSP",
+      "away": "CAR",
+      "home_name": "Ospreys",
+      "away_name": "Cardiff Rugby",
+      "venue": "St Helen's",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623",
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "pf": 81,
+          "pa": 107,
+          "pts": 6,
+          "form": "LLW",
+          "pos": 13
+        },
+        "away": {
+          "pl": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "pf": 66,
+          "pa": 71,
+          "pts": 9,
+          "form": "WWL",
+          "pos": 6
+        },
+        "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      },
+      "model": {
+        "name": "normal margin model",
+        "expected_home_points": 29.2,
+        "expected_away_points": 25.1,
+        "expected_margin": 4.1,
+        "expected_total": 54.3,
+        "margin_sd": 18.96,
+        "total_sd": 12.93,
+        "home_advantage_points": 9.62,
+        "home_advantage_applied": "+/- half of the measured margin to home/away, so the total is unchanged",
+        "draw_rate": 0.125,
+        "sample": "URC Round 3 results, 8 matches, official match centre"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "3-way",
+          "options": {
+            "OSP": {
+              "probability": 0.5118,
+              "decimal": 1.88,
+              "american": "-114"
+            },
+            "draw": {
+              "probability": 0.125,
+              "decimal": 7.69,
+              "american": "+669"
+            },
+            "CAR": {
+              "probability": 0.3632,
+              "decimal": 2.65,
+              "american": "+165"
+            }
+          }
+        },
+        "handicap": {
+          "type": "handicap",
+          "line": {
+            "OSP": -4.5,
+            "CAR": 4.5
+          },
+          "options": {
+            "OSP": {
+              "probability": 0.4909,
+              "decimal": 1.96,
+              "american": "-104"
+            },
+            "CAR": {
+              "probability": 0.5091,
+              "decimal": 1.89,
+              "american": "-113"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 54.5,
+          "options": {
+            "over": {
+              "probability": 0.4945,
+              "decimal": 1.94,
+              "american": "-106"
+            },
+            "under": {
+              "probability": 0.5055,
+              "decimal": 1.9,
+              "american": "-111"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "OSP",
+        "label": "Ospreys to win the match",
+        "probability": 0.5118,
+        "decimal": 1.88,
+        "american": "-114",
+        "confidence": "low",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": null
+    },
+    {
+      "id": "mlb-849805",
+      "sport": "Baseball",
+      "competition": "MLB 2026 World Series",
+      "date": "2026-10-23",
+      "time": "2026-10-24T00:00:00Z",
+      "home": "MIL",
+      "away": "TB",
+      "home_name": "Milwaukee Brewers",
+      "away_name": "Tampa Bay Rays",
+      "venue": "American Family Field",
+      "source_url": "https://statsapi.mlb.com/api/v1/game/849805/feed/live",
+      "detail": "World Series Game 1",
+      "inputs": {
+        "home": {
+          "wins": 103,
+          "losses": 59,
+          "runs_scored": 832,
+          "runs_allowed": 618
+        },
+        "away": {
+          "wins": 98,
+          "losses": 64,
+          "runs_scored": 736,
+          "runs_allowed": 650,
+          "division_rank": 1
+        },
+        "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+      },
+      "model": {
+        "name": "independent Poisson runs model",
+        "expected_home_runs": 4.258,
+        "expected_away_runs": 3.581,
+        "expected_total": 7.839,
+        "run_environment": 4.84,
+        "games": 162,
+        "tie_handling": "scoreline ties split 50/50 as extra innings",
+        "home_advantage": "not applied - no official MLB home/away split was captured this session"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "2-way",
+          "options": {
+            "MIL": {
+              "probability": 0.594,
+              "decimal": 1.62,
+              "american": "-162"
+            },
+            "TB": {
+              "probability": 0.406,
+              "decimal": 2.37,
+              "american": "+137"
+            }
+          }
+        },
+        "handicap": {
+          "type": "run line",
+          "line": {
+            "MIL": -1.5,
+            "TB": 1.5
+          },
+          "options": {
+            "MIL": {
+              "probability": 0.3799,
+              "decimal": 2.53,
+              "american": "+153"
+            },
+            "TB": {
+              "probability": 0.6201,
+              "decimal": 1.55,
+              "american": "-182"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 7.5,
+          "options": {
+            "over": {
+              "probability": 0.5244,
+              "decimal": 1.83,
+              "american": "-120"
+            },
+            "under": {
+              "probability": 0.4756,
+              "decimal": 2.02,
+              "american": "+102"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "MIL",
+        "label": "Milwaukee Brewers to win the match",
+        "probability": 0.594,
+        "decimal": 1.62,
+        "american": "-162",
+        "confidence": "medium",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": null
+    },
+    {
+      "id": "mlb-849802",
+      "sport": "Baseball",
+      "competition": "MLB 2026 World Series",
+      "date": "2026-10-24",
+      "time": "2026-10-25T00:00:00Z",
+      "home": "MIL",
+      "away": "TB",
+      "home_name": "Milwaukee Brewers",
+      "away_name": "Tampa Bay Rays",
+      "venue": "American Family Field",
+      "source_url": "https://statsapi.mlb.com/api/v1/game/849802/feed/live",
+      "detail": "World Series Game 2",
+      "inputs": {
+        "home": {
+          "wins": 103,
+          "losses": 59,
+          "runs_scored": 832,
+          "runs_allowed": 618
+        },
+        "away": {
+          "wins": 98,
+          "losses": 64,
+          "runs_scored": 736,
+          "runs_allowed": 650,
+          "division_rank": 1
+        },
+        "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+      },
+      "model": {
+        "name": "independent Poisson runs model",
+        "expected_home_runs": 4.258,
+        "expected_away_runs": 3.581,
+        "expected_total": 7.839,
+        "run_environment": 4.84,
+        "games": 162,
+        "tie_handling": "scoreline ties split 50/50 as extra innings",
+        "home_advantage": "not applied - no official MLB home/away split was captured this session"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "2-way",
+          "options": {
+            "MIL": {
+              "probability": 0.594,
+              "decimal": 1.62,
+              "american": "-162"
+            },
+            "TB": {
+              "probability": 0.406,
+              "decimal": 2.37,
+              "american": "+137"
+            }
+          }
+        },
+        "handicap": {
+          "type": "run line",
+          "line": {
+            "MIL": -1.5,
+            "TB": 1.5
+          },
+          "options": {
+            "MIL": {
+              "probability": 0.3799,
+              "decimal": 2.53,
+              "american": "+153"
+            },
+            "TB": {
+              "probability": 0.6201,
+              "decimal": 1.55,
+              "american": "-182"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 7.5,
+          "options": {
+            "over": {
+              "probability": 0.5244,
+              "decimal": 1.83,
+              "american": "-120"
+            },
+            "under": {
+              "probability": 0.4756,
+              "decimal": 2.02,
+              "american": "+102"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "MIL",
+        "label": "Milwaukee Brewers to win the match",
+        "probability": 0.594,
+        "decimal": 1.62,
+        "american": "-162",
+        "confidence": "medium",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": null
+    },
+    {
+      "id": "mlb-849804",
+      "sport": "Baseball",
+      "competition": "MLB 2026 World Series",
+      "date": "2026-10-26",
+      "time": "2026-10-27T00:00:00Z",
+      "home": "TB",
+      "away": "MIL",
+      "home_name": "Tampa Bay Rays",
+      "away_name": "Milwaukee Brewers",
+      "venue": "Tropicana Field",
+      "source_url": "https://statsapi.mlb.com/api/v1/game/849804/feed/live",
+      "detail": "World Series Game 3",
+      "inputs": {
+        "home": {
+          "wins": 98,
+          "losses": 64,
+          "runs_scored": 736,
+          "runs_allowed": 650,
+          "division_rank": 1
+        },
+        "away": {
+          "wins": 103,
+          "losses": 59,
+          "runs_scored": 832,
+          "runs_allowed": 618
+        },
+        "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+      },
+      "model": {
+        "name": "independent Poisson runs model",
+        "expected_home_runs": 3.581,
+        "expected_away_runs": 4.258,
+        "expected_total": 7.839,
+        "run_environment": 4.84,
+        "games": 162,
+        "tie_handling": "scoreline ties split 50/50 as extra innings",
+        "home_advantage": "not applied - no official MLB home/away split was captured this session"
+      },
+      "markets": {
+        "match_winner": {
+          "type": "2-way",
+          "options": {
+            "TB": {
+              "probability": 0.406,
+              "decimal": 2.37,
+              "american": "+137"
+            },
+            "MIL": {
+              "probability": 0.594,
+              "decimal": 1.62,
+              "american": "-162"
+            }
+          }
+        },
+        "handicap": {
+          "type": "run line",
+          "line": {
+            "MIL": -1.5,
+            "TB": 1.5
+          },
+          "options": {
+            "MIL": {
+              "probability": 0.7853,
+              "decimal": 1.22,
+              "american": "-446"
+            },
+            "TB": {
+              "probability": 0.2147,
+              "decimal": 4.48,
+              "american": "+348"
+            }
+          }
+        },
+        "total": {
+          "type": "total",
+          "line": 7.5,
+          "options": {
+            "over": {
+              "probability": 0.5244,
+              "decimal": 1.83,
+              "american": "-120"
+            },
+            "under": {
+              "probability": 0.4756,
+              "decimal": 2.02,
+              "american": "+102"
+            }
+          }
+        }
+      },
+      "pick": {
+        "market": "match_winner",
+        "selection": "MIL",
+        "label": "Milwaukee Brewers to win the match",
+        "probability": 0.594,
+        "decimal": 1.62,
+        "american": "-162",
+        "confidence": "medium",
+        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+      },
+      "prediction": null
+    }
+  ]
+}

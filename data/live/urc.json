@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "sport": "Rugby Union",
+    "competition": "United Rugby Championship 2026-27, Round 5",
+    "captured_utc": "2026-10-21T07:30:00Z",
+    "captured_by": "arena/d4b9d560-olbg2",
+    "time_note": "URC match centre states 'All times shown are Local'. Times are stored exactly as published and are NOT converted to UTC.",
+    "fixture_source": {
+      "name": "URC official match centre, Round 5",
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/5"
+    },
+    "table_source": {
+      "name": "URC official league table 2026/27",
+      "url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    "verified": true,
+    "coverage_note": "Round 4 (23-24 Oct 2026) is already published by the root dashboard layer from data/inputs/urc.json; this capture adds Round 5, which no other layer holds."
+  },
+  "table": {
+    "EDI": {
+      "name": "Edinburgh Rugby",
+      "pos": 1,
+      "pts": 14,
+      "pl": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "pf": 80,
+      "pa": 54,
+      "diff": 26,
+      "form": "WWW"
+    },
+    "GLA": {
+      "name": "Glasgow Warriors",
+      "pos": 2,
+      "pts": 13,
+      "pl": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "pf": 95,
+      "pa": 72,
+      "diff": 23,
+      "form": "WDW"
+    },
+    "BUL": {
+      "name": "Vodacom Bulls",
+      "pos": 3,
+      "pts": 11,
+      "pl": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 126,
+      "pa": 54,
+      "diff": 72,
+      "form": "WLW"
+    },
+    "STO": {
+      "name": "DHL Stormers",
+      "pos": 4,
+      "pts": 11,
+      "pl": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 81,
+      "pa": 54,
+      "diff": 27,
+      "form": "WLW"
+    },
+    "SHA": {
+      "name": "Hollywoodbets Sharks",
+      "pos": 5,
+      "pts": 10,
+      "pl": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 89,
+      "pa": 83,
+      "diff": 6,
+      "form": "WWL"
+    },
+    "CAR": {
+      "name": "Cardiff Rugby",
+      "pos": 6,
+      "pts": 9,
+      "pl": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 66,
+      "pa": 71,
+      "diff": -5,
+      "form": "WWL"
+    },
+    "LIO": {
+      "name": "10bet Lions",
+      "pos": 7,
+      "pts": 9,
+      "pl": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 77,
+      "pa": 102,
+      "diff": -25,
+      "form": "WWL"
+    },
+    "DRA": {
+      "name": "Dragons RFC",
+      "pos": 8,
+      "pts": 9,
+      "pl": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "pf": 88,
+      "pa": 83,
+      "diff": 5,
+      "form": "DWL"
+    },
+    "MUN": {
+      "name": "Munster Rugby",
+      "pos": 9,
+      "pts": 9,
+      "pl": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "pf": 72,
+      "pa": 74,
+      "diff": -2,
+      "form": "LWD"
+    },
+    "LEI": {
+      "name": "Leinster Rugby",
+      "pos": 10,
+      "pts": 8,
+      "pl": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 75,
+      "pa": 58,
+      "diff": 17,
+      "form": "LLW"
+    },
+    "ULS": {
+      "name": "Ulster Rugby",
+      "pos": 11,
+      "pts": 8,
+      "pl": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "pf": 88,
+      "pa": 93,
+      "diff": -5,
+      "form": "LDD"
+    },
+    "SCA": {
+      "name": "Scarlets",
+      "pos": 12,
+      "pts": 7,
+      "pl": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 68,
+      "pa": 85,
+      "diff": -17,
+      "form": "LLW"
+    },
+    "OSP": {
+      "name": "Ospreys",
+      "pos": 13,
+      "pts": 6,
+      "pl": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 81,
+      "pa": 107,
+      "diff": -26,
+      "form": "LLW"
+    },
+    "CON": {
+      "name": "Connacht Rugby",
+      "pos": 14,
+      "pts": 5,
+      "pl": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 56,
+      "pa": 84,
+      "diff": -28,
+      "form": "LWL"
+    },
+    "BEN": {
+      "name": "Benetton Rugby",
+      "pos": 15,
+      "pts": 5,
+      "pl": 3,
+      "w": 0,
+      "d": 1,
+      "l": 2,
+      "pf": 64,
+      "pa": 68,
+      "diff": -4,
+      "form": "DLL"
+    },
+    "ZEB": {
+      "name": "Zebre Parma",
+      "pos": 16,
+      "pts": 1,
+      "pl": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "pf": 52,
+      "pa": 116,
+      "diff": -64,
+      "form": "LLL"
+    }
+  },
+  "fixtures": [
+    {
+      "id": "urc-292616",
+      "date_local": "2026-10-30",
+      "time_local": "15:45",
+      "home": "CON",
+      "away": "LEI",
+      "venue": "Dexcom Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616"
+    },
+    {
+      "id": "urc-292617",
+      "date_local": "2026-10-30",
+      "time_local": "15:45",
+      "home": "GLA",
+      "away": "LIO",
+      "venue": "Scotstoun Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617"
+    },
+    {
+      "id": "urc-292618",
+      "date_local": "2026-10-31",
+      "time_local": "08:45",
+      "home": "STO",
+      "away": "ULS",
+      "venue": "DHL Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618"
+    },
+    {
+      "id": "urc-292619",
+      "date_local": "2026-10-31",
+      "time_local": "11:00",
+      "home": "BUL",
+      "away": "SCA",
+      "venue": "Loftus Versfeld",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619"
+    },
+    {
+      "id": "urc-292620",
+      "date_local": "2026-10-31",
+      "time_local": "11:00",
+      "home": "BEN",
+      "away": "EDI",
+      "venue": "Stadio Monigo",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620"
+    },
+    {
+      "id": "urc-292621",
+      "date_local": "2026-10-31",
+      "time_local": "13:30",
+      "home": "MUN",
+      "away": "SHA",
+      "venue": "Thomond Park",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621"
+    },
+    {
+      "id": "urc-292622",
+      "date_local": "2026-10-31",
+      "time_local": "13:30",
+      "home": "DRA",
+      "away": "ZEB",
+      "venue": "Rodney Parade",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622"
+    },
+    {
+      "id": "urc-292623",
+      "date_local": "2026-10-31",
+      "time_local": "15:45",
+      "home": "OSP",
+      "away": "CAR",
+      "venue": "St Helen's",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623"
+    }
+  ],
+  "round3_results": {
+    "source": {
+      "name": "URC official match centre, Round 3 results",
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/5"
+    },
+    "note": "Results panel rendered at the head of the Round 5 match-centre page; used only to derive the observed home/away scoring split and margin spread that the line model uses.",
+    "played": [
+      {
+        "date": "2026-10-09",
+        "home": "GLA",
+        "away": "CON",
+        "hs": 36,
+        "as": 19,
+        "venue": "Scotstoun Stadium"
+      },
+      {
+        "date": "2026-10-09",
+        "home": "DRA",
+        "away": "OSP",
+        "hs": 31,
+        "as": 38,
+        "venue": "Rodney Parade"
+      },
+      {
+        "date": "2026-10-10",
+        "home": "BUL",
+        "away": "LIO",
+        "hs": 57,
+        "as": 15,
+        "venue": "Loftus Versfeld"
+      },
+      {
+        "date": "2026-10-10",
+        "home": "STO",
+        "away": "SHA",
+        "hs": 39,
+        "as": 22,
+        "venue": "DHL Stadium"
+      },
+      {
+        "date": "2026-10-10",
+        "home": "ZEB",
+        "away": "EDI",
+        "hs": 12,
+        "as": 29,
+        "venue": "Stadio Sergio Lanfranchi"
+      },
+      {
+        "date": "2026-10-10",
+        "home": "SCA",
+        "away": "BEN",
+        "hs": 27,
+        "as": 26,
+        "venue": "Parc y Scarlets"
+      },
+      {
+        "date": "2026-10-10",
+        "home": "ULS",
+        "away": "MUN",
+        "hs": 26,
+        "as": 26,
+        "venue": "Affidea Stadium"
+      },
+      {
+        "date": "2026-10-10",
+        "home": "LEI",
+        "away": "CAR",
+        "hs": 29,
+        "as": 5,
+        "venue": "Laya Arena"
+      }
+    ]
+  }
+}

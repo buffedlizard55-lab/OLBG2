@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "sport": "Baseball",
+    "competition": "MLB 2026 World Series",
+    "captured_utc": "2026-10-21T07:45:00Z",
+    "captured_by": "arena/d4b9d560-olbg2",
+    "fixture_source": {
+      "name": "MLB official Stats API schedule (sportId=1)",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-26&hydrate=team"
+    },
+    "standings_source": {
+      "name": "MLB official Stats API standings, 2026 regular season (AL: leagueId=103, NL: leagueId=104)",
+      "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    },
+    "verified": true,
+    "notes": [
+      "gameDate values from the schedule feed are UTC; officialDate is the local playing date. Both are stored as returned.",
+      "MLB returned totalGames=0 for 2026-10-21 and 2026-10-22, so no MLB rows exist for those dates.",
+      "Games 4-7 of the series are 'if necessary' and were not returned by the schedule feed, so they are not published."
+    ]
+  },
+  "teams": {
+    "TB": {
+      "name": "Tampa Bay Rays",
+      "team_id": 139,
+      "league": "American League",
+      "division": "American League East",
+      "division_rank": 1,
+      "league_rank": 1,
+      "wins": 98,
+      "losses": 64,
+      "runs_scored": 736,
+      "runs_allowed": 650,
+      "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    },
+    "MIL": {
+      "name": "Milwaukee Brewers",
+      "team_id": 158,
+      "league": "National League",
+      "division": "National League Central",
+      "wins": 103,
+      "losses": 59,
+      "runs_scored": 832,
+      "runs_allowed": 618,
+      "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason&fields=records,teamRecords,team,name,wins,losses,runsScored,runsAllowed"
+    }
+  },
+  "fixtures": [
+    {
+      "id": "mlb-849805",
+      "game_pk": 849805,
+      "official_date": "2026-10-23",
+      "game_date_utc": "2026-10-24T00:00:00Z",
+      "home": "MIL",
+      "away": "TB",
+      "venue": "American Family Field",
+      "description": "World Series Game 1",
+      "series_game_number": 1,
+      "url": "https://statsapi.mlb.com/api/v1/game/849805/feed/live",
+      "human_url": "https://www.mlb.com/gameday/849805"
+    },
+    {
+      "id": "mlb-849802",
+      "game_pk": 849802,
+      "official_date": "2026-10-24",
+      "game_date_utc": "2026-10-25T00:00:00Z",
+      "home": "MIL",
+      "away": "TB",
+      "venue": "American Family Field",
+      "description": "World Series Game 2",
+      "series_game_number": 2,
+      "url": "https://statsapi.mlb.com/api/v1/game/849802/feed/live",
+      "human_url": "https://www.mlb.com/gameday/849802"
+    },
+    {
+      "id": "mlb-849804",
+      "game_pk": 849804,
+      "official_date": "2026-10-26",
+      "game_date_utc": "2026-10-27T00:00:00Z",
+      "home": "TB",
+      "away": "MIL",
+      "venue": "Tropicana Field",
+      "description": "World Series Game 3",
+      "series_game_number": 3,
+      "url": "https://statsapi.mlb.com/api/v1/game/849804/feed/live",
+      "human_url": "https://www.mlb.com/gameday/849804"
+    }
+  ]
+}

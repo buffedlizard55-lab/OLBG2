@@ -1,0 +1,26 @@
+{
+  "as_of_utc": "2026-10-21T05:12:00Z",
+  "scope": "Partial manual snapshot; not a complete or continuously updated OLBG inventory.",
+  "events": [
+    {
+      "id": "nhl-2026020152", "sport": "Ice hockey", "league": "NHL", "date": "2026-10-21", "time": "19:30 EDT", "away": "Philadelphia Flyers", "home": "Buffalo Sabres",
+      "official_url": "https://www.nhl.com/gamecenter/phi-vs-buf/2026/10/21/2026020152",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897",
+      "markets_checked": ["Money line", "Puck line", "Game total"],
+      "own_lines": {"money_line": null, "handicap": null, "total": null}, "winner": null, "confidence": null, "prediction": null,
+      "status": "needs review", "note": "NHL gamecenter confirms matchup and 7:30 PM EDT; OLBG lists 19:37 without a stated timezone. Market availability and independent prices have not been verified. No evidence-backed selection is published."
+    },
+    {
+      "id": "nhl-2026020153", "sport": "Ice hockey", "league": "NHL", "date": "2026-10-21", "time": "19:30 EDT", "away": "Florida Panthers", "home": "Ottawa Senators",
+      "official_url": "https://www.nhl.com/gamecenter/fla-vs-ott/2026/10/21/2026020153",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
+      "markets_checked": ["Money line", "Puck line", "Game total"],
+      "own_lines": {"money_line": null, "handicap": null, "total": null}, "winner": null, "confidence": null, "prediction": null,
+      "status": "needs review", "note": "NHL gamecenter confirms matchup and 7:30 PM EDT; OLBG lists 19:37 without a stated timezone. Market availability and independent prices have not been verified. No evidence-backed selection is published."
+    }
+  ],
+  "coverage_gaps": [
+    {"sport": "Basketball", "issue": "OLBG lists MIL Bucks @ WAS Wizards, but the accessible official NBA games page exposes daily game counts without individual fixtures. Matchup, time and markets not independently confirmed; no row or pick published.", "official_url": "https://www.nba.com/games", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889"},
+    {"sport": "All other eligible sports", "issue": "No complete verified OLBG inventory or official schedule cross-check was completed. This snapshot is not exhaustive and must not be treated as current after the as-of time.", "official_url": "https://www.nhl.com/schedule/2026-10-21", "olbg_url": "https://www.olbg.com/betting-tips"}
+  ]
+}

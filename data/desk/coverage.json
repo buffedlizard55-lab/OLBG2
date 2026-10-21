@@ -1,0 +1,202 @@
+{
+  "coverage": [
+    {
+      "sport": "Ice hockey",
+      "slug": "ice-hockey",
+      "status": "covered",
+      "fixtures": 14,
+      "official_url": "https://www.nhl.com/schedule/2026-10-21",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "note": "Every NHL game on Oct 21 and Oct 22, each linked to its own gamecenter. Full money line, puck line and total originated."
+    },
+    {
+      "sport": "Basketball",
+      "slug": "basketball",
+      "status": "covered",
+      "fixtures": 11,
+      "official_url": "https://www.nba.com/games?date=2026-10-21",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "note": "All 11 NBA games on Oct 21. Lines are baseline only: the season is one game old, so no club has a usable sample."
+    },
+    {
+      "sport": "Baseball",
+      "slug": "baseball",
+      "status": "no-fixtures",
+      "fixtures": 0,
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21",
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "note": "The official MLB schedule API returns zero games for Oct 21, 2026. No row published."
+    },
+    {
+      "sport": "Tennis",
+      "slug": "tennis",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "note": "No official draw was retrieved, so no fixture, price or pick is published."
+    },
+    {
+      "sport": "Cricket",
+      "slug": "cricket",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "note": "No official fixture list was retrieved. Not covered in this snapshot."
+    },
+    {
+      "sport": "Rugby union",
+      "slug": "rugby-union",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "note": "No official league fixture list was retrieved. Not covered in this snapshot."
+    },
+    {
+      "sport": "Rugby league",
+      "slug": "rugby-league",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "note": "No official league fixture list was retrieved. Not covered in this snapshot."
+    },
+    {
+      "sport": "Snooker",
+      "slug": "snooker",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "note": "No official draw was retrieved. Not covered in this snapshot."
+    },
+    {
+      "sport": "Darts",
+      "slug": "darts",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15",
+      "note": "No official draw was retrieved. Not covered in this snapshot."
+    },
+    {
+      "sport": "Handball",
+      "slug": "handball",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "note": "No official fixture list was retrieved. Not covered in this snapshot."
+    },
+    {
+      "sport": "Volleyball",
+      "slug": "volleyball",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "note": "No official fixture list was retrieved. Not covered in this snapshot."
+    },
+    {
+      "sport": "Golf",
+      "slug": "golf",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/5",
+      "note": "Golf is an outright tournament market rather than a two-sided match. No official field was retrieved, so no price is published."
+    },
+    {
+      "sport": "Motor racing",
+      "slug": "motor-racing",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "note": "Motor racing is a multi-entrant event, not a match. No official entry list was retrieved."
+    },
+    {
+      "sport": "Greyhounds",
+      "slug": "greyhounds",
+      "status": "unverified",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "note": "Race-by-race card data was not retrieved. No runner is priced."
+    },
+    {
+      "sport": "Soccer",
+      "slug": "soccer",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Football/1",
+      "note": "Excluded by scope. Football in the OLBG menu means soccer and is not covered."
+    },
+    {
+      "sport": "Horse racing",
+      "slug": "horse-racing",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Horse_Racing/2",
+      "note": "Excluded by scope."
+    },
+    {
+      "sport": "Boxing, UFC and MMA",
+      "slug": "boxing",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Boxing/16",
+      "note": "Excluded by scope."
+    },
+    {
+      "sport": "American football",
+      "slug": "american-football",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/American_Football/11",
+      "note": "Excluded by scope."
+    },
+    {
+      "sport": "Gaelic football",
+      "slug": "gaelic-football",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "note": "Excluded by scope (football)."
+    },
+    {
+      "sport": "Hurling",
+      "slug": "hurling",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Hurling/26",
+      "note": "Excluded by scope."
+    },
+    {
+      "sport": "Cycling",
+      "slug": "cycling",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips/Cycling/17",
+      "note": "Excluded by scope."
+    },
+    {
+      "sport": "Specials",
+      "slug": "specials",
+      "status": "excluded",
+      "fixtures": 0,
+      "official_url": null,
+      "olbg_url": "https://www.olbg.com/betting-tips",
+      "note": "Excluded by scope. OLBG's specials are not a fixture list."
+    }
+  ]
+}

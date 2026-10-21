@@ -114,3 +114,53 @@ Verifying the live site exposed one provenance defect: all twelve NHL rows linke
 including the eleven games on 22 October. The data itself was correct (captured from the 22 October feed during
 collection), but the citation was not line-accurate. Fixed in PR #8 by deriving the URL from each fixture's own
 date; the site was rebuilt and re-verified. No prices, picks or confidence grades changed.
+
+
+## Session `4a778bb7` — evidence desk v2 and integration (2026-10-21 05:30–06:30 UTC)
+
+**Branch:** `arena/4a778bb7-olbg2` (the hosting environment fixes one branch per session; `session-*` branches
+cannot be created here). Claim committed and pushed as `b40eb6d` before implementation work.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Evidence desk v2: engine, data, tests, site rebuild | done | `4a778bb7` | `scripts/engine.py`, `scripts/build.py`, `data/desk/**`, `site/**`, `tests/**` |
+| Integration with the root dashboard (merged in `3778896`, then `75d6a40`) | done | `4a778bb7` | `README.md`, `COORDINATION.md`, `scripts/build_site.py` (nav label only) |
+
+### What this session added
+
+- `scripts/engine.py` — originated-line engine. NHL: goal difference per game shrunk toward the league mean by 12
+  games, +0.25 home edge, logistic scale 1.2, no-vig American prices, 1.5 puck line, half-goal totals with σ 1.7.
+  NBA: explicit baseline (league-average clubs, 2.5-point home court, no total).
+- `data/desk/` — meta (parameters, exclusions, limits), 32-club NHL standings inputs, 25 fixtures, 4 predictions,
+  22-sport coverage registry, 8 flags, and an allow-listed source registry.
+- `site/` — dashboard, pick sheet with confidence filter, per-sport pages, methodology, source registry and a
+  Flagged for Review page. 28 tests; `scripts/build.py` fails on any unregistered or non-official source.
+- Verified: 25 fixtures (14 NHL across Oct 21–22, 11 NBA on Oct 21), 64 markets, 4 high-confidence picks
+  (BUF, BOS, DAL, MIN money lines), no unverified value filled in.
+
+### Merge and conflict resolution
+
+`main` advanced twice while this branch was open (`3778896` after PR #7, then `75d6a40` after PR #9). Each time the
+branch was merged forward; nothing from the other session was discarded.
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `scripts/build.py`, `tests/test_build.py`, `site/**` | Two different `site/` pipelines | This branch's desk pipeline kept; the old two-fixture builder and its tests are superseded. `data/events.json` retained unchanged for provenance. |
+| `scripts/model.py` | Both sessions created it | The other session's model kept at `scripts/model.py` (used by `build_site.py`); this branch's engine renamed to `scripts/engine.py`. |
+| `data/sources.json`, `data/flagged.json` | Both sessions created them | Root dashboard files kept in place; the desk versions moved to `data/desk/`. |
+| `index.html`, `picks.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/**`, `assets/**` | Root dashboard vs the old redirect/site | Root dashboard kept as the landing page. |
+| `README.md`, `COORDINATION.md` | Two project descriptions | Merged: the other sessions' records preserved above, this section appended. |
+| `scripts/build_site.py` | — | Single edit: nav label `Prior audit` → `Evidence desk v2`, plus a footer link. Rebuilt; page output otherwise byte-identical. |
+
+Both pipelines were run after the merge: `scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken
+links; `python -m unittest discover -s tests` → 28 tests pass; `scripts/build.py` → 25 fixtures, 4 high / 5 medium /
+16 low, regenerating `site/` with no diff. `scripts/model.py` writes a `generated_at` timestamp into
+`data/matches.json`, so re-running it always produces a one-line diff; the committed file was restored after the
+check and that non-determinism is logged here.
+
+### Irregularities carried forward
+
+All eight desk flags remain open and published at `/site/flagged.html`: the NHL internal inconsistency, the OLBG
+19:37 vs 7:30 PM EDT discrepancy, the eleven unverified eligible sports, the NBA baseline, the MLB zero-game date,
+blank venues and the missing 2025-26 NBA bulk baseline. The root dashboard's own flags remain published at
+`/flagged.html`.

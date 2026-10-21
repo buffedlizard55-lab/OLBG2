@@ -422,7 +422,7 @@ def build_flagged(flagged, matches):
 <ul>
 <li>Read the ATP rankings and PDC Order of Merit from a browser-rendered page so tennis and darts can be lined.</li>
 <li>Confirm the Gaelic football club fixtures on the relevant county board sites before publishing them.</li>
-<li>Survey the eight sports that were not captured at all (Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League).</li>
+<li>Survey the six sports that were not opened at all (Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League); handball and volleyball are already surveyed and recorded as F21 and F22.</li>
 </ul></details>
 """
     return page("Flagged for review", "flagged.html", body, "Unverified, blank and irregular items with source links.")

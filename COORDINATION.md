@@ -1024,3 +1024,15 @@ Integration and conflict record: while this follow-up was in progress, main adva
 Verification on the merged base: `python3 -m unittest discover -s tests -v` (43 tests passed); `python3 scripts/build_site.py` (11 pages, 47 stored rows, 9 predictions); `python3 scripts/build.py`; `python3 scripts/survey_build.py`; `python3 scripts/survey_verify.py` (24 pages, 130 survey rows, 11 lines, 2 predictions, 21 flags; all structural gates green); `python3 scripts/integration_audit.py` (0 local link errors); `python3 scripts/official_source_audit.py` (130 survey rows lacking explicit official fixture-source values; domain classification is not content verification). No validator or build claims external factual accuracy.
 
 Final pre-push sync note: `git pull --rebase origin arena/e3c5f898-olbg2` attempted to replay historical session commits and conflicted in `COORDINATION.md`; the rebase was aborted without modifying the branch. `git merge-base` confirmed both the remote session branch and `origin/main` are already ancestors of this branch (the integration merge records both). No work was discarded; the next push is a fast-forward only.
+
+### Publish record — root-dashboard evidence-copy follow-up, session `arena/e3c5f898-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#43](https://github.com/buffedlizard55-lab/OLBG2/pull/43) |
+| Merge | **MERGED** 2026-10-21T07:22:49Z; commit `b69e1f914fc8cf772cf29b6cb0d2c8b26a19c46d` |
+| Content validation | Run `39561559990` — success |
+| GitHub Pages build/deployment | Run `39561559440` — success, build and deploy jobs |
+| Pages status | `built`, source `main:/` |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/index.html?cachebust=43` shows the dated-snapshot disclaimer, 47 stored rows, and source-link verification limits. |
+| Warnings | Non-blocking Node.js 20 deprecation and Ubuntu runner migration annotations; all jobs succeeded. |

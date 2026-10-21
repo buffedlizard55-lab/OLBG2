@@ -10,14 +10,14 @@ from urllib.parse import unquote, urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import build as B  # noqa: E402
-import model as M  # noqa: E402
+import engine as M  # noqa: E402
 
 
 def snapshot():
     return {
         "meta": B.load("meta.json"),
         "sources": B.load("sources.json"),
-        "nhl_teams": B.load("team_inputs/nhl.json"),
+        "nhl_teams": B.load("nhl_teams.json"),
         "fixtures": B.load("fixtures.json"),
         "picks": B.load("picks.json"),
         "flagged": B.load("flagged.json"),
@@ -193,7 +193,9 @@ class SiteTests(unittest.TestCase):
                 if not target or urlparse(target).scheme or target.startswith("#"):
                     continue
                 path = (page.parent / unquote(urlparse(target).path)).resolve()
-                self.assertTrue(path.is_relative_to(root), f"{page}: escapes site root")
+                if not path.is_relative_to(root):
+                    # The only permitted outbound local link is the root dashboard entry point.
+                    self.assertEqual(path, (B.ROOT / "index.html").resolve(), f"{page}: escapes site root")
                 self.assertTrue(path.is_file(), f"{page}: missing {target}")
 
     def test_no_insecure_links(self):

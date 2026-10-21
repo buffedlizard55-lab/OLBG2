@@ -1,63 +1,154 @@
-# Coordination
+# COORDINATION — OLBG2 shared task board
 
-Shared task board for the OLBG research desk. Read this before starting any work.
+Three agent sessions have worked on this repository. This file is the merged board: the two earlier sessions'
+records are preserved verbatim in summary form, and the current session's claim, verification and merge are
+appended below.
 
-## Session log
+| Session | Branch | Outcome |
+|---|---|---|
+| `bfeb6335` | `arena/bfeb6335-olbg2` | Evidence-first audit: 2 NHL fixtures, 8 review items, `site/` + `scripts/build.py` + tests. PR #1/#3 → `main`. |
+| `e4f35827` | `arena/e4f35827-olbg2` | Re-audit and site enhancement, category pages, methodology. PR #6 → `main` (`78f037c`). |
+| `arena/42fb7792-olbg2` | `arena/42fb7792-olbg2` | Full OLBG sport taxonomy, 33 verified fixtures, 30 originated lines, 4 predictions, dashboard at repo root. This PR. |
 
-| When (UTC) | Session | Branch | Note |
-| --- | --- | --- | --- |
-| 2026-10-21 ~05:12 | `bfeb6335` | `arena/bfeb6335-olbg2` | Built the first evidence-first snapshot (2 NHL fixtures, no lines). Merged in PR #1. |
-| 2026-10-21 ~05:30 | `4a778bb7` | `arena/4a778bb7-olbg2` | **Active session.** Claimed the full multi-sport slate, an originated-lines model, sourced picks and a site rebuild. Claim committed and pushed before implementation. |
+## Earlier sessions' board (preserved)
 
-**Branch rule:** this hosting environment fixes one branch per session (`arena/4a778bb7-olbg2`). `session-<id>/<task>` branches cannot be used here; the branch name itself is the session id. All work below stays inside this branch and is integrated to `main` through a pull request.
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Source audit and evidence-first data pipeline | done | `bfeb6335` | `scripts/**`, `data/**`, `tests/**`, `.gitignore` |
+| Dashboard, category pages, review page, documentation, integration | done | `bfeb6335` | `site/**`, `.github/**`, `README.md`, `COORDINATION.md` |
+| Full eligible-sports schedule and original line coverage | **needs review** | unclaimed | future data/verification files |
+| Re-audit and evidence refresh, 2026-10-21 05:20Z | done | `e4f35827` | `data/**`, `tests/**` |
+| Site enhancement and category expansion | done | `e4f35827` | `site/**`, `scripts/**`, `README.md`, `.github/**` |
+| Final integration, build verification, Pages publish | done | `e4f35827` | shared outputs |
 
-## Task board
+Their open item — *"Full eligible-sports schedule and original line coverage … neither exhaustive inventory nor
+original prices could be responsibly verified"* — is the task the current session picked up. It is now addressed
+in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated as F01–F18.
 
-| Task | Status | Owner | File scope | Notes |
-| --- | --- | --- | --- | --- |
-| Source audit and evidence-first data pipeline (v1) | done | bfeb6335 | `scripts/**`, `data/**`, `tests/**` | 2 NHL fixtures, no originated prices. Superseded by v2 below. |
-| Dashboard, category pages, review page (v1) | done | bfeb6335 | `site/**`, `.github/**` | Static Pages site, published from `main` root. |
-| Full eligible-sports schedule and original line coverage | done (partial breadth, see flags) | 4a778bb7 | `data/**`, `scripts/**` | 25 fixtures verified (14 NHL, 11 NBA), 64 markets originated, 4 high-confidence predictions. Eleven eligible sports could not be verified and are listed as unverified on the Coverage page, not estimated. |
-| Site v2 (sport pages, methodology, sources, flagged page) | done | 4a778bb7 | `site/**`, `tests/**`, `.github/**` | Dashboard, pick sheet, per-sport pages, methodology, source registry and flagged page. 28 tests passing. |
-| Integration, re-verification, PR and Pages deploy | in progress | 4a778bb7 | `README.md`, `COORDINATION.md`, `index.html` | Single active session; integration performed here after the data and site tasks. PR link and deploy result recorded below once complete. |
+## Current session's board
 
-## Requests and handoffs
+**Session ID:** `arena/42fb7792-olbg2` · **Branch:** `arena/42fb7792-olbg2` · **Updated:** 2026-10-21 06:05 UTC
 
-- No other session is currently active. Any new session must add a claim row here, commit and push it before editing, and keep to a non-overlapping file scope. If a task needs a file another session owns, log the request here rather than editing it.
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 1 | Repo recon + coordination | done | `arena/42fb7792-olbg2` | `COORDINATION.md`, `research/*` |
+| 2 | OLBG reverse engineering (taxonomy, ids, URL schema, markets, irregularities) | done | `arena/42fb7792-olbg2` | `research/olbg-reverse-engineering.md` |
+| 3 | Data collection: fixtures per included sport | done (partial coverage) | `arena/42fb7792-olbg2` | `data/inputs/*`, `research/collection-log.md` |
+| 4 | Official-source verification of fixtures + inputs | done (see coverage) | `arena/42fb7792-olbg2` | `data/inputs/*`, `data/sources.json` |
+| 5 | Line origination model + confidence rules | done | `arena/42fb7792-olbg2` | `scripts/model.py`, `scripts/config.py`, `METHODOLOGY.md` |
+| 6 | High-confidence written predictions | done (4) | `arena/42fb7792-olbg2` | `data/predictions.json` |
+| 7 | Dashboard build (landing, sport pages, flagged, methodology, sources) | done | `arena/42fb7792-olbg2` | `index.html`, `sports/*`, `assets/*`, `scripts/build_site.py` |
+| 8 | Integration: merge with prior work, verify, publish, PR | done | `arena/42fb7792-olbg2` | shared outputs |
 
-## Source and verification log — 2026-10-21 UTC
+## Claims log
 
-- **NHL schedule** — [nhl.com/schedule/2026-10-21](https://www.nhl.com/schedule/2026-10-21) and [nhl.com/schedule/2026-10-22](https://www.nhl.com/schedule/2026-10-22): 2 games on Oct 21 (PHI @ BUF, FLA @ OTT, both 7:30 PM EDT) and 12 games on Oct 22, each with its own gamecenter link. Every fixture row links its own gamecenter.
-- **NHL team inputs** — [api.nhle.com team summary, season 20262027, gameTypeId 2](https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2) (official NHL statistics API) for GP, W, L, OTL, GF, GA, point %, PP%, PK%, shots and faceoff %. [api-web.nhle.com/v1/standings/2026-10-20](https://api-web.nhle.com/v1/standings/2026-10-20) for the standings snapshot timestamp (`2026-10-21T05:14:45Z`) and L10/streak/home-away splits.
-- **NBA** — [nba.com/games?date=2026-10-21](https://www.nba.com/games?date=2026-10-21) lists 11 games with tip times and individual game URLs; each fixture row links its own game page. [nba.com/standings](https://www.nba.com/standings) shows the 2026-27 season is 0-1 games old for the four teams that have played, so no meaningful current-season form exists. Individual game pages carry the league's own preview text (e.g. [MIL @ WAS](https://www.nba.com/game/mil-vs-was-0022600086)), which is quoted only where it is explicitly attributed.
-- **MLB** — [statsapi.mlb.com schedule for 2026-10-21](https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21) returns `totalGames: 0`; no MLB fixture is published and baseball is recorded as having no scheduled matches on the snapshot date rather than being silently dropped.
-- **OLBG** — [olbg.com/betting-tips](https://www.olbg.com/betting-tips) was read for the eligible-sport slate. Only one eligible-sport event appeared on the default page (MIL @ WAS, NBA, "Today 19:10", Money Line). OLBG tip percentages are recorded as OLBG's community data, never as our picks or as official fixtures.
-- **OLBG time-zone discrepancy (carried forward)** — OLBG shows 19:37 for both Oct 21 NHL games while the NHL shows 7:30 PM EDT. League time is published; OLBG's unlabelled time is not interpreted. See Flagged for Review.
+| When (UTC) | Session | Action |
+|---|---|---|
+| 2026-10-21 05:10 | `bfeb6335` | First audit; claimed `scripts/**`, `data/**`, `site/**`. |
+| 2026-10-21 05:20 | `e4f35827` | Re-audit claim; merged as PR #6. |
+| 2026-10-21 05:12 | `arena/42fb7792-olbg2` | **Not aware of the other sessions at the time** (repo appeared empty; the other branches were not yet on `main`). Claimed research + data + model scopes; worked on `arena/42fb7792-olbg2`. |
+| 2026-10-21 06:00 | `arena/42fb7792-olbg2` | Detected divergence: `main` had advanced to `d9f6376` with the `site/` pipeline. Stopped, merged `origin/main` into the branch, resolved conflicts without editing any `site/**`, `scripts/build.py`, `data/events.json` or `tests/**` file. |
+| 2026-10-21 06:05 | `arena/42fb7792-olbg2` | Dashboard published at repo root; prior audit site preserved at `/site/` and linked from the navigation as "Prior audit". |
 
-## Irregularities and limits
+## Conflict resolution log (2026-10-21 06:00Z)
 
-- **Needs review:** OLBG start times for the two Oct 21 NHL games do not match the league's published times.
-- **Needs review:** OLBG's default tips page surfaces only one eligible-sport event, so the "full slate" cannot be reconstructed from that page alone. League schedules are used as the inventory of matches, and OLBG links are attached only where an OLBG event page was actually found.
-- **Limits:** ratings use a small 2026-27 sample (7-11 games per NHL club); NBA has essentially no 2026-27 sample. Prices are model fair odds, not market prices, and no vig is applied. Nothing here is betting advice.
+| File | Conflict | Resolution |
+|---|---|---|
+| `index.html` | Prior session: redirect to `site/index.html`. This session: dashboard. | Root becomes the new dashboard. The prior site is **not modified** and remains at `site/index.html`; the dashboard adds a "Prior audit" navigation link to it. |
+| `README.md` | Two different project descriptions. | Rewritten to describe both layers, both build pipelines and the shared integrity rules. |
+| `COORDINATION.md` | Two different boards. | This merged board: earlier sessions preserved, current session appended, merge logged. |
+| `site/**`, `scripts/build.py`, `data/events.json`, `tests/**`, `.github/workflows/pages.yml` | — | **Untouched.** `git diff origin/main -- site scripts/build.py data/events.json tests .github` is empty on this branch, so the prior CI check (`build.py` + `git diff --exit-code -- site`) still passes. |
 
-## v2 verification log — 2026-10-21 UTC
+## Verification performed (this session)
 
-- **NHL fixture inventory.** `nhl.com/schedule/2026-10-21` shows 2 games and `nhl.com/schedule/2026-10-22` shows 12 (NBA-style week view: 12 in the Oct 22 table). The 12th Oct 22 game, DET @ VAN (id 2026020165), was missing from the truncated first read of that page and was confirmed separately on the Vancouver club schedule (`api-web.nhle.com/v1/club-schedule/VAN/week/2026-10-19`). All 14 rows carry their own gamecenter URL.
-- **NHL inputs.** All 32 clubs taken from `nhl.com/standings`, which states it is current as of Oct 21, 1:13 AM EDT. Every row was checked for GP = W + L + OT; the build enforces that identity.
-- **NHL evidence packs.** Gamecenter pages read individually for PHI @ BUF, NSH @ BOS, WPG @ DAL and MIN @ CGY. Each prediction's facts were transcribed from those pages: team rates, players to watch, goalie lines, last-10 results and venue.
-- **NBA.** All 11 games on Oct 21 with tip times from `nba.com/games?date=2026-10-21`; MIL @ WAS also opened individually to confirm date, time and arena. `nba.com/standings` shows the season is 0-1 games old, which is why NBA lines are baseline.
-- **Baseball.** `statsapi.mlb.com` schedule for the date returns `totalGames: 0`; no row published.
-- **Build checks.** `python -m unittest discover -s tests` (28 tests) and `python scripts/build.py`. Tests cover the model invariants, every validation rule, local link resolution, insecure-link rejection, and that every published fixture carries its official link.
-- **Limits.** Ratings rest on a 7-11 game NHL sample; NBA has none. Prices are no-vig fair odds, not market prices, and no rated value has been back-tested.
+| Source family | Verified what | Result |
+|---|---|---|
+| NBA.com games page (2026-10-21) | 11 fixtures, tip times, game ids | 11 published; 1 game id blank (truncated capture) |
+| NBA.com standings 2025-26 | 30 records + home/road splits | Prior used; 0 current-season games → confidence capped |
+| NHL score API | 21 Oct (2) + 22 Oct (11 of 12) | 12 published, 1 fixture omitted (away team truncated) |
+| NHL stats REST team summary | 32 teams GP/W/L/OTL/GF/GA | 31 complete; Sharks goals blank → their game not originated |
+| URC match centre + table | 8 Round 4 fixtures + 16-team table | All 8 published and lined |
+| ICC match list | AFG v BAN ODI, NZ v IND T20I | Fixtures published, no line (ranking table empty) |
+| WST matches | NI Open R1 results + 2 scheduled R2 matches | Both R2 matches had started by capture; not published |
+| MLB stats API | 21 Oct schedule | 0 games — no MLB rows |
 
-### Irregularities logged this session
+## Handoff / open work for any later session
 
-- NHL's own properties disagree on games played and records for some clubs; the standings table (timestamped, internally consistent with the published rates) is used. Detail in `data/flagged.json` (`flag-nhl-gp`).
-- OLBG's default tips page surfaces only one eligible-sport event, so OLBG cannot be used as the slate inventory.
-- OLBG times for the two Oct 21 NHL games remain 19:37 against the league's 7:30 PM EDT.
+1. **Do not hand-edit** `data/matches.json`, `index.html` or `sports/*.html` — regenerate with
+   `python3 scripts/model.py && python3 scripts/build_site.py`.
+2. **Do not hand-edit** `site/**` — it is generated by `scripts/build.py` and checked by CI.
+3. Highest-value additions, in order:
+   - capture the missing NHL game on 22 Oct (Seattle home) and the Sharks' goal totals → +2 lines;
+   - read ATP rankings + PDC Order of Merit from a rendered page → unlock tennis and darts;
+   - verify Gaelic football club fixtures on county-board sites;
+   - survey the eight sports never captured (Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports,
+     Aussie Rules, Rugby League).
+4. New findings must be appended to `data/flagged.json` and `data/sources.json`, then re-published.
 
-## Integration and publication
+## Environment facts (recorded for other sessions)
 
-- v1 PR: https://github.com/buffedlizard55-lab/OLBG2/pull/1 (merged).
-- v2 branch: `arena/4a778bb7-olbg2`. v2 PR and merge result recorded here when complete.
-- GitHub Pages publishes the `main` branch root in legacy mode; the root `index.html` redirects to `site/index.html`. CI validates the source data, the tests and the generated HTML.
+- Sandbox HTTP egress is restricted to GitHub hosts. General web pages and league APIs are **not** reachable from
+  `bash`. Use the agent `fetch_page` / `web_search` tools instead.
+- GitHub Actions cannot be dispatched from this sandbox (`/actions/permissions` → 403, dispatch → 404), so no
+  interactive collector can run. Data must be captured with the agent tools and committed with provenance.
+- GitHub Pages serves `main` at the repository root in legacy mode. The dashboard therefore lives at the root and
+  the prior site at `/site/`.
+
+## Publish record
+
+| Item | Value |
+|---|---|
+| Integration branch | `arena/42fb7792-olbg2` |
+| Dashboard build check | `python3 scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken links |
+| Prior pipeline check | `python -m unittest discover -s tests -v` → 6 tests pass; `python scripts/build.py` → no `site/` diff |
+| Pull request | PR #8 (this merge) |
+| Merge result | merged to `main` |
+| Pages deploy | verified after merge |
+
+
+## Session `4a778bb7` — evidence desk v2 and integration (2026-10-21 05:30–06:20 UTC)
+
+**Branch:** `arena/4a778bb7-olbg2` (the hosting environment fixes one branch per session; `session-*` branches
+cannot be created here). Claim committed and pushed as `b40eb6d` before any implementation work.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Evidence desk v2: engine, data, tests, site rebuild | done | `4a778bb7` | `scripts/engine.py`, `scripts/build.py`, `data/desk/**`, `site/**`, `tests/**` |
+| Integration with the root dashboard merged in `3778896` | done | `4a778bb7` | `README.md`, `COORDINATION.md`, `scripts/build_site.py` (nav label only) |
+
+### What this session added
+
+- `scripts/engine.py` — originated-line engine. NHL: goal difference per game shrunk toward the league mean by 12
+  games, +0.25 home edge, logistic scale 1.2, no-vig American prices, 1.5 puck line, half-goal totals with σ 1.7.
+  NBA: explicit baseline (league-average clubs, 2.5-point home court, no total).
+- `data/desk/` — meta (parameters, exclusions, limits), 32-club NHL standings inputs, 25 fixtures, 4 predictions,
+  22-sport coverage registry, 8 flags, and an allow-listed source registry.
+- `site/` — dashboard, pick sheet with confidence filter, per-sport pages, methodology, source registry and a
+  Flagged for Review page. 28 tests; `scripts/build.py` fails on any unregistered or non-official source.
+- Verified: 25 fixtures (14 NHL across Oct 21–22, 11 NBA on Oct 21), 64 markets, 4 high-confidence picks
+  (BUF, BOS, DAL, MIN money lines), 0 unverified values filled in.
+
+### Merge and conflict resolution (06:10 UTC)
+
+`main` advanced to `3778896` (PR #7) while this branch was open. `git merge origin/main` produced conflicts; nothing
+from the other session was discarded.
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `scripts/build.py`, `tests/test_build.py`, `site/**` | Two different `site/` pipelines | This branch's desk pipeline kept; the old two-fixture builder and its tests are superseded. `data/events.json` retained unchanged for provenance. |
+| `scripts/model.py` | Both sessions created it | The other session's model kept at `scripts/model.py` (used by `build_site.py`); this branch's engine renamed to `scripts/engine.py`. |
+| `data/sources.json`, `data/flagged.json` | Both sessions created them | Root dashboard files kept in place; the desk versions moved to `data/desk/`. |
+| `index.html`, `picks.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/**`, `assets/**` | Root dashboard vs old redirect/site | Root dashboard kept as the landing page. |
+| `README.md`, `COORDINATION.md` | Two project descriptions | Merged: the other session's records preserved above, this section appended. |
+| `scripts/build_site.py` | — | Single edit: nav label `Prior audit` → `Evidence desk v2`, plus a footer link. Rebuilt; page output otherwise byte-identical. |
+
+Both pipelines were then run: `scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken links;
+`python -m unittest discover -s tests` → 28 tests pass; `scripts/build.py` → 25 fixtures. Note that
+`scripts/model.py` writes a `generated_at` timestamp into `data/matches.json`, so regenerating it always produces
+a one-line diff; the committed file was restored after the check.
+
+### Irregularities carried forward
+
+All eight desk flags remain open and published at `/site/flagged.html`, including the NHL internal inconsistency,
+the OLBG 19:37 vs 7:30 PM EDT discrepancy, the eleven unverified eligible sports and the NBA baseline. The root
+dashboard's 18 flags remain published at `/flagged.html`.

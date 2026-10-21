@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
-from model import (
+from engine import (
     choose_selection,
     confidence_label,
     implied,
@@ -17,7 +17,7 @@ from model import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
+DATA = ROOT / "data" / "desk"
 OUT = ROOT / "site"
 OFFICIAL_HOSTS = {"www.nhl.com", "www.nba.com", "api.nhle.com", "api-web.nhle.com", "statsapi.mlb.com"}
 REFERENCE_HOSTS = {"www.olbg.com"}
@@ -270,7 +270,7 @@ def page(title: str, body: str, active: str, prefix: str = "", subtitle: str = "
 <main class="main">
   <header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> {esc(title.upper())}</span><span class="top-right">{sub}<span class="live-dot"></span> RESEARCH MODE</span></header>
   {body}
-  <footer>Independent research snapshot · fair odds only · no guaranteed outcomes · <a href="{prefix}methodology.html">method</a> · <a href="{prefix}flagged.html">flagged items</a></footer>
+  <footer>Independent research snapshot · fair odds only · no guaranteed outcomes · <a href="{prefix}methodology.html">method</a> · <a href="{prefix}flagged.html">flagged items</a> · <a href="{prefix}../index.html">root dashboard</a></footer>
 </main></div>
 <script>
 document.querySelectorAll('[data-filter]').forEach(function (btn) {{
@@ -383,7 +383,7 @@ def build() -> dict:
     data = {
         "meta": load("meta.json"),
         "sources": load("sources.json"),
-        "nhl_teams": load("team_inputs/nhl.json"),
+        "nhl_teams": load("nhl_teams.json"),
         "fixtures": load("fixtures.json"),
         "picks": load("picks.json"),
         "flagged": load("flagged.json"),

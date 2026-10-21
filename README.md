@@ -1,69 +1,131 @@
-# OLBG research desk
+# OLBG2 — verified fixtures, originated lines, confidence-graded picks
 
-An evidence-first, static research dashboard published to GitHub Pages. It lists the eligible
-fixtures on the OLBG slate that could be matched to an **official league page**, originates its own
-fair prices for each one, publishes one selection per match with a computed confidence level, and
-writes sourced predictions for the high-confidence picks. Open questions are published rather than
-hidden.
+A reverse-engineered view of [OLBG.com](https://www.olbg.com)'s sports coverage. The fixture list is rebuilt from
+OLBG's sport hubs, then **every fixture is re-verified against the official league or governing body** before
+anything is published. Betting lines are originated here from verified performance data — no bookmaker price is
+used anywhere — and each selection is graded `high`, `medium` or `low` confidence.
 
-**Live site:** https://buffedlizard55-lab.github.io/OLBG2/ (root redirects to `site/index.html`)
+**Live site:** https://buffedlizard55-lab.github.io/OLBG2/
 
-## What is covered in this snapshot (2026-10-21 05:55 UTC)
+The repository holds two published layers, both live:
 
-| Sport | Window | Fixtures | Lines | Status |
-| --- | --- | --- | --- | --- |
-| Ice hockey (NHL) | 2026-10-21 → 2026-10-22 | 14 | Money line, puck line, total | Full |
-| Basketball (NBA) | 2026-10-21 | 11 | Money line, spread | Baseline only |
-| Baseball (MLB) | 2026-10-21 | 0 | — | Official schedule returns no games |
-| Tennis, cricket, rugby union, rugby league, snooker, darts, handball, volleyball, golf, motor racing, greyhounds | — | 0 | — | **Unverified**; no rows published |
+| Layer | Entry point | What it is |
+|---|---|---|
+| **Slate dashboard** | `/index.html` | 33 verified fixtures · 30 originated lines · 4 high-confidence predictions · 18 flagged items. Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
+| **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 8 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
 
-Excluded by scope and listed as excluded: soccer/football, horse racing, boxing, UFC/MMA, American
-football, Gaelic football, hurling, cycling, specials.
+Both layers are live and independent. The root dashboard was contributed by the `42fb7792` session; the
+`4a778bb7` session rebuilt the `site/` layer, which had previously been the two-fixture audit. Each layer states
+its own snapshot and scope, and neither reuses a bookmaker price.
 
-## How the lines are originated
+The two layers differ in breadth and depth and **do not share a fixture file**. Where they overlap (NHL, NBA) they
+were verified against the same league sources but originate lines with different models, so their prices differ.
+Treat each page's own numbers as the authoritative statement of that page's method; the method pages are the
+contract.
 
-Nothing is copied from a bookmaker. `scripts/model.py` computes every price from official league
-inputs using the parameters in `data/meta.json`:
+> Integration note (2026-10-21): the merge that combined these layers preserved the root dashboard and its
+> pipeline byte-for-byte apart from the navigation label (`Prior audit` → `Evidence desk v2`) and a footer link.
+> `scripts/build.py`, `tests/**` and `site/**` now belong to the evidence desk; the older two-fixture audit data
+> remains at `data/events.json` for provenance and is no longer built by either pipeline.
 
-- **NHL** — goal difference per game, shrunk toward the league mean by 12 games, plus a 0.25-goal
-  home edge, converted to a win probability with a logistic curve (scale 1.2). Puck line from the
-  same margin distribution; total from blended goals for/against, shrunk toward 6.0 goals, priced
-  with a normal curve (σ = 1.7). Prices are no-vig fair American odds.
-- **NBA** — the 2026-27 season is one game old, so every club is rated league-average and only home
-  court (2.5 points) separates the sides. No total is originated.
+## What is in the dashboard release (capture window 2026-10-21 05:10–05:45 UTC)
 
-Confidence is computed, not chosen: **high** requires ≥ 13 points of win-probability edge, a sample
-of at least 7 games per side, *and* an evidence pack (the fixture's own official page cited in the
-prediction). A big edge without an evidence pack is capped at **medium**; everything else is **low**.
+| Sport | Fixtures | Lines originated | High confidence |
+|---|---|---|---|
+| Ice Hockey (NHL) | 12 | 11 | 4 |
+| Basketball (NBA) | 11 | 11 | 0 |
+| Rugby Union (URC) | 8 | 8 | 0 |
+| Cricket (ICC) | 2 | 0 | 0 |
+| **Total** | **33** | **30** | **4** |
 
-## Local build
+Two of the 33 rows are deliberately blank: the Sharks' goal totals were never captured, and the ICC ranking
+table did not render, so no cricket line could be originated without inventing an input. Both are on the
+[Flagged for review](https://buffedlizard55-lab.github.io/OLBG2/flagged.html) page with source links.
 
-Python 3.10+, no third-party dependencies.
+## Evidence desk v2 (capture 2026-10-21 05:55 UTC)
+
+| Sport | Window | Fixtures | Markets | High confidence |
+|---|---|---|---|---|
+| Ice hockey (NHL) | Oct 21–22 | 14 | Money line, puck line, total | 4 |
+| Basketball (NBA) | Oct 21 | 11 | Money line, spread (baseline only) | 0 |
+
+`scripts/engine.py` originates prices from official inputs only: NHL goal difference per game shrunk toward the
+league mean by 12 games, plus a 0.25-goal home edge, logistic scale 1.2, no-vig American prices, half-goal totals
+(σ = 1.7). NBA has no 2026-27 sample, so every club is league-average with a 2.5-point home edge and no total.
+Confidence is computed: **high** needs ≥ 13 points of win-probability edge, ≥ 7 games per side and an evidence
+pack (the fixture's own gamecenter cited in the prediction); a large edge without a pack is capped at medium.
+
+`scripts/build.py` fails the build if any fixture, pick or flag cites a URL outside the allow-listed registry
+(`data/desk/sources.json`), if an excluded sport appears, if a pick contradicts the model's favourite, if a
+prediction is under 30 words or duplicated, or if a high-confidence row lacks a prediction.
 
 ```sh
-python -m unittest discover -s tests -v
-python scripts/build.py
-python -m http.server 8000 -d site
+python -m unittest discover -s tests -v   # 28 tests, including link resolution and all data rules
+python scripts/build.py                   # regenerates site/ deterministically
 ```
 
-- `data/meta.json` — snapshot, parameters, exclusions, stated limits.
-- `data/sources.json` — the allow-listed source registry. The build **fails** if a fixture, pick or
-  flag cites a URL that is not registered here.
-- `data/team_inputs/nhl.json` — official standings inputs for all 32 clubs.
-- `data/fixtures.json` — 25 fixtures, each with its own official page.
-- `data/picks.json` — four written predictions with fact lists and sources.
-- `data/flagged.json`, `data/coverage.json` — open items and per-sport verification state.
-- `site/` — generated pages, committed so the snapshot is readable without a build.
+## Scope
 
-## Evidence rules
+Included: Tennis, Basketball, Golf, Cricket, Snooker, Rugby Union, Rugby League, Baseball, Ice Hockey,
+Motor Racing, Darts, Handball, Volleyball, Aussie Rules, eSports, Gaelic Football, Greyhounds.
 
-1. A fixture is published only with an official league URL on an approved host
-   (`nhl.com`, `nba.com`, `api.nhle.com`, `api-web.nhle.com`, `statsapi.mlb.com`). OLBG is a
-   reference, never a fixture source.
-2. Every high-confidence prediction is at least 30 words, unique, and names the team, a player,
-   current form, recent results and the exact selection. Its fact list and sources sit next to it.
-3. Unconfirmed values stay blank and are flagged. Blank is a finding.
-4. Source pages change. Treat this as a timestamped snapshot, not a live feed.
+Excluded by the brief: football (soccer), horse racing, American football, boxing, cycling, hurling and
+"specials". UFC/MMA are filed under Boxing on OLBG, so that exclusion covers them. Enforced in
+`scripts/config.py` and, for the prior pipeline, in `data/events.json` + `scripts/build.py`.
 
-See [COORDINATION.md](COORDINATION.md) for the session log, verification trail, open irregularities
-and the integration record.
+## Repository layout
+
+```
+index.html, picks.html, flagged.html, methodology.html, sources.html   dashboard (this release, generated)
+sports/<sport>.html                                                    per-sport dashboard pages
+assets/style.css                                                       dashboard styling
+data/inputs/*.json                                                     verified inputs + fixtures
+data/matches.json                                                      generated dataset (lines, picks)
+data/predictions.json                                                  high-confidence write-ups + sources
+data/flagged.json                                                      review queue (18 items)
+data/sources.json                                                      source register (24 sources)
+scripts/config.py, model.py, build_site.py                             dashboard pipeline
+data/events.json, scripts/build.py, tests/test_build.py                prior audit pipeline (untouched)
+site/**                                                                prior audit site (untouched)
+research/olbg-reverse-engineering.md, research/collection-log.md       OLBG schema + every fetch
+COORDINATION.md                                                        shared task board and merge log
+```
+
+## Rebuild
+
+Dashboard:
+
+```bash
+python3 scripts/model.py        # data/inputs -> data/matches.json
+python3 scripts/build_site.py   # data/*.json -> HTML; fails on broken links or predictions under 30 words
+```
+
+Prior audit site (unchanged, and what CI validates):
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/build.py
+```
+
+Both pipelines use the Python standard library only. Pages is served from `main` at the repository root in
+legacy mode, with `.nojekyll` committed.
+
+## Data integrity rules used here
+
+1. A fixture is published only if an official source confirms both teams, the competition and the date.
+2. A value that cannot be confirmed is left blank and listed on the flagged page. Nothing is inferred.
+3. OLBG supplies event discovery and market vocabulary only — never odds, never results.
+4. Every published row links to the official fixture source and to its data source.
+5. Predictions exist only for high-confidence picks, are at least 30 words, name the selection explicitly and
+   cite a source for every factual claim.
+
+See [METHODOLOGY.md](METHODOLOGY.md) for formulas and confidence thresholds.
+
+## Coverage gaps
+
+Tennis, darts, snooker, Gaelic football, Top 14 / Pro D2, and eight further sports (Handball, Volleyball, Golf,
+Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League) could not be verified inside the capture window.
+They are listed individually on the Flagged for Review page — absence from this site is **not** evidence that
+OLBG lists no events for them.
+
+18+ · This is an analytics and research project, not betting advice.

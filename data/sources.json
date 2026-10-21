@@ -1,184 +1,38 @@
 {
+  "meta": {
+    "capture_window_utc": "2026-10-21T05:10:00Z to 2026-10-21T05:45:00Z",
+    "policy": "Only official league, governing-body or publisher sources are used to confirm a value. OLBG is used only for event discovery and market vocabulary, never as an odds or result source."
+  },
   "sources": [
-    {
-      "id": "nhl-schedule",
-      "label": "NHL schedule, Oct 21 2026",
-      "url": "https://www.nhl.com/schedule/2026-10-21",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Fixture list, matchups and published start times for Oct 21.",
-      "checked_utc": "2026-10-21T05:40:00Z"
-    },
-    {
-      "id": "nhl-schedule-22",
-      "label": "NHL schedule, Oct 22 2026",
-      "url": "https://www.nhl.com/schedule/2026-10-22",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Fixture list, matchups and published start times for Oct 22.",
-      "checked_utc": "2026-10-21T05:42:00Z"
-    },
-    {
-      "id": "nhl-standings",
-      "label": "NHL standings (2026-27)",
-      "url": "https://www.nhl.com/standings",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "GP, W-L-OT, points percentage, goals for/against, home/away splits, L10 and streaks for all 32 clubs. Page states it is current as of Oct 21, 1:13 AM EDT.",
-      "checked_utc": "2026-10-21T05:44:00Z"
-    },
-    {
-      "id": "nhl-api-team",
-      "label": "NHL statistics API - team summary",
-      "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2",
-      "host": "api.nhle.com",
-      "kind": "official",
-      "used_for": "Cross-check of games played, goals for/against and special teams. Used to detect the games-played discrepancy flagged for review.",
-      "checked_utc": "2026-10-21T05:38:00Z"
-    },
-    {
-      "id": "nhl-api-standings",
-      "label": "NHL API - standings snapshot",
-      "url": "https://api-web.nhle.com/v1/standings/2026-10-20",
-      "host": "api-web.nhle.com",
-      "kind": "official",
-      "used_for": "Snapshot timestamp and home/away/L10 splits cross-check.",
-      "checked_utc": "2026-10-21T05:35:00Z"
-    },
-    {
-      "id": "nhl-gc-152",
-      "label": "Gamecenter: PHI @ BUF",
-      "url": "https://www.nhl.com/gamecenter/phi-vs-buf/2026/10/21/2026020152",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Evidence pack: records, players to watch, goalie lines, team rates and last-10 results.",
-      "checked_utc": "2026-10-21T05:48:00Z"
-    },
-    {
-      "id": "nhl-gc-153",
-      "label": "Gamecenter: FLA @ OTT",
-      "url": "https://www.nhl.com/gamecenter/fla-vs-ott/2026/10/21/2026020153",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Fixture identity and published start time.",
-      "checked_utc": "2026-10-21T05:40:00Z"
-    },
-    {
-      "id": "nhl-gc-154",
-      "label": "Gamecenter: NSH @ BOS",
-      "url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Evidence pack: records, players to watch, goalie lines, team rates and last-10 results.",
-      "checked_utc": "2026-10-21T05:50:00Z"
-    },
-    {
-      "id": "nhl-gc-158",
-      "label": "Gamecenter: FLA @ PIT",
-      "url": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Evidence pack: records, players to watch, goalie lines, team rates and last-10 results.",
-      "checked_utc": "2026-10-21T05:51:00Z"
-    },
-    {
-      "id": "nhl-gc-161",
-      "label": "Gamecenter: WPG @ DAL",
-      "url": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Evidence pack: records, players to watch, goalie lines, team rates and last-10 results.",
-      "checked_utc": "2026-10-21T05:53:00Z"
-    },
-    {
-      "id": "nhl-gc-162",
-      "label": "Gamecenter: MIN @ CGY",
-      "url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Evidence pack: records, players to watch, goalie lines, team rates and last-10 results.",
-      "checked_utc": "2026-10-21T05:54:00Z"
-    },
-    {
-      "id": "nba-games",
-      "label": "NBA games, Oct 21 2026",
-      "url": "https://www.nba.com/games?date=2026-10-21",
-      "host": "www.nba.com",
-      "kind": "official",
-      "used_for": "All 11 fixtures with tip times and per-game links.",
-      "checked_utc": "2026-10-21T05:36:00Z"
-    },
-    {
-      "id": "nba-standings",
-      "label": "NBA standings (2026-27)",
-      "url": "https://www.nba.com/standings",
-      "host": "www.nba.com",
-      "kind": "official",
-      "used_for": "Confirms the 2026-27 season is 0-1 games old, which is why every NBA line is a baseline.",
-      "checked_utc": "2026-10-21T05:37:00Z"
-    },
-    {
-      "id": "nba-game-mil-was",
-      "label": "NBA game page: MIL @ WAS",
-      "url": "https://www.nba.com/game/mil-vs-was-0022600086",
-      "host": "www.nba.com",
-      "kind": "official",
-      "used_for": "Fixture confirmation (Oct 21, 7:00 PM ET, Capital One Arena) and the league's preview notes.",
-      "checked_utc": "2026-10-21T05:39:00Z"
-    },
-    {
-      "id": "mlb-schedule",
-      "label": "MLB stats API - schedule for Oct 21 2026",
-      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21",
-      "host": "statsapi.mlb.com",
-      "kind": "official",
-      "used_for": "Returns totalGames 0 for the date; recorded as no scheduled MLB fixtures, not as proof of an offseason.",
-      "checked_utc": "2026-10-21T05:37:00Z"
-    },
-    {
-      "id": "olbg-tips",
-      "label": "OLBG betting tips index",
-      "url": "https://www.olbg.com/betting-tips",
-      "host": "www.olbg.com",
-      "kind": "reference",
-      "used_for": "Eligible-sport slate and OLBG event pages. OLBG is a reference, never an official fixture source.",
-      "checked_utc": "2026-10-21T05:30:00Z"
-    },
-    {
-      "id": "olbg-phi-buf",
-      "label": "OLBG event: PHI @ BUF",
-      "url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897",
-      "host": "www.olbg.com",
-      "kind": "reference",
-      "used_for": "OLBG listing and the 19:37 time discrepancy.",
-      "checked_utc": "2026-10-21T05:12:00Z"
-    },
-    {
-      "id": "olbg-fla-ott",
-      "label": "OLBG event: FLA @ OTT",
-      "url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
-      "host": "www.olbg.com",
-      "kind": "reference",
-      "used_for": "OLBG listing and the 19:37 time discrepancy.",
-      "checked_utc": "2026-10-21T05:12:00Z"
-    },
-    {
-      "id": "olbg-mil-was",
-      "label": "OLBG event: MIL @ WAS",
-      "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889",
-      "host": "www.olbg.com",
-      "kind": "reference",
-      "used_for": "OLBG listing (Today 19:10, Money Line) and community tip share.",
-      "checked_utc": "2026-10-21T05:30:00Z"
-    },
-    {
-      "id": "nhl-gc-163",
-      "label": "Gamecenter: CAR @ EDM",
-      "url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
-      "host": "www.nhl.com",
-      "kind": "official",
-      "used_for": "Evidence for the games-played inconsistency: header 7-2-1 against a 3.82 GF/GP that equals 42 goals in 11 games.",
-      "checked_utc": "2026-10-21T05:52:00Z"
-    }
+    {"id": "S01", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips", "used_for": "Global tips page. Found to contain stale cached football fixtures; not used for event data.", "official": false},
+    {"id": "S02", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/sitemap-betting-tips.xml", "used_for": "Full sport taxonomy and numeric sport IDs.", "official": false},
+    {"id": "S03", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4", "used_for": "NBA event list, market labels, event_ids.", "official": false},
+    {"id": "S04", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13", "used_for": "Ice hockey event list and market labels.", "official": false},
+    {"id": "S05", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Tennis/3", "used_for": "Tennis event list.", "official": false},
+    {"id": "S06", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Cricket/7", "used_for": "Cricket event list.", "official": false},
+    {"id": "S07", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Rugby_Union/9", "used_for": "Rugby union event list (URC, Top 14, Pro D2).", "official": false},
+    {"id": "S08", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Darts/15", "used_for": "Darts event list.", "official": false},
+    {"id": "S09", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Snooker/8", "used_for": "Snooker event list.", "official": false},
+    {"id": "S10", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "used_for": "Gaelic football club fixture list.", "official": false},
+
+    {"id": "S11", "publisher": "NBA", "type": "Official", "url": "https://www.nba.com/games?date=2026-10-21", "used_for": "Confirms 11 NBA fixtures, tip times in ET and game ids for 2026-10-21.", "official": true},
+    {"id": "S12", "publisher": "NBA", "type": "Official", "url": "https://www.nba.com/standings", "used_for": "Confirms 2026-27 season has just started; most teams 0-0.", "official": true},
+    {"id": "S13", "publisher": "NBA", "type": "Official", "url": "https://www.nba.com/standings?Season=2025-26", "used_for": "Completed 2025-26 records, home and road splits for all 30 teams — the NBA strength input.", "official": true},
+
+    {"id": "S14", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/score/2026-10-21", "used_for": "Confirms two NHL games on 21 October with UTC start times, venues and game ids.", "official": true},
+    {"id": "S15", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/score/2026-10-22", "used_for": "Confirms eleven of the twelve games on 22 October, UTC start times, venues, club records and team leaders.", "official": true},
+    {"id": "S16", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/schedule/2026-10-21", "used_for": "Cross-check of the 21 October schedule (two games).", "official": true},
+    {"id": "S17", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/scoreboard/2026-10-22", "used_for": "Recent results used in write-ups (e.g. Colorado 2 @ Philadelphia 3 on 19 October).", "official": true},
+    {"id": "S18", "publisher": "NHL", "type": "Official", "url": "https://api.nhle.com/stats/rest/en/team/summary", "used_for": "2026-27 team summary: games played, W-L-OTL, goals for/against — the NHL strength input.", "official": true},
+
+    {"id": "S19", "publisher": "United Rugby Championship", "type": "Official", "url": "https://stats.unitedrugby.com/match-centre/2026-27/4", "used_for": "Confirms all eight Round 4 fixtures, venues and venue-local kick-off times.", "official": true},
+    {"id": "S20", "publisher": "United Rugby Championship", "type": "Official", "url": "https://stats.unitedrugby.com/match-centre/table/2026-27", "used_for": "Official league table: P, W, D, L, PF, PA, points and form — the URC strength input.", "official": true},
+
+    {"id": "S21", "publisher": "ICC", "type": "Official", "url": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi", "used_for": "Confirms Afghanistan v Bangladesh ODI (match 274658) and New Zealand v India T20I (match 271646). Ranking table itself rendered empty.", "official": true},
+
+    {"id": "S22", "publisher": "World Snooker Tour", "type": "Official", "url": "https://www.wst.tv/matches/", "used_for": "BetVictor Northern Ireland Open 2026 draw: round-one results and two scheduled round-two matches on 21 October.", "official": true},
+    {"id": "S23", "publisher": "World Snooker Tour", "type": "Official", "url": "https://www.wst.tv/rankings/", "used_for": "World rankings top 11 and One Year List top 11 (not sufficient to rate all eight players).", "official": false, "note": "Official site, but the captured subset did not cover every player needed."},
+
+    {"id": "S24", "publisher": "MLB", "type": "Official", "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21", "used_for": "Confirms there were no MLB games on 21 October (post-season rest day).", "official": true}
   ]
 }

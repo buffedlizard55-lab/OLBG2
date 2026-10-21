@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for review · OLBG2 Sports Betting Data</title>
+<meta name="description" content="Unverified, blank and irregular items with source links.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
+    <nav class="main"><a href="index.html">Dashboard</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html" aria-current="page">Flagged for review</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a><a href="site/index.html">Evidence desk v2</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero">
+  <h1>Flagged for review</h1>
+  <p class="lede">Everything that could not be confirmed from an official source, every value deliberately left
+  blank, and every irregularity found in OLBG's own pages. These items do not block publication — they are the
+  review queue.</p>
+  <p class="meta">18 items · 14 blank or unoriginated values</p>
+</section>
+
+<div class="panel"><div class="table-scroll"><table>
+<thead><tr><th>ID</th><th>Severity</th><th>Category</th><th>Item and detail</th><th>Source</th></tr></thead>
+<tbody><tr>
+      <td class="mono">F01</td>
+      <td><span class="badge b-sev-high">High</span></td>
+      <td>Data gap</td>
+      <td><b>NHL 2026-10-22, 12th game (Seattle Kraken home)</b><span class="sub" style="max-width:560px">The NHL score feed lists 12 games for 22 October. Eleven were captured with both teams, venue and start time. The twelfth (at Climate Pledge Arena) was cut off mid-record, so the away team is unknown and the fixture is omitted rather than guessed.</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F04</td>
+      <td><span class="badge b-sev-high">High</span></td>
+      <td>Coverage gap</td>
+      <td><b>Tennis — no line originated</b><span class="sub" style="max-width:560px">OLBG listed ATP/WTA matches (e.g. Leylah Fernandez v Aliaksandra Sasnovich, Adrian Mannarino v Andrey Rublev, Ekaterina Alexandrova v Marta Kostyuk). The official ATP rankings page renders its table client-side, so no ranking input could be read and verified; the tournament entry lists were not matched. Publishing probabilities would have required inventing an input.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Tennis/3" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F05</td>
+      <td><span class="badge b-sev-high">High</span></td>
+      <td>Coverage gap</td>
+      <td><b>Darts — no line originated</b><span class="sub" style="max-width:560px">OLBG listed 26+ PDC matches for 22-23 October. The PDC rankings page returned a cookie-consent shell rather than the Order of Merit table, and the tournament draw was not captured, so neither the fixtures nor a strength input could be verified.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F09</td>
+      <td><span class="badge b-sev-high">High</span></td>
+      <td>Coverage gap</td>
+      <td><b>Sports not surveyed in this capture</b><span class="sub" style="max-width:560px">Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not captured before the session closed. Absence from this site is NOT evidence that OLBG lists no events for them.</span></td>
+      <td class="small"><a href="https://www.olbg.com/sitemap-betting-tips.xml" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F11</td>
+      <td><span class="badge b-sev-high">High</span></td>
+      <td>Market gap</td>
+      <td><b>Cricket — fixtures verified, no line</b><span class="sub" style="max-width:560px">Two fixtures were confirmed on the ICC official match list (Afghanistan v Bangladesh ODI; New Zealand v India T20I). The ICC team-ranking table rendered empty, so no strength input existed and no line was originated.</span></td>
+      <td class="small"><a href="https://www.icc-cricket.com/rankings/team-rankings/mens/odi" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F02</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Unverified value</td>
+      <td><b>San Jose Sharks goals for / against</b><span class="sub" style="max-width:560px">The Sharks&#x27; goals-for and goals-against did not appear inside the captured response window of the NHL team-summary endpoint. Their 2026-10-22 game at Ottawa therefore has no originated line; the row is published with blank goals data.</span></td>
+      <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F06</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Timing</td>
+      <td><b>Snooker — events already started</b><span class="sub" style="max-width:560px">World Snooker Tour confirmed two BetVictor Northern Ireland Open round-two matches at 05:00 (UK) on 21 October (Pang Junxu v Liam Davies; Cheung Ka Wai v Stuart Bingham). By capture time both had started, and the remaining four OLBG-listed matches were outside the captured page window. None were published as pre-match selections.</span></td>
+      <td class="small"><a href="https://www.wst.tv/matches/" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F07</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Coverage gap</td>
+      <td><b>Gaelic Football — club fixtures unverified</b><span class="sub" style="max-width:560px">OLBG listed club matches (St Finbarrs v Nemo Rangers, Moycullen v Salthill-Knocknacarra, Rathgormack v The Nire). No official county-board page confirming these fixtures was captured, so they are not published as verified rows.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F08</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Coverage gap</td>
+      <td><b>Rugby Union — Top 14 and Pro D2 not verified</b><span class="sub" style="max-width:560px">OLBG listed French league fixtures (e.g. Toulouse v Perpignan, Bayonne v Lyon, Montauban v Oyonnax). Only the United Rugby Championship could be verified against its official match centre; LNR fixtures were not captured.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F10</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Market gap</td>
+      <td><b>NBA game totals not originated</b><span class="sub" style="max-width:560px">No verified 2025-26 points-for / points-against table was captured, so totals were left blank for all 11 NBA games rather than estimated. Moneyline and handicap were originated from the official prior-season record.</span></td>
+      <td class="small"><a href="https://www.nba.com/standings?Season=2025-26" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F12</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>OLBG irregularity</td>
+      <td><b>OLBG displayed times do not map to one timezone</b><span class="sub" style="max-width:560px">NBA events show US-Eastern clock times roughly ten minutes after the official tip time (OLBG 19:10 vs NBA 19:00 ET for Milwaukee @ Washington). NHL events show UK clock times roughly seven minutes after the equivalent UK time (OLBG 00:37 vs an 00:30 UK face-off). The dataset stores OLBG strings verbatim and takes authoritative times from the league feed.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F13</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>OLBG irregularity</td>
+      <td><b>Cached fixtures on OLBG&#x27;s global tips page</b><span class="sub" style="max-width:560px">The global /betting-tips page returned football fixtures that cannot exist in October 2026 (Champions League cards such as Real Madrid v RB Leipzig). Sport hub pages were internally consistent, so only hub pages were used for event discovery.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F15</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Model limitation</td>
+      <td><b>NBA confidence capped at medium</b><span class="sub" style="max-width:560px">Every NBA team playing on 21 October was 0-0 before tip-off, so the model uses the completed 2025-26 season as a prior. Confidence is therefore capped at &#x27;medium&#x27; and no NBA pick is presented as high confidence.</span></td>
+      <td class="small"><a href="https://www.nba.com/standings" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F16</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Timing</td>
+      <td><b>URC kick-off times are venue-local</b><span class="sub" style="max-width:560px">The URC match centre states &#x27;All times shown are Local&#x27;. Times are stored exactly as published and were not converted, so a reader in another timezone must apply the venue offset.</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F18</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Market gap</td>
+      <td><b>No OLBG odds were used or available</b><span class="sub" style="max-width:560px">OLBG hub pages publish tip percentages but no prices, and no bookmaker prices were used at any point. Every price in this dataset is generated from our own probability plus a 4% theoretical margin. They are not market prices.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F03</td>
+      <td><span class="badge b-sev-low">Low</span></td>
+      <td>Unverified value</td>
+      <td><b>NBA Sacramento @ LA Clippers game id</b><span class="sub" style="max-width:560px">The official games page rendered the fixture but the game id was truncated in capture. The fixture is published; the game id is blank.</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F14</td>
+      <td><span class="badge b-sev-low">Low</span></td>
+      <td>OLBG irregularity</td>
+      <td><b>Non-canonical team names</b><span class="sub" style="max-width:560px">OLBG appends format labels to cricket fixtures (e.g. &#x27;Afghanistan vs Bangladesh One Day Match&#x27;) and abbreviates Gaelic football club names (&#x27;Eire Og Cor&#x27;). Canonical names in this dataset come from the official body.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Cricket/7" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F17</td>
+      <td><span class="badge b-sev-low">Low</span></td>
+      <td>Model limitation</td>
+      <td><b>NHL sample is 7-11 games</b><span class="sub" style="max-width:560px">Lines are originated from 2026-27 season-to-date goal rates with empirical-Bayes shrinkage (k=8) and a 1.05 home-ice factor. Early-season rates are noisy; the shrinkage is the guard against overconfidence, not a correction for roster changes.</span></td>
+      <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">official / source page</a></td>
+    </tr></tbody></table></div></div>
+
+<h2 class="section">Values left blank on purpose</h2>
+<p class="section-sub">No value in this list was estimated. Blank means the official source did not supply it inside the capture window.</p>
+<div class="panel" style="padding:16px 20px"><ul class="small"><li><b>Atlanta Hawks <span class="muted">@</span> Orlando Magic</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Milwaukee Bucks <span class="muted">@</span> Washington Wizards</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Minnesota Timberwolves <span class="muted">@</span> Miami Heat</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Charlotte Hornets <span class="muted">@</span> Brooklyn Nets</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Chicago Bulls <span class="muted">@</span> Toronto Raptors</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Indiana Pacers <span class="muted">@</span> New Orleans Pelicans</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Utah Jazz <span class="muted">@</span> Memphis Grizzlies</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Dallas Mavericks <span class="muted">@</span> Houston Rockets</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Golden State Warriors <span class="muted">@</span> Los Angeles Lakers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Phoenix Suns <span class="muted">@</span> Portland Trail Blazers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Sacramento Kings <span class="muted">@</span> LA Clippers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Bangladesh <span class="muted">@</span> Afghanistan</b> (Cricket) — No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.</li><li><b>India <span class="muted">@</span> New Zealand</b> (Cricket) — No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.</li><li><b>San Jose Sharks <span class="muted">@</span> Ottawa Senators</b> (Ice Hockey) — Verified goals-for / goals-against for one or both teams were not captured.</li></ul></div>
+
+<h2 class="section">What a reviewer should do next</h2>
+<details open><summary>Highest-value fixes</summary>
+<ul>
+<li>Capture the missing NHL game on 22 October (Seattle home) and the Sharks' goal totals, then re-run <code>scripts/model.py</code>.</li>
+<li>Read the ATP rankings and PDC Order of Merit from a browser-rendered page so tennis and darts can be lined.</li>
+<li>Confirm the Gaelic football club fixtures on the relevant county board sites before publishing them.</li>
+<li>Survey the eight sports that were not captured at all (Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League).</li>
+</ul></details>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
+    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="flagged.html">Flagged</a> · <a href="site/index.html">Evidence desk v2</a></span>
+  </div>
+</footer>
+</body>
+</html>

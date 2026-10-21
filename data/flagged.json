@@ -1,99 +1,151 @@
 {
-  "flagged": [
+  "meta": {
+    "purpose": "Everything that could not be confirmed from an official source, every value deliberately left blank, and every irregularity found while reverse-engineering OLBG. Nothing here blocks publication; it is the reviewer's queue."
+  },
+  "items": [
     {
-      "id": "flag-olbg-time",
-      "category": "Conflicting published time",
-      "item": "OLBG lists 19:37 for both Oct 21 NHL games; the NHL lists 7:30 PM EDT.",
-      "detail": "The two OLBG event pages show 19:37 without a stated time zone. The NHL schedule and both gamecenters show 7:30 PM EDT. The site publishes the league time and does not convert or reconcile OLBG's figure.",
-      "sources": [
-        "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897",
-        "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
-        "https://www.nhl.com/schedule/2026-10-21"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
+      "id": "F01",
+      "severity": "high",
+      "category": "Data gap",
+      "item": "NHL 2026-10-22, 12th game (Seattle Kraken home)",
+      "detail": "The NHL score feed lists 12 games for 22 October. Eleven were captured with both teams, venue and start time. The twelfth (at Climate Pledge Arena) was cut off mid-record, so the away team is unknown and the fixture is omitted rather than guessed.",
+      "source": "https://api-web.nhle.com/v1/score/2026-10-22"
     },
     {
-      "id": "flag-olbg-slate",
-      "category": "Incomplete OLBG inventory",
-      "item": "OLBG's default tips page surfaces only one eligible-sport event.",
-      "detail": "On the snapshot the default page listed football, Gaelic football, horse racing, handball and snooker alongside a single eligible NBA event (MIL @ WAS). No complete eligible-sport OLBG inventory could be reconstructed from that page, so league schedules are used as the fixture inventory and OLBG links are attached only where an event page was actually found.",
-      "sources": [
-        "https://www.olbg.com/betting-tips"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
+      "id": "F02",
+      "severity": "medium",
+      "category": "Unverified value",
+      "item": "San Jose Sharks goals for / against",
+      "detail": "The Sharks' goals-for and goals-against did not appear inside the captured response window of the NHL team-summary endpoint. Their 2026-10-22 game at Ottawa therefore has no originated line; the row is published with blank goals data.",
+      "source": "https://api.nhle.com/stats/rest/en/team/summary"
     },
     {
-      "id": "flag-nhl-gp",
-      "category": "League source inconsistency",
-      "item": "NHL gamecenter headers and the NHL statistics API disagree with the standings table on games played.",
-      "detail": "Carolina's gamecenter shows 7-2-1 while the standings table shows 8-2-1 over 11 games; the gamecenter's own GF/GP of 3.82 equals 42/11, so the rates match the standings while the header does not. The NHL statistics API returns 10 games played and 36 goals for Carolina. All three are NHL.com properties. The build uses the standings table, which is timestamped and internally consistent.",
-      "sources": [
-        "https://www.nhl.com/standings",
-        "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
-        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
+      "id": "F03",
+      "severity": "low",
+      "category": "Unverified value",
+      "item": "NBA Sacramento @ LA Clippers game id",
+      "detail": "The official games page rendered the fixture but the game id was truncated in capture. The fixture is published; the game id is blank.",
+      "source": "https://www.nba.com/games?date=2026-10-21"
     },
     {
-      "id": "flag-nba-baseline",
-      "category": "Baseline only",
-      "item": "Every NBA line is a baseline; no current-season form exists.",
-      "detail": "NBA.com's standings show the 2026-27 season is 0-1 games old, so the engine rates every club league-average and applies a 2.5-point home edge. No total is originated because no verified league scoring baseline is loaded. These are opening-style lines, not informed prices, and every NBA pick is labelled low confidence.",
-      "sources": [
-        "https://www.nba.com/standings",
-        "https://www.nba.com/games?date=2026-10-21"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
-    },
-    {
-      "id": "flag-mlb-none",
-      "category": "No fixtures",
-      "item": "MLB reports zero games for Oct 21 2026.",
-      "detail": "The official MLB stats API returns totalGames 0 for the date. No baseball row is published. This is not evidence that the season has ended, only that no game is scheduled that day.",
-      "sources": [
-        "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
-    },
-    {
-      "id": "flag-other-sports",
+      "id": "F04",
+      "severity": "high",
       "category": "Coverage gap",
-      "item": "Eleven eligible sports were not verified in this session.",
-      "detail": "Tennis, cricket, rugby union, rugby league, snooker, darts, handball, volleyball, golf, motor racing and greyhounds were not cross-checked against an official schedule. No fixtures, lines or picks are published for them. They are listed on the Coverage page with their OLBG sport index and marked unverified rather than estimated.",
-      "sources": [
-        "https://www.olbg.com/betting-tips"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
+      "item": "Tennis — no line originated",
+      "detail": "OLBG listed ATP/WTA matches (e.g. Leylah Fernandez v Aliaksandra Sasnovich, Adrian Mannarino v Andrey Rublev, Ekaterina Alexandrova v Marta Kostyuk). The official ATP rankings page renders its table client-side, so no ranking input could be read and verified; the tournament entry lists were not matched. Publishing probabilities would have required inventing an input.",
+      "source": "https://www.olbg.com/betting-tips/Tennis/3"
     },
     {
-      "id": "flag-venues",
-      "category": "Blank fields",
-      "item": "Venue is blank where the fetched source did not state it.",
-      "detail": "Venue is published only for fixtures whose official page named the arena. Blank cells are deliberate and unverified, not missing data that was inferred.",
-      "sources": [
-        "https://www.nhl.com/schedule/2026-10-22",
-        "https://www.nba.com/games?date=2026-10-21"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
+      "id": "F05",
+      "severity": "high",
+      "category": "Coverage gap",
+      "item": "Darts — no line originated",
+      "detail": "OLBG listed 26+ PDC matches for 22-23 October. The PDC rankings page returned a cookie-consent shell rather than the Order of Merit table, and the tournament draw was not captured, so neither the fixtures nor a strength input could be verified.",
+      "source": "https://www.olbg.com/betting-tips/Darts/15"
     },
     {
-      "id": "flag-nba-prior",
-      "category": "Unverified input",
-      "item": "No official bulk source for 2025-26 NBA records was retrieved.",
-      "detail": "The NBA standings page renders the current season regardless of the season parameter supplied, and per-game preview text was the only place prior-season records appeared. Rather than assemble ratings from a partial set of preview pages, no prior-season rating is used at all.",
-      "sources": [
-        "https://www.nba.com/standings",
-        "https://www.nba.com/game/mil-vs-was-0022600086"
-      ],
-      "state": "open",
-      "owner": "4a778bb7"
+      "id": "F06",
+      "severity": "medium",
+      "category": "Timing",
+      "item": "Snooker — events already started",
+      "detail": "World Snooker Tour confirmed two BetVictor Northern Ireland Open round-two matches at 05:00 (UK) on 21 October (Pang Junxu v Liam Davies; Cheung Ka Wai v Stuart Bingham). By capture time both had started, and the remaining four OLBG-listed matches were outside the captured page window. None were published as pre-match selections.",
+      "source": "https://www.wst.tv/matches/"
+    },
+    {
+      "id": "F07",
+      "severity": "medium",
+      "category": "Coverage gap",
+      "item": "Gaelic Football — club fixtures unverified",
+      "detail": "OLBG listed club matches (St Finbarrs v Nemo Rangers, Moycullen v Salthill-Knocknacarra, Rathgormack v The Nire). No official county-board page confirming these fixtures was captured, so they are not published as verified rows.",
+      "source": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+    },
+    {
+      "id": "F08",
+      "severity": "medium",
+      "category": "Coverage gap",
+      "item": "Rugby Union — Top 14 and Pro D2 not verified",
+      "detail": "OLBG listed French league fixtures (e.g. Toulouse v Perpignan, Bayonne v Lyon, Montauban v Oyonnax). Only the United Rugby Championship could be verified against its official match centre; LNR fixtures were not captured.",
+      "source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "F09",
+      "severity": "high",
+      "category": "Coverage gap",
+      "item": "Sports not surveyed in this capture",
+      "detail": "Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not captured before the session closed. Absence from this site is NOT evidence that OLBG lists no events for them.",
+      "source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    },
+    {
+      "id": "F10",
+      "severity": "medium",
+      "category": "Market gap",
+      "item": "NBA game totals not originated",
+      "detail": "No verified 2025-26 points-for / points-against table was captured, so totals were left blank for all 11 NBA games rather than estimated. Moneyline and handicap were originated from the official prior-season record.",
+      "source": "https://www.nba.com/standings?Season=2025-26"
+    },
+    {
+      "id": "F11",
+      "severity": "high",
+      "category": "Market gap",
+      "item": "Cricket — fixtures verified, no line",
+      "detail": "Two fixtures were confirmed on the ICC official match list (Afghanistan v Bangladesh ODI; New Zealand v India T20I). The ICC team-ranking table rendered empty, so no strength input existed and no line was originated.",
+      "source": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi"
+    },
+    {
+      "id": "F12",
+      "severity": "medium",
+      "category": "OLBG irregularity",
+      "item": "OLBG displayed times do not map to one timezone",
+      "detail": "NBA events show US-Eastern clock times roughly ten minutes after the official tip time (OLBG 19:10 vs NBA 19:00 ET for Milwaukee @ Washington). NHL events show UK clock times roughly seven minutes after the equivalent UK time (OLBG 00:37 vs an 00:30 UK face-off). The dataset stores OLBG strings verbatim and takes authoritative times from the league feed.",
+      "source": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4"
+    },
+    {
+      "id": "F13",
+      "severity": "medium",
+      "category": "OLBG irregularity",
+      "item": "Cached fixtures on OLBG's global tips page",
+      "detail": "The global /betting-tips page returned football fixtures that cannot exist in October 2026 (Champions League cards such as Real Madrid v RB Leipzig). Sport hub pages were internally consistent, so only hub pages were used for event discovery.",
+      "source": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "F14",
+      "severity": "low",
+      "category": "OLBG irregularity",
+      "item": "Non-canonical team names",
+      "detail": "OLBG appends format labels to cricket fixtures (e.g. 'Afghanistan vs Bangladesh One Day Match') and abbreviates Gaelic football club names ('Eire Og Cor'). Canonical names in this dataset come from the official body.",
+      "source": "https://www.olbg.com/betting-tips/Cricket/7"
+    },
+    {
+      "id": "F15",
+      "severity": "medium",
+      "category": "Model limitation",
+      "item": "NBA confidence capped at medium",
+      "detail": "Every NBA team playing on 21 October was 0-0 before tip-off, so the model uses the completed 2025-26 season as a prior. Confidence is therefore capped at 'medium' and no NBA pick is presented as high confidence.",
+      "source": "https://www.nba.com/standings"
+    },
+    {
+      "id": "F16",
+      "severity": "medium",
+      "category": "Timing",
+      "item": "URC kick-off times are venue-local",
+      "detail": "The URC match centre states 'All times shown are Local'. Times are stored exactly as published and were not converted, so a reader in another timezone must apply the venue offset.",
+      "source": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    },
+    {
+      "id": "F17",
+      "severity": "low",
+      "category": "Model limitation",
+      "item": "NHL sample is 7-11 games",
+      "detail": "Lines are originated from 2026-27 season-to-date goal rates with empirical-Bayes shrinkage (k=8) and a 1.05 home-ice factor. Early-season rates are noisy; the shrinkage is the guard against overconfidence, not a correction for roster changes.",
+      "source": "https://api.nhle.com/stats/rest/en/team/summary"
+    },
+    {
+      "id": "F18",
+      "severity": "medium",
+      "category": "Market gap",
+      "item": "No OLBG odds were used or available",
+      "detail": "OLBG hub pages publish tip percentages but no prices, and no bookmaker prices were used at any point. Every price in this dataset is generated from our own probability plus a 4% theoretical margin. They are not market prices.",
+      "source": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
     }
   ]
 }

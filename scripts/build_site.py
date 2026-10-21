@@ -602,6 +602,21 @@ def main():
         if not (m.get("fixture_source") or {}).get("url"):
             problems.append(f"match {m['id']} has no fixture source URL")
 
+    # Every citation must belong to the source register. Dates are normalised so a
+    # date-specific feed can cite the register's dated template.
+    def normalise(url: str) -> str:
+        return re.sub(r"\d{4}-\d{2}-\d{2}", "{date}", url)
+
+    registered = {normalise(src["url"]) for src in sources["sources"]}
+    for m in matches["matches"]:
+        url = (m.get("fixture_source") or {}).get("url", "")
+        if url and normalise(url) not in registered:
+            problems.append(f"match {m['id']} cites an unregistered source: {url}")
+    for p in preds["predictions"]:
+        for src in p.get("sources", []):
+            if normalise(src["url"]) not in registered:
+                problems.append(f"prediction {p['match_id']} cites an unregistered source: {src['url']}")
+
     if problems:
         print("BUILD PROBLEMS:")
         for p in problems:

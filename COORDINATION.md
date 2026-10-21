@@ -678,3 +678,22 @@ Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no b
 | Independent regression audit of merged dashboard, survey and evidence desk; record discrepancies without editing their outputs | in progress | `arena/9b76e3ea-olbg2` | `research/independent-audit-9b76e3ea.md`, append-only `COORDINATION.md` |
 
 This audit does not claim new fixture coverage or independently verify sporting facts unless explicitly sourced. Generated pages, datasets and pipelines remain outside this session's scope.
+
+## Independent cross-layer audit — session `arena/9b76e3ea-olbg2`
+
+**Status:** done · **Branch:** `arena/9b76e3ea-olbg2` · **Updated:** 2026-10-21 UTC
+
+Audit report: [`research/independent-audit-9b76e3ea.md`](research/independent-audit-9b76e3ea.md). Scope limited to static repo/build consistency; no external sports facts were re-verified in this pass.
+
+**Verification:** `python3 -m unittest discover -s tests -v` (28 passed); `python3 scripts/build.py`; `python3 scripts/build_site.py` (9 pages, 35 fixtures); `python3 scripts/survey_verify.py` (all checks passed: 24 HTML pages, 130 rows, 11 lines, 2 predictions, 21 flags); `python3 scripts/survey_build.py`; repeated survey verification (deterministic). Generated outputs remained clean after regeneration.
+
+**Irregularities to carry to integration / review:**
+
+1. Survey inventory event rows have OLBG `source_url` provenance but no per-row official fixture-source field; the verifier checks OLBG URL presence, not official fixture confirmation (see report R1).
+2. Survey narrative facts cite non-official secondary outlets and Wikipedia; the validator checks URL presence, not official status. Official-only factual claims remain to be rechecked (R2).
+3. Scope differs: root README says 17 sports and includes Gaelic Football/Greyhounds; survey taxonomy says 15 and excludes both. Root coverage-gap text is stale after the survey. Survey page count should be 24 HTML pages, not 25 (R3).
+4. Root index navigation has no link to `/survey/`; prior integration request remains open (R4).
+5. At least two fixtures overlap root and survey: Afghanistan–Bangladesh and New Zealand–India. The “no duplication” statement is inaccurate; combined counts must deduplicate (R5).
+6. Snapshot is static: 72/130 survey records use indexed snapshots and are marked stale; no scheduled schedule collector was found (R6).
+
+No sporting value was marked newly verified from this read-only audit. Generated/shared outputs were not modified. Recommended integration work: reconcile navigation, scope/count language and overlap disclosures; require official source URLs per published fixture and official URLs for prediction facts; disclose snapshot age or implement a freshness gate. Existing needs-review items remain non-blocking.

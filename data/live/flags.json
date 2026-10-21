@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "session": "arena/d4b9d560-olbg2",
+    "captured_utc": "2026-10-21T07:55:00Z",
+    "rule": "Anything that could not be confirmed from an official source is listed here and stays blank on the tables. Nothing is inferred to fill a gap."
+  },
+  "flags": [
+    {
+      "id": "L01",
+      "severity": "irregularity",
+      "title": "Published NHL team totals in the root dashboard are one game day stale",
+      "detail": "The root layer originates its NHL lines from data/inputs/nhl_teams.json, snapshot 2026-10-21T05:20Z. Re-reading the official NHL team-summary service at 2026-10-21T07:35Z returns later totals for four clubs: Tampa Bay 8GP 6-2-0 25GF/23GA->9GP 7-2-0 31GF/23GA; Vancouver 10GP 2-7-1 30GF/45GA->11GP 2-8-1 33GF/51GA; Vegas 10GP 8-2-0 41GF/24GA->11GP 8-3-0 43GF/30GA; Carolina 10GP 7-2-1 36GF/24GA->11GP 8-2-1 42GF/27GA. The 2026-10-20 games are missing from the published inputs, which affects the originated totals for games 2026020160 (Vegas at St. Louis) and 2026020165 (Detroit at Vancouver) in particular.",
+      "action": "Flagged, not silently changed: data/inputs/nhl_teams.json belongs to an earlier session's scope, so no value was edited. The published lines should be regenerated from a fresh snapshot.",
+      "sources": [
+        "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&sort=points&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "https://api-web.nhle.com/v1/standings/now",
+        "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/inputs/nhl_teams.json"
+      ]
+    },
+    {
+      "id": "L02",
+      "severity": "unverified",
+      "title": "NBA matchups for 2026-10-22 could not be read from an official source",
+      "detail": "The official NBA games page returned its month calendar (11 games on 21 Oct, 2 on 22 Oct, 12 on 23 Oct, 8 on 24 Oct, 7 on 25 Oct) but the fixture list itself failed to render, and the JSON scoreboard feed returned HTTP 500 while stats.nba.com was unreachable. Team names, tip times and venues for 22 October are therefore blank and no NBA line is originated.",
+      "action": "Left blank and flagged. Calendar counts are published because they were returned by the official page.",
+      "sources": [
+        "https://www.nba.com/games?date=2026-10-22",
+        "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
+      ]
+    },
+    {
+      "id": "L03",
+      "severity": "unverified",
+      "title": "Tennis: official ATP scores page reachable, but no upcoming fixtures or rankings captured",
+      "detail": "atptour.com/en/scores/current returned in-play and finished matches plus a serve-speed leaderboard, but no dated upcoming fixture list. The ATP rankings table was not retrievable in this session (session c8711d36 previously recorded the same blocker as F04). Without a fixture date and both players' standings, no tennis line can be originated without inference.",
+      "action": "No tennis rows published. Flagged.",
+      "sources": [
+        "https://www.atptour.com/en/scores/current"
+      ]
+    },
+    {
+      "id": "L04",
+      "severity": "unverified",
+      "title": "Cricket: no official fixture source reachable",
+      "detail": "icc-cricket.com/en/matches returned a 404 page and the ICC data service cricketapi-icc.pulselive.com did not respond. Earlier layers hold two ICC fixtures (Afghanistan v Bangladesh, New Zealand v India) from a 05:35Z capture; they were not re-verified here, and the ICC ranking table remains unretrievable (prior flag F11).",
+      "action": "No cricket rows published in this layer. Flagged.",
+      "sources": [
+        "https://www.icc-cricket.com/en/matches",
+        "https://cricketapi-icc.pulselive.com/cricket/match/live?pageSize=30"
+      ]
+    },
+    {
+      "id": "L05",
+      "severity": "unverified",
+      "title": "Handball: EHF competition pages returned 404",
+      "detail": "Both eurohandball.com competition paths attempted returned the site's 404 page, so no EHF Champions League fixture list was captured.",
+      "action": "No handball rows published. Flagged.",
+      "sources": [
+        "https://www.eurohandball.com/en/competitions/mach-o-ehf-champions-league/"
+      ]
+    },
+    {
+      "id": "L06",
+      "severity": "coverage gap",
+      "title": "Ten in-scope sports were not captured in this session",
+      "detail": "Rugby League, Volleyball, Golf, Darts, Snooker, eSports, Motor Racing, Aussie Rules, Greyhounds and Gaelic Football have no official-source capture in this session's window, so this layer publishes no rows for them. The survey layer (/survey/) does hold OLBG-listed events for most of them, but those rows carry OLBG provenance rather than an official fixture source - the gap the concurrent provenance audit (PR #34) also records.",
+      "action": "Listed as a coverage gap rather than filled from memory.",
+      "sources": [
+        "https://buffedlizard55-lab.github.io/OLBG2/survey/"
+      ]
+    },
+    {
+      "id": "L07",
+      "severity": "model limitation",
+      "title": "World Series model carries no home-advantage term, so all three games price identically",
+      "detail": "No official MLB home/away split was captured this session, so the Poisson model applies no home edge. Games 1, 2 and 3 therefore return the same match-winner probabilities (Milwaukee 59.4%) even though game 3 is played in St. Petersburg. The prices are internally consistent with the inputs but understate the home side in games 1-2.",
+      "action": "Disclosed. Confidence for all three is medium, never high, which is consistent with the uncertainty.",
+      "sources": [
+        "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+      ]
+    },
+    {
+      "id": "L08",
+      "severity": "model limitation",
+      "title": "Rugby spreads are estimated from eight matches",
+      "detail": "The margin spread (18.96 points) and total spread (12.93 points) used for URC handicap and total prices are the sample standard deviations of the eight official Round 3 results. Eight matches is a small sample, so handicap and total prices are wider than a full-season estimate would give.",
+      "action": "Disclosed in every row's model block. High-confidence picks are taken from the match-winner market only.",
+      "sources": [
+        "https://stats.unitedrugby.com/match-centre/2026-27/5"
+      ]
+    },
+    {
+      "id": "L09",
+      "severity": "disclosure",
+      "title": "URC kick-off times are local, not UTC",
+      "detail": "The URC match centre states 'All times shown are Local'. Kick-off times are stored exactly as published and are not converted, so rows for South African, Italian and British venues are not directly comparable.",
+      "action": "Each row labels its time as local.",
+      "sources": [
+        "https://stats.unitedrugby.com/match-centre/2026-27/5"
+      ]
+    },
+    {
+      "id": "L10",
+      "severity": "corroboration",
+      "title": "Second confirmation of the NHL shootout-goal convention split (prior flag F19)",
+      "detail": "Read in the same session, the official standings service returns Vegas with 44 goals for while the team-summary service returns 43 for the same date - a one-goal difference equal to Vegas' single shootout win. This independently reproduces the convention difference session db99ed90 recorded as F19.",
+      "action": "No change needed; recorded so the two endpoints are not mistaken for a data error.",
+      "sources": [
+        "https://api-web.nhle.com/v1/standings/now",
+        "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&sort=points&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027"
+      ]
+    },
+    {
+      "id": "L11",
+      "severity": "coverage gap",
+      "title": "The brief's 'full list of updated matches for every sport' is not met",
+      "detail": "This layer adds 11 newly captured fixtures across two sports (Rugby Union Round 5, MLB World Series). Combined with the root dashboard (35 fixtures), the evidence desk (25 NHL fixtures) and the survey inventory (130 OLBG-listed events), coverage is substantial, but 14 in-scope sports still have no official-source fixture capture, and the combined counts overlap rather than deduplicate.",
+      "action": "Stated plainly instead of being presented as complete.",
+      "sources": [
+        "https://buffedlizard55-lab.github.io/OLBG2/"
+      ]
+    }
+  ]
+}

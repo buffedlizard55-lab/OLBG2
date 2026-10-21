@@ -1036,3 +1036,77 @@ Final pre-push sync note: `git pull --rebase origin arena/e3c5f898-olbg2` attemp
 | Pages status | `built`, source `main:/` |
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/index.html?cachebust=43` shows the dated-snapshot disclaimer, 47 stored rows, and source-link verification limits. |
 | Warnings | Non-blocking Node.js 20 deprecation and Ubuntu runner migration annotations; all jobs succeeded. |
+
+### Merge conflict log - session `arena/d4b9d560-olbg2`
+
+Merging `origin/main` (PR #44, commit `237d944`) into this branch conflicted only in this
+append-only file: the upstream sessions' records and this session's Layer-4 completion had both
+appended at EOF. Resolved additively - the upstream sections are kept verbatim above and this
+session's record follows. No code, data or generated page was discarded. After the merge the
+root dashboard was regenerated from the combined `scripts/build_site.py`, which now carries both
+the upstream navigation entries and this session's `/live/` entry.
+
+# Session `arena/d4b9d560-olbg2` — live-slate desk (Layer 4) and final integration
+
+**Session ID:** `arena/d4b9d560-olbg2` · **Branch:** `arena/d4b9d560-olbg2` · **Claimed:** 2026-10-21 (before any edit, per protocol)
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| L1 | Capture a fresh 2026-10-21 slate from official governing-body/league sources only, one official source URL per row | in progress | `arena/d4b9d560-olbg2` | `data/live/**`, `research/live-slate-d4b9d560.md` |
+| L2 | Originate money-line / handicap / total lines from verified inputs, pick + low/medium/high confidence | in progress | `arena/d4b9d560-olbg2` | `scripts/live_model.py`, `data/live/**` |
+| L3 | High-confidence written predictions (≥30 words) with official-source facts | in progress | `arena/d4b9d560-olbg2` | `data/live/**` |
+| L4 | Dashboard layer at `/live/` (landing + per-sport subpages + flagged) | in progress | `arena/d4b9d560-olbg2` | `scripts/live_build.py`, `live/**` |
+| L5 | Final integration: root nav link, rebuild all layers, verify, PR, merge, confirm Pages | pending | `arena/d4b9d560-olbg2` | shared outputs (integration session) |
+
+**Concurrent-session check at claim time:** PR #34 (`arena/18eca832-olbg2`, "Audit survey official-source
+provenance") is open and MERGEABLE. It owns `scripts/official_source_audit.py`,
+`tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md` and an append to
+`COORDINATION.md`. This session does **not** create, edit or delete any of those paths, and does not touch
+`survey/**`, `data/survey/**`, `scripts/survey_*.py`, `site/**`, `scripts/build.py`, `data/desk/**`.
+Overlap is limited to append-only `COORDINATION.md` sections, resolved additively at merge.
+
+**Rules for this session:** a value is published only when an official source returned it in this session's
+capture; anything unreachable stays blank and is flagged; no value is inferred from memory or from a
+secondary outlet. Every published row carries the official URL it was read from.
+
+### Completion - session `arena/d4b9d560-olbg2` (Layer 4 live slate)
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| L1 | Fresh 2026-10-21 capture from official sources, one official URL per row | done | 11 fixtures: URC Round 5 (8) + MLB World Series (3); `data/live/urc.json`, `data/live/mlb.json` |
+| L2 | Originate match-winner / handicap / total lines, pick + confidence | done | 33 market lines, 11 picks (4 high, 4 medium, 3 low); `scripts/live_model.py` -> `data/live/lines.json` |
+| L3 | High-confidence written predictions >= 30 words | done | 4 predictions, 60-68 words each, every fact traceable to the URC match centre or table; `data/live/predictions.json` |
+| L4 | Dashboard layer at `/live/` | done | 6 pages, 0 broken local links, every fixture row carries its official source; `scripts/live_build.py` |
+| L5 | Final integration, verification, PR, merge, Pages | done | recorded in the publish table below |
+
+**Sources used (all read this session, 07:05-07:55Z):**
+`stats.unitedrugby.com/match-centre/2026-27/5` and `/table/2026-27`;
+`statsapi.mlb.com/api/v1/schedule` and `/api/v1/standings`;
+`api-web.nhle.com/v1/score|schedule|standings`; `api.nhle.com/stats/rest/en/team/summary`;
+`nba.com/games`; `atptour.com/en/scores/current`. Full table with what each returned, plus the
+seven sources tried and rejected, is in `research/live-slate-d4b9d560.md`.
+
+**Verification:** `python3 -m unittest discover -s tests -q` -> 44 tests pass (16 new in
+`tests/test_live.py`); `scripts/live_build.py` -> 6 pages, 0 broken local links, no fixture
+without an official source; the three earlier gates reproduce clean (`build_site.py` 10 pages /
+35 fixtures / no broken links, `build.py` 25 fixtures, `survey_verify.py` all green, 24 pages /
+130 events).
+
+**Irregularities flagged (11, `data/live/flags.json`, published at `live/flagged.html`):**
+L01 the root dashboard's NHL inputs are one game day stale for Tampa Bay, Vancouver, Vegas and
+Carolina (published 8/10/10/10 GP vs official 9/11/11/11 GP), which affects the originated
+totals for games 2026020160 and 2026020165 - flagged, not edited, because that file is another
+session's scope; L02 NBA matchups unretrievable; L03 tennis fixtures/rankings unretrievable;
+L04 cricket sources down; L05 handball 404; L06 ten in-scope sports not captured; L07 no
+home-advantage term in the World Series model; L08 rugby spreads estimated from 8 matches;
+L09 URC kick-off times are local; L10 second confirmation of the shootout-goal convention split
+(prior F19); L11 the brief's "full list for every sport" is not met and the layers' counts
+overlap rather than deduplicate.
+
+**Scope discipline:** no file owned by another session was edited. `survey/**`,
+`data/survey/**`, `scripts/survey_*.py`, `site/**`, `scripts/build.py`, `data/desk/**`,
+`data/inputs/**`, `data/matches.json`, `tests/test_build.py`, `tests/test_integration.py` and
+PR #34's `scripts/official_source_audit.py` / `tests/test_official_source_audit.py` /
+`research/official-source-audit-18eca832.md` are untouched. Shared outputs touched as the
+integration session: `scripts/build_site.py` (one navigation entry for `/live/`) and the root
+pages it regenerates, plus this append-only file.

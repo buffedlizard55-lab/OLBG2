@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "captured_utc": "2026-10-21T07:50:00Z",
+    "captured_by": "arena/d4b9d560-olbg2",
+    "rule": "A sport is 'verified fixtures' only if an official source returned the fixtures in this session's capture. Every other sport is listed with what was tried and why it is blank. No fixture, price or player fact is inferred.",
+    "scope": "In-scope sports are OLBG's betting sports minus the brief's exclusions (soccer, boxing, UFC, MMA, football/American football, hurling, horse racing, cycling, specials)."
+  },
+  "sports": [
+    {
+      "sport": "Rugby Union",
+      "status": "verified fixtures",
+      "fixtures": 8,
+      "competition": "United Rugby Championship 2026-27, Round 5",
+      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/5",
+      "note": "8 fixtures with per-match official URLs, venues, local kick-off times and the full 16-club league table."
+    },
+    {
+      "sport": "Baseball",
+      "status": "verified fixtures",
+      "fixtures": 3,
+      "competition": "MLB 2026 World Series",
+      "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-26&hydrate=team",
+      "note": "Rays v Brewers. MLB returned 0 games for 2026-10-21 and 2026-10-22; games 4-7 were not returned as scheduled."
+    },
+    {
+      "sport": "Ice Hockey",
+      "status": "covered by an earlier layer - re-verified here, not republished",
+      "fixtures": 0,
+      "competition": "NHL 2026-27 regular season",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "note": "The root dashboard already publishes all 14 NHL games for 2026-10-21 and 2026-10-22 with originated lines, so this layer does not duplicate them. This session re-read the official score and schedule feeds and confirmed fixture ids 2026020154-2026020157, matchups, venues and start times match. It also found that four teams' published input totals are one game day stale - see flag L01."
+    },
+    {
+      "sport": "Basketball",
+      "status": "partially verified - calendar only",
+      "fixtures": 0,
+      "competition": "NBA 2026-27 regular season",
+      "source_url": "https://www.nba.com/games?date=2026-10-22",
+      "note": "The official games page returned its month calendar (11 games on 21 Oct, 2 on 22 Oct, 12 on 23 Oct, 8 on 24 Oct, 7 on 25 Oct) but the game list itself failed to render ('Sorry, something went wrong'). The JSON scoreboard feed returned HTTP 500 and stats.nba.com was unreachable from this session. Matchups for 22 Oct therefore stay blank and are flagged rather than guessed. See flag L02."
+    },
+    {
+      "sport": "Tennis",
+      "status": "official source reachable - no upcoming-fixture list captured",
+      "fixtures": 0,
+      "competition": "ATP Tour",
+      "source_url": "https://www.atptour.com/en/scores/current",
+      "note": "The official ATP scores page returned in-play and completed matches only (for example Zizou Bergs d. Toby Samuel 6-3 7-6(3), Brandon Nakashima d. Hamad Medjedovic 7-6(4) 6-7(4) 6-2, Corentin Moutet d. Ugo Humbert 6-2 6-7(5) 7-6(4)), plus the official serve-speed leaderboard. No dated upcoming fixture list or ranking table was retrievable in this session, so no tennis lines are originated. See flag L03."
+    },
+    {
+      "sport": "Cricket",
+      "status": "no official fixture source reachable",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": "https://www.icc-cricket.com/en/matches",
+      "note": "icc-cricket.com/en/matches returned 404 and the ICC data service cricketapi-icc.pulselive.com was unreachable from this session. No fixtures published. See flag L04."
+    },
+    {
+      "sport": "Handball",
+      "status": "no official fixture source reachable",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": "https://www.eurohandball.com/en/competitions/mach-o-ehf-champions-league/",
+      "note": "Both eurohandball.com competition paths tried returned the site's 404 page. No fixtures published. See flag L05."
+    },
+    {
+      "sport": "Rugby League",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official source was fetched for rugby league in this session's window. The survey layer holds OLBG-listed rugby league rows but those carry OLBG provenance, not an official fixture source. See flag L06."
+    },
+    {
+      "sport": "Volleyball",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official source fetched in this session. See flag L06."
+    },
+    {
+      "sport": "Golf",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official source fetched in this session. Golf is outright-only in the survey taxonomy (no head-to-head match market). See flag L06."
+    },
+    {
+      "sport": "Darts",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official source fetched in this session. Session ca1d5677 previously recorded pdc.tv as cookie-walled (COORDINATION.md). See flag L06."
+    },
+    {
+      "sport": "Snooker",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official source fetched in this session. Session ca1d5677 previously recorded wst.tv returning HTTP 500 (COORDINATION.md). See flag L06."
+    },
+    {
+      "sport": "eSports",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official publisher source fetched in this session. See flag L06."
+    },
+    {
+      "sport": "Motor Racing",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official source fetched in this session. See flag L06."
+    },
+    {
+      "sport": "Aussie Rules",
+      "status": "not captured in this session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "No official source fetched in this session; the AFL season is expected to have concluded, but that is not asserted here because no official source was read. See flag L06."
+    },
+    {
+      "sport": "Greyhounds",
+      "status": "scope disputed by an earlier session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "Session c8711d36 flagged F23: the brief excludes horse racing but not greyhounds, so earlier layers kept greyhounds in scope. No official source was fetched here. See flags L06 and F23."
+    },
+    {
+      "sport": "Gaelic Football",
+      "status": "scope disputed by an earlier session",
+      "fixtures": 0,
+      "competition": null,
+      "source_url": null,
+      "note": "The brief excludes 'football' without naming the Gaelic code; earlier layers kept it in scope under flag F23. No official source was fetched here. See flags L06 and F23."
+    }
+  ]
+}

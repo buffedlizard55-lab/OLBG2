@@ -101,6 +101,16 @@ in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated
 | Integration branch | `arena/42fb7792-olbg2` |
 | Dashboard build check | `python3 scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken links |
 | Prior pipeline check | `python -m unittest discover -s tests -v` → 6 tests pass; `python scripts/build.py` → no `site/` diff |
-| Pull request | PR #8 (this merge) |
-| Merge result | merged to `main` |
-| Pages deploy | verified after merge |
+| Pull request | **PR #7** https://github.com/buffedlizard55-lab/OLBG2/pull/7 |
+| Merge | merged to `main` at 2026-10-21 05:21:08Z · merge commit `3778896` |
+| Merge conflict | Yes — resolved by merging `origin/main` (`d9f6376`) into the branch first; no prior work discarded (see log above) |
+| Deploy run | `Validate Pages content` 39549059975 success · `pages build and deployment` 39549058659 success |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/` renders the dashboard; `/site/index.html` renders the prior audit site |
+| Follow-up | PR #8 — per-date NHL provenance (each NHL row now cites its own `…/score/YYYY-MM-DD` feed instead of all rows citing 21 October) |
+
+### Post-merge note
+
+Verifying the live site exposed one provenance defect: all twelve NHL rows linked to the 21 October score feed,
+including the eleven games on 22 October. The data itself was correct (captured from the 22 October feed during
+collection), but the citation was not line-accurate. Fixed in PR #8 by deriving the URL from each fixture's own
+date; the site was rebuilt and re-verified. No prices, picks or confidence grades changed.

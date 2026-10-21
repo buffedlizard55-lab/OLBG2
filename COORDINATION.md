@@ -684,3 +684,5 @@ Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no b
 
 ### Integration conflict log — 8103ccb6
 PR #29 initially could not merge because main advanced to 8457c79 (another session added Survey navigation). Stopped and merged origin/main. Preserved both coordination sections, kept their Survey footer, consolidated duplicate Survey nav items, and regenerated all conflicting HTML from the combined builder. No data was changed or discarded. Re-ran all three builds and 33 tests.
+
+Pre-push pull/rebase after the sync merge attempted to replay already merged concurrent-session commits and conflicted in the board. Aborted rebase without discarding work; the explicit merge commit preserves both histories. Push follows the safe abort, rather than rewriting prior sessions' commits.

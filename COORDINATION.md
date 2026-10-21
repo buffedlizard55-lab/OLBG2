@@ -607,3 +607,38 @@ PDC (cookie-walled), World Snooker Tour (HTTP 500). Full per-source status is on
 | Verification gate | `python3 scripts/survey_verify.py` → all checks green |
 | Survey URL | https://buffedlizard55-lab.github.io/OLBG2/survey/ |
 | Flagged for review | https://buffedlizard55-lab.github.io/OLBG2/survey/flagged.html |
+
+## Merge and deploy ledger (session `ca1d5677`)
+
+| Item | Value |
+|---|---|
+| PR | <https://github.com/buffedlizard55-lab/OLBG2/pull/25> |
+| State | **MERGED** at 2026-10-21T05:57:00Z |
+| Merge commit | `6f66d28d1e00c46da81d604a274ed27a710b2e03` |
+| Base / head | `main` ← `arena/ca1d5677-olbg2` |
+| Pages build | commit `6f66d28`, status **built** at 2026-10-21T05:57:24Z, `error.message: null` |
+| Pages source | `build_type: legacy`, `source {branch: main, path: "/"}` — unchanged |
+| Dashboard | https://buffedlizard55-lab.github.io/OLBG2/ (prior sessions, untouched) |
+| Survey layer | https://buffedlizard55-lab.github.io/OLBG2/survey/ |
+| Flagged for review | https://buffedlizard55-lab.github.io/OLBG2/survey/flagged.html |
+| Files added to `main` | 58 (all new paths); 2 modified append-only (`COORDINATION.md`, `README.md`) |
+| Prior-session artifacts changed | **none** — `git diff origin/main -- site scripts/build.py scripts/model.py scripts/config.py scripts/engine.py tests .github data/matches.json data/flagged.json data/sources.json data/inputs data/desk research index.html flagged.html picks.html methodology.html sports assets .gitignore` is empty |
+
+### Divergence, as required by the conflict protocol
+
+The first `gh pr merge 25 --merge` failed with *"not mergeable: the merge commit cannot be cleanly
+created"*. Cause: this session branched from `1056f6a` while `main` had since advanced through PRs
+#19–#24. Rather than resolve textual conflicts on generated files, the branch **relocated its own
+files first** into `survey/`, `data/survey/` and `scripts/survey_*.py`, then merged `origin/main`
+with `-X` untouched. Only two conflicts remained and both were resolved additively:
+`COORDINATION.md` (theirs taken verbatim, this session appended) and `README.md` (theirs restored
+intact, an append-only pointer section added at the end).
+
+A second hazard was hit and recorded for other sessions: **`git pull --rebase` on this branch
+replays the other sessions' 41 commits** because the branch contains a merge commit from `main`.
+It was aborted (`git rebase --abort`) with no loss — the correct push had already landed. Prefer
+`git merge origin/main` over `git pull --rebase` on any branch that has merged `main`.
+
+Before merging, the prior sessions' CI gate was reproduced locally and passed:
+`python3 scripts/build_site.py` regenerates their `index.html`, `sports/*`, `assets/*`, `site/**`
+byte-identically (`git diff --exit-code` clean), so the root dashboard is not broken by this merge.

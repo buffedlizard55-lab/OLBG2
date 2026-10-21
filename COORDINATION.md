@@ -667,3 +667,14 @@ Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no b
 | Merge result | Merged 2026-10-21 06:41:09 UTC; merge commit `e5ad112b41d4df167026fd9429310d2335dc4727` |
 | Validate Pages content | Run `39556956109` success |
 | GitHub Pages deployment | Run `39556955856` success, including deploy job |
+---
+
+# Session `arena/9b76e3ea-olbg2` — independent cross-layer verification
+
+**Branch:** `arena/9b76e3ea-olbg2` · **Updated:** 2026-10-21 UTC
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independent regression audit of merged dashboard, survey and evidence desk; record discrepancies without editing their outputs | in progress | `arena/9b76e3ea-olbg2` | `research/independent-audit-9b76e3ea.md`, append-only `COORDINATION.md` |
+
+This audit does not claim new fixture coverage or independently verify sporting facts unless explicitly sourced. Generated pages, datasets and pipelines remain outside this session's scope.

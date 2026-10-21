@@ -70,12 +70,11 @@ def e(s):
     return html.escape("" if s is None else str(s))
 
 
-OFFICIAL_HOSTS = ("icc-cricket.com", "lnr.fr", "owgr.com", "atptour.com", "wtatennis.com",
-                  "pdc.tv", "worldsnooker.com", "wst.tv", "world.rugby", "nba.com", "nhl.com",
-                  "mlb.com", "fifa.com", "formula1.com", "fia.com", "esnooker.com",
-                  "lequipe.fr", "espn.com", "cricinfo.com", "wikipedia.org", "all.rugby",
-                  "rugbyorbit.com", "planet rugby", "planetrugby.com", "rugbyrama.fr",
-                  "ladepeche.fr", "stadetoulousain.fr", "thesportsencounter.com")
+OFFICIAL_HOSTS = ("icc-cricket.com", "lnr.fr", "unitedrugby.com", "owgr.com", "pgatour.com",
+                  "dpworldtour.com", "atptour.com", "wtatennis.com", "pdc.tv", "worldsnooker.com",
+                  "wst.tv", "world.rugby", "nba.com", "euroleaguebasketball.net", "nhl.com",
+                  "nhle.com", "mlb.com", "formula1.com", "fia.com", "eurohandball.com",
+                  "plusliga.pl", "nrl.com", "superleague.co.uk", "gaa.ie", "gbgb.org.uk")
 
 
 def tier_of(url):
@@ -85,10 +84,7 @@ def tier_of(url):
     u = url.lower()
     if "olbg.com" in u:
         return "olbg"
-    if "lnr.fr" in u or "icc-cricket.com" in u or "owgr.com" in u or "atptour.com" in u \
-       or "wtatennis.com" in u or "pdc.tv" in u or "worldsnooker.com" in u or "wst.tv" in u \
-       or "world.rugby" in u or "nba.com" in u or "nhl.com" in u or "mlb.com" in u \
-       or "formula1.com" in u or "fia.com" in u:
+    if any(h in u for h in OFFICIAL_HOSTS):
         return "official"
     return "corroborating"
 
@@ -238,7 +234,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 """
 
-NAV = [("../index.html", "Main dashboard"), ("index.html", "Survey dashboard"), ("sports.html", "Sports"), ("lines.html", "Our Lines"),
+NAV = [("../index.html", "Main dashboard"), ("../verified/index.html", "Verified Desk"),
+       ("index.html", "Survey dashboard"), ("sports.html", "Sports"), ("lines.html", "Our Lines"),
        ("picks.html", "Picks"), ("predictions.html", "Predictions"),
        ("methodology.html", "Methodology"), ("verification.html", "Verification"),
        ("flagged.html", "Flagged for Review"), ("excluded.html", "Excluded Sports")]
@@ -438,13 +435,15 @@ for s in included:
                 line_txt = (f'p={pct(lr.get("pick_probability"))} @ {odds(wm.get("our_fair_odds_a") or wm.get("our_fair_odds_b"))}'
                             if wm.get("our_probability") is not None else "&mdash;")
                 pick, cf = lr.get("pick"), lr["confidence"]
-                official = lr.get("rating_source") or (wm.get("basis_source"))
+                official = lr.get("rating_source") or (wm.get("basis_source")) or r.get("official_fixture_source")
                 extra = f'<br>{autosrc(official)}' if official else ""
                 conf_cell = badge(cf)
             else:
                 line_txt = '<span class="badge badge-unv">UNVERIFIED</span>'
                 pick, cf = "&mdash;", "unverified"
-                extra, conf_cell = "", badge("unverified")
+                official = r.get("official_fixture_source")
+                extra = f'<br>{autosrc(official)}' if official else ""
+                conf_cell = badge("unverified")
             tips = r["tips_for"] if r["tips_for"] is not None else "&mdash;"
             total = r["tips_total"] if r["tips_total"] is not None else ""
             tipstr = f"{tips}/{total}" if total else str(tips)
@@ -632,48 +631,32 @@ b.append('<div class="card"><h3>Official sources consulted</h3><div class="scrol
          '<th>Source</th><th>Body</th><th>What it was used for</th><th>As of</th><th>Status</th>'
          '</tr></thead><tbody>')
 OFFICIAL = [
-    ("https://www.icc-cricket.com/rankings/team-rankings", "International Cricket Council",
-     "Men's ODI and T20I team ratings for 4 cricket fixtures", "ODI 2026-10-19, T20I 2026-10-14", "used"),
-    ("https://www.cricinfo.com/rankings/icc-team-ranking", "ESPNcricinfo (ICC digital partner)",
-     "Read-through of the ICC rankings table", "2026-10-19", "used"),
-    ("https://www.lnr.fr/rugby-top-14/classement", "Ligue Nationale de Rugby",
-     "Top 14 league table after round 6 for 3 fixtures", "2026-10-20", "used"),
+    ("https://top14.lnr.fr/classement", "Ligue Nationale de Rugby",
+     "Official Top 14 standings after Journée 6 for Round 7 origination", "2026-10-21", "used"),
     ("https://top14.lnr.fr/club/toulouse", "Ligue Nationale de Rugby",
-     "Official published fixture probabilities and kickoff detail", "2026-10-19", "used"),
+     "Official club win probabilities (83.06 / 15.32 / 1.61) & Sale Sharks 60-14 result", "2026-10-21", "used"),
     ("https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan", "Ligue Nationale de Rugby",
-     "Fixture confirmation: round 7, 24 Oct 2026 16:35, Stade Ernest-Wallon", "2026-10-19", "used"),
-    ("https://www.espn.com/cricket/series/_/id/23884/afg-vs-ban", "ESPNcricinfo",
-     "Verified results: Afghanistan beat Bangladesh by 200 runs in the 2nd ODI", "2026-10-20", "used"),
-    ("https://www.cricinfo.com/series/uae-odi-tri-series-2026-27-1555109/afghanistan-vs-bangladesh-3rd-match-1555119/live-cricket-score",
-     "ESPNcricinfo", "Fixture date and official 11:30 GMT start", "2026-10-21", "used"),
-    ("https://www.cricinfo.com/team/afghanistan-40/match-schedule-fixtures-and-results", "ESPNcricinfo",
-     "Afghanistan beat Zimbabwe by 158 runs", "2026-10-19", "used"),
-    ("https://www.owgr.com/current-world-ranking", "Official World Golf Ranking",
-     "Retrieved week 42 (18 Oct 2026) average points; no line produced because tournament fields were unverified",
-     "2026-10-18", "retrieved, not used"),
-    ("https://www.atptour.com/en/rankings/singles", "ATP Tour",
-     "Top-18 official points; insufficient range for the 14 OLBG tennis fixtures", "2026-10-07", "retrieved, not used"),
-    ("https://www.wtatennis.com/rankings/singles", "WTA",
-     "Page is JavaScript-rendered; confirmed live tournaments (Osaka Japan Open, Ningbo Open) only",
-     "2026-10-21", "not usable"),
+     "Fixture confirmation: Journée 7, 24 Oct 2026 16:35, Stade Ernest-Wallon", "2026-10-21", "used"),
+    ("https://stats.unitedrugby.com/match-centre/table/2026-27", "United Rugby Championship",
+     "Official URC Round 3 standings & Round 4 fixtures", "2026-10-21", "used"),
     ("https://www.pdc.tv/rankings", "Professional Darts Corporation",
-     "Order of Merit positions; cookie-walled, only partial top-14 obtainable", "2026-10-19", "partial"),
-    ("https://worldsnooker.com/rankings", "World Snooker Tour",
-     "Returned HTTP 500 during collection", "n/a", "failed"),
-    ("https://www.world.rugby/rankings/mru", "World Rugby",
-     "Would be needed for the Six Nations 2027 antepost; not retrieved", "n/a", "not retrieved"),
-    ("https://www.olbg.com/sitemap-betting-tips.xml", "OLBG",
-     "Authoritative sport taxonomy: 22 sports with numeric ids", "2026-10-21", "used"),
-    ("https://www.olbg.com/betting-tips/Rugby_Union/9", "OLBG",
-     "Published competition base rates: Top 14, Premiership, URC, Super Rugby", "2026-10-21", "used"),
-    ("https://www.olbg.com/betting-tips/Handball/20", "OLBG",
-     "Published favourite/underdog/tie rates for EHF and IHF tournaments", "2026-10-18", "retrieved, not used"),
-    ("https://www.olbg.com/betting-tips/Rugby_League/10", "OLBG",
-     "Published Super League / Championship / NRL base rates", "2026-10-20", "retrieved, not used"),
-    ("https://www.olbg.com/betting-tips/Snooker/8", "OLBG",
-     "Snooker market taxonomy and Triple Crown margin / frame-score statistics", "2026-10-21", "used for taxonomy"),
-    ("https://www.nba.com/schedule", "NBA", "Confirmed reachability of official league source",
-     "2026-10-21", "reachable, not used"),
+     "Official PDC Werner Ranking Ladder prize sums for all 32 European Championship R1 players", "2026-10-21", "used"),
+    ("https://www.wst.tv/rankings/", "World Snooker Tour",
+     "Official WST two-year prize rankings (Top 36) & Northern Ireland Open R2 match centre", "2026-10-21", "used"),
+    ("https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026", "Major League Baseball",
+     "Official 2026 regular-season W-L & run totals for World Series Game 1 (TB @ MIL)", "2026-10-21", "used"),
+    ("https://www.atptour.com/en/rankings/singles", "ATP Tour",
+     "Official PIF ATP Top-100 singles rankings (originated on /verified/)", "2026-10-21", "used"),
+    ("https://www.euroleaguebasketball.net/en/euroleague/standings/", "Euroleague Basketball",
+     "Official EuroLeague R7 & BKT EuroCup R4 standings (originated on /verified/)", "2026-10-21", "used"),
+    ("https://ehfcl.eurohandball.com/men/2026-27/standings/", "European Handball Federation",
+     "Official EHF Champions League Men Group Phase standings (originated on /verified/)", "2026-10-21", "used"),
+    ("https://www.formula1.com/en/results/2026/drivers", "FIA Formula One",
+     "Official 2026 FIA Drivers' Championship points after Round 17 (originated on /verified/)", "2026-10-21", "used"),
+    ("https://www.icc-cricket.com/rankings/team-rankings", "International Cricket Council",
+     "Client-side JS shell only; cricket rows left blank after purging third-party mirrors", "2026-10-21", "not usable"),
+    ("https://www.wtatennis.com/rankings/singles", "WTA Tour",
+     "Client-side JS shell; WTA rows left blank", "2026-10-21", "not usable"),
 ]
 for url, body, use, asof, status in OFFICIAL:
     ok = status.startswith("used")

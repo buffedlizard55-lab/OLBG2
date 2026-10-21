@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology &amp; Models — OLBG Verified Multi-Sport Origination Desk</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span>OLBG Verified Research &amp; Origination Desk</span>
+        <span class="brand-badge">2026-10-21 Primary Audit</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" class="">Overview & All Matches</a>
+<a href="predictions.html" class="">High-Confidence Picks</a>
+<a href="flagged.html" class="nav-flag">Flagged for Review</a>
+<a href="audit.html" class="">Line-by-Line Repo Audit</a>
+<a href="methodology.html" class="active">Methodology & Models</a>
+      </nav>
+    </div>
+  </header>
+  <div class="subbar">
+    <div class="subbar-inner">
+      <span><strong>Cross-Layer Navigation:</strong></span>
+      <a href="../index.html">Root Dashboard (/)</a>
+      <span>·</span>
+      <a href="../live/index.html">Live Slate (/live/)</a>
+      <span>·</span>
+      <a href="../survey/index.html">All-Sports Survey (/survey/)</a>
+      <span>·</span>
+      <a href="../site/index.html">Evidence Desk v2 (/site/)</a>
+      <span>·</span>
+      <a href="../integration.html">Integration Status</a>
+    </div>
+  </div>
+  <main class="container">
+
+<section class="hero">
+  <p class="eyebrow">Cleanroom Mathematical Origination &amp; Verification Rules</p>
+  <h1>Origination Models, Market Coverage &amp; Confidence Grading</h1>
+  <p>All fair probabilities and decimal prices (<code>1 / p</code>, zero bookmaker overround) are computed deterministically in <code>scripts/verified_model.py</code> using only the Python standard library and verified primary inputs from <code>scripts/verified_seed.py</code> and <code>data/inputs/*.json</code>.</p>
+</section>
+
+<div class="sport-grid">
+  <div class="card"><h3>1. Ice Hockey (NHL — 16 Games)</h3><p>Empirical-Bayes shrunk attack/defence goal rates (<code>k = 8</code> games shrinkage toward league mean goals/game) feeding a 0–25 bivariate Poisson grid with 52%/48% home/away OT/SO split. Originates 2-way Moneyline, -1.5/+1.5 Puck Line, and 5.5/6.5 Total Goals.</p></div>
+  <div class="card"><h3>2. Basketball (NBA, EuroLeague, EuroCup — 25 Games)</h3><p>NBA uses shrunk 2025-26 win-rate logit prior (capped at <code>MEDIUM</code>; totals left blank because <code>nba.com/standings</code> omits PF/PA). EuroLeague (10 R7 games) &amp; BKT EuroCup (4 R4 games) use shrunk net efficiency margin normal models across Moneyline, Spread, and Over/Under Total Points.</p></div>
+  <div class="card"><h3>3. Rugby Union (Top 14, Pro D2, URC — 23 Matches)</h3><p>Normal scoring-margin &amp; total-points distribution with empirical-Bayes shrinkage (<code>k = 4</code> matches) and home advantage (+4.5 pts) across 1X2 Match Result, Half-Point Handicap, and Total Points.</p></div>
+  <div class="card"><h3>4. Handball (EHF Champions League — 12 Matches)</h3><p>Full-support 0–60 bivariate Poisson model trained on official 4-match Group Phase GF/GA tables (<code>k = 4</code>), originating 1X2 Match Winner, Half-Goal Handicap, and Over/Under Total Goals.</p></div>
+  <div class="card"><h3>5. Darts (PDC European Championship — 16 Ties)</h3><p>Exact negative-binomial / binomial race-to-6-legs Markov calculation from log two-year official PDC Werner Ranking Ladder prize sums for all 32 players, pricing Match Winner, -1.5/+1.5 Leg Handicap, and Over/Under 9.5 Total Legs.</p></div>
+  <div class="card"><h3>6. Tennis &amp; Snooker (7 ATP + 2 WST Matches)</h3><p>Exact best-of-3 sets (ATP Top-100 points) and best-of-7 frames (WST Top-36 prize money) combinatorial models pricing Match Winner, -1.5/+1.5 Set/Frame Handicap, and Over/Under Total Sets/Frames. Matches involving unconfirmed ranks outside SSR pages are left blank.</p></div>
+  <div class="card"><h3>7. Baseball &amp; Motor Racing (MLB WS G1 + 2 F1 Markets)</h3><p>MLB World Series Game 1 (<code>TB 98-64, 736 RS / 650 RA</code> at <code>MIL 103-59, 832 RS / 618 RA</code>) uses shrunk run-rate Poisson across Moneyline, Run Line, and Total Runs. FIA Formula 1 prices Round 18 &amp; 2026 Drivers' Championship from official 17-round points shares.</p></div>
+  <div class="card"><h3>8. Confidence Thresholds</h3><p><strong>HIGH:</strong> &ge;72.0% model probability backed by current-season official stats (requires bespoke &ge;30-word human editorial preview). <strong>MEDIUM:</strong> 60.0%–71.99% (or prior-season cap). <strong>LOW:</strong> &lt;60.0%. <strong>Unlined:</strong> Any missing primary input.</p></div>
+</div>
+
+  </main>
+  <footer>
+    <div>Every value published on <code>/verified/</code> is traced to an official governing-body or league endpoint captured on <strong>2026-10-21</strong>. Unconfirmed fields are left strictly blank (<code>—</code>) and listed on <a href="flagged.html">Flagged for Review</a>.</div>
+    <div>Excluded per brief: Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, Specials.</div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

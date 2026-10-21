@@ -32,11 +32,12 @@ SPORTS = {
 
 NAV = [
     ("index.html", "Dashboard"),
+    ("verified/index.html", "Verified desk (155 rows)"),
     ("picks.html", "Picks & predictions"),
     ("flagged.html", "Flagged for review"),
     ("methodology.html", "Methodology"),
     ("sources.html", "Sources"),
-    ("survey/index.html", "Survey (130 events)"),
+    ("survey/index.html", "Survey (145 events)"),
     ("live/index.html", "Live slate (2026-10-21)"),
     ("site/index.html", "Evidence desk v2"),
     ("integration.html", "Evidence status"),

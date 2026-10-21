@@ -6,7 +6,7 @@
     "included": false,
     "note": "Excluded by brief: 'soccer', 'football'.",
     "listing_url": null,
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.olbg.com/betting-tips/Football/1"
   },
   {
     "olbg_sport_id": 2,
@@ -15,70 +15,70 @@
     "included": false,
     "note": "Excluded by brief: 'horse racing'.",
     "listing_url": null,
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.olbg.com/betting-tips/Horse_Racing/2"
   },
   {
     "olbg_sport_id": 3,
     "slug": "Tennis",
     "name": "Tennis",
     "included": true,
-    "note": "",
+    "note": "ATP Top-100 matches originated; WTA/Challenger unconfirmed ranks left blank.",
     "listing_url": "https://www.olbg.com/betting-tips/Tennis/3",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.atptour.com/en/rankings/singles"
   },
   {
     "olbg_sport_id": 4,
-    "slug": "Basketball",
-    "name": "Basketball",
-    "included": true,
-    "note": "",
-    "listing_url": "https://www.olbg.com/betting-tips/Basketball/4",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
-  },
-  {
-    "olbg_sport_id": 5,
     "slug": "Golf",
     "name": "Golf",
     "included": true,
-    "note": "Outright tournaments only; no head-to-head match market listed.",
-    "listing_url": "https://www.olbg.com/betting-tips/Golf/5",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "note": "Outright tour events verified; lines left blank pending full field strokes-gained data.",
+    "listing_url": "https://www.olbg.com/betting-tips/Golf/4",
+    "registry_source": "https://www.pgatour.com/schedule"
+  },
+  {
+    "olbg_sport_id": 6,
+    "slug": "Boxing",
+    "name": "Boxing",
+    "included": false,
+    "note": "Excluded by brief: 'boxing'.",
+    "listing_url": null,
+    "registry_source": "https://www.olbg.com/betting-tips/Boxing/6"
   },
   {
     "olbg_sport_id": 7,
     "slug": "Cricket",
     "name": "Cricket",
     "included": true,
-    "note": "",
+    "note": "ICC fixtures verified; lines blank because icc-cricket.com renders ratings/scorecards client-side.",
     "listing_url": "https://www.olbg.com/betting-tips/Cricket/7",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.icc-cricket.com/tournaments/mens-cricket-world-cup-league-2"
   },
   {
     "olbg_sport_id": 8,
     "slug": "Snooker",
     "name": "Snooker",
     "included": true,
-    "note": "",
+    "note": "Northern Ireland Open R2 verified via WST; Top-36 matches originated.",
     "listing_url": "https://www.olbg.com/betting-tips/Snooker/8",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.wst.tv/matches/"
   },
   {
     "olbg_sport_id": 9,
     "slug": "Rugby_Union",
     "name": "Rugby Union",
     "included": true,
-    "note": "",
+    "note": "Top 14 Round 7, Pro D2 Round 8, and URC Round 4 verified from LNR & URC tables.",
     "listing_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://top14.lnr.fr/classement"
   },
   {
     "olbg_sport_id": 10,
     "slug": "Rugby_League",
     "name": "Rugby League",
     "included": true,
-    "note": "",
+    "note": "3 active 2027 Grand Final / Premiership futures verified on OLBG off-season hub.",
     "listing_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.nrl.com/draw/"
   },
   {
     "olbg_sport_id": 11,
@@ -87,114 +87,141 @@
     "included": false,
     "note": "Excluded by brief: 'american football'.",
     "listing_url": null,
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.olbg.com/betting-tips/American_Football/11"
   },
   {
     "olbg_sport_id": 12,
     "slug": "Baseball",
     "name": "Baseball",
     "included": true,
-    "note": "",
+    "note": "2026 MLB World Series Game 1 (TB @ MIL, gamePk=849805) verified via MLB StatsAPI.",
     "listing_url": "https://www.olbg.com/betting-tips/Baseball/12",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26"
   },
   {
     "olbg_sport_id": 13,
     "slug": "Ice_Hockey",
     "name": "Ice Hockey",
     "included": true,
-    "note": "",
+    "note": "NHL 2026-27 slate verified directly via api-web.nhle.com & api.nhle.com.",
     "listing_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://api-web.nhle.com/v1/score/2026-10-21"
   },
   {
     "olbg_sport_id": 14,
     "slug": "Motor_Racing",
     "name": "Motor Racing",
     "included": true,
-    "note": "Included: brief excludes 'cycling', not motorsport. See flag F-04.",
+    "note": "2026 FIA Formula 1 Round 18 (Austin) & Drivers' Championship verified via formula1.com.",
     "listing_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.formula1.com/en/results/2026/drivers"
   },
   {
     "olbg_sport_id": 15,
     "slug": "Darts",
     "name": "Darts",
     "included": true,
-    "note": "",
+    "note": "All 16 PDC European Championship Round 1 ties originated from pdc.tv/rankings.",
     "listing_url": "https://www.olbg.com/betting-tips/Darts/15",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
-  },
-  {
-    "olbg_sport_id": 16,
-    "slug": "Boxing",
-    "name": "Boxing",
-    "included": false,
-    "note": "Excluded by brief: 'boxing'. OLBG has no separate UFC/MMA node. See F-05.",
-    "listing_url": null,
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.pdc.tv/rankings"
   },
   {
     "olbg_sport_id": 17,
     "slug": "Cycling",
     "name": "Cycling",
     "included": false,
-    "note": "Excluded by brief: 'cycling'.",
+    "note": "Excluded by brief: 'cycling' (no active OLBG hub on 2026-10-21).",
     "listing_url": null,
     "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+  },
+  {
+    "olbg_sport_id": 18,
+    "slug": "Specials",
+    "name": "Specials / Entertainment & Politics",
+    "included": false,
+    "note": "Excluded by brief: 'specials' (no active OLBG hub on 2026-10-21).",
+    "listing_url": null,
+    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+  },
+  {
+    "olbg_sport_id": 19,
+    "slug": "Basketball",
+    "name": "Basketball",
+    "included": true,
+    "note": "NBA opening week, EuroLeague R7, and BKT EuroCup R4 verified from official league feeds.",
+    "listing_url": "https://www.olbg.com/betting-tips/Basketball/19",
+    "registry_source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
   },
   {
     "olbg_sport_id": 20,
     "slug": "Handball",
     "name": "Handball",
     "included": true,
-    "note": "",
+    "note": "EHF Champions League Men Round 5 fixtures verified via ehfcl.eurohandball.com.",
     "listing_url": "https://www.olbg.com/betting-tips/Handball/20",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
   },
   {
     "olbg_sport_id": 21,
     "slug": "Volleyball",
     "name": "Volleyball",
     "included": true,
-    "note": "",
+    "note": "Polish PlusLiga Round 2 verified on plusliga.pl; left blank at M=1.",
     "listing_url": "https://www.olbg.com/betting-tips/Volleyball/21",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.plusliga.pl/games.html"
   },
   {
     "olbg_sport_id": 22,
     "slug": "Aussie_Rules",
     "name": "Aussie Rules",
     "included": true,
-    "note": "No /betting-tips node in OLBG sitemap; no upcoming events listed.",
+    "note": "Zero active markets on OLBG during AFL off-season.",
     "listing_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.olbg.com/betting-tips/Aussie_Rules/22"
   },
   {
     "olbg_sport_id": 23,
     "slug": "eSports",
     "name": "eSports",
     "included": true,
-    "note": "No /betting-tips node in OLBG sitemap; no upcoming events listed.",
+    "note": "Zero active markets on OLBG hub on 2026-10-21.",
     "listing_url": "https://www.olbg.com/betting-tips/eSports/23",
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.olbg.com/betting-tips/eSports/23"
   },
   {
     "olbg_sport_id": 25,
     "slug": "Gaelic_Football",
     "name": "Gaelic Football",
+    "included": true,
+    "note": "5 county championship finals catalogued on OLBG; unlined due to absent official GAA tables.",
+    "listing_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+    "registry_source": "https://www.gaa.ie/football"
+  },
+  {
+    "olbg_sport_id": 26,
+    "slug": "Hurling",
+    "name": "Hurling",
     "included": false,
-    "note": "Football code; excluded under brief's 'football'. Ambiguous - see flag F-03.",
+    "note": "Excluded by brief: 'hurling' (active OLBG hub id 26 explicitly blocked).",
     "listing_url": null,
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "registry_source": "https://www.olbg.com/betting-tips/Hurling/26"
+  },
+  {
+    "olbg_sport_id": 27,
+    "slug": "UFC_MMA",
+    "name": "UFC / MMA",
+    "included": false,
+    "note": "Excluded by brief: 'ufc', 'mma' (active OLBG hub id 27 explicitly blocked).",
+    "listing_url": null,
+    "registry_source": "https://www.olbg.com/betting-tips/UFC_MMA/27"
   },
   {
     "olbg_sport_id": 28,
     "slug": "Greyhounds",
     "name": "Greyhounds",
-    "included": false,
-    "note": "Racing family; excluded alongside 'horse racing'. Ambiguous - see flag F-03.",
-    "listing_url": null,
-    "registry_source": "https://www.olbg.com/sitemap-betting-tips.xml"
+    "included": true,
+    "note": "6 UK race markets catalogued on OLBG; unlined due to licensed GBGB trap data.",
+    "listing_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+    "registry_source": "https://www.gbgb.org.uk"
   }
 ]

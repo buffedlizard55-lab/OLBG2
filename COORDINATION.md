@@ -780,6 +780,30 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` and `https://buffedlizard55-lab.github.io/OLBG2/survey/` both fetched successfully; root includes Survey navigation |
 | Deployment warning | GitHub Actions emitted Node.js 20/runner-image deprecation notices; all jobs succeeded, non-blocking |
 
+---
+
+# Session `arena/8f07248b-olbg2` — independent content integrity check
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published fixture/market/prediction evidence coverage and report actionable integrity gaps; no edits to shared data or generated pages | in progress | `arena/8f07248b-olbg2` | `research/integrity-audit-8f07248b.md`, append-only `COORDINATION.md` |
+
+Scope is deliberately disjoint from active integration work (`scripts/build_site.py`, `scripts/integration_audit.py`, generated pages and CI). This is a static structural/evidence-link audit; it will not mark sports facts verified without checking official sources. No fixture data will be added or modified.
+
+### Completion — `arena/8f07248b-olbg2`
+
+Independent structural/evidence-link audit is complete. Report: [`research/integrity-audit-8f07248b.md`](research/integrity-audit-8f07248b.md). Scope remained disjoint from integration code, shared data, and generated pages. Findings: 0/130 survey inventory records have a per-row official fixture-source field (they carry OLBG discovery provenance); survey narrative citation tests establish URL presence but not publisher authority; and the 35-match core count is 33 originated + 2 unoriginated (with confidence counts 4 high, 10 medium, 19 low, 2 unverified).
+
+Verification performed: `python3 scripts/survey_verify.py` passed (24 generated pages, 335 rows, 130 events = 11 modelled + 119 flagged, 2 predictions; deterministic rebuild); `python3 -m unittest discover -s tests -v` passed (33 tests). No external sporting facts were newly verified, no factual data or generated pages were changed. These findings are non-blocking and should remain visible for review; the static validators must not be presented as exhaustive official-source verification.
+
+The initial `git pull --rebase origin arena/8f07248b-olbg2` returned “couldn't find remote ref” because this branch was not yet published. Claim commit is local. Per the fixed Arena branch constraint, work remains on this branch; no other branch was created or used.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Independent evidence-integrity check and report | done | `arena/8f07248b-olbg2` | `research/integrity-audit-8f07248b.md`, `COORDINATION.md` |
+
+---
+
 ## Session `arena/18eca832-olbg2` — official-source integrity audit
 
 | Task | Status | Owner | File scope |

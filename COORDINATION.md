@@ -28,5 +28,6 @@ Session identifier: `bfeb6335` (Arena's fixed working branch: `arena/bfeb6335-ol
 
 ## Integration and publication
 
-- Local integration tests and generated-link validation passed. PR: https://github.com/buffedlizard55-lab/OLBG2/pull/1 . Merge result and deployment confirmation pending.
+- Local integration tests and generated-link validation passed. PR: https://github.com/buffedlizard55-lab/OLBG2/pull/1 ; merged into `main` at 2026-10-21T05:13:49Z (merge commit `306916e54801416d4fea03b48b222eef537dfffa`).
 - GitHub Pages is already configured for legacy publication from the `main` branch root. Attempting to change build type to Actions was rejected by GitHub API (403, integration lacks `pages=write,administration=write`). We therefore use the existing branch publication, with a root redirect to the generated dashboard; CI validates source and generated files only. Do not claim Actions deployment.
+- Legacy Pages build/deploy run `39548374857` and validation run `39548375638` both succeeded; the Pages API reported build status `built` at 2026-10-21T05:14:38Z. Confirmed live root redirect (cache-busted URL), [dashboard](https://buffedlizard55-lab.github.io/OLBG2/site/index.html), and [Flagged for Review](https://buffedlizard55-lab.github.io/OLBG2/site/flagged.html) return the expected content. The root URL may briefly show an old cached README without cache busting.

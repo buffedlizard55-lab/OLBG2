@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T05:28:33Z",
+  "generated_at": "2026-10-21T05:33:03Z",
   "inputs_captured_at": "2026-10-21T05:45:00Z",
   "params": {
     "nhl_home_ice_factor": 1.05,
@@ -18,12 +18,12 @@
     "nhl_min_gp_medium": 5
   },
   "counts": {
-    "total": 33,
-    "originated": 30,
-    "not_originated": 3,
+    "total": 35,
+    "originated": 33,
+    "not_originated": 2,
     "high": 4,
-    "medium": 9,
-    "low": 17
+    "medium": 10,
+    "low": 19
   },
   "matches": [
     {
@@ -1221,12 +1221,12 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 0.988,
-        "home_defence": 1.102,
+        "home_defence": 1.103,
         "away_attack": 0.712,
         "away_defence": 1.021,
-        "expected_home_goals": 3.251,
+        "expected_home_goals": 3.252,
         "expected_away_goals": 2.298,
         "expected_margin": 0.954,
         "expected_total": 5.549
@@ -1335,14 +1335,14 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 0.892,
         "home_defence": 0.911,
         "away_attack": 1.045,
-        "away_defence": 0.949,
+        "away_defence": 0.95,
         "expected_home_goals": 2.731,
         "expected_away_goals": 2.785,
-        "expected_margin": -0.054,
+        "expected_margin": -0.055,
         "expected_total": 5.516
       },
       "inputs": {
@@ -1382,14 +1382,14 @@
           "market": "Puck line",
           "selection": "Ottawa Senators -1.5",
           "line": -1.5,
-          "probability": 0.248,
+          "probability": 0.2479,
           "price": 3.88
         },
         {
           "market": "Puck line",
           "selection": "Florida Panthers +1.5",
           "line": 1.5,
-          "probability": 0.752,
+          "probability": 0.7521,
           "price": 1.28
         },
         {
@@ -1449,12 +1449,12 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
-        "home_attack": 1.095,
-        "home_defence": 0.842,
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.096,
+        "home_defence": 0.843,
         "away_attack": 0.968,
         "away_defence": 0.948,
-        "expected_home_goals": 3.348,
+        "expected_home_goals": 3.349,
         "expected_away_goals": 2.385,
         "expected_margin": 0.963,
         "expected_total": 5.734
@@ -1518,7 +1518,7 @@
           "selection": "Under 5.5",
           "line": 5.5,
           "probability": 0.4893,
-          "price": 1.96
+          "price": 1.97
         }
       ],
       "pick": {
@@ -1563,15 +1563,15 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 1.072,
-        "home_defence": 1.003,
-        "away_attack": 0.986,
+        "home_defence": 1.004,
+        "away_attack": 0.987,
         "away_defence": 0.832,
         "expected_home_goals": 2.878,
-        "expected_away_goals": 2.896,
+        "expected_away_goals": 2.897,
         "expected_margin": -0.018,
-        "expected_total": 5.774
+        "expected_total": 5.775
       },
       "inputs": {
         "home": {
@@ -1624,14 +1624,14 @@
           "market": "Total goals",
           "selection": "Over 5.5",
           "line": 5.5,
-          "probability": 0.5174,
+          "probability": 0.5175,
           "price": 1.86
         },
         {
           "market": "Total goals",
           "selection": "Under 5.5",
           "line": 5.5,
-          "probability": 0.4826,
+          "probability": 0.4825,
           "price": 1.99
         }
       ],
@@ -1675,9 +1675,89 @@
         "nhl_shrink_k": 8.0,
         "nhl_overround": 0.04
       },
-      "line_status": "not_originated",
-      "reason": "Verified goals-for / goals-against for one or both teams were not captured.",
-      "confidence": "unverified"
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.892,
+        "home_defence": 0.911,
+        "away_attack": 0.915,
+        "away_defence": 1.06,
+        "expected_home_goals": 3.047,
+        "expected_away_goals": 2.438,
+        "expected_margin": 0.61,
+        "expected_total": 5.485
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "6-3-0",
+          "gf": 22,
+          "ga": 23,
+          "gf_pg": 2.44,
+          "ga_pg": 2.56
+        },
+        "away": {
+          "gp": 10,
+          "record": "5-4-1",
+          "gf": 26,
+          "ga": 34,
+          "gf_pg": 2.6,
+          "ga_pg": 3.4
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Ottawa Senators",
+          "line": null,
+          "probability": 0.6005,
+          "price": 1.6
+        },
+        {
+          "market": "Moneyline",
+          "selection": "San Jose Sharks",
+          "line": null,
+          "probability": 0.3995,
+          "price": 2.41
+        },
+        {
+          "market": "Puck line",
+          "selection": "Ottawa Senators -1.5",
+          "line": -1.5,
+          "probability": 0.3447,
+          "price": 2.79
+        },
+        {
+          "market": "Puck line",
+          "selection": "San Jose Sharks +1.5",
+          "line": 1.5,
+          "probability": 0.6553,
+          "price": 1.47
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 5.5",
+          "line": 5.5,
+          "probability": 0.4686,
+          "price": 2.05
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 5.5",
+          "line": 5.5,
+          "probability": 0.5314,
+          "price": 1.81
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Ottawa Senators",
+        "side": "home",
+        "probability": 0.6005,
+        "price": 1.6,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
     },
     {
       "id": "nhl-2026020157",
@@ -1711,10 +1791,10 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 1.026,
         "home_defence": 1.045,
-        "away_attack": 0.968,
+        "away_attack": 0.969,
         "away_defence": 1.026,
         "expected_home_goals": 3.395,
         "expected_away_goals": 2.961,
@@ -1772,14 +1852,14 @@
           "market": "Total goals",
           "selection": "Over 6.5",
           "line": 6.5,
-          "probability": 0.4506,
+          "probability": 0.4507,
           "price": 2.13
         },
         {
           "market": "Total goals",
           "selection": "Under 6.5",
           "line": 6.5,
-          "probability": 0.5494,
+          "probability": 0.5493,
           "price": 1.75
         }
       ],
@@ -1825,11 +1905,11 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
-        "home_attack": 1.023,
-        "home_defence": 1.113,
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.024,
+        "home_defence": 1.114,
         "away_attack": 1.045,
-        "away_defence": 0.949,
+        "away_defence": 0.95,
         "expected_home_goals": 3.133,
         "expected_away_goals": 3.405,
         "expected_margin": -0.272,
@@ -1886,14 +1966,14 @@
           "market": "Total goals",
           "selection": "Over 6.5",
           "line": 6.5,
-          "probability": 0.4794,
+          "probability": 0.4795,
           "price": 2.01
         },
         {
           "market": "Total goals",
           "selection": "Under 6.5",
           "line": 6.5,
-          "probability": 0.5206,
+          "probability": 0.5205,
           "price": 1.85
         }
       ],
@@ -1939,13 +2019,13 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 0.988,
-        "home_defence": 0.834,
+        "home_defence": 0.835,
         "away_attack": 0.902,
-        "away_defence": 1.119,
+        "away_defence": 1.12,
         "expected_home_goals": 3.566,
-        "expected_away_goals": 2.203,
+        "expected_away_goals": 2.202,
         "expected_margin": 1.363,
         "expected_total": 5.768
       },
@@ -1972,14 +2052,14 @@
           "market": "Moneyline",
           "selection": "New York Islanders",
           "line": null,
-          "probability": 0.7117,
+          "probability": 0.7118,
           "price": 1.35
         },
         {
           "market": "Moneyline",
           "selection": "Los Angeles Kings",
           "line": null,
-          "probability": 0.2883,
+          "probability": 0.2882,
           "price": 3.34
         },
         {
@@ -2015,7 +2095,7 @@
         "market": "Moneyline",
         "selection": "New York Islanders",
         "side": "home",
-        "probability": 0.7117,
+        "probability": 0.7118,
         "price": 1.35,
         "confidence": "high"
       },
@@ -2053,15 +2133,15 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 1.026,
         "home_defence": 1.026,
         "away_attack": 1.186,
-        "away_defence": 0.878,
+        "away_defence": 0.879,
         "expected_home_goals": 2.907,
-        "expected_away_goals": 3.559,
-        "expected_margin": -0.652,
-        "expected_total": 6.466
+        "expected_away_goals": 3.56,
+        "expected_margin": -0.653,
+        "expected_total": 6.467
       },
       "inputs": {
         "home": {
@@ -2167,11 +2247,11 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 0.892,
         "home_defence": 0.739,
         "away_attack": 0.93,
-        "away_defence": 0.968,
+        "away_defence": 0.969,
         "expected_home_goals": 2.786,
         "expected_away_goals": 2.01,
         "expected_margin": 0.776,
@@ -2214,14 +2294,14 @@
           "market": "Puck line",
           "selection": "Dallas Stars -1.5",
           "line": -1.5,
-          "probability": 0.3612,
+          "probability": 0.3613,
           "price": 2.66
         },
         {
           "market": "Puck line",
           "selection": "Winnipeg Jets +1.5",
           "line": 1.5,
-          "probability": 0.6388,
+          "probability": 0.6387,
           "price": 1.51
         },
         {
@@ -2281,7 +2361,7 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 0.846,
         "home_defence": 1.253,
         "away_attack": 1.005,
@@ -2314,28 +2394,28 @@
           "market": "Moneyline",
           "selection": "Calgary Flames",
           "line": null,
-          "probability": 0.3115,
+          "probability": 0.3114,
           "price": 3.09
         },
         {
           "market": "Moneyline",
           "selection": "Minnesota Wild",
           "line": null,
-          "probability": 0.6885,
+          "probability": 0.6886,
           "price": 1.4
         },
         {
           "market": "Puck line",
           "selection": "Calgary Flames -1.5",
           "line": -1.5,
-          "probability": 0.1289,
+          "probability": 0.1288,
           "price": 7.46
         },
         {
           "market": "Puck line",
           "selection": "Minnesota Wild +1.5",
           "line": 1.5,
-          "probability": 0.8711,
+          "probability": 0.8712,
           "price": 1.1
         },
         {
@@ -2357,7 +2437,7 @@
         "market": "Moneyline",
         "selection": "Minnesota Wild",
         "side": "away",
-        "probability": 0.6885,
+        "probability": 0.6886,
         "price": 1.4,
         "confidence": "high"
       },
@@ -2395,15 +2475,15 @@
       },
       "line_status": "originated",
       "model": {
-        "league_avg_goals_per_game": 3.072,
+        "league_avg_goals_per_game": 3.07,
         "home_attack": 1.256,
         "home_defence": 0.988,
-        "away_attack": 1.095,
-        "away_defence": 0.878,
+        "away_attack": 1.096,
+        "away_defence": 0.879,
         "expected_home_goals": 3.558,
-        "expected_away_goals": 3.165,
+        "expected_away_goals": 3.166,
         "expected_margin": 0.393,
-        "expected_total": 6.723
+        "expected_total": 6.724
       },
       "inputs": {
         "home": {
@@ -2456,14 +2536,14 @@
           "market": "Total goals",
           "selection": "Over 6.5",
           "line": 6.5,
-          "probability": 0.5083,
+          "probability": 0.5084,
           "price": 1.89
         },
         {
           "market": "Total goals",
           "selection": "Under 6.5",
           "line": 6.5,
-          "probability": 0.4917,
+          "probability": 0.4916,
           "price": 1.96
         }
       ],
@@ -2473,6 +2553,234 @@
         "side": "home",
         "probability": 0.5591,
         "price": 1.72,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020164",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "SEA",
+        "name": "Seattle Kraken"
+      },
+      "away": {
+        "code": "UTA",
+        "name": "Utah Mammoth"
+      },
+      "start_display": "2026-10-23 02:00 UTC",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "venue": "Climate Pledge Arena",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.114,
+        "home_defence": 1.06,
+        "away_attack": 1.132,
+        "away_defence": 1.005,
+        "expected_home_goals": 3.61,
+        "expected_away_goals": 3.508,
+        "expected_margin": 0.103,
+        "expected_total": 7.118
+      },
+      "inputs": {
+        "home": {
+          "gp": 10,
+          "record": "6-3-1",
+          "gf": 37,
+          "ga": 34,
+          "gf_pg": 3.7,
+          "ga_pg": 3.4
+        },
+        "away": {
+          "gp": 10,
+          "record": "7-3-0",
+          "gf": 38,
+          "ga": 31,
+          "gf_pg": 3.8,
+          "ga_pg": 3.1
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Seattle Kraken",
+          "line": null,
+          "probability": 0.5151,
+          "price": 1.87
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Utah Mammoth",
+          "line": null,
+          "probability": 0.4849,
+          "price": 1.98
+        },
+        {
+          "market": "Puck line",
+          "selection": "Seattle Kraken -1.5",
+          "line": -1.5,
+          "probability": 0.2957,
+          "price": 3.25
+        },
+        {
+          "market": "Puck line",
+          "selection": "Utah Mammoth +1.5",
+          "line": 1.5,
+          "probability": 0.7043,
+          "price": 1.37
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 7.5",
+          "line": 7.5,
+          "probability": 0.4189,
+          "price": 2.3
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 7.5",
+          "line": 7.5,
+          "probability": 0.5811,
+          "price": 1.65
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Seattle Kraken",
+        "side": "home",
+        "probability": 0.5151,
+        "price": 1.87,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020165",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "VAN",
+        "name": "Vancouver Canucks"
+      },
+      "away": {
+        "code": "DET",
+        "name": "Detroit Red Wings"
+      },
+      "start_display": "2026-10-23 02:00 UTC",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "venue": "Rogers Arena",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.987,
+        "home_defence": 1.259,
+        "away_attack": 0.892,
+        "away_defence": 0.969,
+        "expected_home_goals": 3.083,
+        "expected_away_goals": 3.283,
+        "expected_margin": -0.2,
+        "expected_total": 6.367
+      },
+      "inputs": {
+        "home": {
+          "gp": 10,
+          "record": "2-7-1",
+          "gf": 30,
+          "ga": 45,
+          "gf_pg": 3.0,
+          "ga_pg": 4.5
+        },
+        "away": {
+          "gp": 9,
+          "record": "3-3-3",
+          "gf": 22,
+          "ga": 26,
+          "gf_pg": 2.44,
+          "ga_pg": 2.89
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Vancouver Canucks",
+          "line": null,
+          "probability": 0.469,
+          "price": 2.05
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Detroit Red Wings",
+          "line": null,
+          "probability": 0.531,
+          "price": 1.81
+        },
+        {
+          "market": "Puck line",
+          "selection": "Vancouver Canucks -1.5",
+          "line": -1.5,
+          "probability": 0.2452,
+          "price": 3.92
+        },
+        {
+          "market": "Puck line",
+          "selection": "Detroit Red Wings +1.5",
+          "line": 1.5,
+          "probability": 0.7548,
+          "price": 1.27
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 6.5",
+          "line": 6.5,
+          "probability": 0.4524,
+          "price": 2.13
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 6.5",
+          "line": 6.5,
+          "probability": 0.5476,
+          "price": 1.76
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Detroit Red Wings",
+        "side": "away",
+        "probability": 0.531,
+        "price": 1.81,
         "confidence": "low"
       },
       "confidence": "low"

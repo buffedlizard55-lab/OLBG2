@@ -11,7 +11,7 @@ The repository holds two published layers, both live:
 
 | Layer | Entry point | What it is |
 |---|---|---|
-| **Slate dashboard** | `/index.html` | 33 verified fixtures · 30 originated lines · 4 high-confidence predictions · 19 flagged items. Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
+| **Slate dashboard** | `/index.html` | 35 verified fixtures · 33 originated lines · 4 high-confidence predictions · 18 open review items (2 closed). Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
 | **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 8 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
 
 Both layers are live and independent. The root dashboard was contributed by the `42fb7792` session; the
@@ -32,15 +32,20 @@ contract.
 
 | Sport | Fixtures | Lines originated | High confidence |
 |---|---|---|---|
-| Ice Hockey (NHL) | 12 | 11 | 4 |
+| Ice Hockey (NHL) | 14 | 14 | 4 |
 | Basketball (NBA) | 11 | 11 | 0 |
 | Rugby Union (URC) | 8 | 8 | 0 |
 | Cricket (ICC) | 2 | 0 | 0 |
-| **Total** | **33** | **30** | **4** |
+| **Total** | **35** | **33** | **4** |
 
-Two of the 33 rows are deliberately blank: the Sharks' goal totals were never captured, and the ICC ranking
-table did not render, so no cricket line could be originated without inventing an input. Both are on the
+Two of the 35 rows are deliberately blank: the ICC ranking table did not render, so neither cricket fixture could
+be lined without inventing a strength input. Both are on the
 [Flagged for review](https://buffedlizard55-lab.github.io/OLBG2/flagged.html) page with source links.
+
+The NHL slate is now complete for the window: all 14 games on 21–22 October are captured, and the two night-cap
+games that were missing from the first capture (Utah at Seattle, Detroit at Vancouver) were recovered from the
+official club schedules. F01 and F02 are closed on the flagged page rather than deleted, so the audit trail stays
+visible.
 
 ## Evidence desk v2 (capture 2026-10-21 05:55 UTC)
 
@@ -82,8 +87,8 @@ assets/style.css                                                       dashboard
 data/inputs/*.json                                                     verified inputs + fixtures
 data/matches.json                                                      generated dataset (lines, picks)
 data/predictions.json                                                  high-confidence write-ups + sources
-data/flagged.json                                                      review queue (19 items)
-data/sources.json                                                      source register (26 sources)
+data/flagged.json                                                      review queue (18 open, 2 closed)
+data/sources.json                                                      source register (29 sources)
 scripts/config.py, model.py, build_site.py                             dashboard pipeline
 data/events.json, scripts/build.py, tests/test_build.py                original audit pipeline (kept green by CI)
 site/**                                                                evidence desk v2 (own engine + build, CI-checked)

@@ -302,3 +302,47 @@ owned by the earlier audit and desk sessions and untouched here.
 naming exactly this work as the highest-value addition, so this is a handoff, not a takeover. Nothing in the scope
 has been modified since `6c5c2dd`; claim committed before any edit.
 
+## Completion — NHL slate finished, F01 and F02 closed (2026-10-21 06:30 UTC)
+
+Session `db99ed90`, branch `arena/db99ed90-olbg2`, working inside the scope claimed above. `data/desk/**`, `site/**`,
+`data/inputs/{nba_teams,urc}.json`, `scripts/build.py` and `tests/**` were not touched.
+
+### What changed
+
+| Change | Detail |
+|---|---|
+| Two NHL fixtures added | `2026020164` Utah Mammoth @ Seattle Kraken (Climate Pledge Arena) and `2026020165` Detroit Red Wings @ Vancouver Canucks (Rogers Arena), both 2026-10-23T02:00:00Z, both from the clubs' official schedule endpoints |
+| Sharks row completed | `teamId=28`: 10 GP, 5-4-1, 26 GF, 34 GA, 11 points — the stored row had been a 9-game snapshot with empty goal columns |
+| Lines originated | 14/14 NHL games now carry money line, puck line and total (was 11/14) |
+| Flags | F01 and F02 moved from the open list to a new **Closed since the first capture** section, with the source that closed each and the closing time. F20 added; F12 rewritten with new evidence |
+| Sources | S27 (Seattle club schedule), S28 (Vancouver club schedule), S29 (team-summary teamId filter), S30 (OLBG NHL league page) |
+
+### Verification of the correction
+
+| Check | Result |
+|---|---|
+| 22 October game count | `api-web.nhle.com/v1/schedule/2026-10-22` → `numberOfGames: 12`; the first capture held 10, not the 11 its own note claimed |
+| Recovered fixtures | `club-schedule-season/SEA` and `/VAN` both list `startTimeUTC` 2026-10-23T02:00:00Z with the venues above; ids match the score-feed numbering |
+| Sharks totals | 26 GF / 10 GP = 2.60 and 34 GA / 10 GP = 3.40, exactly the per-game rates returned in the same payload — an internal cross-check, not a derived value |
+| Other 31 team rows | unchanged and still reproduce the previously published rates (VGK 41/10 = 4.10, CGY 17/8 = 2.13, VAN 51/11 = 4.64 …) |
+| Build | `model.py` → 35 fixtures, 33 originated, 4 high, 10 medium, 19 low; `build_site.py` → 9 pages, 35 fixtures, 4 predictions, no broken links; 28 desk tests pass |
+| Determinism | `build_site.py` and `build.py` are byte-identical on re-run; `model.py` writes a fresh `generated_at` only |
+
+### New finding while closing F01
+
+OLBG's NHL pages list **two** of the fourteen NHL games in the window — the 21 October pair — and none of the twelve on
+22 October, which is confirmed by the league feed. The 12 rows therefore carry no OLBG event link rather than a
+constructed one; this is recorded as F20. A second fetch of the same page rendered `19:37` where the first rendered
+`00:37` for the same 23:30Z face-off, which proves the timezone finding (F12) rather than merely suggesting it: OLBG
+renders in the viewer's zone and states none.
+
+### Publish record
+
+| Item | Value |
+|---|---|
+| Branch | `arena/db99ed90-olbg2` |
+| Pre-merge checks | 28 tests pass · `build.py` → 25 fixtures, 9 desk flags · `build_site.py` → 9 pages, 35 fixtures, 4 predictions, 0 broken links · generated output committed, so CI's `git diff --exit-code` is clean |
+| Pull request | recorded below |
+| Merge | recorded below |
+| Pages deploy | recorded below |
+

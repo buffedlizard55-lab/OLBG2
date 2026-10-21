@@ -22,18 +22,12 @@
   <p class="lede">Everything that could not be confirmed from an official source, every value deliberately left
   blank, and every irregularity found in OLBG's own pages. These items do not block publication — they are the
   review queue.</p>
-  <p class="meta">19 items · 14 blank or unoriginated values</p>
+  <p class="meta">18 open items · 2 closed since the first capture · 13 blank or unoriginated values</p>
 </section>
 
 <div class="panel"><div class="table-scroll"><table>
 <thead><tr><th>ID</th><th>Severity</th><th>Category</th><th>Item and detail</th><th>Source</th></tr></thead>
 <tbody><tr>
-      <td class="mono">F01</td>
-      <td><span class="badge b-sev-high">High</span></td>
-      <td>Data gap</td>
-      <td><b>NHL 2026-10-22, 12th game (Seattle Kraken home)</b><span class="sub" style="max-width:560px">The NHL score feed lists 12 games for 22 October. Eleven were captured with both teams, venue and start time. The twelfth (at Climate Pledge Arena) was cut off mid-record, so the away team is unknown and the fixture is omitted rather than guessed.</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">official / source page</a></td>
-    </tr><tr>
       <td class="mono">F04</td>
       <td><span class="badge b-sev-high">High</span></td>
       <td>Coverage gap</td>
@@ -57,12 +51,6 @@
       <td>Market gap</td>
       <td><b>Cricket — fixtures verified, no line</b><span class="sub" style="max-width:560px">Two fixtures were confirmed on the ICC official match list (Afghanistan v Bangladesh ODI; New Zealand v India T20I). The ICC team-ranking table rendered empty, so no strength input existed and no line was originated.</span></td>
       <td class="small"><a href="https://www.icc-cricket.com/rankings/team-rankings/mens/odi" rel="noopener">official / source page</a></td>
-    </tr><tr>
-      <td class="mono">F02</td>
-      <td><span class="badge b-sev-medium">Medium</span></td>
-      <td>Unverified value</td>
-      <td><b>San Jose Sharks goals for / against</b><span class="sub" style="max-width:560px">The Sharks&#x27; goals-for and goals-against did not appear inside the captured response window of the NHL team-summary endpoint. Their 2026-10-22 game at Ottawa therefore has no originated line; the row is published with blank goals data.</span></td>
-      <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">official / source page</a></td>
     </tr><tr>
       <td class="mono">F06</td>
       <td><span class="badge b-sev-medium">Medium</span></td>
@@ -91,7 +79,7 @@
       <td class="mono">F12</td>
       <td><span class="badge b-sev-medium">Medium</span></td>
       <td>OLBG irregularity</td>
-      <td><b>OLBG displayed times do not map to one timezone</b><span class="sub" style="max-width:560px">NBA events show US-Eastern clock times roughly ten minutes after the official tip time (OLBG 19:10 vs NBA 19:00 ET for Milwaukee @ Washington). NHL events show UK clock times roughly seven minutes after the equivalent UK time (OLBG 00:37 vs an 00:30 UK face-off). The dataset stores OLBG strings verbatim and takes authoritative times from the league feed.</span></td>
+      <td><b>OLBG displayed times do not map to one timezone</b><span class="sub" style="max-width:560px">OLBG renders clock times in the viewer&#x27;s timezone and never states the zone. The same two NHL fixtures (PHI@BUF, FLA@OTT, both 23:30Z) rendered as &#x27;Tomorrow 00:37&#x27; in one fetch and &#x27;Today 19:37&#x27; in another about an hour later - the same instant, once in UK time and once in US Eastern. NBA events show the same offset: OLBG 19:10 against the NBA&#x27;s 19:00 ET tip. The dataset stores OLBG strings verbatim and takes authoritative times from the league feed, never from OLBG.</span></td>
       <td class="small"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4" rel="noopener">official / source page</a></td>
     </tr><tr>
       <td class="mono">F13</td>
@@ -141,16 +129,41 @@
       <td>Source convention</td>
       <td><b>NHL goal totals differ by shootout convention</b><span class="sub" style="max-width:560px">nhl.com/standings counts the shootout-deciding goal in GF/GA; api.nhle.com/stats/rest/en/team/summary does not. Over the same games Ottawa read 24 GF on standings vs 22 in the API (two shootout wins), Buffalo 34 GA vs 33 (one shootout loss) and Seattle 39 vs 37 (two shootout wins). Our inputs are captured from nhl.com/standings, so our rates sit up to ~0.2 goals per game above the stats-API view. Disclosed rather than adjusted, because the input is correct for its cited source. Found by a separate verification pass (PR #11).</span></td>
       <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F20</td>
+      <td><span class="badge b-sev-low">Low</span></td>
+      <td>OLBG coverage</td>
+      <td><b>OLBG&#x27;s NHL pages list only 2 of the 14 NHL games in the window</b><span class="sub" style="max-width:560px">Both https://www.olbg.com/betting-tips/Ice_Hockey/13 and https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13 return only the two 21 October games (event_id 199897 PHI@BUF and 199896 FLA@OTT, each with a single Game Totals tip) plus four European club fixtures. The twelve 22 October NHL games are not listed even though the league schedule and the club feeds confirm them. That is why 12 of the 14 NHL rows carry no OLBG event link: the link is left out rather than constructed.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13" rel="noopener">official / source page</a></td>
+    </tr></tbody></table></div></div>
+
+<h2 class="section">Closed since the first capture</h2>
+<p class="section-sub">Items that were open in an earlier capture and have since been resolved against an official source. They stay on this page so the audit trail is visible.</p>
+<div class="panel"><div class="table-scroll"><table>
+<thead><tr><th>ID</th><th>Status</th><th>Category</th><th>Item and resolution</th><th>Source</th></tr></thead>
+<tbody><tr>
+      <td class="mono">F01</td>
+      <td><span class="badge b-sev-resolved">Resolved</span></td>
+      <td>Data gap — closed</td>
+      <td><b>NHL 22 October: two night-cap games were missing from the capture</b><span class="sub" style="max-width:560px">The official score feed lists 12 games on 22 October and the first capture stopped after ten (the earlier note said eleven, which was itself off by one). The two missing fixtures were Utah Mammoth at Seattle Kraken (2026020164, Climate Pledge Arena) and Detroit Red Wings at Vancouver Canucks (2026020165, Rogers Arena), both starting 02:00Z on 23 October. Each was recovered from its club&#x27;s official schedule endpoint, which carries the same startTimeUTC and venue fields as the score feed, and both are now published with a money line, puck line and total. The NHL slate is 14/14 for 21-22 October.</span>
+          <span class="sub" style="max-width:560px">Closed 2026-10-21T06:10:00Z by session db99ed90. Corroborated for Vancouver at https://api-web.nhle.com/v1/club-schedule-season/VAN/20262027</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/club-schedule-season/SEA/20262027" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F02</td>
+      <td><span class="badge b-sev-resolved">Resolved</span></td>
+      <td>Unverified value — closed</td>
+      <td><b>San Jose Sharks goals for / against</b><span class="sub" style="max-width:560px">The stored Sharks row was a nine-game snapshot with empty goal columns, so the 22 October game at Ottawa could not be lined. Re-read from the official team summary filtered to teamId=28: 10 GP, 5-4-1, 26 goals for, 34 against, 11 points, matching the 2.60 and 3.40 per-game rates in the same feed. The row is complete and the Sharks-Senators game now carries a money line, puck line and total.</span>
+          <span class="sub" style="max-width:560px">Closed 2026-10-21T06:10:00Z by session db99ed90. Same endpoint as the rest of the team table; only the team filter differs.</span></td>
+      <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=gameTypeId%3D2%20and%20seasonId%3D20262027%20and%20teamId%3D28" rel="noopener">official / source page</a></td>
     </tr></tbody></table></div></div>
 
 <h2 class="section">Values left blank on purpose</h2>
 <p class="section-sub">No value in this list was estimated. Blank means the official source did not supply it inside the capture window.</p>
-<div class="panel" style="padding:16px 20px"><ul class="small"><li><b>Atlanta Hawks <span class="muted">@</span> Orlando Magic</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Milwaukee Bucks <span class="muted">@</span> Washington Wizards</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Minnesota Timberwolves <span class="muted">@</span> Miami Heat</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Charlotte Hornets <span class="muted">@</span> Brooklyn Nets</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Chicago Bulls <span class="muted">@</span> Toronto Raptors</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Indiana Pacers <span class="muted">@</span> New Orleans Pelicans</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Utah Jazz <span class="muted">@</span> Memphis Grizzlies</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Dallas Mavericks <span class="muted">@</span> Houston Rockets</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Golden State Warriors <span class="muted">@</span> Los Angeles Lakers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Phoenix Suns <span class="muted">@</span> Portland Trail Blazers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Sacramento Kings <span class="muted">@</span> LA Clippers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Bangladesh <span class="muted">@</span> Afghanistan</b> (Cricket) — No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.</li><li><b>India <span class="muted">@</span> New Zealand</b> (Cricket) — No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.</li><li><b>San Jose Sharks <span class="muted">@</span> Ottawa Senators</b> (Ice Hockey) — Verified goals-for / goals-against for one or both teams were not captured.</li></ul></div>
+<div class="panel" style="padding:16px 20px"><ul class="small"><li><b>Atlanta Hawks <span class="muted">@</span> Orlando Magic</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Milwaukee Bucks <span class="muted">@</span> Washington Wizards</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Minnesota Timberwolves <span class="muted">@</span> Miami Heat</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Charlotte Hornets <span class="muted">@</span> Brooklyn Nets</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Chicago Bulls <span class="muted">@</span> Toronto Raptors</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Indiana Pacers <span class="muted">@</span> New Orleans Pelicans</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Utah Jazz <span class="muted">@</span> Memphis Grizzlies</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Dallas Mavericks <span class="muted">@</span> Houston Rockets</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Golden State Warriors <span class="muted">@</span> Los Angeles Lakers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Phoenix Suns <span class="muted">@</span> Portland Trail Blazers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Sacramento Kings <span class="muted">@</span> LA Clippers</b> (Basketball) · Game total — No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input.</li><li><b>Bangladesh <span class="muted">@</span> Afghanistan</b> (Cricket) — No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.</li><li><b>India <span class="muted">@</span> New Zealand</b> (Cricket) — No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.</li></ul></div>
 
 <h2 class="section">What a reviewer should do next</h2>
 <details open><summary>Highest-value fixes</summary>
 <ul>
-<li>Capture the missing NHL game on 22 October (Seattle home) and the Sharks' goal totals, then re-run <code>scripts/model.py</code>.</li>
 <li>Read the ATP rankings and PDC Order of Merit from a browser-rendered page so tennis and darts can be lined.</li>
 <li>Confirm the Gaelic football club fixtures on the relevant county board sites before publishing them.</li>
 <li>Survey the eight sports that were not captured at all (Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League).</li>

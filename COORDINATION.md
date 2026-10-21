@@ -660,3 +660,10 @@ Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no b
 | Task | Status | Owner | Files |
 |---|---|---|---|
 | Root-dashboard Survey navigation | done | `arena/dd14fcfd-olbg2` | `scripts/build_site.py`, root generated HTML, `COORDINATION.md` |
+
+| Item | Value |
+|---|---|
+| Follow-up PR | [#27](https://github.com/buffedlizard55-lab/OLBG2/pull/27) |
+| Merge result | Merged 2026-10-21 06:41:09 UTC; merge commit `e5ad112b41d4df167026fd9429310d2335dc4727` |
+| Validate Pages content | Run `39556956109` success |
+| GitHub Pages deployment | Run `39556955856` success, including deploy job |

@@ -779,3 +779,13 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 | GitHub Pages deployment | Run `39557166195` — build and deploy jobs succeeded |
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` and `https://buffedlizard55-lab.github.io/OLBG2/survey/` both fetched successfully; root includes Survey navigation |
 | Deployment warning | GitHub Actions emitted Node.js 20/runner-image deprecation notices; all jobs succeeded, non-blocking |
+
+---
+
+# Session `arena/8f07248b-olbg2` — independent content integrity check
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published fixture/market/prediction evidence coverage and report actionable integrity gaps; no edits to shared data or generated pages | in progress | `arena/8f07248b-olbg2` | `research/integrity-audit-8f07248b.md`, append-only `COORDINATION.md` |
+
+Scope is deliberately disjoint from active integration work (`scripts/build_site.py`, `scripts/integration_audit.py`, generated pages and CI). This is a static structural/evidence-link audit; it will not mark sports facts verified without checking official sources. No fixture data will be added or modified.

@@ -716,9 +716,9 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
   </div>
   <h3>{esc(p['headline'])}</h3>
   <div class="pred-pick-bar">
-    <span><strong>Fixture:</strong> {esc(p['event'])}</span>
-    <span><strong>Selection:</strong> {esc(p['selection'])}</span>
-    <span><strong>Model Win Prob:</strong> {p['probability']*100:.1f}%</span>
+    <span><strong>Fixture:</strong> {esc(p['event'])}</span> ·
+    <span><strong>Selection:</strong> {esc(p['selection'])}</span> ·
+    <span><strong>Model Win Prob:</strong> {p['probability']*100:.1f}%</span> ·
     <span><strong>Originated Fair Odds:</strong> {p['fair_odds']:.2f}</span>
   </div>
   <p class="pred-body">{esc(p['text'])}</p>

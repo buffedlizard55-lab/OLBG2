@@ -139,7 +139,7 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
         "facts": [
             {"claim": "Stade Toulousain lead Top 14 on 24 pts (5W-0D-1L, 197 PF, 124 PA, W-W-W-W-W)", "source": "https://top14.lnr.fr/classement"},
             {"claim": "USA Perpignan rank 9th on 13 pts (3W-0D-3L, 166 PF, 199 PA, -33)", "source": "https://top14.lnr.fr/classement"},
-            {"claim": "Stade Toulousain beat Sale Sharks 60-14 in EPCR Champions Cup Round 1", "source": "https://www.epcrugby.com/champions-cup/matches"},
+            {"claim": "Stade Toulousain beat Sale Sharks 60-14 in EPCR Champions Cup Round 1", "source": "https://top14.lnr.fr/club/toulouse"},
             {"claim": "Journée 7 fixture sheet 11867 confirmed on LNR", "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan"},
         ],
     },

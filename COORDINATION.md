@@ -966,3 +966,16 @@ with no rebase (a rebase would have replayed other sessions' commits).
 After the merge: 36 unit tests pass (up from 33, the three new ones are the concurrent session's), all three
 builds and the survey gate pass, `integration_audit.py` reports 0 local link errors, and
 `official_source_audit.py` runs green. No other session's work was discarded.
+
+### Publish record — session `arena/73620ec4-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#39](https://github.com/buffedlizard55-lab/OLBG2/pull/39) |
+| Merge | **MERGED** 2026-10-21T07:12:59Z; merge commit `7dda52e9d2cda8bcd54c11f8acb48a9f49d38550` |
+| Concurrent merges handled | PRs #34–#38 landed on `main` while #39 was in CI. `main` was merged forward (no rebase); `README.md` took the newer evidence-caveat rewrite as its base and `COORDINATION.md` kept both ledgers. No other session's work discarded. |
+| Validate Pages content | Run `39560437531` — success |
+| GitHub Pages build and deployment | Run `39560436396` — success; Pages API reports `status: built`, source `main:/` |
+| Live check | `/index.html` served with 47 fixtures, 5 sport cards including Handball, and the 17-sport coverage table; `/sports/handball.html` served with 12 fixtures, 12 lines and 5 high-confidence picks; `/flagged.html` served with F24–F26 open and F12/F21 closed |
+| Cache note | The bare `/` path briefly served the previous cached page after deploy; `?cachebust=` returned the new build, and the repository blob at `main` was already correct. No rebuild was needed. |
+| Follow-up | This record plus a wording fix to the F21 closure evidence (84 prices / five predictions) go in a follow-up PR. |

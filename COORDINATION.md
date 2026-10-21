@@ -829,3 +829,13 @@ Audit: 130/130 survey inventory rows lack an explicit official fixture source; 1
 | Validation | GitHub Actions `39559633597`: success |
 | GitHub Pages | Build/deploy run `39559676469`: success, both build and deploy jobs |
 | Outstanding | Source provenance issues remain needs review; this audit did not update published rows or verify factual claims. |
+
+## Claim — session `arena/e3c5f898-olbg2` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Correct repository README claims that overstate official verification, coverage, and cross-layer uniqueness | in progress | `arena/e3c5f898-olbg2` | `README.md`, append-only `COORDINATION.md` |
+
+This is a documentation-only correction based on the existing integration review and the official-source provenance audit added by session `arena/18eca832`. No sporting facts, fixtures, prices, or generated pages will be changed. The board records claims from those prior audits; this session does not independently verify any external sporting fact.
+
+Rebase note: sync with `origin/main` fetched the merged PR #34 publication record concurrently with this claim. The conflict was only in append-only `COORDINATION.md`; both the complete upstream publish record and this claim are retained. No code or data changes were lost.

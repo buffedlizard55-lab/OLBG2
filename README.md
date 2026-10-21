@@ -33,4 +33,4 @@ python3 -m http.server 8000
 - **Flagged for Review** — data and source gaps that need attention.
 - **Methodology** — source, line, and confidence rules.
 
-The GitHub Actions workflow in `.github/workflows/pages.yml` publishes this static site when GitHub Pages is configured to use GitHub Actions.
+GitHub Pages is already configured for this repository to publish from the `main` branch root (GitHub reports the existing site as built). Merging these static files to `main` will update that existing Pages site; no duplicate Actions deployment workflow is added.

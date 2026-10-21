@@ -101,20 +101,30 @@ in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated
 | Integration branch | `arena/42fb7792-olbg2` |
 | Dashboard build check | `python3 scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken links |
 | Prior pipeline check | `python -m unittest discover -s tests -v` → 6 tests pass; `python scripts/build.py` → no `site/` diff |
-| Pull request | PR #8 (this merge) |
-| Merge result | merged to `main` |
-| Pages deploy | verified after merge |
+| Pull request | **PR #7** https://github.com/buffedlizard55-lab/OLBG2/pull/7 |
+| Merge | merged to `main` at 2026-10-21 05:21:08Z · merge commit `3778896` |
+| Merge conflict | Yes — resolved by merging `origin/main` (`d9f6376`) into the branch first; no prior work discarded (see log above) |
+| Deploy run | `Validate Pages content` 39549059975 success · `pages build and deployment` 39549058659 success |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/` renders the dashboard; `/site/index.html` renders the prior audit site |
+| Follow-up | PR #8 — per-date NHL provenance (each NHL row now cites its own `…/score/YYYY-MM-DD` feed instead of all rows citing 21 October) |
+
+### Post-merge note
+
+Verifying the live site exposed one provenance defect: all twelve NHL rows linked to the 21 October score feed,
+including the eleven games on 22 October. The data itself was correct (captured from the 22 October feed during
+collection), but the citation was not line-accurate. Fixed in PR #8 by deriving the URL from each fixture's own
+date; the site was rebuilt and re-verified. No prices, picks or confidence grades changed.
 
 
-## Session `4a778bb7` — evidence desk v2 and integration (2026-10-21 05:30–06:20 UTC)
+## Session `4a778bb7` — evidence desk v2 and integration (2026-10-21 05:30–06:30 UTC)
 
 **Branch:** `arena/4a778bb7-olbg2` (the hosting environment fixes one branch per session; `session-*` branches
-cannot be created here). Claim committed and pushed as `b40eb6d` before any implementation work.
+cannot be created here). Claim committed and pushed as `b40eb6d` before implementation work.
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
 | Evidence desk v2: engine, data, tests, site rebuild | done | `4a778bb7` | `scripts/engine.py`, `scripts/build.py`, `data/desk/**`, `site/**`, `tests/**` |
-| Integration with the root dashboard merged in `3778896` | done | `4a778bb7` | `README.md`, `COORDINATION.md`, `scripts/build_site.py` (nav label only) |
+| Integration with the root dashboard (merged in `3778896`, then `75d6a40`) | done | `4a778bb7` | `README.md`, `COORDINATION.md`, `scripts/build_site.py` (nav label only) |
 
 ### What this session added
 
@@ -126,29 +136,31 @@ cannot be created here). Claim committed and pushed as `b40eb6d` before any impl
 - `site/` — dashboard, pick sheet with confidence filter, per-sport pages, methodology, source registry and a
   Flagged for Review page. 28 tests; `scripts/build.py` fails on any unregistered or non-official source.
 - Verified: 25 fixtures (14 NHL across Oct 21–22, 11 NBA on Oct 21), 64 markets, 4 high-confidence picks
-  (BUF, BOS, DAL, MIN money lines), 0 unverified values filled in.
+  (BUF, BOS, DAL, MIN money lines), no unverified value filled in.
 
-### Merge and conflict resolution (06:10 UTC)
+### Merge and conflict resolution
 
-`main` advanced to `3778896` (PR #7) while this branch was open. `git merge origin/main` produced conflicts; nothing
-from the other session was discarded.
+`main` advanced twice while this branch was open (`3778896` after PR #7, then `75d6a40` after PR #9). Each time the
+branch was merged forward; nothing from the other session was discarded.
 
 | File | Conflict | Resolution |
 |---|---|---|
 | `scripts/build.py`, `tests/test_build.py`, `site/**` | Two different `site/` pipelines | This branch's desk pipeline kept; the old two-fixture builder and its tests are superseded. `data/events.json` retained unchanged for provenance. |
 | `scripts/model.py` | Both sessions created it | The other session's model kept at `scripts/model.py` (used by `build_site.py`); this branch's engine renamed to `scripts/engine.py`. |
 | `data/sources.json`, `data/flagged.json` | Both sessions created them | Root dashboard files kept in place; the desk versions moved to `data/desk/`. |
-| `index.html`, `picks.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/**`, `assets/**` | Root dashboard vs old redirect/site | Root dashboard kept as the landing page. |
-| `README.md`, `COORDINATION.md` | Two project descriptions | Merged: the other session's records preserved above, this section appended. |
+| `index.html`, `picks.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/**`, `assets/**` | Root dashboard vs the old redirect/site | Root dashboard kept as the landing page. |
+| `README.md`, `COORDINATION.md` | Two project descriptions | Merged: the other sessions' records preserved above, this section appended. |
 | `scripts/build_site.py` | — | Single edit: nav label `Prior audit` → `Evidence desk v2`, plus a footer link. Rebuilt; page output otherwise byte-identical. |
 
-Both pipelines were then run: `scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken links;
-`python -m unittest discover -s tests` → 28 tests pass; `scripts/build.py` → 25 fixtures. Note that
-`scripts/model.py` writes a `generated_at` timestamp into `data/matches.json`, so regenerating it always produces
-a one-line diff; the committed file was restored after the check.
+Both pipelines were run after the merge: `scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken
+links; `python -m unittest discover -s tests` → 28 tests pass; `scripts/build.py` → 25 fixtures, 4 high / 5 medium /
+16 low, regenerating `site/` with no diff. `scripts/model.py` writes a `generated_at` timestamp into
+`data/matches.json`, so re-running it always produces a one-line diff; the committed file was restored after the
+check and that non-determinism is logged here.
 
 ### Irregularities carried forward
 
-All eight desk flags remain open and published at `/site/flagged.html`, including the NHL internal inconsistency,
-the OLBG 19:37 vs 7:30 PM EDT discrepancy, the eleven unverified eligible sports and the NBA baseline. The root
-dashboard's 18 flags remain published at `/flagged.html`.
+All eight desk flags remain open and published at `/site/flagged.html`: the NHL internal inconsistency, the OLBG
+19:37 vs 7:30 PM EDT discrepancy, the eleven unverified eligible sports, the NBA baseline, the MLB zero-game date,
+blank venues and the missing 2025-26 NBA bulk baseline. The root dashboard's own flags remain published at
+`/flagged.html`.

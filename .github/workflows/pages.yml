@@ -29,8 +29,16 @@ jobs:
       - name: Regenerate the dashboard layer
         run: python scripts/build_site.py
 
+      - name: Rebuild and structurally validate the survey layer
+        run: |
+          python scripts/survey_build.py
+          python scripts/survey_verify.py
+
+      - name: Check links across all published layers
+        run: python scripts/integration_audit.py
+
       - name: Fail if any generated page is stale
-        run: git diff --exit-code -- site index.html picks.html flagged.html methodology.html sources.html sports assets
+        run: git diff --exit-code -- site survey integration.html index.html picks.html flagged.html methodology.html sources.html sports assets
 
       - name: Check every generated local link resolves
         run: |

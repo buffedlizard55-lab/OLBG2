@@ -650,3 +650,9 @@ byte-identically (`git diff --exit-code` clean), so the root dashboard is not br
 | Final cross-layer discoverability, evidence-status audit and CI integration | in progress | `8103ccb6` | `scripts/build_site.py`, `scripts/integration_audit.py`, `integration.html`, generated root pages, `tests/test_integration.py`, `.github/workflows/pages.yml`, `research/integration-audit.md`, `COORDINATION.md` |
 
 All earlier claims are complete; no active conflicting claim or open PR was found. Work stays on the Arena-assigned branch `arena/8103ccb6-olbg2` (branch naming is fixed by this environment). Preserve all three data layers; do not claim that structural validation verifies external facts. Integrate the previously requested Survey navigation and expose contradictions/coverage gaps centrally. Official-source spot check: https://api-web.nhle.com/v1/score/2026-10-21 retrieved with fetch_page this turn; two fixtures, PHI@BUF and FLA@OTT at 23:30Z. This is not a re-verification of the full inventory.
+
+### Completion — session `8103ccb6`
+
+Task status: **done** (integration code); external evidence gaps: **needs review**, published on `integration.html`. Detailed scope, source, findings and reproducible commands: `research/integration-audit.md`. Root, desk and survey data were preserved without alteration. Added survey discoverability, cross-layer evidence disclosures, secondary-source narrative review rows, freshness notices, cross-layer local-link checks and survey CI gates. All 33 unit tests pass, all three builds pass, survey structural checks pass, zero broken local links. These are not claims of exhaustive official factual verification. Full automatic current coverage and all-market origination remain unfulfilled and explicitly flagged.
+
+Initial pre-push `git pull --rebase origin arena/8103ccb6-olbg2` reported no remote ref (new branch). Claim was then pushed successfully. No conflict or work loss. Only the fixed Arena branch is used.

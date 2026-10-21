@@ -838,7 +838,7 @@ Audit: 130/130 survey inventory rows lack an explicit official fixture source; 1
 
 This is a documentation-only correction based on the existing integration review and the official-source provenance audit added by session `arena/18eca832`. No sporting facts, fixtures, prices, or generated pages will be changed. The board records claims from those prior audits; this session does not independently verify any external sporting fact.
 
-Rebase note: sync with `origin/main` fetched the merged PR #34 publication record concurrently with this claim. The conflict was only in append-only `COORDINATION.md`; both the complete upstream publish record and this claim are retained. No code or data changes were lost.
+Rebase/push note: syncing with `origin/main` brought in PR #34's publish record. Rebasing rewrote the already-pushed claim commit, so the subsequent push was rejected as non-fast-forward. The original remote branch was fetched and merged; this append-only ledger conflict was resolved by retaining the PR #34 publish record and the current session's single claim/completion entry. No code or data was discarded.
 
 ### Completion — session `arena/e3c5f898-olbg2`
 

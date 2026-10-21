@@ -9,10 +9,25 @@ Run:  python3 scripts/model.py
 """
 from __future__ import annotations
 
+import re
+
 import json
 import math
 import os
 from datetime import datetime, timezone
+
+def dated_source_url(template: str, date: str) -> str:
+    """Point a feed template at one fixture's date without mangling query strings.
+
+    NHL-style feeds end in a date path segment; NBA-style feeds carry ?date=.
+    Anything else is returned unchanged so a citation is never invented.
+    """
+    if "date=" in template:
+        return re.sub(r"date=\d{4}-\d{2}-\d{2}", f"date={date}", template)
+    if re.search(r"/\d{4}-\d{2}-\d{2}/?$", template):
+        return re.sub(r"/\d{4}-\d{2}-\d{2}(/?)$", lambda m: "/" + date + m.group(1), template)
+    return template
+
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INPUTS = os.path.join(ROOT, "data", "inputs")
@@ -146,7 +161,7 @@ def build_nhl(teams: dict, fixtures: dict) -> list[dict]:
             "start_display": fx["start_utc"].replace("T", " ").replace(":00Z", " UTC"),
             "start_utc": fx["start_utc"],
             "venue": fx["venue"],
-            "fixture_source": {"name": fixtures["source_name"], "url": fixtures["source_url"].rsplit("/", 1)[0] + "/" + fx["date"]},
+            "fixture_source": {"name": fixtures["source_name"], "url": dated_source_url(fixtures["source_url"], fx["date"])},
             "data_source": {"name": "NHL official team summary", "url": INPUTS_URLS["nhl"], "captured_at": "2026-10-21T05:20:00Z"},
             "olbg_event_url": fx.get("olbg_event_url"),
             "params": {k: PARAMS[k] for k in ("nhl_home_ice_factor", "nhl_shrink_k", "nhl_overround")},
@@ -254,7 +269,7 @@ def build_nba(teams: dict, fixtures: dict) -> list[dict]:
             "start_utc": None,
             "start_note": "Tip time as published by NBA.com in US Eastern time.",
             "venue": None,
-            "fixture_source": {"name": fixtures["source_name"], "url": fixtures["source_url"].rsplit("/", 1)[0] + "/" + fx["date"]},
+            "fixture_source": {"name": fixtures["source_name"], "url": dated_source_url(fixtures["source_url"], fx["date"])},
             "data_source": {"name": "NBA official standings 2025-26", "url": INPUTS_URLS["nba"], "captured_at": "2026-10-21T05:25:00Z"},
             "olbg_event_url": fx.get("olbg_event_url"),
             "line_status": "originated",

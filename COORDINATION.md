@@ -165,6 +165,23 @@ All eight desk flags remain open and published at `/site/flagged.html`: the NHL 
 blank venues and the missing 2025-26 NBA bulk baseline. The root dashboard's own flags remain published at
 `/flagged.html`.
 
+
+## Publish record — session `4a778bb7`
+
+| Item | Value |
+|---|---|
+| Pull request | https://github.com/buffedlizard55-lab/OLBG2/pull/8 |
+| Merge commit | `5f2afc8` (merged 2026-10-21T05:23:45Z, no approval wait) |
+| CI on the PR | `validate` check passed (tests + `scripts/build.py` + no `site/` diff) |
+| CI on `main` | run 39549310277 succeeded |
+| GitHub Pages | build 1301715319 status `built`; `pages-build-deployment` run 39549309155 succeeded |
+| Live entry points | `/` root dashboard (33 fixtures) · `/site/index.html` evidence desk v2 (25 fixtures) · `/site/flagged.html` · `/flagged.html` |
+
+Open irregularities do not block the merge and remain published on both Flagged for Review pages, each with the
+source link that raised it. The only unresolved data disagreements are the NHL games-played inconsistency, the OLBG
+19:37 vs 7:30 PM EDT times, the eleven unverified eligible sports and the absence of an official bulk 2025-26 NBA
+baseline.
+
 ---
 
 ## Independent verification and second integration — session `db99ed90` (2026-10-21)

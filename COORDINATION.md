@@ -642,3 +642,11 @@ It was aborted (`git rebase --abort`) with no loss — the correct push had alre
 Before merging, the prior sessions' CI gate was reproduced locally and passed:
 `python3 scripts/build_site.py` regenerates their `index.html`, `sports/*`, `assets/*`, `site/**`
 byte-identically (`git diff --exit-code` clean), so the root dashboard is not broken by this merge.
+
+## Claim — session `8103ccb6` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Final cross-layer discoverability, evidence-status audit and CI integration | in progress | `8103ccb6` | `scripts/build_site.py`, `scripts/integration_audit.py`, `integration.html`, generated root pages, `tests/test_integration.py`, `.github/workflows/pages.yml`, `research/integration-audit.md`, `COORDINATION.md` |
+
+All earlier claims are complete; no active conflicting claim or open PR was found. Work stays on the Arena-assigned branch `arena/8103ccb6-olbg2` (branch naming is fixed by this environment). Preserve all three data layers; do not claim that structural validation verifies external facts. Integrate the previously requested Survey navigation and expose contradictions/coverage gaps centrally. Official-source spot check: https://api-web.nhle.com/v1/score/2026-10-21 retrieved with fetch_page this turn; two fixtures, PHI@BUF and FLA@OTT at 23:30Z. This is not a re-verification of the full inventory.

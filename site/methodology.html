@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="How lines are originated, priced and rated, and what the model cannot do.">
+<title>Methodology · OLBG research desk</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body><div class="shell">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-icon">O<span>.</span></span>
+    <div><strong>OLBG / research</strong><small>Official-source desk</small></div></div>
+  <div class="nav-label">WORKSPACE</div>
+  <nav aria-label="Main navigation"><a class="nav-item" href="index.html"><span class="swatch"></span>Overview</a><a class="nav-item" href="fixtures.html"><span class="swatch"></span>All fixtures</a><a class="nav-item" href="sports/index.html"><span class="swatch"></span>Sports</a><a class="nav-item active" href="methodology.html"><span class="swatch"></span>Methodology</a><a class="nav-item" href="sources.html"><span class="swatch"></span>Sources</a><a class="nav-item" href="flagged.html"><span class="swatch"></span>Flagged for review</a></nav>
+  <div class="side-note"><span class="dot"></span>Static snapshot<br><small>Not a live feed. Not betting advice.</small></div>
+</aside>
+<main class="main">
+  <header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> METHODOLOGY</span>
+  <span class="top-right">SNAPSHOT MODE <span class="live-dot"></span></span></header>
+<section class="hero">
+<div class="eyebrow">METHOD <span class="dash"></span> olbg-desk-poisson-v1</div>
+<h1>Our own numbers,<br><em>and their limits.</em></h1>
+<p>No bookmaker price is copied, scraped or used as an input. Every published price is recomputed from the official inputs stored with the fixture.</p>
+</section>
+<div class="prose">
+<h2>1. What counts as a verified fixture</h2>
+<p>A row is published only when the competition's own feed returns the two teams, the fixture date and the start time.
+For this snapshot that means the NHL game-centre payload at <code>api-web.nhle.com</code>, plus the NHL game page for each fixture.
+OLBG is recorded as the coverage reference the brief asked for, but OLBG is never treated as an official match source.</p>
+
+<h2>2. The model</h2>
+<div class="formula">lambda_home = ((home.GF/GP + away.GA/GP) / 2) &times; 1.05
+lambda_away = ((away.GF/GP + home.GA/GP) / 2) &times; 0.95
+P(i, j)   = Poisson(i; lambda_home) &times; Poisson(j; lambda_away),  i,j = 0..10</div>
+<p>Goals for and against per game come from the official payload. The blend is a standard attack-versus-defence estimate:
+each side's scoring rate is averaged with the opponent's concession rate.</p>
+
+<h2>3. Markets</h2>
+<ul>
+<li><b>Money line (two-way, overtime and shootout included):</b> P(home win) + 0.5 &times; P(tie). The site's own model assumes the extra period is a coin flip; that assumption is stated, not hidden.</li>
+<li><b>Puck line 1.5:</b> P(margin &ge; 2) for the favourite, and its complement for the underdog.</li>
+<li><b>Match total:</b> over and under at 5.5 and 6.5 goals, read from the same 60-minute matrix.</li>
+<li><b>Regulation three-way:</b> shown for transparency; it is not the market the selection is taken from.</li>
+</ul>
+
+<h2>4. Prices and confidence</h2>
+<p>Prices are fair decimal odds, <code>1 / probability</code>, rounded to two decimals. No margin is added, so these are not
+sportsbook prices and should not be read as ones.</p>
+<p>Confidence is a property of this model, not a claim about the real world. The selected side is always the side the model prices shorter.
+The label then comes from how far that side sits from a coin flip:</p>
+<div class="table-scroll"><table><thead><tr><th>Label</th><th>Condition</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><span class="badge high">high</span></td><td>edge &ge; 10 points</td><td>The model separates the sides by at least 20 points of probability.</td></tr>
+<tr><td><span class="badge medium">medium</span></td><td>6–10 points</td><td>A moderate model edge.</td></tr>
+<tr><td><span class="badge low">low</span></td><td>under 6 points</td><td>Close to a coin flip; published for completeness only.</td></tr>
+</tbody></table></div>
+
+<h2>5. Narratives</h2>
+<p>Only high-confidence selections carry a written prediction, and each is at least 30 words. Every factual statement in a
+narrative maps to a field in the official payload: goals for and against per game, points percentage, power-play and penalty-kill
+rank, the last-ten record, the listed results, the head coach or the schedule. Nothing is added from memory.</p>
+
+<h2>6. Model parameters are assumptions</h2>
+<p>The home multiplier (1.05), away multiplier (0.95), tie split (0.5) and the confidence
+edges are choices made by this desk. They are <b>not</b> league statistics and are not presented as verified facts. They live in
+<code>data/events.json</code> under <code>model</code>, so anyone can change them and re-run <code>scripts/build.py</code> to reproduce every price.</p>
+
+<h2>7. What the model does not do</h2>
+<ul>
+<li>It does not adjust for rest, back-to-backs, travel or schedule density.</li>
+<li>It does not know who starts in goal, who is injured, scratched or suspended.</li>
+<li>It does not use shots, expected goals, special-teams match-up or score effects.</li>
+<li>It does not shrink small samples. Early-season rates are carried in exactly as published, which is why some prices look extreme.</li>
+<li>It does not compare against market prices, so it cannot claim value against a bookmaker.</li>
+</ul>
+
+<h2>8. Reproduction</h2>
+<div class="formula">python -m unittest discover -s tests -v
+python scripts/build.py
+python -m http.server 8000 -d site</div>
+<p>The build refuses to run if a row lacks an approved source host, if a selection disagrees with the model, if a high-confidence
+narrative is under 30 words or fails to name its selection, or if the coverage board's row counts disagree with the fixture list.</p>
+</div>
+<footer>Independent research snapshot assembled 2026-10-21T05:52:00Z. Not affiliated with OLBG, the NHL or any league.
+Every published row links to an official competition source. Model prices are this desk's own estimates, not bookmaker prices,
+and no outcome is guaranteed. Betting involves risk; if you gamble, keep it legal in your jurisdiction.</footer>
+</main></div></body></html>

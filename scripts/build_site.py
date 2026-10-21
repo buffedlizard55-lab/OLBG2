@@ -32,6 +32,7 @@ NAV = [
     ("flagged.html", "Flagged for review"),
     ("methodology.html", "Methodology"),
     ("sources.html", "Sources"),
+    ("site/index.html", "Prior audit"),
 ]
 
 E = html.escape

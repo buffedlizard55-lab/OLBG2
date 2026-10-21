@@ -23,7 +23,7 @@
   <p class="lede">Everything that could not be confirmed from an official source, every value deliberately left
   blank, and every irregularity found in OLBG's own pages. These items do not block publication — they are the
   review queue.</p>
-  <p class="meta">20 open items · 2 closed since the first capture · 13 blank or unoriginated values</p>
+  <p class="meta">21 open items · 2 closed since the first capture · 13 blank or unoriginated values</p>
 </section>
 
 <div class="panel"><div class="table-scroll"><table>
@@ -118,6 +118,12 @@
       <td>Market gap</td>
       <td><b>No OLBG odds were used or available</b><span class="sub" style="max-width:560px">OLBG hub pages publish tip percentages but no prices, and no bookmaker prices were used at any point. Every price in this dataset is generated from our own probability plus a 4% theoretical margin. They are not market prices.</span></td>
       <td class="small"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F23</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Scope divergence</td>
+      <td><b>Greyhounds and Gaelic Football — scope differs between layers</b><span class="sub" style="max-width:560px">The brief&#x27;s exclusion list names neither sport, so this dashboard keeps both in scope (scripts/config.py; OLBG ids 25 and 28) while the survey layer excluded both as racing/football-family judgements (its flag F-03). Session c8711d36 reviewed both positions on 2026-10-21 and kept the brief-literal reading: both remain in scope here, but no fixture is published for either until an official fixture source is verified (Gaelic club fixtures: F07). See research/refresh-c8711d36.md and data/refresh/refresh.json (R-SCOPE).</span></td>
+      <td class="small"><a href="https://www.olbg.com/sitemap-betting-tips.xml" rel="noopener">official / source page</a></td>
     </tr><tr>
       <td class="mono">F03</td>
       <td><span class="badge b-sev-low">Low</span></td>

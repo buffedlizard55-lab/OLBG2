@@ -11,7 +11,7 @@ The repository holds two published layers, both live:
 
 | Layer | Entry point | What it is |
 |---|---|---|
-| **Slate dashboard** | `/index.html` | 35 verified fixtures · 33 originated lines · 4 high-confidence predictions · 20 open review items (2 closed). Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
+| **Slate dashboard** | `/index.html` | 35 verified fixtures · 33 originated lines · 4 high-confidence predictions · 21 open review items (2 closed). Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
 | **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 9 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
 
 Both layers are live and independent. The root dashboard was contributed by the `42fb7792` session; the
@@ -86,7 +86,7 @@ assets/style.css                                                       dashboard
 data/inputs/*.json                                                     verified inputs + fixtures
 data/matches.json                                                      generated dataset (lines, picks)
 data/predictions.json                                                  high-confidence write-ups + sources
-data/flagged.json                                                      review queue (20 open, 2 closed)
+data/flagged.json                                                      review queue (21 open, 2 closed)
 data/sources.json                                                      source register (32 sources)
 scripts/config.py, model.py, build_site.py                             dashboard pipeline
 data/events.json, scripts/build.py, tests/test_build.py                original audit pipeline (kept green by CI)

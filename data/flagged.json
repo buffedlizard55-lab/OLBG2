@@ -1,7 +1,7 @@
 {
   "meta": {
     "purpose": "Everything that could not be confirmed from an official source, every value deliberately left blank, and every irregularity found while reverse-engineering OLBG. Nothing here blocks publication; it is the reviewer's queue.",
-    "count": 20,
+    "count": 21,
     "resolved_count": 2,
     "note": "Two items (F01, F02) were closed on 2026-10-21 by session db99ed90 from official feeds; they are listed separately under 'Closed since the first capture' so the open count stays honest."
   },
@@ -165,6 +165,14 @@
       "item": "Volleyball — events exist, none published",
       "detail": "OLBG's volleyball hub listed at least fifteen events on the first page segment across Polish PlusLiga (LUK Lublin v Trefl Gdansk, Warta Zawiercie v Kedzierzyn Kozle, Slepsk Suwalki v GKS Katowice), the German Bundesliga (WWK Volleys Munchen v VfB Friedrichshafen, Netzhoppers KW v Helios Grizzlys Giesen) and Italian women's Serie A1 (Bergamo v Milano, Novara v Marignano), with match-winner and set-score markets. The hub labels no competition for the event and no official league table was captured, so no volleyball fixture is published as verified and no line is originated.",
       "source": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "F23",
+      "severity": "medium",
+      "category": "Scope divergence",
+      "item": "Greyhounds and Gaelic Football — scope differs between layers",
+      "detail": "The brief's exclusion list names neither sport, so this dashboard keeps both in scope (scripts/config.py; OLBG ids 25 and 28) while the survey layer excluded both as racing/football-family judgements (its flag F-03). Session c8711d36 reviewed both positions on 2026-10-21 and kept the brief-literal reading: both remain in scope here, but no fixture is published for either until an official fixture source is verified (Gaelic club fixtures: F07). See research/refresh-c8711d36.md and data/refresh/refresh.json (R-SCOPE).",
+      "source": "https://www.olbg.com/sitemap-betting-tips.xml"
     }
   ],
   "resolved": [

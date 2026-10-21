@@ -1,0 +1,36 @@
+{
+  "session": "c8711d36",
+  "refreshed_at": "2026-10-21",
+  "checks": [
+    {
+      "id": "R-SJS",
+      "subject": "San Jose Sharks goal totals (desk cross-scope request, nhl-2026020156)",
+      "official_source": "https://api-web.nhle.com/v1/standings/now",
+      "source_name": "NHL official standings API (api-web.nhle.com), standings date 2026-10-20",
+      "verified_values": {"team": "SJS San Jose Sharks", "gp": 10, "w": 5, "l": 4, "otl": 1, "points": 11, "gf_standings_convention": 27, "ga_standings_convention": 35, "home": "2-2-0", "away": "3-2-1", "l10": "5-4-1"},
+      "finding": "Standings API gives 27 GF / 35 GA, matching data/desk/nhl_teams.json exactly. The root dashboard's stats-API values (26/34 in data/inputs/nhl_teams.json) differ by exactly one goal each way, consistent with San Jose's one shootout win (shootoutWins=1) counted in standings GF/GA but not in the stats API. Both layers are correct under their stated convention; see flagged F19. No data change required.",
+      "status": "verified - no change"
+    },
+    {
+      "id": "R-ICC",
+      "subject": "ICC men's ODI team rankings (root flagged F11)",
+      "official_source": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi",
+      "finding": "Re-fetched 2026-10-21: the page loads and confirms the two fixtures (AFG v BAN ODI, NZ v IND T20I as upcoming ICC matches) but the rankings table rows render empty in the capture, exactly as in the first capture. No rating could be read from icc-cricket.com itself, so no root-dashboard cricket line is originated. The survey layer's cricket lines, originated from ESPNcricinfo's ICC ratings table, are unaffected.",
+      "status": "unverified - F11 stays open"
+    },
+    {
+      "id": "R-ATP",
+      "subject": "ATP singles rankings (root flagged F04)",
+      "official_source": "https://www.atptour.com/en/rankings/singles",
+      "finding": "Re-fetched 2026-10-21: atptour.com loads (rankings week 2026.10.19 is offered) but the ranking table itself is client-rendered and was not extracted - the capture is dominated by the date/country selectors. No verified ranking pair for an OLBG tennis fixture could be read, so no tennis line is originated.",
+      "status": "unverified - F04 stays open"
+    },
+    {
+      "id": "R-SCOPE",
+      "subject": "Greyhounds / Gaelic Football scope divergence (survey F-03 vs dashboard config)",
+      "official_source": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "finding": "The brief's exclusion list (soccer, boxing, UFC/MMA, football, American football, hurling, horse racing, cycling, specials) names neither Gaelic Football nor Greyhounds. The root dashboard therefore keeps both in scope (scripts/config.py, OLBG ids 25 and 28); the survey layer excluded both as racing/football-family judgements and flagged it as F-03. Decision for this integration: follow the brief literally - both stay IN scope on the root dashboard, no fixtures are published for either until an official fixture source is verified (Gaelic club fixtures remain F07), and the divergence stays visible on both flagged pages.",
+      "status": "decision recorded - flagged as F23"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from poisson import evaluate
 
-d = json.loads(Path("data/events.json").read_text())
+d = json.loads((Path(__file__).resolve().parent / "events.json").read_text())
 p = d["model"]
 print(f"{'matchup':34} {'lh':>4} {'la':>4} {'MLh':>5} {'MLa':>5} {'puck-1.5':>8} {'o5.5':>5} {'o6.5':>5} {'pick':22} {'%':>5} {'conf':7}")
 for e in d["events"]:

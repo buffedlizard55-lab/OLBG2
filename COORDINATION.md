@@ -979,3 +979,20 @@ builds and the survey gate pass, `integration_audit.py` reports 0 local link err
 | Live check | `/index.html` served with 47 fixtures, 5 sport cards including Handball, and the 17-sport coverage table; `/sports/handball.html` served with 12 fixtures, 12 lines and 5 high-confidence picks; `/flagged.html` served with F24–F26 open and F12/F21 closed |
 | Cache note | The bare `/` path briefly served the previous cached page after deploy; `?cachebust=` returned the new build, and the repository blob at `main` was already correct. No rebuild was needed. |
 | Follow-up | This record plus a wording fix to the F21 closure evidence (84 prices / five predictions) go in a follow-up PR. |
+
+### Correction found by post-deploy review (2026-10-21 07:30 UTC)
+
+Reviewing the live picks page against `data/matches.json` exposed a real defect in this session's own work: three
+handball predictions still quoted the model probabilities from **before** the score-grid renormalisation
+(74.9%, 76.5%, 78.5%) while the published rows read 84.5%, 78.5% and 84.1%. The probabilities in the data were
+correct; the prose was stale. Two things changed as a result:
+
+1. The three predictions and their matching facts were corrected to the published values.
+2. `scripts/build_site.py` now fails the build if a prediction does not quote its row's published probability, and
+   `tests/test_dashboard.py` asserts the same rule along with six other structural checks (one prediction per high
+   row, ≥ 30 words, unique text, a source URL on every fact, an official fixture URL on every row, and the
+   handball rows' market set).
+
+A related wording defect was also fixed: the PSG prediction had claimed Zagreb's only win came against Celje. That
+was not verified from the standings (which publish only the aggregate 1-0-3 record), so the claim and its fact row
+were removed rather than left standing.

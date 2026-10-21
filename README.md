@@ -18,7 +18,7 @@ for the high-confidence picks, and a GitHub Pages dashboard publishing all of it
 | Lines originated | 11 |
 | Picks: high / medium / low | 2 / 1 / 8 |
 | Written predictions (≥30 words) | 2 |
-| Flags raised | 20 |
+| Flags raised | 21 |
 | Event rows with no originated line | 119 (each itemised with a reason) |
 
 ## The one rule that shaped everything
@@ -49,9 +49,17 @@ scripts/
   load_inventory.py      materialises the collected OLBG inventory into data/events/
   originate_lines.py     verified inputs + model -> data/lines.json
   analyse.py             picks, confidence, predictions, flags
-  build_site.py          data/*.json -> docs/ (pure stdlib, deterministic)
+  build_site.py          data/*.json -> site at repo root (stdlib, deterministic)
   verify.py              gates the build: links, per-row sources, data integrity
-docs/                    the published GitHub Pages site
+index.html, sports.html,   the published GitHub Pages site, built at the
+  lines.html, picks.html,    repository root because Pages on this repo is pinned
+  predictions.html,          to "/" of main and the token cannot repoint it
+  methodology.html,
+  verification.html,
+  flagged.html,
+  excluded.html
+  sports/<sport>.html        one subpage per in-scope sport
+  assets/style.css, app.js
 ```
 
 ## Reproduce
@@ -60,7 +68,7 @@ docs/                    the published GitHub Pages site
 python3 scripts/load_inventory.py    # data/sports.json + data/events/*.json
 python3 scripts/originate_lines.py   # data/lines.json
 python3 scripts/analyse.py           # data/picks.json, data/predictions.json, data/flags.json
-python3 scripts/build_site.py        # docs/
+python3 scripts/build_site.py        # site files at the repo root
 python3 scripts/verify.py            # exits non-zero on any failed check
 ```
 

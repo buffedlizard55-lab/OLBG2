@@ -119,7 +119,7 @@ enough verified player-level detail to write one without inventing it.
 python3 scripts/load_inventory.py    # -> data/sports.json, data/events/*.json
 python3 scripts/originate_lines.py   # -> data/lines.json
 python3 scripts/analyse.py           # -> data/picks.json, data/predictions.json, data/flags.json
-python3 scripts/build_site.py        # -> docs/
+python3 scripts/build_site.py        # -> site files at the repository root
 python3 scripts/verify.py            # gate; non-zero exit on any failure
 ```
 

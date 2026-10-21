@@ -7,7 +7,8 @@ what it examined and what it found.
 import json, pathlib, re, sys, html.parser, collections
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA, DOCS = ROOT / "data", ROOT / "docs"
+DATA, DOCS = ROOT / "data", ROOT
+SITE = None  # set below from build_site.site_files()
 fails, warns = [], []
 
 
@@ -61,7 +62,10 @@ class LinkParser(html.parser.HTMLParser):
 print("=" * 72)
 print("1. Internal link integrity")
 print("=" * 72)
-allhtml = sorted(DOCS.rglob("*.html"))
+sys.path.insert(0, str(ROOT / "scripts"))
+import build_site
+SITE = build_site.site_files()
+allhtml = [f for f in SITE if f.suffix == ".html"]
 print(f"  scanned {len(allhtml)} generated pages")
 broken = []
 ext = 0
@@ -160,7 +164,7 @@ print("=" * 72)
 import hashlib, subprocess
 def digest():
     parts = sorted("{}:{}".format(p.relative_to(DOCS), hashlib.sha256(p.read_bytes()).hexdigest())
-                   for p in DOCS.rglob("*") if p.is_file())
+                   for p in build_site.site_files())
     return hashlib.sha256("\n".join(parts).encode()).hexdigest()
 
 

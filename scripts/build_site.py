@@ -10,12 +10,28 @@ import json, html, pathlib, collections, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-DOCS = ROOT / "docs"
+# GitHub Pages on this repository is configured as build_type "legacy" with
+# source {branch: main, path: "/"}, and the API call to repoint it at /docs
+# returns 403 for this token (no pages:write scope). The site is therefore
+# published at the repository root, which also keeps the URLs clean:
+# https://buffedlizard55-lab.github.io/OLBG2/flagged.html rather than /docs/flagged.html
+DOCS = ROOT
 ASSETS = DOCS / "assets"
 SPORTS_DIR = DOCS / "sports"
-for d in (DOCS, ASSETS, SPORTS_DIR):
+for d in (ASSETS, SPORTS_DIR):
     d.mkdir(parents=True, exist_ok=True)
 (DOCS / ".nojekyll").write_text("")
+
+# Pages of the site, kept explicit so the verifier never scans the whole repo.
+TOP_PAGES = ["index.html", "sports.html", "lines.html", "picks.html", "predictions.html",
+             "methodology.html", "verification.html", "flagged.html", "excluded.html"]
+
+
+def site_files():
+    out = [DOCS / t for t in TOP_PAGES]
+    out += sorted(SPORTS_DIR.glob("*.html"))
+    out += [ASSETS / "style.css", ASSETS / "app.js"]
+    return [f for f in out if f.exists()]
 
 RETRIEVED = "2026-10-21"
 DIVERGENCE_CAP_DOC = 15.0   # must match scripts/analyse.py DIVERGENCE_CAP
@@ -751,7 +767,7 @@ open(DOCS / "excluded.html", "w").write(page("Excluded Sports", "excluded.html",
 
 (ASSETS / "style.css").write_text(CSS)
 (ASSETS / "app.js").write_text(JS)
-print(f"built {len(list(DOCS.rglob('*.html')))} html pages into {DOCS.relative_to(ROOT)}/")
-for p in sorted(DOCS.rglob("*")):
-    if p.is_file():
-        print(f"  {p.relative_to(DOCS)!s:34s} {p.stat().st_size:7d} B")
+built = site_files()
+print(f"built {len(built)} site files into the repository root")
+for p in built:
+    print(f"  {p.relative_to(DOCS)!s:34s} {p.stat().st_size:7d} B")

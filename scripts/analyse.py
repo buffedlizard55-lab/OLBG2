@@ -359,6 +359,21 @@ flags = [
              "so the term is set to zero rather than guessed. Both ICC-rated fixtures modelled are at neutral "
              "venues in the UAE, which limits the impact for this run.",
       action="Add a sourced home-advantage coefficient before applying the model to home-and-away series."),
+ dict(id="F-21", severity="environment", area="publishing",
+      title="GitHub Pages cannot be repointed at /docs, so the site publishes from the repository root",
+      detail="Pages on this repository is build_type 'legacy' with source {branch: main, path: '/'}. "
+             "PUT /repos/buffedlizard55-lab/OLBG2/pages with source[path]=/docs returns "
+             "'403 Resource not accessible by integration' - the available token has no pages:write scope. "
+             "Adding an Actions workflow would not help either, because switching build_type to 'workflow' "
+             "needs the same permission.",
+      consequence="scripts/build_site.py generates the site at the repository root (index.html, "
+                  "sports.html, lines.html, picks.html, predictions.html, methodology.html, "
+                  "verification.html, flagged.html, excluded.html, sports/, assets/, .nojekyll) instead of "
+                  "into docs/. This also produces cleaner URLs: "
+                  "https://buffedlizard55-lab.github.io/OLBG2/flagged.html rather than /docs/flagged.html.",
+      action="If a docs/ layout is preferred, a maintainer with pages:write can run "
+             "'gh api -X PUT repos/buffedlizard55-lab/OLBG2/pages -f source[branch]=main -f source[path]=/docs' "
+             "and then change the DOCS constant in scripts/build_site.py back to ROOT / 'docs'."),
  dict(id="F-20", severity="source-tier", area="predictions",
       title="Player availability in prediction P-01 comes from regional press, not an official team sheet",
       detail="The Thomas Ramos, Tommaso Menoncello, Blair Kinghorn and Jack Willis availability statements are "

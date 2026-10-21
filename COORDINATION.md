@@ -15,7 +15,7 @@ session ID and file scope, then commit and push that claim **before** editing an
 - **Commit rule**: small, frequent commits; `git pull --rebase` before every push.
 - **Verification rule**: nothing is marked `verified` without an official-source link.
   Values that cannot be confirmed are left blank and flagged `unverified`.
-- **Shared outputs** (`docs/index.html`, `docs/_data/*`, site navigation, merged tables)
+- **Shared outputs** (`index.html`, `sports.html`, site navigation, merged tables)
   are touched only by the final integration session.
 
 ## Status legend
@@ -33,17 +33,17 @@ session ID and file scope, then commit and push that claim **before** editing an
 
 | # | Task | Status | Owner (session) | Files in scope |
 | --- | --- | --- | --- | --- |
-| T1 | Repository review + baseline audit of existing content (see REPO_REVIEW.md) | done | `ca1d5677` | `docs/audit/*`, `REPO_REVIEW.md` |
+| T1 | Repository review + baseline audit of existing content (see REPO_REVIEW.md) | done | `ca1d5677` | `REPO_REVIEW.md` |
 | T2 | Build OLBG sport registry; decide include/exclude per brief | done | `ca1d5677` | `data/sports.json` |
 | T3 | Collect event lists for all included sports from OLBG | done | `ca1d5677` | `data/events/*.json` |
 | T4 | Collect official ratings/standings inputs (per sport) | done | `ca1d5677` | `data/ratings/*.json` |
 | T5 | Originate our own lines (ML / handicap / total) from T4 inputs | done | `ca1d5677` | `data/lines.json`, `scripts/originate_lines.py` |
 | T6 | Pick match winner + low/medium/high confidence per match | done | `ca1d5677` | `data/picks.json` |
 | T7 | Write 30+ word human predictions for high-confidence picks | done | `ca1d5677` | `data/predictions.json` |
-| T8 | Build GitHub Pages site (landing + category subpages + tables) | done | `ca1d5677` | `docs/**`, `scripts/build_site.py` |
-| T9 | Verification pass: every row has an official source link or is flagged | done | `ca1d5677` | `docs/verification.html`, `scripts/verify.py` |
-| T10 | Flagged-for-Review page (irregularities + unverified items) | done | `ca1d5677` | `data/flags.json`, `docs/flagged.html` |
-| T11 | Integration: build check, link check, publish Pages, open + merge PR | done | `ca1d5677` | `docs/**`, `COORDINATION.md` |
+| T8 | Build GitHub Pages site (landing + category subpages + tables) | done | `ca1d5677` | `index.html`, `sports.html`, `lines.html`, `picks.html`, `predictions.html`, `methodology.html`, `verification.html`, `flagged.html`, `excluded.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
+| T9 | Verification pass: every row has an official source link or is flagged | done | `ca1d5677` | `verification.html`, `scripts/verify.py` |
+| T10 | Flagged-for-Review page (irregularities + unverified items) | done | `ca1d5677` | `data/flags.json`, `flagged.html` |
+| T11 | Integration: build check, link check, publish Pages, open + merge PR | done | `ca1d5677` | generated site files, `COORDINATION.md` |
 
 No other session has claimed any task in this repository at the time of writing.
 Any session picking up work must add its row here and push immediately.
@@ -56,13 +56,14 @@ Any session picking up work must add its row here and push immediately.
 | --- | --- | --- |
 | 2026-10-21 | `ca1d5677` | Board created. Repo at `1056f6a` contained only a 7-byte `README.md` (`# OLBG2`) — no data, no code, no site. Claimed T1–T11 as a single-session run. |
 | 2026-10-21 | `ca1d5677` | Environment note: sandbox `bash` egress is restricted to github.com / pypi.org / npmjs.org, so `curl olbg.com` fails. Collection and verification run through the harness `fetch_page` / `web_search` tools, which **do** reach olbg.com and official governing-body sites. Logged as irregularity **F-01**. |
+| 2026-10-21 | `ca1d5677` | Publish note: `PUT /repos/:owner/:repo/pages` returns **403 Resource not accessible by integration**, so the Pages source cannot be repointed from `/` to `/docs` with this token. The site is therefore generated at the repository root, which also keeps URLs clean. Logged as irregularity **F-21**. |
 | 2026-10-21 | `ca1d5677` | Environment note: OLBG event pages render bookmaker prices client-side; the served HTML exposes `WIN @` with an empty price. Decimal prices therefore cannot be captured, so lines are originated from official ratings instead of de-vigging book prices. Logged as irregularity **F-02**. |
 
 ---
 
 ## Decisions requiring human review
 
-Tracked in detail in `data/flags.json` and published at `docs/flagged.html`. Headline items:
+Tracked in detail in `data/flags.json` and published at `flagged.html`. Headline items:
 
 - **F-03** Ambiguous exclusions: `Greyhounds` and `Gaelic_Football` are not named in the
   brief's exclusion list but are racing / football-code sports. Both excluded; review needed.
@@ -124,12 +125,12 @@ rugbyorbit.com, planetrugby.com, rugbyrama.fr, ladepeche.fr, thesportsencounter.
 
 ### Irregularities
 
-20 flags in `data/flags.json`, published at `docs/flagged.html`. Categories: 6 source conflicts
+21 flags in `data/flags.json`, published at `flagged.html`. Categories: 7 source conflicts
 or data-availability failures, 2 irregularities in OLBG's own content (F-06 timezone, F-13 F1
 calendar row mixing three events), 3 scope decisions needing confirmation (F-03, F-04, F-05),
 3 coverage gaps (F-15 119 rows with no line, F-17, F-18), 1 model divergence (F-14), 1 model
 limitation (F-19), 1 data-freshness issue (F-16 86 snapshot rows), 1 source-tier caveat (F-20),
-2 environment notes (F-01, F-02).
+3 environment notes (F-01, F-02, F-21).
 
 ### Coverage statement
 

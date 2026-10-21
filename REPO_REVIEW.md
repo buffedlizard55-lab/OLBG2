@@ -21,10 +21,10 @@ configuration, no `.gitignore`, no licence and no prior branch other than `main`
    at risk. The task board was created from scratch.
 2. **`README.md` had no trailing newline** (7 bytes, `# OLBG2`). Cosmetic. The file has been
    replaced with a full project README.
-3. **No GitHub Pages configuration existed.** There was no `docs/`, no `gh-pages` branch, no
-   `_config.yml` and no Actions workflow. Pages had to be configured from nothing. A `.nojekyll`
-   file was added to `docs/` so GitHub Pages serves the static HTML directly instead of running
-   a Jekyll build that would skip directories beginning with an underscore and add no value.
+3. **No GitHub Pages configuration existed.** There was no site directory, no `gh-pages` branch, no `_config.yml` and no Actions workflow.
+   Pages had to be configured from nothing. A `.nojekyll` file was added at the repository root so
+   GitHub Pages serves the static HTML directly instead of running a Jekyll build that would skip
+   directories beginning with an underscore and add no value.
 4. **No remote branch for this session existed.** The first `git pull --rebase origin
    arena/ca1d5677-olbg2` failed with `fatal: couldn't find remote ref` because the branch was
    local-only; the subsequent `git push` created it. Not a defect — recorded so the log entry

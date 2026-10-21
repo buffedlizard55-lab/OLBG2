@@ -722,3 +722,13 @@ No sporting value was marked newly verified from this read-only audit. Generated
 Before the second push, `git pull --rebase origin main` fetched PRs #27–#28 and conflicted only in the append-only coordination ledger: the upstream Survey-navigation completion and this session's original claim had both appended at EOF. Resolved additively, retaining the complete upstream `arena/dd14fcfd-olbg2` record and this session's claim; no files or changes were discarded. The upstream branch had already added Survey to the root navigation, so audit finding R4 is now marked resolved in `research/independent-audit-9b76e3ea.md`. The final audit record and this conflict note remain append-only.
 
 Second sync: main advanced through PR #31 during CI. Preserved both appended coordination records and the independent audit file; no code or data conflicts.
+
+### Publish ledger — session `8103ccb6`
+
+- PR: https://github.com/buffedlizard55-lab/OLBG2/pull/29 — **MERGED** 2026-10-21T06:43:35Z.
+- Merge commit: `cc84b6aa800c488f79c50881a6cee36476a65529`.
+- Main validation run `39557217508`: **success**.
+- Pages build and deployment run `39557216961`: **success** (build, deploy and report-build-status all passed).
+- Live dashboard: https://buffedlizard55-lab.github.io/OLBG2/ ; central evidence review: https://buffedlizard55-lab.github.io/OLBG2/integration.html .
+- Remaining evidence/coverage limitations are published and do not block the static-site release. The full original data-collection brief is not represented as complete.
+- Final pre-push synchronization used `git pull --rebase=merges` successfully to preserve the concurrent-session merge topology.

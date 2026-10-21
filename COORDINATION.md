@@ -1110,3 +1110,24 @@ PR #34's `scripts/official_source_audit.py` / `tests/test_official_source_audit.
 `research/official-source-audit-18eca832.md` are untouched. Shared outputs touched as the
 integration session: `scripts/build_site.py` (one navigation entry for `/live/`) and the root
 pages it regenerates, plus this append-only file.
+
+### Publish record - session `arena/d4b9d560-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#45](https://github.com/buffedlizard55-lab/OLBG2/pull/45) |
+| Merge result | **Merged** into `main` as `9d19b0df0f09c1a3968d1c5d665dc5058989f044` |
+| CI before merge | "Validate Pages content" `validate` job SUCCESS; `mergeStateStatus: CLEAN` |
+| GitHub Pages deployment | run `39562042070` - build, deploy and report-build-status jobs all `success`; `gh api repos/.../pages` -> `status: built` |
+| Live check | https://buffedlizard55-lab.github.io/OLBG2/live/ fetched after deploy: 11 fixtures, 33 market lines, 4 high-confidence picks, 11 flags, per-row official source links |
+| Concurrent merges | `origin/main` had advanced to `237d944` (PR #44) while this branch was in progress. Merged in; the only conflict was the append-only end of this file, resolved additively with the upstream records kept verbatim. No upstream file was edited. |
+
+### Correction found after deploy (fixed in the follow-up commit)
+
+Reviewing the rendered page, the baseball run line for World Series Game 3 (Brewers away) was
+priced at 78.5% for `MIL -1.5`. That was wrong: the code took the covering probability as
+`1 - P(home wins by 2+)`, which is only valid when the home side is the favourite. Each side's
+own "win by two or more" probability is now computed separately, so `MIL -1.5` is 38.0% (+153)
+and `TB +1.5` is 62.0% (-182) in all three games, as it must be while the model applies no home
+edge. Regression test `test_run_line_price_is_venue_independent` in `tests/test_live.py` pins
+this. Match-winner, handicap (rugby) and total prices were unaffected - 55 tests pass.

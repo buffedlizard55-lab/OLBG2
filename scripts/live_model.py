@@ -197,13 +197,17 @@ def mlb_rows():
         p_away += p_tie / 2.0
         p_over_total = p_over.get(total_line, 0.0)
 
+        # Run line: each side's own "win by two or more" probability is computed
+        # separately, so the price does not depend on which venue the game is at.
         run_line = 1.5
-        p_home_cover = 0.0
+        p_home_cover = p_away_cover = 0.0
         for i in range(MAX_GOALS):
             for j in range(MAX_GOALS):
+                p = poisson_pmf(i, lam_home) * poisson_pmf(j, lam_away)
                 if i - j >= 2:
-                    p_home_cover += poisson_pmf(i, lam_home) * poisson_pmf(j, lam_away)
-        p_away_cover = 1.0 - p_home_cover
+                    p_home_cover += p
+                elif j - i >= 2:
+                    p_away_cover += p
         if p_home >= p_away:
             fav, dog, fav_line, dog_line = fx["home"], fx["away"], -run_line, run_line
             p_fav_cover = p_home_cover

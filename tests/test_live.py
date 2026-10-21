@@ -61,6 +61,18 @@ class LiveSlate(unittest.TestCase):
             if row["pick"]["confidence"] != "high":
                 self.assertIsNone(row["prediction"], row["id"])
 
+    def test_run_line_price_is_venue_independent(self):
+        """The model applies no home edge, so a side's run-line price must not depend on venue."""
+        mlb = [r for r in self.rows if r["sport"] == "Baseball"]
+        self.assertEqual(len(mlb), 3)
+        for team in ("MIL", "TB"):
+            prices = {r["markets"]["handicap"]["options"][team]["probability"]
+                      for r in mlb if team in r["markets"]["handicap"]["options"]}
+            self.assertEqual(len(prices), 1, "%s run-line price varies by venue: %s" % (team, prices))
+        for r in mlb:
+            fav = "MIL"
+            self.assertLess(r["markets"]["handicap"]["options"][fav]["probability"], 0.5, r["id"])
+
     def test_flags_all_have_sources(self):
         flags = load("flags.json")["flags"]
         self.assertTrue(flags)

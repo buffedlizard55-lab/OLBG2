@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology &middot; OLBG2</title>
+<meta name="description" content="Methodology - OLBG2 sports betting research dashboard.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script></head>
+<body><header><div class="wrap"><div class="brand">
+<h1>OLBG2</h1><span class="tag">Reverse-engineered OLBG match intelligence &middot; retrieved 2026-10-21</span>
+</div><nav><a href="../index.html" class="">Main dashboard</a><a href="index.html" class="">Survey dashboard</a><a href="sports.html" class="">Sports</a><a href="lines.html" class="">Our Lines</a><a href="picks.html" class="">Picks</a><a href="predictions.html" class="">Predictions</a><a href="methodology.html" class="on">Methodology</a><a href="verification.html" class="">Verification</a><a href="flagged.html" class="">Flagged for Review</a><a href="excluded.html" class="">Excluded Sports</a></nav></div></header>
+<main class="wrap"><h2>Methodology</h2>
+<p class="lead">How a line is originated, how a pick is made, and exactly which parts are verified facts versus disclosed modelling assumptions.</p>
+<div class="card"><h3>1. Inventory</h3><p>OLBG's sport taxonomy is taken from <a class="src t-olbg" href="https://www.olbg.com/sitemap-betting-tips.xml" rel="noopener noreferrer" target="_blank">its sitemap &#8599;</a>, which lists 22 sports with numeric ids. Each in-scope sport's <code>/betting-tips/&lt;Sport&gt;/&lt;id&gt;</code> page is read and every fixture recorded with its event id, competition, displayed time, market, OLBG's top community selection and tip counts. Each row records <code>retrieved_via</code> and <code>as_of</code> so a live-fetched row is never mixed with a dated snapshot row.</p></div>
+<div class="card"><h3>2. Evidence tiers</h3><div class="scroll"><table><thead><tr><th>Tier</th><th>Input</th><th>Used for</th></tr></thead><tbody><tr><td><code>tier1</code></td><td>Governing-body rating for <strong>both</strong> competitors (ICC team ratings, OWGR average points, PDC Order of Merit, WST rankings, ATP/WTA rankings).</td><td>Cricket internationals in this run.</td></tr><tr><td><code>tier2</code></td><td>Official league table position and points difference for both clubs.</td><td>Top 14 fixtures in this run.</td></tr><tr><td><code>tier3</code></td><td>Published competition-level base rates with a stated sample size.</td><td>URC fixtures in this run.</td></tr><tr><td><code>none</code></td><td>Nothing verifiable.</td><td>No line is published; the row is flagged.</td></tr></tbody></table></div></div>
+<div class="card"><h3>3. Probability</h3><p>A logistic function of the rating gap: <code>p = 1 / (1 + exp(-&Delta; / S))</code>. Fair no-vig decimal price is <code>1 / p</code>. Half-point lines use <code>floor(x) + 0.5</code>, the convention that avoids a push.</p>
+<h3>Model constants &mdash; disclosed assumptions, not sourced facts</h3><div class="scroll"><table><thead><tr><th>Constant</th><th class="num">Value</th><th>Status</th></tr></thead><tbody>
+<tr><td><code>cricket_odi_scale</code></td><td class="num">25.0</td><td class="small">Assumption. Sensitivity is published per line.</td></tr>
+<tr><td><code>cricket_t20i_scale</code></td><td class="num">50.0</td><td class="small">Assumption. Sensitivity is published per line.</td></tr>
+<tr><td><code>cricket_home_advantage</code></td><td class="num">0.0</td><td class="small">Assumption. Sensitivity is published per line.</td></tr>
+<tr><td><code>rugby_points_per_logit</code></td><td class="num">6.0</td><td class="small">Assumption. Sensitivity is published per line.</td></tr>
+<tr><td><code>rugby_draw_share_from_base</code></td><td class="num">True</td><td class="small">Assumption. Sensitivity is published per line.</td></tr>
+</tbody></table></div><ul class="facts">
+<li>ODI and T20I ICC ratings live on different scales (ODI 0-160, T20I 0-300), so each format gets its own logistic scale.</li>
+<li>No home-advantage term is applied to cricket because no official, in-session verifiable coefficient was available. Both cricket fixtures modelled are at neutral venues in the UAE, which limits the impact. Flagged as a limitation.</li>
+<li>Rugby union Tier-2 lines use a logistic on the league-points gap with the draw probability held at the published competition base rate and the remaining mass split between the two sides.</li>
+</ul></div>
+<div class="card"><h3>4. Confidence rule</h3><div class="scroll"><table><thead><tr><th>Label</th><th>Condition</th></tr></thead><tbody>
+<tr><td><span class="badge b-high">high</span></td><td class="small">Model probability &ge; 0.70 on verified Tier&nbsp;1/2 inputs with verified form, or a Tier&nbsp;1 rating gap &ge; 0.55 corroborated by a verified same-series head-to-head win.</td></tr>
+<tr><td><span class="badge b-med">medium</span></td><td class="small">Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates.</td></tr>
+<tr><td><span class="badge b-low">low</span></td><td class="small">Any other published line, and any line whose divergence from an official published probability exceeds 15 percentage points.</td></tr>
+<tr><td><span class="badge b-unv">unverified</span></td><td class="small">No line could be originated from a verifiable official source.</td></tr>
+</tbody></table></div><div class="note warn"><strong>Official-divergence guard.</strong> Where a governing body publishes its own probability for the same fixture, we compute the gap. If it exceeds 15.0 percentage points, confidence is capped at LOW and the disagreement is flagged. We never silently override an official figure with our own.</div></div>
+<div class="card"><h3>5. Predictions</h3><p>A prediction is written only for a high-confidence pick, must be at least 30 words, must name the selection unambiguously, and may only use facts recorded in <code>data/lines.json</code> or <code>data/analyse</code> verified-form blocks. Each fact is published under the prediction with its source link. The word count is asserted at build time.</p></div>
+<div class="card"><h3>6. What we do not do</h3><ul class="facts"><li>We do not de-vig bookmaker prices, because OLBG renders them client-side and they were not retrievable (<a href="flagged.html#F-02">F-02</a>).</li><li>We do not use OLBG community tip percentages as a probability input. That would echo the crowd rather than originate a line. Tip counts are shown as separate, clearly labelled community data.</li><li>We do not fill a blank cell with an estimate. An unverifiable value stays blank and is flagged.</li><li>We do not name a player, injury, score or date in a prediction unless it was verified.</li></ul></div></main>
+<footer><div class="wrap">
+Built from <code>data/*.json</code> by <code>scripts/build_site.py</code>. Every published value carries a source
+link; values that could not be confirmed against an official source are left blank and flagged
+<a href="flagged.html">for review</a>. Nothing on this site is betting advice. 18+.
+</div></footer></body></html>

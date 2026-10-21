@@ -21,8 +21,7 @@ configuration, no `.gitignore`, no licence and no prior branch other than `main`
    at risk. The task board was created from scratch.
 2. **`README.md` had no trailing newline** (7 bytes, `# OLBG2`). Cosmetic. The file has been
    replaced with a full project README.
-3. **No GitHub Pages configuration existed.** There was no site directory, no `gh-pages` branch, no `_config.yml` and no Actions workflow.
-   Pages had to be configured from nothing. A `.nojekyll` file was added at the repository root so
+3. **No GitHub Pages configuration existed at the audited commit.** At `1056f6a` there was no site directory, no `gh-pages` branch, no `_config.yml` and no Actions workflow. A `.nojekyll` file is provided at the repository root (by the prior sessions' build) so
    GitHub Pages serves the static HTML directly instead of running a Jekyll build that would skip
    directories beginning with an underscore and add no value.
 4. **No remote branch for this session existed.** The first `git pull --rebase origin
@@ -42,7 +41,7 @@ configuration, no `.gitignore`, no licence and no prior branch other than `main`
 ## Irregularities found in the source data (not the repo)
 
 These are irregularities in OLBG or in the official sources consulted, raised during the review
-and published on the [Flagged for Review](https://buffedlizard55-lab.github.io/OLBG2/flagged.html) page:
+and published on the [Flagged for Review](https://buffedlizard55-lab.github.io/OLBG2/survey/flagged.html) page:
 
 | Flag | Finding |
 | --- | --- |
@@ -61,7 +60,7 @@ and published on the [Flagged for Review](https://buffedlizard55-lab.github.io/O
 
 | Flag | Decision |
 | --- | --- |
-| F-03 | Greyhounds (OLBG id 28) and Gaelic Football (id 25) are not named in the brief but were excluded — Greyhounds as a racing-family sport alongside horse racing, Gaelic Football as a football code alongside soccer. Both are a one-line change in `scripts/load_inventory.py`. |
+| F-03 | Greyhounds (OLBG id 28) and Gaelic Football (id 25) are not named in the brief but were excluded — Greyhounds as a racing-family sport alongside horse racing, Gaelic Football as a football code alongside soccer. Both are a one-line change in `scripts/survey_inventory.py`. |
 | F-04 | Motor Racing (id 14) was included; the brief excludes cycling, not motorsport. |
 | F-05 | OLBG has no UFC, MMA, Hurling or Specials node, so four of the brief's exclusions are vacuous. |
 

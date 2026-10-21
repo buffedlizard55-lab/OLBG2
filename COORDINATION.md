@@ -765,3 +765,17 @@ Second sync: main advanced through PR #31 during CI. Preserved both appended coo
 | Merge | MERGED 2026-10-21T06:44:42Z, merge commit `56d0a1168542c583fca33f5c9b136f8e9bc4ebd5` |
 | Pages | Build `39557334322` success; latest Pages build status `built` on `56d0a11`; live flagged page shows 21 open items incl. F23 |
 | Concurrent merges handled | PR #27 (dd14fcfd, identical Survey nav — theirs adopted) and PR #29/#32 (8103ccb6/9b76e3ea integration audit) merged from `origin/main` twice; only COORDINATION.md conflicted, both records kept, generated pages rebuilt (10 pages, 0 broken links) |
+
+---
+
+Second sync: before pushing the post-merge ledger update, `git pull --rebase origin main` fetched PR #29 and conflicted only at the append-only end of `COORDINATION.md` (upstream's sync note versus this session's PR #31 publish record). Resolved by retaining both complete sections. No code, data, or generated outputs conflicted or were discarded.
+### Publish record — independent audit
+
+| Item | Value |
+|---|---|
+| Pull request | [#31](https://github.com/buffedlizard55-lab/OLBG2/pull/31) |
+| Merge result | **Merged** 2026-10-21 06:43:07 UTC; merge commit `600110e26bb65bae17a951f1550acb0402e6d1f0` |
+| Validate Pages content | Run `39557166627` — success |
+| GitHub Pages deployment | Run `39557166195` — build and deploy jobs succeeded |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/` and `https://buffedlizard55-lab.github.io/OLBG2/survey/` both fetched successfully; root includes Survey navigation |
+| Deployment warning | GitHub Actions emitted Node.js 20/runner-image deprecation notices; all jobs succeeded, non-blocking |

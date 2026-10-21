@@ -86,7 +86,7 @@ assets/style.css                                                       dashboard
 data/inputs/*.json                                                     verified inputs + fixtures
 data/matches.json                                                      generated dataset (lines, picks)
 data/predictions.json                                                  high-confidence write-ups + sources
-data/flagged.json                                                      review queue (20 open, 2 closed)
+data/flagged.json                                                      review queue (21 open, 2 closed)
 data/sources.json                                                      source register (32 sources)
 scripts/config.py, model.py, build_site.py                             dashboard pipeline
 data/events.json, scripts/build.py, tests/test_build.py                original audit pipeline (kept green by CI)

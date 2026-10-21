@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "snapshot_utc": "2026-10-21T05:15:00Z",
+    "note": "Fixtures verified against the official league / governing-body source named in each row. OLBG event links are recorded only where the pairing on the OLBG hub page matches the official pairing exactly."
+  },
+  "nhl": {
+    "source_name": "NHL official schedule / score API",
+    "source_url": "https://api-web.nhle.com/v1/score/2026-10-21",
+    "fixtures": [
+      {"id": "nhl-2026020152", "date": "2026-10-21", "start_utc": "2026-10-21T23:30:00Z", "away": "PHI", "home": "BUF", "venue": "KeyBank Center", "game_id": 2026020152},
+      {"id": "nhl-2026020153", "date": "2026-10-21", "start_utc": "2026-10-21T23:30:00Z", "away": "FLA", "home": "OTT", "venue": "Canadian Tire Centre", "game_id": 2026020153, "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896"},
+      {"id": "nhl-2026020154", "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "NSH", "home": "BOS", "venue": "TD Garden", "game_id": 2026020154},
+      {"id": "nhl-2026020155", "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "NYR", "home": "TOR", "venue": "Scotiabank Arena", "game_id": 2026020155},
+      {"id": "nhl-2026020156", "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "SJS", "home": "OTT", "venue": "Canadian Tire Centre", "game_id": 2026020156},
+      {"id": "nhl-2026020157", "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "ANA", "home": "NJD", "venue": "Prudential Center", "game_id": 2026020157},
+      {"id": "nhl-2026020158", "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "FLA", "home": "PIT", "venue": "PPG Paints Arena", "game_id": 2026020158},
+      {"id": "nhl-2026020159", "date": "2026-10-22", "start_utc": "2026-10-22T23:30:00Z", "away": "LAK", "home": "NYI", "venue": "UBS Arena", "game_id": 2026020159},
+      {"id": "nhl-2026020160", "date": "2026-10-22", "start_utc": "2026-10-23T00:00:00Z", "away": "VGK", "home": "STL", "venue": "Enterprise Center", "game_id": 2026020160},
+      {"id": "nhl-2026020161", "date": "2026-10-22", "start_utc": "2026-10-23T00:00:00Z", "away": "WPG", "home": "DAL", "venue": "American Airlines Center", "game_id": 2026020161},
+      {"id": "nhl-2026020162", "date": "2026-10-22", "start_utc": "2026-10-23T01:00:00Z", "away": "MIN", "home": "CGY", "venue": "Scotiabank Saddledome", "game_id": 2026020162},
+      {"id": "nhl-2026020163", "date": "2026-10-22", "start_utc": "2026-10-23T01:00:00Z", "away": "CAR", "home": "EDM", "venue": "Rogers Place", "game_id": 2026020163}
+    ]
+  },
+  "nba": {
+    "source_name": "NBA official games page",
+    "source_url": "https://www.nba.com/games?date=2026-10-21",
+    "fixtures": [
+      {"id": "nba-0022600085", "date": "2026-10-21", "tip_et": "19:00", "away": "ATL", "home": "ORL", "game_id": "0022600085"},
+      {"id": "nba-0022600086", "date": "2026-10-21", "tip_et": "19:00", "away": "MIL", "home": "WAS", "game_id": "0022600086", "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889"},
+      {"id": "nba-0022600004", "date": "2026-10-21", "tip_et": "19:30", "away": "MIN", "home": "MIA", "game_id": "0022600004"},
+      {"id": "nba-0022600087", "date": "2026-10-21", "tip_et": "19:30", "away": "CHA", "home": "BKN", "game_id": "0022600087"},
+      {"id": "nba-0022600088", "date": "2026-10-21", "tip_et": "19:30", "away": "CHI", "home": "TOR", "game_id": "0022600088", "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673"},
+      {"id": "nba-0022600090", "date": "2026-10-21", "tip_et": "20:00", "away": "IND", "home": "NOP", "game_id": "0022600090", "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892"},
+      {"id": "nba-0022600089", "date": "2026-10-21", "tip_et": "20:00", "away": "UTA", "home": "MEM", "game_id": "0022600089", "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/UTA_Jazz_@_MEM_Grizzlies/4?event_id=534894"},
+      {"id": "nba-0022600091", "date": "2026-10-21", "tip_et": "20:30", "away": "DAL", "home": "HOU", "game_id": "0022600091"},
+      {"id": "nba-0022600005", "date": "2026-10-21", "tip_et": "22:00", "away": "GSW", "home": "LAL", "game_id": "0022600005"},
+      {"id": "nba-0022600092", "date": "2026-10-21", "tip_et": "22:00", "away": "PHX", "home": "POR", "game_id": "0022600092", "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893"},
+      {"id": "nba-0022600093", "date": "2026-10-21", "tip_et": "22:30", "away": "SAC", "home": "LAC", "game_id": null, "note": "Game id not present in the captured window; fixture taken from the official games page."}
+    ]
+  },
+  "other_verified": {
+    "cricket": [
+      {"id": "icc-274658", "date": "2026-10-21", "start_display": "07:30 (as shown by ICC, user-local)", "away": "Bangladesh", "home": "Afghanistan", "format": "ODI", "url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh", "olbg_event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Afghanistan_vs_Bangladesh_One_Day_Match/7?event_id=188824"},
+      {"id": "icc-271646", "date": "2026-10-22", "start_display": "03:00 (as shown by ICC, user-local)", "away": "India", "home": "New Zealand", "format": "T20I", "url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india", "olbg_event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_1st_T20_Match/7?event_id=188814"}
+    ]
+  }
+}

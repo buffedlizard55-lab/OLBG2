@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "capture_window_utc": "2026-10-21T05:10:00Z to 2026-10-21T05:45:00Z",
+    "policy": "Only official league, governing-body or publisher sources are used to confirm a value. OLBG is used only for event discovery and market vocabulary, never as an odds or result source."
+  },
+  "sources": [
+    {"id": "S01", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips", "used_for": "Global tips page. Found to contain stale cached football fixtures; not used for event data.", "official": false},
+    {"id": "S02", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/sitemap-betting-tips.xml", "used_for": "Full sport taxonomy and numeric sport IDs.", "official": false},
+    {"id": "S03", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4", "used_for": "NBA event list, market labels, event_ids.", "official": false},
+    {"id": "S04", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13", "used_for": "Ice hockey event list and market labels.", "official": false},
+    {"id": "S05", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Tennis/3", "used_for": "Tennis event list.", "official": false},
+    {"id": "S06", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Cricket/7", "used_for": "Cricket event list.", "official": false},
+    {"id": "S07", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Rugby_Union/9", "used_for": "Rugby union event list (URC, Top 14, Pro D2).", "official": false},
+    {"id": "S08", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Darts/15", "used_for": "Darts event list.", "official": false},
+    {"id": "S09", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Snooker/8", "used_for": "Snooker event list.", "official": false},
+    {"id": "S10", "publisher": "OLBG", "type": "Discovery", "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "used_for": "Gaelic football club fixture list.", "official": false},
+
+    {"id": "S11", "publisher": "NBA", "type": "Official", "url": "https://www.nba.com/games?date=2026-10-21", "used_for": "Confirms 11 NBA fixtures, tip times in ET and game ids for 2026-10-21.", "official": true},
+    {"id": "S12", "publisher": "NBA", "type": "Official", "url": "https://www.nba.com/standings", "used_for": "Confirms 2026-27 season has just started; most teams 0-0.", "official": true},
+    {"id": "S13", "publisher": "NBA", "type": "Official", "url": "https://www.nba.com/standings?Season=2025-26", "used_for": "Completed 2025-26 records, home and road splits for all 30 teams — the NBA strength input.", "official": true},
+
+    {"id": "S14", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/score/2026-10-21", "used_for": "Confirms two NHL games on 21 October with UTC start times, venues and game ids.", "official": true},
+    {"id": "S15", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/score/2026-10-22", "used_for": "Confirms eleven of the twelve games on 22 October, UTC start times, venues, club records and team leaders.", "official": true},
+    {"id": "S16", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/schedule/2026-10-21", "used_for": "Cross-check of the 21 October schedule (two games).", "official": true},
+    {"id": "S17", "publisher": "NHL", "type": "Official", "url": "https://api-web.nhle.com/v1/scoreboard/2026-10-22", "used_for": "Recent results used in write-ups (e.g. Colorado 2 @ Philadelphia 3 on 19 October).", "official": true},
+    {"id": "S18", "publisher": "NHL", "type": "Official", "url": "https://api.nhle.com/stats/rest/en/team/summary", "used_for": "2026-27 team summary: games played, W-L-OTL, goals for/against — the NHL strength input.", "official": true},
+
+    {"id": "S19", "publisher": "United Rugby Championship", "type": "Official", "url": "https://stats.unitedrugby.com/match-centre/2026-27/4", "used_for": "Confirms all eight Round 4 fixtures, venues and venue-local kick-off times.", "official": true},
+    {"id": "S20", "publisher": "United Rugby Championship", "type": "Official", "url": "https://stats.unitedrugby.com/match-centre/table/2026-27", "used_for": "Official league table: P, W, D, L, PF, PA, points and form — the URC strength input.", "official": true},
+
+    {"id": "S21", "publisher": "ICC", "type": "Official", "url": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi", "used_for": "Confirms Afghanistan v Bangladesh ODI (match 274658) and New Zealand v India T20I (match 271646). Ranking table itself rendered empty.", "official": true},
+
+    {"id": "S22", "publisher": "World Snooker Tour", "type": "Official", "url": "https://www.wst.tv/matches/", "used_for": "BetVictor Northern Ireland Open 2026 draw: round-one results and two scheduled round-two matches on 21 October.", "official": true},
+    {"id": "S23", "publisher": "World Snooker Tour", "type": "Official", "url": "https://www.wst.tv/rankings/", "used_for": "World rankings top 11 and One Year List top 11 (not sufficient to rate all eight players).", "official": false, "note": "Official site, but the captured subset did not cover every player needed."},
+
+    {"id": "S24", "publisher": "MLB", "type": "Official", "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21", "used_for": "Confirms there were no MLB games on 21 October (post-season rest day).", "official": true}
+  ]
+}

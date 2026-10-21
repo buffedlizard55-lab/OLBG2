@@ -23,7 +23,7 @@ appended below.
 
 Their open item — *"Full eligible-sports schedule and original line coverage … neither exhaustive inventory nor
 original prices could be responsibly verified"* — is the task the current session picked up. It is now addressed
-in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated as F01–F18.
+in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated as F01–F19.
 
 ## Current session's board
 
@@ -106,7 +106,9 @@ in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated
 | Merge conflict | Yes — resolved by merging `origin/main` (`d9f6376`) into the branch first; no prior work discarded (see log above) |
 | Deploy run | `Validate Pages content` 39549059975 success · `pages build and deployment` 39549058659 success |
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` renders the dashboard; `/site/index.html` renders the prior audit site |
-| Follow-up | PR #8 — per-date NHL provenance (each NHL row now cites its own `…/score/YYYY-MM-DD` feed instead of all rows citing 21 October) |
+| Follow-up | PR #9 — per-date NHL provenance (each NHL row now cites its own `…/score/YYYY-MM-DD` feed) |
+| Follow-up | PR #12 — repaired the NBA citations the PR #9 helper mangled, and added a build gate requiring every citation to match `data/sources.json` |
+| Cross-session check | PR #11 (`db99ed90`) independently recaptured the NHL slate: fixture ids, matchups, dates, start times and last-ten records matched, and its two overlapping selections agreed. Its goal-convention finding (shootout goal counted by nhl.com/standings, excluded by the stats API) is now disclosed as **F19** in `data/flagged.json` and in METHODOLOGY.md §2. |
 
 ### Post-merge note
 

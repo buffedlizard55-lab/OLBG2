@@ -32,6 +32,11 @@ total line  = nearest half point to lambda_home + lambda_away
 
 `league_avg` is the mean goals-for per game across all 32 teams in the same snapshot.
 
+**Goal convention.** Inputs come from `api.nhle.com/stats/rest/en/team/summary`, which excludes the
+shootout-deciding goal from GF/GA. `nhl.com/standings` includes it, so the two differ for teams that have been
+through a shootout (e.g. Ottawa 22 vs 24 GF, Buffalo 33 vs 34 GA). The model stays on the stats-API view and the
+difference is disclosed as flag F19 rather than silently reconciled.
+
 ### NBA — prior-season logit model
 
 ```
@@ -82,3 +87,5 @@ transfers or travel claims are made, because none could be verified.
 - No market prices were available, so no value comparison against a bookmaker is possible.
 - URC times are venue-local; no conversion was applied.
 - Coverage is incomplete and every gap is listed on the flagged page.
+- Team strength is assumed stationary within a season; no travel, back-to-back, injury or lineup adjustment is applied.
+- The 4% margin is a theoretical overround, not an observed market price, so these are not "value" recommendations.

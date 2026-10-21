@@ -22,7 +22,7 @@
   <p class="lede">Everything that could not be confirmed from an official source, every value deliberately left
   blank, and every irregularity found in OLBG's own pages. These items do not block publication — they are the
   review queue.</p>
-  <p class="meta">18 items · 14 blank or unoriginated values</p>
+  <p class="meta">19 items · 14 blank or unoriginated values</p>
 </section>
 
 <div class="panel"><div class="table-scroll"><table>
@@ -135,6 +135,12 @@
       <td>Model limitation</td>
       <td><b>NHL sample is 7-11 games</b><span class="sub" style="max-width:560px">Lines are originated from 2026-27 season-to-date goal rates with empirical-Bayes shrinkage (k=8) and a 1.05 home-ice factor. Early-season rates are noisy; the shrinkage is the guard against overconfidence, not a correction for roster changes.</span></td>
       <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F19</td>
+      <td><span class="badge b-sev-low">Low</span></td>
+      <td>Source convention</td>
+      <td><b>NHL goal totals differ by shootout convention</b><span class="sub" style="max-width:560px">nhl.com/standings counts the shootout-deciding goal in GF/GA; api.nhle.com/stats/rest/en/team/summary does not. Over the same games Ottawa read 24 GF on standings vs 22 in the API (two shootout wins), Buffalo 34 GA vs 33 (one shootout loss) and Seattle 39 vs 37 (two shootout wins). Our rates use the stats API, so they sit up to ~0.2 goals per game below the standings view. Disclosed rather than adjusted, because the input is correct for its cited source. Found by a separate verification pass (PR #11).</span></td>
+      <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2" rel="noopener">official / source page</a></td>
     </tr></tbody></table></div></div>
 
 <h2 class="section">Values left blank on purpose</h2>

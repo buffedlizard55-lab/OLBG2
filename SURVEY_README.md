@@ -38,41 +38,54 @@ source that would be needed to originate a line.
 ## Layout
 
 ```
-COORDINATION.md          shared multi-session task board
-REPO_REVIEW.md           baseline audit of the repo as found
-METHODOLOGY.md           how lines are originated, confidence rule, disclosed assumptions
-data/survey/
-  sports.json            OLBG's 22-sport taxonomy with include/exclude decisions
-  events/<sport>.json    fixture inventory, one file per in-scope sport
-  lines.json             originated lines + every verified input used
-  picks.json             winner pick + confidence per originated line
-  predictions.json       written predictions for high-confidence picks
-  flags.json             irregularities, source conflicts, unverified rows
-scripts/
-  survey_inventory.py      materialises the collected OLBG inventory into data/events/
-  originate_lines.py     verified inputs + model -> data/survey/lines.json
-  analyse.py             picks, confidence, predictions, flags
-  survey_build.py        data/survey/*.json -> survey/ (stdlib, deterministic)
-  verify.py              gates the build: links, per-row sources, data integrity
-index.html, sports.html,   the published GitHub Pages site, built at the
-  lines.html, picks.html,    repository root because Pages on this repo is pinned
-  predictions.html,          to "/" of main and the token cannot repoint it
-  methodology.html,
-  verification.html,
-  flagged.html,
-  excluded.html
-  sports/<sport>.html        one subpage per in-scope sport
+COORDINATION.md            shared multi-session task board (all four sessions)
+REPO_REVIEW.md             baseline audit of the repo as found at 1056f6a
+SURVEY_README.md           this file
+
+survey/                    THIS LAYER's published pages
+  index.html               survey dashboard
+  sports.html              all 22 OLBG sports with in-scope / excluded status
+  lines.html               our originated lines
+  picks.html               winner pick + confidence per line
+  predictions.html         written predictions for high-confidence picks
+  methodology.html         evidence tiers, model constants, confidence rule
+  verification.html        every official source consulted and its status
+  flagged.html             Flagged for Review - 21 flags + 119 itemised rows
+  excluded.html            the 7 excluded sports and why
+  sports/<sport>.html      one subpage per in-scope sport (15)
   assets/style.css, app.js
+  METHODOLOGY.md           long-form methodology
+
+data/survey/
+  sports.json              OLBG's 22-sport taxonomy with include/exclude decisions
+  events/<sport>.json      fixture inventory, one file per in-scope sport
+  lines.json               originated lines + every verified input used
+  picks.json               winner pick + confidence per originated line
+  predictions.json         written predictions for high-confidence picks
+  flags.json               irregularities, source conflicts, unverified rows
+
+scripts/
+  survey_inventory.py      materialises the collected OLBG inventory into data/survey/
+  survey_lines.py          verified inputs + model -> data/survey/lines.json
+  survey_analyse.py        picks, confidence, predictions, flags
+  survey_build.py          data/survey/*.json -> survey/ (stdlib, deterministic)
+  survey_verify.py         gates the build: links, per-row sources, data integrity
 ```
+
+Everything else at the repository root - `index.html`, `sports/`, `assets/`, `scripts/build_site.py`,
+`scripts/model.py`, `data/matches.json`, `site/`, `tests/`, `.github/`, `research/` - belongs to the
+three earlier sessions and is **not** touched by this layer. `git diff origin/main` for those paths
+is empty.
+
 
 ## Reproduce
 
 ```bash
-python3 scripts/survey_inventory.py    # data/sports.json + data/survey/events/*.json
-python3 scripts/survey_lines.py   # data/survey/lines.json
-python3 scripts/survey_analyse.py           # data/survey/picks.json, data/survey/predictions.json, data/survey/flags.json
-python3 scripts/survey_build.py        # site files at the repo root
-python3 scripts/survey_verify.py            # exits non-zero on any failed check
+python3 scripts/survey_inventory.py    # data/survey/sports.json + data/survey/events/*.json
+python3 scripts/survey_lines.py      # data/survey/lines.json
+python3 scripts/survey_analyse.py    # data/survey/{picks,predictions,flags}.json
+python3 scripts/survey_build.py      # survey/
+python3 scripts/survey_verify.py     # exits non-zero on any failed check
 ```
 
 `survey_verify.py` re-runs `survey_build.py` and asserts the output is byte-identical, so the site is

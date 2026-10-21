@@ -769,6 +769,6 @@ open(DOCS / "excluded.html", "w").write(page("Excluded Sports", "excluded.html",
 (ASSETS / "style.css").write_text(CSS)
 (ASSETS / "app.js").write_text(JS)
 built = site_files()
-print(f"built {len(built)} site files into the repository root")
+print(f"built {len(built)} site files into survey/")
 for p in built:
     print(f"  {p.relative_to(DOCS)!s:34s} {p.stat().st_size:7d} B")

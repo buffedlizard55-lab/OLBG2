@@ -1,4 +1,5 @@
 import copy
+import html as html_lib
 import json
 import sys
 import unittest
@@ -6,13 +7,25 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
-from build import DATA, OUT, build, link, validate  # noqa: E402
-from poisson import evaluate, markets  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+
+import build as B  # noqa: E402
+import engine as M  # noqa: E402
 
 
-class LocalLinks(HTMLParser):
+def snapshot():
+    return {
+        "meta": B.load("meta.json"),
+        "sources": B.load("sources.json"),
+        "nhl_teams": B.load("nhl_teams.json"),
+        "fixtures": B.load("fixtures.json"),
+        "picks": B.load("picks.json"),
+        "flagged": B.load("flagged.json"),
+        "coverage": B.load("coverage.json"),
+    }
+
+
+class Links(HTMLParser):
     def __init__(self):
         super().__init__()
         self.links = []
@@ -22,170 +35,210 @@ class LocalLinks(HTMLParser):
             self.links += [v for k, v in attrs if k == "href"]
 
 
-class SnapshotTests(unittest.TestCase):
+class DataTests(unittest.TestCase):
     def setUp(self):
-        self.data = json.loads(DATA.read_text(encoding="utf-8"))
+        self.data = snapshot()
 
-    def test_snapshot_valid(self):
-        validate(self.data)
+    def test_snapshot_validates(self):
+        B.validate(self.data)
+        B.build_rows(self.data)
 
     def test_excluded_sport_rejected(self):
-        for sport in ("Football", "Boxing", "UFC", "MMAs", "American Football", "Hurling",
-                      "Horse racing", "Cycling", "Specials", "Gaelic football"):
-            modified = copy.deepcopy(self.data)
-            modified["events"][0]["sport"] = sport
-            with self.assertRaises(ValueError, msg=sport):
-                validate(modified)
-
-    def test_unapproved_source_host_rejected(self):
+        bad = copy.deepcopy(self.data)
+        bad["fixtures"]["fixtures"][0]["sport"] = "Football"
         with self.assertRaises(ValueError):
-            link("https://example.com/score", "bad")
+            B.validate(bad)
+
+    def test_non_official_fixture_source_rejected(self):
+        bad = copy.deepcopy(self.data)
+        bad["fixtures"]["fixtures"][0]["official_url"] = "https://example.com/game"
         with self.assertRaises(ValueError):
-            link("javascript:alert(1)", "bad")
+            B.validate(bad)
 
-    def test_unapproved_event_source_rejected(self):
-        modified = copy.deepcopy(self.data)
-        modified["events"][0]["sources"]["official"] = "https://example.com/x"
+    def test_olbg_cannot_be_the_official_source(self):
+        bad = copy.deepcopy(self.data)
+        bad["fixtures"]["fixtures"][0]["official_url"] = bad["fixtures"]["fixtures"][0]["olbg_url"]
         with self.assertRaises(ValueError):
-            validate(modified)
+            B.validate(bad)
 
-    def test_high_confidence_requires_long_narrative(self):
-        modified = copy.deepcopy(self.data)
-        high = next(e for e in modified["events"] if e["pick"]["confidence"] == "high")
-        high["pick"]["narrative"] = "Short call."
+    def test_high_confidence_always_has_a_prediction(self):
+        # Confidence is computed: removing the evidence pack downgrades the row instead of
+        # leaving a high-confidence line without written support.
+        rows = B.build_rows(self.data)
+        highs = [r for r in rows if r["confidence"] == "high"]
+        self.assertTrue(highs)
+        for row in highs:
+            self.assertIsNotNone(row["pick"])
+            self.assertTrue(row["evidence"])
+        bad = copy.deepcopy(self.data)
+        bad["picks"]["picks"].pop(highs[0]["fixture"]["id"])
+        downgraded = [r for r in B.build_rows(bad) if r["fixture"]["id"] == highs[0]["fixture"]["id"]][0]
+        self.assertNotEqual(downgraded["confidence"], "high")
+
+    def test_pick_must_match_model_favourite(self):
+        bad = copy.deepcopy(self.data)
+        fid = "nhl-2026020152"
+        bad["picks"]["picks"][fid]["selection"] = "Philadelphia Flyers"
         with self.assertRaises(ValueError):
-            validate(modified)
+            B.build_rows(bad)
 
-    def test_high_confidence_narrative_must_name_selection(self):
-        modified = copy.deepcopy(self.data)
-        high = next(e for e in modified["events"] if e["pick"]["confidence"] == "high")
-        high["pick"]["narrative"] = " ".join(["word"] * 40)
+    def test_short_prediction_rejected(self):
+        bad = copy.deepcopy(self.data)
+        bad["picks"]["picks"]["nhl-2026020152"]["narrative"] = "Sabres win."
         with self.assertRaises(ValueError):
-            validate(modified)
+            B.validate(bad)
 
-    def test_pick_must_match_model(self):
-        modified = copy.deepcopy(self.data)
-        modified["events"][0]["pick"]["selection"] = "Someone Else"
+    def test_duplicate_prediction_rejected(self):
+        bad = copy.deepcopy(self.data)
+        bad["picks"]["picks"]["nhl-2026020154"]["narrative"] = bad["picks"]["picks"]["nhl-2026020152"]["narrative"]
         with self.assertRaises(ValueError):
-            validate(modified)
+            B.validate(bad)
 
-    def test_confidence_must_match_model(self):
-        modified = copy.deepcopy(self.data)
-        pick = modified["events"][0]["pick"]
-        pick["confidence"] = "low" if pick["confidence"] != "low" else "high"
+    def test_unregistered_source_rejected(self):
+        bad = copy.deepcopy(self.data)
+        bad["picks"]["picks"]["nhl-2026020152"]["sources"].append("https://www.nhl.com/not-registered")
         with self.assertRaises(ValueError):
-            validate(modified)
+            B.validate(bad)
 
-    def test_coverage_row_count_must_match(self):
-        modified = copy.deepcopy(self.data)
-        modified["coverage"][0]["rows"] += 1
+    def test_prediction_must_cite_its_own_game(self):
+        bad = copy.deepcopy(self.data)
+        bad["picks"]["picks"]["nhl-2026020152"]["sources"] = [
+            "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+            "https://www.nhl.com/standings",
+        ]
         with self.assertRaises(ValueError):
-            validate(modified)
+            B.build_rows(bad)
 
-    def test_every_event_has_three_sources_and_two_teams(self):
-        for e in self.data["events"]:
-            for key in ("official", "official_api", "olbg"):
-                self.assertTrue(e["sources"][key].startswith("https://"), (e["id"], key))
-            self.assertNotEqual(e["away"]["name"], e["home"]["name"])
-            self.assertIn(e["sport"], {c["sport"] for c in self.data["coverage"]})
+    def test_every_fixture_is_inside_the_window(self):
+        start = self.data["meta"]["window_start"]
+        end = self.data["meta"]["window_end"]
+        for fx in self.data["fixtures"]["fixtures"]:
+            self.assertTrue(start <= fx["date"] <= end, fx["id"])
 
-    def test_all_high_narratives_are_unique_and_long_enough(self):
-        texts = [e["pick"]["narrative"] for e in self.data["events"] if e["pick"]["narrative"]]
-        self.assertEqual(len(texts), len(set(texts)), "narratives must not repeat")
-        for text in texts:
-            self.assertGreaterEqual(len(text.split()), 30)
+    def test_every_pick_is_a_known_market(self):
+        for fid, pick in self.data["picks"]["picks"].items():
+            self.assertIn(pick["market"], B.MARKETS, fid)
 
 
 class ModelTests(unittest.TestCase):
     def setUp(self):
-        self.data = json.loads(DATA.read_text(encoding="utf-8"))
-        self.params = self.data["model"]
+        self.params = B.load("meta.json")["params"]
 
-    def test_two_way_probabilities_sum_to_one(self):
-        for e in self.data["events"]:
-            mk = evaluate(e, self.params)
-            # displayed percentages are rounded to 0.1pp, so the printed sum can sit 0.2pp below 100
-            self.assertAlmostEqual(mk["money_line"]["home"] + mk["money_line"]["away"], 100.0, delta=0.25)
+    def test_price_and_probability_are_consistent(self):
+        for p in (0.05, 0.25, 0.4, 0.5, 0.62, 0.83, 0.95):
+            price = M.american(p)
+            self.assertFalse(-100 < price < 100)
+            self.assertAlmostEqual(M.implied(price), p, delta=0.02)
 
-    def test_fair_odds_are_inverse_probability(self):
-        for e in self.data["events"]:
-            mk = markets(e["home"], e["away"], self.params)
-            p = mk["money_line"]["home"] / 100.0
-            # odds are derived from the exact probability, not the displayed 0.1pp one
-            self.assertAlmostEqual(mk["money_line"]["home_odds"], round(1 / p, 2), delta=0.02)
+    def test_bad_probability_rejected(self):
+        for p in (0, 1, -0.2, 1.2):
+            with self.assertRaises(ValueError):
+                M.american(p)
 
-    def test_complementary_markets_sum_to_one(self):
-        for e in self.data["events"]:
-            mk = markets(e["home"], e["away"], self.params)
-            self.assertAlmostEqual(mk["puck_line"]["home_minus_1_5"] + mk["puck_line"]["away_plus_1_5"], 100.0, delta=0.25)
-            self.assertAlmostEqual(mk["totals"]["5.5"]["over"] + mk["totals"]["5.5"]["under"], 100.0, delta=0.25)
+    def test_probabilities_are_complementary(self):
+        home = {"abbr": "AAA", "name": "A", "gp": 10, "gf": 30, "ga": 30}
+        away = {"abbr": "BBB", "name": "B", "gp": 10, "gf": 30, "ga": 30}
+        market = M.nhl_market(home, away, self.params)
+        self.assertAlmostEqual(market["money_line"]["p_home"] + market["money_line"]["p_away"], 1.0, places=3)
+        self.assertAlmostEqual(market["handicap"]["p_home_cover"] + market["handicap"]["p_away_cover"], 1.0, places=3)
+        self.assertAlmostEqual(market["total"]["p_over"] + market["total"]["p_under"], 1.0, places=3)
 
-    def test_expected_goals_follow_inputs(self):
-        """A team that scores more and concedes less must never be priced longer."""
-        for e in self.data["events"]:
-            mk = evaluate(e, self.params)
-            gf_diff = e["home"]["gf_pg"] - e["home"]["ga_pg"]
-            if gf_diff > 0.5:
-                self.assertGreater(mk["money_line"]["home"], 50.0, e["id"])
+    def test_home_advantage_when_teams_are_identical(self):
+        home = {"abbr": "AAA", "name": "A", "gp": 10, "gf": 30, "ga": 30}
+        away = {"abbr": "BBB", "name": "B", "gp": 10, "gf": 30, "ga": 30}
+        market = M.nhl_market(home, away, self.params)
+        self.assertGreater(market["money_line"]["p_home"], 0.5)
+        self.assertLess(market["expected_margin"], self.params["nhl_home_goals"] + 1e-9)
 
-    def test_model_is_deterministic(self):
-        e = self.data["events"][0]
-        self.assertEqual(markets(e["home"], e["away"], self.params), markets(e["home"], e["away"], self.params))
+    def test_small_sample_is_shrunk(self):
+        small = M.shrunk_goal_rate(20, 10, 2, self.params["nhl_shrink_games"])
+        raw = (20 - 10) / 2
+        self.assertLess(abs(small), abs(raw))
 
-    def test_changing_parameters_changes_prices(self):
-        e = self.data["events"][0]
-        base = markets(e["home"], e["away"], self.params)
-        shifted = dict(self.params, home_multiplier=1.5)
-        self.assertNotEqual(base["money_line"]["home"], markets(e["home"], e["away"], shifted)["money_line"]["home"])
+    def test_total_line_is_a_half_goal(self):
+        for gf, ga, gp in ((30, 20, 10), (17, 36, 11), (42, 24, 10)):
+            home = {"abbr": "AAA", "name": "A", "gp": gp, "gf": gf, "ga": ga}
+            away = {"abbr": "BBB", "name": "B", "gp": gp, "gf": ga, "ga": gf}
+            line = M.nhl_market(home, away, self.params)["total"]["line"]
+            self.assertEqual((line * 2) % 2, 1.0, line)
+
+    def test_baseline_nba_has_no_total(self):
+        market = M.nba_market({"abbr": "AAA", "name": "A", "gp": 0}, {"abbr": "BBB", "name": "B", "gp": 0}, self.params)
+        self.assertIsNone(market["total"])
+        self.assertGreater(market["money_line"]["p_home"], 0.5)
+
+    def test_confidence_caps_without_evidence(self):
+        self.params = dict(self.params)
+        edge = 0.2
+        label, reason = M.confidence_label(edge, evidence=False, sample_ok=True, baseline=False, params=self.params)
+        self.assertEqual(label, "medium")
+        self.assertIn("no evidence pack", reason)
+        label, _ = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=False, params=self.params)
+        self.assertEqual(label, "high")
+        label, _ = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=True, params=self.params)
+        self.assertEqual(label, "low")
 
 
 class SiteTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        build()
-        cls.data = json.loads(DATA.read_text(encoding="utf-8"))
+        cls.result = B.build()
 
-    def test_generated_local_links_resolve(self):
-        for page in OUT.rglob("*.html"):
-            parser = LocalLinks()
+    def test_local_links_resolve(self):
+        root = B.OUT.resolve()
+        for page in B.OUT.rglob("*.html"):
+            parser = Links()
             parser.feed(page.read_text(encoding="utf-8"))
             for target in parser.links:
-                if urlparse(target).scheme or target.startswith("#"):
+                if not target or urlparse(target).scheme or target.startswith("#"):
                     continue
                 path = (page.parent / unquote(urlparse(target).path)).resolve()
-                self.assertTrue(path.is_relative_to(OUT.resolve()), f"{page}: escapes site root")
-                self.assertTrue(path.is_file(), f"{page.name}: broken link {target}")
+                if not path.is_relative_to(root):
+                    # The only permitted outbound local link is the root dashboard entry point.
+                    self.assertEqual(path, (B.ROOT / "index.html").resolve(), f"{page}: escapes site root")
+                self.assertTrue(path.is_file(), f"{page}: missing {target}")
 
-    def test_navigation_and_categories_exist(self):
-        for target in ("index.html", "fixtures.html", "sports/index.html", "methodology.html",
-                       "sources.html", "flagged.html", "assets/style.css"):
-            self.assertTrue((OUT / target).is_file(), target)
-        for cov in self.data["coverage"]:
-            self.assertTrue((OUT / "sports" / f'{cov["slug"]}.html').is_file(), cov["slug"])
+    def test_no_insecure_links(self):
+        for page in B.OUT.rglob("*.html"):
+            parser = Links()
+            parser.feed(page.read_text(encoding="utf-8"))
+            for target in parser.links:
+                if urlparse(target).scheme:
+                    self.assertEqual(urlparse(target).scheme, "https", f"{page}: {target}")
 
-    def test_every_fixture_appears_with_a_source_link(self):
-        fixtures = (OUT / "fixtures.html").read_text(encoding="utf-8")
-        for e in self.data["events"]:
-            self.assertIn(e["away"]["name"], fixtures)
-            self.assertIn(e["sources"]["official"], fixtures)
-            self.assertIn(e["sources"]["olbg"], fixtures)
+    def test_unverified_sports_do_not_link_to_missing_pages(self):
+        html = (B.OUT / "index.html").read_text(encoding="utf-8")
+        for row in B.load("coverage.json")["coverage"]:
+            if row["status"] != "covered":
+                self.assertNotIn(f'href="sports/{row["slug"]}.html"', html)
 
-    def test_flags_page_lists_every_flag(self):
-        flagged = (OUT / "flagged.html").read_text(encoding="utf-8")
-        for f in self.data["flags"]:
-            self.assertIn(f["item"].replace("&", "&amp;"), flagged)
+    def test_navigation_targets_exist(self):
+        for target in ("index.html", "picks.html", "sports/index.html", "sports/ice-hockey.html",
+                       "sports/basketball.html", "methodology.html", "sources.html",
+                       "flagged.html", "assets/style.css", "data/lines.json"):
+            self.assertTrue((B.OUT / target).is_file(), target)
 
-    def test_no_unrendered_placeholders(self):
-        for page in OUT.rglob("*.html"):
-            text = page.read_text(encoding="utf-8")
-            self.assertNotIn("None</", text, page.name)
-            self.assertNotIn("None%", text, page.name)
-            self.assertNotIn("&lt;span", text, page.name)
+    def test_every_fixture_is_published_with_its_official_link(self):
+        html = (B.OUT / "picks.html").read_text(encoding="utf-8")
+        for fx in B.load("fixtures.json")["fixtures"]:
+            self.assertIn(fx["official_url"], html, fx["id"])
 
-    def test_no_excluded_sport_published(self):
-        index = (OUT / "index.html").read_text(encoding="utf-8")
-        self.assertNotIn("Horse Racing</a>", index)
-        self.assertNotIn("Boxing", index.split("coverage board")[0])
+    def test_no_excluded_sport_is_published_as_a_fixture(self):
+        html = (B.OUT / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn("Horse racing</strong>", html)
+        self.assertNotIn(">Premier League<", html)
+
+    def test_high_confidence_rows_have_narratives_on_the_pick_sheet(self):
+        html = (B.OUT / "picks.html").read_text(encoding="utf-8")
+        for row in self.result["high"]:
+            self.assertIn(html_lib.escape(row["pick"]["narrative"], quote=True), html)
+
+    def test_machine_readable_output_matches_rows(self):
+        payload = json.loads((B.OUT / "data" / "lines.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(payload["fixtures"]), len(self.result["rows"]))
+        for item in payload["fixtures"]:
+            self.assertTrue(item["official_url"].startswith("https://"))
+            self.assertIn(item["confidence"], {"low", "medium", "high"})
 
 
 if __name__ == "__main__":

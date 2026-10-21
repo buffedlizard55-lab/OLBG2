@@ -1,602 +1,688 @@
-"""Validate the evidence snapshot and build the static research site.
-
-Run:  python scripts/build.py
-Out:  site/  (index, fixtures, sports/*, methodology, sources, flagged, assets)
-"""
+"""Validate the evidence snapshot, originate lines, and build the static dashboard."""
 from __future__ import annotations
 
 import html
 import json
-import sys
+import re
 from pathlib import Path
 from urllib.parse import urlparse
 
+from engine import (
+    choose_selection,
+    confidence_label,
+    implied,
+    nba_market,
+    nhl_market,
+    shrunk_goal_rate,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
-from poisson import evaluate  # noqa: E402
-
-DATA = ROOT / "data/events.json"
+DATA = ROOT / "data" / "desk"
 OUT = ROOT / "site"
+OFFICIAL_HOSTS = {"www.nhl.com", "www.nba.com", "api.nhle.com", "api-web.nhle.com", "statsapi.mlb.com"}
+REFERENCE_HOSTS = {"www.olbg.com"}
+SNAPSHOT_LABEL = "2026-10-21 05:55 UTC"
+MARKETS = {"Money line", "Puck line", "Spread", "Total", "Win match"}
 
-EXCLUDED = {
-    "soccer", "football", "american football", "boxing", "ufc", "mma", "hurling",
-    "horse racing", "cycling", "specials", "gaelic football",
-}
-APPROVED_HOSTS = {
-    "www.nhl.com", "api-web.nhle.com", "api.nhle.com", "www.olbg.com",
-    "www.nba.com", "cdn.nba.com", "stats.nba.com", "data.nba.com",
-    "www.mlb.com", "statsapi.mlb.com", "www.icc-cricket.com", "www.atptour.com",
-    "www.premrugby.com", "www.premiershiprugby.com", "www.rugby-league.com",
-    "www.pdc.tv", "www.wst.tv", "www.eurohandball.com", "en.volleyballworld.com",
-    "www.afl.com.au", "www.formula1.com", "www.pgatour.com", "www.gbgb.org.uk",
-    "www.world.rugby", "www.ecb.co.uk", "www.iihf.com", "www.ice.hockey",
-}
-NAV = [
-    ("index.html", "Overview", "home"),
-    ("fixtures.html", "All fixtures", "fixtures"),
-    ("sports/index.html", "Sports", "sports"),
-    ("methodology.html", "Methodology", "method"),
-    ("sources.html", "Sources", "sources"),
-    ("flagged.html", "Flagged for review", "flagged"),
-]
-STATUS_LABEL = {
-    "covered": ("Covered", "ok"),
-    "verified_no_games": ("No games (verified)", "neutral"),
-    "official_feed_incomplete": ("Official feed incomplete", "bad"),
-    "date_not_exposed": ("Date not exposed", "warn"),
-    "not_verified": ("Not verified", "warn"),
-    "not_a_head_to_head_fixture": ("Not head-to-head", "neutral"),
-    "no_official_authority": ("No official authority", "warn"),
-}
+
+# ------------------------------------------------------------------ helpers
 
 
 def esc(value) -> str:
     return html.escape(str(value), quote=True)
 
 
-def link(url: str, label: str) -> str:
+def load(name: str) -> dict:
+    return json.loads((DATA / name).read_text(encoding="utf-8"))
+
+
+def host_of(url: str) -> str:
     parsed = urlparse(url)
-    if parsed.scheme != "https" or parsed.netloc not in APPROVED_HOSTS:
-        raise ValueError(f"Unapproved source URL: {url}")
-    return f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(label)} &#8599;</a>'
+    if parsed.scheme != "https" or not parsed.netloc:
+        raise ValueError(f"URL must be absolute https: {url}")
+    return parsed.netloc.lower()
 
 
-def _next_day(date: str) -> str:
-    from datetime import date as _date, timedelta
-    return (_date.fromisoformat(date) + timedelta(days=1)).isoformat()
+def check_url(url: str, hosts: set[str], label: str) -> str:
+    host = host_of(url)
+    if host not in hosts:
+        raise ValueError(f"{label}: host {host} is not approved ({url})")
+    return url
 
 
-def stamp(start_utc: str) -> str:
-    date, time = start_utc.split("T")
-    return f"{date} · {time[:5]} UTC"
+def a(url: str | None, label: str, cls: str = "") -> str:
+    if not url:
+        return '<span class="muted">Not published</span>'
+    klass = f' class="{cls}"' if cls else ""
+    return f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer"{klass}>{esc(label)}</a>'
 
 
-def badge(text: str, kind: str) -> str:
-    return f'<span class="badge {kind}">{esc(text)}</span>'
+def price(value: int | None) -> str:
+    if value is None:
+        return "—"
+    return f"+{value}" if value > 0 else str(value)
 
 
-def pills(recent: list[str]) -> str:
-    out = []
-    for item in recent:
-        code, _, opp = item.partition(" ")
-        kind = "w" if code in ("W", "OTW", "SOW") else "l"
-        out.append(f'<span class="pill {kind}">{esc(code)} {esc(opp)}</span>')
-    return '<div class="pills">' + "".join(out) + "</div>"
+def pct(value: float | None) -> str:
+    return "—" if value is None else f"{value * 100:.1f}%"
 
 
-# --------------------------------------------------------------------------- validation
+def badge(label: str, reason: str = "") -> str:
+    title = f' title="{esc(reason)}"' if reason else ""
+    return f'<span class="badge {esc(label)}"{title}>{esc(label)}</span>'
+
+
+def num(value, digits: int = 2) -> str:
+    if value is None:
+        return "—"
+    return f"{value:+.{digits}f}" if isinstance(value, float) else str(value)
+
+
+# ------------------------------------------------------------------ validation
+
 
 def validate(data: dict) -> None:
-    snap = data.get("snapshot") or {}
-    for key in ("as_of_utc", "window", "scope", "excluded_sports"):
-        if not snap.get(key):
-            raise ValueError(f"snapshot.{key} is required")
+    meta = data["meta"]
+    params = meta["params"]
+    for key in ("nhl_shrink_games", "nhl_home_goals", "nhl_logistic_scale", "nhl_total_sd",
+                "nhl_league_total", "nba_home_points", "nba_logistic_scale", "high_edge",
+                "medium_edge", "min_games_for_high", "min_prediction_words"):
+        if key not in params:
+            raise ValueError(f"meta.params missing {key}")
+    if not meta.get("snapshot_utc"):
+        raise ValueError("missing snapshot timestamp")
 
-    model = data.get("model") or {}
-    for key in ("name", "home_multiplier", "away_multiplier", "tie_split_home", "edge_high", "edge_medium"):
-        if key not in model:
-            raise ValueError(f"model.{key} is required")
-    if not 0 < model["tie_split_home"] < 1:
-        raise ValueError("tie_split_home must be in (0,1)")
-    if model["edge_medium"] >= model["edge_high"]:
-        raise ValueError("edge_medium must be below edge_high")
+    sources = data["sources"]["sources"]
+    by_url = {}
+    for src in sources:
+        check_url(src["url"], OFFICIAL_HOSTS | REFERENCE_HOSTS, "source")
+        if src["kind"] == "official":
+            check_url(src["url"], OFFICIAL_HOSTS, "official source")
+        elif src["kind"] == "reference":
+            check_url(src["url"], REFERENCE_HOSTS, "reference source")
+        else:
+            raise ValueError(f"unknown source kind {src['kind']}")
+        if src["url"] in by_url:
+            raise ValueError(f"duplicate source {src['url']}")
+        by_url[src["url"]] = src
 
-    events = data.get("events")
-    if not isinstance(events, list) or not events:
-        raise ValueError("events must be a non-empty list")
+    coverage = {row["sport"]: row for row in data["coverage"]["coverage"]}
+    if not coverage:
+        raise ValueError("coverage registry is empty")
+    for row in coverage.values():
+        if row["status"] not in {"covered", "no-fixtures", "unverified", "excluded"}:
+            raise ValueError(f"bad coverage status {row['status']}")
+        if row["official_url"]:
+            check_url(row["official_url"], OFFICIAL_HOSTS, "coverage official")
+        if row["olbg_url"]:
+            check_url(row["olbg_url"], REFERENCE_HOSTS, "coverage olbg")
 
+    excluded = {s.lower() for s in meta["excluded_sports"]}
+    fixtures = data["fixtures"]["fixtures"]
+    if not fixtures:
+        raise ValueError("no fixtures")
     seen = set()
-    for row in events:
-        rid = row.get("id")
-        if not rid or rid in seen:
-            raise ValueError(f"missing or duplicate event id: {rid}")
-        seen.add(rid)
-        if row["sport"].lower() in EXCLUDED:
-            raise ValueError(f"{rid}: excluded sport {row['sport']}")
-        for key in ("sport", "competition", "date", "start_utc"):
-            if not row.get(key):
-                raise ValueError(f"{rid}: missing {key}")
-        utc_date = row["start_utc"][:10]
-        if utc_date not in (row["date"], _next_day(row["date"])):
-            raise ValueError(f"{rid}: start_utc does not fall on the fixture date or the following UTC day")
-        for side in ("away", "home"):
-            team = row.get(side) or {}
-            for key in ("name", "abbrev", "coach", "gf_pg", "ga_pg", "pp_pct", "pk_pct", "l10"):
-                if key not in team:
-                    raise ValueError(f"{rid}: {side}.{key} missing")
-            if not isinstance(team["gf_pg"], (int, float)) or not isinstance(team["ga_pg"], (int, float)):
-                raise ValueError(f"{rid}: {side} goal rates must be numeric")
-            if team["gf_pg"] <= 0 or team["ga_pg"] <= 0:
-                raise ValueError(f"{rid}: {side} goal rates must be positive")
-            if not team.get("recent"):
-                raise ValueError(f"{rid}: {side}.recent is required")
-        for key in ("official", "official_api", "olbg"):
-            link(row["sources"][key], key)
-        if not isinstance(row.get("olbg_listed"), bool):
-            raise ValueError(f"{rid}: olbg_listed must be a boolean")
+    for fx in fixtures:
+        if fx["id"] in seen:
+            raise ValueError(f"duplicate fixture id {fx['id']}")
+        seen.add(fx["id"])
+        if fx["sport"].lower() in excluded:
+            raise ValueError(f"excluded sport in fixtures: {fx['sport']}")
+        if fx["sport_slug"] not in {row["slug"] for row in coverage.values()}:
+            raise ValueError(f"fixture sport_slug not registered: {fx['sport_slug']}")
+        if fx["date"] < meta["window_start"] or fx["date"] > meta["window_end"]:
+            raise ValueError(f"fixture {fx['id']} outside the published window")
+        check_url(fx["official_url"], OFFICIAL_HOSTS, f"fixture {fx['id']}")
+        if fx["olbg_url"]:
+            check_url(fx["olbg_url"], REFERENCE_HOSTS, f"fixture {fx['id']} olbg")
+        if fx["engine"] not in {"nhl", "nba"}:
+            raise ValueError(f"unknown engine {fx['engine']}")
 
-        # model / pick agreement
-        mk = evaluate(row, model)
-        pick = row.get("pick")
-        if not pick:
-            raise ValueError(f"{rid}: every fixture needs a selection")
-        if pick["selection"] != mk["selection"]:
-            raise ValueError(f"{rid}: pick {pick['selection']} != model {mk['selection']}")
-        if pick["confidence"] != mk["confidence"]:
-            raise ValueError(f"{rid}: confidence {pick['confidence']} != model {mk['confidence']}")
-        if pick["confidence"] == "high":
-            text = pick.get("narrative") or ""
-            if len(text.split()) < 30:
-                raise ValueError(f"{rid}: high confidence needs a 30+ word narrative")
-            if pick["selection"] not in text:
-                raise ValueError(f"{rid}: narrative must name the selection")
-        if not (pick.get("basis") or "").strip():
-            raise ValueError(f"{rid}: pick needs a factual basis")
+    teams = data["nhl_teams"]["teams"]
+    for abbr in {fx["inputs"]["home"] for fx in fixtures if fx["engine"] == "nhl"} | {
+            fx["inputs"]["away"] for fx in fixtures if fx["engine"] == "nhl"}:
+        if abbr not in teams:
+            raise ValueError(f"missing NHL team input {abbr}")
+        team = teams[abbr]
+        if team["gp"] != team["w"] + team["l"] + team["otl"]:
+            raise ValueError(f"NHL team {abbr}: W+L+OT does not equal GP")
+        if team["gp"] <= 0 or team["gf"] < 0 or team["ga"] < 0:
+            raise ValueError(f"NHL team {abbr}: impossible totals")
 
-    sports = {c["slug"] for c in data["coverage"]}
-    if len(sports) != len(data["coverage"]):
-        raise ValueError("duplicate coverage slug")
-    for cov in data["coverage"]:
-        if cov["sport"].lower() in EXCLUDED:
-            raise ValueError(f"excluded sport on coverage board: {cov['sport']}")
-        for key in ("sport", "slug", "olbg_url", "official_url", "rows", "status", "detail"):
-            if cov.get(key) in (None, ""):
-                raise ValueError(f"coverage {cov.get('sport')}: missing {key}")
-        if cov["status"] not in STATUS_LABEL:
-            raise ValueError(f"coverage {cov['sport']}: unknown status {cov['status']}")
-        link(cov["olbg_url"], "OLBG")
-        link(cov["official_url"], "Official")
-        expected = sum(1 for r in events if r["sport"] == cov["sport"])
-        if cov["rows"] != expected:
-            raise ValueError(f"coverage {cov['sport']}: rows={cov['rows']} but {expected} events")
+    picks = data["picks"]["picks"]
+    narratives = {}
+    for fid, pick in picks.items():
+        if fid not in seen:
+            raise ValueError(f"pick for unknown fixture {fid}")
+        if pick["market"] not in MARKETS:  # pragma: no cover - defensive
+            raise ValueError(f"unknown market {pick['market']}")
+        words = len(pick["narrative"].split())
+        if words < params["min_prediction_words"]:
+            raise ValueError(f"prediction for {fid} is only {words} words")
+        norm = re.sub(r"\W+", " ", pick["narrative"].lower()).strip()
+        if norm in narratives:
+            raise ValueError(f"prediction for {fid} duplicates {narratives[norm]}")
+        narratives[norm] = fid
+        if not pick["sources"]:
+            raise ValueError(f"prediction for {fid} has no sources")
+        for url in pick["sources"]:
+            if url not in by_url:
+                raise ValueError(f"prediction for {fid} cites an unregistered source: {url}")
+        if not pick.get("facts"):
+            raise ValueError(f"prediction for {fid} has no fact list")
 
-    for flag in data["flags"]:
-        for key in ("item", "sport", "detail", "sources"):
-            if not flag.get(key):
-                raise ValueError(f"flag missing {key}")
+    for flag in data["flagged"]["flagged"]:
         for url in flag["sources"]:
-            link(url, "source")
+            if url not in by_url:
+                raise ValueError(f"flag {flag['id']} cites an unregistered source: {url}")
 
 
-# --------------------------------------------------------------------------- chrome
+# ------------------------------------------------------------------ computation
 
-def page(title: str, description: str, body: str, active: str, prefix: str = "") -> str:
+
+def build_rows(data: dict) -> list[dict]:
+    meta = data["meta"]
+    params = meta["params"]
+    teams = data["nhl_teams"]["teams"]
+    picks = data["picks"]["picks"]
+    rows = []
+    for fx in data["fixtures"]["fixtures"]:
+        if fx["engine"] == "nhl":
+            home = teams[fx["inputs"]["home"]]
+            away = teams[fx["inputs"]["away"]]
+            market = nhl_market(home, away, params)
+            sample_ok = min(home["gp"], away["gp"]) >= params["min_games_for_high"]
+            baseline = False
+        else:
+            home = {"abbr": fx["home"], "name": fx["home_name"], "gp": 0}
+            away = {"abbr": fx["away"], "name": fx["away_name"], "gp": 0}
+            market = nba_market(home, away, params)
+            sample_ok = False
+            baseline = True
+
+        ml = market["money_line"]
+        primary = choose_selection(market)["primary"]
+        pick = picks.get(fx["id"])
+        if pick:
+            if pick["market"] != "Money line":
+                raise ValueError(f"only money-line picks are wired for {fx['id']}")
+            if pick["selection"] != ml["favoured"]:
+                raise ValueError(
+                    f"pick for {fx['id']} selects {pick['selection']} but the model favours {ml['favoured']}"
+                )
+        selection = pick["selection"] if pick else primary["selection"]
+        odds = ml["home"] if selection == ml["home_team"] else ml["away"]
+        probability = ml["p_home"] if selection == ml["home_team"] else ml["p_away"]
+        edge = abs(ml["p_home"] - 0.5)
+        evidence = bool(pick and fx["official_url"] in pick["sources"])
+        label, reason = confidence_label(edge, evidence=evidence, sample_ok=sample_ok,
+                                        baseline=baseline, params=params)
+        if pick and not evidence:
+            raise ValueError(f"prediction for {fx['id']} must cite its own official page")
+        rows.append({
+            "fixture": fx, "market": market, "pick": pick, "selection": selection,
+            "odds": odds, "probability": probability, "edge": edge,
+            "confidence": label, "confidence_reason": reason,
+            "evidence": evidence, "leans": choose_selection(market)["leans"],
+        })
+
+    for row in rows:
+        if row["confidence"] == "high" and not row["pick"]:
+            raise ValueError(f"high confidence without a prediction: {row['fixture']['id']}")
+    return rows
+
+
+# ------------------------------------------------------------------ rendering
+
+
+NAV = [
+    ("index.html", "Overview", "home"),
+    ("picks.html", "Pick sheet", "picks"),
+    ("sports/index.html", "Sports", "sports"),
+    ("methodology.html", "Method", "method"),
+    ("sources.html", "Sources", "sources"),
+    ("flagged.html", "Flagged", "flagged"),
+]
+
+
+def page(title: str, body: str, active: str, prefix: str = "", subtitle: str = "") -> str:
     items = "".join(
         f'<a class="nav-item{" active" if key == active else ""}" href="{prefix}{path}">'
-        f'<span class="swatch"></span>{esc(text)}</a>'
+        f'<span>{esc(text)}</span></a>'
         for path, text, key in NAV
     )
+    sub = f'<span class="crumb">{esc(subtitle)}</span>' if subtitle else ""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="description" content="{esc(description)}">
 <title>{esc(title)} · OLBG research desk</title>
 <link rel="stylesheet" href="{prefix}assets/style.css">
-</head><body><div class="shell">
+</head><body>
+<div class="shell">
 <aside class="sidebar">
-  <div class="brand"><span class="brand-icon">O<span>.</span></span>
-    <div><strong>OLBG / research</strong><small>Official-source desk</small></div></div>
-  <div class="nav-label">WORKSPACE</div>
-  <nav aria-label="Main navigation">{items}</nav>
-  <div class="side-note"><span class="dot"></span>Static snapshot<br><small>Not a live feed. Not betting advice.</small></div>
+  <div class="brand"><span class="mark">O<span>.</span></span><div><strong>OLBG research</strong><small>Independent evidence desk</small></div></div>
+  <div class="nav-label">Workspace</div>
+  <nav aria-label="Main">{items}</nav>
+  <div class="side-note"><span class="dot"></span><div><strong>Snapshot</strong><br><small>{esc(SNAPSHOT_LABEL)}</small></div></div>
+  <div class="side-note quiet"><small>Not affiliated with OLBG, the NHL or the NBA. No betting advice.</small></div>
 </aside>
 <main class="main">
-  <header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> {esc(title.upper())}</span>
-  <span class="top-right">SNAPSHOT MODE <span class="live-dot"></span></span></header>
-{body}
-<footer>Independent research snapshot assembled {esc(SNAP['as_of_utc'])}. Not affiliated with OLBG, the NHL or any league.
-Every published row links to an official competition source. Model prices are this desk's own estimates, not bookmaker prices,
-and no outcome is guaranteed. Betting involves risk; if you gamble, keep it legal in your jurisdiction.</footer>
-</main></div></body></html>"""
+  <header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> {esc(title.upper())}</span><span class="top-right">{sub}<span class="live-dot"></span> RESEARCH MODE</span></header>
+  {body}
+  <footer>Independent research snapshot · fair odds only · no guaranteed outcomes · <a href="{prefix}methodology.html">method</a> · <a href="{prefix}flagged.html">flagged items</a> · <a href="{prefix}../index.html">root dashboard</a></footer>
+</main></div>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function (btn) {{
+  btn.addEventListener('click', function () {{
+    var group = btn.getAttribute('data-group');
+    document.querySelectorAll('[data-group="' + group + '"]').forEach(function (b) {{ b.classList.toggle('on', b === btn); }});
+    var want = btn.getAttribute('data-filter');
+    document.querySelectorAll('[data-conf]').forEach(function (row) {{
+      row.hidden = want !== 'all' && row.getAttribute('data-conf') !== want;
+    }});
+  }});
+}});
+</script>
+</body></html>"""
 
 
-# --------------------------------------------------------------------------- fragments
+def kpi(label: str, value: str, note: str) -> str:
+    return f'<div class="kpi"><span>{esc(label)}</span><strong>{esc(value)}</strong><small>{esc(note)}</small></div>'
 
-def market_cells(row: dict, mk: dict) -> str:
-    ml, pl, t5 = mk["money_line"], mk["puck_line"], mk["totals"]["5.5"]
-    a, h = row["away"]["abbrev"], row["home"]["abbrev"]
+
+def pick_table(rows: list[dict], prefix: str = "", show_narrative: bool = False) -> str:
+    body = []
+    for row in rows:
+        fx, market, pick = row["fixture"], row["market"], row["pick"]
+        links = a(fx["official_url"], "League") + (" · " + a(fx["olbg_url"], "OLBG") if fx["olbg_url"] else "")
+        narrative = ""
+        if show_narrative and pick:
+            sources = " ".join(a(u, f"source {i + 1}") for i, u in enumerate(pick["sources"]))
+            facts = "".join(f"<li>{esc(f)}</li>" for f in pick["facts"])
+            narrative = (
+                f'<div class="prediction"><p>{esc(pick["narrative"])}</p>'
+                f'<div class="prediction-meta"><span><strong>Verified inputs</strong></span><ul>{facts}</ul>'
+                f'<span class="src">{sources}</span></div></div>'
+            )
+        body.append(
+            f'<tr data-conf="{esc(row["confidence"])}">'
+            f'<td class="when mono">{esc(fx["date"][5:])}<br><span class="muted">{esc(fx["time"])}</span></td>'
+            f'<td><span class="tag">{esc(fx["league"])}</span></td>'
+            f'<td><strong>{esc(fx["away"])}</strong> at <strong>{esc(fx["home"])}</strong>'
+            f'<br><span class="muted">{esc(fx["away_name"])} at {esc(fx["home_name"])}</span></td>'
+            f'<td><strong>{esc(row["selection"])}</strong><br><span class="muted">{esc(row["pick"]["market"] if pick else "Money line")}</span></td>'
+            f'<td class="mono">{price(row["odds"])}</td>'
+            f'<td class="mono">{pct(row["probability"])}</td>'
+            f'<td class="mono">{row["edge"] * 100:.1f} pts</td>'
+            f'<td>{badge(row["confidence"], row["confidence_reason"])}</td>'
+            f'<td class="src">{links}</td></tr>'
+            + (f'<tr class="pred-row" data-conf="{esc(row["confidence"])}"><td colspan="9">{narrative}</td></tr>' if narrative else "")
+        )
     return (
-        f'<td class="mono">{esc(h)} {ml["home"]}%<br><span class="muted small">{ml["home_odds"]:.2f} · '
-        f'{esc(a)} {ml["away"]}% {ml["away_odds"]:.2f}</span></td>'
-        f'<td class="mono">{esc(h)} -1.5 {pl["home_minus_1_5"]}%<br><span class="muted small">{pl["home_minus_1_5_odds"]:.2f} · '
-        f'{esc(a)} +1.5 {pl["away_plus_1_5"]}% {pl["away_plus_1_5_odds"]:.2f}</span></td>'
-        f'<td class="mono">O 5.5 {t5["over"]}%<br><span class="muted small">{t5["over_odds"]:.2f} · '
-        f'U 5.5 {t5["under"]}% {t5["under_odds"]:.2f}</span></td>'
+        '<div class="table-scroll"><table class="pick-table"><thead><tr>'
+        '<th>When</th><th>League</th><th>Matchup</th><th>Selection</th><th>Price</th>'
+        '<th>Model prob.</th><th>Edge</th><th>Confidence</th><th>Sources</th>'
+        "</tr></thead><tbody>" + "".join(body) + "</tbody></table></div>"
     )
 
 
-def fixture_table(events: list[dict], model: dict, *, show_status: bool = True) -> str:
-    if not events:
-        return '<div class="table-scroll"><table><tbody><tr><td class="empty">No fixture on this page has passed official-source verification.</td></tr></tbody></table></div>'
-    head = (
-        "<thead><tr><th>Matchup</th><th>Competition</th><th>Start</th>"
-        '<th class="num">Money line</th><th class="num">Puck line</th><th class="num">Total 5.5</th>'
-        "<th>Selection</th><th>Confidence</th><th>Sources</th></tr></thead>"
+def market_cell(market: dict) -> str:
+    ml = market["money_line"]
+    hc = market["handicap"]
+    tot = market["total"]
+    total = (f'O {tot["line"]:g} {price(tot["over"])} / U {tot["line"]:g} {price(tot["under"])}'
+             if tot else '<span class="muted">No total originated</span>')
+    return (
+        f'<div class="mk"><span>ML</span><b>{esc(ml["away_team"].split()[-1])} {price(ml["away"])}</b>'
+        f'<b>{esc(ml["home_team"].split()[-1])} {price(ml["home"])}</b></div>'
+        f'<div class="mk"><span>{"Puck line" if market["engine"] == "nhl" else "Spread"}</span>'
+        f'<b>{esc(ml["away_team"].split()[-1])} {hc["line_away"]:+g} {price(hc["away"])}</b>'
+        f'<b>{esc(ml["home_team"].split()[-1])} {hc["line_home"]:+g} {price(hc["home"])}</b></div>'
+        f'<div class="mk"><span>Total</span><b class="wide">{total}</b></div>'
     )
-    rows = []
-    for row in events:
-        mk = evaluate(row, model)
-        src = (
-            f'{link(row["sources"]["official"], "NHL")}'
-            f'{link(row["sources"]["official_api"], "feed")}'
-            f'{link(row["sources"]["olbg"], "OLBG")}'
-        )
-        rows.append(
-            f'<tr><td><span class="match">{esc(row["away"]["name"])}</span> <span class="at">at</span> '
-            f'<span class="match">{esc(row["home"]["name"])}</span></td>'
-            f'<td>{esc(row["competition"])}<br><span class="muted small">{esc(row["date"])}</span></td>'
-            f'<td class="nowrap mono">{esc(stamp(row["start_utc"]))}</td>'
-            f'{market_cells(row, mk)}'
-            f'<td><strong>{esc(mk["selection"])}</strong><br><span class="muted small">{mk["selection_prob"]}% · {mk["selection_odds"]:.2f}</span></td>'
-            f'<td>{badge(mk["confidence"].capitalize(), mk["confidence"])}</td>'
-            f'<td class="src">{src}</td></tr>'
-        )
-    return f'<div class="table-scroll"><table>{head}<tbody>{"".join(rows)}</tbody></table></div>'
 
 
-def fixture_detail(row: dict, model: dict) -> str:
-    mk = evaluate(row, model)
-    pick = row["pick"]
-    ml, pl, t55, t65 = mk["money_line"], mk["puck_line"], mk["totals"]["5.5"], mk["totals"]["6.5"]
-    narr = f'<p class="narr">{esc(pick["narrative"])}</p>' if pick.get("narrative") else ""
-    flags = "".join(f'<div class="note"><b>Flagged:</b> {esc(f)}</div>' for f in row.get("flags", []))
-    olbg_note = "" if row["olbg_listed"] else (
-        '<div class="note"><b>OLBG:</b> no individual OLBG event page was listed for this fixture at capture time, '
-        "so the OLBG link points at the league index.</div>"
+def fixture_table(rows: list[dict], prefix: str = "") -> str:
+    body = []
+    for row in rows:
+        fx = row["fixture"]
+        body.append(
+            f'<tr><td class="when mono">{esc(fx["date"][5:])}<br><span class="muted">{esc(fx["time"])}</span></td>'
+            f'<td><strong>{esc(fx["away"])} @ {esc(fx["home"])}</strong><br>'
+            f'<span class="muted">{esc(fx["away_name"])} at {esc(fx["home_name"])}</span>'
+            f'{"<br><span class=muted>" + esc(fx["venue"]) + "</span>" if fx.get("venue") else ""}</td>'
+            f'<td>{market_cell(row["market"])}</td>'
+            f'<td><strong>{esc(row["selection"])}</strong> {price(row["odds"])}<br>'
+            f'{badge(row["confidence"], row["confidence_reason"])}</td>'
+            f'<td class="src">{a(fx["official_url"], "League page")}'
+            f'{"<br>" + a(fx["olbg_url"], "OLBG page") if fx["olbg_url"] else ""}</td></tr>'
+        )
+    return (
+        '<div class="table-scroll"><table><thead><tr><th>When</th><th>Matchup</th>'
+        '<th>Our lines</th><th>Pick</th><th>Sources</th></tr></thead><tbody>'
+        + "".join(body) + "</tbody></table></div>"
     )
-    form = ""
-    for side in ("away", "home"):
-        t = row[side]
-        form += (
-            f'<div class="team"><b>{esc(t["name"])}</b> <span class="muted small">{esc(t["abbrev"])} · coach {esc(t["coach"])}</span>'
-            f'<div class="rowof">GF/GP {t["gf_pg"]:.2f} · GA/GP {t["ga_pg"]:.2f} · PP {t["pp_pct"]*100:.1f}% '
-            f'(rank {t["pp_rank"]}) · PK {t["pk_pct"]*100:.1f}% (rank {t["pk_rank"]})</div>'
-            f'<div class="rowof">Last ten {esc(t["l10"])} · current streak {esc(t["streak"])}</div>'
-            f'{pills(t["recent"])}</div>'
-        )
-    return f"""<article class="fixture">
-<div class="fixture-head"><div>
-  <h3>{esc(row["away"]["name"])} at {esc(row["home"]["name"])}</h3>
-  <div class="meta">{esc(row["competition"])} · {esc(stamp(row["start_utc"]))} · fixture id {esc(row["id"])}</div>
-</div><div>{badge(mk["confidence"].capitalize() + " confidence", mk["confidence"])}</div></div>
-<div class="pickblock">
-  <div class="muted small">OUR SELECTION</div>
-  <div class="pickline"><span class="sel">{esc(mk["selection"])}</span>
-    <span class="muted small">money line · {mk["selection_prob"]}% · fair price {mk["selection_odds"]:.2f}</span></div>
-  {narr}
-  <p class="meta"><b>Basis:</b> {esc(pick["basis"])}</p>
-</div>
-<div class="markets">
-  <div class="market"><div class="label">Money line (incl. OT/SO)</div>
-    <div class="val">{esc(row["away"]["abbrev"])} {ml["away"]}% · {ml["away_odds"]:.2f}</div>
-    <div class="val">{esc(row["home"]["abbrev"])} {ml["home"]}% · {ml["home_odds"]:.2f}</div>
-    <div class="sub">60-min model, ties split {int(model["tie_split_home"]*100)}/{int((1-model["tie_split_home"])*100)}</div></div>
-  <div class="market"><div class="label">Puck line 1.5</div>
-    <div class="val">{esc(row["home"]["abbrev"])} -1.5 · {pl["home_minus_1_5"]}% · {pl["home_minus_1_5_odds"]:.2f}</div>
-    <div class="val">{esc(row["away"]["abbrev"])} +1.5 · {pl["away_plus_1_5"]}% · {pl["away_plus_1_5_odds"]:.2f}</div>
-    <div class="sub">P(margin &ge; 2) from the same matrix</div></div>
-  <div class="market"><div class="label">Match total</div>
-    <div class="val">O 5.5 · {t55["over"]}% · {t55["over_odds"]:.2f}</div>
-    <div class="val">O 6.5 · {t65["over"]}% · {t65["over_odds"]:.2f}</div>
-    <div class="sub">U 5.5 {t55["under"]}% · {t55["under_odds"]:.2f} · U 6.5 {t65["under"]}% · {t65["under_odds"]:.2f}</div></div>
-</div>
-<div class="markets" style="grid-template-columns:repeat(3,minmax(0,1fr))">
-  <div class="market"><div class="label">Expected goals</div><div class="val">{esc(row["away"]["abbrev"])} {mk["lambda_away"]} · {esc(row["home"]["abbrev"])} {mk["lambda_home"]}</div><div class="sub">Model &lambda;, not a league stat</div></div>
-  <div class="market"><div class="label">Expected total</div><div class="val">{mk["expected_total"]}</div><div class="sub">Most likely score {esc(mk["most_likely_score"])}</div></div>
-  <div class="market"><div class="label">Regulation 3-way</div><div class="val">{mk["regulation_three_way"]["home"]} / {mk["regulation_three_way"]["tie"]} / {mk["regulation_three_way"]["away"]}%</div><div class="sub">Home / tie / away after 60 minutes</div></div>
-</div>
-<div class="form">{form}</div>
-{olbg_note}{flags}
-<div class="meta">Sources: {link(row["sources"]["official"], "official game page")} {link(row["sources"]["official_api"], "official game feed")} {link(row["sources"]["olbg"], "OLBG listing")}</div>
-</article>"""
 
 
-# --------------------------------------------------------------------------- pages
-
-SNAP: dict = {}
-
-
-def write(path: str, text: str) -> None:
-    target = OUT / path
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(text, encoding="utf-8")
-
-
-def build_index(data: dict) -> None:
-    events, model, cov = data["events"], data["model"], data["coverage"]
-    high = [e for e in events if e["pick"]["confidence"] == "high"]
-    covered = [c for c in cov if c["rows"] > 0]
-    asof = esc(SNAP["as_of_utc"])
-    stats = f"""<div class="stats">
-<div><span>Verified fixtures</span><strong>{len(events):02}</strong><small>Teams, date and start read from the official league feed</small></div>
-<div><span>High-confidence picks</span><strong>{len(high):02}</strong><small>Each with a 30+ word sourced narrative</small></div>
-<div><span>Markets priced</span><strong>3</strong><small>Money line, puck line, match total — per fixture</small></div>
-<div><span>Sports with rows</span><strong>{len(covered):02}</strong><small>of {len(cov)} eligible OLBG categories</small></div>
-</div>"""
-    cov_rows = []
-    for c in cov:
-        label, kind = STATUS_LABEL[c["status"]]
-        cov_rows.append(
-            f'<tr><td><a href="sports/{esc(c["slug"])}.html"><strong>{esc(c["sport"])}</strong></a>'
-            f'<br><span class="muted small">OLBG id {esc(c["olbg_id"])}</span></td>'
-            f'<td class="num mono">{c["rows"]}</td><td>{badge(label, kind)}</td>'
-            f'<td class="small">{esc(c["detail"])}</td>'
-            f'<td class="src">{link(c["olbg_url"], "OLBG")}{link(c["official_url"], "Official")}</td></tr>'
-        )
-    body = f"""<section class="hero">
-<div class="eyebrow">SNAPSHOT <span class="dash"></span> {asof}</div>
-<h1>Fourteen verified fixtures.<br><em>Every number traceable.</em></h1>
-<p>This desk reads the official competition feed first, publishes only what that feed supports, and then originates its own
-money line, puck line and match total. Where an official source could not confirm a fixture, the row is absent and the gap is written down.</p>
-</section>
-<div class="notice"><b>Coverage is partial and that is deliberate.</b> One sport has fully verified rows ({len(events)} NHL games across {esc(SNAP["window"])}).
-Fifteen other eligible OLBG categories are tracked on the coverage board with the exact reason each has no row.
-<a href="flagged.html">Read the flagged items &rarr;</a></div>
-{stats}
-<div class="section-head"><div><div class="eyebrow">FIXTURE LEDGER</div><h2>Every verified fixture</h2>
-<p>Prices are fair odds (1 / probability) from our own model. No bookmaker price is used as an input.</p></div>
-<a class="text-link" href="fixtures.html">Open full detail &rarr;</a></div>
-{fixture_table(events, model)}
-<div class="section-head"><div><div class="eyebrow">COVERAGE BOARD</div><h2>Eligible sports, status by status</h2>
-<p>OLBG taxonomy taken from its betting-tips sitemap. Soccer, boxing, UFC/MMA, football (incl. American and Gaelic), hurling,
-horse racing, cycling and specials are excluded by the brief and never enter the pipeline.</p></div><span class="count">{len(cov)} categories</span></div>
-<div class="table-scroll"><table><thead><tr><th>Sport</th><th class="num">Rows</th><th>Status</th><th>Why</th><th>Sources</th></tr></thead>
-<tbody>{"".join(cov_rows)}</tbody></table></div>
-<div class="section-head"><div><div class="eyebrow">METHOD</div><h2>How a line is originated</h2></div><a class="text-link" href="methodology.html">Full methodology &rarr;</a></div>
-<div class="grid-3">
-<div class="card"><h3>1. Official inputs</h3><p>Goals for and against per game, power play, penalty kill and the last ten results for both teams, read from the NHL game-centre payload at {asof}.</p></div>
-<div class="card"><h3>2. Poisson score matrix</h3><p>Each attack is blended with the opposing defence and run through a 60-minute Poisson matrix. Ties are split 50/50 for the two-way money line.</p></div>
-<div class="card"><h3>3. Fair price and confidence</h3><p>Prices are 1 / probability. Confidence is set by the distance of the selection from a coin flip, using the thresholds declared in the data file.</p></div>
-</div>"""
-    write("index.html", page("Overview", "Verified fixtures, originated lines and a transparent coverage board.", body, "home"))
-
-
-def build_fixtures(data: dict) -> None:
-    events, model = data["events"], data["model"]
-    high = [e for e in events if e["pick"]["confidence"] == "high"]
-    body = f"""<section class="hero">
-<div class="eyebrow">FULL DETAIL <span class="dash"></span> {esc(SNAP["as_of_utc"])}</div>
-<h1>Line by line,<br><em>source by source.</em></h1>
-<p>Each card carries the official inputs used, the resulting prices on three markets, the selection, the confidence and the
-links needed to re-check the whole thing by hand.</p>
-</section>
-{fixture_table(events, model)}
-<div class="section-head"><div><div class="eyebrow">FIXTURE DETAIL</div><h2>Inputs, markets and selections</h2>
-<p>Results lists run most recent first, exactly as the league feed returns them.</p></div><span class="count">{len(events)} fixtures</span></div>
-{"".join(fixture_detail(e, model) for e in events)}
-<div class="section-head"><div><div class="eyebrow">HIGH CONFIDENCE</div><h2>Published narratives</h2>
-<p>Only the {len(high)} high-confidence selections carry a written prediction. Every claim in them is a field in the official payload.</p></div></div>
-<div class="grid-2">{"".join(f'<div class="card"><h3>{esc(e["away"]["abbrev"])} at {esc(e["home"]["abbrev"])} {badge("high", "high")}</h3><p>{esc(e["pick"]["narrative"])}</p><div class="meta">{link(e["sources"]["official"], "official game page")}</div></div>' for e in high)}</div>"""
-    write("fixtures.html", page("All fixtures", "Every verified fixture with official inputs, originated lines and narratives.", body, "fixtures"))
-
-
-def build_sports(data: dict) -> None:
-    cov = data["coverage"]
-    cards = []
-    for c in cov:
-        label, kind = STATUS_LABEL[c["status"]]
-        cards.append(
-            f'<a class="card" href="../sports/{esc(c["slug"])}.html" style="text-decoration:none;color:inherit">'
-            f'<h3>{esc(c["sport"])} {badge(label, kind)}</h3>'
-            f'<p>{esc(c["detail"][:150])}{"…" if len(c["detail"])>150 else ""}</p>'
-            f'<div class="meta">{c["rows"]} row(s) · OLBG id {esc(c["olbg_id"])} · {esc(c["official_name"])}</div></a>'
-        )
-    body = f"""<section class="hero">
-<div class="eyebrow">CATEGORIES <span class="dash"></span> {len(cov)} ELIGIBLE</div>
-<h1>Every eligible sport,<br><em>including the empty ones.</em></h1>
-<p>The brief excludes soccer, boxing, UFC/MMA, football, American football, hurling, horse racing, cycling and specials.
-What remains is listed here. An empty category is a finding, not an omission.</p>
-</section>
-<div class="grid-2">{"".join(cards)}</div>"""
-    write("sports/index.html", page("Sports", "Every eligible OLBG sport category with its verification status.", body, "sports", "../"))
-
-
-def build_sport_pages(data: dict) -> None:
-    model = data["model"]
-    for c in data["coverage"]:
-        rows = [e for e in data["events"] if e["sport"] == c["sport"]]
-        label, kind = STATUS_LABEL[c["status"]]
-        if rows:
-            table = fixture_table(rows, model)
-            detail = "".join(fixture_detail(e, model) for e in rows)
-            markets = sorted({m for e in rows for m in ("Money line", "Puck line", "Match total")})
-            extra = f"""<div class="section-head"><div><div class="eyebrow">MARKETS INVESTIGATED</div><h2>What was priced</h2></div></div>
-<div class="grid-3">{"".join(f'<div class="card"><h3>{esc(m)}</h3><p>Priced for all {len(rows)} fixtures from the same 60-minute score matrix.</p></div>' for m in markets)}</div>
-<div class="section-head"><div><div class="eyebrow">FIXTURE DETAIL</div><h2>Inputs and selections</h2></div></div>{detail}"""
+def coverage_chips(data: dict) -> str:
+    chips = []
+    for row in data["coverage"]["coverage"]:
+        inner = f'<span>{esc(row["sport"])}</span><b>{esc(str(row["fixtures"]))}</b>'
+        if row["status"] == "covered":
+            chips.append(f'<a class="chip {esc(row["status"])}" href="sports/{esc(row["slug"])}.html">{inner}</a>')
         else:
-            table = ""
-            extra = f"""<div class="card" style="margin-bottom:14px"><h3>Why there is no row {badge(label, kind)}</h3>
-<p>{esc(c["detail"])}</p>
-<div class="meta">{link(c["official_url"], c["official_name"] + " fixtures")} {link(c["olbg_url"], "OLBG category")}</div></div>"""
-            table = ("<div class=\"section-head\"><div><div class=\"eyebrow\">FIXTURES</div><h2>Verified fixtures</h2></div>"
-                     f'<span class="count">0 rows</span></div>{table}')
-        body = f"""<section class="hero">
-<div class="eyebrow">CATEGORY <span class="dash"></span> {esc(c["sport"].upper())}</div>
-<h1>{esc(c["sport"])}<span style="color:var(--accent)">.</span></h1>
-<p>{esc(c["official_name"])}. {esc(c["detail"])}</p>
-</section>
-<div class="pickline" style="margin-bottom:18px">{badge(label, kind)}<span class="count">{c["rows"]} row(s) published</span>
-{link(c["olbg_url"], "OLBG category")}{link(c["official_url"], "Official source")}</div>
-{extra}"""
-        write(f'sports/{c["slug"]}.html', page(c["sport"], c["detail"][:150], body, "sports", "../"))
+            chips.append(f'<span class="chip {esc(row["status"])}" title="{esc(row["note"])}">{inner}</span>')
+    return '<div class="chips">' + "".join(chips) + "</div>"
 
 
-def build_methodology(data: dict) -> None:
-    m = data["model"]
-    body = f"""<section class="hero">
-<div class="eyebrow">METHOD <span class="dash"></span> {esc(m["name"])}</div>
-<h1>Our own numbers,<br><em>and their limits.</em></h1>
-<p>No bookmaker price is copied, scraped or used as an input. Every published price is recomputed from the official inputs stored with the fixture.</p>
-</section>
-<div class="prose">
-<h2>1. What counts as a verified fixture</h2>
-<p>A row is published only when the competition's own feed returns the two teams, the fixture date and the start time.
-For this snapshot that means the NHL game-centre payload at <code>api-web.nhle.com</code>, plus the NHL game page for each fixture.
-OLBG is recorded as the coverage reference the brief asked for, but OLBG is never treated as an official match source.</p>
-
-<h2>2. The model</h2>
-<div class="formula">lambda_home = ((home.GF/GP + away.GA/GP) / 2) &times; {m["home_multiplier"]}
-lambda_away = ((away.GF/GP + home.GA/GP) / 2) &times; {m["away_multiplier"]}
-P(i, j)   = Poisson(i; lambda_home) &times; Poisson(j; lambda_away),  i,j = 0..{m["max_goals"]}</div>
-<p>Goals for and against per game come from the official payload. The blend is a standard attack-versus-defence estimate:
-each side's scoring rate is averaged with the opponent's concession rate.</p>
-
-<h2>3. Markets</h2>
-<ul>
-<li><b>Money line (two-way, overtime and shootout included):</b> P(home win) + {m["tie_split_home"]} &times; P(tie). The site's own model assumes the extra period is a coin flip; that assumption is stated, not hidden.</li>
-<li><b>Puck line 1.5:</b> P(margin &ge; 2) for the favourite, and its complement for the underdog.</li>
-<li><b>Match total:</b> over and under at 5.5 and 6.5 goals, read from the same 60-minute matrix.</li>
-<li><b>Regulation three-way:</b> shown for transparency; it is not the market the selection is taken from.</li>
-</ul>
-
-<h2>4. Prices and confidence</h2>
-<p>Prices are fair decimal odds, <code>1 / probability</code>, rounded to two decimals. No margin is added, so these are not
-sportsbook prices and should not be read as ones.</p>
-<p>Confidence is a property of this model, not a claim about the real world. The selected side is always the side the model prices shorter.
-The label then comes from how far that side sits from a coin flip:</p>
-<div class="table-scroll"><table><thead><tr><th>Label</th><th>Condition</th><th>Meaning</th></tr></thead><tbody>
-<tr><td>{badge("high", "high")}</td><td>edge &ge; {m["edge_high"]*100:.0f} points</td><td>The model separates the sides by at least {m["edge_high"]*200:.0f} points of probability.</td></tr>
-<tr><td>{badge("medium", "medium")}</td><td>{m["edge_medium"]*100:.0f}–{m["edge_high"]*100:.0f} points</td><td>A moderate model edge.</td></tr>
-<tr><td>{badge("low", "low")}</td><td>under {m["edge_medium"]*100:.0f} points</td><td>Close to a coin flip; published for completeness only.</td></tr>
-</tbody></table></div>
-
-<h2>5. Narratives</h2>
-<p>Only high-confidence selections carry a written prediction, and each is at least 30 words. Every factual statement in a
-narrative maps to a field in the official payload: goals for and against per game, points percentage, power-play and penalty-kill
-rank, the last-ten record, the listed results, the head coach or the schedule. Nothing is added from memory.</p>
-
-<h2>6. Model parameters are assumptions</h2>
-<p>The home multiplier ({m["home_multiplier"]}), away multiplier ({m["away_multiplier"]}), tie split ({m["tie_split_home"]}) and the confidence
-edges are choices made by this desk. They are <b>not</b> league statistics and are not presented as verified facts. They live in
-<code>data/events.json</code> under <code>model</code>, so anyone can change them and re-run <code>scripts/build.py</code> to reproduce every price.</p>
-
-<h2>7. What the model does not do</h2>
-<ul>
-<li>It does not adjust for rest, back-to-backs, travel or schedule density.</li>
-<li>It does not know who starts in goal, who is injured, scratched or suspended.</li>
-<li>It does not use shots, expected goals, special-teams match-up or score effects.</li>
-<li>It does not shrink small samples. Early-season rates are carried in exactly as published, which is why some prices look extreme.</li>
-<li>It does not compare against market prices, so it cannot claim value against a bookmaker.</li>
-</ul>
-
-<h2>8. Reproduction</h2>
-<div class="formula">python -m unittest discover -s tests -v
-python scripts/build.py
-python -m http.server 8000 -d site</div>
-<p>The build refuses to run if a row lacks an approved source host, if a selection disagrees with the model, if a high-confidence
-narrative is under 30 words or fails to name its selection, or if the coverage board's row counts disagree with the fixture list.</p>
-</div>"""
-    write("methodology.html", page("Methodology", "How lines are originated, priced and rated, and what the model cannot do.", body, "method"))
+# ------------------------------------------------------------------ pages
 
 
-def build_sources(data: dict) -> None:
-    rows = []
-    for e in data["events"]:
-        rows.append(
-            f'<tr><td><strong>{esc(e["away"]["abbrev"])} at {esc(e["home"]["abbrev"])}</strong><br>'
-            f'<span class="muted small">{esc(e["date"])}</span></td>'
-            f'<td class="src">{link(e["sources"]["official"], "NHL game page")}</td>'
-            f'<td class="src">{link(e["sources"]["official_api"], "Official feed (JSON)")}</td>'
-            f'<td class="src">{link(e["sources"]["olbg"], "OLBG")}{badge("listed", "ok") if e["olbg_listed"] else badge("index only", "neutral")}</td></tr>'
-        )
-    cov_rows = "".join(
-        f'<tr><td><strong>{esc(c["sport"])}</strong></td><td class="src">{link(c["official_url"], c["official_name"])}</td>'
-        f'<td class="src">{link(c["olbg_url"], "OLBG category")}</td><td>{esc(c["status"])}</td></tr>'
-        for c in data["coverage"]
-    )
-    tax = "".join(f'<li><b>{esc(s)}</b> — OLBG sport id {esc(i)}</li>' for s, i in [
-        ("Football / soccer", 1), ("Horse racing", 2), ("Tennis", 3), ("Basketball", 4), ("Golf", 5),
-        ("Cricket", 7), ("Snooker", 8), ("Rugby union", 9), ("Rugby league", 10), ("American football", 11),
-        ("Baseball", 12), ("Ice hockey", 13), ("Motor racing", 14), ("Darts", 15), ("Boxing", 16),
-        ("Cycling", 17), ("Handball", 20), ("Volleyball", 21), ("Aussie rules", 22), ("eSports", 23),
-        ("Gaelic football", 25), ("Greyhounds", 28),
-    ])
-    body = f"""<section class="hero">
-<div class="eyebrow">SOURCE REGISTER <span class="dash"></span> {esc(SNAP["as_of_utc"])}</div>
-<h1>Every link,<br><em>in one place.</em></h1>
-<p>This is the manual-review list. Each fixture shows the official game page, the machine-readable official feed it was read from,
-and the OLBG reference. Category sources follow.</p>
-</section>
-<div class="section-head"><div><div class="eyebrow">FIXTURES</div><h2>Row-level sources</h2></div><span class="count">{len(data["events"])} rows</span></div>
-<div class="table-scroll"><table><thead><tr><th>Fixture</th><th>Official game page</th><th>Official feed</th><th>OLBG reference</th></tr></thead>
-<tbody>{"".join(rows)}</tbody></table></div>
-<div class="section-head"><div><div class="eyebrow">CATEGORIES</div><h2>Governing-body sources</h2></div><span class="count">{len(data["coverage"])} categories</span></div>
-<div class="table-scroll"><table><thead><tr><th>Sport</th><th>Official source</th><th>OLBG</th><th>Status</th></tr></thead>
-<tbody>{cov_rows}</tbody></table></div>
-<div class="prose"><h2>OLBG taxonomy observed</h2>
-<p>Sport ids below were read from OLBG's betting-tips sitemap and category URLs. Categories struck out by the brief are still listed,
-because the exclusion has to be explicit rather than implied.</p><ul>{tax}</ul>
-<p>OLBG is used as the coverage reference. It is not treated as an official match source, and its tipster selections are not our picks.</p></div>"""
-    write("sources.html", page("Sources", "Row-level and category-level source links for manual review.", body, "sources"))
-
-
-def build_flagged(data: dict) -> None:
-    flags = "".join(
-        f'<tr><td><strong>{esc(f["item"])}</strong><br><span class="muted small">{esc(f["sport"])}</span></td>'
-        f'<td class="small">{esc(f["detail"])}</td>'
-        f'<td class="src">{"".join(link(u, "source") for u in f["sources"])}</td></tr>'
-        for f in data["flags"]
-    )
-    gaps = "".join(
-        f'<tr><td><strong>{esc(c["sport"])}</strong></td><td>{badge(STATUS_LABEL[c["status"]][0], STATUS_LABEL[c["status"]][1])}</td>'
-        f'<td class="small">{esc(c["detail"])}</td>'
-        f'<td class="src">{link(c["official_url"], "Official")}{link(c["olbg_url"], "OLBG")}</td></tr>'
-        for c in data["coverage"] if c["rows"] == 0
-    )
-    body = f"""<section class="hero">
-<div class="eyebrow">TRANSPARENCY <span class="dash"></span> {esc(SNAP["as_of_utc"])}</div>
-<h1>Flagged for review<span style="color:var(--flag)">.</span></h1>
-<p>Open questions stay visible. None of these items blocks the rest of the dataset; each one is a place where an official source
-did not give us what the brief assumes is available.</p>
-</section>
-<div class="notice"><b>Nothing on this page is a verified betting claim.</b> It is the audit trail: what disagreed, what was missing,
-and which links you need to check it yourself.</div>
-<div class="section-head"><div><div class="eyebrow">IRREGULARITIES</div><h2>Open items</h2></div><span class="count">{len(data["flags"])} items</span></div>
-<div class="table-scroll"><table><thead><tr><th>Item</th><th>What was found</th><th>Review sources</th></tr></thead><tbody>{flags}</tbody></table></div>
-<div class="section-head"><div><div class="eyebrow">COVERAGE GAPS</div><h2>Eligible categories with no row</h2>
-<p>Each gap states the blocker and links the source that would be used next.</p></div><span class="count">{sum(1 for c in data["coverage"] if c["rows"]==0)} categories</span></div>
-<div class="table-scroll"><table><thead><tr><th>Sport</th><th>Status</th><th>Why there is no row</th><th>Sources</th></tr></thead><tbody>{gaps}</tbody></table></div>"""
-    write("flagged.html", page("Flagged for review", "Irregularities, verification gaps and the sources to check them.", body, "flagged"))
-
-
-def build() -> None:
-    global SNAP
-    data = json.loads(DATA.read_text(encoding="utf-8"))
+def build() -> dict:
+    data = {
+        "meta": load("meta.json"),
+        "sources": load("sources.json"),
+        "nhl_teams": load("nhl_teams.json"),
+        "fixtures": load("fixtures.json"),
+        "picks": load("picks.json"),
+        "flagged": load("flagged.json"),
+        "coverage": load("coverage.json"),
+    }
     validate(data)
-    SNAP = data["snapshot"]
-    build_index(data)
-    build_fixtures(data)
-    build_sports(data)
-    build_sport_pages(data)
-    build_methodology(data)
-    build_sources(data)
-    build_flagged(data)
-    write(".nojekyll", "")
-    high = sum(1 for e in data["events"] if e["pick"]["confidence"] == "high")
-    print(f"built {len(data['events'])} fixtures ({high} high confidence), "
-          f"{len(data['coverage'])} category pages, {len(data['flags'])} flags")
+    rows = build_rows(data)
+    meta = data["meta"]
+    params = meta["params"]
+    coverage = data["coverage"]["coverage"]
+    covered = [c for c in coverage if c["status"] == "covered"]
+    unverified = [c for c in coverage if c["status"] == "unverified"]
+    high = [r for r in rows if r["confidence"] == "high"]
+    medium = [r for r in rows if r["confidence"] == "medium"]
+    low = [r for r in rows if r["confidence"] == "low"]
+    markets_priced = sum(2 + (1 if r["market"]["total"] else 0) for r in rows)
+    flags = data["flagged"]["flagged"]
+
+    OUT.mkdir(exist_ok=True)
+    (OUT / "sports").mkdir(exist_ok=True)
+    (OUT / "data").mkdir(exist_ok=True)
+
+    # ---------------- overview
+    hero = (
+        '<section class="hero"><div class="eyebrow">SNAPSHOT <span class="dash"></span> '
+        f'{esc(meta["snapshot_utc"])}</div><h1>The slate,<br><em>priced and sourced.</em></h1>'
+        '<p>Every fixture below was matched to an official league page. Every price is originated here, '
+        'from published team rates, with no bookmaker input. Where the evidence runs out, the cell is blank and '
+        'the item is on the flagged page.</p></section>'
+    )
+    notice = (
+        '<div class="notice"><b>Scope.</b> NHL Oct 21-22 and NBA Oct 21 are covered. '
+        f'{len(unverified)} eligible sports could not be verified in this session and carry no rows. '
+        'NBA prices are baseline only. <a href="flagged.html">See what is open →</a></div>'
+    )
+    kpis = (
+        '<div class="kpis">'
+        + kpi("Fixtures verified", str(len(rows)), "each with its own official page")
+        + kpi("Sports covered", str(len(covered)), "NHL and NBA")
+        + kpi("Markets priced", str(markets_priced), "money line, handicap, total")
+        + kpi("High confidence", str(len(high)), "model edge + evidence pack")
+        + kpi("Flagged items", str(len(flags)), "open questions, published")
+        + "</div>"
+    )
+    section = (
+        '<div class="section-head"><div><div class="eyebrow">PICK SHEET</div><h2>Every match, one selection</h2></div>'
+        '<a class="text-link" href="picks.html">Full pick sheet →</a></div>'
+    )
+    legends = (
+        '<div class="legend"><span class="muted">Confidence is computed, not chosen:</span>'
+        f' high ≥ {params["high_edge"] * 100:.0f} points of win-probability edge <em>and</em> an official evidence pack; '
+        f'medium ≥ {params["medium_edge"] * 100:.0f} pts; everything else is low.</div>'
+    )
+    cov = (
+        '<div class="section-head"><div><div class="eyebrow">COVERAGE</div><h2>Which sports are priced</h2></div>'
+        '<a class="text-link" href="sports/index.html">Coverage detail →</a></div>' + coverage_chips(data)
+    )
+    build_note = (
+        '<div class="cards2"><article class="card"><h3>How the numbers are made</h3>'
+        '<p>NHL ratings are goals for and against per game, shrunk toward the league mean by 12 games, plus a '
+        '0.25-goal home edge, converted with a logistic curve. NBA ratings are league-average because the season '
+        'is one game old. Prices are no-vig fair odds.</p>'
+        '<a class="text-link" href="methodology.html">Read the method →</a></article>'
+        '<article class="card"><h3>What is deliberately blank</h3>'
+        '<p>No total is published for the NBA. No venue is filled in unless the fetched page named it. No pick is '
+        'labelled high without a cited gamecenter pack. Blank means unverified here.</p>'
+        '<a class="text-link" href="flagged.html">Open items →</a></article></div>'
+    )
+    (OUT / "index.html").write_text(
+        page("Overview", hero + notice + kpis + section + legends + pick_table(rows) + cov + build_note, "home", subtitle="2026-10-21/22"),
+        encoding="utf-8",
+    )
+
+    # ---------------- pick sheet
+    filters = (
+        '<div class="filters"><span class="muted">Filter</span>'
+        '<button class="pill on" data-group="conf" data-filter="all">All</button>'
+        '<button class="pill" data-group="conf" data-filter="high">High</button>'
+        '<button class="pill" data-group="conf" data-filter="medium">Medium</button>'
+        '<button class="pill" data-group="conf" data-filter="low">Low</button></div>'
+    )
+    high_cards = "".join(
+        f'<article class="prediction-card"><div class="eyebrow">HIGH CONFIDENCE <span class="dash"></span> '
+        f'{esc(r["fixture"]["league"])}</div>'
+        f'<h3>{esc(r["selection"])} <span class="price mono">{price(r["odds"])}</span></h3>'
+        f'<p class="matchup-line">{esc(r["fixture"]["away_name"])} at {esc(r["fixture"]["home_name"])} · '
+        f'{esc(r["fixture"]["date"])} {esc(r["fixture"]["time"])}</p>'
+        f'<p>{esc(r["pick"]["narrative"])}</p>'
+        f'<div class="facts"><ul>' + "".join(f"<li>{esc(f)}</li>" for f in r["pick"]["facts"]) + "</ul></div>"
+        f'<div class="src">' + " ".join(a(u, f"source {i + 1}") for i, u in enumerate(r["pick"]["sources"]))
+        + f' · {a(r["fixture"]["official_url"], "official game page")}</div></article>'
+        for r in high
+    )
+    picks_body = (
+        f'<section class="subhero"><div class="eyebrow">PICK SHEET <span class="dash"></span> {esc(meta["snapshot_utc"])}</div>'
+        '<h1>One selection per match<span class="accent">.</span></h1>'
+        '<p>Model probability, fair price, edge and confidence for every verified fixture. Predictions appear in full '
+        f'for the {len(high)} high-confidence picks; medium and low picks carry the model line only.</p></section>'
+        '<div class="kpis small">' + kpi("High", str(len(high)), "with written prediction") + kpi("Medium", str(len(medium)), "model edge only")
+        + kpi("Low", str(len(low)), "no edge") + "</div>"
+        + '<div class="section-head"><div><div class="eyebrow">PREDICTIONS</div><h2>High confidence</h2></div></div>'
+        + '<div class="prediction-grid">' + high_cards + "</div>"
+        + '<div class="section-head below"><div><div class="eyebrow">ALL SELECTIONS</div><h2>Pick sheet</h2></div></div>'
+        + filters + pick_table(rows, show_narrative=True)
+    )
+    (OUT / "picks.html").write_text(page("Pick sheet", picks_body, "picks", subtitle=f"{len(rows)} fixtures"), encoding="utf-8")
+
+    # ---------------- sports index
+    status_label = {"covered": "Covered", "no-fixtures": "No fixtures", "unverified": "Unverified", "excluded": "Excluded"}
+    cards = []
+    for row in coverage:
+        cards.append(
+            f'<article class="sport-card {esc(row["status"])}"><div class="sport-head"><h3>{esc(row["sport"])}</h3>'
+            f'<span class="chip {esc(row["status"])}">{esc(status_label[row["status"]])}</span></div>'
+            f'<p>{esc(row["note"])}</p><div class="sport-meta"><span class="mono">{row["fixtures"]} fixtures</span>'
+            f'{a(row["official_url"], "Official")} {a(row["olbg_url"], "OLBG")}'
+            f'{" " + a("../sports/" + row["slug"] + ".html", "Open →") if row["status"] == "covered" else ""}</div></article>'
+        )
+    sports_body = (
+        '<section class="subhero"><div class="eyebrow">COVERAGE MAP</div><h1>Every sport, and its status<span class="accent">.</span></h1>'
+        '<p>Eligible sports are listed with their verification state. A sport without an official check carries no '
+        'fixture, no price and no pick. Excluded sports are recorded so the boundary is explicit.</p></section>'
+        + '<div class="sport-grid">' + "".join(cards) + "</div>"
+    )
+    (OUT / "sports/index.html").write_text(page("Sports", sports_body, "sports", prefix="../"), encoding="utf-8")
+
+    # ---------------- sport pages
+    for sport in covered:
+        slug = sport["slug"]
+        subset = [r for r in rows if r["fixture"]["sport_slug"] == slug]
+        groups = ""
+        for day in sorted({r["fixture"]["date"] for r in subset}):
+            day_rows = [r for r in subset if r["fixture"]["date"] == day]
+            groups += f'<h3 class="day">{esc(day)}</h3>' + fixture_table(day_rows)
+        ratings = ""
+        if slug == "ice-hockey":
+            trs = []
+            for abbr, t in sorted(data["nhl_teams"]["teams"].items(),
+                                  key=lambda kv: -shrunk_goal_rate(kv[1]["gf"], kv[1]["ga"], kv[1]["gp"], params["nhl_shrink_games"])):
+                rating = shrunk_goal_rate(t["gf"], t["ga"], t["gp"], params["nhl_shrink_games"])
+                trs.append(
+                    f'<tr><td><strong>{esc(abbr)}</strong> <span class="muted">{esc(t["name"])}</span></td>'
+                    f'<td class="mono">{t["gp"]}</td><td class="mono">{t["w"]}-{t["l"]}-{t["otl"]}</td>'
+                    f'<td class="mono">{t["gf"] / t["gp"]:.2f}</td><td class="mono">{t["ga"] / t["gp"]:.2f}</td>'
+                    f'<td class="mono">{t["pct"]:.3f}</td><td class="mono">{rating:+.3f}</td>'
+                    f'<td class="mono">{esc(t["l10"])}</td><td class="mono">{esc(t["streak"])}</td></tr>'
+                )
+            ratings = (
+                '<div class="section-head below"><div><div class="eyebrow">INPUTS</div><h2>NHL ratings</h2></div>'
+                f'<span class="count">{len(trs)} clubs</span></div>'
+                '<p class="table-foot">Official standings inputs and the shrunk rating used by the engine '
+                f'(rating = goal difference per game × GP ÷ (GP + {params["nhl_shrink_games"]})). '
+                + a("https://www.nhl.com/standings", "NHL standings") + "</p>"
+                '<div class="table-scroll"><table><thead><tr><th>Club</th><th>GP</th><th>W-L-OT</th><th>GF/GP</th>'
+                '<th>GA/GP</th><th>P%</th><th>Rating</th><th>L10</th><th>Streak</th></tr></thead><tbody>'
+                + "".join(trs) + "</tbody></table></div>"
+            )
+        narratives = "".join(
+            f'<article class="card"><div class="eyebrow">PREDICTION</div><h3>{esc(r["selection"])} '
+            f'<span class="price mono">{price(r["odds"])}</span></h3><p>{esc(r["pick"]["narrative"])}</p>'
+            f'<div class="src">' + " ".join(a(u, f"source {i + 1}") for i, u in enumerate(r["pick"]["sources"])) + "</div></article>"
+            for r in subset if r["pick"]
+        )
+        note = (
+            'Every NHL game in the window is listed, each linked to its gamecenter. Lines are fair odds with no margin.'
+            if slug == "ice-hockey" else
+            'Every NBA game on Oct 21 is listed. Lines are baseline: the season is one game old, so no club has a usable sample.'
+        )
+        body = (
+            f'<section class="subhero"><div class="eyebrow">CATEGORY <span class="dash"></span> {esc(sport["sport"].upper())}</div>'
+            f'<h1>{esc(sport["sport"])}<span class="accent">.</span></h1><p>{esc(note)}</p>'
+            f'<div class="sport-meta">{a(sport["official_url"], "Official schedule")} {a(sport["olbg_url"], "OLBG index")}</div></section>'
+            + (f'<div class="section-head"><div><div class="eyebrow">SLATE</div><h2>{len(subset)} fixtures</h2></div>'
+               f'<span class="count">{len(subset)} priced</span></div>' + groups)
+            + (ratings if ratings else "")
+            + ('<div class="section-head below"><div><div class="eyebrow">PREDICTIONS</div><h2>Written picks</h2></div></div>'
+               f'<div class="cards2">{narratives}</div>' if narratives else "")
+        )
+        (OUT / "sports" / f"{slug}.html").write_text(page(sport["sport"], body, "sports", prefix="../", subtitle=f"{len(subset)} fixtures"), encoding="utf-8")
+
+    # ---------------- methodology
+    p = params
+    param_rows = "".join(
+        f'<tr><td class="mono">{esc(k)}</td><td class="mono">{esc(v)}</td></tr>' for k, v in p.items()
+    )
+    method_body = f'''<section class="subhero"><div class="eyebrow">METHOD <span class="dash"></span> v{esc(meta["model_version"])}</div>
+<h1>Originated, not copied<span class="accent">.</span></h1>
+<p>No bookmaker price is read or reproduced. Every price on this site is derived from official league inputs with the
+parameters below, so any line can be recomputed by hand.</p></section>
+<div class="prose">
+<h2>NHL</h2>
+<ol>
+<li><b>Rating.</b> For each club, goal difference per game is multiplied by GP ÷ (GP + {p["nhl_shrink_games"]}). The shrink pulls small samples toward the league mean, which is zero by construction.</li>
+<li><b>Expected margin.</b> Home rating + {p["nhl_home_goals"]} goals − away rating.</li>
+<li><b>Win probability.</b> P(home) = 1 ÷ (1 + e<sup>−margin ÷ {p["nhl_logistic_scale"]}</sup>), which includes overtime and shootouts.</li>
+<li><b>Price.</b> No-vig fair American odds from that probability, rounded to the nearest 5. A 55% chance is about −120.</li>
+<li><b>Puck line.</b> P(cover −1.5) = 1 − logistic(1.5 − margin, {p["nhl_logistic_scale"]}).</li>
+<li><b>Total.</b> Each side's goals for per game is blended with the opponent's goals against per game, shrunk toward {p["nhl_league_total"]} goals over the same {p["nhl_shrink_games"]}-game weight. The line is the nearest half-goal; over/under uses a normal curve with σ = {p["nhl_total_sd"]}.</li>
+</ol>
+<h2>NBA</h2>
+<p>The 2026-27 season is one game old at the snapshot, so every club carries a league-average rating and only home
+court separates the sides ({p["nba_home_points"]} points, logistic scale {p["nba_logistic_scale"]}). That produces a
+-2.5 home spread and a money line near −125. No total is originated because no verified
+league scoring baseline is loaded. These are opening-style lines, not informed prices, and every NBA pick is low confidence.</p>
+<h2>Confidence</h2>
+<ul>
+<li><b>High</b> requires at least {p["high_edge"] * 100:.0f} points of model edge, a games-played sample of at least
+{p["min_games_for_high"]} per side, and an evidence pack: the fixture's own official game page must be cited in the prediction.</li>
+<li><b>Medium</b> requires at least {p["medium_edge"] * 100:.0f} points of edge. A larger edge without an evidence pack is capped at medium.</li>
+<li><b>Low</b> covers everything else, including every baseline NBA line.</li>
+</ul>
+<h2>Evidence rules</h2>
+<ul>
+<li>A fixture is published only with an official league URL on an approved host. OLBG is a reference, never a fixture source.</li>
+<li>A high-confidence prediction is at least {p["min_prediction_words"]} words, unique, and names the team, a player, current form, recent results and the exact selection.</li>
+<li>Every factual claim in a prediction has a source link on the same row, and the fact list is printed next to it.</li>
+<li>Unconfirmed values stay blank. Blank is a finding, not an invitation to infer.</li>
+</ul>
+<h2>Known limits</h2>
+<ul>{''.join(f'<li>{esc(x)}</li>' for x in meta["limits"])}</ul>
+<h2>Parameters</h2>
+<div class="table-scroll"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>{param_rows}</tbody></table></div>
+<p class="table-foot"><a href="data/lines.json">lines.json</a> contains the full computed output for auditing.</p>
+</div>'''
+    (OUT / "methodology.html").write_text(page("Method", method_body, "method", subtitle=f"v{meta['model_version']}"), encoding="utf-8")
+
+    # ---------------- sources
+    kind_label = {"official": "Official", "reference": "Reference"}
+    src_rows = "".join(
+        f'<tr><td><strong>{esc(s["label"])}</strong><br><span class="muted">{esc(s["used_for"])}</span></td>'
+        f'<td><span class="chip {"covered" if s["kind"] == "official" else "unverified"}">{esc(kind_label[s["kind"]])}</span></td>'
+        f'<td class="mono src">{esc(s["checked_utc"])}</td><td class="src">{a(s["url"], host_of(s["url"]))}</td></tr>'
+        for s in data["sources"]["sources"]
+    )
+    sources_body = (
+        '<section class="subhero"><div class="eyebrow">SOURCE REGISTRY</div><h1>Every link, and what it proved<span class="accent">.</span></h1>'
+        '<p>Only these URLs are accepted by the build. A prediction or flag that cites an unregistered link fails validation.</p></section>'
+        '<div class="table-scroll"><table><thead><tr><th>Source</th><th>Type</th><th>Checked (UTC)</th><th>URL</th></tr></thead><tbody>'
+        + src_rows + "</tbody></table></div>"
+        '<p class="table-foot">Official sources are league properties on league domains. OLBG is recorded as a reference only: '
+        'its tip percentages are its community data, not our picks, and its times are not treated as authoritative.</p>'
+    )
+    (OUT / "sources.html").write_text(page("Sources", sources_body, "sources", subtitle=f"{len(data['sources']['sources'])} links"), encoding="utf-8")
+
+    # ---------------- flagged
+    flag_rows = "".join(
+        f'<tr><td><strong>{esc(f["item"])}</strong><br><span class="tag">{esc(f["category"])}</span></td>'
+        f'<td>{esc(f["detail"])}</td><td class="src">' + "<br>".join(a(u, f"source {i + 1}") for i, u in enumerate(f["sources"]))
+        + f'</td><td><span class="chip unverified">{esc(f["state"])}</span></td></tr>'
+        for f in flags
+    )
+    gap_rows = "".join(
+        f'<tr><td><strong>{esc(c["sport"])}</strong></td><td><span class="chip {esc(c["status"])}">{esc(c["status"])}</span></td>'
+        f'<td>{esc(c["note"])}</td><td class="src">{a(c["olbg_url"], "OLBG index")}'
+        f'{"<br>" + a(c["official_url"], "Official reference") if c["official_url"] else ""}</td></tr>'
+        for c in coverage if c["status"] in {"unverified", "no-fixtures"}
+    )
+    flagged_body = (
+        '<section class="subhero"><div class="eyebrow">TRANSPARENCY LOG</div><h1>Flagged for review<span class="accent">.</span></h1>'
+        '<p>Open questions, conflicting sources, blanks and coverage gaps. None of these block publication; all of them are '
+        'listed here with the link that raised them so they can be checked.</p></section>'
+        f'<div class="section-head"><div><div class="eyebrow">OPEN ITEMS</div><h2>{len(flags)} flagged</h2></div></div>'
+        '<div class="table-scroll"><table><thead><tr><th>Item</th><th>Why it is flagged</th><th>Sources</th><th>State</th></tr></thead><tbody>'
+        + flag_rows + "</tbody></table></div>"
+        f'<div class="section-head below"><div><div class="eyebrow">COVERAGE</div><h2>Sports without published rows</h2></div></div>'
+        '<div class="table-scroll"><table><thead><tr><th>Sport</th><th>Status</th><th>Note</th><th>Reference</th></tr></thead><tbody>'
+        + gap_rows + "</tbody></table></div>"
+    )
+    (OUT / "flagged.html").write_text(page("Flagged for review", flagged_body, "flagged", subtitle=f"{len(flags)} items"), encoding="utf-8")
+
+    # ---------------- machine-readable output
+    payload = {
+        "snapshot_utc": meta["snapshot_utc"],
+        "model_version": meta["model_version"],
+        "params": params,
+        "fixtures": [
+            {
+                "id": r["fixture"]["id"], "sport": r["fixture"]["sport"], "league": r["fixture"]["league"],
+                "date": r["fixture"]["date"], "time": r["fixture"]["time"],
+                "away": r["fixture"]["away_name"], "home": r["fixture"]["home_name"],
+                "venue": r["fixture"].get("venue"),
+                "official_url": r["fixture"]["official_url"], "olbg_url": r["fixture"]["olbg_url"],
+                "lines": r["market"], "selection": r["selection"], "price": r["odds"],
+                "model_probability": r["probability"], "edge": round(r["edge"], 4),
+                "confidence": r["confidence"], "confidence_reason": r["confidence_reason"],
+                "leans": r["leans"], "prediction": r["pick"]["narrative"] if r["pick"] else None,
+            }
+            for r in rows
+        ],
+        "flagged": flags,
+    }
+    (OUT / "data" / "lines.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    return {"rows": rows, "high": high, "medium": medium, "low": low}
 
 
 if __name__ == "__main__":
-    build()
+    result = build()
+    print(
+        f"Built {len(result['rows'])} fixtures "
+        f"({len(result['high'])} high, {len(result['medium'])} medium, {len(result['low'])} low)"
+    )

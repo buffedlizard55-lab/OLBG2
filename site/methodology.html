@@ -2,84 +2,70 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="description" content="How lines are originated, priced and rated, and what the model cannot do.">
-<title>Methodology · OLBG research desk</title>
+<title>Method · OLBG research desk</title>
 <link rel="stylesheet" href="assets/style.css">
-</head><body><div class="shell">
+</head><body>
+<div class="shell">
 <aside class="sidebar">
-  <div class="brand"><span class="brand-icon">O<span>.</span></span>
-    <div><strong>OLBG / research</strong><small>Official-source desk</small></div></div>
-  <div class="nav-label">WORKSPACE</div>
-  <nav aria-label="Main navigation"><a class="nav-item" href="index.html"><span class="swatch"></span>Overview</a><a class="nav-item" href="fixtures.html"><span class="swatch"></span>All fixtures</a><a class="nav-item" href="sports/index.html"><span class="swatch"></span>Sports</a><a class="nav-item active" href="methodology.html"><span class="swatch"></span>Methodology</a><a class="nav-item" href="sources.html"><span class="swatch"></span>Sources</a><a class="nav-item" href="flagged.html"><span class="swatch"></span>Flagged for review</a></nav>
-  <div class="side-note"><span class="dot"></span>Static snapshot<br><small>Not a live feed. Not betting advice.</small></div>
+  <div class="brand"><span class="mark">O<span>.</span></span><div><strong>OLBG research</strong><small>Independent evidence desk</small></div></div>
+  <div class="nav-label">Workspace</div>
+  <nav aria-label="Main"><a class="nav-item" href="index.html"><span>Overview</span></a><a class="nav-item" href="picks.html"><span>Pick sheet</span></a><a class="nav-item" href="sports/index.html"><span>Sports</span></a><a class="nav-item active" href="methodology.html"><span>Method</span></a><a class="nav-item" href="sources.html"><span>Sources</span></a><a class="nav-item" href="flagged.html"><span>Flagged</span></a></nav>
+  <div class="side-note"><span class="dot"></span><div><strong>Snapshot</strong><br><small>2026-10-21 05:55 UTC</small></div></div>
+  <div class="side-note quiet"><small>Not affiliated with OLBG, the NHL or the NBA. No betting advice.</small></div>
 </aside>
 <main class="main">
-  <header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> METHODOLOGY</span>
-  <span class="top-right">SNAPSHOT MODE <span class="live-dot"></span></span></header>
-<section class="hero">
-<div class="eyebrow">METHOD <span class="dash"></span> olbg-desk-poisson-v1</div>
-<h1>Our own numbers,<br><em>and their limits.</em></h1>
-<p>No bookmaker price is copied, scraped or used as an input. Every published price is recomputed from the official inputs stored with the fixture.</p>
-</section>
+  <header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> METHOD</span><span class="top-right"><span class="crumb">v1.0.0</span><span class="live-dot"></span> RESEARCH MODE</span></header>
+  <section class="subhero"><div class="eyebrow">METHOD <span class="dash"></span> v1.0.0</div>
+<h1>Originated, not copied<span class="accent">.</span></h1>
+<p>No bookmaker price is read or reproduced. Every price on this site is derived from official league inputs with the
+parameters below, so any line can be recomputed by hand.</p></section>
 <div class="prose">
-<h2>1. What counts as a verified fixture</h2>
-<p>A row is published only when the competition's own feed returns the two teams, the fixture date and the start time.
-For this snapshot that means the NHL game-centre payload at <code>api-web.nhle.com</code>, plus the NHL game page for each fixture.
-OLBG is recorded as the coverage reference the brief asked for, but OLBG is never treated as an official match source.</p>
-
-<h2>2. The model</h2>
-<div class="formula">lambda_home = ((home.GF/GP + away.GA/GP) / 2) &times; 1.05
-lambda_away = ((away.GF/GP + home.GA/GP) / 2) &times; 0.95
-P(i, j)   = Poisson(i; lambda_home) &times; Poisson(j; lambda_away),  i,j = 0..10</div>
-<p>Goals for and against per game come from the official payload. The blend is a standard attack-versus-defence estimate:
-each side's scoring rate is averaged with the opponent's concession rate.</p>
-
-<h2>3. Markets</h2>
+<h2>NHL</h2>
+<ol>
+<li><b>Rating.</b> For each club, goal difference per game is multiplied by GP ÷ (GP + 12). The shrink pulls small samples toward the league mean, which is zero by construction.</li>
+<li><b>Expected margin.</b> Home rating + 0.25 goals − away rating.</li>
+<li><b>Win probability.</b> P(home) = 1 ÷ (1 + e<sup>−margin ÷ 1.2</sup>), which includes overtime and shootouts.</li>
+<li><b>Price.</b> No-vig fair American odds from that probability, rounded to the nearest 5. A 55% chance is about −120.</li>
+<li><b>Puck line.</b> P(cover −1.5) = 1 − logistic(1.5 − margin, 1.2).</li>
+<li><b>Total.</b> Each side's goals for per game is blended with the opponent's goals against per game, shrunk toward 6.0 goals over the same 12-game weight. The line is the nearest half-goal; over/under uses a normal curve with σ = 1.7.</li>
+</ol>
+<h2>NBA</h2>
+<p>The 2026-27 season is one game old at the snapshot, so every club carries a league-average rating and only home
+court separates the sides (2.5 points, logistic scale 11.0). That produces a
+-2.5 home spread and a money line near −125. No total is originated because no verified
+league scoring baseline is loaded. These are opening-style lines, not informed prices, and every NBA pick is low confidence.</p>
+<h2>Confidence</h2>
 <ul>
-<li><b>Money line (two-way, overtime and shootout included):</b> P(home win) + 0.5 &times; P(tie). The site's own model assumes the extra period is a coin flip; that assumption is stated, not hidden.</li>
-<li><b>Puck line 1.5:</b> P(margin &ge; 2) for the favourite, and its complement for the underdog.</li>
-<li><b>Match total:</b> over and under at 5.5 and 6.5 goals, read from the same 60-minute matrix.</li>
-<li><b>Regulation three-way:</b> shown for transparency; it is not the market the selection is taken from.</li>
+<li><b>High</b> requires at least 13 points of model edge, a games-played sample of at least
+7 per side, and an evidence pack: the fixture's own official game page must be cited in the prediction.</li>
+<li><b>Medium</b> requires at least 6 points of edge. A larger edge without an evidence pack is capped at medium.</li>
+<li><b>Low</b> covers everything else, including every baseline NBA line.</li>
 </ul>
-
-<h2>4. Prices and confidence</h2>
-<p>Prices are fair decimal odds, <code>1 / probability</code>, rounded to two decimals. No margin is added, so these are not
-sportsbook prices and should not be read as ones.</p>
-<p>Confidence is a property of this model, not a claim about the real world. The selected side is always the side the model prices shorter.
-The label then comes from how far that side sits from a coin flip:</p>
-<div class="table-scroll"><table><thead><tr><th>Label</th><th>Condition</th><th>Meaning</th></tr></thead><tbody>
-<tr><td><span class="badge high">high</span></td><td>edge &ge; 10 points</td><td>The model separates the sides by at least 20 points of probability.</td></tr>
-<tr><td><span class="badge medium">medium</span></td><td>6–10 points</td><td>A moderate model edge.</td></tr>
-<tr><td><span class="badge low">low</span></td><td>under 6 points</td><td>Close to a coin flip; published for completeness only.</td></tr>
-</tbody></table></div>
-
-<h2>5. Narratives</h2>
-<p>Only high-confidence selections carry a written prediction, and each is at least 30 words. Every factual statement in a
-narrative maps to a field in the official payload: goals for and against per game, points percentage, power-play and penalty-kill
-rank, the last-ten record, the listed results, the head coach or the schedule. Nothing is added from memory.</p>
-
-<h2>6. Model parameters are assumptions</h2>
-<p>The home multiplier (1.05), away multiplier (0.95), tie split (0.5) and the confidence
-edges are choices made by this desk. They are <b>not</b> league statistics and are not presented as verified facts. They live in
-<code>data/events.json</code> under <code>model</code>, so anyone can change them and re-run <code>scripts/build.py</code> to reproduce every price.</p>
-
-<h2>7. What the model does not do</h2>
+<h2>Evidence rules</h2>
 <ul>
-<li>It does not adjust for rest, back-to-backs, travel or schedule density.</li>
-<li>It does not know who starts in goal, who is injured, scratched or suspended.</li>
-<li>It does not use shots, expected goals, special-teams match-up or score effects.</li>
-<li>It does not shrink small samples. Early-season rates are carried in exactly as published, which is why some prices look extreme.</li>
-<li>It does not compare against market prices, so it cannot claim value against a bookmaker.</li>
+<li>A fixture is published only with an official league URL on an approved host. OLBG is a reference, never a fixture source.</li>
+<li>A high-confidence prediction is at least 30 words, unique, and names the team, a player, current form, recent results and the exact selection.</li>
+<li>Every factual claim in a prediction has a source link on the same row, and the fact list is printed next to it.</li>
+<li>Unconfirmed values stay blank. Blank is a finding, not an invitation to infer.</li>
 </ul>
-
-<h2>8. Reproduction</h2>
-<div class="formula">python -m unittest discover -s tests -v
-python scripts/build.py
-python -m http.server 8000 -d site</div>
-<p>The build refuses to run if a row lacks an approved source host, if a selection disagrees with the model, if a high-confidence
-narrative is under 30 words or fails to name its selection, or if the coverage board's row counts disagree with the fixture list.</p>
+<h2>Known limits</h2>
+<ul><li>The NHL sample is 7-11 games per club, so ratings are heavily shrunk toward the mean.</li><li>The NBA sample is zero games, so every NBA line is an explicit baseline.</li><li>No line is originated for a market when its inputs are missing; the cell stays blank and is flagged.</li><li>Prices are fair odds with no margin and are not betting advice.</li></ul>
+<h2>Parameters</h2>
+<div class="table-scroll"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td class="mono">nhl_shrink_games</td><td class="mono">12</td></tr><tr><td class="mono">nhl_home_goals</td><td class="mono">0.25</td></tr><tr><td class="mono">nhl_logistic_scale</td><td class="mono">1.2</td></tr><tr><td class="mono">nhl_total_sd</td><td class="mono">1.7</td></tr><tr><td class="mono">nhl_league_total</td><td class="mono">6.0</td></tr><tr><td class="mono">nba_home_points</td><td class="mono">2.5</td></tr><tr><td class="mono">nba_logistic_scale</td><td class="mono">11.0</td></tr><tr><td class="mono">high_edge</td><td class="mono">0.13</td></tr><tr><td class="mono">medium_edge</td><td class="mono">0.06</td></tr><tr><td class="mono">min_games_for_high</td><td class="mono">7</td></tr><tr><td class="mono">min_prediction_words</td><td class="mono">30</td></tr></tbody></table></div>
+<p class="table-foot"><a href="data/lines.json">lines.json</a> contains the full computed output for auditing.</p>
 </div>
-<footer>Independent research snapshot assembled 2026-10-21T05:52:00Z. Not affiliated with OLBG, the NHL or any league.
-Every published row links to an official competition source. Model prices are this desk's own estimates, not bookmaker prices,
-and no outcome is guaranteed. Betting involves risk; if you gamble, keep it legal in your jurisdiction.</footer>
-</main></div></body></html>
+  <footer>Independent research snapshot · fair odds only · no guaranteed outcomes · <a href="methodology.html">method</a> · <a href="flagged.html">flagged items</a> · <a href="../index.html">root dashboard</a></footer>
+</main></div>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var group = btn.getAttribute('data-group');
+    document.querySelectorAll('[data-group="' + group + '"]').forEach(function (b) { b.classList.toggle('on', b === btn); });
+    var want = btn.getAttribute('data-filter');
+    document.querySelectorAll('[data-conf]').forEach(function (row) {
+      row.hidden = want !== 'all' && row.getAttribute('data-conf') !== want;
+    });
+  });
+});
+</script>
+</body></html>

@@ -32,7 +32,7 @@ NAV = [
     ("flagged.html", "Flagged for review"),
     ("methodology.html", "Methodology"),
     ("sources.html", "Sources"),
-    ("site/index.html", "NHL evidence desk"),
+    ("site/index.html", "Evidence desk v2"),
 ]
 
 E = html.escape
@@ -80,7 +80,7 @@ def page(title: str, active: str, body: str, subtitle: str = "") -> str:
 <footer class="site">
   <div class="wrap">
     <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
-    <span><a href="{prefix}methodology.html">Methodology</a> · <a href="{prefix}sources.html">Sources</a> · <a href="{prefix}flagged.html">Flagged</a></span>
+    <span><a href="{prefix}methodology.html">Methodology</a> · <a href="{prefix}sources.html">Sources</a> · <a href="{prefix}flagged.html">Flagged</a> · <a href="{prefix}site/index.html">Evidence desk v2</a></span>
   </div>
 </footer>
 </body>

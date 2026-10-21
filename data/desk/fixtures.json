@@ -1,0 +1,530 @@
+{
+  "as_of": "2026-10-21",
+  "fixtures": [
+    {
+      "id": "nhl-2026020152",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-21",
+      "time": "7:30 PM EDT",
+      "home": "BUF",
+      "away": "PHI",
+      "home_name": "Buffalo Sabres",
+      "away_name": "Philadelphia Flyers",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/phi-vs-buf/2026/10/21/2026020152",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897",
+      "engine": "nhl",
+      "inputs": {
+        "home": "BUF",
+        "away": "PHI"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020153",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-21",
+      "time": "7:30 PM EDT",
+      "home": "OTT",
+      "away": "FLA",
+      "home_name": "Ottawa Senators",
+      "away_name": "Florida Panthers",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/fla-vs-ott/2026/10/21/2026020153",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
+      "engine": "nhl",
+      "inputs": {
+        "home": "OTT",
+        "away": "FLA"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020154",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "home": "BOS",
+      "away": "NSH",
+      "home_name": "Boston Bruins",
+      "away_name": "Nashville Predators",
+      "venue": "TD Garden",
+      "official_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "BOS",
+        "away": "NSH"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020155",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "home": "TOR",
+      "away": "NYR",
+      "home_name": "Toronto Maple Leafs",
+      "away_name": "New York Rangers",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "TOR",
+        "away": "NYR"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020156",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "home": "OTT",
+      "away": "SJS",
+      "home_name": "Ottawa Senators",
+      "away_name": "San Jose Sharks",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "OTT",
+        "away": "SJS"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020157",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "home": "NJD",
+      "away": "ANA",
+      "home_name": "New Jersey Devils",
+      "away_name": "Anaheim Ducks",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "NJD",
+        "away": "ANA"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020158",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "home": "PIT",
+      "away": "FLA",
+      "home_name": "Pittsburgh Penguins",
+      "away_name": "Florida Panthers",
+      "venue": "PPG Paints Arena",
+      "official_url": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "PIT",
+        "away": "FLA"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020159",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "7:30 PM EDT",
+      "home": "NYI",
+      "away": "LAK",
+      "home_name": "New York Islanders",
+      "away_name": "Los Angeles Kings",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "NYI",
+        "away": "LAK"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020160",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "8:00 PM EDT",
+      "home": "STL",
+      "away": "VGK",
+      "home_name": "St. Louis Blues",
+      "away_name": "Vegas Golden Knights",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "STL",
+        "away": "VGK"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020161",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "8:00 PM EDT",
+      "home": "DAL",
+      "away": "WPG",
+      "home_name": "Dallas Stars",
+      "away_name": "Winnipeg Jets",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "DAL",
+        "away": "WPG"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020162",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "9:00 PM EDT",
+      "home": "CGY",
+      "away": "MIN",
+      "home_name": "Calgary Flames",
+      "away_name": "Minnesota Wild",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "CGY",
+        "away": "MIN"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020163",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "9:00 PM EDT",
+      "home": "EDM",
+      "away": "CAR",
+      "home_name": "Edmonton Oilers",
+      "away_name": "Carolina Hurricanes",
+      "venue": "Rogers Place",
+      "official_url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "EDM",
+        "away": "CAR"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020164",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "10:00 PM EDT",
+      "home": "SEA",
+      "away": "UTA",
+      "home_name": "Seattle Kraken",
+      "away_name": "Utah Mammoth",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "SEA",
+        "away": "UTA"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nhl-2026020165",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "sport_slug": "ice-hockey",
+      "date": "2026-10-22",
+      "time": "10:00 PM EDT",
+      "home": "VAN",
+      "away": "DET",
+      "home_name": "Vancouver Canucks",
+      "away_name": "Detroit Red Wings",
+      "venue": "Rogers Arena",
+      "official_url": "https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165",
+      "olbg_url": null,
+      "engine": "nhl",
+      "inputs": {
+        "home": "VAN",
+        "away": "DET"
+      },
+      "status": "verified fixture"
+    },
+    {
+      "id": "nba-0022600085",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "7:00 PM ET",
+      "home": "ORL",
+      "away": "ATL",
+      "home_name": "Orlando Magic",
+      "away_name": "Atlanta Hawks",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/atl-vs-orl-0022600085",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "ORL",
+        "away": "ATL"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600086",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "7:00 PM ET",
+      "home": "WAS",
+      "away": "MIL",
+      "home_name": "Washington Wizards",
+      "away_name": "Milwaukee Bucks",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/mil-vs-was-0022600086",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889",
+      "engine": "nba",
+      "inputs": {
+        "home": "WAS",
+        "away": "MIL"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600004",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "7:30 PM ET",
+      "home": "MIA",
+      "away": "MIN",
+      "home_name": "Miami Heat",
+      "away_name": "Minnesota Timberwolves",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/min-vs-mia-0022600004",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "MIA",
+        "away": "MIN"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600087",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "7:30 PM ET",
+      "home": "BKN",
+      "away": "CHA",
+      "home_name": "Brooklyn Nets",
+      "away_name": "Charlotte Hornets",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/cha-vs-bkn-0022600087",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "BKN",
+        "away": "CHA"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600088",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "7:30 PM ET",
+      "home": "TOR",
+      "away": "CHI",
+      "home_name": "Toronto Raptors",
+      "away_name": "Chicago Bulls",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/chi-vs-tor-0022600088",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "TOR",
+        "away": "CHI"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600090",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "8:00 PM ET",
+      "home": "NOP",
+      "away": "IND",
+      "home_name": "New Orleans Pelicans",
+      "away_name": "Indiana Pacers",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/ind-vs-nop-0022600090",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "NOP",
+        "away": "IND"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600089",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "8:00 PM ET",
+      "home": "MEM",
+      "away": "UTA",
+      "home_name": "Memphis Grizzlies",
+      "away_name": "Utah Jazz",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/uta-vs-mem-0022600089",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "MEM",
+        "away": "UTA"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600091",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "8:30 PM ET",
+      "home": "HOU",
+      "away": "DAL",
+      "home_name": "Houston Rockets",
+      "away_name": "Dallas Mavericks",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/dal-vs-hou-0022600091",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "HOU",
+        "away": "DAL"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600005",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "10:00 PM ET",
+      "home": "LAL",
+      "away": "GSW",
+      "home_name": "Los Angeles Lakers",
+      "away_name": "Golden State Warriors",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/gsw-vs-lal-0022600005",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "LAL",
+        "away": "GSW"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-0022600092",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "10:00 PM ET",
+      "home": "POR",
+      "away": "PHX",
+      "home_name": "Portland Trail Blazers",
+      "away_name": "Phoenix Suns",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/phx-vs-por-0022600092",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "POR",
+        "away": "PHX"
+      },
+      "status": "verified fixture; baseline line"
+    },
+    {
+      "id": "nba-sac-lac",
+      "sport": "Basketball",
+      "league": "NBA",
+      "sport_slug": "basketball",
+      "date": "2026-10-21",
+      "time": "10:30 PM ET",
+      "home": "LAC",
+      "away": "SAC",
+      "home_name": "LA Clippers",
+      "away_name": "Sacramento Kings",
+      "venue": null,
+      "official_url": "https://www.nba.com/games?date=2026-10-21",
+      "olbg_url": null,
+      "engine": "nba",
+      "inputs": {
+        "home": "LAC",
+        "away": "SAC"
+      },
+      "status": "verified fixture; baseline line"
+    }
+  ]
+}

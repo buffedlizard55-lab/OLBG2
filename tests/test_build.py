@@ -9,7 +9,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from build import DATA, OUT, build, validate, link
 
-
 class LocalLinks(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -18,7 +17,6 @@ class LocalLinks(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag in ('a', 'link'):
             self.links += [value for key, value in attrs if key in ('href',)]
-
 
 class EvidenceTests(unittest.TestCase):
     def setUp(self):
@@ -58,9 +56,8 @@ class EvidenceTests(unittest.TestCase):
 
     def test_all_navigation_targets_exist(self):
         build()
-        for target in ('index.html', 'flagged.html', 'sports/ice-hockey.html', 'sports/basketball.html', 'assets/style.css'):
+        for target in ('index.html', 'flagged.html', 'sports/ice-hockey.html', 'sports/basketball.html', 'sports/tennis.html', 'sports/baseball.html', 'methodology.html', 'assets/style.css'):
             self.assertTrue((OUT / target).is_file(), target)
-
 
 if __name__ == '__main__':
     unittest.main()

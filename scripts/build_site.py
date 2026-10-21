@@ -688,6 +688,23 @@ def main():
         print("FAIL: predictions under 30 words:", [p["match_id"] for p in short])
         return 1
 
+    # A prediction that quotes a model probability must quote the one actually published.
+    # This caught three stale percentages left behind when the handball grid was corrected.
+    by_id = {m["id"]: m for m in matches["matches"]}
+    stale = []
+    for p in preds["predictions"]:
+        row = by_id.get(p["match_id"])
+        if not row or "pick" not in row:
+            continue
+        expected = f'{row["pick"]["probability"] * 100:.1f}%'
+        if expected not in p["text"]:
+            stale.append(f'{p["match_id"]}: text does not quote the published {expected}')
+    if stale:
+        print("FAIL: prediction probability mismatch:")
+        for item in stale:
+            print(" -", item)
+        return 1
+
     from integration_audit import body as integration_body
 
     pages = {

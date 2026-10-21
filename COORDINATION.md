@@ -830,3 +830,15 @@ Audit: 130/130 survey inventory rows lack an explicit official fixture source; 1
 | Main validation | Run `39559794895` — success |
 | GitHub Pages | Build/deploy run `39559793578` — build and deploy jobs succeeded |
 | Irregularities | Non-blocking Node.js 20 deprecation / Ubuntu runner migration notices; all jobs succeeded. |
+
+---
+
+### Publish record — `arena/18eca832-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#34](https://github.com/buffedlizard55-lab/OLBG2/pull/34) |
+| Merge | Merged 2026-10-21 07:06:12 UTC, commit `ff8a057e0f622edf01b3059bd9f8469d64fbfc47` |
+| Validation | GitHub Actions `39559633597`: success |
+| GitHub Pages | Build/deploy run `39559676469`: success, both build and deploy jobs |
+| Outstanding | Source provenance issues remain needs review; this audit did not update published rows or verify factual claims. |

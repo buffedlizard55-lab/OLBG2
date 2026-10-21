@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flagged for Review &middot; OLBG2</title>
+<meta name="description" content="Flagged for Review - OLBG2 sports betting research dashboard.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script></head>
+<body><header><div class="wrap"><div class="brand">
+<h1>OLBG2</h1><span class="tag">Reverse-engineered OLBG match intelligence &middot; retrieved 2026-10-21</span>
+</div><nav><a href="index.html" class="">Dashboard</a><a href="sports.html" class="">Sports</a><a href="lines.html" class="">Our Lines</a><a href="picks.html" class="">Picks</a><a href="predictions.html" class="">Predictions</a><a href="methodology.html" class="">Methodology</a><a href="verification.html" class="">Verification</a><a href="flagged.html" class="on">Flagged for Review</a><a href="excluded.html" class="">Excluded Sports</a></nav></div></header>
+<main class="wrap"><h2>Flagged for Review</h2>
+<p class="lead">20 flags. A flag never blocks publication; it marks something a human should look at &mdash; a source conflict, a scope decision, a coverage gap, or a value we could not verify. 119 individual event rows carry no originated line and are itemised under F-15.</p>
+<div class="kpis"><div class="kpi"><div class="n">20</div><div class="l">flags</div></div><div class="kpi"><div class="n">5</div><div class="l">source conflicts</div></div><div class="kpi"><div class="n">2</div><div class="l">irregularities</div></div><div class="kpi"><div class="n">3</div><div class="l">scope decisions</div></div><div class="kpi"><div class="n">3</div><div class="l">coverage gaps</div></div><div class="kpi"><div class="n">119</div><div class="l">unverified rows</div></div></div>
+<div class="flag sev-environment" id="F-01"><div class="id">F-01 &middot; environment &middot; collection</div><h4>Sandbox network egress is restricted; OLBG and official sites are unreachable from bash</h4><p>curl to olbg.com fails with SSL_ERROR_SYSCALL in the sandbox. Only github.com, pypi.org and registry.npmjs.org are reachable from bash. All collection and verification was performed through the harness fetch_page / web_search tools, which do reach olbg.com and official governing-body sites.</p>
+<p class="act"><strong>Action:</strong> None required. Recorded so a reviewer knows why no raw HTTP logs or cached HTML exist in the repo.</p>
+</div>
+<div class="flag sev-data-availability" id="F-02"><div class="id">F-02 &middot; data-availability &middot; odds</div><h4>OLBG renders bookmaker prices client-side, so no decimal prices were captured</h4><p>Live event pages serve the market and selection labels but the price placeholder &#x27;WIN @&#x27; is empty; prices are injected by JavaScript. Some older search-index copies of OLBG event pages do contain prices (e.g. Ottawa Senators v Washington Capitals: Money Line 1.61 / 2.60, Game Totals 1.74 / 2.10), but those are historical snapshots of past fixtures, not current prices.</p>
+<p><strong>Consequence:</strong> We could not de-vig bookmaker prices. Lines are originated from governing-body ratings and published competition base rates instead, which is a cleaner basis for &#x27;our own&#x27; line anyway.</p>
+<p class="act"><strong>Action:</strong> If a price feed is wanted, an OLBG API key or a headless-browser collector is required.</p>
+</div>
+<div class="flag sev-scope-decision" id="F-03"><div class="id">F-03 &middot; scope-decision &middot; exclusions</div><h4>Greyhounds and Gaelic Football were excluded although the brief does not name them</h4><p>The brief excludes soccer, boxing, ufc, mma, football, american football, hurling, horse racing, cycling and specials. OLBG carries Greyhounds (sport id 28) and Gaelic Football (sport id 25). Greyhounds is a racing family sport and Gaelic Football is a football code, so both were excluded. Neither fits the &#x27;match winner / handicap / match total&#x27; model the brief asks for.</p>
+<p class="act"><strong>Action:</strong> Confirm or override. Both are a one-line change in scripts/load_inventory.py.</p>
+</div>
+<div class="flag sev-scope-decision" id="F-04"><div class="id">F-04 &middot; scope-decision &middot; exclusions</div><h4>Motor Racing is included</h4><p>The brief excludes cycling but not motorsport, so Formula 1 events are in scope. Motor Racing has no head-to-head match market: OLBG lists Win Race, Fastest Qualifier, Podium Finish, Top 6 Finish, Points Finish, Fastest Lap and Win Tournament. &#x27;Match winner&#x27; is mapped to race winner.</p>
+<p class="act"><strong>Action:</strong> Confirm Motor Racing should stay in scope.</p>
+</div>
+<div class="flag sev-scope-decision" id="F-05"><div class="id">F-05 &middot; scope-decision &middot; exclusions</div><h4>OLBG has no UFC, MMA, Hurling or Specials sport node</h4><p>https://www.olbg.com/sitemap-betting-tips.xml lists 22 sports: Football, Horse Racing, Tennis, Basketball, Golf, Cricket, Snooker, Rugby Union, Rugby League, American Football, Baseball, Ice Hockey, Motor Racing, Darts, Boxing, Cycling, Handball, Volleyball, Greyhounds, Gaelic Football, Aussie Rules and eSports. There is no separate UFC/MMA, Hurling or Specials node, so four of the brief&#x27;s exclusions are vacuous against OLBG&#x27;s own taxonomy.</p>
+<p class="act"><strong>Action:</strong> None. Recorded so the exclusion list can be audited.</p>
+</div>
+<div class="flag sev-irregularity" id="F-06"><div class="id">F-06 &middot; irregularity &middot; times</div><h4>OLBG displays event times in US Eastern, not UK time</h4><p>OLBG lists Afghanistan v Bangladesh as &#x27;Today 07:30&#x27;. The official fixture time is 11:30 GMT on 21 October 2026 (ESPNcricinfo), which is 07:30 EDT. Tennis events listed at 01:30-08:00 correspond to the live WTA Japan Open (Osaka) and Ningbo Open afternoon sessions. All listed_time values in data/events/*.json are reproduced exactly as OLBG displays them and are US Eastern.</p>
+<p class="act"><strong>Action:</strong> Site tables label the column &#x27;Listed time (OLBG, US Eastern)&#x27; to prevent misreading.</p>
+</div>
+<div class="flag sev-source-conflict" id="F-07"><div class="id">F-07 &middot; source-conflict &middot; cricket</div><h4>Venue conflict for Afghanistan v Bangladesh, 3rd ODI</h4><p>Wikipedia (2026 Afghanistan Tri-Nation Series) gives Sharjah Cricket Stadium, Sharjah, with umpires Ahmad Shah Durrani and Allahudien Paleker. ESPNcricinfo&#x27;s series and fixture pages give Abu Dhabi. Both are dated 19-21 October 2026 and describe the same 11:30 GMT start.</p>
+<p class="act"><strong>Action:</strong> Unresolved. Venue is published as the conflict, not as a single value.</p>
+</div>
+<div class="flag sev-source-conflict" id="F-08"><div class="id">F-08 &middot; source-conflict &middot; cricket</div><h4>Series naming conflict for the Afghanistan / Bangladesh / Zimbabwe ODIs</h4><p>ESPNcricinfo indexes the ODIs under &#x27;Afghanistan v Bangladesh 2026-27&#x27; with a separate &#x27;UAE ODI Tri-Series 2026-27&#x27; node; Wikipedia calls the same fixtures the &#x27;2026 Afghanistan Tri-Nation Series&#x27;. OLBG lists the fixture generically as &#x27;Afghanistan vs Bangladesh One Day Match&#x27;.</p>
+<p class="act"><strong>Action:</strong> None blocking. Competition label on the site cites all three.</p>
+</div>
+<div class="flag sev-source-conflict" id="F-09"><div class="id">F-09 &middot; source-conflict &middot; tennis</div><h4>ATP official ranking points disagree with third-party mirrors</h4><p>atptour.com/en/rankings/singles (crawled 7 Oct 2026) gives Sinner 10,950, Zverev 10,070, Alcaraz 5,610. livetennis.io, describing the official ranking published 5 October 2026, gives Sinner 11,000, Zverev 9,720, Alcaraz 5,260. Wikipedia gives a third variant (Alcaraz 5,560, Djokovic 8th on 3,480).</p>
+<p><strong>Consequence:</strong> No tennis line was originated. Only atptour.com&#x27;s own top-18 values are treated as official, and none of the 14 OLBG tennis fixtures has both players inside that verified range.</p>
+<p class="act"><strong>Action:</strong> Re-run with the official ATP/WTA ranking tables for the full 1-200 range to unlock tennis lines.</p>
+</div>
+<div class="flag sev-source-conflict" id="F-10"><div class="id">F-10 &middot; source-conflict &middot; cricket</div><h4>ICC ODI points differ between mirrors for the same rating</h4><p>ESPNcricinfo&#x27;s ICC rankings table (updated 19 Oct 2026) gives Afghanistan 29 matches / 2,680 points; Wikipedia (source: ICC, 18 Oct 2026) gives 28 matches / 2,565 points. Both agree on a rating of 92. Pakistan is 33 matches / 3,360 points / rating 102 on one and 32 / 3,215 / 100 on another.</p>
+<p><strong>Consequence:</strong> Only the RATING column is used by the model, so the points discrepancy does not move any line. Recorded because a reviewer comparing points across sources will see the difference.</p>
+<p class="act"><strong>Action:</strong> Confirm against https://www.icc-cricket.com/rankings/team-rankings directly.</p>
+</div>
+<div class="flag sev-source-conflict" id="F-11"><div class="id">F-11 &middot; source-conflict &middot; darts</div><h4>PDC Order of Merit values differ across snapshots</h4><p>The official https://www.pdc.tv/rankings crawl (Feb 2026) gives Gian van Veen £1,035,750 and Gerwyn Price £782,000; October 2026 reporting gives van Veen £1,045.75k and Price £787k. July 2026 post-World Matchplay figures differ again (Littler £3,143,500).</p>
+<p><strong>Consequence:</strong> No darts line was originated: for all 14 OLBG darts fixtures at most one of the two players has a verified Order of Merit position, so a rating gap cannot be computed.</p>
+<p class="act"><strong>Action:</strong> Re-run with the full official PDC Order of Merit (top 128) to unlock darts lines.</p>
+</div>
+<div class="flag sev-data-availability" id="F-12"><div class="id">F-12 &middot; data-availability &middot; snooker</div><h4>Official World Snooker Tour rankings page could not be read; world number one conflicts across sources</h4><p>https://worldsnooker.com/rankings returned HTTP 500 during collection. Secondary sources disagree: Wikipedia (5 Sep 2026) has Judd Trump number one on 1,655,550 points; snookerhq (5 Oct 2026) has Trump third on £1,114,050 behind Wu Yize; Wikipedia&#x27;s Judd Trump article (16 Oct 2026) states a current ranking of 3 as of 4 October 2026.</p>
+<p><strong>Consequence:</strong> No snooker line was originated for any of the 6 fixtures.</p>
+<p class="act"><strong>Action:</strong> Re-run against https://wst.tv/rankings or worldsnooker.com when reachable.</p>
+</div>
+<div class="flag sev-irregularity" id="F-13"><div class="id">F-13 &middot; irregularity &middot; motor-racing</div><h4>OLBG&#x27;s own F1 calendar contains a Grand Prix / circuit / country mismatch</h4><p>https://www.olbg.com/betting-tips/Motor_Racing/14 lists &#x27;Round 16, 4 October, Bahrain Grand Prix, Sepang International Circuit, Malaysia&#x27;. The Bahrain Grand Prix is held at the Bahrain International Circuit in Sakhir; Sepang is the Malaysian circuit. The row mixes three different events.</p>
+<p class="act"><strong>Action:</strong> Raised against the source site. Our Motor Racing rows use only the USA Grand Prix and the Drivers&#x27; Championship markets, not the calendar table.</p>
+</div>
+<div class="flag sev-model-divergence" id="F-14"><div class="id">F-14 &middot; model-divergence &middot; rugby-union</div><h4>Our originated rugby union lines diverge from LNR&#x27;s own published probabilities</h4><p>LNR&#x27;s official club pages publish fixture probabilities. Toulouse v Perpignan: LNR 83.06 / 15.32 / 1.61 versus our 95.10 / 2.60 / 2.30 (12.04 pp divergence, inside the 15 pp cap, pick direction agrees). La Rochelle v Bordeaux: LNR 46.24 / 53.18 / 0.58 versus our 24.73 / 72.99 / 2.30 (19.81 pp divergence, outside the cap).</p>
+<p><strong>Consequence:</strong> La Rochelle v Bordeaux confidence is capped at LOW despite a 0.73 model probability. Our model weights points difference heavily (Bordeaux +64 versus La Rochelle +9) and LNR&#x27;s figure does not.</p>
+<p class="act"><strong>Action:</strong> Review whether points difference should carry that much weight in the rugby union model.</p>
+</div>
+<div class="flag sev-coverage-gap" id="F-15"><div class="id">F-15 &middot; coverage-gap &middot; lines</div><h4>119 of the inventoried events have no originated line</h4><p>Each is listed below with the exact official source that would be needed to originate a line. Values are left blank rather than inferred, per the verification rule.</p>
+<div class="controls"><input type="search" placeholder="Filter the 119 unverified rows..." data-filter="#t-f15"></div>
+<div class="scroll"><table id="t-f15" data-sortable data-require-source><thead><tr><th>Sport</th><th>Event</th><th>Market</th><th>Listed time</th><th>As of</th><th>Retrieval</th><th>Why no line was originated</th><th>Provenance</th></tr></thead><tbody>
+<tr data-sport="baseball"><td>baseball</td>
+<td><strong>TB Rays @ MIL Brewers</strong></td><td>Money Line</td>
+<td class="small">24 Oct 01:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Postseason fixture; no official starting-pitcher or standings-based rating retrieved in-session. Source to consult: https://www.mlb.com/standings and the official postseason bracket.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Baseball/12" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>MIL Bucks @ WAS Wizards</strong></td><td>Money Line</td>
+<td class="small">Today 19:10</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>Hapoel Tel Aviv vs Virtus Bologna</strong></td><td>Money Line</td>
+<td class="small">Today 12:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Hapoel_Tel_Aviv_vs_Virtus_Bologna/4?event_id=535919" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>Seoul Thunders vs KCC Egis</strong></td><td>Money Line</td>
+<td class="small">Today 06:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Seoul_Thunders_vs_KCC_Egis/4?event_id=535966" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>ATL Hawks @ ORL Magic</strong></td><td>Money Line</td>
+<td class="small">Today 19:10</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/ATL_Hawks_@_ORL_Magic/4?event_id=534888" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>CHI Bulls @ TOR Raptors</strong></td><td>Money Line</td>
+<td class="small">Today 19:40</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>PAOK vs Ratiopharm Ulm</strong></td><td>Money Line</td>
+<td class="small">Today 13:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/PAOK_vs_Ratiopharm_Ulm/4?event_id=535952" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>Bosna Sarajevo vs Bahcesehir Koleji</strong></td><td>Money Line</td>
+<td class="small">Today 13:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/Bosna_Sarajevo_vs_Bahcesehir_Koleji/4?event_id=535950" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>Hapoel Jerusalem vs Rigas Zelli</strong></td><td>Money Line</td>
+<td class="small">Today 14:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/Hapoel_Jerusalem_vs_Rigas_Zelli/4?event_id=535956" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>IND Pacers @ NO Pelicans</strong></td><td>Money Line</td>
+<td class="small">Today 20:10</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>PHX Suns @ POR Trail Blazers</strong></td><td>Money Line</td>
+<td class="small">Today 22:10</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>Panathinaikos vs Baskonia</strong></td><td>Money Line</td>
+<td class="small">Tomorrow 14:15</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Panathinaikos_vs_Baskonia/4?event_id=535923" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>DEN Nuggets @ OKC Thunder</strong></td><td>Money Line</td>
+<td class="small">Tomorrow 21:40</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DEN_Nuggets_@_OKC_Thunder/4?event_id=534843" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>U BT Cluj Napoca vs London Lions</strong></td><td>Money Line</td>
+<td class="small">Today 12:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/U_BT_Cluj_Napoca_vs_London_Lions/4?event_id=535949" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="basketball"><td>basketball</td>
+<td><strong>AEK vs Antwerp Giants</strong></td><td>Money Line</td>
+<td class="small">Today 12:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/European/Basketball_Champions_League/AEK_vs_Antwerp_Giants/4?event_id=535969" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>Northern Cape Heat vs Garden Route Badgers T20</strong></td><td>Win Match</td>
+<td class="small">Today 07:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Northern_Cape_Heat_vs_Garden_Route_Badgers_T20/7?event_id=188823" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>North West Dragons vs Limpopo Impalas T20</strong></td><td>Win Match</td>
+<td class="small">Today 12:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/North_West_Dragons_vs_Limpopo_Impalas_T20/7?event_id=188810" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>Eastern Storm vs Tuskers T20</strong></td><td>Win Match</td>
+<td class="small">Tomorrow 12:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Eastern_Storm_vs_Tuskers_T20/7?event_id=188811" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>Australia W vs New Zealand W 3rd T20 Match</strong></td><td>Win Match</td>
+<td class="small">Tomorrow 04:15</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Australia_W_vs_New_Zealand_W_3rd_T20_Match/7?event_id=188826" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>Mpumalanga Rhinos vs South Africa Emerging T20</strong></td><td>Win Match</td>
+<td class="small">Tomorrow 07:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Mpumalanga_Rhinos_vs_South_Africa_Emerging_T20/7?event_id=188825" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>World Cup 2027</strong></td><td>Outright Winner</td>
+<td class="small">21 Nov 2027 05:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/World_Cup_2027/7?event_id=182606" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>Big Bash Women 2026</strong></td><td>Outright Winner</td>
+<td class="small">05 Dec 03:10</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Big_Bash_Women_2026/7?event_id=187184" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>T20 Big Bash 2026-27</strong></td><td>Outright Winner</td>
+<td class="small">12 Dec 03:15</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Big_Bash_2026-27/7?event_id=187503" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>SA20 2026-27</strong></td><td>Outright Winner</td>
+<td class="small">24 Jan 2027 11:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/SA20_2026-27/7?event_id=187504" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="cricket"><td>cricket</td>
+<td><strong>T20 Blast 2027</strong></td><td>Outright Winner</td>
+<td class="small">18 Jul 2027 11:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">No verified official basis retrieved in-session.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Blast_2027/7?event_id=188350" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Luke Humphries vs Ryan Searle</strong></td><td>Win Match 2-way</td>
+<td class="small">22 Oct 20:45</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Jonny Clayton vs Niko Springer</strong></td><td>Win Match 2-way</td>
+<td class="small">23 Oct 19:45</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Luke Woodhouse vs Dirk van Duijvenbode</strong></td><td>Win Match 2-way</td>
+<td class="small">22 Oct 18:15</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Niels Zonneveld vs Cameron Menzies</strong></td><td>Win Match 2-way</td>
+<td class="small">22 Oct 19:15</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Gerwyn Price vs Rob Cross</strong></td><td>Win Match 2-way</td>
+<td class="small">22 Oct 19:45</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>James Wade vs Damon Heta</strong></td><td>Win Match 2-way</td>
+<td class="small">22 Oct 20:15</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Gian van Veen vs Andrew Gilding</strong></td><td>Win Match 2-way</td>
+<td class="small">22 Oct 21:15</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Ross Smith vs Karel Sedlacek</strong></td><td>Win Match 2-way</td>
+<td class="small">22 Oct 21:45</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Ryan Joyce vs Jermaine Wattimena</strong></td><td>Win Match 2-way</td>
+<td class="small">23 Oct 18:15</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Krzysztof Ratajski vs Dave Chisnall</strong></td><td>Win Match 2-way</td>
+<td class="small">23 Oct 18:45</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Nathan Aspinall vs Cristo Reyes</strong></td><td>Win Match 2-way</td>
+<td class="small">23 Oct 19:15</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Luke Littler vs William OConnor</strong></td><td>Win Match 2-way</td>
+<td class="small">23 Oct 20:15</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Wessel Nijman vs Martin Schindler</strong></td><td>Win Match 2-way</td>
+<td class="small">23 Oct 20:45</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>Josh Rock vs Chris Dobey</strong></td><td>Win Match 2-way</td>
+<td class="small">23 Oct 21:45</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>PDC World Championship 2027</strong></td><td>Win Tournament</td>
+<td class="small">03 Jan 2027 17:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="darts"><td>darts</td>
+<td><strong>European Championship</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 18:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Genesis Championship</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 04:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Genesis_Championship/5?event_id=101905" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Bermuda Championship</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 17:45</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Bermuda_Championship/5?event_id=101904" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Players Series SA</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 02:45</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Players_Series_SA/5?event_id=101907" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>BMW Ladies Championship</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 04:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/BMW_Ladies_Championship/5?event_id=101906" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Stifel Charity Classic</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 17:45</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Stifel_Charity_Classic/5?event_id=101903" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Senior Italian Open</strong></td><td>Win Tournament</td>
+<td class="small">24 Oct 11:45</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Senior_Italian_Open/5?event_id=101911" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Fortinet Players Cup</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 02:45</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Fortinet_Players_Cup/5?event_id=101908" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Hong Kong Open</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 03:45</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Hong_Kong_Open/5?event_id=101910" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Stella Artois Players Championship</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 10:45</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Stella_Artois_Players_Championship/5?event_id=101912" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="golf"><td>golf</td>
+<td><strong>Hero Womens Indian Open</strong></td><td>Win Tournament</td>
+<td class="small">25 Oct 08:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Hero_Womens_Indian_Open/5?event_id=101909" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>GOG vs KIF Kolding</strong></td><td>Money Line</td>
+<td class="small">Today 15:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>SG Flensburg Handewitt vs Fuchse Berlin</strong></td><td>Money Line</td>
+<td class="small">Today 14:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>SC Magdeburg vs TVB Stuttgart</strong></td><td>Money Line</td>
+<td class="small">Today 17:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Podravka Vegeta W vs Nykobing FH W</strong></td><td>Money Line</td>
+<td class="small">Today 13:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Ribe Esbjerg HH vs Skanderborg Handbold</strong></td><td>Money Line</td>
+<td class="small">Today 13:30</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>CSM Bucuresti W vs Sola W</strong></td><td>Money Line</td>
+<td class="small">Today 15:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>TBV Lemgo Lippe vs Frisch Auf Goppingen</strong></td><td>Money Line</td>
+<td class="small">Today 15:30</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Bergsoy vs OIF Arendal</strong></td><td>Money Line</td>
+<td class="small">Today 15:30</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Flint Tonsberg W vs Utleira W</strong></td><td>Money Line</td>
+<td class="small">Today 15:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Chambery Savoie vs Pays dAix UC</strong></td><td>Money Line</td>
+<td class="small">Today 16:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Aalborg Handbold vs Mors Thy Handbold</strong></td><td>Money Line</td>
+<td class="small">Today 19:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Bjerringbro Silkeborg vs TMS Ringsted</strong></td><td>Money Line</td>
+<td class="small">Today 17:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>BM Cangas vs FC Barcelona</strong></td><td>Money Line</td>
+<td class="small">Today 17:15</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="handball"><td>handball</td>
+<td><strong>Fredericia HK vs Skive FH</strong></td><td>Money Line</td>
+<td class="small">Today 18:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>Adler Mannheim vs Schwenninger Wild Wings</strong></td><td>Money Line</td>
+<td class="small">Today 15:30</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>CLB Blue Jackets @ MIN Wild</strong></td><td>Money Line</td>
+<td class="small">Today 23:07</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>ERC Ingolstadt vs Augsburger Panther</strong></td><td>Money Line</td>
+<td class="small">Today 15:30</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>Kolner Haie vs Fischtown Pinguins Bremerhaven</strong></td><td>Money Line</td>
+<td class="small">Today 15:30</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>HCB Sudtirol Alperia vs EHC Black Wings Linz</strong></td><td>Money Line</td>
+<td class="small">Today 17:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>CAR Hurricanes @ CGY Flames</strong></td><td>Money Line</td>
+<td class="small">Tomorrow 01:07</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>Milano HC vs Fehervar AV19</strong></td><td>Money Line</td>
+<td class="small">Today 16:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>HC TWK Innsbruck vs HK Olimpija Ljubljana</strong></td><td>Game Totals</td>
+<td class="small">Today 16:30</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="ice_hockey"><td>ice hockey</td>
+<td><strong>Nurnberg Ice Tigers vs EHC Munchen</strong></td><td>Money Line</td>
+<td class="small">Today 18:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="motor_racing"><td>motor racing</td>
+<td><strong>USA Grand Prix</strong></td><td>Win Race</td>
+<td class="small">25 Oct 20:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Motor_Racing/14" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="motor_racing"><td>motor racing</td>
+<td><strong>USA Grand Prix</strong></td><td>Fastest Lap</td>
+<td class="small">25 Oct 20:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Motor_Racing/14" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="motor_racing"><td>motor racing</td>
+<td><strong>Formula 1 Drivers Championship 2026</strong></td><td>Win Tournament</td>
+<td class="small">06 Dec 13:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Motor_Racing/14" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="motor_racing"><td>motor racing</td>
+<td><strong>Formula 1 Drivers Championship 2026 Without Kimi Antonelli</strong></td><td>Win Tournament</td>
+<td class="small">06 Dec 13:00</td><td class="small">2026-10-18</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Motor_Racing/14" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Montauban v Oyonnax</strong></td><td>To Win</td>
+<td class="small">Tomorrow 20:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Agen v Nissa</strong></td><td>To Win</td>
+<td class="small">23 Oct 18:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Soyaux Angouleme v Dax</strong></td><td>To Win</td>
+<td class="small">23 Oct 18:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Narbonne v Brive</strong></td><td>To Win</td>
+<td class="small">23 Oct 18:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Aurillac v Nevers</strong></td><td>To Win</td>
+<td class="small">23 Oct 18:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Valence Romans v Colomiers</strong></td><td>To Win</td>
+<td class="small">23 Oct 18:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Grenoble v Biarritz</strong></td><td>Handicap</td>
+<td class="small">23 Oct 20:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Provence v Beziers</strong></td><td>Handicap</td>
+<td class="small">23 Oct 20:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="rugby_union"><td>rugby union</td>
+<td><strong>Six Nations 2027</strong></td><td>Win Tournament</td>
+<td class="small">14 Mar 2027 20:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">Antepost outright on national teams. Requires the official World Rugby rankings. Source to consult: https://www.world.rugby/rankings/mru</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
+<td><strong>Cheung Ka Wai v Stuart Bingham</strong></td><td>Win Match</td>
+<td class="small">Today 05:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Cheung_Ka_Wai_v_Stuart_Bingham/8?event_id=9933" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
+<td><strong>Pang Junxu v Liam Davies</strong></td><td>Win Match</td>
+<td class="small">Today 05:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Pang_Junxu_v_Liam_Davies/8?event_id=9929" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
+<td><strong>Elliot Slessor v Jamie Jones</strong></td><td>Win Match</td>
+<td class="small">Today 15:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Elliot_Slessor_v_Jamie_Jones/8?event_id=9931" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
+<td><strong>Luca Brecel v Martin O Donnell</strong></td><td>Win Match</td>
+<td class="small">Today 15:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Luca_Brecel_v_Martin_O_Donnell/8?event_id=9932" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
+<td><strong>John Higgins v Jak Jones</strong></td><td>Win Match</td>
+<td class="small">Today 08:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
+<td><strong>Sam Craigie v Xu Si</strong></td><td>Win Match</td>
+<td class="small">Today 09:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Sam_Craigie_v_Xu_Si/8?event_id=9930" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Leylah Fernandez vs Aliaksandra Sasnovich</strong></td><td>Win Match</td>
+<td class="small">Today 02:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Leylah_Fernandez_vs_Aliaksandra_Sasnovich/3?event_id=902039" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Katie Boulter vs Viktorija Golubic</strong></td><td>Win Match</td>
+<td class="small">Today 01:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Katie_Boulter_vs_Viktorija_Golubic/3?event_id=902065" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>James Duckworth vs Luciano Darderi</strong></td><td>Win Match</td>
+<td class="small">Today 02:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/James_Duckworth_vs_Luciano_Darderi/3?event_id=902038" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Adrian Mannarino vs Andrey Rublev</strong></td><td>Win Match</td>
+<td class="small">Today 05:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Adrian_Mannarino_vs_Andrey_Rublev/3?event_id=902037" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Sorana Cirstea vs Sara Bejlek</strong></td><td>Win Match</td>
+<td class="small">Today 04:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Sorana_Cirstea_vs_Sara_Bejlek/3?event_id=902074" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Zangar Nurlanuly vs Tomas Machac</strong></td><td>1st Set Winner</td>
+<td class="small">Today 04:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Zangar_Nurlanuly_vs_Tomas_Machac/3?event_id=901935" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Mattia Bellucci vs Tomas Martin Etcheverry</strong></td><td>Set Betting</td>
+<td class="small">Today 02:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mattia_Bellucci_vs_Tomas_Martin_Etcheverry/3?event_id=901993" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Dino Prizmic vs Damir Dzumhur</strong></td><td>Win Match</td>
+<td class="small">Today 05:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Dino_Prizmic_vs_Damir_Dzumhur/3?event_id=901896" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Stan Wawrinka vs Martin Landaluce</strong></td><td>Win Match</td>
+<td class="small">Today 08:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Martin_Landaluce/3?event_id=901974" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>David Goffin vs Remy Bertola</strong></td><td>Win Match</td>
+<td class="small">Today 12:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/David_Goffin_vs_Remy_Bertola/3?event_id=902028" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Facundo Diaz Acosta vs Nikoloz Basilashvili</strong></td><td>Set Betting</td>
+<td class="small">Today 04:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Facundo_Diaz_Acosta_vs_Nikoloz_Basilashvili/3?event_id=902040" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Martin Damm vs Francisco Cerundolo</strong></td><td>Set Betting</td>
+<td class="small">Today 05:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Martin_Damm_vs_Francisco_Cerundolo/3?event_id=902048" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Mariano Navone vs Tallon Griekspoor</strong></td><td>Win Match</td>
+<td class="small">Today 07:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mariano_Navone_vs_Tallon_Griekspoor/3?event_id=902085" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="tennis"><td>tennis</td>
+<td><strong>Ekaterina Alexandrova vs Marta Kostyuk</strong></td><td>Win Match</td>
+<td class="small">Today 07:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ekaterina_Alexandrova_vs_Marta_Kostyuk/3?event_id=902084" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>SAVO Volley vs Loimu</strong></td><td>Win Match</td>
+<td class="small">Today 16:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>Prostejov W vs VK Lvice Praha W</strong></td><td>Win Match</td>
+<td class="small">Today 17:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>Vampula W vs Arctic Volley W</strong></td><td>Win Match</td>
+<td class="small">Today 16:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>St Nazaire vs Toulouse</strong></td><td>Win Match</td>
+<td class="small">Today 19:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>Praia Clube W vs Pinheiros W</strong></td><td>Win Match</td>
+<td class="small">Tomorrow 01:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>TSV Hartberg W vs VBV Trofaiach-WSV Eisenerz W</strong></td><td>Win Match</td>
+<td class="small">Today 16:35</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>TV Rottenburg vs SWD Duren</strong></td><td>Win Match</td>
+<td class="small">Today 17:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>Narbonne vs Royan</strong></td><td>Win Match</td>
+<td class="small">Today 18:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>VCO Berlin vs FT Freiburg</strong></td><td>Win Match</td>
+<td class="small">Today 18:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>Fluminense W vs Sancor Volei W</strong></td><td>Win Match</td>
+<td class="small">Today 22:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>AZS Olsztyn vs Norwid Czestochowa</strong></td><td>Win Match</td>
+<td class="small">Today 16:30</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="volleyball"><td>volleyball</td>
+<td><strong>AS Cannes vs Sete</strong></td><td>Win Match</td>
+<td class="small">Today 18:00</td><td class="small">2026-10-20</td>
+<td class="small">indexed snapshot</td>
+<td class="small">No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+</tbody></table></div>
+</div>
+<div class="flag sev-data-freshness" id="F-16"><div class="id">F-16 &middot; data-freshness &middot; inventory</div><h4>Most inventory rows come from dated search-index snapshots rather than a live fetch</h4><p>Live fetches on 2026-10-21 covered tennis, cricket, snooker, golf and basketball (58 rows). Darts, rugby union, ice hockey, handball, volleyball, baseball and motor racing (86 rows) come from search-index copies dated 2026-10-18 to 2026-10-20, where the page&#x27;s own &#x27;Today&#x27; refers to that earlier date. Each row carries retrieved_via and as_of so the two populations are never mixed.</p>
+<p class="act"><strong>Action:</strong> Re-collect those seven sports with a live fetch before acting on their times.</p>
+</div>
+<div class="flag sev-coverage-gap" id="F-17"><div class="id">F-17 &middot; coverage-gap &middot; inventory</div><h4>Aussie Rules and eSports have no OLBG betting-tips node and no upcoming events</h4><p>https://www.olbg.com/sitemap-betting-tips.xml lists /best-tipsters/Aussie_Rules/22 and /best-tipsters/eSports/23 but no corresponding /betting-tips node for either. The AFL 2026 season content on OLBG is a February pre-season preview; the 2026 season has concluded.</p>
+<p class="act"><strong>Action:</strong> Both sports are reported as zero events rather than omitted silently.</p>
+</div>
+<div class="flag sev-coverage-gap" id="F-18"><div class="id">F-18 &middot; coverage-gap &middot; inventory</div><h4>Rugby League lists no upcoming events</h4><p>https://www.olbg.com/betting-tips/Rugby_League/10 currently serves only its historical statistics tables (Super League, Championship, NRL) with no fixture list. The fixtures that appear in search-index copies of the same URL are dated 28 March 2026.</p>
+<p class="act"><strong>Action:</strong> Rugby League is reported as zero current events. Its published base rates are retained in the model inputs for the next window.</p>
+</div>
+<div class="flag sev-model-limitation" id="F-19"><div class="id">F-19 &middot; model-limitation &middot; cricket</div><h4>No home-advantage term in the cricket model</h4><p>No official, in-session verifiable home-advantage coefficient for ODI or T20I cricket was available, so the term is set to zero rather than guessed. Both ICC-rated fixtures modelled are at neutral venues in the UAE, which limits the impact for this run.</p>
+<p class="act"><strong>Action:</strong> Add a sourced home-advantage coefficient before applying the model to home-and-away series.</p>
+</div>
+<div class="flag sev-source-tier" id="F-20"><div class="id">F-20 &middot; source-tier &middot; predictions</div><h4>Player availability in prediction P-01 comes from regional press, not an official team sheet</h4><p>The Thomas Ramos, Tommaso Menoncello, Blair Kinghorn and Jack Willis availability statements are sourced to La Depeche and Rugbyrama (both 20 October 2026). Neither the LNR nor Stade Toulousain published a confirmed team sheet at collection time.</p>
+<p class="act"><strong>Action:</strong> Treat as press-tier evidence. Re-check against the official LNR match sheet before staking.</p>
+</div></main>
+<footer><div class="wrap">
+Built from <code>data/*.json</code> by <code>scripts/build_site.py</code>. Every published value carries a source
+link; values that could not be confirmed against an official source are left blank and flagged
+<a href="flagged.html">for review</a>. Nothing on this site is betting advice. 18+.
+</div></footer></body></html>

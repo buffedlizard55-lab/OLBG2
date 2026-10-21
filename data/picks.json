@@ -1,0 +1,153 @@
+[
+  {
+    "sport": "cricket",
+    "match": "Afghanistan vs Bangladesh One Day Match",
+    "competition": "ICC ODI rated fixture",
+    "tier": "tier1",
+    "pick": "Afghanistan",
+    "pick_probability": 0.5987,
+    "confidence": "high",
+    "confidence_notes": [
+      "Verified same-series head-to-head: Afghanistan won by 200 runs (Afghanistan 190, Bangladesh 109 in 28.3 overs), 2nd ODI, Abu Dhabi on 2026-10-17.",
+      "HIGH via the corroborated head-to-head path (threshold 0.55, not 0.70)."
+    ],
+    "official_divergence_pp": null,
+    "form_verified": true,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "cricket",
+    "match": "New Zealand vs India 1st T20 Match",
+    "competition": "ICC T20I rated fixture",
+    "tier": "tier1",
+    "pick": "India",
+    "pick_probability": 0.5987,
+    "confidence": "low",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "cricket",
+    "match": "Namibia vs Ireland 1st ODI",
+    "competition": "ICC ODI rated fixture",
+    "tier": "tier1",
+    "pick": "Ireland",
+    "pick_probability": 0.6814,
+    "confidence": "medium",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "cricket",
+    "match": "England vs Sri Lanka One Day Match",
+    "competition": "ICC ODI rated fixture",
+    "tier": "tier1",
+    "pick": "England",
+    "pick_probability": 0.51,
+    "confidence": "low",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "rugby_union",
+    "match": "Toulouse v Perpignan",
+    "competition": "Top 14",
+    "tier": "tier2",
+    "pick": "Toulouse",
+    "pick_probability": 0.951,
+    "confidence": "high",
+    "confidence_notes": [
+      "LNR publishes 83.06% for Toulouse; our line is 95.10% (divergence 12.04 pp)."
+    ],
+    "official_divergence_pp": 12.04,
+    "form_verified": true,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "rugby_union",
+    "match": "Bayonne v Lyon",
+    "competition": "Top 14",
+    "tier": "tier2",
+    "pick": "Bayonne",
+    "pick_probability": 0.5492,
+    "confidence": "low",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "rugby_union",
+    "match": "La Rochelle v Bordeaux",
+    "competition": "Top 14",
+    "tier": "tier2",
+    "pick": "Bordeaux",
+    "pick_probability": 0.7299,
+    "confidence": "low",
+    "confidence_notes": [
+      "LNR publishes 53.18% for Bordeaux; our line is 72.99% (divergence 19.81 pp).",
+      "Divergence exceeds the 15.0 pp cap, so confidence is capped at LOW and the disagreement is flagged for review."
+    ],
+    "official_divergence_pp": 19.81,
+    "form_verified": true,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "rugby_union",
+    "match": "Connacht v Zebre Parma",
+    "competition": "URC",
+    "tier": "tier3",
+    "pick": "Connacht",
+    "pick_probability": 0.644,
+    "confidence": "low",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "rugby_union",
+    "match": "Bulls v Ulster",
+    "competition": "URC",
+    "tier": "tier3",
+    "pick": "Bulls",
+    "pick_probability": 0.644,
+    "confidence": "low",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "rugby_union",
+    "match": "Stormers v Scarlets",
+    "competition": "URC",
+    "tier": "tier3",
+    "pick": "Stormers",
+    "pick_probability": 0.644,
+    "confidence": "low",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  },
+  {
+    "sport": "rugby_union",
+    "match": "Leinster v Munster",
+    "competition": "URC",
+    "tier": "tier3",
+    "pick": "Leinster",
+    "pick_probability": 0.644,
+    "confidence": "low",
+    "confidence_notes": [],
+    "official_divergence_pp": null,
+    "form_verified": false,
+    "retrieved": "2026-10-21"
+  }
+]

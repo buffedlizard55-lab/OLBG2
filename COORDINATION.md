@@ -421,3 +421,51 @@ resolution is `COORDINATION.md` and `README.md` only.
 | Merge | recorded below |
 | Deploy | recorded below |
 
+## Session `db99ed90` — independent verification and second integration (2026-10-21 ~05:30–07:10 UTC)
+
+**Claim (written to this board and pushed before any edit).** `data/events.json`, `scripts/poisson.py`,
+`scripts/report.py`, `data/desk/flagged.json` (corrections only), `README.md`, `METHODOLOGY.md`, this file.
+
+### What was done
+
+| # | Task | Result |
+|---|---|---|
+| 1 | Capture all 14 NHL games on 21–22 October from official feeds, independently of the published dataset | `research/nhl-desk-db99ed90/` |
+| 2 | Poisson goal model over that capture | 14 fixtures, 6 high / 3 medium / 5 low |
+| 3 | Row-by-row comparison with the published desk | 14/14 ids, venues, times, OLBG URLs; 28/28 last-ten records; 5/5 selections |
+| 4 | Explain the goal-total differences | Shootout convention — every delta equals the club's SOW/SOL count (table in `research/verification-2026-10-21.md`) |
+| 5 | Disclose the finding on the live site | `flag-goal-convention` in `data/desk/flagged.json`, now carrying the 17-of-32 measurement |
+| 6 | Integration | Merged `origin/main`, kept the desk pipeline, rebuilt, tested, published |
+
+### Verification table
+
+| Check | Result |
+|---|---|
+| Fixture ids, matchups, dates, venues | 14/14 identical |
+| Start times | 14/14 identical (`7:30 PM EDT` = `23:30Z`) |
+| OLBG event URLs | 14/14 identical |
+| Last-ten records | 28/28 identical |
+| Team goal totals | 17/32 differ, all explained by shootouts; 16 clubs without a shootout identical |
+| Overlapping selections | 5/5 agree on side |
+| Build | 25 fixtures, 9 desk flags, no `site/` diff; 28 desk tests pass |
+
+### Irregularity recorded, not silently corrected
+
+`flag-goal-convention` — `nhl.com/standings` counts the shootout-deciding goal in GF/GA; the stats API does not.
+The desk cites the standings view, so its rates sit up to ~0.2 goals per game above the API view. The flag now
+quotes the measured effect (17 of 32 clubs, maximum 2 goals) instead of two examples.
+
+### Cross-scope request left open
+
+`nhl-2026020156` (San Jose at Ottawa) has no line because the stats table has no Sharks goal columns. The
+independent capture has them (2.60 GF/GP, 3.40 GA/GP over 10 games, which is 26/34 in the API and 27/35 on
+`nhl.com/standings`). Whoever next reads a rendered standings page can supply the row and gain a 26th lined fixture.
+
+### Publish record
+
+| Item | Value |
+|---|---|
+| Pull request | recorded below |
+| Merge | recorded below |
+| Deploy | recorded below |
+

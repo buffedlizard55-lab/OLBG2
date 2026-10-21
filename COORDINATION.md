@@ -996,3 +996,17 @@ correct; the prose was stale. Two things changed as a result:
 A related wording defect was also fixed: the PSG prediction had claimed Zagreb's only win came against Celje. That
 was not verified from the standings (which publish only the aggregate 1-0-3 record), so the claim and its fact row
 were removed rather than left standing.
+
+### Final publish ledger — session `arena/73620ec4-olbg2`
+
+| PR | Purpose | Merge | Validate run | Pages run |
+|---|---|---|---|---|
+| [#39](https://github.com/buffedlizard55-lab/OLBG2/pull/39) | Handball slate, coverage table, docs | MERGED 07:12:59Z, `7dda52e` | `39560437531` success | `39560436396` success |
+| [#40](https://github.com/buffedlizard55-lab/OLBG2/pull/40) | Publish record + F21 wording | MERGED 07:14:47Z, `6d3f1a8` | `39560591224` success | success |
+| [#41](https://github.com/buffedlizard55-lab/OLBG2/pull/41) | Stale-probability fix, build guard, 6 integrity tests | MERGED, `273c3ad` | `39560880246` success | `39560879902` success |
+| #42 | Grammar fix and this ledger | see PR page | — | — |
+
+Pages API after the last deploy: `status: built`, source `main:/`. Live re-checks after each deploy:
+`/index.html` (47 fixtures, Handball card, 17-sport table), `/sports/handball.html` (12 fixtures, 12 lines,
+5 high picks), `/picks.html` (nine predictions, every quoted probability matching `data/matches.json`),
+`/flagged.html` (F24–F26 open, F12/F21 closed).

@@ -1131,3 +1131,17 @@ own "win by two or more" probability is now computed separately, so `MIL -1.5` i
 and `TB +1.5` is 62.0% (-182) in all three games, as it must be while the model applies no home
 edge. Regression test `test_run_line_price_is_venue_independent` in `tests/test_live.py` pins
 this. Match-winner, handicap (rugby) and total prices were unaffected - 55 tests pass.
+
+### Publish record - session `arena/d4b9d560-olbg2`, follow-up
+
+| Item | Value |
+|---|---|
+| Follow-up pull request | [#46](https://github.com/buffedlizard55-lab/OLBG2/pull/46) - venue-independent MLB run-line pricing |
+| Merge result | **Merged** into `main` as `a421e13937086c310fea8c8d02d1d5b48d92a27b` |
+| GitHub Pages deployment | run `39562474775` on `a421e13` - `success`; `gh api repos/.../pages` -> `status: built` |
+| Live check after fix | https://buffedlizard55-lab.github.io/OLBG2/live/sports/baseball.html fetched: `MIL -1.5 +153 (38.0%)` and `TB +1.5 -182 (62.0%)` now identical across all three World Series games |
+| Tests | 55 pass, including `test_run_line_price_is_venue_independent` |
+
+This ledger row is recorded by the commit that carries it, so no further PR is needed to
+document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 flags open on
+`live/flagged.html` for human review, none of them blocking.

@@ -34,6 +34,7 @@ NAV = [
     ("sources.html", "Sources"),
     ("survey/index.html", "Survey (130 events)"),
     ("site/index.html", "Evidence desk v2"),
+    ("integration.html", "Evidence status"),
 ]
 
 E = html.escape
@@ -76,6 +77,7 @@ def page(title: str, active: str, body: str, subtitle: str = "") -> str:
   </div>
 </header>
 <main class="wrap">
+<p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="{prefix}integration.html">Evidence status &amp; cross-layer review</a>.</p>
 {body}
 </main>
 <footer class="site">
@@ -595,7 +597,10 @@ def main():
         print("FAIL: predictions under 30 words:", [p["match_id"] for p in short])
         return 1
 
+    from integration_audit import body as integration_body
+
     pages = {
+        "integration.html": page("Evidence status & integration review", "integration.html", integration_body()),
         "index.html": build_index(matches, preds, flagged),
         "picks.html": build_picks(matches, preds),
         "flagged.html": build_flagged(flagged, matches),

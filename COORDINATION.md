@@ -676,6 +676,20 @@ only through its own script.
 
 **Merge note (c8711d36 integration):** session `dd14fcfd` independently merged the identical Survey-navigation change as PR #27 while this branch was in CI. On merging `origin/main`, this session took their `scripts/build_site.py` version (same link, same label) and regenerated the root pages, so no duplicate work remains; R3 is credited to both.
 
+
+## Claim — session `8103ccb6` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Final cross-layer discoverability, evidence-status audit and CI integration | in progress | `8103ccb6` | `scripts/build_site.py`, `scripts/integration_audit.py`, `integration.html`, generated root pages, `tests/test_integration.py`, `.github/workflows/pages.yml`, `research/integration-audit.md`, `COORDINATION.md` |
+
+All earlier claims are complete; no active conflicting claim or open PR was found. Work stays on the Arena-assigned branch `arena/8103ccb6-olbg2` (branch naming is fixed by this environment). Preserve all three data layers; do not claim that structural validation verifies external facts. Integrate the previously requested Survey navigation and expose contradictions/coverage gaps centrally. Official-source spot check: https://api-web.nhle.com/v1/score/2026-10-21 retrieved with fetch_page this turn; two fixtures, PHI@BUF and FLA@OTT at 23:30Z. This is not a re-verification of the full inventory.
+
+### Completion — session `8103ccb6`
+
+Task status: **done** (integration code); external evidence gaps: **needs review**, published on `integration.html`. Detailed scope, source, findings and reproducible commands: `research/integration-audit.md`. Root, desk and survey data were preserved without alteration. Added survey discoverability, cross-layer evidence disclosures, secondary-source narrative review rows, freshness notices, cross-layer local-link checks and survey CI gates. All 33 unit tests pass, all three builds pass, survey structural checks pass, zero broken local links. These are not claims of exhaustive official factual verification. Full automatic current coverage and all-market origination remain unfulfilled and explicitly flagged.
+
+Initial pre-push `git pull --rebase origin arena/8103ccb6-olbg2` reported no remote ref (new branch). Claim was then pushed successfully. No conflict or work loss. Only the fixed Arena branch is used.
 ## Current session `arena/dd14fcfd-olbg2` (2026-10-21)
 
 | Task | Status | Owner | File scope |
@@ -700,3 +714,45 @@ Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no b
 | Merge result | Merged 2026-10-21 06:41:09 UTC; merge commit `e5ad112b41d4df167026fd9429310d2335dc4727` |
 | Validate Pages content | Run `39556956109` success |
 | GitHub Pages deployment | Run `39556955856` success, including deploy job |
+
+
+### Integration conflict log — 8103ccb6
+PR #29 initially could not merge because main advanced to 8457c79 (another session added Survey navigation). Stopped and merged origin/main. Preserved both coordination sections, kept their Survey footer, consolidated duplicate Survey nav items, and regenerated all conflicting HTML from the combined builder. No data was changed or discarded. Re-ran all three builds and 33 tests.
+
+Pre-push pull/rebase after the sync merge attempted to replay already merged concurrent-session commits and conflicted in the board. Aborted rebase without discarding work; the explicit merge commit preserves both histories. Push follows the safe abort, rather than rewriting prior sessions' commits.
+---
+
+# Session `arena/9b76e3ea-olbg2` — independent cross-layer verification
+
+**Branch:** `arena/9b76e3ea-olbg2` · **Updated:** 2026-10-21 UTC
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independent regression audit of merged dashboard, survey and evidence desk; record discrepancies without editing their outputs | done | `arena/9b76e3ea-olbg2` | `research/independent-audit-9b76e3ea.md`, append-only `COORDINATION.md` |
+
+This audit does not claim new fixture coverage or independently verify sporting facts unless explicitly sourced. Generated pages, datasets and pipelines remain outside this session's scope.
+
+## Independent cross-layer audit — session `arena/9b76e3ea-olbg2`
+
+**Status:** done · **Branch:** `arena/9b76e3ea-olbg2` · **Updated:** 2026-10-21 UTC
+
+Audit report: [`research/independent-audit-9b76e3ea.md`](research/independent-audit-9b76e3ea.md). Scope limited to static repo/build consistency; no external sports facts were re-verified in this pass.
+
+**Verification:** `python3 -m unittest discover -s tests -v` (28 passed); `python3 scripts/build.py`; `python3 scripts/build_site.py` (9 pages, 35 fixtures); `python3 scripts/survey_verify.py` (all checks passed: 24 HTML pages, 130 rows, 11 lines, 2 predictions, 21 flags); `python3 scripts/survey_build.py`; repeated survey verification (deterministic). Generated outputs remained clean after regeneration.
+
+**Irregularities to carry to integration / review:**
+
+1. Survey inventory event rows have OLBG `source_url` provenance but no per-row official fixture-source field; the verifier checks OLBG URL presence, not official fixture confirmation (see report R1).
+2. Survey narrative facts cite non-official secondary outlets and Wikipedia; the validator checks URL presence, not official status. Official-only factual claims remain to be rechecked (R2).
+3. Scope differs: root README says 17 sports and includes Gaelic Football/Greyhounds; survey taxonomy says 15 and excludes both. Root coverage-gap text is stale after the survey. Survey page count should be 24 HTML pages, not 25 (R3).
+4. Survey navigation issue R4 was fixed upstream in PR #27 while this audit was in progress: the root navigation/footer now links to `/survey/`. Confirmed after rebase.
+5. At least two fixtures overlap root and survey: Afghanistan–Bangladesh and New Zealand–India. The “no duplication” statement is inaccurate; combined counts must deduplicate (R5).
+6. Snapshot is static: 72/130 survey records use indexed snapshots and are marked stale; no scheduled schedule collector was found (R6).
+
+No sporting value was marked newly verified from this read-only audit. Generated/shared outputs were not modified. Recommended integration work: reconcile navigation, scope/count language and overlap disclosures; require official source URLs per published fixture and official URLs for prediction facts; disclose snapshot age or implement a freshness gate. Existing needs-review items remain non-blocking.
+
+### Rebase conflict / upstream integration update (2026-10-21 UTC)
+
+Before the second push, `git pull --rebase origin main` fetched PRs #27–#28 and conflicted only in the append-only coordination ledger: the upstream Survey-navigation completion and this session's original claim had both appended at EOF. Resolved additively, retaining the complete upstream `arena/dd14fcfd-olbg2` record and this session's claim; no files or changes were discarded. The upstream branch had already added Survey to the root navigation, so audit finding R4 is now marked resolved in `research/independent-audit-9b76e3ea.md`. The final audit record and this conflict note remain append-only.
+
+Second sync: main advanced through PR #31 during CI. Preserved both appended coordination records and the independent audit file; no code or data conflicts.

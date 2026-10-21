@@ -490,3 +490,120 @@ scope.
 | Root dashboard (`/`) | 35 (NHL 14, NBA 11, URC 8, ICC 2) | 33 | 4 | 20 open + 2 closed |
 | Evidence desk (`/site/`) | 25 (NHL 14, NBA 11) | 64 markets | 4 | 9 open |
 
+
+
+---
+
+# Session `ca1d5677` — sport-coverage survey layer (appended)
+
+**Session ID:** `ca1d5677` · **Branch:** `arena/ca1d5677-olbg2` · **PR:** #25 · **Updated:** 2026-10-21 06:40 UTC
+
+This session started from `1056f6a` while `main` still looked empty, built a full survey layer,
+and only discovered the three merged sessions when its own PR reported *not mergeable*. It then
+stopped, read this board, and relocated every one of its files into a namespace that does not
+overlap any file the prior sessions own. **No file owned by `bfeb6335`, `e4f35827` or
+`arena/42fb7792-olbg2` was modified**, with the single documented exception of appending the
+sections you are reading now to this shared board and an append-only pointer section at the end
+of `README.md`.
+
+## Claim
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| S1 | Repo baseline audit at `1056f6a` | done | `ca1d5677` | `REPO_REVIEW.md` |
+| S2 | OLBG sport taxonomy + include/exclude decisions | done | `ca1d5677` | `data/survey/sports.json` |
+| S3 | **Survey the sports never captured** (prior board's open handoff item 3, fourth bullet) | done | `ca1d5677` | `data/survey/events/*.json`, `scripts/survey_inventory.py` |
+| S4 | Originate lines from verified official inputs | done (11 of 130) | `ca1d5677` | `data/survey/lines.json`, `scripts/survey_lines.py` |
+| S5 | Picks + confidence with an official-divergence guard | done | `ca1d5677` | `data/survey/picks.json`, `scripts/survey_analyse.py` |
+| S6 | High-confidence written predictions | done (2) | `ca1d5677` | `data/survey/predictions.json` |
+| S7 | Survey sub-site (10 pages + 15 sport pages) | done | `ca1d5677` | `survey/**`, `scripts/survey_build.py` |
+| S8 | Verification gate | done, all green | `ca1d5677` | `scripts/survey_verify.py` |
+| S9 | Integration with the three merged sessions | done | `ca1d5677` | this file, `README.md` (append-only) |
+
+## What this layer adds to what is already published
+
+The prior board's open item was that *"neither exhaustive inventory nor original prices could be
+responsibly verified"*, and its handoff asked a later session to *"survey the eight sports never
+captured (Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby
+League)"*. That is exactly what S3 did, and it went further:
+
+| | Prior sessions (root dashboard) | This layer (`/survey/`) |
+|---|---|---|
+| Fixtures inventoried | 33 (NHL 12, NBA 11, URC 8, ICC 2) | **130** across all 15 in-scope sports |
+| Sports with events | 4 | 12 (plus 3 confirmed to have zero OLBG events) |
+| Handball / Volleyball / Golf / Motor Racing / Rugby League / eSports / Aussie Rules / Darts / Snooker / Tennis / Cricket / Baseball | never captured | **surveyed**, with per-event provenance |
+| Lines originated | 30 | 11 (different fixtures; no duplication) |
+| High-confidence predictions | 4 (NHL money lines) | 2 (Top 14, ICC ODI) |
+| Flags | 19 (F01–F19) | 21 (F-01–F-21) |
+
+The two layers cover **different fixtures**, so nothing is duplicated.
+
+## New findings contributed by this layer
+
+- **F-06** OLBG displays fixture times in **US Eastern**, not UK time. Proved by reconciling
+  OLBG's `07:30` for Afghanistan v Bangladesh against the official `11:30 GMT` start. This
+  affects how any session reads OLBG `listed_time` values, including the prior board's
+  "tip times" captured from NBA.com.
+- **F-13** OLBG's own F1 calendar row mixes three events: *"Round 16, 4 October, Bahrain Grand
+  Prix, Sepang International Circuit, Malaysia"*.
+- **F-02** OLBG event pages render bookmaker prices client-side; the served HTML has an empty
+  `WIN @` placeholder. Confirms the prior board's note that prices must come from elsewhere.
+- **F-05** OLBG has **no** UFC, MMA, Hurling or Specials sport node, so four of the brief's ten
+  exclusions are vacuous. Its taxonomy is exactly 22 sports.
+- **F-03 / F-04** Greyhounds and Gaelic Football are not named in the brief; both excluded here
+  (racing family / football code). Motor Racing included. Needs confirmation — and note the prior
+  board lists Greyhounds and Gaelic football among sports to survey, so the two layers currently
+  take opposite positions on whether Gaelic football is in scope.
+- **F-21** `PUT /repos/:owner/:repo/pages` returns **403 Resource not accessible by integration**
+  for this token, so the Pages source cannot be repointed from `/` to `/docs`. Independently
+  confirms the prior board's environment note that *"GitHub Pages serves `main` at the repository
+  root in legacy mode"*.
+- **F-12** `https://worldsnooker.com/rankings` returns **HTTP 500**; secondary sources disagree on
+  the world number one (Trump 1st in September, 3rd by 4 October). Relevant to the prior board's
+  "read ATP rankings + PDC Order of Merit from a rendered page" handoff item: **the PDC page is
+  cookie-walled and the ATP page is JavaScript-rendered**, which is why neither unlocked here.
+
+## Conflict resolution log (2026-10-21 06:35 UTC)
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `COORDINATION.md` | add/add — two different boards | **Theirs taken verbatim**; this session appended below the existing content. Nothing removed. |
+| `README.md` | modify/delete — this session had renamed it to `SURVEY_README.md`, prior session modified it | **Theirs restored intact**, then a clearly delimited append-only section added at the end pointing to `/survey/`. Their original text is unmodified above it. |
+| `index.html`, `flagged.html`, `picks.html`, `methodology.html`, `sports/*`, `assets/*`, `scripts/build_site.py`, `data/matches.json`, `data/predictions.json`, `data/flagged.json`, `data/sources.json`, `tests/**`, `site/**`, `.github/**`, `research/**`, `.gitignore`, `.nojekyll` | — | **Untouched.** This session relocated its own colliding files into `survey/`, `data/survey/` and `scripts/survey_*.py` *before* merging, so these never conflicted. |
+
+## Verification performed (this layer)
+
+`scripts/survey_verify.py` gates the build and is green: all internal links resolve across 25
+pages; all 335 data-table rows carry a source link or an explicit UNVERIFIED badge; all 130
+inventory rows carry a provenance URL, listed time, as-of date and retrieval method; all 11
+originated lines cite a rating or basis source; every null line cell is explicitly marked
+unverified rather than silently blank; both predictions exceed 30 words (143, 133) and every
+fact carries a URL; a prediction exists for every high-confidence pick and no other; the
+inventory reconciles exactly as 130 = 11 modelled + 119 flagged; flag ids unique; and rebuilding
+from the same data is byte-identical.
+
+Official sources used: OLBG sitemap and per-sport listings; ICC team rankings (icc-cricket.com
+via cricinfo.com); LNR Top 14 standings, fixture sheet and published fixture probabilities
+(lnr.fr / top14.lnr.fr); ESPNcricinfo series pages and scorecards. Retrieved but not usable:
+OWGR (retrieved, week 42), ATP (JavaScript-rendered, top 18 only), WTA (JavaScript-rendered),
+PDC (cookie-walled), World Snooker Tour (HTTP 500). Full per-source status is on
+`survey/verification.html`.
+
+## Request logged for the integration owner (not done here, per the ownership rule)
+
+1. Add a `Survey` link to the root dashboard navigation pointing at `survey/index.html`, so the
+   130-event layer is discoverable from `/`. The survey pages already link back to `../index.html`.
+2. Decide **F-03**: are Greyhounds and Gaelic Football in scope? The two layers currently differ.
+3. Consider merging the two flag registers (`data/flagged.json` F01–F19 and
+   `data/survey/flags.json` F-01–F-21) into one numbering scheme on the flagged page.
+
+## Publish record (this layer)
+
+| Item | Value |
+|---|---|
+| Integration branch | `arena/ca1d5677-olbg2` |
+| PR | #25 |
+| Build check | `python3 scripts/survey_build.py` → 25 pages, 130 events, 11 lines, 2 predictions, 21 flags |
+| Verification gate | `python3 scripts/survey_verify.py` → all checks green |
+| Survey URL | https://buffedlizard55-lab.github.io/OLBG2/survey/ |
+| Flagged for review | https://buffedlizard55-lab.github.io/OLBG2/survey/flagged.html |

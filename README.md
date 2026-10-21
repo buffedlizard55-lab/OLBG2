@@ -133,3 +133,24 @@ They are listed individually on the Flagged for Review page — absence from thi
 OLBG lists no events for them.
 
 18+ · This is an analytics and research project, not betting advice.
+
+---
+
+## Sport-coverage survey layer (`/survey/`) — added by session `ca1d5677`
+
+Everything above this line is unchanged. A fourth session surveyed the sports this dashboard had
+not captured and published the result as a separate, self-contained layer so that no file above
+was overwritten.
+
+- **Live:** <https://buffedlizard55-lab.github.io/OLBG2/survey/>
+- **Flagged for review:** <https://buffedlizard55-lab.github.io/OLBG2/survey/flagged.html>
+- **What it adds:** 130 fixtures across all 15 in-scope OLBG sports — including Handball (14),
+  Volleyball (12), Golf (10), Motor Racing (4), Darts (16), Snooker (6), Tennis (14), Cricket (14),
+  Baseball (1), Ice Hockey (9), Basketball (14) and Rugby Union (16) — plus confirmation that
+  Rugby League, Aussie Rules and eSports currently list no OLBG events at all.
+- **Different fixtures, no duplication:** 11 lines originated on ICC-rated cricket internationals
+  and Top 14 / URC rugby union, with 2 high-confidence written predictions.
+- **Its own pipeline:** `scripts/survey_*.py` → `data/survey/**` → `survey/**`, gated by
+  `scripts/survey_verify.py`. Its flags are `F-01`–`F-21`; the dashboard's remain `F01`–`F19`.
+- **Read `survey/METHODOLOGY.md`** for its evidence tiers, model constants and the
+  official-divergence guard that caps confidence when our line disagrees with a governing body.

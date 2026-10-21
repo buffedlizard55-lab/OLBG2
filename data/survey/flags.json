@@ -1,0 +1,1368 @@
+[
+  {
+    "id": "F-01",
+    "severity": "environment",
+    "area": "collection",
+    "title": "Sandbox network egress is restricted; OLBG and official sites are unreachable from bash",
+    "detail": "curl to olbg.com fails with SSL_ERROR_SYSCALL in the sandbox. Only github.com, pypi.org and registry.npmjs.org are reachable from bash. All collection and verification was performed through the harness fetch_page / web_search tools, which do reach olbg.com and official governing-body sites.",
+    "action": "None required. Recorded so a reviewer knows why no raw HTTP logs or cached HTML exist in the repo."
+  },
+  {
+    "id": "F-02",
+    "severity": "data-availability",
+    "area": "odds",
+    "title": "OLBG renders bookmaker prices client-side, so no decimal prices were captured",
+    "detail": "Live event pages serve the market and selection labels but the price placeholder 'WIN @' is empty; prices are injected by JavaScript. Some older search-index copies of OLBG event pages do contain prices (e.g. Ottawa Senators v Washington Capitals: Money Line 1.61 / 2.60, Game Totals 1.74 / 2.10), but those are historical snapshots of past fixtures, not current prices.",
+    "consequence": "We could not de-vig bookmaker prices. Lines are originated from governing-body ratings and published competition base rates instead, which is a cleaner basis for 'our own' line anyway.",
+    "action": "If a price feed is wanted, an OLBG API key or a headless-browser collector is required."
+  },
+  {
+    "id": "F-03",
+    "severity": "scope-decision",
+    "area": "exclusions",
+    "title": "Greyhounds and Gaelic Football were excluded although the brief does not name them",
+    "detail": "The brief excludes soccer, boxing, ufc, mma, football, american football, hurling, horse racing, cycling and specials. OLBG carries Greyhounds (sport id 28) and Gaelic Football (sport id 25). Greyhounds is a racing family sport and Gaelic Football is a football code, so both were excluded. Neither fits the 'match winner / handicap / match total' model the brief asks for.",
+    "action": "Confirm or override. Both are a one-line change in scripts/load_inventory.py."
+  },
+  {
+    "id": "F-04",
+    "severity": "scope-decision",
+    "area": "exclusions",
+    "title": "Motor Racing is included",
+    "detail": "The brief excludes cycling but not motorsport, so Formula 1 events are in scope. Motor Racing has no head-to-head match market: OLBG lists Win Race, Fastest Qualifier, Podium Finish, Top 6 Finish, Points Finish, Fastest Lap and Win Tournament. 'Match winner' is mapped to race winner.",
+    "action": "Confirm Motor Racing should stay in scope."
+  },
+  {
+    "id": "F-05",
+    "severity": "scope-decision",
+    "area": "exclusions",
+    "title": "OLBG has no UFC, MMA, Hurling or Specials sport node",
+    "detail": "https://www.olbg.com/sitemap-betting-tips.xml lists 22 sports: Football, Horse Racing, Tennis, Basketball, Golf, Cricket, Snooker, Rugby Union, Rugby League, American Football, Baseball, Ice Hockey, Motor Racing, Darts, Boxing, Cycling, Handball, Volleyball, Greyhounds, Gaelic Football, Aussie Rules and eSports. There is no separate UFC/MMA, Hurling or Specials node, so four of the brief's exclusions are vacuous against OLBG's own taxonomy.",
+    "action": "None. Recorded so the exclusion list can be audited."
+  },
+  {
+    "id": "F-06",
+    "severity": "irregularity",
+    "area": "times",
+    "title": "OLBG displays event times in US Eastern, not UK time",
+    "detail": "OLBG lists Afghanistan v Bangladesh as 'Today 07:30'. The official fixture time is 11:30 GMT on 21 October 2026 (ESPNcricinfo), which is 07:30 EDT. Tennis events listed at 01:30-08:00 correspond to the live WTA Japan Open (Osaka) and Ningbo Open afternoon sessions. All listed_time values in data/events/*.json are reproduced exactly as OLBG displays them and are US Eastern.",
+    "action": "Site tables label the column 'Listed time (OLBG, US Eastern)' to prevent misreading."
+  },
+  {
+    "id": "F-07",
+    "severity": "source-conflict",
+    "area": "cricket",
+    "title": "Venue conflict for Afghanistan v Bangladesh, 3rd ODI",
+    "detail": "Wikipedia (2026 Afghanistan Tri-Nation Series) gives Sharjah Cricket Stadium, Sharjah, with umpires Ahmad Shah Durrani and Allahudien Paleker. ESPNcricinfo's series and fixture pages give Abu Dhabi. Both are dated 19-21 October 2026 and describe the same 11:30 GMT start.",
+    "action": "Unresolved. Venue is published as the conflict, not as a single value."
+  },
+  {
+    "id": "F-08",
+    "severity": "source-conflict",
+    "area": "cricket",
+    "title": "Series naming conflict for the Afghanistan / Bangladesh / Zimbabwe ODIs",
+    "detail": "ESPNcricinfo indexes the ODIs under 'Afghanistan v Bangladesh 2026-27' with a separate 'UAE ODI Tri-Series 2026-27' node; Wikipedia calls the same fixtures the '2026 Afghanistan Tri-Nation Series'. OLBG lists the fixture generically as 'Afghanistan vs Bangladesh One Day Match'.",
+    "action": "None blocking. Competition label on the site cites all three."
+  },
+  {
+    "id": "F-09",
+    "severity": "source-conflict",
+    "area": "tennis",
+    "title": "ATP official ranking points disagree with third-party mirrors",
+    "detail": "atptour.com/en/rankings/singles (crawled 7 Oct 2026) gives Sinner 10,950, Zverev 10,070, Alcaraz 5,610. livetennis.io, describing the official ranking published 5 October 2026, gives Sinner 11,000, Zverev 9,720, Alcaraz 5,260. Wikipedia gives a third variant (Alcaraz 5,560, Djokovic 8th on 3,480).",
+    "consequence": "No tennis line was originated. Only atptour.com's own top-18 values are treated as official, and none of the 14 OLBG tennis fixtures has both players inside that verified range.",
+    "action": "Re-run with the official ATP/WTA ranking tables for the full 1-200 range to unlock tennis lines."
+  },
+  {
+    "id": "F-10",
+    "severity": "source-conflict",
+    "area": "cricket",
+    "title": "ICC ODI points differ between mirrors for the same rating",
+    "detail": "ESPNcricinfo's ICC rankings table (updated 19 Oct 2026) gives Afghanistan 29 matches / 2,680 points; Wikipedia (source: ICC, 18 Oct 2026) gives 28 matches / 2,565 points. Both agree on a rating of 92. Pakistan is 33 matches / 3,360 points / rating 102 on one and 32 / 3,215 / 100 on another.",
+    "consequence": "Only the RATING column is used by the model, so the points discrepancy does not move any line. Recorded because a reviewer comparing points across sources will see the difference.",
+    "action": "Confirm against https://www.icc-cricket.com/rankings/team-rankings directly."
+  },
+  {
+    "id": "F-11",
+    "severity": "source-conflict",
+    "area": "darts",
+    "title": "PDC Order of Merit values differ across snapshots",
+    "detail": "The official https://www.pdc.tv/rankings crawl (Feb 2026) gives Gian van Veen £1,035,750 and Gerwyn Price £782,000; October 2026 reporting gives van Veen £1,045.75k and Price £787k. July 2026 post-World Matchplay figures differ again (Littler £3,143,500).",
+    "consequence": "No darts line was originated: for all 14 OLBG darts fixtures at most one of the two players has a verified Order of Merit position, so a rating gap cannot be computed.",
+    "action": "Re-run with the full official PDC Order of Merit (top 128) to unlock darts lines."
+  },
+  {
+    "id": "F-12",
+    "severity": "data-availability",
+    "area": "snooker",
+    "title": "Official World Snooker Tour rankings page could not be read; world number one conflicts across sources",
+    "detail": "https://worldsnooker.com/rankings returned HTTP 500 during collection. Secondary sources disagree: Wikipedia (5 Sep 2026) has Judd Trump number one on 1,655,550 points; snookerhq (5 Oct 2026) has Trump third on £1,114,050 behind Wu Yize; Wikipedia's Judd Trump article (16 Oct 2026) states a current ranking of 3 as of 4 October 2026.",
+    "consequence": "No snooker line was originated for any of the 6 fixtures.",
+    "action": "Re-run against https://wst.tv/rankings or worldsnooker.com when reachable."
+  },
+  {
+    "id": "F-13",
+    "severity": "irregularity",
+    "area": "motor-racing",
+    "title": "OLBG's own F1 calendar contains a Grand Prix / circuit / country mismatch",
+    "detail": "https://www.olbg.com/betting-tips/Motor_Racing/14 lists 'Round 16, 4 October, Bahrain Grand Prix, Sepang International Circuit, Malaysia'. The Bahrain Grand Prix is held at the Bahrain International Circuit in Sakhir; Sepang is the Malaysian circuit. The row mixes three different events.",
+    "action": "Raised against the source site. Our Motor Racing rows use only the USA Grand Prix and the Drivers' Championship markets, not the calendar table."
+  },
+  {
+    "id": "F-14",
+    "severity": "model-divergence",
+    "area": "rugby-union",
+    "title": "Our originated rugby union lines diverge from LNR's own published probabilities",
+    "detail": "LNR's official club pages publish fixture probabilities. Toulouse v Perpignan: LNR 83.06 / 15.32 / 1.61 versus our 95.10 / 2.60 / 2.30 (12.04 pp divergence, inside the 15 pp cap, pick direction agrees). La Rochelle v Bordeaux: LNR 46.24 / 53.18 / 0.58 versus our 24.73 / 72.99 / 2.30 (19.81 pp divergence, outside the cap).",
+    "consequence": "La Rochelle v Bordeaux confidence is capped at LOW despite a 0.73 model probability. Our model weights points difference heavily (Bordeaux +64 versus La Rochelle +9) and LNR's figure does not.",
+    "action": "Review whether points difference should carry that much weight in the rugby union model."
+  },
+  {
+    "id": "F-15",
+    "severity": "coverage-gap",
+    "area": "lines",
+    "title": "119 of the inventoried events have no originated line",
+    "detail": "Each is listed below with the exact official source that would be needed to originate a line. Values are left blank rather than inferred, per the verification rule.",
+    "items": [
+      {
+        "sport": "baseball",
+        "match": "TB Rays @ MIL Brewers",
+        "market": "Money Line",
+        "listed_time": "24 Oct 01:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Baseball/12",
+        "reason": "Postseason fixture; no official starting-pitcher or standings-based rating retrieved in-session. Source to consult: https://www.mlb.com/standings and the official postseason bracket."
+      },
+      {
+        "sport": "basketball",
+        "match": "MIL Bucks @ WAS Wizards",
+        "market": "Money Line",
+        "listed_time": "Today 19:10",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "Hapoel Tel Aviv vs Virtus Bologna",
+        "market": "Money Line",
+        "listed_time": "Today 12:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Hapoel_Tel_Aviv_vs_Virtus_Bologna/4?event_id=535919",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "Seoul Thunders vs KCC Egis",
+        "market": "Money Line",
+        "listed_time": "Today 06:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Seoul_Thunders_vs_KCC_Egis/4?event_id=535966",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "ATL Hawks @ ORL Magic",
+        "market": "Money Line",
+        "listed_time": "Today 19:10",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/ATL_Hawks_@_ORL_Magic/4?event_id=534888",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "CHI Bulls @ TOR Raptors",
+        "market": "Money Line",
+        "listed_time": "Today 19:40",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "PAOK vs Ratiopharm Ulm",
+        "market": "Money Line",
+        "listed_time": "Today 13:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/PAOK_vs_Ratiopharm_Ulm/4?event_id=535952",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "Bosna Sarajevo vs Bahcesehir Koleji",
+        "market": "Money Line",
+        "listed_time": "Today 13:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/Bosna_Sarajevo_vs_Bahcesehir_Koleji/4?event_id=535950",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "Hapoel Jerusalem vs Rigas Zelli",
+        "market": "Money Line",
+        "listed_time": "Today 14:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/Hapoel_Jerusalem_vs_Rigas_Zelli/4?event_id=535956",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "IND Pacers @ NO Pelicans",
+        "market": "Money Line",
+        "listed_time": "Today 20:10",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "PHX Suns @ POR Trail Blazers",
+        "market": "Money Line",
+        "listed_time": "Today 22:10",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "Panathinaikos vs Baskonia",
+        "market": "Money Line",
+        "listed_time": "Tomorrow 14:15",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Panathinaikos_vs_Baskonia/4?event_id=535923",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "DEN Nuggets @ OKC Thunder",
+        "market": "Money Line",
+        "listed_time": "Tomorrow 21:40",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DEN_Nuggets_@_OKC_Thunder/4?event_id=534843",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "U BT Cluj Napoca vs London Lions",
+        "market": "Money Line",
+        "listed_time": "Today 12:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/European/Euro_Cup/U_BT_Cluj_Napoca_vs_London_Lions/4?event_id=535949",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "basketball",
+        "match": "AEK vs Antwerp Giants",
+        "market": "Money Line",
+        "listed_time": "Today 12:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Basketball/European/Basketball_Champions_League/AEK_vs_Antwerp_Giants/4?event_id=535969",
+        "reason": "No official league standings or rating retrieved for both clubs in-session. Sources to consult: https://www.nba.com/standings, https://www.euroleaguebasketball.net, and the relevant national federation."
+      },
+      {
+        "sport": "cricket",
+        "match": "Northern Cape Heat vs Garden Route Badgers T20",
+        "market": "Win Match",
+        "listed_time": "Today 07:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Northern_Cape_Heat_vs_Garden_Route_Badgers_T20/7?event_id=188823",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "North West Dragons vs Limpopo Impalas T20",
+        "market": "Win Match",
+        "listed_time": "Today 12:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/North_West_Dragons_vs_Limpopo_Impalas_T20/7?event_id=188810",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "Eastern Storm vs Tuskers T20",
+        "market": "Win Match",
+        "listed_time": "Tomorrow 12:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Eastern_Storm_vs_Tuskers_T20/7?event_id=188811",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "Australia W vs New Zealand W 3rd T20 Match",
+        "market": "Win Match",
+        "listed_time": "Tomorrow 04:15",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Australia_W_vs_New_Zealand_W_3rd_T20_Match/7?event_id=188826",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "Mpumalanga Rhinos vs South Africa Emerging T20",
+        "market": "Win Match",
+        "listed_time": "Tomorrow 07:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Mpumalanga_Rhinos_vs_South_Africa_Emerging_T20/7?event_id=188825",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "World Cup 2027",
+        "market": "Outright Winner",
+        "listed_time": "21 Nov 2027 05:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/World_Cup_2027/7?event_id=182606",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "Big Bash Women 2026",
+        "market": "Outright Winner",
+        "listed_time": "05 Dec 03:10",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Big_Bash_Women_2026/7?event_id=187184",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "T20 Big Bash 2026-27",
+        "market": "Outright Winner",
+        "listed_time": "12 Dec 03:15",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Big_Bash_2026-27/7?event_id=187503",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "SA20 2026-27",
+        "market": "Outright Winner",
+        "listed_time": "24 Jan 2027 11:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/SA20_2026-27/7?event_id=187504",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "cricket",
+        "match": "T20 Blast 2027",
+        "market": "Outright Winner",
+        "listed_time": "18 Jul 2027 11:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Blast_2027/7?event_id=188350",
+        "reason": "No verified official basis retrieved in-session."
+      },
+      {
+        "sport": "darts",
+        "match": "Luke Humphries vs Ryan Searle",
+        "market": "Win Match 2-way",
+        "listed_time": "22 Oct 20:45",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Jonny Clayton vs Niko Springer",
+        "market": "Win Match 2-way",
+        "listed_time": "23 Oct 19:45",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Luke Woodhouse vs Dirk van Duijvenbode",
+        "market": "Win Match 2-way",
+        "listed_time": "22 Oct 18:15",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Niels Zonneveld vs Cameron Menzies",
+        "market": "Win Match 2-way",
+        "listed_time": "22 Oct 19:15",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Gerwyn Price vs Rob Cross",
+        "market": "Win Match 2-way",
+        "listed_time": "22 Oct 19:45",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "James Wade vs Damon Heta",
+        "market": "Win Match 2-way",
+        "listed_time": "22 Oct 20:15",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Gian van Veen vs Andrew Gilding",
+        "market": "Win Match 2-way",
+        "listed_time": "22 Oct 21:15",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Ross Smith vs Karel Sedlacek",
+        "market": "Win Match 2-way",
+        "listed_time": "22 Oct 21:45",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Ryan Joyce vs Jermaine Wattimena",
+        "market": "Win Match 2-way",
+        "listed_time": "23 Oct 18:15",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Krzysztof Ratajski vs Dave Chisnall",
+        "market": "Win Match 2-way",
+        "listed_time": "23 Oct 18:45",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Nathan Aspinall vs Cristo Reyes",
+        "market": "Win Match 2-way",
+        "listed_time": "23 Oct 19:15",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Luke Littler vs William OConnor",
+        "market": "Win Match 2-way",
+        "listed_time": "23 Oct 20:15",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Wessel Nijman vs Martin Schindler",
+        "market": "Win Match 2-way",
+        "listed_time": "23 Oct 20:45",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "Josh Rock vs Chris Dobey",
+        "market": "Win Match 2-way",
+        "listed_time": "23 Oct 21:45",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "PDC World Championship 2027",
+        "market": "Win Tournament",
+        "listed_time": "03 Jan 2027 17:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "darts",
+        "match": "European Championship",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 18:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Darts/15",
+        "reason": "Official PDC Order of Merit position not verified for both players (see F-11). Source to consult: https://www.pdc.tv/rankings"
+      },
+      {
+        "sport": "golf",
+        "match": "Genesis Championship",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 04:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Genesis_Championship/5?event_id=101905",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Bermuda Championship",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 17:45",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Bermuda_Championship/5?event_id=101904",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Players Series SA",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 02:45",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Players_Series_SA/5?event_id=101907",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "BMW Ladies Championship",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 04:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/BMW_Ladies_Championship/5?event_id=101906",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Stifel Charity Classic",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 17:45",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Stifel_Charity_Classic/5?event_id=101903",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Senior Italian Open",
+        "market": "Win Tournament",
+        "listed_time": "24 Oct 11:45",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Senior_Italian_Open/5?event_id=101911",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Fortinet Players Cup",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 02:45",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Fortinet_Players_Cup/5?event_id=101908",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Hong Kong Open",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 03:45",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Hong_Kong_Open/5?event_id=101910",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Stella Artois Players Championship",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 10:45",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Stella_Artois_Players_Championship/5?event_id=101912",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "golf",
+        "match": "Hero Womens Indian Open",
+        "market": "Win Tournament",
+        "listed_time": "25 Oct 08:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Hero_Womens_Indian_Open/5?event_id=101909",
+        "reason": "Outright tournament market. The official field list was not verified, so a tournament-winner probability cannot be computed. OWGR average points were retrieved (https://www.owgr.com/current-world-ranking, week 42, 18 Oct 2026) but a field is required to normalise them."
+      },
+      {
+        "sport": "handball",
+        "match": "GOG vs KIF Kolding",
+        "market": "Money Line",
+        "listed_time": "Today 15:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "SG Flensburg Handewitt vs Fuchse Berlin",
+        "market": "Money Line",
+        "listed_time": "Today 14:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "SC Magdeburg vs TVB Stuttgart",
+        "market": "Money Line",
+        "listed_time": "Today 17:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Podravka Vegeta W vs Nykobing FH W",
+        "market": "Money Line",
+        "listed_time": "Today 13:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Ribe Esbjerg HH vs Skanderborg Handbold",
+        "market": "Money Line",
+        "listed_time": "Today 13:30",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "CSM Bucuresti W vs Sola W",
+        "market": "Money Line",
+        "listed_time": "Today 15:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "TBV Lemgo Lippe vs Frisch Auf Goppingen",
+        "market": "Money Line",
+        "listed_time": "Today 15:30",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Bergsoy vs OIF Arendal",
+        "market": "Money Line",
+        "listed_time": "Today 15:30",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Flint Tonsberg W vs Utleira W",
+        "market": "Money Line",
+        "listed_time": "Today 15:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Chambery Savoie vs Pays dAix UC",
+        "market": "Money Line",
+        "listed_time": "Today 16:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Aalborg Handbold vs Mors Thy Handbold",
+        "market": "Money Line",
+        "listed_time": "Today 19:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Bjerringbro Silkeborg vs TMS Ringsted",
+        "market": "Money Line",
+        "listed_time": "Today 17:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "BM Cangas vs FC Barcelona",
+        "market": "Money Line",
+        "listed_time": "Today 17:15",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "handball",
+        "match": "Fredericia HK vs Skive FH",
+        "market": "Money Line",
+        "listed_time": "Today 18:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Handball/20",
+        "reason": "OLBG publishes favourite/underdog/tie base rates for EHF and IHF tournaments only; these fixtures are domestic Danish, German, Norwegian, French, Austrian and Spanish league games, so no published base rate applies. Sources to consult: the relevant national federation league table."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "Adler Mannheim vs Schwenninger Wild Wings",
+        "market": "Money Line",
+        "listed_time": "Today 15:30",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "CLB Blue Jackets @ MIN Wild",
+        "market": "Money Line",
+        "listed_time": "Today 23:07",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "ERC Ingolstadt vs Augsburger Panther",
+        "market": "Money Line",
+        "listed_time": "Today 15:30",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "Kolner Haie vs Fischtown Pinguins Bremerhaven",
+        "market": "Money Line",
+        "listed_time": "Today 15:30",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "HCB Sudtirol Alperia vs EHC Black Wings Linz",
+        "market": "Money Line",
+        "listed_time": "Today 17:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "CAR Hurricanes @ CGY Flames",
+        "market": "Money Line",
+        "listed_time": "Tomorrow 01:07",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "Milano HC vs Fehervar AV19",
+        "market": "Money Line",
+        "listed_time": "Today 16:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "HC TWK Innsbruck vs HK Olimpija Ljubljana",
+        "market": "Game Totals",
+        "listed_time": "Today 16:30",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "ice_hockey",
+        "match": "Nurnberg Ice Tigers vs EHC Munchen",
+        "market": "Money Line",
+        "listed_time": "Today 18:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "reason": "No official league standings retrieved for both clubs in-session. Sources to consult: https://www.nhl.com/standings and the DEL / ICEHL official sites."
+      },
+      {
+        "sport": "motor_racing",
+        "match": "USA Grand Prix",
+        "market": "Win Race",
+        "listed_time": "25 Oct 20:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+        "reason": "Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar."
+      },
+      {
+        "sport": "motor_racing",
+        "match": "USA Grand Prix",
+        "market": "Fastest Lap",
+        "listed_time": "25 Oct 20:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+        "reason": "Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar."
+      },
+      {
+        "sport": "motor_racing",
+        "match": "Formula 1 Drivers Championship 2026",
+        "market": "Win Tournament",
+        "listed_time": "06 Dec 13:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+        "reason": "Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar."
+      },
+      {
+        "sport": "motor_racing",
+        "match": "Formula 1 Drivers Championship 2026 Without Kimi Antonelli",
+        "market": "Win Tournament",
+        "listed_time": "06 Dec 13:00",
+        "as_of": "2026-10-18",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+        "reason": "Multi-car race, not a head-to-head match. Requires the official FIA entry list and championship standings. Sources to consult: https://www.formula1.com/en/results and the FIA official calendar."
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Montauban v Oyonnax",
+        "market": "To Win",
+        "listed_time": "Tomorrow 20:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Agen v Nissa",
+        "market": "To Win",
+        "listed_time": "23 Oct 18:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Soyaux Angouleme v Dax",
+        "market": "To Win",
+        "listed_time": "23 Oct 18:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Narbonne v Brive",
+        "market": "To Win",
+        "listed_time": "23 Oct 18:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Aurillac v Nevers",
+        "market": "To Win",
+        "listed_time": "23 Oct 18:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Valence Romans v Colomiers",
+        "market": "To Win",
+        "listed_time": "23 Oct 18:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Grenoble v Biarritz",
+        "market": "Handicap",
+        "listed_time": "23 Oct 20:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Provence v Beziers",
+        "market": "Handicap",
+        "listed_time": "23 Oct 20:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "French second-tier (Pro D2) or non-Top-14 fixture: no official league table retrieved in-session, and OLBG publishes no base rates for that competition. Source to consult: https://www.lnr.fr/rugby-pro-d2/classement or https://www.urcrugby.com"
+      },
+      {
+        "sport": "rugby_union",
+        "match": "Six Nations 2027",
+        "market": "Win Tournament",
+        "listed_time": "14 Mar 2027 20:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "reason": "Antepost outright on national teams. Requires the official World Rugby rankings. Source to consult: https://www.world.rugby/rankings/mru"
+      },
+      {
+        "sport": "snooker",
+        "match": "Cheung Ka Wai v Stuart Bingham",
+        "market": "Win Match",
+        "listed_time": "Today 05:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Cheung_Ka_Wai_v_Stuart_Bingham/8?event_id=9933",
+        "reason": "Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings"
+      },
+      {
+        "sport": "snooker",
+        "match": "Pang Junxu v Liam Davies",
+        "market": "Win Match",
+        "listed_time": "Today 05:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Pang_Junxu_v_Liam_Davies/8?event_id=9929",
+        "reason": "Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings"
+      },
+      {
+        "sport": "snooker",
+        "match": "Elliot Slessor v Jamie Jones",
+        "market": "Win Match",
+        "listed_time": "Today 15:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Elliot_Slessor_v_Jamie_Jones/8?event_id=9931",
+        "reason": "Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings"
+      },
+      {
+        "sport": "snooker",
+        "match": "Luca Brecel v Martin O Donnell",
+        "market": "Win Match",
+        "listed_time": "Today 15:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Luca_Brecel_v_Martin_O_Donnell/8?event_id=9932",
+        "reason": "Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings"
+      },
+      {
+        "sport": "snooker",
+        "match": "John Higgins v Jak Jones",
+        "market": "Win Match",
+        "listed_time": "Today 08:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934",
+        "reason": "Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings"
+      },
+      {
+        "sport": "snooker",
+        "match": "Sam Craigie v Xu Si",
+        "market": "Win Match",
+        "listed_time": "Today 09:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Sam_Craigie_v_Xu_Si/8?event_id=9930",
+        "reason": "Official World Snooker Tour ranking not verified for both players (see F-12). Source to consult: https://wst.tv/rankings"
+      },
+      {
+        "sport": "tennis",
+        "match": "Leylah Fernandez vs Aliaksandra Sasnovich",
+        "market": "Win Match",
+        "listed_time": "Today 02:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Leylah_Fernandez_vs_Aliaksandra_Sasnovich/3?event_id=902039",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Katie Boulter vs Viktorija Golubic",
+        "market": "Win Match",
+        "listed_time": "Today 01:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Katie_Boulter_vs_Viktorija_Golubic/3?event_id=902065",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "James Duckworth vs Luciano Darderi",
+        "market": "Win Match",
+        "listed_time": "Today 02:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/James_Duckworth_vs_Luciano_Darderi/3?event_id=902038",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Adrian Mannarino vs Andrey Rublev",
+        "market": "Win Match",
+        "listed_time": "Today 05:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Adrian_Mannarino_vs_Andrey_Rublev/3?event_id=902037",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Sorana Cirstea vs Sara Bejlek",
+        "market": "Win Match",
+        "listed_time": "Today 04:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Sorana_Cirstea_vs_Sara_Bejlek/3?event_id=902074",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Zangar Nurlanuly vs Tomas Machac",
+        "market": "1st Set Winner",
+        "listed_time": "Today 04:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Zangar_Nurlanuly_vs_Tomas_Machac/3?event_id=901935",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Mattia Bellucci vs Tomas Martin Etcheverry",
+        "market": "Set Betting",
+        "listed_time": "Today 02:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mattia_Bellucci_vs_Tomas_Martin_Etcheverry/3?event_id=901993",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Dino Prizmic vs Damir Dzumhur",
+        "market": "Win Match",
+        "listed_time": "Today 05:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Dino_Prizmic_vs_Damir_Dzumhur/3?event_id=901896",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Stan Wawrinka vs Martin Landaluce",
+        "market": "Win Match",
+        "listed_time": "Today 08:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Martin_Landaluce/3?event_id=901974",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "David Goffin vs Remy Bertola",
+        "market": "Win Match",
+        "listed_time": "Today 12:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/David_Goffin_vs_Remy_Bertola/3?event_id=902028",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Facundo Diaz Acosta vs Nikoloz Basilashvili",
+        "market": "Set Betting",
+        "listed_time": "Today 04:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Facundo_Diaz_Acosta_vs_Nikoloz_Basilashvili/3?event_id=902040",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Martin Damm vs Francisco Cerundolo",
+        "market": "Set Betting",
+        "listed_time": "Today 05:30",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Martin_Damm_vs_Francisco_Cerundolo/3?event_id=902048",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Mariano Navone vs Tallon Griekspoor",
+        "market": "Win Match",
+        "listed_time": "Today 07:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mariano_Navone_vs_Tallon_Griekspoor/3?event_id=902085",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "tennis",
+        "match": "Ekaterina Alexandrova vs Marta Kostyuk",
+        "market": "Win Match",
+        "listed_time": "Today 07:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ekaterina_Alexandrova_vs_Marta_Kostyuk/3?event_id=902084",
+        "reason": "Official ATP/WTA ranking not verified for both players (see F-09). Source to consult: https://www.atptour.com/en/rankings/singles and https://www.wtatennis.com/rankings/singles"
+      },
+      {
+        "sport": "volleyball",
+        "match": "SAVO Volley vs Loimu",
+        "market": "Win Match",
+        "listed_time": "Today 16:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "Prostejov W vs VK Lvice Praha W",
+        "market": "Win Match",
+        "listed_time": "Today 17:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "Vampula W vs Arctic Volley W",
+        "market": "Win Match",
+        "listed_time": "Today 16:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "St Nazaire vs Toulouse",
+        "market": "Win Match",
+        "listed_time": "Today 19:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "Praia Clube W vs Pinheiros W",
+        "market": "Win Match",
+        "listed_time": "Tomorrow 01:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "TSV Hartberg W vs VBV Trofaiach-WSV Eisenerz W",
+        "market": "Win Match",
+        "listed_time": "Today 16:35",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "TV Rottenburg vs SWD Duren",
+        "market": "Win Match",
+        "listed_time": "Today 17:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "Narbonne vs Royan",
+        "market": "Win Match",
+        "listed_time": "Today 18:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "VCO Berlin vs FT Freiburg",
+        "market": "Win Match",
+        "listed_time": "Today 18:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "Fluminense W vs Sancor Volei W",
+        "market": "Win Match",
+        "listed_time": "Today 22:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "AZS Olsztyn vs Norwid Czestochowa",
+        "market": "Win Match",
+        "listed_time": "Today 16:30",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      },
+      {
+        "sport": "volleyball",
+        "match": "AS Cannes vs Sete",
+        "market": "Win Match",
+        "listed_time": "Today 18:00",
+        "as_of": "2026-10-20",
+        "retrieved_via": "indexed_snapshot",
+        "source_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+        "reason": "No official league standings retrieved for either club in-session. Sources to consult: the relevant national federation (Finland, Czechia, France, Brazil, Austria, Germany, Poland, Italy, Turkey)."
+      }
+    ]
+  },
+  {
+    "id": "F-16",
+    "severity": "data-freshness",
+    "area": "inventory",
+    "title": "Most inventory rows come from dated search-index snapshots rather than a live fetch",
+    "detail": "Live fetches on 2026-10-21 covered tennis, cricket, snooker, golf and basketball (58 rows). Darts, rugby union, ice hockey, handball, volleyball, baseball and motor racing (86 rows) come from search-index copies dated 2026-10-18 to 2026-10-20, where the page's own 'Today' refers to that earlier date. Each row carries retrieved_via and as_of so the two populations are never mixed.",
+    "action": "Re-collect those seven sports with a live fetch before acting on their times."
+  },
+  {
+    "id": "F-17",
+    "severity": "coverage-gap",
+    "area": "inventory",
+    "title": "Aussie Rules and eSports have no OLBG betting-tips node and no upcoming events",
+    "detail": "https://www.olbg.com/sitemap-betting-tips.xml lists /best-tipsters/Aussie_Rules/22 and /best-tipsters/eSports/23 but no corresponding /betting-tips node for either. The AFL 2026 season content on OLBG is a February pre-season preview; the 2026 season has concluded.",
+    "action": "Both sports are reported as zero events rather than omitted silently."
+  },
+  {
+    "id": "F-18",
+    "severity": "coverage-gap",
+    "area": "inventory",
+    "title": "Rugby League lists no upcoming events",
+    "detail": "https://www.olbg.com/betting-tips/Rugby_League/10 currently serves only its historical statistics tables (Super League, Championship, NRL) with no fixture list. The fixtures that appear in search-index copies of the same URL are dated 28 March 2026.",
+    "action": "Rugby League is reported as zero current events. Its published base rates are retained in the model inputs for the next window."
+  },
+  {
+    "id": "F-19",
+    "severity": "model-limitation",
+    "area": "cricket",
+    "title": "No home-advantage term in the cricket model",
+    "detail": "No official, in-session verifiable home-advantage coefficient for ODI or T20I cricket was available, so the term is set to zero rather than guessed. Both ICC-rated fixtures modelled are at neutral venues in the UAE, which limits the impact for this run.",
+    "action": "Add a sourced home-advantage coefficient before applying the model to home-and-away series."
+  },
+  {
+    "id": "F-20",
+    "severity": "source-tier",
+    "area": "predictions",
+    "title": "Player availability in prediction P-01 comes from regional press, not an official team sheet",
+    "detail": "The Thomas Ramos, Tommaso Menoncello, Blair Kinghorn and Jack Willis availability statements are sourced to La Depeche and Rugbyrama (both 20 October 2026). Neither the LNR nor Stade Toulousain published a confirmed team sheet at collection time.",
+    "action": "Treat as press-tier evidence. Re-check against the official LNR match sheet before staking."
+  },
+  {
+    "id": "F-21",
+    "severity": "environment",
+    "area": "publishing",
+    "title": "GitHub Pages cannot be repointed at /docs, so the site publishes from the repository root",
+    "detail": "Pages on this repository is build_type 'legacy' with source {branch: main, path: '/'}. PUT /repos/buffedlizard55-lab/OLBG2/pages with source[path]=/docs returns '403 Resource not accessible by integration' - the available token has no pages:write scope. Adding an Actions workflow would not help either, because switching build_type to 'workflow' needs the same permission.",
+    "consequence": "scripts/build_site.py generates the site at the repository root (index.html, sports.html, lines.html, picks.html, predictions.html, methodology.html, verification.html, flagged.html, excluded.html, sports/, assets/, .nojekyll) instead of into docs/. This also produces cleaner URLs: https://buffedlizard55-lab.github.io/OLBG2/flagged.html rather than /docs/flagged.html.",
+    "action": "If a docs/ layout is preferred, a maintainer with pages:write can run 'gh api -X PUT repos/buffedlizard55-lab/OLBG2/pages -f source[branch]=main -f source[path]=/docs' and then change the DOCS constant in scripts/build_site.py back to ROOT / 'docs'."
+  }
+]

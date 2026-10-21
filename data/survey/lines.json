@@ -1,0 +1,1014 @@
+{
+  "model_constants": {
+    "cricket_odi_scale": 25.0,
+    "cricket_t20i_scale": 50.0,
+    "cricket_home_advantage": 0.0,
+    "rugby_points_per_logit": 6.0,
+    "rugby_draw_share_from_base": true,
+    "notes": [
+      "ODI and T20I ICC ratings live on different scales (ODI 0-160, T20I 0-300), so each format gets its own logistic scale.",
+      "No home-advantage term is applied to cricket because no official, in-session verifiable coefficient was available. Both cricket fixtures modelled are at neutral venues in the UAE, which limits the impact. Flagged as a limitation.",
+      "Rugby union Tier-2 lines use a logistic on the league-points gap with the draw probability held at the published competition base rate and the remaining mass split between the two sides."
+    ]
+  },
+  "verified_inputs": {
+    "icc": {
+      "source": "https://www.icc-cricket.com/rankings/team-rankings",
+      "read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
+      "cross_check": "https://en.wikipedia.org/wiki/ICC_Men%27s_ODI_Team_Rankings",
+      "as_of": {
+        "odi": "2026-10-19",
+        "t20i": "2026-10-14"
+      },
+      "odi": {
+        "India": 115,
+        "New Zealand": 109,
+        "South Africa": 104,
+        "Australia": 102,
+        "Pakistan": 102,
+        "England": 95,
+        "Sri Lanka": 94,
+        "Afghanistan": 92,
+        "Bangladesh": 82,
+        "West Indies": 79,
+        "Zimbabwe": 64,
+        "Ireland": 51,
+        "Scotland": 45,
+        "Netherlands": 44,
+        "USA": 41,
+        "Namibia": 32,
+        "Nepal": 30,
+        "Oman": 23,
+        "UAE": 14,
+        "Canada": 12
+      },
+      "t20i": {
+        "England": 269,
+        "India": 267,
+        "Australia": 260,
+        "New Zealand": 247,
+        "South Africa": 243,
+        "Pakistan": 240,
+        "West Indies": 236,
+        "Bangladesh": 222,
+        "Sri Lanka": 221,
+        "Afghanistan": 218,
+        "Ireland": 205,
+        "Zimbabwe": 202,
+        "USA": 183,
+        "Nepal": 181,
+        "Netherlands": 180,
+        "Namibia": 179
+      }
+    },
+    "top14": {
+      "source_official": "https://www.lnr.fr/rugby-top-14/classement",
+      "read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
+      "corroborated_by": "https://www.rugbyorbit.com/competitions/top-14/",
+      "as_of": "2026-10-20",
+      "round": 6,
+      "table": {
+        "Toulouse": [
+          24,
+          6,
+          5,
+          0,
+          1,
+          73
+        ],
+        "Pau": [
+          22,
+          6,
+          5,
+          0,
+          1,
+          58
+        ],
+        "Bordeaux": [
+          19,
+          6,
+          4,
+          0,
+          2,
+          64
+        ],
+        "La Rochelle": [
+          18,
+          6,
+          4,
+          0,
+          2,
+          9
+        ],
+        "Bayonne": [
+          17,
+          6,
+          4,
+          0,
+          2,
+          -24
+        ],
+        "Stade Francais": [
+          14,
+          6,
+          3,
+          0,
+          3,
+          -11
+        ],
+        "Montpellier": [
+          14,
+          6,
+          3,
+          0,
+          3,
+          41
+        ],
+        "Lyon": [
+          14,
+          6,
+          3,
+          0,
+          3,
+          -9
+        ],
+        "Perpignan": [
+          13,
+          6,
+          3,
+          0,
+          3,
+          -33
+        ],
+        "Toulon": [
+          12,
+          6,
+          2,
+          0,
+          4,
+          0
+        ],
+        "Clermont": [
+          11,
+          6,
+          2,
+          0,
+          4,
+          -29
+        ],
+        "Racing 92": [
+          10,
+          6,
+          2,
+          0,
+          4,
+          -53
+        ],
+        "Castres": [
+          9,
+          6,
+          2,
+          0,
+          4,
+          -27
+        ],
+        "Vannes": [
+          1,
+          6,
+          0,
+          0,
+          6,
+          -59
+        ]
+      }
+    },
+    "olbg_base_rates": {
+      "rugby_union": {
+        "source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        "as_of": "2026-10-21",
+        "Premiership": [
+          64.1,
+          34.1,
+          1.9,
+          54.0,
+          15.2,
+          540
+        ],
+        "Top 14": [
+          74.4,
+          23.3,
+          2.3,
+          49.7,
+          14.6,
+          910
+        ],
+        "Super Rugby": [
+          59.6,
+          38.4,
+          2.0,
+          56.1,
+          16.0,
+          406
+        ],
+        "URC": [
+          64.4,
+          32.9,
+          2.6,
+          48.9,
+          14.8,
+          720
+        ]
+      },
+      "handball": {
+        "source": "https://www.olbg.com/betting-tips/Handball/20",
+        "as_of": "2026-10-18",
+        "EHF Champions League (men)": [
+          654,
+          68.2,
+          22.0,
+          9.8
+        ],
+        "EHF Champions League (women)": [
+          647,
+          74.5,
+          18.9,
+          6.6
+        ],
+        "European Championship (men)": [
+          307,
+          68.4,
+          22.5,
+          9.1
+        ],
+        "European Championship (women)": [
+          253,
+          75.9,
+          18.6,
+          5.5
+        ],
+        "IHF World Championship (men)": [
+          502,
+          77.9,
+          14.9,
+          7.2
+        ]
+      },
+      "rugby_league": {
+        "source": "https://www.olbg.com/betting-tips/Rugby_League/10",
+        "as_of": "2026-10-20",
+        "Super League": [
+          57.3,
+          40.2,
+          2.5,
+          42.0,
+          18.4,
+          836
+        ],
+        "Championship": [
+          52.8,
+          45.4,
+          1.8,
+          48.3,
+          21.7,
+          955
+        ],
+        "NRL": [
+          54.1,
+          41.6,
+          4.4,
+          46.0,
+          null,
+          1008
+        ]
+      }
+    },
+    "form": {
+      "Afghanistan": {
+        "facts": [
+          "Beat Zimbabwe by 158 runs in the UAE ODI Tri-Series; Sediqullah Atal 102 off 110 and Ibrahim Zadran 90 off 96 in a total of 294.",
+          "Beat Bangladesh by 200 runs in the 2nd ODI at Abu Dhabi (Afghanistan 190, Bangladesh 109).",
+          "Only Test v Bangladesh (9-13 Oct 2026, Abu Dhabi) drawn; Rahmat Shah 105 not out in the first innings."
+        ],
+        "source": "https://www.cricinfo.com/series/afghanistan-v-bangladesh-2026-27-1555106/match-schedule-fixtures-and-results",
+        "corroborated_by": "https://www.espn.com/cricket/series/_/id/23884/afg-vs-ban",
+        "as_of": "2026-10-20"
+      },
+      "Bangladesh": {
+        "facts": [
+          "Lost to Afghanistan by 200 runs in the 2nd ODI, bowled out for 109 chasing 191.",
+          "Lost to Zimbabwe by 99 runs earlier in the UAE ODI Tri-Series.",
+          "Litton Das top-scored for the side in the series with 155 runs in two innings."
+        ],
+        "source": "https://www.espn.com/cricket/series/_/id/23884/afg-vs-ban",
+        "corroborated_by": "https://www.cricinfo.com/team/afghanistan-40/match-schedule-fixtures-and-results",
+        "as_of": "2026-10-20"
+      },
+      "Toulouse": {
+        "facts": [
+          "Top of the Top 14 after round 6 with 24 points from 6 matches (5 wins, 1 loss) and a +73 points difference.",
+          "Beat Bayonne 45-34 at home on Sunday 11 October 2026 in round 6."
+        ],
+        "source": "https://www.lnr.fr/rugby-top-14/classement",
+        "corroborated_by": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
+        "as_of": "2026-10-20"
+      },
+      "Perpignan": {
+        "facts": [
+          "Ninth in the Top 14 after round 6 with 13 points (3 wins, 3 losses) and a -33 points difference.",
+          "Beat Vannes 21-12 at home on Saturday 10 October 2026 in round 6."
+        ],
+        "source": "https://www.lnr.fr/rugby-top-14/classement",
+        "corroborated_by": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
+        "as_of": "2026-10-20"
+      },
+      "Bordeaux": {
+        "facts": [
+          "Third in the Top 14 after round 6 with 19 points from 6 matches (4 wins, 2 losses) and a +64 points difference.",
+          "Won 23-22 away at Clermont on Saturday 10 October 2026 in round 6."
+        ],
+        "source": "https://www.lnr.fr/rugby-top-14/classement",
+        "corroborated_by": "https://all.rugby/tournament/top-14/table",
+        "as_of": "2026-10-20"
+      },
+      "La Rochelle": {
+        "facts": [
+          "Fourth in the Top 14 after round 6 with 18 points from 6 matches (4 wins, 2 losses) and a +9 points difference.",
+          "Won 28-16 away at Lyon on Saturday 10 October 2026 in round 6."
+        ],
+        "source": "https://www.lnr.fr/rugby-top-14/classement",
+        "corroborated_by": "https://all.rugby/tournament/top-14/table",
+        "as_of": "2026-10-20"
+      }
+    }
+  },
+  "lines": [
+    {
+      "match": "Afghanistan vs Bangladesh One Day Match",
+      "sport": "cricket",
+      "tier": "tier1",
+      "competition": "ICC ODI rated fixture",
+      "side_a": "Afghanistan",
+      "side_b": "Bangladesh",
+      "rating_a": 92,
+      "rating_b": 82,
+      "rating_scale": 25.0,
+      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
+      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
+      "rating_as_of": "2026-10-19",
+      "p_a": 0.5987,
+      "p_b": 0.4013,
+      "sensitivity_p_a": {
+        "scale_20.0": 0.6225,
+        "scale_25.0": 0.5987,
+        "scale_30.0": 0.5826
+      },
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.5987,
+          "our_fair_odds_a": 1.67,
+          "our_fair_odds_b": 2.49,
+          "basis": "ICC rating gap, logistic"
+        },
+        {
+          "name": "Match Total (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official venue/pitch/scoring-rate data verified in-session"
+        },
+        {
+          "name": "Handicap (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official margin model input verified in-session"
+        }
+      ],
+      "pick": "Afghanistan",
+      "pick_probability": 0.5987,
+      "venue": "Sharjah Cricket Stadium (per Wikipedia) / Abu Dhabi (per ESPNcricinfo) - CONFLICT",
+      "official_start": "2026-10-21 11:30 GMT",
+      "official_source": "https://www.cricinfo.com/series/uae-odi-tri-series-2026-27-1555109/afghanistan-vs-bangladesh-3rd-match-1555119/live-cricket-score",
+      "form_verified": true,
+      "confidence": "high",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Afghanistan_vs_Bangladesh_One_Day_Match/7?event_id=188824",
+      "olbg_listed_time": "Today 07:30",
+      "olbg_market": "Win Match",
+      "olbg_top_selection": "Afghanistan",
+      "olbg_tips": "7/7",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "verified_h2h": {
+        "picked_side": "Afghanistan",
+        "result": "Afghanistan won by 200 runs (Afghanistan 190, Bangladesh 109 in 28.3 overs), 2nd ODI, Abu Dhabi",
+        "date": "2026-10-17",
+        "source": "https://www.espn.com/cricket/series/_/id/23884/afg-vs-ban",
+        "corroborated_by": "https://www.cricinfo.com/series/afghanistan-v-bangladesh-2026-27-1555106/match-schedule-fixtures-and-results"
+      },
+      "confidence_notes": [
+        "Verified same-series head-to-head: Afghanistan won by 200 runs (Afghanistan 190, Bangladesh 109 in 28.3 overs), 2nd ODI, Abu Dhabi on 2026-10-17.",
+        "HIGH via the corroborated head-to-head path (threshold 0.55, not 0.70)."
+      ]
+    },
+    {
+      "match": "New Zealand vs India 1st T20 Match",
+      "sport": "cricket",
+      "tier": "tier1",
+      "competition": "ICC T20I rated fixture",
+      "side_a": "New Zealand",
+      "side_b": "India",
+      "rating_a": 247,
+      "rating_b": 267,
+      "rating_scale": 50.0,
+      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
+      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
+      "rating_as_of": "2026-10-14",
+      "p_a": 0.4013,
+      "p_b": 0.5987,
+      "sensitivity_p_a": {
+        "scale_40.0": 0.6225,
+        "scale_50.0": 0.5987,
+        "scale_60.0": 0.5826
+      },
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.4013,
+          "our_fair_odds_a": 2.49,
+          "our_fair_odds_b": 1.67,
+          "basis": "ICC rating gap, logistic"
+        },
+        {
+          "name": "Match Total (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official venue/pitch/scoring-rate data verified in-session"
+        },
+        {
+          "name": "Handicap (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official margin model input verified in-session"
+        }
+      ],
+      "pick": "India",
+      "pick_probability": 0.5987,
+      "venue": null,
+      "official_start": null,
+      "official_source": null,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_1st_T20_Match/7?event_id=188814",
+      "olbg_listed_time": "Tomorrow 03:00",
+      "olbg_market": "Win Match",
+      "olbg_top_selection": "India",
+      "olbg_tips": "5/7",
+      "olbg_tip_pct": 71,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Namibia vs Ireland 1st ODI",
+      "sport": "cricket",
+      "tier": "tier1",
+      "competition": "ICC ODI rated fixture",
+      "side_a": "Namibia",
+      "side_b": "Ireland",
+      "rating_a": 32,
+      "rating_b": 51,
+      "rating_scale": 25.0,
+      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
+      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
+      "rating_as_of": "2026-10-19",
+      "p_a": 0.3186,
+      "p_b": 0.6814,
+      "sensitivity_p_a": {
+        "scale_20.0": 0.7211,
+        "scale_25.0": 0.6814,
+        "scale_30.0": 0.6532
+      },
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.3186,
+          "our_fair_odds_a": 3.14,
+          "our_fair_odds_b": 1.47,
+          "basis": "ICC rating gap, logistic"
+        },
+        {
+          "name": "Match Total (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official venue/pitch/scoring-rate data verified in-session"
+        },
+        {
+          "name": "Handicap (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official margin model input verified in-session"
+        }
+      ],
+      "pick": "Ireland",
+      "pick_probability": 0.6814,
+      "venue": null,
+      "official_start": null,
+      "official_source": null,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Namibia_vs_Ireland_1st_ODI/7?event_id=188828",
+      "olbg_listed_time": "Tomorrow 04:00",
+      "olbg_market": "Win Match",
+      "olbg_top_selection": "Ireland",
+      "olbg_tips": "3/3",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "England vs Sri Lanka One Day Match",
+      "sport": "cricket",
+      "tier": "tier1",
+      "competition": "ICC ODI rated fixture",
+      "side_a": "England",
+      "side_b": "Sri Lanka",
+      "rating_a": 95,
+      "rating_b": 94,
+      "rating_scale": 25.0,
+      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
+      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
+      "rating_as_of": "2026-10-19",
+      "p_a": 0.51,
+      "p_b": 0.49,
+      "sensitivity_p_a": {
+        "scale_20.0": 0.5125,
+        "scale_25.0": 0.51,
+        "scale_30.0": 0.5083
+      },
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.51,
+          "our_fair_odds_a": 1.96,
+          "our_fair_odds_b": 2.04,
+          "basis": "ICC rating gap, logistic"
+        },
+        {
+          "name": "Match Total (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official venue/pitch/scoring-rate data verified in-session"
+        },
+        {
+          "name": "Handicap (runs)",
+          "our_line": null,
+          "basis": null,
+          "unverified": true,
+          "reason": "No official margin model input verified in-session"
+        }
+      ],
+      "pick": "England",
+      "pick_probability": 0.51,
+      "venue": null,
+      "official_start": null,
+      "official_source": null,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/England_vs_Sri_Lanka_One_Day_Match/7?event_id=188829",
+      "olbg_listed_time": "Tomorrow 04:00",
+      "olbg_market": "Win Match",
+      "olbg_top_selection": "England",
+      "olbg_tips": "1/2",
+      "olbg_tip_pct": 50,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Toulouse v Perpignan",
+      "sport": "rugby_union",
+      "tier": "tier2",
+      "competition": "Top 14",
+      "side_a": "Toulouse",
+      "side_b": "Perpignan",
+      "rating_a": 24,
+      "rating_b": 13,
+      "rating_scale": 6.0,
+      "rating_label": "Top 14 league points after round 6",
+      "rating_source": "https://www.lnr.fr/rugby-top-14/classement",
+      "rating_read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
+      "rating_as_of": "2026-10-20",
+      "p_a": 0.951,
+      "p_b": 0.026,
+      "p_draw": 0.023,
+      "markets": [
+        {
+          "name": "Win Match (3-way moneyline)",
+          "our_probability": 0.951,
+          "our_probability_draw": 0.023,
+          "our_probability_away": 0.026,
+          "our_fair_odds_a": 1.05,
+          "our_fair_odds_draw": 43.48,
+          "our_fair_odds_b": 38.48,
+          "basis": "League-points gap (logistic) + published draw base rate"
+        },
+        {
+          "name": "Match Total (points)",
+          "our_line": 49.5,
+          "our_projected_total": 49.7,
+          "basis": "OLBG published Top 14 average total points 49.7 over 910 matches",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Handicap (points)",
+          "our_line": "home -14.5",
+          "our_projected_margin": 14.6,
+          "basis": "OLBG published Top 14 average winning margin 14.6; competition-level, not team-specific",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        }
+      ],
+      "pick": "Toulouse",
+      "pick_probability": 0.951,
+      "form_verified": true,
+      "confidence": "high",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_listed_time": "24 Oct 15:35",
+      "olbg_market": "Handicap",
+      "olbg_top_selection": "Perpignan +23.50",
+      "olbg_tips": "1/1",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-20",
+      "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": {
+        "home": 83.06,
+        "away": 15.32,
+        "draw": 1.61,
+        "source": "https://top14.lnr.fr/club/toulouse",
+        "as_of": "2026-10-19",
+        "kickoff_local": "2026-10-24 16:35 (French local)",
+        "venue": "Stade Ernest-Wallon, Toulouse",
+        "fixture_source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan"
+      },
+      "official_divergence_pp": 12.04,
+      "confidence_notes": [
+        "LNR publishes 83.06% for Toulouse; our line is 95.10% (divergence 12.04 pp)."
+      ]
+    },
+    {
+      "match": "Bayonne v Lyon",
+      "sport": "rugby_union",
+      "tier": "tier2",
+      "competition": "Top 14",
+      "side_a": "Bayonne",
+      "side_b": "Lyon",
+      "rating_a": 17,
+      "rating_b": 14,
+      "rating_scale": 6.0,
+      "rating_label": "Top 14 league points after round 6",
+      "rating_source": "https://www.lnr.fr/rugby-top-14/classement",
+      "rating_read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
+      "rating_as_of": "2026-10-20",
+      "p_a": 0.5492,
+      "p_b": 0.4278,
+      "p_draw": 0.023,
+      "markets": [
+        {
+          "name": "Win Match (3-way moneyline)",
+          "our_probability": 0.5492,
+          "our_probability_draw": 0.023,
+          "our_probability_away": 0.4278,
+          "our_fair_odds_a": 1.82,
+          "our_fair_odds_draw": 43.48,
+          "our_fair_odds_b": 2.34,
+          "basis": "League-points gap (logistic) + published draw base rate"
+        },
+        {
+          "name": "Match Total (points)",
+          "our_line": 49.5,
+          "our_projected_total": 49.7,
+          "basis": "OLBG published Top 14 average total points 49.7 over 910 matches",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Handicap (points)",
+          "our_line": "home -14.5",
+          "our_projected_margin": 14.6,
+          "basis": "OLBG published Top 14 average winning margin 14.6; competition-level, not team-specific",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        }
+      ],
+      "pick": "Bayonne",
+      "pick_probability": 0.5492,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_listed_time": "24 Oct 15:35",
+      "olbg_market": "Handicap",
+      "olbg_top_selection": "Lyon +10.50",
+      "olbg_tips": "1/1",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-20",
+      "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "La Rochelle v Bordeaux",
+      "sport": "rugby_union",
+      "tier": "tier2",
+      "competition": "Top 14",
+      "side_a": "La Rochelle",
+      "side_b": "Bordeaux",
+      "rating_a": 18,
+      "rating_b": 19,
+      "rating_scale": 6.0,
+      "rating_label": "Top 14 league points after round 6",
+      "rating_source": "https://www.lnr.fr/rugby-top-14/classement",
+      "rating_read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
+      "rating_as_of": "2026-10-20",
+      "p_a": 0.2471,
+      "p_b": 0.7299,
+      "p_draw": 0.023,
+      "markets": [
+        {
+          "name": "Win Match (3-way moneyline)",
+          "our_probability": 0.2471,
+          "our_probability_draw": 0.023,
+          "our_probability_away": 0.7299,
+          "our_fair_odds_a": 4.05,
+          "our_fair_odds_draw": 43.48,
+          "our_fair_odds_b": 1.37,
+          "basis": "League-points gap (logistic) + published draw base rate"
+        },
+        {
+          "name": "Match Total (points)",
+          "our_line": 49.5,
+          "our_projected_total": 49.7,
+          "basis": "OLBG published Top 14 average total points 49.7 over 910 matches",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Handicap (points)",
+          "our_line": "home -14.5",
+          "our_projected_margin": 14.6,
+          "basis": "OLBG published Top 14 average winning margin 14.6; competition-level, not team-specific",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        }
+      ],
+      "pick": "Bordeaux",
+      "pick_probability": 0.7299,
+      "form_verified": true,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_listed_time": "25 Oct 20:05",
+      "olbg_market": "To Win",
+      "olbg_top_selection": "La Rochelle",
+      "olbg_tips": "1/1",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-20",
+      "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": {
+        "home": 46.24,
+        "away": 53.18,
+        "draw": 0.58,
+        "source": "https://top14.lnr.fr/club/la-rochelle",
+        "as_of": "2026-10-19",
+        "kickoff_local": "2026-10-25 21:05 (French local)",
+        "venue": "Stade Marcel-Deflandre, La Rochelle",
+        "corroborated_by": "https://top14.lnr.fr/club/bordeaux-begles"
+      },
+      "official_divergence_pp": 19.81,
+      "confidence_notes": [
+        "LNR publishes 53.18% for Bordeaux; our line is 72.99% (divergence 19.81 pp).",
+        "Divergence exceeds the 15.0 pp cap, so confidence is capped at LOW and the disagreement is flagged for review."
+      ]
+    },
+    {
+      "match": "Connacht v Zebre Parma",
+      "sport": "rugby_union",
+      "tier": "tier3",
+      "competition": "URC",
+      "side_a": "Connacht",
+      "side_b": "Zebre Parma",
+      "p_a": 0.644,
+      "p_b": 0.329,
+      "p_draw": 0.026,
+      "rating_source": null,
+      "markets": [
+        {
+          "name": "Win Match (3-way moneyline)",
+          "our_probability": 0.644,
+          "our_probability_draw": 0.026,
+          "our_probability_away": 0.329,
+          "our_fair_odds_a": 1.55,
+          "our_fair_odds_draw": 38.46,
+          "our_fair_odds_b": 3.04,
+          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Match Total (points)",
+          "our_line": 48.5,
+          "our_projected_total": 48.9,
+          "basis": "OLBG published URC average total points 48.9 over 720 matches",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Handicap (points)",
+          "our_line": "home -14.5",
+          "our_projected_margin": 14.8,
+          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        }
+      ],
+      "pick": "Connacht",
+      "pick_probability": 0.644,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_listed_time": "23 Oct 19:45",
+      "olbg_market": "To Win",
+      "olbg_top_selection": "Connacht",
+      "olbg_tips": "3/5",
+      "olbg_tip_pct": 60,
+      "as_of": "2026-10-20",
+      "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Bulls v Ulster",
+      "sport": "rugby_union",
+      "tier": "tier3",
+      "competition": "URC",
+      "side_a": "Bulls",
+      "side_b": "Ulster",
+      "p_a": 0.644,
+      "p_b": 0.329,
+      "p_draw": 0.026,
+      "rating_source": null,
+      "markets": [
+        {
+          "name": "Win Match (3-way moneyline)",
+          "our_probability": 0.644,
+          "our_probability_draw": 0.026,
+          "our_probability_away": 0.329,
+          "our_fair_odds_a": 1.55,
+          "our_fair_odds_draw": 38.46,
+          "our_fair_odds_b": 3.04,
+          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Match Total (points)",
+          "our_line": 48.5,
+          "our_projected_total": 48.9,
+          "basis": "OLBG published URC average total points 48.9 over 720 matches",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Handicap (points)",
+          "our_line": "home -14.5",
+          "our_projected_margin": 14.8,
+          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        }
+      ],
+      "pick": "Bulls",
+      "pick_probability": 0.644,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_listed_time": "24 Oct 12:45",
+      "olbg_market": "Handicap",
+      "olbg_top_selection": "Ulster +18.50",
+      "olbg_tips": "2/2",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-20",
+      "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Stormers v Scarlets",
+      "sport": "rugby_union",
+      "tier": "tier3",
+      "competition": "URC",
+      "side_a": "Stormers",
+      "side_b": "Scarlets",
+      "p_a": 0.644,
+      "p_b": 0.329,
+      "p_draw": 0.026,
+      "rating_source": null,
+      "markets": [
+        {
+          "name": "Win Match (3-way moneyline)",
+          "our_probability": 0.644,
+          "our_probability_draw": 0.026,
+          "our_probability_away": 0.329,
+          "our_fair_odds_a": 1.55,
+          "our_fair_odds_draw": 38.46,
+          "our_fair_odds_b": 3.04,
+          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Match Total (points)",
+          "our_line": 48.5,
+          "our_projected_total": 48.9,
+          "basis": "OLBG published URC average total points 48.9 over 720 matches",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Handicap (points)",
+          "our_line": "home -14.5",
+          "our_projected_margin": 14.8,
+          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        }
+      ],
+      "pick": "Stormers",
+      "pick_probability": 0.644,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_listed_time": "24 Oct 15:00",
+      "olbg_market": "To Win",
+      "olbg_top_selection": "Stormers",
+      "olbg_tips": "1/2",
+      "olbg_tip_pct": 50,
+      "as_of": "2026-10-20",
+      "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Leinster v Munster",
+      "sport": "rugby_union",
+      "tier": "tier3",
+      "competition": "URC",
+      "side_a": "Leinster",
+      "side_b": "Munster",
+      "p_a": 0.644,
+      "p_b": 0.329,
+      "p_draw": 0.026,
+      "rating_source": null,
+      "markets": [
+        {
+          "name": "Win Match (3-way moneyline)",
+          "our_probability": 0.644,
+          "our_probability_draw": 0.026,
+          "our_probability_away": 0.329,
+          "our_fair_odds_a": 1.55,
+          "our_fair_odds_draw": 38.46,
+          "our_fair_odds_b": 3.04,
+          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Match Total (points)",
+          "our_line": 48.5,
+          "our_projected_total": 48.9,
+          "basis": "OLBG published URC average total points 48.9 over 720 matches",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        },
+        {
+          "name": "Handicap (points)",
+          "our_line": "home -14.5",
+          "our_projected_margin": 14.8,
+          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
+          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+        }
+      ],
+      "pick": "Leinster",
+      "pick_probability": 0.644,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_listed_time": "24 Oct 18:00",
+      "olbg_market": "To Win",
+      "olbg_top_selection": "Leinster",
+      "olbg_tips": "1/1",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-20",
+      "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    }
+  ]
+}

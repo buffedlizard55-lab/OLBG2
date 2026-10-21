@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · OLBG2 Sports Betting Data</title>
+<meta name="description" content="Verified OLBG fixtures with independently originated betting lines and confidence-graded picks.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
+    <nav class="main"><a href="index.html" aria-current="page">Dashboard</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero">
+  <h1>Verified fixtures, our own lines, and the confidence behind every pick.</h1>
+  <p class="lede">A reverse-engineered view of OLBG's sports coverage: every fixture re-checked against the
+  official league or governing body, every price originated here from verified data, and every gap left blank
+  and flagged rather than guessed.</p>
+  <p class="meta">Capture window 2026-10-21 05:10–05:45 UTC · 33 fixtures · 30 with originated lines ·
+  4 high-confidence picks · 18 items flagged for review</p>
+</section>
+
+<div class="grid stats">
+  <div class="card stat"><div class="k">Fixtures verified</div><div class="v">33</div><div class="s">official source on every row</div></div>
+  <div class="card stat"><div class="k">Lines originated</div><div class="v">30</div><div class="s">moneyline · handicap · totals</div></div>
+  <div class="card stat"><div class="k">High-confidence picks</div><div class="v">4</div><div class="s">written predictions included</div></div>
+  <div class="card stat"><div class="k">Flagged for review</div><div class="v">18</div><div class="s">blank, unverified or irregular</div></div>
+</div>
+
+<h2 class="section">Sports covered</h2>
+<p class="section-sub">Eight of OLBG's included sports could not be surveyed before the capture window closed. They are listed on the flagged page, not silently dropped.</p>
+<div class="grid sports"><a class="card sport-card" href="sports/ice-hockey.html">
+          <h3>Ice Hockey</h3>
+          <p>NHL — lines originated from this season&#x27;s official team goal rates.</p>
+          <div class="row"><span>Fixtures</span><b>12</b></div>
+          <div class="row"><span>Lines originated</span><b>11</b></div>
+          <div class="row"><span>High confidence</span><b>4</b></div>
+        </a><a class="card sport-card" href="sports/basketball.html">
+          <h3>Basketball</h3>
+          <p>NBA — lines originated from the completed 2025-26 season as a prior.</p>
+          <div class="row"><span>Fixtures</span><b>11</b></div>
+          <div class="row"><span>Lines originated</span><b>11</b></div>
+          <div class="row"><span>High confidence</span><b>0</b></div>
+        </a><a class="card sport-card" href="sports/rugby-union.html">
+          <h3>Rugby Union</h3>
+          <p>United Rugby Championship Round 4 — lines from the official league table.</p>
+          <div class="row"><span>Fixtures</span><b>8</b></div>
+          <div class="row"><span>Lines originated</span><b>8</b></div>
+          <div class="row"><span>High confidence</span><b>0</b></div>
+        </a><a class="card sport-card" href="sports/cricket.html">
+          <h3>Cricket</h3>
+          <p>ICC-listed internationals — fixtures verified, lines deliberately not originated.</p>
+          <div class="row"><span>Fixtures</span><b>2</b></div>
+          <div class="row"><span>Lines originated</span><b>0</b></div>
+          <div class="row"><span>High confidence</span><b>0</b></div>
+        </a></div>
+
+<h2 class="section">All fixtures</h2>
+<p class="section-sub">Filter by sport, confidence or search a team. Every row links to the official fixture source; OLBG event links appear only where the pairing matched exactly.</p>
+<div class="panel">
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search team, competition or pick…" aria-label="Search fixtures">
+    <select id="fsport" aria-label="Filter by sport">
+      <option value="">All sports</option>
+      <option>Ice Hockey</option><option>Basketball</option><option>Rugby Union</option><option>Cricket</option>
+    </select>
+    <select id="fconf" aria-label="Filter by confidence">
+      <option value="">Any confidence</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
+      <option value="unverified">Not originated</option>
+    </select>
+    <span class="hint" id="count"></span>
+  </div>
+  <div class="table-scroll">
+  <table id="tbl">
+    <thead><tr><th>Match</th><th>Start</th><th>Pick</th><th>Confidence</th><th>Price</th><th>Official source</th></tr></thead>
+    <tbody><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Atlanta Hawks <span class="muted">@</span> Orlando Magic</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 19:00 ET</td>
+      <td>Orlando Magic<span class="sub">Moneyline · 54.1% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.78</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
+    </tr><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Milwaukee Bucks <span class="muted">@</span> Washington Wizards</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 19:00 ET</td>
+      <td>Milwaukee Bucks<span class="sub">Moneyline · 60.1% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.60</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Minnesota Timberwolves <span class="muted">@</span> Miami Heat</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 19:30 ET</td>
+      <td>Minnesota Timberwolves<span class="sub">Moneyline · 50.5% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.90</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
+    </tr><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Charlotte Hornets <span class="muted">@</span> Brooklyn Nets</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 19:30 ET</td>
+      <td>Charlotte Hornets<span class="sub">Moneyline · 67.2% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.43</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
+    </tr><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Chicago Bulls <span class="muted">@</span> Toronto Raptors</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 19:30 ET</td>
+      <td>Toronto Raptors<span class="sub">Moneyline · 68.0% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.41</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Indiana Pacers <span class="muted">@</span> New Orleans Pelicans</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 20:00 ET</td>
+      <td>New Orleans Pelicans<span class="sub">Moneyline · 62.0% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.55</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Utah Jazz <span class="muted">@</span> Memphis Grizzlies</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 20:00 ET</td>
+      <td>Memphis Grizzlies<span class="sub">Moneyline · 58.0% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.66</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/UTA_Jazz_@_MEM_Grizzlies/4?event_id=534894" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Basketball" data-conf="medium">
+      <td><span class="match">Dallas Mavericks <span class="muted">@</span> Houston Rockets</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 20:30 ET</td>
+      <td>Houston Rockets<span class="sub">Moneyline · 76.3% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.26</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
+    </tr><tr data-sport="Basketball" data-conf="medium">
+      <td><span class="match">Golden State Warriors <span class="muted">@</span> Los Angeles Lakers</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 22:00 ET</td>
+      <td>Los Angeles Lakers<span class="sub">Moneyline · 68.8% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.40</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
+    </tr><tr data-sport="Basketball" data-conf="low">
+      <td><span class="match">Phoenix Suns <span class="muted">@</span> Portland Trail Blazers</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 22:00 ET</td>
+      <td>Portland Trail Blazers<span class="sub">Moneyline · 52.2% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.84</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Basketball" data-conf="medium">
+      <td><span class="match">Sacramento Kings <span class="muted">@</span> LA Clippers</span><span class="sub">NBA</span></td>
+      <td class="num">2026-10-21 22:30 ET</td>
+      <td>LA Clippers<span class="sub">Moneyline · 72.4% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.33</span></td>
+      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
+    </tr><tr data-sport="Cricket" data-conf="unverified">
+      <td><span class="match">Bangladesh <span class="muted">@</span> Afghanistan</span><span class="sub">International (ODI)</span></td>
+      <td class="num">2026-10-21 07:30 (as shown by ICC, user-local)</td>
+      <td><span class="badge b-unv">Not originated</span></td>
+      <td><span class="badge b-unv">Unverified</span></td>
+      <td class="num"><span class="muted">—</span></td>
+      <td class="small"><a href="https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh" rel="noopener">ICC official match list</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Afghanistan_vs_Bangladesh_One_Day_Match/7?event_id=188824" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Cricket" data-conf="unverified">
+      <td><span class="match">India <span class="muted">@</span> New Zealand</span><span class="sub">International (T20I)</span></td>
+      <td class="num">2026-10-22 03:00 (as shown by ICC, user-local)</td>
+      <td><span class="badge b-unv">Not originated</span></td>
+      <td><span class="badge b-unv">Unverified</span></td>
+      <td class="num"><span class="muted">—</span></td>
+      <td class="small"><a href="https://www.icc-cricket.com/matches/271646/new-zealand-vs-india" rel="noopener">ICC official match list</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_1st_T20_Match/7?event_id=188814" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="high">
+      <td><span class="match">Philadelphia Flyers <span class="muted">@</span> Buffalo Sabres</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-21 23:30 UTC</td>
+      <td>Buffalo Sabres<span class="sub">Moneyline · 65.4% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.47</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="low">
+      <td><span class="match">Florida Panthers <span class="muted">@</span> Ottawa Senators</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-21 23:30 UTC</td>
+      <td>Florida Panthers<span class="sub">Moneyline · 50.9% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.89</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="high">
+      <td><span class="match">Nashville Predators <span class="muted">@</span> Boston Bruins</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-22 23:00 UTC</td>
+      <td>Boston Bruins<span class="sub">Moneyline · 65.3% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.47</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="low">
+      <td><span class="match">New York Rangers <span class="muted">@</span> Toronto Maple Leafs</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-22 23:00 UTC</td>
+      <td>New York Rangers<span class="sub">Moneyline · 50.3% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.91</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="unverified">
+      <td><span class="match">San Jose Sharks <span class="muted">@</span> Ottawa Senators</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-22 23:00 UTC</td>
+      <td><span class="badge b-unv">Not originated</span></td>
+      <td><span class="badge b-unv">Unverified</span></td>
+      <td class="num"><span class="muted">—</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="low">
+      <td><span class="match">Anaheim Ducks <span class="muted">@</span> New Jersey Devils</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-22 23:00 UTC</td>
+      <td>New Jersey Devils<span class="sub">Moneyline · 56.7% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.70</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="low">
+      <td><span class="match">Florida Panthers <span class="muted">@</span> Pittsburgh Penguins</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-22 23:00 UTC</td>
+      <td>Florida Panthers<span class="sub">Moneyline · 54.1% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.78</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="high">
+      <td><span class="match">Los Angeles Kings <span class="muted">@</span> New York Islanders</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-22 23:30 UTC</td>
+      <td>New York Islanders<span class="sub">Moneyline · 71.2% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.35</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="medium">
+      <td><span class="match">Vegas Golden Knights <span class="muted">@</span> St. Louis Blues</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-23 00:00 UTC</td>
+      <td>Vegas Golden Knights<span class="sub">Moneyline · 59.9% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.60</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="medium">
+      <td><span class="match">Winnipeg Jets <span class="muted">@</span> Dallas Stars</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-23 00:00 UTC</td>
+      <td>Dallas Stars<span class="sub">Moneyline · 63.5% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.51</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="high">
+      <td><span class="match">Minnesota Wild <span class="muted">@</span> Calgary Flames</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-23 01:00 UTC</td>
+      <td>Minnesota Wild<span class="sub">Moneyline · 68.8% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.40</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Ice Hockey" data-conf="low">
+      <td><span class="match">Carolina Hurricanes <span class="muted">@</span> Edmonton Oilers</span><span class="sub">NHL</span></td>
+      <td class="num">2026-10-23 01:00 UTC</td>
+      <td>Edmonton Oilers<span class="sub">Moneyline · 55.9% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.72</span></td>
+      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="low">
+      <td><span class="match">Hollywoodbets Sharks <span class="muted">@</span> Cardiff Rugby</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-23 14:45 local</td>
+      <td>Cardiff Rugby<span class="sub">Match winner · 53.4% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.80</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="medium">
+      <td><span class="match">Zebre Parma <span class="muted">@</span> Connacht Rugby</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-23 14:45 local</td>
+      <td>Connacht Rugby<span class="sub">Match winner · 62.5% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.54</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="medium">
+      <td><span class="match">10bet Lions <span class="muted">@</span> Edinburgh Rugby</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-23 14:45 local</td>
+      <td>Edinburgh Rugby<span class="sub">Match winner · 66.1% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.46</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="medium">
+      <td><span class="match">Ulster Rugby <span class="muted">@</span> Vodacom Bulls</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-24 07:45 local</td>
+      <td>Vodacom Bulls<span class="sub">Match winner · 71.5% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.34</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="medium">
+      <td><span class="match">Scarlets <span class="muted">@</span> DHL Stormers</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-24 10:00 local</td>
+      <td>DHL Stormers<span class="sub">Match winner · 64.5% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.49</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="low">
+      <td><span class="match">Glasgow Warriors <span class="muted">@</span> Benetton Rugby</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-24 10:00 local</td>
+      <td>Benetton Rugby<span class="sub">Match winner · 50.2% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.91</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="low">
+      <td><span class="match">Munster Rugby <span class="muted">@</span> Leinster Rugby</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-24 13:00 local</td>
+      <td>Leinster Rugby<span class="sub">Match winner · 59.6% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.61</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr><tr data-sport="Rugby Union" data-conf="low">
+      <td><span class="match">Dragons RFC <span class="muted">@</span> Ospreys</span><span class="sub">United Rugby Championship</span></td>
+      <td class="num">2026-10-24 14:00 local</td>
+      <td>Dragons RFC<span class="sub">Match winner · 51.1% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.88</span></td>
+      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
+    </tr></tbody>
+  </table>
+  </div>
+</div>
+
+<h2 class="section">How to read this</h2>
+<details open>
+  <summary>Prices are ours, not the market's</summary>
+  <p>OLBG publishes tip percentages but no prices, and no bookmaker odds were used. Every price above is
+  <code>1 / (probability × 1.04)</code>, i.e. our own fair price plus a 4% theoretical margin. They are not
+  available prices and should not be read as such. The full formulas live in <a href="methodology.html">Methodology</a>.</p>
+</details>
+<details>
+  <summary>What "confidence" means here</summary>
+  <p>Confidence grades how decisive the model is <em>and</em> how much verified data stands behind it.
+  High requires a probability of at least 65% from at least seven games of current-season data. The NBA's
+  season is one game old, so NBA picks are capped at medium; the URC has played three rounds, so it is also
+  capped at medium.</p>
+</details>
+<details>
+  <summary>Sports we could not cover in this capture</summary>
+  <p>Baseball, Darts, Golf, Greyhounds, Handball, Motor Racing, Rugby League, Snooker, Tennis, Volleyball,
+  eSports, Aussie Rules and Gaelic Football were listed by OLBG but could not be verified (or, for baseball,
+  had no games). Each has an entry on the <a href="flagged.html">Flagged for review</a> page with the reason.</p>
+</details>
+
+<script>
+(function () {
+  var q = document.getElementById('q'), fs = document.getElementById('fsport'),
+      fc = document.getElementById('fconf'), tbl = document.getElementById('tbl'),
+      count = document.getElementById('count');
+  function apply() {
+    var term = (q.value || '').toLowerCase(), sport = fs.value, conf = fc.value, shown = 0;
+    Array.prototype.forEach.call(tbl.tBodies[0].rows, function (row) {
+      var text = row.innerText.toLowerCase();
+      var okTerm = !term || text.indexOf(term) > -1;
+      var okSport = !sport || row.getAttribute('data-sport') === sport;
+      var rowConf = row.getAttribute('data-conf');
+      var okConf = !conf || (conf === 'unverified' ? rowConf !== 'high' && rowConf !== 'medium' && rowConf !== 'low' : rowConf === conf);
+      var show = okTerm && okSport && okConf;
+      row.style.display = show ? '' : 'none';
+      if (show) shown++;
+    });
+    count.textContent = shown + ' of ' + tbl.tBodies[0].rows.length + ' shown';
+  }
+  [q, fs, fc].forEach(function (el) { el.addEventListener('input', apply); el.addEventListener('change', apply); });
+  apply();
+})();
+</script>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
+    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="flagged.html">Flagged</a></span>
+  </div>
+</footer>
+</body>
+</html>

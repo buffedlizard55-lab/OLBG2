@@ -33,4 +33,4 @@ This was a copy/evidence review. No new sporting fact was marked verified, and t
 
 ## Follow-up after PR #39
 
-A concurrent integration added Handball and expanded the root snapshot from 35 to 47 stored rows. The evidence-limit wording was reapplied to the merged builder, preserving the Handball data and its pages; current generated counts should be read from the dashboard, not the historical 35-row observation above. This follow-up still does not re-verify the underlying Handball or earlier sporting facts.
+A concurrent integration added Handball and expanded the root snapshot from 35 to 47 stored rows. The evidence-limit wording was reapplied to the merged builder, preserving the Handball data and its pages; current generated counts should be read from the dashboard, not the historical 35-row observation above. Subsequent PRs #41–#42 corrected Handball model probabilities and prediction wording; this copy audit preserves those merged updates and does not re-verify their sporting facts.

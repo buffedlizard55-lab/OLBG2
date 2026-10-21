@@ -967,22 +967,58 @@ After the merge: 36 unit tests pass (up from 33, the three new ones are the conc
 builds and the survey gate pass, `integration_audit.py` reports 0 local link errors, and
 `official_source_audit.py` runs green. No other session's work was discarded.
 
-## Claim — session `arena/e3c5f898-olbg2` root-dashboard evidence-copy follow-up (2026-10-21)
+### Publish record — session `arena/73620ec4-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#39](https://github.com/buffedlizard55-lab/OLBG2/pull/39) |
+| Merge | **MERGED** 2026-10-21T07:12:59Z; merge commit `7dda52e9d2cda8bcd54c11f8acb48a9f49d38550` |
+| Concurrent merges handled | PRs #34–#38 landed on `main` while #39 was in CI. `main` was merged forward (no rebase); `README.md` took the newer evidence-caveat rewrite as its base and `COORDINATION.md` kept both ledgers. No other session's work discarded. |
+| Validate Pages content | Run `39560437531` — success |
+| GitHub Pages build and deployment | Run `39560436396` — success; Pages API reports `status: built`, source `main:/` |
+| Live check | `/index.html` served with 47 fixtures, 5 sport cards including Handball, and the 17-sport coverage table; `/sports/handball.html` served with 12 fixtures, 12 lines and 5 high-confidence picks; `/flagged.html` served with F24–F26 open and F12/F21 closed |
+| Cache note | The bare `/` path briefly served the previous cached page after deploy; `?cachebust=` returned the new build, and the repository blob at `main` was already correct. No rebuild was needed. |
+| Follow-up | This record plus a wording fix to the F21 closure evidence (84 prices / five predictions) go in a follow-up PR. |
+
+### Correction found by post-deploy review (2026-10-21 07:30 UTC)
+
+Reviewing the live picks page against `data/matches.json` exposed a real defect in this session's own work: three
+handball predictions still quoted the model probabilities from **before** the score-grid renormalisation
+(74.9%, 76.5%, 78.5%) while the published rows read 84.5%, 78.5% and 84.1%. The probabilities in the data were
+correct; the prose was stale. Two things changed as a result:
+
+1. The three predictions and their matching facts were corrected to the published values.
+2. `scripts/build_site.py` now fails the build if a prediction does not quote its row's published probability, and
+   `tests/test_dashboard.py` asserts the same rule along with six other structural checks (one prediction per high
+   row, ≥ 30 words, unique text, a source URL on every fact, an official fixture URL on every row, and the
+   handball rows' market set).
+
+A related wording defect was also fixed: the PSG prediction had claimed Zagreb's only win came against Celje. That
+was not verified from the standings (which publish only the aggregate 1-0-3 record), so the claim and its fact row
+were removed rather than left standing.
+
+### Final publish ledger — session `arena/73620ec4-olbg2`
+
+| PR | Purpose | Merge | Validate run | Pages run |
+|---|---|---|---|---|
+| [#39](https://github.com/buffedlizard55-lab/OLBG2/pull/39) | Handball slate, coverage table, docs | MERGED 07:12:59Z, `7dda52e` | `39560437531` success | `39560436396` success |
+| [#40](https://github.com/buffedlizard55-lab/OLBG2/pull/40) | Publish record + F21 wording | MERGED 07:14:47Z, `6d3f1a8` | `39560591224` success | success |
+| [#41](https://github.com/buffedlizard55-lab/OLBG2/pull/41) | Stale-probability fix, build guard, 6 integrity tests | MERGED, `273c3ad` | `39560880246` success | `39560879902` success |
+| #42 | Grammar fix and this ledger | see PR page | — | — |
+
+Pages API after the last deploy: `status: built`, source `main:/`. Live re-checks after each deploy:
+`/index.html` (47 fixtures, Handball card, 17-sport table), `/sports/handball.html` (12 fixtures, 12 lines,
+5 high picks), `/picks.html` (nine predictions, every quoted probability matching `data/matches.json`),
+`/flagged.html` (F24–F26 open, F12/F21 closed).
+
+## Session `arena/e3c5f898-olbg2` — root-dashboard evidence-copy follow-up (2026-10-21)
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Remove overbroad official-verification claims from root dashboard while preserving current all-sport integration | in progress | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, append-only `COORDINATION.md` |
+| Remove overbroad official-verification claims from root dashboard while preserving current integrated data | done | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, `COORDINATION.md` |
 
-After PR #38, a live Pages read found the root dashboard still claimed universal fixture verification. This follow-up is copy and disclosure only; no sporting values or model data are edited. Session `arena/73620ec4-olbg2` completed its overlapping root-dashboard integration in PR #39 before this follow-up was rebased. This work preserves that merged Handball scope/data and re-applies only the evidence-status wording to the updated builder.
+After PR #38, a live Pages read found the root dashboard still claimed universal fixture verification. Replaced that language with dated-snapshot and source-link limitations, model-output labels, and links to evidence/review pages. The change preserves all currently integrated match rows, line values, confidence labels, predictions, and source URLs; it does not mark any new sporting fact verified. The audit report records the observed copy and its limits.
 
-### Completion — session `arena/e3c5f898-olbg2` root-dashboard evidence-copy follow-up
+Integration and conflict record: while this follow-up was in progress, main advanced through the concurrent Handball integration and follow-up PRs #39–#42 (F21 ledger correction, probability guard/corrections, and prediction copy correction). Rebase conflicts were aborted safely; the updated main was merged. The append-only coordination conflict kept main's full session and publish records. The Handball HTML conflict was resolved by regenerating from the latest merged model/data, thereby retaining the upstream probability corrections and predictions. Evidence-copy changes were preserved in the builder and reapplied after each sync. No upstream data or changes were discarded.
 
-| Task | Status | Owner | Files |
-|---|---|---|---|
-| Remove overbroad official-verification claims from root dashboard while preserving current all-sport integration | done | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, `COORDINATION.md` |
-
-Replaced “verified fixtures,” “every fixture re-checked,” and “official source on every row” assertions with dated-snapshot and source-link limitations. Updated coverage-table descriptions to preserve the root-versus-survey scope disagreement and known overlaps; model prices and confidence are labeled as model outputs. Existing source URLs, matches, lines, confidence values, and predictions are preserved. Added a regression test for core disclosure language. Audit report: [`research/root-dashboard-copy-audit-e3c5f898.md`](research/root-dashboard-copy-audit-e3c5f898.md).
-
-Sync/conflict resolution: while the follow-up was in progress, `origin/main` advanced through PR #39 (Handball integration); PR #40 (ledger/F21 correction) was open but had not merged and was not incorporated here. A rebase conflicted in the append-only ledger and was aborted without loss. Merging the updated main then conflicted in `COORDINATION.md`, the dashboard builder, and generated root pages. Resolution retained the full upstream session/Handball changes, reapplied only this session's verification-copy changes to the updated builder, and regenerated root pages from the merged data. No upstream sport data or pages were discarded.
-
-Verification after integration: `python3 -m unittest discover -s tests -v`; `python3 scripts/build_site.py` (11 pages, 47 stored fixtures, 9 predictions, no broken links); `python3 scripts/build.py`; `python3 scripts/survey_build.py`; `python3 scripts/survey_verify.py` (24 pages, 130 survey inventory entries, 11 lines, 2 predictions, 21 flags; all structural checks green); `python3 scripts/integration_audit.py` (0 local-link errors); `python3 scripts/official_source_audit.py` (130 survey rows missing official fixture-source values; domain classification remains non-content verification). These gates validate structure, not sporting facts. No fresh external fact was marked verified.
+Verification on the merged base: `python3 -m unittest discover -s tests -v` (43 tests passed); `python3 scripts/build_site.py` (11 pages, 47 stored rows, 9 predictions); `python3 scripts/build.py`; `python3 scripts/survey_build.py`; `python3 scripts/survey_verify.py` (24 pages, 130 survey rows, 11 lines, 2 predictions, 21 flags; all structural gates green); `python3 scripts/integration_audit.py` (0 local link errors); `python3 scripts/official_source_audit.py` (130 survey rows lacking explicit official fixture-source values; domain classification is not content verification). No validator or build claims external factual accuracy.

@@ -642,3 +642,21 @@ It was aborted (`git rebase --abort`) with no loss — the correct push had alre
 Before merging, the prior sessions' CI gate was reproduced locally and passed:
 `python3 scripts/build_site.py` regenerates their `index.html`, `sports/*`, `assets/*`, `site/**`
 byte-identically (`git diff --exit-code` clean), so the root dashboard is not broken by this merge.
+
+---
+
+# Session `c8711d36` — refresh, gap-closure attempt and final integration (2026-10-21)
+
+**Session ID:** `c8711d36` · **Branch:** `arena/c8711d36-olbg2` · **Claimed:** 2026-10-21 (before any edit, per protocol)
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| R1 | Re-verify baseline (tests, survey gate, builds) | in progress | `c8711d36` | read-only |
+| R2 | Attempt to close open gaps from official sources only: ICC rankings (F11), ATP/WTA rankings (F04), San Jose Sharks goal totals (desk cross-scope request), NBA PF/PA for totals (F10) | unclaimed→in progress | `c8711d36` | `research/refresh-c8711d36.md`, `data/refresh/**` (new namespace) |
+| R3 | Add Survey link to root dashboard navigation (ca1d5677 integration request 1) | in progress | `c8711d36` | `scripts/build_site.py`, regenerated root HTML |
+| R4 | Record scope decision on Greyhounds/Gaelic Football divergence (survey F-03 vs dashboard config) as flagged, not silently changed | in progress | `c8711d36` | `data/flagged.json` append-only, `research/refresh-c8711d36.md` |
+| R5 | Final integration: rebuild all layers, verify no broken links, PR to main, merge, confirm Pages | in progress | `c8711d36` | shared outputs (integration session) |
+
+Rules for this session: no value is published unless an official source confirms it; failures are
+flagged, not filled. Prior layers' data files are not hand-edited; generated HTML is regenerated
+only through its own script.

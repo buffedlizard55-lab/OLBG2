@@ -1,0 +1,2029 @@
+{
+  "snapshot_utc": "2026-10-21T05:55:00Z",
+  "model_version": "1.0.0",
+  "params": {
+    "nhl_shrink_games": 12,
+    "nhl_home_goals": 0.25,
+    "nhl_logistic_scale": 1.2,
+    "nhl_total_sd": 1.7,
+    "nhl_league_total": 6.0,
+    "nba_home_points": 2.5,
+    "nba_logistic_scale": 11.0,
+    "high_edge": 0.13,
+    "medium_edge": 0.06,
+    "min_games_for_high": 7,
+    "min_prediction_words": 30
+  },
+  "fixtures": [
+    {
+      "id": "nhl-2026020152",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-21",
+      "time": "7:30 PM EDT",
+      "away": "Philadelphia Flyers",
+      "home": "Buffalo Sabres",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/phi-vs-buf/2026/10/21/2026020152",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897",
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "BUF",
+            "gp": 9,
+            "gf_pg": 3.0,
+            "ga_pg": 3.7777777777777777,
+            "gd_pg": -0.7777777777777778,
+            "rating": -0.3333333333333333
+          },
+          "away": {
+            "abbr": "PHI",
+            "gp": 11,
+            "gf_pg": 1.5454545454545454,
+            "ga_pg": 3.272727272727273,
+            "gd_pg": -1.7272727272727273,
+            "rating": -0.8260869565217391
+          }
+        },
+        "expected_margin": 0.743,
+        "expected_total": 5.91,
+        "money_line": {
+          "home": -185,
+          "away": 185,
+          "p_home": 0.65,
+          "p_away": 0.35,
+          "home_team": "Buffalo Sabres",
+          "away_team": "Philadelphia Flyers",
+          "favoured": "Buffalo Sabres"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 190,
+          "away": -190,
+          "p_home_cover": 0.3473,
+          "p_away_cover": 0.6527
+        },
+        "total": {
+          "line": 6.5,
+          "over": 175,
+          "under": -175,
+          "p_over": 0.365,
+          "p_under": 0.635
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Buffalo Sabres",
+      "price": -185,
+      "model_probability": 0.65,
+      "edge": 0.15,
+      "confidence": "high",
+      "confidence_reason": "Model edge 0.150 with an official evidence pack and a sufficient sample.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Philadelphia Flyers",
+          "probability": 0.6527,
+          "price": -190
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.635,
+          "price": -175
+        }
+      ],
+      "prediction": "The Flyers have scored 17 goals in 11 games, a 1.55 goals-per-game rate that NHL.com ranks 32nd, and their power play converts at 12.9%. Buffalo counters with Jack Quinn on seven points and Tage Thompson on three goals, inside a 3.00 goals-per-game attack. Take the Sabres on the money line at home."
+    },
+    {
+      "id": "nhl-2026020153",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-21",
+      "time": "7:30 PM EDT",
+      "away": "Florida Panthers",
+      "home": "Ottawa Senators",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/fla-vs-ott/2026/10/21/2026020153",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "OTT",
+            "gp": 9,
+            "gf_pg": 2.6666666666666665,
+            "ga_pg": 2.5555555555555554,
+            "gd_pg": 0.1111111111111111,
+            "rating": 0.047619047619047616
+          },
+          "away": {
+            "abbr": "FLA",
+            "gp": 9,
+            "gf_pg": 3.3333333333333335,
+            "ga_pg": 2.7777777777777777,
+            "gd_pg": 0.5555555555555556,
+            "rating": 0.23809523809523808
+          }
+        },
+        "expected_margin": 0.06,
+        "expected_total": 5.86,
+        "money_line": {
+          "home": -105,
+          "away": 105,
+          "p_home": 0.5124,
+          "p_away": 0.4876,
+          "home_team": "Ottawa Senators",
+          "away_team": "Florida Panthers",
+          "favoured": "Ottawa Senators"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 330,
+          "away": -330,
+          "p_home_cover": 0.2314,
+          "p_away_cover": 0.7686
+        },
+        "total": {
+          "line": 6.5,
+          "over": 185,
+          "under": -185,
+          "p_over": 0.3527,
+          "p_under": 0.6473
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Ottawa Senators",
+      "price": -105,
+      "model_probability": 0.5124,
+      "edge": 0.0124,
+      "confidence": "low",
+      "confidence_reason": "Model edge 0.012 is below the medium bar.",
+      "leans": [
+        {
+          "market": "Money line",
+          "selection": "Florida Panthers",
+          "probability": 0.4876,
+          "price": 105
+        },
+        {
+          "market": "Puck line +1.5",
+          "selection": "Florida Panthers",
+          "probability": 0.7686,
+          "price": -330
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.6473,
+          "price": -185
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020154",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "away": "Nashville Predators",
+      "home": "Boston Bruins",
+      "venue": "TD Garden",
+      "official_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "BOS",
+            "gp": 10,
+            "gf_pg": 3.6,
+            "ga_pg": 2.2,
+            "gd_pg": 1.4,
+            "rating": 0.6363636363636364
+          },
+          "away": {
+            "abbr": "NSH",
+            "gp": 8,
+            "gf_pg": 2.875,
+            "ga_pg": 3.0,
+            "gd_pg": -0.125,
+            "rating": -0.05
+          }
+        },
+        "expected_margin": 0.936,
+        "expected_total": 5.94,
+        "money_line": {
+          "home": -220,
+          "away": 220,
+          "p_home": 0.6857,
+          "p_away": 0.3143,
+          "home_team": "Boston Bruins",
+          "away_team": "Nashville Predators",
+          "favoured": "Boston Bruins"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 160,
+          "away": -160,
+          "p_home_cover": 0.3847,
+          "p_away_cover": 0.6153
+        },
+        "total": {
+          "line": 6.5,
+          "over": 170,
+          "under": -170,
+          "p_over": 0.3698,
+          "p_under": 0.6302
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Boston Bruins",
+      "price": -220,
+      "model_probability": 0.6857,
+      "edge": 0.1857,
+      "confidence": "high",
+      "confidence_reason": "Model edge 0.186 with an official evidence pack and a sufficient sample.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Nashville Predators",
+          "probability": 0.6153,
+          "price": -160
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.6302,
+          "price": -170
+        }
+      ],
+      "prediction": "Boston is 7-2-1, allows 2.20 goals per game, fourth in the NHL, and Jeremy Swayman is 6-1-1 with a .928 save percentage. Nashville has three wins in eight games despite Roman Josi's nine points and a 29.6% power play. Back the Bruins on the money line at TD Garden."
+    },
+    {
+      "id": "nhl-2026020155",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "away": "New York Rangers",
+      "home": "Toronto Maple Leafs",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "TOR",
+            "gp": 11,
+            "gf_pg": 3.4545454545454546,
+            "ga_pg": 3.1818181818181817,
+            "gd_pg": 0.2727272727272727,
+            "rating": 0.13043478260869565
+          },
+          "away": {
+            "abbr": "NYR",
+            "gp": 11,
+            "gf_pg": 3.0,
+            "ga_pg": 2.1818181818181817,
+            "gd_pg": 0.8181818181818182,
+            "rating": 0.391304347826087
+          }
+        },
+        "expected_margin": -0.011,
+        "expected_total": 5.96,
+        "money_line": {
+          "home": 100,
+          "away": -100,
+          "p_home": 0.4977,
+          "p_away": 0.5023,
+          "home_team": "Toronto Maple Leafs",
+          "away_team": "New York Rangers",
+          "favoured": "New York Rangers"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 350,
+          "away": -350,
+          "p_home_cover": 0.2211,
+          "p_away_cover": 0.7789
+        },
+        "total": {
+          "line": 6.5,
+          "over": 165,
+          "under": -165,
+          "p_over": 0.3746,
+          "p_under": 0.6254
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "New York Rangers",
+      "price": -100,
+      "model_probability": 0.5023,
+      "edge": 0.0023,
+      "confidence": "low",
+      "confidence_reason": "Model edge 0.002 is below the medium bar.",
+      "leans": [
+        {
+          "market": "Money line",
+          "selection": "Toronto Maple Leafs",
+          "probability": 0.4977,
+          "price": 100
+        },
+        {
+          "market": "Puck line +1.5",
+          "selection": "New York Rangers",
+          "probability": 0.7789,
+          "price": -350
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.6254,
+          "price": -165
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020156",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "away": "San Jose Sharks",
+      "home": "Ottawa Senators",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "OTT",
+            "gp": 9,
+            "gf_pg": 2.6666666666666665,
+            "ga_pg": 2.5555555555555554,
+            "gd_pg": 0.1111111111111111,
+            "rating": 0.047619047619047616
+          },
+          "away": {
+            "abbr": "SJS",
+            "gp": 10,
+            "gf_pg": 2.7,
+            "ga_pg": 3.5,
+            "gd_pg": -0.8,
+            "rating": -0.36363636363636365
+          }
+        },
+        "expected_margin": 0.661,
+        "expected_total": 5.88,
+        "money_line": {
+          "home": -175,
+          "away": 175,
+          "p_home": 0.6344,
+          "p_away": 0.3656,
+          "home_team": "Ottawa Senators",
+          "away_team": "San Jose Sharks",
+          "favoured": "Ottawa Senators"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 200,
+          "away": -200,
+          "p_home_cover": 0.332,
+          "p_away_cover": 0.668
+        },
+        "total": {
+          "line": 6.5,
+          "over": 180,
+          "under": -180,
+          "p_over": 0.3568,
+          "p_under": 0.6432
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Ottawa Senators",
+      "price": -175,
+      "model_probability": 0.6344,
+      "edge": 0.1344,
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.134 clears the high bar, but no evidence pack is attached.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "San Jose Sharks",
+          "probability": 0.668,
+          "price": -200
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.6432,
+          "price": -180
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020157",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "away": "Anaheim Ducks",
+      "home": "New Jersey Devils",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "NJD",
+            "gp": 9,
+            "gf_pg": 3.2222222222222223,
+            "ga_pg": 3.3333333333333335,
+            "gd_pg": -0.1111111111111111,
+            "rating": -0.047619047619047616
+          },
+          "away": {
+            "abbr": "ANA",
+            "gp": 9,
+            "gf_pg": 2.888888888888889,
+            "ga_pg": 3.2222222222222223,
+            "gd_pg": -0.3333333333333333,
+            "rating": -0.14285714285714285
+          }
+        },
+        "expected_margin": 0.345,
+        "expected_total": 6.14,
+        "money_line": {
+          "home": -135,
+          "away": 135,
+          "p_home": 0.5714,
+          "p_away": 0.4286,
+          "home_team": "New Jersey Devils",
+          "away_team": "Anaheim Ducks",
+          "favoured": "New Jersey Devils"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 260,
+          "away": -260,
+          "p_home_cover": 0.2764,
+          "p_away_cover": 0.7236
+        },
+        "total": {
+          "line": 6.5,
+          "over": 140,
+          "under": -140,
+          "p_over": 0.4168,
+          "p_under": 0.5832
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "New Jersey Devils",
+      "price": -135,
+      "model_probability": 0.5714,
+      "edge": 0.0714,
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.071 clears the medium bar.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Anaheim Ducks",
+          "probability": 0.7236,
+          "price": -260
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.5832,
+          "price": -140
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020158",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "7:00 PM EDT",
+      "away": "Florida Panthers",
+      "home": "Pittsburgh Penguins",
+      "venue": "PPG Paints Arena",
+      "official_url": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "PIT",
+            "gp": 10,
+            "gf_pg": 3.3,
+            "ga_pg": 3.8,
+            "gd_pg": -0.5,
+            "rating": -0.22727272727272727
+          },
+          "away": {
+            "abbr": "FLA",
+            "gp": 9,
+            "gf_pg": 3.3333333333333335,
+            "ga_pg": 2.7777777777777777,
+            "gd_pg": 0.5555555555555556,
+            "rating": 0.23809523809523808
+          }
+        },
+        "expected_margin": -0.215,
+        "expected_total": 6.26,
+        "money_line": {
+          "home": 120,
+          "away": -120,
+          "p_home": 0.4553,
+          "p_away": 0.5447,
+          "home_team": "Pittsburgh Penguins",
+          "away_team": "Florida Panthers",
+          "favoured": "Florida Panthers"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 420,
+          "away": -420,
+          "p_home_cover": 0.1932,
+          "p_away_cover": 0.8068
+        },
+        "total": {
+          "line": 6.5,
+          "over": 125,
+          "under": -125,
+          "p_over": 0.4438,
+          "p_under": 0.5562
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Florida Panthers",
+      "price": -120,
+      "model_probability": 0.5447,
+      "edge": 0.0447,
+      "confidence": "low",
+      "confidence_reason": "Model edge 0.045 is below the medium bar.",
+      "leans": [
+        {
+          "market": "Money line",
+          "selection": "Pittsburgh Penguins",
+          "probability": 0.4553,
+          "price": 120
+        },
+        {
+          "market": "Puck line +1.5",
+          "selection": "Florida Panthers",
+          "probability": 0.8068,
+          "price": -420
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.5562,
+          "price": -125
+        }
+      ],
+      "prediction": "Florida has won three in a row and scores 3.33 goals per game, ninth in the NHL, with Matthew Tkachuk on 14 points and Brady Tkachuk on six goals. Pittsburgh has lost four straight, concedes 3.70 goals per game (27th) and its goalies share an .867 save percentage. Florida is the lean, though the model edge is thin."
+    },
+    {
+      "id": "nhl-2026020159",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "7:30 PM EDT",
+      "away": "Los Angeles Kings",
+      "home": "New York Islanders",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "NYI",
+            "gp": 9,
+            "gf_pg": 3.0,
+            "ga_pg": 2.2222222222222223,
+            "gd_pg": 0.7777777777777778,
+            "rating": 0.3333333333333333
+          },
+          "away": {
+            "abbr": "LAK",
+            "gp": 7,
+            "gf_pg": 2.4285714285714284,
+            "ga_pg": 3.857142857142857,
+            "gd_pg": -1.4285714285714286,
+            "rating": -0.5263157894736842
+          }
+        },
+        "expected_margin": 1.11,
+        "expected_total": 5.91,
+        "money_line": {
+          "home": -250,
+          "away": 250,
+          "p_home": 0.716,
+          "p_away": 0.284,
+          "home_team": "New York Islanders",
+          "away_team": "Los Angeles Kings",
+          "favoured": "New York Islanders"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 140,
+          "away": -140,
+          "p_home_cover": 0.4194,
+          "p_away_cover": 0.5806
+        },
+        "total": {
+          "line": 6.5,
+          "over": 175,
+          "under": -175,
+          "p_over": 0.3641,
+          "p_under": 0.6359
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "New York Islanders",
+      "price": -250,
+      "model_probability": 0.716,
+      "edge": 0.216,
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.216 clears the high bar, but no evidence pack is attached.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Los Angeles Kings",
+          "probability": 0.5806,
+          "price": -140
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.6359,
+          "price": -175
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020160",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "8:00 PM EDT",
+      "away": "Vegas Golden Knights",
+      "home": "St. Louis Blues",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "STL",
+            "gp": 9,
+            "gf_pg": 3.2222222222222223,
+            "ga_pg": 3.2222222222222223,
+            "gd_pg": 0.0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "VGK",
+            "gp": 10,
+            "gf_pg": 4.2,
+            "ga_pg": 2.4,
+            "gd_pg": 1.8,
+            "rating": 0.8181818181818181
+          }
+        },
+        "expected_margin": -0.568,
+        "expected_total": 6.22,
+        "money_line": {
+          "home": 160,
+          "away": -160,
+          "p_home": 0.3838,
+          "p_away": 0.6162,
+          "home_team": "St. Louis Blues",
+          "away_team": "Vegas Golden Knights",
+          "favoured": "Vegas Golden Knights"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 560,
+          "away": -560,
+          "p_home_cover": 0.1514,
+          "p_away_cover": 0.8486
+        },
+        "total": {
+          "line": 6.5,
+          "over": 130,
+          "under": -130,
+          "p_over": 0.4355,
+          "p_under": 0.5645
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Vegas Golden Knights",
+      "price": -160,
+      "model_probability": 0.6162,
+      "edge": 0.1162,
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.116 clears the medium bar.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Vegas Golden Knights",
+          "probability": 0.8486,
+          "price": -560
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.5645,
+          "price": -130
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020161",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "8:00 PM EDT",
+      "away": "Winnipeg Jets",
+      "home": "Dallas Stars",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "DAL",
+            "gp": 9,
+            "gf_pg": 2.5555555555555554,
+            "ga_pg": 1.6666666666666667,
+            "gd_pg": 0.8888888888888888,
+            "rating": 0.38095238095238093
+          },
+          "away": {
+            "abbr": "WPG",
+            "gp": 9,
+            "gf_pg": 2.6666666666666665,
+            "ga_pg": 2.888888888888889,
+            "gd_pg": -0.2222222222222222,
+            "rating": -0.09523809523809523
+          }
+        },
+        "expected_margin": 0.726,
+        "expected_total": 5.52,
+        "money_line": {
+          "home": -185,
+          "away": 185,
+          "p_home": 0.6468,
+          "p_away": 0.3532,
+          "home_team": "Dallas Stars",
+          "away_team": "Winnipeg Jets",
+          "favoured": "Dallas Stars"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 190,
+          "away": -190,
+          "p_home_cover": 0.3442,
+          "p_away_cover": 0.6558
+        },
+        "total": {
+          "line": 6.5,
+          "over": 255,
+          "under": -255,
+          "p_over": 0.2829,
+          "p_under": 0.7171
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Dallas Stars",
+      "price": -185,
+      "model_probability": 0.6468,
+      "edge": 0.1468,
+      "confidence": "high",
+      "confidence_reason": "Model edge 0.147 with an official evidence pack and a sufficient sample.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Winnipeg Jets",
+          "probability": 0.6558,
+          "price": -190
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.7171,
+          "price": -255
+        }
+      ],
+      "prediction": "Dallas allows 1.56 goals per game, the best rate in the NHL, with Jake Oettinger at 4-2-1, a .945 save percentage and three shutouts. Winnipeg has lost two straight and scores 2.67 goals per game, 23rd in the league. Take the Stars on the money line at American Airlines Center."
+    },
+    {
+      "id": "nhl-2026020162",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "9:00 PM EDT",
+      "away": "Minnesota Wild",
+      "home": "Calgary Flames",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "CGY",
+            "gp": 8,
+            "gf_pg": 2.125,
+            "ga_pg": 4.625,
+            "gd_pg": -2.5,
+            "rating": -1.0
+          },
+          "away": {
+            "abbr": "MIN",
+            "gp": 10,
+            "gf_pg": 3.1,
+            "ga_pg": 2.5,
+            "gd_pg": 0.6,
+            "rating": 0.2727272727272727
+          }
+        },
+        "expected_margin": -1.023,
+        "expected_total": 6.07,
+        "money_line": {
+          "home": 235,
+          "away": -235,
+          "p_home": 0.299,
+          "p_away": 0.701,
+          "home_team": "Calgary Flames",
+          "away_team": "Minnesota Wild",
+          "favoured": "Minnesota Wild"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 820,
+          "away": -820,
+          "p_home_cover": 0.1089,
+          "p_away_cover": 0.8911
+        },
+        "total": {
+          "line": 6.5,
+          "over": 150,
+          "under": -150,
+          "p_over": 0.4002,
+          "p_under": 0.5998
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Minnesota Wild",
+      "price": -235,
+      "model_probability": 0.701,
+      "edge": 0.201,
+      "confidence": "high",
+      "confidence_reason": "Model edge 0.201 with an official evidence pack and a sufficient sample.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Minnesota Wild",
+          "probability": 0.8911,
+          "price": -820
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.5998,
+          "price": -150
+        }
+      ],
+      "prediction": "Minnesota is 6-2-2 with Kirill Kaprizov on 11 goals and 17 points, while Jesper Wallstedt is 6-1-2 with a .915 save percentage. Calgary is 2-6-0, concedes 4.63 goals per game, 31st in the NHL, and has lost six of eight. The Wild money line is the selection."
+    },
+    {
+      "id": "nhl-2026020163",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "9:00 PM EDT",
+      "away": "Carolina Hurricanes",
+      "home": "Edmonton Oilers",
+      "venue": "Rogers Place",
+      "official_url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "EDM",
+            "gp": 9,
+            "gf_pg": 4.555555555555555,
+            "ga_pg": 3.0,
+            "gd_pg": 1.5555555555555556,
+            "rating": 0.6666666666666666
+          },
+          "away": {
+            "abbr": "CAR",
+            "gp": 11,
+            "gf_pg": 3.8181818181818183,
+            "ga_pg": 2.4545454545454546,
+            "gd_pg": 1.3636363636363635,
+            "rating": 0.6521739130434783
+          }
+        },
+        "expected_margin": 0.264,
+        "expected_total": 6.39,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5549,
+          "p_away": 0.4451,
+          "home_team": "Edmonton Oilers",
+          "away_team": "Carolina Hurricanes",
+          "favoured": "Edmonton Oilers"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 280,
+          "away": -280,
+          "p_home_cover": 0.2632,
+          "p_away_cover": 0.7368
+        },
+        "total": {
+          "line": 6.5,
+          "over": 110,
+          "under": -110,
+          "p_over": 0.4746,
+          "p_under": 0.5254
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Edmonton Oilers",
+      "price": -125,
+      "model_probability": 0.5549,
+      "edge": 0.0549,
+      "confidence": "low",
+      "confidence_reason": "Model edge 0.055 is below the medium bar.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Carolina Hurricanes",
+          "probability": 0.7368,
+          "price": -280
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020164",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "10:00 PM EDT",
+      "away": "Utah Mammoth",
+      "home": "Seattle Kraken",
+      "venue": null,
+      "official_url": "https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "SEA",
+            "gp": 10,
+            "gf_pg": 3.9,
+            "ga_pg": 3.4,
+            "gd_pg": 0.5,
+            "rating": 0.22727272727272727
+          },
+          "away": {
+            "abbr": "UTA",
+            "gp": 10,
+            "gf_pg": 3.8,
+            "ga_pg": 3.1,
+            "gd_pg": 0.7,
+            "rating": 0.3181818181818182
+          }
+        },
+        "expected_margin": 0.159,
+        "expected_total": 6.5,
+        "money_line": {
+          "home": -115,
+          "away": 115,
+          "p_home": 0.5331,
+          "p_away": 0.4669,
+          "home_team": "Seattle Kraken",
+          "away_team": "Utah Mammoth",
+          "favoured": "Seattle Kraken"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 305,
+          "away": -305,
+          "p_home_cover": 0.2465,
+          "p_away_cover": 0.7535
+        },
+        "total": {
+          "line": 7.5,
+          "over": 260,
+          "under": -260,
+          "p_over": 0.2782,
+          "p_under": 0.7218
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Seattle Kraken",
+      "price": -115,
+      "model_probability": 0.5331,
+      "edge": 0.0331,
+      "confidence": "low",
+      "confidence_reason": "Model edge 0.033 is below the medium bar.",
+      "leans": [
+        {
+          "market": "Money line",
+          "selection": "Utah Mammoth",
+          "probability": 0.4669,
+          "price": 115
+        },
+        {
+          "market": "Puck line +1.5",
+          "selection": "Utah Mammoth",
+          "probability": 0.7535,
+          "price": -305
+        },
+        {
+          "market": "Total 7.5",
+          "selection": "Under",
+          "probability": 0.7218,
+          "price": -260
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nhl-2026020165",
+      "sport": "Ice hockey",
+      "league": "NHL",
+      "date": "2026-10-22",
+      "time": "10:00 PM EDT",
+      "away": "Detroit Red Wings",
+      "home": "Vancouver Canucks",
+      "venue": "Rogers Arena",
+      "official_url": "https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nhl",
+        "inputs": {
+          "home": {
+            "abbr": "VAN",
+            "gp": 11,
+            "gf_pg": 3.0,
+            "ga_pg": 4.636363636363637,
+            "gd_pg": -1.6363636363636365,
+            "rating": -0.782608695652174
+          },
+          "away": {
+            "abbr": "DET",
+            "gp": 9,
+            "gf_pg": 2.5555555555555554,
+            "ga_pg": 3.111111111111111,
+            "gd_pg": -0.5555555555555556,
+            "rating": -0.23809523809523808
+          }
+        },
+        "expected_margin": -0.295,
+        "expected_total": 6.28,
+        "money_line": {
+          "home": 130,
+          "away": -130,
+          "p_home": 0.4389,
+          "p_away": 0.5611,
+          "home_team": "Vancouver Canucks",
+          "away_team": "Detroit Red Wings",
+          "favoured": "Detroit Red Wings"
+        },
+        "handicap": {
+          "line_home": -1.5,
+          "line_away": 1.5,
+          "home": 445,
+          "away": -445,
+          "p_home_cover": 0.1831,
+          "p_away_cover": 0.8169
+        },
+        "total": {
+          "line": 6.5,
+          "over": 125,
+          "under": -125,
+          "p_over": 0.4483,
+          "p_under": 0.5517
+        },
+        "notes": [
+          "Money line includes overtime and shootouts.",
+          "Puck line is the standard 1.5-goal handicap.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Detroit Red Wings",
+      "price": -130,
+      "model_probability": 0.5611,
+      "edge": 0.0611,
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.061 clears the medium bar.",
+      "leans": [
+        {
+          "market": "Puck line +1.5",
+          "selection": "Detroit Red Wings",
+          "probability": 0.8169,
+          "price": -445
+        },
+        {
+          "market": "Total 6.5",
+          "selection": "Under",
+          "probability": 0.5517,
+          "price": -125
+        }
+      ],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600085",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "7:00 PM ET",
+      "away": "Atlanta Hawks",
+      "home": "Orlando Magic",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/atl-vs-orl-0022600085",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "ORL",
+            "name": "Orlando Magic",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "ATL",
+            "name": "Atlanta Hawks",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Orlando Magic",
+          "away_team": "Atlanta Hawks",
+          "favoured": "Orlando Magic"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Orlando Magic",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600086",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "7:00 PM ET",
+      "away": "Milwaukee Bucks",
+      "home": "Washington Wizards",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/mil-vs-was-0022600086",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889",
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "WAS",
+            "name": "Washington Wizards",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "MIL",
+            "name": "Milwaukee Bucks",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Washington Wizards",
+          "away_team": "Milwaukee Bucks",
+          "favoured": "Washington Wizards"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Washington Wizards",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600004",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "7:30 PM ET",
+      "away": "Minnesota Timberwolves",
+      "home": "Miami Heat",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/min-vs-mia-0022600004",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "MIA",
+            "name": "Miami Heat",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "MIN",
+            "name": "Minnesota Timberwolves",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Miami Heat",
+          "away_team": "Minnesota Timberwolves",
+          "favoured": "Miami Heat"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Miami Heat",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600087",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "7:30 PM ET",
+      "away": "Charlotte Hornets",
+      "home": "Brooklyn Nets",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/cha-vs-bkn-0022600087",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "BKN",
+            "name": "Brooklyn Nets",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "CHA",
+            "name": "Charlotte Hornets",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Brooklyn Nets",
+          "away_team": "Charlotte Hornets",
+          "favoured": "Brooklyn Nets"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Brooklyn Nets",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600088",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "7:30 PM ET",
+      "away": "Chicago Bulls",
+      "home": "Toronto Raptors",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/chi-vs-tor-0022600088",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "TOR",
+            "name": "Toronto Raptors",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "CHI",
+            "name": "Chicago Bulls",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Toronto Raptors",
+          "away_team": "Chicago Bulls",
+          "favoured": "Toronto Raptors"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Toronto Raptors",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600090",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "8:00 PM ET",
+      "away": "Indiana Pacers",
+      "home": "New Orleans Pelicans",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/ind-vs-nop-0022600090",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "NOP",
+            "name": "New Orleans Pelicans",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "IND",
+            "name": "Indiana Pacers",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "New Orleans Pelicans",
+          "away_team": "Indiana Pacers",
+          "favoured": "New Orleans Pelicans"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "New Orleans Pelicans",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600089",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "8:00 PM ET",
+      "away": "Utah Jazz",
+      "home": "Memphis Grizzlies",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/uta-vs-mem-0022600089",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "MEM",
+            "name": "Memphis Grizzlies",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "UTA",
+            "name": "Utah Jazz",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Memphis Grizzlies",
+          "away_team": "Utah Jazz",
+          "favoured": "Memphis Grizzlies"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Memphis Grizzlies",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600091",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "8:30 PM ET",
+      "away": "Dallas Mavericks",
+      "home": "Houston Rockets",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/dal-vs-hou-0022600091",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "HOU",
+            "name": "Houston Rockets",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "DAL",
+            "name": "Dallas Mavericks",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Houston Rockets",
+          "away_team": "Dallas Mavericks",
+          "favoured": "Houston Rockets"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Houston Rockets",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600005",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "10:00 PM ET",
+      "away": "Golden State Warriors",
+      "home": "Los Angeles Lakers",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/gsw-vs-lal-0022600005",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "LAL",
+            "name": "Los Angeles Lakers",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "GSW",
+            "name": "Golden State Warriors",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Los Angeles Lakers",
+          "away_team": "Golden State Warriors",
+          "favoured": "Los Angeles Lakers"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Los Angeles Lakers",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-0022600092",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "10:00 PM ET",
+      "away": "Phoenix Suns",
+      "home": "Portland Trail Blazers",
+      "venue": null,
+      "official_url": "https://www.nba.com/game/phx-vs-por-0022600092",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "POR",
+            "name": "Portland Trail Blazers",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "PHX",
+            "name": "Phoenix Suns",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "Portland Trail Blazers",
+          "away_team": "Phoenix Suns",
+          "favoured": "Portland Trail Blazers"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "Portland Trail Blazers",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    },
+    {
+      "id": "nba-sac-lac",
+      "sport": "Basketball",
+      "league": "NBA",
+      "date": "2026-10-21",
+      "time": "10:30 PM ET",
+      "away": "Sacramento Kings",
+      "home": "LA Clippers",
+      "venue": null,
+      "official_url": "https://www.nba.com/games?date=2026-10-21",
+      "olbg_url": null,
+      "lines": {
+        "engine": "nba-baseline",
+        "inputs": {
+          "home": {
+            "abbr": "LAC",
+            "name": "LA Clippers",
+            "gp": 0,
+            "rating": 0.0
+          },
+          "away": {
+            "abbr": "SAC",
+            "name": "Sacramento Kings",
+            "gp": 0,
+            "rating": 0.0
+          }
+        },
+        "expected_margin": 2.5,
+        "expected_total": null,
+        "money_line": {
+          "home": -125,
+          "away": 125,
+          "p_home": 0.5566,
+          "p_away": 0.4434,
+          "home_team": "LA Clippers",
+          "away_team": "Sacramento Kings",
+          "favoured": "LA Clippers"
+        },
+        "handicap": {
+          "line_home": -2.5,
+          "line_away": 2.5,
+          "home": -100,
+          "away": -100,
+          "p_home_cover": 0.5,
+          "p_away_cover": 0.5
+        },
+        "total": null,
+        "notes": [
+          "Baseline line: no 2026-27 games played, so both teams are rated league-average.",
+          "Home court is worth 2.5 points; the spread is therefore pick'em against the number.",
+          "No total is originated because no verified league scoring baseline is loaded.",
+          "Prices are no-vig fair odds, not bookmaker prices."
+        ]
+      },
+      "selection": "LA Clippers",
+      "price": -125,
+      "model_probability": 0.5566,
+      "edge": 0.0566,
+      "confidence": "low",
+      "confidence_reason": "Baseline pricing: no current-season sample to separate the teams.",
+      "leans": [],
+      "prediction": null
+    }
+  ],
+  "flagged": [
+    {
+      "id": "flag-olbg-time",
+      "category": "Conflicting published time",
+      "item": "OLBG lists 19:37 for both Oct 21 NHL games; the NHL lists 7:30 PM EDT.",
+      "detail": "The two OLBG event pages show 19:37 without a stated time zone. The NHL schedule and both gamecenters show 7:30 PM EDT. The site publishes the league time and does not convert or reconcile OLBG's figure.",
+      "sources": [
+        "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897",
+        "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
+        "https://www.nhl.com/schedule/2026-10-21"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-olbg-slate",
+      "category": "Incomplete OLBG inventory",
+      "item": "OLBG's default tips page surfaces only one eligible-sport event.",
+      "detail": "On the snapshot the default page listed football, Gaelic football, horse racing, handball and snooker alongside a single eligible NBA event (MIL @ WAS). No complete eligible-sport OLBG inventory could be reconstructed from that page, so league schedules are used as the fixture inventory and OLBG links are attached only where an event page was actually found.",
+      "sources": [
+        "https://www.olbg.com/betting-tips"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-nhl-gp",
+      "category": "League source inconsistency",
+      "item": "NHL gamecenter headers and the NHL statistics API disagree with the standings table on games played.",
+      "detail": "Carolina's gamecenter shows 7-2-1 while the standings table shows 8-2-1 over 11 games; the gamecenter's own GF/GP of 3.82 equals 42/11, so the rates match the standings while the header does not. The NHL statistics API returns 10 games played and 36 goals for Carolina. All three are NHL.com properties. The build uses the standings table, which is timestamped and internally consistent.",
+      "sources": [
+        "https://www.nhl.com/standings",
+        "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-nba-baseline",
+      "category": "Baseline only",
+      "item": "Every NBA line is a baseline; no current-season form exists.",
+      "detail": "NBA.com's standings show the 2026-27 season is 0-1 games old, so the engine rates every club league-average and applies a 2.5-point home edge. No total is originated because no verified league scoring baseline is loaded. These are opening-style lines, not informed prices, and every NBA pick is labelled low confidence.",
+      "sources": [
+        "https://www.nba.com/standings",
+        "https://www.nba.com/games?date=2026-10-21"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-mlb-none",
+      "category": "No fixtures",
+      "item": "MLB reports zero games for Oct 21 2026.",
+      "detail": "The official MLB stats API returns totalGames 0 for the date. No baseball row is published. This is not evidence that the season has ended, only that no game is scheduled that day.",
+      "sources": [
+        "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-other-sports",
+      "category": "Coverage gap",
+      "item": "Eleven eligible sports were not verified in this session.",
+      "detail": "Tennis, cricket, rugby union, rugby league, snooker, darts, handball, volleyball, golf, motor racing and greyhounds were not cross-checked against an official schedule. No fixtures, lines or picks are published for them. They are listed on the Coverage page with their OLBG sport index and marked unverified rather than estimated.",
+      "sources": [
+        "https://www.olbg.com/betting-tips"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-venues",
+      "category": "Blank fields",
+      "item": "Venue is blank where the fetched source did not state it.",
+      "detail": "Venue is published only for fixtures whose official page named the arena. Blank cells are deliberate and unverified, not missing data that was inferred.",
+      "sources": [
+        "https://www.nhl.com/schedule/2026-10-22",
+        "https://www.nba.com/games?date=2026-10-21"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-nba-prior",
+      "category": "Unverified input",
+      "item": "No official bulk source for 2025-26 NBA records was retrieved.",
+      "detail": "The NBA standings page renders the current season regardless of the season parameter supplied, and per-game preview text was the only place prior-season records appeared. Rather than assemble ratings from a partial set of preview pages, no prior-season rating is used at all.",
+      "sources": [
+        "https://www.nba.com/standings",
+        "https://www.nba.com/game/mil-vs-was-0022600086"
+      ],
+      "state": "open",
+      "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-goal-convention",
+      "category": "Official sources disagree",
+      "item": "NHL.com standings and the NHL stats API report different goals for and against for the same clubs.",
+      "detail": "The standings table counts the shootout-deciding goal; the stats API's goalsFor/goalsAgainst does not. Seventeen of the 32 clubs differ in this snapshot, and every difference equals that club's count of shootout wins (goals for) or shootout losses (goals against). Ottawa read 24 GF on nhl.com/standings against 22 in the API over the same nine games, with two shootout wins; Seattle 39 v 37 with two shootout wins; Buffalo 27/34 v 27/33 with one shootout loss; Detroit 23/28 v 22/26 with one shootout win and two shootout losses; Dallas 23/15 v 22/14 with one of each. The 16 clubs without a shootout are identical in both feeds. The desk's model uses the standings view, so clubs with shootout games carry a slightly higher scoring rate than the API implies - at most 2 goals over 9-11 games, about 0.2 per game. Both figures are official; the gap is definitional and no number was adjusted. Independently re-derived from the official feeds on 2026-10-21 by session db99ed90, which captured the same 14 NHL fixtures separately.",
+      "sources": [
+        "https://www.nhl.com/standings",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2"
+      ],
+      "state": "open",
+      "owner": "db99ed90"
+    }
+  ]
+}

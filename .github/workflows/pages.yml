@@ -1,0 +1,63 @@
+name: Validate Pages content
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run the test suite
+        run: python -m unittest discover -s tests -v
+
+      - name: Rebuild the site from the committed data
+        run: python scripts/build.py
+
+      - name: Regenerate the dashboard layer
+        run: python scripts/build_site.py
+
+      - name: Fail if any generated page is stale
+        run: git diff --exit-code -- site index.html picks.html flagged.html methodology.html sources.html sports assets
+
+      - name: Check every generated local link resolves
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlparse
+
+          OUT = Path("site")
+          class Links(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.links = []
+              def handle_starttag(self, tag, attrs):
+                  if tag in ("a", "link"):
+                      self.links += [v for k, v in attrs if k == "href"]
+
+          pages = broken = 0
+          for page in OUT.rglob("*.html"):
+              pages += 1
+              p = Links(); p.feed(page.read_text(encoding="utf-8"))
+              for target in p.links:
+                  if urlparse(target).scheme or target.startswith("#"):
+                      continue
+                  path = (page.parent / unquote(urlparse(target).path)).resolve()
+                  if not path.is_file():
+                      broken += 1
+                      print(f"BROKEN {page}: {target}")
+          print(f"checked {pages} pages, {broken} broken local links")
+          raise SystemExit(1 if broken else 0)
+          PY

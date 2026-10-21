@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "sport": "Basketball",
+    "competition": "NBA 2025-26 regular season (completed) used as the strength prior for 2026-27 games",
+    "snapshot_utc": "2026-10-21T05:25:00Z",
+    "note": "2026-27 games played to date: all 22 teams playing on 2026-10-21 were 0-0 before tip-off (six other teams had played once on 2026-10-20). Current-season form is therefore not available and the prior season is used, flagged as a prior in every NBA row.",
+    "source_name": "NBA official standings (2025-26)",
+    "source_url": "https://www.nba.com/standings?Season=2025-26",
+    "verified": true
+  },
+  "teams": {
+    "DET": {"name": "Detroit Pistons", "w": 60, "l": 22, "home_w": 31, "home_l": 9, "road_w": 28, "road_l": 13},
+    "BOS": {"name": "Boston Celtics", "w": 56, "l": 26, "home_w": 30, "home_l": 11, "road_w": 26, "road_l": 15},
+    "NYK": {"name": "New York Knicks", "w": 53, "l": 29, "home_w": 30, "home_l": 10, "road_w": 22, "road_l": 19},
+    "CLE": {"name": "Cleveland Cavaliers", "w": 52, "l": 30, "home_w": 27, "home_l": 14, "road_w": 25, "road_l": 16},
+    "TOR": {"name": "Toronto Raptors", "w": 46, "l": 36, "home_w": 24, "home_l": 17, "road_w": 22, "road_l": 19},
+    "ATL": {"name": "Atlanta Hawks", "w": 46, "l": 36, "home_w": 24, "home_l": 17, "road_w": 22, "road_l": 19},
+    "PHI": {"name": "Philadelphia 76ers", "w": 45, "l": 37, "home_w": 23, "home_l": 18, "road_w": 22, "road_l": 19},
+    "ORL": {"name": "Orlando Magic", "w": 45, "l": 37, "home_w": 25, "home_l": 15, "road_w": 19, "road_l": 20},
+    "CHA": {"name": "Charlotte Hornets", "w": 44, "l": 38, "home_w": 21, "home_l": 20, "road_w": 23, "road_l": 18},
+    "MIA": {"name": "Miami Heat", "w": 43, "l": 39, "home_w": 26, "home_l": 15, "road_w": 17, "road_l": 24},
+    "MIL": {"name": "Milwaukee Bucks", "w": 32, "l": 50, "home_w": 19, "home_l": 22, "road_w": 13, "road_l": 28},
+    "CHI": {"name": "Chicago Bulls", "w": 31, "l": 51, "home_w": 18, "home_l": 23, "road_w": 13, "road_l": 28},
+    "BKN": {"name": "Brooklyn Nets", "w": 20, "l": 62, "home_w": 12, "home_l": 29, "road_w": 8, "road_l": 33},
+    "IND": {"name": "Indiana Pacers", "w": 19, "l": 63, "home_w": 11, "home_l": 30, "road_w": 8, "road_l": 33},
+    "WAS": {"name": "Washington Wizards", "w": 17, "l": 65, "home_w": 11, "home_l": 30, "road_w": 6, "road_l": 35},
+    "OKC": {"name": "Oklahoma City Thunder", "w": 64, "l": 18, "home_w": 34, "home_l": 7, "road_w": 30, "road_l": 10},
+    "SAS": {"name": "San Antonio Spurs", "w": 62, "l": 20, "home_w": 32, "home_l": 8, "road_w": 29, "road_l": 12},
+    "DEN": {"name": "Denver Nuggets", "w": 54, "l": 28, "home_w": 28, "home_l": 13, "road_w": 26, "road_l": 15},
+    "LAL": {"name": "Los Angeles Lakers", "w": 53, "l": 29, "home_w": 28, "home_l": 13, "road_w": 25, "road_l": 16},
+    "HOU": {"name": "Houston Rockets", "w": 52, "l": 30, "home_w": 30, "home_l": 11, "road_w": 22, "road_l": 19},
+    "MIN": {"name": "Minnesota Timberwolves", "w": 49, "l": 33, "home_w": 26, "home_l": 15, "road_w": 23, "road_l": 18},
+    "PHX": {"name": "Phoenix Suns", "w": 45, "l": 37, "home_w": 25, "home_l": 16, "road_w": 20, "road_l": 21},
+    "POR": {"name": "Portland Trail Blazers", "w": 42, "l": 40, "home_w": 24, "home_l": 17, "road_w": 18, "road_l": 23},
+    "LAC": {"name": "LA Clippers", "w": 42, "l": 40, "home_w": 23, "home_l": 18, "road_w": 19, "road_l": 22},
+    "GSW": {"name": "Golden State Warriors", "w": 37, "l": 45, "home_w": 22, "home_l": 19, "road_w": 15, "road_l": 26},
+    "NOP": {"name": "New Orleans Pelicans", "w": 26, "l": 56, "home_w": 17, "home_l": 24, "road_w": 9, "road_l": 32},
+    "DAL": {"name": "Dallas Mavericks", "w": 26, "l": 56, "home_w": 16, "home_l": 25, "road_w": 10, "road_l": 30},
+    "MEM": {"name": "Memphis Grizzlies", "w": 25, "l": 57, "home_w": 13, "home_l": 27, "road_w": 11, "road_l": 29},
+    "SAC": {"name": "Sacramento Kings", "w": 22, "l": 60, "home_w": 15, "home_l": 26, "road_w": 7, "road_l": 34},
+    "UTA": {"name": "Utah Jazz", "w": 22, "l": 60, "home_w": 14, "home_l": 27, "road_w": 8, "road_l": 33}
+  }
+}

@@ -1,0 +1,3693 @@
+{
+  "generated_at": "2026-10-21T05:34:42Z",
+  "inputs_captured_at": "2026-10-21T05:45:00Z",
+  "params": {
+    "nhl_home_ice_factor": 1.05,
+    "nhl_shrink_k": 8.0,
+    "nhl_overround": 0.04,
+    "nba_shrink_to_500": 0.25,
+    "nba_points_per_logit": 11.0,
+    "nba_margin_sigma": 11.0,
+    "nba_home_logit_edge": 0.2,
+    "nba_overround": 0.04,
+    "urc_shrink_k": 6.0,
+    "urc_home_points": 3.0,
+    "urc_margin_sigma": 13.0,
+    "urc_overround": 0.04,
+    "nhl_min_gp_high": 7,
+    "nhl_min_gp_medium": 5
+  },
+  "counts": {
+    "total": 35,
+    "originated": 33,
+    "not_originated": 2,
+    "high": 4,
+    "medium": 10,
+    "low": 19
+  },
+  "matches": [
+    {
+      "id": "nba-0022600085",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "ORL",
+        "name": "Orlando Magic"
+      },
+      "away": {
+        "code": "ATL",
+        "name": "Atlanta Hawks"
+      },
+      "start_display": "2026-10-21 19:00 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.5366,
+        "away_shrunk_win_pct": 0.5457,
+        "expected_margin_home": 1.79
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "45-37",
+          "home": "25-15",
+          "road": "19-20"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "46-36",
+          "home": "24-17",
+          "road": "22-19"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Orlando Magic",
+          "line": null,
+          "probability": 0.5407,
+          "price": 1.78
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Atlanta Hawks",
+          "line": null,
+          "probability": 0.4593,
+          "price": 2.09
+        },
+        {
+          "market": "Handicap",
+          "selection": "Orlando Magic -1.5",
+          "line": -1.5,
+          "probability": 0.5067,
+          "price": 1.9
+        },
+        {
+          "market": "Handicap",
+          "selection": "Atlanta Hawks +1.5",
+          "line": 1.5,
+          "probability": 0.4933,
+          "price": 1.95
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Orlando Magic",
+        "side": "home",
+        "probability": 0.5407,
+        "price": 1.78,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600086",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "WAS",
+        "name": "Washington Wizards"
+      },
+      "away": {
+        "code": "MIL",
+        "name": "Milwaukee Bucks"
+      },
+      "start_display": "2026-10-21 19:00 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889",
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.2805,
+        "away_shrunk_win_pct": 0.4177,
+        "expected_margin_home": -4.51
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "17-65",
+          "home": "11-30",
+          "road": "6-35"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "32-50",
+          "home": "19-22",
+          "road": "13-28"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Washington Wizards",
+          "line": null,
+          "probability": 0.399,
+          "price": 2.41
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Milwaukee Bucks",
+          "line": null,
+          "probability": 0.601,
+          "price": 1.6
+        },
+        {
+          "market": "Handicap",
+          "selection": "Washington Wizards +4.5",
+          "line": 4.5,
+          "probability": 0.4998,
+          "price": 1.92
+        },
+        {
+          "market": "Handicap",
+          "selection": "Milwaukee Bucks -4.5",
+          "line": -4.5,
+          "probability": 0.5002,
+          "price": 1.92
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Milwaukee Bucks",
+        "side": "away",
+        "probability": 0.601,
+        "price": 1.6,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600004",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "MIA",
+        "name": "Miami Heat"
+      },
+      "away": {
+        "code": "MIN",
+        "name": "Minnesota Timberwolves"
+      },
+      "start_display": "2026-10-21 19:30 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.5183,
+        "away_shrunk_win_pct": 0.5732,
+        "expected_margin_home": -0.24
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "43-39",
+          "home": "26-15",
+          "road": "17-24"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "49-33",
+          "home": "26-15",
+          "road": "23-18"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Miami Heat",
+          "line": null,
+          "probability": 0.4946,
+          "price": 1.94
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Minnesota Timberwolves",
+          "line": null,
+          "probability": 0.5054,
+          "price": 1.9
+        },
+        {
+          "market": "Handicap",
+          "selection": "Miami Heat +0.5",
+          "line": 0.5,
+          "probability": 0.506,
+          "price": 1.9
+        },
+        {
+          "market": "Handicap",
+          "selection": "Minnesota Timberwolves -0.5",
+          "line": -0.5,
+          "probability": 0.494,
+          "price": 1.95
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Minnesota Timberwolves",
+        "side": "away",
+        "probability": 0.5054,
+        "price": 1.9,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600087",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "BKN",
+        "name": "Brooklyn Nets"
+      },
+      "away": {
+        "code": "CHA",
+        "name": "Charlotte Hornets"
+      },
+      "start_display": "2026-10-21 19:30 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.3079,
+        "away_shrunk_win_pct": 0.5274,
+        "expected_margin_home": -7.92
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "20-62",
+          "home": "12-29",
+          "road": "8-33"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "44-38",
+          "home": "21-20",
+          "road": "23-18"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Brooklyn Nets",
+          "line": null,
+          "probability": 0.3275,
+          "price": 2.94
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Charlotte Hornets",
+          "line": null,
+          "probability": 0.6725,
+          "price": 1.43
+        },
+        {
+          "market": "Handicap",
+          "selection": "Brooklyn Nets +7.5",
+          "line": 7.5,
+          "probability": 0.4905,
+          "price": 1.96
+        },
+        {
+          "market": "Handicap",
+          "selection": "Charlotte Hornets -7.5",
+          "line": -7.5,
+          "probability": 0.5095,
+          "price": 1.89
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Charlotte Hornets",
+        "side": "away",
+        "probability": 0.6725,
+        "price": 1.43,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600088",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "TOR",
+        "name": "Toronto Raptors"
+      },
+      "away": {
+        "code": "CHI",
+        "name": "Chicago Bulls"
+      },
+      "start_display": "2026-10-21 19:30 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673",
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.5457,
+        "away_shrunk_win_pct": 0.4085,
+        "expected_margin_home": 8.29
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "46-36",
+          "home": "24-17",
+          "road": "22-19"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "31-51",
+          "home": "18-23",
+          "road": "13-28"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Toronto Raptors",
+          "line": null,
+          "probability": 0.6799,
+          "price": 1.41
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Chicago Bulls",
+          "line": null,
+          "probability": 0.3201,
+          "price": 3.0
+        },
+        {
+          "market": "Handicap",
+          "selection": "Toronto Raptors -8.5",
+          "line": -8.5,
+          "probability": 0.4952,
+          "price": 1.94
+        },
+        {
+          "market": "Handicap",
+          "selection": "Chicago Bulls +8.5",
+          "line": 8.5,
+          "probability": 0.5048,
+          "price": 1.9
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Toronto Raptors",
+        "side": "home",
+        "probability": 0.6799,
+        "price": 1.41,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600090",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "NOP",
+        "name": "New Orleans Pelicans"
+      },
+      "away": {
+        "code": "IND",
+        "name": "Indiana Pacers"
+      },
+      "start_display": "2026-10-21 20:00 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892",
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.3628,
+        "away_shrunk_win_pct": 0.2988,
+        "expected_margin_home": 5.39
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "26-56",
+          "home": "17-24",
+          "road": "9-32"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "19-63",
+          "home": "11-30",
+          "road": "8-33"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "New Orleans Pelicans",
+          "line": null,
+          "probability": 0.6201,
+          "price": 1.55
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Indiana Pacers",
+          "line": null,
+          "probability": 0.3799,
+          "price": 2.53
+        },
+        {
+          "market": "Handicap",
+          "selection": "New Orleans Pelicans -5.5",
+          "line": -5.5,
+          "probability": 0.4975,
+          "price": 1.93
+        },
+        {
+          "market": "Handicap",
+          "selection": "Indiana Pacers +5.5",
+          "line": 5.5,
+          "probability": 0.5025,
+          "price": 1.91
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "New Orleans Pelicans",
+        "side": "home",
+        "probability": 0.6201,
+        "price": 1.55,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600089",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "MEM",
+        "name": "Memphis Grizzlies"
+      },
+      "away": {
+        "code": "UTA",
+        "name": "Utah Jazz"
+      },
+      "start_display": "2026-10-21 20:00 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/UTA_Jazz_@_MEM_Grizzlies/4?event_id=534894",
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.3537,
+        "away_shrunk_win_pct": 0.3262,
+        "expected_margin_home": 3.55
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "25-57",
+          "home": "13-27",
+          "road": "11-29"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "22-60",
+          "home": "14-27",
+          "road": "8-33"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Memphis Grizzlies",
+          "line": null,
+          "probability": 0.5799,
+          "price": 1.66
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Utah Jazz",
+          "line": null,
+          "probability": 0.4201,
+          "price": 2.29
+        },
+        {
+          "market": "Handicap",
+          "selection": "Memphis Grizzlies -3.5",
+          "line": -3.5,
+          "probability": 0.501,
+          "price": 1.92
+        },
+        {
+          "market": "Handicap",
+          "selection": "Utah Jazz +3.5",
+          "line": 3.5,
+          "probability": 0.499,
+          "price": 1.93
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Memphis Grizzlies",
+        "side": "home",
+        "probability": 0.5799,
+        "price": 1.66,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600091",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "HOU",
+        "name": "Houston Rockets"
+      },
+      "away": {
+        "code": "DAL",
+        "name": "Dallas Mavericks"
+      },
+      "start_display": "2026-10-21 20:30 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.6006,
+        "away_shrunk_win_pct": 0.3628,
+        "expected_margin_home": 12.88
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "52-30",
+          "home": "30-11",
+          "road": "22-19"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "26-56",
+          "home": "16-25",
+          "road": "10-30"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Houston Rockets",
+          "line": null,
+          "probability": 0.7634,
+          "price": 1.26
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Dallas Mavericks",
+          "line": null,
+          "probability": 0.2366,
+          "price": 4.06
+        },
+        {
+          "market": "Handicap",
+          "selection": "Houston Rockets -12.5",
+          "line": -12.5,
+          "probability": 0.5087,
+          "price": 1.89
+        },
+        {
+          "market": "Handicap",
+          "selection": "Dallas Mavericks +12.5",
+          "line": 12.5,
+          "probability": 0.4913,
+          "price": 1.96
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Houston Rockets",
+        "side": "home",
+        "probability": 0.7634,
+        "price": 1.26,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "nba-0022600005",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "LAL",
+        "name": "Los Angeles Lakers"
+      },
+      "away": {
+        "code": "GSW",
+        "name": "Golden State Warriors"
+      },
+      "start_display": "2026-10-21 22:00 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.6098,
+        "away_shrunk_win_pct": 0.4634,
+        "expected_margin_home": 8.72
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "53-29",
+          "home": "28-13",
+          "road": "25-16"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "37-45",
+          "home": "22-19",
+          "road": "15-26"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Los Angeles Lakers",
+          "line": null,
+          "probability": 0.6885,
+          "price": 1.4
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Golden State Warriors",
+          "line": null,
+          "probability": 0.3115,
+          "price": 3.09
+        },
+        {
+          "market": "Handicap",
+          "selection": "Los Angeles Lakers -8.5",
+          "line": -8.5,
+          "probability": 0.505,
+          "price": 1.9
+        },
+        {
+          "market": "Handicap",
+          "selection": "Golden State Warriors +8.5",
+          "line": 8.5,
+          "probability": 0.495,
+          "price": 1.94
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Los Angeles Lakers",
+        "side": "home",
+        "probability": 0.6885,
+        "price": 1.4,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "nba-0022600092",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "POR",
+        "name": "Portland Trail Blazers"
+      },
+      "away": {
+        "code": "PHX",
+        "name": "Phoenix Suns"
+      },
+      "start_display": "2026-10-21 22:00 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893",
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.5091,
+        "away_shrunk_win_pct": 0.5366,
+        "expected_margin_home": 0.99
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "42-40",
+          "home": "24-17",
+          "road": "18-23"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "45-37",
+          "home": "25-16",
+          "road": "20-21"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Portland Trail Blazers",
+          "line": null,
+          "probability": 0.5225,
+          "price": 1.84
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Phoenix Suns",
+          "line": null,
+          "probability": 0.4775,
+          "price": 2.01
+        },
+        {
+          "market": "Handicap",
+          "selection": "Portland Trail Blazers -0.5",
+          "line": -0.5,
+          "probability": 0.5111,
+          "price": 1.88
+        },
+        {
+          "market": "Handicap",
+          "selection": "Phoenix Suns +0.5",
+          "line": 0.5,
+          "probability": 0.4889,
+          "price": 1.97
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Portland Trail Blazers",
+        "side": "home",
+        "probability": 0.5225,
+        "price": 1.84,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nba-0022600093",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "home": {
+        "code": "LAC",
+        "name": "LA Clippers"
+      },
+      "away": {
+        "code": "SAC",
+        "name": "Sacramento Kings"
+      },
+      "start_display": "2026-10-21 22:30 ET",
+      "start_utc": null,
+      "start_note": "Tip time as published by NBA.com in US Eastern time.",
+      "venue": null,
+      "fixture_source": {
+        "name": "NBA official games page",
+        "url": "https://www.nba.com/games?date=2026-10-21"
+      },
+      "data_source": {
+        "name": "NBA official standings 2025-26",
+        "url": "https://www.nba.com/standings?Season=2025-26",
+        "captured_at": "2026-10-21T05:25:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "nba_shrink_to_500": 0.25,
+        "nba_points_per_logit": 11.0,
+        "nba_margin_sigma": 11.0,
+        "nba_home_logit_edge": 0.2,
+        "nba_overround": 0.04
+      },
+      "model": {
+        "league_home_win_rate_2025_26": 0.5543,
+        "home_shrunk_win_pct": 0.5091,
+        "away_shrunk_win_pct": 0.3262,
+        "expected_margin_home": 10.58
+      },
+      "inputs": {
+        "home": {
+          "season": "2025-26",
+          "record": "42-40",
+          "home": "23-18",
+          "road": "19-22"
+        },
+        "away": {
+          "season": "2025-26",
+          "record": "22-60",
+          "home": "15-26",
+          "road": "7-34"
+        },
+        "note": "2026-27 record for both teams was 0-0 before tip-off; prior season used as the strength input."
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "LA Clippers",
+          "line": null,
+          "probability": 0.7235,
+          "price": 1.33
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Sacramento Kings",
+          "line": null,
+          "probability": 0.2765,
+          "price": 3.48
+        },
+        {
+          "market": "Handicap",
+          "selection": "LA Clippers -10.5",
+          "line": -10.5,
+          "probability": 0.5018,
+          "price": 1.92
+        },
+        {
+          "market": "Handicap",
+          "selection": "Sacramento Kings +10.5",
+          "line": 10.5,
+          "probability": 0.4982,
+          "price": 1.93
+        }
+      ],
+      "markets_not_originated": [
+        {
+          "market": "Game total",
+          "reason": "No verified 2025-26 team points-for / points-against data was captured, so a total cannot be originated without inventing an input."
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "LA Clippers",
+        "side": "home",
+        "probability": 0.7235,
+        "price": 1.33,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "icc-274658",
+      "sport": "Cricket",
+      "competition": "International (ODI)",
+      "home": {
+        "code": null,
+        "name": "Afghanistan"
+      },
+      "away": {
+        "code": null,
+        "name": "Bangladesh"
+      },
+      "start_display": "2026-10-21 07:30 (as shown by ICC, user-local)",
+      "start_utc": null,
+      "start_note": "ICC displays start time in the viewer's local time; no UTC value was published.",
+      "venue": null,
+      "fixture_source": {
+        "name": "ICC official match list",
+        "url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh"
+      },
+      "data_source": null,
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Afghanistan_vs_Bangladesh_One_Day_Match/7?event_id=188824",
+      "line_status": "not_originated",
+      "reason": "No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.",
+      "confidence": "unverified"
+    },
+    {
+      "id": "icc-271646",
+      "sport": "Cricket",
+      "competition": "International (T20I)",
+      "home": {
+        "code": null,
+        "name": "New Zealand"
+      },
+      "away": {
+        "code": null,
+        "name": "India"
+      },
+      "start_display": "2026-10-22 03:00 (as shown by ICC, user-local)",
+      "start_utc": null,
+      "start_note": "ICC displays start time in the viewer's local time; no UTC value was published.",
+      "venue": null,
+      "fixture_source": {
+        "name": "ICC official match list",
+        "url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india"
+      },
+      "data_source": null,
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_1st_T20_Match/7?event_id=188814",
+      "line_status": "not_originated",
+      "reason": "No official team-strength input was available: the ICC team-ranking table did not render in the captured page and no other governing-body rating was verified. A line would require inventing an input.",
+      "confidence": "unverified"
+    },
+    {
+      "id": "nhl-2026020152",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "BUF",
+        "name": "Buffalo Sabres"
+      },
+      "away": {
+        "code": "PHI",
+        "name": "Philadelphia Flyers"
+      },
+      "start_display": "2026-10-21 23:30 UTC",
+      "start_utc": "2026-10-21T23:30:00Z",
+      "venue": "KeyBank Center",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-21"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.988,
+        "home_defence": 1.103,
+        "away_attack": 0.712,
+        "away_defence": 1.021,
+        "expected_home_goals": 3.252,
+        "expected_away_goals": 2.298,
+        "expected_margin": 0.954,
+        "expected_total": 5.549
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "4-3-2",
+          "gf": 27,
+          "ga": 33,
+          "gf_pg": 3.0,
+          "ga_pg": 3.67
+        },
+        "away": {
+          "gp": 11,
+          "record": "2-6-3",
+          "gf": 17,
+          "ga": 35,
+          "gf_pg": 1.55,
+          "ga_pg": 3.18
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Buffalo Sabres",
+          "line": null,
+          "probability": 0.6543,
+          "price": 1.47
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Philadelphia Flyers",
+          "line": null,
+          "probability": 0.3457,
+          "price": 2.78
+        },
+        {
+          "market": "Puck line",
+          "selection": "Buffalo Sabres -1.5",
+          "line": -1.5,
+          "probability": 0.4005,
+          "price": 2.4
+        },
+        {
+          "market": "Puck line",
+          "selection": "Philadelphia Flyers +1.5",
+          "line": 1.5,
+          "probability": 0.5995,
+          "price": 1.6
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 5.5",
+          "line": 5.5,
+          "probability": 0.4795,
+          "price": 2.01
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 5.5",
+          "line": 5.5,
+          "probability": 0.5205,
+          "price": 1.85
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Buffalo Sabres",
+        "side": "home",
+        "probability": 0.6543,
+        "price": 1.47,
+        "confidence": "high"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "nhl-2026020153",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "OTT",
+        "name": "Ottawa Senators"
+      },
+      "away": {
+        "code": "FLA",
+        "name": "Florida Panthers"
+      },
+      "start_display": "2026-10-21 23:30 UTC",
+      "start_utc": "2026-10-21T23:30:00Z",
+      "venue": "Canadian Tire Centre",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-21"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.892,
+        "home_defence": 0.911,
+        "away_attack": 1.045,
+        "away_defence": 0.95,
+        "expected_home_goals": 2.731,
+        "expected_away_goals": 2.785,
+        "expected_margin": -0.055,
+        "expected_total": 5.516
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "6-3-0",
+          "gf": 22,
+          "ga": 23,
+          "gf_pg": 2.44,
+          "ga_pg": 2.56
+        },
+        "away": {
+          "gp": 9,
+          "record": "5-2-2",
+          "gf": 30,
+          "ga": 25,
+          "gf_pg": 3.33,
+          "ga_pg": 2.78
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Ottawa Senators",
+          "line": null,
+          "probability": 0.491,
+          "price": 1.96
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Florida Panthers",
+          "line": null,
+          "probability": 0.509,
+          "price": 1.89
+        },
+        {
+          "market": "Puck line",
+          "selection": "Ottawa Senators -1.5",
+          "line": -1.5,
+          "probability": 0.2479,
+          "price": 3.88
+        },
+        {
+          "market": "Puck line",
+          "selection": "Florida Panthers +1.5",
+          "line": 1.5,
+          "probability": 0.7521,
+          "price": 1.28
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 5.5",
+          "line": 5.5,
+          "probability": 0.4739,
+          "price": 2.03
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 5.5",
+          "line": 5.5,
+          "probability": 0.5261,
+          "price": 1.83
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Florida Panthers",
+        "side": "away",
+        "probability": 0.509,
+        "price": 1.89,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020154",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "BOS",
+        "name": "Boston Bruins"
+      },
+      "away": {
+        "code": "NSH",
+        "name": "Nashville Predators"
+      },
+      "start_display": "2026-10-22 23:00 UTC",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "venue": "TD Garden",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.096,
+        "home_defence": 0.843,
+        "away_attack": 0.968,
+        "away_defence": 0.948,
+        "expected_home_goals": 3.349,
+        "expected_away_goals": 2.385,
+        "expected_margin": 0.963,
+        "expected_total": 5.734
+      },
+      "inputs": {
+        "home": {
+          "gp": 10,
+          "record": "7-2-1",
+          "gf": 36,
+          "ga": 22,
+          "gf_pg": 3.6,
+          "ga_pg": 2.2
+        },
+        "away": {
+          "gp": 8,
+          "record": "3-2-3",
+          "gf": 23,
+          "ga": 22,
+          "gf_pg": 2.88,
+          "ga_pg": 2.75
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Boston Bruins",
+          "line": null,
+          "probability": 0.6534,
+          "price": 1.47
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Nashville Predators",
+          "line": null,
+          "probability": 0.3466,
+          "price": 2.77
+        },
+        {
+          "market": "Puck line",
+          "selection": "Boston Bruins -1.5",
+          "line": -1.5,
+          "probability": 0.4038,
+          "price": 2.38
+        },
+        {
+          "market": "Puck line",
+          "selection": "Nashville Predators +1.5",
+          "line": 1.5,
+          "probability": 0.5962,
+          "price": 1.61
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 5.5",
+          "line": 5.5,
+          "probability": 0.5107,
+          "price": 1.88
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 5.5",
+          "line": 5.5,
+          "probability": 0.4893,
+          "price": 1.97
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Boston Bruins",
+        "side": "home",
+        "probability": 0.6534,
+        "price": 1.47,
+        "confidence": "high"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "nhl-2026020155",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "TOR",
+        "name": "Toronto Maple Leafs"
+      },
+      "away": {
+        "code": "NYR",
+        "name": "New York Rangers"
+      },
+      "start_display": "2026-10-22 23:00 UTC",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "venue": "Scotiabank Arena",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.072,
+        "home_defence": 1.004,
+        "away_attack": 0.987,
+        "away_defence": 0.832,
+        "expected_home_goals": 2.878,
+        "expected_away_goals": 2.897,
+        "expected_margin": -0.018,
+        "expected_total": 5.775
+      },
+      "inputs": {
+        "home": {
+          "gp": 11,
+          "record": "5-4-2",
+          "gf": 38,
+          "ga": 34,
+          "gf_pg": 3.45,
+          "ga_pg": 3.09
+        },
+        "away": {
+          "gp": 11,
+          "record": "7-3-1",
+          "gf": 33,
+          "ga": 24,
+          "gf_pg": 3.0,
+          "ga_pg": 2.18
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Toronto Maple Leafs",
+          "line": null,
+          "probability": 0.497,
+          "price": 1.93
+        },
+        {
+          "market": "Moneyline",
+          "selection": "New York Rangers",
+          "line": null,
+          "probability": 0.503,
+          "price": 1.91
+        },
+        {
+          "market": "Puck line",
+          "selection": "Toronto Maple Leafs -1.5",
+          "line": -1.5,
+          "probability": 0.258,
+          "price": 3.73
+        },
+        {
+          "market": "Puck line",
+          "selection": "New York Rangers +1.5",
+          "line": 1.5,
+          "probability": 0.742,
+          "price": 1.3
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 5.5",
+          "line": 5.5,
+          "probability": 0.5175,
+          "price": 1.86
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 5.5",
+          "line": 5.5,
+          "probability": 0.4825,
+          "price": 1.99
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "New York Rangers",
+        "side": "away",
+        "probability": 0.503,
+        "price": 1.91,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020156",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "OTT",
+        "name": "Ottawa Senators"
+      },
+      "away": {
+        "code": "SJS",
+        "name": "San Jose Sharks"
+      },
+      "start_display": "2026-10-22 23:00 UTC",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "venue": "Canadian Tire Centre",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.892,
+        "home_defence": 0.911,
+        "away_attack": 0.915,
+        "away_defence": 1.06,
+        "expected_home_goals": 3.047,
+        "expected_away_goals": 2.438,
+        "expected_margin": 0.61,
+        "expected_total": 5.485
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "6-3-0",
+          "gf": 22,
+          "ga": 23,
+          "gf_pg": 2.44,
+          "ga_pg": 2.56
+        },
+        "away": {
+          "gp": 10,
+          "record": "5-4-1",
+          "gf": 26,
+          "ga": 34,
+          "gf_pg": 2.6,
+          "ga_pg": 3.4
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Ottawa Senators",
+          "line": null,
+          "probability": 0.6005,
+          "price": 1.6
+        },
+        {
+          "market": "Moneyline",
+          "selection": "San Jose Sharks",
+          "line": null,
+          "probability": 0.3995,
+          "price": 2.41
+        },
+        {
+          "market": "Puck line",
+          "selection": "Ottawa Senators -1.5",
+          "line": -1.5,
+          "probability": 0.3447,
+          "price": 2.79
+        },
+        {
+          "market": "Puck line",
+          "selection": "San Jose Sharks +1.5",
+          "line": 1.5,
+          "probability": 0.6553,
+          "price": 1.47
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 5.5",
+          "line": 5.5,
+          "probability": 0.4686,
+          "price": 2.05
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 5.5",
+          "line": 5.5,
+          "probability": 0.5314,
+          "price": 1.81
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Ottawa Senators",
+        "side": "home",
+        "probability": 0.6005,
+        "price": 1.6,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "nhl-2026020157",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "NJD",
+        "name": "New Jersey Devils"
+      },
+      "away": {
+        "code": "ANA",
+        "name": "Anaheim Ducks"
+      },
+      "start_display": "2026-10-22 23:00 UTC",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "venue": "Prudential Center",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.026,
+        "home_defence": 1.045,
+        "away_attack": 0.969,
+        "away_defence": 1.026,
+        "expected_home_goals": 3.395,
+        "expected_away_goals": 2.961,
+        "expected_margin": 0.434,
+        "expected_total": 6.356
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "5-4-0",
+          "gf": 29,
+          "ga": 30,
+          "gf_pg": 3.22,
+          "ga_pg": 3.33
+        },
+        "away": {
+          "gp": 9,
+          "record": "4-5-0",
+          "gf": 26,
+          "ga": 29,
+          "gf_pg": 2.89,
+          "ga_pg": 3.22
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "New Jersey Devils",
+          "line": null,
+          "probability": 0.567,
+          "price": 1.7
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Anaheim Ducks",
+          "line": null,
+          "probability": 0.433,
+          "price": 2.22
+        },
+        {
+          "market": "Puck line",
+          "selection": "New Jersey Devils -1.5",
+          "line": -1.5,
+          "probability": 0.3305,
+          "price": 2.91
+        },
+        {
+          "market": "Puck line",
+          "selection": "Anaheim Ducks +1.5",
+          "line": 1.5,
+          "probability": 0.6695,
+          "price": 1.44
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 6.5",
+          "line": 6.5,
+          "probability": 0.4507,
+          "price": 2.13
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 6.5",
+          "line": 6.5,
+          "probability": 0.5493,
+          "price": 1.75
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "New Jersey Devils",
+        "side": "home",
+        "probability": 0.567,
+        "price": 1.7,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020158",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "PIT",
+        "name": "Pittsburgh Penguins"
+      },
+      "away": {
+        "code": "FLA",
+        "name": "Florida Panthers"
+      },
+      "start_display": "2026-10-22 23:00 UTC",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "venue": "PPG Paints Arena",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.024,
+        "home_defence": 1.114,
+        "away_attack": 1.045,
+        "away_defence": 0.95,
+        "expected_home_goals": 3.133,
+        "expected_away_goals": 3.405,
+        "expected_margin": -0.272,
+        "expected_total": 6.538
+      },
+      "inputs": {
+        "home": {
+          "gp": 10,
+          "record": "3-6-1",
+          "gf": 32,
+          "ga": 37,
+          "gf_pg": 3.2,
+          "ga_pg": 3.7
+        },
+        "away": {
+          "gp": 9,
+          "record": "5-2-2",
+          "gf": 30,
+          "ga": 25,
+          "gf_pg": 3.33,
+          "ga_pg": 2.78
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Pittsburgh Penguins",
+          "line": null,
+          "probability": 0.4585,
+          "price": 2.1
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Florida Panthers",
+          "line": null,
+          "probability": 0.5415,
+          "price": 1.78
+        },
+        {
+          "market": "Puck line",
+          "selection": "Pittsburgh Penguins -1.5",
+          "line": -1.5,
+          "probability": 0.2394,
+          "price": 4.02
+        },
+        {
+          "market": "Puck line",
+          "selection": "Florida Panthers +1.5",
+          "line": 1.5,
+          "probability": 0.7606,
+          "price": 1.26
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 6.5",
+          "line": 6.5,
+          "probability": 0.4795,
+          "price": 2.01
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 6.5",
+          "line": 6.5,
+          "probability": 0.5205,
+          "price": 1.85
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Florida Panthers",
+        "side": "away",
+        "probability": 0.5415,
+        "price": 1.78,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020159",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "NYI",
+        "name": "New York Islanders"
+      },
+      "away": {
+        "code": "LAK",
+        "name": "Los Angeles Kings"
+      },
+      "start_display": "2026-10-22 23:30 UTC",
+      "start_utc": "2026-10-22T23:30:00Z",
+      "venue": "UBS Arena",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.988,
+        "home_defence": 0.835,
+        "away_attack": 0.902,
+        "away_defence": 1.12,
+        "expected_home_goals": 3.566,
+        "expected_away_goals": 2.202,
+        "expected_margin": 1.363,
+        "expected_total": 5.768
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "5-3-1",
+          "gf": 27,
+          "ga": 19,
+          "gf_pg": 3.0,
+          "ga_pg": 2.11
+        },
+        "away": {
+          "gp": 7,
+          "record": "1-4-2",
+          "gf": 17,
+          "ga": 27,
+          "gf_pg": 2.43,
+          "ga_pg": 3.86
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "New York Islanders",
+          "line": null,
+          "probability": 0.7118,
+          "price": 1.35
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Los Angeles Kings",
+          "line": null,
+          "probability": 0.2882,
+          "price": 3.34
+        },
+        {
+          "market": "Puck line",
+          "selection": "New York Islanders -1.5",
+          "line": -1.5,
+          "probability": 0.4693,
+          "price": 2.05
+        },
+        {
+          "market": "Puck line",
+          "selection": "Los Angeles Kings +1.5",
+          "line": 1.5,
+          "probability": 0.5307,
+          "price": 1.81
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 5.5",
+          "line": 5.5,
+          "probability": 0.5164,
+          "price": 1.86
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 5.5",
+          "line": 5.5,
+          "probability": 0.4836,
+          "price": 1.99
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "New York Islanders",
+        "side": "home",
+        "probability": 0.7118,
+        "price": 1.35,
+        "confidence": "high"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "nhl-2026020160",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "STL",
+        "name": "St. Louis Blues"
+      },
+      "away": {
+        "code": "VGK",
+        "name": "Vegas Golden Knights"
+      },
+      "start_display": "2026-10-23 00:00 UTC",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "venue": "Enterprise Center",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.026,
+        "home_defence": 1.026,
+        "away_attack": 1.186,
+        "away_defence": 0.879,
+        "expected_home_goals": 2.907,
+        "expected_away_goals": 3.56,
+        "expected_margin": -0.653,
+        "expected_total": 6.467
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "4-4-1",
+          "gf": 29,
+          "ga": 29,
+          "gf_pg": 3.22,
+          "ga_pg": 3.22
+        },
+        "away": {
+          "gp": 10,
+          "record": "8-2-0",
+          "gf": 41,
+          "ga": 24,
+          "gf_pg": 4.1,
+          "ga_pg": 2.4
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "St. Louis Blues",
+          "line": null,
+          "probability": 0.4006,
+          "price": 2.4
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Vegas Golden Knights",
+          "line": null,
+          "probability": 0.5994,
+          "price": 1.6
+        },
+        {
+          "market": "Puck line",
+          "selection": "St. Louis Blues -1.5",
+          "line": -1.5,
+          "probability": 0.1938,
+          "price": 4.96
+        },
+        {
+          "market": "Puck line",
+          "selection": "Vegas Golden Knights +1.5",
+          "line": 1.5,
+          "probability": 0.8062,
+          "price": 1.19
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 6.5",
+          "line": 6.5,
+          "probability": 0.4682,
+          "price": 2.05
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 6.5",
+          "line": 6.5,
+          "probability": 0.5318,
+          "price": 1.81
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Vegas Golden Knights",
+        "side": "away",
+        "probability": 0.5994,
+        "price": 1.6,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "nhl-2026020161",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "DAL",
+        "name": "Dallas Stars"
+      },
+      "away": {
+        "code": "WPG",
+        "name": "Winnipeg Jets"
+      },
+      "start_display": "2026-10-23 00:00 UTC",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "venue": "American Airlines Center",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.892,
+        "home_defence": 0.739,
+        "away_attack": 0.93,
+        "away_defence": 0.969,
+        "expected_home_goals": 2.786,
+        "expected_away_goals": 2.01,
+        "expected_margin": 0.776,
+        "expected_total": 4.796
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "5-3-1",
+          "gf": 22,
+          "ga": 14,
+          "gf_pg": 2.44,
+          "ga_pg": 1.56
+        },
+        "away": {
+          "gp": 9,
+          "record": "4-3-2",
+          "gf": 24,
+          "ga": 26,
+          "gf_pg": 2.67,
+          "ga_pg": 2.89
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Dallas Stars",
+          "line": null,
+          "probability": 0.6352,
+          "price": 1.51
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Winnipeg Jets",
+          "line": null,
+          "probability": 0.3648,
+          "price": 2.64
+        },
+        {
+          "market": "Puck line",
+          "selection": "Dallas Stars -1.5",
+          "line": -1.5,
+          "probability": 0.3613,
+          "price": 2.66
+        },
+        {
+          "market": "Puck line",
+          "selection": "Winnipeg Jets +1.5",
+          "line": 1.5,
+          "probability": 0.6387,
+          "price": 1.51
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 4.5",
+          "line": 4.5,
+          "probability": 0.523,
+          "price": 1.84
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 4.5",
+          "line": 4.5,
+          "probability": 0.477,
+          "price": 2.02
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Dallas Stars",
+        "side": "home",
+        "probability": 0.6352,
+        "price": 1.51,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "nhl-2026020162",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "CGY",
+        "name": "Calgary Flames"
+      },
+      "away": {
+        "code": "MIN",
+        "name": "Minnesota Wild"
+      },
+      "start_display": "2026-10-23 01:00 UTC",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "venue": "Scotiabank Saddledome",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.846,
+        "home_defence": 1.253,
+        "away_attack": 1.005,
+        "away_defence": 0.897,
+        "expected_home_goals": 2.446,
+        "expected_away_goals": 3.684,
+        "expected_margin": -1.238,
+        "expected_total": 6.13
+      },
+      "inputs": {
+        "home": {
+          "gp": 8,
+          "record": "2-6-0",
+          "gf": 17,
+          "ga": 37,
+          "gf_pg": 2.12,
+          "ga_pg": 4.62
+        },
+        "away": {
+          "gp": 10,
+          "record": "6-2-2",
+          "gf": 31,
+          "ga": 25,
+          "gf_pg": 3.1,
+          "ga_pg": 2.5
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Calgary Flames",
+          "line": null,
+          "probability": 0.3114,
+          "price": 3.09
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Minnesota Wild",
+          "line": null,
+          "probability": 0.6886,
+          "price": 1.4
+        },
+        {
+          "market": "Puck line",
+          "selection": "Calgary Flames -1.5",
+          "line": -1.5,
+          "probability": 0.1288,
+          "price": 7.46
+        },
+        {
+          "market": "Puck line",
+          "selection": "Minnesota Wild +1.5",
+          "line": 1.5,
+          "probability": 0.8712,
+          "price": 1.1
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 6.5",
+          "line": 6.5,
+          "probability": 0.4146,
+          "price": 2.32
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 6.5",
+          "line": 6.5,
+          "probability": 0.5854,
+          "price": 1.64
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Minnesota Wild",
+        "side": "away",
+        "probability": 0.6886,
+        "price": 1.4,
+        "confidence": "high"
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "nhl-2026020163",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "EDM",
+        "name": "Edmonton Oilers"
+      },
+      "away": {
+        "code": "CAR",
+        "name": "Carolina Hurricanes"
+      },
+      "start_display": "2026-10-23 01:00 UTC",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "venue": "Rogers Place",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.256,
+        "home_defence": 0.988,
+        "away_attack": 1.096,
+        "away_defence": 0.879,
+        "expected_home_goals": 3.558,
+        "expected_away_goals": 3.166,
+        "expected_margin": 0.393,
+        "expected_total": 6.724
+      },
+      "inputs": {
+        "home": {
+          "gp": 9,
+          "record": "7-1-1",
+          "gf": 41,
+          "ga": 27,
+          "gf_pg": 4.56,
+          "ga_pg": 3.0
+        },
+        "away": {
+          "gp": 10,
+          "record": "7-2-1",
+          "gf": 36,
+          "ga": 24,
+          "gf_pg": 3.6,
+          "ga_pg": 2.4
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Edmonton Oilers",
+          "line": null,
+          "probability": 0.5591,
+          "price": 1.72
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Carolina Hurricanes",
+          "line": null,
+          "probability": 0.4409,
+          "price": 2.18
+        },
+        {
+          "market": "Puck line",
+          "selection": "Edmonton Oilers -1.5",
+          "line": -1.5,
+          "probability": 0.3295,
+          "price": 2.92
+        },
+        {
+          "market": "Puck line",
+          "selection": "Carolina Hurricanes +1.5",
+          "line": 1.5,
+          "probability": 0.6705,
+          "price": 1.43
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 6.5",
+          "line": 6.5,
+          "probability": 0.5084,
+          "price": 1.89
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 6.5",
+          "line": 6.5,
+          "probability": 0.4916,
+          "price": 1.96
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Edmonton Oilers",
+        "side": "home",
+        "probability": 0.5591,
+        "price": 1.72,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020164",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "SEA",
+        "name": "Seattle Kraken"
+      },
+      "away": {
+        "code": "UTA",
+        "name": "Utah Mammoth"
+      },
+      "start_display": "2026-10-23 02:00 UTC",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "venue": "Climate Pledge Arena",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 1.114,
+        "home_defence": 1.06,
+        "away_attack": 1.132,
+        "away_defence": 1.005,
+        "expected_home_goals": 3.61,
+        "expected_away_goals": 3.508,
+        "expected_margin": 0.103,
+        "expected_total": 7.118
+      },
+      "inputs": {
+        "home": {
+          "gp": 10,
+          "record": "6-3-1",
+          "gf": 37,
+          "ga": 34,
+          "gf_pg": 3.7,
+          "ga_pg": 3.4
+        },
+        "away": {
+          "gp": 10,
+          "record": "7-3-0",
+          "gf": 38,
+          "ga": 31,
+          "gf_pg": 3.8,
+          "ga_pg": 3.1
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Seattle Kraken",
+          "line": null,
+          "probability": 0.5151,
+          "price": 1.87
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Utah Mammoth",
+          "line": null,
+          "probability": 0.4849,
+          "price": 1.98
+        },
+        {
+          "market": "Puck line",
+          "selection": "Seattle Kraken -1.5",
+          "line": -1.5,
+          "probability": 0.2957,
+          "price": 3.25
+        },
+        {
+          "market": "Puck line",
+          "selection": "Utah Mammoth +1.5",
+          "line": 1.5,
+          "probability": 0.7043,
+          "price": 1.37
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 7.5",
+          "line": 7.5,
+          "probability": 0.4189,
+          "price": 2.3
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 7.5",
+          "line": 7.5,
+          "probability": 0.5811,
+          "price": 1.65
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Seattle Kraken",
+        "side": "home",
+        "probability": 0.5151,
+        "price": 1.87,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "nhl-2026020165",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": {
+        "code": "VAN",
+        "name": "Vancouver Canucks"
+      },
+      "away": {
+        "code": "DET",
+        "name": "Detroit Red Wings"
+      },
+      "start_display": "2026-10-23 02:00 UTC",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "venue": "Rogers Arena",
+      "fixture_source": {
+        "name": "NHL official schedule / score API",
+        "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+      },
+      "data_source": {
+        "name": "NHL official team summary",
+        "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&start=0&limit=32&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+        "captured_at": "2026-10-21T05:20:00Z"
+      },
+      "olbg_event_url": null,
+      "params": {
+        "nhl_home_ice_factor": 1.05,
+        "nhl_shrink_k": 8.0,
+        "nhl_overround": 0.04
+      },
+      "line_status": "originated",
+      "model": {
+        "league_avg_goals_per_game": 3.07,
+        "home_attack": 0.987,
+        "home_defence": 1.259,
+        "away_attack": 0.892,
+        "away_defence": 0.969,
+        "expected_home_goals": 3.083,
+        "expected_away_goals": 3.283,
+        "expected_margin": -0.2,
+        "expected_total": 6.367
+      },
+      "inputs": {
+        "home": {
+          "gp": 10,
+          "record": "2-7-1",
+          "gf": 30,
+          "ga": 45,
+          "gf_pg": 3.0,
+          "ga_pg": 4.5
+        },
+        "away": {
+          "gp": 9,
+          "record": "3-3-3",
+          "gf": 22,
+          "ga": 26,
+          "gf_pg": 2.44,
+          "ga_pg": 2.89
+        }
+      },
+      "markets": [
+        {
+          "market": "Moneyline",
+          "selection": "Vancouver Canucks",
+          "line": null,
+          "probability": 0.469,
+          "price": 2.05
+        },
+        {
+          "market": "Moneyline",
+          "selection": "Detroit Red Wings",
+          "line": null,
+          "probability": 0.531,
+          "price": 1.81
+        },
+        {
+          "market": "Puck line",
+          "selection": "Vancouver Canucks -1.5",
+          "line": -1.5,
+          "probability": 0.2452,
+          "price": 3.92
+        },
+        {
+          "market": "Puck line",
+          "selection": "Detroit Red Wings +1.5",
+          "line": 1.5,
+          "probability": 0.7548,
+          "price": 1.27
+        },
+        {
+          "market": "Total goals",
+          "selection": "Over 6.5",
+          "line": 6.5,
+          "probability": 0.4524,
+          "price": 2.13
+        },
+        {
+          "market": "Total goals",
+          "selection": "Under 6.5",
+          "line": 6.5,
+          "probability": 0.5476,
+          "price": 1.76
+        }
+      ],
+      "pick": {
+        "market": "Moneyline",
+        "selection": "Detroit Red Wings",
+        "side": "away",
+        "probability": 0.531,
+        "price": 1.81,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "urc-292608",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "CAR",
+        "name": "Cardiff Rugby"
+      },
+      "away": {
+        "code": "SHA",
+        "name": "Hollywoodbets Sharks"
+      },
+      "start_display": "2026-10-23 14:45 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "Cardiff Arms Park",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 26.77,
+        "expected_away_points": 24.98,
+        "expected_margin_home": 1.79,
+        "expected_total": 51.74
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "2-0-1",
+          "pf": 66,
+          "pa": 71,
+          "pts": 9,
+          "form": "WWL"
+        },
+        "away": {
+          "pl": 3,
+          "record": "2-0-1",
+          "pf": 89,
+          "pa": 83,
+          "pts": 10,
+          "form": "WWL"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "Cardiff Rugby",
+          "line": null,
+          "probability": 0.5344,
+          "price": 1.8
+        },
+        {
+          "market": "Match winner",
+          "selection": "Hollywoodbets Sharks",
+          "line": null,
+          "probability": 0.4656,
+          "price": 2.06
+        },
+        {
+          "market": "Handicap",
+          "selection": "Cardiff Rugby -1.5",
+          "line": -1.5,
+          "probability": 0.5056,
+          "price": 1.9
+        },
+        {
+          "market": "Handicap",
+          "selection": "Hollywoodbets Sharks +1.5",
+          "line": 1.5,
+          "probability": 0.4944,
+          "price": 1.94
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 51.5",
+          "line": 51.5,
+          "probability": 0.5052,
+          "price": 1.9
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 51.5",
+          "line": 51.5,
+          "probability": 0.4948,
+          "price": 1.94
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "Cardiff Rugby",
+        "side": "home",
+        "probability": 0.5344,
+        "price": 1.8,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "urc-292609",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "CON",
+        "name": "Connacht Rugby"
+      },
+      "away": {
+        "code": "ZEB",
+        "name": "Zebre Parma"
+      },
+      "start_display": "2026-10-23 14:45 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "Dexcom Stadium",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 28.95,
+        "expected_away_points": 22.28,
+        "expected_margin_home": 6.67,
+        "expected_total": 51.23
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "1-0-2",
+          "pf": 56,
+          "pa": 84,
+          "pts": 5,
+          "form": "LWL"
+        },
+        "away": {
+          "pl": 3,
+          "record": "0-0-3",
+          "pf": 52,
+          "pa": 116,
+          "pts": 1,
+          "form": "LLL"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "Connacht Rugby",
+          "line": null,
+          "probability": 0.6255,
+          "price": 1.54
+        },
+        {
+          "market": "Match winner",
+          "selection": "Zebre Parma",
+          "line": null,
+          "probability": 0.3745,
+          "price": 2.57
+        },
+        {
+          "market": "Handicap",
+          "selection": "Connacht Rugby -6.5",
+          "line": -6.5,
+          "probability": 0.5033,
+          "price": 1.91
+        },
+        {
+          "market": "Handicap",
+          "selection": "Zebre Parma +6.5",
+          "line": 6.5,
+          "probability": 0.4967,
+          "price": 1.94
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 51.5",
+          "line": 51.5,
+          "probability": 0.4942,
+          "price": 1.95
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 51.5",
+          "line": 51.5,
+          "probability": 0.5058,
+          "price": 1.9
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "Connacht Rugby",
+        "side": "home",
+        "probability": 0.6255,
+        "price": 1.54,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "urc-292610",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "EDI",
+        "name": "Edinburgh Rugby"
+      },
+      "away": {
+        "code": "LIO",
+        "name": "10bet Lions"
+      },
+      "start_display": "2026-10-23 14:45 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "Hive Stadium",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 30.47,
+        "expected_away_points": 21.81,
+        "expected_margin_home": 8.66,
+        "expected_total": 52.28
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "3-0-0",
+          "pf": 80,
+          "pa": 54,
+          "pts": 14,
+          "form": "WWW"
+        },
+        "away": {
+          "pl": 3,
+          "record": "2-0-1",
+          "pf": 77,
+          "pa": 102,
+          "pts": 9,
+          "form": "WWL"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "Edinburgh Rugby",
+          "line": null,
+          "probability": 0.6607,
+          "price": 1.46
+        },
+        {
+          "market": "Match winner",
+          "selection": "10bet Lions",
+          "line": null,
+          "probability": 0.3393,
+          "price": 2.83
+        },
+        {
+          "market": "Handicap",
+          "selection": "Edinburgh Rugby -8.5",
+          "line": -8.5,
+          "probability": 0.5031,
+          "price": 1.91
+        },
+        {
+          "market": "Handicap",
+          "selection": "10bet Lions +8.5",
+          "line": 8.5,
+          "probability": 0.4969,
+          "price": 1.94
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 52.5",
+          "line": 52.5,
+          "probability": 0.4954,
+          "price": 1.94
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 52.5",
+          "line": 52.5,
+          "probability": 0.5046,
+          "price": 1.91
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "Edinburgh Rugby",
+        "side": "home",
+        "probability": 0.6607,
+        "price": 1.46,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "urc-292611",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "BUL",
+        "name": "Vodacom Bulls"
+      },
+      "away": {
+        "code": "ULS",
+        "name": "Ulster Rugby"
+      },
+      "start_display": "2026-10-24 07:45 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "Loftus Versfeld",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 34.89,
+        "expected_away_points": 22.91,
+        "expected_margin_home": 11.99,
+        "expected_total": 57.8
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "2-0-1",
+          "pf": 126,
+          "pa": 54,
+          "pts": 11,
+          "form": "WLW"
+        },
+        "away": {
+          "pl": 3,
+          "record": "0-2-1",
+          "pf": 88,
+          "pa": 93,
+          "pts": 8,
+          "form": "LDD"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "Vodacom Bulls",
+          "line": null,
+          "probability": 0.7154,
+          "price": 1.34
+        },
+        {
+          "market": "Match winner",
+          "selection": "Ulster Rugby",
+          "line": null,
+          "probability": 0.2846,
+          "price": 3.38
+        },
+        {
+          "market": "Handicap",
+          "selection": "Vodacom Bulls -11.5",
+          "line": -11.5,
+          "probability": 0.5093,
+          "price": 1.89
+        },
+        {
+          "market": "Handicap",
+          "selection": "Ulster Rugby +11.5",
+          "line": 11.5,
+          "probability": 0.4907,
+          "price": 1.96
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 57.5",
+          "line": 57.5,
+          "probability": 0.5063,
+          "price": 1.9
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 57.5",
+          "line": 57.5,
+          "probability": 0.4937,
+          "price": 1.95
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "Vodacom Bulls",
+        "side": "home",
+        "probability": 0.7154,
+        "price": 1.34,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "urc-292612",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "STO",
+        "name": "DHL Stormers"
+      },
+      "away": {
+        "code": "SCA",
+        "name": "Scarlets"
+      },
+      "start_display": "2026-10-24 10:00 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "DHL Stadium",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 28.69,
+        "expected_away_points": 20.91,
+        "expected_margin_home": 7.77,
+        "expected_total": 49.6
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "2-0-1",
+          "pf": 81,
+          "pa": 54,
+          "pts": 11,
+          "form": "WLW"
+        },
+        "away": {
+          "pl": 3,
+          "record": "1-0-2",
+          "pf": 68,
+          "pa": 85,
+          "pts": 7,
+          "form": "LLW"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "DHL Stormers",
+          "line": null,
+          "probability": 0.6452,
+          "price": 1.49
+        },
+        {
+          "market": "Match winner",
+          "selection": "Scarlets",
+          "line": null,
+          "probability": 0.3548,
+          "price": 2.71
+        },
+        {
+          "market": "Handicap",
+          "selection": "DHL Stormers -7.5",
+          "line": -7.5,
+          "probability": 0.5052,
+          "price": 1.9
+        },
+        {
+          "market": "Handicap",
+          "selection": "Scarlets +7.5",
+          "line": 7.5,
+          "probability": 0.4948,
+          "price": 1.94
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 49.5",
+          "line": 49.5,
+          "probability": 0.5022,
+          "price": 1.91
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 49.5",
+          "line": 49.5,
+          "probability": 0.4978,
+          "price": 1.93
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "DHL Stormers",
+        "side": "home",
+        "probability": 0.6452,
+        "price": 1.49,
+        "confidence": "medium"
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "urc-292613",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "BEN",
+        "name": "Benetton Rugby"
+      },
+      "away": {
+        "code": "GLA",
+        "name": "Glasgow Warriors"
+      },
+      "start_display": "2026-10-24 10:00 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "Stadio Monigo",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 25.39,
+        "expected_away_points": 25.27,
+        "expected_margin_home": 0.13,
+        "expected_total": 50.66
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "0-1-2",
+          "pf": 64,
+          "pa": 68,
+          "pts": 5,
+          "form": "DLL"
+        },
+        "away": {
+          "pl": 3,
+          "record": "2-1-0",
+          "pf": 95,
+          "pa": 72,
+          "pts": 13,
+          "form": "WDW"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "Benetton Rugby",
+          "line": null,
+          "probability": 0.5025,
+          "price": 1.91
+        },
+        {
+          "market": "Match winner",
+          "selection": "Glasgow Warriors",
+          "line": null,
+          "probability": 0.4975,
+          "price": 1.93
+        },
+        {
+          "market": "Handicap",
+          "selection": "Benetton Rugby -0.5",
+          "line": -0.5,
+          "probability": 0.4928,
+          "price": 1.95
+        },
+        {
+          "market": "Handicap",
+          "selection": "Glasgow Warriors +0.5",
+          "line": 0.5,
+          "probability": 0.5072,
+          "price": 1.9
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 50.5",
+          "line": 50.5,
+          "probability": 0.5034,
+          "price": 1.91
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 50.5",
+          "line": 50.5,
+          "probability": 0.4966,
+          "price": 1.94
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "Benetton Rugby",
+        "side": "home",
+        "probability": 0.5025,
+        "price": 1.91,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "urc-292614",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "LEI",
+        "name": "Leinster Rugby"
+      },
+      "away": {
+        "code": "MUN",
+        "name": "Munster Rugby"
+      },
+      "start_display": "2026-10-24 13:00 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "Aviva Stadium",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 26.8,
+        "expected_away_points": 21.74,
+        "expected_margin_home": 5.05,
+        "expected_total": 48.54
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "1-0-2",
+          "pf": 75,
+          "pa": 58,
+          "pts": 8,
+          "form": "LLW"
+        },
+        "away": {
+          "pl": 3,
+          "record": "1-1-1",
+          "pf": 72,
+          "pa": 74,
+          "pts": 9,
+          "form": "LWD"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "Leinster Rugby",
+          "line": null,
+          "probability": 0.596,
+          "price": 1.61
+        },
+        {
+          "market": "Match winner",
+          "selection": "Munster Rugby",
+          "line": null,
+          "probability": 0.404,
+          "price": 2.38
+        },
+        {
+          "market": "Handicap",
+          "selection": "Leinster Rugby -5.5",
+          "line": -5.5,
+          "probability": 0.4914,
+          "price": 1.96
+        },
+        {
+          "market": "Handicap",
+          "selection": "Munster Rugby +5.5",
+          "line": 5.5,
+          "probability": 0.5086,
+          "price": 1.89
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 48.5",
+          "line": 48.5,
+          "probability": 0.501,
+          "price": 1.92
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 48.5",
+          "line": 48.5,
+          "probability": 0.499,
+          "price": 1.93
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "Leinster Rugby",
+        "side": "home",
+        "probability": 0.596,
+        "price": 1.61,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    },
+    {
+      "id": "urc-292615",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "home": {
+        "code": "OSP",
+        "name": "Ospreys"
+      },
+      "away": {
+        "code": "DRA",
+        "name": "Dragons RFC"
+      },
+      "start_display": "2026-10-24 14:00 local",
+      "start_utc": null,
+      "start_note": "URC publishes venue-local times only; the string is stored exactly as published.",
+      "venue": "St Helen's",
+      "fixture_source": {
+        "name": "URC official match centre",
+        "url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+      },
+      "data_source": {
+        "name": "URC official league table",
+        "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "captured_at": "2026-10-21T05:35:00Z"
+      },
+      "olbg_event_url": null,
+      "line_status": "originated",
+      "params": {
+        "urc_shrink_k": 6.0,
+        "urc_home_points": 3.0,
+        "urc_margin_sigma": 13.0,
+        "urc_overround": 0.04
+      },
+      "model": {
+        "league_pf_per_game": 26.21,
+        "league_pa_per_game": 26.21,
+        "expected_home_points": 28.46,
+        "expected_away_points": 29.03,
+        "expected_margin_home": -0.56,
+        "expected_total": 57.49
+      },
+      "inputs": {
+        "home": {
+          "pl": 3,
+          "record": "1-0-2",
+          "pf": 81,
+          "pa": 107,
+          "pts": 6,
+          "form": "LLW"
+        },
+        "away": {
+          "pl": 3,
+          "record": "1-1-1",
+          "pf": 88,
+          "pa": 83,
+          "pts": 9,
+          "form": "DWL"
+        }
+      },
+      "markets": [
+        {
+          "market": "Match winner",
+          "selection": "Ospreys",
+          "line": null,
+          "probability": 0.4891,
+          "price": 1.97
+        },
+        {
+          "market": "Match winner",
+          "selection": "Dragons RFC",
+          "line": null,
+          "probability": 0.5109,
+          "price": 1.88
+        },
+        {
+          "market": "Handicap",
+          "selection": "Ospreys +0.5",
+          "line": 0.5,
+          "probability": 0.4988,
+          "price": 1.93
+        },
+        {
+          "market": "Handicap",
+          "selection": "Dragons RFC -0.5",
+          "line": -0.5,
+          "probability": 0.5012,
+          "price": 1.92
+        },
+        {
+          "market": "Match total",
+          "selection": "Over 57.5",
+          "line": 57.5,
+          "probability": 0.4998,
+          "price": 1.92
+        },
+        {
+          "market": "Match total",
+          "selection": "Under 57.5",
+          "line": 57.5,
+          "probability": 0.5002,
+          "price": 1.92
+        }
+      ],
+      "pick": {
+        "market": "Match winner",
+        "selection": "Dragons RFC",
+        "side": "away",
+        "probability": 0.5109,
+        "price": 1.88,
+        "confidence": "low"
+      },
+      "confidence": "low"
+    }
+  ]
+}

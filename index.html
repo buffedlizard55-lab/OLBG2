@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dashboard · OLBG2 Sports Betting Data</title>
-<meta name="description" content="Verified OLBG fixtures with independently originated betting lines and confidence-graded picks.">
+<meta name="description" content="Dated partial OLBG schedule research with independent model lines and explicit evidence limitations.">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
 </head>
@@ -19,58 +19,55 @@
 <p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="integration.html">Evidence status &amp; cross-layer review</a>.</p>
 
 <section class="hero">
-  <h1>Verified fixtures, our own lines, and the confidence behind every pick.</h1>
-  <p class="lede">A reverse-engineered view of OLBG's sports coverage: every fixture re-checked against the
-  official league or governing body, every price originated here from verified data, and every gap left blank
-  and flagged rather than guessed.</p>
-  <p class="meta">Capture windows 2026-10-21 05:12–05:25 UTC and 07:06–07:40 UTC · 47 fixtures · 45 with originated lines ·
-  9 high-confidence picks · 22 open review items</p>
+  <h1>Schedule research, independent lines, and evidence status.</h1>
+  <p class="lede">A dated, partial research snapshot of OLBG event listings and selected league schedules. Source links are provided where captured, but they do not mean every fixture or input was independently re-checked in this audit. Model prices and confidence are estimates. See the <a href="integration.html">evidence-status review</a> for verification limits and unresolved items.</p>
+  <p class="meta">Dated captures · 47 stored rows · 45 originated-line records ·
+  9 model-labeled high-confidence picks · 22 open review items</p>
 </section>
 
 <div class="grid stats">
-  <div class="card stat"><div class="k">Fixtures verified</div><div class="v">47</div><div class="s">official source on every row</div></div>
-  <div class="card stat"><div class="k">Lines originated</div><div class="v">45</div><div class="s">moneyline · handicap · totals</div></div>
-  <div class="card stat"><div class="k">High-confidence picks</div><div class="v">9</div><div class="s">written predictions included</div></div>
-  <div class="card stat"><div class="k">Open review items</div><div class="v">22</div><div class="s">blank, unverified or irregular</div></div>
+  <div class="card stat"><div class="k">Stored fixture rows</div><div class="v">47</div><div class="s">dated snapshot; verification varies</div></div>
+  <div class="card stat"><div class="k">Lines originated</div><div class="v">45</div><div class="s">model outputs, not bookmaker prices</div></div>
+  <div class="card stat"><div class="k">Model-labeled high picks</div><div class="v">9</div><div class="s">not verified certainty</div></div>
+  <div class="card stat"><div class="k">Open review items</div><div class="v">22</div><div class="s">unverified, blank or irregular</div></div>
 </div>
 
 <h2 class="section">Sports covered</h2>
-<p class="section-sub">5 of OLBG's 17 included sports are covered in this release; the other 12 are listed on the flagged page with the reason — absence here is not evidence that OLBG lists no events.</p>
+<p class="section-sub">This root snapshot publishes rows for 5 sports under its own scope. The root's 17-sport scope differs from the survey's 15-sport interpretation; the disagreement remains flagged. Neither layer is an exhaustive live OLBG feed.</p>
 <div class="grid sports"><a class="card sport-card" href="sports/ice-hockey.html">
           <h3>Ice Hockey</h3>
-          <p>NHL — lines originated from this season&#x27;s official team goal rates.</p>
+          <p>NHL schedule snapshot; the model uses stored team goal-rate inputs, not freshly revalidated here.</p>
           <div class="row"><span>Fixtures</span><b>14</b></div>
           <div class="row"><span>Lines originated</span><b>14</b></div>
-          <div class="row"><span>High confidence</span><b>4</b></div>
+          <div class="row"><span>High model labels</span><b>4</b></div>
         </a><a class="card sport-card" href="sports/basketball.html">
           <h3>Basketball</h3>
-          <p>NBA — lines originated from the completed 2025-26 season as a prior.</p>
+          <p>NBA schedule snapshot; the model uses stored 2025-26 season inputs as a prior, not freshly revalidated here.</p>
           <div class="row"><span>Fixtures</span><b>11</b></div>
           <div class="row"><span>Lines originated</span><b>11</b></div>
-          <div class="row"><span>High confidence</span><b>0</b></div>
+          <div class="row"><span>High model labels</span><b>0</b></div>
         </a><a class="card sport-card" href="sports/rugby-union.html">
           <h3>Rugby Union</h3>
-          <p>United Rugby Championship Round 4 — lines from the official league table.</p>
+          <p>URC Round 4 snapshot; the model uses stored table inputs, not freshly revalidated here.</p>
           <div class="row"><span>Fixtures</span><b>8</b></div>
           <div class="row"><span>Lines originated</span><b>8</b></div>
-          <div class="row"><span>High confidence</span><b>0</b></div>
+          <div class="row"><span>High model labels</span><b>0</b></div>
         </a><a class="card sport-card" href="sports/cricket.html">
           <h3>Cricket</h3>
-          <p>ICC-listed internationals — fixtures verified, lines deliberately not originated.</p>
+          <p>ICC match-list snapshot; no line was produced because this model&#x27;s required strength input is absent.</p>
           <div class="row"><span>Fixtures</span><b>2</b></div>
           <div class="row"><span>Lines originated</span><b>0</b></div>
-          <div class="row"><span>High confidence</span><b>0</b></div>
+          <div class="row"><span>High model labels</span><b>0</b></div>
         </a><a class="card sport-card" href="sports/handball.html">
           <h3>Handball</h3>
-          <p>EHF Champions League Men round 5 — lines from the official group standings.</p>
+          <p>EHF Champions League Men round 5 snapshot; the model uses stored table inputs, not freshly revalidated here.</p>
           <div class="row"><span>Fixtures</span><b>12</b></div>
           <div class="row"><span>Lines originated</span><b>12</b></div>
-          <div class="row"><span>High confidence</span><b>5</b></div>
+          <div class="row"><span>High model labels</span><b>5</b></div>
         </a></div>
 
-<h2 class="section">All 17 in-scope sports</h2>
-<p class="section-sub">Every sport the brief includes, with this layer's fixtures and lines beside the number of
-events the independent coverage survey recorded. "Not surveyed" is a statement about our captures, not about OLBG.</p>
+<h2 class="section">Root scope coverage</h2>
+<p class="section-sub">The table compares the root configuration with stored survey counts; the layers have different scope decisions and known overlaps. Counts are not a combined unique-event total, and "not surveyed" describes our capture only, not OLBG.</p>
 <div class="panel"><div class="table-scroll"><table>
 <thead><tr><th>Sport</th><th>Our fixtures</th><th>Lines originated</th><th>Survey events</th><th>Status</th><th>Pages</th></tr></thead>
 <tbody><tr>
@@ -78,7 +75,7 @@ events the independent coverage survey recorded. "Not surveyed" is a statement a
           <td>—</td>
           <td>—</td>
           <td>0</td>
-          <td><span class="badge b-low">Surveyed — none listed</span></td>
+          <td><span class="badge b-low">No entry captured in survey</span></td>
           <td class="small"><a href="survey/sports/aussie_rules.html">survey page</a></td>
         </tr><tr>
           <td><b>Baseball</b></td>
@@ -99,7 +96,7 @@ events the independent coverage survey recorded. "Not surveyed" is a statement a
           <td>2</td>
           <td>—</td>
           <td>14</td>
-          <td><span class="badge b-med">Fixtures verified, no line</span></td>
+          <td><span class="badge b-med">Stored rows, no line</span></td>
           <td class="small"><a href="sports/cricket.html">our page</a> · <a href="survey/sports/cricket.html">survey page</a></td>
         </tr><tr>
           <td><b>Darts</b></td>
@@ -155,7 +152,7 @@ events the independent coverage survey recorded. "Not surveyed" is a statement a
           <td>—</td>
           <td>—</td>
           <td>0</td>
-          <td><span class="badge b-low">Surveyed — none listed</span></td>
+          <td><span class="badge b-low">No entry captured in survey</span></td>
           <td class="small"><a href="survey/sports/rugby_league.html">survey page</a></td>
         </tr><tr>
           <td><b>Rugby Union</b></td>
@@ -190,12 +187,12 @@ events the independent coverage survey recorded. "Not surveyed" is a statement a
           <td>—</td>
           <td>—</td>
           <td>0</td>
-          <td><span class="badge b-low">Surveyed — none listed</span></td>
+          <td><span class="badge b-low">No entry captured in survey</span></td>
           <td class="small"><a href="survey/sports/esports.html">survey page</a></td>
         </tr></tbody></table></div></div>
 
-<h2 class="section">All fixtures</h2>
-<p class="section-sub">Filter by sport, confidence or search a team. Every row links to the official fixture source; OLBG event links appear only where the pairing matched exactly.</p>
+<h2 class="section">Snapshot event rows</h2>
+<p class="section-sub">Filter by sport, model label or team. Rows include available source references; a linked official-site page is not proof that its contents were independently re-checked for every row. OLBG event links appear only where the pairing matched exactly.</p>
 <div class="panel">
   <div class="toolbar">
     <input id="q" type="search" placeholder="Search team, competition or pick…" aria-label="Search fixtures">
@@ -214,7 +211,7 @@ events the independent coverage survey recorded. "Not surveyed" is a statement a
   </div>
   <div class="table-scroll">
   <table id="tbl">
-    <thead><tr><th>Match</th><th>Start</th><th>Pick</th><th>Confidence</th><th>Price</th><th>Official source</th></tr></thead>
+    <thead><tr><th>Match</th><th>Start</th><th>Model pick</th><th>Model label</th><th>Model price</th><th>Source link(s)</th></tr></thead>
     <tbody><tr data-sport="Basketball" data-conf="low">
       <td><span class="match">Atlanta Hawks <span class="muted">@</span> Orlando Magic</span><span class="sub">NBA</span></td>
       <td class="num">2026-10-21 19:00 ET</td>
@@ -558,16 +555,17 @@ events the independent coverage survey recorded. "Not surveyed" is a statement a
 </details>
 <details>
   <summary>What "confidence" means here</summary>
-  <p>Confidence grades how decisive the model is <em>and</em> how much verified data stands behind it.
-  High requires a probability of at least 65% from at least seven games of current-season data. The NBA's
-  season is one game old, so NBA picks are capped at medium; the URC has played three rounds, so it is also
-  capped at medium.</p>
+  <p>Confidence grades are model classifications based on recorded sample size and model probability; they are
+  not probabilities that have been independently validated, nor a guarantee of outcome. Sport-specific thresholds
+  are described in <a href="methodology.html">Methodology</a>. Evidence gaps are listed in
+  <a href="integration.html">Evidence status</a>.</p>
 </details>
 <details>
   <summary>Sports we could not cover in this capture</summary>
-  <p>Baseball, Darts, Golf, Greyhounds, Handball, Motor Racing, Rugby League, Snooker, Tennis, Volleyball,
-  eSports, Aussie Rules and Gaelic Football were listed by OLBG but could not be verified (or, for baseball,
-  had no games). Each has an entry on the <a href="flagged.html">Flagged for review</a> page with the reason.</p>
+  <p>This root layer is partial. The separate <a href="survey/index.html">sport survey</a> records additional
+  listings, but its inventory also has unresolved official-source verification gaps. Review both the
+  <a href="flagged.html">root queue</a> and <a href="survey/flagged.html">survey queue</a>; absence from either capture is
+  not evidence that OLBG has no event.</p>
 </details>
 
 <script>

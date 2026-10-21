@@ -1010,3 +1010,17 @@ Pages API after the last deploy: `status: built`, source `main:/`. Live re-check
 `/index.html` (47 fixtures, Handball card, 17-sport table), `/sports/handball.html` (12 fixtures, 12 lines,
 5 high picks), `/picks.html` (nine predictions, every quoted probability matching `data/matches.json`),
 `/flagged.html` (F24–F26 open, F12/F21 closed).
+
+## Session `arena/e3c5f898-olbg2` — root-dashboard evidence-copy follow-up (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Remove overbroad official-verification claims from root dashboard while preserving current integrated data | done | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, `COORDINATION.md` |
+
+After PR #38, a live Pages read found the root dashboard still claimed universal fixture verification. Replaced that language with dated-snapshot and source-link limitations, model-output labels, and links to evidence/review pages. The change preserves all currently integrated match rows, line values, confidence labels, predictions, and source URLs; it does not mark any new sporting fact verified. The audit report records the observed copy and its limits.
+
+Integration and conflict record: while this follow-up was in progress, main advanced through the concurrent Handball integration and follow-up PRs #39–#42 (F21 ledger correction, probability guard/corrections, and prediction copy correction). Rebase conflicts were aborted safely; the updated main was merged. The append-only coordination conflict kept main's full session and publish records. The Handball HTML conflict was resolved by regenerating from the latest merged model/data, thereby retaining the upstream probability corrections and predictions. Evidence-copy changes were preserved in the builder and reapplied after each sync. No upstream data or changes were discarded.
+
+Verification on the merged base: `python3 -m unittest discover -s tests -v` (43 tests passed); `python3 scripts/build_site.py` (11 pages, 47 stored rows, 9 predictions); `python3 scripts/build.py`; `python3 scripts/survey_build.py`; `python3 scripts/survey_verify.py` (24 pages, 130 survey rows, 11 lines, 2 predictions, 21 flags; all structural gates green); `python3 scripts/integration_audit.py` (0 local link errors); `python3 scripts/official_source_audit.py` (130 survey rows lacking explicit official fixture-source values; domain classification is not content verification). No validator or build claims external factual accuracy.
+
+Final pre-push sync note: `git pull --rebase origin arena/e3c5f898-olbg2` attempted to replay historical session commits and conflicted in `COORDINATION.md`; the rebase was aborted without modifying the branch. `git merge-base` confirmed both the remote session branch and `origin/main` are already ancestors of this branch (the integration merge records both). No work was discarded; the next push is a fast-forward only.

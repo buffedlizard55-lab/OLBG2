@@ -1,0 +1,40 @@
+name: Publish static site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Validate static dashboard data
+        run: node --input-type=module -e "import fs from 'node:fs'; const d=JSON.parse(fs.readFileSync('data.json','utf8')); if (!Array.isArray(d.records)||!Array.isArray(d.reviewItems)||!Array.isArray(d.exclusions)) process.exit(1); for (const f of ['index.html','categories.html','markets.html','review.html','methodology.html','styles.css','app.js']) if (!fs.existsSync(f)) throw new Error('Missing '+f);"
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

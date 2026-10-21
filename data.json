@@ -1,0 +1,39 @@
+{
+  "lastUpdated": null,
+  "records": [],
+  "exclusions": [
+    { "name": "Soccer", "status": "user-requested; scope unverified" },
+    { "name": "Boxing", "status": "user-requested; scope unverified" },
+    { "name": "UFC", "status": "user-requested; scope unverified" },
+    { "name": "MMA", "status": "user-requested; scope unverified" },
+    { "name": "Football", "status": "user-requested; ambiguous; scope unverified" },
+    { "name": "American football", "status": "user-requested; scope unverified" },
+    { "name": "Hurling", "status": "user-requested; scope unverified" },
+    { "name": "Horse racing", "status": "user-requested; scope unverified" },
+    { "name": "Cycling", "status": "user-requested; scope unverified" },
+    { "name": "Specials", "status": "user-requested; scope unverified" }
+  ],
+  "reviewItems": [
+    {
+      "id": "feed-access",
+      "title": "No official fixture or market feed has been verified",
+      "detail": "No source extracts, accessible OLBG pages, or official sport/competition source records were present in the repository. Live coverage and completeness are therefore unverified.",
+      "sourceUrl": "",
+      "status": "unverified"
+    },
+    {
+      "id": "exclusions",
+      "title": "Exclusion definitions need source and scope review",
+      "detail": "The exclusion names came from the project request. The meaning of football versus American football, and whether UFC/MMA categories overlap, has not been independently resolved.",
+      "sourceUrl": "",
+      "status": "unverified"
+    },
+    {
+      "id": "lines-picks",
+      "title": "No independently originated lines or picks are published",
+      "detail": "Current lines, market prices, match facts, and form data cannot be claimed without match-specific official source checks. No predictions have been generated.",
+      "sourceUrl": "",
+      "status": "unverified"
+    }
+  ]
+}

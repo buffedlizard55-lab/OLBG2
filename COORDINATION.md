@@ -4,13 +4,17 @@ Session: `arena/8b1fdb8f-olbg2` (current Arena branch; fixed by the workspace)
 
 | Task | Status | Owner | File scope | Notes |
 |---|---|---|---|---|
-| Establish verifiable static dashboard foundation and document data/source constraints | in progress | `arena/8b1fdb8f-olbg2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` | No other task was claimed in this board when inspected. No confirmed match data has been supplied; do not fabricate schedules, odds, results, picks, or citations. |
+| Establish verifiable static dashboard foundation and document data/source constraints | done | `arena/8b1fdb8f-olbg2` | `COORDINATION.md`, `README.md`, `index.html`, `categories.html`, `markets.html`, `review.html`, `methodology.html`, `styles.css`, `app.js`, `data.json`, `.github/workflows/pages.yml` | Foundation only; no match data has been confirmed. Do not fabricate schedules, odds, results, picks, or citations. |
+| Discover official OLBG/sport sources and populate complete live coverage with verified events, lines, and picks | needs review | unassigned | `data.json` (integration-owned), future source documentation | Blocked: no verified OLBG fixture/market feed or official match records are available in the supplied repository/context. Do not mark data complete without match-specific official-source checks. |
 
 ## Handoffs and integration requests
 
-- None.
+- No integration handoff was attempted; the repository has no parallel contributors or source-data branches visible in the board.
+- The claimed branch is fixed by Arena as `arena/8b1fdb8f-olbg2`; a separate `session-&lt;id&gt;/&lt;task&gt;` branch cannot be used here.
 
 ## Verification and completion log
 
 - Initial repository review: only `README.md` was present; no app, source data, tests, or existing coordination board existed.
-- Official-source verification: none performed yet. No sport or match data is marked verified.
+- Local checks passed: `node --check app.js`; parsed `data.json` and confirmed the expected arrays; `git diff --check`; launched static preview on port 8000.
+- Official-source verification: none performed; no sport, match, market, line, or pick data is marked verified. The three review flags document the missing evidence and unvalidated exclusion scope.
+- GitHub Pages workflow was added, but no GitHub Pages deployment or production URL was verified in this session.

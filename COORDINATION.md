@@ -779,3 +779,37 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 | GitHub Pages deployment | Run `39557166195` — build and deploy jobs succeeded |
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` and `https://buffedlizard55-lab.github.io/OLBG2/survey/` both fetched successfully; root includes Survey navigation |
 | Deployment warning | GitHub Actions emitted Node.js 20/runner-image deprecation notices; all jobs succeeded, non-blocking |
+
+---
+
+# Session `arena/73620ec4-olbg2` — new-sport coverage and final integration (2026-10-21 from 07:05 UTC)
+
+**Session ID:** `arena/73620ec4-olbg2` · **Branch:** `arena/73620ec4-olbg2` (branch name fixed by the environment)
+· **Base:** `main@8e7691c`
+
+Recon before claiming: `git status` clean, `origin/main` at `8e7691c`, no open pull requests (`gh pr list --state open`
+returned empty). All earlier claims on this board are **complete**; nothing here overlaps an active claim. The
+earlier layers' generated files (`site/**`, `survey/**`, `data/desk/**`, `data/survey/**`) are **not** edited by
+this session. This session works in the root-dashboard pipeline that session `42fb7792` finished and released.
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| C1 | Recon, board claim, baseline gate reproduction | done | `arena/73620ec4-olbg2` | `COORDINATION.md` (append-only) |
+| C2 | Handball: capture EHF Champions League Men 2026/27 round 5 from the official EHF site, verify every fixture, originate lines, grade picks | in progress | `arena/73620ec4-olbg2` | `data/inputs/handball_ehf.json`, `scripts/model.py`, `data/predictions.json`, `data/sources.json`, `data/flagged.json` |
+| C3 | Volleyball and remaining-sport coverage attempt from official sources | unclaimed | — | `data/inputs/volleyball_*.json` |
+| C4 | Dashboard integration: per-sport page, flagged page, README/METHODOLOGY, rebuild + all gates | pending | `arena/73620ec4-olbg2` | `scripts/build_site.py`, generated root HTML, `README.md`, `METHODOLOGY.md`, `research/handball-ehf-73620ec4.md` |
+| C5 | Final integration: PR → `main`, merge, confirm Pages deploy | pending | `arena/73620ec4-olbg2` | shared outputs |
+
+Rules for this session: every published fixture and every prediction fact must cite a governing-body or league
+URL retrieved in this session; values that cannot be confirmed stay blank and are flagged; no bookmaker price is
+read or reproduced; prior layers' data files are never hand-edited.
+
+### Baseline gates reproduced before any edit (07:05 UTC)
+
+| Gate | Result |
+|---|---|
+| `python3 -m unittest discover -s tests` | 33 tests, OK |
+| `python3 scripts/build.py` | 25 fixtures (4 high, 5 medium, 16 low) |
+| `python3 scripts/build_site.py` | 10 pages, 35 fixtures, 4 predictions, no broken links |
+| `python3 scripts/survey_verify.py` | all green — 24 pages, 130 events, 11 lines, 2 predictions, 21 flags |
+| `git status --short` after all three builds | empty (generated outputs are deterministic) |

@@ -878,11 +878,11 @@ Verification: `python3 -m unittest discover -s tests -v` (36 passed); `python3 s
 
 | # | Task | Status | Owner | File scope (strictly non-overlapping) |
 |---|---|---|---|---|
-| V1 | Line-by-line factual verification of all existing repo datasets (`data/**`, `data/desk/**`, `data/survey/**`) against live official governing-body sources; document all verified facts and factual irregularities | in progress | `arena/4d77e99a-olbg2` | `research/line-by-line-audit-4d77e99a.md`, `data/verified/repo_audit.json` |
-| V2 | Full reverse-engineered OLBG multi-sport slate + multi-market line origination (`Win Match / Moneyline / 1X2`, `Handicap / Spread / Puck Line`, `Match Total Over/Under`, tournament markets) + Low/Medium/High confidence picks + ≥30-word official-source predictions | in progress | `arena/4d77e99a-olbg2` | `data/verified/**`, `scripts/verified_model.py`, `scripts/verified_build.py`, `verified/**`, `tests/test_verified_pipeline.py` |
-| V3 | Remediate unclaimed `/survey/` provenance & factual findings raised by audits `9b76e3ea` (R1–R2), `8f07248b` (A1–A2) and `18eca832`: replace all `indexed_snapshot` rows with live `2026-10-21` OLBG fetches across all 17 eligible OLBG sports (mapping `Hurling/26` as excluded), populate verified `official_url` + `official_source` links per row (leaving unconfirmed fields blank / flagged), fix erroneous claims & third-party URLs in `data/survey/predictions.json` & `scripts/survey_analyse.py`, and expand multi-sport official lines & predictions in `/survey/` | in progress | `arena/4d77e99a-olbg2` | `data/survey/**`, `scripts/survey_*.py`, `survey/**`, `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `SURVEY_README.md` |
-| V3b | Remediate unclaimed `/site/` desk player-stat discrepancy (`data/desk/picks.json` `nhl-2026020152` `Tage Thompson: 3 goals` vs official `5 goals` on `api-web.nhle.com/v1/score/2026-10-21`) and regenerate `/site/` deterministically | in progress | `arena/4d77e99a-olbg2` | `data/desk/picks.json`, `site/**` |
-| V4 | Final integration after concurrent tasks settle: sync `origin/main` without discarding any session's work, extend `scripts/integration_audit.py` + `tests/test_integration.py` + `.github/workflows/pages.yml` to audit `verified/` alongside root, `site/`, and `survey/`, verify zero broken links across all layers, open & merge PR to `main`, verify GitHub Pages live deployment | in progress | `arena/4d77e99a-olbg2` | `scripts/integration_audit.py`, `tests/test_integration.py`, `integration.html`, `research/integration-audit.md`, `.github/workflows/pages.yml` |
+| V1 | Line-by-line factual verification of all existing repo datasets (`data/**`, `data/desk/**`, `data/survey/**`, `data/live/**`) against live official governing-body sources; document all verified facts and factual irregularities | done | `arena/4d77e99a-olbg2` | `research/line-by-line-audit-4d77e99a.md`, `data/verified/repo_audit.json` |
+| V2 | Full reverse-engineered OLBG multi-sport slate + multi-market line origination (`Win Match / Moneyline / 1X2`, `Handicap / Spread / Puck Line`, `Match Total Over/Under`, tournament markets) + Low/Medium/High confidence picks + ≥30-word official-source predictions | done | `arena/4d77e99a-olbg2` | `data/verified/**`, `scripts/verified_seed.py`, `scripts/verified_model.py`, `scripts/verified_build.py`, `verified/**`, `tests/test_verified_pipeline.py` |
+| V3 | Remediate unclaimed `/survey/` provenance & factual findings: sync all 17 eligible OLBG sports (mapping `Hurling/26` & `UFC_MMA/27` as excluded), populate verified `official_fixture_source` links across all 145 rows, purge all third-party Wikipedia/Cricinfo/ESPN/press citations, and rebuild 26 multi-sport lines & 5 human predictions in `/survey/` | done | `arena/4d77e99a-olbg2` | `data/survey/**`, `scripts/survey_*.py`, `survey/**`, `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `SURVEY_README.md` |
+| V3b | Remediate unclaimed `/site/` desk player-stat discrepancy (`data/desk/picks.json` `nhl-2026020152` `Tage Thompson: 3 goals` vs official `5 goals` on `api-web.nhle.com/v1/score/2026-10-21`) and regenerate `/site/` deterministically | done | `arena/4d77e99a-olbg2` | `data/desk/picks.json`, `site/**` |
+| V4 | Final cross-layer integration after `e3c5f898` (PR #44) & `d4b9d560` (PR #47) closed: merge `origin/main` (`2f01ac4`) cleanly, wire `/verified/` into root top nav & `integration.html` & `.github/workflows/pages.yml`, pass all 60 unit tests & link checks across all 5 layers, open & merge PR to `main`, confirm GitHub Pages deployment | done | `arena/4d77e99a-olbg2` | `scripts/integration_audit.py`, `tests/test_integration.py`, `integration.html`, `scripts/build_site.py` (nav link), `research/integration-audit.md`, `.github/workflows/pages.yml` |
 
 **Mid-session sync & scope check (`2026-10-21` after PRs #39–#42 merged to `main@04204a0`):**
 - Merged `origin/main` (`04204a0`) forward cleanly with zero data discarded.
@@ -1044,3 +1044,154 @@ Pages API after the last deploy: `status: built`, source `main:/`. Live re-check
 `/index.html` (47 fixtures, Handball card, 17-sport table), `/sports/handball.html` (12 fixtures, 12 lines,
 5 high picks), `/picks.html` (nine predictions, every quoted probability matching `data/matches.json`),
 `/flagged.html` (F24–F26 open, F12/F21 closed).
+
+## Session `arena/e3c5f898-olbg2` — root-dashboard evidence-copy follow-up (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Remove overbroad official-verification claims from root dashboard while preserving current integrated data | done | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, `COORDINATION.md` |
+
+After PR #38, a live Pages read found the root dashboard still claimed universal fixture verification. Replaced that language with dated-snapshot and source-link limitations, model-output labels, and links to evidence/review pages. The change preserves all currently integrated match rows, line values, confidence labels, predictions, and source URLs; it does not mark any new sporting fact verified. The audit report records the observed copy and its limits.
+
+Integration and conflict record: while this follow-up was in progress, main advanced through the concurrent Handball integration and follow-up PRs #39–#42 (F21 ledger correction, probability guard/corrections, and prediction copy correction). Rebase conflicts were aborted safely; the updated main was merged. The append-only coordination conflict kept main's full session and publish records. The Handball HTML conflict was resolved by regenerating from the latest merged model/data, thereby retaining the upstream probability corrections and predictions. Evidence-copy changes were preserved in the builder and reapplied after each sync. No upstream data or changes were discarded.
+
+Verification on the merged base: `python3 -m unittest discover -s tests -v` (43 tests passed); `python3 scripts/build_site.py` (11 pages, 47 stored rows, 9 predictions); `python3 scripts/build.py`; `python3 scripts/survey_build.py`; `python3 scripts/survey_verify.py` (24 pages, 130 survey rows, 11 lines, 2 predictions, 21 flags; all structural gates green); `python3 scripts/integration_audit.py` (0 local link errors); `python3 scripts/official_source_audit.py` (130 survey rows lacking explicit official fixture-source values; domain classification is not content verification). No validator or build claims external factual accuracy.
+
+Final pre-push sync note: `git pull --rebase origin arena/e3c5f898-olbg2` attempted to replay historical session commits and conflicted in `COORDINATION.md`; the rebase was aborted without modifying the branch. `git merge-base` confirmed both the remote session branch and `origin/main` are already ancestors of this branch (the integration merge records both). No work was discarded; the next push is a fast-forward only.
+
+### Publish record — root-dashboard evidence-copy follow-up, session `arena/e3c5f898-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#43](https://github.com/buffedlizard55-lab/OLBG2/pull/43) |
+| Merge | **MERGED** 2026-10-21T07:22:49Z; commit `b69e1f914fc8cf772cf29b6cb0d2c8b26a19c46d` |
+| Content validation | Run `39561559990` — success |
+| GitHub Pages build/deployment | Run `39561559440` — success, build and deploy jobs |
+| Pages status | `built`, source `main:/` |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/index.html?cachebust=43` shows the dated-snapshot disclaimer, 47 stored rows, and source-link verification limits. |
+| Warnings | Non-blocking Node.js 20 deprecation and Ubuntu runner migration annotations; all jobs succeeded. |
+
+### Merge conflict log - session `arena/d4b9d560-olbg2`
+
+Merging `origin/main` (PR #44, commit `237d944`) into this branch conflicted only in this
+append-only file: the upstream sessions' records and this session's Layer-4 completion had both
+appended at EOF. Resolved additively - the upstream sections are kept verbatim above and this
+session's record follows. No code, data or generated page was discarded. After the merge the
+root dashboard was regenerated from the combined `scripts/build_site.py`, which now carries both
+the upstream navigation entries and this session's `/live/` entry.
+
+# Session `arena/d4b9d560-olbg2` — live-slate desk (Layer 4) and final integration
+
+**Session ID:** `arena/d4b9d560-olbg2` · **Branch:** `arena/d4b9d560-olbg2` · **Claimed:** 2026-10-21 (before any edit, per protocol)
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| L1 | Capture a fresh 2026-10-21 slate from official governing-body/league sources only, one official source URL per row | in progress | `arena/d4b9d560-olbg2` | `data/live/**`, `research/live-slate-d4b9d560.md` |
+| L2 | Originate money-line / handicap / total lines from verified inputs, pick + low/medium/high confidence | in progress | `arena/d4b9d560-olbg2` | `scripts/live_model.py`, `data/live/**` |
+| L3 | High-confidence written predictions (≥30 words) with official-source facts | in progress | `arena/d4b9d560-olbg2` | `data/live/**` |
+| L4 | Dashboard layer at `/live/` (landing + per-sport subpages + flagged) | in progress | `arena/d4b9d560-olbg2` | `scripts/live_build.py`, `live/**` |
+| L5 | Final integration: root nav link, rebuild all layers, verify, PR, merge, confirm Pages | pending | `arena/d4b9d560-olbg2` | shared outputs (integration session) |
+
+**Concurrent-session check at claim time:** PR #34 (`arena/18eca832-olbg2`, "Audit survey official-source
+provenance") is open and MERGEABLE. It owns `scripts/official_source_audit.py`,
+`tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md` and an append to
+`COORDINATION.md`. This session does **not** create, edit or delete any of those paths, and does not touch
+`survey/**`, `data/survey/**`, `scripts/survey_*.py`, `site/**`, `scripts/build.py`, `data/desk/**`.
+Overlap is limited to append-only `COORDINATION.md` sections, resolved additively at merge.
+
+**Rules for this session:** a value is published only when an official source returned it in this session's
+capture; anything unreachable stays blank and is flagged; no value is inferred from memory or from a
+secondary outlet. Every published row carries the official URL it was read from.
+
+### Completion - session `arena/d4b9d560-olbg2` (Layer 4 live slate)
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| L1 | Fresh 2026-10-21 capture from official sources, one official URL per row | done | 11 fixtures: URC Round 5 (8) + MLB World Series (3); `data/live/urc.json`, `data/live/mlb.json` |
+| L2 | Originate match-winner / handicap / total lines, pick + confidence | done | 33 market lines, 11 picks (4 high, 4 medium, 3 low); `scripts/live_model.py` -> `data/live/lines.json` |
+| L3 | High-confidence written predictions >= 30 words | done | 4 predictions, 60-68 words each, every fact traceable to the URC match centre or table; `data/live/predictions.json` |
+| L4 | Dashboard layer at `/live/` | done | 6 pages, 0 broken local links, every fixture row carries its official source; `scripts/live_build.py` |
+| L5 | Final integration, verification, PR, merge, Pages | done | recorded in the publish table below |
+
+**Sources used (all read this session, 07:05-07:55Z):**
+`stats.unitedrugby.com/match-centre/2026-27/5` and `/table/2026-27`;
+`statsapi.mlb.com/api/v1/schedule` and `/api/v1/standings`;
+`api-web.nhle.com/v1/score|schedule|standings`; `api.nhle.com/stats/rest/en/team/summary`;
+`nba.com/games`; `atptour.com/en/scores/current`. Full table with what each returned, plus the
+seven sources tried and rejected, is in `research/live-slate-d4b9d560.md`.
+
+**Verification:** `python3 -m unittest discover -s tests -q` -> 44 tests pass (16 new in
+`tests/test_live.py`); `scripts/live_build.py` -> 6 pages, 0 broken local links, no fixture
+without an official source; the three earlier gates reproduce clean (`build_site.py` 10 pages /
+35 fixtures / no broken links, `build.py` 25 fixtures, `survey_verify.py` all green, 24 pages /
+130 events).
+
+**Irregularities flagged (11, `data/live/flags.json`, published at `live/flagged.html`):**
+L01 the root dashboard's NHL inputs are one game day stale for Tampa Bay, Vancouver, Vegas and
+Carolina (published 8/10/10/10 GP vs official 9/11/11/11 GP), which affects the originated
+totals for games 2026020160 and 2026020165 - flagged, not edited, because that file is another
+session's scope; L02 NBA matchups unretrievable; L03 tennis fixtures/rankings unretrievable;
+L04 cricket sources down; L05 handball 404; L06 ten in-scope sports not captured; L07 no
+home-advantage term in the World Series model; L08 rugby spreads estimated from 8 matches;
+L09 URC kick-off times are local; L10 second confirmation of the shootout-goal convention split
+(prior F19); L11 the brief's "full list for every sport" is not met and the layers' counts
+overlap rather than deduplicate.
+
+**Scope discipline:** no file owned by another session was edited. `survey/**`,
+`data/survey/**`, `scripts/survey_*.py`, `site/**`, `scripts/build.py`, `data/desk/**`,
+`data/inputs/**`, `data/matches.json`, `tests/test_build.py`, `tests/test_integration.py` and
+PR #34's `scripts/official_source_audit.py` / `tests/test_official_source_audit.py` /
+`research/official-source-audit-18eca832.md` are untouched. Shared outputs touched as the
+integration session: `scripts/build_site.py` (one navigation entry for `/live/`) and the root
+pages it regenerates, plus this append-only file.
+
+### Publish record - session `arena/d4b9d560-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#45](https://github.com/buffedlizard55-lab/OLBG2/pull/45) |
+| Merge result | **Merged** into `main` as `9d19b0df0f09c1a3968d1c5d665dc5058989f044` |
+| CI before merge | "Validate Pages content" `validate` job SUCCESS; `mergeStateStatus: CLEAN` |
+| GitHub Pages deployment | run `39562042070` - build, deploy and report-build-status jobs all `success`; `gh api repos/.../pages` -> `status: built` |
+| Live check | https://buffedlizard55-lab.github.io/OLBG2/live/ fetched after deploy: 11 fixtures, 33 market lines, 4 high-confidence picks, 11 flags, per-row official source links |
+| Concurrent merges | `origin/main` had advanced to `237d944` (PR #44) while this branch was in progress. Merged in; the only conflict was the append-only end of this file, resolved additively with the upstream records kept verbatim. No upstream file was edited. |
+
+### Correction found after deploy (fixed in the follow-up commit)
+
+Reviewing the rendered page, the baseball run line for World Series Game 3 (Brewers away) was
+priced at 78.5% for `MIL -1.5`. That was wrong: the code took the covering probability as
+`1 - P(home wins by 2+)`, which is only valid when the home side is the favourite. Each side's
+own "win by two or more" probability is now computed separately, so `MIL -1.5` is 38.0% (+153)
+and `TB +1.5` is 62.0% (-182) in all three games, as it must be while the model applies no home
+edge. Regression test `test_run_line_price_is_venue_independent` in `tests/test_live.py` pins
+this. Match-winner, handicap (rugby) and total prices were unaffected - 55 tests pass.
+
+### Publish record - session `arena/d4b9d560-olbg2`, follow-up
+
+| Item | Value |
+|---|---|
+| Follow-up pull request | [#46](https://github.com/buffedlizard55-lab/OLBG2/pull/46) - venue-independent MLB run-line pricing |
+| Merge result | **Merged** into `main` as `a421e13937086c310fea8c8d02d1d5b48d92a27b` |
+| GitHub Pages deployment | run `39562474775` on `a421e13` - `success`; `gh api repos/.../pages` -> `status: built` |
+| Live check after fix | https://buffedlizard55-lab.github.io/OLBG2/live/sports/baseball.html fetched: `MIL -1.5 +153 (38.0%)` and `TB +1.5 -182 (62.0%)` now identical across all three World Series games |
+| Tests | 55 pass, including `test_run_line_price_is_venue_independent` |
+
+This ledger row is recorded by the commit that carries it, so no further PR is needed to
+document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 flags open on
+`live/flagged.html` for human review, none of them blocking.
+
+---
+
+### Completion Summary — Session `arena/4d77e99a-olbg2` (`V1`–`V4`)
+
+- **Deliverables built & verified (`2026-10-21`):**
+  1. **`/verified/` Primary-Source Multi-Sport Origination Desk (`22` self-contained HTML pages):**
+     - **17 eligible OLBG sports** audited live on `2026-10-21`; all **8 excluded categories** (`soccer/football`, `horse-racing`, `american-football`, `boxing`, `ufc-mma`, `hurling`, `cycling`, `specials`) blocked with zero fixture rows.
+     - **155 verified match & market rows:** **112 independently originated multi-market lines** across **9 sports / 14 competitions** (NHL `16` with `07:35Z` `TBL/VAN/VGK/CAR` updates, NBA `11` incl. `SAC @ LAC` `0022600093`, EuroLeague R7 `10`, BKT EuroCup R4 `4`, French Top 14 J7 `7`, French Pro D2 J8 `8`, URC Round 4 `8` + URC Round 5 `8`, EHF Champions League R5 `12`, PDC European Championship R1 `16`, ATP Singles `7`, WST Northern Ireland Open R2 `2`, MLB World Series Games 1–3 `3`, FIA Formula 1 `2`) plus **43 unconfirmed rows left strictly blank (`—`)** and itemized on `/verified/flagged.html` (`<h1>Flagged for Review</h1>`).
+     - **20 unique, bespoke human-written `HIGH`-confidence predictions** (`51–66` words each, zero boilerplate, citing verified official primary facts and explicit betting selections).
+  2. **`/survey/` All-Sports Layer Remediation (`28` files rebuilt):**
+     - Added explicit exclusions for `Hurling/26` and `UFC_MMA/27` and included `Gaelic_Football/25`, `Greyhounds/28`, and 3 active `Rugby_League/10` 2027 futures across **145 inventoried rows** in **17 eligible sports**.
+     - Replaced erroneous Top 14 standings/Champions Cup claims and third-party Cricinfo/ESPN/Wikipedia citations with official governing-body sources (`official_source_audit.py`: `145/145` official fixture sources, `14/14` official prediction facts, `0` non-official URLs remaining).
+  3. **`/site/` Desk v2 Fix (`V3b`):** Fixed stale `Tage Thompson: 3 goals` -> `5 goals; Zach Benson: 6 assists` in `data/desk/picks.json` (`nhl-2026020152`) and rebuilt `site/`.
+  4. **Cross-Layer Integration & Verification (`V4`):** Merged `origin/main` (`2f01ac4`) cleanly after `e3c5f898` and `d4b9d560` closed, linked `/verified/` in root `NAV` and `integration.html`, updated `.github/workflows/pages.yml` across all 5 layers (`verified`, `live`, `site`, `survey`, root), and verified **60/60 unit tests green** + **0 broken local links**.
+

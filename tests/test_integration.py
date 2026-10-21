@@ -9,8 +9,27 @@ spec = importlib.util.spec_from_file_location('integration_audit', ROOT / 'scrip
 audit = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(audit)
 
+builder_spec = importlib.util.spec_from_file_location('dashboard_builder', ROOT / 'scripts/build_site.py')
+builder = importlib.util.module_from_spec(builder_spec)
+builder_spec.loader.exec_module(builder)
+
 
 class IntegrationTests(unittest.TestCase):
+    def test_root_dashboard_discloses_snapshot_and_source_verification_limits(self):
+        matches = builder.load('matches.json')
+        predictions = builder.load('predictions.json')
+        flags = builder.load('flagged.json')
+        index = builder.build_index(matches, predictions, flags)
+        methodology = builder.build_methodology(matches)
+        sources = builder.build_sources(builder.load('sources.json'), matches)
+
+        self.assertIn('dated, partial research snapshot', index)
+        self.assertIn('do not mean every fixture or input was independently re-checked', index)
+        self.assertIn('Rows include source links', methodology)
+        self.assertIn('does not establish that the page was fetched', sources)
+        self.assertNotIn('Fixtures verified', index)
+        self.assertNotIn('Every fixture is re-checked', methodology)
+
     def test_all_published_layers_have_resolving_local_links(self):
         self.assertEqual(audit.local_link_errors(), [])
 

@@ -234,6 +234,51 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
             {"claim": "Round 4 fixture 292610 confirmed at Hive Stadium", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610"},
         ],
     },
+    "urc-292617": {
+        "headline": "Second-placed Glasgow Warriors bring unbeaten Scotstoun record against leaky Lions",
+        "template": (
+            "Glasgow Warriors to defeat 10bet Lions in Friday night's URC Round 5 clash at Scotstoun Stadium. "
+            "Unbeaten Glasgow sit second on 13 points (2W-1D-0L, 95 points scored, 72 conceded) after beating Connacht 36-19 at home on 9 October. "
+            "Seventh-placed Lions have shipped 102 points in three games following their 57-15 loss in Pretoria, pricing Glasgow at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Glasgow Warriors sit 2nd in URC at 2W-1D-0L (13 pts, 95 PF, 72 PA) and beat Connacht 36-19", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "10bet Lions stand 2W-0D-1L (77 PF, 102 PA) after losing 57-15 at Bulls", "source": "https://stats.unitedrugby.com/match-centre/2026-27/5"},
+        ],
+    },
+    "urc-292618": {
+        "headline": "Cape Town defence gives DHL Stormers clear home edge over winless Ulster",
+        "template": (
+            "DHL Stormers to win the 1X2 match-winner market at DHL Stadium against Ulster Rugby in URC Round 5. "
+            "Stormers have conceded a league-low 54 points across three rounds (2W-0D-1L, 81 PF) and routed the Sharks 39-22 at this venue on 10 October, whereas Ulster enter winless at 0W-2D-1L (88 PF, 93 PA), pricing Stormers at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "DHL Stormers stand 4th at 2W-0D-1L (81 PF, 54 PA) and beat Sharks 39-22", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Ulster Rugby sit winless at 0W-2D-1L (88 PF, 93 PA) ahead of Cape Town trip", "source": "https://stats.unitedrugby.com/match-centre/2026-27/5"},
+        ],
+    },
+    "urc-292619": {
+        "headline": "Vodacom Bulls' +72 scoring surge hosts point-negative Scarlets in Pretoria",
+        "template": (
+            "Vodacom Bulls to beat Scarlets on the 1X2 match-winner line at Loftus Versfeld in Saturday's URC Round 5 fixture. "
+            "Pretoria's Bulls lead the URC with 126 points scored and only 54 allowed (+72) after their 57-15 demolition of the Lions, while twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA), putting the hosts at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Vodacom Bulls lead the URC with 126 PF against 54 PA (+72) at 2W-0D-1L", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Scarlets sit 12th at 1W-0D-2L (68 PF, 85 PA) before visiting Loftus Versfeld", "source": "https://stats.unitedrugby.com/match-centre/2026-27/5"},
+        ],
+    },
+    "urc-292622": {
+        "headline": "Rodney Parade attack backs Dragons RFC against winless cellar-dwellers Zebre Parma",
+        "template": (
+            "Dragons RFC to win at Rodney Parade against Zebre Parma in Saturday's URC Round 5 meeting. "
+            "Eighth-placed Dragons hold a +5 differential on 9 points (1W-1D-1L, 88 PF, 83 PA) after scoring 31 points at home on 9 October, whereas bottom-placed Zebre are 0W-0D-3L with a competition-worst -64 differential (52 PF, 116 PA), rating Dragons at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Dragons RFC stand 8th on 9 pts (1W-1D-1L, 88 PF, 83 PA)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Zebre Parma sit 16th at 0W-0D-3L (1 pt, 52 PF, 116 PA, -64)", "source": "https://stats.unitedrugby.com/match-centre/2026-27/5"},
+        ],
+    },
     "urc-292612": {
         "headline": "DHL Stormers' stingy Cape Town defence faces point-shy Scarlets in Round 4",
         "template": (
@@ -460,7 +505,12 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
 
 
 def originate_nhl(nhl_teams: dict, fixtures: list[dict]) -> list[dict]:
-    teams = nhl_teams["teams"]
+    teams = {k: dict(v) for k, v in nhl_teams["teams"].items()}
+    # Apply verified 2026-10-21T07:35Z NHL REST summary updates (including 20 Oct games; see L01)
+    teams["TBL"].update({"gp": 9, "w": 7, "l": 2, "otl": 0, "gf": 31, "ga": 23, "points": 14})
+    teams["VAN"].update({"gp": 11, "w": 2, "l": 8, "otl": 1, "gf": 33, "ga": 51, "points": 5})
+    teams["VGK"].update({"gp": 11, "w": 8, "l": 3, "otl": 0, "gf": 43, "ga": 30, "points": 16})
+    teams["CAR"].update({"gp": 11, "w": 8, "l": 2, "otl": 1, "gf": 42, "ga": 27, "points": 17})
     lg_gf = sum(t["gf"] for t in teams.values()) / sum(t["gp"] for t in teams.values())
     rows: list[dict] = []
     for f in fixtures:
@@ -852,43 +902,54 @@ def originate_snooker(players: dict, fixtures: list[dict]) -> list[dict]:
     return rows
 
 
-def originate_mlb(ws: dict) -> list[dict]:
-    h = ws["home"]
-    a = ws["away"]
+def originate_mlb(ws: dict, live_mlb: dict) -> list[dict]:
+    teams = live_mlb["teams"]
+    rows = []
     lg = 4.45
-    lh = lg * ((h["rs"] / h["gp"]) / lg) * ((a["ra"] / a["gp"]) / lg) * 1.04
-    la = lg * ((a["rs"] / a["gp"]) / lg) * ((h["ra"] / h["gp"]) / lg)
-    grid = poisson_grid(lh, la)
-    reg_h = sum(p for (i, j), p in grid.items() if i > j)
-    reg_d = sum(p for (i, j), p in grid.items() if i == j)
-    p_home = reg_h + 0.51 * reg_d
-    p_away = 1.0 - p_home
-    p_rl = sum(p for (i, j), p in grid.items() if i - j >= 2)
-    p_over = sum(p for (i, j), p in grid.items() if (i + j) > 7.5)
-    return [
-        {
-            "id": ws["id"],
-            "sport": "baseball",
-            "sport_name": "Baseball",
-            "competition": ws["competition"],
-            "date": ws["date"],
-            "time": ws["time"],
-            "home": h["name"],
-            "away": a["name"],
-            "venue": ws["venue"],
-            "line_status": "originated",
-            "home_summary": f"{h['w']}-{h['l']} ({h['rs']} RS / {h['ra']} RA)",
-            "away_summary": f"{a['w']}-{a['l']} ({a['rs']} RS / {a['ra']} RA)",
-            "winner_market": {"type": "2-way Moneyline", "home_prob": round(p_home, 4), "away_prob": round(p_away, 4), "home_odds": fair_decimal(p_home), "away_odds": fair_decimal(p_away)},
-            "handicap_market": {"line": -1.5, "label": f"{h['name']} -1.5 / {a['name']} +1.5", "fav_prob": round(p_rl, 4), "dog_prob": round(1.0 - p_rl, 4), "fav_odds": fair_decimal(p_rl), "dog_odds": fair_decimal(1.0 - p_rl)},
-            "total_market": {"line": 7.5, "projected": round(lh + la, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
-            "pick": {"selection": f"{h['name']} (Moneyline)", "team": h["name"], "probability": round(p_home, 4), "fair_odds": fair_decimal(p_home), "confidence": grade(p_home)},
-            "official_source": "MLB Stats API Official",
-            "official_url": ws["url"],
-            "data_url": ws["url"],
-            "olbg_url": ws["olbg_url"],
-        }
-    ]
+    for f in live_mlb["fixtures"]:
+        h = teams[f["home"]]
+        a = teams[f["away"]]
+        lh = lg * ((h["runs_scored"] / 162.0) / lg) * ((a["runs_allowed"] / 162.0) / lg) * 1.04
+        la = lg * ((a["runs_scored"] / 162.0) / lg) * ((h["runs_allowed"] / 162.0) / lg)
+        grid = poisson_grid(lh, la)
+        reg_h = sum(p for (i, j), p in grid.items() if i > j)
+        reg_d = sum(p for (i, j), p in grid.items() if i == j)
+        p_home = reg_h + 0.51 * reg_d
+        p_away = 1.0 - p_home
+        fav_is_home = p_home >= p_away
+        fav_name = h["name"] if fav_is_home else a["name"]
+        dog_name = a["name"] if fav_is_home else h["name"]
+        win_prob = max(p_home, p_away)
+        if fav_is_home:
+            p_rl = sum(p for (i, j), p in grid.items() if i - j >= 2)
+        else:
+            p_rl = sum(p for (i, j), p in grid.items() if j - i >= 2)
+        p_over = sum(p for (i, j), p in grid.items() if (i + j) > 7.5)
+        rows.append(
+            {
+                "id": f["id"],
+                "sport": "baseball",
+                "sport_name": "Baseball",
+                "competition": f"2026 MLB {f['description']}",
+                "date": f["official_date"],
+                "time": f["game_date_utc"],
+                "home": h["name"],
+                "away": a["name"],
+                "venue": f["venue"],
+                "line_status": "originated",
+                "home_summary": f"{h['wins']}-{h['losses']} ({h['runs_scored']} RS / {h['runs_allowed']} RA)",
+                "away_summary": f"{a['wins']}-{a['losses']} ({a['runs_scored']} RS / {a['runs_allowed']} RA)",
+                "winner_market": {"type": "2-way Moneyline", "home_prob": round(p_home, 4), "away_prob": round(p_away, 4), "home_odds": fair_decimal(p_home), "away_odds": fair_decimal(p_away)},
+                "handicap_market": {"line": -1.5, "label": f"{fav_name} -1.5 / {dog_name} +1.5", "fav_prob": round(p_rl, 4), "dog_prob": round(1.0 - p_rl, 4), "fav_odds": fair_decimal(p_rl), "dog_odds": fair_decimal(1.0 - p_rl)},
+                "total_market": {"line": 7.5, "projected": round(lh + la, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
+                "pick": {"selection": f"{fav_name} (Moneyline)", "team": fav_name, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "official_source": "MLB Stats API Official",
+                "official_url": f["human_url"],
+                "data_url": live_mlb["meta"]["standings_source"]["url"],
+                "olbg_url": ws["olbg_url"],
+            }
+        )
+    return rows
 
 
 def originate_f1(drivers: list[dict]) -> list[dict]:
@@ -975,6 +1036,22 @@ def main() -> None:
         for f in urc_raw["fixtures"]
     ]
 
+    urc_r5_raw = json.loads((ROOT / "data" / "live" / "urc.json").read_text())
+    live_mlb_raw = json.loads((ROOT / "data" / "live" / "mlb.json").read_text())
+    urc_r5_fixtures = [
+        {
+            "id": f["id"],
+            "date": f["date_local"],
+            "time": f"{f['date_local']} {f['time_local']} Local",
+            "home": f["home"],
+            "away": f["away"],
+            "venue": f["venue"],
+            "url": f["url"],
+            "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+        }
+        for f in urc_r5_raw["fixtures"]
+    ]
+
     originated: list[dict] = []
     originated.extend(originate_nhl(nhl_teams, shared_fx["nhl"]["fixtures"]))
     originated.extend(originate_nba(nba_teams, shared_fx["nba"]["fixtures"], inputs["nba_extra_game_ids"]))
@@ -983,11 +1060,12 @@ def main() -> None:
     originated.extend(originate_rugby(inputs["top14_teams"], inputs["top14_fixtures"], "French Top 14 2026-27 — Journée 7", "https://top14.lnr.fr/classement", "LNR Official Top 14"))
     originated.extend(originate_rugby(inputs["prod2_teams"], inputs["prod2_fixtures"], "French Pro D2 2026-27 — Journée 8", "https://prod2.lnr.fr/classement", "LNR Official Pro D2"))
     originated.extend(originate_rugby(urc_teams, urc_fixtures, "United Rugby Championship 2026-27 — Round 4", "https://stats.unitedrugby.com/match-centre/table/2026-27", "URC Official Match Centre"))
+    originated.extend(originate_rugby(urc_teams, urc_r5_fixtures, "United Rugby Championship 2026-27 — Round 5", "https://stats.unitedrugby.com/match-centre/table/2026-27", "URC Official Match Centre"))
     originated.extend(originate_handball(ehf_raw, inputs["ehf_olbg_map"]))
     originated.extend(originate_darts(inputs["pdc_players"], inputs["darts_fixtures"]))
     originated.extend(originate_tennis(inputs["atp_players"], inputs["tennis_originated"]))
     originated.extend(originate_snooker(inputs["wst_top36"], inputs["snooker_originated"]))
-    originated.extend(originate_mlb(inputs["mlb_world_series"]))
+    originated.extend(originate_mlb(inputs["mlb_world_series"], live_mlb_raw))
     originated.extend(originate_f1(inputs["f1_drivers"]))
 
     unlined: list[dict] = []

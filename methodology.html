@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Methodology · OLBG2 Sports Betting Data</title>
-<meta name="description" content="Line origination formulas, confidence rules and verification process.">
+<meta name="description" content="Model formulas and confidence rules; factual verification coverage is limited and flagged.">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
 </head>
@@ -12,7 +12,7 @@
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
-    <nav class="main"><a href="index.html">Dashboard</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sources.html">Sources</a><a href="survey/index.html">Survey (130 events)</a><a href="site/index.html">Evidence desk v2</a><a href="integration.html">Evidence status</a></nav>
+    <nav class="main"><a href="index.html">Dashboard</a><a href="verified/index.html">Verified desk (155 rows)</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sources.html">Sources</a><a href="survey/index.html">Survey (145 events)</a><a href="live/index.html">Live slate (2026-10-21)</a><a href="site/index.html">Evidence desk v2</a><a href="integration.html">Evidence status</a></nav>
   </div>
 </header>
 <main class="wrap">
@@ -20,8 +20,7 @@
 
 <section class="hero">
   <h1>Methodology</h1>
-  <p class="lede">How a fixture becomes a line: what we take from OLBG, what we re-verify, how the probabilities are
-  computed, and the exact rules that decide a confidence grade.</p>
+  <p class="lede">How stored inputs are transformed into model lines and labels, and what the checks do and do not establish. This documents the model; it does not claim each source page or sporting fact was independently re-verified.</p>
 </section>
 
 <h2 class="section">1. Scope</h2>
@@ -39,16 +38,18 @@ is included anywhere. The list is enforced in <code>scripts/config.py</code>.</p
 They do <b>not</b> publish prices. Nothing in this dataset uses OLBG tip percentages as a probability: our lines
 are originated independently. OLBG is only an event-discovery and market-vocabulary source.</p>
 
-<h2 class="section">3. Verification</h2>
-<p>Every fixture is re-checked against the league or governing body before it is published: NBA.com, the NHL
-score API, the URC match centre, the ICC match list, the WST draw and the EHF Champions League match centre. If the official source does not confirm the
-fixture, the row is not published and the OLBG event goes to the flagged page. If the official source confirms the
-fixture but no verified strength input exists, the fixture is published with a blank line and a stated reason.</p>
+<h2 class="section">3. Evidence and verification limits</h2>
+<p>Rows include source links captured for this dated snapshot, but the presence of a URL is not evidence that its
+contents were checked or that it confirms every displayed field. A later cross-layer audit performed only a
+limited NHL schedule spot-check; it did not freshly verify every fixture, strength input, market, or prediction.
+The build validates internal structure and source-link presence, not external page contents. Refer to the
+<a href="integration.html">evidence-status review</a> and the <a href="flagged.html">review queue</a>; treat any
+fact without explicit confirmation as unverified rather than assuming that the linked page supports it.</p>
 
 <h2 class="section">4. The models</h2>
 <h3>Ice Hockey (NHL)</h3>
-<p>A multiplicative Poisson attack/defence model on season-to-date goals, with empirical-Bayes shrinkage because
-only 7–11 games have been played.</p>
+<p>A multiplicative Poisson attack/defence model on the goals-per-game inputs stored in this snapshot, with
+empirical-Bayes shrinkage. The underlying statistics are not freshly revalidated by this audit.</p>
 <pre><code>league_avg = mean(goals for per game) over all 32 teams
 w          = gp / (gp + 8.0)
 attack_i   = 1 + w * ((gf_i / gp_i) / league_avg - 1)
@@ -62,8 +63,8 @@ total line = nearest half-point to lambda_home + lambda_away</code></pre>
 line-setting parameters, not sourced facts. They are recorded in every NHL row.</p>
 
 <h3>Basketball (NBA)</h3>
-<p>The 2026-27 season is one game old and every team playing on 21 October was 0-0, so the completed 2025-26
-season is used as a prior, shrunk 25% toward .500.</p>
+<p>The model uses stored 2025-26 records as a prior, shrunk 25% toward .500. The underlying standings values
+and the description of the current season are not freshly revalidated by this audit.</p>
 <pre><code>raw      = wins / (wins + losses)            # 2025-26
 shrunk   = 0.75 * raw + 0.25 * 0.5
 rating   = logit(shrunk)
@@ -73,8 +74,8 @@ handicap = nearest half-point to -margin
 total    = NOT ORIGINATED (no verified points-for/against input was captured)</code></pre>
 
 <h3>Rugby Union (URC)</h3>
-<p>Points for and against per game from the official league table, shrunk toward the league mean because only
-three rounds have been played.</p>
+<p>The checked-in model input represents points for and against per game from a league table, shrunk toward the
+league mean. The source page contents and values were not freshly revalidated in this copy audit.</p>
 <pre><code>w = pl / (pl + 6.0)
 attack_i  = 1 + w * ((pf_i / pl_i) / league_pf - 1)
 defence_i = 1 + w * ((pa_i / pl_i) / league_pa - 1)
@@ -89,8 +90,9 @@ total    = expected_home + expected_away, nearest half-point</code></pre>
 theoretical margin. <b>These are not bookmaker prices and were not compared to any bookmaker.</b></p>
 
 <h3>Handball (EHF Champions League Men)</h3>
-<p>Goals for and against per game inside the current group phase, shrunk toward the competition mean because
-only four rounds have been played, then converted into a joint Poisson score grid:</p>
+<p>The model uses the stored group-phase goals-for and goals-against inputs, shrinks them toward its competition
+mean, then converts the estimates into a joint Poisson score grid. The source values and round count are not
+freshly revalidated by this copy audit:</p>
 <pre><code>league_gf  = sum(goals for) / sum(games played) over all 24 clubs
 w          = gp / (gp + 3.0)
 attack_i   = 1 + w * ((gf_i / gp_i) / league_gf - 1)
@@ -116,23 +118,23 @@ or more group games, <b>medium</b> from 58%, and <b>low</b> below that.</p>
 "high" would be a confidence trick, not a prediction.</p>
 
 <h2 class="section">6. Predictions</h2>
-<p>Written predictions are produced only for high-confidence picks. Each one must be at least 30 words, name the
-selection explicitly, and state the team, its record and goal rate, at least one named player with a verified
-statistic, and the model probability. No claim about injuries, line-ups, travel or transfers appears anywhere,
-because none could be verified from an official source in this capture. Every factual sentence carries a source
-link on the <a href="picks.html">Picks page</a>.</p>
+<p>Written predictions are attached to model-labeled high picks and include citations, but a citation link alone
+is not proof that its page supports the associated claim. The current cross-layer audit did not freshly verify every
+fact in these narratives. Treat existing prose as unverified where not checked against an official source; see
+<a href="integration.html">Evidence status</a> and open cited pages before relying on a statement. No automated
+gate checks the factual content of prediction text.</p>
 
 <h2 class="section">7. Provenance</h2>
-<p>Raw captures and what was taken from each URL are logged in <code>research/collection-log.md</code>. The
-machine-readable dataset is <a href="data/matches.json">data/matches.json</a>; regenerate it with
-<code>python3 scripts/model.py</code> and rebuild this site with <code>python3 scripts/build_site.py</code>.
-The builder fails the build if a prediction is under 30 words or a link is broken.</p>
+<p>URLs and collection notes are recorded in <code>research/collection-log.md</code>; raw response captures are not
+uniformly archived. The machine-readable dataset is <a href="data/matches.json">data/matches.json</a>; regenerate it
+with <code>python3 scripts/model.py</code> and rebuild this site with <code>python3 scripts/build_site.py</code>.
+The builder checks structure, local links, and prediction length, not factual content of the linked pages.</p>
 
 </main>
 <footer class="site">
   <div class="wrap">
     <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
-    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="survey/index.html">Survey (130 events)</a> · <a href="flagged.html">Flagged</a> · <a href="site/index.html">Evidence desk v2</a></span>
+    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="survey/index.html">Survey (130 events)</a> · <a href="live/index.html">Live slate</a> · <a href="flagged.html">Flagged</a> · <a href="site/index.html">Evidence desk v2</a></span>
   </div>
 </footer>
 </body>

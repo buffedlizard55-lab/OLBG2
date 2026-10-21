@@ -26,6 +26,11 @@ jobs:
           python scripts/verified_model.py
           python scripts/verified_build.py
 
+      - name: Rebuild live slate layer
+        run: |
+          python scripts/live_model.py
+          python scripts/live_build.py
+
       - name: Rebuild the desk site from committed data
         run: python scripts/build.py
 
@@ -47,4 +52,4 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Fail if any generated page or data file is stale
-        run: git diff --exit-code -- verified data/verified site survey data/survey integration.html index.html picks.html flagged.html methodology.html sources.html sports assets
+        run: git diff --exit-code -- verified data/verified live data/live site survey data/survey integration.html index.html picks.html flagged.html methodology.html sources.html sports assets

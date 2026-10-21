@@ -514,7 +514,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
     root_prefix = "../" * (depth + 1)
     nav_items = [
         ("index", f"{prefix}index.html", "Overview & All Matches", ""),
-        ("predictions", f"{prefix}predictions.html", "High-Confidence Picks (17)", ""),
+        ("predictions", f"{prefix}predictions.html", "High-Confidence Picks", ""),
         ("flagged", f"{prefix}flagged.html", "Flagged for Review", "nav-flag"),
         ("audit", f"{prefix}audit.html", "Line-by-Line Repo Audit", ""),
         ("methodology", f"{prefix}methodology.html", "Methodology & Models", ""),

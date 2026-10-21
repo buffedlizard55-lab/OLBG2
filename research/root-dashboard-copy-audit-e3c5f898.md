@@ -1,6 +1,6 @@
 # Root dashboard verification-copy audit — 2026-10-21
 
-**Session:** `arena/e3c5f898-olbg2`  
+**Session:** `arena/e3c5f898-olbg2`
 **Scope:** Root dashboard text and generated pages only. No match rows, prices, source records, or predictions were changed.
 
 ## Why the copy changed

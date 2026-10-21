@@ -85,6 +85,24 @@ in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated
      Aussie Rules, Rugby League).
 4. New findings must be appended to `data/flagged.json` and `data/sources.json`, then re-published.
 
+## Final state of this session's deliverable
+
+| Item | Value |
+|---|---|
+| Verified fixtures | 33 (NHL 12, NBA 11, URC 8, ICC 2) |
+| Lines originated | 30 — money line on all, puck line + total on 11 NHL, spread + total on 11 NBA, handicap + total on 8 URC |
+| High-confidence picks | 4, all NHL money lines, with 92–99-word write-ups |
+| Flagged | 19 items (F01–F19); 14 blank values explicitly listed |
+| Uncovered sports | 13 of the 17 in scope, each named on the flagged page with the reason |
+| Live dashboard | https://buffedlizard55-lab.github.io/OLBG2/ |
+| Live evidence desk | https://buffedlizard55-lab.github.io/OLBG2/site/index.html |
+
+**What "complete" does and does not mean here.** Every fixture that was captured is published with an official
+source on the row, and every market that could be derived from a verified input was originated. The list is not
+an exhaustive inventory of OLBG's slate: thirteen sports were never captured, and six OLBG events that were seen
+(tennis, darts, snooker, Gaelic football, Top 14, Pro D2) could not be verified against a governing-body source
+inside the window. Those are on the flagged page rather than silently dropped or quietly guessed.
+
 ## Environment facts (recorded for other sessions)
 
 - Sandbox HTTP egress is restricted to GitHub hosts. General web pages and league APIs are **not** reachable from
@@ -108,6 +126,7 @@ in part: 33 fixtures and 30 originated lines, with the remaining gaps enumerated
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` renders the dashboard; `/site/index.html` renders the prior audit site |
 | Follow-up | PR #9 — per-date NHL provenance (each NHL row now cites its own `…/score/YYYY-MM-DD` feed) |
 | Follow-up | PR #12 — repaired the NBA citations the PR #9 helper mangled, and added a build gate requiring every citation to match `data/sources.json` |
+| Follow-up | PR #13 — F19 goal-convention disclosure, README counts, this log. Deploy runs 39549662975 / 39549662117 success, live re-checked |
 | Cross-session check | PR #11 (`db99ed90`) independently recaptured the NHL slate: fixture ids, matchups, dates, start times and last-ten records matched, and its two overlapping selections agreed. Its goal-convention finding (shootout goal counted by nhl.com/standings, excluded by the stats API) is now disclosed as **F19** in `data/flagged.json` and in METHODOLOGY.md §2. |
 
 ### Post-merge note

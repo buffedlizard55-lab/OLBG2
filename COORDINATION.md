@@ -869,6 +869,16 @@ Follow-up sync note: a second `git pull --rebase origin main` tried replaying th
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Remove universal official-verification claims from the root dashboard and expose snapshot limits | in progress | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `research/root-dashboard-copy-audit-e3c5f898.md`, append-only `COORDINATION.md` |
+| Remove universal official-verification claims from the root dashboard and expose snapshot limits | in progress | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, append-only `COORDINATION.md` |
 
 A live Pages spot-check after PR #38 showed the root dashboard still says all 35 fixtures were verified and every row's official source was checked, while the integration audit documents only limited spot-checks. This follow-up changes presentation and preserves row-level URLs; it does not change fixture data, line values, confidence, or predictions, and will not claim fresh official verification.
+
+### Completion — root dashboard copy audit, session `arena/e3c5f898-olbg2`
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Remove universal official-verification claims from the root dashboard and expose snapshot limits | done | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, `COORDINATION.md` |
+
+The published root-page spot-check exposed a headline and count that claimed all 35 rows were verified and that every row's official source had been checked. Replaced this copy with explicit dated-snapshot language, source-link limitations, model-output labels, and links to evidence/review pages; corrected similar broad claims on sport, picks, methodology, source, and flagged pages. Added a regression test for the key disclosures. No sporting data, lines, confidence labels, predictions, or source URLs were changed. Audit report records the observed text and provenance boundaries; no new sporting facts are claimed as verified.
+
+Verification: `python3 -m unittest discover -s tests -v` (37 passed); `python3 scripts/build_site.py` (10 pages, 35 stored rows, no broken links); `python3 scripts/build.py` (25 fixtures); `python3 scripts/survey_build.py` + `python3 scripts/survey_verify.py` (24 pages, 130 rows, 11 lines, 2 predictions, 21 flags; all structural checks passed); `python3 scripts/integration_audit.py` (0 local-link errors); `python3 scripts/official_source_audit.py` (130 survey rows missing official fixture-source values; 11/15 narrative fact URLs outside its candidate-domain allowlist, without content verification). Generated root HTML has no remaining broad “fixtures verified / every fixture re-checked / official source on every row” claims. All structural checks passed; none establish external factual accuracy.

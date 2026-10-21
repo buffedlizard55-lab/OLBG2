@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the static GitHub Pages dashboard from the verified data files.
+"""Build the static GitHub Pages dashboard from checked-in snapshot data.
 
 Outputs (repo root, because GitHub Pages serves main:/):
   index.html, picks.html, flagged.html, methodology.html, sources.html,
@@ -20,10 +20,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 
 SPORTS = {
-    "Ice Hockey": {"slug": "ice-hockey", "blurb": "NHL — lines originated from this season's official team goal rates."},
-    "Basketball": {"slug": "basketball", "blurb": "NBA — lines originated from the completed 2025-26 season as a prior."},
-    "Rugby Union": {"slug": "rugby-union", "blurb": "United Rugby Championship Round 4 — lines from the official league table."},
-    "Cricket": {"slug": "cricket", "blurb": "ICC-listed internationals — fixtures verified, lines deliberately not originated."},
+    "Ice Hockey": {"slug": "ice-hockey", "blurb": "NHL schedule snapshot; the model uses stored team goal-rate inputs, not freshly revalidated here."},
+    "Basketball": {"slug": "basketball", "blurb": "NBA schedule snapshot; the model uses stored 2025-26 season inputs as a prior, not freshly revalidated here."},
+    "Rugby Union": {"slug": "rugby-union", "blurb": "URC Round 4 snapshot; the model uses stored table inputs, not freshly revalidated here."},
+    "Cricket": {"slug": "cricket", "blurb": "ICC match-list snapshot; no line was produced because this model's required strength input is absent."},
 }
 
 NAV = [
@@ -164,33 +164,31 @@ def build_index(matches, preds, flagged):
           <p>{E(meta['blurb'])}</p>
           <div class="row"><span>Fixtures</span><b>{len(rows)}</b></div>
           <div class="row"><span>Lines originated</span><b>{lined}</b></div>
-          <div class="row"><span>High confidence</span><b>{high}</b></div>
+          <div class="row"><span>High model labels</span><b>{high}</b></div>
         </a>""")
 
     table = "".join(row_summary(m) for m in matches["matches"])
     body = f"""
 <section class="hero">
-  <h1>Verified fixtures, our own lines, and the confidence behind every pick.</h1>
-  <p class="lede">A reverse-engineered view of OLBG's sports coverage: every fixture re-checked against the
-  official league or governing body, every price originated here from verified data, and every gap left blank
-  and flagged rather than guessed.</p>
-  <p class="meta">Capture window 2026-10-21 05:12–05:25 UTC · {c['total']} fixtures · {c['originated']} with originated lines ·
-  {c['high']} high-confidence picks · {len(flagged['items'])} open review items</p>
+  <h1>Schedule research, independent lines, and evidence status.</h1>
+  <p class="lede">A dated, partial research snapshot of OLBG event listings and selected league schedules. Source links are provided where captured, but they do not mean every fixture or input was independently re-checked in this audit. Model prices and confidence are estimates. See the <a href="integration.html">evidence-status review</a> for verification limits and unresolved items.</p>
+  <p class="meta">Capture window 2026-10-21 05:12–05:25 UTC · {c['total']} stored rows · {c['originated']} originated-line records ·
+  {c['high']} model-labeled high-confidence picks · {len(flagged['items'])} open review items</p>
 </section>
 
 <div class="grid stats">
-  {stat("Fixtures verified", c['total'], "official source on every row")}
-  {stat("Lines originated", c['originated'], "moneyline · handicap · totals")}
-  {stat("High-confidence picks", c['high'], "written predictions included")}
-  {stat("Open review items", len(flagged['items']), "blank, unverified or irregular")}
+  {stat("Stored fixture rows", c['total'], "dated snapshot; verification varies")}
+  {stat("Lines originated", c['originated'], "model outputs, not bookmaker prices")}
+  {stat("Model-labeled high picks", c['high'], "not verified certainty")}
+  {stat("Open review items", len(flagged['items']), "unverified, blank or irregular")}
 </div>
 
 <h2 class="section">Sports covered</h2>
-<p class="section-sub">Thirteen of OLBG's seventeen included sports are not covered in this release. Each one is listed on the flagged page with the reason — absence here is not evidence that OLBG lists no events.</p>
+<p class="section-sub">This root snapshot contains four sports and is not exhaustive. The separate <a href="survey/index.html">sport survey</a> provides a broader OLBG taxonomy inventory, with its own scope and verification limitations. Absence here is not evidence that OLBG lists no events.</p>
 <div class="grid sports">{''.join(sport_cards)}</div>
 
-<h2 class="section">All fixtures</h2>
-<p class="section-sub">Filter by sport, confidence or search a team. Every row links to the official fixture source; OLBG event links appear only where the pairing matched exactly.</p>
+<h2 class="section">Snapshot event rows</h2>
+<p class="section-sub">Filter by sport, model label or team. Rows include available source references; a linked official-site page is not proof that its contents were independently re-checked for every row. OLBG event links appear only where the pairing matched exactly.</p>
 <div class="panel">
   <div class="toolbar">
     <input id="q" type="search" placeholder="Search team, competition or pick…" aria-label="Search fixtures">
@@ -209,7 +207,7 @@ def build_index(matches, preds, flagged):
   </div>
   <div class="table-scroll">
   <table id="tbl">
-    <thead><tr><th>Match</th><th>Start</th><th>Pick</th><th>Confidence</th><th>Price</th><th>Official source</th></tr></thead>
+    <thead><tr><th>Match</th><th>Start</th><th>Model pick</th><th>Model label</th><th>Model price</th><th>Source link(s)</th></tr></thead>
     <tbody>{table}</tbody>
   </table>
   </div>
@@ -224,16 +222,17 @@ def build_index(matches, preds, flagged):
 </details>
 <details>
   <summary>What "confidence" means here</summary>
-  <p>Confidence grades how decisive the model is <em>and</em> how much verified data stands behind it.
-  High requires a probability of at least 65% from at least seven games of current-season data. The NBA's
-  season is one game old, so NBA picks are capped at medium; the URC has played three rounds, so it is also
-  capped at medium.</p>
+  <p>Confidence grades are model classifications based on recorded sample size and model probability; they are
+  not probabilities that have been independently validated, nor a guarantee of outcome. The thresholds are
+  described in <a href="methodology.html">Methodology</a>. Evidence gaps and limits on factual verification
+  are listed in <a href="integration.html">Evidence status</a>.</p>
 </details>
 <details>
   <summary>Sports we could not cover in this capture</summary>
-  <p>Baseball, Darts, Golf, Greyhounds, Handball, Motor Racing, Rugby League, Snooker, Tennis, Volleyball,
-  eSports, Aussie Rules and Gaelic Football were listed by OLBG but could not be verified (or, for baseball,
-  had no games). Each has an entry on the <a href="flagged.html">Flagged for review</a> page with the reason.</p>
+  <p>This root snapshot covers only four sports and is not an exhaustive OLBG inventory. A separate
+  <a href="survey/index.html">sport survey</a> records additional listings, but its inventory also has
+  unresolved official-source verification gaps. Check the <a href="flagged.html">root review queue</a> and
+  <a href="survey/flagged.html">survey review queue</a>; absence from either capture is not evidence OLBG has no event.</p>
 </details>
 
 <script>
@@ -260,7 +259,7 @@ def build_index(matches, preds, flagged):
 }})();
 </script>
 """
-    return page("Dashboard", "index.html", body, "Verified OLBG fixtures with independently originated betting lines and confidence-graded picks.")
+    return page("Dashboard", "index.html", body, "Dated partial OLBG schedule research with independent model lines and explicit evidence limitations.")
 
 
 def build_sport_page(sport, matches, preds):
@@ -287,7 +286,7 @@ def build_sport_page(sport, matches, preds):
         pred_html = ""
         if pred:
             pred_html = f"""<div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
-              <div class="pill">High-confidence prediction</div>
+              <div class="pill">Model-labeled high prediction</div>
               <p style="margin:8px 0 0"><b>{E(pred['headline'])}</b></p>
               <p class="small" style="margin:6px 0 0">{E(pred['text'])}</p></div>"""
         cards.append(f"""
@@ -297,13 +296,13 @@ def build_sport_page(sport, matches, preds):
               <span class="sub">{E(m['competition'])} · {E(m.get('start_display') or '')}{(' · ' + E(m['venue'])) if m.get('venue') else ''}</span></div>
             <div>{pick_html}</div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — {inputs_block(m)}</p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — {inputs_block(m)}</p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody>{markets}</tbody></table></div>
           {model_html}
           {pred_html}
-          <p class="small" style="margin:12px 0 0">Fixture source: {fixture_link(m)}
+          <p class="small" style="margin:12px 0 0">Source link: {fixture_link(m)}
           {(' · <a href="' + E(m['olbg_event_url']) + '" rel="noopener">OLBG event page</a>') if m.get('olbg_event_url') else ''}</p>
         </div>""")
 
@@ -311,11 +310,9 @@ def build_sport_page(sport, matches, preds):
 <section class="hero">
   <h1>{E(sport)}</h1>
   <p class="lede">{E(meta['blurb'])}</p>
-  <p class="meta">{len(rows)} verified fixtures · {lined} with originated lines · {len(high)} high-confidence picks</p>
+  <p class="meta">{len(rows)} stored rows · {lined} with originated lines · {len(high)} model-labeled high picks</p>
 </section>
-<div class="note info">Every price on this page is originated by this project from verified official data, not taken
-from a bookmaker. Blank values mean the input could not be verified — see
-<a href="../flagged.html">Flagged for review</a>.</div>
+<div class="note info">Prices on this page are outputs of this project's models, not bookmaker prices. The inputs shown below are from the checked-in snapshot; source links do not establish that every input or fixture was independently re-checked. Blank values and known evidence gaps are listed in <a href="../flagged.html">Flagged for review</a> and the <a href="../integration.html">evidence-status review</a>.</div>
 {''.join(cards)}
 <p class="small muted" style="margin-top:22px"><a href="../index.html">← Back to dashboard</a></p>
 """
@@ -350,8 +347,7 @@ def build_picks(matches, preds):
     body = f"""
 <section class="hero">
   <h1>Picks and predictions</h1>
-  <p class="lede">One selection per fixture, graded by how decisive the model is and how much verified data backs it.
-  Written predictions exist only for high-confidence picks — {len(preds['predictions'])} NHL games in this release.</p>
+  <p class="lede">One model selection per originated fixture, with confidence labels calculated from recorded inputs. They are estimates, not verified certainty. Existing written predictions are preserved with citations, but their underlying factual claims have not all been re-checked in the current audit — see <a href="integration.html">Evidence status</a>.</p>
   <p class="meta">{len(preds['predictions'])} written predictions · {matches['counts']['high']} high · {matches['counts']['medium']} medium · {matches['counts']['low']} low</p>
 </section>
 
@@ -363,11 +359,9 @@ def build_picks(matches, preds):
 <thead><tr><th>Sport</th><th>Match</th><th>Selection</th><th>Model %</th><th>Our price</th><th>Confidence</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div></div>
 
-<div class="note">No pick was made on a market we could not originate. All eleven NBA game totals and every
-cricket market are blank for that reason; the two cricket fixtures carry a result market only where the model could
-not be fed a verified strength input, so they appear as fixtures without a line.</div>
+<div class="note">The cricket rows have no originated line because the checked-in snapshot does not provide the strength inputs used by this model. This is a limit of this model/data snapshot, not evidence that no official rating or market exists. NBA totals are also omitted because the model's required scoring inputs are not present.</div>
 """
-    return page("Picks & predictions", "picks.html", body, "Confidence-graded selections with verified-source written predictions.")
+    return page("Picks & predictions", "picks.html", body, "Model-labeled selections with cited narratives; factual support requires review.")
 
 
 def build_flagged(flagged, matches):
@@ -400,9 +394,9 @@ def build_flagged(flagged, matches):
     body = f"""
 <section class="hero">
   <h1>Flagged for review</h1>
-  <p class="lede">Everything that could not be confirmed from an official source, every value deliberately left
-  blank, and every irregularity found in OLBG's own pages. These items do not block publication — they are the
-  review queue.</p>
+  <p class="lede">Known review items recorded during collection and later audits: blank model values, source conflicts,
+  and evidence gaps. This queue is not a guarantee that every published claim or every irregularity has been found.
+  See <a href="integration.html">Evidence status</a> for cross-layer limitations.</p>
   <p class="meta">{len(items)} open items · {len(resolved)} closed since the first capture · {len(blanks)} blank or unoriginated values</p>
 </section>
 
@@ -417,7 +411,7 @@ def build_flagged(flagged, matches):
 <tbody>{resolved_rows}</tbody></table></div></div>
 
 <h2 class="section">Values left blank on purpose</h2>
-<p class="section-sub">No value in this list was estimated. Blank means the official source did not supply it inside the capture window.</p>
+<p class="section-sub">No value in this list was estimated. A blank or unoriginated value means the snapshot has no model output for that field; it does not establish that an official source has no value.</p>
 <div class="panel" style="padding:16px 20px"><ul class="small">{''.join(blanks)}</ul></div>
 
 <h2 class="section">What a reviewer should do next</h2>
@@ -436,8 +430,7 @@ def build_methodology(matches):
     body = f"""
 <section class="hero">
   <h1>Methodology</h1>
-  <p class="lede">How a fixture becomes a line: what we take from OLBG, what we re-verify, how the probabilities are
-  computed, and the exact rules that decide a confidence grade.</p>
+  <p class="lede">How the stored inputs are transformed into model lines and labels, and what the checks do and do not establish. This page documents the model; it is not a claim that each source page or sporting fact has been independently re-verified.</p>
 </section>
 
 <h2 class="section">1. Scope</h2>
@@ -455,11 +448,13 @@ is included anywhere. The list is enforced in <code>scripts/config.py</code>.</p
 They do <b>not</b> publish prices. Nothing in this dataset uses OLBG tip percentages as a probability: our lines
 are originated independently. OLBG is only an event-discovery and market-vocabulary source.</p>
 
-<h2 class="section">3. Verification</h2>
-<p>Every fixture is re-checked against the league or governing body before it is published: NBA.com, the NHL
-score API, the URC match centre, the ICC match list, the WST draw. If the official source does not confirm the
-fixture, the row is not published and the OLBG event goes to the flagged page. If the official source confirms the
-fixture but no verified strength input exists, the fixture is published with a blank line and a stated reason.</p>
+<h2 class="section">3. Evidence and verification limits</h2>
+<p>Rows include source links captured for this dated snapshot, but the presence of a URL is not evidence that its
+contents were checked or that it confirms every displayed field. A later cross-layer audit performed only a
+limited NHL schedule spot-check; it did not freshly verify every fixture, strength input, market, or prediction.
+The build validates internal structure and source-link presence, not external page contents. Refer to the
+<a href="integration.html">evidence-status review</a> and the <a href="flagged.html">review queue</a>; treat any
+fact without explicit confirmation as unverified rather than assuming that the linked page supports it.</p>
 
 <h2 class="section">4. The models</h2>
 <h3>Ice Hockey (NHL)</h3>
@@ -489,8 +484,8 @@ handicap = nearest half-point to -margin
 total    = NOT ORIGINATED (no verified points-for/against input was captured)</code></pre>
 
 <h3>Rugby Union (URC)</h3>
-<p>Points for and against per game from the official league table, shrunk toward the league mean because only
-three rounds have been played.</p>
+<p>The checked-in model input represents points for and against per game from a league table, shrunk toward the
+league mean. The source page contents and values were not freshly revalidated in this copy audit.</p>
 <pre><code>w = pl / (pl + {p['urc_shrink_k']})
 attack_i  = 1 + w * ((pf_i / pl_i) / league_pf - 1)
 defence_i = 1 + w * ((pa_i / pl_i) / league_pa - 1)
@@ -516,17 +511,17 @@ theoretical margin. <b>These are not bookmaker prices and were not compared to a
 "high" would be a confidence trick, not a prediction.</p>
 
 <h2 class="section">6. Predictions</h2>
-<p>Written predictions are produced only for high-confidence picks. Each one must be at least 30 words, name the
-selection explicitly, and state the team, its record and goal rate, at least one named player with a verified
-statistic, and the model probability. No claim about injuries, line-ups, travel or transfers appears anywhere,
-because none could be verified from an official source in this capture. Every factual sentence carries a source
-link on the <a href="picks.html">Picks page</a>.</p>
+<p>Written predictions are attached to the model-labeled high picks and include citations, but a citation link alone
+is not proof that its page supports the associated claim. The current cross-layer audit did not freshly verify every
+fact in these narratives. Treat the existing prose as unverified where not checked against an official source; see
+<a href="integration.html">Evidence status</a> and open each cited page before relying on a statement. No automated
+gate checks the factual content of prediction text.</p>
 
 <h2 class="section">7. Provenance</h2>
-<p>Raw captures and what was taken from each URL are logged in <code>research/collection-log.md</code>. The
-machine-readable dataset is <a href="data/matches.json">data/matches.json</a>; regenerate it with
-<code>python3 scripts/model.py</code> and rebuild this site with <code>python3 scripts/build_site.py</code>.
-The builder fails the build if a prediction is under 30 words or a link is broken.</p>
+  <p>URLs and collection notes are recorded in <code>research/collection-log.md</code>; raw response captures are not
+uniformly archived. The machine-readable dataset is <a href="data/matches.json">data/matches.json</a>; regenerate it
+with <code>python3 scripts/model.py</code> and rebuild this site with <code>python3 scripts/build_site.py</code>.
+The builder checks structure, local links, and prediction length, not factual content of the linked pages.</p>
 """
     return page("Methodology", "methodology.html", body, "Line origination formulas, confidence rules and verification process.")
 
@@ -551,8 +546,7 @@ def build_sources(sources, matches):
     body = f"""
 <section class="hero">
   <h1>Sources</h1>
-  <p class="lede">Every URL used to build this dataset, what it verified, and whether it is an official body.
-  OLBG rows are discovery-only and marked as such.</p>
+  <p class="lede">Source URLs and their recorded intended use. A registered URL or an official-domain match does not establish that the page was fetched, or that it supports every linked claim. OLBG links are listing provenance, not official fixture confirmation.</p>
   <p class="meta">{len(sources['sources'])} sources · {len(per_source)} of them are cited directly by a published fixture row</p>
 </section>
 <div class="panel"><div class="table-scroll"><table>
@@ -561,7 +555,7 @@ def build_sources(sources, matches):
 <div class="note">Capture window 2026-10-21 05:12–05:25 UTC. Pages change; a reviewer re-checking later may see
 different numbers, especially on the NHL and NBA standings pages, which update after every game.</div>
 """
-    return page("Sources", "sources.html", body, "Official and discovery sources with what each one verified.")
+    return page("Sources", "sources.html", body, "Source register with recorded purpose; linked content is not automatically verified.")
 
 
 def collect_internal_links(pages):

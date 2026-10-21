@@ -779,3 +779,28 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 | GitHub Pages deployment | Run `39557166195` — build and deploy jobs succeeded |
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` and `https://buffedlizard55-lab.github.io/OLBG2/survey/` both fetched successfully; root includes Survey navigation |
 | Deployment warning | GitHub Actions emitted Node.js 20/runner-image deprecation notices; all jobs succeeded, non-blocking |
+
+---
+
+# Session `arena/d4b9d560-olbg2` — live-slate desk (Layer 4) and final integration
+
+**Session ID:** `arena/d4b9d560-olbg2` · **Branch:** `arena/d4b9d560-olbg2` · **Claimed:** 2026-10-21 (before any edit, per protocol)
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| L1 | Capture a fresh 2026-10-21 slate from official governing-body/league sources only, one official source URL per row | in progress | `arena/d4b9d560-olbg2` | `data/live/**`, `research/live-slate-d4b9d560.md` |
+| L2 | Originate money-line / handicap / total lines from verified inputs, pick + low/medium/high confidence | in progress | `arena/d4b9d560-olbg2` | `scripts/live_model.py`, `data/live/**` |
+| L3 | High-confidence written predictions (≥30 words) with official-source facts | in progress | `arena/d4b9d560-olbg2` | `data/live/**` |
+| L4 | Dashboard layer at `/live/` (landing + per-sport subpages + flagged) | in progress | `arena/d4b9d560-olbg2` | `scripts/live_build.py`, `live/**` |
+| L5 | Final integration: root nav link, rebuild all layers, verify, PR, merge, confirm Pages | pending | `arena/d4b9d560-olbg2` | shared outputs (integration session) |
+
+**Concurrent-session check at claim time:** PR #34 (`arena/18eca832-olbg2`, "Audit survey official-source
+provenance") is open and MERGEABLE. It owns `scripts/official_source_audit.py`,
+`tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md` and an append to
+`COORDINATION.md`. This session does **not** create, edit or delete any of those paths, and does not touch
+`survey/**`, `data/survey/**`, `scripts/survey_*.py`, `site/**`, `scripts/build.py`, `data/desk/**`.
+Overlap is limited to append-only `COORDINATION.md` sections, resolved additively at merge.
+
+**Rules for this session:** a value is published only when an official source returned it in this session's
+capture; anything unreachable stays blank and is flagged; no value is inferred from memory or from a
+secondary outlet. Every published row carries the official URL it was read from.

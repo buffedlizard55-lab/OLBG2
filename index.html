@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dashboard · OLBG2 Sports Betting Data</title>
-<meta name="description" content="Verified OLBG fixtures with independently originated betting lines and confidence-graded picks.">
+<meta name="description" content="Dated partial OLBG schedule research with independent model lines and explicit evidence limitations.">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
 </head>
@@ -19,57 +19,186 @@
 <p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="integration.html">Evidence status &amp; cross-layer review</a>.</p>
 
 <section class="hero">
-  <h1>Verified fixtures, our own lines, and the confidence behind every pick.</h1>
-  <p class="lede">A reverse-engineered view of OLBG's sports coverage: every fixture re-checked against the
-  official league or governing body, every price originated here from verified data, and every gap left blank
-  and flagged rather than guessed.</p>
-  <p class="meta">Capture window 2026-10-21 05:12–05:25 UTC · 35 fixtures · 33 with originated lines ·
-  4 high-confidence picks · 21 open review items</p>
+  <h1>Schedule research, independent lines, and evidence status.</h1>
+  <p class="lede">A dated, partial research snapshot of OLBG event listings and selected league schedules. Source links are provided where captured, but they do not mean every fixture or input was independently re-checked in this audit. Model prices and confidence are estimates. See the <a href="integration.html">evidence-status review</a> for verification limits and unresolved items.</p>
+  <p class="meta">Dated captures · 47 stored rows · 45 originated-line records ·
+  9 model-labeled high-confidence picks · 22 open review items</p>
 </section>
 
 <div class="grid stats">
-  <div class="card stat"><div class="k">Fixtures verified</div><div class="v">35</div><div class="s">official source on every row</div></div>
-  <div class="card stat"><div class="k">Lines originated</div><div class="v">33</div><div class="s">moneyline · handicap · totals</div></div>
-  <div class="card stat"><div class="k">High-confidence picks</div><div class="v">4</div><div class="s">written predictions included</div></div>
-  <div class="card stat"><div class="k">Open review items</div><div class="v">21</div><div class="s">blank, unverified or irregular</div></div>
+  <div class="card stat"><div class="k">Stored fixture rows</div><div class="v">47</div><div class="s">dated snapshot; verification varies</div></div>
+  <div class="card stat"><div class="k">Lines originated</div><div class="v">45</div><div class="s">model outputs, not bookmaker prices</div></div>
+  <div class="card stat"><div class="k">Model-labeled high picks</div><div class="v">9</div><div class="s">not verified certainty</div></div>
+  <div class="card stat"><div class="k">Open review items</div><div class="v">22</div><div class="s">unverified, blank or irregular</div></div>
 </div>
 
 <h2 class="section">Sports covered</h2>
-<p class="section-sub">Thirteen of OLBG's seventeen included sports are not covered in this release. Each one is listed on the flagged page with the reason — absence here is not evidence that OLBG lists no events.</p>
+<p class="section-sub">This root snapshot publishes rows for 5 sports under its own scope. The root's 17-sport scope differs from the survey's 15-sport interpretation; the disagreement remains flagged. Neither layer is an exhaustive live OLBG feed.</p>
 <div class="grid sports"><a class="card sport-card" href="sports/ice-hockey.html">
           <h3>Ice Hockey</h3>
-          <p>NHL — lines originated from this season&#x27;s official team goal rates.</p>
+          <p>NHL schedule snapshot; the model uses stored team goal-rate inputs, not freshly revalidated here.</p>
           <div class="row"><span>Fixtures</span><b>14</b></div>
           <div class="row"><span>Lines originated</span><b>14</b></div>
-          <div class="row"><span>High confidence</span><b>4</b></div>
+          <div class="row"><span>High model labels</span><b>4</b></div>
         </a><a class="card sport-card" href="sports/basketball.html">
           <h3>Basketball</h3>
-          <p>NBA — lines originated from the completed 2025-26 season as a prior.</p>
+          <p>NBA schedule snapshot; the model uses stored 2025-26 season inputs as a prior, not freshly revalidated here.</p>
           <div class="row"><span>Fixtures</span><b>11</b></div>
           <div class="row"><span>Lines originated</span><b>11</b></div>
-          <div class="row"><span>High confidence</span><b>0</b></div>
+          <div class="row"><span>High model labels</span><b>0</b></div>
         </a><a class="card sport-card" href="sports/rugby-union.html">
           <h3>Rugby Union</h3>
-          <p>United Rugby Championship Round 4 — lines from the official league table.</p>
+          <p>URC Round 4 snapshot; the model uses stored table inputs, not freshly revalidated here.</p>
           <div class="row"><span>Fixtures</span><b>8</b></div>
           <div class="row"><span>Lines originated</span><b>8</b></div>
-          <div class="row"><span>High confidence</span><b>0</b></div>
+          <div class="row"><span>High model labels</span><b>0</b></div>
         </a><a class="card sport-card" href="sports/cricket.html">
           <h3>Cricket</h3>
-          <p>ICC-listed internationals — fixtures verified, lines deliberately not originated.</p>
+          <p>ICC match-list snapshot; no line was produced because this model&#x27;s required strength input is absent.</p>
           <div class="row"><span>Fixtures</span><b>2</b></div>
           <div class="row"><span>Lines originated</span><b>0</b></div>
-          <div class="row"><span>High confidence</span><b>0</b></div>
+          <div class="row"><span>High model labels</span><b>0</b></div>
+        </a><a class="card sport-card" href="sports/handball.html">
+          <h3>Handball</h3>
+          <p>EHF Champions League Men round 5 snapshot; the model uses stored table inputs, not freshly revalidated here.</p>
+          <div class="row"><span>Fixtures</span><b>12</b></div>
+          <div class="row"><span>Lines originated</span><b>12</b></div>
+          <div class="row"><span>High model labels</span><b>5</b></div>
         </a></div>
 
-<h2 class="section">All fixtures</h2>
-<p class="section-sub">Filter by sport, confidence or search a team. Every row links to the official fixture source; OLBG event links appear only where the pairing matched exactly.</p>
+<h2 class="section">Root scope coverage</h2>
+<p class="section-sub">The table compares the root configuration with stored survey counts; the layers have different scope decisions and known overlaps. Counts are not a combined unique-event total, and "not surveyed" describes our capture only, not OLBG.</p>
+<div class="panel"><div class="table-scroll"><table>
+<thead><tr><th>Sport</th><th>Our fixtures</th><th>Lines originated</th><th>Survey events</th><th>Status</th><th>Pages</th></tr></thead>
+<tbody><tr>
+          <td><b>Aussie Rules</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>0</td>
+          <td><span class="badge b-low">No entry captured in survey</span></td>
+          <td class="small"><a href="survey/sports/aussie_rules.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Baseball</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>1</td>
+          <td><span class="badge b-med">Surveyed, no line</span></td>
+          <td class="small"><a href="survey/sports/baseball.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Basketball</b></td>
+          <td>11</td>
+          <td>11</td>
+          <td>14</td>
+          <td><span class="badge b-high">Lines originated here</span></td>
+          <td class="small"><a href="sports/basketball.html">our page</a> · <a href="survey/sports/basketball.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Cricket</b></td>
+          <td>2</td>
+          <td>—</td>
+          <td>14</td>
+          <td><span class="badge b-med">Stored rows, no line</span></td>
+          <td class="small"><a href="sports/cricket.html">our page</a> · <a href="survey/sports/cricket.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Darts</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>16</td>
+          <td><span class="badge b-med">Surveyed, no line</span></td>
+          <td class="small"><a href="survey/sports/darts.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Gaelic Football</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="badge b-unv">Not surveyed</span></td>
+          <td class="small"><span class="muted">flagged only</span></td>
+        </tr><tr>
+          <td><b>Golf</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>10</td>
+          <td><span class="badge b-med">Surveyed, no line</span></td>
+          <td class="small"><a href="survey/sports/golf.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Greyhounds</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="badge b-unv">Not surveyed</span></td>
+          <td class="small"><span class="muted">flagged only</span></td>
+        </tr><tr>
+          <td><b>Handball</b></td>
+          <td>12</td>
+          <td>12</td>
+          <td>14</td>
+          <td><span class="badge b-high">Lines originated here</span></td>
+          <td class="small"><a href="sports/handball.html">our page</a> · <a href="survey/sports/handball.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Ice Hockey</b></td>
+          <td>14</td>
+          <td>14</td>
+          <td>9</td>
+          <td><span class="badge b-high">Lines originated here</span></td>
+          <td class="small"><a href="sports/ice-hockey.html">our page</a> · <a href="survey/sports/ice_hockey.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Motor Racing</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>4</td>
+          <td><span class="badge b-med">Surveyed, no line</span></td>
+          <td class="small"><a href="survey/sports/motor_racing.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Rugby League</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>0</td>
+          <td><span class="badge b-low">No entry captured in survey</span></td>
+          <td class="small"><a href="survey/sports/rugby_league.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Rugby Union</b></td>
+          <td>8</td>
+          <td>8</td>
+          <td>16</td>
+          <td><span class="badge b-high">Lines originated here</span></td>
+          <td class="small"><a href="sports/rugby-union.html">our page</a> · <a href="survey/sports/rugby_union.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Snooker</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>6</td>
+          <td><span class="badge b-med">Surveyed, no line</span></td>
+          <td class="small"><a href="survey/sports/snooker.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Tennis</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>14</td>
+          <td><span class="badge b-med">Surveyed, no line</span></td>
+          <td class="small"><a href="survey/sports/tennis.html">survey page</a></td>
+        </tr><tr>
+          <td><b>Volleyball</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>12</td>
+          <td><span class="badge b-med">Surveyed, no line</span></td>
+          <td class="small"><a href="survey/sports/volleyball.html">survey page</a></td>
+        </tr><tr>
+          <td><b>eSports</b></td>
+          <td>—</td>
+          <td>—</td>
+          <td>0</td>
+          <td><span class="badge b-low">No entry captured in survey</span></td>
+          <td class="small"><a href="survey/sports/esports.html">survey page</a></td>
+        </tr></tbody></table></div></div>
+
+<h2 class="section">Snapshot event rows</h2>
+<p class="section-sub">Filter by sport, model label or team. Rows include available source references; a linked official-site page is not proof that its contents were independently re-checked for every row. OLBG event links appear only where the pairing matched exactly.</p>
 <div class="panel">
   <div class="toolbar">
     <input id="q" type="search" placeholder="Search team, competition or pick…" aria-label="Search fixtures">
     <select id="fsport" aria-label="Filter by sport">
       <option value="">All sports</option>
-      <option>Ice Hockey</option><option>Basketball</option><option>Rugby Union</option><option>Cricket</option>
+      <option>Ice Hockey</option><option>Basketball</option><option>Rugby Union</option><option>Cricket</option><option>Handball</option>
     </select>
     <select id="fconf" aria-label="Filter by confidence">
       <option value="">Any confidence</option>
@@ -82,7 +211,7 @@
   </div>
   <div class="table-scroll">
   <table id="tbl">
-    <thead><tr><th>Match</th><th>Start</th><th>Pick</th><th>Confidence</th><th>Price</th><th>Official source</th></tr></thead>
+    <thead><tr><th>Match</th><th>Start</th><th>Model pick</th><th>Model label</th><th>Model price</th><th>Source link(s)</th></tr></thead>
     <tbody><tr data-sport="Basketball" data-conf="low">
       <td><span class="match">Atlanta Hawks <span class="muted">@</span> Orlando Magic</span><span class="sub">NBA</span></td>
       <td class="num">2026-10-21 19:00 ET</td>
@@ -174,6 +303,90 @@
       <td><span class="badge b-unv">Unverified</span></td>
       <td class="num"><span class="muted">—</span></td>
       <td class="small"><a href="https://www.icc-cricket.com/matches/271646/new-zealand-vs-india" rel="noopener">ICC official match list</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_1st_T20_Match/7?event_id=188814" rel="noopener">OLBG event</a></span></td>
+    </tr><tr data-sport="Handball" data-conf="medium">
+      <td><span class="match">SAH - Aarhus <span class="muted">@</span> Dinamo Bucuresti</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group E)</span></td>
+      <td class="num">2026-10-21 18:45 CEST</td>
+      <td>SAH - Aarhus<span class="sub">Match winner · 62.3% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.54</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="medium">
+      <td><span class="match">FC Porto <span class="muted">@</span> RK Partizan AdmiralBet</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group A)</span></td>
+      <td class="num">2026-10-21 18:45 CEST</td>
+      <td>FC Porto<span class="sub">Match winner · 58.6% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.64</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="medium">
+      <td><span class="match">Füchse Berlin <span class="muted">@</span> One Veszprém HC</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group A)</span></td>
+      <td class="num">2026-10-21 18:45 CEST</td>
+      <td>One Veszprém HC<span class="sub">Match winner · 65.6% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.47</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="high">
+      <td><span class="match">Paris Saint-Germain <span class="muted">@</span> HC Zagreb</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group C)</span></td>
+      <td class="num">2026-10-21 18:45 CEST</td>
+      <td>Paris Saint-Germain<span class="sub">Match winner · 70.2% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.37</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="medium">
+      <td><span class="match">HC Vardar 1961 <span class="muted">@</span> HBC Nantes</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group B)</span></td>
+      <td class="num">2026-10-21 20:45 CEST</td>
+      <td>HBC Nantes<span class="sub">Match winner · 62.0% model</span></td>
+      <td><span class="badge b-med">Medium</span></td>
+      <td class="num"><span class="num">1.55</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="high">
+      <td><span class="match">RK Celje Pivovarna Laško <span class="muted">@</span> Aalborg Håndbold</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group C)</span></td>
+      <td class="num">2026-10-21 20:45 CEST</td>
+      <td>Aalborg Håndbold<span class="sub">Match winner · 84.5% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.14</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="low">
+      <td><span class="match">Industria Kielce <span class="muted">@</span> HC Kriens-Luzern</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group F)</span></td>
+      <td class="num">2026-10-21 20:45 CEST</td>
+      <td>HC Kriens-Luzern<span class="sub">Match winner · 50.8% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.89</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="low">
+      <td><span class="match">GOG <span class="muted">@</span> OTP Bank - PICK Szeged</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group D)</span></td>
+      <td class="num">2026-10-22 18:45 CEST</td>
+      <td>OTP Bank - PICK Szeged<span class="sub">Match winner · 49.3% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.95</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="low">
+      <td><span class="match">Orlen Wisla Plock <span class="muted">@</span> MT Melsungen</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group B)</span></td>
+      <td class="num">2026-10-22 18:45 CEST</td>
+      <td>Orlen Wisla Plock<span class="sub">Match winner · 49.4% model</span></td>
+      <td><span class="badge b-low">Low</span></td>
+      <td class="num"><span class="num">1.95</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="high">
+      <td><span class="match">Montpellier Handball <span class="muted">@</span> Barça</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group E)</span></td>
+      <td class="num">2026-10-22 20:45 CEST</td>
+      <td>Barça<span class="sub">Match winner · 78.5% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.22</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="high">
+      <td><span class="match">IFK Kristianstad <span class="muted">@</span> Sporting Clube de Portugal</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group D)</span></td>
+      <td class="num">2026-10-22 20:45 CEST</td>
+      <td>Sporting Clube de Portugal<span class="sub">Match winner · 85.5% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.13</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
+    </tr><tr data-sport="Handball" data-conf="high">
+      <td><span class="match">SC Magdeburg <span class="muted">@</span> Kolstad Håndball</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group F)</span></td>
+      <td class="num">2026-10-22 20:45 CEST</td>
+      <td>SC Magdeburg<span class="sub">Match winner · 84.1% model</span></td>
+      <td><span class="badge b-high">High</span></td>
+      <td class="num"><span class="num">1.14</span></td>
+      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
     </tr><tr data-sport="Ice Hockey" data-conf="high">
       <td><span class="match">Philadelphia Flyers <span class="muted">@</span> Buffalo Sabres</span><span class="sub">NHL</span></td>
       <td class="num">2026-10-21 23:30 UTC</td>
@@ -342,16 +555,17 @@
 </details>
 <details>
   <summary>What "confidence" means here</summary>
-  <p>Confidence grades how decisive the model is <em>and</em> how much verified data stands behind it.
-  High requires a probability of at least 65% from at least seven games of current-season data. The NBA's
-  season is one game old, so NBA picks are capped at medium; the URC has played three rounds, so it is also
-  capped at medium.</p>
+  <p>Confidence grades are model classifications based on recorded sample size and model probability; they are
+  not probabilities that have been independently validated, nor a guarantee of outcome. Sport-specific thresholds
+  are described in <a href="methodology.html">Methodology</a>. Evidence gaps are listed in
+  <a href="integration.html">Evidence status</a>.</p>
 </details>
 <details>
   <summary>Sports we could not cover in this capture</summary>
-  <p>Baseball, Darts, Golf, Greyhounds, Handball, Motor Racing, Rugby League, Snooker, Tennis, Volleyball,
-  eSports, Aussie Rules and Gaelic Football were listed by OLBG but could not be verified (or, for baseball,
-  had no games). Each has an entry on the <a href="flagged.html">Flagged for review</a> page with the reason.</p>
+  <p>This root layer is partial. The separate <a href="survey/index.html">sport survey</a> records additional
+  listings, but its inventory also has unresolved official-source verification gaps. Review both the
+  <a href="flagged.html">root queue</a> and <a href="survey/flagged.html">survey queue</a>; absence from either capture is
+  not evidence that OLBG has no event.</p>
 </details>
 
 <script>

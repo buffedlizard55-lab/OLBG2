@@ -782,6 +782,270 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 
 ---
 
+# Session `arena/8f07248b-olbg2` — independent content integrity check
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published fixture/market/prediction evidence coverage and report actionable integrity gaps; no edits to shared data or generated pages | in progress | `arena/8f07248b-olbg2` | `research/integrity-audit-8f07248b.md`, append-only `COORDINATION.md` |
+
+Scope is deliberately disjoint from active integration work (`scripts/build_site.py`, `scripts/integration_audit.py`, generated pages and CI). This is a static structural/evidence-link audit; it will not mark sports facts verified without checking official sources. No fixture data will be added or modified.
+
+### Completion — `arena/8f07248b-olbg2`
+
+Independent structural/evidence-link audit is complete. Report: [`research/integrity-audit-8f07248b.md`](research/integrity-audit-8f07248b.md). Scope remained disjoint from integration code, shared data, and generated pages. Findings: 0/130 survey inventory records have a per-row official fixture-source field (they carry OLBG discovery provenance); survey narrative citation tests establish URL presence but not publisher authority; and the 35-match core count is 33 originated + 2 unoriginated (with confidence counts 4 high, 10 medium, 19 low, 2 unverified).
+
+Verification performed: `python3 scripts/survey_verify.py` passed (24 generated pages, 335 rows, 130 events = 11 modelled + 119 flagged, 2 predictions; deterministic rebuild); `python3 -m unittest discover -s tests -v` passed (33 tests). No external sporting facts were newly verified, no factual data or generated pages were changed. These findings are non-blocking and should remain visible for review; the static validators must not be presented as exhaustive official-source verification.
+
+The initial `git pull --rebase origin arena/8f07248b-olbg2` returned “couldn't find remote ref” because this branch was not yet published. Claim commit is local. Per the fixed Arena branch constraint, work remains on this branch; no other branch was created or used.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Independent evidence-integrity check and report | done | `arena/8f07248b-olbg2` | `research/integrity-audit-8f07248b.md`, `COORDINATION.md` |
+
+---
+
+## Session `arena/18eca832-olbg2` — official-source integrity audit
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published survey source classification without modifying shared datasets or generated pages | in progress | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, append-only `COORDINATION.md` |
+
+The fixed Arena branch is used rather than creating a session-named branch. This claim does not assert any new fixture verification.
+
+### Completion — `arena/18eca832-olbg2`
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Read-only official-source integrity audit | done; findings need review | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, `COORDINATION.md` |
+
+Audit: 130/130 survey inventory rows lack an explicit official fixture source; 11/15 prediction fact citations are outside a conservative official-domain allowlist. Domain classification is not content verification. See [audit and manual-review links](research/official-source-audit-18eca832.md). No match values or generated pages were changed. `python3 -m unittest discover -s tests -q`: 36 passed. The inventory and unsupported narrative evidence remain **needs review**; no claims of exhaustive coverage or official verification are made.
+
+### Publish record — session `arena/8f07248b-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#35](https://github.com/buffedlizard55-lab/OLBG2/pull/35) |
+| Merge | Merged 2026-10-21 07:07:14 UTC; merge commit `b9c107116ecc51768ee3dfd2b7d6a0bf9359e987` |
+| Pull request validation | Run `39559753810` — success |
+| Main validation | Run `39559794895` — success |
+| GitHub Pages | Build/deploy run `39559793578` — build and deploy jobs succeeded |
+| Irregularities | Non-blocking Node.js 20 deprecation / Ubuntu runner migration notices; all jobs succeeded. |
+
+---
+
+### Publish record — `arena/18eca832-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#34](https://github.com/buffedlizard55-lab/OLBG2/pull/34) |
+| Merge | Merged 2026-10-21 07:06:12 UTC, commit `ff8a057e0f622edf01b3059bd9f8469d64fbfc47` |
+| Validation | GitHub Actions `39559633597`: success |
+| GitHub Pages | Build/deploy run `39559676469`: success, both build and deploy jobs |
+| Outstanding | Source provenance issues remain needs review; this audit did not update published rows or verify factual claims. |
+
+## Claim — session `arena/e3c5f898-olbg2` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Correct repository README claims that overstate official verification, coverage, and cross-layer uniqueness | in progress | `arena/e3c5f898-olbg2` | `README.md`, append-only `COORDINATION.md` |
+
+This is a documentation-only correction based on the existing integration review and the official-source provenance audit added by session `arena/18eca832`. No sporting facts, fixtures, prices, or generated pages will be changed. The board records claims from those prior audits; this session does not independently verify any external sporting fact.
+
+Rebase/push note: syncing with `origin/main` brought in PR #34's publish record. Rebasing rewrote the already-pushed claim commit, so the subsequent push was rejected as non-fast-forward. The original remote branch was fetched and merged; this append-only ledger conflict was resolved by retaining the PR #34 publish record and the current session's single claim/completion entry. No code or data was discarded.
+
+### Completion — session `arena/e3c5f898-olbg2`
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Correct README claims that overstated official verification, coverage, and cross-layer uniqueness | done | `arena/e3c5f898-olbg2` | `README.md`, `COORDINATION.md` |
+
+Updated the README to distinguish stored snapshot rows from officially verified fixtures; state the survey's documented source-field gaps and the limits of domain classification; describe root/survey scope differences and known cross-layer overlaps; and avoid presenting the inventory as a live, complete, or deduplicated OLBG slate. The descriptions were checked against `integration.html`, `research/official-source-audit-18eca832.md`, `scripts/official_source_audit.py`, `data/survey/sports.json`, and the existing README counts. This was an internal-documentation audit only: no external sports fact was newly verified, and no match, market, prediction, model, or generated page was changed.
+
+Verification: `python3 -m unittest discover -s tests -v` (36 passed); `python3 scripts/build.py` (25 fixtures); `python3 scripts/build_site.py` (10 pages, 35 fixtures, 0 broken links); `python3 scripts/survey_build.py` and `python3 scripts/survey_verify.py` (24 pages, 130 inventory rows, 11 lines, 2 predictions, 21 flags; all structural checks passed); `python3 scripts/integration_audit.py` (0 local-link errors); `python3 scripts/official_source_audit.py` (130 inventory rows without official fixture-source fields; 11/15 prediction-fact URLs outside its candidate official-domain allowlist; classification is not content verification). `git diff --check` passed. No sporting data changed.
+
+Follow-up sync note: a second `git pull --rebase origin main` tried replaying the already-pushed original claim commit and conflicted in `COORDINATION.md`. The rebase was aborted without discarding changes. The current branch already contained `origin/main` and, after merging the remote session branch, contained `origin/arena/e3c5f898-olbg2`; the subsequent push advanced that remote branch by fast-forward. The claim, README update, both concurrent publish records, and completion entry are retained.
+
+---
+
+# Session `arena/73620ec4-olbg2` — new-sport coverage and final integration (2026-10-21 from 07:05 UTC)
+
+**Session ID:** `arena/73620ec4-olbg2` · **Branch:** `arena/73620ec4-olbg2` (branch name fixed by the environment)
+· **Base:** `main@8e7691c`
+
+Recon before claiming: `git status` clean, `origin/main` at `8e7691c`, no open pull requests (`gh pr list --state open`
+returned empty). All earlier claims on this board are **complete**; nothing here overlaps an active claim. The
+earlier layers' generated files (`site/**`, `survey/**`, `data/desk/**`, `data/survey/**`) are **not** edited by
+this session. This session works in the root-dashboard pipeline that session `42fb7792` finished and released.
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| C1 | Recon, board claim, baseline gate reproduction | done | `arena/73620ec4-olbg2` | `COORDINATION.md` (append-only) |
+| C2 | Handball: capture EHF Champions League Men 2026/27 round 5 from the official EHF site, verify every fixture, originate lines, grade picks | in progress | `arena/73620ec4-olbg2` | `data/inputs/handball_ehf.json`, `scripts/model.py`, `data/predictions.json`, `data/sources.json`, `data/flagged.json` |
+| C3 | Volleyball and remaining-sport coverage attempt from official sources | unclaimed | — | `data/inputs/volleyball_*.json` |
+| C4 | Dashboard integration: per-sport page, flagged page, README/METHODOLOGY, rebuild + all gates | pending | `arena/73620ec4-olbg2` | `scripts/build_site.py`, generated root HTML, `README.md`, `METHODOLOGY.md`, `research/handball-ehf-73620ec4.md` |
+| C5 | Final integration: PR → `main`, merge, confirm Pages deploy | pending | `arena/73620ec4-olbg2` | shared outputs |
+
+Rules for this session: every published fixture and every prediction fact must cite a governing-body or league
+URL retrieved in this session; values that cannot be confirmed stay blank and are flagged; no bookmaker price is
+read or reproduced; prior layers' data files are never hand-edited.
+
+### Baseline gates reproduced before any edit (07:05 UTC)
+
+| Gate | Result |
+|---|---|
+| `python3 -m unittest discover -s tests` | 33 tests, OK |
+| `python3 scripts/build.py` | 25 fixtures (4 high, 5 medium, 16 low) |
+| `python3 scripts/build_site.py` | 10 pages, 35 fixtures, 4 predictions, no broken links |
+| `python3 scripts/survey_verify.py` | all green — 24 pages, 130 events, 11 lines, 2 predictions, 21 flags |
+| `git status --short` after all three builds | empty (generated outputs are deterministic) |
+
+## Completion — session `arena/73620ec4-olbg2` (2026-10-21 07:45 UTC)
+
+| # | Task | Status | Scope |
+|---|---|---|---|
+| C1 | Recon, claim, baseline gates | done | `COORDINATION.md` |
+| C2 | Handball capture, verification, lines, picks | done | `data/inputs/handball_ehf.json`, `scripts/model.py`, `data/predictions.json`, `data/sources.json`, `data/flagged.json` |
+| C3 | Volleyball coverage | **not done — carried as F22** | — |
+| C4 | Dashboard integration, 17-sport coverage table, docs | done | `scripts/build_site.py`, generated root HTML, `README.md`, `METHODOLOGY.md`, `research/handball-ehf-73620ec4.md` |
+| C5 | Final integration: PR, merge, Pages | in progress | shared outputs |
+
+### What was verified, line by line
+
+Full record: [`research/handball-ehf-73620ec4.md`](research/handball-ehf-73620ec4.md).
+
+| Check | Official source | Outcome |
+|---|---|---|
+| 12 EHF Champions League Men round-5 fixtures (pairing, date, throw-off time, match id) | <https://ehfcl.eurohandball.com/men/2026-27/matches/> | 12/12 confirmed and published; 12/12 lined |
+| Group A–F standings (gp, W-D-L, GF, GA, Pts) for 24 clubs | <https://ehfcl.eurohandball.com/men/2026-27/standings/> | Read twice in the same window for A–B and C–F; identical |
+| One match detail page (timezone, venue) | <https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101032/HCZagreb-ParisSaintGermain/> | Confirms "Wed Oct 21, 2026 18:45 (CEST)", Arena Zagreb |
+| MLB slate on 21 October | <https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21> | `totalGames: 0` — no MLB rows added |
+| Volleyball — Polish league | plusliga.pl redirects to tauronliga.pl, whose page is labelled "TAURON Liga" while listing men's clubs | **Not usable as a verified competition source in this window; no rows added (F22 stays open)** |
+| Volleyball — German Bundesliga table | <https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/tabelle_hauptrunde.xhtml> | Table renders but only one match has been played; no strength input exists yet, so no rows added |
+
+### New findings and closures
+
+| ID | Effect |
+|---|---|
+| F24 | New: OLBG renders start times in the viewer's timezone (Zagreb v PSG: OLBG 12:45 vs EHF 18:45 CEST = 12:45 US Eastern) |
+| F25 | New: OLBG club names differ from EHF registered names; therefore no OLBG event link on any handball row |
+| F26 | New: 11 of 12 handball venues left blank |
+| F12 | **Closed** — explained by F24 |
+| F21 | **Closed** — handball now published and lined |
+| F22 | Still open — volleyball surveyed, not lined |
+
+### Gates after the change
+
+| Gate | Result |
+|---|---|
+| `python3 scripts/model.py` | 47 fixtures, 45 originated, 9 high / 14 medium / 22 low |
+| `python3 scripts/build_site.py` | 11 pages, 47 fixtures, 9 predictions, 0 broken local links, all citations registered |
+| `python3 scripts/build.py` | desk layer unchanged, 25 fixtures |
+| `python3 scripts/survey_verify.py` | all green (24 pages, 130 events, 11 lines, 2 predictions, 21 flags) |
+| `python3 -m unittest discover -s tests` | 33 tests, OK |
+| `python3 scripts/integration_audit.py` | 0 cross-layer local link errors |
+
+### Irregularity worth a reviewer's attention
+
+The handball score grid initially truncated at 45 goals and silently lost about 10% of the joint probability
+mass (an 8.74-goal expected margin showed a 41.7% cover probability on a −8.5 line). The grid is now sized from
+the rates and renormalised; the corrected figure is published. This is recorded here rather than quietly fixed
+because it shows how a plausible-looking price can be wrong without any source error.
+
+### Concurrent-merge record (2026-10-21 08:05 UTC)
+
+While this branch was in CI, PRs #34–#38 from sessions `18eca832`, `8f07248b` and `e3c5f898` merged to `main`.
+`gh pr merge 39` refused ("merge commit cannot be cleanly created"), so `origin/main` was merged into this branch
+with no rebase (a rebase would have replayed other sessions' commits).
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `COORDINATION.md` | add/add at EOF — their audit ledgers vs this session's section | Their file taken verbatim, this session's complete section re-appended below it. Nothing removed. |
+| `README.md` | Their evidence-caveat rewrite vs this session's handball edits | **Their rewrite taken as the base**; only the root-dashboard row counts were updated (47/45/9, 22 open, 4 closed) and one handball section inserted. `git diff origin/main -- README.md` shows additions only. |
+| `research/integrity-audit-8f07248b.md`, `research/official-source-audit-18eca832.md`, `scripts/official_source_audit.py`, `tests/test_official_source_audit.py` | none | Taken as-is from `main` and re-verified in this branch. |
+
+After the merge: 36 unit tests pass (up from 33, the three new ones are the concurrent session's), all three
+builds and the survey gate pass, `integration_audit.py` reports 0 local link errors, and
+`official_source_audit.py` runs green. No other session's work was discarded.
+
+### Publish record — session `arena/73620ec4-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#39](https://github.com/buffedlizard55-lab/OLBG2/pull/39) |
+| Merge | **MERGED** 2026-10-21T07:12:59Z; merge commit `7dda52e9d2cda8bcd54c11f8acb48a9f49d38550` |
+| Concurrent merges handled | PRs #34–#38 landed on `main` while #39 was in CI. `main` was merged forward (no rebase); `README.md` took the newer evidence-caveat rewrite as its base and `COORDINATION.md` kept both ledgers. No other session's work discarded. |
+| Validate Pages content | Run `39560437531` — success |
+| GitHub Pages build and deployment | Run `39560436396` — success; Pages API reports `status: built`, source `main:/` |
+| Live check | `/index.html` served with 47 fixtures, 5 sport cards including Handball, and the 17-sport coverage table; `/sports/handball.html` served with 12 fixtures, 12 lines and 5 high-confidence picks; `/flagged.html` served with F24–F26 open and F12/F21 closed |
+| Cache note | The bare `/` path briefly served the previous cached page after deploy; `?cachebust=` returned the new build, and the repository blob at `main` was already correct. No rebuild was needed. |
+| Follow-up | This record plus a wording fix to the F21 closure evidence (84 prices / five predictions) go in a follow-up PR. |
+
+### Correction found by post-deploy review (2026-10-21 07:30 UTC)
+
+Reviewing the live picks page against `data/matches.json` exposed a real defect in this session's own work: three
+handball predictions still quoted the model probabilities from **before** the score-grid renormalisation
+(74.9%, 76.5%, 78.5%) while the published rows read 84.5%, 78.5% and 84.1%. The probabilities in the data were
+correct; the prose was stale. Two things changed as a result:
+
+1. The three predictions and their matching facts were corrected to the published values.
+2. `scripts/build_site.py` now fails the build if a prediction does not quote its row's published probability, and
+   `tests/test_dashboard.py` asserts the same rule along with six other structural checks (one prediction per high
+   row, ≥ 30 words, unique text, a source URL on every fact, an official fixture URL on every row, and the
+   handball rows' market set).
+
+A related wording defect was also fixed: the PSG prediction had claimed Zagreb's only win came against Celje. That
+was not verified from the standings (which publish only the aggregate 1-0-3 record), so the claim and its fact row
+were removed rather than left standing.
+
+### Final publish ledger — session `arena/73620ec4-olbg2`
+
+| PR | Purpose | Merge | Validate run | Pages run |
+|---|---|---|---|---|
+| [#39](https://github.com/buffedlizard55-lab/OLBG2/pull/39) | Handball slate, coverage table, docs | MERGED 07:12:59Z, `7dda52e` | `39560437531` success | `39560436396` success |
+| [#40](https://github.com/buffedlizard55-lab/OLBG2/pull/40) | Publish record + F21 wording | MERGED 07:14:47Z, `6d3f1a8` | `39560591224` success | success |
+| [#41](https://github.com/buffedlizard55-lab/OLBG2/pull/41) | Stale-probability fix, build guard, 6 integrity tests | MERGED, `273c3ad` | `39560880246` success | `39560879902` success |
+| #42 | Grammar fix and this ledger | see PR page | — | — |
+
+Pages API after the last deploy: `status: built`, source `main:/`. Live re-checks after each deploy:
+`/index.html` (47 fixtures, Handball card, 17-sport table), `/sports/handball.html` (12 fixtures, 12 lines,
+5 high picks), `/picks.html` (nine predictions, every quoted probability matching `data/matches.json`),
+`/flagged.html` (F24–F26 open, F12/F21 closed).
+
+## Session `arena/e3c5f898-olbg2` — root-dashboard evidence-copy follow-up (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Remove overbroad official-verification claims from root dashboard while preserving current integrated data | done | `arena/e3c5f898-olbg2` | `scripts/build_site.py`, generated root HTML, `tests/test_integration.py`, `research/root-dashboard-copy-audit-e3c5f898.md`, `COORDINATION.md` |
+
+After PR #38, a live Pages read found the root dashboard still claimed universal fixture verification. Replaced that language with dated-snapshot and source-link limitations, model-output labels, and links to evidence/review pages. The change preserves all currently integrated match rows, line values, confidence labels, predictions, and source URLs; it does not mark any new sporting fact verified. The audit report records the observed copy and its limits.
+
+Integration and conflict record: while this follow-up was in progress, main advanced through the concurrent Handball integration and follow-up PRs #39–#42 (F21 ledger correction, probability guard/corrections, and prediction copy correction). Rebase conflicts were aborted safely; the updated main was merged. The append-only coordination conflict kept main's full session and publish records. The Handball HTML conflict was resolved by regenerating from the latest merged model/data, thereby retaining the upstream probability corrections and predictions. Evidence-copy changes were preserved in the builder and reapplied after each sync. No upstream data or changes were discarded.
+
+Verification on the merged base: `python3 -m unittest discover -s tests -v` (43 tests passed); `python3 scripts/build_site.py` (11 pages, 47 stored rows, 9 predictions); `python3 scripts/build.py`; `python3 scripts/survey_build.py`; `python3 scripts/survey_verify.py` (24 pages, 130 survey rows, 11 lines, 2 predictions, 21 flags; all structural gates green); `python3 scripts/integration_audit.py` (0 local link errors); `python3 scripts/official_source_audit.py` (130 survey rows lacking explicit official fixture-source values; domain classification is not content verification). No validator or build claims external factual accuracy.
+
+Final pre-push sync note: `git pull --rebase origin arena/e3c5f898-olbg2` attempted to replay historical session commits and conflicted in `COORDINATION.md`; the rebase was aborted without modifying the branch. `git merge-base` confirmed both the remote session branch and `origin/main` are already ancestors of this branch (the integration merge records both). No work was discarded; the next push is a fast-forward only.
+
+### Publish record — root-dashboard evidence-copy follow-up, session `arena/e3c5f898-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#43](https://github.com/buffedlizard55-lab/OLBG2/pull/43) |
+| Merge | **MERGED** 2026-10-21T07:22:49Z; commit `b69e1f914fc8cf772cf29b6cb0d2c8b26a19c46d` |
+| Content validation | Run `39561559990` — success |
+| GitHub Pages build/deployment | Run `39561559440` — success, build and deploy jobs |
+| Pages status | `built`, source `main:/` |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/index.html?cachebust=43` shows the dated-snapshot disclaimer, 47 stored rows, and source-link verification limits. |
+| Warnings | Non-blocking Node.js 20 deprecation and Ubuntu runner migration annotations; all jobs succeeded. |
+
+### Merge conflict log - session `arena/d4b9d560-olbg2`
+
+Merging `origin/main` (PR #44, commit `237d944`) into this branch conflicted only in this
+append-only file: the upstream sessions' records and this session's Layer-4 completion had both
+appended at EOF. Resolved additively - the upstream sections are kept verbatim above and this
+session's record follows. No code, data or generated page was discarded. After the merge the
+root dashboard was regenerated from the combined `scripts/build_site.py`, which now carries both
+the upstream navigation entries and this session's `/live/` entry.
+
 # Session `arena/d4b9d560-olbg2` — live-slate desk (Layer 4) and final integration
 
 **Session ID:** `arena/d4b9d560-olbg2` · **Branch:** `arena/d4b9d560-olbg2` · **Claimed:** 2026-10-21 (before any edit, per protocol)

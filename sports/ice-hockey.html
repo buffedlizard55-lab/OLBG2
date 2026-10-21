@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ice Hockey · OLBG2 Sports Betting Data</title>
-<meta name="description" content="NHL — lines originated from this season&#x27;s official team goal rates.">
+<meta name="description" content="NHL schedule snapshot; the model uses stored team goal-rate inputs, not freshly revalidated here.">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
 </head>
@@ -20,12 +20,10 @@
 
 <section class="hero">
   <h1>Ice Hockey</h1>
-  <p class="lede">NHL — lines originated from this season&#x27;s official team goal rates.</p>
-  <p class="meta">14 verified fixtures · 14 with originated lines · 4 high-confidence picks</p>
+  <p class="lede">NHL schedule snapshot; the model uses stored team goal-rate inputs, not freshly revalidated here.</p>
+  <p class="meta">14 stored rows · 14 with originated lines · 4 model-labeled high picks</p>
 </section>
-<div class="note info">Every price on this page is originated by this project from verified official data, not taken
-from a bookmaker. Blank values mean the input could not be verified — see
-<a href="../flagged.html">Flagged for review</a>.</div>
+<div class="note info">Prices on this page are outputs of this project's models, not bookmaker prices. Inputs come from the checked-in snapshot; source links do not establish that every input or fixture was independently re-checked. See <a href="../flagged.html">Flagged for review</a> and <a href="../integration.html">Evidence status</a>.</div>
 
         <div class="card" style="margin:14px 0">
           <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
@@ -33,16 +31,16 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-21 23:30 UTC · KeyBank Center</span></div>
             <div><span class="sel">Buffalo Sabres</span> <span class="badge b-high">High</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Buffalo Sabres</b>: record=4-3-2, gp=9, gf=27, ga=33, gf_pg=3.0, ga_pg=3.67<br><b>Philadelphia Flyers</b>: record=2-6-3, gp=11, gf=17, ga=35, gf_pg=1.55, ga_pg=3.18</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Buffalo Sabres</b>: record=4-3-2, gp=9, gf=27, ga=33, gf_pg=3.0, ga_pg=3.67<br><b>Philadelphia Flyers</b>: record=2-6-3, gp=11, gf=17, ga=35, gf_pg=1.55, ga_pg=3.18</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Buffalo Sabres</td><td class="num">—</td><td class="num">65.4%</td><td class="num">1.47</td></tr><tr><td>Moneyline</td><td>Philadelphia Flyers</td><td class="num">—</td><td class="num">34.6%</td><td class="num">2.78</td></tr><tr><td>Puck line</td><td>Buffalo Sabres -1.5</td><td class="num">-1.5</td><td class="num">40.1%</td><td class="num">2.40</td></tr><tr><td>Puck line</td><td>Philadelphia Flyers +1.5</td><td class="num">1.5</td><td class="num">60.0%</td><td class="num">1.60</td></tr><tr><td>Total goals</td><td>Over 5.5</td><td class="num">5.5</td><td class="num">47.9%</td><td class="num">2.01</td></tr><tr><td>Total goals</td><td>Under 5.5</td><td class="num">5.5</td><td class="num">52.0%</td><td class="num">1.85</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 0.988 · home defence: 1.103 · away attack: 0.712 · away defence: 1.021 · expected home goals: 3.252 · expected away goals: 2.298 · expected margin: 0.954 · expected total: 5.549</p>
           <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
-              <div class="pill">High-confidence prediction</div>
+              <div class="pill">Model-labeled high prediction</div>
               <p style="margin:8px 0 0"><b>Sabres should outlast a shot-shy Flyers side</b></p>
               <p class="small" style="margin:6px 0 0">Buffalo Sabres to win the moneyline against the Philadelphia Flyers at KeyBank Center. Buffalo are 4-3-2 through nine games and have scored 27 goals while conceding 33, a 3.00 goals-per-game attack that dwarfs Philadelphia&#x27;s 1.55. The Flyers are 2-6-3 and have managed only 17 goals in 11 games, despite beating Colorado 3-2 on 19 October. Buffalo winger Tage Thompson leads the club with five goals and Ukko-Pekka Luukkonen has three wins in net, while Philadelphia&#x27;s Matvei Michkov has six. The model puts Buffalo at 65.4%, which is why this selection is graded high confidence.</p></div>
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a>
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -51,13 +49,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-21 23:30 UTC · Canadian Tire Centre</span></div>
             <div><span class="sel">Florida Panthers</span> <span class="badge b-low">Low</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Ottawa Senators</b>: record=6-3-0, gp=9, gf=22, ga=23, gf_pg=2.44, ga_pg=2.56<br><b>Florida Panthers</b>: record=5-2-2, gp=9, gf=30, ga=25, gf_pg=3.33, ga_pg=2.78</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Ottawa Senators</b>: record=6-3-0, gp=9, gf=22, ga=23, gf_pg=2.44, ga_pg=2.56<br><b>Florida Panthers</b>: record=5-2-2, gp=9, gf=30, ga=25, gf_pg=3.33, ga_pg=2.78</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Ottawa Senators</td><td class="num">—</td><td class="num">49.1%</td><td class="num">1.96</td></tr><tr><td>Moneyline</td><td>Florida Panthers</td><td class="num">—</td><td class="num">50.9%</td><td class="num">1.89</td></tr><tr><td>Puck line</td><td>Ottawa Senators -1.5</td><td class="num">-1.5</td><td class="num">24.8%</td><td class="num">3.88</td></tr><tr><td>Puck line</td><td>Florida Panthers +1.5</td><td class="num">1.5</td><td class="num">75.2%</td><td class="num">1.28</td></tr><tr><td>Total goals</td><td>Over 5.5</td><td class="num">5.5</td><td class="num">47.4%</td><td class="num">2.03</td></tr><tr><td>Total goals</td><td>Under 5.5</td><td class="num">5.5</td><td class="num">52.6%</td><td class="num">1.83</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 0.892 · home defence: 0.911 · away attack: 1.045 · away defence: 0.95 · expected home goals: 2.731 · expected away goals: 2.785 · expected margin: -0.055 · expected total: 5.516</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a>
            · <a href="https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896" rel="noopener">OLBG event page</a></p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -66,16 +64,16 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-22 23:00 UTC · TD Garden</span></div>
             <div><span class="sel">Boston Bruins</span> <span class="badge b-high">High</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Boston Bruins</b>: record=7-2-1, gp=10, gf=36, ga=22, gf_pg=3.6, ga_pg=2.2<br><b>Nashville Predators</b>: record=3-2-3, gp=8, gf=23, ga=22, gf_pg=2.88, ga_pg=2.75</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Boston Bruins</b>: record=7-2-1, gp=10, gf=36, ga=22, gf_pg=3.6, ga_pg=2.2<br><b>Nashville Predators</b>: record=3-2-3, gp=8, gf=23, ga=22, gf_pg=2.88, ga_pg=2.75</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Boston Bruins</td><td class="num">—</td><td class="num">65.3%</td><td class="num">1.47</td></tr><tr><td>Moneyline</td><td>Nashville Predators</td><td class="num">—</td><td class="num">34.7%</td><td class="num">2.77</td></tr><tr><td>Puck line</td><td>Boston Bruins -1.5</td><td class="num">-1.5</td><td class="num">40.4%</td><td class="num">2.38</td></tr><tr><td>Puck line</td><td>Nashville Predators +1.5</td><td class="num">1.5</td><td class="num">59.6%</td><td class="num">1.61</td></tr><tr><td>Total goals</td><td>Over 5.5</td><td class="num">5.5</td><td class="num">51.1%</td><td class="num">1.88</td></tr><tr><td>Total goals</td><td>Under 5.5</td><td class="num">5.5</td><td class="num">48.9%</td><td class="num">1.97</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 1.096 · home defence: 0.843 · away attack: 0.968 · away defence: 0.948 · expected home goals: 3.349 · expected away goals: 2.385 · expected margin: 0.963 · expected total: 5.734</p>
           <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
-              <div class="pill">High-confidence prediction</div>
+              <div class="pill">Model-labeled high prediction</div>
               <p style="margin:8px 0 0"><b>Bruins&#x27; defensive record points to a home win over Nashville</b></p>
               <p class="small" style="margin:6px 0 0">Boston Bruins to win the moneyline when the Nashville Predators visit TD Garden. Boston sit at 7-2-1 after ten games, scoring 36 and conceding just 22, which works out at 2.20 goals against per game, comfortably better than Nashville&#x27;s 2.75. The Predators are 3-2-3 and have found the net 23 times in eight outings. David Pastrnak has four goals and eight assists for Boston and Jeremy Swayman has already recorded six wins, while Roman Josi has eight assists and Ryan O&#x27;Reilly four goals for Nashville. Our model gives Boston a 65.3% chance.</p></div>
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -84,13 +82,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-22 23:00 UTC · Scotiabank Arena</span></div>
             <div><span class="sel">New York Rangers</span> <span class="badge b-low">Low</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Toronto Maple Leafs</b>: record=5-4-2, gp=11, gf=38, ga=34, gf_pg=3.45, ga_pg=3.09<br><b>New York Rangers</b>: record=7-3-1, gp=11, gf=33, ga=24, gf_pg=3.0, ga_pg=2.18</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Toronto Maple Leafs</b>: record=5-4-2, gp=11, gf=38, ga=34, gf_pg=3.45, ga_pg=3.09<br><b>New York Rangers</b>: record=7-3-1, gp=11, gf=33, ga=24, gf_pg=3.0, ga_pg=2.18</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Toronto Maple Leafs</td><td class="num">—</td><td class="num">49.7%</td><td class="num">1.93</td></tr><tr><td>Moneyline</td><td>New York Rangers</td><td class="num">—</td><td class="num">50.3%</td><td class="num">1.91</td></tr><tr><td>Puck line</td><td>Toronto Maple Leafs -1.5</td><td class="num">-1.5</td><td class="num">25.8%</td><td class="num">3.73</td></tr><tr><td>Puck line</td><td>New York Rangers +1.5</td><td class="num">1.5</td><td class="num">74.2%</td><td class="num">1.30</td></tr><tr><td>Total goals</td><td>Over 5.5</td><td class="num">5.5</td><td class="num">51.7%</td><td class="num">1.86</td></tr><tr><td>Total goals</td><td>Under 5.5</td><td class="num">5.5</td><td class="num">48.2%</td><td class="num">1.99</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 1.072 · home defence: 1.004 · away attack: 0.987 · away defence: 0.832 · expected home goals: 2.878 · expected away goals: 2.897 · expected margin: -0.018 · expected total: 5.775</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -99,13 +97,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-22 23:00 UTC · Canadian Tire Centre</span></div>
             <div><span class="sel">Ottawa Senators</span> <span class="badge b-med">Medium</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Ottawa Senators</b>: record=6-3-0, gp=9, gf=22, ga=23, gf_pg=2.44, ga_pg=2.56<br><b>San Jose Sharks</b>: record=5-4-1, gp=10, gf=26, ga=34, gf_pg=2.6, ga_pg=3.4</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Ottawa Senators</b>: record=6-3-0, gp=9, gf=22, ga=23, gf_pg=2.44, ga_pg=2.56<br><b>San Jose Sharks</b>: record=5-4-1, gp=10, gf=26, ga=34, gf_pg=2.6, ga_pg=3.4</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Ottawa Senators</td><td class="num">—</td><td class="num">60.1%</td><td class="num">1.60</td></tr><tr><td>Moneyline</td><td>San Jose Sharks</td><td class="num">—</td><td class="num">40.0%</td><td class="num">2.41</td></tr><tr><td>Puck line</td><td>Ottawa Senators -1.5</td><td class="num">-1.5</td><td class="num">34.5%</td><td class="num">2.79</td></tr><tr><td>Puck line</td><td>San Jose Sharks +1.5</td><td class="num">1.5</td><td class="num">65.5%</td><td class="num">1.47</td></tr><tr><td>Total goals</td><td>Over 5.5</td><td class="num">5.5</td><td class="num">46.9%</td><td class="num">2.05</td></tr><tr><td>Total goals</td><td>Under 5.5</td><td class="num">5.5</td><td class="num">53.1%</td><td class="num">1.81</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 0.892 · home defence: 0.911 · away attack: 0.915 · away defence: 1.06 · expected home goals: 3.047 · expected away goals: 2.438 · expected margin: 0.61 · expected total: 5.485</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -114,13 +112,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-22 23:00 UTC · Prudential Center</span></div>
             <div><span class="sel">New Jersey Devils</span> <span class="badge b-low">Low</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>New Jersey Devils</b>: record=5-4-0, gp=9, gf=29, ga=30, gf_pg=3.22, ga_pg=3.33<br><b>Anaheim Ducks</b>: record=4-5-0, gp=9, gf=26, ga=29, gf_pg=2.89, ga_pg=3.22</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>New Jersey Devils</b>: record=5-4-0, gp=9, gf=29, ga=30, gf_pg=3.22, ga_pg=3.33<br><b>Anaheim Ducks</b>: record=4-5-0, gp=9, gf=26, ga=29, gf_pg=2.89, ga_pg=3.22</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>New Jersey Devils</td><td class="num">—</td><td class="num">56.7%</td><td class="num">1.70</td></tr><tr><td>Moneyline</td><td>Anaheim Ducks</td><td class="num">—</td><td class="num">43.3%</td><td class="num">2.22</td></tr><tr><td>Puck line</td><td>New Jersey Devils -1.5</td><td class="num">-1.5</td><td class="num">33.1%</td><td class="num">2.91</td></tr><tr><td>Puck line</td><td>Anaheim Ducks +1.5</td><td class="num">1.5</td><td class="num">67.0%</td><td class="num">1.44</td></tr><tr><td>Total goals</td><td>Over 6.5</td><td class="num">6.5</td><td class="num">45.1%</td><td class="num">2.13</td></tr><tr><td>Total goals</td><td>Under 6.5</td><td class="num">6.5</td><td class="num">54.9%</td><td class="num">1.75</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 1.026 · home defence: 1.045 · away attack: 0.969 · away defence: 1.026 · expected home goals: 3.395 · expected away goals: 2.961 · expected margin: 0.434 · expected total: 6.356</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -129,13 +127,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-22 23:00 UTC · PPG Paints Arena</span></div>
             <div><span class="sel">Florida Panthers</span> <span class="badge b-low">Low</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Pittsburgh Penguins</b>: record=3-6-1, gp=10, gf=32, ga=37, gf_pg=3.2, ga_pg=3.7<br><b>Florida Panthers</b>: record=5-2-2, gp=9, gf=30, ga=25, gf_pg=3.33, ga_pg=2.78</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Pittsburgh Penguins</b>: record=3-6-1, gp=10, gf=32, ga=37, gf_pg=3.2, ga_pg=3.7<br><b>Florida Panthers</b>: record=5-2-2, gp=9, gf=30, ga=25, gf_pg=3.33, ga_pg=2.78</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Pittsburgh Penguins</td><td class="num">—</td><td class="num">45.9%</td><td class="num">2.10</td></tr><tr><td>Moneyline</td><td>Florida Panthers</td><td class="num">—</td><td class="num">54.1%</td><td class="num">1.78</td></tr><tr><td>Puck line</td><td>Pittsburgh Penguins -1.5</td><td class="num">-1.5</td><td class="num">23.9%</td><td class="num">4.02</td></tr><tr><td>Puck line</td><td>Florida Panthers +1.5</td><td class="num">1.5</td><td class="num">76.1%</td><td class="num">1.26</td></tr><tr><td>Total goals</td><td>Over 6.5</td><td class="num">6.5</td><td class="num">47.9%</td><td class="num">2.01</td></tr><tr><td>Total goals</td><td>Under 6.5</td><td class="num">6.5</td><td class="num">52.0%</td><td class="num">1.85</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 1.024 · home defence: 1.114 · away attack: 1.045 · away defence: 0.95 · expected home goals: 3.133 · expected away goals: 3.405 · expected margin: -0.272 · expected total: 6.538</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -144,16 +142,16 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-22 23:30 UTC · UBS Arena</span></div>
             <div><span class="sel">New York Islanders</span> <span class="badge b-high">High</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>New York Islanders</b>: record=5-3-1, gp=9, gf=27, ga=19, gf_pg=3.0, ga_pg=2.11<br><b>Los Angeles Kings</b>: record=1-4-2, gp=7, gf=17, ga=27, gf_pg=2.43, ga_pg=3.86</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>New York Islanders</b>: record=5-3-1, gp=9, gf=27, ga=19, gf_pg=3.0, ga_pg=2.11<br><b>Los Angeles Kings</b>: record=1-4-2, gp=7, gf=17, ga=27, gf_pg=2.43, ga_pg=3.86</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>New York Islanders</td><td class="num">—</td><td class="num">71.2%</td><td class="num">1.35</td></tr><tr><td>Moneyline</td><td>Los Angeles Kings</td><td class="num">—</td><td class="num">28.8%</td><td class="num">3.34</td></tr><tr><td>Puck line</td><td>New York Islanders -1.5</td><td class="num">-1.5</td><td class="num">46.9%</td><td class="num">2.05</td></tr><tr><td>Puck line</td><td>Los Angeles Kings +1.5</td><td class="num">1.5</td><td class="num">53.1%</td><td class="num">1.81</td></tr><tr><td>Total goals</td><td>Over 5.5</td><td class="num">5.5</td><td class="num">51.6%</td><td class="num">1.86</td></tr><tr><td>Total goals</td><td>Under 5.5</td><td class="num">5.5</td><td class="num">48.4%</td><td class="num">1.99</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 0.988 · home defence: 0.835 · away attack: 0.902 · away defence: 1.12 · expected home goals: 3.566 · expected away goals: 2.202 · expected margin: 1.363 · expected total: 5.768</p>
           <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
-              <div class="pill">High-confidence prediction</div>
+              <div class="pill">Model-labeled high prediction</div>
               <p style="margin:8px 0 0"><b>Islanders&#x27; goaltending and defence make them a clear home favourite</b></p>
               <p class="small" style="margin:6px 0 0">New York Islanders to win the moneyline against the Los Angeles Kings at UBS Arena. The Islanders are 5-3-1 and have conceded only 19 goals in nine games, a 2.11 goals-against average, while scoring 27. Los Angeles have played just seven games, going 1-4-2, and have shipped 27 goals at 3.86 per game while scoring 17. Bo Horvat leads New York with five goals, Matthew Schaefer has eight assists and Ilya Sorokin has five wins; the Kings&#x27; leading scorer is Artemi Panarin with four. The model makes the Islanders a 71.2% favourite, the highest NHL probability on this slate.</p></div>
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -162,13 +160,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-23 00:00 UTC · Enterprise Center</span></div>
             <div><span class="sel">Vegas Golden Knights</span> <span class="badge b-med">Medium</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>St. Louis Blues</b>: record=4-4-1, gp=9, gf=29, ga=29, gf_pg=3.22, ga_pg=3.22<br><b>Vegas Golden Knights</b>: record=8-2-0, gp=10, gf=41, ga=24, gf_pg=4.1, ga_pg=2.4</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>St. Louis Blues</b>: record=4-4-1, gp=9, gf=29, ga=29, gf_pg=3.22, ga_pg=3.22<br><b>Vegas Golden Knights</b>: record=8-2-0, gp=10, gf=41, ga=24, gf_pg=4.1, ga_pg=2.4</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>St. Louis Blues</td><td class="num">—</td><td class="num">40.1%</td><td class="num">2.40</td></tr><tr><td>Moneyline</td><td>Vegas Golden Knights</td><td class="num">—</td><td class="num">59.9%</td><td class="num">1.60</td></tr><tr><td>Puck line</td><td>St. Louis Blues -1.5</td><td class="num">-1.5</td><td class="num">19.4%</td><td class="num">4.96</td></tr><tr><td>Puck line</td><td>Vegas Golden Knights +1.5</td><td class="num">1.5</td><td class="num">80.6%</td><td class="num">1.19</td></tr><tr><td>Total goals</td><td>Over 6.5</td><td class="num">6.5</td><td class="num">46.8%</td><td class="num">2.05</td></tr><tr><td>Total goals</td><td>Under 6.5</td><td class="num">6.5</td><td class="num">53.2%</td><td class="num">1.81</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 1.026 · home defence: 1.026 · away attack: 1.186 · away defence: 0.879 · expected home goals: 2.907 · expected away goals: 3.56 · expected margin: -0.653 · expected total: 6.467</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -177,13 +175,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-23 00:00 UTC · American Airlines Center</span></div>
             <div><span class="sel">Dallas Stars</span> <span class="badge b-med">Medium</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Dallas Stars</b>: record=5-3-1, gp=9, gf=22, ga=14, gf_pg=2.44, ga_pg=1.56<br><b>Winnipeg Jets</b>: record=4-3-2, gp=9, gf=24, ga=26, gf_pg=2.67, ga_pg=2.89</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Dallas Stars</b>: record=5-3-1, gp=9, gf=22, ga=14, gf_pg=2.44, ga_pg=1.56<br><b>Winnipeg Jets</b>: record=4-3-2, gp=9, gf=24, ga=26, gf_pg=2.67, ga_pg=2.89</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Dallas Stars</td><td class="num">—</td><td class="num">63.5%</td><td class="num">1.51</td></tr><tr><td>Moneyline</td><td>Winnipeg Jets</td><td class="num">—</td><td class="num">36.5%</td><td class="num">2.64</td></tr><tr><td>Puck line</td><td>Dallas Stars -1.5</td><td class="num">-1.5</td><td class="num">36.1%</td><td class="num">2.66</td></tr><tr><td>Puck line</td><td>Winnipeg Jets +1.5</td><td class="num">1.5</td><td class="num">63.9%</td><td class="num">1.51</td></tr><tr><td>Total goals</td><td>Over 4.5</td><td class="num">4.5</td><td class="num">52.3%</td><td class="num">1.84</td></tr><tr><td>Total goals</td><td>Under 4.5</td><td class="num">4.5</td><td class="num">47.7%</td><td class="num">2.02</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 0.892 · home defence: 0.739 · away attack: 0.93 · away defence: 0.969 · expected home goals: 2.786 · expected away goals: 2.01 · expected margin: 0.776 · expected total: 4.796</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -192,16 +190,16 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-23 01:00 UTC · Scotiabank Saddledome</span></div>
             <div><span class="sel">Minnesota Wild</span> <span class="badge b-high">High</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Calgary Flames</b>: record=2-6-0, gp=8, gf=17, ga=37, gf_pg=2.12, ga_pg=4.62<br><b>Minnesota Wild</b>: record=6-2-2, gp=10, gf=31, ga=25, gf_pg=3.1, ga_pg=2.5</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Calgary Flames</b>: record=2-6-0, gp=8, gf=17, ga=37, gf_pg=2.12, ga_pg=4.62<br><b>Minnesota Wild</b>: record=6-2-2, gp=10, gf=31, ga=25, gf_pg=3.1, ga_pg=2.5</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Calgary Flames</td><td class="num">—</td><td class="num">31.1%</td><td class="num">3.09</td></tr><tr><td>Moneyline</td><td>Minnesota Wild</td><td class="num">—</td><td class="num">68.9%</td><td class="num">1.40</td></tr><tr><td>Puck line</td><td>Calgary Flames -1.5</td><td class="num">-1.5</td><td class="num">12.9%</td><td class="num">7.46</td></tr><tr><td>Puck line</td><td>Minnesota Wild +1.5</td><td class="num">1.5</td><td class="num">87.1%</td><td class="num">1.10</td></tr><tr><td>Total goals</td><td>Over 6.5</td><td class="num">6.5</td><td class="num">41.5%</td><td class="num">2.32</td></tr><tr><td>Total goals</td><td>Under 6.5</td><td class="num">6.5</td><td class="num">58.5%</td><td class="num">1.64</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 0.846 · home defence: 1.253 · away attack: 1.005 · away defence: 0.897 · expected home goals: 2.446 · expected away goals: 3.684 · expected margin: -1.238 · expected total: 6.13</p>
           <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px">
-              <div class="pill">High-confidence prediction</div>
+              <div class="pill">Model-labeled high prediction</div>
               <p style="margin:8px 0 0"><b>Wild&#x27;s scoring depth against Calgary&#x27;s leaky defence</b></p>
               <p class="small" style="margin:6px 0 0">Minnesota Wild to win the moneyline in Calgary. Minnesota are 6-2-2 with 31 goals for and 25 against in ten games, while the Flames are 2-6-0 and have conceded 37 goals in eight, an ugly 4.62 per game, scoring only 17 themselves. Kirill Kaprizov has 11 goals already and Quinn Hughes 11 assists for the Wild, with Jesper Wallstedt recording six wins. Calgary&#x27;s scoring leader is Morgan Frost on three, and Dustin Wolf has one win. The model still lands on 68.9% for Minnesota even after applying its 1.05 home-ice adjustment in Calgary&#x27;s favour, and the gap in goals conceded is what drives that number rather than any market signal.</p></div>
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -210,13 +208,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-23 01:00 UTC · Rogers Place</span></div>
             <div><span class="sel">Edmonton Oilers</span> <span class="badge b-low">Low</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Edmonton Oilers</b>: record=7-1-1, gp=9, gf=41, ga=27, gf_pg=4.56, ga_pg=3.0<br><b>Carolina Hurricanes</b>: record=7-2-1, gp=10, gf=36, ga=24, gf_pg=3.6, ga_pg=2.4</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Edmonton Oilers</b>: record=7-1-1, gp=9, gf=41, ga=27, gf_pg=4.56, ga_pg=3.0<br><b>Carolina Hurricanes</b>: record=7-2-1, gp=10, gf=36, ga=24, gf_pg=3.6, ga_pg=2.4</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Edmonton Oilers</td><td class="num">—</td><td class="num">55.9%</td><td class="num">1.72</td></tr><tr><td>Moneyline</td><td>Carolina Hurricanes</td><td class="num">—</td><td class="num">44.1%</td><td class="num">2.18</td></tr><tr><td>Puck line</td><td>Edmonton Oilers -1.5</td><td class="num">-1.5</td><td class="num">33.0%</td><td class="num">2.92</td></tr><tr><td>Puck line</td><td>Carolina Hurricanes +1.5</td><td class="num">1.5</td><td class="num">67.0%</td><td class="num">1.43</td></tr><tr><td>Total goals</td><td>Over 6.5</td><td class="num">6.5</td><td class="num">50.8%</td><td class="num">1.89</td></tr><tr><td>Total goals</td><td>Under 6.5</td><td class="num">6.5</td><td class="num">49.2%</td><td class="num">1.96</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 1.256 · home defence: 0.988 · away attack: 1.096 · away defence: 0.879 · expected home goals: 3.558 · expected away goals: 3.166 · expected margin: 0.393 · expected total: 6.724</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -225,13 +223,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-23 02:00 UTC · Climate Pledge Arena</span></div>
             <div><span class="sel">Seattle Kraken</span> <span class="badge b-low">Low</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Seattle Kraken</b>: record=6-3-1, gp=10, gf=37, ga=34, gf_pg=3.7, ga_pg=3.4<br><b>Utah Mammoth</b>: record=7-3-0, gp=10, gf=38, ga=31, gf_pg=3.8, ga_pg=3.1</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Seattle Kraken</b>: record=6-3-1, gp=10, gf=37, ga=34, gf_pg=3.7, ga_pg=3.4<br><b>Utah Mammoth</b>: record=7-3-0, gp=10, gf=38, ga=31, gf_pg=3.8, ga_pg=3.1</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Seattle Kraken</td><td class="num">—</td><td class="num">51.5%</td><td class="num">1.87</td></tr><tr><td>Moneyline</td><td>Utah Mammoth</td><td class="num">—</td><td class="num">48.5%</td><td class="num">1.98</td></tr><tr><td>Puck line</td><td>Seattle Kraken -1.5</td><td class="num">-1.5</td><td class="num">29.6%</td><td class="num">3.25</td></tr><tr><td>Puck line</td><td>Utah Mammoth +1.5</td><td class="num">1.5</td><td class="num">70.4%</td><td class="num">1.37</td></tr><tr><td>Total goals</td><td>Over 7.5</td><td class="num">7.5</td><td class="num">41.9%</td><td class="num">2.30</td></tr><tr><td>Total goals</td><td>Under 7.5</td><td class="num">7.5</td><td class="num">58.1%</td><td class="num">1.65</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 1.114 · home defence: 1.06 · away attack: 1.132 · away defence: 1.005 · expected home goals: 3.61 · expected away goals: 3.508 · expected margin: 0.103 · expected total: 7.118</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
         <div class="card" style="margin:14px 0">
@@ -240,13 +238,13 @@ from a bookmaker. Blank values mean the input could not be verified — see
               <span class="sub">NHL · 2026-10-23 02:00 UTC · Rogers Arena</span></div>
             <div><span class="sel">Detroit Red Wings</span> <span class="badge b-low">Low</span></div>
           </div>
-          <p class="small muted" style="margin:10px 0 6px">Verified inputs — <span class="small"><b>Vancouver Canucks</b>: record=2-7-1, gp=10, gf=30, ga=45, gf_pg=3.0, ga_pg=4.5<br><b>Detroit Red Wings</b>: record=3-3-3, gp=9, gf=22, ga=26, gf_pg=2.44, ga_pg=2.89</span></p>
+          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Vancouver Canucks</b>: record=2-7-1, gp=10, gf=30, ga=45, gf_pg=3.0, ga_pg=4.5<br><b>Detroit Red Wings</b>: record=3-3-3, gp=9, gf=22, ga=26, gf_pg=2.44, ga_pg=2.89</span></p>
           <div class="table-scroll" style="max-height:none">
           <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
           <tbody><tr><td>Moneyline</td><td>Vancouver Canucks</td><td class="num">—</td><td class="num">46.9%</td><td class="num">2.05</td></tr><tr><td>Moneyline</td><td>Detroit Red Wings</td><td class="num">—</td><td class="num">53.1%</td><td class="num">1.81</td></tr><tr><td>Puck line</td><td>Vancouver Canucks -1.5</td><td class="num">-1.5</td><td class="num">24.5%</td><td class="num">3.92</td></tr><tr><td>Puck line</td><td>Detroit Red Wings +1.5</td><td class="num">1.5</td><td class="num">75.5%</td><td class="num">1.27</td></tr><tr><td>Total goals</td><td>Over 6.5</td><td class="num">6.5</td><td class="num">45.2%</td><td class="num">2.13</td></tr><tr><td>Total goals</td><td>Under 6.5</td><td class="num">6.5</td><td class="num">54.8%</td><td class="num">1.76</td></tr></tbody></table></div>
           <p class="small muted" style="margin:10px 0 0">league avg goals per game: 3.07 · home attack: 0.987 · home defence: 1.259 · away attack: 0.892 · away defence: 0.969 · expected home goals: 3.083 · expected away goals: 3.283 · expected margin: -0.2 · expected total: 6.367</p>
-          
-          <p class="small" style="margin:12px 0 0">Fixture source: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
+
+          <p class="small" style="margin:12px 0 0">Source link: <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a>
           </p>
         </div>
 <p class="small muted" style="margin-top:22px"><a href="../index.html">← Back to dashboard</a></p>

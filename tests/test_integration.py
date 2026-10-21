@@ -1,4 +1,4 @@
-"""Structural regression tests; intentionally do not claim external verification."""
+"""Structural regression tests across Root, Verified, Survey, and Desk layers."""
 import importlib.util
 from pathlib import Path
 import tempfile
@@ -30,9 +30,15 @@ class IntegrationTests(unittest.TestCase):
         facts = sum(len(p['facts_used']) for p in audit.load('data/survey/predictions.json'))
         self.assertEqual(sum(row[1] == 'UNVERIFIED IN THIS AUDIT' for row in audit.findings()), facts)
 
-    def test_disclosures_are_escaped_and_not_live_claims(self):
+    def test_disclosures_are_escaped_and_link_verified_desk(self):
         text = audit.body()
         self.assertIn('not a live complete match feed', text)
         self.assertIn('not unique combined totals', text)
         self.assertIn('UNVERIFIED IN THIS AUDIT', text)
         self.assertIn('survey/flagged.html', text)
+        self.assertIn('verified/index.html', text)
+        self.assertIn('verified/flagged.html', text)
+
+
+if __name__ == '__main__':
+    unittest.main()

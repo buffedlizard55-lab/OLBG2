@@ -118,8 +118,8 @@ for f in sorted((DATA / "events").glob("*.json")):
             no_time.append((f.stem, e["match"]))
 check(not no_src, f"all {n_ev} inventory rows carry an OLBG provenance URL")
 check(not no_time, f"all {n_ev} inventory rows carry listed_time, as_of and retrieved_via")
-check(len(sports) == 22, f"OLBG sport taxonomy has 22 entries (found {len(sports)})")
-check(len(inc) == 15, f"15 sports in scope (found {len(inc)})")
+check(len(sports) == 25, f"OLBG sport taxonomy has 25 entries incl. Hurling/UFC/Specials (found {len(sports)})")
+check(len(inc) == 17, f"17 eligible sports in scope (found {len(inc)})")
 check(all(s["listing_url"] for s in inc), "every in-scope sport has a listing URL")
 
 lines = json.loads((DATA / "lines.json").read_text())["lines"]

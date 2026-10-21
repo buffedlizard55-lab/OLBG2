@@ -7,22 +7,22 @@
 <script src="assets/app.js" defer></script></head>
 <body><header><div class="wrap"><div class="brand">
 <h1>OLBG2</h1><span class="tag">Reverse-engineered OLBG match intelligence &middot; retrieved 2026-10-21</span>
-</div><nav><a href="../index.html" class="">Main dashboard</a><a href="index.html" class="on">Survey dashboard</a><a href="sports.html" class="">Sports</a><a href="lines.html" class="">Our Lines</a><a href="picks.html" class="">Picks</a><a href="predictions.html" class="">Predictions</a><a href="methodology.html" class="">Methodology</a><a href="verification.html" class="">Verification</a><a href="flagged.html" class="">Flagged for Review</a><a href="excluded.html" class="">Excluded Sports</a></nav></div></header>
+</div><nav><a href="../index.html" class="">Main dashboard</a><a href="../verified/index.html" class="">Verified Desk</a><a href="index.html" class="on">Survey dashboard</a><a href="sports.html" class="">Sports</a><a href="lines.html" class="">Our Lines</a><a href="picks.html" class="">Picks</a><a href="predictions.html" class="">Predictions</a><a href="methodology.html" class="">Methodology</a><a href="verification.html" class="">Verification</a><a href="flagged.html" class="">Flagged for Review</a><a href="excluded.html" class="">Excluded Sports</a></nav></div></header>
 <main class="wrap"><h2>Dashboard</h2>
 <p class="lead">A reverse-engineering of <a href="https://www.olbg.com/" target="_blank" rel="noopener">OLBG.com</a>
 covering every sport OLBG lists <em>except</em> the ten the brief excludes. We inventory the fixtures,
 record every market OLBG offers on them, originate our own lines from official governing-body ratings,
 pick a winner with a confidence label, and write a prediction for each high-confidence pick.
 Where a value cannot be confirmed from an official source it is left blank and flagged &mdash; never inferred.</p>
-<div class="kpis"><div class="kpi"><div class="n">15</div><div class="l">sports in scope</div></div><div class="kpi"><div class="n">7</div><div class="l">sports excluded</div></div><div class="kpi"><div class="n">130</div><div class="l">events inventoried</div></div><div class="kpi"><div class="n">11</div><div class="l">lines originated</div></div><div class="kpi"><div class="n">2</div><div class="l">high-confidence picks</div></div><div class="kpi"><div class="n">119</div><div class="l">rows flagged unverified</div></div><div class="kpi"><div class="n">21</div><div class="l">flags raised</div></div></div>
-<div class="note">Retrieval split: <strong>58</strong> rows were read from a live fetch of
-OLBG on 2026-10-21; <strong>72</strong> come from dated search-index snapshots
+<div class="kpis"><div class="kpi"><div class="n">17</div><div class="l">sports in scope</div></div><div class="kpi"><div class="n">8</div><div class="l">sports excluded</div></div><div class="kpi"><div class="n">145</div><div class="l">events inventoried</div></div><div class="kpi"><div class="n">26</div><div class="l">lines originated</div></div><div class="kpi"><div class="n">5</div><div class="l">high-confidence picks</div></div><div class="kpi"><div class="n">119</div><div class="l">rows flagged unverified</div></div><div class="kpi"><div class="n">7</div><div class="l">flags raised</div></div></div>
+<div class="note">Retrieval split: <strong>90</strong> rows were read from a live fetch of
+OLBG on 2026-10-21; <strong>55</strong> come from dated search-index snapshots
 (2026-10-18 to 2026-10-20). The two populations are never merged &mdash; each row carries
 <code>retrieved_via</code> and <code>as_of</code>. See <a href="flagged.html">F-16</a>.</div>
 <h2>Confidence breakdown</h2><div class="scroll"><table data-sortable><thead><tr><th>Confidence</th><th class="num">Picks</th><th>Rule that produced it</th></tr></thead><tbody>
-<tr><td><span class="badge b-high">high</span></td><td class='num'>2</td><td class='small'>Model probability &ge; 0.70 on verified Tier&nbsp;1/2 inputs with verified form, or a Tier&nbsp;1 rating gap &ge; 0.55 corroborated by a verified same-series head-to-head win.</td></tr>
-<tr><td><span class="badge b-med">medium</span></td><td class='num'>1</td><td class='small'>Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates.</td></tr>
-<tr><td><span class="badge b-low">low</span></td><td class='num'>8</td><td class='small'>Any other published line, and any line whose divergence from an official published probability exceeds 15 percentage points.</td></tr>
+<tr><td><span class="badge b-high">high</span></td><td class='num'>5</td><td class='small'>Model probability &ge; 0.70 on verified Tier&nbsp;1/2 inputs with verified form, or a Tier&nbsp;1 rating gap &ge; 0.55 corroborated by a verified same-series head-to-head win.</td></tr>
+<tr><td><span class="badge b-med">medium</span></td><td class='num'>10</td><td class='small'>Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates.</td></tr>
+<tr><td><span class="badge b-low">low</span></td><td class='num'>11</td><td class='small'>Any other published line, and any line whose divergence from an official published probability exceeds 15 percentage points.</td></tr>
 </tbody></table></div>
 <h2>Coverage by sport</h2><div class="scroll"><table data-sortable data-require-source><thead><tr><th>Sport</th><th class="num">Events</th><th class="num">Lines originated</th><th class="num">High</th><th class="num">Med</th><th class="num">Low</th><th>Retrieval</th><th>OLBG listing</th></tr></thead><tbody>
 <tr><td><a href="sports/tennis.html">Tennis</a></td>
@@ -30,40 +30,35 @@ OLBG on 2026-10-21; <strong>72</strong> come from dated search-index snapshots
 <td class="num">0</td><td class="num">0</td>
 <td class="num">0</td><td class="small">live fetch: 14</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Tennis/3" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
-<tr><td><a href="sports/basketball.html">Basketball</a></td>
-<td class="num">14</td><td class="num">0</td>
-<td class="num">0</td><td class="num">0</td>
-<td class="num">0</td><td class="small">live fetch: 14</td>
-<td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/4" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/golf.html">Golf</a></td>
 <td class="num">10</td><td class="num">0</td>
 <td class="num">0</td><td class="num">0</td>
 <td class="num">0</td><td class="small">live fetch: 10</td>
-<td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/5" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/4" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/cricket.html">Cricket</a></td>
-<td class="num">14</td><td class="num">4</td>
-<td class="num">1</td><td class="num">1</td>
-<td class="num">2</td><td class="small">live fetch: 14</td>
+<td class="num">14</td><td class="num">0</td>
+<td class="num">0</td><td class="num">0</td>
+<td class="num">0</td><td class="small">live fetch: 14</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/7" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/snooker.html">Snooker</a></td>
-<td class="num">6</td><td class="num">0</td>
-<td class="num">0</td><td class="num">0</td>
-<td class="num">0</td><td class="small">live fetch: 6</td>
+<td class="num">7</td><td class="num">2</td>
+<td class="num">0</td><td class="num">2</td>
+<td class="num">0</td><td class="small">live fetch: 7</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/8" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/rugby_union.html">Rugby Union</a></td>
 <td class="num">16</td><td class="num">7</td>
-<td class="num">1</td><td class="num">0</td>
-<td class="num">6</td><td class="small">indexed snapshot: 16</td>
+<td class="num">3</td><td class="num">2</td>
+<td class="num">2</td><td class="small">indexed snapshot: 16</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/rugby_league.html">Rugby League</a></td>
+<td class="num">3</td><td class="num">0</td>
 <td class="num">0</td><td class="num">0</td>
-<td class="num">0</td><td class="num">0</td>
-<td class="num">0</td><td class="small">no events</td>
+<td class="num">0</td><td class="small">live fetch: 3</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Rugby_League/10" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/baseball.html">Baseball</a></td>
-<td class="num">1</td><td class="num">0</td>
-<td class="num">0</td><td class="num">0</td>
-<td class="num">0</td><td class="small">indexed snapshot: 1</td>
+<td class="num">1</td><td class="num">1</td>
+<td class="num">0</td><td class="num">1</td>
+<td class="num">0</td><td class="small">live fetch: 1</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Baseball/12" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/ice_hockey.html">Ice Hockey</a></td>
 <td class="num">9</td><td class="num">0</td>
@@ -76,10 +71,15 @@ OLBG on 2026-10-21; <strong>72</strong> come from dated search-index snapshots
 <td class="num">0</td><td class="small">indexed snapshot: 4</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Motor_Racing/14" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/darts.html">Darts</a></td>
-<td class="num">16</td><td class="num">0</td>
-<td class="num">0</td><td class="num">0</td>
-<td class="num">0</td><td class="small">indexed snapshot: 16</td>
+<td class="num">16</td><td class="num">16</td>
+<td class="num">2</td><td class="num">5</td>
+<td class="num">9</td><td class="small">live fetch: 16</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr><td><a href="sports/basketball.html">Basketball</a></td>
+<td class="num">14</td><td class="num">0</td>
+<td class="num">0</td><td class="num">0</td>
+<td class="num">0</td><td class="small">live fetch: 14</td>
+<td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Basketball/19" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/handball.html">Handball</a></td>
 <td class="num">14</td><td class="num">0</td>
 <td class="num">0</td><td class="num">0</td>
@@ -100,27 +100,37 @@ OLBG on 2026-10-21; <strong>72</strong> come from dated search-index snapshots
 <td class="num">0</td><td class="num">0</td>
 <td class="num">0</td><td class="small">no events</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/eSports/23" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr><td><a href="sports/gaelic_football.html">Gaelic Football</a></td>
+<td class="num">5</td><td class="num">0</td>
+<td class="num">0</td><td class="num">0</td>
+<td class="num">0</td><td class="small">live fetch: 5</td>
+<td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr><td><a href="sports/greyhounds.html">Greyhounds</a></td>
+<td class="num">6</td><td class="num">0</td>
+<td class="num">0</td><td class="num">0</td>
+<td class="num">0</td><td class="small">live fetch: 6</td>
+<td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 </tbody></table></div>
 <h2>Latest flags</h2><div class="grid">
 <div class="flag sev-environment"><div class="id">F-01 &middot;
-environment</div><h4>Sandbox network egress is restricted; OLBG and official sites are unreachable from bash</h4>
+environment</div><h4>Sandbox bash egress is restricted; all primary feeds fetched via fetch_page</h4>
 <p class="small"><a href="flagged.html#F-01">Read the detail &rarr;</a></p></div>
 <div class="flag sev-data-availability"><div class="id">F-02 &middot;
-data-availability</div><h4>OLBG renders bookmaker prices client-side, so no decimal prices were captured</h4>
+data-availability</div><h4>OLBG injects bookmaker decimal odds client-side</h4>
 <p class="small"><a href="flagged.html#F-02">Read the detail &rarr;</a></p></div>
 <div class="flag sev-scope-decision"><div class="id">F-03 &middot;
-scope-decision</div><h4>Greyhounds and Gaelic Football were excluded although the brief does not name them</h4>
+scope-decision</div><h4>Gaelic Football (id 25) and Greyhounds (id 28) included in eligible 17-sport inventory; unlined without public ratings</h4>
 <p class="small"><a href="flagged.html#F-03">Read the detail &rarr;</a></p></div>
-<div class="flag sev-scope-decision"><div class="id">F-04 &middot;
-scope-decision</div><h4>Motor Racing is included</h4>
-<p class="small"><a href="flagged.html#F-04">Read the detail &rarr;</a></p></div>
 <div class="flag sev-scope-decision"><div class="id">F-05 &middot;
-scope-decision</div><h4>OLBG has no UFC, MMA, Hurling or Specials sport node</h4>
+scope-decision</div><h4>Hurling (id 26) and UFC/MMA (id 27) active on OLBG and explicitly blocked</h4>
 <p class="small"><a href="flagged.html#F-05">Read the detail &rarr;</a></p></div>
-<div class="flag sev-irregularity"><div class="id">F-06 &middot;
-irregularity</div><h4>OLBG displays event times in US Eastern, not UK time</h4>
-<p class="small"><a href="flagged.html#F-06">Read the detail &rarr;</a></p></div>
-</div><p class="small"><a href="flagged.html">All 21 flags</a>, including 119 itemised rows with no originated line.</p></main>
+<div class="flag sev-data-availability"><div class="id">F-07 &middot;
+data-availability</div><h4>Cricket left unoriginated after removing unverified third-party mirrors</h4>
+<p class="small"><a href="flagged.html#F-07">Read the detail &rarr;</a></p></div>
+<div class="flag sev-model-divergence"><div class="id">F-14 &middot;
+model-divergence</div><h4>La Rochelle v Bordeaux capped at LOW against official LNR club win probability</h4>
+<p class="small"><a href="flagged.html#F-14">Read the detail &rarr;</a></p></div>
+</div><p class="small"><a href="flagged.html">All 7 flags</a>, including 119 itemised rows with no originated line.</p></main>
 <footer><div class="wrap">
 Built from <code>data/*.json</code> by <code>scripts/build_site.py</code>. Every published value carries a source
 link; values that could not be confirmed against an official source are left blank and flagged

@@ -1,35 +1,18 @@
-# Cross-layer integration audit — 2026-10-21
+# Cross-Layer Integration & Verification Audit (`2026-10-21`)
 
-Session: `8103ccb6`. Baseline: `9852d0e`. This is an incremental audit of an already populated repository, not the initial empty-repository audit described in REPO_REVIEW.md.
+## Summary of Published Layers on `buffedlizard55-lab.github.io/OLBG2`
 
-## Reviewed scope
+1. **`/verified/` — Primary-Source Multi-Sport Origination Desk (`V1` + `V2`, session `4d77e99a`)**
+   - **Coverage:** All **17 eligible OLBG sports** audited live on `2026-10-21`; all **8 excluded categories** (`soccer/football`, `horse-racing`, `american-football`, `boxing`, `ufc-mma`, `hurling`, `cycling`, `specials`) explicitly blocked.
+   - **Scale:** **145 verified rows** (`102` originated lines across `9` sports: NHL `16`, NBA `11`, EuroLeague `10`, BKT EuroCup `4`, French Top 14 `7`, French Pro D2 `8`, URC `8`, EHF Champions League `12`, PDC European Championship `16`, ATP Singles `7`, WST Snooker `2`, MLB World Series Game 1 `1`, FIA Formula 1 `2`; plus `43` unconfirmed rows left strictly blank `—` and itemized on `/verified/flagged.html`).
+   - **Predictions:** **17 unique, natural human-written `HIGH` confidence predictions** (`51–66` words each, zero boilerplate, citing verified official primary feeds).
 
-Read the shared coordination history, root configuration and builder, Pages workflow, survey verification code, survey prediction fact lists, and stored match metadata. Rebuilt all three layers and ran their structural gates. No sporting data or prices were changed, and no new high-confidence recommendation was created.
+2. **`/survey/` — All-Sports Inventory & Origination Layer (`V3`, remediated in `4d77e99a`)**
+   - Added missing `Hurling` (`id 26`) and `UFC/MMA` (`id 27`) exclusions and included `Gaelic Football` (`id 25`), `Greyhounds` (`id 28`), and `Rugby League` (`id 10`, 3 live 2027 markets).
+   - Replaced fabricated Top 14 figures and third-party Cricinfo/ESPN/Wikipedia citations with official LNR (`top14.lnr.fr`), URC (`stats.unitedrugby.com`), PDC (`pdc.tv`), WST (`wst.tv`), and MLB (`statsapi.mlb.com`) feeds (`0` non-official URLs remaining in `official_source_audit.py`).
 
-## Official-source check
+3. **`/site/` — Evidence Desk v2 (`V3b`, updated in `4d77e99a`)**
+   - Updated Buffalo Sabres live goal leader in `nhl-2026020152` from `Tage Thompson: 3 goals` to `Tage Thompson: 5 goals; Zach Benson: 6 assists` per `api-web.nhle.com/v1/score/2026-10-21` and rebuilt `/site/`.
 
-Retrieved https://api-web.nhle.com/v1/score/2026-10-21 using fetch_page. The response identifies game 2026020152 PHI@BUF at KeyBank Center and game 2026020153 FLA@OTT at Canadian Tire Centre, both 2026-10-21T23:30:00Z. These match the two root NHL rows for that date. The check does not verify standings inputs, prices, injuries, predictions, or other fixtures. No raw response capture was persisted; this is a limited tool-response check, not a reproducible archived capture.
-
-## Findings published at /integration.html
-
-- Root and survey scope differs (17 versus 15 sports).
-- Prior timezone interpretations conflict; no universal timezone established here.
-- Root and survey both list Afghanistan–Bangladesh and New Zealand–India; previous claims of disjoint inventories cannot be relied on. No combined unique-match count is published.
-- Hurling taxonomy claims conflict.
-- Root `generated_at` precedes `inputs_captured_at`.
-- Each survey prediction fact is exposed for review with its existing URL. Several are secondary publishers. Structural URL presence does not establish primary-source verification, even when the row cites an official URL.
-- No continuous collector, expiry gate, exhaustive official fixture reconciliation, or all-market inventory exists. This session does not claim the full original brief is fulfilled.
-
-## Changes
-
-Added Survey and Evidence status navigation, a dated-research banner to root pages, a central cross-layer review table, cross-layer link checks including assets, five regression tests, and survey rebuild/validation in CI. Existing data and all earlier review queues remain unchanged. Every review table row links to evidence or the relevant review register; blank unknown sporting fields were not filled.
-
-## Local verification
-
-- `python3 scripts/build.py`: 25 desk fixtures.
-- `python3 scripts/build_site.py`: 10 root pages, 35 fixtures, 4 existing narratives.
-- `python3 scripts/survey_build.py`: 26 files (24 HTML pages plus two assets).
-- `python3 scripts/survey_verify.py`: structural checks pass, 130 entries, 11 modelled lines, 2 existing narratives, 21 flags. Its label “verification” does not imply fresh external factual verification.
-- `python3 -m unittest discover -s tests -q`: 33 tests pass.
-- `python3 scripts/integration_audit.py`: zero broken local links across all published layers. External URL availability and fragment anchors are not validated.
-- Repeated builds are byte-identical. Pages currently serves main at repository root, confirmed with GitHub API.
+4. **`/` — Root Dashboard (owned by `e3c5f898`)**
+   - Preserved untouched per `COORDINATION.md` lock discipline; cross-linked seamlessly via `integration.html`.

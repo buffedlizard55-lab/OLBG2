@@ -11,12 +11,15 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data' / 'survey'
-# Deliberately narrow allowlist: a familiar sports news site is not a governing body.
+# Deliberately narrow allowlist: only official governing bodies / leagues.
 OFFICIAL_HOSTS = {
-    'icc-cricket.com', 'nba.com', 'nhl.com', 'nhlstats.nhl.com',
+    'icc-cricket.com', 'nba.com', 'nhl.com', 'nhle.com', 'nhlstats.nhl.com',
     'mlb.com', 'atptour.com', 'wtatennis.com', 'itftennis.com',
-    'worldsnooker.com', 'wst.tv', 'pdc.tv', 'lnr.fr', 'top14.lnr.fr',
-    'unitedrugby.com', 'thepwr.com', 'gaa.ie', 'fiba.basketball',
+    'worldsnooker.com', 'wst.tv', 'pdc.tv', 'lnr.fr', 'top14.lnr.fr', 'prod2.lnr.fr',
+    'unitedrugby.com', 'world.rugby', 'thepwr.com', 'nrl.com', 'superleague.co.uk',
+    'gaa.ie', 'gbgb.org.uk', 'fiba.basketball', 'euroleaguebasketball.net',
+    'eurohandball.com', 'plusliga.pl', 'formula1.com', 'fia.com',
+    'owgr.com', 'pgatour.com', 'dpworldtour.com',
 }
 
 

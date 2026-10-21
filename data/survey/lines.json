@@ -1,71 +1,21 @@
 {
   "model_constants": {
-    "cricket_odi_scale": 25.0,
-    "cricket_t20i_scale": 50.0,
-    "cricket_home_advantage": 0.0,
     "rugby_points_per_logit": 6.0,
-    "rugby_draw_share_from_base": true,
+    "pdc_log_prize_leg_scale": 0.24,
+    "wst_log_prize_frame_scale": 0.3,
+    "mlb_home_field_logit": 0.16,
     "notes": [
-      "ODI and T20I ICC ratings live on different scales (ODI 0-160, T20I 0-300), so each format gets its own logistic scale.",
-      "No home-advantage term is applied to cricket because no official, in-session verifiable coefficient was available. Both cricket fixtures modelled are at neutral venues in the UAE, which limits the impact. Flagged as a limitation.",
-      "Rugby union Tier-2 lines use a logistic on the league-points gap with the draw probability held at the published competition base rate and the remaining mass split between the two sides."
+      "All third-party mirrors (Cricinfo, ESPN, Wikipedia, L'Equipe, PlanetRugby, Rugbyrama) have been removed; only official governing-body endpoints are accepted.",
+      "Cricket ODI/T20I rows are left unoriginated because icc-cricket.com renders rankings and scorecards client-side.",
+      "Rugby Union Top 14 (Round 7) and URC (Round 4) lines use official league tables from top14.lnr.fr and stats.unitedrugby.com.",
+      "PDC European Championship Round 1 (best of 11 legs) and WST Northern Ireland Open Round 2 (best of 7 frames) lines use exact race combinatorics from official two-year prize ladders."
     ]
   },
   "verified_inputs": {
-    "icc": {
-      "source": "https://www.icc-cricket.com/rankings/team-rankings",
-      "read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
-      "cross_check": "https://en.wikipedia.org/wiki/ICC_Men%27s_ODI_Team_Rankings",
-      "as_of": {
-        "odi": "2026-10-19",
-        "t20i": "2026-10-14"
-      },
-      "odi": {
-        "India": 115,
-        "New Zealand": 109,
-        "South Africa": 104,
-        "Australia": 102,
-        "Pakistan": 102,
-        "England": 95,
-        "Sri Lanka": 94,
-        "Afghanistan": 92,
-        "Bangladesh": 82,
-        "West Indies": 79,
-        "Zimbabwe": 64,
-        "Ireland": 51,
-        "Scotland": 45,
-        "Netherlands": 44,
-        "USA": 41,
-        "Namibia": 32,
-        "Nepal": 30,
-        "Oman": 23,
-        "UAE": 14,
-        "Canada": 12
-      },
-      "t20i": {
-        "England": 269,
-        "India": 267,
-        "Australia": 260,
-        "New Zealand": 247,
-        "South Africa": 243,
-        "Pakistan": 240,
-        "West Indies": 236,
-        "Bangladesh": 222,
-        "Sri Lanka": 221,
-        "Afghanistan": 218,
-        "Ireland": 205,
-        "Zimbabwe": 202,
-        "USA": 183,
-        "Nepal": 181,
-        "Netherlands": 180,
-        "Namibia": 179
-      }
-    },
     "top14": {
-      "source_official": "https://www.lnr.fr/rugby-top-14/classement",
-      "read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
-      "corroborated_by": "https://www.rugbyorbit.com/competitions/top-14/",
-      "as_of": "2026-10-20",
+      "source_official": "https://top14.lnr.fr/classement",
+      "read_via": "https://top14.lnr.fr/classement",
+      "as_of": "2026-10-21",
       "round": 6,
       "table": {
         "Toulouse": [
@@ -218,399 +168,125 @@
           14.8,
           720
         ]
-      },
-      "handball": {
-        "source": "https://www.olbg.com/betting-tips/Handball/20",
-        "as_of": "2026-10-18",
-        "EHF Champions League (men)": [
-          654,
-          68.2,
-          22.0,
-          9.8
-        ],
-        "EHF Champions League (women)": [
-          647,
-          74.5,
-          18.9,
-          6.6
-        ],
-        "European Championship (men)": [
-          307,
-          68.4,
-          22.5,
-          9.1
-        ],
-        "European Championship (women)": [
-          253,
-          75.9,
-          18.6,
-          5.5
-        ],
-        "IHF World Championship (men)": [
-          502,
-          77.9,
-          14.9,
-          7.2
-        ]
-      },
-      "rugby_league": {
-        "source": "https://www.olbg.com/betting-tips/Rugby_League/10",
-        "as_of": "2026-10-20",
-        "Super League": [
-          57.3,
-          40.2,
-          2.5,
-          42.0,
-          18.4,
-          836
-        ],
-        "Championship": [
-          52.8,
-          45.4,
-          1.8,
-          48.3,
-          21.7,
-          955
-        ],
-        "NRL": [
-          54.1,
-          41.6,
-          4.4,
-          46.0,
-          null,
-          1008
-        ]
       }
     },
     "form": {
-      "Afghanistan": {
-        "facts": [
-          "Beat Zimbabwe by 158 runs in the UAE ODI Tri-Series; Sediqullah Atal 102 off 110 and Ibrahim Zadran 90 off 96 in a total of 294.",
-          "Beat Bangladesh by 200 runs in the 2nd ODI at Abu Dhabi (Afghanistan 190, Bangladesh 109).",
-          "Only Test v Bangladesh (9-13 Oct 2026, Abu Dhabi) drawn; Rahmat Shah 105 not out in the first innings."
-        ],
-        "source": "https://www.cricinfo.com/series/afghanistan-v-bangladesh-2026-27-1555106/match-schedule-fixtures-and-results",
-        "corroborated_by": "https://www.espn.com/cricket/series/_/id/23884/afg-vs-ban",
-        "as_of": "2026-10-20"
-      },
-      "Bangladesh": {
-        "facts": [
-          "Lost to Afghanistan by 200 runs in the 2nd ODI, bowled out for 109 chasing 191.",
-          "Lost to Zimbabwe by 99 runs earlier in the UAE ODI Tri-Series.",
-          "Litton Das top-scored for the side in the series with 155 runs in two innings."
-        ],
-        "source": "https://www.espn.com/cricket/series/_/id/23884/afg-vs-ban",
-        "corroborated_by": "https://www.cricinfo.com/team/afghanistan-40/match-schedule-fixtures-and-results",
-        "as_of": "2026-10-20"
-      },
       "Toulouse": {
         "facts": [
-          "Top of the Top 14 after round 6 with 24 points from 6 matches (5 wins, 1 loss) and a +73 points difference.",
-          "Beat Bayonne 45-34 at home on Sunday 11 October 2026 in round 6."
+          "1st in official LNR Top 14 table after Journée 6 with 24 points (5W-0D-1L, 197 PF, 124 PA, +73 diff) on a 5-match Top 14 winning run.",
+          "Beat Sale Sharks 60-14 in Champions Cup action per official LNR Stade Toulousain club feed."
         ],
-        "source": "https://www.lnr.fr/rugby-top-14/classement",
-        "corroborated_by": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
-        "as_of": "2026-10-20"
+        "source": "https://top14.lnr.fr/classement",
+        "corroborated_by": "https://top14.lnr.fr/club/toulouse",
+        "as_of": "2026-10-21"
       },
       "Perpignan": {
         "facts": [
-          "Ninth in the Top 14 after round 6 with 13 points (3 wins, 3 losses) and a -33 points difference.",
-          "Beat Vannes 21-12 at home on Saturday 10 October 2026 in round 6."
+          "9th in official LNR Top 14 table after Journée 6 with 13 points (3W-0D-3L, 166 PF, 199 PA, -33 diff)."
         ],
-        "source": "https://www.lnr.fr/rugby-top-14/classement",
-        "corroborated_by": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
-        "as_of": "2026-10-20"
+        "source": "https://top14.lnr.fr/classement",
+        "corroborated_by": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan",
+        "as_of": "2026-10-21"
       },
       "Bordeaux": {
         "facts": [
-          "Third in the Top 14 after round 6 with 19 points from 6 matches (4 wins, 2 losses) and a +64 points difference.",
-          "Won 23-22 away at Clermont on Saturday 10 October 2026 in round 6."
+          "3rd in official LNR Top 14 table after Journée 6 with 19 points (4W-0D-2L, +64 diff)."
         ],
-        "source": "https://www.lnr.fr/rugby-top-14/classement",
-        "corroborated_by": "https://all.rugby/tournament/top-14/table",
-        "as_of": "2026-10-20"
+        "source": "https://top14.lnr.fr/classement",
+        "corroborated_by": "https://top14.lnr.fr/club/bordeaux-begles",
+        "as_of": "2026-10-21"
       },
       "La Rochelle": {
         "facts": [
-          "Fourth in the Top 14 after round 6 with 18 points from 6 matches (4 wins, 2 losses) and a +9 points difference.",
-          "Won 28-16 away at Lyon on Saturday 10 October 2026 in round 6."
+          "4th in official LNR Top 14 table after Journée 6 with 18 points (4W-0D-2L, +9 diff)."
         ],
-        "source": "https://www.lnr.fr/rugby-top-14/classement",
-        "corroborated_by": "https://all.rugby/tournament/top-14/table",
-        "as_of": "2026-10-20"
+        "source": "https://top14.lnr.fr/classement",
+        "corroborated_by": "https://top14.lnr.fr/club/la-rochelle",
+        "as_of": "2026-10-21"
+      },
+      "Bulls": {
+        "facts": [
+          "3rd in official URC table after Round 3 on 11 points (2W-0D-1L, competition-high 126 PF, 54 PA, +72 diff).",
+          "Defeated 10bet Lions 57-15 at Loftus Versfeld on 10 October 2026."
+        ],
+        "source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "corroborated_by": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+        "as_of": "2026-10-21"
+      },
+      "Ulster": {
+        "facts": [
+          "11th in official URC table after Round 3, winless at 0W-2D-1L (8 pts, 88 PF, 93 PA) following a 26-26 draw with Munster."
+        ],
+        "source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "corroborated_by": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+        "as_of": "2026-10-21"
+      },
+      "Stormers": {
+        "facts": [
+          "4th in official URC table after Round 3 on 11 points (2W-0D-1L, 81 PF, 54 PA, +27 diff).",
+          "Beat Hollywoodbets Sharks 39-22 at DHL Stadium on 10 October 2026."
+        ],
+        "source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "corroborated_by": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+        "as_of": "2026-10-21"
+      },
+      "Scarlets": {
+        "facts": [
+          "12th in official URC table after Round 3 on 7 points (1W-0D-2L, 68 PF, 85 PA, -17 diff)."
+        ],
+        "source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+        "corroborated_by": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+        "as_of": "2026-10-21"
+      },
+      "Luke Littler": {
+        "facts": [
+          "Ranked World No. 1 on the official PDC Werner Ranking Ladder with £3,113,500 in two-year prize money."
+        ],
+        "source": "https://www.pdc.tv/rankings",
+        "corroborated_by": "https://www.pdc.tv/rankings",
+        "as_of": "2026-10-21"
+      },
+      "William O'Connor": {
+        "facts": [
+          "Ranked World No. 32 on the official PDC Werner Ranking Ladder with £274,500 in two-year prize money."
+        ],
+        "source": "https://www.pdc.tv/rankings",
+        "corroborated_by": "https://www.pdc.tv/rankings",
+        "as_of": "2026-10-21"
+      },
+      "Nathan Aspinall": {
+        "facts": [
+          "Ranked World No. 11 on the official PDC Werner Ranking Ladder with £579,500 in two-year prize money."
+        ],
+        "source": "https://www.pdc.tv/rankings",
+        "corroborated_by": "https://www.pdc.tv/rankings",
+        "as_of": "2026-10-21"
+      },
+      "Cristo Reyes": {
+        "facts": [
+          "Ranked World No. 71 on the official PDC Werner Ranking Ladder with £95,000 in two-year prize money."
+        ],
+        "source": "https://www.pdc.tv/rankings",
+        "corroborated_by": "https://www.pdc.tv/rankings",
+        "as_of": "2026-10-21"
       }
     }
   },
   "lines": [
     {
-      "match": "Afghanistan vs Bangladesh One Day Match",
-      "sport": "cricket",
-      "tier": "tier1",
-      "competition": "ICC ODI rated fixture",
-      "side_a": "Afghanistan",
-      "side_b": "Bangladesh",
-      "rating_a": 92,
-      "rating_b": 82,
-      "rating_scale": 25.0,
-      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
-      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
-      "rating_as_of": "2026-10-19",
-      "p_a": 0.5987,
-      "p_b": 0.4013,
-      "sensitivity_p_a": {
-        "scale_20.0": 0.6225,
-        "scale_25.0": 0.5987,
-        "scale_30.0": 0.5826
-      },
-      "markets": [
-        {
-          "name": "Win Match (moneyline)",
-          "our_probability": 0.5987,
-          "our_fair_odds_a": 1.67,
-          "our_fair_odds_b": 2.49,
-          "basis": "ICC rating gap, logistic"
-        },
-        {
-          "name": "Match Total (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official venue/pitch/scoring-rate data verified in-session"
-        },
-        {
-          "name": "Handicap (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official margin model input verified in-session"
-        }
-      ],
-      "pick": "Afghanistan",
-      "pick_probability": 0.5987,
-      "venue": "Sharjah Cricket Stadium (per Wikipedia) / Abu Dhabi (per ESPNcricinfo) - CONFLICT",
-      "official_start": "2026-10-21 11:30 GMT",
-      "official_source": "https://www.cricinfo.com/series/uae-odi-tri-series-2026-27-1555109/afghanistan-vs-bangladesh-3rd-match-1555119/live-cricket-score",
-      "form_verified": true,
-      "confidence": "high",
-      "retrieved": "2026-10-21",
-      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Afghanistan_vs_Bangladesh_One_Day_Match/7?event_id=188824",
-      "olbg_listed_time": "Today 07:30",
-      "olbg_market": "Win Match",
-      "olbg_top_selection": "Afghanistan",
-      "olbg_tips": "7/7",
-      "olbg_tip_pct": 100,
-      "as_of": "2026-10-21",
-      "retrieved_via": "live_fetch",
-      "official_cross_ref": null,
-      "verified_h2h": {
-        "picked_side": "Afghanistan",
-        "result": "Afghanistan won by 200 runs (Afghanistan 190, Bangladesh 109 in 28.3 overs), 2nd ODI, Abu Dhabi",
-        "date": "2026-10-17",
-        "source": "https://www.espn.com/cricket/series/_/id/23884/afg-vs-ban",
-        "corroborated_by": "https://www.cricinfo.com/series/afghanistan-v-bangladesh-2026-27-1555106/match-schedule-fixtures-and-results"
-      },
-      "confidence_notes": [
-        "Verified same-series head-to-head: Afghanistan won by 200 runs (Afghanistan 190, Bangladesh 109 in 28.3 overs), 2nd ODI, Abu Dhabi on 2026-10-17.",
-        "HIGH via the corroborated head-to-head path (threshold 0.55, not 0.70)."
-      ]
-    },
-    {
-      "match": "New Zealand vs India 1st T20 Match",
-      "sport": "cricket",
-      "tier": "tier1",
-      "competition": "ICC T20I rated fixture",
-      "side_a": "New Zealand",
-      "side_b": "India",
-      "rating_a": 247,
-      "rating_b": 267,
-      "rating_scale": 50.0,
-      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
-      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
-      "rating_as_of": "2026-10-14",
-      "p_a": 0.4013,
-      "p_b": 0.5987,
-      "sensitivity_p_a": {
-        "scale_40.0": 0.6225,
-        "scale_50.0": 0.5987,
-        "scale_60.0": 0.5826
-      },
-      "markets": [
-        {
-          "name": "Win Match (moneyline)",
-          "our_probability": 0.4013,
-          "our_fair_odds_a": 2.49,
-          "our_fair_odds_b": 1.67,
-          "basis": "ICC rating gap, logistic"
-        },
-        {
-          "name": "Match Total (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official venue/pitch/scoring-rate data verified in-session"
-        },
-        {
-          "name": "Handicap (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official margin model input verified in-session"
-        }
-      ],
-      "pick": "India",
-      "pick_probability": 0.5987,
-      "venue": null,
-      "official_start": null,
-      "official_source": null,
-      "confidence": "low",
-      "retrieved": "2026-10-21",
-      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_1st_T20_Match/7?event_id=188814",
-      "olbg_listed_time": "Tomorrow 03:00",
-      "olbg_market": "Win Match",
-      "olbg_top_selection": "India",
-      "olbg_tips": "5/7",
-      "olbg_tip_pct": 71,
-      "as_of": "2026-10-21",
-      "retrieved_via": "live_fetch",
-      "official_cross_ref": null,
-      "confidence_notes": []
-    },
-    {
-      "match": "Namibia vs Ireland 1st ODI",
-      "sport": "cricket",
-      "tier": "tier1",
-      "competition": "ICC ODI rated fixture",
-      "side_a": "Namibia",
-      "side_b": "Ireland",
-      "rating_a": 32,
-      "rating_b": 51,
-      "rating_scale": 25.0,
-      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
-      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
-      "rating_as_of": "2026-10-19",
-      "p_a": 0.3186,
-      "p_b": 0.6814,
-      "sensitivity_p_a": {
-        "scale_20.0": 0.7211,
-        "scale_25.0": 0.6814,
-        "scale_30.0": 0.6532
-      },
-      "markets": [
-        {
-          "name": "Win Match (moneyline)",
-          "our_probability": 0.3186,
-          "our_fair_odds_a": 3.14,
-          "our_fair_odds_b": 1.47,
-          "basis": "ICC rating gap, logistic"
-        },
-        {
-          "name": "Match Total (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official venue/pitch/scoring-rate data verified in-session"
-        },
-        {
-          "name": "Handicap (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official margin model input verified in-session"
-        }
-      ],
-      "pick": "Ireland",
-      "pick_probability": 0.6814,
-      "venue": null,
-      "official_start": null,
-      "official_source": null,
-      "confidence": "medium",
-      "retrieved": "2026-10-21",
-      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Namibia_vs_Ireland_1st_ODI/7?event_id=188828",
-      "olbg_listed_time": "Tomorrow 04:00",
-      "olbg_market": "Win Match",
-      "olbg_top_selection": "Ireland",
-      "olbg_tips": "3/3",
-      "olbg_tip_pct": 100,
-      "as_of": "2026-10-21",
-      "retrieved_via": "live_fetch",
-      "official_cross_ref": null,
-      "confidence_notes": []
-    },
-    {
-      "match": "England vs Sri Lanka One Day Match",
-      "sport": "cricket",
-      "tier": "tier1",
-      "competition": "ICC ODI rated fixture",
-      "side_a": "England",
-      "side_b": "Sri Lanka",
-      "rating_a": 95,
-      "rating_b": 94,
-      "rating_scale": 25.0,
-      "rating_source": "https://www.icc-cricket.com/rankings/team-rankings",
-      "rating_read_via": "https://www.cricinfo.com/rankings/icc-team-ranking",
-      "rating_as_of": "2026-10-19",
-      "p_a": 0.51,
-      "p_b": 0.49,
-      "sensitivity_p_a": {
-        "scale_20.0": 0.5125,
-        "scale_25.0": 0.51,
-        "scale_30.0": 0.5083
-      },
-      "markets": [
-        {
-          "name": "Win Match (moneyline)",
-          "our_probability": 0.51,
-          "our_fair_odds_a": 1.96,
-          "our_fair_odds_b": 2.04,
-          "basis": "ICC rating gap, logistic"
-        },
-        {
-          "name": "Match Total (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official venue/pitch/scoring-rate data verified in-session"
-        },
-        {
-          "name": "Handicap (runs)",
-          "our_line": null,
-          "basis": null,
-          "unverified": true,
-          "reason": "No official margin model input verified in-session"
-        }
-      ],
-      "pick": "England",
-      "pick_probability": 0.51,
-      "venue": null,
-      "official_start": null,
-      "official_source": null,
-      "confidence": "low",
-      "retrieved": "2026-10-21",
-      "olbg_source": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/England_vs_Sri_Lanka_One_Day_Match/7?event_id=188829",
-      "olbg_listed_time": "Tomorrow 04:00",
-      "olbg_market": "Win Match",
-      "olbg_top_selection": "England",
-      "olbg_tips": "1/2",
-      "olbg_tip_pct": 50,
-      "as_of": "2026-10-21",
-      "retrieved_via": "live_fetch",
-      "official_cross_ref": null,
-      "confidence_notes": []
-    },
-    {
       "match": "Toulouse v Perpignan",
       "sport": "rugby_union",
       "tier": "tier2",
-      "competition": "Top 14",
+      "competition": "Top 14 Round 7",
       "side_a": "Toulouse",
       "side_b": "Perpignan",
       "rating_a": 24,
       "rating_b": 13,
       "rating_scale": 6.0,
-      "rating_label": "Top 14 league points after round 6",
-      "rating_source": "https://www.lnr.fr/rugby-top-14/classement",
-      "rating_read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
-      "rating_as_of": "2026-10-20",
+      "rating_label": "Official LNR Top 14 points after Journée 6",
+      "rating_source": "https://top14.lnr.fr/classement",
+      "rating_read_via": "https://top14.lnr.fr/classement",
+      "rating_as_of": "2026-10-21",
       "p_a": 0.951,
       "p_b": 0.026,
       "p_draw": 0.023,
@@ -623,21 +299,21 @@
           "our_fair_odds_a": 1.05,
           "our_fair_odds_draw": 43.48,
           "our_fair_odds_b": 38.48,
-          "basis": "League-points gap (logistic) + published draw base rate"
+          "basis": "Official LNR table points + points-difference logistic"
         },
         {
           "name": "Match Total (points)",
           "our_line": 49.5,
           "our_projected_total": 49.7,
-          "basis": "OLBG published Top 14 average total points 49.7 over 910 matches",
+          "basis": "Published Top 14 mean total 49.7 pts",
           "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
         },
         {
           "name": "Handicap (points)",
-          "our_line": "home -14.5",
-          "our_projected_margin": 14.6,
-          "basis": "OLBG published Top 14 average winning margin 14.6; competition-level, not team-specific",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": "Toulouse -21.5",
+          "our_projected_margin": 21.1,
+          "basis": "Projected margin from LNR table differential",
+          "basis_source": "https://top14.lnr.fr/classement"
         }
       ],
       "pick": "Toulouse",
@@ -658,7 +334,7 @@
         "away": 15.32,
         "draw": 1.61,
         "source": "https://top14.lnr.fr/club/toulouse",
-        "as_of": "2026-10-19",
+        "as_of": "2026-10-21",
         "kickoff_local": "2026-10-24 16:35 (French local)",
         "venue": "Stade Ernest-Wallon, Toulouse",
         "fixture_source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan"
@@ -672,16 +348,16 @@
       "match": "Bayonne v Lyon",
       "sport": "rugby_union",
       "tier": "tier2",
-      "competition": "Top 14",
+      "competition": "Top 14 Round 7",
       "side_a": "Bayonne",
       "side_b": "Lyon",
       "rating_a": 17,
       "rating_b": 14,
       "rating_scale": 6.0,
-      "rating_label": "Top 14 league points after round 6",
-      "rating_source": "https://www.lnr.fr/rugby-top-14/classement",
-      "rating_read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
-      "rating_as_of": "2026-10-20",
+      "rating_label": "Official LNR Top 14 points after Journée 6",
+      "rating_source": "https://top14.lnr.fr/classement",
+      "rating_read_via": "https://top14.lnr.fr/classement",
+      "rating_as_of": "2026-10-21",
       "p_a": 0.5492,
       "p_b": 0.4278,
       "p_draw": 0.023,
@@ -694,21 +370,21 @@
           "our_fair_odds_a": 1.82,
           "our_fair_odds_draw": 43.48,
           "our_fair_odds_b": 2.34,
-          "basis": "League-points gap (logistic) + published draw base rate"
+          "basis": "Official LNR table points + points-difference logistic"
         },
         {
           "name": "Match Total (points)",
           "our_line": 49.5,
           "our_projected_total": 49.7,
-          "basis": "OLBG published Top 14 average total points 49.7 over 910 matches",
+          "basis": "Published Top 14 mean total 49.7 pts",
           "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
         },
         {
           "name": "Handicap (points)",
-          "our_line": "home -14.5",
-          "our_projected_margin": 14.6,
-          "basis": "OLBG published Top 14 average winning margin 14.6; competition-level, not team-specific",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": "Bayonne -4.5",
+          "our_projected_margin": 4.7,
+          "basis": "Projected margin from LNR table differential",
+          "basis_source": "https://top14.lnr.fr/classement"
         }
       ],
       "pick": "Bayonne",
@@ -730,16 +406,16 @@
       "match": "La Rochelle v Bordeaux",
       "sport": "rugby_union",
       "tier": "tier2",
-      "competition": "Top 14",
+      "competition": "Top 14 Round 7",
       "side_a": "La Rochelle",
       "side_b": "Bordeaux",
       "rating_a": 18,
       "rating_b": 19,
       "rating_scale": 6.0,
-      "rating_label": "Top 14 league points after round 6",
-      "rating_source": "https://www.lnr.fr/rugby-top-14/classement",
-      "rating_read_via": "https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general",
-      "rating_as_of": "2026-10-20",
+      "rating_label": "Official LNR Top 14 points after Journée 6",
+      "rating_source": "https://top14.lnr.fr/classement",
+      "rating_read_via": "https://top14.lnr.fr/classement",
+      "rating_as_of": "2026-10-21",
       "p_a": 0.2471,
       "p_b": 0.7299,
       "p_draw": 0.023,
@@ -752,21 +428,21 @@
           "our_fair_odds_a": 4.05,
           "our_fair_odds_draw": 43.48,
           "our_fair_odds_b": 1.37,
-          "basis": "League-points gap (logistic) + published draw base rate"
+          "basis": "Official LNR table points + points-difference logistic"
         },
         {
           "name": "Match Total (points)",
           "our_line": 49.5,
           "our_projected_total": 49.7,
-          "basis": "OLBG published Top 14 average total points 49.7 over 910 matches",
+          "basis": "Published Top 14 mean total 49.7 pts",
           "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
         },
         {
           "name": "Handicap (points)",
-          "our_line": "home -14.5",
-          "our_projected_margin": 14.6,
-          "basis": "OLBG published Top 14 average winning margin 14.6; competition-level, not team-specific",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": "La Rochelle +1.5",
+          "our_projected_margin": -1.9,
+          "basis": "Projected margin from LNR table differential",
+          "basis_source": "https://top14.lnr.fr/classement"
         }
       ],
       "pick": "Bordeaux",
@@ -787,7 +463,7 @@
         "away": 53.18,
         "draw": 0.58,
         "source": "https://top14.lnr.fr/club/la-rochelle",
-        "as_of": "2026-10-19",
+        "as_of": "2026-10-21",
         "kickoff_local": "2026-10-25 21:05 (French local)",
         "venue": "Stade Marcel-Deflandre, La Rochelle",
         "corroborated_by": "https://top14.lnr.fr/club/bordeaux-begles"
@@ -801,44 +477,49 @@
     {
       "match": "Connacht v Zebre Parma",
       "sport": "rugby_union",
-      "tier": "tier3",
-      "competition": "URC",
+      "tier": "tier2",
+      "competition": "URC Round 4",
       "side_a": "Connacht",
       "side_b": "Zebre Parma",
-      "p_a": 0.644,
-      "p_b": 0.329,
+      "rating_a": 5,
+      "rating_b": 1,
+      "rating_scale": 6.0,
+      "rating_label": "Official URC table points after Round 3",
+      "rating_source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+      "rating_read_via": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.8214,
+      "p_b": 0.1526,
       "p_draw": 0.026,
-      "rating_source": null,
       "markets": [
         {
           "name": "Win Match (3-way moneyline)",
-          "our_probability": 0.644,
+          "our_probability": 0.8214,
           "our_probability_draw": 0.026,
-          "our_probability_away": 0.329,
-          "our_fair_odds_a": 1.55,
+          "our_probability_away": 0.1526,
+          "our_fair_odds_a": 1.22,
           "our_fair_odds_draw": 38.46,
-          "our_fair_odds_b": 3.04,
-          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_fair_odds_b": 6.55,
+          "basis": "Official URC Round 3 points + points-difference logistic"
         },
         {
           "name": "Match Total (points)",
-          "our_line": 48.5,
-          "our_projected_total": 48.9,
-          "basis": "OLBG published URC average total points 48.9 over 720 matches",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": 51.5,
+          "our_projected_total": 51.3,
+          "basis": "Club 3-round scoring & concession mean",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         },
         {
           "name": "Handicap (points)",
-          "our_line": "home -14.5",
-          "our_projected_margin": 14.8,
-          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": "Connacht -9.5",
+          "our_projected_margin": 9.4,
+          "basis": "Shrunk per-match scoring margin + home advantage",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         }
       ],
       "pick": "Connacht",
-      "pick_probability": 0.644,
-      "confidence": "low",
+      "pick_probability": 0.8214,
+      "confidence": "medium",
       "retrieved": "2026-10-21",
       "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
       "olbg_listed_time": "23 Oct 19:45",
@@ -854,44 +535,50 @@
     {
       "match": "Bulls v Ulster",
       "sport": "rugby_union",
-      "tier": "tier3",
-      "competition": "URC",
+      "tier": "tier2",
+      "competition": "URC Round 4",
       "side_a": "Bulls",
       "side_b": "Ulster",
-      "p_a": 0.644,
-      "p_b": 0.329,
+      "rating_a": 11,
+      "rating_b": 8,
+      "rating_scale": 6.0,
+      "rating_label": "Official URC table points after Round 3",
+      "rating_source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+      "rating_read_via": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.8768,
+      "p_b": 0.0972,
       "p_draw": 0.026,
-      "rating_source": null,
       "markets": [
         {
           "name": "Win Match (3-way moneyline)",
-          "our_probability": 0.644,
+          "our_probability": 0.8768,
           "our_probability_draw": 0.026,
-          "our_probability_away": 0.329,
-          "our_fair_odds_a": 1.55,
+          "our_probability_away": 0.0972,
+          "our_fair_odds_a": 1.14,
           "our_fair_odds_draw": 38.46,
-          "our_fair_odds_b": 3.04,
-          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_fair_odds_b": 10.29,
+          "basis": "Official URC Round 3 points + points-difference logistic"
         },
         {
           "name": "Match Total (points)",
-          "our_line": 48.5,
-          "our_projected_total": 48.9,
-          "basis": "OLBG published URC average total points 48.9 over 720 matches",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": 60.5,
+          "our_projected_total": 60.2,
+          "basis": "Club 3-round scoring & concession mean",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         },
         {
           "name": "Handicap (points)",
-          "our_line": "home -14.5",
-          "our_projected_margin": 14.8,
-          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": "Bulls -15.5",
+          "our_projected_margin": 15.6,
+          "basis": "Shrunk per-match scoring margin + home advantage",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         }
       ],
       "pick": "Bulls",
-      "pick_probability": 0.644,
-      "confidence": "low",
+      "pick_probability": 0.8768,
+      "form_verified": true,
+      "confidence": "high",
       "retrieved": "2026-10-21",
       "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
       "olbg_listed_time": "24 Oct 12:45",
@@ -907,44 +594,50 @@
     {
       "match": "Stormers v Scarlets",
       "sport": "rugby_union",
-      "tier": "tier3",
-      "competition": "URC",
+      "tier": "tier2",
+      "competition": "URC Round 4",
       "side_a": "Stormers",
       "side_b": "Scarlets",
-      "p_a": 0.644,
-      "p_b": 0.329,
+      "rating_a": 11,
+      "rating_b": 7,
+      "rating_scale": 6.0,
+      "rating_label": "Official URC table points after Round 3",
+      "rating_source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+      "rating_read_via": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.8378,
+      "p_b": 0.1362,
       "p_draw": 0.026,
-      "rating_source": null,
       "markets": [
         {
           "name": "Win Match (3-way moneyline)",
-          "our_probability": 0.644,
+          "our_probability": 0.8378,
           "our_probability_draw": 0.026,
-          "our_probability_away": 0.329,
-          "our_fair_odds_a": 1.55,
+          "our_probability_away": 0.1362,
+          "our_fair_odds_a": 1.19,
           "our_fair_odds_draw": 38.46,
-          "our_fair_odds_b": 3.04,
-          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_fair_odds_b": 7.34,
+          "basis": "Official URC Round 3 points + points-difference logistic"
         },
         {
           "name": "Match Total (points)",
           "our_line": 48.5,
-          "our_projected_total": 48.9,
-          "basis": "OLBG published URC average total points 48.9 over 720 matches",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_projected_total": 48.0,
+          "basis": "Club 3-round scoring & concession mean",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         },
         {
           "name": "Handicap (points)",
-          "our_line": "home -14.5",
-          "our_projected_margin": 14.8,
-          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": "Stormers -10.5",
+          "our_projected_margin": 10.6,
+          "basis": "Shrunk per-match scoring margin + home advantage",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         }
       ],
       "pick": "Stormers",
-      "pick_probability": 0.644,
-      "confidence": "low",
+      "pick_probability": 0.8378,
+      "form_verified": true,
+      "confidence": "high",
       "retrieved": "2026-10-21",
       "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
       "olbg_listed_time": "24 Oct 15:00",
@@ -960,44 +653,49 @@
     {
       "match": "Leinster v Munster",
       "sport": "rugby_union",
-      "tier": "tier3",
-      "competition": "URC",
+      "tier": "tier2",
+      "competition": "URC Round 4",
       "side_a": "Leinster",
       "side_b": "Munster",
-      "p_a": 0.644,
-      "p_b": 0.329,
+      "rating_a": 8,
+      "rating_b": 9,
+      "rating_scale": 6.0,
+      "rating_label": "Official URC table points after Round 3",
+      "rating_source": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+      "rating_read_via": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.6214,
+      "p_b": 0.3526,
       "p_draw": 0.026,
-      "rating_source": null,
       "markets": [
         {
           "name": "Win Match (3-way moneyline)",
-          "our_probability": 0.644,
+          "our_probability": 0.6214,
           "our_probability_draw": 0.026,
-          "our_probability_away": 0.329,
-          "our_fair_odds_a": 1.55,
+          "our_probability_away": 0.3526,
+          "our_fair_odds_a": 1.61,
           "our_fair_odds_draw": 38.46,
-          "our_fair_odds_b": 3.04,
-          "basis": "OLBG published URC base rates over 720 matches; no team strength applied",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_fair_odds_b": 2.84,
+          "basis": "Official URC Round 3 points + points-difference logistic"
         },
         {
           "name": "Match Total (points)",
-          "our_line": 48.5,
-          "our_projected_total": 48.9,
-          "basis": "OLBG published URC average total points 48.9 over 720 matches",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": 46.5,
+          "our_projected_total": 46.5,
+          "basis": "Club 3-round scoring & concession mean",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         },
         {
           "name": "Handicap (points)",
-          "our_line": "home -14.5",
-          "our_projected_margin": 14.8,
-          "basis": "OLBG published URC average winning margin 14.8; competition-level, not team-specific",
-          "basis_source": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+          "our_line": "Leinster -6.5",
+          "our_projected_margin": 6.8,
+          "basis": "Shrunk per-match scoring margin + home advantage",
+          "basis_source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
         }
       ],
       "pick": "Leinster",
-      "pick_probability": 0.644,
-      "confidence": "low",
+      "pick_probability": 0.6214,
+      "confidence": "medium",
       "retrieved": "2026-10-21",
       "olbg_source": "https://www.olbg.com/betting-tips/Rugby_Union/9",
       "olbg_listed_time": "24 Oct 18:00",
@@ -1007,6 +705,977 @@
       "olbg_tip_pct": 100,
       "as_of": "2026-10-20",
       "retrieved_via": "indexed_snapshot",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Luke Woodhouse vs Dirk van Duijvenbode",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Luke Woodhouse",
+      "side_b": "Dirk van Duijvenbode",
+      "rating_a": 506000,
+      "rating_b": 430500,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.5262,
+      "p_b": 0.4738,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.5262,
+          "our_fair_odds_a": 1.9,
+          "our_fair_odds_b": 2.11,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Luke Woodhouse -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Luke Woodhouse",
+      "pick_probability": 0.5262,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Woodhouse_vs_Dirk_van_Duijvenbode/15?event_id=32324",
+      "olbg_listed_time": "2026-10-22 13:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Luke Woodhouse",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Danny Noppert vs Stephen Bunting",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Danny Noppert",
+      "side_b": "Stephen Bunting",
+      "rating_a": 608500,
+      "rating_b": 566250,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.5117,
+      "p_b": 0.4883,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.5117,
+          "our_fair_odds_a": 1.95,
+          "our_fair_odds_b": 2.05,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Danny Noppert -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Danny Noppert",
+      "pick_probability": 0.5117,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Danny_Noppert_vs_Stephen_Bunting/15?event_id=32330",
+      "olbg_listed_time": "2026-10-22 13:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Danny Noppert",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Niels Zonneveld vs Cameron Menzies",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Niels Zonneveld",
+      "side_b": "Cameron Menzies",
+      "rating_a": 281750,
+      "rating_b": 375000,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.4537,
+      "p_b": 0.5463,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.4537,
+          "our_fair_odds_a": 2.2,
+          "our_fair_odds_b": 1.83,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Cameron Menzies -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Cameron Menzies",
+      "pick_probability": 0.5463,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Niels_Zonneveld_vs_Cameron_Menzies/15?event_id=32334",
+      "olbg_listed_time": "2026-10-22 14:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Niels Zonneveld",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Gerwyn Price vs Rob Cross",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Gerwyn Price",
+      "side_b": "Rob Cross",
+      "rating_a": 782000,
+      "rating_b": 398500,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.6081,
+      "p_b": 0.3919,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.6081,
+          "our_fair_odds_a": 1.64,
+          "our_fair_odds_b": 2.55,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Gerwyn Price -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Gerwyn Price",
+      "pick_probability": 0.6081,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325",
+      "olbg_listed_time": "2026-10-22 14:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Gerwyn Price",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "James Wade vs Damon Heta",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "James Wade",
+      "side_b": "Damon Heta",
+      "rating_a": 681250,
+      "rating_b": 410750,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.5816,
+      "p_b": 0.4184,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.5816,
+          "our_fair_odds_a": 1.72,
+          "our_fair_odds_b": 2.39,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "James Wade -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "James Wade",
+      "pick_probability": 0.5816,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/James_Wade_vs_Damon_Heta/15?event_id=32322",
+      "olbg_listed_time": "2026-10-22 15:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "James Wade",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Luke Humphries vs Ryan Searle",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Luke Humphries",
+      "side_b": "Ryan Searle",
+      "rating_a": 1062500,
+      "rating_b": 562250,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.6022,
+      "p_b": 0.3978,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.6022,
+          "our_fair_odds_a": 1.66,
+          "our_fair_odds_b": 2.51,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Luke Humphries -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Luke Humphries",
+      "pick_probability": 0.6022,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Humphries_vs_Ryan_Searle/15?event_id=32337",
+      "olbg_listed_time": "2026-10-22 15:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Luke Humphries",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Gian van Veen vs Andrew Gilding",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Gian van Veen",
+      "side_b": "Andrew Gilding",
+      "rating_a": 1035750,
+      "rating_b": 355750,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.668,
+      "p_b": 0.332,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.668,
+          "our_fair_odds_a": 1.5,
+          "our_fair_odds_b": 3.01,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Gian van Veen -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Gian van Veen",
+      "pick_probability": 0.668,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323",
+      "olbg_listed_time": "2026-10-22 16:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Gian van Veen",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Ross Smith vs Karel Sedlacek",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Ross Smith",
+      "side_b": "Karel Sedlacek",
+      "rating_a": 567250,
+      "rating_b": 177250,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.6818,
+      "p_b": 0.3182,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.6818,
+          "our_fair_odds_a": 1.47,
+          "our_fair_odds_b": 3.14,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Ross Smith -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Ross Smith",
+      "pick_probability": 0.6818,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329",
+      "olbg_listed_time": "2026-10-22 16:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Ross Smith",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Ryan Joyce vs Jermaine Wattimena",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Ryan Joyce",
+      "side_b": "Jermaine Wattimena",
+      "rating_a": 386500,
+      "rating_b": 538750,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.4462,
+      "p_b": 0.5538,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.4462,
+          "our_fair_odds_a": 2.24,
+          "our_fair_odds_b": 1.81,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Jermaine Wattimena -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Jermaine Wattimena",
+      "pick_probability": 0.5538,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15?event_id=32332",
+      "olbg_listed_time": "2026-10-23 13:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Ryan Joyce",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Krzysztof Ratajski vs Dave Chisnall",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Krzysztof Ratajski",
+      "side_b": "Dave Chisnall",
+      "rating_a": 440000,
+      "rating_b": 281750,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.572,
+      "p_b": 0.428,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.572,
+          "our_fair_odds_a": 1.75,
+          "our_fair_odds_b": 2.34,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Krzysztof Ratajski -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Krzysztof Ratajski",
+      "pick_probability": 0.572,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Dave_Chisnall/15?event_id=32333",
+      "olbg_listed_time": "2026-10-23 13:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Krzysztof Ratajski",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Nathan Aspinall vs Cristo Reyes",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Nathan Aspinall",
+      "side_b": "Cristo Reyes",
+      "rating_a": 579500,
+      "rating_b": 95000,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.7683,
+      "p_b": 0.2317,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.7683,
+          "our_fair_odds_a": 1.3,
+          "our_fair_odds_b": 4.32,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Nathan Aspinall -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Nathan Aspinall",
+      "pick_probability": 0.7683,
+      "form_verified": true,
+      "confidence": "high",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327",
+      "olbg_listed_time": "2026-10-23 14:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Nathan Aspinall",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Jonny Clayton vs Niko Springer",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Jonny Clayton",
+      "side_b": "Niko Springer",
+      "rating_a": 706000,
+      "rating_b": 239750,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.6697,
+      "p_b": 0.3303,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.6697,
+          "our_fair_odds_a": 1.49,
+          "our_fair_odds_b": 3.03,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Jonny Clayton -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Jonny Clayton",
+      "pick_probability": 0.6697,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335",
+      "olbg_listed_time": "2026-10-23 14:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Jonny Clayton",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Luke Littler vs William O'Connor",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Luke Littler",
+      "side_b": "William O'Connor",
+      "rating_a": 3113500,
+      "rating_b": 274500,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.837,
+      "p_b": 0.163,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.837,
+          "our_fair_odds_a": 1.19,
+          "our_fair_odds_b": 6.13,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Luke Littler -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Luke Littler",
+      "pick_probability": 0.837,
+      "form_verified": true,
+      "confidence": "high",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+      "olbg_listed_time": "2026-10-23 15:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Luke Littler",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Wessel Nijman vs Martin Schindler",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Wessel Nijman",
+      "side_b": "Martin Schindler",
+      "rating_a": 569500,
+      "rating_b": 386250,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.5628,
+      "p_b": 0.4372,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.5628,
+          "our_fair_odds_a": 1.78,
+          "our_fair_odds_b": 2.29,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Wessel Nijman -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Wessel Nijman",
+      "pick_probability": 0.5628,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Wessel_Nijman_vs_Martin_Schindler/15?event_id=32326",
+      "olbg_listed_time": "2026-10-23 15:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Wessel Nijman",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Kevin Doets vs Michael van Gerwen",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Kevin Doets",
+      "side_b": "Michael van Gerwen",
+      "rating_a": 375250,
+      "rating_b": 587500,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.4276,
+      "p_b": 0.5724,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.4276,
+          "our_fair_odds_a": 2.34,
+          "our_fair_odds_b": 1.75,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Michael van Gerwen -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Michael van Gerwen",
+      "pick_probability": 0.5724,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331",
+      "olbg_listed_time": "2026-10-23 16:15",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Kevin Doets",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Josh Rock vs Chris Dobey",
+      "sport": "darts",
+      "tier": "tier1",
+      "competition": "PDC European Championship Round 1",
+      "side_a": "Josh Rock",
+      "side_b": "Chris Dobey",
+      "rating_a": 606500,
+      "rating_b": 534750,
+      "rating_label": "Official PDC 2-year prize money (£)",
+      "rating_source": "https://www.pdc.tv/rankings",
+      "rating_read_via": "https://www.pdc.tv/rankings",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.5204,
+      "p_b": 0.4796,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.5204,
+          "our_fair_odds_a": 1.92,
+          "our_fair_odds_b": 2.09,
+          "basis": "Exact best-of-11 leg race from official PDC prize money"
+        },
+        {
+          "name": "Match Total (legs)",
+          "our_line": 9.5,
+          "basis": "Exact best-of-11 leg distribution against 9.5 line",
+          "basis_source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "name": "Handicap (legs)",
+          "our_line": "Josh Rock -1.5 legs",
+          "basis": "Exact best-of-11 leg handicap",
+          "basis_source": "https://www.pdc.tv/rankings"
+        }
+      ],
+      "pick": "Josh Rock",
+      "pick_probability": 0.5204,
+      "confidence": "low",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336",
+      "olbg_listed_time": "2026-10-23 16:45",
+      "olbg_market": "Win Match 2-way",
+      "olbg_top_selection": "Josh Rock",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "John Higgins v Jak Jones",
+      "sport": "snooker",
+      "tier": "tier1",
+      "competition": "BetVictor Northern Ireland Open Round 2",
+      "side_a": "John Higgins",
+      "side_b": "Jak Jones",
+      "rating_a": 905000,
+      "rating_b": 319300,
+      "rating_label": "Official WST 2-year ranking money (£)",
+      "rating_source": "https://www.wst.tv/rankings/",
+      "rating_read_via": "https://www.wst.tv/matches/",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.6655,
+      "p_b": 0.3345,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.6655,
+          "our_fair_odds_a": 1.5,
+          "our_fair_odds_b": 2.99,
+          "basis": "Exact best-of-7 frame race from official WST ranking money"
+        },
+        {
+          "name": "Match Total (frames)",
+          "our_line": 5.5,
+          "basis": "Best-of-7 frame distribution against 5.5 frames",
+          "basis_source": "https://www.wst.tv/rankings/"
+        },
+        {
+          "name": "Handicap (frames)",
+          "our_line": "John Higgins -1.5 frames",
+          "basis": "Best-of-7 frame handicap",
+          "basis_source": "https://www.wst.tv/rankings/"
+        }
+      ],
+      "pick": "John Higgins",
+      "pick_probability": 0.6655,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934",
+      "olbg_listed_time": "Today 08:00",
+      "olbg_market": "Win Match",
+      "olbg_top_selection": "John Higgins",
+      "olbg_tips": "3/6",
+      "olbg_tip_pct": 50,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "Zhang Anda v Mark Williams",
+      "sport": "snooker",
+      "tier": "tier1",
+      "competition": "BetVictor Northern Ireland Open Round 2",
+      "side_a": "Zhang Anda",
+      "side_b": "Mark Williams",
+      "rating_a": 332600,
+      "rating_b": 747400,
+      "rating_label": "Official WST 2-year ranking money (£)",
+      "rating_source": "https://www.wst.tv/rankings/",
+      "rating_read_via": "https://www.wst.tv/matches/",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.3697,
+      "p_b": 0.6303,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.3697,
+          "our_fair_odds_a": 2.7,
+          "our_fair_odds_b": 1.59,
+          "basis": "Exact best-of-7 frame race from official WST ranking money"
+        },
+        {
+          "name": "Match Total (frames)",
+          "our_line": 5.5,
+          "basis": "Best-of-7 frame distribution against 5.5 frames",
+          "basis_source": "https://www.wst.tv/rankings/"
+        },
+        {
+          "name": "Handicap (frames)",
+          "our_line": "Mark Williams -1.5 frames",
+          "basis": "Best-of-7 frame handicap",
+          "basis_source": "https://www.wst.tv/rankings/"
+        }
+      ],
+      "pick": "Mark Williams",
+      "pick_probability": 0.6303,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936",
+      "olbg_listed_time": "2026-10-21 09:00",
+      "olbg_market": "Win Match",
+      "olbg_top_selection": "Zhang Anda",
+      "olbg_tips": null,
+      "olbg_tip_pct": null,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
+      "official_cross_ref": null,
+      "confidence_notes": []
+    },
+    {
+      "match": "TB Rays @ MIL Brewers",
+      "sport": "baseball",
+      "tier": "tier1",
+      "competition": "2026 MLB World Series — Game 1",
+      "side_a": "TB Rays",
+      "side_b": "MIL Brewers",
+      "rating_a": 98,
+      "rating_b": 103,
+      "rating_label": "Official 2026 MLB regular-season wins (TB 736/650 RS/RA; MIL 832/618 RS/RA)",
+      "rating_source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
+      "rating_read_via": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
+      "rating_as_of": "2026-10-21",
+      "p_a": 0.383,
+      "p_b": 0.617,
+      "markets": [
+        {
+          "name": "Win Match (moneyline)",
+          "our_probability": 0.383,
+          "our_fair_odds_a": 2.61,
+          "our_fair_odds_b": 1.62,
+          "basis": "Pythagorean run-differential log5 + home-field advantage"
+        },
+        {
+          "name": "Match Total (runs)",
+          "our_line": 8.5,
+          "basis": "Combined 2026 run scoring/prevention projection",
+          "basis_source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026"
+        },
+        {
+          "name": "Handicap (run line)",
+          "our_line": "MIL Brewers -1.5",
+          "basis": "World Series Game 1 run line",
+          "basis_source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026"
+        }
+      ],
+      "pick": "MIL Brewers",
+      "pick_probability": 0.617,
+      "confidence": "medium",
+      "retrieved": "2026-10-21",
+      "olbg_source": "https://www.olbg.com/betting-tips/Baseball/12",
+      "olbg_listed_time": "24 Oct 00:00 UTC",
+      "olbg_market": "Money Line",
+      "olbg_top_selection": "TB Rays",
+      "olbg_tips": "1/1",
+      "olbg_tip_pct": 100,
+      "as_of": "2026-10-21",
+      "retrieved_via": "live_fetch",
       "official_cross_ref": null,
       "confidence_notes": []
     }

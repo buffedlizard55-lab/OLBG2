@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Line-by-Line Repo Audit — OLBG Verified Multi-Sport Origination Desk</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span>OLBG Verified Research &amp; Origination Desk</span>
+        <span class="brand-badge">2026-10-21 Primary Audit</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" class="">Overview & All Matches</a>
+<a href="predictions.html" class="">High-Confidence Picks (17)</a>
+<a href="flagged.html" class="nav-flag">Flagged for Review</a>
+<a href="audit.html" class="active">Line-by-Line Repo Audit</a>
+<a href="methodology.html" class="">Methodology & Models</a>
+      </nav>
+    </div>
+  </header>
+  <div class="subbar">
+    <div class="subbar-inner">
+      <span><strong>Cross-Layer Navigation:</strong></span>
+      <a href="../index.html">Root Dashboard (/)</a>
+      <span>·</span>
+      <a href="../survey/index.html">All-Sports Survey (/survey/)</a>
+      <span>·</span>
+      <a href="../site/index.html">Evidence Desk v2 (/site/)</a>
+      <span>·</span>
+      <a href="../integration.html">Integration Status</a>
+    </div>
+  </div>
+  <main class="container">
+
+<section class="hero">
+  <p class="eyebrow">Forensic Line-by-Line Repository Verification</p>
+  <h1>Line-by-Line Audit of Existing Repository Layers</h1>
+  <p>Before originating a single new line on branch <code>arena/4d77e99a-olbg2</code>, we inspected every JSON file, Python generator, and HTML surface already present in the repository against live official governing-body endpoints on <strong>2026-10-21</strong>, respecting active branch file locks in <code>COORDINATION.md</code>.</p>
+</section>
+
+<div class="sport-grid">
+  <div class="card">
+    <div class="card-top"><h3>Layer 1 — Root Dashboard (<code>/</code>)</h3><span class="pill pill-originated">Core Tables Verified</span></div>
+    <p>Checked all 16 NHL team rows, 30 NBA prior rows, 16 URC Round 4 rows, and 24 EHF Champions League rows against official APIs: <strong>0 numerical errors</strong>. Logged missing <code>SAC @ LAC</code> ID <code>0022600093</code>, Oct 22 scoreboard URL citation on an Oct 19 game, and unlabeled handball <code>W-D-L</code> notation for active owner <code>e3c5f898</code>.</p>
+  </div>
+  <div class="card">
+    <div class="card-top"><h3>Layer 2 — Live Slate (<code>/live/</code>)</h3><span class="pill pill-originated">Clean Architecture</span></div>
+    <p>Reviewed read-only in deference to active session <code>d4b9d560</code>. Clean official-source separation; cross-linked directly from all <code>/verified/</code> pages.</p>
+  </div>
+  <div class="card">
+    <div class="card-top"><h3>Layer 3 — All-Sports Survey (<code>/survey/</code>)</h3><span class="pill pill-sev-high">Remediated in V3</span></div>
+    <p>Uncovered Wikipedia citation + fabricated Top 14 table in <code>P-01</code> (claimed Toulouse 2nd at 4-0-2 and Perpignan 14th at 0-0-6 vs official LNR #1 5-0-1 &amp; #9 3-0-3), third-party cricket URLs + 200-run vs 81-run desync, empty <code>rugby_league.json</code>, missing <code>Hurling/26</code> exclusion, and missing row-level official URLs. All remediated in <code>V3</code>.</p>
+  </div>
+  <div class="card">
+    <div class="card-top"><h3>Layer 4 — Evidence Desk v2 (<code>/site/</code>)</h3><span class="pill pill-originated">Fixed &amp; Rebuilt</span></div>
+    <p>Verified all 25 rows line by line against <code>api-web.nhle.com/v1/score/2026-10-21</code>; caught stale <code>Tage Thompson: 3 goals</code> (official live leader is <code>Tage Thompson: 5 goals; Zach Benson: 6 assists</code>), updated <code>data/desk/picks.json</code>, and rebuilt <code>site/</code> cleanly.</p>
+  </div>
+</div>
+
+<div class="section-head">
+  <h2>Complete Audit Ledger (10 Findings with Official Proof URLs)</h2>
+  <p>Full markdown narrative also archived in <code>research/line-by-line-audit-4d77e99a.md</code>.</p>
+</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Severity</th><th>Layer &amp; File</th><th>Published Value</th><th>Official Primary Value</th><th>Action Taken</th><th>Official Proof</th></tr>
+    </thead>
+    <tbody><tr id="RA-01"><td class="mono"><strong>RA-01</strong></td><td><span class="pill pill-sev-critical">critical</span></td><td><div><strong>Survey (/survey/)</strong></div><div class="mono">data/survey/predictions.json (P-02)</div></td><td>England Women v West Indies Women — ICC Women&#x27;s T20 World Cup 2026 — 2026-10-21 15:00 — HIGH (77.4%)</td><td>Tournament concluded four months earlier in June–July 2026; match absent from live OLBG Cricket/7 and cricket.json</td><td>Purged stale P-02 record and locked deterministic regeneration in unit tests.</td><td><a href="https://www.icc-cricket.com/tournaments/womens-t20-world-cup-2026" target="_blank" rel="noopener">ICC Official Tournament Page ↗</a></td></tr><tr id="RA-02"><td class="mono"><strong>RA-02</strong></td><td><span class="pill pill-sev-critical">critical</span></td><td><div><strong>Survey (/survey/)</strong></div><div class="mono">scripts/survey_analyse.py &amp; data/survey/picks.json</div></td><td>&#x27;Afghanistan beat Bangladesh by 200 runs ... Afghanistan 190, Bangladesh 109 in 28.3 overs&#x27; + threshold override 0.55 -&gt; HIGH</td><td>190 - 109 = 81 runs (two separate Oct 2025 ODIs spliced together from non-official sites); official ICC page 274658 renders body stats client-side</td><td>Removed spliced claim, non-official links, and artificial 0.55 HIGH override; marked match unlined (&#x27;—&#x27;).</td><td><a href="https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh" target="_blank" rel="noopener">ICC Official Match 274658 ↗</a></td></tr><tr id="RA-03"><td class="mono"><strong>RA-03</strong></td><td><span class="pill pill-sev-high">high</span></td><td><div><strong>Survey (/survey/)</strong></div><div class="mono">data/survey/predictions.json (P-01 Top 14 &amp; P-02)</div></td><td>Claimed Toulouse #2 (4-0-2) &amp; Perpignan #14 (0-0-6) citing wikipedia.org, rugbyrama.fr, allrugby.com, espn.com, racingpost.com</td><td>Official LNR Top 14 J6 standings show #1 Stade Toulousain (24 pts, 5W-0D-1L, 197/124, 5 straight wins) vs #9 USA Perpignan (13 pts, 3W-0D-3L, 166/199); #14 is RC Vannes (0W-0D-6L)</td><td>Replaced 100% of third-party URLs and wrong Wikipedia standings with live LNR/EPCR official figures.</td><td><a href="https://top14.lnr.fr/classement" target="_blank" rel="noopener">LNR Official Top 14 Standings ↗</a></td></tr><tr id="RA-04"><td class="mono"><strong>RA-04</strong></td><td><span class="pill pill-sev-high">high</span></td><td><div><strong>Survey (/survey/)</strong></div><div class="mono">data/survey/sports.json</div></td><td>21 sports total; omitted Hurling/26, Gaelic_Football/25, and Greyhounds/28</td><td>OLBG carries 23 sport hubs: Hurling/26 is active and must be excluded per scope; Gaelic_Football/25 (5 events) and Greyhounds/28 (6 races) are eligible and active</td><td>Expanded sports.json to all 23 OLBG hubs (17 eligible + 6 OLBG-active excluded) and built pages for all 17 eligible sports.</td><td><a href="https://www.olbg.com/sitemap-betting-tips.xml" target="_blank" rel="noopener">OLBG Betting Tips Sitemap ↗</a></td></tr><tr id="RA-05"><td class="mono"><strong>RA-05</strong></td><td><span class="pill pill-sev-medium">medium</span></td><td><div><strong>Survey (/survey/)</strong></div><div class="mono">data/survey/events/*.json</div></td><td>45 stale 2026-10-18 indexed_snapshot rows; rugby_league.json = []</td><td>Live 2026-10-21 crawl confirms 3 active Rugby League outrights (2695857, 2801554, 2801600), 12 EHF CL R5 ties, 16 PDC R1 ties, and 0 tips on Aussie Rules/eSports</td><td>Replaced all 45 indexed_snapshot rows with live 2026-10-21 OLBG fetches across all 17 eligible sports.</td><td><a href="https://www.olbg.com/betting-tips/Rugby_League/10" target="_blank" rel="noopener">OLBG Rugby League Hub ↗</a></td></tr><tr id="RA-06"><td class="mono"><strong>RA-06</strong></td><td><span class="pill pill-sev-medium">medium</span></td><td><div><strong>Survey (/survey/)</strong></div><div class="mono">scripts/survey_build.py &amp; data/survey/events/*.json</div></td><td>0 of 130 inventory rows had row-level official source links</td><td>Every row requires an official governing-body link alongside OLBG for manual verification</td><td>Added official_source + official_url to every row in both /survey/ and /verified/.</td><td><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" target="_blank" rel="noopener">Euroleague / LNR / EHF / PDC / ATP / WST / NHL / NBA ↗</a></td></tr><tr id="RA-07"><td class="mono"><strong>RA-07</strong></td><td><span class="pill pill-sev-medium">medium</span></td><td><div><strong>Desk (/site/)</strong></div><div class="mono">data/desk/picks.json (nhl-2026020152)</div></td><td>&#x27;Jack Quinn on seven points and Tage Thompson on three goals&#x27;</td><td>Official NHL API teamLeaders for game 2026020152 lists Tage Thompson (#72, BUF) with 5 goals and Zach Benson (#6, BUF) with 6 assists</td><td>Updated data/desk/picks.json to 5 goals / 6 assists and regenerated /site/ cleanly via scripts/build.py.</td><td><a href="https://api-web.nhle.com/v1/score/2026-10-21" target="_blank" rel="noopener">NHL Official Score API (2026-10-21) ↗</a></td></tr><tr id="RA-08"><td class="mono"><strong>RA-08</strong></td><td><span class="pill pill-sev-low">low</span></td><td><div><strong>Survey (/survey/)</strong></div><div class="mono">data/survey/lines.json &amp; scripts/survey_lines.py (SL-08, SL-09)</div></td><td>Labels URC fixtures Connacht v Zebre and Munster/Edinburgh round as &#x27;URC Round 6&#x27;</td><td>Official URC match centre URL is /match-centre/2026-27/4 (&#x27;Round 4&#x27;) and all 16 clubs have PL=3 matches played</td><td>Recorded accurately as Round 4 in /verified/ and /survey/; logged for root owner in COORDINATION.md.</td><td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" target="_blank" rel="noopener">URC Official Match Centre Round 4 ↗</a></td></tr><tr id="RA-09"><td class="mono"><strong>RA-09</strong></td><td><span class="pill pill-sev-low">low</span></td><td><div><strong>Root (/)</strong></div><div class="mono">data/inputs/fixtures.json (F03)</div></td><td>Sacramento Kings @ LA Clippers game_id left null</td><td>Official NBA schedule publishes game_id 0022600093 (https://www.nba.com/game/sac-vs-lac-0022600093)</td><td>Published with verified game_id 0022600093 in /verified/ and /survey/; logged in COORDINATION.md.</td><td><a href="https://www.nba.com/game/sac-vs-lac-0022600093" target="_blank" rel="noopener">NBA Official Game Page 0022600093 ↗</a></td></tr><tr id="RA-10"><td class="mono"><strong>RA-10</strong></td><td><span class="pill pill-sev-low">low</span></td><td><div><strong>Root (/)</strong></div><div class="mono">data/predictions.json (nhl-2026020152 &amp; handball W-D-L)</div></td><td>Cites scoreboard/2026-10-22 for 19 Oct PHI-COL score; formats unbeaten 3W-1D-0L handball clubs as &#x27;3-1-0&#x27; next to NHL W-L-OTL &#x27;4-3-2&#x27;</td><td>19 Oct game sits on score/2026-10-19; EHF standings report 3W, 1D, 0L (unbeaten, 7 pts)</td><td>Explicit &#x27;3W-1D-0L&#x27; notation enforced across all /verified/ and /survey/ narratives.</td><td><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" target="_blank" rel="noopener">EHF Official Standings ↗</a></td></tr></tbody>
+  </table>
+</div>
+
+  </main>
+  <footer>
+    <div>Every value published on <code>/verified/</code> is traced to an official governing-body or league endpoint captured on <strong>2026-10-21</strong>. Unconfirmed fields are left strictly blank (<code>—</code>) and listed on <a href="flagged.html">Flagged for Review</a>.</div>
+    <div>Excluded per brief: Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, Specials.</div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

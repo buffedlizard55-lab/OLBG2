@@ -16,12 +16,12 @@ class SourceAuditTests(unittest.TestCase):
         self.assertEqual(classify('javascript:alert(1)'), 'missing_or_invalid')
         self.assertEqual(classify('https://top14.lnr.fr/fixture'), 'official_domain_candidate')
 
-    def test_audit_reconciles_counts(self):
+    def test_audit_reconciles_counts_and_zero_third_party_sources_remain(self):
         result = audit()
         self.assertEqual(result['inventory_count'], sum(result['fixture_source_classes'].values()))
         self.assertEqual(result['facts_count'], sum(result['fact_source_classes'].values()))
-        self.assertEqual(result['inventory_count'] - result['fixture_source_classes'].get('official_domain_candidate', 0),
-                         len(result['events_needing_official_fixture_source']))
+        self.assertEqual(result['events_needing_official_fixture_source'], [])
+        self.assertEqual(result['facts_needing_official_source_review'], [])
 
 
 if __name__ == '__main__':

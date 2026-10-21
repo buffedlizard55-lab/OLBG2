@@ -23,7 +23,7 @@
   <p class="lede">Everything that could not be confirmed from an official source, every value deliberately left
   blank, and every irregularity found in OLBG's own pages. These items do not block publication — they are the
   review queue.</p>
-  <p class="meta">23 open items · 3 closed since the first capture · 25 blank or unoriginated values</p>
+  <p class="meta">22 open items · 4 closed since the first capture · 25 blank or unoriginated values</p>
 </section>
 
 <div class="panel"><div class="table-scroll"><table>
@@ -44,7 +44,7 @@
       <td class="mono">F09</td>
       <td><span class="badge b-sev-high">High</span></td>
       <td>Coverage gap</td>
-      <td><b>Six sports were not surveyed at all in this capture</b><span class="sub" style="max-width:560px">Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not opened in this capture, so nothing is claimed about them either way. Handball and Volleyball have since been surveyed (F21, F22). Absence from this site is NOT evidence that OLBG lists no events for a sport.</span></td>
+      <td><b>Six sports were not surveyed at all in this capture</b><span class="sub" style="max-width:560px">Golf, Motor Racing, Greyhounds, eSports, Aussie Rules and Rugby League were not opened in this capture, so nothing is claimed about them either way. Handball is now published with originated lines on sports/handball.html (F21 closed); Volleyball is surveyed but not yet lined (F22). Absence from this site is NOT evidence that OLBG lists no events for a sport.</span></td>
       <td class="small"><a href="https://www.olbg.com/sitemap-betting-tips.xml" rel="noopener">official / source page</a></td>
     </tr><tr>
       <td class="mono">F11</td>
@@ -82,12 +82,6 @@
       <td>Market gap</td>
       <td><b>NBA game totals not originated</b><span class="sub" style="max-width:560px">No verified 2025-26 points-for / points-against table was captured, so totals were left blank for all 11 NBA games rather than estimated. Moneyline and handicap were originated from the official prior-season record.</span></td>
       <td class="small"><a href="https://www.nba.com/standings?Season=2025-26" rel="noopener">official / source page</a></td>
-    </tr><tr>
-      <td class="mono">F12</td>
-      <td><span class="badge b-sev-medium">Medium</span></td>
-      <td>OLBG irregularity</td>
-      <td><b>OLBG displayed times do not map to one timezone</b><span class="sub" style="max-width:560px">OLBG renders clock times in the viewer&#x27;s timezone and never states the zone. The same two NHL fixtures (PHI@BUF, FLA@OTT, both 23:30Z) rendered as &#x27;Tomorrow 00:37&#x27; in one fetch and &#x27;Today 19:37&#x27; in another about an hour later - the same instant, once in UK time and once in US Eastern. NBA events show the same offset: OLBG 19:10 against the NBA&#x27;s 19:00 ET tip. The dataset stores OLBG strings verbatim and takes authoritative times from the league feed, never from OLBG.</span></td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4" rel="noopener">official / source page</a></td>
     </tr><tr>
       <td class="mono">F13</td>
       <td><span class="badge b-sev-medium">Medium</span></td>
@@ -193,6 +187,13 @@
       <td><b>Handball — events exist, none published</b><span class="sub" style="max-width:560px">OLBG&#x27;s handball hub listed at least fifteen events on the first page segment, almost all EHF Champions League ties on 21-22 October: RK Zagreb v PSG Handball (event_id 12053), Veszprem v Fuchse Berlin (12055), Nantes v HC Vardar (12050), Kolstad v SC Magdeburg (12048), Aalborg v RK Celje (12044) and FC Barcelona v Montpellier, plus Swedish and Danish league games. The hub groups every event under &#x27;All Handball / All Events&#x27;, states no competition, and renders times in the viewer&#x27;s timezone (see F12). No official EHF fixture list or standings table could be read in this capture, so no fixture is published and no line is originated: both a confirmed pairing and a verified strength input would be required.</span>
           <span class="sub" style="max-width:560px">Closed 2026-10-21 by session arena/73620ec4-olbg2. 12 EHF Champions League Men round-5 fixtures on 21-22 October 2026 were verified against the official EHF matches page and the official group standings, and all 12 now carry originated match-winner, handicap and match-total lines (45 markets) plus three high-confidence predictions. See sports/handball.html.</span></td>
       <td class="small"><a href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F12</td>
+      <td><span class="badge b-sev-resolved">Resolved</span></td>
+      <td>OLBG irregularity</td>
+      <td><b>OLBG displayed times do not map to one timezone</b><span class="sub" style="max-width:560px">OLBG renders clock times in the viewer&#x27;s timezone and never states the zone. The same two NHL fixtures (PHI@BUF, FLA@OTT, both 23:30Z) rendered as &#x27;Tomorrow 00:37&#x27; in one fetch and &#x27;Today 19:37&#x27; in another about an hour later - the same instant, once in UK time and once in US Eastern. NBA events show the same offset: OLBG 19:10 against the NBA&#x27;s 19:00 ET tip. The dataset stores OLBG strings verbatim and takes authoritative times from the league feed, never from OLBG.</span>
+          <span class="sub" style="max-width:560px">Closed 2026-10-21 by session arena/73620ec4-olbg2. Explained in F24: OLBG renders each event&#x27;s start time in the viewer&#x27;s timezone, not the venue&#x27;s. HC Zagreb v PSG shows as &#x27;12:45&#x27; on OLBG and 18:45 CEST on the official EHF page, which is 12:45 in US Eastern daylight time. OLBG times are therefore unusable as local kick-off times; this layer takes all start times from the official competition pages.</span></td>
+      <td class="small"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4" rel="noopener">official / source page</a></td>
     </tr></tbody></table></div></div>
 
 <h2 class="section">Values left blank on purpose</h2>

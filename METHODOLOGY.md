@@ -8,7 +8,7 @@ The published version of this document, with worked examples, is the site page
 1. **Discovery** — the event list, event_id and market label come from OLBG's sport hub pages
    (`/betting-tips/{Sport}/{id}`). OLBG publishes no prices.
 2. **Confirmation** — the fixture is checked against the official league or governing body (NBA.com, the NHL
-   score API, the URC match centre, the ICC match list, the WST draw). If it cannot be confirmed, it is not
+   score API, the URC match centre, the ICC match list, the WST draw, the EHF Champions League match centre). If it cannot be confirmed, it is not
    published; the OLBG event goes to the flagged page instead.
 3. **Inputs** — performance data is taken from the same official family of sources (NBA standings, NHL team
    summary, URC league table). Nothing else is used.
@@ -61,6 +61,26 @@ expected_away = league_pa * attack_away * defence_home - 3.0/2
 P(home) = logistic(expected_margin / 13.0)
 ```
 
+### Handball — group-phase attack/defence Poisson
+
+```
+league_gf   = sum(gf) / sum(gp) over all 24 clubs   # goals per team per game, both directions
+w           = gp / (gp + 3)                         # four rounds played -> heavy shrinkage
+attack_i    = 1 + w * ((gf_i/gp_i)/league_gf - 1)
+defence_i   = 1 + w * ((ga_i/gp_i)/league_ga - 1)
+exp_home    = league_gf * attack_home * defence_away + 0.4
+exp_away    = league_gf * attack_away * defence_home - 0.4
+P(result)   = sum of Poisson(i; exp_home) * Poisson(j; exp_away) over matching scores
+```
+
+The 0.4-goal split is our own home-court assumption (`handball_home_goals = 0.8`), not a sourced value. Match
+winner is three-way; handicap uses a half-goal line just beyond the expected margin; match total uses a half-goal
+line just below the expected total. The score grid is sized from the rates and renormalised, because a fixed
+small grid truncates around 10% of the mass at handball scoring rates and shifts every probability.
+
+Source: EHF Champions League Men official group standings and matches page (S33, S34), captured 2026-10-21
+07:15 UTC. Verification record: `research/handball-ehf-73620ec4.md`.
+
 ### Prices
 
 `price = round(1 / (p * 1.04), 2)`, clamped to 1.05–12.00. This is a fair price plus a 4% theoretical margin.
@@ -73,6 +93,7 @@ It is **not** a market price.
 | NHL | p ≥ 65% and both teams ≥ 7 games | p ≥ 57% (≥ 7 games) or p ≥ 68% (≥ 5 games) | otherwise |
 | NBA | not permitted (zero current-season games) | p ≥ 68% | p < 68% |
 | URC | not permitted (three rounds) | p ≥ 62% | p < 62% |
+| Handball | p ≥ 70% and both clubs ≥ 4 group games | p ≥ 58% (≥ 4 games) | otherwise |
 
 ## 4. Predictions
 

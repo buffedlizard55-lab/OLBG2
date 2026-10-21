@@ -11,7 +11,7 @@ The repository holds two published layers, both live:
 
 | Layer | Entry point | What it is |
 |---|---|---|
-| **Slate dashboard** | `/index.html` | 35 verified fixtures · 33 originated lines · 4 high-confidence predictions · 21 open review items (2 closed). Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
+| **Slate dashboard** | `/index.html` | 47 verified fixtures · 45 originated lines · 9 high-confidence predictions · 22 open review items (4 closed). Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
 | **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 9 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
 
 Both layers are live and independent. The root dashboard was contributed by the `42fb7792` session; the
@@ -27,15 +27,16 @@ authoritative statement of that page's method.
 16-category coverage board and eight source/flag records. It is an analysis input, not a third site — `report.py`
 prints a league-wide table from it, and the published desk pages are built from `data/desk/*.json`.
 
-## What is in the dashboard release (capture window 2026-10-21 05:12–05:25 UTC)
+## What is in the dashboard release (capture windows 2026-10-21 05:12–05:25 and 07:06–07:45 UTC)
 
 | Sport | Fixtures | Lines originated | High confidence |
 |---|---|---|---|
 | Ice Hockey (NHL) | 14 | 14 | 4 |
 | Basketball (NBA) | 11 | 11 | 0 |
+| Handball (EHF Champions League Men) | 12 | 12 | 5 |
 | Rugby Union (URC) | 8 | 8 | 0 |
 | Cricket (ICC) | 2 | 0 | 0 |
-| **Total** | **35** | **33** | **4** |
+| **Total** | **47** | **45** | **9** |
 
 Two of the 35 rows are deliberately blank: the ICC ranking table did not render, so neither cricket fixture could
 be lined without inventing a strength input. Both are on the
@@ -45,6 +46,15 @@ The NHL slate is now complete for the window: all 14 games on 21–22 October ar
 games that were missing from the first capture (Utah at Seattle, Detroit at Vancouver) were recovered from the
 official club schedules. F01 and F02 are closed on the flagged page rather than deleted, so the audit trail stays
 visible.
+
+### Handball addition (session `arena/73620ec4-olbg2`, 2026-10-21 07:06–07:45 UTC)
+
+All twelve EHF Champions League Men round-5 fixtures on 21–22 October were verified against the official EHF
+matches page and the official group standings, then lined with a two-way handicap and match total on top of the
+three-way match winner. The complete line-by-line table, the eight market prices per game and the irregularities
+found while doing it are in [`research/handball-ehf-73620ec4.md`](research/handball-ehf-73620ec4.md). The findings
+raised were F24 (OLBG times are rendered in the viewer's timezone), F25 (OLBG club names differ from EHF names)
+and F26 (eleven venues left blank). F12 and F21 were closed with evidence.
 
 ## Evidence desk v2 (capture 2026-10-21 05:55 UTC)
 
@@ -83,7 +93,7 @@ Excluded by the brief: football (soccer), horse racing, American football, boxin
 index.html, picks.html, flagged.html, methodology.html, sources.html   dashboard (this release, generated)
 sports/<sport>.html                                                    per-sport dashboard pages
 assets/style.css                                                       dashboard styling
-data/inputs/*.json                                                     verified inputs + fixtures
+data/inputs/*.json                                                     verified inputs + fixtures (incl. handball_ehf.json)
 data/matches.json                                                      generated dataset (lines, picks)
 data/predictions.json                                                  high-confidence write-ups + sources
 data/flagged.json                                                      review queue (21 open, 2 closed)
@@ -92,6 +102,7 @@ scripts/config.py, model.py, build_site.py                             dashboard
 data/events.json, scripts/build.py, tests/test_build.py                original audit pipeline (kept green by CI)
 site/**                                                                evidence desk v2 (own engine + build, CI-checked)
 research/olbg-reverse-engineering.md, research/collection-log.md       OLBG schema + every fetch
+research/handball-ehf-73620ec4.md                                      line-by-line EHF verification record
 COORDINATION.md                                                        shared task board and merge log
 ```
 
@@ -127,10 +138,12 @@ See [METHODOLOGY.md](METHODOLOGY.md) for formulas and confidence thresholds.
 
 ## Coverage gaps
 
-Tennis, darts, snooker, Gaelic football, Top 14 / Pro D2, and eight further sports (Handball, Volleyball, Golf,
-Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League) could not be verified inside the capture window.
-They are listed individually on the Flagged for Review page — absence from this site is **not** evidence that
-OLBG lists no events for them.
+Handball was added in the 07:06–07:45 UTC capture and is no longer a gap. Still uncovered by this dashboard:
+Tennis, Darts, Snooker, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League, Volleyball, Gaelic
+Football and the Top 14 / Pro D2 rugby competitions. Volleyball was surveyed on the same day (F22) but not lined:
+the German Bundesliga had played one match and the Polish league page could not be tied to a named competition
+with confidence. Every remaining sport is listed on the Flagged for Review page with its reason — absence from
+this site is **not** evidence that OLBG lists no events for them.
 
 18+ · This is an analytics and research project, not betting advice.
 

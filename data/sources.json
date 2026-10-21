@@ -251,7 +251,7 @@
       "publisher": "OLBG",
       "type": "Discovery",
       "url": "https://www.olbg.com/betting-tips/Handball/20",
-      "used_for": "Handball hub: event list, ids, market vocabulary, competition grouping.",
+      "used_for": "Handball hub: event list, ids, market vocabulary, competition grouping. Also the source of the timezone-rendering finding (F24) and the club-name divergence (F25). No handball price, probability or result is taken from OLBG.",
       "official": false
     },
     {
@@ -277,14 +277,6 @@
       "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
       "used_for": "Group A-F standings before round 5: games played, wins, draws, losses, goals for, goals against, goal difference and points for all 24 clubs. This is the only strength input for the handball model.",
       "official": true
-    },
-    {
-      "id": "S35",
-      "publisher": "OLBG",
-      "type": "Discovery",
-      "url": "https://www.olbg.com/betting-tips/Handball/20",
-      "used_for": "Event discovery for the handball hub and the source of the timezone-rendering finding (F24). No handball price, probability or result is taken from OLBG.",
-      "official": false
     }
   ]
 }

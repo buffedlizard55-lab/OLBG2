@@ -156,6 +156,68 @@ def inputs_block(m):
     return f'<span class="small"><b>{E(m["home"]["name"])}</b>: {E(fmt(h))}<br><b>{E(m["away"]["name"])}</b>: {E(fmt(a))}</span>'
 
 
+# Survey-layer coverage, read from its own data files so the dashboard cannot drift from it.
+SURVEY_SPORTS = {
+    "Tennis": "tennis", "Basketball": "basketball", "Golf": "golf", "Cricket": "cricket",
+    "Snooker": "snooker", "Rugby Union": "rugby_union", "Rugby League": "rugby_league",
+    "Baseball": "baseball", "Ice Hockey": "ice_hockey", "Motor Racing": "motor_racing",
+    "Darts": "darts", "Handball": "handball", "Volleyball": "volleyball",
+    "Aussie Rules": "aussie_rules", "eSports": "esports",
+}
+
+
+def survey_counts() -> dict:
+    """Number of OLBG events the coverage survey recorded per sport (0 if none)."""
+    counts = {}
+    for sport, slug in SURVEY_SPORTS.items():
+        path = os.path.join(DATA, "survey", "events", f"{slug}.json")
+        try:
+            with open(path) as fh:
+                counts[sport] = len(json.load(fh))
+        except (OSError, ValueError):
+            counts[sport] = None
+    return counts
+
+
+def coverage_table(matches):
+    """One row for every in-scope sport: what this layer published, what the survey found."""
+    survey = survey_counts()
+    root = {}
+    for m in matches["matches"]:
+        entry = root.setdefault(m["sport"], {"fixtures": 0, "lined": 0})
+        entry["fixtures"] += 1
+        entry["lined"] += 1 if m["line_status"] == "originated" else 0
+
+    rows = []
+    for sport in sorted(config.INCLUDED_SPORTS):
+        mine = root.get(sport, {"fixtures": 0, "lined": 0})
+        events = survey.get(sport)
+        if mine["lined"]:
+            status, cls = "Lines originated here", "b-high"
+        elif mine["fixtures"]:
+            status, cls = "Fixtures verified, no line", "b-med"
+        elif events:
+            status, cls = "Surveyed, no line", "b-med"
+        elif events == 0:
+            status, cls = "Surveyed — none listed", "b-low"
+        else:
+            status, cls = "Not surveyed", "b-unv"
+        links = []
+        if sport in SPORTS:
+            links.append(f'<a href="sports/{SPORTS[sport]["slug"]}.html">our page</a>')
+        if sport in SURVEY_SPORTS:
+            links.append(f'<a href="survey/sports/{SURVEY_SPORTS[sport]}.html">survey page</a>')
+        rows.append(f"""<tr>
+          <td><b>{E(sport)}</b></td>
+          <td>{mine["fixtures"] or "—"}</td>
+          <td>{mine["lined"] or "—"}</td>
+          <td>{events if events is not None else "—"}</td>
+          <td><span class="badge {cls}">{E(status)}</span></td>
+          <td class="small">{" · ".join(links) or '<span class="muted">flagged only</span>'}</td>
+        </tr>""")
+    return "".join(rows)
+
+
 def build_index(matches, preds, flagged):
     c = matches["counts"]
     sport_cards = []
@@ -192,6 +254,13 @@ def build_index(matches, preds, flagged):
 <h2 class="section">Sports covered</h2>
 <p class="section-sub">{len(SPORTS)} of OLBG's {len(config.INCLUDED_SPORTS)} included sports are covered in this release; the other {len(config.INCLUDED_SPORTS) - len(SPORTS)} are listed on the flagged page with the reason — absence here is not evidence that OLBG lists no events.</p>
 <div class="grid sports">{''.join(sport_cards)}</div>
+
+<h2 class="section">All 17 in-scope sports</h2>
+<p class="section-sub">Every sport the brief includes, with this layer's fixtures and lines beside the number of
+events the independent coverage survey recorded. "Not surveyed" is a statement about our captures, not about OLBG.</p>
+<div class="panel"><div class="table-scroll"><table>
+<thead><tr><th>Sport</th><th>Our fixtures</th><th>Lines originated</th><th>Survey events</th><th>Status</th><th>Pages</th></tr></thead>
+<tbody>{coverage_table(matches)}</tbody></table></div></div>
 
 <h2 class="section">All fixtures</h2>
 <p class="section-sub">Filter by sport, confidence or search a team. Every row links to the official fixture source; OLBG event links appear only where the pairing matched exactly.</p>
@@ -463,7 +532,7 @@ are originated independently. OLBG is only an event-discovery and market-vocabul
 
 <h2 class="section">3. Verification</h2>
 <p>Every fixture is re-checked against the league or governing body before it is published: NBA.com, the NHL
-score API, the URC match centre, the ICC match list, the WST draw. If the official source does not confirm the
+score API, the URC match centre, the ICC match list, the WST draw and the EHF Champions League match centre. If the official source does not confirm the
 fixture, the row is not published and the OLBG event goes to the flagged page. If the official source confirms the
 fixture but no verified strength input exists, the fixture is published with a blank line and a stated reason.</p>
 

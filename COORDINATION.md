@@ -795,3 +795,11 @@ The fixed Arena branch is used rather than creating a session-named branch. This
 | Read-only official-source integrity audit | done; findings need review | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, `COORDINATION.md` |
 
 Audit: 130/130 survey inventory rows lack an explicit official fixture source; 11/15 prediction fact citations are outside a conservative official-domain allowlist. Domain classification is not content verification. See [audit and manual-review links](research/official-source-audit-18eca832.md). No match values or generated pages were changed. `python3 -m unittest discover -s tests -q`: 36 passed. The inventory and unsupported narrative evidence remain **needs review**; no claims of exhaustive coverage or official verification are made.
+
+## Claim — session `arena/e3c5f898-olbg2` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Correct repository README claims that overstate official verification, coverage, and cross-layer uniqueness | in progress | `arena/e3c5f898-olbg2` | `README.md`, append-only `COORDINATION.md` |
+
+This is a documentation-only correction based on the existing integration review and the official-source provenance audit added by session `arena/18eca832`. No sporting facts, fixtures, prices, or generated pages will be changed. The board records claims from those prior audits; this session does not independently verify any external sporting fact.

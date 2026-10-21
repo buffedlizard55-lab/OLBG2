@@ -41,9 +41,9 @@ Official references present in these records include the ICC team rankings (`htt
 
 **Impact:** readers cannot tell whether “17 sports” or “15 sports” is the agreed scope, and which coverage statement is current. Keep both interpretations visible as a flagged decision until resolved; update all counts from generated data in one integration pass.
 
-### R4 — The root landing page does not link to the survey layer (high usability)
+### R4 — Survey navigation was missing at audit start; fixed upstream during this audit (resolved)
 
-`index.html` navigation links to Dashboard, Picks, Flagged for review, Methodology, Sources and Evidence desk v2, but contains no link to `survey/index.html`. The survey's own pages are reachable at `/survey/`, and the README mentions that path, but the primary dashboard hides the 130-event survey from ordinary navigation. This was already recorded as an integration request in `COORDINATION.md` under session `ca1d5677`.
+At the initial audit of commit `9852d0e`, `index.html` had no `survey/index.html` navigation link; this was also recorded as an integration request in `COORDINATION.md` under session `ca1d5677`. While this report was being prepared, session `arena/dd14fcfd-olbg2` added the survey link to the root navigation and footer in PR #27, merged into `main` (merge commit `e5ad112`). After rebasing onto the updated `main`, this audit confirmed the link is present in the root page and regenerated output. This finding is closed; no navigation change was made by this session.
 
 ### R5 — The “no duplicate fixtures” statement is false for two records (medium)
 
@@ -62,4 +62,4 @@ Survey data records `as_of` dates from 2026-10-18, 2026-10-20 and 2026-10-21. A 
 
 ## Scope boundary / non-changes
 
-This session did not edit any generated page, sports data, prediction, source register or pipeline owned by earlier sessions. `COORDINATION.md` already contains unresolved integration requests about the survey navigation, scope ambiguity and combining flag registers. The findings above are recorded for the next integration owner rather than silently changing shared published outputs.
+This session did not edit any generated page, sports data, prediction, source register or pipeline owned by earlier sessions. `COORDINATION.md` already contains unresolved integration requests about the survey navigation, scope ambiguity and combining flag registers. The findings above are recorded for the next integration owner rather than silently changing shared published outputs. R4 is resolved by PR #27: the root nav/footer now link to the survey and remained present after rebasing.

@@ -675,7 +675,7 @@ Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no b
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Independent regression audit of merged dashboard, survey and evidence desk; record discrepancies without editing their outputs | in progress | `arena/9b76e3ea-olbg2` | `research/independent-audit-9b76e3ea.md`, append-only `COORDINATION.md` |
+| Independent regression audit of merged dashboard, survey and evidence desk; record discrepancies without editing their outputs | done | `arena/9b76e3ea-olbg2` | `research/independent-audit-9b76e3ea.md`, append-only `COORDINATION.md` |
 
 This audit does not claim new fixture coverage or independently verify sporting facts unless explicitly sourced. Generated pages, datasets and pipelines remain outside this session's scope.
 
@@ -692,8 +692,12 @@ Audit report: [`research/independent-audit-9b76e3ea.md`](research/independent-au
 1. Survey inventory event rows have OLBG `source_url` provenance but no per-row official fixture-source field; the verifier checks OLBG URL presence, not official fixture confirmation (see report R1).
 2. Survey narrative facts cite non-official secondary outlets and Wikipedia; the validator checks URL presence, not official status. Official-only factual claims remain to be rechecked (R2).
 3. Scope differs: root README says 17 sports and includes Gaelic Football/Greyhounds; survey taxonomy says 15 and excludes both. Root coverage-gap text is stale after the survey. Survey page count should be 24 HTML pages, not 25 (R3).
-4. Root index navigation has no link to `/survey/`; prior integration request remains open (R4).
+4. Survey navigation issue R4 was fixed upstream in PR #27 while this audit was in progress: the root navigation/footer now links to `/survey/`. Confirmed after rebase.
 5. At least two fixtures overlap root and survey: Afghanistan–Bangladesh and New Zealand–India. The “no duplication” statement is inaccurate; combined counts must deduplicate (R5).
 6. Snapshot is static: 72/130 survey records use indexed snapshots and are marked stale; no scheduled schedule collector was found (R6).
 
 No sporting value was marked newly verified from this read-only audit. Generated/shared outputs were not modified. Recommended integration work: reconcile navigation, scope/count language and overlap disclosures; require official source URLs per published fixture and official URLs for prediction facts; disclose snapshot age or implement a freshness gate. Existing needs-review items remain non-blocking.
+
+### Rebase conflict / upstream integration update (2026-10-21 UTC)
+
+Before the second push, `git pull --rebase origin main` fetched PRs #27–#28 and conflicted only in the append-only coordination ledger: the upstream Survey-navigation completion and this session's original claim had both appended at EOF. Resolved additively, retaining the complete upstream `arena/dd14fcfd-olbg2` record and this session's claim; no files or changes were discarded. The upstream branch had already added Survey to the root navigation, so audit finding R4 is now marked resolved in `research/independent-audit-9b76e3ea.md`. The final audit record and this conflict note remain append-only.

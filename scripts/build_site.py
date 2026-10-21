@@ -182,7 +182,7 @@ def build_index(matches, preds, flagged):
 </div>
 
 <h2 class="section">Sports covered</h2>
-<p class="section-sub">Eight of OLBG's included sports could not be surveyed before the capture window closed. They are listed on the flagged page, not silently dropped.</p>
+<p class="section-sub">Thirteen of OLBG's seventeen included sports are not covered in this release. Each one is listed on the flagged page with the reason — absence here is not evidence that OLBG lists no events.</p>
 <div class="grid sports">{''.join(sport_cards)}</div>
 
 <h2 class="section">All fixtures</h2>

@@ -7,12 +7,13 @@ Session identifier: `bfeb6335` (Arena's fixed working branch: `arena/bfeb6335-ol
 | Source audit and evidence-first data pipeline | done | bfeb6335 | `scripts/**`, `data/**`, `tests/**`, `.gitignore` | Partial snapshot only, validated locally. Unsupported sport coverage is a separate review item below. |
 | Dashboard, category pages, review page, documentation and integration | done | bfeb6335 | `site/**`, `.github/**`, `README.md`, `COORDINATION.md` | Static Pages site built locally; final remote deployment tracked below. |
 | Full eligible-sports schedule and original line coverage | needs review | unclaimed | future data and verification files; request shared output edits via board | Published on Flagged for Review page. Neither exhaustive inventory nor original prices could be responsibly verified in this session. |
-| Post-merge build, deployment, and source-link audit | in progress | 7499a763 | `COORDINATION.md` (audit log only) | This session began from the initial commit while the completed prior integration was already on `main`. Its preliminary broad claim was superseded during reconciliation to avoid duplicate edits. It will not publish new fixtures, lines, or picks without direct official-source verification. |
+| Post-merge build, deployment, and source-link audit | done | 7499a763 | `COORDINATION.md` (audit log only) | This session began from the initial commit while the completed prior integration was already on `main`. Its preliminary broad claim was superseded during reconciliation to avoid duplicate edits. It ran the local validation suite and checked the merged PR, Pages deployment, and Pages configuration through the GitHub API; it did not publish new fixtures, lines, or picks. |
 
 ## Requests and handoffs
 
 - None. Other sessions: please claim non-overlapping scopes here before editing; the shared table and navigation are integration-owned.
 - **2026-10-21 — session 7499a763:** Discovered the completed integration on `origin/main` after creating the preliminary claim `6ea4ead` from the initial snapshot. Merged `origin/main` into the fixed Arena branch and resolved the add/add conflict in this coordination file by retaining the prior session's completed work and replacing the duplicate broad claim with the narrow audit task above. No prior-session file content was discarded.
+- **2026-10-21 — session 7499a763:** A subsequent `git pull --rebase` against this session branch tried to replay the commits already brought in by that merge and stopped on the same add/add coordination-file conflict. It was immediately aborted before any replayed commit or file change was accepted; the completed integration remained intact. The reconciled branch was then pushed as a normal fast-forward from its existing remote tip.
 
 ## Source and verification log — 2026-10-21 UTC
 
@@ -21,6 +22,7 @@ Session identifier: `bfeb6335` (Arena's fixed working branch: `arena/bfeb6335-ol
 - [OLBG NBA matchup page](https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889) contains a Bucks/Wizards listing and market headings. The accessible [official NBA games page](https://www.nba.com/games) showed 11 games on Oct 21 but failed to expose the individual matchup list ("Sorry, something went wrong"). Consequently no NBA fixture row is claimed as verified. See Flagged for Review.
 - [MLB schedule Oct 21](https://www.mlb.com/schedule/2026-10-21) displayed no games for that date; this does not establish season-wide absence of baseball matches.
 - Reviewed the two NHL source-to-row mappings manually; ran `python -m unittest discover -s tests -v` (6 passing tests) and `python scripts/build.py`. The tests reject excluded sports, malformed links, invalid high-confidence text, missing fields, and broken local links. External links were opened at research time, not monitored continuously.
+- **Post-merge audit — session 7499a763:** Re-ran the six local validation tests, regenerated `site/`, and confirmed `git diff --exit-code -- site` was clean. The generated local-link test passed. Through the GitHub API, confirmed PR [#1](https://github.com/buffedlizard55-lab/OLBG2/pull/1) is merged, its `validate` check succeeded, and the legacy GitHub Pages deployment for main commit `306916e` reached `success` at [the public Pages URL](https://buffedlizard55-lab.github.io/OLBG2/). This audit does **not** constitute a new fetch or re-verification of third-party fixture facts; the snapshot remains dated and the source limitations below still apply.
 
 ## Irregularities and limits
 
@@ -30,5 +32,5 @@ Session identifier: `bfeb6335` (Arena's fixed working branch: `arena/bfeb6335-ol
 
 ## Integration and publication
 
-- Local integration tests and generated-link validation passed. PR: https://github.com/buffedlizard55-lab/OLBG2/pull/1 . Merge result and deployment confirmation pending.
-- GitHub Pages is already configured for legacy publication from the `main` branch root. Attempting to change build type to Actions was rejected by GitHub API (403, integration lacks `pages=write,administration=write`). We therefore use the existing branch publication, with a root redirect to the generated dashboard; CI validates source and generated files only. Do not claim Actions deployment.
+- Local integration tests and generated-link validation passed. PR [#1](https://github.com/buffedlizard55-lab/OLBG2/pull/1) merged to `main` at `306916e` on 2026-10-21. Its validation run succeeded. GitHub API deployment status is `success`; the published site is https://buffedlizard55-lab.github.io/OLBG2/.
+- GitHub Pages is configured for legacy publication from the `main` branch root, is public, and has HTTPS enforced. A root redirect opens the generated dashboard under `site/`; CI validates source and generated files only. No GitHub Actions publication mode is claimed.

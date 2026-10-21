@@ -642,3 +642,11 @@ It was aborted (`git rebase --abort`) with no loss — the correct push had alre
 Before merging, the prior sessions' CI gate was reproduced locally and passed:
 `python3 scripts/build_site.py` regenerates their `index.html`, `sports/*`, `assets/*`, `site/**`
 byte-identically (`git diff --exit-code` clean), so the root dashboard is not broken by this merge.
+
+## Current session `arena/dd14fcfd-olbg2` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Make the existing 130-event survey discoverable from the root dashboard | in progress | `arena/dd14fcfd-olbg2` | `scripts/build_site.py`, generated root HTML, `COORDINATION.md` |
+
+Claim is limited to root-dashboard navigation; the survey dataset and its generated pages remain owned by their prior contribution. Validation will run the survey integrity gate, both site builds, and unit tests.

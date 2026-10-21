@@ -28,4 +28,5 @@ Session identifier: `bfeb6335` (Arena's fixed working branch: `arena/bfeb6335-ol
 
 ## Integration and publication
 
-- Local integration tests and generated-link validation passed. PR link, merge result and deployment confirmation pending.
+- Local integration tests and generated-link validation passed. PR: https://github.com/buffedlizard55-lab/OLBG2/pull/1 . Merge result and deployment confirmation pending.
+- GitHub Pages is already configured for legacy publication from the `main` branch root. Attempting to change build type to Actions was rejected by GitHub API (403, integration lacks `pages=write,administration=write`). We therefore use the existing branch publication, with a root redirect to the generated dashboard; CI validates source and generated files only. Do not claim Actions deployment.

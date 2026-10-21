@@ -12,7 +12,7 @@ python scripts/build.py
 python -m http.server 8000 -d site
 ```
 
-`data/events.json` contains evidence links and explicit nulls for unknowns. `scripts/build.py` validates and escapes all displayed fields. `site/` contains the generated static pages, committed to make the evidence snapshot readable without running a server. GitHub Actions rebuilds and deploys on pushes to `main`.
+`data/events.json` contains evidence links and explicit nulls for unknowns. `scripts/build.py` validates and escapes all displayed fields. `site/` contains the generated static pages, committed to make the evidence snapshot readable without running a server. GitHub Actions validates the generated site on PRs and pushes to `main`. The repository’s existing GitHub Pages configuration publishes the `main` branch root; the root `index.html` redirects to `site/index.html`. GitHub Pages settings cannot be changed with this session’s integration permissions, so no Actions deployment is attempted.
 
 ## Evidence rules
 

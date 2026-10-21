@@ -863,4 +863,30 @@ Updated the README to distinguish stored snapshot rows from officially verified 
 
 Verification: `python3 -m unittest discover -s tests -v` (36 passed); `python3 scripts/build.py` (25 fixtures); `python3 scripts/build_site.py` (10 pages, 35 fixtures, 0 broken links); `python3 scripts/survey_build.py` and `python3 scripts/survey_verify.py` (24 pages, 130 inventory rows, 11 lines, 2 predictions, 21 flags; all structural checks passed); `python3 scripts/integration_audit.py` (0 local-link errors); `python3 scripts/official_source_audit.py` (130 inventory rows without official fixture-source fields; 11/15 prediction-fact URLs outside its candidate official-domain allowlist; classification is not content verification). `git diff --check` passed. No sporting data changed.
 
+---
+
+# Session `arena/4d77e99a-olbg2` — line-by-line official verification, multi-sport originated slate & survey provenance remediation (2026-10-21)
+
+**Session ID:** `arena/4d77e99a-olbg2` · **Branch:** `arena/4d77e99a-olbg2` (fixed Arena session branch) · **Claimed:** 2026-10-21 UTC before any edits.
+
+**Active parallel-session check before claim:**
+- Checked `origin/main` (`1a0bf38`, after PRs #34–#38 merged) and all remote session branches via `git ls-remote --heads origin`.
+- Completed sessions on `main`: `bfeb6335`, `e4f35827`, `42fb7792`, `4a778bb7`, `db99ed90`, `ca1d5677`, `dd14fcfd`, `8103ccb6`, `c8711d36`, `9b76e3ea`, `18eca832`, `8f07248b`, `e3c5f898`.
+- Active concurrent branches respected with **zero file overlap during task execution**:
+  - `arena/73620ec4-olbg2` claims `data/inputs/handball_ehf.json`, `scripts/model.py`, `data/predictions.json`, `data/sources.json`, `data/flagged.json`, `scripts/build_site.py`, root HTML, `README.md`, `METHODOLOGY.md`, `research/handball-ehf-73620ec4.md` (and explicitly excludes `survey/**`, `data/survey/**`, `site/**`, `data/desk/**`).
+  - `arena/d4b9d560-olbg2` claims `data/live/**`, `research/live-slate-d4b9d560.md`, `scripts/live_model.py`, `scripts/live_build.py`, `live/**` (and explicitly excludes `survey/**`, `data/survey/**`, `scripts/survey_*.py`, `site/**`, `data/desk/**`).
+
+| # | Task | Status | Owner | File scope (strictly non-overlapping) |
+|---|---|---|---|---|
+| V1 | Line-by-line factual verification of all existing repo datasets (`data/**`, `data/desk/**`, `data/survey/**`) against live official governing-body sources; document all verified facts and factual irregularities | in progress | `arena/4d77e99a-olbg2` | `research/line-by-line-audit-4d77e99a.md`, `data/verified/repo_audit.json` |
+| V2 | Full reverse-engineered OLBG multi-sport slate + multi-market line origination (`Win Match / Moneyline / 1X2`, `Handicap / Spread / Puck Line`, `Match Total Over/Under`, tournament markets) + Low/Medium/High confidence picks + ≥30-word official-source predictions | in progress | `arena/4d77e99a-olbg2` | `data/verified/**`, `scripts/verified_model.py`, `scripts/verified_build.py`, `verified/**`, `tests/test_verified_pipeline.py` |
+| V3 | Remediate unclaimed `/survey/` provenance & factual findings raised by audits `9b76e3ea` (R1–R2), `8f07248b` (A1–A2) and `18eca832`: populate verified `official_fixture_source` links per row (leaving unconfirmed rows `null` / `UNVERIFIED`), fix secondary/erroneous claims in `data/survey/predictions.json` using verified official sources, and expose official vs OLBG status per row in `/survey/` | in progress | `arena/4d77e99a-olbg2` | `data/survey/**`, `scripts/survey_*.py`, `survey/**`, `scripts/official_source_audit.py` |
+| V4 | Final integration after concurrent tasks settle: sync `origin/main` without discarding any session's work, wire root navigation + CI link/build checks for `verified/`, verify zero broken links across all layers, open & merge PR to `main`, verify GitHub Pages live deployment | pending | `arena/4d77e99a-olbg2` | shared integration outputs |
+
+**Cross-scope irregularities already identified for active owners / review (logged here instead of editing files claimed by `73620ec4`):**
+1. `data/desk/picks.json` (`nhl-2026020158`, `FLA @ PIT`): narrative states *"Florida has won three in a row ... with Matthew Tkachuk on 14 points and Brady Tkachuk on six goals"* — **Brady Tkachuk plays for the Ottawa Senators, not the Florida Panthers** (will be verified live against NHL official API and corrected or flagged depending on scope status at integration).
+2. `data/predictions.json` vs `data/desk/picks.json` (`nhl-2026020152`, `PHI @ BUF`): `data/predictions.json` states Tage Thompson has **5 goals** while `data/desk/picks.json` states Tage Thompson has **3 goals** for the same game; `data/predictions.json` also cites a 19 October game result to `scoreboard/2026-10-22`. Both will be checked directly against `api-web.nhle.com` in V1.
+3. `data/survey/predictions.json` (`P-02`, `Afghanistan vs Bangladesh One Day Match`): text claims *"Afghanistan beat Bangladesh by 200 runs in the second ODI, bowling them out for 109 in pursuit of 191"* while `facts_used` states *"Afghanistan 190, Bangladesh 109"* (`190 - 109 = 81 runs`, an internal contradiction) and cites non-official secondary sites — scheduled for direct official-source verification and remediation in V3.
+
+
 Follow-up sync note: a second `git pull --rebase origin main` tried replaying the already-pushed original claim commit and conflicted in `COORDINATION.md`. The rebase was aborted without discarding changes. The current branch already contained `origin/main` and, after merging the remote session branch, contained `origin/arena/e3c5f898-olbg2`; the subsequent push advanced that remote branch by fast-forward. The claim, README update, both concurrent publish records, and completion entry are retained.

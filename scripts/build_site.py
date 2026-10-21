@@ -171,7 +171,7 @@ def build_index(matches, preds, flagged):
   <p class="lede">A reverse-engineered view of OLBG's sports coverage: every fixture re-checked against the
   official league or governing body, every price originated here from verified data, and every gap left blank
   and flagged rather than guessed.</p>
-  <p class="meta">Capture window 2026-10-21 05:10–05:45 UTC · {c['total']} fixtures · {c['originated']} with originated lines ·
+  <p class="meta">Capture window 2026-10-21 05:12–05:25 UTC · {c['total']} fixtures · {c['originated']} with originated lines ·
   {c['high']} high-confidence picks · {len(flagged['items'])} items flagged for review</p>
 </section>
 
@@ -540,7 +540,7 @@ def build_sources(sources, matches):
 <div class="panel"><div class="table-scroll"><table>
 <thead><tr><th>ID</th><th>Publisher</th><th>Type</th><th>URL</th><th>Used for</th></tr></thead>
 <tbody>{rows}</tbody></table></div></div>
-<div class="note">Capture window 2026-10-21 05:10–05:45 UTC. Pages change; a reviewer re-checking later may see
+<div class="note">Capture window 2026-10-21 05:12–05:25 UTC. Pages change; a reviewer re-checking later may see
 different numbers, especially on the NHL and NBA standings pages, which update after every game.</div>
 """
     return page("Sources", "sources.html", body, "Official and discovery sources with what each one verified.")

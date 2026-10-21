@@ -28,7 +28,7 @@ contract.
 > `scripts/build.py`, `tests/**` and `site/**` now belong to the evidence desk; the older two-fixture audit data
 > remains at `data/events.json` for provenance and is no longer built by either pipeline.
 
-## What is in the dashboard release (capture window 2026-10-21 05:10–05:45 UTC)
+## What is in the dashboard release (capture window 2026-10-21 05:12–05:25 UTC)
 
 | Sport | Fixtures | Lines originated | High confidence |
 |---|---|---|---|

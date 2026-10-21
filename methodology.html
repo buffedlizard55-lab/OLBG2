@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology · OLBG2 Sports Betting Data</title>
+<meta name="description" content="Line origination formulas, confidence rules and verification process.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
+    <nav class="main"><a href="index.html">Dashboard</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sources.html">Sources</a><a href="site/index.html">NHL evidence desk</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero">
+  <h1>Methodology</h1>
+  <p class="lede">How a fixture becomes a line: what we take from OLBG, what we re-verify, how the probabilities are
+  computed, and the exact rules that decide a confidence grade.</p>
+</section>
+
+<h2 class="section">1. Scope</h2>
+<p class="section-sub">Included: Tennis, Basketball, Golf, Cricket, Snooker, Rugby Union, Rugby League, Baseball,
+Ice Hockey, Motor Racing, Darts, Handball, Volleyball, Aussie Rules, eSports, Gaelic Football, Greyhounds.</p>
+<p>Excluded by the brief: football (soccer, OLBG id 1), horse racing (2), American football (11), boxing (16),
+cycling (17) and hurling (26). UFC/MMA have no separate OLBG sport id — they are filed under Boxing/16, so the
+exclusion of id 16 covers them. "Specials" are not a sport on OLBG; they are a bet-type, and no specials market
+is included anywhere. The list is enforced in <code>scripts/config.py</code>.</p>
+<div class="note info">Two scope judgement calls, both flagged: Gaelic Football is treated as a distinct sport and kept
+(the brief excludes "football", which we read as soccer); hurling is excluded by name.</div>
+
+<h2 class="section">2. What OLBG gives us, and what it does not</h2>
+<p>Sport hub pages supply the event list, the event_id, the market label a tipster used, and tip percentages.
+They do <b>not</b> publish prices. Nothing in this dataset uses OLBG tip percentages as a probability: our lines
+are originated independently. OLBG is only an event-discovery and market-vocabulary source.</p>
+
+<h2 class="section">3. Verification</h2>
+<p>Every fixture is re-checked against the league or governing body before it is published: NBA.com, the NHL
+score API, the URC match centre, the ICC match list, the WST draw. If the official source does not confirm the
+fixture, the row is not published and the OLBG event goes to the flagged page. If the official source confirms the
+fixture but no verified strength input exists, the fixture is published with a blank line and a stated reason.</p>
+
+<h2 class="section">4. The models</h2>
+<h3>Ice Hockey (NHL)</h3>
+<p>A multiplicative Poisson attack/defence model on season-to-date goals, with empirical-Bayes shrinkage because
+only 7–11 games have been played.</p>
+<pre><code>league_avg = mean(goals for per game) over all 32 teams
+w          = gp / (gp + 8.0)
+attack_i   = 1 + w * ((gf_i / gp_i) / league_avg - 1)
+defence_i  = 1 + w * ((ga_i / gp_i) / league_avg - 1)
+lambda_home = league_avg * attack_home * defence_away * 1.05
+lambda_away = league_avg * attack_away * defence_home / 1.05
+P(home)    = Poisson score grid, tie split 50/50 (overtime / shootout)
+puck line  = fixed at 1.5, P(home covers) = P(margin >= 2)
+total line = nearest half-point to lambda_home + lambda_away</code></pre>
+<p class="small muted">Home-ice factor 1.05 and shrinkage k=8.0 are our own
+line-setting parameters, not sourced facts. They are recorded in every NHL row.</p>
+
+<h3>Basketball (NBA)</h3>
+<p>The 2026-27 season is one game old and every team playing on 21 October was 0-0, so the completed 2025-26
+season is used as a prior, shrunk 25% toward .500.</p>
+<pre><code>raw      = wins / (wins + losses)            # 2025-26
+shrunk   = 0.75 * raw + 0.25 * 0.5
+rating   = logit(shrunk)
+margin   = 11.0 * (rating_home + 0.2 - rating_away)
+P(home)  = logistic(margin / 11.0)
+handicap = nearest half-point to -margin
+total    = NOT ORIGINATED (no verified points-for/against input was captured)</code></pre>
+
+<h3>Rugby Union (URC)</h3>
+<p>Points for and against per game from the official league table, shrunk toward the league mean because only
+three rounds have been played.</p>
+<pre><code>w = pl / (pl + 6.0)
+attack_i  = 1 + w * ((pf_i / pl_i) / league_pf - 1)
+defence_i = 1 + w * ((pa_i / pl_i) / league_pa - 1)
+expected_home = league_pf * attack_home * defence_away + 3.0/2
+expected_away = league_pa * attack_away * defence_home - 3.0/2
+P(home)  = logistic((expected_home - expected_away) / 13.0)
+handicap = nearest half-point to the expected margin
+total    = expected_home + expected_away, nearest half-point</code></pre>
+
+<h3>Prices</h3>
+<p>Every price is <code>round(1 / (p * 1.04), 2)</code>, clamped to 1.05–12.00. That is a fair price plus a 4%
+theoretical margin. <b>These are not bookmaker prices and were not compared to any bookmaker.</b></p>
+
+<h2 class="section">5. Confidence rules</h2>
+<table>
+<thead><tr><th>Sport</th><th>High</th><th>Medium</th><th>Low</th></tr></thead>
+<tbody>
+<tr><td>NHL</td><td>p ≥ 65% and both teams ≥ 7 games played</td><td>p ≥ 57% with ≥ 7 games, or p ≥ 68% with ≥ 5</td><td>everything else</td></tr>
+<tr><td>NBA</td><td>not permitted — zero current-season games</td><td>p ≥ 68%</td><td>p &lt; 68%</td></tr>
+<tr><td>URC</td><td>not permitted — three rounds played</td><td>p ≥ 62%</td><td>p &lt; 62%</td></tr>
+</tbody></table>
+<p class="small muted" style="margin-top:10px">The rule is deliberately conservative: promoting a three-game sample to
+"high" would be a confidence trick, not a prediction.</p>
+
+<h2 class="section">6. Predictions</h2>
+<p>Written predictions are produced only for high-confidence picks. Each one must be at least 30 words, name the
+selection explicitly, and state the team, its record and goal rate, at least one named player with a verified
+statistic, and the model probability. No claim about injuries, line-ups, travel or transfers appears anywhere,
+because none could be verified from an official source in this capture. Every factual sentence carries a source
+link on the <a href="picks.html">Picks page</a>.</p>
+
+<h2 class="section">7. Provenance</h2>
+<p>Raw captures and what was taken from each URL are logged in <code>research/collection-log.md</code>. The
+machine-readable dataset is <a href="data/matches.json">data/matches.json</a>; regenerate it with
+<code>python3 scripts/model.py</code> and rebuild this site with <code>python3 scripts/build_site.py</code>.
+The builder fails the build if a prediction is under 30 words or a link is broken.</p>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
+    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="flagged.html">Flagged</a></span>
+  </div>
+</footer>
+</body>
+</html>

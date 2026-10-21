@@ -26,8 +26,11 @@ jobs:
       - name: Rebuild the site from the committed data
         run: python scripts/build.py
 
-      - name: Fail if the committed site is stale
-        run: git diff --exit-code -- site
+      - name: Regenerate the dashboard layer
+        run: python scripts/build_site.py
+
+      - name: Fail if any generated page is stale
+        run: git diff --exit-code -- site index.html picks.html flagged.html methodology.html sources.html sports assets
 
       - name: Check every generated local link resolves
         run: |

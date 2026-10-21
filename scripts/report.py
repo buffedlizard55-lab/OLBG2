@@ -1,7 +1,7 @@
 import json, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from model import evaluate
+from poisson import evaluate
 
 d = json.loads(Path("data/events.json").read_text())
 p = d["model"]

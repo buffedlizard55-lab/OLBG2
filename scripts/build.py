@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from model import evaluate  # noqa: E402
+from poisson import evaluate  # noqa: E402
 
 DATA = ROOT / "data/events.json"
 OUT = ROOT / "site"

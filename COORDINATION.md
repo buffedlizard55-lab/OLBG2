@@ -119,7 +119,7 @@ inside the window. Those are on the flagged page rather than silently dropped or
 | Integration branch | `arena/42fb7792-olbg2` |
 | Dashboard build check | `python3 scripts/build_site.py` → 9 pages, 33 fixtures, 4 predictions, no broken links |
 | Prior pipeline check | `python -m unittest discover -s tests -v` → 6 tests pass; `python scripts/build.py` → no `site/` diff |
-| Pull requests | **PR #7** (dashboard release) · **PR #9** (per-date provenance) · **PR #12** (NBA citation repair + source register gate) · **PR #13** (F19 disclosure) · **PR #14** (capture window + coverage statement) |
+| Pull requests | **PR #7** (dashboard release) · **PR #9** (per-date provenance) · **PR #12** (NBA citation repair + source register gate) · **PR #13** (F19 disclosure) · **PR #14** (capture window + coverage statement) · **PR #16** (final ledger) · **PR #17** (removed an implied market comparison from the Wild write-up) |
 | Merge result | all five merged to `main`; current tip `main` after PR #14 |
 | First merge | PR #7 merged 2026-10-21 05:21:08Z · merge commit `3778896` |
 | Merge conflict | Yes — resolved by merging `origin/main` (`d9f6376`) into the branch first; no prior work discarded (see log above) |
@@ -129,6 +129,7 @@ inside the window. Those are on the flagged page rather than silently dropped or
 | Follow-up | PR #12 — repaired the NBA citations the PR #9 helper mangled, and added a build gate requiring every citation to match `data/sources.json` |
 | Follow-up | PR #13 — F19 goal-convention disclosure, README counts, this log. Deploy runs 39549662975 / 39549662117 success, live re-checked |
 | Follow-up | PR #14 — capture window corrected to 05:12–05:25 UTC (it had read 05:45) and the final coverage statement added. Deploy runs 39549864859 / 39549864671 success, Pages status `built` |
+| Follow-up | PR #16 — ledger of PRs and deploy ids. PR #17 — reworded the Minnesota prediction so it no longer implies a market comparison. Deploy runs 39550115718 / 39550115404 success |
 | Cross-session check | PR #11 (`db99ed90`) independently recaptured the NHL slate: fixture ids, matchups, dates, start times and last-ten records matched, and its two overlapping selections agreed. Its goal-convention finding (shootout goal counted by nhl.com/standings, excluded by the stats API) is now disclosed as **F19** in `data/flagged.json` and in METHODOLOGY.md §2. |
 
 ### Post-merge note

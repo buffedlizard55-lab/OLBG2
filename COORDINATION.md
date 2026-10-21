@@ -469,3 +469,24 @@ independent capture has them (2.60 GF/GP, 3.40 GA/GP over 10 games, which is 26/
 | Merge | recorded below |
 | Deploy | recorded below |
 
+## Publish ledger — all four PRs from session `db99ed90` (closes the "recorded below" rows)
+
+| PR | Title | Merge commit | Validate run | Pages run | Live check |
+|---|---|---|---|---|---|
+| [#19](https://github.com/buffedlizard55-lab/OLBG2/pull/19) | Complete the NHL slate: 14/14 games, F01 and F02 closed | `c828e53` | 39550395204 | 39550393822 | `sports/ice-hockey.html` shows Utah @ Seattle with six prices; `flagged.html` shows the closed-items section |
+| [#20](https://github.com/buffedlizard55-lab/OLBG2/pull/20) | Survey handball and volleyball on OLBG | `42e16f7` | 39550663818 | 39550663101 | `flagged.html` shows F21/F22 and "20 open items · 2 closed" |
+| [#21](https://github.com/buffedlizard55-lab/OLBG2/pull/21) | Correct two stale README statements | `9616757` | 39550881881 | 39550881480 | root pages unchanged; README corrected |
+| [#22](https://github.com/buffedlizard55-lab/OLBG2/pull/22) | Independent audit of the NHL dataset; shootout effect measured | `e3cfb1f` | 39551094468 | 39551093843 | `site/flagged.html` shows the 17-of-32 measurement in `flag-goal-convention` |
+
+Every merge was made with `gh pr merge --merge` after `mergeStateStatus` reached `CLEAN`; three of the four needed a
+sync merge first because `main` advanced while CI ran. In each sync the other sessions' files were taken as-is and only
+generated pages were regenerated — `git diff origin/main` before each merge touched nothing outside this session's
+scope.
+
+### Final state
+
+| Layer | Fixtures | Lines | Predictions | Review queue |
+|---|---|---|---|---|
+| Root dashboard (`/`) | 35 (NHL 14, NBA 11, URC 8, ICC 2) | 33 | 4 | 20 open + 2 closed |
+| Evidence desk (`/site/`) | 25 (NHL 14, NBA 11) | 64 markets | 4 | 9 open |
+

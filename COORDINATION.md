@@ -779,3 +779,19 @@ Second sync: before pushing the post-merge ledger update, `git pull --rebase ori
 | GitHub Pages deployment | Run `39557166195` — build and deploy jobs succeeded |
 | Live check | `https://buffedlizard55-lab.github.io/OLBG2/` and `https://buffedlizard55-lab.github.io/OLBG2/survey/` both fetched successfully; root includes Survey navigation |
 | Deployment warning | GitHub Actions emitted Node.js 20/runner-image deprecation notices; all jobs succeeded, non-blocking |
+
+## Session `arena/18eca832-olbg2` — official-source integrity audit
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Independently audit published survey source classification without modifying shared datasets or generated pages | in progress | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, append-only `COORDINATION.md` |
+
+The fixed Arena branch is used rather than creating a session-named branch. This claim does not assert any new fixture verification.
+
+### Completion — `arena/18eca832-olbg2`
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Read-only official-source integrity audit | done; findings need review | `arena/18eca832-olbg2` | `scripts/official_source_audit.py`, `tests/test_official_source_audit.py`, `research/official-source-audit-18eca832.md`, `COORDINATION.md` |
+
+Audit: 130/130 survey inventory rows lack an explicit official fixture source; 11/15 prediction fact citations are outside a conservative official-domain allowlist. Domain classification is not content verification. See [audit and manual-review links](research/official-source-audit-18eca832.md). No match values or generated pages were changed. `python3 -m unittest discover -s tests -q`: 36 passed. The inventory and unsupported narrative evidence remain **needs review**; no claims of exhaustive coverage or official verification are made.

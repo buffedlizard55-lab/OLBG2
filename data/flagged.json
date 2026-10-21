@@ -1,6 +1,7 @@
 {
   "meta": {
-    "purpose": "Everything that could not be confirmed from an official source, every value deliberately left blank, and every irregularity found while reverse-engineering OLBG. Nothing here blocks publication; it is the reviewer's queue."
+    "purpose": "Everything that could not be confirmed from an official source, every value deliberately left blank, and every irregularity found while reverse-engineering OLBG. Nothing here blocks publication; it is the reviewer's queue.",
+    "count": 19
   },
   "items": [
     {
@@ -146,6 +147,14 @@
       "item": "No OLBG odds were used or available",
       "detail": "OLBG hub pages publish tip percentages but no prices, and no bookmaker prices were used at any point. Every price in this dataset is generated from our own probability plus a 4% theoretical margin. They are not market prices.",
       "source": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "F19",
+      "severity": "low",
+      "category": "Source convention",
+      "item": "NHL goal totals differ by shootout convention",
+      "detail": "nhl.com/standings counts the shootout-deciding goal in GF/GA; api.nhle.com/stats/rest/en/team/summary does not. Over the same games Ottawa read 24 GF on standings vs 22 in the API (two shootout wins), Buffalo 34 GA vs 33 (one shootout loss) and Seattle 39 vs 37 (two shootout wins). Our rates use the stats API, so they sit up to ~0.2 goals per game below the standings view. Disclosed rather than adjusted, because the input is correct for its cited source. Found by a separate verification pass (PR #11).",
+      "source": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2"
     }
   ]
 }

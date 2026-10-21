@@ -11,7 +11,7 @@ The repository holds two published layers, both live:
 
 | Layer | Entry point | What it is |
 |---|---|---|
-| **Slate dashboard** | `/index.html` | 33 verified fixtures · 30 originated lines · 4 high-confidence predictions · 18 flagged items. Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
+| **Slate dashboard** | `/index.html` | 33 verified fixtures · 30 originated lines · 4 high-confidence predictions · 19 flagged items. Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
 | **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 8 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
 
 Both layers are live and independent. The root dashboard was contributed by the `42fb7792` session; the
@@ -82,11 +82,11 @@ assets/style.css                                                       dashboard
 data/inputs/*.json                                                     verified inputs + fixtures
 data/matches.json                                                      generated dataset (lines, picks)
 data/predictions.json                                                  high-confidence write-ups + sources
-data/flagged.json                                                      review queue (18 items)
-data/sources.json                                                      source register (24 sources)
+data/flagged.json                                                      review queue (19 items)
+data/sources.json                                                      source register (26 sources)
 scripts/config.py, model.py, build_site.py                             dashboard pipeline
-data/events.json, scripts/build.py, tests/test_build.py                prior audit pipeline (untouched)
-site/**                                                                prior audit site (untouched)
+data/events.json, scripts/build.py, tests/test_build.py                original audit pipeline (kept green by CI)
+site/**                                                                evidence desk v2 (own engine + build, CI-checked)
 research/olbg-reverse-engineering.md, research/collection-log.md       OLBG schema + every fetch
 COORDINATION.md                                                        shared task board and merge log
 ```

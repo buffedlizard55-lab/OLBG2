@@ -1195,3 +1195,14 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
   3. **`/site/` Desk v2 Fix (`V3b`):** Fixed stale `Tage Thompson: 3 goals` -> `5 goals; Zach Benson: 6 assists` in `data/desk/picks.json` (`nhl-2026020152`) and rebuilt `site/`.
   4. **Cross-Layer Integration & Verification (`V4`):** Merged `origin/main` (`2f01ac4`) cleanly after `e3c5f898` and `d4b9d560` closed, linked `/verified/` in root `NAV` and `integration.html`, updated `.github/workflows/pages.yml` across all 5 layers (`verified`, `live`, `site`, `survey`, root), and verified **60/60 unit tests green** + **0 broken local links**.
 
+### Publish Record — Session `arena/4d77e99a-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#48](https://github.com/buffedlizard55-lab/OLBG2/pull/48) (`arena/4d77e99a-olbg2` -> `main`) |
+| Merge result | **Merged** into `main` as `334090b0977119d2e1fe5990bd91f66c59c2a232` |
+| CI check (`Validate Pages content`) | Run `39565716854` (PR) & Run `39565771210` (`main`) — `validate` job `SUCCESS` (60/60 tests, deterministic rebuilds across all 5 layers, 0 local link errors) |
+| GitHub Pages deployment | Run `39565769873` (`pages-build-deployment`) — `build`, `deploy`, and `report-build-status` all `success`; `gh api repos/buffedlizard55-lab/OLBG2/pages` -> `status: built` |
+| Live production URLs verified | `https://buffedlizard55-lab.github.io/OLBG2/`, `https://buffedlizard55-lab.github.io/OLBG2/verified/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/predictions.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/survey/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/integration.html` |
+
+

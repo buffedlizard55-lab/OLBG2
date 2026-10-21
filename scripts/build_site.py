@@ -172,14 +172,14 @@ def build_index(matches, preds, flagged):
   official league or governing body, every price originated here from verified data, and every gap left blank
   and flagged rather than guessed.</p>
   <p class="meta">Capture window 2026-10-21 05:12–05:25 UTC · {c['total']} fixtures · {c['originated']} with originated lines ·
-  {c['high']} high-confidence picks · {len(flagged['items'])} items flagged for review</p>
+  {c['high']} high-confidence picks · {len(flagged['items'])} open review items</p>
 </section>
 
 <div class="grid stats">
   {stat("Fixtures verified", c['total'], "official source on every row")}
   {stat("Lines originated", c['originated'], "moneyline · handicap · totals")}
   {stat("High-confidence picks", c['high'], "written predictions included")}
-  {stat("Flagged for review", len(flagged['items']), "blank, unverified or irregular")}
+  {stat("Open review items", len(flagged['items']), "blank, unverified or irregular")}
 </div>
 
 <h2 class="section">Sports covered</h2>
@@ -348,7 +348,7 @@ def build_picks(matches, preds):
 <section class="hero">
   <h1>Picks and predictions</h1>
   <p class="lede">One selection per fixture, graded by how decisive the model is and how much verified data backs it.
-  Written predictions exist only for high-confidence picks — four NHL games in this release.</p>
+  Written predictions exist only for high-confidence picks — {len(preds['predictions'])} NHL games in this release.</p>
   <p class="meta">{len(preds['predictions'])} written predictions · {matches['counts']['high']} high · {matches['counts']['medium']} medium · {matches['counts']['low']} low</p>
 </section>
 
@@ -360,8 +360,9 @@ def build_picks(matches, preds):
 <thead><tr><th>Sport</th><th>Match</th><th>Selection</th><th>Model %</th><th>Our price</th><th>Confidence</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div></div>
 
-<div class="note">No pick was made on a market we could not originate. NBA totals, all cricket markets and the
-San Jose–Ottawa NHL game are blank for that reason.</div>
+<div class="note">No pick was made on a market we could not originate. All eleven NBA game totals and every
+cricket market are blank for that reason; the two cricket fixtures carry a result market only where the model could
+not be fed a verified strength input, so they appear as fixtures without a line.</div>
 """
     return page("Picks & predictions", "picks.html", body, "Confidence-graded selections with verified-source written predictions.")
 
@@ -369,6 +370,15 @@ San Jose–Ottawa NHL game are blank for that reason.</div>
 def build_flagged(flagged, matches):
     order = {"high": 0, "medium": 1, "low": 2}
     items = sorted(flagged["items"], key=lambda i: (order.get(i["severity"], 3), i["id"]))
+    resolved = flagged.get("resolved", [])
+    resolved_rows = "".join(f"""<tr>
+      <td class="mono">{E(i['id'])}</td>
+      <td><span class="badge b-sev-resolved">Resolved</span></td>
+      <td>{E(i['category'])}</td>
+      <td><b>{E(i['item'])}</b><span class="sub" style="max-width:560px">{E(i['detail'])}</span>
+          <span class="sub" style="max-width:560px">Closed {E(i['closed_at'])} by {E(i['closed_by'])}. {E(i.get('evidence',''))}</span></td>
+      <td class="small"><a href="{E(i['source'])}" rel="noopener">official / source page</a></td>
+    </tr>""" for i in resolved)
     rows = "".join(f"""<tr>
       <td class="mono">{E(i['id'])}</td>
       <td><span class="badge b-sev-{E(i['severity'])}">{E(i['severity']).title()}</span></td>
@@ -390,12 +400,18 @@ def build_flagged(flagged, matches):
   <p class="lede">Everything that could not be confirmed from an official source, every value deliberately left
   blank, and every irregularity found in OLBG's own pages. These items do not block publication — they are the
   review queue.</p>
-  <p class="meta">{len(items)} items · {len(blanks)} blank or unoriginated values</p>
+  <p class="meta">{len(items)} open items · {len(resolved)} closed since the first capture · {len(blanks)} blank or unoriginated values</p>
 </section>
 
 <div class="panel"><div class="table-scroll"><table>
 <thead><tr><th>ID</th><th>Severity</th><th>Category</th><th>Item and detail</th><th>Source</th></tr></thead>
 <tbody>{rows}</tbody></table></div></div>
+
+<h2 class="section">Closed since the first capture</h2>
+<p class="section-sub">Items that were open in an earlier capture and have since been resolved against an official source. They stay on this page so the audit trail is visible.</p>
+<div class="panel"><div class="table-scroll"><table>
+<thead><tr><th>ID</th><th>Status</th><th>Category</th><th>Item and resolution</th><th>Source</th></tr></thead>
+<tbody>{resolved_rows}</tbody></table></div></div>
 
 <h2 class="section">Values left blank on purpose</h2>
 <p class="section-sub">No value in this list was estimated. Blank means the official source did not supply it inside the capture window.</p>
@@ -404,7 +420,6 @@ def build_flagged(flagged, matches):
 <h2 class="section">What a reviewer should do next</h2>
 <details open><summary>Highest-value fixes</summary>
 <ul>
-<li>Capture the missing NHL game on 22 October (Seattle home) and the Sharks' goal totals, then re-run <code>scripts/model.py</code>.</li>
 <li>Read the ATP rankings and PDC Order of Merit from a browser-rendered page so tennis and darts can be lined.</li>
 <li>Confirm the Gaelic football club fixtures on the relevant county board sites before publishing them.</li>
 <li>Survey the eight sports that were not captured at all (Handball, Volleyball, Golf, Motor Racing, Greyhounds, eSports, Aussie Rules, Rugby League).</li>

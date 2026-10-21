@@ -1,25 +1,11 @@
 {
   "meta": {
     "purpose": "Everything that could not be confirmed from an official source, every value deliberately left blank, and every irregularity found while reverse-engineering OLBG. Nothing here blocks publication; it is the reviewer's queue.",
-    "count": 19
+    "count": 18,
+    "resolved_count": 2,
+    "note": "Two items (F01, F02) were closed on 2026-10-21 by session db99ed90 from official feeds; they are listed separately under 'Closed since the first capture' so the open count stays honest."
   },
   "items": [
-    {
-      "id": "F01",
-      "severity": "high",
-      "category": "Data gap",
-      "item": "NHL 2026-10-22, 12th game (Seattle Kraken home)",
-      "detail": "The NHL score feed lists 12 games for 22 October. Eleven were captured with both teams, venue and start time. The twelfth (at Climate Pledge Arena) was cut off mid-record, so the away team is unknown and the fixture is omitted rather than guessed.",
-      "source": "https://api-web.nhle.com/v1/score/2026-10-22"
-    },
-    {
-      "id": "F02",
-      "severity": "medium",
-      "category": "Unverified value",
-      "item": "San Jose Sharks goals for / against",
-      "detail": "The Sharks' goals-for and goals-against did not appear inside the captured response window of the NHL team-summary endpoint. Their 2026-10-22 game at Ottawa therefore has no originated line; the row is published with blank goals data.",
-      "source": "https://api.nhle.com/stats/rest/en/team/summary"
-    },
     {
       "id": "F03",
       "severity": "low",
@@ -97,7 +83,7 @@
       "severity": "medium",
       "category": "OLBG irregularity",
       "item": "OLBG displayed times do not map to one timezone",
-      "detail": "NBA events show US-Eastern clock times roughly ten minutes after the official tip time (OLBG 19:10 vs NBA 19:00 ET for Milwaukee @ Washington). NHL events show UK clock times roughly seven minutes after the equivalent UK time (OLBG 00:37 vs an 00:30 UK face-off). The dataset stores OLBG strings verbatim and takes authoritative times from the league feed.",
+      "detail": "OLBG renders clock times in the viewer's timezone and never states the zone. The same two NHL fixtures (PHI@BUF, FLA@OTT, both 23:30Z) rendered as 'Tomorrow 00:37' in one fetch and 'Today 19:37' in another about an hour later - the same instant, once in UK time and once in US Eastern. NBA events show the same offset: OLBG 19:10 against the NBA's 19:00 ET tip. The dataset stores OLBG strings verbatim and takes authoritative times from the league feed, never from OLBG.",
       "source": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4"
     },
     {
@@ -155,6 +141,38 @@
       "item": "NHL goal totals differ by shootout convention",
       "detail": "nhl.com/standings counts the shootout-deciding goal in GF/GA; api.nhle.com/stats/rest/en/team/summary does not. Over the same games Ottawa read 24 GF on standings vs 22 in the API (two shootout wins), Buffalo 34 GA vs 33 (one shootout loss) and Seattle 39 vs 37 (two shootout wins). Our inputs are captured from nhl.com/standings, so our rates sit up to ~0.2 goals per game above the stats-API view. Disclosed rather than adjusted, because the input is correct for its cited source. Found by a separate verification pass (PR #11).",
       "source": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2"
+    },
+    {
+      "id": "F20",
+      "severity": "low",
+      "category": "OLBG coverage",
+      "item": "OLBG's NHL pages list only 2 of the 14 NHL games in the window",
+      "detail": "Both https://www.olbg.com/betting-tips/Ice_Hockey/13 and https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13 return only the two 21 October games (event_id 199897 PHI@BUF and 199896 FLA@OTT, each with a single Game Totals tip) plus four European club fixtures. The twelve 22 October NHL games are not listed even though the league schedule and the club feeds confirm them. That is why 12 of the 14 NHL rows carry no OLBG event link: the link is left out rather than constructed.",
+      "source": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+    }
+  ],
+  "resolved": [
+    {
+      "id": "F01",
+      "severity": "resolved",
+      "category": "Data gap — closed",
+      "item": "NHL 22 October: two night-cap games were missing from the capture",
+      "detail": "The official score feed lists 12 games on 22 October and the first capture stopped after ten (the earlier note said eleven, which was itself off by one). The two missing fixtures were Utah Mammoth at Seattle Kraken (2026020164, Climate Pledge Arena) and Detroit Red Wings at Vancouver Canucks (2026020165, Rogers Arena), both starting 02:00Z on 23 October. Each was recovered from its club's official schedule endpoint, which carries the same startTimeUTC and venue fields as the score feed, and both are now published with a money line, puck line and total. The NHL slate is 14/14 for 21-22 October.",
+      "source": "https://api-web.nhle.com/v1/club-schedule-season/SEA/20262027",
+      "closed_at": "2026-10-21T06:10:00Z",
+      "closed_by": "session db99ed90",
+      "evidence": "Corroborated for Vancouver at https://api-web.nhle.com/v1/club-schedule-season/VAN/20262027"
+    },
+    {
+      "id": "F02",
+      "severity": "resolved",
+      "category": "Unverified value — closed",
+      "item": "San Jose Sharks goals for / against",
+      "detail": "The stored Sharks row was a nine-game snapshot with empty goal columns, so the 22 October game at Ottawa could not be lined. Re-read from the official team summary filtered to teamId=28: 10 GP, 5-4-1, 26 goals for, 34 against, 11 points, matching the 2.60 and 3.40 per-game rates in the same feed. The row is complete and the Sharks-Senators game now carries a money line, puck line and total.",
+      "source": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=gameTypeId%3D2%20and%20seasonId%3D20262027%20and%20teamId%3D28",
+      "closed_at": "2026-10-21T06:10:00Z",
+      "closed_by": "session db99ed90",
+      "evidence": "Same endpoint as the rest of the team table; only the team filter differs."
     }
   ]
 }

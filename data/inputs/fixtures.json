@@ -116,9 +116,29 @@
         "home": "EDM",
         "venue": "Rogers Place",
         "game_id": 2026020163
+      },
+      {
+        "id": "nhl-2026020164",
+        "date": "2026-10-22",
+        "start_utc": "2026-10-23T02:00:00Z",
+        "away": "UTA",
+        "home": "SEA",
+        "venue": "Climate Pledge Arena",
+        "game_id": 2026020164,
+        "olbg_event_url": null
+      },
+      {
+        "id": "nhl-2026020165",
+        "date": "2026-10-22",
+        "start_utc": "2026-10-23T02:00:00Z",
+        "away": "DET",
+        "home": "VAN",
+        "venue": "Rogers Arena",
+        "game_id": 2026020165,
+        "olbg_event_url": null
       }
     ],
-    "note": "source_url is a template; each row cites the date-specific score feed (…/score/YYYY-MM-DD)."
+    "note": "source_url is a template; each row cites the date-specific score feed (…/score/YYYY-MM-DD). The two 22 October night-cap games (2026020164, 2026020165) were captured from the club schedule endpoints for Seattle and Vancouver, which carry the same startTimeUTC and venue fields."
   },
   "nba": {
     "source_name": "NBA official games page",

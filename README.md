@@ -11,11 +11,22 @@ The repository holds two published layers, both live:
 
 | Layer | Entry point | What it is |
 |---|---|---|
-| **Dashboard (this release)** | `/index.html` | 33 verified fixtures · 30 originated lines · 4 high-confidence predictions · 18 flagged items |
-| **Prior audit site** | `/site/index.html` | The first two sessions' evidence audit: 2 NHL fixtures, 8 review items, category pages, its own build + tests |
+| **Slate dashboard** | `/index.html` | 33 verified fixtures · 30 originated lines · 4 high-confidence predictions · 18 flagged items. Built by `scripts/model.py` → `data/matches.json` → `scripts/build_site.py`. |
+| **Evidence desk v2** | `/site/index.html` | 25 verified fixtures · 64 markets originated (money line, puck line, total) · 4 sourced high-confidence predictions · 8 flagged items. Built by `scripts/engine.py` + `scripts/build.py` from `data/desk/`. |
 
-The prior audit site is preserved unchanged (its build, tests and CI check are untouched). The dashboard links to
-it from the top navigation as **Prior audit**.
+Both layers are live and independent. The root dashboard was contributed by the `42fb7792` session; the
+`4a778bb7` session rebuilt the `site/` layer, which had previously been the two-fixture audit. Each layer states
+its own snapshot and scope, and neither reuses a bookmaker price.
+
+The two layers differ in breadth and depth and **do not share a fixture file**. Where they overlap (NHL, NBA) they
+were verified against the same league sources but originate lines with different models, so their prices differ.
+Treat each page's own numbers as the authoritative statement of that page's method; the method pages are the
+contract.
+
+> Integration note (2026-10-21): the merge that combined these layers preserved the root dashboard and its
+> pipeline byte-for-byte apart from the navigation label (`Prior audit` → `Evidence desk v2`) and a footer link.
+> `scripts/build.py`, `tests/**` and `site/**` now belong to the evidence desk; the older two-fixture audit data
+> remains at `data/events.json` for provenance and is no longer built by either pipeline.
 
 ## What is in the dashboard release (capture window 2026-10-21 05:10–05:45 UTC)
 
@@ -30,6 +41,28 @@ it from the top navigation as **Prior audit**.
 Two of the 33 rows are deliberately blank: the Sharks' goal totals were never captured, and the ICC ranking
 table did not render, so no cricket line could be originated without inventing an input. Both are on the
 [Flagged for review](https://buffedlizard55-lab.github.io/OLBG2/flagged.html) page with source links.
+
+## Evidence desk v2 (capture 2026-10-21 05:55 UTC)
+
+| Sport | Window | Fixtures | Markets | High confidence |
+|---|---|---|---|---|
+| Ice hockey (NHL) | Oct 21–22 | 14 | Money line, puck line, total | 4 |
+| Basketball (NBA) | Oct 21 | 11 | Money line, spread (baseline only) | 0 |
+
+`scripts/engine.py` originates prices from official inputs only: NHL goal difference per game shrunk toward the
+league mean by 12 games, plus a 0.25-goal home edge, logistic scale 1.2, no-vig American prices, half-goal totals
+(σ = 1.7). NBA has no 2026-27 sample, so every club is league-average with a 2.5-point home edge and no total.
+Confidence is computed: **high** needs ≥ 13 points of win-probability edge, ≥ 7 games per side and an evidence
+pack (the fixture's own gamecenter cited in the prediction); a large edge without a pack is capped at medium.
+
+`scripts/build.py` fails the build if any fixture, pick or flag cites a URL outside the allow-listed registry
+(`data/desk/sources.json`), if an excluded sport appears, if a pick contradicts the model's favourite, if a
+prediction is under 30 words or duplicated, or if a high-confidence row lacks a prediction.
+
+```sh
+python -m unittest discover -s tests -v   # 28 tests, including link resolution and all data rules
+python scripts/build.py                   # regenerates site/ deterministically
+```
 
 ## Scope
 

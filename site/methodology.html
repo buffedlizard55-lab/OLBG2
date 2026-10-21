@@ -1,12 +1,71 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Methodology · OLBG research desk</title><link rel="stylesheet" href="assets/style.css"></head><body><div class="shell"><aside class="sidebar"><div class="brand"><span class="brand-icon">O<span>.</span></span><div><strong>OLBG / research</strong><small>Independent evidence desk</small></div></div><div class="nav-label">WORKSPACE</div><nav aria-label="Main navigation"><a class="nav-item " href="index.html">Overview</a><a class="nav-item " href="sports/ice-hockey.html">Ice hockey</a><a class="nav-item " href="sports/basketball.html">Basketball</a><a class="nav-item " href="sports/tennis.html">Tennis</a><a class="nav-item " href="sports/baseball.html">Baseball</a><a class="nav-item active" href="methodology.html">Methodology</a><a class="nav-item " href="flagged.html">Flagged for review</a></nav><div class="side-note"><span class="dot"></span> Evidence-first snapshot<br><small>Not a live betting feed</small></div></aside><main class="main"><header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> METHODOLOGY</span><span class="top-right">RESEARCH MODE <span class="live-dot"></span></span></header><section class="subhero"><div class="eyebrow">SNAPSHOT <span class="dash"></span> 2026-10-21T05:20:00Z</div><h1>Methodology<span class="accent">.</span></h1><p>How independent lines, confidence and high-confidence narratives would be produced — and why none are published in this snapshot.</p></section>
-    <div class="section-head"><div><div class="eyebrow">PRICING FRAMEWORK</div><h2>Originating our own lines</h2></div></div>
-    <div class="method-grid">
-      <article><b>Requirements before any line is shown</b><p>An originated money line, handicap (puck line / point spread) and total (over/under) requires: (1) a documented statistical method (e.g., Elo, Poisson, Dixon-Coles for soccer-free sports), (2) explicit inputs (form, injuries, home advantage) with source links, (3) timestamp, and (4) reproducible calculation (code or spreadsheet). Without these, the table shows — / — / —.</p><small>Current status: 00 lines originated. Rule enforced by validation.</small></article>
-      <article><b>Markets examined per match</b><p>Every available market is considered: Win match / Money line (2-way incl. OT for NHL, 3-way where applicable), Handicap / Puck line / Point spread (typically ±1.5 in NHL, varies elsewhere), Match total / Game totals Over-Under. OLBG tags are used as research categories only, never as our price.</p><small>Examples on OLBG: PHI@BUF Over 5.50; WAS -4.50 spread; Fernandez Win Match.</small></article>
-      <article><b>Winner &amp; confidence</b><p>After originating lines, a winner (or Over/Under) is selected and labeled low / medium / high confidence. Low/medium can be a naked pick with a source note. High confidence additionally requires a 30+ word human narrative naming teams, players, current form and recent match history — each factual claim backed by an official source.</p><small>Test enforces: confidence high ⇒ winner + 30-word prediction present.</small></article>
-      <article><b>What verification looks like</b><p>Line-by-line: every table row has an official league URL (NHL gamecenter, NBA games, MLB schedule, etc.) and an OLBG URL. If a value cannot be confirmed on the official source, it stays blank and the row is flagged. Nothing is inferred. See Flagged page for the current gaps.</p><small>Verification log is in COORDINATION.md with direct links.</small></article>
-    </div>
-    <div class="section-head below"><div><div class="eyebrow">EXCLUSIONS</div><h2>Sports outside scope</h2></div></div>
-    <div class="scope-grid"><article class="scope-card muted-card"><h3>Excluded by brief</h3><p>Soccer, boxing, UFC/MMA, football (including Gaelic &amp; American football), hurling, horse racing, cycling, specials. These are never treated as eligible, even if OLBG lists them.</p><small>OLBG categories exist for these but are out of scope for this project.</small></article><article class="scope-card"><h3>Eligible — but not necessarily covered today</h3><p>All other sports OLBG tips are in scope when they appear: ice hockey (NHL, EHL, SHL...), basketball (NBA, EuroLeague...), tennis (ATP/WTA/ITF), baseball (MLB), rugby, darts, snooker, volleyball, etc. Coverage depends on what official schedule can verify on the snapshot date.</p><small>See category pages for per-sport status.</small></article></div>
-    <div class="notice" style="margin-bottom:40px"><b>No betting advice.</b> This is a research snapshot. Nothing here is a recommendation or guaranteed outcome.</div>
-    <footer>Independent research snapshot · Not affiliated with OLBG or any league · No betting advice or guaranteed outcomes.</footer></main></div></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Method · OLBG research desk</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><span class="mark">O<span>.</span></span><div><strong>OLBG research</strong><small>Independent evidence desk</small></div></div>
+  <div class="nav-label">Workspace</div>
+  <nav aria-label="Main"><a class="nav-item" href="index.html"><span>Overview</span></a><a class="nav-item" href="picks.html"><span>Pick sheet</span></a><a class="nav-item" href="sports/index.html"><span>Sports</span></a><a class="nav-item active" href="methodology.html"><span>Method</span></a><a class="nav-item" href="sources.html"><span>Sources</span></a><a class="nav-item" href="flagged.html"><span>Flagged</span></a></nav>
+  <div class="side-note"><span class="dot"></span><div><strong>Snapshot</strong><br><small>2026-10-21 05:55 UTC</small></div></div>
+  <div class="side-note quiet"><small>Not affiliated with OLBG, the NHL or the NBA. No betting advice.</small></div>
+</aside>
+<main class="main">
+  <header class="topbar"><span>SPORTS INTELLIGENCE <span class="slash">/</span> METHOD</span><span class="top-right"><span class="crumb">v1.0.0</span><span class="live-dot"></span> RESEARCH MODE</span></header>
+  <section class="subhero"><div class="eyebrow">METHOD <span class="dash"></span> v1.0.0</div>
+<h1>Originated, not copied<span class="accent">.</span></h1>
+<p>No bookmaker price is read or reproduced. Every price on this site is derived from official league inputs with the
+parameters below, so any line can be recomputed by hand.</p></section>
+<div class="prose">
+<h2>NHL</h2>
+<ol>
+<li><b>Rating.</b> For each club, goal difference per game is multiplied by GP ÷ (GP + 12). The shrink pulls small samples toward the league mean, which is zero by construction.</li>
+<li><b>Expected margin.</b> Home rating + 0.25 goals − away rating.</li>
+<li><b>Win probability.</b> P(home) = 1 ÷ (1 + e<sup>−margin ÷ 1.2</sup>), which includes overtime and shootouts.</li>
+<li><b>Price.</b> No-vig fair American odds from that probability, rounded to the nearest 5. A 55% chance is about −120.</li>
+<li><b>Puck line.</b> P(cover −1.5) = 1 − logistic(1.5 − margin, 1.2).</li>
+<li><b>Total.</b> Each side's goals for per game is blended with the opponent's goals against per game, shrunk toward 6.0 goals over the same 12-game weight. The line is the nearest half-goal; over/under uses a normal curve with σ = 1.7.</li>
+</ol>
+<h2>NBA</h2>
+<p>The 2026-27 season is one game old at the snapshot, so every club carries a league-average rating and only home
+court separates the sides (2.5 points, logistic scale 11.0). That produces a
+-2.5 home spread and a money line near −125. No total is originated because no verified
+league scoring baseline is loaded. These are opening-style lines, not informed prices, and every NBA pick is low confidence.</p>
+<h2>Confidence</h2>
+<ul>
+<li><b>High</b> requires at least 13 points of model edge, a games-played sample of at least
+7 per side, and an evidence pack: the fixture's own official game page must be cited in the prediction.</li>
+<li><b>Medium</b> requires at least 6 points of edge. A larger edge without an evidence pack is capped at medium.</li>
+<li><b>Low</b> covers everything else, including every baseline NBA line.</li>
+</ul>
+<h2>Evidence rules</h2>
+<ul>
+<li>A fixture is published only with an official league URL on an approved host. OLBG is a reference, never a fixture source.</li>
+<li>A high-confidence prediction is at least 30 words, unique, and names the team, a player, current form, recent results and the exact selection.</li>
+<li>Every factual claim in a prediction has a source link on the same row, and the fact list is printed next to it.</li>
+<li>Unconfirmed values stay blank. Blank is a finding, not an invitation to infer.</li>
+</ul>
+<h2>Known limits</h2>
+<ul><li>The NHL sample is 7-11 games per club, so ratings are heavily shrunk toward the mean.</li><li>The NBA sample is zero games, so every NBA line is an explicit baseline.</li><li>No line is originated for a market when its inputs are missing; the cell stays blank and is flagged.</li><li>Prices are fair odds with no margin and are not betting advice.</li></ul>
+<h2>Parameters</h2>
+<div class="table-scroll"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td class="mono">nhl_shrink_games</td><td class="mono">12</td></tr><tr><td class="mono">nhl_home_goals</td><td class="mono">0.25</td></tr><tr><td class="mono">nhl_logistic_scale</td><td class="mono">1.2</td></tr><tr><td class="mono">nhl_total_sd</td><td class="mono">1.7</td></tr><tr><td class="mono">nhl_league_total</td><td class="mono">6.0</td></tr><tr><td class="mono">nba_home_points</td><td class="mono">2.5</td></tr><tr><td class="mono">nba_logistic_scale</td><td class="mono">11.0</td></tr><tr><td class="mono">high_edge</td><td class="mono">0.13</td></tr><tr><td class="mono">medium_edge</td><td class="mono">0.06</td></tr><tr><td class="mono">min_games_for_high</td><td class="mono">7</td></tr><tr><td class="mono">min_prediction_words</td><td class="mono">30</td></tr></tbody></table></div>
+<p class="table-foot"><a href="data/lines.json">lines.json</a> contains the full computed output for auditing.</p>
+</div>
+  <footer>Independent research snapshot · fair odds only · no guaranteed outcomes · <a href="methodology.html">method</a> · <a href="flagged.html">flagged items</a> · <a href="../index.html">root dashboard</a></footer>
+</main></div>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var group = btn.getAttribute('data-group');
+    document.querySelectorAll('[data-group="' + group + '"]').forEach(function (b) { b.classList.toggle('on', b === btn); });
+    var want = btn.getAttribute('data-filter');
+    document.querySelectorAll('[data-conf]').forEach(function (row) {
+      row.hidden = want !== 'all' && row.getAttribute('data-conf') !== want;
+    });
+  });
+});
+</script>
+</body></html>

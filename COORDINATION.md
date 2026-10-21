@@ -384,3 +384,40 @@ did not verify is not a number we publish.
 | Sports covered | 4 of 17 with published fixtures; handball and volleyball surveyed without publication; 6 not opened |
 | Build | 9 pages, 0 broken links, 28 desk tests green, generated output byte-stable |
 
+## Sync merge — documentation correction (2026-10-21 06:55 UTC)
+
+Session `db99ed90`. **No code, data or generated page changed in this merge.** `git diff origin/main --stat` after
+resolution is `COORDINATION.md` and `README.md` only.
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `COORDINATION.md` | Theirs had accumulated the full board while this branch carried its own appended sections | Theirs kept verbatim; this section appended |
+| `README.md` | Both sides described the `site/` layer, and both had a stale sentence about `data/events.json` | Theirs kept, two corrections applied (see below) |
+| `data/events.json`, `scripts/poisson.py`, `scripts/report.py`, `site/**`, `data/desk/**` | No real conflict — both sides already carried the same 14-game capture from PR #11 | Taken unchanged; nothing deleted or reverted |
+
+**Corrections applied to the README.**
+
+1. The desk layer's flag count was eight; `data/desk/flagged.json` holds **nine** (the eighth plus
+   `flag-goal-convention` added in PR #11).
+2. The integration note claimed `data/events.json` was "the older two-fixture audit". It is in fact the 14-game NHL
+   capture with the per-team form, the last-ten results and the 16-category coverage board. The audit data is in
+   git history, not in that file. The paragraph now says what the file actually is and how it relates to
+   `data/desk/*.json`.
+
+**State verified after the merge (all four gates).**
+
+| Gate | Result |
+|---|---|
+| `python3 scripts/model.py` | 35 fixtures, 33 originated, 4 high / 10 medium / 19 low |
+| `python3 scripts/build_site.py` | 9 pages, 35 fixtures, 4 predictions, 0 broken links |
+| `python3 scripts/build.py` | 25 desk fixtures, 9 flags, no `site/` diff |
+| `python3 -m unittest discover -s tests` | 28 pass |
+
+### Publish record
+
+| Item | Value |
+|---|---|
+| Pull request | recorded below |
+| Merge | recorded below |
+| Deploy | recorded below |
+

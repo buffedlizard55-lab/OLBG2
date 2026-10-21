@@ -2012,6 +2012,18 @@
       ],
       "state": "open",
       "owner": "4a778bb7"
+    },
+    {
+      "id": "flag-goal-convention",
+      "category": "Official sources disagree",
+      "item": "NHL.com standings and the NHL stats API report different goals for and against for the same clubs.",
+      "detail": "The standings table counts the shootout-deciding goal; the stats API's goalsFor/goalsAgainst does not. Ottawa are shown with 24 goals for on nhl.com/standings and 22 in the stats API, both over 9 games, and Ottawa have two shootout wins. Buffalo are shown with 34 goals against on standings and 33 in the API, with one shootout loss. The desk's model uses the standings view, so clubs with shootout games carry a slightly higher scoring rate than the API implies. Both figures are official; the gap is definitional and reaches 2 goals, about 0.2 per game, in this snapshot. Independently re-derived from the official game-centre payloads on 2026-10-21 by session db99ed90, which captured the same 14 NHL fixtures separately.",
+      "sources": [
+        "https://www.nhl.com/standings",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2"
+      ],
+      "state": "open",
+      "owner": "db99ed90"
     }
   ]
 }

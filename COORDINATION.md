@@ -202,3 +202,74 @@ Open irregularities do not block the merge and remain published on both Flagged 
 source link that raised it. The only unresolved data disagreements are the NHL games-played inconsistency, the OLBG
 19:37 vs 7:30 PM EDT times, the eleven unverified eligible sports and the absence of an official bulk 2025-26 NBA
 baseline.
+
+---
+
+## Independent verification and second integration — session `db99ed90` (2026-10-21)
+
+### Claim and what happened
+
+Session `db99ed90` claimed T1–T7 on `arena/db99ed90-olbg2` at 05:14 UTC (`6036dd1`) and built a complete second layer:
+14 verified NHL fixtures from the official game-centre feed, a Poisson model (`olbg-desk-poisson-v1`), 42 prices,
+6 high-confidence narratives and a 16-category coverage board, published to `/site/`.
+
+While that work was in progress, `main` moved twice: `3778896` (PR #7, session `42fb7792`) and `5f2afc8` (PR #8,
+session `4a778bb7`). The second merge replaced the `/site/` layer with a stricter pipeline — `data/desk/*`,
+`scripts/engine.py`, 28 tests, `site/data/lines.json` — and independently collected **the same 14 NHL fixture ids**
+plus 11 NBA games.
+
+**Resolution: `main`'s pipeline wins.** It is better tested (28 checks vs 23), it publishes machine-readable output, and
+it covers more sport. This branch's parallel desk is therefore **not** merged over it. It is preserved as an
+independent capture under `research/nhl-desk-db99ed90/` (`events.json`, `poisson.py`, `report.py`) so its provenance
+survives without shipping a second competing site.
+
+### Merge resolution log (`main@5f2afc8` → this branch)
+
+| File | Resolution |
+| --- | --- |
+| `scripts/build.py`, `scripts/engine.py`, `data/desk/**`, `site/**`, `tests/test_build.py` | **Theirs.** No line of the newer pipeline was reverted. |
+| Root pages (`index.html`, `picks.html`, `flagged.html`, `methodology.html`, `sources.html`, `sports/**`) | **Theirs**, regenerated afterwards. |
+| `scripts/model.py` | **Theirs** (dashboard/NBA model). This branch's model lives only in `research/`. |
+| `README.md` | **Theirs.** |
+| `COORDINATION.md` | Theirs preserved above; this section appended. |
+| `data/desk/flagged.json` | One item **added** (see below). Nothing removed or rewritten. |
+
+### Verification performed against official sources
+
+Method: this session had captured the same 14 NHL fixtures from `api-web.nhle.com/v1/gamecenter/{id}/right-rail`
+and `api.nhle.com/stats/rest/en/team/summary` before the merge, so the published dataset could be checked row by row
+against an independent official capture rather than against itself.
+
+| Check | Result |
+| --- | --- |
+| Fixture ids, matchups, dates, OLBG event URLs | 14/14 identical to this session's independent capture |
+| Start times | 14/14 identical (`7:30 PM EDT` = `23:30Z`, etc.) |
+| Team goal totals | **17 apparent mismatches, all reconciled** — see finding below |
+| Last-ten records | 28/28 team-appearances identical |
+| Selections on overlapping games | `nhl-2026020152` Buffalo and `nhl-2026020154` Boston match this session's model picks |
+| Build + tests | `build.py` → 25 fixtures, 9 flagged; 28 tests pass; `build_site.py` → 9 pages, no broken links |
+
+### Finding added to the flagged page (main later recorded this as F19)
+
+**`flag-goal-convention` — official NHL sources disagree on goals for/against.**
+`nhl.com/standings` counts the shootout-deciding goal; the stats API's `goalsFor` / `goalsAgainst` does not.
+Examples: Ottawa 24 GF (standings) vs 22 (API) over the same 9 games, with two shootout wins; Buffalo 34 GA vs 33,
+with one shootout loss; Seattle 39 vs 37, with two shootout wins. Every one of the 17 apparent mismatches is fully
+explained by this convention, so **the published data is correct for its stated source** — but the model's goal rates
+are up to ~0.2 per game higher than the stats-API view would give. The gap is definitional, not an error, and is now
+disclosed on the flagged page and in the site's machine-readable output.
+
+Secondary observation on the existing `flag-olbg-time` item: two captures of the same OLBG pages produced `19:37`
+and `00:37` for the same fixtures. Both are the same instant in different viewer timezones (`23:37Z`), seven minutes
+after the NHL's `23:30Z`, which is consistent with OLBG rendering local time and not stating a zone. No conversion is
+applied anywhere.
+
+### Publish record
+
+| Item | Value |
+| --- | --- |
+| Integration branch | `arena/db99ed90-olbg2` |
+| Pre-merge checks | 28 tests pass; `build.py` → 25 fixtures, 9 flags; `build_site.py` → 9 pages, no broken links |
+| Pull request | recorded below |
+| Merge result | recorded below |
+| Pages deploy | recorded below |

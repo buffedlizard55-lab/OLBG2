@@ -656,3 +656,31 @@ All earlier claims are complete; no active conflicting claim or open PR was foun
 Task status: **done** (integration code); external evidence gaps: **needs review**, published on `integration.html`. Detailed scope, source, findings and reproducible commands: `research/integration-audit.md`. Root, desk and survey data were preserved without alteration. Added survey discoverability, cross-layer evidence disclosures, secondary-source narrative review rows, freshness notices, cross-layer local-link checks and survey CI gates. All 33 unit tests pass, all three builds pass, survey structural checks pass, zero broken local links. These are not claims of exhaustive official factual verification. Full automatic current coverage and all-market origination remain unfulfilled and explicitly flagged.
 
 Initial pre-push `git pull --rebase origin arena/8103ccb6-olbg2` reported no remote ref (new branch). Claim was then pushed successfully. No conflict or work loss. Only the fixed Arena branch is used.
+## Current session `arena/dd14fcfd-olbg2` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Make the existing 130-event survey discoverable from the root dashboard | in progress | `arena/dd14fcfd-olbg2` | `scripts/build_site.py`, generated root HTML, `COORDINATION.md` |
+
+Claim is limited to root-dashboard navigation; the survey dataset and its generated pages remain owned by their prior contribution. Validation will run the survey integrity gate, both site builds, and unit tests.
+
+### Completion — `arena/dd14fcfd-olbg2`
+
+The root dashboard now links directly to `survey/index.html` in both the primary navigation and footer; the link is emitted by `scripts/build_site.py` and appears on all generated root pages. This makes the existing 130-event inventory and its sport/category pages discoverable without changing survey data or prior sources.
+
+Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no broken links); `python3 scripts/survey_verify.py` passed (all 130 inventory entries and 335 rows integrity checks, 24 scanned content pages, all internal links resolve); `python3 -m unittest discover -s tests -v` passed (28 tests). No new factual claims or sports data were introduced.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Root-dashboard Survey navigation | done | `arena/dd14fcfd-olbg2` | `scripts/build_site.py`, root generated HTML, `COORDINATION.md` |
+
+| Item | Value |
+|---|---|
+| Follow-up PR | [#27](https://github.com/buffedlizard55-lab/OLBG2/pull/27) |
+| Merge result | Merged 2026-10-21 06:41:09 UTC; merge commit `e5ad112b41d4df167026fd9429310d2335dc4727` |
+| Validate Pages content | Run `39556956109` success |
+| GitHub Pages deployment | Run `39556955856` success, including deploy job |
+
+
+### Integration conflict log — 8103ccb6
+PR #29 initially could not merge because main advanced to 8457c79 (another session added Survey navigation). Stopped and merged origin/main. Preserved both coordination sections, kept their Survey footer, consolidated duplicate Survey nav items, and regenerated all conflicting HTML from the combined builder. No data was changed or discarded. Re-ran all three builds and 33 tests.

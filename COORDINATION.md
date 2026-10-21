@@ -839,3 +839,13 @@ Audit: 130/130 survey inventory rows lack an explicit official fixture source; 1
 This is a documentation-only correction based on the existing integration review and the official-source provenance audit added by session `arena/18eca832`. No sporting facts, fixtures, prices, or generated pages will be changed. The board records claims from those prior audits; this session does not independently verify any external sporting fact.
 
 Rebase note: sync with `origin/main` fetched the merged PR #34 publication record concurrently with this claim. The conflict was only in append-only `COORDINATION.md`; both the complete upstream publish record and this claim are retained. No code or data changes were lost.
+
+### Completion — session `arena/e3c5f898-olbg2`
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Correct README claims that overstated official verification, coverage, and cross-layer uniqueness | done | `arena/e3c5f898-olbg2` | `README.md`, `COORDINATION.md` |
+
+Updated the README to distinguish stored snapshot rows from officially verified fixtures; state the survey's documented source-field gaps and the limits of domain classification; describe root/survey scope differences and known cross-layer overlaps; and avoid presenting the inventory as a live, complete, or deduplicated OLBG slate. The descriptions were checked against `integration.html`, `research/official-source-audit-18eca832.md`, `scripts/official_source_audit.py`, `data/survey/sports.json`, and the existing README counts. This was an internal-documentation audit only: no external sports fact was newly verified, and no match, market, prediction, model, or generated page was changed.
+
+Verification: `python3 -m unittest discover -s tests -v` (36 passed); `python3 scripts/build.py` (25 fixtures); `python3 scripts/build_site.py` (10 pages, 35 fixtures, 0 broken links); `python3 scripts/survey_build.py` and `python3 scripts/survey_verify.py` (24 pages, 130 inventory rows, 11 lines, 2 predictions, 21 flags; all structural checks passed); `python3 scripts/integration_audit.py` (0 local-link errors); `python3 scripts/official_source_audit.py` (130 inventory rows without official fixture-source fields; 11/15 prediction-fact URLs outside its candidate official-domain allowlist; classification is not content verification). `git diff --check` passed. No sporting data changed.

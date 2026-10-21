@@ -1,26 +1,1324 @@
 {
-  "as_of_utc": "2026-10-21T05:12:00Z",
-  "scope": "Partial manual snapshot; not a complete or continuously updated OLBG inventory.",
+  "snapshot": {
+    "as_of_utc": "2026-10-21T05:52:00Z",
+    "window": "2026-10-21 to 2026-10-22 (NHL schedule days)",
+    "scope": "Official-source snapshot. Only fixtures whose teams, date and start time were read from an official competition feed are published as rows. Everything else is listed on the coverage board and on the Flagged for Review page.",
+    "excluded_sports": [
+      "Soccer / Football (OLBG id 1)",
+      "Boxing (OLBG id 16)",
+      "UFC / MMA",
+      "American Football (OLBG id 11)",
+      "Hurling",
+      "Horse Racing (OLBG id 2)",
+      "Cycling (OLBG id 17)",
+      "Gaelic Football (OLBG id 25)",
+      "Specials (TV, politics, awards)"
+    ]
+  },
+  "model": {
+    "name": "olbg-desk-poisson-v1",
+    "home_multiplier": 1.05,
+    "away_multiplier": 0.95,
+    "tie_split_home": 0.5,
+    "max_goals": 10,
+    "edge_high": 0.1,
+    "edge_medium": 0.06,
+    "parameters_note": "home_multiplier, away_multiplier, tie_split_home and the confidence edges are modelling choices made by this desk. They are not league statistics and are not presented as verified facts. Change them in this file and re-run scripts/build.py to reproduce every price."
+  },
   "events": [
     {
-      "id": "nhl-2026020152", "sport": "Ice hockey", "league": "NHL", "date": "2026-10-21", "time": "19:30 EDT", "away": "Philadelphia Flyers", "home": "Buffalo Sabres",
-      "official_url": "https://www.nhl.com/gamecenter/phi-vs-buf/2026/10/21/2026020152",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897",
-      "markets_checked": ["Money line", "Puck line", "Game total"],
-      "own_lines": {"money_line": null, "handicap": null, "total": null}, "winner": null, "confidence": null, "prediction": null,
-      "status": "needs review", "note": "NHL gamecenter confirms matchup and 7:30 PM EDT; OLBG lists 19:37 without a stated timezone. Market availability and independent prices have not been verified. No evidence-backed selection is published."
+      "id": "nhl-2026020152",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-21",
+      "start_utc": "2026-10-21T23:30:00Z",
+      "away": {
+        "name": "Philadelphia Flyers",
+        "abbrev": "PHI",
+        "coach": "Rick Tocchet",
+        "gf_pg": 1.55,
+        "ga_pg": 3.18,
+        "pp_pct": 0.129032,
+        "pk_pct": 0.846154,
+        "pp_rank": 27,
+        "pk_rank": 8,
+        "gf_rank": 32,
+        "ga_rank": 18,
+        "l10": "2-5-3",
+        "streak": "W2",
+        "recent": [
+          "W COL",
+          "W OTT",
+          "L DET",
+          "SOL SEA",
+          "L CAR",
+          "L BOS",
+          "L OTT",
+          "L TBL",
+          "OTL CAR",
+          "OTL NJD"
+        ]
+      },
+      "home": {
+        "name": "Buffalo Sabres",
+        "abbrev": "BUF",
+        "coach": "Lindy Ruff",
+        "gf_pg": 3.0,
+        "ga_pg": 3.67,
+        "pp_pct": 0.090909,
+        "pk_pct": 0.645161,
+        "pp_rank": 31,
+        "pk_rank": 30,
+        "gf_rank": 17,
+        "ga_rank": 26,
+        "l10": "4-3-2",
+        "streak": "O1",
+        "recent": [
+          "OTL MTL",
+          "OTW TOR",
+          "SOL MTL",
+          "W FLA",
+          "L UTA",
+          "L DAL",
+          "OTW MIN",
+          "W CHI",
+          "L CBJ"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/buf-vs-phi/2026/10/21/2026020152",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020152/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/PHI_Flyers_@_BUF_Sabres/13?event_id=199897"
+      },
+      "olbg_listed": true,
+      "pick": {
+        "selection": "Buffalo Sabres",
+        "confidence": "high",
+        "narrative": "Selection: Buffalo Sabres on the money line. Buffalo are 4-3-2 across their last ten and average 3.00 goals per game, while Philadelphia are last in the NHL at 1.55 goals per game and 2-5-3 over the same span, despite closing with wins over Colorado and Ottawa. The Flyers concede 3.18 per game, which leaves the Sabres the clear side.",
+        "basis": "Buffalo 3.00 GF/GP against Philadelphia 1.55 GF/GP, the lowest rate in the league."
+      },
+      "flags": [
+        "OLBG shows this fixture at 00:37 on its own clock the following day; the NHL start time is 23:30Z. OLBG does not state a timezone in the retrieved text, so no conversion is assumed."
+      ]
     },
     {
-      "id": "nhl-2026020153", "sport": "Ice hockey", "league": "NHL", "date": "2026-10-21", "time": "19:30 EDT", "away": "Florida Panthers", "home": "Ottawa Senators",
-      "official_url": "https://www.nhl.com/gamecenter/fla-vs-ott/2026/10/21/2026020153",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
-      "markets_checked": ["Money line", "Puck line", "Game total"],
-      "own_lines": {"money_line": null, "handicap": null, "total": null}, "winner": null, "confidence": null, "prediction": null,
-      "status": "needs review", "note": "NHL gamecenter confirms matchup and 7:30 PM EDT; OLBG lists 19:37 without a stated timezone. Market availability and independent prices have not been verified. No evidence-backed selection is published."
+      "id": "nhl-2026020153",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-21",
+      "start_utc": "2026-10-21T23:30:00Z",
+      "away": {
+        "name": "Florida Panthers",
+        "abbrev": "FLA",
+        "coach": "Paul Maurice",
+        "gf_pg": 3.33,
+        "ga_pg": 2.78,
+        "pp_pct": 0.209302,
+        "pk_pct": 0.805556,
+        "pp_rank": 16,
+        "pk_rank": 13,
+        "gf_rank": 9,
+        "ga_rank": 11,
+        "l10": "5-2-2",
+        "streak": "W3",
+        "recent": [
+          "W SEA",
+          "OTW VAN",
+          "W CBJ",
+          "L BUF",
+          "L MIN",
+          "W LAK",
+          "OTL ANA",
+          "OTL SJS",
+          "OTW CAR"
+        ]
+      },
+      "home": {
+        "name": "Ottawa Senators",
+        "abbrev": "OTT",
+        "coach": "Travis Green",
+        "gf_pg": 2.44,
+        "ga_pg": 2.56,
+        "pp_pct": 0.128205,
+        "pk_pct": 0.794118,
+        "pp_rank": 28,
+        "pk_rank": 16,
+        "gf_rank": 25,
+        "ga_rank": 8,
+        "l10": "6-3-0",
+        "streak": "L1",
+        "recent": [
+          "L PHI",
+          "SOW NYI",
+          "L STL",
+          "W NJD",
+          "SOW NSH",
+          "W PHI",
+          "L DET",
+          "W BOS",
+          "W TOR"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/ott-vs-fla/2026/10/21/2026020153",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020153/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896"
+      },
+      "olbg_listed": true,
+      "pick": {
+        "selection": "Florida Panthers",
+        "confidence": "low",
+        "narrative": null,
+        "basis": "Model separates the sides by 1.9 points; Florida's 5-2-2 last ten and 3.33 GF/GP edge Ottawa's 2.44."
+      },
+      "flags": [
+        "OLBG shows this fixture at 00:37 on its own clock the following day; the NHL start time is 23:30Z. No timezone is stated by OLBG in the retrieved text."
+      ]
+    },
+    {
+      "id": "nhl-2026020154",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": {
+        "name": "Nashville Predators",
+        "abbrev": "NSH",
+        "coach": "Andrew Brunette",
+        "gf_pg": 2.88,
+        "ga_pg": 2.75,
+        "pp_pct": 0.296296,
+        "pk_pct": 0.851852,
+        "pp_rank": 3,
+        "pk_rank": 7,
+        "gf_rank": 22,
+        "ga_rank": 10,
+        "l10": "3-2-3",
+        "streak": "W1",
+        "recent": [
+          "W STL",
+          "SOL SJS",
+          "L VGK",
+          "SOL OTT",
+          "W MTL",
+          "OTL TOR",
+          "W DAL",
+          "L MIN"
+        ]
+      },
+      "home": {
+        "name": "Boston Bruins",
+        "abbrev": "BOS",
+        "coach": "Marco Sturm",
+        "gf_pg": 3.6,
+        "ga_pg": 2.2,
+        "pp_pct": 0.214286,
+        "pk_pct": 0.8,
+        "pp_rank": 15,
+        "pk_rank": 14,
+        "gf_rank": 7,
+        "ga_rank": 4,
+        "l10": "7-2-1",
+        "streak": "O1",
+        "recent": [
+          "OTL DAL",
+          "W LAK",
+          "W ANA",
+          "W SJS",
+          "W PHI",
+          "W UTA",
+          "L OTT",
+          "L MIN",
+          "OTW WPG",
+          "W NYR"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/bos-vs-nsh/2026/10/22/2026020154",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020154/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Boston Bruins",
+        "confidence": "high",
+        "narrative": "Selection: Boston Bruins on the money line. Boston are 7-2-1 in their last ten, scoring 3.60 and conceding 2.20 goals per game, with wins over Los Angeles, Anaheim, San Jose, Philadelphia and Utah in that run. Nashville are 3-2-3 and carry a 29.6% power play, third in the NHL, so Boston's 80.0% penalty kill will be tested.",
+        "basis": "Boston 7-2-1 with 2.20 GA/GP against Nashville's 3-2-3 record and 2.88 GF/GP."
+      },
+      "flags": [
+        "Fixture is on the official NHL schedule. OLBG's ice hockey index listed only two NHL events at capture time, so this game has no individual OLBG event page to link."
+      ]
+    },
+    {
+      "id": "nhl-2026020155",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": {
+        "name": "New York Rangers",
+        "abbrev": "NYR",
+        "coach": "Mike Sullivan",
+        "gf_pg": 3.0,
+        "ga_pg": 2.18,
+        "pp_pct": 0.205882,
+        "pk_pct": 0.941176,
+        "pp_rank": 18,
+        "pk_rank": 2,
+        "gf_rank": 17,
+        "ga_rank": 3,
+        "l10": "7-2-1",
+        "streak": "W1",
+        "recent": [
+          "W ANA",
+          "OTL CBJ",
+          "L NJD",
+          "W TBL",
+          "W VAN",
+          "L WSH",
+          "W NYI",
+          "W UTA",
+          "W DET",
+          "W TBL"
+        ]
+      },
+      "home": {
+        "name": "Toronto Maple Leafs",
+        "abbrev": "TOR",
+        "coach": "Jim Hiller",
+        "gf_pg": 3.45,
+        "ga_pg": 3.09,
+        "pp_pct": 0.275,
+        "pk_pct": 0.973684,
+        "pp_rank": 6,
+        "pk_rank": 1,
+        "gf_rank": 8,
+        "ga_rank": 16,
+        "l10": "5-3-2",
+        "streak": "W2",
+        "recent": [
+          "W CBJ",
+          "W SJS",
+          "L NYI",
+          "OTL BUF",
+          "L UTA",
+          "W COL",
+          "SOL VGK",
+          "OTW NSH",
+          "L OTT",
+          "W NYI"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/tor-vs-nyr/2026/10/22/2026020155",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020155/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Toronto Maple Leafs",
+        "confidence": "low",
+        "narrative": null,
+        "basis": "Model separates the sides by 2.0 points despite Toronto's league-best 97.4% penalty kill."
+      },
+      "flags": []
+    },
+    {
+      "id": "nhl-2026020156",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": {
+        "name": "San Jose Sharks",
+        "abbrev": "SJS",
+        "coach": "Ryan Warsofsky",
+        "gf_pg": 2.6,
+        "ga_pg": 3.4,
+        "pp_pct": 0.242424,
+        "pk_pct": 0.787879,
+        "pp_rank": 8,
+        "pk_rank": 18,
+        "gf_rank": 24,
+        "ga_rank": 23,
+        "l10": "5-4-1",
+        "streak": "W1",
+        "recent": [
+          "OTW MTL",
+          "L TOR",
+          "SOL DET",
+          "SOW NSH",
+          "L BOS",
+          "L EDM",
+          "OTW STL",
+          "L DAL",
+          "OTW LAK",
+          "OTW FLA"
+        ]
+      },
+      "home": {
+        "name": "Ottawa Senators",
+        "abbrev": "OTT",
+        "coach": "Travis Green",
+        "gf_pg": 2.44,
+        "ga_pg": 2.56,
+        "pp_pct": 0.128205,
+        "pk_pct": 0.794118,
+        "pp_rank": 28,
+        "pk_rank": 16,
+        "gf_rank": 25,
+        "ga_rank": 8,
+        "l10": "6-3-0",
+        "streak": "L1",
+        "recent": [
+          "L PHI",
+          "SOW NYI",
+          "L STL",
+          "W NJD",
+          "SOW NSH",
+          "W PHI",
+          "L DET",
+          "W BOS",
+          "W TOR"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/ott-vs-sjs/2026/10/22/2026020156",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020156/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Ottawa Senators",
+        "confidence": "high",
+        "narrative": "Selection: Ottawa Senators on the money line. Ottawa are 6-3-0 in their last ten, including wins over New Jersey, Boston and Toronto, and allow 2.56 goals per game, eighth in the league. San Jose are 5-4-1 but concede 3.40 per game, 23rd overall. Ottawa's caveat is a back-to-back after facing Florida the previous night.",
+        "basis": "Ottawa 2.56 GA/GP against San Jose's 3.40, with Ottawa 6-3-0 in the last ten."
+      },
+      "flags": [
+        "Ottawa play on consecutive nights (2026-10-21 vs Florida and 2026-10-22 vs San Jose). The model does not adjust for rest or back-to-backs."
+      ]
+    },
+    {
+      "id": "nhl-2026020157",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": {
+        "name": "Anaheim Ducks",
+        "abbrev": "ANA",
+        "coach": "Joel Quenneville",
+        "gf_pg": 2.89,
+        "ga_pg": 3.22,
+        "pp_pct": 0.225806,
+        "pk_pct": 0.787879,
+        "pp_rank": 11,
+        "pk_rank": 18,
+        "gf_rank": 21,
+        "ga_rank": 19,
+        "l10": "4-5-0",
+        "streak": "L4",
+        "recent": [
+          "L NYI",
+          "L NYR",
+          "L BOS",
+          "L CGY",
+          "W CGY",
+          "W WPG",
+          "L EDM",
+          "OTW FLA",
+          "W VGK"
+        ]
+      },
+      "home": {
+        "name": "New Jersey Devils",
+        "abbrev": "NJD",
+        "coach": "Sheldon Keefe",
+        "gf_pg": 3.22,
+        "ga_pg": 3.33,
+        "pp_pct": 0.2,
+        "pk_pct": 0.708333,
+        "pp_rank": 19,
+        "pk_rank": 26,
+        "gf_rank": 11,
+        "ga_rank": 22,
+        "l10": "5-4-0",
+        "streak": "W1",
+        "recent": [
+          "W COL",
+          "L WSH",
+          "W NYR",
+          "OTW DET",
+          "L OTT",
+          "W VAN",
+          "L UTA",
+          "L NYI",
+          "OTW PHI"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/njd-vs-ana/2026/10/22/2026020157",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020157/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "New Jersey Devils",
+        "confidence": "medium",
+        "narrative": null,
+        "basis": "Anaheim have lost four straight; New Jersey score 3.22 per game against Anaheim's 2.89."
+      },
+      "flags": []
+    },
+    {
+      "id": "nhl-2026020158",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": {
+        "name": "Florida Panthers",
+        "abbrev": "FLA",
+        "coach": "Paul Maurice",
+        "gf_pg": 3.33,
+        "ga_pg": 2.78,
+        "pp_pct": 0.209302,
+        "pk_pct": 0.805556,
+        "pp_rank": 17,
+        "pk_rank": 13,
+        "gf_rank": 9,
+        "ga_rank": 11,
+        "l10": "5-2-2",
+        "streak": "W3",
+        "recent": [
+          "W SEA",
+          "OTW VAN",
+          "W CBJ",
+          "L BUF",
+          "L MIN",
+          "W LAK",
+          "OTL ANA",
+          "OTL SJS",
+          "OTW CAR"
+        ]
+      },
+      "home": {
+        "name": "Pittsburgh Penguins",
+        "abbrev": "PIT",
+        "coach": "Dan Muse",
+        "gf_pg": 3.2,
+        "ga_pg": 3.7,
+        "pp_pct": 0.233333,
+        "pk_pct": 0.807692,
+        "pp_rank": 9,
+        "pk_rank": 12,
+        "gf_rank": 13,
+        "ga_rank": 27,
+        "l10": "3-6-1",
+        "streak": "L4",
+        "recent": [
+          "L UTA",
+          "L VGK",
+          "L COL",
+          "L CHI",
+          "SOW DAL",
+          "SOL CBJ",
+          "L WSH",
+          "L WPG",
+          "OTW MTL",
+          "W PHI"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/pit-vs-fla/2026/10/22/2026020158",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020158/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Florida Panthers",
+        "confidence": "low",
+        "narrative": null,
+        "basis": "Model margin is 6.0 points. Pittsburgh have lost four straight and allow 3.70 per game; Florida play a back-to-back."
+      },
+      "flags": [
+        "Florida play on consecutive nights (2026-10-21 at Ottawa and 2026-10-22 at Pittsburgh). No rest adjustment is applied."
+      ]
+    },
+    {
+      "id": "nhl-2026020159",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:30:00Z",
+      "away": {
+        "name": "Los Angeles Kings",
+        "abbrev": "LAK",
+        "coach": "Peter Laviolette",
+        "gf_pg": 2.43,
+        "ga_pg": 3.86,
+        "pp_pct": 0.173913,
+        "pk_pct": 0.64,
+        "pp_rank": 24,
+        "pk_rank": 31,
+        "gf_rank": 28,
+        "ga_rank": 29,
+        "l10": "1-4-2",
+        "streak": "W1",
+        "recent": [
+          "W WSH",
+          "L BOS",
+          "L EDM",
+          "OTL VGK",
+          "L FLA",
+          "OTL SJS",
+          "L COL"
+        ]
+      },
+      "home": {
+        "name": "New York Islanders",
+        "abbrev": "NYI",
+        "coach": "Peter DeBoer",
+        "gf_pg": 3.0,
+        "ga_pg": 2.11,
+        "pp_pct": 0.178571,
+        "pk_pct": 0.875,
+        "pp_rank": 23,
+        "pk_rank": 5,
+        "gf_rank": 17,
+        "ga_rank": 2,
+        "l10": "5-3-1",
+        "streak": "W2",
+        "recent": [
+          "W ANA",
+          "W TOR",
+          "SOL OTT",
+          "W VAN",
+          "L TBL",
+          "W CHI",
+          "L NYR",
+          "W NJD",
+          "L TOR"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/nyi-vs-lak/2026/10/22/2026020159",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020159/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "New York Islanders",
+        "confidence": "high",
+        "narrative": "Selection: New York Islanders on the money line. The Islanders are 5-3-1 in their last ten, allowing 2.11 goals per game, second in the NHL, with wins over Anaheim, Toronto, Vancouver, Chicago and New Jersey in that stretch. Los Angeles are 1-4-2 over the same window, give up 3.86 per game and kill penalties at 64.0%, 31st in the league.",
+        "basis": "Islanders 2.11 GA/GP (second in the NHL) against a Los Angeles side that is 1-4-2 in its last ten."
+      },
+      "flags": [
+        "NHL's own game-centre payload reports 1-4-2 in Los Angeles' last ten while listing only seven past results, so the last-ten record and the result list do not cover the same number of games. Both are reproduced exactly as published."
+      ]
+    },
+    {
+      "id": "nhl-2026020160",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "away": {
+        "name": "Vegas Golden Knights",
+        "abbrev": "VGK",
+        "coach": "Ryan Craig",
+        "gf_pg": 4.1,
+        "ga_pg": 2.4,
+        "pp_pct": 0.277778,
+        "pk_pct": 0.73913,
+        "pp_rank": 5,
+        "pk_rank": 24,
+        "gf_rank": 2,
+        "ga_rank": 5,
+        "l10": "8-2-0",
+        "streak": "W3",
+        "recent": [
+          "W PIT",
+          "W CGY",
+          "W NSH",
+          "L MIN",
+          "OTW LAK",
+          "SOW TOR",
+          "W SEA",
+          "W VAN",
+          "L ANA",
+          "W CHI"
+        ]
+      },
+      "home": {
+        "name": "St. Louis Blues",
+        "abbrev": "STL",
+        "coach": "Jim Montgomery",
+        "gf_pg": 3.22,
+        "ga_pg": 3.22,
+        "pp_pct": 0.192308,
+        "pk_pct": 0.857143,
+        "pp_rank": 21,
+        "pk_rank": 6,
+        "gf_rank": 11,
+        "ga_rank": 19,
+        "l10": "4-4-1",
+        "streak": "W1",
+        "recent": [
+          "W WPG",
+          "L NSH",
+          "L MIN",
+          "W OTT",
+          "W CBJ",
+          "OTL SJS",
+          "L CHI",
+          "L COL",
+          "W DAL"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/stl-vs-vgk/2026/10/22/2026020160",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020160/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Vegas Golden Knights",
+        "confidence": "medium",
+        "narrative": null,
+        "basis": "Vegas are 8-2-0 and score 4.10 per game, second in the NHL; St. Louis are 4-4-1."
+      },
+      "flags": []
+    },
+    {
+      "id": "nhl-2026020161",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "away": {
+        "name": "Winnipeg Jets",
+        "abbrev": "WPG",
+        "coach": "Scott Arniel",
+        "gf_pg": 2.67,
+        "ga_pg": 2.89,
+        "pp_pct": 0.26087,
+        "pk_pct": 0.791667,
+        "pp_rank": 7,
+        "pk_rank": 17,
+        "gf_rank": 23,
+        "ga_rank": 12,
+        "l10": "4-3-2",
+        "streak": "L2",
+        "recent": [
+          "L STL",
+          "L CAR",
+          "OTL CHI",
+          "W MIN",
+          "L ANA",
+          "W COL",
+          "W PIT",
+          "W DET",
+          "OTL BOS"
+        ]
+      },
+      "home": {
+        "name": "Dallas Stars",
+        "abbrev": "DAL",
+        "coach": "Glen Gulutzan",
+        "gf_pg": 2.44,
+        "ga_pg": 1.56,
+        "pp_pct": 0.173913,
+        "pk_pct": 0.90625,
+        "pp_rank": 24,
+        "pk_rank": 3,
+        "gf_rank": 25,
+        "ga_rank": 1,
+        "l10": "5-3-1",
+        "streak": "W3",
+        "recent": [
+          "OTW BOS",
+          "W CHI",
+          "SOW COL",
+          "L COL",
+          "SOL PIT",
+          "W BUF",
+          "W SJS",
+          "L NSH",
+          "L STL"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/dal-vs-wpg/2026/10/22/2026020161",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020161/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Dallas Stars",
+        "confidence": "high",
+        "narrative": "Selection: Dallas Stars on the money line. Dallas are 5-3-1 over their last ten and lead the NHL at 1.56 goals against per game, with wins over Boston, Chicago, Buffalo and San Jose in that stretch. Winnipeg have lost two straight and sit 4-3-2 in the same period, scoring 2.67 goals per game against Dallas's 90.6% penalty kill.",
+        "basis": "Dallas allow a league-best 1.56 goals per game; Winnipeg have lost two straight."
+      },
+      "flags": []
+    },
+    {
+      "id": "nhl-2026020162",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "away": {
+        "name": "Minnesota Wild",
+        "abbrev": "MIN",
+        "coach": "John Hynes",
+        "gf_pg": 3.1,
+        "ga_pg": 2.5,
+        "pp_pct": 0.290323,
+        "pk_pct": 0.818182,
+        "pp_rank": 4,
+        "pk_rank": 10,
+        "gf_rank": 16,
+        "ga_rank": 7,
+        "l10": "6-2-2",
+        "streak": "O1",
+        "recent": [
+          "OTL EDM",
+          "W CBJ",
+          "W STL",
+          "L WPG",
+          "W VGK",
+          "W FLA",
+          "L TBL",
+          "OTL BUF",
+          "W BOS",
+          "W NSH"
+        ]
+      },
+      "home": {
+        "name": "Calgary Flames",
+        "abbrev": "CGY",
+        "coach": "Ryan Huska",
+        "gf_pg": 2.13,
+        "ga_pg": 4.63,
+        "pp_pct": 0.210526,
+        "pk_pct": 0.814815,
+        "pp_rank": 16,
+        "pk_rank": 11,
+        "gf_rank": 31,
+        "ga_rank": 31,
+        "l10": "2-6-0",
+        "streak": "W1",
+        "recent": [
+          "W CAR",
+          "L VGK",
+          "W ANA",
+          "L ANA",
+          "L COL",
+          "L SEA",
+          "L VAN",
+          "L SEA"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/cgy-vs-min/2026/10/22/2026020162",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020162/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Minnesota Wild",
+        "confidence": "high",
+        "narrative": "Selection: Minnesota Wild on the money line. Minnesota are 6-2-2 in their last ten, scoring 3.10 and conceding 2.50 goals per game, with wins over Columbus, St. Louis, Vegas, Florida, Boston and Nashville. Calgary are 2-6-0, score a league-31st 2.13 per game and allow 4.63, the worst rate in the NHL, despite beating Carolina last time out.",
+        "basis": "Calgary's 4.63 GA/GP is the worst in the NHL; Minnesota are 6-2-2 with 3.10 GF/GP."
+      },
+      "flags": [
+        "Calgary's official goals-against rate (4.63 per game) is the highest in the league and is carried into the model unadjusted."
+      ]
+    },
+    {
+      "id": "nhl-2026020163",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "away": {
+        "name": "Carolina Hurricanes",
+        "abbrev": "CAR",
+        "coach": "Rod Brind'Amour",
+        "gf_pg": 3.82,
+        "ga_pg": 2.45,
+        "pp_pct": 0.227273,
+        "pk_pct": 0.891892,
+        "pp_rank": 10,
+        "pk_rank": 4,
+        "gf_rank": 4,
+        "ga_rank": 6,
+        "l10": "8-2-0",
+        "streak": "W1",
+        "recent": [
+          "W VAN",
+          "L CGY",
+          "W WPG",
+          "W WSH",
+          "W PHI",
+          "W CHI",
+          "W VAN",
+          "W MTL",
+          "OTW PHI",
+          "L WSH"
+        ]
+      },
+      "home": {
+        "name": "Edmonton Oilers",
+        "abbrev": "EDM",
+        "coach": "Mike Babcock",
+        "gf_pg": 4.56,
+        "ga_pg": 3.0,
+        "pp_pct": 0.310345,
+        "pk_pct": 0.740741,
+        "pp_rank": 2,
+        "pk_rank": 22,
+        "gf_rank": 1,
+        "ga_rank": 14,
+        "l10": "7-1-1",
+        "streak": "W2",
+        "recent": [
+          "OTW MIN",
+          "W UTA",
+          "L UTA",
+          "W LAK",
+          "W SJS",
+          "W ANA",
+          "W SEA",
+          "W VAN",
+          "OTL VAN"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/edm-vs-car/2026/10/22/2026020163",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020163/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Edmonton Oilers",
+        "confidence": "medium",
+        "narrative": null,
+        "basis": "Edmonton score a league-leading 4.56 per game; Carolina are 8-2-0 with 2.45 against, so the model splits them by 6.4 points."
+      },
+      "flags": []
+    },
+    {
+      "id": "nhl-2026020164",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "away": {
+        "name": "Utah Mammoth",
+        "abbrev": "UTA",
+        "coach": "André Tourigny",
+        "gf_pg": 3.8,
+        "ga_pg": 3.1,
+        "pp_pct": 0.361111,
+        "pk_pct": 0.6875,
+        "pp_rank": 1,
+        "pk_rank": 28,
+        "gf_rank": 5,
+        "ga_rank": 17,
+        "l10": "7-3-0",
+        "streak": "W1",
+        "recent": [
+          "W PIT",
+          "L EDM",
+          "W EDM",
+          "W TOR",
+          "W BUF",
+          "L BOS",
+          "W NJD",
+          "L NYR",
+          "W CBJ",
+          "W CHI"
+        ]
+      },
+      "home": {
+        "name": "Seattle Kraken",
+        "abbrev": "SEA",
+        "coach": "Lane Lambert",
+        "gf_pg": 3.7,
+        "ga_pg": 3.4,
+        "pp_pct": 0.21875,
+        "pk_pct": 0.724138,
+        "pp_rank": 12,
+        "pk_rank": 25,
+        "gf_rank": 6,
+        "ga_rank": 23,
+        "l10": "6-3-1",
+        "streak": "W1",
+        "recent": [
+          "SOW DET",
+          "L FLA",
+          "OTL TBL",
+          "SOW PHI",
+          "W WSH",
+          "W DET",
+          "L VGK",
+          "W CGY",
+          "L EDM",
+          "W CGY"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/sea-vs-uta/2026/10/22/2026020164",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020164/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Seattle Kraken",
+        "confidence": "low",
+        "narrative": null,
+        "basis": "Model margin is 2.1 points; Utah hold the league's best power play at 36.1%."
+      },
+      "flags": []
+    },
+    {
+      "id": "nhl-2026020165",
+      "sport": "Ice hockey",
+      "competition": "NHL",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "away": {
+        "name": "Detroit Red Wings",
+        "abbrev": "DET",
+        "coach": "Todd McLellan",
+        "gf_pg": 2.44,
+        "ga_pg": 2.89,
+        "pp_pct": 0.21875,
+        "pk_pct": 0.6875,
+        "pp_rank": 12,
+        "pk_rank": 28,
+        "gf_rank": 25,
+        "ga_rank": 12,
+        "l10": "3-3-3",
+        "streak": "O1",
+        "recent": [
+          "SOL SEA",
+          "SOW SJS",
+          "W PHI",
+          "OTL NJD",
+          "SOL MTL",
+          "L SEA",
+          "W OTT",
+          "L WPG",
+          "L NYR"
+        ]
+      },
+      "home": {
+        "name": "Vancouver Canucks",
+        "abbrev": "VAN",
+        "coach": "Manny Malhotra",
+        "gf_pg": 3.0,
+        "ga_pg": 4.64,
+        "pp_pct": 0.21875,
+        "pk_pct": 0.638889,
+        "pp_rank": 12,
+        "pk_rank": 32,
+        "gf_rank": 17,
+        "ga_rank": 32,
+        "l10": "1-8-1",
+        "streak": "L2",
+        "recent": [
+          "L CAR",
+          "L TBL",
+          "OTL FLA",
+          "L NYI",
+          "L NYR",
+          "L NJD",
+          "L CAR",
+          "L VGK",
+          "W CGY",
+          "L EDM"
+        ]
+      },
+      "sources": {
+        "official": "https://www.nhl.com/gamecenter/van-vs-det/2026/10/22/2026020165",
+        "official_api": "https://api-web.nhle.com/v1/gamecenter/2026020165/right-rail",
+        "olbg": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13"
+      },
+      "olbg_listed": false,
+      "pick": {
+        "selection": "Detroit Red Wings",
+        "confidence": "low",
+        "narrative": null,
+        "basis": "Model margin is 4.1 points. Vancouver have lost two straight and allow 4.64 per game, the worst in the NHL."
+      },
+      "flags": []
     }
   ],
-  "coverage_gaps": [
-    {"sport": "Basketball", "issue": "OLBG lists MIL Bucks @ WAS Wizards, but the accessible official NBA games page exposes daily game counts without individual fixtures. Matchup, time and markets not independently confirmed; no row or pick published.", "official_url": "https://www.nba.com/games", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889"},
-    {"sport": "All other eligible sports", "issue": "No complete verified OLBG inventory or official schedule cross-check was completed. This snapshot is not exhaustive and must not be treated as current after the as-of time.", "official_url": "https://www.nhl.com/schedule/2026-10-21", "olbg_url": "https://www.olbg.com/betting-tips"}
+  "coverage": [
+    {
+      "sport": "Ice hockey",
+      "slug": "ice-hockey",
+      "olbg_id": 13,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "official_name": "National Hockey League",
+      "official_url": "https://www.nhl.com/schedule/2026-10-21",
+      "rows": 14,
+      "status": "covered",
+      "detail": "All 14 NHL games on the official 2026-10-21 and 2026-10-22 schedule days were read from the NHL game-centre feed. OLBG's ice hockey index listed two NHL events plus Austrian (EHL) and Swedish (SHL) fixtures; the European fixtures have no official row because their league sources were not verified in this session."
+    },
+    {
+      "sport": "Basketball",
+      "slug": "basketball",
+      "olbg_id": 4,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "official_name": "National Basketball Association",
+      "official_url": "https://www.nba.com/games",
+      "rows": 0,
+      "status": "official_feed_incomplete",
+      "detail": "nba.com/games reported 11 games on 2026-10-21 and 2 on 2026-10-22, but the individual matchups returned 'Sorry, something went wrong' inside a successful page load. cdn.nba.com scoreboard and schedule JSON endpoints returned HTTP 500, data.nba.com returned AccessDenied and stats.nba.com did not respond. OLBG lists MIL Bucks @ WAS Wizards; no NBA fixture is published without an official matchup record."
+    },
+    {
+      "sport": "Baseball",
+      "slug": "baseball",
+      "olbg_id": 12,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "official_name": "Major League Baseball",
+      "official_url": "https://www.mlb.com/schedule/2026-10-21",
+      "rows": 0,
+      "status": "verified_no_games",
+      "detail": "The official MLB schedule API returned totalGames 0 for 2026-10-21, so there is no baseball fixture to publish for the capture day. This is a verified negative for that date only and says nothing about the rest of the season."
+    },
+    {
+      "sport": "Cricket",
+      "slug": "cricket",
+      "olbg_id": 7,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "official_name": "International Cricket Council",
+      "official_url": "https://www.icc-cricket.com/fixtures-results",
+      "rows": 0,
+      "status": "date_not_exposed",
+      "detail": "The ICC fixtures page rendered upcoming matches (including New Zealand v India, a T20 international) but gave only a clock time in 'your time' with no date, and the ICC match-centre page for that fixture rendered without any date or start field. A fixture without a verified date is not published."
+    },
+    {
+      "sport": "Tennis",
+      "slug": "tennis",
+      "olbg_id": 3,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "official_name": "ATP Tour",
+      "official_url": "https://www.atptour.com/en/scores/current",
+      "rows": 0,
+      "status": "date_not_exposed",
+      "detail": "The ATP scores page rendered in-progress and completed matches with player names and set scores, but no fixture dates, so no upcoming match could be dated from the retrieved text."
+    },
+    {
+      "sport": "Rugby Union",
+      "slug": "rugby-union",
+      "olbg_id": 9,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "official_name": "Premiership Rugby",
+      "official_url": "https://www.premrugby.com/fixtures-results",
+      "rows": 0,
+      "status": "not_verified",
+      "detail": "premiershiprugby.com/fixtures returned HTTP 404 and redirected to an error page; the current fixtures page is /fixtures-results, which was not machine-read before this snapshot. No Rugby Union fixture is published."
+    },
+    {
+      "sport": "Rugby League",
+      "slug": "rugby-league",
+      "olbg_id": 10,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "official_name": "Rugby Football League",
+      "official_url": "https://www.rugby-league.com/fixtures",
+      "rows": 0,
+      "status": "not_verified",
+      "detail": "No official Rugby League fixture feed was read in this session. No fixture is published rather than publishing an unverified one."
+    },
+    {
+      "sport": "Darts",
+      "slug": "darts",
+      "olbg_id": 15,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15",
+      "official_name": "Professional Darts Corporation",
+      "official_url": "https://www.pdc.tv/",
+      "rows": 0,
+      "status": "not_verified",
+      "detail": "No official PDC fixture feed was read in this session."
+    },
+    {
+      "sport": "Snooker",
+      "slug": "snooker",
+      "olbg_id": 8,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "official_name": "World Snooker Tour",
+      "official_url": "https://www.wst.tv/",
+      "rows": 0,
+      "status": "not_verified",
+      "detail": "No official WST fixture feed was read in this session."
+    },
+    {
+      "sport": "Handball",
+      "slug": "handball",
+      "olbg_id": 20,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "official_name": "European Handball Federation",
+      "official_url": "https://www.eurohandball.com/",
+      "rows": 0,
+      "status": "not_verified",
+      "detail": "No official EHF fixture feed was read in this session."
+    },
+    {
+      "sport": "Volleyball",
+      "slug": "volleyball",
+      "olbg_id": 21,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "official_name": "Volleyball World",
+      "official_url": "https://en.volleyballworld.com/",
+      "rows": 0,
+      "status": "not_verified",
+      "detail": "No official Volleyball World fixture feed was read in this session."
+    },
+    {
+      "sport": "Aussie Rules",
+      "slug": "aussie-rules",
+      "olbg_id": 22,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22",
+      "official_name": "Australian Football League",
+      "official_url": "https://www.afl.com.au/fixtures",
+      "rows": 0,
+      "status": "not_verified",
+      "detail": "No official AFL fixture feed was read in this session."
+    },
+    {
+      "sport": "Motor racing",
+      "slug": "motor-racing",
+      "olbg_id": 14,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "official_name": "FIA Formula One World Championship",
+      "official_url": "https://www.formula1.com/en/racing/2026",
+      "rows": 0,
+      "status": "not_a_head_to_head_fixture",
+      "detail": "Motor racing events are races, not two-sided matches, so there is no money line, handicap or match total in the sense used by this desk. No row is published and no model is applied."
+    },
+    {
+      "sport": "Golf",
+      "slug": "golf",
+      "olbg_id": 5,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/5",
+      "official_name": "PGA Tour",
+      "official_url": "https://www.pgatour.com/schedule",
+      "rows": 0,
+      "status": "not_a_head_to_head_fixture",
+      "detail": "Golf is an outright tournament market rather than a two-sided match. No money line, handicap or match total is originated here."
+    },
+    {
+      "sport": "Greyhounds",
+      "slug": "greyhounds",
+      "olbg_id": 28,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "official_name": "Greyhound Board of Great Britain",
+      "official_url": "https://www.gbgb.org.uk/",
+      "rows": 0,
+      "status": "not_a_head_to_head_fixture",
+      "detail": "Greyhound racing is a multi-runner race, not a two-sided match. No match markets are originated."
+    },
+    {
+      "sport": "eSports",
+      "slug": "esports",
+      "olbg_id": 23,
+      "eligible": true,
+      "olbg_url": "https://www.olbg.com/best-tipsters/eSports/23",
+      "official_name": "Not established",
+      "official_url": "https://www.olbg.com/betting-tips",
+      "rows": 0,
+      "status": "no_official_authority",
+      "detail": "OLBG exposes an eSports tipster category but it did not appear in the betting-tips sitemap used to build this taxonomy. No single official governing body source was identified, so no eSports fixture is published."
+    }
+  ],
+  "flags": [
+    {
+      "item": "OLBG start times do not match the NHL",
+      "sport": "Ice hockey",
+      "detail": "OLBG's ice hockey index showed PHI Flyers @ BUF Sabres and FLA Panthers @ OTT Senators both starting at 00:37 the following day. The NHL game-centre feed gives both games a start of 2026-10-21T23:30:00Z. OLBG does not state a timezone in the retrieved text. The league time is published; the OLBG time is recorded but not converted.",
+      "sources": [
+        "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "https://api-web.nhle.com/v1/schedule/2026-10-21"
+      ]
+    },
+    {
+      "item": "OLBG lists only two NHL events for a 14-game NHL slate",
+      "sport": "Ice hockey",
+      "detail": "At capture time OLBG's ice hockey index carried two NHL events (event_id 199897 and 199896) against 14 NHL games on the official 2026-10-21/22 schedule. Twelve fixtures therefore have no individual OLBG event page to cite; they link to OLBG's NHL index instead and are marked olbg_listed=false.",
+      "sources": [
+        "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "https://api-web.nhle.com/v1/schedule/2026-10-21"
+      ]
+    },
+    {
+      "item": "OLBG lists European ice hockey that is not publicly modelled here",
+      "sport": "Ice hockey",
+      "detail": "OLBG also listed Austria EHL fixtures (Pustertal v Pioneers Vorarlberg, HCB Sudtirol Alperia v HC TWK Innsbruck, Graz 99ers v Milano HC, KAC Klagenfurt v Fehervar AV19) and a Swedish Hockey League fixture (Timra IK v Farjestad BK). None could be cross-checked against an official league feed in this session, so no row or line is published for them.",
+      "sources": [
+        "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      ]
+    },
+    {
+      "item": "NBA page returns a game count but no matchups",
+      "sport": "Basketball",
+      "detail": "nba.com/games reported 11 games on 2026-10-21 and 2 on 2026-10-22 inside a page that also displayed 'Sorry, something went wrong'. Four machine-readable NBA endpoints were tried and all failed. This blocks every NBA row, including the Bucks/Wizards game OLBG lists.",
+      "sources": [
+        "https://www.nba.com/games",
+        "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889"
+      ]
+    },
+    {
+      "item": "Cricket and tennis fixtures carry no date in the retrievable text",
+      "sport": "Cricket / Tennis",
+      "detail": "The ICC fixtures page and the ATP scores page both rendered live and upcoming matches but did not expose a fixture date. The ICC match-centre page for New Zealand v India (T20 international) also rendered without a date field. A match without a verified date is not published.",
+      "sources": [
+        "https://www.icc-cricket.com/fixtures-results",
+        "https://www.atptour.com/en/scores/current"
+      ]
+    },
+    {
+      "item": "Los Angeles last-ten record does not match the result list",
+      "sport": "Ice hockey",
+      "detail": "For LAK at NYI the NHL payload reports a last-ten record of 1-4-2 but lists seven past results. The record and the list are both reproduced verbatim; no attempt is made to reconstruct the missing games.",
+      "sources": [
+        "https://api-web.nhle.com/v1/gamecenter/2026020159/right-rail"
+      ]
+    },
+    {
+      "item": "Eleven eligible sports have no verified fixture row",
+      "sport": "Coverage",
+      "detail": "Rugby Union, Rugby League, Darts, Snooker, Handball, Volleyball, Aussie Rules, Motor racing, Golf, Greyhounds and eSports have no published row. Each entry on the coverage board states why, and links the governing body page that would be used next. Nothing was filled in to make the table look complete.",
+      "sources": [
+        "https://www.olbg.com/betting-tips"
+      ]
+    },
+    {
+      "item": "Model parameters are assumptions, not league statistics",
+      "sport": "Model",
+      "detail": "The home and away multipliers (1.05 / 0.95), the 50/50 split of regulation ties and the confidence thresholds are choices made by this desk. They are not measured from league data and are not presented as facts. The model also ignores rest, travel, injuries, goaltender assignment and score effects.",
+      "sources": [
+        "https://api-web.nhle.com/v1/gamecenter/2026020152/right-rail"
+      ]
+    }
   ]
 }

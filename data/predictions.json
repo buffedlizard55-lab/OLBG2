@@ -84,7 +84,7 @@
       "match_id": "nhl-2026020162",
       "selection": "Minnesota Wild to win (moneyline)",
       "headline": "Wild's scoring depth against Calgary's leaky defence",
-      "text": "Minnesota Wild to win the moneyline in Calgary. Minnesota are 6-2-2 with 31 goals for and 25 against in ten games, while the Flames are 2-6-0 and have conceded 37 goals in eight, an ugly 4.62 per game, scoring only 17 themselves. Kirill Kaprizov has 11 goals already and Quinn Hughes 11 assists for the Wild, with Jesper Wallstedt recording six wins. Calgary's scoring leader is Morgan Frost on three, and Dustin Wolf has one win. A modelled price of 1.40 on a 68.9% chance is the value read here, after the model's 1.05 home-ice adjustment in Calgary's favour.",
+      "text": "Minnesota Wild to win the moneyline in Calgary. Minnesota are 6-2-2 with 31 goals for and 25 against in ten games, while the Flames are 2-6-0 and have conceded 37 goals in eight, an ugly 4.62 per game, scoring only 17 themselves. Kirill Kaprizov has 11 goals already and Quinn Hughes 11 assists for the Wild, with Jesper Wallstedt recording six wins. Calgary's scoring leader is Morgan Frost on three, and Dustin Wolf has one win. The model still lands on 68.9% for Minnesota even after applying its 1.05 home-ice adjustment in Calgary's favour, and the gap in goals conceded is what drives that number rather than any market signal.",
       "facts": [
         {
           "claim": "Minnesota 6-2-2, 31 for, 25 against in 10 games",
@@ -102,7 +102,8 @@
           "claim": "Model probability 68.9%, modelled price 1.40",
           "source": "data/matches.json"
         }
-      ]
+      ],
+      "words": 110
     }
   ]
 }

@@ -813,3 +813,55 @@ read or reproduced; prior layers' data files are never hand-edited.
 | `python3 scripts/build_site.py` | 10 pages, 35 fixtures, 4 predictions, no broken links |
 | `python3 scripts/survey_verify.py` | all green — 24 pages, 130 events, 11 lines, 2 predictions, 21 flags |
 | `git status --short` after all three builds | empty (generated outputs are deterministic) |
+
+## Completion — session `arena/73620ec4-olbg2` (2026-10-21 07:45 UTC)
+
+| # | Task | Status | Scope |
+|---|---|---|---|
+| C1 | Recon, claim, baseline gates | done | `COORDINATION.md` |
+| C2 | Handball capture, verification, lines, picks | done | `data/inputs/handball_ehf.json`, `scripts/model.py`, `data/predictions.json`, `data/sources.json`, `data/flagged.json` |
+| C3 | Volleyball coverage | **not done — carried as F22** | — |
+| C4 | Dashboard integration, 17-sport coverage table, docs | done | `scripts/build_site.py`, generated root HTML, `README.md`, `METHODOLOGY.md`, `research/handball-ehf-73620ec4.md` |
+| C5 | Final integration: PR, merge, Pages | in progress | shared outputs |
+
+### What was verified, line by line
+
+Full record: [`research/handball-ehf-73620ec4.md`](research/handball-ehf-73620ec4.md).
+
+| Check | Official source | Outcome |
+|---|---|---|
+| 12 EHF Champions League Men round-5 fixtures (pairing, date, throw-off time, match id) | <https://ehfcl.eurohandball.com/men/2026-27/matches/> | 12/12 confirmed and published; 12/12 lined |
+| Group A–F standings (gp, W-D-L, GF, GA, Pts) for 24 clubs | <https://ehfcl.eurohandball.com/men/2026-27/standings/> | Read twice in the same window for A–B and C–F; identical |
+| One match detail page (timezone, venue) | <https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101032/HCZagreb-ParisSaintGermain/> | Confirms "Wed Oct 21, 2026 18:45 (CEST)", Arena Zagreb |
+| MLB slate on 21 October | <https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-21> | `totalGames: 0` — no MLB rows added |
+| Volleyball — Polish league | plusliga.pl redirects to tauronliga.pl, whose page is labelled "TAURON Liga" while listing men's clubs | **Not usable as a verified competition source in this window; no rows added (F22 stays open)** |
+| Volleyball — German Bundesliga table | <https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/tabelle_hauptrunde.xhtml> | Table renders but only one match has been played; no strength input exists yet, so no rows added |
+
+### New findings and closures
+
+| ID | Effect |
+|---|---|
+| F24 | New: OLBG renders start times in the viewer's timezone (Zagreb v PSG: OLBG 12:45 vs EHF 18:45 CEST = 12:45 US Eastern) |
+| F25 | New: OLBG club names differ from EHF registered names; therefore no OLBG event link on any handball row |
+| F26 | New: 11 of 12 handball venues left blank |
+| F12 | **Closed** — explained by F24 |
+| F21 | **Closed** — handball now published and lined |
+| F22 | Still open — volleyball surveyed, not lined |
+
+### Gates after the change
+
+| Gate | Result |
+|---|---|
+| `python3 scripts/model.py` | 47 fixtures, 45 originated, 9 high / 14 medium / 22 low |
+| `python3 scripts/build_site.py` | 11 pages, 47 fixtures, 9 predictions, 0 broken local links, all citations registered |
+| `python3 scripts/build.py` | desk layer unchanged, 25 fixtures |
+| `python3 scripts/survey_verify.py` | all green (24 pages, 130 events, 11 lines, 2 predictions, 21 flags) |
+| `python3 -m unittest discover -s tests` | 33 tests, OK |
+| `python3 scripts/integration_audit.py` | 0 cross-layer local link errors |
+
+### Irregularity worth a reviewer's attention
+
+The handball score grid initially truncated at 45 goals and silently lost about 10% of the joint probability
+mass (an 8.74-goal expected margin showed a 41.7% cover probability on a −8.5 line). The grid is now sized from
+the rates and renormalised; the corrected figure is published. This is recorded here rather than quietly fixed
+because it shows how a plausible-looking price can be wrong without any source error.

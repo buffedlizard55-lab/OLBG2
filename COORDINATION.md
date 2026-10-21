@@ -643,6 +643,19 @@ Before merging, the prior sessions' CI gate was reproduced locally and passed:
 `python3 scripts/build_site.py` regenerates their `index.html`, `sports/*`, `assets/*`, `site/**`
 byte-identically (`git diff --exit-code` clean), so the root dashboard is not broken by this merge.
 
+## Claim — session `8103ccb6` (2026-10-21)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Final cross-layer discoverability, evidence-status audit and CI integration | in progress | `8103ccb6` | `scripts/build_site.py`, `scripts/integration_audit.py`, `integration.html`, generated root pages, `tests/test_integration.py`, `.github/workflows/pages.yml`, `research/integration-audit.md`, `COORDINATION.md` |
+
+All earlier claims are complete; no active conflicting claim or open PR was found. Work stays on the Arena-assigned branch `arena/8103ccb6-olbg2` (branch naming is fixed by this environment). Preserve all three data layers; do not claim that structural validation verifies external facts. Integrate the previously requested Survey navigation and expose contradictions/coverage gaps centrally. Official-source spot check: https://api-web.nhle.com/v1/score/2026-10-21 retrieved with fetch_page this turn; two fixtures, PHI@BUF and FLA@OTT at 23:30Z. This is not a re-verification of the full inventory.
+
+### Completion — session `8103ccb6`
+
+Task status: **done** (integration code); external evidence gaps: **needs review**, published on `integration.html`. Detailed scope, source, findings and reproducible commands: `research/integration-audit.md`. Root, desk and survey data were preserved without alteration. Added survey discoverability, cross-layer evidence disclosures, secondary-source narrative review rows, freshness notices, cross-layer local-link checks and survey CI gates. All 33 unit tests pass, all three builds pass, survey structural checks pass, zero broken local links. These are not claims of exhaustive official factual verification. Full automatic current coverage and all-market origination remain unfulfilled and explicitly flagged.
+
+Initial pre-push `git pull --rebase origin arena/8103ccb6-olbg2` reported no remote ref (new branch). Claim was then pushed successfully. No conflict or work loss. Only the fixed Arena branch is used.
 ## Current session `arena/dd14fcfd-olbg2` (2026-10-21)
 
 | Task | Status | Owner | File scope |
@@ -667,6 +680,12 @@ Verification: `python3 scripts/build_site.py` passed (9 pages, 35 fixtures, no b
 | Merge result | Merged 2026-10-21 06:41:09 UTC; merge commit `e5ad112b41d4df167026fd9429310d2335dc4727` |
 | Validate Pages content | Run `39556956109` success |
 | GitHub Pages deployment | Run `39556955856` success, including deploy job |
+
+
+### Integration conflict log — 8103ccb6
+PR #29 initially could not merge because main advanced to 8457c79 (another session added Survey navigation). Stopped and merged origin/main. Preserved both coordination sections, kept their Survey footer, consolidated duplicate Survey nav items, and regenerated all conflicting HTML from the combined builder. No data was changed or discarded. Re-ran all three builds and 33 tests.
+
+Pre-push pull/rebase after the sync merge attempted to replay already merged concurrent-session commits and conflicted in the board. Aborted rebase without discarding work; the explicit merge commit preserves both histories. Push follows the safe abort, rather than rewriting prior sessions' commits.
 ---
 
 # Session `arena/9b76e3ea-olbg2` — independent cross-layer verification
@@ -701,3 +720,5 @@ No sporting value was marked newly verified from this read-only audit. Generated
 ### Rebase conflict / upstream integration update (2026-10-21 UTC)
 
 Before the second push, `git pull --rebase origin main` fetched PRs #27–#28 and conflicted only in the append-only coordination ledger: the upstream Survey-navigation completion and this session's original claim had both appended at EOF. Resolved additively, retaining the complete upstream `arena/dd14fcfd-olbg2` record and this session's claim; no files or changes were discarded. The upstream branch had already added Survey to the root navigation, so audit finding R4 is now marked resolved in `research/independent-audit-9b76e3ea.md`. The final audit record and this conflict note remain append-only.
+
+Second sync: main advanced through PR #31 during CI. Preserved both appended coordination records and the independent audit file; no code or data conflicts.

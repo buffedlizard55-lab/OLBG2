@@ -270,6 +270,8 @@ applied anywhere.
 | --- | --- |
 | Integration branch | `arena/db99ed90-olbg2` |
 | Pre-merge checks | 28 tests pass; `build.py` → 25 fixtures, 9 flags; `build_site.py` → 9 pages, no broken links |
-| Pull request | recorded below |
-| Merge result | recorded below |
-| Pages deploy | recorded below |
+| Pull request | [#11](https://github.com/buffedlizard55-lab/OLBG2/pull/11) — "Independent verification of the NHL dataset + disclosed goal-convention finding" |
+| Merge result | merged to `main` (merge commit); PR is `CLEAN`/`MERGEABLE` at merge time and `validate` CI passed on both the head commit and the merge |
+| Pages deploy | `pages-build-deployment` run completed `success`; `gh api repos/.../pages` → `status: built`, `build_type: legacy`, source `main:/` |
+| Live URL | https://buffedlizard55-lab.github.io/OLBG2/ — served `flagged.html` with F19 visible, confirmed after deploy |
+| Follow-up correction | F19 and `METHODOLOGY.md` said the model used the stats-API view; `data/desk/nhl_teams.json` (`source_id: nhl-standings`) and the captured totals show it uses the standings view. Wording corrected to match the data; no number or price changed. |

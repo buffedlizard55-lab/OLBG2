@@ -139,7 +139,7 @@
       <td class="mono">F19</td>
       <td><span class="badge b-sev-low">Low</span></td>
       <td>Source convention</td>
-      <td><b>NHL goal totals differ by shootout convention</b><span class="sub" style="max-width:560px">nhl.com/standings counts the shootout-deciding goal in GF/GA; api.nhle.com/stats/rest/en/team/summary does not. Over the same games Ottawa read 24 GF on standings vs 22 in the API (two shootout wins), Buffalo 34 GA vs 33 (one shootout loss) and Seattle 39 vs 37 (two shootout wins). Our rates use the stats API, so they sit up to ~0.2 goals per game below the standings view. Disclosed rather than adjusted, because the input is correct for its cited source. Found by a separate verification pass (PR #11).</span></td>
+      <td><b>NHL goal totals differ by shootout convention</b><span class="sub" style="max-width:560px">nhl.com/standings counts the shootout-deciding goal in GF/GA; api.nhle.com/stats/rest/en/team/summary does not. Over the same games Ottawa read 24 GF on standings vs 22 in the API (two shootout wins), Buffalo 34 GA vs 33 (one shootout loss) and Seattle 39 vs 37 (two shootout wins). Our inputs are captured from nhl.com/standings, so our rates sit up to ~0.2 goals per game above the stats-API view. Disclosed rather than adjusted, because the input is correct for its cited source. Found by a separate verification pass (PR #11).</span></td>
       <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2" rel="noopener">official / source page</a></td>
     </tr></tbody></table></div></div>
 

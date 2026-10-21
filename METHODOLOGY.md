@@ -32,10 +32,11 @@ total line  = nearest half point to lambda_home + lambda_away
 
 `league_avg` is the mean goals-for per game across all 32 teams in the same snapshot.
 
-**Goal convention.** Inputs come from `api.nhle.com/stats/rest/en/team/summary`, which excludes the
-shootout-deciding goal from GF/GA. `nhl.com/standings` includes it, so the two differ for teams that have been
-through a shootout (e.g. Ottawa 22 vs 24 GF, Buffalo 33 vs 34 GA). The model stays on the stats-API view and the
-difference is disclosed as flag F19 rather than silently reconciled.
+**Goal convention.** The captured inputs in `data/desk/nhl_teams.json` carry `source_id: nhl-standings` and were
+read from `nhl.com/standings`, whose GF/GA **includes** the shootout-deciding goal. The stats API
+(`api.nhle.com/stats/rest/en/team/summary`) excludes it, so the two views differ for clubs that have been through a
+shootout (e.g. Ottawa 24 vs 22 GF, Buffalo 34 vs 33 GA, Seattle 39 vs 37 GF). Rates therefore sit up to ~0.2 goals per
+game **above** the stats-API view, and the difference is disclosed as flag F19 rather than silently reconciled.
 
 ### NBA — prior-season logit model
 

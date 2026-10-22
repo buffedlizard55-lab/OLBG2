@@ -2323,7 +2323,7 @@ The workflow is currently owned by merged scopes; the request is recorded rather
 | U2 | Audit keyboard/screen-reader usability of `/portal/` search/filter controls, result counts, and table navigation without asserting new sports facts | done | `arena/cf53958f-olbg2` | `research/accessibility-cf53958f.md` |
 | U3 | Improve control names, focus visibility, and accessible result announcements in the portal generator/assets; regenerate only `/portal/` pages | done | `arena/cf53958f-olbg2` | `scripts/portal_build.py`, `portal/assets/app.js`, `portal/assets/style.css`, generated `portal/**` |
 | U4 | Add regression coverage for accessible controls and verify deterministic portal build, row-source links, internal links, and repository tests | done (190 tests after rebase) | `arena/cf53958f-olbg2` | `tests/test_portal_accessibility_cf53958f.py` |
-| U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | in progress (latest-main rebase + 190 tests passed; PR pending) | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
+| U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | in progress (PR #103 open; refreshed on `6077bd7`; 190 tests pass) | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
 
 **Scope boundary:** this is a user-interface/accessibility improvement to the existing portal, not another match-data layer or factual audit. Every existing row, source URL, line, pick, and flagged item remains unchanged. If another live session claims `/portal/**` or its builder before implementation/integration, stop and log a cross-scope request rather than editing it.
 
@@ -2396,3 +2396,11 @@ Main advanced to `cdbcf03` (merges PRs #100 and #101) while preparing the push, 
 ### Rebase conflict resolution — `arena/cf53958f-olbg2` (pre-publication record, 2026-10-22 UTC)
 
 Applying the final pre-publication note onto `6077bd7` conflicted only in `COORDINATION.md`. Retained both the prior verification-history log and this session's latest pre-publication and push records; no upstream reconciliation or publication record was removed.
+
+
+### PR #103 refresh — `arena/cf53958f-olbg2` (2026-10-22 UTC)
+
+- Opened [PR #103](https://github.com/buffedlizard55-lab/OLBG2/pull/103). Its initial `validate` check passed (run 39777866765, head `e3db327`). The first merge attempt reported a conflict because main advanced while the PR was open; it was **not merged** and no review was awaited.
+- Rebased onto latest `origin/main` `6077bd7`, preserving the new `/reconcile/` publication entry. Conflicts were limited to the append-only coordination tail; portal code had no conflicts.
+- On the refreshed tree, `py_compile`, portal build, `portal_verify.py`, `git diff --check`, and the full suite all pass; **190 tests**. Verifier remains 26 pages / 707 sourced rows / 1,562 internal links; `data/portal` is unchanged.
+- The PR still points at old head `e3db327` and is currently conflicting until the refreshed branch is pushed. Latest fetch confirms remote branch `arena/cf53958f-olbg2` is still exactly `e3db327`; the refreshed local head is `e2718eb`. Next push will use an explicit lease pinned to `e3db327`, then CI must rerun before merge. U5 and Pages verification remain open.

@@ -1,0 +1,846 @@
+{
+  "captured_at": "2026-10-22T09:35:00Z",
+  "session": "arena/42c8f6be-olbg2",
+  "min_words": 64,
+  "max_words": 92,
+  "target_band": "-250 to +10000 American (1.40 to 101.00 decimal)",
+  "sports_covered": [
+    "baseball",
+    "basketball",
+    "darts",
+    "handball",
+    "ice-hockey",
+    "motor-racing",
+    "rugby-union",
+    "snooker",
+    "tennis"
+  ],
+  "count": 25,
+  "predictions": [
+    {
+      "match_id": "nhl-2026020154",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Nashville Predators @ Boston Bruins",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "venue": "TD Garden",
+      "selection": "Boston Bruins (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6601,
+      "fair_decimal": 1.51,
+      "fair_american": -196,
+      "fair_american_str": "-196",
+      "confidence": "high",
+      "headline": "TD Garden's stingiest home defense gives Boston the clear edge over overtime-reliant Nashville",
+      "text": "Boston Bruins on the Moneyline is the play at TD Garden on Thursday night. Boston enter 7-2-1 overall and have suffocated visitors for just six goals allowed across four home outings (3-1-0, outscoring guests 15-6), powered by David Pastrnak's four goals and eight assists alongside six wins from goaltender Jeremy Swayman. Nashville's 3-2-3 mark leans heavily on overtime salvage points on the road (1-0-2), with only 23 goals scored in eight games behind Ryan O'Reilly (four goals) and Roman Josi (eight assists).",
+      "word_count": 82,
+      "facts": [
+        {
+          "claim": "Boston Bruins stand 7-2-1 overall and 3-1-0 at TD Garden (15 GF, 6 GA)",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "David Pastrnak leads Boston (4G, 8A) and Jeremy Swayman owns 6 wins; Ryan O'Reilly (4G) and Roman Josi (8A) pace Nashville",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "official_source": "NHL Official GameCenter & Stats API",
+      "official_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026-10-22/2026020154",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020159",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Los Angeles Kings @ New York Islanders",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:30:00Z",
+      "venue": "UBS Arena",
+      "selection": "New York Islanders (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.7149,
+      "fair_decimal": 1.4,
+      "fair_american": -250,
+      "fair_american_str": "-250",
+      "confidence": "high",
+      "headline": "Sorokin and a 4-1-0 UBS Arena fortress meet a Kings offense averaging 2.43 goals",
+      "text": "New York Islanders on the Moneyline stands right on our -250 threshold at UBS Arena. New York have turned home ice into an early-season stronghold at 4-1-0 while outscoring visitors 19-10, backed by Bo Horvat's five goals, rookie blueliner Matthew Schaefer's eight assists, and five victories from netminder Ilya Sorokin. Even though Los Angeles snapped their skid last time out, the Kings remain 1-4-2 with just 17 goals scored against 27 conceded across seven games and a lone win for Darcy Kuemper.",
+      "word_count": 82,
+      "facts": [
+        {
+          "claim": "New York Islanders sit 4-1-0 at UBS Arena (19 GF, 10 GA); Los Angeles Kings sit 1-4-2 overall (17 GF, 27 GA)",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "Bo Horvat (5G), Matthew Schaefer (8A), and Ilya Sorokin (5W) lead NYI; Darcy Kuemper has 1 win for LAK",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "official_source": "NHL Official GameCenter & Stats API",
+      "official_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026-10-22/2026020159",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020162",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Minnesota Wild @ Calgary Flames",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "venue": "Scotiabank Saddledome",
+      "selection": "Minnesota Wild (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6738,
+      "fair_decimal": 1.48,
+      "fair_american": -208,
+      "fair_american_str": "-208",
+      "confidence": "high",
+      "headline": "Kaprizov's eleven-goal surge targets a Calgary defense shipping 4.63 goals a night",
+      "text": "Take Minnesota Wild on the Moneyline at Scotiabank Saddledome on Thursday. Kirill Kaprizov has already erupted for eleven goals and goaltender Jesper Wallstedt has collected six wins to lift Minnesota to 6-2-2 (14 points, 31 goals for, 25 against across ten games). Calgary's solitary win in their previous outing barely masks a 2-6-0 start built on 17 goals scored and 37 surrendered in eight games, including a leaky 1-3-0 home split where opponents have outscored the Flames 19-9.",
+      "word_count": 78,
+      "facts": [
+        {
+          "claim": "Minnesota Wild stand 6-2-2 (31 GF, 25 GA); Calgary Flames stand 2-6-0 (17 GF, 37 GA) and 1-3-0 at home",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Kirill Kaprizov has 11 goals and Jesper Wallstedt has 6 wins on the official NHL score feed",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "official_source": "NHL Official GameCenter & Stats API",
+      "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026-10-22/2026020162",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "shl-2026-1022-ske-dif",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "Swedish Hockey League (SHL) 2026-27",
+      "event": "Skellefteå AIK v Djurgårdens IF",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 17:00 UTC",
+      "venue": "Skellefteå Kraft Arena",
+      "selection": "Skellefteå AIK (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.7096,
+      "fair_decimal": 1.41,
+      "fair_american": -244,
+      "fair_american_str": "-244",
+      "confidence": "high",
+      "headline": "Lindholm and Lindberg steer third-placed Skellefteå against a leaky Djurgården defense",
+      "text": "Side with Skellefteå AIK on the Moneyline when Djurgårdens IF visit Skellefteå Kraft Arena on Thursday evening. Skellefteå sit third in the SHL on 19 points (32 goals for, 25 against in ten games) behind twin 11-point centers Pär Lindholm and Oscar Lindberg (three goals, eight assists apiece) after taking second-placed Frölunda to a 3-2 shootout on 17 October. Djurgården were hammered 6-2 in Gothenburg on 20 October and sit 12th with a -10 goal differential (23-33) despite Charles Hudon's eight points.",
+      "word_count": 82,
+      "facts": [
+        {
+          "claim": "Skellefteå AIK sit 3rd on 19 pts (32 GF, 25 GA, 10 GP); Djurgårdens IF sit 12th on 12 pts (23 GF, 33 GA, 11 GP)",
+          "source": "https://stats.swehockey.se/ScheduleAndResults/Standings/20961"
+        },
+        {
+          "claim": "Pär Lindholm (11 pts) and Oscar Lindberg (11 pts) rank #4 and #5 in SHL scoring; Frölunda beat Djurgården 6-2 on 20 Oct 2026",
+          "source": "https://stats.swehockey.se/Players/Statistics/ScoringLeaders/20961"
+        }
+      ],
+      "official_source": "Swedish Ice Hockey Association (stats.swehockey.se)",
+      "official_url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "shl-2026-1024-hv71-fro",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "Swedish Hockey League (SHL) 2026-27",
+      "event": "HV 71 v Frölunda HC",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24 16:00 UTC",
+      "venue": "Husqvarna Garden",
+      "selection": "Frölunda HC (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6582,
+      "fair_decimal": 1.52,
+      "fair_american": -192,
+      "fair_american_str": "-192",
+      "confidence": "high",
+      "headline": "Red-hot Frölunda bring a +14 goal differential to Jönköping against struggling HV 71",
+      "text": "Frölunda HC on the Moneyline is the standout Saturday call in Jönköping. Second-placed Frölunda have piled up 25 points from eleven outings (38 goals scored, only 24 allowed) with Graeme Clarke (nine points), Samuel Fagemo (eight), and captain Henrik Tömmernes (eight) driving back-to-back statement wins over Skellefteå (3-2 shootout on 17 October) and Djurgården (6-2 on 20 October). Thirteenth-placed HV 71 own a lone regulation victory in eleven games (29-39 goal split), dropping a 5-2 decision at Luleå and a 3-2 home shootout to bottom club Linköping despite Pavol Regenda's ten points.",
+      "word_count": 92,
+      "facts": [
+        {
+          "claim": "Frölunda HC rank 2nd (25 pts, 38 GF, 24 GA); HV 71 rank 13th (10 pts, 1 regulation win in 11 GP, 29 GF, 39 GA)",
+          "source": "https://stats.swehockey.se/ScheduleAndResults/Standings/20961"
+        },
+        {
+          "claim": "Frölunda beat Skellefteå 3-2 (SO, 17 Oct) and Djurgården 6-2 (20 Oct); HV 71 lost 2-5 at Luleå (17 Oct) and 2-3 SO vs Linköping (20 Oct)",
+          "source": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961"
+        }
+      ],
+      "official_source": "Swedish Ice Hockey Association (stats.swehockey.se)",
+      "official_url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "el-E2026-62",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "EuroLeague 2026-27 — Round 7",
+      "event": "Maccabi Rapyd Tel Aviv v Real Madrid",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 18:05 UTC",
+      "venue": "Aleksandar Nikolic Hall",
+      "selection": "Real Madrid (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6653,
+      "fair_decimal": 1.5,
+      "fair_american": -200,
+      "fair_american_str": "-200",
+      "confidence": "high",
+      "headline": "Maledon's playmaking and Tavares's rim protection give Real Madrid the Belgrade neutral-floor edge",
+      "text": "Real Madrid on the Moneyline is our Round 7 play against Maccabi Rapyd Tel Aviv in Belgrade. Theo Maledon is averaging 15.2 points, 5.8 assists, and a 21.5 PIR alongside Walter Tavares's 7.2 rebounds and 1.3 blocks per game, steering Madrid to a +23 scoring margin across six EuroLeague rounds (554 scored, 531 conceded). Playing away from Tel Aviv, 16th-placed Maccabi sit 2-4 with a -31 differential (509-540, allowing 90.0 points a night) even with Yam Madar contributing 12.2 points and 4.5 assists.",
+      "word_count": 83,
+      "facts": [
+        {
+          "claim": "Real Madrid sit 3-3 (554 PF, 531 PA, +23); Maccabi Rapyd Tel Aviv sit 2-4 (509 PF, 540 PA, -31)",
+          "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+        },
+        {
+          "claim": "Theo Maledon (15.2 PPG, 5.8 APG, 21.5 PIR) and Walter Tavares (7.2 RPG, 1.3 BPG) lead Real Madrid; Yam Madar posts 12.2 PPG for Maccabi",
+          "source": "https://api-live.euroleague.net/v3/competitions/E/statistics/players/traditional?seasonMode=Single&seasonCode=E2026&statisticMode=PerGame&sortDirection=Descending&limit=25"
+        }
+      ],
+      "official_source": "EuroLeague Official Game Center (E2026)",
+      "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "match_id": "el-E2026-68",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "EuroLeague 2026-27 — Round 7",
+      "event": "Zalgiris Kaunas v LDLC ASVEL Villeurbanne",
+      "date": "2026-10-23",
+      "start_utc": "2026-10-23 17:00 UTC",
+      "venue": "Zalgirio Arena",
+      "selection": "Zalgiris Kaunas (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.663,
+      "fair_decimal": 1.51,
+      "fair_american": -196,
+      "fair_american_str": "-196",
+      "confidence": "high",
+      "headline": "Valanciunas anchors Zalgiris at home in Kaunas against defense-optional ASVEL",
+      "text": "Zalgiris Kaunas on the Moneyline offers solid value at Zalgirio Arena on Thursday evening. Veteran center Jonas Valanciunas has anchored Zalgiris with 10.2 points, 7.7 rebounds, and an 18.3 PIR through six rounds (490 scored, 517 allowed), giving the Lithuanian hosts clear interior superiority as they hunt their first home win after banking two road victories already. Seventeen-ranked LDLC ASVEL Villeurbanne also sit 2-4 but own a porous -45 differential (527-572, 95.3 points conceded per game) that Patty Mills's 15.6 points per game cannot cover.",
+      "word_count": 85,
+      "facts": [
+        {
+          "claim": "Zalgiris Kaunas (490 PF, 517 PA) host 17th-placed LDLC ASVEL Villeurbanne (2-4, 527 PF, 572 PA, -45)",
+          "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+        },
+        {
+          "claim": "Jonas Valanciunas posts 10.2 PPG, 7.7 RPG, 18.3 PIR for Zalgiris; Patty Mills averages 15.6 PPG on 46.2% 3PT for ASVEL",
+          "source": "https://api-live.euroleague.net/v3/competitions/E/statistics/players/traditional?seasonMode=Single&seasonCode=E2026&statisticMode=PerGame&sortDirection=Descending&limit=25"
+        }
+      ],
+      "official_source": "EuroLeague Official Game Center (E2026)",
+      "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "match_id": "el-E2026-69",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "EuroLeague 2026-27 — Round 7",
+      "event": "Paris Basketball v Valencia Basket",
+      "date": "2026-10-23",
+      "start_utc": "2026-10-23 18:45 UTC",
+      "venue": "Adidas Arena",
+      "selection": "Valencia Basket (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6589,
+      "fair_decimal": 1.52,
+      "fair_american": -192,
+      "fair_american_str": "-192",
+      "confidence": "high",
+      "headline": "Former Paris star TJ Shorts returns to Adidas Arena leading fourth-placed Valencia",
+      "text": "Valencia Basket on the Moneyline is the selection as fourth-placed Valencia visit 18th-placed Paris Basketball. Returning to his old arena, point guard TJ Shorts is posting 15.8 points, 5.7 assists, and an 18.3 PIR alongside Nikola Mirotic's efficient 14.7 points (96.9% free throws) for a 4-2 Valencia side boasting a +46 differential (583-537) and a spotless 2-0 away record. Paris have slid to 1-5 (504-545, 1-3 at home) despite Nadir Hifi's 20.2 points per game across four appearances.",
+      "word_count": 78,
+      "facts": [
+        {
+          "claim": "Valencia Basket rank 4th at 4-2 (583 PF, 537 PA, 2-0 away); Paris Basketball rank 18th at 1-5 (504 PF, 545 PA, 1-3 home)",
+          "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+        },
+        {
+          "claim": "TJ Shorts (15.8 PPG, 5.7 APG, 18.3 PIR) and Nikola Mirotic (14.7 PPG) lead Valencia; Nadir Hifi averages 20.2 PPG for Paris",
+          "source": "https://api-live.euroleague.net/v3/competitions/E/statistics/players/traditional?seasonMode=Single&seasonCode=E2026&statisticMode=PerGame&sortDirection=Descending&limit=25"
+        }
+      ],
+      "official_source": "EuroLeague Official Game Center (E2026)",
+      "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "match_id": "el-E2026-80",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "EuroLeague 2026-27 — Round 8",
+      "event": "Virtus Bologna v Zalgiris Kaunas",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28 19:30 UTC",
+      "venue": "PalaDozza",
+      "selection": "Virtus Bologna (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6834,
+      "fair_decimal": 1.46,
+      "fair_american": -217,
+      "fair_american_str": "-217",
+      "confidence": "high",
+      "headline": "Unbeaten home floor in Bologna and Aliou Diarra's shot-blocking back Virtus in Round 8",
+      "text": "Virtus Bologna on the Moneyline is our Round 8 pick when Zalgiris Kaunas visit PalaDozza on 28 October. Following Wednesday's competitive 90-81 Round 7 road loss against Hapoel Tel Aviv in Sofia, seventh-placed Virtus stand 4-3 overall (606 scored, 608 allowed) and remain a perfect 2-0 on home hardwood in Bologna behind rim-protector Aliou Diarra's 11.9 points, 7.1 rebounds, and EuroLeague-leading 2.4 blocks (19.3 PIR). Fourteenth-placed Zalgiris carry a negative scoring differential (-27) into one of Italy's loudest venues.",
+      "word_count": 79,
+      "facts": [
+        {
+          "claim": "Virtus Bologna stand 4-3 (606 PF, 608 PA, 2-0 home) following Round 7 game E2026_61 (Hapoel Tel Aviv 90-81 Virtus on 21 Oct 2026)",
+          "source": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games"
+        },
+        {
+          "claim": "Aliou Diarra averages 11.9 PPG, 7.1 RPG, 2.4 BPG, and 19.3 PIR for Virtus Bologna across 7 games",
+          "source": "https://api-live.euroleague.net/v3/competitions/E/statistics/players/traditional?seasonMode=Single&seasonCode=E2026&statisticMode=PerGame&sortDirection=Descending&limit=25"
+        }
+      ],
+      "official_source": "EuroLeague Official Game Center (E2026)",
+      "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/virtus-bologna-zalgiris-kaunas/E2026/80/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "match_id": "ec-eurocup-r5-lkb-ulm",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "BKT EuroCup 2026-27 — Round 5 (Group D)",
+      "event": "Lietkabelis Panevezys v ratiopharm ulm",
+      "date": "2026-10-27",
+      "start_utc": "2026-10-27 17:00 UTC",
+      "venue": "KALNAPILIO ARENA",
+      "selection": "Lietkabelis Panevezys (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6533,
+      "fair_decimal": 1.53,
+      "fair_american": -189,
+      "fair_american_str": "-189",
+      "confidence": "high",
+      "headline": "Group D's stingiest half-court defense makes Lietkabelis clear home favorites over Ulm",
+      "text": "Back Lietkabelis Panevezys on the Moneyline in BKT EuroCup Group D Round 5 action. Lietkabelis have surged to a 3-1 start tied atop Group D by holding opponents to a group-best 307 points across four outings (76.8 allowed per game, 321 scored, +14 differential). Visiting ratiopharm ulm sit 2-2 (367 scored, 365 conceded) playing frantic 91-point track meets with guard Tobias Jensen chipping in 5.4 points and 2.2 assists, a style that historically bog-downs inside Panevezys's physical half-court press.",
+      "word_count": 79,
+      "facts": [
+        {
+          "claim": "Lietkabelis Panevezys stand 3-1 in EuroCup Group D (321 PF, 307 PA); ratiopharm ulm stand 2-2 (367 PF, 365 PA)",
+          "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"
+        },
+        {
+          "claim": "Tobias Jensen averages 5.4 PPG and 2.2 APG for ratiopharm ulm on the official EuroCup traditional player feed",
+          "source": "https://api-live.euroleague.net/v3/competitions/U/statistics/players/traditional?seasonCode=U2026&statisticMode=PerGame"
+        }
+      ],
+      "official_source": "BKT EuroCup Official Live API (U2026)",
+      "official_url": "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "match_id": "prod2-12063",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "French Pro D2 2026-27 — Journée 8",
+      "event": "SU Agen v Nissa Rugby",
+      "date": "2026-10-23",
+      "start_utc": "2026-10-23 17:30 UTC",
+      "venue": "Official Club Ground",
+      "selection": "SU Agen (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6709,
+      "fair_decimal": 1.49,
+      "fair_american": -204,
+      "fair_american_str": "-204",
+      "confidence": "high",
+      "headline": "Tolofua's breakdown dominance and back-to-back wins put SU Agen on top at Stade Armandie",
+      "text": "SU Agen (1X2 Match Winner) is the selection at Stade Armandie on Friday night in Pro D2 Journée 8. Tenth-placed Agen arrive on consecutive victories (W-L-L-W-W recent sequence, 15 points, 189 scored) while ranking third across Pro D2 in time in possession (52.6%) and joint-second in breakdown turnovers through flanker Sialevailea Tolofua (six jackals). Thirteenth-placed Nissa Rugby sit on 11 points (2W-5L, 171-213, -42) having dropped four of their last five matches (L-L-L-W-L).",
+      "word_count": 73,
+      "facts": [
+        {
+          "claim": "SU Agen stand 10th (15 pts, 3W-4L, 189 PF, 206 PA, form W-L-L-W-W); Nissa Rugby stand 13th (11 pts, 2W-5L, 171 PF, 213 PA)",
+          "source": "https://prod2.lnr.fr/classement"
+        },
+        {
+          "claim": "Sialevailea Tolofua ranks joint-2nd in Pro D2 jackals (6) and SU Agen rank 3rd in possession (52.6%)",
+          "source": "https://prod2.lnr.fr/statistiques"
+        }
+      ],
+      "official_source": "LNR Pro D2 Official Feuille de Match",
+      "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "prod2-12065",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "French Pro D2 2026-27 — Journée 8",
+      "event": "Soyaux-Angoulême XV v US Dax",
+      "date": "2026-10-23",
+      "start_utc": "2026-10-23 17:30 UTC",
+      "venue": "Official Club Ground",
+      "selection": "Soyaux-Angoulême XV (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6949,
+      "fair_decimal": 1.44,
+      "fair_american": -227,
+      "fair_american_str": "-227",
+      "confidence": "high",
+      "headline": "Pro D2 turnover king Hubert Texier anchors Soyaux-Angoulême's +40 defense against wide-open Dax",
+      "text": "Side with Soyaux-Angoulême XV (1X2 Match Winner) at Stade Chanzy on Friday evening. Seventh-placed Soyaux-Angoulême boast a +40 scoring differential across seven rounds (220 scored, just 180 conceded, 3W-1D-3L) spearheaded by Pro D2's number-one breakdown jackler Hubert Texier (nine turnovers won). Although sixth-placed US Dax arrive 4W-3L behind fly-half Romuald Seguy's 82 points, Dax have leaked 264 points (37.7 per game) in wild shootouts — a defensive liability in Pro D2 where hosts win 70% of fixtures.",
+      "word_count": 77,
+      "facts": [
+        {
+          "claim": "Soyaux-Angoulême XV stand 3W-1D-3L (220 PF, 180 PA, +40); US Dax stand 4W-0D-3L (269 PF, 264 PA)",
+          "source": "https://prod2.lnr.fr/classement"
+        },
+        {
+          "claim": "Hubert Texier leads Pro D2 with 9 jackals, Romuald Seguy ranks 2nd in points (82), and home teams win 70% of 2026-27 Pro D2 matches",
+          "source": "https://prod2.lnr.fr/statistiques"
+        }
+      ],
+      "official_source": "LNR Pro D2 Official Feuille de Match",
+      "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292614",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 4",
+      "event": "Leinster Rugby v Munster Rugby",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24 17:00 UTC",
+      "venue": "Aviva Stadium",
+      "selection": "Leinster Rugby (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6827,
+      "fair_decimal": 1.46,
+      "fair_american": -217,
+      "fair_american_str": "-217",
+      "confidence": "high",
+      "headline": "Reigning champions Leinster ride a 29-5 defensive clinic into Saturday's Irish derby with Munster",
+      "text": "Leinster Rugby (1X2 Match Winner) is our headline United Rugby Championship call on Saturday evening in Dublin. Led up front by Ireland back-rowers Caelan Doris and Josh van der Flier alongside hooker Dan Sheehan, the reigning back-to-back URC champions shook off an understrength South African tour by dismantling Cardiff 29-5 last weekend to reach a +17 differential (75 for, 58 against, 12 tries to 8). Munster arrive winless on the road after a bruising 26-26 draw at Ulster (72-74 differential, 11 tries conceded).",
+      "word_count": 83,
+      "facts": [
+        {
+          "claim": "Leinster stand +17 (75 PF, 58 PA, 12 tries) after beating Cardiff 29-5; Munster stand -2 (72 PF, 74 PA) after drawing 26-26 at Ulster",
+          "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+        },
+        {
+          "claim": "Caelan Doris, Josh van der Flier, and Dan Sheehan feature on the official 2026-27 Leinster URC squad list ahead of match 292614",
+          "source": "https://stats.unitedrugby.com/clubs/leinster/players"
+        }
+      ],
+      "official_source": "URC Official Match Centre",
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "pdc-32323",
+      "sport": "darts",
+      "sport_name": "Darts",
+      "competition": "PDC Machineseeker European Championship 2026 — Round 1",
+      "event": "Gian van Veen v Andrew Gilding",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 17:00 UTC",
+      "venue": "Westfalenhalle, Dortmund",
+      "selection": "Gian van Veen (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.668,
+      "fair_decimal": 1.5,
+      "fair_american": -200,
+      "fair_american_str": "-200",
+      "confidence": "high",
+      "headline": "Defending European Champion Gian van Veen opens Dortmund title defence against #27 Andrew Gilding",
+      "text": "Gian van Veen to win is the play as the reigning European Champion launches his title defence in Thursday's evening session at Dortmund's Westfalenhalle. Ranked world number three on the PDC Order of Merit with £1,035,750 in two-year prize money, the Dutchman returns to the exact stage of his breakthrough major triumph against 27th-ranked Andrew Gilding (£355,750), carrying nearly a three-to-one earnings edge over the best-of-11-leg sprint.",
+      "word_count": 67,
+      "facts": [
+        {
+          "claim": "Gian van Veen ranks #3 (£1,035,750) and Andrew Gilding ranks #27 (£355,750) on the official PDC Order of Merit",
+          "source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Reigning champion van Veen faces Gilding on Thursday 22 October in Dortmund (PDC European Championship R1)",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        }
+      ],
+      "official_source": "PDC Official Rankings & European Championship Draw",
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15"
+    },
+    {
+      "match_id": "pdc-32329",
+      "sport": "darts",
+      "sport_name": "Darts",
+      "competition": "PDC Machineseeker European Championship 2026 — Round 1",
+      "event": "Ross Smith v Karel Sedlacek",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 17:00 UTC",
+      "venue": "Westfalenhalle, Dortmund",
+      "selection": "Ross Smith (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6818,
+      "fair_decimal": 1.47,
+      "fair_american": -213,
+      "fair_american_str": "-213",
+      "confidence": "high",
+      "headline": "Former Dortmund champion Ross Smith holds a 31-spot ranking cushion over Karel Sedlacek",
+      "text": "Ross Smith to beat Karel Sedlacek closes Thursday's first-round card in Dortmund at attractive odds inside -250. World number 13 Smith — himself a former European Champion inside Westfalenhalle — has banked £567,250 on the two-year PDC Order of Merit, standing 31 places clear of 44th-ranked Czech thrower Karel Sedlacek (£177,250). Across a race to six legs, Smith's heavy 180-scoring power translates that prize-money gap into a 68.2% win expectation.",
+      "word_count": 70,
+      "facts": [
+        {
+          "claim": "Ross Smith ranks #13 (£567,250) and Karel Sedlacek ranks #44 (£177,250) on the official PDC Order of Merit",
+          "source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Smith v Sedlacek closes the Thursday 22 October evening session at Westfalenhalle Dortmund",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        }
+      ],
+      "official_source": "PDC Official Rankings & European Championship Draw",
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15"
+    },
+    {
+      "match_id": "pdc-32335",
+      "sport": "darts",
+      "sport_name": "Darts",
+      "competition": "PDC Machineseeker European Championship 2026 — Round 1",
+      "event": "Jonny Clayton v Niko Springer",
+      "date": "2026-10-23",
+      "start_utc": "2026-10-23 17:00 UTC",
+      "venue": "Westfalenhalle, Dortmund",
+      "selection": "Jonny Clayton (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6697,
+      "fair_decimal": 1.49,
+      "fair_american": -204,
+      "fair_american_str": "-204",
+      "confidence": "high",
+      "headline": "World #5 Jonny Clayton's stage pedigree outweighs German crowd support for #36 Niko Springer",
+      "text": "Jonny Clayton to win is our Friday Dortmund selection against home qualifier Niko Springer. Climbing back to number five in the world on £706,000 across the two-year PDC Order of Merit, the Welsh major winner brings clinical double-hitting composure into a hostile German arena against 36th-ranked Springer (£239,750). Even over a volatile best-of-11-leg opener, Clayton's nearly three-fold ranking-money advantage prices him at 67.0% (-204 fair American, 1.49 decimal).",
+      "word_count": 68,
+      "facts": [
+        {
+          "claim": "Jonny Clayton ranks #5 (£706,000) and Niko Springer ranks #36 (£239,750) on the official PDC Order of Merit",
+          "source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Clayton v Springer is scheduled in Round 1 of the 2026 PDC European Championship on Friday 23 October",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        }
+      ],
+      "official_source": "PDC Official Rankings & European Championship Draw",
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15"
+    },
+    {
+      "match_id": "atp-902110",
+      "sport": "tennis",
+      "sport_name": "Tennis",
+      "competition": "ATP Tour Indoor Hard — Round of 16",
+      "event": "Tomas Machac v Karen Khachanov",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 09:00 UTC",
+      "venue": "Indoor Hard Court (ATP Tour)",
+      "selection": "Karen Khachanov (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6505,
+      "fair_decimal": 1.54,
+      "fair_american": -185,
+      "fair_american_str": "-185",
+      "confidence": "high",
+      "headline": "Indoor powerhouse Karen Khachanov (#25) holds more than double #72 Tomas Machac's ranking points",
+      "text": "Karen Khachanov to defeat Tomas Machac is the opening ATP indoor hard-court pick on Thursday morning. Sitting #25 in the 19 October PIF ATP Singles Rankings on 1,990 points, Khachanov thrives on low-bouncing European indoor courts where his first-serve weight dictates short rallies. Machac arrives down at #72 on 779 points after an interrupted campaign, leaving Khachanov a 65.1% favorite (-185 fair American, 1.54 decimal) across best-of-three sets.",
+      "word_count": 68,
+      "facts": [
+        {
+          "claim": "Karen Khachanov ranks #25 (1,990 pts) and Tomas Machac ranks #72 (779 pts) on the 2026-10-19 PIF ATP Singles Rankings",
+          "source": "https://www.atptour.com/en/rankings/singles"
+        },
+        {
+          "claim": "Round of 16 fixture Tomas Machac vs Karen Khachanov confirmed on the live tour slate",
+          "source": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Tomas_Machac_vs_Karen_Khachanov/3?event_id=902110"
+        }
+      ],
+      "official_source": "PIF ATP Singles Rankings (2026-10-19)",
+      "official_url": "https://www.atptour.com/en/players/tomas-machac/m0fh/overview",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Tomas_Machac_vs_Karen_Khachanov/3?event_id=902110"
+    },
+    {
+      "match_id": "atp-902082",
+      "sport": "tennis",
+      "sport_name": "Tennis",
+      "competition": "ATP Tour Indoor Hard — Round of 16",
+      "event": "Alexander Bublik v Fabian Marozsan",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 15:30 UTC",
+      "venue": "Indoor Hard Court (ATP Tour)",
+      "selection": "Alexander Bublik (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6558,
+      "fair_decimal": 1.52,
+      "fair_american": -192,
+      "fair_american_str": "-192",
+      "confidence": "high",
+      "headline": "Top-20 server Alexander Bublik (#19) brings 2,275 ATP points into indoor clash with #64 Marozsan",
+      "text": "Alexander Bublik to win is our play in Thursday afternoon's indoor Round-of-16 meeting with Fabian Marozsan. Holding world #19 status with 2,275 PIF ATP points, Bublik's flat indoor delivery makes service breaks scarce over three sets against #64 Marozsan (860 points). While Hungarian shotmaker Marozsan can steal rhythm in neutral exchanges, a 1,415-point ranking cushion prices Bublik cleanly at 65.6% (1.52 decimal, -192 American).",
+      "word_count": 64,
+      "facts": [
+        {
+          "claim": "Alexander Bublik ranks #19 (2,275 pts) and Fabian Marozsan ranks #64 (860 pts) on the official ATP rankings",
+          "source": "https://www.atptour.com/en/rankings/singles"
+        },
+        {
+          "claim": "Round of 16 tie Bublik vs Marozsan verified on the Thursday 22 October tour schedule",
+          "source": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexander_Bublik_vs_Fabian_Marozsan/3?event_id=902082"
+        }
+      ],
+      "official_source": "PIF ATP Singles Rankings (2026-10-19)",
+      "official_url": "https://www.atptour.com/en/players/alexander-bublik/bk92/overview",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexander_Bublik_vs_Fabian_Marozsan/3?event_id=902082"
+    },
+    {
+      "match_id": "atp-902105",
+      "sport": "tennis",
+      "sport_name": "Tennis",
+      "competition": "ATP Tour Indoor Hard — Round of 16",
+      "event": "Kyrian Jacquet v Brandon Nakashima",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 19:30 UTC",
+      "venue": "Indoor Hard Court (ATP Tour)",
+      "selection": "Brandon Nakashima (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6917,
+      "fair_decimal": 1.45,
+      "fair_american": -222,
+      "fair_american_str": "-222",
+      "confidence": "high",
+      "headline": "Career-high #17 Brandon Nakashima's baseline consistency outclasses #85 Kyrian Jacquet indoors",
+      "text": "Back Brandon Nakashima to beat Kyrian Jacquet in Thursday evening's indoor hard-court Round of 16. Climbing to #17 in the PIF ATP rankings on 2,375 points, the American's compact return game and tiebreak poise match up cleanly against 85th-ranked Frenchman Jacquet (703 points). Separated by 68 ranking spots and more than three times the rolling points haul, Nakashima rates a 69.2% winner (1.45 decimal, -222 American).",
+      "word_count": 66,
+      "facts": [
+        {
+          "claim": "Brandon Nakashima ranks #17 (2,375 pts) and Kyrian Jacquet ranks #85 (703 pts) on the 2026-10-19 PIF ATP rankings",
+          "source": "https://www.atptour.com/en/rankings/singles"
+        },
+        {
+          "claim": "Jacquet vs Nakashima confirmed for 22 October 19:30 UTC",
+          "source": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Kyrian_Jacquet_vs_Brandon_Nakashima/3?event_id=902105"
+        }
+      ],
+      "official_source": "PIF ATP Singles Rankings (2026-10-19)",
+      "official_url": "https://www.atptour.com/en/players/kyrian-jacquet/j0az/overview",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Kyrian_Jacquet_vs_Brandon_Nakashima/3?event_id=902105"
+    },
+    {
+      "match_id": "atp-902133",
+      "sport": "tennis",
+      "sport_name": "Tennis",
+      "competition": "ATP Erste Bank Open Vienna — Quarter-Finals",
+      "event": "Corentin Moutet v Tommy Paul",
+      "date": "2026-10-23",
+      "start_utc": "2026-10-23 10:30 UTC",
+      "venue": "Indoor Hard Court (ATP Tour)",
+      "selection": "Tommy Paul (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.7162,
+      "fair_decimal": 1.4,
+      "fair_american": -250,
+      "fair_american_str": "-250",
+      "confidence": "high",
+      "headline": "World #15 Tommy Paul's all-court defense counters trick-shot lefty #94 Corentin Moutet in Vienna",
+      "text": "Tommy Paul to win is our Friday quarter-final call against Corentin Moutet at the Erste Bank Open in Vienna. Ranked #15 globally on 2,575 PIF ATP points, Paul's footspeed forward to drop shots neutralizes left-hander Moutet's slice variety (#94, 640 points). Across a four-to-one ranking-points ratio on fast indoor hard court, our best-of-three binomial model puts Paul right on the -250 high-confidence ceiling (1.40 decimal).",
+      "word_count": 65,
+      "facts": [
+        {
+          "claim": "Tommy Paul ranks #15 (2,575 pts) and Corentin Moutet ranks #94 (640 pts) on the official PIF ATP rankings",
+          "source": "https://www.atptour.com/en/rankings/singles"
+        },
+        {
+          "claim": "Quarter-final Moutet vs Paul scheduled Friday 23 October 10:30 UTC",
+          "source": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Corentin_Moutet_vs_Tommy_Paul/3?event_id=902133"
+        }
+      ],
+      "official_source": "PIF ATP Singles Rankings (2026-10-19)",
+      "official_url": "https://www.atptour.com/en/players/corentin-moutet/mw02/overview",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Corentin_Moutet_vs_Tommy_Paul/3?event_id=902133"
+    },
+    {
+      "match_id": "ehfcl-202711020101016",
+      "sport": "handball",
+      "sport_name": "Handball",
+      "competition": "EHF Champions League Men 2026-27 — Round 6",
+      "event": "Orlen Wisla Plock v HBC Nantes",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T17:45:00Z",
+      "venue": "Group B Arena",
+      "selection": "Orlen Wisla Plock (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.684,
+      "fair_decimal": 1.46,
+      "fair_american": -217,
+      "fair_american_str": "-217",
+      "confidence": "high",
+      "headline": "Bjerre and Kosorotov fuel Plock's revenge mission at ORLEN Arena after September's one-goal loss in Nantes",
+      "text": "Orlen Wisla Plock (1X2 Match Winner) is our EHF Champions League Round 6 selection on Wednesday 28 October. After dropping a razor-thin 26-25 opener in Nantes on 9 September, Xavier Sabate's Polish champions have rattled off three straight Group B wins — edging MT Melsungen 25-24 before sweeping HC Vardar 32-26 away and 33-32 at home — powered by left wing Frederik Bjerre (26 goals) and Sergei Mark Kosorotov (19 goals). Back inside ORLEN Arena (115-108 goal split vs Nantes's 142-143), Plock grade at 68.4% (1.46 decimal, -217 American).",
+      "word_count": 89,
+      "facts": [
+        {
+          "claim": "Orlen Wisla Plock stand 3W-0D-1L (115:108) after beating Melsungen (25-24) and Vardar twice (32-26, 33-32) following a 25-26 loss at Nantes on 9 Sep 2026",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/clubs/details/Qg5-SUEq-U2qV3euQZ48RQ/OrlenWislaPlock/"
+        },
+        {
+          "claim": "Frederik Bjerre (26 goals) and Sergei Mark Kosorotov (19 goals) lead Orlen Wisla Plock's 2026-27 EHF Champions League attack",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/clubs/details/Qg5-SUEq-U2qV3euQZ48RQ/OrlenWislaPlock/"
+        }
+      ],
+      "official_source": "EHF Champions League Official Match Centre",
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101016/OrlenWislaPlock-HBCNantes/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+    },
+    {
+      "match_id": "mlb-849805",
+      "sport": "baseball",
+      "sport_name": "Baseball",
+      "competition": "2026 MLB World Series — World Series Game 1",
+      "event": "Tampa Bay Rays @ Milwaukee Brewers",
+      "date": "2026-10-23",
+      "start_utc": "",
+      "venue": "American Family Field",
+      "selection": "Milwaukee Brewers (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6557,
+      "fair_decimal": 1.53,
+      "fair_american": -189,
+      "fair_american_str": "-189",
+      "confidence": "high",
+      "headline": "Jacob Misiorowski takes the World Series Game 1 ball for a 103-win Brewers juggernaut in Milwaukee",
+      "text": "Milwaukee Brewers on the Moneyline is the play in Friday night's World Series Game 1 at American Family Field. Milwaukee paced Major League Baseball at 103-59 behind a +214 regular-season run differential (832 scored, 618 allowed — a 3.81 runs-against clip) and hand the Game 1 ball to hard-throwing right-hander Jacob Misiorowski. With 98-64 Tampa Bay (736-650 run split) yet to name a probable starter on the official MLB schedule feed, home field prices Milwaukee at 65.6% (1.53 decimal, -189 American).",
+      "word_count": 81,
+      "facts": [
+        {
+          "claim": "Milwaukee Brewers finished 103-59 (832 RS, 618 RA) vs Tampa Bay Rays 98-64 (736 RS, 650 RA)",
+          "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+        },
+        {
+          "claim": "World Series Game 1 (gamePk 849805) lists Jacob Misiorowski as Milwaukee probable pitcher at American Family Field",
+          "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28&hydrate=team,linescore,probablePitcher"
+        }
+      ],
+      "official_source": "MLB Official StatsAPI (gamePk verified)",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule/postseason?season=2026",
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+    },
+    {
+      "match_id": "mlb-849802",
+      "sport": "baseball",
+      "sport_name": "Baseball",
+      "competition": "2026 MLB World Series — World Series Game 2",
+      "event": "Tampa Bay Rays @ Milwaukee Brewers",
+      "date": "2026-10-24",
+      "start_utc": "",
+      "venue": "American Family Field",
+      "selection": "Milwaukee Brewers (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6557,
+      "fair_decimal": 1.53,
+      "fair_american": -189,
+      "fair_american_str": "-189",
+      "confidence": "high",
+      "headline": "Milwaukee's bullpen depth and +214 run differential carry straight into World Series Game 2",
+      "text": "Stay with Milwaukee Brewers on the Moneyline for Saturday night's World Series Game 2 at American Family Field. Across a 162-game sample, Milwaukee outscored opponents by 1.32 runs per game (5.14 scored vs 3.81 surrendered) compared with Tampa Bay's +0.53 margin (4.54 scored vs 4.01 allowed) before advancing past October's League Championship Series. Keeping the DH-era run environment inside Milwaukee's home park gives the Brewers identical 65.6% run-grid equity (-189 fair American, 1.53 decimal) before the series shifts to St. Petersburg.",
+      "word_count": 81,
+      "facts": [
+        {
+          "claim": "Milwaukee averaged 5.14 RS / 3.81 RA across 162 games vs Tampa Bay's 4.54 RS / 4.01 RA",
+          "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+        },
+        {
+          "claim": "World Series Game 2 (gamePk 849802) scheduled Saturday 24 October at American Family Field",
+          "source": "https://www.mlb.com/gameday/849802"
+        }
+      ],
+      "official_source": "MLB Official StatsAPI (gamePk verified)",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule/postseason?season=2026",
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+    },
+    {
+      "match_id": "f1-2026-us-gp",
+      "sport": "motor-racing",
+      "sport_name": "Motor Racing",
+      "competition": "2026 FIA Formula 1 World Championship — United States Grand Prix",
+      "event": "2026 Formula 1 United States Grand Prix — Race Winner",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25 19:00 UTC",
+      "venue": "Circuit of the Americas, Austin",
+      "selection": "Kimi Antonelli (Mercedes) — Race Winner",
+      "market": "Race Winner",
+      "probability": 0.2433,
+      "fair_decimal": 4.11,
+      "fair_american": 311,
+      "fair_american_str": "+311",
+      "confidence": "high",
+      "headline": "Runaway title leader Kimi Antonelli brings a 102-point Mercedes cushion to COTA at plus money",
+      "text": "Kimi Antonelli (Mercedes) to win the United States Grand Prix is our flagship plus-money Motor Racing play at Austin's Circuit of the Americas. While Antonelli's 102-point stranglehold atop the Drivers' Championship (340 points against Mercedes teammate George Russell's 238, Ferrari's Charles Leclerc on 229, and Lando Norris on 221) makes his season title price unbackable chalk, the single-race market prices his 24.3% Plackett-Luce win share at an attractive +311 fair American (4.11 decimal).",
+      "word_count": 73,
+      "facts": [
+        {
+          "claim": "Kimi Antonelli leads the 2026 FIA F1 Drivers' Standings on 340 pts ahead of George Russell (238), Charles Leclerc (229), and Lando Norris (221)",
+          "source": "https://www.formula1.com/en/results/2026/drivers"
+        },
+        {
+          "claim": "2026 United States Grand Prix at Circuit of the Americas, Austin confirmed on official F1 calendar",
+          "source": "https://www.formula1.com/en/racing/2026"
+        }
+      ],
+      "official_source": "Formula 1 Official 2026 Standings & Austin Schedule",
+      "official_url": "https://www.formula1.com/en/results/2026/drivers",
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"
+    },
+    {
+      "match_id": "wst-2026-r3-m50",
+      "sport": "snooker",
+      "sport_name": "Snooker",
+      "competition": "WST BetVictor Northern Ireland Open 2026 — Round 3",
+      "event": "Kyren Wilson v Pang Junxu",
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22 12:00 UTC",
+      "venue": "Waterfront Hall, Belfast",
+      "selection": "Kyren Wilson (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6828,
+      "fair_decimal": 1.46,
+      "fair_american": -217,
+      "fair_american_str": "-217",
+      "confidence": "high",
+      "headline": "Kyren Wilson's 13 season centuries and faster cue-ball tempo outgun Pang Junxu in Belfast",
+      "text": "Kyren Wilson to beat Pang Junxu is the standout snooker selection in Thursday's BetVictor Northern Ireland Open last-32 session at Waterfront Hall, Belfast. Ranked ninth globally on £716,800, the former Crucible king arrives winning 63% of his 24 matches this season with 13 centuries, 48 breaks over 50, and a brisk 21.9-second shot time. World #29 Pang (£272,750, 53% win rate across 23 matches, nine centuries, 26.5s shot time) trails across every scoring metric, pricing Wilson at 68.3% (-217 American, 1.46 decimal).",
+      "word_count": 82,
+      "facts": [
+        {
+          "claim": "Kyren Wilson ranks #9 (£716,800) and Pang Junxu ranks #29 (£272,750) on official WST World Rankings",
+          "source": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+        },
+        {
+          "claim": "WST Match Centre records Wilson at 63% wins, 13 centuries, 48 breaks of 50+, 21.9s AST vs Pang's 53%, 9 centuries, 26.5s AST",
+          "source": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7"
+        }
+      ],
+      "official_source": "World Snooker Tour Match Centre & Top-36 Rankings",
+      "official_url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
+    }
+  ]
+}

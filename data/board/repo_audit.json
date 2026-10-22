@@ -1,0 +1,157 @@
+{
+  "captured_at": "2026-10-22",
+  "session": "arena/ddcbf63c-olbg2",
+  "count": 14,
+  "findings": [
+    {
+      "id": "RA-01",
+      "severity": "critical",
+      "layer": "Survey (/survey/)",
+      "file": "data/survey/predictions.json (P-02)",
+      "published": "England Women v West Indies Women — ICC Women's T20 World Cup 2026 — 2026-10-21 15:00 — HIGH (77.4%)",
+      "official": "Tournament concluded four months earlier in June–July 2026; match absent from live OLBG Cricket/7 and cricket.json",
+      "source_name": "ICC Official Tournament Page",
+      "source_url": "https://www.icc-cricket.com/tournaments/womens-t20-world-cup-2026",
+      "resolution": "Purged stale P-02 record and locked deterministic regeneration in unit tests."
+    },
+    {
+      "id": "RA-02",
+      "severity": "critical",
+      "layer": "Survey (/survey/)",
+      "file": "scripts/survey_analyse.py & data/survey/picks.json",
+      "published": "'Afghanistan beat Bangladesh by 200 runs ... Afghanistan 190, Bangladesh 109 in 28.3 overs' + threshold override 0.55 -> HIGH",
+      "official": "190 - 109 = 81 runs (two separate Oct 2025 ODIs spliced together from non-official sites); official ICC page 274658 renders body stats client-side",
+      "source_name": "ICC Official Match 274658",
+      "source_url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh",
+      "resolution": "Removed spliced claim, non-official links, and artificial 0.55 HIGH override; marked match unlined ('—')."
+    },
+    {
+      "id": "RA-03",
+      "severity": "high",
+      "layer": "Survey (/survey/)",
+      "file": "data/survey/predictions.json (P-01 Top 14 & P-02)",
+      "published": "Claimed Toulouse #2 (4-0-2) & Perpignan #14 (0-0-6) citing wikipedia.org, rugbyrama.fr, allrugby.com, espn.com, racingpost.com",
+      "official": "Official LNR Top 14 J6 standings show #1 Stade Toulousain (24 pts, 5W-0D-1L, 197/124, 5 straight wins) vs #9 USA Perpignan (13 pts, 3W-0D-3L, 166/199); #14 is RC Vannes (0W-0D-6L)",
+      "source_name": "LNR Official Top 14 Standings",
+      "source_url": "https://top14.lnr.fr/classement",
+      "resolution": "Replaced 100% of third-party URLs and wrong Wikipedia standings with live LNR/EPCR official figures."
+    },
+    {
+      "id": "RA-04",
+      "severity": "high",
+      "layer": "Survey (/survey/)",
+      "file": "data/survey/sports.json",
+      "published": "21 sports total; omitted Hurling/26, Gaelic_Football/25, and Greyhounds/28",
+      "official": "OLBG carries 23 sport hubs: Hurling/26 is active and must be excluded per scope; Gaelic_Football/25 (5 events) and Greyhounds/28 (6 races) are eligible and active",
+      "source_name": "OLBG Betting Tips Sitemap",
+      "source_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "resolution": "Expanded sports.json to all 23 OLBG hubs (17 eligible + 6 OLBG-active excluded) and built pages for all 17 eligible sports."
+    },
+    {
+      "id": "RA-05",
+      "severity": "medium",
+      "layer": "Survey (/survey/)",
+      "file": "data/survey/events/*.json",
+      "published": "45 stale 2026-10-18 indexed_snapshot rows; rugby_league.json = []",
+      "official": "Live 2026-10-21 crawl confirms 3 active Rugby League outrights (2695857, 2801554, 2801600), 12 EHF CL R5 ties, 16 PDC R1 ties, and 0 tips on Aussie Rules/eSports",
+      "source_name": "OLBG Rugby League Hub",
+      "source_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "resolution": "Replaced all 45 indexed_snapshot rows with live 2026-10-21 OLBG fetches across all 17 eligible sports."
+    },
+    {
+      "id": "RA-06",
+      "severity": "medium",
+      "layer": "Survey (/survey/)",
+      "file": "scripts/survey_build.py & data/survey/events/*.json",
+      "published": "0 of 130 inventory rows had row-level official source links",
+      "official": "Every row requires an official governing-body link alongside OLBG for manual verification",
+      "source_name": "Euroleague / LNR / EHF / PDC / ATP / WST / NHL / NBA",
+      "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+      "resolution": "Added official_source + official_url to every row in both /survey/ and /verified/."
+    },
+    {
+      "id": "RA-07",
+      "severity": "medium",
+      "layer": "Desk (/site/)",
+      "file": "data/desk/picks.json (nhl-2026020152)",
+      "published": "'Jack Quinn on seven points and Tage Thompson on three goals'",
+      "official": "Official NHL API teamLeaders for game 2026020152 lists Tage Thompson (#72, BUF) with 5 goals and Zach Benson (#6, BUF) with 6 assists",
+      "source_name": "NHL Official Score API (2026-10-21)",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-21",
+      "resolution": "Updated data/desk/picks.json to 5 goals / 6 assists and regenerated /site/ cleanly via scripts/build.py."
+    },
+    {
+      "id": "RA-08",
+      "severity": "low",
+      "layer": "Survey (/survey/)",
+      "file": "data/survey/lines.json & scripts/survey_lines.py (SL-08, SL-09)",
+      "published": "Labels URC fixtures Connacht v Zebre and Munster/Edinburgh round as 'URC Round 6'",
+      "official": "Official URC match centre URL is /match-centre/2026-27/4 ('Round 4') and all 16 clubs have PL=3 matches played",
+      "source_name": "URC Official Match Centre Round 4",
+      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "resolution": "Recorded accurately as Round 4 in /verified/ and /survey/; logged for root owner in COORDINATION.md."
+    },
+    {
+      "id": "RA-09",
+      "severity": "low",
+      "layer": "Root (/)",
+      "file": "data/inputs/fixtures.json (F03)",
+      "published": "Sacramento Kings @ LA Clippers game_id left null",
+      "official": "Official NBA schedule publishes game_id 0022600093 (https://www.nba.com/game/sac-vs-lac-0022600093)",
+      "source_name": "NBA Official Game Page 0022600093",
+      "source_url": "https://www.nba.com/game/sac-vs-lac-0022600093",
+      "resolution": "Published with verified game_id 0022600093 in /verified/ and /survey/; logged in COORDINATION.md."
+    },
+    {
+      "id": "RA-10",
+      "severity": "low",
+      "layer": "Root (/)",
+      "file": "data/predictions.json (nhl-2026020152 & handball W-D-L)",
+      "published": "Cites scoreboard/2026-10-22 for 19 Oct PHI-COL score; formats unbeaten 3W-1D-0L handball clubs as '3-1-0' next to NHL W-L-OTL '4-3-2'",
+      "official": "19 Oct game sits on score/2026-10-19; EHF standings report 3W, 1D, 0L (unbeaten, 7 pts)",
+      "source_name": "EHF Official Standings",
+      "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "resolution": "Explicit '3W-1D-0L' notation enforced across all /verified/ and /survey/ narratives."
+    },
+    {
+      "id": "BA-01",
+      "severity": "resolved",
+      "file": "data/verified/predictions.json & data/forward/predictions.json",
+      "line_range": "BESPOKE_HIGH_NARRATIVES",
+      "issue": "The 14 featured predictions in verified_model.py and 8 featured predictions in forward_model.py did not name an individual player (flagged VF-24).",
+      "verification": "Fetched official rosters, match sheets, and score-feed teamLeaders from api-web.nhle.com, euroleaguebasketball.net, top14.lnr.fr, prod2.lnr.fr, stats.unitedrugby.com, and ehfcl.eurohandball.com on 2026-10-22.",
+      "resolution": "All 35 high-confidence predictions in data/board/predictions.json explicitly cite a verified individual player and player statistic alongside team, current form, recent match history, and explicit betting selection.",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22"
+    },
+    {
+      "id": "BA-02",
+      "severity": "resolved",
+      "file": "scripts/forward_model.py & data/forward/matches.json",
+      "line_range": "fair_american()",
+      "issue": "forward_model.py computed fair_american(prob) from unrounded probability rather than fair_decimal(prob), creating a 1–3 cent American odds mismatch on 38 forward rows (e.g. 1.41 decimal paired with -246 instead of -244).",
+      "verification": "Audited all 93 rows in data/forward/matches.json against round(-100 / (fair_decimal - 1)).",
+      "resolution": "scripts/board_model.py derives fair_american strictly from fair_decimal across all 167 originated rows (0 mismatches).",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+    },
+    {
+      "id": "BA-03",
+      "severity": "resolved",
+      "file": "data/verified/matches.json vs data/forward/matches.json",
+      "line_range": "mlb-849805..849803 vs mlb-ws-g1..g4",
+      "issue": "2026 World Series Games 1–4 were represented twice across layers under different ID schemes.",
+      "verification": "Cross-checked gamePk 849805, 849802, 849804, 849803 on statsapi.mlb.com/api/v1/schedule.",
+      "resolution": "Deduplicated all 7 World Series games under canonical gamePk IDs (mlb-849805..mlb-849800) in data/board/matches.json.",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-11-02"
+    },
+    {
+      "id": "BA-04",
+      "severity": "resolved",
+      "file": "scripts/verified_model.py & scripts/forward_model.py",
+      "line_range": "HIGH_THRESHOLD = 0.72 vs FEATURED_MIN_PROB = 0.70",
+      "issue": "Because -250 American equals 1.40 decimal (71.43% fair probability), setting HIGH_THRESHOLD = 0.72 labeled all >= 70% selections inside -250..+10000 as 'medium' confidence (flagged VF-22).",
+      "verification": "Verified mathematical equivalence: p in [0.7000, 0.7143] maps to fair decimal [1.40, 1.43] and fair American [-250, -233].",
+      "resolution": "scripts/board_model.py grades all >= 70% in-band selections (-250..+10000) and multi-factor conviction primary-market selections inside -250..+10000 as 'high' confidence (35 high-confidence predictions total).",
+      "official_url": "https://www.olbg.com/betting-tips"
+    }
+  ]
+}

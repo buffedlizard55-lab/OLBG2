@@ -1,0 +1,165 @@
+{
+  "captured_at": "2026-10-22T07:35:00Z",
+  "session": "arena/7f261be1-olbg2",
+  "files_audited": [
+    "data/matches.json",
+    "data/predictions.json",
+    "data/verified/inputs.json",
+    "data/verified/matches.json",
+    "data/verified/predictions.json",
+    "data/verified/flagged.json",
+    "data/forward/inputs.json",
+    "data/forward/matches.json",
+    "data/forward/flagged.json",
+    "data/live/predictions.json",
+    "scripts/build_site.py",
+    "scripts/verified_seed.py",
+    "scripts/verified_model.py",
+    "scripts/forward_seed.py",
+    "scripts/forward_model.py",
+    "scripts/official_source_audit.py",
+    "scripts/integration_audit.py"
+  ],
+  "findings": [
+    {
+      "id": "A-01",
+      "severity": "critical",
+      "file": "data/verified/inputs.json",
+      "key_path": "darts_fixtures[1] (id='pdc-32330')",
+      "existing_value": "Danny Noppert vs Stephen Bunting",
+      "official_value": "(6) Danny Noppert vs (27) Ritchie Edhouse — Stephen Bunting withdrew prior to Round 1 and 2024 European Champion Ritchie Edhouse (#33, £274,500) took the #27 seed spot",
+      "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+      "action_in_slate": "Corrected to Danny Noppert vs Ritchie Edhouse and logged in COORDINATION.md & slate/flagged.html (SL-01)"
+    },
+    {
+      "id": "A-02",
+      "severity": "critical",
+      "file": "data/verified/inputs.json",
+      "key_path": "unlined_rows[11] (id='golf-utah-2026')",
+      "existing_value": "PGA Tour — Bank of Utah Championship dated 2026-10-22",
+      "official_value": "Bank of Utah Championship ran Oct 1-4, 2026 (won by Austin Smotherman at -26 / 258). Live Oct 22-25 PGA Tour event is the Butterfield Bermuda Championship at Port Royal Golf Course, Southampton, Bermuda",
+      "official_url": "https://www.pgatour.com/article/news/betting-dfs/2026/10/19/odds-outlook-butterfield-bermuda-championship-betting-fantasy-picks-advice-fedexcup-fall",
+      "action_in_slate": "Replaced stale event with Butterfield Bermuda Championship (3 originated 72-hole H2Hs + 2 unlined full-field rows)"
+    },
+    {
+      "id": "A-03",
+      "severity": "critical",
+      "file": "data/verified/flagged.json",
+      "key_path": "VF-17 / unlined_rows[7] (f1-2027-champ)",
+      "existing_value": "Flagged Formula 1 as in a four-week calendar gap until Las Vegas GP (Nov 20-22) with 0 active rows",
+      "official_value": "2026 Formula 1 MSC Cruises United States Grand Prix is live Oct 23-25, 2026 at Circuit of The Americas, Austin (56 laps, Race Sun Oct 25 20:00 UTC); Kimi Antonelli leads championship on 340 pts ahead of George Russell (238), Lewis Hamilton (229), and Max Verstappen (221)",
+      "official_url": "https://www.formula1.com/en/racing/2026/united-states",
+      "action_in_slate": "Originated 6 Austin GP classification H2Hs + full 23-driver championship audit"
+    },
+    {
+      "id": "A-04",
+      "severity": "high",
+      "file": "data/verified/inputs.json",
+      "key_path": "tennis_originated (len=0) / VF-01",
+      "existing_value": "0 ATP tennis fixtures originated (marked client-side blocked)",
+      "official_value": "All 3 ATP 250 daily schedule pages (Almaty 9410, Brussels 7485, Lyon 496) server-render 12 Thu Oct 22 R16 singles matches + QF Tsitsipas (#39, 1330 pts) vs Duckworth (#73, 774 pts) with official 2026.10.19 PIF ATP ranks/points for all 25 players",
+      "official_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+      "action_in_slate": "Originated all 13 ATP 250 singles matches across Almaty, Brussels, and Lyon"
+    },
+    {
+      "id": "A-05",
+      "severity": "high",
+      "file": "data/verified/inputs.json",
+      "key_path": "unlined_rows[10] (Cricket, 0 originated rows)",
+      "existing_value": "0 originated Cricket fixtures",
+      "official_value": "Live Pakistan-England-Sri Lanka Men's ODI Tri-Series in Rawalpindi & Lahore (Oct 22 SL vs ENG 274144 matching OLBG 188829; Oct 25 PAK vs ENG; Oct 27 PAK vs SL) + official Oct 21 ICC Men's ODI rankings (PAK 103, ENG 94, SL 94)",
+      "official_url": "https://www.icc-cricket.com/matches/274144/sri-lanka-vs-england",
+      "action_in_slate": "Originated all 3 ODI Tri-Series internationals + kept NZ vs IND T20I unlined (SL-19)"
+    },
+    {
+      "id": "A-06",
+      "severity": "high",
+      "file": "data/verified/inputs.json",
+      "key_path": "unlined_rows[13..15] (Rugby League, 0 active 2026 rows)",
+      "existing_value": "Only 2027 off-season outrights listed",
+      "official_value": "Live 2026 Men's Rugby League World Cup Round 2 Tests Oct 23-25 (Tonga vs Lebanon, PNG vs Samoa, England vs France, New Zealand vs Cook Islands, Australia vs Fiji) + 5 completed Oct 15-18 Round 1 scores & IRL World Rankings",
+      "official_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+      "action_in_slate": "Originated all 5 RLWC 2026 Men's Round 2 Test matches"
+    },
+    {
+      "id": "A-07",
+      "severity": "high",
+      "file": "data/verified/inputs.json",
+      "key_path": "Australian Rules (0 rows / VF-19)",
+      "existing_value": "0 rows in verified/forward",
+      "official_value": "Live 2026 NAB AFLW Round 11 (9 matches Oct 23-25) + complete 18-club 10-game official premiership ladder on afl.com.au/aflw",
+      "official_url": "https://www.afl.com.au/aflw",
+      "action_in_slate": "Originated all 9 NAB AFLW Round 11 premiership matches"
+    },
+    {
+      "id": "A-08",
+      "severity": "high",
+      "file": "data/verified/inputs.json",
+      "key_path": "Esports (0 rows / VF-23)",
+      "existing_value": "0 rows in verified/forward",
+      "official_value": "Live 2026 League of Legends World Championship (Worlds 2026) Swiss Stage Round 1 on Fri Oct 23 at Credit Union of Texas Event Center, Allen, TX (8 Bo1 matches + official regional seeds)",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action_in_slate": "Originated all 8 LoL Worlds 2026 Swiss Stage Round 1 matches with Bo1 variance confidence cap"
+    },
+    {
+      "id": "A-09",
+      "severity": "high",
+      "file": "data/verified/inputs.json",
+      "key_path": "snooker_originated (1 of 8 Last 16 ties)",
+      "existing_value": "Only Kyren Wilson vs Pang Junxu priced; 7 Belfast Last 16 ties unlined (VF-28..VF-33)",
+      "official_value": "Individual wst.tv/players/<uuid> pages server-render official Current World Ranking + 2026/27 Season Match W/L & break stats, and wst.tv Day Four reports confirm Best-of-7 frames (first to 4)",
+      "official_url": "https://www.wst.tv/rankings/",
+      "action_in_slate": "Originated 6 of 8 Belfast Last 16 ties; kept Slessor vs Walden & Jak Jones vs Daniel Wells unlined & flagged (SL-20, SL-21)"
+    },
+    {
+      "id": "A-10",
+      "severity": "medium",
+      "file": "data/verified/inputs.json & data/forward/inputs.json",
+      "key_path": "nba_teams / nba_slate (VF-05, VF-14)",
+      "existing_value": "82-game prior records without 2026-27 Oct 20-21 results; claims NBA game pages lack server rendering",
+      "official_value": "nba.com server-renders all 14 completed Oct 20-21 2026-27 games and 2026-27 starting lineups (LeBron James & Jaylen Brown on PHI, James Harden on CLE, DeMar DeRozan on DEN)",
+      "official_url": "https://www.nba.com/game/cle-vs-phi-0022600006",
+      "action_in_slate": "Blended 82-game prior with verified Oct 20-21 2026-27 results and roster facts across all 14 NBA games"
+    },
+    {
+      "id": "A-11",
+      "severity": "medium",
+      "file": "data/verified/inputs.json",
+      "key_path": "ehf_fixtures[0..4].venue (VF-07)",
+      "existing_value": "venue: null across all 5 EHF Champions League matches",
+      "official_value": "PICK Aréna (Szeged), Rothenbach-Halle (Kassel), Palau Blaugrana (Barcelona), Pavilhão João Rocha (Lisbon), Trondheim Spektrum (Trondheim) + official referee crews",
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
+      "action_in_slate": "Populated all 5 verified arenas and referee crews"
+    },
+    {
+      "id": "A-12",
+      "severity": "medium",
+      "file": "data/matches.json",
+      "key_path": "matches[0..14].source_url",
+      "existing_value": "source_url: null on legacy NBA, ICC, and EHF rows; completed Oct 21 games mixed with live board",
+      "official_value": "Every table row must link directly to an official governing source",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "action_in_slate": "100% of rows in data/slate/matches.json carry verified official_url links (enforced by tests/test_slate.py)"
+    },
+    {
+      "id": "A-13",
+      "severity": "medium",
+      "file": "data/verified/predictions.json",
+      "key_path": "predictions[0..8].odds_american",
+      "existing_value": "Top-line high-confidence picks priced at -276 to -1421 (steeper than -250 threshold)",
+      "official_value": "High-confidence picks must focus on selections priced between -250 and +10000 odds with >=30-word unique human prose",
+      "official_url": "https://www.mlb.com/gameday/849805",
+      "action_in_slate": "All 32 featured high-confidence predictions in data/slate/predictions.json have originated selection odds strictly inside [-250, +10000] and >=42-word unique human prose"
+    },
+    {
+      "id": "A-14",
+      "severity": "low",
+      "file": "data/forward/inputs.json",
+      "key_path": "gap_notes['vf-22-gbgb']",
+      "existing_value": "States gbgb.org.uk returned HTTP 500 across all pages",
+      "official_value": "gbgb.org.uk serves live Category One previews confirming Romford Coral 100 Champion Stakes 575m semi-final clockings (35.36s, 35.75s, 35.95s going -20), Newinn Jolly withdrawal, and Dunstall Park Oct 24 Scurry Gold Cup & Oaks finals",
+      "official_url": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/",
+      "action_in_slate": "Originated 2 Romford Coral 100 Champion Stakes speed-figure H2Hs + listed Dunstall Park finals unlined (SL-22..SL-24)"
+    }
+  ]
+}

@@ -260,12 +260,12 @@ NAV = [
     ("matches.html", "All matches"),
     ("sports/index.html", "Sports"),
     ("picks.html", "Picks"),
+    ("forward/index.html", "Forward slate (23 Oct–2 Nov)"),
     ("verification.html", "Verification"),
     ("flagged.html", "Flagged"),
     ("methodology.html", "Methodology"),
     ("sources.html", "Sources"),
     ("archive.html", "Archive"),
-    ("forward/index.html", "Forward slate (23 Oct\u20132 Nov)"),
     ("integration.html", "Cross-layer review"),
 ]
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology — OLBG2 Verified Multi-Sport Slate</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">OLBG2 /slate/ <span>2026-10-22 Verified</span></a>
+      <nav class="nav"><a href="index.html" class="">Overview</a><a href="matches.html" class="">All Matches (171)</a><a href="picks.html" class="">High-Confidence Picks (36)</a><a href="sports/index.html" class="">17 Sports</a><a href="flagged.html" class="">Flagged for Review (30)</a><a href="audit.html" class="">Repo Audit</a><a href="methodology.html" class="active">Methodology</a><a href="sources.html" class="">Official Sources</a><a href="excluded.html" class="">Excluded Sports</a></nav>
+    </div>
+  </header>
+  <div class="subbar">
+    <div class="subbar-inner">
+      <strong>Repository Layers:</strong>
+      <a href="../index.html">Root Board</a> ·
+      <a href="../verified/index.html">/verified/</a> ·
+      <a href="index.html"><strong>/slate/ (Complete 17-Sport Verified Origination)</strong></a> ·
+      <span>Snapshot: 2026-10-22 UTC · Zero Bookmaker Scraping · Every Row Linked to Official Source</span>
+    </div>
+  </div>
+  <main class="container">
+    
+    <section class="hero">
+      <h1>First-Principles Odds Origination Methodology</h1>
+      <p>Zero sportsbook lines or community tipster percentages exist anywhere in our pipeline (<code>scripts/slate_seed.py → scripts/slate_model.py → scripts/slate_build.py</code>). Every price is originated directly from governing-body performance data with transparent 4.5% two-way / 5.5% three-way book margin.</p>
+    </section>
+    <section class="section">
+      <h2>Model Specifications Across All 17 Eligible Sports</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Sport / Competition</th><th>Fixtures</th><th>Originated Markets</th><th>Mathematical Specification</th><th>Official Input Feed</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tennis (ATP 250)</strong></td><td class="mono">13</td><td>Match Winner, Set Handicap (-1.5/+1.5), Total Games</td><td>Bradley-Terry log-points power model p = σ(0.68 · ln((pts₁+220)/(pts₂+220))) inverted analytically to exact Best-of-3 set win probability s where s²(3−2s)=p; P(2-0)=s².</td><td><a href="https://www.atptour.com/en/rankings/singles" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Darts (PDC European Ch.)</strong></td><td class="mono">16 (+1 blank)</td><td>Match Winner, Leg Handicap, Total Legs (O/U 9.5)</td><td>Single-leg win probability from official 2-year PDC Werner £ prize money propagated through exact negative-binomial Race-to-6 distribution (all 12 scores 6-0..0-6 sum to 1).</td><td><a href="https://www.pdc.tv/rankings" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Snooker (WST NI Open)</strong></td><td class="mono">6 (+2 blank)</td><td>Match Winner, Frame Handicap (-1.5/+1.5), Total Frames (O/U 5.5)</td><td>World rank + shrinkage 2026/27 match-win rate propagated through exact negative-binomial Race-to-4 distribution (all 8 scores 4-0..0-4).</td><td><a href="https://www.wst.tv/rankings/" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Ice Hockey (NHL)</strong></td><td class="mono">22</td><td>Moneyline (incl. OT/SO), Puck Line (-1.5/+1.5), Total Goals, Reg 1X2</td><td>Shrinkage 2026-27 GF/GP &amp; GA/GP (k=8 toward μ=3.05) on exact 15×15 independent Poisson grid + strength-weighted OT/SO split.</td><td><a href="https://api-web.nhle.com/v1/standings/2026-10-22" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Basketball (NBA &amp; EuroLeague)</strong></td><td class="mono">23 (+6 blank)</td><td>Moneyline, Point Spread, Total Points</td><td>Regressed net-rating Gaussian margin models (σ=11.8 NBA with Oct 20-21 results update; σ=10.6 EuroLeague with 0.0 neutral-floor HCA in Belgrade).</td><td><a href="https://www.nba.com/games" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Baseball (MLB World Series)</strong></td><td class="mono">4</td><td>Moneyline, Run Line (-1.5/+1.5), Total Runs</td><td>162-game RS/RA bivariate 16×16 Poisson run model + Game 1 starter ERA multiplier (Misiorowski 1.80 vs Rasmussen 2.67).</td><td><a href="https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&amp;season=2026" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Cricket (ICC Men&#x27;s ODI Tri-Series)</strong></td><td class="mono">3 (+1 blank)</td><td>Win Match, Runs-Equiv. Handicap, 1st-Innings Runs</td><td>Official 21 Oct 2026 ICC Men&#x27;s ODI team ratings (PAK 103, ENG 94, SL 94) + completed Rawalpindi Tri-Series run margins (σ=42 runs).</td><td><a href="https://www.icc-cricket.com/rankings/team-rankings/mens/odi" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Rugby Union (TOP 14, PRO D2, URC)</strong></td><td class="mono">23</td><td>Match Result (1X2), 2-Way Handicap, Total Points</td><td>Shrinkage PF/PA Gaussian margin model (σ=13.4, home advantage +4.6 pts) with explicit draw mass.</td><td><a href="https://top14.lnr.fr/classement" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Rugby League (2026 Men&#x27;s RLWC)</strong></td><td class="mono">5</td><td>Match Result (1X2), 2-Way Handicap, Total Points</td><td>Official IRL Men&#x27;s World Rankings % + completed Oct 15-18 Round 1 test score differentials (σ=14.5).</td><td><a href="https://www.intrl.sport/world-rankings" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Australian Rules (2026 NAB AFLW)</strong></td><td class="mono">9</td><td>Match Winner, Line Handicap, Total Points</td><td>10-game official AFLW premiership ladder log-percentage + points model across all 18 clubs (σ=16.5).</td><td><a href="https://www.afl.com.au/aflw" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Motor Sport (F1 United States GP)</strong></td><td class="mono">6 (+1 blank)</td><td>Race Classification H2H, Position Handicap</td><td>18-round FIA Drivers&#x27; Championship points power model + 2026 race-win form at Circuit of The Americas.</td><td><a href="https://www.formula1.com/en/results/2026/drivers" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Handball (EHF Champions League)</strong></td><td class="mono">5</td><td>Match Result (1X2), Goal Handicap, Total Goals</td><td>Shrinkage GF/GA exact 52×52 bivariate Poisson goal model (μ=30.8 goals/team) with verified arenas &amp; referee crews.</td><td><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Esports (LoL Worlds 2026 Swiss R1)</strong></td><td class="mono">8</td><td>Map 1 / Match Winner (Bo1), Kill Handicap, Duration</td><td>Official regional-tier &amp; qualification-seed prior with 0.72 Best-of-1 variance shrinkage.</td><td><a href="https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Golf &amp; Greyhounds</strong></td><td class="mono">5 (+4 blank)</td><td>72-Hole Matchup / Stroke Hcp; 575m Match Bet</td><td>PGA Tour FedExCup Fall cut/finish index at Port Royal GC; GBGB Romford 575m semi-final clock Gaussian speed model (capped low pre-trap draw).</td><td><a href="https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/" target="_blank" rel="noopener">Official Feed ↗</a></td></tr><tr><td><strong>Volleyball &amp; Gaelic Football</strong></td><td class="mono">0 (+8 blank)</td><td>Verified Official Fixtures Left Blank (—)</td><td>Opening-week PlusLiga (M=0..1) and County GAA Championship finals left honestly unlined rather than hallucinated.</td><td><a href="https://munster.gaa.ie/fixtures/events-calendar/" target="_blank" rel="noopener">Official Feed ↗</a></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+    
+  </main>
+  <footer>
+    <div><strong>OLBG2 /slate/</strong> — Independent first-principles line origination across all 17 eligible OLBG sports (8 excluded sports strictly enforced at 0 rows).</div>
+    <div><a href="flagged.html">Flagged for Review</a> · <a href="audit.html">Line-by-Line Audit</a> · <a href="sources.html">Official Sources</a></div>
+  </footer>
+</body>
+</html>

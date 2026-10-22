@@ -1548,6 +1548,136 @@ VF-22 **still blocked**: gbgb.org.uk returned fetch failures/500 on all three pa
 
 ---
 
+## Session `arena/d219b7cf-olbg2` — documentation/data-count consistency audit (2026-10-22)
+
+**Claimed:** 2026-10-22 UTC, before implementation edits. **Branch:** fixed Arena branch `arena/d219b7cf-olbg2`.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Reconcile README snapshot counts and coverage statements against the checked-in verified dataset and generated dashboard; document the audit and any remaining scope limits without changing sporting data | done | `arena/d219b7cf-olbg2` | `README.md`, `research/repo-consistency-d219b7cf.md`, append-only `COORDINATION.md` |
+
+This is a documentation-only task. It does not claim new external-source verification, does not alter fixture/price/prediction data, and does not edit generated pages or pipeline code. No other live task is known to claim these files on this checkout; historical claims are treated as complete where their publish records say so.
+
+### Completion — session `arena/d219b7cf-olbg2`
+
+Reconciled README figures against `data/verified/matches.json`, its 118 row records and `source_scope` labels, `data/verified/predictions.json`, `data/verified/flagged.json`, the generated dashboard, and actual local build/test output. Corrected stale counts (119→118 rows, 93→94 originated, 26→24 unlined, 85→84 fixture-scoped links, 26→33 flags), the zero-row category statement, repository test count (61/63→80), and the American-versus-decimal odds description. Added `research/repo-consistency-d219b7cf.md` with reconciliation details, reproducible checks, and the explicit limitation that no external sporting fact or source page was newly checked in this task.
+
+**Verification performed:** `python3 -m unittest discover -s tests -v` (80 passed); `python3 scripts/build_site.py` (118 rows, 94 originated, 14 band picks/predictions, 33 review items); `python3 scripts/integration_audit.py` (0 local link errors); `git diff --check` (clean). Source links remain on individual rows; this task makes no new verification claim. **Irregularities left disclosed:** 34 of 118 rows cite competition/ranking rather than individual fixture pages; 33 review flags remain; this is a dated partial snapshot, not a live exhaustive slate.
+
+---
+
+## Session `arena/1619553b-olbg2` — root nav link for the forward slate + blocked-gap re-check (2026-10-22)
+
+**Session ID:** `arena/1619553b-olbg2` · **Branch:** `arena/1619553b-olbg2` (fixed by the environment; `session-…` naming not available) · **Claimed:** 2026-10-22 07:20 UTC, before any edit, per protocol.
+
+**Concurrent-session check at claim time:** `origin/main` = `1aebda7` (PR #69, merged). The only open PR is #54 (`arena/1bb45081-olbg2`, CONFLICTING, stale since 2026-10-22 01:58Z, touches the odds-window gate across all layers). This session does **not** edit anything in PR #54's scope beyond the one `NAV` list entry below, and does not rebase or take over #54. No in-progress claim from another session is live (all other claims are closed or done).
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| N1 | Close the logged nav-link request from `6a87eefa` G6: add "Forward slate (23 Oct–2 Nov)" → `forward/index.html` to the root dashboard navigation, by editing the `NAV` list in the generator and rebuilding | **done** (commit `af32d1b`; diff = one nav line per page) | `arena/1619553b-olbg2` | `scripts/build_site.py` (NAV list only), generated root `index.html`, `matches.html`, `picks.html`, `verification.html`, `flagged.html`, `methodology.html`, `sources.html`, `archive.html`, `integration.html`, `COORDINATION.md` |
+| N2 | Re-check blocked gap VF-14 (NBA 22–24 Oct fixture list) against NBA.com — per-day counts only so far | **done — still blocked** (`research/gap-recheck-1619553b.md`) | `arena/1619553b-olbg2` | `research/gap-recheck-1619553b.md`, `COORDINATION.md` |
+| N3 | Re-check blocked gap VF-22 (GBGB greyhound cards) against gbgb.org.uk using the site's real fixtures navigation (the first guessed URL returned 404) | **done — still blocked** (`research/gap-recheck-1619553b.md`) | `arena/1619553b-olbg2` | `research/gap-recheck-1619553b.md`, `COORDINATION.md` |
+
+Rules for this session: nothing is published unless an official page returned it in this session; nothing is inferred; no bookmaker price is read.
+
+### Result — session `arena/1619553b-olbg2` (2026-10-22 UTC)
+
+| Item | Result |
+|---|---|
+| N1 | Root navigation now links "Forward slate (23 Oct–2 Nov)" → `forward/index.html` on all root and sport pages. Regenerated with `scripts/build_site.py`; the diff is that one nav line per page. `scripts/integration_audit.py`: 0 local link errors. `python3 -m unittest discover -s tests`: 80 OK. Closes the `6a87eefa` G6 nav request. |
+| N2 | **VF-14 still open.** NBA official pages checked: `https://www.nba.com/games?date=2026-10-23` (per-day counts only; body reads "Sorry, something went wrong") and `https://www.nba.com/schedule?season=2026` (no game rows in the captured HTML). No NBA row published. Details: `research/gap-recheck-1619553b.md`. |
+| N3 | **VF-22 still open.** GBGB official pages are reachable: `https://www.gbgb.org.uk/` (homepage), `https://www.gbgb.org.uk/racing/open-races/`, `https://www.gbgb.org.uk/racing/race-courses/` and `https://www.gbgb.org.uk/racing/results/` (returns "0 items in 0 pages"). Dated race cards are client-rendered and were not returned. The earlier "500 on all pages" description is not reproducible; the flag should be reworded (logged for the flag owner). The guessed `/racing/fixtures/` path is a 404. No greyhound row published. |
+| Irregularities | (1) VF-22 wording: "500 on all pages" not reproduced. (2) NBA calendar page shows its own error text ("Sorry, something went wrong"). Both are for manual review. |
+| Other | Did not edit PR #54's scope beyond the `NAV` entry. PR #54 remains open and stale; not taken over. |
+
+**Sync note — session `arena/d219b7cf-olbg2` (2026-10-22):** PR #71 initially could not be merged because `main` advanced to PR #70 (session `arena/1619553b-olbg2`). Fetched and merged `origin/main`; resolved the append-only `COORDINATION.md` conflict by retaining both the current session's audit record and the upstream N1–N3 record. All upstream navigation/gap-recheck files were preserved. The required `git pull --rebase origin arena/d219b7cf-olbg2` before pushing attempted to replay the upstream session commits already included by the merge and conflicted in the coordination ledger; the rebase was aborted without discarding work. Merge ancestry was confirmed fast-forwardable from the remote session branch. While checks completed, `main` advanced again through PR #72 (same upstream session); the next merge attempt reported a conflict. Merged the new `origin/main` tip, retained the newer publish/flag records as well as this audit record, reran all 80 tests and the integration link audit (0 errors), and revalidated merge ancestry. No data or upstream edits were discarded.
+
+**Merge record — `arena/1619553b-olbg2`:** PR https://github.com/buffedlizard55-lab/OLBG2/pull/70 (validate check `pass`, run 39739781475) merged with `gh pr merge 70 --merge` at 2026-10-22 07:20:41Z, merge commit `7380145`. Post-merge `Validate Pages content` and `Deploy Pages` on `main` both `success`. Live check: https://buffedlizard55-lab.github.io/OLBG2/forward/index.html serves the forward slate that the new root nav link points to.
+
+**Flag raised for the forward-layer owner (not edited here):** `forward/index.html` and `forward/gaps.html` state that gbgb.org.uk "did not serve any page" (homepage, results and race-cards returned fetch failures or HTTP 500) on 2026-10-22. This session's fetch of `https://www.gbgb.org.uk/`, `/racing/open-races/`, `/racing/race-courses/` and `/racing/results/` returned normal pages on the same date (see `research/gap-recheck-1619553b.md`). The VF-22 gap stays open, but its stated reason should be corrected to "dated race cards are client-rendered" in the next forward-layer edit. Logged as an irregularity for manual review.
+
+**Session `arena/1619553b-olbg2` status:** N1 done and live; N2 (VF-14) and N3 (VF-22) re-checked, both still open with no rows published. Session closed.
+
+### Publication record — session `arena/d219b7cf-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#71](https://github.com/buffedlizard55-lab/OLBG2/pull/71) — README snapshot consistency corrections |
+| Merge | **Merged** 2026-10-22 07:23:30 UTC as `d8ae5adebca3c2fc57ca4dad22cf9b14c511aac7` |
+| Validate | `Validate Pages content` **success**, run [39740105648](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740105648) |
+| GitHub Pages | `Deploy Pages` **success**, run [39740166497](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740166497) |
+| Result | README/reconciliation report and coordination record published. Data and generated fixture pages unchanged by this documentation task. |
+
+---
+
+## Session `arena/ddcbf63c-olbg2` — independent line-by-line verification, multi-sport origination desk (`/board/`), and `-250..+10000` player-verified predictions (2026-10-22)
+
+**Session ID:** `arena/ddcbf63c-olbg2` · **Branch:** `arena/ddcbf63c-olbg2` (fixed by the Arena environment; `session-…` branch naming is disallowed by platform tracking) · **Claimed:** 2026-10-22 07:24 UTC, committed and pushed before any implementation edit per protocol.
+**Rebase conflict note (07:24 UTC):** `git pull --rebase origin main` encountered an append-only conflict in `COORDINATION.md` against `49ba8bf` (session `arena/d219b7cf-olbg2` publication record); resolved by preserving `d219b7cf`'s full publication record above and appending this claim below without discarding any upstream work.
+
+**Concurrent-session check across all remote branches (`refs/heads/*`) at claim time (`origin/main` = `49ba8bf`):**
+
+| Branch | Status at claim | Claimed file scope respected by `arena/ddcbf63c-olbg2` |
+|---|---|---|
+| `arena/1619553b-olbg2` | **Closed & merged** (PR #70 / PR #72) | Completed |
+| `arena/d219b7cf-olbg2` | **Closed & merged** (PR #71 / PR #73 → `49ba8bf`) | Completed (`README.md`, `research/repo-consistency-d219b7cf.md`) |
+| `arena/1352b77f-olbg2` | **In progress** (claim on `1352b77f`) | `research/verification-1352b77f.md`, `data/verified/flagged.json`, `data/forward/flagged.json`, `data/verified/predictions.json`, `data/verified/band.json`, shared outputs at V5 — **untouched here** |
+| `arena/c12bdcd7-olbg2` | **In progress** (claim on `c12bdcd7`) | PR #54 review, `scripts/build_site.py`, `data/forward/**`, `data/verified/inputs.json`, `research/*c12bdcd7*`, shared outputs at I6 — **untouched here** |
+| `arena/7f261be1-olbg2` | **In progress** (claim on `7f261be1`) | `data/slate/**`, `scripts/slate_*.py`, `slate/**`, `research/olbg-audit-7f261be1.md`, `tests/test_slate.py` — **untouched here** |
+
+| # | Task | Status | Owner | File scope (strictly disjoint) |
+|---|---|---|---|---|
+| D1 | Claim board, fetch all remote branches, verify 0 file-scope conflicts | **done** (`5f079d8`) | `arena/ddcbf63c-olbg2` | `COORDINATION.md` (append-only) |
+| D2 | OLBG reverse-engineering audit & line-by-line repo/official-source verification across all 17 eligible OLBG sports + 8 excluded sports (live fetches of `olbg.com` + governing bodies `api-web.nhle.com`, `api.nhle.com`, `nba.com`, `euroleaguebasketball.net`, `ehfcl.eurohandball.com`, `top14.lnr.fr`, `prod2.lnr.fr`, `stats.unitedrugby.com`, `statsapi.mlb.com`, `pdc.tv`, `wst.tv`, `atptour.com`, `wtatennis.com`, `formula1.com`, `bcci.tv`, `owgr.com`, `plusliga.pl`, `nrl.com`, `gaa.ie`, `gbgb.org.uk`, `afl.com.au`) | **done** | `arena/ddcbf63c-olbg2` | `research/olbg-verification-ddcbf63c.md`, `data/board/sources.json`, `data/board/repo_audit.json` |
+| D3 | Multi-sport fixture inventory & independent multi-market line origination (`207` deduplicated fixtures: `167` originated across Win Match / 1X2 / Moneyline, Handicap / Spread / Puck / Run / Frame / Leg Line, Match Total Over/Under + Alternate In-Band Lines; `40` unconfirmed rows left strictly blank `—` and flagged) | **done** | `arena/ddcbf63c-olbg2` | `scripts/board_seed.py`, `scripts/board_model.py`, `data/board/inputs.json`, `data/board/matches.json`, `data/board/flagged.json`, `data/board/sports.json` |
+| D4 | High-confidence picks strictly inside `[-250, +10000]` fair odds (`1.40–101.00` decimal): `35` unique `85–108`-word non-robotic human predictions (`22` strict `>= 70%` win-probability in-band selections + `13` multi-factor conviction primary-market winners) including **team + named player + current form + dated recent match history + explicit betting selection**, every fact hyperlinked to its official source | **done** | `arena/ddcbf63c-olbg2` | `data/board/predictions.json`, `scripts/board_model.py` |
+| D5 | Clean GH Pages dashboard (`board/index.html`, `board/matches.html`, `board/picks.html`, `board/flagged.html`, `board/sources.html`, `board/audit.html`, `board/sports/<slug>.html` for all 17 sports, `board/assets/style.css`, `board/assets/app.js`) + automated test suite (`tests/test_board_ddcbf63c.py`, 85 total repo tests passing) | **done** | `arena/ddcbf63c-olbg2` | `scripts/board_build.py`, `board/**`, `tests/test_board_ddcbf63c.py` |
+| D6 | Rebase on latest `main`, run full repo build & link verification + unit tests, open PR → `main`, self-merge after CI passes, confirm GitHub Pages deploy & live URLs, and record PR + merge SHA + live verification in `COORDINATION.md` | **in progress** | `arena/ddcbf63c-olbg2` | `COORDINATION.md` |
+
+### Verification & Audit Summary — `arena/ddcbf63c-olbg2` (2026-10-22 UTC)
+
+- **Official governing-body sources fetched & verified in this session (25 endpoints):**
+  1. `https://www.olbg.com/betting-tips` — confirmed tipster consensus ratios only (`0` bookmaker odds tokens), 17 eligible categories and 8 excluded categories (`soccer`, `football`, `american football`, `boxing`, `ufc`, `mma`, `hurling`, `horse racing`, `cycling`, `specials`); flagged stale `England v Sri Lanka` (`event_id=188829`, timestamp `22 Sep 11:00`) still listed on the Oct 22 feed (`VF-16`).
+  2. `https://api-web.nhle.com/v1/score/2026-10-22`, `2026-10-24`, `2026-10-25`, `https://api-web.nhle.com/v1/standings/2026-10-22`, `https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2` — verified all 12 Oct 22 NHL games + 70 forward Oct 23–Nov 2 NHL games, 32-club records/GF-GA, and official `teamLeaders` (`Alex Tuch` 6G, `Tage Thompson` 5G, `Rasmus Dahlin` 9A, `Alex Lyon` 4W; `Nick Suzuki` 11A, `Cole Caufield` 5G; `Pavel Dorofeyev` 7G, `Jack Eichel` 12A; `Brad Marchand` 7G, `Matthew Tkachuk` 11A; `Kirill Marchenko` 6G, `Dmitri Voronkov` 8A; `Dylan Larkin` 7G, `Alex DeBrincat` 8A; `Andrei Svechnikov` 6G, `Pyotr Kochetkov` 6W; `Connor McDavid` 20A).
+  3. `https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-11-02` — verified 2026 World Series Games 1–7 (`gamePk` `849805`, `849802`, `849804`, `849803`, `849799`, `849801`, `849800`) between Tampa Bay Rays (`99-63`) and Milwaukee Brewers (`93-69`), deduplicating `mlb-849805..849803` vs `mlb-ws-g1..g4` (`BA-03` / `BF-34`).
+  4. `https://www.euroleaguebasketball.net/en/euroleague/standings/` & `/teams/panathinaikos-aktor-athens/roster/pan/` — verified Panathinaikos AKTOR Athens (`5-1`, `528 PF / 438 PA`, `+90`; `Kostas Sloukas` `#10`, `Sylvain Francisco` `#3`, `Jerian Grant` `#22`) vs Baskonia (`1-5`, `-60`).
+  5. `https://ehfcl.eurohandball.com/men/2026-27/standings/` & `/clubs/details/caQUSFvFaPlT7EN8zrPZaA/Bar%C3%A7a/` — verified EHF Champions League Men Groups A–F and Barça (`4-0-0`, `137:104`, `+33`; `Ian Barrufet` 15G, `Ludovic Fabregas` 14G, `Petar Cikuša` 11G, `Daniel Fernández` 11G, `Luís Frade` 11G, `Viktor Gísli Hallgrímsson`).
+  6. `https://top14.lnr.fr/classement`, `/feuille-de-match/2026-2027/j6/11860-toulouse-bayonne`, `https://prod2.lnr.fr/classement`, `/j7/12061-nice-provence-rugby`, `/j6/12049-aurillac-biarritz` — verified Top 14 & Pro D2 standings and official match-sheet scorers (`Antoine Dupont` 2T, `Julien Marchand` 2T, `Romain Ntamack` 1T/4C; `Thomas Salles` 5P/2C, `Tyler Ardron` T; `Tedo Abzhandadze` & `Dachi Papunashvili` vs `Jake Strachan` 1T/7C/1P).
+  7. `https://stats.unitedrugby.com/match-centre/table`, `/2026-27/3`, and R3 match centres `292600..292604` — verified URC Round 3 recaps and scorers (`Gregor Hiddleston` 2T, `Rory Darge` T, `George Horne` 4C; `RyanBaird`, `Caelan Doris`; `Cameron Hanekom` 2T, `Canan Moodie` T, `Handre Pollard` 3C; `Hacjivah Dayimani` 2T, `Sacha Feinberg-Mngomezulu` 3C/1P; `Magnus Bradbury` T, `Matt Currie` T, `James Grayson` 3C/1P; `Elliot Dee` 2T, `Tinus de Beer` 3C).
+  8. `https://www.wst.tv/matches/`, `https://www.pdc.tv/order-of-merit/pdc-order-of-merit`, `https://www.formula1.com/en/results/2026/drivers`, `https://www.owgr.com/current-world-ranking`, `https://www.bcci.tv/international/men/fixtures-results`, `https://www.atptour.com/en/rankings/singles`, `https://www.wtatennis.com/rankings/singles`, `https://www.nrl.com/draw/?competition=111&round=1&season=2026`, `https://www.plusliga.pl/games.html`, `https://www.gaa.ie/fixtures-results`, `https://www.gbgb.org.uk/racing/results/` — verified all remaining categories and flagged 40 unlined fixtures (`—`) where server-rendered governing-body pages lacked pre-match head-to-head form inputs.
+- **Line-by-line repository findings resolved in `/board/` (`BA-01..BA-04`):**
+  - `BA-01`: Injected verified official player names & stats into all 22 strict `>= 70%` in-band picks (`14` core + `8` forward) alongside the `13` multi-factor conviction primary-market winners (`35` high-confidence picks total, `85–108` words each, `0` duplicates).
+  - `BA-02`: Fixed `fair_american` derivation in `scripts/board_model.py` so American odds are computed from rounded `fair_decimal`, eliminating all 38 decimal/American rounding discrepancies found in `data/forward/matches.json`.
+  - `BA-03`: Deduplicated 2026 World Series Games 1–4 under canonical MLB `gamePk` IDs (`mlb-849805..849803`) alongside Games 5–7 (`mlb-849799..849800`), yielding `207` unique fixtures (`167` originated + `40` unlined).
+  - `BA-04`: Aligned confidence grading with the `[-250, +10000]` (`1.40–101.00` decimal) focus band so `>= 70%` in-band selections and multi-factor conviction primary-market winners carry `high` confidence.
+
+**Rules enforced in `arena/ddcbf63c-olbg2`:** Zero bookmaker prices or tipster consensus percentages are read or used. Every published value comes from an official governing-body/league/tour page fetched and logged with its UTC timestamp in this session; anything unconfirmed server-side remains blank (`—`) and is published with its source link on `board/flagged.html`.
+---
+
+## Session `arena/7f261be1-olbg2` — OLBG reverse-engineering audit, 17-sport live primary-source verification & origination desk (`/slate/`), and `-250..+10000` human predictions
+
+**Session ID:** `arena/7f261be1-olbg2` · **Branch:** `arena/7f261be1-olbg2` · **Status:** **S1–S6 complete & merged to `main`**.
+
+| # | Task | Status | Owner | File scope (strictly disjoint) |
+|---|---|---|---|---|
+| S1 | Claim board, fetch all remote branches, verify 0 file-scope conflicts | **done** | `arena/7f261be1-olbg2` | `COORDINATION.md` (append-only) |
+| S2 | Line-by-line repo review (`data/matches.json`, `data/verified/*`, `data/forward/*`, `data/live/*`, `scripts/*.py`) + live 2026-10-22 official-source verification across all 17 eligible OLBG sports + 8 excluded sports (`A-01..A-14`) | **done** | `arena/7f261be1-olbg2` | `research/olbg-audit-7f261be1.md`, `data/slate/sources.json`, `data/slate/repo_audit.json` |
+| S3 | Multi-sport fixture seed & independent multi-market line origination across all 17 eligible sports (`148` originated matches across `15` sports + `23` honestly unlined rows left blank across `8` sub-slates = `171` verified fixtures) | **done** | `arena/7f261be1-olbg2` | `scripts/slate_seed.py`, `scripts/slate_model.py`, `data/slate/inputs.json`, `data/slate/matches.json`, `data/slate/flagged.json` |
+| S4 | High-confidence human predictions (`36` selections across `13` sports, `45–52` words each, unique non-templated prose, verbatim-verified participants, current form + recent history + explicit selection strictly inside `[-250, +10000]`) | **done** | `arena/7f261be1-olbg2` | `data/slate/predictions.json`, `scripts/slate_model.py` |
+| S5 | Clean GitHub Pages dashboard (`26` HTML pages: `slate/{index,matches,picks,flagged,audit,methodology,sources,excluded}.html` + `slate/sports/{index,<17 slugs>}.html` + `slate/assets/{style.css,app.js}`) + deterministic test suite | **done** | `arena/7f261be1-olbg2` | `scripts/slate_build.py`, `slate/**`, `tests/test_slate.py` |
+| S6 | Sync with latest `origin/main` (preserving `/board/` & `/hub/`), pass full unified test suite & link check, merge PR #74 to `main`, and log publication record | **done** | `arena/7f261be1-olbg2` | `COORDINATION.md` |
+
+### Publication record — session `arena/7f261be1-olbg2`
+
+| Item | Result |
+|---|---|
+| Primary Pull Request | [#74](https://github.com/buffedlizard55-lab/OLBG2/pull/74) — `feat(slate): 17-sport primary-source verified match list, multi-market origination & 36 predictions (/slate/)` |
+| Merge Commit on `main` | `19548dceecc4d1b95d5213c44ecf04fd4344f28d` (merged `2026-10-22T08:06:54Z`) |
+| Automated Validation | `Validate Pages content` `pass` (run `39744075133`); unified repo test suite green across all merged layers; `0` local link or anchor errors across all `26` `/slate/` HTML pages |
+| Live GitHub Pages Entrypoints | `https://buffedlizard55-lab.github.io/OLBG2/slate/`, `https://buffedlizard55-lab.github.io/OLBG2/slate/matches.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/picks.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/audit.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/sports/index.html` |
+
+---
+
 ## Session `arena/c12bdcd7-olbg2` — final integration + open-item closure (2026-10-22)
 
 **Session ID:** `arena/c12bdcd7-olbg2` · **Branch:** `arena/c12bdcd7-olbg2` (environment-fixed) · **Claimed:** 2026-10-22 (UTC), before any implementation edit.

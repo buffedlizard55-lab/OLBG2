@@ -1716,3 +1716,26 @@ Rules for this session: nothing is published unless an official page returned it
 - V5: root nav now links the forward slate (fulfils the request logged by `6a87eefa`): "Forward slate (23 Oct–2 Nov)" → `forward/index.html`. PR #54 handling and merge/Pages confirmation recorded below.
 - Dataset after this session: 178 rows (154 originated, 24 unlined), 34 review items, 80 tests passing.
 - No conflicts encountered; no other session's files were touched.
+
+---
+
+## Session `arena/1352b77f-olbg2` — V1–V5 integration: line-by-line re-verification, NBA slate capture, uniform odds-window gate on /verified/ + /forward/ (2026-10-22)
+
+**Session ID:** `arena/1352b77f-olbg2` · **Branch:** `arena/1352b77f-olbg2` · **Claimed:** 2026-10-22 07:10Z (commit `d4318cf`, pushed first). V1 done · V2 done · V3 done · V4 done · V5 done (this entry; publication record appended post-merge).
+
+| # | Task | Result |
+|---|---|---|
+| V2 | Line-by-line re-verification of the published desk against official sources | **done** — 11 source families re-read 07:25–08:10Z; **0 published values wrong**. Record: `research/verification-1352b77f.md`. Not re-read (named in VF-34): EuroLeague/EuroCup rows, URC R5 fixtures, golf, GAA, RL, cricket, volleyball, forward NHL 26 Oct–2 Nov. |
+| V3 | Gap closures | **VF-14 closed at matchup level for 22–31 Oct**: `nba.com/schedule?date=2026-10-24` server-renders future weeks (game ids, tip-off ET, venues); all 74 games captured (60 new originated rows incl. 10 Emirates NBA Cup group games of 30 Oct). 1–2 Nov not rendered — not invented. **VF-22**: retried (`/racecards/` = official 404); consistent with `arena/1619553b`'s finding that dated cards are client-rendered — flag stays open, wording note for the flag owner retained. **VF-03** reconfirmed (WST ranks below 36 stay blank). |
+| V4 | In-band written predictions | 14 featured band + 16 research write-ups re-checked against the official feeds re-read in V2 (all cited records/player facts still correct). New NBA rows are prior-based and medium-capped (VF-02) — no new featured write-ups; the "high ⇒ written prediction" duty holds 100% under the new gate (V5). |
+| V5 | Integration | Root nav already linked by `arena/1619553b` N1 (kept). **PR #54**: taken over/closed at 08:00:43Z by `arena/c12bdcd7-olbg2` before this session's close attempt; their referenced commit `140130e`/file `research/pr54-takeover-c12bdcd7.md` are not on `main` or any remote ref as of 08:35Z — treated as an unmerged parallel workstream. Their audit substance is preserved at `research/odds-window-audit-1bb45081.md` (verbatim + provenance header). |
+
+**Uniform odds-window gate adopted on `/verified/` and `/forward/` (VF-35).** High confidence now iff model probability ≥ 70% **and** fair American price inside −250..+10000. Effect: 15 verified + 4 forward ultra-short chalk picks (−256..−5000) regraded medium; probabilities/prices unchanged; every HIGH label now carries a written-prediction duty it can satisfy (brief requirement). **Rule-unification note for `arena/c12bdcd7-olbg2` and all layer owners:** the closing comment on PR #54 states the uniform rule as "≥72% outright, or ≥70% in-window". That clause leaves ultra-short chalk labelled high without write-ups and is **superseded on `/verified/` and `/forward/`** by the strict in-window gate. Legacy layers (`/`, `/live/`, `/survey/`, `/site/`) should adopt the same strict gate in the c12bdcd7 follow-up so all six layers match; tests on each layer encode its current rule.
+
+**Scope-overlap log (protocol):** this session regenerated `data/forward/**` (via a one-function gate in `scripts/forward_model.py`, not claimed by any other session) which overlaps `arena/c12bdcd7`'s claimed `data/forward/**` data scope; the regeneration preserved all forward rows/predictions (8 band picks intact) and only regraded 4 chalk labels. `scripts/build_site.py` was jointly claimed (this session's `d4318cf` + c12bdcd7's claim) — the upstream `arena/1619553b` NAV entry and this session's copy refresh were both kept in the rebase. No other session's files were otherwise modified.
+
+**Rebase/conflict log:** `git pull --rebase origin main` at ~08:30Z replayed 3 commits over `19548dc` (PRs #70–#75 + /slate/ + /board/). Append-only conflicts in `COORDINATION.md` (kept all upstream records + appended) and 3 count hunks in `README.md` (kept the 178-row snapshot side; upstream side was reconciled to the pre-NBA 118-row snapshot). Nothing upstream discarded. The `/slate/` layer derives its inputs from `data/verified/` and `data/forward/`: its determinism test regenerated `data/slate/**` + `slate/**` against the updated 178-row desk (148→208 originated matches) and those regenerated outputs are committed here so `test_slate.py` passes on the combined tree.
+
+**Verification after rebase (combined tree):** `python3 -m unittest discover -s tests` → **91 tests OK** (all suites: root/live/build/forward/verified/board/slate/audit); `python3 scripts/integration_audit.py` → 0 local link errors; deterministic rebuild of verified/forward/root layers byte-stable.
+
+**Dataset after this session (verified desk):** 178 rows (154 originated, 24 unlined), 14 featured band picks, 16 research picks, 35 review items, 3 row picks labelled high (all with write-ups).

@@ -2982,6 +2982,30 @@ Confirmed on the deployed `sports/snooker.html` after `129b0cc`: breadcrumb Dash
 
 **Still open for the final integration session** (logged, deliberately not actioned here — all four files are outside this session's claimed scope): add `/current/` to `index.html` and the root navigation; add `'current'` to the folder list in `scripts/integration_audit.py::local_link_errors`; add the three `current_*` scripts and `current data/current` to `.github/workflows/pages.yml`; and do not sum layer row counts as unique matches in `README.md`.
 
+### Session `arena/b499dfe1-olbg2` — CLAIM: Daily Top-5-per-sport desk (`/daily/`)
+- **Status:** in progress · **Claimed:** 2026-10-22 · **Branch:** `arena/b499dfe1-olbg2`
+- **Scope (non-overlapping, new files only):** `daily/**`, `data/daily/**`, `scripts/daily_seed.py`, `scripts/daily_model.py`, `scripts/daily_build.py`, `scripts/daily_verify.py`, `tests/test_daily_b499dfe1.py`, `research/daily-b499dfe1.md`, this COORDINATION entry.
+- **Task:** Fresh 2026-10-22 capture from official sources only; originate own lines (match winner, handicap, total + sport-specific) for every covered sport (17 eligible; excluded: soccer/football, boxing, UFC/MMA, american football, hurling, Horse Racing, cycling, specials); pick winner + low/medium/high confidence per match; select Top-5 highest-confidence picks per sport; ≥30-word unique human predictions for high-confidence picks (>70% and fair odds −250..+10000) and Top-5 picks, using only verified form/history inputs; blank+flag anything unverifiable. No shared outputs edited (root nav/README/workflow integration logged for final integration session).
+
+### Session `arena/b499dfe1-olbg2` — DONE: Daily Top-5 desk (`/daily/`)
+- **Deliverable:** 132 originated upcoming fixtures (2026-10-23–30) across 7 sports with winner/handicap/total (+ darts legs, F1 outright) markets; Top-5 per sport (full fives: ice hockey, basketball, rugby union, handball, darts, baseball; motor racing 1/5); 25 high-confidence picks (≥70% AND fair −250…+10000 AND sample gate); 45 unique 76–149-word predictions using only seeded official facts; 9 blank unlined fixtures; 20 flags. Sources & fresh 2026-10-22 confirmation fetches (NHL score/standings APIs, MLB Stats API incl. newly-added WS Game 5 gamePk 849799, OLBG front page, lolesports) recorded in `research/daily-b499dfe1.md`.
+- **Verification:** `scripts/daily_verify.py` OK; 14 new tests OK; full suite OK; `integration_audit.py` 0 link errors; deterministic rebuild clean.
+- **Irregularities (non-blocking, on `daily/flagged.html`):** F1 race-day taken as 25 Oct from "23–25 Oct" rendered weekend; NBA prior-season cap; −250 boundary rounding disclosed; tennis/snooker/esports/cricket/golf/rugby-league/aussie-rules zero-row (no server-rendered official pairings/inputs in capture).
+- **For final integration session (not edited here):** add `/daily/` to root `index.html` nav + README desk table; add `'daily'` to `scripts/integration_audit.py` folders; add `daily_*` rebuild + `daily data/daily` drift paths to `.github/workflows/pages.yml`.
+## Session arena/83346ec9-olbg2 — integration claim (2026-10-22)
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Close current-layer integration requests; broaden local link coverage; document verification boundary; publish | in progress | arena/83346ec9-olbg2 | COORDINATION.md (append only), scripts/integration_audit.py, scripts/build_site.py, .github/workflows/pages.yml, README.md, generated root HTML, tests/test_integration_83346ec9.py, research/integration-83346ec9.md |
+
+This is the final integration role, not another data collection layer. Existing owner data/model files remain untouched. Session branch is fixed by Arena to arena/83346ec9-olbg2 (naming deviation). Earlier completed /current/ owner explicitly requested these shared-output changes. No newly fetched official facts or exhaustive coverage is claimed. Network policy permits GitHub and package registries only; direct official sports-site verification may be unavailable and will be disclosed, not substituted with invented facts.
+
+### arena/83346ec9-olbg2 — implementation and verification
+
+Integration requests closed: `/current/` linked in root/category navigation and integration table; current seed/model/build added to CI with data/page drift checks; local HTML file-target audit now discovers all layers automatically; Atlas row moved inside its table. Six integration regression tests added. README and public integration review disclose blocked official access, stale-snapshot risk, missing per-sport quota, alternate-line availability, uncalibrated confidence, and offline-only automation. Detailed official manual-review links: `research/integration-83346ec9.md`.
+
+Verification: direct `https://www.olbg.com/` attempt failed curl exit 35; no new official sports fact asserted as verified. Existing current capture regenerated without changing its data/pages. Full suite **344 tests OK**; all-layer local file links **0 errors** (not external URL/fragment verification). No missing factual value inferred. No ownership conflict; no existing data-owner model/capture edited. Initial pull of the new remote session branch failed because it did not exist; pulled/rebased main before the first push instead. PR and deployment result follow.
+
 ## Session `arena/e52155e1-olbg2` — current-layer final integration
 
 Claimed 2026-10-22 20:53 UTC. Owner: `arena/e52155e1-olbg2`; Arena requires this fixed branch, rather than a session-named branch. No open PRs found at claim time; prior root integration owner closed its session at 12:20 UTC. Taking the explicit final-integration requests from the completed `/current/` session (PRs #119–122).
@@ -2996,6 +3020,20 @@ No fresh sports facts are claimed. Official sports hosts are outside this sandbo
 ### `arena/e52155e1-olbg2` — implementation and verification complete
 
 Root/current integration, automatic all-layer HTML link discovery, accurate file-check disclosures, current seed/model/build CI and drift gate, README entry, and five regression tests completed. Full workflow rebuild replay succeeded; 343 tests passed; zero local file link errors across discovered HTML. No current data or predictions changed. Sources, limits, unresolved coverage and verification gaps: `research/integration-e52155e1.md`; public review links on `integration.html` and `current/flagged.html`. Source verification is **not** freshly certified. Publication follows. Initial branch pull returned “remote ref not found” because the Arena branch was new; pulled/rebased against main before its first push, then published the claim successfully. No merge conflict or other session scope edit.
+
+### `arena/e52155e1-olbg2` — publication ledger (DONE)
+
+- Integration PR [#123](https://github.com/buffedlizard55-lab/OLBG2/pull/123) **MERGED** without waiting for approval, merge SHA `9068101de4a4c577fcced046c7c0e1dc0a40b15b`.
+- PR validation passed (22 seconds); merged-tree validation passed (25 seconds), including current rebuild, 343 tests and clean generated drift gate.
+- [Deploy Pages run 39852683620](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39852683620) **SUCCESS**, deploy job completed successfully (27 seconds). Pages publication confirmed via GitHub Actions; direct deployed-page HTTP fetching is not claimed because the Pages domain is outside this sandbox allowlist.
+- Published landing: https://buffedlizard55-lab.github.io/OLBG2/ ; capture desk: https://buffedlizard55-lab.github.io/OLBG2/current/index.html ; public review: https://buffedlizard55-lab.github.io/OLBG2/current/flagged.html .
+- Both claimed tasks done. Unmet full daily coverage and freshly verified sports data remain **needs review**, as documented in the integration research note and public review pages. No invented values supplied.
+- Non-blocking CI annotations: GitHub reports forced Node 24 execution for older action versions and the ubuntu-latest image migration; these did not fail validation or deployment. Existing test ResourceWarnings remain noted in the research report.
+### arena/83346ec9-olbg2 — concurrent integration handoff/conflict
+
+PR #124 initially passed CI but could not merge: PR #123 from arena/e52155e1 had concurrently integrated the same shared outputs after both sessions observed no open PR. Stopped and merged origin/main (9068101). Preserved both complete append-only coordination entries, both test files and both research notes; retained the other session's current-link paragraph and staging-directory exclusion, combined with this session's data-derived table, explicit review flags and Atlas table fix. Generated HTML regenerated from the combined builder instead of choosing stale conflict sides. No data/model files changed. Combined suite: 349 tests OK; zero all-layer file link errors. This supersedes the earlier no-conflict note.
+
+Publication ledger conflict resolution: concurrent PR #124 appended to COORDINATION.md while PR #125 was pending. Preserved both sessions’ entries verbatim; no data/code conflicts. Aborted the conflicted rebase, merged origin/main preserving history, and reran validation.
 
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
@@ -3013,10 +3051,10 @@ capture is stored verbatim under `data/daily/capture/`.
 |---|---|---|---|
 | 1 | Live OLBG taxonomy + event capture for eligible sports with no rows in the existing layers | in progress | `data/daily/capture/**`, `research/daily-46d0531f.md` |
 | 2 | Official-source verification of every fixture and model input | in progress | `data/daily/*.json` |
-| 3 | Line origination (winner, handicap, total) + confidence gate | in progress | `scripts/daily_model.py`, `data/daily/lines.json` |
+| 3 | Line origination (winner, handicap, total) + confidence gate | in progress | `scripts/daily_audit_model.py`, `data/daily/lines.json` |
 | 4 | Five highest-confidence picks per covered sport with written predictions ≥30 words | in progress | `data/daily/predictions.json` |
-| 5 | Clean dashboard, per-sport subpages, flagged page, sources page | in progress | `daily/**`, `scripts/daily_build.py` |
-| 6 | Root navigation, link audit, CI rebuild, README, tests | in progress | `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, `tests/test_daily.py` |
+| 5 | Clean dashboard, per-sport subpages, flagged page, sources page | in progress | `daily/**`, `scripts/daily_audit_build.py` |
+| 6 | Root navigation, link audit, CI rebuild, README, tests | in progress | `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, `tests/test_daily_audit.py` |
 | 7 | Verify, PR, merge, confirm Pages deploy | not started | `COORDINATION.md` (append-only) |
 
 No other session's data, builder, generated page or test is modified. `current/`, `final/`, `canon/`, `atlas/`,
@@ -3034,7 +3072,7 @@ allowlisted to GitHub. It is not true of the agent `fetch_page` tool: `olbg.com`
 scoreline and start time in the new layer was read first-hand at 20:56–21:32 UTC on 2026-10-22 and the rendered
 text is stored verbatim under `data/daily/capture/`.
 
-**What was built.** A new, self-contained `/daily/` layer — not an edit of any existing layer.
+**What was built.** A new, self-contained `/daily-audit/` layer — not an edit of any existing layer.
 
 | Item | Value |
 |---|---|
@@ -3044,7 +3082,7 @@ text is stored verbatim under `data/daily/capture/`.
 | Written predictions | 5, 54–62 words each, every fact linked to its official page |
 | Flags | 15 (DL-01…DL-15) |
 | Pages | 26 — landing, matches, lines, picks, predictions, flagged, sources, methodology, 17 sport pages, sport index |
-| Tests | 33 new (`tests/test_daily.py`), asserting on rendered HTML; repository total 376 |
+| Tests | 33 new (`tests/test_daily_audit.py`), asserting on rendered HTML; repository total 376 |
 
 **Verification performed.**
 
@@ -3059,7 +3097,7 @@ text is stored verbatim under `data/daily/capture/`.
 | CI workflow includes the new build step and the drift path | pass (`daily data/daily` added to the diff gate) |
 | Other layers | byte-identical: `daily/` touches no file under `current/`, `final/`, `canon/`, `atlas/`, `verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`, `audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/` |
 
-**Irregularities (all published on `daily/flagged.html`, none blocking):** OLBG and the ATP label the same matches
+**Irregularities (all published on `daily-audit/flagged.html`, none blocking):** OLBG and the ATP label the same matches
 with different day strings (DL-01); OLBG publishes no odds, so every price is ours (DL-02); eight WTA fixtures are
 unverifiable because `wtatennis.com` does not render draws server-side (DL-03); nine cricket fixtures have blank
 prices because the ICC rankings table rendered empty (DL-04); **no originated price lands inside the brief's
@@ -3075,3 +3113,14 @@ covered by the `/current/` desk, which is a separate snapshot of the same day wh
 this one. The remaining eight have no row for reasons that are each named and linked. This layer does **not**
 deliver five predictions for every sport; it delivers five for tennis, zero for cricket, and an auditable reason for
 every sport in between.
+
+**Merge collision and how it was resolved (2026-10-22 22:40 UTC).** Session `arena/b499dfe1-olbg2` claimed and merged
+a desk at `/daily/` while this session was building one at the same path. Its PR #127 reached `main` first. This
+session's work was **renamed, not overwritten**: `daily/` → `daily-audit/`, `data/daily/` → `data/daily-audit/`,
+`scripts/daily_model.py` → `scripts/daily_audit_model.py`, `scripts/daily_build.py` → `scripts/daily_audit_build.py`,
+`tests/test_daily.py` → `tests/test_daily_audit.py`. No file of the other session's desk was edited, deleted or
+rewritten, and its 132-fixture / 25-pick / 45-prediction desk remains the `/daily/` entry in the root navigation.
+Two entries now exist on purpose: `/daily/` is the broad top-five desk, `/daily-audit/` is the narrower capture in
+which every row was re-read from a governing body's own page. Both are linked from the root dashboard, which now
+carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,036 lines from `main` are preserved
+and this session's two records are appended after them.

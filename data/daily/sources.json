@@ -1,0 +1,81 @@
+{
+ "sources": [
+  {
+   "id": "nhl-score",
+   "name": "NHL official score API (api-web.nhle.com)",
+   "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "captured": "2026-10-22",
+   "note": "Fresh re-fetch by this session 2026-10-22 confirmed 23 Oct (2 games) and 24 Oct (12 games) FUT state, records and team leaders match the repo capture files."
+  },
+  {
+   "id": "nhl-summary",
+   "name": "NHL Stats REST team summary",
+   "url": "https://api-web.nhle.com/v1/standings/2026-10-22",
+   "captured": "2026-10-22",
+   "note": "Standings endpoint re-fetched 2026-10-22; GP/W/L/OTL/GF/GA agree with data/current/capture/nhl_team_summary_2026-10-22.json."
+  },
+  {
+   "id": "nba",
+   "name": "NBA official schedule & 2025-26 standings (nba.com)",
+   "url": "https://www.nba.com/standings?Season=2025-26",
+   "captured": "2026-10-22",
+   "note": "Current-season records were 0-0 at capture; prior-season records are the only verified performance input. OLBG front page re-fetched 2026-10-22 lists CLE@PHI and DEN@OKC 'Today', corroborating opening-week capture."
+  },
+  {
+   "id": "euroleague",
+   "name": "EuroLeague Basketball official game centre & standings",
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+   "captured": "2026-10-22",
+   "note": ""
+  },
+  {
+   "id": "lnr",
+   "name": "Ligue Nationale de Rugby official tables & fixtures (Top 14 / Pro D2)",
+   "url": "https://top14.lnr.fr/classement",
+   "captured": "2026-10-22",
+   "note": ""
+  },
+  {
+   "id": "urc",
+   "name": "United Rugby Championship official match centre & table",
+   "url": "https://www.unitedrugby.com/match-centre",
+   "captured": "2026-10-22",
+   "note": ""
+  },
+  {
+   "id": "ehf",
+   "name": "EHF Champions League Men official matches & standings",
+   "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "captured": "2026-10-22",
+   "note": ""
+  },
+  {
+   "id": "pdc",
+   "name": "PDC official Werner Rankings Ladder & European Championship draw",
+   "url": "https://www.pdc.tv/rankings",
+   "captured": "2026-10-22",
+   "note": "OLBG front page re-fetched 2026-10-22 lists 'Ryan Joyce vs Jermaine Wattimena, Tomorrow 13:15, Win Match 2-way' (event 32332), corroborating the 23 Oct Round 1 capture."
+  },
+  {
+   "id": "mlb",
+   "name": "MLB Stats API official schedule & standings (statsapi.mlb.com)",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-29",
+   "captured": "2026-10-22",
+   "note": "Re-fetched by this session 2026-10-22: Games 1-5, gamePk 849805/849802/849804/849803/849799 (Game 5 if-necessary), venues American Family Field / Tropicana Field, all 'Scheduled'."
+  },
+  {
+   "id": "f1",
+   "name": "Formula1.com official 2026 calendar & driver standings",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "captured": "2026-10-22",
+   "note": ""
+  },
+  {
+   "id": "olbg",
+   "name": "OLBG.com betting-tips hub (taxonomy & market labels only; OLBG publishes no prices used here)",
+   "url": "https://www.olbg.com/betting-tips",
+   "captured": "2026-10-22",
+   "note": "Re-fetched 2026-10-22. URL schema /betting-tips/{Sport}/{SportId} and event pages ...?event_id={id}; markets seen include Money Line, Win Match 2-way, Full Time Result (excluded sports ignored)."
+  }
+ ]
+}

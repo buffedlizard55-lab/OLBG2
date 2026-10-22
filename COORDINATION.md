@@ -2081,3 +2081,41 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 | Open review | Board 207→277 rebuild mismatch and workflow drift coverage remain needs review/cross-scope requests. No external official-source content was freshly verified by this session. |
 
 **Post-merge copy clarification:** the root dashboard itself publishes 14 price-band writeups; the separate `/verified/` research page contains 16 additional writeups. The README now distinguishes these rather than summing them as 30 root predictions. This clarification is included in the follow-up publication record.
+
+---
+
+## Session `arena/18792bd6-olbg2` — fresh first-hand official-source capture window (`/current/`)
+
+**Session ID:** `arena/18792bd6-olbg2` · **Branch:** `arena/18792bd6-olbg2` (fixed by the environment, so the requested
+`session-<id>/<task>` naming cannot be used) · **Claimed:** 2026-10-22 12:20 UTC, before any implementation edit.
+
+**Live-branch / open-PR check at claim time:** `origin/main` = `293c0c0` (PR #93 merged). Two PRs open:
+[#94](https://github.com/buffedlizard55-lab/OLBG2/pull/94) `arena/f048d3a9-olbg2` (owns `fresh/**`, `data/fresh/**`,
+`scripts/fresh_audit.py`, `scripts/fresh_build.py`, `tests/test_fresh.py`, `research/fresh-f048d3a9.md`) and
+[#95](https://github.com/buffedlizard55-lab/OLBG2/pull/95) `arena/aa8e25ef-olbg2` (owns
+`research/final-verification-aa8e25ef.md`). Both scopes are treated as owned: this session does **not** edit them,
+nor any upstream layer (`site/`, `survey/`, `verified/`, `board/`, `hub/`, `slate/`, `forward/`, `live/`, `final/`,
+`portal/`, `evidence/`, `audit65/`, `review/`, root `*.html`, `sports/**`, `assets/**`, `scripts/build*.py`,
+`scripts/verified_*.py`, `data/verified/**`, …). `COORDINATION.md` is append-only here.
+
+| # | Task | Status | Owner | File scope (non-overlapping, new files only) |
+|---|---|---|---|---|
+| C1 | Claim board + concurrent-session check | done 12:20Z | `arena/18792bd6-olbg2` | `COORDINATION.md` (append-only) |
+| C2 | First-hand official-source fixture capture, 2026-10-22→2026-10-25 window, all 17 eligible sports | in progress | `arena/18792bd6-olbg2` | `data/current/capture/**`, `data/current/matches.json`, `research/current-capture-18792bd6.md` |
+| C3 | Line origination for every captured fixture (win match, handicap, match total) from the captured official inputs only | unclaimed→this session | `arena/18792bd6-olbg2` | `scripts/current_model.py`, `data/current/lines.json` |
+| C4 | Uniform in-band confidence gate (high = ≥70% **and** −250…+10000 American / 1.40–101.00 decimal) + ≥30-word human write-ups with sourced form and recent history | unclaimed→this session | `arena/18792bd6-olbg2` | `scripts/current_model.py`, `data/current/predictions.json` |
+| C5 | `/current/` GH Pages layer: clean landing, all-matches table, per-category sport subpages, picks, flagged-for-review, sources, verification ledger | unclaimed→this session | `arena/18792bd6-olbg2` | `scripts/current_build.py`, `current/**`, `assets` untouched |
+| C6 | Regression tests + link audit for the new layer | unclaimed→this session | `arena/18792bd6-olbg2` | `tests/test_current.py` |
+| C7 | Integration: merge latest `main`, full rebuild, no broken links, tests green, PR → merge → Pages deploy confirmed, recorded here | unclaimed→this session | `arena/18792bd6-olbg2` | shared outputs at integration only |
+
+**Why this layer exists (the gap it closes).** Every prior layer's rows inherit a capture stamp from a session that ran
+earlier on 2026-10-22 or on 2026-10-21; PR #94's audit explicitly records **FR-08 "sample-only re-verification"** and
+PR #93's `review/reproducibility.html` records that official sites were unreachable from that sandbox. This session
+re-reads the official governing-body feeds **first hand** for the current window and publishes only what those feeds
+returned, with the response captured verbatim under `data/current/capture/` so any reviewer can re-check a row
+against the stored payload rather than against a claim.
+
+**Rules for this session.** A value is published only when an official governing-body / league / tour endpoint returned
+it in this session; the raw response is stored under `data/current/capture/` and the row links the official page.
+Anything not returned stays **blank** with a written reason and a flag on `current/flagged.html`. No bookmaker price is
+read, no value is inferred, and no row from an upstream layer is copied in as if it were re-verified here.

@@ -2169,3 +2169,50 @@ inside its own scope. (b) Every contradiction and spot-check verdict carries the
 `confirmed` if this session actually read the value back from the linked official page during this session; unable-to-read rows
 are marked `unreadable`, never guessed. (d) The audit reports defects; it does not silently "fix" another session's numbers.
 (e) CI wiring for the new layer is a **cross-scope request** to the `.github/workflows/**` owner, logged rather than edited.
+
+### R2–R5 results — reconciliation engine, console, spot checks, tests (`arena/3552df3e-olbg2`, 12:40Z)
+
+All work landed only in this session's declared scope. No other session's data, builder, page, workflow or test was edited;
+`git status --porcelain -- data/matches.json data/verified data/board data/forward data/hub data/slate data/portal data/final data/desk data/live data/survey`
+is empty after the rebuild.
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| R2 | Reconciliation engine | done | `scripts/reconcile_audit.py` normalises 11 layers into 1,619 rows / 433 distinct fixtures and runs checks C1–C10. Deterministic (fixed audit date, no clock, no network). |
+| R3 | First-hand spot checks | done | 9 checks in `data/reconcile/spot_checks.json`: 3 confirmed, 3 partially confirmed, 1 contradicted (ATP Almaty), 2 unreadable (PDC cookie wall, plusliga.pl redirect). |
+| R4 | `/reconcile/` console | done | 28 pages: overview, conflicts (overlap/price/grade/rule), non-fixtures, freshness, provenance, predictions, spot checks, flagged for review, method, sources, sports index + 17 sport pages. |
+| R5 | Verifier + tests | done | `scripts/reconcile_verify.py` → 28 pages, 1,807 table rows, 0 broken links/fragments, every source cell populated, published counts match the report. `tests/test_reconcile.py` → 30 tests. Full repo suite: **179 tests pass**. |
+| R6 | Integration | in progress | merge of `origin/main` (`d273833`) into the branch, conflict in this file resolved by keeping both entries; PR/Pages record follows. |
+
+**Findings (all reproducible by `python3 scripts/reconcile_audit.py`):**
+
+| Measure | Value |
+|---|---|
+| Published rows across 11 layers | 1,619 |
+| Distinct fixtures those rows describe | 433 |
+| Fixtures published by ≥2 layers | 369 (1,466 rows) |
+| Rows that are not head-to-head fixtures | 64 |
+| Team-level price conflicts | 341 (largest 16.05 decimal, KOSNER BASKONIA 2026-10-22) |
+| Selection-level grade conflicts | 161 |
+| High grades breaching the stated rule | 116 (slate 57, hub 40, board 37 in part) |
+| Stale rows | 34 |
+| Rows with no date | 25 |
+| Rows under excluded sports | 0 |
+| Eligible sports covered | 17 / 17 |
+
+**Material verification result (SC-04).** The official ATP Almaty day-6 order of play for 2026-10-22
+(<https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule>) lists Atmane–Bellucci, Machac–Khachanov,
+Medvedev–Shimabukuro, Bublik–Marozsan and two doubles matches. The `/slate/` layer publishes Almaty round-of-16
+pairings including *Flavio Cobolli v Rinky Hijikata*; neither player appears on the official card. Those rows are
+reported on `/reconcile/flagged.html` as unverified, not silently corrected (the file is owned by another session).
+
+**Cross-scope requests (logged, not edited):**
+
+1. **Root navigation owner** (`scripts/build_site.py`, root pages — claimed by the live session `arena/dc72bac4-olbg2`,
+   PR #96 open at the time of this merge): add a navigation entry
+   `Reconciliation console (/reconcile/)` so the root landing page links to the new audit. This session did not touch
+   the builder or the root pages, because that scope is still claimed.
+2. **CI owner** (`.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`): add
+   `python scripts/reconcile_audit.py && python scripts/reconcile_build.py && python scripts/reconcile_verify.py`
+   to the validation job, and add `data/reconcile reconcile` to the `git diff --exit-code` drift gate. Not edited here.
+3. **`/slate/` owner**: SC-04 above. The tennis rows cite an order of play that does not contain the published pairings.

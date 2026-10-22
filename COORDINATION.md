@@ -2992,3 +2992,7 @@ Claimed 2026-10-22 20:53 UTC. Owner: `arena/e52155e1-olbg2`; Arena requires this
 | Verify tests/rebuild/link integrity, publish PR and merge, confirm Pages | in progress | above plus `research/integration-e52155e1.md`, `COORDINATION.md` append-only |
 
 No fresh sports facts are claimed. Official sports hosts are outside this sandbox's outbound allowlist; existing captures and row-level links can be structurally audited, but not newly certified. Full coverage and five defensible picks per sport remain unmet rather than fabricated. Other sessions' data and builders are out of scope.
+
+### `arena/e52155e1-olbg2` — implementation and verification complete
+
+Root/current integration, automatic all-layer HTML link discovery, accurate file-check disclosures, current seed/model/build CI and drift gate, README entry, and five regression tests completed. Full workflow rebuild replay succeeded; 343 tests passed; zero local file link errors across discovered HTML. No current data or predictions changed. Sources, limits, unresolved coverage and verification gaps: `research/integration-e52155e1.md`; public review links on `integration.html` and `current/flagged.html`. Source verification is **not** freshly certified. Publication follows. Initial branch pull returned “remote ref not found” because the Arena branch was new; pulled/rebased against main before its first push, then published the claim successfully. No merge conflict or other session scope edit.

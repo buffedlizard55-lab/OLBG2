@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-10-21",
+  "captured_at": "2026-10-22",
   "items": [
     {
       "id": "VF-01",
@@ -75,11 +75,51 @@
       "id": "VF-08",
       "severity": "low",
       "category": "Unlined futures / specialist feeds",
-      "sport": "Golf, Rugby League, Gaelic Football, Greyhounds",
-      "item": "16 specialist/futures markets catalogued without prices ('—')",
-      "detail": "PGA/DP World Tour 132-man strokes-gained feeds, 2027 pre-roster NRL/Super League futures, county GAA club tables, and licensed GBGB greyhound sectional data are not publicly server-rendered; fixtures are linked and prices left blank.",
+      "sport": "Golf, Rugby League, Gaelic Football",
+      "item": "10 specialist/futures markets catalogued without prices ('—')",
+      "detail": "PGA/DP World Tour 132-man strokes-gained feeds, 2027 pre-roster NRL/Super League futures, and county GAA club tables are not publicly server-rendered; fixtures are linked and prices left blank.",
       "source_name": "OLBG Sitemap",
       "source_url": "https://www.olbg.com/sitemap-betting-tips.xml"
+    },
+    {
+      "id": "VF-11",
+      "severity": "medium",
+      "category": "Capture-time limitation",
+      "sport": "Ice Hockey (NHL)",
+      "item": "FLA/OTT team inputs exclude their still-live 21-Oct game",
+      "detail": "The NHL Stats REST summary and standings were read on 2026-10-22 at ~01:35Z while PHI @ BUF (2-1 PHI after two periods) and FLA @ OTT (3-1 OTT after two periods) were still LIVE on the official Score API. Florida and Ottawa play again on 22 Oct, so their inputs are one in-progress game behind; the effect is bounded (one game of 10) and is disclosed rather than estimated from a live score.",
+      "source_name": "NHL Official Score API (2026-10-21)",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-21"
+    },
+    {
+      "id": "VF-12",
+      "severity": "medium",
+      "category": "Coverage gap this refresh",
+      "sport": "Basketball (EuroCup) & Tennis",
+      "item": "EuroCup Round 5 and ATP next-round fixtures not captured on 2026-10-22",
+      "detail": "The four BKT EuroCup R4 games were completed on 21 Oct and are retired; the EuroCup game-center page read on 2026-10-22 did not expose a server-rendered Round 5 fixture list in the chunks fetched, so EuroCup carries no rows until a later session captures Round 5 (due ~27-28 Oct). The same applies to ATP quarter-final orders of play (see VF-04). Neither gap was filled from secondary sources.",
+      "source_name": "EuroCup Official Game Center",
+      "source_url": "https://www.euroleaguebasketball.net/en/eurocup/game-center/"
+    },
+    {
+      "id": "VF-13",
+      "severity": "low",
+      "category": "Re-verification limit",
+      "sport": "Darts (PDC)",
+      "item": "PDC ranking ladder retained from 21-Oct capture",
+      "detail": "pdc.tv/rankings read on 2026-10-22 returned a cookie-consent wall with no server-rendered ladder rows in the fetched content. The 21-Oct captured Werner Ranking Ladder values are retained because no PDC ranking event has been completed between the two captures (the European Championship itself starts on the evening of 22 Oct); flagged so the next session re-reads the ladder after the event.",
+      "source_name": "PDC Official Rankings",
+      "source_url": "https://www.pdc.tv/rankings"
+    },
+    {
+      "id": "VF-14",
+      "severity": "low",
+      "category": "Coverage gap this refresh",
+      "sport": "Greyhounds",
+      "item": "No 22-Oct GBGB race cards captured",
+      "detail": "The six 21-Oct cards (Harlow, Monmore, Nottingham, Kinsley) are completed and retired. Trap sectional ratings require a licensed GBGB data feed and no 22-Oct card was captured from an official source in this refresh, so the Greyhounds page currently lists zero rows rather than stale ones.",
+      "source_name": "GBGB Official Results",
+      "source_url": "https://www.gbgb.org.uk/racing/results/"
     },
     {
       "id": "VF-09",

@@ -1971,3 +1971,16 @@ data row was altered. CI now rebuilds `data/final/` and `final/` and fails on dr
 
 **Cross-scope request resolved:** the root nav change requested from `arena/1352b77f-olbg2`
 was made by this session at F7, as logged. It is a two-line edit (NAV entry + banner).
+
+## Session arena/17c50bb7-olbg2 — deployment integrity and evidence-access audit
+
+Claimed 2026-10-22 UTC. Fixed Arena branch retained instead of requested alternate naming.
+Prior scopes are preserved; no fixture, prediction, or model dataset is claimed or overwritten.
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Prevent Pages publishing before validation succeeds | in progress | arena/17c50bb7-olbg2 | .github/workflows/pages.yml, .github/workflows/validate.yml, tests/test_publication_gate.py |
+| Official-source access probe and honest publication report | in progress | arena/17c50bb7-olbg2 | research/publication-17c50bb7.md, publication.html |
+| Integration, PR, merge, deployment confirmation | in progress | arena/17c50bb7-olbg2 | COORDINATION.md append-only |
+
+Finding: existing Pages workflow deploys independently of content validation, so a failing build can be published. This scope adds a validation dependency without changing other sessions' data. Official websites are outside this sandbox's network allowlist; linked sources alone will not be represented as first-hand verification.

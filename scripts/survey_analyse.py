@@ -53,6 +53,18 @@ OFFICIAL_CROSS_REF = {
 }
 
 
+def fair_american(prob):
+    """Fair no-vig American price of a probability (the published convention)."""
+    if prob >= 0.5:
+        return round(-100.0 / (1.0 / prob - 1.0))
+    return round((1.0 / prob - 1.0) * 100.0)
+
+
+def in_focus_band(prob):
+    """The brief's -250..+10000 window on the fair no-vig price."""
+    return -250 <= fair_american(prob) <= 10000
+
+
 def confidence(rec):
     p, tier = rec.get("pick_probability"), rec.get("tier")
     if p is None or tier in (None, "none"):
@@ -76,7 +88,11 @@ def confidence(rec):
 
     if capped:
         return "low", notes
-    if tier in ("tier1", "tier2") and rec.get("form_verified") and p >= 0.72:
+    # Uniform window rule (all layers): high requires p >= 0.72, or p >= 0.70
+    # with the fair no-vig price inside [-250, +10000]. Never high below 0.70.
+    if tier in ("tier1", "tier2") and rec.get("form_verified") and (
+        p >= 0.72 or (p >= 0.70 and in_focus_band(p))
+    ):
         return "high", notes
     if tier in ("tier1", "tier2") and p >= 0.60:
         return "medium", notes
@@ -216,6 +232,9 @@ for p in PREDICTIONS:
     p["word_count"] = len(p["text"].split())
     p["olbg_source"] = rec.get("olbg_source")
     p["retrieved"] = "2026-10-21"
+    am = fair_american(p["our_probability"])
+    p["fair_american"] = am
+    p["price_band"] = "in-band" if -250 <= am <= 10000 else "outside-band"
 
 picks = []
 for rec in lines:

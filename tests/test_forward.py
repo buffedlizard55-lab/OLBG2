@@ -178,7 +178,7 @@ class ForwardPipelineTests(unittest.TestCase):
         by_id = {it["id"]: it for it in self.flags["items"]}
         self.assertIn("closed", by_id["VF-15"]["status"])
         self.assertIn("closed", by_id["VF-20"]["status"])
-        self.assertIn("BLOCKED", by_id["VF-22"]["status"])
+        self.assertIn("PARTIAL/CLOSED", by_id["VF-22"]["status"])
         self.assertIn("PARTIAL", by_id["VF-14"]["status"])
 
     # ---- determinism ------------------------------------------------------

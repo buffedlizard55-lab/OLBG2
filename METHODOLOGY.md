@@ -94,13 +94,35 @@ row always agree. Neither convention is a bookmaker quote.
 
 | Sport | High | Medium | Low |
 |---|---|---|---|
-| NHL | p ≥ 65% and both teams ≥ 7 games | p ≥ 57% (≥ 7 games) or p ≥ 68% (≥ 5 games) | otherwise |
+| NHL | uniform window rule and both teams ≥ 7 games | p ≥ 57% (≥ 7 games) or p ≥ 68% (≥ 5 games) | otherwise |
 | NBA | not permitted (zero current-season games) | p ≥ 68% | p < 68% |
 | URC | not permitted (three rounds) | p ≥ 62% | p < 62% |
-| Handball | p ≥ 70% and both clubs ≥ 4 group games | p ≥ 58% (≥ 4 games) | otherwise |
+| Handball | uniform window rule and both clubs ≥ 4 group games | p ≥ 58% (≥ 4 games) | otherwise |
 
-The `/verified/` layer grades its own picks on a single published rule: **high** when the model probability is
-≥ 70% with the fair American price inside −250..+10000 (uniform odds-window gate); **medium** ≥ 60% or out-of-window; **low**
+
+**Uniform high-confidence window (applied to the four earlier layers — root archive, `/site/`, `/survey/`, `/live/` — on 2026-10-22 by session `arena/c12bdcd7`).** The brief defines high-confidence
+picks as greater-than-70% selections and asks generation to focus on matches priced between **−250 and +10000**.
+Every layer therefore applies one shared clause on top of its own evidence/sample gates: **high** requires
+model probability **≥ 72%**, **or ≥ 70% with the fair no-vig price (1/p) inside [−250, +10000]** — and never
+below the 70% floor. Boundary arithmetic: −250 American = decimal 1.40 = 71.43% implied, so a two-way fair
+price qualifies between 70.0% and 71.43% outright; alternate handicap/total lines are used to express stronger
+opinions inside the window (as the `/verified/` featured set does). Written predictions accompany every
+high-confidence pick and every featured write-up sits inside the window; chalk-favourite write-ups outside it
+are retained but labelled "outside the focus band" on their pages rather than passed off as compliant.
+
+Selections regraded below high by this rule keep their narratives verbatim in per-layer archive files
+(`data/predictions_archived.json`, `data/desk/archived_picks.json`) with the regrade reason — nothing is
+deleted. The earlier root rule (NHL high at p ≥ 65%) and the live-slate rule (high at p ≥ 62%) were superseded
+because both could label sub-70% picks high, which the brief's definition forbids. This closed the odds-window
+compliance task opened as PR #54 (session `1bb45081`); see `research/pr54-takeover-c12bdcd7.md`.
+
+The `/verified/` and `/forward/` published desks apply the strict form of the same window (session
+`arena/1352b77f-olbg2`, VF-35): **high** only when the model probability is ≥ 70% **and** the fair American price
+sits inside −250..+10000 — ultra-short chalk is capped at **medium**, so every HIGH label carries a written
+prediction (14 featured band + 16 research write-ups) and the picks page never presents unbackable −5000
+favourites as high-confidence tips. Unifying the four earlier layers onto this strict form is the one open
+cross-layer item (recorded in COORDINATION.md for the legacy-layer owner). **medium** ≥ 60%; **low**
+>>>>>>> origin/main
 below 60%. NBA picks are capped at medium because only prior-season records exist. Handicap and total picks are
 graded by the same rule; alternate lines only become featured when the moneyline pick already clears 70%.
 

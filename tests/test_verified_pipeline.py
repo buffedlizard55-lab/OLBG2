@@ -123,9 +123,11 @@ class VerifiedPipelineTests(unittest.TestCase):
         # retired (-1 unlined); NZ v IND corrected to 22 Oct 07:00 UTC.
         # 2026-10-22 (session arena/1352b77f-olbg2): +60 NBA fixtures for
         # 24-31 Oct captured from the official week schedule (VF-14 closed),
-        # so originated moves 94 -> 154; unlined unchanged at 24.
+        # so originated moves 94 -> 154. 2026-10-22 (session c12bdcd7): +10
+        # unlined GBGB Category One open races (23 Oct-26 Dec) from the
+        # official GBGB schedule (VF-22), so unlined moves 24 -> 34.
         self.assertEqual(orig, 154)
-        self.assertEqual(unl, 24)
+        self.assertEqual(unl, 34)
 
     def test_research_desk_picks_are_in_band_verified_and_player_aware(self) -> None:
         # Research-desk write-ups (session 26963a2d) sit beside the featured

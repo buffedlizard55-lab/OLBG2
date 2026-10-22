@@ -126,15 +126,36 @@ def half_line(value: float) -> float:
 
 
 # ---------------------------------------------------------------- confidence
+def fair_american(p: float) -> int:
+    """Fair no-vig American price of a probability (the published convention)."""
+    if p >= 0.5:
+        return round(-100.0 / (1.0 / p - 1.0))
+    return round((1.0 / p - 1.0) * 100.0)
+
+
+def in_focus_band(p: float) -> bool:
+    """The brief's -250..+10000 window on the fair no-vig price."""
+    return -250 <= fair_american(p) <= 10000
+
+
+def window_high(p: float) -> bool:
+    """Uniform high clause (all layers): >= 72% outright, or >= 70% inside the band."""
+    return p >= 0.72 or (p >= 0.70 and in_focus_band(p))
+
+
 def confidence_for(sport: str, p: float, min_gp: int | None) -> str:
-    """Deterministic confidence rule from METHODOLOGY.md."""
+    """Deterministic confidence rule from METHODOLOGY.md.
+
+    High is never awarded below a 70% model probability (the brief's floor),
+    and the uniform window clause applies on top of each sport's sample gate.
+    """
     if sport == "Basketball":
         # Current season sample is zero; only last season's prior exists.
         return "medium" if p >= 0.68 else "low"
     if sport == "Handball":
         # Four group games per side is a thin sample, so high is reserved for clear favourites.
         if min_gp is not None and min_gp >= 4:
-            if p >= 0.70:
+            if window_high(p):
                 return "high"
             if p >= 0.58:
                 return "medium"
@@ -143,7 +164,7 @@ def confidence_for(sport: str, p: float, min_gp: int | None) -> str:
         # Three rounds played -> never above medium.
         return "medium" if p >= 0.62 else "low"
     if min_gp is not None and min_gp >= PARAMS["nhl_min_gp_high"]:
-        if p >= 0.65:
+        if window_high(p):
             return "high"
         if p >= 0.57:
             return "medium"

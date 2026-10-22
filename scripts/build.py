@@ -10,6 +10,9 @@ from urllib.parse import urlparse
 from engine import (
     choose_selection,
     confidence_label,
+    fair_american,
+    in_focus_band,
+    window_high,
     implied,
     nba_market,
     nhl_market,
@@ -151,7 +154,9 @@ def validate(data: dict) -> None:
 
     picks = data["picks"]["picks"]
     narratives = {}
-    for fid, pick in picks.items():
+    for fid, pick in list(picks.items()) + [
+        (a["fixture_id"], a) for a in data.get("archived_picks", {}).get("picks", [])
+    ]:
         if fid not in seen:
             raise ValueError(f"pick for unknown fixture {fid}")
         if pick["market"] not in MARKETS:  # pragma: no cover - defensive
@@ -215,8 +220,8 @@ def build_rows(data: dict) -> list[dict]:
         probability = ml["p_home"] if selection == ml["home_team"] else ml["p_away"]
         edge = abs(ml["p_home"] - 0.5)
         evidence = bool(pick and fx["official_url"] in pick["sources"])
-        label, reason = confidence_label(edge, evidence=evidence, sample_ok=sample_ok,
-                                        baseline=baseline, params=params)
+        label, reason = confidence_label(edge, probability=probability, evidence=evidence,
+                                        sample_ok=sample_ok, baseline=baseline, params=params)
         if pick and not evidence:
             raise ValueError(f"prediction for {fx['id']} must cite its own official page")
         rows.append({
@@ -386,6 +391,7 @@ def build() -> dict:
         "nhl_teams": load("nhl_teams.json"),
         "fixtures": load("fixtures.json"),
         "picks": load("picks.json"),
+        "archived_picks": load("archived_picks.json"),
         "flagged": load("flagged.json"),
         "coverage": load("coverage.json"),
     }
@@ -465,17 +471,36 @@ def build() -> dict:
         '<button class="pill" data-group="conf" data-filter="medium">Medium</button>'
         '<button class="pill" data-group="conf" data-filter="low">Low</button></div>'
     )
+    def band_tag(probability):
+        if in_focus_band(probability):
+            return '<span class="chip covered">in the &minus;250&hellip;+10000 focus band</span>'
+        return ('<span class="chip unverified">outside the &minus;250&hellip;+10000 focus band '
+                "(chalk favourite)</span>")
+
     high_cards = "".join(
         f'<article class="prediction-card"><div class="eyebrow">HIGH CONFIDENCE <span class="dash"></span> '
         f'{esc(r["fixture"]["league"])}</div>'
         f'<h3>{esc(r["selection"])} <span class="price mono">{price(r["odds"])}</span></h3>'
         f'<p class="matchup-line">{esc(r["fixture"]["away_name"])} at {esc(r["fixture"]["home_name"])} · '
-        f'{esc(r["fixture"]["date"])} {esc(r["fixture"]["time"])}</p>'
+        f'{esc(r["fixture"]["date"])} {esc(r["fixture"]["time"])} · {band_tag(r["probability"])}</p>'
         f'<p>{esc(r["pick"]["narrative"])}</p>'
         f'<div class="facts"><ul>' + "".join(f"<li>{esc(f)}</li>" for f in r["pick"]["facts"]) + "</ul></div>"
         f'<div class="src">' + " ".join(a(u, f"source {i + 1}") for i, u in enumerate(r["pick"]["sources"]))
         + f' · {a(r["fixture"]["official_url"], "official game page")}</div></article>'
         for r in high
+    )
+    archived = data["archived_picks"]["picks"]
+    archived_cards = "".join(
+        f'<article class="prediction-card"><div class="eyebrow">ARCHIVED <span class="dash"></span> '
+        f'regraded to {esc(e["regraded_to"])}</div>'
+        f'<h3>{esc(e["selection"])} <span class="price mono">{price(e["fair_american"])}</span></h3>'
+        f'<p class="matchup-line">{esc(e["fixture_id"])} · p={e["probability"]:.1%} · fair American {e["fair_american"]}</p>'
+        f'<p class="matchup-line">{esc(e["archive_reason"])}</p>'
+        f'<p>{esc(e["narrative"])}</p>'
+        f'<div class="facts"><ul>' + "".join(f"<li>{esc(f)}</li>" for f in e["facts"]) + "</ul></div>"
+        f'<div class="src">' + " ".join(a(u, f"source {i + 1}") for i, u in enumerate(e["sources"]))
+        + '</div></article>'
+        for e in archived
     )
     picks_body = (
         f'<section class="subhero"><div class="eyebrow">PICK SHEET <span class="dash"></span> {esc(meta["snapshot_utc"])}</div>'
@@ -485,7 +510,16 @@ def build() -> dict:
         '<div class="kpis small">' + kpi("High", str(len(high)), "with written prediction") + kpi("Medium", str(len(medium)), "model edge only")
         + kpi("Low", str(len(low)), "no edge") + "</div>"
         + '<div class="section-head"><div><div class="eyebrow">PREDICTIONS</div><h2>High confidence</h2></div></div>'
+        + '<p>High requires model probability &ge; 70% and the published rule &ge; 72% outright, or &ge; 70% with '
+        'the fair no-vig price inside the &minus;250&hellip;+10000 focus band. Written predictions accompany '
+        'every high-confidence pick.</p>'
         + '<div class="prediction-grid">' + high_cards + "</div>"
+        + '<div class="section-head below"><div><div class="eyebrow">ARCHIVE</div><h2>Regraded narratives</h2></div></div>'
+        + '<p>These write-ups were published in an earlier pass for selections that fail the uniform rule '
+        '(below the 70% floor or outside the focus window). Nothing is deleted: each keeps its facts and '
+        'source links, with the regrade recorded on the card. See '
+        '<a href="flagged.html">Flagged for Review</a>.</p>'
+        + '<div class="prediction-grid">' + archived_cards + "</div>"
         + '<div class="section-head below"><div><div class="eyebrow">ALL SELECTIONS</div><h2>Pick sheet</h2></div></div>'
         + filters + pick_table(rows, show_narrative=True)
     )

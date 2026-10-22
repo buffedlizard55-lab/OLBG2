@@ -22,6 +22,7 @@ class DashboardIntegrityTests(unittest.TestCase):
     def setUpClass(cls):
         cls.matches = load("matches.json")
         cls.preds = load("predictions.json")["predictions"]
+        cls.archived = load("predictions_archived.json")["predictions"]
         cls.by_id = {m["id"]: m for m in cls.matches["matches"]}
 
     def test_every_high_confidence_row_has_exactly_one_prediction(self):
@@ -52,6 +53,47 @@ class DashboardIntegrityTests(unittest.TestCase):
     def test_every_fixture_cites_an_official_source_url(self):
         for m in self.matches["matches"]:
             self.assertTrue(m["fixture_source"]["url"].startswith("https://"), m["id"])
+
+    def test_no_high_label_fails_the_published_window_rule(self):
+        # Published rule (all layers): high requires model probability >= 72%,
+        # or >= 70% with the fair no-vig price inside [-250, +10000]. Never
+        # high below the 70% floor (the brief defines high-confidence picks as
+        # greater-than-70% selections).
+        def fair_american(prob):
+            return round(-100.0 / (1.0 / prob - 1.0))
+
+        for m in self.matches["matches"]:
+            if m.get("confidence") != "high":
+                continue
+            prob = m["pick"]["probability"]
+            self.assertGreaterEqual(prob, 0.70, m["id"])
+            in_band = -250 <= fair_american(prob) <= 10000
+            self.assertTrue(prob >= 0.72 or in_band, m["id"])
+
+    def test_archived_narratives_document_the_regrade(self):
+        self.assertEqual(len(self.archived), 3)
+        active_ids = {p["match_id"] for p in self.preds}
+        for a in self.archived:
+            self.assertNotIn(a["match_id"], active_ids)
+            self.assertEqual(a["regraded_to"], "medium", a["match_id"])
+            self.assertIn("below the 70% floor", a["archive_reason"], a["match_id"])
+            self.assertGreaterEqual(len(a["text"].split()), 30, a["match_id"])
+            self.assertTrue(a["facts"], a["match_id"])
+            self.assertLess(a["probability"], 0.70, a["match_id"])
+            self.assertEqual(self.by_id[a["match_id"]]["confidence"], a["regraded_to"])
+
+    def test_active_predictions_carry_price_band_annotations(self):
+        def fair_american(prob):
+            return round(-100.0 / (1.0 / prob - 1.0))
+
+        bands = []
+        for p in self.preds:
+            prob = p["probability"]
+            expected = "in-band" if -250 <= fair_american(prob) <= 10000 else "outside-band"
+            self.assertEqual(p["price_band"], expected, p["match_id"])
+            self.assertEqual(p["fair_american"], fair_american(prob), p["match_id"])
+            bands.append(expected)
+        self.assertGreaterEqual(bands.count("in-band"), 2)
 
     def test_handball_rows_are_all_lined_and_come_from_ehf(self):
         rows = [m for m in self.matches["matches"] if m["sport"] == "Handball"]

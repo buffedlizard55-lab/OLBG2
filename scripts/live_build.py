@@ -220,19 +220,28 @@ def build():
             fh.write(page("%s - live slate" % sport, body, prefix="../"))
 
     # ---- picks
-    pred_blocks = []
+    def fair_american(prob):
+        return round(-100.0 / (1.0 / prob - 1.0)) if prob >= 0.5 else round((1.0 / prob - 1.0) * 100.0)
+
+    pred_blocks_in, pred_blocks_out = [], []
     for r in by_conf["high"]:
         p = r["prediction"]
-        pred_blocks.append(
-            "<div class='quote'><b>%s</b> &middot; %s @ %s &middot; <span class='pill high'>high</span> "
+        am = fair_american(r["pick"]["probability"])
+        in_band = -250 <= am <= 10000
+        tag = ("<span class='pill high'>high</span> <span class='muted small'>in the -250...+10000 focus band</span>"
+               if in_band else
+               "<span class='pill high'>high</span> <span class='muted small'>outside the -250...+10000 focus band (chalk favourite)</span>")
+        block = (
+            "<div class='quote'><b>%s</b> &middot; %s @ %s &middot; %s "
             "<span class='muted small'>%.1f%% &middot; %s</span><p>%s</p>"
             "<p class='small muted'>Selection: %s. Words: %d. Facts from: <a href='%s'>official source</a>.</p></div>"
             % (
-                esc(r["date"]), esc(r["away_name"]), esc(r["home_name"]),
+                esc(r["date"]), esc(r["away_name"]), esc(r["home_name"]), tag,
                 r["pick"]["probability"] * 100, esc(r["pick"]["american"]),
                 esc(p["text"]), esc(p["selection"]), p["words"], esc(r["source_url"]),
             )
         )
+        (pred_blocks_in if in_band else pred_blocks_out).append(block)
     pick_rows = "".join(
         "<tr><td>%s</td><td>%s @ %s</td><td>%s</td><td><span class='pill %s'>%s</span></td><td>%.1f%%</td><td>%s</td><td class='small'><a href='%s'>official source</a></td></tr>"
         % (
@@ -245,10 +254,18 @@ def build():
     picks = page(
         "Picks and predictions",
         "<p>One match-winner pick per fixture with a confidence label "
-        "(high &ge; 62%%, medium 55-62%%, low &lt; 55%% model probability). Written predictions accompany every "
+        "(high = model probability &ge; 72%%, or &ge; 70%% with the fair no-vig price inside "
+        "-250...+10000; medium 55-72%%; low &lt; 55%%). Written predictions accompany every "
         "high-confidence pick.</p><h2>All picks</h2>"
         "<table><tr><th>Date</th><th>Match</th><th>Pick</th><th>Confidence</th><th>Model probability</th><th>Price</th><th>Source</th></tr>%s</table>"
-        "<h2>High-confidence predictions</h2>%s" % (pick_rows, "".join(pred_blocks)),
+        "<h2>High-confidence predictions inside the -250...+10000 focus band (%d)</h2>%s"
+        "<h2>High-confidence predictions outside the focus band (%d)</h2>"
+        "<p class='small muted'>The brief asks for high-confidence generation to focus on fair prices between "
+        "-250 and +10000. These are chalk favourites priced shorter than -250; their write-ups are retained for "
+        "completeness and clearly labelled rather than passed off as in-band.</p>%s"
+        % (pick_rows, len(pred_blocks_in), "".join(pred_blocks_in) or
+           "<p class='small muted'>No in-band high-confidence picks on this slate.</p>",
+           len(pred_blocks_out), "".join(pred_blocks_out)),
     )
 
     # ---- flagged
@@ -300,7 +317,8 @@ def build():
         "no league constant that was not captured is assumed. Tied scorelines are split 50/50 as extra innings. No home "
         "advantage is applied because no official home/away split was captured (flag L07).</p>"
         "<p><b>Pricing.</b> Fair prices are divided by 1.04, a disclosed 4% overround, then converted to American odds. "
-        "<b>Confidence.</b> high &ge; 0.62, medium 0.55-0.62, low &lt; 0.55 on the model probability of the match-winner "
+        "<b>Confidence.</b> high = probability &ge; 0.72, or &ge; 0.70 with the fair no-vig price inside "
+        "[-250, +10000]; medium 0.55-0.72, low &lt; 0.55 on the model probability of the match-winner "
         "selection.</p>"
         "<h2>Rules this layer follows</h2>"
         "<p>A value is published only when an official source returned it in this session's capture. Anything "

@@ -124,7 +124,7 @@
         "decimal": 1.93,
         "american": "-108",
         "confidence": "low",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": null
     },
@@ -243,7 +243,7 @@
         "decimal": 1.19,
         "american": "-530",
         "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": {
         "fixture_id": "urc-292617",
@@ -257,6 +257,9 @@
           "Fixture: Friday 30 October 2026, 15:45 local, Scotstoun Stadium"
         ],
         "text": "Glasgow Warriors are unbeaten through three rounds, sitting second on 13 points after outscoring Connacht 36-19 at Scotstoun in their last outing, and that same ground hosts this one. The 10bet Lions arrive with 102 points already conceded, the second-worst defensive record in the table, and fresh from being beaten 57-15 at Loftus Versfeld. Backing Glasgow on the match-winner market looks the sound play.",
+        "probability": 0.8088,
+        "fair_american": -423,
+        "price_band": "outside-band",
         "words": 64
       }
     },
@@ -375,7 +378,7 @@
         "decimal": 1.26,
         "american": "-382",
         "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": {
         "fixture_id": "urc-292618",
@@ -389,6 +392,9 @@
           "Fixture: Saturday 31 October 2026, 08:45 local, DHL Stadium"
         ],
         "text": "Ulster are still searching for a first win of the campaign, their three rounds producing two draws and a defeat, most recently a 26-26 stalemate with Munster. The DHL Stormers have conceded just 54 points in three matches, the tightest defence in the division, and put 39 past the Sharks in Cape Town last time out. With the Stormers at home in Cape Town again, the Stormers to win is the selection.",
+        "probability": 0.7618,
+        "fair_american": -320,
+        "price_band": "outside-band",
         "words": 72
       }
     },
@@ -507,7 +513,7 @@
         "decimal": 1.12,
         "american": "-835",
         "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": {
         "fixture_id": "urc-292619",
@@ -521,6 +527,9 @@
           "Fixture: Saturday 31 October 2026, 11:00 local, Loftus Versfeld"
         ],
         "text": "The Vodacom Bulls have scored 126 points in three rounds, 19 of them tries, and hold a plus-72 points difference that no other club in the table comes close to, having thumped the Lions 57-15 in Pretoria. The Scarlets have won one of three, squeaking past Benetton by a single point at home, and now travel to Loftus Versfeld. Bulls to win the match is the pick.",
+        "probability": 0.8586,
+        "fair_american": -607,
+        "price_band": "outside-band",
         "words": 67
       }
     },
@@ -639,7 +648,7 @@
         "decimal": 2.09,
         "american": "+109",
         "confidence": "low",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": null
     },
@@ -758,7 +767,7 @@
         "decimal": 1.7,
         "american": "-142",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": null
     },
@@ -877,7 +886,7 @@
         "decimal": 1.14,
         "american": "-727",
         "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": {
         "fixture_id": "urc-292622",
@@ -891,6 +900,9 @@
           "Fixture: Saturday 31 October 2026, 13:30 local, Rodney Parade"
         ],
         "text": "Zebre Parma sit bottom of the table on a single point, their three matches all defeats and their minus-64 points difference the worst in the championship, the latest a 12-29 home loss to Edinburgh. Dragons RFC have nine points from three rounds and put 31 points on the board in their last outing at Rodney Parade, where this fixture is played. Dragons RFC to win the match is the selection here.",
+        "probability": 0.8453,
+        "fair_american": -546,
+        "price_band": "outside-band",
         "words": 71
       }
     },
@@ -1009,7 +1021,7 @@
         "decimal": 1.88,
         "american": "-114",
         "confidence": "low",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": null
     },
@@ -1112,7 +1124,7 @@
         "decimal": 1.62,
         "american": "-162",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": null
     },
@@ -1215,7 +1227,7 @@
         "decimal": 1.62,
         "american": "-162",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": null
     },
@@ -1318,7 +1330,7 @@
         "decimal": 1.62,
         "american": "-162",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside [-250, +10000]; medium 0.55-0.72; low < 0.55"
       },
       "prediction": null
     }

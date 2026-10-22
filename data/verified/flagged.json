@@ -114,12 +114,12 @@
     {
       "id": "VF-22",
       "severity": "low",
-      "category": "Coverage gap this refresh",
+      "category": "Coverage gap narrowed this session",
       "sport": "Greyhounds",
-      "item": "No 22-Oct GBGB race cards captured",
-      "detail": "The six 21-Oct cards (Harlow, Monmore, Nottingham, Kinsley) are completed and retired. Trap sectional ratings require a licensed GBGB data feed and no 22-Oct card was captured from an official source in this refresh, so the Greyhounds page currently lists zero rows rather than stale ones.",
-      "source_name": "GBGB Official Results",
-      "source_url": "https://www.gbgb.org.uk/racing/results/"
+      "item": "Official GBGB Category One schedule captured; daily cards and trap ratings still unreachable",
+      "detail": "Session c12bdcd7 (2026-10-22) fetched the official GBGB 2026 Category One Schedule (server-rendered table) and published the ten upcoming open races, 23 Oct to 26 Dec, each with date, track, event and distance. The daily race cards and results grids on gbgb.org.uk remain client-rendered (the /racecards/ path now returns 404), and trap sectional ratings require a licensed feed, so no runner list, start time or market could be verified and all ten rows ship unlined. Remaining gap: per-race cards with runners and off times.",
+      "source_name": "GBGB 2026 Category One Schedule",
+      "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/"
     },
     {
       "id": "VF-23",

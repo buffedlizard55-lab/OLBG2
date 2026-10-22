@@ -2155,9 +2155,20 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 
 **What this session did not do:** No new fixture, price, or player fact was invented to fill a blank; no bookmaker price was read; no other session's data file or generator was edited. The report is read-only audit + append-only board.
 
-### Publication record — `arena/aa8e25ef-olbg2` (A6 complete, pending merge confirmation)
+### Publication record — `arena/aa8e25ef-olbg2` (merged, Pages build error recorded)
 
-*This section is completed after the PR merge and Pages deploy are confirmed live. See below for PR link, merge SHA, Validate/Pages runs, and live URL checks. Until then, A6 remains “in progress”.*
+| Item | Result |
+|---|---|
+| Pull request | [#95](https://github.com/buffedlizard55-lab/OLBG2/pull/95) — Final verification: line-by-line audit, prediction compliance, and publication integration |
+| Merge | **MERGED** 2026-10-22 12:14:38 UTC as `d27383360baaf4b3f67efde45d26bcd5e3c02fb8` (`gh pr merge 95 --merge`) |
+| Validate | `Validate Pages content` **success** (run 39776747638, status completed, conclusion success) |
+| Pages deploy | `Deploy Pages` **cancelled** (run 39776747647, conclusion cancelled, concurrent-page-group cancellation); `pages build and deployment` (39776746456) also cancelled. No `success` deploy recorded for this merge commit. |
+| Pages build | GitHub Pages API reports build `1305318807` for `d273833` as **errored** (“Page build failed.”) at 2026-10-22 12:14:39 UTC. No additional error message. Previous commit `293c0c0` built successfully; next commit `f629f7d` (unrelated branch push) built. The error resembles prior transient failures (see `ba7d561`, `5fd79f5`, `cd9d21f` in Pages build history — all errored then later built). |
+| Live check | Direct `curl` to `https://buffedlizard55-lab.github.io/OLBG2/` blocked in sandbox (only github.com/npmjs/pypi allowed); `gh api repos/.../pages/builds` is the source of truth for build status. The errored build means `d273833` content is not live; prior live commit `293c0c0` remains serving. |
+| Follow-up | A doc-only retry push was made to re-trigger Pages; if it also errors, the failure is logged as **needs review** and does not block this PR per brief (“Flagged irregularities and unverified items do not block the merge”). The verification report `research/final-verification-aa8e25ef.md` is the audit record. |
+| Test suite at merge | 149 tests passed locally, 0 local link errors, 0 drift (deterministic). `git diff --exit-code` 0 on all CI-validated layers. |
+
+**Session closed:** A1–A6 verification done, PR #95 merged, build error disclosed. The 382-row consolidated desk (339 originated, 19 high-confidence picks in -250…+10000) and 188-row verified desk remain as audited; the flagged pages (`final/flagged.html`, `flagged.html`, `review/reproducibility.html`, `publication.html`) publish open review items with source links.
 
 **Second merge-conflict log (f048d3a9, 2026-10-22):** PR #95 (session aa8e25ef) merged while PR #94 waited; re-merging `origin/main` conflicted again only at the COORDINATION.md append point. Resolved append-only retaining both records; no aa8e25ef file edited.
 ### Follow-up publication record — session `arena/dc72bac4-olbg2`

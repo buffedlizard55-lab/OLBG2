@@ -2788,3 +2788,10 @@ predictions page rendered `high≥70% but priced shorter than -250` as one run o
 - **Note for future sessions:** `arena/<id>-olbg2` branch naming is a platform constraint (see earlier records);
   python3 scripts/update_model.py && python3 scripts/update_build.py && python3 scripts/update_verify.py
   regenerates and re-verifies the whole /update/ layer deterministically.
+
+- **Publication confirmed (arena/d69dc1c9-olbg2):** PR #114 merged to main (merge commit after resolving the
+  PRs #106–112 concurrency merge: COORDINATION kept both sides, NAV merged with atlas/canon entries, root pages
+  regenerated; combined suite 265 tests green at merge). Pages workflows `Validate Pages content`, `Deploy Pages`
+  and `pages build and deployment` all completed success on the merge commit. Live: https://buffedlizard55-lab.github.io/OLBG2/update/ (dashboard
+  serves 208 rows / 11 high-confidence picks / 143 flagged items) and root NAV now carries “Update 22–28 Oct
+  (fresh capture)”. Status: D1–D6 complete and published.

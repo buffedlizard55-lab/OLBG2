@@ -1,0 +1,5516 @@
+{
+ "layer": "daily",
+ "session": "arena/b499dfe1-olbg2",
+ "captured_at": "2026-10-22",
+ "window": [
+  "2026-10-23",
+  "2026-10-30"
+ ],
+ "count": 132,
+ "fixtures": [
+  {
+   "id": "mlb-849805",
+   "sport": "baseball",
+   "competition": "MLB World Series 2026 \u2014 World Series Game 1",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "venue": "American Family Field",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "home_code": "MIL",
+   "away_code": "TB",
+   "official_url": "https://www.mlb.com/gameday/849805",
+   "source_id": "mlb",
+   "family": "poisson_baseball",
+   "inputs": {
+    "home": {
+     "name": "Milwaukee Brewers",
+     "wins": 103,
+     "losses": 59,
+     "runs_scored": 832,
+     "runs_allowed": 618
+    },
+    "away": {
+     "name": "Tampa Bay Rays",
+     "wins": 98,
+     "losses": 64,
+     "runs_scored": 736,
+     "runs_allowed": 650
+    },
+    "league_runs_pg": 4.4811
+   }
+  },
+  {
+   "id": "mlb-849802",
+   "sport": "baseball",
+   "competition": "MLB World Series 2026 \u2014 World Series Game 2",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "venue": "American Family Field",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "home_code": "MIL",
+   "away_code": "TB",
+   "official_url": "https://www.mlb.com/gameday/849802",
+   "source_id": "mlb",
+   "family": "poisson_baseball",
+   "inputs": {
+    "home": {
+     "name": "Milwaukee Brewers",
+     "wins": 103,
+     "losses": 59,
+     "runs_scored": 832,
+     "runs_allowed": 618
+    },
+    "away": {
+     "name": "Tampa Bay Rays",
+     "wins": 98,
+     "losses": 64,
+     "runs_scored": 736,
+     "runs_allowed": 650
+    },
+    "league_runs_pg": 4.4811
+   }
+  },
+  {
+   "id": "mlb-849804",
+   "sport": "baseball",
+   "competition": "MLB World Series 2026 \u2014 World Series Game 3",
+   "date": "2026-10-26",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": "Tropicana Field",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "home_code": "TB",
+   "away_code": "MIL",
+   "official_url": "https://www.mlb.com/gameday/849804",
+   "source_id": "mlb",
+   "family": "poisson_baseball",
+   "inputs": {
+    "home": {
+     "name": "Tampa Bay Rays",
+     "wins": 98,
+     "losses": 64,
+     "runs_scored": 736,
+     "runs_allowed": 650
+    },
+    "away": {
+     "name": "Milwaukee Brewers",
+     "wins": 103,
+     "losses": 59,
+     "runs_scored": 832,
+     "runs_allowed": 618
+    },
+    "league_runs_pg": 4.4811
+   }
+  },
+  {
+   "id": "mlb-849803",
+   "sport": "baseball",
+   "competition": "MLB World Series 2026 \u2014 World Series Game 4",
+   "date": "2026-10-27",
+   "start_utc": "2026-10-28T00:00:00Z",
+   "venue": "Tropicana Field",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "home_code": "TB",
+   "away_code": "MIL",
+   "official_url": "https://www.mlb.com/gameday/849803",
+   "source_id": "mlb",
+   "family": "poisson_baseball",
+   "inputs": {
+    "home": {
+     "name": "Tampa Bay Rays",
+     "wins": 98,
+     "losses": 64,
+     "runs_scored": 736,
+     "runs_allowed": 650
+    },
+    "away": {
+     "name": "Milwaukee Brewers",
+     "wins": 103,
+     "losses": 59,
+     "runs_scored": 832,
+     "runs_allowed": 618
+    },
+    "league_runs_pg": 4.4811
+   }
+  },
+  {
+   "id": "mlb-849799",
+   "sport": "baseball",
+   "competition": "MLB World Series 2026 \u2014 World Series Game 5 (if necessary)",
+   "date": "2026-10-28",
+   "start_utc": "2026-10-29T00:00:00Z",
+   "venue": "Tropicana Field",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "home_code": "TB",
+   "away_code": "MIL",
+   "official_url": "https://www.mlb.com/gameday/849799",
+   "source_id": "mlb",
+   "family": "poisson_baseball",
+   "inputs": {
+    "home": {
+     "name": "Tampa Bay Rays",
+     "wins": 98,
+     "losses": 64,
+     "runs_scored": 736,
+     "runs_allowed": 650
+    },
+    "away": {
+     "name": "Milwaukee Brewers",
+     "wins": 103,
+     "losses": 59,
+     "runs_scored": 832,
+     "runs_allowed": 618
+    },
+    "league_runs_pg": 4.4811
+   }
+  },
+  {
+   "id": "el-E2026-68",
+   "sport": "basketball",
+   "competition": "EuroLeague 2026-27 Regular Season",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "Zalgirio Arena",
+   "home": "Zalgiris Kaunas",
+   "away": "LDLC ASVEL Villeurbanne",
+   "home_code": "ZAL",
+   "away_code": "ASV",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+   "source_id": "euroleague",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Zalgiris Kaunas",
+     "gp": 6,
+     "w": 2,
+     "l": 4,
+     "pf": 490,
+     "pa": 517,
+     "home": "0-2",
+     "away": "2-2",
+     "rank": 14,
+     "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/zalgiris-kaunas/zal/"
+    },
+    "away": {
+     "name": "LDLC ASVEL Villeurbanne",
+     "gp": 6,
+     "w": 2,
+     "l": 4,
+     "pf": 527,
+     "pa": 572,
+     "home": "1-2",
+     "away": "1-2",
+     "rank": 17,
+     "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/ldlc-asvel-villeurbanne/asv/"
+    }
+   }
+  },
+  {
+   "id": "el-E2026-69",
+   "sport": "basketball",
+   "competition": "EuroLeague 2026-27 Regular Season",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 18:45 UTC",
+   "venue": "Adidas Arena",
+   "home": "Paris Basketball",
+   "away": "Valencia Basket",
+   "home_code": "PBB",
+   "away_code": "VBC",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+   "source_id": "euroleague",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Paris Basketball",
+     "gp": 6,
+     "w": 1,
+     "l": 5,
+     "pf": 504,
+     "pa": 545,
+     "home": "1-3",
+     "away": "0-2",
+     "rank": 18,
+     "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/paris-basketball/prs/"
+    },
+    "away": {
+     "name": "Valencia Basket",
+     "gp": 6,
+     "w": 4,
+     "l": 2,
+     "pf": 583,
+     "pa": 537,
+     "home": "2-2",
+     "away": "2-0",
+     "rank": 4,
+     "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/valencia-basket/pam/"
+    }
+   }
+  },
+  {
+   "id": "el-E2026-70",
+   "sport": "basketball",
+   "competition": "EuroLeague 2026-27 Regular Season",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 18:15 UTC",
+   "venue": "Sunel Arena",
+   "home": "Olympiacos Piraeus",
+   "away": "Fenerbahce Tarfin Istanbul",
+   "home_code": "OLY",
+   "away_code": "FBT",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
+   "source_id": "euroleague",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Olympiacos Piraeus",
+     "gp": 6,
+     "w": 5,
+     "l": 1,
+     "pf": 564,
+     "pa": 524,
+     "home": "1-0",
+     "away": "4-1",
+     "rank": 3,
+     "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/olympiacos-piraeus/oly/"
+    },
+    "away": {
+     "name": "Fenerbahce Tarfin Istanbul",
+     "gp": 6,
+     "w": 5,
+     "l": 1,
+     "pf": 501,
+     "pa": 447,
+     "home": "5-0",
+     "away": "0-1",
+     "rank": 2,
+     "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/fenerbahce-tarfin-istanbul/ulk/"
+    }
+   }
+  },
+  {
+   "id": "nba-0022600008",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "19:00 ET",
+   "venue": "TD Garden",
+   "home": "Boston Celtics",
+   "away": "New York Knicks",
+   "home_code": "BOS",
+   "away_code": "NYK",
+   "official_url": "https://www.nba.com/game/nyk-vs-bos-0022600008",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Boston Celtics",
+     "w": 56,
+     "l": 26,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 26,
+     "road_l": 15
+    },
+    "away": {
+     "name": "New York Knicks",
+     "w": 53,
+     "l": 29,
+     "home_w": 30,
+     "home_l": 10,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600009",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "21:30 ET",
+   "venue": "Moody Center",
+   "home": "San Antonio Spurs",
+   "away": "Houston Rockets",
+   "home_code": "SAS",
+   "away_code": "HOU",
+   "official_url": "https://www.nba.com/game/hou-vs-sas-0022600009",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "San Antonio Spurs",
+     "w": 62,
+     "l": 20,
+     "home_w": 32,
+     "home_l": 8,
+     "road_w": 29,
+     "road_l": 12
+    },
+    "away": {
+     "name": "Houston Rockets",
+     "w": 52,
+     "l": 30,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600094",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "19:00 ET",
+   "venue": "Spectrum Center",
+   "home": "Charlotte Hornets",
+   "away": "Atlanta Hawks",
+   "home_code": "CHA",
+   "away_code": "ATL",
+   "official_url": "https://www.nba.com/game/atl-vs-cha-0022600094",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Charlotte Hornets",
+     "w": 44,
+     "l": 38,
+     "home_w": 21,
+     "home_l": 20,
+     "road_w": 23,
+     "road_l": 18
+    },
+    "away": {
+     "name": "Atlanta Hawks",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600095",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "19:00 ET",
+   "venue": "Gainbridge Fieldhouse",
+   "home": "Indiana Pacers",
+   "away": "Dallas Mavericks",
+   "home_code": "IND",
+   "away_code": "DAL",
+   "official_url": "https://www.nba.com/game/dal-vs-ind-0022600095",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Indiana Pacers",
+     "w": 19,
+     "l": 63,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "Dallas Mavericks",
+     "w": 26,
+     "l": 56,
+     "home_w": 16,
+     "home_l": 25,
+     "road_w": 10,
+     "road_l": 30
+    }
+   }
+  },
+  {
+   "id": "nba-0022600096",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "19:00 ET",
+   "venue": "Kia Center",
+   "home": "Orlando Magic",
+   "away": "Minnesota Timberwolves",
+   "home_code": "ORL",
+   "away_code": "MIN",
+   "official_url": "https://www.nba.com/game/min-vs-orl-0022600096",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Orlando Magic",
+     "w": 45,
+     "l": 37,
+     "home_w": 25,
+     "home_l": 15,
+     "road_w": 19,
+     "road_l": 20
+    },
+    "away": {
+     "name": "Minnesota Timberwolves",
+     "w": 49,
+     "l": 33,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 23,
+     "road_l": 18
+    }
+   }
+  },
+  {
+   "id": "nba-0022600097",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "19:00 ET",
+   "venue": "Capital One Arena",
+   "home": "Washington Wizards",
+   "away": "Toronto Raptors",
+   "home_code": "WAS",
+   "away_code": "TOR",
+   "official_url": "https://www.nba.com/game/tor-vs-was-0022600097",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Washington Wizards",
+     "w": 17,
+     "l": 65,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 6,
+     "road_l": 35
+    },
+    "away": {
+     "name": "Toronto Raptors",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600098",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "20:00 ET",
+   "venue": "Kaseya Center",
+   "home": "Miami Heat",
+   "away": "Detroit Pistons",
+   "home_code": "MIA",
+   "away_code": "DET",
+   "official_url": "https://www.nba.com/game/det-vs-mia-0022600098",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Miami Heat",
+     "w": 43,
+     "l": 39,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 17,
+     "road_l": 24
+    },
+    "away": {
+     "name": "Detroit Pistons",
+     "w": 60,
+     "l": 22,
+     "home_w": 31,
+     "home_l": 9,
+     "road_w": 28,
+     "road_l": 13
+    }
+   }
+  },
+  {
+   "id": "nba-0022600099",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "16:00 ET",
+   "venue": "Fiserv Forum",
+   "home": "Milwaukee Bucks",
+   "away": "Chicago Bulls",
+   "home_code": "MIL",
+   "away_code": "CHI",
+   "official_url": "https://www.nba.com/game/chi-vs-mil-0022600099",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Milwaukee Bucks",
+     "w": 32,
+     "l": 50,
+     "home_w": 19,
+     "home_l": 22,
+     "road_w": 13,
+     "road_l": 28
+    },
+    "away": {
+     "name": "Chicago Bulls",
+     "w": 31,
+     "l": 51,
+     "home_w": 18,
+     "home_l": 23,
+     "road_w": 13,
+     "road_l": 28
+    }
+   }
+  },
+  {
+   "id": "nba-0022600100",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "21:30 ET",
+   "venue": "Delta Center",
+   "home": "Utah Jazz",
+   "away": "New Orleans Pelicans",
+   "home_code": "UTA",
+   "away_code": "NOP",
+   "official_url": "https://www.nba.com/game/nop-vs-uta-0022600100",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Utah Jazz",
+     "w": 22,
+     "l": 60,
+     "home_w": 14,
+     "home_l": 27,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "New Orleans Pelicans",
+     "w": 26,
+     "l": 56,
+     "home_w": 17,
+     "home_l": 24,
+     "road_w": 9,
+     "road_l": 32
+    }
+   }
+  },
+  {
+   "id": "nba-0022600101",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "22:00 ET",
+   "venue": "Chase Center",
+   "home": "Golden State Warriors",
+   "away": "Memphis Grizzlies",
+   "home_code": "GSW",
+   "away_code": "MEM",
+   "official_url": "https://www.nba.com/game/mem-vs-gsw-0022600101",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Golden State Warriors",
+     "w": 37,
+     "l": 45,
+     "home_w": 22,
+     "home_l": 19,
+     "road_w": 15,
+     "road_l": 26
+    },
+    "away": {
+     "name": "Memphis Grizzlies",
+     "w": 25,
+     "l": 57,
+     "home_w": 13,
+     "home_l": 27,
+     "road_w": 11,
+     "road_l": 29
+    }
+   }
+  },
+  {
+   "id": "nba-0022600102",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "22:00 ET",
+   "venue": "Crypto.com Arena",
+   "home": "Los Angeles Lakers",
+   "away": "LA Clippers",
+   "home_code": "LAL",
+   "away_code": "LAC",
+   "official_url": "https://www.nba.com/game/lac-vs-lal-0022600102",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Los Angeles Lakers",
+     "w": 53,
+     "l": 29,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 25,
+     "road_l": 16
+    },
+    "away": {
+     "name": "LA Clippers",
+     "w": 42,
+     "l": 40,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 19,
+     "road_l": 22
+    }
+   }
+  },
+  {
+   "id": "nba-0022600103",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "22:00 ET",
+   "venue": "Golden 1 Center",
+   "home": "Sacramento Kings",
+   "away": "Portland Trail Blazers",
+   "home_code": "SAC",
+   "away_code": "POR",
+   "official_url": "https://www.nba.com/game/por-vs-sac-0022600103",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Sacramento Kings",
+     "w": 22,
+     "l": 60,
+     "home_w": 15,
+     "home_l": 26,
+     "road_w": 7,
+     "road_l": 34
+    },
+    "away": {
+     "name": "Portland Trail Blazers",
+     "w": 42,
+     "l": 40,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 18,
+     "road_l": 23
+    }
+   }
+  },
+  {
+   "id": "nba-0022600104",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "18:00 ET",
+   "venue": "Spectrum Center",
+   "home": "Charlotte Hornets",
+   "away": "Miami Heat",
+   "home_code": "CHA",
+   "away_code": "MIA",
+   "official_url": "https://www.nba.com/game/mia-vs-cha-0022600104",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Charlotte Hornets",
+     "w": 44,
+     "l": 38,
+     "home_w": 21,
+     "home_l": 20,
+     "road_w": 23,
+     "road_l": 18
+    },
+    "away": {
+     "name": "Miami Heat",
+     "w": 43,
+     "l": 39,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 17,
+     "road_l": 24
+    }
+   }
+  },
+  {
+   "id": "nba-0022600105",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "19:30 ET",
+   "venue": "Rocket Arena",
+   "home": "Cleveland Cavaliers",
+   "away": "Brooklyn Nets",
+   "home_code": "CLE",
+   "away_code": "BKN",
+   "official_url": "https://www.nba.com/game/bkn-vs-cle-0022600105",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Cleveland Cavaliers",
+     "w": 52,
+     "l": 30,
+     "home_w": 27,
+     "home_l": 14,
+     "road_w": 25,
+     "road_l": 16
+    },
+    "away": {
+     "name": "Brooklyn Nets",
+     "w": 20,
+     "l": 62,
+     "home_w": 12,
+     "home_l": 29,
+     "road_w": 8,
+     "road_l": 33
+    }
+   }
+  },
+  {
+   "id": "nba-0022600106",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "19:30 ET",
+   "venue": "Xfinity Mobile Arena",
+   "home": "Philadelphia 76ers",
+   "away": "Milwaukee Bucks",
+   "home_code": "PHI",
+   "away_code": "MIL",
+   "official_url": "https://www.nba.com/game/mil-vs-phi-0022600106",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Philadelphia 76ers",
+     "w": 45,
+     "l": 37,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Milwaukee Bucks",
+     "w": 32,
+     "l": 50,
+     "home_w": 19,
+     "home_l": 22,
+     "road_w": 13,
+     "road_l": 28
+    }
+   }
+  },
+  {
+   "id": "nba-0022600107",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "20:30 ET",
+   "venue": "State Farm Arena",
+   "home": "Atlanta Hawks",
+   "away": "Houston Rockets",
+   "home_code": "ATL",
+   "away_code": "HOU",
+   "official_url": "https://www.nba.com/game/hou-vs-atl-0022600107",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Atlanta Hawks",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Houston Rockets",
+     "w": 52,
+     "l": 30,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600108",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "20:00 ET",
+   "venue": "United Center",
+   "home": "Chicago Bulls",
+   "away": "Washington Wizards",
+   "home_code": "CHI",
+   "away_code": "WAS",
+   "official_url": "https://www.nba.com/game/was-vs-chi-0022600108",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Chicago Bulls",
+     "w": 31,
+     "l": 51,
+     "home_w": 18,
+     "home_l": 23,
+     "road_w": 13,
+     "road_l": 28
+    },
+    "away": {
+     "name": "Washington Wizards",
+     "w": 17,
+     "l": 65,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 6,
+     "road_l": 35
+    }
+   }
+  },
+  {
+   "id": "nba-0022600109",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "20:00 ET",
+   "venue": "American Airlines Center",
+   "home": "Dallas Mavericks",
+   "away": "San Antonio Spurs",
+   "home_code": "DAL",
+   "away_code": "SAS",
+   "official_url": "https://www.nba.com/game/sas-vs-dal-0022600109",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Dallas Mavericks",
+     "w": 26,
+     "l": 56,
+     "home_w": 16,
+     "home_l": 25,
+     "road_w": 10,
+     "road_l": 30
+    },
+    "away": {
+     "name": "San Antonio Spurs",
+     "w": 62,
+     "l": 20,
+     "home_w": 32,
+     "home_l": 8,
+     "road_w": 29,
+     "road_l": 12
+    }
+   }
+  },
+  {
+   "id": "nba-0022600110",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "21:00 ET",
+   "venue": "Ball Arena",
+   "home": "Denver Nuggets",
+   "away": "New Orleans Pelicans",
+   "home_code": "DEN",
+   "away_code": "NOP",
+   "official_url": "https://www.nba.com/game/nop-vs-den-0022600110",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Denver Nuggets",
+     "w": 54,
+     "l": 28,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 26,
+     "road_l": 15
+    },
+    "away": {
+     "name": "New Orleans Pelicans",
+     "w": 26,
+     "l": 56,
+     "home_w": 17,
+     "home_l": 24,
+     "road_w": 9,
+     "road_l": 32
+    }
+   }
+  },
+  {
+   "id": "nba-0022600111",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "22:00 ET",
+   "venue": "Mortgage Matchup Center",
+   "home": "Phoenix Suns",
+   "away": "Golden State Warriors",
+   "home_code": "PHX",
+   "away_code": "GSW",
+   "official_url": "https://www.nba.com/game/gsw-vs-phx-0022600111",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Phoenix Suns",
+     "w": 45,
+     "l": 37,
+     "home_w": 25,
+     "home_l": 16,
+     "road_w": 20,
+     "road_l": 21
+    },
+    "away": {
+     "name": "Golden State Warriors",
+     "w": 37,
+     "l": 45,
+     "home_w": 22,
+     "home_l": 19,
+     "road_w": 15,
+     "road_l": 26
+    }
+   }
+  },
+  {
+   "id": "nba-0022600112",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "17:00 ET",
+   "venue": "Delta Center",
+   "home": "Utah Jazz",
+   "away": "Los Angeles Lakers",
+   "home_code": "UTA",
+   "away_code": "LAL",
+   "official_url": "https://www.nba.com/game/lal-vs-uta-0022600112",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Utah Jazz",
+     "w": 22,
+     "l": 60,
+     "home_w": 14,
+     "home_l": 27,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "Los Angeles Lakers",
+     "w": 53,
+     "l": 29,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 25,
+     "road_l": 16
+    }
+   }
+  },
+  {
+   "id": "nba-0022600113",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "18:00 ET",
+   "venue": "Barclays Center",
+   "home": "Brooklyn Nets",
+   "away": "Indiana Pacers",
+   "home_code": "BKN",
+   "away_code": "IND",
+   "official_url": "https://www.nba.com/game/ind-vs-bkn-0022600113",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Brooklyn Nets",
+     "w": 20,
+     "l": 62,
+     "home_w": 12,
+     "home_l": 29,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "Indiana Pacers",
+     "w": 19,
+     "l": 63,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 8,
+     "road_l": 33
+    }
+   }
+  },
+  {
+   "id": "nba-0022600114",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "19:00 ET",
+   "venue": "Madison Square Garden",
+   "home": "New York Knicks",
+   "away": "Orlando Magic",
+   "home_code": "NYK",
+   "away_code": "ORL",
+   "official_url": "https://www.nba.com/game/orl-vs-nyk-0022600114",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "New York Knicks",
+     "w": 53,
+     "l": 29,
+     "home_w": 30,
+     "home_l": 10,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Orlando Magic",
+     "w": 45,
+     "l": 37,
+     "home_w": 25,
+     "home_l": 15,
+     "road_w": 19,
+     "road_l": 20
+    }
+   }
+  },
+  {
+   "id": "nba-0022600115",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "19:00 ET",
+   "venue": "Target Center",
+   "home": "Minnesota Timberwolves",
+   "away": "Toronto Raptors",
+   "home_code": "MIN",
+   "away_code": "TOR",
+   "official_url": "https://www.nba.com/game/tor-vs-min-0022600115",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Minnesota Timberwolves",
+     "w": 49,
+     "l": 33,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 23,
+     "road_l": 18
+    },
+    "away": {
+     "name": "Toronto Raptors",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600116",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "19:00 ET",
+   "venue": "Paycom Center",
+   "home": "Oklahoma City Thunder",
+   "away": "LA Clippers",
+   "home_code": "OKC",
+   "away_code": "LAC",
+   "official_url": "https://www.nba.com/game/lac-vs-okc-0022600116",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Oklahoma City Thunder",
+     "w": 64,
+     "l": 18,
+     "home_w": 34,
+     "home_l": 7,
+     "road_w": 30,
+     "road_l": 10
+    },
+    "away": {
+     "name": "LA Clippers",
+     "w": 42,
+     "l": 40,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 19,
+     "road_l": 22
+    }
+   }
+  },
+  {
+   "id": "nba-0022600117",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "19:30 ET",
+   "venue": "Xfinity Mobile Arena",
+   "home": "Philadelphia 76ers",
+   "away": "Detroit Pistons",
+   "home_code": "PHI",
+   "away_code": "DET",
+   "official_url": "https://www.nba.com/game/det-vs-phi-0022600117",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Philadelphia 76ers",
+     "w": 45,
+     "l": 37,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Detroit Pistons",
+     "w": 60,
+     "l": 22,
+     "home_w": 31,
+     "home_l": 9,
+     "road_w": 28,
+     "road_l": 13
+    }
+   }
+  },
+  {
+   "id": "nba-0022600118",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "21:00 ET",
+   "venue": "Golden 1 Center",
+   "home": "Sacramento Kings",
+   "away": "Memphis Grizzlies",
+   "home_code": "SAC",
+   "away_code": "MEM",
+   "official_url": "https://www.nba.com/game/mem-vs-sac-0022600118",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Sacramento Kings",
+     "w": 22,
+     "l": 60,
+     "home_w": 15,
+     "home_l": 26,
+     "road_w": 7,
+     "road_l": 34
+    },
+    "away": {
+     "name": "Memphis Grizzlies",
+     "w": 25,
+     "l": 57,
+     "home_w": 13,
+     "home_l": 27,
+     "road_w": 11,
+     "road_l": 29
+    }
+   }
+  },
+  {
+   "id": "nba-0022600119",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "19:00 ET",
+   "venue": "Spectrum Center",
+   "home": "Charlotte Hornets",
+   "away": "Washington Wizards",
+   "home_code": "CHA",
+   "away_code": "WAS",
+   "official_url": "https://www.nba.com/game/was-vs-cha-0022600119",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Charlotte Hornets",
+     "w": 44,
+     "l": 38,
+     "home_w": 21,
+     "home_l": 20,
+     "road_w": 23,
+     "road_l": 18
+    },
+    "away": {
+     "name": "Washington Wizards",
+     "w": 17,
+     "l": 65,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 6,
+     "road_l": 35
+    }
+   }
+  },
+  {
+   "id": "nba-0022600120",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "19:00 ET",
+   "venue": "Rocket Arena",
+   "home": "Cleveland Cavaliers",
+   "away": "Minnesota Timberwolves",
+   "home_code": "CLE",
+   "away_code": "MIN",
+   "official_url": "https://www.nba.com/game/min-vs-cle-0022600120",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Cleveland Cavaliers",
+     "w": 52,
+     "l": 30,
+     "home_w": 27,
+     "home_l": 14,
+     "road_w": 25,
+     "road_l": 16
+    },
+    "away": {
+     "name": "Minnesota Timberwolves",
+     "w": 49,
+     "l": 33,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 23,
+     "road_l": 18
+    }
+   }
+  },
+  {
+   "id": "nba-0022600121",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "19:30 ET",
+   "venue": "TD Garden",
+   "home": "Boston Celtics",
+   "away": "Chicago Bulls",
+   "home_code": "BOS",
+   "away_code": "CHI",
+   "official_url": "https://www.nba.com/game/chi-vs-bos-0022600121",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Boston Celtics",
+     "w": 56,
+     "l": 26,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 26,
+     "road_l": 15
+    },
+    "away": {
+     "name": "Chicago Bulls",
+     "w": 31,
+     "l": 51,
+     "home_w": 18,
+     "home_l": 23,
+     "road_w": 13,
+     "road_l": 28
+    }
+   }
+  },
+  {
+   "id": "nba-0022600122",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "19:30 ET",
+   "venue": "Kaseya Center",
+   "home": "Miami Heat",
+   "away": "Dallas Mavericks",
+   "home_code": "MIA",
+   "away_code": "DAL",
+   "official_url": "https://www.nba.com/game/dal-vs-mia-0022600122",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Miami Heat",
+     "w": 43,
+     "l": 39,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 17,
+     "road_l": 24
+    },
+    "away": {
+     "name": "Dallas Mavericks",
+     "w": 26,
+     "l": 56,
+     "home_w": 16,
+     "home_l": 25,
+     "road_w": 10,
+     "road_l": 30
+    }
+   }
+  },
+  {
+   "id": "nba-0022600123",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "20:00 ET",
+   "venue": "Fiserv Forum",
+   "home": "Milwaukee Bucks",
+   "away": "Indiana Pacers",
+   "home_code": "MIL",
+   "away_code": "IND",
+   "official_url": "https://www.nba.com/game/ind-vs-mil-0022600123",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Milwaukee Bucks",
+     "w": 32,
+     "l": 50,
+     "home_w": 19,
+     "home_l": 22,
+     "road_w": 13,
+     "road_l": 28
+    },
+    "away": {
+     "name": "Indiana Pacers",
+     "w": 19,
+     "l": 63,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 8,
+     "road_l": 33
+    }
+   }
+  },
+  {
+   "id": "nba-0022600124",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "20:00 ET",
+   "venue": "Paycom Center",
+   "home": "Oklahoma City Thunder",
+   "away": "Phoenix Suns",
+   "home_code": "OKC",
+   "away_code": "PHX",
+   "official_url": "https://www.nba.com/game/phx-vs-okc-0022600124",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Oklahoma City Thunder",
+     "w": 64,
+     "l": 18,
+     "home_w": 34,
+     "home_l": 7,
+     "road_w": 30,
+     "road_l": 10
+    },
+    "away": {
+     "name": "Phoenix Suns",
+     "w": 45,
+     "l": 37,
+     "home_w": 25,
+     "home_l": 16,
+     "road_w": 20,
+     "road_l": 21
+    }
+   }
+  },
+  {
+   "id": "nba-0022600125",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "20:30 ET",
+   "venue": "Toyota Center",
+   "home": "Houston Rockets",
+   "away": "Atlanta Hawks",
+   "home_code": "HOU",
+   "away_code": "ATL",
+   "official_url": "https://www.nba.com/game/atl-vs-hou-0022600125",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Houston Rockets",
+     "w": 52,
+     "l": 30,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Atlanta Hawks",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600126",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "21:00 ET",
+   "venue": "Delta Center",
+   "home": "Utah Jazz",
+   "away": "Memphis Grizzlies",
+   "home_code": "UTA",
+   "away_code": "MEM",
+   "official_url": "https://www.nba.com/game/mem-vs-uta-0022600126",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Utah Jazz",
+     "w": 22,
+     "l": 60,
+     "home_w": 14,
+     "home_l": 27,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "Memphis Grizzlies",
+     "w": 25,
+     "l": 57,
+     "home_w": 13,
+     "home_l": 27,
+     "road_w": 11,
+     "road_l": 29
+    }
+   }
+  },
+  {
+   "id": "nba-0022600127",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-26",
+   "start_utc": "22:00 ET",
+   "venue": "Ball Arena",
+   "home": "Denver Nuggets",
+   "away": "Golden State Warriors",
+   "home_code": "DEN",
+   "away_code": "GSW",
+   "official_url": "https://www.nba.com/game/gsw-vs-den-0022600127",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Denver Nuggets",
+     "w": 54,
+     "l": 28,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 26,
+     "road_l": 15
+    },
+    "away": {
+     "name": "Golden State Warriors",
+     "w": 37,
+     "l": 45,
+     "home_w": 22,
+     "home_l": 19,
+     "road_w": 15,
+     "road_l": 26
+    }
+   }
+  },
+  {
+   "id": "nba-0022600128",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-27",
+   "start_utc": "19:30 ET",
+   "venue": "TD Garden",
+   "home": "Boston Celtics",
+   "away": "Brooklyn Nets",
+   "home_code": "BOS",
+   "away_code": "BKN",
+   "official_url": "https://www.nba.com/game/bkn-vs-bos-0022600128",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Boston Celtics",
+     "w": 56,
+     "l": 26,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 26,
+     "road_l": 15
+    },
+    "away": {
+     "name": "Brooklyn Nets",
+     "w": 20,
+     "l": 62,
+     "home_w": 12,
+     "home_l": 29,
+     "road_w": 8,
+     "road_l": 33
+    }
+   }
+  },
+  {
+   "id": "nba-0022600129",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-27",
+   "start_utc": "20:00 ET",
+   "venue": "Madison Square Garden",
+   "home": "New York Knicks",
+   "away": "Detroit Pistons",
+   "home_code": "NYK",
+   "away_code": "DET",
+   "official_url": "https://www.nba.com/game/det-vs-nyk-0022600129",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "New York Knicks",
+     "w": 53,
+     "l": 29,
+     "home_w": 30,
+     "home_l": 10,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Detroit Pistons",
+     "w": 60,
+     "l": 22,
+     "home_w": 31,
+     "home_l": 9,
+     "road_w": 28,
+     "road_l": 13
+    }
+   }
+  },
+  {
+   "id": "nba-0022600130",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-27",
+   "start_utc": "20:00 ET",
+   "venue": "Frost Bank Center",
+   "home": "San Antonio Spurs",
+   "away": "Sacramento Kings",
+   "home_code": "SAS",
+   "away_code": "SAC",
+   "official_url": "https://www.nba.com/game/sac-vs-sas-0022600130",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "San Antonio Spurs",
+     "w": 62,
+     "l": 20,
+     "home_w": 32,
+     "home_l": 8,
+     "road_w": 29,
+     "road_l": 12
+    },
+    "away": {
+     "name": "Sacramento Kings",
+     "w": 22,
+     "l": 60,
+     "home_w": 15,
+     "home_l": 26,
+     "road_w": 7,
+     "road_l": 34
+    }
+   }
+  },
+  {
+   "id": "nba-0022600131",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-27",
+   "start_utc": "23:00 ET",
+   "venue": "Crypto.com Arena",
+   "home": "Los Angeles Lakers",
+   "away": "Portland Trail Blazers",
+   "home_code": "LAL",
+   "away_code": "POR",
+   "official_url": "https://www.nba.com/game/por-vs-lal-0022600131",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Los Angeles Lakers",
+     "w": 53,
+     "l": 29,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 25,
+     "road_l": 16
+    },
+    "away": {
+     "name": "Portland Trail Blazers",
+     "w": 42,
+     "l": 40,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 18,
+     "road_l": 23
+    }
+   }
+  },
+  {
+   "id": "nba-0022600132",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "19:00 ET",
+   "venue": "State Farm Arena",
+   "home": "Atlanta Hawks",
+   "away": "Miami Heat",
+   "home_code": "ATL",
+   "away_code": "MIA",
+   "official_url": "https://www.nba.com/game/mia-vs-atl-0022600132",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Atlanta Hawks",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Miami Heat",
+     "w": 43,
+     "l": 39,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 17,
+     "road_l": 24
+    }
+   }
+  },
+  {
+   "id": "nba-0022600133",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "19:00 ET",
+   "venue": "Rocket Arena",
+   "home": "Cleveland Cavaliers",
+   "away": "Washington Wizards",
+   "home_code": "CLE",
+   "away_code": "WAS",
+   "official_url": "https://www.nba.com/game/was-vs-cle-0022600133",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Cleveland Cavaliers",
+     "w": 52,
+     "l": 30,
+     "home_w": 27,
+     "home_l": 14,
+     "road_w": 25,
+     "road_l": 16
+    },
+    "away": {
+     "name": "Washington Wizards",
+     "w": 17,
+     "l": 65,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 6,
+     "road_l": 35
+    }
+   }
+  },
+  {
+   "id": "nba-0022600134",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "19:00 ET",
+   "venue": "Little Caesars Arena",
+   "home": "Detroit Pistons",
+   "away": "Charlotte Hornets",
+   "home_code": "DET",
+   "away_code": "CHA",
+   "official_url": "https://www.nba.com/game/cha-vs-det-0022600134",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Detroit Pistons",
+     "w": 60,
+     "l": 22,
+     "home_w": 31,
+     "home_l": 9,
+     "road_w": 28,
+     "road_l": 13
+    },
+    "away": {
+     "name": "Charlotte Hornets",
+     "w": 44,
+     "l": 38,
+     "home_w": 21,
+     "home_l": 20,
+     "road_w": 23,
+     "road_l": 18
+    }
+   }
+  },
+  {
+   "id": "nba-0022600135",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "19:00 ET",
+   "venue": "Gainbridge Fieldhouse",
+   "home": "Indiana Pacers",
+   "away": "Philadelphia 76ers",
+   "home_code": "IND",
+   "away_code": "PHI",
+   "official_url": "https://www.nba.com/game/phi-vs-ind-0022600135",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Indiana Pacers",
+     "w": 19,
+     "l": 63,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "Philadelphia 76ers",
+     "w": 45,
+     "l": 37,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600136",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "19:30 ET",
+   "venue": "Scotiabank Arena",
+   "home": "Toronto Raptors",
+   "away": "Orlando Magic",
+   "home_code": "TOR",
+   "away_code": "ORL",
+   "official_url": "https://www.nba.com/game/orl-vs-tor-0022600136",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Toronto Raptors",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Orlando Magic",
+     "w": 45,
+     "l": 37,
+     "home_w": 25,
+     "home_l": 15,
+     "road_w": 19,
+     "road_l": 20
+    }
+   }
+  },
+  {
+   "id": "nba-0022600137",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "20:00 ET",
+   "venue": "United Center",
+   "home": "Chicago Bulls",
+   "away": "New York Knicks",
+   "home_code": "CHI",
+   "away_code": "NYK",
+   "official_url": "https://www.nba.com/game/nyk-vs-chi-0022600137",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Chicago Bulls",
+     "w": 31,
+     "l": 51,
+     "home_w": 18,
+     "home_l": 23,
+     "road_w": 13,
+     "road_l": 28
+    },
+    "away": {
+     "name": "New York Knicks",
+     "w": 53,
+     "l": 29,
+     "home_w": 30,
+     "home_l": 10,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600138",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "20:00 ET",
+   "venue": "Fiserv Forum",
+   "home": "Milwaukee Bucks",
+   "away": "Houston Rockets",
+   "home_code": "MIL",
+   "away_code": "HOU",
+   "official_url": "https://www.nba.com/game/hou-vs-mil-0022600138",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Milwaukee Bucks",
+     "w": 32,
+     "l": 50,
+     "home_w": 19,
+     "home_l": 22,
+     "road_w": 13,
+     "road_l": 28
+    },
+    "away": {
+     "name": "Houston Rockets",
+     "w": 52,
+     "l": 30,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600139",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "20:00 ET",
+   "venue": "Target Center",
+   "home": "Minnesota Timberwolves",
+   "away": "Golden State Warriors",
+   "home_code": "MIN",
+   "away_code": "GSW",
+   "official_url": "https://www.nba.com/game/gsw-vs-min-0022600139",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Minnesota Timberwolves",
+     "w": 49,
+     "l": 33,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 23,
+     "road_l": 18
+    },
+    "away": {
+     "name": "Golden State Warriors",
+     "w": 37,
+     "l": 45,
+     "home_w": 22,
+     "home_l": 19,
+     "road_w": 15,
+     "road_l": 26
+    }
+   }
+  },
+  {
+   "id": "nba-0022600140",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "20:00 ET",
+   "venue": "Smoothie King Center",
+   "home": "New Orleans Pelicans",
+   "away": "Denver Nuggets",
+   "home_code": "NOP",
+   "away_code": "DEN",
+   "official_url": "https://www.nba.com/game/den-vs-nop-0022600140",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "New Orleans Pelicans",
+     "w": 26,
+     "l": 56,
+     "home_w": 17,
+     "home_l": 24,
+     "road_w": 9,
+     "road_l": 32
+    },
+    "away": {
+     "name": "Denver Nuggets",
+     "w": 54,
+     "l": 28,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 26,
+     "road_l": 15
+    }
+   }
+  },
+  {
+   "id": "nba-0022600141",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "21:00 ET",
+   "venue": "Delta Center",
+   "home": "Utah Jazz",
+   "away": "San Antonio Spurs",
+   "home_code": "UTA",
+   "away_code": "SAS",
+   "official_url": "https://www.nba.com/game/sas-vs-uta-0022600141",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Utah Jazz",
+     "w": 22,
+     "l": 60,
+     "home_w": 14,
+     "home_l": 27,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "San Antonio Spurs",
+     "w": 62,
+     "l": 20,
+     "home_w": 32,
+     "home_l": 8,
+     "road_w": 29,
+     "road_l": 12
+    }
+   }
+  },
+  {
+   "id": "nba-0022600142",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "21:30 ET",
+   "venue": "American Airlines Center",
+   "home": "Dallas Mavericks",
+   "away": "Oklahoma City Thunder",
+   "home_code": "DAL",
+   "away_code": "OKC",
+   "official_url": "https://www.nba.com/game/okc-vs-dal-0022600142",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Dallas Mavericks",
+     "w": 26,
+     "l": 56,
+     "home_w": 16,
+     "home_l": 25,
+     "road_w": 10,
+     "road_l": 30
+    },
+    "away": {
+     "name": "Oklahoma City Thunder",
+     "w": 64,
+     "l": 18,
+     "home_w": 34,
+     "home_l": 7,
+     "road_w": 30,
+     "road_l": 10
+    }
+   }
+  },
+  {
+   "id": "nba-0022600143",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-28",
+   "start_utc": "22:30 ET",
+   "venue": "Intuit Dome",
+   "home": "LA Clippers",
+   "away": "Los Angeles Lakers",
+   "home_code": "LAC",
+   "away_code": "LAL",
+   "official_url": "https://www.nba.com/game/lal-vs-lac-0022600143",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "LA Clippers",
+     "w": 42,
+     "l": 40,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 19,
+     "road_l": 22
+    },
+    "away": {
+     "name": "Los Angeles Lakers",
+     "w": 53,
+     "l": 29,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 25,
+     "road_l": 16
+    }
+   }
+  },
+  {
+   "id": "nba-0022600144",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-29",
+   "start_utc": "19:00 ET",
+   "venue": "State Farm Arena",
+   "home": "Atlanta Hawks",
+   "away": "Cleveland Cavaliers",
+   "home_code": "ATL",
+   "away_code": "CLE",
+   "official_url": "https://www.nba.com/game/cle-vs-atl-0022600144",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Atlanta Hawks",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Cleveland Cavaliers",
+     "w": 52,
+     "l": 30,
+     "home_w": 27,
+     "home_l": 14,
+     "road_w": 25,
+     "road_l": 16
+    }
+   }
+  },
+  {
+   "id": "nba-0022600145",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-29",
+   "start_utc": "20:00 ET",
+   "venue": "Smoothie King Center",
+   "home": "New Orleans Pelicans",
+   "away": "Sacramento Kings",
+   "home_code": "NOP",
+   "away_code": "SAC",
+   "official_url": "https://www.nba.com/game/sac-vs-nop-0022600145",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "New Orleans Pelicans",
+     "w": 26,
+     "l": 56,
+     "home_w": 17,
+     "home_l": 24,
+     "road_w": 9,
+     "road_l": 32
+    },
+    "away": {
+     "name": "Sacramento Kings",
+     "w": 22,
+     "l": 60,
+     "home_w": 15,
+     "home_l": 26,
+     "road_w": 7,
+     "road_l": 34
+    }
+   }
+  },
+  {
+   "id": "nba-0022600146",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-29",
+   "start_utc": "22:00 ET",
+   "venue": "Moda Center",
+   "home": "Portland Trail Blazers",
+   "away": "Memphis Grizzlies",
+   "home_code": "POR",
+   "away_code": "MEM",
+   "official_url": "https://www.nba.com/game/mem-vs-por-0022600146",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Portland Trail Blazers",
+     "w": 42,
+     "l": 40,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 18,
+     "road_l": 23
+    },
+    "away": {
+     "name": "Memphis Grizzlies",
+     "w": 25,
+     "l": 57,
+     "home_w": 13,
+     "home_l": 27,
+     "road_w": 11,
+     "road_l": 29
+    }
+   }
+  },
+  {
+   "id": "nba-0022600015",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "19:00 ET",
+   "venue": "Capital One Arena",
+   "home": "Washington Wizards",
+   "away": "Charlotte Hornets",
+   "home_code": "WAS",
+   "away_code": "CHA",
+   "official_url": "https://www.nba.com/game/cha-vs-was-0022600015",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Washington Wizards",
+     "w": 17,
+     "l": 65,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 6,
+     "road_l": 35
+    },
+    "away": {
+     "name": "Charlotte Hornets",
+     "w": 44,
+     "l": 38,
+     "home_w": 21,
+     "home_l": 20,
+     "road_w": 23,
+     "road_l": 18
+    }
+   }
+  },
+  {
+   "id": "nba-0022600016",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "19:30 ET",
+   "venue": "TD Garden",
+   "home": "Boston Celtics",
+   "away": "Chicago Bulls",
+   "home_code": "BOS",
+   "away_code": "CHI",
+   "official_url": "https://www.nba.com/game/chi-vs-bos-0022600016",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Boston Celtics",
+     "w": 56,
+     "l": 26,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 26,
+     "road_l": 15
+    },
+    "away": {
+     "name": "Chicago Bulls",
+     "w": 31,
+     "l": 51,
+     "home_w": 18,
+     "home_l": 23,
+     "road_w": 13,
+     "road_l": 28
+    }
+   }
+  },
+  {
+   "id": "nba-0022600017",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "19:30 ET",
+   "venue": "Barclays Center",
+   "home": "Brooklyn Nets",
+   "away": "Detroit Pistons",
+   "home_code": "BKN",
+   "away_code": "DET",
+   "official_url": "https://www.nba.com/game/det-vs-bkn-0022600017",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Brooklyn Nets",
+     "w": 20,
+     "l": 62,
+     "home_w": 12,
+     "home_l": 29,
+     "road_w": 8,
+     "road_l": 33
+    },
+    "away": {
+     "name": "Detroit Pistons",
+     "w": 60,
+     "l": 22,
+     "home_w": 31,
+     "home_l": 9,
+     "road_w": 28,
+     "road_l": 13
+    }
+   }
+  },
+  {
+   "id": "nba-0022600018",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "19:30 ET",
+   "venue": "Xfinity Mobile Arena",
+   "home": "Philadelphia 76ers",
+   "away": "New York Knicks",
+   "home_code": "PHI",
+   "away_code": "NYK",
+   "official_url": "https://www.nba.com/game/nyk-vs-phi-0022600018",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Philadelphia 76ers",
+     "w": 45,
+     "l": 37,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "New York Knicks",
+     "w": 53,
+     "l": 29,
+     "home_w": 30,
+     "home_l": 10,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600019",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "19:30 ET",
+   "venue": "Scotiabank Arena",
+   "home": "Toronto Raptors",
+   "away": "Orlando Magic",
+   "home_code": "TOR",
+   "away_code": "ORL",
+   "official_url": "https://www.nba.com/game/orl-vs-tor-0022600019",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Toronto Raptors",
+     "w": 46,
+     "l": 36,
+     "home_w": 24,
+     "home_l": 17,
+     "road_w": 22,
+     "road_l": 19
+    },
+    "away": {
+     "name": "Orlando Magic",
+     "w": 45,
+     "l": 37,
+     "home_w": 25,
+     "home_l": 15,
+     "road_w": 19,
+     "road_l": 20
+    }
+   }
+  },
+  {
+   "id": "nba-0022600020",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "20:00 ET",
+   "venue": "Kaseya Center",
+   "home": "Miami Heat",
+   "away": "Indiana Pacers",
+   "home_code": "MIA",
+   "away_code": "IND",
+   "official_url": "https://www.nba.com/game/ind-vs-mia-0022600020",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Miami Heat",
+     "w": 43,
+     "l": 39,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 17,
+     "road_l": 24
+    },
+    "away": {
+     "name": "Indiana Pacers",
+     "w": 19,
+     "l": 63,
+     "home_w": 11,
+     "home_l": 30,
+     "road_w": 8,
+     "road_l": 33
+    }
+   }
+  },
+  {
+   "id": "nba-0022600021",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "20:00 ET",
+   "venue": "American Airlines Center",
+   "home": "Dallas Mavericks",
+   "away": "Houston Rockets",
+   "home_code": "DAL",
+   "away_code": "HOU",
+   "official_url": "https://www.nba.com/game/hou-vs-dal-0022600021",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Dallas Mavericks",
+     "w": 26,
+     "l": 56,
+     "home_w": 16,
+     "home_l": 25,
+     "road_w": 10,
+     "road_l": 30
+    },
+    "away": {
+     "name": "Houston Rockets",
+     "w": 52,
+     "l": 30,
+     "home_w": 30,
+     "home_l": 11,
+     "road_w": 22,
+     "road_l": 19
+    }
+   }
+  },
+  {
+   "id": "nba-0022600022",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "20:00 ET",
+   "venue": "Target Center",
+   "home": "Minnesota Timberwolves",
+   "away": "LA Clippers",
+   "home_code": "MIN",
+   "away_code": "LAC",
+   "official_url": "https://www.nba.com/game/lac-vs-min-0022600022",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Minnesota Timberwolves",
+     "w": 49,
+     "l": 33,
+     "home_w": 26,
+     "home_l": 15,
+     "road_w": 23,
+     "road_l": 18
+    },
+    "away": {
+     "name": "LA Clippers",
+     "w": 42,
+     "l": 40,
+     "home_w": 23,
+     "home_l": 18,
+     "road_w": 19,
+     "road_l": 22
+    }
+   }
+  },
+  {
+   "id": "nba-0022600023",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "22:00 ET",
+   "venue": "Chase Center",
+   "home": "Golden State Warriors",
+   "away": "Los Angeles Lakers",
+   "home_code": "GSW",
+   "away_code": "LAL",
+   "official_url": "https://www.nba.com/game/lal-vs-gsw-0022600023",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Golden State Warriors",
+     "w": 37,
+     "l": 45,
+     "home_w": 22,
+     "home_l": 19,
+     "road_w": 15,
+     "road_l": 26
+    },
+    "away": {
+     "name": "Los Angeles Lakers",
+     "w": 53,
+     "l": 29,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 25,
+     "road_l": 16
+    }
+   }
+  },
+  {
+   "id": "nba-0022600024",
+   "sport": "basketball",
+   "competition": "NBA Regular Season 2026-27",
+   "date": "2026-10-30",
+   "start_utc": "22:00 ET",
+   "venue": "Mortgage Matchup Center",
+   "home": "Phoenix Suns",
+   "away": "Denver Nuggets",
+   "home_code": "PHX",
+   "away_code": "DEN",
+   "official_url": "https://www.nba.com/game/den-vs-phx-0022600024",
+   "source_id": "nba",
+   "family": "nba_prior",
+   "inputs": {
+    "home": {
+     "name": "Phoenix Suns",
+     "w": 45,
+     "l": 37,
+     "home_w": 25,
+     "home_l": 16,
+     "road_w": 20,
+     "road_l": 21
+    },
+    "away": {
+     "name": "Denver Nuggets",
+     "w": 54,
+     "l": 28,
+     "home_w": 28,
+     "home_l": 13,
+     "road_w": 26,
+     "road_l": 15
+    }
+   }
+  },
+  {
+   "id": "pdc-32326",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Wessel Nijman",
+   "away": "Martin Schindler",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Wessel_Nijman_vs_Martin_Schindler/15?event_id=32326",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Wessel Nijman",
+     "rank": 12,
+     "prize_gbp": 569500
+    },
+    "away": {
+     "name": "Martin Schindler",
+     "rank": 24,
+     "prize_gbp": 386250
+    }
+   }
+  },
+  {
+   "id": "pdc-32327",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Nathan Aspinall",
+   "away": "Cristo Reyes",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Nathan Aspinall",
+     "rank": 11,
+     "prize_gbp": 579500
+    },
+    "away": {
+     "name": "Cristo Reyes",
+     "rank": 71,
+     "prize_gbp": 95000
+    }
+   }
+  },
+  {
+   "id": "pdc-32328",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Luke Littler",
+   "away": "William O'Connor",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Luke Littler",
+     "rank": 1,
+     "prize_gbp": 3113500
+    },
+    "away": {
+     "name": "William O'Connor",
+     "rank": 32,
+     "prize_gbp": 274500
+    }
+   }
+  },
+  {
+   "id": "pdc-32331",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Kevin Doets",
+   "away": "Michael van Gerwen",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Kevin Doets",
+     "rank": 25,
+     "prize_gbp": 375250
+    },
+    "away": {
+     "name": "Michael van Gerwen",
+     "rank": 10,
+     "prize_gbp": 587500
+    }
+   }
+  },
+  {
+   "id": "pdc-32332",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Ryan Joyce",
+   "away": "Jermaine Wattimena",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15?event_id=32332",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Ryan Joyce",
+     "rank": 23,
+     "prize_gbp": 386500
+    },
+    "away": {
+     "name": "Jermaine Wattimena",
+     "rank": 16,
+     "prize_gbp": 538750
+    }
+   }
+  },
+  {
+   "id": "pdc-32333",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Krzysztof Ratajski",
+   "away": "Dave Chisnall",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Dave_Chisnall/15?event_id=32333",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Krzysztof Ratajski",
+     "rank": 19,
+     "prize_gbp": 440000
+    },
+    "away": {
+     "name": "Dave Chisnall",
+     "rank": 30,
+     "prize_gbp": 281750
+    }
+   }
+  },
+  {
+   "id": "pdc-32335",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Jonny Clayton",
+   "away": "Niko Springer",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Jonny Clayton",
+     "rank": 5,
+     "prize_gbp": 706000
+    },
+    "away": {
+     "name": "Niko Springer",
+     "rank": 36,
+     "prize_gbp": 239750
+    }
+   }
+  },
+  {
+   "id": "pdc-32336",
+   "sport": "darts",
+   "competition": "PDC European Championship 2026 \u2014 Round 1 (best of 11 legs)",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "Josh Rock",
+   "away": "Chris Dobey",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.pdc.tv/rankings",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336",
+   "source_id": "pdc",
+   "family": "darts",
+   "inputs": {
+    "home": {
+     "name": "Josh Rock",
+     "rank": 8,
+     "prize_gbp": 606500
+    },
+    "away": {
+     "name": "Chris Dobey",
+     "rank": 17,
+     "prize_gbp": 534750
+    }
+   }
+  },
+  {
+   "id": "ehfcl-202711020101004",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "18:45",
+   "venue": "",
+   "home": "FC Porto",
+   "away": "One Veszprem HC",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101004/FCPorto-OneVeszpr%C3%A9mHC/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "FC Porto",
+     "gp": 5,
+     "gf": 158,
+     "ga": 173,
+     "record": "1-1-3"
+    },
+    "away": {
+     "name": "One Veszprem HC",
+     "gp": 5,
+     "gf": 185,
+     "ga": 146,
+     "record": "5-0-0"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101016",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "18:45",
+   "venue": "",
+   "home": "Orlen Wisla Plock",
+   "away": "HBC Nantes",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101016/OrlenWislaPlock-HBCNantes/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "Orlen Wisla Plock",
+     "gp": 4,
+     "gf": 115,
+     "ga": 108,
+     "record": "3-0-1"
+    },
+    "away": {
+     "name": "HBC Nantes",
+     "gp": 5,
+     "gf": 142,
+     "ga": 143,
+     "record": "3-0-2"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101022",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "18:45",
+   "venue": "",
+   "home": "HC Vardar 1961",
+   "away": "MT Melsungen",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "HC Vardar 1961",
+     "gp": 5,
+     "gf": 154,
+     "ga": 158,
+     "record": "1-0-4"
+    },
+    "away": {
+     "name": "MT Melsungen",
+     "gp": 4,
+     "gf": 110,
+     "ga": 112,
+     "record": "2-0-2"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101026",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "20:45",
+   "venue": "",
+   "home": "Paris Saint-Germain",
+   "away": "Aalborg Handbold",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101026/ParisSaintGermain-AalborgH%C3%A5ndbold/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "Paris Saint-Germain",
+     "gp": 5,
+     "gf": 182,
+     "ga": 157,
+     "record": "3-1-1"
+    },
+    "away": {
+     "name": "Aalborg Handbold",
+     "gp": 5,
+     "gf": 170,
+     "ga": 145,
+     "record": "4-1-0"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101036",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "20:45",
+   "venue": "",
+   "home": "RK Celje Pivovarna Lasko",
+   "away": "HC Zagreb",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101036/RKCeljePivovarnaLa%C5%A1ko-HCZagreb/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "RK Celje Pivovarna Lasko",
+     "gp": 5,
+     "gf": 150,
+     "ga": 188,
+     "record": "0-0-5"
+    },
+    "away": {
+     "name": "HC Zagreb",
+     "gp": 5,
+     "gf": 146,
+     "ga": 158,
+     "record": "2-0-3"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101065",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "20:45",
+   "venue": "",
+   "home": "SC Magdeburg",
+   "away": "HC Kriens-Luzern",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "SC Magdeburg",
+     "gp": 4,
+     "gf": 141,
+     "ga": 108,
+     "record": "4-0-0"
+    },
+    "away": {
+     "name": "HC Kriens-Luzern",
+     "gp": 5,
+     "gf": 158,
+     "ga": 161,
+     "record": "2-0-3"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101067",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "20:45",
+   "venue": "",
+   "home": "Industria Kielce",
+   "away": "Kolstad Handball",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "Industria Kielce",
+     "gp": 5,
+     "gf": 155,
+     "ga": 153,
+     "record": "3-0-2"
+    },
+    "away": {
+     "name": "Kolstad Handball",
+     "gp": 4,
+     "gf": 111,
+     "ga": 143,
+     "record": "0-0-4"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101009",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "18:45",
+   "venue": "",
+   "home": "Fuchse Berlin",
+   "away": "RK Partizan AdmiralBet",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101009/F%C3%BCchseBerlin-RKPartizanAdmiralBet/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "Fuchse Berlin",
+     "gp": 5,
+     "gf": 184,
+     "ga": 172,
+     "record": "3-0-2"
+    },
+    "away": {
+     "name": "RK Partizan AdmiralBet",
+     "gp": 5,
+     "gf": 148,
+     "ga": 184,
+     "record": "0-1-4"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101040",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "18:45",
+   "venue": "",
+   "home": "GOG",
+   "away": "Sporting Clube de Portugal",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "GOG",
+     "gp": 4,
+     "gf": 145,
+     "ga": 139,
+     "record": "3-0-1"
+    },
+    "away": {
+     "name": "Sporting Clube de Portugal",
+     "gp": 4,
+     "gf": 149,
+     "ga": 125,
+     "record": "3-1-0"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101046",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "18:45",
+   "venue": "",
+   "home": "IFK Kristianstad",
+   "away": "OTP Bank - PICK Szeged",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101046/IFKKristianstad-OTPBankPICKSzeged/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "IFK Kristianstad",
+     "gp": 4,
+     "gf": 122,
+     "ga": 155,
+     "record": "0-0-4"
+    },
+    "away": {
+     "name": "OTP Bank - PICK Szeged",
+     "gp": 4,
+     "gf": 139,
+     "ga": 136,
+     "record": "1-1-2"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101054",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "20:45",
+   "venue": "",
+   "home": "SAH - Aarhus",
+   "away": "Barca",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101054/SAHAarhus-Bar%C3%A7a/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "SAH - Aarhus",
+     "gp": 5,
+     "gf": 150,
+     "ga": 163,
+     "record": "2-1-2"
+    },
+    "away": {
+     "name": "Barca",
+     "gp": 4,
+     "gf": 137,
+     "ga": 104,
+     "record": "4-0-0"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101055",
+   "sport": "handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "20:45",
+   "venue": "",
+   "home": "Montpellier Handball",
+   "away": "Dinamo Bucuresti",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101055/MontpellierHandball-DinamoBucuresti/",
+   "source_id": "ehf",
+   "family": "poisson_handball",
+   "inputs": {
+    "home": {
+     "name": "Montpellier Handball",
+     "gp": 4,
+     "gf": 116,
+     "ga": 125,
+     "record": "1-0-3"
+    },
+    "away": {
+     "name": "Dinamo Bucuresti",
+     "gp": 5,
+     "gf": 134,
+     "ga": 145,
+     "record": "1-1-3"
+    },
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "nhl-2026020166",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "venue": "United Center",
+   "home": "Chicago Blackhawks",
+   "away": "Montreal Canadiens",
+   "home_code": "CHI",
+   "away_code": "MTL",
+   "official_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 16,
+     "team": "Chicago Blackhawks",
+     "abbrev": "CHI",
+     "gp": 9,
+     "w": 3,
+     "l": 6,
+     "otl": 0,
+     "pts": 6,
+     "pointPct": 0.33333,
+     "gf": 21,
+     "ga": 36,
+     "gfpg": 2.33333,
+     "gapg": 4.0,
+     "pp": 0.125,
+     "pk": 0.740741
+    },
+    "away": {
+     "teamId": 8,
+     "team": "Montreal Canadiens",
+     "abbrev": "MTL",
+     "gp": 9,
+     "w": 4,
+     "l": 3,
+     "otl": 2,
+     "pts": 10,
+     "pointPct": 0.55555,
+     "gf": 28,
+     "ga": 34,
+     "gfpg": 3.11111,
+     "gapg": 3.77777,
+     "pp": 0.137931,
+     "pk": 0.783784
+    },
+    "leaders": {
+     "MTL": {
+      "goals": {
+       "player": "Cole Caufield",
+       "value": 6
+      },
+      "assists": {
+       "player": "Nick Suzuki",
+       "value": 7
+      },
+      "wins": {
+       "player": "Jacob Fowler",
+       "value": 3
+      }
+     },
+     "CHI": {
+      "goals": {
+       "player": "Frank Nazar",
+       "value": 3
+      },
+      "assists": {
+       "player": "Anton Frondell",
+       "value": 5
+      },
+      "wins": {
+       "player": "Spencer Knight",
+       "value": 3
+      }
+     }
+    },
+    "home_record": "3-6-0",
+    "away_record": "4-3-2"
+   }
+  },
+  {
+   "id": "nhl-2026020167",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-24T01:00:00Z",
+   "venue": "Ball Arena",
+   "home": "Colorado Avalanche",
+   "away": "Tampa Bay Lightning",
+   "home_code": "COL",
+   "away_code": "TBL",
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-23/2026020167",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 21,
+     "team": "Colorado Avalanche",
+     "abbrev": "COL",
+     "gp": 10,
+     "w": 5,
+     "l": 4,
+     "otl": 1,
+     "pts": 11,
+     "pointPct": 0.55,
+     "gf": 41,
+     "ga": 30,
+     "gfpg": 4.1,
+     "gapg": 3.0,
+     "pp": 0.1875,
+     "pk": 0.826087
+    },
+    "away": {
+     "teamId": 14,
+     "team": "Tampa Bay Lightning",
+     "abbrev": "TBL",
+     "gp": 9,
+     "w": 7,
+     "l": 2,
+     "otl": 0,
+     "pts": 14,
+     "pointPct": 0.77777,
+     "gf": 31,
+     "ga": 23,
+     "gfpg": 3.44444,
+     "gapg": 2.55555,
+     "pp": 0.129032,
+     "pk": 0.791667
+    },
+    "leaders": {
+     "TBL": {
+      "goals": {
+       "player": "Brandon Hagel",
+       "value": 7
+      },
+      "assists": {
+       "player": "Nikita Kucherov",
+       "value": 9
+      }
+     },
+     "COL": {
+      "goals": {
+       "player": "Artturi Lehkonen",
+       "value": 8
+      },
+      "assists": {
+       "player": "Nathan MacKinnon",
+       "value": null
+      }
+     }
+    },
+    "home_record": "5-4-1",
+    "away_record": "7-2-0"
+   }
+  },
+  {
+   "id": "nhl-2026020168",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "venue": "Xfinity Mobile Arena",
+   "home": "Philadelphia Flyers",
+   "away": "Anaheim Ducks",
+   "home_code": "PHI",
+   "away_code": "ANA",
+   "official_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 4,
+     "team": "Philadelphia Flyers",
+     "abbrev": "PHI",
+     "gp": 12,
+     "w": 3,
+     "l": 6,
+     "otl": 3,
+     "pts": 9,
+     "pointPct": 0.375,
+     "gf": 20,
+     "ga": 36,
+     "gfpg": 1.66666,
+     "gapg": 3.0,
+     "pp": 0.138888,
+     "pk": 0.833334
+    },
+    "away": {
+     "teamId": 24,
+     "team": "Anaheim Ducks",
+     "abbrev": "ANA",
+     "gp": 9,
+     "w": 4,
+     "l": 5,
+     "otl": 0,
+     "pts": 8,
+     "pointPct": 0.44444,
+     "gf": 26,
+     "ga": 29,
+     "gfpg": 2.88888,
+     "gapg": 3.22222,
+     "pp": 0.225806,
+     "pk": 0.787879
+    },
+    "leaders": {
+     "ANA": {
+      "goals": {
+       "player": "Beckett Sennecke",
+       "value": 5
+      },
+      "assists": {
+       "player": "Leo Carlsson",
+       "value": 9
+      },
+      "wins": {
+       "player": "Lukas Dostal",
+       "value": 3
+      }
+     },
+     "PHI": {
+      "goals": {
+       "player": "Matvei Michkov",
+       "value": 6
+      },
+      "assists": {
+       "player": "Trevor Zegras",
+       "value": 5
+      },
+      "wins": {
+       "player": "Dan Vladar",
+       "value": 2
+      }
+     }
+    },
+    "home_record": "3-6-3",
+    "away_record": "4-5-0"
+   }
+  },
+  {
+   "id": "nhl-2026020169",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T19:30:00Z",
+   "venue": "Prudential Center",
+   "home": "New Jersey Devils",
+   "away": "Los Angeles Kings",
+   "home_code": "NJD",
+   "away_code": "LAK",
+   "official_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 1,
+     "team": "New Jersey Devils",
+     "abbrev": "NJD",
+     "gp": 9,
+     "w": 5,
+     "l": 4,
+     "otl": 0,
+     "pts": 10,
+     "pointPct": 0.55555,
+     "gf": 29,
+     "ga": 30,
+     "gfpg": 3.22222,
+     "gapg": 3.33333,
+     "pp": 0.2,
+     "pk": 0.708334
+    },
+    "away": {
+     "teamId": 26,
+     "team": "Los Angeles Kings",
+     "abbrev": "LAK",
+     "gp": 7,
+     "w": 1,
+     "l": 4,
+     "otl": 2,
+     "pts": 4,
+     "pointPct": 0.28571,
+     "gf": 17,
+     "ga": 27,
+     "gfpg": 2.42857,
+     "gapg": 3.85714,
+     "pp": 0.173913,
+     "pk": 0.64
+    },
+    "leaders": {
+     "LAK": {
+      "goals": {
+       "player": "Artemi Panarin",
+       "value": 4
+      },
+      "assists": {
+       "player": "Brandt Clarke",
+       "value": 4
+      },
+      "wins": {
+       "player": "Darcy Kuemper",
+       "value": 1
+      }
+     },
+     "NJD": {
+      "goals": {
+       "player": "Nico Hischier",
+       "value": 4
+      },
+      "assists": {
+       "player": "Jack Hughes",
+       "value": 7
+      },
+      "wins": {
+       "player": "Jake Allen",
+       "value": 4
+      }
+     }
+    },
+    "home_record": "5-4-0",
+    "away_record": "1-4-2"
+   }
+  },
+  {
+   "id": "nhl-2026020170",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "TD Garden",
+   "home": "Boston Bruins",
+   "away": "San Jose Sharks",
+   "home_code": "BOS",
+   "away_code": "SJS",
+   "official_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 6,
+     "team": "Boston Bruins",
+     "abbrev": "BOS",
+     "gp": 10,
+     "w": 7,
+     "l": 2,
+     "otl": 1,
+     "pts": 15,
+     "pointPct": 0.75,
+     "gf": 36,
+     "ga": 22,
+     "gfpg": 3.6,
+     "gapg": 2.2,
+     "pp": 0.214285,
+     "pk": 0.8
+    },
+    "away": {
+     "teamId": 28,
+     "team": "San Jose Sharks",
+     "abbrev": "SJS",
+     "gp": 10,
+     "w": 5,
+     "l": 4,
+     "otl": 1,
+     "pts": 11,
+     "pointPct": 0.55,
+     "gf": 26,
+     "ga": 34,
+     "gfpg": 2.6,
+     "gapg": 3.4,
+     "pp": 0.242424,
+     "pk": 0.787879
+    },
+    "leaders": {
+     "SJS": {
+      "goals": {
+       "player": "Macklin Celebrini",
+       "value": 5
+      },
+      "assists": {
+       "player": "Macklin Celebrini",
+       "value": 9
+      },
+      "wins": {
+       "player": "Alex Nedeljkovic",
+       "value": 3
+      }
+     },
+     "BOS": {
+      "goals": {
+       "player": "David Pastrnak",
+       "value": 4
+      },
+      "assists": {
+       "player": "David Pastrnak",
+       "value": 8
+      },
+      "wins": {
+       "player": "Jeremy Swayman",
+       "value": 6
+      }
+     }
+    },
+    "home_record": "7-2-1",
+    "away_record": "5-4-1"
+   }
+  },
+  {
+   "id": "nhl-2026020171",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Canadian Tire Centre",
+   "home": "Ottawa Senators",
+   "away": "New York Rangers",
+   "home_code": "OTT",
+   "away_code": "NYR",
+   "official_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 9,
+     "team": "Ottawa Senators",
+     "abbrev": "OTT",
+     "gp": 10,
+     "w": 7,
+     "l": 3,
+     "otl": 0,
+     "pts": 14,
+     "pointPct": 0.7,
+     "gf": 27,
+     "ga": 24,
+     "gfpg": 2.7,
+     "gapg": 2.4,
+     "pp": 0.130434,
+     "pk": 0.794872
+    },
+    "away": {
+     "teamId": 3,
+     "team": "New York Rangers",
+     "abbrev": "NYR",
+     "gp": 11,
+     "w": 7,
+     "l": 3,
+     "otl": 1,
+     "pts": 15,
+     "pointPct": 0.68181,
+     "gf": 33,
+     "ga": 24,
+     "gfpg": 3.0,
+     "gapg": 2.18181,
+     "pp": 0.205882,
+     "pk": 0.941177
+    },
+    "leaders": {
+     "NYR": {
+      "goals": {
+       "player": "Alexis Lafreniere",
+       "value": 7
+      },
+      "assists": {
+       "player": "Adam Fox",
+       "value": 10
+      },
+      "wins": {
+       "player": "Dylan Garand",
+       "value": 4
+      }
+     },
+     "OTT": {
+      "goals": {
+       "player": "Tim Stutzle",
+       "value": 6
+      },
+      "assists": {
+       "player": "Tim Stutzle",
+       "value": 8
+      },
+      "wins": {
+       "player": "Linus Ullmark",
+       "value": 7
+      }
+     }
+    },
+    "home_record": "7-3-0",
+    "away_record": "7-3-1"
+   }
+  },
+  {
+   "id": "nhl-2026020172",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "PPG Paints Arena",
+   "home": "Pittsburgh Penguins",
+   "away": "Nashville Predators",
+   "home_code": "PIT",
+   "away_code": "NSH",
+   "official_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 5,
+     "team": "Pittsburgh Penguins",
+     "abbrev": "PIT",
+     "gp": 10,
+     "w": 3,
+     "l": 6,
+     "otl": 1,
+     "pts": 7,
+     "pointPct": 0.35,
+     "gf": 32,
+     "ga": 37,
+     "gfpg": 3.2,
+     "gapg": 3.7,
+     "pp": 0.233333,
+     "pk": 0.807693
+    },
+    "away": {
+     "teamId": 18,
+     "team": "Nashville Predators",
+     "abbrev": "NSH",
+     "gp": 8,
+     "w": 3,
+     "l": 2,
+     "otl": 3,
+     "pts": 9,
+     "pointPct": 0.5625,
+     "gf": 23,
+     "ga": 22,
+     "gfpg": 2.875,
+     "gapg": 2.75,
+     "pp": 0.296296,
+     "pk": 0.851852
+    },
+    "leaders": {
+     "NSH": {
+      "goals": {
+       "player": "Ryan O'Reilly",
+       "value": 4
+      },
+      "assists": {
+       "player": "Roman Josi",
+       "value": 8
+      },
+      "wins": {
+       "player": "Juuse Saros",
+       "value": 3
+      }
+     },
+     "PIT": {
+      "goals": {
+       "player": "Evgeni Malkin",
+       "value": 5
+      },
+      "assists": {
+       "player": "Erik Karlsson",
+       "value": 10
+      },
+      "wins": {
+       "player": "Arturs Silovs",
+       "value": 3
+      }
+     }
+    },
+    "home_record": "3-6-1",
+    "away_record": "3-2-3"
+   }
+  },
+  {
+   "id": "nhl-2026020173",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Capital One Arena",
+   "home": "Washington Capitals",
+   "away": "Buffalo Sabres",
+   "home_code": "WSH",
+   "away_code": "BUF",
+   "official_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 15,
+     "team": "Washington Capitals",
+     "abbrev": "WSH",
+     "gp": 9,
+     "w": 5,
+     "l": 4,
+     "otl": 0,
+     "pts": 10,
+     "pointPct": 0.55555,
+     "gf": 30,
+     "ga": 29,
+     "gfpg": 3.33333,
+     "gapg": 3.22222,
+     "pp": 0.2,
+     "pk": 0.8
+    },
+    "away": {
+     "teamId": 7,
+     "team": "Buffalo Sabres",
+     "abbrev": "BUF",
+     "gp": 10,
+     "w": 4,
+     "l": 4,
+     "otl": 2,
+     "pts": 10,
+     "pointPct": 0.5,
+     "gf": 28,
+     "ga": 36,
+     "gfpg": 2.8,
+     "gapg": 3.6,
+     "pp": 0.111111,
+     "pk": 0.666667
+    },
+    "leaders": {
+     "BUF": {
+      "goals": {
+       "player": "Tage Thompson",
+       "value": 5
+      },
+      "assists": {
+       "player": "Zach Benson",
+       "value": 6
+      },
+      "wins": {
+       "player": "Ukko-Pekka Luukkonen",
+       "value": 3
+      }
+     },
+     "WSH": {
+      "goals": {
+       "player": "Alex Tuch",
+       "value": 5
+      },
+      "assists": {
+       "player": "Dylan Strome",
+       "value": 5
+      },
+      "wins": {
+       "player": "Logan Thompson",
+       "value": 4
+      }
+     }
+    },
+    "home_record": "5-4-0",
+    "away_record": "4-4-2"
+   }
+  },
+  {
+   "id": "nhl-2026020174",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Nationwide Arena",
+   "home": "Columbus Blue Jackets",
+   "away": "Vegas Golden Knights",
+   "home_code": "CBJ",
+   "away_code": "VGK",
+   "official_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 29,
+     "team": "Columbus Blue Jackets",
+     "abbrev": "CBJ",
+     "gp": 8,
+     "w": 3,
+     "l": 5,
+     "otl": 0,
+     "pts": 6,
+     "pointPct": 0.375,
+     "gf": 19,
+     "ga": 29,
+     "gfpg": 2.375,
+     "gapg": 3.625,
+     "pp": 0.086956,
+     "pk": 0.7
+    },
+    "away": {
+     "teamId": 54,
+     "team": "Vegas Golden Knights",
+     "abbrev": "VGK",
+     "gp": 11,
+     "w": 8,
+     "l": 3,
+     "otl": 0,
+     "pts": 16,
+     "pointPct": 0.72727,
+     "gf": 43,
+     "ga": 30,
+     "gfpg": 3.90909,
+     "gapg": 2.72727,
+     "pp": 0.25,
+     "pk": 0.73077
+    },
+    "leaders": {
+     "VGK": {
+      "goals": {
+       "player": "Mark Stone",
+       "value": 8
+      },
+      "assists": {
+       "player": "Jack Eichel",
+       "value": 13
+      },
+      "wins": {
+       "player": "Carter Hart",
+       "value": 4
+      }
+     },
+     "CBJ": {
+      "goals": {
+       "player": "Kent Johnson",
+       "value": 4
+      },
+      "assists": {
+       "player": "Zach Werenski",
+       "value": 6
+      },
+      "wins": {
+       "player": "Jet Greaves",
+       "value": 2
+      }
+     }
+    },
+    "home_record": "3-5-0",
+    "away_record": "8-3-0"
+   }
+  },
+  {
+   "id": "nhl-2026020175",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Enterprise Center",
+   "home": "St. Louis Blues",
+   "away": "Carolina Hurricanes",
+   "home_code": "STL",
+   "away_code": "CAR",
+   "official_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 19,
+     "team": "St. Louis Blues",
+     "abbrev": "STL",
+     "gp": 9,
+     "w": 4,
+     "l": 4,
+     "otl": 1,
+     "pts": 9,
+     "pointPct": 0.5,
+     "gf": 29,
+     "ga": 29,
+     "gfpg": 3.22222,
+     "gapg": 3.22222,
+     "pp": 0.192307,
+     "pk": 0.857143
+    },
+    "away": {
+     "teamId": 12,
+     "team": "Carolina Hurricanes",
+     "abbrev": "CAR",
+     "gp": 11,
+     "w": 8,
+     "l": 2,
+     "otl": 1,
+     "pts": 17,
+     "pointPct": 0.77272,
+     "gf": 42,
+     "ga": 27,
+     "gfpg": 3.81818,
+     "gapg": 2.45454,
+     "pp": 0.227272,
+     "pk": 0.891892
+    },
+    "leaders": {
+     "CAR": {
+      "goals": {
+       "player": "Andrei Svechnikov",
+       "value": 6
+      },
+      "assists": {
+       "player": "Jackson Blake",
+       "value": 10
+      },
+      "wins": {
+       "player": "Pyotr Kochetkov",
+       "value": 6
+      }
+     },
+     "STL": {
+      "goals": {
+       "player": "Mason McTavish",
+       "value": 5
+      },
+      "assists": {
+       "player": "Dylan Holloway",
+       "value": 6
+      },
+      "wins": {
+       "player": "Joel Hofer",
+       "value": 3
+      }
+     }
+    },
+    "home_record": "4-4-1",
+    "away_record": "8-2-1"
+   }
+  },
+  {
+   "id": "nhl-2026020176",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Rogers Place",
+   "home": "Edmonton Oilers",
+   "away": "Toronto Maple Leafs",
+   "home_code": "EDM",
+   "away_code": "TOR",
+   "official_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 22,
+     "team": "Edmonton Oilers",
+     "abbrev": "EDM",
+     "gp": 9,
+     "w": 7,
+     "l": 1,
+     "otl": 1,
+     "pts": 15,
+     "pointPct": 0.83333,
+     "gf": 41,
+     "ga": 27,
+     "gfpg": 4.55555,
+     "gapg": 3.0,
+     "pp": 0.310344,
+     "pk": 0.740741
+    },
+    "away": {
+     "teamId": 10,
+     "team": "Toronto Maple Leafs",
+     "abbrev": "TOR",
+     "gp": 11,
+     "w": 5,
+     "l": 4,
+     "otl": 2,
+     "pts": 12,
+     "pointPct": 0.54545,
+     "gf": 38,
+     "ga": 34,
+     "gfpg": 3.45454,
+     "gapg": 3.0909,
+     "pp": 0.275,
+     "pk": 0.973685
+    },
+    "leaders": {
+     "TOR": {
+      "goals": {
+       "player": "Auston Matthews",
+       "value": 8
+      },
+      "assists": {
+       "player": "Auston Matthews",
+       "value": 10
+      },
+      "wins": {
+       "player": "Anthony Stolarz",
+       "value": 3
+      }
+     },
+     "EDM": {
+      "goals": {
+       "player": "Leon Draisaitl",
+       "value": 8
+      },
+      "assists": {
+       "player": "Connor McDavid",
+       "value": 20
+      },
+      "wins": {
+       "player": "Devon Levi",
+       "value": 5
+      }
+     }
+    },
+    "home_record": "7-1-1",
+    "away_record": "5-4-2"
+   }
+  },
+  {
+   "id": "nhl-2026020177",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "venue": "Delta Center",
+   "home": "Utah Mammoth",
+   "away": "Tampa Bay Lightning",
+   "home_code": "UTA",
+   "away_code": "TBL",
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 68,
+     "team": "Utah Mammoth",
+     "abbrev": "UTA",
+     "gp": 10,
+     "w": 7,
+     "l": 3,
+     "otl": 0,
+     "pts": 14,
+     "pointPct": 0.7,
+     "gf": 38,
+     "ga": 31,
+     "gfpg": 3.8,
+     "gapg": 3.1,
+     "pp": 0.361111,
+     "pk": 0.6875
+    },
+    "away": {
+     "teamId": 14,
+     "team": "Tampa Bay Lightning",
+     "abbrev": "TBL",
+     "gp": 9,
+     "w": 7,
+     "l": 2,
+     "otl": 0,
+     "pts": 14,
+     "pointPct": 0.77777,
+     "gf": 31,
+     "ga": 23,
+     "gfpg": 3.44444,
+     "gapg": 2.55555,
+     "pp": 0.129032,
+     "pk": 0.791667
+    },
+    "leaders": {
+     "TBL": {
+      "goals": {
+       "player": "Brandon Hagel",
+       "value": 7
+      },
+      "assists": {
+       "player": "Nikita Kucherov",
+       "value": 9
+      },
+      "wins": {
+       "player": "Andrei Vasilevskiy",
+       "value": 5
+      }
+     },
+     "UTA": {
+      "goals": {
+       "player": "Nick Schmaltz",
+       "value": 7
+      },
+      "assists": {
+       "player": "Clayton Keller",
+       "value": 9
+      },
+      "wins": {
+       "player": "Karel Vejmelka",
+       "value": 5
+      }
+     }
+    },
+    "home_record": "7-3-0",
+    "away_record": "7-2-0"
+   }
+  },
+  {
+   "id": "nhl-2026020178",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": "Scotiabank Saddledome",
+   "home": "Calgary Flames",
+   "away": "Detroit Red Wings",
+   "home_code": "CGY",
+   "away_code": "DET",
+   "official_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 20,
+     "team": "Calgary Flames",
+     "abbrev": "CGY",
+     "gp": 8,
+     "w": 2,
+     "l": 6,
+     "otl": 0,
+     "pts": 4,
+     "pointPct": 0.25,
+     "gf": 17,
+     "ga": 37,
+     "gfpg": 2.125,
+     "gapg": 4.625,
+     "pp": 0.210526,
+     "pk": 0.814815
+    },
+    "away": {
+     "teamId": 17,
+     "team": "Detroit Red Wings",
+     "abbrev": "DET",
+     "gp": 9,
+     "w": 3,
+     "l": 3,
+     "otl": 3,
+     "pts": 9,
+     "pointPct": 0.5,
+     "gf": 22,
+     "ga": 26,
+     "gfpg": 2.44444,
+     "gapg": 2.88888,
+     "pp": 0.21875,
+     "pk": 0.6875
+    },
+    "leaders": {
+     "DET": {
+      "goals": {
+       "player": "Alex DeBrincat",
+       "value": 6
+      },
+      "assists": {
+       "player": "Alex DeBrincat",
+       "value": 5
+      },
+      "wins": {
+       "player": "John Gibson",
+       "value": 2
+      }
+     },
+     "CGY": {
+      "goals": {
+       "player": "Morgan Frost",
+       "value": 3
+      },
+      "assists": {
+       "player": "Joel Farabee",
+       "value": 5
+      },
+      "wins": {
+       "player": "Dustin Wolf",
+       "value": 1
+      }
+     }
+    },
+    "home_record": "2-6-0",
+    "away_record": "3-3-3"
+   }
+  },
+  {
+   "id": "nhl-2026020179",
+   "sport": "ice-hockey",
+   "competition": "NHL Regular Season 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": "Climate Pledge Arena",
+   "home": "Seattle Kraken",
+   "away": "Minnesota Wild",
+   "home_code": "SEA",
+   "away_code": "MIN",
+   "official_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+   "source_id": "nhl-score",
+   "family": "poisson",
+   "inputs": {
+    "home": {
+     "teamId": 55,
+     "team": "Seattle Kraken",
+     "abbrev": "SEA",
+     "gp": 10,
+     "w": 6,
+     "l": 3,
+     "otl": 1,
+     "pts": 13,
+     "pointPct": 0.65,
+     "gf": 37,
+     "ga": 34,
+     "gfpg": 3.7,
+     "gapg": 3.4,
+     "pp": 0.21875,
+     "pk": 0.724138
+    },
+    "away": {
+     "teamId": 30,
+     "team": "Minnesota Wild",
+     "abbrev": "MIN",
+     "gp": 10,
+     "w": 6,
+     "l": 2,
+     "otl": 2,
+     "pts": 14,
+     "pointPct": 0.7,
+     "gf": 31,
+     "ga": 25,
+     "gfpg": 3.1,
+     "gapg": 2.5,
+     "pp": 0.290322,
+     "pk": 0.818182
+    },
+    "leaders": {
+     "MIN": {
+      "goals": {
+       "player": "Kirill Kaprizov",
+       "value": 11
+      },
+      "assists": {
+       "player": "Quinn Hughes",
+       "value": 11
+      },
+      "wins": {
+       "player": "Jesper Wallstedt",
+       "value": 6
+      }
+     },
+     "SEA": {
+      "goals": {
+       "player": "Frederick Gaudreau",
+       "value": 5
+      },
+      "assists": {
+       "player": "Chandler Stephenson",
+       "value": 8
+      },
+      "wins": {
+       "player": "Philipp Grubauer",
+       "value": 3
+      }
+     }
+    },
+    "home_record": "6-3-1",
+    "away_record": "6-2-2"
+   }
+  },
+  {
+   "id": "f1-us-gp-2026",
+   "sport": "motor-racing",
+   "competition": "FIA Formula One World Championship 2026 - United States Grand Prix (Round 18; weekend rendered 23-25 Oct on formula1.com)",
+   "date": "2026-10-25",
+   "start_utc": "",
+   "venue": "",
+   "home": "United States Grand Prix",
+   "away": "",
+   "home_code": "",
+   "away_code": "",
+   "official_url": "https://www.formula1.com/en/racing/2026/united-states",
+   "source_id": "f1",
+   "family": "outright",
+   "inputs": {
+    "drivers": [
+     {
+      "pos": 1,
+      "driver": "Kimi Antonelli",
+      "code": "ANT",
+      "nat": "ITA",
+      "team": "Mercedes",
+      "pts": 340
+     },
+     {
+      "pos": 2,
+      "driver": "George Russell",
+      "code": "RUS",
+      "nat": "GBR",
+      "team": "Mercedes",
+      "pts": 238
+     },
+     {
+      "pos": 3,
+      "driver": "Lewis Hamilton",
+      "code": "HAM",
+      "nat": "GBR",
+      "team": "Ferrari",
+      "pts": 229
+     },
+     {
+      "pos": 4,
+      "driver": "Max Verstappen",
+      "code": "VER",
+      "nat": "NED",
+      "team": "Red Bull Racing",
+      "pts": 221
+     },
+     {
+      "pos": 5,
+      "driver": "Charles Leclerc",
+      "code": "LEC",
+      "nat": "MON",
+      "team": "Ferrari",
+      "pts": 215
+     },
+     {
+      "pos": 6,
+      "driver": "Lando Norris",
+      "code": "NOR",
+      "nat": "GBR",
+      "team": "McLaren",
+      "pts": 201
+     },
+     {
+      "pos": 7,
+      "driver": "Oscar Piastri",
+      "code": "PIA",
+      "nat": "AUS",
+      "team": "McLaren",
+      "pts": 138
+     },
+     {
+      "pos": 8,
+      "driver": "Isack Hadjar",
+      "code": "HAD",
+      "nat": "FRA",
+      "team": "Red Bull Racing",
+      "pts": 97
+     },
+     {
+      "pos": 9,
+      "driver": "Liam Lawson",
+      "code": "LAW",
+      "nat": "NZL",
+      "team": "Racing Bulls",
+      "pts": 75
+     },
+     {
+      "pos": 10,
+      "driver": "Pierre Gasly",
+      "code": "GAS",
+      "nat": "FRA",
+      "team": "Alpine",
+      "pts": 41
+     },
+     {
+      "pos": 11,
+      "driver": "Arvid Lindblad",
+      "code": "LIN",
+      "nat": "GBR",
+      "team": "Racing Bulls",
+      "pts": 38
+     },
+     {
+      "pos": 12,
+      "driver": "Franco Colapinto",
+      "code": "COL",
+      "nat": "ARG",
+      "team": "Alpine",
+      "pts": 27
+     },
+     {
+      "pos": 13,
+      "driver": "Oliver Bearman",
+      "code": "BEA",
+      "nat": "GBR",
+      "team": "Haas F1 Team",
+      "pts": 23
+     },
+     {
+      "pos": 14,
+      "driver": "Nico Hulkenberg",
+      "code": "HUL",
+      "nat": "GER",
+      "team": "Audi",
+      "pts": 13
+     },
+     {
+      "pos": 15,
+      "driver": "Gabriel Bortoleto",
+      "code": "BOR",
+      "nat": "BRA",
+      "team": "Audi",
+      "pts": 10
+     },
+     {
+      "pos": 16,
+      "driver": "Esteban Ocon",
+      "code": "OCO",
+      "nat": "FRA",
+      "team": "Haas F1 Team",
+      "pts": 7
+     },
+     {
+      "pos": 17,
+      "driver": "Fernando Alonso",
+      "code": "ALO",
+      "nat": "ESP",
+      "team": "Aston Martin",
+      "pts": 7
+     },
+     {
+      "pos": 18,
+      "driver": "Carlos Sainz",
+      "code": "SAI",
+      "nat": "ESP",
+      "team": "Williams",
+      "pts": 7
+     },
+     {
+      "pos": 19,
+      "driver": "Alexander Albon",
+      "code": "ALB",
+      "nat": "THA",
+      "team": "Williams",
+      "pts": 5
+     },
+     {
+      "pos": 20,
+      "driver": "Yuki Tsunoda",
+      "code": "TSU",
+      "nat": "JPN",
+      "team": "Racing Bulls",
+      "pts": 1
+     },
+     {
+      "pos": 21,
+      "driver": "Lance Stroll",
+      "code": "STR",
+      "nat": "CAN",
+      "team": "Aston Martin",
+      "pts": 0
+     },
+     {
+      "pos": 22,
+      "driver": "Valtteri Bottas",
+      "code": "BOT",
+      "nat": "FIN",
+      "team": "Cadillac",
+      "pts": 0
+     },
+     {
+      "pos": 23,
+      "driver": "Sergio Perez",
+      "code": "PER",
+      "nat": "MEX",
+      "team": "Cadillac",
+      "pts": 0
+     }
+    ],
+    "winners": [
+     {
+      "round": 1,
+      "race": "Australia",
+      "winner": "George Russell",
+      "second": "Kimi Antonelli",
+      "third": "Charles Leclerc"
+     },
+     {
+      "round": 2,
+      "race": "China",
+      "winner": "Kimi Antonelli",
+      "second": "George Russell",
+      "third": "Lewis Hamilton"
+     },
+     {
+      "round": 3,
+      "race": "Japan",
+      "winner": "Kimi Antonelli",
+      "second": "Oscar Piastri",
+      "third": "Charles Leclerc"
+     },
+     {
+      "round": 4,
+      "race": "Miami",
+      "winner": "Kimi Antonelli",
+      "second": "Lando Norris",
+      "third": "Oscar Piastri"
+     },
+     {
+      "round": 5,
+      "race": "Canada",
+      "winner": "Kimi Antonelli",
+      "second": "Lewis Hamilton",
+      "third": "Max Verstappen"
+     },
+     {
+      "round": 6,
+      "race": "Monaco",
+      "winner": "Kimi Antonelli",
+      "second": "Lewis Hamilton",
+      "third": "Isack Hadjar"
+     },
+     {
+      "round": 7,
+      "race": "Barcelona-Catalunya",
+      "winner": "Lewis Hamilton",
+      "second": "George Russell",
+      "third": null
+     }
+    ],
+    "previous_round": {
+     "round": 17,
+     "country": "Singapore",
+     "dates_as_rendered": "09 - 11 OCT",
+     "official_url": "https://www.formula1.com/en/racing/2026/singapore"
+    }
+   }
+  },
+  {
+   "id": "prod2-12063",
+   "sport": "rugby-union",
+   "competition": "Pro D2 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:30 UTC",
+   "venue": "",
+   "home": "SU Agen",
+   "away": "Nissa Rugby",
+   "home_code": "agen",
+   "away_code": "nice",
+   "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "SU Agen",
+     "rank": 10,
+     "pts": 15,
+     "gp": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "pf": 189,
+     "pa": 206,
+     "form": "W-L-L-W-W"
+    },
+    "away": {
+     "name": "Nissa Rugby",
+     "rank": 13,
+     "pts": 11,
+     "gp": 7,
+     "w": 2,
+     "d": 0,
+     "l": 5,
+     "pf": 171,
+     "pa": 213,
+     "form": "L-L-L-W-L"
+    }
+   }
+  },
+  {
+   "id": "prod2-12064",
+   "sport": "rugby-union",
+   "competition": "Pro D2 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 19:00 UTC",
+   "venue": "",
+   "home": "Provence Rugby",
+   "away": "AS B\u00e9ziers H\u00e9rault",
+   "home_code": "provence",
+   "away_code": "beziers",
+   "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Provence Rugby",
+     "rank": 2,
+     "pts": 29,
+     "gp": 7,
+     "w": 7,
+     "d": 0,
+     "l": 0,
+     "pf": 222,
+     "pa": 158,
+     "form": "W-W-W-W-W"
+    },
+    "away": {
+     "name": "AS B\u00e9ziers H\u00e9rault",
+     "rank": 14,
+     "pts": 9,
+     "gp": 7,
+     "w": 2,
+     "d": 0,
+     "l": 5,
+     "pf": 147,
+     "pa": 240,
+     "form": "W-L-W-L-L"
+    }
+   }
+  },
+  {
+   "id": "prod2-12065",
+   "sport": "rugby-union",
+   "competition": "Pro D2 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:30 UTC",
+   "venue": "",
+   "home": "Soyaux-Angoul\u00eame XV",
+   "away": "US Dax",
+   "home_code": "angouleme",
+   "away_code": "dax",
+   "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Soyaux-Angoul\u00eame XV",
+     "rank": 7,
+     "pts": 17,
+     "gp": 7,
+     "w": 3,
+     "d": 1,
+     "l": 3,
+     "pf": 220,
+     "pa": 180,
+     "form": "W-L-W-L-D"
+    },
+    "away": {
+     "name": "US Dax",
+     "rank": 6,
+     "pts": 19,
+     "gp": 7,
+     "w": 4,
+     "d": 0,
+     "l": 3,
+     "pf": 269,
+     "pa": 264,
+     "form": "W-L-W-L-W"
+    }
+   }
+  },
+  {
+   "id": "prod2-12066",
+   "sport": "rugby-union",
+   "competition": "Pro D2 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:30 UTC",
+   "venue": "",
+   "home": "Stade Aurillacois",
+   "away": "USON Nevers",
+   "home_code": "aurillac",
+   "away_code": "nevers",
+   "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Stade Aurillacois",
+     "rank": 9,
+     "pts": 16,
+     "gp": 7,
+     "w": 3,
+     "d": 0,
+     "l": 4,
+     "pf": 240,
+     "pa": 254,
+     "form": "L-L-L-W-W"
+    },
+    "away": {
+     "name": "USON Nevers",
+     "rank": 16,
+     "pts": 4,
+     "gp": 7,
+     "w": 0,
+     "d": 0,
+     "l": 7,
+     "pf": 146,
+     "pa": 222,
+     "form": "L-L-L-L-L"
+    }
+   }
+  },
+  {
+   "id": "prod2-12067",
+   "sport": "rugby-union",
+   "competition": "Pro D2 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 19:00 UTC",
+   "venue": "",
+   "home": "FC Grenoble Rugby",
+   "away": "Biarritz Olympique PB",
+   "home_code": "grenoble",
+   "away_code": "biarritz",
+   "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "FC Grenoble Rugby",
+     "rank": 3,
+     "pts": 22,
+     "gp": 7,
+     "w": 5,
+     "d": 0,
+     "l": 2,
+     "pf": 213,
+     "pa": 176,
+     "form": "L-W-W-W-W"
+    },
+    "away": {
+     "name": "Biarritz Olympique PB",
+     "rank": 5,
+     "pts": 20,
+     "gp": 7,
+     "w": 4,
+     "d": 1,
+     "l": 2,
+     "pf": 213,
+     "pa": 191,
+     "form": "W-W-W-L-D"
+    }
+   }
+  },
+  {
+   "id": "prod2-12069",
+   "sport": "rugby-union",
+   "competition": "Pro D2 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:00 UTC",
+   "venue": "",
+   "home": "RC Narbonnais",
+   "away": "CA Brive",
+   "home_code": "narbonne",
+   "away_code": "brive",
+   "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "RC Narbonnais",
+     "rank": 15,
+     "pts": 9,
+     "gp": 7,
+     "w": 2,
+     "d": 0,
+     "l": 5,
+     "pf": 186,
+     "pa": 296,
+     "form": "L-W-L-L-L"
+    },
+    "away": {
+     "name": "CA Brive",
+     "rank": 4,
+     "pts": 21,
+     "gp": 7,
+     "w": 5,
+     "d": 0,
+     "l": 2,
+     "pf": 206,
+     "pa": 164,
+     "form": "W-W-W-L-L"
+    }
+   }
+  },
+  {
+   "id": "prod2-12070",
+   "sport": "rugby-union",
+   "competition": "Pro D2 2026-27",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 17:30 UTC",
+   "venue": "",
+   "home": "Valence Romans",
+   "away": "Colomiers Rugby",
+   "home_code": "valence",
+   "away_code": "colomiers",
+   "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Valence Romans",
+     "rank": 11,
+     "pts": 13,
+     "gp": 7,
+     "w": 2,
+     "d": 0,
+     "l": 5,
+     "pf": 192,
+     "pa": 190,
+     "form": "L-L-L-W-L"
+    },
+    "away": {
+     "name": "Colomiers Rugby",
+     "rank": 12,
+     "pts": 12,
+     "gp": 7,
+     "w": 2,
+     "d": 0,
+     "l": 5,
+     "pf": 220,
+     "pa": 207,
+     "form": "L-W-L-L-W"
+    }
+   }
+  },
+  {
+   "id": "urc-292608",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 18:45 UTC",
+   "venue": "Cardiff Arms Park",
+   "home": "Cardiff Rugby",
+   "away": "Hollywoodbets Sharks",
+   "home_code": "CAR",
+   "away_code": "SHA",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Cardiff Rugby",
+     "gp": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pf": 66,
+     "pa": 71
+    },
+    "away": {
+     "name": "Hollywoodbets Sharks",
+     "gp": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pf": 89,
+     "pa": 83
+    }
+   }
+  },
+  {
+   "id": "urc-292609",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 18:45 UTC",
+   "venue": "Dexcom Stadium",
+   "home": "Connacht Rugby",
+   "away": "Zebre Parma",
+   "home_code": "CON",
+   "away_code": "ZEB",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Connacht Rugby",
+     "gp": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pf": 56,
+     "pa": 84
+    },
+    "away": {
+     "name": "Zebre Parma",
+     "gp": 3,
+     "w": 0,
+     "d": 0,
+     "l": 3,
+     "pf": 52,
+     "pa": 116
+    }
+   }
+  },
+  {
+   "id": "urc-292610",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23 18:45 UTC",
+   "venue": "Hive Stadium",
+   "home": "Edinburgh Rugby",
+   "away": "10bet Lions",
+   "home_code": "EDI",
+   "away_code": "LIO",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Edinburgh Rugby",
+     "gp": 3,
+     "w": 3,
+     "d": 0,
+     "l": 0,
+     "pf": 80,
+     "pa": 54
+    },
+    "away": {
+     "name": "10bet Lions",
+     "gp": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pf": 77,
+     "pa": 102
+    }
+   }
+  },
+  {
+   "id": "top14-11861",
+   "sport": "rugby-union",
+   "competition": "Top 14 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 14:35 UTC",
+   "venue": "",
+   "home": "Aviron Bayonnais",
+   "away": "LOU Rugby",
+   "home_code": "bayonne",
+   "away_code": "lyon",
+   "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11861-bayonne-lyon",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Aviron Bayonnais",
+     "rank": 5,
+     "pts": 17,
+     "gp": 6,
+     "w": 4,
+     "d": 0,
+     "l": 2,
+     "pf": 190,
+     "pa": 214,
+     "form": "L-W-W-W-L"
+    },
+    "away": {
+     "name": "LOU Rugby",
+     "rank": 8,
+     "pts": 14,
+     "gp": 6,
+     "w": 3,
+     "d": 0,
+     "l": 3,
+     "pf": 193,
+     "pa": 202,
+     "form": "W-W-L-L-L"
+    }
+   }
+  },
+  {
+   "id": "top14-11862",
+   "sport": "rugby-union",
+   "competition": "Top 14 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 12:30 UTC",
+   "venue": "",
+   "home": "RC Vannes",
+   "away": "ASM Clermont",
+   "home_code": "vannes",
+   "away_code": "clermont",
+   "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "RC Vannes",
+     "rank": 14,
+     "pts": 1,
+     "gp": 6,
+     "w": 0,
+     "d": 0,
+     "l": 6,
+     "pf": 117,
+     "pa": 176,
+     "form": "L-L-L-L-L"
+    },
+    "away": {
+     "name": "ASM Clermont",
+     "rank": 11,
+     "pts": 11,
+     "gp": 6,
+     "w": 2,
+     "d": 0,
+     "l": 4,
+     "pf": 140,
+     "pa": 169,
+     "form": "W-L-W-L-L"
+    }
+   }
+  },
+  {
+   "id": "top14-11863",
+   "sport": "rugby-union",
+   "competition": "Top 14 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 14:35 UTC",
+   "venue": "",
+   "home": "Castres Olympique",
+   "away": "Stade Fran\u00e7ais Paris",
+   "home_code": "castres",
+   "away_code": "paris",
+   "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11863-castres-paris",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Castres Olympique",
+     "rank": 13,
+     "pts": 9,
+     "gp": 6,
+     "w": 2,
+     "d": 0,
+     "l": 4,
+     "pf": 126,
+     "pa": 153,
+     "form": "L-W-L-L-L"
+    },
+    "away": {
+     "name": "Stade Fran\u00e7ais Paris",
+     "rank": 6,
+     "pts": 14,
+     "gp": 6,
+     "w": 3,
+     "d": 0,
+     "l": 3,
+     "pf": 147,
+     "pa": 158,
+     "form": "L-L-W-L-W"
+    }
+   }
+  },
+  {
+   "id": "top14-11865",
+   "sport": "rugby-union",
+   "competition": "Top 14 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 14:35 UTC",
+   "venue": "",
+   "home": "Racing 92",
+   "away": "Montpellier H\u00e9rault Rugby",
+   "home_code": "racing92",
+   "away_code": "montpellier",
+   "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11865-racing-92-montpellier",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Racing 92",
+     "rank": 12,
+     "pts": 10,
+     "gp": 6,
+     "w": 2,
+     "d": 0,
+     "l": 4,
+     "pf": 143,
+     "pa": 196,
+     "form": "L-W-L-W-L"
+    },
+    "away": {
+     "name": "Montpellier H\u00e9rault Rugby",
+     "rank": 7,
+     "pts": 14,
+     "gp": 6,
+     "w": 3,
+     "d": 0,
+     "l": 3,
+     "pf": 163,
+     "pa": 122,
+     "form": "W-W-L-W-L"
+    }
+   }
+  },
+  {
+   "id": "top14-11866",
+   "sport": "rugby-union",
+   "competition": "Top 14 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 19:00 UTC",
+   "venue": "",
+   "home": "RC Toulon",
+   "away": "Section Paloise",
+   "home_code": "toulon",
+   "away_code": "pau",
+   "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "RC Toulon",
+     "rank": 10,
+     "pts": 12,
+     "gp": 6,
+     "w": 2,
+     "d": 0,
+     "l": 4,
+     "pf": 130,
+     "pa": 130,
+     "form": "L-L-W-L-W"
+    },
+    "away": {
+     "name": "Section Paloise",
+     "rank": 2,
+     "pts": 22,
+     "gp": 6,
+     "w": 5,
+     "d": 0,
+     "l": 1,
+     "pf": 239,
+     "pa": 181,
+     "form": "W-L-W-W-W"
+    }
+   }
+  },
+  {
+   "id": "top14-11867",
+   "sport": "rugby-union",
+   "competition": "Top 14 2026-27",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 14:35 UTC",
+   "venue": "",
+   "home": "Stade Toulousain",
+   "away": "USA Perpignan",
+   "home_code": "toulouse",
+   "away_code": "perpignan",
+   "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Stade Toulousain",
+     "rank": 1,
+     "pts": 24,
+     "gp": 6,
+     "w": 5,
+     "d": 0,
+     "l": 1,
+     "pf": 197,
+     "pa": 124,
+     "form": "W-W-W-W-W"
+    },
+    "away": {
+     "name": "USA Perpignan",
+     "rank": 9,
+     "pts": 13,
+     "gp": 6,
+     "w": 3,
+     "d": 0,
+     "l": 3,
+     "pf": 166,
+     "pa": 199,
+     "form": "W-L-W-L-W"
+    }
+   }
+  },
+  {
+   "id": "urc-292611",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 11:45 UTC",
+   "venue": "Loftus Versfeld",
+   "home": "Vodacom Bulls",
+   "away": "Ulster Rugby",
+   "home_code": "BUL",
+   "away_code": "ULS",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Vodacom Bulls",
+     "gp": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pf": 126,
+     "pa": 54
+    },
+    "away": {
+     "name": "Ulster Rugby",
+     "gp": 3,
+     "w": 0,
+     "d": 2,
+     "l": 1,
+     "pf": 88,
+     "pa": 93
+    }
+   }
+  },
+  {
+   "id": "urc-292612",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 14:00 UTC",
+   "venue": "DHL Stadium",
+   "home": "DHL Stormers",
+   "away": "Scarlets",
+   "home_code": "STO",
+   "away_code": "SCA",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "DHL Stormers",
+     "gp": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pf": 81,
+     "pa": 54
+    },
+    "away": {
+     "name": "Scarlets",
+     "gp": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pf": 68,
+     "pa": 85
+    }
+   }
+  },
+  {
+   "id": "urc-292613",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 14:00 UTC",
+   "venue": "Stadio Monigo",
+   "home": "Benetton Rugby",
+   "away": "Glasgow Warriors",
+   "home_code": "BEN",
+   "away_code": "GLA",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Benetton Rugby",
+     "gp": 3,
+     "w": 0,
+     "d": 1,
+     "l": 2,
+     "pf": 64,
+     "pa": 68
+    },
+    "away": {
+     "name": "Glasgow Warriors",
+     "gp": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "pf": 95,
+     "pa": 72
+    }
+   }
+  },
+  {
+   "id": "urc-292614",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 17:00 UTC",
+   "venue": "Aviva Stadium",
+   "home": "Leinster Rugby",
+   "away": "Munster Rugby",
+   "home_code": "LEI",
+   "away_code": "MUN",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Leinster Rugby",
+     "gp": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pf": 75,
+     "pa": 58
+    },
+    "away": {
+     "name": "Munster Rugby",
+     "gp": 3,
+     "w": 1,
+     "d": 1,
+     "l": 1,
+     "pf": 72,
+     "pa": 74
+    }
+   }
+  },
+  {
+   "id": "urc-292615",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 4",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24 18:00 UTC",
+   "venue": "St Helen's",
+   "home": "Ospreys",
+   "away": "Dragons RFC",
+   "home_code": "OSP",
+   "away_code": "DRA",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Ospreys",
+     "gp": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pf": 81,
+     "pa": 107
+    },
+    "away": {
+     "name": "Dragons RFC",
+     "gp": 3,
+     "w": 1,
+     "d": 1,
+     "l": 1,
+     "pf": 88,
+     "pa": 83
+    }
+   }
+  },
+  {
+   "id": "top14-11864",
+   "sport": "rugby-union",
+   "competition": "Top 14 2026-27",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25 20:05 UTC",
+   "venue": "",
+   "home": "Stade Rochelais",
+   "away": "Union Bordeaux-B\u00e8gles",
+   "home_code": "la_rochelle",
+   "away_code": "bordeaux",
+   "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles",
+   "source_id": "lnr",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Stade Rochelais",
+     "rank": 4,
+     "pts": 18,
+     "gp": 6,
+     "w": 4,
+     "d": 0,
+     "l": 2,
+     "pf": 144,
+     "pa": 135,
+     "form": "W-L-L-W-W"
+    },
+    "away": {
+     "name": "Union Bordeaux-B\u00e8gles",
+     "rank": 3,
+     "pts": 19,
+     "gp": 6,
+     "w": 4,
+     "d": 0,
+     "l": 2,
+     "pf": 215,
+     "pa": 151,
+     "form": "L-W-L-W-W"
+    }
+   }
+  },
+  {
+   "id": "urc-292616",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 5",
+   "date": "2026-10-30",
+   "start_utc": "2026-10-30 19:45 UTC",
+   "venue": "Dexcom Stadium",
+   "home": "Connacht Rugby",
+   "away": "Leinster Rugby",
+   "home_code": "CON",
+   "away_code": "LEI",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Connacht Rugby",
+     "gp": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pf": 56,
+     "pa": 84
+    },
+    "away": {
+     "name": "Leinster Rugby",
+     "gp": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pf": 75,
+     "pa": 58
+    }
+   }
+  },
+  {
+   "id": "urc-292617",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship 2026-27 Round 5",
+   "date": "2026-10-30",
+   "start_utc": "2026-10-30 19:45 UTC",
+   "venue": "Scotstoun Stadium",
+   "home": "Glasgow Warriors",
+   "away": "10bet Lions",
+   "home_code": "GLA",
+   "away_code": "LIO",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617",
+   "source_id": "urc",
+   "family": "margin",
+   "inputs": {
+    "home": {
+     "name": "Glasgow Warriors",
+     "gp": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "pf": 95,
+     "pa": 72
+    },
+    "away": {
+     "name": "10bet Lions",
+     "gp": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pf": 77,
+     "pa": 102
+    }
+   }
+  }
+ ]
+}

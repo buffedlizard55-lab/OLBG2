@@ -1,0 +1,263 @@
+{
+ "sports": [
+  {
+   "slug": "ice-hockey",
+   "name": "Ice Hockey",
+   "olbg_sport_id": 13,
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "markets_investigated": [
+    "Moneyline (2-way)",
+    "Puck Line (-1.5 / +1.5)",
+    "Game Total (Over/Under)"
+   ]
+  },
+  {
+   "slug": "basketball",
+   "name": "Basketball",
+   "olbg_sport_id": 19,
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
+   "markets_investigated": [
+    "Moneyline (2-way)",
+    "Point Spread / Handicap",
+    "Game Total (Over/Under)"
+   ]
+  },
+  {
+   "slug": "rugby-union",
+   "name": "Rugby Union",
+   "olbg_sport_id": 9,
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+   "official_url": "https://top14.lnr.fr/classement",
+   "markets_investigated": [
+    "Match Result 1X2 & Draw-No-Bet Winner",
+    "Point Handicap",
+    "Match Total Points"
+   ]
+  },
+  {
+   "slug": "handball",
+   "name": "Handball",
+   "olbg_sport_id": 20,
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "markets_investigated": [
+    "Match Result 1X2 & 2-Way Winner",
+    "Goal Handicap",
+    "Match Total Goals"
+   ]
+  },
+  {
+   "slug": "darts",
+   "name": "Darts",
+   "olbg_sport_id": 15,
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/15",
+   "official_url": "https://www.pdc.tv/rankings",
+   "markets_investigated": [
+    "Match Winner (Best of 11 Legs)",
+    "Leg Handicap (-1.5 / +1.5)",
+    "Total Legs (Over/Under 9.5)"
+   ]
+  },
+  {
+   "slug": "tennis",
+   "name": "Tennis",
+   "olbg_sport_id": 3,
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "official_url": "https://www.atptour.com/en/rankings/singles",
+   "markets_investigated": [
+    "Match Winner (Best of 3 Sets)",
+    "Set Handicap (-1.5 / +1.5 Sets)",
+    "Total Sets (Over/Under 2.5)"
+   ]
+  },
+  {
+   "slug": "snooker",
+   "name": "Snooker",
+   "olbg_sport_id": 8,
+   "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+   "official_url": "https://www.wst.tv/matches/",
+   "markets_investigated": [
+    "Match Winner (Best of 7 Frames)",
+    "Frame Handicap (-1.5 / +1.5)",
+    "Total Frames (Over/Under 5.5)"
+   ]
+  },
+  {
+   "slug": "baseball",
+   "name": "Baseball",
+   "olbg_sport_id": 12,
+   "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+   "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
+   "markets_investigated": [
+    "Moneyline (2-way)",
+    "Run Line (-1.5 / +1.5)",
+    "Game Total (Over/Under 7.5 & Alt 5.5)"
+   ]
+  },
+  {
+   "slug": "motor-racing",
+   "name": "Motor Racing",
+   "olbg_sport_id": 14,
+   "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+   "official_url": "https://www.formula1.com/en/results/2026/drivers",
+   "markets_investigated": [
+    "Grand Prix Outright Winner",
+    " Championship Outright Leader",
+    "Podium / Head-to-Head Margin"
+   ]
+  },
+  {
+   "slug": "volleyball",
+   "name": "Volleyball",
+   "olbg_sport_id": 21,
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+   "official_url": "https://www.plusliga.pl/games.html",
+   "markets_investigated": [
+    "Match Winner",
+    "Set Handicap",
+    "Total Points / Sets"
+   ]
+  },
+  {
+   "slug": "cricket",
+   "name": "Cricket",
+   "olbg_sport_id": 7,
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+   "official_url": "https://www.icc-cricket.com/tournaments/mens-cricket-world-cup-league-2",
+   "markets_investigated": [
+    "Match Winner (ODI / T20I / Test)",
+    "Innings Runs",
+    "Series Outright"
+   ]
+  },
+  {
+   "slug": "golf",
+   "name": "Golf",
+   "olbg_sport_id": 4,
+   "olbg_url": "https://www.olbg.com/betting-tips/Golf/4",
+   "official_url": "https://www.pgatour.com/schedule",
+   "markets_investigated": [
+    "Tournament Outright Winner",
+    "Each-Way Top 5 / Top 10"
+   ]
+  },
+  {
+   "slug": "rugby-league",
+   "name": "Rugby League",
+   "olbg_sport_id": 10,
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "official_url": "https://www.nrl.com/draw/",
+   "markets_investigated": [
+    "2027 Grand Final / Premiership Outright",
+    "Series Winner"
+   ]
+  },
+  {
+   "slug": "gaelic-football",
+   "name": "Gaelic Football",
+   "olbg_sport_id": 25,
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+   "official_url": "https://www.gaa.ie/football",
+   "markets_investigated": [
+    "Match Result",
+    "Handicap",
+    "All-Ireland Outright"
+   ]
+  },
+  {
+   "slug": "greyhounds",
+   "name": "Greyhounds",
+   "olbg_sport_id": 28,
+   "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+   "official_url": "https://www.gbgb.org.uk/racing/results/",
+   "markets_investigated": [
+    "Win Trap",
+    "Forecast / Tricast"
+   ]
+  },
+  {
+   "slug": "aussie-rules",
+   "name": "Aussie Rules",
+   "olbg_sport_id": 22,
+   "olbg_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22",
+   "official_url": "https://www.afl.com.au/fixture",
+   "markets_investigated": [
+    "Match Winner",
+    "Line / Handicap",
+    "Total Score"
+   ]
+  },
+  {
+   "slug": "esports",
+   "name": "eSports",
+   "olbg_sport_id": 23,
+   "olbg_url": "https://www.olbg.com/betting-tips/eSports/23",
+   "official_url": "https://lolesports.com/schedule",
+   "markets_investigated": [
+    "Match Winner",
+    "Map Handicap",
+    "Total Maps"
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "slug": "soccer",
+   "label": "Soccer / Football",
+   "olbg_sport_id": 1,
+   "olbg_url": "https://www.olbg.com/betting-tips/Football/1",
+   "reason": "Excluded by project scope ('soccer', 'football')"
+  },
+  {
+   "slug": "horse-racing",
+   "label": "Horse Racing",
+   "olbg_sport_id": 2,
+   "olbg_url": "https://www.olbg.com/betting-tips/Horse_Racing/2",
+   "reason": "Excluded by project scope ('horse racing')"
+  },
+  {
+   "slug": "american-football",
+   "label": "American Football",
+   "olbg_sport_id": 11,
+   "olbg_url": "https://www.olbg.com/betting-tips/American_Football/11",
+   "reason": "Excluded by project scope ('american football')"
+  },
+  {
+   "slug": "boxing",
+   "label": "Boxing",
+   "olbg_sport_id": 6,
+   "olbg_url": "https://www.olbg.com/betting-tips/Boxing/6",
+   "reason": "Excluded by project scope ('boxing')"
+  },
+  {
+   "slug": "ufc-mma",
+   "label": "UFC / MMA",
+   "olbg_sport_id": 27,
+   "olbg_url": "https://www.olbg.com/betting-tips/UFC_MMA/27",
+   "reason": "Excluded by project scope ('ufc', 'mma')"
+  },
+  {
+   "slug": "hurling",
+   "label": "Hurling",
+   "olbg_sport_id": 26,
+   "olbg_url": "https://www.olbg.com/betting-tips/Hurling/26",
+   "reason": "Excluded by project scope ('hurling')"
+  },
+  {
+   "slug": "cycling",
+   "label": "Cycling",
+   "olbg_sport_id": null,
+   "olbg_url": "https://www.olbg.com/betting-tips",
+   "reason": "Excluded by project scope ('cycling'); no active OLBG sport hub on 2026-10-21"
+  },
+  {
+   "slug": "specials",
+   "label": "Specials / Entertainment & Politics",
+   "olbg_sport_id": null,
+   "olbg_url": "https://www.olbg.com/betting-tips",
+   "reason": "Excluded by project scope ('specials'); no active OLBG sport hub on 2026-10-21"
+  }
+ ]
+}

@@ -2982,6 +2982,16 @@ Confirmed on the deployed `sports/snooker.html` after `129b0cc`: breadcrumb Dash
 
 **Still open for the final integration session** (logged, deliberately not actioned here — all four files are outside this session's claimed scope): add `/current/` to `index.html` and the root navigation; add `'current'` to the folder list in `scripts/integration_audit.py::local_link_errors`; add the three `current_*` scripts and `current data/current` to `.github/workflows/pages.yml`; and do not sum layer row counts as unique matches in `README.md`.
 
+### Session `arena/b499dfe1-olbg2` — CLAIM: Daily Top-5-per-sport desk (`/daily/`)
+- **Status:** in progress · **Claimed:** 2026-10-22 · **Branch:** `arena/b499dfe1-olbg2`
+- **Scope (non-overlapping, new files only):** `daily/**`, `data/daily/**`, `scripts/daily_seed.py`, `scripts/daily_model.py`, `scripts/daily_build.py`, `scripts/daily_verify.py`, `tests/test_daily_b499dfe1.py`, `research/daily-b499dfe1.md`, this COORDINATION entry.
+- **Task:** Fresh 2026-10-22 capture from official sources only; originate own lines (match winner, handicap, total + sport-specific) for every covered sport (17 eligible; excluded: soccer/football, boxing, UFC/MMA, american football, hurling, Horse Racing, cycling, specials); pick winner + low/medium/high confidence per match; select Top-5 highest-confidence picks per sport; ≥30-word unique human predictions for high-confidence picks (>70% and fair odds −250..+10000) and Top-5 picks, using only verified form/history inputs; blank+flag anything unverifiable. No shared outputs edited (root nav/README/workflow integration logged for final integration session).
+
+### Session `arena/b499dfe1-olbg2` — DONE: Daily Top-5 desk (`/daily/`)
+- **Deliverable:** 132 originated upcoming fixtures (2026-10-23–30) across 7 sports with winner/handicap/total (+ darts legs, F1 outright) markets; Top-5 per sport (full fives: ice hockey, basketball, rugby union, handball, darts, baseball; motor racing 1/5); 25 high-confidence picks (≥70% AND fair −250…+10000 AND sample gate); 45 unique 76–149-word predictions using only seeded official facts; 9 blank unlined fixtures; 20 flags. Sources & fresh 2026-10-22 confirmation fetches (NHL score/standings APIs, MLB Stats API incl. newly-added WS Game 5 gamePk 849799, OLBG front page, lolesports) recorded in `research/daily-b499dfe1.md`.
+- **Verification:** `scripts/daily_verify.py` OK; 14 new tests OK; full suite OK; `integration_audit.py` 0 link errors; deterministic rebuild clean.
+- **Irregularities (non-blocking, on `daily/flagged.html`):** F1 race-day taken as 25 Oct from "23–25 Oct" rendered weekend; NBA prior-season cap; −250 boundary rounding disclosed; tennis/snooker/esports/cricket/golf/rugby-league/aussie-rules zero-row (no server-rendered official pairings/inputs in capture).
+- **For final integration session (not edited here):** add `/daily/` to root `index.html` nav + README desk table; add `'daily'` to `scripts/integration_audit.py` folders; add `daily_*` rebuild + `daily data/daily` drift paths to `.github/workflows/pages.yml`.
 ## Session arena/83346ec9-olbg2 — integration claim (2026-10-22)
 
 | Task | Status | Owner | Scope |

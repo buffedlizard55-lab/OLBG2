@@ -2737,3 +2737,31 @@ inside the window are marked **featured**. The methodology page states this expl
   are not covered by the cross-layer link audit; adding them to the scanned folders would extend the guarantee.
 - Post-merge checks on the rebased tree: full CI script sequence re-run, `integration_audit.py` reports
   **0 broken cross-layer links**, `python -m unittest discover -s tests` reports **162 tests, OK**.
+
+### `/atlas/` publication record — PUBLISHED (2026-10-22)
+
+| Item | Value |
+|---|---|
+| Pull request | **[#107](https://github.com/buffedlizard55-lab/OLBG2/pull/107)** — `Add /atlas/ first-hand verified desk (317 rows, 41 predictions, verification ledger)` |
+| Merge result | **MERGED** 2026-10-22T12:50:45Z · merge commit `c0cacba51b8feb35310ed9a1be2c7948d343bb03` |
+| Check | `validate` (workflow `Validate Pages content`) **pass** — full rebuild, `git diff --exit-code` across every layer, cross-layer link audit, 162 unit tests |
+| Deploy | The `Deploy Pages` run attached to `c0cacba` was **cancelled by the concurrency group** when PR #111 merged seconds later; the replacement run on `main` (`2a22fc0`, which contains `c0cacba`) **succeeded**, so the Atlas layer is live. Recorded because a cancelled run on the merge commit is easy to misread as a failed deploy. |
+| Live pages verified by fetching the deployed URL | `/atlas/index.html`, `/atlas/picks.html` — both render the published counts (317 rows, 174 confirmed, 143 blank, 41 predictions, 6 featured, 25 flagged) and the written predictions verbatim |
+| Live URL | <https://buffedlizard55-lab.github.io/OLBG2/atlas/index.html> · flagged page <https://buffedlizard55-lab.github.io/OLBG2/atlas/flagged.html> |
+
+**Second merge (follow-up, this branch):** one cosmetic fix — `.tag` had no trailing margin, so the live
+predictions page rendered `high≥70% but priced shorter than -250` as one run of text. Fixed in
+`scripts/atlas_build.py` and the CSS regenerated; no data, row, price or prediction text changed.
+
+**What remains open, deliberately:**
+
+1. 17 tennis rows in `/final/` still describe fixtures that do not exist on the ATP page they cite. This session
+   removed them from `/atlas/` and itemised each one (`AT-01.01…17`), but did **not** edit `data/final/**` or
+   `final/**`, which belong to the `/final/` owner. The fix is to regenerate `/final/` after deleting those rows
+   from `data/final/matches.json`, or to point the `/final/` owner at `data/atlas/capture_atp.json` for the true
+   round-of-16 pairings.
+2. The same applies to `AT-03`: 16 `/final/` basketball rows cite competition code `U` (BKT EuroCup) as the
+   EuroLeague. `/atlas/` carries correct `E2026` rows; `/final/` still carries the mis-cited ones.
+3. `stats.nba.com` and `atptour.com/en/rankings/singles` remain unreadable from this environment, so 74 NBA and
+   11 tennis rows stay unpriced. Any future session with a working fetch should add those two inputs first —
+   they are worth roughly 85 rows of origination.

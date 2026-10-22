@@ -83,7 +83,8 @@ def poisson_markets(fx, lh, la, draw_ok, hcap_line=1.5, unit="goals"):
     for tl in [tline - 1, tline, tline + 1, tline + 2]:
         po = sum(v for k, v in tot.items() if k > tl)
         touts.append(out(f"Over {tl}", po, "over", tl)); touts.append(out(f"Under {tl}", 1 - po, "under", tl))
-    mk.append({"market": f"Match Total {unit.title()} (Over/Under)", "line": tline, "outcomes": touts})
+    total_unit = "Runs" if "run" in unit else "Goals"
+    mk.append({"market": f"Match Total {total_unit} (Over/Under)", "line": tline, "outcomes": touts})
     return mk, lh - la, exp_tot
 
 def margin_markets(fx, exp_h, exp_a, sigma, draw_ok=False):

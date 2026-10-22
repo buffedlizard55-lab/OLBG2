@@ -3035,6 +3035,12 @@ PR #124 initially passed CI but could not merge: PR #123 from arena/e52155e1 had
 
 Publication ledger conflict resolution: concurrent PR #124 appended to COORDINATION.md while PR #125 was pending. Preserved both sessions’ entries verbatim; no data/code conflicts. Aborted the conflicted rebase, merged origin/main preserving history, and reran validation.
 
+### Session `arena/b499dfe1-olbg2` — FINAL PUBLICATION LEDGER for `/daily/`
+- **PR:** [#127](https://github.com/buffedlizard55-lab/OLBG2/pull/127) merged 2026-10-22T21:04:17Z, merge commit `1fa995c`; `Deploy Pages` run 39854224613 **success**; live verified by fetching the deployed pages (dashboard + Top-5 render with correct counts/links).
+- **Merge conflict:** one, in `COORDINATION.md` only (parallel session merged first). Both append-only sides kept in full; no other session's work discarded. Re-verified on merged tree (full suite OK, daily rebuild byte-identical).
+- **Post-deploy fix (this commit):** market label "Match Total Goals (Puck Line) (Over/Under)" corrected to "Match Total Goals (Over/Under)" / "Match Total Runs (Over/Under)"; labels only — no price changed. Also confirmed the three 2026-10-25 NHL rows trace to `data/current/capture/nhl_score_2026-10-24.json` (the official /score/ feed spills past midnight UTC), not invented.
+- **Live:** https://buffedlizard55-lab.github.io/OLBG2/daily/index.html · /matches.html · /top5.html · /predictions.html · /flagged.html · /sports/*.html
+
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
 Claimed 2026-10-22 21:05 UTC. Branch `arena/46d0531f-olbg2` (Arena fixes the branch name for this session).

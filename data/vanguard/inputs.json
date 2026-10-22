@@ -1,0 +1,1873 @@
+{
+ "captured_utc": "2026-10-22T22:00:00Z",
+ "session": "arena/ca03be92-olbg2",
+ "params": {
+  "ice-hockey": {
+   "kind": "poisson",
+   "shrink": 8.0,
+   "home": 0.1,
+   "total_shrink": 8.0
+  },
+  "basketball": {
+   "kind": "normal",
+   "sd": 11.0,
+   "total_sd": 15.0,
+   "home": 3.0
+  },
+  "rugby-union": {
+   "kind": "normal",
+   "sd": 13.0,
+   "total_sd": 16.0,
+   "home": 3.0,
+   "draw_band": 1.0
+  },
+  "baseball": {
+   "kind": "poisson",
+   "shrink": 20.0,
+   "home": 0.12,
+   "total_shrink": 20.0
+  },
+  "handball": {
+   "kind": "poisson",
+   "shrink": 3.0,
+   "home": 0.4,
+   "total_shrink": 3.0
+  },
+  "tennis": {
+   "kind": "logistic",
+   "scale": 55.0
+  },
+  "snooker": {
+   "kind": "logistic",
+   "scale": 40.0
+  },
+  "esports": {
+   "kind": "logistic",
+   "scale": 400.0
+  },
+  "darts": {
+   "kind": "logistic",
+   "scale": 25.0
+  },
+  "cricket": {
+   "kind": "logistic",
+   "scale": 40.0
+  },
+  "volleyball": {
+   "kind": "logistic",
+   "scale": 60.0
+  },
+  "rugby-league": {
+   "kind": "logistic",
+   "scale": 30.0
+  },
+  "aussie-rules": {
+   "kind": "logistic",
+   "scale": 45.0
+  },
+  "gaelic-football": {
+   "kind": "logistic",
+   "scale": 45.0
+  },
+  "motor-racing": {
+   "kind": "share"
+  },
+  "golf": {
+   "kind": "share"
+  },
+  "greyhounds": {
+   "kind": "share"
+  }
+ },
+ "fixtures": [
+  {
+   "sid": "nhl-2026020154",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-22T23:00:00Z",
+   "home": "Boston Bruins",
+   "away": "Nashville Predators",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "h": {
+    "gf": 36,
+    "ga": 22,
+    "gp": 10
+   },
+   "a": {
+    "gf": 23,
+    "ga": 22,
+    "gp": 8
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Boston are 7-2-1 and Jeremy Swayman already has six wins; David Pastrnak has four goals and eight assists. Nashville are 3-2-3, with Ryan O'Reilly on four goals and Roman Josi on eight assists."
+  },
+  {
+   "sid": "nhl-2026020155",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-22T23:00:00Z",
+   "home": "Toronto Maple Leafs",
+   "away": "New York Rangers",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "h": {
+    "gf": 38,
+    "ga": 34,
+    "gp": 11
+   },
+   "a": {
+    "gf": 33,
+    "ga": 24,
+    "gp": 11
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Toronto are 5-4-2, with Auston Matthews on eight goals and ten assists. The Rangers are 7-3-1; Alexis Lafreniere has seven goals and Adam Fox ten assists."
+  },
+  {
+   "sid": "nhl-2026020156",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-22T23:00:00Z",
+   "home": "Ottawa Senators",
+   "away": "San Jose Sharks",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "h": {
+    "gf": 27,
+    "ga": 24,
+    "gp": 10
+   },
+   "a": {
+    "gf": 26,
+    "ga": 34,
+    "gp": 10
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Ottawa are 7-3-0, Linus Ullmark has seven wins and Tim Stutzle six goals. San Jose are 5-4-1 with Macklin Celebrini on five goals and nine assists."
+  },
+  {
+   "sid": "nhl-2026020157",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-22T23:00:00Z",
+   "home": "New Jersey Devils",
+   "away": "Anaheim Ducks",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "h": {
+    "gf": 29,
+    "ga": 30,
+    "gp": 9
+   },
+   "a": {
+    "gf": 26,
+    "ga": 29,
+    "gp": 9
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "New Jersey are 5-4-0, Jake Allen has four wins and Jack Hughes seven assists. Anaheim are 4-5-0 with Leo Carlsson on nine assists and Beckett Sennecke on five goals."
+  },
+  {
+   "sid": "nhl-2026020158",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-22T23:00:00Z",
+   "home": "Pittsburgh Penguins",
+   "away": "Florida Panthers",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "h": {
+    "gf": 32,
+    "ga": 37,
+    "gp": 10
+   },
+   "a": {
+    "gf": 31,
+    "ga": 30,
+    "gp": 10
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Pittsburgh are 3-6-1, Evgeni Malkin has five goals and Erik Karlsson ten assists. Florida are 5-3-2; Matthew Tkachuk has twelve assists and Brady Tkachuk seven goals."
+  },
+  {
+   "sid": "nhl-2026020159",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-22T23:30:00Z",
+   "home": "New York Islanders",
+   "away": "Los Angeles Kings",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "h": {
+    "gf": 27,
+    "ga": 19,
+    "gp": 9
+   },
+   "a": {
+    "gf": 17,
+    "ga": 27,
+    "gp": 7
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "The Islanders are 5-3-1, Ilya Sorokin has five wins and Bo Horvat five goals. Los Angeles are 1-4-2 with Artemi Panarin on four goals."
+  },
+  {
+   "sid": "nhl-2026020160",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-23T00:00:00Z",
+   "home": "St. Louis Blues",
+   "away": "Vegas Golden Knights",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "h": {
+    "gf": 29,
+    "ga": 29,
+    "gp": 9
+   },
+   "a": {
+    "gf": 43,
+    "ga": 30,
+    "gp": 11
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "St. Louis are 4-4-1; Joel Hofer has three wins and Dylan Holloway six assists. Vegas are 8-3-0 with Jack Eichel on thirteen assists and Mark Stone on eight goals."
+  },
+  {
+   "sid": "nhl-2026020161",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-23T00:00:00Z",
+   "home": "Dallas Stars",
+   "away": "Winnipeg Jets",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "h": {
+    "gf": 22,
+    "ga": 14,
+    "gp": 9
+   },
+   "a": {
+    "gf": 24,
+    "ga": 26,
+    "gp": 9
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Dallas are 5-3-1 with three shutouts, Jake Oettinger on four wins and Mikko Rantanen on five goals. Winnipeg are 4-3-2; Kyle Connor has eight goals and Mark Scheifele six assists."
+  },
+  {
+   "sid": "nhl-2026020162",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-23T01:00:00Z",
+   "home": "Calgary Flames",
+   "away": "Minnesota Wild",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "h": {
+    "gf": 17,
+    "ga": 37,
+    "gp": 8
+   },
+   "a": {
+    "gf": 31,
+    "ga": 25,
+    "gp": 10
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Calgary are 2-6-0 with Dustin Wolf on one win and Morgan Frost on three goals. Minnesota are 6-2-2; Kirill Kaprizov has eleven goals and Quinn Hughes eleven assists."
+  },
+  {
+   "sid": "nhl-2026020163",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-23T01:00:00Z",
+   "home": "Edmonton Oilers",
+   "away": "Carolina Hurricanes",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "h": {
+    "gf": 41,
+    "ga": 27,
+    "gp": 9
+   },
+   "a": {
+    "gf": 42,
+    "ga": 27,
+    "gp": 11
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Edmonton are 7-1-1 with Connor McDavid on twenty assists and Leon Draisaitl on eight goals. Carolina are 8-2-1; Andrei Svechnikov has six goals and Jackson Blake ten assists."
+  },
+  {
+   "sid": "nhl-2026020164",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-23T02:00:00Z",
+   "home": "Seattle Kraken",
+   "away": "Utah Mammoth",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "h": {
+    "gf": 37,
+    "ga": 34,
+    "gp": 10
+   },
+   "a": {
+    "gf": 38,
+    "ga": 31,
+    "gp": 10
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Seattle are 6-3-1 with Chandler Stephenson on eight assists and Frederick Gaudreau on five goals. Utah are 7-3-0; Clayton Keller has nine assists and Nick Schmaltz seven goals."
+  },
+  {
+   "sid": "nhl-2026020165",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-23T02:00:00Z",
+   "home": "Vancouver Canucks",
+   "away": "Detroit Red Wings",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "h": {
+    "gf": 33,
+    "ga": 51,
+    "gp": 11
+   },
+   "a": {
+    "gf": 22,
+    "ga": 26,
+    "gp": 9
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Vancouver are 2-8-1 with Elias Pettersson on eight assists. Detroit are 3-3-3; Alex DeBrincat has six goals and five assists."
+  },
+  {
+   "sid": "nhl-2026020166",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-24T00:00:00Z",
+   "home": "Chicago Blackhawks",
+   "away": "Montreal Canadiens",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "h": {
+    "gf": 21,
+    "ga": 36,
+    "gp": 9
+   },
+   "a": {
+    "gf": 28,
+    "ga": 34,
+    "gp": 9
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Chicago are 3-6-0 with Anton Frondell on five assists and Spencer Knight on three wins. Montreal are 4-3-2; Cole Caufield has six goals and Nick Suzuki seven assists."
+  },
+  {
+   "sid": "nhl-2026020167",
+   "sport": "ice-hockey",
+   "comp": "NHL",
+   "start": "2026-10-24T01:00:00Z",
+   "home": "Colorado Avalanche",
+   "away": "Tampa Bay Lightning",
+   "src": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "h": {
+    "gf": 41,
+    "ga": 30,
+    "gp": 10
+   },
+   "a": {
+    "gf": 31,
+    "ga": 23,
+    "gp": 9
+   },
+   "basis": "goals for and against per game from the NHL team summary endpoint, shrunk gp/(gp+8) toward the league average of 3.0784 goals per team game; home multiplier +0.10 goals",
+   "facts": "Colorado are 5-4-1; Nathan MacKinnon has ten assists and Artturi Lehkonen eight goals. Tampa Bay are 7-2-0 with Nikita Kucherov on nine assists and Brandon Hagel on seven goals."
+  },
+  {
+   "sid": "el-E2026-68",
+   "sport": "basketball",
+   "comp": "EuroLeague round 7",
+   "start": "2026-10-23T11:00:00Z",
+   "home": "Zalgiris Kaunas",
+   "away": "LDLC ASVEL Villeurbanne",
+   "src": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-ldlc/E2026/68/",
+   "h": {
+    "gf": 490,
+    "ga": 517,
+    "gp": 6
+   },
+   "a": {
+    "gf": 527,
+    "ga": 572,
+    "gp": 6
+   },
+   "basis": "points for and against per game from the EuroLeague standings, shrunk gp/(gp+6) toward the league average of 86.4426 points per team; home +3.0",
+   "facts": "Zalgiris are 2-4, scoring 490 and conceding 517, with a 0-2 home record. ASVEL are 2-4, scoring 527 and conceding 572."
+  },
+  {
+   "sid": "el-E2026-70",
+   "sport": "basketball",
+   "comp": "EuroLeague round 7",
+   "start": "2026-10-23T12:15:00Z",
+   "home": "Olympiacos Piraeus",
+   "away": "Fenerbahce Tarfin Istanbul",
+   "src": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-fenerbahce/E2026/70/",
+   "h": {
+    "gf": 564,
+    "ga": 524,
+    "gp": 6
+   },
+   "a": {
+    "gf": 501,
+    "ga": 447,
+    "gp": 6
+   },
+   "basis": "points for and against per game from the EuroLeague standings, shrunk gp/(gp+6) toward the league average of 86.4426 points per team; home +3.0",
+   "facts": "Olympiacos are 5-1 with 564 points scored and 524 conceded, and are 2-0 in overtime games. Fenerbahce are 5-1, scoring 501 and conceding 447, with a 5-0 home record."
+  },
+  {
+   "sid": "el-E2026-69",
+   "sport": "basketball",
+   "comp": "EuroLeague round 7",
+   "start": "2026-10-23T12:45:00Z",
+   "home": "Paris Basketball",
+   "away": "Valencia Basket",
+   "src": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-valencia/E2026/69/",
+   "h": {
+    "gf": 504,
+    "ga": 545,
+    "gp": 6
+   },
+   "a": {
+    "gf": 583,
+    "ga": 537,
+    "gp": 6
+   },
+   "basis": "points for and against per game from the EuroLeague standings, shrunk gp/(gp+6) toward the league average of 86.4426 points per team; home +3.0",
+   "facts": "Paris are 1-5, scoring 504 and conceding 545. Valencia are 4-2 with the competition's most productive offence at 583 points in six games."
+  },
+  {
+   "sid": "nba-0022600006",
+   "sport": "basketball",
+   "comp": "NBA",
+   "start": "2026-10-22T23:00:00Z",
+   "home": "Philadelphia 76ers",
+   "away": "Cleveland Cavaliers",
+   "src": "https://www.nba.com/game/0022600006",
+   "h": {
+    "gf": -5.8999999999999915,
+    "ga": 0,
+    "gp": 1,
+    "net": -5.8999999999999915
+   },
+   "a": {
+    "gf": 0,
+    "ga": 0,
+    "gp": 1,
+    "net": 0
+   },
+   "basis": "preseason net rating from NBA.com's official Week 1 power rankings, used as a points-per-100 proxy with a league-average prior where the table published no value; flagged on the review page because preseason data is not regular-season form",
+   "facts": "The 76ers opened with a 106-? result at New York on 20 October and are Philadelphia's home opener; Cleveland's preseason net rating was -3.8 in the official Week 1 power rankings."
+  },
+  {
+   "sid": "nba-0022600007",
+   "sport": "basketball",
+   "comp": "NBA",
+   "start": "2026-10-23T01:30:00Z",
+   "home": "Oklahoma City Thunder",
+   "away": "Denver Nuggets",
+   "src": "https://www.nba.com/game/0022600007",
+   "h": {
+    "gf": 11.1,
+    "ga": 0,
+    "gp": 1,
+    "net": 11.1
+   },
+   "a": {
+    "gf": 0,
+    "ga": 0,
+    "gp": 1,
+    "net": 0
+   },
+   "basis": "preseason net rating from NBA.com's official Week 1 power rankings, used as a points-per-100 proxy with a league-average prior where the table published no value; flagged on the review page because preseason data is not regular-season form",
+   "facts": "Oklahoma City posted the league's best preseason net rating at +11.1 in the official Week 1 power rankings and open at home; Denver's figure was not published in that table."
+  },
+  {
+   "sid": "nba-0022600008",
+   "sport": "basketball",
+   "comp": "NBA",
+   "start": "2026-10-23T23:00:00Z",
+   "home": "Boston Celtics",
+   "away": "New York Knicks",
+   "src": "https://www.nba.com/game/0022600008",
+   "h": {
+    "gf": 17.700000000000003,
+    "ga": 0,
+    "gp": 1,
+    "net": 17.700000000000003
+   },
+   "a": {
+    "gf": 0,
+    "ga": 0,
+    "gp": 1,
+    "net": 0
+   },
+   "basis": "preseason net rating from NBA.com's official Week 1 power rankings, used as a points-per-100 proxy with a league-average prior where the table published no value; flagged on the review page because preseason data is not regular-season form",
+   "facts": "Boston went 4-0 in preseason with a +17.7 net rating, the best in the league, and Jaylen Brown has moved to Philadelphia. New York are the defending champions."
+  },
+  {
+   "sid": "nba-0022600009",
+   "sport": "basketball",
+   "comp": "NBA",
+   "start": "2026-10-24T01:30:00Z",
+   "home": "San Antonio Spurs",
+   "away": "Houston Rockets",
+   "src": "https://www.nba.com/game/0022600009",
+   "h": {
+    "gf": 8.4,
+    "ga": 0,
+    "gp": 1,
+    "net": 8.4
+   },
+   "a": {
+    "gf": 0,
+    "ga": 0,
+    "gp": 1,
+    "net": 0
+   },
+   "basis": "preseason net rating from NBA.com's official Week 1 power rankings, used as a points-per-100 proxy with a league-average prior where the table published no value; flagged on the review page because preseason data is not regular-season form",
+   "facts": "San Antonio's preseason net rating was +8.4, third in the league; Houston's figure was not published in the same official table."
+  },
+  {
+   "sid": "urc-292608",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-23T13:45:00Z",
+   "home": "Cardiff Rugby",
+   "away": "Hollywoodbets Sharks",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+   "h": {
+    "gf": 66,
+    "ga": 71,
+    "gp": 3,
+    "pts": 9
+   },
+   "a": {
+    "gf": 89,
+    "ga": 83,
+    "gp": 3,
+    "pts": 10
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "Cardiff are sixth on nine points after beating the Ospreys and losing 29-5 at Leinster. The Sharks are fifth on ten points and lost 39-22 at the Stormers last week."
+  },
+  {
+   "sid": "urc-292609",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-23T13:45:00Z",
+   "home": "Connacht Rugby",
+   "away": "Zebre Parma",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+   "h": {
+    "gf": 56,
+    "ga": 84,
+    "gp": 3,
+    "pts": 5
+   },
+   "a": {
+    "gf": 52,
+    "ga": 116,
+    "gp": 3,
+    "pts": 1
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "Connacht are fourteenth on five points, scoring 56 and conceding 84. Zebre are bottom with one point, winless in three and 64 points down on differential."
+  },
+  {
+   "sid": "urc-292610",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-23T13:45:00Z",
+   "home": "Edinburgh Rugby",
+   "away": "10bet Lions",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+   "h": {
+    "gf": 80,
+    "ga": 54,
+    "gp": 3,
+    "pts": 14
+   },
+   "a": {
+    "gf": 77,
+    "ga": 102,
+    "gp": 3,
+    "pts": 9
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "Edinburgh lead the table on 14 points with three wins from three, 80 points for and 54 against. The Lions are seventh on nine points and conceded 57 at the Bulls."
+  },
+  {
+   "sid": "urc-292611",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-24T06:45:00Z",
+   "home": "Vodacom Bulls",
+   "away": "Ulster Rugby",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+   "h": {
+    "gf": 126,
+    "ga": 54,
+    "gp": 3,
+    "pts": 11
+   },
+   "a": {
+    "gf": 88,
+    "ga": 93,
+    "gp": 3,
+    "pts": 8
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "The Bulls are third on eleven points with 126 points scored, the most in the table, after beating the Lions 57-15. Ulster are eleventh, drawing with Munster and losing to Glasgow."
+  },
+  {
+   "sid": "urc-292612",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-24T09:00:00Z",
+   "home": "DHL Stormers",
+   "away": "Scarlets",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+   "h": {
+    "gf": 81,
+    "ga": 54,
+    "gp": 3,
+    "pts": 11
+   },
+   "a": {
+    "gf": 68,
+    "ga": 85,
+    "gp": 3,
+    "pts": 7
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "The Stormers are fourth on eleven points after a 39-22 win over the Sharks at this ground. The Scarlets are twelfth on seven points, conceding 85."
+  },
+  {
+   "sid": "urc-292613",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-24T09:00:00Z",
+   "home": "Benetton Rugby",
+   "away": "Glasgow Warriors",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+   "h": {
+    "gf": 64,
+    "ga": 68,
+    "gp": 3,
+    "pts": 5
+   },
+   "a": {
+    "gf": 95,
+    "ga": 72,
+    "gp": 3,
+    "pts": 13
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "Benetton are fifteenth on five points, drawing with Ulster and losing twice. Glasgow are second on 13 points, unbeaten, with 95 points scored."
+  },
+  {
+   "sid": "urc-292614",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-24T12:00:00Z",
+   "home": "Leinster Rugby",
+   "away": "Munster Rugby",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+   "h": {
+    "gf": 75,
+    "ga": 58,
+    "gp": 3,
+    "pts": 8
+   },
+   "a": {
+    "gf": 72,
+    "ga": 74,
+    "gp": 3,
+    "pts": 9
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "Leinster are tenth on eight points but have conceded only 58, the fewest in the table, and beat Cardiff 29-5 in round three. Munster are ninth on nine points."
+  },
+  {
+   "sid": "urc-292615",
+   "sport": "rugby-union",
+   "comp": "United Rugby Championship round 4",
+   "start": "2026-10-24T13:00:00Z",
+   "home": "Ospreys",
+   "away": "Dragons RFC",
+   "src": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+   "h": {
+    "gf": 81,
+    "ga": 107,
+    "gp": 3,
+    "pts": 6
+   },
+   "a": {
+    "gf": 88,
+    "ga": 83,
+    "gp": 3,
+    "pts": 9
+   },
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "The Ospreys are thirteenth on six points, conceding 107. Dragons are eighth on nine points and drew 26-26 at Ulster after beating the Ospreys 31-38 earlier this month."
+  },
+  {
+   "sid": "mlb-849805",
+   "sport": "baseball",
+   "comp": "MLB World Series game 1",
+   "start": "2026-10-24T00:00:00Z",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "src": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-23&hydrate=team,probablePitcher",
+   "h": {
+    "gf": 832,
+    "ga": 618,
+    "gp": 162
+   },
+   "a": {
+    "gf": 736,
+    "ga": 650,
+    "gp": 162
+   },
+   "basis": "runs scored and allowed per game from the MLB regular-season standings, shrunk gp/(gp+20) toward the league average of 4.4811 runs per team; home +0.12",
+   "facts": "Milwaukee went 103-59 with a +214 run differential; Jacob Misiorowski struck out 252 in 174.2 innings at a 1.80 ERA. Tampa Bay went 98-64 and start Nick Martinez, 15-6 with a 3.10 ERA."
+  },
+  {
+   "sid": "mlb-849802",
+   "sport": "baseball",
+   "comp": "MLB World Series game 2",
+   "start": "2026-10-25T00:00:00Z",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "src": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-24&hydrate=team,probablePitcher",
+   "h": {
+    "gf": 832,
+    "ga": 618,
+    "gp": 162
+   },
+   "a": {
+    "gf": 736,
+    "ga": 650,
+    "gp": 162
+   },
+   "basis": "runs scored and allowed per game from the MLB regular-season standings, shrunk gp/(gp+20) toward the league average of 4.4811 runs per team; home +0.12",
+   "facts": "Milwaukee's 103-59 record is the best in MLB this season and they are 55-26 at home. Tampa Bay start Drew Rasmussen, 16-5 with a 2.67 ERA in 172 innings."
+  },
+  {
+   "sid": "snk-71b7dbc4",
+   "sport": "snooker",
+   "comp": "BetVictor Northern Ireland Open quarter-final",
+   "start": "2026-10-23T07:00:00Z",
+   "home": "Anthony McGill",
+   "away": "Kyren Wilson",
+   "src": "https://www.wst.tv/match-centre/71b7dbc4-9b19-4b26-b482-add32562040a",
+   "h": {
+    "strength": 23.57
+   },
+   "a": {
+    "strength": 71.68
+   },
+   "basis": "Johnstone's Paint World Rankings prize money in tens of thousands of pounds, read from wst.tv/rankings; difference divided by a 40-point scale in a logistic model",
+   "facts": "McGill is world number 33 on 235,700 pounds and beat Mateusz Baranowski 4-1 in round three. Wilson is world number nine on 716,800 pounds and edged Pang Junxu 4-3."
+  },
+  {
+   "sid": "snk-c8486960",
+   "sport": "snooker",
+   "comp": "BetVictor Northern Ireland Open quarter-final",
+   "start": "2026-10-23T07:00:00Z",
+   "home": "Sam Craigie",
+   "away": "Elliot Slessor",
+   "src": "https://www.wst.tv/match-centre/c8486960-4aa5-40f6-812a-5dcd38dae85b",
+   "h": {
+    "strength": 0.0
+   },
+   "a": {
+    "strength": 32.92
+   },
+   "basis": "Johnstone's Paint World Rankings prize money in tens of thousands of pounds, read from wst.tv/rankings; difference divided by a 40-point scale in a logistic model",
+   "facts": "Craigie came from 3-2 down to beat Matthew Selt 4-2 and beat Xu Si 4-3 in round two. Slessor is world number 23 on 329,200 pounds and beat Ricky Walden 4-1."
+  },
+  {
+   "sid": "snk-19048b0d",
+   "sport": "snooker",
+   "comp": "BetVictor Northern Ireland Open quarter-final",
+   "start": "2026-10-23T13:00:00Z",
+   "home": "Mark Williams",
+   "away": "David Gilbert",
+   "src": "https://www.wst.tv/match-centre/19048b0d-aaf4-4691-ad10-15b1b707f622",
+   "h": {
+    "strength": 74.74
+   },
+   "a": {
+    "strength": 22.12
+   },
+   "basis": "Johnstone's Paint World Rankings prize money in tens of thousands of pounds, read from wst.tv/rankings; difference divided by a 40-point scale in a logistic model",
+   "facts": "Williams is world number eight on 747,400 pounds and whitewashed Martin O'Donnell 4-0 in round three. Gilbert is world number 34 on 221,200 pounds and beat Ka Wai Cheung 4-2."
+  },
+  {
+   "sid": "ten-bg23-me82",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T06:30:00Z",
+   "home": "Nikoloz Basilashvili",
+   "away": "Adrian Mannarino",
+   "src": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "h": {
+    "strength": 21.283796653792763
+   },
+   "a": {
+    "strength": 27.258026340878022
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Basilashvili is ranked 128 and beat Marin Cilic to reach the last eight. Mannarino is ranked 79 and leads their head-to-head 1-0, having won 6-3 6-2 at a hard-court event this season."
+  },
+  {
+   "sid": "ten-te51-d994",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T08:00:00Z",
+   "home": "Stefanos Tsitsipas",
+   "away": "James Duckworth",
+   "src": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "h": {
+    "strength": 36.46916505762094
+   },
+   "a": {
+    "strength": 27.820855486487112
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Tsitsipas is ranked 39 on 1,330 points and is the seventh seed. Duckworth is ranked 73 with 774 points."
+  },
+  {
+   "sid": "ten-mm58-a0gc",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T10:00:00Z",
+   "home": "Daniil Medvedev",
+   "away": "Terence Atmane",
+   "src": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "h": {
+    "strength": 60.4979338490167
+   },
+   "a": {
+    "strength": 24.819347291981714
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Medvedev is ranked five on 3,660 points and beat Sho Shimabukuro 6-2 6-1. Atmane is ranked 98 and came through 6-7 7-6 7-6 against Mattia Bellucci."
+  },
+  {
+   "sid": "ten-bk92-ke29",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T12:30:00Z",
+   "home": "Alexander Bublik",
+   "away": "Karen Khachanov",
+   "src": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "h": {
+    "strength": 47.69696007084728
+   },
+   "a": {
+    "strength": 44.609416046390926
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Bublik is ranked 19 on 2,275 points and is the third seed. Khachanov is ranked 25 on 1,990 points and beat Tomas Machac 6-2 4-6 7-6."
+  },
+  {
+   "sid": "ten-c0bh-c0au",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T12:00:00Z",
+   "home": "Clement Chidekh",
+   "away": "Francisco Cerundolo",
+   "src": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+   "h": {
+    "strength": 19.261360284258224
+   },
+   "a": {
+    "strength": 47.11687595755899
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Chidekh is ranked 152, a qualifier, and beat Jacob Fearnley and David Goffin for his first tour-level quarter-final. Cerundolo is ranked 21 on 2,220 points."
+  },
+  {
+   "sid": "ten-gj37-l0bv",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T14:00:00Z",
+   "home": "Tallon Griekspoor",
+   "away": "Jiri Lehecka",
+   "src": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+   "h": {
+    "strength": 29.748949561287034
+   },
+   "a": {
+    "strength": 47.275786614291256
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Griekspoor is ranked 60 on 885 points. Lehecka is ranked 20 on 2,235 points and beat Raphael Collignon 6-4 6-2."
+  },
+  {
+   "sid": "ten-mw02-pl56",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T12:00:00Z",
+   "home": "Corentin Moutet",
+   "away": "Tommy Paul",
+   "src": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+   "h": {
+    "strength": 25.298221281347036
+   },
+   "a": {
+    "strength": 50.7444578254611
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Moutet is ranked 94 on 640 points. Paul is ranked 15 on 2,575 points and is the fourth seed."
+  },
+  {
+   "sid": "ten-ae14-fb98",
+   "sport": "tennis",
+   "comp": "ATP Tour quarter-final",
+   "start": "2026-10-23T13:30:00Z",
+   "home": "Daniel Altmaier",
+   "away": "Taylor Fritz",
+   "src": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+   "h": {
+    "strength": 29.13760456866693
+   },
+   "a": {
+    "strength": 53.665631459994955
+   },
+   "basis": "PIF ATP ranking points read from atptour.com/rankings/singles; square root of points used as strength, difference divided by a 55-point scale",
+   "facts": "Altmaier is ranked 65 on 849 points. Fritz is ranked 14 on 2,880 points, the second seed, and beat Pierre-Hugues Herbert 6-2 7-5."
+  },
+  {
+   "sid": "ehf-202711020101016",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-28T17:45:00Z",
+   "home": "Orlen Wisla Plock",
+   "away": "HBC Nantes",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101016/OrlenWislaPlock-HBCNantes/",
+   "h": {
+    "gf": 141,
+    "ga": 136,
+    "gp": 5
+   },
+   "a": {
+    "gf": 142,
+    "ga": 143,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Plock lead Group B on six points with a +5 goal difference. Nantes are level on six points with 142 scored and 143 conceded."
+  },
+  {
+   "sid": "ehf-202711020101004",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-28T17:45:00Z",
+   "home": "FC Porto",
+   "away": "One Veszprem HC",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101004/FCPorto-OneVeszpremHC/",
+   "h": {
+    "gf": 158,
+    "ga": 173,
+    "gp": 5
+   },
+   "a": {
+    "gf": 185,
+    "ga": 146,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Porto are third in Group A on three points, 15 goals down. Veszprem lead the group with five wins from five and a +39 difference."
+  },
+  {
+   "sid": "ehf-202711020101022",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-28T17:45:00Z",
+   "home": "HC Vardar 1961",
+   "away": "MT Melsungen",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+   "h": {
+    "gf": 154,
+    "ga": 158,
+    "gp": 5
+   },
+   "a": {
+    "gf": 138,
+    "ga": 138,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Vardar are fourth in Group B on two points, 154 scored and 158 conceded. Melsungen are second on six points with an even goal difference."
+  },
+  {
+   "sid": "ehf-202711020101067",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-28T19:45:00Z",
+   "home": "Industria Kielce",
+   "away": "Kolstad Handball",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadHandball/",
+   "h": {
+    "gf": 155,
+    "ga": 153,
+    "gp": 5
+   },
+   "a": {
+    "gf": 143,
+    "ga": 178,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Kielce are second in Group F on six points, +2. Kolstad are bottom of the group, winless with a -35 difference."
+  },
+  {
+   "sid": "ehf-202711020101036",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-28T19:45:00Z",
+   "home": "RK Celje Pivovarna Lasko",
+   "away": "HC Zagreb",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101036/RKCeljePivovarnaLasko-HCZagreb/",
+   "h": {
+    "gf": 150,
+    "ga": 188,
+    "gp": 5
+   },
+   "a": {
+    "gf": 146,
+    "ga": 158,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Celje are winless in Group C with a -38 difference. Zagreb are third on four points with 146 scored and 158 conceded."
+  },
+  {
+   "sid": "ehf-202711020101065",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-28T19:45:00Z",
+   "home": "SC Magdeburg",
+   "away": "HC Kriens-Luzern",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriens-Luzern/",
+   "h": {
+    "gf": 176,
+    "ga": 140,
+    "gp": 5
+   },
+   "a": {
+    "gf": 158,
+    "ga": 161,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Magdeburg have won all five Group F games with a +36 difference. Kriens-Luzern are third on four points at -3."
+  },
+  {
+   "sid": "ehf-202711020101026",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-28T19:45:00Z",
+   "home": "Paris Saint-Germain",
+   "away": "Aalborg Handbold",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101026/ParisSaint-Germain-AalborgHandbold/",
+   "h": {
+    "gf": 182,
+    "ga": 157,
+    "gp": 5
+   },
+   "a": {
+    "gf": 170,
+    "ga": 145,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "PSG are second in Group C on seven points with 182 scored. Aalborg lead the group on nine points and are unbeaten."
+  },
+  {
+   "sid": "ehf-202711020101046",
+   "sport": "handball",
+   "comp": "EHF Champions League men group phase",
+   "start": "2026-10-29T17:45:00Z",
+   "home": "IFK Kristianstad",
+   "away": "OTP Bank - PICK Szeged",
+   "src": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101046/IFKKristianstad-OTPBank-PICKSzeged/",
+   "h": {
+    "gf": 162,
+    "ga": 197,
+    "gp": 5
+   },
+   "a": {
+    "gf": 172,
+    "ga": 169,
+    "gp": 5
+   },
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Kristianstad are winless in Group D with a -35 difference. Szeged are third on four points after two draws."
+  },
+  {
+   "sid": "rlwc-tonga-v-lebanon",
+   "sport": "rugby-league",
+   "comp": "Rugby League World Cup round 2",
+   "start": "2026-10-23T04:05:00Z",
+   "home": "Tonga",
+   "away": "Lebanon",
+   "src": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/tonga-v-lebanon/",
+   "h": {
+    "strength": 18.0
+   },
+   "a": {
+    "strength": -24.0
+   },
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "Tonga beat England 30-12 in round one, with Addin Fonua-Blake and Haumole Olakau'atu in the pack. Lebanon lost 42-18 to Papua New Guinea."
+  },
+  {
+   "sid": "rlwc-papua-new-guinea-v-samoa",
+   "sport": "rugby-league",
+   "comp": "Rugby League World Cup round 2",
+   "start": "2026-10-23T23:25:00Z",
+   "home": "Papua New Guinea",
+   "away": "Samoa",
+   "src": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/papua-new-guinea-v-samoa/",
+   "h": {
+    "strength": 24.0
+   },
+   "a": {
+    "strength": 74.0
+   },
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "Papua New Guinea beat Lebanon 42-18 in round one. Samoa beat France 78-4, with Brian To'o and Stephen Crichton in the backline."
+  },
+  {
+   "sid": "rlwc-england-v-france",
+   "sport": "rugby-league",
+   "comp": "Rugby League World Cup round 2",
+   "start": "2026-10-24T01:35:00Z",
+   "home": "England",
+   "away": "France",
+   "src": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/england-v-france/",
+   "h": {
+    "strength": -18.0
+   },
+   "a": {
+    "strength": -74.0
+   },
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "England lost 30-12 to Tonga in round one despite a Herbie Farnworth try. France were beaten 78-4 by Samoa."
+  },
+  {
+   "sid": "rlwc-new-zealand-v-cook-islands",
+   "sport": "rugby-league",
+   "comp": "Rugby League World Cup round 2",
+   "start": "2026-10-25T00:05:00Z",
+   "home": "New Zealand",
+   "away": "Cook Islands",
+   "src": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/new-zealand-v-cook-islands/",
+   "h": {
+    "strength": -2.0
+   },
+   "a": {
+    "strength": -28.0
+   },
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "New Zealand lost 24-22 to Australia in round one, with Keano Kini at fullback. The Cook Islands lost 40-12 to Fiji."
+  },
+  {
+   "sid": "rlwc-australia-v-fiji",
+   "sport": "rugby-league",
+   "comp": "Rugby League World Cup round 2",
+   "start": "2026-10-25T04:05:00Z",
+   "home": "Australia",
+   "away": "Fiji",
+   "src": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+   "h": {
+    "strength": 2.0
+   },
+   "a": {
+    "strength": 28.0
+   },
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "Australia beat New Zealand 24-22 in round one. Fiji beat the Cook Islands 40-12."
+  },
+  {
+   "sid": "gaa-cork-psfc",
+   "sport": "gaelic-football",
+   "comp": "Cork Premier Senior Football final",
+   "start": "2026-10-25T16:00:00Z",
+   "home": "St Finbarrs",
+   "away": "Nemo Rangers",
+   "src": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+   "h": {
+    "strength": null
+   },
+   "a": {
+    "strength": null
+   },
+   "basis": "no numeric official input was published for these club sides, so no price is originated",
+   "facts": "St Finbarrs beat Nemo Rangers 1-14 to 1-13 in the 2025 final at SuperValu Pairc Ui Chaoimh. The 2026 final throws in at 16:00 on 25 October at the same venue."
+  },
+  {
+   "sid": "gaa-kerry-sfc",
+   "sport": "gaelic-football",
+   "comp": "Kerry Senior Football final",
+   "start": "2026-10-25T14:00:00Z",
+   "home": "Dr Crokes",
+   "away": "Kenmare Shamrocks",
+   "src": "https://munster.gaa.ie/event/2026-kerry-county-senior-football-championship-final-dr-crokes-v-kenmare-shamrocks/",
+   "h": {
+    "strength": null
+   },
+   "a": {
+    "strength": null
+   },
+   "basis": "no numeric official input was published for these club sides, so no price is originated",
+   "facts": "The Kerry final is scheduled for 14:00 on 25 October at Fitzgerald Stadium, refereed by Sean Joy."
+  },
+  {
+   "sid": "gaa-waterford-sfc",
+   "sport": "gaelic-football",
+   "comp": "Waterford Senior Football final",
+   "start": "2026-10-25T14:30:00Z",
+   "home": "Rathgormack",
+   "away": "The Nire",
+   "src": "https://munster.gaa.ie/fixtures/events-calendar/",
+   "h": {
+    "strength": null
+   },
+   "a": {
+    "strength": null
+   },
+   "basis": "no numeric official input was published for these club sides, so no price is originated",
+   "facts": "The Waterford final throws in at 14:30 on 25 October at Fraher Field, Dungarvan. Rathgormack beat Abbeyside-Ballinacourty 2-10 to 0-8 in the 2024 final."
+  },
+  {
+   "sid": "vb-perugia-pordenone",
+   "sport": "volleyball",
+   "comp": "SuperLega round 2",
+   "start": "2026-10-25T17:00:00Z",
+   "home": "Perugia",
+   "away": "Pordenone",
+   "src": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "h": {
+    "strength": 120.0
+   },
+   "a": {
+    "strength": 103.2967032967033
+   },
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Perugia took two points from round one, beating Cuneo 3-2 after 114 points scored and 95 conceded. Prata beat Monza 3-1."
+  },
+  {
+   "sid": "vb-trentino-cisterna",
+   "sport": "volleyball",
+   "comp": "SuperLega round 2",
+   "start": "2026-10-25T16:00:00Z",
+   "home": "Trentino",
+   "away": "Cisterna",
+   "src": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "h": {
+    "strength": 122.95081967213115
+   },
+   "a": {
+    "strength": 141.07142857142858
+   },
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Trentino swept Modena 3-0 in round one, 75 points to 61. Cisterna swept Milano 3-0 and top the early table on point ratio."
+  },
+  {
+   "sid": "vb-piacenza-modena",
+   "sport": "volleyball",
+   "comp": "SuperLega round 2",
+   "start": "2026-10-25T17:00:00Z",
+   "home": "Piacenza",
+   "away": "Modena",
+   "src": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "h": {
+    "strength": 133.92857142857142
+   },
+   "a": {
+    "strength": 81.33333333333333
+   },
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Piacenza swept Padova 3-0 in round one, scoring 75 and conceding 56. Modena were swept 3-0 by Trentino."
+  },
+  {
+   "sid": "vb-civitanova-padova",
+   "sport": "volleyball",
+   "comp": "SuperLega round 2",
+   "start": "2026-10-25T17:00:00Z",
+   "home": "Civitanova",
+   "away": "Padova",
+   "src": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "h": {
+    "strength": 120.0
+   },
+   "a": {
+    "strength": 74.66666666666667
+   },
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Civitanova won 3-0 at Verona, 78 points to 65. Padova lost 3-0 at home to Piacenza."
+  },
+  {
+   "sid": "vb-milano-cuneo",
+   "sport": "volleyball",
+   "comp": "SuperLega round 2",
+   "start": "2026-10-25T18:00:00Z",
+   "home": "Milano",
+   "away": "Cuneo",
+   "src": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "h": {
+    "strength": 70.88607594936708
+   },
+   "a": {
+    "strength": 83.33333333333333
+   },
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Milano were swept 3-0 by Cisterna, scoring 56. Cuneo took a point off Perugia in a 3-2 defeat."
+  },
+  {
+   "sid": "vb-monza-verona",
+   "sport": "volleyball",
+   "comp": "SuperLega round 2",
+   "start": "2026-10-25T17:00:00Z",
+   "home": "Monza",
+   "away": "Verona",
+   "src": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "h": {
+    "strength": 96.80851063829788
+   },
+   "a": {
+    "strength": 83.33333333333333
+   },
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Monza lost 3-1 at Prata, 94 points to 91. Verona were swept 3-0 by Civitanova."
+  },
+  {
+   "sid": "aflw-port-adelaide-v-collingwood",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-23T08:15:00Z",
+   "home": "Port Adelaide",
+   "away": "Collingwood",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 27.759999999999998
+   },
+   "a": {
+    "strength": -0.6600000000000001
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "Port Adelaide are eleventh on 16 points at 78.8 per cent. Collingwood are sixteenth on four points at 56.7 per cent and have lost captain Ruby Schleicher to a season-ending exit."
+  },
+  {
+   "sid": "aflw-st-kilda-v-brisbane",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-24T02:05:00Z",
+   "home": "St Kilda",
+   "away": "Brisbane",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": -2.9800000000000004
+   },
+   "a": {
+    "strength": 21.94
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "St Kilda are bottom with one win from ten at 45.1 per cent. Brisbane are fourteenth on 12 points and beat Port Adelaide in round ten."
+  },
+  {
+   "sid": "aflw-geelong-v-fremantle",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-24T04:05:00Z",
+   "home": "Geelong",
+   "away": "Fremantle",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 85.44
+   },
+   "a": {
+    "strength": 40.980000000000004
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "Geelong are second on 36 points at 167.2 per cent with a top-two spot in reach. Fremantle are eighth on 20 points at 104.9."
+  },
+  {
+   "sid": "aflw-gold-coast-v-richmond",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-24T05:05:00Z",
+   "home": "Gold Coast",
+   "away": "Richmond",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 63.78
+   },
+   "a": {
+    "strength": 25.78
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "Gold Coast are fifth on 28 points at 138.9 per cent. Richmond are thirteenth on 16 points at 68.9 and have lost four in a row."
+  },
+  {
+   "sid": "aflw-western-bulldogs-v-melbourne",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-24T08:15:00Z",
+   "home": "Western Bulldogs",
+   "away": "Melbourne",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 72.18
+   },
+   "a": {
+    "strength": 79.44
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "The Bulldogs are fourth on 32 points at 140.9 per cent after dismantling Carlton. Melbourne are third on 32 points at 177.2 and won the last meeting 9.8 (62) to 1.8 (14)."
+  },
+  {
+   "sid": "aflw-sydney-v-west-coast",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-25T01:35:00Z",
+   "home": "Sydney",
+   "away": "West Coast",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 58.58
+   },
+   "a": {
+    "strength": 27.04
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "Sydney are seventh on 28 points at 112.9 per cent. West Coast are twelfth on 16 points at 75.2."
+  },
+  {
+   "sid": "aflw-north-melbourne-v-adelaide",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-25T02:05:00Z",
+   "home": "North Melbourne",
+   "away": "Adelaide",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 102.38
+   },
+   "a": {
+    "strength": 40.480000000000004
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "North Melbourne top the ladder on 36 points at 251.9 per cent and are chasing a third straight flag. Adelaide are ninth on 20 points at 102.4."
+  },
+  {
+   "sid": "aflw-hawthorn-v-essendon",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-25T04:05:00Z",
+   "home": "Hawthorn",
+   "away": "Essendon",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 40.3
+   },
+   "a": {
+    "strength": -0.879999999999999
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "Hawthorn are tenth on 20 points at 101.5 per cent after a shock loss to the Giants. Essendon are seventeenth on four points at 55.6."
+  },
+  {
+   "sid": "aflw-carlton-v-greater-western-sydney",
+   "sport": "aussie-rules",
+   "comp": "AFLW round 11",
+   "start": "2026-10-25T06:05:00Z",
+   "home": "Carlton",
+   "away": "Greater Western Sydney",
+   "src": "https://www.afl.com.au/aflw",
+   "h": {
+    "strength": 62.6
+   },
+   "a": {
+    "strength": 9.64
+   },
+   "basis": "ladder points and percentage from the official AFLW ladder, combined as 2 x points + (percentage - 100)/5; difference divided by a 45-point scale",
+   "facts": "Carlton are sixth on 28 points at 133.0 per cent. The Giants are fifteenth on eight points at 68.2 and beat Hawthorn in round ten."
+  },
+  {
+   "sid": "darts-joyce-wattimena",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T17:00:00Z",
+   "home": "Ryan Joyce",
+   "away": "Jermaine Wattimena",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -15.0
+   },
+   "a": {
+    "strength": -18.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Joyce is seeded 15 for Dortmund and Wattimena 18. Wattimena was runner-up in this event in 2024."
+  },
+  {
+   "sid": "darts-ratajski-chisnall",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T17:45:00Z",
+   "home": "Krzysztof Ratajski",
+   "away": "Dave Chisnall",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -3.0
+   },
+   "a": {
+    "strength": -30.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Ratajski is the third seed after a strong European Tour season; Chisnall is seeded 30."
+  },
+  {
+   "sid": "darts-clayton-springer",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T18:45:00Z",
+   "home": "Jonny Clayton",
+   "away": "Niko Springer",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -7.0
+   },
+   "a": {
+    "strength": -26.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Clayton won the Swiss Darts Trophy in Basel in October and is seeded seven. Springer is seeded 26 and plays on home soil."
+  },
+  {
+   "sid": "darts-littler-oconnor",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T19:15:00Z",
+   "home": "Luke Littler",
+   "away": "William O'Connor",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -1.0
+   },
+   "a": {
+    "strength": -30.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Littler is the world number one and has never won this event. O'Connor broke into the world's top 32 after beating Michael van Gerwen in Maastricht."
+  },
+  {
+   "sid": "darts-nijman-schindler",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T19:45:00Z",
+   "home": "Wessel Nijman",
+   "away": "Martin Schindler",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -2.0
+   },
+   "a": {
+    "strength": -31.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Nijman is the second seed and a two-time European Tour winner in 2026. Schindler is seeded 31 and admitted he is not in his best phase."
+  },
+  {
+   "sid": "darts-doets-van-gerwen",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T20:15:00Z",
+   "home": "Kevin Doets",
+   "away": "Michael van Gerwen",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -14.0
+   },
+   "a": {
+    "strength": -10.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Doets is seeded 14. Van Gerwen has slipped to world number ten after an early exit in Maastricht."
+  },
+  {
+   "sid": "darts-rock-dobey",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T20:45:00Z",
+   "home": "Josh Rock",
+   "away": "Chris Dobey",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -10.0
+   },
+   "a": {
+    "strength": -23.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Rock won the Graz European Tour event in 2026 and is seeded ten. Dobey is seeded 23."
+  },
+  {
+   "sid": "darts-aspinall-reyes",
+   "sport": "darts",
+   "comp": "Machineseeker European Championship round one",
+   "start": "2026-10-23T21:15:00Z",
+   "home": "Nathan Aspinall",
+   "away": "Cristo Reyes",
+   "src": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "h": {
+    "strength": -6.0
+   },
+   "a": {
+    "strength": -40.0
+   },
+   "basis": "European Tour seed number from the official PDC draw bracket, negated so that seed 1 is strongest; difference divided by an 8-point scale. Unseeded players are treated as seed 40 and flagged",
+   "facts": "Aspinall is the sixth seed and a Munich winner this year. Reyes is an unseeded Spanish qualifier returning to the big stage."
+  },
+  {
+   "sid": "lol-al-v-kc",
+   "sport": "esports",
+   "comp": "League of Legends Worlds 2026 Swiss stage",
+   "start": "2026-10-23T20:00:00Z",
+   "home": "Anyone's Legend",
+   "away": "Karmine Corp",
+   "src": "https://lolesports.com/en-US/gpr/2026/current",
+   "h": {
+    "strength": 1409.0
+   },
+   "a": {
+    "strength": 1409.0
+   },
+   "basis": "Global Power Score from Riot's official lolesports.com Global Power Rankings (updated 19 October 2026); Elo-style logistic with a 400-point scale",
+   "facts": "Anyone's Legend and Karmine Corp share a Global Power Score of 1,409 points. Karmine Corp are 36-13 across 2026 and came through the play-in stage 3-2 against Cloud9."
+  },
+  {
+   "sid": "lol-g2-v-dk",
+   "sport": "esports",
+   "comp": "League of Legends Worlds 2026 Swiss stage",
+   "start": "2026-10-23T21:00:00Z",
+   "home": "G2 Esports",
+   "away": "Dplus KIA",
+   "src": "https://lolesports.com/en-US/gpr/2026/current",
+   "h": {
+    "strength": 1480.0
+   },
+   "a": {
+    "strength": 1409.0
+   },
+   "basis": "Global Power Score from Riot's official lolesports.com Global Power Rankings (updated 19 October 2026); Elo-style logistic with a 400-point scale",
+   "facts": "G2 are fourth on 1,480 points with a 33-15 record and field Caps, Hans Sama and BrokenBlade. Dplus KIA are seventh on 1,409."
+  },
+  {
+   "sid": "lol-tlaw-v-cfo",
+   "sport": "esports",
+   "comp": "League of Legends Worlds 2026 Swiss stage",
+   "start": "2026-10-23T22:00:00Z",
+   "home": "Team Liquid Alienware",
+   "away": "CTBC Flying Oyster",
+   "src": "https://lolesports.com/en-US/gpr/2026/current",
+   "h": {
+    "strength": 1369.0
+   },
+   "a": {
+    "strength": 1314.0
+   },
+   "basis": "Global Power Score from Riot's official lolesports.com Global Power Rankings (updated 19 October 2026); Elo-style logistic with a 400-point scale",
+   "facts": "Team Liquid Alienware are eleventh on 1,369 points. CTBC Flying Oyster are twentieth on 1,314."
+  },
+  {
+   "sid": "lol-los-v-t1",
+   "sport": "esports",
+   "comp": "League of Legends Worlds 2026 Swiss stage",
+   "start": "2026-10-23T23:00:00Z",
+   "home": "LOS",
+   "away": "T1",
+   "src": "https://lolesports.com/en-US/gpr/2026/current",
+   "h": {
+    "strength": 1183.0
+   },
+   "a": {
+    "strength": 1471.0
+   },
+   "basis": "Global Power Score from Riot's official lolesports.com Global Power Rankings (updated 19 October 2026); Elo-style logistic with a 400-point scale",
+   "facts": "LOS are thirty-ninth on 1,183 points after a 23-9 domestic season. T1 are fifth on 1,471."
+  },
+  {
+   "sid": "lol-tsw-v-lyon",
+   "sport": "esports",
+   "comp": "League of Legends Worlds 2026 Swiss stage",
+   "start": "2026-10-24T00:00:00Z",
+   "home": "Team Secret Whales",
+   "away": "LYON",
+   "src": "https://lolesports.com/en-US/gpr/2026/current",
+   "h": {
+    "strength": 1368.0
+   },
+   "a": {
+    "strength": 1424.0
+   },
+   "basis": "Global Power Score from Riot's official lolesports.com Global Power Rankings (updated 19 October 2026); Elo-style logistic with a 400-point scale",
+   "facts": "Team Secret Whales are twelfth on 1,368 points with a 26-6 record. LYON are sixth on 1,424."
+  },
+  {
+   "sid": "f1-usgp",
+   "sport": "motor-racing",
+   "comp": "Formula 1 United States Grand Prix",
+   "start": "2026-10-25T19:00:00Z",
+   "home": "United States Grand Prix",
+   "away": "Outright",
+   "src": "https://www.formula1.com/en/results/2026/drivers",
+   "h": {
+    "strength": 0.0
+   },
+   "a": {
+    "strength": 0.0
+   },
+   "basis": "share of 2026 drivers' championship points from formula1.com; a points share is a season-long measure, not a single-race model, so every price here is capped at low confidence",
+   "facts": "Kimi Antonelli leads the championship on 340 points from 17 rounds, 102 clear of George Russell on 238. Max Verstappen has won the last two races in Bahrain and Singapore.",
+   "contenders": [
+    [
+     "Kimi Antonelli",
+     340
+    ],
+    [
+     "George Russell",
+     238
+    ],
+    [
+     "Lewis Hamilton",
+     229
+    ],
+    [
+     "Max Verstappen",
+     221
+    ],
+    [
+     "Charles Leclerc",
+     215
+    ],
+    [
+     "Lando Norris",
+     201
+    ]
+   ]
+  },
+  {
+   "sid": "golf-stifel",
+   "sport": "golf",
+   "comp": "PGA Tour Champions Stifel Charity Classic",
+   "start": "2026-10-23T17:45:00Z",
+   "home": "Stifel Charity Classic",
+   "away": "Outright",
+   "src": "https://www.pgatour.com/pgatour-champions/tournaments/2026/stifel-charity-classic/S2026625/overview",
+   "h": {
+    "strength": 0.0
+   },
+   "a": {
+    "strength": 0.0
+   },
+   "basis": "share of published 2026 Charles Schwab Cup money for the three players whose figures were published; the remaining 69 players in the 72-man field are not modelled and the market is flagged as partial",
+   "facts": "Stewart Cink leads the Charles Schwab Cup on $3,798,700 with five wins in 2026, including the Senior PGA Championship and Regions Tradition. Steven Alker has four wins and $2,265,087.",
+   "contenders": [
+    [
+     "Stewart Cink",
+     3798700
+    ],
+    [
+     "Zach Johnson",
+     3295614
+    ],
+    [
+     "Steven Alker",
+     2265087
+    ]
+   ]
+  },
+  {
+   "sid": "gbgb-romford-final",
+   "sport": "greyhounds",
+   "comp": "Coral 100 Champion Stakes final, Romford",
+   "start": "2026-10-23T18:30:00Z",
+   "home": "Romford 575m final",
+   "away": "Outright",
+   "src": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/",
+   "h": {
+    "strength": 0.0
+   },
+   "a": {
+    "strength": 0.0
+   },
+   "basis": "semi-final winning times published by GBGB converted to a weight of 1/(time - 35.00); the two runners whose times were not published are given the slowest published time plus 0.10 and flagged",
+   "facts": "Grouchos Gregor won the third semi-final in 35.36sec for trainer Kelly Wilton. Aayamza Legend won the second in 35.75 and Bubbly Holly the first in 35.95; Newinn Jolly was withdrawn with a urine infection.",
+   "contenders": [
+    [
+     "Grouchos Gregor",
+     2.7777777777777777
+    ],
+    [
+     "Aayamza Legend",
+     1.3333333333333333
+    ],
+    [
+     "Bubbly Holly",
+     1.0526315789473684
+    ],
+    [
+     "Fortanach Col",
+     1.6666666666666667
+    ],
+    [
+     "Don Cici",
+     1.0
+    ]
+   ]
+  },
+  {
+   "sid": "cricket-afg-zim-final",
+   "sport": "cricket",
+   "comp": "UAE ODI Tri-Series final",
+   "start": "2026-10-23T11:30:00Z",
+   "home": "Afghanistan",
+   "away": "Zimbabwe",
+   "src": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi",
+   "h": {
+    "strength": 93.0
+   },
+   "a": {
+    "strength": 65.0
+   },
+   "basis": "ICC men's ODI team rating from icc-cricket.com; difference divided by a 40-point scale",
+   "facts": "Afghanistan are eighth on 93 ODI rating points and Zimbabwe eleventh on 65. Sediqullah Atal made 102 from 110 balls in Afghanistan's 158-run win over Zimbabwe on 19 October, and Rashid Khan took 4/17."
+  },
+  {
+   "sid": "cricket-indw-zimw",
+   "sport": "cricket",
+   "comp": "India Women v Zimbabwe Women, first ODI",
+   "start": "2026-10-23T08:00:00Z",
+   "home": "India Women",
+   "away": "Zimbabwe Women",
+   "src": "https://www.icc-cricket.com/rankings/team-rankings/womens/odi",
+   "h": {
+    "strength": 124.0
+   },
+   "a": {
+    "strength": 14.0
+   },
+   "basis": "ICC women's ODI team rating from icc-cricket.com; difference divided by a 40-point scale",
+   "facts": "India Women are third on 124 rating points and Zimbabwe Women twelfth on 14. Smriti Mandhana holds the top spot in the ICC women's ODI batting rankings on 790 points."
+  }
+ ]
+}

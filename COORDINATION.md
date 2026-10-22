@@ -2996,3 +2996,21 @@ No fresh sports facts are claimed. Official sports hosts are outside this sandbo
 ### `arena/e52155e1-olbg2` — implementation and verification complete
 
 Root/current integration, automatic all-layer HTML link discovery, accurate file-check disclosures, current seed/model/build CI and drift gate, README entry, and five regression tests completed. Full workflow rebuild replay succeeded; 343 tests passed; zero local file link errors across discovered HTML. No current data or predictions changed. Sources, limits, unresolved coverage and verification gaps: `research/integration-e52155e1.md`; public review links on `integration.html` and `current/flagged.html`. Source verification is **not** freshly certified. Publication follows. Initial branch pull returned “remote ref not found” because the Arena branch was new; pulled/rebased against main before its first push, then published the claim successfully. No merge conflict or other session scope edit.
+
+## Session `arena/103d996c-olbg2` — fresh-capture layer `/relay/` (claim 2026-10-22 21:00 UTC)
+
+Owner: `arena/103d996c-olbg2`. Branch fixed by Arena to `arena/103d996c-olbg2` (naming deviation, as prior Arena sessions). At claim time PR #124 (`arena/83346ec9-olbg2`, final-integration role) is **open and actively committing** (last commit `a0a3ca9`, 20:54:03Z) — that role and its file scope are NOT touched by this session.
+
+**Gap this session closes:** unlike the two integration sessions that followed it, this sandbox's *web fetch tool* **can reach official sports endpoints** (verified at claim time: `api-web.nhle.com/v1/score/2026-10-23` and `statsapi.mlb.com/api/v1/schedule` both returned live JSON first-hand). This session therefore performs a **new first-hand capture** for the window 2026-10-22 → 2026-10-29, prioritising the ten sports that publish zero rows in `/current/` (Tennis, Darts, Cricket, Volleyball, Rugby League, Golf, eSports, Aussie Rules, Gaelic Football, Greyhounds) plus refreshed rows for the covered sports, aiming at five in-band high-confidence picks per sport where fixtures exist.
+
+| # | Task | Status | Owner | File scope (non-overlapping; new files only) |
+|---|---|---|---|---|
+| R1 | Claim board + concurrent-session check | done 21:00Z | `arena/103d996c-olbg2` | `COORDINATION.md` (append-only) |
+| R2 | First-hand official captures, window 2026-10-22→2026-10-29, all 17 eligible sports | in progress | `arena/103d996c-olbg2` | `data/relay/capture/**`, `data/relay/matches.json`, `research/relay-103d996c.md` |
+| R3 | Line origination for every captured fixture (win match, handicap, match total) | unclaimed→this session | `arena/103d996c-olbg2` | `scripts/relay_seed.py`, `scripts/relay_model.py`, `data/relay/lines.json` |
+| R4 | Band gate (high = ≥70% AND −250…+10000) + ≥30-word unique predictions, 5-per-sport where possible | unclaimed→this session | `arena/103d996c-olbg2` | `data/relay/predictions.json` |
+| R5 | `/relay/` GH Pages layer (landing, matches, lines, picks, predictions, flagged, sources, per-sport pages) | unclaimed→this session | `arena/103d996c-olbg2` | `scripts/relay_build.py`, `relay/**` |
+| R6 | Regression tests + link audit for the new layer | unclaimed→this session | `arena/103d996c-olbg2` | `tests/test_relay_103d996c.py` |
+| R7 | Integration: merge main **after PR #124 merges**, rebuild, tests, link audit, PR → merge → Pages confirm, log here | unclaimed→this session | `arena/103d996c-olbg2` | shared outputs at integration only |
+
+Rules: a value is published only if an official governing-body/league/tour endpoint returned it in this session, with the verbatim response stored under `data/relay/capture/`; anything else stays blank + flagged. No bookmaker price is read; nothing is inferred. Root navigation, CI workflow, `integration_audit.py` and every other session's files stay untouched; requests for them are logged at R7.

@@ -25,6 +25,16 @@ def findings():
         for fact, url in pred['facts_used']:
             rows.append((f"Survey {pred['id']}: {fact}", 'UNVERIFIED IN THIS AUDIT',
                          'Structural script check records the primary governing-body URL cited by this prediction; inspect the linked official source directly for manual verification.', url))
+    archived_doc = load('data/survey/archived_predictions.json')
+    for pred in archived_doc['predictions']:
+        for fact, url in pred['facts_used']:
+            rows.append((f"Survey archived {pred['id']}: {fact}", 'UNVERIFIED IN THIS AUDIT',
+                         'Narrative regraded out of high by the 2026-10-22 [-250, +10000] odds window; primary governing-body URL retained for manual verification.', url))
+    rows.append(('Odds-window confidence remediation (2026-10-22)', 'RULE APPLIED ACROSS LAYERS',
+                 'High now requires model probability >= 70% and a fair no-vig American price in [-250, +10000]. '
+                 'Root keeps 2 window-compliant highs and archives 7 narratives; live archives 4; survey archives 5; '
+                 'verified keeps 4 and archives 20. Nothing was deleted; archived narratives keep their sources.',
+                 'research/odds-window-audit-1bb45081.md'))
     return rows
 
 

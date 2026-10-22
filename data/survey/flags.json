@@ -1365,5 +1365,13 @@
         "reason": "Polish PlusLiga clubs sit at M=1 match played and plusliga.pl/table.html cross-redirects to tauronliga.pl."
       }
     ]
+  },
+  {
+    "id": "F-16",
+    "severity": "model-divergence",
+    "area": "confidence-rule",
+    "title": "Odds-window remediation: 5 high narratives regraded (fair price shorter than -250) and archived",
+    "detail": "Since 2026-10-22 high confidence requires probability >= 70% with fair American odds inside [-250, +10000]. None of the five prior survey picks clears the bound; their narratives move to data/survey/archived_predictions.json without deletion.",
+    "action": "See research/odds-window-audit-1bb45081.md and the archived predictions table on /survey/."
   }
 ]

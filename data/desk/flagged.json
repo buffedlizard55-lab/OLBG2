@@ -106,6 +106,17 @@
       ],
       "state": "open",
       "owner": "db99ed90"
+    },
+    {
+      "id": "flag-odds-window",
+      "category": "Confidence-rule remediation",
+      "item": "Odds-window gate (2026-10-22): four desk narratives regraded out of high and archived",
+      "detail": "High confidence now additionally requires probability >= 70% and a fair no-vig American price within [-250, +10000]. Buffalo (65.0%, -185), Boston (68.6%, -217) and Dallas (64.7%, -182) fail the 70% floor and drop to medium; the Florida/Pittsburgh narrative (54.5%) was already low. Minnesota at Calgary (70.1%, -233) remains the desk's sole high pick. The four displaced narratives are retained verbatim in data/desk/archived_picks.json with reasons and rendered in the archive section of picks.html. Full remediation record: research/odds-window-audit-1bb45081.md in this repository.",
+      "sources": [
+        "https://www.nhl.com/schedule/2026-10-22"
+      ],
+      "state": "open",
+      "owner": "1bb45081"
     }
   ]
 }

@@ -216,7 +216,7 @@ def build_rows(data: dict) -> list[dict]:
         edge = abs(ml["p_home"] - 0.5)
         evidence = bool(pick and fx["official_url"] in pick["sources"])
         label, reason = confidence_label(edge, evidence=evidence, sample_ok=sample_ok,
-                                        baseline=baseline, params=params)
+                                        baseline=baseline, params=params, probability=probability)
         if pick and not evidence:
             raise ValueError(f"prediction for {fx['id']} must cite its own official page")
         rows.append({
@@ -424,7 +424,7 @@ def build() -> dict:
         + kpi("Fixtures verified", str(len(rows)), "each with its own official page")
         + kpi("Sports covered", str(len(covered)), "NHL and NBA")
         + kpi("Markets priced", str(markets_priced), "money line, handicap, total")
-        + kpi("High confidence", str(len(high)), "model edge + evidence pack")
+        + kpi("High confidence", str(len(high)), "edge + evidence + >=70% prob in [-250,+10000]")
         + kpi("Flagged items", str(len(flags)), "open questions, published")
         + "</div>"
     )
@@ -434,7 +434,8 @@ def build() -> dict:
     )
     legends = (
         '<div class="legend"><span class="muted">Confidence is computed, not chosen:</span>'
-        f' high ≥ {params["high_edge"] * 100:.0f} points of win-probability edge <em>and</em> an official evidence pack; '
+        f' high ≥ {params["high_edge"] * 100:.0f} points of win-probability edge <em>and</em> an official evidence pack '
+        '<em>and</em> (since 2026-10-22) probability ≥ 70% with a fair American price in [-250, +10000]; '
         f'medium ≥ {params["medium_edge"] * 100:.0f} pts; everything else is low.</div>'
     )
     cov = (
@@ -477,15 +478,34 @@ def build() -> dict:
         + f' · {a(r["fixture"]["official_url"], "official game page")}</div></article>'
         for r in high
     )
+    archived_picks = load("archived_picks.json")["picks"]
+    archive_cards = "".join(
+        f'<article class="prediction-card" data-conf="archived"><div class="eyebrow">ARCHIVED NARRATIVE <span class="dash"></span> '
+        f'{esc(item["fixture_id"])}</div>'
+        f'<h3>{esc(item["selection"])} <span class="price mono">{item["american_odds"]:+d}</span></h3>'
+        f'<p class="matchup-line">Probability {pct(item["probability"])} · fair decimal {num(item["fair_odds"])} · '
+        f'regraded to {esc(item["regraded_to"])}</p>'
+        f'<p>{esc(item["narrative"])}</p>'
+        f'<div class="facts"><ul>' + "".join(f"<li>{esc(f)}</li>" for f in item["facts"]) + "</ul></div>"
+        f'<p class="small muted">{esc(item["archive_reason"])}</p>'
+        f'<div class="src">' + " ".join(a(u, f"source {i + 1}") for i, u in enumerate(item["sources"]))
+        + "</div></article>"
+        for item in archived_picks
+    )
     picks_body = (
         f'<section class="subhero"><div class="eyebrow">PICK SHEET <span class="dash"></span> {esc(meta["snapshot_utc"])}</div>'
         '<h1>One selection per match<span class="accent">.</span></h1>'
-        '<p>Model probability, fair price, edge and confidence for every verified fixture. Predictions appear in full '
-        f'for the {len(high)} high-confidence picks; medium and low picks carry the model line only.</p></section>'
+        '<p>Model probability, fair price, edge and confidence for every verified fixture. Since 2026-10-22 a high label '
+        'also needs at least 70% probability and a fair American price inside <strong>[-250, +10000]</strong>. Predictions '
+        f'appear in full for the {len(high)} high-confidence pick; displaced narratives are archived below, not deleted.</p></section>'
         '<div class="kpis small">' + kpi("High", str(len(high)), "with written prediction") + kpi("Medium", str(len(medium)), "model edge only")
-        + kpi("Low", str(len(low)), "no edge") + "</div>"
+        + kpi("Low", str(len(low)), "no edge") + kpi("Archived", str(len(archived_picks)), "odds-window regrades") + "</div>"
         + '<div class="section-head"><div><div class="eyebrow">PREDICTIONS</div><h2>High confidence</h2></div></div>'
         + '<div class="prediction-grid">' + high_cards + "</div>"
+        + f'<div class="section-head below"><div><div class="eyebrow">ARCHIVE</div><h2>Archived narratives ({len(archived_picks)})</h2></div></div>'
+        + '<p class="small muted">Write-ups removed from the active high set by the 2026-10-22 odds-window rule; full text and '
+        'citations retained in <code>data/desk/archived_picks.json</code>.</p>'
+        + '<div class="prediction-grid">' + archive_cards + "</div>"
         + '<div class="section-head below"><div><div class="eyebrow">ALL SELECTIONS</div><h2>Pick sheet</h2></div></div>'
         + filters + pick_table(rows, show_narrative=True)
     )
@@ -591,7 +611,10 @@ league scoring baseline is loaded. These are opening-style lines, not informed p
 <h2>Confidence</h2>
 <ul>
 <li><b>High</b> requires at least {p["high_edge"] * 100:.0f} points of model edge, a games-played sample of at least
-{p["min_games_for_high"]} per side, and an evidence pack: the fixture's own official game page must be cited in the prediction.</li>
+{p["min_games_for_high"]} per side, an evidence pack (the fixture's own official game page cited in the prediction),
+and since 2026-10-22 a model probability of at least 70% whose fair no-vig American price sits inside [-250, +10000].
+Selections failing that final gate are capped at medium and their narratives archived in
+<code>data/desk/archived_picks.json</code>.</li>
 <li><b>Medium</b> requires at least {p["medium_edge"] * 100:.0f} points of edge. A larger edge without an evidence pack is capped at medium.</li>
 <li><b>Low</b> covers everything else, including every baseline NBA line.</li>
 </ul>

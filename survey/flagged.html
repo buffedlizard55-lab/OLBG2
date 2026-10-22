@@ -9,8 +9,8 @@
 <h1>OLBG2</h1><span class="tag">Reverse-engineered OLBG match intelligence &middot; retrieved 2026-10-21</span>
 </div><nav><a href="../index.html" class="">Main dashboard</a><a href="../verified/index.html" class="">Verified Desk</a><a href="index.html" class="">Survey dashboard</a><a href="sports.html" class="">Sports</a><a href="lines.html" class="">Our Lines</a><a href="picks.html" class="">Picks</a><a href="predictions.html" class="">Predictions</a><a href="methodology.html" class="">Methodology</a><a href="verification.html" class="">Verification</a><a href="flagged.html" class="on">Flagged for Review</a><a href="excluded.html" class="">Excluded Sports</a></nav></div></header>
 <main class="wrap"><h2>Flagged for Review</h2>
-<p class="lead">7 flags. A flag never blocks publication; it marks something a human should look at &mdash; a source conflict, a scope decision, a coverage gap, or a value we could not verify. 119 individual event rows carry no originated line and are itemised under F-15.</p>
-<div class="kpis"><div class="kpi"><div class="n">7</div><div class="l">flags</div></div><div class="kpi"><div class="n">0</div><div class="l">source conflicts</div></div><div class="kpi"><div class="n">0</div><div class="l">irregularities</div></div><div class="kpi"><div class="n">2</div><div class="l">scope decisions</div></div><div class="kpi"><div class="n">1</div><div class="l">coverage gaps</div></div><div class="kpi"><div class="n">119</div><div class="l">unverified rows</div></div></div>
+<p class="lead">8 flags. A flag never blocks publication; it marks something a human should look at &mdash; a source conflict, a scope decision, a coverage gap, or a value we could not verify. 119 individual event rows carry no originated line and are itemised under F-15.</p>
+<div class="kpis"><div class="kpi"><div class="n">8</div><div class="l">flags</div></div><div class="kpi"><div class="n">0</div><div class="l">source conflicts</div></div><div class="kpi"><div class="n">0</div><div class="l">irregularities</div></div><div class="kpi"><div class="n">2</div><div class="l">scope decisions</div></div><div class="kpi"><div class="n">1</div><div class="l">coverage gaps</div></div><div class="kpi"><div class="n">119</div><div class="l">unverified rows</div></div></div>
 <div class="flag sev-environment" id="F-01"><div class="id">F-01 &middot; environment &middot; collection</div><h4>Sandbox bash egress is restricted; all primary feeds fetched via fetch_page</h4><p>Direct curl to sports domains is blocked in bash; every OLBG hub and governing-body table was read live on 2026-10-21 via fetch_page.</p>
 <p class="act"><strong>Action:</strong> Documented for reproducibility.</p>
 </div>
@@ -629,6 +629,9 @@
 <td class="small">indexed snapshot</td>
 <td class="small">Polish PlusLiga clubs sit at M=1 match played and plusliga.pl/table.html cross-redirects to tauronliga.pl.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 </tbody></table></div>
+</div>
+<div class="flag sev-model-divergence" id="F-16"><div class="id">F-16 &middot; model-divergence &middot; confidence-rule</div><h4>Odds-window remediation: 5 high narratives regraded (fair price shorter than -250) and archived</h4><p>Since 2026-10-22 high confidence requires probability &gt;= 70% with fair American odds inside [-250, +10000]. None of the five prior survey picks clears the bound; their narratives move to data/survey/archived_predictions.json without deletion.</p>
+<p class="act"><strong>Action:</strong> See research/odds-window-audit-1bb45081.md and the archived predictions table on /survey/.</p>
 </div></main>
 <footer><div class="wrap">
 Built from <code>data/*.json</code> by <code>scripts/build_site.py</code>. Every published value carries a source

@@ -46,7 +46,9 @@ class IntegrationTests(unittest.TestCase):
             self.assertEqual(audit.local_link_errors(root), [])
 
     def test_each_survey_narrative_fact_is_disclosed(self):
-        facts = sum(len(p['facts_used']) for p in audit.load('data/survey/predictions.json'))
+        active = audit.load('data/survey/predictions.json')
+        archived = audit.load('data/survey/archived_predictions.json')['predictions']
+        facts = sum(len(p['facts_used']) for p in active + archived)
         self.assertEqual(sum(row[1] == 'UNVERIFIED IN THIS AUDIT' for row in audit.findings()), facts)
 
     def test_disclosures_are_escaped_and_link_verified_desk(self):

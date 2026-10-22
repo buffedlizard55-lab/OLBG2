@@ -8,6 +8,28 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "survey"
 DIVERGENCE_CAP = 15.0
 
+# 2026-10-22 odds-window remediation: HIGH requires probability >= 70% AND a
+# fair no-vig American price inside the brief's [-250, +10000] window.
+HIGH_PROB_FLOOR = 0.70
+ODDS_WINDOW_MIN_AMERICAN = -250
+ODDS_WINDOW_MAX_AMERICAN = 10000
+
+
+def _fair_decimal(p):
+    return round(1.0 / max(p, 1e-6), 2)
+
+
+def _american(decimal_odds):
+    if decimal_odds >= 2.0:
+        return round((decimal_odds - 1.0) * 100.0)
+    return round(-100.0 / (decimal_odds - 1.0))
+
+
+def _window_high_eligible(p):
+    american = _american(_fair_decimal(p))
+    return (p >= HIGH_PROB_FLOOR
+            and ODDS_WINDOW_MIN_AMERICAN <= american <= ODDS_WINDOW_MAX_AMERICAN)
+
 lines_doc = json.loads((DATA / "lines.json").read_text())
 lines = lines_doc["lines"]
 FORM = lines_doc["verified_inputs"]["form"]
@@ -77,7 +99,14 @@ def confidence(rec):
     if capped:
         return "low", notes
     if tier in ("tier1", "tier2") and rec.get("form_verified") and p >= 0.72:
-        return "high", notes
+        if _window_high_eligible(p):
+            return "high", notes
+        notes.append(
+            f"Probability {p * 100:.1f}% clears the high floor but its fair American price "
+            f"{_american(_fair_decimal(p)):+d} is shorter than -250 (outside the [-250, +10000] "
+            "odds window); capped at medium and narrative archived on 2026-10-22."
+        )
+        return "medium", notes
     if tier in ("tier1", "tier2") and p >= 0.60:
         return "medium", notes
     return "low", notes
@@ -294,9 +323,52 @@ flags.append(dict(
     items=missing,
 ))
 
+# Split narratives by the post-window graded label: active predictions track
+# high rows 1:1 (the survey_verify invariant); displaced narratives are
+# archived verbatim with the regrade reason and fair American price.
+graded = {r["match"]: r for r in lines}
+active_predictions, archived_predictions = [], []
+window_reason = (
+    "Fair no-vig price shorter than -250 American, outside the brief's "
+    "[-250, +10000] high-confidence odds window; regraded on 2026-10-22 and "
+    "narrative retained verbatim."
+)
+for p in PREDICTIONS:
+    rec = graded.get(p["match"])
+    if rec is not None and rec["confidence"] == "high":
+        active_predictions.append(p)
+        continue
+    prob = rec["pick_probability"] if rec else None
+    entry = dict(p)
+    if prob is not None:
+        entry["probability"] = prob
+        entry["fair_odds"] = _fair_decimal(prob)
+        entry["american_odds"] = _american(entry["fair_odds"])
+    entry["regraded_to"] = rec["confidence"] if rec else "medium"
+    entry["archive_reason"] = window_reason
+    archived_predictions.append(entry)
+
+if archived_predictions:
+    flags.append(dict(
+        id="F-16", severity="model-divergence", area="confidence-rule",
+        title=(f"Odds-window remediation: {len(archived_predictions)} high narratives regraded "
+               "(fair price shorter than -250) and archived"),
+        detail=("Since 2026-10-22 high confidence requires probability >= 70% with fair American "
+                "odds inside [-250, +10000]. None of the five prior survey picks clears the bound; "
+                "their narratives move to data/survey/archived_predictions.json without deletion."),
+        action="See research/odds-window-audit-1bb45081.md and the archived predictions table on /survey/.",
+    ))
+
 flags.sort(key=lambda f: f["id"])
 (DATA / "flags.json").write_text(json.dumps(flags, indent=2, ensure_ascii=False) + "\n")
 (DATA / "picks.json").write_text(json.dumps(picks, indent=2, ensure_ascii=False) + "\n")
-(DATA / "predictions.json").write_text(json.dumps(PREDICTIONS, indent=2, ensure_ascii=False) + "\n")
+(DATA / "predictions.json").write_text(json.dumps(active_predictions, indent=2, ensure_ascii=False) + "\n")
+(DATA / "archived_predictions.json").write_text(json.dumps({
+    "archived_at": "2026-10-22",
+    "rule": "fair American odds must fall within [-250, +10000] and probability >= 0.70",
+    "count": len(archived_predictions),
+    "predictions": archived_predictions,
+}, indent=2, ensure_ascii=False) + "\n")
 (DATA / "lines.json").write_text(json.dumps(lines_doc, indent=2, ensure_ascii=False) + "\n")
-print("survey_analyse: picks=", len(picks), "predictions=", len(PREDICTIONS), "unlined=", len(missing))
+print("survey_analyse: picks=", len(picks), "active_predictions=", len(active_predictions),
+      "archived_predictions=", len(archived_predictions), "unlined=", len(missing))

@@ -82,8 +82,8 @@
       "price": -185,
       "model_probability": 0.65,
       "edge": 0.15,
-      "confidence": "high",
-      "confidence_reason": "Model edge 0.150 with an official evidence pack and a sufficient sample.",
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.150 clears the high bar, but no evidence pack is attached.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -98,7 +98,7 @@
           "price": -175
         }
       ],
-      "prediction": "The Flyers have scored 17 goals in 11 games, a 1.55 goals-per-game rate that NHL.com ranks 32nd, and their power play converts at 12.9%. Buffalo counters with Tage Thompson on five goals and Zach Benson on six assists inside a 3.00 goals-per-game attack. Take the Sabres on the money line at home."
+      "prediction": null
     },
     {
       "id": "nhl-2026020153",
@@ -258,8 +258,8 @@
       "price": -220,
       "model_probability": 0.6857,
       "edge": 0.1857,
-      "confidence": "high",
-      "confidence_reason": "Model edge 0.186 with an official evidence pack and a sufficient sample.",
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.186 clears the high bar, but no evidence pack is attached.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -274,7 +274,7 @@
           "price": -170
         }
       ],
-      "prediction": "Boston is 7-2-1, allows 2.20 goals per game, fourth in the NHL, and Jeremy Swayman is 6-1-1 with a .928 save percentage. Nashville has three wins in eight games despite Roman Josi's nine points and a 29.6% power play. Back the Bruins on the money line at TD Garden."
+      "prediction": null
     },
     {
       "id": "nhl-2026020155",
@@ -626,7 +626,7 @@
           "price": -125
         }
       ],
-      "prediction": "Florida has won three in a row and scores 3.33 goals per game, ninth in the NHL, with Matthew Tkachuk on 14 points and Brady Tkachuk on six goals. Pittsburgh has lost four straight, concedes 3.70 goals per game (27th) and its goalies share an .867 save percentage. Florida is the lean, though the model edge is thin."
+      "prediction": null
     },
     {
       "id": "nhl-2026020159",
@@ -865,8 +865,8 @@
       "price": -185,
       "model_probability": 0.6468,
       "edge": 0.1468,
-      "confidence": "high",
-      "confidence_reason": "Model edge 0.147 with an official evidence pack and a sufficient sample.",
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.147 clears the high bar, but no evidence pack is attached.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -881,7 +881,7 @@
           "price": -255
         }
       ],
-      "prediction": "Dallas allows 1.56 goals per game, the best rate in the NHL, with Jake Oettinger at 4-2-1, a .945 save percentage and three shutouts. Winnipeg has lost two straight and scores 2.67 goals per game, 23rd in the league. Take the Stars on the money line at American Airlines Center."
+      "prediction": null
     },
     {
       "id": "nhl-2026020162",
@@ -951,7 +951,7 @@
       "model_probability": 0.701,
       "edge": 0.201,
       "confidence": "high",
-      "confidence_reason": "Model edge 0.201 with an official evidence pack and a sufficient sample.",
+      "confidence_reason": "Model edge 0.201 with an official evidence pack, sufficient sample, and an in-window fair price (-233).",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -2024,6 +2024,17 @@
       ],
       "state": "open",
       "owner": "db99ed90"
+    },
+    {
+      "id": "flag-odds-window",
+      "category": "Confidence-rule remediation",
+      "item": "Odds-window gate (2026-10-22): four desk narratives regraded out of high and archived",
+      "detail": "High confidence now additionally requires probability >= 70% and a fair no-vig American price within [-250, +10000]. Buffalo (65.0%, -185), Boston (68.6%, -217) and Dallas (64.7%, -182) fail the 70% floor and drop to medium; the Florida/Pittsburgh narrative (54.5%) was already low. Minnesota at Calgary (70.1%, -233) remains the desk's sole high pick. The four displaced narratives are retained verbatim in data/desk/archived_picks.json with reasons and rendered in the archive section of picks.html. Full remediation record: research/odds-window-audit-1bb45081.md in this repository.",
+      "sources": [
+        "https://www.nhl.com/schedule/2026-10-22"
+      ],
+      "state": "open",
+      "owner": "1bb45081"
     }
   ]
 }

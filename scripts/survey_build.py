@@ -534,10 +534,19 @@ b.append('</tbody></table></div>')
 open(DOCS / "picks.html", "w").write(page("Picks", "picks.html", "\n".join(b)))
 
 # ---------------------------------------------------------------- predictions
+archived_doc = json.loads((DATA / "archived_predictions.json").read_text())
+archived_preds = archived_doc["predictions"]
 b = ['<h2>Predictions for high-confidence picks</h2>',
-     f'<p class="lead">{len(preds)} high-confidence picks carry a written prediction. Every factual claim in each '
-     'one is listed underneath it with the source it was verified against. No player, score, injury or date appears '
-     'in a prediction unless it was verified during collection.</p>']
+     f'<p class="lead">{len(preds)} high-confidence picks carry a written prediction. Since 2026-10-22 a high label '
+     'needs model probability &ge; 70% <strong>and</strong> a fair no-vig American price inside '
+     '<strong>[-250, +10000]</strong>. Every factual claim in each write-up is listed underneath it with the source '
+     'it was verified against. No player, score, injury or date appears in a prediction unless it was verified '
+     'during collection.</p>']
+if not preds:
+    b.append('<div class="note warn"><strong>No active high-confidence predictions.</strong> All five prior picks '
+             'price shorter than -250 on fair no-vig odds (see the archive table below); they were regraded medium '
+             'rather than relabelled against the rule. The model still publishes one pick per originated fixture on '
+             'the <a href="picks.html">Picks</a> page with its confidence label.</div>')
 for p in preds:
     b.append(f"""<div class="pred"><h4>{e(p['match'])}</h4>
 <div class="meta">{e(p['competition'])} &middot; {e(p['kickoff'])} &middot; {e(p['venue'])}</div>
@@ -557,6 +566,29 @@ for p in preds:
 b.append('<div class="note warn">Medium and low confidence picks deliberately carry no written prediction. '
          'For those we do not hold enough verified player-level detail to write one without inventing it, which '
          'the verification rule forbids.</div>')
+
+# --------------------------------------------- archived (odds-window) narratives
+b.append(f'<h2 id="archived">Archived narratives — odds-window regrades ({len(archived_preds)})</h2>')
+b.append('<p class="lead">Write-ups displaced by the 2026-10-22 rule. The full original text and verified facts '
+         'remain in <code>data/survey/archived_predictions.json</code>; nothing was deleted.</p>')
+b.append('<table><thead><tr><th>ID</th><th>Match</th><th>Selection</th><th>Model %</th><th>Fair decimal</th>'
+         '<th>American</th><th>New grade</th><th>Reason</th></tr></thead><tbody>')
+for a in archived_preds:
+    b.append(f"<tr><td>{e(a['id'])}</td><td>{e(a['match'])}<div class=\"meta\">{e(a['competition'])}</div></td>"
+             f"<td>{e(a['selection'])}</td><td>{pct(a['probability'])}</td>"
+             f"<td>{odds(a['fair_odds'])}</td><td><strong>{a['american_odds']:+d}</strong></td>"
+             f"<td>{badge(a['regraded_to'])}</td><td class=\"meta\">{e(a['archive_reason'])}</td></tr>")
+b.append('</tbody></table>')
+for a in archived_preds:
+    b.append(f'<div class="pred"><h4>{e(a["match"])} <span class="meta">(archived {e(a["id"])})</span></h4>')
+    b.append(f'<div class="sel">{e(a["selection"])}</div>')
+    b.append(f'<div class="meta">Probability {pct(a["probability"])} &middot; fair {odds(a["fair_odds"])} '
+             f'&middot; American {a["american_odds"]:+d} &middot; regraded to {e(a["regraded_to"])} &middot; '
+             f'{e(a["word_count"])} words</div>')
+    b.append(f'<div class="text">{e(a["text"])}</div><ul class="facts">')
+    for fact, url in a["facts_used"]:
+        b.append(f'<li>{e(fact)} &mdash; {src(url, "verify")}</li>')
+    b.append('</ul></div>')
 open(DOCS / "predictions.html", "w").write(page("Predictions", "predictions.html", "\n".join(b)))
 
 # ---------------------------------------------------------------- methodology

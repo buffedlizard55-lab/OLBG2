@@ -190,7 +190,32 @@ def nba_market(home: dict, away: dict, params: dict) -> dict:
 # ---------------------------------------------------------------- picks and confidence
 
 
-def confidence_label(edge: float, *, evidence: bool, sample_ok: bool, baseline: bool, params: dict) -> tuple[str, str]:
+# 2026-10-22 odds-window remediation, applied uniformly across all layers:
+# HIGH additionally needs probability >= 70% and a fair no-vig American price
+# inside the brief's [-250, +10000] window.
+HIGH_PROB_FLOOR = 0.70
+ODDS_WINDOW_MIN_AMERICAN = -250
+ODDS_WINDOW_MAX_AMERICAN = 10000
+
+
+def _fair_decimal(probability: float) -> float:
+    return round(1.0 / max(probability, 1e-6), 2)
+
+
+def _american(decimal_odds: float) -> int:
+    if decimal_odds >= 2.0:
+        return round((decimal_odds - 1.0) * 100.0)
+    return round(-100.0 / (decimal_odds - 1.0))
+
+
+def window_high_eligible(probability: float) -> tuple[bool, int]:
+    american = _american(_fair_decimal(probability))
+    return (probability >= HIGH_PROB_FLOOR
+            and ODDS_WINDOW_MIN_AMERICAN <= american <= ODDS_WINDOW_MAX_AMERICAN), american
+
+
+def confidence_label(edge: float, *, evidence: bool, sample_ok: bool, baseline: bool,
+                     params: dict, probability: float | None = None) -> tuple[str, str]:
     """Return (label, reason). Labels are capped when the evidence pack is missing."""
     if baseline:
         return "low", "Baseline pricing: no current-season sample to separate the teams."
@@ -199,7 +224,13 @@ def confidence_label(edge: float, *, evidence: bool, sample_ok: bool, baseline: 
             return "medium", f"Model edge {edge:.3f} clears the high bar, but no evidence pack is attached."
         if not sample_ok:
             return "medium", "Model edge clears the high bar, but the games-played sample is below the minimum."
-        return "high", f"Model edge {edge:.3f} with an official evidence pack and a sufficient sample."
+        eligible, american = window_high_eligible(probability or 0.0)
+        if not eligible:
+            return ("medium",
+                    f"Model edge {edge:.3f} with an evidence pack, but probability "
+                    f"{(probability or 0.0) * 100:.1f}% / fair American {american:+d} fails the "
+                    "70% floor or the [-250, +10000] odds window; capped at medium on 2026-10-22.")
+        return "high", f"Model edge {edge:.3f} with an official evidence pack, sufficient sample, and an in-window fair price ({american:+d})."
     if edge >= params["medium_edge"]:
         return "medium", f"Model edge {edge:.3f} clears the medium bar."
     return "low", f"Model edge {edge:.3f} is below the medium bar."

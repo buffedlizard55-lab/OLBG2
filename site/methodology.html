@@ -37,7 +37,10 @@ league scoring baseline is loaded. These are opening-style lines, not informed p
 <h2>Confidence</h2>
 <ul>
 <li><b>High</b> requires at least 13 points of model edge, a games-played sample of at least
-7 per side, and an evidence pack: the fixture's own official game page must be cited in the prediction.</li>
+7 per side, an evidence pack (the fixture's own official game page cited in the prediction),
+and since 2026-10-22 a model probability of at least 70% whose fair no-vig American price sits inside [-250, +10000].
+Selections failing that final gate are capped at medium and their narratives archived in
+<code>data/desk/archived_picks.json</code>.</li>
 <li><b>Medium</b> requires at least 6 points of edge. A larger edge without an evidence pack is capped at medium.</li>
 <li><b>Low</b> covers everything else, including every baseline NBA line.</li>
 </ul>

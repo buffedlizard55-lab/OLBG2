@@ -77,37 +77,58 @@ class DataTests(unittest.TestCase):
 
     def test_pick_must_match_model_favourite(self):
         bad = copy.deepcopy(self.data)
-        fid = "nhl-2026020152"
-        bad["picks"]["picks"][fid]["selection"] = "Philadelphia Flyers"
+        fid = "nhl-2026020162"  # the only fixture still carrying an active high narrative
+        bad["picks"]["picks"][fid]["selection"] = "Calgary Flames"
         with self.assertRaises(ValueError):
             B.build_rows(bad)
 
     def test_short_prediction_rejected(self):
         bad = copy.deepcopy(self.data)
-        bad["picks"]["picks"]["nhl-2026020152"]["narrative"] = "Sabres win."
+        bad["picks"]["picks"]["nhl-2026020162"]["narrative"] = "Wild win."
         with self.assertRaises(ValueError):
             B.validate(bad)
 
     def test_duplicate_prediction_rejected(self):
         bad = copy.deepcopy(self.data)
-        bad["picks"]["picks"]["nhl-2026020154"]["narrative"] = bad["picks"]["picks"]["nhl-2026020152"]["narrative"]
+        # The window regrade left one active narrative; attach a copy under another
+        # known fixture id so the duplicate-narrative guard still has two entries.
+        bad["picks"]["picks"]["nhl-2026020152"] = copy.deepcopy(
+            bad["picks"]["picks"]["nhl-2026020162"]
+        )
         with self.assertRaises(ValueError):
             B.validate(bad)
 
     def test_unregistered_source_rejected(self):
         bad = copy.deepcopy(self.data)
-        bad["picks"]["picks"]["nhl-2026020152"]["sources"].append("https://www.nhl.com/not-registered")
+        bad["picks"]["picks"]["nhl-2026020162"]["sources"].append("https://www.nhl.com/not-registered")
         with self.assertRaises(ValueError):
             B.validate(bad)
 
     def test_prediction_must_cite_its_own_game(self):
         bad = copy.deepcopy(self.data)
-        bad["picks"]["picks"]["nhl-2026020152"]["sources"] = [
+        bad["picks"]["picks"]["nhl-2026020162"]["sources"] = [
             "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
             "https://www.nhl.com/standings",
         ]
         with self.assertRaises(ValueError):
             B.build_rows(bad)
+
+    def test_archived_picks_file_documents_the_window_regrade(self):
+        doc = B.load("archived_picks.json")
+        self.assertEqual(doc["count"], 4)
+        active = set(self.data["picks"]["picks"])
+        for entry in doc["picks"]:
+            self.assertNotIn(entry["fixture_id"], active)
+            self.assertIn(entry["regraded_to"], {"medium", "low"})
+            self.assertIn("[-250, +10000]", entry["archive_reason"])
+            self.assertGreaterEqual(len(entry["narrative"].split()),
+                                    self.data["meta"]["params"]["min_prediction_words"])
+            self.assertTrue(entry["facts"])
+        # the sole surviving high pick must clear both the probability floor and the window
+        rows = {r["fixture"]["id"]: r for r in B.build_rows(self.data)}
+        high = [r for r in rows.values() if r["confidence"] == "high"]
+        self.assertEqual([r["fixture"]["id"] for r in high], ["nhl-2026020162"])
+        self.assertGreaterEqual(high[0]["probability"], 0.70)
 
     def test_every_fixture_is_inside_the_window(self):
         start = self.data["meta"]["window_start"]
@@ -170,13 +191,38 @@ class ModelTests(unittest.TestCase):
     def test_confidence_caps_without_evidence(self):
         self.params = dict(self.params)
         edge = 0.2
-        label, reason = M.confidence_label(edge, evidence=False, sample_ok=True, baseline=False, params=self.params)
+        label, reason = M.confidence_label(edge, evidence=False, sample_ok=True, baseline=False,
+                                           params=self.params, probability=0.71)
         self.assertEqual(label, "medium")
         self.assertIn("no evidence pack", reason)
-        label, _ = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=False, params=self.params)
+        # in-window probability (fair -244) keeps the high label
+        label, _ = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=False,
+                                      params=self.params, probability=0.705)
         self.assertEqual(label, "high")
-        label, _ = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=True, params=self.params)
+        # probability below the 70% floor is capped at medium even with edge + evidence
+        label, reason = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=False,
+                                           params=self.params, probability=0.65)
+        self.assertEqual(label, "medium")
+        self.assertIn("odds window", reason)
+        # heavy chalk inside the evidence rule but shorter than -250 is also capped
+        label, reason = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=False,
+                                           params=self.params, probability=0.85)
+        self.assertEqual(label, "medium")
+        self.assertIn("[-250, +10000]", reason)
+        label, _ = M.confidence_label(edge, evidence=True, sample_ok=True, baseline=True,
+                                      params=self.params, probability=0.71)
         self.assertEqual(label, "low")
+
+    def test_window_helpers_boundary_math(self):
+        # -250 American equals decimal 1.40 and implied 71.43%
+        self.assertEqual(M._american(1.40), -250)
+        eligible, american = M.window_high_eligible(0.71)
+        self.assertTrue(eligible)
+        self.assertEqual(american, -244)
+        eligible, _ = M.window_high_eligible(0.72)
+        self.assertFalse(eligible)  # fair 1.39 -> -256, shorter than -250
+        eligible, _ = M.window_high_eligible(0.99)
+        self.assertFalse(eligible)
 
 
 class SiteTests(unittest.TestCase):

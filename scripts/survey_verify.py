@@ -145,6 +145,22 @@ hc = {r["match"] for r in lines if r["confidence"] == "high"}
 check(hp == hc, f"a prediction exists for every high-confidence pick and for no other "
                 f"(high={sorted(hc)})")
 
+badb = [p["id"] for p in preds if p.get("price_band") not in ("in-band", "outside-band")]
+check(not badb, f"every prediction declares its -250..+10000 price band ({badb})")
+
+def _fa(prob):
+    return round(-100.0 / (1.0 / prob - 1.0)) if prob >= 0.5 else round((1.0 / prob - 1.0) * 100.0)
+
+badw = [p["id"] for p in preds
+        if p["confidence"] == "high" and not (
+            p["our_probability"] >= 0.72
+            or (p["our_probability"] >= 0.70 and -250 <= _fa(p["our_probability"]) <= 10000))]
+check(not badw, f"no high-confidence pick fails the published window rule ({badw})")
+
+badf = [r["match"] for r in lines
+        if r["confidence"] == "high" and (r.get("pick_probability") or 0) < 0.70]
+check(not badf, f"no high label sits below the 70% probability floor ({badf})")
+
 flags = json.loads((DATA / "flags.json").read_text())
 f15 = next(f for f in flags if f["id"] == "F-15")
 modelled = {(r["sport"], r["match"]) for r in lines}

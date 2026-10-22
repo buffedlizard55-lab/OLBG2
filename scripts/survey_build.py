@@ -294,8 +294,9 @@ OLBG on {e(RETRIEVED)}; <strong>{snap_rows}</strong> come from dated search-inde
 
 b.append('<h2>Confidence breakdown</h2><div class="scroll"><table data-sortable><thead><tr>'
          '<th>Confidence</th><th class="num">Picks</th><th>Rule that produced it</th></tr></thead><tbody>')
-RULES = {"high": "Model probability &ge; 0.70 on verified Tier&nbsp;1/2 inputs with verified form, "
-                 "or a Tier&nbsp;1 rating gap &ge; 0.55 corroborated by a verified same-series head-to-head win.",
+RULES = {"high": "Model probability &ge; 0.72 on verified Tier&nbsp;1/2 inputs with verified form, "
+                 "or &ge; 0.70 with the fair no-vig price inside the &minus;250&hellip;+10000 focus band "
+                 "(the uniform rule shared by every layer).",
          "medium": "Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates.",
          "low": "Any other published line, and any line whose divergence from an official published "
                 "probability exceeds 15 percentage points.",
@@ -534,26 +535,46 @@ b.append('</tbody></table></div>')
 open(DOCS / "picks.html", "w").write(page("Picks", "picks.html", "\n".join(b)))
 
 # ---------------------------------------------------------------- predictions
-b = ['<h2>Predictions for high-confidence picks</h2>',
-     f'<p class="lead">{len(preds)} high-confidence picks carry a written prediction. Every factual claim in each '
-     'one is listed underneath it with the source it was verified against. No player, score, injury or date appears '
-     'in a prediction unless it was verified during collection.</p>']
-for p in preds:
-    b.append(f"""<div class="pred"><h4>{e(p['match'])}</h4>
+def pred_card(p):
+    band_tag = ('<span class="badge b-high">in band &minus;250&hellip;+10000</span>'
+                if p.get("price_band") == "in-band"
+                else '<span class="badge badge-unv">outside the &minus;250&hellip;+10000 focus band</span>')
+    out = [f"""<div class="pred"><h4>{e(p['match'])} {band_tag}</h4>
 <div class="meta">{e(p['competition'])} &middot; {e(p['kickoff'])} &middot; {e(p['venue'])}</div>
 <div class="sel">{e(p['selection'])}</div>
 <div class="meta">Our probability <strong>{pct(p['our_probability'])}</strong> &middot; our fair price
-<strong>{odds(p['our_fair_odds'])}</strong> &middot; confidence {badge(p['confidence'])}
+<strong>{odds(p['our_fair_odds'])}</strong> &middot; fair American {p.get('fair_american', '&mdash;')}
+&middot; confidence {badge(p['confidence'])}
 &middot; {e(p['word_count'])} words</div>
 <div class="text">{e(p['text'])}</div>
-<ul class="facts">""")
+<ul class="facts">"""]
     for fact, url in p["facts_used"]:
-        b.append(f'<li>{e(fact)} &mdash; {src(url, "verify")}</li>')
-    b.append("</ul>")
+        out.append(f'<li>{e(fact)} &mdash; {src(url, "verify")}</li>')
+    out.append("</ul>")
     if p.get("official_cross_ref"):
-        b.append(f'<div class="note small">Official cross-reference: {e(p["official_cross_ref"])}</div>')
-    b.append(f'<p class="small">OLBG fixture: {src(p.get("olbg_source"), "OLBG")} &middot; '
-             f'Venue source: {src(p.get("venue_source"), "verify")}</p></div>')
+        out.append(f'<div class="note small">Official cross-reference: {e(p["official_cross_ref"])}</div>')
+    out.append(f'<p class="small">OLBG fixture: {src(p.get("olbg_source"), "OLBG")} &middot; '
+               f'Venue source: {src(p.get("venue_source"), "verify")}</p></div>')
+    return "".join(out)
+
+in_band = [p for p in preds if p.get("price_band") == "in-band"]
+outside = [p for p in preds if p.get("price_band") != "in-band"]
+b = ['<h2>Predictions for high-confidence picks</h2>',
+     f'<p class="lead">{len(preds)} high-confidence picks carry a written prediction. Every factual claim in each '
+     'one is listed underneath it with the source it was verified against. No player, score, injury or date appears '
+     'in a prediction unless it was verified during collection. The brief asks high-confidence generation to focus '
+     'on fair prices between &minus;250 and +10000, so the two groups below are shown separately.</p>']
+b.append(f'<h3>In the &minus;250&hellip;+10000 focus band ({len(in_band)})</h3>')
+if in_band:
+    for p in in_band:
+        b.append(pred_card(p))
+else:
+    b.append('<div class="note">No selection on this slate qualifies inside the focus band: every high-confidence '
+             'pick here is priced shorter than &minus;250 on its win-match market. They are shown below and '
+             'labelled honestly rather than passed off as in-band.</div>')
+b.append(f'<h3>Outside the focus band &mdash; chalk favourites ({len(outside)})</h3>')
+for p in outside:
+    b.append(pred_card(p))
 b.append('<div class="note warn">Medium and low confidence picks deliberately carry no written prediction. '
          'For those we do not hold enough verified player-level detail to write one without inventing it, which '
          'the verification rule forbids.</div>')

@@ -3207,14 +3207,12 @@ Combined sport coverage across the two daily desks is 10 of the 17 eligible spor
 basketball, baseball, handball, darts, motor racing, Aussie rules, rugby league and cricket. Still without a
 line in either desk: tennis, snooker, golf, volleyball, greyhounds, Gaelic football and esports. That gap is
 recorded on both flagged pages and remains the largest unmet part of the brief.
-=======
 
 ### Session `arena/b499dfe1-olbg2` — FINAL PUBLICATION LEDGER for `/daily/`
 - **PR:** [#127](https://github.com/buffedlizard55-lab/OLBG2/pull/127) merged 2026-10-22T21:04:17Z, merge commit `1fa995c`; `Deploy Pages` run 39854224613 **success**; live verified by fetching the deployed pages (dashboard + Top-5 render with correct counts/links).
 - **Merge conflict:** one, in `COORDINATION.md` only (parallel session merged first). Both append-only sides kept in full; no other session's work discarded. Re-verified on merged tree (full suite OK, daily rebuild byte-identical).
 - **Post-deploy fix (this commit):** market label "Match Total Goals (Puck Line) (Over/Under)" corrected to "Match Total Goals (Over/Under)" / "Match Total Runs (Over/Under)"; labels only — no price changed. Also confirmed the three 2026-10-25 NHL rows trace to `data/current/capture/nhl_score_2026-10-24.json` (the official /score/ feed spills past midnight UTC), not invented.
 - **Live:** https://buffedlizard55-lab.github.io/OLBG2/daily/index.html · /matches.html · /top5.html · /predictions.html · /flagged.html · /sports/*.html
->>>>>>> origin/main
 =======
 
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
@@ -3608,3 +3606,23 @@ was inferred to fill a gap.
 Still open for the final integration session (logged, not actioned): root navigation entry for
 `/relay/`, CI rebuild + drift-path entries for the four `relay_*` scripts, and `relay` in the
 cross-layer link audit if its folder list is still explicit.
+=======
+---
+
+## Session `arena/ca03be92-olbg2` — CLAIM: `/vanguard/` late-evening 2026-10-22 first-hand 17-sport desk, multi-market origination, Top-5-per-sport & in-band high-confidence predictions, and line-by-line repo review
+
+- **Session ID:** `arena/ca03be92-olbg2` · **Branch:** `arena/ca03be92-olbg2` (fixed by Arena harness; `session-<id>/<task>` branch naming deviation recorded per protocol)
+- **Claimed:** 2026-10-22 20:54 UTC (before any implementation edit; rebased onto `9068101` PR #123 — append-only conflict in `COORDINATION.md` resolved by preserving `arena/e52155e1-olbg2`'s entry verbatim above ours)
+- **Live concurrent-session check at claim time (`git fetch origin '+refs/heads/*'`):** `origin/main` = `9068101` (PR #123 merged); active concurrent branches detected (`arena/d44995c7-olbg2` owning `peak/**`, `data/peak/**`, `scripts/peak_*`, `tests/test_peak_d44995c7.py`, `research/peak-capture-d44995c7.md`; `arena/b499dfe1-olbg2` owning `daily/**`, `data/daily/**`, `scripts/daily_*`, `tests/test_daily_b499dfe1.py`, `research/daily-b499dfe1.md`; `arena/83346ec9-olbg2` claiming root shared files `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, generated root `*.html`, and `tests/test_integration_83346ec9.py`).
+- **Strict disjoint file scope:** This session touches **only** new files in `vanguard/**`, `data/vanguard/**`, `scripts/vanguard_*.py`, `tests/test_vanguard_ca03be92.py`, `research/vanguard-audit-ca03be92.md`, plus append-only updates to `COORDINATION.md`. Zero edits to any root/shared files or any other session's scope; root navigation/CI integration requests will be logged here for the active integration owner.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| V1 | Board check, live-branch scan, claim disjoint `/vanguard/` scope, commit & push immediately | done | `arena/ca03be92-olbg2` | `COORDINATION.md` (append-only) |
+| V2 | Reverse-engineer `olbg.com` live (`2026-10-22 ~21:00Z`) + line-by-line forensic repo review of latest merged layers (`/current/`, `/pulse/`, `/update/`, `/atlas/`, `/canon/`, `/beacon/`, `/final/`, `/verified/`) against live official governing-body feeds | in progress | `arena/ca03be92-olbg2` | `data/vanguard/olbg_taxonomy.json`, `data/vanguard/repo_audit.json`, `research/vanguard-audit-ca03be92.md` |
+| V3 | Fresh post-20:50Z official governing-body capture across all 17 eligible sports (excluding soccer/football, boxing, UFC, MMA, American football, hurling, horse racing, cycling, specials; separating completed/in-play Oct 22 daytime ties from genuine upcoming matches) | unclaimed (next) | `arena/ca03be92-olbg2` | `data/vanguard/captures/**`, `data/vanguard/inputs.json`, `data/vanguard/sources.json`, `scripts/vanguard_seed.py` |
+| V4 | Multi-market independent line origination (match winner, handicap/spread, match total, alternate grids, tournament outrights where applicable) + low/medium/high confidence labeling + strict in-band (`p >= 0.7000` and fair American `-250` to `+10000`, `1.40 <= d <= 101.00`) high-confidence gate + Top-5 highest-confidence picks per covered sport | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_model.py`, `data/vanguard/matches.json`, `data/vanguard/lines.json` |
+| V5 | Unique, non-robotic ≥30-word human predictions backed strictly by verified official team, player, current form, and recent match history for every high-confidence in-band pick and every daily Top-5-per-sport selection | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_predictions.py`, `data/vanguard/predictions.json`, `data/vanguard/flagged.json` |
+| V6 | Clean `/vanguard/` GH Pages dashboard (landing, all-matches table, multi-market lines, high-confidence picks, daily Top-5-per-sport, 17 sport subpages, OLBG reverse-engineering, repo audit, Flagged for Review, sources, methodology) + verifier & rendered-HTML test suite | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_build.py`, `scripts/vanguard_verify.py`, `vanguard/**`, `tests/test_vanguard_ca03be92.py` |
+| V7 | Rebase/merge latest `origin/main` cleanly, run full repo test suite + link checks, open PR → merge to `main`, confirm live GitHub Pages deployment, log PR & merge result here | unclaimed (next) | `arena/ca03be92-olbg2` | `COORDINATION.md` (append-only) |
+>>>>>>> 140baf3 (coordination: claim disjoint /vanguard/ desk scope (session ca03be92))

@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-10-22",
+  "items": [
+    {
+      "id": "VF-15",
+      "title": "MLB World Series Games 4-7 missing from the verified slate",
+      "status": "closed-in-forward",
+      "summary": "Forward slate originates all seven World Series games from the official schedule, including Game 4 (mlb-ws-g4, 2026-10-27, Tropicana Field) which the verified layer never lined. Games 5-7 carry official if-necessary flags and are priced for the window but may not be played.",
+      "sources": [
+        "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-11-02"
+      ]
+    },
+    {
+      "id": "VF-14",
+      "title": "NBA 2026-10-22..24 fixtures not verified",
+      "status": "PARTIAL: official per-day game counts captured from the rendered calendar; matchup lists for 22-24 October not server-rendered. VF-14 stays open for matchup-level capture.",
+      "summary": "nba.com now server-renders its month calendar, giving official per-day game counts (22 Oct: 2, 23 Oct: 12, 24 Oct: 8, ... 31 Oct: 7), but fixture lists for future dates still fail to server-render ('Sorry, something went wrong'), and the CDN schedule JSON returns HTTP 500. No NBA rows are added to the forward slate: the desk never publishes matchups it cannot verify. Attempt log kept in data/forward/capture_gap_notes.json.",
+      "sources": [
+        "https://www.nba.com/games"
+      ]
+    },
+    {
+      "id": "VF-20",
+      "title": "EuroCup Round 5 card missing",
+      "status": "closed-in-forward",
+      "summary": "All sixteen EuroCup Round 5 fixtures (27-28 October) are captured from the official EuroLeague live API (competition U, season U2026) and appear in the forward slate. They ship unlined because the same API's standings endpoints return empty bodies and the desk never infers team strength.",
+      "sources": [
+        "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games"
+      ]
+    },
+    {
+      "id": "VF-22",
+      "title": "GBGB race cards unreachable",
+      "status": "STILL BLOCKED: gbgb.org.uk did not serve any page at capture time (2026-10-22). VF-22 remains open; no greyhound rows added to the forward slate (a card capture would also lack the trap ratings this desk requires before lining).",
+      "summary": "gbgb.org.uk returned fetch failures or HTTP 500 on the homepage, the results page and the race-cards page on 2026-10-22. No greyhound rows are added: there is no verified card to publish and no trap ratings to price from. Attempt log kept in data/forward/capture_gap_notes.json.",
+      "sources": [
+        "https://www.gbgb.org.uk/"
+      ]
+    },
+    {
+      "id": "VF-WINDOW",
+      "title": "Forward window coverage",
+      "status": "complete-for-verified-sports",
+      "summary": "Slate covers 2026-10-23 .. 2026-11-02: 70 NHL fixtures (the complete official gameWeek card), 7 MLB World Series games and 16 EuroCup Round 5 matches. NBA and greyhound coverage remain blocked as recorded above; tennis/WST/PDC/volleyball/handball are explicitly out of scope for this layer.",
+      "sources": []
+    }
+  ]
+}

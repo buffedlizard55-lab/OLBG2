@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-10-22",
+  "source": "https://statsapi.mlb.com/api/v1/ (standings, team season stats, team leaders, schedule)",
+  "teams": {
+    "TB": {
+      "name": "Tampa Bay Rays",
+      "team_id": 139,
+      "wins": 98,
+      "losses": 64,
+      "runs_scored": 736,
+      "runs_allowed": 650,
+      "home": "55-26",
+      "away": "43-38",
+      "postseason_path": "ALDS 3-0 vs New York Yankees (1-0, 5-2, 4-3); ALCS 4-2 vs Cleveland Guardians (L 3-7, W 3-1, L 2-3, W 3-2 resumed G4, W 7-3, W 3-1 makeup, W 7-3)",
+      "leaders": {
+        "hr": "Junior Caminero 42 HR; Jonathan Aranda 22; Yandy Diaz 22",
+        "avg": "Chandler Simpson .306; Yandy Diaz .293; Junior Caminero .276",
+        "era": "Drew Rasmussen 2.67; Nick Martinez 3.10"
+      }
+    },
+    "MIL": {
+      "name": "Milwaukee Brewers",
+      "team_id": 158,
+      "wins": 103,
+      "losses": 59,
+      "runs_scored": 832,
+      "runs_allowed": 618,
+      "postseason_path": "NLDS 3-1 vs San Diego Padres (W 3-2, W 4-3, L 3-4, W 3-1); NLCS 4-0 vs Los Angeles Dodgers (W 2-1, W 7-4, W 6-2, W 6-4)",
+      "leaders": {
+        "hr": "Jake Bauers 26 HR; Jackson Chourio 25; Brice Turang 21",
+        "avg": "Jackson Chourio .291; William Contreras .270; Brice Turang .268",
+        "era": "Jacob Misiorowski 1.80 (team leader among qualified)"
+      }
+    }
+  },
+  "note": "Runs scored/allowed each verified directly against statsapi.mlb.com team season stats (fields-filtered) on 2026-10-22. Team records cross-checked against the standings endpoint and against each club's final regular-season game leagueRecord (MIL 103-59 after 2026-09-27 finale)."
+}

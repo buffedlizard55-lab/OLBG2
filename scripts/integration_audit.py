@@ -24,6 +24,9 @@ def _vsports():
 def findings():
     """Produce review rows from repository evidence, without inventing external facts."""
     rows = [
+        ('Integration 83346ec9 / source access', 'UNVERIFIED EXTERNALLY', 'Direct OLBG HTTPS access failed in this session. Existing captures and narratives were not re-verified against live official sites. No daily exhaustive refresh or five verified picks per sport is established.', 'https://www.olbg.com/'),
+        ('Current desk / confidence and coverage', 'NEEDS REVIEW', 'The current capture contains 57 fixture rows in 7 sports, not complete worldwide coverage. Its 29 predictions cover four sports; ten sport categories have zero rows. Model fair odds are not available bookmaker prices; 28 of 29 picks are alternate lines, whose actual availability is unverified. High confidence is not externally calibrated.', 'current/flagged.html'),
+        ('This session / verification ledger', 'STRUCTURAL ONLY', 'Integration checks do not confirm every sports fact. Read the recorded source-access failure, scope and remaining requirements before treating any dated row as current.', 'research/integration-83346ec9.md'),
         ('Integration / freshness', 'UNVERIFIED', 'The site contains dated 2026-10-21 captures, not a continuously refreshed feed. No exhaustive live bookmaker price feed is claimed.', 'survey/verification.html'),
         ('Scope alignment across layers', 'RESOLVED IN V2/V3', 'All active layers (Root, Verified /verified/, and Survey /survey/) enforce the 17 eligible OLBG sports and block all excluded terms including Hurling (id 26) and UFC/MMA (id 27).', 'verified/flagged.html'),
         ('Timezone preservation', 'VERIFIED POLICY', 'Times are preserved in the exact timezone published by each official feed (UTC for NHL/MLB, US ET for NBA, French local for LNR, venue local for URC, CEST for EHF) without unconfirmed conversion.', 'verified/methodology.html'),
@@ -57,6 +60,20 @@ def _atlas_row():
         f'<a href="atlas/methodology.html">Methodology</a></td></tr>')
 
 
+def _current_row():
+    counts = load('data/current/band.json')['counts']
+    capture = load('data/current/matches.json')['captured_at_utc']
+    return (
+        '<tr><td><a href="current/index.html"><strong>Current capture desk (/current/)</strong></a></td>'
+        f'<td>{counts["fixture_rows"]} stored fixtures; {counts["originated_rows"]} originated, '
+        f'{counts["blank_rows"]} blank; {counts["sports_with_rows"]} sports with rows. '
+        f'Capture: {escape(capture)} (not live).</td>'
+        f'<td><a href="current/predictions.html">{counts["band_picks"]} model-band predictions</a> · '
+        '<a href="current/flagged.html">Flagged for Review</a> · '
+        '<a href="current/sources.html">Official source register</a> · '
+        '<a href="research/integration-83346ec9.md">Integration verification limits</a></td></tr>')
+
+
 def body():
     rows = ''.join('<tr><td>{}</td><td>{}</td><td>{}</td><td><a href="{}">Source / review record</a></td></tr>'.format(*(escape(x, quote=True) for x in row)) for row in findings())
     root = load('data/matches.json')
@@ -73,14 +90,15 @@ def body():
 <tr><td><a href="index.html">Root dashboard (/)</a></td><td>{len(root['matches'])} fixtures</td><td><a href="flagged.html">Root review queue</a> · <a href="sources.html">Source register</a></td></tr>
 <tr><td><a href="site/index.html">Evidence desk v2 (/site/)</a></td><td>25 NHL/NBA fixtures (updated 2026-10-21)</td><td><a href="site/flagged.html">Desk review queue</a> · <a href="site/sources.html">Desk sources</a></td></tr>
 <tr><td><a href="survey/index.html">All-sport survey (/survey/)</a></td><td>{events} inventoried entries across all 17 eligible sports (26 lines · 119 unlined)</td><td><a href="survey/flagged.html">Survey review queue</a> · <a href="survey/verification.html">Verification register</a></td></tr>
-</tbody></table></div>
 {_atlas_row()}
+{_current_row()}
+</tbody></table></div>
 <h2>Current capture desk</h2>
 <p><a href="current/index.html">22 October capture dashboard</a> · <a href="current/matches.html">Fixture table</a> · <a href="current/lines.html">Originated prices</a> · <a href="current/predictions.html">Predictions</a> · <a href="current/sources.html">Source links</a> · <a href="current/flagged.html">Flagged for Review</a>. This is a separate overlapping snapshot, not an incremental addition to other desks. No fresh official-source verification is claimed by this integration.</p>
 <h2>Cross-layer findings &amp; narrative claims needing review</h2>
 <p>All existing layers are preserved and cross-linked. Rows below summarize cross-layer status and enumerate every survey narrative fact alongside its official source link for manual review.</p>
 <div class="table-wrap"><table><thead><tr><th>Entry / claim</th><th>Status</th><th>Finding</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>
-<h2>Automation boundary</h2><p>CI rebuilds all static layers (<code>/verified/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, verifies local file links across all published HTML pages (fragment anchors and external URLs are not checked), and runs full unit tests.</p>'''
+<h2>Automation boundary</h2><p>CI rebuilds selected static layers (<code>/verified/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, checks local file targets across all published HTML layers (fragment anchors and external URLs are not checked), and runs full unit tests.</p>'''
 
 
 class Links(HTMLParser):
@@ -96,11 +114,10 @@ class Links(HTMLParser):
 
 def local_link_errors(root=ROOT):
     errors = []
-    # Audit every published HTML layer, including newly added desks, by default.
-    pages = sorted(p for p in root.rglob('*.html')
-                   if not any(part.startswith('.') or part in
-                              ('node_modules', '_site', 'venv', '__pycache__')
-                              for part in p.relative_to(root).parts))
+    # Discover every published layer; an allowlist silently misses new desks.
+    pages = [p for p in root.rglob('*.html')
+             if not any(part.startswith('.') or part in ('node_modules', '_site', 'venv', '__pycache__')
+                        for part in p.relative_to(root).parts)]
     for page in pages:
         parser = Links()
         parser.feed(page.read_text())
@@ -120,5 +137,5 @@ if __name__ == '__main__':
     errors = local_link_errors()
     for error in errors:
         print('BROKEN', error)
-    print(f'Cross-layer local link errors: {len(errors)}. Structural file check only; external facts and fragment anchors not checked.')
+    print(f'Cross-layer local link errors: {len(errors)}. Structural check only; external facts not re-verified.')
     raise SystemExit(bool(errors))

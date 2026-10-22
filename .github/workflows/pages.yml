@@ -67,7 +67,7 @@ jobs:
           python scripts/atlas_verify.py
           python scripts/atlas_build.py
 
-      - name: Rebuild the current official-capture desk
+      - name: Rebuild current capture desk (offline committed evidence)
         run: |
           python scripts/current_seed.py
           python scripts/current_model.py

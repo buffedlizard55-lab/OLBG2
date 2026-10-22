@@ -95,7 +95,7 @@ class Links(HTMLParser):
 def local_link_errors(root=ROOT):
     errors = []
     pages = list(root.glob('*.html'))
-    for folder in ('sports', 'site', 'survey', 'verified', 'live', 'atlas'):
+    for folder in ('sports', 'site', 'survey', 'verified', 'live', 'canon', 'atlas'):
         folder_path = root / folder
         if folder_path.exists():
             pages.extend(folder_path.rglob('*.html'))

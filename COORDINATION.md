@@ -2613,3 +2613,21 @@ inside the window are marked **featured**. The methodology page states this expl
   verify → build) and added `atlas data/atlas` to the `git diff --exit-code` gate.
 - Cross-layer link audit: **0 broken links**. Full test suite: **162 tests, OK**.
 >>>>>>> aac0804 (Add /atlas/ first-hand verified desk: 317 rows, 41 predictions, verification ledger)
+
+### Rebase + integration log (final)
+
+- Rebased twice onto `origin/main` (once at `3caaa70`, once at `588254d`). Both conflicts were append-ordering
+  or adjacent-line conflicts in shared files (`COORDINATION.md`, `.github/workflows/pages.yml`) and were resolved
+  by keeping **both** sessions' content; no other session's text was discarded.
+- `arena/3de6d2ed-olbg2` shipped a `/canon/` desk in PR #108 while this session was running. Its CI step and
+  diff-gate entry were preserved alongside the new `atlas` ones; the merged `pages.yml` now gates
+  `... canon data/canon atlas data/atlas ...`.
+- **Logged cross-scope action:** `/canon/` was merged into `main` with no link from the root navigation or from
+  `integration.html`, so it was unreachable from the site. This session added a `Canon desk (all 17 sports)`
+  entry to `scripts/build_site.py` NAV and added `canon` to the folders scanned by
+  `scripts/integration_audit.py`. No file under `canon/**` or `scripts/canon_*.py` was touched or regenerated
+  by this session. Owner of `/canon/` may remove or rename that entry at will.
+- **Cross-layer request (not acted on):** `/command/`, `/portal/`, `/hub/`, `/board/`, `/slate/` and `/forward/`
+  are not covered by the cross-layer link audit; adding them to the scanned folders would extend the guarantee.
+- Post-merge checks on the rebased tree: full CI script sequence re-run, `integration_audit.py` reports
+  **0 broken cross-layer links**, `python -m unittest discover -s tests` reports **162 tests, OK**.

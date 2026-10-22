@@ -36,7 +36,7 @@ class FinalDataTests(unittest.TestCase):
         cls.flags = load(DATA / "flagged.json")["items"]
 
     def test_row_count_and_unique_ids(self):
-        self.assertEqual(len(self.rows), 322)
+        self.assertEqual(len(self.rows), 382)
         ids = [r["id"] for r in self.rows]
         self.assertEqual(len(ids), len(set(ids)))
 
@@ -67,7 +67,7 @@ class FinalDataTests(unittest.TestCase):
 
     def test_high_confidence_obeys_both_constraints(self):
         high = [r for r in self.rows if (r.get("pick") or {}).get("confidence") == "high"]
-        self.assertEqual(len(high), 15)
+        self.assertEqual(len(high), 19)
         for row in high:
             pick = row["pick"]
             self.assertGreaterEqual(pick["probability"], 0.70, row["id"])
@@ -113,7 +113,7 @@ class FinalPredictionTests(unittest.TestCase):
         cls.high = {r["id"] for r in cls.rows if (r.get("pick") or {}).get("confidence") == "high"}
 
     def test_one_prediction_per_high_pick(self):
-        self.assertEqual(len(self.preds), 15)
+        self.assertEqual(len(self.preds), 19)
         self.assertEqual({p["match_id"] for p in self.preds}, self.high)
 
     def test_each_prediction_is_long_enough_and_unique(self):
@@ -182,7 +182,7 @@ class FinalSiteTests(unittest.TestCase):
         body = (SITE / "matches.html").read_text(encoding="utf-8")
         tbody = body.split("<tbody>", 1)[1]
         rows = re.findall(r"<tr class=.*?</tr>", tbody, flags=re.S)
-        self.assertEqual(len(rows), 322)
+        self.assertEqual(len(rows), 382)
         for row in rows:
             self.assertIn('<a href="https://', row)
 

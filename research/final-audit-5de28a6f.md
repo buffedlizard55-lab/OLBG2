@@ -24,7 +24,7 @@ from `final/archive.html`.
 | verified | 128 | 94 | 13 | 22 Oct–2 Nov (futures to Jul 2027) |
 | forward | 93 | 77 | 3 | 23 Oct–2 Nov |
 
-Total 755 rows. De-duplication produced **322 unique fixtures**; **208** of them appear
+Total 765 rows. De-duplication produced **382 unique fixtures**; **268** of them appear
 in two or more layers. One hub row (`grey-689570`) has no individual representative: it
 collapses into a greyhound fixture that another hub row already defines. This is recorded
 on the flagged page.
@@ -33,21 +33,21 @@ on the flagged page.
 
 | Metric | Value |
 |---|---:|
-| Fixtures | 322 |
-| Originated (3 markets) | 279 |
+| Fixtures | 382 |
+| Originated (3 markets) | 339 |
 | Deliberately unlined | 43 |
-| High confidence | 15 |
-| Medium | 129 |
-| Low | 135 |
+| High confidence | 19 |
+| Medium | 171 |
+| Low | 149 |
 | Sports | 17 |
 | Excluded-sport leaks | 0 |
 
-Per sport: ice hockey 95, basketball 49, rugby union 31, tennis 28, darts 18, handball 12,
+Per sport: ice hockey 95, basketball 109, rugby union 31, tennis 28, darts 18, handball 12,
 motor racing 11, volleyball 9, Aussie rules 9, snooker 8, rugby league 8, eSports 8,
 baseball 7, golf 5, Gaelic football 5, greyhounds 15, cricket 4.
 
-Layer used for the surviving row: hub 147, board 73, slate 53, verified 49. The largest
-overlaps are ice hockey (82), basketball (39) and rugby union (31).
+Layer used for the surviving row: hub 147, verified 109, board 73, slate 53. The largest
+overlaps are basketball (99), ice hockey (82) and rugby union (31).
 
 ## 4. The rule, and why only 15 high picks
 
@@ -57,7 +57,7 @@ High = model probability **≥ 0.70** *and* fair decimal **1.40–101.00** (the 
 and is graded **medium** with the explicit reason "outside the focus band"; everything
 between 60% and 70% is medium; below 60% is low.
 
-This is why the consolidated desk reports 15 highs where the hub claimed 25 and the board
+This is why the consolidated desk reports 19 highs where the hub claimed 25 and the board
 claimed 42. Those layers used 65% thresholds or price-only bands.
 
 ## 5. Corrections applied (each has a source link on `/final/flagged.html`)
@@ -127,9 +127,9 @@ FR-15 exclusion filter · FR-16 PDC consent wall · FR-17 eSports pairings from 
 ## 10. Reproduce
 
 ```
-python3 scripts/final_consolidate.py   # 322 fixtures, 15 high
-python3 scripts/final_predictions.py   # 15 sourced write-ups
-python3 scripts/final_flags.py         # 17 review items
+python3 scripts/final_consolidate.py   # 382 fixtures, 19 high
+python3 scripts/final_predictions.py   # 19 sourced write-ups
+python3 scripts/final_flags.py         # 18 review items
 python3 scripts/final_build.py         # 26 pages under /final/
 python3 -m unittest tests.test_final   # 24 structural checks
 ```

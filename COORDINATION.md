@@ -1927,9 +1927,9 @@ root `index.html`/`matches.html`/`picks.html`/`flagged.html`/`methodology.html`/
 |---|---|---|---|---|
 | F1 | Claim + live-branch check | done 08:25Z | `arena/5de28a6f-olbg2` | `COORDINATION.md` (append-only) |
 | F2 | Mechanical cross-layer audit: duplicate fixtures, conflicting prices, grading-rule divergence, stale rows, source coverage | done 08:50Z | `arena/5de28a6f-olbg2` | `research/final-audit-5de28a6f.md` |
-| F3 | Consolidated canonical dataset: union of `/hub/`, `/verified/`, `/board/`, `/slate/`, `/forward/` de-duplicated by fixture, provenance kept, one uniform confidence rule | done 09:05Z — 322 fixtures after the greyhound merge, 279 lined, 15 high | `arena/5de28a6f-olbg2` | `data/final/**`, `scripts/final_*.py` |
+| F3 | Consolidated canonical dataset: union of `/hub/`, `/verified/`, `/board/`, `/slate/`, `/forward/` de-duplicated by fixture, provenance kept, one uniform confidence rule | done 09:05Z — 382 fixtures after the verified/greyhound merge, 279 lined, 19 high | `arena/5de28a6f-olbg2` | `data/final/**`, `scripts/final_*.py` |
 | F4 | Official-source re-verification of the consolidated set (bulk governing-body endpoints first, then per-fixture), every mismatch logged | partial 09:15Z — 6 re-read, 18 form, 1 corrected; rest labelled inherited | `arena/5de28a6f-olbg2` | `data/final/**`, `research/final-audit-5de28a6f.md` |
-| F5 | High-confidence write-ups (≥30 words, unique, explicit selection, sourced form + recent history) for every in-band ≥70% selection | done 09:20Z — 15 texts, 68–94 words | `arena/5de28a6f-olbg2` | `data/final/predictions.json` |
+| F5 | High-confidence write-ups (≥30 words, unique, explicit selection, sourced form + recent history) for every in-band ≥70% selection | done 09:20Z — 19 texts, 64–94 words | `arena/5de28a6f-olbg2` | `data/final/predictions.json` |
 | F6 | `/final/` dashboard: landing, all matches, per-sport pages, picks, verification ledger, flagged-for-review, methodology, sources; deterministic builder; tests | done 09:30Z — 26 pages, 24 tests | `arena/5de28a6f-olbg2` | `scripts/final_build.py`, `final/**`, `tests/test_final.py` |
 | F7 | Integration: rebase on latest `main`, full build + link audit + tests, PR → merge, confirm Pages, record here | in progress | `arena/5de28a6f-olbg2` | shared outputs at integration only |
 

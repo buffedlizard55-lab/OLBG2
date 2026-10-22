@@ -678,7 +678,7 @@ def render_methodology(rows, preds):
         '<li><strong>Unlined:</strong> no market is published and the reason is on the row.</li>',
         '</ul>',
         '<p class="tiny">The band is 1.40–101.00 decimal because &minus;250 American = 1.40 and +10000 = 101.00. A 70% probability is 1.43 decimal; '
-        'therefore the overlap of “≥70%” and “no shorter than &minus;250” is 70.0–71.4%. That intersection produces the 15 high picks. '
+        f'therefore the overlap of “≥70%” and “no shorter than &minus;250” is 70.0–71.4%. That intersection produces the {sum(1 for r in rows if (r.get("pick") or {}).get("confidence") == "high")} high picks. '
         'A 75% favourite (1.33) is outside the band even though it is more likely to win; it is graded medium with that exact reason so the label never overstates the price constraint.</p></div>',
         '<h2>De-duplication and provenance</h2>',
         '<div class="panel"><p>Rows are clustered by sport, unordered team pair and date (with a one-day tolerance only when the two '

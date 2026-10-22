@@ -1,10 +1,10 @@
 {
   "generated_at": "2026-10-22T08:50:00Z",
   "counts": {
-    "items": 17,
+    "items": 18,
     "high": 3,
     "medium": 5,
-    "low": 9
+    "low": 10
   },
   "items": [
     {
@@ -13,7 +13,7 @@
       "category": "Confidence-rule divergence",
       "sport": "cross-sport",
       "item": "Five layers used at least three different definitions of a high-confidence pick",
-      "detail": "The hub graded 25 picks high at >=65% probability inside the band; 22 of those 25 are below 70%. The verified desk used 72% (or a 70% band selection), the board labelled 42 picks high, and the slate marked rows high at a price-only band (one ATP pick at 64.97% was labelled high). This consolidation applies one rule - >=70% AND fair decimal 1.40-101.00 - and produces 15 high picks. Every other pick is medium or low with the reason on the row.",
+      "detail": "The hub graded 25 picks high at >=65% probability inside the band; 22 of those 25 are below 70%. The verified desk used 72% (or a 70% band selection), the board labelled 42 picks high, and the slate marked rows high at a price-only band (one ATP pick at 64.97% was labelled high). This consolidation applies one rule - >=70% AND fair decimal 1.40-101.00 - and produces 19 high picks. Every other pick is medium or low with the reason on the row.",
       "source_name": "Hub grading function",
       "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/hub_model.py"
     },
@@ -22,8 +22,8 @@
       "severity": "high",
       "category": "Duplicate fixtures and conflicting prices",
       "sport": "cross-sport",
-      "item": "765 layer rows collapse to 322 fixtures; 208 fixtures appear in two or more layers",
-      "detail": "208 of the 322 fixtures were captured by more than one session. The same game can carry different model probabilities because each layer ran its own model. Example: Minnesota Wild at Calgary is 70.84% on the verified row but 67.38% on the hub row; Boston v Nashville is 63.69% on the board row and 66.01% on the hub row. One row per fixture is kept, the layer used is recorded in provenance, and the other layers are not blended into the number.",
+      "item": "885 layer rows collapse to 382 fixtures; 268 fixtures appear in two or more layers",
+      "detail": "268 of the 382 fixtures were captured by more than one session. The same game can carry different model probabilities because each layer ran its own model. Example: Minnesota Wild at Calgary is 70.84% on the verified row but 67.38% on the hub row; Boston v Nashville is 63.69% on the board row and 66.01% on the hub row. One row per fixture is kept, the layer used is recorded in provenance, and the other layers are not blended into the number.",
       "source_name": "NHL GameCenter example",
       "source_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162"
     },
@@ -102,8 +102,8 @@
       "severity": "low",
       "category": "Source scope",
       "sport": "cross-sport",
-      "item": "206 of 322 rows do not link to an individual fixture page",
-      "detail": "116 rows cite a URL that identifies the fixture; 193 cite a competition, rankings or tournament page and 13 cite a player page. Two tennis rows (atp-902103 and atp-902133) link to player profiles because the layer did not capture a tournament-specific schedule URL; both are flagged rather than presented as fixture-level proof.",
+      "item": "206 of 382 rows do not link to an individual fixture page",
+      "detail": "176 rows cite a URL that identifies the fixture; 193 cite a competition, rankings or tournament page and 13 cite a player page. Two tennis rows (atp-902103 and atp-902133) link to player profiles because the layer did not capture a tournament-specific schedule URL; both are flagged rather than presented as fixture-level proof.",
       "source_name": "Example player page",
       "source_url": "https://www.atptour.com/en/players/valentin-vacherot/va25/overview"
     },
@@ -112,7 +112,7 @@
       "severity": "low",
       "category": "Inherited facts",
       "sport": "cross-sport",
-      "item": "16 of 30 facts in the write-ups were not re-read today",
+      "item": "20 of 34 facts in the write-ups were not re-read today",
       "detail": "Each fact carries its source URL and an 'inherited' badge. Re-read today: NHL standings and skater leaders, the Nashville-Boston game page, the SHL table, the PGA Tour tournament page. Not re-read: LNR, URC, ATP rankings table, EHF, EuroLeague/EuroCup, NBA, MLB, Formula 1, SuperLega, PlusLiga, AFLW, NRL, LoL, GAA, GBGB.",
       "source_name": "NHL leaders feed",
       "source_url": "https://api-web.nhle.com/v1/skater-stats-leaders/20262027/2?categories=goals,assists,points&limit=10"
@@ -166,6 +166,16 @@
       "detail": "The slate layer captured the LoL Worlds 2026 Swiss Round 1 pairings from Liquipedia, a community wiki. That is not an official source, so the eight rows are published as unlined and unverified, with the official lolesports.com Worlds schedule as the outbound link. No market or pick is shown for them. This is why eSports carries eight rows but zero originated picks.",
       "source_name": "LoL Esports official schedule",
       "source_url": "https://lolesports.com/en-US/leagues/worlds/schedule"
+    },
+    {
+      "id": "FR-18",
+      "severity": "low",
+      "category": "Market coverage",
+      "sport": "Basketball",
+      "item": "Four NBA fixtures carry a moneyline only",
+      "detail": "The verified layer captured the NBA card with a two-way moneyline and no handicap or total columns. The consolidated rows therefore publish one market each. No handicap line or total was estimated to fill the gap, and all four fixtures still carry an official NBA game-page link.",
+      "source_name": "NBA game page",
+      "source_url": "https://www.nba.com/game/mil-vs-phi-0022600106"
     },
     {
       "id": "FR-16",

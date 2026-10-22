@@ -184,6 +184,15 @@ def main():
             "source_name": "LoL Esports official schedule", "source_url": "https://lolesports.com/en-US/leagues/worlds/schedule",
         },
         {
+            "id": "FR-18", "severity": "low", "category": "Market coverage",
+            "sport": "Basketball",
+            "item": "Four NBA fixtures carry a moneyline only",
+            "detail": ("The verified layer captured the NBA card with a two-way moneyline and no handicap or total "
+                       "columns. The consolidated rows therefore publish one market each. No handicap line or total "
+                       "was estimated to fill the gap, and all four fixtures still carry an official NBA game-page link."),
+            "source_name": "NBA game page", "source_url": "https://www.nba.com/game/mil-vs-phi-0022600106",
+        },
+        {
             "id": "FR-16", "severity": "low", "category": "Consent wall",
             "sport": "Darts",
             "item": "PDC article cannot be read past the consent wall",

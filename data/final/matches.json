@@ -12,24 +12,24 @@
     }
   },
   "counts": {
-    "rows": 322,
-    "originated": 279,
+    "rows": 382,
+    "originated": 339,
     "unlined": 43,
-    "high": 15,
-    "medium": 129,
-    "low": 135,
+    "high": 19,
+    "medium": 171,
+    "low": 149,
     "sports": 17,
     "excluded_leaks": 0,
     "source_layers": {
-      "verified": 128,
+      "verified": 188,
       "hub": 189,
       "board": 207,
-      "slate": 148,
+      "slate": 208,
       "forward": 93
     },
     "per_sport": {
       "ice-hockey": 95,
-      "basketball": 49,
+      "basketball": 109,
       "rugby-union": 31,
       "darts": 18,
       "tennis": 28,
@@ -48,7 +48,7 @@
     },
     "provenance": {
       "hub": 147,
-      "verified": 49,
+      "verified": 109,
       "board": 73,
       "slate": 53
     }
@@ -12009,6 +12009,1590 @@
       }
     },
     {
+      "id": "nba-0022600104",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T18:00:00Z",
+      "venue": "Spectrum Center",
+      "home": "Charlotte Hornets",
+      "away": "Miami Heat",
+      "home_summary": "2025-26: 44-38 (Home 21-20)",
+      "away_summary": "2025-26: 43-39 (Road 17-24)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Charlotte Hornets",
+              "probability": 0.5802,
+              "fair_decimal": 1.72,
+              "fair_american": -139
+            },
+            {
+              "label": "Miami Heat",
+              "probability": 0.4198,
+              "fair_decimal": 2.38,
+              "fair_american": 138
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Charlotte Hornets",
+        "market": "Moneyline",
+        "probability": 0.5802,
+        "fair_decimal": 1.72,
+        "fair_american": -139,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/mia-vs-cha-0022600104",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600104",
+        "original_ids": {
+          "verified": "nba-0022600104",
+          "slate": "nba-0022600104"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/mia-vs-cha-0022600104",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600105",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:30:00Z",
+      "venue": "Rocket Arena",
+      "home": "Cleveland Cavaliers",
+      "away": "Brooklyn Nets",
+      "home_summary": "2025-26: 52-30 (Home 27-14)",
+      "away_summary": "2025-26: 20-62 (Road 8-33)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Cleveland Cavaliers",
+              "probability": 0.8524,
+              "fair_decimal": 1.17,
+              "fair_american": -588
+            },
+            {
+              "label": "Brooklyn Nets",
+              "probability": 0.1476,
+              "fair_decimal": 6.78,
+              "fair_american": 578
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Cleveland Cavaliers",
+        "market": "Moneyline",
+        "probability": 0.8524,
+        "fair_decimal": 1.17,
+        "fair_american": -588,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/bkn-vs-cle-0022600105",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600105",
+        "original_ids": {
+          "verified": "nba-0022600105",
+          "slate": "nba-0022600105"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/bkn-vs-cle-0022600105",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600106",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:30:00Z",
+      "venue": "Xfinity Mobile Arena",
+      "home": "Philadelphia 76ers",
+      "away": "Milwaukee Bucks",
+      "home_summary": "2025-26: 45-37 (Home 23-18)",
+      "away_summary": "2025-26: 32-50 (Road 13-28)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Philadelphia 76ers",
+              "probability": 0.7007,
+              "fair_decimal": 1.43,
+              "fair_american": -233
+            },
+            {
+              "label": "Milwaukee Bucks",
+              "probability": 0.2993,
+              "fair_decimal": 3.34,
+              "fair_american": 234
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Philadelphia 76ers",
+        "market": "Moneyline",
+        "probability": 0.7007,
+        "fair_decimal": 1.43,
+        "fair_american": -233,
+        "confidence": "high",
+        "grade_reason": ">=70% model probability and fair price inside 1.40-101.00"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/mil-vs-phi-0022600106",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600106",
+        "original_ids": {
+          "verified": "nba-0022600106",
+          "slate": "nba-0022600106"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/mil-vs-phi-0022600106",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600108",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T20:00:00Z",
+      "venue": "United Center",
+      "home": "Chicago Bulls",
+      "away": "Washington Wizards",
+      "home_summary": "2025-26: 31-51 (Home 18-23)",
+      "away_summary": "2025-26: 17-65 (Road 6-35)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Chicago Bulls",
+              "probability": 0.7302,
+              "fair_decimal": 1.37,
+              "fair_american": -270
+            },
+            {
+              "label": "Washington Wizards",
+              "probability": 0.2698,
+              "fair_decimal": 3.71,
+              "fair_american": 271
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Chicago Bulls",
+        "market": "Moneyline",
+        "probability": 0.7302,
+        "fair_decimal": 1.37,
+        "fair_american": -270,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/was-vs-chi-0022600108",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600108",
+        "original_ids": {
+          "verified": "nba-0022600108",
+          "slate": "nba-0022600108"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/was-vs-chi-0022600108",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600109",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T20:00:00Z",
+      "venue": "American Airlines Center",
+      "home": "Dallas Mavericks",
+      "away": "San Antonio Spurs",
+      "home_summary": "2025-26: 26-56 (Home 16-25)",
+      "away_summary": "2025-26: 62-20 (Road 29-12)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Dallas Mavericks",
+              "probability": 0.2006,
+              "fair_decimal": 4.99,
+              "fair_american": 399
+            },
+            {
+              "label": "San Antonio Spurs",
+              "probability": 0.7994,
+              "fair_decimal": 1.25,
+              "fair_american": -400
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "San Antonio Spurs",
+        "market": "Moneyline",
+        "probability": 0.7994,
+        "fair_decimal": 1.25,
+        "fair_american": -400,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/sas-vs-dal-0022600109",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600109",
+        "original_ids": {
+          "verified": "nba-0022600109",
+          "slate": "nba-0022600109"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/sas-vs-dal-0022600109",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600107",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T20:30:00Z",
+      "venue": "State Farm Arena",
+      "home": "Atlanta Hawks",
+      "away": "Houston Rockets",
+      "home_summary": "2025-26: 46-36 (Home 24-17)",
+      "away_summary": "2025-26: 52-30 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Atlanta Hawks",
+              "probability": 0.5026,
+              "fair_decimal": 1.99,
+              "fair_american": -101
+            },
+            {
+              "label": "Houston Rockets",
+              "probability": 0.4974,
+              "fair_decimal": 2.01,
+              "fair_american": 101
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Atlanta Hawks",
+        "market": "Moneyline",
+        "probability": 0.5026,
+        "fair_decimal": 1.99,
+        "fair_american": -101,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/hou-vs-atl-0022600107",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600107",
+        "original_ids": {
+          "verified": "nba-0022600107",
+          "slate": "nba-0022600107"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/hou-vs-atl-0022600107",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600110",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T21:00:00Z",
+      "venue": "Ball Arena",
+      "home": "Denver Nuggets",
+      "away": "New Orleans Pelicans",
+      "home_summary": "2025-26: 54-28 (Home 28-13)",
+      "away_summary": "2025-26: 26-56 (Road 9-32)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Denver Nuggets",
+              "probability": 0.8232,
+              "fair_decimal": 1.21,
+              "fair_american": -476
+            },
+            {
+              "label": "New Orleans Pelicans",
+              "probability": 0.1768,
+              "fair_decimal": 5.66,
+              "fair_american": 466
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Denver Nuggets",
+        "market": "Moneyline",
+        "probability": 0.8232,
+        "fair_decimal": 1.21,
+        "fair_american": -476,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/nop-vs-den-0022600110",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600110",
+        "original_ids": {
+          "verified": "nba-0022600110",
+          "slate": "nba-0022600110"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/nop-vs-den-0022600110",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600111",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T22:00:00Z",
+      "venue": "Mortgage Matchup Center",
+      "home": "Phoenix Suns",
+      "away": "Golden State Warriors",
+      "home_summary": "2025-26: 45-37 (Home 25-16)",
+      "away_summary": "2025-26: 37-45 (Road 15-26)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Phoenix Suns",
+              "probability": 0.6522,
+              "fair_decimal": 1.53,
+              "fair_american": -189
+            },
+            {
+              "label": "Golden State Warriors",
+              "probability": 0.3478,
+              "fair_decimal": 2.88,
+              "fair_american": 188
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Phoenix Suns",
+        "market": "Moneyline",
+        "probability": 0.6522,
+        "fair_decimal": 1.53,
+        "fair_american": -189,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/gsw-vs-phx-0022600111",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600111",
+        "original_ids": {
+          "verified": "nba-0022600111",
+          "slate": "nba-0022600111"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/gsw-vs-phx-0022600111",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600112",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T17:00:00Z",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "Los Angeles Lakers",
+      "home_summary": "2025-26: 22-60 (Home 14-27)",
+      "away_summary": "2025-26: 53-29 (Road 25-16)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Utah Jazz",
+              "probability": 0.2437,
+              "fair_decimal": 4.1,
+              "fair_american": 310
+            },
+            {
+              "label": "Los Angeles Lakers",
+              "probability": 0.7563,
+              "fair_decimal": 1.32,
+              "fair_american": -312
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Los Angeles Lakers",
+        "market": "Moneyline",
+        "probability": 0.7563,
+        "fair_decimal": 1.32,
+        "fair_american": -312,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/lal-vs-uta-0022600112",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600112",
+        "original_ids": {
+          "verified": "nba-0022600112",
+          "slate": "nba-0022600112"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/lal-vs-uta-0022600112",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600113",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Barclays Center",
+      "home": "Brooklyn Nets",
+      "away": "Indiana Pacers",
+      "home_summary": "2025-26: 20-62 (Home 12-29)",
+      "away_summary": "2025-26: 19-63 (Road 8-33)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Brooklyn Nets",
+              "probability": 0.5831,
+              "fair_decimal": 1.71,
+              "fair_american": -141
+            },
+            {
+              "label": "Indiana Pacers",
+              "probability": 0.4169,
+              "fair_decimal": 2.4,
+              "fair_american": 140
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Brooklyn Nets",
+        "market": "Moneyline",
+        "probability": 0.5831,
+        "fair_decimal": 1.71,
+        "fair_american": -141,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/ind-vs-bkn-0022600113",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600113",
+        "original_ids": {
+          "verified": "nba-0022600113",
+          "slate": "nba-0022600113"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/ind-vs-bkn-0022600113",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600114",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Madison Square Garden",
+      "home": "New York Knicks",
+      "away": "Orlando Magic",
+      "home_summary": "2025-26: 53-29 (Home 30-10)",
+      "away_summary": "2025-26: 45-37 (Road 19-20)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "New York Knicks",
+              "probability": 0.6547,
+              "fair_decimal": 1.53,
+              "fair_american": -189
+            },
+            {
+              "label": "Orlando Magic",
+              "probability": 0.3453,
+              "fair_decimal": 2.9,
+              "fair_american": 190
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "New York Knicks",
+        "market": "Moneyline",
+        "probability": 0.6547,
+        "fair_decimal": 1.53,
+        "fair_american": -189,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/orl-vs-nyk-0022600114",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600114",
+        "original_ids": {
+          "verified": "nba-0022600114",
+          "slate": "nba-0022600114"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/orl-vs-nyk-0022600114",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600115",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Target Center",
+      "home": "Minnesota Timberwolves",
+      "away": "Toronto Raptors",
+      "home_summary": "2025-26: 49-33 (Home 26-15)",
+      "away_summary": "2025-26: 46-36 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Minnesota Timberwolves",
+              "probability": 0.6018,
+              "fair_decimal": 1.66,
+              "fair_american": -152
+            },
+            {
+              "label": "Toronto Raptors",
+              "probability": 0.3982,
+              "fair_decimal": 2.51,
+              "fair_american": 151
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Minnesota Timberwolves",
+        "market": "Moneyline",
+        "probability": 0.6018,
+        "fair_decimal": 1.66,
+        "fair_american": -152,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/tor-vs-min-0022600115",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600115",
+        "original_ids": {
+          "verified": "nba-0022600115",
+          "slate": "nba-0022600115"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/tor-vs-min-0022600115",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600116",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Paycom Center",
+      "home": "Oklahoma City Thunder",
+      "away": "LA Clippers",
+      "home_summary": "2025-26: 64-18 (Home 34-7)",
+      "away_summary": "2025-26: 42-40 (Road 19-22)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Oklahoma City Thunder",
+              "probability": 0.7917,
+              "fair_decimal": 1.26,
+              "fair_american": -385
+            },
+            {
+              "label": "LA Clippers",
+              "probability": 0.2083,
+              "fair_decimal": 4.8,
+              "fair_american": 380
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Oklahoma City Thunder",
+        "market": "Moneyline",
+        "probability": 0.7917,
+        "fair_decimal": 1.26,
+        "fair_american": -385,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/lac-vs-okc-0022600116",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600116",
+        "original_ids": {
+          "verified": "nba-0022600116",
+          "slate": "nba-0022600116"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/lac-vs-okc-0022600116",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600117",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:30:00Z",
+      "venue": "Xfinity Mobile Arena",
+      "home": "Philadelphia 76ers",
+      "away": "Detroit Pistons",
+      "home_summary": "2025-26: 45-37 (Home 23-18)",
+      "away_summary": "2025-26: 60-22 (Road 28-13)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Philadelphia 76ers",
+              "probability": 0.3955,
+              "fair_decimal": 2.53,
+              "fair_american": 153
+            },
+            {
+              "label": "Detroit Pistons",
+              "probability": 0.6045,
+              "fair_decimal": 1.65,
+              "fair_american": -154
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Detroit Pistons",
+        "market": "Moneyline",
+        "probability": 0.6045,
+        "fair_decimal": 1.65,
+        "fair_american": -154,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/det-vs-phi-0022600117",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600117",
+        "original_ids": {
+          "verified": "nba-0022600117",
+          "slate": "nba-0022600117"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/det-vs-phi-0022600117",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600118",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Opening Week)",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T21:00:00Z",
+      "venue": "Golden 1 Center",
+      "home": "Sacramento Kings",
+      "away": "Memphis Grizzlies",
+      "home_summary": "2025-26: 22-60 (Home 15-26)",
+      "away_summary": "2025-26: 25-57 (Road 11-29)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Sacramento Kings",
+              "probability": 0.5318,
+              "fair_decimal": 1.88,
+              "fair_american": -114
+            },
+            {
+              "label": "Memphis Grizzlies",
+              "probability": 0.4682,
+              "fair_decimal": 2.14,
+              "fair_american": 114
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Sacramento Kings",
+        "market": "Moneyline",
+        "probability": 0.5318,
+        "fair_decimal": 1.88,
+        "fair_american": -114,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/mem-vs-sac-0022600118",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600118",
+        "original_ids": {
+          "verified": "nba-0022600118",
+          "slate": "nba-0022600118"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/mem-vs-sac-0022600118",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600119",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T19:00:00Z",
+      "venue": "Spectrum Center",
+      "home": "Charlotte Hornets",
+      "away": "Washington Wizards",
+      "home_summary": "2025-26: 44-38 (Home 21-20)",
+      "away_summary": "2025-26: 17-65 (Road 6-35)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Charlotte Hornets",
+              "probability": 0.8275,
+              "fair_decimal": 1.21,
+              "fair_american": -476
+            },
+            {
+              "label": "Washington Wizards",
+              "probability": 0.1725,
+              "fair_decimal": 5.8,
+              "fair_american": 480
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Charlotte Hornets",
+        "market": "Moneyline",
+        "probability": 0.8275,
+        "fair_decimal": 1.21,
+        "fair_american": -476,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/was-vs-cha-0022600119",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600119",
+        "original_ids": {
+          "verified": "nba-0022600119",
+          "slate": "nba-0022600119"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/was-vs-cha-0022600119",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600120",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T19:00:00Z",
+      "venue": "Rocket Arena",
+      "home": "Cleveland Cavaliers",
+      "away": "Minnesota Timberwolves",
+      "home_summary": "2025-26: 52-30 (Home 27-14)",
+      "away_summary": "2025-26: 49-33 (Road 23-18)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Cleveland Cavaliers",
+              "probability": 0.6026,
+              "fair_decimal": 1.66,
+              "fair_american": -152
+            },
+            {
+              "label": "Minnesota Timberwolves",
+              "probability": 0.3974,
+              "fair_decimal": 2.52,
+              "fair_american": 152
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Cleveland Cavaliers",
+        "market": "Moneyline",
+        "probability": 0.6026,
+        "fair_decimal": 1.66,
+        "fair_american": -152,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/min-vs-cle-0022600120",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600120",
+        "original_ids": {
+          "verified": "nba-0022600120",
+          "slate": "nba-0022600120"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/min-vs-cle-0022600120",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600121",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T19:30:00Z",
+      "venue": "TD Garden",
+      "home": "Boston Celtics",
+      "away": "Chicago Bulls",
+      "home_summary": "2025-26: 56-26 (Home 30-11)",
+      "away_summary": "2025-26: 31-51 (Road 13-28)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Boston Celtics",
+              "probability": 0.802,
+              "fair_decimal": 1.25,
+              "fair_american": -400
+            },
+            {
+              "label": "Chicago Bulls",
+              "probability": 0.198,
+              "fair_decimal": 5.05,
+              "fair_american": 405
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Boston Celtics",
+        "market": "Moneyline",
+        "probability": 0.802,
+        "fair_decimal": 1.25,
+        "fair_american": -400,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/chi-vs-bos-0022600121",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600121",
+        "original_ids": {
+          "verified": "nba-0022600121",
+          "slate": "nba-0022600121"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/chi-vs-bos-0022600121",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600122",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T19:30:00Z",
+      "venue": "Kaseya Center",
+      "home": "Miami Heat",
+      "away": "Dallas Mavericks",
+      "home_summary": "2025-26: 43-39 (Home 26-15)",
+      "away_summary": "2025-26: 26-56 (Road 10-30)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Miami Heat",
+              "probability": 0.7396,
+              "fair_decimal": 1.35,
+              "fair_american": -286
+            },
+            {
+              "label": "Dallas Mavericks",
+              "probability": 0.2604,
+              "fair_decimal": 3.84,
+              "fair_american": 284
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Miami Heat",
+        "market": "Moneyline",
+        "probability": 0.7396,
+        "fair_decimal": 1.35,
+        "fair_american": -286,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/dal-vs-mia-0022600122",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600122",
+        "original_ids": {
+          "verified": "nba-0022600122",
+          "slate": "nba-0022600122"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/dal-vs-mia-0022600122",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600123",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T20:00:00Z",
+      "venue": "Fiserv Forum",
+      "home": "Milwaukee Bucks",
+      "away": "Indiana Pacers",
+      "home_summary": "2025-26: 32-50 (Home 19-22)",
+      "away_summary": "2025-26: 19-63 (Road 8-33)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Milwaukee Bucks",
+              "probability": 0.7161,
+              "fair_decimal": 1.4,
+              "fair_american": -250
+            },
+            {
+              "label": "Indiana Pacers",
+              "probability": 0.2839,
+              "fair_decimal": 3.52,
+              "fair_american": 252
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Milwaukee Bucks",
+        "market": "Moneyline",
+        "probability": 0.7161,
+        "fair_decimal": 1.4,
+        "fair_american": -250,
+        "confidence": "high",
+        "grade_reason": ">=70% model probability and fair price inside 1.40-101.00"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/ind-vs-mil-0022600123",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600123",
+        "original_ids": {
+          "verified": "nba-0022600123",
+          "slate": "nba-0022600123"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/ind-vs-mil-0022600123",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600124",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T20:00:00Z",
+      "venue": "Paycom Center",
+      "home": "Oklahoma City Thunder",
+      "away": "Phoenix Suns",
+      "home_summary": "2025-26: 64-18 (Home 34-7)",
+      "away_summary": "2025-26: 45-37 (Road 20-21)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Oklahoma City Thunder",
+              "probability": 0.7693,
+              "fair_decimal": 1.3,
+              "fair_american": -333
+            },
+            {
+              "label": "Phoenix Suns",
+              "probability": 0.2307,
+              "fair_decimal": 4.33,
+              "fair_american": 333
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Oklahoma City Thunder",
+        "market": "Moneyline",
+        "probability": 0.7693,
+        "fair_decimal": 1.3,
+        "fair_american": -333,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/phx-vs-okc-0022600124",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600124",
+        "original_ids": {
+          "verified": "nba-0022600124",
+          "slate": "nba-0022600124"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/phx-vs-okc-0022600124",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600125",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T20:30:00Z",
+      "venue": "Toyota Center",
+      "home": "Houston Rockets",
+      "away": "Atlanta Hawks",
+      "home_summary": "2025-26: 52-30 (Home 30-11)",
+      "away_summary": "2025-26: 46-36 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Houston Rockets",
+              "probability": 0.634,
+              "fair_decimal": 1.58,
+              "fair_american": -172
+            },
+            {
+              "label": "Atlanta Hawks",
+              "probability": 0.366,
+              "fair_decimal": 2.73,
+              "fair_american": 173
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Houston Rockets",
+        "market": "Moneyline",
+        "probability": 0.634,
+        "fair_decimal": 1.58,
+        "fair_american": -172,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/atl-vs-hou-0022600125",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600125",
+        "original_ids": {
+          "verified": "nba-0022600125",
+          "slate": "nba-0022600125"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/atl-vs-hou-0022600125",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600126",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T21:00:00Z",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "Memphis Grizzlies",
+      "home_summary": "2025-26: 22-60 (Home 14-27)",
+      "away_summary": "2025-26: 25-57 (Road 11-29)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Utah Jazz",
+              "probability": 0.5318,
+              "fair_decimal": 1.88,
+              "fair_american": -114
+            },
+            {
+              "label": "Memphis Grizzlies",
+              "probability": 0.4682,
+              "fair_decimal": 2.14,
+              "fair_american": 114
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Utah Jazz",
+        "market": "Moneyline",
+        "probability": 0.5318,
+        "fair_decimal": 1.88,
+        "fair_american": -114,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/mem-vs-uta-0022600126",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600126",
+        "original_ids": {
+          "verified": "nba-0022600126",
+          "slate": "nba-0022600126"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/mem-vs-uta-0022600126",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600127",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T22:00:00Z",
+      "venue": "Ball Arena",
+      "home": "Denver Nuggets",
+      "away": "Golden State Warriors",
+      "home_summary": "2025-26: 54-28 (Home 28-13)",
+      "away_summary": "2025-26: 37-45 (Road 15-26)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Denver Nuggets",
+              "probability": 0.738,
+              "fair_decimal": 1.36,
+              "fair_american": -278
+            },
+            {
+              "label": "Golden State Warriors",
+              "probability": 0.262,
+              "fair_decimal": 3.82,
+              "fair_american": 282
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Denver Nuggets",
+        "market": "Moneyline",
+        "probability": 0.738,
+        "fair_decimal": 1.36,
+        "fair_american": -278,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/gsw-vs-den-0022600127",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600127",
+        "original_ids": {
+          "verified": "nba-0022600127",
+          "slate": "nba-0022600127"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/gsw-vs-den-0022600127",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
       "id": "ec-eurocup-r5-bah-pao",
       "sport": "basketball",
       "sport_name": "Basketball",
@@ -13144,6 +14728,72 @@
       }
     },
     {
+      "id": "nba-0022600128",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-27",
+      "start_utc": "2026-10-27T19:30:00Z",
+      "venue": "TD Garden",
+      "home": "Boston Celtics",
+      "away": "Brooklyn Nets",
+      "home_summary": "2025-26: 56-26 (Home 30-11)",
+      "away_summary": "2025-26: 20-62 (Road 8-33)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Boston Celtics",
+              "probability": 0.8746,
+              "fair_decimal": 1.14,
+              "fair_american": -714
+            },
+            {
+              "label": "Brooklyn Nets",
+              "probability": 0.1254,
+              "fair_decimal": 7.97,
+              "fair_american": 697
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Boston Celtics",
+        "market": "Moneyline",
+        "probability": 0.8746,
+        "fair_decimal": 1.14,
+        "fair_american": -714,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/bkn-vs-bos-0022600128",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600128",
+        "original_ids": {
+          "verified": "nba-0022600128",
+          "slate": "nba-0022600128"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/bkn-vs-bos-0022600128",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
       "id": "el-E2026-73",
       "sport": "basketball",
       "sport_name": "Basketball",
@@ -13241,6 +14891,204 @@
         "status": "inherited",
         "checked_at": null,
         "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/kosner-baskonia-vitoria-gasteiz-real-madrid/E2026/73/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600129",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-27",
+      "start_utc": "2026-10-27T20:00:00Z",
+      "venue": "Madison Square Garden",
+      "home": "New York Knicks",
+      "away": "Detroit Pistons",
+      "home_summary": "2025-26: 53-29 (Home 30-10)",
+      "away_summary": "2025-26: 60-22 (Road 28-13)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "New York Knicks",
+              "probability": 0.4839,
+              "fair_decimal": 2.07,
+              "fair_american": 107
+            },
+            {
+              "label": "Detroit Pistons",
+              "probability": 0.5161,
+              "fair_decimal": 1.94,
+              "fair_american": -106
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Detroit Pistons",
+        "market": "Moneyline",
+        "probability": 0.5161,
+        "fair_decimal": 1.94,
+        "fair_american": -106,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/det-vs-nyk-0022600129",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600129",
+        "original_ids": {
+          "verified": "nba-0022600129",
+          "slate": "nba-0022600129"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/det-vs-nyk-0022600129",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600130",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-27",
+      "start_utc": "2026-10-27T20:00:00Z",
+      "venue": "Frost Bank Center",
+      "home": "San Antonio Spurs",
+      "away": "Sacramento Kings",
+      "home_summary": "2025-26: 62-20 (Home 32-8)",
+      "away_summary": "2025-26: 22-60 (Road 7-34)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "San Antonio Spurs",
+              "probability": 0.8951,
+              "fair_decimal": 1.12,
+              "fair_american": -833
+            },
+            {
+              "label": "Sacramento Kings",
+              "probability": 0.1049,
+              "fair_decimal": 9.53,
+              "fair_american": 853
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "San Antonio Spurs",
+        "market": "Moneyline",
+        "probability": 0.8951,
+        "fair_decimal": 1.12,
+        "fair_american": -833,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/sac-vs-sas-0022600130",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600130",
+        "original_ids": {
+          "verified": "nba-0022600130",
+          "slate": "nba-0022600130"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/sac-vs-sas-0022600130",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600131",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-27",
+      "start_utc": "2026-10-27T23:00:00Z",
+      "venue": "Crypto.com Arena",
+      "home": "Los Angeles Lakers",
+      "away": "Portland Trail Blazers",
+      "home_summary": "2025-26: 53-29 (Home 28-13)",
+      "away_summary": "2025-26: 42-40 (Road 18-23)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Los Angeles Lakers",
+              "probability": 0.6837,
+              "fair_decimal": 1.46,
+              "fair_american": -217
+            },
+            {
+              "label": "Portland Trail Blazers",
+              "probability": 0.3163,
+              "fair_decimal": 3.16,
+              "fair_american": 216
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Los Angeles Lakers",
+        "market": "Moneyline",
+        "probability": 0.6837,
+        "fair_decimal": 1.46,
+        "fair_american": -217,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/por-vs-lal-0022600131",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600131",
+        "original_ids": {
+          "verified": "nba-0022600131",
+          "slate": "nba-0022600131"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/por-vs-lal-0022600131",
         "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
       }
     },
@@ -14283,6 +16131,270 @@
       }
     },
     {
+      "id": "nba-0022600132",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T19:00:00Z",
+      "venue": "State Farm Arena",
+      "home": "Atlanta Hawks",
+      "away": "Miami Heat",
+      "home_summary": "2025-26: 46-36 (Home 24-17)",
+      "away_summary": "2025-26: 43-39 (Road 17-24)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Atlanta Hawks",
+              "probability": 0.6014,
+              "fair_decimal": 1.66,
+              "fair_american": -152
+            },
+            {
+              "label": "Miami Heat",
+              "probability": 0.3986,
+              "fair_decimal": 2.51,
+              "fair_american": 151
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Atlanta Hawks",
+        "market": "Moneyline",
+        "probability": 0.6014,
+        "fair_decimal": 1.66,
+        "fair_american": -152,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/mia-vs-atl-0022600132",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600132",
+        "original_ids": {
+          "verified": "nba-0022600132",
+          "slate": "nba-0022600132"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/mia-vs-atl-0022600132",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600133",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T19:00:00Z",
+      "venue": "Rocket Arena",
+      "home": "Cleveland Cavaliers",
+      "away": "Washington Wizards",
+      "home_summary": "2025-26: 52-30 (Home 27-14)",
+      "away_summary": "2025-26: 17-65 (Road 6-35)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Cleveland Cavaliers",
+              "probability": 0.8727,
+              "fair_decimal": 1.15,
+              "fair_american": -667
+            },
+            {
+              "label": "Washington Wizards",
+              "probability": 0.1273,
+              "fair_decimal": 7.86,
+              "fair_american": 686
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Cleveland Cavaliers",
+        "market": "Moneyline",
+        "probability": 0.8727,
+        "fair_decimal": 1.15,
+        "fair_american": -667,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/was-vs-cle-0022600133",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600133",
+        "original_ids": {
+          "verified": "nba-0022600133",
+          "slate": "nba-0022600133"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/was-vs-cle-0022600133",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600134",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T19:00:00Z",
+      "venue": "Little Caesars Arena",
+      "home": "Detroit Pistons",
+      "away": "Charlotte Hornets",
+      "home_summary": "2025-26: 60-22 (Home 31-9)",
+      "away_summary": "2025-26: 44-38 (Road 23-18)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Detroit Pistons",
+              "probability": 0.7365,
+              "fair_decimal": 1.36,
+              "fair_american": -278
+            },
+            {
+              "label": "Charlotte Hornets",
+              "probability": 0.2635,
+              "fair_decimal": 3.8,
+              "fair_american": 280
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Detroit Pistons",
+        "market": "Moneyline",
+        "probability": 0.7365,
+        "fair_decimal": 1.36,
+        "fair_american": -278,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/cha-vs-det-0022600134",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600134",
+        "original_ids": {
+          "verified": "nba-0022600134",
+          "slate": "nba-0022600134"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/cha-vs-det-0022600134",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600135",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T19:00:00Z",
+      "venue": "Gainbridge Fieldhouse",
+      "home": "Indiana Pacers",
+      "away": "Philadelphia 76ers",
+      "home_summary": "2025-26: 19-63 (Home 11-30)",
+      "away_summary": "2025-26: 45-37 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Indiana Pacers",
+              "probability": 0.2817,
+              "fair_decimal": 3.55,
+              "fair_american": 255
+            },
+            {
+              "label": "Philadelphia 76ers",
+              "probability": 0.7183,
+              "fair_decimal": 1.39,
+              "fair_american": -256
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Philadelphia 76ers",
+        "market": "Moneyline",
+        "probability": 0.7183,
+        "fair_decimal": 1.39,
+        "fair_american": -256,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/phi-vs-ind-0022600135",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600135",
+        "original_ids": {
+          "verified": "nba-0022600135",
+          "slate": "nba-0022600135"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/phi-vs-ind-0022600135",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
       "id": "ec-eurocup-r5-bgs-rig",
       "sport": "basketball",
       "sport_name": "Basketball",
@@ -14594,6 +16706,72 @@
       }
     },
     {
+      "id": "nba-0022600136",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T19:30:00Z",
+      "venue": "Scotiabank Arena",
+      "home": "Toronto Raptors",
+      "away": "Orlando Magic",
+      "home_summary": "2025-26: 46-36 (Home 24-17)",
+      "away_summary": "2025-26: 45-37 (Road 19-20)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Toronto Raptors",
+              "probability": 0.5803,
+              "fair_decimal": 1.72,
+              "fair_american": -139
+            },
+            {
+              "label": "Orlando Magic",
+              "probability": 0.4197,
+              "fair_decimal": 2.38,
+              "fair_american": 138
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Toronto Raptors",
+        "market": "Moneyline",
+        "probability": 0.5803,
+        "fair_decimal": 1.72,
+        "fair_american": -139,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/orl-vs-tor-0022600136",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600136",
+        "original_ids": {
+          "verified": "nba-0022600136",
+          "slate": "nba-0022600136"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/orl-vs-tor-0022600136",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
       "id": "ec-eurocup-r5-tnf-vnc",
       "sport": "basketball",
       "sport_name": "Basketball",
@@ -14695,6 +16873,1788 @@
         "status": "inherited",
         "checked_at": null,
         "source_url": "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600137",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T20:00:00Z",
+      "venue": "United Center",
+      "home": "Chicago Bulls",
+      "away": "New York Knicks",
+      "home_summary": "2025-26: 31-51 (Home 18-23)",
+      "away_summary": "2025-26: 53-29 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Chicago Bulls",
+              "probability": 0.3327,
+              "fair_decimal": 3.01,
+              "fair_american": 201
+            },
+            {
+              "label": "New York Knicks",
+              "probability": 0.6673,
+              "fair_decimal": 1.5,
+              "fair_american": -200
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "New York Knicks",
+        "market": "Moneyline",
+        "probability": 0.6673,
+        "fair_decimal": 1.5,
+        "fair_american": -200,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/nyk-vs-chi-0022600137",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600137",
+        "original_ids": {
+          "verified": "nba-0022600137",
+          "slate": "nba-0022600137"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/nyk-vs-chi-0022600137",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600138",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T20:00:00Z",
+      "venue": "Fiserv Forum",
+      "home": "Milwaukee Bucks",
+      "away": "Houston Rockets",
+      "home_summary": "2025-26: 32-50 (Home 19-22)",
+      "away_summary": "2025-26: 52-30 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Milwaukee Bucks",
+              "probability": 0.3534,
+              "fair_decimal": 2.83,
+              "fair_american": 183
+            },
+            {
+              "label": "Houston Rockets",
+              "probability": 0.6466,
+              "fair_decimal": 1.55,
+              "fair_american": -182
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Houston Rockets",
+        "market": "Moneyline",
+        "probability": 0.6466,
+        "fair_decimal": 1.55,
+        "fair_american": -182,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/hou-vs-mil-0022600138",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600138",
+        "original_ids": {
+          "verified": "nba-0022600138",
+          "slate": "nba-0022600138"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/hou-vs-mil-0022600138",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600139",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T20:00:00Z",
+      "venue": "Target Center",
+      "home": "Minnesota Timberwolves",
+      "away": "Golden State Warriors",
+      "home_summary": "2025-26: 49-33 (Home 26-15)",
+      "away_summary": "2025-26: 37-45 (Road 15-26)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Minnesota Timberwolves",
+              "probability": 0.6912,
+              "fair_decimal": 1.45,
+              "fair_american": -222
+            },
+            {
+              "label": "Golden State Warriors",
+              "probability": 0.3088,
+              "fair_decimal": 3.24,
+              "fair_american": 224
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Minnesota Timberwolves",
+        "market": "Moneyline",
+        "probability": 0.6912,
+        "fair_decimal": 1.45,
+        "fair_american": -222,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/gsw-vs-min-0022600139",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600139",
+        "original_ids": {
+          "verified": "nba-0022600139",
+          "slate": "nba-0022600139"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/gsw-vs-min-0022600139",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600140",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T20:00:00Z",
+      "venue": "Smoothie King Center",
+      "home": "New Orleans Pelicans",
+      "away": "Denver Nuggets",
+      "home_summary": "2025-26: 26-56 (Home 17-24)",
+      "away_summary": "2025-26: 54-28 (Road 26-15)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "New Orleans Pelicans",
+              "probability": 0.2733,
+              "fair_decimal": 3.66,
+              "fair_american": 266
+            },
+            {
+              "label": "Denver Nuggets",
+              "probability": 0.7267,
+              "fair_decimal": 1.38,
+              "fair_american": -263
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Denver Nuggets",
+        "market": "Moneyline",
+        "probability": 0.7267,
+        "fair_decimal": 1.38,
+        "fair_american": -263,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/den-vs-nop-0022600140",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600140",
+        "original_ids": {
+          "verified": "nba-0022600140",
+          "slate": "nba-0022600140"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/den-vs-nop-0022600140",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600141",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T21:00:00Z",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "San Antonio Spurs",
+      "home_summary": "2025-26: 22-60 (Home 14-27)",
+      "away_summary": "2025-26: 62-20 (Road 29-12)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Utah Jazz",
+              "probability": 0.1702,
+              "fair_decimal": 5.88,
+              "fair_american": 488
+            },
+            {
+              "label": "San Antonio Spurs",
+              "probability": 0.8298,
+              "fair_decimal": 1.21,
+              "fair_american": -476
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "San Antonio Spurs",
+        "market": "Moneyline",
+        "probability": 0.8298,
+        "fair_decimal": 1.21,
+        "fair_american": -476,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/sas-vs-uta-0022600141",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600141",
+        "original_ids": {
+          "verified": "nba-0022600141",
+          "slate": "nba-0022600141"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/sas-vs-uta-0022600141",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600142",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T21:30:00Z",
+      "venue": "American Airlines Center",
+      "home": "Dallas Mavericks",
+      "away": "Oklahoma City Thunder",
+      "home_summary": "2025-26: 26-56 (Home 16-25)",
+      "away_summary": "2025-26: 64-18 (Road 30-10)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Dallas Mavericks",
+              "probability": 0.1831,
+              "fair_decimal": 5.46,
+              "fair_american": 446
+            },
+            {
+              "label": "Oklahoma City Thunder",
+              "probability": 0.8169,
+              "fair_decimal": 1.22,
+              "fair_american": -455
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Oklahoma City Thunder",
+        "market": "Moneyline",
+        "probability": 0.8169,
+        "fair_decimal": 1.22,
+        "fair_american": -455,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/okc-vs-dal-0022600142",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600142",
+        "original_ids": {
+          "verified": "nba-0022600142",
+          "slate": "nba-0022600142"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/okc-vs-dal-0022600142",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600143",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T22:30:00Z",
+      "venue": "Intuit Dome",
+      "home": "LA Clippers",
+      "away": "Los Angeles Lakers",
+      "home_summary": "2025-26: 42-40 (Home 23-18)",
+      "away_summary": "2025-26: 53-29 (Road 25-16)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "LA Clippers",
+              "probability": 0.4475,
+              "fair_decimal": 2.23,
+              "fair_american": 123
+            },
+            {
+              "label": "Los Angeles Lakers",
+              "probability": 0.5525,
+              "fair_decimal": 1.81,
+              "fair_american": -123
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Los Angeles Lakers",
+        "market": "Moneyline",
+        "probability": 0.5525,
+        "fair_decimal": 1.81,
+        "fair_american": -123,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/lal-vs-lac-0022600143",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600143",
+        "original_ids": {
+          "verified": "nba-0022600143",
+          "slate": "nba-0022600143"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/lal-vs-lac-0022600143",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600144",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-29",
+      "start_utc": "2026-10-29T19:00:00Z",
+      "venue": "State Farm Arena",
+      "home": "Atlanta Hawks",
+      "away": "Cleveland Cavaliers",
+      "home_summary": "2025-26: 46-36 (Home 24-17)",
+      "away_summary": "2025-26: 52-30 (Road 25-16)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Atlanta Hawks",
+              "probability": 0.5026,
+              "fair_decimal": 1.99,
+              "fair_american": -101
+            },
+            {
+              "label": "Cleveland Cavaliers",
+              "probability": 0.4974,
+              "fair_decimal": 2.01,
+              "fair_american": 101
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Atlanta Hawks",
+        "market": "Moneyline",
+        "probability": 0.5026,
+        "fair_decimal": 1.99,
+        "fair_american": -101,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/cle-vs-atl-0022600144",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600144",
+        "original_ids": {
+          "verified": "nba-0022600144",
+          "slate": "nba-0022600144"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/cle-vs-atl-0022600144",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600145",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-29",
+      "start_utc": "2026-10-29T20:00:00Z",
+      "venue": "Smoothie King Center",
+      "home": "New Orleans Pelicans",
+      "away": "Sacramento Kings",
+      "home_summary": "2025-26: 26-56 (Home 17-24)",
+      "away_summary": "2025-26: 22-60 (Road 7-34)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "New Orleans Pelicans",
+              "probability": 0.6181,
+              "fair_decimal": 1.62,
+              "fair_american": -161
+            },
+            {
+              "label": "Sacramento Kings",
+              "probability": 0.3819,
+              "fair_decimal": 2.62,
+              "fair_american": 162
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "New Orleans Pelicans",
+        "market": "Moneyline",
+        "probability": 0.6181,
+        "fair_decimal": 1.62,
+        "fair_american": -161,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/sac-vs-nop-0022600145",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600145",
+        "original_ids": {
+          "verified": "nba-0022600145",
+          "slate": "nba-0022600145"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/sac-vs-nop-0022600145",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600146",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-29",
+      "start_utc": "2026-10-29T22:00:00Z",
+      "venue": "Moda Center",
+      "home": "Portland Trail Blazers",
+      "away": "Memphis Grizzlies",
+      "home_summary": "2025-26: 42-40 (Home 24-17)",
+      "away_summary": "2025-26: 25-57 (Road 11-29)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Portland Trail Blazers",
+              "probability": 0.7407,
+              "fair_decimal": 1.35,
+              "fair_american": -286
+            },
+            {
+              "label": "Memphis Grizzlies",
+              "probability": 0.2593,
+              "fair_decimal": 3.86,
+              "fair_american": 286
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Portland Trail Blazers",
+        "market": "Moneyline",
+        "probability": 0.7407,
+        "fair_decimal": 1.35,
+        "fair_american": -286,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/mem-vs-por-0022600146",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600146",
+        "original_ids": {
+          "verified": "nba-0022600146",
+          "slate": "nba-0022600146"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/mem-vs-por-0022600146",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600015",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group C)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T19:00:00Z",
+      "venue": "Capital One Arena",
+      "home": "Washington Wizards",
+      "away": "Charlotte Hornets",
+      "home_summary": "2025-26: 17-65 (Home 11-30)",
+      "away_summary": "2025-26: 44-38 (Road 23-18)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Washington Wizards",
+              "probability": 0.2674,
+              "fair_decimal": 3.74,
+              "fair_american": 274
+            },
+            {
+              "label": "Charlotte Hornets",
+              "probability": 0.7326,
+              "fair_decimal": 1.37,
+              "fair_american": -270
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Charlotte Hornets",
+        "market": "Moneyline",
+        "probability": 0.7326,
+        "fair_decimal": 1.37,
+        "fair_american": -270,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/cha-vs-was-0022600015",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600015",
+        "original_ids": {
+          "verified": "nba-0022600015",
+          "slate": "nba-0022600015"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/cha-vs-was-0022600015",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600016",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group C)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T19:30:00Z",
+      "venue": "TD Garden",
+      "home": "Boston Celtics",
+      "away": "Chicago Bulls",
+      "home_summary": "2025-26: 56-26 (Home 30-11)",
+      "away_summary": "2025-26: 31-51 (Road 13-28)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Boston Celtics",
+              "probability": 0.802,
+              "fair_decimal": 1.25,
+              "fair_american": -400
+            },
+            {
+              "label": "Chicago Bulls",
+              "probability": 0.198,
+              "fair_decimal": 5.05,
+              "fair_american": 405
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Boston Celtics",
+        "market": "Moneyline",
+        "probability": 0.802,
+        "fair_decimal": 1.25,
+        "fair_american": -400,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/chi-vs-bos-0022600016",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600016",
+        "original_ids": {
+          "verified": "nba-0022600016",
+          "slate": "nba-0022600016"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/chi-vs-bos-0022600016",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600017",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group A)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T19:30:00Z",
+      "venue": "Barclays Center",
+      "home": "Brooklyn Nets",
+      "away": "Detroit Pistons",
+      "home_summary": "2025-26: 20-62 (Home 12-29)",
+      "away_summary": "2025-26: 60-22 (Road 28-13)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Brooklyn Nets",
+              "probability": 0.1702,
+              "fair_decimal": 5.88,
+              "fair_american": 488
+            },
+            {
+              "label": "Detroit Pistons",
+              "probability": 0.8298,
+              "fair_decimal": 1.21,
+              "fair_american": -476
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Detroit Pistons",
+        "market": "Moneyline",
+        "probability": 0.8298,
+        "fair_decimal": 1.21,
+        "fair_american": -476,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/det-vs-bkn-0022600017",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600017",
+        "original_ids": {
+          "verified": "nba-0022600017",
+          "slate": "nba-0022600017"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/det-vs-bkn-0022600017",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600018",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group B)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T19:30:00Z",
+      "venue": "Xfinity Mobile Arena",
+      "home": "Philadelphia 76ers",
+      "away": "New York Knicks",
+      "home_summary": "2025-26: 45-37 (Home 23-18)",
+      "away_summary": "2025-26: 53-29 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Philadelphia 76ers",
+              "probability": 0.4801,
+              "fair_decimal": 2.08,
+              "fair_american": 108
+            },
+            {
+              "label": "New York Knicks",
+              "probability": 0.5199,
+              "fair_decimal": 1.92,
+              "fair_american": -109
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "New York Knicks",
+        "market": "Moneyline",
+        "probability": 0.5199,
+        "fair_decimal": 1.92,
+        "fair_american": -109,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/nyk-vs-phi-0022600018",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600018",
+        "original_ids": {
+          "verified": "nba-0022600018",
+          "slate": "nba-0022600018"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/nyk-vs-phi-0022600018",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600019",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group A)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T19:30:00Z",
+      "venue": "Scotiabank Arena",
+      "home": "Toronto Raptors",
+      "away": "Orlando Magic",
+      "home_summary": "2025-26: 46-36 (Home 24-17)",
+      "away_summary": "2025-26: 45-37 (Road 19-20)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Toronto Raptors",
+              "probability": 0.5803,
+              "fair_decimal": 1.72,
+              "fair_american": -139
+            },
+            {
+              "label": "Orlando Magic",
+              "probability": 0.4197,
+              "fair_decimal": 2.38,
+              "fair_american": 138
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Toronto Raptors",
+        "market": "Moneyline",
+        "probability": 0.5803,
+        "fair_decimal": 1.72,
+        "fair_american": -139,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/orl-vs-tor-0022600019",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600019",
+        "original_ids": {
+          "verified": "nba-0022600019",
+          "slate": "nba-0022600019"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/orl-vs-tor-0022600019",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600020",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group B)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T20:00:00Z",
+      "venue": "Kaseya Center",
+      "home": "Miami Heat",
+      "away": "Indiana Pacers",
+      "home_summary": "2025-26: 43-39 (Home 26-15)",
+      "away_summary": "2025-26: 19-63 (Road 8-33)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Miami Heat",
+              "probability": 0.8035,
+              "fair_decimal": 1.24,
+              "fair_american": -417
+            },
+            {
+              "label": "Indiana Pacers",
+              "probability": 0.1965,
+              "fair_decimal": 5.09,
+              "fair_american": 409
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Miami Heat",
+        "market": "Moneyline",
+        "probability": 0.8035,
+        "fair_decimal": 1.24,
+        "fair_american": -417,
+        "confidence": "medium",
+        "grade_reason": "model probability >=70% but fair price is shorter than -250 (1.40 decimal), outside the brief's focus band"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/ind-vs-mia-0022600020",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600020",
+        "original_ids": {
+          "verified": "nba-0022600020",
+          "slate": "nba-0022600020"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/ind-vs-mia-0022600020",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600021",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group A)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T20:00:00Z",
+      "venue": "American Airlines Center",
+      "home": "Dallas Mavericks",
+      "away": "Houston Rockets",
+      "home_summary": "2025-26: 26-56 (Home 16-25)",
+      "away_summary": "2025-26: 52-30 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Dallas Mavericks",
+              "probability": 0.2922,
+              "fair_decimal": 3.42,
+              "fair_american": 242
+            },
+            {
+              "label": "Houston Rockets",
+              "probability": 0.7078,
+              "fair_decimal": 1.41,
+              "fair_american": -244
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Houston Rockets",
+        "market": "Moneyline",
+        "probability": 0.7078,
+        "fair_decimal": 1.41,
+        "fair_american": -244,
+        "confidence": "high",
+        "grade_reason": ">=70% model probability and fair price inside 1.40-101.00"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/hou-vs-dal-0022600021",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600021",
+        "original_ids": {
+          "verified": "nba-0022600021",
+          "slate": "nba-0022600021"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/hou-vs-dal-0022600021",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600022",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group B)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T20:00:00Z",
+      "venue": "Target Center",
+      "home": "Minnesota Timberwolves",
+      "away": "LA Clippers",
+      "home_summary": "2025-26: 49-33 (Home 26-15)",
+      "away_summary": "2025-26: 42-40 (Road 19-22)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Minnesota Timberwolves",
+              "probability": 0.6429,
+              "fair_decimal": 1.56,
+              "fair_american": -179
+            },
+            {
+              "label": "LA Clippers",
+              "probability": 0.3571,
+              "fair_decimal": 2.8,
+              "fair_american": 180
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Minnesota Timberwolves",
+        "market": "Moneyline",
+        "probability": 0.6429,
+        "fair_decimal": 1.56,
+        "fair_american": -179,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/lac-vs-min-0022600022",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600022",
+        "original_ids": {
+          "verified": "nba-0022600022",
+          "slate": "nba-0022600022"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/lac-vs-min-0022600022",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600023",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group C)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T22:00:00Z",
+      "venue": "Chase Center",
+      "home": "Golden State Warriors",
+      "away": "Los Angeles Lakers",
+      "home_summary": "2025-26: 37-45 (Home 22-19)",
+      "away_summary": "2025-26: 53-29 (Road 25-16)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Golden State Warriors",
+              "probability": 0.3945,
+              "fair_decimal": 2.53,
+              "fair_american": 153
+            },
+            {
+              "label": "Los Angeles Lakers",
+              "probability": 0.6055,
+              "fair_decimal": 1.65,
+              "fair_american": -154
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Los Angeles Lakers",
+        "market": "Moneyline",
+        "probability": 0.6055,
+        "fair_decimal": 1.65,
+        "fair_american": -154,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/lal-vs-gsw-0022600023",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600023",
+        "original_ids": {
+          "verified": "nba-0022600023",
+          "slate": "nba-0022600023"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/lal-vs-gsw-0022600023",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600024",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group A)",
+      "date": "2026-10-30",
+      "start_utc": "2026-10-30T22:00:00Z",
+      "venue": "Mortgage Matchup Center",
+      "home": "Phoenix Suns",
+      "away": "Denver Nuggets",
+      "home_summary": "2025-26: 45-37 (Home 25-16)",
+      "away_summary": "2025-26: 54-28 (Road 26-15)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Phoenix Suns",
+              "probability": 0.4684,
+              "fair_decimal": 2.13,
+              "fair_american": 113
+            },
+            {
+              "label": "Denver Nuggets",
+              "probability": 0.5316,
+              "fair_decimal": 1.88,
+              "fair_american": -114
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Denver Nuggets",
+        "market": "Moneyline",
+        "probability": 0.5316,
+        "fair_decimal": 1.88,
+        "fair_american": -114,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/den-vs-phx-0022600024",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600024",
+        "original_ids": {
+          "verified": "nba-0022600024",
+          "slate": "nba-0022600024"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/den-vs-phx-0022600024",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600147",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-31",
+      "start_utc": "2026-10-31T15:00:00Z",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "Portland Trail Blazers",
+      "home_summary": "2025-26: 22-60 (Home 14-27)",
+      "away_summary": "2025-26: 42-40 (Road 18-23)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Utah Jazz",
+              "probability": 0.3448,
+              "fair_decimal": 2.9,
+              "fair_american": 190
+            },
+            {
+              "label": "Portland Trail Blazers",
+              "probability": 0.6552,
+              "fair_decimal": 1.53,
+              "fair_american": -189
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Portland Trail Blazers",
+        "market": "Moneyline",
+        "probability": 0.6552,
+        "fair_decimal": 1.53,
+        "fair_american": -189,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/por-vs-uta-0022600147",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600147",
+        "original_ids": {
+          "verified": "nba-0022600147",
+          "slate": "nba-0022600147"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/por-vs-uta-0022600147",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600148",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-31",
+      "start_utc": "2026-10-31T18:00:00Z",
+      "venue": "Spectrum Center",
+      "home": "Charlotte Hornets",
+      "away": "Philadelphia 76ers",
+      "home_summary": "2025-26: 44-38 (Home 21-20)",
+      "away_summary": "2025-26: 45-37 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Charlotte Hornets",
+              "probability": 0.5588,
+              "fair_decimal": 1.79,
+              "fair_american": -127
+            },
+            {
+              "label": "Philadelphia 76ers",
+              "probability": 0.4412,
+              "fair_decimal": 2.27,
+              "fair_american": 127
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Charlotte Hornets",
+        "market": "Moneyline",
+        "probability": 0.5588,
+        "fair_decimal": 1.79,
+        "fair_american": -127,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/phi-vs-cha-0022600148",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600148",
+        "original_ids": {
+          "verified": "nba-0022600148",
+          "slate": "nba-0022600148"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/phi-vs-cha-0022600148",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600149",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-31",
+      "start_utc": "2026-10-31T19:00:00Z",
+      "venue": "Smoothie King Center",
+      "home": "New Orleans Pelicans",
+      "away": "Atlanta Hawks",
+      "home_summary": "2025-26: 26-56 (Home 17-24)",
+      "away_summary": "2025-26: 46-36 (Road 22-19)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "New Orleans Pelicans",
+              "probability": 0.3509,
+              "fair_decimal": 2.85,
+              "fair_american": 185
+            },
+            {
+              "label": "Atlanta Hawks",
+              "probability": 0.6491,
+              "fair_decimal": 1.54,
+              "fair_american": -185
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Atlanta Hawks",
+        "market": "Moneyline",
+        "probability": 0.6491,
+        "fair_decimal": 1.54,
+        "fair_american": -185,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/atl-vs-nop-0022600149",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600149",
+        "original_ids": {
+          "verified": "nba-0022600149",
+          "slate": "nba-0022600149"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/atl-vs-nop-0022600149",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600150",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-31",
+      "start_utc": "2026-10-31T20:00:00Z",
+      "venue": "FedExForum",
+      "home": "Memphis Grizzlies",
+      "away": "Sacramento Kings",
+      "home_summary": "2025-26: 25-57 (Home 13-27)",
+      "away_summary": "2025-26: 22-60 (Road 7-34)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Memphis Grizzlies",
+              "probability": 0.6065,
+              "fair_decimal": 1.65,
+              "fair_american": -154
+            },
+            {
+              "label": "Sacramento Kings",
+              "probability": 0.3935,
+              "fair_decimal": 2.54,
+              "fair_american": 154
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Memphis Grizzlies",
+        "market": "Moneyline",
+        "probability": 0.6065,
+        "fair_decimal": 1.65,
+        "fair_american": -154,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/sac-vs-mem-0022600150",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600150",
+        "original_ids": {
+          "verified": "nba-0022600150",
+          "slate": "nba-0022600150"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/sac-vs-mem-0022600150",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600151",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-31",
+      "start_utc": "2026-10-31T20:00:00Z",
+      "venue": "Fiserv Forum",
+      "home": "Milwaukee Bucks",
+      "away": "Cleveland Cavaliers",
+      "home_summary": "2025-26: 32-50 (Home 19-22)",
+      "away_summary": "2025-26: 52-30 (Road 25-16)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Milwaukee Bucks",
+              "probability": 0.3534,
+              "fair_decimal": 2.83,
+              "fair_american": 183
+            },
+            {
+              "label": "Cleveland Cavaliers",
+              "probability": 0.6466,
+              "fair_decimal": 1.55,
+              "fair_american": -182
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Cleveland Cavaliers",
+        "market": "Moneyline",
+        "probability": 0.6466,
+        "fair_decimal": 1.55,
+        "fair_american": -182,
+        "confidence": "medium",
+        "grade_reason": ">=60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/cle-vs-mil-0022600151",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600151",
+        "original_ids": {
+          "verified": "nba-0022600151",
+          "slate": "nba-0022600151"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/cle-vs-mil-0022600151",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600152",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-31",
+      "start_utc": "2026-10-31T20:00:00Z",
+      "venue": "Frost Bank Center",
+      "home": "San Antonio Spurs",
+      "away": "Minnesota Timberwolves",
+      "home_summary": "2025-26: 62-20 (Home 32-8)",
+      "away_summary": "2025-26: 49-33 (Road 23-18)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "San Antonio Spurs",
+              "probability": 0.7139,
+              "fair_decimal": 1.4,
+              "fair_american": -250
+            },
+            {
+              "label": "Minnesota Timberwolves",
+              "probability": 0.2861,
+              "fair_decimal": 3.5,
+              "fair_american": 250
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "San Antonio Spurs",
+        "market": "Moneyline",
+        "probability": 0.7139,
+        "fair_decimal": 1.4,
+        "fair_american": -250,
+        "confidence": "high",
+        "grade_reason": ">=70% model probability and fair price inside 1.40-101.00"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/min-vs-sas-0022600152",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600152",
+        "original_ids": {
+          "verified": "nba-0022600152",
+          "slate": "nba-0022600152"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/min-vs-sas-0022600152",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "nba-0022600153",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "NBA Regular Season 2026-27 (Week 2)",
+      "date": "2026-10-31",
+      "start_utc": "2026-10-31T20:30:00Z",
+      "venue": "Toyota Center",
+      "home": "Houston Rockets",
+      "away": "Oklahoma City Thunder",
+      "home_summary": "2025-26: 52-30 (Home 30-11)",
+      "away_summary": "2025-26: 64-18 (Road 30-10)",
+      "line_status": "originated",
+      "blank_reason": "no official pre-match input published by the governing body",
+      "markets": [
+        {
+          "market": "Moneyline",
+          "outcomes": [
+            {
+              "label": "Houston Rockets",
+              "probability": 0.418,
+              "fair_decimal": 2.39,
+              "fair_american": 139
+            },
+            {
+              "label": "Oklahoma City Thunder",
+              "probability": 0.582,
+              "fair_decimal": 1.72,
+              "fair_american": -139
+            }
+          ]
+        }
+      ],
+      "pick": {
+        "selection": "Oklahoma City Thunder",
+        "market": "Moneyline",
+        "probability": 0.582,
+        "fair_decimal": 1.72,
+        "fair_american": -139,
+        "confidence": "low",
+        "grade_reason": "under 60% model probability"
+      },
+      "official_source": "NBA Official Game Page",
+      "official_url": "https://www.nba.com/game/okc-vs-hou-0022600153",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified",
+          "slate"
+        ],
+        "original_id": "nba-0022600153",
+        "original_ids": {
+          "verified": "nba-0022600153",
+          "slate": "nba-0022600153"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.nba.com/game/okc-vs-hou-0022600153",
         "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
       }
     },

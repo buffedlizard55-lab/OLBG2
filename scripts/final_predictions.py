@@ -247,6 +247,55 @@ PREDICTIONS = {
              "source": ATP, "verified": False},
         ],
     },
+    "nba-0022600106": {
+        "text": (
+            "Back Philadelphia 76ers on the moneyline when Milwaukee Bucks visit Xfinity Mobile Arena on Saturday, "
+            "24 October. The official game page carries Philadelphia's 2025-26 finish at 45-37 with a 23-18 home "
+            "record, against Milwaukee's 32-50 season and a 13-28 road mark. Opening-week rosters can shift the "
+            "picture, but the baseline gap is 13 wins and a home court that held up last season. Our margin model "
+            "makes the 76ers a 70.1% shot at 1.43 fair decimal (-233 American)."
+        ),
+        "facts": [
+            {"claim": "Philadelphia finished 2025-26 at 45-37 (23-18 at home); Milwaukee were 32-50 (13-28 on the road)",
+             "source": "https://www.nba.com/game/mil-vs-phi-0022600106", "verified": False},
+        ],
+    },
+    "nba-0022600123": {
+        "text": (
+            "Take Milwaukee Bucks at home against Indiana Pacers on Monday, 26 October. Milwaukee's 2025-26 line was "
+            "32-50 overall but 19-22 at Fiserv Forum, while Indiana finished 19-63 and won only eight road games all "
+            "season (8-33), per the official game page. That is the weakest travelling profile in the sample, and the "
+            "model prices a Bucks win at 71.6% (1.40 fair decimal, -250 American)."
+        ),
+        "facts": [
+            {"claim": "Milwaukee were 32-50 (19-22 at home) and Indiana 19-63 (8-33 on the road) in 2025-26",
+             "source": "https://www.nba.com/game/ind-vs-mil-0022600123", "verified": False},
+        ],
+    },
+    "nba-0022600021": {
+        "text": (
+            "Back Houston Rockets on the moneyline at American Airlines Center on Friday, 30 October. The official "
+            "game page records Houston at 52-30 last season with a 22-19 road record, while Dallas went 26-56 and "
+            "16-25 at home. A 26-win gap is the largest on this NBA card, and the Emirates NBA Cup setting does not "
+            "change the talent baseline. Our model gives Houston 70.8% at 1.41 fair decimal (-244 American)."
+        ),
+        "facts": [
+            {"claim": "Houston were 52-30 (22-19 away) and Dallas 26-56 (16-25 at home) in 2025-26",
+             "source": "https://www.nba.com/game/hou-vs-dal-0022600021", "verified": False},
+        ],
+    },
+    "nba-0022600152": {
+        "text": (
+            "Take San Antonio Spurs at Frost Bank Center on Saturday, 31 October. San Antonio closed 2025-26 at 62-20 "
+            "with a 32-8 home record, the best home mark in this set, while Minnesota were 49-33 and 23-18 on the "
+            "road, per the official game page. The Spurs' home edge is worth roughly seven points in our margin "
+            "model, which prices them at 71.4% (1.40 fair decimal, -250 American)."
+        ),
+        "facts": [
+            {"claim": "San Antonio were 62-20 (32-8 at home) and Minnesota 49-33 (23-18 away) in 2025-26",
+             "source": "https://www.nba.com/game/min-vs-sas-0022600152", "verified": False},
+        ],
+    },
     "atp-902133": {
         "text": (
             "Back Tommy Paul to beat Corentin Moutet in Friday's quarter-final in Vienna. The captured ATP list has "

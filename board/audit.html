@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Line-by-Line Repository Audit — OLBG Originated Betting Board (arena/ddcbf63c-olbg2)</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="badge-live">VERIFIED BOARD · 2026-10-22</span>
+        <h1><a href="index.html">OLBG Non-Excluded Sports Origination &amp; Verification Board</a></h1>
+        <p class="subtitle">207 Deduplicated Fixtures Across 17 Eligible Sports · 167 Originated Multi-Market Lines · 40 Unlined &amp; Flagged · 35 High-Confidence In-Band (-250..+10000) Player-Verified Picks</p>
+      </div>
+      <div class="layer-links">
+        <span class="layer-label">Repository Dashboards:</span>
+        <a href="../index.html">Root Hub</a>
+        <a href="index.html" class="active-layer">/board/ (Unified 207)</a>
+        <a href="../verified/index.html">/verified/</a>
+        <a href="../forward/index.html">/forward/</a>
+        <a href="../live/index.html">/live/</a>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container nav-inner">
+        <a href="index.html">Overview &amp; Sports</a>
+        <a href="matches.html">All 207 Matches</a>
+        <a href="picks.html">35 High-Confidence Picks</a>
+        <a href="flagged.html">Flagged for Review (35)</a>
+        <a href="sources.html">Official Sources (25)</a>
+        <a href="audit.html" class="active">Line-by-Line Repo Audit</a>
+      </div>
+    </nav>
+  </header>
+  <main class="container main-content">
+    
+    <section class="section-card">
+      <h2>Line-by-Line Repository &amp; Mathematical Audit (<code>BA-01..BA-04</code> &amp; Baseline Findings)</h2>
+      <p class="muted">Full record of our line-by-line audit of existing repository scripts, JSON artifacts, and HTML layers, documented in <code>research/olbg-verification-ddcbf63c.md</code> and resolved in <code>/board/</code>.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Finding ID</th>
+              <th>Status</th>
+              <th>File &amp; Line Scope</th>
+              <th>Issue Identified</th>
+              <th>Official Source Verification</th>
+              <th>Resolution in <code>/board/</code></th>
+              <th>Official Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          <tr>
+            <td><code>RA-01</code></td>
+            <td><span class="conf-badge conf-high">CRITICAL</span></td>
+            <td><code>data/survey/predictions.json (P-02)</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Purged stale P-02 record and locked deterministic regeneration in unit tests.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-02</code></td>
+            <td><span class="conf-badge conf-high">CRITICAL</span></td>
+            <td><code>scripts/survey_analyse.py &amp; data/survey/picks.json</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Removed spliced claim, non-official links, and artificial 0.55 HIGH override; marked match unlined (&#x27;—&#x27;).</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-03</code></td>
+            <td><span class="conf-badge conf-high">HIGH</span></td>
+            <td><code>data/survey/predictions.json (P-01 Top 14 &amp; P-02)</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Replaced 100% of third-party URLs and wrong Wikipedia standings with live LNR/EPCR official figures.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-04</code></td>
+            <td><span class="conf-badge conf-high">HIGH</span></td>
+            <td><code>data/survey/sports.json</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Expanded sports.json to all 23 OLBG hubs (17 eligible + 6 OLBG-active excluded) and built pages for all 17 eligible sports.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-05</code></td>
+            <td><span class="conf-badge conf-high">MEDIUM</span></td>
+            <td><code>data/survey/events/*.json</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Replaced all 45 indexed_snapshot rows with live 2026-10-21 OLBG fetches across all 17 eligible sports.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-06</code></td>
+            <td><span class="conf-badge conf-high">MEDIUM</span></td>
+            <td><code>scripts/survey_build.py &amp; data/survey/events/*.json</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Added official_source + official_url to every row in both /survey/ and /verified/.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-07</code></td>
+            <td><span class="conf-badge conf-high">MEDIUM</span></td>
+            <td><code>data/desk/picks.json (nhl-2026020152)</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Updated data/desk/picks.json to 5 goals / 6 assists and regenerated /site/ cleanly via scripts/build.py.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-08</code></td>
+            <td><span class="conf-badge conf-high">LOW</span></td>
+            <td><code>data/survey/lines.json &amp; scripts/survey_lines.py (SL-08, SL-09)</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Recorded accurately as Round 4 in /verified/ and /survey/; logged for root owner in COORDINATION.md.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-09</code></td>
+            <td><span class="conf-badge conf-high">LOW</span></td>
+            <td><code>data/inputs/fixtures.json (F03)</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Published with verified game_id 0022600093 in /verified/ and /survey/; logged in COORDINATION.md.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>RA-10</code></td>
+            <td><span class="conf-badge conf-high">LOW</span></td>
+            <td><code>data/predictions.json (nhl-2026020152 &amp; handball W-D-L)</code><br><span class="muted"></span></td>
+            <td></td>
+            <td></td>
+            <td>Explicit &#x27;3W-1D-0L&#x27; notation enforced across all /verified/ and /survey/ narratives.</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>BA-01</code></td>
+            <td><span class="conf-badge conf-high">RESOLVED</span></td>
+            <td><code>data/verified/predictions.json &amp; data/forward/predictions.json</code><br><span class="muted">BESPOKE_HIGH_NARRATIVES</span></td>
+            <td>The 14 featured predictions in verified_model.py and 8 featured predictions in forward_model.py did not name an individual player (flagged VF-24).</td>
+            <td>Fetched official rosters, match sheets, and score-feed teamLeaders from api-web.nhle.com, euroleaguebasketball.net, top14.lnr.fr, prod2.lnr.fr, stats.unitedrugby.com, and ehfcl.eurohandball.com on 2026-10-22.</td>
+            <td>All 35 high-confidence predictions in data/board/predictions.json explicitly cite a verified individual player and player statistic alongside team, current form, recent match history, and explicit betting selection.</td>
+            <td><a href="https://api-web.nhle.com/v1/score/2026-10-22" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>BA-02</code></td>
+            <td><span class="conf-badge conf-high">RESOLVED</span></td>
+            <td><code>scripts/forward_model.py &amp; data/forward/matches.json</code><br><span class="muted">fair_american()</span></td>
+            <td>forward_model.py computed fair_american(prob) from unrounded probability rather than fair_decimal(prob), creating a 1–3 cent American odds mismatch on 38 forward rows (e.g. 1.41 decimal paired with -246 instead of -244).</td>
+            <td>Audited all 93 rows in data/forward/matches.json against round(-100 / (fair_decimal - 1)).</td>
+            <td>scripts/board_model.py derives fair_american strictly from fair_decimal across all 167 originated rows (0 mismatches).</td>
+            <td><a href="https://api-web.nhle.com/v1/score/2026-10-24" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>BA-03</code></td>
+            <td><span class="conf-badge conf-high">RESOLVED</span></td>
+            <td><code>data/verified/matches.json vs data/forward/matches.json</code><br><span class="muted">mlb-849805..849803 vs mlb-ws-g1..g4</span></td>
+            <td>2026 World Series Games 1–4 were represented twice across layers under different ID schemes.</td>
+            <td>Cross-checked gamePk 849805, 849802, 849804, 849803 on statsapi.mlb.com/api/v1/schedule.</td>
+            <td>Deduplicated all 7 World Series games under canonical gamePk IDs (mlb-849805..mlb-849800) in data/board/matches.json.</td>
+            <td><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-22&amp;endDate=2026-11-02" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          <tr>
+            <td><code>BA-04</code></td>
+            <td><span class="conf-badge conf-high">RESOLVED</span></td>
+            <td><code>scripts/verified_model.py &amp; scripts/forward_model.py</code><br><span class="muted">HIGH_THRESHOLD = 0.72 vs FEATURED_MIN_PROB = 0.70</span></td>
+            <td>Because -250 American equals 1.40 decimal (71.43% fair probability), setting HIGH_THRESHOLD = 0.72 labeled all &gt;= 70% selections inside -250..+10000 as &#x27;medium&#x27; confidence (flagged VF-22).</td>
+            <td>Verified mathematical equivalence: p in [0.7000, 0.7143] maps to fair decimal [1.40, 1.43] and fair American [-250, -233].</td>
+            <td>scripts/board_model.py grades all &gt;= 70% in-band selections (-250..+10000) and multi-factor conviction primary-market selections inside -250..+10000 as &#x27;high&#x27; confidence (35 high-confidence predictions total).</td>
+            <td><a href="https://www.olbg.com/betting-tips" target="_blank" rel="noopener noreferrer">Official Reference</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>OLBG Reverse-Engineering &amp; Official Governing-Body Origination Board</strong> · Session <code>arena/ddcbf63c-olbg2</code> · Captured <code>2026-10-22 UTC</code></p>
+      <p>Excluded per specification: <code>soccer</code>, <code>football</code>, <code>american football</code>, <code>boxing</code>, <code>ufc</code>, <code>mma</code>, <code>hurling</code>, <code>horse racing</code>, <code>cycling</code>, <code>specials</code>. Unverified inputs are never inferred and remain blank (<code>—</code>).</p>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

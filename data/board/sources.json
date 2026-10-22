@@ -1,0 +1,182 @@
+{
+  "captured_at": "2026-10-22",
+  "session": "arena/ddcbf63c-olbg2",
+  "count": 25,
+  "sources": [
+    {
+      "sport": "All Sports (Discovery)",
+      "authority": "OLBG Betting Tips Index",
+      "url": "https://www.olbg.com/betting-tips",
+      "verified_at": "2026-10-22",
+      "scope": "Tipster feed & sport taxonomy (zero bookmaker odds used)"
+    },
+    {
+      "sport": "Ice Hockey",
+      "authority": "NHL Web API (Score & Leaders)",
+      "url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "verified_at": "2026-10-22",
+      "scope": "Oct 22–Nov 2 NHL schedule, start times, venues & teamLeaders"
+    },
+    {
+      "sport": "Ice Hockey",
+      "authority": "NHL Stats REST API (Team Summary)",
+      "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+      "verified_at": "2026-10-22",
+      "scope": "32-club GP, W-L-OTL, GF/GA (excl. shootout winner) & points"
+    },
+    {
+      "sport": "Ice Hockey",
+      "authority": "NHL Web API (Standings)",
+      "url": "https://api-web.nhle.com/v1/standings/2026-10-22",
+      "verified_at": "2026-10-22",
+      "scope": "Home/road splits, L10 records & current streaks"
+    },
+    {
+      "sport": "Baseball",
+      "authority": "MLB Stats API (Schedule)",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-11-02",
+      "verified_at": "2026-10-22",
+      "scope": "2026 World Series Games 1–7 (Rays vs Brewers, gamePk 849805..849800)"
+    },
+    {
+      "sport": "Basketball",
+      "authority": "NBA Official Schedule & Standings",
+      "url": "https://www.nba.com/standings",
+      "verified_at": "2026-10-22",
+      "scope": "NBA Week-1 schedule (14 games) & Opening Night standings"
+    },
+    {
+      "sport": "Basketball",
+      "authority": "EuroLeague Official Standings & Rosters",
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+      "verified_at": "2026-10-22",
+      "scope": "20-club EuroLeague R6/R7 standings, PF/PA & Panathinaikos roster"
+    },
+    {
+      "sport": "Basketball",
+      "authority": "BKT EuroCup Game Center & Standings",
+      "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
+      "verified_at": "2026-10-22",
+      "scope": "EuroCup Round 5 (16 games, U2026/41..56) & Group A/B tables"
+    },
+    {
+      "sport": "Rugby Union",
+      "authority": "LNR Top 14 Official Classement & Match Sheets",
+      "url": "https://top14.lnr.fr/classement",
+      "verified_at": "2026-10-22",
+      "scope": "Top 14 J6 standings, J7 fixtures & J6 match sheet 11860 try-scorers"
+    },
+    {
+      "sport": "Rugby Union",
+      "authority": "LNR Pro D2 Official Classement & Match Sheets",
+      "url": "https://prod2.lnr.fr/classement",
+      "verified_at": "2026-10-22",
+      "scope": "Pro D2 J7 standings, J8 fixtures & J6/J7 match sheets 12049 / 12061"
+    },
+    {
+      "sport": "Rugby Union",
+      "authority": "United Rugby Championship Match Centre",
+      "url": "https://stats.unitedrugby.com/match-centre/table",
+      "verified_at": "2026-10-22",
+      "scope": "URC R3 standings, R4–R5 fixtures & R3 match recaps 292600..292604"
+    },
+    {
+      "sport": "Handball",
+      "authority": "EHF Champions League Men Standings & Club Rosters",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "verified_at": "2026-10-22",
+      "scope": "Groups A–F standings, R5 fixtures & Barça player goal tallies"
+    },
+    {
+      "sport": "Darts",
+      "authority": "PDC Order of Merit & European Championship Draw",
+      "url": "https://www.pdc.tv/order-of-merit/pdc-order-of-merit",
+      "verified_at": "2026-10-22",
+      "scope": "16 European Championship R1 ties & 2-year prize-money rankings"
+    },
+    {
+      "sport": "Snooker",
+      "authority": "World Snooker Tour Match Centre",
+      "url": "https://www.wst.tv/matches/",
+      "verified_at": "2026-10-22",
+      "scope": "Northern Ireland Open R1–R2 results & 8 Last-16 R3 ties"
+    },
+    {
+      "sport": "Tennis",
+      "authority": "ATP Tour & WTA Official Singles Rankings",
+      "url": "https://www.atptour.com/en/rankings/singles",
+      "verified_at": "2026-10-22",
+      "scope": "ATP Basel/Vienna & WTA Tokyo/Guangzhou draws and rankings"
+    },
+    {
+      "sport": "Cricket",
+      "authority": "BCCI & ICC International Fixtures",
+      "url": "https://www.bcci.tv/international/men/fixtures-results",
+      "verified_at": "2026-10-22",
+      "scope": "NZ vs IND 1st T20I (LIVE on 2026-10-22) & international calendar"
+    },
+    {
+      "sport": "Formula 1",
+      "authority": "Formula 1 2026 Drivers' Standings",
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "verified_at": "2026-10-22",
+      "scope": "2026 F1 Drivers' Championship (Antonelli 340, Russell 238, Hamilton 229)"
+    },
+    {
+      "sport": "Golf",
+      "authority": "Official World Golf Ranking (Week 42)",
+      "url": "https://www.owgr.com/current-world-ranking",
+      "verified_at": "2026-10-22",
+      "scope": "OWGR top 200 average points (Scheffler 16.6784, McIlroy 8.3040)"
+    },
+    {
+      "sport": "Volleyball",
+      "authority": "PlusLiga / PLS Official Calendar",
+      "url": "https://www.plusliga.pl/games.html",
+      "verified_at": "2026-10-22",
+      "scope": "PlusLiga Round 1 fixture & PLS network redirect verification"
+    },
+    {
+      "sport": "Rugby League",
+      "authority": "NRL Match Centre & Pacific Championships",
+      "url": "https://www.nrl.com/draw/?competition=111&round=1&season=2026",
+      "verified_at": "2026-10-22",
+      "scope": "2026 Pacific Championships calendar"
+    },
+    {
+      "sport": "Australian Rules",
+      "authority": "AFL Match Centre",
+      "url": "https://www.afl.com.au/matches/match-centre",
+      "verified_at": "2026-10-22",
+      "scope": "AFL post-Grand Final off-season status"
+    },
+    {
+      "sport": "Bowls",
+      "authority": "World Bowls & Bowls Scotland Calendar",
+      "url": "https://www.worldbowls.com/calendar/",
+      "verified_at": "2026-10-22",
+      "scope": "Scottish National Indoor Open Singles Championship"
+    },
+    {
+      "sport": "Esports",
+      "authority": "LoL Esports & Liquipedia Counter-Strike",
+      "url": "https://lolesports.com/en-GB",
+      "verified_at": "2026-10-22",
+      "scope": "LoL Worlds 2026 Knockout Stage & Thunderpick World Championship"
+    },
+    {
+      "sport": "Gaelic Games",
+      "authority": "GAA Official Fixtures & Results",
+      "url": "https://www.gaa.ie/fixtures-results",
+      "verified_at": "2026-10-22",
+      "scope": "Oct 24 Ireland vs Scotland Shinty-Hurling & county football finals"
+    },
+    {
+      "sport": "Greyhound Racing",
+      "authority": "Greyhound Board of Great Britain (GBGB)",
+      "url": "https://www.gbgb.org.uk/racing/results/",
+      "verified_at": "2026-10-22",
+      "scope": " Hove Open Race card & client-rendered trap form check"
+    }
+  ]
+}

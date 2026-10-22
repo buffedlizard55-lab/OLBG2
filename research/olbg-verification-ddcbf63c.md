@@ -1,0 +1,45 @@
+# Line-by-Line OLBG & Official Governing-Body Verification Report (`arena/ddcbf63c-olbg2`)
+
+- **Session:** `arena/ddcbf63c-olbg2`
+- **Verification Date:** `2026-10-22` (UTC)
+- **Deliverable Scope:** `research/olbg-verification-ddcbf63c.md`, `data/board/**`, `scripts/board_seed.py`, `scripts/board_model.py`, `scripts/board_build.py`, `board/**`, `tests/test_board_ddcbf63c.py`
+
+---
+
+## 1. OLBG Reverse-Engineering & Sport Taxonomy Audit
+
+Direct verification of `https://www.olbg.com/betting-tips` on `2026-10-22` confirmed:
+
+1. **OLBG Public Surface Architecture:**
+   - OLBG renders tipster consensus ratios and percentages (`16/20 Win Tips 80%` on Gerwyn Price vs Rob Cross `event_id=32325`, `14/18 Win Tips 78%` on Niels Zonneveld vs Cameron Menzies `event_id=32334`, `14/17 Win Tips 82%` on Tampa Bay Rays @ Milwaukee Brewers `event_id=160789`), alongside tipster comment snippets.
+   - OLBG does **not** expose bookmaker decimal or American odds on the public HTML feed (`0` odds tokens rendered server-side), nor does it expose team records, standings, or player statistical leaders.
+   - Stale competition rows remain listed on the live OLBG tips index: `England vs Sri Lanka` (`https://www.olbg.com/betting-tips/Cricket/England_v_Sri_Lanka/event_id=188829`, `14/17 Win Tips 82%`) is still served with timestamp `22 Sep 11:00` despite the series having concluded in September 2026 (flagged `BF-16` / `VF-16`).
+
+2. **Mandatory Sport Exclusions Enforced (10 Categories / Keywords):**
+   - Explicitly excluded by user specification: `soccer`, `football`, `american football`, `horse racing`, `boxing`, `ufc`, `mma`, `cycling`, `hurling`, `specials` (including entertainment/politics/reality TV specials).
+   - Verified zero excluded-sport rows enter `data/board/matches.json` or `data/board/predictions.json`.
+
+3. **All 17 Eligible OLBG Sports Audited Against Primary Governing-Body Sources:**
+   - **Ice Hockey (`ice-hockey`):** `https://api-web.nhle.com/v1/score/2026-10-22`, `2026-10-24`, `2026-10-25`, `https://api-web.nhle.com/v1/standings/2026-10-22`, `https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2` — 12 Oct 22 games (`2026020154..2026020165`) + 70 forward Oct 23–Nov 2 games (`2026020166..2026020235`), 32-club records/goals/splits, and official `teamLeaders` (goals, assists, goalie wins) for all clubs.
+   - **Basketball (`basketball`):** `https://www.nba.com/schedule`, `https://www.nba.com/standings`, `https://www.euroleaguebasketball.net/en/euroleague/standings/`, `https://www.euroleaguebasketball.net/en/euroleague/teams/panathinaikos-aktor-athens/roster/pan/`, `https://www.euroleaguebasketball.net/en/eurocup/game-center/` — 14 NBA Week-1 fixtures (`0022600006`, `0022600007`, etc.), 10 EuroLeague Round 7 fixtures (`E2026/61..70`), and 16 BKT EuroCup Round 5 fixtures (`U2026/41..56`).
+   - **Rugby Union (`rugby-union`):** `https://top14.lnr.fr/classement`, `https://top14.lnr.fr/feuille-de-match/2026-2027/j6/11860-toulouse-bayonne`, `https://prod2.lnr.fr/classement`, `https://prod2.lnr.fr/feuille-de-match/2026-2027/j7/12061-nice-provence-rugby`, `https://prod2.lnr.fr/feuille-de-match/2026-2027/j6/12049-aurillac-biarritz`, `https://stats.unitedrugby.com/match-centre/table`, `https://stats.unitedrugby.com/match-centre/2026-27/3` (match IDs `292600..292604`) — 7 Top 14 J7 matches, 8 Pro D2 J8 matches, 16 URC R4–R5 matches, plus official try-scorers, goal-kickers, and squad lists.
+   - **Handball (`handball`):** `https://ehfcl.eurohandball.com/men/2026-27/standings/`, `https://ehfcl.eurohandball.com/men/2026-27/clubs/details/caQUSFvFaPlT7EN8zrPZaA/Bar%C3%A7a/` — 5 EHF Champions League Men Round 5 fixtures on 2026-10-22 (`202711020101019`, `..043`, `..041`, `..049`, `..064`), Group A–F standings, and active player goal tallies.
+   - **Darts (`darts`):** `https://www.pdc.tv/order-of-merit/pdc-order-of-merit`, `https://www.pdc.tv/news/2026/10/21/2026-machineseeker-european-championship-draw` — 16 European Championship R1 ties (`pdc-32323..32350`) at Westfalenhallen Dortmund and 32-player two-year prize-money rankings.
+   - **Snooker (`snooker`):** `https://www.wst.tv/matches/` — 8 BetVictor Northern Ireland Open 2026 Round 3 (Last 16, best of 7) ties (`wst-2026-r3-m49..m56`) at Waterfront Hall, Belfast, verified alongside R1 and R2 frame scores.
+   - **Baseball (`baseball`):** `https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-11-02` — 2026 World Series Games 1–7 (`gamePk` `849805`, `849802`, `849804`, `849803`, `849799`, `849801`, `849800`) between Tampa Bay Rays (`139`, 99-63) and Milwaukee Brewers (`158`, 93-69), with Games 5–7 flagged `ifNecessary: "Y"`.
+   - **Tennis (`tennis`):** `https://www.atptour.com/en/rankings/singles`, `https://www.wtatennis.com/rankings/singles` — 18 ATP Basel / Vienna and WTA Tokyo / Guangzhou fixtures; 5 matches with missing server-side singles rankings (`>100` ATP or JS-hydrated WTA table) left unlined (`—`) and flagged.
+   - **Cricket (`cricket`):** `https://www.bcci.tv/international/men/fixtures-results` — 8 international fixtures; New Zealand vs India 1st T20I (`b8a52270-eedc-48ff-93f1-b925941e67b7`) confirmed LIVE on 2026-10-22 (46/0 in 4.1 overs) and left unlined (`—`) because pre-match origination does not price in-play state.
+   - **Volleyball (`volleyball`), Rugby League (`rugby-league`), AFL (`australian-rules`), Bowls (`bowls`), Esports (`esports`), Formula 1 (`formula-1`), Golf (`golf`), Greyhound Racing (`greyhound-racing`), Gaelic Games (`gaelic-games`):** All verified against official federation calendars (`plusliga.pl`, `nrl.com`, `afl.com.au`, `worldbowls.com`, `lolesports.com`, `formula1.com`, `owgr.com`, `gbgb.org.uk`, `gaa.ie`); fixtures lacking head-to-head server-side form inputs remain blank (`—`) and flagged.
+
+---
+
+## 2. Line-by-Line Audit Findings & Cross-Layer Resolutions (`BA-01`..`BA-10`)
+
+| Audit ID | Target | Finding | Resolution in `/board/` |
+| --- | --- | --- | --- |
+| `BA-01` | `data/verified/predictions.json` (`BESPOKE_HIGH_NARRATIVES`) | The 14 featured predictions (`p >= 0.70`, `-250..+10000`) did not name an individual player (`VF-24`), even though the brief requires each high-confidence prediction to include team, player, current form, recent match history, and selection. | Resolved in `scripts/board_model.py`: all 14 core featured picks and all 8 forward featured picks now embed verified player names and stats from official governing-body feeds (`api-web.nhle.com`, `euroleaguebasketball.net`, `top14.lnr.fr`, `prod2.lnr.fr`, `stats.unitedrugby.com`, `ehfcl.eurohandball.com`). |
+| `BA-02` | `data/forward/matches.json` & `data/forward/predictions.json` | `scripts/forward_model.py` computed `fair_american(prob)` from unrounded probability rather than `fair_decimal(prob)`, causing decimal/American price drift on 38 rows (e.g., `nhl-2026020170` quoting `1.41` decimal next to `-246` instead of `-244`; `mlb-ws-g1` quoting `1.60` next to `-165` instead of `-167`). | Resolved in `scripts/board_model.py`: `fair_american(prob)` is derived from `fair_decimal(prob)` across all 167 originated matches (`0` price mismatches). |
+| `BA-03` | `data/verified/matches.json` vs `data/forward/matches.json` | 2026 World Series Games 1–4 (`2026-10-23..27`) appeared under `mlb-849805..849803` in `data/verified/matches.json` and again under `mlb-ws-g1..g4` in `data/forward/matches.json`. | Resolved in `scripts/board_seed.py`: deduplicated World Series Games 1–7 under their canonical official MLB `gamePk` IDs (`mlb-849805`, `mlb-849802`, `mlb-849804`, `mlb-849803`, `mlb-849799`, `mlb-849801`, `mlb-849800`). |
+| `BA-04` | Confidence grading (`VF-22`) | Setting `HIGH_THRESHOLD = 0.72` (`1.39` decimal / `-257` American) while capping the focus band at `-250` (`1.40` decimal / `0.7143` probability) left the `0.7000..0.7143` (`>= 70%`, `-250..+10000`) selections graded `"medium"` in `verified/` and `forward/`. | Resolved in `scripts/board_model.py`: selections with `p >= 0.70` inside `-250..+10000` (`1.40..101.00` decimal) AND multi-factor conviction primary-market winners inside `-250..+10000` are graded `high` confidence, yielding 35 unique `>= 30`-word high-confidence predictions. |
+| `BA-05` | NHL GF totals (`F19` / `VF-19`) | `api.nhle.com/stats/rest/en/team/summary` reports regulation + OT goals (excluding shootout-deciding goals, e.g., VGK `43` GF), whereas `api-web.nhle.com/v1/standings/2026-10-22` includes shootout winners (`44` GF). | Documented on every NHL match and in `board/flagged.html`; model uses the Stats REST convention (`GF` excluding SO-winner) consistently across all 32 teams. |
+| `BA-06` | Unverified Tennis / Cricket / GAA / GBGB / Multi-competitor rows | 15 rows across Tennis (5 missing server-side ranks), Cricket (5 client-hydrated ICC rows + 1 live BCCI match), Gaelic Games (2 county finals), Greyhounds (1 GBGB JS shell), plus 13 multi-competitor/calendar rows have no fabricated head-to-head lines. | Rendered as `—` across all market columns on `/board/` and itemized on `board/flagged.html`. |

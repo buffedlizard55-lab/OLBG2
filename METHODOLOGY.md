@@ -3,6 +3,8 @@
 The published version of this document, with worked examples, is the site page
 [methodology.html](methodology.html). This file is the same content in Markdown for reviewers reading the repo.
 
+> **Scope note (22 October 2026):** this is the legacy root-dashboard methodology, not the current `/verified/` model specification. The verified desk has its own generated [methodology](verified/methodology.html), source register and per-row provenance. It may publish an officially pending card as **unlined** rather than omit it; raw OLBG date labels are identified as such. Current verified High confidence requires `p > 0.70` **and** fair American odds from `-250` through `+10000` inclusive, plus a unique official-fact narrative of at least 30 words.
+
 ## 1. Verification chain
 
 1. **Discovery** — the event list, event_id and market label come from OLBG's sport hub pages

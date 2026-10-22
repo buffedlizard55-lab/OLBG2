@@ -15,11 +15,11 @@ def load(path):
 def findings():
     """Produce review rows from repository evidence, without inventing external facts."""
     rows = [
-        ('Integration / freshness', 'UNVERIFIED', 'The site contains dated 2026-10-21 captures, not a continuously refreshed feed. No exhaustive live bookmaker price feed is claimed.', 'survey/verification.html'),
+        ('Integration / freshness', 'UNVERIFIED', 'The site contains dated captures from 18–22 October 2026, not a continuously refreshed feed. The verified desk capture is 22 October; older layers remain dated snapshots. No exhaustive live bookmaker price feed is claimed.', 'survey/verification.html'),
         ('Scope alignment across layers', 'RESOLVED IN V2/V3', 'All active layers (Root, Verified /verified/, and Survey /survey/) enforce the 17 eligible OLBG sports and block all excluded terms including Hurling (id 26) and UFC/MMA (id 27).', 'verified/flagged.html'),
-        ('Timezone preservation', 'VERIFIED POLICY', 'Times are preserved in the exact timezone published by each official feed (UTC for NHL/MLB, US ET for NBA, French local for LNR, venue local for URC, CEST for EHF) without unconfirmed conversion.', 'verified/methodology.html'),
+        ('Timezone and raw-label preservation', 'SOURCE LABELED', 'Official times retain their published zone/local-time basis. Relative OLBG Today/Tomorrow labels and later tournament/futures labels remain raw text unless an official page independently establishes date and time; no viewer-timezone conversion is inferred.', 'verified/methodology.html'),
         ('Duplicate-count disclosure', 'NEEDS REVIEW', 'Layers represent distinct audit passes over overlapping sports windows. Do not sum layer row counts to claim unique matches across the repository.', 'verified/audit.html'),
-        ('Line-by-line repository audit (RA-01 to RA-10)', 'AUDITED 2026-10-21', 'Full primary-source audit remediated stale Buffalo Sabres goal leader in /site/, purged all third-party Wikipedia/Cricinfo/ESPN citations in /survey/, populated SAC @ LAC game ID 0022600093, and originated 102 multi-market lines across 9 sports in /verified/.', 'verified/audit.html'),
+        ('Line-by-line repository audit (RA-01 to RA-18)', 'AUDITED THROUGH 2026-10-22', 'The ledger preserves the earlier cross-layer baseline and adds the current verified-desk findings: stale-event removal, corrected OLBG taxonomy, OLBG-discovered versus official-supplement provenance, strict High price gating, neutral-site NBA handling, and official/raw date-semantics corrections.', 'verified/audit.html'),
     ]
     for pred in load('data/survey/predictions.json'):
         for fact, url in pred['facts_used']:
@@ -33,22 +33,24 @@ def body():
     root = load('data/matches.json')
     verified = load('data/verified/matches.json')
     v_counts = verified['counts']
+    v_sports = len({m['sport'] for m in verified['matches'] if m['line_status'] == 'originated'})
     events = sum(len(json.loads(f.read_text())) for f in (ROOT / 'data/survey/events').glob('*.json'))
+    survey_lines = len(load('data/survey/lines.json')['lines'])
     return f'''<h1>Evidence status &amp; integration review</h1>
-<p class="lede">Flagged for Review · checked 21 October 2026. Structural checks verify links, schema invariants, and source allowlists across all published layers.</p>
+<p class="lede">Flagged for Review · current verified capture {verified['captured_at']}; older layers retain their own snapshot dates. Structural checks verify links, schema invariants, and source allowlists across all published layers.</p>
 <div class="notice"><strong>Partial, dated research — not a live complete match feed.</strong> Probabilities and confidence labels are model outputs derived from official governing-body statistics, not guarantees. Any value not confirmed server-side from an official trusted source is left blank (<code>—</code>) and listed on <a href="verified/flagged.html">Verified Flagged for Review</a> and <a href="survey/flagged.html">Survey Flagged for Review</a>.</div>
 <h2>Explore every research layer</h2>
 <div class="table-wrap"><table><thead><tr><th>Layer</th><th>Stored entries (not unique combined totals)</th><th>Evidence &amp; limitations</th></tr></thead><tbody>
-<tr><td><a href="verified/index.html"><strong>Verified Multi-Sport Desk (/verified/)</strong></a></td><td>{v_counts['total_rows']} verified rows ({v_counts['originated_rows']} originated lines across 9 sports · {v_counts['unlined_rows']} blank/flagged)</td><td><a href="verified/predictions.html">{v_counts['high_confidence']} human HIGH predictions</a> · <a href="verified/flagged.html">Flagged for Review</a> · <a href="verified/audit.html">Line-by-Line Repo Audit</a></td></tr>
+<tr><td><a href="verified/index.html"><strong>Verified Multi-Sport Desk (/verified/)</strong></a></td><td>{v_counts['total_rows']} catalogued rows ({v_counts['originated_rows']} originated lines across {v_sports} sports · {v_counts['unlined_rows']} blank/flagged)</td><td><a href="verified/predictions.html">{v_counts['high_confidence']} human HIGH predictions</a> · <a href="verified/flagged.html">Flagged for Review</a> · <a href="verified/audit.html">Line-by-Line Repo Audit</a></td></tr>
 <tr><td><a href="live/index.html">Live slate (/live/)</a></td><td>11 fresh 2026-10-21 fixtures (URC R5 + MLB World Series G1-G3)</td><td><a href="live/flagged.html">Live review queue</a> · <a href="live/picks.html">Live picks &amp; predictions</a></td></tr>
 <tr><td><a href="index.html">Root dashboard (/)</a></td><td>{len(root['matches'])} fixtures</td><td><a href="flagged.html">Root review queue</a> · <a href="sources.html">Source register</a></td></tr>
 <tr><td><a href="site/index.html">Evidence desk v2 (/site/)</a></td><td>25 NHL/NBA fixtures (updated 2026-10-21)</td><td><a href="site/flagged.html">Desk review queue</a> · <a href="site/sources.html">Desk sources</a></td></tr>
-<tr><td><a href="survey/index.html">All-sport survey (/survey/)</a></td><td>{events} inventoried entries across all 17 eligible sports (26 lines · 119 unlined)</td><td><a href="survey/flagged.html">Survey review queue</a> · <a href="survey/verification.html">Verification register</a></td></tr>
+<tr><td><a href="survey/index.html">All-sport survey (/survey/)</a></td><td>{events} inventoried entries across all 17 eligible sports ({survey_lines} lines · {events - survey_lines} unlined)</td><td><a href="survey/flagged.html">Survey review queue</a> · <a href="survey/verification.html">Verification register</a></td></tr>
 </tbody></table></div>
 <h2>Cross-layer findings &amp; narrative claims needing review</h2>
 <p>All existing layers are preserved and cross-linked. Rows below summarize cross-layer status and enumerate every survey narrative fact alongside its official source link for manual review.</p>
 <div class="table-wrap"><table><thead><tr><th>Entry / claim</th><th>Status</th><th>Finding</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>
-<h2>Automation boundary</h2><p>CI rebuilds all static layers (<code>/verified/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, verifies every local link and anchor across all published pages, and runs full unit tests.</p>'''
+<h2>Automation boundary</h2><p>CI rebuilds all five static layers (<code>/verified/</code>, <code>/live/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, verifies every local link and anchor across all published pages, and runs full unit tests. These are structural checks; external facts still require manual review of the linked official pages.</p>'''
 
 
 class Links(HTMLParser):
@@ -88,5 +90,5 @@ if __name__ == '__main__':
     errors = local_link_errors()
     for error in errors:
         print('BROKEN', error)
-    print(f'Cross-layer local link errors: {len(errors)}. External facts checked via verified audit.')
+    print(f'Cross-layer local link errors: {len(errors)}. External facts require manual official-source review.')
     raise SystemExit(bool(errors))

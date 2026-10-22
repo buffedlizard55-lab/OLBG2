@@ -32,7 +32,7 @@ SPORTS = {
 
 NAV = [
     ("index.html", "Dashboard"),
-    ("verified/index.html", "Verified desk (155 rows)"),
+    ("verified/index.html", "Verified multi-sport desk"),
     ("picks.html", "Picks & predictions"),
     ("flagged.html", "Flagged for review"),
     ("methodology.html", "Methodology"),

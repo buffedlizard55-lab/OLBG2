@@ -57,6 +57,12 @@ class IntegrationTests(unittest.TestCase):
         self.assertIn('survey/flagged.html', text)
         self.assertIn('verified/index.html', text)
         self.assertIn('verified/flagged.html', text)
+        self.assertIn('166 catalogued rows', text)
+        self.assertIn('originated lines across 7 sports', text)
+        self.assertIn('current verified capture 2026-10-22', text)
+        self.assertIn('RA-01 to RA-18', text)
+        self.assertNotIn('originated lines across 9 sports', text)
+        self.assertTrue(any(href == 'verified/index.html' and label == 'Verified multi-sport desk' for href, label in builder.NAV))
 
 
 if __name__ == '__main__':

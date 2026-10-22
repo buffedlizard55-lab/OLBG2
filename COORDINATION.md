@@ -1217,10 +1217,19 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 
 | # | Task | Status | Owner | Exclusive file scope |
 |---|---|---|---|---|
-| A1 | Reproduce all builds/tests; audit the latest verified desk, stale claims, model/provenance gates and source register | in progress | `arena/4daa1e65-olbg2` | `research/verified-refresh-4daa1e65.md`, `data/verified/repo_audit.json` |
-| A2 | Re-check eligible OLBG taxonomy and current official match evidence; correct or explicitly flag unsupported/stale values without inference | pending | `arena/4daa1e65-olbg2` | `data/verified/{sports,inputs,flagged}.json`, `scripts/verified_seed.py` |
-| A3 | Strengthen multi-market origination, high-confidence selection/odds-band rules, sourced prediction validation and regression tests | pending | `arena/4daa1e65-olbg2` | `scripts/verified_model.py`, `data/verified/{matches,predictions}.json`, `tests/test_verified_pipeline.py` |
-| A4 | Rebuild the clean `/verified/` dashboard and per-sport pages; ensure every row/fact has an official review link and blanks are visibly flagged | pending | `arena/4daa1e65-olbg2` | `scripts/verified_build.py`, `verified/**` |
-| A5 | Final integration: update stale shared documentation/navigation, run all five layer gates and local-link checks, PR → `main`, merge, verify Pages deployment | pending | `arena/4daa1e65-olbg2` | `README.md`, `METHODOLOGY.md`, `scripts/integration_audit.py`, `tests/test_integration.py`, `integration.html`, `.github/workflows/pages.yml`, `COORDINATION.md` |
+| A1 | Reproduce all builds/tests; audit the latest verified desk, stale claims, model/provenance gates and source register | done | `arena/4daa1e65-olbg2` | `research/verified-refresh-4daa1e65.md`, `data/verified/repo_audit.json` |
+| A2 | Re-check eligible OLBG taxonomy and current official match evidence; correct or explicitly flag unsupported/stale values without inference | done | `arena/4daa1e65-olbg2` | `data/verified/{sports,inputs,flagged}.json`, `scripts/verified_seed.py` |
+| A3 | Strengthen multi-market origination, high-confidence selection/odds-band rules, sourced prediction validation and regression tests | done | `arena/4daa1e65-olbg2` | `scripts/verified_model.py`, `data/verified/{matches,predictions}.json`, `tests/test_verified_pipeline.py` |
+| A4 | Rebuild the clean `/verified/` dashboard and per-sport pages; ensure every row/fact has an official review link and blanks are visibly flagged | done | `arena/4daa1e65-olbg2` | `scripts/verified_build.py`, `verified/**` |
+| A5 | Final integration: update stale shared documentation/navigation, run all five layer gates and local-link checks, PR → `main`, merge, verify Pages deployment | in progress | `arena/4daa1e65-olbg2` | `README.md`, `METHODOLOGY.md`, `scripts/integration_audit.py`, `tests/test_integration.py`, `integration.html`, `.github/workflows/pages.yml`, `COORDINATION.md` |
 
 Historical `site/**`, `survey/**`, `live/**`, root legacy match pipelines and their source datasets are outside the execution scope except read-only regression testing. No external fact will be marked verified solely because a URL or prior snapshot exists; failed confirmations remain blank and are published for review.
+
+### A1–A4 implementation checkpoint (2026-10-22)
+
+- Implementation commit `cd0fb01` on the fixed session branch replaces the active verified inventory and regenerates all six verified JSON documents plus 22 HTML pages.
+- Computed output: **166 catalogued rows = 126 static OLBG-discovered cards + 40 official supplements; 92 originated / 74 unlined; 3 High / 41 Medium / 48 Low**. Per-sport totals are Ice Hockey 19, Basketball 25, Rugby Union 24, Handball 20, Darts 18, Tennis 20, Baseball 3, Motor Racing 3, Volleyball 9, Cricket 12, Golf 4, Rugby League 3 and Gaelic Football 6; four other eligible hubs have zero rows.
+- The strict High gate is `p > 0.70` and fair American `-250..+10000` inclusive. Qualifying narratives are MIN (`nhl-2026020162`), Aurillac (`prod2-12066`) and Connacht (`urc-292609`), each with unique official-fact prose of at least 30 words. Stronger favourites outside the price band remain Medium.
+- Provenance, taxonomy, stale-event removal, official/raw time semantics, NBA neutral-site handling, the actual F1 without-Antonelli market, SHL/Liiga official-table models, 15 review flags and RA-01–RA-18 are generated from `scripts/verified_refresh_data.py` and the verified model/build chain.
+- `python3 -m unittest tests.test_verified_pipeline -v` passes 12 tests, including positive American-price boundaries, exact counts, provenance, raw labels and internal links. These are structural/mathematical gates, not substitutes for manual official-page verification.
+- A5 shared integration updates cover README, legacy-methodology scope, root navigation and dynamic integration counts before the full five-layer CI run.

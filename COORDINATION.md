@@ -2290,3 +2290,23 @@ reported on `/reconcile/flagged.html` as unverified, not silently corrected (the
 
 **Handoff:** No further edits from this session. Flagged review items remain on `final/flagged.html`, `flagged.html`, `review/reproducibility.html`, `publication.html`, `reconcile/flagged.html`. Parallel sessions' scopes (fresh, reconcile, dc72bac4) were preserved append-only.
 
+
+### Publish record — `/reconcile/` (`arena/3552df3e-olbg2`)
+
+| Item | Value |
+|---|---|
+| Pull requests | **PR [#97](https://github.com/buffedlizard55-lab/OLBG2/pull/97)** (console + engine + tests + root nav entry) · **PR [#100](https://github.com/buffedlizard55-lab/OLBG2/pull/100)** (correct layer count in flagged item R09) |
+| Merged | #97 `2026-10-22T12:18:46Z` as `c02faa91f71be804b4d3cba6596d0e4cad36b42d` · #100 merged as `f20945cd6a8d25ca06cfe3dc086241724edd2bf7` |
+| Merge conflicts | Two, both in this file only, both resolved by keeping **both** sessions' appended entries (no other session's work discarded). No conflict in any data, code, page or test file. |
+| Validation | `Validate Pages content` **success** on PR #97 (`39777216817`) and PR #100 (`39777545598`); 179 repo tests + 30 reconcile tests pass locally; `reconcile_verify.py` → 28 pages, 1,807 table rows, 0 broken links/fragments, every source cell populated; `integration_audit.py` → 0 cross-layer local link errors |
+| Deploy | `Deploy Pages` runs `39777310423` (c02faa9) and `39777644906` (cdbcf03) **success**; `pages build and deployment` `39777645168` **success** |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/reconcile/index.html` renders the 1,619-row / 433-fixture audit; `/reconcile/flagged.html` renders all nine review items with evidence links |
+| Root navigation | Added `Reconciliation console` to `NAV` in `scripts/build_site.py` and regenerated the root pages **after** PR #96 (the branch that owned that file) merged, so no live claim was edited |
+
+**Scope discipline.** Files touched: `scripts/reconcile_{audit,build,verify}.py`, `data/reconcile/**`, `reconcile/**`,
+`tests/test_reconcile.py`, `research/reconcile-3552df3e.md`, `COORDINATION.md` (append-only), plus the single approved
+integration edit to `scripts/build_site.py` `NAV` and its regenerated output. No other session's dataset, builder, page,
+workflow or test was modified; after every rebuild `git status` over all eleven upstream datasets is empty.
+
+**Cross-scope request still open:** CI wiring for `/reconcile/` in `.github/workflows/pages.yml` (rebuild + drift gate).
+The workflow is currently owned by merged scopes; the request is recorded rather than edited.

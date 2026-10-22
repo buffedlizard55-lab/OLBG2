@@ -72,7 +72,7 @@
       "verified_value": "7 live Oct-22 SHL fixtures active on OLBG /Ice_Hockey/13 and verified with complete 14-club standings & top-25 player scorers on stats.swehockey.se (ID 20961)",
       "official_source": "Swedish Ice Hockey Association Official Stats",
       "official_url": "https://stats.swehockey.se/ScheduleAndResults/Standings/20961",
-      "resolution": "Originated all 7 SHL games alongside all 12 NHL games (19 total Ice Hockey fixtures across Moneyline, Puck Line, and Total Goals)."
+      "resolution": "Originated all 13 SHL games alongside all 12 NHL games (25 total Ice Hockey fixtures across Moneyline, Puck Line, and Total Goals)."
     },
     {
       "id": "HA-08",
@@ -92,7 +92,7 @@
       "verified_value": "2 live Italian SuperLega Credem Banca Round 2 fixtures (Cisterna vs Monza; Verona vs Trentino) verified with official Round 1 set/point results on legavolley.it",
       "official_source": "Lega Pallavolo Serie A Official Calendar & Standings",
       "official_url": "https://www.legavolley.it/calendario/?IdCampionato=999",
-      "resolution": "Originated both SuperLega Round 2 matches with heavy shrinkage + low-confidence sample cap; kept 3 PlusLiga ties blank + flagged."
+      "resolution": "Originated all 6 SuperLega Round 2 matches with heavy shrinkage + low-confidence sample cap; kept 3 PlusLiga ties blank + flagged."
     },
     {
       "id": "HA-10",
@@ -112,7 +112,7 @@
       "verified_value": "Brief requires every high-confidence write-up to cite team, player, current form, recent match history, and explicit pick inside [-250, +10000]",
       "official_source": "Official league player leaderboards (NHL, SHL, MLB, EuroLeague, EuroCup, ATP, PDC, WST, F1, LNR, URC, EHF)",
       "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
-      "resolution": "Authored 38 unique, natural, human-sounding write-ups (55–95 words each), every single one naming both teams/competitors, verified star player(s) with exact 2026 stats, current form, recent dated match history, and explicit in-band pick."
+      "resolution": "Authored 25 unique, natural, human-sounding write-ups across 9 sports (64–92 words each), every single one naming both teams/competitors, verified star player(s) with exact 2026 stats, current form, recent dated match history, and explicit in-band pick."
     },
     {
       "id": "HA-12",

@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """Build the unified OLBG2 research dashboard at the repository root.
 
-The published dataset is the /verified/ primary-source desk (178 rows across 13
-of the 17 eligible sports). The four earlier layers are preserved untouched and
-indexed from archive.html; none of their rows is counted twice here.
+The published root dataset is the checked-in /verified/ desk. Row and sport counts are derived from its data at build time. Other research layers are separate, overlapping snapshots; their counts are not added to the root view.
 
 Outputs (all deterministic):
   index.html, matches.html, verification.html, picks.html, flagged.html,
@@ -353,8 +351,8 @@ def build_index(matches, preds=None, flagged=None) -> str:
     )[:12]
 
     body = f"""
-<div class="notice blue"><strong>A newer consolidated desk exists.</strong> This page is the 118-row verified layer. The
-<a href="final/index.html">consolidated desk</a> de-duplicates all five layers into one table across all 17 eligible sports,
+<div class="notice blue"><strong>A newer consolidated desk exists.</strong> This page is the {total}-row verified layer. The
+<a href="final/index.html">consolidated desk</a> de-duplicates its five source layers into one table across all 17 eligible sports,
 regrades every pick under a single rule and carries its own flagged page. Start there; use this page as evidence.</div>
 
 <section class="hero">
@@ -515,9 +513,7 @@ def build_sports_index() -> str:
     body = f"""
 <p class="crumb"><a href="../index.html">Dashboard</a> / Sports</p>
 <h1>Sports</h1>
-<p class="lede">17 eligible OLBG sports. 13 carry rows in this snapshot; Aussie Rules, eSports, Tennis and
-Greyhounds carry zero rows (their bodies published no verifiable fixture in this window). The eight excluded
-categories are listed at the bottom with the reason.</p>
+<p class="lede">{len(sports['eligible_sports'])} eligible OLBG sports. {len(counts)} carry rows in this snapshot; {len(sports['eligible_sports']) - len(counts)} have no published rows in this capture. A zero-row category is not evidence that no fixtures exist beyond this window. The eight excluded categories are listed at the bottom with the reason.</p>
 <div class="grid sports">{"".join(cards)}</div>
 <h2>Excluded by the brief</h2>
 <ul class="excluded">{excluded}</ul>
@@ -764,7 +760,7 @@ the highest-probability qualifying selection. The 20 original high picks are 1.0
 
 <h2>Evidence rules</h2>
 <ul>
-  <li>A fixture is published only with an official URL. If the URL is a competition page rather than a fixture page, the row says so (63 rows).</li>
+  <li>A fixture is published only with an official URL. If the URL is a competition page rather than a fixture page, the row says so ({sum(1 for m in rows if m.get('source_scope') != 'fixture')} rows in this snapshot).</li>
   <li>A value that the official page did not return is <code>null</code>, rendered as <code>—</code>, and explained on the flagged page. No value is inferred.</li>
   <li>No bookmaker price, tipster percentage or secondary outlet enters any equation.</li>
   <li>Rows dated before 2026-10-22 are labelled <em>past</em>. The snapshot does not pretend to be live.</li>
@@ -865,10 +861,8 @@ def build_archive() -> str:
     )
     body = f"""
 <h1>Archive of earlier layers</h1>
-<p class="lede">Five research layers exist in this repository. The unified dashboard is built from the
-<strong>verified desk</strong> ({len(verified)} rows, 15 sports), which contains every fixture published by the other
-structured layers plus additional sports. The earlier layers are preserved untouched below with their own source links,
-so nothing is lost and no row is counted twice on the dashboard.</p>
+<p class="lede">Several overlapping research layers exist in this repository. The root dashboard is built from the
+<strong>verified desk</strong> ({len(verified)} rows across {len({m['sport'] for m in verified})} sports). This archive displays selected earlier root, live, evidence, forward and survey snapshots with their own source links; it is not a full inventory of every research sub-site.</p>
 <div class="notice"><strong>Do not add these row counts together.</strong> The same fixture appears in several layers.
 Use the <a href="matches.html">unified table</a> for the published dataset; use this page for provenance.</div>
 

@@ -75,10 +75,12 @@ def body():
 <tr><td><a href="survey/index.html">All-sport survey (/survey/)</a></td><td>{events} inventoried entries across all 17 eligible sports (26 lines · 119 unlined)</td><td><a href="survey/flagged.html">Survey review queue</a> · <a href="survey/verification.html">Verification register</a></td></tr>
 </tbody></table></div>
 {_atlas_row()}
+<h2>Current capture desk</h2>
+<p><a href="current/index.html">22 October capture dashboard</a> · <a href="current/matches.html">Fixture table</a> · <a href="current/lines.html">Originated prices</a> · <a href="current/predictions.html">Predictions</a> · <a href="current/sources.html">Source links</a> · <a href="current/flagged.html">Flagged for Review</a>. This is a separate overlapping snapshot, not an incremental addition to other desks. No fresh official-source verification is claimed by this integration.</p>
 <h2>Cross-layer findings &amp; narrative claims needing review</h2>
 <p>All existing layers are preserved and cross-linked. Rows below summarize cross-layer status and enumerate every survey narrative fact alongside its official source link for manual review.</p>
 <div class="table-wrap"><table><thead><tr><th>Entry / claim</th><th>Status</th><th>Finding</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>
-<h2>Automation boundary</h2><p>CI rebuilds all static layers (<code>/verified/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, verifies every local link and anchor across all published pages, and runs full unit tests.</p>'''
+<h2>Automation boundary</h2><p>CI rebuilds all static layers (<code>/verified/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, verifies local file links across all published HTML pages (fragment anchors and external URLs are not checked), and runs full unit tests.</p>'''
 
 
 class Links(HTMLParser):
@@ -94,11 +96,11 @@ class Links(HTMLParser):
 
 def local_link_errors(root=ROOT):
     errors = []
-    pages = list(root.glob('*.html'))
-    for folder in ('sports', 'site', 'survey', 'verified', 'live', 'canon', 'atlas'):
-        folder_path = root / folder
-        if folder_path.exists():
-            pages.extend(folder_path.rglob('*.html'))
+    # Audit every published HTML layer, including newly added desks, by default.
+    pages = sorted(p for p in root.rglob('*.html')
+                   if not any(part.startswith('.') or part in
+                              ('node_modules', '_site', 'venv', '__pycache__')
+                              for part in p.relative_to(root).parts))
     for page in pages:
         parser = Links()
         parser.feed(page.read_text())
@@ -118,5 +120,5 @@ if __name__ == '__main__':
     errors = local_link_errors()
     for error in errors:
         print('BROKEN', error)
-    print(f'Cross-layer local link errors: {len(errors)}. External facts checked via verified audit.')
+    print(f'Cross-layer local link errors: {len(errors)}. Structural file check only; external facts and fragment anchors not checked.')
     raise SystemExit(bool(errors))

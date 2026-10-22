@@ -1,126 +1,77 @@
-# OLBG2 — eligible-sports schedule, originated lines, and sourced predictions
+# OLBG2 — multi-sport schedule research and line origination
 
-OLBG2 is a static research project that reverse-engineers [OLBG.com](https://www.olbg.com)'s sports taxonomy,
-records fixtures for every eligible sport, originates its own prices from official governing-body statistics, and
-publishes every value next to the official page it came from. It is **not** a live bookmaker feed, not betting
-advice, and not a complete snapshot of world sport: it is a dated capture with its gaps disclosed.
+OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
-**Published dashboard:** <https://buffedlizard55-lab.github.io/OLBG2/>
+**Published landing page:** <https://buffedlizard55-lab.github.io/OLBG2/>
 
-**Flagged for review:** <https://buffedlizard55-lab.github.io/OLBG2/flagged.html>
+**Consolidated 17-sport desk:** <https://buffedlizard55-lab.github.io/OLBG2/final/index.html>
 
-**Cross-layer evidence review:** <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
+**Flagged for Review:** <https://buffedlizard55-lab.github.io/OLBG2/final/flagged.html> · <https://buffedlizard55-lab.github.io/OLBG2/publication.html> · <https://buffedlizard55-lab.github.io/OLBG2/review/reproducibility.html>
 
-## What the root site is
+**Cross-layer integrity review:** <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
 
-The dashboard at the repository root is the unified, deduplicated view over the multi-sport desk in
-[`verified/`](verified/index.html). It carries **178 rows across 13 of the 17 eligible sports**, each row with
-its official source link, a verification badge, and — where the model could be supported — moneyline, handicap and
-total prices. 154 rows are fully originated; 24 are blank with a written reason, and four eligible sports (Aussie Rules, eSports, Tennis, Greyhounds) have no verified rows in this window.
+## Start here
 
-| Layer | Entry point | Snapshot contents (not an external verification claim) |
+The repository contains several independently collected, overlapping snapshots. **Do not add their row counts together.** The root dashboard is the `/verified/` desk; `/final/` is a deterministic de-duplicated view of five input layers. Neither is a guarantee of full real-world fixture coverage or of current bookmaker prices.
+
+| Desk | Entry point | Checked-in snapshot (2026-10-22) |
 |---|---|---|
-| **Unified dashboard** | [`index.html`](index.html) | 178 rows, 13 sports with rows, 154 originated rows, 14 price-band picks, 30 written predictions (14 featured + 16 research), 35 review items. Built by `scripts/build_site.py` from `data/verified/**`. |
-| **Verified multi-sport desk** | [`verified/index.html`](verified/index.html) | The same 178 rows in their original layout, plus audit and methodology pages. Built by `scripts/verified_seed.py` → `verified_model.py` → `verified_build.py`. |
-| **Root-layer archive** | [`archive.html`](archive.html) | The earlier 47-row root capture, preserved with its own source links. Superseded for NHL, NBA, URC, cricket and handball, but not deleted. |
-| **Evidence desk v2** | [`site/index.html`](site/index.html) | Independent NHL/NBA layer with 25 stored fixture rows and 64 market records. Built by `scripts/engine.py` and `scripts/build.py`. |
-| **Sport survey** | [`survey/index.html`](survey/index.html) | 130 OLBG-discovered inventory entries across its 15-sport taxonomy; 11 originated lines, 2 predictions. Inventory rows are not all fixture-verified. |
+| **Root dashboard** | [`index.html`](index.html) | 188 rows across 14 of 17 eligible sports; 154 rows with originated lines, 34 unlined, 14 price-band selections, and 30 written analyses. The 14 price-band selections are a separate filter, not the count of rows labelled high confidence. |
+| **Consolidated desk** | [`final/index.html`](final/index.html) | 382 deduplicated rows across all 17 eligible sports; 339 originated and 43 unlined. The union uses `/verified/`, `/hub/`, `/board/`, `/slate/`, and `/forward/`. It contains 19 featured model picks. |
+| **Forensic origination portal** | [`portal/index.html`](portal/index.html) | Separate 244-row audit snapshot: 220 originated, 24 explicitly unlined; includes its own sport pages, predictions, sources, and review queue. |
+| **Board** | [`board/index.html`](board/index.html) | Checked-in 207-row snapshot. A deterministic rebuild using the current forward-window capture produces 277 rows; the generated update is held for review because two tests in the board owner's scope still assert the older 207/167 counts. See `research/reproducibility-audit-dc72bac4.md`. |
+| **Verified desk** | [`verified/index.html`](verified/index.html) | Root dashboard's source dataset and 17 category pages; 188 rows, 154 originated. |
+| **Forward window** | [`forward/index.html`](forward/index.html) | 93 scheduled rows from the checked-in NHL, MLB, and EuroCup capture files. |
+| **Other research layers** | [`hub/index.html`](hub/index.html), [`slate/index.html`](slate/index.html), [`evidence/index.html`](evidence/index.html), [`audit65/index.html`](audit65/index.html), [`live/index.html`](live/index.html), [`survey/index.html`](survey/index.html), [`site/index.html`](site/index.html) | Separate snapshots and audits with their own scopes, capture dates, evidence limits, and flagged items. They overlap with other desks. |
 
-The layers are **not** disjoint and must not be added together. They represent separate audit passes over
-overlapping windows; use the unified dashboard for the published dataset and the archive page for provenance.
+The root verified desk has 144 fixture-scoped URLs and 44 competition-scoped URLs. The latter are explicitly identified in its review/methodology pages; an official competition link does not independently prove a particular fixture detail. Every unlined value is intentionally blank with a reason rather than inferred. The consolidated desk retains row-level provenance and publishes a separate review page.
 
-## Scope
+## Sport scope
 
-The brief excludes soccer/football, boxing, UFC/MMA, American football, hurling, horse racing, cycling and
-specials. The remaining 17 sports form the eligible taxonomy. Aussie Rules (AFL off-season) and eSports returned
-no active fixtures in this window; they are listed with zero rows rather than silently skipped. Greyhounds and
-Gaelic Football are **not** on the exclusion list, so they are in scope; the survey layer's older 15-sport taxonomy
-that omitted them is disclosed and superseded.
+The working taxonomy contains 17 eligible sports. Excluded categories include soccer/football, boxing, UFC/MMA, American football, hurling, horse racing, cycling, and specials. The precise interpretation of the brief's separate use of “football” and “American football” is disclosed as an open scope issue; the project does not silently treat that wording as settled. Zero rows in a category mean only that the particular snapshot contains no row for it, not that the sport has no fixtures.
 
-The brief's use of “football” next to a separate “American football” entry remains the one unresolved scope
-question. It is recorded as an interpretation flag rather than resolved by assumption.
+## Prices and predictions
 
-## Verification, blanks and freshness
+Prices are model-derived fair prices, not bookmaker quotes. The `high` label is a model confidence category, not a guarantee. For the stricter focus selection, the relevant condition is model probability of at least 70% **and** fair American odds from −250 to +10000 (decimal 1.40–101.00). Each published desk states its own model and selection rules; do not compare labels across separate snapshots without reading their methodology.
 
-- Every published row carries a link to an official governing-body, league or tour page.
-- 144 of the 178 rows cite a URL that identifies the individual fixture; the other 34 cite a competition or
-  rankings page. That difference is shown on every table and disclosed as **VF-11** on the flagged page.
-- Where an official input was missing (client-rendered rankings, one-match samples, unconfirmed venues, 2027
-  futures without rosters), the value is **blank** and the reason is published. Nothing was inferred.
-- On **2026-10-22** two verification passes re-fetched the official tables behind the published rows and
-  compared them line by line. The first (6 families: NHL, URC, Top 14, Pro D2, EuroLeague, EHF) corrected one
-  Pro D2 form sentence (VF-25). The second (11 families: NHL, NBA, MLB, PDC, WST, URC, Top 14, Pro D2, EHF,
-  FIA, plus the NBA standings priors) matched every published value it re-read and captured the NBA 24–31 Oct
-  slate (VF-14). Coverage limits and the rows **not** re-read are published as **VF-23** and **VF-34**
-  (see [verification.html](verification.html) and `research/verification-1352b77f.md`).
-- The remaining rows keep the 2026-10-22 capture stamp of the session that collected them. The snapshot is dated,
-  not continuously refreshed, and no row predates its capture date (enforced by a test).
+Prediction paragraphs are generated only where the selected data layer supplies relevant sourced inputs. The links and review ledgers let readers inspect those inputs. Passing structural tests does not establish that every linked official page was freshly fetched or that every narrative claim is accurate. The [`publication review`](publication.html) records source-access attempts that failed in this environment; those values remain unverified rather than being presented as newly checked facts.
 
-## Prices and confidence
-
-Model prices are fair decimals derived from the models in [METHODOLOGY.md](METHODOLOGY.md), not bookmaker quotes.
-
-- Confidence (uniform odds-window gate): **high** only when model probability is ≥70% **and** the fair American price sits inside −250..+10000; ultra-short chalk is capped at **medium**;
-  **medium** ≥60%; **low** below 60%. The same selection can no longer read HIGH on one page and MEDIUM on
-  another (VF-26).
-- Price band from the brief: **−250 to +10000 American odds**, equivalent to decimal odds of **1.40–101.00**. A 70%+ probability cannot be priced above
-  1.43, so the only window satisfying both a ≥70% probability and the −250 floor is 70.0–71.4%.
-- All **14** featured written predictions are **price-band** selections at **1.40–1.42** (70.0–71.4%), each with
-  its own ≥30-word write-up and sourced facts (plus 16 research-desk write-ups). Short-priced moneyline favourites
-  are graded **medium** under the uniform gate rather than padding the high label with unbackable prices.
-- The 14 featured write-ups assert no individual player statistic (**VF-24**). The 16 research-desk write-ups
-  added on 2026-10-22 (`/verified/predictions.html#research`) do name players, using only the NHL official score
-  feed leaders, the PDC Order of Merit and WST match-centre statistics captured that day (see **VF-33**).
-
-## Repository layout
+## Repository map
 
 ```text
-index.html, matches.html, picks.html, verification.html      unified dashboard pages
-flagged.html, methodology.html, sources.html, archive.html   review, method, sources, provenance
-sports/index.html, sports/<slug>.html                        17 eligible sport pages
-integration.html                                             cross-layer evidence-status review
-verified/**                                                  multi-sport desk pages (source dataset)
-site/**                                                      evidence desk snapshot and pages
-survey/**                                                    sport survey pages
+index.html, matches.html, picks.html, flagged.html, verification.html  root research desk
+final/                                                               consolidated 17-sport dashboard
+portal/                                                              independent origination / audit portal
+verified/, forward/, board/, hub/, slate/, live/, survey/, site/     overlapping evidence layers
+integration.html, evidence/, audit65/, publication.html               integrity and review pages
+sports/                                                               root desk's eligible-sport pages
 
-data/verified/*.json                                         unified dataset, predictions, band, flags
-data/matches.json, data/predictions.json, data/flagged.json  archived root-layer outputs
-data/desk/*.json                                             evidence desk snapshot data
-data/survey/**                                               survey inventory, line records and flags
-
-scripts/verified_seed.py, verified_model.py, verified_build.py   verified desk pipeline
-scripts/build_site.py                                        unified dashboard builder
-scripts/model.py, build.py                                   archived root layer and evidence desk
-scripts/survey_*.py                                          survey pipeline and checks
-scripts/official_source_audit.py                             read-only survey provenance classification
-scripts/integration_audit.py                                 cross-layer link and disclosure checks
-
-tests/                                                       automated structural tests (80)
-research/                                                    collection and audit notes
-COORDINATION.md                                              task board and session log
+data/                                                                 committed inputs, snapshots, predictions, sources, flags
+scripts/                                                              deterministic builders, models, and structural verifiers
+tests/                                                                repository unittest suite
+research/                                                              capture notes and audit reports
+COORDINATION.md                                                       shared task board and integration history
 ```
 
-## Rebuild and verify
+## Rebuild and verify locally
 
-All scripts use the Python standard library. From the repository root:
+The pipelines use Python's standard library. From the repository root, the principal generation order is:
 
 ```bash
 python3 scripts/verified_seed.py && python3 scripts/verified_model.py && python3 scripts/verified_build.py
-python3 scripts/build_site.py
-python3 scripts/build.py
-python3 scripts/survey_build.py && python3 scripts/survey_verify.py
-python3 scripts/integration_audit.py
-python3 -m unittest discover -s tests
+python3 scripts/forward_seed.py && python3 scripts/forward_model.py && python3 scripts/forward_build.py
+python3 scripts/live_model.py && python3 scripts/live_build.py
+python3 scripts/board_seed.py && python3 scripts/board_model.py && python3 scripts/board_build.py
+python3 scripts/hub_seed.py && python3 scripts/hub_model.py && python3 scripts/hub_build.py && python3 scripts/hub_verify.py
+python3 scripts/slate_seed.py && python3 scripts/slate_model.py && python3 scripts/slate_build.py
+python3 scripts/portal_seed.py && python3 scripts/portal_model.py && python3 scripts/portal_build.py && python3 scripts/portal_verify.py
+python3 scripts/evidence_integrity.py && python3 scripts/audit65.py
+python3 scripts/final_consolidate.py && python3 scripts/final_predictions.py && python3 scripts/final_flags.py && python3 scripts/final_build.py
+python3 scripts/survey_sync_inventory.py && python3 scripts/survey_lines.py && python3 scripts/survey_analyse.py && python3 scripts/survey_build.py && python3 scripts/survey_verify.py
+python3 scripts/build.py && python3 scripts/build_site.py && python3 scripts/integration_audit.py
+python3 -m unittest discover -s tests -v
 ```
 
-Expected: the builder reports `10 root pages + 17 sport pages / 178 rows, 154 originated, 14 band picks / 14
-predictions (14 band) / 34 verified review items`; the integration audit reports zero local link errors; the suite
-reports 80 tests passing.
+Generation is deterministic from the committed captures; it does not fetch OLBG or governing-body pages. The current CI workflow validates selected pipelines, local links, and tests before Pages deployment. Its drift gate does not cover every independently generated sub-site, so local rebuild success should not be mistaken for a factual source audit. That CI coverage limitation is logged in [`COORDINATION.md`](COORDINATION.md).
 
-The builders and tests validate internal structure, model rules, source allowlists and local links. They do not
-fetch pages, and a passing check is not proof that every external page supports every adjacent claim. CI rebuilds
-the static layers and fails if the generated HTML drifts from the checked-in files.
-
-For the formulas, thresholds and known limitations see [METHODOLOGY.md](METHODOLOGY.md) and the
-[methodology page](methodology.html). For open questions use [Flagged for Review](flagged.html) and the
-[cross-layer review](integration.html). Research, not betting advice. 18+.
+For model rules and limitations see [`METHODOLOGY.md`](METHODOLOGY.md), each desk's methodology page, and the appropriately labeled **Flagged for Review** pages. Research, not betting advice. 18+.

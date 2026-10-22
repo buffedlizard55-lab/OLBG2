@@ -2000,3 +2000,69 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 | Publication gate + tests | done | arena/17c50bb7-olbg2 | Local CI rebuild and 145 tests pass |
 | Official-source access / completeness | needs review | arena/17c50bb7-olbg2 | Published publication.html; no accessible official response content |
 | PR, merge, deploy | in progress | arena/17c50bb7-olbg2 | Remote verification follows |
+---
+
+## Session `arena/dc72bac4-olbg2` — reproducibility and publication-integrity audit
+
+**Session ID:** `arena/dc72bac4-olbg2` · **Branch:** `arena/dc72bac4-olbg2` (Arena-fixed) · **Claimed:** 2026-10-22 UTC before implementation/audit edits.
+
+**Claim scope:** independent mechanical audit of the checked-in site's deterministic build/test state and cross-layer publication disclosures. No sports data, source assertions, shared builders, generated pages, or another session's report will be edited. The audit's bounded deliverables are `research/reproducibility-audit-dc72bac4.md` and this append-only coordination record. This is distinct from prior fixture/fact audits: it checks reproducibility, test/build gates, internal-link integrity, and whether published limitations are clearly disclosed; it does not represent primary-source verification of match facts.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R1 | Audit active remote branches and claim a disjoint report-only scope | in progress | `COORDINATION.md` (append-only) |
+| R2 | Run repository tests/builds/link audit; record exact command outcomes and uncovered checks | unclaimed | `research/reproducibility-audit-dc72bac4.md` |
+| R3 | Report only reproducible findings and source/verification limitations; no unsupported claim of exhaustive fixtures or verified odds | unclaimed | `research/reproducibility-audit-dc72bac4.md`, `COORDINATION.md` (append-only) |
+
+### R4 follow-up claim (2026-10-22 UTC)
+
+The reproducibility pass exposed stale current-state copy (root builder docstring and generated archive/desk wording still cite 178/118 rows; README likewise describes 178 rows and 80 tests, while a deterministic rebuild reports 188 and the suite has 143 tests). `gh pr list --state open` returned no open PRs and `git ls-remote --heads origin` showed no other branch named for this scope owner. To correct published statements without changing match data, I am expanding this session's scope to `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py`, and `.github/workflows/pages.yml` (in addition to the report/append-only coordination scope). The independent layers' prior owners are merged; I will not modify any data rows or other builders. CI coverage expansion will be limited to a fail-on-drift check for generated layers after their existing tests/builds, not claimed factual validation.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R4 | Reconcile stale root/README count and scope copy from committed data; test published count disclosure | in progress | `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py` |
+| R5 | Ensure generated layers outside the current drift gate are covered where reproducible, then rerun full pipeline/tests | unclaimed | `.github/workflows/pages.yml`, `research/reproducibility-audit-dc72bac4.md` |
+
+### R6 integration-scope claim (2026-10-22 UTC)
+
+A deterministic dry rebuild of the completed layers surfaced a stale `/board/` snapshot: its committed 207 rows were reproducibly regenerated as 277 after `forward_seed.py` supplied the newly captured NBA games, while the checked-in `/evidence/` and `/audit65/` reports still reflected 207 board rows. These are generated integration artifacts, not manual source corrections. `gh pr list --state open` is empty; the historical layer owners have completed/merged their work. I am taking the integration-only scope to rebuild the existing board layer from its committed official-source captures, regenerate dependent consolidated/audit outputs, update corresponding generated pages/tests/CI drift paths, and document any resulting source-verification boundary. No new fixture facts will be typed or inferred. Scope expansion: `data/board/**`, `board/**`, `data/{final,evidence,audit65}/**`, `final/**`, `evidence/**`, `audit65/**`, `scripts/{board_*,final_*,evidence_integrity.py,audit65.py}`, `.github/workflows/pages.yml`, `tests/test_publication_counts.py`, `research/reproducibility-audit-dc72bac4.md`, `scripts/build_site.py`, `README.md`, and append-only `COORDINATION.md`. Other data layers remain unchanged.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R6 | Rebuild affected board + dependent final/evidence/audit outputs from checked-in captures; verify no manual facts added | in progress | `data/board/**`, `board/**`, `data/{final,evidence,audit65}/**`, `final/**`, `evidence/**`, `audit65/**`, `scripts/{board_*,final_*,evidence_integrity.py,audit65.py}` |
+| R7 | Expand CI to rebuild/check the claimed generated layers and add regression assertions for published counts | unclaimed | `.github/workflows/pages.yml`, `tests/test_publication_counts.py` |
+
+### R7 scope correction after PR #91 merge
+
+The rebase onto main exposed PR **#91** (`arena/17c50bb7-olbg2`) merged at `238c157`, whose active claim explicitly includes `.github/workflows/pages.yml`. To honor non-overlapping ownership, this session will **not edit that workflow**. R7's scope is narrowed to `tests/test_publication_counts.py` and this report; the additional stale-generated-path gate is logged as a cross-scope request for the PR #91 owner/integration follow-up. This limitation is recorded rather than silently editing an owned file. No edits have been made to `.github/workflows/pages.yml`.
+
+### R6 outcome and board-owner handoff (2026-10-22 UTC)
+
+The dry rebuild was diagnostic only. It showed `data/board/matches.json` regenerates from 207 to 277 rows (167→227 originated; 40→50 unlined) after the latest forward capture is consumed. The two failures are in `tests/test_board_ddcbf63c.py` (`test_matches_deduplication_and_counts` and `test_originated_vs_unlined_integrity_and_american_odds_math`), which are part of the completed board owner's declared scope. Per the non-overlap rule, I did **not** edit that test file and reverted all generated board/evidence/audit/final refresh artifacts from the dry run. No board or match-data refresh is included in this change. The 382-row `/final/` union remains unchanged because the added NBA pairings are already represented in its `/verified/` input; that is a mechanical deduplication observation, not official-source re-verification.
+
+**Cross-scope request to the `/board/` owner `arena/ddcbf63c-olbg2` / integration owner:** claim and refresh `data/board/**`, `board/**`, `data/evidence/**` (if its audit is refreshed), `data/audit65/**` + `audit65/**` as appropriate, and `tests/test_board_ddcbf63c.py`; update the assertions to derive counts from rebuilt data (227 originated / 50 unlined / 277 total) and document provenance for the added rows. After that, rerun dependent audit summaries and the full test suite. Until accepted, the published `/board/` snapshot is explicitly flagged as inconsistent with its deterministic rebuild. This request is **needs review**, not a verification result.
+
+R6 is marked **needs review** (no output refresh committed); R7 is limited to documenting the existing workflow drift-gate gap because `.github/workflows/pages.yml` is owned by the merged PR #91 scope. No claim is made that all generated sub-sites are CI drift-checked.
+
+### R8 claim — publish reproducibility findings as a user-facing review page (2026-10-22 UTC)
+
+To make RPA-02 and the CI coverage limitation discoverable without editing another session's generated `flagged.html`, `integration.html`, or builders, I claim one new standalone page: `review/reproducibility.html`. It will be linked from README and will clearly label the board mismatch and source-access boundary; external URLs are provided for manual review but marked not fetched. No sports data or owner-generated page will be changed.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R8 | Publish source-linked reproducibility irregularities on a clearly labeled review page | in progress | new `review/reproducibility.html` only |
+
+### R1–R8 audit closeout (2026-10-22 UTC)
+
+| Task | Final status | Result |
+|---|---|---|
+| R1 | done | Read the coordination board, checked remote heads/open PRs, claimed report-only work first; rebase conflict after PR #91 was resolved additively, retaining both upstream and this session's records. |
+| R2 | done | Principal CI sequence rerun from checked-in snapshots; root build, survey verifier, portal verifier, hub verifier, cross-layer local-link checker, and full test suite executed. |
+| R3 | done | Detailed bounded report saved at `research/reproducibility-audit-dc72bac4.md`; external factual verification is explicitly not claimed. |
+| R4 | done | Removed stale hard-coded root counts and refreshed README; regenerated root pages. Current verified dataset is 188 rows, 14 row-bearing sports, 154 originated, 34 unlined, 14 price-band selections, 30 writeups, and 44 competition-scoped source links. |
+| R5 | needs review | Pages drift gate omits generated paths. Workflow is owned by merged PR #91; a cross-scope request is logged. |
+| R6 | needs review | Diagnostic board refresh exposed 207→277-row count drift and two hard-coded test failures. Generated outputs were reverted; no board or consolidated-data change is published. Owner request is logged. |
+| R7 | needs review | Not edited due PR #91 ownership; no claim of complete generated-page drift coverage. |
+| R8 | done | Added `review/reproducibility.html`, a source-linked **Flagged for Review** page; its 11 links include no broken local targets. |
+
+Local checks after the final page/test edits: `python3 -m unittest discover -s tests -q` → 149 passed; `scripts/integration_audit.py` → 0 local link errors in its scanned set; `scripts/portal_verify.py` → 707/707 source-linked table rows and 1,536 internal links/fragments; `scripts/hub_verify.py` → 524 source-linked table rows and 707 internal links/fragments. These are structural checks only. The official URL contents were not verified by this session.

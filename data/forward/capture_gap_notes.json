@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-10-22",
+  "vf-14-nba": {
+    "attempts": [
+      "https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_1.json -> HTTP 500",
+      "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json -> HTTP 500",
+      "https://www.nba.com/games?date=10/23/2026 -> page renders month calendar (official per-day counts) but current-date card only",
+      "https://www.nba.com/games?date=2026-10-23 -> 'Sorry, something went wrong' for fixture list",
+      "https://www.nba.com/schedule?date=2026-10-23 -> shell renders, matchups client-side only"
+    ],
+    "outcome": "PARTIAL: official per-day game counts captured from the rendered calendar; matchup lists for 22-24 October not server-rendered. VF-14 stays open for matchup-level capture."
+  },
+  "vf-20-eurocup": {
+    "attempts": [
+      "https://api-live.euroleague.net/v3/competitions/E/seasons/E2026/games -> UnsupportedApiVersion for GET",
+      "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games (round filter ignored; full season feed; Round 5 recovered from chunks 11-12)",
+      "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/standings -> empty body",
+      "https://api-live.euroleague.net/v1/competitions/U/seasons/U2026/standings -> empty body"
+    ],
+    "outcome": "CLOSED for the fixture card: all 16 EuroCup Round 5 matches (2026-10-27/28) captured from the official EuroLeague API. Team form/standings are not published on the standings endpoints (empty), and this desk never infers strength, so R5 rows ship unlined with that blank_reason."
+  },
+  "vf-22-gbgb": {
+    "attempts": [
+      "https://www.gbgb.org.uk/racing/race-cards/ -> fetch failed",
+      "https://www.gbgb.org.uk/racing/results/ -> HTTP 500",
+      "https://www.gbgb.org.uk/ -> HTTP 500"
+    ],
+    "outcome": "STILL BLOCKED: gbgb.org.uk did not serve any page at capture time (2026-10-22). VF-22 remains open; no greyhound rows added to the forward slate (a card capture would also lack the trap ratings this desk requires before lining)."
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gap Flags — OLBG Forward Slate Desk</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span>OLBG Forward Slate Origination Desk</span>
+        <span class="brand-badge">Window 2026-10-23 → 2026-11-02</span>
+      </a>
+      <nav class="nav" aria-label="Forward slate navigation">
+        <a href="index.html" class="">Overview &amp; Slate</a>
+        <a href="matches.html" class="">All Matches</a>
+        <a href="picks.html" class="">High-Confidence Picks</a>
+        <a href="gaps.html" class="active">Gap Flags</a>
+      </nav>
+    </div>
+  </header>
+  <div class="subbar">
+    <div class="subbar-inner">
+      <span><strong>Cross-Layer Navigation:</strong></span>
+      <a href="../index.html">Root Dashboard (/)</a>
+      <span>·</span>
+      <a href="../verified/index.html">Verified Desk (/verified/)</a>
+      <span>·</span>
+      <a href="../live/index.html">Live Slate (/live/)</a>
+      <span>·</span>
+      <a href="../survey/index.html">All-Sports Survey (/survey/)</a>
+    </div>
+  </div>
+  <main class="container">
+
+<section class="hero">
+  <p class="eyebrow">Forward Gap Flags</p>
+  <h1>Named Gaps — Status After This Window's Capture</h1>
+  <p>Where the official feeds did not deliver, the desk says so and leaves the rows blank.
+  Attempt logs live in <code>data/forward/capture_gap_notes.json</code>.</p>
+</section>
+    <div class="card">
+      <h3><span class="chip chip-warn">VF-15</span> MLB World Series Games 4-7 missing from the verified slate</h3>
+      <p class="small muted">Status: closed-in-forward</p>
+      <p>Forward slate originates all seven World Series games from the official schedule, including Game 4 (mlb-ws-g4, 2026-10-27, Tropicana Field) which the verified layer never lined. Games 5-7 carry official if-necessary flags and are priced for the window but may not be played.</p>
+      <p class="small">Sources: <a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-22&amp;endDate=2026-11-02">https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-22&amp;endDate=2026-11-02</a></p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-warn">VF-14</span> NBA 2026-10-22..24 fixtures not verified</h3>
+      <p class="small muted">Status: PARTIAL: official per-day game counts captured from the rendered calendar; matchup lists for 22-24 October not server-rendered. VF-14 stays open for matchup-level capture.</p>
+      <p>nba.com now server-renders its month calendar, giving official per-day game counts (22 Oct: 2, 23 Oct: 12, 24 Oct: 8, ... 31 Oct: 7), but fixture lists for future dates still fail to server-render (&#x27;Sorry, something went wrong&#x27;), and the CDN schedule JSON returns HTTP 500. No NBA rows are added to the forward slate: the desk never publishes matchups it cannot verify. Attempt log kept in data/forward/capture_gap_notes.json.</p>
+      <p class="small">Sources: <a href="https://www.nba.com/games">https://www.nba.com/games</a></p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-warn">VF-20</span> EuroCup Round 5 card missing</h3>
+      <p class="small muted">Status: closed-in-forward</p>
+      <p>All sixteen EuroCup Round 5 fixtures (27-28 October) are captured from the official EuroLeague live API (competition U, season U2026) and appear in the forward slate. They ship unlined because the same API&#x27;s standings endpoints return empty bodies and the desk never infers team strength.</p>
+      <p class="small">Sources: <a href="https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games">https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games</a></p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-warn">VF-22</span> GBGB race cards unreachable</h3>
+      <p class="small muted">Status: STILL BLOCKED: gbgb.org.uk did not serve any page at capture time (2026-10-22). VF-22 remains open; no greyhound rows added to the forward slate (a card capture would also lack the trap ratings this desk requires before lining).</p>
+      <p>gbgb.org.uk returned fetch failures or HTTP 500 on the homepage, the results page and the race-cards page on 2026-10-22. No greyhound rows are added: there is no verified card to publish and no trap ratings to price from. Attempt log kept in data/forward/capture_gap_notes.json.</p>
+      <p class="small">Sources: <a href="https://www.gbgb.org.uk/">https://www.gbgb.org.uk/</a></p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-warn">VF-WINDOW</span> Forward window coverage</h3>
+      <p class="small muted">Status: complete-for-verified-sports</p>
+      <p>Slate covers 2026-10-23 .. 2026-11-02: 70 NHL fixtures (the complete official gameWeek card), 7 MLB World Series games and 16 EuroCup Round 5 matches. NBA and greyhound coverage remain blocked as recorded above; tennis/WST/PDC/volleyball/handball are explicitly out of scope for this layer.</p>
+      
+    </div>
+
+  </main>
+  <footer class="footer">
+    <p>Forward slate layer generated by <code>scripts/forward_build.py</code> from
+    <code>data/forward/</code> captures. Every market is independently originated from
+    official-source team statistics — no bookmaker odds or tipster consensus percentages
+    enter any equation. Rows whose official inputs could not be verified ship unlined with
+    an explicit reason.</p>
+  </footer>
+</body>
+</html>

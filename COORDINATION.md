@@ -1498,3 +1498,50 @@ this session's capture (timestamps logged per fetch); nothing is inferred; bookm
 - Cross-scope edits made at integration (allowed at T5 only): `scripts/survey_sync_inventory.py` (idempotence bug — originated WST tie's URL was overwritten on every second run; fixed, plus Round-3 label), `METHODOLOGY.md`/`README.md` player-level paragraph. `scripts/build_site.py`, root `picks.html` and PR #54's files untouched.
 - Open for a later session: EuroLeague HTA/VIR desk inputs exclude game 61 (Hapoel 90-81 Virtus, 21 Oct) — informational, those rows are not featured; MLB Game 5 (if necessary) not listed; golf/F1/rugby-league outright rows not re-read this session.
 - **PR:** https://github.com/buffedlizard55-lab/OLBG2/pull/67 — `validate` check passed (run 39715990106); **merged** (merge commit `471eb5b`) without approval per brief; **Deploy Pages** run 39716136620 on `main` completed `success`; live re-check of https://buffedlizard55-lab.github.io/OLBG2/verified/predictions.html confirmed the new build (Toulouse 14:35 UTC, MIN −244, "30 write-ups (featured + research desk)", research section present). Session `arena/26963a2d-olbg2` **closed**.
+---
+
+## Session `arena/6a87eefa-olbg2` — forward-window slate capture + named gap closures (2026-10-22 02:55 UTC)
+
+**Session ID:** `arena/6a87eefa-olbg2` · **Branch:** `arena/6a87eefa-olbg2` (Arena-fixed; `session-…` naming not available) · **Claimed:** 2026-10-22 02:55 UTC, before any implementation edit.
+
+**Concurrent-session check at claim time** (all live branches fetched and read before claiming):
+
+| Branch | Claim | Live scope this session will NOT touch |
+|---|---|---|
+| `arena/1bb45081-olbg2` | PR #54 OPEN, odds-window gate W1–W4 | all five layers' confidence regrades, `scripts/*_model.py`, `scripts/engine.py`, `METHODOLOGY.md`, generated pick files |
+| `arena/072755db-olbg2` | V1–V5 verification + coverage completion + final integration | `data/verified/**`, `scripts/verified_seed.py`, `scripts/verified_model.py`, `tests/test_verified_pipeline.py`, root pages |
+| `arena/26963a2d-olbg2` | T1–T5 re-verify, research-grade in-band picks, coverage expansion | `research/reverify-26963a2d.md`, `data/verified/*_26963a2d.json`, tennis / WST / PDC / volleyball / handball capture |
+| `arena/9a2928c8-olbg2` | T2–T6 line-by-line verification, price-band audit, site polish | `data/verified/predictions.json`, `data/verified/band.json`, `picks.html`, `index.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
+| `arena/dbfb6608-olbg2` | A1 independent market-evidence audit | `research/market-evidence-audit-dbfb6608.md` (report only) |
+
+Three of those sessions (072755db V5, 26963a2d T5, 9a2928c8 T6) have each claimed **final integration**. This session does not take that role while they are live. Its own integration is **additive only** (see T6).
+
+| # | Task | Status | Owner | File scope (new files only until T6) |
+|---|---|---|---|---|
+| G1 | Claim + coordination check | done | `arena/6a87eefa-olbg2` | `COORDINATION.md` (append-only) |
+| G2 | Forward-window fixture capture 2026-10-23 → 2026-11-02 from official bodies only (NHL, MLB, NBA, EuroCup, GBGB), plus the named open gaps VF-14 (NBA 22–24 Oct slate), VF-15 (World Series Games 4–7), VF-20 (EuroCup Round 5), VF-22 (GBGB cards). Every row carries the official URL it came from and the capture timestamp. Anything a source will not render stays blank and is flagged. | in progress | `arena/6a87eefa-olbg2` | `data/forward/inputs.json`, `research/forward-slate-6a87eefa.md` |
+| G3 | Independent line origination (moneyline + handicap + total where inputs exist) + low/medium/high pick per match, applying the uniform high-confidence gate (model prob ≥ 0.70 AND fair American in −250…+10000) in this layer's own code | pending | `arena/6a87eefa-olbg2` | `scripts/forward_seed.py`, `scripts/forward_model.py`, `data/forward/matches.json`, `data/forward/flagged.json` |
+| G4 | In-band high-confidence written predictions: ≥30 words each, unique, human, team + player + current form + recent match history + explicit betting selection, every factual claim tied to an official source fetched in this session | pending | `arena/6a87eefa-olbg2` | `data/forward/predictions.json` |
+| G5 | Self-contained `forward/` dashboard layer (landing + matches + picks + flagged + sources + methodology), schema-compatible with `data/verified/matches.json` rows so the integration session can splice rows in with a one-command merge; unit tests for the layer | pending | `arena/6a87eefa-olbg2` | `scripts/forward_build.py`, `forward/**`, `tests/test_forward.py` |
+| G6 | Additive integration: PR of the new files + this board entry only. One root-nav link request is **logged here**, not edited into shared pages, while other sessions hold them. Merge only if `main` is green; confirm Pages deploy; record result here | pending | `arena/6a87eefa-olbg2` | shared outputs limited to `COORDINATION.md`; nav-link edits only if unclaimed at the time |
+
+**Scope rule (explicit):** this session does not re-verify, regrade, reprice or rewrite any existing row, pick, flag or page. It adds a dated forward slate that no live claim's window covers (their windows end 2026-10-27), and closes exactly the four named flags VF-14/VF-15/VF-20/VF-22 where an official source allows. Tennis, WST, PDC, volleyball and handball are excluded from this session because `26963a2d` named them. No bookmaker price is read; prices are this layer's own fair-model prices.
+
+**Nav-link request for the integration session (logged, not edited):** please add `forward/index.html` to the root dashboard navigation as "Forward slate (23 Oct–2 Nov)" once this PR merges, or say so here and this session will add the single link in a follow-up commit when the shared files are free.
+
+### Publish record — `arena/6a87eefa-olbg2` (G1–G6 complete, 2026-10-22)
+
+| # | Result |
+|---|---|
+| G1 | Claimed as above; scope honoured (new files + append-only board). |
+| G2 | Captured 2026-10-22 from official feeds: **70 NHL fixtures** (complete game-week card 23 Oct–2 Nov, ids 2026020166–235, via `api-web.nhle.com/v1/score/{date}`), all 32 NHL club records + GF/GA (`api.nhle.com/stats/rest/en/team/summary`), **7 MLB World Series games** incl. G4 (`statsapi.mlb.com` schedule/standings/team stats/leaders; TB 98-64 736/650, MIL 103-59 832/618, both postseason paths and player leaders captured), **16 EuroCup Round 5 fixtures** (27–28 Oct, `api-live.euroleague.net/v2/competitions/U/seasons/U2026/games`), NBA per-day slate counts from the rendered nba.com calendar. Raw captures: `data/forward/capture_*.json(l)`. |
+| G3 | `scripts/forward_seed.py` → `data/forward/inputs.json`; `scripts/forward_model.py` → `data/forward/matches.json` (93 rows: 70 NHL + 7 MLB originated, 16 EuroCup unlined with explicit `blank_reason`), `flagged.json`. Shrinkage-Poisson origination (winner + handicap + total) method-identical to the verified desk; uniform high-confidence gate (prob ≥ 0.70 AND fair American −250..+10000) applied in this layer's own code, incl. alternate-line repricing so chalky favourites can be taken in-band. |
+| G4 | `data/forward/predictions.json`: **8 bespoke ≥30-word write-ups** (77–99 words), unique, each naming team + player + current form + explicit selection with fact-level official sources: SJS@BOS 24 Oct, MIN@UTA +1.5, BUF@SJS +1.5, TOR@SEA +1.5, WSH@NSH +1.5, CHI@BOS (BOS −0.5 alt), PIT@MTL +1.5, COL@CHI 2 Nov. |
+| G5 | `scripts/forward_build.py` → `forward/{index,matches,picks,gaps}.html` + `forward/assets/style.css` (self-contained; row schema splices with `data/verified/matches.json`). `tests/test_forward.py` (10 tests: determinism vs script output, market integrity, the uniform gate, prediction language rules, VF-15/VF-20 coverage, gap flags, site rendering). Full suite `python3 -m unittest discover -s tests`: **77 tests OK**. |
+| G6 | Additive PR (new `data/forward/**`, `research/forward-slate-6a87eefa.md`, `scripts/forward_{seed,model,build}.py`, `forward/**`, `tests/test_forward.py` + this board entry) merged to `main`; Pages deploy confirmed. **Root nav-link request (logged, not edited):** add `forward/index.html` to the root dashboard nav as "Forward slate (23 Oct–2 Nov)" — root pages were live-claimed by other sessions at publish time. |
+
+**Gap-flag outcomes recorded in `data/forward/flagged.json` and `data/forward/capture_gap_notes.json`:**
+VF-15 **closed in forward layer** (WS G4 `mlb-ws-g4` originated 2026-10-27, Tropicana Field; G5–G7 carry official if-necessary flags).
+VF-20 **closed for the card** (all 16 EuroCup R5 fixtures captured; rows ship unlined because the EuroLeague standings endpoints return empty bodies — never inferred).
+VF-14 **partial**: official per-day NBA game counts captured from the rendered calendar (22 Oct: 2, 23: 12, 24: 8 … 31: 7) but future-date fixture lists still fail server-render and the CDN schedule JSON returns 500 — no NBA rows published, flag stays open.
+VF-22 **still blocked**: gbgb.org.uk returned fetch failures/500 on all three pages tried — no greyhound rows published, flag stays open.

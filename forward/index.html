@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview &amp; Slate — OLBG Forward Slate Desk</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span>OLBG Forward Slate Origination Desk</span>
+        <span class="brand-badge">Window 2026-10-23 → 2026-11-02</span>
+      </a>
+      <nav class="nav" aria-label="Forward slate navigation">
+        <a href="index.html" class="active">Overview &amp; Slate</a>
+        <a href="matches.html" class="">All Matches</a>
+        <a href="picks.html" class="">High-Confidence Picks</a>
+        <a href="gaps.html" class="">Gap Flags</a>
+      </nav>
+    </div>
+  </header>
+  <div class="subbar">
+    <div class="subbar-inner">
+      <span><strong>Cross-Layer Navigation:</strong></span>
+      <a href="../index.html">Root Dashboard (/)</a>
+      <span>·</span>
+      <a href="../verified/index.html">Verified Desk (/verified/)</a>
+      <span>·</span>
+      <a href="../live/index.html">Live Slate (/live/)</a>
+      <span>·</span>
+      <a href="../survey/index.html">All-Sports Survey (/survey/)</a>
+    </div>
+  </div>
+  <main class="container">
+
+<section class="hero">
+  <p class="eyebrow">Forward-Window Slate Capture &amp; Line Origination</p>
+  <h1>OLBG Forward Slate Desk — 23 Oct to 2 Nov 2026</h1>
+  <p>The complete official <strong>NHL</strong> game-week card for 2026-10-23 → 2026-11-02,
+  the full <strong>2026 MLB World Series</strong> schedule including the Game 4 the verified
+  layer never lined (VF-15), and every <strong>EuroCup Round 5</strong> fixture (VF-20) —
+  captured live from official league feeds on 2026-10-22 and priced with the same independent
+  methodology as the verified desk. High-confidence picks sit between <strong>-250 and +10000
+  American</strong> at a &gt;70% model probability; anything unverifiable is left blank and
+  flagged (VF-14, VF-22), never inferred.</p>
+</section>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="kpi-val">93</div><div class="kpi-label">Forward Slate Rows</div></div>
+  <div class="kpi"><div class="kpi-val">77</div><div class="kpi-label">Originated Lines (NHL + MLB)</div></div>
+  <div class="kpi"><div class="kpi-val">70</div><div class="kpi-label">NHL Fixtures (complete game-week card)</div></div>
+  <div class="kpi"><div class="kpi-val">7</div><div class="kpi-label">MLB World Series Games (G4 gap closed)</div></div>
+  <div class="kpi"><div class="kpi-val">16</div><div class="kpi-label">EuroCup R5 Fixtures (card closed, unlined)</div></div>
+  <div class="kpi"><div class="kpi-val">8</div><div class="kpi-label">In-Band High-Confidence Picks (−250..+10000)</div></div>
+</div>
+
+<div class="section-head">
+  <h2>Named Gap Closures</h2>
+  <p>Task-board items attempted against live official feeds during the 2026-10-22 capture window.
+  <a href="gaps.html">Full flag log →</a></p>
+</div>
+    <div class="card">
+      <h3><span class="chip chip-ok">VF-15</span> MLB World Series Games 4-7 missing from the verified slate</h3>
+      <p class="small muted">Status: closed-in-forward</p>
+      <p>Forward slate originates all seven World Series games from the official schedule, including Game 4 (mlb-ws-g4, 2026-10-27, Tropicana Field) which the verified layer never lined. Games 5-7 carry official if-necessary flags and are priced for the window but may not be played.</p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-warn">VF-14</span> NBA 2026-10-22..24 fixtures not verified</h3>
+      <p class="small muted">Status: PARTIAL: official per-day game counts captured from the rendered calendar; matchup lists for 22-24 October not server-rendered. VF-14 stays open for matchup-level capture.</p>
+      <p>nba.com now server-renders its month calendar, giving official per-day game counts (22 Oct: 2, 23 Oct: 12, 24 Oct: 8, ... 31 Oct: 7), but fixture lists for future dates still fail to server-render (&#x27;Sorry, something went wrong&#x27;), and the CDN schedule JSON returns HTTP 500. No NBA rows are added to the forward slate: the desk never publishes matchups it cannot verify. Attempt log kept in data/forward/capture_gap_notes.json.</p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-ok">VF-20</span> EuroCup Round 5 card missing</h3>
+      <p class="small muted">Status: closed-in-forward</p>
+      <p>All sixteen EuroCup Round 5 fixtures (27-28 October) are captured from the official EuroLeague live API (competition U, season U2026) and appear in the forward slate. They ship unlined because the same API&#x27;s standings endpoints return empty bodies and the desk never infers team strength.</p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-warn">VF-22</span> GBGB race cards unreachable</h3>
+      <p class="small muted">Status: STILL BLOCKED: gbgb.org.uk did not serve any page at capture time (2026-10-22). VF-22 remains open; no greyhound rows added to the forward slate (a card capture would also lack the trap ratings this desk requires before lining).</p>
+      <p>gbgb.org.uk returned fetch failures or HTTP 500 on the homepage, the results page and the race-cards page on 2026-10-22. No greyhound rows are added: there is no verified card to publish and no trap ratings to price from. Attempt log kept in data/forward/capture_gap_notes.json.</p>
+    </div>
+    <div class="card">
+      <h3><span class="chip chip-ok">VF-WINDOW</span> Forward window coverage</h3>
+      <p class="small muted">Status: complete-for-verified-sports</p>
+      <p>Slate covers 2026-10-23 .. 2026-11-02: 70 NHL fixtures (the complete official gameWeek card), 7 MLB World Series games and 16 EuroCup Round 5 matches. NBA and greyhound coverage remain blocked as recorded above; tennis/WST/PDC/volleyball/handball are explicitly out of scope for this layer.</p>
+    </div>
+
+<div class="section-head">
+  <h2>Featured High-Confidence Picks (sample)</h2>
+  <p><a href="picks.html">All 8 bespoke write-ups →</a> ·
+     <a href="matches.html">All 93 slate rows →</a></p>
+</div>
+    <div class="card">
+      <h3>Boston Bruins (Moneyline) <span class="chip chip-high">high · 71.1% · -246</span></h3>
+      <p class="small muted">San Jose Sharks @ Boston Bruins · NHL Regular Season 2026-27 · 2026-10-24T23:00:00Z</p>
+      <p><strong>Boston&#x27;s 2.20 goals-against wall hosts a Celebrini side shipping 3.40 per night</strong></p>
+      <p>Take Boston Bruins (Moneyline) when the Sharks visit TD Garden on Saturday night. Boston have opened 2026-27 at 7-2-1 with 36 scored and only 22 conceded across ten games, and David Pastrnak paces the club with four goals and eight assists in front of Jeremy Swayman&#x27;s six wins. San Jose sit 5-4-1 having leaked 34 goals in ten, their bright spot Macklin Celebrini (five goals, nine assists), and this matchup prices the Bruins at 71.1% (1.41 fair decimal, -246 American).</p>
+      <p class="small"><a href="picks.html">Full write-up &amp; sources →</a></p>
+    </div>
+    <div class="card">
+      <h3>Minnesota Wild +1.5 (Handicap) <span class="chip chip-high">high · 70.6% · -240</span></h3>
+      <p class="small muted">Minnesota Wild @ Utah Mammoth · NHL Regular Season 2026-27 · 2026-10-28T01:00:00Z</p>
+      <p><strong>Kaprizov&#x27;s 11-goal Wild carry a two-goal cushion into Delta Center</strong></p>
+      <p>Back Minnesota Wild +1.5 (Handicap) at Delta Center on Tuesday evening instead of touching the near-even moneyline. Minnesota arrive 6-2-2 with 31 goals scored and 25 allowed over ten games, Kirill Kaprizov leading the club with eleven goals and Quinn Hughes quarterbacking with eleven assists, while Jesper Wallstedt has six wins in net. Utah&#x27;s 7-3-0 start is real (38 scored), but two of the Wild&#x27;s ten games have needed extra time (two overtime losses) and the +1.5 cushion grades at 70.6% (1.42 fair decimal, -240 American).</p>
+      <p class="small"><a href="picks.html">Full write-up &amp; sources →</a></p>
+    </div>
+    <div class="card">
+      <h3>Buffalo Sabres +1.5 (Handicap) <span class="chip chip-high">high · 71.1% · -246</span></h3>
+      <p class="small muted">Buffalo Sabres @ San Jose Sharks · NHL Regular Season 2026-27 · 2026-10-28T02:30:00Z</p>
+      <p><strong>Evenly matched Sabres and Sharks split by the half-goal line in San Jose</strong></p>
+      <p>Take Buffalo Sabres +1.5 (Handicap) at SAP Center on Tuesday night in a game the model can barely separate. Buffalo&#x27;s 4-4-2 start (28 scored, 36 conceded) and San Jose&#x27;s 5-4-1 (26 scored, 34 conceded) both profile as mid-table form, with Tage Thompson&#x27;s five goals and Zach Benson&#x27;s six assists carrying the Sabres while Macklin Celebrini leads the Sharks with five goals and nine assists. Neither side has found a consistent run — Buffalo sit at .500 through ten games (4-4-2) — so the half-goal cushion prices at 71.1% (1.41 fair decimal, -246 American).</p>
+      <p class="small"><a href="picks.html">Full write-up &amp; sources →</a></p>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <p>Forward slate layer generated by <code>scripts/forward_build.py</code> from
+    <code>data/forward/</code> captures. Every market is independently originated from
+    official-source team statistics — no bookmaker odds or tipster consensus percentages
+    enter any equation. Rows whose official inputs could not be verified ship unlined with
+    an explicit reason.</p>
+  </footer>
+</body>
+</html>

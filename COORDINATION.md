@@ -1329,13 +1329,27 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 
 | # | Task | Status | Owner | File scope (non-overlapping) |
 |---|---|---|---|---|
-| T1 | Claim board, recon & coordination | in progress | `arena/9a2928c8-olbg2` | `COORDINATION.md` (append-only) |
-| T2 | OLBG reverse-engineering re-verification (taxonomy, IDs, URL schema, markets) | pending | `arena/9a2928c8-olbg2` | `research/olbg-reverse-engineering-9a2928c8.md`, `data/verified/sports.json` (if needed) |
-| T3 | Line-by-line official-source verification of all 119 rows (fixtures, inputs, prices, predictions) — every row must carry official URL or be flagged blank | pending | `arena/9a2928c8-olbg2` | `research/line-by-line-verification-9a2928c8.md`, `data/verified/flagged.json` (append-only new findings) |
-| T4 | Price-band audit: ensure all 14 high-confidence write-ups sit in -250…+10000, are ≥30 words, unique, human, and state team/player/current form/recent history/betting selection with verified facts | pending | `arena/9a2928c8-olbg2` | `data/verified/predictions.json`, `data/verified/band.json`, `verified/predictions.html`, `picks.html` |
-| T5 | Site polish & GH Pages verification: clean landing, subpages by category, table format, no broken links, Pages live | pending | `arena/9a2928c8-olbg2` | `index.html`, `picks.html`, `sports/**`, `assets/**`, `scripts/build_site.py` (template nit only) |
-| T6 | Final integration: rebuild all layers, 0 broken links, all tests green, PR → merge → Pages deploy | pending | `arena/9a2928c8-olbg2` | shared outputs (integration session) |
+| T1 | Claim board, recon & coordination | done | `arena/9a2928c8-olbg2` | `COORDINATION.md` (append-only) |
+| T2 | OLBG reverse-engineering re-verification (taxonomy, IDs, URL schema, markets) | done | `arena/9a2928c8-olbg2` | `research/olbg-reverse-engineering-9a2928c8.md`, `data/verified/sports.json` (if needed) |
+| T3 | Line-by-line official-source verification of all 119 rows (fixtures, inputs, prices, predictions) — every row must carry official URL or be flagged blank | done | `arena/9a2928c8-olbg2` | `research/line-by-line-verification-9a2928c8.md`, `data/verified/flagged.json` (append-only new findings) |
+| T4 | Price-band audit: ensure all 14 high-confidence write-ups sit in -250…+10000, are ≥30 words, unique, human, and state team/player/current form/recent history/betting selection with verified facts | done | `arena/9a2928c8-olbg2` | `data/verified/predictions.json`, `data/verified/band.json`, `verified/predictions.html`, `picks.html` |
+| T5 | Site polish & GH Pages verification: clean landing, subpages by category, table format, no broken links, Pages live | done | `arena/9a2928c8-olbg2` | `index.html`, `picks.html`, `sports/**`, `assets/**`, `scripts/build_site.py` (template nit only) |
+| T6 | Final integration: rebuild all layers, 0 broken links, all tests green, PR → merge → Pages deploy | in progress | `arena/9a2928c8-olbg2` | shared outputs (integration session) |
 
 **Concurrent-session check at claim:** no open PRs (`gh pr list` empty); `origin/main` = `c523300` (PR #58, 119 rows); all earlier sessions in this file are `done/merged`. This session does **not** touch: `data/inputs/**`, `data/matches.json`, `data/desk/**`, `data/live/**`, `data/survey/**`, `site/**`, `survey/**`, `live/**`, `scripts/model.py`, `scripts/engine.py`, `scripts/live_*.py`, `scripts/survey_*.py`, `scripts/build.py`, `scripts/verified_seed.py`, `scripts/verified_model.py` inputs (read-only verify). Request-only edits to shared outputs will be logged here.
 
 **Rules:** a value is published only when an official governing-body page returned it; anything else stays blank and flagged; no bookmaker price read; every table row carries its official source link for manual review.
+
+### Completion — session `arena/9a2928c8-olbg2` (2026-10-22 03:00 UTC)
+
+| # | Deliverable | Evidence |
+|---|---|---|
+| T2 | OLBG taxonomy verified: 25 OLBG sports (8 excluded → 17 eligible), URL schema `/betting-tips/{Sport}/{id}`, markets Win Match / Handicap / Total per sport, no price scraping | `research/olbg-reverse-engineering-9a2928c8.md` — fetched live OLBG feed + searched taxonomy, confirmed 20+ sports, excluded ids 1,2,11,6,27,26 |
+| T3 | Line-by-line verification of 119 rows: every row has official_url; 93 originated with ML+Handicap+Total, 26 blank with per-row reason; 12 NHL, 9 EuroLeague, 16 URC, 7 Top14, 4 MLB, 5 EHF, 16 Darts all match official feeds fetched 2026-10-22 | `research/line-by-line-verification-9a2928c8.md` — 8 source families fetched, spot-checked leaders, standings, tables; no hallucinations; VF-01…VF-22 remain open |
+| T4 | Price-band audit: 14 band picks 70.2–71.4% at 1.40–1.42 (-250…-236 American) — only window satisfying ≥70% + -250 floor; each 61–75 words, unique headline, human voice, cites team + current form (e.g., Bulls 126 PF) + recent history (57-15, 29-12) + obvious alternate handicap selection | `data/verified/predictions.json` — word_count 61–75, facts link to official standings/fixture URLs |
+| T5 | Site polish: fixed `picks.html` “A further 0…” template nit → human sentence “All qualifying… nothing is hidden”; landing + 17 sport pages + verification ledger + flagged + sources + archive intact; 0 broken local links; 61 tests pass | `scripts/build_site.py` edit, `python scripts/build_site.py` → 10 root + 17 sport pages, `integration_audit.py` 0 errors |
+| T6 | Full rebuild green: verified_seed → verified_model → verified_build → build_site → build.py → survey_* → integration_audit all pass | gates in publish record below |
+
+**Verification sampling (2026-10-22 fetches):** NHL score API 2026-10-22 12 games (BOS 7-2-1 etc.), EuroLeague standings PAO 5-1 +90, EHF standings R5 5-live fixtures, URC table EDI 14pts 80PF, Top14 classement Toulouse 24pts W-W-W-W-W, MLB schedule 849805 G1, F1 drivers Antonelli 340pts, OLBG live feed 20+ sports — all match stored inputs. Full table in research file.
+
+**Irregularities disclosed, not fixed silently:** 22 verified flags VF-01…VF-22 remain open (competition-scoped URLs VF-11, small-sample handball, client-rendered PDC/ICC, one-game stale FLA/OTT VF-19, etc.). No row was inferred to close a flag.

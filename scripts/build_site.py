@@ -529,13 +529,18 @@ def build_picks() -> str:
   <a href="sports/{esc(p['sport'])}.html">All {esc(p['sport_name'])} rows</a></div>
 </article>'''
 
+    # Graceful wording when all high-confidence selections are already inside the band.
+    if len(primary) == 0:
+        lede_extra = "All qualifying high-confidence selections are inside the −250…+10000 window, so no additional picks are listed outside the band — nothing is hidden."
+    else:
+        lede_extra = f"A further <strong>{len(primary)} high-confidence picks</strong> are strong model selections but priced shorter than −250, so they are labelled as outside the requested band rather than passed off as compliant."
+
     body = f"""
 <h1>Picks &amp; predictions</h1>
 <p class="lede">Two clearly separated lists. <strong>{len(band_preds)} price-band picks</strong> satisfy both rules in the brief:
 model probability ≥70% and fair odds between −250 (1.40) and +10000 (101.00). Because a 70%+ probability cannot be
 priced above 1.43, the qualifying window is narrow; we enumerated handicap and total ladders to find selections inside it.
-A further <strong>{len(primary)} high-confidence picks</strong> are strong model selections but priced shorter than −250, so they
-are labelled as outside the requested band rather than passed off as compliant.</p>
+{lede_extra}</p>
 <div class="notice"><strong>How the numbers are produced.</strong> Probabilities come from the sport-specific models documented in
 <a href="methodology.html">Methodology</a>; prices are fair decimals (1/probability), not bookmaker quotes. Every prediction is
 ≥30 words, unique, and carries at least two facts with the official source that published them.</div>

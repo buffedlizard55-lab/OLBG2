@@ -1971,3 +1971,17 @@ data row was altered. CI now rebuilds `data/final/` and `final/` and fails on dr
 
 **Cross-scope request resolved:** the root nav change requested from `arena/1352b77f-olbg2`
 was made by this session at F7, as logged. It is a two-line edit (NAV entry + banner).
+
+---
+
+## Session `arena/dc72bac4-olbg2` — reproducibility and publication-integrity audit
+
+**Session ID:** `arena/dc72bac4-olbg2` · **Branch:** `arena/dc72bac4-olbg2` (Arena-fixed) · **Claimed:** 2026-10-22 UTC before implementation/audit edits.
+
+**Claim scope:** independent mechanical audit of the checked-in site's deterministic build/test state and cross-layer publication disclosures. No sports data, source assertions, shared builders, generated pages, or another session's report will be edited. The audit's bounded deliverables are `research/reproducibility-audit-dc72bac4.md` and this append-only coordination record. This is distinct from prior fixture/fact audits: it checks reproducibility, test/build gates, internal-link integrity, and whether published limitations are clearly disclosed; it does not represent primary-source verification of match facts.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R1 | Audit active remote branches and claim a disjoint report-only scope | in progress | `COORDINATION.md` (append-only) |
+| R2 | Run repository tests/builds/link audit; record exact command outcomes and uncovered checks | unclaimed | `research/reproducibility-audit-dc72bac4.md` |
+| R3 | Report only reproducible findings and source/verification limitations; no unsupported claim of exhaustive fixtures or verified odds | unclaimed | `research/reproducibility-audit-dc72bac4.md`, `COORDINATION.md` (append-only) |

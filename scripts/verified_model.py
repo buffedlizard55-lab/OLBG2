@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 """Independent multi-market line origination and human prediction builder for /verified/.
 
-Reads cleanroom primary-official inputs from data/verified/inputs.json (plus the
-verified shared tables in data/inputs/{nhl_teams,nba_teams,fixtures,urc,handball_ehf}.json)
-and writes:
+Reads the single self-contained official-input capture in data/verified/inputs.json
+(written by scripts/verified_seed.py) and writes:
   - data/verified/matches.json
   - data/verified/predictions.json
+
+Every lined match gets an independently originated winner market, handicap and
+totals line plus a named pick graded low/medium/high. A per-match "featured"
+selection is the strongest market (moneyline, handicap or totals) whose model
+probability is >= 0.70 and whose fair American price sits inside the
+-250..+10000 focus band; featured selections each carry a bespoke written
+prediction of at least 30 words.
 
 Zero bookmaker odds or tipster consensus percentages enter any equation.
 """
@@ -13,14 +19,17 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VERIFIED = ROOT / "data" / "verified"
-SHARED = ROOT / "data" / "inputs"
 
 HIGH_THRESHOLD = 0.72
 MEDIUM_THRESHOLD = 0.60
+FEATURED_MIN_PROB = 0.70
+AMERICAN_MIN = -250
+AMERICAN_MAX = 10000
 
 
 def read_json(path: Path) -> dict:
@@ -34,6 +43,14 @@ def write_json(path: Path, obj: object) -> None:
 
 def fair_decimal(prob: float) -> float:
     return round(max(1.02, 1.0 / max(prob, 1e-6)), 2)
+
+
+def fair_american(prob: float) -> int:
+    """Fair (no-vig) American moneyline price implied by a model probability."""
+    dec = 1.0 / min(max(prob, 1e-6), 1.0 - 1e-9)
+    if dec >= 2.0:
+        return int(round((dec - 1.0) * 100))
+    return int(round(-100.0 / (dec - 1.0)))
 
 
 def normal_cdf(x: float) -> float:
@@ -69,6 +86,16 @@ def poisson_grid(lh: float, la: float) -> dict[tuple[int, int], float]:
     return {k: v / total_mass for k, v in grid.items()}
 
 
+def _grid_margin_total_probs(grid: dict) -> tuple[dict, dict]:
+    """Collapse a Poisson score grid into margin / total probability maps."""
+    margin_probs: dict[int, float] = {}
+    total_probs: dict[int, float] = {}
+    for (i, j), p in grid.items():
+        margin_probs[i - j] = margin_probs.get(i - j, 0.0) + p
+        total_probs[i + j] = total_probs.get(i + j, 0.0) + p
+    return margin_probs, total_probs
+
+
 def grade(prob: float, cap: str | None = None) -> str:
     raw = "high" if prob >= HIGH_THRESHOLD else ("medium" if prob >= MEDIUM_THRESHOLD else "low")
     order = ["low", "medium", "high"]
@@ -88,16 +115,44 @@ def best_of_race(p: float, target: int) -> list[tuple[int, int, float]]:
     return outcomes
 
 
-# Hand-crafted, non-templated human analyses for every HIGH-confidence selection.
-# Each entry uses verified official figures only and embeds {prob_pct} and {price}
-# directly from the live model run so prose and table numbers can never diverge.
+# Hand-crafted, non-templated human analyses for every featured selection
+# (probability >= 0.70 with a fair American price inside -250..+10000).
+# Each entry uses verified official figures only and embeds {selection},
+# {prob_pct}, {price} and {american} directly from the live model run so
+# prose and table numbers can never diverge.
 BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
+    "nhl-2026020162": {
+        "headline": "Minnesota's 2.50 goals-against clamp meets Calgary's 2.13-per-game attack",
+        "template": (
+            "Back {selection} at Scotiabank Saddledome on Thursday night. "
+            "Minnesota have banked 14 points from ten games (6-2-2) on the back of just 25 goals conceded, the tightest defensive rate on tonight's slate, while Calgary sit 2-6-0 having scored only 17 goals in eight outings and shipped 37. "
+            "Our shrunk Poisson model makes the visiting Wild a {prob_pct}% shot ({price} fair decimal, {american} American)."
+        ),
+        "facts": [
+            {"claim": "Minnesota Wild stand 6-2-2 (14 pts, 31 GF, 25 GA) after ten games", "source": "https://api.nhle.com/stats/rest/en/team/summary"},
+            {"claim": "Calgary Flames stand 2-6-0 (4 pts, 17 GF, 37 GA) after eight games", "source": "https://api.nhle.com/stats/rest/en/team/summary"},
+            {"claim": "Game 2026020162 confirmed at Scotiabank Saddledome on the official NHL score feed", "source": "https://api-web.nhle.com/v1/score/2026-10-22"},
+        ],
+    },
+    "nhl-2026020163": {
+        "headline": "Two 15-plus-point starts collide in Edmonton — take Carolina with the goal and a half",
+        "template": (
+            "Take {selection} in Thursday's heavyweight clash at Rogers Place. "
+            "Carolina have lost only twice in regulation through eleven games (8-2-1, 17 points, 42 scored against 27 allowed), a profile built on one-goal games, while Edmonton (7-1-1, 41-27) rarely blow elite opponents away. "
+            "The +1.5 puck line cashes on any Hurricanes win or one-goal defeat including overtime, and our Poisson grid prices that cover at {prob_pct}% ({price}, {american} American)."
+        ),
+        "facts": [
+            {"claim": "Carolina Hurricanes stand 8-2-1 (17 pts, 42 GF, 27 GA) after eleven games", "source": "https://api.nhle.com/stats/rest/en/team/summary"},
+            {"claim": "Edmonton Oilers stand 7-1-1 (15 pts, 41 GF, 27 GA) after nine games", "source": "https://api.nhle.com/stats/rest/en/team/summary"},
+            {"claim": "Game 2026020163 confirmed at Rogers Place on the official NHL score feed", "source": "https://api-web.nhle.com/v1/score/2026-10-22"},
+        ],
+    },
     "el-E2026-67": {
         "headline": "Athens fortress and +90 net differential make Panathinaikos overwhelming hosts",
         "template": (
-            "Back **Panathinaikos AKTOR Athens to beat Kosner Baskonia Vitoria-Gasteiz** on the EuroLeague Round 7 moneyline at Telekom Center Athens. "
+            "Back {selection} in EuroLeague Round 7 at Telekom Center Athens rather than swallowing the ultra-short straight moneyline. "
             "Panathinaikos sit top of the 20-club standings at 5-1 with a competition-best +90 point differential (528 scored, 438 conceded) and a 4-1 home record. "
-            "Baskonia arrive bottom at 1-5 (-60 differential, 0-2 away, allowing 94.0 points per game), pricing the hosts at {prob_pct}% ({price} fair decimal)."
+            "Baskonia arrive bottom at 1-5 (-60 differential, 0-2 away, allowing 94.0 points per game), so covering a reduced spread prices at {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Panathinaikos lead the 2026-27 EuroLeague table at 5-1 (528 PF, 438 PA, +90, 4-1 home)", "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"},
@@ -105,36 +160,12 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
             {"claim": "Round 7 fixture confirmed at Telekom Center Athens on 22 October 2026", "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/"},
         ],
     },
-    "ec-R4-bosna-bks": {
-        "headline": "Unbeaten Group D leaders Bahcesehir carry a +21.3 per-game margin into Sarajevo",
-        "template": (
-            "Select **Bahcesehir College Istanbul to win away against BOSNA BH Telecom Sarajevo** in BKT EuroCup Group D. "
-            "Bahcesehir have swept their opening three group games 3-0 while outscoring opponents 291-227 (+64 net, 97.0 points per outing). "
-            "Bosna are winless at 0-3 (237 scored, 252 allowed), and even after accounting for Sarajevo home court our shrinkage model makes Bahcesehir {prob_pct}% favourites ({price} fair odds)."
-        ),
-        "facts": [
-            {"claim": "Bahcesehir top EuroCup Group D at 3-0 with 291 PF and 227 PA (+64)", "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"},
-            {"claim": "BOSNA BH Telecom Sarajevo stand 7th in Group D at 0-3 (237 PF, 252 PA, -15)", "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"},
-        ],
-    },
-    "ec-R4-jlm-rig": {
-        "headline": "Hapoel Midtown Jerusalem's defensive stinginess separates them from Riga Zelli",
-        "template": (
-            "Take **Hapoel Midtown Jerusalem on the moneyline over Riga Zelli** in EuroCup Group A action. "
-            "Jerusalem enter undefeated at 3-0 having held three opponents to 221 combined points (73.7 allowed per game against 84.7 scored). "
-            "Riga Zelli are 2-1 overall (261-250) with an 0-1 road mark, and on a neutral floor our efficiency model still rates Hapoel at {prob_pct}% ({price})."
-        ),
-        "facts": [
-            {"claim": "Hapoel Midtown Jerusalem sit 3-0 in Group A (254 PF, 221 PA, +33)", "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"},
-            {"claim": "Riga Zelli sit 2-1 in Group A (261 PF, 250 PA, +11, 0-1 away)", "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"},
-        ],
-    },
     "top14-11867": {
         "headline": "Table-topping Stade Toulousain bring five straight Top 14 victories to Ernest-Wallon",
         "template": (
-            "Stade Toulousain to win the match-winner market at home against USA Perpignan on Saturday afternoon in Top 14 Journée 7. "
+            "Take {selection} against USA Perpignan on Saturday afternoon in Top 14 Journée 7. "
             "Toulouse sit first on 24 points (5W-0D-1L, 197 for, 124 against, +73) riding five consecutive league wins plus a 60-14 Champions Cup demolition of Sale Sharks. "
-            "Ninth-placed Perpignan (3W-0D-3L, 166-199, -33) face a {prob_pct}% home favourite ({price} fair price)."
+            "Ninth-placed Perpignan (3W-0D-3L, 166-199, -33) must keep it within a converted score to spoil a {prob_pct}% cover price ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Stade Toulousain lead Top 14 on 24 pts (5W-0D-1L, 197 PF, 124 PA, W-W-W-W-W)", "source": "https://top14.lnr.fr/classement"},
@@ -143,25 +174,12 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
             {"claim": "Journée 7 fixture sheet 11867 confirmed on LNR", "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan"},
         ],
     },
-    "prod2-12068": {
-        "headline": "Unbeaten Oyonnax average 44.7 points per game heading to Montauban",
-        "template": (
-            "Oyonnax Rugby to beat US Montauban away in Thursday night's Pro D2 Journée 8 opener. "
-            "Top-seeded Oyonnax have won all seven league fixtures (7W-0D-0L, 33 points with five bonus points), piling up 313 points while conceding only 154 (+159). "
-            "Eighth-placed Montauban carry a -32 differential (182 for, 214 against) and three losses in five, leaving Oyonnax at {prob_pct}% ({price}) even away from home."
-        ),
-        "facts": [
-            {"claim": "Oyonnax lead Pro D2 on 33 pts (7W-0D-0L, 313 PF, 154 PA, +159)", "source": "https://prod2.lnr.fr/classement"},
-            {"claim": "US Montauban sit 8th on 17 pts (4W-0D-3L, 182 PF, 214 PA, -32)", "source": "https://prod2.lnr.fr/classement"},
-            {"claim": "Journée 8 match sheet 12068 confirmed on LNR Pro D2", "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax"},
-        ],
-    },
     "prod2-12064": {
         "headline": "Seven-from-seven Provence Rugby host leaky Béziers in Aix-en-Provence",
         "template": (
-            "Provence Rugby to defeat AS Béziers Hérault at home in Friday's Pro D2 Journée 8 card. "
+            "Back {selection} against AS Béziers Hérault in Friday's Pro D2 Journée 8 card. "
             "Unbeaten Provence stand 7W-0D-0L on 29 points after conceding just 158 points across seven rounds (222 scored, +64). "
-            "Fourteenth-placed Béziers have dropped four of their last five matches while shipping 240 points (-93 differential), giving Provence an {prob_pct}% win probability ({price} fair decimal)."
+            "Fourteenth-placed Béziers have dropped four of their last five matches while shipping 240 points (-93 differential), and covering a one-score alternate line rates {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Provence Rugby rank 2nd in Pro D2 at 7W-0D-0L (29 pts, 222 PF, 158 PA, +64)", "source": "https://prod2.lnr.fr/classement"},
@@ -172,9 +190,9 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
     "prod2-12066": {
         "headline": "Resurgent Aurillac catch winless bottom club Nevers on home turf",
         "template": (
-            "Back Stade Aurillacois to beat USON Nevers at home in Pro D2 Journée 8. "
+            "Back {selection} — Stade Aurillacois simply to beat USON Nevers at home in Pro D2 Journée 8. "
             "Aurillac arrive on back-to-back victories over Biarritz and Béziers to reach 16 points (3W-0D-4L, 240 points scored). "
-            "Bottom-placed Nevers are the lone winless club in the division at 0W-0D-7L with a -76 differential (146 scored, 222 conceded), putting home side Aurillac at {prob_pct}% ({price})."
+            "Bottom-placed Nevers are the lone winless club in the division at 0W-0D-7L with a -76 differential (146 scored, 222 conceded), putting the home win at {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Stade Aurillacois sit 9th on 16 pts (3W-0D-4L, 240 PF, 254 PA, consecutive wins)", "source": "https://prod2.lnr.fr/classement"},
@@ -182,39 +200,12 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
             {"claim": "Journée 8 match sheet 12066 confirmed on LNR Pro D2", "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers"},
         ],
     },
-    "prod2-12069": {
-        "headline": "CA Brive's defensive structure outclasses Narbonne's league-worst 296 points conceded",
-        "template": (
-            "CA Brive to win away at RC Narbonnais in Pro D2 Journée 8. "
-            "Fourth-placed Brive (5W-0D-2L, 21 points) allow just 23.4 points per game (206 scored, 164 conceded, +42). "
-            "Fifteenth-placed Narbonne own the worst defence in Pro D2 having leaked 296 points in seven outings (-110 differential, four straight defeats), giving Brive a {prob_pct}% edge ({price})."
-        ),
-        "facts": [
-            {"claim": "CA Brive rank 4th on 21 pts (5W-0D-2L, 206 PF, 164 PA, +42)", "source": "https://prod2.lnr.fr/classement"},
-            {"claim": "RC Narbonnais rank 15th on 9 pts (2W-0D-5L, 186 PF, 296 PA, -110)", "source": "https://prod2.lnr.fr/classement"},
-            {"claim": "Journée 8 match sheet 12069 confirmed on LNR Pro D2", "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive"},
-        ],
-    },
-    "urc-292611": {
-        "headline": "Loftus Versfeld firepower makes Vodacom Bulls heavy hosts against winless Ulster",
-        "template": (
-            "Vodacom Bulls to win the 1X2 match-winner market against Ulster Rugby at Loftus Versfeld on Saturday morning in URC Round 4. "
-            "Pretoria's Bulls lead the entire URC in scoring with 126 points across three matches against only 54 conceded (+72), fresh off hammering the Lions 57-15 on 10 October. "
-            "Winless Ulster enter at 0W-2D-1L (88 PF, 93 PA), putting the Bulls at {prob_pct}% ({price} fair price)."
-        ),
-        "facts": [
-            {"claim": "Vodacom Bulls stand 2W-0D-1L with a URC-high 126 PF and 54 PA (+72)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
-            {"claim": "Vodacom Bulls beat 10bet Lions 57-15 on 10 October 2026", "source": "https://stats.unitedrugby.com/match-centre/2026-27/4"},
-            {"claim": "Ulster Rugby stand winless at 0W-2D-1L (88 PF, 93 PA)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
-            {"claim": "Round 4 fixture 292611 confirmed at Loftus Versfeld", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611"},
-        ],
-    },
     "urc-292609": {
         "headline": "Connacht host winless Zebre Parma (-64 differential) under Friday night lights in Galway",
         "template": (
-            "Connacht Rugby to defeat Zebre Parma at Dexcom Stadium in Friday's URC Round 4 meeting. "
+            "Back {selection} — Connacht Rugby to defeat Zebre Parma at Dexcom Stadium in Friday's URC Round 4 meeting. "
             "Bottom-placed Zebre arrive at 0W-0D-3L with a competition-worst -64 differential (52 scored, 116 conceded) after losing 29-12 to Edinburgh on 10 October. "
-            "Against 1W-0D-2L Connacht (56 PF, 84 PA) in Galway, our shrunk margin model prices the home win at {prob_pct}% ({price})."
+            "Against 1W-0D-2L Connacht (56 PF, 84 PA) in Galway, our shrunk margin model prices the home win at {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Zebre Parma sit 16th in the URC at 0W-0D-3L (52 PF, 116 PA, -64)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
@@ -225,8 +216,9 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
     "urc-292610": {
         "headline": "Three-from-three league leaders Edinburgh welcome leaky Lions to Hive Stadium",
         "template": (
-            "Edinburgh Rugby to win the 1X2 match-winner market at home against 10bet Lions in Friday night's URC Round 4 fixture. "
-            "Edinburgh sit top of the URC on 14 points as the only 3W-0D-0L side (80 PF, 54 PA) after beating Zebre 29-12 away, whereas the Lions shipped 57 points at Loftus last time out (77 PF, 102 PA overall), pricing Edinburgh at {prob_pct}% ({price})."
+            "Take {selection} at home against 10bet Lions in Friday night's URC Round 4 fixture rather than the short outright price. "
+            "Edinburgh sit top of the URC on 14 points as the only 3W-0D-0L side (80 PF, 54 PA) after beating Zebre 29-12 away, whereas the Lions shipped 57 points at Loftus last time out (77 PF, 102 PA overall). "
+            "Winning by two or more rates {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Edinburgh lead the URC table at 3W-0D-0L (14 pts, 80 PF, 54 PA)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
@@ -234,34 +226,51 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
             {"claim": "Round 4 fixture 292610 confirmed at Hive Stadium", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610"},
         ],
     },
+    "urc-292611": {
+        "headline": "Loftus Versfeld firepower makes Vodacom Bulls heavy hosts against winless Ulster",
+        "template": (
+            "Back {selection} against Ulster Rugby at Loftus Versfeld on Saturday morning in URC Round 4. "
+            "Pretoria's Bulls lead the entire URC in scoring with 126 points across three matches against only 54 conceded (+72), fresh off hammering the Lions 57-15 on 10 October. "
+            "Winless Ulster enter at 0W-2D-1L (88 PF, 93 PA), and a four-point winning margin prices at {prob_pct}% ({price} fair decimal, {american} American)."
+        ),
+        "facts": [
+            {"claim": "Vodacom Bulls stand 2W-0D-1L with a URC-high 126 PF and 54 PA (+72)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Vodacom Bulls beat 10bet Lions 57-15 on 10 October 2026", "source": "https://stats.unitedrugby.com/match-centre/2026-27/4"},
+            {"claim": "Ulster Rugby stand winless at 0W-2D-1L (88 PF, 93 PA)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Round 4 fixture 292611 confirmed at Loftus Versfeld", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611"},
+        ],
+    },
+    "urc-292612": {
+        "headline": "DHL Stormers' stingy Cape Town defence faces point-shy Scarlets in Round 4",
+        "template": (
+            "Take {selection} at DHL Stadium in Saturday's URC Round 4 clash with the Scarlets. "
+            "Cape Town's Stormers stand 4th on 11 points (2W-0D-1L, 81 PF, joint-best 54 PA) coming off a comprehensive 39-22 home victory over the Sharks on 10 October. "
+            "Twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA), making any home win beyond a penalty a {prob_pct}% cover ({price} fair decimal, {american} American)."
+        ),
+        "facts": [
+            {"claim": "DHL Stormers stand 4th in the URC at 2W-0D-1L (81 PF, 54 PA, +27)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Stormers beat Hollywoodbets Sharks 39-22 on 10 October 2026", "source": "https://stats.unitedrugby.com/match-centre/2026-27/4"},
+            {"claim": "Scarlets stand 12th at 1W-0D-2L (68 PF, 85 PA) before visiting DHL Stadium", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612"},
+        ],
+    },
     "urc-292617": {
         "headline": "Second-placed Glasgow Warriors bring unbeaten Scotstoun record against leaky Lions",
         "template": (
-            "Glasgow Warriors to defeat 10bet Lions in Friday night's URC Round 5 clash at Scotstoun Stadium. "
+            "Back {selection} in Friday night's URC Round 5 clash with 10bet Lions at Scotstoun Stadium. "
             "Unbeaten Glasgow sit second on 13 points (2W-1D-0L, 95 points scored, 72 conceded) after beating Connacht 36-19 at home on 9 October. "
-            "Seventh-placed Lions have shipped 102 points in three games following their 57-15 loss in Pretoria, pricing Glasgow at {prob_pct}% ({price})."
+            "Seventh-placed Lions have shipped 102 points in three games following their 57-15 loss in Pretoria, so a two-point home margin rates {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Glasgow Warriors sit 2nd in URC at 2W-1D-0L (13 pts, 95 PF, 72 PA) and beat Connacht 36-19", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
             {"claim": "10bet Lions stand 2W-0D-1L (77 PF, 102 PA) after losing 57-15 at Bulls", "source": "https://stats.unitedrugby.com/match-centre/2026-27/5"},
         ],
     },
-    "urc-292618": {
-        "headline": "Cape Town defence gives DHL Stormers clear home edge over winless Ulster",
-        "template": (
-            "DHL Stormers to win the 1X2 match-winner market at DHL Stadium against Ulster Rugby in URC Round 5. "
-            "Stormers have conceded a league-low 54 points across three rounds (2W-0D-1L, 81 PF) and routed the Sharks 39-22 at this venue on 10 October, whereas Ulster enter winless at 0W-2D-1L (88 PF, 93 PA), pricing Stormers at {prob_pct}% ({price})."
-        ),
-        "facts": [
-            {"claim": "DHL Stormers stand 4th at 2W-0D-1L (81 PF, 54 PA) and beat Sharks 39-22", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
-            {"claim": "Ulster Rugby sit winless at 0W-2D-1L (88 PF, 93 PA) ahead of Cape Town trip", "source": "https://stats.unitedrugby.com/match-centre/2026-27/5"},
-        ],
-    },
     "urc-292619": {
         "headline": "Vodacom Bulls' +72 scoring surge hosts point-negative Scarlets in Pretoria",
         "template": (
-            "Vodacom Bulls to beat Scarlets on the 1X2 match-winner line at Loftus Versfeld in Saturday's URC Round 5 fixture. "
-            "Pretoria's Bulls lead the URC with 126 points scored and only 54 allowed (+72) after their 57-15 demolition of the Lions, while twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA), putting the hosts at {prob_pct}% ({price})."
+            "Back {selection} at Loftus Versfeld in Saturday's URC Round 5 fixture against the Scarlets. "
+            "Pretoria's Bulls lead the URC with 126 points scored and only 54 allowed (+72) after their 57-15 demolition of the Lions, while twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA). "
+            "Clearing a five-point alternate spread prices the hosts at {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Vodacom Bulls lead the URC with 126 PF against 54 PA (+72) at 2W-0D-1L", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
@@ -271,72 +280,21 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
     "urc-292622": {
         "headline": "Rodney Parade attack backs Dragons RFC against winless cellar-dwellers Zebre Parma",
         "template": (
-            "Dragons RFC to win at Rodney Parade against Zebre Parma in Saturday's URC Round 5 meeting. "
-            "Eighth-placed Dragons hold a +5 differential on 9 points (1W-1D-1L, 88 PF, 83 PA) after scoring 31 points at home on 9 October, whereas bottom-placed Zebre are 0W-0D-3L with a competition-worst -64 differential (52 PF, 116 PA), rating Dragons at {prob_pct}% ({price})."
+            "Take {selection} at Rodney Parade against Zebre Parma in Saturday's URC Round 5 meeting. "
+            "Eighth-placed Dragons hold a +5 differential on 9 points (1W-1D-1L, 88 PF, 83 PA) after scoring 31 points at home on 9 October, whereas bottom-placed Zebre are 0W-0D-3L with a competition-worst -64 differential (52 PF, 116 PA). "
+            "Winning by four or more rates {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Dragons RFC stand 8th on 9 pts (1W-1D-1L, 88 PF, 83 PA)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
             {"claim": "Zebre Parma sit 16th at 0W-0D-3L (1 pt, 52 PF, 116 PA, -64)", "source": "https://stats.unitedrugby.com/match-centre/2026-27/5"},
         ],
     },
-    "urc-292612": {
-        "headline": "DHL Stormers' stingy Cape Town defence faces point-shy Scarlets in Round 4",
-        "template": (
-            "DHL Stormers to beat Scarlets at DHL Stadium in Saturday's URC Round 4 clash. "
-            "Cape Town's Stormers stand 4th on 11 points (2W-0D-1L, 81 PF, joint-best 54 PA) coming off a comprehensive 39-22 home victory over the Sharks on 10 October. "
-            "Twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA), making Stormers {prob_pct}% favourites ({price} fair decimal)."
-        ),
-        "facts": [
-            {"claim": "DHL Stormers stand 4th in the URC at 2W-0D-1L (81 PF, 54 PA, +27)", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
-            {"claim": "Stormers beat Hollywoodbets Sharks 39-22 on 10 October 2026", "source": "https://stats.unitedrugby.com/match-centre/2026-27/4"},
-            {"claim": "Scarlets stand 12th at 1W-0D-2L (68 PF, 85 PA) before visiting DHL Stadium", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612"},
-        ],
-    },
-    "ehfcl-202711020101041": {
-        "headline": "Unbeaten Sporting Clube de Portugal meet Group D's leakiest defence in Lisbon",
-        "template": (
-            "Sporting Clube de Portugal to win the match-winner market at home over IFK Kristianstad in Thursday's EHF Champions League Round 5 tie. "
-            "Sporting stand unbeaten in Group D at 3W-1D-0L (7 points, 149 goals scored, 125 conceded). "
-            "Winless Kristianstad sit 0W-0D-4L having conceded a competition-high 155 goals (122 scored), making Sporting {prob_pct}% favourites ({price} fair price)."
-        ),
-        "facts": [
-            {"claim": "Sporting lead Group D unbeaten at 3W-1D-0L (7 pts, 149 GF, 125 GA)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
-            {"claim": "IFK Kristianstad sit 4th in Group D at 0W-0D-4L (0 pts, 122 GF, 155 GA)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
-            {"claim": "EHF Round 5 match 202711020101041 scheduled 22 Oct 20:45 CEST", "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/"},
-        ],
-    },
-    "ehfcl-202711020101029": {
-        "headline": "Unbeaten Aalborg Håndbold hold a +55 goal-difference swing over winless Celje",
-        "template": (
-            "Aalborg Håndbold to beat RK Celje Pivovarna Laško at home in Wednesday's Group C EHF Champions League fixture. "
-            "Aalborg are unbeaten at 3W-1D-0L (7 points, 136 goals for, 115 against, +21), whereas Celje have dropped all four games (0W-0D-4L) while conceding 154 goals (-34). "
-            "Full-support Poisson pricing rates Aalborg at {prob_pct}% ({price} fair decimal)."
-        ),
-        "facts": [
-            {"claim": "Aalborg stand 3W-1D-0L in Group C (7 pts, 136 GF, 115 GA, +21)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
-            {"claim": "RK Celje Pivovarna Laško stand 0W-0D-4L in Group C (0 pts, 120 GF, 154 GA, -34)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
-            {"claim": "EHF Round 5 match 202711020101029 scheduled 21 Oct 20:45 CEST", "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/"},
-        ],
-    },
-    "ehfcl-202711020101064": {
-        "headline": "Four-from-four SC Magdeburg travel to Trondheim against 0W-0D-4L Kolstad",
-        "template": (
-            "SC Magdeburg to defeat Kolstad Håndball away in Thursday night's EHF Champions League Group F contest. "
-            "Magdeburg boast a perfect 4W-0D-0L record (8 points) with 141 goals scored and only 108 conceded (+33). "
-            "Kolstad sit bottom at 0W-0D-4L (111 scored, 143 conceded, -32), leaving visiting Magdeburg at {prob_pct}% ({price} fair odds)."
-        ),
-        "facts": [
-            {"claim": "SC Magdeburg lead Group F at 4W-0D-0L (8 pts, 141 GF, 108 GA, +33)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
-            {"claim": "Kolstad Håndball sit 4th in Group F at 0W-0D-4L (0 pts, 111 GF, 143 GA, -32)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
-            {"claim": "EHF Round 5 match 202711020101064 scheduled 22 Oct 20:45 CEST", "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/"},
-        ],
-    },
     "ehfcl-202711020101049": {
         "headline": "Competition-best defence gives unbeaten Barça commanding home control over Montpellier",
         "template": (
-            "Barça to beat Montpellier Handball at Palau Blaugrana in Thursday's EHF Champions League Group E clash. "
+            "Back {selection} at Palau Blaugrana in Thursday's EHF Champions League Group E clash instead of the prohibitive 1X2 price. "
             "Barça have won all four group fixtures (4W-0D-0L, 8 points) while conceding only 104 goals — the stingiest mark among all 24 clubs — alongside 137 goals scored. "
-            "Against 1W-0D-3L Montpellier (116 GF, 125 GA), Barça project at {prob_pct}% ({price})."
+            "Against 1W-0D-3L Montpellier (116 GF, 125 GA), winning by four or more projects at {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Barça lead Group E at 4W-0D-0L with 137 GF and 104 GA (fewest goals allowed in EHF CL)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
@@ -344,173 +302,11 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
             {"claim": "EHF Round 5 match 202711020101049 scheduled 22 Oct 20:45 CEST", "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/"},
         ],
     },
-    "pdc-32328": {
-        "headline": "World No. 1 Luke Littler's £3.11m prize haul towers over William O'Connor over 11 legs",
-        "template": (
-            "Luke Littler to win his PDC European Championship first-round tie against William O'Connor on Friday afternoon. "
-            "Littler leads the official PDC Werner Ranking Ladder by more than £2 million on £3,113,500 across the two-year cycle, whereas world No. 32 O'Connor sits on £274,500. "
-            "Over best-of-11 legs, that 11.3-to-1 prize ratio translates into an {prob_pct}% match win probability ({price} fair decimal)."
-        ),
-        "facts": [
-            {"claim": "Luke Littler ranks #1 on the official PDC Werner Ranking Ladder with £3,113,500", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "William O'Connor ranks #32 on the official PDC Werner Ranking Ladder with £274,500", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "European Championship R1 tie confirmed on OLBG Darts hub (event_id=32328)", "source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328"},
-        ],
-    },
-    "pdc-32327": {
-        "headline": "World No. 11 Nathan Aspinall holds a six-fold ranking money edge on qualifier Cristo Reyes",
-        "template": (
-            "Nathan Aspinall to defeat Cristo Reyes in Friday's PDC European Championship Round 1 contest (contrarian to casual tipster upset chatter). "
-            "Official PDC standings place Aspinall 11th on £579,500 against No. 71 Reyes on £95,000 — the widest ranking-position gap in the entire 16-match draw. "
-            "Across a first-to-six-legs race our binomial leg model prices Aspinall at {prob_pct}% ({price})."
-        ),
-        "facts": [
-            {"claim": "Nathan Aspinall ranks #11 on the PDC Werner Ranking Ladder with £579,500", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "Cristo Reyes ranks #71 on the PDC Werner Ranking Ladder with £95,000", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "European Championship R1 tie confirmed on OLBG Darts hub (event_id=32327)", "source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327"},
-        ],
-    },
-    "atp-902102": {
-        "headline": "World No. 15 Tommy Paul carries more than quadruple Benjamin Bonzi's ATP points",
-        "template": (
-            "Tommy Paul to beat Benjamin Bonzi in Wednesday afternoon's indoor hard-court singles clash. "
-            "On the official 19 October 2026 PIF ATP Rankings, Paul stands No. 15 on 2,575 points (+200 movement across 22 tournaments) while Bonzi clings to No. 100 on 605 points (-8 places). "
-            "In best-of-three sets our Markov set model makes Paul an {prob_pct}% favourite ({price} fair decimal)."
-        ),
-        "facts": [
-            {"claim": "Tommy Paul ranks #15 on 2,575 official ATP singles points (2026.10.19)", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "Benjamin Bonzi ranks #100 on 605 official ATP singles points (2026.10.19)", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "Match listed on OLBG Tennis hub for 21 Oct 14:30 (event_id=902102)", "source": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Benjamin_Bonzi_vs_Tommy_Paul/3?event_id=902102"},
-        ],
-    },
-    "atp-7485-MS008": {
-        "headline": "Top-10 seed Arthur Fils brings a 3,325-to-1,010 ATP points margin into Brussels R16",
-        "template": (
-            "Arthur Fils to defeat Jaume Munar in the BNP Paribas Fortis European Open Round of 16 in Brussels. "
-            "Official PIF ATP singles standings rank the 22-year-old Frenchman No. 10 in the world on 3,325 points across 19 events, more than triple No. 51 Munar's 1,010 points. "
-            "Across best-of-three indoor sets our model rates Fils at {prob_pct}% ({price} fair decimal)."
-        ),
-        "facts": [
-            {"claim": "Arthur Fils holds ATP world rank #10 on 3,325 points (2026.10.19)", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "Jaume Munar holds ATP world rank #51 on 1,010 points (2026.10.19)", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "Brussels Round of 16 match MS008 confirmed on official ATP Tour live scores", "source": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008"},
-        ],
-    },
-    "atp-902037": {
-        "headline": "Andrey Rublev's 2,175-point ranking base outguns 38-year-old Adrian Mannarino in Almaty",
-        "template": (
-            "Andrey Rublev to win his Almaty Open singles meeting with Adrian Mannarino. "
-            "Rublev sits No. 22 in the official 19 October 2026 ATP rankings on 2,175 points compared with No. 79 Mannarino on 743 points across 33 tournaments played. "
-            "That nearly three-to-one ATP points gap yields a {prob_pct}% best-of-three win probability ({price} fair price) for Rublev."
-        ),
-        "facts": [
-            {"claim": "Andrey Rublev ranks #22 on 2,175 official ATP points", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "Adrian Mannarino ranks #79 on 743 official ATP points", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "Almaty Open match confirmed on ATP Tour & OLBG (event_id=902037)", "source": "https://www.atptour.com/en/tournaments/almaty/9410/overview"},
-        ],
-    },
-    "atp-9410-MS015": {
-        "headline": "Second seed Luciano Darderi holds a 50-place ATP ranking cushion over James Duckworth",
-        "template": (
-            "Luciano Darderi to prevail over James Duckworth in the Almaty Open Round of 16 on Center Court. "
-            "Seeded second in Kazakhstan, world No. 23 Darderi carries 2,160 official ATP points into the tie against 34-year-old No. 73 Duckworth on 774 points (-103 week-on-week). "
-            "Over best-of-three sets our ranking points model prices Darderi at {prob_pct}% ({price} fair decimal)."
-        ),
-        "facts": [
-            {"claim": "Luciano Darderi ranks #23 on 2,160 official ATP points and is #2 seed in Almaty", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "James Duckworth ranks #73 on 774 official ATP points", "source": "https://www.atptour.com/en/rankings/singles"},
-            {"claim": "Almaty Round of 16 match MS015 confirmed on official ATP Tour stats centre", "source": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015"},
-        ],
-    },
-    "f1-2026-drivers": {
-        "headline": "Kimi Antonelli's 102-point cushion atop the FIA Drivers' Championship commands title market",
-        "template": (
-            "Kimi Antonelli to win the 2026 FIA Formula 1 Drivers' World Championship outright. "
-            "Official Formula 1 standings entering Austin show Mercedes rookie sensation Antonelli on 340 points — a massive 102 points clear of team-mate George Russell (238), 111 ahead of Lewis Hamilton (229), and 119 clear of Max Verstappen (221). "
-            "Our championship points-rate model puts Antonelli's title probability at {prob_pct}% ({price})."
-        ),
-        "facts": [
-            {"claim": "Kimi Antonelli leads the 2026 FIA Drivers' Standings on 340 points for Mercedes", "source": "https://www.formula1.com/en/results/2026/drivers"},
-            {"claim": "Nearest chasers: George Russell 238 pts, Lewis Hamilton 229 pts, Max Verstappen 221 pts", "source": "https://www.formula1.com/en/results/2026/drivers"},
-            {"claim": "Market active on OLBG Motor Racing hub", "source": "https://www.olbg.com/betting-tips/Motor_Racing/14"},
-        ],
-    },
-    # Additional high-conviction candidates in case shrinkage parameters push any border match >= 72%:
-    "nhl-2026020159": {
-        "headline": "Sorokin and stingy Islanders defence host struggling Kings at UBS Arena",
-        "template": (
-            "New York Islanders to win on the moneyline against the Los Angeles Kings at UBS Arena. "
-            "New York enter at 5-3-1 having allowed only 19 goals across nine games (2.11 GA/G) behind five wins from Ilya Sorokin, while Los Angeles sit 1-4-2 with 27 goals conceded in seven outings (3.86 GA/G). "
-            "Our shrunk Poisson model prices the Islanders at {prob_pct}% ({price})."
-        ),
-        "facts": [
-            {"claim": "NY Islanders stand 5-3-1 with 27 GF and 19 GA in 9 games", "source": "https://api.nhle.com/stats/rest/en/team/summary"},
-            {"claim": "Los Angeles Kings stand 1-4-2 with 17 GF and 27 GA in 7 games", "source": "https://api.nhle.com/stats/rest/en/team/summary"},
-            {"claim": "Sorokin 5 wins, Horvat 5 goals on official NHL GameCenter feed", "source": "https://api-web.nhle.com/v1/score/2026-10-22"},
-        ],
-    },
-    "pdc-32323": {
-        "headline": "World No. 3 Gian van Veen holds a near three-to-one prize advantage over Andrew Gilding",
-        "template": (
-            "Gian van Veen to beat Andrew Gilding in Thursday's PDC European Championship first round. "
-            "Van Veen sits third on the official PDC Werner Ranking Ladder with £1,035,750 in two-year prize money, facing world No. 27 Gilding on £355,750. "
-            "Across a best-of-11-legs format that sustained scoring superiority translates into a {prob_pct}% win probability ({price} fair price)."
-        ),
-        "facts": [
-            {"claim": "Gian van Veen ranks #3 on the official PDC Werner Ranking Ladder (£1,035,750)", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "Andrew Gilding ranks #27 on the official PDC Werner Ranking Ladder (£355,750)", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "European Championship R1 tie confirmed on OLBG Darts hub (event_id=32323)", "source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323"},
-        ],
-    },
-    "pdc-32329": {
-        "headline": "Top-16 seed Ross Smith brings triple Karel Sedlacek's PDC prize haul to Dortmund",
-        "template": (
-            "Ross Smith to defeat Karel Sedlacek in Thursday afternoon's PDC European Championship opener. "
-            "Official PDC rankings place Smith 13th on £567,250 against world No. 44 Sedlacek on £177,250 — a £390,000 two-year prize gap that makes OLBG's slight underdog lean toward Sedlacek look mispriced. "
-            "Over best-of-11 legs our model rates Smith at {prob_pct}% ({price} fair decimal)."
-        ),
-        "facts": [
-            {"claim": "Ross Smith ranks #13 on the official PDC Werner Ranking Ladder (£567,250)", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "Karel Sedlacek ranks #44 on the official PDC Werner Ranking Ladder (£177,250)", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "European Championship R1 tie confirmed on OLBG Darts hub (event_id=32329)", "source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329"},
-        ],
-    },
-    "pdc-32335": {
-        "headline": "Fifth-ranked Jonny Clayton carries triple Niko Springer's ranking money into Friday's tie",
-        "template": (
-            "Jonny Clayton to win his PDC European Championship Round 1 clash against German youngster Niko Springer. "
-            "Clayton holds world No. 5 status on £706,000 on the official PDC Werner Ranking Ladder compared with No. 36 Springer on £239,750. "
-            "Across first-to-six legs our binomial leg model gives the Welshman a {prob_pct}% win probability ({price} fair odds)."
-        ),
-        "facts": [
-            {"claim": "Jonny Clayton ranks #5 on the official PDC Werner Ranking Ladder (£706,000)", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "Niko Springer ranks #36 on the official PDC Werner Ranking Ladder (£239,750)", "source": "https://www.pdc.tv/rankings"},
-            {"claim": "European Championship R1 tie confirmed on OLBG Darts hub (event_id=32335)", "source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335"},
-        ],
-    },
-    "wst-9934": {
-        "headline": "World No. 6 John Higgins brings nearly triple Jak Jones's ranking money into Belfast R2",
-        "template": (
-            "John Higgins to defeat Jak Jones in Wednesday's BetVictor Northern Ireland Open Round 2 clash in Belfast. "
-            "Official Johnstone's Paint World Rankings place Higgins sixth on £905,000 across the two-year cycle against world No. 24 Jak Jones on £319,300, making OLBG's heavy public lean toward Jones a prime fade. "
-            "Over best-of-seven frames our model puts Higgins at {prob_pct}% ({price})."
-        ),
-        "facts": [
-            {"claim": "John Higgins ranks #6 on £905,000 in official WST World Rankings", "source": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"},
-            {"claim": "Jak Jones ranks #24 on £319,300 in official WST World Rankings", "source": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"},
-            {"claim": "Northern Ireland Open Match 45 confirmed on WST Match Centre", "source": "https://www.wst.tv/match-centre/eba55492-fba6-4a53-90be-a04b3560ae65"},
-        ],
-    },
 }
 
-
-def originate_nhl(nhl_teams: dict, fixtures: list[dict]) -> list[dict]:
-    teams = {k: dict(v) for k, v in nhl_teams["teams"].items()}
-    # Apply verified 2026-10-21T07:35Z NHL REST summary updates (including 20 Oct games; see L01)
-    teams["TBL"].update({"gp": 9, "w": 7, "l": 2, "otl": 0, "gf": 31, "ga": 23, "points": 14})
-    teams["VAN"].update({"gp": 11, "w": 2, "l": 8, "otl": 1, "gf": 33, "ga": 51, "points": 5})
-    teams["VGK"].update({"gp": 11, "w": 8, "l": 3, "otl": 0, "gf": 43, "ga": 30, "points": 16})
-    teams["CAR"].update({"gp": 11, "w": 8, "l": 2, "otl": 1, "gf": 42, "ga": 27, "points": 17})
+def originate_nhl(teams: dict, fixtures: list[dict]) -> list[dict]:
+    # Team goals are the official NHL Stats REST summary convention (the
+    # shootout-deciding goal is excluded), captured in verified_seed.py.
     lg_gf = sum(t["gf"] for t in teams.values()) / sum(t["gp"] for t in teams.values())
     rows: list[dict] = []
     for f in fixtures:
@@ -554,6 +350,11 @@ def originate_nhl(nhl_teams: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": -1.5, "label": f"{h['name']} -1.5 / {a['name']} +1.5", "fav_prob": round(p_h_pl, 4), "dog_prob": round(p_a_pl, 4), "fav_odds": fair_decimal(p_h_pl), "dog_odds": fair_decimal(p_a_pl)},
                 "total_market": {"line": tot_line, "projected": round(lh + la, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Moneyline)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": conf},
+                "_dist": {
+                    "margin_probs": _grid_margin_total_probs(grid)[0],
+                    "total_probs": _grid_margin_total_probs(grid)[1],
+                    "unit": "goals",
+                },
                 "official_source": "NHL GameCenter & Stats API",
                 "official_url": f"https://www.nhl.com/gamecenter/{f['away'].lower()}-vs-{f['home'].lower()}/{f['date'].replace('-', '/')}/{f['game_id']}",
                 "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
@@ -563,16 +364,18 @@ def originate_nhl(nhl_teams: dict, fixtures: list[dict]) -> list[dict]:
     return rows
 
 
-def originate_nba(nba_teams: dict, fixtures: list[dict], extra_ids: dict) -> list[dict]:
-    teams = nba_teams["teams"]
+def originate_nba(teams: dict, fixtures: list[dict]) -> list[dict]:
+    # 2026-27 opening week: no current-season games have been played, so the
+    # strength prior is each club's completed 2025-26 regular-season record
+    # (copied into inputs.json by verified_seed.py). Confidence is therefore
+    # capped at medium and NBA rows never become featured written predictions.
     rows: list[dict] = []
     k = 10.0
     for idx, f in enumerate(fixtures, 1):
         h = teams[f["home"]]
         a = teams[f["away"]]
-        key = f"{f['away']}|{f['home']}|{f['date']}"
-        gid = f.get("game_id") or extra_ids.get(key)
-        slug_url = f"https://www.nba.com/game/{f['away'].lower()}-vs-{f['home'].lower()}-{gid}" if gid else "https://www.nba.com/games?date=2026-10-21"
+        gid = f.get("game_id")
+        slug_url = f"https://www.nba.com/game/{f['away'].lower()}-vs-{f['home'].lower()}-{gid}" if gid else f"https://www.nba.com/schedule?date={f['date']}"
         ph0 = (h["w"] + 0.5 * k) / (h["w"] + h["l"] + k)
         pa0 = (a["w"] + 0.5 * k) / (a["w"] + a["l"] + k)
         logit = math.log(ph0 / (1.0 - ph0)) - math.log(pa0 / (1.0 - pa0)) + 0.28
@@ -581,7 +384,7 @@ def originate_nba(nba_teams: dict, fixtures: list[dict], extra_ids: dict) -> lis
         exp_margin = logit * 6.8
         hcap = spread_line(exp_margin)
         p_cover = 1.0 - normal_cdf((-hcap - exp_margin) / 12.0)
-        win_side = f["home"] if p_home >= p_away else f["away"]
+        win_side = h["name"] if p_home >= p_away else a["name"]
         win_prob = max(p_home, p_away)
         conf = grade(win_prob, cap="medium")
         rows.append(
@@ -589,12 +392,12 @@ def originate_nba(nba_teams: dict, fixtures: list[dict], extra_ids: dict) -> lis
                 "id": f"nba-{gid or idx}",
                 "sport": "basketball",
                 "sport_name": "Basketball",
-                "competition": "NBA Regular Season 2026-27 (Opening Night)",
+                "competition": "NBA Regular Season 2026-27 (Opening Week)",
                 "date": f["date"],
                 "time": f"{f['date']} {f['tip_et']} ET",
                 "home": h["name"],
                 "away": a["name"],
-                "venue": None,
+                "venue": f.get("venue"),
                 "line_status": "originated",
                 "home_summary": f"2025-26: {h['w']}-{h['l']} (Home {h['home_w']}-{h['home_l']})",
                 "away_summary": f"2025-26: {a['w']}-{a['l']} (Road {a['road_w']}-{a['road_l']})",
@@ -653,6 +456,7 @@ def originate_euro_hoops(teams: dict, fixtures: list[dict], comp: str, standings
                 "handicap_market": {"line": hcap, "label": f"{h['name']} {hcap:+.1f}", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": tline, "projected": round(exp_total, 1), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Moneyline)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "_dist": {"margin": (exp_margin, 10.8), "total": (exp_total, 13.5), "unit": "points"},
                 "official_source": "Euroleague Basketball Official",
                 "official_url": f["url"],
                 "data_url": standings_url,
@@ -716,6 +520,7 @@ def originate_rugby(teams: dict, fixtures: list[dict], comp: str, standings_url:
                 "handicap_market": {"line": hcap, "label": f"{h['name']} {hcap:+.1f}", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": tline, "projected": round(exp_total, 1), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (1X2 Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "_dist": {"margin": (exp_margin, sigma), "total": (exp_total, 14.2), "unit": "points"},
                 "official_source": source_label,
                 "official_url": f["url"],
                 "data_url": standings_url,
@@ -725,12 +530,11 @@ def originate_rugby(teams: dict, fixtures: list[dict], comp: str, standings_url:
     return rows
 
 
-def originate_handball(ehf_data: dict, olbg_map: dict) -> list[dict]:
-    teams = ehf_data["teams"]
+def originate_handball(teams: dict, fixtures: list[dict], olbg_map: dict) -> list[dict]:
     lg_gf = sum(t["gf"] for t in teams.values()) / sum(t["gp"] for t in teams.values())
     k = 3.0
     rows: list[dict] = []
-    for f in ehf_data["fixtures"]:
+    for f in fixtures:
         h = teams[f["home"]]
         a = teams[f["away"]]
         att_h = ((h["gf"] + k * lg_gf) / (h["gp"] + k)) / lg_gf
@@ -767,6 +571,11 @@ def originate_handball(ehf_data: dict, olbg_map: dict) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{h['name']} {hcap:+.1f}", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": tline, "projected": round(lh + la, 1), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (1X2 Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "_dist": {
+                    "margin_probs": _grid_margin_total_probs(grid)[0],
+                    "total_probs": _grid_margin_total_probs(grid)[1],
+                    "unit": "goals",
+                },
                 "official_source": "EHF Official Match Details",
                 "official_url": f["detail_url"],
                 "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
@@ -809,6 +618,7 @@ def originate_darts(players: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{f['p1']} {hcap:+.1f} legs", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": 9.5, "projected": round(exp_legs, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "_dist": {"score_dist": dist, "unit": "legs"},
                 "official_source": "PDC Official Rankings",
                 "official_url": "https://www.pdc.tv/rankings",
                 "data_url": "https://www.pdc.tv/rankings",
@@ -851,6 +661,7 @@ def originate_tennis(players: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{f['p1']} {hcap:+.1f} sets", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": 2.5, "projected": round(exp_sets, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "_dist": {"score_dist": dist, "unit": "sets"},
                 "official_source": "ATP Tour Official",
                 "official_url": f["url"],
                 "data_url": "https://www.atptour.com/en/rankings/singles",
@@ -893,6 +704,7 @@ def originate_snooker(players: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{f['p1']} {hcap:+.1f} frames", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": 5.5, "projected": round(exp_frames, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "_dist": {"score_dist": dist, "unit": "frames"},
                 "official_source": "WST Official Match Centre",
                 "official_url": f["url"],
                 "data_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
@@ -902,15 +714,28 @@ def originate_snooker(players: dict, fixtures: list[dict]) -> list[dict]:
     return rows
 
 
-def originate_mlb(ws: dict, live_mlb: dict) -> list[dict]:
-    teams = live_mlb["teams"]
+MLB_OLBG_URL = "https://www.olbg.com/betting-tips/Baseball/12"
+MLB_STANDINGS_URL = (
+    "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026"
+    "&standingsTypes=regularSeason"
+)
+
+
+def originate_mlb(teams: dict, fixtures: list[dict]) -> list[dict]:
     rows = []
-    lg = 4.45
-    for f in live_mlb["fixtures"]:
+    # League scoring rate derived only from the two verified World Series
+    # clubs' official 162-game run totals (no outside constants).
+    gp_total = sum(t["wins"] + t["losses"] for t in teams.values())
+    rs_pg = sum(t["runs_scored"] for t in teams.values()) / gp_total
+    ra_pg = sum(t["runs_allowed"] for t in teams.values()) / gp_total
+    lg = 0.5 * (rs_pg + ra_pg)
+    for f in fixtures:
         h = teams[f["home"]]
         a = teams[f["away"]]
-        lh = lg * ((h["runs_scored"] / 162.0) / lg) * ((a["runs_allowed"] / 162.0) / lg) * 1.04
-        la = lg * ((a["runs_scored"] / 162.0) / lg) * ((h["runs_allowed"] / 162.0) / lg)
+        gp_h = h["wins"] + h["losses"]
+        gp_a = a["wins"] + a["losses"]
+        lh = lg * ((h["runs_scored"] / gp_h) / lg) * ((a["runs_allowed"] / gp_a) / lg) * 1.04
+        la = lg * ((a["runs_scored"] / gp_a) / lg) * ((h["runs_allowed"] / gp_h) / lg)
         grid = poisson_grid(lh, la)
         reg_h = sum(p for (i, j), p in grid.items() if i > j)
         reg_d = sum(p for (i, j), p in grid.items() if i == j)
@@ -943,10 +768,15 @@ def originate_mlb(ws: dict, live_mlb: dict) -> list[dict]:
                 "handicap_market": {"line": -1.5, "label": f"{fav_name} -1.5 / {dog_name} +1.5", "fav_prob": round(p_rl, 4), "dog_prob": round(1.0 - p_rl, 4), "fav_odds": fair_decimal(p_rl), "dog_odds": fair_decimal(1.0 - p_rl)},
                 "total_market": {"line": 7.5, "projected": round(lh + la, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{fav_name} (Moneyline)", "team": fav_name, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "_dist": {
+                    "margin_probs": _grid_margin_total_probs(grid)[0],
+                    "total_probs": _grid_margin_total_probs(grid)[1],
+                    "unit": "runs",
+                },
                 "official_source": "MLB Stats API Official",
                 "official_url": f["human_url"],
-                "data_url": live_mlb["meta"]["standings_source"]["url"],
-                "olbg_url": ws["olbg_url"],
+                "data_url": MLB_STANDINGS_URL,
+                "olbg_url": MLB_OLBG_URL,
             }
         )
     return rows
@@ -1009,64 +839,186 @@ def originate_f1(drivers: list[dict]) -> list[dict]:
     ]
 
 
+def _in_band(prob: float) -> bool:
+    return prob >= FEATURED_MIN_PROB and AMERICAN_MIN <= fair_american(prob) <= AMERICAN_MAX
+
+
+def _best_alt_line(prob_gt, lo: float, hi: float, quarters: bool = False) -> tuple[float, float] | None:
+    """Alternate line whose P(value > line) lands closest to the middle of the
+    featured band. Lines are always .5 fractions (no pushes); when `quarters`
+    is set — continuous normal-margin models only — Asian .25/.75 lines are
+    also scanned, priced from the same CDF, doubling line density so strong
+    favourites can be repriced inside the -250 floor."""
+    best: tuple[float, float] | None = None
+    step = 0.5 if quarters else 1.0
+    x = math.floor(lo) + (0.25 if quarters else 0.5)
+    while x <= hi:
+        p = prob_gt(x)
+        if _in_band(p) and (best is None or abs(p - 0.7071) < abs(best[1] - 0.7071)):
+            best = (x, p)
+        x += step
+    return best
+
+
+def _fmt_line(v: float) -> str:
+    s = f"{v:+.2f}".rstrip("0").rstrip(".")
+    return s if s not in {"+", "-"} else f"{v:+.1f}"
+
+
+def _alternate_candidates(row: dict) -> list[dict]:
+    """Alternate handicap/total lines priced from the originator's own
+    distribution so strong favourites can be taken at in-band prices
+    (e.g. -6.5 instead of the main -13.5) instead of ultra-short moneylines."""
+    dist = row.get("_dist")
+    if not dist:
+        return []
+    home, away, unit = row["home"], row["away"], dist.get("unit", "points")
+    out: list[dict] = []
+
+    def add_handicaps(prob_gt_home, prob_gt_away, lo, hi, quarters=False):
+        alt = _best_alt_line(prob_gt_home, lo, hi, quarters)
+        if alt:
+            line, p = alt
+            out.append({"selection": f"{home} {_fmt_line(-line)} (Alternate Handicap)", "market": "Alternate Handicap", "probability": round(p, 4)})
+        alt = _best_alt_line(prob_gt_away, lo, hi, quarters)
+        if alt:
+            line, p = alt
+            out.append({"selection": f"{away} {_fmt_line(-line)} (Alternate Handicap)", "market": "Alternate Handicap", "probability": round(p, 4)})
+
+    def add_totals(prob_gt_total, lo, hi):
+        alt = _best_alt_line(prob_gt_total, lo, hi)
+        if alt:
+            line, p = alt
+            out.append({"selection": f"Over {line:.1f} {unit} (Alternate Total)", "market": "Alternate Total", "probability": round(p, 4)})
+        alt = _best_alt_line(lambda x: 1.0 - prob_gt_total(x), lo, hi)
+        if alt:
+            line, p = alt
+            out.append({"selection": f"Under {line:.1f} {unit} (Alternate Total)", "market": "Alternate Total", "probability": round(p, 4)})
+
+    if "margin" in dist:  # normal margin/total models (basketball, rugby)
+        mu, sigma = dist["margin"]
+        add_handicaps(
+            lambda x: 1.0 - normal_cdf((x - mu) / sigma),
+            lambda x: 1.0 - normal_cdf((x + mu) / sigma),
+            mu - 2.2 * sigma,
+            mu + 2.2 * sigma,
+            quarters=True,
+        )
+        mu_t, sigma_t = dist["total"]
+        add_totals(lambda x: 1.0 - normal_cdf((x - mu_t) / sigma_t), mu_t - 2.2 * sigma_t, mu_t + 2.2 * sigma_t)
+    if "margin_probs" in dist:  # Poisson-grid models (NHL, handball, MLB)
+        mp = {int(k): v for k, v in dist["margin_probs"].items()}
+        tp = {int(k): v for k, v in dist["total_probs"].items()}
+        neg = {-k: v for k, v in mp.items()}
+        add_handicaps(
+            lambda x: sum(p for v, p in mp.items() if v > x),
+            lambda x: sum(p for v, p in neg.items() if v > x),
+            min(mp),
+            max(mp),
+        )
+        add_totals(lambda x: sum(p for v, p in tp.items() if v > x), min(tp), max(tp))
+    if "score_dist" in dist:  # race formats (darts legs, snooker frames, tennis sets)
+        sd = dist["score_dist"]
+        add_handicaps(
+            lambda x: sum(pr for a, b, pr in sd if (a - b) > x),
+            lambda x: sum(pr for a, b, pr in sd if (b - a) > x),
+            -8,
+            8,
+        )
+        add_totals(lambda x: sum(pr for a, b, pr in sd if (a + b) > x), 0, 16)
+    return out
+
+
+def featured_selection(row: dict) -> dict | None:
+    """Strongest in-band selection for one match across every originated market.
+
+    A selection qualifies when its model probability is >= FEATURED_MIN_PROB
+    and its fair American price falls inside [AMERICAN_MIN, AMERICAN_MAX], so
+    the featured desk never pads itself with ultra-short prices. NBA opening
+    week (prior-season records only) is excluded by design.
+    """
+    if row["competition"].startswith("NBA"):
+        return None
+    candidates: list[dict] = [
+        {
+            "selection": row["pick"]["selection"],
+            "market": "Match Winner",
+            "probability": row["pick"]["probability"],
+        }
+    ]
+    hm = row.get("handicap_market")
+    if hm:
+        label = hm["label"]
+        if " / " in label:  # fixed ±1.5 lines name both sides explicitly
+            fav_label, dog_label = label.split(" / ", 1)
+            candidates.append({"selection": f"{fav_label} (Handicap)", "market": "Handicap", "probability": hm["fav_prob"]})
+            candidates.append({"selection": f"{dog_label} (Handicap)", "market": "Handicap", "probability": hm["dog_prob"]})
+        else:
+            candidates.append({"selection": f"{label} (Handicap)", "market": "Handicap", "probability": hm["fav_prob"]})
+    tm = row.get("total_market")
+    if tm:
+        candidates.append({"selection": f"Over {tm['line']} (Match Total)", "market": "Match Total", "probability": tm["over_prob"]})
+        candidates.append({"selection": f"Under {tm['line']} (Match Total)", "market": "Match Total", "probability": tm["under_prob"]})
+    # Alternates only reprice existing conviction into the band — they never
+    # manufacture a featured angle for a coin-flip match. Alternate handicaps
+    # require a >= 0.70 moneyline pick and must back the pick's team; alternate
+    # totals require a >= 0.60 lean on the main totals line in that direction.
+    pick_prob = row["pick"]["probability"]
+    pick_team = row["pick"].get("team") or ""
+    for cand in _alternate_candidates(row):
+        if cand["market"] == "Alternate Handicap":
+            if pick_prob >= FEATURED_MIN_PROB and pick_team and cand["selection"].startswith(pick_team):
+                candidates.append(cand)
+        elif cand["market"] == "Alternate Total" and tm:
+            if cand["selection"].startswith("Over") and tm["over_prob"] >= MEDIUM_THRESHOLD:
+                candidates.append(cand)
+            elif cand["selection"].startswith("Under") and tm["under_prob"] >= MEDIUM_THRESHOLD:
+                candidates.append(cand)
+    in_band = []
+    for c in candidates:
+        if _in_band(c["probability"]):
+            in_band.append(
+                {
+                    **c,
+                    "fair_odds": fair_decimal(c["probability"]),
+                    "fair_american": fair_american(c["probability"]),
+                    "confidence": "high",
+                }
+            )
+    if not in_band:
+        return None
+    # The straight match winner is the cleanest expression of conviction;
+    # alternate lines only headline when the moneyline itself is out of band.
+    return max(in_band, key=lambda c: (c["market"] == "Match Winner", c["probability"]))
+
+
 def main() -> None:
     inputs = read_json(VERIFIED / "inputs.json")
-    nhl_teams = read_json(SHARED / "nhl_teams.json")
-    nba_teams = read_json(SHARED / "nba_teams.json")
-    shared_fx = read_json(SHARED / "fixtures.json")
-    urc_raw = read_json(SHARED / "urc.json")
-    ehf_raw = read_json(SHARED / "handball_ehf.json")
+    captured_at = inputs["captured_at"]
     sports_meta = {s["slug"]: s["name"] for s in read_json(VERIFIED / "sports.json")["eligible_sports"]}
 
-    urc_teams = {
-        k: {"name": v["name"], "gp": v["pl"], "w": v["w"], "d": v["d"], "l": v["l"], "pf": v["pf"], "pa": v["pa"]}
-        for k, v in urc_raw["table"].items()
-    }
-    urc_fixtures = [
-        {
-            "id": f["id"],
-            "date": f["date_local"],
-            "time": f"{f['date_local']} {f['time_local']} Local",
-            "home": f["home"],
-            "away": f["away"],
-            "venue": f["venue"],
-            "url": f["url"],
-            "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
-        }
-        for f in urc_raw["fixtures"]
-    ]
-
-    urc_r5_raw = json.loads((ROOT / "data" / "live" / "urc.json").read_text())
-    live_mlb_raw = json.loads((ROOT / "data" / "live" / "mlb.json").read_text())
-    urc_r5_fixtures = [
-        {
-            "id": f["id"],
-            "date": f["date_local"],
-            "time": f"{f['date_local']} {f['time_local']} Local",
-            "home": f["home"],
-            "away": f["away"],
-            "venue": f["venue"],
-            "url": f["url"],
-            "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
-        }
-        for f in urc_r5_raw["fixtures"]
-    ]
-
     originated: list[dict] = []
-    originated.extend(originate_nhl(nhl_teams, shared_fx["nhl"]["fixtures"]))
-    originated.extend(originate_nba(nba_teams, shared_fx["nba"]["fixtures"], inputs["nba_extra_game_ids"]))
+    originated.extend(originate_nhl(inputs["nhl_teams"], inputs["nhl_fixtures"]))
+    originated.extend(originate_nba(inputs["nba_teams"], inputs["nba_fixtures"]))
     originated.extend(originate_euro_hoops(inputs["euroleague_teams"], inputs["euroleague_fixtures"], "EuroLeague 2026-27 — Round 7", "https://www.euroleaguebasketball.net/en/euroleague/standings/"))
-    originated.extend(originate_euro_hoops(inputs["eurocup_teams"], inputs["eurocup_fixtures"], "BKT EuroCup 2026-27 — Round 4", "https://www.euroleaguebasketball.net/en/eurocup/standings/"))
+    # EuroCup Round 5 was not captured this refresh (VF-12); the fixture list
+    # is empty so this call is a no-op until the next official capture.
+    originated.extend(originate_euro_hoops(inputs["eurocup_teams"], inputs["eurocup_fixtures"], "BKT EuroCup 2026-27", "https://www.euroleaguebasketball.net/en/eurocup/standings/"))
     originated.extend(originate_rugby(inputs["top14_teams"], inputs["top14_fixtures"], "French Top 14 2026-27 — Journée 7", "https://top14.lnr.fr/classement", "LNR Official Top 14"))
     originated.extend(originate_rugby(inputs["prod2_teams"], inputs["prod2_fixtures"], "French Pro D2 2026-27 — Journée 8", "https://prod2.lnr.fr/classement", "LNR Official Pro D2"))
-    originated.extend(originate_rugby(urc_teams, urc_fixtures, "United Rugby Championship 2026-27 — Round 4", "https://stats.unitedrugby.com/match-centre/table/2026-27", "URC Official Match Centre"))
-    originated.extend(originate_rugby(urc_teams, urc_r5_fixtures, "United Rugby Championship 2026-27 — Round 5", "https://stats.unitedrugby.com/match-centre/table/2026-27", "URC Official Match Centre"))
-    originated.extend(originate_handball(ehf_raw, inputs["ehf_olbg_map"]))
+    originated.extend(originate_rugby(inputs["urc_teams"], inputs["urc_r4_fixtures"], "United Rugby Championship 2026-27 — Round 4", "https://stats.unitedrugby.com/match-centre/table/2026-27", "URC Official Match Centre"))
+    originated.extend(originate_rugby(inputs["urc_teams"], inputs["urc_r5_fixtures"], "United Rugby Championship 2026-27 — Round 5", "https://stats.unitedrugby.com/match-centre/table/2026-27", "URC Official Match Centre"))
+    originated.extend(originate_handball(inputs["ehf_teams"], inputs["ehf_fixtures"], inputs["ehf_olbg_map"]))
     originated.extend(originate_darts(inputs["pdc_players"], inputs["darts_fixtures"]))
     originated.extend(originate_tennis(inputs["atp_players"], inputs["tennis_originated"]))
     originated.extend(originate_snooker(inputs["wst_top36"], inputs["snooker_originated"]))
-    originated.extend(originate_mlb(inputs["mlb_world_series"], live_mlb_raw))
+    originated.extend(originate_mlb(inputs["mlb_teams"], inputs["mlb_fixtures"]))
     originated.extend(originate_f1(inputs["f1_drivers"]))
+
+    for row in originated:
+        row["pick"]["fair_american"] = fair_american(row["pick"]["probability"])
+        row["featured"] = featured_selection(row)
+        row.pop("_dist", None)  # ephemeral distribution used only for alternates
 
     unlined: list[dict] = []
     for u in inputs["unlined_rows"]:
@@ -1088,6 +1040,7 @@ def main() -> None:
                 "handicap_market": None,
                 "total_market": None,
                 "pick": None,
+                "featured": None,
                 "blank_reason": u["blank_reason"],
                 "official_source": u["official_source"],
                 "official_url": u["official_url"],
@@ -1097,18 +1050,34 @@ def main() -> None:
         )
 
     all_rows = originated + unlined
-    high_rows = [m for m in originated if m["pick"]["confidence"] == "high"]
+    featured_rows = [m for m in originated if m.get("featured")]
+
+    if os.environ.get("VERIFIED_DRY_RUN"):
+        for m in featured_rows:
+            f = m["featured"]
+            print(
+                f"{m['id']:24s} {f['selection']:52s} p={f['probability']:.3f} "
+                f"dec={f['fair_odds']:.2f} am={f['fair_american']:+d} | pick p={m['pick']['probability']:.3f}"
+            )
+        print(f"originated={len(originated)} unlined={len(unlined)} featured={len(featured_rows)}")
+        print("missing narratives:", [m["id"] for m in featured_rows if m["id"] not in BESPOKE_HIGH_NARRATIVES])
+        print("stale narratives:", [k for k in BESPOKE_HIGH_NARRATIVES if k not in {m['id'] for m in featured_rows}])
+        return
 
     predictions: list[dict] = []
-    missing_ids = [m["id"] for m in high_rows if m["id"] not in BESPOKE_HIGH_NARRATIVES]
+    missing_ids = [m["id"] for m in featured_rows if m["id"] not in BESPOKE_HIGH_NARRATIVES]
     if missing_ids:
-        raise RuntimeError(f"Missing bespoke human narratives for HIGH picks: {missing_ids}")
+        raise RuntimeError(f"Missing bespoke human narratives for featured selections: {missing_ids}")
 
-    for m in high_rows:
+    for m in featured_rows:
         spec = BESPOKE_HIGH_NARRATIVES[m["id"]]
-        prob_pct = f"{m['pick']['probability'] * 100:.1f}"
-        price = f"{m['pick']['fair_odds']:.2f}"
-        text = spec["template"].format(prob_pct=prob_pct, price=price).replace("**", "")
+        feat = m["featured"]
+        prob_pct = f"{feat['probability'] * 100:.1f}"
+        price = f"{feat['fair_odds']:.2f}"
+        american = f"{feat['fair_american']:+d}"
+        text = spec["template"].format(
+            prob_pct=prob_pct, price=price, american=american, selection=feat["selection"]
+        ).replace("**", "")
         plain_words = len(text.split())
         if plain_words < 30:
             raise AssertionError(f"Prediction {m['id']} has only {plain_words} words (< 30)")
@@ -1120,9 +1089,11 @@ def main() -> None:
                 "competition": m["competition"],
                 "event": f"{m['away']} @ {m['home']}" if m["sport"] in {"ice-hockey", "baseball"} else f"{m['home']} v {m['away']}",
                 "time": m["time"],
-                "selection": m["pick"]["selection"],
-                "probability": m["pick"]["probability"],
-                "fair_odds": m["pick"]["fair_odds"],
+                "selection": feat["selection"],
+                "market": feat["market"],
+                "probability": feat["probability"],
+                "fair_odds": feat["fair_odds"],
+                "fair_american": feat["fair_american"],
                 "confidence": "high",
                 "headline": spec["headline"],
                 "text": text,
@@ -1140,9 +1111,10 @@ def main() -> None:
         "high_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "high"),
         "medium_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "medium"),
         "low_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "low"),
+        "featured": len(featured_rows),
     }
-    write_json(VERIFIED / "matches.json", {"captured_at": "2026-10-21", "counts": counts, "matches": all_rows})
-    write_json(VERIFIED / "predictions.json", {"captured_at": "2026-10-21", "min_words": 30, "count": len(predictions), "predictions": predictions})
+    write_json(VERIFIED / "matches.json", {"captured_at": captured_at, "counts": counts, "matches": all_rows})
+    write_json(VERIFIED / "predictions.json", {"captured_at": captured_at, "min_words": 30, "count": len(predictions), "predictions": predictions})
     print(f"verified_model: {counts}")
 
 

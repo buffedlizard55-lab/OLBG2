@@ -1,10 +1,11 @@
 {
-  "captured_at": "2026-10-21",
+  "captured_at": "2026-10-22",
   "counts": {
     "total_rows": 155,
     "originated_rows": 112,
     "unlined_rows": 43,
     "high_confidence": 20,
+    "band_picks": 13,
     "medium_confidence": 38,
     "low_confidence": 54
   },
@@ -55,7 +56,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/phi-vs-buf/2026/10/21/2026020152",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nhl.com/gamecenter/phi-vs-buf/2026/10/21/2026020152"
+      }
     },
     {
       "id": "nhl-2026020153",
@@ -103,7 +111,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/fla-vs-ott/2026/10/21/2026020153",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nhl.com/gamecenter/fla-vs-ott/2026/10/21/2026020153"
+      }
     },
     {
       "id": "nhl-2026020154",
@@ -151,7 +166,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154"
+      }
     },
     {
       "id": "nhl-2026020155",
@@ -199,7 +221,23 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155"
+      },
+      "band_pick": {
+        "selection": "Over 4.5 (Match Total)",
+        "market": "total",
+        "line": 4.5,
+        "probability": 0.7035,
+        "fair_odds": 1.42,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "nhl-2026020156",
@@ -247,7 +285,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156"
+      }
     },
     {
       "id": "nhl-2026020157",
@@ -295,7 +340,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157"
+      }
     },
     {
       "id": "nhl-2026020158",
@@ -343,7 +395,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158"
+      }
     },
     {
       "id": "nhl-2026020159",
@@ -391,7 +450,23 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159"
+      },
+      "band_pick": {
+        "selection": "Los Angeles Kings +2.5 (Handicap)",
+        "market": "handicap",
+        "line": 2.5,
+        "probability": 0.7056,
+        "fair_odds": 1.42,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "nhl-2026020160",
@@ -439,7 +514,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160"
+      }
     },
     {
       "id": "nhl-2026020161",
@@ -487,7 +569,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161"
+      }
     },
     {
       "id": "nhl-2026020162",
@@ -535,7 +624,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162"
+      }
     },
     {
       "id": "nhl-2026020163",
@@ -583,7 +679,23 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163"
+      },
+      "band_pick": {
+        "selection": "Over 5.5 (Match Total)",
+        "market": "total",
+        "line": 5.5,
+        "probability": 0.7037,
+        "fair_odds": 1.42,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "nhl-2026020164",
@@ -631,7 +743,23 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164"
+      },
+      "band_pick": {
+        "selection": "Seattle Kraken +1.5 (Handicap)",
+        "market": "handicap",
+        "line": 1.5,
+        "probability": 0.7059,
+        "fair_odds": 1.42,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "nhl-2026020165",
@@ -679,7 +807,14 @@
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
-      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165"
+      }
     },
     {
       "id": "nba-0022600085",
@@ -720,7 +855,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/atl-vs-orl-0022600085",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/atl-vs-orl-0022600085"
+      }
     },
     {
       "id": "nba-0022600086",
@@ -761,7 +903,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/mil-vs-was-0022600086",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/mil-vs-was-0022600086"
+      }
     },
     {
       "id": "nba-0022600004",
@@ -802,7 +951,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/min-vs-mia-0022600004",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/min-vs-mia-0022600004"
+      }
     },
     {
       "id": "nba-0022600087",
@@ -843,7 +999,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/cha-vs-bkn-0022600087",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/cha-vs-bkn-0022600087"
+      }
     },
     {
       "id": "nba-0022600088",
@@ -884,7 +1047,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/chi-vs-tor-0022600088",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/chi-vs-tor-0022600088"
+      }
     },
     {
       "id": "nba-0022600090",
@@ -925,7 +1095,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/ind-vs-nop-0022600090",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/ind-vs-nop-0022600090"
+      }
     },
     {
       "id": "nba-0022600089",
@@ -966,7 +1143,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/uta-vs-mem-0022600089",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/UTA_Jazz_@_MEM_Grizzlies/4?event_id=534894"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/UTA_Jazz_@_MEM_Grizzlies/4?event_id=534894",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/uta-vs-mem-0022600089"
+      }
     },
     {
       "id": "nba-0022600091",
@@ -1007,7 +1191,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/dal-vs-hou-0022600091",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/dal-vs-hou-0022600091"
+      }
     },
     {
       "id": "nba-0022600005",
@@ -1048,7 +1239,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/gsw-vs-lal-0022600005",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/gsw-vs-lal-0022600005"
+      }
     },
     {
       "id": "nba-0022600092",
@@ -1089,7 +1287,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/phx-vs-por-0022600092",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/game/phx-vs-por-0022600092"
+      }
     },
     {
       "id": "nba-11",
@@ -1130,7 +1335,14 @@
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/games?date=2026-10-21",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nba.com/games?date=2026-10-21"
+      }
     },
     {
       "id": "el-E2026-61",
@@ -1178,7 +1390,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/hapoel-ibi-tel-aviv-virtus-bologna/E2026/61/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/hapoel-ibi-tel-aviv-virtus-bologna/E2026/61/"
+      }
     },
     {
       "id": "el-E2026-64",
@@ -1226,7 +1445,23 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/"
+      },
+      "band_pick": {
+        "selection": "Under 182.5 (Match Total)",
+        "market": "total",
+        "line": 182.5,
+        "probability": 0.7128,
+        "fair_odds": 1.4,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "el-E2026-65",
@@ -1274,7 +1509,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/"
+      }
     },
     {
       "id": "el-E2026-62",
@@ -1322,7 +1564,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/"
+      }
     },
     {
       "id": "el-E2026-67",
@@ -1370,7 +1619,23 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/"
+      },
+      "band_pick": {
+        "selection": "Kosner Baskonia Vitoria-Gasteiz +17.5 (Handicap)",
+        "market": "handicap",
+        "line": 17.5,
+        "probability": 0.7033,
+        "fair_odds": 1.42,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "el-E2026-63",
@@ -1418,7 +1683,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/"
+      }
     },
     {
       "id": "el-E2026-66",
@@ -1466,7 +1738,23 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/"
+      },
+      "band_pick": {
+        "selection": "Partizan Mozzart Bet Belgrade +4.5 (Handicap)",
+        "market": "handicap",
+        "line": 4.5,
+        "probability": 0.7129,
+        "fair_odds": 1.4,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "el-E2026-68",
@@ -1514,7 +1802,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/"
+      }
     },
     {
       "id": "el-E2026-70",
@@ -1562,7 +1857,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/"
+      }
     },
     {
       "id": "el-E2026-69",
@@ -1610,7 +1912,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/"
+      }
     },
     {
       "id": "ec-R4-paok-ulm",
@@ -1658,7 +1967,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
       "data_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"
+      }
     },
     {
       "id": "ec-R4-bosna-bks",
@@ -1706,7 +2022,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
       "data_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"
+      }
     },
     {
       "id": "ec-R4-jlm-rig",
@@ -1754,7 +2077,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
       "data_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"
+      }
     },
     {
       "id": "ec-R4-ubt-ldn",
@@ -1802,7 +2132,14 @@
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
       "data_url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.euroleaguebasketball.net/en/eurocup/standings/"
+      }
     },
     {
       "id": "top14-11867",
@@ -1853,7 +2190,23 @@
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan",
       "data_url": "https://top14.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan"
+      },
+      "band_pick": {
+        "selection": "Over 48.5 (Match Total)",
+        "market": "total",
+        "line": 48.5,
+        "probability": 0.7121,
+        "fair_odds": 1.4,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "top14-11861",
@@ -1904,7 +2257,14 @@
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11861-bayonne-lyon",
       "data_url": "https://top14.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11861-bayonne-lyon"
+      }
     },
     {
       "id": "top14-11862",
@@ -1955,7 +2315,14 @@
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont",
       "data_url": "https://top14.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont"
+      }
     },
     {
       "id": "top14-11863",
@@ -2006,7 +2373,14 @@
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11863-castres-paris",
       "data_url": "https://top14.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11863-castres-paris"
+      }
     },
     {
       "id": "top14-11865",
@@ -2057,7 +2431,14 @@
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11865-racing-92-montpellier",
       "data_url": "https://top14.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11865-racing-92-montpellier"
+      }
     },
     {
       "id": "top14-11866",
@@ -2108,7 +2489,14 @@
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau",
       "data_url": "https://top14.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau"
+      }
     },
     {
       "id": "top14-11864",
@@ -2159,7 +2547,14 @@
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles",
       "data_url": "https://top14.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles"
+      }
     },
     {
       "id": "prod2-12068",
@@ -2210,7 +2605,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax"
+      }
     },
     {
       "id": "prod2-12063",
@@ -2261,7 +2663,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice"
+      }
     },
     {
       "id": "prod2-12064",
@@ -2312,7 +2721,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers"
+      }
     },
     {
       "id": "prod2-12065",
@@ -2363,7 +2779,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax"
+      }
     },
     {
       "id": "prod2-12066",
@@ -2414,7 +2837,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers"
+      }
     },
     {
       "id": "prod2-12069",
@@ -2465,7 +2895,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive"
+      }
     },
     {
       "id": "prod2-12070",
@@ -2516,7 +2953,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers"
+      }
     },
     {
       "id": "prod2-12067",
@@ -2567,7 +3011,14 @@
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz",
       "data_url": "https://prod2.lnr.fr/classement",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz"
+      }
     },
     {
       "id": "urc-292608",
@@ -2618,7 +3069,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608"
+      }
     },
     {
       "id": "urc-292609",
@@ -2669,7 +3127,23 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609"
+      },
+      "band_pick": {
+        "selection": "Under 59.5 (Match Total)",
+        "market": "total",
+        "line": 59.5,
+        "probability": 0.7044,
+        "fair_odds": 1.42,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "urc-292610",
@@ -2720,7 +3194,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610"
+      }
     },
     {
       "id": "urc-292611",
@@ -2771,7 +3252,23 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611"
+      },
+      "band_pick": {
+        "selection": "Vodacom Bulls -3.5 (Handicap)",
+        "market": "handicap",
+        "line": -3.5,
+        "probability": 0.7139,
+        "fair_odds": 1.4,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "urc-292612",
@@ -2822,7 +3319,23 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612"
+      },
+      "band_pick": {
+        "selection": "Over 42.5 (Match Total)",
+        "market": "total",
+        "line": 42.5,
+        "probability": 0.7064,
+        "fair_odds": 1.42,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "urc-292613",
@@ -2873,7 +3386,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613"
+      }
     },
     {
       "id": "urc-292614",
@@ -2924,7 +3444,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614"
+      }
     },
     {
       "id": "urc-292615",
@@ -2975,7 +3502,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615"
+      }
     },
     {
       "id": "urc-292616",
@@ -3026,7 +3560,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616"
+      }
     },
     {
       "id": "urc-292617",
@@ -3077,7 +3618,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617"
+      }
     },
     {
       "id": "urc-292618",
@@ -3128,7 +3676,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618"
+      }
     },
     {
       "id": "urc-292619",
@@ -3179,7 +3734,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619"
+      }
     },
     {
       "id": "urc-292620",
@@ -3230,7 +3792,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620"
+      }
     },
     {
       "id": "urc-292621",
@@ -3281,7 +3850,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621"
+      }
     },
     {
       "id": "urc-292622",
@@ -3332,7 +3908,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622"
+      }
     },
     {
       "id": "urc-292623",
@@ -3383,7 +3966,14 @@
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623"
+      }
     },
     {
       "id": "ehfcl-202711020101059",
@@ -3433,7 +4023,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101059/DinamoBucuresti-SAHAarhus/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101059/DinamoBucuresti-SAHAarhus/"
+      }
     },
     {
       "id": "ehfcl-202711020101012",
@@ -3483,7 +4080,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101012/RKPartizanAdmiralBet-FCPorto/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101012/RKPartizanAdmiralBet-FCPorto/"
+      }
     },
     {
       "id": "ehfcl-202711020101001",
@@ -3533,7 +4137,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101001/OneVeszpr%C3%A9mHC-F%C3%BCchseBerlin/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101001/OneVeszpr%C3%A9mHC-F%C3%BCchseBerlin/"
+      }
     },
     {
       "id": "ehfcl-202711020101032",
@@ -3583,7 +4194,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101032/HCZagreb-ParisSaintGermain/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101032/HCZagreb-ParisSaintGermain/"
+      }
     },
     {
       "id": "ehfcl-202711020101017",
@@ -3633,7 +4251,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101017/HBCNantes-HCVardar1961/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101017/HBCNantes-HCVardar1961/"
+      }
     },
     {
       "id": "ehfcl-202711020101029",
@@ -3683,7 +4308,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/"
+      }
     },
     {
       "id": "ehfcl-202711020101070",
@@ -3733,7 +4365,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101070/HCKriensLuzern-IndustriaKielce/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101070/HCKriensLuzern-IndustriaKielce/"
+      }
     },
     {
       "id": "ehfcl-202711020101043",
@@ -3783,7 +4422,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/"
+      }
     },
     {
       "id": "ehfcl-202711020101019",
@@ -3833,7 +4479,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/"
+      }
     },
     {
       "id": "ehfcl-202711020101049",
@@ -3883,7 +4536,23 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/"
+      },
+      "band_pick": {
+        "selection": "Barça -3.5 (Handicap)",
+        "market": "handicap",
+        "line": -3.5,
+        "probability": 0.7069,
+        "fair_odds": 1.41,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "ehfcl-202711020101041",
@@ -3933,7 +4602,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/"
+      }
     },
     {
       "id": "ehfcl-202711020101064",
@@ -3983,7 +4659,14 @@
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/"
+      }
     },
     {
       "id": "pdc-32324",
@@ -4031,7 +4714,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Woodhouse_vs_Dirk_van_Duijvenbode/15?event_id=32324"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Woodhouse_vs_Dirk_van_Duijvenbode/15?event_id=32324",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32330",
@@ -4079,7 +4769,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Danny_Noppert_vs_Stephen_Bunting/15?event_id=32330"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Danny_Noppert_vs_Stephen_Bunting/15?event_id=32330",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32334",
@@ -4127,7 +4824,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Niels_Zonneveld_vs_Cameron_Menzies/15?event_id=32334"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Niels_Zonneveld_vs_Cameron_Menzies/15?event_id=32334",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32325",
@@ -4175,7 +4879,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32322",
@@ -4223,7 +4934,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/James_Wade_vs_Damon_Heta/15?event_id=32322"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/James_Wade_vs_Damon_Heta/15?event_id=32322",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32337",
@@ -4271,7 +4989,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Humphries_vs_Ryan_Searle/15?event_id=32337"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Humphries_vs_Ryan_Searle/15?event_id=32337",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32323",
@@ -4319,7 +5044,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32329",
@@ -4367,7 +5099,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32332",
@@ -4415,7 +5154,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15?event_id=32332"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15?event_id=32332",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32333",
@@ -4463,7 +5209,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Dave_Chisnall/15?event_id=32333"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Dave_Chisnall/15?event_id=32333",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32327",
@@ -4511,7 +5264,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32335",
@@ -4559,7 +5319,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32328",
@@ -4607,7 +5374,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32326",
@@ -4655,7 +5429,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Wessel_Nijman_vs_Martin_Schindler/15?event_id=32326"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Wessel_Nijman_vs_Martin_Schindler/15?event_id=32326",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32331",
@@ -4703,7 +5484,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-32336",
@@ -4751,7 +5539,14 @@
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "atp-7485-MS008",
@@ -4799,7 +5594,14 @@
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008",
       "data_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008"
+      }
     },
     {
       "id": "atp-902102",
@@ -4847,7 +5649,14 @@
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Benjamin_Bonzi_vs_Tommy_Paul/3?event_id=902102"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Benjamin_Bonzi_vs_Tommy_Paul/3?event_id=902102",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "atp-902037",
@@ -4895,7 +5704,14 @@
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/tournaments/almaty/9410/overview",
       "data_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Adrian_Mannarino_vs_Andrey_Rublev/3?event_id=902037"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Adrian_Mannarino_vs_Andrey_Rublev/3?event_id=902037",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/tournaments/almaty/9410/overview"
+      }
     },
     {
       "id": "atp-9410-MS015",
@@ -4943,7 +5759,14 @@
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015",
       "data_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015"
+      }
     },
     {
       "id": "atp-9410-MS019",
@@ -4991,7 +5814,14 @@
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS019",
       "data_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS019"
+      }
     },
     {
       "id": "atp-902085",
@@ -5039,7 +5869,14 @@
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mariano_Navone_vs_Tallon_Griekspoor/3?event_id=902085"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mariano_Navone_vs_Tallon_Griekspoor/3?event_id=902085",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "atp-901896",
@@ -5087,7 +5924,14 @@
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Dino_Prizmic_vs_Damir_Dzumhur/3?event_id=901896"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Dino_Prizmic_vs_Damir_Dzumhur/3?event_id=901896",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "wst-9934",
@@ -5135,7 +5979,14 @@
       "official_source": "WST Official Match Centre",
       "official_url": "https://www.wst.tv/match-centre/eba55492-fba6-4a53-90be-a04b3560ae65",
       "data_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934"
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/eba55492-fba6-4a53-90be-a04b3560ae65"
+      }
     },
     {
       "id": "wst-9936",
@@ -5183,7 +6034,14 @@
       "official_source": "WST Official Match Centre",
       "official_url": "https://www.wst.tv/match-centre/480e5abf-5766-44ad-9918-f822ceefd4a5",
       "data_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936"
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/480e5abf-5766-44ad-9918-f822ceefd4a5"
+      }
     },
     {
       "id": "mlb-849805",
@@ -5231,7 +6089,23 @@
       "official_source": "MLB Stats API Official",
       "official_url": "https://www.mlb.com/gameday/849805",
       "data_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
-      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.mlb.com/gameday/849805"
+      },
+      "band_pick": {
+        "selection": "Tampa Bay Rays +2.5 (Handicap)",
+        "market": "handicap",
+        "line": 2.5,
+        "probability": 0.7086,
+        "fair_odds": 1.41,
+        "confidence": "high",
+        "price_band": "in-band"
+      }
     },
     {
       "id": "mlb-849802",
@@ -5279,7 +6153,14 @@
       "official_source": "MLB Stats API Official",
       "official_url": "https://www.mlb.com/gameday/849802",
       "data_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
-      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.mlb.com/gameday/849802"
+      }
     },
     {
       "id": "mlb-849804",
@@ -5327,7 +6208,14 @@
       "official_source": "MLB Stats API Official",
       "official_url": "https://www.mlb.com/gameday/849804",
       "data_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
-      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "reverified",
+        "checked": "2026-10-22",
+        "scope": "fixture id, teams, local date and start time",
+        "source": "https://www.mlb.com/gameday/849804"
+      }
     },
     {
       "id": "f1-2026-usgp",
@@ -5368,7 +6256,14 @@
       "official_source": "Formula 1 Official Standings",
       "official_url": "https://www.formula1.com/en/results/2026/drivers",
       "data_url": "https://www.formula1.com/en/results/2026/drivers",
-      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.formula1.com/en/results/2026/drivers"
+      }
     },
     {
       "id": "f1-2026-drivers",
@@ -5409,7 +6304,14 @@
       "official_source": "Formula 1 Official Standings",
       "official_url": "https://www.formula1.com/en/results/2026/drivers",
       "data_url": "https://www.formula1.com/en/results/2026/drivers",
-      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.formula1.com/en/results/2026/drivers"
+      }
     },
     {
       "id": "wst-9933",
@@ -5432,7 +6334,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/matches/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Cheung_Ka_Wai_v_Stuart_Bingham/8?event_id=9933"
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Cheung_Ka_Wai_v_Stuart_Bingham/8?event_id=9933",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/matches/"
+      }
     },
     {
       "id": "wst-9929",
@@ -5455,7 +6364,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/matches/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Pang_Junxu_v_Liam_Davies/8?event_id=9929"
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Pang_Junxu_v_Liam_Davies/8?event_id=9929",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/matches/"
+      }
     },
     {
       "id": "wst-9937",
@@ -5478,7 +6394,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/e9c15ae6-b9b8-4cea-a83a-49c58eb14046",
       "data_url": null,
-      "olbg_url": null
+      "olbg_url": null,
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/e9c15ae6-b9b8-4cea-a83a-49c58eb14046"
+      }
     },
     {
       "id": "wst-9930",
@@ -5501,7 +6424,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/afb42fc9-9654-479e-997e-d33d8a1a6888",
       "data_url": null,
-      "olbg_url": null
+      "olbg_url": null,
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/afb42fc9-9654-479e-997e-d33d8a1a6888"
+      }
     },
     {
       "id": "wst-9935",
@@ -5524,7 +6454,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/e58a00e5-e6a7-479b-98d0-5c7867af28a8",
       "data_url": null,
-      "olbg_url": null
+      "olbg_url": null,
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/e58a00e5-e6a7-479b-98d0-5c7867af28a8"
+      }
     },
     {
       "id": "wst-9938",
@@ -5547,7 +6484,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/3a24076e-455c-497b-abd5-976e194abc5e",
       "data_url": null,
-      "olbg_url": null
+      "olbg_url": null,
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/3a24076e-455c-497b-abd5-976e194abc5e"
+      }
     },
     {
       "id": "wst-9939",
@@ -5570,7 +6514,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/4fb27af0-7db4-4ec2-b93b-137de3f66135",
       "data_url": null,
-      "olbg_url": null
+      "olbg_url": null,
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/4fb27af0-7db4-4ec2-b93b-137de3f66135"
+      }
     },
     {
       "id": "wst-9931",
@@ -5593,7 +6544,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/f6536f1f-6c2d-47cd-b802-a81e6f04e4cc",
       "data_url": null,
-      "olbg_url": null
+      "olbg_url": null,
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/f6536f1f-6c2d-47cd-b802-a81e6f04e4cc"
+      }
     },
     {
       "id": "wst-9932",
@@ -5616,7 +6574,14 @@
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/0c49ba0c-2d21-481e-a2ac-fbece616f591",
       "data_url": null,
-      "olbg_url": null
+      "olbg_url": null,
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wst.tv/match-centre/0c49ba0c-2d21-481e-a2ac-fbece616f591"
+      }
     },
     {
       "id": "ten-902084",
@@ -5639,7 +6604,14 @@
       "official_source": "WTA Rankings Hub",
       "official_url": "https://www.wtatennis.com/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ekaterina_Alexandrova_vs_Marta_Kostyuk/3?event_id=902084"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ekaterina_Alexandrova_vs_Marta_Kostyuk/3?event_id=902084",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wtatennis.com/rankings/singles"
+      }
     },
     {
       "id": "ten-902074",
@@ -5662,7 +6634,14 @@
       "official_source": "WTA Rankings Hub",
       "official_url": "https://www.wtatennis.com/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Sorana_Cirstea_vs_Sara_Bejlek/3?event_id=902074"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Sorana_Cirstea_vs_Sara_Bejlek/3?event_id=902074",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.wtatennis.com/rankings/singles"
+      }
     },
     {
       "id": "ten-901935",
@@ -5685,7 +6664,14 @@
       "official_source": "ATP Rankings",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Zangar_Nurlanuly_vs_Tomas_Machac/3?event_id=901935"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Zangar_Nurlanuly_vs_Tomas_Machac/3?event_id=901935",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "ten-901974",
@@ -5708,7 +6694,14 @@
       "official_source": "ATP Rankings",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Martin_Landaluce/3?event_id=901974"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Martin_Landaluce/3?event_id=901974",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "ten-902083",
@@ -5731,7 +6724,14 @@
       "official_source": "ATP Rankings",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stefanos_Tsitsipas_vs_Mikhail_Kukushkin/3?event_id=902083"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stefanos_Tsitsipas_vs_Mikhail_Kukushkin/3?event_id=902083",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "ten-902028",
@@ -5754,7 +6754,14 @@
       "official_source": "ATP Rankings",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/David_Goffin_vs_Remy_Bertola/3?event_id=902028"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/David_Goffin_vs_Remy_Bertola/3?event_id=902028",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "ten-902059",
@@ -5777,7 +6784,14 @@
       "official_source": "ATP Rankings",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Moise_Kouame_vs_Lorenzo_Musetti/3?event_id=902059"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Moise_Kouame_vs_Lorenzo_Musetti/3?event_id=902059",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "ten-902094",
@@ -5800,7 +6814,14 @@
       "official_source": "ATP Rankings",
       "official_url": "https://www.atptour.com/en/rankings/singles",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Clement_Chidekh_vs_Jacob_Fearnley/3?event_id=902094"
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Clement_Chidekh_vs_Jacob_Fearnley/3?event_id=902094",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.atptour.com/en/rankings/singles"
+      }
     },
     {
       "id": "pdc-32338",
@@ -5823,7 +6844,14 @@
       "official_source": "PDC Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "pdc-26023",
@@ -5846,7 +6874,14 @@
       "official_source": "PDC Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/PDC_World_Championship_2027/15?event_id=26023"
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/PDC_World_Championship_2027/15?event_id=26023",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pdc.tv/rankings"
+      }
     },
     {
       "id": "f1-2027-champ",
@@ -5869,7 +6904,14 @@
       "official_source": "Formula 1 Official",
       "official_url": "https://www.formula1.com/en/results/2026/drivers",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.formula1.com/en/results/2026/drivers"
+      }
     },
     {
       "id": "vb-lublin-gdansk",
@@ -5892,7 +6934,14 @@
       "official_source": "PlusLiga Schedule",
       "official_url": "https://www.plusliga.pl/games.html",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.plusliga.pl/games.html"
+      }
     },
     {
       "id": "vb-suwalki-katowice",
@@ -5915,7 +6964,14 @@
       "official_source": "PlusLiga Schedule",
       "official_url": "https://www.plusliga.pl/games.html",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.plusliga.pl/games.html"
+      }
     },
     {
       "id": "vb-belchatow-warszawa",
@@ -5938,7 +6994,14 @@
       "official_source": "PlusLiga Schedule",
       "official_url": "https://www.plusliga.pl/games.html",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.plusliga.pl/games.html"
+      }
     },
     {
       "id": "vb-chelm-rzeszow",
@@ -5961,7 +7024,14 @@
       "official_source": "PlusLiga Schedule",
       "official_url": "https://www.plusliga.pl/games.html",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.plusliga.pl/games.html"
+      }
     },
     {
       "id": "icc-274658",
@@ -5984,7 +7054,14 @@
       "official_source": "ICC Match Centre",
       "official_url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh"
+      }
     },
     {
       "id": "icc-271646",
@@ -6007,7 +7084,14 @@
       "official_source": "ICC Match Centre",
       "official_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india"
+      }
     },
     {
       "id": "icc-269791",
@@ -6030,7 +7114,14 @@
       "official_source": "ICC Match Centre",
       "official_url": "https://www.icc-cricket.com/matches/269791/south-africa-vs-australia",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "source_scope": "fixture",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.icc-cricket.com/matches/269791/south-africa-vs-australia"
+      }
     },
     {
       "id": "golf-utah-2026",
@@ -6053,7 +7144,14 @@
       "official_source": "PGA Tour Schedule",
       "official_url": "https://www.pgatour.com/schedule",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Golf/4"
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/4",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.pgatour.com/schedule"
+      }
     },
     {
       "id": "golf-genesis-2026",
@@ -6076,7 +7174,14 @@
       "official_source": "DP World Tour Schedule",
       "official_url": "https://www.europeantour.com/dpworld-tour/schedule/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Golf/4"
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/4",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.europeantour.com/dpworld-tour/schedule/"
+      }
     },
     {
       "id": "rl-2695857",
@@ -6099,7 +7204,14 @@
       "official_source": "NRL Official Draw",
       "official_url": "https://www.nrl.com/draw/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nrl.com/draw/"
+      }
     },
     {
       "id": "rl-2801554",
@@ -6122,7 +7234,14 @@
       "official_source": "Super League Official",
       "official_url": "https://www.superleague.co.uk/match-centre",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.superleague.co.uk/match-centre"
+      }
     },
     {
       "id": "rl-2801600",
@@ -6145,7 +7264,14 @@
       "official_source": "NRL Official",
       "official_url": "https://www.nrl.com/draw/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.nrl.com/draw/"
+      }
     },
     {
       "id": "gaa-3530",
@@ -6168,7 +7294,14 @@
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gaa.ie/football"
+      }
     },
     {
       "id": "gaa-3532",
@@ -6191,7 +7324,14 @@
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gaa.ie/football"
+      }
     },
     {
       "id": "gaa-3531",
@@ -6214,7 +7354,14 @@
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gaa.ie/football"
+      }
     },
     {
       "id": "gaa-3536",
@@ -6237,7 +7384,14 @@
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gaa.ie/football"
+      }
     },
     {
       "id": "gaa-3327",
@@ -6260,7 +7414,14 @@
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gaa.ie/football"
+      }
     },
     {
       "id": "dog-689384",
@@ -6283,7 +7444,14 @@
       "official_source": "GBGB Licensed Track Hub",
       "official_url": "https://www.gbgb.org.uk/racing/results/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gbgb.org.uk/racing/results/"
+      }
     },
     {
       "id": "dog-689385",
@@ -6306,7 +7474,14 @@
       "official_source": "GBGB Licensed Track Hub",
       "official_url": "https://www.gbgb.org.uk/racing/results/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gbgb.org.uk/racing/results/"
+      }
     },
     {
       "id": "dog-689387",
@@ -6329,7 +7504,14 @@
       "official_source": "GBGB Licensed Track Hub",
       "official_url": "https://www.gbgb.org.uk/racing/results/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gbgb.org.uk/racing/results/"
+      }
     },
     {
       "id": "dog-689383",
@@ -6352,7 +7534,14 @@
       "official_source": "GBGB Licensed Track Hub",
       "official_url": "https://www.gbgb.org.uk/racing/results/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gbgb.org.uk/racing/results/"
+      }
     },
     {
       "id": "dog-689386",
@@ -6375,7 +7564,14 @@
       "official_source": "GBGB Licensed Track Hub",
       "official_url": "https://www.gbgb.org.uk/racing/results/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gbgb.org.uk/racing/results/"
+      }
     },
     {
       "id": "dog-689390",
@@ -6398,7 +7594,14 @@
       "official_source": "GBGB Licensed Track Hub",
       "official_url": "https://www.gbgb.org.uk/racing/results/",
       "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "verification": {
+        "status": "captured",
+        "checked": "2026-10-21",
+        "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+        "source": "https://www.gbgb.org.uk/racing/results/"
+      }
     }
   ]
 }

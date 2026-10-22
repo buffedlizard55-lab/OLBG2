@@ -3,139 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Methodology · OLBG2 Sports Betting Data</title>
-<meta name="description" content="Model formulas and confidence rules; factual verification coverage is limited and flagged.">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+<title>Methodology · OLBG2</title>
+<meta name="description" content="Dated OLBG reverse-engineering research: officially sourced fixtures, independently originated lines, confidence-graded picks and open review items.">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
 </head>
 <body>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
-    <nav class="main"><a href="index.html">Dashboard</a><a href="verified/index.html">Verified desk (155 rows)</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sources.html">Sources</a><a href="survey/index.html">Survey (145 events)</a><a href="live/index.html">Live slate (2026-10-21)</a><a href="site/index.html">Evidence desk v2</a><a href="integration.html">Evidence status</a></nav>
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="matches.html">All matches</a><a href="sports/index.html">Sports</a><a href="picks.html">Picks</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sources.html">Sources</a><a href="archive.html">Archive</a><a href="integration.html">Cross-layer review</a></nav>
   </div>
 </header>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 01:30 UTC</strong> · 155 stored rows · 112 originated lines · 13 price-band picks · every row carries its official source link · <a href="flagged.html">18 open review items</a></div></div>
 <main class="wrap">
-<p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="integration.html">Evidence status &amp; cross-layer review</a>.</p>
 
-<section class="hero">
-  <h1>Methodology</h1>
-  <p class="lede">How stored inputs are transformed into model lines and labels, and what the checks do and do not establish. This documents the model; it does not claim each source page or sporting fact was independently re-verified.</p>
-</section>
+<h1>Methodology &amp; models</h1>
+<p class="lede">How the 112 originated lines, the confidence labels and the 33 predictions are produced — and where the
+limits are. This is a research model, not a bookmaker. Rows include source links to the official input page, but a link
+does not by itself prove the page supported every field; the <a href="verification.html">verification ledger</a> records
+what was actually checked.</p>
 
-<h2 class="section">1. Scope</h2>
-<p class="section-sub">Included: Tennis, Basketball, Golf, Cricket, Snooker, Rugby Union, Rugby League, Baseball,
-Ice Hockey, Motor Racing, Darts, Handball, Volleyball, Aussie Rules, eSports, Gaelic Football, Greyhounds.</p>
-<p>Excluded by the brief: football (soccer, OLBG id 1), horse racing (2), American football (11), boxing (16),
-cycling (17) and hurling (26). UFC/MMA have no separate OLBG sport id — they are filed under Boxing/16, so the
-exclusion of id 16 covers them. "Specials" are not a sport on OLBG; they are a bet-type, and no specials market
-is included anywhere. The list is enforced in <code>scripts/config.py</code>.</p>
-<div class="note info">Two scope judgement calls, both flagged: Gaelic Football is treated as a distinct sport and kept
-(the brief excludes "football", which we read as soccer); hurling is excluded by name.</div>
+<h2>Pipeline</h2>
+<ol class="steps">
+  <li><strong>Discover</strong> the sport and event on OLBG. OLBG is used only for discovery and market vocabulary.</li>
+  <li><strong>Verify</strong> the fixture on the governing body or league endpoint: ids, teams, local date, start time, venue.</li>
+  <li><strong>Collect</strong> the model inputs from official standings: wins, losses, goals/points for and against, ranking money.</li>
+  <li><strong>Originate</strong> moneyline, handicap and total prices from the sport-specific distribution below.</li>
+  <li><strong>Grade</strong> the selection: high ≥72% (≥70% for a price-band pick), medium ≥60%, low below 60%.</li>
+  <li><strong>Write</strong> a unique ≥30-word prediction for every published high-confidence or band pick, with sourced facts.</li>
+  <li><strong>Disclose</strong> every blank, stale or unsupported value on <a href="flagged.html">Flagged for Review</a>.</li>
+</ol>
 
-<h2 class="section">2. What OLBG gives us, and what it does not</h2>
-<p>Sport hub pages supply the event list, the event_id, the market label a tipster used, and tip percentages.
-They do <b>not</b> publish prices. Nothing in this dataset uses OLBG tip percentages as a probability: our lines
-are originated independently. OLBG is only an event-discovery and market-vocabulary source.</p>
+<h2>Confidence and the price band</h2>
+<div class="two-col">
+<div class="panel"><h3>Confidence</h3>
+<p><span class="badge high">high</span> model probability ≥72%. <span class="badge medium">medium</span> ≥60%.
+<span class="badge low">low</span> below 60%. NBA picks are capped at medium because the prior season's records
+do not reflect current rosters.</p></div>
+<div class="panel"><h3>Price band (−250 to +10000)</h3>
+<p>Decimal 1.40 to 101.00. A 70%+ probability is at most 1.43 decimal, so only a 70.0–71.4% selection can satisfy both
+the confidence rule and the −250 floor. The builder enumerates moneyline, handicap ladders and total ladders, then takes
+the highest-probability qualifying selection. The 20 original high picks are 1.02–1.39 and are disclosed as outside the band.</p></div>
+</div>
 
-<h2 class="section">3. Evidence and verification limits</h2>
-<p>Rows include source links captured for this dated snapshot, but the presence of a URL is not evidence that its
-contents were checked or that it confirms every displayed field. A later cross-layer audit performed only a
-limited NHL schedule spot-check; it did not freshly verify every fixture, strength input, market, or prediction.
-The build validates internal structure and source-link presence, not external page contents. Refer to the
-<a href="integration.html">evidence-status review</a> and the <a href="flagged.html">review queue</a>; treat any
-fact without explicit confirmation as unverified rather than assuming that the linked page supports it.</p>
+<h2>Sport models</h2>
+<div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Model and markets</th></tr></thead>
+<tbody><tr><td><strong>Ice Hockey</strong></td><td>Bivariate Poisson goal grid, 8-game shrinkage to the league mean, +5% home attack, 52% of regulation ties to the home side. Markets: moneyline, ±1.5 puck line, 5.5/6.5 total.</td></tr><tr><td><strong>Basketball (EuroLeague / EuroCup)</strong></td><td>Normal margin model from points for/against, 3-game shrinkage, +3.4 home court, σ=10.8; totals σ=13.5. Markets: moneyline, handicap, total.</td></tr><tr><td><strong>Basketball (NBA)</strong></td><td>Logistic model from 2025-26 win records, +0.28 home logit, margin σ=12. Totals deliberately blank because nba.com standings omit points for/against. Confidence capped at medium.</td></tr><tr><td><strong>Rugby Union</strong></td><td>Normal points model from league tables, 3-game shrinkage, +4.2 home advantage, σ=12.6; draw band included; totals σ=14.2. Markets: 1X2, draw-no-bet, handicap, total.</td></tr><tr><td><strong>Handball</strong></td><td>Poisson goal grid from EHF group standings, +6% home attack, no draw split. Markets: 1X2, handicap, total.</td></tr><tr><td><strong>Darts</strong></td><td>Binomial leg model from official PDC prize-money rankings; best-of-11 legs. Markets: match winner, leg handicap, total legs.</td></tr><tr><td><strong>Tennis</strong></td><td>Best-of-three set model from ATP ranking points. Markets: match winner, set handicap, total sets.</td></tr><tr><td><strong>Snooker</strong></td><td>Best-of-seven frame model from WST two-year ranking money. Markets: match winner, frame handicap, total frames.</td></tr><tr><td><strong>Baseball</strong></td><td>Poisson run model from 162-game runs scored/allowed, 4% home factor. Markets: moneyline, run line, total.</td></tr><tr><td><strong>Motor Racing</strong></td><td>Plackett-Luce-style weights from official FIA points (exponent 1.65) with an 8% residual field share; championship model uses a normal CDF over the points gap.</td></tr></tbody></table></div>
 
-<h2 class="section">4. The models</h2>
-<h3>Ice Hockey (NHL)</h3>
-<p>A multiplicative Poisson attack/defence model on the goals-per-game inputs stored in this snapshot, with
-empirical-Bayes shrinkage. The underlying statistics are not freshly revalidated by this audit.</p>
-<pre><code>league_avg = mean(goals for per game) over all 32 teams
-w          = gp / (gp + 8.0)
-attack_i   = 1 + w * ((gf_i / gp_i) / league_avg - 1)
-defence_i  = 1 + w * ((ga_i / gp_i) / league_avg - 1)
-lambda_home = league_avg * attack_home * defence_away * 1.05
-lambda_away = league_avg * attack_away * defence_home / 1.05
-P(home)    = Poisson score grid, tie split 50/50 (overtime / shootout)
-puck line  = fixed at 1.5, P(home covers) = P(margin >= 2)
-total line = nearest half-point to lambda_home + lambda_away</code></pre>
-<p class="small muted">Home-ice factor 1.05 and shrinkage k=8.0 are our own
-line-setting parameters, not sourced facts. They are recorded in every NHL row.</p>
+<h2>Evidence rules</h2>
+<ul>
+  <li>A fixture is published only with an official URL. If the URL is a competition page rather than a fixture page, the row says so (63 rows).</li>
+  <li>A value that the official page did not return is <code>null</code>, rendered as <code>—</code>, and explained on the flagged page. No value is inferred.</li>
+  <li>No bookmaker price, tipster percentage or secondary outlet enters any equation.</li>
+  <li>Rows dated before 2026-10-22 are labelled <em>past</em>. The snapshot does not pretend to be live.</li>
+  <li><strong>Rows include source links</strong>; the audit trail records whether each was re-read on 2026-10-22.</li>
+</ul>
 
-<h3>Basketball (NBA)</h3>
-<p>The model uses stored 2025-26 records as a prior, shrunk 25% toward .500. The underlying standings values
-and the description of the current season are not freshly revalidated by this audit.</p>
-<pre><code>raw      = wins / (wins + losses)            # 2025-26
-shrunk   = 0.75 * raw + 0.25 * 0.5
-rating   = logit(shrunk)
-margin   = 11.0 * (rating_home + 0.2 - rating_away)
-P(home)  = logistic(margin / 11.0)
-handicap = nearest half-point to -margin
-total    = NOT ORIGINATED (no verified points-for/against input was captured)</code></pre>
-
-<h3>Rugby Union (URC)</h3>
-<p>The checked-in model input represents points for and against per game from a league table, shrunk toward the
-league mean. The source page contents and values were not freshly revalidated in this copy audit.</p>
-<pre><code>w = pl / (pl + 6.0)
-attack_i  = 1 + w * ((pf_i / pl_i) / league_pf - 1)
-defence_i = 1 + w * ((pa_i / pl_i) / league_pa - 1)
-expected_home = league_pf * attack_home * defence_away + 3.0/2
-expected_away = league_pa * attack_away * defence_home - 3.0/2
-P(home)  = logistic((expected_home - expected_away) / 13.0)
-handicap = nearest half-point to the expected margin
-total    = expected_home + expected_away, nearest half-point</code></pre>
-
-<h3>Prices</h3>
-<p>Every price is <code>round(1 / (p * 1.04), 2)</code>, clamped to 1.05–12.00. That is a fair price plus a 4%
-theoretical margin. <b>These are not bookmaker prices and were not compared to any bookmaker.</b></p>
-
-<h3>Handball (EHF Champions League Men)</h3>
-<p>The model uses the stored group-phase goals-for and goals-against inputs, shrinks them toward its competition
-mean, then converts the estimates into a joint Poisson score grid. The source values and round count are not
-freshly revalidated by this copy audit:</p>
-<pre><code>league_gf  = sum(goals for) / sum(games played) over all 24 clubs
-w          = gp / (gp + 3.0)
-attack_i   = 1 + w * ((gf_i / gp_i) / league_gf - 1)
-defence_i  = 1 + w * ((ga_i / gp_i) / league_ga - 1)
-exp_home   = league_gf * attack_home * defence_away + 0.8 / 2
-exp_away   = league_gf * attack_away * defence_home - 0.8 / 2
-P(result)  = sum of Poisson(i; exp_home) * Poisson(j; exp_away) over the matching scores</code></pre>
-<p>Match winner is three-way (draw included). Handicap uses a half-goal line set just beyond the expected
-margin, and match total uses a half-goal line just below the expected total, so no bet can push. Prices apply a
-4% theoretical margin to the model probability; no bookmaker price is used anywhere.
-A handball pick is graded <b>high</b> only when the model gives it at least 70% and both clubs have played four
-or more group games, <b>medium</b> from 58%, and <b>low</b> below that.</p>
-
-<h2 class="section">5. Confidence rules</h2>
-<table>
-<thead><tr><th>Sport</th><th>High</th><th>Medium</th><th>Low</th></tr></thead>
-<tbody>
-<tr><td>NHL</td><td>p ≥ 65% and both teams ≥ 7 games played</td><td>p ≥ 57% with ≥ 7 games, or p ≥ 68% with ≥ 5</td><td>everything else</td></tr>
-<tr><td>NBA</td><td>not permitted — zero current-season games</td><td>p ≥ 68%</td><td>p &lt; 68%</td></tr>
-<tr><td>URC</td><td>not permitted — three rounds played</td><td>p ≥ 62%</td><td>p &lt; 62%</td></tr>
-</tbody></table>
-<p class="small muted" style="margin-top:10px">The rule is deliberately conservative: promoting a three-game sample to
-"high" would be a confidence trick, not a prediction.</p>
-
-<h2 class="section">6. Predictions</h2>
-<p>Written predictions are attached to model-labeled high picks and include citations, but a citation link alone
-is not proof that its page supports the associated claim. The current cross-layer audit did not freshly verify every
-fact in these narratives. Treat existing prose as unverified where not checked against an official source; see
-<a href="integration.html">Evidence status</a> and open cited pages before relying on a statement. No automated
-gate checks the factual content of prediction text.</p>
-
-<h2 class="section">7. Provenance</h2>
-<p>URLs and collection notes are recorded in <code>research/collection-log.md</code>; raw response captures are not
-uniformly archived. The machine-readable dataset is <a href="data/matches.json">data/matches.json</a>; regenerate it
-with <code>python3 scripts/model.py</code> and rebuild this site with <code>python3 scripts/build_site.py</code>.
-The builder checks structure, local links, and prediction length, not factual content of the linked pages.</p>
+<h2>Known limits</h2>
+<ul>
+  <li>Sample sizes are small early in the season (3–11 matches per club), so shrinkage is heavy and prices move with one result.</li>
+  <li>No injury, suspension, lineup, weather or travel information is modelled.</li>
+  <li>No home-advantage term is applied to neutral-site or tournament fixtures beyond the venue flag.</li>
+  <li>Futures (F1 title, 2027 rugby league) rest on roster assumptions that are not verifiable in October 2026.</li>
+</ul>
 
 </main>
-<footer class="site">
-  <div class="wrap">
-    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
-    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="survey/index.html">Survey (130 events)</a> · <a href="live/index.html">Live slate</a> · <a href="flagged.html">Flagged</a> · <a href="site/index.html">Evidence desk v2</a></span>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap">
+  <p><strong>Dated, partial research snapshot — not a live feed and not betting advice.</strong> Model probabilities are estimates, not guarantees. Rows dated before 2026-10-22 are labelled <em>past</em> and are not presented as upcoming. Unconfirmed values are blank (<code>—</code>) and listed on <a href="flagged.html">Flagged for Review</a>. 18+.</p>
+  <p class="tiny">Built by <code>scripts/build_site.py</code> from checked-in data. Earlier layers are preserved at <a href="verified/index.html">/verified/</a>, <a href="live/index.html">/live/</a>, <a href="survey/index.html">/survey/</a>, <a href="site/index.html">/site/</a> and indexed in the <a href="archive.html">archive</a>.</p>
+</div></footer>
 </body>
 </html>

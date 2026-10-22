@@ -3,214 +3,340 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Picks &amp; predictions · OLBG2 Sports Betting Data</title>
-<meta name="description" content="Model-labeled selections with cited narratives; factual support requires review.">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+<title>Picks and predictions · OLBG2</title>
+<meta name="description" content="Dated OLBG reverse-engineering research: officially sourced fixtures, independently originated lines, confidence-graded picks and open review items.">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
 </head>
 <body>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
-    <nav class="main"><a href="index.html">Dashboard</a><a href="verified/index.html">Verified desk (155 rows)</a><a href="picks.html" aria-current="page">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a><a href="survey/index.html">Survey (145 events)</a><a href="live/index.html">Live slate (2026-10-21)</a><a href="site/index.html">Evidence desk v2</a><a href="integration.html">Evidence status</a></nav>
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="matches.html">All matches</a><a href="sports/index.html">Sports</a><a href="picks.html" aria-current="page">Picks</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a><a href="archive.html">Archive</a><a href="integration.html">Cross-layer review</a></nav>
   </div>
 </header>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 01:30 UTC</strong> · 155 stored rows · 112 originated lines · 13 price-band picks · every row carries its official source link · <a href="flagged.html">18 open review items</a></div></div>
 <main class="wrap">
-<p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="integration.html">Evidence status &amp; cross-layer review</a>.</p>
 
-<section class="hero">
-  <h1>Picks and predictions</h1>
-  <p class="lede">One model selection per originated fixture, with confidence labels calculated from recorded inputs. They are estimates, not verified certainty. Existing written predictions are preserved with citations, but their underlying factual claims have not all been re-checked in the current audit — see <a href="integration.html">Evidence status</a>.</p>
-  <p class="meta">9 written predictions · 9 high · 14 medium · 22 low</p>
-</section>
+<h1>Picks &amp; predictions</h1>
+<p class="lede">Two clearly separated lists. <strong>13 price-band picks</strong> satisfy both rules in the brief:
+model probability ≥70% and fair odds between −250 (1.40) and +10000 (101.00). Because a 70%+ probability cannot be
+priced above 1.43, the qualifying window is narrow; we enumerated handicap and total ladders to find selections inside it.
+A further <strong>20 high-confidence picks</strong> are strong model selections but priced shorter than −250, so they
+are labelled as outside the requested band rather than passed off as compliant.</p>
+<div class="notice"><strong>How the numbers are produced.</strong> Probabilities come from the sport-specific models documented in
+<a href="methodology.html">Methodology</a>; prices are fair decimals (1/probability), not bookmaker quotes. Every prediction is
+≥30 words, unique, and carries at least two facts with the official source that published them.</div>
 
-<div class="grid picks">
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Ice Hockey</span></div>
-          <h3 style="margin-top:10px">Sabres should outlast a shot-shy Flyers side</h3>
-          <div class="small muted">Philadelphia Flyers <span class="muted">@</span> Buffalo Sabres · 2026-10-21 23:30 UTC</div>
-          <div class="sel" style="margin-top:10px">Buffalo Sabres to win (moneyline)</div>
-          <p>Buffalo Sabres to win the moneyline against the Philadelphia Flyers at KeyBank Center. Buffalo are 4-3-2 through nine games and have scored 27 goals while conceding 33, a 3.00 goals-per-game attack that dwarfs Philadelphia&#x27;s 1.55. The Flyers are 2-6-3 and have managed only 17 goals in 11 games, despite beating Colorado 3-2 on 19 October. Buffalo winger Tage Thompson leads the club with five goals and Ukko-Pekka Luukkonen has three wins in net, while Philadelphia&#x27;s Matvei Michkov has six. The model puts Buffalo at 65.4%, which is why this selection is graded high confidence.</p>
-          <div class="foot">Model probability 65.4% · our price 1.47 · 94 words</div>
-          <ul class="facts"><li>Buffalo are 4-3-2 and have scored 27 and conceded 33 in nine games — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Philadelphia are 2-6-3 with 17 goals in 11 games (1.55 per game) — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Philadelphia beat Colorado 3-2 on 19 October — <a href="https://api-web.nhle.com/v1/scoreboard/2026-10-22" rel="noopener">source</a></li><li>Tage Thompson 5 goals, Luukkonen 3 wins, Michkov 6 goals — <a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">source</a></li><li>Model probability 65.4% — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Ice Hockey</span></div>
-          <h3 style="margin-top:10px">Bruins&#x27; defensive record points to a home win over Nashville</h3>
-          <div class="small muted">Nashville Predators <span class="muted">@</span> Boston Bruins · 2026-10-22 23:00 UTC</div>
-          <div class="sel" style="margin-top:10px">Boston Bruins to win (moneyline)</div>
-          <p>Boston Bruins to win the moneyline when the Nashville Predators visit TD Garden. Boston sit at 7-2-1 after ten games, scoring 36 and conceding just 22, which works out at 2.20 goals against per game, comfortably better than Nashville&#x27;s 2.75. The Predators are 3-2-3 and have found the net 23 times in eight outings. David Pastrnak has four goals and eight assists for Boston and Jeremy Swayman has already recorded six wins, while Roman Josi has eight assists and Ryan O&#x27;Reilly four goals for Nashville. Our model gives Boston a 65.3% chance.</p>
-          <div class="foot">Model probability 65.3% · our price 1.47 · 92 words</div>
-          <ul class="facts"><li>Boston 7-2-1, 36 goals for, 22 against in 10 games — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Nashville 3-2-3, 23 goals for, 22 against in 8 games — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Pastrnak 4+8, Swayman 6 wins, Josi 8 assists, O&#x27;Reilly 4 goals — <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">source</a></li><li>Model probability 65.3% — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Ice Hockey</span></div>
-          <h3 style="margin-top:10px">Islanders&#x27; goaltending and defence make them a clear home favourite</h3>
-          <div class="small muted">Los Angeles Kings <span class="muted">@</span> New York Islanders · 2026-10-22 23:30 UTC</div>
-          <div class="sel" style="margin-top:10px">New York Islanders to win (moneyline)</div>
-          <p>New York Islanders to win the moneyline against the Los Angeles Kings at UBS Arena. The Islanders are 5-3-1 and have conceded only 19 goals in nine games, a 2.11 goals-against average, while scoring 27. Los Angeles have played just seven games, going 1-4-2, and have shipped 27 goals at 3.86 per game while scoring 17. Bo Horvat leads New York with five goals, Matthew Schaefer has eight assists and Ilya Sorokin has five wins; the Kings&#x27; leading scorer is Artemi Panarin with four. The model makes the Islanders a 71.2% favourite, the highest NHL probability on this slate.</p>
-          <div class="foot">Model probability 71.2% · our price 1.35 · 99 words</div>
-          <ul class="facts"><li>NY Islanders 5-3-1, 27 goals for, 19 against in 9 games — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Los Angeles 1-4-2 in 7 games, 17 for, 27 against — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Horvat 5 goals, Schaefer 8 assists, Sorokin 5 wins, Panarin 4 goals — <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">source</a></li><li>Model probability 71.2% — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Ice Hockey</span></div>
-          <h3 style="margin-top:10px">Wild&#x27;s scoring depth against Calgary&#x27;s leaky defence</h3>
-          <div class="small muted">Minnesota Wild <span class="muted">@</span> Calgary Flames · 2026-10-23 01:00 UTC</div>
-          <div class="sel" style="margin-top:10px">Minnesota Wild to win (moneyline)</div>
-          <p>Minnesota Wild to win the moneyline in Calgary. Minnesota are 6-2-2 with 31 goals for and 25 against in ten games, while the Flames are 2-6-0 and have conceded 37 goals in eight, an ugly 4.62 per game, scoring only 17 themselves. Kirill Kaprizov has 11 goals already and Quinn Hughes 11 assists for the Wild, with Jesper Wallstedt recording six wins. Calgary&#x27;s scoring leader is Morgan Frost on three, and Dustin Wolf has one win. The model still lands on 68.9% for Minnesota even after applying its 1.05 home-ice adjustment in Calgary&#x27;s favour, and the gap in goals conceded is what drives that number rather than any market signal.</p>
-          <div class="foot">Model probability 68.9% · our price 1.40 · 110 words</div>
-          <ul class="facts"><li>Minnesota 6-2-2, 31 for, 25 against in 10 games — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Calgary 2-6-0, 17 for, 37 against in 8 games — <a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">source</a></li><li>Kaprizov 11 goals, Quinn Hughes 11 assists, Wallstedt 6 wins, Frost 3 goals, Wolf 1 win — <a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">source</a></li><li>Model probability 68.9%, modelled price 1.40 — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Handball</span></div>
-          <h3 style="margin-top:10px">Celje&#x27;s leaking defence should not hold up in Aalborg</h3>
-          <div class="small muted">RK Celje Pivovarna Laško <span class="muted">@</span> Aalborg Håndbold · 2026-10-21 20:45 CEST</div>
-          <div class="sel" style="margin-top:10px">Aalborg Håndbold to win (match winner)</div>
-          <p>Aalborg Håndbold to win the match-winner market at home to RK Celje Pivovarna Laško on 21 October. Aalborg are 3-1-0 in Group C with 136 goals scored and 115 conceded, while Celje have lost all four group games and shipped 154 goals, the second-worst defensive record in the competition so far. The model prices Aalborg at 84.5%, which is why this selection carries a high-confidence grade.</p>
-          <div class="foot">Model probability 84.5% · our price 1.14 · 66 words</div>
-          <ul class="facts"><li>Aalborg are 3-1-0 in Group C with 136 goals scored and 115 conceded (7 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Celje are 0-4 with 120 goals scored and 154 conceded (0 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Only IFK Kristianstad (155) have conceded more than Celje (154) in the group phase — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Aalborg host Celje on 21 October, throw-off 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">source</a></li><li>Model probability for Aalborg is 84.5% — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Handball</span></div>
-          <h3 style="margin-top:10px">Barça&#x27;s defence gives Montpellier little room at home</h3>
-          <div class="small muted">Montpellier Handball <span class="muted">@</span> Barça · 2026-10-22 20:45 CEST</div>
-          <div class="sel" style="margin-top:10px">Barça to win (match winner)</div>
-          <p>Barça to win the match-winner market against Montpellier Handball at home on 22 October. The Catalan side have won all four Group E fixtures, scoring 137 goals and conceding only 104, the fewest goals against of any team in the group phase so far. Montpellier are 1-0-3 and have conceded 125 in four matches. Our model puts Barça at 78.5% and grades the pick high confidence.</p>
-          <div class="foot">Model probability 78.5% · our price 1.22 · 66 words</div>
-          <ul class="facts"><li>Barça are 4-0-0 in Group E with 137 goals scored and 104 conceded (8 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Barça&#x27;s 104 goals conceded is the lowest total in the group phase — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Montpellier are 1-0-3 with 116 goals scored and 125 conceded (2 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Barça host Montpellier on 22 October, throw-off 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">source</a></li><li>Model probability for Barça is 78.5% — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Handball</span></div>
-          <h3 style="margin-top:10px">Perfect Magdeburg should extend Kolstad&#x27;s losing run</h3>
-          <div class="small muted">SC Magdeburg <span class="muted">@</span> Kolstad Håndball · 2026-10-22 20:45 CEST</div>
-          <div class="sel" style="margin-top:10px">SC Magdeburg to win (match winner)</div>
-          <p>SC Magdeburg to win the match-winner market away to Kolstad Håndball on 22 October. Magdeburg are 4-0 in Group F, scoring 141 goals and conceding 108, while Kolstad have lost all four of their group matches and conceded 143. The Norwegian side have scored 111 goals, the lowest tally of any team in Group F. The model gives Magdeburg an 84.1% chance and a high-confidence grade.</p>
-          <div class="foot">Model probability 84.1% · our price 1.14 · 66 words</div>
-          <ul class="facts"><li>Magdeburg are 4-0-0 in Group F with 141 goals scored and 108 conceded (8 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Kolstad are 0-4 with 111 goals scored and 143 conceded (0 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Kolstad&#x27;s 111 goals is the lowest total among the four Group F teams — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Kolstad host Magdeburg on 22 October, throw-off 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">source</a></li><li>Model probability for Magdeburg is 84.1% — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Handball</span></div>
-          <h3 style="margin-top:10px">PSG&#x27;s scoring power should tell in Zagreb</h3>
-          <div class="small muted">Paris Saint-Germain <span class="muted">@</span> HC Zagreb · 2026-10-21 18:45 CEST</div>
-          <div class="sel" style="margin-top:10px">Paris Saint-Germain to win (match winner)</div>
-          <p>Paris Saint-Germain to win the match-winner market away at HC Zagreb on 21 October. PSG are 3-1-0 in Group C and have scored 154 goals in four games, the highest total in the group phase, while conceding 128. Zagreb are 1-0-3 with 117 scored and 130 conceded and have won only one of their four group matches. The model makes PSG a 70.2% favourite, which earns a high-confidence grade.</p>
-          <div class="foot">Model probability 70.2% · our price 1.37 · 69 words</div>
-          <ul class="facts"><li>PSG are 3-1-0 in Group C with 154 goals scored and 128 conceded (7 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>PSG&#x27;s 154 goals is the highest total in the group phase before round 5 — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Zagreb are 1-0-3 with 117 goals scored and 130 conceded (2 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Zagreb host PSG at Arena Zagreb on 21 October, throw-off 18:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">source</a></li><li>Model probability for PSG is 70.2% — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div>
-        <div class="card pick">
-          <div><span class="badge b-high">High</span> <span class="pill">Handball</span></div>
-          <h3 style="margin-top:10px">Sporting&#x27;s scoring rate points to a clear home win</h3>
-          <div class="small muted">IFK Kristianstad <span class="muted">@</span> Sporting Clube de Portugal · 2026-10-22 20:45 CEST</div>
-          <div class="sel" style="margin-top:10px">Sporting Clube de Portugal to win (match winner)</div>
-          <p>Sporting Clube de Portugal to win the match-winner market at home to IFK Kristianstad on 22 October. Sporting are unbeaten in Group D at 3-1-0, with 149 goals scored and 125 conceded. Kristianstad have lost all four group games, scoring 122 and conceding 155, the most goals against of any team in the group phase. Our model gives Sporting 85.5%, the biggest edge on the handball slate, so the pick is graded high confidence.</p>
-          <div class="foot">Model probability 85.5% · our price 1.13 · 74 words</div>
-          <ul class="facts"><li>Sporting are 3-1-0 in Group D with 149 goals scored and 125 conceded (7 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Kristianstad are 0-4 with 122 goals scored and 155 conceded (0 points) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Kristianstad&#x27;s 155 goals conceded is the highest in the group phase — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">source</a></li><li>Sporting host Kristianstad on 22 October, throw-off 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">source</a></li><li>Model probability for Sporting is 85.5%, the highest of the 12 handball fixtures — <a href="data/matches.json" rel="noopener">source</a></li></ul>
-        </div></div>
+<h2>Price-band picks (13)</h2>
+<p class="sub">All are dated 2026-10-22 or later at the snapshot. Each quotes its own probability and price.</p>
+<div class="preds"><article class="pred">
+  <div class="predhead"><div><span class="badge basketball">Basketball</span>
+  <span class="tiny">EuroLeague 2026-27 — Round 7 · 2026-10-22 17:30 UTC</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Istanbul derby total sits 7.6 above a 174.9-point projection</h3>
+  <p class="selection">Under 182.5 (Match Total) · <strong>71.3%</strong> · 1.40 decimal · 52 words</p>
+  <p>Take under 182.5 points in the Istanbul derby between Anadolu Efes and Besiktas. Efes have scored 492 and conceded 510 across six EuroLeague rounds, while Besiktas have scored 554 and conceded 555. The 182.5 line sits 7.6 points above our possession-adjusted projection of 174.9, and the under is priced at 71.3% (1.40).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Anadolu Efes stand 13th at 2-4 with 492 points scored and 510 conceded — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Besiktas stand 11th at 3-3 with 554 points scored and 555 conceded — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Round 7 fixture Efes v Besiktas confirmed on the EuroLeague game centre — <a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/" rel="noopener">euroleaguebasketball.net</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/" rel="noopener">Official fixture page</a>
+  <a href="sports/basketball.html">All Basketball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge basketball">Basketball</span>
+  <span class="tiny">EuroLeague 2026-27 — Round 7 · 2026-10-22 18:15 UTC</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Seventeen and a half points is a heavy ask for league-leading Panathinaikos</h3>
+  <p class="selection">Kosner Baskonia Vitoria-Gasteiz +17.5 (Handicap) · <strong>70.3%</strong> · 1.42 decimal · 64 words</p>
+  <p>Take Kosner Baskonia Vitoria-Gasteiz +17.5 at Telekom Center Athens. Baskonia are bottom of the EuroLeague at 1-5, with 504 points scored and 564 conceded, and 0-2 on the road. Panathinaikos lead the table at 5-1 with a +90 differential (528 scored, 438 conceded) and a 4-1 home record. Even so, our margin model gives the visitors a 70.3% (1.42) chance of staying within seventeen.</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Panathinaikos lead the 2026-27 EuroLeague at 5-1 with 528 PF, 438 PA and a 4-1 home record — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Kosner Baskonia are 20th at 1-5 with 504 PF, 564 PA and an 0-2 road record — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Round 7 fixture confirmed at Telekom Center Athens — <a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/" rel="noopener">euroleaguebasketball.net</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/" rel="noopener">Official fixture page</a>
+  <a href="sports/basketball.html">All Basketball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge basketball">Basketball</span>
+  <span class="tiny">EuroLeague 2026-27 — Round 7 · 2026-10-22 18:45 UTC</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Partizan&#x27;s low-scoring profile supports a +4.5 cushion in the Eternal Derby</h3>
+  <p class="selection">Partizan Mozzart Bet Belgrade +4.5 (Handicap) · <strong>71.3%</strong> · 1.40 decimal · 56 words</p>
+  <p>Back Partizan Mozzart Bet Belgrade +4.5 in the Eternal Derby. Partizan are 3-3 with 466 points scored and 471 conceded, a near-even profile that keeps games close. Crvena Zvezda are 4-2 but have scored 485 points in six outings, the lowest total among the top five clubs. Our normal-margin model gives the four-and-a-half-point cushion 71.3% (1.40).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Partizan stand 12th at 3-3 with 466 PF and 471 PA — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Crvena Zvezda stand 5th at 4-2 with 485 PF and 457 PA — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Round 7 Eternal Derby confirmed at Stark Arena on 22 October 2026 — <a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/" rel="noopener">euroleaguebasketball.net</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/" rel="noopener">Official fixture page</a>
+  <a href="sports/basketball.html">All Basketball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge handball">Handball</span>
+  <span class="tiny">EHF Champions League Men 2026/27 — Round 5 · 2026-10-22 20:45 CEST</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Barça&#x27;s four-from-four defence meets a Montpellier side with three defeats</h3>
+  <p class="selection">Barça -3.5 (Handicap) · <strong>70.7%</strong> · 1.41 decimal · 59 words</p>
+  <p>Back Barça -3.5 against Montpellier Handball in EHF Champions League Group E. Barça have won all four group games, scoring 137 goals and conceding 104, an average of 26.0 against per match. Montpellier are 1-3, with 116 goals scored and 125 conceded. Our bivariate Poisson grid gives the hosts a 70.7% (1.41) chance of winning by four or more.</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Barça top Group E at 4-0 with 137 GF and 104 GA — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>Montpellier stand third in Group E at 1-3 with 116 GF and 125 GA — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>Round 5 fixture Barça v Montpellier confirmed at Palau Blaugrana — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/" rel="noopener">ehfcl.eurohandball.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/" rel="noopener">Official fixture page</a>
+  <a href="sports/handball.html">All Handball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge ice-hockey">Ice Hockey</span>
+  <span class="tiny">NHL Regular Season 2026-27 · 2026-10-22T23:00:00Z</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Toronto games average 6.5 goals and Rangers games 5.2 this season</h3>
+  <p class="selection">Over 4.5 (Match Total) · <strong>70.3%</strong> · 1.42 decimal · 57 words</p>
+  <p>Take over 4.5 goals in Toronto&#x27;s meeting with the New York Rangers. Toronto&#x27;s games have averaged 6.5 total goals, and the Rangers&#x27; 5.2. The Maple Leafs have scored 38 and conceded 34 in eleven games; New York have scored 33 and conceded 24 in eleven. With the model projecting 5.92, over 4.5 is a 70.3% (1.42) selection.</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Toronto have 38 GF and 34 GA in eleven games (6.5 combined goals per game) — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>New York Rangers have 33 GF and 24 GA in eleven games (5.2 combined goals per game) — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>Game 2026020155 Rangers at Maple Leafs confirmed for 22 October 2026 — <a href="https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155" rel="noopener">nhl.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155" rel="noopener">Official fixture page</a>
+  <a href="sports/ice-hockey.html">All Ice Hockey rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge ice-hockey">Ice Hockey</span>
+  <span class="tiny">NHL Regular Season 2026-27 · 2026-10-22T23:30:00Z</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>A two-and-a-half-goal cushion for a Kings side that has conceded 27</h3>
+  <p class="selection">Los Angeles Kings +2.5 (Handicap) · <strong>70.6%</strong> · 1.42 decimal · 65 words</p>
+  <p>Take Los Angeles Kings +2.5 on the puck line against the New York Islanders. Los Angeles are 1-4-2, with 17 goals scored and 27 conceded in seven games. The Islanders are 5-3-1, scoring 27 and conceding 19 in nine games, the tighter defensive record. The +2.5 line sits more than two goals above the model&#x27;s expected margin, and the cover is priced at 70.6% (1.42).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Los Angeles are 1-4-2 with 17 GF and 27 GA in seven games — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>New York Islanders are 5-3-1 with 27 GF and 19 GA in nine games — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>Game 2026020159 Los Angeles at New York Islanders confirmed for 22 October 2026 — <a href="https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159" rel="noopener">nhl.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159" rel="noopener">Official fixture page</a>
+  <a href="sports/ice-hockey.html">All Ice Hockey rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 4 · 2026-10-23 14:45 Local</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Two of the URC&#x27;s lowest-scoring sides point under 59.5 in Galway</h3>
+  <p class="selection">Under 59.5 (Match Total) · <strong>70.4%</strong> · 1.42 decimal · 61 words</p>
+  <p>Take under 59.5 points as Connacht host Zebre Parma in URC Round 4. Connacht have scored 56 and conceded 84 in three matches; Zebre have scored 52 and conceded 116. That is 308 combined points across six team-matches, 51.3 per game, and the line asks for 8.2 more than the observed rate. Our points model prices the under at 70.4% (1.42).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Connacht stand 14th after three rounds with 56 PF and 84 PA — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Zebre stand 16th after three rounds with 52 PF and 116 PA — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Round 4 fixture Connacht v Zebre confirmed at Dexcom Stadium on 23 October 2026 — <a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge ice-hockey">Ice Hockey</span>
+  <span class="tiny">NHL Regular Season 2026-27 · 2026-10-23T01:00:00Z</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Two top-scoring clubs meet with a 5.5 total that the model clears</h3>
+  <p class="selection">Over 5.5 (Match Total) · <strong>70.4%</strong> · 1.42 decimal · 57 words</p>
+  <p>Back over 5.5 goals as Edmonton Oilers host Carolina Hurricanes. Edmonton have scored 41 goals in nine games (4.6 per game) and conceded 27. Carolina have scored 42 in eleven (3.8 per game) and conceded 27. Edmonton average 4.6 goals per game and Carolina 3.8; with the model projecting 7.03, over 5.5 is priced at 70.4% (1.42).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Edmonton are 7-1-1 with 41 GF and 27 GA in nine games — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>Carolina are 8-2-1 with 42 GF and 27 GA in eleven games — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>Game 2026020163 Carolina at Edmonton confirmed for 22 October 2026 — <a href="https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163" rel="noopener">nhl.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163" rel="noopener">Official fixture page</a>
+  <a href="sports/ice-hockey.html">All Ice Hockey rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge ice-hockey">Ice Hockey</span>
+  <span class="tiny">NHL Regular Season 2026-27 · 2026-10-23T02:00:00Z</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Seattle&#x27;s one-goal cushion covers a tight Pacific matchup with Utah</h3>
+  <p class="selection">Seattle Kraken +1.5 (Handicap) · <strong>70.6%</strong> · 1.42 decimal · 66 words</p>
+  <p>Back Seattle Kraken +1.5 on the puck line against Utah Mammoth. Seattle are 6-3-1 with 37 goals scored and 34 conceded in ten games. Utah are 7-3-0 with 38 scored and 31 conceded, a slightly better defensive record over the same number of games. With both clubs on ten games played, our Poisson model gives the Kraken a 70.6% (1.42) chance of avoiding a two-goal defeat.</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Seattle are 6-3-1 with 37 GF and 34 GA in ten games — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>Utah are 7-3-0 with 38 GF and 31 GA in ten games — <a href="https://api-web.nhle.com/v1/standings/2026-10-21" rel="noopener">api-web.nhle.com</a></li><li>Game 2026020164 Utah at Seattle confirmed for 22 October 2026 — <a href="https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164" rel="noopener">nhl.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164" rel="noopener">Official fixture page</a>
+  <a href="sports/ice-hockey.html">All Ice Hockey rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 4 · 2026-10-24 07:45 Local</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Bulls&#x27; +72 differential meets a winless Ulster at Loftus Versfeld</h3>
+  <p class="selection">Vodacom Bulls -3.5 (Handicap) · <strong>71.4%</strong> · 1.40 decimal · 69 words</p>
+  <p>Back Vodacom Bulls -3.5 against Ulster Rugby in Pretoria. The Bulls have scored 126 points in three URC rounds and conceded 54, a +72 differential that is the best in the table. Ulster are 0-2-1, with 88 points scored and 93 conceded, and are still without a win after three rounds. A four-point margin is modest against that scoring gap; our normal model prices the cover at 71.4% (1.40).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Vodacom Bulls have 126 PF, 54 PA and a +72 differential after three rounds — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Ulster are 0-2-1 with 88 PF and 93 PA — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Round 4 fixture Bulls v Ulster confirmed at Loftus Versfeld on 24 October 2026 — <a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 4 · 2026-10-24 10:00 Local</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Stormers and Scarlets have been combining for 48 points a game</h3>
+  <p class="selection">Over 42.5 (Match Total) · <strong>70.6%</strong> · 1.42 decimal · 54 words</p>
+  <p>Take over 42.5 points when DHL Stormers host Scarlets in Cape Town. The Stormers have scored 81 and conceded 54 in three matches; the Scarlets have scored 68 and conceded 85. Those 288 points across six team-matches average 48.0 per fixture, 5.5 above the line. Our total model prices the over at 70.6% (1.42).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>DHL Stormers have 81 PF and 54 PA after three rounds — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Scarlets have 68 PF and 85 PA after three rounds — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Round 4 fixture Stormers v Scarlets confirmed at DHL Stadium on 24 October 2026 — <a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">French Top 14 2026-27 — Journée 7 · 2026-10-24 12:30 UTC</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Toulouse and Perpignan have combined for 57 points per fixture</h3>
+  <p class="selection">Over 48.5 (Match Total) · <strong>71.2%</strong> · 1.40 decimal · 65 words</p>
+  <p>Back over 48.5 points as Stade Toulousain host USA Perpignan in Top 14 Round 7. Toulouse have scored 197 and conceded 124 in six matches, an average of 32.8 scored and 20.7 conceded. Perpignan have scored 166 and conceded 199, an average of 33.2 conceded. The combined 686 points across twelve team-matches is 57.2 per fixture; our total model prices the over at 71.2% (1.40).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Stade Toulousain are 5-0-1 with 197 PF and 124 PA after six rounds — <a href="https://top14.lnr.fr/classement" rel="noopener">top14.lnr.fr</a></li><li>USA Perpignan are 3-3 with 166 PF and 199 PA — <a href="https://top14.lnr.fr/classement" rel="noopener">top14.lnr.fr</a></li><li>Journee 7 fixture confirmed at Stade Ernest-Wallon on 24 October 2026 — <a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan" rel="noopener">top14.lnr.fr</a></li></ul></div>
+  <div class="predfoot"><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge baseball">Baseball</span>
+  <span class="tiny">2026 MLB World Series Game 1 · 2026-10-24T00:00:00Z</span></div><span class="badge band">in band −250…+10000</span></div>
+  <h3>Rays&#x27; 98-win season earns a two-and-a-half-run cushion in World Series Game 1</h3>
+  <p class="selection">Tampa Bay Rays +2.5 (Handicap) · <strong>70.9%</strong> · 1.41 decimal · 63 words</p>
+  <p>Take Tampa Bay Rays +2.5 on the run line in World Series Game 1 at American Family Field. The Rays finished 98-64 with 736 runs scored and 650 allowed. Milwaukee were the stronger regular-season side at 103-59, scoring 832 and allowing 618, and are rightful favourites. Our Poisson run model still gives Tampa Bay a 70.9% (1.41) chance of covering the two-and-a-half-run cushion.</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Tampa Bay finished 98-64 with 736 RS and 650 RA in 2026 — <a href="https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&amp;season=2026&amp;standingsTypes=regularSeason" rel="noopener">statsapi.mlb.com</a></li><li>Milwaukee finished 103-59 with 832 RS and 618 RA in 2026 — <a href="https://statsapi.mlb.com/api/v1/standings?leagueId=104&amp;season=2026&amp;standingsTypes=regularSeason" rel="noopener">statsapi.mlb.com</a></li><li>World Series Game 1 confirmed at American Family Field for 23 October 2026 — <a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-22&amp;endDate=2026-10-27" rel="noopener">statsapi.mlb.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.mlb.com/gameday/849805" rel="noopener">Official fixture page</a>
+  <a href="sports/baseball.html">All Baseball rows</a></div>
+</article></div>
 
-<h2 class="section">Every selection</h2>
-<p class="section-sub">Low-confidence rows are honest reads on thin samples, not recommendations.</p>
-<div class="panel"><div class="table-scroll"><table>
-<thead><tr><th>Sport</th><th>Match</th><th>Selection</th><th>Model %</th><th>Our price</th><th>Confidence</th></tr></thead>
-<tbody><tr><td>Handball</td><td>Paris Saint-Germain <span class="muted">@</span> HC Zagreb</td>
-          <td>Paris Saint-Germain</td><td class="num">70.2%</td>
-          <td class="num">1.37</td><td><span class="badge b-high">High</span></td></tr><tr><td>Handball</td><td>RK Celje Pivovarna Laško <span class="muted">@</span> Aalborg Håndbold</td>
-          <td>Aalborg Håndbold</td><td class="num">84.5%</td>
-          <td class="num">1.14</td><td><span class="badge b-high">High</span></td></tr><tr><td>Handball</td><td>Montpellier Handball <span class="muted">@</span> Barça</td>
-          <td>Barça</td><td class="num">78.5%</td>
-          <td class="num">1.22</td><td><span class="badge b-high">High</span></td></tr><tr><td>Handball</td><td>IFK Kristianstad <span class="muted">@</span> Sporting Clube de Portugal</td>
-          <td>Sporting Clube de Portugal</td><td class="num">85.5%</td>
-          <td class="num">1.13</td><td><span class="badge b-high">High</span></td></tr><tr><td>Handball</td><td>SC Magdeburg <span class="muted">@</span> Kolstad Håndball</td>
-          <td>SC Magdeburg</td><td class="num">84.1%</td>
-          <td class="num">1.14</td><td><span class="badge b-high">High</span></td></tr><tr><td>Ice Hockey</td><td>Philadelphia Flyers <span class="muted">@</span> Buffalo Sabres</td>
-          <td>Buffalo Sabres</td><td class="num">65.4%</td>
-          <td class="num">1.47</td><td><span class="badge b-high">High</span></td></tr><tr><td>Ice Hockey</td><td>Nashville Predators <span class="muted">@</span> Boston Bruins</td>
-          <td>Boston Bruins</td><td class="num">65.3%</td>
-          <td class="num">1.47</td><td><span class="badge b-high">High</span></td></tr><tr><td>Ice Hockey</td><td>Los Angeles Kings <span class="muted">@</span> New York Islanders</td>
-          <td>New York Islanders</td><td class="num">71.2%</td>
-          <td class="num">1.35</td><td><span class="badge b-high">High</span></td></tr><tr><td>Ice Hockey</td><td>Minnesota Wild <span class="muted">@</span> Calgary Flames</td>
-          <td>Minnesota Wild</td><td class="num">68.9%</td>
-          <td class="num">1.40</td><td><span class="badge b-high">High</span></td></tr><tr><td>Basketball</td><td>Dallas Mavericks <span class="muted">@</span> Houston Rockets</td>
-          <td>Houston Rockets</td><td class="num">76.3%</td>
-          <td class="num">1.26</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Basketball</td><td>Golden State Warriors <span class="muted">@</span> Los Angeles Lakers</td>
-          <td>Los Angeles Lakers</td><td class="num">68.8%</td>
-          <td class="num">1.40</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Basketball</td><td>Sacramento Kings <span class="muted">@</span> LA Clippers</td>
-          <td>LA Clippers</td><td class="num">72.4%</td>
-          <td class="num">1.33</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Handball</td><td>SAH - Aarhus <span class="muted">@</span> Dinamo Bucuresti</td>
-          <td>SAH - Aarhus</td><td class="num">62.3%</td>
-          <td class="num">1.54</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Handball</td><td>FC Porto <span class="muted">@</span> RK Partizan AdmiralBet</td>
-          <td>FC Porto</td><td class="num">58.6%</td>
-          <td class="num">1.64</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Handball</td><td>Füchse Berlin <span class="muted">@</span> One Veszprém HC</td>
-          <td>One Veszprém HC</td><td class="num">65.6%</td>
-          <td class="num">1.47</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Handball</td><td>HC Vardar 1961 <span class="muted">@</span> HBC Nantes</td>
-          <td>HBC Nantes</td><td class="num">62.0%</td>
-          <td class="num">1.55</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Ice Hockey</td><td>San Jose Sharks <span class="muted">@</span> Ottawa Senators</td>
-          <td>Ottawa Senators</td><td class="num">60.1%</td>
-          <td class="num">1.60</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Ice Hockey</td><td>Vegas Golden Knights <span class="muted">@</span> St. Louis Blues</td>
-          <td>Vegas Golden Knights</td><td class="num">59.9%</td>
-          <td class="num">1.60</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Ice Hockey</td><td>Winnipeg Jets <span class="muted">@</span> Dallas Stars</td>
-          <td>Dallas Stars</td><td class="num">63.5%</td>
-          <td class="num">1.51</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Rugby Union</td><td>Zebre Parma <span class="muted">@</span> Connacht Rugby</td>
-          <td>Connacht Rugby</td><td class="num">62.5%</td>
-          <td class="num">1.54</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Rugby Union</td><td>10bet Lions <span class="muted">@</span> Edinburgh Rugby</td>
-          <td>Edinburgh Rugby</td><td class="num">66.1%</td>
-          <td class="num">1.46</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Rugby Union</td><td>Ulster Rugby <span class="muted">@</span> Vodacom Bulls</td>
-          <td>Vodacom Bulls</td><td class="num">71.5%</td>
-          <td class="num">1.34</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Rugby Union</td><td>Scarlets <span class="muted">@</span> DHL Stormers</td>
-          <td>DHL Stormers</td><td class="num">64.5%</td>
-          <td class="num">1.49</td><td><span class="badge b-med">Medium</span></td></tr><tr><td>Basketball</td><td>Atlanta Hawks <span class="muted">@</span> Orlando Magic</td>
-          <td>Orlando Magic</td><td class="num">54.1%</td>
-          <td class="num">1.78</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Basketball</td><td>Milwaukee Bucks <span class="muted">@</span> Washington Wizards</td>
-          <td>Milwaukee Bucks</td><td class="num">60.1%</td>
-          <td class="num">1.60</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Basketball</td><td>Minnesota Timberwolves <span class="muted">@</span> Miami Heat</td>
-          <td>Minnesota Timberwolves</td><td class="num">50.5%</td>
-          <td class="num">1.90</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Basketball</td><td>Charlotte Hornets <span class="muted">@</span> Brooklyn Nets</td>
-          <td>Charlotte Hornets</td><td class="num">67.2%</td>
-          <td class="num">1.43</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Basketball</td><td>Chicago Bulls <span class="muted">@</span> Toronto Raptors</td>
-          <td>Toronto Raptors</td><td class="num">68.0%</td>
-          <td class="num">1.41</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Basketball</td><td>Indiana Pacers <span class="muted">@</span> New Orleans Pelicans</td>
-          <td>New Orleans Pelicans</td><td class="num">62.0%</td>
-          <td class="num">1.55</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Basketball</td><td>Utah Jazz <span class="muted">@</span> Memphis Grizzlies</td>
-          <td>Memphis Grizzlies</td><td class="num">58.0%</td>
-          <td class="num">1.66</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Basketball</td><td>Phoenix Suns <span class="muted">@</span> Portland Trail Blazers</td>
-          <td>Portland Trail Blazers</td><td class="num">52.2%</td>
-          <td class="num">1.84</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Handball</td><td>Industria Kielce <span class="muted">@</span> HC Kriens-Luzern</td>
-          <td>HC Kriens-Luzern</td><td class="num">50.8%</td>
-          <td class="num">1.89</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Handball</td><td>GOG <span class="muted">@</span> OTP Bank - PICK Szeged</td>
-          <td>OTP Bank - PICK Szeged</td><td class="num">49.3%</td>
-          <td class="num">1.95</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Handball</td><td>Orlen Wisla Plock <span class="muted">@</span> MT Melsungen</td>
-          <td>Orlen Wisla Plock</td><td class="num">49.4%</td>
-          <td class="num">1.95</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Ice Hockey</td><td>Florida Panthers <span class="muted">@</span> Ottawa Senators</td>
-          <td>Florida Panthers</td><td class="num">50.9%</td>
-          <td class="num">1.89</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Ice Hockey</td><td>New York Rangers <span class="muted">@</span> Toronto Maple Leafs</td>
-          <td>New York Rangers</td><td class="num">50.3%</td>
-          <td class="num">1.91</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Ice Hockey</td><td>Anaheim Ducks <span class="muted">@</span> New Jersey Devils</td>
-          <td>New Jersey Devils</td><td class="num">56.7%</td>
-          <td class="num">1.70</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Ice Hockey</td><td>Florida Panthers <span class="muted">@</span> Pittsburgh Penguins</td>
-          <td>Florida Panthers</td><td class="num">54.1%</td>
-          <td class="num">1.78</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Ice Hockey</td><td>Carolina Hurricanes <span class="muted">@</span> Edmonton Oilers</td>
-          <td>Edmonton Oilers</td><td class="num">55.9%</td>
-          <td class="num">1.72</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Ice Hockey</td><td>Utah Mammoth <span class="muted">@</span> Seattle Kraken</td>
-          <td>Seattle Kraken</td><td class="num">51.5%</td>
-          <td class="num">1.87</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Ice Hockey</td><td>Detroit Red Wings <span class="muted">@</span> Vancouver Canucks</td>
-          <td>Detroit Red Wings</td><td class="num">53.1%</td>
-          <td class="num">1.81</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Rugby Union</td><td>Hollywoodbets Sharks <span class="muted">@</span> Cardiff Rugby</td>
-          <td>Cardiff Rugby</td><td class="num">53.4%</td>
-          <td class="num">1.80</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Rugby Union</td><td>Glasgow Warriors <span class="muted">@</span> Benetton Rugby</td>
-          <td>Benetton Rugby</td><td class="num">50.2%</td>
-          <td class="num">1.91</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Rugby Union</td><td>Munster Rugby <span class="muted">@</span> Leinster Rugby</td>
-          <td>Leinster Rugby</td><td class="num">59.6%</td>
-          <td class="num">1.61</td><td><span class="badge b-low">Low</span></td></tr><tr><td>Rugby Union</td><td>Dragons RFC <span class="muted">@</span> Ospreys</td>
-          <td>Dragons RFC</td><td class="num">51.1%</td>
-          <td class="num">1.88</td><td><span class="badge b-low">Low</span></td></tr></tbody></table></div></div>
-
-<div class="note">Cricket rows have no originated line because this snapshot does not contain the strength input required by this model; that does not establish that no official rating or market exists. NBA totals are omitted because the model's required scoring inputs are not present.</div>
+<h2>High-confidence picks outside the price band (20)</h2>
+<p class="sub">These are the pre-existing 72%+ moneyline selections. Their fair odds run from 1.02 to 1.39,
+so they sit below the brief's −250 floor. They are preserved and disclosed, not re-labelled.</p>
+<div class="preds"><article class="pred">
+  <div class="predhead"><div><span class="badge tennis">Tennis</span>
+  <span class="tiny">ATP 250 Almaty Open · 2026-10-21 05:30</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Andrey Rublev&#x27;s 2,175-point ranking base outguns 38-year-old Adrian Mannarino in Almaty</h3>
+  <p class="selection">Andrey Rublev (Match Winner) · <strong>75.2%</strong> · 1.33 decimal · 56 words</p>
+  <p>Andrey Rublev to win his Almaty Open singles meeting with Adrian Mannarino. Rublev sits No. 22 in the official 19 October 2026 ATP rankings on 2,175 points compared with No. 79 Mannarino on 743 points across 33 tournaments played. That nearly three-to-one ATP points gap yields a 75.2% best-of-three win probability (1.33 fair price) for Rublev.</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Andrey Rublev ranks #22 on 2,175 official ATP points — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>Adrian Mannarino ranks #79 on 743 official ATP points — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>Almaty Open match confirmed on ATP Tour &amp; OLBG (event_id=902037) — <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" rel="noopener">atptour.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" rel="noopener">Official fixture page</a>
+  <a href="sports/tennis.html">All Tennis rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge tennis">Tennis</span>
+  <span class="tiny">ATP 250 Almaty Open (Round of 16) · 2026-10-21 08:00</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Second seed Luciano Darderi holds a 50-place ATP ranking cushion over James Duckworth</h3>
+  <p class="selection">Luciano Darderi (Match Winner) · <strong>74.2%</strong> · 1.35 decimal · 57 words</p>
+  <p>Luciano Darderi to prevail over James Duckworth in the Almaty Open Round of 16 on Center Court. Seeded second in Kazakhstan, world No. 23 Darderi carries 2,160 official ATP points into the tie against 34-year-old No. 73 Duckworth on 774 points (-103 week-on-week). Over best-of-three sets our ranking points model prices Darderi at 74.2% (1.35 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Luciano Darderi ranks #23 on 2,160 official ATP points and is #2 seed in Almaty — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>James Duckworth ranks #73 on 774 official ATP points — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>Almaty Round of 16 match MS015 confirmed on official ATP Tour stats centre — <a href="https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015" rel="noopener">atptour.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015" rel="noopener">Official fixture page</a>
+  <a href="sports/tennis.html">All Tennis rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge tennis">Tennis</span>
+  <span class="tiny">ATP Tour Indoor Singles · 2026-10-21 14:30</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>World No. 15 Tommy Paul carries more than quadruple Benjamin Bonzi&#x27;s ATP points</h3>
+  <p class="selection">Tommy Paul (Match Winner) · <strong>81.8%</strong> · 1.22 decimal · 60 words</p>
+  <p>Tommy Paul to beat Benjamin Bonzi in Wednesday afternoon&#x27;s indoor hard-court singles clash. On the official 19 October 2026 PIF ATP Rankings, Paul stands No. 15 on 2,575 points (+200 movement across 22 tournaments) while Bonzi clings to No. 100 on 605 points (-8 places). In best-of-three sets our Markov set model makes Paul an 81.8% favourite (1.22 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Tommy Paul ranks #15 on 2,575 official ATP singles points (2026.10.19) — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>Benjamin Bonzi ranks #100 on 605 official ATP singles points (2026.10.19) — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>Match listed on OLBG Tennis hub for 21 Oct 14:30 (event_id=902102) — <a href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Benjamin_Bonzi_vs_Tommy_Paul/3?event_id=902102" rel="noopener">olbg.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.atptour.com/en/rankings/singles" rel="noopener">Official fixture page</a>
+  <a href="sports/tennis.html">All Tennis rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge tennis">Tennis</span>
+  <span class="tiny">ATP 250 BNP Paribas Fortis European Open (Brussels R16) · 2026-10-21 15:00</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Top-10 seed Arthur Fils brings a 3,325-to-1,010 ATP points margin into Brussels R16</h3>
+  <p class="selection">Arthur Fils (Match Winner) · <strong>77.4%</strong> · 1.29 decimal · 59 words</p>
+  <p>Arthur Fils to defeat Jaume Munar in the BNP Paribas Fortis European Open Round of 16 in Brussels. Official PIF ATP singles standings rank the 22-year-old Frenchman No. 10 in the world on 3,325 points across 19 events, more than triple No. 51 Munar&#x27;s 1,010 points. Across best-of-three indoor sets our model rates Fils at 77.4% (1.29 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Arthur Fils holds ATP world rank #10 on 3,325 points (2026.10.19) — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>Jaume Munar holds ATP world rank #51 on 1,010 points (2026.10.19) — <a href="https://www.atptour.com/en/rankings/singles" rel="noopener">atptour.com</a></li><li>Brussels Round of 16 match MS008 confirmed on official ATP Tour live scores — <a href="https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008" rel="noopener">atptour.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008" rel="noopener">Official fixture page</a>
+  <a href="sports/tennis.html">All Tennis rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge handball">Handball</span>
+  <span class="tiny">EHF Champions League Men 2026/27 — Round 5 · 2026-10-21 20:45 CEST</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Unbeaten Aalborg Håndbold hold a +55 goal-difference swing over winless Celje</h3>
+  <p class="selection">Aalborg Håndbold (1X2 Match Winner) · <strong>87.9%</strong> · 1.14 decimal · 54 words</p>
+  <p>Aalborg Håndbold to beat RK Celje Pivovarna Laško at home in Wednesday&#x27;s Group C EHF Champions League fixture. Aalborg are unbeaten at 3W-1D-0L (7 points, 136 goals for, 115 against, +21), whereas Celje have dropped all four games (0W-0D-4L) while conceding 154 goals (-34). Full-support Poisson pricing rates Aalborg at 87.9% (1.14 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Aalborg stand 3W-1D-0L in Group C (7 pts, 136 GF, 115 GA, +21) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>RK Celje Pivovarna Laško stand 0W-0D-4L in Group C (0 pts, 120 GF, 154 GA, -34) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>EHF Round 5 match 202711020101029 scheduled 21 Oct 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/" rel="noopener">ehfcl.eurohandball.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/" rel="noopener">Official fixture page</a>
+  <a href="sports/handball.html">All Handball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge basketball">Basketball</span>
+  <span class="tiny">EuroLeague 2026-27 — Round 7 · 2026-10-22 18:15 UTC</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Athens fortress and +90 net differential make Panathinaikos overwhelming hosts</h3>
+  <p class="selection">Panathinaikos AKTOR Athens (Moneyline) · <strong>86.1%</strong> · 1.16 decimal · 65 words</p>
+  <p>Back Panathinaikos AKTOR Athens to beat Kosner Baskonia Vitoria-Gasteiz on the EuroLeague Round 7 moneyline at Telekom Center Athens. Panathinaikos sit top of the 20-club standings at 5-1 with a competition-best +90 point differential (528 scored, 438 conceded) and a 4-1 home record. Baskonia arrive bottom at 1-5 (-60 differential, 0-2 away, allowing 94.0 points per game), pricing the hosts at 86.1% (1.16 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Panathinaikos lead the 2026-27 EuroLeague table at 5-1 (528 PF, 438 PA, +90, 4-1 home) — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Kosner Baskonia sit 20th at 1-5 (504 PF, 564 PA, -60, 0-2 road) — <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></li><li>Round 7 fixture confirmed at Telekom Center Athens on 22 October 2026 — <a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/" rel="noopener">euroleaguebasketball.net</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/" rel="noopener">Official fixture page</a>
+  <a href="sports/basketball.html">All Basketball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge handball">Handball</span>
+  <span class="tiny">EHF Champions League Men 2026/27 — Round 5 · 2026-10-22 20:45 CEST</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Competition-best defence gives unbeaten Barça commanding home control over Montpellier</h3>
+  <p class="selection">Barça (1X2 Match Winner) · <strong>82.3%</strong> · 1.21 decimal · 49 words</p>
+  <p>Barça to beat Montpellier Handball at Palau Blaugrana in Thursday&#x27;s EHF Champions League Group E clash. Barça have won all four group fixtures (4W-0D-0L, 8 points) while conceding only 104 goals across four games alongside 137 scored. Against 1W-0D-3L Montpellier (116 GF, 125 GA), Barça project at 82.3% (1.21).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Barça lead Group E at 4W-0D-0L with 137 GF and 104 GA — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>Montpellier Handball stand 3rd in Group E at 1W-0D-3L (116 GF, 125 GA) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>EHF Round 5 match 202711020101049 scheduled 22 Oct 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/" rel="noopener">ehfcl.eurohandball.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/" rel="noopener">Official fixture page</a>
+  <a href="sports/handball.html">All Handball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge handball">Handball</span>
+  <span class="tiny">EHF Champions League Men 2026/27 — Round 5 · 2026-10-22 20:45 CEST</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Unbeaten Sporting Clube de Portugal meet Group D&#x27;s leakiest defence in Lisbon</h3>
+  <p class="selection">Sporting Clube de Portugal (1X2 Match Winner) · <strong>88.9%</strong> · 1.12 decimal · 55 words</p>
+  <p>Sporting Clube de Portugal to win the match-winner market at home over IFK Kristianstad in Thursday&#x27;s EHF Champions League Round 5 tie. Sporting stand unbeaten in Group D at 3W-1D-0L (7 points, 149 goals scored, 125 conceded). Winless Kristianstad sit 0W-0D-4L having conceded 155 goals while scoring 122, making Sporting 88.9% favourites (1.12 fair price).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Sporting lead Group D unbeaten at 3W-1D-0L (7 pts, 149 GF, 125 GA) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>IFK Kristianstad sit 4th in Group D at 0W-0D-4L (0 pts, 122 GF, 155 GA) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>EHF Round 5 match 202711020101041 scheduled 22 Oct 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/" rel="noopener">ehfcl.eurohandball.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/" rel="noopener">Official fixture page</a>
+  <a href="sports/handball.html">All Handball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge handball">Handball</span>
+  <span class="tiny">EHF Champions League Men 2026/27 — Round 5 · 2026-10-22 20:45 CEST</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Four-from-four SC Magdeburg travel to Trondheim against 0W-0D-4L Kolstad</h3>
+  <p class="selection">SC Magdeburg (1X2 Match Winner) · <strong>81.2%</strong> · 1.23 decimal · 51 words</p>
+  <p>SC Magdeburg to defeat Kolstad Håndball away in Thursday night&#x27;s EHF Champions League Group F contest. Magdeburg boast a perfect 4W-0D-0L record (8 points) with 141 goals scored and only 108 conceded (+33). Kolstad sit bottom at 0W-0D-4L (111 scored, 143 conceded, -32), leaving visiting Magdeburg at 81.2% (1.23 fair odds).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>SC Magdeburg lead Group F at 4W-0D-0L (8 pts, 141 GF, 108 GA, +33) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>Kolstad Håndball sit 4th in Group F at 0W-0D-4L (0 pts, 111 GF, 143 GA, -32) — <a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></li><li>EHF Round 5 match 202711020101064 scheduled 22 Oct 20:45 CEST — <a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/" rel="noopener">ehfcl.eurohandball.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/" rel="noopener">Official fixture page</a>
+  <a href="sports/handball.html">All Handball rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge darts">Darts</span>
+  <span class="tiny">2026 PDC European Championship — Round 1 (Best of 11 Legs) · 2026-10-23 14:15</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>World No. 11 Nathan Aspinall holds a six-fold ranking money edge on qualifier Cristo Reyes</h3>
+  <p class="selection">Nathan Aspinall (Match Winner) · <strong>76.8%</strong> · 1.30 decimal · 52 words</p>
+  <p>Nathan Aspinall to defeat Cristo Reyes in Friday&#x27;s PDC European Championship Round 1 contest (contrarian to casual tipster upset chatter). Official PDC standings place Aspinall 11th on £579,500 against No. 71 Reyes on £95,000 — a 60-place ranking gap. Across a first-to-six-legs race our binomial leg model prices Aspinall at 76.8% (1.30).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Nathan Aspinall ranks #11 on the PDC Werner Ranking Ladder with £579,500 — <a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a></li><li>Cristo Reyes ranks #71 on the PDC Werner Ranking Ladder with £95,000 — <a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a></li><li>European Championship R1 tie confirmed on OLBG Darts hub (event_id=32327) — <a href="https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327" rel="noopener">olbg.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.pdc.tv/rankings" rel="noopener">Official fixture page</a>
+  <a href="sports/darts.html">All Darts rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 4 · 2026-10-23 14:45 Local</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Three-from-three league leaders Edinburgh welcome leaky Lions to Hive Stadium</h3>
+  <p class="selection">Edinburgh Rugby (1X2 Match Winner) · <strong>73.6%</strong> · 1.36 decimal · 64 words</p>
+  <p>Edinburgh Rugby to win the 1X2 match-winner market at home against 10bet Lions in Friday night&#x27;s URC Round 4 fixture. Edinburgh sit top of the URC on 14 points as the only 3W-0D-0L side (80 PF, 54 PA) after beating Zebre 29-12 away, whereas the Lions shipped 57 points at Loftus last time out (77 PF, 102 PA overall), pricing Edinburgh at 73.6% (1.36).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Edinburgh lead the URC table at 3W-0D-0L (14 pts, 80 PF, 54 PA) — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>10bet Lions sit 2W-0D-1L (77 PF, 102 PA) after losing 57-15 at Bulls on 10 Oct — <a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">stats.unitedrugby.com</a></li><li>Round 4 fixture 292610 confirmed at Hive Stadium — <a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge darts">Darts</span>
+  <span class="tiny">2026 PDC European Championship — Round 1 (Best of 11 Legs) · 2026-10-23 15:15</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>World No. 1 Luke Littler&#x27;s £3.11m prize haul towers over William O&#x27;Connor over 11 legs</h3>
+  <p class="selection">Luke Littler (Match Winner) · <strong>83.7%</strong> · 1.19 decimal · 60 words</p>
+  <p>Luke Littler to win his PDC European Championship first-round tie against William O&#x27;Connor on Friday afternoon. Littler leads the official PDC Werner Ranking Ladder by more than £2 million on £3,113,500 across the two-year cycle, whereas world No. 32 O&#x27;Connor sits on £274,500. Over best-of-11 legs, that 11.3-to-1 prize ratio translates into an 83.7% match win probability (1.19 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Luke Littler ranks #1 on the official PDC Werner Ranking Ladder with £3,113,500 — <a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a></li><li>William O&#x27;Connor ranks #32 on the official PDC Werner Ranking Ladder with £274,500 — <a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a></li><li>European Championship R1 tie confirmed on OLBG Darts hub (event_id=32328) — <a href="https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328" rel="noopener">olbg.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.pdc.tv/rankings" rel="noopener">Official fixture page</a>
+  <a href="sports/darts.html">All Darts rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">French Pro D2 2026-27 — Journée 8 · 2026-10-23 17:30 UTC</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Seven-from-seven Provence Rugby host leaky Béziers in Aix-en-Provence</h3>
+  <p class="selection">Provence Rugby (1X2 Match Winner) · <strong>82.0%</strong> · 1.22 decimal · 59 words</p>
+  <p>Provence Rugby to defeat AS Béziers Hérault at home in Friday&#x27;s Pro D2 Journée 8 card. Unbeaten Provence stand 7W-0D-0L on 29 points after conceding just 158 points across seven rounds (222 scored, +64). Fourteenth-placed Béziers have dropped four of their last five matches while shipping 240 points (-93 differential), giving Provence an 82.0% win probability (1.22 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Provence Rugby rank 2nd in Pro D2 at 7W-0D-0L (29 pts, 222 PF, 158 PA, +64) — <a href="https://prod2.lnr.fr/classement" rel="noopener">prod2.lnr.fr</a></li><li>AS Béziers Hérault rank 14th at 2W-0D-5L (9 pts, 147 PF, 240 PA, -93) — <a href="https://prod2.lnr.fr/classement" rel="noopener">prod2.lnr.fr</a></li><li>Journée 8 match sheet 12064 confirmed on LNR Pro D2 — <a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers" rel="noopener">prod2.lnr.fr</a></li></ul></div>
+  <div class="predfoot"><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 4 · 2026-10-24 07:45 Local</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Loftus Versfeld firepower makes Vodacom Bulls heavy hosts against winless Ulster</h3>
+  <p class="selection">Vodacom Bulls (1X2 Match Winner) · <strong>78.9%</strong> · 1.27 decimal · 66 words</p>
+  <p>Vodacom Bulls to win the 1X2 match-winner market against Ulster Rugby at Loftus Versfeld on Saturday morning in URC Round 4. Pretoria&#x27;s Bulls lead the entire URC in scoring with 126 points across three matches against only 54 conceded (+72), fresh off hammering the Lions 57-15 on 10 October. Winless Ulster enter at 0W-2D-1L (88 PF, 93 PA), putting the Bulls at 78.9% (1.27 fair price).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Vodacom Bulls stand 2W-0D-1L with a URC-high 126 PF and 54 PA (+72) — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Vodacom Bulls beat 10bet Lions 57-15 on 10 October 2026 — <a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">stats.unitedrugby.com</a></li><li>Ulster Rugby stand winless at 0W-2D-1L (88 PF, 93 PA) — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Round 4 fixture 292611 confirmed at Loftus Versfeld — <a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 4 · 2026-10-24 10:00 Local</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>DHL Stormers&#x27; stingy Cape Town defence faces point-shy Scarlets in Round 4</h3>
+  <p class="selection">DHL Stormers (1X2 Match Winner) · <strong>72.1%</strong> · 1.39 decimal · 58 words</p>
+  <p>DHL Stormers to beat Scarlets at DHL Stadium in Saturday&#x27;s URC Round 4 clash. Cape Town&#x27;s Stormers stand 4th on 11 points (2W-0D-1L, 81 PF, joint-best 54 PA) coming off a comprehensive 39-22 home victory over the Sharks on 10 October. Twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA), making Stormers 72.1% favourites (1.39 fair decimal).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>DHL Stormers stand 4th in the URC at 2W-0D-1L (81 PF, 54 PA, +27) — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Stormers beat Hollywoodbets Sharks 39-22 on 10 October 2026 — <a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">stats.unitedrugby.com</a></li><li>Scarlets stand 12th at 1W-0D-2L (68 PF, 85 PA) before visiting DHL Stadium — <a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">French Top 14 2026-27 — Journée 7 · 2026-10-24 12:30 UTC</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Table-topping Stade Toulousain bring five straight Top 14 victories to Ernest-Wallon</h3>
+  <p class="selection">Stade Toulousain (1X2 Match Winner) · <strong>77.7%</strong> · 1.29 decimal · 59 words</p>
+  <p>Stade Toulousain to win the match-winner market at home against USA Perpignan on Saturday afternoon in Top 14 Journée 7. Toulouse sit first on 24 points (5W-0D-1L, 197 for, 124 against, +73) riding five consecutive league wins plus a 60-14 Champions Cup demolition of Sale Sharks. Ninth-placed Perpignan (3W-0D-3L, 166-199, -33) face a 77.7% home favourite (1.29 fair price).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Stade Toulousain lead Top 14 on 24 pts (5W-0D-1L, 197 PF, 124 PA, W-W-W-W-W) — <a href="https://top14.lnr.fr/classement" rel="noopener">top14.lnr.fr</a></li><li>USA Perpignan rank 9th on 13 pts (3W-0D-3L, 166 PF, 199 PA, -33) — <a href="https://top14.lnr.fr/classement" rel="noopener">top14.lnr.fr</a></li><li>Stade Toulousain beat Sale Sharks 60-14 in EPCR Champions Cup Round 1 — <a href="https://top14.lnr.fr/club/toulouse" rel="noopener">top14.lnr.fr</a></li><li>Journée 7 fixture sheet 11867 confirmed on LNR — <a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan" rel="noopener">top14.lnr.fr</a></li></ul></div>
+  <div class="predfoot"><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 5 · 2026-10-30 15:45 Local</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Second-placed Glasgow Warriors bring unbeaten Scotstoun record against leaky Lions</h3>
+  <p class="selection">Glasgow Warriors (1X2 Match Winner) · <strong>72.9%</strong> · 1.37 decimal · 58 words</p>
+  <p>Glasgow Warriors to defeat 10bet Lions in Friday night&#x27;s URC Round 5 clash at Scotstoun Stadium. Unbeaten Glasgow sit second on 13 points (2W-1D-0L, 95 points scored, 72 conceded) after beating Connacht 36-19 at home on 9 October. Seventh-placed Lions have shipped 102 points in three games following their 57-15 loss in Pretoria, pricing Glasgow at 72.9% (1.37).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Glasgow Warriors sit 2nd in URC at 2W-1D-0L (13 pts, 95 PF, 72 PA) and beat Connacht 36-19 — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>10bet Lions stand 2W-0D-1L (77 PF, 102 PA) after losing 57-15 at Bulls — <a href="https://stats.unitedrugby.com/match-centre/2026-27/5" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 5 · 2026-10-31 11:00 Local</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Vodacom Bulls&#x27; +72 scoring surge hosts point-negative Scarlets in Pretoria</h3>
+  <p class="selection">Vodacom Bulls (1X2 Match Winner) · <strong>81.1%</strong> · 1.23 decimal · 57 words</p>
+  <p>Vodacom Bulls to beat Scarlets on the 1X2 match-winner line at Loftus Versfeld in Saturday&#x27;s URC Round 5 fixture. Pretoria&#x27;s Bulls lead the URC with 126 points scored and only 54 allowed (+72) after their 57-15 demolition of the Lions, while twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA), putting the hosts at 81.1% (1.23).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Vodacom Bulls lead the URC with 126 PF against 54 PA (+72) at 2W-0D-1L — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Scarlets sit 12th at 1W-0D-2L (68 PF, 85 PA) before visiting Loftus Versfeld — <a href="https://stats.unitedrugby.com/match-centre/2026-27/5" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge rugby-union">Rugby Union</span>
+  <span class="tiny">United Rugby Championship 2026-27 — Round 5 · 2026-10-31 13:30 Local</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Rodney Parade attack backs Dragons RFC against winless cellar-dwellers Zebre Parma</h3>
+  <p class="selection">Dragons RFC (1X2 Match Winner) · <strong>77.3%</strong> · 1.29 decimal · 58 words</p>
+  <p>Dragons RFC to win at Rodney Parade against Zebre Parma in Saturday&#x27;s URC Round 5 meeting. Eighth-placed Dragons hold a +5 differential on 9 points (1W-1D-1L, 88 PF, 83 PA) after scoring 31 points at home on 9 October, whereas bottom-placed Zebre are 0W-0D-3L with a competition-worst -64 differential (52 PF, 116 PA), rating Dragons at 77.3% (1.29).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Dragons RFC stand 8th on 9 pts (1W-1D-1L, 88 PF, 83 PA) — <a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></li><li>Zebre Parma sit 16th at 0W-0D-3L (1 pt, 52 PF, 116 PA, -64) — <a href="https://stats.unitedrugby.com/match-centre/2026-27/5" rel="noopener">stats.unitedrugby.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622" rel="noopener">Official fixture page</a>
+  <a href="sports/rugby-union.html">All Rugby Union rows</a></div>
+</article><article class="pred">
+  <div class="predhead"><div><span class="badge motor-racing">Motor Racing</span>
+  <span class="tiny">2026 FIA Formula 1 Drivers&#x27; World Championship — Outright · Season Outright (7 Rounds Left)</span></div><span class="badge outband">shorter than −250</span></div>
+  <h3>Kimi Antonelli&#x27;s 102-point cushion atop the FIA Drivers&#x27; Championship commands title market</h3>
+  <p class="selection">Kimi Antonelli — 2026 World Champion · <strong>98.7%</strong> · 1.02 decimal · 62 words</p>
+  <p>Kimi Antonelli to win the 2026 FIA Formula 1 Drivers&#x27; World Championship outright. Official Formula 1 standings entering Austin show Mercedes rookie sensation Antonelli on 340 points — a massive 102 points clear of team-mate George Russell (238), 111 ahead of Lewis Hamilton (229), and 119 clear of Max Verstappen (221). Our championship points-rate model puts Antonelli&#x27;s title probability at 98.7% (1.02).</p>
+  <div class="sources"><strong>Verified facts</strong><ul><li>Kimi Antonelli leads the 2026 FIA Drivers&#x27; Standings on 340 points for Mercedes — <a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener">formula1.com</a></li><li>Nearest chasers: George Russell 238 pts, Lewis Hamilton 229 pts, Max Verstappen 221 pts — <a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener">formula1.com</a></li><li>Market active on OLBG Motor Racing hub — <a href="https://www.olbg.com/betting-tips/Motor_Racing/14" rel="noopener">olbg.com</a></li></ul></div>
+  <div class="predfoot"><a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener">Official fixture page</a>
+  <a href="sports/motor-racing.html">All Motor Racing rows</a></div>
+</article></div>
 
 </main>
-<footer class="site">
-  <div class="wrap">
-    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
-    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="survey/index.html">Survey (130 events)</a> · <a href="live/index.html">Live slate</a> · <a href="flagged.html">Flagged</a> · <a href="site/index.html">Evidence desk v2</a></span>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap">
+  <p><strong>Dated, partial research snapshot — not a live feed and not betting advice.</strong> Model probabilities are estimates, not guarantees. Rows dated before 2026-10-22 are labelled <em>past</em> and are not presented as upcoming. Unconfirmed values are blank (<code>—</code>) and listed on <a href="flagged.html">Flagged for Review</a>. 18+.</p>
+  <p class="tiny">Built by <code>scripts/build_site.py</code> from checked-in data. Earlier layers are preserved at <a href="verified/index.html">/verified/</a>, <a href="live/index.html">/live/</a>, <a href="survey/index.html">/survey/</a>, <a href="site/index.html">/site/</a> and indexed in the <a href="archive.html">archive</a>.</p>
+</div></footer>
 </body>
 </html>

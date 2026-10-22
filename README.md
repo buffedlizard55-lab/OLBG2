@@ -1,79 +1,94 @@
-# OLBG2 — sports schedule research, originated lines, and review flags
+# OLBG2 — eligible-sports schedule, originated lines, and sourced predictions
 
-OLBG2 is a static research project that examines [OLBG.com](https://www.olbg.com)'s sports taxonomy and selected event listings, records source material, and demonstrates independent line-origination models. It is **not** a complete or continuously updated OLBG slate, and its stored event rows must not all be treated as officially verified fixtures. Model prices and confidence labels are estimates, not bookmaker odds or guarantees.
+OLBG2 is a static research project that reverse-engineers [OLBG.com](https://www.olbg.com)'s sports taxonomy,
+records fixtures for every eligible sport, originates its own prices from official governing-body statistics, and
+publishes every value next to the official page it came from. It is **not** a live bookmaker feed, not betting
+advice, and not a complete snapshot of world sport: it is a dated capture with its gaps disclosed.
 
 **Published dashboard:** <https://buffedlizard55-lab.github.io/OLBG2/>
 
-**Evidence-status review:** <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
+**Flagged for review:** <https://buffedlizard55-lab.github.io/OLBG2/flagged.html>
 
-**Sport survey:** <https://buffedlizard55-lab.github.io/OLBG2/survey/>
+**Cross-layer evidence review:** <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
 
-## Evidence status — read before using the counts
+## What the root site is
 
-This repository contains multiple separately built snapshots. Their counts are **stored rows, not a verified count of unique upcoming matches**. The layers have known overlaps, different scopes, and different evidence limitations. Do not add their totals together.
-
-The official-source provenance audit (`python3 scripts/official_source_audit.py`) reports that **all 130 survey inventory rows lack an explicit official fixture-source field**. The OLBG URLs on those records document OLBG listing provenance; they do not independently confirm that the fixture, date, or competition is correct. For the survey's 15 prediction-fact citations, 4 URLs are on candidate official domains and 11 are outside the audit's conservative allowlist. A domain match is not proof that a page supports a claim. See the [audit report](research/official-source-audit-18eca832.md), [cross-layer review](integration.html), and [Flagged for Review](flagged.html).
+The dashboard at the repository root is the unified, deduplicated view over the multi-sport desk in
+[`verified/`](verified/index.html). It carries **155 fixtures across 15 of the 17 eligible sports**, each row with
+its official source link, a verification badge, and — where the model could be supported — moneyline, handicap and
+total prices. 112 rows are fully originated; 43 are blank with a written reason.
 
 | Layer | Entry point | Snapshot contents (not an external verification claim) |
 |---|---|---|
-| **Root dashboard** | [`index.html`](index.html) | 47 stored match rows, 45 originated-line records, 9 written high-confidence picks; 22 open and 4 closed review items at the recorded snapshot. Built by `scripts/model.py` and `scripts/build_site.py`. |
-| **Evidence desk** | [`site/index.html`](site/index.html) | Separate NHL/NBA layer with 25 stored fixture rows and 64 market records, plus its own source register and flags. Built by `scripts/engine.py` and `scripts/build.py`. |
-| **Sport survey** | [`survey/index.html`](survey/index.html) | 130 OLBG-discovered inventory entries across its 15-sport taxonomy; 11 originated lines, 2 written predictions, and a separate review queue. The inventory rows are not all officially fixture-verified. |
+| **Unified dashboard** | [`index.html`](index.html) | 155 fixtures, 15 sports, 112 originated rows, 13 price-band picks, 33 written predictions, 18 open review items. Built by `scripts/build_site.py` from `data/verified/**`. |
+| **Verified multi-sport desk** | [`verified/index.html`](verified/index.html) | The same 155 rows in their original layout, plus audit and methodology pages. Built by `scripts/verified_seed.py` → `verified_model.py` → `verified_build.py`. |
+| **Root-layer archive** | [`archive.html`](archive.html) | The earlier 47-row root capture, preserved with its own source links. Superseded for NHL, NBA, URC, cricket and handball, but not deleted. |
+| **Evidence desk v2** | [`site/index.html`](site/index.html) | Independent NHL/NBA layer with 25 stored fixture rows and 64 market records. Built by `scripts/engine.py` and `scripts/build.py`. |
+| **Sport survey** | [`survey/index.html`](survey/index.html) | 130 OLBG-discovered inventory entries across its 15-sport taxonomy; 11 originated lines, 2 predictions. Inventory rows are not all fixture-verified. |
 
-These are dated snapshots, not an automatically refreshed feed. Prior captures span 18–21 October 2026; the builders regenerate pages from checked-in data but do not retrieve new schedules. Recheck every event and source before treating it as upcoming or using its model output.
+The layers are **not** disjoint and must not be added together. They represent separate audit passes over
+overlapping windows; use the unified dashboard for the published dataset and the archive page for provenance.
 
-## Handball addition (2026-10-21 07:06–07:45 UTC)
+## Scope
 
-The root dashboard now carries the twelve EHF Champions League Men round-5 fixtures of 21–22 October 2026.
-Each pairing, date and published throw-off time was read from the official EHF match centre
-(<https://ehfcl.eurohandball.com/men/2026-27/matches/>), and each club's group-phase wins, draws, losses, goals
-for and goals against came from the official standings on the same site
-(<https://ehfcl.eurohandball.com/men/2026-27/standings/>). All twelve were lined (three-way match winner,
-handicap and match total; 84 prices) and five high-confidence picks carry written predictions with per-fact
-source links. The line-by-line table and the irregularities found are in
-[`research/handball-ehf-73620ec4.md`](research/handball-ehf-73620ec4.md).
+The brief excludes soccer/football, boxing, UFC/MMA, American football, hurling, horse racing, cycling and
+specials. The remaining 17 sports form the eligible taxonomy. Aussie Rules (AFL off-season) and eSports returned
+no active fixtures in this window; they are listed with zero rows rather than silently skipped. Greyhounds and
+Gaelic Football are **not** on the exclusion list, so they are in scope; the survey layer's older 15-sport taxonomy
+that omitted them is disclosed and superseded.
 
-Handball is therefore a fifth covered sport in the root layer (Ice Hockey, Basketball, Rugby Union, Cricket,
-Handball). The other twelve in-scope sports remain uncovered there and are listed individually on the
-[Flagged for Review](flagged.html) page; the dashboard's own coverage table shows this layer's rows, its lines
-and the survey's event count for every one of the 17 sports. This addition does not change the survey layer,
-the evidence desk or any earlier session's files.
+The brief's use of “football” next to a separate “American football” entry remains the one unresolved scope
+question. It is recorded as an interpretation flag rather than resolved by assumption.
 
-## Cross-layer scope and overlap
+## Verification, blanks and freshness
 
-The root scope configuration lists 17 included sports. The survey taxonomy lists 15 and excludes Greyhounds and Gaelic Football. This disagreement is unresolved and published for review; neither layer establishes the final interpretation of the brief. The original brief's use of “football” is also ambiguous alongside its separate mention of American football.
+- Every published row carries a link to an official governing-body, league or tour page.
+- 92 of the 155 rows cite a URL that identifies the individual fixture; the other 63 cite a competition or
+  rankings page. That difference is shown on every table and disclosed as **VF-11** on the flagged page.
+- Where an official input was missing (client-rendered rankings, one-match samples, unconfirmed venues, 2027
+  futures without rosters), the value is **blank** and the reason is published. Nothing was inferred.
+- 15 rows (12 NHL fixtures, 3 MLB World Series games) were re-read on **2026-10-22**; the other 140 retain their
+  **2026-10-21** capture stamp. The snapshot is dated, not continuously refreshed.
+- 59 rows are dated 2026-10-21 and are labelled **past** everywhere; they stay visible for audit and are never
+  presented as upcoming tips.
 
-The layers are not deduplicated. At least Afghanistan v Bangladesh and New Zealand v India appear in both the root dashboard and survey; the root dashboard and evidence desk also share NHL/NBA coverage. Do not describe the datasets as disjoint or report a combined unique-match total.
+## Prices and confidence
 
-The survey records inventory entries for sports beyond the root dashboard's original capture, but this does not establish exhaustive OLBG coverage. Its reported zero-entry results for Rugby League, Aussie Rules, and eSports are snapshot observations, not proof that OLBG has no listings outside the capture window. The [integration review](integration.html) and the survey's [Flagged for Review](survey/flagged.html) page list unresolved evidence and scope issues.
+Model prices are fair decimals derived from the models in [METHODOLOGY.md](METHODOLOGY.md), not bookmaker quotes.
 
-## Project scope
-
-The brief excludes soccer, boxing, UFC/MMA, American football, hurling, horse racing, cycling, and specials. OLBG taxonomy, scope decisions, and data layers are documented separately; Greyhounds and Gaelic Football remain a flagged interpretation question rather than a settled exclusion.
+- Confidence: **high** ≥72% model probability, **medium** ≥60%, **low** below 60%.
+- Price band from the brief: **−250 to +10000** decimal (1.40–101.00). A 70%+ probability cannot be priced above
+  1.43, so the only window satisfying both a ≥70% probability and the −250 floor is 70.0–71.4%.
+- The 20 original high-confidence picks are priced 1.02–1.39 and are labelled **outside band**.
+- 13 additional handicap/total picks at **1.40–1.42** carry their own ≥30-word predictions and official facts;
+  these are the **price-band** picks the brief asked for.
 
 ## Repository layout
 
 ```text
-index.html, picks.html, flagged.html, methodology.html, sources.html  root dashboard pages
-sports/*.html                                                       root sport pages
-integration.html                                                    cross-layer evidence-status review
-site/**                                                             evidence desk snapshot and pages
-survey/**                                                           sport survey pages
+index.html, matches.html, picks.html, verification.html      unified dashboard pages
+flagged.html, methodology.html, sources.html, archive.html   review, method, sources, provenance
+sports/index.html, sports/<slug>.html                        17 eligible sport pages
+integration.html                                             cross-layer evidence-status review
+verified/**                                                  multi-sport desk pages (source dataset)
+site/**                                                      evidence desk snapshot and pages
+survey/**                                                    sport survey pages
 
-data/inputs/*.json                                                  root dashboard inputs
-data/matches.json, data/predictions.json, data/flagged.json          root dashboard outputs and review queue
- data/desk/*.json                                                   evidence desk snapshot data
- data/survey/**                                                     survey inventory, line records and flags
- data/sources.json                                                  root dashboard source register
+data/verified/*.json                                         unified dataset, predictions, band, flags
+data/matches.json, data/predictions.json, data/flagged.json  archived root-layer outputs
+data/desk/*.json                                             evidence desk snapshot data
+data/survey/**                                               survey inventory, line records and flags
 
-scripts/model.py, build_site.py                                      root dashboard model and builder
-scripts/engine.py, build.py                                          evidence desk model and builder
-scripts/survey_*.py                                                  survey pipeline and checks
-scripts/official_source_audit.py                                     read-only survey provenance classification
-scripts/integration_audit.py                                        cross-layer link and evidence disclosure checks
-tests/                                                               automated structural tests
-research/                                                            collection and audit notes
-COORDINATION.md                                                      task board and session log
+scripts/verified_seed.py, verified_model.py, verified_build.py   verified desk pipeline
+scripts/build_site.py                                        unified dashboard builder
+scripts/model.py, build.py                                   archived root layer and evidence desk
+scripts/survey_*.py                                          survey pipeline and checks
+scripts/official_source_audit.py                             read-only survey provenance classification
+scripts/integration_audit.py                                 cross-layer link and disclosure checks
+
+tests/                                                       automated structural tests (61)
+research/                                                    collection and audit notes
+COORDINATION.md                                              task board and session log
 ```
 
 ## Rebuild and verify
@@ -81,15 +96,22 @@ COORDINATION.md                                                      task board 
 All scripts use the Python standard library. From the repository root:
 
 ```bash
-python3 -m unittest discover -s tests -v
-python3 scripts/build.py
+python3 scripts/verified_seed.py && python3 scripts/verified_model.py && python3 scripts/verified_build.py
 python3 scripts/build_site.py
-python3 scripts/survey_build.py
-python3 scripts/survey_verify.py
+python3 scripts/build.py
+python3 scripts/survey_build.py && python3 scripts/survey_verify.py
 python3 scripts/integration_audit.py
-python3 scripts/official_source_audit.py
+python3 -m unittest discover -s tests
 ```
 
-The builders and tests validate internal structure, model rules, and local links. The official-source audit classifies URL domains and reports missing provenance fields; it does **not** fetch pages or validate their contents. CI likewise does not collect live schedules. Passing these checks is not proof of factual accuracy, official-source support, freshness, complete market coverage, or an exhaustive sport inventory.
+Expected: the builder reports `10 root pages + 17 sport pages / 155 rows, 112 originated, 13 band picks / 33
+predictions (13 band) / 18 verified review items`; the integration audit reports zero local link errors; the suite
+reports 61 tests passing.
 
-For model formulas and confidence thresholds, see [METHODOLOGY.md](METHODOLOGY.md) and [survey/METHODOLOGY.md](survey/METHODOLOGY.md). For current caveats, use the [evidence-status review](integration.html) and clearly labeled review pages. This project is research, not betting advice. 18+.
+The builders and tests validate internal structure, model rules, source allowlists and local links. They do not
+fetch pages, and a passing check is not proof that every external page supports every adjacent claim. CI rebuilds
+the static layers and fails if the generated HTML drifts from the checked-in files.
+
+For the formulas, thresholds and known limitations see [METHODOLOGY.md](METHODOLOGY.md) and the
+[methodology page](methodology.html). For open questions use [Flagged for Review](flagged.html) and the
+[cross-layer review](integration.html). Research, not betting advice. 18+.

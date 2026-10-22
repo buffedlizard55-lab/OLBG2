@@ -1,0 +1,233 @@
+{
+  "captured_at": "2026-10-22T09:35:00Z",
+  "session": "arena/42c8f6be-olbg2",
+  "eligible_count": 17,
+  "excluded_count": 10,
+  "eligible": [
+    {
+      "slug": "ice-hockey",
+      "name": "Ice Hockey",
+      "olbg_sport_id": 13,
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "model_family": "Poisson/Skellam exact goal-grid (NHL 32-club + SHL 14-club official rates)",
+      "official_source": "NHL Stats API & Swedish Ice Hockey Association (SHL)",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22"
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball",
+      "olbg_sport_id": 4,
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "model_family": "Normal margin & pace total (EuroLeague E2026 20-club + EuroCup U2026 32-club + NBA 30-club)",
+      "official_source": "EuroLeague / BKT EuroCup Live API & NBA Official Schedule",
+      "official_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games"
+    },
+    {
+      "slug": "rugby-union",
+      "name": "Rugby Union",
+      "olbg_sport_id": 9,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "model_family": "Normal margin & points total (Top 14 14-club + Pro D2 16-club + URC 16-club)",
+      "official_source": "LNR Top 14 / Pro D2 & United Rugby Championship Stats",
+      "official_url": "https://top14.lnr.fr/classement"
+    },
+    {
+      "slug": "darts",
+      "name": "Darts",
+      "olbg_sport_id": 15,
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15",
+      "model_family": "Log-prize leg-win binomial best-of-11 legs (PDC 2-Year Order of Merit)",
+      "official_source": "PDC Official World Rankings (Werner Ladder)",
+      "official_url": "https://www.pdc.tv/rankings"
+    },
+    {
+      "slug": "tennis",
+      "name": "Tennis",
+      "olbg_sport_id": 3,
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "model_family": "Log-points set-win binomial best-of-3 sets (PIF ATP Singles Rankings 2026-10-19)",
+      "official_source": "ATP Tour Official Singles Rankings & Activity",
+      "official_url": "https://www.atptour.com/en/rankings/singles"
+    },
+    {
+      "slug": "handball",
+      "name": "Handball",
+      "olbg_sport_id": 20,
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "model_family": "Poisson/Skellam exact goal-grid (EHF Champions League Men 24-club Groups A-F)",
+      "official_source": "EHF Champions League Men Official Standings",
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+      "slug": "volleyball",
+      "name": "Volleyball",
+      "olbg_sport_id": 21,
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "model_family": "Shrunk rally-point quotient best-of-5 sets (SuperLega Credem Banca 12-club table; M=1 low-conf cap)",
+      "official_source": "Lega Pallavolo Serie A Official Standings & Calendar",
+      "official_url": "https://www.legavolley.it/classifica/"
+    },
+    {
+      "slug": "baseball",
+      "name": "Baseball",
+      "olbg_sport_id": 12,
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "model_family": "Pythagorean & Poisson run-grid (MLB StatsAPI 2026 Regular Season + Postseason)",
+      "official_source": "MLB Official StatsAPI (2026 World Series)",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule/postseason?season=2026"
+    },
+    {
+      "slug": "motor-racing",
+      "name": "Motor Racing",
+      "olbg_sport_id": 14,
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "model_family": "Plackett-Luce championship & race-form model (2026 FIA Formula 1 Standings)",
+      "official_source": "Formula 1 Official 2026 Drivers' Standings",
+      "official_url": "https://www.formula1.com/en/results/2026/drivers"
+    },
+    {
+      "slug": "snooker",
+      "name": "Snooker",
+      "olbg_sport_id": 8,
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "model_family": "Log-prize frame-win binomial best-of-7 frames (WST Official Top-36 Rankings)",
+      "official_source": "World Snooker Tour Official Rankings",
+      "official_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+    },
+    {
+      "slug": "cricket",
+      "name": "Cricket",
+      "olbg_sport_id": 7,
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "model_family": "Unlined — ICC T20I team-rating feed client-rendered only",
+      "official_source": "ICC Official Match Centre",
+      "official_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india"
+    },
+    {
+      "slug": "golf",
+      "name": "Golf",
+      "olbg_sport_id": 5,
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/5",
+      "model_family": "Unlined — 120–132 player strokes-gained feeds client-rendered only",
+      "official_source": "PGA Tour & DP World Tour Official Schedules",
+      "official_url": "https://www.pgatour.com/schedule"
+    },
+    {
+      "slug": "rugby-league",
+      "name": "Rugby League",
+      "olbg_sport_id": 10,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "model_family": "Unlined — 2027 off-season outrights prior to squad registration",
+      "official_source": "NRL & Super League Official Match Centres",
+      "official_url": "https://www.nrl.com/draw/"
+    },
+    {
+      "slug": "gaelic-football",
+      "name": "Gaelic Football",
+      "olbg_sport_id": 25,
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "model_family": "Unlined — County club championship scoring tables not published centrally",
+      "official_source": "GAA Official Fixtures & Results",
+      "official_url": "https://www.gaa.ie/football"
+    },
+    {
+      "slug": "greyhounds",
+      "name": "Greyhounds",
+      "olbg_sport_id": 28,
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "model_family": "Unlined — GBGB trap sectional ratings client-rendered / licensed",
+      "official_source": "Greyhound Board of Great Britain (GBGB)",
+      "official_url": "https://www.gbgb.org.uk/racing/results/"
+    },
+    {
+      "slug": "aussie-rules",
+      "name": "Aussie Rules",
+      "olbg_sport_id": 22,
+      "olbg_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22",
+      "model_family": "Active hub — 0 live OLBG events (AFL post-Grand-Final off-season)",
+      "official_source": "AFL Official Fixture",
+      "official_url": "https://www.afl.com.au/fixture"
+    },
+    {
+      "slug": "esports",
+      "name": "eSports",
+      "olbg_sport_id": 23,
+      "olbg_url": "https://www.olbg.com/betting-tips/eSports/23",
+      "model_family": "Active hub — 0 live OLBG events between knockout stages",
+      "official_source": "LoL Esports Official Schedule",
+      "official_url": "https://lolesports.com"
+    }
+  ],
+  "excluded": [
+    {
+      "slug": "soccer",
+      "name": "Soccer / Association Football",
+      "olbg_sport_id": 1,
+      "olbg_url": "https://www.olbg.com/betting-tips/Football/1",
+      "reason": "Excluded per explicit user brief ('soccer', 'football')."
+    },
+    {
+      "slug": "football",
+      "name": "Football",
+      "olbg_sport_id": 1,
+      "olbg_url": "https://www.olbg.com/betting-tips/Football/1",
+      "reason": "Excluded per explicit user brief ('football')."
+    },
+    {
+      "slug": "boxing",
+      "name": "Boxing",
+      "olbg_sport_id": 16,
+      "olbg_url": "https://www.olbg.com/betting-tips/Boxing/16",
+      "reason": "Excluded per explicit user brief ('boxing'; ID corrected from 6 -> 16 per HA-03)."
+    },
+    {
+      "slug": "ufc",
+      "name": "UFC",
+      "olbg_sport_id": 26,
+      "olbg_url": "https://www.olbg.com/betting-tips/UFC_MMA/26",
+      "reason": "Excluded per explicit user brief ('ufc')."
+    },
+    {
+      "slug": "mma",
+      "name": "MMA",
+      "olbg_sport_id": 26,
+      "olbg_url": "https://www.olbg.com/betting-tips/UFC_MMA/26",
+      "reason": "Excluded per explicit user brief ('mma')."
+    },
+    {
+      "slug": "american-football",
+      "name": "American Football",
+      "olbg_sport_id": 6,
+      "olbg_url": "https://www.olbg.com/betting-tips/American_Football/6",
+      "reason": "Excluded per explicit user brief ('american football')."
+    },
+    {
+      "slug": "hurling",
+      "name": "Hurling",
+      "olbg_sport_id": 24,
+      "olbg_url": "https://www.olbg.com/betting-tips/Hurling/24",
+      "reason": "Excluded per explicit user brief ('hurling')."
+    },
+    {
+      "slug": "horse-racing",
+      "name": "Horse Racing",
+      "olbg_sport_id": 2,
+      "olbg_url": "https://www.olbg.com/betting-tips/Horse_Racing/2",
+      "reason": "Excluded per explicit user brief ('horse racing')."
+    },
+    {
+      "slug": "cycling",
+      "name": "Cycling",
+      "olbg_sport_id": 17,
+      "olbg_url": "https://www.olbg.com/betting-tips/Cycling/17",
+      "reason": "Excluded per explicit user brief ('cycling'; ID corrected from None -> 17 per HA-03)."
+    },
+    {
+      "slug": "specials",
+      "name": "Specials",
+      "olbg_sport_id": 18,
+      "olbg_url": "https://www.olbg.com/betting-tips/Specials/18",
+      "reason": "Excluded per explicit user brief ('specials')."
+    }
+  ]
+}

@@ -2081,3 +2081,50 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 | Open review | Board 207→277 rebuild mismatch and workflow drift coverage remain needs review/cross-scope requests. No external official-source content was freshly verified by this session. |
 
 **Post-merge copy clarification:** the root dashboard itself publishes 14 price-band writeups; the separate `/verified/` research page contains 16 additional writeups. The README now distinguishes these rather than summing them as 30 root predictions. This clarification is included in the follow-up publication record.
+---
+
+## Session `arena/aa8e25ef-olbg2` — final line-by-line verification, prediction audit, and publication integration (2026-10-22)
+
+**Session ID:** `arena/aa8e25ef-olbg2` · **Branch:** `arena/aa8e25ef-olbg2` (Arena-fixed) · **Claimed:** 2026-10-22 12:10 UTC, before any implementation edit, committed and pushed first per protocol. **Rebased to `origin/main` `293c0c0` (PR #93) on 2026-10-22 12:13 UTC; no upstream files discarded, conflict resolved append-only.**
+
+**Concurrent-session check at claim time** (`git fetch origin` + `gh pr list` at 12:13 UTC, `origin/main` = `293c0c0`):
+
+| Branch / PR | Status | Treatment |
+|---|---|---|
+| `arena/dc72bac4-olbg2`, PR #92 **MERGED** `44ac539` + PR #93 `293c0c0` | **MERGED** (2026-10-22 12:10 UTC) | Completed — reproducibility audit + review page + root count corrections; file scopes `research/reproducibility-audit-dc72bac4.md`, `review/reproducibility.html`, `tests/test_publication_counts.py`, `README.md`, `scripts/build_site.py` — **untouched here except for append-only COORDINATION.md until F7** |
+| All other prior sessions (`bfeb6335`, `e4f35827`, `42fb7792`, `ddcbf63c`, `7f261be1`, `1352b77f`, `c12bdcd7`, `02095e6b`, `42c8f6be`, `65ff36f0`, `d81930c3`, `5de28a6f`, `17c50bb7`) | **Closed & merged** | Completed; no active claims |
+| No open PRs at claim time | — | Shared outputs free for final integration |
+
+**Scope rule:** Until F7, this session edits only `COORDINATION.md` (append-only claim), `research/final-verification-aa8e25ef.md` (new verification report), and `publication.html` (access-probe update). No other session's data, builder, or generated page is edited until the final integration step, where shared outputs are regenerated only via their own committed scripts.
+
+| # | Task | Status | Owner | File scope (strictly disjoint until F7) |
+|---|---|---|---|---|
+| A1 | Claim board, fetch all remote branches, verify 0 file-scope conflicts | **done** (commit d6647ef, rebased to 293c0c0) | `arena/aa8e25ef-olbg2` | `COORDINATION.md` (append-only) |
+| A2 | Repo recon + line-by-line verification of every layer (OLBG reverse-engineering, fixture/source linkage, price/odds math, confidence gating, prediction language) | **done** | `arena/aa8e25ef-olbg2` | `research/final-verification-aa8e25ef.md` |
+| A3 | Audit high-confidence predictions for brief compliance (≥70% + −250…+10000, ≥30 words, team + player + form + recent history + explicit selection, unique non-robotic prose, sourced) | **done** | `arena/aa8e25ef-olbg2` | `data/final/predictions.json` (read-only audit; no data edit unless a hallucination is confirmed) |
+| A4 | Rebuild all layers, run full test suite + link audits, confirm deterministic generation | **done** | `arena/aa8e25ef-olbg2` | `scripts/*`, `tests/*` (run only) |
+| A5 | Publish updated `publication.html` access-probe + verification ledger if needed | **done** | `arena/aa8e25ef-olbg2` | `publication.html`, `research/publication-17c50bb7.md` (append note) |
+| A6 | Final integration: rebase on latest `main`, rebuild shared outputs via committed scripts only, PR → merge (no approval wait) → Pages deploy confirmed → record PR + merge SHA + live URLs | **in progress** | `arena/aa8e25ef-olbg2` | shared outputs at integration only |
+
+**Verification notes:** No value is published without an official source URL; anything unconfirmed stays blank with a reason on the flagged page. No bookmaker price is read.
+
+### A2–A6 completion — `arena/aa8e25ef-olbg2` (2026-10-22)
+
+| # | Task | Final status | Result |
+|---|---|---|---|
+| A2 | **done** | `research/final-verification-aa8e25ef.md` — line-by-line audit of 382 final + 188 verified rows, 17 sports, 339 originated markets, confidence math, OLBG taxonomy, source linkage. Every row has an `https://` official_url; 0 bad URLs; 0 excluded-sport leaks. Manual-review links provided for all 29 official feeds. |
+| A3 | **done** | All 19 high-confidence picks audited: p 70.1–71.6% + fair -250…+10000 (1.40–1.43), words 64–94 (≥30), unique openings, team + form + history + explicit Back/Take + market present. Player named in 10/19 where official leaders feed rendered; 9 team-form-only cases flagged as A-03 (SHL, Pro D2, URC, some NBA/ATP lack player leaders in server-rendered capture) — no hallucinated player added. No bookmaker price read. |
+| A4 | **done** | Full rebuild: `verified_seed → verified_model → verified_build` (188 rows, 154 originated), `build_site` (10+17 pages, 188 rows), `final_consolidate → predictions → flags → build` (26 pages, 382 rows, 19 predictions), `integration_audit` 0 local link errors, `portal_verify` 707/707 rows linked, `hub_verify` 524/524 rows linked, `unittest` 149 passed. Deterministic generation confirmed (`git diff --exit-code` 0). |
+| A5 | **done** | Access probe re-confirmed: sandbox egress limited to github.com/npmjs/pypi only (TLS EOF on olbg.com, nhl.com, nba.com — recorded in `research/publication-17c50bb7.md`). No new official fact claimed as freshly re-verified; `publication.html` remains the honest Flagged for Review probe page. All undone verification explicitly disclosed as “inherited” vs “re-read” in verification report §7. |
+| A6 | **in progress** | Rebased on `origin/main` 293c0c0 (PR #93) preserving both upstream publication records; no conflicts discarding work. Full test suite green, no drift. PR → merge → Pages deploy follows. |
+
+**Irregularities flagged in this session (for manual review, not blockers):**
+- A-03: 9 of 19 final predictions lack a named player because the official source that rendered the fixture did not server-render player leaders (SHL, Pro D2, URC, some NBA/ATP). The picks page header “names a player” is narrowed to “where official capture provided one” in this report.
+- RPA-02/RPA-03 remain **needs review** (board 207→277 drift, CI drift gate gap) — owned by PR #91 scope, not edited here.
+- All other flagged items (FR-01…FR-18, VF-01…VF-35) remain published on `final/flagged.html` and `flagged.html` with source links.
+
+**What this session did not do:** No new fixture, price, or player fact was invented to fill a blank; no bookmaker price was read; no other session's data file or generator was edited. The report is read-only audit + append-only board.
+
+### Publication record — `arena/aa8e25ef-olbg2` (A6 complete, pending merge confirmation)
+
+*This section is completed after the PR merge and Pages deploy are confirmed live. See below for PR link, merge SHA, Validate/Pages runs, and live URL checks. Until then, A6 remains “in progress”.*

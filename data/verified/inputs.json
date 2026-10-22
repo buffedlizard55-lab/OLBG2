@@ -2850,6 +2850,32 @@
       "runs_allowed": 618
     }
   },
+  "mlb_world_series": {
+    "id": "mlb-849805",
+    "competition": "2026 MLB World Series — Game 1",
+    "date": "2026-10-23",
+    "venue": "American Family Field",
+    "away": {
+      "code": "TB",
+      "name": "Tampa Bay Rays",
+      "gp": 162,
+      "w": 98,
+      "l": 64,
+      "rs": 736,
+      "ra": 650
+    },
+    "home": {
+      "code": "MIL",
+      "name": "Milwaukee Brewers",
+      "gp": 162,
+      "w": 103,
+      "l": 59,
+      "rs": 832,
+      "ra": 618
+    },
+    "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-31",
+    "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+  },
   "mlb_fixtures": [
     {
       "id": "mlb-849805",

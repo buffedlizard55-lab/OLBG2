@@ -14,14 +14,14 @@ covering every sport OLBG lists <em>except</em> the ten the brief excludes. We i
 record every market OLBG offers on them, originate our own lines from official governing-body ratings,
 pick a winner with a confidence label, and write a prediction for each high-confidence pick.
 Where a value cannot be confirmed from an official source it is left blank and flagged &mdash; never inferred.</p>
-<div class="kpis"><div class="kpi"><div class="n">17</div><div class="l">sports in scope</div></div><div class="kpi"><div class="n">8</div><div class="l">sports excluded</div></div><div class="kpi"><div class="n">145</div><div class="l">events inventoried</div></div><div class="kpi"><div class="n">26</div><div class="l">lines originated</div></div><div class="kpi"><div class="n">5</div><div class="l">high-confidence picks</div></div><div class="kpi"><div class="n">119</div><div class="l">rows flagged unverified</div></div><div class="kpi"><div class="n">7</div><div class="l">flags raised</div></div></div>
-<div class="note">Retrieval split: <strong>90</strong> rows were read from a live fetch of
+<div class="kpis"><div class="kpi"><div class="n">17</div><div class="l">sports in scope</div></div><div class="kpi"><div class="n">8</div><div class="l">sports excluded</div></div><div class="kpi"><div class="n">139</div><div class="l">events inventoried</div></div><div class="kpi"><div class="n">24</div><div class="l">lines originated</div></div><div class="kpi"><div class="n">5</div><div class="l">high-confidence picks</div></div><div class="kpi"><div class="n">115</div><div class="l">rows flagged unverified</div></div><div class="kpi"><div class="n">7</div><div class="l">flags raised</div></div></div>
+<div class="note">Retrieval split: <strong>84</strong> rows were read from a live fetch of
 OLBG on 2026-10-21; <strong>55</strong> come from dated search-index snapshots
 (2026-10-18 to 2026-10-20). The two populations are never merged &mdash; each row carries
 <code>retrieved_via</code> and <code>as_of</code>. See <a href="flagged.html">F-16</a>.</div>
 <h2>Confidence breakdown</h2><div class="scroll"><table data-sortable><thead><tr><th>Confidence</th><th class="num">Picks</th><th>Rule that produced it</th></tr></thead><tbody>
 <tr><td><span class="badge b-high">high</span></td><td class='num'>5</td><td class='small'>Model probability &ge; 0.70 on verified Tier&nbsp;1/2 inputs with verified form, or a Tier&nbsp;1 rating gap &ge; 0.55 corroborated by a verified same-series head-to-head win.</td></tr>
-<tr><td><span class="badge b-med">medium</span></td><td class='num'>10</td><td class='small'>Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates.</td></tr>
+<tr><td><span class="badge b-med">medium</span></td><td class='num'>8</td><td class='small'>Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates.</td></tr>
 <tr><td><span class="badge b-low">low</span></td><td class='num'>11</td><td class='small'>Any other published line, and any line whose divergence from an official published probability exceeds 15 percentage points.</td></tr>
 </tbody></table></div>
 <h2>Coverage by sport</h2><div class="scroll"><table data-sortable data-require-source><thead><tr><th>Sport</th><th class="num">Events</th><th class="num">Lines originated</th><th class="num">High</th><th class="num">Med</th><th class="num">Low</th><th>Retrieval</th><th>OLBG listing</th></tr></thead><tbody>
@@ -41,8 +41,8 @@ OLBG on 2026-10-21; <strong>55</strong> come from dated search-index snapshots
 <td class="num">0</td><td class="small">live fetch: 14</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/7" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/snooker.html">Snooker</a></td>
-<td class="num">7</td><td class="num">2</td>
-<td class="num">0</td><td class="num">2</td>
+<td class="num">7</td><td class="num">0</td>
+<td class="num">0</td><td class="num">0</td>
 <td class="num">0</td><td class="small">live fetch: 7</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/8" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/rugby_union.html">Rugby Union</a></td>
@@ -106,9 +106,9 @@ OLBG on 2026-10-21; <strong>55</strong> come from dated search-index snapshots
 <td class="num">0</td><td class="small">live fetch: 5</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr><td><a href="sports/greyhounds.html">Greyhounds</a></td>
-<td class="num">6</td><td class="num">0</td>
 <td class="num">0</td><td class="num">0</td>
-<td class="num">0</td><td class="small">live fetch: 6</td>
+<td class="num">0</td><td class="num">0</td>
+<td class="num">0</td><td class="small">no events</td>
 <td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 </tbody></table></div>
 <h2>Latest flags</h2><div class="grid">
@@ -130,7 +130,7 @@ data-availability</div><h4>Cricket left unoriginated after removing unverified t
 <div class="flag sev-model-divergence"><div class="id">F-14 &middot;
 model-divergence</div><h4>La Rochelle v Bordeaux capped at LOW against official LNR club win probability</h4>
 <p class="small"><a href="flagged.html#F-14">Read the detail &rarr;</a></p></div>
-</div><p class="small"><a href="flagged.html">All 7 flags</a>, including 119 itemised rows with no originated line.</p></main>
+</div><p class="small"><a href="flagged.html">All 7 flags</a>, including 115 itemised rows with no originated line.</p></main>
 <footer><div class="wrap">
 Built from <code>data/*.json</code> by <code>scripts/build_site.py</code>. Every published value carries a source
 link; values that could not be confirmed against an official source are left blank and flagged

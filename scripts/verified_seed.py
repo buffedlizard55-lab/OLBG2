@@ -871,6 +871,20 @@ def main() -> None:
             "wst_top36": WST_TOP36,
             "snooker_originated": SNOOKER_ORIGINATED,
             "mlb_teams": MLB_TEAMS,
+            # Cross-layer compatibility view: scripts/survey_lines.py prices
+            # its World Series Game 1 row from this key. Derived from the
+            # same verified MLB_TEAMS / MLB_FIXTURES literals so it cannot
+            # drift from this desk's own numbers.
+            "mlb_world_series": {
+                "id": MLB_FIXTURES[0]["id"],
+                "competition": "2026 MLB World Series — Game 1",
+                "date": MLB_FIXTURES[0]["official_date"],
+                "venue": MLB_FIXTURES[0]["venue"],
+                "away": {"code": "TB", "name": MLB_TEAMS["TB"]["name"], "gp": MLB_TEAMS["TB"]["wins"] + MLB_TEAMS["TB"]["losses"], "w": MLB_TEAMS["TB"]["wins"], "l": MLB_TEAMS["TB"]["losses"], "rs": MLB_TEAMS["TB"]["runs_scored"], "ra": MLB_TEAMS["TB"]["runs_allowed"]},
+                "home": {"code": "MIL", "name": MLB_TEAMS["MIL"]["name"], "gp": MLB_TEAMS["MIL"]["wins"] + MLB_TEAMS["MIL"]["losses"], "w": MLB_TEAMS["MIL"]["wins"], "l": MLB_TEAMS["MIL"]["losses"], "rs": MLB_TEAMS["MIL"]["runs_scored"], "ra": MLB_TEAMS["MIL"]["runs_allowed"]},
+                "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-31",
+                "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+            },
             "mlb_fixtures": MLB_FIXTURES,
             "f1_drivers": F1_DRIVERS,
             "unlined_rows": UNLINED_ROWS,

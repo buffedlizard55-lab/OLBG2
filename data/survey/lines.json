@@ -1527,108 +1527,6 @@
       "confidence_notes": []
     },
     {
-      "match": "John Higgins v Jak Jones",
-      "sport": "snooker",
-      "tier": "tier1",
-      "competition": "BetVictor Northern Ireland Open Round 2",
-      "side_a": "John Higgins",
-      "side_b": "Jak Jones",
-      "rating_a": 905000,
-      "rating_b": 319300,
-      "rating_label": "Official WST 2-year ranking money (£)",
-      "rating_source": "https://www.wst.tv/rankings/",
-      "rating_read_via": "https://www.wst.tv/matches/",
-      "rating_as_of": "2026-10-21",
-      "p_a": 0.6655,
-      "p_b": 0.3345,
-      "markets": [
-        {
-          "name": "Win Match (moneyline)",
-          "our_probability": 0.6655,
-          "our_fair_odds_a": 1.5,
-          "our_fair_odds_b": 2.99,
-          "basis": "Exact best-of-7 frame race from official WST ranking money"
-        },
-        {
-          "name": "Match Total (frames)",
-          "our_line": 5.5,
-          "basis": "Best-of-7 frame distribution against 5.5 frames",
-          "basis_source": "https://www.wst.tv/rankings/"
-        },
-        {
-          "name": "Handicap (frames)",
-          "our_line": "John Higgins -1.5 frames",
-          "basis": "Best-of-7 frame handicap",
-          "basis_source": "https://www.wst.tv/rankings/"
-        }
-      ],
-      "pick": "John Higgins",
-      "pick_probability": 0.6655,
-      "confidence": "medium",
-      "retrieved": "2026-10-21",
-      "olbg_source": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934",
-      "olbg_listed_time": "Today 08:00",
-      "olbg_market": "Win Match",
-      "olbg_top_selection": "John Higgins",
-      "olbg_tips": "3/6",
-      "olbg_tip_pct": 50,
-      "as_of": "2026-10-21",
-      "retrieved_via": "live_fetch",
-      "official_cross_ref": null,
-      "confidence_notes": []
-    },
-    {
-      "match": "Zhang Anda v Mark Williams",
-      "sport": "snooker",
-      "tier": "tier1",
-      "competition": "BetVictor Northern Ireland Open Round 2",
-      "side_a": "Zhang Anda",
-      "side_b": "Mark Williams",
-      "rating_a": 332600,
-      "rating_b": 747400,
-      "rating_label": "Official WST 2-year ranking money (£)",
-      "rating_source": "https://www.wst.tv/rankings/",
-      "rating_read_via": "https://www.wst.tv/matches/",
-      "rating_as_of": "2026-10-21",
-      "p_a": 0.3697,
-      "p_b": 0.6303,
-      "markets": [
-        {
-          "name": "Win Match (moneyline)",
-          "our_probability": 0.3697,
-          "our_fair_odds_a": 2.7,
-          "our_fair_odds_b": 1.59,
-          "basis": "Exact best-of-7 frame race from official WST ranking money"
-        },
-        {
-          "name": "Match Total (frames)",
-          "our_line": 5.5,
-          "basis": "Best-of-7 frame distribution against 5.5 frames",
-          "basis_source": "https://www.wst.tv/rankings/"
-        },
-        {
-          "name": "Handicap (frames)",
-          "our_line": "Mark Williams -1.5 frames",
-          "basis": "Best-of-7 frame handicap",
-          "basis_source": "https://www.wst.tv/rankings/"
-        }
-      ],
-      "pick": "Mark Williams",
-      "pick_probability": 0.6303,
-      "confidence": "medium",
-      "retrieved": "2026-10-21",
-      "olbg_source": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936",
-      "olbg_listed_time": "2026-10-21 09:00",
-      "olbg_market": "Win Match",
-      "olbg_top_selection": "Zhang Anda",
-      "olbg_tips": null,
-      "olbg_tip_pct": null,
-      "as_of": "2026-10-21",
-      "retrieved_via": "live_fetch",
-      "official_cross_ref": null,
-      "confidence_notes": []
-    },
-    {
       "match": "TB Rays @ MIL Brewers",
       "sport": "baseball",
       "tier": "tier1",
@@ -1639,7 +1537,7 @@
       "rating_b": 103,
       "rating_label": "Official 2026 MLB regular-season wins (TB 736/650 RS/RA; MIL 832/618 RS/RA)",
       "rating_source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-      "rating_read_via": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
+      "rating_read_via": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-31",
       "rating_as_of": "2026-10-21",
       "p_a": 0.383,
       "p_b": 0.617,

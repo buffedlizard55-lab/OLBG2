@@ -74,7 +74,8 @@ class VerifiedPipelineTests(unittest.TestCase):
 
     def test_every_row_has_trusted_official_source_url_and_no_third_party_domains(self) -> None:
         rows = self.matches["matches"]
-        self.assertGreaterEqual(len(rows), 140)
+        self.assertEqual(len(rows), self.matches["counts"]["total_rows"])
+        self.assertGreaterEqual(len(rows), 100)
         for m in rows:
             url = m.get("official_url") or ""
             parsed = urlparse(url)
@@ -115,19 +116,35 @@ class VerifiedPipelineTests(unittest.TestCase):
                 self.assertIsNone(m["handicap_market"])
                 self.assertIsNone(m["total_market"])
                 self.assertIsNone(m["pick"])
-        self.assertEqual(orig, 112)
-        self.assertEqual(unl, 43)
+        self.assertEqual(orig, self.matches["counts"]["originated_rows"])
+        self.assertEqual(unl, self.matches["counts"]["unlined_rows"])
+        self.assertEqual(orig, 93)
+        self.assertEqual(unl, 26)
 
-    def test_high_confidence_predictions_are_unique_human_and_ge_30_words(self) -> None:
-        high_ids = {
-            m["id"]
+    def test_featured_predictions_are_unique_human_and_ge_30_words(self) -> None:
+        # Written predictions are the per-match FEATURED selections: model
+        # probability >= 0.70 priced between -250 and +10000 American, so the
+        # desk never pads the page with ultra-short moneyline favourites.
+        featured = {
+            m["id"]: m["featured"]
             for m in self.matches["matches"]
-            if m["line_status"] == "originated" and m["pick"]["confidence"] == "high"
+            if m["line_status"] == "originated" and m.get("featured")
         }
         preds = self.preds["predictions"]
         pred_ids = {p["match_id"] for p in preds}
-        self.assertEqual(high_ids, pred_ids)
-        self.assertGreaterEqual(len(preds), 17)
+        self.assertEqual(set(featured), pred_ids)
+        self.assertGreaterEqual(len(preds), 10)
+        for p in preds:
+            feat = featured[p["match_id"]]
+            self.assertEqual(p["selection"], feat["selection"])
+            self.assertEqual(p["confidence"], "high")
+            self.assertGreaterEqual(p["probability"], 0.70)
+            self.assertGreaterEqual(p["fair_american"], -250)
+            self.assertLessEqual(p["fair_american"], 10000)
+            dec = 1.0 / p["probability"]
+            exp_am = round((dec - 1) * 100) if dec >= 2 else round(-100 / (dec - 1))
+            self.assertAlmostEqual(p["fair_american"], exp_am, delta=2)
+            self.assertIn(p["selection"], p["text"], "Narrative must name its selection")
         openings = set()
         headlines = set()
         for p in preds:
@@ -144,6 +161,14 @@ class VerifiedPipelineTests(unittest.TestCase):
                 self.assertNotIn(parsed.netloc, BANNED_DOMAINS)
         self.assertEqual(len(openings), len(preds), "Duplicate prediction openings found")
         self.assertEqual(len(headlines), len(preds), "Duplicate headlines found")
+
+    def test_no_stale_fixtures_and_nba_never_featured(self) -> None:
+        captured = self.matches["captured_at"]
+        for m in self.matches["matches"]:
+            self.assertGreaterEqual(m["date"], captured, f"Stale row {m['id']} dated {m['date']}")
+            if m["competition"].startswith("NBA"):
+                self.assertIsNone(m.get("featured"))
+        self.assertEqual(self.preds["captured_at"], captured)
 
     def test_html_pages_flagged_heading_and_zero_broken_internal_links(self) -> None:
         html_files = list(SITE.rglob("*.html"))

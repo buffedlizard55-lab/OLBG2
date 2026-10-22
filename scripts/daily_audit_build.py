@@ -245,7 +245,7 @@ def landing():
     body = f"""
 <p class="crumb">Dashboard</p>
 <section class="hero">
-<p class="eyebrow">Daily slate · captured 2026-10-22 21:30 UTC</p>
+<p class="eyebrow">Daily audit · captured 2026-10-22 21:30 UTC</p>
 <h1>{esc(TITLE)}</h1>
 <p class="lede">A dated snapshot built from pages fetched first-hand this session: the ATP Tour's own order of play and draws
 for the Almaty and Brussels quarter-finals, and the ICC's own fixtures list. Every fixture row carries the official page it was read from;

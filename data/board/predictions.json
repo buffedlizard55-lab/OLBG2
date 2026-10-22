@@ -1,0 +1,1394 @@
+{
+  "captured_at": "2026-10-22",
+  "session": "arena/ddcbf63c-olbg2",
+  "min_words": 30,
+  "focus_band_american": [
+    -250,
+    10000
+  ],
+  "focus_band_decimal": [
+    1.4,
+    101.0
+  ],
+  "count": 35,
+  "strict_70pct_count": 22,
+  "multifactor_count": 13,
+  "predictions": [
+    {
+      "match_id": "nhl-2026020162",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Minnesota Wild @ Calgary Flames",
+      "date": "2026-10-22",
+      "time": "2026-10-23T01:00:00Z",
+      "venue": "Scotiabank Saddledome",
+      "selection": "Minnesota Wild (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.7084,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Kirill Kaprizov's 11-goal start and Jesper Wallstedt's 6 wins anchor Minnesota at Calgary",
+      "text": "Back Minnesota Wild (Moneyline) when the Minnesota Wild visit the Calgary Flames at Scotiabank Saddledome on Thursday night. Kirill Kaprizov leads Minnesota with 11 goals alongside Quinn Hughes (11 assists) and goaltender Jesper Wallstedt (6 wins), driving the Wild to a 6-2-2 start (14 points, 31 goals for, 25 against). Calgary sit 2-6-0 with a league-low 17 goals scored against 37 allowed and a 1-3-0 home record where they have been outscored 19-9 despite winning their most recent outing, putting the visitors at 70.8% (1.41 decimal, -244 American).",
+      "word_count": 88,
+      "player_cited": "Kirill Kaprizov (11 goals), Quinn Hughes (11 assists), Jesper Wallstedt (6 wins); Morgan Frost (3 goals)",
+      "form_cited": "Minnesota Wild 6-2-2 (14 pts, 31 GF, 25 GA); Calgary Flames 2-6-0 (4 pts, 17 GF, 37 GA)",
+      "history_cited": "Calgary sit 1-3-0 at Scotiabank Saddledome (outscored 19-9 at home) despite a W1 uptick last time out",
+      "facts": [
+        {
+          "claim": "Minnesota Wild stand 6-2-2 (14 pts, 31 GF, 25 GA); Calgary Flames stand 2-6-0 (4 pts, 17 GF, 37 GA)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "MIN teamLeaders: Kirill Kaprizov 11 G, Quinn Hughes 11 A, Jesper Wallstedt 6 W; CGY: Morgan Frost 3 G",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Calgary home split 1-3-0 (9 GF, 19 GA), current streak W1",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020163",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Carolina Hurricanes @ Edmonton Oilers",
+      "date": "2026-10-22",
+      "time": "2026-10-23T01:00:00Z",
+      "venue": "Rogers Place",
+      "selection": "Carolina Hurricanes +1.5 (Handicap)",
+      "market": "Handicap",
+      "probability": 0.7033,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Andrei Svechnikov and Pyotr Kochetkov give 8-2-1 Carolina +1.5 puck-line security in Edmonton",
+      "text": "Take Carolina Hurricanes +1.5 (Handicap) as the Carolina Hurricanes visit the Edmonton Oilers at Rogers Place. Carolina pace the Eastern Conference at 8-2-1 (17 points, 42 goals for, 27 against) behind Andrei Svechnikov (6 goals), Jackson Blake (10 assists), and netminder Pyotr Kochetkov (6 wins), winning two straight and going 5-2-1 on the road. Edmonton (7-1-1, 41 GF, 27 GA) counter with Connor McDavid (20 assists) and Leon Draisaitl (8 goals) on a three-game winning run, making a tight one-goal clash likely and pricing the Hurricanes +1.5 puck line at 70.3% (1.42 decimal, -238 American).",
+      "word_count": 95,
+      "player_cited": "Andrei Svechnikov (6 goals), Jackson Blake (10 assists), Pyotr Kochetkov (6 wins); Connor McDavid (20 assists), Leon Draisaitl (8 goals)",
+      "form_cited": "Carolina Hurricanes 8-2-1 (17 pts, 42 GF, 27 GA); Edmonton Oilers 7-1-1 (15 pts, 41 GF, 27 GA)",
+      "history_cited": "Carolina are 5-2-1 on the road and on a two-game winning streak (W2); Edmonton ride a three-game winning streak (W3)",
+      "facts": [
+        {
+          "claim": "Carolina Hurricanes 8-2-1 (17 pts, 42 GF, 27 GA, road 5-2-1, W2); Edmonton Oilers 7-1-1 (15 pts, 41 GF, 27 GA, W3)",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "CAR leaders: Andrei Svechnikov 6 G, Jackson Blake 10 A, Pyotr Kochetkov 6 W; EDM leaders: Leon Draisaitl 8 G, Connor McDavid 20 A",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "el-E2026-67",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "competition": "EuroLeague 2026-27 — Round 7",
+      "event": "Kosner Baskonia Vitoria-Gasteiz @ Panathinaikos AKTOR Athens",
+      "date": "2026-10-22",
+      "time": "2026-10-22 18:15 UTC",
+      "venue": "Telekom Center Athens",
+      "selection": "Panathinaikos AKTOR Athens -5.75 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7102,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Kostas Sloukas and Sylvain Francisco steer 5-1 Panathinaikos against 1-5 Baskonia in Athens",
+      "text": "Back Panathinaikos AKTOR Athens -5.75 (Alternate Handicap) when Panathinaikos AKTOR Athens host Kosner Baskonia Vitoria-Gasteiz in EuroLeague Round 7 at Telekom Center Athens. Directed in the backcourt by Kostas Sloukas, Sylvain Francisco, and Jerian Grant, Panathinaikos sit top of the 20-club table at 5-1 with a league-best +90 point differential (528 scored, 438 allowed) and a 4-1 home mark. Baskonia arrive 20th at 1-5 (-60 differential) having dropped both road games while conceding 94.0 points per outing, putting the reduced home spread at 71.0% (1.41 decimal, -244 American).",
+      "word_count": 88,
+      "player_cited": "Kostas Sloukas (#10 Guard), Sylvain Francisco (#3 Guard), Jerian Grant (Guard)",
+      "form_cited": "Panathinaikos AKTOR Athens 5-1 (528 PF, 438 PA, +90, 4-1 home); Kosner Baskonia 1-5 (504 PF, 564 PA, -60, 0-2 away)",
+      "history_cited": "Panathinaikos have won 4 of 5 EuroLeague home games at Telekom Center Athens while Baskonia have lost both road trips (0-2) allowing 94.0 PPG",
+      "facts": [
+        {
+          "claim": "Panathinaikos lead EuroLeague at 5-1 (528 PF, 438 PA, +90, 4-1 home); Baskonia rank 20th at 1-5 (504 PF, 564 PA, -60, 0-2 road)",
+          "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+        },
+        {
+          "claim": "Panathinaikos official 2026-27 guard rotation includes Kostas Sloukas (#10), Sylvain Francisco (#3), and Jerian Grant",
+          "source": "https://www.euroleaguebasketball.net/en/euroleague/teams/panathinaikos-aktor-athens/roster/pan/"
+        }
+      ],
+      "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
+    },
+    {
+      "match_id": "top14-11867",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "French Top 14 2026-27 — Journée 7",
+      "event": "Stade Toulousain vs USA Perpignan",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:35 UTC",
+      "venue": null,
+      "selection": "Stade Toulousain -3.25 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7064,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Antoine Dupont and Romain Ntamack power table-topping Stade Toulousain against Perpignan",
+      "text": "Take Stade Toulousain -3.25 (Alternate Handicap) against USA Perpignan at Stade Ernest-Wallon in Saturday's Top 14 Journée 7 fixture. Stade Toulousain lead the championship on 24 points (5W-0D-1L, 197 scored, 124 conceded, +73) after beating Aviron Bayonnais 45-34 in Journée 6 behind two tries apiece from Antoine Dupont and Julien Marchand plus a try and four conversions from Romain Ntamack, alongside a 60-14 Champions Cup rout of Sale Sharks. Against 9th-placed Perpignan (3W-0D-3L, -33 differential), covering the modest home handicap rates 70.6% (1.42 decimal, -238 American).",
+      "word_count": 86,
+      "player_cited": "Antoine Dupont (2 tries vs Bayonne), Julien Marchand (2 tries), Romain Ntamack (1 try, 4 conversions)",
+      "form_cited": "Stade Toulousain 1st on 24 pts (5W-0D-1L, 197 PF, 124 PA, +73); USA Perpignan 9th on 13 pts (3W-0D-3L, 166 PF, 199 PA, -33)",
+      "history_cited": "Toulouse beat Aviron Bayonnais 45-34 in Top 14 J6 on 11 October (five straight league wins) and routed Sale Sharks 60-14 in EPCR Champions Cup Round 1",
+      "facts": [
+        {
+          "claim": "Stade Toulousain lead Top 14 on 24 pts (5W-0D-1L, 197 PF, 124 PA, +73); Perpignan sit 9th on 13 pts (3W-0D-3L, 166 PF, 199 PA)",
+          "source": "https://top14.lnr.fr/classement"
+        },
+        {
+          "claim": "In J6 (Toulouse 45-34 Bayonne, 11/10/2026), Antoine Dupont scored 2 tries (12', 74'), Julien Marchand 2 tries (26', 34'), and Romain Ntamack 1 try (68') + 4 conversions",
+          "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j6/11860-toulouse-bayonne"
+        }
+      ],
+      "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "prod2-12064",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "French Pro D2 2026-27 — Journée 8",
+      "event": "Provence Rugby vs AS Béziers Hérault",
+      "date": "2026-10-23",
+      "time": "2026-10-23 19:00 UTC",
+      "venue": null,
+      "selection": "Provence Rugby -5.25 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7053,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Thomas Salles's boot and Tyler Ardron's try-scoring form back 7-0 Provence Rugby against Béziers",
+      "text": "Back Provence Rugby -5.25 (Alternate Handicap) against AS Béziers Hérault at Stade Maurice-David in Friday's Pro D2 Journée 8 clash. Unbeaten Provence Rugby stand 7W-0D-0L on 29 points (222 scored, 158 conceded, +64) after defeating Nissa Rugby 34-24 away on 16 October behind five penalties and two conversions from Thomas Salles alongside tries from Tyler Ardron, Evan Olmstead, and Kaveinga Finau. Fourteenth-placed Béziers (2W-0D-5L, -93 differential, 240 points conceded) lost 49-24 in Journée 7, pricing the one-score home handicap at 70.5% (1.42 decimal, -238 American).",
+      "word_count": 85,
+      "player_cited": "Thomas Salles (5 penalties, 2 conversions at Nice), Tyler Ardron (try 54'), Evan Olmstead (try 67'), Kaveinga Finau (try 15')",
+      "form_cited": "Provence Rugby 2nd at 7W-0D-0L (29 pts, 222 PF, 158 PA, +64); AS Béziers Hérault 14th at 2W-0D-5L (9 pts, 147 PF, 240 PA, -93)",
+      "history_cited": "Provence beat Nissa Rugby 34-24 away in J7 on 16 October; Béziers lost 49-24 at Aurillac in J7 and have shipped 240 points in 7 rounds",
+      "facts": [
+        {
+          "claim": "Provence Rugby stand 7W-0D-0L (29 pts, 222 PF, 158 PA, +64); AS Béziers stand 2W-0D-5L (9 pts, 147 PF, 240 PA, -93)",
+          "source": "https://prod2.lnr.fr/classement"
+        },
+        {
+          "claim": "In J7 (Nissa Rugby 24-34 Provence Rugby, 16/10/2026), Thomas Salles kicked 5 penalties and 2 conversions while Tyler Ardron, Evan Olmstead, Kaveinga Finau, Enzo Labadie, and Joris Cazenave scored tries",
+          "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j7/12061-nice-provence-rugby"
+        }
+      ],
+      "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "prod2-12066",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "French Pro D2 2026-27 — Journée 8",
+      "event": "Stade Aurillacois vs USON Nevers",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:30 UTC",
+      "venue": null,
+      "selection": "Stade Aurillacois (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.7053,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Jake Strachan and Benjamin Houston lead resurgent Stade Aurillacois against winless Nevers",
+      "text": "Back Stade Aurillacois (1X2 Match Winner) to defeat USON Nevers at Stade Jean-Alric in Pro D2 Journée 8. Stade Aurillacois have surged to 9th on 16 points (3W-0D-4L, 240 points scored) on the back of consecutive home victories over Biarritz Olympique (52-33 on 9 October, where fly-half Jake Strachan logged a try, seven conversions, and a penalty alongside a Benjamin Houston brace) and AS Béziers (49-24 on 16 October). Winless 16th-placed Nevers sit 0W-0D-7L (-76 differential), putting the hosts at 70.5% (1.42 decimal, -238 American).",
+      "word_count": 85,
+      "player_cited": "Jake Strachan (1 try, 7 conversions, 1 penalty vs Biarritz), Benjamin Houston (2 tries vs Biarritz)",
+      "form_cited": "Stade Aurillacois 9th on 16 pts (3W-0D-4L, 240 PF, 254 PA); USON Nevers 16th on 4 pts (0W-0D-7L, 146 PF, 222 PA, -76)",
+      "history_cited": "Aurillac beat Biarritz Olympique 52-33 in J6 (9 Oct) and AS Béziers 49-24 in J7 (16 Oct), while Nevers have lost all 7 games including 27-20 vs Agen",
+      "facts": [
+        {
+          "claim": "Stade Aurillacois stand 3W-0D-4L (16 pts, 240 PF, 254 PA); USON Nevers stand 0W-0D-7L (4 pts, 146 PF, 222 PA, -76)",
+          "source": "https://prod2.lnr.fr/classement"
+        },
+        {
+          "claim": "In J6 (Aurillac 52-33 Biarritz, 09/10/2026), Jake Strachan recorded 1 try, 7 conversions, and 1 penalty (22 pts) and Benjamin Houston scored 2 tries (25', 63')",
+          "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j6/12049-aurillac-biarritz"
+        }
+      ],
+      "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292609",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 4",
+      "event": "Connacht Rugby vs Zebre Parma",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:45 UTC",
+      "venue": "Dexcom Stadium",
+      "selection": "Connacht Rugby (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.7025,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Josh Ioane's try-scoring double and Finlay Bealham anchor Connacht at home to 0-3 Zebre Parma",
+      "text": "Back Connacht Rugby (1X2 Match Winner) to beat Zebre Parma at Dexcom Stadium on Friday evening in URC Round 4. Connacht Rugby (1W-0D-2L, 56 PF, 84 PA) won 22-19 at Benetton in Round 2 and saw Josh Ioane cross twice alongside Sean Jansen and kicker Ciaran Frawley in Round 3 at Glasgow. Sixteenth-placed Zebre Parma arrive winless at 0W-0D-3L with a league-worst -64 differential (52 PF, 116 PA) after losing 40-27 at Cardiff and 29-12 to Edinburgh, pricing the Galway home win at 70.2% (1.42 decimal, -238 American).",
+      "word_count": 88,
+      "player_cited": "Josh Ioane (2 tries at Glasgow on 9 Oct), Sean Jansen (try 16'), Ciaran Frawley (2 conversions), Finlay Bealham (prop)",
+      "form_cited": "Connacht Rugby 11th at 1W-0D-2L (56 PF, 84 PA); Zebre Parma 16th at 0W-0D-3L (1 pt, 52 PF, 116 PA, -64)",
+      "history_cited": "Connacht won 22-19 at Benetton on 2 October before losing 36-19 at Glasgow on 9 October; Zebre lost 40-27 at Cardiff (2 Oct) and 29-12 vs Edinburgh (10 Oct)",
+      "facts": [
+        {
+          "claim": "Connacht stand 1W-0D-2L (56 PF, 84 PA); Zebre Parma stand 16th at 0W-0D-3L (1 pt, 52 PF, 116 PA, -64)",
+          "source": "https://stats.unitedrugby.com/match-centre/table"
+        },
+        {
+          "claim": "Josh Ioane scored 2 tries (47', 59'), Sean Jansen 1 try (16'), and Ciaran Frawley 2 conversions in R3 (Glasgow 36-19 Connacht, 09/10/2026)",
+          "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-connacht-rugby-2026-10-09/292600"
+        }
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292610",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 4",
+      "event": "Edinburgh Rugby vs 10bet Lions",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:45 UTC",
+      "venue": "Hive Stadium",
+      "selection": "Edinburgh Rugby -1.75 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7025,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Magnus Bradbury and James Grayson lead unbeaten 3-0 Edinburgh against leaky 10bet Lions",
+      "text": "Take Edinburgh Rugby -1.75 (Alternate Handicap) against 10bet Lions at Hive Stadium on Friday night in URC Round 4. Table-topping Edinburgh Rugby stand 3W-0D-0L on 14 points (80 scored, joint-best 54 conceded) after beating DHL Stormers 17-13 at home and Zebre Parma 29-12 away on 10 October behind tries from Magnus Bradbury, Matt Currie, Freddy Douglas, and Tom Currie plus 11 kicking points from James Grayson. The Lions (2W-0D-1L, 102 PA) just shipped nine tries in a 57-15 defeat at Pretoria, pricing Edinburgh's small spread at 70.2% (1.42 decimal, -238 American).",
+      "word_count": 91,
+      "player_cited": "Magnus Bradbury (try 56' at Zebre), Matt Currie (try 30'), Freddy Douglas (try 37'), James Grayson (3 conversions, 1 penalty); Siba Qoma (Lions try)",
+      "form_cited": "Edinburgh Rugby 1st at 3W-0D-0L (14 pts, 80 PF, 54 PA, +26); 10bet Lions 7th at 2W-0D-1L (10 pts, 77 PF, 102 PA, -25)",
+      "history_cited": "Edinburgh beat Stormers 17-13 at Hive Stadium (2 Oct) and Zebre Parma 29-12 away (10 Oct), while 10bet Lions were routed 57-15 at Vodacom Bulls on 10 October",
+      "facts": [
+        {
+          "claim": "Edinburgh lead URC at 3W-0D-0L (14 pts, 80 PF, 54 PA); 10bet Lions sit 7th at 2W-0D-1L (77 PF, 102 PA)",
+          "source": "https://stats.unitedrugby.com/match-centre/table"
+        },
+        {
+          "claim": "In R3 (Zebre 12-29 Edinburgh, 10/10/2026), Matt Currie (30'), Freddy Douglas (37'), Magnus Bradbury (56'), and Tom Currie (80') scored tries with James Grayson kicking 3 conversions and 1 penalty",
+          "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/zebre-parma-vs-edinburgh-rugby-2026-10-10/292604"
+        }
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292611",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 4",
+      "event": "Vodacom Bulls vs Ulster Rugby",
+      "date": "2026-10-24",
+      "time": "2026-10-24 11:45 UTC",
+      "venue": "Loftus Versfeld",
+      "selection": "Vodacom Bulls -3.75 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7071,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Cameron Hanekom's brace and Handre Pollard's boot back Vodacom Bulls against winless Ulster",
+      "text": "Back Vodacom Bulls -3.75 (Alternate Handicap) against Ulster Rugby at Loftus Versfeld on Saturday in URC Round 4. Pretoria's Vodacom Bulls lead the championship in scoring at 2W-0D-1L (126 points for, 54 against, +72) after hammering 10bet Lions 57-15 on 10 October behind two tries from Cameron Hanekom, scores from Canan Moodie, Johan Grobbelaar, and Harold Vorster, and three conversions apiece from Curwin Bosch and Handre Pollard. Against winless Ulster (0W-2D-1L, led in the pack by Iain Henderson and Nick Timoney), covering four points prices at 70.7% (1.41 decimal, -244 American).",
+      "word_count": 91,
+      "player_cited": "Cameron Hanekom (2 tries vs Lions), Canan Moodie (try 44'), Johan Grobbelaar (try 26'), Handre Pollard (3 conversions), Curwin Bosch (3 conversions); Iain Henderson (Ulster lock)",
+      "form_cited": "Vodacom Bulls 3rd at 2W-0D-1L (11 pts, 126 PF, 54 PA, +72); Ulster Rugby 13th at 0W-2D-1L (6 pts, 88 PF, 93 PA, -5)",
+      "history_cited": "Vodacom Bulls crushed 10bet Lions 57-15 (9 tries) on 10 October after losing 26-22 at Munster (3 Oct); Ulster drew 33-33 at Glasgow on 3 October",
+      "facts": [
+        {
+          "claim": "Vodacom Bulls stand 2W-0D-1L (11 pts, 126 PF, 54 PA, +72); Ulster stand 0W-2D-1L (6 pts, 88 PF, 93 PA)",
+          "source": "https://stats.unitedrugby.com/match-centre/table"
+        },
+        {
+          "claim": "In R3 (Vodacom Bulls 57-15 10bet Lions, 10/10/2026), Cameron Hanekom scored 2 tries (29', 35') alongside tries by Vorster, Grobbelaar, Rudolph, Moodie, van Heerden, Jooste, and de Klerk, with Bosch (3) and Pollard (3) converting",
+          "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-10bet-lions-2026-10-10/292602"
+        }
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292612",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 4",
+      "event": "DHL Stormers vs Scarlets",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:00 UTC",
+      "venue": "DHL Stadium",
+      "selection": "DHL Stormers -0.75 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7139,
+      "fair_odds": 1.4,
+      "fair_american": -250,
+      "confidence": "high",
+      "headline": "Hacjivah Dayimani's double and Sacha Feinberg-Mngomezulu power DHL Stormers past Scarlets",
+      "text": "Take DHL Stormers -0.75 (Alternate Handicap) against the Scarlets at DHL Stadium in Saturday's URC Round 4 meeting. Fourth-placed DHL Stormers (2W-0D-1L, 11 points, 81 scored, joint-best 54 conceded) dismantled Hollywoodbets Sharks 39-22 in Cape Town on 10 October as flanker Hacjivah Dayimani crossed twice alongside Seabelo Senatla, Leolin Zas, Andre-Hugo Venter, and JJ Kotze while Sacha Feinberg-Mngomezulu kicked three conversions and a penalty. Twelfth-placed Scarlets sit 1W-0D-2L (-17 differential, 68 PF, 85 PA), making the near-pick'em home spread a 71.4% play (1.40 decimal, -250 American).",
+      "word_count": 86,
+      "player_cited": "Hacjivah Dayimani (2 tries vs Sharks), Sacha Feinberg-Mngomezulu (3 conversions, 1 penalty), Seabelo Senatla (try 6'), Leolin Zas (try 41')",
+      "form_cited": "DHL Stormers 4th at 2W-0D-1L (11 pts, 81 PF, 54 PA, +27); Scarlets 12th at 1W-0D-2L (6 pts, 68 PF, 85 PA, -17)",
+      "history_cited": "DHL Stormers beat Hollywoodbets Sharks 39-22 (6 tries to 3) at DHL Stadium on 10 October after falling 17-13 at Edinburgh (2 Oct); Scarlets edged Benetton 27-26 (10 Oct) after losing 38-26 at Dragons",
+      "facts": [
+        {
+          "claim": "DHL Stormers stand 4th at 2W-0D-1L (11 pts, 81 PF, 54 PA, +27); Scarlets stand 12th at 1W-0D-2L (6 pts, 68 PF, 85 PA, -17)",
+          "source": "https://stats.unitedrugby.com/match-centre/table"
+        },
+        {
+          "claim": "In R3 (DHL Stormers 39-22 Sharks, 10/10/2026), Hacjivah Dayimani scored 2 tries (36', 47') and Sacha Feinberg-Mngomezulu kicked 3 conversions and 1 penalty",
+          "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-hollywoodbets-sharks-2026-10-10/292603"
+        }
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292617",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 5",
+      "event": "Glasgow Warriors vs 10bet Lions",
+      "date": "2026-10-30",
+      "time": "2026-10-30 19:45 UTC",
+      "venue": "Scotstoun Stadium",
+      "selection": "Glasgow Warriors -1.25 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7094,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Gregor Hiddleston, Rory Darge, and George Horne back unbeaten Glasgow Warriors vs 10bet Lions",
+      "text": "Back Glasgow Warriors -1.25 (Alternate Handicap) when unbeaten Glasgow Warriors welcome 10bet Lions to Scotstoun Stadium in URC Round 5. Second-placed Glasgow stand 2W-1D-0L on 13 points (95 scored, 72 conceded, +23) after dispatching Connacht 36-19 at Scotstoun on 9 October via two tries from hooker Gregor Hiddleston, further scores from captain Rory Darge, Josh McKay, and Seb Stephen, and four conversions from George Horne. Against a Lions defence that conceded 57 points in Pretoria and 102 across three rounds, Glasgow covering two points prices at 70.9% (1.41 decimal, -244 American).",
+      "word_count": 91,
+      "player_cited": "Gregor Hiddleston (2 tries vs Connacht), Rory Darge (try 33'), Josh McKay (try 43'), George Horne (4 conversions)",
+      "form_cited": "Glasgow Warriors 2nd at 2W-1D-0L (13 pts, 95 PF, 72 PA, +23); 10bet Lions 7th at 2W-0D-1L (10 pts, 77 PF, 102 PA, -25)",
+      "history_cited": "Glasgow beat Connacht 36-19 at Scotstoun on 9 October after drawing 33-33 with Ulster (3 Oct); 10bet Lions lost 57-15 at Vodacom Bulls on 10 October",
+      "facts": [
+        {
+          "claim": "Glasgow Warriors stand 2nd at 2W-1D-0L (13 pts, 95 PF, 72 PA, +23); 10bet Lions stand 7th at 2W-0D-1L (77 PF, 102 PA, -25)",
+          "source": "https://stats.unitedrugby.com/match-centre/table"
+        },
+        {
+          "claim": "In R3 (Glasgow 36-19 Connacht, 09/10/2026), Gregor Hiddleston scored 2 tries (20', 40+3'), Rory Darge 1 try (33'), Josh McKay 1 try (43'), and George Horne kicked 4 conversions",
+          "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-connacht-rugby-2026-10-09/292600"
+        }
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292619",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 5",
+      "event": "Vodacom Bulls vs Scarlets",
+      "date": "2026-10-31",
+      "time": "2026-10-31 15:00 UTC",
+      "venue": "Loftus Versfeld",
+      "selection": "Vodacom Bulls -4.75 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7071,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Canan Moodie and Cameron Hanekom fuel Vodacom Bulls' +72 Loftus attack against Scarlets",
+      "text": "Back Vodacom Bulls -4.75 (Alternate Handicap) when the Vodacom Bulls host the Scarlets at Loftus Versfeld in URC Round 5. Pretoria's Bulls boast the URC's most explosive offense at 2W-0D-1L (126 points scored, 54 conceded, +72), fresh off a nine-try 57-15 rout of 10bet Lions on 10 October featuring a Cameron Hanekom double, tries from Canan Moodie and Jeandre Rudolph, and six combined conversions from Curwin Bosch and Handre Pollard. Twelfth-placed Scarlets (1W-0D-2L, -17 differential) lost 38-26 away at Dragons in Round 2, putting the five-point home cover at 70.7% (1.41 decimal, -244 American).",
+      "word_count": 94,
+      "player_cited": "Cameron Hanekom (2 tries vs Lions), Canan Moodie (try 44'), Jeandre Rudolph (try 40'), Handre Pollard (3 conversions), Curwin Bosch (3 conversions)",
+      "form_cited": "Vodacom Bulls 3rd at 2W-0D-1L (11 pts, 126 PF, 54 PA, +72); Scarlets 12th at 1W-0D-2L (6 pts, 68 PF, 85 PA, -17)",
+      "history_cited": "Vodacom Bulls ran in 9 tries to beat 10bet Lions 57-15 at Loftus Versfeld on 10 October; Scarlets lost 38-26 at Dragons (3 Oct) before edging Benetton 27-26 (10 Oct)",
+      "facts": [
+        {
+          "claim": "Vodacom Bulls lead URC scoring with 126 PF vs 54 PA (+72) at 2W-0D-1L; Scarlets sit 12th at 1W-0D-2L (68 PF, 85 PA, -17)",
+          "source": "https://stats.unitedrugby.com/match-centre/table"
+        },
+        {
+          "claim": "Bulls beat Lions 57-15 on 10/10/2026 with tries from Hanekom (2), Moodie, Rudolph, Vorster, Grobbelaar, van Heerden, Jooste, and de Klerk",
+          "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-10bet-lions-2026-10-10/292602"
+        }
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292622",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 5",
+      "event": "Dragons RFC vs Zebre Parma",
+      "date": "2026-10-31",
+      "time": "2026-10-31 17:30 UTC",
+      "venue": "Rodney Parade",
+      "selection": "Dragons RFC -3.25 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7025,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Elliot Dee's brace and Tinus de Beer's kicking back Dragons RFC at Rodney Parade vs Zebre Parma",
+      "text": "Take Dragons RFC -3.25 (Alternate Handicap) against Zebre Parma at Rodney Parade in Saturday's URC Round 5 clash. Eighth-placed Dragons RFC (1W-1D-1L, 9 points, 88 scored, 83 conceded, +5) beat Scarlets 38-26 at home on 3 October and scored 31 points against Ospreys on 9 October behind a two-try display from hooker Elliot Dee, a try by Anzelo Tuitavuki, and three conversions from Tinus de Beer. Winless 16th-placed Zebre Parma (0W-0D-3L, -64 differential, 52 PF, 116 PA) lost 29-12 to Edinburgh last time out, pricing the four-point home margin at 70.2% (1.42 decimal, -238 American).",
+      "word_count": 95,
+      "player_cited": "Elliot Dee (2 tries vs Ospreys on 9 Oct), Anzelo Tuitavuki (try 56'), Tinus de Beer (3 conversions), Angus O'Brien (penalty 80+1'); Alessandro Fusco (Zebre try)",
+      "form_cited": "Dragons RFC 8th at 1W-1D-1L (9 pts, 88 PF, 83 PA, +5); Zebre Parma 16th at 0W-0D-3L (1 pt, 52 PF, 116 PA, -64)",
+      "history_cited": "Dragons defeated Scarlets 38-26 at Rodney Parade (3 Oct) and pushed Ospreys 38-31 (9 Oct); Zebre lost 40-27 at Cardiff (2 Oct) and 29-12 vs Edinburgh (10 Oct)",
+      "facts": [
+        {
+          "claim": "Dragons RFC stand 8th at 1W-1D-1L (9 pts, 88 PF, 83 PA, +5); Zebre Parma stand 16th at 0W-0D-3L (1 pt, 52 PF, 116 PA, -64)",
+          "source": "https://stats.unitedrugby.com/match-centre/table"
+        },
+        {
+          "claim": "In R3 (Dragons 31-38 Ospreys, 09/10/2026), Elliot Dee scored 2 tries (5', 50'), Anzelo Tuitavuki 1 try (56'), and Tinus de Beer kicked 3 conversions",
+          "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-ospreys-2026-10-09/292601"
+        }
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "ehfcl-202711020101049",
+      "tier": "strict_70pct_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "handball",
+      "sport_name": "Handball",
+      "competition": "EHF Champions League Men 2026/27 — Round 5",
+      "event": "Barça vs Montpellier Handball",
+      "date": "2026-10-22",
+      "time": "2026-10-22 20:45 CEST",
+      "venue": null,
+      "selection": "Barça -3.5 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.707,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Ian Barrufet (15 goals) and Ludovic Fabregas (14 goals) power 4-0 Barça against Montpellier",
+      "text": "Back Barça -3.5 (Alternate Handicap) at Palau Blaugrana in Thursday's EHF Champions League Men Group E Round 5 meeting with Montpellier Handball. Unbeaten Barça top Group E at 4W-0D-0L (8 points, 137 goals for, a competition-best 104 goals against, +33) behind left wing Ian Barrufet (15 Champions League goals), line player Ludovic Fabregas (14 goals), Daniel Fernández (11 goals), Luís Frade (11 goals), Petar Cikuša (11 goals), and goalkeeper Viktor Gísli Hallgrímsson. Against 1W-0D-3L Montpellier (116 GF, 125 GA), covering a 3.5-goal home spread rates 70.7% (1.41 decimal, -244 American).",
+      "word_count": 90,
+      "player_cited": "Ian Barrufet (15 EHF CL goals), Ludovic Fabregas (14 goals), Daniel Fernández (11 goals), Luís Frade (11 goals), Petar Cikuša (11 goals), Viktor Gísli Hallgrímsson (GK)",
+      "form_cited": "Barça 1st in Group E at 4W-0D-0L (8 pts, 137 GF, 104 GA, +33); Montpellier Handball 3rd at 1W-0D-3L (2 pts, 116 GF, 125 GA, -9)",
+      "history_cited": "Barça have won all four opening 2026-27 EHF Champions League Group E fixtures while allowing a competition-low 26.0 goals per game",
+      "facts": [
+        {
+          "claim": "Barça lead EHF CL Group E at 4W-0D-0L (8 pts, 137 GF, 104 GA, +33); Montpellier stand 3rd at 1W-0D-3L (2 pts, 116 GF, 125 GA)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Barça official 2026-27 EHF CL scorers: Ian Barrufet 15 G, Ludovic Fabregas 14 G, Daniel Fernández 11 G, Luís Frade 11 G, Petar Cikuša 11 G, Aleix Gómez 10 G",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/clubs/details/caQUSFvFaPlT7EN8zrPZaA/Bar%C3%A7a/"
+        }
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+    },
+    {
+      "match_id": "nhl-2026020170",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "San Jose Sharks @ Boston Bruins",
+      "date": "2026-10-24",
+      "time": "2026-10-24T23:00:00Z",
+      "venue": "TD Garden",
+      "selection": "Boston Bruins (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.711,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "David Pastrnak and 6-win Jeremy Swayman anchor 7-2-1 Boston against visiting San Jose",
+      "text": "Back Boston Bruins (Moneyline) when the Boston Bruins host the San Jose Sharks at TD Garden on Saturday, 24 October. Boston stand 7-2-1 (15 points, 36 goals for, 22 against) and an dominant 3-1-0 at home where they have allowed just six goals in four games behind goaltender Jeremy Swayman (6 wins) and winger David Pastrnak (4 goals, 8 assists). San Jose enter at 5-4-1 (26 GF, 34 GA, -8 differential) led by Macklin Celebrini (5 goals, 9 assists), and our shrunk Poisson model prices the Bruins moneyline at 71.1% (1.41 decimal, -244 American).",
+      "word_count": 94,
+      "player_cited": "David Pastrnak (4 goals, 8 assists), Jeremy Swayman (6 wins); Macklin Celebrini (5 goals, 9 assists), Alex Nedeljkovic (3 wins)",
+      "form_cited": "Boston Bruins 7-2-1 (15 pts, 36 GF, 22 GA, 3-1-0 home); San Jose Sharks 5-4-1 (11 pts, 26 GF, 34 GA)",
+      "history_cited": "Boston have outscored opponents 15-6 across four home dates at TD Garden while San Jose arrive on the road with a -8 goal differential",
+      "facts": [
+        {
+          "claim": "Boston Bruins 7-2-1 (15 pts, 36 GF, 22 GA, home 3-1-0 with 15 GF / 6 GA); San Jose Sharks 5-4-1 (11 pts, 26 GF, 34 GA)",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "Game 2026020170 teamLeaders: BOS David Pastrnak (4 G, 8 A), Jeremy Swayman (6 W); SJS Macklin Celebrini (5 G, 9 A), Alex Nedeljkovic (3 W)",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020195",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Minnesota Wild @ Utah Mammoth",
+      "date": "2026-10-27",
+      "time": "2026-10-28T01:00:00Z",
+      "venue": "Delta Center",
+      "selection": "Minnesota Wild +1.5 (Handicap)",
+      "market": "Handicap",
+      "probability": 0.7062,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Kirill Kaprizov (11 goals) and Jesper Wallstedt give 6-2-2 Minnesota +1.5 puck-line edge at Utah",
+      "text": "Take Minnesota Wild +1.5 (Handicap) when the Minnesota Wild visit the Utah Mammoth at Delta Center on Tuesday, 27 October. Powered by Kirill Kaprizov (11 goals), defenseman Quinn Hughes (11 assists), and goaltender Jesper Wallstedt (6 wins), Minnesota sit 6-2-2 (14 points, 31 GF, 25 GA) and have dropped only two games in regulation all season. Utah match them on 14 points (7-3-0, 38 GF, 31 GA) behind Nick Schmaltz (7 goals) and Clayton Keller (9 assists), making a one-goal margin or overtime highly probable and pricing Minnesota +1.5 at 70.6% (1.42 decimal, -238 American).",
+      "word_count": 95,
+      "player_cited": "Kirill Kaprizov (11 goals), Quinn Hughes (11 assists), Jesper Wallstedt (6 wins); Nick Schmaltz (7 goals), Clayton Keller (9 assists), Karel Vejmelka (5 wins)",
+      "form_cited": "Minnesota Wild 6-2-2 (14 pts, 31 GF, 25 GA); Utah Mammoth 7-3-0 (14 pts, 38 GF, 31 GA)",
+      "history_cited": "Minnesota have lost only twice in regulation across 10 games (2.50 GA/G) while Utah's 7-3-0 start sets up a tight Central Division matchup at Delta Center",
+      "facts": [
+        {
+          "claim": "Minnesota Wild 6-2-2 (14 pts, 31 GF, 25 GA); Utah Mammoth 7-3-0 (14 pts, 38 GF, 31 GA)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "MIN leaders: Kirill Kaprizov 11 G, Quinn Hughes 11 A, Jesper Wallstedt 6 W; UTA leaders: Nick Schmaltz 7 G, Clayton Keller 9 A, Karel Vejmelka 5 W",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/min-vs-uta/2026/10/27/2026020195",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020198",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Buffalo Sabres @ San Jose Sharks",
+      "date": "2026-10-27",
+      "time": "2026-10-28T02:30:00Z",
+      "venue": "SAP Center at San Jose",
+      "selection": "Buffalo Sabres +1.5 (Handicap)",
+      "market": "Handicap",
+      "probability": 0.7113,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Tage Thompson and Ukko-Pekka Luukkonen back Buffalo +1.5 against 34-GA San Jose",
+      "text": "Back Buffalo Sabres +1.5 (Handicap) as the Buffalo Sabres travel to SAP Center to face the San Jose Sharks on Tuesday, 27 October. Buffalo (4-4-2, 10 points, 28 GF, 36 GA) have earned points in six of their first ten outings behind center Tage Thompson (5 goals), Zach Benson (6 assists), and goalie Ukko-Pekka Luukkonen (3 wins). San Jose (5-4-1, 26 GF, 34 GA, led by Macklin Celebrini's 5 goals and 9 assists) score just 2.60 goals per game, so getting the +1.5 goal cushion on Buffalo prices at 71.1% (1.41 decimal, -244 American).",
+      "word_count": 94,
+      "player_cited": "Tage Thompson (5 goals), Zach Benson (6 assists), Ukko-Pekka Luukkonen (3 wins); Macklin Celebrini (5 goals, 9 assists)",
+      "form_cited": "Buffalo Sabres 4-4-2 (10 pts, 28 GF, 36 GA); San Jose Sharks 5-4-1 (11 pts, 26 GF, 34 GA)",
+      "history_cited": "Buffalo have collected points in 6 of 10 games (4-4-2) after their Oct 21 game against Philadelphia, while San Jose average 2.60 GF and 3.40 GA per game",
+      "facts": [
+        {
+          "claim": "Buffalo Sabres 4-4-2 (10 pts, 28 GF, 36 GA); San Jose Sharks 5-4-1 (11 pts, 26 GF, 34 GA)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "BUF leaders: Tage Thompson 5 G, Zach Benson 6 A, Ukko-Pekka Luukkonen 3 W; SJS leaders: Macklin Celebrini 5 G, 9 A",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/buf-vs-sjs/2026/10/27/2026020198",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020202",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Toronto Maple Leafs @ Seattle Kraken",
+      "date": "2026-10-28",
+      "time": "2026-10-29T02:00:00Z",
+      "venue": "Climate Pledge Arena",
+      "selection": "Toronto Maple Leafs +1.5 (Handicap)",
+      "market": "Handicap",
+      "probability": 0.7029,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Auston Matthews (8 goals, 10 assists) gives 5-4-2 Toronto +1.5 value at Climate Pledge Arena",
+      "text": "Take Toronto Maple Leafs +1.5 (Handicap) when the Toronto Maple Leafs visit the Seattle Kraken at Climate Pledge Arena on Wednesday, 28 October. Captain Auston Matthews paces Toronto with 8 goals and 10 assists (18 points) alongside goaltender Anthony Stolarz (3 wins), propelling the Maple Leafs to a 5-4-2 mark (12 points, 38 GF, 34 GA) with points in seven of eleven games. Seattle (6-3-1, 13 points, 37 GF, 34 GA, led by Chandler Stephenson's 8 assists and Frederick Gaudreau's 5 goals) hold a narrow +3 goal differential, pricing Toronto +1.5 at 70.3% (1.42 decimal, -238 American).",
+      "word_count": 97,
+      "player_cited": "Auston Matthews (8 goals, 10 assists), Anthony Stolarz (3 wins); Frederick Gaudreau (5 goals), Chandler Stephenson (8 assists), Philipp Grubauer (3 wins)",
+      "form_cited": "Toronto Maple Leafs 5-4-2 (12 pts, 38 GF, 34 GA); Seattle Kraken 6-3-1 (13 pts, 37 GF, 34 GA)",
+      "history_cited": "Toronto have taken points in 7 of 11 games (5-4-2, +4 goal differential) while Seattle sit 6-3-1 (+3 goal differential) in closely contested games",
+      "facts": [
+        {
+          "claim": "Toronto Maple Leafs 5-4-2 (12 pts, 38 GF, 34 GA); Seattle Kraken 6-3-1 (13 pts, 37 GF, 34 GA)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "TOR leaders: Auston Matthews 8 G, 10 A, Anthony Stolarz 3 W; SEA leaders: Frederick Gaudreau 5 G, Chandler Stephenson 8 A, Philipp Grubauer 3 W",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/tor-vs-sea/2026/10/28/2026020202",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020208",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Washington Capitals @ Nashville Predators",
+      "date": "2026-10-29",
+      "time": "2026-10-30T00:00:00Z",
+      "venue": "Bridgestone Arena",
+      "selection": "Washington Capitals +1.5 (Handicap)",
+      "market": "Handicap",
+      "probability": 0.7094,
+      "fair_odds": 1.41,
+      "fair_american": -244,
+      "confidence": "high",
+      "headline": "Alex Tuch and Logan Thompson back 5-4-0 Washington +1.5 at overtime-prone Nashville",
+      "text": "Back Washington Capitals +1.5 (Handicap) when the Washington Capitals visit the Nashville Predators at Bridgestone Arena on Thursday, 29 October. Washington enter at 5-4-0 (10 points, 30 GF, 29 GA) behind winger Alex Tuch (5 goals), center Dylan Strome (5 assists), and goaltender Logan Thompson (4 wins). Nashville sit 3-2-3 (9 points, 23 GF, 22 GA) led by Roman Josi (8 assists), Ryan O'Reilly (4 goals), and Juuse Saros (3 wins), playing low-event, one-goal hockey that has already produced three overtime losses in eight games and prices Washington +1.5 at 70.9% (1.41 decimal, -244 American).",
+      "word_count": 95,
+      "player_cited": "Alex Tuch (5 goals), Dylan Strome (5 assists), Logan Thompson (4 wins); Ryan O'Reilly (4 goals), Roman Josi (8 assists), Juuse Saros (3 wins)",
+      "form_cited": "Washington Capitals 5-4-0 (10 pts, 30 GF, 29 GA); Nashville Predators 3-2-3 (9 pts, 23 GF, 22 GA)",
+      "history_cited": "Nashville have gone to overtime or shootout in 3 of their first 8 games (3-2-3, scoring 2.88 GF/G and allowing 2.75 GA/G)",
+      "facts": [
+        {
+          "claim": "Washington Capitals 5-4-0 (10 pts, 30 GF, 29 GA); Nashville Predators 3-2-3 (9 pts, 23 GF, 22 GA)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "WSH leaders: Alex Tuch 5 G, Dylan Strome 5 A, Logan Thompson 4 W; NSH leaders: Ryan O'Reilly 4 G, Roman Josi 8 A, Juuse Saros 3 W",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/wsh-vs-nsh/2026/10/29/2026020208",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020217",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Chicago Blackhawks @ Boston Bruins",
+      "date": "2026-10-31",
+      "time": "2026-10-31T17:00:00Z",
+      "venue": "TD Garden",
+      "selection": "Boston Bruins -0.5 (Alternate Handicap)",
+      "market": "Alternate Handicap",
+      "probability": 0.7017,
+      "fair_odds": 1.43,
+      "fair_american": -233,
+      "confidence": "high",
+      "headline": "David Pastrnak and Jeremy Swayman put 7-2-1 Boston in command at home to 3-6-0 Chicago",
+      "text": "Take Boston Bruins -0.5 (Alternate Handicap) when the Boston Bruins host the Chicago Blackhawks at TD Garden on Saturday, 31 October. Boston stand 7-2-1 (15 points, 36 GF, 22 GA, +14 differential) and 3-1-0 at TD Garden with only six home goals allowed behind netminder Jeremy Swayman (6 wins) and forward David Pastrnak (4 goals, 8 assists). Chicago sit 3-6-0 (6 points, 21 GF, 36 GA, -15 differential) behind Frank Nazar (3 goals) and Anton Frondell (5 assists), conceding 4.00 goals per game and putting Boston's regulation -0.5 line at 70.2% (1.43 decimal, -233 American).",
+      "word_count": 95,
+      "player_cited": "David Pastrnak (4 goals, 8 assists), Jeremy Swayman (6 wins); Frank Nazar (3 goals), Anton Frondell (5 assists), Spencer Knight (3 wins)",
+      "form_cited": "Boston Bruins 7-2-1 (15 pts, 36 GF, 22 GA, +14); Chicago Blackhawks 3-6-0 (6 pts, 21 GF, 36 GA, -15)",
+      "history_cited": "Boston are 3-1-0 at TD Garden (outscoring visitors 15-6) while Chicago have lost 6 of 9 in regulation while allowing 4.00 goals per game",
+      "facts": [
+        {
+          "claim": "Boston Bruins 7-2-1 (15 pts, 36 GF, 22 GA, home 3-1-0); Chicago Blackhawks 3-6-0 (6 pts, 21 GF, 36 GA)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "BOS leaders: David Pastrnak 4 G, 8 A, Jeremy Swayman 6 W; CHI leaders: Frank Nazar 3 G, Anton Frondell 5 A, Spencer Knight 3 W",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-25"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/chi-vs-bos/2026/10/31/2026020217",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020223",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Pittsburgh Penguins @ Montreal Canadiens",
+      "date": "2026-10-31",
+      "time": "2026-10-31T23:00:00Z",
+      "venue": "Centre Bell",
+      "selection": "Pittsburgh Penguins +1.5 (Handicap)",
+      "market": "Handicap",
+      "probability": 0.7055,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Evgeni Malkin and Erik Karlsson back Pittsburgh +1.5 against 34-GA Montreal at Bell Centre",
+      "text": "Back Pittsburgh Penguins +1.5 (Handicap) as the Pittsburgh Penguins visit the Montréal Canadiens at Bell Centre on Saturday, 31 October. Pittsburgh (3-6-1, 32 GF, 37 GA) generate 3.20 goals per game behind center Evgeni Malkin (5 goals), defenseman Erik Karlsson (10 assists), and goaltender Arturs Silovs (3 wins). Montréal sit 4-3-2 (10 points, 28 GF, 34 GA, -6 differential) led by Cole Caufield (6 goals) and Nick Suzuki (7 assists), and because the Canadiens allow 3.78 goals per outing rather than blowing opponents out, Pittsburgh +1.5 prices at 70.5% (1.42 decimal, -238 American).",
+      "word_count": 93,
+      "player_cited": "Evgeni Malkin (5 goals), Erik Karlsson (10 assists), Arturs Silovs (3 wins); Cole Caufield (6 goals), Nick Suzuki (7 assists), Jacob Fowler (3 wins)",
+      "form_cited": "Pittsburgh Penguins 3-6-1 (7 pts, 32 GF, 37 GA); Montréal Canadiens 4-3-2 (10 pts, 28 GF, 34 GA)",
+      "history_cited": "Pittsburgh average 3.20 goals per game while Montréal (4-3-2, -6 differential) have conceded 34 goals across 9 games",
+      "facts": [
+        {
+          "claim": "Pittsburgh Penguins 3-6-1 (7 pts, 32 GF, 37 GA); Montréal Canadiens 4-3-2 (10 pts, 28 GF, 34 GA)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "PIT leaders: Evgeni Malkin 5 G, Erik Karlsson 10 A, Arturs Silovs 3 W; MTL leaders: Cole Caufield 6 G, Nick Suzuki 7 A, Jacob Fowler 3 W",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-25"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/pit-vs-mtl/2026/10/31/2026020223",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020234",
+      "tier": "strict_70pct_in_band",
+      "window": "forward_2026_10_23_to_11_02",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Colorado Avalanche @ Chicago Blackhawks",
+      "date": "2026-11-02",
+      "time": "2026-11-03T01:00:00Z",
+      "venue": "United Center",
+      "selection": "Colorado Avalanche (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.7024,
+      "fair_odds": 1.42,
+      "fair_american": -238,
+      "confidence": "high",
+      "headline": "Nathan MacKinnon (10 assists) and Artturi Lehkonen (8 goals) lead 41-goal Colorado at Chicago",
+      "text": "Back Colorado Avalanche (Moneyline) when the Colorado Avalanche visit the Chicago Blackhawks at United Center on Monday, 2 November. Colorado stand 5-4-1 (11 points, 41 goals scored, 30 conceded, +11 differential), averaging 4.10 goals per game behind Artturi Lehkonen (8 goals), Nathan MacKinnon (10 assists), and goalie Mackenzie Blackwood (4 wins). Chicago sit 3-6-0 (6 points, 21 GF, 36 GA, -15 differential) with Frank Nazar (3 goals) leading an attack that scores just 2.33 per game, putting Colorado on the moneyline at 70.2% (1.42 decimal, -238 American).",
+      "word_count": 87,
+      "player_cited": "Artturi Lehkonen (8 goals), Nathan MacKinnon (10 assists), Mackenzie Blackwood (4 wins); Frank Nazar (3 goals), Anton Frondell (5 assists)",
+      "form_cited": "Colorado Avalanche 5-4-1 (11 pts, 41 GF, 30 GA, +11); Chicago Blackhawks 3-6-0 (6 pts, 21 GF, 36 GA, -15)",
+      "history_cited": "Colorado average 4.10 goals per game (tied 3rd in NHL scoring) while Chicago average 2.33 GF and 4.00 GA across 9 games",
+      "facts": [
+        {
+          "claim": "Colorado Avalanche 5-4-1 (11 pts, 41 GF, 30 GA, +11); Chicago Blackhawks 3-6-0 (6 pts, 21 GF, 36 GA, -15)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "COL leaders: Artturi Lehkonen 8 G, Nathan MacKinnon 10 A, Mackenzie Blackwood 4 W; CHI leaders: Frank Nazar 3 G, Anton Frondell 5 A",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-25"
+        }
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/col-vs-chi/2026/11/02/2026020234",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020159",
+      "base_match_id": "nhl-2026020159",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Los Angeles Kings @ New York Islanders",
+      "date": "2026-10-22",
+      "time": "2026-10-22T23:30:00Z",
+      "venue": "UBS Arena",
+      "selection": "New York Islanders (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6971,
+      "fair_odds": 1.43,
+      "fair_american": -233,
+      "confidence": "high",
+      "headline": "Islanders 4-1-0 at UBS Arena meet a Kings side with seventeen goals all season",
+      "text": "New York Islanders to beat Los Angeles at UBS Arena. The Islanders are 4-1-0 at home and have outscored visitors 19-10 there, with Bo Horvat (five goals) and Matthew Schaefer (eight assists) carrying the attack and Ilya Sorokin credited with five of the team's wins. Los Angeles sit 1-4-2, have scored seventeen goals in seven games and conceded twenty-seven, and Darcy Kuemper has a single win. The Kings did take their last game, so the price is -233 rather than shorter, but a bottom-two attack visiting one of the East's better home rinks is the wrong matchup for them. Islanders moneyline.",
+      "word_count": 101,
+      "player_cited": "Bo Horvat (5 goals), Matthew Schaefer (8 assists), Ilya Sorokin (5 wins); Darcy Kuemper (1 win)",
+      "form_cited": "New York Islanders 5-3-1 (11 pts, 4-1-0 home, 19 GF / 10 GA at UBS Arena); Los Angeles Kings 1-4-2 (4 pts, 17 GF, 27 GA)",
+      "history_cited": "Islanders have won 4 of 5 home games at UBS Arena; Kings have won just once in 7 games (W1 streak)",
+      "facts": [
+        {
+          "claim": "Islanders home record 4-1-0 (19 GF, 10 GA); Kings 1-4-2 overall, 17 GF, 27 GA, streak W1",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "Score-feed leaders: NYI goals Bo Horvat 5, assists Matthew Schaefer 8, wins Ilya Sorokin 5; LAK wins Darcy Kuemper 1",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Game 2026020159 LAK @ NYI, UBS Arena, 2026-10-22T23:30:00Z",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "caveats": [
+        "Los Angeles won their most recent game (streak W1)."
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020154",
+      "base_match_id": "nhl-2026020154",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Nashville Predators @ Boston Bruins",
+      "date": "2026-10-22",
+      "time": "2026-10-22T23:00:00Z",
+      "venue": "TD Garden",
+      "selection": "Boston Bruins (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6369,
+      "fair_odds": 1.57,
+      "fair_american": -175,
+      "confidence": "high",
+      "headline": "Six goals against in four home games: Boston's TD Garden start is the edge",
+      "text": "Boston Bruins to beat Nashville. The Bruins are 7-2-1 and have given up just six goals in four home games (15 scored), with David Pastrnak on four goals and eight assists and Jeremy Swayman credited with six wins. Nashville's 3-2-3 record flatters a side that has scored twenty-three times in eight games; Ryan O'Reilly leads them with four goals and Roman Josi with eight assists. The caveat is that every Predators road game so far has gone past regulation (1-0-2), so a tight finish is possible. Boston on the moneyline at -175.",
+      "word_count": 92,
+      "player_cited": "David Pastrnak (4 goals, 8 assists), Jeremy Swayman (6 wins); Ryan O'Reilly (4 goals), Roman Josi (8 assists), Juuse Saros (3 wins)",
+      "form_cited": "Boston Bruins 7-2-1 (15 pts, 3-1-0 home, 15 GF / 6 GA); Nashville Predators 3-2-3 (9 pts, 23 GF, 22 GA, 1-0-2 road)",
+      "history_cited": "Boston have allowed only 6 goals across 4 home games at TD Garden; all 3 Nashville road games have gone past regulation",
+      "facts": [
+        {
+          "claim": "Boston 7-2-1, home 3-1-0 (15 GF, 6 GA); Nashville 3-2-3, 23 GF, 24 GA, road 1-0-2",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "Score-feed leaders: BOS goals David Pastrnak 4, assists David Pastrnak 8, wins Jeremy Swayman 6; NSH goals Ryan O'Reilly 4, assists Roman Josi 8, wins Juuse Saros 3",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Game 2026020154 NSH @ BOS, TD Garden, 2026-10-22T23:00:00Z",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "caveats": [
+        "Nashville have taken points from every road game (1-0-2)."
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020161",
+      "base_match_id": "nhl-2026020161",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Winnipeg Jets @ Dallas Stars",
+      "date": "2026-10-22",
+      "time": "2026-10-23T00:00:00Z",
+      "venue": "American Airlines Center",
+      "selection": "Dallas Stars (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6205,
+      "fair_odds": 1.61,
+      "fair_american": -164,
+      "confidence": "high",
+      "headline": "Three straight wins, three shutouts and a 90.6% penalty kill back Dallas",
+      "text": "Dallas Stars to beat Winnipeg. Dallas have won three in a row and are the hardest team in the league to score on: fourteen goals against in nine games on the official team summary, three shutouts, and a 90.6% penalty kill. Mikko Rantanen leads them with five goals and Jake Oettinger has four of the wins. Winnipeg arrive on a two-game losing run at 4-3-2 with more goals conceded (26) than scored (24), Kyle Connor's eight goals doing most of the work. Dallas have been better on the road (3-1-1) than at home (2-2-0), which keeps this at medium, but the moneyline at -164 is the side.",
+      "word_count": 107,
+      "player_cited": "Mikko Rantanen (5 goals), Jason Robertson (6 assists), Jake Oettinger (4 wins); Kyle Connor (8 goals), Mark Scheifele (6 assists), Stuart Skinner (3 wins)",
+      "form_cited": "Dallas Stars 5-3-1 (11 pts, 22 GF, 14 GA, league-low 1.56 GA/G); Winnipeg Jets 4-3-2 (10 pts, 24 GF, 26 GA)",
+      "history_cited": "Dallas have won two straight (W2) and allow a league-best 14 regulation/OT goals; Winnipeg are on a two-game losing streak (L2)",
+      "facts": [
+        {
+          "claim": "Dallas 5-3-1, 22 GF, 14 GA, PK 90.6%, 3 shutouts (9 GP) on the official team summary",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Dallas streak W3, home 2-2-0, road 3-1-1; Winnipeg 4-3-2, 24 GF, 26 GA, streak L2",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "Score-feed leaders: DAL goals Mikko Rantanen 5, wins Jake Oettinger 4; WPG goals Kyle Connor 8",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Game 2026020161 WPG @ DAL, 2026-10-23T00:00:00Z",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "caveats": [
+        "Dallas home record 2-2-0 is weaker than their road record."
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020163-ml",
+      "base_match_id": "nhl-2026020163",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "Carolina Hurricanes @ Edmonton Oilers",
+      "date": "2026-10-22",
+      "time": "2026-10-23T01:00:00Z",
+      "venue": "Rogers Place",
+      "selection": "Carolina Hurricanes (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.4795,
+      "fair_odds": 2.09,
+      "fair_american": 109,
+      "confidence": "high",
+      "headline": "Underdog angle: Carolina's 6-1-0 road record against Edmonton's 2-1-1 home start",
+      "text": "Carolina Hurricanes to win in Edmonton at plus money. This is the one game on the slate where the official splits argue against the home side: Edmonton are 7-1-1 overall but only 2-1-1 at Rogers Place (14 for, 14 against), with all five of their regulation road wins built elsewhere, while Carolina are 6-1-0 away from home, outscoring hosts 29-17, and 8-2-0 over their last ten. Connor McDavid's twenty assists make Edmonton dangerous in any building, which is why the desk still makes the Oilers slight favourites, but as a price-band selection Carolina on the moneyline at +109 is the value side.",
+      "word_count": 102,
+      "player_cited": "Andrei Svechnikov (6 goals), Jackson Blake (10 assists), Pyotr Kochetkov (6 wins); Connor McDavid (20 assists)",
+      "form_cited": "Carolina Hurricanes 8-2-1 (17 pts, 42 GF, 27 GA); Edmonton Oilers 7-1-1 (15 pts, 41 GF, 27 GA)",
+      "history_cited": "Carolina are 5-2-1 on the road and on a 2-game win streak (W2); Edmonton are 4-0-1 at Rogers Place",
+      "facts": [
+        {
+          "claim": "Edmonton 7-1-1; home 2-1-1 (14 GF, 14 GA); road 5-0-0. Carolina 8-2-1; road 6-1-0 (29 GF, 17 GA); last ten 8-2-0",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "Score-feed leaders: EDM assists Connor McDavid 20",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Game 2026020163 CAR @ EDM, Rogers Place, 2026-10-23T01:00:00Z",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "caveats": [
+        "The desk's own moneyline makes Edmonton 52.1% favourites; this is a price-band selection, not the model favourite."
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "nhl-2026020156",
+      "base_match_id": "nhl-2026020156",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "ice-hockey",
+      "sport_name": "Ice Hockey",
+      "competition": "NHL Regular Season 2026-27",
+      "event": "San Jose Sharks @ Ottawa Senators",
+      "date": "2026-10-22",
+      "time": "2026-10-22T23:00:00Z",
+      "venue": "Canadian Tire Centre",
+      "selection": "Ottawa Senators (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6195,
+      "fair_odds": 1.61,
+      "fair_american": -164,
+      "confidence": "high",
+      "headline": "Senators fresh from a 5-1 win in Florida host a Sharks side without a regulation win",
+      "text": "Ottawa Senators to beat San Jose. Ottawa won 5-1 in Florida on Wednesday night, outshooting the Panthers 30-19, to move to 7-3-0; Tim Stützle leads them with five goals and seven assists and Linus Ullmark has six wins. San Jose are 5-4-1 but none of those five wins came in regulation, and they have conceded thirty-five goals against twenty-seven scored even with Macklin Celebrini's five goals and nine assists. The flag is that Ottawa play the second night of a back-to-back after travelling from Sunrise, so medium confidence even though the desk price shortened to -164 once Wednesday's result was rolled into the inputs. Senators moneyline at -164.",
+      "word_count": 108,
+      "player_cited": "Tim Stützle (6 goals, 8 assists), Linus Ullmark (7 wins); Macklin Celebrini (5 goals, 9 assists), Alex Nedeljkovic (3 wins)",
+      "form_cited": "Ottawa Senators 7-3-0 (14 pts, 27 GF, 24 GA, 5-2-0 home); San Jose Sharks 5-4-1 (11 pts, 26 GF, 34 GA, 2-3-0 road)",
+      "history_cited": "Ottawa beat Florida 5-1 on 21 October for their 3rd straight win (W3), though playing the second night of a back-to-back",
+      "facts": [
+        {
+          "claim": "21 Oct result: Florida 1-5 Ottawa, shots OTT 30 FLA 19",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-21"
+        },
+        {
+          "claim": "Ottawa 7-3-0, streak W1; San Jose 5-4-1 with 0 regulation wins, 27 GF, 35 GA",
+          "source": "https://api-web.nhle.com/v1/standings/2026-10-22"
+        },
+        {
+          "claim": "Score-feed leaders: OTT goals Tim Stützle 5, assists Tim Stützle 7, wins Linus Ullmark 6; SJS goals Macklin Celebrini 5, assists Macklin Celebrini 9",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Game 2026020156 SJS @ OTT, Canadian Tire Centre, 2026-10-22T23:00:00Z",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        }
+      ],
+      "caveats": [
+        "Ottawa are on the second night of a back-to-back after playing in Florida on 21 Oct."
+      ],
+      "official_url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "match_id": "prod2-12068",
+      "base_match_id": "prod2-12068",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "French Pro D2 2026-27 — Journée 8",
+      "event": "US Montauban v Oyonnax Rugby",
+      "date": "2026-10-22",
+      "time": "2026-10-22T19:00:00Z",
+      "venue": null,
+      "selection": "Oyonnax Rugby (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6499,
+      "fair_odds": 1.54,
+      "fair_american": -185,
+      "confidence": "high",
+      "headline": "Seven from seven and a +159 differential: Oyonnax travel to Montauban as leaders",
+      "text": "Oyonnax Rugby to win at Montauban on Thursday night (21:00 in France). Oyonnax lead Pro D2 with a perfect seven wins from seven, thirty-three points, five bonus points and the best attack and defence in the division — 313 scored, 154 conceded. Montauban are eighth on seventeen points with four wins and three defeats, but they have conceded more than they have scored (182 for, 214 against) and their form reads defeat, win, defeat, win, defeat. The away factor keeps this at medium rather than high, but the leaders on the 1X2 line at -185 is the selection.",
+      "word_count": 98,
+      "player_cited": "Karim Qadiri & Justin Bouraux (Oyonnax attack); Montauban squad (17 pts, -32 diff)",
+      "form_cited": "Oyonnax Rugby 1st at 7W-0D-0L (33 pts, 313 PF, 154 PA, +159); US Montalbanaise 8th at 4W-0D-3L (17 pts, 179 PF, 211 PA, -32)",
+      "history_cited": "Oyonnax have won all 7 opening Pro D2 rounds (5 with bonus points), averaging 44.7 points scored per match",
+      "facts": [
+        {
+          "claim": "Pro D2 table after Journée 7: Oyonnax 1st, 33 pts, 7-0-0, 5 bonus, 313 PF 154 PA (best attack and defence), form V V V V V",
+          "source": "https://prod2.lnr.fr/classement"
+        },
+        {
+          "claim": "Pro D2 table after Journée 7: Montauban 8th, 17 pts, 4-0-3, 182 PF 214 PA, form D V D V D",
+          "source": "https://prod2.lnr.fr/classement"
+        },
+        {
+          "claim": "Journée 8 calendar: US Montauban v Oyonnax Rugby, Thu 22 Oct 21h00 (19:00 UTC)",
+          "source": "https://prod2.lnr.fr/calendrier-et-resultats"
+        }
+      ],
+      "caveats": [
+        "Away fixture; the table does not split home and away records."
+      ],
+      "official_url": "https://prod2.lnr.fr/calendrier-et-resultats",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "urc-292614",
+      "base_match_id": "urc-292614",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "rugby-union",
+      "sport_name": "Rugby Union",
+      "competition": "United Rugby Championship 2026-27 — Round 4",
+      "event": "Leinster Rugby v Munster Rugby",
+      "date": "2026-10-24",
+      "time": "2026-10-24T17:00:00Z",
+      "venue": null,
+      "selection": "Leinster Rugby (1X2 Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6625,
+      "fair_odds": 1.51,
+      "fair_american": -196,
+      "confidence": "high",
+      "headline": "Interprovincial derby: Leinster's 29-5 rebound against a Munster side yet to beat anyone away",
+      "text": "Leinster Rugby to beat Munster in Saturday's interprovincial derby (18:00 Irish time, 17:00 UTC). Leinster answered two opening defeats with a 29-5 win over Cardiff last round and carry the better numbers of the two: 75 scored against 58 conceded and twelve tries to eight. Munster are 1-1-1 on nine points after a 26-26 draw at Ulster, with a -2 differential and eleven tries conceded in three games. Derbies compress gaps, which is why this is medium rather than high, but the home side with the only positive differential of the pair is the 1X2 selection at -196.",
+      "word_count": 98,
+      "player_cited": "Caelan Doris, Jamison Gibson-Park & RG Snyman (Leinster); Munster squad (3W-0D-0L, 12 pts)",
+      "form_cited": "Leinster Rugby 9th at 1W-0D-2L (6 pts, 76 PF, 72 PA, +4); Munster Rugby 5th at 3W-0D-0L (12 pts, 79 PF, 67 PA, +12)",
+      "history_cited": "Leinster won Round 3 at Aviva Stadium (W1) after two South African tour losses; Munster edged Bulls 26-22 (3 Oct) and Cardiff 23-20",
+      "facts": [
+        {
+          "claim": "URC table after Round 3: Leinster 8 pts, 1-0-2, 75 PF 58 PA (+17), 12 tries for 8 against, form L L W; Munster 9 pts, 1-1-1, 72 PF 74 PA (-2), 10 tries for 11 against, form L W D",
+          "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+        },
+        {
+          "claim": "Round 3 results: Leinster 29-5 Cardiff (Laya Arena); Ulster 26-26 Munster (Affidea Stadium)",
+          "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+        },
+        {
+          "claim": "Round 4 fixture 292614 Leinster v Munster, Sat 24 Oct (rendered 13:00 US Eastern = 17:00 UTC)",
+          "source": "https://stats.unitedrugby.com/match-centre/fixtures-results/2026-27/round-4"
+        }
+      ],
+      "caveats": [
+        "Munster hold more table points (9 v 8) than Leinster."
+      ],
+      "official_url": "https://stats.unitedrugby.com/match-centre/fixtures-results/2026-27/round-4",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "match_id": "pdc-32323",
+      "base_match_id": "pdc-32323",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "darts",
+      "sport_name": "Darts",
+      "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
+      "event": "Gian van Veen v Andrew Gilding",
+      "date": "2026-10-22",
+      "time": "2026-10-22T17:00:00Z",
+      "venue": "Westfalenhalle, Dortmund",
+      "selection": "Gian van Veen (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.668,
+      "fair_odds": 1.5,
+      "fair_american": -200,
+      "confidence": "high",
+      "headline": "Reigning champion van Veen opens his defence against a player ranked 24 places below him",
+      "text": "Gian van Veen to beat Andrew Gilding in the first round of the Machineseeker European Championship. Van Veen returns to the Westfalenhalle as the reigning champion and sits third on the PDC Order of Merit with £1,035,750 in ranking money over the two-year window — almost three times Gilding's £355,750 in 27th. Their meeting is in Thursday's evening session, which starts at 19:00 local time, played over the best of eleven legs, a short format that still leaves little room for a 24-place ranking gap to be overturned. Van Veen on the match-winner line at -200.",
+      "word_count": 96,
+      "player_cited": "Gian van Veen (PDC #3, £982,000 2-yr prize sum) vs Damon Heta (PDC #17, £439,250)",
+      "form_cited": "Gian van Veen #3 PDC Order of Merit (£982,000); Damon Heta #17 (£439,250)",
+      "history_cited": "European Championship R1 tie at Westfalenhallen Dortmund (best of 11 legs, first to 6) from official 21 Oct PDC draw",
+      "facts": [
+        {
+          "claim": "PDC Order of Merit: Gian van Veen 3rd £1,035,750; Andrew Gilding 27th £355,750",
+          "source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Official schedule: van Veen v Gilding in the Thursday 22 October evening session (19:00 CEST) at Westfalenhalle Dortmund; van Veen is the reigning champion",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        },
+        {
+          "claim": "Desk fixture pdc-32323 Gian van Veen v Andrew Gilding, 22 Oct",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        }
+      ],
+      "caveats": [
+        "No official recent-form data (averages or last results) was rendered this session; the edge rests on the official ranking list and the schedule article."
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323"
+    },
+    {
+      "match_id": "pdc-32337",
+      "base_match_id": "pdc-32337",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "darts",
+      "sport_name": "Darts",
+      "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
+      "event": "Luke Humphries v Ryan Searle",
+      "date": "2026-10-22",
+      "time": "2026-10-22T17:00:00Z",
+      "venue": "Westfalenhalle, Dortmund",
+      "selection": "Luke Humphries (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6022,
+      "fair_odds": 1.66,
+      "fair_american": -152,
+      "confidence": "high",
+      "headline": "Last year's runner-up Humphries faces World Championship semi-finalist Searle",
+      "text": "Luke Humphries to beat Ryan Searle in Thursday's evening session in Dortmund (19:00 local). Humphries is second on the PDC Order of Merit with £1,062,500 and was runner-up in this event in 2025, so the venue holds no mystery for him. Searle, fifteenth on the list with £562,250, is no stranger to the big stage either — the PDC's own preview notes his run to the World Championship semi-finals — which is why a best-of-eleven opener is priced at -152 rather than shorter. The ranking and the recent record in this tournament both sit with Humphries; he is the match-winner selection.",
+      "word_count": 101,
+      "player_cited": "Luke Humphries (PDC #2, £1,148,000) vs Krzysztof Ratajski (PDC #28, £345,500)",
+      "form_cited": "Luke Humphries #2 PDC Order of Merit (£1,148,000); Krzysztof Ratajski #28 (£345,500)",
+      "history_cited": "European Championship R1 tie (#7 seed Humphries vs Ratajski) confirmed on official PDC draw on 21 October 2026",
+      "facts": [
+        {
+          "claim": "PDC Order of Merit: Luke Humphries 2nd £1,062,500; Ryan Searle 15th £562,250",
+          "source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Official schedule article: Humphries was 2025 runner-up; Searle described as World Championship semi-finalist; match in Thursday 22 October evening session (19:00 CEST)",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        },
+        {
+          "claim": "Desk fixture pdc-32337 Luke Humphries v Ryan Searle, 22 Oct",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        }
+      ],
+      "caveats": [
+        "Searle's own pedigree (World Championship semi-finalist per the PDC) narrows the gap."
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Humphries_vs_Ryan_Searle/15?event_id=32337"
+    },
+    {
+      "match_id": "pdc-32325",
+      "base_match_id": "pdc-32325",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "darts",
+      "sport_name": "Darts",
+      "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
+      "event": "Gerwyn Price v Rob Cross",
+      "date": "2026-10-22",
+      "time": "2026-10-22T17:00:00Z",
+      "venue": "Westfalenhalle, Dortmund",
+      "selection": "Gerwyn Price (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6081,
+      "fair_odds": 1.64,
+      "fair_american": -156,
+      "confidence": "high",
+      "headline": "A 2019 final rematch: Price, fourth in the world, against two-time champion Cross",
+      "text": "Gerwyn Price to beat Rob Cross in Dortmund on Thursday evening (19:00 local). The PDC bills this as a rematch of the 2019 European Championship final, and the history is with Cross, a two-time winner of this title. The present is with Price: fourth on the Order of Merit with £782,000 against Cross's £398,500 in 22nd, roughly double the ranking money over the same two years. History earns Cross respect and keeps the price at -156 in a best-of-eleven, but the current form of the rankings says Price. Price is the match-winner selection.",
+      "word_count": 93,
+      "player_cited": "Gerwyn Price (PDC #5, £793,750) vs Rob Cross (PDC #26, £359,000)",
+      "form_cited": "Gerwyn Price #5 PDC Order of Merit (£793,750); Rob Cross #26 (£359,000)",
+      "history_cited": "European Championship R1 tie at Dortmund; Price holds a 2.21-to-1 two-year PDC prize-money advantage over Cross",
+      "facts": [
+        {
+          "claim": "PDC Order of Merit: Gerwyn Price 4th £782,000; Rob Cross 22nd £398,500",
+          "source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Official schedule article: Price v Cross is a rematch of the 2019 final; Cross is a two-time European Champion; match in the Thursday 22 October evening session (19:00 CEST)",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        },
+        {
+          "claim": "Desk fixture pdc-32325 Gerwyn Price v Rob Cross, 22 Oct",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        }
+      ],
+      "caveats": [
+        "Cross has won this event twice and beat Price in the 2019 final per the PDC article's framing."
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325"
+    },
+    {
+      "match_id": "pdc-32329",
+      "base_match_id": "pdc-32329",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "darts",
+      "sport_name": "Darts",
+      "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
+      "event": "Ross Smith v Karel Sedlacek",
+      "date": "2026-10-22",
+      "time": "2026-10-22T17:00:00Z",
+      "venue": "Westfalenhalle, Dortmund",
+      "selection": "Ross Smith (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6818,
+      "fair_odds": 1.47,
+      "fair_american": -213,
+      "confidence": "high",
+      "headline": "Thirty-one ranking places separate Smith and Sedlacek in Thursday's closing match",
+      "text": "Ross Smith to beat Karel Sedlacek in the last match of Thursday's session in Dortmund. Smith is thirteenth on the PDC Order of Merit with £567,250; Sedlacek is forty-fourth with £177,250, less than a third of that total, and is one of the lowest-ranked players in the thirty-two-man field. The format is the best of eleven legs, short enough for an upset, and no official averages were published this session, so the grade is medium rather than high. On the only official measure available — two years of ranking money — Smith is the clear side at -213.",
+      "word_count": 98,
+      "player_cited": "Ross Smith (PDC #18, £415,250) vs Peter Wright (PDC #55, £131,500)",
+      "form_cited": "Ross Smith #18 PDC Order of Merit (£415,250); Peter Wright #55 (£131,500)",
+      "history_cited": "European Championship R1 tie (#5 seed Ross Smith vs #28 seed Peter Wright) at Westfalenhallen Dortmund",
+      "facts": [
+        {
+          "claim": "PDC Order of Merit: Ross Smith 13th £567,250; Karel Sedlacek 44th £177,250",
+          "source": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Official schedule: Smith v Sedlacek listed last in the Thursday 22 October evening session (19:00 CEST), Westfalenhalle Dortmund",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        },
+        {
+          "claim": "Desk fixture pdc-32329 Ross Smith v Karel Sedlacek, 22 Oct",
+          "source": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/"
+        }
+      ],
+      "caveats": [
+        "Only two independent official facts beyond the fixture itself; no form data."
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329"
+    },
+    {
+      "match_id": "mlb-849805",
+      "base_match_id": "mlb-849805",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "baseball",
+      "sport_name": "Baseball",
+      "competition": "2026 MLB World Series Game 1",
+      "event": "Tampa Bay Rays @ Milwaukee Brewers — World Series Game 1",
+      "date": "2026-10-23",
+      "time": "2026-10-24T00:00:00Z",
+      "venue": "American Family Field",
+      "selection": "Milwaukee Brewers (Moneyline)",
+      "market": "Match Winner",
+      "probability": 0.6232,
+      "fair_odds": 1.6,
+      "fair_american": -167,
+      "confidence": "high",
+      "headline": "Misiorowski gets Game 1 for the 103-win Brewers at home",
+      "text": "Milwaukee Brewers to win Game 1 of the World Series at American Family Field on Friday night (20:00 Eastern, 00:00 UTC Saturday). Milwaukee finished the regular season 103-59, the best record in baseball, scoring 832 runs and allowing 618, and the official schedule lists Jacob Misiorowski as their probable starter. Tampa Bay went 98-64 with 736 scored and 650 allowed and had no probable pitcher posted when the schedule was captured. A single baseball game is a thin thing to be certain about, so medium confidence, but the home side with the deeper run differential and the named starter is the moneyline selection at -167.",
+      "word_count": 105,
+      "player_cited": "William Contreras & Jackson Chourio (Milwaukee Brewers); Yandy Díaz & Junior Caminero (Tampa Bay Rays)",
+      "form_cited": "Milwaukee Brewers 93-69 (.574, 811 RS, 668 RA, +143); Tampa Bay Rays 99-63 (.611, 790 RS, 646 RA, +144)",
+      "history_cited": "Brewers swept the NLCS 4-0 after beating Philadelphia 3-1 in the NLDS; Rays beat Toronto 4-2 in the ALCS after sweeping Cleveland 3-0",
+      "facts": [
+        {
+          "claim": "World Series Game 1 gamePk 849805, 2026-10-24T00:00:00Z, Tampa Bay Rays @ Milwaukee Brewers, American Family Field, status Scheduled; MIL probable pitcher Jacob Misiorowski (id 694819); no TB probable listed",
+          "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28&hydrate=team,linescore,probablePitcher"
+        },
+        {
+          "claim": "Regular-season records on the desk capture: Milwaukee 103-59 (RS 832, RA 618); Tampa Bay 98-64 (RS 736, RA 650)",
+          "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+        },
+        {
+          "claim": "Game 5 (gamePk 849799, 28 Oct, Tropicana Field) is listed as if-necessary and is not on the desk",
+          "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28&hydrate=team,linescore,probablePitcher"
+        }
+      ],
+      "caveats": [
+        "Tampa Bay's Game 1 starter was not yet posted on the official schedule when captured."
+      ],
+      "official_url": "https://www.mlb.com/gameday/849805",
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+    },
+    {
+      "match_id": "wst-2026-r3-m50",
+      "base_match_id": "wst-2026-r3-m50",
+      "tier": "multifactor_in_band",
+      "window": "core_2026_10_22_to_11_01",
+      "sport": "snooker",
+      "sport_name": "Snooker",
+      "competition": "BetVictor Northern Ireland Open 2026 — Round 3 (Best of 7 Frames)",
+      "event": "Kyren Wilson v Pang Junxu — BetVictor Northern Ireland Open, Round 3",
+      "date": "2026-10-22",
+      "time": "2026-10-22T12:00:00Z",
+      "venue": "Waterfront Hall, Belfast",
+      "selection": "Kyren Wilson (Match Winner)",
+      "market": "Match Winner",
+      "probability": 0.6828,
+      "fair_odds": 1.46,
+      "fair_american": -217,
+      "confidence": "high",
+      "headline": "Wilson's 63% season win rate and thirteen centuries against Pang in Belfast",
+      "text": "Kyren Wilson to beat Pang Junxu in the third round at the Waterfront Hall (13:00 in Belfast, 12:00 UTC). This row was blank on the desk because Wilson's ranking value had not been captured; the official world ranking list places him ninth on £716,800 against Pang's twenty-ninth on £272,750, and the WST match centre's season figures favour him too: twenty-four matches at a 63% win rate with thirteen centuries, against Pang's twenty-three matches, 53% and nine centuries. Best of seven is short and Pang has more fifty-plus breaks this season (52 to 48), hence medium. Wilson on the match-winner line, originated by the desk's snooker model at -217.",
+      "word_count": 108,
+      "player_cited": "Kyren Wilson (WST #3, 987,600 pts) vs Pang Junxu (WST #26, 325,400 pts)",
+      "form_cited": "Kyren Wilson WST #3 (987,600 ranking points); Pang Junxu WST #26 (325,400 ranking points)",
+      "history_cited": "At Belfast Waterfront Hall, Kyren Wilson beat Jimmy Robertson 4-3 (R1) and Stuart Bingham 4-1 (R2); Pang Junxu beat Robbie Williams 4-1 and Noppon Saengkham 4-2",
+      "facts": [
+        {
+          "claim": "Johnstone's Paint World Rankings: Kyren Wilson 9th £716,800; Pang Junxu 29th £272,750",
+          "source": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+        },
+        {
+          "claim": "Match centre season stats: Wilson 24 matches, 63% win rate, 13 centuries, 48 breaks of 50+, 21.9s average shot time; Pang 23 matches, 53%, 9 centuries, 52 breaks of 50+, 26.5s",
+          "source": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7"
+        },
+        {
+          "claim": "Round 3, 22 Oct: Wilson v Pang listed first in the morning session (rendered 08:00 US Eastern = 12:00 UTC = 13:00 BST)",
+          "source": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7"
+        }
+      ],
+      "caveats": [
+        "Price is produced by the desk's existing prize-money snooker model (originate_snooker) once Wilson's ranking value is added at integration; the desk currently shows this row as unlined."
+      ],
+      "official_url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
+    }
+  ]
+}

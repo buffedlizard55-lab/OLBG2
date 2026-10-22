@@ -200,10 +200,14 @@ def seed_urc():
         h = by_team[game["home"]]
         a = by_team[game["away"]]
         url = game["match_url"]
-        facts = []
+        facts, seen = [], set()
         for side in (game["home"], game["away"]):
             for res in results:
                 if side in (res["home"], res["away"]):
+                    key = (res["date"], res["home"], res["away"])
+                    if key in seen:
+                        continue
+                    seen.add(key)
                     facts.append(fact("result", "Round 3, %s: %s %d-%d %s (%s)" % (
                         res["date"], res["home"], res["home_score"], res["away_score"],
                         res["away"], res["venue"]), tbl["source_url"], URC_SOURCE))

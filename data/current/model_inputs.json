@@ -1372,8 +1372,8 @@
    "home": 3.0,
    "sd_margin": 13.0,
    "sd_total": 16.0,
-   "draw_band": 3.0,
-   "model": "attack/defence points model, shrinkage pl/(pl+6), +3.0 home points, normal margin sd 13.0, draw band +/-3 points"
+   "draw_band": 1.0,
+   "model": "attack/defence points model, shrinkage pl/(pl+6), +3.0 home points, normal margin sd 13.0, draw band +/-1 point (a draw needs level scores)"
   },
   "ehf": {
    "league_avg_goals_per_team_game": 31.8273,

@@ -92,7 +92,7 @@ def half(x):
 class PoissonGrid:
     """Joint independent-Poisson score distribution (hockey, handball, baseball)."""
 
-    def __init__(self, lam_home, lam_away, n_max):
+    def __init__(self, lam_home, lam_away, n_max, settle_ties=False):
         ph = poisson_pmf(lam_home, n_max)
         pa = poisson_pmf(lam_away, n_max)
         self.p_home = self.p_draw = self.p_away = 0.0
@@ -109,6 +109,17 @@ class PoissonGrid:
                     self.p_away += w
                 self.margin[i - j] = self.margin.get(i - j, 0.0) + w
                 self.total[i + j] = self.total.get(i + j, 0.0) + w
+        if settle_ties:
+            # Ice hockey and baseball settle a level score in overtime / extra
+            # innings, so half the tie mass is a home win and half an away win.
+            # It is parked on +/-0.5 sentinels, which keeps every deeper
+            # handicap threshold arithmetically exact.
+            tie = self.margin.pop(0, 0.0)
+            self.margin[0.5] = self.margin.get(0.5, 0.0) + tie / 2.0
+            self.margin[-0.5] = self.margin.get(-0.5, 0.0) + tie / 2.0
+            self.p_home += tie / 2.0
+            self.p_away += tie / 2.0
+            self.p_draw = 0.0
         self.lam_home, self.lam_away = lam_home, lam_away
 
     def p_margin_gt(self, line):
@@ -249,8 +260,8 @@ def build_inputs():
         "league_avg_points_per_team_game": round(league, 4), "clubs": rows,
         "source_url": urc["source_url"], "source_name": urc["source_name"],
         "round3_results": urc["round3_results"],
-        "prior": 6.0, "home": 3.0, "sd_margin": 13.0, "sd_total": 16.0, "draw_band": 3.0,
-        "model": "attack/defence points model, shrinkage pl/(pl+6), +3.0 home points, normal margin sd 13.0, draw band +/-3 points",
+        "prior": 6.0, "home": 3.0, "sd_margin": 13.0, "sd_total": 16.0, "draw_band": 1.0,
+        "model": "attack/defence points model, shrinkage pl/(pl+6), +3.0 home points, normal margin sd 13.0, draw band +/-1 point (a draw needs level scores)",
     }
 
     # --- EHF Champions League: 24-club official group tables -------------- #
@@ -353,7 +364,7 @@ def dist_for(match, inputs):
         lam = cfg["league_avg_goals_per_team_game"]
         lam_h = lam * h["attack"] * a["defence"] * cfg["home"]
         lam_a = lam * a["attack"] * h["defence"] / cfg["home"]
-        return PoissonGrid(lam_h, lam_a, 12), {
+        return PoissonGrid(lam_h, lam_a, 12, settle_ties=True), {
             "family": "nhl", "tie": "split", "hc_natural": 1.5, "hc_radius": 2.0,
             "total_radius": 2.0, "expected_h": lam_h, "expected_a": lam_a,
             "ratings": {"home": h, "away": a}, "league_avg": lam}
@@ -407,7 +418,7 @@ def dist_for(match, inputs):
         lam = cfg["league_avg_runs_per_team_game"]
         exp_h = lam * h["attack"] * a["defence"] + cfg["home"]
         exp_a = lam * a["attack"] * h["defence"] - cfg["home"]
-        return PoissonGrid(exp_h, exp_a, 20), {
+        return PoissonGrid(exp_h, exp_a, 20, settle_ties=True), {
             "family": "mlb", "tie": "split", "hc_natural": 1.5, "hc_radius": 1.5,
             "total_radius": 2.0, "expected_h": exp_h, "expected_a": exp_a,
             "ratings": {"home": h, "away": a}, "league_avg": lam}
@@ -434,14 +445,21 @@ def dist_for(match, inputs):
     return None, {"blank_reason": "No official strength input captured for this sport."}
 
 
+VENUE_CAVEATS = {
+    "euroleague-r7-62": ("The official game centre lists ALEKSANDAR NIKOLIC HALL as the venue for Maccabi Rapyd "
+                         "Tel Aviv's home fixture. The feed does not state whether that is a neutral site, and this "
+                         "layer applies its uniform +3.0 home-point advantage regardless, so the home advantage in "
+                         "this row may be overstated. Disclosed, not adjusted."),
+    "euroleague-r7-66": ("The official game centre lists BELGRADE ARENA for Partizan Mozzart Bet Belgrade's home "
+                         "fixture against Crvena Zvezda Meridianbet Belgrade, a same-city derby. A shared-city derby "
+                         "dilutes home advantage; the uniform +3.0 is still applied and disclosed."),
+}
+
+
 def markets_for(match, dist, cfg):
     """Originate every market and every side; return the market list + band search."""
     markets = []
     p_home, p_draw, p_away = dist.p_home, dist.p_draw, dist.p_away
-    if cfg.get("tie") == "split":
-        p_home += 0.5 * p_draw
-        p_away += 0.5 * p_draw
-        p_draw = 0.0
     outcomes = [{"name": match["home"]["name"], "side": "home", "p": p_home}]
     if p_draw > 0:
         outcomes.append({"name": "Draw", "side": "draw", "p": p_draw})
@@ -450,20 +468,25 @@ def markets_for(match, dist, cfg):
     for o in outcomes:
         o["p"] = o["p"] / total_p
         o.update(price(o["p"]))
-        o["confidence"] = label(o["p"], in_band(o["p"]))
+        o["in_band"] = in_band(o["p"])
+        o["confidence"] = label(o["p"], o["in_band"])
         o.pop("american_exact", None)
     markets.append({"market": "match winner", "line": "", "outcomes": outcomes})
 
     mu = cfg["expected_h"] - cfg["expected_a"]
     nat = cfg.get("hc_natural")
     if nat:
-        nat_line = -nat if mu >= 0 else nat
+        # T is the threshold on the home margin; the home side is posted at -T,
+        # so a home favourite carries T = +nat (the standard puck / run line).
+        nat_line = nat if mu >= 0 else -nat
     else:
         nat_line = half(mu)
     steps = int(round(cfg["hc_radius"]))
     hc = []
     for k in range(-steps, steps + 1):
         line = round(nat_line + 1.0 * k, 1)
+        if cfg.get("tie") == "split" and abs(line) < 1.0:
+            continue   # +/-0.5 restates the moneyline once overtime settles ties
         p_cover = dist.p_margin_gt(line)
         if p_cover <= 0.0005 or p_cover >= 0.9995:
             continue
@@ -523,7 +546,8 @@ def best_band(markets, mu, mu_t):
                 rank, nat = 2, mu_t
             gap = 0.0 if nat is None else abs(o["line"] - nat)
             cands.append({"rank": rank, "gap": round(gap, 3), "p": o["p"],
-                          "market": m["market"], "selection": o["selection"],
+                          "market": m["market"],
+                          "selection": o.get("selection", o.get("name", "")),
                           "line": o.get("line", ""), "posted": o.get("posted", ""),
                           "side": o["side"]})
     if not cands:
@@ -539,6 +563,7 @@ def best_band(markets, mu, mu_t):
                    "fair_decimal": price(c["p"])["fair_decimal"],
                    "fair_american": price(c["p"])["fair_american"], "rank": c["rank"]}
                   for c in cands]
+
 
 
 def originate_f1(match, inputs):
@@ -622,16 +647,22 @@ def main():
         markets, mu, mu_t = markets_for(m, dist, cfg)
         band, cands = best_band(markets, mu, mu_t)
         mw = markets[0]["outcomes"]
+        two_way = [o for o in mw if o["side"] in ("home", "away")]
         best = max(mw, key=lambda o: o["p"])
         if band:
             primary = {"market": band["market"], "selection": band["selection"], "p": band["p"],
                        "fair_decimal": band["fair_decimal"], "fair_american": band["fair_american"],
                        "confidence": "high", "note": "In-band selection found by searching every originated market."}
         else:
+            level = abs(mw[0]["p"] - mw[-1]["p"]) < 0.0005
             primary = {"market": "match winner", "selection": best["name"], "p": best["p"],
                        "fair_decimal": best["fair_decimal"], "fair_american": best["fair_american"],
                        "confidence": best["confidence"],
-                       "note": ("No originated market on either side reaches probability 0.70 inside the "
+                       "level": level,
+                       "note": (("The captured inputs rate both sides identically, so this is a true coin flip: "
+                                  "the published selection follows the official listing order and carries "
+                                  "no model edge. " if level else "")
+                                + "No originated market on either side reaches probability 0.70 inside the "
                                 "-250 to +10000 fair-price band, so the strongest two-way opinion is "
                                 "published instead and capped at %s." % best["confidence"])}
         rows.append({
@@ -642,6 +673,7 @@ def main():
             "expected_away": round(cfg["expected_a"], 3),
             "expected_margin": round(mu, 3), "expected_total": round(mu_t, 3),
             "league_avg": round(cfg.get("league_avg", 0.0), 4),
+            "caveat": VENUE_CAVEATS.get(m["id"], ""),
         })
         if band:
             band_picks.append({
@@ -652,6 +684,7 @@ def main():
                 "time_note": m["time_note"], "official_url": m["official_url"],
                 "capture_file": m["capture_file"], "source_name": m["source_name"],
                 "expected_margin": round(mu, 3), "expected_total": round(mu_t, 3),
+                "caveat": VENUE_CAVEATS.get(m["id"], ""),
                 **band})
 
     counts = {

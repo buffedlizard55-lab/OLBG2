@@ -5,12 +5,12 @@
   "originated_rows": 55,
   "blank_rows": 2,
   "sports_with_rows": 7,
-  "band_picks": 28,
+  "band_picks": 29,
   "markets_originated": 164,
-  "prices_originated": 1995,
-  "high_confidence": 28,
+  "prices_originated": 1931,
+  "high_confidence": 29,
   "medium_confidence": 11,
-  "low_confidence": 16
+  "low_confidence": 15
  },
  "gate": {
   "min_probability": 0.7,
@@ -43,6 +43,7 @@
        "p": 0.5516,
        "fair_decimal": 1.81,
        "fair_american": -123,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -51,6 +52,7 @@
        "p": 0.4484,
        "fair_decimal": 2.23,
        "fair_american": 123,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -614,7 +616,8 @@
    "expected_away": 88.232,
    "expected_margin": 1.426,
    "expected_total": 177.89,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": "The official game centre lists ALEKSANDAR NIKOLIC HALL as the venue for Maccabi Rapyd Tel Aviv's home fixture. The feed does not state whether that is a neutral site, and this layer applies its uniform +3.0 home-point advantage regardless, so the home advantage in this row may be overstated. Disclosed, not adjusted."
   },
   {
    "match_id": "euroleague-r7-63",
@@ -640,6 +643,7 @@
        "p": 0.5221,
        "fair_decimal": 1.92,
        "fair_american": -109,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -648,6 +652,7 @@
        "p": 0.4779,
        "fair_decimal": 2.09,
        "fair_american": 109,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -1211,7 +1216,8 @@
    "expected_away": 88.134,
    "expected_margin": 0.609,
    "expected_total": 176.878,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": ""
   },
   {
    "match_id": "euroleague-r7-64",
@@ -1237,6 +1243,7 @@
        "p": 0.6594,
        "fair_decimal": 1.52,
        "fair_american": -194,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -1245,6 +1252,7 @@
        "p": 0.3406,
        "fair_decimal": 2.94,
        "fair_american": 194,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -1808,7 +1816,8 @@
    "expected_away": 85.648,
    "expected_margin": 4.52,
    "expected_total": 175.817,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": ""
   },
   {
    "match_id": "euroleague-r7-65",
@@ -1821,6 +1830,7 @@
     "fair_decimal": 1.58,
     "fair_american": -173,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -1834,6 +1844,7 @@
        "p": 0.6333,
        "fair_decimal": 1.58,
        "fair_american": -173,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -1842,6 +1853,7 @@
        "p": 0.3667,
        "fair_decimal": 2.73,
        "fair_american": 173,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -2377,7 +2389,8 @@
    "expected_away": 83.755,
    "expected_margin": 3.746,
    "expected_total": 171.256,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": ""
   },
   {
    "match_id": "euroleague-r7-66",
@@ -2403,6 +2416,7 @@
        "p": 0.6205,
        "fair_decimal": 1.61,
        "fair_american": -164,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -2411,6 +2425,7 @@
        "p": 0.3795,
        "fair_decimal": 2.64,
        "fair_american": 164,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -2974,7 +2989,8 @@
    "expected_away": 76.803,
    "expected_margin": 3.375,
    "expected_total": 156.98,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": "The official game centre lists BELGRADE ARENA for Partizan Mozzart Bet Belgrade's home fixture against Crvena Zvezda Meridianbet Belgrade, a same-city derby. A shared-city derby dilutes home advantage; the uniform +3.0 is still applied and disclosed."
   },
   {
    "match_id": "euroleague-r7-67",
@@ -3000,6 +3016,7 @@
        "p": 0.9532,
        "fair_decimal": 1.05,
        "fair_american": -2035,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -3008,6 +3025,7 @@
        "p": 0.0468,
        "fair_decimal": 21.35,
        "fair_american": 2035,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -3571,7 +3589,8 @@
    "expected_away": 75.593,
    "expected_margin": 18.439,
    "expected_total": 169.625,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101019",
@@ -3597,6 +3616,7 @@
        "p": 0.4518,
        "fair_decimal": 2.21,
        "fair_american": 121,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -3605,6 +3625,7 @@
        "p": 0.0539,
        "fair_decimal": 18.54,
        "fair_american": 1754,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -3613,6 +3634,7 @@
        "p": 0.4943,
        "fair_decimal": 2.02,
        "fair_american": 102,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -4080,7 +4102,8 @@
    "expected_away": 27.605,
    "expected_margin": -0.395,
    "expected_total": 54.814,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101041",
@@ -4106,6 +4129,7 @@
        "p": 0.8546,
        "fair_decimal": 1.17,
        "fair_american": -588,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -4114,6 +4138,7 @@
        "p": 0.0257,
        "fair_decimal": 38.88,
        "fair_american": 3788,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -4122,6 +4147,7 @@
        "p": 0.1197,
        "fair_decimal": 8.36,
        "fair_american": 736,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -4581,7 +4607,8 @@
    "expected_away": 30.347,
    "expected_margin": 9.322,
    "expected_total": 70.015,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101043",
@@ -4594,6 +4621,7 @@
     "fair_decimal": 2.03,
     "fair_american": 103,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -4607,6 +4635,7 @@
        "p": 0.4934,
        "fair_decimal": 2.03,
        "fair_american": 103,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -4615,6 +4644,7 @@
        "p": 0.0474,
        "fair_decimal": 21.1,
        "fair_american": 2010,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -4623,6 +4653,7 @@
        "p": 0.4592,
        "fair_decimal": 2.18,
        "fair_american": 118,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -5062,7 +5093,8 @@
    "expected_away": 35.294,
    "expected_margin": 0.363,
    "expected_total": 70.951,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101049",
@@ -5088,6 +5120,7 @@
        "p": 0.7855,
        "fair_decimal": 1.27,
        "fair_american": -366,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -5096,6 +5129,7 @@
        "p": 0.0359,
        "fair_decimal": 27.84,
        "fair_american": 2684,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -5104,6 +5138,7 @@
        "p": 0.1785,
        "fair_decimal": 5.6,
        "fair_american": 460,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -5571,7 +5606,8 @@
    "expected_away": 26.65,
    "expected_margin": 6.616,
    "expected_total": 59.917,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101064",
@@ -5584,6 +5620,7 @@
     "fair_decimal": 1.19,
     "fair_american": -530,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -5597,6 +5634,7 @@
        "p": 0.1301,
        "fair_decimal": 7.69,
        "fair_american": 669,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -5605,6 +5643,7 @@
        "p": 0.0287,
        "fair_decimal": 34.8,
        "fair_american": 3380,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -5613,6 +5652,7 @@
        "p": 0.8412,
        "fair_decimal": 1.19,
        "fair_american": -530,
+       "in_band": false,
        "confidence": "medium"
       }
      ]
@@ -6052,7 +6092,8 @@
    "expected_away": 35.763,
    "expected_margin": -8.423,
    "expected_total": 63.103,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "snooker-niopen-r3-1",
@@ -6065,6 +6106,7 @@
     "fair_decimal": 1.75,
     "fair_american": -133,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -6078,6 +6120,7 @@
        "p": 0.5712,
        "fair_decimal": 1.75,
        "fair_american": -133,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -6086,6 +6129,7 @@
        "p": 0.4288,
        "fair_decimal": 2.33,
        "fair_american": 133,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -6297,7 +6341,8 @@
    "expected_away": 2.711,
    "expected_margin": 0.379,
    "expected_total": 5.8,
-   "league_avg": 0.0
+   "league_avg": 0.0,
+   "caveat": ""
   },
   {
    "match_id": "snooker-niopen-r3-2",
@@ -6310,6 +6355,7 @@
     "fair_decimal": 1.62,
     "fair_american": -161,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -6323,6 +6369,7 @@
        "p": 0.6175,
        "fair_decimal": 1.62,
        "fair_american": -161,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -6331,6 +6378,7 @@
        "p": 0.3825,
        "fair_decimal": 2.61,
        "fair_american": 161,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -6542,7 +6590,8 @@
    "expected_away": 2.575,
    "expected_margin": 0.628,
    "expected_total": 5.778,
-   "league_avg": 0.0
+   "league_avg": 0.0,
+   "caveat": ""
   },
   {
    "match_id": "snooker-niopen-r3-3",
@@ -6555,7 +6604,8 @@
     "fair_decimal": 2.0,
     "fair_american": 100,
     "confidence": "low",
-    "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
+    "level": true,
+    "note": "The captured inputs rate both sides identically, so this is a true coin flip: the published selection follows the official listing order and carries no model edge. No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
     {
@@ -6568,6 +6618,7 @@
        "p": 0.5,
        "fair_decimal": 2.0,
        "fair_american": 100,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -6576,6 +6627,7 @@
        "p": 0.5,
        "fair_decimal": 2.0,
        "fair_american": 100,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -6787,7 +6839,8 @@
    "expected_away": 2.906,
    "expected_margin": 0.0,
    "expected_total": 5.812,
-   "league_avg": 0.0
+   "league_avg": 0.0,
+   "caveat": ""
   },
   {
    "match_id": "snooker-niopen-r3-4",
@@ -6811,6 +6864,7 @@
     "fair_decimal": 1.75,
     "fair_american": -133,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -6824,6 +6878,7 @@
        "p": 0.4288,
        "fair_decimal": 2.33,
        "fair_american": 133,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -6832,6 +6887,7 @@
        "p": 0.5712,
        "fair_decimal": 1.75,
        "fair_american": -133,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -7043,7 +7099,8 @@
    "expected_away": 3.089,
    "expected_margin": -0.379,
    "expected_total": 5.8,
-   "league_avg": 0.0
+   "league_avg": 0.0,
+   "caveat": ""
   },
   {
    "match_id": "snooker-niopen-r3-6",
@@ -7067,6 +7124,7 @@
     "fair_decimal": 1.53,
     "fair_american": -187,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -7080,6 +7138,7 @@
        "p": 0.652,
        "fair_decimal": 1.53,
        "fair_american": -187,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -7088,133 +7147,86 @@
        "p": 0.348,
        "fair_decimal": 2.87,
        "fair_american": 187,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Milwaukee Brewers +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9472,
-       "fair_decimal": 1.06,
-       "fair_american": -1793,
-       "american_exact": -1793.0602794335894,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Rays -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0528,
-       "fair_decimal": 18.93,
-       "fair_american": 1793,
-       "american_exact": 1793.0602794335887,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Milwaukee Brewers +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.8983,
-       "fair_decimal": 1.11,
-       "fair_american": -884,
-       "american_exact": -883.6149742536629,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Rays -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.1017,
-       "fair_decimal": 9.84,
-       "fair_american": 884,
-       "american_exact": 883.6149742536625,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Milwaukee Brewers +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.822,
-       "fair_decimal": 1.22,
-       "fair_american": -462,
-       "american_exact": -461.89515644196194,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Rays -1.5",
-       "line": -1.5,
+       "selection": "Milwaukee Brewers -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.178,
-       "fair_decimal": 5.62,
-       "fair_american": 462,
-       "american_exact": 461.8951564419618,
+       "p": 0.4489,
+       "fair_decimal": 2.23,
+       "fair_american": 123,
+       "american_exact": 122.75429580076928,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Tampa Bay Rays +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.5511,
+       "fair_decimal": 1.81,
+       "fair_american": -123,
+       "american_exact": -122.75429580076928,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "home",
-       "selection": "Milwaukee Brewers +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.7165,
-       "fair_decimal": 1.4,
-       "fair_american": -253,
-       "american_exact": -252.69586945174427,
+       "selection": "Milwaukee Brewers -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.3173,
+       "fair_decimal": 3.15,
+       "fair_american": 215,
+       "american_exact": 215.20880755603162,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Tampa Bay Rays +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.6827,
+       "fair_decimal": 1.46,
+       "fair_american": -215,
+       "american_exact": -215.2088075560316,
        "in_band": false,
        "confidence": "medium"
       },
       {
-       "side": "away",
-       "selection": "Tampa Bay Rays -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.2835,
-       "fair_decimal": 3.53,
-       "fair_american": 253,
-       "american_exact": 252.69586945174436,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
        "side": "home",
-       "selection": "Milwaukee Brewers -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.5876,
-       "fair_decimal": 1.7,
-       "fair_american": -142,
-       "american_exact": -142.4805474706618,
+       "selection": "Milwaukee Brewers -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.2065,
+       "fair_decimal": 4.84,
+       "fair_american": 384,
+       "american_exact": 384.19175161920907,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Tampa Bay Rays +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.4124,
-       "fair_decimal": 2.42,
-       "fair_american": 142,
-       "american_exact": 142.48054747066178,
+       "selection": "Tampa Bay Rays +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.7935,
+       "fair_decimal": 1.26,
+       "fair_american": -384,
+       "american_exact": -384.19175161920896,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       }
      ]
     },
@@ -7343,7 +7355,8 @@
    "expected_away": 3.686,
    "expected_margin": 1.156,
    "expected_total": 8.528,
-   "league_avg": 4.4811
+   "league_avg": 4.4811,
+   "caveat": ""
   },
   {
    "match_id": "euroleague-r7-68",
@@ -7369,6 +7382,7 @@
        "p": 0.7489,
        "fair_decimal": 1.34,
        "fair_american": -298,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -7377,6 +7391,7 @@
        "p": 0.2511,
        "fair_decimal": 3.98,
        "fair_american": 298,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -7940,7 +7955,8 @@
    "expected_away": 83.995,
    "expected_margin": 7.383,
    "expected_total": 175.372,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": ""
   },
   {
    "match_id": "euroleague-r7-69",
@@ -7966,6 +7982,7 @@
        "p": 0.4493,
        "fair_decimal": 2.23,
        "fair_american": 123,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -7974,6 +7991,7 @@
        "p": 0.5507,
        "fair_decimal": 1.82,
        "fair_american": -123,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -8537,7 +8555,8 @@
    "expected_away": 91.134,
    "expected_margin": -1.402,
    "expected_total": 180.866,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": ""
   },
   {
    "match_id": "euroleague-r7-70",
@@ -8563,6 +8582,7 @@
        "p": 0.6611,
        "fair_decimal": 1.51,
        "fair_american": -195,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -8571,6 +8591,7 @@
        "p": 0.3389,
        "fair_decimal": 2.95,
        "fair_american": 195,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -9134,7 +9155,8 @@
    "expected_away": 82.415,
    "expected_margin": 4.571,
    "expected_total": 169.401,
-   "league_avg": 86.4426
+   "league_avg": 86.4426,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020166",
@@ -9147,6 +9169,7 @@
     "fair_decimal": 1.85,
     "fair_american": -117,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -9160,6 +9183,7 @@
        "p": 0.4607,
        "fair_decimal": 2.17,
        "fair_american": 117,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -9168,133 +9192,86 @@
        "p": 0.5393,
        "fair_decimal": 1.85,
        "fair_american": -117,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": 1.5,
+     "line": -1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Chicago Blackhawks +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.5397,
-       "fair_decimal": 1.85,
-       "fair_american": -117,
-       "american_exact": -117.25149075444376,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Montreal Canadiens -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.4603,
-       "fair_decimal": 2.17,
-       "fair_american": 117,
-       "american_exact": 117.2514907544438,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Chicago Blackhawks -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.3816,
-       "fair_decimal": 2.62,
-       "fair_american": 162,
-       "american_exact": 162.07641899795075,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Montreal Canadiens +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.6184,
-       "fair_decimal": 1.62,
-       "fair_american": -162,
-       "american_exact": -162.07641899795075,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Chicago Blackhawks -1.5",
-       "line": 1.5,
-       "posted": -1.5,
-       "p": 0.2416,
-       "fair_decimal": 4.14,
-       "fair_american": 314,
-       "american_exact": 313.8467500623747,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Montreal Canadiens +1.5",
-       "line": 1.5,
-       "posted": 1.5,
-       "p": 0.7584,
-       "fair_decimal": 1.32,
-       "fair_american": -314,
-       "american_exact": -313.8467500623748,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Chicago Blackhawks -2.5",
-       "line": 2.5,
-       "posted": -2.5,
-       "p": 0.1364,
-       "fair_decimal": 7.33,
-       "fair_american": 633,
-       "american_exact": 633.0047619338773,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Montreal Canadiens +2.5",
-       "line": 2.5,
-       "posted": 2.5,
-       "p": 0.8636,
-       "fair_decimal": 1.16,
-       "fair_american": -633,
-       "american_exact": -633.0047619338773,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Chicago Blackhawks -3.5",
-       "line": 3.5,
-       "posted": -3.5,
-       "p": 0.0687,
-       "fair_decimal": 14.56,
-       "fair_american": 1356,
-       "american_exact": 1356.0538076608293,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Montreal Canadiens +3.5",
-       "line": 3.5,
+       "selection": "Chicago Blackhawks +3.5",
+       "line": -3.5,
        "posted": 3.5,
-       "p": 0.9313,
-       "fair_decimal": 1.07,
-       "fair_american": -1356,
-       "american_exact": -1356.0538076608282,
+       "p": 0.9,
+       "fair_decimal": 1.11,
+       "fair_american": -900,
+       "american_exact": -899.7011316908072,
        "in_band": false,
        "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Montreal Canadiens -3.5",
+       "line": -3.5,
+       "posted": -3.5,
+       "p": 0.1,
+       "fair_decimal": 10.0,
+       "fair_american": 900,
+       "american_exact": 899.7011316908065,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Chicago Blackhawks +2.5",
+       "line": -2.5,
+       "posted": 2.5,
+       "p": 0.8142,
+       "fair_decimal": 1.23,
+       "fair_american": -438,
+       "american_exact": -438.2287662406391,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Montreal Canadiens -2.5",
+       "line": -2.5,
+       "posted": -2.5,
+       "p": 0.1858,
+       "fair_decimal": 5.38,
+       "fair_american": 438,
+       "american_exact": 438.2287662406389,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Chicago Blackhawks +1.5",
+       "line": -1.5,
+       "posted": 1.5,
+       "p": 0.6911,
+       "fair_decimal": 1.45,
+       "fair_american": -224,
+       "american_exact": -223.70984590988095,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Montreal Canadiens -1.5",
+       "line": -1.5,
+       "posted": -1.5,
+       "p": 0.3089,
+       "fair_decimal": 3.24,
+       "fair_american": 224,
+       "american_exact": 223.70984590988093,
+       "in_band": false,
+       "confidence": "low"
       }
      ]
     },
@@ -9423,7 +9400,8 @@
    "expected_away": 3.416,
    "expected_margin": -0.258,
    "expected_total": 6.573,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020167",
@@ -9436,6 +9414,7 @@
     "fair_decimal": 1.78,
     "fair_american": -129,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -9449,6 +9428,7 @@
        "p": 0.5627,
        "fair_decimal": 1.78,
        "fair_american": -129,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -9457,133 +9437,86 @@
        "p": 0.4373,
        "fair_decimal": 2.29,
        "fair_american": 129,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Colorado Avalanche +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9392,
-       "fair_decimal": 1.06,
-       "fair_american": -1546,
-       "american_exact": -1545.8438129377837,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0608,
-       "fair_decimal": 16.46,
-       "fair_american": 1546,
-       "american_exact": 1545.843812937781,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Colorado Avalanche +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.8767,
-       "fair_decimal": 1.14,
-       "fair_american": -711,
-       "american_exact": -710.9506595071304,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.1233,
-       "fair_decimal": 8.11,
-       "fair_american": 711,
-       "american_exact": 710.9506595071306,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Colorado Avalanche +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.7771,
-       "fair_decimal": 1.29,
-       "fair_american": -349,
-       "american_exact": -348.56076435105064,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -1.5",
-       "line": -1.5,
+       "selection": "Colorado Avalanche -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.2229,
-       "fair_decimal": 4.49,
-       "fair_american": 349,
-       "american_exact": 348.5607643510507,
+       "p": 0.33,
+       "fair_decimal": 3.03,
+       "fair_american": 203,
+       "american_exact": 203.0036385582691,
        "in_band": false,
        "confidence": "low"
       },
       {
-       "side": "home",
-       "selection": "Colorado Avalanche +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.6413,
-       "fair_decimal": 1.56,
-       "fair_american": -179,
-       "american_exact": -178.75221680460118,
+       "side": "away",
+       "selection": "Tampa Bay Lightning +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.67,
+       "fair_decimal": 1.49,
+       "fair_american": -203,
+       "american_exact": -203.00363855826913,
        "in_band": false,
        "confidence": "medium"
       },
       {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.3587,
-       "fair_decimal": 2.79,
-       "fair_american": 179,
-       "american_exact": 178.75221680460118,
+       "side": "home",
+       "selection": "Colorado Avalanche -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.2019,
+       "fair_decimal": 4.95,
+       "fair_american": 395,
+       "american_exact": 395.35447558788303,
        "in_band": false,
        "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Tampa Bay Lightning +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.7981,
+       "fair_decimal": 1.25,
+       "fair_american": -395,
+       "american_exact": -395.3544755878831,
+       "in_band": false,
+       "confidence": "medium"
       },
       {
        "side": "home",
-       "selection": "Colorado Avalanche -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.4841,
-       "fair_decimal": 2.07,
-       "fair_american": 107,
-       "american_exact": 106.58644434003025,
+       "selection": "Colorado Avalanche -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.1106,
+       "fair_decimal": 9.04,
+       "fair_american": 804,
+       "american_exact": 804.0692022500957,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Tampa Bay Lightning +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.5159,
-       "fair_decimal": 1.94,
-       "fair_american": -107,
-       "american_exact": -106.58644434003028,
+       "selection": "Tampa Bay Lightning +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.8894,
+       "fair_decimal": 1.12,
+       "fair_american": -804,
+       "american_exact": -804.0692022500964,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       }
      ]
     },
@@ -9712,7 +9645,8 @@
    "expected_away": 3.072,
    "expected_margin": 0.412,
    "expected_total": 6.556,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292608",
@@ -9735,25 +9669,28 @@
       {
        "name": "Cardiff Rugby",
        "side": "home",
-       "p": 0.5547,
-       "fair_decimal": 1.8,
-       "fair_american": -125,
-       "confidence": "low"
+       "p": 0.6146,
+       "fair_decimal": 1.63,
+       "fair_american": -159,
+       "in_band": false,
+       "confidence": "medium"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.1707,
-       "fair_decimal": 5.86,
-       "fair_american": 486,
+       "p": 0.0573,
+       "fair_decimal": 17.45,
+       "fair_american": 1645,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Hollywoodbets Sharks",
        "side": "away",
-       "p": 0.2746,
-       "fair_decimal": 3.64,
-       "fair_american": 264,
+       "p": 0.3281,
+       "fair_decimal": 3.05,
+       "fair_american": 205,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -10445,7 +10382,8 @@
    "expected_away": 23.478,
    "expected_margin": 4.787,
    "expected_total": 51.743,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292609",
@@ -10468,25 +10406,28 @@
       {
        "name": "Connacht Rugby",
        "side": "home",
-       "p": 0.6961,
-       "fair_decimal": 1.44,
-       "fair_american": -229,
+       "p": 0.7476,
+       "fair_decimal": 1.34,
+       "fair_american": -296,
+       "in_band": false,
        "confidence": "medium"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.1391,
-       "fair_decimal": 7.19,
-       "fair_american": 619,
+       "p": 0.0465,
+       "fair_decimal": 21.5,
+       "fair_american": 2050,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Zebre Parma",
        "side": "away",
-       "p": 0.1649,
-       "fair_decimal": 6.07,
-       "fair_american": 507,
+       "p": 0.2059,
+       "fair_decimal": 4.86,
+       "fair_american": 386,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -11186,7 +11127,8 @@
    "expected_away": 20.779,
    "expected_margin": 9.671,
    "expected_total": 51.23,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292610",
@@ -11209,25 +11151,28 @@
       {
        "name": "Edinburgh",
        "side": "home",
-       "p": 0.7474,
-       "fair_decimal": 1.34,
-       "fair_american": -296,
+       "p": 0.7939,
+       "fair_decimal": 1.26,
+       "fair_american": -385,
+       "in_band": false,
        "confidence": "medium"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.1229,
-       "fair_decimal": 8.14,
-       "fair_american": 714,
+       "p": 0.041,
+       "fair_decimal": 24.37,
+       "fair_american": 2337,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "10bet Lions",
        "side": "away",
-       "p": 0.1297,
-       "fair_decimal": 7.71,
-       "fair_american": 671,
+       "p": 0.165,
+       "fair_decimal": 6.06,
+       "fair_american": 506,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -11927,7 +11872,8 @@
    "expected_away": 20.31,
    "expected_margin": 11.662,
    "expected_total": 52.283,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "mlb-849802",
@@ -11940,6 +11886,7 @@
     "fair_decimal": 1.53,
     "fair_american": -187,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -11953,6 +11900,7 @@
        "p": 0.652,
        "fair_decimal": 1.53,
        "fair_american": -187,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -11961,133 +11909,86 @@
        "p": 0.348,
        "fair_decimal": 2.87,
        "fair_american": 187,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Milwaukee Brewers +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9472,
-       "fair_decimal": 1.06,
-       "fair_american": -1793,
-       "american_exact": -1793.0602794335894,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Rays -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0528,
-       "fair_decimal": 18.93,
-       "fair_american": 1793,
-       "american_exact": 1793.0602794335887,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Milwaukee Brewers +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.8983,
-       "fair_decimal": 1.11,
-       "fair_american": -884,
-       "american_exact": -883.6149742536629,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Rays -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.1017,
-       "fair_decimal": 9.84,
-       "fair_american": 884,
-       "american_exact": 883.6149742536625,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Milwaukee Brewers +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.822,
-       "fair_decimal": 1.22,
-       "fair_american": -462,
-       "american_exact": -461.89515644196194,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Rays -1.5",
-       "line": -1.5,
+       "selection": "Milwaukee Brewers -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.178,
-       "fair_decimal": 5.62,
-       "fair_american": 462,
-       "american_exact": 461.8951564419618,
+       "p": 0.4489,
+       "fair_decimal": 2.23,
+       "fair_american": 123,
+       "american_exact": 122.75429580076928,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Tampa Bay Rays +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.5511,
+       "fair_decimal": 1.81,
+       "fair_american": -123,
+       "american_exact": -122.75429580076928,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "home",
-       "selection": "Milwaukee Brewers +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.7165,
-       "fair_decimal": 1.4,
-       "fair_american": -253,
-       "american_exact": -252.69586945174427,
+       "selection": "Milwaukee Brewers -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.3173,
+       "fair_decimal": 3.15,
+       "fair_american": 215,
+       "american_exact": 215.20880755603162,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Tampa Bay Rays +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.6827,
+       "fair_decimal": 1.46,
+       "fair_american": -215,
+       "american_exact": -215.2088075560316,
        "in_band": false,
        "confidence": "medium"
       },
       {
-       "side": "away",
-       "selection": "Tampa Bay Rays -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.2835,
-       "fair_decimal": 3.53,
-       "fair_american": 253,
-       "american_exact": 252.69586945174436,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
        "side": "home",
-       "selection": "Milwaukee Brewers -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.5876,
-       "fair_decimal": 1.7,
-       "fair_american": -142,
-       "american_exact": -142.4805474706618,
+       "selection": "Milwaukee Brewers -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.2065,
+       "fair_decimal": 4.84,
+       "fair_american": 384,
+       "american_exact": 384.19175161920907,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Tampa Bay Rays +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.4124,
-       "fair_decimal": 2.42,
-       "fair_american": 142,
-       "american_exact": 142.48054747066178,
+       "selection": "Tampa Bay Rays +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.7935,
+       "fair_decimal": 1.26,
+       "fair_american": -384,
+       "american_exact": -384.19175161920896,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       }
      ]
     },
@@ -12216,7 +12117,8 @@
    "expected_away": 3.686,
    "expected_margin": 1.156,
    "expected_total": 8.528,
-   "league_avg": 4.4811
+   "league_avg": 4.4811,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020168",
@@ -12229,6 +12131,7 @@
     "fair_decimal": 1.76,
     "fair_american": -131,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -12242,6 +12145,7 @@
        "p": 0.4333,
        "fair_decimal": 2.31,
        "fair_american": 131,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -12250,133 +12154,86 @@
        "p": 0.5667,
        "fair_decimal": 1.76,
        "fair_american": -131,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": 1.5,
+     "line": -1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Philadelphia Flyers +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.5221,
-       "fair_decimal": 1.92,
-       "fair_american": -109,
-       "american_exact": -109.24004096383848,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Anaheim Ducks -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.4779,
-       "fair_decimal": 2.09,
-       "fair_american": 109,
-       "american_exact": 109.24004096383845,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Philadelphia Flyers -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.3446,
-       "fair_decimal": 2.9,
-       "fair_american": 190,
-       "american_exact": 190.20083337927437,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Anaheim Ducks +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.6554,
-       "fair_decimal": 1.53,
-       "fair_american": -190,
-       "american_exact": -190.20083337927437,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Philadelphia Flyers -1.5",
-       "line": 1.5,
-       "posted": -1.5,
-       "p": 0.1969,
-       "fair_decimal": 5.08,
-       "fair_american": 408,
-       "american_exact": 407.81997383555455,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Anaheim Ducks +1.5",
-       "line": 1.5,
-       "posted": 1.5,
-       "p": 0.8031,
-       "fair_decimal": 1.25,
-       "fair_american": -408,
-       "american_exact": -407.8199738355545,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Philadelphia Flyers -2.5",
-       "line": 2.5,
-       "posted": -2.5,
-       "p": 0.0972,
-       "fair_decimal": 10.29,
-       "fair_american": 929,
-       "american_exact": 928.5156833184019,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Anaheim Ducks +2.5",
-       "line": 2.5,
-       "posted": 2.5,
-       "p": 0.9028,
-       "fair_decimal": 1.11,
-       "fair_american": -929,
-       "american_exact": -928.5156833184028,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Philadelphia Flyers -3.5",
-       "line": 3.5,
-       "posted": -3.5,
-       "p": 0.0417,
-       "fair_decimal": 23.99,
-       "fair_american": 2299,
-       "american_exact": 2298.837526065681,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Anaheim Ducks +3.5",
-       "line": 3.5,
+       "selection": "Philadelphia Flyers +3.5",
+       "line": -3.5,
        "posted": 3.5,
-       "p": 0.9583,
-       "fair_decimal": 1.04,
-       "fair_american": -2299,
-       "american_exact": -2298.8375260656817,
+       "p": 0.9162,
+       "fair_decimal": 1.09,
+       "fair_american": -1094,
+       "american_exact": -1094.018315418472,
        "in_band": false,
        "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Anaheim Ducks -3.5",
+       "line": -3.5,
+       "posted": -3.5,
+       "p": 0.0838,
+       "fair_decimal": 11.94,
+       "fair_american": 1094,
+       "american_exact": 1094.018315418473,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Philadelphia Flyers +2.5",
+       "line": -2.5,
+       "posted": 2.5,
+       "p": 0.8288,
+       "fair_decimal": 1.21,
+       "fair_american": -484,
+       "american_exact": -484.1090317893911,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Anaheim Ducks -2.5",
+       "line": -2.5,
+       "posted": -2.5,
+       "p": 0.1712,
+       "fair_decimal": 5.84,
+       "fair_american": 484,
+       "american_exact": 484.10903178939105,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Philadelphia Flyers +1.5",
+       "line": -1.5,
+       "posted": 1.5,
+       "p": 0.6939,
+       "fair_decimal": 1.44,
+       "fair_american": -227,
+       "american_exact": -226.66168336547878,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Anaheim Ducks -1.5",
+       "line": -1.5,
+       "posted": -1.5,
+       "p": 0.3061,
+       "fair_decimal": 3.27,
+       "fair_american": 227,
+       "american_exact": 226.66168336547878,
+       "in_band": false,
+       "confidence": "low"
       }
      ]
     },
@@ -12505,7 +12362,8 @@
    "expected_away": 2.793,
    "expected_margin": -0.392,
    "expected_total": 5.193,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020169",
@@ -12518,6 +12376,7 @@
     "fair_decimal": 1.56,
     "fair_american": -180,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -12531,6 +12390,7 @@
        "p": 0.6424,
        "fair_decimal": 1.56,
        "fair_american": -180,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -12539,133 +12399,86 @@
        "p": 0.3576,
        "fair_decimal": 2.8,
        "fair_american": 180,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "New Jersey Devils +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9622,
-       "fair_decimal": 1.04,
-       "fair_american": -2546,
-       "american_exact": -2545.579837803554,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Los Angeles Kings -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0378,
-       "fair_decimal": 26.46,
-       "fair_american": 2546,
-       "american_exact": 2545.5798378035597,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "New Jersey Devils +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.9165,
-       "fair_decimal": 1.09,
-       "fair_american": -1098,
-       "american_exact": -1098.2514866995184,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Los Angeles Kings -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.0835,
-       "fair_decimal": 11.98,
-       "fair_american": 1098,
-       "american_exact": 1098.2514866995177,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "New Jersey Devils +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.8367,
-       "fair_decimal": 1.2,
-       "fair_american": -512,
-       "american_exact": -512.280594777937,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Los Angeles Kings -1.5",
-       "line": -1.5,
+       "selection": "New Jersey Devils -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.1633,
-       "fair_decimal": 6.12,
-       "fair_american": 512,
-       "american_exact": 512.2805947779372,
+       "p": 0.4071,
+       "fair_decimal": 2.46,
+       "fair_american": 146,
+       "american_exact": 145.6318295230618,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Los Angeles Kings +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.5929,
+       "fair_decimal": 1.69,
+       "fair_american": -146,
+       "american_exact": -145.63182952306175,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "home",
-       "selection": "New Jersey Devils +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.7175,
-       "fair_decimal": 1.39,
-       "fair_american": -254,
-       "american_exact": -253.97338089455093,
+       "selection": "New Jersey Devils -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.2632,
+       "fair_decimal": 3.8,
+       "fair_american": 280,
+       "american_exact": 279.9127509294412,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Los Angeles Kings +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.7368,
+       "fair_decimal": 1.36,
+       "fair_american": -280,
+       "american_exact": -279.9127509294411,
        "in_band": false,
        "confidence": "medium"
       },
       {
-       "side": "away",
-       "selection": "Los Angeles Kings -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.2825,
-       "fair_decimal": 3.54,
-       "fair_american": 254,
-       "american_exact": 253.97338089455087,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
        "side": "home",
-       "selection": "New Jersey Devils -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.5671,
-       "fair_decimal": 1.76,
-       "fair_american": -131,
-       "american_exact": -130.99351627082308,
+       "selection": "New Jersey Devils -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.1528,
+       "fair_decimal": 6.54,
+       "fair_american": 554,
+       "american_exact": 554.4060418229158,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Los Angeles Kings +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.4329,
-       "fair_decimal": 2.31,
-       "fair_american": 131,
-       "american_exact": 130.99351627082308,
+       "selection": "Los Angeles Kings +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.8472,
+       "fair_decimal": 1.18,
+       "fair_american": -554,
+       "american_exact": -554.4060418229157,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       }
      ]
     },
@@ -12794,7 +12607,8 @@
    "expected_away": 2.759,
    "expected_margin": 0.944,
    "expected_total": 6.462,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020170",
@@ -12820,6 +12634,7 @@
        "p": 0.7253,
        "fair_decimal": 1.38,
        "fair_american": -264,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -12828,133 +12643,86 @@
        "p": 0.2747,
        "fair_decimal": 3.64,
        "fair_american": 264,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Boston Bruins +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9815,
-       "fair_decimal": 1.02,
-       "fair_american": -5301,
-       "american_exact": -5301.020503615773,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "San Jose Sharks -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0185,
-       "fair_decimal": 54.01,
-       "fair_american": 5301,
-       "american_exact": 5301.0205036157895,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Boston Bruins +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.9528,
-       "fair_decimal": 1.05,
-       "fair_american": -2019,
-       "american_exact": -2019.1982720560954,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "San Jose Sharks -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.0472,
-       "fair_decimal": 21.19,
-       "fair_american": 2019,
-       "american_exact": 2019.198272056095,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Boston Bruins +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.8946,
-       "fair_decimal": 1.12,
-       "fair_american": -849,
-       "american_exact": -849.1642229652709,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "San Jose Sharks -1.5",
-       "line": -1.5,
+       "selection": "Boston Bruins -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.1054,
-       "fair_decimal": 9.49,
-       "fair_american": 849,
-       "american_exact": 849.1642229652706,
+       "p": 0.4902,
+       "fair_decimal": 2.04,
+       "fair_american": 104,
+       "american_exact": 103.98497002703428,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "San Jose Sharks +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.5098,
+       "fair_decimal": 1.96,
+       "fair_american": -104,
+       "american_exact": -103.98497002703428,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "home",
-       "selection": "Boston Bruins +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.7954,
-       "fair_decimal": 1.26,
-       "fair_american": -389,
-       "american_exact": -388.86334477868684,
+       "selection": "Boston Bruins -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.33,
+       "fair_decimal": 3.03,
+       "fair_american": 203,
+       "american_exact": 203.05159569629444,
        "in_band": false,
-       "confidence": "medium"
+       "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "San Jose Sharks -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.2046,
-       "fair_decimal": 4.89,
-       "fair_american": 389,
-       "american_exact": 388.8633447786868,
+       "selection": "San Jose Sharks +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.67,
+       "fair_decimal": 1.49,
+       "fair_american": -203,
+       "american_exact": -203.05159569629444,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       },
       {
        "side": "home",
-       "selection": "Boston Bruins -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.6549,
-       "fair_decimal": 1.53,
-       "fair_american": -190,
-       "american_exact": -189.76083511945552,
+       "selection": "Boston Bruins -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.1989,
+       "fair_decimal": 5.03,
+       "fair_american": 403,
+       "american_exact": 402.8662342564383,
        "in_band": false,
-       "confidence": "medium"
+       "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "San Jose Sharks +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.3451,
-       "fair_decimal": 2.9,
-       "fair_american": 190,
-       "american_exact": 189.76083511945552,
+       "selection": "San Jose Sharks +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.8011,
+       "fair_decimal": 1.25,
+       "fair_american": -403,
+       "american_exact": -402.86623425643836,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       }
      ]
     },
@@ -13103,7 +12871,8 @@
    "expected_away": 2.254,
    "expected_margin": 1.487,
    "expected_total": 5.996,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020171",
@@ -13116,6 +12885,7 @@
     "fair_decimal": 1.98,
     "fair_american": -102,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -13129,6 +12899,7 @@
        "p": 0.4946,
        "fair_decimal": 2.02,
        "fair_american": 102,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -13137,133 +12908,86 @@
        "p": 0.5054,
        "fair_decimal": 1.98,
        "fair_american": -102,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": 1.5,
+     "line": -1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Ottawa Senators +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.586,
-       "fair_decimal": 1.71,
-       "fair_american": -142,
-       "american_exact": -141.54875646879066,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "New York Rangers -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.414,
-       "fair_decimal": 2.42,
-       "fair_american": 142,
-       "american_exact": 141.54875646879069,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Ottawa Senators -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.4032,
-       "fair_decimal": 2.48,
-       "fair_american": 148,
-       "american_exact": 147.99620659138859,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "New York Rangers +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.5968,
-       "fair_decimal": 1.68,
-       "fair_american": -148,
-       "american_exact": -147.99620659138864,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Ottawa Senators -1.5",
-       "line": 1.5,
-       "posted": -1.5,
-       "p": 0.2408,
-       "fair_decimal": 4.15,
-       "fair_american": 315,
-       "american_exact": 315.3023965402958,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "New York Rangers +1.5",
-       "line": 1.5,
-       "posted": 1.5,
-       "p": 0.7592,
-       "fair_decimal": 1.32,
-       "fair_american": -315,
-       "american_exact": -315.30239654029566,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Ottawa Senators -2.5",
-       "line": 2.5,
-       "posted": -2.5,
-       "p": 0.1243,
-       "fair_decimal": 8.04,
-       "fair_american": 704,
-       "american_exact": 704.2512138604028,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "New York Rangers +2.5",
-       "line": 2.5,
-       "posted": 2.5,
-       "p": 0.8757,
-       "fair_decimal": 1.14,
-       "fair_american": -704,
-       "american_exact": -704.2512138604025,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Ottawa Senators -3.5",
-       "line": 3.5,
-       "posted": -3.5,
-       "p": 0.0558,
-       "fair_decimal": 17.93,
-       "fair_american": 1693,
-       "american_exact": 1693.257849416591,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "New York Rangers +3.5",
-       "line": 3.5,
+       "selection": "Ottawa Senators +3.5",
+       "line": -3.5,
        "posted": 3.5,
-       "p": 0.9442,
+       "p": 0.941,
        "fair_decimal": 1.06,
-       "fair_american": -1693,
-       "american_exact": -1693.2578494165946,
+       "fair_american": -1594,
+       "american_exact": -1594.3770751400002,
        "in_band": false,
        "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "New York Rangers -3.5",
+       "line": -3.5,
+       "posted": -3.5,
+       "p": 0.059,
+       "fair_decimal": 16.94,
+       "fair_american": 1594,
+       "american_exact": 1594.3770751400025,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Ottawa Senators +2.5",
+       "line": -2.5,
+       "posted": 2.5,
+       "p": 0.8698,
+       "fair_decimal": 1.15,
+       "fair_american": -668,
+       "american_exact": -668.1768004329876,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "New York Rangers -2.5",
+       "line": -2.5,
+       "posted": -2.5,
+       "p": 0.1302,
+       "fair_decimal": 7.68,
+       "fair_american": 668,
+       "american_exact": 668.1768004329876,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Ottawa Senators +1.5",
+       "line": -1.5,
+       "posted": 1.5,
+       "p": 0.7505,
+       "fair_decimal": 1.33,
+       "fair_american": -301,
+       "american_exact": -300.7443558597388,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "New York Rangers -1.5",
+       "line": -1.5,
+       "posted": -1.5,
+       "p": 0.2495,
+       "fair_decimal": 4.01,
+       "fair_american": 301,
+       "american_exact": 300.74435585973885,
+       "in_band": false,
+       "confidence": "low"
       }
      ]
     },
@@ -13392,7 +13116,8 @@
    "expected_away": 2.535,
    "expected_margin": -0.031,
    "expected_total": 5.039,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020172",
@@ -13418,6 +13143,7 @@
        "p": 0.4959,
        "fair_decimal": 2.02,
        "fair_american": 102,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -13426,133 +13152,86 @@
        "p": 0.5041,
        "fair_decimal": 1.98,
        "fair_american": -102,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": 1.5,
+     "line": -1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Pittsburgh Penguins +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.5773,
-       "fair_decimal": 1.73,
-       "fair_american": -137,
-       "american_exact": -136.55034010762765,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Nashville Predators -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.4227,
-       "fair_decimal": 2.37,
-       "fair_american": 137,
-       "american_exact": 136.55034010762765,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Pittsburgh Penguins -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.4146,
-       "fair_decimal": 2.41,
-       "fair_american": 141,
-       "american_exact": 141.22282362552508,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Nashville Predators +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.5854,
-       "fair_decimal": 1.71,
-       "fair_american": -141,
-       "american_exact": -141.22282362552508,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Pittsburgh Penguins -1.5",
-       "line": 1.5,
-       "posted": -1.5,
-       "p": 0.2661,
-       "fair_decimal": 3.76,
-       "fair_american": 276,
-       "american_exact": 275.861512017284,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Nashville Predators +1.5",
-       "line": 1.5,
-       "posted": 1.5,
-       "p": 0.7339,
-       "fair_decimal": 1.36,
-       "fair_american": -276,
-       "american_exact": -275.8615120172839,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Pittsburgh Penguins -2.5",
-       "line": 2.5,
-       "posted": -2.5,
-       "p": 0.1518,
-       "fair_decimal": 6.59,
-       "fair_american": 559,
-       "american_exact": 558.7825942670048,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Nashville Predators +2.5",
-       "line": 2.5,
-       "posted": 2.5,
-       "p": 0.8482,
-       "fair_decimal": 1.18,
-       "fair_american": -559,
-       "american_exact": -558.782594267005,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Pittsburgh Penguins -3.5",
-       "line": 3.5,
-       "posted": -3.5,
-       "p": 0.077,
-       "fair_decimal": 12.99,
-       "fair_american": 1199,
-       "american_exact": 1198.717169545509,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Nashville Predators +3.5",
-       "line": 3.5,
+       "selection": "Pittsburgh Penguins +3.5",
+       "line": -3.5,
        "posted": 3.5,
-       "p": 0.923,
-       "fair_decimal": 1.08,
-       "fair_american": -1199,
-       "american_exact": -1198.7171695455102,
+       "p": 0.9199,
+       "fair_decimal": 1.09,
+       "fair_american": -1148,
+       "american_exact": -1147.7536501052648,
        "in_band": false,
        "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Nashville Predators -3.5",
+       "line": -3.5,
+       "posted": -3.5,
+       "p": 0.0801,
+       "fair_decimal": 12.48,
+       "fair_american": 1148,
+       "american_exact": 1147.7536501052632,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Pittsburgh Penguins +2.5",
+       "line": -2.5,
+       "posted": 2.5,
+       "p": 0.8432,
+       "fair_decimal": 1.19,
+       "fair_american": -538,
+       "american_exact": -537.6381987593724,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Nashville Predators -2.5",
+       "line": -2.5,
+       "posted": -2.5,
+       "p": 0.1568,
+       "fair_decimal": 6.38,
+       "fair_american": 538,
+       "american_exact": 537.6381987593727,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Pittsburgh Penguins +1.5",
+       "line": -1.5,
+       "posted": 1.5,
+       "p": 0.727,
+       "fair_decimal": 1.38,
+       "fair_american": -266,
+       "american_exact": -266.2943915450191,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Nashville Predators -1.5",
+       "line": -1.5,
+       "posted": -1.5,
+       "p": 0.273,
+       "fair_decimal": 3.66,
+       "fair_american": 266,
+       "american_exact": 266.29439154501904,
+       "in_band": false,
+       "confidence": "low"
       }
      ]
     },
@@ -13701,20 +13380,22 @@
    "expected_away": 3.153,
    "expected_margin": -0.026,
    "expected_total": 6.28,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020173",
    "sport": "ice-hockey",
    "originated": true,
    "primary": {
-    "market": "handicap",
-    "selection": "Washington Capitals +0.5",
-    "p": 0.7018,
-    "fair_decimal": 1.42,
-    "fair_american": -235,
-    "confidence": "high",
-    "note": "In-band selection found by searching every originated market."
+    "market": "match winner",
+    "selection": "Washington Capitals",
+    "p": 0.6261,
+    "fair_decimal": 1.6,
+    "fair_american": -167,
+    "confidence": "medium",
+    "level": false,
+    "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
     {
@@ -13727,6 +13408,7 @@
        "p": 0.6261,
        "fair_decimal": 1.6,
        "fair_american": -167,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -13735,133 +13417,86 @@
        "p": 0.3739,
        "fair_decimal": 2.67,
        "fair_american": 167,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Washington Capitals +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9574,
-       "fair_decimal": 1.04,
-       "fair_american": -2250,
-       "american_exact": -2249.7721926698196,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Buffalo Sabres -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0426,
-       "fair_decimal": 23.5,
-       "fair_american": 2250,
-       "american_exact": 2249.772192669819,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Washington Capitals +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.9082,
-       "fair_decimal": 1.1,
-       "fair_american": -990,
-       "american_exact": -989.8836147415362,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Buffalo Sabres -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.0918,
-       "fair_decimal": 10.9,
-       "fair_american": 990,
-       "american_exact": 989.8836147415362,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Washington Capitals +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.8243,
-       "fair_decimal": 1.21,
-       "fair_american": -469,
-       "american_exact": -469.13036442232664,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Buffalo Sabres -1.5",
-       "line": -1.5,
+       "selection": "Washington Capitals -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.1757,
-       "fair_decimal": 5.69,
-       "fair_american": 469,
-       "american_exact": 469.1303644223269,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Washington Capitals +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.7018,
-       "fair_decimal": 1.42,
-       "fair_american": -235,
-       "american_exact": -235.3520491586562,
-       "in_band": true,
-       "confidence": "high"
-      },
-      {
-       "side": "away",
-       "selection": "Buffalo Sabres -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.2982,
-       "fair_decimal": 3.35,
-       "fair_american": 235,
-       "american_exact": 235.35204915865617,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Washington Capitals -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.5503,
-       "fair_decimal": 1.82,
-       "fair_american": -122,
-       "american_exact": -122.35597431563919,
+       "p": 0.3918,
+       "fair_decimal": 2.55,
+       "fair_american": 155,
+       "american_exact": 155.22431669863096,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Buffalo Sabres +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.4497,
-       "fair_decimal": 2.22,
-       "fair_american": 122,
-       "american_exact": 122.35597431563923,
+       "selection": "Buffalo Sabres +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.6082,
+       "fair_decimal": 1.64,
+       "fair_american": -155,
+       "american_exact": -155.2243166986309,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "home",
+       "selection": "Washington Capitals -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.2513,
+       "fair_decimal": 3.98,
+       "fair_american": 298,
+       "american_exact": 297.91749283903226,
        "in_band": false,
        "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Buffalo Sabres +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.7487,
+       "fair_decimal": 1.34,
+       "fair_american": -298,
+       "american_exact": -297.91749283903243,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "home",
+       "selection": "Washington Capitals -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.1448,
+       "fair_decimal": 6.91,
+       "fair_american": 591,
+       "american_exact": 590.6246990885955,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Buffalo Sabres +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.8552,
+       "fair_decimal": 1.17,
+       "fair_american": -591,
+       "american_exact": -590.6246990885959,
+       "in_band": false,
+       "confidence": "medium"
       }
      ]
     },
@@ -13982,35 +13617,16 @@
      ]
     }
    ],
-   "band_pick": {
-    "market": "handicap",
-    "selection": "Washington Capitals +0.5",
-    "line": -0.5,
-    "p": 0.7018,
-    "fair_decimal": 1.42,
-    "fair_american": -235,
-    "confidence": "high",
-    "side": "home",
-    "posted": 0.5,
-    "rank": 1
-   },
-   "band_candidates": [
-    {
-     "market": "handicap",
-     "selection": "Washington Capitals +0.5",
-     "p": 0.7018,
-     "fair_decimal": 1.42,
-     "fair_american": -235,
-     "rank": 1
-    }
-   ],
+   "band_pick": null,
+   "band_candidates": [],
    "blank_reason": "",
    "model": "nhl",
    "expected_home": 3.691,
    "expected_away": 2.853,
    "expected_margin": 0.838,
    "expected_total": 6.545,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020174",
@@ -14023,6 +13639,7 @@
     "fair_decimal": 1.53,
     "fair_american": -189,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -14036,6 +13653,7 @@
        "p": 0.3461,
        "fair_decimal": 2.89,
        "fair_american": 189,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -14044,133 +13662,86 @@
        "p": 0.6539,
        "fair_decimal": 1.53,
        "fair_american": -189,
+       "in_band": false,
        "confidence": "medium"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": 1.5,
+     "line": -1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Columbus Blue Jackets +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.421,
-       "fair_decimal": 2.38,
-       "fair_american": 138,
-       "american_exact": 137.54521232431176,
+       "selection": "Columbus Blue Jackets +3.5",
+       "line": -3.5,
+       "posted": 3.5,
+       "p": 0.8421,
+       "fair_decimal": 1.19,
+       "fair_american": -533,
+       "american_exact": -533.4110097308334,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       },
       {
        "side": "away",
-       "selection": "Vegas Golden Knights -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.579,
-       "fair_decimal": 1.73,
-       "fair_american": -138,
-       "american_exact": -137.54521232431173,
+       "selection": "Vegas Golden Knights -3.5",
+       "line": -3.5,
+       "posted": -3.5,
+       "p": 0.1579,
+       "fair_decimal": 6.33,
+       "fair_american": 533,
+       "american_exact": 533.4110097308331,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "home",
-       "selection": "Columbus Blue Jackets -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.2711,
-       "fair_decimal": 3.69,
-       "fair_american": 269,
-       "american_exact": 268.9098492534069,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Vegas Golden Knights +0.5",
-       "line": 0.5,
-       "posted": 0.5,
+       "selection": "Columbus Blue Jackets +2.5",
+       "line": -2.5,
+       "posted": 2.5,
        "p": 0.7289,
        "fair_decimal": 1.37,
        "fair_american": -269,
-       "american_exact": -268.9098492534069,
+       "american_exact": -268.9110575806478,
        "in_band": false,
        "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Columbus Blue Jackets -1.5",
-       "line": 1.5,
-       "posted": -1.5,
-       "p": 0.1541,
-       "fair_decimal": 6.49,
-       "fair_american": 549,
-       "american_exact": 548.8269615156005,
-       "in_band": false,
-       "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Vegas Golden Knights +1.5",
-       "line": 1.5,
-       "posted": 1.5,
-       "p": 0.8459,
-       "fair_decimal": 1.18,
-       "fair_american": -549,
-       "american_exact": -548.8269615156005,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Columbus Blue Jackets -2.5",
-       "line": 2.5,
+       "selection": "Vegas Golden Knights -2.5",
+       "line": -2.5,
        "posted": -2.5,
-       "p": 0.0772,
-       "fair_decimal": 12.95,
-       "fair_american": 1195,
-       "american_exact": 1195.2239406100834,
+       "p": 0.2711,
+       "fair_decimal": 3.69,
+       "fair_american": 269,
+       "american_exact": 268.91105758064776,
        "in_band": false,
        "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Vegas Golden Knights +2.5",
-       "line": 2.5,
-       "posted": 2.5,
-       "p": 0.9228,
-       "fair_decimal": 1.08,
-       "fair_american": -1195,
-       "american_exact": -1195.2239406100828,
-       "in_band": false,
-       "confidence": "medium"
       },
       {
        "side": "home",
-       "selection": "Columbus Blue Jackets -3.5",
-       "line": 3.5,
-       "posted": -3.5,
-       "p": 0.0342,
-       "fair_decimal": 29.27,
-       "fair_american": 2827,
-       "american_exact": 2827.15684875045,
+       "selection": "Columbus Blue Jackets +1.5",
+       "line": -1.5,
+       "posted": 1.5,
+       "p": 0.5824,
+       "fair_decimal": 1.72,
+       "fair_american": -139,
+       "american_exact": -139.45757550998243,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Vegas Golden Knights +3.5",
-       "line": 3.5,
-       "posted": 3.5,
-       "p": 0.9658,
-       "fair_decimal": 1.04,
-       "fair_american": -2827,
-       "american_exact": -2827.156848750448,
+       "selection": "Vegas Golden Knights -1.5",
+       "line": -1.5,
+       "posted": -1.5,
+       "p": 0.4176,
+       "fair_decimal": 2.39,
+       "fair_american": 139,
+       "american_exact": 139.45757550998246,
        "in_band": false,
-       "confidence": "medium"
+       "confidence": "low"
       }
      ]
     },
@@ -14299,7 +13870,8 @@
    "expected_away": 3.691,
    "expected_margin": -1.017,
    "expected_total": 6.365,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020175",
@@ -14312,6 +13884,7 @@
     "fair_decimal": 1.73,
     "fair_american": -136,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -14325,6 +13898,7 @@
        "p": 0.4231,
        "fair_decimal": 2.36,
        "fair_american": 136,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -14333,133 +13907,86 @@
        "p": 0.5769,
        "fair_decimal": 1.73,
        "fair_american": -136,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": 1.5,
+     "line": -1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "St. Louis Blues +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.5026,
-       "fair_decimal": 1.99,
-       "fair_american": -101,
-       "american_exact": -101.02536005657399,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Carolina Hurricanes -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.4974,
-       "fair_decimal": 2.01,
-       "fair_american": 101,
-       "american_exact": 101.02536005657399,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "St. Louis Blues -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.3436,
-       "fair_decimal": 2.91,
-       "fair_american": 191,
-       "american_exact": 191.02966131059253,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Carolina Hurricanes +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.6564,
-       "fair_decimal": 1.52,
-       "fair_american": -191,
-       "american_exact": -191.02966131059247,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "St. Louis Blues -1.5",
-       "line": 1.5,
-       "posted": -1.5,
-       "p": 0.2089,
-       "fair_decimal": 4.79,
-       "fair_american": 379,
-       "american_exact": 378.77069556413676,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Carolina Hurricanes +1.5",
-       "line": 1.5,
-       "posted": 1.5,
-       "p": 0.7911,
-       "fair_decimal": 1.26,
-       "fair_american": -379,
-       "american_exact": -378.7706955641368,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "St. Louis Blues -2.5",
-       "line": 2.5,
-       "posted": -2.5,
-       "p": 0.1125,
-       "fair_decimal": 8.89,
-       "fair_american": 789,
-       "american_exact": 789.2798907102044,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Carolina Hurricanes +2.5",
-       "line": 2.5,
-       "posted": 2.5,
-       "p": 0.8875,
-       "fair_decimal": 1.13,
-       "fair_american": -789,
-       "american_exact": -789.2798907102045,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "St. Louis Blues -3.5",
-       "line": 3.5,
-       "posted": -3.5,
-       "p": 0.0537,
-       "fair_decimal": 18.63,
-       "fair_american": 1763,
-       "american_exact": 1762.6342735655683,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Carolina Hurricanes +3.5",
-       "line": 3.5,
+       "selection": "St. Louis Blues +3.5",
+       "line": -3.5,
        "posted": 3.5,
-       "p": 0.9463,
-       "fair_decimal": 1.06,
-       "fair_american": -1763,
-       "american_exact": -1762.6342735655671,
+       "p": 0.8866,
+       "fair_decimal": 1.13,
+       "fair_american": -782,
+       "american_exact": -781.8044831069781,
        "in_band": false,
        "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Carolina Hurricanes -3.5",
+       "line": -3.5,
+       "posted": -3.5,
+       "p": 0.1134,
+       "fair_decimal": 8.82,
+       "fair_american": 782,
+       "american_exact": 781.8044831069775,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "St. Louis Blues +2.5",
+       "line": -2.5,
+       "posted": 2.5,
+       "p": 0.7924,
+       "fair_decimal": 1.26,
+       "fair_american": -382,
+       "american_exact": -381.60395585953927,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Carolina Hurricanes -2.5",
+       "line": -2.5,
+       "posted": -2.5,
+       "p": 0.2076,
+       "fair_decimal": 4.82,
+       "fair_american": 382,
+       "american_exact": 381.6039558595393,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "St. Louis Blues +1.5",
+       "line": -1.5,
+       "posted": 1.5,
+       "p": 0.6603,
+       "fair_decimal": 1.51,
+       "fair_american": -194,
+       "american_exact": -194.34467781233826,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Carolina Hurricanes -1.5",
+       "line": -1.5,
+       "posted": -1.5,
+       "p": 0.3397,
+       "fair_decimal": 2.94,
+       "fair_american": 194,
+       "american_exact": 194.3446778123383,
+       "in_band": false,
+       "confidence": "low"
       }
      ]
     },
@@ -14588,18 +14115,19 @@
    "expected_away": 3.422,
    "expected_margin": -0.498,
    "expected_total": 6.346,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020176",
    "sport": "ice-hockey",
    "originated": true,
    "primary": {
-    "market": "handicap",
-    "selection": "Edmonton Oilers +0.5",
-    "p": 0.71,
+    "market": "match total",
+    "selection": "Under 8.5",
+    "p": 0.7084,
     "fair_decimal": 1.41,
-    "fair_american": -245,
+    "fair_american": -243,
     "confidence": "high",
     "note": "In-band selection found by searching every originated market."
    },
@@ -14614,6 +14142,7 @@
        "p": 0.6387,
        "fair_decimal": 1.57,
        "fair_american": -177,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -14622,133 +14151,86 @@
        "p": 0.3613,
        "fair_decimal": 2.77,
        "fair_american": 177,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Edmonton Oilers +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9547,
-       "fair_decimal": 1.05,
-       "fair_american": -2109,
-       "american_exact": -2109.207700607024,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Toronto Maple Leafs -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0453,
-       "fair_decimal": 22.09,
-       "fair_american": 2109,
-       "american_exact": 2109.207700607021,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Edmonton Oilers +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.9062,
-       "fair_decimal": 1.1,
-       "fair_american": -966,
-       "american_exact": -966.115258054871,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Toronto Maple Leafs -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.0938,
-       "fair_decimal": 10.66,
-       "fair_american": 966,
-       "american_exact": 966.1152580548702,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Edmonton Oilers +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.8257,
-       "fair_decimal": 1.21,
-       "fair_american": -474,
-       "american_exact": -473.6430511108673,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Toronto Maple Leafs -1.5",
-       "line": -1.5,
+       "selection": "Edmonton Oilers -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.1743,
-       "fair_decimal": 5.74,
-       "fair_american": 474,
-       "american_exact": 473.6430511108675,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Edmonton Oilers +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.71,
-       "fair_decimal": 1.41,
-       "fair_american": -245,
-       "american_exact": -244.82263862507813,
-       "in_band": true,
-       "confidence": "high"
-      },
-      {
-       "side": "away",
-       "selection": "Toronto Maple Leafs -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.29,
-       "fair_decimal": 3.45,
-       "fair_american": 245,
-       "american_exact": 244.82263862507816,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Edmonton Oilers -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.567,
-       "fair_decimal": 1.76,
-       "fair_american": -131,
-       "american_exact": -130.9448111427306,
+       "p": 0.4152,
+       "fair_decimal": 2.41,
+       "fair_american": 141,
+       "american_exact": 140.82864145987566,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Toronto Maple Leafs +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.433,
-       "fair_decimal": 2.31,
-       "fair_american": 131,
-       "american_exact": 130.94481114273063,
+       "selection": "Toronto Maple Leafs +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.5848,
+       "fair_decimal": 1.71,
+       "fair_american": -141,
+       "american_exact": -140.8286414598756,
        "in_band": false,
        "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Edmonton Oilers -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.2766,
+       "fair_decimal": 3.61,
+       "fair_american": 261,
+       "american_exact": 261.4858247445569,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Toronto Maple Leafs +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.7234,
+       "fair_decimal": 1.38,
+       "fair_american": -261,
+       "american_exact": -261.48582474455696,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "home",
+       "selection": "Edmonton Oilers -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.167,
+       "fair_decimal": 5.99,
+       "fair_american": 499,
+       "american_exact": 498.6343870478003,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Toronto Maple Leafs +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.833,
+       "fair_decimal": 1.2,
+       "fair_american": -499,
+       "american_exact": -498.63438704780026,
+       "in_band": false,
+       "confidence": "medium"
       }
      ]
     },
@@ -14870,26 +14352,18 @@
     }
    ],
    "band_pick": {
-    "market": "handicap",
-    "selection": "Edmonton Oilers +0.5",
-    "line": -0.5,
-    "p": 0.71,
+    "market": "match total",
+    "selection": "Under 8.5",
+    "line": 8.5,
+    "p": 0.7084,
     "fair_decimal": 1.41,
-    "fair_american": -245,
+    "fair_american": -243,
     "confidence": "high",
-    "side": "home",
-    "posted": 0.5,
-    "rank": 1
+    "side": "under",
+    "posted": "",
+    "rank": 2
    },
    "band_candidates": [
-    {
-     "market": "handicap",
-     "selection": "Edmonton Oilers +0.5",
-     "p": 0.71,
-     "fair_decimal": 1.41,
-     "fair_american": -245,
-     "rank": 1
-    },
     {
      "market": "match total",
      "selection": "Under 8.5",
@@ -14905,7 +14379,8 @@
    "expected_away": 3.097,
    "expected_margin": 0.966,
    "expected_total": 7.159,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292611",
@@ -14914,10 +14389,11 @@
    "primary": {
     "market": "match winner",
     "selection": "Vodacom Bulls",
-    "p": 0.8217,
-    "fair_decimal": 1.22,
-    "fair_american": -461,
+    "p": 0.859,
+    "fair_decimal": 1.16,
+    "fair_american": -609,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -14928,25 +14404,28 @@
       {
        "name": "Vodacom Bulls",
        "side": "home",
-       "p": 0.8217,
-       "fair_decimal": 1.22,
-       "fair_american": -461,
+       "p": 0.859,
+       "fair_decimal": 1.16,
+       "fair_american": -609,
+       "in_band": false,
        "confidence": "medium"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.095,
-       "fair_decimal": 10.52,
-       "fair_american": 952,
+       "p": 0.0316,
+       "fair_decimal": 31.65,
+       "fair_american": 3065,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Ulster Rugby",
        "side": "away",
-       "p": 0.0833,
-       "fair_decimal": 12.01,
-       "fair_american": 1101,
+       "p": 0.1094,
+       "fair_decimal": 9.14,
+       "fair_american": 814,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -15618,7 +15097,8 @@
    "expected_away": 21.404,
    "expected_margin": 14.984,
    "expected_total": 57.792,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292612",
@@ -15641,25 +15121,28 @@
       {
        "name": "DHL Stormers",
        "side": "home",
-       "p": 0.725,
-       "fair_decimal": 1.38,
-       "fair_american": -264,
+       "p": 0.7739,
+       "fair_decimal": 1.29,
+       "fair_american": -342,
+       "in_band": false,
        "confidence": "medium"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.1303,
-       "fair_decimal": 7.68,
-       "fair_american": 668,
+       "p": 0.0435,
+       "fair_decimal": 22.97,
+       "fair_american": 2197,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Scarlets",
        "side": "away",
-       "p": 0.1447,
-       "fair_decimal": 6.91,
-       "fair_american": 591,
+       "p": 0.1826,
+       "fair_decimal": 5.48,
+       "fair_american": 448,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -16351,7 +15834,8 @@
    "expected_away": 19.416,
    "expected_margin": 10.772,
    "expected_total": 49.604,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292613",
@@ -16360,10 +15844,11 @@
    "primary": {
     "market": "match winner",
     "selection": "Benetton Rugby",
-    "p": 0.5039,
-    "fair_decimal": 1.98,
-    "fair_american": -102,
+    "p": 0.565,
+    "fair_decimal": 1.77,
+    "fair_american": -130,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -16374,25 +15859,28 @@
       {
        "name": "Benetton Rugby",
        "side": "home",
-       "p": 0.5039,
-       "fair_decimal": 1.98,
-       "fair_american": -102,
+       "p": 0.565,
+       "fair_decimal": 1.77,
+       "fair_american": -130,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.1774,
-       "fair_decimal": 5.64,
-       "fair_american": 464,
+       "p": 0.0596,
+       "fair_decimal": 16.79,
+       "fair_american": 1579,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Glasgow Warriors",
        "side": "away",
-       "p": 0.3187,
-       "fair_decimal": 3.14,
-       "fair_american": 214,
+       "p": 0.3755,
+       "fair_decimal": 2.66,
+       "fair_american": 166,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -17064,7 +16552,8 @@
    "expected_away": 23.766,
    "expected_margin": 3.127,
    "expected_total": 50.659,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292614",
@@ -17073,11 +16562,11 @@
    "primary": {
     "market": "match winner",
     "selection": "Leinster Rugby",
-    "p": 0.6513,
-    "fair_decimal": 1.54,
-    "fair_american": -187,
-    "confidence": "medium",
-    "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
+    "p": 0.7063,
+    "fair_decimal": 1.42,
+    "fair_american": -240,
+    "confidence": "high",
+    "note": "In-band selection found by searching every originated market."
    },
    "markets": [
     {
@@ -17087,25 +16576,28 @@
       {
        "name": "Leinster Rugby",
        "side": "home",
-       "p": 0.6513,
-       "fair_decimal": 1.54,
-       "fair_american": -187,
-       "confidence": "medium"
+       "p": 0.7063,
+       "fair_decimal": 1.42,
+       "fair_american": -240,
+       "in_band": true,
+       "confidence": "high"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.1512,
-       "fair_decimal": 6.62,
-       "fair_american": 562,
+       "p": 0.0506,
+       "fair_decimal": 19.75,
+       "fair_american": 1875,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Munster Rugby",
        "side": "away",
-       "p": 0.1976,
-       "fair_decimal": 5.06,
-       "fair_american": 406,
+       "p": 0.2431,
+       "fair_decimal": 4.11,
+       "fair_american": 311,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -17769,15 +17261,36 @@
      ]
     }
    ],
-   "band_pick": null,
-   "band_candidates": [],
+   "band_pick": {
+    "market": "match winner",
+    "selection": "Leinster Rugby",
+    "line": "",
+    "p": 0.7063,
+    "fair_decimal": 1.42,
+    "fair_american": -240,
+    "confidence": "high",
+    "side": "home",
+    "posted": "",
+    "rank": 0
+   },
+   "band_candidates": [
+    {
+     "market": "match winner",
+     "selection": "Leinster Rugby",
+     "p": 0.7063,
+     "fair_decimal": 1.42,
+     "fair_american": -240,
+     "rank": 0
+    }
+   ],
    "blank_reason": "",
    "model": "urc",
    "expected_home": 28.299,
    "expected_away": 20.246,
    "expected_margin": 8.053,
    "expected_total": 48.545,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "urc-r4-292615",
@@ -17800,25 +17313,28 @@
       {
        "name": "Ospreys",
        "side": "home",
-       "p": 0.4827,
-       "fair_decimal": 2.07,
-       "fair_american": 107,
+       "p": 0.544,
+       "fair_decimal": 1.84,
+       "fair_american": -119,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Draw",
        "side": "draw",
-       "p": 0.1794,
-       "fair_decimal": 5.57,
-       "fair_american": 457,
+       "p": 0.0603,
+       "fair_decimal": 16.6,
+       "fair_american": 1560,
+       "in_band": false,
        "confidence": "low"
       },
       {
        "name": "Dragons RFC",
        "side": "away",
-       "p": 0.3379,
-       "fair_decimal": 2.96,
-       "fair_american": 196,
+       "p": 0.3958,
+       "fair_decimal": 2.53,
+       "fair_american": 153,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -18518,20 +18034,21 @@
    "expected_away": 27.527,
    "expected_margin": 2.436,
    "expected_total": 57.49,
-   "league_avg": 26.2083
+   "league_avg": 26.2083,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020177",
    "sport": "ice-hockey",
    "originated": true,
    "primary": {
-    "market": "match winner",
-    "selection": "Utah Mammoth",
-    "p": 0.5302,
-    "fair_decimal": 1.89,
-    "fair_american": -113,
-    "confidence": "low",
-    "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
+    "market": "handicap",
+    "selection": "Tampa Bay Lightning +1.5",
+    "p": 0.7014,
+    "fair_decimal": 1.43,
+    "fair_american": -235,
+    "confidence": "high",
+    "note": "In-band selection found by searching every originated market."
    },
    "markets": [
     {
@@ -18544,6 +18061,7 @@
        "p": 0.5302,
        "fair_decimal": 1.89,
        "fair_american": -113,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -18552,133 +18070,86 @@
        "p": 0.4698,
        "fair_decimal": 2.13,
        "fair_american": 113,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Utah Mammoth +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9298,
-       "fair_decimal": 1.08,
-       "fair_american": -1324,
-       "american_exact": -1323.7742744076236,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0702,
-       "fair_decimal": 14.24,
-       "fair_american": 1324,
-       "american_exact": 1323.7742744076254,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Utah Mammoth +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.8604,
-       "fair_decimal": 1.16,
-       "fair_american": -616,
-       "american_exact": -616.1050116323017,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.1396,
-       "fair_decimal": 7.16,
-       "fair_american": 616,
-       "american_exact": 616.1050116323015,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Utah Mammoth +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.7527,
-       "fair_decimal": 1.33,
-       "fair_american": -304,
-       "american_exact": -304.39523689801115,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -1.5",
-       "line": -1.5,
+       "selection": "Utah Mammoth -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.2473,
-       "fair_decimal": 4.04,
-       "fair_american": 304,
-       "american_exact": 304.3952368980112,
+       "p": 0.2986,
+       "fair_decimal": 3.35,
+       "fair_american": 235,
+       "american_exact": 234.85579764212235,
        "in_band": false,
        "confidence": "low"
       },
       {
+       "side": "away",
+       "selection": "Tampa Bay Lightning +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.7014,
+       "fair_decimal": 1.43,
+       "fair_american": -235,
+       "american_exact": -234.85579764212244,
+       "in_band": true,
+       "confidence": "high"
+      },
+      {
        "side": "home",
-       "selection": "Utah Mammoth +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.6101,
-       "fair_decimal": 1.64,
-       "fair_american": -157,
-       "american_exact": -156.50061114657873,
+       "selection": "Utah Mammoth -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.1771,
+       "fair_decimal": 5.65,
+       "fair_american": 465,
+       "american_exact": 464.78038221151496,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Tampa Bay Lightning +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.8229,
+       "fair_decimal": 1.22,
+       "fair_american": -465,
+       "american_exact": -464.7803822115147,
        "in_band": false,
        "confidence": "medium"
       },
       {
-       "side": "away",
-       "selection": "Tampa Bay Lightning -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.3899,
-       "fair_decimal": 2.57,
-       "fair_american": 157,
-       "american_exact": 156.50061114657876,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
        "side": "home",
-       "selection": "Utah Mammoth -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.4502,
-       "fair_decimal": 2.22,
-       "fair_american": 122,
-       "american_exact": 122.14035941472163,
+       "selection": "Utah Mammoth -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.0937,
+       "fair_decimal": 10.67,
+       "fair_american": 967,
+       "american_exact": 966.7451168218741,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Tampa Bay Lightning +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.5498,
-       "fair_decimal": 1.82,
-       "fair_american": -122,
-       "american_exact": -122.14035941472164,
+       "selection": "Tampa Bay Lightning +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.9063,
+       "fair_decimal": 1.1,
+       "fair_american": -967,
+       "american_exact": -966.7451168218737,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       }
      ]
     },
@@ -18799,15 +18270,36 @@
      ]
     }
    ],
-   "band_pick": null,
-   "band_candidates": [],
+   "band_pick": {
+    "market": "handicap",
+    "selection": "Tampa Bay Lightning +1.5",
+    "line": 1.5,
+    "p": 0.7014,
+    "fair_decimal": 1.43,
+    "fair_american": -235,
+    "confidence": "high",
+    "side": "away",
+    "posted": 1.5,
+    "rank": 3
+   },
+   "band_candidates": [
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Lightning +1.5",
+     "p": 0.7014,
+     "fair_decimal": 1.43,
+     "fair_american": -235,
+     "rank": 3
+    }
+   ],
    "blank_reason": "",
    "model": "nhl",
    "expected_home": 3.325,
    "expected_away": 3.128,
    "expected_margin": 0.196,
    "expected_total": 6.453,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020178",
@@ -18833,6 +18325,7 @@
        "p": 0.4005,
        "fair_decimal": 2.5,
        "fair_american": 150,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -18841,133 +18334,86 @@
        "p": 0.5995,
        "fair_decimal": 1.67,
        "fair_american": -150,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": 1.5,
+     "line": -1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Calgary Flames +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.482,
-       "fair_decimal": 2.07,
-       "fair_american": 107,
-       "american_exact": 107.48752042303758,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Detroit Red Wings -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.518,
-       "fair_decimal": 1.93,
-       "fair_american": -107,
-       "american_exact": -107.48752042303757,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Calgary Flames -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.319,
-       "fair_decimal": 3.13,
-       "fair_american": 213,
-       "american_exact": 213.48890237280625,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Detroit Red Wings +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.681,
-       "fair_decimal": 1.47,
-       "fair_american": -213,
-       "american_exact": -213.48890237280636,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Calgary Flames -1.5",
-       "line": 1.5,
-       "posted": -1.5,
-       "p": 0.1856,
-       "fair_decimal": 5.39,
-       "fair_american": 439,
-       "american_exact": 438.8439125584047,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Detroit Red Wings +1.5",
-       "line": 1.5,
-       "posted": 1.5,
-       "p": 0.8144,
-       "fair_decimal": 1.23,
-       "fair_american": -439,
-       "american_exact": -438.84391255840495,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Calgary Flames -2.5",
-       "line": 2.5,
-       "posted": -2.5,
-       "p": 0.0946,
-       "fair_decimal": 10.57,
-       "fair_american": 957,
-       "american_exact": 956.6476347244127,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Detroit Red Wings +2.5",
-       "line": 2.5,
-       "posted": 2.5,
-       "p": 0.9054,
-       "fair_decimal": 1.1,
-       "fair_american": -957,
-       "american_exact": -956.6476347244133,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "home",
-       "selection": "Calgary Flames -3.5",
-       "line": 3.5,
-       "posted": -3.5,
-       "p": 0.0424,
-       "fair_decimal": 23.57,
-       "fair_american": 2257,
-       "american_exact": 2257.043990894351,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "away",
-       "selection": "Detroit Red Wings +3.5",
-       "line": 3.5,
+       "selection": "Calgary Flames +3.5",
+       "line": -3.5,
        "posted": 3.5,
-       "p": 0.9576,
-       "fair_decimal": 1.04,
-       "fair_american": -2257,
-       "american_exact": -2257.0439908943467,
+       "p": 0.8849,
+       "fair_decimal": 1.13,
+       "fair_american": -769,
+       "american_exact": -768.6000900980849,
        "in_band": false,
        "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Detroit Red Wings -3.5",
+       "line": -3.5,
+       "posted": -3.5,
+       "p": 0.1151,
+       "fair_decimal": 8.69,
+       "fair_american": 769,
+       "american_exact": 768.6000900980856,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Calgary Flames +2.5",
+       "line": -2.5,
+       "posted": 2.5,
+       "p": 0.7861,
+       "fair_decimal": 1.27,
+       "fair_american": -367,
+       "american_exact": -367.46939588780623,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Detroit Red Wings -2.5",
+       "line": -2.5,
+       "posted": -2.5,
+       "p": 0.2139,
+       "fair_decimal": 4.67,
+       "fair_american": 367,
+       "american_exact": 367.4693958878061,
+       "in_band": false,
+       "confidence": "low"
+      },
+      {
+       "side": "home",
+       "selection": "Calgary Flames +1.5",
+       "line": -1.5,
+       "posted": 1.5,
+       "p": 0.647,
+       "fair_decimal": 1.55,
+       "fair_american": -183,
+       "american_exact": -183.2543528210748,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "away",
+       "selection": "Detroit Red Wings -1.5",
+       "line": -1.5,
+       "posted": -1.5,
+       "p": 0.353,
+       "fair_decimal": 2.83,
+       "fair_american": 183,
+       "american_exact": 183.25435282107478,
+       "in_band": false,
+       "confidence": "low"
       }
      ]
     },
@@ -19116,7 +18562,8 @@
    "expected_away": 3.268,
    "expected_margin": -0.626,
    "expected_total": 5.911,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "nhl-2026020179",
@@ -19129,6 +18576,7 @@
     "fair_decimal": 1.94,
     "fair_american": -107,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -19142,6 +18590,7 @@
        "p": 0.5164,
        "fair_decimal": 1.94,
        "fair_american": -107,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -19150,133 +18599,86 @@
        "p": 0.4836,
        "fair_decimal": 2.07,
        "fair_american": 107,
+       "in_band": false,
        "confidence": "low"
       }
      ]
     },
     {
      "market": "handicap",
-     "line": -1.5,
+     "line": 1.5,
      "outcomes": [
       {
        "side": "home",
-       "selection": "Seattle Kraken +3.5",
-       "line": -3.5,
-       "posted": 3.5,
-       "p": 0.9266,
-       "fair_decimal": 1.08,
-       "fair_american": -1263,
-       "american_exact": -1263.2954078319094,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Minnesota Wild -3.5",
-       "line": -3.5,
-       "posted": -3.5,
-       "p": 0.0734,
-       "fair_decimal": 13.63,
-       "fair_american": 1263,
-       "american_exact": 1263.295407831911,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Seattle Kraken +2.5",
-       "line": -2.5,
-       "posted": 2.5,
-       "p": 0.8545,
-       "fair_decimal": 1.17,
-       "fair_american": -587,
-       "american_exact": -587.3336895845714,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Minnesota Wild -2.5",
-       "line": -2.5,
-       "posted": -2.5,
-       "p": 0.1455,
-       "fair_decimal": 6.87,
-       "fair_american": 587,
-       "american_exact": 587.333689584571,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Seattle Kraken +1.5",
-       "line": -1.5,
-       "posted": 1.5,
-       "p": 0.7433,
-       "fair_decimal": 1.35,
-       "fair_american": -290,
-       "american_exact": -289.5811408734826,
-       "in_band": false,
-       "confidence": "medium"
-      },
-      {
-       "side": "away",
-       "selection": "Minnesota Wild -1.5",
-       "line": -1.5,
+       "selection": "Seattle Kraken -1.5",
+       "line": 1.5,
        "posted": -1.5,
-       "p": 0.2567,
-       "fair_decimal": 3.9,
-       "fair_american": 290,
-       "american_exact": 289.58114087348264,
-       "in_band": false,
-       "confidence": "low"
-      },
-      {
-       "side": "home",
-       "selection": "Seattle Kraken +0.5",
-       "line": -0.5,
-       "posted": 0.5,
-       "p": 0.5973,
-       "fair_decimal": 1.67,
-       "fair_american": -148,
-       "american_exact": -148.32926167162807,
+       "p": 0.2845,
+       "fair_decimal": 3.52,
+       "fair_american": 252,
+       "american_exact": 251.50864807220623,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Minnesota Wild -0.5",
-       "line": -0.5,
-       "posted": -0.5,
-       "p": 0.4027,
-       "fair_decimal": 2.48,
-       "fair_american": 148,
-       "american_exact": 148.32926167162805,
+       "selection": "Minnesota Wild +1.5",
+       "line": 1.5,
+       "posted": 1.5,
+       "p": 0.7155,
+       "fair_decimal": 1.4,
+       "fair_american": -252,
+       "american_exact": -251.50864807220634,
        "in_band": false,
-       "confidence": "low"
+       "confidence": "medium"
       },
       {
        "side": "home",
-       "selection": "Seattle Kraken -0.5",
-       "line": 0.5,
-       "posted": -0.5,
-       "p": 0.4355,
-       "fair_decimal": 2.3,
-       "fair_american": 130,
-       "american_exact": 129.6474386385552,
+       "selection": "Seattle Kraken -2.5",
+       "line": 2.5,
+       "posted": -2.5,
+       "p": 0.1656,
+       "fair_decimal": 6.04,
+       "fair_american": 504,
+       "american_exact": 503.81556150611556,
        "in_band": false,
        "confidence": "low"
       },
       {
        "side": "away",
-       "selection": "Minnesota Wild +0.5",
-       "line": 0.5,
-       "posted": 0.5,
-       "p": 0.5645,
-       "fair_decimal": 1.77,
-       "fair_american": -130,
-       "american_exact": -129.64743863855517,
+       "selection": "Minnesota Wild +2.5",
+       "line": 2.5,
+       "posted": 2.5,
+       "p": 0.8344,
+       "fair_decimal": 1.2,
+       "fair_american": -504,
+       "american_exact": -503.8155615061154,
+       "in_band": false,
+       "confidence": "medium"
+      },
+      {
+       "side": "home",
+       "selection": "Seattle Kraken -3.5",
+       "line": 3.5,
+       "posted": -3.5,
+       "p": 0.0859,
+       "fair_decimal": 11.64,
+       "fair_american": 1064,
+       "american_exact": 1064.4704850412659,
        "in_band": false,
        "confidence": "low"
+      },
+      {
+       "side": "away",
+       "selection": "Minnesota Wild +3.5",
+       "line": 3.5,
+       "posted": 3.5,
+       "p": 0.9141,
+       "fair_decimal": 1.09,
+       "fair_american": -1064,
+       "american_exact": -1064.4704850412654,
+       "in_band": false,
+       "confidence": "medium"
       }
      ]
     },
@@ -19405,7 +18807,8 @@
    "expected_away": 3.114,
    "expected_margin": 0.106,
    "expected_total": 6.334,
-   "league_avg": 3.0784
+   "league_avg": 3.0784,
+   "caveat": ""
   },
   {
    "match_id": "f1-2026-round-18",
@@ -19765,6 +19168,7 @@
        "p": 0.2091,
        "fair_decimal": 4.78,
        "fair_american": 378,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -19773,6 +19177,7 @@
        "p": 0.037,
        "fair_decimal": 27.04,
        "fair_american": 2604,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -19781,6 +19186,7 @@
        "p": 0.7539,
        "fair_decimal": 1.33,
        "fair_american": -306,
+       "in_band": false,
        "confidence": "medium"
       }
      ]
@@ -20248,7 +19654,8 @@
    "expected_away": 36.568,
    "expected_margin": -6.119,
    "expected_total": 67.017,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101016",
@@ -20261,6 +19668,7 @@
     "fair_decimal": 1.75,
     "fair_american": -134,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -20274,6 +19682,7 @@
        "p": 0.5721,
        "fair_decimal": 1.75,
        "fair_american": -134,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -20282,6 +19691,7 @@
        "p": 0.0522,
        "fair_decimal": 19.17,
        "fair_american": 1817,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -20290,6 +19700,7 @@
        "p": 0.3758,
        "fair_decimal": 2.66,
        "fair_american": 166,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -20729,7 +20140,8 @@
    "expected_away": 26.712,
    "expected_margin": 1.852,
    "expected_total": 55.276,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101022",
@@ -20755,6 +20167,7 @@
        "p": 0.5062,
        "fair_decimal": 1.98,
        "fair_american": -103,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -20763,6 +20176,7 @@
        "p": 0.0522,
        "fair_decimal": 19.15,
        "fair_american": 1815,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -20771,6 +20185,7 @@
        "p": 0.4416,
        "fair_decimal": 2.26,
        "fair_american": 126,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -21230,7 +20645,8 @@
    "expected_away": 28.822,
    "expected_margin": 0.62,
    "expected_total": 58.264,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101026",
@@ -21243,6 +20659,7 @@
     "fair_decimal": 1.97,
     "fair_american": -103,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -21256,6 +20673,7 @@
        "p": 0.5075,
        "fair_decimal": 1.97,
        "fair_american": -103,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -21264,6 +20682,7 @@
        "p": 0.0492,
        "fair_decimal": 20.34,
        "fair_american": 1934,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -21272,6 +20691,7 @@
        "p": 0.4434,
        "fair_decimal": 2.26,
        "fair_american": 126,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -21711,7 +21131,8 @@
    "expected_away": 32.508,
    "expected_margin": 0.653,
    "expected_total": 65.668,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101036",
@@ -21737,6 +21158,7 @@
        "p": 0.3651,
        "fair_decimal": 2.74,
        "fair_american": 174,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -21745,6 +21167,7 @@
        "p": 0.048,
        "fair_decimal": 20.85,
        "fair_american": 1985,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -21753,6 +21176,7 @@
        "p": 0.587,
        "fair_decimal": 1.7,
        "fair_american": -142,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -22220,7 +21644,8 @@
    "expected_away": 33.208,
    "expected_margin": -2.261,
    "expected_total": 64.155,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101065",
@@ -22246,6 +21671,7 @@
        "p": 0.7518,
        "fair_decimal": 1.33,
        "fair_american": -303,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -22254,6 +21680,7 @@
        "p": 0.0383,
        "fair_decimal": 26.12,
        "fair_american": 2512,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -22262,6 +21689,7 @@
        "p": 0.2099,
        "fair_decimal": 4.77,
        "fair_american": 377,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -22729,7 +22157,8 @@
    "expected_away": 28.537,
    "expected_margin": 5.894,
    "expected_total": 62.968,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101067",
@@ -22755,6 +22184,7 @@
        "p": 0.7381,
        "fair_decimal": 1.35,
        "fair_american": -282,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -22763,6 +22193,7 @@
        "p": 0.0397,
        "fair_decimal": 25.2,
        "fair_american": 2420,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -22771,6 +22202,7 @@
        "p": 0.2222,
        "fair_decimal": 4.5,
        "fair_american": 350,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -23230,7 +22662,8 @@
    "expected_away": 28.387,
    "expected_margin": 5.529,
    "expected_total": 62.303,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101009",
@@ -23243,6 +22676,7 @@
     "fair_decimal": 1.27,
     "fair_american": -370,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -23256,6 +22690,7 @@
        "p": 0.7873,
        "fair_decimal": 1.27,
        "fair_american": -370,
+       "in_band": false,
        "confidence": "medium"
       },
       {
@@ -23264,6 +22699,7 @@
        "p": 0.0331,
        "fair_decimal": 30.21,
        "fair_american": 2921,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -23272,6 +22708,7 @@
        "p": 0.1796,
        "fair_decimal": 5.57,
        "fair_american": 457,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -23711,7 +23148,8 @@
    "expected_away": 31.573,
    "expected_margin": 7.177,
    "expected_total": 70.324,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101040",
@@ -23737,6 +23175,7 @@
        "p": 0.3847,
        "fair_decimal": 2.6,
        "fair_american": 160,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -23745,6 +23184,7 @@
        "p": 0.0462,
        "fair_decimal": 21.63,
        "fair_american": 2063,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -23753,6 +23193,7 @@
        "p": 0.569,
        "fair_decimal": 1.76,
        "fair_american": -132,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -24212,7 +23653,8 @@
    "expected_away": 36.361,
    "expected_margin": -1.964,
    "expected_total": 70.758,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101046",
@@ -24225,6 +23667,7 @@
     "fair_decimal": 1.46,
     "fair_american": -220,
     "confidence": "medium",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at medium."
    },
    "markets": [
@@ -24238,6 +23681,7 @@
        "p": 0.2716,
        "fair_decimal": 3.68,
        "fair_american": 268,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -24246,6 +23690,7 @@
        "p": 0.0412,
        "fair_decimal": 24.29,
        "fair_american": 2329,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -24254,6 +23699,7 @@
        "p": 0.6872,
        "fair_decimal": 1.46,
        "fair_american": -220,
+       "in_band": false,
        "confidence": "medium"
       }
      ]
@@ -24693,7 +24139,8 @@
    "expected_away": 37.262,
    "expected_margin": -4.581,
    "expected_total": 69.944,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101054",
@@ -24719,6 +24166,7 @@
        "p": 0.2235,
        "fair_decimal": 4.47,
        "fair_american": 347,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -24727,6 +24175,7 @@
        "p": 0.0402,
        "fair_decimal": 24.89,
        "fair_american": 2389,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -24735,6 +24184,7 @@
        "p": 0.7363,
        "fair_decimal": 1.36,
        "fair_american": -279,
+       "in_band": false,
        "confidence": "medium"
       }
      ]
@@ -25194,7 +24644,8 @@
    "expected_away": 33.317,
    "expected_margin": -5.442,
    "expected_total": 61.192,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   },
   {
    "match_id": "ehfcl-202711020101055",
@@ -25207,6 +24658,7 @@
     "fair_decimal": 1.91,
     "fair_american": -110,
     "confidence": "low",
+    "level": false,
     "note": "No originated market on either side reaches probability 0.70 inside the -250 to +10000 fair-price band, so the strongest two-way opinion is published instead and capped at low."
    },
    "markets": [
@@ -25220,6 +24672,7 @@
        "p": 0.5235,
        "fair_decimal": 1.91,
        "fair_american": -110,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -25228,6 +24681,7 @@
        "p": 0.0526,
        "fair_decimal": 19.02,
        "fair_american": 1802,
+       "in_band": false,
        "confidence": "low"
       },
       {
@@ -25236,6 +24690,7 @@
        "p": 0.4239,
        "fair_decimal": 2.36,
        "fair_american": 136,
+       "in_band": false,
        "confidence": "low"
       }
      ]
@@ -25675,7 +25130,8 @@
    "expected_away": 27.988,
    "expected_margin": 0.946,
    "expected_total": 56.921,
-   "league_avg": 31.8273
+   "league_avg": 31.8273,
+   "caveat": ""
   }
  ]
 }

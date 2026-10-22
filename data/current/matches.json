@@ -1,0 +1,4056 @@
+{
+ "layer": "current",
+ "generated_by": "scripts/current_seed.py",
+ "capture_window": {
+  "start": "2026-10-22",
+  "end": "2026-10-29"
+ },
+ "captured_at_utc": "2026-10-22T13:10:00Z",
+ "matches": [
+  {
+   "id": "euroleague-r7-62",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "14:05",
+   "home": {
+    "name": "Maccabi Rapyd Tel Aviv",
+    "abbrev": "MTA",
+    "record": "2-4"
+   },
+   "away": {
+    "name": "Real Madrid",
+    "abbrev": "RMB",
+    "record": "3-3"
+   },
+   "venue": "ALEKSANDAR NIKOLIC HALL",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Maccabi Rapyd Tel Aviv P16, 2-4 (win 33.3%), last ten 2-4",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "Real Madrid P9, 3-3 (win 50.0%), last ten 3-3",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 14:05 at ALEKSANDAR NIKOLIC HALL",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 16,
+    "away_pos": 9,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 509,
+    "home_against": 540,
+    "away_for": 554,
+    "away_against": 531,
+    "home_home": "1-1",
+    "away_away": "1-3",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "euroleague-r7-63",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "14:30",
+   "home": {
+    "name": "Armani Olimpia Milan",
+    "abbrev": "MIL",
+    "record": "1-5"
+   },
+   "away": {
+    "name": "FC Barcelona",
+    "abbrev": "BAR",
+    "record": "3-3"
+   },
+   "venue": "UNIPOL FORUM",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Armani Olimpia Milan P19, 1-5 (win 16.7%), last ten 1-5",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "FC Barcelona P10, 3-3 (win 50.0%), last ten 3-3",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 14:30 at UNIPOL FORUM",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 19,
+    "away_pos": 10,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 504,
+    "home_against": 559,
+    "away_for": 534,
+    "away_against": 525,
+    "home_home": "1-2",
+    "away_away": "1-1",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "euroleague-r7-64",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "13:30",
+   "home": {
+    "name": "Anadolu Efes Istanbul",
+    "abbrev": "EFS",
+    "record": "2-4"
+   },
+   "away": {
+    "name": "Besiktas Istanbul",
+    "abbrev": "BJK",
+    "record": "3-3"
+   },
+   "venue": "TURKCELL BASKETBALL DEVELOPMENT CENTER",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Anadolu Efes Istanbul P13, 2-4 (win 33.3%), last ten 2-4",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "Besiktas Istanbul P11, 3-3 (win 50.0%), last ten 3-3",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 13:30 at TURKCELL BASKETBALL DEVELOPMENT CENTER",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 13,
+    "away_pos": 11,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 492,
+    "home_against": 510,
+    "away_for": 554,
+    "away_against": 555,
+    "home_home": "1-1",
+    "away_away": "2-1",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "euroleague-r7-65",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "14:00",
+   "home": {
+    "name": "FC Bayern Munich",
+    "abbrev": "BAY",
+    "record": "2-4"
+   },
+   "away": {
+    "name": "Dubai Basketball",
+    "abbrev": "DUB",
+    "record": "4-2"
+   },
+   "venue": "SAP GARDEN",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "FC Bayern Munich P15, 2-4 (win 33.3%), last ten 2-4",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "Dubai Basketball P7, 4-2 (win 66.7%), last ten 4-2",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 14:00 at SAP GARDEN",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 15,
+    "away_pos": 7,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 521,
+    "home_against": 552,
+    "away_for": 490,
+    "away_against": 493,
+    "home_home": "0-2",
+    "away_away": "2-1",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "euroleague-r7-66",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "14:45",
+   "home": {
+    "name": "Partizan Mozzart Bet Belgrade",
+    "abbrev": "PAR",
+    "record": "3-3"
+   },
+   "away": {
+    "name": "Crvena Zvezda Meridianbet Belgrade",
+    "abbrev": "CZV",
+    "record": "4-2"
+   },
+   "venue": "BELGRADE ARENA",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Partizan Mozzart Bet Belgrade P12, 3-3 (win 50.0%), last ten 3-3",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "Crvena Zvezda Meridianbet Belgrade P6, 4-2 (win 66.7%), last ten 4-2",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 14:45 at BELGRADE ARENA",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 12,
+    "away_pos": 6,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 466,
+    "home_against": 471,
+    "away_for": 485,
+    "away_against": 457,
+    "home_home": "1-1",
+    "away_away": "2-0",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "euroleague-r7-67",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "14:15",
+   "home": {
+    "name": "Panathinaikos AKTOR Athens",
+    "abbrev": "PAO",
+    "record": "5-1"
+   },
+   "away": {
+    "name": "Kosner Baskonia Vitoria-Gasteiz",
+    "abbrev": "KBA",
+    "record": "1-5"
+   },
+   "venue": "TELEKOM CENTER ATHENS",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Panathinaikos AKTOR Athens P1, 5-1 (win 83.3%), last ten 5-1",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "Kosner Baskonia Vitoria-Gasteiz P20, 1-5 (win 16.7%), last ten 1-5",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 14:15 at TELEKOM CENTER ATHENS",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 1,
+    "away_pos": 20,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 528,
+    "home_against": 438,
+    "away_for": 504,
+    "away_against": 564,
+    "home_home": "4-1",
+    "away_away": "0-2",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101019",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "MT Melsungen",
+    "abbrev": "",
+    "record": "2-0-2"
+   },
+   "away": {
+    "name": "Orlen Wisla Plock",
+    "abbrev": "",
+    "record": "3-0-1"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group B: MT Melsungen P4 2-0-2, 110:112 goals (-2), 4 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group B: Orlen Wisla Plock P4 3-0-1, 115:108 goals (+7), 6 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "B",
+    "away_group": "B",
+    "home_gp": 4,
+    "away_gp": 4,
+    "home_pts": 4,
+    "away_pts": 6,
+    "home_for": 110,
+    "home_against": 112,
+    "away_for": 115,
+    "away_against": 108,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101041",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "Sporting Clube de Portugal",
+    "abbrev": "",
+    "record": "3-1-0"
+   },
+   "away": {
+    "name": "IFK Kristianstad",
+    "abbrev": "",
+    "record": "0-0-4"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group D: Sporting Clube de Portugal P4 3-1-0, 149:125 goals (+24), 7 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group D: IFK Kristianstad P4 0-0-4, 122:155 goals (-33), 0 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "D",
+    "away_group": "D",
+    "home_gp": 4,
+    "away_gp": 4,
+    "home_pts": 7,
+    "away_pts": 0,
+    "home_for": 149,
+    "home_against": 125,
+    "away_for": 122,
+    "away_against": 155,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101043",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "OTP Bank - PICK Szeged",
+    "abbrev": "",
+    "record": "1-1-2"
+   },
+   "away": {
+    "name": "GOG",
+    "abbrev": "",
+    "record": "3-0-1"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group D: OTP Bank - PICK Szeged P4 1-1-2, 139:136 goals (+3), 3 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group D: GOG P4 3-0-1, 145:139 goals (+6), 6 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "D",
+    "away_group": "D",
+    "home_gp": 4,
+    "away_gp": 4,
+    "home_pts": 3,
+    "away_pts": 6,
+    "home_for": 139,
+    "home_against": 136,
+    "away_for": 145,
+    "away_against": 139,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101049",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "Barca",
+    "abbrev": "",
+    "record": "4-0-0"
+   },
+   "away": {
+    "name": "Montpellier Handball",
+    "abbrev": "",
+    "record": "1-0-3"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group E: Barca P4 4-0-0, 137:104 goals (+33), 8 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group E: Montpellier Handball P4 1-0-3, 116:125 goals (-9), 2 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "E",
+    "away_group": "E",
+    "home_gp": 4,
+    "away_gp": 4,
+    "home_pts": 8,
+    "away_pts": 2,
+    "home_for": 137,
+    "home_against": 104,
+    "away_for": 116,
+    "away_against": 125,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101064",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "Kolstad Handball",
+    "abbrev": "",
+    "record": "0-0-4"
+   },
+   "away": {
+    "name": "SC Magdeburg",
+    "abbrev": "",
+    "record": "4-0-0"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group F: Kolstad Handball P4 0-0-4, 111:143 goals (-32), 0 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group F: SC Magdeburg P4 4-0-0, 141:108 goals (+33), 8 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "F",
+    "away_group": "F",
+    "home_gp": 4,
+    "away_gp": 4,
+    "home_pts": 0,
+    "away_pts": 8,
+    "home_for": 111,
+    "home_against": 143,
+    "away_for": 141,
+    "away_against": 108,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "snooker-niopen-r3-1",
+   "kind": "team",
+   "event": "",
+   "sport": "snooker",
+   "sport_name": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026, Round 3",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "Thu 22 Oct 09:00",
+   "home": {
+    "name": "Anthony McGill",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Mateusz Baranowski",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5",
+   "source_family": "wst",
+   "source_name": "World Snooker Tour official matches page (wst.tv)",
+   "capture_file": "data/current/capture/wst_ni_open_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "won: Stephen Maguire 1-4 Anthony McGill (Round 1, Sun 18 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    },
+    {
+     "kind": "result",
+     "text": "won: Gary Wilson 3-4 Mateusz Baranowski (Round 1, Sun 18 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    }
+   ],
+   "inputs": {
+    "p1_matches": 1,
+    "p1_frames_won": 4,
+    "p1_frames_lost": 1,
+    "p2_matches": 1,
+    "p2_frames_won": 4,
+    "p2_frames_lost": 3,
+    "event_matches_observed": 21,
+    "event_frames_observed": 123,
+    "event_frames_per_match": 5.8571,
+    "match_label": "Match 49",
+    "best_of": 7,
+    "time_note": "Times and the day label are reproduced verbatim from the official page, which does not state the timezone in the fetched rendering. Two fixtures listed at 09:00 may already have started when this page is published; disclosed as flag CU-03 rather than resolved by assumption."
+   }
+  },
+  {
+   "id": "snooker-niopen-r3-2",
+   "kind": "team",
+   "event": "",
+   "sport": "snooker",
+   "sport_name": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026, Round 3",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "Thu 22 Oct 09:00",
+   "home": {
+    "name": "Elliot Slessor",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Ricky Walden",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8",
+   "source_family": "wst",
+   "source_name": "World Snooker Tour official matches page (wst.tv)",
+   "capture_file": "data/current/capture/wst_ni_open_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "won: Elliot Slessor 4-0 He Guoqiang (Round 1, Sun 18 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    },
+    {
+     "kind": "result",
+     "text": "won: Elliot Slessor 4-1 Jamie Jones (Round 2, Wed 21 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    },
+    {
+     "kind": "result",
+     "text": "won: Neil Robertson 1-4 Ricky Walden (Round 1, Sun 18 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    }
+   ],
+   "inputs": {
+    "p1_matches": 2,
+    "p1_frames_won": 8,
+    "p1_frames_lost": 1,
+    "p2_matches": 1,
+    "p2_frames_won": 4,
+    "p2_frames_lost": 1,
+    "event_matches_observed": 21,
+    "event_frames_observed": 123,
+    "event_frames_per_match": 5.8571,
+    "match_label": "Match 52",
+    "best_of": 7,
+    "time_note": "Times and the day label are reproduced verbatim from the official page, which does not state the timezone in the fetched rendering. Two fixtures listed at 09:00 may already have started when this page is published; disclosed as flag CU-03 rather than resolved by assumption."
+   }
+  },
+  {
+   "id": "snooker-niopen-r3-3",
+   "kind": "team",
+   "event": "",
+   "sport": "snooker",
+   "sport_name": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026, Round 3",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "Thu 22 Oct 14:00",
+   "home": {
+    "name": "Mark Williams",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Martin O'Donnell",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f",
+   "source_family": "wst",
+   "source_name": "World Snooker Tour official matches page (wst.tv)",
+   "capture_file": "data/current/capture/wst_ni_open_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "won: Zhang Anda 2-4 Mark Williams (Round 2, Wed 21 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    },
+    {
+     "kind": "result",
+     "text": "won: Luca Brecel 2-4 Martin O'Donnell (Round 2, Wed 21 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    }
+   ],
+   "inputs": {
+    "p1_matches": 1,
+    "p1_frames_won": 4,
+    "p1_frames_lost": 2,
+    "p2_matches": 1,
+    "p2_frames_won": 4,
+    "p2_frames_lost": 2,
+    "event_matches_observed": 21,
+    "event_frames_observed": 123,
+    "event_frames_per_match": 5.8571,
+    "match_label": "Match 54",
+    "best_of": 7,
+    "time_note": "Times and the day label are reproduced verbatim from the official page, which does not state the timezone in the fetched rendering. Two fixtures listed at 09:00 may already have started when this page is published; disclosed as flag CU-03 rather than resolved by assumption."
+   }
+  },
+  {
+   "id": "snooker-niopen-r3-4",
+   "kind": "team",
+   "event": "",
+   "sport": "snooker",
+   "sport_name": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026, Round 3",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "Thu 22 Oct 14:00",
+   "home": {
+    "name": "David Gilbert",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Ka Wai Cheung",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236",
+   "source_family": "wst",
+   "source_name": "World Snooker Tour official matches page (wst.tv)",
+   "capture_file": "data/current/capture/wst_ni_open_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "won: Gao Yang 3-4 David Gilbert (Round 2, Wed 21 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    }
+   ],
+   "inputs": {
+    "p1_matches": 1,
+    "p1_frames_won": 4,
+    "p1_frames_lost": 3,
+    "p2_matches": 0,
+    "p2_frames_won": 0,
+    "p2_frames_lost": 0,
+    "event_matches_observed": 21,
+    "event_frames_observed": 123,
+    "event_frames_per_match": 5.8571,
+    "match_label": "Match 53",
+    "best_of": 7,
+    "time_note": "Times and the day label are reproduced verbatim from the official page, which does not state the timezone in the fetched rendering. Two fixtures listed at 09:00 may already have started when this page is published; disclosed as flag CU-03 rather than resolved by assumption."
+   }
+  },
+  {
+   "id": "snooker-niopen-r3-5",
+   "kind": "team",
+   "event": "",
+   "sport": "snooker",
+   "sport_name": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026, Round 3",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "Thu 22 Oct 15:00",
+   "home": {
+    "name": "Jordan Brown",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Scott Donaldson",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea",
+   "source_family": "wst",
+   "source_name": "World Snooker Tour official matches page (wst.tv)",
+   "capture_file": "data/current/capture/wst_ni_open_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "won: Michael Holt 3-4 Jordan Brown (Round 2, Wed 21 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    },
+    {
+     "kind": "result",
+     "text": "won: Noppon Saengkham 1-4 Scott Donaldson (Round 2, Wed 21 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    }
+   ],
+   "inputs": {
+    "p1_matches": 1,
+    "p1_frames_won": 4,
+    "p1_frames_lost": 3,
+    "p2_matches": 1,
+    "p2_frames_won": 4,
+    "p2_frames_lost": 1,
+    "event_matches_observed": 21,
+    "event_frames_observed": 123,
+    "event_frames_per_match": 5.8571,
+    "match_label": "Match 56",
+    "best_of": 7,
+    "time_note": "Times and the day label are reproduced verbatim from the official page, which does not state the timezone in the fetched rendering. Two fixtures listed at 09:00 may already have started when this page is published; disclosed as flag CU-03 rather than resolved by assumption."
+   }
+  },
+  {
+   "id": "snooker-niopen-r3-6",
+   "kind": "team",
+   "event": "",
+   "sport": "snooker",
+   "sport_name": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026, Round 3",
+   "date": "2026-10-22",
+   "start_utc": "",
+   "time_note": "Thu 22 Oct 15:00",
+   "home": {
+    "name": "Jak Jones",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Daniel Wells",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900",
+   "source_family": "wst",
+   "source_name": "World Snooker Tour official matches page (wst.tv)",
+   "capture_file": "data/current/capture/wst_ni_open_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "won: Daniel Wells 4-3 Ryan Day (Round 2, Wed 21 Oct)",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_name": "World Snooker Tour official matches page (wst.tv)"
+    }
+   ],
+   "inputs": {
+    "p1_matches": 0,
+    "p1_frames_won": 0,
+    "p1_frames_lost": 0,
+    "p2_matches": 1,
+    "p2_frames_won": 4,
+    "p2_frames_lost": 3,
+    "event_matches_observed": 21,
+    "event_frames_observed": 123,
+    "event_frames_per_match": 5.8571,
+    "match_label": "Match 55",
+    "best_of": 7,
+    "time_note": "Times and the day label are reproduced verbatim from the official page, which does not state the timezone in the fetched rendering. Two fixtures listed at 09:00 may already have started when this page is published; disclosed as flag CU-03 rather than resolved by assumption."
+   }
+  },
+  {
+   "id": "mlb-849805",
+   "kind": "team",
+   "event": "",
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "competition": "MLB 2026 World Series",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Milwaukee Brewers",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Tampa Bay Rays",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "American Family Field",
+   "official_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/23/849805",
+   "source_family": "mlb",
+   "source_name": "MLB Stats API (statsapi.mlb.com) schedule",
+   "capture_file": "data/current/capture/mlb_world_series_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "series",
+     "text": "World Series Game 1 of a best-of-7 series; official status 'Scheduled'",
+     "source_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/23/849805",
+     "source_name": "MLB Stats API (statsapi.mlb.com) schedule"
+    },
+    {
+     "kind": "season",
+     "text": "Milwaukee Brewers 103-59 (.636), 832 runs scored, 618 runs allowed, division rank 1",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+     "source_name": "MLB Stats API standings"
+    },
+    {
+     "kind": "season",
+     "text": "Tampa Bay Rays 98-64 (.605), 736 runs scored, 650 runs allowed, division rank 1",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+     "source_name": "MLB Stats API standings"
+    },
+    {
+     "kind": "venue",
+     "text": "American Family Field",
+     "source_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/23/849805",
+     "source_name": "MLB Stats API (statsapi.mlb.com) schedule"
+    }
+   ],
+   "inputs": {
+    "home_gp": 162,
+    "home_rs": 832,
+    "home_ra": 618,
+    "away_gp": 162,
+    "away_rs": 736,
+    "away_ra": 650,
+    "league_avg_runs_per_game": 4.4811,
+    "league_sample_clubs": 30,
+    "standings_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsType=regularSeason&fields=records,teamRecords,team,id,name,gamesPlayed,wins,losses,winningPercentage,runsScored,runsAllowed,runDifferential,divisionRank"
+   }
+  },
+  {
+   "id": "euroleague-r7-68",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-23",
+   "start_utc": "",
+   "time_note": "13:00",
+   "home": {
+    "name": "Zalgiris Kaunas",
+    "abbrev": "ZAL",
+    "record": "2-4"
+   },
+   "away": {
+    "name": "LDLC ASVEL Villeurbanne",
+    "abbrev": "ASV",
+    "record": "2-4"
+   },
+   "venue": "ZALGIRIO ARENA",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Zalgiris Kaunas P14, 2-4 (win 33.3%), last ten 2-4",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "LDLC ASVEL Villeurbanne P17, 2-4 (win 33.3%), last ten 2-4",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 13:00 at ZALGIRIO ARENA",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 14,
+    "away_pos": 17,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 490,
+    "home_against": 517,
+    "away_for": 527,
+    "away_against": 572,
+    "home_home": "0-2",
+    "away_away": "1-2",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "euroleague-r7-69",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-23",
+   "start_utc": "",
+   "time_note": "14:45",
+   "home": {
+    "name": "Paris Basketball",
+    "abbrev": "PBB",
+    "record": "1-5"
+   },
+   "away": {
+    "name": "Valencia Basket",
+    "abbrev": "VBC",
+    "record": "4-2"
+   },
+   "venue": "ADIDAS ARENA",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Paris Basketball P18, 1-5 (win 16.7%), last ten 1-5",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "Valencia Basket P5, 4-2 (win 66.7%), last ten 4-2",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 14:45 at ADIDAS ARENA",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 18,
+    "away_pos": 5,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 504,
+    "home_against": 545,
+    "away_for": 583,
+    "away_against": 537,
+    "home_home": "1-3",
+    "away_away": "2-0",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "euroleague-r7-70",
+   "kind": "team",
+   "event": "",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "date": "2026-10-23",
+   "start_utc": "",
+   "time_note": "14:15",
+   "home": {
+    "name": "Olympiacos Piraeus",
+    "abbrev": "OLY",
+    "record": "5-1"
+   },
+   "away": {
+    "name": "Fenerbahce Tarfin Istanbul",
+    "abbrev": "FBT",
+    "record": "5-1"
+   },
+   "venue": "SUNEL ARENA",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
+   "source_family": "euroleague",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Olympiacos Piraeus P3, 5-1 (win 83.3%), last ten 5-1",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "standing",
+     "text": "Fenerbahce Tarfin Istanbul P2, 5-1 (win 83.3%), last ten 5-1",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    },
+    {
+     "kind": "venue",
+     "text": "Tip 14:15 at SUNEL ARENA",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
+     "source_name": "EuroLeague Basketball official game centre and standings"
+    }
+   ],
+   "inputs": {
+    "home_pos": 3,
+    "away_pos": 2,
+    "home_gp": 6,
+    "away_gp": 6,
+    "home_for": 564,
+    "home_against": 524,
+    "away_for": 501,
+    "away_against": 447,
+    "home_home": "1-0",
+    "away_away": "0-1",
+    "standings_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+   }
+  },
+  {
+   "id": "nhl-2026020166",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Chicago Blackhawks",
+    "abbrev": "CHI",
+    "record": "3-6-0"
+   },
+   "away": {
+    "name": "Montreal Canadiens",
+    "abbrev": "MTL",
+    "record": "4-3-2"
+   },
+   "venue": "United Center",
+   "official_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-23.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "MTL leader goals: Cole Caufield (6)",
+     "source_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CHI leader goals: Frank Nazar (3)",
+     "source_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "MTL leader assists: Nick Suzuki (7)",
+     "source_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CHI leader assists: Anton Frondell (5)",
+     "source_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "MTL leader wins: Jacob Fowler (3)",
+     "source_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CHI leader wins: Spencer Knight (3)",
+     "source_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "CHI",
+    "away_abbrev": "MTL",
+    "home_record": "3-6-0",
+    "away_record": "4-3-2"
+   }
+  },
+  {
+   "id": "nhl-2026020167",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-24T01:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Colorado Avalanche",
+    "abbrev": "COL",
+    "record": "5-4-1"
+   },
+   "away": {
+    "name": "Tampa Bay Lightning",
+    "abbrev": "TBL",
+    "record": "7-2-0"
+   },
+   "venue": "Ball Arena",
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-23/2026020167",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-23.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "TBL leader goals: Brandon Hagel (7)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-23/2026020167",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "COL leader goals: Artturi Lehkonen (8)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-23/2026020167",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "TBL leader assists: Nikita Kucherov (9)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-23/2026020167",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "COL leader assists: Nathan MacKinnon (None)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-23/2026020167",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "COL",
+    "away_abbrev": "TBL",
+    "home_record": "5-4-1",
+    "away_record": "7-2-0"
+   }
+  },
+  {
+   "id": "urc-r4-292608",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-23",
+   "start_utc": "",
+   "time_note": "14:45",
+   "home": {
+    "name": "Cardiff Rugby",
+    "abbrev": "",
+    "record": "2-0-1"
+   },
+   "away": {
+    "name": "Hollywoodbets Sharks",
+    "abbrev": "",
+    "record": "2-0-1"
+   },
+   "venue": "Cardiff Arms Park",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Leinster Rugby 29-5 Cardiff Rugby (Laya Arena)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: DHL Stormers 39-22 Hollywoodbets Sharks (DHL Stadium)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 9,
+    "away_pts": 10,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 66,
+    "home_pa": 71,
+    "away_pf": 89,
+    "away_pa": 83,
+    "home_pos": 6,
+    "away_pos": 5,
+    "home_bp": 1,
+    "away_bp": 2,
+    "home_form": "WWL",
+    "away_form": "WWL",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "urc-r4-292609",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-23",
+   "start_utc": "",
+   "time_note": "14:45",
+   "home": {
+    "name": "Connacht Rugby",
+    "abbrev": "",
+    "record": "1-0-2"
+   },
+   "away": {
+    "name": "Zebre Parma",
+    "abbrev": "",
+    "record": "0-0-3"
+   },
+   "venue": "Dexcom Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-09: Glasgow Warriors 36-19 Connacht Rugby (Scotstoun Stadium)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Zebre Parma 12-29 Edinburgh (Stadio Sergio Lanfranchi)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 5,
+    "away_pts": 1,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 56,
+    "home_pa": 84,
+    "away_pf": 52,
+    "away_pa": 116,
+    "home_pos": 14,
+    "away_pos": 16,
+    "home_bp": 1,
+    "away_bp": 1,
+    "home_form": "LWL",
+    "away_form": "LLL",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "urc-r4-292610",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-23",
+   "start_utc": "",
+   "time_note": "14:45",
+   "home": {
+    "name": "Edinburgh",
+    "abbrev": "",
+    "record": "3-0-0"
+   },
+   "away": {
+    "name": "10bet Lions",
+    "abbrev": "",
+    "record": "2-0-1"
+   },
+   "venue": "Hive Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Zebre Parma 12-29 Edinburgh (Stadio Sergio Lanfranchi)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Vodacom Bulls 57-15 10bet Lions (Loftus Versfeld)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 14,
+    "away_pts": 9,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 80,
+    "home_pa": 54,
+    "away_pf": 77,
+    "away_pa": 102,
+    "home_pos": 1,
+    "away_pos": 7,
+    "home_bp": 2,
+    "away_bp": 1,
+    "home_form": "WWW",
+    "away_form": "WWL",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "mlb-849802",
+   "kind": "team",
+   "event": "",
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "competition": "MLB 2026 World Series",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Milwaukee Brewers",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Tampa Bay Rays",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "American Family Field",
+   "official_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/24/849802",
+   "source_family": "mlb",
+   "source_name": "MLB Stats API (statsapi.mlb.com) schedule",
+   "capture_file": "data/current/capture/mlb_world_series_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "series",
+     "text": "World Series Game 2 of a best-of-7 series; official status 'Scheduled'",
+     "source_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/24/849802",
+     "source_name": "MLB Stats API (statsapi.mlb.com) schedule"
+    },
+    {
+     "kind": "season",
+     "text": "Milwaukee Brewers 103-59 (.636), 832 runs scored, 618 runs allowed, division rank 1",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+     "source_name": "MLB Stats API standings"
+    },
+    {
+     "kind": "season",
+     "text": "Tampa Bay Rays 98-64 (.605), 736 runs scored, 650 runs allowed, division rank 1",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+     "source_name": "MLB Stats API standings"
+    },
+    {
+     "kind": "venue",
+     "text": "American Family Field",
+     "source_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/24/849802",
+     "source_name": "MLB Stats API (statsapi.mlb.com) schedule"
+    }
+   ],
+   "inputs": {
+    "home_gp": 162,
+    "home_rs": 832,
+    "home_ra": 618,
+    "away_gp": 162,
+    "away_rs": 736,
+    "away_ra": 650,
+    "league_avg_runs_per_game": 4.4811,
+    "league_sample_clubs": 30,
+    "standings_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsType=regularSeason&fields=records,teamRecords,team,id,name,gamesPlayed,wins,losses,winningPercentage,runsScored,runsAllowed,runDifferential,divisionRank"
+   }
+  },
+  {
+   "id": "nhl-2026020168",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Philadelphia Flyers",
+    "abbrev": "PHI",
+    "record": "3-6-3"
+   },
+   "away": {
+    "name": "Anaheim Ducks",
+    "abbrev": "ANA",
+    "record": "4-5-0"
+   },
+   "venue": "Xfinity Mobile Arena",
+   "official_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "ANA leader goals: Beckett Sennecke (5)",
+     "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "PHI leader goals: Matvei Michkov (6)",
+     "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "ANA leader assists: Leo Carlsson (9)",
+     "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "PHI leader assists: Trevor Zegras (5)",
+     "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "ANA leader wins: Lukas Dostal (3)",
+     "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "PHI leader wins: Dan Vladar (2)",
+     "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "PHI",
+    "away_abbrev": "ANA",
+    "home_record": "3-6-3",
+    "away_record": "4-5-0"
+   }
+  },
+  {
+   "id": "nhl-2026020169",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T19:30:00Z",
+   "time_note": "",
+   "home": {
+    "name": "New Jersey Devils",
+    "abbrev": "NJD",
+    "record": "5-4-0"
+   },
+   "away": {
+    "name": "Los Angeles Kings",
+    "abbrev": "LAK",
+    "record": "1-4-2"
+   },
+   "venue": "Prudential Center",
+   "official_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "LAK leader goals: Artemi Panarin (4)",
+     "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "NJD leader goals: Nico Hischier (4)",
+     "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "LAK leader assists: Brandt Clarke (4)",
+     "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "NJD leader assists: Jack Hughes (7)",
+     "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "LAK leader wins: Darcy Kuemper (1)",
+     "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "NJD leader wins: Jake Allen (4)",
+     "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "NJD",
+    "away_abbrev": "LAK",
+    "home_record": "5-4-0",
+    "away_record": "1-4-2"
+   }
+  },
+  {
+   "id": "nhl-2026020170",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Boston Bruins",
+    "abbrev": "BOS",
+    "record": "7-2-1"
+   },
+   "away": {
+    "name": "San Jose Sharks",
+    "abbrev": "SJS",
+    "record": "5-4-1"
+   },
+   "venue": "TD Garden",
+   "official_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "SJS leader goals: Macklin Celebrini (5)",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "BOS leader goals: David Pastrnak (4)",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "SJS leader assists: Macklin Celebrini (9)",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "BOS leader assists: David Pastrnak (8)",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "SJS leader wins: Alex Nedeljkovic (3)",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "BOS leader wins: Jeremy Swayman (6)",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "BOS",
+    "away_abbrev": "SJS",
+    "home_record": "7-2-1",
+    "away_record": "5-4-1"
+   }
+  },
+  {
+   "id": "nhl-2026020171",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Ottawa Senators",
+    "abbrev": "OTT",
+    "record": "7-3-0"
+   },
+   "away": {
+    "name": "New York Rangers",
+    "abbrev": "NYR",
+    "record": "7-3-1"
+   },
+   "venue": "Canadian Tire Centre",
+   "official_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "NYR leader goals: Alexis Lafreniere (7)",
+     "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "OTT leader goals: Tim Stutzle (6)",
+     "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "NYR leader assists: Adam Fox (10)",
+     "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "OTT leader assists: Tim Stutzle (8)",
+     "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "NYR leader wins: Dylan Garand (4)",
+     "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "OTT leader wins: Linus Ullmark (7)",
+     "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "OTT",
+    "away_abbrev": "NYR",
+    "home_record": "7-3-0",
+    "away_record": "7-3-1"
+   }
+  },
+  {
+   "id": "nhl-2026020172",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Pittsburgh Penguins",
+    "abbrev": "PIT",
+    "record": "3-6-1"
+   },
+   "away": {
+    "name": "Nashville Predators",
+    "abbrev": "NSH",
+    "record": "3-2-3"
+   },
+   "venue": "PPG Paints Arena",
+   "official_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "NSH leader goals: Ryan O'Reilly (4)",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "PIT leader goals: Evgeni Malkin (5)",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "NSH leader assists: Roman Josi (8)",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "PIT leader assists: Erik Karlsson (10)",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "NSH leader wins: Juuse Saros (3)",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "PIT leader wins: Arturs Silovs (3)",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "PIT",
+    "away_abbrev": "NSH",
+    "home_record": "3-6-1",
+    "away_record": "3-2-3"
+   }
+  },
+  {
+   "id": "nhl-2026020173",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Washington Capitals",
+    "abbrev": "WSH",
+    "record": "5-4-0"
+   },
+   "away": {
+    "name": "Buffalo Sabres",
+    "abbrev": "BUF",
+    "record": "4-4-2"
+   },
+   "venue": "Capital One Arena",
+   "official_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "BUF leader goals: Tage Thompson (5)",
+     "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "WSH leader goals: Alex Tuch (5)",
+     "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "BUF leader assists: Zach Benson (6)",
+     "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "WSH leader assists: Dylan Strome (5)",
+     "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "BUF leader wins: Ukko-Pekka Luukkonen (3)",
+     "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "WSH leader wins: Logan Thompson (4)",
+     "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "WSH",
+    "away_abbrev": "BUF",
+    "home_record": "5-4-0",
+    "away_record": "4-4-2"
+   }
+  },
+  {
+   "id": "nhl-2026020174",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Columbus Blue Jackets",
+    "abbrev": "CBJ",
+    "record": "3-5-0"
+   },
+   "away": {
+    "name": "Vegas Golden Knights",
+    "abbrev": "VGK",
+    "record": "8-3-0"
+   },
+   "venue": "Nationwide Arena",
+   "official_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "VGK leader goals: Mark Stone (8)",
+     "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CBJ leader goals: Kent Johnson (4)",
+     "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "VGK leader assists: Jack Eichel (13)",
+     "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CBJ leader assists: Zach Werenski (6)",
+     "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "VGK leader wins: Carter Hart (4)",
+     "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CBJ leader wins: Jet Greaves (2)",
+     "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "CBJ",
+    "away_abbrev": "VGK",
+    "home_record": "3-5-0",
+    "away_record": "8-3-0"
+   }
+  },
+  {
+   "id": "nhl-2026020175",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "St. Louis Blues",
+    "abbrev": "STL",
+    "record": "4-4-1"
+   },
+   "away": {
+    "name": "Carolina Hurricanes",
+    "abbrev": "CAR",
+    "record": "8-2-1"
+   },
+   "venue": "Enterprise Center",
+   "official_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "CAR leader goals: Andrei Svechnikov (6)",
+     "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "STL leader goals: Mason McTavish (5)",
+     "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CAR leader assists: Jackson Blake (10)",
+     "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "STL leader assists: Dylan Holloway (6)",
+     "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CAR leader wins: Pyotr Kochetkov (6)",
+     "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "STL leader wins: Joel Hofer (3)",
+     "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "STL",
+    "away_abbrev": "CAR",
+    "home_record": "4-4-1",
+    "away_record": "8-2-1"
+   }
+  },
+  {
+   "id": "nhl-2026020176",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Edmonton Oilers",
+    "abbrev": "EDM",
+    "record": "7-1-1"
+   },
+   "away": {
+    "name": "Toronto Maple Leafs",
+    "abbrev": "TOR",
+    "record": "5-4-2"
+   },
+   "venue": "Rogers Place",
+   "official_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "TOR leader goals: Auston Matthews (8)",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "EDM leader goals: Leon Draisaitl (8)",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "TOR leader assists: Auston Matthews (10)",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "EDM leader assists: Connor McDavid (20)",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "TOR leader wins: Anthony Stolarz (3)",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "EDM leader wins: Devon Levi (5)",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "EDM",
+    "away_abbrev": "TOR",
+    "home_record": "7-1-1",
+    "away_record": "5-4-2"
+   }
+  },
+  {
+   "id": "urc-r4-292611",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-24",
+   "start_utc": "",
+   "time_note": "07:45",
+   "home": {
+    "name": "Vodacom Bulls",
+    "abbrev": "",
+    "record": "2-0-1"
+   },
+   "away": {
+    "name": "Ulster Rugby",
+    "abbrev": "",
+    "record": "0-2-1"
+   },
+   "venue": "Loftus Versfeld",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Vodacom Bulls 57-15 10bet Lions (Loftus Versfeld)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Ulster Rugby 26-26 Munster Rugby (Affidea Stadium)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 11,
+    "away_pts": 8,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 126,
+    "home_pa": 54,
+    "away_pf": 88,
+    "away_pa": 93,
+    "home_pos": 3,
+    "away_pos": 11,
+    "home_bp": 3,
+    "away_bp": 4,
+    "home_form": "WLW",
+    "away_form": "LDD",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "urc-r4-292612",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-24",
+   "start_utc": "",
+   "time_note": "10:00",
+   "home": {
+    "name": "DHL Stormers",
+    "abbrev": "",
+    "record": "2-0-1"
+   },
+   "away": {
+    "name": "Scarlets",
+    "abbrev": "",
+    "record": "1-0-2"
+   },
+   "venue": "DHL Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: DHL Stormers 39-22 Hollywoodbets Sharks (DHL Stadium)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Scarlets 27-26 Benetton Rugby (Parc y Scarlets)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 11,
+    "away_pts": 7,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 81,
+    "home_pa": 54,
+    "away_pf": 68,
+    "away_pa": 85,
+    "home_pos": 4,
+    "away_pos": 12,
+    "home_bp": 3,
+    "away_bp": 3,
+    "home_form": "WLW",
+    "away_form": "LLW",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "urc-r4-292613",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-24",
+   "start_utc": "",
+   "time_note": "10:00",
+   "home": {
+    "name": "Benetton Rugby",
+    "abbrev": "",
+    "record": "0-1-2"
+   },
+   "away": {
+    "name": "Glasgow Warriors",
+    "abbrev": "",
+    "record": "2-1-0"
+   },
+   "venue": "Stadio Monigo",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Scarlets 27-26 Benetton Rugby (Parc y Scarlets)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-09: Glasgow Warriors 36-19 Connacht Rugby (Scotstoun Stadium)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 5,
+    "away_pts": 13,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 64,
+    "home_pa": 68,
+    "away_pf": 95,
+    "away_pa": 72,
+    "home_pos": 15,
+    "away_pos": 2,
+    "home_bp": 3,
+    "away_bp": 3,
+    "home_form": "DLL",
+    "away_form": "WDW",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "urc-r4-292614",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-24",
+   "start_utc": "",
+   "time_note": "13:00",
+   "home": {
+    "name": "Leinster Rugby",
+    "abbrev": "",
+    "record": "1-0-2"
+   },
+   "away": {
+    "name": "Munster Rugby",
+    "abbrev": "",
+    "record": "1-1-1"
+   },
+   "venue": "Aviva Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Leinster Rugby 29-5 Cardiff Rugby (Laya Arena)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-10: Ulster Rugby 26-26 Munster Rugby (Affidea Stadium)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 8,
+    "away_pts": 9,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 75,
+    "home_pa": 58,
+    "away_pf": 72,
+    "away_pa": 74,
+    "home_pos": 10,
+    "away_pos": 9,
+    "home_bp": 4,
+    "away_bp": 3,
+    "home_form": "LLW",
+    "away_form": "LWD",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "urc-r4-292615",
+   "kind": "team",
+   "event": "",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27",
+   "date": "2026-10-24",
+   "start_utc": "",
+   "time_note": "14:00",
+   "home": {
+    "name": "Ospreys",
+    "abbrev": "",
+    "record": "1-0-2"
+   },
+   "away": {
+    "name": "Dragons RFC",
+    "abbrev": "",
+    "record": "1-1-1"
+   },
+   "venue": "St Helen's",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+   "source_family": "urc",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "result",
+     "text": "Round 3, 2026-10-09: Dragons RFC 31-38 Ospreys (Rodney Parade)",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+     "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)"
+    }
+   ],
+   "inputs": {
+    "home_pts": 6,
+    "away_pts": 9,
+    "home_pl": 3,
+    "away_pl": 3,
+    "home_pf": 81,
+    "home_pa": 107,
+    "away_pf": 88,
+    "away_pa": 83,
+    "home_pos": 13,
+    "away_pos": 8,
+    "home_bp": 2,
+    "away_bp": 3,
+    "home_form": "LLW",
+    "away_form": "DWL",
+    "table_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+    "round_note": "Times shown are Local on the official page. Each match_url is the official per-fixture match-centre page for that fixture."
+   }
+  },
+  {
+   "id": "nhl-2026020177",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Utah Mammoth",
+    "abbrev": "UTA",
+    "record": "7-3-0"
+   },
+   "away": {
+    "name": "Tampa Bay Lightning",
+    "abbrev": "TBL",
+    "record": "7-2-0"
+   },
+   "venue": "Delta Center",
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "TBL leader goals: Brandon Hagel (7)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "UTA leader goals: Nick Schmaltz (7)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "TBL leader assists: Nikita Kucherov (9)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "UTA leader assists: Clayton Keller (9)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "TBL leader wins: Andrei Vasilevskiy (5)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "UTA leader wins: Karel Vejmelka (5)",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "UTA",
+    "away_abbrev": "TBL",
+    "home_record": "7-3-0",
+    "away_record": "7-2-0"
+   }
+  },
+  {
+   "id": "nhl-2026020178",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Calgary Flames",
+    "abbrev": "CGY",
+    "record": "2-6-0"
+   },
+   "away": {
+    "name": "Detroit Red Wings",
+    "abbrev": "DET",
+    "record": "3-3-3"
+   },
+   "venue": "Scotiabank Saddledome",
+   "official_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "DET leader goals: Alex DeBrincat (6)",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CGY leader goals: Morgan Frost (3)",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "DET leader assists: Alex DeBrincat (5)",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CGY leader assists: Joel Farabee (5)",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "DET leader wins: John Gibson (2)",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "CGY leader wins: Dustin Wolf (1)",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "CGY",
+    "away_abbrev": "DET",
+    "home_record": "2-6-0",
+    "away_record": "3-3-3"
+   }
+  },
+  {
+   "id": "nhl-2026020179",
+   "kind": "team",
+   "event": "",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 Regular Season",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "time_note": "",
+   "home": {
+    "name": "Seattle Kraken",
+    "abbrev": "SEA",
+    "record": "6-3-1"
+   },
+   "away": {
+    "name": "Minnesota Wild",
+    "abbrev": "MIN",
+    "record": "6-2-2"
+   },
+   "venue": "Climate Pledge Arena",
+   "official_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+   "source_family": "nhl",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "facts": [
+    {
+     "kind": "leader",
+     "text": "MIN leader goals: Kirill Kaprizov (11)",
+     "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "SEA leader goals: Frederick Gaudreau (5)",
+     "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "MIN leader assists: Quinn Hughes (11)",
+     "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "SEA leader assists: Chandler Stephenson (8)",
+     "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "MIN leader wins: Jesper Wallstedt (6)",
+     "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "leader",
+     "text": "SEA leader wins: Philipp Grubauer (3)",
+     "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    },
+    {
+     "kind": "caveat",
+     "text": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+     "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+     "source_name": "NHL official API (api-web.nhle.com) score feed"
+    }
+   ],
+   "inputs": {
+    "home_abbrev": "SEA",
+    "away_abbrev": "MIN",
+    "home_record": "6-3-1",
+    "away_record": "6-2-2"
+   }
+  },
+  {
+   "id": "f1-2026-round-18",
+   "kind": "event",
+   "event": "United States Grand Prix (Round 18)",
+   "sport": "motor-racing",
+   "sport_name": "Motor Racing",
+   "competition": "FIA Formula One World Championship 2026",
+   "date": "2026-10-25",
+   "start_utc": "",
+   "time_note": "23 - 25 OCT",
+   "home": {
+    "name": "United States Grand Prix (Round 18)",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": null,
+   "venue": "United States",
+   "official_url": "https://www.formula1.com/en/racing/2026/united-states",
+   "source_family": "formula1",
+   "source_name": "Formula 1 official calendar and results (formula1.com)",
+   "capture_file": "data/current/capture/f1_calendar_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "P1 Kimi Antonelli (Mercedes) - 340 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P2 George Russell (Mercedes) - 238 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P3 Lewis Hamilton (Ferrari) - 229 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P4 Max Verstappen (Red Bull Racing) - 221 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P5 Charles Leclerc (Ferrari) - 215 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P6 Lando Norris (McLaren) - 201 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P7 Oscar Piastri (McLaren) - 138 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P8 Isack Hadjar (Red Bull Racing) - 97 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P9 Liam Lawson (Racing Bulls) - 75 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P10 Pierre Gasly (Alpine) - 41 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P11 Arvid Lindblad (Racing Bulls) - 38 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P12 Franco Colapinto (Alpine) - 27 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P13 Oliver Bearman (Haas F1 Team) - 23 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P14 Nico Hulkenberg (Audi) - 13 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P15 Gabriel Bortoleto (Audi) - 10 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P16 Esteban Ocon (Haas F1 Team) - 7 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P17 Fernando Alonso (Aston Martin) - 7 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P18 Carlos Sainz (Williams) - 7 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P19 Alexander Albon (Williams) - 5 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P20 Yuki Tsunoda (Racing Bulls) - 1 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P21 Lance Stroll (Aston Martin) - 0 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P22 Valtteri Bottas (Cadillac) - 0 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "P23 Sergio Perez (Cadillac) - 0 pts",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 1 Australia: 1st George Russell, 2nd Kimi Antonelli, 3rd Charles Leclerc",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 2 China: 1st Kimi Antonelli, 2nd George Russell, 3rd Lewis Hamilton",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 3 Japan: 1st Kimi Antonelli, 2nd Oscar Piastri, 3rd Charles Leclerc",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 4 Miami: 1st Kimi Antonelli, 2nd Lando Norris, 3rd Oscar Piastri",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 5 Canada: 1st Kimi Antonelli, 2nd Lewis Hamilton, 3rd Max Verstappen",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 6 Monaco: 1st Kimi Antonelli, 2nd Lewis Hamilton, 3rd Isack Hadjar",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "result",
+     "text": "Round 7 Barcelona-Catalunya: 1st Lewis Hamilton, 2nd George Russell, 3rd None",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    },
+    {
+     "kind": "window",
+     "text": "The official 2026 calendar page lists Round 17 Singapore (09-11 Oct) as the previous, completed round and Round 18 United States (23-25 Oct) as next; Round 19 Mexico follows (30 Oct-01 Nov). Seventeen rounds are therefore complete before Round 18.",
+     "source_url": "https://www.formula1.com/en/racing/2026",
+     "source_name": "Formula 1 official calendar and results (formula1.com)"
+    }
+   ],
+   "inputs": {
+    "drivers": [
+     {
+      "pos": 1,
+      "driver": "Kimi Antonelli",
+      "team": "Mercedes",
+      "code": "ANT",
+      "nat": "ITA",
+      "pts": 340
+     },
+     {
+      "pos": 2,
+      "driver": "George Russell",
+      "team": "Mercedes",
+      "code": "RUS",
+      "nat": "GBR",
+      "pts": 238
+     },
+     {
+      "pos": 3,
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "code": "HAM",
+      "nat": "GBR",
+      "pts": 229
+     },
+     {
+      "pos": 4,
+      "driver": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "code": "VER",
+      "nat": "NED",
+      "pts": 221
+     },
+     {
+      "pos": 5,
+      "driver": "Charles Leclerc",
+      "team": "Ferrari",
+      "code": "LEC",
+      "nat": "MON",
+      "pts": 215
+     },
+     {
+      "pos": 6,
+      "driver": "Lando Norris",
+      "team": "McLaren",
+      "code": "NOR",
+      "nat": "GBR",
+      "pts": 201
+     },
+     {
+      "pos": 7,
+      "driver": "Oscar Piastri",
+      "team": "McLaren",
+      "code": "PIA",
+      "nat": "AUS",
+      "pts": 138
+     },
+     {
+      "pos": 8,
+      "driver": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "code": "HAD",
+      "nat": "FRA",
+      "pts": 97
+     },
+     {
+      "pos": 9,
+      "driver": "Liam Lawson",
+      "team": "Racing Bulls",
+      "code": "LAW",
+      "nat": "NZL",
+      "pts": 75
+     },
+     {
+      "pos": 10,
+      "driver": "Pierre Gasly",
+      "team": "Alpine",
+      "code": "GAS",
+      "nat": "FRA",
+      "pts": 41
+     },
+     {
+      "pos": 11,
+      "driver": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "code": "LIN",
+      "nat": "GBR",
+      "pts": 38
+     },
+     {
+      "pos": 12,
+      "driver": "Franco Colapinto",
+      "team": "Alpine",
+      "code": "COL",
+      "nat": "ARG",
+      "pts": 27
+     },
+     {
+      "pos": 13,
+      "driver": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "code": "BEA",
+      "nat": "GBR",
+      "pts": 23
+     },
+     {
+      "pos": 14,
+      "driver": "Nico Hulkenberg",
+      "team": "Audi",
+      "code": "HUL",
+      "nat": "GER",
+      "pts": 13
+     },
+     {
+      "pos": 15,
+      "driver": "Gabriel Bortoleto",
+      "team": "Audi",
+      "code": "BOR",
+      "nat": "BRA",
+      "pts": 10
+     },
+     {
+      "pos": 16,
+      "driver": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "code": "OCO",
+      "nat": "FRA",
+      "pts": 7
+     },
+     {
+      "pos": 17,
+      "driver": "Fernando Alonso",
+      "team": "Aston Martin",
+      "code": "ALO",
+      "nat": "ESP",
+      "pts": 7
+     },
+     {
+      "pos": 18,
+      "driver": "Carlos Sainz",
+      "team": "Williams",
+      "code": "SAI",
+      "nat": "ESP",
+      "pts": 7
+     },
+     {
+      "pos": 19,
+      "driver": "Alexander Albon",
+      "team": "Williams",
+      "code": "ALB",
+      "nat": "THA",
+      "pts": 5
+     },
+     {
+      "pos": 20,
+      "driver": "Yuki Tsunoda",
+      "team": "Racing Bulls",
+      "code": "TSU",
+      "nat": "JPN",
+      "pts": 1
+     },
+     {
+      "pos": 21,
+      "driver": "Lance Stroll",
+      "team": "Aston Martin",
+      "code": "STR",
+      "nat": "CAN",
+      "pts": 0
+     },
+     {
+      "pos": 22,
+      "driver": "Valtteri Bottas",
+      "team": "Cadillac",
+      "code": "BOT",
+      "nat": "FIN",
+      "pts": 0
+     },
+     {
+      "pos": 23,
+      "driver": "Sergio Perez",
+      "team": "Cadillac",
+      "code": "PER",
+      "nat": "MEX",
+      "pts": 0
+     }
+    ],
+    "field_points_total": 1933,
+    "round": 18,
+    "rounds_completed": 17,
+    "round_label": "23 - 25 OCT",
+    "sponsor_note": "FORMULA 1 (title sponsor as rendered: MSC Cruises)",
+    "standings_url": "https://www.formula1.com/en/results/2026/drivers"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101004",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "FC Porto",
+    "abbrev": "",
+    "record": "1-1-3"
+   },
+   "away": {
+    "name": "One Veszprem HC",
+    "abbrev": "",
+    "record": "5-0-0"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101004/FCPorto-OneVeszpr%C3%A9mHC/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group A: FC Porto P5 1-1-3, 158:173 goals (-15), 3 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group A: One Veszprem HC P5 5-0-0, 185:146 goals (+39), 10 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "A",
+    "away_group": "A",
+    "home_gp": 5,
+    "away_gp": 5,
+    "home_pts": 3,
+    "away_pts": 10,
+    "home_for": 158,
+    "home_against": 173,
+    "away_for": 185,
+    "away_against": 146,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101016",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "Orlen Wisla Plock",
+    "abbrev": "",
+    "record": "3-0-1"
+   },
+   "away": {
+    "name": "HBC Nantes",
+    "abbrev": "",
+    "record": "3-0-2"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101016/OrlenWislaPlock-HBCNantes/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group B: Orlen Wisla Plock P4 3-0-1, 115:108 goals (+7), 6 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group B: HBC Nantes P5 3-0-2, 142:143 goals (-1), 6 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "B",
+    "away_group": "B",
+    "home_gp": 4,
+    "away_gp": 5,
+    "home_pts": 6,
+    "away_pts": 6,
+    "home_for": 115,
+    "home_against": 108,
+    "away_for": 142,
+    "away_against": 143,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101022",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "HC Vardar 1961",
+    "abbrev": "",
+    "record": "1-0-4"
+   },
+   "away": {
+    "name": "MT Melsungen",
+    "abbrev": "",
+    "record": "2-0-2"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group B: HC Vardar 1961 P5 1-0-4, 154:158 goals (-4), 2 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group B: MT Melsungen P4 2-0-2, 110:112 goals (-2), 4 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "B",
+    "away_group": "B",
+    "home_gp": 5,
+    "away_gp": 4,
+    "home_pts": 2,
+    "away_pts": 4,
+    "home_for": 154,
+    "home_against": 158,
+    "away_for": 110,
+    "away_against": 112,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101026",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "Paris Saint-Germain",
+    "abbrev": "",
+    "record": "3-1-1"
+   },
+   "away": {
+    "name": "Aalborg Handbold",
+    "abbrev": "",
+    "record": "4-1-0"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101026/ParisSaintGermain-AalborgH%C3%A5ndbold/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group C: Paris Saint-Germain P5 3-1-1, 182:157 goals (+25), 7 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group C: Aalborg Handbold P5 4-1-0, 170:145 goals (+25), 9 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "C",
+    "away_group": "C",
+    "home_gp": 5,
+    "away_gp": 5,
+    "home_pts": 7,
+    "away_pts": 9,
+    "home_for": 182,
+    "home_against": 157,
+    "away_for": 170,
+    "away_against": 145,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101036",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "RK Celje Pivovarna Lasko",
+    "abbrev": "",
+    "record": "0-0-5"
+   },
+   "away": {
+    "name": "HC Zagreb",
+    "abbrev": "",
+    "record": "2-0-3"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101036/RKCeljePivovarnaLa%C5%A1ko-HCZagreb/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group C: RK Celje Pivovarna Lasko P5 0-0-5, 150:188 goals (-38), 0 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group C: HC Zagreb P5 2-0-3, 146:158 goals (-12), 4 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "C",
+    "away_group": "C",
+    "home_gp": 5,
+    "away_gp": 5,
+    "home_pts": 0,
+    "away_pts": 4,
+    "home_for": 150,
+    "home_against": 188,
+    "away_for": 146,
+    "away_against": 158,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101065",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "SC Magdeburg",
+    "abbrev": "",
+    "record": "4-0-0"
+   },
+   "away": {
+    "name": "HC Kriens-Luzern",
+    "abbrev": "",
+    "record": "2-0-3"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group F: SC Magdeburg P4 4-0-0, 141:108 goals (+33), 8 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group F: HC Kriens-Luzern P5 2-0-3, 158:161 goals (-3), 4 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "F",
+    "away_group": "F",
+    "home_gp": 4,
+    "away_gp": 5,
+    "home_pts": 8,
+    "away_pts": 4,
+    "home_for": 141,
+    "home_against": 108,
+    "away_for": 158,
+    "away_against": 161,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101067",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-28",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "Industria Kielce",
+    "abbrev": "",
+    "record": "3-0-2"
+   },
+   "away": {
+    "name": "Kolstad Handball",
+    "abbrev": "",
+    "record": "0-0-4"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group F: Industria Kielce P5 3-0-2, 155:153 goals (+2), 6 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group F: Kolstad Handball P4 0-0-4, 111:143 goals (-32), 0 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "F",
+    "away_group": "F",
+    "home_gp": 5,
+    "away_gp": 4,
+    "home_pts": 6,
+    "away_pts": 0,
+    "home_for": 155,
+    "home_against": 153,
+    "away_for": 111,
+    "away_against": 143,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101009",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "Fuchse Berlin",
+    "abbrev": "",
+    "record": "3-0-2"
+   },
+   "away": {
+    "name": "RK Partizan AdmiralBet",
+    "abbrev": "",
+    "record": "0-1-4"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101009/F%C3%BCchseBerlin-RKPartizanAdmiralBet/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group A: Fuchse Berlin P5 3-0-2, 184:172 goals (+12), 6 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group A: RK Partizan AdmiralBet P5 0-1-4, 148:184 goals (-36), 1 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "A",
+    "away_group": "A",
+    "home_gp": 5,
+    "away_gp": 5,
+    "home_pts": 6,
+    "away_pts": 1,
+    "home_for": 184,
+    "home_against": 172,
+    "away_for": 148,
+    "away_against": 184,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101040",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "GOG",
+    "abbrev": "",
+    "record": "3-0-1"
+   },
+   "away": {
+    "name": "Sporting Clube de Portugal",
+    "abbrev": "",
+    "record": "3-1-0"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group D: GOG P4 3-0-1, 145:139 goals (+6), 6 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group D: Sporting Clube de Portugal P4 3-1-0, 149:125 goals (+24), 7 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "D",
+    "away_group": "D",
+    "home_gp": 4,
+    "away_gp": 4,
+    "home_pts": 6,
+    "away_pts": 7,
+    "home_for": 145,
+    "home_against": 139,
+    "away_for": 149,
+    "away_against": 125,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101046",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "",
+   "time_note": "18:45",
+   "home": {
+    "name": "IFK Kristianstad",
+    "abbrev": "",
+    "record": "0-0-4"
+   },
+   "away": {
+    "name": "OTP Bank - PICK Szeged",
+    "abbrev": "",
+    "record": "1-1-2"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101046/IFKKristianstad-OTPBankPICKSzeged/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group D: IFK Kristianstad P4 0-0-4, 122:155 goals (-33), 0 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group D: OTP Bank - PICK Szeged P4 1-1-2, 139:136 goals (+3), 3 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "D",
+    "away_group": "D",
+    "home_gp": 4,
+    "away_gp": 4,
+    "home_pts": 0,
+    "away_pts": 3,
+    "home_for": 122,
+    "home_against": 155,
+    "away_for": 139,
+    "away_against": 136,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101054",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "SAH - Aarhus",
+    "abbrev": "",
+    "record": "2-1-2"
+   },
+   "away": {
+    "name": "Barca",
+    "abbrev": "",
+    "record": "4-0-0"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101054/SAHAarhus-Bar%C3%A7a/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group E: SAH - Aarhus P5 2-1-2, 150:163 goals (-13), 5 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group E: Barca P4 4-0-0, 137:104 goals (+33), 8 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "E",
+    "away_group": "E",
+    "home_gp": 5,
+    "away_gp": 4,
+    "home_pts": 5,
+    "away_pts": 8,
+    "home_for": 150,
+    "home_against": 163,
+    "away_for": 137,
+    "away_against": 104,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101055",
+   "kind": "team",
+   "event": "",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27",
+   "date": "2026-10-29",
+   "start_utc": "",
+   "time_note": "20:45",
+   "home": {
+    "name": "Montpellier Handball",
+    "abbrev": "",
+    "record": "1-0-3"
+   },
+   "away": {
+    "name": "Dinamo Bucuresti",
+    "abbrev": "",
+    "record": "1-1-3"
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101055/MontpellierHandball-DinamoBucuresti/",
+   "source_family": "ehf",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "facts": [
+    {
+     "kind": "standing",
+     "text": "Group E: Montpellier Handball P4 1-0-3, 116:125 goals (-9), 2 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    },
+    {
+     "kind": "standing",
+     "text": "Group E: Dinamo Bucuresti P5 1-1-3, 134:145 goals (-11), 3 pts",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)"
+    }
+   ],
+   "inputs": {
+    "home_group": "E",
+    "away_group": "E",
+    "home_gp": 4,
+    "away_gp": 5,
+    "home_pts": 2,
+    "away_pts": 3,
+    "home_for": 116,
+    "home_against": 125,
+    "away_for": 134,
+    "away_against": 145,
+    "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+   }
+  }
+ ],
+ "sports": {
+  "aussie-rules": {
+   "sport": "aussie-rules",
+   "sport_name": "Aussie Rules",
+   "fixture_rows": 0,
+   "zero_row_reason": "No AFL fixture inside the 22 to 29 October 2026 capture window was returned by an official source during this session. The AFL Premiership season had concluded and no governing-body fixture feed was read, so this sport publishes zero rows rather than a list reconstructed from memory, a third-party site or another layer of this repository.",
+   "zero_row_flag": "CU-08",
+   "source_consulted": "https://www.afl.com.au/",
+   "source_reachable": false
+  },
+  "baseball": {
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "fixture_rows": 2,
+   "zero_row_reason": "",
+   "zero_row_flag": "",
+   "source_consulted": "",
+   "source_reachable": null
+  },
+  "basketball": {
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "fixture_rows": 9,
+   "zero_row_reason": "",
+   "zero_row_flag": "",
+   "source_consulted": "",
+   "source_reachable": null
+  },
+  "cricket": {
+   "sport": "cricket",
+   "sport_name": "Cricket",
+   "fixture_rows": 0,
+   "zero_row_reason": "No international or franchise fixture list for the capture window was returned by an official board feed during this session. Cricket pairings, venues and start times could not be read first-hand, so no cricket row is published; inventing a series schedule or copying one from an aggregator would be exactly the inference this layer refuses to make.",
+   "zero_row_flag": "CU-09",
+   "source_consulted": "https://www.icc-cricket.com/",
+   "source_reachable": false
+  },
+  "darts": {
+   "sport": "darts",
+   "sport_name": "Darts",
+   "fixture_rows": 0,
+   "zero_row_reason": "pdc.tv/tournaments, pdc.tv/live and pdc.tv/tournaments/european-championship each rendered only a cookie-consent wall and a cookie and vendor inventory to this fetcher at every chunk depth: no draw, no pairings, no session times. The 2026 European Championship window of 22 to 25 October at the Westfalenhallen in Dortmund was confirmed official through pdc.tv/calendar, but not one pairing was read, so no row is published.",
+   "zero_row_flag": "CU-10",
+   "source_consulted": "https://www.pdc.tv/tournaments/european-championship",
+   "source_reachable": true
+  },
+  "esports": {
+   "sport": "esports",
+   "sport_name": "eSports",
+   "fixture_rows": 0,
+   "zero_row_reason": "No esports fixture list for the capture window was returned by an official tournament organiser during this session, and no governing body publishes a consolidated cross-title calendar. Without a first-hand fixture feed this sport publishes zero rows; title, organiser, map and start time would all otherwise have to be guessed.",
+   "zero_row_flag": "CU-11",
+   "source_consulted": "",
+   "source_reachable": false
+  },
+  "gaelic-football": {
+   "sport": "gaelic-football",
+   "sport_name": "Gaelic Football",
+   "fixture_rows": 0,
+   "zero_row_reason": "The inter-county GAA season had concluded inside the capture window and no official fixture list was returned by gaa.ie during this session. Club championship fixtures are organised county by county and no consolidated official feed was read, so Gaelic football publishes zero rows rather than a partial or inferred list.",
+   "zero_row_flag": "CU-12",
+   "source_consulted": "https://www.gaa.ie/",
+   "source_reachable": false
+  },
+  "golf": {
+   "sport": "golf",
+   "sport_name": "Golf",
+   "fixture_rows": 0,
+   "zero_row_reason": "The DP World Tour schedule returned the Genesis Championship, event 40 of 42 in Korea, as in-play at the moment of capture: the round indicator read 'Round 2 Tee Times Available'. In-play events are excluded by this layer's rules, and no later tournament was listed as scheduled inside the window, so golf publishes zero rows with the official schedule page linked.",
+   "zero_row_flag": "CU-13",
+   "source_consulted": "https://www.europeantour.com/dpworld-tour/schedule/",
+   "source_reachable": true
+  },
+  "greyhounds": {
+   "sport": "greyhounds",
+   "sport_name": "Greyhounds",
+   "fixture_rows": 0,
+   "zero_row_reason": "No official greyhound racing fixture feed was reachable during this session. Meeting-level cards change daily and are published by national governing bodies rather than a single international federation, so without a first-hand read of a card this sport publishes zero rows; no race, trap, distance or time is shown.",
+   "zero_row_flag": "CU-14",
+   "source_consulted": "",
+   "source_reachable": false
+  },
+  "handball": {
+   "sport": "handball",
+   "sport_name": "Handball",
+   "fixture_rows": 17,
+   "zero_row_reason": "",
+   "zero_row_flag": "",
+   "source_consulted": "",
+   "source_reachable": null
+  },
+  "ice-hockey": {
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "fixture_rows": 14,
+   "zero_row_reason": "",
+   "zero_row_flag": "",
+   "source_consulted": "",
+   "source_reachable": null
+  },
+  "motor-racing": {
+   "sport": "motor-racing",
+   "sport_name": "Motor Racing",
+   "fixture_rows": 1,
+   "zero_row_reason": "",
+   "zero_row_flag": "",
+   "source_consulted": "",
+   "source_reachable": null
+  },
+  "rugby-league": {
+   "sport": "rugby-league",
+   "sport_name": "Rugby League",
+   "fixture_rows": 0,
+   "zero_row_reason": "No rugby-league fixture inside the capture window was returned by an official league source during this session. The northern-hemisphere club season had ended and no international window was read first-hand, so rugby league publishes zero rows rather than a reconstructed list of friendly or representative fixtures.",
+   "zero_row_flag": "CU-15",
+   "source_consulted": "",
+   "source_reachable": false
+  },
+  "rugby-union": {
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "fixture_rows": 8,
+   "zero_row_reason": "",
+   "zero_row_flag": "",
+   "source_consulted": "",
+   "source_reachable": null
+  },
+  "snooker": {
+   "sport": "snooker",
+   "sport_name": "Snooker",
+   "fixture_rows": 6,
+   "zero_row_reason": "",
+   "zero_row_flag": "",
+   "source_consulted": "",
+   "source_reachable": null
+  },
+  "tennis": {
+   "sport": "tennis",
+   "sport_name": "Tennis",
+   "fixture_rows": 0,
+   "zero_row_reason": "atptour.com/en/scores/current returned only matches already live or completed at the moment of capture, the Almaty event tid 9410, Brussels tid 7485 and Lyon tid 496, plus news and partner widgets. atptour.com/en/scores/2026-10-23 and the tournament draw route both returned HTTP 404. No future-session pairing was read, so tennis publishes zero rows.",
+   "zero_row_flag": "CU-16",
+   "source_consulted": "https://www.atptour.com/en/scores/current",
+   "source_reachable": true
+  },
+  "volleyball": {
+   "sport": "volleyball",
+   "sport_name": "Volleyball",
+   "fixture_rows": 0,
+   "zero_row_reason": "No volleyball fixture inside the capture window was returned by an official federation source during this session, neither a national league nor an international competition. Without a first-hand fixture feed this sport publishes zero rows; pool standings and match times would otherwise be assumptions rather than captured values.",
+   "zero_row_flag": "CU-17",
+   "source_consulted": "",
+   "source_reachable": false
+  }
+ },
+ "excluded": [
+  {
+   "sport": "ice-hockey",
+   "reason_flag": "CU-01",
+   "what": "NHL games dated 2026-10-22 (five read from api-web.nhle.com/v1/schedule/2026-10-22, game ids 2026020154-2026020158) and every W-L-OTL record carried beside the published 23-24 October fixtures",
+   "reason": "The 22 October games were in-play at the moment of capture, so they are excluded from the published slate. The same feed showed that records beside the 23-24 October fixtures had not absorbed the 22 October results, so every published NHL record is a 2026-10-21 snapshot. Both facts are disclosed rather than normalised.",
+   "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-22"
+  },
+  {
+   "sport": "ice-hockey",
+   "reason_flag": "CU-02",
+   "what": "Nathan MacKinnon's assists total in the Colorado game-leader block (2026-10-23 feed)",
+   "reason": "The value was truncated at the end of the fetched chunk and is stored as null. It is not published anywhere on this layer; the remaining five named leaders for that game were read completely.",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-23"
+  },
+  {
+   "sport": "basketball",
+   "reason_flag": "CU-03",
+   "what": "NBA fixtures for 2026-10-22 to 2026-10-29",
+   "reason": "nba.com/games?date=2026-10-22 rendered only per-day game counts (22 Oct = 2, 23 Oct = 12, 24 Oct = 8, 25 Oct = 7, 26 Oct = 9) and the fixture list itself failed to render. cdn.nba.com scoreboard, data.nba.net scoreboard, nba.com/game and stats.nba.com scoreboardv2 all returned errors. No pairing was read, so no NBA row is published; the nine EuroLeague rows are this layer's basketball coverage.",
+   "source_url": "https://www.nba.com/games?date=2026-10-22"
+  },
+  {
+   "sport": "basketball",
+   "reason_flag": "CU-04",
+   "what": "EuroLeague Round 7 fixture E2026/70 (Hapoel IBI Tel Aviv v Crvena Zvezda Meridianbet)",
+   "reason": "Read from the official game centre but not published as a fixture: Hapoel IBI Tel Aviv had already played Round 7 on 2026-10-21 (90-81 v Virtus Bologna) and stands at 5-2 over 7 GP while every other club shows 6 GP. The game centre therefore lists a Round 7 row that is already complete, and publishing it would double-count the round.",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/"
+  },
+  {
+   "sport": "handball",
+   "reason_flag": "CU-05",
+   "what": "EHF European Cup Men fixtures dated 2026-10-23 and 2026-10-24 (nine read from ehfcl.eurohandball.com) and the IHF Women's World Championship 2027 qualifiers Estonia v Kosovo / Kosovo v Estonia",
+   "reason": "Captured first-hand but published without originated prices: the EHF pages exposed no group-standings table for the European Cup or for the World Championship qualifiers in this session, and originating a line with no strength input would be inference.",
+   "source_url": "https://ehfcl.eurohandball.com/"
+  },
+  {
+   "sport": "handball",
+   "reason_flag": "CU-06",
+   "what": "A 20:45 fixture on 2026-10-29 beginning with Montpellier Handball",
+   "reason": "The listing was cut off at the end of the fetched chunk. The opponent was read separately on the official standings page (Montpellier Handball v Dinamo Bucuresti, match id 202711020101055) and is published, but the truncation is disclosed here so the two readings can be reconciled manually.",
+   "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+  },
+  {
+   "sport": "snooker",
+   "reason_flag": "CU-07",
+   "what": "Two 2026 Northern Ireland Open Round 3 fixtures (David Gilbert v Ka Wai Cheung; Jak Jones v Daniel Wells) and two 09:00 fixtures on Thursday 22 October",
+   "reason": "Neither player in those two fixtures appears in the 21 Round 1/Round 2 results read from wst.tv, so there is no first-hand strength input for them: they are published with blank lines and the reason rather than with an inferred price. Separately, the official page does not state a timezone, so the two 09:00 fixtures may already have begun when this page is published.",
+   "source_url": "https://www.wst.tv/matches/"
+  },
+  {
+   "sport": "basketball",
+   "reason_flag": "CU-19",
+   "what": "EuroLeague Round 7 venue attribution for Maccabi Rapyd Tel Aviv (ALEKSANDAR NIKOLIC HALL) and the Belgrade derby at BELGRADE ARENA",
+   "reason": "The official game centre names an arena for every fixture but never states whether a home fixture is being played at a neutral site, and a same-city derby dilutes home advantage. This layer applies one uniform +3.0 home-point advantage to every fixture and discloses the two cases where that may overstate or understate the edge, rather than adjusting a number the source does not provide.",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/"
+  },
+  {
+   "sport": "baseball",
+   "reason_flag": "CU-20",
+   "what": "World Series Game 1 and Game 2 priced identically",
+   "reason": "Both games are originated from the same official season inputs (club runs scored and allowed over 162 games plus the 30-club league average). No starting-pitcher announcement was returned by the official schedule endpoint in this session, and starting pitchers dominate single-game baseball pricing, so the two rows carry the same model numbers and the same medium confidence. No pitcher is named anywhere on this layer.",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-25"
+  },
+  {
+   "sport": "motor-racing",
+   "reason_flag": "CU-21",
+   "what": "Round 18 United States Grand Prix outright prices",
+   "reason": "The only official strength input read this session is the 2026 Drivers' championship standings. Share-of-championship-points is a crude outright prior, not a circuit model: it knows nothing about the Circuit of the Americas, tyre allocation, sprint format or car upgrades. Every driver price on this row is therefore capped at low confidence and no high-confidence pick is claimed for motor racing.",
+   "source_url": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  {
+   "sport": "snooker",
+   "reason_flag": "CU-22",
+   "what": "Best-of-seven frame format for Northern Ireland Open Round 3",
+   "reason": "The official matches page does not state the frame format for Round 3. All 21 Round 1 and Round 2 results read first-hand this session ended with the winner on exactly four frames, which is consistent only with a best-of-seven, so that format is used and disclosed rather than taken from an outside source. No world-ranking table was captured either, so the only strength input is in-event frame form; two of the six fixtures have none at all and publish blank lines.",
+   "source_url": "https://www.wst.tv/matches/"
+  },
+  {
+   "sport": "all",
+   "reason_flag": "CU-23",
+   "what": "Model constants that are ours, not the sport's",
+   "reason": "Home advantages (+1.05 multiplicative for the NHL, +3.0 points for EuroLeague and the URC, +0.4 goals for the EHF, +0.25 runs for MLB), the shrinkage priors (gp+8, gp+6, gp+3, gp+20, matches+6), the margin and total standard deviations (NHL and handball and MLB come from an exact score grid; EuroLeague 11.0/15.0; URC 13.0/16.0 with a +/-1 point draw band) and the alternate-line radii are all assumptions chosen by this layer. No official source publishes them. They are listed in full on the methodology page so any reader can re-run the arithmetic with different values.",
+   "source_url": "methodology.html"
+  },
+  {
+   "sport": "rugby-union",
+   "reason_flag": "CU-18",
+   "what": "United Rugby Championship Round 4 kickoff times",
+   "reason": "The official Round 4 listing renders times as 'Local' without naming a timezone, and one fixture renders '12:15' on Saturday 24 October an hour earlier than the rest of the round. Times are published verbatim as read and flagged rather than converted or normalised.",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+  }
+ ],
+ "sport_order": [
+  "aussie-rules",
+  "baseball",
+  "basketball",
+  "cricket",
+  "darts",
+  "esports",
+  "gaelic-football",
+  "golf",
+  "greyhounds",
+  "handball",
+  "ice-hockey",
+  "motor-racing",
+  "rugby-league",
+  "rugby-union",
+  "snooker",
+  "tennis",
+  "volleyball"
+ ]
+}

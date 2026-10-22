@@ -1,0 +1,25 @@
+{
+  "source_url": "https://api-web.nhle.com/v1/score/2026-10-23",
+  "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+  "fetched_utc": "2026-10-22T12:23:00Z",
+  "week_counts": [
+    {"date":"2026-10-20","numberOfGames":11},{"date":"2026-10-21","numberOfGames":2},
+    {"date":"2026-10-22","numberOfGames":12},{"date":"2026-10-23","numberOfGames":2},
+    {"date":"2026-10-24","numberOfGames":12},{"date":"2026-10-25","numberOfGames":5},
+    {"date":"2026-10-26","numberOfGames":3}
+  ],
+  "games": [
+    {"id":2026020166,"gameDate":"2026-10-23","startTimeUTC":"2026-10-24T00:00:00Z","venue":"United Center","venueTimezone":"America/Chicago","gameState":"FUT",
+     "away":{"abbrev":"MTL","name":"Canadiens","record":"4-3-2"},"home":{"abbrev":"CHI","name":"Blackhawks","record":"3-6-0"},
+     "gameCenterLink":"https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-23/2026020166",
+     "leaders":[{"team":"MTL","player":"Cole Caufield","category":"goals","value":6},{"team":"CHI","player":"Frank Nazar","category":"goals","value":3},
+                {"team":"MTL","player":"Nick Suzuki","category":"assists","value":7},{"team":"CHI","player":"Anton Frondell","category":"assists","value":5},
+                {"team":"MTL","player":"Jacob Fowler","category":"wins","value":3},{"team":"CHI","player":"Spencer Knight","category":"wins","value":3}]},
+    {"id":2026020167,"gameDate":"2026-10-23","startTimeUTC":"2026-10-24T01:00:00Z","venue":"Ball Arena","venueTimezone":"America/Denver","gameState":"FUT",
+     "away":{"abbrev":"TBL","name":"Lightning","record":"7-2-0"},"home":{"abbrev":"COL","name":"Avalanche","record":"5-4-1"},
+     "gameCenterLink":"https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-23/2026020167",
+     "leaders":[{"team":"TBL","player":"Brandon Hagel","category":"goals","value":7},{"team":"COL","player":"Artturi Lehkonen","category":"goals","value":8},
+                {"team":"TBL","player":"Nikita Kucherov","category":"assists","value":9},{"team":"COL","player":"Nathan MacKinnon","category":"assists","value":null}]}
+  ],
+  "capture_note": "MacKinnon assists value was truncated at the end of the fetched chunk and is recorded as null rather than guessed (see flag CU-02)."
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Current Capture Desk</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap bar">
+<a class="brand" href="index.html"><span>OLBG Current Capture Desk</span>
+<small>2026-10-22 first-hand official capture &middot; window 22&ndash;29 October 2026</small></a>
+<nav class="nav" aria-label="Primary navigation"><a href="index.html">Dashboard</a><a href="matches.html">All Fixtures</a><a href="lines.html">Originated Lines</a><a href="picks.html">Picks &amp; Confidence</a><a href="predictions.html">High-Confidence Predictions</a><a href="inputs.html">Model Inputs</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Source Register</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sports/index.html">By Sport</a></nav>
+</div></header>
+<div class="cross"><div class="wrap">
+<strong>Cross-layer:</strong>
+<a href="../index.html">Root dashboard</a> &middot;
+<a href="../verified/index.html">Verified desk</a> &middot;
+<a href="../live/index.html">Live slate</a> &middot;
+<a href="../survey/index.html">All-sport survey</a> &middot;
+<a href="../integration.html">Integration status</a> &middot;
+<a href="../flagged.html">Root review queue</a>
+</div></div>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">Dashboard</a> &rsaquo; Methodology</p>
+<h1>Methodology, markets and the high-confidence gate</h1>
+<p class="lede">Every price on this layer is originated from official statistics captured on
+22 October 2026. Nothing is copied from a bookmaker and nothing is inherited from another
+layer of this repository.</p>
+
+<h2>The high-confidence gate</h2>
+<div class="notice"><strong>high</strong> = model probability &ge; 0.7000 <em>and</em> a fair
+no-vig American price inside -250 &hellip; +10000. A fair price of -250 corresponds to
+p = 0.714286, so the band is a 1.43-point-wide window. <strong>medium</strong> = probability
+&ge; 0.60, and also any probability above 0.70 whose fair price is shorter than -250, because
+ultra-short chalk is capped. <strong>low</strong> = everything else.</div>
+<p>The gate is applied to <em>every</em> originated market on <em>both</em> sides, not only to
+the two-way moneyline. That matters: a moneyline can only satisfy the window between 70.0% and
+71.43%, which almost never happens, whereas an alternate handicap or total line can be chosen
+so a genuinely strong opinion lands inside the band. Of 29 high-confidence picks, 28 come from
+an alternate handicap or total line and 1 from a moneyline.</p>
+
+<h2>Pricing convention</h2>
+<p>Prices are fair and carry no vigourish: <code>fair_decimal = 1 / probability</code> rounded
+to two decimals, converted to American as <code>+100 &times; (decimal - 1)</code> above 2.00
+and <code>-100 / (decimal - 1)</code> below it. Handicap thresholds are always half-points so
+no line can push, and the home side is posted at minus the threshold while the away side is
+posted at plus it, making the two sides exact complements.</p>
+
+<h2>Models by sport</h2>
+<div class="table-wrap"><table class="data"><thead><tr>
+<th>Sport</th><th>Model</th><th>League average from the capture</th>
+<th>Distribution</th><th>Alternate-line search radius</th></tr></thead><tbody>
+<tr><td>Ice Hockey</td><td>multiplicative Poisson on goals for/against, shrinkage gp/(gp+8), home factor 1.05</td><td>3.0784 goals per team game over 32 clubs</td>
+<td>Exact Poisson score grid to 12 goals; ties settled 50/50 for overtime and the shootout</td>
+<td>Handicap &plusmn;2.0 from the puck line, total &plusmn;2.0</td></tr>
+<tr><td>Basketball</td><td>attack/defence points model, shrinkage gp/(gp+6), +3.0 home points, normal margin sd 11.0</td><td>86.4426 points per team game over 20 clubs</td>
+<td>Normal margin, no draws</td><td>Handicap &plusmn;6.0, total &plusmn;4.0</td></tr>
+<tr><td>Rugby Union</td><td>attack/defence points model, shrinkage pl/(pl+6), +3.0 home points, normal margin sd 13.0, draw band +/-1 point (a draw needs level scores)</td><td>26.2083 points per team game over 16 clubs</td>
+<td>Normal margin with a &plusmn;1 point draw band</td><td>Handicap &plusmn;7.0, total &plusmn;6.0</td></tr>
+<tr><td>Handball</td><td>attack/defence Poisson on goals, shrinkage gp/(gp+3), +/-0.4 home goals, full score grid</td><td>31.8273 goals per team game over 24 clubs</td>
+<td>Exact Poisson score grid to 70 goals; draws stand</td><td>Handicap &plusmn;4.0, total &plusmn;4.0</td></tr>
+<tr><td>Baseball</td><td>attack/defence Poisson on runs, shrinkage gp/(gp+20), +0.25 home runs, ties split 50/50 for extra innings</td><td>4.4811 runs per team game over 30 clubs</td>
+<td>Exact Poisson score grid to 20 runs; ties settled 50/50 for extra innings</td>
+<td>Handicap &plusmn;1.5, total &plusmn;2.0</td></tr>
+<tr><td>Snooker</td><td>exact best-of-seven frame distribution; per-frame win rate from captured frames, shrunk matches/(matches+6) toward 0.5</td><td>5.8571 frames per match across 21 captured results</td>
+<td>Exact best-of-seven frame distribution</td><td>Handicap &plusmn;1.5 frames, total &plusmn;1.0</td></tr>
+<tr><td>Motor Racing</td><td>share-of-championship-points outright; head-to-head between the top two by points share</td><td>1933 championship points across 23 drivers</td>
+<td>Direct share, no distribution</td><td>Not applicable &mdash; outrights only</td></tr>
+</tbody></table></div>
+
+<h2>Assumptions that are ours, not the sport's (flag CU-23)</h2>
+<p>No official source publishes a home advantage, a shrinkage prior or a standard deviation.
+These are chosen by this layer and are listed in full so the arithmetic can be re-run with
+different values:</p>
+<ul>
+<li><strong>Home advantage:</strong> NHL &times;1.05 multiplicative on goals; EuroLeague +3.0
+points; URC +3.0 points; EHF +0.4 goals; MLB +0.25 runs. Snooker and motor racing have no
+home advantage.</li>
+<li><strong>Shrinkage priors</strong> (<code>w = games / (games + prior)</code>): NHL 8,
+EuroLeague 6, URC 6, EHF 3, MLB 20, snooker 6 matches. Ratings are
+<code>1 + w &times; (rate / league_average - 1)</code>, so a club with no games sits exactly
+at league average.</li>
+<li><strong>Dispersion:</strong> hockey, handball, baseball and snooker need none because the
+score grid is exact. EuroLeague margin sd 11.0 and total sd 15.0; URC margin sd 13.0 and total
+sd 16.0, with a draw requiring the margin inside &plusmn;1 point.</li>
+<li><strong>Alternate-line radii</strong> are capped per sport so a published line is one a
+book would plausibly post rather than an artefact of searching a huge grid.</li>
+</ul>
+
+<h2>Verification performed</h2>
+<ul>
+<li>Every fixture, record, standing, venue, time and result was returned by an official
+governing-body, league or tour endpoint during this session and stored verbatim under
+<code>data/current/capture/</code>.</li>
+<li>The four grid and normal models were recomputed from the raw captures through an
+independent code path and agreed with the published probabilities to four decimal places.</li>
+<li>Arithmetic in every captured table was re-checked: goals for minus goals against equals
+the published difference, and wins plus draws plus losses equals games played, for all 24 EHF
+clubs, all 30 MLB clubs, all 20 EuroLeague clubs and all 16 URC clubs.</li>
+<li>Cross-validation: the EuroLeague standings positions 1 to 20 match the club codes printed
+beside each fixture in the official game centre; NHL records beside the 23 and 24 October
+fixtures match the 21 October team-summary snapshot for six clubs.</li>
+<li>No bookmaker price, aggregator price or third-party statistic was read at any point.</li>
+</ul>
+
+</main>
+<footer><div class="wrap">
+<p>Every published value was returned by an official governing-body, league or tour endpoint
+during the 2026-10-22 capture session and is stored verbatim under
+<code>data/current/capture/</code>. Values no official source returned are left blank and
+listed on <a href="flagged.html">Flagged for Review</a>. No bookmaker price was read; all
+prices on this layer are originated from the models on <a href="methodology.html">Methodology</a>.</p>
+</div></footer>
+
+</body>
+</html>

@@ -2860,3 +2860,73 @@ rendered HTML. Read the deployed page back, not just the build log.
 
 **Sources used:** all first-hand official (NHL APIs, statsapi.mlb.com, nba.com, pdc.tv via search-cache of official articles, ehfcl.eurohandball.com, wst.tv, atptour.com, prod2.lnr.fr, icc-cricket.com, formula1.com, lolesports.com); OLBG used only for universe cross-check + market shapes; full URL registry in `pulse/sources.html` and `data/pulse/inputs.json`.
 **Irregularities (20, non-blocking):** PU-01·21 in `data/pulse/flagged.json` and `/pulse/flagged.html` — incl. OLBG time-label conflict on Montauban (PU-05), F1 R7 podium truncation + R17 gap (PU-06), darts leg-model cap after degenerate p=1.0 run (PU-16), NHL partner prices as context not inputs (PU-02).
+
+---
+
+## Session `arena/18792bd6-olbg2` — fresh first-hand official-source capture window (`/current/`)
+
+**Session ID:** `arena/18792bd6-olbg2` · **Branch:** `arena/18792bd6-olbg2` (fixed by the environment, so the requested
+`session-<id>/<task>` naming cannot be used) · **Claimed:** 2026-10-22 12:20 UTC, before any implementation edit.
+
+**Live-branch / open-PR check at claim time:** `origin/main` = `293c0c0` (PR #93 merged). Two PRs open:
+[#94](https://github.com/buffedlizard55-lab/OLBG2/pull/94) `arena/f048d3a9-olbg2` (owns `fresh/**`, `data/fresh/**`,
+`scripts/fresh_audit.py`, `scripts/fresh_build.py`, `tests/test_fresh.py`, `research/fresh-f048d3a9.md`) and
+[#95](https://github.com/buffedlizard55-lab/OLBG2/pull/95) `arena/aa8e25ef-olbg2` (owns
+`research/final-verification-aa8e25ef.md`). Both scopes are treated as owned: this session does **not** edit them,
+nor any upstream layer (`site/`, `survey/`, `verified/`, `board/`, `hub/`, `slate/`, `forward/`, `live/`, `final/`,
+`portal/`, `evidence/`, `audit65/`, `review/`, root `*.html`, `sports/**`, `assets/**`, `scripts/build*.py`,
+`scripts/verified_*.py`, `data/verified/**`, …). `COORDINATION.md` is append-only here.
+
+| # | Task | Status | Owner | File scope (non-overlapping, new files only) |
+|---|---|---|---|---|
+| C1 | Claim board + concurrent-session check | done 12:20Z | `arena/18792bd6-olbg2` | `COORDINATION.md` (append-only) |
+| C2 | First-hand official-source fixture capture, 2026-10-22→2026-10-25 window, all 17 eligible sports | in progress | `arena/18792bd6-olbg2` | `data/current/capture/**`, `data/current/matches.json`, `research/current-capture-18792bd6.md` |
+| C3 | Line origination for every captured fixture (win match, handicap, match total) from the captured official inputs only | unclaimed→this session | `arena/18792bd6-olbg2` | `scripts/current_model.py`, `data/current/lines.json` |
+| C4 | Uniform in-band confidence gate (high = ≥70% **and** −250…+10000 American / 1.40–101.00 decimal) + ≥30-word human write-ups with sourced form and recent history | unclaimed→this session | `arena/18792bd6-olbg2` | `scripts/current_model.py`, `data/current/predictions.json` |
+| C5 | `/current/` GH Pages layer: clean landing, all-matches table, per-category sport subpages, picks, flagged-for-review, sources, verification ledger | unclaimed→this session | `arena/18792bd6-olbg2` | `scripts/current_build.py`, `current/**`, `assets` untouched |
+| C6 | Regression tests + link audit for the new layer | unclaimed→this session | `arena/18792bd6-olbg2` | `tests/test_current.py` |
+| C7 | Integration: merge latest `main`, full rebuild, no broken links, tests green, PR → merge → Pages deploy confirmed, recorded here | unclaimed→this session | `arena/18792bd6-olbg2` | shared outputs at integration only |
+
+**Why this layer exists (the gap it closes).** Every prior layer's rows inherit a capture stamp from a session that ran
+earlier on 2026-10-22 or on 2026-10-21; PR #94's audit explicitly records **FR-08 "sample-only re-verification"** and
+PR #93's `review/reproducibility.html` records that official sites were unreachable from that sandbox. This session
+re-reads the official governing-body feeds **first hand** for the current window and publishes only what those feeds
+returned, with the response captured verbatim under `data/current/capture/` so any reviewer can re-check a row
+against the stored payload rather than against a claim.
+
+**Rules for this session.** A value is published only when an official governing-body / league / tour endpoint returned
+it in this session; the raw response is stored under `data/current/capture/` and the row links the official page.
+Anything not returned stays **blank** with a written reason and a flag on `current/flagged.html`. No bookmaker price is
+read, no value is inferred, and no row from an upstream layer is copied in as if it were re-verified here.
+
+### Session `arena/18792bd6-olbg2` — COMPLETION LOG (2026-10-22, `/current/` layer)
+
+**Status: DONE — all of C1…C7 complete.** Published at `/current/` (28 files).
+
+| Task | Status | Session | Files |
+|---|---|---|---|
+| C1 | done 12:20Z (`a116e81`) | `arena/18792bd6-olbg2` | `COORDINATION.md` (append-only) |
+| C2 | done — 12 verbatim capture files, all read first-hand on 2026-10-22 | `arena/18792bd6-olbg2` | `data/current/capture/**`, `data/current/matches.json` |
+| C3 | done — 1931 originated prices across 164 markets (match winner, handicap, match total; F1 outright + head-to-head) | `arena/18792bd6-olbg2` | `scripts/current_seed.py`, `scripts/current_model.py`, `data/current/lines.json`, `data/current/model_inputs.json` |
+| C4 | done — uniform gate p ≥ 0.70 **and** fair American −250…+10000 searched over every originated market and both sides → **29 in-band picks**, **29 hand-authored predictions of 52–61 words each**, all unique | `arena/18792bd6-olbg2` | `data/current/band.json`, `data/current/predictions.json` |
+| C5 | done — 10 desk pages + 17 per-sport subpages + 1 sport index | `arena/18792bd6-olbg2` | `scripts/current_build.py`, `current/**` |
+| C6 | done — 37 regression tests; repository suite **324 tests OK** | `arena/18792bd6-olbg2` | `tests/test_current.py` |
+| C7 | done — merged `origin/main` at `c9b25e0`, one COORDINATION.md conflict resolved by keeping both sides, full rebuild deterministic, `integration_audit.py` reports **0 link errors**, drift check clean | `arena/18792bd6-olbg2` | none outside scope |
+
+**Coverage.** 57 fixture rows / 7 sports with originated lines (Ice Hockey 14, Handball 17, Basketball 9, Rugby Union 8, Snooker 6, Baseball 2, Motor Racing 1) and 10 sports publishing **zero rows each with a first-hand reason** (Aussie Rules, Cricket, Darts, eSports, Gaelic Football, Golf, Greyhounds, Rugby League, Tennis, Volleyball). Fixture window 2026-10-22 → 2026-10-29.
+
+**Official sources read this session** (verbatim transcripts under `data/current/capture/`, full register on `current/sources.html`): `stats.unitedrugby.com/match-centre/table/2026-27` and `/match-centre/2026-27/4`; `api-web.nhle.com/v1/score/2026-10-23` and `/2026-10-24`; `api.nhle.com/stats/rest/en/team/summary` (32 clubs); `euroleaguebasketball.net/en/euroleague/game-center/` and `/standings/` (20 clubs); `ehfcl.eurohandball.com/` and `/men/2026-27/standings/` (all 24 group-phase clubs, Groups A–F); `wst.tv/matches/` (6 Round 3 fixtures + 21 completed Round 1/2 frame scores); `statsapi.mlb.com/api/v1/schedule` and `/api/v1/standings?leagueId=103,104` (all 30 clubs); `formula1.com/en/racing/2026` and `/en/results/2026/drivers` (23 drivers); `europeantour.com/dpworld-tour/schedule/`. Consulted and unusable: `nba.com/games`, `pdc.tv` (three routes), `atptour.com/en/scores/current`.
+
+**Verification performed.** (1) Four fixtures recomputed from the raw captures through an independent code path — NHL BOS v SJS, URC LEI v MUN, EHF BAR v MHB, EL PAO v KBA — agreeing to four decimals on league average, expected score, moneyline, draw and band probabilities; two of these are wired into `tests/test_current.py`. (2) Table arithmetic re-checked for all 24 EHF, 30 MLB, 20 EuroLeague and 16 URC clubs, including total goals/runs for equalling total against (EHF 3501 v 3501; MLB 21769 v 21769). (3) Cross-validated EuroLeague standings positions 1–20 against the club codes printed in the official game centre, and NHL fixture records against the 21 October team summary for six clubs. (4) Structural CI inside `tests/test_current.py`: byte-identical rebuild, every local link and anchor resolving, every official link `https`, every table's header/body cell counts matching, every fixture carrying its own official URL on `matches.html`, every zero-row sport page carrying its flag id. (5) No bookmaker, aggregator or third-party statistic was read; no hallucinated pairings — tennis and darts publish zero rows rather than inventing draws.
+
+**Irregularities: 23 disclosure flags CU-01…CU-23, all published on `current/flagged.html` with the source consulted beside each.** None blocks publication. The material ones: CU-01 every published NHL W-L-OTL record is a 2026-10-21 snapshot that excludes the twelve 22 October games (the 22 October fixtures themselves are excluded as in-play); CU-02 a truncated MacKinnon assists value stored as `null` and never published; CU-03 the NBA is absent from this layer — four official endpoints failed and `nba.com/games` renders only per-day counts, so the nine EuroLeague rows are the whole basketball coverage; CU-04 the EuroLeague game centre lists a Round 7 fixture for Hapoel IBI Tel Aviv that the club had already played on 2026-10-21 (5-2 over 7 GP while every other club shows 6 GP) — excluded rather than double-counted; CU-05 nine EHF European Cup fixtures and two IHF World Championship qualifiers captured but not priced because no official group table exists for them; CU-07 two snooker Round 3 fixtures have no first-hand strength input for either player and publish blank lines; CU-19 the official feed names an arena but never says whether a home fixture is at a neutral site, so one uniform home advantage is applied and the two affected fixtures disclosed; CU-20 World Series Games 1 and 2 price identically because no starting pitcher was returned and none is named; CU-22 the snooker best-of-seven format is derived from the 21 captured results (every winner finished on exactly four frames), not stated on the page; CU-23 home advantages, shrinkage priors, standard deviations, draw bands and alternate-line radii are this layer's assumptions and no official source publishes them.
+
+**Substantive difference from earlier layers.** The in-band high-confidence search runs over *every* originated market on *both* sides, not just two-way moneylines. A moneyline can only enter the −250…+10000 window between 70.0 % and 71.43 %, which almost never happens; alternate handicap and total lines let a genuinely strong opinion land inside it. Of the 29 high-confidence picks, 28 are alternate handicap or total lines and 1 is a moneyline (Leinster Rugby v Munster Rugby, 0.7063, −240). Alternate-line grids are capped per sport, and a heavy receiving handicap on the side the model does not favour is ranked last so it is only published when nothing better exists.
+
+**Requests to the final integration session (logged, not actioned — these files are outside this session's scope):**
+1. `index.html` / root navigation / `sports/*.html`: please add `/current/` to the root dashboard's layer table alongside `/verified/`, `/live/`, `/survey/`, `/canon/`, `/atlas/`, `/pulse/`, `/update/`.
+2. `scripts/integration_audit.py`: its `local_link_errors()` folder list is `('sports','site','survey','verified','live')`; please add `'current'` (and the other new layers) so cross-layer link checking covers them. This session verified its own links inside `tests/test_current.py` instead of editing that shared file.
+3. `.github/workflows/pages.yml`: please add `python scripts/current_seed.py && python scripts/current_model.py && python scripts/current_build.py` to the rebuild steps and `current data/current` to the `git diff --exit-code` drift paths. Byte-identical rebuild is meanwhile enforced by `tests/test_current.py::TestSiteStructure::test_rebuild_is_byte_identical`.
+4. `README.md`: PR #94 already flags the root counts as stale (FR-01…FR-11). This layer adds 57 rows / 29 predictions / 23 flags; please do not sum layer counts as unique matches.
+
+**Scope discipline.** Only `current/**`, `data/current/**`, `scripts/current_seed.py`, `scripts/current_model.py`, `scripts/current_build.py`, `tests/test_current.py`, `research/current-capture-18792bd6.md` and append-only entries in `COORDINATION.md` were touched. `index.html`, root navigation, `data/matches.json`, `scripts/integration_audit.py` and `.github/workflows/**` were **not** edited. The environment fixes this session's branch to `arena/18792bd6-olbg2`, so the requested `session-<id>/<task>` naming could not be used; deviation recorded in the claim block above.

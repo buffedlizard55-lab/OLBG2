@@ -1,0 +1,111 @@
+{
+  "layer": "daily",
+  "generated_by": "hand-authored 2026-10-22 from the captures in data/daily/capture/",
+  "flags": [
+    {
+      "id": "DL-01",
+      "title": "OLBG and the ATP disagree about the day label for the same tennis matches",
+      "what": "All eight published tennis fixtures carry the ATP day heading 'Fri, 23 October, 2026 (Day 7)'. OLBG lists the same players as 'Tomorrow', which from a 22 October capture also means 23 October, but OLBG prints no date and no timezone while the ATP prints a local start time with no zone either.",
+      "reason": "Both strings are stored verbatim. The published date is the ATP one because it is the only source that prints a date. No kickoff is converted to UTC, and no row asserts a UTC start time.",
+      "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+    },
+    {
+      "id": "DL-02",
+      "title": "OLBG publishes no odds, so no bookmaker price is used or compared",
+      "what": "The OLBG sport hubs and event pages render tip counts and percentages (for example 'Medvedev 2/2 Win Tips 100%') but no price for any selection.",
+      "reason": "Every price in this layer is originated from the model in scripts/daily_model.py. No market price is quoted, averaged or implied, and the 'in window' test is applied to our own fair price, not to a bookmaker's.",
+      "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Terence_Atmane/3?event_id=902145"
+    },
+    {
+      "id": "DL-03",
+      "title": "Eight WTA fixtures seen on OLBG are not published as rows",
+      "what": "OLBG lists sixteen tennis events. Eight are women's matches: Ann Li v Lilli Tagger, Talia Gibson v Ashlyn Krueger, Leylah Fernandez v Ekaterina Alexandrova, Sara Bejlek v Marie Bouzkova, Iva Jovic v Diana Shnaider, Mary Stoiana v Katerina Siniakova, Katie Boulter v Antonia Ruzic and Elena Rybakina v Katarzyna Kawa.",
+      "reason": "The WTA official draws page for Hong Kong returned only site chrome and notifications, and the WTA scores page listed tournaments but no matches, so no official draw, seed or scoreline could be read for any of the eight. They are listed here rather than published as unsourced rows.",
+      "source_url": "https://www.wtatennis.com/tournaments/1074/hong-kong/2026/draws"
+    },
+    {
+      "id": "DL-04",
+      "title": "Nine cricket fixtures are published with blank prices",
+      "what": "Nine upcoming ICC fixtures are published (AFG v ZIM ODI, NZ v IND T20I, IND v ZIM ODI, NGR v MOZ, ZAM v LES, GAM v UGA, DEN v KUW, QAT v KEN, AFG-U19 v BAN-U19). Every price column on those rows is blank.",
+      "reason": "The ICC men's T20I team-rankings page rendered an empty table body, the ODI page was not captured, and the ICC match pages returned no scorecard or recent-results panel. With no official strength input, a line would be inference. Blank plus this flag is the published state.",
+      "source_url": "https://www.icc-cricket.com/rankings/team-rankings/mens/t20i"
+    },
+    {
+      "id": "DL-05",
+      "title": "No originated price lands inside the brief's -250 to +10000 window",
+      "what": "The brief's two conditions - a greater than 70% chance and a price between -250 and +10000 - intersect in a window 1.43 probability points wide (p from 0.7000 to 0.714286). The closest of the 288 originated prices is Under 24.5 games at p = 0.7242, a fair -263, which is 0.99 points above the window on the short side.",
+      "reason": "With half-point lines and a 4.5-game margin standard deviation, consecutive lines step by about four probability points, so a 1.43-point window is stepped over. The five published picks are the highest-confidence match winners (p from 0.7336 to 0.9216) and every one is labelled 'outside the -250 window' on the picks page rather than reclassified. The alternative - publishing a quarter-game line purely to sit inside the window - would be a fabricated market, not a price.",
+      "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+    },
+    {
+      "id": "DL-06",
+      "title": "Two priced fixtures have no verified scoreline this week",
+      "what": "Francisco Cerundolo (No. 3 seed, Brussels) and Arthur Fils (No. 1 seed, Brussels) both entered on a first-round bye. Fils's round-of-16 score was not in the chunk read, and Cerundolo's round-of-16 opponent and score were not read either.",
+      "reason": "Their form input is therefore zero and their rating rests on official seeding alone. Both picks are still labelled high on the model probability, and every page repeats that the input gap exists. No scoreline is guessed for either player.",
+      "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+      "id": "DL-07",
+      "title": "OLBG prints two different kick-off times for one Gaelic football fixture",
+      "what": "The Gaelic Football hub prints 'St Finbarrs v Nemo Rangers 25 Oct 16:00'; the global tips page prints '25 Oct 12:00' for the same event.",
+      "reason": "Recorded, not resolved. Neither fixture is published as a row because no official GAA page for a club fixture was found (see DL-09).",
+      "source_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+    },
+    {
+      "id": "DL-08",
+      "title": "Cricket rows carry no date, and one fixture's identity conflicts between sources",
+      "what": "The ICC fixtures list prints a start time and '(Your time)' but no date on any row, so seven of the nine cricket rows have a blank date. Separately, OLBG names one fixture 'India W vs Zimbabwe W 1st ODI' while the ICC row for the same start time prints IND v ZIM with no women's marker.",
+      "reason": "Dates are left blank rather than inferred from the capture date. The NZ v IND date comes only from OLBG's own label and is attributed to OLBG on the row. The IND v ZIM identity conflict is published as-is and not resolved to men's or women's.",
+      "source_url": "https://www.icc-cricket.com/fixtures-results"
+    },
+    {
+      "id": "DL-09",
+      "title": "Gaelic football: two in-window club fixtures cannot be officially confirmed",
+      "what": "OLBG lists St Finbarrs v Nemo Rangers (25 Oct) and Moycullen v Salthill-Knocknacarra (24 Oct) inside the capture window, plus three fixtures on 1 November outside it.",
+      "reason": "The official GAA fixtures page for October 2026 rendered a single 24 October entry, the Shinty-Hurling International, and no club football. No county-board page was fetched, so no official source exists in this session for either row. They are not published as rows.",
+      "source_url": "https://www.gaa.ie/fixtures-results"
+    },
+    {
+      "id": "DL-10",
+      "title": "Darts: eight OLBG fixtures have no official data behind them in this session",
+      "what": "OLBG lists eight darts match-ups for 23 October (Ryan Joyce v Jermaine Wattimena, Jonny Clayton v Niko Springer, Josh Rock v Chris Dobey, Krzysztof Ratajski v Dave Chisnall, Nathan Aspinall v Cristo Reyes, Wessel Nijman v Martin Schindler, Luke Littler v William OConnor, Kevin Doets v Michael van Gerwen) plus the European Championship outright.",
+      "reason": "The PDC official pages returned a cookie-consent wall with no fixture, score or order-of-merit content, so no official draw, seed, ranking or recent result could be read. None of the eight is published as a row and no darts prediction is claimed.",
+      "source_url": "https://www.pdc.tv/matches"
+    },
+    {
+      "id": "DL-11",
+      "title": "eSports: OLBG's own hub is empty",
+      "what": "The OLBG eSports hub renders the literal text 'No tips found.'",
+      "reason": "No event exists to verify, so the sport has zero rows for this capture. Nothing is inferred from other eSports calendars.",
+      "source_url": "https://www.olbg.com/betting-tips/eSports/23"
+    },
+    {
+      "id": "DL-12",
+      "title": "Rugby League: no 2026 fixture listed, only 2027 outrights",
+      "what": "The OLBG rugby-league hub lists State of Origin 2027, Super League 2027 Grand Final and NRL 2027 Grand Final, and no match in the capture window.",
+      "reason": "With no fixture there is nothing to price. The three outrights are outside the brief's match-level scope and are not published as rows.",
+      "source_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    },
+    {
+      "id": "DL-13",
+      "title": "Five-picks-a-day target: met for tennis, not met for cricket",
+      "what": "The brief asks for the five highest-confidence picks for every covered sport each day. This layer publishes five written tennis predictions and zero cricket predictions.",
+      "reason": "Tennis has eight officially verified quarter-finals with a seed-and-form strength input, which yields five selections at p >= 0.70. Cricket has nine officially verified fixtures and no strength input, so no price, no pick and no prediction exists for it. The shortfall is published rather than filled with unsourced prose.",
+      "source_url": "https://www.icc-cricket.com/fixtures-results"
+    },
+    {
+      "id": "DL-14",
+      "title": "Four eligible sports were not surveyed in this session",
+      "what": "Golf, Greyhounds, Volleyball and Aussie Rules have no OLBG hub capture and no fixture row in this layer.",
+      "reason": "The session's capture budget went to the sports where an official fixture source proved readable. These four are recorded as not surveyed, which is not the same claim as 'no fixtures exist'. Prior layers cover motor racing; aussie rules is outside its season in late October, but that is not asserted here because no official calendar page was read.",
+      "source_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "DL-15",
+      "title": "Model constants are this layer's assumptions, not the sport's numbers",
+      "what": "Seed ratings (1500 base, 25 per seed step), unseeded 1480, qualifier 1455, 6 per set won or lost, a 200-point logistic scale, a margin mean of 8 x (p - 0.5) games with a 4.5-game standard deviation, and a 22-game total with a 4.2-game standard deviation.",
+      "reason": "No official body publishes these. They are listed in full on the methodology page so any reader can re-run the arithmetic with different values and see how far the prices move.",
+      "source_url": "methodology.html"
+    }
+  ]
+}

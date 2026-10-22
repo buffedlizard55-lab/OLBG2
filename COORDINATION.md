@@ -3022,3 +3022,56 @@ capture is stored verbatim under `data/daily/capture/`.
 No other session's data, builder, generated page or test is modified. `current/`, `final/`, `canon/`, `atlas/`,
 `verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`,
 `audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/`, `atlas/` stay byte-identical.
+
+### `arena/46d0531f-olbg2` — daily slate published
+
+**Status: implementation and verification complete; publication in progress.**
+
+**Method change that unblocked the task.** Earlier sessions recorded that official sports hosts could not be reached
+and therefore that no fact could be freshly certified. That is true of the sandbox shell, whose egress is
+allowlisted to GitHub. It is not true of the agent `fetch_page` tool: `olbg.com`, `atptour.com`,
+`icc-cricket.com`, `wtatennis.com`, `pdc.tv` and `gaa.ie` all answered in this session. Every fixture, seed,
+scoreline and start time in the new layer was read first-hand at 20:56–21:32 UTC on 2026-10-22 and the rendered
+text is stored verbatim under `data/daily/capture/`.
+
+**What was built.** A new, self-contained `/daily/` layer — not an edit of any existing layer.
+
+| Item | Value |
+|---|---|
+| Fixtures | 17 — 8 ATP quarter-finals (ATP day 7 order of play + draws) and 9 ICC fixtures |
+| Prices | 288 across 24 fixture-markets (match winner, games handicap, total games) |
+| High-confidence winners | 5 (p 0.7336–0.9216) |
+| Written predictions | 5, 54–62 words each, every fact linked to its official page |
+| Flags | 15 (DL-01…DL-15) |
+| Pages | 26 — landing, matches, lines, picks, predictions, flagged, sources, methodology, 17 sport pages, sport index |
+| Tests | 33 new (`tests/test_daily.py`), asserting on rendered HTML; repository total 376 |
+
+**Verification performed.**
+
+| Check | Result |
+|---|---|
+| `python3 -m unittest discover -s tests` | 376 tests OK |
+| `python3 scripts/integration_audit.py` | 0 cross-layer local link errors |
+| Every internal link and `#anchor` in all 26 new pages | resolved on disk by test |
+| Byte-identical rebuild (`daily_model` + `daily_build` re-run inside a test) | pass |
+| Every price re-derived from its own printed probability | pass |
+| Every fixture row's official URL present in the rendered table | pass |
+| CI workflow includes the new build step and the drift path | pass (`daily data/daily` added to the diff gate) |
+| Other layers | byte-identical: `daily/` touches no file under `current/`, `final/`, `canon/`, `atlas/`, `verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`, `audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/` |
+
+**Irregularities (all published on `daily/flagged.html`, none blocking):** OLBG and the ATP label the same matches
+with different day strings (DL-01); OLBG publishes no odds, so every price is ours (DL-02); eight WTA fixtures are
+unverifiable because `wtatennis.com` does not render draws server-side (DL-03); nine cricket fixtures have blank
+prices because the ICC rankings table rendered empty (DL-04); **no originated price lands inside the brief's
+−250…+10000 window** because that window is 1.43 probability points wide and half-point lines step over it (DL-05);
+two picks rest on seeding only, after byes (DL-06); OLBG prints two different kick-off times for one Gaelic fixture
+(DL-07); cricket rows have no date because the ICC prints none (DL-08); Gaelic club fixtures, darts, eSports and
+rugby league each have a named, sourced reason for having no row (DL-09…DL-12); the five-picks-per-sport target is
+met for tennis and **not met for cricket** (DL-13); four sports were not surveyed (DL-14); model constants are ours,
+not the sport's (DL-15).
+
+**Coverage statement, stated plainly.** Two of the seventeen eligible sports have rows in this layer. Seven more are
+covered by the `/current/` desk, which is a separate snapshot of the same day whose counts must not be added to
+this one. The remaining eight have no row for reasons that are each named and linked. This layer does **not**
+deliver five predictions for every sport; it delivers five for tennis, zero for cricket, and an auditable reason for
+every sport in between.

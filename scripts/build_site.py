@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
+    ("daily/index.html", "Daily slate (23 Oct, new)"),
     ("current/index.html", "Current capture (22 Oct)"),
     ("final/index.html", "Consolidated desk (all 17 sports)"),
     ("update/index.html", "Update 22–28 Oct (fresh capture)"),
@@ -356,6 +357,11 @@ def build_index(matches, preds=None, flagged=None) -> str:
     )[:12]
 
     body = f"""
+<div class="notice blue"><strong>Newest capture: <a href="daily/index.html">the daily slate for 23 October 2026</a>.</strong>
+Built from pages fetched on 22 October at 21:30 UTC: eight ATP quarter-finals verified against the ATP Tour's own order of play and draws,
+nine ICC fixtures verified against the ICC, 288 originated prices and five written picks. It is a separate snapshot — its counts must not be added
+to the counts on this page.</div>
+
 <div class="notice blue"><strong>A newer consolidated desk exists.</strong> This page is the {total}-row verified layer. The
 <a href="final/index.html">consolidated desk</a> de-duplicates its five source layers into one table across all 17 eligible sports,
 regrades every pick under a single rule and carries its own flagged page. Start there; use this page as evidence.</div>

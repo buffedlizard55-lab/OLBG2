@@ -1,0 +1,167 @@
+{
+  "layer": "daily",
+  "captured_at_utc": "2026-10-22T21:30:00Z",
+  "tool": "agent fetch_page (server-rendered HTML only; no browser automation, no API keys)",
+  "sources": [
+    {
+      "name": "OLBG — global betting tips page",
+      "url": "https://www.olbg.com/betting-tips",
+      "family": "aggregator",
+      "verified": "The displayed event list: sport labels, day/time strings, market labels, tip counts and percentages. Used for discovery and for the cross-check in DL-07.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "OLBG — Tennis hub (id 3)",
+      "url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "family": "aggregator",
+      "verified": "The 16 listed tennis events and their OLBG day/time labels. No odds are printed on this page.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "OLBG — Tennis event page (Medvedev v Atmane)",
+      "url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Terence_Atmane/3?event_id=902145",
+      "family": "aggregator",
+      "verified": "The market menu for a tennis match: Win Match, Set Betting, 1st Set Winner, Games Won handicap, Total Games, with the lines OLBG displays (-3.50 and +22.50).",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "OLBG — Cricket hub (id 7)",
+      "url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "family": "aggregator",
+      "verified": "Four in-window cricket events and three outright markets; tip counts only.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "OLBG — Darts hub (id 15)",
+      "url": "https://www.olbg.com/betting-tips/Darts/15",
+      "family": "aggregator",
+      "verified": "Eight listed darts matches for 23 October plus the European Championship outright.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read (fixtures not published: DL-10)"
+    },
+    {
+      "name": "OLBG — Gaelic Football hub (id 25)",
+      "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "family": "aggregator",
+      "verified": "Five club fixtures, two inside the capture window; handicap selections with tip counts.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read (fixtures not published: DL-09)"
+    },
+    {
+      "name": "OLBG — Rugby League hub (id 10)",
+      "url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "family": "aggregator",
+      "verified": "Only three 2027 outright markets; no fixture in the capture window.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read (no fixture: DL-12)"
+    },
+    {
+      "name": "OLBG — eSports hub (id 23)",
+      "url": "https://www.olbg.com/betting-tips/eSports/23",
+      "family": "aggregator",
+      "verified": "The literal empty state: 'No tips found.'",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read (empty: DL-11)"
+    },
+    {
+      "name": "ATP Tour — Almaty Open 2026 daily schedule",
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "family": "governing body",
+      "verified": "The four Almaty quarter-finals on the Day 7 order of play, their court and their local start times.",
+      "capture_file": "data/daily/capture/atp_almaty_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "ATP Tour — Almaty Open 2026 singles draw",
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/draws",
+      "family": "governing body",
+      "verified": "Seeds (1, 3, 5, 7), qualifier markers, byes, and the Round of 32 and Round of 16 scorelines quoted in the predictions.",
+      "capture_file": "data/daily/capture/atp_almaty_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "ATP Tour — Brussels 2026 daily schedule",
+      "url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+      "family": "governing body",
+      "verified": "The four Brussels quarter-finals on the Day 7 order of play, their court and their local start times.",
+      "capture_file": "data/daily/capture/atp_brussels_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "ATP Tour — Brussels 2026 singles draw",
+      "url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+      "family": "governing body",
+      "verified": "Seeds (1, 2, 3, 5, 6), qualifier and lucky-loser markers, byes, and the Round of 32 scorelines quoted in the predictions.",
+      "capture_file": "data/daily/capture/atp_brussels_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "ATP Tour — live scores page",
+      "url": "https://www.atptour.com/en/scores/current",
+      "family": "governing body",
+      "verified": "The completed Round of 16 scorelines for Lehecka (6-4 6-2 v Collignon), Michelsen (6-3 6-4 v Goffin) and the Bublik walkover.",
+      "capture_file": "data/daily/capture/atp_brussels_2026-10-22.md",
+      "status": "read"
+    },
+    {
+      "name": "ATP Tour — PIF ATP Rankings (singles)",
+      "url": "https://www.atptour.com/en/rankings/singles",
+      "family": "governing body",
+      "verified": "The top-12 ranking points column (Sinner 10,950; Zverev 10,070; Alcaraz 5,610; Shelton 4,720; Medvedev 3,660; Cobolli 3,640). Used only to sanity-check Medvedev's No. 1 seeding; not used as a model input because the table was not read below rank 12.",
+      "capture_file": "data/daily/capture/atp_almaty_2026-10-22.md",
+      "status": "partially read"
+    },
+    {
+      "name": "ICC — fixtures and results",
+      "url": "https://www.icc-cricket.com/fixtures-results",
+      "family": "governing body",
+      "verified": "Nine upcoming fixtures with format, teams, start time and match-page link; one completed T20 (AUS v BAN) which is excluded as not upcoming.",
+      "capture_file": "data/daily/capture/icc_2026-10-22.md",
+      "status": "read (no strength input: DL-04)"
+    },
+    {
+      "name": "ICC — Afghanistan v Zimbabwe match page",
+      "url": "https://www.icc-cricket.com/matches/274659/afghanistan-vs-zimbabwe",
+      "family": "governing body",
+      "verified": "The series name 'ODI Tri-Series in UAE, 2026'. The scorecard and recent-form panels did not render.",
+      "capture_file": "data/daily/capture/icc_2026-10-22.md",
+      "status": "partially read"
+    },
+    {
+      "name": "ICC — men's T20I team rankings",
+      "url": "https://www.icc-cricket.com/rankings/team-rankings/mens/t20i",
+      "family": "governing body",
+      "verified": "Nothing: the table body rendered empty in this session.",
+      "capture_file": "data/daily/capture/icc_2026-10-22.md",
+      "status": "failed — empty table"
+    },
+    {
+      "name": "WTA — Hong Kong 2026 draws",
+      "url": "https://www.wtatennis.com/tournaments/1074/hong-kong/2026/draws",
+      "family": "governing body",
+      "verified": "Nothing: the page returned site chrome and a notifications list only, with no draw content.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "failed — no draw content"
+    },
+    {
+      "name": "PDC — matches",
+      "url": "https://www.pdc.tv/matches",
+      "family": "governing body",
+      "verified": "Nothing: a cookie-consent wall was returned instead of fixture content.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "failed — consent wall"
+    },
+    {
+      "name": "GAA — fixtures and results",
+      "url": "https://www.gaa.ie/fixtures-results",
+      "family": "governing body",
+      "verified": "The October 2026 listing contains one 24 October entry, the Shinty-Hurling International at SuperValu Páirc Uí Chaoimh (18:00). No club football fixture is listed.",
+      "capture_file": "data/daily/capture/olbg_taxonomy_and_hubs_2026-10-22.md",
+      "status": "read (no club rows: DL-09)"
+    }
+  ]
+}

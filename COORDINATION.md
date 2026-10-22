@@ -2011,11 +2011,11 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 
 | # | Task | Status | Owner | File scope (new files only) |
 |---|---|---|---|---|
-| N1 | Claim + repo recon (145 tests pass on arrival) | in progress | arena/f048d3a9-olbg2 | `COORDINATION.md` (append-only) |
+| N1 | Claim + repo recon (145 tests pass on arrival) | done | arena/f048d3a9-olbg2 | `COORDINATION.md` (append-only) |
 | N2 | Mechanical line-by-line audit of unified desk: duplicates, excluded-sport leakage, odds/probability math, confidence-gate (-250..+10000, >=70%), prediction word-count/uniqueness, source-link presence, staleness vs 2026-10-22 | unclaimed→claimed | arena/f048d3a9-olbg2 | `scripts/fresh_audit.py`, `data/fresh/audit.json`, `research/fresh-f048d3a9.md` |
 | N3 | Attempt first-hand official-source re-verification via available tools; blank/unverified anything not confirmed | unclaimed→claimed | arena/f048d3a9-olbg2 | `research/fresh-f048d3a9.md`, `data/fresh/audit.json` |
 | N4 | `/fresh/` dashboard: landing, all-rows table, picks check, flagged page, sources; deterministic builder + tests | unclaimed→claimed | arena/f048d3a9-olbg2 | `scripts/fresh_build.py`, `fresh/**`, `tests/test_fresh.py` |
-| N5 | Integration: full build/tests/link audit, PR → merge, confirm Pages live, record here | unclaimed→claimed | arena/f048d3a9-olbg2 | shared outputs at integration only |
+| N5 | Integration: full build/tests/link audit, PR → merge, confirm Pages live, record here | done (PR #94 merged f629f7d, Pages live-verified) | arena/f048d3a9-olbg2 | shared outputs at integration only |
 
 **Rules:** no existing dataset value is edited in place; discrepancies are published as flagged items with official source links and blank corrected values where unconfirmed. High = model prob ≥70% AND fair American in [-250,+10000].
 
@@ -2160,3 +2160,13 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 *This section is completed after the PR merge and Pages deploy are confirmed live. See below for PR link, merge SHA, Validate/Pages runs, and live URL checks. Until then, A6 remains “in progress”.*
 
 **Second merge-conflict log (f048d3a9, 2026-10-22):** PR #95 (session aa8e25ef) merged while PR #94 waited; re-merging `origin/main` conflicted again only at the COORDINATION.md append point. Resolved append-only retaining both records; no aa8e25ef file edited.
+
+### Publication record — `arena/f048d3a9-olbg2` (2026-10-22 UTC)
+| Item | Result |
+|---|---|
+| Pull request | [#94](https://github.com/buffedlizard55-lab/OLBG2/pull/94) — Fresh line-by-line audit `/fresh/`, FR flags, 188-row dashboard |
+| Merge | **MERGED** 2026-10-22T12:15:40Z, merge commit `f629f7df9c70f0ce16fd769a7834c1a3b5c9465d` (`gh pr merge 94 --merge`) after `validate` passed; two append-only COORDINATION.md conflicts during merge (vs PR #92/#93 dc72bac4 and PR #95 aa8e25ef) resolved retaining both sessions' records, no other files conflicted |
+| Tests at merge | Full suite OK (151+ tests incl. 6 fresh), `integration_audit.py` 0 local link errors |
+| GitHub Pages | Live-verified via browser fetch after merge: https://buffedlizard55-lab.github.io/OLBG2/fresh/flagged.html serves FR-01/02/04–11 with official source links and blank corrected values; `/fresh/index.html` + 188-row `/fresh/matches.html` published from the same tree. Sandbox curl to github.io is TLS-blocked, so curl (not used as evidence) returned 000 — the browser-fetch retrieval above is the live evidence. |
+| Open flags | FR-01/FR-02 need upstream `/verified/` owner regrade; FR-03 closed by dc72bac4's README fix; all other FR items remain **needs review** on the live flagged page and do not block anything |
+| Root nav request | Still open: root owner to add `/fresh/` ("Fresh Audit") link in `scripts/build_site.py` navigation |

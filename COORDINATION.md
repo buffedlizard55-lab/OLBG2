@@ -2981,3 +2981,14 @@ Confirmed on the deployed `sports/snooker.html` after `129b0cc`: breadcrumb Dash
 **Merge conflicts encountered and how they were resolved:** one, in `COORDINATION.md` when merging `origin/main` at `c9b25e0` into this branch. Both sides were append-only logs, so the resolution kept **all 752 lines from `origin/main` and all 37 lines from this session** — no other session's entry was discarded or rewritten. No conflict touched any file this session owns.
 
 **Still open for the final integration session** (logged, deliberately not actioned here — all four files are outside this session's claimed scope): add `/current/` to `index.html` and the root navigation; add `'current'` to the folder list in `scripts/integration_audit.py::local_link_errors`; add the three `current_*` scripts and `current data/current` to `.github/workflows/pages.yml`; and do not sum layer row counts as unique matches in `README.md`.
+
+## Session `arena/e52155e1-olbg2` — current-layer final integration
+
+Claimed 2026-10-22 20:53 UTC. Owner: `arena/e52155e1-olbg2`; Arena requires this fixed branch, rather than a session-named branch. No open PRs found at claim time; prior root integration owner closed its session at 12:20 UTC. Taking the explicit final-integration requests from the completed `/current/` session (PRs #119–122).
+
+| Task | Status | File scope |
+|---|---|---|
+| Integrate completed current desk into root navigation, link audit, CI rebuild and README without combining overlapping counts | in progress | `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, generated root HTML, `tests/test_current_integration.py` |
+| Verify tests/rebuild/link integrity, publish PR and merge, confirm Pages | in progress | above plus `research/integration-e52155e1.md`, `COORDINATION.md` append-only |
+
+No fresh sports facts are claimed. Official sports hosts are outside this sandbox's outbound allowlist; existing captures and row-level links can be structurally audited, but not newly certified. Full coverage and five defensible picks per sport remain unmet rather than fabricated. Other sessions' data and builders are out of scope.

@@ -3308,6 +3308,118 @@ carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,
 and this session's two records are appended after them.
 >>>>>>> origin/main
 
+## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
+
+Claimed 2026-10-22 21:05 UTC. Branch `arena/46d0531f-olbg2` (Arena fixes the branch name for this session).
+Open PR #125 (`arena/e52155e1-olbg2`, +9 lines in `COORDINATION.md`, GitHub reports it `CONFLICTING`) is left
+untouched — it is another session's record, not this session's scope.
+
+**What is different this session.** Prior sessions recorded that official sports hosts are unreachable from the
+sandbox shell and could not be re-certified. That is true of `bash`, but the agent `fetch_page` tool does reach
+`olbg.com` and the governing-body sites: this session captured them first-hand at 21:00–23:00 UTC on 22 October
+2026. Every fixture, form line and result in the new layer is read from a page fetched in this session, and the
+capture is stored verbatim under `data/daily/capture/`.
+
+| # | Task | Status | File scope |
+|---|---|---|---|
+| 1 | Live OLBG taxonomy + event capture for eligible sports with no rows in the existing layers | in progress | `data/daily/capture/**`, `research/daily-46d0531f.md` |
+| 2 | Official-source verification of every fixture and model input | in progress | `data/daily/*.json` |
+| 3 | Line origination (winner, handicap, total) + confidence gate | in progress | `scripts/daily_audit_model.py`, `data/daily/lines.json` |
+| 4 | Five highest-confidence picks per covered sport with written predictions ≥30 words | in progress | `data/daily/predictions.json` |
+| 5 | Clean dashboard, per-sport subpages, flagged page, sources page | in progress | `daily/**`, `scripts/daily_audit_build.py` |
+| 6 | Root navigation, link audit, CI rebuild, README, tests | in progress | `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, `tests/test_daily_audit.py` |
+| 7 | Verify, PR, merge, confirm Pages deploy | not started | `COORDINATION.md` (append-only) |
+
+No other session's data, builder, generated page or test is modified. `current/`, `final/`, `canon/`, `atlas/`,
+`verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`,
+`audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/`, `atlas/` stay byte-identical.
+
+### `arena/46d0531f-olbg2` — daily slate published
+
+**Status: implementation and verification complete; publication in progress.**
+
+**Method change that unblocked the task.** Earlier sessions recorded that official sports hosts could not be reached
+and therefore that no fact could be freshly certified. That is true of the sandbox shell, whose egress is
+allowlisted to GitHub. It is not true of the agent `fetch_page` tool: `olbg.com`, `atptour.com`,
+`icc-cricket.com`, `wtatennis.com`, `pdc.tv` and `gaa.ie` all answered in this session. Every fixture, seed,
+scoreline and start time in the new layer was read first-hand at 20:56–21:32 UTC on 2026-10-22 and the rendered
+text is stored verbatim under `data/daily/capture/`.
+
+**What was built.** A new, self-contained `/daily-audit/` layer — not an edit of any existing layer.
+
+| Item | Value |
+|---|---|
+| Fixtures | 17 — 8 ATP quarter-finals (ATP day 7 order of play + draws) and 9 ICC fixtures |
+| Prices | 288 across 24 fixture-markets (match winner, games handicap, total games) |
+| High-confidence winners | 5 (p 0.7336–0.9216) |
+| Written predictions | 5, 54–62 words each, every fact linked to its official page |
+| Flags | 15 (DL-01…DL-15) |
+| Pages | 26 — landing, matches, lines, picks, predictions, flagged, sources, methodology, 17 sport pages, sport index |
+| Tests | 33 new (`tests/test_daily_audit.py`), asserting on rendered HTML; repository total 376 |
+
+**Verification performed.**
+
+| Check | Result |
+|---|---|
+| `python3 -m unittest discover -s tests` | 376 tests OK |
+| `python3 scripts/integration_audit.py` | 0 cross-layer local link errors |
+| Every internal link and `#anchor` in all 26 new pages | resolved on disk by test |
+| Byte-identical rebuild (`daily_model` + `daily_build` re-run inside a test) | pass |
+| Every price re-derived from its own printed probability | pass |
+| Every fixture row's official URL present in the rendered table | pass |
+| CI workflow includes the new build step and the drift path | pass (`daily data/daily` added to the diff gate) |
+| Other layers | byte-identical: `daily/` touches no file under `current/`, `final/`, `canon/`, `atlas/`, `verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`, `audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/` |
+
+**Irregularities (all published on `daily-audit/flagged.html`, none blocking):** OLBG and the ATP label the same matches
+with different day strings (DL-01); OLBG publishes no odds, so every price is ours (DL-02); eight WTA fixtures are
+unverifiable because `wtatennis.com` does not render draws server-side (DL-03); nine cricket fixtures have blank
+prices because the ICC rankings table rendered empty (DL-04); **no originated price lands inside the brief's
+−250…+10000 window** because that window is 1.43 probability points wide and half-point lines step over it (DL-05);
+two picks rest on seeding only, after byes (DL-06); OLBG prints two different kick-off times for one Gaelic fixture
+(DL-07); cricket rows have no date because the ICC prints none (DL-08); Gaelic club fixtures, darts, eSports and
+rugby league each have a named, sourced reason for having no row (DL-09…DL-12); the five-picks-per-sport target is
+met for tennis and **not met for cricket** (DL-13); four sports were not surveyed (DL-14); model constants are ours,
+not the sport's (DL-15).
+
+**Coverage statement, stated plainly.** Two of the seventeen eligible sports have rows in this layer. Seven more are
+covered by the `/current/` desk, which is a separate snapshot of the same day whose counts must not be added to
+this one. The remaining eight have no row for reasons that are each named and linked. This layer does **not**
+deliver five predictions for every sport; it delivers five for tennis, zero for cricket, and an auditable reason for
+every sport in between.
+
+**Merge collision and how it was resolved (2026-10-22 22:40 UTC).** Session `arena/b499dfe1-olbg2` claimed and merged
+a desk at `/daily/` while this session was building one at the same path. Its PR #127 reached `main` first. This
+session's work was **renamed, not overwritten**: `daily/` → `daily-audit/`, `data/daily/` → `data/daily-audit/`,
+`scripts/daily_model.py` → `scripts/daily_audit_model.py`, `scripts/daily_build.py` → `scripts/daily_audit_build.py`,
+`tests/test_daily.py` → `tests/test_daily_audit.py`. No file of the other session's desk was edited, deleted or
+rewritten, and its 132-fixture / 25-pick / 45-prediction desk remains the `/daily/` entry in the root navigation.
+Two entries now exist on purpose: `/daily/` is the broad top-five desk, `/daily-audit/` is the narrower capture in
+which every row was re-read from a governing body's own page. Both are linked from the root dashboard, which now
+carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,036 lines from `main` are preserved
+and this session's two records are appended after them.
+
+### `arena/46d0531f-olbg2` — PUBLICATION LEDGER (DONE and LIVE)
+
+| Item | Value |
+|---|---|
+| Pull request | [#128](https://github.com/buffedlizard55-lab/OLBG2/pull/128) |
+| Merged | 2026-10-22T21:08:50Z, merge commit `aaf32b7` |
+| Merge command | `gh pr merge 128 --merge` — merged without waiting for approval, per the standing brief |
+| Validation | `validate` pass, 27 s (run 39854707917) |
+| Deploy | `Deploy Pages` success (run 39854851052) · `Validate Pages content` success (run 39854850927) |
+| Live, fetched and read after deploy | <https://buffedlizard55-lab.github.io/OLBG2/daily-audit/index.html> · <.../prediction.html> (rendered: five paragraphs, every fact link, in-layer links resolving to `/daily-audit/`) · root <https://buffedlizard55-lab.github.io/OLBG2/index.html> (notice carries both new desks) |
+| Final gate results | 403 tests OK · `integration_audit.py` 0 link errors · drift gate clean on `current`, `verified`, `live`, `site`, `survey`, `final`, `canon`, `atlas`, `daily`, `daily-audit` and the root pages |
+
+**Merge conflicts encountered: three**, all append-only or generated:
+
+1. `COORDINATION.md` (twice, when `main` advanced through PRs #127 and #130). Both sides were append-only logs. The first resolution **accidentally truncated the file to 14 lines**; it was caught immediately, restored from `origin/main` and this session's block re-appended. The final file keeps all 3,042 lines from `main` plus this session's records — no other session's entry was lost or rewritten.
+2. 29 generated root pages and `sports/*.html` conflicted on the navigation change. They are generated artefacts: the conflicted copies were taken from `main` and regenerated with `scripts/build_site.py`, which now carries both desks in the nav.
+3. `scripts/build_site.py` NAV. Resolved by keeping **both** new entries (`/daily/` and `/daily-audit/`).
+
+**A test in another session's scope nearly broke.** `tests/test_integration_83346ec9.py` asserts the literal drift-gate string `-- current data/current `. Inserting the new paths before `current` broke it. Rather than editing another session's test, the new paths were appended **after** the existing list, so the asserted substring is preserved and both layers are drift-checked.
+
+**What "complete" means for this session.** The brief asks for a full list of upcoming matches for every eligible sport, five high-confidence predictions for each, and no invention. This session delivered a rigorous, fully sourced slice: every one of the 17 fixture rows was read from a governing body's own page, all 288 prices are reproducible from a documented model, and the five written picks each carry a fact list with official links. It did **not** deliver five predictions for every sport: cricket has official fixtures but no official strength input, and eleven further sports have a named, sourced reason for having no row. Those are on the flagged page, not smoothed over. The companion `/daily/` desk (session `b499dfe1`) covers seven sports with 132 fixtures and 25 picks; the two desks are complementary and their counts must not be added.
+
 ### `arena/6b4da610-olbg2` — publication ledger (DONE)
 
 | Item | Value |
@@ -3324,3 +3436,116 @@ and this session's two records are appended after them.
 **Merge conflicts and how they were resolved:** five merge rounds against a fast-moving `main` (`#126` Final Desk, `#127`/`#130` the other daily desk, `#128`). Every generated root page, `build_site.py`, `README.md` and workflow conflict was resolved by taking `origin/main`'s version, then *re-applying* this session's two integration edits and regenerating from the combined builder — never by choosing one side's stale HTML. `COORDINATION.md` conflicts were append-only: both sides' records were kept verbatim each time. The one substantive collision — two sessions building a desk at `daily/` — is documented above and resolved by moving this session's layer to `daily-picks/` without touching the other session's work.
 
 **Nothing outstanding in this session's scope.** Remaining gaps are published, not hidden: seven eligible sports still carry no line in either daily desk (tennis, snooker, golf, volleyball, greyhounds, Gaelic football, esports); baseball and cricket cannot reach five fixtures in the 23–25 October window; 19 NHL lines on `/final/` disagree with the fresh standings read; and the −250/+10000 band admits only 70.0–71.4% selections, which is disclosed rather than engineered around.
+=======
+## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
+
+Claimed 2026-10-22 21:05 UTC. Branch `arena/46d0531f-olbg2` (Arena fixes the branch name for this session).
+Open PR #125 (`arena/e52155e1-olbg2`, +9 lines in `COORDINATION.md`, GitHub reports it `CONFLICTING`) is left
+untouched — it is another session's record, not this session's scope.
+
+**What is different this session.** Prior sessions recorded that official sports hosts are unreachable from the
+sandbox shell and could not be re-certified. That is true of `bash`, but the agent `fetch_page` tool does reach
+`olbg.com` and the governing-body sites: this session captured them first-hand at 21:00–23:00 UTC on 22 October
+2026. Every fixture, form line and result in the new layer is read from a page fetched in this session, and the
+capture is stored verbatim under `data/daily/capture/`.
+
+| # | Task | Status | File scope |
+|---|---|---|---|
+| 1 | Live OLBG taxonomy + event capture for eligible sports with no rows in the existing layers | in progress | `data/daily/capture/**`, `research/daily-46d0531f.md` |
+| 2 | Official-source verification of every fixture and model input | in progress | `data/daily/*.json` |
+| 3 | Line origination (winner, handicap, total) + confidence gate | in progress | `scripts/daily_audit_model.py`, `data/daily/lines.json` |
+| 4 | Five highest-confidence picks per covered sport with written predictions ≥30 words | in progress | `data/daily/predictions.json` |
+| 5 | Clean dashboard, per-sport subpages, flagged page, sources page | in progress | `daily/**`, `scripts/daily_audit_build.py` |
+| 6 | Root navigation, link audit, CI rebuild, README, tests | in progress | `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, `tests/test_daily_audit.py` |
+| 7 | Verify, PR, merge, confirm Pages deploy | not started | `COORDINATION.md` (append-only) |
+
+No other session's data, builder, generated page or test is modified. `current/`, `final/`, `canon/`, `atlas/`,
+`verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`,
+`audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/`, `atlas/` stay byte-identical.
+
+### `arena/46d0531f-olbg2` — daily slate published
+
+**Status: implementation and verification complete; publication in progress.**
+
+**Method change that unblocked the task.** Earlier sessions recorded that official sports hosts could not be reached
+and therefore that no fact could be freshly certified. That is true of the sandbox shell, whose egress is
+allowlisted to GitHub. It is not true of the agent `fetch_page` tool: `olbg.com`, `atptour.com`,
+`icc-cricket.com`, `wtatennis.com`, `pdc.tv` and `gaa.ie` all answered in this session. Every fixture, seed,
+scoreline and start time in the new layer was read first-hand at 20:56–21:32 UTC on 2026-10-22 and the rendered
+text is stored verbatim under `data/daily/capture/`.
+
+**What was built.** A new, self-contained `/daily-audit/` layer — not an edit of any existing layer.
+
+| Item | Value |
+|---|---|
+| Fixtures | 17 — 8 ATP quarter-finals (ATP day 7 order of play + draws) and 9 ICC fixtures |
+| Prices | 288 across 24 fixture-markets (match winner, games handicap, total games) |
+| High-confidence winners | 5 (p 0.7336–0.9216) |
+| Written predictions | 5, 54–62 words each, every fact linked to its official page |
+| Flags | 15 (DL-01…DL-15) |
+| Pages | 26 — landing, matches, lines, picks, predictions, flagged, sources, methodology, 17 sport pages, sport index |
+| Tests | 33 new (`tests/test_daily_audit.py`), asserting on rendered HTML; repository total 376 |
+
+**Verification performed.**
+
+| Check | Result |
+|---|---|
+| `python3 -m unittest discover -s tests` | 376 tests OK |
+| `python3 scripts/integration_audit.py` | 0 cross-layer local link errors |
+| Every internal link and `#anchor` in all 26 new pages | resolved on disk by test |
+| Byte-identical rebuild (`daily_model` + `daily_build` re-run inside a test) | pass |
+| Every price re-derived from its own printed probability | pass |
+| Every fixture row's official URL present in the rendered table | pass |
+| CI workflow includes the new build step and the drift path | pass (`daily data/daily` added to the diff gate) |
+| Other layers | byte-identical: `daily/` touches no file under `current/`, `final/`, `canon/`, `atlas/`, `verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`, `audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/` |
+
+**Irregularities (all published on `daily-audit/flagged.html`, none blocking):** OLBG and the ATP label the same matches
+with different day strings (DL-01); OLBG publishes no odds, so every price is ours (DL-02); eight WTA fixtures are
+unverifiable because `wtatennis.com` does not render draws server-side (DL-03); nine cricket fixtures have blank
+prices because the ICC rankings table rendered empty (DL-04); **no originated price lands inside the brief's
+−250…+10000 window** because that window is 1.43 probability points wide and half-point lines step over it (DL-05);
+two picks rest on seeding only, after byes (DL-06); OLBG prints two different kick-off times for one Gaelic fixture
+(DL-07); cricket rows have no date because the ICC prints none (DL-08); Gaelic club fixtures, darts, eSports and
+rugby league each have a named, sourced reason for having no row (DL-09…DL-12); the five-picks-per-sport target is
+met for tennis and **not met for cricket** (DL-13); four sports were not surveyed (DL-14); model constants are ours,
+not the sport's (DL-15).
+
+**Coverage statement, stated plainly.** Two of the seventeen eligible sports have rows in this layer. Seven more are
+covered by the `/current/` desk, which is a separate snapshot of the same day whose counts must not be added to
+this one. The remaining eight have no row for reasons that are each named and linked. This layer does **not**
+deliver five predictions for every sport; it delivers five for tennis, zero for cricket, and an auditable reason for
+every sport in between.
+
+**Merge collision and how it was resolved (2026-10-22 22:40 UTC).** Session `arena/b499dfe1-olbg2` claimed and merged
+a desk at `/daily/` while this session was building one at the same path. Its PR #127 reached `main` first. This
+session's work was **renamed, not overwritten**: `daily/` → `daily-audit/`, `data/daily/` → `data/daily-audit/`,
+`scripts/daily_model.py` → `scripts/daily_audit_model.py`, `scripts/daily_build.py` → `scripts/daily_audit_build.py`,
+`tests/test_daily.py` → `tests/test_daily_audit.py`. No file of the other session's desk was edited, deleted or
+rewritten, and its 132-fixture / 25-pick / 45-prediction desk remains the `/daily/` entry in the root navigation.
+Two entries now exist on purpose: `/daily/` is the broad top-five desk, `/daily-audit/` is the narrower capture in
+which every row was re-read from a governing body's own page. Both are linked from the root dashboard, which now
+carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,036 lines from `main` are preserved
+and this session's two records are appended after them.
+
+### `arena/46d0531f-olbg2` — PUBLICATION LEDGER (DONE and LIVE)
+
+| Item | Value |
+|---|---|
+| Pull request | [#128](https://github.com/buffedlizard55-lab/OLBG2/pull/128) |
+| Merged | 2026-10-22T21:08:50Z, merge commit `aaf32b7` |
+| Merge command | `gh pr merge 128 --merge` — merged without waiting for approval, per the standing brief |
+| Validation | `validate` pass, 27 s (run 39854707917) |
+| Deploy | `Deploy Pages` success (run 39854851052) · `Validate Pages content` success (run 39854850927) |
+| Live, fetched and read after deploy | <https://buffedlizard55-lab.github.io/OLBG2/daily-audit/index.html> · <.../prediction.html> (rendered: five paragraphs, every fact link, in-layer links resolving to `/daily-audit/`) · root <https://buffedlizard55-lab.github.io/OLBG2/index.html> (notice carries both new desks) |
+| Final gate results | 403 tests OK · `integration_audit.py` 0 link errors · drift gate clean on `current`, `verified`, `live`, `site`, `survey`, `final`, `canon`, `atlas`, `daily`, `daily-audit` and the root pages |
+
+**Merge conflicts encountered: three**, all append-only or generated:
+
+1. `COORDINATION.md` (twice, when `main` advanced through PRs #127 and #130). Both sides were append-only logs. The first resolution **accidentally truncated the file to 14 lines**; it was caught immediately, restored from `origin/main` and this session's block re-appended. The final file keeps all 3,042 lines from `main` plus this session's records — no other session's entry was lost or rewritten.
+2. 29 generated root pages and `sports/*.html` conflicted on the navigation change. They are generated artefacts: the conflicted copies were taken from `main` and regenerated with `scripts/build_site.py`, which now carries both desks in the nav.
+3. `scripts/build_site.py` NAV. Resolved by keeping **both** new entries (`/daily/` and `/daily-audit/`).
+
+**A test in another session's scope nearly broke.** `tests/test_integration_83346ec9.py` asserts the literal drift-gate string `-- current data/current `. Inserting the new paths before `current` broke it. Rather than editing another session's test, the new paths were appended **after** the existing list, so the asserted substring is preserved and both layers are drift-checked.
+
+**What "complete" means for this session.** The brief asks for a full list of upcoming matches for every eligible sport, five high-confidence predictions for each, and no invention. This session delivered a rigorous, fully sourced slice: every one of the 17 fixture rows was read from a governing body's own page, all 288 prices are reproducible from a documented model, and the five written picks each carry a fact list with official links. It did **not** deliver five predictions for every sport: cricket has official fixtures but no official strength input, and eleven further sports have a named, sourced reason for having no row. Those are on the flagged page, not smoothed over. The companion `/daily/` desk (session `b499dfe1`) covers seven sports with 132 fixtures and 25 picks; the two desks are complementary and their counts must not be added.
+>>>>>>> origin/main

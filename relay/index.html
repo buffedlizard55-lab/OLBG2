@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relay Desk — OLBG fixtures and originated lines</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap bar">
+<a class="brand" href="index.html"><span>OLBG Relay Desk</span>
+<small>fresh official capture &middot; window 23&ndash;29 October 2026 &middot; session arena/103d996c-olbg2</small></a>
+<nav class="nav" aria-label="Primary navigation"><a href="index.html" aria-current="page">Dashboard</a><a href="matches.html">All Fixtures</a><a href="lines.html">Originated Lines</a><a href="picks.html">Picks &amp; Confidence</a><a href="predictions.html">High-Confidence Predictions</a><a href="inputs.html">Model Inputs</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Source Register</a><a href="methodology.html">Methodology</a><a href="sports/index.html">By Sport</a></nav>
+</div></header>
+<div class="cross"><div class="wrap">
+<strong>Cross-layer:</strong>
+<a href="../index.html">Root dashboard</a> &middot;
+<a href="../current/index.html">Current capture desk</a> &middot;
+<a href="../verified/index.html">Verified desk</a> &middot;
+<a href="../live/index.html">Live slate</a> &middot;
+<a href="../flagged.html">Root review queue</a>
+</div></div>
+<main class="wrap">
+
+<p class="eyebrow">Session arena/103d996c-olbg2 &middot; captured 2026-10-22 20:55&ndash;21:20 UTC</p>
+<h1>Relay multi-sport fixture desk</h1>
+<p class="lede">Upcoming fixtures for the eligible OLBG sports for the window
+<strong>23&ndash;29 October 2026</strong>, with originated lines on every fixture that has an
+official strength input. Nine rows were read first-hand from official endpoints in this
+session (evidence&nbsp;A); 29 rows carry over verbatim from the completed
+<a href="../current/index.html">/current/</a> capture of the same day (evidence&nbsp;B) because
+this session's fetch proxy failed on those endpoints &mdash; every row says which.</p>
+<div class="cards">
+<div class="card"><b>38</b><span>fixtures</span></div>
+<div class="card"><b>1310</b><span>originated prices</span></div>
+<div class="card"><b>20</b><span>in-band high-confidence picks</span></div>
+<div class="card"><b>20</b><span>written predictions</span></div>
+<div class="card"><b>6</b><span>sports with rows / 17 in scope</span></div>
+<div class="card"><b>17</b><span>disclosure flags</span></div>
+</div>
+<h2>Sports coverage</h2>
+<table><thead><tr><th>Sport</th><th>Status this window</th></tr></thead><tbody><tr><td><strong>Ice Hockey</strong></td><td>14 fixtures, 5 in-band high-confidence picks &mdash; <a href="sports/ice-hockey.html">sport page</a></td></tr><tr><td><strong>Basketball</strong></td><td>3 fixtures, 3 in-band high-confidence picks &mdash; <a href="sports/basketball.html">sport page</a></td></tr><tr><td><strong>Rugby Union</strong></td><td>8 fixtures, 6 in-band high-confidence picks &mdash; <a href="sports/rugby-union.html">sport page</a></td></tr><tr><td><strong>Handball</strong></td><td>10 fixtures, 6 in-band high-confidence picks &mdash; <a href="sports/handball.html">sport page</a></td></tr><tr><td><strong>Baseball</strong></td><td>2 fixtures, 0 in-band high-confidence picks &mdash; <a href="sports/baseball.html">sport page</a></td></tr><tr><td><strong>Snooker</strong></td><td>zero rows this window &mdash; <a href="sports/snooker.html">reason on sport page</a></td></tr><tr><td><strong>Tennis</strong></td><td>zero rows this window &mdash; <a href="sports/tennis.html">reason on sport page</a></td></tr><tr><td><strong>Darts</strong></td><td>zero rows this window &mdash; <a href="sports/darts.html">reason on sport page</a></td></tr><tr><td><strong>Cricket</strong></td><td>zero rows this window &mdash; <a href="sports/cricket.html">reason on sport page</a></td></tr><tr><td><strong>Motor Racing</strong></td><td>1 fixtures, 0 in-band high-confidence picks &mdash; <a href="sports/motor-racing.html">sport page</a></td></tr><tr><td><strong>Golf</strong></td><td>zero rows this window &mdash; <a href="sports/golf.html">reason on sport page</a></td></tr><tr><td><strong>Rugby League</strong></td><td>zero rows this window &mdash; <a href="sports/rugby-league.html">reason on sport page</a></td></tr><tr><td><strong>Aussie Rules</strong></td><td>zero rows this window &mdash; <a href="sports/aussie-rules.html">reason on sport page</a></td></tr><tr><td><strong>Volleyball</strong></td><td>zero rows this window &mdash; <a href="sports/volleyball.html">reason on sport page</a></td></tr><tr><td><strong>Gaelic Football</strong></td><td>zero rows this window &mdash; <a href="sports/gaelic-football.html">reason on sport page</a></td></tr><tr><td><strong>Greyhounds</strong></td><td>zero rows this window &mdash; <a href="sports/greyhounds.html">reason on sport page</a></td></tr><tr><td><strong>eSports</strong></td><td>zero rows this window &mdash; <a href="sports/esports.html">reason on sport page</a></td></tr></tbody></table>
+<h2>How to read this desk</h2>
+<p>High confidence means model probability &ge; 0.70 <em>and</em> a fair no-vig American price
+inside &minus;250&hellip;+10000, searched across every originated market and both sides.
+Nothing here reads a bookmaker price. Values that could not be confirmed are blank and flagged
+on the <a href="flagged.html">Flagged for Review</a> page. Five-picks-per-sport is met for
+Rugby Union (6), Handball (6) and Ice Hockey (5); the shortfalls and the ten zero-row sports
+are disclosed, never papered over.</p>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>OLBG Relay Desk &middot; generated by <code>scripts/relay_build.py</code> from
+<code>data/relay/*.json</code> &middot; every row links an official source &middot;
+unverified values are blank, never inferred &middot;
+<a href="flagged.html">Flagged for Review</a></p>
+</div></footer>
+</body>
+</html>

@@ -1404,7 +1404,7 @@ The picks introduction now handles an empty outside-band category without implyi
 | V2 | Independent line-by-line verification of the published rows and the 14 featured predictions' factual claims, re-fetched from the governing body in this session | done — 6 source families re-read (NHL, URC, Top 14, Pro D2, EuroLeague, EHF); every compared figure matched except one corrected form sentence; the rows NOT re-read are listed in VF-23 | `arena/072755db-olbg2` | `research/verification-072755db.md` |
 | V3 | Repair the defects the verification found, and close only the gaps an official source supports | done — Béziers form corrected, confidence grading unified, price rounding fixed, `source_scope` emitted, capture badges corrected. **Not done:** no new fixtures were added; tennis, Aussie Rules, eSports and Greyhounds still carry zero rows, and 9 of 16 WST players still lack a published prize value, so the 8 snooker rows stay blank (VF-03). | `arena/072755db-olbg2` | `scripts/verified_seed.py`, `scripts/verified_model.py`, `scripts/build_site.py`, `data/verified/**`, `tests/test_verified_pipeline.py` |
 | V4 | Publish verification results on the site (flagged/verification pages) and re-run every generator | done — VF-23…VF-26 published, 26 review items, 85 fixture-scoped / 34 competition-scoped URLs, `captured 22 Oct` badges, 63 tests green, 0 link errors | `arena/072755db-olbg2` | `scripts/build_site.py`, root pages, `verified/**` |
-| V5 | Final integration: PR → merge → Pages deploy confirmation → record here | pending | `arena/072755db-olbg2` | shared outputs |
+| V5 | Final integration: PR → merge → Pages deploy confirmation → record here | done — PR #62 merged `f8852c2`; Deploy Pages run `39714361125` success; Pages status `built`; live pages re-fetched | `arena/072755db-olbg2` | shared outputs |
 
 **File-scope overlap disclosure.** V3 necessarily touches `data/verified/**` and `scripts/verified_model.py`, which are also in stale PR #54's diff. #54's task (regrading confidence labels under the odds window) is **not** re-claimed here; this session only adds/repairs fixture, line and narrative coverage. If #54 is ever merged it must be rebased over this branch's data.
 
@@ -1427,3 +1427,30 @@ The picks introduction now handles an empty outside-band category without implyi
 
 - **#61** (`arena/9a2928c8-olbg2`, opened 02:51Z, one minute after this claim, "Final line-by-line verification, price-band polish & OLBG re-audit"). Overlapping scope. This session did not take it over and did not revert it; if it merges it must be rebased over this branch's `data/verified/**` and `scripts/build_site.py`, and its rows must be re-verified against the corrected figures above.
 - **#54** (`arena/1bb45081-olbg2`, 01:58Z, no commits since). Stale parallel claim, left untouched.
+
+
+## Publish record — session `arena/072755db-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#62](https://github.com/buffedlizard55-lab/OLBG2/pull/62) (`arena/072755db-olbg2` → `main`) |
+| Merge result | **Merged** as `f8852c2` at 2026-10-22T02:59:14Z (self-merge, no approval wait) |
+| CI on the PR | `Validate Pages content` run `39713958493` and `39714304607` — **success** (63 tests, all generators byte-stable, 0 link errors) |
+| CI on `main` | `Validate Pages content` run `39714361120` — success |
+| GitHub Pages | `Deploy Pages` run `39714361125` — success; `gh api …/pages` → `status: built` |
+| Live URLs re-fetched | `/` (119 rows, 93 originated, 14 band picks, 14 predictions, 6 source families, 26 review items); `/picks.html` (Béziers sentence corrected, −238 price consistent); `/flagged.html` (VF-23…VF-26 present with sources) |
+| Merge conflicts | Two, both in `COORDINATION.md` and both resolved additively — PR #60 (`f503c50`) and PR #61 (`317647c`, session `9a2928c8`) merged into this branch with **both** sessions' records kept. Their two research documents are preserved. No data file from another session was overwritten: the merged `data/verified/**` carries this session's corrected figures because #61 explicitly changed no data file. |
+
+### Final state
+
+| Item | Value |
+|---|---|
+| Rows | 119 (93 originated, 26 blank with a reason) |
+| Sports | 13 with rows; Aussie Rules, eSports, Tennis and Greyhounds carry zero rows with the reason published |
+| Confidence | 18 high / 26 medium / 49 low (high = ≥72%, or a band selection ≥70% inside −250…+10000) |
+| Predictions | 14, all in band, 61–75 words, each with sourced facts |
+| Review items | 26 (VF-01…VF-26); 4 added by this session |
+| Source scope | 85 fixture-scoped URLs / 34 competition-scoped |
+| Tests | 63 passing |
+
+**What remains genuinely open** (all published, none hidden): no player-level fact in any write-up (VF-24); rows outside the six re-read source families were not re-checked today (VF-23); 9 of 16 WST players still lack a published prize value so the 8 snooker rows stay blank (VF-03); tennis/Aussie Rules/eSports/Greyhounds have no active fixtures or no capturable feed (VF-09, VF-20, VF-22); PDC ladder and ICC dates remain as captured (VF-16, VF-17, VF-21).

@@ -2323,7 +2323,7 @@ The workflow is currently owned by merged scopes; the request is recorded rather
 | U2 | Audit keyboard/screen-reader usability of `/portal/` search/filter controls, result counts, and table navigation without asserting new sports facts | done | `arena/cf53958f-olbg2` | `research/accessibility-cf53958f.md` |
 | U3 | Improve control names, focus visibility, and accessible result announcements in the portal generator/assets; regenerate only `/portal/` pages | done | `arena/cf53958f-olbg2` | `scripts/portal_build.py`, `portal/assets/app.js`, `portal/assets/style.css`, generated `portal/**` |
 | U4 | Add regression coverage for accessible controls and verify deterministic portal build, row-source links, internal links, and repository tests | done (190 tests after rebase) | `arena/cf53958f-olbg2` | `tests/test_portal_accessibility_cf53958f.py` |
-| U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | in progress | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
+| U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | in progress (latest-main rebase + 190 tests passed; PR pending) | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
 
 **Scope boundary:** this is a user-interface/accessibility improvement to the existing portal, not another match-data layer or factual audit. Every existing row, source URL, line, pick, and flagged item remains unchanged. If another live session claims `/portal/**` or its builder before implementation/integration, stop and log a cross-scope request rather than editing it.
 
@@ -2385,3 +2385,14 @@ Applying the post-rebase verification record after `cdbcf03` conflicted only at 
 ### Rebase conflict resolution — `arena/cf53958f-olbg2` (test-record refresh, 2026-10-22 UTC)
 
 Applying the earlier test-record commit onto `6077bd7` conflicted only at the append-only coordination end. Retained the reconcile publication record, the implementation-refresh note, and the prior `d2a1048` verification history; the complete-suite verification is rerun on the current mainline before merging.
+
+### Latest pre-publication verification — `arena/cf53958f-olbg2` (2026-10-22 UTC)
+
+Main advanced to `cdbcf03` (merges PRs #100 and #101) while preparing the push, so the branch was rebased again, resolving only append-point conflicts in this board. On the final rebased tree: `python3 -m py_compile scripts/portal_build.py`, portal build, and `scripts/portal_verify.py` passed; `python3 -m unittest discover -s tests -q` passed **190 tests**; `git diff --check` passed; no `data/portal` file changed. Portal verification remains 26 HTML pages, 707 official-source-linked rows, 1,562 checked internal links/fragments, 17 sports, 220 originated rows, 24 deliberately blank rows, 34 picks, and 38 flags.
+
+**Push irregularity:** the first normal push was correctly rejected as non-fast-forward because the earlier pushed session branch still pointed at `7fd9226`, while the required mainline rebase rewrote the session's claim commit. A fresh fetch confirmed the remote branch tip was still only that prior claim (no unrecognized implementation commits). The retry will use an explicit `--force-with-lease` expectation for `7fd9226`; it will not overwrite an intervening branch update. U5 remains open until PR checks, merge, and Pages deploy are verified.
+
+
+### Rebase conflict resolution — `arena/cf53958f-olbg2` (pre-publication record, 2026-10-22 UTC)
+
+Applying the final pre-publication note onto `6077bd7` conflicted only in `COORDINATION.md`. Retained both the prior verification-history log and this session's latest pre-publication and push records; no upstream reconciliation or publication record was removed.

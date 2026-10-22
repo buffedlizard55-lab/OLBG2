@@ -1,0 +1,304 @@
+{
+  "captured_at": "2026-10-22T05:45:00Z",
+  "session": "arena/d81930c3-olbg2",
+  "eligible_count": 17,
+  "excluded_hub_count": 11,
+  "eligible_sports": [
+    {
+      "slug": "aussie-rules",
+      "name": "Aussie Rules",
+      "olbg_id": 22,
+      "olbg_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22",
+      "olbg_status": "Live hub HTTP 200 ('No tips found'); active NAB AFLW Round 11 verified via afl.com.au",
+      "governing_body": "Australian Football League (AFL / NAB AFLW)",
+      "official_url": "https://www.afl.com.au/aflw",
+      "competitions": [
+        "2026 NAB AFLW Premiership — Round 11"
+      ]
+    },
+    {
+      "slug": "baseball",
+      "name": "Baseball",
+      "olbg_id": 12,
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "olbg_status": "Live hub HTTP 200 (2026 World Series Game 1 event_id=160789)",
+      "governing_body": "Major League Baseball (MLB StatsAPI)",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule/postseason?season=2026",
+      "competitions": [
+        "2026 MLB World Series — Tampa Bay Rays vs Milwaukee Brewers"
+      ]
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball",
+      "olbg_id": 4,
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "olbg_status": "Live hub HTTP 200 (NBA Opening Week + EuroLeague Round 7)",
+      "governing_body": "National Basketball Association (NBA) & Euroleague Basketball",
+      "official_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+      "competitions": [
+        "2026-27 NBA Regular Season (Opening Week)",
+        "2026-27 EuroLeague Regular Season — Round 7"
+      ]
+    },
+    {
+      "slug": "cricket",
+      "name": "Cricket",
+      "olbg_id": 7,
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "olbg_status": "Live hub HTTP 200 (AFG v ZIM 188831, CSA Pro20 188811 & 188825 + 5 futures)",
+      "governing_body": "International Cricket Council (ICC) & Cricket South Africa (CSA)",
+      "official_url": "https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026",
+      "competitions": [
+        "New Zealand vs India T20I Series",
+        "Pakistan ODI Tri-Series",
+        "UAE ODI Tri-Series Final",
+        "CSA YesPlay Pro20 Cup"
+      ]
+    },
+    {
+      "slug": "darts",
+      "name": "Darts",
+      "olbg_id": 15,
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15",
+      "olbg_status": "Live hub HTTP 200 (16 PDC European Championship R1 ties 32322..32337 + 2 outrights)",
+      "governing_body": "Professional Darts Corporation (PDC)",
+      "official_url": "https://www.pdc.tv/order-of-merit/pdc-order-merit",
+      "competitions": [
+        "2026 Machineseeker European Championship — Round 1 (Dortmund)"
+      ]
+    },
+    {
+      "slug": "esports",
+      "name": "Esports",
+      "olbg_id": 23,
+      "olbg_url": "https://www.olbg.com/betting-tips/eSports/23",
+      "olbg_status": "Live hub HTTP 200 ('No tips found'); active LoL Worlds Swiss Stage R1 verified via lolesports.com",
+      "governing_body": "Riot Games / LoL Esports",
+      "official_url": "https://lolesports.com/en-US/leagues/first_stand,lck,lcs,msi,worlds",
+      "competitions": [
+        "2026 League of Legends World Championship — Swiss Stage Round 1 (Allen, TX)"
+      ]
+    },
+    {
+      "slug": "gaelic-football",
+      "name": "Gaelic Football",
+      "olbg_id": 25,
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "olbg_status": "Live hub HTTP 200 (5 Senior Club County Finals 3530..3537 + All-Ireland 2027 3327)",
+      "governing_body": "Gaelic Athletic Association (GAA / Munster & Connacht County Boards)",
+      "official_url": "https://munster.gaa.ie/fixtures/club-championships-2026/",
+      "competitions": [
+        "2026 GAA County Senior Football Championship Finals (Cork, Galway, Waterford, Limerick)"
+      ]
+    },
+    {
+      "slug": "golf",
+      "name": "Golf",
+      "olbg_id": 5,
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/5",
+      "olbg_status": "Live hub HTTP 200 (Butterfield Bermuda 101904 & Stifel Charity Classic 101903)",
+      "governing_body": "PGA TOUR, PGA TOUR Champions & DP World Tour",
+      "official_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528",
+      "competitions": [
+        "PGA TOUR Butterfield Bermuda Championship",
+        "DP World Tour Genesis Championship (126-player field)",
+        "PGA TOUR Champions Stifel Charity Classic"
+      ]
+    },
+    {
+      "slug": "greyhounds",
+      "name": "Greyhounds",
+      "olbg_id": 28,
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "olbg_status": "Live hub HTTP 200 (4 BAGS traps 689570..689584); Cat-1 Coral 100 Champion Stakes Final via gbgb.org.uk",
+      "governing_body": "Greyhound Board of Great Britain (GBGB)",
+      "official_url": "https://www.gbgb.org.uk/racing/results/",
+      "competitions": [
+        "GBGB Category One — Coral 100 Champion Stakes Final (Romford 575m)"
+      ]
+    },
+    {
+      "slug": "handball",
+      "name": "Handball",
+      "olbg_id": 20,
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "olbg_status": "Live hub HTTP 200 (5 EHF Men's Champions League Round 5 ties + domestic leagues)",
+      "governing_body": "European Handball Federation (EHF)",
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "competitions": [
+        "2026-27 Machineseeker EHF Men's Champions League — Group Phase Round 5"
+      ]
+    },
+    {
+      "slug": "ice-hockey",
+      "name": "Ice Hockey",
+      "olbg_id": 13,
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "olbg_status": "Live hub HTTP 200 (12 NHL games + 7 Swedish SHL games 199899..199906 + Liiga 199912)",
+      "governing_body": "National Hockey League (NHL) & Svenska Ishockeyförbundet (SHL)",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "competitions": [
+        "2026-27 NHL Regular Season",
+        "2026-27 Swedish Hockey League (SHL)"
+      ]
+    },
+    {
+      "slug": "motor-racing",
+      "name": "Motor Racing",
+      "olbg_id": 14,
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "olbg_status": "Live hub HTTP 200 (US Grand Prix 913 + 2026 WDC 828 + 2027 WDC 912)",
+      "governing_body": "FIA / Formula One World Championship Limited",
+      "official_url": "https://www.formula1.com/en/results/2026/races/1297/united-states",
+      "competitions": [
+        "2026 FIA Formula 1 World Championship — Round 18 United States Grand Prix (COTA)"
+      ]
+    },
+    {
+      "slug": "rugby-league",
+      "name": "Rugby League",
+      "olbg_id": 10,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "olbg_status": "Live hub HTTP 200 (3× 2027 futures); active RLWC 2026 Round 2 verified via rlwc2026.com & nrl.com",
+      "governing_body": "International Rugby League (IRL) & National Rugby League (NRL / RLWC 2026)",
+      "official_url": "https://www.rlwc2026.com/",
+      "competitions": [
+        "2026 Men's Rugby League World Cup — Round 2"
+      ]
+    },
+    {
+      "slug": "rugby-union",
+      "name": "Rugby Union",
+      "olbg_id": 9,
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "olbg_status": "Live hub HTTP 200 (Top 14 Round 7, Pro D2 Round 8 & URC Round 4)",
+      "governing_body": "United Rugby Championship (URC) & Ligue Nationale de Rugby (LNR Top 14 / Pro D2)",
+      "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/",
+      "competitions": [
+        "2026-27 BKT United Rugby Championship — Round 4",
+        "2026-27 Top 14 — J7",
+        "2026-27 Pro D2 — J8"
+      ]
+    },
+    {
+      "slug": "snooker",
+      "name": "Snooker",
+      "olbg_id": 8,
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "olbg_status": "Live hub HTTP 200 (8 WST Northern Ireland Open Round of 16 ties)",
+      "governing_body": "World Snooker Tour (WST)",
+      "official_url": "https://www.wst.tv/tournaments/northern-ireland-open-2026/",
+      "competitions": [
+        "2026 BetVictor Northern Ireland Open — Round 3 (Last 16, Belfast)"
+      ]
+    },
+    {
+      "slug": "tennis",
+      "name": "Tennis",
+      "olbg_id": 3,
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "olbg_status": "Live hub HTTP 200 (ATP Almaty, Brussels, Lyon & WTA Ningbo, Osaka 902069..902133)",
+      "governing_body": "Association of Tennis Professionals (ATP) & Women's Tennis Association (WTA)",
+      "official_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+      "competitions": [
+        "ATP 250 Almaty Open",
+        "ATP 250 European Open (Brussels)",
+        "ATP 250 Grand Prix Auvergne-Rhône-Alpes (Lyon)",
+        "WTA 500 BNB Ningbo Open",
+        "WTA 250 Kinoshita Group Japan Open (Osaka)"
+      ]
+    },
+    {
+      "slug": "volleyball",
+      "name": "Volleyball",
+      "olbg_id": 21,
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "olbg_status": "Live hub HTTP 200 (Italian SuperLega R2 + Polish PlusLiga + Tauron Liga)",
+      "governing_body": "Lega Pallavolo Serie A (SuperLega Credem Banca) & Polska Liga Siatkówki",
+      "official_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+      "competitions": [
+        "2026-27 Italian SuperLega Credem Banca — Round 2"
+      ]
+    }
+  ],
+  "excluded_hubs": [
+    {
+      "olbg_id": 1,
+      "olbg_path": "/betting-tips/Football/1",
+      "rule_term": "soccer / football",
+      "http_status": 200,
+      "note": "Association football — excluded"
+    },
+    {
+      "olbg_id": 2,
+      "olbg_path": "/betting-tips/Horse_Racing/2",
+      "rule_term": "horse racing",
+      "http_status": 200,
+      "note": "UK & Ireland horse racing — excluded"
+    },
+    {
+      "olbg_id": 6,
+      "olbg_path": "/betting-tips/Specials/6",
+      "rule_term": "specials",
+      "http_status": 200,
+      "note": "Legacy specials endpoint — excluded"
+    },
+    {
+      "olbg_id": 11,
+      "olbg_path": "/betting-tips/American_Football/11",
+      "rule_term": "american football",
+      "http_status": 200,
+      "note": "NFL / NCAAF — excluded"
+    },
+    {
+      "olbg_id": 16,
+      "olbg_path": "/betting-tips/Boxing/16",
+      "rule_term": "boxing",
+      "http_status": 200,
+      "note": "Professional boxing — excluded"
+    },
+    {
+      "olbg_id": 17,
+      "olbg_path": "/betting-tips/Cycling/17",
+      "rule_term": "cycling",
+      "http_status": 200,
+      "note": "UCI road/track cycling — excluded"
+    },
+    {
+      "olbg_id": 18,
+      "olbg_path": "/betting-tips/Entertainment/18",
+      "rule_term": "specials",
+      "http_status": 200,
+      "note": "TV/award novelty specials — excluded"
+    },
+    {
+      "olbg_id": 19,
+      "olbg_path": "/betting-tips/Politics/19",
+      "rule_term": "specials",
+      "http_status": 200,
+      "note": "Election novelty specials — excluded"
+    },
+    {
+      "olbg_id": 24,
+      "olbg_path": "/betting-tips/Specials/24",
+      "rule_term": "specials",
+      "http_status": 200,
+      "note": "General specials hub — excluded"
+    },
+    {
+      "olbg_id": 26,
+      "olbg_path": "/betting-tips/Hurling/26",
+      "rule_term": "hurling",
+      "http_status": 200,
+      "note": "Live GAA Hurling hub (714, 675) — excluded"
+    },
+    {
+      "olbg_id": 27,
+      "olbg_path": "/betting-tips/UFC_MMA/27",
+      "rule_term": "ufc / mma",
+      "http_status": 200,
+      "note": "Mixed martial arts — excluded"
+    }
+  ]
+}

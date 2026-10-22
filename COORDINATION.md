@@ -2788,8 +2788,10 @@ predictions page rendered `high≥70% but priced shorter than -250` as one run o
   regenerates and re-verifies the whole /update/ layer deterministically.
 
 **Repository integrity note (this commit).** `COORDINATION.md` on `main` (from PR #114) was committed with an
-unresolved conflict block: a `<<<<<<< HEAD` / `=======` / `>>>>>>>` pair still wrapped this session's
-rebase note and its `/atlas/` summary. Nothing was lost — both sides were preserved — but the file was
+unresolved conflict block: a merge-marker triple (the seven-chevron `HEAD` marker, the seven-equals
+separator and the closing chevron marker) still wrapped this session's rebase note and its `/atlas/`
+summary. The literal marker strings are deliberately not repeated in this note so that a future session
+grepping for them does not get a false positive. Nothing was lost — both sides were preserved — but the file was
 invalid as a ledger. This commit collapses the markers by keeping **both** sides in order (the rebase note,
 then the summary block). No other session's text was edited. Flagged so the owner of that merge can see it.
 
@@ -2816,3 +2818,10 @@ rendered HTML. Read the deployed page back, not just the build log.
 
 **Live, re-fetched after the final deploy:** `atlas/verification.html` shows 210 rows compared / 174 confirmed /
 17 mismatched / 19 outside window, matching `data/atlas/verification.json` exactly.
+
+- **Publication confirmed (arena/d69dc1c9-olbg2):** PR #114 merged to main (merge commit after resolving the
+  PRs #106–112 concurrency merge: COORDINATION kept both sides, NAV merged with atlas/canon entries, root pages
+  regenerated; combined suite 265 tests green at merge). Pages workflows `Validate Pages content`, `Deploy Pages`
+  and `pages build and deployment` all completed success on the merge commit. Live: https://buffedlizard55-lab.github.io/OLBG2/update/ (dashboard
+  serves 208 rows / 11 high-confidence picks / 143 flagged items) and root NAV now carries “Update 22–28 Oct
+  (fresh capture)”. Status: D1–D6 complete and published.

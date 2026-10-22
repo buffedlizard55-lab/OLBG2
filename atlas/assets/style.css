@@ -26,8 +26,8 @@ th{background:var(--panel2);color:var(--muted);font-weight:600;font-size:12px;
 text-transform:uppercase;letter-spacing:.4px;position:sticky;top:0;z-index:1}
 tbody tr:hover{background:#1a2129}
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;max-height:76vh;overflow-y:auto}
-.tag{display:inline-block;padding:1px 7px;border-radius:99px;font-size:11px;font-weight:600;
-border:1px solid var(--line);white-space:nowrap}
+.tag{display:inline-block;margin:0 4px 2px 0;padding:1px 7px;border-radius:99px;font-size:11px;
+font-weight:600;border:1px solid var(--line);white-space:nowrap}
 .t-high{color:var(--hi);border-color:var(--hi)}
 .t-medium{color:var(--warn);border-color:var(--warn)}
 .t-low{color:var(--muted)}

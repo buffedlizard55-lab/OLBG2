@@ -1,0 +1,151 @@
+{
+  "snapshot_utc": "2026-10-22T12:25:00Z",
+  "session": "arena/3babcd0d-olbg2",
+  "finding_count": 16,
+  "findings": [
+    {
+      "id": "BF-01",
+      "severity": "critical",
+      "layer": "portal",
+      "affected": "data/portal/predictions.json (27/34 picks), portal/picks.html",
+      "summary": "27 of 34 'high'-confidence picks have model win probability < 0.7000 (down to 24.35% on pick-f1-usgp-winner and 40.80% on pick-gbgb-rom-cs-outright) via a sub-70% 'Tier H2' override.",
+      "official_url": "https://www.formula1.com/en/results/2026/drivers",
+      "beacon_fix": "Strict unrounded gate: high iff match_state=='upcoming' and 0.7000 <= p <= 5/7 (0.7142857, [-250, -233])."
+    },
+    {
+      "id": "BF-02",
+      "severity": "critical",
+      "layer": "all_layers",
+      "affected": "data/{verified,hub,board,slate,portal,final}/matches.json; data/{verified,final}/predictions.json (pick-pdc-32321)",
+      "summary": "World No. 2 Luke Humphries officially withdrew on 2026-10-22 (gastroenteritis) and was replaced by Kim Huybrechts vs Ryan Searle; every prior layer still prices Humphries vs Searle and features Humphries as an active high-confidence pick.",
+      "official_url": "https://www.pdc.tv/news/2026/october/22/humphries-withdraws-from-machineseeker-european-championship",
+      "beacon_fix": "Replaced Humphries vs Searle with official Kim Huybrechts vs Ryan Searle and logged Humphries withdrawal in flagged.json."
+    },
+    {
+      "id": "BF-03",
+      "severity": "critical",
+      "layer": "final, slate",
+      "affected": "data/final/matches.json (12 /slate/ ATP rows); data/final/predictions.json (atp-bru-r16-4)",
+      "summary": "/final/ retained 12 fabricated /slate/ ATP pairings (scheduling 6 players in two cities on Oct 22) and featured non-existent Arthur Fils v Adrian Mannarino (atp-bru-r16-4) as a high-confidence pick.",
+      "official_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+      "beacon_fix": "Pruned all fabricated /slate/ ATP rows; included only official ATP Almaty (9410), Brussels (7485), and Lyon (496) order-of-play ties."
+    },
+    {
+      "id": "BF-04",
+      "severity": "high",
+      "layer": "final, verified",
+      "affected": "data/final/predictions.json (nba-0022600123 p=0.7161, atp-902133 p=0.7162)",
+      "summary": "Decimal rounding (round(1/p, 2) >= 1.40) admitted two picks above p = 5/7 = 0.7142857 (d_exact = 1.39645 and 1.39626, fair American -252, breaching -250).",
+      "official_url": "https://www.nba.com/games?date=2026-10-26",
+      "beacon_fix": "Enforced exact unrounded rational upper bound p <= 5.0 / 7.0 (1.0 / p >= 1.40) with unit-test assertions."
+    },
+    {
+      "id": "BF-05",
+      "severity": "high",
+      "layer": "hub, portal, final",
+      "affected": "data/{hub,final}/matches.json (wta-902135, wta-902107, wta-902117, wta-902134, atp-902126)",
+      "summary": "Oct 23 WTA QFs at WTA 250 Osaka and WTA 500 Ningbo were mislabeled 'WTA 250 Guangzhou' (which runs Oct 26\u2013Nov 1, 2026); Cobolli v Wawrinka was mislabeled ATP Basel instead of ATP Lyon.",
+      "official_url": "https://www.wtatennis.com/tournaments/1023/guangzhou/2026",
+      "beacon_fix": "Assigned verified WTA 250 Japan Open (Osaka), WTA 500 Ningbo Open, and ATP 250 Lyon competitions and venues."
+    },
+    {
+      "id": "BF-06",
+      "severity": "high",
+      "layer": "portal",
+      "affected": "data/portal/matches.json (8 snooker rows); data/portal/predictions.json (pick-wst-nio-r16-1)",
+      "summary": "/portal/ cited HTTP-404 wst.tv/tournaments/northern-ireland-open-2026/ and hallucinated 'World No. 2 Kyren Wilson faces No. 28 Pang Junxu' (official WST rankings: #2 Wu Yize, #9 Kyren Wilson, #29 Pang Junxu).",
+      "official_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+      "beacon_fix": "Linked live HTTP-200 WST Johnstone's Paint World Rankings URL and verified exact 2026 rankings and prize totals."
+    },
+    {
+      "id": "BF-07",
+      "severity": "high",
+      "layer": "portal, slate, final, verified",
+      "affected": "data/portal/predictions.json (pick-gbgb-rom-cs-outright); data/{slate,portal,final}/matches.json",
+      "summary": "/portal/ claimed 6 finalists in Romford's Coral 100 Champion Stakes Final after Newinn Jolly officially withdrew (5-runner final), invented synthetic 1v1 trap/golf/F1 match bets, and /verified/ linked a 2025 GBGB schedule URL.",
+      "official_url": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/",
+      "beacon_fix": "Modeled the verified 5-runner Romford Category One Final outright and banned synthetic 1v1 match bets."
+    },
+    {
+      "id": "BF-08",
+      "severity": "high",
+      "layer": "final, slate",
+      "affected": "data/final/matches.json (duplicate F1 rows); data/slate/matches.json (golf-dpwt-genesis-h2h-1)",
+      "summary": "/final/ duplicated F1 US GP and Drivers' Title rows under two IDs each; /slate/ & /final/ listed Rory McIlroy v Rasmus Hojgaard at the Genesis Championship in Korea, where McIlroy is not in the 126-man field.",
+      "official_url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/genesis-championship-to-welcome-multiple-winners-eugenio-chacarra-casey-jarvis-and-jayden-schaper-in-south-korea/",
+      "beacon_fix": "Deduplicated F1 outrights and modeled DPWT Genesis Championship as an official 126-man tournament outright led by Eugenio Chacarra, Junghwan Lee, Si Woo Kim, and Sungjae Im."
+    },
+    {
+      "id": "BF-09",
+      "severity": "high",
+      "layer": "board, forward, slate, portal, final",
+      "affected": "29 files with Basketball/19, 9 files with Australian_Rules/27, 14 files with Esports/28",
+      "summary": "Prior layers linked OLBG Sport IDs 19 (excluded Politics), 27 (excluded UFC/MMA), and 28 (Greyhounds) on Basketball, Aussie Rules, and eSports rows.",
+      "official_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "beacon_fix": "Hard-validated canonical OLBG hub URLs (Basketball/4, Aussie_Rules/22, eSports/23, Greyhounds/28) across 100% of /beacon/ rows."
+    },
+    {
+      "id": "BF-10",
+      "severity": "medium",
+      "layer": "slate, final, desk",
+      "affected": "data/{slate,final}/matches.json (crk-pak-rsa-test2); data/desk/fixtures.json (icc-271646, icc-269791)",
+      "summary": "Pakistan v South Africa Rawalpindi Test in /slate/ & /final/ is a 2025 ghost fixture; Rawalpindi on 2026-10-22 hosts England v Sri Lanka in the 2026 Pakistan ODI Tri-Series.",
+      "official_url": "https://www.icc-cricket.com/tournaments/mens-odi-tri-series-2026",
+      "beacon_fix": "Replaced ghost Test with verified Oct 22-25 ODIs (Afghanistan v Zimbabwe Sharjah Final, India W v Zimbabwe W, Pakistan v England, intraday Sri Lanka v England)."
+    },
+    {
+      "id": "BF-11",
+      "severity": "medium",
+      "layer": "hub, portal, final",
+      "affected": "Early Oct 22 ATP, WST Snooker, PGA Bermuda, and DPWT Genesis rows",
+      "summary": "Completed/in-play Oct 22 events (Atmane def. Bellucci 6-7, 7-6, 7-6; Machac v Khachanov; Collignon v Lehecka; morning WST Belfast ties; Golf R1) remain marked pre-match.",
+      "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "beacon_fix": "Added explicit match_state ('upcoming', 'in_play', 'completed', 'unverified_blank') and gated high-confidence picks strictly to upcoming fixtures."
+    },
+    {
+      "id": "BF-12",
+      "severity": "medium",
+      "layer": "verified, final",
+      "affected": "data/verified/predictions.json (14/14); data/final/predictions.json (14/19)",
+      "summary": "Inherited /verified/ high-confidence write-ups omit named players, falling short of the requirement to cite verified team, player, current form, recent match history, and selection.",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "beacon_fix": "Every /beacon/ high-confidence prediction cites >=2 verified players, current season form, recent match history, and explicit selection in >=40 words."
+    },
+    {
+      "id": "BF-13",
+      "severity": "medium",
+      "layer": "final",
+      "affected": "research/final-audit-5de28a6f.md (C-04, C-05); data/final/flagged.json",
+      "summary": "/final/ falsely flagged David Pastrnak (4G, 8A) and Roman Josi (8A) as unverified stat drift; live api-web.nhle.com/v1/score/2026-10-22 confirms both exact season totals.",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "beacon_fix": "Preserved official NHL API game-leader totals with direct endpoint citations."
+    },
+    {
+      "id": "BF-14",
+      "severity": "medium",
+      "layer": "survey, slate, portal, audit65",
+      "affected": "data/survey/lines.json (unitedrugby.com/standings); 25 files citing liquipedia.net",
+      "summary": "unitedrugby.com/standings returns HTTP 404 and liquipedia.net is a user-edited wiki rather than Riot Games' official lolesports.com.",
+      "official_url": "https://lolesports.com/en-US/news/worlds-2026-primer",
+      "beacon_fix": "Replaced with HTTP-200 stats.unitedrugby.com/match-centre/table/2026-27 and lolesports.com/en-US/news/worlds-2026-primer."
+    },
+    {
+      "id": "BF-15",
+      "severity": "low",
+      "layer": "hub, portal, final",
+      "affected": "data/{hub,portal,final}/matches.json",
+      "summary": "Synthetic Asian quarter-lines (.25 / .75) were emitted on sports whose regulated/OLBG markets trade exclusively in half-units (.5).",
+      "official_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "beacon_fix": "Standardized 100% of handicaps and totals to half-unit (.5) lines."
+    },
+    {
+      "id": "BF-16",
+      "severity": "critical",
+      "layer": "slate, portal, final",
+      "affected": "data/{slate,portal,final}/matches.json (aflw-r11-1..9, icc-274657-afg-zim); data/portal/predictions.json (pick-aflw-r11-2)",
+      "summary": "8 of 9 AFLW Round 11 pairings in /slate/, /portal/, and /final/ were hallucinated, and North Melbourne v Adelaide was placed at Arden Street Oval instead of North Hobart Oval; Afghanistan v Zimbabwe Final was placed in Abu Dhabi instead of Sharjah.",
+      "official_url": "https://www.afl.com.au/aflw/news/1634432/aflw-teams-dees-make-hore-call-freo-star-returns-another-pies-blow",
+      "beacon_fix": "Replaced all 9 AFLW Round 11 fixtures and the Sharjah ODI Tri-Series Final with verified official pairings, venues, and UTC kickoffs."
+    }
+  ]
+}

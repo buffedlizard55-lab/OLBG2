@@ -1985,3 +1985,12 @@ was made by this session at F7, as logged. It is a two-line edit (NAV entry + ba
 | R1 | Audit active remote branches and claim a disjoint report-only scope | in progress | `COORDINATION.md` (append-only) |
 | R2 | Run repository tests/builds/link audit; record exact command outcomes and uncovered checks | unclaimed | `research/reproducibility-audit-dc72bac4.md` |
 | R3 | Report only reproducible findings and source/verification limitations; no unsupported claim of exhaustive fixtures or verified odds | unclaimed | `research/reproducibility-audit-dc72bac4.md`, `COORDINATION.md` (append-only) |
+
+### R4 follow-up claim (2026-10-22 UTC)
+
+The reproducibility pass exposed stale current-state copy (root builder docstring and generated archive/desk wording still cite 178/118 rows; README likewise describes 178 rows and 80 tests, while a deterministic rebuild reports 188 and the suite has 143 tests). `gh pr list --state open` returned no open PRs and `git ls-remote --heads origin` showed no other branch named for this scope owner. To correct published statements without changing match data, I am expanding this session's scope to `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py`, and `.github/workflows/pages.yml` (in addition to the report/append-only coordination scope). The independent layers' prior owners are merged; I will not modify any data rows or other builders. CI coverage expansion will be limited to a fail-on-drift check for generated layers after their existing tests/builds, not claimed factual validation.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R4 | Reconcile stale root/README count and scope copy from committed data; test published count disclosure | in progress | `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py` |
+| R5 | Ensure generated layers outside the current drift gate are covered where reproducible, then rerun full pipeline/tests | unclaimed | `.github/workflows/pages.yml`, `research/reproducibility-audit-dc72bac4.md` |

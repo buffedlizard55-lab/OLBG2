@@ -131,10 +131,22 @@ def main() -> None:
     ]
     (EVENTS / "rugby_league.json").write_text(json.dumps(rl_rows, indent=2, ensure_ascii=False) + "\n")
 
-    # 3. Gaelic Football & Greyhounds from verified unlined live OLBG capture
+    # 3. Gaelic Football & Greyhounds from verified unlined live OLBG capture.
+    # Only rows that carry a numeric OLBG event id are mirrored: rows sourced
+    # from a governing body rather than the OLBG capture (e.g. the GBGB
+    # Category One schedule rows gbgb-cat1-*) are published on the unified
+    # desk but never presented here as OLBG discovery inventory.
+    def _olbg_event_id(row):
+        try:
+            return int(row["id"].split("-")[1])
+        except (IndexError, ValueError):
+            return None
+
     gf_rows = []
     gh_rows = []
     for u in vin["unlined_rows"]:
+        if _olbg_event_id(u) is None:
+            continue
         if u["sport"] == "gaelic-football":
             gf_rows.append(
                 {
@@ -146,7 +158,7 @@ def main() -> None:
                     "tips_for": None,
                     "tips_total": None,
                     "tip_pct": None,
-                    "event_id": int(u["id"].split("-")[1]),
+                    "event_id": _olbg_event_id(u),
                     "source_url": u["olbg_url"],
                     "official_fixture_source": u["official_url"],
                     "retrieved_via": "live_fetch",
@@ -165,7 +177,7 @@ def main() -> None:
                     "tips_for": None,
                     "tips_total": None,
                     "tip_pct": None,
-                    "event_id": int(u["id"].split("-")[1]),
+                    "event_id": _olbg_event_id(u),
                     "source_url": u["olbg_url"],
                     "official_fixture_source": u["official_url"],
                     "retrieved_via": "live_fetch",

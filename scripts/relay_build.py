@@ -35,12 +35,14 @@ SPORTS_IN_SCOPE = [
 
 ZERO_ROW_REASONS = {
     "snooker": ("The BetVictor Northern Ireland Open Round 3 fixtures all fell on 22 "
-                "October and were in play or finished at capture time; the Round 4 draw "
-                "could not be read because the fetch proxy failed on the later chunks of "
-                "wst.tv/matches. Flag RL-08."),
+                "October and were in play or finished at capture time; the quarter-final "
+                "pairings for 23 October depend on the Round 3 evening session still in "
+                "progress at capture, and the later chunks of wst.tv/matches could not be "
+                "retrieved through the failing fetch proxy. Flag RL-08."),
     "tennis": ("The ATP official scores page was read first-hand on 22 October (Round of "
-               "16 results from Vienna, Brussels and Lyon) but the upcoming-schedule chunks "
-               "could not be retrieved, so no future fixture could be published. Flag RL-09."),
+               "16 results from Vienna, Brussels and Lyon), but tomorrow's quarter-final "
+               "order of play could not be retrieved (fetch-proxy failures), so no future "
+               "fixture could be published. Flag RL-09."),
     "darts": ("pdc.tv confirms the 2026 European Championship is live (tournament hub "
               "10870), but the hub's draw and results are JavaScript-rendered and were not "
               "extractable, so no fixture could be published. Flag RL-10."),

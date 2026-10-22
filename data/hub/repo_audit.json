@@ -1,0 +1,148 @@
+{
+  "captured_at": "2026-10-22T07:55:00Z",
+  "session": "arena/42c8f6be-olbg2",
+  "baseline_commit": "49ba8bf",
+  "findings_count": 14,
+  "findings": [
+    {
+      "id": "HA-01",
+      "severity": "high",
+      "file": "scripts/verified_seed.py:193-194; data/verified/sports.json",
+      "upstream_value": "Basketball olbg_sport_id=19 (https://www.olbg.com/betting-tips/Basketball/19)",
+      "verified_value": "Basketball olbg_sport_id=4 (https://www.olbg.com/betting-tips/Basketball/4)",
+      "official_source": "OLBG Sitemap Index",
+      "official_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "resolution": "Corrected to id=4 (/Basketball/4) in data/hub/sports.json and all 49 Basketball rows."
+    },
+    {
+      "id": "HA-02",
+      "severity": "high",
+      "file": "scripts/verified_seed.py:293-294; data/verified/sports.json",
+      "upstream_value": "Golf olbg_sport_id=4 (https://www.olbg.com/betting-tips/Golf/4)",
+      "verified_value": "Golf olbg_sport_id=5 (https://www.olbg.com/betting-tips/Golf/5)",
+      "official_source": "OLBG Sitemap Index",
+      "official_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "resolution": "Corrected to id=5 (/Golf/5) in data/hub/sports.json and all Golf rows."
+    },
+    {
+      "id": "HA-03",
+      "severity": "medium",
+      "file": "scripts/verified_seed.py:172,175; data/verified/sports.json",
+      "upstream_value": "Boxing olbg_sport_id=6 (/Boxing/6); Cycling olbg_sport_id=None ('no active OLBG sport hub')",
+      "verified_value": "Boxing olbg_sport_id=16 (/Boxing/16); Cycling olbg_sport_id=17 (/Cycling/17)",
+      "official_source": "OLBG Sitemap Index",
+      "official_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "resolution": "Corrected excluded-category metadata in data/hub/sports.json while maintaining strict exclusion."
+    },
+    {
+      "id": "HA-04",
+      "severity": "high",
+      "file": "scripts/verified_seed.py:359-360,377; data/verified/inputs.json",
+      "upstream_value": "E2026_61 retired on line 377 while HTA left at 4-2 (540:520, GP=6) and VIR left at 4-2 (525:518, GP=6)",
+      "verified_value": "E2026_61 finished Hapoel IBI Tel Aviv 90-81 Virtus Bologna (2026-10-21): HTA is 5-2 (630:601, GP=7, home 3-1) and VIR is 4-3 (606:608, GP=7, away 2-3)",
+      "official_source": "EuroLeague Official Live API (E2026 Games)",
+      "official_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
+      "resolution": "Recomputed all 20 EuroLeague club records from all 61 completed games (E2026_1..E2026_61) and originated all 19 Round 7 & Round 8 fixtures."
+    },
+    {
+      "id": "HA-05",
+      "severity": "high",
+      "file": "scripts/verified_seed.py:389-404; data/verified/inputs.json",
+      "upstream_value": "Only 8/32 BKT EuroCup teams stored at GP=3 (pre-Round 4) and 0 EuroCup fixtures originated (VF-20)",
+      "verified_value": "All 64 completed U2026 games give exact GP=4 records across all 32 EuroCup clubs (including London Lions 89-72 Cluj and Bosna 86-77 Bahcesehir) plus 16 Round 5 fixtures",
+      "official_source": "BKT EuroCup Official Live API (U2026 Games)",
+      "official_url": "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games",
+      "resolution": "Seeded exact GP=4 records for all 32 EuroCup clubs and originated all 16 Round 5 fixtures across all 3 markets."
+    },
+    {
+      "id": "HA-06",
+      "severity": "high",
+      "file": "scripts/verified_seed.py:238,938; data/verified/inputs.json",
+      "upstream_value": "tennis_originated = [] (0 originated Tennis rows despite 16 live ties on OLBG /Tennis/3)",
+      "verified_value": "All 26 ATP players across 13 live ATP Tour singles ties verified on official ATP rankings (#5 Medvedev 3,660 pts through #657 Goffin) and 2026 player-activity feeds; 3 WTA ties blocked by api.wtatennis.com HTTP 400",
+      "official_source": "ATP Tour Official Singles Rankings & Player Activity",
+      "official_url": "https://www.atptour.com/en/rankings/singles",
+      "resolution": "Originated all 13 verified ATP singles ties across Match Winner, Set Handicap (-1.5/+1.5), and Total Sets (O/U 2.5); kept 3 WTA Guangzhou ties blank + flagged."
+    },
+    {
+      "id": "HA-07",
+      "severity": "high",
+      "file": "scripts/verified_seed.py:180-189; data/verified/inputs.json",
+      "upstream_value": "Only 12 NHL games originated under Ice Hockey; 0 Swedish Hockey League (SHL) fixtures included",
+      "verified_value": "7 live Oct-22 SHL fixtures active on OLBG /Ice_Hockey/13 and verified with complete 14-club standings & top-25 player scorers on stats.swehockey.se (ID 20961)",
+      "official_source": "Swedish Ice Hockey Association Official Stats",
+      "official_url": "https://stats.swehockey.se/ScheduleAndResults/Standings/20961",
+      "resolution": "Originated all 7 SHL games alongside all 12 NHL games (19 total Ice Hockey fixtures across Moneyline, Puck Line, and Total Goals)."
+    },
+    {
+      "id": "HA-08",
+      "severity": "medium",
+      "file": "scripts/verified_seed.py:211-219; data/verified/inputs.json",
+      "upstream_value": "Only 5 Oct-22 EHF Champions League Men Round 5 fixtures included",
+      "verified_value": "Official EHF standings page also publishes Round 6 fixtures (28–29 Oct 2026), including 7 ties between clubs whose GP=5 records are complete prior to tonight's slate",
+      "official_source": "EHF Champions League Men Official Standings & Schedule",
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "resolution": "Originated all 5 Oct-22 Round 5 ties plus 7 complete-GP=5 Round 6 ties (12 total Handball fixtures across 1X2/Winner, Goal Handicap, and Total Goals)."
+    },
+    {
+      "id": "HA-09",
+      "severity": "medium",
+      "file": "scripts/verified_seed.py:271-279,659-661",
+      "upstream_value": "0 Volleyball matches originated; only 3 Polish PlusLiga ties listed",
+      "verified_value": "2 live Italian SuperLega Credem Banca Round 2 fixtures (Cisterna vs Monza; Verona vs Trentino) verified with official Round 1 set/point results on legavolley.it",
+      "official_source": "Lega Pallavolo Serie A Official Calendar & Standings",
+      "official_url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "resolution": "Originated both SuperLega Round 2 matches with heavy shrinkage + low-confidence sample cap; kept 3 PlusLiga ties blank + flagged."
+    },
+    {
+      "id": "HA-10",
+      "severity": "medium",
+      "file": "data/forward/flagged.json (VF-22)",
+      "upstream_value": "States gbgb.org.uk returned fetch failures or HTTP 500 across pages",
+      "verified_value": "gbgb.org.uk/, /racing/open-races/, /racing/race-courses/, and /racing/results/ return HTTP 200; dated cards/sectional trap times are client-rendered/licensed",
+      "official_source": "GBGB Official Portal",
+      "official_url": "https://www.gbgb.org.uk/racing/results/",
+      "resolution": "Recorded exact technical reason in data/hub/flagged.json (HF-05) and logged in COORDINATION.md."
+    },
+    {
+      "id": "HA-11",
+      "severity": "medium",
+      "file": "data/verified/predictions.json",
+      "upstream_value": "Legacy predictions[] list (14 entries) cites teams and form only without naming any individual player",
+      "verified_value": "Brief requires every high-confidence write-up to cite team, player, current form, recent match history, and explicit pick inside [-250, +10000]",
+      "official_source": "Official league player leaderboards (NHL, SHL, MLB, EuroLeague, EuroCup, ATP, PDC, WST, F1, LNR, URC, EHF)",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "resolution": "Authored 38 unique, natural, human-sounding write-ups (55–95 words each), every single one naming both teams/competitors, verified star player(s) with exact 2026 stats, current form, recent dated match history, and explicit in-band pick."
+    },
+    {
+      "id": "HA-12",
+      "severity": "medium",
+      "file": "data/desk/*.json; data/live/*.json; data/survey/*.json",
+      "upstream_value": "Historical 2026-10-20 / 2026-10-21 snapshots retain completed pre-2026-10-22 fixtures",
+      "verified_value": "All pre-2026-10-22 fixtures are completed and superseded by live 2026-10-22 slates",
+      "official_source": "NHL & EuroLeague Official APIs",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "resolution": "0 pre-2026-10-22 fixtures included in /hub/; full cross-layer audit table published at /hub/audit.html."
+    },
+    {
+      "id": "HA-13",
+      "severity": "low",
+      "file": "data/verified/inputs.json (wst_top36 / VF-30)",
+      "upstream_value": "1 Snooker tie priced (#9 Wilson vs #29 Pang) with best-of-7 broadcaster note; 7 outside-Top-36 ties left blank",
+      "verified_value": "Confirmed on wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false (#1-#36 only server-rendered)",
+      "official_source": "WST Official World Rankings",
+      "official_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+      "resolution": "Retained exact zero-inference rule: Wilson vs Pang priced with disclosure; 7 outside-Top-36 ties kept blank (—)."
+    },
+    {
+      "id": "HA-14",
+      "severity": "low",
+      "file": "data/verified/inputs.json (NBA totals, Cricket, Golf, RL, GAA, Greyhounds)",
+      "upstream_value": "NBA totals and non-server-rendered sports left blank (—) rather than inferred",
+      "verified_value": "Confirmed across nba.com, icc-cricket.com, pgatour.com, europeantour.com, nrl.com, superleague.co.uk, gaa.ie, and gbgb.org.uk",
+      "official_source": "Official Governing-Body Endpoints",
+      "official_url": "https://www.nba.com/schedule",
+      "resolution": "Maintained strict null/em-dash discipline across all 14 NBA totals and all 30 unlined rows."
+    }
+  ]
+}

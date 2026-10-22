@@ -1,0 +1,224 @@
+{
+  "captured_at": "2026-10-22T07:55:00Z",
+  "session": "arena/42c8f6be-olbg2",
+  "live_http_200_fetches": 130,
+  "bookmaker_odds_copied": false,
+  "olbg_discovery": {
+    "sitemap_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+    "global_hub_url": "https://www.olbg.com/betting-tips",
+    "eligible_sport_count": 17,
+    "active_eligible_sport_count": 15,
+    "empty_offseason_eligible_sport_count": 2,
+    "excluded_sport_hub_count": 8
+  },
+  "sources": [
+    {
+      "id": "olbg-sitemap",
+      "sport": "Cross-sport",
+      "authority": "OLBG Betting Tips Sitemap Index",
+      "url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "scope": "Sport taxonomy, canonical hub IDs & active category URLs",
+      "status": "verified_200"
+    },
+    {
+      "id": "nhl-score",
+      "sport": "ice-hockey",
+      "authority": "National Hockey League Official Web API (Score & Team Leaders)",
+      "url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "scope": "All 12 Oct-22 NHL fixtures, start UTC times, venues & team goal/assist/goalie-win leaders",
+      "status": "verified_200"
+    },
+    {
+      "id": "nhl-standings",
+      "sport": "ice-hockey",
+      "authority": "National Hockey League Official Web API (Standings)",
+      "url": "https://api-web.nhle.com/v1/standings/2026-10-22",
+      "scope": "2026-27 NHL standings, home/road splits, L10 form & streaks across all 32 clubs",
+      "status": "verified_200"
+    },
+    {
+      "id": "nhl-skater-leaders",
+      "sport": "ice-hockey",
+      "authority": "National Hockey League Official Web API (Skater Leaders)",
+      "url": "https://api-web.nhle.com/v1/skater-stats-leaders/20262027/2",
+      "scope": "2026-27 NHL regular-season points, goals & assists leaders",
+      "status": "verified_200"
+    },
+    {
+      "id": "shl-standings",
+      "sport": "ice-hockey",
+      "authority": "Swedish Ice Hockey Association (Svenska Ishockeyförbundet — SHL Standings & Player Leaders)",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Standings/20961",
+      "scope": "2026-27 SHL regular-season table (14 clubs, GP 12-13, GF:GA) & top-25 scoring leaders",
+      "status": "verified_200"
+    },
+    {
+      "id": "shl-schedule",
+      "sport": "ice-hockey",
+      "authority": "Swedish Ice Hockey Association (Svenska Ishockeyförbundet — SHL Schedule & Results)",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "scope": "All completed Sep–Oct 2026 SHL results plus all 7 Oct-22 17:00 UTC SHL fixtures & arenas",
+      "status": "verified_200"
+    },
+    {
+      "id": "euroleague-games",
+      "sport": "basketball",
+      "authority": "Euroleague Basketball Official Live API (EuroLeague E2026 Games)",
+      "url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
+      "scope": "All 61 completed E2026 games (including E2026_61 HTA 90-81 VIR) + Round 7 & Round 8 fixtures",
+      "status": "verified_200"
+    },
+    {
+      "id": "euroleague-players",
+      "sport": "basketball",
+      "authority": "Euroleague Basketball Official v3 Statistics API (E2026 Per-Game Leaders)",
+      "url": "https://api-live.euroleague.net/v3/competitions/E/statistics/players/traditional?seasonMode=Single&seasonCode=E2026&statisticMode=PerGame&limit=50",
+      "scope": "Official 2026-27 EuroLeague player PIR, PPG, RPG & APG leaders",
+      "status": "verified_200"
+    },
+    {
+      "id": "eurocup-games",
+      "sport": "basketball",
+      "authority": "Euroleague Basketball Official Live API (BKT EuroCup U2026 Games)",
+      "url": "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games",
+      "scope": "All 64 completed U2026 games (GP=4 across all 32 clubs) + all 16 Round 5 fixtures",
+      "status": "verified_200"
+    },
+    {
+      "id": "eurocup-players",
+      "sport": "basketball",
+      "authority": "Euroleague Basketball Official v3 Statistics API (U2026 Per-Game Leaders)",
+      "url": "https://api-live.euroleague.net/v3/competitions/U/statistics/players/traditional?seasonMode=Single&seasonCode=U2026&statisticMode=PerGame&limit=50",
+      "scope": "Official 2026-27 BKT EuroCup player PIR, PPG, RPG & APG leaders",
+      "status": "verified_200"
+    },
+    {
+      "id": "nba-schedule",
+      "sport": "basketball",
+      "authority": "National Basketball Association Official Schedule",
+      "url": "https://www.nba.com/schedule",
+      "scope": "2026-27 NBA Week-1 fixtures (22–23 Oct) paired with 30-team 2025-26 regular-season priors (Totals left blank)",
+      "status": "verified_200"
+    },
+    {
+      "id": "top14-table",
+      "sport": "rugby-union",
+      "authority": "Ligue Nationale de Rugby — Top 14 Official Standings & J7 Match Sheets",
+      "url": "https://top14.lnr.fr/classement",
+      "scope": "All 14 Top 14 clubs after J6 (Pts, W-D-L, PF:PA, form) + all 7 J7 fixtures (24–25 Oct)",
+      "status": "verified_200"
+    },
+    {
+      "id": "prod2-table",
+      "sport": "rugby-union",
+      "authority": "Ligue Nationale de Rugby — Pro D2 Official Standings & J8 Match Sheets",
+      "url": "https://prod2.lnr.fr/classement",
+      "scope": "All 16 Pro D2 clubs after J7 (Pts, W-D-L, PF:PA, form) + all 8 J8 fixtures (22–23 Oct)",
+      "status": "verified_200"
+    },
+    {
+      "id": "urc-table",
+      "sport": "rugby-union",
+      "authority": "United Rugby Championship Official Match Centre & Table",
+      "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+      "scope": "All 16 URC clubs after Round 3 (Pts, W-D-L, PF:PA, tries, form), Round 3 scores, plus Round 4 & Round 5 fixtures",
+      "status": "verified_200"
+    },
+    {
+      "id": "ehfcl-standings",
+      "sport": "handball",
+      "authority": "European Handball Federation — EHF Champions League Men 2026/27 Standings & Calendar",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "scope": "All 24 EHF Champions League Men clubs across Groups A–F + Round 5 (22 Oct) & Round 6 (28–29 Oct) fixtures",
+      "status": "verified_200"
+    },
+    {
+      "id": "pdc-rankings",
+      "sport": "darts",
+      "authority": "Professional Darts Corporation — Official Werner Ranking Ladder",
+      "url": "https://www.pdc.tv/rankings",
+      "scope": "Two-year prize money rankings across all 32 qualifiers in the 2026 PDC European Championship",
+      "status": "verified_200"
+    },
+    {
+      "id": "atp-rankings",
+      "sport": "tennis",
+      "authority": "ATP Tour Official Singles Rankings & Player Activity",
+      "url": "https://www.atptour.com/en/rankings/singles",
+      "scope": "2026-10-19 official rankings, ranking points & 2026 win-loss / H2H profiles for all 26 players across 13 live ATP ties",
+      "status": "verified_200"
+    },
+    {
+      "id": "mlb-statsapi",
+      "sport": "baseball",
+      "authority": "Major League Baseball Official StatsAPI (2026 Standings, Postseason Schedule & Rosters)",
+      "url": "https://statsapi.mlb.com/api/v1/schedule/postseason?season=2026&hydrate=probablePitcher(note),team,linescore",
+      "scope": "2026 World Series Games 1–4 (TB 98-64 vs MIL 103-59), ALCS/NLCS results, team run totals & active 26-man rosters",
+      "status": "verified_200"
+    },
+    {
+      "id": "legavolley-superlega",
+      "sport": "volleyball",
+      "authority": "Lega Pallavolo Serie A — SuperLega Credem Banca Official Schedule & Standings",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "scope": "Round 1 results/set-points and Round 2 fixtures (Cisterna vs Monza; Verona vs Trentino)",
+      "status": "verified_200"
+    },
+    {
+      "id": "f1-official",
+      "sport": "motor-racing",
+      "authority": "FIA Formula One World Championship Official 2026 Standings & Race Results",
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "scope": "17-race 2026 Drivers' standings (Antonelli 340, Russell 238, Hamilton 229, Verstappen 221) & race winners through Singapore",
+      "status": "verified_200"
+    },
+    {
+      "id": "wst-rankings",
+      "sport": "snooker",
+      "authority": "World Snooker Tour — Johnstone's Paint Official World Rankings & Match Centre",
+      "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+      "scope": "Official Top-36 prize rankings (pricing #9 Kyren Wilson vs #29 Pang Junxu; leaving 7 outside-Top-36 NI Open R3 ties blank)",
+      "status": "verified_200"
+    },
+    {
+      "id": "icc-cricket",
+      "sport": "cricket",
+      "authority": "International Cricket Council Match Centre",
+      "url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
+      "scope": "New Zealand v India 1st T20I fixture verification (ratings client-rendered; left unlined)",
+      "status": "verified_client_shell"
+    },
+    {
+      "id": "pga-dpwt-golf",
+      "sport": "golf",
+      "authority": "PGA Tour & DP World Tour Official Schedules",
+      "url": "https://www.pgatour.com/schedule",
+      "scope": "Bank of Utah Championship & Genesis Championship tournament verification (strokeplay field ratings not server-rendered; left unlined)",
+      "status": "verified_client_shell"
+    },
+    {
+      "id": "rl-futures",
+      "sport": "rugby-league",
+      "authority": "NRL & Betfred Super League Official Sites",
+      "url": "https://www.nrl.com/draw/",
+      "scope": "2027 NRL Premiership & 2027 Super League Grand Final futures left unlined pre-rosters",
+      "status": "verified_200"
+    },
+    {
+      "id": "gaa-fixtures",
+      "sport": "gaelic-football",
+      "authority": "Gaelic Athletic Association Official Fixtures",
+      "url": "https://www.gaa.ie/fixtures-results/",
+      "scope": "5 county club championship ties catalogued and left unlined (no official county club rating tables)",
+      "status": "verified_client_shell"
+    },
+    {
+      "id": "gbgb-greyhounds",
+      "sport": "greyhounds",
+      "authority": "Greyhound Board of Great Britain Official Portal",
+      "url": "https://www.gbgb.org.uk/racing/results/",
+      "scope": "4 active UK track cards on OLBG left unlined (sectional trap form is client-rendered / licensed)",
+      "status": "verified_client_shell"
+    }
+  ]
+}

@@ -189,17 +189,63 @@ def nba_market(home: dict, away: dict, params: dict) -> dict:
 
 # ---------------------------------------------------------------- picks and confidence
 
+# Uniform high-confidence window shared by every layer (see METHODOLOGY.md):
+# a high label requires model probability >= 70% (the brief's floor) and the
+# published rule ">= 72% outright, or >= 70% with the fair no-vig price inside
+# [-250, +10000]".
+HIGH_MIN_PROBABILITY = 0.70
+HIGH_OUTRIGHT_PROBABILITY = 0.72
+AMERICAN_MIN = -250
+AMERICAN_MAX = 10000
 
-def confidence_label(edge: float, *, evidence: bool, sample_ok: bool, baseline: bool, params: dict) -> tuple[str, str]:
-    """Return (label, reason). Labels are capped when the evidence pack is missing."""
+
+def fair_american(probability: float) -> int:
+    """Fair no-vig American price of a probability (the published convention)."""
+    if not 0.0 < probability < 1.0:
+        raise ValueError("probability must be strictly between 0 and 1")
+    if probability >= 0.5:
+        return round(-100.0 / (1.0 / probability - 1.0))
+    return round((1.0 / probability - 1.0) * 100.0)
+
+
+def in_focus_band(probability: float) -> bool:
+    """The brief's -250..+10000 window on the fair no-vig price."""
+    return AMERICAN_MIN <= fair_american(probability) <= AMERICAN_MAX
+
+
+def window_high(probability: float) -> bool:
+    """Uniform high clause: >= 72% outright, or >= 70% inside the focus band."""
+    return probability >= HIGH_OUTRIGHT_PROBABILITY or (
+        probability >= HIGH_MIN_PROBABILITY and in_focus_band(probability)
+    )
+
+
+def confidence_label(edge: float, *, probability: float, evidence: bool, sample_ok: bool,
+                     baseline: bool, params: dict) -> tuple[str, str]:
+    """Return (label, reason). Labels are capped when the evidence pack is missing
+    or when the selection fails the uniform 70% floor / focus-window rule."""
     if baseline:
         return "low", "Baseline pricing: no current-season sample to separate the teams."
     if edge >= params["high_edge"]:
+        if probability < HIGH_MIN_PROBABILITY:
+            return "medium", (
+                f"Model edge {edge:.3f} clears the high bar, but the {probability:.1%} selection "
+                "is below the 70% high-confidence floor."
+            )
+        if not window_high(probability):
+            return "medium", (
+                f"Model edge {edge:.3f} clears the high bar and the selection clears the 70% floor, "
+                "but its fair price sits outside the -250..+10000 focus window and below the 72% "
+                "outright bar."
+            )
         if not evidence:
             return "medium", f"Model edge {edge:.3f} clears the high bar, but no evidence pack is attached."
         if not sample_ok:
             return "medium", "Model edge clears the high bar, but the games-played sample is below the minimum."
-        return "high", f"Model edge {edge:.3f} with an official evidence pack and a sufficient sample."
+        return "high", (
+            f"Model edge {edge:.3f} with an official evidence pack, a sufficient sample and a "
+            "window-eligible selection."
+        )
     if edge >= params["medium_edge"]:
         return "medium", f"Model edge {edge:.3f} clears the medium bar."
     return "low", f"Model edge {edge:.3f} is below the medium bar."

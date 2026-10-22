@@ -1554,6 +1554,12 @@ VF-22 **still blocked**: gbgb.org.uk returned fetch failures/500 on all three pa
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Reconcile README snapshot counts and coverage statements against the checked-in verified dataset and generated dashboard; document the audit and any remaining scope limits without changing sporting data | in progress | `arena/d219b7cf-olbg2` | `README.md`, `research/repo-consistency-d219b7cf.md`, append-only `COORDINATION.md` |
+| Reconcile README snapshot counts and coverage statements against the checked-in verified dataset and generated dashboard; document the audit and any remaining scope limits without changing sporting data | done | `arena/d219b7cf-olbg2` | `README.md`, `research/repo-consistency-d219b7cf.md`, append-only `COORDINATION.md` |
 
 This is a documentation-only task. It does not claim new external-source verification, does not alter fixture/price/prediction data, and does not edit generated pages or pipeline code. No other live task is known to claim these files on this checkout; historical claims are treated as complete where their publish records say so.
+
+### Completion — session `arena/d219b7cf-olbg2`
+
+Reconciled README figures against `data/verified/matches.json`, its 118 row records and `source_scope` labels, `data/verified/predictions.json`, `data/verified/flagged.json`, the generated dashboard, and actual local build/test output. Corrected stale counts (119→118 rows, 93→94 originated, 26→24 unlined, 85→84 fixture-scoped links, 26→33 flags), the zero-row category statement, repository test count (61/63→80), and the American-versus-decimal odds description. Added `research/repo-consistency-d219b7cf.md` with reconciliation details, reproducible checks, and the explicit limitation that no external sporting fact or source page was newly checked in this task.
+
+**Verification performed:** `python3 -m unittest discover -s tests -v` (80 passed); `python3 scripts/build_site.py` (118 rows, 94 originated, 14 band picks/predictions, 33 review items); `python3 scripts/integration_audit.py` (0 local link errors); `git diff --check` (clean). Source links remain on individual rows; this task makes no new verification claim. **Irregularities left disclosed:** 34 of 118 rows cite competition/ranking rather than individual fixture pages; 33 review flags remain; this is a dated partial snapshot, not a live exhaustive slate.

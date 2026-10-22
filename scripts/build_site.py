@@ -40,6 +40,7 @@ def load_verified(name: str):
 
 
 CAPTURED_AT = "2026-10-22"  # set from data/verified/matches.json by dataset()
+SNAPSHOT = {"rows": 119, "originated": 93, "band": 14, "flags": 26}  # refreshed by dataset()
 _MONTHS = {"01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr", "05": "May", "06": "Jun",
            "07": "Jul", "08": "Aug", "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"}
 
@@ -48,6 +49,12 @@ def dataset():
     global CAPTURED_AT
     payload = load_verified("matches.json")
     CAPTURED_AT = payload.get("captured_at") or CAPTURED_AT
+    SNAPSHOT.update(
+        rows=len(payload["matches"]),
+        originated=sum(1 for m in payload["matches"] if m.get("line_status") == "originated"),
+        band=sum(1 for m in payload["matches"] if m.get("band_pick")),
+        flags=len(load_verified("flagged.json")["items"]),
+    )
     matches = payload["matches"]
     preds = load_verified("predictions.json")["predictions"]
     flags = load_verified("flagged.json")["items"]
@@ -284,7 +291,7 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
     <nav class="nav" aria-label="Main navigation">{nav}</nav>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · 119 stored rows · 93 originated lines · 14 price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">22 open review items</a></div></div>
+<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
 <main class="wrap">
 {body}
 </main>

@@ -1971,3 +1971,24 @@ data row was altered. CI now rebuilds `data/final/` and `final/` and fails on dr
 
 **Cross-scope request resolved:** the root nav change requested from `arena/1352b77f-olbg2`
 was made by this session at F7, as logged. It is a two-line edit (NAV entry + banner).
+
+---
+
+## Session `arena/d69dc1c9-olbg2` — updated-matches desk for 22–28 Oct 2026 (`/update/`)
+
+**Session ID:** `arena/d69dc1c9-olbg2` · **Branch:** `arena/d69dc1c9-olbg2` (fixed by Arena session tracking) · **Claimed:** 2026-10-22 UTC, committed and pushed immediately before any implementation edit.
+
+**Concurrent-session check at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`; `origin/main` = `72b8892`, PR #90 merged; `gh pr list --state open` = **empty**): no live claims and no open PRs remain on the board; every earlier session's tasks read done/closed or are historical records. This session therefore treats the following as **owned** and edits nothing else until integration:
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| D1 | Coordination claim + repo recon + baseline (143 tests green, CI drift scope mapped) | done | `arena/d69dc1c9-olbg2` | `COORDINATION.md` (append-only) |
+| D2 | Fresh official-source capture of **updated matches 2026-10-22 → 2026-10-28** for all 17 eligible sports (zero excluded sports), every row with its official source URL, unrendered values strictly blank + flagged | **in progress** | `arena/d69dc1c9-olbg2` | `data/update/inputs.json`, `data/update/sources.json`, `research/update-d69dc1c9.md` |
+| D3 | Multi-market line origination for every captured match (Win Match / Moneyline, Handicap / Spread / Puck / Run / Set line, Match Total O/U, plus alternate in-band selection) | **unclaimed** | `arena/d69dc1c9-olbg2` | `scripts/update_model.py`, `data/update/matches.json` |
+| D4 | Confidence grading (low/medium/high, uniform odds-window gate −250..+10000 for high) + bespoke ≥30-word human predictions for every high-confidence in-band pick, each fact cited to a primary source fetched this session | **unclaimed** | `arena/d69dc1c9-olbg2` | `data/update/predictions.json`, `data/update/band.json` |
+| D5 | Clean GH Pages dashboard at `/update/` (landing, matches, picks, per-sport pages, sources, methodology, flagged-for-review) + structural/link verifier + unit tests | **unclaimed** | `arena/d69dc1c9-olbg2` | `scripts/update_build.py`, `scripts/update_verify.py`, `update/**`, `tests/test_update_d69dc1c9.py` |
+| D6 | Integration: rebase on latest `main`, root nav link, full build + link audit + tests, PR → merge, Pages verification, publish record | **unclaimed** | `arena/d69dc1c9-olbg2` | shared outputs at integration only (`scripts/build_site.py` NAV entry + regenerated root pages), this file |
+
+**Scope rule:** this session creates only new files (`data/update/**`, `scripts/update_*.py`, `update/**`, `tests/test_update_d69dc1c9.py`, `research/update-d69dc1c9.md`) until D6. It does **not** edit any earlier layer (`site/`, `survey/`, `live/`, `desk/`, `verified/`, `forward/`, `board/`, `slate/`, `hub/`, `evidence/`, `audit65/`, `portal/`, `final/`), any earlier dataset, or any CI-owned generated path except the root NAV entry at integration, which is logged here. Cross-scope needs will be logged below instead of edited.
+
+**Verified-data rule (unchanged from the board):** every published value carries the official URL of the row it came from; nothing inferred or filled; unconfirmed values stay blank with a reason; a selection is `high` only when model probability ≥ 70% **and** the fair American price sits inside −250..+10000 (decimal 1.40–101.00); no bookmaker prices are read or invented.

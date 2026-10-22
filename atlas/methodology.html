@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header><h1>OLBG2 · Atlas desk</h1><nav><a href="index.html" class="">Overview</a><a href="matches.html" class="">All matches</a><a href="picks.html" class="">Predictions</a><a href="sports/index.html" class="">By sport</a><a href="verification.html" class="">Verification</a><a href="flagged.html" class="">Flagged</a><a href="methodology.html" class="on">Methodology</a><a href="sources.html" class="">Sources</a></nav></header>
+<main>
+<h2>Methodology</h2>
+<h3>1. What gets published</h3>
+<p>A fixture is published only if this session opened the governing-body URL stored on the row and the
+fixture was there — same teams, same date, same venue. Everything else is either blank (values not
+confirmed) or on the flagged page (rows that contradict their source).</p>
+<h3>2. Confidence rule</h3>
+<ul>
+<li><b>high</b> — model probability ≥ 70% <i>and</i> the match's own prices sit between -250 and +10000.</li>
+<li><b>medium</b> — model probability ≥ 60%, or ≥ 70% on a match priced shorter than -250.</li>
+<li><b>low</b> — under 60%.</li>
+</ul>
+<div class="note warn"><b>Two defensible readings, both shown.</b> The brief says to focus high-confidence
+picks on “matches that sit between -250 and +10000”. This desk reads that as a filter on the <i>match</i>,
+so a selection at 87% on the puck line is graded <b>high</b> even though its own price (-690) is shorter
+than -250. Earlier layers in this repository read it as a filter on the <i>selection</i>, which is stricter.
+Both counts are printed: 41 written predictions, of which 6 are also priced inside the window themselves
+and are marked <i>featured</i> on the predictions page.</div>
+<h3>3. NHL model</h3>
+<pre>w        = gp / (gp + 8)
+attack_i  = 1 + w * ((gf_i/gp_i) / L - 1)
+defence_i = 1 + w * ((ga_i/gp_i) / L - 1)
+L         = league goals per team-game, from the same table
+lambda_home = L * attack_home * defence_away * 1.044
+lambda_away = L * attack_away * defence_home / 1.044
+moneyline   = Poisson grid to 15 goals, tied games split 50/50
+puck line   = 1.5 goals, P(home covers) = P(home margin ≥ 2)
+total       = the half-goal line whose P(over) is closest to 0.50</pre>
+<p><b>Inputs are official.</b> Every term comes from nhl.com/standings as published on 22 October 2026.
+The constants 8 (shrinkage games) and 1.044 (home-ice multiplier, about a 9% goal ratio) are our own
+origination, not measured values.</p>
+<h3>4. MLB model</h3>
+<pre>pythag_i  = RS^1.83 / (RS^1.83 + RA^1.83)
+p         = log5(pythag_home, pythag_away), shifted by a logit home edge of 0.16
+runs      = Poisson rates from the two clubs' official runs scored/allowed per game
+run line  = 1.5 runs from the Skellam grid on those two rates
+total     = the half-run line whose P(over) is closest to 0.50</pre>
+<p>Inputs: the official MLB Stats API standings endpoint for the completed 2026 regular season.</p>
+<h3>5. What is deliberately blank</h3>
+<p>Where no official strength input could be read, the row is published with the fixture and its link but
+with every price blank. That applies to all 74 NBA rows (stats.nba.com unreachable, and the new season is
+one game old), the 9 EuroLeague rows (the official standings endpoint returned an empty payload), the 10
+tennis rows (the ATP rankings table could not be read) and the 143 rows inherited from the earlier desk
+that this session did not re-open.</p>
+<h3>6. Prices</h3>
+<p>Every price on this site is a fair price originated by this project: 1 ÷ our model probability, with no
+margin and no bookmaker input. No bookmaker price is read, scraped or compared anywhere in this repository.</p>
+</main>
+<footer>Generated 2026-10-22T13:25:00Z · session <code>arena/ba48a907-olbg2</code> · every price on this site is
+originated by this project, never taken from a bookmaker · every row links to the official page it was
+read from.</footer>
+<script src="assets/app.js"></script>
+</body></html>

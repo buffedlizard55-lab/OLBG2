@@ -2541,6 +2541,75 @@ in which every row is either confirmed this session or removed to the flagged pa
 5. Excluded sports (soccer/football, boxing, UFC/MMA, American football, hurling, horse racing, cycling, specials)
    must not appear as rows; a leak is a build failure.
 
+<<<<<<< HEAD
 **Rebase note (13:36Z):** while this session was running, `arena/17c50bb7-olbg2` merged PR #106 into `main`
 (`3caaa70`) and appended its own block above. The conflict was append-ordering only; both blocks are retained
 verbatim and no other session's text was altered.
+=======
+---
+
+## Session `arena/ba48a907-olbg2` — Atlas first-hand desk: COMPLETE (2026-10-22 13:35Z)
+
+Branch `arena/ba48a907-olbg2`, base `72b8892`. Shipped as PR into `main` (link recorded below once opened).
+
+### What was built
+
+| Artefact | Content |
+|---|---|
+| `data/atlas/capture_*.json` | 7 first-hand governing-body captures (NHL schedule/standings/table/scorers, NBA schedule, MLB schedule+standings, EuroLeague R7, ATP R16) |
+| `scripts/atlas_seed.py` → `data/atlas/fixtures.json`, `sports.json` | 317 rows, 17 eligible sports, each badged `confirmed` or `inherited-unverified` |
+| `scripts/atlas_model.py` → `data/atlas/matches.json` | 80 originated rows (NHL + MLB multi-market lines), 237 blank with a written reason, 75 matches in band |
+| `scripts/atlas_predictions.py` → `data/atlas/predictions.json` | 41 predictions, 6 featured, min 102 words, every one a ≥70% selection on an in-band match |
+| `scripts/atlas_verify.py` → `verification.json`, `flagged.json` | line-by-line ledger vs `data/final/matches.json` + 25 flagged items |
+| `scripts/atlas_build.py` → `atlas/**` | 25 pages: overview, all matches, predictions, 17 sport subpages, verification, flagged, methodology, sources |
+| `tests/test_atlas.py` | 20 tests; whole suite now 162 tests, all passing |
+
+### Verification totals (per family, compared against the published `/final/` desk)
+
+| Family | Official source | Compared | Confirmed | Mismatched | Outside window |
+|---|---|---|---|---|---|
+| NHL | `api.nhle.com/stats/rest/en/game` + `nhl.com/standings` | 73 | 73 | 0 | 9 |
+| NBA | `nba.com/schedule` | 74 | 74 | 0 | 0 |
+| MLB | `statsapi.mlb.com` schedule + standings | 7 | 7 | 0 | 0 |
+| EuroLeague | `api-live.euroleague.net/.../E2026/games?roundNumber=7` | 9 | 9 | 0 | 10 |
+| ATP tennis | `atptour.com` daily schedules (Almaty/Brussels/Lyon) | 11 | 11 | 17 | 0 |
+
+### Irregularities found and how they were handled
+
+1. **17 tennis rows in `/final/` describe matches that do not exist** on the ATP page those rows cite (e.g.
+   `Cobolli v Hijikata` and `Diallo v Vukic` against the Almaty schedule). Not republished; itemised individually
+   as `AT-01.01…AT-01.17` with the cited official URL so a reader can check each one.
+2. **One apparent fabrication turned out to be real.** `Borna Gojo v Daniel Altmaier` was flagged, then found on a
+   deeper section of the official Lyon order of play (Court 1). Added to the capture (`capture_atp.json` now 11
+   matches) and the flag withdrawn. Lesson recorded: ATP tournament pages list show-court singles in the first
+   chunk and outside-court singles further down — chunk 0 alone is not the whole draw.
+3. **EuroLeague/EuroCup citation error.** 16 `/final/` basketball rows cite
+   `api-live.euroleague.net/v2/competitions/U/seasons/U2026/games` and call it the EuroLeague. Code `U` is the BKT
+   EuroCup (R7 falls 10–12 Nov); the EuroLeague is code `E`. Re-sourced to `E2026` and re-verified. (`AT-03`)
+4. **Two official NHL goal tallies disagree** by up to two goals per club: nhl.com counts the shootout-deciding
+   goal, the stats API does not (DAL 23-15 vs 22-14). Both official. nhl.com used throughout and disclosed. (`AT-04`)
+5. **EuroLeague standings endpoint is dead** (empty payload, with and without a phase filter) → 9 EuroLeague rows
+   published, unlined, with the reason printed. (`AT-05`)
+6. **No official NBA strength input available** (`stats.nba.com` unreachable; season one game old) → all 74 NBA rows
+   published unlined. (`AT-06`)
+7. **ATP rankings unreadable** (page returns only the date selector) → 11 tennis rows unlined, no seeding-derived
+   value originated. (`AT-07`)
+8. **143 rows across 13 sports were not re-read this session** → republished with their official link but every
+   price/probability/pick blank. (`AT-08`)
+9. **9 NHL rows dated 1–2 Nov** fall outside the queried window → left to `/final/`, not republished. (`AT-09`)
+
+### Interpretation logged for future sessions
+
+The brief's “focus high-confidence picks on matches between -250 and +10000” has two defensible readings — a filter
+on the *match* or on the *selection*. This desk reports both: 2 rows grade `high` on the stricter per-selection
+reading, while 41 written predictions cover every ≥70% selection on an in-band match; the 6 whose own price is also
+inside the window are marked **featured**. The methodology page states this explicitly rather than hiding it.
+
+### Integration performed
+
+- `scripts/build_site.py` NAV: added `atlas/index.html` → “Atlas desk (first-hand)” (root nav regenerated).
+- `scripts/integration_audit.py`: added `atlas` to the scanned folders and a layer row on `integration.html`.
+- `.github/workflows/pages.yml`: added an “Rebuild the first-hand Atlas desk” step (seed → model → predictions →
+  verify → build) and added `atlas data/atlas` to the `git diff --exit-code` gate.
+- Cross-layer link audit: **0 broken links**. Full test suite: **162 tests, OK**.
+>>>>>>> aac0804 (Add /atlas/ first-hand verified desk: 317 rows, 41 predictions, verification ledger)

@@ -37,6 +37,26 @@ def findings():
     return rows
 
 
+def _atlas_row():
+    """First-hand Atlas layer row, rendered only when the layer has been built."""
+    path = ROOT / 'data' / 'atlas' / 'matches.json'
+    if not path.exists():
+        return ''
+    counts = json.loads(path.read_text())['counts']
+    preds = json.loads((ROOT / 'data' / 'atlas' / 'predictions.json').read_text())
+    flags = json.loads((ROOT / 'data' / 'atlas' / 'flagged.json').read_text())
+    return (
+        '<tr><td><a href="atlas/index.html"><strong>Atlas first-hand desk (/atlas/)</strong></a></td>'
+        f'<td>{counts["rows"]} rows across {counts["sports"]} sports ({counts["confirmed"]} confirmed '
+        f'first-hand against the governing body, {counts["originated"]} originated, '
+        f'{counts["blank"]} blank)</td>'
+        f'<td><a href="atlas/picks.html">{preds["count"]} written predictions '
+        f'({preds["featured_count"]} featured)</a> · '
+        f'<a href="atlas/verification.html">verification ledger</a> · '
+        f'<a href="atlas/flagged.html">Flagged for Review ({flags["count"]})</a> · '
+        f'<a href="atlas/methodology.html">Methodology</a></td></tr>')
+
+
 def body():
     rows = ''.join('<tr><td>{}</td><td>{}</td><td>{}</td><td><a href="{}">Source / review record</a></td></tr>'.format(*(escape(x, quote=True) for x in row)) for row in findings())
     root = load('data/matches.json')
@@ -54,6 +74,7 @@ def body():
 <tr><td><a href="site/index.html">Evidence desk v2 (/site/)</a></td><td>25 NHL/NBA fixtures (updated 2026-10-21)</td><td><a href="site/flagged.html">Desk review queue</a> · <a href="site/sources.html">Desk sources</a></td></tr>
 <tr><td><a href="survey/index.html">All-sport survey (/survey/)</a></td><td>{events} inventoried entries across all 17 eligible sports (26 lines · 119 unlined)</td><td><a href="survey/flagged.html">Survey review queue</a> · <a href="survey/verification.html">Verification register</a></td></tr>
 </tbody></table></div>
+{_atlas_row()}
 <h2>Cross-layer findings &amp; narrative claims needing review</h2>
 <p>All existing layers are preserved and cross-linked. Rows below summarize cross-layer status and enumerate every survey narrative fact alongside its official source link for manual review.</p>
 <div class="table-wrap"><table><thead><tr><th>Entry / claim</th><th>Status</th><th>Finding</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>
@@ -74,7 +95,7 @@ class Links(HTMLParser):
 def local_link_errors(root=ROOT):
     errors = []
     pages = list(root.glob('*.html'))
-    for folder in ('sports', 'site', 'survey', 'verified', 'live'):
+    for folder in ('sports', 'site', 'survey', 'verified', 'live', 'atlas'):
         folder_path = root / folder
         if folder_path.exists():
             pages.extend(folder_path.rglob('*.html'))

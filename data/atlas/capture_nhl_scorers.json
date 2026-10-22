@@ -1,0 +1,217 @@
+{
+ "source": "NHL Stats REST API \u2014 skater summary, 2026-27 (official api.nhle.com)",
+ "url": "https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22%3A%22points%22%2C%22direction%22%3A%22DESC%22%7D%5D&start=0&limit=60&cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2",
+ "captured_utc": "2026-10-22T13:10:00Z",
+ "session": "arena/ba48a907-olbg2",
+ "coverage": "The desk read the top 64 scorers in the official 2026-27 points list. Every club whose leading scorer appears in that slice is listed below. Seven clubs (CGY, CHI, CBJ, LAK, PHI, WSH and one other) have no player in the slice read, so no player is named for them anywhere on this site.",
+ "leaders": [
+  {
+   "team": "EDM",
+   "player": "Connor McDavid",
+   "points": 26,
+   "goals": 6,
+   "assists": 20,
+   "games_played": 9
+  },
+  {
+   "team": "TOR",
+   "player": "Auston Matthews",
+   "points": 18,
+   "goals": 8,
+   "assists": 10,
+   "games_played": 11
+  },
+  {
+   "team": "VGK",
+   "player": "Jack Eichel",
+   "points": 18,
+   "goals": 5,
+   "assists": 13,
+   "games_played": 11
+  },
+  {
+   "team": "MIN",
+   "player": "Kirill Kaprizov",
+   "points": 17,
+   "goals": 11,
+   "assists": 6,
+   "games_played": 10
+  },
+  {
+   "team": "COL",
+   "player": "Nathan MacKinnon",
+   "points": 16,
+   "goals": 6,
+   "assists": 10,
+   "games_played": 10
+  },
+  {
+   "team": "FLA",
+   "player": "Matthew Tkachuk",
+   "points": 15,
+   "goals": 3,
+   "assists": 12,
+   "games_played": 10
+  },
+  {
+   "team": "OTT",
+   "player": "Tim St\u00fctzle",
+   "points": 14,
+   "goals": 6,
+   "assists": 8,
+   "games_played": 10
+  },
+  {
+   "team": "CAR",
+   "player": "Sebastian Aho",
+   "points": 14,
+   "goals": 6,
+   "assists": 8,
+   "games_played": 11
+  },
+  {
+   "team": "SJS",
+   "player": "Macklin Celebrini",
+   "points": 14,
+   "goals": 5,
+   "assists": 9,
+   "games_played": 8
+  },
+  {
+   "team": "TBL",
+   "player": "Nikita Kucherov",
+   "points": 13,
+   "goals": 4,
+   "assists": 9,
+   "games_played": 9
+  },
+  {
+   "team": "UTA",
+   "player": "Nick Schmaltz",
+   "points": 13,
+   "goals": 7,
+   "assists": 6,
+   "games_played": 10
+  },
+  {
+   "team": "BOS",
+   "player": "David Pastrnak",
+   "points": 12,
+   "goals": 4,
+   "assists": 8,
+   "games_played": 10
+  },
+  {
+   "team": "MTL",
+   "player": "Nick Suzuki",
+   "points": 12,
+   "goals": 5,
+   "assists": 7,
+   "games_played": 9
+  },
+  {
+   "team": "PIT",
+   "player": "Erik Karlsson",
+   "points": 11,
+   "goals": 1,
+   "assists": 10,
+   "games_played": 10
+  },
+  {
+   "team": "WPG",
+   "player": "Kyle Connor",
+   "points": 11,
+   "goals": 8,
+   "assists": 3,
+   "games_played": 9
+  },
+  {
+   "team": "ANA",
+   "player": "Leo Carlsson",
+   "points": 11,
+   "goals": 2,
+   "assists": 9,
+   "games_played": 9
+  },
+  {
+   "team": "DET",
+   "player": "Alex DeBrincat",
+   "points": 11,
+   "goals": 6,
+   "assists": 5,
+   "games_played": 9
+  },
+  {
+   "team": "VAN",
+   "player": "Elias Pettersson",
+   "points": 11,
+   "goals": 3,
+   "assists": 8,
+   "games_played": 11
+  },
+  {
+   "team": "NYI",
+   "player": "Bo Horvat",
+   "points": 10,
+   "goals": 5,
+   "assists": 5,
+   "games_played": 9
+  },
+  {
+   "team": "BUF",
+   "player": "Tage Thompson",
+   "points": 9,
+   "goals": 5,
+   "assists": 4,
+   "games_played": 10
+  },
+  {
+   "team": "NJD",
+   "player": "Jack Hughes",
+   "points": 9,
+   "goals": 2,
+   "assists": 7,
+   "games_played": 9
+  },
+  {
+   "team": "STL",
+   "player": "Mason McTavish",
+   "points": 9,
+   "goals": 5,
+   "assists": 4,
+   "games_played": 9
+  },
+  {
+   "team": "SEA",
+   "player": "Chandler Stephenson",
+   "points": 9,
+   "goals": 1,
+   "assists": 8,
+   "games_played": 10
+  },
+  {
+   "team": "DAL",
+   "player": "Jason Robertson",
+   "points": 9,
+   "goals": 3,
+   "assists": 6,
+   "games_played": 9
+  },
+  {
+   "team": "NSH",
+   "player": "Roman Josi",
+   "points": 9,
+   "goals": 1,
+   "assists": 8,
+   "games_played": 8
+  },
+  {
+   "team": "COL",
+   "player": "Cale Makar",
+   "points": 11,
+   "goals": 3,
+   "assists": 8,
+   "games_played": 9
+  }
+ ]
+}

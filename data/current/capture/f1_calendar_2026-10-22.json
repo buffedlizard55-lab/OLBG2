@@ -1,0 +1,266 @@
+{
+ "source_url": "https://www.formula1.com/en/racing/2026",
+ "source_name": "Formula 1 official 2026 race calendar (formula1.com)",
+ "fetched_utc": "2026-10-22T12:36:00Z",
+ "next_round": {
+  "round": 18,
+  "country": "United States",
+  "event_name": "FORMULA 1 (title sponsor as rendered: MSC Cruises)",
+  "dates_as_rendered": "23 - 25 OCT",
+  "official_url": "https://www.formula1.com/en/racing/2026/united-states"
+ },
+ "previous_round": {
+  "round": 17,
+  "country": "Singapore",
+  "dates_as_rendered": "09 - 11 OCT",
+  "official_url": "https://www.formula1.com/en/racing/2026/singapore"
+ },
+ "following_round": {
+  "round": 19,
+  "country": "Mexico",
+  "dates_as_rendered": "30 OCT - 01 NOV",
+  "official_url": "https://www.formula1.com/en/racing/2026/mexico"
+ },
+ "note": "Race winner market only; the calendar page does not publish a start time for the Grand Prix itself, so the start time is left blank rather than inferred (flag CU-05).",
+ "source_url_drivers": "https://www.formula1.com/en/results/2026/drivers",
+ "drivers_standings_source": "Formula 1 official 2026 Drivers' Standings (formula1.com)",
+ "fetched_drivers_utc": "2026-10-22T12:48:00Z",
+ "rounds_completed_note": "The official 2026 calendar page lists Round 17 Singapore (09-11 Oct) as the previous, completed round and Round 18 United States (23-25 Oct) as next; Round 19 Mexico follows (30 Oct-01 Nov). Seventeen rounds are therefore complete before Round 18.",
+ "drivers_standings": [
+  {
+   "pos": 1,
+   "driver": "Kimi Antonelli",
+   "code": "ANT",
+   "nat": "ITA",
+   "team": "Mercedes",
+   "pts": 340
+  },
+  {
+   "pos": 2,
+   "driver": "George Russell",
+   "code": "RUS",
+   "nat": "GBR",
+   "team": "Mercedes",
+   "pts": 238
+  },
+  {
+   "pos": 3,
+   "driver": "Lewis Hamilton",
+   "code": "HAM",
+   "nat": "GBR",
+   "team": "Ferrari",
+   "pts": 229
+  },
+  {
+   "pos": 4,
+   "driver": "Max Verstappen",
+   "code": "VER",
+   "nat": "NED",
+   "team": "Red Bull Racing",
+   "pts": 221
+  },
+  {
+   "pos": 5,
+   "driver": "Charles Leclerc",
+   "code": "LEC",
+   "nat": "MON",
+   "team": "Ferrari",
+   "pts": 215
+  },
+  {
+   "pos": 6,
+   "driver": "Lando Norris",
+   "code": "NOR",
+   "nat": "GBR",
+   "team": "McLaren",
+   "pts": 201
+  },
+  {
+   "pos": 7,
+   "driver": "Oscar Piastri",
+   "code": "PIA",
+   "nat": "AUS",
+   "team": "McLaren",
+   "pts": 138
+  },
+  {
+   "pos": 8,
+   "driver": "Isack Hadjar",
+   "code": "HAD",
+   "nat": "FRA",
+   "team": "Red Bull Racing",
+   "pts": 97
+  },
+  {
+   "pos": 9,
+   "driver": "Liam Lawson",
+   "code": "LAW",
+   "nat": "NZL",
+   "team": "Racing Bulls",
+   "pts": 75
+  },
+  {
+   "pos": 10,
+   "driver": "Pierre Gasly",
+   "code": "GAS",
+   "nat": "FRA",
+   "team": "Alpine",
+   "pts": 41
+  },
+  {
+   "pos": 11,
+   "driver": "Arvid Lindblad",
+   "code": "LIN",
+   "nat": "GBR",
+   "team": "Racing Bulls",
+   "pts": 38
+  },
+  {
+   "pos": 12,
+   "driver": "Franco Colapinto",
+   "code": "COL",
+   "nat": "ARG",
+   "team": "Alpine",
+   "pts": 27
+  },
+  {
+   "pos": 13,
+   "driver": "Oliver Bearman",
+   "code": "BEA",
+   "nat": "GBR",
+   "team": "Haas F1 Team",
+   "pts": 23
+  },
+  {
+   "pos": 14,
+   "driver": "Nico Hulkenberg",
+   "code": "HUL",
+   "nat": "GER",
+   "team": "Audi",
+   "pts": 13
+  },
+  {
+   "pos": 15,
+   "driver": "Gabriel Bortoleto",
+   "code": "BOR",
+   "nat": "BRA",
+   "team": "Audi",
+   "pts": 10
+  },
+  {
+   "pos": 16,
+   "driver": "Esteban Ocon",
+   "code": "OCO",
+   "nat": "FRA",
+   "team": "Haas F1 Team",
+   "pts": 7
+  },
+  {
+   "pos": 17,
+   "driver": "Fernando Alonso",
+   "code": "ALO",
+   "nat": "ESP",
+   "team": "Aston Martin",
+   "pts": 7
+  },
+  {
+   "pos": 18,
+   "driver": "Carlos Sainz",
+   "code": "SAI",
+   "nat": "ESP",
+   "team": "Williams",
+   "pts": 7
+  },
+  {
+   "pos": 19,
+   "driver": "Alexander Albon",
+   "code": "ALB",
+   "nat": "THA",
+   "team": "Williams",
+   "pts": 5
+  },
+  {
+   "pos": 20,
+   "driver": "Yuki Tsunoda",
+   "code": "TSU",
+   "nat": "JPN",
+   "team": "Racing Bulls",
+   "pts": 1
+  },
+  {
+   "pos": 21,
+   "driver": "Lance Stroll",
+   "code": "STR",
+   "nat": "CAN",
+   "team": "Aston Martin",
+   "pts": 0
+  },
+  {
+   "pos": 22,
+   "driver": "Valtteri Bottas",
+   "code": "BOT",
+   "nat": "FIN",
+   "team": "Cadillac",
+   "pts": 0
+  },
+  {
+   "pos": 23,
+   "driver": "Sergio Perez",
+   "code": "PER",
+   "nat": "MEX",
+   "team": "Cadillac",
+   "pts": 0
+  }
+ ],
+ "race_winners_first_hand": [
+  {
+   "round": 1,
+   "race": "Australia",
+   "winner": "George Russell",
+   "second": "Kimi Antonelli",
+   "third": "Charles Leclerc"
+  },
+  {
+   "round": 2,
+   "race": "China",
+   "winner": "Kimi Antonelli",
+   "second": "George Russell",
+   "third": "Lewis Hamilton"
+  },
+  {
+   "round": 3,
+   "race": "Japan",
+   "winner": "Kimi Antonelli",
+   "second": "Oscar Piastri",
+   "third": "Charles Leclerc"
+  },
+  {
+   "round": 4,
+   "race": "Miami",
+   "winner": "Kimi Antonelli",
+   "second": "Lando Norris",
+   "third": "Oscar Piastri"
+  },
+  {
+   "round": 5,
+   "race": "Canada",
+   "winner": "Kimi Antonelli",
+   "second": "Lewis Hamilton",
+   "third": "Max Verstappen"
+  },
+  {
+   "round": 6,
+   "race": "Monaco",
+   "winner": "Kimi Antonelli",
+   "second": "Lewis Hamilton",
+   "third": "Isack Hadjar"
+  },
+  {
+   "round": 7,
+   "race": "Barcelona-Catalunya",
+   "winner": "Lewis Hamilton",
+   "second": "George Russell",
+   "third": null
+  }
+ ]
+}

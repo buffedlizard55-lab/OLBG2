@@ -1,0 +1,77 @@
+{
+ "source_url_schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-25",
+ "source_url_standings": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+ "source_name": "MLB official Stats API (statsapi.mlb.com)",
+ "fetched_utc": "2026-10-22T12:41:00Z",
+ "series": "2026 World Series (gameType W, best of 7)",
+ "games": [
+  {
+   "game_pk": 849805,
+   "official_date": "2026-10-23",
+   "game_date_utc": "2026-10-24T00:00:00Z",
+   "description": "World Series Game 1",
+   "away": {
+    "id": 139,
+    "name": "Tampa Bay Rays"
+   },
+   "home": {
+    "id": 158,
+    "name": "Milwaukee Brewers"
+   },
+   "venue": {
+    "id": 32,
+    "name": "American Family Field"
+   },
+   "status": "Scheduled",
+   "games_in_series": 7,
+   "series_game_number": 1,
+   "official_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/23/849805"
+  },
+  {
+   "game_pk": 849802,
+   "official_date": "2026-10-24",
+   "game_date_utc": "2026-10-25T00:00:00Z",
+   "description": "World Series Game 2",
+   "away": {
+    "id": 139,
+    "name": "Tampa Bay Rays"
+   },
+   "home": {
+    "id": 158,
+    "name": "Milwaukee Brewers"
+   },
+   "venue": {
+    "id": 32,
+    "name": "American Family Field"
+   },
+   "status": "Scheduled",
+   "games_in_series": 7,
+   "series_game_number": 2,
+   "official_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/24/849802"
+  }
+ ],
+ "season_records": [
+  {
+   "team": "Tampa Bay Rays",
+   "team_id": 139,
+   "wins": 98,
+   "losses": 64,
+   "win_pct": ".605",
+   "runs_scored": 736,
+   "runs_allowed": 650,
+   "division_rank": "1",
+   "league_rank": "1"
+  },
+  {
+   "team": "Milwaukee Brewers",
+   "team_id": 158,
+   "wins": 103,
+   "losses": 59,
+   "win_pct": ".636",
+   "runs_scored": 832,
+   "runs_allowed": 618,
+   "division_rank": "1"
+  }
+ ],
+ "note": "The schedule feed returns leagueRecord 0-0 for both clubs because World Series games use a fresh series record; the 2026 regular-season records above were read from the official standings endpoint."
+}

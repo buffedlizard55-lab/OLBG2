@@ -1,0 +1,682 @@
+{
+ "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+ "source_name": "NHL official API (api-web.nhle.com) score/schedule feed for 2026-10-24",
+ "fetched_utc": "2026-10-22T12:32:00Z",
+ "api_reported_number_of_games": 12,
+ "games_captured": 12,
+ "record_snapshot_note": "W-L-OTL records are exactly as returned by the official feed at fetch time and match the 2026-10-21 team-summary snapshot in nhl_team_summary_2026-10-22.json (cross-checked for BOS 7-2-1, NYR 7-3-1, CAR 8-2-1, VGK 8-3-0, TBL 7-2-0, CHI 3-6-0). Results of the twelve games played on 2026-10-22 are therefore NOT reflected in these records; disclosed as flag CU-01.",
+ "games": [
+  {
+   "game_id": 2026020168,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T17:00:00Z",
+   "venue": "Xfinity Mobile Arena",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "ANA",
+    "name": "Ducks",
+    "record": "4-5-0"
+   },
+   "home": {
+    "abbrev": "PHI",
+    "name": "Flyers",
+    "record": "3-6-3"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+   "team_leaders": [
+    {
+     "team": "ANA",
+     "player": "Beckett Sennecke",
+     "category": "goals",
+     "value": 5
+    },
+    {
+     "team": "PHI",
+     "player": "Matvei Michkov",
+     "category": "goals",
+     "value": 6
+    },
+    {
+     "team": "ANA",
+     "player": "Leo Carlsson",
+     "category": "assists",
+     "value": 9
+    },
+    {
+     "team": "PHI",
+     "player": "Trevor Zegras",
+     "category": "assists",
+     "value": 5
+    },
+    {
+     "team": "ANA",
+     "player": "Lukas Dostal",
+     "category": "wins",
+     "value": 3
+    },
+    {
+     "team": "PHI",
+     "player": "Dan Vladar",
+     "category": "wins",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "game_id": 2026020169,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T19:30:00Z",
+   "venue": "Prudential Center",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "LAK",
+    "name": "Kings",
+    "record": "1-4-2"
+   },
+   "home": {
+    "abbrev": "NJD",
+    "name": "Devils",
+    "record": "5-4-0"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+   "team_leaders": [
+    {
+     "team": "LAK",
+     "player": "Artemi Panarin",
+     "category": "goals",
+     "value": 4
+    },
+    {
+     "team": "NJD",
+     "player": "Nico Hischier",
+     "category": "goals",
+     "value": 4
+    },
+    {
+     "team": "LAK",
+     "player": "Brandt Clarke",
+     "category": "assists",
+     "value": 4
+    },
+    {
+     "team": "NJD",
+     "player": "Jack Hughes",
+     "category": "assists",
+     "value": 7
+    },
+    {
+     "team": "LAK",
+     "player": "Darcy Kuemper",
+     "category": "wins",
+     "value": 1
+    },
+    {
+     "team": "NJD",
+     "player": "Jake Allen",
+     "category": "wins",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "game_id": 2026020170,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T23:00:00Z",
+   "venue": "TD Garden",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "SJS",
+    "name": "Sharks",
+    "record": "5-4-1"
+   },
+   "home": {
+    "abbrev": "BOS",
+    "name": "Bruins",
+    "record": "7-2-1"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+   "team_leaders": [
+    {
+     "team": "SJS",
+     "player": "Macklin Celebrini",
+     "category": "goals",
+     "value": 5
+    },
+    {
+     "team": "BOS",
+     "player": "David Pastrnak",
+     "category": "goals",
+     "value": 4
+    },
+    {
+     "team": "SJS",
+     "player": "Macklin Celebrini",
+     "category": "assists",
+     "value": 9
+    },
+    {
+     "team": "BOS",
+     "player": "David Pastrnak",
+     "category": "assists",
+     "value": 8
+    },
+    {
+     "team": "SJS",
+     "player": "Alex Nedeljkovic",
+     "category": "wins",
+     "value": 3
+    },
+    {
+     "team": "BOS",
+     "player": "Jeremy Swayman",
+     "category": "wins",
+     "value": 6
+    }
+   ]
+  },
+  {
+   "game_id": 2026020171,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T23:00:00Z",
+   "venue": "Canadian Tire Centre",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "NYR",
+    "name": "Rangers",
+    "record": "7-3-1"
+   },
+   "home": {
+    "abbrev": "OTT",
+    "name": "Senators",
+    "record": "7-3-0"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+   "team_leaders": [
+    {
+     "team": "NYR",
+     "player": "Alexis Lafreniere",
+     "category": "goals",
+     "value": 7
+    },
+    {
+     "team": "OTT",
+     "player": "Tim Stutzle",
+     "category": "goals",
+     "value": 6
+    },
+    {
+     "team": "NYR",
+     "player": "Adam Fox",
+     "category": "assists",
+     "value": 10
+    },
+    {
+     "team": "OTT",
+     "player": "Tim Stutzle",
+     "category": "assists",
+     "value": 8
+    },
+    {
+     "team": "NYR",
+     "player": "Dylan Garand",
+     "category": "wins",
+     "value": 4
+    },
+    {
+     "team": "OTT",
+     "player": "Linus Ullmark",
+     "category": "wins",
+     "value": 7
+    }
+   ]
+  },
+  {
+   "game_id": 2026020172,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T23:00:00Z",
+   "venue": "PPG Paints Arena",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "NSH",
+    "name": "Predators",
+    "record": "3-2-3"
+   },
+   "home": {
+    "abbrev": "PIT",
+    "name": "Penguins",
+    "record": "3-6-1"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+   "team_leaders": [
+    {
+     "team": "NSH",
+     "player": "Ryan O'Reilly",
+     "category": "goals",
+     "value": 4
+    },
+    {
+     "team": "PIT",
+     "player": "Evgeni Malkin",
+     "category": "goals",
+     "value": 5
+    },
+    {
+     "team": "NSH",
+     "player": "Roman Josi",
+     "category": "assists",
+     "value": 8
+    },
+    {
+     "team": "PIT",
+     "player": "Erik Karlsson",
+     "category": "assists",
+     "value": 10
+    },
+    {
+     "team": "NSH",
+     "player": "Juuse Saros",
+     "category": "wins",
+     "value": 3
+    },
+    {
+     "team": "PIT",
+     "player": "Arturs Silovs",
+     "category": "wins",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "game_id": 2026020173,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T23:00:00Z",
+   "venue": "Capital One Arena",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "BUF",
+    "name": "Sabres",
+    "record": "4-4-2"
+   },
+   "home": {
+    "abbrev": "WSH",
+    "name": "Capitals",
+    "record": "5-4-0"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+   "team_leaders": [
+    {
+     "team": "BUF",
+     "player": "Tage Thompson",
+     "category": "goals",
+     "value": 5
+    },
+    {
+     "team": "WSH",
+     "player": "Alex Tuch",
+     "category": "goals",
+     "value": 5
+    },
+    {
+     "team": "BUF",
+     "player": "Zach Benson",
+     "category": "assists",
+     "value": 6
+    },
+    {
+     "team": "WSH",
+     "player": "Dylan Strome",
+     "category": "assists",
+     "value": 5
+    },
+    {
+     "team": "BUF",
+     "player": "Ukko-Pekka Luukkonen",
+     "category": "wins",
+     "value": 3
+    },
+    {
+     "team": "WSH",
+     "player": "Logan Thompson",
+     "category": "wins",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "game_id": 2026020174,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T23:00:00Z",
+   "venue": "Nationwide Arena",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "VGK",
+    "name": "Golden Knights",
+    "record": "8-3-0"
+   },
+   "home": {
+    "abbrev": "CBJ",
+    "name": "Blue Jackets",
+    "record": "3-5-0"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+   "team_leaders": [
+    {
+     "team": "VGK",
+     "player": "Mark Stone",
+     "category": "goals",
+     "value": 8
+    },
+    {
+     "team": "CBJ",
+     "player": "Kent Johnson",
+     "category": "goals",
+     "value": 4
+    },
+    {
+     "team": "VGK",
+     "player": "Jack Eichel",
+     "category": "assists",
+     "value": 13
+    },
+    {
+     "team": "CBJ",
+     "player": "Zach Werenski",
+     "category": "assists",
+     "value": 6
+    },
+    {
+     "team": "VGK",
+     "player": "Carter Hart",
+     "category": "wins",
+     "value": 4
+    },
+    {
+     "team": "CBJ",
+     "player": "Jet Greaves",
+     "category": "wins",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "game_id": 2026020175,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T23:00:00Z",
+   "venue": "Enterprise Center",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "CAR",
+    "name": "Hurricanes",
+    "record": "8-2-1"
+   },
+   "home": {
+    "abbrev": "STL",
+    "name": "Blues",
+    "record": "4-4-1"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+   "team_leaders": [
+    {
+     "team": "CAR",
+     "player": "Andrei Svechnikov",
+     "category": "goals",
+     "value": 6
+    },
+    {
+     "team": "STL",
+     "player": "Mason McTavish",
+     "category": "goals",
+     "value": 5
+    },
+    {
+     "team": "CAR",
+     "player": "Jackson Blake",
+     "category": "assists",
+     "value": 10
+    },
+    {
+     "team": "STL",
+     "player": "Dylan Holloway",
+     "category": "assists",
+     "value": 6
+    },
+    {
+     "team": "CAR",
+     "player": "Pyotr Kochetkov",
+     "category": "wins",
+     "value": 6
+    },
+    {
+     "team": "STL",
+     "player": "Joel Hofer",
+     "category": "wins",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "game_id": 2026020176,
+   "game_date": "2026-10-24",
+   "start_time_utc": "2026-10-24T23:00:00Z",
+   "venue": "Rogers Place",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "TOR",
+    "name": "Maple Leafs",
+    "record": "5-4-2"
+   },
+   "home": {
+    "abbrev": "EDM",
+    "name": "Oilers",
+    "record": "7-1-1"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+   "team_leaders": [
+    {
+     "team": "TOR",
+     "player": "Auston Matthews",
+     "category": "goals",
+     "value": 8
+    },
+    {
+     "team": "EDM",
+     "player": "Leon Draisaitl",
+     "category": "goals",
+     "value": 8
+    },
+    {
+     "team": "TOR",
+     "player": "Auston Matthews",
+     "category": "assists",
+     "value": 10
+    },
+    {
+     "team": "EDM",
+     "player": "Connor McDavid",
+     "category": "assists",
+     "value": 20
+    },
+    {
+     "team": "TOR",
+     "player": "Anthony Stolarz",
+     "category": "wins",
+     "value": 3
+    },
+    {
+     "team": "EDM",
+     "player": "Devon Levi",
+     "category": "wins",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "game_id": 2026020177,
+   "game_date": "2026-10-25",
+   "start_time_utc": "2026-10-25T01:00:00Z",
+   "venue": "Delta Center",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "TBL",
+    "name": "Lightning",
+    "record": "7-2-0"
+   },
+   "home": {
+    "abbrev": "UTA",
+    "name": "Mammoth",
+    "record": "7-3-0"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+   "team_leaders": [
+    {
+     "team": "TBL",
+     "player": "Brandon Hagel",
+     "category": "goals",
+     "value": 7
+    },
+    {
+     "team": "UTA",
+     "player": "Nick Schmaltz",
+     "category": "goals",
+     "value": 7
+    },
+    {
+     "team": "TBL",
+     "player": "Nikita Kucherov",
+     "category": "assists",
+     "value": 9
+    },
+    {
+     "team": "UTA",
+     "player": "Clayton Keller",
+     "category": "assists",
+     "value": 9
+    },
+    {
+     "team": "TBL",
+     "player": "Andrei Vasilevskiy",
+     "category": "wins",
+     "value": 5
+    },
+    {
+     "team": "UTA",
+     "player": "Karel Vejmelka",
+     "category": "wins",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "game_id": 2026020178,
+   "game_date": "2026-10-25",
+   "start_time_utc": "2026-10-25T02:00:00Z",
+   "venue": "Scotiabank Saddledome",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "DET",
+    "name": "Red Wings",
+    "record": "3-3-3"
+   },
+   "home": {
+    "abbrev": "CGY",
+    "name": "Flames",
+    "record": "2-6-0"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+   "team_leaders": [
+    {
+     "team": "DET",
+     "player": "Alex DeBrincat",
+     "category": "goals",
+     "value": 6
+    },
+    {
+     "team": "CGY",
+     "player": "Morgan Frost",
+     "category": "goals",
+     "value": 3
+    },
+    {
+     "team": "DET",
+     "player": "Alex DeBrincat",
+     "category": "assists",
+     "value": 5
+    },
+    {
+     "team": "CGY",
+     "player": "Joel Farabee",
+     "category": "assists",
+     "value": 5
+    },
+    {
+     "team": "DET",
+     "player": "John Gibson",
+     "category": "wins",
+     "value": 2
+    },
+    {
+     "team": "CGY",
+     "player": "Dustin Wolf",
+     "category": "wins",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "game_id": 2026020179,
+   "game_date": "2026-10-25",
+   "start_time_utc": "2026-10-25T02:00:00Z",
+   "venue": "Climate Pledge Arena",
+   "game_state": "FUT",
+   "away": {
+    "abbrev": "MIN",
+    "name": "Wild",
+    "record": "6-2-2"
+   },
+   "home": {
+    "abbrev": "SEA",
+    "name": "Kraken",
+    "record": "6-3-1"
+   },
+   "official_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/25/2026020179",
+   "team_leaders": [
+    {
+     "team": "MIN",
+     "player": "Kirill Kaprizov",
+     "category": "goals",
+     "value": 11
+    },
+    {
+     "team": "SEA",
+     "player": "Frederick Gaudreau",
+     "category": "goals",
+     "value": 5
+    },
+    {
+     "team": "MIN",
+     "player": "Quinn Hughes",
+     "category": "assists",
+     "value": 11
+    },
+    {
+     "team": "SEA",
+     "player": "Chandler Stephenson",
+     "category": "assists",
+     "value": 8
+    },
+    {
+     "team": "MIN",
+     "player": "Jesper Wallstedt",
+     "category": "wins",
+     "value": 6
+    },
+    {
+     "team": "SEA",
+     "player": "Philipp Grubauer",
+     "category": "wins",
+     "value": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1330,3 +1330,7 @@ This claim is limited to the unclaimed residual nit recorded above; no new fixtu
 ### Completion — `arena/53b0cd38-olbg2`
 
 The picks introduction now handles an empty outside-band category without implying nonexistent picks or quoting an invented range. No fixture, line, or narrative data changed. Verified by rerunning the complete CI generation pipeline, survey integrity validation (26 pages, 139 inventory rows), cross-layer link audit (0 internal errors), and 61 unit tests (all passing). Source links remain those in the existing verified dataset; this copy-only correction makes no new source claims. Irregularity: this snapshot is not an exhaustive live inventory of OLBG's fixtures; the 22 existing review flags remain open and non-blocking. Task status: **done**.
+
+### Publication record — 2026-10-22
+
+[PR #59](https://github.com/buffedlizard55-lab/OLBG2/pull/59) merged into `main` as `3a48e3d`; PR validation passed. [Deploy Pages run 39713298932](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713298932) succeeded for that commit. Site: https://buffedlizard55-lab.github.io/OLBG2/picks.html . This records deployment status from GitHub Actions, not an independent browser fetch of the live URL.

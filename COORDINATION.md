@@ -1206,3 +1206,21 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 | Live production URLs verified | `https://buffedlizard55-lab.github.io/OLBG2/`, `https://buffedlizard55-lab.github.io/OLBG2/verified/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/predictions.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/survey/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/integration.html` |
 
 
+## Session `arena/50268b75-olbg2` — daily slate refresh of the `/verified/` desk + in-band high-confidence focus (2026-10-22)
+
+**Session ID:** `arena/50268b75-olbg2` · **Branch:** `arena/50268b75-olbg2` · **Claimed:** 2026-10-22 01:23 UTC (before any implementation edit)
+
+**Why this session:** the `/verified/` desk was captured 2026-10-21. Its 21 Oct NHL/NBA/EuroCup/EHF/tennis/snooker/greyhound rows are now played, its NHL/NBA team inputs are one game day stale, and a new 22 Oct NHL + NBA slate exists. The brief also asks to focus high-confidence written picks on selections priced between **−250 and +10000** (American) rather than ultra-short moneylines; the current desk's 20 written picks are mostly sub-−250 moneylines.
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| R1 | Fresh 2026-10-22 capture from official governing-body sources only (NHL score/stats APIs, NBA official schedule + standings, MLB stats API, spot-verify EuroLeague R7 / Pro D2 J8 / PDC EC R1 / EHF R5 22-Oct fixtures). One official URL per row; anything unreachable stays blank and is flagged. | in progress | `arena/50268b75-olbg2` | `scripts/verified_seed.py`, `data/verified/**`, `research/refresh-50268b75.md` |
+| R2 | Migrate verified model NHL/NBA/URC/EHF inputs from shared `data/inputs/**` into `data/verified/inputs.json` (full-replacement fresh NHL/NBA literals; URC/EHF copied at seed time, EHF 21-Oct fixtures dropped as completed). Shared inputs are **not** edited. | in progress | `arena/50268b75-olbg2` | `scripts/verified_seed.py`, `scripts/verified_model.py`, `data/verified/**` |
+| R3 | Originate lines on refreshed slate; add fair American odds; featured written predictions only for selections with model probability ≥ 70% **and** fair American price in [−250, +10000] (handicap/total markets used when the moneyline is shorter than −250); ≥30 unique words each, official-source facts per claim. | in progress | `arena/50268b75-olbg2` | `scripts/verified_model.py`, `data/verified/**`, `verified/**` |
+| R4 | Rebuild `/verified/`, update pipeline tests, verify line by line (no row without official source, 0 broken local links, full suite green). | pending | `arena/50268b75-olbg2` | `scripts/verified_build.py`, `verified/**`, `tests/test_verified_pipeline.py` |
+| R5 | Final integration: PR → merge → confirm Pages deploy; record here. | pending | `arena/50268b75-olbg2` | shared outputs (integration), `COORDINATION.md` |
+
+**Concurrent-session check at claim time:** no open PRs (`gh pr list` empty); `origin/main` = `f8a14b4` (PR #49); all earlier sessions in this file are closed/merged. This session does **not** create, edit or delete: `data/inputs/**`, `data/matches.json`, `data/predictions.json`, `data/flagged.json`, `data/sources.json`, `data/desk/**`, `data/live/**`, `data/survey/**`, `data/refresh/**`, root pages, `site/**`, `live/**`, `survey/**`, `sports/**`, `assets/**`, `scripts/model.py`, `scripts/build_site.py`, `scripts/build.py`, `scripts/engine.py`, `scripts/live_*.py`, `scripts/survey_*.py`, `scripts/official_source_audit.py`, `scripts/integration_audit.py`, other sessions' tests. If root navigation needs a touch it will be requested here instead of edited.
+
+**Rules for this session (same as prior desks):** a value is published only when an official source returned it in this session's capture; unreachable values stay blank and are flagged; completed 21-Oct rows are removed from the upcoming desk and the removal is logged in `research/refresh-50268b75.md` (earlier layers keep their snapshots untouched); no bookmaker odds are read or used — the −250/+10000 band is applied to our own originated fair prices.
+

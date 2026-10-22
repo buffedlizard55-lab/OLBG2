@@ -1318,3 +1318,25 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 **Sequencing note (transparent):** PR #56 was merged a moment before its diff-gate check reported failure (root `picks.html` still stale), briefly leaving `main` red on the generated-files gate only — no wrong data was published beyond the one corrected sentence lingering on the root page. PR #57 synced it and `main` is green again. Lesson logged: never issue a merge in the same block as its CI watch.
 
 **Residual nit (left for next session):** root `picks.html` intro reads "A further 0 high-confidence picks…" — factual but clumsy template output from `build_site.py` when every write-up is in-band.
+
+
+---
+
+## Session `arena/072755db-olbg2` — line-by-line verification, coverage completion, final integration (2026-10-22 02:50 UTC)
+
+**Session ID:** `arena/072755db-olbg2` · **Branch:** `arena/072755db-olbg2` · **Claimed:** 2026-10-22 02:50 UTC (committed and pushed before any implementation edit)
+
+**Concurrent-session check at claim time.** `origin/main` = `c523300` (PR #58). Two PRs are open and were **not** created by this session: **#59** (`arena/53b0cd38-olbg2`, created 02:46Z, three files: `COORDINATION.md`, `picks.html`, `scripts/build_site.py`) and **#54** (`arena/1bb45081-olbg2`, created 01:58Z, 79 files, odds-window gate; no commits in the 52 minutes since). This session does **not** take over #59 or #54, does not merge them, and does not revert their intent. #59 is active and is left alone. #54 is recorded below as a stale parallel claim.
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| V1 | Claim, baseline build + test run | in progress | `arena/072755db-olbg2` | `COORDINATION.md` |
+| V2 | Independent line-by-line verification of every published row's official URL and of the 14 featured predictions' factual claims, re-fetched from the governing body in this session | in progress | `arena/072755db-olbg2` | `research/verification-072755db.md` |
+| V3 | Close coverage gaps that an official source can support (sports with zero rows; unlined rows with obtainable official inputs) | unclaimed by others | `arena/072755db-olbg2` | `scripts/verified_seed.py`, `scripts/verified_model.py`, `data/verified/**`, `tests/test_verified_pipeline.py` |
+| V4 | Publish verification results on the site (flagged/verification pages) and re-run every generator | pending | `arena/072755db-olbg2` | `scripts/build_site.py`, root pages, `verified/**` |
+| V5 | Final integration: PR → merge → Pages deploy confirmation → record here | pending | `arena/072755db-olbg2` | shared outputs |
+
+**File-scope overlap disclosure.** V3 necessarily touches `data/verified/**` and `scripts/verified_model.py`, which are also in stale PR #54's diff. #54's task (regrading confidence labels under the odds window) is **not** re-claimed here; this session only adds/repairs fixture, line and narrative coverage. If #54 is ever merged it must be rebased over this branch's data.
+
+**Rules applied.** A value is published only if an official source returned it during this session; otherwise it stays blank and is flagged. No bookmaker price is read. Prices remain our own fair-model prices. Every row keeps an official URL; every claim in a written prediction keeps its source.
+

@@ -3011,6 +3011,16 @@ No fresh sports facts are claimed. Official sports hosts are outside this sandbo
 
 Root/current integration, automatic all-layer HTML link discovery, accurate file-check disclosures, current seed/model/build CI and drift gate, README entry, and five regression tests completed. Full workflow rebuild replay succeeded; 343 tests passed; zero local file link errors across discovered HTML. No current data or predictions changed. Sources, limits, unresolved coverage and verification gaps: `research/integration-e52155e1.md`; public review links on `integration.html` and `current/flagged.html`. Source verification is **not** freshly certified. Publication follows. Initial branch pull returned “remote ref not found” because the Arena branch was new; pulled/rebased against main before its first push, then published the claim successfully. No merge conflict or other session scope edit.
 
+### `arena/e52155e1-olbg2` — publication ledger (DONE)
+
+- Integration PR [#123](https://github.com/buffedlizard55-lab/OLBG2/pull/123) **MERGED** without waiting for approval, merge SHA `9068101de4a4c577fcced046c7c0e1dc0a40b15b`.
+- PR validation passed (22 seconds); merged-tree validation passed (25 seconds), including current rebuild, 343 tests and clean generated drift gate.
+- [Deploy Pages run 39852683620](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39852683620) **SUCCESS**, deploy job completed successfully (27 seconds). Pages publication confirmed via GitHub Actions; direct deployed-page HTTP fetching is not claimed because the Pages domain is outside this sandbox allowlist.
+- Published landing: https://buffedlizard55-lab.github.io/OLBG2/ ; capture desk: https://buffedlizard55-lab.github.io/OLBG2/current/index.html ; public review: https://buffedlizard55-lab.github.io/OLBG2/current/flagged.html .
+- Both claimed tasks done. Unmet full daily coverage and freshly verified sports data remain **needs review**, as documented in the integration research note and public review pages. No invented values supplied.
+- Non-blocking CI annotations: GitHub reports forced Node 24 execution for older action versions and the ubuntu-latest image migration; these did not fail validation or deployment. Existing test ResourceWarnings remain noted in the research report.
 ### arena/83346ec9-olbg2 — concurrent integration handoff/conflict
 
 PR #124 initially passed CI but could not merge: PR #123 from arena/e52155e1 had concurrently integrated the same shared outputs after both sessions observed no open PR. Stopped and merged origin/main (9068101). Preserved both complete append-only coordination entries, both test files and both research notes; retained the other session's current-link paragraph and staging-directory exclusion, combined with this session's data-derived table, explicit review flags and Atlas table fix. Generated HTML regenerated from the combined builder instead of choosing stale conflict sides. No data/model files changed. Combined suite: 349 tests OK; zero all-layer file link errors. This supersedes the earlier no-conflict note.
+
+Publication ledger conflict resolution: concurrent PR #124 appended to COORDINATION.md while PR #125 was pending. Preserved both sessions’ entries verbatim; no data/code conflicts. Aborted the conflicted rebase, merged origin/main preserving history, and reran validation.

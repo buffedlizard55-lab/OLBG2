@@ -176,14 +176,14 @@ def main():
     ledger.append({
         "family": "ATP tennis",
         "official_source": cap_atp["source"],
-        "url": "https://www.atptour.com/en/scores/current/{almaty|brussels|lyon}/daily-schedule",
+        "url": "https://www.atptour.com/en/scores/current",
         "window": "Thu 22 October 2026",
         "rows_compared": len(ten_rows),
         "confirmed": len(confirmed),
         "mismatched": len(failed),
         "outside_window": len(ten_rows) - len(confirmed) - len(failed),
-        "note": (f"{len(confirmed)} round-of-16 pairings confirmed on the official ATP daily schedules for Almaty, "
-                 f"Brussels and Lyon. {len(failed)} of the {len(ten_rows)} tennis rows in the previously "
+        "note": (f"{len(confirmed)} round-of-16 pairings confirmed on the official ATP daily schedules for "
+                 f"Almaty (/9410), Brussels (/7485) and Lyon (/496). {len(failed)} of the {len(ten_rows)} tennis rows in the previously "
                  "published desk pair players who are not scheduled to meet on the page those rows cite; "
                  "they are listed individually on the flagged page and are not republished by this desk."),
     })

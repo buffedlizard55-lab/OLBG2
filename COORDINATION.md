@@ -2765,3 +2765,27 @@ predictions page rendered `high≥70% but priced shorter than -250` as one run o
 3. `stats.nba.com` and `atptour.com/en/rankings/singles` remain unreadable from this environment, so 74 NBA and
    11 tennis rows stay unpriced. Any future session with a working fetch should add those two inputs first —
    they are worth roughly 85 rows of origination.
+
+### `/atlas/` final ledger — all three PRs merged and deployed
+
+| PR | Title | Merged | Merge commit | `validate` | `Deploy Pages` |
+|---|---|---|---|---|---|
+| **[#107](https://github.com/buffedlizard55-lab/OLBG2/pull/107)** | Add `/atlas/` first-hand verified desk | 2026-10-22T12:50:45Z | `c0cacba` | pass | run on `c0cacba` cancelled by concurrency (PR #111 merged 8s later); replacement run on `main` succeeded |
+| **[#112](https://github.com/buffedlizard55-lab/OLBG2/pull/112)** | Fix tag spacing + record publication | 2026-10-22T12:57:12Z | `03fa3d3` | pass | **success** |
+| **[#113](https://github.com/buffedlizard55-lab/OLBG2/pull/113)** | Flagged-page accuracy pass | 2026-10-22T13:01:19Z | `6a77e0a` | pass | **success** |
+
+Three follow-up defects were found by reading the **deployed** pages back (not by re-reading the source), which
+is why they took three PRs instead of one:
+
+1. `.tag` had no trailing margin → `high≥70% but priced shorter than -250` rendered as one run of text. (PR #112)
+2. `AT-02`/`AT-07` hard-coded "Ten round-of-16 pairings" after the capture had grown to 11, and six WTA rows
+   carried a "schedule this desk read" link pointing at the *Almaty ATP* draw — implying a comparison that could
+   not be made. Both fixed, and every remaining hard-coded row count is now computed. (PR #113)
+3. The verification ledger's ATP row used a template string `{almaty|brussels|lyon}` as the `href`, producing
+   `%7Balmaty%7Cbrussels%7Clyon%7D`. Replaced with the real `/en/scores/current` index. (PR #114, this commit)
+
+**Lesson for the next session:** every one of those three was invisible in `data/atlas/*.json` and obvious in the
+rendered HTML. Read the deployed page back, not just the build log.
+
+**Live, re-fetched after the final deploy:** `atlas/verification.html` shows 210 rows compared / 174 confirmed /
+17 mismatched / 19 outside window, matching `data/atlas/verification.json` exactly.

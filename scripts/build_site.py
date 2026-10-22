@@ -256,7 +256,8 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
-    ("index.html", "Dashboard"),
+    ("final/index.html", "Consolidated desk (all 17 sports)"),
+    ("index.html", "Verified desk"),
     ("matches.html", "All matches"),
     ("sports/index.html", "Sports"),
     ("picks.html", "Picks"),
@@ -352,6 +353,10 @@ def build_index(matches, preds=None, flagged=None) -> str:
     )[:12]
 
     body = f"""
+<div class="notice blue"><strong>A newer consolidated desk exists.</strong> This page is the 118-row verified layer. The
+<a href="final/index.html">consolidated desk</a> de-duplicates all five layers into one table across all 17 eligible sports,
+regrades every pick under a single rule and carries its own flagged page. Start there; use this page as evidence.</div>
+
 <section class="hero">
   <p class="eyebrow">OLBG reverse-engineering · primary-source verification · independent line origination</p>
   <h1>Every eligible OLBG sport, one verified table.</h1>

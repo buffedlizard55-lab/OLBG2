@@ -42,6 +42,13 @@ jobs:
           python scripts/survey_build.py
           python scripts/survey_verify.py
 
+      - name: Rebuild the consolidated 17-sport desk
+        run: |
+          python scripts/final_consolidate.py
+          python scripts/final_predictions.py
+          python scripts/final_flags.py
+          python scripts/final_build.py
+
       - name: Regenerate the root dashboard & integration layer
         run: python scripts/build_site.py
 
@@ -52,4 +59,4 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Fail if any generated page or data file is stale
-        run: git diff --exit-code -- verified data/verified live data/live site survey data/survey integration.html index.html picks.html flagged.html methodology.html sources.html sports assets
+        run: git diff --exit-code -- verified data/verified live data/live site survey data/survey final data/final integration.html index.html picks.html flagged.html methodology.html sources.html sports assets

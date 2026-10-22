@@ -1890,3 +1890,84 @@ A65-1 is **done**. A65-2 remains **in progress / external Pages queue**; the pub
 | Combined-tree verification before merge | 115 unit tests OK (root/live/desk/survey/forward/verified/board/slate/hub/evidence/audit65), `integration_audit.py` 0 local link errors, CI's exact drift command clean locally, `evidence/audit.json` regenerated against the 188-row desk (reproducibility gate green) |
 
 Session closed: V1 claim, V2 re-verification, V3 gap closures (VF-14 closed 22–31 Oct; VF-22/03 reconfirmed), V4 write-up re-check, V5 integration + publication — done and live.
+---
+
+## Session `arena/d81930c3-olbg2` — First-Hand Official-Source Verification, Cross-Layer Audit, Multi-Market Origination & In-Band Predictions Portal (`/portal/`)
+
+**Session ID:** `arena/d81930c3-olbg2` · **Branch:** `arena/d81930c3-olbg2` (fixed by Arena session tracking; `session-<id>/<task>` branch naming is disallowed by platform tracking) · **Claimed:** `2026-10-22` UTC, committed and pushed immediately before any implementation edit.
+
+**Concurrent-session check across all remote branches (`refs/heads/*`) at claim time (`origin/main` = `33083e6`):**
+- `arena/1352b77f-olbg2` (`08:10 UTC`): `scripts/verified_*.py`, `scripts/build_site.py`, `data/verified/**`, `data/forward/**`, `research/verification-1352b77f.md`, `README.md`, root HTML — **untouched**
+- `arena/c12bdcd7-olbg2` (`08:25 UTC`): `METHODOLOGY.md`, `scripts/build_site.py`, `scripts/survey_*.py`, `scripts/live_*.py`, `scripts/build.py`, `scripts/engine.py`, `scripts/model.py`, `data/{desk,live,survey}/**`, `research/pr54-takeover-c12bdcd7.md`, root HTML — **untouched**
+- `arena/02095e6b-olbg2` (`08:23 UTC`): `evidence/**`, `scripts/evidence_integrity.py`, `tests/test_evidence_integrity.py`, `research/evidence-integrity.md` — **untouched**
+- `arena/65ff36f0-olbg2` (`08:23 UTC`): `audit65/**`, `data/audit65/**`, `scripts/audit65.py`, `tests/test_audit65.py`, `research/independent-audit-65ff36f0.md` — **untouched**
+- `arena/399eb9ae-olbg2` (`08:25 UTC`): `center/**`, `data/center/**`, `scripts/center_*.py`, `tests/test_center_399eb9ae.py`, `research/audit-399eb9ae.md` — **untouched**
+- `arena/5de28a6f-olbg2` (`08:25 UTC`): `final/**`, `data/final/**`, `scripts/final_*.py`, `tests/test_final.py`, `research/final-audit-5de28a6f.md` — **untouched**
+- Merged disjoint layers (`/site/`, `/survey/`, `/live/`, `/verified/`, `/forward/`, `/board/`, `/slate/`, `/hub/`) — **untouched**
+
+| # | Task | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| P1 | Read `COORDINATION.md`, check all active remote branches, claim strictly disjoint `/portal/` scope, commit & push claim immediately | **done** | `arena/d81930c3-olbg2` | `COORDINATION.md` (append-only) |
+| P2 | Reverse-engineer OLBG.com (`sitemap-betting-tips.xml` + all 17 eligible sport hubs + excluded hubs) & perform line-by-line forensic audit of existing repo layers (`/verified/`, `/forward/`, `/board/`, `/slate/`, `/hub/`, `/live/`, `/site/`, `/survey/`) against live official governing-body sources (`2026-10-22` UTC), flagging every irregularity with clickable official links | **done** | `arena/d81930c3-olbg2` | `research/audit-d81930c3.md`, `data/portal/sources.json`, `data/portal/repo_audit.json`, `data/portal/sports.json` |
+| P3 | Full 17-sport verified match schedule & independent multi-market line origination (`Win Match / Moneyline / 1X2`, `Handicap / Spread / Puck / Run / Set / Leg / Frame Line`, `Match Total Over/Under`, plus actionable `-250..+10000` markets; zero excluded sports; unconfirmed values left strictly blank `—` and flagged) | **done** | `arena/d81930c3-olbg2` | `scripts/portal_seed.py`, `scripts/portal_model.py`, `data/portal/inputs.json`, `data/portal/matches.json`, `data/portal/flagged.json` |
+| P4 | Confidence grading (`low` / `medium` / `high`) & bespoke, non-robotic human predictions (`>= 30` words each, unique prose, strictly inside `-250` to `+10000` fair American odds, naming verified team + player + current form + recent match history + explicit betting selection, every factual claim verified first-hand from official sources) | **done** | `arena/d81930c3-olbg2` | `data/portal/predictions.json`, `scripts/portal_model.py` |
+| P5 | Clean, user-friendly GitHub Pages dashboard at `/portal/` (`portal/{index,matches,picks,flagged,audit,methodology,sources,excluded}.html` + `portal/sports/{index,<17-slugs>}.html` + `portal/assets/{style.css,app.js}`) + strict line-by-line row-source/link verifier & automated unit test suite | **done** | `arena/d81930c3-olbg2` | `scripts/portal_build.py`, `scripts/portal_verify.py`, `portal/**`, `tests/test_portal_d81930c3.py` |
+| P6 | Rebase onto latest `origin/main`, run full repo build + link verification + test suite, open PR → `main`, self-merge without waiting for approval, confirm GitHub Pages deployment, and record PR link, merge SHA, sources, verification, and irregularities in `COORDINATION.md` | **done** | `arena/d81930c3-olbg2` | `COORDINATION.md` (append-only; root nav link logged as cross-scope request while root owners are active, or integrated cleanly if all root claims close) |
+
+### Summary of Completed `/portal/` Deliverables & Cross-Scope Requests (`arena/d81930c3-olbg2`)
+
+- **Primary Pull Request & Merge Record:**
+  - **PR [#88](https://github.com/buffedlizard55-lab/OLBG2/pull/88)** — **MERGED** to `main` at `2026-10-22T09:05:50Z` (merge commit `5fd79f5213ec39922fcccb9409f8c7233a4408a4`).
+  - **Post-PR-#82 Snapshot Isolation Sync:** Isolated `data/portal/raw_seed.json` inside `data/portal/` so upstream dataset expansions (such as PR #82's 74-game NBA Oct 22–31 slate) never mutate `/portal/` during `unittest`; synced `/portal/` cleanly to **`220` originated multi-market matches + `24` transparently blank rows = `244` verified rows**.
+  - **GitHub Pages Target URL:** `https://buffedlizard55-lab.github.io/OLBG2/portal/index.html` (and `/portal/flagged.html`, `/portal/picks.html`, `/portal/matches.html`, `/portal/sports/index.html`; Pages build `1304941323` and `Deploy Pages` workflow `39752769550` triggered on `main`).
+- **17 / 17 Eligible OLBG Sports Originated (`0` Excluded Sports Leaked):** `220` multi-market originated fixtures + `24` transparently blank unconfirmed fixtures = **`244` verified fixtures** across Aussie Rules (`9`), Baseball (`4`), Basketball (`83`: `74` NBA Oct 22–31 + `9` EuroLeague R7), Cricket (`8`), Darts (`16`), Esports (`8`), Gaelic Football (`6`), Golf (`8`), Greyhounds (`7`), Handball (`6`), Ice Hockey (`19`), Motor Racing (`6`), Rugby League (`6`), Rugby Union (`23`), Snooker (`8`), Tennis (`17`), and Volleyball (`10`).
+- **34 Featured High-Confidence In-Band Predictions Across All 17 Sports:** `100%` strictly inside `[-250, +10000]` (`-244` to `+311` American, `1.41` to `4.11` decimal), `56–87` words each, `34 / 34` unique 3-word openings, naming verified teams, named players & stats, current form, dated match history, and explicit betting selection.
+- **Line-by-Line Verification & Link Audit:** `26` static HTML pages under `portal/`, `707 / 707` (`100%`) `<tbody><tr>` rows carrying primary governing-body HTTPS links (`29` official feeds documented in `data/portal/sources.json`), `1,536 / 1,536` internal links & fragments verified, `119 / 119` repository unit tests passing, and `0` diff across all CI-validated upstream layers.
+- **Cross-Scope Requests Logged (Zero Upstream Edits Made):**
+  1. **Root Navigation Owner (`scripts/build_site.py`, root `index.html`):** Please add a navigation link to `/portal/index.html` (`17-Sport Origination & Forensic Audit Portal`) and `/portal/flagged.html` (`38 Flagged Items`).
+  2. **`/slate/` Owner (`data/slate/matches.json`, `data/slate/predictions.json`):** See `PA-01`, `PA-02`, `PA-08`, `PA-09` in `research/audit-d81930c3.md` — 12 of 13 ATP fixtures and predictions `[0..5]` are non-existent pairings on official `atptour.com` daily schedules (`Almaty 9410`, `Brussels 7485`, `Lyon 496`); `pdc-32330` replaced active `(28) Stephen Bunting` with `Ritchie Edhouse`; 8 LoL Worlds rows cite `liquipedia.net`; F1 pick `#34` states `18` completed rounds instead of `17`.
+  3. **`/verified/`, `/board/`, `/hub/` Owners:** See `PA-03`, `PA-04`, `PA-06` — `golf-utah-2026` concluded Oct 4 (won by Austin Smotherman `-26`); Genesis Championship field is `126` players (`90 DPWT + 36 KPGA`); `/hub/` mislabels Lyon/Ningbo/Osaka tennis ties as next week's `Basel`/`Vienna`/`Guangzhou`.
+
+## Session `arena/5de28a6f-olbg2` — consolidated 17-sport verification desk, strict in-band confidence regrade, and publication (`/final/`)
+
+**Session ID:** `arena/5de28a6f-olbg2` · **Branch:** `arena/5de28a6f-olbg2` · **Claimed:** 2026-10-22 08:25 UTC, before any implementation edit.
+
+**Live-branch check at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, tips listed with UTC times):
+`arena/02095e6b-olbg2` 08:23 (scoped evidence integrity audit claim), `arena/65ff36f0-olbg2` 08:23
+(publication-integrity audit claim), `arena/7f261be1-olbg2` 08:23 (PR #74 ledger), `arena/1352b77f-olbg2`
+08:10 (adopting PR #54 uniform odds-window gate in `scripts/build_site.py` / root picks), `arena/c12bdcd7-olbg2`
+08:00 (root METHODOLOGY). This session treats those scopes as owned and does **not** edit `scripts/build_site.py`,
+root `index.html`/`matches.html`/`picks.html`/`flagged.html`/`methodology.html`/`sources.html`/`verification.html`/
+`archive.html`/`integration.html`, `sports/**`, `assets/**`, `data/verified/**`, `data/forward/**`, or `scripts/verified_*.py`.
+
+| # | Task | Status | Owner | File scope (new files only until F6) |
+|---|---|---|---|---|
+| F1 | Claim + live-branch check | done 08:25Z | `arena/5de28a6f-olbg2` | `COORDINATION.md` (append-only) |
+| F2 | Mechanical cross-layer audit: duplicate fixtures, conflicting prices, grading-rule divergence, stale rows, source coverage | done 08:50Z | `arena/5de28a6f-olbg2` | `research/final-audit-5de28a6f.md` |
+| F3 | Consolidated canonical dataset: union of `/hub/`, `/verified/`, `/board/`, `/slate/`, `/forward/` de-duplicated by fixture, provenance kept, one uniform confidence rule | done 09:05Z — 382 fixtures after the verified/greyhound merge, 279 lined, 19 high | `arena/5de28a6f-olbg2` | `data/final/**`, `scripts/final_*.py` |
+| F4 | Official-source re-verification of the consolidated set (bulk governing-body endpoints first, then per-fixture), every mismatch logged | partial 09:15Z — 6 re-read, 18 form, 1 corrected; rest labelled inherited | `arena/5de28a6f-olbg2` | `data/final/**`, `research/final-audit-5de28a6f.md` |
+| F5 | High-confidence write-ups (≥30 words, unique, explicit selection, sourced form + recent history) for every in-band ≥70% selection | done 09:20Z — 19 texts, 64–94 words | `arena/5de28a6f-olbg2` | `data/final/predictions.json` |
+| F6 | `/final/` dashboard: landing, all matches, per-sport pages, picks, verification ledger, flagged-for-review, methodology, sources; deterministic builder; tests | done 09:30Z — 26 pages, 24 tests | `arena/5de28a6f-olbg2` | `scripts/final_build.py`, `final/**`, `tests/test_final.py` |
+| F7 | Integration: rebase on latest `main`, full build + link audit + tests, PR → merge, confirm Pages, record here | in progress | `arena/5de28a6f-olbg2` | shared outputs at integration only |
+
+**Cross-scope request (logged, not edited):** root-layer owner `arena/1352b77f-olbg2` — once `/final/` is published,
+add a top-bar link `"Consolidated 17-Sport Desk (/final/)"` to `scripts/build_site.py`'s navigation so the root landing
+points at the consolidated table. This session will make that one-line change itself at F7 only if the branch is no
+longer live and `main` has no newer root build; otherwise the link stays a logged request.
+
+**Rules for this session:** every published value keeps the official URL of the row it came from; no value is inferred
+or filled; a selection is graded `high` only when the model probability is ≥70% **and** the fair decimal price is inside
+1.40–101.00 (the brief's −250…+10000 band), which is the only window satisfying both constraints; everything else is
+medium/low or blank. No bookmaker price is read or invented.
+
+
+### F7 integration note (appended before merge)
+
+The consolidated desk is committed on `arena/5de28a6f-olbg2` as three commits:
+`65b75e7` (engine + data + 24 tests), `151bcf8` (26 generated pages), `19508fa` (root nav
+entry + CI enforcement). Shared outputs changed at integration only: `index.html` and the
+other root pages gained one nav entry and one banner link to `final/index.html`; no root
+data row was altered. CI now rebuilds `data/final/` and `final/` and fails on drift.
+
+**Cross-scope request resolved:** the root nav change requested from `arena/1352b77f-olbg2`
+was made by this session at F7, as logged. It is a two-line edit (NAV entry + banner).

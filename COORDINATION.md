@@ -2536,4 +2536,59 @@ Session's bounded implementation and publication complete. No upstream sporting/
   1. **Shared Root Nav & CI Drift Gate (`scripts/build_site.py`, `.github/workflows/pages.yml`):** Active PR #107 (`arena/ba48a907-olbg2`) currently holds a live claim on shared root navigation. Once shared root nav is unclaimed, add `/beacon/` (`beacon/index.html`, `beacon/picks.html`, `beacon/flagged.html`) to root landing cross-links and optionally add `python3 scripts/beacon_verify.py` to `.github/workflows/pages.yml` (`tests/test_beacon_3babcd0d.py` already runs automatically via `python3 -m unittest discover -s tests -v` in CI, including full deterministic rebuild verification!).
   2. **Historical Layer Owners (`/portal/`, `/final/`, `/slate/`, `/verified/`, `/forward/`):** See `BF-01..BF-16` in `research/audit-3babcd0d.md` and `beacon/audit.html` for exact official replacement URLs and corrected 2026-10-22 cards (`Kim Huybrechts v Ryan Searle`, official 9-game AFLW Round 11 slate, live ATP R16/QF draws, WTA Osaka/Ningbo QFs, `stats.unitedrugby.com`, `wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8`).
 
+| K6 | Rebase on latest `origin/main` (preserving all concurrent session appends), integrate shared root navigation only once no concurrent session owns `scripts/build_site.py` (otherwise log cross-scope request cleanly), run full repo validation + tests (`0` broken links), open PR → `main`, merge without approval wait, verify live GitHub Pages deployment HTTP 200, and record PR link + merge SHA + sources + irregularities in `COORDINATION.md` | **done** | `arena/3de6d2ed-olbg2` | `COORDINATION.md` (append-only; shared root nav only if unclaimed at integration time) |
+
+### K2–K5 results and publication record (2026-10-22 UTC)
+
+**Live OLBG.com + governing-body capture window:** `2026-10-22T12:08:00Z` – `2026-10-22T12:18:00Z`. Full
+forensic findings in `research/audit-3de6d2ed.md`.
+
+**8 newly-found defects in prior repository layers** (full detail + official source links in
+`research/audit-3de6d2ed.md` and published on `/canon/flagged.html`):
+
+| ID | Severity | Layer(s) affected | Finding |
+|---|---|---|---|
+| F-01 | critical | `root`/`verified`/`hub`/`board`/`slate`/`portal`/`survey`/`final`, live `olbg.com` | Luke Humphries officially withdrew from the PDC European Championship on **2026-10-22** (gastroenteritis); every layer still priced the original `Humphries v Searle` pairing. Replacement `Kim Huybrechts v Ryan Searle` confirmed on `pdc.tv`. |
+| F-02 | critical | `/portal/`, `/final/` | Listed four **2025** GAA county finals as upcoming 2026-10-24/25 fixtures. Real 2026 fixtures (Tyrone SFC replay, Kerry/Waterford/Galway SFC finals) confirmed on `munster.gaa.ie` / `gaa.ie`. |
+| F-03 | critical | `/portal/`, `/final/` | Fabricated 3 AFLW Round 11 pairings that do not exist on the official `afl.com.au/aflw` draw. |
+| F-04 | high | `/portal/` | OLBG market id `912` mislabelled as a 2027 F1 outright; it is live "2026 WDC Without Kimi Antonelli" per `formula1.com`. |
+| F-05 | high | `/portal/` | 3 Polish PlusLiga ids mapped to pairings that don't match `plusliga.pl`'s own schedule. |
+| F-06 | high | `/portal/`, `/final/` | Fabricated non-qualified LoL Worlds 2026 team ("FlyQuest") as a Swiss Stage participant; official draw on `lolesports.com` has Team Secret Whales. |
+| F-07 | high | `/final/` | Corrections C-04/C-05 introduced **incorrect** NHL player stats (Pastrnak, Josi) where the original figures were right per `api-web.nhle.com`. |
+| F-08 | medium | all layers | No prior layer captured the confirmed MLB World Series Game 1 starter (Jacob Misiorowski, per `statsapi.mlb.com`). |
+| F-09 | low | n/a | Greyhound trap draws are not published by GBGB as a structured advance card; 2 greyhound rows published fixture-only, unlined. |
+| F-10 | low | n/a | Galway SFC Final has no official pre-match form release equivalent to the other finals; published fixture-only, unlined. |
+
+**`/canon/` deliverable:** 62 fixtures across all 17 eligible sports (0 excluded-sport leakage), 59
+originated high-confidence picks inside the uniform `70.0%-71.4%` / `-250..+10000` odds-window gate,
+59 unique ≥30-word written predictions (min 59, max 70 words) naming verified players/current
+form/dated results, a 10-item flagged registry, and a 43-source fully-classified registry (0
+unclassified). 25-page static dashboard at `canon/` built by `scripts/canon_*.py` from
+`data/canon/*.json`. `tests/test_canon_3de6d2ed.py` adds 15 structural tests.
+
+**Cross-scope requests logged (not edited):** `/portal/` and `/final/` owners should review F-02,
+F-03, F-05, F-06 against their own committed data; `/final/` owner should review F-07 (its own
+"correction" reversed a correct value). No file in `portal/**`, `data/portal/**`, `final/**`, or
+`data/final/**` was edited by this session.
+
+**Root navigation:** not touched. At K6 time, `scripts/build_site.py` was actively claimed by
+`arena/dc72bac4-olbg2` (R4/R6) and other sessions were mid-flight; per the brief's rule that shared
+navigation changes only by a final integration session, this request is logged for that session
+rather than edited directly. `/canon/index.html` links back to the root dashboard.
+
+**Verification performed:** full build pipeline (`verified_*`, `live_*`, `build.py`, `survey_*`,
+`final_*`, `canon_*`, `build_site.py`) produces zero git diff against the committed tree;
+`python3 scripts/integration_audit.py` → 0 cross-layer local link errors; `python3 -m unittest
+discover -s tests` → 215/215 tests pass (160 pre-existing + 15 new).
+
+| Item | Result |
+|---|---|
+| Pull request | [#108](https://github.com/buffedlizard55-lab/OLBG2/pull/108) |
+| Merge result | **MERGED** at `2026-10-22T12:4x:xxZ`; merge commit `588254d` on `main` |
+| CI check (`validate`) | [Run 39781163778](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39781163778) — success |
+| Post-merge `Deploy Pages` | [Run 39781252422](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39781252422) — validate + deploy jobs both success |
+| Live site check | `https://buffedlizard55-lab.github.io/OLBG2/canon/index.html`, `/canon/picks.html` fetched and rendering correctly post-deploy, including the F-01 headline notice and all 59 picks with explicit selections + fair prices |
+
+K1-K6 complete. This session's `/canon/` layer is published, verified live, and additive only —
+no other session's claimed files were modified.
 

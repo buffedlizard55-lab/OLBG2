@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology — OLBG2 /update/</title><style>
+:root{--ink:#12253f;--muted:#5b6b7f;--line:#e3e8ee;--accent:#0d5c63;--hot:#b3261e;--warm:#8a5a00;--cool:#1b5e20;--wash:#f6f8fa}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--ink);color:#fff;padding:18px 24px}header h1{margin:0;font-size:21px;letter-spacing:.2px}header .sub{opacity:.8;font-size:13px;margin-top:2px}
+nav{background:var(--wash);border-bottom:1px solid var(--line);padding:9px 24px;display:flex;flex-wrap:wrap;gap:3px 14px;font-size:13px}
+nav a{color:var(--accent);text-decoration:none;font-weight:600}nav a:hover{text-decoration:underline}
+main{max-width:1220px;margin:0 auto;padding:22px 24px 60px}
+h2{font-size:19px;margin:26px 0 10px}h3{font-size:16px;margin:20px 0 8px}
+p.lede{color:var(--muted);margin:6px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 20px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--wash);font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+tr:nth-child(even) td{background:#fcfdfe}
+a.src{color:var(--accent);font-weight:600;text-decoration:none;word-break:break-all}
+a.src:hover{text-decoration:underline}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
+.p-high{background:#fdecea;color:var(--hot)}.p-medium{background:#fff4e0;color:var(--warm)}.p-low{background:#eef2f6;color:var(--muted)}
+.p-ok{background:#e7f4ea;color:var(--cool)}.p-flag{background:#fdecea;color:var(--hot)}
+.p-cap{background:#e8f0fe;color:#1a4fa0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:14px 0 22px}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--wash)}
+.card .num{font-size:24px;font-weight:700}.card .lbl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.writeup{color:#233246;font-size:13.5px}
+small.mut{color:var(--muted)}
+.flagitem{border-left:4px solid var(--hot);background:#fffafa;padding:10px 14px;margin:10px 0;border-radius:0 6px 6px 0}
+.flagitem .t{font-weight:700}footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:18px 24px}
+.blank{color:#98a4b3;font-style:italic}
+</style></head>
+<body>
+<header><h1>OLBG2 · Updated Match List &amp; Betting Lines</h1>
+<div class="sub">Window 22–28 October 2026 · every value from verified official sources · nothing inferred</div></header>
+<nav><a href="index.html">Dashboard</a><a href="matches.html">Matches</a><a href="picks.html">Picks</a><a href="band.html">In-Band Picks</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a><a href="flagged.html">Flagged for Review</a><span style="flex-basis:100%;height:0"></span><a href="tennis.html">Tennis</a><a href="darts.html">Darts</a><a href="snooker.html">Snooker</a><a href="golf.html">Golf</a><a href="cricket.html">Cricket</a><a href="baseball.html">Baseball</a><a href="basketball.html">Basketball</a><a href="ice-hockey.html">Ice Hockey</a><a href="rugby-union.html">Rugby Union</a><a href="rugby-league.html">Rugby League</a><a href="handball.html">Handball</a><a href="volleyball.html">Volleyball</a><a href="aussie-rules.html">Aussie Rules</a><a href="motor-racing.html">Motor Racing</a><a href="esports.html">Esports</a><a href="greyhounds.html">Greyhounds</a><a href="gaelic-football.html">Gaelic Football</a></nav>
+<main>
+<h2>Methodology</h2>
+<p class="lede">Session arena/d69dc1c9-olbg2 · window 22–28 Oct 2026 · branch arena/d69dc1c9-olbg2.</p>
+<h3>Origination rules</h3>
+<ul>
+<li><strong>Win match:</strong> Bill James log5 on Laplace-smoothed win percentages (W+1)/(GP+2) from captured W-L(-D)
+records; EuroLeague uses a logistic on the standings position rendered by the official widget; darts uses a logistic on
+official draw seedings where the bracket rendered them; the F1 race winner uses a 60/40 blend of season and last-five
+win shares from the official 2026 results table.</li>
+<li><strong>Handicap:</strong> expected margin from captured PF/PA differentials blended with the win probability
+(NHL scale 6 goals, URC 14 points, MLB 2.5 runs); priced at the standard ~1.91 two-way. Alternates come from the prior
+layer where that layer already priced them (labelled inherited).</li>
+<li><strong>Totals:</strong> mean of the two teams' captured per-game combined scoring, rounded to the half. Where no
+captured over/under splits exist the price is left even and said so.</li>
+<li><strong>Never inferred:</strong> no player names without an official feed, no times/timezones conversions without a
+label, no lines where form was not verified. Those rows keep the pick blank and appear on Flagged for Review.</li>
+</ul>
+<h3>Confidence gate</h3>
+<ul>
+<li><strong>High:</strong> model win probability ≥ 70% <em>and</em> fair American inside −250…+10000 (70.0–71.4%
+maps to roughly −250…−233). A 75% favourite at −300 is honestly labelled <em>high (out of band)</em> and kept out
+of the in-band tables.</li>
+<li><strong>Medium:</strong> 60–70% (or high-probability out-of-band picks' underlying moneyline where the listed
+selection is an alternative handicap carrying its own price).</li>
+<li><strong>Low:</strong> below 60%.</li>
+</ul>
+<h3>Capture vs inherited</h3>
+<p class="lede"><em>Fresh capture</em> = fetched from the official league source during this session (NHL score feeds,
+MLB Stats API, URC match centre, WST match centre, ATP day schedules, EuroLeague official site, PDC official pages,
+F1 official results, TAURON Liga game centre). <em>Form cross-ref</em> = fixture captured fresh, form label borrowed
+from the prior /verified/ layer where the fresh feed lacked records (clearly marked on the row). <em>Inherited</em> =
+entire row carried from data/verified (PR #82) because no fresh capture was possible (NBA endpoints were down; other
+sports exceeded the session's fetch budget). Inherited rows never claim fresh-capture credit.</p>
+<h3>Irregularities</h3>
+<p class="lede">PDC pages served consent walls (schedule text obtained via search rendering of the official URLs —
+rows keep the official links for manual review); Luke Humphries' same-day withdrawal (gastroenteritis, official PDC
+statement 22 Oct) replaced him with Kim Huybrechts in the European Championship draw — flagged; URC and EuroLeague and
+TAURON Liga times are published exactly as rendered, timezones not inferred.</p>
+</main>
+<footer>Built by <code>scripts/update_build.py</code> from <code>data/update/</code> · session branch arena/d69dc1c9-olbg2 ·
+unverified values are left blank and flagged — never filled by guess.</footer>
+</body></html>

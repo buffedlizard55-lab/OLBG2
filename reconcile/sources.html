@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · OLBG2 reconciliation console</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> OLBG2 · Reconciliation console</div>
+    <nav class="nav"><a href="index.html">Overview</a><a href="conflicts.html">Conflicts</a><a href="non-fixtures.html">Non-fixtures</a><a href="freshness.html">Freshness</a><a href="provenance.html">Provenance</a><a href="predictions.html">Predictions</a><a href="spot-checks.html">Spot checks</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="../index.html">Dashboard</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+
+<h1>Sources</h1>
+<p class="lede">Every URL this audit opened, and what it was used for. Internal layer files are listed as paths so the
+audit is reproducible from the repository itself.</p>
+<h2>Official pages read in this session</h2>
+<div class="scroll"><table class="data"><thead><tr><th>Check</th><th>Official page</th><th>Verdict</th></tr></thead><tbody>
+<tr><td>SC-01</td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-22" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/schedule/2026-10-22</a></td><td>confirmed</td></tr>
+<tr><td>SC-02</td><td><a href="https://api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24</a></td><td>confirmed</td></tr>
+<tr><td>SC-03</td><td><a href="https://api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24</a></td><td>partially_confirmed</td></tr>
+<tr><td>SC-04</td><td><a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener noreferrer" target="_blank">atptour.com/en/scores/current/almaty/9410/daily-schedule</a></td><td>contradicted</td></tr>
+<tr><td>SC-05</td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener noreferrer" target="_blank">gbgb.org.uk/racing/open-races/2025-category-one-schedule/</a></td><td>confirmed</td></tr>
+<tr><td>SC-06</td><td><a href="https://www.pdc.tv/tournaments/machineseeker-european-championship" rel="noopener noreferrer" target="_blank">pdc.tv/tournaments/machineseeker-european-championship</a></td><td>unreadable</td></tr>
+<tr><td>SC-07</td><td><a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener noreferrer" target="_blank">formula1.com/en/results/2026/drivers</a></td><td>partially_confirmed</td></tr>
+<tr><td>SC-08</td><td><a href="https://www.plusliga.pl/games.html" rel="noopener noreferrer" target="_blank">plusliga.pl/games.html</a></td><td>unreadable</td></tr>
+<tr><td>SC-09</td><td><a href="https://api-live.euroleague.net/v1/results?seasonCode=E2026&amp;round=7" rel="noopener noreferrer" target="_blank">api-live.euroleague.net/v1/results?seasonCode=E2026&amp;round=7</a></td><td>partially_confirmed</td></tr>
+</tbody></table></div>
+<h2>Governing-body endpoints used by the audited layers</h2>
+<p class="lede">These are the citation hosts the layers themselves use. They were not all opened in this session; they are
+listed because the provenance counts on the provenance page depend on them.</p>
+<div class="scroll"><table class="data"><thead><tr><th>Source</th><th>URL</th></tr></thead><tbody>
+<tr><td>NHL schedule feed (2026-10-22)</td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-22" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/schedule/2026-10-22</a></td></tr>
+<tr><td>NHL club schedule (BOS, week of 2026-10-24)</td><td><a href="https://api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24</a></td></tr>
+<tr><td>ATP Almaty daily schedule</td><td><a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener noreferrer" target="_blank">atptour.com/en/scores/current/almaty/9410/daily-schedule</a></td></tr>
+<tr><td>GBGB 2026 Category One schedule</td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener noreferrer" target="_blank">gbgb.org.uk/racing/open-races/2025-category-one-schedule/</a></td></tr>
+<tr><td>PDC Machineseeker European Championship</td><td><a href="https://www.pdc.tv/tournaments/machineseeker-european-championship" rel="noopener noreferrer" target="_blank">pdc.tv/tournaments/machineseeker-european-championship</a></td></tr>
+<tr><td>Formula 1 2026 drivers&#x27; standings</td><td><a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener noreferrer" target="_blank">formula1.com/en/results/2026/drivers</a></td></tr>
+<tr><td>PlusLiga games page (resolves to TAURON Liga)</td><td><a href="https://www.plusliga.pl/games.html" rel="noopener noreferrer" target="_blank">plusliga.pl/games.html</a></td></tr>
+<tr><td>EuroLeague results API, season E2026 round 7</td><td><a href="https://api-live.euroleague.net/v1/results?seasonCode=E2026&amp;round=7" rel="noopener noreferrer" target="_blank">api-live.euroleague.net/v1/results?seasonCode=E2026&amp;round=7</a></td></tr>
+<tr><td>OLBG ice hockey hub (taxonomy reference)</td><td><a href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener noreferrer" target="_blank">olbg.com/betting-tips/Ice_Hockey/13</a></td></tr>
+</tbody></table></div>
+<h2>Repository inputs (read-only)</h2>
+<div class="scroll"><table class="data"><thead><tr><th>Layer</th><th>File</th><th>Rows</th></tr></thead><tbody>
+<tr><td>board</td><td><code>data/board/matches.json</code></td><td><span class="num">207</span></td></tr>
+<tr><td>desk</td><td><code>data/desk/fixtures.json</code></td><td><span class="num">25</span></td></tr>
+<tr><td>final</td><td><code>data/final/matches.json</code></td><td><span class="num">382</span></td></tr>
+<tr><td>forward</td><td><code>data/forward/matches.json</code></td><td><span class="num">93</span></td></tr>
+<tr><td>hub</td><td><code>data/hub/matches.json</code></td><td><span class="num">189</span></td></tr>
+<tr><td>live</td><td><code>data/live/lines.json</code></td><td><span class="num">11</span></td></tr>
+<tr><td>portal</td><td><code>data/portal/matches.json</code></td><td><span class="num">244</span></td></tr>
+<tr><td>root</td><td><code>data/matches.json</code></td><td><span class="num">47</span></td></tr>
+<tr><td>slate</td><td><code>data/slate/matches.json</code></td><td><span class="num">208</span></td></tr>
+<tr><td>survey</td><td><code>data/survey/lines.json</code></td><td><span class="num">25</span></td></tr>
+<tr><td>verified</td><td><code>data/verified/matches.json</code></td><td><span class="num">188</span></td></tr>
+</tbody></table></div>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Independent cross-layer audit of the published OLBG2 datasets. Read-only: no other session's data was edited.
+Every value below is machine-derived from committed JSON; spot checks link the official page that was read.</p>
+<p>Audit date 2026-10-22 · session <code>arena/3552df3e-olbg2</code> · <a href="flagged.html">Flagged for review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

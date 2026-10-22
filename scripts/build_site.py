@@ -266,6 +266,7 @@ NAV = [
     ("sources.html", "Sources"),
     ("archive.html", "Archive"),
     ("integration.html", "Cross-layer review"),
+    ("reconcile/index.html", "Reconciliation console"),
 ]
 
 

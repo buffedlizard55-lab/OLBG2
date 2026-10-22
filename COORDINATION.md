@@ -2167,3 +2167,90 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 - Pages deploy run [39776532006](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39776532006) **success**, validation and deployment jobs passed.
 - Pages build `1305315713` reports `built`, no error, commit `293c0c045d9c05b7ee73840ed3ae2af5395666be`.
 - Cache-busted live review page retrieval succeeded at `https://buffedlizard55-lab.github.io/OLBG2/review/reproducibility.html?v=293c0c0`; it displays the source-access caveat and board count mismatch. This confirms deployment only, not the official NBA URL contents.
+---
+
+## Session `arena/3552df3e-olbg2` — cross-layer reconciliation console (`/reconcile/`)
+
+**Session ID:** `arena/3552df3e-olbg2` · **Branch:** `arena/3552df3e-olbg2` (fixed by Arena session tracking) ·
+**Claimed:** 2026-10-22 12:15 UTC, committed and pushed immediately, before any implementation edit.
+
+**Live-branch survey at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`; `origin/main` = `238c157`, PR #91 merged):
+
+| Branch | Tip (UTC) | Claimed scope at claim time | This session |
+|---|---|---|---|
+| `arena/dc72bac4-olbg2` | 12:08 | `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py`, `review/reproducibility.html`, `research/reproducibility-audit-dc72bac4.md` | untouched |
+| `arena/5fba1c42-olbg2` | 12:06 | `/pulse/` desk, `scripts/pulse_*`, `data/pulse/**` | untouched |
+| `arena/3de6d2ed-olbg2` | 12:05 | `/canon/` desk, `scripts/canon_*`, `data/canon/**` | untouched |
+| `arena/17c50bb7-olbg2` | 12:05 | `.github/workflows/{pages,deploy-pages}.yml`, `publication.html`, `tests/test_publication_gate.py` | untouched |
+| `arena/d69dc1c9-olbg2` | 12:04 | `/update/` desk, `scripts/update_*`, `data/update/**` | untouched |
+| `arena/58642817-olbg2` | 12:04 | `/command/` desk, `scripts/command_*`, `data/command/**` | untouched |
+| `arena/ba48a907-olbg2` | 12:03 | `/atlas/` desk, `scripts/atlas_*`, `data/atlas/**` | untouched |
+| every merged layer (`site/`, `survey/`, `live/`, `verified/`, `forward/`, `board/`, `slate/`, `hub/`, `evidence/`, `audit65/`, `portal/`, `final/`, root HTML, `sports/`, `assets/`, `data/{verified,final,portal,hub,board,slate,forward,live}/**`) | merged | published output | **read only, never edited** |
+
+Seven sessions are already producing a *sixth through twelfth* near-identical fixture/prediction layer. Adding another would
+duplicate work and worsen the repo's central defect: **the same fixtures are published at several URLs with different
+prices, and some published "matches" are not head-to-head fixtures at all** (tournament fields, outright futures and
+venue-vs-field pairings are formatted as matches with moneylines). No session has audited that. This session therefore
+claims the one scope nobody holds — reconciliation of the *existing* layers — rather than another dataset.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| R1 | Read `COORDINATION.md`, survey live branches, claim disjoint scope, commit & push immediately | done 12:15Z | `arena/3552df3e-olbg2` | `COORDINATION.md` (append-only) |
+| R2 | Deterministic cross-layer reconciliation engine: fixture identity normalisation across every published layer; duplicate/overlap detection; price, confidence and provenance contradiction detection; non-match (outright / tournament-field / venue-vs-field) classification; stale-row and citation-granularity checks; prediction-quality checks | in progress | `arena/3552df3e-olbg2` | `scripts/reconcile_audit.py` |
+| R3 | First-hand spot re-verification of sampled published rows against governing-body pages (fetch timestamped), each verdict `confirmed` / `contradicted` / `unreadable`, links recorded on the row | in progress | `arena/3552df3e-olbg2` | `data/reconcile/spot_checks.json`, `research/reconcile-3552df3e.md` |
+| R4 | `/reconcile/` console pages: landing KPI dashboard, cross-layer contradictions, non-match rows, provenance & citation audit, spot-check ledger, per-sport pages, flagged-for-review, methodology, sources | pending | `arena/3552df3e-olbg2` | `scripts/reconcile_build.py`, `reconcile/**`, `data/reconcile/report.json` |
+| R5 | Structural verifier + unit tests (every published row keeps a source link; no layer file is mutated) | pending | `arena/3552df3e-olbg2` | `scripts/reconcile_verify.py`, `tests/test_reconcile.py` |
+| R6 | Integration: rebase on latest `main`, full build + cross-layer link audit + full test suite, root nav entry, PR → merge, confirm Pages deploy, record here | pending | `arena/3552df3e-olbg2` | shared outputs at integration only |
+
+**Rules for this session.** (a) No file owned by another session is edited; the audit reads published JSON/HTML and writes only
+inside its own scope. (b) Every contradiction and spot-check verdict carries the URL it was read from. (c) A row is only marked
+`confirmed` if this session actually read the value back from the linked official page during this session; unable-to-read rows
+are marked `unreadable`, never guessed. (d) The audit reports defects; it does not silently "fix" another session's numbers.
+(e) CI wiring for the new layer is a **cross-scope request** to the `.github/workflows/**` owner, logged rather than edited.
+
+### R2–R5 results — reconciliation engine, console, spot checks, tests (`arena/3552df3e-olbg2`, 12:40Z)
+
+All work landed only in this session's declared scope. No other session's data, builder, page, workflow or test was edited;
+`git status --porcelain -- data/matches.json data/verified data/board data/forward data/hub data/slate data/portal data/final data/desk data/live data/survey`
+is empty after the rebuild.
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| R2 | Reconciliation engine | done | `scripts/reconcile_audit.py` normalises 11 layers into 1,619 rows / 433 distinct fixtures and runs checks C1–C10. Deterministic (fixed audit date, no clock, no network). |
+| R3 | First-hand spot checks | done | 9 checks in `data/reconcile/spot_checks.json`: 3 confirmed, 3 partially confirmed, 1 contradicted (ATP Almaty), 2 unreadable (PDC cookie wall, plusliga.pl redirect). |
+| R4 | `/reconcile/` console | done | 28 pages: overview, conflicts (overlap/price/grade/rule), non-fixtures, freshness, provenance, predictions, spot checks, flagged for review, method, sources, sports index + 17 sport pages. |
+| R5 | Verifier + tests | done | `scripts/reconcile_verify.py` → 28 pages, 1,807 table rows, 0 broken links/fragments, every source cell populated, published counts match the report. `tests/test_reconcile.py` → 30 tests. Full repo suite: **179 tests pass**. |
+| R6 | Integration | in progress | merge of `origin/main` (`d273833`) into the branch, conflict in this file resolved by keeping both entries; PR/Pages record follows. |
+
+**Findings (all reproducible by `python3 scripts/reconcile_audit.py`):**
+
+| Measure | Value |
+|---|---|
+| Published rows across 11 layers | 1,619 |
+| Distinct fixtures those rows describe | 433 |
+| Fixtures published by ≥2 layers | 369 (1,466 rows) |
+| Rows that are not head-to-head fixtures | 64 |
+| Team-level price conflicts | 341 (largest 16.05 decimal, KOSNER BASKONIA 2026-10-22) |
+| Selection-level grade conflicts | 161 |
+| High grades breaching the stated rule | 116 (slate 57, hub 40, board 37 in part) |
+| Stale rows | 34 |
+| Rows with no date | 25 |
+| Rows under excluded sports | 0 |
+| Eligible sports covered | 17 / 17 |
+
+**Material verification result (SC-04).** The official ATP Almaty day-6 order of play for 2026-10-22
+(<https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule>) lists Atmane–Bellucci, Machac–Khachanov,
+Medvedev–Shimabukuro, Bublik–Marozsan and two doubles matches. The `/slate/` layer publishes Almaty round-of-16
+pairings including *Flavio Cobolli v Rinky Hijikata*; neither player appears on the official card. Those rows are
+reported on `/reconcile/flagged.html` as unverified, not silently corrected (the file is owned by another session).
+
+**Cross-scope requests (logged, not edited):**
+
+1. **Root navigation owner** (`scripts/build_site.py`, root pages — claimed by the live session `arena/dc72bac4-olbg2`,
+   PR #96 open at the time of this merge): add a navigation entry
+   `Reconciliation console (/reconcile/)` so the root landing page links to the new audit. This session did not touch
+   the builder or the root pages, because that scope is still claimed.
+2. **CI owner** (`.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`): add
+   `python scripts/reconcile_audit.py && python scripts/reconcile_build.py && python scripts/reconcile_verify.py`
+   to the validation job, and add `data/reconcile reconcile` to the `git diff --exit-code` drift gate. Not edited here.
+3. **`/slate/` owner**: SC-04 above. The tennis rows cite an order of play that does not contain the published pairings.

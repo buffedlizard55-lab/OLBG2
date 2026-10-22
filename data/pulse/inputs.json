@@ -1,0 +1,269 @@
+{
+ "captured_at": "2026-10-22T12:45:00Z",
+ "captured_by": "arena/5fba1c42-olbg2",
+ "note": "Every value below was captured first-hand on 2026-10-22 from the official governing-body source named per row. NFL, football(soccer), horse racing, boxing, UFC/MMA, cycling, hurling and specials are excluded sports and are never collected. Blanks are intentional: values that could not be confirmed from an official source.",
+
+ "nhl": {
+  "sport": "ice-hockey", "competition": "NHL Regular Season 2026-27",
+  "source_label": "NHL official Score API + Stats REST + GameCenter pages",
+  "score_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+  "stats_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+  "teams": {
+   "Washington Capitals": {"gp":9,"gf":30,"ga":29,"w":5,"l":4,"otl":0},
+   "New Jersey Devils": {"gp":9,"gf":29,"ga":30,"w":5,"l":4,"otl":0},
+   "Vegas Golden Knights": {"gp":11,"gf":43,"ga":30,"w":8,"l":3,"otl":0},
+   "Vancouver Canucks": {"gp":11,"gf":33,"ga":51,"w":2,"l":8,"otl":1},
+   "Anaheim Ducks": {"gp":9,"gf":26,"ga":29,"w":4,"l":5,"otl":0},
+   "St. Louis Blues": {"gp":9,"gf":29,"ga":29,"w":4,"l":4,"otl":1},
+   "Dallas Stars": {"gp":9,"gf":22,"ga":14,"w":5,"l":3,"otl":1},
+   "Detroit Red Wings": {"gp":9,"gf":22,"ga":26,"w":3,"l":3,"otl":3},
+   "Ottawa Senators": {"gp":10,"gf":27,"ga":24,"w":7,"l":3,"otl":0},
+   "Winnipeg Jets": {"gp":9,"gf":24,"ga":26,"w":4,"l":3,"otl":2},
+   "Colorado Avalanche": {"gp":10,"gf":41,"ga":30,"w":5,"l":4,"otl":1},
+   "Nashville Predators": {"gp":8,"gf":23,"ga":22,"w":3,"l":2,"otl":3},
+   "Boston Bruins": {"gp":10,"gf":36,"ga":22,"w":7,"l":2,"otl":1},
+   "Columbus Blue Jackets": {"gp":8,"gf":19,"ga":29,"w":3,"l":5,"otl":0},
+   "Chicago Blackhawks": {"gp":9,"gf":21,"ga":36,"w":3,"l":6,"otl":0},
+   "Calgary Flames": {"gp":8,"gf":17,"ga":37,"w":2,"l":6,"otl":0},
+   "Tampa Bay Lightning": {"gp":9,"gf":31,"ga":23,"w":7,"l":2,"otl":0},
+   "Pittsburgh Penguins": {"gp":10,"gf":32,"ga":37,"w":3,"l":6,"otl":1},
+   "Montréal Canadiens": {"gp":9,"gf":28,"ga":34,"w":4,"l":3,"otl":2},
+   "San Jose Sharks": {"gp":10,"gf":26,"ga":34,"w":5,"l":4,"otl":1},
+   "New York Rangers": {"gp":11,"gf":33,"ga":24,"w":7,"l":3,"otl":1},
+   "New York Islanders": {"gp":9,"gf":27,"ga":19,"w":5,"l":3,"otl":1},
+   "Los Angeles Kings": {"gp":7,"gf":17,"ga":27,"w":1,"l":4,"otl":2},
+   "Seattle Kraken": {"gp":10,"gf":37,"ga":34,"w":6,"l":3,"otl":1},
+   "Utah Mammoth": {"gp":10,"gf":38,"ga":31,"w":7,"l":3,"otl":0},
+   "Minnesota Wild": {"gp":10,"gf":31,"ga":25,"w":6,"l":2,"otl":2},
+   "Buffalo Sabres": {"gp":10,"gf":28,"ga":36,"w":4,"l":4,"otl":2},
+   "Carolina Hurricanes": {"gp":11,"gf":42,"ga":27,"w":8,"l":2,"otl":1},
+   "Philadelphia Flyers": {"gp":12,"gf":20,"ga":36,"w":3,"l":6,"otl":3},
+   "Edmonton Oilers": {"gp":9,"gf":41,"ga":27,"w":7,"l":1,"otl":1},
+   "Florida Panthers": {"gp":10,"gf":31,"ga":30,"w":5,"l":3,"otl":2},
+   "Toronto Maple Leafs": {"gp":11,"gf":38,"ga":34,"w":5,"l":4,"otl":2}
+  },
+  "games": [
+   {"id":"nhl-2026020154","gid":2026020154,"away":"Nashville Predators","home":"Boston Bruins","venue":"TD Garden","start_utc":"2026-10-22T23:00:00Z","url":"https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154","market_context":{"home":"-155 (DraftKings)","away":"+130 (DraftKings)"},"leaders":{"home":"David Pastrnak 4G/8A; Jeremy Swayman 6 wins","away":"Ryan O'Reilly 4G; Roman Josi 8A; Juuse Saros 3 wins"}},
+   {"id":"nhl-2026020155","gid":2026020155,"away":"New York Rangers","home":"Toronto Maple Leafs","venue":"Scotiabank Arena","start_utc":"2026-10-22T23:00:00Z","url":"https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155","market_context":{"home":"-108 (DraftKings)","away":"-112 (DraftKings)"},"leaders":{"home":"Auston Matthews 8G/10A; Anthony Stolarz 3 wins","away":"Alexis Lafrenière 7G; Adam Fox 10A; Dylan Garand 4 wins"}},
+   {"id":"nhl-2026020156","gid":2026020156,"away":"San Jose Sharks","home":"Ottawa Senators","venue":"Canadian Tire Centre","start_utc":"2026-10-22T23:00:00Z","url":"https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156","market_context":{"home":"-135 (DraftKings)","away":"+114 (DraftKings)"},"leaders":{"home":"Tim Stützle 6G/8A; Linus Ullmark 7 wins","away":"Macklin Celebrini 5G/9A; Alex Nedeljkovic 3 wins"}},
+   {"id":"nhl-2026020157","gid":2026020157,"away":"Anaheim Ducks","home":"New Jersey Devils","venue":"Prudential Center","start_utc":"2026-10-22T23:00:00Z","url":"https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157","market_context":{"home":"-198 (DraftKings)","away":"+164 (DraftKings)"},"leaders":{"home":"Nico Hischier 4G; Jack Hughes 7A; Jake Allen 4 wins","away":"Beckett Sennecke 5G; Leo Carlsson 9A; Lukas Dostal 3 wins"}},
+   {"id":"nhl-2026020158","gid":2026020158,"away":"Florida Panthers","home":"Pittsburgh Penguins","venue":"PPG Paints Arena","start_utc":"2026-10-22T23:00:00Z","url":"https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158","market_context":{"home":"-115 (DraftKings)","away":"-105 (DraftKings)"},"leaders":{"home":"Evgeni Malkin 5G; Erik Karlsson 10A; Arturs Silovs 3 wins","away":"Brady Tkachuk 7G; Matthew Tkachuk 12A; Jacob Markstrom 3 wins"}},
+   {"id":"nhl-2026020159","gid":2026020159,"away":"Los Angeles Kings","home":"New York Islanders","venue":"UBS Arena","start_utc":"2026-10-22T23:30:00Z","url":"https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159","market_context":{"home":"-115 (DraftKings)","away":"-105 (DraftKings)"},"leaders":{"home":"Bo Horvat 5G; Matthew Schaefer 8A; Ilya Sorokin 5 wins","away":"Artemi Panarin 4G; Brandt Clarke 4A; Darcy Kuemper 1 win"}},
+   {"id":"nhl-2026020160","gid":2026020160,"away":"Vegas Golden Knights","home":"St. Louis Blues","venue":"Enterprise Center","start_utc":"2026-10-23T00:00:00Z","url":"https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160","market_context":{"home":"+105 (DraftKings)","away":"-125 (DraftKings)"},"leaders":{"home":"Mason McTavish 5G; Dylan Holloway 6A; Joel Hofer 3 wins","away":"Mark Stone 8G; Jack Eichel 13A; Carter Hart 4 wins"}},
+   {"id":"nhl-2026020161","gid":2026020161,"away":"Winnipeg Jets","home":"Dallas Stars","venue":"American Airlines Center","start_utc":"2026-10-23T00:00:00Z","url":"https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161","market_context":{"home":"-205 (DraftKings)","away":"+170 (DraftKings)"},"leaders":{"home":"Mikko Rantanen 5G; Jason Robertson 6A; Jake Oettinger 4 wins","away":"Kyle Connor 8G; Mark Scheifele 6A; Stuart Skinner 3 wins"}},
+   {"id":"nhl-2026020162","gid":2026020162,"away":"Minnesota Wild","home":"Calgary Flames","venue":"Scotiabank Saddledome","start_utc":"2026-10-23T01:00:00Z","url":"https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162","market_context":{"home":"+170 (DraftKings)","away":"-205 (DraftKings)"},"leaders":{"home":"Morgan Frost 3G; Joel Farabee 5A; Dustin Wolf 1 win","away":"Kirill Kaprizov 11G; Quinn Hughes 11A; Jesper Wallstedt 6 wins"}},
+   {"id":"nhl-2026020163","gid":2026020163,"away":"Carolina Hurricanes","home":"Edmonton Oilers","venue":"Rogers Place","start_utc":"2026-10-23T01:00:00Z","url":"https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163","market_context":{"home":"-102 (DraftKings)","away":"-118 (DraftKings)"},"leaders":{"home":"Leon Draisaitl 8G; Connor McDavid 20A; Devon Levi 5 wins","away":"Andrei Svechnikov 6G; Jackson Blake 10A; Pyotr Kochetkov 6 wins"}},
+   {"id":"nhl-2026020164","gid":2026020164,"away":"Utah Mammoth","home":"Seattle Kraken","venue":"Climate Pledge Arena","start_utc":"2026-10-23T02:00:00Z","url":"https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164","market_context":{"home":"+142 (DraftKings)","away":"-170 (DraftKings)"},"leaders":{"home":"Frederick Gaudreau 5G; Chandler Stephenson 8A; Philipp Grubauer 3 wins","away":"Nick Schmaltz 7G; Clayton Keller 9A; Karel Vejmelka 5 wins"}},
+   {"id":"nhl-2026020165","gid":2026020165,"away":"Detroit Red Wings","home":"Vancouver Canucks","venue":"Rogers Arena","start_utc":"2026-10-23T02:00:00Z","url":"https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165","market_context":{"home":"+142 (DraftKings)","away":"-170 (DraftKings)"},"leaders":{"home":"Paul Cotter 4G; Elias Pettersson 8A; Leevi Meriläinen 1 win","away":"Alex DeBrincat 6G/5A; John Gibson 2 wins"}}
+  ],
+  "market_context_note": "Prices are published by the NHL itself inside its official score API (oddsPartners: DraftKings=9, FanDuel=7, Sportradar=8). Recorded as market context only; originated lines never copy them."
+ },
+
+ "nba": {
+  "sport": "basketball", "competition": "NBA Regular Season 2026-27",
+  "source_label": "NBA.com official game pages and games calendar",
+  "calendar_url": "https://www.nba.com/games?date=2026-10-22",
+  "games": [
+   {"id":"nba-0022600006","gid":"0022600006","away":"Cleveland Cavaliers","home":"Philadelphia 76ers","venue":"Xfinity Mobile Arena, Philadelphia","tip_et":"7:00 PM","start_utc":"2026-10-22T23:00:00Z","record_away":"0-0","record_home":"1-0","url":"https://www.nba.com/game/cle-vs-phi-0022600006","verified_facts":["76ers beat the defending champion Knicks 106-100 in Tuesday's opener (Maxey 28 pts, Brown 19, Embiid 13/11/6)","LeBron James debuted for Philadelphia in his record 24th season with 14/9/7","Cavaliers were 4-0 against the 76ers in 2025-26","Cleveland added Peyton Watson from Denver (career-high 14.6 ppg, 41.1% 3PT last season)"]},
+   {"id":"nba-0022600007","gid":"0022600007","away":"Denver Nuggets","home":"Oklahoma City Thunder","venue":"Paycom Center, Oklahoma City","tip_et":"9:30 PM","start_utc":"2026-10-23T01:30:00Z","record_away":"0-0","record_home":"1-0","url":"https://www.nba.com/game/den-vs-okc-0022600007","verified_facts":["NBA.com games grid lists both teams on ESPN","Thunder enter 1-0; Nuggets enter 0-0 (Oct 22 grid)"]}
+  ],
+  "blank_reason": "2026-27 season is 1 game old: no official current-season team scoring data exists to originate spreads/totals from, and 2025-26 standings are no longer served on NBA.com. Lines left blank and flagged rather than invented."
+ },
+
+ "mlb": {
+  "sport": "baseball", "competition": "2026 MLB World Series",
+  "source_label": "MLB Stats API (statsapi.mlb.com) schedule + standings",
+  "schedule_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28&hydrate=team,venue",
+  "standings_url_al": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+  "standings_url_nl": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason&fields=records,teamRecords,team,name,wins,losses,runsScored,runsAllowed,divisionRank",
+  "teams": {
+   "Tampa Bay Rays": {"w":98,"l":64,"rs":736,"ra":650,"home_record":"55-26","away_record":"43-38","division":"AL East champions (divisionRank 1)"},
+   "Milwaukee Brewers": {"w":103,"l":59,"rs":832,"ra":618,"home_record":"55-26","away_record":"48-33","division":"NL Central champions (divisionRank 1)"}
+  },
+  "games": [
+   {"id":"mlb-849805","game_pk":849805,"description":"World Series Game 1","official_date":"2026-10-23","start_utc":"2026-10-24T00:00:00Z","away":"Tampa Bay Rays","home":"Milwaukee Brewers","venue":"American Family Field","url":"https://www.mlb.com/gameday/849805"},
+   {"id":"mlb-849802","game_pk":849802,"description":"World Series Game 2","official_date":"2026-10-24","start_utc":"2026-10-25T00:00:00Z","away":"Tampa Bay Rays","home":"Milwaukee Brewers","venue":"American Family Field","url":"https://www.mlb.com/gameday/849802"},
+   {"id":"mlb-849804","game_pk":849804,"description":"World Series Game 3","official_date":"2026-10-26","start_utc":"2026-10-27T00:00:00Z","away":"Milwaukee Brewers","home":"Tampa Bay Rays","venue":"Tropicana Field","url":"https://www.mlb.com/gameday/849804"}
+  ]
+ },
+
+ "pdc": {
+  "sport": "darts", "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct)",
+  "format": "Round 1, best of 11 legs (first to 6)",
+  "source_label": "PDC official site (pdc.tv) tournament schedule & preview",
+  "schedule_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+  "preview_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "session_local": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "matches": [
+   {"id":"pdc-ec-r1-1","p1":"Luke Woodhouse","s1":9,"p2":"Dirk van Duijvenbode","s2":24,"olbg_url":"https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Woodhouse_vs_Dirk_van_Duijvenbode/15?event_id=32324"},
+   {"id":"pdc-ec-r1-2","p1":"Danny Noppert","s1":5,"p2":"Stephen Bunting","s2":28,"olbg_url":"https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Danny_Noppert_vs_Stephen_Bunting/15?event_id=32330"},
+   {"id":"pdc-ec-r1-3","p1":"Niels Zonneveld","s1":4,"p2":"Cameron Menzies","s2":29,"olbg_url":"https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Niels_Zonneveld_vs_Cameron_Menzies/15?event_id=32334"},
+   {"id":"pdc-ec-r1-4","p1":"Gerwyn Price","s1":13,"p2":"Rob Cross","s2":20,"olbg_url":"https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325"},
+   {"id":"pdc-ec-r1-5","p1":"James Wade","s1":16,"p2":"Damon Heta","s2":17},
+   {"id":"pdc-ec-r1-6","p1":"Luke Humphries","s1":12,"p2":"Ryan Searle","s2":21},
+   {"id":"pdc-ec-r1-7","p1":"Gian van Veen","s1":8,"p2":"Andrew Gilding","s2":25},
+   {"id":"pdc-ec-r1-8","p1":"Ross Smith","s1":1,"p2":"Karel Sedlacek","s2":32}
+  ],
+  "seed_note": "Seeds are the official 1-32 European Tour one-year ranking seeds printed on the PDC draw bracket. OLBG event pages confirmed for the four matches OLBG listed at capture (times 13:15-14:45 UTC shown on OLBG event pages)."
+ },
+
+ "ehf": {
+  "sport": "handball", "competition": "EHF Champions League Men 2026/27, Group Phase (09.09.2026 - 29.10.2026)",
+  "source_label": "EHF official competition site ehfcl.eurohandball.com",
+  "matches_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+  "standings_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+  "standings": {
+   "One Veszprém HC": {"grp":"A","gp":5,"w":5,"d":0,"l":0,"gf":185,"ga":146,"pts":10},
+   "Füchse Berlin": {"grp":"A","gp":5,"w":3,"d":0,"l":2,"gf":184,"ga":172,"pts":6},
+   "FC Porto": {"grp":"A","gp":5,"w":1,"d":1,"l":3,"gf":158,"ga":173,"pts":3},
+   "RK Partizan AdmiralBet": {"grp":"A","gp":5,"w":0,"d":1,"l":4,"gf":148,"ga":184,"pts":1},
+   "Orlen Wisla Plock": {"grp":"B","gp":4,"w":3,"d":0,"l":1,"gf":115,"ga":108,"pts":6},
+   "HBC Nantes": {"grp":"B","gp":5,"w":3,"d":0,"l":2,"gf":142,"ga":143,"pts":6},
+   "MT Melsungen": {"grp":"B","gp":4,"w":2,"d":0,"l":2,"gf":110,"ga":112,"pts":4},
+   "HC Vardar 1961": {"grp":"B","gp":5,"w":1,"d":0,"l":4,"gf":154,"ga":158,"pts":2},
+   "Aalborg Håndbold": {"grp":"C","gp":5,"w":4,"d":1,"l":0,"gf":170,"ga":145,"pts":9},
+   "Paris Saint-Germain": {"grp":"C","gp":5,"w":3,"d":1,"l":1,"gf":182,"ga":157,"pts":7},
+   "HC Zagreb": {"grp":"C","gp":5,"w":2,"d":0,"l":3,"gf":146,"ga":158,"pts":4},
+   "RK Celje Pivovarna Laško": {"grp":"C","gp":5,"w":0,"d":0,"l":5,"gf":150,"ga":188,"pts":0},
+   "Sporting Clube de Portugal": {"grp":"D","gp":4,"w":3,"d":1,"l":0,"gf":149,"ga":125,"pts":7},
+   "GOG": {"grp":"D","gp":4,"w":3,"d":0,"l":1,"gf":145,"ga":139,"pts":6},
+   "OTP Bank - PICK Szeged": {"grp":"D","gp":4,"w":1,"d":1,"l":2,"gf":139,"ga":136,"pts":3},
+   "IFK Kristianstad": {"grp":"D","gp":4,"w":0,"d":0,"l":4,"gf":122,"ga":155,"pts":0},
+   "Barça": {"grp":"E","gp":4,"w":4,"d":0,"l":0,"gf":137,"ga":104,"pts":8},
+   "SAH - Aarhus": {"grp":"E","gp":5,"w":2,"d":1,"l":2,"gf":150,"ga":163,"pts":5},
+   "Dinamo Bucuresti": {"grp":"E","gp":5,"w":1,"d":1,"l":3,"gf":134,"ga":145,"pts":3},
+   "Montpellier Handball": {"grp":"E","gp":4,"w":1,"d":0,"l":3,"gf":116,"ga":125,"pts":2},
+   "SC Magdeburg": {"grp":"F","gp":4,"w":4,"d":0,"l":0,"gf":141,"ga":108,"pts":8},
+   "Industria Kielce": {"grp":"F","gp":5,"w":3,"d":0,"l":2,"gf":155,"ga":153,"pts":6},
+   "HC Kriens-Luzern": {"grp":"F","gp":5,"w":2,"d":0,"l":3,"gf":158,"ga":161,"pts":4},
+   "Kolstad Håndball": {"grp":"F","gp":4,"w":0,"d":0,"l":4,"gf":111,"ga":143,"pts":0}
+  },
+  "matches": [
+   {"id":"ehf-202711020101019","home":"MT Melsungen","away":"Orlen Wisla Plock","start_utc":"2026-10-22T16:45:00Z","time_local":"18:45 CEST","url":"https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/"},
+   {"id":"ehf-202711020101043","home":"OTP Bank - PICK Szeged","away":"GOG","start_utc":"2026-10-22T16:45:00Z","time_local":"18:45 CEST","url":"https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/"},
+   {"id":"ehf-202711020101041","home":"Sporting Clube de Portugal","away":"IFK Kristianstad","start_utc":"2026-10-22T18:45:00Z","time_local":"20:45 CEST","url":"https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/"},
+   {"id":"ehf-202711020101049","home":"Barça","away":"Montpellier Handball","start_utc":"2026-10-22T18:45:00Z","time_local":"20:45 CEST","url":"https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/"},
+   {"id":"ehf-202711020101064","home":"Kolstad Håndball","away":"SC Magdeburg","start_utc":"2026-10-22T18:45:00Z","time_local":"20:45 CEST","url":"https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/"}
+  ]
+ },
+
+ "wst": {
+  "sport": "snooker", "competition": "BetVictor Northern Ireland Open 2026 (Belfast, 18-25 Oct)",
+  "format": "Round 3 (last 16), best of 7 frames (first to 4)",
+  "source_label": "World Snooker Tour official match centre (wst.tv)",
+  "tournament_url": "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578",
+  "form_note": "frames_won/frames_lost are this tournament's R1+R2 results read from the official match list (verified 2026-10-22)",
+  "live_at_capture": [
+   {"match":"Matthew Selt v Sam Craigie","status":"Live Now 08:00 (best of 7)"},
+   {"match":"Kyren Wilson v Pang Junxu","status":"Live Now 08:00 - Wilson led 1-0 at capture"}
+  ],
+  "scheduled": [
+   {"id":"wst-r3-49","time":"09:00","p1":"Anthony McGill","f1":[8,2],"r1":"4-1 v Stephen Maguire","r2":"4-1 v Jack Lisowski","p2":"Mateusz Baranowski","f2":[8,6],"r1b":"4-3 v Gary Wilson","r2b":"4-3 v Wang Xinbo","url":"https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5"},
+   {"id":"wst-r3-50","time":"09:00","p1":"Elliot Slessor","f1":[8,1],"r1":"4-0 v He Guoqiang","r2":"4-1 v Jamie Jones","p2":"Ricky Walden","f2":[8,4],"r1b":"4-1 v Neil Robertson","r2b":"4-3 v Joe O'Connor","url":"https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8"},
+   {"id":"wst-r3-53","time":"14:00","p1":"Mark Williams","f1":[8,4],"r1":"4-2 v Robbie Williams","r2":"4-2 v Zhang Anda","p2":"Martin O'Donnell","f2":[8,5],"r1b":"4-3 v Judd Trump","r2b":"4-2 v Luca Brecel","url":"https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f"},
+   {"id":"wst-r3-54","time":"14:00","p1":"David Gilbert","f1":[8,4],"r1":"4-1 v Oliver Sykes","r2":"4-3 v Gao Yang","p2":"Cheung Ka Wai","f2":[8,3],"r1b":"4-3 v Ronnie O'Sullivan","r2b":"4-0 v Stuart Bingham","url":"https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236"},
+   {"id":"wst-r3-55","time":"15:00","p1":"Jordan Brown","f1":[8,5],"r1":"4-2 v Mark Allen","r2":"4-3 v Michael Holt","p2":"Scott Donaldson","f2":[8,1],"r1b":"4-0 v Wu Yize","r2b":"4-1 v Noppon Saengkham","url":"https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea"},
+   {"id":"wst-r3-56","time":"15:00","p1":"Jak Jones","f1":[8,3],"r1":"4-1 v Tom Ford","r2":"4-2 v John Higgins","p2":"Daniel Wells","f2":[8,5],"r1b":"4-2 v Barry Hawkins","r2b":"4-3 v Ryan Day","url":"https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900"}
+  ],
+  "giant_killing_note": "Verified first-round exits included Mark Selby 2-4 Louis Heathcote, Shaun Murphy 2-4 Liam Davies, Ali Carter 0-4 Xu Si, Neil Robertson 1-4 Ricky Walden, Ronnie O'Sullivan 3-4 Cheung Ka Wai, Judd Trump 3-4 Martin O'Donnell and Mark Allen 2-4 Jordan Brown, all read from the official match list."
+ },
+
+ "atp": {
+  "sport": "tennis", "competition": "ATP 250 Almaty 2026 (tournament 9410), Round of 16",
+  "source_label": "ATP Tour official scores (atptour.com)",
+  "schedule_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+  "current_url": "https://www.atptour.com/en/scores/current",
+  "completed_today": [
+   {"match":"Terence Atmane d. Mattia Bellucci 6-7(4) 7-6(2) 7-6(5)","note":"R16, Center Court (first match, completed - 'Game Set and Match Terence Atmane')"}
+  ],
+  "in_progress_at_capture": [
+   {"match":"Tomas Machac v (5) Karen Khachanov","note":"R16 live on Center Court at capture (second match)"}
+  ],
+  "upcoming": [
+   {"id":"atp-9410-r16-3","p1":"Daniil Medvedev","s1":1,"p1_seed":"(1)","p2":"Sho Shimabukuro","s2":33,"p2_seed":"unseeded (modelled as 33 - beyond the 32 seeds)","slot":"Center Court, follows Machac v Khachanov","url":"https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"},
+   {"id":"atp-9410-r16-4","p1":"Alexander Bublik","s1":3,"p1_seed":"(3)","p2":"Fabian Marozsan","s2":33,"p2_seed":"unseeded (modelled as 33 - beyond the 32 seeds)","slot":"Center Court, Not Before 19:30 local (14:30 UTC)","url":"https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"}
+  ],
+  "other_live_tournaments": "ATP official current-scores hub also lists live R16 matches at Brussels (7485): Raphael Collignon v (2) Jiri Lehecka, and Lyon (496): (3) Valentin Vacherot v Luca Van Assche, Borna Gojo v Daniel Altmaier - all in progress at capture, so no pre-match lines published for them.",
+  "unseeded_proxy_note": "The schedule page prints no ranking for unseeded players; seed 33 is a model placeholder for 'unseeded man in a 32-player draw', documented in METHODOLOGY-style notes on the site methodology page. It is not a claim about any official ranking."
+ },
+
+ "prod2": {
+  "sport": "rugby-union", "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "source_label": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "calendar_url": "https://prod2.lnr.fr/calendrier-et-resultats",
+  "positions_note": "Positions are the official table positions printed next to each club on the J8 fixture list (1e..16e)",
+  "matches": [
+   {"id":"prod2-j8-12068","day":"jeudi 22 octobre","time_local":"21h00","start_utc":"2026-10-22T19:00:00Z","home":"US Montauban","ph":8,"away":"Oyonnax Rugby","pa":1,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax"},
+   {"id":"prod2-j8-12069","day":"vendredi 23 octobre","time_local":"19h00","start_utc":"2026-10-23T17:00:00Z","home":"RC Narbonnais","ph":15,"away":"CA Brive","pa":4,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive"},
+   {"id":"prod2-j8-12063","day":"vendredi 23 octobre","time_local":"19h30","start_utc":"2026-10-23T17:30:00Z","home":"SU Agen","ph":10,"away":"Nissa Rugby (Nice)","pa":13,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice"},
+   {"id":"prod2-j8-12065","day":"vendredi 23 octobre","time_local":"19h30","start_utc":"2026-10-23T17:30:00Z","home":"Soyaux-Angoulême XV","ph":7,"away":"US Dax","pa":6,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax"},
+   {"id":"prod2-j8-12066","day":"vendredi 23 octobre","time_local":"19h30","start_utc":"2026-10-23T17:30:00Z","home":"Stade Aurillacois (Aurillac)","ph":9,"away":"USON Nevers","pa":16,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers"},
+   {"id":"prod2-j8-12070","day":"vendredi 23 octobre","time_local":"19h30","start_utc":"2026-10-23T17:30:00Z","home":"Valence Romans","ph":11,"away":"Colomiers Rugby","pa":12,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers"},
+   {"id":"prod2-j8-12064","day":"vendredi 23 octobre","time_local":"21h00","start_utc":"2026-10-23T19:00:00Z","home":"Provence Rugby","ph":2,"away":"AS Béziers Hérault","pa":14,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers"},
+   {"id":"prod2-j8-12067","day":"vendredi 23 octobre","time_local":"21h00","start_utc":"2026-10-23T19:00:00Z","home":"FC Grenoble Rugby","ph":3,"away":"Biarritz Olympique PB","pa":5,"url":"https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz"}
+  ],
+  "olbg_note": "OLBG listed Montauban v Oyonnax with a 15:00 start label; the official LNR page says 21h00 local (19:00 UTC). The OLBG start-time label and the official kick-off disagree - flagged for review (PU-05)."
+ },
+
+ "icc": {
+  "sport": "cricket", "competition": "New Zealand v India T20I series 2026 (5 matches)",
+  "source_label": "ICC official site (icc-cricket.com) match page + series news",
+  "match1_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
+  "series_news_url": "https://icc-cricket.com/news/iyer-backs-india-s-adaptability-ahead-of-new-zealand-t20is",
+  "series_schedule_verified": ["1st T20I 22 Oct Christchurch (Hagley Oval, 07:00 UTC start per ICC match page)","2nd T20I 24 Oct Christchurch","3rd T20I 27 Oct Wellington","4th T20I 30 Oct Auckland","5th T20I 1 Nov Hamilton"],
+  "matches": [
+   {"id":"icc-nzind-t20i-2","description":"New Zealand v India, 2nd T20I","date":"2026-10-24","venue":"Christchurch (Hagley Oval per series venue note for matches 1-2)","home":"New Zealand","away":"India","url":"https://www.icc-cricket.com/matches/271646/new-zealand-vs-india"}
+  ],
+  "in_play_at_capture": "1st T20I (today, Hagley Oval) started 07:00 UTC and was in play when captured; no pre-match line published for it.",
+  "blank_reason": "ICC ranking/form tables were not captured first-hand; team-strength values left blank and flagged (PU-03) rather than inferred."
+ },
+
+ "f1": {
+  "sport": "motor-racing", "competition": "FIA Formula 1 United States Grand Prix 2026 (Round 18), Austin, 23-25 Oct; race Sunday 25 Oct",
+  "source_label": "FIA Formula One official calendar with official per-round results (formula1.com)",
+  "calendar_url": "https://www.formula1.com/en/racing/2026",
+  "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913",
+  "verified_round_winners_r1_r16": {
+   "R1 Australia":"Russell (2nd Antonelli, 3rd Leclerc)","R2 China":"Antonelli (2nd Russell, 3rd Hamilton)","R3 Japan":"Antonelli (2nd Piastri, 3rd Leclerc)","R4 Miami":"Antonelli (2nd Norris, 3rd Piastri)","R5 Canada":"Antonelli (2nd Hamilton, 3rd Verstappen)","R6 Monaco":"Antonelli (2nd Hamilton, 3rd Hadjar)","R7 Barcelona-Catalunya":"Hamilton (2nd Russell; 3rd not captured - flagged)","R8 Austria":"Russell (2nd Verstappen, 3rd Antonelli)","R9 Great Britain":"Leclerc (2nd Russell, 3rd Hamilton)","R10 Belgium":"Antonelli (2nd Leclerc, 3rd Verstappen)","R11 Hungary":"Norris (2nd Verstappen, 3rd Antonelli)","R12 Netherlands":"Norris (2nd Antonelli, 3rd Russell)","R13 Italy":"Antonelli (2nd Russell, 3rd Verstappen)","R14 Spain":"Antonelli (2nd Verstappen, 3rd Norris)","R15 Azerbaijan":"Russell (2nd Verstappen, 3rd Hadjar)","R16 Bahrain":"Verstappen (2nd Antonelli, 3rd Hamilton)"
+  },
+  "driver_tally_verified": {
+   "Kimi Antonelli":{"wins":8,"p2":3,"p3":2},
+   "George Russell":{"wins":3,"p2":4,"p3":1},
+   "Max Verstappen":{"wins":1,"p2":4,"p3":3},
+   "Lando Norris":{"wins":2,"p2":1,"p3":1},
+   "Lewis Hamilton":{"wins":1,"p2":2,"p3":3},
+   "Charles Leclerc":{"wins":1,"p2":1,"p3":2},
+   "Oscar Piastri":{"wins":0,"p2":1,"p3":1},
+   "Isack Hadjar":{"wins":0,"p2":0,"p3":2}
+  },
+  "gaps": ["R7 (Barcelona-Catalunya) third place was truncated in the captured page chunk - left blank, not inferred","R17 Singapore (09-11 Oct) winner not captured in this session's chunks - excluded from the tally and flagged"],
+  "markets": "Race winner outright (OLBG also lists Podium Finish; OLBG top community pick at capture: Max Verstappen 12/33 = 36%)"
+ },
+
+ "esports_status": {
+  "sport": "esports",
+  "event": "2026 League of Legends World Championship (Worlds), Swiss Stage starts Friday 23 Oct (Credit Union of Texas Event Center, Allen TX per schedule guides; lolesports.com is the official hub)",
+  "official_url": "https://lolesports.com/en-US/news/worlds-2026-primer",
+  "status": "Official prime-times and stage dates verified from lolesports.com primer (Play-In Oct 15-18, Swiss Oct 23-31, Knockout Nov 3-14). The Swiss round-1 pairing list could not be confirmed from an official Riot page fetched in this session, so pairings are left blank and flagged (PU-07) rather than copied from media."
+ },
+
+ "unresolved_sports": [
+  {"sport":"golf","status":"Genesis Championship (DP World Tour, Korea) is live - europeantour.com banner reads 'Round 2 Tee Times Available' on 2026-10-22, so Round 1 was played today. Tournament-outright lines need an official leaderboard/field feed; the leaderboard page did not render server-side. Event recorded, lines blank, flagged (PU-08).","url":"https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard"},
+  {"sport":"greyhounds","status":"GBGB results/racecard pages are JavaScript-driven and rendered no server-side rows at capture; no first-hand fixture captured. Sports-room note: PR #78 on this repo covers GBGB Category One fixtures on the /verified/ desk. Flagged (PU-09).","url":"https://www.gbgb.org.uk/racing/results/"},
+  {"sport":"gaelic-football","status":"gaa.ie fixtures page rendered only the (excluded) hurling/Shinty international fixture for 24 Oct in the captured region; no Gaelic football fixture was confirmed first-hand. Flagged (PU-10).","url":"https://www.gaa.ie/fixtures-results"},
+  {"sport":"volleyball","status":"No official governing-body schedule page (volleyballworld.com competition calendar) rendered a verifiable fixture list at capture. Flagged (PU-11).","url":"https://en.volleyballworld.com/"},
+  {"sport":"rugby-league","status":"No first-hand official fixture capture this session (NRL off-season window; no international match confirmed from an official page in this session). Flagged (PU-12).","url":"https://www.nrl.com/draw/"},
+  {"sport":"aussie-rules","status":"AFL men's season is complete (Grand Final was September); no official fixture was confirmed first-hand for this window. Flagged (PU-13).","url":"https://www.afl.com.au/fixture"}
+ ],
+
+ "olbg_crosscheck": {
+  "captured_url": "https://www.olbg.com/betting-tips/",
+  "eligible_sport_events_seen_today": [
+   "Darts: 8 European Championship R1 matches (13:15-14:45 UTC labels)",
+   "Rugby Union: Montauban v Oyonnax (start label 15:00 - conflicts with official 21h00 local, flagged PU-05)",
+   "Motor Racing: USA Grand Prix, 25 Oct (Win Race; Podium Finish markets)",
+   "Excluded-but-present on OLBG (never collected): Horse Racing (Carlisle, Newmarket, Clonmel, Ffos Las), Football (Europa League 12:45, UEFA Conference League), NFL (NE Patriots @ CHI Bears Money Line)"
+  ],
+  "market_shapes_seen": ["Win Match 2-way","Handicap 2-way (+1.50/-1.50)","Total Legs Over/Under 9.50","Money Line","To Win","Full Time Result","Daily Racing","Win Race","Podium Finish","Totals Over/Under (NHL/NBA pages, prior session captures)"]
+ }
+}

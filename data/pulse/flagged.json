@@ -1,0 +1,185 @@
+{
+ "generated_at": "2026-10-22T12:45:00Z",
+ "flags": [
+  {
+   "code": "PU-01",
+   "item": "NBA 2026-27 lines",
+   "detail": "2026-27 season is 1 game old: no official current-season team scoring data exists to originate spreads/totals from, and 2025-26 standings are no longer served on NBA.com. Lines left blank and flagged rather than invented.",
+   "links": [
+    "https://www.nba.com/games?date=2026-10-22"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-02",
+   "item": "NHL market context",
+   "detail": "Odds next to NHL games are league-published odds-partner prices inside the NHL's own score API; recorded as market context only, never used by the model.",
+   "links": [
+    "https://api-web.nhle.com/v1/score/2026-10-22"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-03",
+   "item": "Cricket team strengths",
+   "detail": "ICC ranking/form tables were not captured first-hand; team-strength values left blank and flagged (PU-03) rather than inferred.",
+   "links": [
+    "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-04",
+   "item": "WST in-play rows",
+   "detail": "Two Round-3 matches (Selt v Craigie, Wilson v Pang Junxu) were already in play at capture; they are listed on sport pages as in-play and receive no pre-match lines.",
+   "links": [
+    "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-05",
+   "item": "Montauban v Oyonnax kick-off",
+   "detail": "OLBG listed Montauban v Oyonnax with a 15:00 start label; the official LNR page says 21h00 local (19:00 UTC). The OLBG start-time label and the official kick-off disagree - flagged for review (PU-05).",
+   "links": [
+    "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-06",
+   "item": "F1 result gaps",
+   "detail": "R7 (Barcelona-Catalunya) third place was truncated in the captured page chunk - left blank, not inferred; R17 Singapore (09-11 Oct) winner not captured in this session's chunks - excluded from the tally and flagged",
+   "links": [
+    "https://www.formula1.com/en/racing/2026"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-07",
+   "item": "Esports pairings",
+   "detail": "Official prime-times and stage dates verified from lolesports.com primer (Play-In Oct 15-18, Swiss Oct 23-31, Knockout Nov 3-14). The Swiss round-1 pairing list could not be confirmed from an official Riot page fetched in this session, so pairings are left blank and flagged (PU-07) rather than copied from media.",
+   "links": [
+    "https://lolesports.com/en-US/news/worlds-2026-primer"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-08",
+   "item": "golf coverage",
+   "detail": "Genesis Championship (DP World Tour, Korea) is live - europeantour.com banner reads 'Round 2 Tee Times Available' on 2026-10-22, so Round 1 was played today. Tournament-outright lines need an official leaderboard/field feed; the leaderboard page did not render server-side. Event recorded, lines blank, flagged (PU-08).",
+   "links": [
+    "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-09",
+   "item": "greyhounds coverage",
+   "detail": "GBGB results/racecard pages are JavaScript-driven and rendered no server-side rows at capture; no first-hand fixture captured. Sports-room note: PR #78 on this repo covers GBGB Category One fixtures on the /verified/ desk. Flagged (PU-09).",
+   "links": [
+    "https://www.gbgb.org.uk/racing/results/"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-10",
+   "item": "gaelic-football coverage",
+   "detail": "gaa.ie fixtures page rendered only the (excluded) hurling/Shinty international fixture for 24 Oct in the captured region; no Gaelic football fixture was confirmed first-hand. Flagged (PU-10).",
+   "links": [
+    "https://www.gaa.ie/fixtures-results"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-11",
+   "item": "volleyball coverage",
+   "detail": "No official governing-body schedule page (volleyballworld.com competition calendar) rendered a verifiable fixture list at capture. Flagged (PU-11).",
+   "links": [
+    "https://en.volleyballworld.com/"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-12",
+   "item": "rugby-league coverage",
+   "detail": "No first-hand official fixture capture this session (NRL off-season window; no international match confirmed from an official page in this session). Flagged (PU-12).",
+   "links": [
+    "https://www.nrl.com/draw/"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-13",
+   "item": "aussie-rules coverage",
+   "detail": "AFL men's season is complete (Grand Final was September); no official fixture was confirmed first-hand for this window. Flagged (PU-13).",
+   "links": [
+    "https://www.afl.com.au/fixture"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-14",
+   "item": "ATP unseeded proxy",
+   "detail": "The schedule page prints no ranking for unseeded players; seed 33 is a model placeholder for 'unseeded man in a 32-player draw', documented in METHODOLOGY-style notes on the site methodology page. It is not a claim about any official ranking.",
+   "links": [
+    "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-15",
+   "item": "Model constants",
+   "detail": "Home-edge multipliers (NHL 1.045, EHF 1.03), NHL OT home share 0.55, seed exponents (darts 1.15, tennis 0.55) and Pro D2 constants (3.5 home points, 1.35 pts/place, sd 13) are documented model assumptions, not official data; sensitivity is shown on the methodology page.",
+   "links": [
+    "https://api.nhle.com/stats/rest/en/team/summary"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-16",
+   "item": "Darts seed basis",
+   "detail": "European Championship seeds are the PDC's one-year European Tour ranking seeds, not the PDC Order of Merit; leg model uses seeds only.",
+   "links": [
+    "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-17",
+   "item": "US GP name",
+   "detail": "OLBG lists the event as 'USA Grand Prix'; the official FIA title is 'United States Grand Prix' (Round 18, COTA, 23-25 Oct). Reconciled as the same event.",
+   "links": [
+    "https://www.formula1.com/en/racing/2026/united-states"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-19",
+   "item": "MLB run-line/total",
+   "detail": "World Series run-line and total were not originated: no verified probable-pitcher or bullpen workload data was captured from official MLB pages in this session. Money lines only.",
+   "links": [
+    "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-20",
+   "item": "Pro D2 totals",
+   "detail": "Match-total markets for Pro D2 were not originated: the official J8 page lists table positions but no verified points-scored data in the captured region.",
+   "links": [
+    "https://prod2.lnr.fr/calendrier-et-resultats"
+   ],
+   "layer": "/pulse/"
+  },
+  {
+   "code": "PU-21",
+   "item": "OLBG check",
+   "detail": "All OLBG-listed eligible-sport events at capture were reconciled against official fixtures; see OLBG crosscheck in inputs.json. No excluded-sport row is originated anywhere on /pulse/.",
+   "links": [
+    "https://www.olbg.com/betting-tips/"
+   ],
+   "layer": "/pulse/"
+  }
+ ]
+}

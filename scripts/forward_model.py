@@ -608,15 +608,17 @@ def build_flagged(inputs: dict, rows: list[dict]) -> dict:
         },
         {
             "id": "VF-22",
-            "title": "GBGB race cards unreachable",
+            "title": "GBGB race cards: official Category One schedule captured, per-race cards still unreachable",
             "status": gaps["vf-22-gbgb"]["outcome"],
             "summary": (
-                "gbgb.org.uk returned fetch failures or HTTP 500 on the homepage, the results page and "
-                "the race-cards page on 2026-10-22. No greyhound rows are added: there is no verified "
-                "card to publish and no trap ratings to price from. Attempt log kept in "
+                "gbgb.org.uk returned fetch failures or HTTP 500 on 2026-10-22 (forward capture), but session "
+                "c12bdcd7 later the same day read the official 2026 Category One Schedule (server-rendered) and "
+                "published the ten upcoming open races (23 Oct - 26 Dec) as unlined rows on the unified "
+                "dashboard. Per-race cards (runners, off times, trap sectional ratings) remain client-rendered "
+                "or licensed, so no greyhound market is originated anywhere in this repo. Attempt log kept in "
                 "data/forward/capture_gap_notes.json."
             ),
-            "sources": ["https://www.gbgb.org.uk/"],
+            "sources": ["https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/"],
         },
         {
             "id": "VF-WINDOW",

@@ -266,8 +266,22 @@ def mlb_rows():
 
 
 # ----------------------------------------------------------------------------- picks
+def fair_american(prob: float) -> int:
+    """Fair no-vig American price of a probability (the published convention)."""
+    if prob >= 0.5:
+        return round(-100.0 / (1.0 / prob - 1.0))
+    return round((1.0 / prob - 1.0) * 100.0)
+
+
+def in_focus_band(prob: float) -> bool:
+    """The brief's -250..+10000 window on the fair no-vig price."""
+    return -250 <= fair_american(prob) <= 10000
+
+
 def confidence(prob: float) -> str:
-    if prob >= 0.62:
+    # Published uniform rule (all layers): high requires model probability
+    # >= 72%, or >= 70% with the fair no-vig price inside [-250, +10000].
+    if prob >= 0.72 or (prob >= 0.70 and in_focus_band(prob)):
         return "high"
     if prob >= 0.55:
         return "medium"
@@ -299,7 +313,8 @@ def add_picks(rows):
             "decimal": row["markets"]["match_winner"]["options"][best_sel]["decimal"],
             "american": row["markets"]["match_winner"]["options"][best_sel]["american"],
             "confidence": confidence(best_prob),
-            "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection",
+            "rule": ("high = probability >= 0.72, or >= 0.70 with the fair no-vig price inside "
+                     "[-250, +10000]; medium 0.55-0.72; low < 0.55"),
         }
         pred = preds.get(row["id"])
         if pred:

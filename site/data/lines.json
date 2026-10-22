@@ -82,8 +82,8 @@
       "price": -185,
       "model_probability": 0.65,
       "edge": 0.15,
-      "confidence": "high",
-      "confidence_reason": "Model edge 0.150 with an official evidence pack and a sufficient sample.",
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.150 clears the high bar, but the 65.0% selection is below the 70% high-confidence floor.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -98,7 +98,7 @@
           "price": -175
         }
       ],
-      "prediction": "The Flyers have scored 17 goals in 11 games, a 1.55 goals-per-game rate that NHL.com ranks 32nd, and their power play converts at 12.9%. Buffalo counters with Tage Thompson on five goals and Zach Benson on six assists inside a 3.00 goals-per-game attack. Take the Sabres on the money line at home."
+      "prediction": null
     },
     {
       "id": "nhl-2026020153",
@@ -258,8 +258,8 @@
       "price": -220,
       "model_probability": 0.6857,
       "edge": 0.1857,
-      "confidence": "high",
-      "confidence_reason": "Model edge 0.186 with an official evidence pack and a sufficient sample.",
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.186 clears the high bar, but the 68.6% selection is below the 70% high-confidence floor.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -274,7 +274,7 @@
           "price": -170
         }
       ],
-      "prediction": "Boston is 7-2-1, allows 2.20 goals per game, fourth in the NHL, and Jeremy Swayman is 6-1-1 with a .928 save percentage. Nashville has three wins in eight games despite Roman Josi's nine points and a 29.6% power play. Back the Bruins on the money line at TD Garden."
+      "prediction": null
     },
     {
       "id": "nhl-2026020155",
@@ -435,7 +435,7 @@
       "model_probability": 0.6344,
       "edge": 0.1344,
       "confidence": "medium",
-      "confidence_reason": "Model edge 0.134 clears the high bar, but no evidence pack is attached.",
+      "confidence_reason": "Model edge 0.134 clears the high bar, but the 63.4% selection is below the 70% high-confidence floor.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -626,7 +626,7 @@
           "price": -125
         }
       ],
-      "prediction": "Florida has won three in a row and scores 3.33 goals per game, ninth in the NHL, with Matthew Tkachuk on 14 points and Brady Tkachuk on six goals. Pittsburgh has lost four straight, concedes 3.70 goals per game (27th) and its goalies share an .867 save percentage. Florida is the lean, though the model edge is thin."
+      "prediction": null
     },
     {
       "id": "nhl-2026020159",
@@ -696,7 +696,7 @@
       "model_probability": 0.716,
       "edge": 0.216,
       "confidence": "medium",
-      "confidence_reason": "Model edge 0.216 clears the high bar, but no evidence pack is attached.",
+      "confidence_reason": "Model edge 0.216 clears the high bar and the selection clears the 70% floor, but its fair price sits outside the -250..+10000 focus window and below the 72% outright bar.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -865,8 +865,8 @@
       "price": -185,
       "model_probability": 0.6468,
       "edge": 0.1468,
-      "confidence": "high",
-      "confidence_reason": "Model edge 0.147 with an official evidence pack and a sufficient sample.",
+      "confidence": "medium",
+      "confidence_reason": "Model edge 0.147 clears the high bar, but the 64.7% selection is below the 70% high-confidence floor.",
       "leans": [
         {
           "market": "Puck line +1.5",
@@ -881,7 +881,7 @@
           "price": -255
         }
       ],
-      "prediction": "Dallas allows 1.56 goals per game, the best rate in the NHL, with Jake Oettinger at 4-2-1, a .945 save percentage and three shutouts. Winnipeg has lost two straight and scores 2.67 goals per game, 23rd in the league. Take the Stars on the money line at American Airlines Center."
+      "prediction": null
     },
     {
       "id": "nhl-2026020162",
@@ -951,7 +951,7 @@
       "model_probability": 0.701,
       "edge": 0.201,
       "confidence": "high",
-      "confidence_reason": "Model edge 0.201 with an official evidence pack and a sufficient sample.",
+      "confidence_reason": "Model edge 0.201 with an official evidence pack, a sufficient sample and a window-eligible selection.",
       "leans": [
         {
           "market": "Puck line +1.5",

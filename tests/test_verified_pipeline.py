@@ -121,8 +121,10 @@ class VerifiedPipelineTests(unittest.TestCase):
         # 2026-10-22 (session 26963a2d): Wilson v Pang priced from the full
         # official WST top-36 (+1 originated) and the in-progress SA v AUS Test
         # retired (-1 unlined); NZ v IND corrected to 22 Oct 07:00 UTC.
+        # 2026-10-22 (session c12bdcd7): +10 unlined GBGB Category One open
+        # races (23 Oct-26 Dec) from the official GBGB schedule (VF-22).
         self.assertEqual(orig, 94)
-        self.assertEqual(unl, 24)
+        self.assertEqual(unl, 34)
 
     def test_research_desk_picks_are_in_band_verified_and_player_aware(self) -> None:
         # Research-desk write-ups (session 26963a2d) sit beside the featured

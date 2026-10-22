@@ -1612,9 +1612,11 @@
       "attempts": [
         "https://www.gbgb.org.uk/racing/race-cards/ -> fetch failed",
         "https://www.gbgb.org.uk/racing/results/ -> HTTP 500",
-        "https://www.gbgb.org.uk/ -> HTTP 500"
+        "https://www.gbgb.org.uk/ -> HTTP 500",
+        "2026-10-22 (session c12bdcd7): https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/ -> HTTP 200, server-rendered 44-row 2026 Category One schedule (date, track, event, winner, distance/type, winning time)",
+        "2026-10-22 (session c12bdcd7): https://www.gbgb.org.uk/racecards/ -> HTTP 404 (path retired); https://www.gbgb.org.uk/racing/ and /racing/open-races/ render filter UI only, race lists load client-side"
       ],
-      "outcome": "STILL BLOCKED: gbgb.org.uk did not serve any page at capture time (2026-10-22). VF-22 remains open; no greyhound rows added to the forward slate (a card capture would also lack the trap ratings this desk requires before lining)."
+      "outcome": "PARTIAL/CLOSED for fixtures: the official 2026 Category One Schedule is captured and ten upcoming open races (23 Oct - 26 Dec) are published on the unified dashboard as unlined rows; per-race cards (runners, off times, trap ratings) remain client-rendered or licensed, so no market is originated."
     }
   }
 }

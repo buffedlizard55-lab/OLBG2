@@ -60,10 +60,10 @@
       <p class="small">Sources: <a href="https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games">https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games</a></p>
     </div>
     <div class="card">
-      <h3><span class="chip chip-warn">VF-22</span> GBGB race cards unreachable</h3>
-      <p class="small muted">Status: STILL BLOCKED: gbgb.org.uk did not serve any page at capture time (2026-10-22). VF-22 remains open; no greyhound rows added to the forward slate (a card capture would also lack the trap ratings this desk requires before lining).</p>
-      <p>gbgb.org.uk returned fetch failures or HTTP 500 on the homepage, the results page and the race-cards page on 2026-10-22. No greyhound rows are added: there is no verified card to publish and no trap ratings to price from. Attempt log kept in data/forward/capture_gap_notes.json.</p>
-      <p class="small">Sources: <a href="https://www.gbgb.org.uk/">https://www.gbgb.org.uk/</a></p>
+      <h3><span class="chip chip-warn">VF-22</span> GBGB race cards: official Category One schedule captured, per-race cards still unreachable</h3>
+      <p class="small muted">Status: PARTIAL/CLOSED for fixtures: the official 2026 Category One Schedule is captured and ten upcoming open races (23 Oct - 26 Dec) are published on the unified dashboard as unlined rows; per-race cards (runners, off times, trap ratings) remain client-rendered or licensed, so no market is originated.</p>
+      <p>gbgb.org.uk returned fetch failures or HTTP 500 on 2026-10-22 (forward capture), but session c12bdcd7 later the same day read the official 2026 Category One Schedule (server-rendered) and published the ten upcoming open races (23 Oct - 26 Dec) as unlined rows on the unified dashboard. Per-race cards (runners, off times, trap sectional ratings) remain client-rendered or licensed, so no greyhound market is originated anywhere in this repo. Attempt log kept in data/forward/capture_gap_notes.json.</p>
+      <p class="small">Sources: <a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/">https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/</a></p>
     </div>
     <div class="card">
       <h3><span class="chip chip-warn">VF-WINDOW</span> Forward window coverage</h3>

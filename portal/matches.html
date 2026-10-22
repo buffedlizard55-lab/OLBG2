@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="index.html" class="">Overview</a><a href="sports/index.html" class="">17 Sports</a><a href="matches.html" class="active">All Matches</a><a href="picks.html" class="">In-Band Picks (34)</a><a href="flagged.html" class="">Flagged for Review (38)</a><a href="audit.html" class="">Repo Audit</a><a href="methodology.html" class="">Methodology</a><a href="sources.html" class="">Official Sources</a><a href="excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="index.html" class="">Overview</a><a href="sports/index.html" class="">17 Sports</a><a href="matches.html" class="active" aria-current="page">All Matches</a><a href="picks.html" class="">In-Band Picks (34)</a><a href="flagged.html" class="">Flagged for Review (38)</a><a href="audit.html" class="">Repo Audit</a><a href="methodology.html" class="">Methodology</a><a href="sources.html" class="">Official Sources</a><a href="excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../index.html">Root Dashboard</a> ·
       <a href="../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../hub/index.html">/hub/</a> ·
       <a href="../evidence/index.html">/evidence/</a> ·
       <a href="../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
     <section class="hero">
       <h1>All 244 Verified Fixtures &amp; Originated Multi-Market Fair Lines</h1>
@@ -37,33 +38,44 @@
     </section>
     <section class="section" data-filter-root="1">
       <div class="controls">
-        <input type="search" data-filter-search placeholder="Search team, player, competition, venue...">
-        <select data-filter-sport>
-          <option value="all">All 17 Eligible Sports</option>
-          <option value='aussie-rules'>Aussie Rules</option><option value='baseball'>Baseball</option><option value='basketball'>Basketball</option><option value='cricket'>Cricket</option><option value='darts'>Darts</option><option value='esports'>Esports</option><option value='gaelic-football'>Gaelic Football</option><option value='golf'>Golf</option><option value='greyhounds'>Greyhounds</option><option value='handball'>Handball</option><option value='ice-hockey'>Ice Hockey</option><option value='motor-racing'>Motor Racing</option><option value='rugby-league'>Rugby League</option><option value='rugby-union'>Rugby Union</option><option value='snooker'>Snooker</option><option value='tennis'>Tennis</option><option value='volleyball'>Volleyball</option>
-        </select>
-        <select data-filter-conf>
-          <option value="all">All Confidence Grades</option>
-          <option value="high">High Confidence (Featured)</option>
-          <option value="medium">Medium Confidence</option>
-          <option value="low">Low Confidence</option>
-          <option value="blank">Unlined / Left Blank</option>
-        </select>
-        <span class="count-pill" data-filter-count></span>
+        <div class="filter-field">
+          <label for="matches-search">Search fixtures</label>
+          <input id="matches-search" type="search" data-filter-search aria-controls="matches-table" placeholder="Team, player, competition, venue...">
+        </div>
+        <div class="filter-field">
+          <label for="matches-sport">Sport</label>
+          <select id="matches-sport" data-filter-sport aria-controls="matches-table">
+            <option value="all">All 17 Eligible Sports</option>
+            <option value='aussie-rules'>Aussie Rules</option><option value='baseball'>Baseball</option><option value='basketball'>Basketball</option><option value='cricket'>Cricket</option><option value='darts'>Darts</option><option value='esports'>Esports</option><option value='gaelic-football'>Gaelic Football</option><option value='golf'>Golf</option><option value='greyhounds'>Greyhounds</option><option value='handball'>Handball</option><option value='ice-hockey'>Ice Hockey</option><option value='motor-racing'>Motor Racing</option><option value='rugby-league'>Rugby League</option><option value='rugby-union'>Rugby Union</option><option value='snooker'>Snooker</option><option value='tennis'>Tennis</option><option value='volleyball'>Volleyball</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="matches-confidence">Confidence</label>
+          <select id="matches-confidence" data-filter-conf aria-controls="matches-table">
+            <option value="all">All Confidence Grades</option>
+            <option value="high">High Confidence (Featured)</option>
+            <option value="medium">Medium Confidence</option>
+            <option value="low">Low Confidence</option>
+            <option value="blank">Unlined / Left Blank</option>
+          </select>
+        </div>
+        <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
       </div>
-      <div class="table-wrap">
-        <table>
+      <noscript><p class="filter-note">Filtering needs JavaScript; all fixture rows remain listed below.</p></noscript>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="All verified fixtures and markets">
+        <table id="matches-table">
+          <caption class="sr-only">All verified fixtures with winner, handicap, totals, confidence, and official-source links</caption>
           <thead>
             <tr>
-              <th>Date / UTC</th>
-              <th>Sport</th>
-              <th>Fixture, Venue &amp; Official Model Basis</th>
-              <th>Win Match / 1X2 (Fair)</th>
-              <th>Standard .5 Handicap / Line</th>
-              <th>Match Total O/U</th>
-              <th>Winner &amp; Grade</th>
-              <th>Actionable [-250..+10000]</th>
-              <th>Official Source</th>
+              <th scope="col">Date / UTC</th>
+              <th scope="col">Sport</th>
+              <th scope="col">Fixture, Venue &amp; Official Model Basis</th>
+              <th scope="col">Win Match / 1X2 (Fair)</th>
+              <th scope="col">Standard .5 Handicap / Line</th>
+              <th scope="col">Match Total O/U</th>
+              <th scope="col">Winner &amp; Grade</th>
+              <th scope="col">Actionable [-250..+10000]</th>
+              <th scope="col">Official Source</th>
             </tr>
           </thead>
           <tbody>
@@ -314,6 +326,7 @@
           </tbody>
         </table>
       </div>
+      <p class="filter-empty" data-filter-empty hidden>No fixtures match the selected filters.</p>
     </section>
     
   </main>

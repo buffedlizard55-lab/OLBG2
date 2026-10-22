@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="index.html" class="">Overview</a><a href="sports/index.html" class="">17 Sports</a><a href="matches.html" class="">All Matches</a><a href="picks.html" class="">In-Band Picks (34)</a><a href="flagged.html" class="">Flagged for Review (38)</a><a href="audit.html" class="">Repo Audit</a><a href="methodology.html" class="">Methodology</a><a href="sources.html" class="">Official Sources</a><a href="excluded.html" class="active">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="index.html" class="">Overview</a><a href="sports/index.html" class="">17 Sports</a><a href="matches.html" class="">All Matches</a><a href="picks.html" class="">In-Band Picks (34)</a><a href="flagged.html" class="">Flagged for Review (38)</a><a href="audit.html" class="">Repo Audit</a><a href="methodology.html" class="">Methodology</a><a href="sources.html" class="">Official Sources</a><a href="excluded.html" class="active" aria-current="page">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../index.html">Root Dashboard</a> ·
       <a href="../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../hub/index.html">/hub/</a> ·
       <a href="../evidence/index.html">/evidence/</a> ·
       <a href="../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
     <section class="hero">
       <h1>Excluded Sports Gate — Zero-Leakage Verification (<code>ID = 1..28</code>)</h1>
@@ -36,9 +37,10 @@
       </p>
     </section>
     <section class="section">
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Excluded OLBG categories">
         <table>
-          <thead><tr><th>OLBG ID</th><th>Hub Path</th><th>Exclusion Rule</th><th>Live Status</th><th>Verification Note</th><th>Endpoint Link</th></tr></thead>
+          <caption class="sr-only">Excluded OLBG sport hubs and the source-backed exclusion boundary</caption>
+          <thead><tr><th scope="col">OLBG ID</th><th scope="col">Hub Path</th><th scope="col">Exclusion Rule</th><th scope="col">Live Status</th><th scope="col">Verification Note</th><th scope="col">Endpoint Link</th></tr></thead>
           <tbody><tr><td class='num'><strong>1</strong></td><td><code>/betting-tips/Football/1</code></td><td><span class='badge badge-critical'>EXCLUDED (soccer / football)</span></td><td class='num'>HTTP 200</td><td>Association football — excluded</td><td><a href='https://www.olbg.com/betting-tips/Football/1' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>2</strong></td><td><code>/betting-tips/Horse_Racing/2</code></td><td><span class='badge badge-critical'>EXCLUDED (horse racing)</span></td><td class='num'>HTTP 200</td><td>UK &amp; Ireland horse racing — excluded</td><td><a href='https://www.olbg.com/betting-tips/Horse_Racing/2' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>6</strong></td><td><code>/betting-tips/Specials/6</code></td><td><span class='badge badge-critical'>EXCLUDED (specials)</span></td><td class='num'>HTTP 200</td><td>Legacy specials endpoint — excluded</td><td><a href='https://www.olbg.com/betting-tips/Specials/6' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>11</strong></td><td><code>/betting-tips/American_Football/11</code></td><td><span class='badge badge-critical'>EXCLUDED (american football)</span></td><td class='num'>HTTP 200</td><td>NFL / NCAAF — excluded</td><td><a href='https://www.olbg.com/betting-tips/American_Football/11' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>16</strong></td><td><code>/betting-tips/Boxing/16</code></td><td><span class='badge badge-critical'>EXCLUDED (boxing)</span></td><td class='num'>HTTP 200</td><td>Professional boxing — excluded</td><td><a href='https://www.olbg.com/betting-tips/Boxing/16' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>17</strong></td><td><code>/betting-tips/Cycling/17</code></td><td><span class='badge badge-critical'>EXCLUDED (cycling)</span></td><td class='num'>HTTP 200</td><td>UCI road/track cycling — excluded</td><td><a href='https://www.olbg.com/betting-tips/Cycling/17' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>18</strong></td><td><code>/betting-tips/Entertainment/18</code></td><td><span class='badge badge-critical'>EXCLUDED (specials)</span></td><td class='num'>HTTP 200</td><td>TV/award novelty specials — excluded</td><td><a href='https://www.olbg.com/betting-tips/Entertainment/18' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>19</strong></td><td><code>/betting-tips/Politics/19</code></td><td><span class='badge badge-critical'>EXCLUDED (specials)</span></td><td class='num'>HTTP 200</td><td>Election novelty specials — excluded</td><td><a href='https://www.olbg.com/betting-tips/Politics/19' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>24</strong></td><td><code>/betting-tips/Specials/24</code></td><td><span class='badge badge-critical'>EXCLUDED (specials)</span></td><td class='num'>HTTP 200</td><td>General specials hub — excluded</td><td><a href='https://www.olbg.com/betting-tips/Specials/24' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>26</strong></td><td><code>/betting-tips/Hurling/26</code></td><td><span class='badge badge-critical'>EXCLUDED (hurling)</span></td><td class='num'>HTTP 200</td><td>Live GAA Hurling hub (714, 675) — excluded</td><td><a href='https://www.olbg.com/betting-tips/Hurling/26' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr><tr><td class='num'><strong>27</strong></td><td><code>/betting-tips/UFC_MMA/27</code></td><td><span class='badge badge-critical'>EXCLUDED (ufc / mma)</span></td><td class='num'>HTTP 200</td><td>Mixed martial arts — excluded</td><td><a href='https://www.olbg.com/betting-tips/UFC_MMA/27' target='_blank' rel='noopener'>OLBG Endpoint ↗</a></td></tr></tbody>
         </table>
       </div>

@@ -110,10 +110,20 @@ def page_shell(title: str, active: str, body: str, depth: int = 0) -> str:
         ("sources", f"{prefix}sources.html", "Official Sources"),
         ("excluded", f"{prefix}excluded.html", "Excluded Gate"),
     ]
-    nav_html = "".join(
-        f'<a href="{href}" class="{"active" if key == active else ""}">{esc(label)}</a>'
-        for key, href, label in nav_items
-    )
+    nav_links = []
+    for key, href, label in nav_items:
+        active_class = "active" if key == active else ""
+        is_current_page = key == active and (
+            key != "sports" or title == "17 Sports Directory"
+        )
+        current_attr = ' aria-current="page"' if is_current_page else ""
+        nav_links.append(
+            f'<a href="{href}" class="{active_class}"{current_attr}>{esc(label)}</a>'
+        )
+    nav_html = "".join(nav_links)
+    # All current portal tables are simple column-header tables. Mark the relationship
+    # explicitly so it is retained when pages are rendered by assistive technology.
+    body = body.replace("<th>", '<th scope="col">')
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,14 +133,15 @@ def page_shell(title: str, active: str, body: str, depth: int = 0) -> str:
   <link rel="stylesheet" href="{prefix}assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="{prefix}index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav">{nav_html}</nav>
+      <nav class="topnav" aria-label="Portal navigation">{nav_html}</nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="{root_prefix}index.html">Root Dashboard</a> ·
       <a href="{root_prefix}verified/index.html">/verified/</a> ·
@@ -140,9 +151,9 @@ def page_shell(title: str, active: str, body: str, depth: int = 0) -> str:
       <a href="{root_prefix}hub/index.html">/hub/</a> ·
       <a href="{root_prefix}evidence/index.html">/evidence/</a> ·
       <a href="{root_prefix}audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     {body}
   </main>
   <footer class="footer">
@@ -243,10 +254,15 @@ def main() -> None:
     def sport_pills(active_slug: str = "", prefix: str = "sports/") -> str:
         links = []
         for s in eligible_sports:
-            cls = "active" if s["slug"] == active_slug else ""
+            is_current = s["slug"] == active_slug
+            cls = "active" if is_current else ""
+            current_attr = " aria-current='page'" if is_current else ""
             cnt = sum(1 for m in lined_matches if m["sport"] == s["slug"])
-            links.append(f"<a class='{cls}' href='{prefix}{esc(s['slug'])}.html'>{esc(s['name'])} ({cnt})</a>")
-        return f"<div class='sport-pills'>{''.join(links)}</div>"
+            links.append(
+                f"<a class='{cls}'{current_attr} href='{prefix}{esc(s['slug'])}.html'>"
+                f"{esc(s['name'])} ({cnt})</a>"
+            )
+        return f"<nav class='sport-pills' aria-label='Eligible sports'>{''.join(links)}</nav>"
 
     # 1. INDEX PAGE (portal/index.html)
     sport_summary_rows = []
@@ -304,8 +320,9 @@ def main() -> None:
     <section class="section">
       <h2>17 Eligible OLBG Sports — Origination &amp; Official Source Matrix</h2>
       <p class="section-lead">Every row links directly to both the official governing body used for verification/inputs and the live OLBG sport discovery endpoint.</p>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Coverage by eligible sport">
         <table>
+          <caption class="sr-only">Sport coverage, originated and blank rows, picks, competitions, and verification links</caption>
           <thead>
             <tr>
               <th>Sport (OLBG ID)</th>
@@ -327,8 +344,9 @@ def main() -> None:
     <section class="section">
       <h2>Critical Cross-Layer Repository Audit Highlights (<a href="flagged.html">See All 38 Flagged Items →</a>)</h2>
       <p class="section-lead">Summary of major factual defects uncovered during line-by-line review of inherited repository datasets against live governing-body feeds.</p>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Critical repository audit highlights">
         <table>
+          <caption class="sr-only">Critical cross-layer findings and official verification links</caption>
           <thead>
             <tr><th>ID</th><th>Severity</th><th>Inherited Layer</th><th>Finding &amp; Portal Remediation</th><th>Official Proof</th></tr>
           </thead>
@@ -358,22 +376,33 @@ def main() -> None:
     </section>
     <section class="section" data-filter-root="1">
       <div class="controls">
-        <input type="search" data-filter-search placeholder="Search team, player, competition, venue...">
-        <select data-filter-sport>
-          <option value="all">All 17 Eligible Sports</option>
-          {sport_opts}
-        </select>
-        <select data-filter-conf>
-          <option value="all">All Confidence Grades</option>
-          <option value="high">High Confidence (Featured)</option>
-          <option value="medium">Medium Confidence</option>
-          <option value="low">Low Confidence</option>
-          <option value="blank">Unlined / Left Blank</option>
-        </select>
-        <span class="count-pill" data-filter-count></span>
+        <div class="filter-field">
+          <label for="matches-search">Search fixtures</label>
+          <input id="matches-search" type="search" data-filter-search aria-controls="matches-table" placeholder="Team, player, competition, venue...">
+        </div>
+        <div class="filter-field">
+          <label for="matches-sport">Sport</label>
+          <select id="matches-sport" data-filter-sport aria-controls="matches-table">
+            <option value="all">All 17 Eligible Sports</option>
+            {sport_opts}
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="matches-confidence">Confidence</label>
+          <select id="matches-confidence" data-filter-conf aria-controls="matches-table">
+            <option value="all">All Confidence Grades</option>
+            <option value="high">High Confidence (Featured)</option>
+            <option value="medium">Medium Confidence</option>
+            <option value="low">Low Confidence</option>
+            <option value="blank">Unlined / Left Blank</option>
+          </select>
+        </div>
+        <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
       </div>
-      <div class="table-wrap">
-        <table>
+      <noscript><p class="filter-note">Filtering needs JavaScript; all fixture rows remain listed below.</p></noscript>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="All verified fixtures and markets">
+        <table id="matches-table">
+          <caption class="sr-only">All verified fixtures with winner, handicap, totals, confidence, and official-source links</caption>
           <thead>
             <tr>
               <th>Date / UTC</th>
@@ -392,6 +421,7 @@ def main() -> None:
           </tbody>
         </table>
       </div>
+      <p class="filter-empty" data-filter-empty hidden>No fixtures match the selected filters.</p>
     </section>
     """
     (PORTAL / "matches.html").write_text(page_shell(f"All {len(matches_data)} Verified Matches", "matches", matches_body, 0))
@@ -426,15 +456,23 @@ def main() -> None:
     <section class="section" data-filter-root="1">
       <h2>Summary Register of All 34 Featured Selections</h2>
       <div class="controls">
-        <input type="search" data-filter-search placeholder="Filter picks by player, team, sport, odds...">
-        <select data-filter-sport>
-          <option value="all">All 17 Eligible Sports</option>
-          {sport_opts}
-        </select>
-        <span class="count-pill" data-filter-count></span>
+        <div class="filter-field">
+          <label for="picks-search">Search picks</label>
+          <input id="picks-search" type="search" data-filter-search aria-controls="picks-table" placeholder="Player, team, sport, odds...">
+        </div>
+        <div class="filter-field">
+          <label for="picks-sport">Sport</label>
+          <select id="picks-sport" data-filter-sport aria-controls="picks-table">
+            <option value="all">All 17 Eligible Sports</option>
+            {sport_opts}
+          </select>
+        </div>
+        <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
       </div>
-      <div class="table-wrap">
-        <table>
+      <noscript><p class="filter-note">Filtering needs JavaScript; all featured picks remain listed below.</p></noscript>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Featured high-confidence picks">
+        <table id="picks-table">
+          <caption class="sr-only">Featured selections, fair odds, probabilities, players, and source links</caption>
           <thead>
             <tr>
               <th>Sport</th><th>Date</th><th>Matchup &amp; Competition</th><th>Explicit Selection</th>
@@ -444,6 +482,7 @@ def main() -> None:
           <tbody>{''.join(pick_table_rows)}</tbody>
         </table>
       </div>
+      <p class="filter-empty" data-filter-empty hidden>No picks match the selected filters.</p>
     </section>
 
     <section class="section">
@@ -480,22 +519,31 @@ def main() -> None:
     </section>
     <section class="section" data-filter-root="1">
       <div class="controls">
-        <input type="search" data-filter-search placeholder="Search flagged ID, layer, player, tournament...">
-        <select data-filter-type>
-          <option value="all">All 38 Flagged Items</option>
-          <option value="repo_irregularity">Inherited Repo Irregularities (12)</option>
-          <option value="unverified_left_blank">Unverified Fields Left Blank (26)</option>
-        </select>
-        <span class="count-pill" data-filter-count></span>
+        <div class="filter-field">
+          <label for="flags-search">Search review items</label>
+          <input id="flags-search" type="search" data-filter-search aria-controls="flags-table" placeholder="ID, layer, player, tournament...">
+        </div>
+        <div class="filter-field">
+          <label for="flags-type">Item type</label>
+          <select id="flags-type" data-filter-type aria-controls="flags-table">
+            <option value="all">All 38 Flagged Items</option>
+            <option value="repo_irregularity">Inherited Repo Irregularities (12)</option>
+            <option value="unverified_left_blank">Unverified Fields Left Blank (26)</option>
+          </select>
+        </div>
+        <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
       </div>
-      <div class="table-wrap">
-        <table>
+      <noscript><p class="filter-note">Filtering needs JavaScript; all review items remain listed below.</p></noscript>
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Flagged and unverified items">
+        <table id="flags-table">
+          <caption class="sr-only">Flagged repository issues and unverified fields, with disposition and official links</caption>
           <thead>
             <tr><th>ID</th><th>Severity</th><th>Layer &amp; Category</th><th>Discrepancy / Unconfirmed Item</th><th>Disposition</th><th>Official Link</th></tr>
           </thead>
           <tbody>{''.join(flag_rows)}</tbody>
         </table>
       </div>
+      <p class="filter-empty" data-filter-empty hidden>No review items match the selected filters.</p>
     </section>
     """
     (PORTAL / "flagged.html").write_text(page_shell("Flagged for Review", "flagged", flagged_body, 0))
@@ -533,8 +581,9 @@ def main() -> None:
     </section>
     <section class="section">
       <h2>Repository Layer Coverage &amp; Verification Comparison</h2>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Repository layer coverage comparison">
         <table>
+          <caption class="sr-only">Repository layers, sports coverage, fixture counts, picks, audit status, and references</caption>
           <thead><tr><th>Layer</th><th>Sports Lined</th><th>Fixtures</th><th>High Picks</th><th>Audit Summary</th><th>Official Reference</th></tr></thead>
           <tbody>{comp_rows}</tbody>
         </table>
@@ -542,8 +591,9 @@ def main() -> None:
     </section>
     <section class="section">
       <h2>Detailed Forensic Findings (PA-01 through PA-12)</h2>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Detailed forensic findings">
         <table>
+          <caption class="sr-only">Line-by-line repository findings with affected files, disposition, and official links</caption>
           <thead><tr><th>ID</th><th>Severity</th><th>Affected Files</th><th>Evidence-Backed Finding</th><th>Portal Remediation</th><th>Official Link</th></tr></thead>
           <tbody>{audit_rows_full}</tbody>
         </table>
@@ -601,8 +651,9 @@ in_focus_band = (1.40 &lt;= fair_decimal &lt;= 101.00) and (-250 &lt;= fair_amer
     </section>
     <section class="section">
       <h2>2. Sport-by-Sport Origination Models (All 17 Eligible Sports)</h2>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Sport-by-sport model summary">
         <table>
+          <caption class="sr-only">Eligible sport models, markets, and primary official input feeds</caption>
           <thead><tr><th>Sport</th><th>Parametric Model &amp; Shrinkage</th><th>Originated Markets</th><th>Primary Input Feed</th></tr></thead>
           <tbody>{meth_rows}</tbody>
         </table>
@@ -624,8 +675,9 @@ in_focus_band = (1.40 &lt;= fair_decimal &lt;= 101.00) and (-250 &lt;= fair_amer
       <p>Every fixture, team record, ranking tally, and named-player statistic in <code>/portal/</code> traces directly to one of the official HTTPS endpoints below.</p>
     </section>
     <section class="section">
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Official governing-body sources">
         <table>
+          <caption class="sr-only">Official source register with capture time and direct HTTPS link</caption>
           <thead><tr><th>Source ID</th><th>Sport</th><th>Governing Body / Endpoint Description</th><th>Captured (UTC)</th><th>Official URL</th></tr></thead>
           <tbody>{src_rows}</tbody>
         </table>
@@ -651,8 +703,9 @@ in_focus_band = (1.40 &lt;= fair_decimal &lt;= 101.00) and (-250 &lt;= fair_amer
       </p>
     </section>
     <section class="section">
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Excluded OLBG categories">
         <table>
+          <caption class="sr-only">Excluded OLBG sport hubs and the source-backed exclusion boundary</caption>
           <thead><tr><th>OLBG ID</th><th>Hub Path</th><th>Exclusion Rule</th><th>Live Status</th><th>Verification Note</th><th>Endpoint Link</th></tr></thead>
           <tbody>{excl_rows}</tbody>
         </table>
@@ -686,8 +739,9 @@ in_focus_band = (1.40 &lt;= fair_decimal &lt;= 101.00) and (-250 &lt;= fair_amer
     </section>
     {sport_pills("", "")}
     <section class="section">
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Eligible sport directory">
         <table>
+          <caption class="sr-only">All eligible sports, their governing bodies, match counts, picks, and official sources</caption>
           <thead><tr><th>Sport</th><th>Governing Body</th><th>Originated</th><th>Blank</th><th>Featured Picks</th><th>OLBG &amp; Official Discovery Note</th><th>Official Link</th></tr></thead>
           <tbody>{''.join(dir_rows)}</tbody>
         </table>
@@ -717,8 +771,9 @@ in_focus_band = (1.40 &lt;= fair_decimal &lt;= 101.00) and (-250 &lt;= fair_amer
             flag_sec = f"""
             <section class="section">
               <h2>Sport-Specific Audit &amp; Unverified Blank Notes</h2>
-              <div class="table-wrap">
+              <div class="table-wrap" role="region" tabindex="0" aria-label="{esc(s['name'])} review findings">
                 <table>
+                  <caption class="sr-only">{esc(s['name'])} audit and unverified-item findings</caption>
                   <thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Disposition</th><th>Official Link</th></tr></thead>
                   <tbody>{frows}</tbody>
                 </table>
@@ -749,18 +804,26 @@ in_focus_band = (1.40 &lt;= fair_decimal &lt;= 101.00) and (-250 &lt;= fair_amer
         <section class="section" data-filter-root="1">
           <h2>{esc(s['name'])} Match Board ({len(s_matches)} Verified Rows)</h2>
           <div class="controls">
-            <input type="search" data-filter-search placeholder="Filter {esc(s['name'])} fixtures...">
-            <select data-filter-conf>
-              <option value="all">All Grades</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="blank">Unlined / Blank</option>
-            </select>
-            <span class="count-pill" data-filter-count></span>
+            <div class="filter-field">
+              <label for="{sl}-search">Search {esc(s['name'])} fixtures</label>
+              <input id="{sl}-search" type="search" data-filter-search aria-controls="{sl}-matches-table" placeholder="Team, player, or competition...">
+            </div>
+            <div class="filter-field">
+              <label for="{sl}-confidence">Confidence</label>
+              <select id="{sl}-confidence" data-filter-conf aria-controls="{sl}-matches-table">
+                <option value="all">All Grades</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="blank">Unlined / Blank</option>
+              </select>
+            </div>
+            <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
-          <div class="table-wrap">
-            <table>
+          <noscript><p class="filter-note">Filtering needs JavaScript; all {esc(s['name'])} rows remain listed below.</p></noscript>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="{esc(s['name'])} fixtures and markets">
+            <table id="{sl}-matches-table">
+              <caption class="sr-only">{esc(s['name'])} fixtures, markets, confidence, and official-source links</caption>
               <thead>
                 <tr>
                   <th>Date / UTC</th><th>Sport</th><th>Fixture, Venue &amp; Basis</th>
@@ -771,6 +834,7 @@ in_focus_band = (1.40 &lt;= fair_decimal &lt;= 101.00) and (-250 &lt;= fair_amer
               <tbody>{render_match_rows(s_matches, "")}</tbody>
             </table>
           </div>
+          <p class="filter-empty" data-filter-empty hidden>No {esc(s['name'])} fixtures match the selected filters.</p>
         </section>
 
         {flag_sec}

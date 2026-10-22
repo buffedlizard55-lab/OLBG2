@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="../index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../../index.html">Root Dashboard</a> ·
       <a href="../../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../../hub/index.html">/hub/</a> ·
       <a href="../../evidence/index.html">/evidence/</a> ·
       <a href="../../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
         <section class="hero">
           <h1>Gaelic Football — Official-Source Multi-Market Lines &amp; In-Band Predictions</h1>
@@ -38,7 +39,7 @@
           </p>
         </section>
 
-        <div class='sport-pills'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='active' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></div>
+        <nav class='sport-pills' aria-label='Eligible sports'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='active' aria-current='page' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></nav>
 
         <section class="section">
           <h2>Featured High-Confidence Gaelic Football Predictions (1)</h2>
@@ -78,23 +79,31 @@
         <section class="section" data-filter-root="1">
           <h2>Gaelic Football Match Board (6 Verified Rows)</h2>
           <div class="controls">
-            <input type="search" data-filter-search placeholder="Filter Gaelic Football fixtures...">
-            <select data-filter-conf>
-              <option value="all">All Grades</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="blank">Unlined / Blank</option>
-            </select>
-            <span class="count-pill" data-filter-count></span>
+            <div class="filter-field">
+              <label for="gaelic-football-search">Search Gaelic Football fixtures</label>
+              <input id="gaelic-football-search" type="search" data-filter-search aria-controls="gaelic-football-matches-table" placeholder="Team, player, or competition...">
+            </div>
+            <div class="filter-field">
+              <label for="gaelic-football-confidence">Confidence</label>
+              <select id="gaelic-football-confidence" data-filter-conf aria-controls="gaelic-football-matches-table">
+                <option value="all">All Grades</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="blank">Unlined / Blank</option>
+              </select>
+            </div>
+            <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
-          <div class="table-wrap">
-            <table>
+          <noscript><p class="filter-note">Filtering needs JavaScript; all Gaelic Football rows remain listed below.</p></noscript>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="Gaelic Football fixtures and markets">
+            <table id="gaelic-football-matches-table">
+              <caption class="sr-only">Gaelic Football fixtures, markets, confidence, and official-source links</caption>
               <thead>
                 <tr>
-                  <th>Date / UTC</th><th>Sport</th><th>Fixture, Venue &amp; Basis</th>
-                  <th>Win Match / 1X2</th><th>Standard .5 Line</th><th>Total O/U</th>
-                  <th>Winner &amp; Grade</th><th>Actionable [-250..+10000]</th><th>Official Source</th>
+                  <th scope="col">Date / UTC</th><th scope="col">Sport</th><th scope="col">Fixture, Venue &amp; Basis</th>
+                  <th scope="col">Win Match / 1X2</th><th scope="col">Standard .5 Line</th><th scope="col">Total O/U</th>
+                  <th scope="col">Winner &amp; Grade</th><th scope="col">Actionable [-250..+10000]</th><th scope="col">Official Source</th>
                 </tr>
               </thead>
               <tbody><tr id='gaa-3530-cork-sfc' data-row='1' data-sport='gaelic-football' data-conf='high'><td class='num'>2026-10-25<div style='color:#6b7280;font-size:11.5px'>2026-10-25 15:30 UTC</div></td><td><a class='badge badge-sport' href='gaelic-football.html'>Gaelic Football</a></td><td><strong>St Finbarr&#x27;s vs Nemo Rangers</strong><div style='font-size:12px;color:#4b5563'>2026 McCarthy Insurance Group Cork Premier SFC Final · SuperValu Páirc Uí Chaoimh, Cork</div><div style='font-size:11.5px;color:#6b7280'>County SFC knockout scoring rates: St Finbarr&#x27;s (18.8 ppg) vs Nemo Rangers (16.4 ppg)</div></td><td><div><strong>St Finbarr&#x27;s:</strong> <span class='odds'>-233 (1.43) · 70.1%</span></div><div><strong>Draw:</strong> <span class='odds'>+1657 (17.57) · 5.7%</span></div><div><strong>Nemo Rangers:</strong> <span class='odds'>+313 (4.13) · 24.2%</span></div></td><td><div><strong>St Finbarr&#x27;s -4.5 pts:</strong> <span class='odds'>+130 (2.30) · 43.6%</span></div><div><strong>Opp:</strong> <span class='odds'>-130 (1.77) · 56.4%</span></div></td><td><div><strong>O/U 33.5 pts Over:</strong> <span class='odds'>-102 (1.98) · 50.5%</span></div><div><strong>Under:</strong> <span class='odds'>+102 (2.02) · 49.5%</span></div></td><td><span class="badge badge-high">HIGH</span><div><strong>St Finbarr&#x27;s</strong></div><div><span class='odds'>-233 (1.43) · 70.1%</span></div></td><td><div><strong>St Finbarr&#x27;s — Win Match</strong></div><div><span class='odds'>-233 (1.43) · 70.1%</span></div><div style='font-size:11.5px;color:#4b5563'>Match Winner (1X2)</div></td><td><a href='https://munster.gaa.ie/fixtures/club-championships-2026/' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Gaelic_Football/25' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr>
@@ -105,14 +114,16 @@
 <tr id='gaa-3327-aisfc-2027' data-row='1' data-sport='gaelic-football' data-conf='blank'><td class='num'>2027-07-25<div style='color:#6b7280;font-size:11.5px'>2027-07-25 — Official TBC</div></td><td><a class='badge badge-sport' href='gaelic-football.html'>Gaelic Football</a></td><td><strong>Inter-County 2027 Outright (OLBG 3327) vs Field / Outright</strong><div style='font-size:12px;color:#4b5563'>2027 All-Ireland Senior Football Championship Outright · Official Venue (see governing-body link)</div><div style='font-size:11.5px;color:#6b7280'>2027 provincial inter-county draws and Allianz League rosters have not yet been contested; left unlined.</div></td><td><span class="blank-cell">— (Unverified / Left Blank)</span></td><td><span class="blank-cell">—</span></td><td><span class="blank-cell">—</span></td><td><span class="badge badge-blank">UNLINED / BLANK</span><span class="blank-cell">—</span></td><td><span class="blank-cell">—</span></td><td><a href='https://www.gaa.ie/football' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Gaelic_Football/25' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr></tbody>
             </table>
           </div>
+          <p class="filter-empty" data-filter-empty hidden>No Gaelic Football fixtures match the selected filters.</p>
         </section>
 
         
             <section class="section">
               <h2>Sport-Specific Audit &amp; Unverified Blank Notes</h2>
-              <div class="table-wrap">
+              <div class="table-wrap" role="region" tabindex="0" aria-label="Gaelic Football review findings">
                 <table>
-                  <thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Disposition</th><th>Official Link</th></tr></thead>
+                  <caption class="sr-only">Gaelic Football audit and unverified-item findings</caption>
+                  <thead><tr><th scope="col">ID</th><th scope="col">Severity</th><th scope="col">Item</th><th scope="col">Disposition</th><th scope="col">Official Link</th></tr></thead>
                   <tbody><tr><td class='num'><strong>PU-08</strong></td><td><span class="badge badge-low">INFO</span></td><td><strong>Cork Senior A Football Championship Final: Kanturk vs Éire Óg (OLBG 3531)</strong><div style='font-size:12.5px;color:#4b5563'>Second-tier Cork Senior A group-stage points-for/against tables are not published server-side on munster.gaa.ie; left blank.</div></td><td>Fixture listed with official governing-body link; odds &amp; winner fields left strictly blank (—) rather than inferred.</td><td><a href='https://munster.gaa.ie/fixtures/club-championships-2026/' target='_blank' rel='noopener'>Official Source ↗</a></td></tr><tr><td class='num'><strong>PU-09</strong></td><td><span class="badge badge-low">INFO</span></td><td><strong>Waterford Senior Football Championship Final: Rathgormack vs The Nire (OLBG 3536)</strong><div style='font-size:12.5px;color:#4b5563'>Waterford club championship scoring differentials not published in server-rendered Munster GAA tables; left unlined.</div></td><td>Fixture listed with official governing-body link; odds &amp; winner fields left strictly blank (—) rather than inferred.</td><td><a href='https://munster.gaa.ie/fixtures/club-championships-2026/' target='_blank' rel='noopener'>Official Source ↗</a></td></tr><tr><td class='num'><strong>PU-10</strong></td><td><span class="badge badge-low">INFO</span></td><td><strong>Limerick Senior Football Championship: Fr Caseys vs Kildimo-Pallaskenry (OLBG 3537)</strong><div style='font-size:12.5px;color:#4b5563'>County board match status and scoring totals unconfirmed on server-rendered Munster GAA page; left blank.</div></td><td>Fixture listed with official governing-body link; odds &amp; winner fields left strictly blank (—) rather than inferred.</td><td><a href='https://munster.gaa.ie/fixtures/club-championships-2026/' target='_blank' rel='noopener'>Official Source ↗</a></td></tr><tr><td class='num'><strong>PU-11</strong></td><td><span class="badge badge-low">INFO</span></td><td><strong>2027 All-Ireland Senior Football Championship Outright: Inter-County 2027 Outright (OLBG 3327)</strong><div style='font-size:12.5px;color:#4b5563'>2027 provincial inter-county draws and Allianz League rosters have not yet been contested; left unlined.</div></td><td>Fixture listed with official governing-body link; odds &amp; winner fields left strictly blank (—) rather than inferred.</td><td><a href='https://www.gaa.ie/football' target='_blank' rel='noopener'>Official Source ↗</a></td></tr></tbody>
                 </table>
               </div>

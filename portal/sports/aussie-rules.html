@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="../index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../../index.html">Root Dashboard</a> ·
       <a href="../../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../../hub/index.html">/hub/</a> ·
       <a href="../../evidence/index.html">/evidence/</a> ·
       <a href="../../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
         <section class="hero">
           <h1>Aussie Rules — Official-Source Multi-Market Lines &amp; In-Band Predictions</h1>
@@ -38,7 +39,7 @@
           </p>
         </section>
 
-        <div class='sport-pills'><a class='active' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></div>
+        <nav class='sport-pills' aria-label='Eligible sports'><a class='active' aria-current='page' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></nav>
 
         <section class="section">
           <h2>Featured High-Confidence Aussie Rules Predictions (2)</h2>
@@ -106,23 +107,31 @@
         <section class="section" data-filter-root="1">
           <h2>Aussie Rules Match Board (9 Verified Rows)</h2>
           <div class="controls">
-            <input type="search" data-filter-search placeholder="Filter Aussie Rules fixtures...">
-            <select data-filter-conf>
-              <option value="all">All Grades</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="blank">Unlined / Blank</option>
-            </select>
-            <span class="count-pill" data-filter-count></span>
+            <div class="filter-field">
+              <label for="aussie-rules-search">Search Aussie Rules fixtures</label>
+              <input id="aussie-rules-search" type="search" data-filter-search aria-controls="aussie-rules-matches-table" placeholder="Team, player, or competition...">
+            </div>
+            <div class="filter-field">
+              <label for="aussie-rules-confidence">Confidence</label>
+              <select id="aussie-rules-confidence" data-filter-conf aria-controls="aussie-rules-matches-table">
+                <option value="all">All Grades</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="blank">Unlined / Blank</option>
+              </select>
+            </div>
+            <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
-          <div class="table-wrap">
-            <table>
+          <noscript><p class="filter-note">Filtering needs JavaScript; all Aussie Rules rows remain listed below.</p></noscript>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="Aussie Rules fixtures and markets">
+            <table id="aussie-rules-matches-table">
+              <caption class="sr-only">Aussie Rules fixtures, markets, confidence, and official-source links</caption>
               <thead>
                 <tr>
-                  <th>Date / UTC</th><th>Sport</th><th>Fixture, Venue &amp; Basis</th>
-                  <th>Win Match / 1X2</th><th>Standard .5 Line</th><th>Total O/U</th>
-                  <th>Winner &amp; Grade</th><th>Actionable [-250..+10000]</th><th>Official Source</th>
+                  <th scope="col">Date / UTC</th><th scope="col">Sport</th><th scope="col">Fixture, Venue &amp; Basis</th>
+                  <th scope="col">Win Match / 1X2</th><th scope="col">Standard .5 Line</th><th scope="col">Total O/U</th>
+                  <th scope="col">Winner &amp; Grade</th><th scope="col">Actionable [-250..+10000]</th><th scope="col">Official Source</th>
                 </tr>
               </thead>
               <tbody><tr id='aflw-r11-1' data-row='1' data-sport='aussie-rules' data-conf='low'><td class='num'>2026-10-23<div style='color:#6b7280;font-size:11.5px'>2026-10-23 08:15 UTC</div></td><td><a class='badge badge-sport' href='aussie-rules.html'>Aussie Rules</a></td><td><strong>Hawthorn Hawks vs Melbourne Demons</strong><div style='font-size:12px;color:#4b5563'>2026 NAB AFLW Premiership — Round 11 · Kinetic Stadium, Frankston</div><div style='font-size:11.5px;color:#6b7280'>AFLW R10 ladder: HAW 28pts (135.4%) vs MELB 32pts (177.2%)</div></td><td><div><strong>Hawthorn Hawks:</strong> <span class='odds'>+129 (2.29) · 43.7%</span></div><div><strong>Melbourne Demons:</strong> <span class='odds'>-128 (1.78) · 56.3%</span></div></td><td><div><strong>Hawthorn Hawks +3.5 pts:</strong> <span class='odds'>-106 (1.94) · 51.6%</span></div><div><strong>Opp:</strong> <span class='odds'>+107 (2.07) · 48.4%</span></div><div style='margin-top:3px;color:#0f4c81'><strong>Alt .5:</strong> Melbourne Demons -2.5 pts <span class='odds'>-102 (1.98) · 50.6%</span></div></td><td><div><strong>O/U 74.5 pts Over:</strong> <span class='odds'>-102 (1.98) · 50.5%</span></div><div><strong>Under:</strong> <span class='odds'>+102 (2.02) · 49.5%</span></div></td><td><span class="badge badge-low">LOW</span><div><strong>Melbourne Demons</strong></div><div><span class='odds'>-128 (1.78) · 56.3%</span></div></td><td><div><strong>Melbourne Demons — Win Match</strong></div><div><span class='odds'>-128 (1.78) · 56.3%</span></div><div style='font-size:11.5px;color:#4b5563'>Moneyline / Match Winner</div></td><td><a href='https://www.afl.com.au/aflw' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Aussie_Rules/22' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr>
@@ -136,6 +145,7 @@
 <tr id='aflw-r11-9' data-row='1' data-sport='aussie-rules' data-conf='medium'><td class='num'>2026-10-25<div style='color:#6b7280;font-size:11.5px'>2026-10-25 08:05 UTC</div></td><td><a class='badge badge-sport' href='aussie-rules.html'>Aussie Rules</a></td><td><strong>West Coast Eagles vs Gold Coast Suns</strong><div style='font-size:12px;color:#4b5563'>2026 NAB AFLW Premiership — Round 11 · Mineral Resources Park, Perth</div><div style='font-size:11.5px;color:#6b7280'>AFLW R10 ladder: WCE 12pts (72.1%) vs GCFC 4pts (52.9%)</div></td><td><div><strong>West Coast Eagles:</strong> <span class='odds'>-345 (1.29) · 77.7%</span></div><div><strong>Gold Coast Suns:</strong> <span class='odds'>+348 (4.48) · 22.3%</span></div></td><td><div><strong>West Coast Eagles -13.5 pts:</strong> <span class='odds'>+102 (2.02) · 49.6%</span></div><div><strong>Opp:</strong> <span class='odds'>-102 (1.98) · 50.4%</span></div><div style='margin-top:3px;color:#0f4c81'><strong>Alt .5:</strong> West Coast Eagles -3.5 pts <span class='odds'>-250 (1.40) · 71.3%</span></div></td><td><div><strong>O/U 74.5 pts Over:</strong> <span class='odds'>-102 (1.98) · 50.5%</span></div><div><strong>Under:</strong> <span class='odds'>+102 (2.02) · 49.5%</span></div></td><td><span class="badge badge-medium">MEDIUM</span><div><strong>West Coast Eagles</strong></div><div><span class='odds'>-345 (1.29) · 77.7%</span></div></td><td><div><strong>West Coast Eagles -3.5 pts</strong></div><div><span class='odds'>-250 (1.40) · 71.3%</span></div><div style='font-size:11.5px;color:#4b5563'>Standard Handicap / Set / Leg Line</div></td><td><a href='https://www.afl.com.au/aflw' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Aussie_Rules/22' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr></tbody>
             </table>
           </div>
+          <p class="filter-empty" data-filter-empty hidden>No Aussie Rules fixtures match the selected filters.</p>
         </section>
 
         

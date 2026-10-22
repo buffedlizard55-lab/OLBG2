@@ -50,6 +50,15 @@ jobs:
           python scripts/final_flags.py
           python scripts/final_build.py
 
+      - name: Rebuild the canon 17-sport first-hand desk
+        run: |
+          python scripts/canon_data.py
+          python scripts/canon_predictions.py
+          python scripts/canon_flags.py
+          python scripts/canon_sources.py
+          python scripts/canon_build.py
+          python scripts/canon_verify.py
+
       - name: Regenerate the root dashboard & integration layer
         run: python scripts/build_site.py
 
@@ -60,4 +69,4 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Fail if any generated page or data file is stale
-        run: git diff --exit-code -- verified data/verified live data/live site survey data/survey final data/final integration.html index.html picks.html flagged.html methodology.html sources.html sports assets
+        run: git diff --exit-code -- verified data/verified live data/live site survey data/survey final data/final canon data/canon integration.html index.html picks.html flagged.html methodology.html sources.html sports assets

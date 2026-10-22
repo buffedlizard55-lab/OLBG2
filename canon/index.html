@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview - OLBG2 canon</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+       margin: 0; background: #f6f7fb; color: #1b2430; line-height: 1.55; }
+header.top { background: #0f172a; color: #fff; padding: 14px 24px; position: sticky; top: 0; z-index: 10; }
+header.top .brand { font-weight: 700; font-size: 1.15rem; margin-right: 24px; }
+header.top a { color: #cbd5e1; text-decoration: none; margin-right: 16px; font-size: 0.92rem; }
+header.top a:hover, header.top a.active { color: #fff; text-decoration: underline; }
+main { max-width: 1180px; margin: 0 auto; padding: 24px; }
+h1 { font-size: 1.7rem; margin-top: 0; }
+h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
+.lede { color: #475569; max-width: 760px; }
+.notice { background: #fff7ed; border: 1px solid #fdba74; border-radius: 8px; padding: 12px 16px; margin: 16px 0; }
+.notice.critical { background: #fef2f2; border-color: #fca5a5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 18px 0; }
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; }
+.card .num { font-size: 1.6rem; font-weight: 700; color: #0f172a; }
+.card .label { color: #64748b; font-size: 0.85rem; }
+.table-wrap { overflow-x: auto; background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #eef1f6; white-space: nowrap; }
+td.wrap, th.wrap { white-space: normal; }
+th { background: #f1f5f9; position: sticky; top: 0; }
+tr:hover td { background: #f8fafc; }
+.badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.76rem; font-weight: 600; }
+.badge.high { background: #dcfce7; color: #166534; }
+.badge.medium { background: #fef9c3; color: #854d0e; }
+.badge.low { background: #e2e8f0; color: #475569; }
+.badge.none { background: #f1f5f9; color: #94a3b8; }
+.badge.critical { background: #fee2e2; color: #991b1b; }
+.badge.high-sev { background: #ffedd5; color: #9a3412; }
+.badge.medium-sev { background: #fef9c3; color: #854d0e; }
+.badge.low-sev { background: #e2e8f0; color: #475569; }
+.pred { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+.pred h3 { margin: 0 0 6px 0; font-size: 1.02rem; }
+.pred .meta { color: #64748b; font-size: 0.82rem; margin-bottom: 8px; }
+.pred .sel { font-weight: 700; color: #0f172a; margin-top: 8px; }
+a.src { font-size: 0.82rem; }
+footer { max-width: 1180px; margin: 0 auto; padding: 24px; color: #94a3b8; font-size: 0.82rem; }
+.sport-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.sport-grid a { display: block; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px;
+                text-decoration: none; color: #0f172a; font-weight: 600; }
+.sport-grid a .count { display: block; font-weight: 400; color: #64748b; font-size: 0.82rem; margin-top: 4px; }
+code { background: #f1f5f9; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head><body>
+<header class="top"><span class="brand">OLBG2 / canon</span><a href="../index.html">Root dashboard</a><a href="index.html" class="active">Overview</a><a href="matches.html">All Matches</a><a href="picks.html">High-Confidence Picks</a><a href="sports/index.html">Sports</a><a href="flagged.html">Flagged for Review</a><a href="audit.html">Repo Audit</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a></header>
+<main>
+
+<h1>OLBG2 canon desk &mdash; 17-sport first-hand origination &amp; forensic audit</h1>
+<p class="lede">A from-scratch reverse-engineering of OLBG.com's eligible 17-sport taxonomy (every sport except
+soccer, boxing, UFC/MMA, American football, hurling, horse racing, cycling and specials), captured
+2026-10-22 between 12:08 and 12:18 UTC and cross-checked line by line against primary governing-body
+sources. This pass also re-audited every existing layer in the repository and found eight previously
+undetected factual defects &mdash; including a same-day PDC withdrawal that even OLBG.com's live page
+had not yet reflected. See <a href="audit.html">the full audit</a>.</p>
+<div class="notice critical"><strong>Headline finding:</strong> Luke Humphries withdrew from the PDC
+European Championship on 2026-10-22 with gastroenteritis. Every other layer in this repository, and the
+live OLBG event at capture time, still priced the original pairing. See <a href="flagged.html#F-01">F-01</a>.</div>
+<div class="cards">
+  <div class="card"><div class="num">62</div><div class="label">Total fixtures captured</div></div>
+  <div class="card"><div class="num">59</div><div class="label">Originated multi-market fixtures</div></div>
+  <div class="card"><div class="num">3</div><div class="label">Transparently blank (unconfirmable)</div></div>
+  <div class="card"><div class="num">59</div><div class="label">High-confidence in-band picks</div></div>
+  <div class="card"><div class="num">59</div><div class="label">Written predictions (&ge;30 words)</div></div>
+  <div class="card"><div class="num">17</div><div class="label">Eligible sports covered</div></div>
+  <div class="card"><div class="num">10</div><div class="label">Flagged review items</div></div>
+  <div class="card"><div class="num">43</div><div class="label">Distinct official sources cited</div></div>
+</div>
+<h2>Where to go next</h2>
+<ul>
+  <li><a href="matches.html">All Matches</a> &mdash; the full captured list across all 17 sports, every row linked to its official source.</li>
+  <li><a href="picks.html">High-Confidence Picks</a> &mdash; the 59 written predictions, each &ge;30 words, naming verified players, form, and history.</li>
+  <li><a href="sports/index.html">Sports</a> &mdash; per-sport pages.</li>
+  <li><a href="flagged.html">Flagged for Review</a> &mdash; 10 items including 8 newly found defects in prior repository layers.</li>
+  <li><a href="audit.html">Repo Audit</a> &mdash; the full line-by-line audit of every existing layer in this repository.</li>
+  <li><a href="methodology.html">Methodology</a> &mdash; the confidence rule and price model.</li>
+  <li><a href="sources.html">Sources</a> &mdash; every official URL cited, classified by publisher.</li>
+</ul>
+
+</main>
+<footer>Session <code>arena/3de6d2ed-olbg2</code> &middot; captured 2026-10-22 12:08-12:18 UTC &middot;
+Research only, not betting advice. 18+. See <a href="methodology.html">methodology</a> for the model and confidence rule.</footer>
+</body></html>

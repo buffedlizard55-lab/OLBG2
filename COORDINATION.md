@@ -1465,3 +1465,28 @@ The picks introduction now handles an empty outside-band category without implyi
 Live re-check after #65 (cache-busted fetch): `/verification.html` shows "Re-read line by line on 2026-10-22" with the
 NHL / URC / Top 14 / Pro D2 / EuroLeague / EHF rows and their source links, 85 fixture-scoped and 34
 competition-scoped, and links to VF-23. No data, price, probability or prediction changed in #64 or #65.
+
+---
+
+## Session `arena/26963a2d-olbg2` — research-grade in-band picks, line-by-line re-verification, coverage expansion (2026-10-22)
+
+**Session ID:** `arena/26963a2d-olbg2` · **Branch:** `arena/26963a2d-olbg2` (fixed by the environment; `session-…` naming not available) · **Claimed:** 2026-10-22 02:55 UTC, before any implementation edit.
+
+**Concurrent-session check at claim time:** `origin/main` = `c523300` (PR #58). Two other branches are live:
+`arena/53b0cd38-olbg2` (claim 02:46Z, scope `scripts/build_site.py` + root `picks.html`, copy-only) and
+`arena/1bb45081-olbg2` (PR #54, open, `mergeable: CONFLICTING`, last commit 01:57Z, scope: all five layers' odds-window gate).
+This session **does not edit** `scripts/build_site.py`, root `picks.html`, or any file in PR #54's diff until the
+integration step (T5), and then only after rebasing on whatever `main` is at that moment. Until T5, every file this
+session writes is **new** (listed below), so no git-level overlap with either live branch is possible.
+
+| # | Task | Status | Owner | File scope (all new files until T5) |
+|---|---|---|---|---|
+| T1 | Line-by-line re-verification of the live 119-row `/verified/` desk against its official sources (fixture ids, start times, venues, records) at ~03:00Z; every irregularity logged with the official link | in progress | `arena/26963a2d-olbg2` | `research/reverify-26963a2d.md`, `data/verified/reverify_26963a2d.json` |
+| T2 | Research capture for match-winner candidates priced −250…+10000: recent results / last-five form, home-away splits, scoring leaders from the governing body only (NHL api-web, EuroLeague game centre, NBA official, URC/LNR, EHF, PDC, WST) | unclaimed → in progress | `arena/26963a2d-olbg2` | `data/verified/research_26963a2d.json` |
+| T3 | Research-grade high-confidence written picks (≥30 words, non-templated, team + player + form + recent history + explicit selection) only where the originated price sits in −250…+10000 and ≥3 independent official facts corroborate the model edge | unclaimed → in progress | `arena/26963a2d-olbg2` | `data/verified/research_picks_26963a2d.json` |
+| T4 | Coverage expansion where an official body renders server-side (tennis order of play, WST NI Open R3 inputs, PDC R2, volleyball/handball) — anything not rendered stays blank and is flagged | unclaimed → in progress | `data/verified/expansion_26963a2d.json`, `research/reverify-26963a2d.md` |
+| T5 | Integration: wire the new files into `verified_seed.py` / `verified_model.py` / `verified_build.py` / `build_site.py`, rebuild all layers, tests + link audit green, PR → merge → Pages deploy confirmed; record here | unclaimed (starts only after T1–T4 and after `53b0cd38` closes; PR #54 handled per the 60-minute rule) | `arena/26963a2d-olbg2` | shared outputs |
+
+**Rules for this session:** a value is published only if an official governing-body/league endpoint returned it in
+this session's capture (timestamps logged per fetch); nothing is inferred; bookmaker prices are never read; the
+−250…+10000 band is applied to our own originated fair prices; a written pick must cite the official URL of every fact.

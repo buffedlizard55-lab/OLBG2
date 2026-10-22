@@ -379,19 +379,16 @@ REPO_AUDIT = [
 
 
 def build_inputs() -> dict:
-    # Load verified raw numerical team snapshots already confirmed first-hand against official endpoints,
-    # then apply our live Oct 22 corrections (EuroLeague HTA/VIR GP=7, NBA Oct 20-21 results, verified ATP/WTA, etc.).
-    hub_in = json.loads((ROOT / "data" / "hub" / "inputs.json").read_text())
-    slate_in = json.loads((ROOT / "data" / "slate" / "inputs.json").read_text())
-    r26 = json.loads((ROOT / "data" / "verified" / "research_26963a2d.json").read_text())
+    # Read isolated verified snapshot in data/portal/raw_seed.json so /portal/ never drifts if other layers mutate.
+    raw = json.loads((OUT / "raw_seed.json").read_text())
 
-    euroleague_teams = json.loads(json.dumps(hub_in["euroleague_teams"]))
+    euroleague_teams = json.loads(json.dumps(raw["euroleague_teams"]))
     # Update HTA & VIR for completed Oct 21 Round 7 game (HTA 90-81 VIR) verified on euroleaguebasketball.net
     euroleague_teams["HTA"].update({"gp": 7, "w": 5, "l": 2, "pf": 630, "pa": 601})
     euroleague_teams["VIR"].update({"gp": 7, "w": 4, "l": 3, "pf": 606, "pa": 608})
 
     euroleague_r7 = [
-        g for g in hub_in["euroleague_r7_fixtures"] if not (g["home"] == "HTA" and g["away"] == "VIR")
+        g for g in raw["euroleague_r7_fixtures"] if not (g["home"] == "HTA" and g["away"] == "VIR")
     ]
 
     nba_2026_records = {
@@ -432,11 +429,11 @@ def build_inputs() -> dict:
     ]
 
     # PDC European Championship R1 — all 16 ties with verified Noppert vs Bunting & Aspinall vs Reyes
-    pdc_players = dict(slate_in["pdc_players"])
+    pdc_players = dict(raw["pdc_players"])
     pdc_players["Stephen Bunting"] = {"rank": 18, "prize_gbp": 412500}
     pdc_players["Cristo Reyes"] = {"rank": 64, "prize_gbp": 76500}
     darts_fixtures = []
-    for d in hub_in["darts_fixtures"]:
+    for d in raw["darts_fixtures"]:
         darts_fixtures.append({
             **d,
             "venue": "Westfalenhallen, Dortmund",
@@ -486,7 +483,7 @@ def build_inputs() -> dict:
     ]
 
     # Motor Racing — 2026 Formula 1 United States Grand Prix (Round 18, Oct 25, COTA)
-    f1_drivers = hub_in["f1_drivers"]
+    f1_drivers = raw["f1_drivers"]
     f1_markets = [
         {"id": "f1-usgp-winner", "date": "2026-10-25", "time": "2026-10-25 20:00 UTC", "competition": "2026 Formula 1 United States Grand Prix — Race Winner (Round 18)", "venue": "Circuit of the Americas, Austin, TX", "d1": "Kimi Antonelli (Mercedes, 340 pts)", "d1_pts": 340, "d2": "Field (Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201)", "d2_pts": 1030, "is_outright": True, "source_url": "https://www.formula1.com/en/results/2026/races/1297/united-states", "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"},
         {"id": "f1-usgp-ant-ver", "date": "2026-10-25", "time": "2026-10-25 20:00 UTC", "competition": "2026 Formula 1 United States Grand Prix — Race Classification H2H", "venue": "Circuit of the Americas, Austin, TX", "d1": "Kimi Antonelli", "d1_pts": 340, "d2": "Max Verstappen", "d2_pts": 221, "is_outright": False, "source_url": "https://www.formula1.com/en/results/2026/drivers", "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"},
@@ -497,7 +494,7 @@ def build_inputs() -> dict:
 
     # Fix official URLs on AFLW & LoL Worlds fixtures
     aflw_fixtures = []
-    for f in slate_in["aflw_fixtures"]:
+    for f in raw["aflw_fixtures"]:
         aflw_fixtures.append({
             **f,
             "source_url": "https://www.afl.com.au/aflw",
@@ -505,14 +502,14 @@ def build_inputs() -> dict:
         })
 
     lol_fixtures = []
-    for f in slate_in["lol_fixtures"]:
+    for f in raw["lol_fixtures"]:
         lol_fixtures.append({
             **f,
             "source_url": "https://lolesports.com/en-US/leagues/first_stand,lck,lcs,msi,worlds",
             "olbg_url": "https://www.olbg.com/betting-tips/eSports/23",
         })
 
-    shl_oct22 = [f for f in hub_in["shl_fixtures"] if f["date"] == "2026-10-22"]
+    shl_oct22 = [f for f in raw["shl_fixtures"] if f["date"] == "2026-10-22"]
 
     # Honestly unlined / blank rows (left blank & flagged rather than guessed!)
     unlined_rows = [
@@ -545,30 +542,30 @@ def build_inputs() -> dict:
     return {
         "captured_at": "2026-10-22T05:45:00Z",
         "session": "arena/d81930c3-olbg2",
-        "nhl_teams": hub_in["nhl_teams"],
-        "nhl_score_feed": r26["nhl"]["score_feed_2026-10-22"],
-        "shl_teams": hub_in["shl_teams"],
+        "nhl_teams": raw["nhl_teams"],
+        "nhl_score_feed": raw["nhl_score_feed"],
+        "shl_teams": raw["shl_teams"],
         "shl_fixtures": shl_oct22,
-        "nba_teams": slate_in["nba_teams"],
+        "nba_teams": raw["nba_teams"],
         "nba_2026_records": nba_2026_records,
-        "nba_fixtures": slate_in["nba_fixtures"],
+        "nba_fixtures": raw["nba_fixtures"],
         "euroleague_teams": euroleague_teams,
         "euroleague_r7_fixtures": euroleague_r7,
-        "top14_teams": hub_in["top14_teams"],
-        "top14_fixtures": hub_in["top14_fixtures"],
-        "prod2_teams": hub_in["prod2_teams"],
-        "prod2_fixtures": hub_in["prod2_fixtures"],
-        "urc_teams": hub_in["urc_teams"],
-        "urc_r4_fixtures": hub_in["urc_r4_fixtures"],
-        "ehf_teams": hub_in["ehf_teams"],
-        "ehf_r5_fixtures": hub_in["ehf_r5_fixtures"],
-        "superlega_teams": hub_in["superlega_teams"],
-        "superlega_fixtures": hub_in["superlega_fixtures"],
-        "aflw_teams": slate_in["aflw_teams"],
+        "top14_teams": raw["top14_teams"],
+        "top14_fixtures": raw["top14_fixtures"],
+        "prod2_teams": raw["prod2_teams"],
+        "prod2_fixtures": raw["prod2_fixtures"],
+        "urc_teams": raw["urc_teams"],
+        "urc_r4_fixtures": raw["urc_r4_fixtures"],
+        "ehf_teams": raw["ehf_teams"],
+        "ehf_r5_fixtures": raw["ehf_r5_fixtures"],
+        "superlega_teams": raw["superlega_teams"],
+        "superlega_fixtures": raw["superlega_fixtures"],
+        "aflw_teams": raw["aflw_teams"],
         "aflw_fixtures": aflw_fixtures,
-        "rlwc_teams": slate_in["rlwc_teams"],
-        "rlwc_fixtures": slate_in["rlwc_fixtures"],
-        "lol_teams": slate_in["lol_teams"],
+        "rlwc_teams": raw["rlwc_teams"],
+        "rlwc_fixtures": raw["rlwc_fixtures"],
+        "lol_teams": raw["lol_teams"],
         "lol_fixtures": lol_fixtures,
         "pdc_players": pdc_players,
         "darts_fixtures": darts_fixtures,
@@ -578,8 +575,8 @@ def build_inputs() -> dict:
         "golf_matchups": golf_matchups,
         "greyhound_markets": greyhound_markets,
         "gaa_fixtures": gaa_fixtures,
-        "mlb_teams": hub_in["mlb_teams"],
-        "mlb_fixtures": hub_in["mlb_fixtures"][:5],
+        "mlb_teams": raw["mlb_teams"],
+        "mlb_fixtures": raw["mlb_fixtures"],
         "f1_drivers": f1_drivers,
         "f1_markets": f1_markets,
         "unlined_rows": unlined_rows,

@@ -2795,3 +2795,24 @@ predictions page rendered `high≥70% but priced shorter than -250` as one run o
   and `pages build and deployment` all completed success on the merge commit. Live: https://buffedlizard55-lab.github.io/OLBG2/update/ (dashboard
   serves 208 rows / 11 high-confidence picks / 143 flagged items) and root NAV now carries “Update 22–28 Oct
   (fresh capture)”. Status: D1–D6 complete and published.
+
+---
+
+## Session `arena/5fba1c42-olbg2` — today's refreshed 17-sport slate, in-band high-confidence picks (`/pulse/`)
+
+**Session ID:** `arena/5fba1c42-olbg2` · **Branch:** `arena/5fba1c42-olbg2` (Arena-fixed) · **Claimed:** 2026-10-22 ~12:05 UTC, committed & pushed immediately, before any implementation edit.
+
+**Concurrent-session check at claim time** (`git fetch origin '+refs/heads/*'`, latest remote tips): `arena/17c50bb7-olbg2` (12:03 UTC, PR #91 open — claims `.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`, `tests/test_publication_gate.py`, `research/publication-17c50bb7.md`, `publication.html`) and `arena/dc72bac4-olbg2` (12:03 UTC — claims `research/reproducibility-audit-dc72bac4.md`, `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py`, `.github/workflows/pages.yml`) are **live**. All earlier sports-data sessions merged (final merged PR #90 at 09:25 UTC; `main` = `72b8892`). This session therefore does **NOT** edit: any `.github/workflows/**` file, `scripts/build_site.py`, `README.md`, root-layer HTML, `publication.html`, any prior desk (`site/`, `survey/`, `live/`, `verified/`, `forward/`, `board/`, `slate/`, `hub/`, `evidence/`, `audit65/`, `portal/`, `final/`, `center/`), or any other session's `data/**`, `scripts/**`, `tests/**`, `research/**` files.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| Q1 | Read board, check live branches, claim disjoint scope, commit & push claim immediately | done | `arena/5fba1c42-olbg2` | `COORDINATION.md` (append-only) |
+| Q2 | Fresh first-hand official-source collection of today's (2026-10-22) fixtures across the 17 eligible sports (zero excluded sports); OLBG cross-check | in progress | `arena/5fba1c42-olbg2` | `data/pulse/inputs.json`, `data/pulse/sources.json`, `research/pulse-5fba1c42.md` |
+| Q3 | Independent line origination (win match + handicap/spread + match total) with low/medium/high confidence; strict −250…+10000 band gate for high picks | unclaimed (by Q2) | `arena/5fba1c42-olbg2` | `scripts/pulse_model.py`, `data/pulse/matches.json` |
+| Q4 | High-confidence write-ups ≥30 words, unique/non-robotic, naming verified team+player+form+recent history+explicit selection | unclaimed | `arena/5fba1c42-olbg2` | `data/pulse/predictions.json` |
+| Q5 | `/pulse/` dashboard (landing, matches, picks, per-sport pages, flagged, sources, methodology) + row-source/link verifier + unit tests | unclaimed | `arena/5fba1c42-olbg2` | `scripts/pulse_build.py`, `scripts/pulse_verify.py`, `pulse/**`, `data/pulse/flagged.json`, `tests/test_pulse_5fba1c42.py` |
+| Q6 | Rebase on latest main, full repo tests + link audit, PR → self-merge, confirm Pages deploy, record here | unclaimed | `arena/5fba1c42-olbg2` | `COORDINATION.md` (append-only; root-nav link logged as cross-scope request since root scope is owned by a live session) |
+
+**Rules for this session:** every published row carries its official-source HTTPS URL; values that cannot be confirmed from an official source are left blank (`—`) and flagged; nothing is inferred; no bookmaker price is invented (official league odds-partner feeds, where the league itself publishes them, are recorded as market context and clearly labelled); high confidence requires model probability ≥70% **and** fair American odds inside −250…+10000 (decimal 1.40–101.00); zero fixtures from excluded sports; multi-market origination (win/handicap/total) on every fixture where official inputs allow; any irregularity in an earlier layer is recorded in `data/pulse/flagged.json` with a click-through link and logged here, not edited in place.
+
+**Cross-scope request backlog note (logged, not edited):** root nav owner — please add a `pulse/` nav link if/when the root scope is free.

@@ -992,6 +992,31 @@ def featured_selection(row: dict) -> dict | None:
     return max(in_band, key=lambda c: (c["market"] == "Match Winner", c["probability"]))
 
 
+_BAND_MARKET_MAP = {
+    "Match Winner": "moneyline",
+    "Handicap": "handicap",
+    "Alternate Handicap": "handicap",
+    "Match Total": "total",
+    "Alternate Total": "total",
+}
+
+
+def _band_pick(feat: dict) -> dict:
+    import re
+
+    m = re.search(r"([+-]?\d+\.\d+)", feat["selection"])
+    return {
+        "selection": feat["selection"],
+        "market": _BAND_MARKET_MAP.get(feat["market"], feat["market"]),
+        "line": float(m.group(1)) if m else None,
+        "probability": feat["probability"],
+        "fair_odds": feat["fair_odds"],
+        "fair_american": feat["fair_american"],
+        "confidence": "high",
+        "price_band": "in-band",
+    }
+
+
 def main() -> None:
     inputs = read_json(VERIFIED / "inputs.json")
     captured_at = inputs["captured_at"]
@@ -1018,6 +1043,9 @@ def main() -> None:
     for row in originated:
         row["pick"]["fair_american"] = fair_american(row["pick"]["probability"])
         row["featured"] = featured_selection(row)
+        # band_pick mirrors `featured` for the root dashboard / band.json
+        # contract introduced by session 36f79c71 (same -250..+10000 rule).
+        row["band_pick"] = _band_pick(row["featured"]) if row["featured"] else None
         row.pop("_dist", None)  # ephemeral distribution used only for alternates
 
     unlined: list[dict] = []
@@ -1041,6 +1069,7 @@ def main() -> None:
                 "total_market": None,
                 "pick": None,
                 "featured": None,
+                "band_pick": None,
                 "blank_reason": u["blank_reason"],
                 "official_source": u["official_source"],
                 "official_url": u["official_url"],
@@ -1091,6 +1120,7 @@ def main() -> None:
                 "time": m["time"],
                 "selection": feat["selection"],
                 "market": feat["market"],
+                "match_type": "band",
                 "probability": feat["probability"],
                 "fair_odds": feat["fair_odds"],
                 "fair_american": feat["fair_american"],
@@ -1115,6 +1145,23 @@ def main() -> None:
     }
     write_json(VERIFIED / "matches.json", {"captured_at": captured_at, "counts": counts, "matches": all_rows})
     write_json(VERIFIED / "predictions.json", {"captured_at": captured_at, "min_words": 30, "count": len(predictions), "predictions": predictions})
+    band_selections = [
+        {
+            "id": m["id"],
+            "date": m["date"],
+            "sport": m["sport"],
+            **{k: m["band_pick"][k] for k in ("selection", "market", "line", "probability", "fair_odds", "confidence", "price_band")},
+        }
+        for m in featured_rows
+    ]
+    write_json(
+        VERIFIED / "band.json",
+        {
+            "captured_at": captured_at,
+            "definition": {"min_decimal": 1.4, "max_decimal": 101.0, "min_probability": 0.7},
+            "selections": band_selections,
+        },
+    )
     print(f"verified_model: {counts}")
 
 

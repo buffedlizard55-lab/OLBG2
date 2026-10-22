@@ -1230,3 +1230,64 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 - **R2 DONE** — Model reads only `data/verified/inputs.json`. Seed copies NBA 2025-26 priors and URC tables/fixtures through deterministic transforms. Regenerated survey outputs via integration step after restoring a derived `mlb_world_series` compat key (survey_lines consumer).
 - **R3 DONE** — 93 originated rows; every pick carries fair American price. 14 featured written predictions (prob ≥ 0.70, American −236…−250, 64–75 unique words each) using alternate handicaps where moneylines are sub-−250. 26 unlined rows listed blank with reasons.
 - **R4 DONE** — Full CI pipeline run locally: all generators green, `survey_verify` PASS, `integration_audit` 0 link errors, `unittest` 61/61 OK.
+
+---
+
+
+---
+
+## Session `arena/36f79c71-olbg2` — refresh, line-by-line verification, unified site (2026-10-22)
+
+**Session ID:** `arena/36f79c71-olbg2` · **Branch:** `arena/36f79c71-olbg2` · **Claimed:** 2026-10-22 (UTC)
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| R1 | Record claim and inspect all five published layers | done | `arena/36f79c71-olbg2` | `COORDINATION.md` |
+| R2 | Re-verify every stored row that is still upcoming against its official source; flag stale/past rows | done — 15 rows re-read on 2026-10-22; 140 keep the 2026-10-21 stamp; 59 past rows labelled | `arena/36f79c71-olbg2` | `data/verified/**`, `research/` |
+| R3 | Close the remaining unlined rows where an official input exists; keep blanks elsewhere | done — 43 rows stay blank with a per-row reason | `arena/36f79c71-olbg2` | `data/verified/**`, `scripts/verified_model.py` |
+| R4 | Add fixtures for sports with no rows (Aussie Rules, eSports) if OLBG and an official body both confirm them | done — none published; both shown as zero-row sports | `arena/36f79c71-olbg2` | `data/verified/**`, `research/` |
+| R5 | High-confidence written predictions inside the required odds band | done — 13 band picks, 1.40–1.42, each with a ≥30-word prediction | `arena/36f79c71-olbg2` | `data/verified/predictions.json` |
+| R6 | Unified landing page and category pages over one deduplicated dataset | done — 10 root pages + 17 sport pages over 155 rows | `arena/36f79c71-olbg2` | root `index.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
+| R7 | Final integration: re-verify, link-check, PR, merge, Pages | in progress — build, 61 tests and 0 local link errors; PR/merge recorded below | `arena/36f79c71-olbg2` | shared outputs |
+
+**Scope discipline.** This session is the final integration session: it may regenerate shared outputs
+(`index.html`, `sports/**`, navigation, the unified table data) because every earlier session's board is closed
+and there are no live claims. Earlier layers (`site/`, `survey/`, `live/`) are preserved untouched; the new work
+lives in `data/verified/**`, `verified/**`, `scripts/verified_*.py`, `scripts/build_site.py`, root pages and
+`research/`. No earlier session's claim is being taken over — all their boards read `done`.
+
+**Method.** Every published value must come from a source fetched in this session (2026-10-22) or remain
+blank and be flagged. OLBG pages are used only for listing provenance; fixtures, times and results come from the
+governing body or league. A row whose event date has passed is labelled `past` rather than presented as upcoming.
+
+
+## Results — session `arena/36f79c71-olbg2`
+
+| Check | Result |
+|---|---|
+| Unified dataset | 155 fixtures, 15 sports, 47 competition labels, 20 governing-body domains |
+| Origination | 112 rows lined (moneyline + handicap; totals where scoring data exists), 43 blank with a reason |
+| Source scope | 92 rows cite a fixture-specific official URL; 63 cite a competition/rankings page (VF-11) |
+| Re-verification | 15 rows re-read on 2026-10-22 (12 NHL, 3 MLB); 140 keep the 2026-10-21 capture stamp |
+| Predictions | 33 total: 13 price-band (1.40–1.42, 70.0–71.4%) + 20 high confidence outside the band |
+| Review queue | 18 items, VF-01 … VF-18, each with an official source link; non-blocking by design |
+| Build | `verified_seed → verified_model → verified_build → build_site` clean; integration audit 0 link errors |
+| Tests | 61 passing, including a new price-band gate (13 picks, exact price bounds, unique ids, valid hockey lines) |
+| Pages | Root dashboard + 17 sport pages + verification ledger + picks + flagged + methodology + sources + archive |
+
+**Not resolved in this session, and published rather than guessed:** the ICC date disagreement for match 271646
+(VF-17), the NBA 2026-10-22 slate that no reachable NBA endpoint would render (VF-14), World Series Game 4 and the
+conditional Games 5–7 (VF-15), and the 63 rows whose official URL identifies the competition rather than the
+fixture (VF-11). No value was inferred to close any of them.
+
+### Merge-conflict resolution — Session `arena/50268b75-olbg2` × `arena/36f79c71-olbg2` (PR #53)
+
+Session `36f79c71` merged PRs #50–#52 (unified 155-row dashboard, price-band layer, Pages workflow) into `main` while this session's PR #53 was open; PR #53's CI was green but `mergeable: CONFLICTING`. Resolution (merge of `origin/main` into this branch, nothing discarded silently):
+
+- **Both sessions worked the same brief in parallel.** `36f79c71` added an additive price-band layer (`band_pick`, `data/verified/band.json`, 13 band narratives) over the stale 2026-10-21 desk, and its own flags VF-13/VF-14/VF-15 record that its desk still carried 59 played 21-Oct rows, no 22-Oct NBA slate, and no World Series Game 4. This session re-captured the desk fresh on 2026-10-22, closing exactly those gaps, so the fresh-capture architecture (`featured`) is the base; every compatible element of `36f79c71` was preserved:
+  - Pages deployment workflow, root table-filter fix, root dashboard + integration changes — untouched in `main`.
+  - Flags VF-11…VF-18 kept verbatim in the register; this session's flags renumbered **VF-19…VF-22** to end the ID collision, and dated resolution notes were appended to VF-11/12/13/14/15/18 rather than rewriting their findings.
+  - `data/verified/band.json` + `band_pick` contract preserved: `verified_model.py` now emits both from the fresh featured selections (14 picks), so the root dashboard and integration page read live data (119 rows, 93 originated, 14 band picks, 22 review items). Three hardcoded stale numbers in `build_site.py` copy were corrected to the merged snapshot.
+  - Narrative superlatives softened by `36f79c71` (Barça goals-against, Panathinaikos differential) were re-verified computationally against the fresh tables — both are factually correct (104 GA is the 24-club minimum; +90 is the best EuroLeague differential) and stand.
+  - `36f79c71`'s 13 `BAND_NARRATIVES` and additive-model tests could not carry over: they price retired 21-Oct fixtures from the superseded slate. They remain in Git history at `585d2be`.
+- **Post-resolution gate:** full pipeline regenerated (verified/live/desk/survey/root), `survey_verify` PASS, `integration_audit` 0 errors, 61/61 unit tests OK.

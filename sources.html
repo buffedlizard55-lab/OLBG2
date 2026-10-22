@@ -3,242 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sources · OLBG2 Sports Betting Data</title>
-<meta name="description" content="Source register with recorded purpose; linked content is not automatically verified.">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+<title>Sources · OLBG2</title>
+<meta name="description" content="Dated OLBG reverse-engineering research: officially sourced fixtures, independently originated lines, confidence-graded picks and open review items.">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
 </head>
 <body>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
-    <nav class="main"><a href="index.html">Dashboard</a><a href="verified/index.html">Verified desk (155 rows)</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Methodology</a><a href="sources.html" aria-current="page">Sources</a><a href="survey/index.html">Survey (145 events)</a><a href="live/index.html">Live slate (2026-10-21)</a><a href="site/index.html">Evidence desk v2</a><a href="integration.html">Evidence status</a></nav>
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="matches.html">All matches</a><a href="sports/index.html">Sports</a><a href="picks.html">Picks</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged</a><a href="methodology.html">Methodology</a><a href="sources.html" aria-current="page">Sources</a><a href="archive.html">Archive</a><a href="integration.html">Cross-layer review</a></nav>
   </div>
 </header>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 01:30 UTC</strong> · 119 stored rows · 93 originated lines · 14 price-band picks · every row carries its official source link · <a href="flagged.html">22 open review items</a></div></div>
 <main class="wrap">
-<p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="integration.html">Evidence status &amp; cross-layer review</a>.</p>
 
-<section class="hero">
-  <h1>Sources</h1>
-  <p class="lede">Source URLs and their recorded intended use. A registered URL or an official-domain match does not establish that the page was fetched, or that it supports every linked claim. OLBG links are listing provenance, not official fixture confirmation.</p>
-  <p class="meta">34 sources · 11 of them are cited directly by a published fixture row</p>
-</section>
-<div class="panel"><div class="table-scroll"><table>
-<thead><tr><th>ID</th><th>Publisher</th><th>Type</th><th>URL</th><th>Recorded purpose</th></tr></thead>
-<tbody><tr>
-      <td class="mono">S01</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips" rel="noopener">https://www.olbg.com/betting-tips</a></td>
-      <td class="small">Global tips page. Found to contain stale cached football fixtures; not used for event data.</td>
-    </tr><tr>
-      <td class="mono">S02</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/sitemap-betting-tips.xml" rel="noopener">https://www.olbg.com/sitemap-betting-tips.xml</a></td>
-      <td class="small">Full sport taxonomy and numeric sport IDs.</td>
-    </tr><tr>
-      <td class="mono">S03</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4" rel="noopener">https://www.olbg.com/betting-tips/Basketball/NBA/NBA/4</a></td>
-      <td class="small">NBA event list, market labels, event_ids.</td>
-    </tr><tr>
-      <td class="mono">S04</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener">https://www.olbg.com/betting-tips/Ice_Hockey/13</a></td>
-      <td class="small">Ice hockey event list and market labels.</td>
-    </tr><tr>
-      <td class="mono">S05</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Tennis/3" rel="noopener">https://www.olbg.com/betting-tips/Tennis/3</a></td>
-      <td class="small">Tennis event list.</td>
-    </tr><tr>
-      <td class="mono">S06</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Cricket/7" rel="noopener">https://www.olbg.com/betting-tips/Cricket/7</a></td>
-      <td class="small">Cricket event list.</td>
-    </tr><tr>
-      <td class="mono">S07</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener">https://www.olbg.com/betting-tips/Rugby_Union/9</a></td>
-      <td class="small">Rugby union event list (URC, Top 14, Pro D2).</td>
-    </tr><tr>
-      <td class="mono">S08</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener">https://www.olbg.com/betting-tips/Darts/15</a></td>
-      <td class="small">Darts event list.</td>
-    </tr><tr>
-      <td class="mono">S09</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Snooker/8" rel="noopener">https://www.olbg.com/betting-tips/Snooker/8</a></td>
-      <td class="small">Snooker event list.</td>
-    </tr><tr>
-      <td class="mono">S10</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener">https://www.olbg.com/betting-tips/Gaelic_Football/25</a></td>
-      <td class="small">Gaelic football club fixture list.</td>
-    </tr><tr>
-      <td class="mono">S11</td>
-      <td>NBA</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">https://www.nba.com/games?date=2026-10-21</a></td>
-      <td class="small">Confirms 11 NBA fixtures, tip times in ET and game ids for 2026-10-21.</td>
-    </tr><tr>
-      <td class="mono">S12</td>
-      <td>NBA</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.nba.com/standings" rel="noopener">https://www.nba.com/standings</a></td>
-      <td class="small">Confirms 2026-27 season has just started; most teams 0-0.</td>
-    </tr><tr>
-      <td class="mono">S13</td>
-      <td>NBA</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.nba.com/standings?Season=2025-26" rel="noopener">https://www.nba.com/standings?Season=2025-26</a></td>
-      <td class="small">Completed 2025-26 records, home and road splits for all 30 teams — the NBA strength input.</td>
-    </tr><tr>
-      <td class="mono">S14</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">https://api-web.nhle.com/v1/score/2026-10-21</a></td>
-      <td class="small">Confirms two NHL games on 21 October with UTC start times, venues and game ids.</td>
-    </tr><tr>
-      <td class="mono">S15</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">https://api-web.nhle.com/v1/score/2026-10-22</a></td>
-      <td class="small">Confirms eleven of the twelve games on 22 October, UTC start times, venues, club records and team leaders.</td>
-    </tr><tr>
-      <td class="mono">S16</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/schedule/2026-10-21" rel="noopener">https://api-web.nhle.com/v1/schedule/2026-10-21</a></td>
-      <td class="small">Cross-check of the 21 October schedule (two games).</td>
-    </tr><tr>
-      <td class="mono">S17</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/scoreboard/2026-10-22" rel="noopener">https://api-web.nhle.com/v1/scoreboard/2026-10-22</a></td>
-      <td class="small">Recent results used in write-ups (e.g. Colorado 2 @ Philadelphia 3 on 19 October).</td>
-    </tr><tr>
-      <td class="mono">S18</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">https://api.nhle.com/stats/rest/en/team/summary</a></td>
-      <td class="small">2026-27 team summary: games played, W-L-OTL, goals for/against — the NHL strength input.</td>
-    </tr><tr>
-      <td class="mono">S19</td>
-      <td>United Rugby Championship</td>
-      <td>Official</td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">https://stats.unitedrugby.com/match-centre/2026-27/4</a></td>
-      <td class="small">Confirms all eight Round 4 fixtures, venues and venue-local kick-off times.</td>
-    </tr><tr>
-      <td class="mono">S20</td>
-      <td>United Rugby Championship</td>
-      <td>Official</td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">https://stats.unitedrugby.com/match-centre/table/2026-27</a></td>
-      <td class="small">Official league table: P, W, D, L, PF, PA, points and form — the URC strength input.</td>
-    </tr><tr>
-      <td class="mono">S21</td>
-      <td>ICC</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.icc-cricket.com/rankings/team-rankings/mens/odi" rel="noopener">https://www.icc-cricket.com/rankings/team-rankings/mens/odi</a></td>
-      <td class="small">Confirms Afghanistan v Bangladesh ODI (match 274658) and New Zealand v India T20I (match 271646). Ranking table itself rendered empty.</td>
-    </tr><tr>
-      <td class="mono">S22</td>
-      <td>World Snooker Tour</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.wst.tv/matches/" rel="noopener">https://www.wst.tv/matches/</a></td>
-      <td class="small">BetVictor Northern Ireland Open 2026 draw: round-one results and two scheduled round-two matches on 21 October.</td>
-    </tr><tr>
-      <td class="mono">S23</td>
-      <td>World Snooker Tour</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.wst.tv/rankings/" rel="noopener">https://www.wst.tv/rankings/</a></td>
-      <td class="small">World rankings top 11 and One Year List top 11 (not sufficient to rate all eight players).<span class="sub">Official site, but the captured subset did not cover every player needed.</span></td>
-    </tr><tr>
-      <td class="mono">S24</td>
-      <td>MLB</td>
-      <td>Official</td>
-      <td class="small"><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;date=2026-10-21" rel="noopener">https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;date=2026-10-21</a></td>
-      <td class="small">Confirms there were no MLB games on 21 October (post-season rest day).</td>
-    </tr><tr>
-      <td class="mono">S25</td>
-      <td>ICC</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh" rel="noopener">https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh</a></td>
-      <td class="small">Confirms the Afghanistan v Bangladesh ODI on 21 October 2026 and the listed start time.</td>
-    </tr><tr>
-      <td class="mono">S26</td>
-      <td>ICC</td>
-      <td>Official</td>
-      <td class="small"><a href="https://www.icc-cricket.com/matches/271646/new-zealand-vs-india" rel="noopener">https://www.icc-cricket.com/matches/271646/new-zealand-vs-india</a></td>
-      <td class="small">Confirms the New Zealand v India T20I on 22 October 2026 and the listed start time.</td>
-    </tr><tr>
-      <td class="mono">S27</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/club-schedule-season/SEA/20262027" rel="noopener">https://api-web.nhle.com/v1/club-schedule-season/SEA/20262027</a></td>
-      <td class="small">Confirms Utah at Seattle on 22 October (2026020164), Climate Pledge Arena, 2026-10-23T02:00:00Z.</td>
-    </tr><tr>
-      <td class="mono">S28</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/club-schedule-season/VAN/20262027" rel="noopener">https://api-web.nhle.com/v1/club-schedule-season/VAN/20262027</a></td>
-      <td class="small">Confirms Detroit at Vancouver on 22 October (2026020165), Rogers Arena, 2026-10-23T02:00:00Z.</td>
-    </tr><tr>
-      <td class="mono">S29</td>
-      <td>NHL</td>
-      <td>Official</td>
-      <td class="small"><a href="https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=gameTypeId%3D2%20and%20seasonId%3D20262027%20and%20teamId%3D28" rel="noopener">https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=gameTypeId%3D2%20and%20seasonId%3D20262027%20and%20teamId%3D28</a></td>
-      <td class="small">Completes the San Jose Sharks row (10 GP, 26 GF, 34 GA, 5-4-1) via the teamId filter.</td>
-    </tr><tr>
-      <td class="mono">S30</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13" rel="noopener">https://www.olbg.com/betting-tips/Ice_Hockey/NHL/13</a></td>
-      <td class="small">NHL league page. Second capture confirming only two NHL events are listed and that times render in the viewer&#x27;s timezone.</td>
-    </tr><tr>
-      <td class="mono">S31</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener">https://www.olbg.com/betting-tips/Handball/20</a></td>
-      <td class="small">Handball hub: event list, ids, market vocabulary, competition grouping. Also the source of the timezone-rendering finding (F24) and the club-name divergence (F25). No handball price, probability or result is taken from OLBG.</td>
-    </tr><tr>
-      <td class="mono">S32</td>
-      <td>OLBG</td>
-      <td>Discovery</td>
-      <td class="small"><a href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener">https://www.olbg.com/betting-tips/Volleyball/21</a></td>
-      <td class="small">Volleyball hub: event list, ids, market vocabulary, competition grouping.</td>
-    </tr><tr>
-      <td class="mono">S33</td>
-      <td>EHF (European Handball Federation)</td>
-      <td>Official competition site</td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/matches/</a></td>
-      <td class="small">EHF Champions League Men 2026/27 fixtures: date, throw-off time with timezone label, match id and detail link for the 12 round-5 matches on 21-22 October 2026.</td>
-    </tr><tr>
-      <td class="mono">S34</td>
-      <td>EHF (European Handball Federation)</td>
-      <td>Official standings</td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/standings/</a></td>
-      <td class="small">Group A-F standings before round 5: games played, wins, draws, losses, goals for, goals against, goal difference and points for all 24 clubs. This is the only strength input for the handball model.</td>
-    </tr></tbody></table></div></div>
-<div class="note">Capture windows 2026-10-21 05:12–05:25 UTC and 07:06–07:40 UTC (EHF handball). Pages change; a reviewer re-checking later may see
-different numbers, especially on the NHL and NBA standings pages, which update after every game.</div>
+<h1>Sources</h1>
+<p class="lede">The official register behind the dataset: 101 distinct fixture/data URLs and
+19 prediction-fact URLs across 21 domains. OLBG is used for discovery only and is never the
+source of a price or a result. A source link records where a value came from; it does not establish that the page was fetched during this audit, and it is not proof that the page supports every claim beside it.</p>
+<div class="grid domains">
+  <div class="card"><div class="cardhead"><h3>stats.unitedrugby.com</h3><span class="pill">24</span></div></div><div class="card"><div class="cardhead"><h3>nba.com</h3><span class="pill">15</span></div></div><div class="card"><div class="cardhead"><h3>nhl.com</h3><span class="pill">12</span></div></div><div class="card"><div class="cardhead"><h3>euroleaguebasketball.net</h3><span class="pill">12</span></div></div><div class="card"><div class="cardhead"><h3>prod2.lnr.fr</h3><span class="pill">12</span></div></div><div class="card"><div class="cardhead"><h3>top14.lnr.fr</h3><span class="pill">11</span></div></div><div class="card"><div class="cardhead"><h3>ehfcl.eurohandball.com</h3><span class="pill">8</span></div></div><div class="card"><div class="cardhead"><h3>wst.tv</h3><span class="pill">8</span></div></div><div class="card"><div class="cardhead"><h3>mlb.com</h3><span class="pill">4</span></div></div><div class="card"><div class="cardhead"><h3>api.nhle.com</h3><span class="pill">2</span></div></div><div class="card"><div class="cardhead"><h3>icc-cricket.com</h3><span class="pill">2</span></div></div><div class="card"><div class="cardhead"><h3>pdc.tv</h3><span class="pill">1</span></div></div>
+</div>
+<h2>Fixture and model-input sources</h2>
+<div class="table-wrap"><table class="data"><thead><tr><th>URL</th><th>Domain</th><th>Rows</th></tr></thead>
+<tbody><tr><td><a href="https://www.pdc.tv/rankings" rel="noopener">https://www.pdc.tv/rankings</a></td><td>pdc.tv</td><td>34</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">https://stats.unitedrugby.com/match-centre/table/2026-27</a></td><td>stats.unitedrugby.com</td><td>16</td></tr><tr><td><a href="https://www.nba.com/standings?Season=2025-26" rel="noopener">https://www.nba.com/standings?Season=2025-26</a></td><td>nba.com</td><td>14</td></tr><tr><td><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">https://api.nhle.com/stats/rest/en/team/summary</a></td><td>api.nhle.com</td><td>12</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/standings/</a></td><td>euroleaguebasketball.net</td><td>9</td></tr><tr><td><a href="https://prod2.lnr.fr/classement" rel="noopener">https://prod2.lnr.fr/classement</a></td><td>prod2.lnr.fr</td><td>8</td></tr><tr><td><a href="https://top14.lnr.fr/classement" rel="noopener">https://top14.lnr.fr/classement</a></td><td>top14.lnr.fr</td><td>7</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/standings/</a></td><td>ehfcl.eurohandball.com</td><td>5</td></tr><tr><td><a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener">https://www.formula1.com/en/results/2026/drivers</a></td><td>formula1.com</td><td>5</td></tr><tr><td><a href="https://www.gaa.ie/football" rel="noopener">https://www.gaa.ie/football</a></td><td>gaa.ie</td><td>5</td></tr><tr><td><a href="https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&amp;season=2026&amp;standingsTypes=regularSeason" rel="noopener">https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&amp;season=2026&amp;standingsTypes=regularSeason</a></td><td>statsapi.mlb.com</td><td>4</td></tr><tr><td><a href="https://www.plusliga.pl/games.html" rel="noopener">https://www.plusliga.pl/games.html</a></td><td>plusliga.pl</td><td>3</td></tr><tr><td><a href="https://www.nrl.com/draw/" rel="noopener">https://www.nrl.com/draw/</a></td><td>nrl.com</td><td>2</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/</a></td><td>ehfcl.eurohandball.com</td><td>1</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/</a></td><td>ehfcl.eurohandball.com</td><td>1</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/</a></td><td>ehfcl.eurohandball.com</td><td>1</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/</a></td><td>ehfcl.eurohandball.com</td><td>1</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/</a></td><td>ehfcl.eurohandball.com</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11861-bayonne-lyon" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11861-bayonne-lyon</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11863-castres-paris" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11863-castres-paris</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11865-racing-92-montpellier" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11865-racing-92-montpellier</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr><tr><td><a href="https://www.europeantour.com/dpworld-tour/schedule/" rel="noopener">https://www.europeantour.com/dpworld-tour/schedule/</a></td><td>europeantour.com</td><td>1</td></tr><tr><td><a href="https://www.icc-cricket.com/matches/269791/south-africa-vs-australia" rel="noopener">https://www.icc-cricket.com/matches/269791/south-africa-vs-australia</a></td><td>icc-cricket.com</td><td>1</td></tr><tr><td><a href="https://www.icc-cricket.com/matches/271646/new-zealand-vs-india" rel="noopener">https://www.icc-cricket.com/matches/271646/new-zealand-vs-india</a></td><td>icc-cricket.com</td><td>1</td></tr><tr><td><a href="https://www.mlb.com/gameday/849802" rel="noopener">https://www.mlb.com/gameday/849802</a></td><td>mlb.com</td><td>1</td></tr><tr><td><a href="https://www.mlb.com/gameday/849803" rel="noopener">https://www.mlb.com/gameday/849803</a></td><td>mlb.com</td><td>1</td></tr><tr><td><a href="https://www.mlb.com/gameday/849804" rel="noopener">https://www.mlb.com/gameday/849804</a></td><td>mlb.com</td><td>1</td></tr><tr><td><a href="https://www.mlb.com/gameday/849805" rel="noopener">https://www.mlb.com/gameday/849805</a></td><td>mlb.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/atl-vs-cha-0022600094" rel="noopener">https://www.nba.com/game/atl-vs-cha-0022600094</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/chi-vs-mil-0022600099" rel="noopener">https://www.nba.com/game/chi-vs-mil-0022600099</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/cle-vs-phi-0022600006" rel="noopener">https://www.nba.com/game/cle-vs-phi-0022600006</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/dal-vs-ind-0022600095" rel="noopener">https://www.nba.com/game/dal-vs-ind-0022600095</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/den-vs-okc-0022600007" rel="noopener">https://www.nba.com/game/den-vs-okc-0022600007</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/det-vs-mia-0022600098" rel="noopener">https://www.nba.com/game/det-vs-mia-0022600098</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/hou-vs-sas-0022600009" rel="noopener">https://www.nba.com/game/hou-vs-sas-0022600009</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/lac-vs-lal-0022600102" rel="noopener">https://www.nba.com/game/lac-vs-lal-0022600102</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/mem-vs-gsw-0022600101" rel="noopener">https://www.nba.com/game/mem-vs-gsw-0022600101</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/min-vs-orl-0022600096" rel="noopener">https://www.nba.com/game/min-vs-orl-0022600096</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/nop-vs-uta-0022600100" rel="noopener">https://www.nba.com/game/nop-vs-uta-0022600100</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/nyk-vs-bos-0022600008" rel="noopener">https://www.nba.com/game/nyk-vs-bos-0022600008</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/por-vs-sac-0022600103" rel="noopener">https://www.nba.com/game/por-vs-sac-0022600103</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nba.com/game/tor-vs-was-0022600097" rel="noopener">https://www.nba.com/game/tor-vs-was-0022600097</a></td><td>nba.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157" rel="noopener">https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163" rel="noopener">https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165" rel="noopener">https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158" rel="noopener">https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159" rel="noopener">https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162" rel="noopener">https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154" rel="noopener">https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155" rel="noopener">https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156" rel="noopener">https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164" rel="noopener">https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160" rel="noopener">https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161" rel="noopener">https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161</a></td><td>nhl.com</td><td>1</td></tr><tr><td><a href="https://www.pgatour.com/schedule" rel="noopener">https://www.pgatour.com/schedule</a></td><td>pgatour.com</td><td>1</td></tr><tr><td><a href="https://www.superleague.co.uk/match-centre" rel="noopener">https://www.superleague.co.uk/match-centre</a></td><td>superleague.co.uk</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7" rel="noopener">https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7</a></td><td>wst.tv</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236" rel="noopener">https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236</a></td><td>wst.tv</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c" rel="noopener">https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c</a></td><td>wst.tv</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8" rel="noopener">https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8</a></td><td>wst.tv</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5" rel="noopener">https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5</a></td><td>wst.tv</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea" rel="noopener">https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea</a></td><td>wst.tv</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900" rel="noopener">https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900</a></td><td>wst.tv</td><td>1</td></tr><tr><td><a href="https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f" rel="noopener">https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f</a></td><td>wst.tv</td><td>1</td></tr></tbody></table></div>
+<h2>Prediction fact sources</h2>
+<p class="sub">Every claim in a prediction links to the page that published it. The full claim-by-claim list is on each
+prediction card at <a href="picks.html">Picks</a>.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>URL</th><th>Domain</th><th>Facts</th></tr></thead>
+<tbody><tr><td><a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">https://stats.unitedrugby.com/match-centre/table/2026-27</a></td><td>stats.unitedrugby.com</td><td>8</td></tr><tr><td><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">https://api.nhle.com/stats/rest/en/team/summary</a></td><td>api.nhle.com</td><td>4</td></tr><tr><td><a href="https://prod2.lnr.fr/classement" rel="noopener">https://prod2.lnr.fr/classement</a></td><td>prod2.lnr.fr</td><td>4</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">https://stats.unitedrugby.com/match-centre/2026-27/4</a></td><td>stats.unitedrugby.com</td><td>4</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/2026-27/5" rel="noopener">https://stats.unitedrugby.com/match-centre/2026-27/5</a></td><td>stats.unitedrugby.com</td><td>3</td></tr><tr><td><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">https://api-web.nhle.com/v1/score/2026-10-22</a></td><td>api-web.nhle.com</td><td>2</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/standings/</a></td><td>ehfcl.eurohandball.com</td><td>2</td></tr><tr><td><a href="https://top14.lnr.fr/classement" rel="noopener">https://top14.lnr.fr/classement</a></td><td>top14.lnr.fr</td><td>2</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/standings/</a></td><td>euroleaguebasketball.net</td><td>2</td></tr><tr><td><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/" rel="noopener">https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/</a></td><td>ehfcl.eurohandball.com</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers" rel="noopener">https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers</a></td><td>prod2.lnr.fr</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611" rel="noopener">https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611</a></td><td>stats.unitedrugby.com</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/club/toulouse" rel="noopener">https://top14.lnr.fr/club/toulouse</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan" rel="noopener">https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan</a></td><td>top14.lnr.fr</td><td>1</td></tr><tr><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/" rel="noopener">https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/</a></td><td>euroleaguebasketball.net</td><td>1</td></tr></tbody></table></div>
 
 </main>
-<footer class="site">
-  <div class="wrap">
-    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
-    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="survey/index.html">Survey (130 events)</a> · <a href="live/index.html">Live slate</a> · <a href="flagged.html">Flagged</a> · <a href="site/index.html">Evidence desk v2</a></span>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap">
+  <p><strong>Dated, partial research snapshot — not a live feed and not betting advice.</strong> Model probabilities are estimates, not guarantees. Rows dated before 2026-10-22 are labelled <em>past</em> and are not presented as upcoming. Unconfirmed values are blank (<code>—</code>) and listed on <a href="flagged.html">Flagged for Review</a>. 18+.</p>
+  <p class="tiny">Built by <code>scripts/build_site.py</code> from checked-in data. Earlier layers are preserved at <a href="verified/index.html">/verified/</a>, <a href="live/index.html">/live/</a>, <a href="survey/index.html">/survey/</a>, <a href="site/index.html">/site/</a> and indexed in the <a href="archive.html">archive</a>.</p>
+</div></footer>
 </body>
 </html>

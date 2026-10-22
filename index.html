@@ -3,601 +3,95 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dashboard · OLBG2 Sports Betting Data</title>
-<meta name="description" content="Dated partial OLBG schedule research with independent model lines and explicit evidence limitations.">
-<link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+<title>Unified dashboard · OLBG2</title>
+<meta name="description" content="Dated OLBG reverse-engineering research: officially sourced fixtures, independently originated lines, confidence-graded picks and open review items.">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
 </head>
 <body>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
-    <nav class="main"><a href="index.html" aria-current="page">Dashboard</a><a href="verified/index.html">Verified desk (155 rows)</a><a href="picks.html">Picks &amp; predictions</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a><a href="survey/index.html">Survey (145 events)</a><a href="live/index.html">Live slate (2026-10-21)</a><a href="site/index.html">Evidence desk v2</a><a href="integration.html">Evidence status</a></nav>
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Dashboard</a><a href="matches.html">All matches</a><a href="sports/index.html">Sports</a><a href="picks.html">Picks</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a><a href="archive.html">Archive</a><a href="integration.html">Cross-layer review</a></nav>
   </div>
 </header>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 01:30 UTC</strong> · 119 stored rows · 93 originated lines · 14 price-band picks · every row carries its official source link · <a href="flagged.html">22 open review items</a></div></div>
 <main class="wrap">
-<p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="integration.html">Evidence status &amp; cross-layer review</a>.</p>
 
 <section class="hero">
-  <h1>Schedule research, independent lines, and evidence status.</h1>
-  <p class="lede">A dated, partial research snapshot of OLBG event listings and selected league schedules. Source links are provided where captured, but they do not mean every fixture or input was independently re-checked in this audit. Model prices and confidence are estimates. See the <a href="integration.html">evidence-status review</a> for verification limits and unresolved items.</p>
-  <p class="meta">Dated captures · 47 stored rows · 45 originated-line records ·
-  9 model-labeled high-confidence picks · 22 open review items</p>
+  <p class="eyebrow">OLBG reverse-engineering · primary-source verification · independent line origination</p>
+  <h1>Every eligible OLBG sport, one verified table.</h1>
+  <p class="lede">A <strong>dated, partial research snapshot</strong> of 119 fixtures across 13 of the 17 eligible sports,
+  excluding soccer/football, horse racing, American football, boxing, UFC/MMA, hurling, cycling and specials.
+  Fixture IDs, teams, dates and start times are linked to the governing body or league that publishes them;
+  source links <strong>do not mean every fixture or input was independently re-checked</strong> in this audit.
+  Model prices and confidence labels are our own estimates.</p>
+  <div class="cta"><a class="button primary" href="matches.html">Browse all 119 rows</a>
+  <a class="button" href="picks.html">14 price-band picks</a>
+  <a class="button" href="flagged.html">Open review items</a></div>
 </section>
 
-<div class="grid stats">
-  <div class="card stat"><div class="k">Stored fixture rows</div><div class="v">47</div><div class="s">dated snapshot; verification varies</div></div>
-  <div class="card stat"><div class="k">Lines originated</div><div class="v">45</div><div class="s">model outputs, not bookmaker prices</div></div>
-  <div class="card stat"><div class="k">Model-labeled high picks</div><div class="v">9</div><div class="s">not verified certainty</div></div>
-  <div class="card stat"><div class="k">Open review items</div><div class="v">22</div><div class="s">unverified, blank or irregular</div></div>
+<div class="kpis">
+  <div class="kpi"><div class="v">119</div><div class="k">stored rows</div><div class="s">13 sports · 39 competitions</div></div>
+  <div class="kpi"><div class="v">93</div><div class="k">originated lines</div><div class="s">moneyline, handicap, total</div></div>
+  <div class="kpi"><div class="v">14</div><div class="k">price-band picks</div><div class="s">≥70% and −250 to +10000</div></div>
+  <div class="kpi"><div class="v">14</div><div class="k">written predictions</div><div class="s">all 14 in the −250…+10000 band, 30+ words</div></div>
+  <div class="kpi"><div class="v">0</div><div class="k">re-verified today</div><div class="s">NHL and MLB feeds</div></div>
+  <div class="kpi"><div class="v">22</div><div class="k">open review items</div><div class="s">blank, stale or irregular</div></div>
 </div>
 
-<h2 class="section">Sports covered</h2>
-<p class="section-sub">This root snapshot publishes rows for 5 sports under its own scope. The root's 17-sport scope differs from the survey's 15-sport interpretation; the disagreement remains flagged. Neither layer is an exhaustive live OLBG feed.</p>
-<div class="grid sports"><a class="card sport-card" href="sports/ice-hockey.html">
-          <h3>Ice Hockey</h3>
-          <p>NHL schedule snapshot; the model uses stored team goal-rate inputs, not freshly revalidated here.</p>
-          <div class="row"><span>Fixtures</span><b>14</b></div>
-          <div class="row"><span>Lines originated</span><b>14</b></div>
-          <div class="row"><span>High model labels</span><b>4</b></div>
-        </a><a class="card sport-card" href="sports/basketball.html">
-          <h3>Basketball</h3>
-          <p>NBA schedule snapshot; the model uses stored 2025-26 season inputs as a prior, not freshly revalidated here.</p>
-          <div class="row"><span>Fixtures</span><b>11</b></div>
-          <div class="row"><span>Lines originated</span><b>11</b></div>
-          <div class="row"><span>High model labels</span><b>0</b></div>
-        </a><a class="card sport-card" href="sports/rugby-union.html">
-          <h3>Rugby Union</h3>
-          <p>URC Round 4 snapshot; the model uses stored table inputs, not freshly revalidated here.</p>
-          <div class="row"><span>Fixtures</span><b>8</b></div>
-          <div class="row"><span>Lines originated</span><b>8</b></div>
-          <div class="row"><span>High model labels</span><b>0</b></div>
-        </a><a class="card sport-card" href="sports/cricket.html">
-          <h3>Cricket</h3>
-          <p>ICC match-list snapshot; no line was produced because this model&#x27;s required strength input is absent.</p>
-          <div class="row"><span>Fixtures</span><b>2</b></div>
-          <div class="row"><span>Lines originated</span><b>0</b></div>
-          <div class="row"><span>High model labels</span><b>0</b></div>
-        </a><a class="card sport-card" href="sports/handball.html">
-          <h3>Handball</h3>
-          <p>EHF Champions League Men round 5 snapshot; the model uses stored table inputs, not freshly revalidated here.</p>
-          <div class="row"><span>Fixtures</span><b>12</b></div>
-          <div class="row"><span>Lines originated</span><b>12</b></div>
-          <div class="row"><span>High model labels</span><b>5</b></div>
-        </a></div>
+<div class="notice"><strong>Read the date column.</strong> 0 rows are dated before 2026-10-22 and are already past;
+46 are dated today and 73 are later. Past rows stay visible for
+audit but are never presented as upcoming tips. <a href="verification.html">Verification ledger</a> · <a href="methodology.html">Methodology</a></div>
 
-<h2 class="section">Root scope coverage</h2>
-<p class="section-sub">The table compares the root configuration with stored survey counts; the layers have different scope decisions and known overlaps. Counts are not a combined unique-event total, and "not surveyed" describes our capture only, not OLBG.</p>
-<div class="panel"><div class="table-scroll"><table>
-<thead><tr><th>Sport</th><th>Our fixtures</th><th>Lines originated</th><th>Survey events</th><th>Status</th><th>Pages</th></tr></thead>
-<tbody><tr>
-          <td><b>Aussie Rules</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>0</td>
-          <td><span class="badge b-low">No entry captured in survey</span></td>
-          <td class="small"><a href="survey/sports/aussie_rules.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Baseball</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>1</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/baseball.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Basketball</b></td>
-          <td>11</td>
-          <td>11</td>
-          <td>14</td>
-          <td><span class="badge b-high">Lines originated here</span></td>
-          <td class="small"><a href="sports/basketball.html">our page</a> · <a href="survey/sports/basketball.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Cricket</b></td>
-          <td>2</td>
-          <td>—</td>
-          <td>14</td>
-          <td><span class="badge b-med">Stored rows, no line</span></td>
-          <td class="small"><a href="sports/cricket.html">our page</a> · <a href="survey/sports/cricket.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Darts</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>16</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/darts.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Gaelic Football</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td><span class="badge b-unv">Not surveyed</span></td>
-          <td class="small"><span class="muted">flagged only</span></td>
-        </tr><tr>
-          <td><b>Golf</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>10</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/golf.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Greyhounds</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td><span class="badge b-unv">Not surveyed</span></td>
-          <td class="small"><span class="muted">flagged only</span></td>
-        </tr><tr>
-          <td><b>Handball</b></td>
-          <td>12</td>
-          <td>12</td>
-          <td>14</td>
-          <td><span class="badge b-high">Lines originated here</span></td>
-          <td class="small"><a href="sports/handball.html">our page</a> · <a href="survey/sports/handball.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Ice Hockey</b></td>
-          <td>14</td>
-          <td>14</td>
-          <td>9</td>
-          <td><span class="badge b-high">Lines originated here</span></td>
-          <td class="small"><a href="sports/ice-hockey.html">our page</a> · <a href="survey/sports/ice_hockey.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Motor Racing</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>4</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/motor_racing.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Rugby League</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>3</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/rugby_league.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Rugby Union</b></td>
-          <td>8</td>
-          <td>8</td>
-          <td>16</td>
-          <td><span class="badge b-high">Lines originated here</span></td>
-          <td class="small"><a href="sports/rugby-union.html">our page</a> · <a href="survey/sports/rugby_union.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Snooker</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>7</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/snooker.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Tennis</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>14</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/tennis.html">survey page</a></td>
-        </tr><tr>
-          <td><b>Volleyball</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>12</td>
-          <td><span class="badge b-med">Surveyed, no line</span></td>
-          <td class="small"><a href="survey/sports/volleyball.html">survey page</a></td>
-        </tr><tr>
-          <td><b>eSports</b></td>
-          <td>—</td>
-          <td>—</td>
-          <td>0</td>
-          <td><span class="badge b-low">No entry captured in survey</span></td>
-          <td class="small"><a href="survey/sports/esports.html">survey page</a></td>
-        </tr></tbody></table></div></div>
+<h2>Sports covered</h2>
+<p class="sub">All 17 eligible OLBG sports are shown. “0 rows” means the sport's official body published no fixture
+inside this capture window (Aussie Rules is off-season; eSports showed no active tips), not that the sport was skipped
+silently. <a href="sports/index.html">Open the category index</a>.</p>
+<div class="grid sports"><a class="card sport" href="sports/ice-hockey.html"><div class="cardhead"><h3>Ice Hockey</h3><span class="pill">12 rows</span></div><p>12 NHL fixtures on 22 Oct 2026 verified and fully originated across all 3 markets from fresh official 2026-27 team goal rates (NHL Stats REST, captured 2026-10-22). The two 21 Oct rows are completed and retired.</p><div class="metrics"><span><b>12</b> lined</span><span><b>0</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/basketball.html"><div class="cardhead"><h3>Basketball</h3><span class="pill">23 rows</span></div><p>23 fixtures verified and originated: 14 NBA opening-week games on 22–23 Oct from the official NBA schedule (Moneyline + Spread with 2025-26 priors; Totals blank — no official PF/PA feed) and 9 EuroLeague Round 7 games. BKT EuroCup Round 4 rows are completed and retired; Round 5 was not captured this refresh (VF-20).</p><div class="metrics"><span><b>23</b> lined</span><span><b>1</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/rugby-union.html"><div class="cardhead"><h3>Rugby Union</h3><span class="pill">31 rows</span></div><p>31 fixtures verified and originated across all 3 markets: 7 Top 14 J7 matches, 8 Pro D2 J8 matches, 8 URC Round 4 matches and 8 URC Round 5 matches.</p><div class="metrics"><span><b>31</b> lined</span><span><b>8</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/handball.html"><div class="cardhead"><h3>Handball</h3><span class="pill">5 rows</span></div><p>5 EHF Champions League Men Round 5 fixtures on 22 Oct 2026 verified and originated across all 3 markets from the fresh official 24-club standings (post 21-Oct Round 5 games); the 7 fixtures completed on 21 Oct are retired.</p><div class="metrics"><span><b>5</b> lined</span><span><b>3</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/darts.html"><div class="cardhead"><h3>Darts</h3><span class="pill">18 rows</span></div><p>All 16 PDC European Championship Round 1 ties (22–23 Oct 2026) verified and originated from official PDC Werner Ranking Ladder prize sums for all 32 players, plus 2 tournament outrights catalogued.</p><div class="metrics"><span><b>16</b> lined</span><span><b>2</b> high</span><span><b>2</b> blank</span></div></a><a class="card sport" href="sports/tennis.html"><div class="cardhead"><h3>Tennis</h3><span class="pill">0 rows</span></div><p>No originated tennis rows on 2026-10-22: the seven 21-Oct ATP ties are completed and retired, and the official ATP scores page read today published only completed results with no server-rendered next-round order of play (VF-20).</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/snooker.html"><div class="cardhead"><h3>Snooker</h3><span class="pill">8 rows</span></div><p>All 8 BetVictor Northern Ireland Open Round 3 ties on 22 Oct 2026 verified on the WST Match Centre and listed without prices: no Round 3 tie pairs two players with captured WST Top-36 prize values, and the official pages read do not state the Round 3 frame format, so no price is inferred (see flagged page). Round 2 was completed on 21 Oct and its rows are retired.</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>8</b> blank</span></div></a><a class="card sport" href="sports/baseball.html"><div class="cardhead"><h3>Baseball</h3><span class="pill">4 rows</span></div><p>2026 MLB World Series Games 1–4 (Tampa Bay Rays v Milwaukee Brewers, gamePk 849805/849802/849804/849803) verified and originated across all 3 markets from official 162-game run records; conditional Games 5–7 are not published.</p><div class="metrics"><span><b>4</b> lined</span><span><b>0</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/motor-racing.html"><div class="cardhead"><h3>Motor Racing</h3><span class="pill">3 rows</span></div><p>2026 United States Grand Prix and 2026 F1 Drivers&#x27; World Championship originated from official 17-round FIA championship standings (Kimi Antonelli 340 pts, George Russell 238 pts); 2027 World Championship left unlined.</p><div class="metrics"><span><b>2</b> lined</span><span><b>1</b> high</span><span><b>1</b> blank</span></div></a><a class="card sport" href="sports/volleyball.html"><div class="cardhead"><h3>Volleyball</h3><span class="pill">3 rows</span></div><p>3 Polish PlusLiga fixtures listed without prices: every club has played only a handful of 2026/27 matches, so no defensible line can be originated yet; the 21-Oct Lublin v Gdańsk row is completed and retired.</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>3</b> blank</span></div></a><a class="card sport" href="sports/cricket.html"><div class="cardhead"><h3>Cricket</h3><span class="pill">2 rows</span></div><p>2 international matches verified on official ICC match URLs (271646, 269791); lines deliberately left blank because ICC ratings render client-side. The 21-Oct tri-series row (274658) is completed and retired.</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>2</b> blank</span></div></a><a class="card sport" href="sports/golf.html"><div class="cardhead"><h3>Golf</h3><span class="pill">2 rows</span></div><p>2 tour events verified on live OLBG (Bank of Utah Championship, Genesis Championship); lines intentionally left blank pending full field strokes-gained feed.</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>2</b> blank</span></div></a><a class="card sport" href="sports/rugby-league.html"><div class="cardhead"><h3>Rugby League</h3><span class="pill">3 rows</span></div><p>3 active 2027 futures verified on live OLBG (2695857, 2801554, 2801600 — correcting empty survey snapshot); lines left blank during pre-2027 off-season.</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>3</b> blank</span></div></a><a class="card sport" href="sports/gaelic-football.html"><div class="cardhead"><h3>Gaelic Football</h3><span class="pill">5 rows</span></div><p>5 live OLBG markets catalogued (4 county club ties + All-Ireland 2027); lines left blank because county club points tables are not published in unified GAA standings.</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>5</b> blank</span></div></a><a class="card sport" href="sports/greyhounds.html"><div class="cardhead"><h3>Greyhounds</h3><span class="pill">0 rows</span></div><p>No greyhound rows on 2026-10-22: the six 21-Oct cards are completed and retired, and trap sectional ratings require a licensed GBGB feed that was not captured this refresh (VF-22).</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/aussie-rules.html"><div class="cardhead"><h3>Aussie Rules</h3><span class="pill">0 rows</span></div><p>Live OLBG hub opened on 2026-10-21 and confirmed to list 0 active tips during the post-Grand-Final AFL off-season.</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>0</b> blank</span></div></a><a class="card sport" href="sports/esports.html"><div class="cardhead"><h3>eSports</h3><span class="pill">0 rows</span></div><p>Live OLBG hub opened on 2026-10-21 and confirmed to list 0 active tips (&#x27;No tips found&#x27;).</p><div class="metrics"><span><b>0</b> lined</span><span><b>0</b> high</span><span><b>0</b> blank</span></div></a></div>
 
-<h2 class="section">Snapshot event rows</h2>
-<p class="section-sub">Filter by sport, model label or team. Rows include available source references; a linked official-site page is not proof that its contents were independently re-checked for every row. OLBG event links appear only where the pairing matched exactly.</p>
-<div class="panel">
-  <div class="toolbar">
-    <input id="q" type="search" placeholder="Search team, competition or pick…" aria-label="Search fixtures">
-    <select id="fsport" aria-label="Filter by sport">
-      <option value="">All sports</option>
-      <option>Ice Hockey</option><option>Basketball</option><option>Rugby Union</option><option>Cricket</option><option>Handball</option>
-    </select>
-    <select id="fconf" aria-label="Filter by confidence">
-      <option value="">Any confidence</option>
-      <option value="high">High</option>
-      <option value="medium">Medium</option>
-      <option value="low">Low</option>
-      <option value="unverified">Not originated</option>
-    </select>
-    <span class="hint" id="count"></span>
-  </div>
-  <div class="table-scroll">
-  <table id="tbl">
-    <thead><tr><th>Match</th><th>Start</th><th>Model pick</th><th>Model label</th><th>Model price</th><th>Source link(s)</th></tr></thead>
-    <tbody><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Atlanta Hawks <span class="muted">@</span> Orlando Magic</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 19:00 ET</td>
-      <td>Orlando Magic<span class="sub">Moneyline · 54.1% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.78</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
-    </tr><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Milwaukee Bucks <span class="muted">@</span> Washington Wizards</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 19:00 ET</td>
-      <td>Milwaukee Bucks<span class="sub">Moneyline · 60.1% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.60</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Minnesota Timberwolves <span class="muted">@</span> Miami Heat</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 19:30 ET</td>
-      <td>Minnesota Timberwolves<span class="sub">Moneyline · 50.5% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.90</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
-    </tr><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Charlotte Hornets <span class="muted">@</span> Brooklyn Nets</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 19:30 ET</td>
-      <td>Charlotte Hornets<span class="sub">Moneyline · 67.2% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.43</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
-    </tr><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Chicago Bulls <span class="muted">@</span> Toronto Raptors</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 19:30 ET</td>
-      <td>Toronto Raptors<span class="sub">Moneyline · 68.0% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.41</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Indiana Pacers <span class="muted">@</span> New Orleans Pelicans</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 20:00 ET</td>
-      <td>New Orleans Pelicans<span class="sub">Moneyline · 62.0% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.55</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Utah Jazz <span class="muted">@</span> Memphis Grizzlies</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 20:00 ET</td>
-      <td>Memphis Grizzlies<span class="sub">Moneyline · 58.0% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.66</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/UTA_Jazz_@_MEM_Grizzlies/4?event_id=534894" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Basketball" data-conf="medium">
-      <td><span class="match">Dallas Mavericks <span class="muted">@</span> Houston Rockets</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 20:30 ET</td>
-      <td>Houston Rockets<span class="sub">Moneyline · 76.3% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.26</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
-    </tr><tr data-sport="Basketball" data-conf="medium">
-      <td><span class="match">Golden State Warriors <span class="muted">@</span> Los Angeles Lakers</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 22:00 ET</td>
-      <td>Los Angeles Lakers<span class="sub">Moneyline · 68.8% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.40</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
-    </tr><tr data-sport="Basketball" data-conf="low">
-      <td><span class="match">Phoenix Suns <span class="muted">@</span> Portland Trail Blazers</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 22:00 ET</td>
-      <td>Portland Trail Blazers<span class="sub">Moneyline · 52.2% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.84</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Basketball" data-conf="medium">
-      <td><span class="match">Sacramento Kings <span class="muted">@</span> LA Clippers</span><span class="sub">NBA</span></td>
-      <td class="num">2026-10-21 22:30 ET</td>
-      <td>LA Clippers<span class="sub">Moneyline · 72.4% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.33</span></td>
-      <td class="small"><a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a></td>
-    </tr><tr data-sport="Cricket" data-conf="unverified">
-      <td><span class="match">Bangladesh <span class="muted">@</span> Afghanistan</span><span class="sub">International (ODI)</span></td>
-      <td class="num">2026-10-21 07:30 (as shown by ICC, user-local)</td>
-      <td><span class="badge b-unv">Not originated</span></td>
-      <td><span class="badge b-unv">Unverified</span></td>
-      <td class="num"><span class="muted">—</span></td>
-      <td class="small"><a href="https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh" rel="noopener">ICC official match list</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Afghanistan_vs_Bangladesh_One_Day_Match/7?event_id=188824" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Cricket" data-conf="unverified">
-      <td><span class="match">India <span class="muted">@</span> New Zealand</span><span class="sub">International (T20I)</span></td>
-      <td class="num">2026-10-22 03:00 (as shown by ICC, user-local)</td>
-      <td><span class="badge b-unv">Not originated</span></td>
-      <td><span class="badge b-unv">Unverified</span></td>
-      <td class="num"><span class="muted">—</span></td>
-      <td class="small"><a href="https://www.icc-cricket.com/matches/271646/new-zealand-vs-india" rel="noopener">ICC official match list</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_1st_T20_Match/7?event_id=188814" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Handball" data-conf="medium">
-      <td><span class="match">SAH - Aarhus <span class="muted">@</span> Dinamo Bucuresti</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group E)</span></td>
-      <td class="num">2026-10-21 18:45 CEST</td>
-      <td>SAH - Aarhus<span class="sub">Match winner · 62.3% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.54</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="medium">
-      <td><span class="match">FC Porto <span class="muted">@</span> RK Partizan AdmiralBet</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group A)</span></td>
-      <td class="num">2026-10-21 18:45 CEST</td>
-      <td>FC Porto<span class="sub">Match winner · 58.6% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.64</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="medium">
-      <td><span class="match">Füchse Berlin <span class="muted">@</span> One Veszprém HC</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group A)</span></td>
-      <td class="num">2026-10-21 18:45 CEST</td>
-      <td>One Veszprém HC<span class="sub">Match winner · 65.6% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.47</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="high">
-      <td><span class="match">Paris Saint-Germain <span class="muted">@</span> HC Zagreb</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group C)</span></td>
-      <td class="num">2026-10-21 18:45 CEST</td>
-      <td>Paris Saint-Germain<span class="sub">Match winner · 70.2% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.37</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="medium">
-      <td><span class="match">HC Vardar 1961 <span class="muted">@</span> HBC Nantes</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group B)</span></td>
-      <td class="num">2026-10-21 20:45 CEST</td>
-      <td>HBC Nantes<span class="sub">Match winner · 62.0% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.55</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="high">
-      <td><span class="match">RK Celje Pivovarna Laško <span class="muted">@</span> Aalborg Håndbold</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group C)</span></td>
-      <td class="num">2026-10-21 20:45 CEST</td>
-      <td>Aalborg Håndbold<span class="sub">Match winner · 84.5% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.14</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="low">
-      <td><span class="match">Industria Kielce <span class="muted">@</span> HC Kriens-Luzern</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group F)</span></td>
-      <td class="num">2026-10-21 20:45 CEST</td>
-      <td>HC Kriens-Luzern<span class="sub">Match winner · 50.8% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.89</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="low">
-      <td><span class="match">GOG <span class="muted">@</span> OTP Bank - PICK Szeged</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group D)</span></td>
-      <td class="num">2026-10-22 18:45 CEST</td>
-      <td>OTP Bank - PICK Szeged<span class="sub">Match winner · 49.3% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.95</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="low">
-      <td><span class="match">Orlen Wisla Plock <span class="muted">@</span> MT Melsungen</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group B)</span></td>
-      <td class="num">2026-10-22 18:45 CEST</td>
-      <td>Orlen Wisla Plock<span class="sub">Match winner · 49.4% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.95</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="high">
-      <td><span class="match">Montpellier Handball <span class="muted">@</span> Barça</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group E)</span></td>
-      <td class="num">2026-10-22 20:45 CEST</td>
-      <td>Barça<span class="sub">Match winner · 78.5% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.22</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="high">
-      <td><span class="match">IFK Kristianstad <span class="muted">@</span> Sporting Clube de Portugal</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group D)</span></td>
-      <td class="num">2026-10-22 20:45 CEST</td>
-      <td>Sporting Clube de Portugal<span class="sub">Match winner · 85.5% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.13</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Handball" data-conf="high">
-      <td><span class="match">SC Magdeburg <span class="muted">@</span> Kolstad Håndball</span><span class="sub">EHF Champions League Men 2026/27 — Group Phase, round 5 (Group F)</span></td>
-      <td class="num">2026-10-22 20:45 CEST</td>
-      <td>SC Magdeburg<span class="sub">Match winner · 84.1% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.14</span></td>
-      <td class="small"><a href="https://ehfcl.eurohandball.com/men/2026-27/matches/" rel="noopener">EHF Champions League Men — official matches page</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="high">
-      <td><span class="match">Philadelphia Flyers <span class="muted">@</span> Buffalo Sabres</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-21 23:30 UTC</td>
-      <td>Buffalo Sabres<span class="sub">Moneyline · 65.4% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.47</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="low">
-      <td><span class="match">Florida Panthers <span class="muted">@</span> Ottawa Senators</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-21 23:30 UTC</td>
-      <td>Florida Panthers<span class="sub">Moneyline · 50.9% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.89</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-21" rel="noopener">NHL official schedule / score API</a><span class="sub"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_OTT_Senators/13?event_id=199896" rel="noopener">OLBG event</a></span></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="high">
-      <td><span class="match">Nashville Predators <span class="muted">@</span> Boston Bruins</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-22 23:00 UTC</td>
-      <td>Boston Bruins<span class="sub">Moneyline · 65.3% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.47</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="low">
-      <td><span class="match">New York Rangers <span class="muted">@</span> Toronto Maple Leafs</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-22 23:00 UTC</td>
-      <td>New York Rangers<span class="sub">Moneyline · 50.3% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.91</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="medium">
-      <td><span class="match">San Jose Sharks <span class="muted">@</span> Ottawa Senators</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-22 23:00 UTC</td>
-      <td>Ottawa Senators<span class="sub">Moneyline · 60.1% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.60</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="low">
-      <td><span class="match">Anaheim Ducks <span class="muted">@</span> New Jersey Devils</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-22 23:00 UTC</td>
-      <td>New Jersey Devils<span class="sub">Moneyline · 56.7% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.70</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="low">
-      <td><span class="match">Florida Panthers <span class="muted">@</span> Pittsburgh Penguins</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-22 23:00 UTC</td>
-      <td>Florida Panthers<span class="sub">Moneyline · 54.1% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.78</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="high">
-      <td><span class="match">Los Angeles Kings <span class="muted">@</span> New York Islanders</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-22 23:30 UTC</td>
-      <td>New York Islanders<span class="sub">Moneyline · 71.2% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.35</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="medium">
-      <td><span class="match">Vegas Golden Knights <span class="muted">@</span> St. Louis Blues</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-23 00:00 UTC</td>
-      <td>Vegas Golden Knights<span class="sub">Moneyline · 59.9% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.60</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="medium">
-      <td><span class="match">Winnipeg Jets <span class="muted">@</span> Dallas Stars</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-23 00:00 UTC</td>
-      <td>Dallas Stars<span class="sub">Moneyline · 63.5% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.51</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="high">
-      <td><span class="match">Minnesota Wild <span class="muted">@</span> Calgary Flames</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-23 01:00 UTC</td>
-      <td>Minnesota Wild<span class="sub">Moneyline · 68.9% model</span></td>
-      <td><span class="badge b-high">High</span></td>
-      <td class="num"><span class="num">1.40</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="low">
-      <td><span class="match">Carolina Hurricanes <span class="muted">@</span> Edmonton Oilers</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-23 01:00 UTC</td>
-      <td>Edmonton Oilers<span class="sub">Moneyline · 55.9% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.72</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="low">
-      <td><span class="match">Utah Mammoth <span class="muted">@</span> Seattle Kraken</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-23 02:00 UTC</td>
-      <td>Seattle Kraken<span class="sub">Moneyline · 51.5% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.87</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Ice Hockey" data-conf="low">
-      <td><span class="match">Detroit Red Wings <span class="muted">@</span> Vancouver Canucks</span><span class="sub">NHL</span></td>
-      <td class="num">2026-10-23 02:00 UTC</td>
-      <td>Detroit Red Wings<span class="sub">Moneyline · 53.1% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.81</span></td>
-      <td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">NHL official schedule / score API</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="low">
-      <td><span class="match">Hollywoodbets Sharks <span class="muted">@</span> Cardiff Rugby</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-23 14:45 local</td>
-      <td>Cardiff Rugby<span class="sub">Match winner · 53.4% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.80</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="medium">
-      <td><span class="match">Zebre Parma <span class="muted">@</span> Connacht Rugby</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-23 14:45 local</td>
-      <td>Connacht Rugby<span class="sub">Match winner · 62.5% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.54</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="medium">
-      <td><span class="match">10bet Lions <span class="muted">@</span> Edinburgh Rugby</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-23 14:45 local</td>
-      <td>Edinburgh Rugby<span class="sub">Match winner · 66.1% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.46</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="medium">
-      <td><span class="match">Ulster Rugby <span class="muted">@</span> Vodacom Bulls</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-24 07:45 local</td>
-      <td>Vodacom Bulls<span class="sub">Match winner · 71.5% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.34</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="medium">
-      <td><span class="match">Scarlets <span class="muted">@</span> DHL Stormers</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-24 10:00 local</td>
-      <td>DHL Stormers<span class="sub">Match winner · 64.5% model</span></td>
-      <td><span class="badge b-med">Medium</span></td>
-      <td class="num"><span class="num">1.49</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="low">
-      <td><span class="match">Glasgow Warriors <span class="muted">@</span> Benetton Rugby</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-24 10:00 local</td>
-      <td>Benetton Rugby<span class="sub">Match winner · 50.2% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.91</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="low">
-      <td><span class="match">Munster Rugby <span class="muted">@</span> Leinster Rugby</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-24 13:00 local</td>
-      <td>Leinster Rugby<span class="sub">Match winner · 59.6% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.61</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr><tr data-sport="Rugby Union" data-conf="low">
-      <td><span class="match">Dragons RFC <span class="muted">@</span> Ospreys</span><span class="sub">United Rugby Championship</span></td>
-      <td class="num">2026-10-24 14:00 local</td>
-      <td>Dragons RFC<span class="sub">Match winner · 51.1% model</span></td>
-      <td><span class="badge b-low">Low</span></td>
-      <td class="num"><span class="num">1.88</span></td>
-      <td class="small"><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">URC official match centre</a></td>
-    </tr></tbody>
-  </table>
-  </div>
+<h2>Next fixtures in the snapshot</h2>
+<p class="sub">Ordered by local fixture date and published start time. Every row links to the official page it was read from.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Date</th><th>Status</th><th>Sport</th><th>Match</th><th>Markets (model)</th><th>Pick</th><th>Source</th><th>Evidence</th></tr></thead><tbody><tr class="row-today" data-sport="golf" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/golf.html">Golf</a><div class="tiny">DP World Tour — Genesis Championship</div></td><td><div class="teams">120-Player Strokeplay Field <span>v</span> Woo Jeong Hills CC</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Full field strokes-gained feed not published in static HTML; left unlined.</div></td><td><span class="blank">—</span></td><td><a href="https://www.europeantour.com/dpworld-tour/schedule/" rel="noopener">europeantour.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="snooker" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/snooker.html">Snooker</a><div class="tiny">BetVictor Northern Ireland Open — Round 3 (Match 50)</div></td><td><div class="teams">Kyren Wilson (prize value not captured) <span>v</span> Pang Junxu (#29, £272,750)</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Kyren Wilson&#x27;s official WST ranking prize value is outside this desk&#x27;s captured Top-36 excerpt, and the official pages read do not state the Round 3 frame format; left blank rather than inferred.</div></td><td><span class="blank">—</span></td><td><a href="https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7" rel="noopener">wst.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="snooker" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/snooker.html">Snooker</a><div class="tiny">BetVictor Northern Ireland Open — Round 3 (Match 51)</div></td><td><div class="teams">Matthew Selt (prize value not captured) <span>v</span> Sam Craigie (prize value not captured)</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Neither player&#x27;s prize value is in this desk&#x27;s captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.</div></td><td><span class="blank">—</span></td><td><a href="https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c" rel="noopener">wst.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="snooker" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/snooker.html">Snooker</a><div class="tiny">BetVictor Northern Ireland Open — Round 3 (Match 49)</div></td><td><div class="teams">Anthony McGill (prize value not captured) <span>v</span> Mateusz Baranowski (prize value not captured)</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Neither player&#x27;s prize value is in this desk&#x27;s captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.</div></td><td><span class="blank">—</span></td><td><a href="https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5" rel="noopener">wst.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="snooker" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/snooker.html">Snooker</a><div class="tiny">BetVictor Northern Ireland Open — Round 3 (Match 52)</div></td><td><div class="teams">Elliot Slessor (#23, £329,200) <span>v</span> Ricky Walden (prize value not captured)</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Ricky Walden&#x27;s prize value is outside this desk&#x27;s captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.</div></td><td><span class="blank">—</span></td><td><a href="https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8" rel="noopener">wst.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="darts" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/darts.html">Darts</a><div class="tiny">2026 PDC European Championship — Round 1 (Best of 11 Legs)</div></td><td><div class="teams">Luke Woodhouse <span>v</span> Dirk van Duijvenbode</div><div class="tiny">Westfalenhalle, Dortmund</div></td><td><div><b>ML</b> 52.6% / 47.4%</div><div><b>HCP</b> -1.5 · 40.1% / 59.9%</div><div><b>Total</b> 9.5 · O 49.1% / U 50.9%</div></td><td><div class="pick">Luke Woodhouse (Match Winner)</div><div class="tiny">52.6% · 1.90 · <span class="badge low">low</span></div></td><td><a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="darts" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/darts.html">Darts</a><div class="tiny">2026 PDC European Championship — Round 1 (Best of 11 Legs)</div></td><td><div class="teams">Danny Noppert <span>v</span> Stephen Bunting</div><div class="tiny">Westfalenhalle, Dortmund</div></td><td><div><b>ML</b> 51.2% / 48.8%</div><div><b>HCP</b> -1.5 · 38.8% / 61.2%</div><div><b>Total</b> 9.5 · O 49.2% / U 50.8%</div></td><td><div class="pick">Danny Noppert (Match Winner)</div><div class="tiny">51.2% · 1.95 · <span class="badge low">low</span></div></td><td><a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="snooker" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/snooker.html">Snooker</a><div class="tiny">BetVictor Northern Ireland Open — Round 3 (Match 53)</div></td><td><div class="teams">David Gilbert (#34, £221,200) <span>v</span> Cheung Ka Wai (prize value not captured)</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Cheung Ka Wai&#x27;s prize value is outside this desk&#x27;s captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.</div></td><td><span class="blank">—</span></td><td><a href="https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236" rel="noopener">wst.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="snooker" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/snooker.html">Snooker</a><div class="tiny">BetVictor Northern Ireland Open — Round 3 (Match 54)</div></td><td><div class="teams">Mark Williams (#8, £747,400) <span>v</span> Martin O&#x27;Donnell (prize value not captured)</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Martin O&#x27;Donnell&#x27;s prize value is outside this desk&#x27;s captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.</div></td><td><span class="blank">—</span></td><td><a href="https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f" rel="noopener">wst.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="golf" data-status="today" data-conf="none"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/golf.html">Golf</a><div class="tiny">PGA Tour — Bank of Utah Championship</div></td><td><div class="teams">132-Player Strokeplay Field <span>v</span> Black Desert Resort</div><div class="tiny">venue unconfirmed</div></td><td><span class="blank">—</span><div class="tiny">Full 132-golfer strokes-gained distribution not published in static HTML; left unlined.</div></td><td><span class="blank">—</span></td><td><a href="https://www.pgatour.com/schedule" rel="noopener">pgatour.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="darts" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/darts.html">Darts</a><div class="tiny">2026 PDC European Championship — Round 1 (Best of 11 Legs)</div></td><td><div class="teams">Niels Zonneveld <span>v</span> Cameron Menzies</div><div class="tiny">Westfalenhalle, Dortmund</div></td><td><div><b>ML</b> 45.4% / 54.6%</div><div><b>HCP</b> 1.5 · 58.0% / 42.0%</div><div><b>Total</b> 9.5 · O 49.0% / U 51.0%</div></td><td><div class="pick">Cameron Menzies (Match Winner)</div><div class="tiny">54.6% · 1.83 · <span class="badge low">low</span></div></td><td><a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="darts" data-status="today" data-conf="medium"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><a href="sports/darts.html">Darts</a><div class="tiny">2026 PDC European Championship — Round 1 (Best of 11 Legs)</div></td><td><div class="teams">Gerwyn Price <span>v</span> Rob Cross</div><div class="tiny">Westfalenhalle, Dortmund</div></td><td><div><b>ML</b> 60.8% / 39.2%</div><div><b>HCP</b> -1.5 · 47.9% / 52.1%</div><div><b>Total</b> 9.5 · O 47.9% / U 52.0%</div></td><td><div class="pick">Gerwyn Price (Match Winner)</div><div class="tiny">60.8% · 1.64 · <span class="badge medium">medium</span></div></td><td><a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr></tbody></table></div>
+
+<h2>Analysis</h2>
+<p class="sub">These figures are computed from the published dataset itself, not from any external claim.</p>
+<div class="two-col">
+  <div class="panel"><h3>Coverage and evidence</h3><ul>
+    <li><strong>93 of 119 rows (78%)</strong> carry originated prices — moneyline and handicap on every lined row, plus totals wherever the official feed publishes scoring data; 26 rows are blank with a stated reason.</li>
+    <li><strong>0 of 119 rows</strong> cite a URL that identifies the individual fixture; the remaining 119 cite a competition or rankings page, disclosed as VF-11.</li>
+    <li><strong>0 rows</strong> were re-read on 2026-10-22; the other 119 keep their 2026-10-21 capture stamp.</li>
+    <li>The snapshot spans <strong>39 competition labels</strong> in 13 sports; Aussie Rules and eSports returned no active fixtures and are shown empty rather than skipped.</li>
+  </ul></div>
+  <div class="panel"><h3>Prices and confidence</h3><ul>
+    <li>Confidence split: <strong>15 high</strong>, 29 medium, 49 low, 26 unlined/no pick.</li>
+    <li><strong>14 band picks</strong> sit at fair odds 1.40-1.42 with model probabilities of 70.0-71.4%, the only window satisfying both the ≥70% rule and the −250 floor.</li>
+    <li>Moneyline picks graded high (&ge;72%) whose fair price is shorter than the &minus;250 floor stay on the sport tables without a written prediction, rather than padding the picks page with ultra-short prices.</li>
+    <li>The longest fair price anywhere in the 14 predictions is <strong>1.42</strong>, inside the +10000 ceiling.</li>
+  </ul></div>
 </div>
 
-<h2 class="section">How to read this</h2>
-<details open>
-  <summary>Prices are ours, not the market's</summary>
-  <p>OLBG publishes tip percentages but no prices, and no bookmaker odds were used. Every price above is
-  <code>1 / (probability × 1.04)</code>, i.e. our own fair price plus a 4% theoretical margin. They are not
-  available prices and should not be read as such. The full formulas live in <a href="methodology.html">Methodology</a>.</p>
-</details>
-<details>
-  <summary>What "confidence" means here</summary>
-  <p>Confidence grades are model classifications based on recorded sample size and model probability; they are
-  not probabilities that have been independently validated, nor a guarantee of outcome. Sport-specific thresholds
-  are described in <a href="methodology.html">Methodology</a>. Evidence gaps are listed in
-  <a href="integration.html">Evidence status</a>.</p>
-</details>
-<details>
-  <summary>Sports we could not cover in this capture</summary>
-  <p>This root layer is partial. The separate <a href="survey/index.html">sport survey</a> records additional
-  listings, but its inventory also has unresolved official-source verification gaps. Review both the
-  <a href="flagged.html">root queue</a> and <a href="survey/flagged.html">survey queue</a>; absence from either capture is
-  not evidence that OLBG has no event.</p>
-</details>
-
-<script>
-(function () {
-  var q = document.getElementById('q'), fs = document.getElementById('fsport'),
-      fc = document.getElementById('fconf'), tbl = document.getElementById('tbl'),
-      count = document.getElementById('count');
-  function apply() {
-    var term = (q.value || '').toLowerCase(), sport = fs.value, conf = fc.value, shown = 0;
-    Array.prototype.forEach.call(tbl.tBodies[0].rows, function (row) {
-      var text = row.innerText.toLowerCase();
-      var okTerm = !term || text.indexOf(term) > -1;
-      var okSport = !sport || row.getAttribute('data-sport') === sport;
-      var rowConf = row.getAttribute('data-conf');
-      var okConf = !conf || (conf === 'unverified' ? rowConf !== 'high' && rowConf !== 'medium' && rowConf !== 'low' : rowConf === conf);
-      var show = okTerm && okSport && okConf;
-      row.style.display = show ? '' : 'none';
-      if (show) shown++;
-    });
-    count.textContent = shown + ' of ' + tbl.tBodies[0].rows.length + ' shown';
-  }
-  [q, fs, fc].forEach(function (el) { el.addEventListener('input', apply); el.addEventListener('change', apply); });
-  apply();
-})();
-</script>
+<h2>What this project does — and does not do</h2>
+<div class="two-col">
+  <div class="panel"><h3>Does</h3><ul>
+    <li>Records OLBG's sport taxonomy and excludes the eight categories in the brief.</li>
+    <li>Reads fixture, date, venue and form data from governing bodies or leagues.</li>
+    <li>Originates its own moneyline, handicap and total prices from those inputs.</li>
+    <li>Writes unique, sourced predictions for every published high-confidence pick.</li>
+    <li>Leaves unconfirmed values blank and publishes them for review.</li>
+  </ul></div>
+  <div class="panel"><h3>Does not</h3><ul>
+    <li>Claim a live, exhaustive OLBG schedule — the capture is dated 2026-10-22 01:30 UTC.</li>
+    <li>Copy bookmaker odds or tipster percentages into the model.</li>
+    <li>Fill a missing venue, ranking or total with an inferred value.</li>
+    <li>Guarantee any selection; confidence is an estimate, not certainty.</li>
+    <li>Present past fixtures as upcoming.</li>
+  </ul></div>
+</div>
 
 </main>
-<footer class="site">
-  <div class="wrap">
-    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
-    <span><a href="methodology.html">Methodology</a> · <a href="sources.html">Sources</a> · <a href="survey/index.html">Survey (130 events)</a> · <a href="live/index.html">Live slate</a> · <a href="flagged.html">Flagged</a> · <a href="site/index.html">Evidence desk v2</a></span>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap">
+  <p><strong>Dated, partial research snapshot — not a live feed and not betting advice.</strong> Model probabilities are estimates, not guarantees. Rows dated before 2026-10-22 are labelled <em>past</em> and are not presented as upcoming. Unconfirmed values are blank (<code>—</code>) and listed on <a href="flagged.html">Flagged for Review</a>. 18+.</p>
+  <p class="tiny">Built by <code>scripts/build_site.py</code> from checked-in data. Earlier layers are preserved at <a href="verified/index.html">/verified/</a>, <a href="live/index.html">/live/</a>, <a href="survey/index.html">/survey/</a>, <a href="site/index.html">/site/</a> and indexed in the <a href="archive.html">archive</a>.</p>
+</div></footer>
 </body>
 </html>

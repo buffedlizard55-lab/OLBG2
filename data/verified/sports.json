@@ -83,7 +83,7 @@
         "Puck Line (-1.5 / +1.5)",
         "Game Total (Over/Under)"
       ],
-      "status_summary": "16 NHL fixtures verified (21–23 Oct 2026) and fully originated across all 3 markets from official 2026-27 team goal rates."
+      "status_summary": "12 NHL fixtures on 22 Oct 2026 verified and fully originated across all 3 markets from fresh official 2026-27 team goal rates (NHL Stats REST, captured 2026-10-22). The two 21 Oct rows are completed and retired."
     },
     {
       "slug": "basketball",
@@ -97,7 +97,7 @@
         "Point Spread / Handicap",
         "Game Total (Over/Under)"
       ],
-      "status_summary": "25 fixtures verified and originated: 11 NBA opening-week games (Moneyline + Spread; Totals blank because nba.com standings omit team points for/against), 10 EuroLeague R7 games (all 3 markets), and 4 BKT EuroCup R4 games (all 3 markets)."
+      "status_summary": "23 fixtures verified and originated: 14 NBA opening-week games on 22–23 Oct from the official NBA schedule (Moneyline + Spread with 2025-26 priors; Totals blank — no official PF/PA feed) and 9 EuroLeague Round 7 games. BKT EuroCup Round 4 rows are completed and retired; Round 5 was not captured this refresh (VF-20)."
     },
     {
       "slug": "rugby-union",
@@ -111,7 +111,7 @@
         "Point Handicap",
         "Match Total Points"
       ],
-      "status_summary": "23 fixtures verified and originated across all 3 markets: 7 Top 14 J7 matches, 8 Pro D2 J8 matches, and 8 URC Round 4 matches."
+      "status_summary": "31 fixtures verified and originated across all 3 markets: 7 Top 14 J7 matches, 8 Pro D2 J8 matches, 8 URC Round 4 matches and 8 URC Round 5 matches."
     },
     {
       "slug": "handball",
@@ -125,7 +125,7 @@
         "Goal Handicap",
         "Match Total Goals"
       ],
-      "status_summary": "12 EHF Champions League Men Round 5 fixtures verified (with all 12 OLBG match IDs mapped) and originated across all 3 markets from full-support bivariate Poisson distributions."
+      "status_summary": "5 EHF Champions League Men Round 5 fixtures on 22 Oct 2026 verified and originated across all 3 markets from the fresh official 24-club standings (post 21-Oct Round 5 games); the 7 fixtures completed on 21 Oct are retired."
     },
     {
       "slug": "darts",
@@ -153,7 +153,7 @@
         "Set Handicap (-1.5 / +1.5 Sets)",
         "Total Sets (Over/Under 2.5)"
       ],
-      "status_summary": "7 ATP Tour singles matches where both players hold verified Top-100 PIF ATP rankings originated across all 3 markets; 8 WTA / Challenger / #101+ matches catalogued with blank unconfirmed rankings."
+      "status_summary": "No originated tennis rows on 2026-10-22: the seven 21-Oct ATP ties are completed and retired, and the official ATP scores page read today published only completed results with no server-rendered next-round order of play (VF-20)."
     },
     {
       "slug": "snooker",
@@ -181,7 +181,7 @@
         "Run Line (-1.5 / +1.5)",
         "Game Total (Over/Under 7.5 & Alt 5.5)"
       ],
-      "status_summary": "2026 MLB World Series Game 1 (Tampa Bay Rays @ Milwaukee Brewers, gamePk=849805) verified and originated across all 3 markets from official 162-game run-scoring and pitching records."
+      "status_summary": "2026 MLB World Series Games 1–4 (Tampa Bay Rays v Milwaukee Brewers, gamePk 849805/849802/849804/849803) verified and originated across all 3 markets from official 162-game run records; conditional Games 5–7 are not published."
     },
     {
       "slug": "motor-racing",
@@ -209,7 +209,7 @@
         "Set Handicap",
         "Total Points / Sets"
       ],
-      "status_summary": "4 Polish PlusLiga fixtures verified on live OLBG and PLS schedule; lines intentionally left blank because every club has played only M=1 match in 2026/27 and plusliga.pl/table.html cross-redirects to tauronliga.pl/table.html."
+      "status_summary": "3 Polish PlusLiga fixtures listed without prices: every club has played only a handful of 2026/27 matches, so no defensible line can be originated yet; the 21-Oct Lublin v Gdańsk row is completed and retired."
     },
     {
       "slug": "cricket",
@@ -223,7 +223,7 @@
         "Innings Runs",
         "Series Outright"
       ],
-      "status_summary": "3 international matches verified on official ICC match URLs (274658, 271646, 269791); lines deliberately left blank because ICC ranking tables and match scorecards render client-side."
+      "status_summary": "2 international matches verified on official ICC match URLs (271646, 269791); lines deliberately left blank because ICC ratings render client-side. The 21-Oct tri-series row (274658) is completed and retired."
     },
     {
       "slug": "golf",
@@ -276,7 +276,7 @@
         "Win Trap",
         "Forecast / Tricast"
       ],
-      "status_summary": "6 live 21 October race cards catalogued across Kinsley, Harlow, Monmore, and Nottingham; lines left blank because trap sectional ratings require a licensed GBGB data feed."
+      "status_summary": "No greyhound rows on 2026-10-22: the six 21-Oct cards are completed and retired, and trap sectional ratings require a licensed GBGB feed that was not captured this refresh (VF-22)."
     },
     {
       "slug": "aussie-rules",

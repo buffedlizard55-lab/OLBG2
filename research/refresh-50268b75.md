@@ -19,7 +19,7 @@ band of **−250 to +10000 (American)**.
 | Top 14 / Pro D2 | `top14.lnr.fr/classement`, `prod2.lnr.fr/classement` | spot-checked unchanged, no intervening rounds |
 | URC | copied at seed time from `data/inputs/urc.json` + `data/live/urc.json` | 16 teams, R4 + R5 fixtures |
 | WST NI Open | `wst.tv` matches / match centre | 8 Round 3 ties (unlined, VF-04) |
-| PDC rankings | `pdc.tv/rankings` — consent wall, no rows served | 21-Oct ladder retained (VF-13) |
+| PDC rankings | `pdc.tv/rankings` — consent wall, no rows served | 21-Oct ladder retained (VF-21) |
 
 ## Decisions & irregularities
 
@@ -27,7 +27,7 @@ band of **−250 to +10000 (American)**.
   standings endpoint includes them); Stats REST is the model source, disclosed
   on the methodology page. Four clubs (PHI, BUF, FLA, OTT) had a game still
   live during capture on 21 Oct; their rows exclude that unfinished game.
-  Florida/Ottawa play 22 Oct on one-game-stale inputs — flagged VF-11, not
+  Florida/Ottawa play 22 Oct on one-game-stale inputs — flagged VF-19, not
   "corrected" from partial live scores.
 - **NBA opening week.** No 2026-27 games played yet: 2025-26 records are the
   prior, confidence capped at medium, totals blank (nba.com standings publish
@@ -42,7 +42,7 @@ band of **−250 to +10000 (American)**.
   each naming its exact selection. Sporting/Magdeburg/Littler-class picks with
   no in-band half-line stay HIGH picks without a write-up rather than padding.
 - **Retired without replacement (flagged):** EuroCup Round 5 and ATP orders of
-  play were not server-rendered on the official pages read (VF-12); all
+  play were not server-rendered on the official pages read (VF-20); all
   completed 21-Oct rows removed desk-wide; tests now assert no row predates
   the capture date.
 - **Cross-layer compatibility:** `scripts/survey_lines.py` consumes
@@ -65,3 +65,11 @@ band of **−250 to +10000 (American)**.
   featured-band, narrative-uniqueness/≥30-words, no-stale-fixture and
   NBA-exclusion assertions.
 - Internal link scan of all 22 verified pages: 0 broken links/anchors.
+
+## Merge note (PR #53)
+
+Session `36f79c71` merged a parallel implementation (PRs #50–#52) while this PR
+was open. Resolution kept this session's fresh-capture architecture, preserved
+that session's flags VF-11…VF-18 (this session's renumbered VF-19…VF-22), its
+Pages workflow/root fixes, and its `band.json`/`band_pick` data contract — now
+emitted from the fresh featured selections. Full detail in `COORDINATION.md`.

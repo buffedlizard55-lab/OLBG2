@@ -12,6 +12,15 @@ def load(path):
     return json.loads((ROOT / path).read_text())
 
 
+def _vcounts():
+    return load("data/verified/matches.json")["counts"]
+
+
+def _vsports():
+    rows = load("data/verified/matches.json")["matches"]
+    return len({r["sport"] for r in rows})
+
+
 def findings():
     """Produce review rows from repository evidence, without inventing external facts."""
     rows = [
@@ -19,7 +28,7 @@ def findings():
         ('Scope alignment across layers', 'RESOLVED IN V2/V3', 'All active layers (Root, Verified /verified/, and Survey /survey/) enforce the 17 eligible OLBG sports and block all excluded terms including Hurling (id 26) and UFC/MMA (id 27).', 'verified/flagged.html'),
         ('Timezone preservation', 'VERIFIED POLICY', 'Times are preserved in the exact timezone published by each official feed (UTC for NHL/MLB, US ET for NBA, French local for LNR, venue local for URC, CEST for EHF) without unconfirmed conversion.', 'verified/methodology.html'),
         ('Duplicate-count disclosure', 'NEEDS REVIEW', 'Layers represent distinct audit passes over overlapping sports windows. Do not sum layer row counts to claim unique matches across the repository.', 'verified/audit.html'),
-        ('Line-by-line repository audit (RA-01 to RA-10)', 'AUDITED 2026-10-21', 'Full primary-source audit remediated stale Buffalo Sabres goal leader in /site/, purged all third-party Wikipedia/Cricinfo/ESPN citations in /survey/, populated SAC @ LAC game ID 0022600093, and originated 102 multi-market lines across 9 sports in /verified/.', 'verified/audit.html'),
+        ('Line-by-line repository audit (RA-01 to RA-10)', 'AUDITED 2026-10-21 · REBUILT 2026-10-22', f'Full primary-source audit remediated a stale Buffalo Sabres goal leader in /site/, purged all third-party Wikipedia/Cricinfo/ESPN citations in /survey/, populated SAC @ LAC game ID 0022600093, and originated {_vcounts()["originated_rows"]} multi-market lines across {_vsports()} sports in /verified/.', 'verified/audit.html'),
     ]
     for pred in load('data/survey/predictions.json'):
         for fact, url in pred['facts_used']:
@@ -35,12 +44,12 @@ def body():
     v_counts = verified['counts']
     events = sum(len(json.loads(f.read_text())) for f in (ROOT / 'data/survey/events').glob('*.json'))
     return f'''<h1>Evidence status &amp; integration review</h1>
-<p class="lede">Flagged for Review · checked 21 October 2026. Structural checks verify links, schema invariants, and source allowlists across all published layers.</p>
+<p class="lede">Flagged for Review · checked 22 October 2026. Structural checks verify links, schema invariants, and source allowlists across all published layers.</p>
 <div class="notice"><strong>Partial, dated research — not a live complete match feed.</strong> Probabilities and confidence labels are model outputs derived from official governing-body statistics, not guarantees. Any value not confirmed server-side from an official trusted source is left blank (<code>—</code>) and listed on <a href="verified/flagged.html">Verified Flagged for Review</a> and <a href="survey/flagged.html">Survey Flagged for Review</a>.</div>
 <h2>Explore every research layer</h2>
 <div class="table-wrap"><table><thead><tr><th>Layer</th><th>Stored entries (not unique combined totals)</th><th>Evidence &amp; limitations</th></tr></thead><tbody>
-<tr><td><a href="verified/index.html"><strong>Verified Multi-Sport Desk (/verified/)</strong></a></td><td>{v_counts['total_rows']} verified rows ({v_counts['originated_rows']} originated lines across 9 sports · {v_counts['unlined_rows']} blank/flagged)</td><td><a href="verified/predictions.html">{v_counts['high_confidence']} human HIGH predictions</a> · <a href="verified/flagged.html">Flagged for Review</a> · <a href="verified/audit.html">Line-by-Line Repo Audit</a></td></tr>
-<tr><td><a href="live/index.html">Live slate (/live/)</a></td><td>11 fresh 2026-10-21 fixtures (URC R5 + MLB World Series G1-G3)</td><td><a href="live/flagged.html">Live review queue</a> · <a href="live/picks.html">Live picks &amp; predictions</a></td></tr>
+<tr><td><a href="verified/index.html"><strong>Verified Multi-Sport Desk (/verified/)</strong></a></td><td>{v_counts['total_rows']} verified rows ({v_counts['originated_rows']} originated lines across {_vsports()} sports · {v_counts['unlined_rows']} blank/flagged)</td><td><a href="verified/predictions.html">{len(load('data/verified/predictions.json')['predictions'])} written predictions ({len(load('data/verified/band.json')['selections'])} band)</a> · <a href="verified/flagged.html">Flagged for Review</a> · <a href="verified/audit.html">Line-by-Line Repo Audit</a></td></tr>
+<tr><td><a href="live/index.html">Live slate (/live/)</a></td><td>{len(load('data/live/lines.json')['rows'])} fresh 2026-10-21 fixtures (URC R5 + MLB World Series G1-G3)</td><td><a href="live/flagged.html">Live review queue</a> · <a href="live/picks.html">Live picks &amp; predictions</a></td></tr>
 <tr><td><a href="index.html">Root dashboard (/)</a></td><td>{len(root['matches'])} fixtures</td><td><a href="flagged.html">Root review queue</a> · <a href="sources.html">Source register</a></td></tr>
 <tr><td><a href="site/index.html">Evidence desk v2 (/site/)</a></td><td>25 NHL/NBA fixtures (updated 2026-10-21)</td><td><a href="site/flagged.html">Desk review queue</a> · <a href="site/sources.html">Desk sources</a></td></tr>
 <tr><td><a href="survey/index.html">All-sport survey (/survey/)</a></td><td>{events} inventoried entries across all 17 eligible sports (26 lines · 119 unlined)</td><td><a href="survey/flagged.html">Survey review queue</a> · <a href="survey/verification.html">Verification register</a></td></tr>

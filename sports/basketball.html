@@ -3,201 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Basketball · OLBG2 Sports Betting Data</title>
-<meta name="description" content="NBA schedule snapshot; the model uses stored 2025-26 season inputs as a prior, not freshly revalidated here.">
-<link rel="stylesheet" href="../assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1730'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%234f8cff'/%3E%3C/svg%3E">
+<title>Basketball fixtures · OLBG2</title>
+<meta name="description" content="Dated OLBG reverse-engineering research: officially sourced fixtures, independently originated lines, confidence-graded picks and open review items.">
+<link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
 </head>
 <body>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="../index.html"><span class="dot"></span>OLBG2 · Sports Betting Data</a>
-    <nav class="main"><a href="../index.html">Dashboard</a><a href="../verified/index.html">Verified desk (155 rows)</a><a href="../picks.html">Picks &amp; predictions</a><a href="../flagged.html">Flagged for review</a><a href="../methodology.html">Methodology</a><a href="../sources.html">Sources</a><a href="../survey/index.html">Survey (145 events)</a><a href="../live/index.html">Live slate (2026-10-21)</a><a href="../site/index.html">Evidence desk v2</a><a href="../integration.html">Evidence status</a></nav>
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="../index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="../index.html">Dashboard</a><a href="../matches.html">All matches</a><a href="../sports/index.html" aria-current="page">Sports</a><a href="../picks.html">Picks</a><a href="../verification.html">Verification</a><a href="../flagged.html">Flagged</a><a href="../methodology.html">Methodology</a><a href="../sources.html">Sources</a><a href="../archive.html">Archive</a><a href="../integration.html">Cross-layer review</a></nav>
   </div>
 </header>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 01:30 UTC</strong> · 119 stored rows · 93 originated lines · 14 price-band picks · every row carries its official source link · <a href="../flagged.html">22 open review items</a></div></div>
 <main class="wrap">
-<p class="notice">Dated research, not a live exhaustive feed. Model confidence is not verified certainty. <a href="../integration.html">Evidence status &amp; cross-layer review</a>.</p>
 
-<section class="hero">
-  <h1>Basketball</h1>
-  <p class="lede">NBA schedule snapshot; the model uses stored 2025-26 season inputs as a prior, not freshly revalidated here.</p>
-  <p class="meta">11 stored rows · 11 with originated lines · 0 model-labeled high picks</p>
-</section>
-<div class="note info">Prices on this page are outputs of this project's models, not bookmaker prices. Inputs come from the checked-in snapshot; source links do not establish that every input or fixture was independently re-checked. See <a href="../flagged.html">Flagged for review</a> and <a href="../integration.html">Evidence status</a>.</div>
-
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Atlanta Hawks <span class="muted">@</span> Orlando Magic</span>
-              <span class="sub">NBA · 2026-10-21 19:00 ET</span></div>
-            <div><span class="sel">Orlando Magic</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Orlando Magic</b>: record=45-37, season=2025-26, home=25-15, road=19-20<br><b>Atlanta Hawks</b>: record=46-36, season=2025-26, home=24-17, road=22-19</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Orlando Magic</td><td class="num">—</td><td class="num">54.1%</td><td class="num">1.78</td></tr><tr><td>Moneyline</td><td>Atlanta Hawks</td><td class="num">—</td><td class="num">45.9%</td><td class="num">2.09</td></tr><tr><td>Handicap</td><td>Orlando Magic -1.5</td><td class="num">-1.5</td><td class="num">50.7%</td><td class="num">1.90</td></tr><tr><td>Handicap</td><td>Atlanta Hawks +1.5</td><td class="num">1.5</td><td class="num">49.3%</td><td class="num">1.95</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.5366 · away shrunk win pct: 0.5457 · expected margin home: 1.79</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-          </p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Milwaukee Bucks <span class="muted">@</span> Washington Wizards</span>
-              <span class="sub">NBA · 2026-10-21 19:00 ET</span></div>
-            <div><span class="sel">Milwaukee Bucks</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Washington Wizards</b>: record=17-65, season=2025-26, home=11-30, road=6-35<br><b>Milwaukee Bucks</b>: record=32-50, season=2025-26, home=19-22, road=13-28</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Washington Wizards</td><td class="num">—</td><td class="num">39.9%</td><td class="num">2.41</td></tr><tr><td>Moneyline</td><td>Milwaukee Bucks</td><td class="num">—</td><td class="num">60.1%</td><td class="num">1.60</td></tr><tr><td>Handicap</td><td>Washington Wizards +4.5</td><td class="num">4.5</td><td class="num">50.0%</td><td class="num">1.92</td></tr><tr><td>Handicap</td><td>Milwaukee Bucks -4.5</td><td class="num">-4.5</td><td class="num">50.0%</td><td class="num">1.92</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.2805 · away shrunk win pct: 0.4177 · expected margin home: -4.51</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-           · <a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_WAS_Wizards/4?event_id=534889" rel="noopener">OLBG event page</a></p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Minnesota Timberwolves <span class="muted">@</span> Miami Heat</span>
-              <span class="sub">NBA · 2026-10-21 19:30 ET</span></div>
-            <div><span class="sel">Minnesota Timberwolves</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Miami Heat</b>: record=43-39, season=2025-26, home=26-15, road=17-24<br><b>Minnesota Timberwolves</b>: record=49-33, season=2025-26, home=26-15, road=23-18</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Miami Heat</td><td class="num">—</td><td class="num">49.5%</td><td class="num">1.94</td></tr><tr><td>Moneyline</td><td>Minnesota Timberwolves</td><td class="num">—</td><td class="num">50.5%</td><td class="num">1.90</td></tr><tr><td>Handicap</td><td>Miami Heat +0.5</td><td class="num">0.5</td><td class="num">50.6%</td><td class="num">1.90</td></tr><tr><td>Handicap</td><td>Minnesota Timberwolves -0.5</td><td class="num">-0.5</td><td class="num">49.4%</td><td class="num">1.95</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.5183 · away shrunk win pct: 0.5732 · expected margin home: -0.24</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-          </p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Charlotte Hornets <span class="muted">@</span> Brooklyn Nets</span>
-              <span class="sub">NBA · 2026-10-21 19:30 ET</span></div>
-            <div><span class="sel">Charlotte Hornets</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Brooklyn Nets</b>: record=20-62, season=2025-26, home=12-29, road=8-33<br><b>Charlotte Hornets</b>: record=44-38, season=2025-26, home=21-20, road=23-18</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Brooklyn Nets</td><td class="num">—</td><td class="num">32.8%</td><td class="num">2.94</td></tr><tr><td>Moneyline</td><td>Charlotte Hornets</td><td class="num">—</td><td class="num">67.2%</td><td class="num">1.43</td></tr><tr><td>Handicap</td><td>Brooklyn Nets +7.5</td><td class="num">7.5</td><td class="num">49.0%</td><td class="num">1.96</td></tr><tr><td>Handicap</td><td>Charlotte Hornets -7.5</td><td class="num">-7.5</td><td class="num">50.9%</td><td class="num">1.89</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.3079 · away shrunk win pct: 0.5274 · expected margin home: -7.92</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-          </p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Chicago Bulls <span class="muted">@</span> Toronto Raptors</span>
-              <span class="sub">NBA · 2026-10-21 19:30 ET</span></div>
-            <div><span class="sel">Toronto Raptors</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Toronto Raptors</b>: record=46-36, season=2025-26, home=24-17, road=22-19<br><b>Chicago Bulls</b>: record=31-51, season=2025-26, home=18-23, road=13-28</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Toronto Raptors</td><td class="num">—</td><td class="num">68.0%</td><td class="num">1.41</td></tr><tr><td>Moneyline</td><td>Chicago Bulls</td><td class="num">—</td><td class="num">32.0%</td><td class="num">3.00</td></tr><tr><td>Handicap</td><td>Toronto Raptors -8.5</td><td class="num">-8.5</td><td class="num">49.5%</td><td class="num">1.94</td></tr><tr><td>Handicap</td><td>Chicago Bulls +8.5</td><td class="num">8.5</td><td class="num">50.5%</td><td class="num">1.90</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.5457 · away shrunk win pct: 0.4085 · expected margin home: 8.29</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-           · <a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_TOR_Raptors/4?event_id=535673" rel="noopener">OLBG event page</a></p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Indiana Pacers <span class="muted">@</span> New Orleans Pelicans</span>
-              <span class="sub">NBA · 2026-10-21 20:00 ET</span></div>
-            <div><span class="sel">New Orleans Pelicans</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>New Orleans Pelicans</b>: record=26-56, season=2025-26, home=17-24, road=9-32<br><b>Indiana Pacers</b>: record=19-63, season=2025-26, home=11-30, road=8-33</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>New Orleans Pelicans</td><td class="num">—</td><td class="num">62.0%</td><td class="num">1.55</td></tr><tr><td>Moneyline</td><td>Indiana Pacers</td><td class="num">—</td><td class="num">38.0%</td><td class="num">2.53</td></tr><tr><td>Handicap</td><td>New Orleans Pelicans -5.5</td><td class="num">-5.5</td><td class="num">49.8%</td><td class="num">1.93</td></tr><tr><td>Handicap</td><td>Indiana Pacers +5.5</td><td class="num">5.5</td><td class="num">50.2%</td><td class="num">1.91</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.3628 · away shrunk win pct: 0.2988 · expected margin home: 5.39</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-           · <a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/IND_Pacers_@_NO_Pelicans/4?event_id=534892" rel="noopener">OLBG event page</a></p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Utah Jazz <span class="muted">@</span> Memphis Grizzlies</span>
-              <span class="sub">NBA · 2026-10-21 20:00 ET</span></div>
-            <div><span class="sel">Memphis Grizzlies</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Memphis Grizzlies</b>: record=25-57, season=2025-26, home=13-27, road=11-29<br><b>Utah Jazz</b>: record=22-60, season=2025-26, home=14-27, road=8-33</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Memphis Grizzlies</td><td class="num">—</td><td class="num">58.0%</td><td class="num">1.66</td></tr><tr><td>Moneyline</td><td>Utah Jazz</td><td class="num">—</td><td class="num">42.0%</td><td class="num">2.29</td></tr><tr><td>Handicap</td><td>Memphis Grizzlies -3.5</td><td class="num">-3.5</td><td class="num">50.1%</td><td class="num">1.92</td></tr><tr><td>Handicap</td><td>Utah Jazz +3.5</td><td class="num">3.5</td><td class="num">49.9%</td><td class="num">1.93</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.3537 · away shrunk win pct: 0.3262 · expected margin home: 3.55</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-           · <a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/UTA_Jazz_@_MEM_Grizzlies/4?event_id=534894" rel="noopener">OLBG event page</a></p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Dallas Mavericks <span class="muted">@</span> Houston Rockets</span>
-              <span class="sub">NBA · 2026-10-21 20:30 ET</span></div>
-            <div><span class="sel">Houston Rockets</span> <span class="badge b-med">Medium</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Houston Rockets</b>: record=52-30, season=2025-26, home=30-11, road=22-19<br><b>Dallas Mavericks</b>: record=26-56, season=2025-26, home=16-25, road=10-30</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Houston Rockets</td><td class="num">—</td><td class="num">76.3%</td><td class="num">1.26</td></tr><tr><td>Moneyline</td><td>Dallas Mavericks</td><td class="num">—</td><td class="num">23.7%</td><td class="num">4.06</td></tr><tr><td>Handicap</td><td>Houston Rockets -12.5</td><td class="num">-12.5</td><td class="num">50.9%</td><td class="num">1.89</td></tr><tr><td>Handicap</td><td>Dallas Mavericks +12.5</td><td class="num">12.5</td><td class="num">49.1%</td><td class="num">1.96</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.6006 · away shrunk win pct: 0.3628 · expected margin home: 12.88</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-          </p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Golden State Warriors <span class="muted">@</span> Los Angeles Lakers</span>
-              <span class="sub">NBA · 2026-10-21 22:00 ET</span></div>
-            <div><span class="sel">Los Angeles Lakers</span> <span class="badge b-med">Medium</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Los Angeles Lakers</b>: record=53-29, season=2025-26, home=28-13, road=25-16<br><b>Golden State Warriors</b>: record=37-45, season=2025-26, home=22-19, road=15-26</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Los Angeles Lakers</td><td class="num">—</td><td class="num">68.8%</td><td class="num">1.40</td></tr><tr><td>Moneyline</td><td>Golden State Warriors</td><td class="num">—</td><td class="num">31.1%</td><td class="num">3.09</td></tr><tr><td>Handicap</td><td>Los Angeles Lakers -8.5</td><td class="num">-8.5</td><td class="num">50.5%</td><td class="num">1.90</td></tr><tr><td>Handicap</td><td>Golden State Warriors +8.5</td><td class="num">8.5</td><td class="num">49.5%</td><td class="num">1.94</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.6098 · away shrunk win pct: 0.4634 · expected margin home: 8.72</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-          </p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Phoenix Suns <span class="muted">@</span> Portland Trail Blazers</span>
-              <span class="sub">NBA · 2026-10-21 22:00 ET</span></div>
-            <div><span class="sel">Portland Trail Blazers</span> <span class="badge b-low">Low</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>Portland Trail Blazers</b>: record=42-40, season=2025-26, home=24-17, road=18-23<br><b>Phoenix Suns</b>: record=45-37, season=2025-26, home=25-16, road=20-21</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>Portland Trail Blazers</td><td class="num">—</td><td class="num">52.2%</td><td class="num">1.84</td></tr><tr><td>Moneyline</td><td>Phoenix Suns</td><td class="num">—</td><td class="num">47.8%</td><td class="num">2.01</td></tr><tr><td>Handicap</td><td>Portland Trail Blazers -0.5</td><td class="num">-0.5</td><td class="num">51.1%</td><td class="num">1.88</td></tr><tr><td>Handicap</td><td>Phoenix Suns +0.5</td><td class="num">0.5</td><td class="num">48.9%</td><td class="num">1.97</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.5091 · away shrunk win pct: 0.5366 · expected margin home: 0.99</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-           · <a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/PHX_Suns_@_POR_Trail_Blazers/4?event_id=534893" rel="noopener">OLBG event page</a></p>
-        </div>
-        <div class="card" style="margin:14px 0">
-          <div style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:baseline">
-            <div><span class="match" style="font-size:16px">Sacramento Kings <span class="muted">@</span> LA Clippers</span>
-              <span class="sub">NBA · 2026-10-21 22:30 ET</span></div>
-            <div><span class="sel">LA Clippers</span> <span class="badge b-med">Medium</span></div>
-          </div>
-          <p class="small muted" style="margin:10px 0 6px">Recorded model inputs — <span class="small"><b>LA Clippers</b>: record=42-40, season=2025-26, home=23-18, road=19-22<br><b>Sacramento Kings</b>: record=22-60, season=2025-26, home=15-26, road=7-34</span></p>
-          <div class="table-scroll" style="max-height:none">
-          <table><thead><tr><th>Market</th><th>Selection</th><th>Line</th><th>Model %</th><th>Our price</th></tr></thead>
-          <tbody><tr><td>Moneyline</td><td>LA Clippers</td><td class="num">—</td><td class="num">72.4%</td><td class="num">1.33</td></tr><tr><td>Moneyline</td><td>Sacramento Kings</td><td class="num">—</td><td class="num">27.7%</td><td class="num">3.48</td></tr><tr><td>Handicap</td><td>LA Clippers -10.5</td><td class="num">-10.5</td><td class="num">50.2%</td><td class="num">1.92</td></tr><tr><td>Handicap</td><td>Sacramento Kings +10.5</td><td class="num">10.5</td><td class="num">49.8%</td><td class="num">1.93</td></tr></tbody></table></div>
-          <p class="small muted" style="margin:10px 0 0">league home win rate 2025 26: 0.5543 · home shrunk win pct: 0.5091 · away shrunk win pct: 0.3262 · expected margin home: 10.58</p>
-
-          <p class="small" style="margin:12px 0 0">Source link: <a href="https://www.nba.com/games?date=2026-10-21" rel="noopener">NBA official games page</a>
-          </p>
-        </div>
-<p class="small muted" style="margin-top:22px"><a href="../index.html">← Back to dashboard</a></p>
+<p class="crumb"><a href="../index.html">Dashboard</a> / <a href="../sports/index.html">Sports</a> / Basketball</p>
+<h1>Basketball</h1>
+<p class="lede">23 fixtures verified and originated: 14 NBA opening-week games on 22–23 Oct from the official NBA schedule (Moneyline + Spread with 2025-26 priors; Totals blank — no official PF/PA feed) and 9 EuroLeague Round 7 games. BKT EuroCup Round 4 rows are completed and retired; Round 5 was not captured this refresh (VF-20).</p>
+<div class="kpis small">
+  <div class="kpi"><div class="v">23</div><div class="k">rows</div></div>
+  <div class="kpi"><div class="v">23</div><div class="k">lined</div></div>
+  <div class="kpi"><div class="v">0</div><div class="k">blank</div></div>
+  <div class="kpi"><div class="v">1</div><div class="k">high confidence</div></div>
+  <div class="kpi"><div class="v">1</div><div class="k">band picks</div></div>
+  <div class="kpi"><div class="v">23</div><div class="k">not yet played</div></div>
+</div>
+<div class="notice"><strong>Markets investigated:</strong> Moneyline (2-way), Point Spread / Handicap, Game Total (Over/Under).
+Governing body: NBA &amp; Euroleague Basketball (EuroLeague + BKT EuroCup).
+<a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/" rel="noopener">Official hub</a></div>
+<div class="table-wrap"><table class="data"><thead><tr><th>Date</th><th>Status</th><th>Match</th><th>Markets (model)</th><th>Pick</th><th>Source</th><th>Evidence</th></tr></thead><tbody><tr class="row-today" data-sport="basketball" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">Anadolu Efes Istanbul <span>v</span> Besiktas Istanbul</div><div class="tiny">Turkcell Basketball Development Center</div></td><td><div><b>ML</b> 59.0% / 41.0%</div><div><b>HCP</b> -2.5 · 49.8% / 50.2%</div><div><b>Total</b> 174.5 · O 51.2% / U 48.8%</div></td><td><div class="pick">Anadolu Efes Istanbul (Moneyline)</div><div class="tiny">59.0% · 1.70 · <span class="badge low">low</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="basketball" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">FC Bayern Munich <span>v</span> Dubai Basketball</div><div class="tiny">SAP Garden</div></td><td><div><b>ML</b> 56.8% / 43.2%</div><div><b>HCP</b> -1.5 · 51.3% / 48.7%</div><div><b>Total</b> 171.5 · O 51.1% / U 48.9%</div></td><td><div class="pick">FC Bayern Munich (Moneyline)</div><div class="tiny">56.8% · 1.76 · <span class="badge low">low</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="basketball" data-status="today" data-conf="medium"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">Maccabi Rapyd Tel Aviv <span>v</span> Real Madrid</div><div class="tiny">Aleksandar Nikolic Hall</div></td><td><div><b>ML</b> 39.1% / 60.9%</div><div><b>HCP</b> 3.5 · 51.8% / 48.1%</div><div><b>Total</b> 176.5 · O 49.1% / U 50.9%</div></td><td><div class="pick">Real Madrid (Moneyline)</div><div class="tiny">60.9% · 1.64 · <span class="badge medium">medium</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="basketball" data-status="today" data-conf="high"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">Panathinaikos AKTOR Athens <span>v</span> Kosner Baskonia Vitoria-Gasteiz</div><div class="tiny">Telekom Center Athens</div></td><td><div><b>ML</b> 86.1% / 13.9%</div><div><b>HCP</b> -11.5 · 50.9% / 49.1%</div><div><b>Total</b> 170.5 · O 50.4% / U 49.6%</div></td><td><div class="pick">Panathinaikos AKTOR Athens (Moneyline)</div><div class="tiny">86.1% · 1.16 · <span class="badge high">high</span></div><div class="bandline">Band pick: Panathinaikos AKTOR Athens -5.75 (Alternate Handicap) · 71.0% · 1.41</div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="basketball" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">Armani Olimpia Milan <span>v</span> FC Barcelona</div><div class="tiny">Unipol Forum</div></td><td><div><b>ML</b> 49.4% / 50.6%</div><div><b>HCP</b> 0.5 · 51.3% / 48.7%</div><div><b>Total</b> 175.5 · O 50.1% / U 49.9%</div></td><td><div class="pick">FC Barcelona (Moneyline)</div><div class="tiny">50.6% · 1.98 · <span class="badge low">low</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="basketball" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">Partizan Mozzart Bet Belgrade <span>v</span> Crvena Zvezda Meridianbet Belgrade</div><div class="tiny">Belgrade Arena</div></td><td><div><b>ML</b> 55.8% / 44.2%</div><div><b>HCP</b> -1.5 · 50.2% / 49.8%</div><div><b>Total</b> 162.5 · O 48.6% / U 51.4%</div></td><td><div class="pick">Partizan Mozzart Bet Belgrade (Moneyline)</div><div class="tiny">55.8% · 1.79 · <span class="badge low">low</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="basketball" data-status="today" data-conf="low"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">Philadelphia 76ers <span>v</span> Cleveland Cavaliers</div><div class="tiny">Xfinity Mobile Arena</div></td><td><div><b>ML</b> 49.2% / 50.8%</div><div><b>HCP</b> 0.5 · 50.9% / 49.1%</div></td><td><div class="pick">Cleveland Cavaliers (Moneyline)</div><div class="tiny">50.8% · 1.97 · <span class="badge low">low</span></div></td><td><a href="https://www.nba.com/game/cle-vs-phi-0022600006" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-today" data-sport="basketball" data-status="today" data-conf="medium"><td class="nowrap">2026-10-22</td><td><span class="badge today">today</span></td><td><div class="teams">Oklahoma City Thunder <span>v</span> Denver Nuggets</div><div class="tiny">Paycom Center</div></td><td><div><b>ML</b> 69.0% / 31.1%</div><div><b>HCP</b> -5.5 · 49.8% / 50.2%</div></td><td><div class="pick">Oklahoma City Thunder (Moneyline)</div><div class="tiny">69.0% · 1.45 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/den-vs-okc-0022600007" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="low"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Milwaukee Bucks <span>v</span> Chicago Bulls</div><div class="tiny">Fiserv Forum</div></td><td><div><b>ML</b> 58.1% / 41.9%</div><div><b>HCP</b> -2.5 · 49.0% / 50.9%</div></td><td><div class="pick">Milwaukee Bucks (Moneyline)</div><div class="tiny">58.1% · 1.72 · <span class="badge low">low</span></div></td><td><a href="https://www.nba.com/game/chi-vs-mil-0022600099" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Zalgiris Kaunas <span>v</span> LDLC ASVEL Villeurbanne</div><div class="tiny">Zalgirio Arena</div></td><td><div><b>ML</b> 65.8% / 34.2%</div><div><b>HCP</b> -4.5 · 49.6% / 50.4%</div><div><b>Total</b> 174.5 · O 50.4% / U 49.6%</div></td><td><div class="pick">Zalgiris Kaunas (Moneyline)</div><div class="tiny">65.8% · 1.52 · <span class="badge medium">medium</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="low"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Olympiacos Piraeus <span>v</span> Fenerbahce Tarfin Istanbul</div><div class="tiny">Sunel Arena</div></td><td><div><b>ML</b> 59.6% / 40.4%</div><div><b>HCP</b> -2.5 · 50.4% / 49.5%</div><div><b>Total</b> 170.5 · O 50.7% / U 49.3%</div></td><td><div class="pick">Olympiacos Piraeus (Moneyline)</div><div class="tiny">59.6% · 1.68 · <span class="badge low">low</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="low"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Paris Basketball <span>v</span> Valencia Basket</div><div class="tiny">Adidas Arena</div></td><td><div><b>ML</b> 44.7% / 55.3%</div><div><b>HCP</b> 1.5 · 50.2% / 49.8%</div><div><b>Total</b> 178.5 · O 48.9% / U 51.1%</div></td><td><div class="pick">Valencia Basket (Moneyline)</div><div class="tiny">55.3% · 1.81 · <span class="badge low">low</span></div></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/" rel="noopener">euroleaguebasketball.net</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Boston Celtics <span>v</span> New York Knicks</div><div class="tiny">TD Garden</div></td><td><div><b>ML</b> 60.4% / 39.6%</div><div><b>HCP</b> -2.5 · 51.2% / 48.8%</div></td><td><div class="pick">Boston Celtics (Moneyline)</div><div class="tiny">60.4% · 1.66 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/nyk-vs-bos-0022600008" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="low"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Charlotte Hornets <span>v</span> Atlanta Hawks</div><div class="tiny">Spectrum Center</div></td><td><div><b>ML</b> 54.8% / 45.2%</div><div><b>HCP</b> -1.5 · 49.4% / 50.6%</div></td><td><div class="pick">Charlotte Hornets (Moneyline)</div><div class="tiny">54.8% · 1.83 · <span class="badge low">low</span></div></td><td><a href="https://www.nba.com/game/atl-vs-cha-0022600094" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="low"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Indiana Pacers <span>v</span> Dallas Mavericks</div><div class="tiny">Gainbridge Fieldhouse</div></td><td><div><b>ML</b> 47.9% / 52.1%</div><div><b>HCP</b> 0.5 · 49.8% / 50.2%</div></td><td><div class="pick">Dallas Mavericks (Moneyline)</div><div class="tiny">52.1% · 1.92 · <span class="badge low">low</span></div></td><td><a href="https://www.nba.com/game/dal-vs-ind-0022600095" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="low"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Orlando Magic <span>v</span> Minnesota Timberwolves</div><div class="tiny">Kia Center</div></td><td><div><b>ML</b> 52.6% / 47.4%</div><div><b>HCP</b> -0.5 · 50.7% / 49.3%</div></td><td><div class="pick">Orlando Magic (Moneyline)</div><div class="tiny">52.6% · 1.90 · <span class="badge low">low</span></div></td><td><a href="https://www.nba.com/game/min-vs-orl-0022600096" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Washington Wizards <span>v</span> Toronto Raptors</div><div class="tiny">Capital One Arena</div></td><td><div><b>ML</b> 25.1% / 75.0%</div><div><b>HCP</b> 7.5 · 50.2% / 49.8%</div></td><td><div class="pick">Toronto Raptors (Moneyline)</div><div class="tiny">75.0% · 1.33 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/tor-vs-was-0022600097" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Miami Heat <span>v</span> Detroit Pistons</div><div class="tiny">Kaseya Center</div></td><td><div><b>ML</b> 37.5% / 62.5%</div><div><b>HCP</b> 3.5 · 50.1% / 49.9%</div></td><td><div class="pick">Detroit Pistons (Moneyline)</div><div class="tiny">62.5% · 1.60 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/det-vs-mia-0022600098" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">San Antonio Spurs <span>v</span> Houston Rockets</div><div class="tiny">Moody Center</div></td><td><div><b>ML</b> 68.5% / 31.5%</div><div><b>HCP</b> -5.5 · 49.3% / 50.7%</div></td><td><div class="pick">San Antonio Spurs (Moneyline)</div><div class="tiny">68.5% · 1.46 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/hou-vs-sas-0022600009" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="low"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Utah Jazz <span>v</span> New Orleans Pelicans</div><div class="tiny">Delta Center</div></td><td><div><b>ML</b> 52.0% / 48.0%</div><div><b>HCP</b> -0.5 · 50.1% / 49.9%</div></td><td><div class="pick">Utah Jazz (Moneyline)</div><div class="tiny">52.0% · 1.92 · <span class="badge low">low</span></div></td><td><a href="https://www.nba.com/game/nop-vs-uta-0022600100" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Golden State Warriors <span>v</span> Memphis Grizzlies</div><div class="tiny">Chase Center</div></td><td><div><b>ML</b> 69.7% / 30.3%</div><div><b>HCP</b> -5.5 · 50.5% / 49.5%</div></td><td><div class="pick">Golden State Warriors (Moneyline)</div><div class="tiny">69.7% · 1.44 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/mem-vs-gsw-0022600101" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Los Angeles Lakers <span>v</span> LA Clippers</div><div class="tiny">Crypto.com Arena</div></td><td><div><b>ML</b> 68.4% / 31.6%</div><div><b>HCP</b> -5.5 · 49.1% / 50.9%</div></td><td><div class="pick">Los Angeles Lakers (Moneyline)</div><div class="tiny">68.4% · 1.46 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/lac-vs-lal-0022600102" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr><tr class="row-upcoming" data-sport="basketball" data-status="upcoming" data-conf="medium"><td class="nowrap">2026-10-23</td><td><span class="badge upcoming">upcoming</span></td><td><div class="teams">Sacramento Kings <span>v</span> Portland Trail Blazers</div><div class="tiny">Golden 1 Center</div></td><td><div><b>ML</b> 34.5% / 65.5%</div><div><b>HCP</b> 4.5 · 50.4% / 49.5%</div></td><td><div class="pick">Portland Trail Blazers (Moneyline)</div><div class="tiny">65.5% · 1.53 · <span class="badge medium">medium</span></div></td><td><a href="https://www.nba.com/game/por-vs-sac-0022600103" rel="noopener">nba.com</a><div class="tiny">competition page</div></td><td><span class="badge warn">captured 21 Oct</span></td></tr></tbody></table></div>
 
 </main>
-<footer class="site">
-  <div class="wrap">
-    <span>Independent line origination · data captured 2026-10-21 UTC · 18+ · Bet responsibly</span>
-    <span><a href="../methodology.html">Methodology</a> · <a href="../sources.html">Sources</a> · <a href="../survey/index.html">Survey (130 events)</a> · <a href="../live/index.html">Live slate</a> · <a href="../flagged.html">Flagged</a> · <a href="../site/index.html">Evidence desk v2</a></span>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap">
+  <p><strong>Dated, partial research snapshot — not a live feed and not betting advice.</strong> Model probabilities are estimates, not guarantees. Rows dated before 2026-10-22 are labelled <em>past</em> and are not presented as upcoming. Unconfirmed values are blank (<code>—</code>) and listed on <a href="../flagged.html">Flagged for Review</a>. 18+.</p>
+  <p class="tiny">Built by <code>scripts/build_site.py</code> from checked-in data. Earlier layers are preserved at <a href="../verified/index.html">/verified/</a>, <a href="../live/index.html">/live/</a>, <a href="../survey/index.html">/survey/</a>, <a href="../site/index.html">/site/</a> and indexed in the <a href="../archive.html">archive</a>.</p>
+</div></footer>
 </body>
 </html>

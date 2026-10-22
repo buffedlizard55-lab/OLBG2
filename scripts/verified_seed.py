@@ -26,7 +26,7 @@ CAPTURE_DATE = "2026-10-22"
 # (https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2&start=0&limit=50),
 # read 2026-10-22 ~01:35Z; all 32 clubs. The two games dated 2026-10-21
 # (PHI @ BUF, FLA @ OTT) were still LIVE at capture (2nd intermission), so
-# those four clubs' rows exclude that in-progress game — flagged VF-11.
+# those four clubs' rows exclude that in-progress game — flagged VF-19.
 # Goal totals use the Stats REST convention (shootout-winning goal excluded;
 # see existing F19 disclosure). W-L-OTL cross-checked 24/24 against the
 # per-game records on https://api-web.nhle.com/v1/score/2026-10-22.
@@ -181,7 +181,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "National Hockey League (NHL)",
         "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
         "markets_investigated": ["Moneyline (2-way)", "Puck Line (-1.5 / +1.5)", "Game Total (Over/Under)"],
-        "status_summary": "16 NHL fixtures verified (21–23 Oct 2026) and fully originated across all 3 markets from official 2026-27 team goal rates.",
+        "status_summary": "12 NHL fixtures on 22 Oct 2026 verified and fully originated across all 3 markets from fresh official 2026-27 team goal rates (NHL Stats REST, captured 2026-10-22). The two 21 Oct rows are completed and retired.",
     },
     {
         "slug": "basketball",
@@ -191,7 +191,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "NBA & Euroleague Basketball (EuroLeague + BKT EuroCup)",
         "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
         "markets_investigated": ["Moneyline (2-way)", "Point Spread / Handicap", "Game Total (Over/Under)"],
-        "status_summary": "25 fixtures verified and originated: 11 NBA opening-week games (Moneyline + Spread; Totals blank because nba.com standings omit team points for/against), 10 EuroLeague R7 games (all 3 markets), and 4 BKT EuroCup R4 games (all 3 markets).",
+        "status_summary": "23 fixtures verified and originated: 14 NBA opening-week games on 22–23 Oct from the official NBA schedule (Moneyline + Spread with 2025-26 priors; Totals blank — no official PF/PA feed) and 9 EuroLeague Round 7 games. BKT EuroCup Round 4 rows are completed and retired; Round 5 was not captured this refresh (VF-20).",
     },
     {
         "slug": "rugby-union",
@@ -201,7 +201,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "Ligue Nationale de Rugby (Top 14 & Pro D2) & United Rugby Championship",
         "official_url": "https://top14.lnr.fr/classement",
         "markets_investigated": ["Match Result 1X2 & Draw-No-Bet Winner", "Point Handicap", "Match Total Points"],
-        "status_summary": "23 fixtures verified and originated across all 3 markets: 7 Top 14 J7 matches, 8 Pro D2 J8 matches, and 8 URC Round 4 matches.",
+        "status_summary": "31 fixtures verified and originated across all 3 markets: 7 Top 14 J7 matches, 8 Pro D2 J8 matches, 8 URC Round 4 matches and 8 URC Round 5 matches.",
     },
     {
         "slug": "handball",
@@ -211,7 +211,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "European Handball Federation (EHF Champions League Men)",
         "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
         "markets_investigated": ["Match Result 1X2 & 2-Way Winner", "Goal Handicap", "Match Total Goals"],
-        "status_summary": "12 EHF Champions League Men Round 5 fixtures verified (with all 12 OLBG match IDs mapped) and originated across all 3 markets from full-support bivariate Poisson distributions.",
+        "status_summary": "5 EHF Champions League Men Round 5 fixtures on 22 Oct 2026 verified and originated across all 3 markets from the fresh official 24-club standings (post 21-Oct Round 5 games); the 7 fixtures completed on 21 Oct are retired.",
     },
     {
         "slug": "darts",
@@ -231,7 +231,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "ATP Tour & WTA Tour",
         "official_url": "https://www.atptour.com/en/rankings/singles",
         "markets_investigated": ["Match Winner (Best of 3 Sets)", "Set Handicap (-1.5 / +1.5 Sets)", "Total Sets (Over/Under 2.5)"],
-        "status_summary": "7 ATP Tour singles matches where both players hold verified Top-100 PIF ATP rankings originated across all 3 markets; 8 WTA / Challenger / #101+ matches catalogued with blank unconfirmed rankings.",
+        "status_summary": "No originated tennis rows on 2026-10-22: the seven 21-Oct ATP ties are completed and retired, and the official ATP scores page read today published only completed results with no server-rendered next-round order of play (VF-20).",
     },
     {
         "slug": "snooker",
@@ -251,7 +251,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "Major League Baseball (MLB)",
         "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
         "markets_investigated": ["Moneyline (2-way)", "Run Line (-1.5 / +1.5)", "Game Total (Over/Under 7.5 & Alt 5.5)"],
-        "status_summary": "2026 MLB World Series Game 1 (Tampa Bay Rays @ Milwaukee Brewers, gamePk=849805) verified and originated across all 3 markets from official 162-game run-scoring and pitching records.",
+        "status_summary": "2026 MLB World Series Games 1–4 (Tampa Bay Rays v Milwaukee Brewers, gamePk 849805/849802/849804/849803) verified and originated across all 3 markets from official 162-game run records; conditional Games 5–7 are not published.",
     },
     {
         "slug": "motor-racing",
@@ -271,7 +271,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "Polska Liga Siatkówki (PlusLiga) & CEV",
         "official_url": "https://www.plusliga.pl/games.html",
         "markets_investigated": ["Match Winner", "Set Handicap", "Total Points / Sets"],
-        "status_summary": "4 Polish PlusLiga fixtures verified on live OLBG and PLS schedule; lines intentionally left blank because every club has played only M=1 match in 2026/27 and plusliga.pl/table.html cross-redirects to tauronliga.pl/table.html.",
+        "status_summary": "3 Polish PlusLiga fixtures listed without prices: every club has played only a handful of 2026/27 matches, so no defensible line can be originated yet; the 21-Oct Lublin v Gdańsk row is completed and retired.",
     },
     {
         "slug": "cricket",
@@ -281,7 +281,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "International Cricket Council (ICC)",
         "official_url": "https://www.icc-cricket.com/tournaments/mens-cricket-world-cup-league-2",
         "markets_investigated": ["Match Winner (ODI / T20I / Test)", "Innings Runs", "Series Outright"],
-        "status_summary": "3 international matches verified on official ICC match URLs (274658, 271646, 269791); lines deliberately left blank because ICC ranking tables and match scorecards render client-side.",
+        "status_summary": "2 international matches verified on official ICC match URLs (271646, 269791); lines deliberately left blank because ICC ratings render client-side. The 21-Oct tri-series row (274658) is completed and retired.",
     },
     {
         "slug": "golf",
@@ -321,7 +321,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "Greyhound Board of Great Britain (GBGB)",
         "official_url": "https://www.gbgb.org.uk/racing/results/",
         "markets_investigated": ["Win Trap", "Forecast / Tricast"],
-        "status_summary": "6 live 21 October race cards catalogued across Kinsley, Harlow, Monmore, and Nottingham; lines left blank because trap sectional ratings require a licensed GBGB data feed.",
+        "status_summary": "No greyhound rows on 2026-10-22: the six 21-Oct cards are completed and retired, and trap sectional ratings require a licensed GBGB feed that was not captured this refresh (VF-22).",
     },
     {
         "slug": "aussie-rules",
@@ -395,7 +395,7 @@ EUROCUP_TEAMS = {
 }
 
 # Retired in the 22-Oct refresh: the four BKT EuroCup R4 fixtures were played
-# on 2026-10-21. Round 5 fixtures were not captured in this refresh (VF-12),
+# on 2026-10-21. Round 5 fixtures were not captured in this refresh (VF-20),
 # so the list is intentionally empty rather than carried stale.
 EUROCUP_FIXTURES = []
 
@@ -557,7 +557,7 @@ ATP_PLAYERS = {
 # Retired in the 22-Oct refresh: all seven originated ties were played on
 # 2026-10-21. The official ATP scores page read on 2026-10-22 published only
 # completed Round-of-16 results with no server-rendered next-round order of
-# play, so no replacement ties could be verified (VF-12).
+# play, so no replacement ties could be verified (VF-20).
 TENNIS_ORIGINATED = []
 
 # Official WST Top-36 rankings (https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false)
@@ -642,7 +642,7 @@ UNLINED_ROWS = [
     {"id": "gaa-3536", "sport": "gaelic-football", "competition": "Waterford Senior Football Championship", "date": "2026-10-25", "time": "2026-10-25 14:30", "home": "Rathgormack", "away": "The Nire", "official_source": "GAA Official", "official_url": "https://www.gaa.ie/football", "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "blank_reason": "County board club championship scoring tables not available in a unified official feed."},
     {"id": "gaa-3327", "sport": "gaelic-football", "competition": "All-Ireland Senior Football Championship 2027", "date": "2027-07-25", "time": "2027-07-25 15:30", "home": "Inter-County Outright", "away": "Field", "official_source": "GAA Official", "official_url": "https://www.gaa.ie/football", "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "blank_reason": "2027 inter-county season not started; left unlined."},
     # Greyhounds: the six 21-Oct race cards are completed and retired in the
-    # 22-Oct refresh; 22-Oct cards were not captured (licensed GBGB feed, VF-14).
+    # 22-Oct refresh; 22-Oct cards were not captured (licensed GBGB feed, VF-22).
 ]
 
 REPO_AUDIT = [
@@ -767,12 +767,20 @@ FLAGGED_ITEMS = [
     {"id": "VF-06", "severity": "high", "category": "Client-rendered source", "sport": "Cricket", "item": "3 ICC international fixtures left unlined ('—')", "detail": "ICC match centres confirm the fixtures (274658, 271646, 269791) in page metadata, while team rating tables and scorecards render 'Loading' client-side. No secondary cricket site was used as a substitute.", "source_name": "ICC Match 274658", "source_url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh"},
     {"id": "VF-07", "severity": "low", "category": "Blank unconfirmed venue", "sport": "Handball & EuroCup", "item": "11 EHF CL venues & 4 EuroCup venues left blank ('—')", "detail": "Only venues explicitly confirmed on opened official match pages (Arena Zagreb for Zagreb–PSG and the 10 EuroLeague arenas) are populated; unverified venues remain blank.", "source_name": "EHF Champions League Matches", "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"},
     {"id": "VF-08", "severity": "low", "category": "Unlined futures / specialist feeds", "sport": "Golf, Rugby League, Gaelic Football", "item": "10 specialist/futures markets catalogued without prices ('—')", "detail": "PGA/DP World Tour 132-man strokes-gained feeds, 2027 pre-roster NRL/Super League futures, and county GAA club tables are not publicly server-rendered; fixtures are linked and prices left blank.", "source_name": "OLBG Sitemap", "source_url": "https://www.olbg.com/sitemap-betting-tips.xml"},
-    {"id": "VF-11", "severity": "medium", "category": "Capture-time limitation", "sport": "Ice Hockey (NHL)", "item": "FLA/OTT team inputs exclude their still-live 21-Oct game", "detail": "The NHL Stats REST summary and standings were read on 2026-10-22 at ~01:35Z while PHI @ BUF (2-1 PHI after two periods) and FLA @ OTT (3-1 OTT after two periods) were still LIVE on the official Score API. Florida and Ottawa play again on 22 Oct, so their inputs are one in-progress game behind; the effect is bounded (one game of 10) and is disclosed rather than estimated from a live score.", "source_name": "NHL Official Score API (2026-10-21)", "source_url": "https://api-web.nhle.com/v1/score/2026-10-21"},
-    {"id": "VF-12", "severity": "medium", "category": "Coverage gap this refresh", "sport": "Basketball (EuroCup) & Tennis", "item": "EuroCup Round 5 and ATP next-round fixtures not captured on 2026-10-22", "detail": "The four BKT EuroCup R4 games were completed on 21 Oct and are retired; the EuroCup game-center page read on 2026-10-22 did not expose a server-rendered Round 5 fixture list in the chunks fetched, so EuroCup carries no rows until a later session captures Round 5 (due ~27-28 Oct). The same applies to ATP quarter-final orders of play (see VF-04). Neither gap was filled from secondary sources.", "source_name": "EuroCup Official Game Center", "source_url": "https://www.euroleaguebasketball.net/en/eurocup/game-center/"},
-    {"id": "VF-13", "severity": "low", "category": "Re-verification limit", "sport": "Darts (PDC)", "item": "PDC ranking ladder retained from 21-Oct capture", "detail": "pdc.tv/rankings read on 2026-10-22 returned a cookie-consent wall with no server-rendered ladder rows in the fetched content. The 21-Oct captured Werner Ranking Ladder values are retained because no PDC ranking event has been completed between the two captures (the European Championship itself starts on the evening of 22 Oct); flagged so the next session re-reads the ladder after the event.", "source_name": "PDC Official Rankings", "source_url": "https://www.pdc.tv/rankings"},
-    {"id": "VF-14", "severity": "low", "category": "Coverage gap this refresh", "sport": "Greyhounds", "item": "No 22-Oct GBGB race cards captured", "detail": "The six 21-Oct cards (Harlow, Monmore, Nottingham, Kinsley) are completed and retired. Trap sectional ratings require a licensed GBGB data feed and no 22-Oct card was captured from an official source in this refresh, so the Greyhounds page currently lists zero rows rather than stale ones.", "source_name": "GBGB Official Results", "source_url": "https://www.gbgb.org.uk/racing/results/"},
+    {"id": "VF-19", "severity": "medium", "category": "Capture-time limitation", "sport": "Ice Hockey (NHL)", "item": "FLA/OTT team inputs exclude their still-live 21-Oct game", "detail": "The NHL Stats REST summary and standings were read on 2026-10-22 at ~01:35Z while PHI @ BUF (2-1 PHI after two periods) and FLA @ OTT (3-1 OTT after two periods) were still LIVE on the official Score API. Florida and Ottawa play again on 22 Oct, so their inputs are one in-progress game behind; the effect is bounded (one game of 10) and is disclosed rather than estimated from a live score.", "source_name": "NHL Official Score API (2026-10-21)", "source_url": "https://api-web.nhle.com/v1/score/2026-10-21"},
+    {"id": "VF-20", "severity": "medium", "category": "Coverage gap this refresh", "sport": "Basketball (EuroCup) & Tennis", "item": "EuroCup Round 5 and ATP next-round fixtures not captured on 2026-10-22", "detail": "The four BKT EuroCup R4 games were completed on 21 Oct and are retired; the EuroCup game-center page read on 2026-10-22 did not expose a server-rendered Round 5 fixture list in the chunks fetched, so EuroCup carries no rows until a later session captures Round 5 (due ~27-28 Oct). The same applies to ATP quarter-final orders of play (see VF-04). Neither gap was filled from secondary sources.", "source_name": "EuroCup Official Game Center", "source_url": "https://www.euroleaguebasketball.net/en/eurocup/game-center/"},
+    {"id": "VF-21", "severity": "low", "category": "Re-verification limit", "sport": "Darts (PDC)", "item": "PDC ranking ladder retained from 21-Oct capture", "detail": "pdc.tv/rankings read on 2026-10-22 returned a cookie-consent wall with no server-rendered ladder rows in the fetched content. The 21-Oct captured Werner Ranking Ladder values are retained because no PDC ranking event has been completed between the two captures (the European Championship itself starts on the evening of 22 Oct); flagged so the next session re-reads the ladder after the event.", "source_name": "PDC Official Rankings", "source_url": "https://www.pdc.tv/rankings"},
+    {"id": "VF-22", "severity": "low", "category": "Coverage gap this refresh", "sport": "Greyhounds", "item": "No 22-Oct GBGB race cards captured", "detail": "The six 21-Oct cards (Harlow, Monmore, Nottingham, Kinsley) are completed and retired. Trap sectional ratings require a licensed GBGB data feed and no 22-Oct card was captured from an official source in this refresh, so the Greyhounds page currently lists zero rows rather than stale ones.", "source_name": "GBGB Official Results", "source_url": "https://www.gbgb.org.uk/racing/results/"},
     {"id": "VF-09", "severity": "low", "category": "Zero active markets", "sport": "Aussie Rules & eSports", "item": "0 live events on OLBG hubs on 2026-10-21", "detail": "Both hubs were fetched directly on 2026-10-21 and returned 'No tips found' (AFL off-season; between LoL Worlds knockout stages on OLBG). Dedicated sport pages confirm the empty check without inventing fixtures.", "source_name": "OLBG Aussie Rules Hub", "source_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22"},
     {"id": "VF-10", "severity": "medium", "category": "OLBG platform irregularity", "sport": "Cross-sport", "item": "Viewer-timezone rendering, abbreviated names & cached global /betting-tips cards", "detail": "OLBG hub pages display kick-offs in US Eastern time on US runners (e.g. 12:45 vs 18:45 CEST for EHF Handball), abbreviate club names ('Eire Og Cor'), and cache stale soccer cards on the global /betting-tips landing page.", "source_name": "OLBG Global Tips Page", "source_url": "https://www.olbg.com/betting-tips"},
+    {"id": "VF-11", "severity": "high", "category": "Source scope", "sport": "Darts, Tennis, Greyhounds, Golf, Gaelic Football, Rugby League, Volleyball, Motor Racing, Snooker, EuroCup, NBA", "item": "63 rows cite a competition or rankings page, not the individual fixture", "detail": "The official URL on these rows is an official governing-body or league page, but it does not itself identify the fixture. Examples: all 18 darts rows cite pdc.tv/rankings; all 15 tennis rows cite the ATP/WTA rankings or tournament overview; all 6 greyhound rows cite the GBGB results index; the 4 EuroCup rows cite the EuroCup standings. The fixture ID, date and opponent on those rows rest on the OLBG listing captured on 2026-10-21. They are published with the source scope disclosed as 'competition', not 'fixture'. [Update 2026-10-22, session 50268b75: the desk was re-captured the same day — tennis and greyhound rows were retired as completed, EuroCup rows retired, and every originated fixture now carries a fixture-level official URL; darts ties still cite the official rankings ladder, which is also their model input.]", "source_name": "PDC Rankings (example)", "source_url": "https://www.pdc.tv/rankings"},
+    {"id": "VF-12", "severity": "medium", "category": "Price band", "sport": "Cross-sport", "item": "20 pre-existing high-confidence picks are all shorter than -250; 13 band picks priced 1.40-1.42 were added", "detail": "The brief asks for high-confidence picks between -250 (decimal 1.40) and +10000 (decimal 101.00). A selection with a 70%+ model probability cannot be priced above 1.43, so only a 70.0-71.4% window satisfies both rules. All 20 original high-confidence selections carry fair odds of 1.02-1.39 and therefore fall outside the requested band; they remain published and labelled 'outside band'. Thirteen handicap/total selections at 1.40-1.42, each with a written prediction and official facts, were originated to meet the band. [Update 2026-10-22, session 50268b75: superseded — the written predictions were re-cut around the band itself, so all 14 current write-ups are in-band selections; short-priced moneyline favourites keep their HIGH grade on sport pages without a write-up.]", "source_name": "Methodology (this repository)", "source_url": "https://www.olbg.com/betting-tips"},
+    {"id": "VF-13", "severity": "medium", "category": "Snapshot freshness", "sport": "Cross-sport", "item": "59 of 155 rows are dated 2026-10-21 and had already started or finished at the 2026-10-22 01:30Z snapshot", "detail": "This is a dated capture, not a live feed. Rows dated before 2026-10-22 are labelled 'past' on every table; 36 rows are dated 2026-10-22 and 60 are dated later. No result has been back-filled and no past row is presented as an upcoming tip. [Resolved 2026-10-22, session 50268b75: all 21-Oct rows were retired in the same-day re-capture; an automated test now asserts no row predates the capture date.]", "source_name": "NHL schedule feed (capture reference)", "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-21"},
+    {"id": "VF-14", "severity": "medium", "category": "Missing competition", "sport": "Basketball (NBA)", "item": "All 11 NBA rows are 2026-10-21 fixtures; the 2026-10-22 slate was not captured", "detail": "nba.com's games calendar rendered 2 games for 22 October 2026, 12 for 23 October and 8 for 24 October, but the page returned 'Sorry, something went wrong' for the fixture list. The NBA static scoreboard endpoint returned HTTP 500 and stats.nba.com did not respond. No NBA fixture was invented to fill the gap. [Resolved 2026-10-22, session 50268b75: the official nba.com/schedule page rendered the 22–23 Oct fixtures (14 games with IDs, tip times and venues), which are now captured and originated.]", "source_name": "NBA Games calendar", "source_url": "https://www.nba.com/games?date=10%2F22%2F2026"},
+    {"id": "VF-15", "severity": "low", "category": "Missing fixture", "sport": "Baseball", "item": "World Series Game 4 (gamePk 849803) confirmed but not originated", "detail": "The MLB Stats API confirms four scheduled games: Game 1 on 23 Oct (849805), Game 2 on 24 Oct (849802), Game 3 on 26 Oct (849804) and Game 4 on 27 Oct (849803) at Tropicana Field. The verified desk prices the first three only; Game 4 and the conditional Games 5-7 are left out rather than priced from an incomplete series state. [Resolved 2026-10-22, session 50268b75: Game 4 (849803) is now originated alongside Games 1–3; conditional Games 5–7 remain unpublished.]", "source_name": "MLB Stats API schedule", "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-27"},
+    {"id": "VF-16", "severity": "high", "category": "Unverified fixture provenance", "sport": "Darts", "item": "PDC event page returned only a cookie-consent wall on 2026-10-22", "detail": "A re-fetch of https://www.pdc.tv/tournament/2026-european-championship on 2026-10-22 returned CookieYes consent text and no match data. The 16 first-round ties and 2 outrights are therefore listed from OLBG and priced only from the official PDC ranking ladder, not from a PDC fixture page.", "source_name": "PDC European Championship (re-fetch)", "source_url": "https://www.pdc.tv/tournament/2026-european-championship"},
+    {"id": "VF-17", "severity": "high", "category": "Date disagreement", "sport": "Cricket", "item": "New Zealand v India is dated 2026-10-23 06:15 UTC in the verified desk and 2026-10-22 in the root layer", "detail": "ICC match 271646 is cited by both layers, but the root dashboard stores 2026-10-22 03:00 while the verified desk stores 2026-10-23 06:15 UTC. The ICC page did not render a date on re-fetch on 2026-10-22, so the disagreement cannot be resolved from the official source and both values are left as captured. The verified desk value is the one used in its table.", "source_name": "ICC match 271646", "source_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india"},
+    {"id": "VF-18", "severity": "low", "category": "Blank unconfirmed market", "sport": "Basketball (BKT EuroCup), Volleyball, Cricket, Golf, Rugby League, Gaelic Football, Greyhounds", "item": "43 rows remain unlined and no price was invented", "detail": "Unlined rows keep winner, handicap, total and pick fields null. Reasons are recorded per row: one-match volleyball samples, non-rendered cricket ratings, strokeplay fields without a verified field rating, 2027 futures without rosters, county GAA tables behind client rendering, and licensed GBGB sectional data. The site shows an em dash and the reason for every one. [Update 2026-10-22, session 50268b75: 26 rows remain unlined on the refreshed desk, each with its reason recorded.]", "source_name": "PlusLiga official games (example)", "source_url": "https://www.plusliga.pl/games.html"},
 ]
 
 

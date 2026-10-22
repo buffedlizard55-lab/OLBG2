@@ -118,8 +118,53 @@ class VerifiedPipelineTests(unittest.TestCase):
                 self.assertIsNone(m["pick"])
         self.assertEqual(orig, self.matches["counts"]["originated_rows"])
         self.assertEqual(unl, self.matches["counts"]["unlined_rows"])
-        self.assertEqual(orig, 93)
-        self.assertEqual(unl, 26)
+        # 2026-10-22 (session 26963a2d): Wilson v Pang priced from the full
+        # official WST top-36 (+1 originated) and the in-progress SA v AUS Test
+        # retired (-1 unlined); NZ v IND corrected to 22 Oct 07:00 UTC.
+        self.assertEqual(orig, 94)
+        self.assertEqual(unl, 24)
+
+    def test_research_desk_picks_are_in_band_verified_and_player_aware(self) -> None:
+        # Research-desk write-ups (session 26963a2d) sit beside the featured
+        # band picks: hand-written, >= 30 words, >= 3 official facts with a
+        # fetch timestamp, confidence high/medium only, price inside the band,
+        # and their numbers must equal the live desk row they describe.
+        research = self.preds["research"]
+        self.assertEqual(len(research), self.preds["research_count"])
+        self.assertGreaterEqual(len(research), 10)
+        rows = {m["id"]: m for m in self.matches["matches"]}
+        openings, headlines = set(), set()
+        for r in research:
+            row = rows[r["match_id"]]
+            self.assertEqual(row["line_status"], "originated")
+            self.assertIn(r["confidence"], {"high", "medium"})
+            self.assertGreaterEqual(r["fair_american"], -250)
+            self.assertLessEqual(r["fair_american"], 10000)
+            if r["selection"] == row["pick"]["selection"]:
+                self.assertAlmostEqual(r["probability"], row["pick"]["probability"], delta=0.0051)
+            else:  # declared price-band underdog on the desk's own 2-way line
+                self.assertAlmostEqual(r["probability"], 1.0 - row["pick"]["probability"], delta=0.0051)
+            self.assertEqual(row["research_pick"]["selection"], r["selection"])
+            words = r["text"].split()
+            self.assertGreaterEqual(len(words), 30)
+            self.assertIn(r["selection"].split(" (")[0], r["text"])
+            self.assertIn(f"{r['fair_american']:+d}", r["text"].replace("+", "+"))
+            self.assertGreaterEqual(len(r["facts"]), 3)
+            for fact in r["facts"]:
+                parsed = urlparse(fact["source"])
+                self.assertEqual(parsed.scheme, "https")
+                self.assertNotIn(parsed.netloc, BANNED_DOMAINS)
+                self.assertTrue(fact.get("fetched_utc"))
+            openings.add(" ".join(words[:5]).lower())
+            headlines.add(r["headline"])
+        self.assertEqual(len(openings), len(research), "Duplicate research openings")
+        self.assertEqual(len(headlines), len(research), "Duplicate research headlines")
+        # At least one research pick is a plus-money selection (brief: not just favourites)
+        self.assertTrue(any(r["fair_american"] > 0 for r in research))
+        # Player-level official facts are present (closes VF-24)
+        joined = " ".join(r["text"] for r in research)
+        for name in ("Kaprizov", "Sorokin", "Pastrnak", "Misiorowski"):
+            self.assertIn(name, joined)
 
     def test_featured_predictions_are_unique_human_and_ge_30_words(self) -> None:
         # Written predictions are the per-match FEATURED selections: model

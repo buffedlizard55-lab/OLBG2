@@ -1,13 +1,14 @@
 {
   "captured_at": "2026-10-22",
   "counts": {
-    "total_rows": 119,
-    "originated_rows": 93,
-    "unlined_rows": 26,
+    "total_rows": 118,
+    "originated_rows": 94,
+    "unlined_rows": 24,
     "high_confidence": 18,
-    "medium_confidence": 26,
-    "low_confidence": 49,
-    "featured": 14
+    "medium_confidence": 28,
+    "low_confidence": 48,
+    "featured": 14,
+    "research": 16
   },
   "matches": [
     {
@@ -25,31 +26,31 @@
       "away_summary": "3-2-3 (23 GF / 22 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.6368,
-        "away_prob": 0.3632,
+        "home_prob": 0.6369,
+        "away_prob": 0.3631,
         "home_odds": 1.57,
         "away_odds": 2.75
       },
       "handicap_market": {
         "line": -1.5,
         "label": "Boston Bruins -1.5 / Nashville Predators +1.5",
-        "fav_prob": 0.3858,
-        "dog_prob": 0.6142,
+        "fav_prob": 0.386,
+        "dog_prob": 0.614,
         "fav_odds": 2.59,
         "dog_odds": 1.63
       },
       "total_market": {
         "line": 5.5,
         "projected": 5.85,
-        "over_prob": 0.5303,
-        "under_prob": 0.4697,
+        "over_prob": 0.5304,
+        "under_prob": 0.4696,
         "over_odds": 1.89,
         "under_odds": 2.13
       },
       "pick": {
         "selection": "Boston Bruins (Moneyline)",
         "team": "Boston Bruins",
-        "probability": 0.6368,
+        "probability": 0.6369,
         "fair_odds": 1.57,
         "confidence": "medium",
         "fair_american": -175
@@ -60,7 +61,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
       "source_scope": "fixture",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Boston Bruins (Moneyline)",
+        "confidence": "medium",
+        "fair_american": -175
+      }
     },
     {
       "id": "nhl-2026020155",
@@ -93,8 +99,8 @@
       "total_market": {
         "line": 5.5,
         "projected": 5.92,
-        "over_prob": 0.5407,
-        "under_prob": 0.4593,
+        "over_prob": 0.541,
+        "under_prob": 0.459,
         "over_odds": 1.85,
         "under_odds": 2.18
       },
@@ -125,38 +131,38 @@
       "away": "San Jose Sharks",
       "venue": "Canadian Tire Centre",
       "line_status": "originated",
-      "home_summary": "6-3-0 (22 GF / 23 GA)",
+      "home_summary": "7-3-0 (27 GF / 24 GA)",
       "away_summary": "5-4-1 (26 GF / 34 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.5831,
-        "away_prob": 0.4169,
-        "home_odds": 1.72,
-        "away_odds": 2.4
+        "home_prob": 0.6195,
+        "away_prob": 0.3805,
+        "home_odds": 1.61,
+        "away_odds": 2.63
       },
       "handicap_market": {
         "line": -1.5,
         "label": "Ottawa Senators -1.5 / San Jose Sharks +1.5",
-        "fav_prob": 0.3276,
-        "dog_prob": 0.6724,
-        "fav_odds": 3.05,
-        "dog_odds": 1.49
+        "fav_prob": 0.364,
+        "dog_prob": 0.636,
+        "fav_odds": 2.75,
+        "dog_odds": 1.57
       },
       "total_market": {
         "line": 5.5,
-        "projected": 5.61,
-        "over_prob": 0.4892,
-        "under_prob": 0.5108,
-        "over_odds": 2.04,
-        "under_odds": 1.96
+        "projected": 5.65,
+        "over_prob": 0.4974,
+        "under_prob": 0.5026,
+        "over_odds": 2.01,
+        "under_odds": 1.99
       },
       "pick": {
         "selection": "Ottawa Senators (Moneyline)",
         "team": "Ottawa Senators",
-        "probability": 0.5831,
-        "fair_odds": 1.72,
-        "confidence": "low",
-        "fair_american": -141
+        "probability": 0.6195,
+        "fair_odds": 1.61,
+        "confidence": "medium",
+        "fair_american": -164
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
@@ -164,7 +170,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
       "source_scope": "fixture",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Ottawa Senators (Moneyline)",
+        "confidence": "medium",
+        "fair_american": -164
+      }
     },
     {
       "id": "nhl-2026020157",
@@ -189,16 +200,16 @@
       "handicap_market": {
         "line": -1.5,
         "label": "New Jersey Devils -1.5 / Anaheim Ducks +1.5",
-        "fav_prob": 0.3116,
-        "dog_prob": 0.6884,
+        "fav_prob": 0.3117,
+        "dog_prob": 0.6883,
         "fav_odds": 3.21,
         "dog_odds": 1.45
       },
       "total_market": {
         "line": 6.5,
         "projected": 6.5,
-        "over_prob": 0.4737,
-        "under_prob": 0.5263,
+        "over_prob": 0.4739,
+        "under_prob": 0.5261,
         "over_odds": 2.11,
         "under_odds": 1.9
       },
@@ -230,37 +241,37 @@
       "venue": "PPG Paints Arena",
       "line_status": "originated",
       "home_summary": "3-6-1 (32 GF / 37 GA)",
-      "away_summary": "5-2-2 (30 GF / 25 GA)",
+      "away_summary": "5-3-2 (31 GF / 30 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.4368,
-        "away_prob": 0.5632,
-        "home_odds": 2.29,
-        "away_odds": 1.78
+        "home_prob": 0.4759,
+        "away_prob": 0.5241,
+        "home_odds": 2.1,
+        "away_odds": 1.91
       },
       "handicap_market": {
         "line": -1.5,
         "label": "Pittsburgh Penguins -1.5 / Florida Panthers +1.5",
-        "fav_prob": 0.2222,
-        "dog_prob": 0.7778,
-        "fav_odds": 4.5,
-        "dog_odds": 1.29
+        "fav_prob": 0.2533,
+        "dog_prob": 0.7467,
+        "fav_odds": 3.95,
+        "dog_odds": 1.34
       },
       "total_market": {
         "line": 6.5,
-        "projected": 6.7,
-        "over_prob": 0.5054,
-        "under_prob": 0.4946,
-        "over_odds": 1.98,
-        "under_odds": 2.02
+        "projected": 6.69,
+        "over_prob": 0.5037,
+        "under_prob": 0.4963,
+        "over_odds": 1.99,
+        "under_odds": 2.01
       },
       "pick": {
         "selection": "Florida Panthers (Moneyline)",
         "team": "Florida Panthers",
-        "probability": 0.5632,
-        "fair_odds": 1.78,
+        "probability": 0.5241,
+        "fair_odds": 1.91,
         "confidence": "low",
-        "fair_american": -128
+        "fair_american": -110
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
@@ -285,31 +296,31 @@
       "away_summary": "1-4-2 (17 GF / 27 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.6969,
-        "away_prob": 0.3031,
+        "home_prob": 0.6971,
+        "away_prob": 0.3029,
         "home_odds": 1.43,
         "away_odds": 3.3
       },
       "handicap_market": {
         "line": -1.5,
         "label": "New York Islanders -1.5 / Los Angeles Kings +1.5",
-        "fav_prob": 0.4514,
-        "dog_prob": 0.5486,
-        "fav_odds": 2.22,
+        "fav_prob": 0.4516,
+        "dog_prob": 0.5484,
+        "fav_odds": 2.21,
         "dog_odds": 1.82
       },
       "total_market": {
         "line": 5.5,
         "projected": 5.88,
-        "over_prob": 0.5347,
-        "under_prob": 0.4653,
+        "over_prob": 0.5346,
+        "under_prob": 0.4654,
         "over_odds": 1.87,
         "under_odds": 2.15
       },
       "pick": {
         "selection": "New York Islanders (Moneyline)",
         "team": "New York Islanders",
-        "probability": 0.6969,
+        "probability": 0.6971,
         "fair_odds": 1.43,
         "confidence": "medium",
         "fair_american": -233
@@ -320,7 +331,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
       "source_scope": "fixture",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "New York Islanders (Moneyline)",
+        "confidence": "high",
+        "fair_american": -233
+      }
     },
     {
       "id": "nhl-2026020160",
@@ -337,34 +353,34 @@
       "away_summary": "8-3-0 (43 GF / 30 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.4203,
-        "away_prob": 0.5797,
+        "home_prob": 0.4201,
+        "away_prob": 0.5799,
         "home_odds": 2.38,
         "away_odds": 1.72
       },
       "handicap_market": {
         "line": -1.5,
         "label": "St. Louis Blues -1.5 / Vegas Golden Knights +1.5",
-        "fav_prob": 0.21,
-        "dog_prob": 0.79,
+        "fav_prob": 0.2099,
+        "dog_prob": 0.7901,
         "fav_odds": 4.76,
         "dog_odds": 1.27
       },
       "total_market": {
         "line": 6.5,
         "projected": 6.74,
-        "over_prob": 0.5107,
-        "under_prob": 0.4893,
+        "over_prob": 0.511,
+        "under_prob": 0.489,
         "over_odds": 1.96,
-        "under_odds": 2.04
+        "under_odds": 2.05
       },
       "pick": {
         "selection": "Vegas Golden Knights (Moneyline)",
         "team": "Vegas Golden Knights",
-        "probability": 0.5797,
+        "probability": 0.5799,
         "fair_odds": 1.72,
         "confidence": "low",
-        "fair_american": -137
+        "fair_american": -139
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160",
@@ -389,8 +405,8 @@
       "away_summary": "4-3-2 (24 GF / 26 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.6204,
-        "away_prob": 0.3796,
+        "home_prob": 0.6205,
+        "away_prob": 0.3795,
         "home_odds": 1.61,
         "away_odds": 2.63
       },
@@ -405,15 +421,15 @@
       "total_market": {
         "line": 5.5,
         "projected": 4.9,
-        "over_prob": 0.3662,
-        "under_prob": 0.6338,
+        "over_prob": 0.366,
+        "under_prob": 0.634,
         "over_odds": 2.73,
         "under_odds": 1.58
       },
       "pick": {
         "selection": "Dallas Stars (Moneyline)",
         "team": "Dallas Stars",
-        "probability": 0.6204,
+        "probability": 0.6205,
         "fair_odds": 1.61,
         "confidence": "medium",
         "fair_american": -164
@@ -424,7 +440,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
       "source_scope": "fixture",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Dallas Stars (Moneyline)",
+        "confidence": "medium",
+        "fair_american": -164
+      }
     },
     {
       "id": "nhl-2026020162",
@@ -441,31 +462,31 @@
       "away_summary": "6-2-2 (31 GF / 25 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.2918,
-        "away_prob": 0.7082,
+        "home_prob": 0.2916,
+        "away_prob": 0.7084,
         "home_odds": 3.43,
         "away_odds": 1.41
       },
       "handicap_market": {
         "line": -1.5,
         "label": "Calgary Flames -1.5 / Minnesota Wild +1.5",
-        "fav_prob": 0.1172,
-        "dog_prob": 0.8828,
-        "fav_odds": 8.53,
+        "fav_prob": 0.117,
+        "dog_prob": 0.883,
+        "fav_odds": 8.55,
         "dog_odds": 1.13
       },
       "total_market": {
         "line": 6.5,
         "projected": 6.31,
-        "over_prob": 0.4437,
-        "under_prob": 0.5563,
+        "over_prob": 0.4439,
+        "under_prob": 0.5561,
         "over_odds": 2.25,
         "under_odds": 1.8
       },
       "pick": {
         "selection": "Minnesota Wild (Moneyline)",
         "team": "Minnesota Wild",
-        "probability": 0.7082,
+        "probability": 0.7084,
         "fair_odds": 1.41,
         "confidence": "high",
         "fair_american": -244
@@ -478,7 +499,7 @@
       "featured": {
         "selection": "Minnesota Wild (Moneyline)",
         "market": "Match Winner",
-        "probability": 0.7082,
+        "probability": 0.7084,
         "fair_odds": 1.41,
         "fair_american": -244,
         "confidence": "high"
@@ -487,11 +508,16 @@
         "selection": "Minnesota Wild (Moneyline)",
         "market": "moneyline",
         "line": null,
-        "probability": 0.7082,
+        "probability": 0.7084,
         "fair_odds": 1.41,
         "fair_american": -244,
         "confidence": "high",
         "price_band": "in-band"
+      },
+      "research_pick": {
+        "selection": "Minnesota Wild (Moneyline)",
+        "confidence": "high",
+        "fair_american": -244
       }
     },
     {
@@ -509,31 +535,31 @@
       "away_summary": "8-2-1 (42 GF / 27 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.5206,
-        "away_prob": 0.4794,
+        "home_prob": 0.5205,
+        "away_prob": 0.4795,
         "home_odds": 1.92,
         "away_odds": 2.09
       },
       "handicap_market": {
         "line": -1.5,
         "label": "Edmonton Oilers -1.5 / Carolina Hurricanes +1.5",
-        "fav_prob": 0.2966,
-        "dog_prob": 0.7034,
+        "fav_prob": 0.2967,
+        "dog_prob": 0.7033,
         "fav_odds": 3.37,
         "dog_odds": 1.42
       },
       "total_market": {
         "line": 6.5,
-        "projected": 7.03,
-        "over_prob": 0.5554,
-        "under_prob": 0.4446,
+        "projected": 7.04,
+        "over_prob": 0.5558,
+        "under_prob": 0.4442,
         "over_odds": 1.8,
         "under_odds": 2.25
       },
       "pick": {
         "selection": "Edmonton Oilers (Moneyline)",
         "team": "Edmonton Oilers",
-        "probability": 0.5206,
+        "probability": 0.5205,
         "fair_odds": 1.92,
         "confidence": "low",
         "fair_american": -109
@@ -546,7 +572,7 @@
       "featured": {
         "selection": "Carolina Hurricanes +1.5 (Handicap)",
         "market": "Handicap",
-        "probability": 0.7034,
+        "probability": 0.7033,
         "fair_odds": 1.42,
         "fair_american": -238,
         "confidence": "high"
@@ -555,11 +581,16 @@
         "selection": "Carolina Hurricanes +1.5 (Handicap)",
         "market": "handicap",
         "line": 1.5,
-        "probability": 0.7034,
+        "probability": 0.7033,
         "fair_odds": 1.42,
         "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
+      },
+      "research_pick": {
+        "selection": "Carolina Hurricanes (Moneyline)",
+        "confidence": "medium",
+        "fair_american": 109
       }
     },
     {
@@ -577,8 +608,8 @@
       "away_summary": "7-3-0 (38 GF / 31 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.4926,
-        "away_prob": 0.5074,
+        "home_prob": 0.4925,
+        "away_prob": 0.5075,
         "home_odds": 2.03,
         "away_odds": 1.97
       },
@@ -593,15 +624,15 @@
       "total_market": {
         "line": 6.5,
         "projected": 7.29,
-        "over_prob": 0.5921,
-        "under_prob": 0.4079,
+        "over_prob": 0.5926,
+        "under_prob": 0.4074,
         "over_odds": 1.69,
         "under_odds": 2.45
       },
       "pick": {
         "selection": "Utah Mammoth (Moneyline)",
         "team": "Utah Mammoth",
-        "probability": 0.5074,
+        "probability": 0.5075,
         "fair_odds": 1.97,
         "confidence": "low",
         "fair_american": -103
@@ -629,31 +660,31 @@
       "away_summary": "3-3-3 (22 GF / 26 GA)",
       "winner_market": {
         "type": "2-way Moneyline",
-        "home_prob": 0.4328,
-        "away_prob": 0.5672,
+        "home_prob": 0.4327,
+        "away_prob": 0.5673,
         "home_odds": 2.31,
         "away_odds": 1.76
       },
       "handicap_market": {
         "line": -1.5,
         "label": "Vancouver Canucks -1.5 / Detroit Red Wings +1.5",
-        "fav_prob": 0.218,
-        "dog_prob": 0.782,
+        "fav_prob": 0.2179,
+        "dog_prob": 0.7821,
         "fav_odds": 4.59,
         "dog_odds": 1.28
       },
       "total_market": {
         "line": 6.5,
         "projected": 6.63,
-        "over_prob": 0.4931,
-        "under_prob": 0.5069,
+        "over_prob": 0.4934,
+        "under_prob": 0.5066,
         "over_odds": 2.03,
         "under_odds": 1.97
       },
       "pick": {
         "selection": "Detroit Red Wings (Moneyline)",
         "team": "Detroit Red Wings",
-        "probability": 0.5672,
+        "probability": 0.5673,
         "fair_odds": 1.76,
         "confidence": "low",
         "fair_american": -132
@@ -1786,7 +1817,7 @@
       "sport_name": "Rugby Union",
       "competition": "French Top 14 2026-27 — Journée 7",
       "date": "2026-10-24",
-      "time": "2026-10-24 12:30 UTC",
+      "time": "2026-10-24 14:35 UTC",
       "home": "Stade Toulousain",
       "away": "USA Perpignan",
       "venue": null,
@@ -1912,7 +1943,7 @@
       "sport_name": "Rugby Union",
       "competition": "French Top 14 2026-27 — Journée 7",
       "date": "2026-10-24",
-      "time": "2026-10-24 14:35 UTC",
+      "time": "2026-10-24 12:30 UTC",
       "home": "RC Vannes",
       "away": "ASM Clermont",
       "venue": null,
@@ -2234,7 +2265,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
       "source_scope": "fixture",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Oyonnax Rugby (1X2 Match Winner)",
+        "confidence": "medium",
+        "fair_american": -185
+      }
     },
     {
       "id": "prod2-12063",
@@ -2297,7 +2333,7 @@
       "sport_name": "Rugby Union",
       "competition": "French Pro D2 2026-27 — Journée 8",
       "date": "2026-10-23",
-      "time": "2026-10-23 17:30 UTC",
+      "time": "2026-10-23 19:00 UTC",
       "home": "Provence Rugby",
       "away": "AS Béziers Hérault",
       "venue": null,
@@ -2486,6 +2522,11 @@
         "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
+      },
+      "research_pick": {
+        "selection": "Stade Aurillacois (1X2 Match Winner)",
+        "confidence": "high",
+        "fair_american": -238
       }
     },
     {
@@ -2494,7 +2535,7 @@
       "sport_name": "Rugby Union",
       "competition": "French Pro D2 2026-27 — Journée 8",
       "date": "2026-10-23",
-      "time": "2026-10-23 17:30 UTC",
+      "time": "2026-10-23 17:00 UTC",
       "home": "RC Narbonnais",
       "away": "CA Brive",
       "venue": null,
@@ -2659,7 +2700,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-23",
-      "time": "2026-10-23 14:45 Local",
+      "time": "2026-10-23 18:45 UTC",
       "home": "Cardiff Rugby",
       "away": "Hollywoodbets Sharks",
       "venue": "Cardiff Arms Park",
@@ -2714,7 +2755,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-23",
-      "time": "2026-10-23 14:45 Local",
+      "time": "2026-10-23 18:45 UTC",
       "home": "Connacht Rugby",
       "away": "Zebre Parma",
       "venue": "Dexcom Stadium",
@@ -2777,6 +2818,11 @@
         "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
+      },
+      "research_pick": {
+        "selection": "Connacht Rugby (1X2 Match Winner)",
+        "confidence": "medium",
+        "fair_american": -238
       }
     },
     {
@@ -2785,7 +2831,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-23",
-      "time": "2026-10-23 14:45 Local",
+      "time": "2026-10-23 18:45 UTC",
       "home": "Edinburgh Rugby",
       "away": "10bet Lions",
       "venue": "Hive Stadium",
@@ -2856,7 +2902,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-24",
-      "time": "2026-10-24 07:45 Local",
+      "time": "2026-10-24 11:45 UTC",
       "home": "Vodacom Bulls",
       "away": "Ulster Rugby",
       "venue": "Loftus Versfeld",
@@ -2927,7 +2973,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-24",
-      "time": "2026-10-24 10:00 Local",
+      "time": "2026-10-24 14:00 UTC",
       "home": "DHL Stormers",
       "away": "Scarlets",
       "venue": "DHL Stadium",
@@ -2998,7 +3044,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-24",
-      "time": "2026-10-24 10:00 Local",
+      "time": "2026-10-24 14:00 UTC",
       "home": "Benetton Rugby",
       "away": "Glasgow Warriors",
       "venue": "Stadio Monigo",
@@ -3053,7 +3099,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-24",
-      "time": "2026-10-24 13:00 Local",
+      "time": "2026-10-24 17:00 UTC",
       "home": "Leinster Rugby",
       "away": "Munster Rugby",
       "venue": "Aviva Stadium",
@@ -3100,7 +3146,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
       "source_scope": "fixture",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Leinster Rugby (1X2 Match Winner)",
+        "confidence": "medium",
+        "fair_american": -196
+      }
     },
     {
       "id": "urc-292615",
@@ -3108,7 +3159,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 4",
       "date": "2026-10-24",
-      "time": "2026-10-24 14:00 Local",
+      "time": "2026-10-24 18:00 UTC",
       "home": "Ospreys",
       "away": "Dragons RFC",
       "venue": "St Helen's",
@@ -3163,7 +3214,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-30",
-      "time": "2026-10-30 15:45 Local",
+      "time": "2026-10-30 19:45 UTC",
       "home": "Connacht Rugby",
       "away": "Leinster Rugby",
       "venue": "Dexcom Stadium",
@@ -3218,7 +3269,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-30",
-      "time": "2026-10-30 15:45 Local",
+      "time": "2026-10-30 19:45 UTC",
       "home": "Glasgow Warriors",
       "away": "10bet Lions",
       "venue": "Scotstoun Stadium",
@@ -3289,7 +3340,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-31",
-      "time": "2026-10-31 08:45 Local",
+      "time": "2026-10-31 12:45 UTC",
       "home": "DHL Stormers",
       "away": "Ulster Rugby",
       "venue": "DHL Stadium",
@@ -3344,7 +3395,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-31",
-      "time": "2026-10-31 11:00 Local",
+      "time": "2026-10-31 15:00 UTC",
       "home": "Vodacom Bulls",
       "away": "Scarlets",
       "venue": "Loftus Versfeld",
@@ -3415,7 +3466,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-31",
-      "time": "2026-10-31 11:00 Local",
+      "time": "2026-10-31 15:00 UTC",
       "home": "Benetton Rugby",
       "away": "Edinburgh Rugby",
       "venue": "Stadio Monigo",
@@ -3470,7 +3521,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-31",
-      "time": "2026-10-31 13:30 Local",
+      "time": "2026-10-31 17:30 UTC",
       "home": "Munster Rugby",
       "away": "Hollywoodbets Sharks",
       "venue": "Thomond Park",
@@ -3525,7 +3576,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-31",
-      "time": "2026-10-31 13:30 Local",
+      "time": "2026-10-31 17:30 UTC",
       "home": "Dragons RFC",
       "away": "Zebre Parma",
       "venue": "Rodney Parade",
@@ -3596,7 +3647,7 @@
       "sport_name": "Rugby Union",
       "competition": "United Rugby Championship 2026-27 — Round 5",
       "date": "2026-10-31",
-      "time": "2026-10-31 15:45 Local",
+      "time": "2026-10-31 19:45 UTC",
       "home": "Ospreys",
       "away": "Cardiff Rugby",
       "venue": "St Helen's",
@@ -3937,7 +3988,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 13:15",
+      "time": "2026-10-22 17:00 UTC",
       "home": "Luke Woodhouse",
       "away": "Dirk van Duijvenbode",
       "venue": "Westfalenhalle, Dortmund",
@@ -3989,7 +4040,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 13:45",
+      "time": "2026-10-22 17:00 UTC",
       "home": "Danny Noppert",
       "away": "Stephen Bunting",
       "venue": "Westfalenhalle, Dortmund",
@@ -4041,7 +4092,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 14:15",
+      "time": "2026-10-22 17:00 UTC",
       "home": "Niels Zonneveld",
       "away": "Cameron Menzies",
       "venue": "Westfalenhalle, Dortmund",
@@ -4093,7 +4144,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 14:45",
+      "time": "2026-10-22 17:00 UTC",
       "home": "Gerwyn Price",
       "away": "Rob Cross",
       "venue": "Westfalenhalle, Dortmund",
@@ -4137,7 +4188,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325",
       "source_scope": "competition",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Gerwyn Price (Match Winner)",
+        "confidence": "medium",
+        "fair_american": -156
+      }
     },
     {
       "id": "pdc-32322",
@@ -4145,7 +4201,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 15:15",
+      "time": "2026-10-22 17:00 UTC",
       "home": "James Wade",
       "away": "Damon Heta",
       "venue": "Westfalenhalle, Dortmund",
@@ -4197,7 +4253,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 15:45",
+      "time": "2026-10-22 17:00 UTC",
       "home": "Luke Humphries",
       "away": "Ryan Searle",
       "venue": "Westfalenhalle, Dortmund",
@@ -4241,7 +4297,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Humphries_vs_Ryan_Searle/15?event_id=32337",
       "source_scope": "competition",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Luke Humphries (Match Winner)",
+        "confidence": "medium",
+        "fair_american": -152
+      }
     },
     {
       "id": "pdc-32323",
@@ -4249,7 +4310,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 16:15",
+      "time": "2026-10-22 17:00 UTC",
       "home": "Gian van Veen",
       "away": "Andrew Gilding",
       "venue": "Westfalenhalle, Dortmund",
@@ -4293,7 +4354,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323",
       "source_scope": "competition",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Gian van Veen (Match Winner)",
+        "confidence": "high",
+        "fair_american": -200
+      }
     },
     {
       "id": "pdc-32329",
@@ -4301,7 +4367,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-22",
-      "time": "2026-10-22 16:45",
+      "time": "2026-10-22 17:00 UTC",
       "home": "Ross Smith",
       "away": "Karel Sedlacek",
       "venue": "Westfalenhalle, Dortmund",
@@ -4345,7 +4411,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329",
       "source_scope": "competition",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Ross Smith (Match Winner)",
+        "confidence": "medium",
+        "fair_american": -213
+      }
     },
     {
       "id": "pdc-32332",
@@ -4353,7 +4424,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 13:15",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Ryan Joyce",
       "away": "Jermaine Wattimena",
       "venue": "Westfalenhalle, Dortmund",
@@ -4405,7 +4476,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 13:45",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Krzysztof Ratajski",
       "away": "Dave Chisnall",
       "venue": "Westfalenhalle, Dortmund",
@@ -4457,7 +4528,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 14:15",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Nathan Aspinall",
       "away": "Cristo Reyes",
       "venue": "Westfalenhalle, Dortmund",
@@ -4509,7 +4580,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 14:45",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Jonny Clayton",
       "away": "Niko Springer",
       "venue": "Westfalenhalle, Dortmund",
@@ -4561,7 +4632,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 15:15",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Luke Littler",
       "away": "William O'Connor",
       "venue": "Westfalenhalle, Dortmund",
@@ -4613,7 +4684,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 15:45",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Wessel Nijman",
       "away": "Martin Schindler",
       "venue": "Westfalenhalle, Dortmund",
@@ -4665,7 +4736,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 16:15",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Kevin Doets",
       "away": "Michael van Gerwen",
       "venue": "Westfalenhalle, Dortmund",
@@ -4717,7 +4788,7 @@
       "sport_name": "Darts",
       "competition": "2026 PDC European Championship — Round 1 (Best of 11 Legs)",
       "date": "2026-10-23",
-      "time": "2026-10-23 16:45",
+      "time": "2026-10-23 17:00 UTC",
       "home": "Josh Rock",
       "away": "Chris Dobey",
       "venue": "Westfalenhalle, Dortmund",
@@ -4762,6 +4833,63 @@
       "source_scope": "competition",
       "featured": null,
       "band_pick": null
+    },
+    {
+      "id": "wst-2026-r3-m50",
+      "sport": "snooker",
+      "sport_name": "Snooker",
+      "competition": "BetVictor Northern Ireland Open 2026 — Round 3 (Best of 7 Frames)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 12:00 UTC",
+      "home": "Kyren Wilson",
+      "away": "Pang Junxu",
+      "venue": "Waterfront Hall, Belfast",
+      "line_status": "originated",
+      "home_summary": "WST #9 (£716,800)",
+      "away_summary": "WST #29 (£272,750)",
+      "winner_market": {
+        "type": "2-way Match Winner",
+        "home_prob": 0.6828,
+        "away_prob": 0.3172,
+        "home_odds": 1.46,
+        "away_odds": 3.15
+      },
+      "handicap_market": {
+        "line": -1.5,
+        "label": "Kyren Wilson -1.5 frames",
+        "fav_prob": 0.5155,
+        "dog_prob": 0.4845,
+        "fav_odds": 1.94,
+        "dog_odds": 2.06
+      },
+      "total_market": {
+        "line": 5.5,
+        "projected": 5.73,
+        "over_prob": 0.5885,
+        "under_prob": 0.4115,
+        "over_odds": 1.7,
+        "under_odds": 2.43
+      },
+      "pick": {
+        "selection": "Kyren Wilson (Match Winner)",
+        "team": "Kyren Wilson",
+        "probability": 0.6828,
+        "fair_odds": 1.46,
+        "confidence": "medium",
+        "fair_american": -217
+      },
+      "official_source": "WST Official Match Centre",
+      "official_url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
+      "data_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "source_scope": "fixture",
+      "featured": null,
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Kyren Wilson (Match Winner)",
+        "confidence": "medium",
+        "fair_american": -217
+      }
     },
     {
       "id": "mlb-849805",
@@ -4813,7 +4941,12 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
       "source_scope": "fixture",
       "featured": null,
-      "band_pick": null
+      "band_pick": null,
+      "research_pick": {
+        "selection": "Milwaukee Brewers (Moneyline)",
+        "confidence": "medium",
+        "fair_american": -167
+      }
     },
     {
       "id": "mlb-849802",
@@ -5062,40 +5195,14 @@
       "band_pick": null
     },
     {
-      "id": "wst-2026-r3-m50",
-      "sport": "snooker",
-      "sport_name": "Snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 50)",
-      "date": "2026-10-22",
-      "time": "2026-10-22 08:00",
-      "home": "Kyren Wilson (prize value not captured)",
-      "away": "Pang Junxu (#29, £272,750)",
-      "venue": null,
-      "line_status": "unlined",
-      "home_summary": null,
-      "away_summary": null,
-      "winner_market": null,
-      "handicap_market": null,
-      "total_market": null,
-      "pick": null,
-      "featured": null,
-      "band_pick": null,
-      "blank_reason": "Kyren Wilson's official WST ranking prize value is outside this desk's captured Top-36 excerpt, and the official pages read do not state the Round 3 frame format; left blank rather than inferred.",
-      "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
-      "source_scope": "fixture",
-      "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
-    },
-    {
       "id": "wst-2026-r3-m51",
       "sport": "snooker",
       "sport_name": "Snooker",
       "competition": "BetVictor Northern Ireland Open — Round 3 (Match 51)",
       "date": "2026-10-22",
-      "time": "2026-10-22 08:00",
-      "home": "Matthew Selt (prize value not captured)",
-      "away": "Sam Craigie (prize value not captured)",
+      "time": "2026-10-22 12:00 UTC",
+      "home": "Matthew Selt (outside official top 36)",
+      "away": "Sam Craigie (outside official top 36)",
       "venue": null,
       "line_status": "unlined",
       "home_summary": null,
@@ -5106,7 +5213,7 @@
       "pick": null,
       "featured": null,
       "band_pick": null,
-      "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
+      "blank_reason": "Neither player is on the official 36-row WST ranking list read on 2026-10-22; the official WST pages read do not state the frame format (broadcaster pages say best of 7, see VF-30).",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c",
       "source_scope": "fixture",
@@ -5119,9 +5226,9 @@
       "sport_name": "Snooker",
       "competition": "BetVictor Northern Ireland Open — Round 3 (Match 49)",
       "date": "2026-10-22",
-      "time": "2026-10-22 09:00",
-      "home": "Anthony McGill (prize value not captured)",
-      "away": "Mateusz Baranowski (prize value not captured)",
+      "time": "2026-10-22 13:00 UTC",
+      "home": "Anthony McGill (outside official top 36)",
+      "away": "Mateusz Baranowski (outside official top 36)",
       "venue": null,
       "line_status": "unlined",
       "home_summary": null,
@@ -5132,7 +5239,7 @@
       "pick": null,
       "featured": null,
       "band_pick": null,
-      "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
+      "blank_reason": "Neither player is on the official 36-row WST ranking list read on 2026-10-22; the official WST pages read do not state the frame format (broadcaster pages say best of 7, see VF-30).",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5",
       "source_scope": "fixture",
@@ -5145,9 +5252,9 @@
       "sport_name": "Snooker",
       "competition": "BetVictor Northern Ireland Open — Round 3 (Match 52)",
       "date": "2026-10-22",
-      "time": "2026-10-22 09:00",
+      "time": "2026-10-22 13:00 UTC",
       "home": "Elliot Slessor (#23, £329,200)",
-      "away": "Ricky Walden (prize value not captured)",
+      "away": "Ricky Walden (outside official top 36)",
       "venue": null,
       "line_status": "unlined",
       "home_summary": null,
@@ -5158,7 +5265,7 @@
       "pick": null,
       "featured": null,
       "band_pick": null,
-      "blank_reason": "Ricky Walden's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
+      "blank_reason": "Ricky Walden's prize value is outside the official 36-row WST ranking list read on 2026-10-22; the official WST pages read do not state the frame format (broadcaster pages say best of 7, see VF-30).",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8",
       "source_scope": "fixture",
@@ -5171,9 +5278,9 @@
       "sport_name": "Snooker",
       "competition": "BetVictor Northern Ireland Open — Round 3 (Match 53)",
       "date": "2026-10-22",
-      "time": "2026-10-22 14:00",
+      "time": "2026-10-22 18:00 UTC",
       "home": "David Gilbert (#34, £221,200)",
-      "away": "Cheung Ka Wai (prize value not captured)",
+      "away": "Cheung Ka Wai (outside official top 36)",
       "venue": null,
       "line_status": "unlined",
       "home_summary": null,
@@ -5184,7 +5291,7 @@
       "pick": null,
       "featured": null,
       "band_pick": null,
-      "blank_reason": "Cheung Ka Wai's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
+      "blank_reason": "Cheung Ka Wai's prize value is outside the official 36-row WST ranking list read on 2026-10-22; the official WST pages read do not state the frame format (broadcaster pages say best of 7, see VF-30).",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236",
       "source_scope": "fixture",
@@ -5197,9 +5304,9 @@
       "sport_name": "Snooker",
       "competition": "BetVictor Northern Ireland Open — Round 3 (Match 54)",
       "date": "2026-10-22",
-      "time": "2026-10-22 14:00",
+      "time": "2026-10-22 18:00 UTC",
       "home": "Mark Williams (#8, £747,400)",
-      "away": "Martin O'Donnell (prize value not captured)",
+      "away": "Martin O'Donnell (outside official top 36)",
       "venue": null,
       "line_status": "unlined",
       "home_summary": null,
@@ -5210,7 +5317,7 @@
       "pick": null,
       "featured": null,
       "band_pick": null,
-      "blank_reason": "Martin O'Donnell's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
+      "blank_reason": "Martin O'Donnell's prize value is outside the official 36-row WST ranking list read on 2026-10-22; the official WST pages read do not state the frame format (broadcaster pages say best of 7, see VF-30).",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f",
       "source_scope": "fixture",
@@ -5223,9 +5330,9 @@
       "sport_name": "Snooker",
       "competition": "BetVictor Northern Ireland Open — Round 3 (Match 55)",
       "date": "2026-10-22",
-      "time": "2026-10-22 15:00",
+      "time": "2026-10-22 19:00 UTC",
       "home": "Jak Jones (#24, £319,300)",
-      "away": "Daniel Wells (prize value not captured)",
+      "away": "Daniel Wells (outside official top 36)",
       "venue": null,
       "line_status": "unlined",
       "home_summary": null,
@@ -5236,7 +5343,7 @@
       "pick": null,
       "featured": null,
       "band_pick": null,
-      "blank_reason": "Daniel Wells's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
+      "blank_reason": "Daniel Wells's prize value is outside the official 36-row WST ranking list read on 2026-10-22; the official WST pages read do not state the frame format (broadcaster pages say best of 7, see VF-30).",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900",
       "source_scope": "fixture",
@@ -5249,9 +5356,9 @@
       "sport_name": "Snooker",
       "competition": "BetVictor Northern Ireland Open — Round 3 (Match 56)",
       "date": "2026-10-22",
-      "time": "2026-10-22 15:00",
-      "home": "Jordan Brown (prize value not captured)",
-      "away": "Scott Donaldson (prize value not captured)",
+      "time": "2026-10-22 19:00 UTC",
+      "home": "Jordan Brown (outside official top 36)",
+      "away": "Scott Donaldson (outside official top 36)",
       "venue": null,
       "line_status": "unlined",
       "home_summary": null,
@@ -5262,7 +5369,7 @@
       "pick": null,
       "featured": null,
       "band_pick": null,
-      "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
+      "blank_reason": "Neither player is on the official 36-row WST ranking list read on 2026-10-22; the official WST pages read do not state the frame format (broadcaster pages say best of 7, see VF-30).",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea",
       "source_scope": "fixture",
@@ -5429,9 +5536,9 @@
       "id": "icc-271646",
       "sport": "cricket",
       "sport_name": "Cricket",
-      "competition": "New Zealand v India T20I Series",
-      "date": "2026-10-23",
-      "time": "2026-10-23 06:15 UTC",
+      "competition": "New Zealand v India — 1st T20I, Hagley Oval, Christchurch",
+      "date": "2026-10-22",
+      "time": "2026-10-22 07:00 UTC",
       "home": "New Zealand",
       "away": "India",
       "venue": null,
@@ -5447,32 +5554,6 @@
       "blank_reason": "ICC T20I team-rankings table renders client-side; prices left blank rather than copied from secondary sites.",
       "official_source": "ICC Match Centre",
       "official_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
-      "source_scope": "fixture",
-      "data_url": null,
-      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"
-    },
-    {
-      "id": "icc-269791",
-      "sport": "cricket",
-      "sport_name": "Cricket",
-      "competition": "ICC World Test Championship",
-      "date": "2026-10-24",
-      "time": "2026-10-24 08:00 UTC",
-      "home": "South Africa",
-      "away": "Australia",
-      "venue": null,
-      "line_status": "unlined",
-      "home_summary": null,
-      "away_summary": null,
-      "winner_market": null,
-      "handicap_market": null,
-      "total_market": null,
-      "pick": null,
-      "featured": null,
-      "band_pick": null,
-      "blank_reason": "ICC Test rankings table renders client-side; prices left blank.",
-      "official_source": "ICC Match Centre",
-      "official_url": "https://www.icc-cricket.com/matches/269791/south-africa-vs-australia",
       "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"

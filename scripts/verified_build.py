@@ -491,7 +491,7 @@ JS = """\
         c.style.display = ok ? '' : 'none';
         if (ok) shown += 1;
       });
-      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' HIGH confidence picks';
+      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' write-ups (featured + research desk)';
     });
   }
 
@@ -648,6 +648,12 @@ def render_match_table(rows: list[dict], depth: int = 0, show_sport_col: bool = 
                     f"<div>Fair <strong>{feat['fair_odds']:.2f}</strong> ({feat['fair_american']:+d} US) · {feat['probability']*100:.1f}%</div>"
                     f'<div><a href="{prefix}predictions.html#{esc(m["id"])}">Read full write-up →</a></div>'
                 )
+            rp = m.get("research_pick")
+            if rp:
+                pick_html += (
+                    f'<div style="margin-top:0.3rem;"><span class="pill pill-{esc(rp["confidence"])}">Research {esc(rp["confidence"])}</span> '
+                    f'<a href="{prefix}predictions.html#research-{esc(m["id"])}">{esc(rp["selection"])} ({rp["fair_american"]:+d} US) — read write-up →</a></div>'
+                )
             badge_html = f'<span class="pill pill-{esc(conf)}">{esc(conf)}</span>'
         else:
             pick_html = f'<span class="blank-cell">— (<a href="{prefix}flagged.html#{esc(m["id"])}">Flagged</a>)</span>'
@@ -711,10 +717,28 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
         if p.get("olbg_url")
         else ""
     )
-    return f"""<article class="pred-card" id="{esc(p['match_id'])}" data-pred-card="1" data-sport="{esc(p['sport'])}">
+    conf = p.get("confidence", "high")
+    kind = p.get("match_type", "band")
+    card_id = esc(p["match_id"]) if kind != "research" else f"research-{esc(p['match_id'])}"
+    kind_pill = ' <span class="pill pill-originated">Research desk</span>' if kind == "research" else ""
+    fetched = {f.get("fetched_utc") for f in p["facts"] if f.get("fetched_utc")}
+    caveats = p.get("caveats") or []
+    caveat_html = (
+        '<p class="pred-body" style="font-size:0.84rem;color:#64748b;margin-top:0.4rem;"><strong>Caveat:</strong> '
+        + esc(" ".join(caveats))
+        + "</p>"
+        if caveats
+        else ""
+    )
+    fetched_html = (
+        f'<div style="font-size:0.78rem;color:#64748b;margin-top:0.3rem;">Official endpoints read at (UTC): {esc(", ".join(sorted(fetched)))}</div>'
+        if fetched
+        else ""
+    )
+    return f"""<article class="pred-card" id="{card_id}" data-pred-card="1" data-sport="{esc(p['sport'])}" data-kind="{esc(kind)}">
   <div class="pred-header">
     <div>
-      <span class="pill pill-high">HIGH CONFIDENCE</span>
+      <span class="pill pill-{esc(conf)}">{esc(conf.upper())} CONFIDENCE</span>{kind_pill}
       <a href="{prefix}sports/{esc(p['sport'])}.html" style="margin-left:0.45rem;font-weight:600;">{esc(p['sport_name'])}</a>
       <span style="color:#64748b;font-size:0.84rem;"> · {esc(p['competition'])} · {esc(p['time'])}</span>
     </div>
@@ -728,10 +752,10 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
     <span><strong>Model Win Prob:</strong> {p['probability']*100:.1f}%</span> ·
     <span><strong>Originated Fair Odds:</strong> {p['fair_odds']:.2f} ({p.get('fair_american', 0):+d} US)</span>
   </div>
-  <p class="pred-body">{esc(p['text'])}</p>
+  <p class="pred-body">{esc(p['text'])}</p>{caveat_html}
   <ul class="fact-list">
     {facts_html}
-  </ul>
+  </ul>{fetched_html}
   <div style="margin-top:0.65rem;font-size:0.8rem;">
     <a href="{esc(p['official_url'])}" target="_blank" rel="noopener">Verify Official Match Record ↗</a>{olbg_link}
   </div>
@@ -750,6 +774,8 @@ def main() -> None:
     excluded = sports_doc["excluded_sports"]
     matches = matches_doc["matches"]
     preds = preds_doc["predictions"]
+    research = preds_doc.get("research", [])
+    research_rule = preds_doc.get("research_rule", {"high": "", "medium": ""})
     flags = flags_doc["items"]
     audits = audit_doc["findings"]
     counts = matches_doc["counts"]
@@ -822,7 +848,7 @@ def main() -> None:
 
 <div class="section-head">
   <h2>Featured High-Confidence Human Predictions</h2>
-  <p><a href="predictions.html">View all {len(preds)} bespoke HIGH-confidence write-ups →</a></p>
+  <p><a href="predictions.html">View all {len(preds)} bespoke HIGH-confidence write-ups →</a> · <a href="predictions.html#research">{len(research)} research-desk selections with player-level official facts →</a></p>
 </div>
 <div class="pred-list">
   {top_preds_preview}
@@ -895,10 +921,18 @@ def main() -> None:
     <option value="all">All Sports with HIGH Picks ({len(preds)})</option>
     {pred_sport_opts}
   </select>
-  <span id="pred-filter-count" class="count-note">Showing {len(preds)} of {len(preds)} HIGH confidence picks</span>
+  <span id="pred-filter-count" class="count-note">Showing {len(preds) + len(research)} of {len(preds) + len(research)} write-ups (featured + research desk)</span>
 </div>
 <div class="pred-list">
   {"".join(render_prediction_card(p, depth=0) for p in preds)}
+</div>
+
+<div class="section-head" id="research">
+  <h2>Research Desk Selections ({len(research)} Picks · {sum(1 for r in research if r['confidence'] == 'high')} High, {sum(1 for r in research if r['confidence'] == 'medium')} Medium)</h2>
+  <p>Hand-written by session 26963a2d on 2026-10-22 from a line-by-line re-read of the governing-body endpoints (fetch times shown on each card). Every selection is the desk's own originated line inside the -250..+10000 band — including one plus-money underdog — and names the team or player, current form and recent history with an official link per fact. Grades follow the research rule: <strong>HIGH</strong> = {esc(research_rule['high'])} <strong>MEDIUM</strong> = {esc(research_rule['medium'])}</p>
+</div>
+<div class="pred-list">
+  {"".join(render_prediction_card(p, depth=0) for p in research)}
 </div>
 """
     (SITE / "predictions.html").write_text(render_shell("Featured High-Confidence Picks", "predictions", preds_body, depth=0))

@@ -111,11 +111,16 @@ the first sentence, the team's record and scoring rate, at least one dated recen
 probability. Every factual claim carries a source link on the Picks page. No injuries, line-ups, transfers or
 travel claims are made, because none could be verified.
 
-**Player-level detail.** The brief asks each prediction to name a player. This snapshot does **not** assert an
-individual player statistic: no official player feed (NHL club stats, URC/LNR player statistics, EuroLeague or
-EHF scorer tables) was captured in the window, and inventing one would be unverified. The gap is published as
-**VF-24** on the Flagged for Review page rather than hidden by an earlier, inaccurate claim that the write-ups
-named players.
+**Player-level detail.** The brief asks each prediction to name a player. The 14 root/featured write-ups do
+**not** assert an individual player statistic (no official player feed had been captured when they were
+written — **VF-24**). On 2026-10-22 session 26963a2d captured the NHL official score feed's per-team leaders
+(goals, assists, goalie wins), the standings endpoint's home/road/last-10 splits, the PDC Order of Merit and the
+WST match-centre season statistics, and published **16 research-desk selections** on `/verified/predictions.html#research`
+that name players with those official figures (e.g. Kaprizov 11 G, Sorokin 5 W, Wilson 63% season win rate),
+each fact carrying its endpoint URL and fetch time. Those write-ups are graded by a stated research rule
+(HIGH only when every official indicator agrees), sit inside the −250…+10000 band, include one plus-money
+underdog, and are re-validated against the live desk row on every build so prose and table prices cannot drift.
+Sports without a server-rendered official player feed (rugby, darts form) still cite only team/ranking facts.
 
 ## 5. Known limitations
 

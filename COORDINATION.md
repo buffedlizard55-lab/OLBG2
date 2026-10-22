@@ -2000,3 +2000,44 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 | Publication gate + tests | done | arena/17c50bb7-olbg2 | Local CI rebuild and 145 tests pass |
 | Official-source access / completeness | needs review | arena/17c50bb7-olbg2 | Published publication.html; no accessible official response content |
 | PR, merge, deploy | in progress | arena/17c50bb7-olbg2 | Remote verification follows |
+
+---
+
+## Session `arena/3552df3e-olbg2` — cross-layer reconciliation console (`/reconcile/`)
+
+**Session ID:** `arena/3552df3e-olbg2` · **Branch:** `arena/3552df3e-olbg2` (fixed by Arena session tracking) ·
+**Claimed:** 2026-10-22 12:15 UTC, committed and pushed immediately, before any implementation edit.
+
+**Live-branch survey at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`; `origin/main` = `238c157`, PR #91 merged):
+
+| Branch | Tip (UTC) | Claimed scope at claim time | This session |
+|---|---|---|---|
+| `arena/dc72bac4-olbg2` | 12:08 | `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py`, `review/reproducibility.html`, `research/reproducibility-audit-dc72bac4.md` | untouched |
+| `arena/5fba1c42-olbg2` | 12:06 | `/pulse/` desk, `scripts/pulse_*`, `data/pulse/**` | untouched |
+| `arena/3de6d2ed-olbg2` | 12:05 | `/canon/` desk, `scripts/canon_*`, `data/canon/**` | untouched |
+| `arena/17c50bb7-olbg2` | 12:05 | `.github/workflows/{pages,deploy-pages}.yml`, `publication.html`, `tests/test_publication_gate.py` | untouched |
+| `arena/d69dc1c9-olbg2` | 12:04 | `/update/` desk, `scripts/update_*`, `data/update/**` | untouched |
+| `arena/58642817-olbg2` | 12:04 | `/command/` desk, `scripts/command_*`, `data/command/**` | untouched |
+| `arena/ba48a907-olbg2` | 12:03 | `/atlas/` desk, `scripts/atlas_*`, `data/atlas/**` | untouched |
+| every merged layer (`site/`, `survey/`, `live/`, `verified/`, `forward/`, `board/`, `slate/`, `hub/`, `evidence/`, `audit65/`, `portal/`, `final/`, root HTML, `sports/`, `assets/`, `data/{verified,final,portal,hub,board,slate,forward,live}/**`) | merged | published output | **read only, never edited** |
+
+Seven sessions are already producing a *sixth through twelfth* near-identical fixture/prediction layer. Adding another would
+duplicate work and worsen the repo's central defect: **the same fixtures are published at several URLs with different
+prices, and some published "matches" are not head-to-head fixtures at all** (tournament fields, outright futures and
+venue-vs-field pairings are formatted as matches with moneylines). No session has audited that. This session therefore
+claims the one scope nobody holds — reconciliation of the *existing* layers — rather than another dataset.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| R1 | Read `COORDINATION.md`, survey live branches, claim disjoint scope, commit & push immediately | done 12:15Z | `arena/3552df3e-olbg2` | `COORDINATION.md` (append-only) |
+| R2 | Deterministic cross-layer reconciliation engine: fixture identity normalisation across every published layer; duplicate/overlap detection; price, confidence and provenance contradiction detection; non-match (outright / tournament-field / venue-vs-field) classification; stale-row and citation-granularity checks; prediction-quality checks | in progress | `arena/3552df3e-olbg2` | `scripts/reconcile_audit.py` |
+| R3 | First-hand spot re-verification of sampled published rows against governing-body pages (fetch timestamped), each verdict `confirmed` / `contradicted` / `unreadable`, links recorded on the row | in progress | `arena/3552df3e-olbg2` | `data/reconcile/spot_checks.json`, `research/reconcile-3552df3e.md` |
+| R4 | `/reconcile/` console pages: landing KPI dashboard, cross-layer contradictions, non-match rows, provenance & citation audit, spot-check ledger, per-sport pages, flagged-for-review, methodology, sources | pending | `arena/3552df3e-olbg2` | `scripts/reconcile_build.py`, `reconcile/**`, `data/reconcile/report.json` |
+| R5 | Structural verifier + unit tests (every published row keeps a source link; no layer file is mutated) | pending | `arena/3552df3e-olbg2` | `scripts/reconcile_verify.py`, `tests/test_reconcile.py` |
+| R6 | Integration: rebase on latest `main`, full build + cross-layer link audit + full test suite, root nav entry, PR → merge, confirm Pages deploy, record here | pending | `arena/3552df3e-olbg2` | shared outputs at integration only |
+
+**Rules for this session.** (a) No file owned by another session is edited; the audit reads published JSON/HTML and writes only
+inside its own scope. (b) Every contradiction and spot-check verdict carries the URL it was read from. (c) A row is only marked
+`confirmed` if this session actually read the value back from the linked official page during this session; unable-to-read rows
+are marked `unreadable`, never guessed. (d) The audit reports defects; it does not silently "fix" another session's numbers.
+(e) CI wiring for the new layer is a **cross-scope request** to the `.github/workflows/**` owner, logged rather than edited.

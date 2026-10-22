@@ -1694,3 +1694,13 @@ Scope is disjoint from prior layer owners. No inherited source or prediction is 
 - Coverage/exhaustive live verification remains **needs review**, not represented as complete. Publication task in progress.
 
 - Sync log: origin/main advanced during this session (PR #77). Rebase encountered a COORDINATION.md append conflict; retained the complete updated main board and appended only this session's claim, avoiding restoration of superseded entries. Re-ran all 103 tests successfully after rebase. No other files conflicted.
+
+### 02095e6b publication record
+
+- Evidence audit implementation: **done**. Review findings: **needs review**, published in `evidence/flagged.html` (not blockers).
+- PR https://github.com/buffedlizard55-lab/OLBG2/pull/79 **merged** at 2026-10-22T08:27:40Z; merge commit `3a392fe48188af2b9468085ad6d82cdbaa9dd914`.
+- All workflow build commands were also executed locally after rebase; deterministic generated-output check passed with no diff. GitHub hosted validation remained queued at merge time; it is not represented as a hosted pass.
+- Deployment target: https://buffedlizard55-lab.github.io/OLBG2/evidence/ . Initial request returned 404 while the new Pages build was still running; deployment confirmation pending. Legacy Pages source is main/root; a Deploy Pages workflow also exists. Earlier legacy builds were cancelled by newer main updates, not attributed to evidence files.
+
+- **Deployment confirmed:** GitHub Actions `Deploy Pages` run https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39747897675 completed successfully. Retrieved https://buffedlizard55-lab.github.io/OLBG2/evidence/index.html?deployment=39747897675 and confirmed the expected live title, 73 findings, all five layer counts, verification boundary, and inventory/review navigation. An earlier unversioned retrieval retained a cached 404; the deployment-version query returned the published content.
+- Publication task: **done**. PR #79 merged and live. Documentation follow-up: https://github.com/buffedlizard55-lab/OLBG2/pull/81 . Full live coverage/official fact re-verification remain **needs review** as disclosed; no unsupported completion claim.

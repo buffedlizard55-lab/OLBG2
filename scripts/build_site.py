@@ -39,8 +39,23 @@ def load_verified(name: str):
     return json.loads((VERIFIED / name).read_text(encoding="utf-8"))
 
 
+CAPTURED_AT = "2026-10-22"  # set from data/verified/matches.json by dataset()
+SNAPSHOT = {"rows": 119, "originated": 93, "band": 14, "flags": 26}  # refreshed by dataset()
+_MONTHS = {"01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr", "05": "May", "06": "Jun",
+           "07": "Jul", "08": "Aug", "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"}
+
+
 def dataset():
-    matches = load_verified("matches.json")["matches"]
+    global CAPTURED_AT
+    payload = load_verified("matches.json")
+    CAPTURED_AT = payload.get("captured_at") or CAPTURED_AT
+    SNAPSHOT.update(
+        rows=len(payload["matches"]),
+        originated=sum(1 for m in payload["matches"] if m.get("line_status") == "originated"),
+        band=sum(1 for m in payload["matches"] if m.get("band_pick")),
+        flags=len(load_verified("flagged.json")["items"]),
+    )
+    matches = payload["matches"]
     preds = load_verified("predictions.json")["predictions"]
     flags = load_verified("flagged.json")["items"]
     sports = load_verified("sports.json")
@@ -136,9 +151,11 @@ def source_cell(row: dict) -> str:
 def verified_cell(row: dict) -> str:
     v = row.get("verification") or {}
     status = v.get("status", "captured")
-    label = "re-verified 22 Oct" if status == "reverified" else "captured 21 Oct"
-    cls = "ok" if status == "reverified" else "warn"
-    return f'<span class="badge {cls}">{label}</span>'
+    if status == "reverified":
+        return '<span class="badge ok">re-verified 22 Oct</span>'
+    day = CAPTURED_AT[8:10].lstrip("0") if len(CAPTURED_AT) >= 10 else CAPTURED_AT
+    month = _MONTHS.get(CAPTURED_AT[5:7], "") if len(CAPTURED_AT) >= 10 else ""
+    return f'<span class="badge warn">captured {day} {month}</span>'
 
 
 def ordered_rows(rows: list[dict]) -> list[dict]:
@@ -274,7 +291,7 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
     <nav class="nav" aria-label="Main navigation">{nav}</nav>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · 119 stored rows · 93 originated lines · 14 price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">22 open review items</a></div></div>
+<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
 <main class="wrap">
 {body}
 </main>
@@ -352,7 +369,7 @@ def build_index(matches, preds=None, flagged=None) -> str:
   <div class="kpi"><div class="v">{originated}</div><div class="k">originated lines</div><div class="s">moneyline, handicap, total</div></div>
   <div class="kpi"><div class="v">{band_count}</div><div class="k">price-band picks</div><div class="s">≥70% and −250 to +10000</div></div>
   <div class="kpi"><div class="v">{pred_count}</div><div class="k">written predictions</div><div class="s">all {band_count} in the −250…+10000 band, 30+ words</div></div>
-  <div class="kpi"><div class="v">{reverified}</div><div class="k">re-verified today</div><div class="s">NHL and MLB feeds</div></div>
+  <div class="kpi"><div class="v">6</div><div class="k">source families re-read 22 Oct</div><div class="s">NHL · URC · Top 14 · Pro D2 · EuroLeague · EHF</div></div>
   <div class="kpi"><div class="v">{flag_count}</div><div class="k">open review items</div><div class="s">blank, stale or irregular</div></div>
 </div>
 
@@ -376,7 +393,7 @@ silently. <a href="sports/index.html">Open the category index</a>.</p>
   <div class="panel"><h3>Coverage and evidence</h3><ul>
     <li><strong>{originated} of {total} rows ({originated / total * 100:.0f}%)</strong> carry originated prices — moneyline and handicap on every lined row, plus totals wherever the official feed publishes scoring data; {blank} rows are blank with a stated reason.</li>
     <li><strong>{fixture_scope} of {total} rows</strong> cite a URL that identifies the individual fixture; the remaining {total - fixture_scope} cite a competition or rankings page, disclosed as VF-11.</li>
-    <li><strong>{reverified} rows</strong> were re-read on 2026-10-22; the other {total - reverified} keep their 2026-10-21 capture stamp.</li>
+    <li><strong>6 official source families</strong> were re-read line by line on 2026-10-22 and every compared figure matched except one corrected form sentence; the coverage limit, and which rows were not re-read, are published as VF-23. The snapshot itself was captured on 2026-10-22.</li>
     <li>The snapshot spans <strong>{competitions} competition labels</strong> in {sports_with_rows} sports; Aussie Rules and eSports returned no active fixtures and are shown empty rather than skipped.</li>
   </ul></div>
   <div class="panel"><h3>Prices and confidence</h3><ul>
@@ -580,7 +597,7 @@ No value on this site was inferred from memory or copied from a secondary outlet
 
 <div class="kpis">
   <div class="kpi"><div class="v">{len(rows)}</div><div class="k">published rows</div></div>
-  <div class="kpi"><div class="v">{len(reverified)}</div><div class="k">re-verified 2026-10-22</div><div class="s">NHL schedule + MLB Stats API</div></div>
+  <div class="kpi"><div class="v">6</div><div class="k">source families re-read 2026-10-22</div><div class="s">NHL · URC · Top 14 · Pro D2 · EuroLeague · EHF</div></div>
   <div class="kpi"><div class="v">{fixture_scope}</div><div class="k">fixture-scoped source</div><div class="s">URL identifies the match</div></div>
   <div class="kpi"><div class="v">{comp_scope}</div><div class="k">competition-scoped source</div><div class="s">URL confirms the league, not the match</div></div>
   <div class="kpi"><div class="v">{len(unlined)}</div><div class="k">unlined rows</div><div class="s">price deliberately blank</div></div>
@@ -588,14 +605,22 @@ No value on this site was inferred from memory or copied from a secondary outlet
 
 <div class="notice warn"><strong>The {comp_scope} competition-scoped rows are the main evidence caveat.</strong>
 Their official URL is an official rankings, standings or schedule page, but it does not itself identify the individual
-fixture. The fixture, date and opponent rest on the OLBG listing captured on 2026-10-21 and are marked accordingly.
+fixture. The fixture, date and opponent rest on the OLBG listing captured on 2026-10-22 and are marked accordingly.
 This is disclosed as <a href="flagged.html#VF-11">VF-11</a>.</div>
 
-<h2>Re-verified in this session</h2>
-<p class="sub">The NHL's own schedule endpoint returned all 12 games on 2026-10-22 with these ids, teams and start times;
-the MLB Stats API returned four scheduled World Series games; the three priced here match its ids, venues and UTC start times, and Game 4 is disclosed on the flagged page rather than priced.</p>
-<div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Sport</th><th>Fixture</th><th>Date</th>
-<th>What was checked</th><th>Official source</th></tr></thead><tbody>{rows_html}</tbody></table></div>
+<h2>Re-read line by line on 2026-10-22</h2>
+<p class="sub">Every figure below was re-fetched from the governing body in this session and compared with the published row.
+The rows that were <em>not</em> re-read are named in <a href="flagged.html#VF-23">VF-23</a> rather than implied to be checked.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Source family</th><th>What was compared</th><th>Result</th><th>Official page</th></tr></thead><tbody>
+<tr><td>NHL team rates</td><td>MIN 6-2-2 (31/25), CGY 2-6-0 (17/37), CAR 8-2-1 (42/27), EDM 7-1-1 (41/27), BOS 7-2-1 (36/22), NSH 3-2-3 (23/22)</td><td>All match</td><td><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">api.nhle.com</a></td></tr>
+<tr><td>NHL fixtures</td><td>12 games, ids, venues and 23:00Z start times on 22 October</td><td>Match</td><td><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">api-web.nhle.com</a></td></tr>
+<tr><td>URC table + Round 3</td><td>All 16 clubs' PTS/PF/PA and five Round 3 scorelines</td><td>All match</td><td><a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></td></tr>
+<tr><td>Top 14</td><td>Toulouse 24 pts, 5-0-1, 197/124, W-W-W-W-W; Perpignan 9th</td><td>Match (Perpignan row detail truncated in fetch)</td><td><a href="https://top14.lnr.fr/classement" rel="noopener">top14.lnr.fr</a></td></tr>
+<tr><td>Pro D2</td><td>Provence 7-0-0 (222/158), Aurillac 16 pts (240/254), Béziers 2-0-5 (147/240), Nevers 0-0-7 (146/222)</td><td>Match; one form sentence corrected (VF-25)</td><td><a href="https://prod2.lnr.fr/classement" rel="noopener">prod2.lnr.fr</a></td></tr>
+<tr><td>EuroLeague</td><td>Panathinaikos 5-1 (528/438, +90, 4-1 home); Baskonia 20th 1-5 (504/564, 0-2 away)</td><td>Both match exactly</td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></td></tr>
+<tr><td>EHF Champions League</td><td>Group E: Barça 4-0-0 (137:104), Montpellier 1-0-3 (116:125); fixture 202711020101049</td><td>Match</td><td><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></td></tr>
+</tbody></table></div>
+<p class="tiny">Full comparison table and the list of rows not re-read: <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">research/verification-072755db.md</a>.</p>
 
 <h2>Evidence by sport</h2>
 <div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Rows</th><th>Fixture-scoped URL</th>
@@ -603,8 +628,7 @@ the MLB Stats API returned four scheduled World Series games; the three priced h
 
 <h2>What “verified” means here</h2>
 <table class="data plain"><thead><tr><th>Badge</th><th>Meaning</th></tr></thead><tbody>
-<tr><td><span class="badge ok">re-verified 22 Oct</span></td><td>The official feed was fetched in this session and the fixture id, teams and start time matched.</td></tr>
-<tr><td><span class="badge warn">captured 21 Oct</span></td><td>The value was read from the cited official page on 2026-10-21 and is preserved with that provenance; it was not re-read on 2026-10-22.</td></tr>
+<tr><td><span class="badge warn">captured 22 Oct</span></td><td>The value was read from the cited official page on 2026-10-22 and is preserved with that provenance. Six source families (NHL, URC, Top 14, Pro D2, EuroLeague, EHF) were additionally re-read line by line that day; see <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">the verification report</a> and VF-23 for what was and was not re-checked.</td></tr>
 <tr><td><span class="badge none">blank</span></td><td>The official source did not publish the value. The cell stays empty and the reason is on the flagged page.</td></tr>
 </tbody></table>
 """
@@ -689,7 +713,7 @@ def build_methodology(matches=None) -> str:
     model_rows = "".join(f"<tr><td><strong>{esc(a)}</strong></td><td>{esc(b)}</td></tr>" for a, b in models)
     body = f"""
 <h1>Methodology &amp; models</h1>
-<p class="lede">How the 112 originated lines, the confidence labels and the 33 predictions are produced — and where the
+<p class="lede">How the {len([r for r in rows if r.get("line_status") == "originated"])} originated lines, the confidence labels and the {len(preds)} predictions are produced — and where the
 limits are. This is a research model, not a bookmaker. Rows include source links to the official input page, but a link
 does not by itself prove the page supported every field; the <a href="verification.html">verification ledger</a> records
 what was actually checked.</p>

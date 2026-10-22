@@ -46,8 +46,13 @@ def fair_decimal(prob: float) -> float:
 
 
 def fair_american(prob: float) -> int:
-    """Fair (no-vig) American moneyline price implied by a model probability."""
-    dec = 1.0 / min(max(prob, 1e-6), 1.0 - 1e-9)
+    """Fair (no-vig) American moneyline price implied by a model probability.
+
+    Derived from the *published* rounded decimal price so the decimal and
+    American figures on a row always agree; deriving both independently from
+    the unrounded probability left three rows quoting two different prices for
+    the same selection (e.g. 1.43 next to -230)."""
+    dec = fair_decimal(prob)
     if dec >= 2.0:
         return int(round((dec - 1.0) * 100))
     return int(round(-100.0 / (dec - 1.0)))
@@ -94,6 +99,36 @@ def _grid_margin_total_probs(grid: dict) -> tuple[dict, dict]:
         margin_probs[i - j] = margin_probs.get(i - j, 0.0) + p
         total_probs[i + j] = total_probs.get(i + j, 0.0) + p
     return margin_probs, total_probs
+
+
+FIXTURE_SCOPED_URL_PATTERNS = (
+    r"nhl\.com/gamecenter/",
+    r"nba\.com/game/",
+    r"euroleaguebasketball\.net/.*/game-center/.*/E2026/\d+/",
+    r"feuille-de-match/",
+    r"stats\.unitedrugby\.com/match-centre/\d{6}/",
+    r"/matches/details/",
+    r"wst\.tv/match-centre/",
+    r"mlb\.com/gameday",
+    r"icc-cricket\.com/matches/\d+",
+)
+
+
+def source_scope(url: str) -> str:
+    """Whether the row's official URL identifies this fixture or only a competition.
+
+    The dashboard prints this distinction on every table (VF-11). It is derived
+    from the URL shape rather than asserted per row, so it cannot drift from the
+    link a reader can actually click.
+    """
+    import re
+
+    if not url:
+        return "competition"
+    for pattern in FIXTURE_SCOPED_URL_PATTERNS:
+        if re.search(pattern, url):
+            return "fixture"
+    return "competition"
 
 
 def grade(prob: float, cap: str | None = None) -> str:
@@ -179,7 +214,7 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
         "template": (
             "Back {selection} against AS Béziers Hérault in Friday's Pro D2 Journée 8 card. "
             "Unbeaten Provence stand 7W-0D-0L on 29 points after conceding just 158 points across seven rounds (222 scored, +64). "
-            "Fourteenth-placed Béziers have dropped four of their last five matches while shipping 240 points (-93 differential), and covering a one-score alternate line rates {prob_pct}% ({price} fair decimal, {american} American)."
+            "Fourteenth-placed Béziers have lost three of their last five matches while shipping 240 points (-93 differential), and covering a one-score alternate line rates {prob_pct}% ({price} fair decimal, {american} American)."
         ),
         "facts": [
             {"claim": "Provence Rugby rank 2nd in Pro D2 at 7W-0D-0L (29 pts, 222 PF, 158 PA, +64)", "source": "https://prod2.lnr.fr/classement"},
@@ -691,7 +726,7 @@ def originate_snooker(players: dict, fixtures: list[dict]) -> list[dict]:
                 "id": f["id"],
                 "sport": "snooker",
                 "sport_name": "Snooker",
-                "competition": "BetVictor Northern Ireland Open 2026 — Round 2 (Best of 7 Frames)",
+                "competition": "BetVictor Northern Ireland Open 2026 — Round 3 (Best of 7 Frames)",
                 "date": f["date"],
                 "time": f["time"],
                 "home": f["p1"],
@@ -1041,7 +1076,20 @@ def main() -> None:
     originated.extend(originate_f1(inputs["f1_drivers"]))
 
     for row in originated:
-        row["pick"]["fair_american"] = fair_american(row["pick"]["probability"])
+        pick = row["pick"]
+        pick["fair_american"] = fair_american(pick["probability"])
+        # The published grading copy (root pages, /verified/ methodology) reads
+        # "high >= 72%, or a band pick >= 70%". Apply that second clause to the
+        # row's own pick as well: three rows previously showed the same
+        # selection as HIGH on the picks page and MEDIUM in their match row.
+        # NBA keeps its medium cap (prior-season records only).
+        if (
+            not row["competition"].startswith("NBA")
+            and pick["probability"] >= FEATURED_MIN_PROB
+            and AMERICAN_MIN <= pick["fair_american"] <= AMERICAN_MAX
+        ):
+            pick["confidence"] = "high"
+        row["source_scope"] = source_scope(row["official_url"])
         row["featured"] = featured_selection(row)
         # band_pick mirrors `featured` for the root dashboard / band.json
         # contract introduced by session 36f79c71 (same -250..+10000 rule).
@@ -1073,6 +1121,7 @@ def main() -> None:
                 "blank_reason": u["blank_reason"],
                 "official_source": u["official_source"],
                 "official_url": u["official_url"],
+                "source_scope": source_scope(u["official_url"]),
                 "data_url": None,
                 "olbg_url": u.get("olbg_url"),
             }
@@ -1134,6 +1183,57 @@ def main() -> None:
             }
         )
 
+    # Research-grade written selections (session 26963a2d): hand-written
+    # medium/high picks inside the -250..+10000 band whose every fact cites
+    # the official endpoint and fetch time. They are published alongside the
+    # featured write-ups (never replacing them) and re-validated here against
+    # the live rows so prose and table prices cannot drift apart.
+    research_doc = read_json(VERIFIED / "research_picks_26963a2d.json")
+    rows_by_id = {m["id"]: m for m in all_rows}
+    research: list[dict] = []
+    for rp in research_doc["picks"]:
+        row = rows_by_id.get(rp["match_id"])
+        if row is None or row["line_status"] != "originated":
+            raise RuntimeError(f"Research pick {rp['match_id']} has no originated desk row")
+        if rp["model_probability"] >= 0.5:
+            live_prob = row["pick"]["probability"]
+            if row["pick"]["selection"] != rp["selection"] or abs(live_prob - rp["model_probability"]) > 0.0051:
+                raise RuntimeError(f"Research pick {rp['match_id']} drifted from desk row: {row['pick']['selection']} {live_prob}")
+        else:  # price-band underdog side of the desk's own 2-way line
+            live_prob = round(1.0 - row["pick"]["probability"], 4)
+            if abs(live_prob - rp["model_probability"]) > 0.0051:
+                raise RuntimeError(f"Research underdog pick {rp['match_id']} drifted: {live_prob}")
+        words = len(rp["text"].split())
+        if words < 30 or rp["selection"].split(" (")[0] not in rp["text"]:
+            raise AssertionError(f"Research pick {rp['match_id']} fails the 30-word / named-selection rule")
+        if len(rp["facts"]) < 3:
+            raise AssertionError(f"Research pick {rp['match_id']} has fewer than 3 official facts")
+        research.append(
+            {
+                "match_id": rp["match_id"],
+                "sport": row["sport"],
+                "sport_name": row["sport_name"],
+                "competition": row["competition"],
+                "event": rp["event"],
+                "time": row["time"],
+                "selection": rp["selection"],
+                "market": rp["market"],
+                "match_type": "research",
+                "probability": live_prob,
+                "fair_odds": fair_decimal(live_prob),
+                "fair_american": fair_american(live_prob),
+                "confidence": rp["confidence"],
+                "headline": rp["headline"],
+                "text": rp["text"],
+                "word_count": words,
+                "facts": [{"claim": f["claim"], "source": f["source"], "fetched_utc": f.get("fetched_utc")} for f in rp["facts"]],
+                "caveats": rp.get("caveats", []),
+                "official_url": rp["official_url"],
+                "olbg_url": row.get("olbg_url"),
+            }
+        )
+        row["research_pick"] = {"selection": rp["selection"], "confidence": rp["confidence"], "fair_american": fair_american(live_prob)}
+
     counts = {
         "total_rows": len(all_rows),
         "originated_rows": len(originated),
@@ -1142,9 +1242,21 @@ def main() -> None:
         "medium_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "medium"),
         "low_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "low"),
         "featured": len(featured_rows),
+        "research": len(research),
     }
     write_json(VERIFIED / "matches.json", {"captured_at": captured_at, "counts": counts, "matches": all_rows})
-    write_json(VERIFIED / "predictions.json", {"captured_at": captured_at, "min_words": 30, "count": len(predictions), "predictions": predictions})
+    write_json(
+        VERIFIED / "predictions.json",
+        {
+            "captured_at": captured_at,
+            "min_words": 30,
+            "count": len(predictions),
+            "predictions": predictions,
+            "research_count": len(research),
+            "research_rule": research_doc["confidence_rule"],
+            "research": research,
+        },
+    )
     band_selections = [
         {
             "id": m["id"],

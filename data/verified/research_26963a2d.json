@@ -1,0 +1,3918 @@
+{
+ "session": "arena/26963a2d-olbg2",
+ "note": "Every value below was transcribed from the named official endpoint at the UTC time shown. Nothing is inferred.",
+ "fetches": [
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "fetched_utc": "2026-10-22T02:58Z",
+   "result": "12 games, all gameState FUT; ids 2026020154-2026020165; start times, venues and W-L-OTL records read"
+  },
+  {
+   "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2&start=0&limit=50",
+   "fetched_utc": "2026-10-22T03:02Z",
+   "result": "32 clubs; GP/W/L/OTL/GF/GA/points plus PP%, PK%, shots for/against per game, shutouts"
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-21",
+   "fetched_utc": "2026-10-22T03:02Z",
+   "result": "2 games: PHI 3-1 BUF (gameState OFF, game 2026020152); FLA 1-5 OTT (gameState FINAL, not yet OFF, game 2026020153)"
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+   "fetched_utc": "2026-10-22T03:06Z",
+   "result": "20-club 2026-27 regular-season table: GP W L PTS+ PTS- +/- home away OT L10"
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=7&season=E2026",
+   "fetched_utc": "2026-10-22T03:06Z",
+   "result": "Round 7: game 61 played 21 Oct (Hapoel IBI Tel Aviv 90-81 Virtus Bologna, Arena 8888 Sofia); 6 games 22 Oct + 3 games 23 Oct listed with venues"
+  },
+  {
+   "url": "https://www.nba.com/schedule?date=2026-10-23",
+   "fetched_utc": "2026-10-22T03:10Z",
+   "result": "Week 1 schedule rendered server-side: 21 Oct results (7 final, 3 live, 1 pending at fetch), 2 games 22 Oct, 12 games 23 Oct with game ids, tip times ET and venues"
+  },
+  {
+   "url": "https://www.nba.com/games?date=2026-10-23",
+   "fetched_utc": "2026-10-22T03:09Z",
+   "result": "Calendar grid only (Oct 20: 3, Oct 21: 11, Oct 22: 2, Oct 23: 12 games); game list errored client-side"
+  },
+  {
+   "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
+   "fetched_utc": "2026-10-22T03:09Z",
+   "result": "HTTP 500 — not reachable"
+  },
+  {
+   "url": "https://stats.nba.com/stats/scoreboardv3?GameDate=2026-10-23&LeagueID=00",
+   "fetched_utc": "2026-10-22T03:09Z",
+   "result": "fetch failed — not reachable"
+  },
+  {
+   "url": "https://top14.lnr.fr/calendrier-et-resultats",
+   "fetched_utc": "2026-10-22T03:14Z",
+   "result": "Journée 7: 7 fixtures with local kick-off times (CEST) and current ranks"
+  },
+  {
+   "url": "https://prod2.lnr.fr/calendrier-et-resultats",
+   "fetched_utc": "2026-10-22T03:14Z",
+   "result": "Journée 8: 8 fixtures with local kick-off times (CEST) and current ranks"
+  },
+  {
+   "url": "https://top14.lnr.fr/classement",
+   "fetched_utc": "2026-10-22T03:16Z",
+   "result": "Top 14 table after J6 (Pts, M, G, N, P, Bonus, PF, PA, Diff, last-5 form)"
+  },
+  {
+   "url": "https://prod2.lnr.fr/classement",
+   "fetched_utc": "2026-10-22T03:16Z",
+   "result": "Pro D2 table after J7 (same columns)"
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+   "fetched_utc": "2026-10-22T03:20Z",
+   "result": "16-club table after Round 3 (PTS PL W D L BP PF PA DIFF TF TA TB LB FORM) + Round 3 results"
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "fetched_utc": "2026-10-22T03:22Z",
+   "result": "Round 4: 8 fixtures 23-24 Oct with ids 292608-292615 and venues; page states 'All times shown are Local' but renders 14:45 for Friday-night Cardiff kick-off"
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/2026-27/5",
+   "fetched_utc": "2026-10-22T03:22Z",
+   "result": "Round 5: fixtures 30-31 Oct ids 292616-292623 and venues"
+  },
+  {
+   "url": "https://www.unitedrugby.com/fixtures-results",
+   "fetched_utc": "2026-10-22T03:20Z",
+   "result": "404"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "fetched_utc": "2026-10-22T03:30Z",
+   "result": "Official schedule of play (article body is in chunk 6 after the consent-wall text): Thu 22 Oct 1900-2300 CEST R1 x8 in listed order; Fri 23 Oct 1900-2300 CEST R1 x8; Sat 24 Oct R2 1300 & 1900 CEST (order TBC); Sun 25 Oct QF 1300 CET, SF+F 1900 CET; clocks go back overnight Sat/Sun"
+  },
+  {
+   "url": "https://www.pdc.tv/rankings",
+   "fetched_utc": "2026-10-22T03:32Z",
+   "result": "PDC Order of Merit readable in chunks 6-8 (consent wall only occupies chunks 0-5) — resolves VF-13 access problem"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/10/21/european-championship-schedule-play",
+   "fetched_utc": "2026-10-22T03:28Z",
+   "result": "consent wall / wrong slug"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "fetched_utc": "2026-10-22T03:32Z",
+   "result": "consent wall only; article body not rendered in any chunk"
+  },
+  {
+   "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "fetched_utc": "2026-10-22T03:36Z",
+   "result": "22 Oct: Melsungen-Plock 18:45, Szeged-GOG 18:45, Sporting-Kristianstad 20:45, Barça-Montpellier 20:45, Kolstad-Magdeburg 20:45 (site times; EHF displays CET/CEST). 28-29 Oct round 6 listed."
+  },
+  {
+   "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+   "fetched_utc": "2026-10-22T03:38Z",
+   "result": "Group phase tables A-F after round 5 (some clubs 4 GP) — identical to desk ehf_teams for all 24 clubs"
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
+   "fetched_utc": "2026-10-22T03:38Z",
+   "result": "NI Open R3 list for 22 Oct (8 matches, rendered 08:00/09:00/14:00/15:00) + season stats Wilson 24 MP 63% win 13 centuries vs Pang 23 MP 53% 9 centuries"
+  },
+  {
+   "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+   "fetched_utc": "2026-10-22T03:40Z",
+   "result": "Johnstone's Paint World Rankings full top 36 with prize money"
+  },
+  {
+   "url": "https://www.plusliga.pl/games.html",
+   "fetched_utc": "2026-10-22T03:44Z",
+   "result": "Redirected by the renderer to https://www.tauronliga.pl/games.html (women's TAURON Liga) — men's PlusLiga fixtures not verifiable this session"
+  },
+  {
+   "url": "https://www.plusliga.pl/games/tour/2026.html",
+   "fetched_utc": "2026-10-22T03:46Z",
+   "result": "404 (also redirected to tauronliga.pl)"
+  },
+  {
+   "url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
+   "fetched_utc": "2026-10-22T03:44Z",
+   "result": "Match strip: NZ v IND T20 'Match starts at 03:00 (Your time)' in the today list; SA v AUS WTC Test 269791 live at Day 4 stumps (SA 425/9d; AUS 99 & 156/4 fo, trail by 170)"
+  },
+  {
+   "url": "https://www.icc-cricket.com/tournaments/world-test-championship/matches/269791/south-africa-vs-australia",
+   "fetched_utc": "2026-10-22T03:46Z",
+   "result": "page shell only (no details rendered)"
+  },
+  {
+   "url": "https://www.bcci.tv/matches/b8a52270-eedc-48ff-93f1-b925941e67b7/new-zealand-vs-india",
+   "fetched_utc": "2026-10-22T03:48Z",
+   "result": "(via web search snippet) BCCI match details: NZL v IND 1st T20I, Thu 22 October 2026, 7:00 am UTC start, Hagley Oval, Christchurch"
+  },
+  {
+   "url": "https://www.gaa.ie/fixtures-results",
+   "fetched_utc": "2026-10-22T03:44Z",
+   "result": "Only national fixture listed for 24-25 Oct is the Shinty-Hurling International (Ireland v Scotland, Sat 24 Oct 18:00, Páirc Uí Chaoimh); county club championship fixtures are not listed on gaa.ie"
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/standings/2026-10-22",
+   "fetched_utc": "2026-10-22T03:55Z",
+   "result": "League standings as of 2026-10-22T02:46Z: W-L-OTL, home/road splits, L10, streak, GF/GA for all 32 clubs (chunks 0-7)"
+  }
+ ],
+ "nhl": {
+  "score_feed_2026-10-22": {
+   "2026020154": {
+    "away": "NSH",
+    "away_record": "3-2-3",
+    "home": "BOS",
+    "home_record": "7-2-1",
+    "venue": "TD Garden",
+    "start_utc": "2026-10-22T23:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "NSH": {
+      "goals": [
+       "Ryan O'Reilly",
+       4
+      ],
+      "assists": [
+       "Roman Josi",
+       8
+      ],
+      "wins": [
+       "Juuse Saros",
+       3
+      ]
+     },
+     "BOS": {
+      "goals": [
+       "David Pastrnak",
+       4
+      ],
+      "assists": [
+       "David Pastrnak",
+       8
+      ],
+      "wins": [
+       "Jeremy Swayman",
+       6
+      ]
+     }
+    }
+   },
+   "2026020155": {
+    "away": "NYR",
+    "away_record": "7-3-1",
+    "home": "TOR",
+    "home_record": "5-4-2",
+    "venue": "Scotiabank Arena",
+    "start_utc": "2026-10-22T23:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "NYR": {
+      "goals": [
+       "Alexis Lafrenière",
+       7
+      ],
+      "assists": [
+       "Adam Fox",
+       10
+      ],
+      "wins": [
+       "Dylan Garand",
+       4
+      ]
+     },
+     "TOR": {
+      "goals": [
+       "Auston Matthews",
+       8
+      ],
+      "assists": [
+       "Auston Matthews",
+       10
+      ],
+      "wins": [
+       "Anthony Stolarz",
+       3
+      ]
+     }
+    }
+   },
+   "2026020156": {
+    "away": "SJS",
+    "away_record": "5-4-1",
+    "home": "OTT",
+    "home_record": "6-3-0",
+    "venue": "Canadian Tire Centre",
+    "start_utc": "2026-10-22T23:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "SJS": {
+      "goals": [
+       "Macklin Celebrini",
+       5
+      ],
+      "assists": [
+       "Macklin Celebrini",
+       9
+      ],
+      "wins": [
+       "Alex Nedeljkovic",
+       3
+      ]
+     },
+     "OTT": {
+      "goals": [
+       "Tim Stützle",
+       5
+      ],
+      "assists": [
+       "Tim Stützle",
+       7
+      ],
+      "wins": [
+       "Linus Ullmark",
+       6
+      ]
+     }
+    }
+   },
+   "2026020157": {
+    "away": "ANA",
+    "away_record": "4-5-0",
+    "home": "NJD",
+    "home_record": "5-4-0",
+    "venue": "Prudential Center",
+    "start_utc": "2026-10-22T23:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "ANA": {
+      "goals": [
+       "Beckett Sennecke",
+       5
+      ],
+      "assists": [
+       "Leo Carlsson",
+       9
+      ],
+      "wins": [
+       "Lukas Dostal",
+       3
+      ]
+     },
+     "NJD": {
+      "goals": [
+       "Nico Hischier",
+       4
+      ],
+      "assists": [
+       "Jack Hughes",
+       7
+      ],
+      "wins": [
+       "Jake Allen",
+       4
+      ]
+     }
+    }
+   },
+   "2026020158": {
+    "away": "FLA",
+    "away_record": "5-2-2",
+    "home": "PIT",
+    "home_record": "3-6-1",
+    "venue": "PPG Paints Arena",
+    "start_utc": "2026-10-22T23:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "FLA": {
+      "goals": [
+       "Brady Tkachuk",
+       6
+      ],
+      "assists": [
+       "Matthew Tkachuk",
+       11
+      ],
+      "wins": [
+       "Jacob Markstrom",
+       3
+      ]
+     },
+     "PIT": {
+      "goals": [
+       "Evgeni Malkin",
+       5
+      ],
+      "assists": [
+       "Erik Karlsson",
+       10
+      ],
+      "wins": [
+       "Arturs Silovs",
+       3
+      ]
+     }
+    }
+   },
+   "2026020159": {
+    "away": "LAK",
+    "away_record": "1-4-2",
+    "home": "NYI",
+    "home_record": "5-3-1",
+    "venue": "UBS Arena",
+    "start_utc": "2026-10-22T23:30:00Z",
+    "state": "FUT",
+    "leaders": {
+     "LAK": {
+      "goals": [
+       "Artemi Panarin",
+       4
+      ],
+      "assists": [
+       "Brandt Clarke",
+       4
+      ],
+      "wins": [
+       "Darcy Kuemper",
+       1
+      ]
+     },
+     "NYI": {
+      "goals": [
+       "Bo Horvat",
+       5
+      ],
+      "assists": [
+       "Matthew Schaefer",
+       8
+      ],
+      "wins": [
+       "Ilya Sorokin",
+       5
+      ]
+     }
+    }
+   },
+   "2026020160": {
+    "away": "VGK",
+    "away_record": "8-3-0",
+    "home": "STL",
+    "home_record": "4-4-1",
+    "venue": "Enterprise Center",
+    "start_utc": "2026-10-23T00:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "VGK": {
+      "goals": [
+       "Mark Stone",
+       8
+      ],
+      "assists": [
+       "Jack Eichel",
+       13
+      ],
+      "wins": [
+       "Carter Hart",
+       4
+      ]
+     },
+     "STL": {
+      "goals": [
+       "Mason McTavish",
+       5
+      ],
+      "assists": [
+       "Dylan Holloway",
+       6
+      ],
+      "wins": [
+       "Joel Hofer",
+       3
+      ]
+     }
+    }
+   },
+   "2026020161": {
+    "away": "WPG",
+    "away_record": "4-3-2",
+    "home": "DAL",
+    "home_record": "5-3-1",
+    "venue": "American Airlines Center",
+    "start_utc": "2026-10-23T00:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "WPG": {
+      "goals": [
+       "Kyle Connor",
+       8
+      ],
+      "assists": [
+       "Mark Scheifele",
+       6
+      ],
+      "wins": [
+       "Stuart Skinner",
+       3
+      ]
+     },
+     "DAL": {
+      "goals": [
+       "Mikko Rantanen",
+       5
+      ],
+      "assists": [
+       "Jason Robertson",
+       6
+      ],
+      "wins": [
+       "Jake Oettinger",
+       4
+      ]
+     }
+    }
+   },
+   "2026020162": {
+    "away": "MIN",
+    "away_record": "6-2-2",
+    "home": "CGY",
+    "home_record": "2-6-0",
+    "venue": "Scotiabank Saddledome",
+    "start_utc": "2026-10-23T01:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "MIN": {
+      "goals": [
+       "Kirill Kaprizov",
+       11
+      ],
+      "assists": [
+       "Quinn Hughes",
+       11
+      ],
+      "wins": [
+       "Jesper Wallstedt",
+       6
+      ]
+     },
+     "CGY": {
+      "goals": [
+       "Morgan Frost",
+       3
+      ],
+      "assists": [
+       "Joel Farabee",
+       5
+      ],
+      "wins": [
+       "Dustin Wolf",
+       1
+      ]
+     }
+    }
+   },
+   "2026020163": {
+    "away": "CAR",
+    "away_record": "8-2-1",
+    "home": "EDM",
+    "home_record": "7-1-1",
+    "venue": "Rogers Place",
+    "start_utc": "2026-10-23T01:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "CAR": {
+      "goals": [
+       "Andrei Svechnikov",
+       6
+      ],
+      "assists": [
+       "Jackson Blake",
+       10
+      ],
+      "wins": [
+       "Pyotr Kochetkov",
+       6
+      ]
+     },
+     "EDM": {
+      "goals": [
+       "Leon Draisaitl",
+       8
+      ],
+      "assists": [
+       "Connor McDavid",
+       20
+      ],
+      "wins": [
+       "Devon Levi",
+       5
+      ]
+     }
+    }
+   },
+   "2026020164": {
+    "away": "UTA",
+    "away_record": "7-3-0",
+    "home": "SEA",
+    "home_record": "6-3-1",
+    "venue": "Climate Pledge Arena",
+    "start_utc": "2026-10-23T02:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "UTA": {
+      "goals": [
+       "Nick Schmaltz",
+       7
+      ],
+      "assists": [
+       "Clayton Keller",
+       9
+      ],
+      "wins": [
+       "Karel Vejmelka",
+       5
+      ]
+     },
+     "SEA": {
+      "goals": [
+       "Frederick Gaudreau",
+       5
+      ],
+      "assists": [
+       "Chandler Stephenson",
+       8
+      ],
+      "wins": [
+       "Philipp Grubauer",
+       3
+      ]
+     }
+    }
+   },
+   "2026020165": {
+    "away": "DET",
+    "away_record": "3-3-3",
+    "home": "VAN",
+    "home_record": "2-8-1",
+    "venue": "Rogers Arena",
+    "start_utc": "2026-10-23T02:00:00Z",
+    "state": "FUT",
+    "leaders": {
+     "DET": {
+      "goals": [
+       "Alex DeBrincat",
+       6
+      ],
+      "assists": [
+       "Alex DeBrincat",
+       5
+      ],
+      "wins": [
+       "John Gibson",
+       2
+      ]
+     },
+     "VAN": {
+      "goals": [
+       "Paul Cotter",
+       4
+      ],
+      "assists": [
+       "Elias Pettersson",
+       8
+      ],
+      "wins": [
+       "Leevi Meriläinen",
+       1
+      ]
+     }
+    }
+   }
+  },
+  "stats_rest_team_summary_2026-10-22T03:02Z": {
+   "WSH": {
+    "gp": 9,
+    "w": 5,
+    "l": 4,
+    "otl": 0,
+    "gf": 30,
+    "ga": 29,
+    "points": 10,
+    "pp_pct": 0.2,
+    "pk_pct": 0.8,
+    "shots_for_pg": 26.78,
+    "shots_against_pg": 29.22,
+    "shutouts": 0
+   },
+   "NJD": {
+    "gp": 9,
+    "w": 5,
+    "l": 4,
+    "otl": 0,
+    "gf": 29,
+    "ga": 30,
+    "points": 10,
+    "pp_pct": 0.2,
+    "pk_pct": 0.708,
+    "shots_for_pg": 35.67,
+    "shots_against_pg": 26.0,
+    "shutouts": 0
+   },
+   "VGK": {
+    "gp": 11,
+    "w": 8,
+    "l": 3,
+    "otl": 0,
+    "gf": 43,
+    "ga": 30,
+    "points": 16,
+    "pp_pct": 0.25,
+    "pk_pct": 0.731,
+    "shots_for_pg": 30.18,
+    "shots_against_pg": 25.0,
+    "shutouts": 0
+   },
+   "VAN": {
+    "gp": 11,
+    "w": 2,
+    "l": 8,
+    "otl": 1,
+    "gf": 33,
+    "ga": 51,
+    "points": 5,
+    "pp_pct": 0.219,
+    "pk_pct": 0.639,
+    "shots_for_pg": 20.73,
+    "shots_against_pg": 33.73,
+    "shutouts": 0
+   },
+   "ANA": {
+    "gp": 9,
+    "w": 4,
+    "l": 5,
+    "otl": 0,
+    "gf": 26,
+    "ga": 29,
+    "points": 8,
+    "pp_pct": 0.226,
+    "pk_pct": 0.788,
+    "shots_for_pg": 24.11,
+    "shots_against_pg": 26.56,
+    "shutouts": 0
+   },
+   "STL": {
+    "gp": 9,
+    "w": 4,
+    "l": 4,
+    "otl": 1,
+    "gf": 29,
+    "ga": 29,
+    "points": 9,
+    "pp_pct": 0.192,
+    "pk_pct": 0.857,
+    "shots_for_pg": 26.22,
+    "shots_against_pg": 27.33,
+    "shutouts": 1
+   },
+   "DAL": {
+    "gp": 9,
+    "w": 5,
+    "l": 3,
+    "otl": 1,
+    "gf": 22,
+    "ga": 14,
+    "points": 11,
+    "pp_pct": 0.174,
+    "pk_pct": 0.906,
+    "shots_for_pg": 25.44,
+    "shots_against_pg": 22.33,
+    "shutouts": 3
+   },
+   "DET": {
+    "gp": 9,
+    "w": 3,
+    "l": 3,
+    "otl": 3,
+    "gf": 22,
+    "ga": 26,
+    "points": 9,
+    "pp_pct": 0.219,
+    "pk_pct": 0.688,
+    "shots_for_pg": 29.78,
+    "shots_against_pg": 27.0,
+    "shutouts": 1
+   },
+   "OTT": {
+    "gp": 9,
+    "w": 6,
+    "l": 3,
+    "otl": 0,
+    "gf": 22,
+    "ga": 23,
+    "points": 12,
+    "pp_pct": 0.128,
+    "pk_pct": 0.794,
+    "shots_for_pg": 23.11,
+    "shots_against_pg": 26.22,
+    "shutouts": 0
+   },
+   "WPG": {
+    "gp": 9,
+    "w": 4,
+    "l": 3,
+    "otl": 2,
+    "gf": 24,
+    "ga": 26,
+    "points": 10,
+    "pp_pct": 0.261,
+    "pk_pct": 0.792,
+    "shots_for_pg": 27.33,
+    "shots_against_pg": 29.11,
+    "shutouts": 0
+   },
+   "COL": {
+    "gp": 10,
+    "w": 5,
+    "l": 4,
+    "otl": 1,
+    "gf": 41,
+    "ga": 30,
+    "points": 11,
+    "pp_pct": 0.188,
+    "pk_pct": 0.826,
+    "shots_for_pg": 30.6,
+    "shots_against_pg": 27.3,
+    "shutouts": 0
+   },
+   "NSH": {
+    "gp": 8,
+    "w": 3,
+    "l": 2,
+    "otl": 3,
+    "gf": 23,
+    "ga": 22,
+    "points": 9,
+    "pp_pct": 0.296,
+    "pk_pct": 0.852,
+    "shots_for_pg": 24.38,
+    "shots_against_pg": 29.13,
+    "shutouts": 0
+   },
+   "BOS": {
+    "gp": 10,
+    "w": 7,
+    "l": 2,
+    "otl": 1,
+    "gf": 36,
+    "ga": 22,
+    "points": 15,
+    "pp_pct": 0.214,
+    "pk_pct": 0.8,
+    "shots_for_pg": 24.9,
+    "shots_against_pg": 28.0,
+    "shutouts": 1
+   },
+   "CBJ": {
+    "gp": 8,
+    "w": 3,
+    "l": 5,
+    "otl": 0,
+    "gf": 19,
+    "ga": 29,
+    "points": 6,
+    "pp_pct": 0.087,
+    "pk_pct": 0.7,
+    "shots_for_pg": 27.63,
+    "shots_against_pg": 27.75,
+    "shutouts": 1
+   },
+   "CHI": {
+    "gp": 9,
+    "w": 3,
+    "l": 6,
+    "otl": 0,
+    "gf": 21,
+    "ga": 36,
+    "points": 6,
+    "pp_pct": 0.125,
+    "pk_pct": 0.741,
+    "shots_for_pg": 21.44,
+    "shots_against_pg": 30.56,
+    "shutouts": 0
+   },
+   "CGY": {
+    "gp": 8,
+    "w": 2,
+    "l": 6,
+    "otl": 0,
+    "gf": 17,
+    "ga": 37,
+    "points": 4,
+    "pp_pct": 0.211,
+    "pk_pct": 0.815,
+    "shots_for_pg": 30.0,
+    "shots_against_pg": 29.63,
+    "shutouts": 0
+   },
+   "TBL": {
+    "gp": 9,
+    "w": 7,
+    "l": 2,
+    "otl": 0,
+    "gf": 31,
+    "ga": 23,
+    "points": 14,
+    "pp_pct": 0.129,
+    "pk_pct": 0.792,
+    "shots_for_pg": 29.78,
+    "shots_against_pg": 24.22,
+    "shutouts": 0
+   },
+   "PIT": {
+    "gp": 10,
+    "w": 3,
+    "l": 6,
+    "otl": 1,
+    "gf": 32,
+    "ga": 37,
+    "points": 7,
+    "pp_pct": 0.233,
+    "pk_pct": 0.808,
+    "shots_for_pg": 27.4,
+    "shots_against_pg": 27.8,
+    "shutouts": 1
+   },
+   "MTL": {
+    "gp": 9,
+    "w": 4,
+    "l": 3,
+    "otl": 2,
+    "gf": 28,
+    "ga": 34,
+    "points": 10,
+    "pp_pct": 0.138,
+    "pk_pct": 0.784,
+    "shots_for_pg": 29.67,
+    "shots_against_pg": 26.33,
+    "shutouts": 1
+   },
+   "SJS": {
+    "gp": 10,
+    "w": 5,
+    "l": 4,
+    "otl": 1,
+    "gf": 26,
+    "ga": 34,
+    "points": 11,
+    "pp_pct": 0.242,
+    "pk_pct": 0.788,
+    "shots_for_pg": 28.2,
+    "shots_against_pg": 28.6,
+    "shutouts": 0
+   },
+   "NYR": {
+    "gp": 11,
+    "w": 7,
+    "l": 3,
+    "otl": 1,
+    "gf": 33,
+    "ga": 24,
+    "points": 15,
+    "pp_pct": 0.206,
+    "pk_pct": 0.941,
+    "shots_for_pg": 24.18,
+    "shots_against_pg": 25.73,
+    "shutouts": 1
+   },
+   "NYI": {
+    "gp": 9,
+    "w": 5,
+    "l": 3,
+    "otl": 1,
+    "gf": 27,
+    "ga": 19,
+    "points": 11,
+    "pp_pct": 0.179,
+    "pk_pct": 0.875,
+    "shots_for_pg": 24.89,
+    "shots_against_pg": 25.33,
+    "shutouts": 1
+   },
+   "LAK": {
+    "gp": 7,
+    "w": 1,
+    "l": 4,
+    "otl": 2,
+    "gf": 17,
+    "ga": 27,
+    "points": 4,
+    "pp_pct": 0.174,
+    "pk_pct": 0.64,
+    "shots_for_pg": 29.29,
+    "shots_against_pg": 27.57,
+    "shutouts": 0
+   },
+   "SEA": {
+    "gp": 10,
+    "w": 6,
+    "l": 3,
+    "otl": 1,
+    "gf": 37,
+    "ga": 34,
+    "points": 13,
+    "pp_pct": 0.219,
+    "pk_pct": 0.724,
+    "shots_for_pg": 26.5,
+    "shots_against_pg": 31.0,
+    "shutouts": 0
+   },
+   "UTA": {
+    "gp": 10,
+    "w": 7,
+    "l": 3,
+    "otl": 0,
+    "gf": 38,
+    "ga": 31,
+    "points": 14,
+    "pp_pct": 0.361,
+    "pk_pct": 0.688,
+    "shots_for_pg": 30.1,
+    "shots_against_pg": 22.5,
+    "shutouts": 1
+   },
+   "MIN": {
+    "gp": 10,
+    "w": 6,
+    "l": 2,
+    "otl": 2,
+    "gf": 31,
+    "ga": 25,
+    "points": 14,
+    "pp_pct": 0.29,
+    "pk_pct": 0.818,
+    "shots_for_pg": 29.8,
+    "shots_against_pg": 26.1,
+    "shutouts": 0
+   },
+   "BUF": {
+    "gp": 10,
+    "w": 4,
+    "l": 4,
+    "otl": 2,
+    "gf": 28,
+    "ga": 36,
+    "points": 10,
+    "pp_pct": 0.111,
+    "pk_pct": 0.667,
+    "shots_for_pg": 26.9,
+    "shots_against_pg": 25.7,
+    "shutouts": 0
+   },
+   "CAR": {
+    "gp": 11,
+    "w": 8,
+    "l": 2,
+    "otl": 1,
+    "gf": 42,
+    "ga": 27,
+    "points": 17,
+    "pp_pct": 0.227,
+    "pk_pct": 0.892,
+    "shots_for_pg": 34.09,
+    "shots_against_pg": 22.36,
+    "shutouts": 0
+   },
+   "PHI": {
+    "gp": 12,
+    "w": 3,
+    "l": 6,
+    "otl": 3,
+    "gf": 20,
+    "ga": 36,
+    "points": 9,
+    "pp_pct": 0.139,
+    "pk_pct": 0.833,
+    "shots_for_pg": 21.83,
+    "shots_against_pg": 31.92,
+    "shutouts": 0
+   },
+   "EDM": {
+    "gp": 9,
+    "w": 7,
+    "l": 1,
+    "otl": 1,
+    "gf": 41,
+    "ga": 27,
+    "points": 15,
+    "pp_pct": 0.31,
+    "pk_pct": 0.741,
+    "shots_for_pg": 25.22,
+    "shots_against_pg": 26.56,
+    "shutouts": 0
+   },
+   "FLA": {
+    "gp": 9,
+    "w": 5,
+    "l": 2,
+    "otl": 2,
+    "gf": 30,
+    "ga": 25,
+    "points": 12,
+    "pp_pct": 0.209,
+    "pk_pct": 0.806,
+    "shots_for_pg": 29.33,
+    "shots_against_pg": 24.0,
+    "shutouts": 1
+   },
+   "TOR": {
+    "gp": 11,
+    "w": 5,
+    "l": 4,
+    "otl": 2,
+    "gf": 38,
+    "ga": 34,
+    "points": 12,
+    "pp_pct": 0.275,
+    "pk_pct": 0.974,
+    "shots_for_pg": 27.82,
+    "shots_against_pg": 30.27,
+    "shutouts": 0
+   }
+  },
+  "results_2026-10-21": [
+   {
+    "game_id": 2026020152,
+    "away": "PHI",
+    "away_score": 3,
+    "home": "BUF",
+    "home_score": 1,
+    "state": "OFF",
+    "note": "Cole Knuble 2 goals; Zegras PPG; Zucker PPG for BUF"
+   },
+   {
+    "game_id": 2026020153,
+    "away": "FLA",
+    "away_score": 1,
+    "home": "OTT",
+    "home_score": 5,
+    "state": "FINAL (not yet OFF at 03:02Z)",
+    "note": "Brady Tkachuk PPG (7th) for FLA; Stützle (6th), Giroux, Pinto, Foegele SHG, Halliday SHG for OTT; shots OTT 30, FLA 19"
+   }
+  ],
+  "standings_2026-10-22T02:46Z": {
+   "CAR": [
+    8,
+    2,
+    1,
+    2,
+    1,
+    1,
+    6,
+    1,
+    0,
+    8,
+    2,
+    0,
+    "W1",
+    42,
+    27,
+    13,
+    10,
+    29,
+    17
+   ],
+   "VGK": [
+    8,
+    3,
+    0,
+    5,
+    2,
+    0,
+    3,
+    1,
+    0,
+    7,
+    3,
+    0,
+    "L1",
+    44,
+    30,
+    28,
+    20,
+    16,
+    10
+   ],
+   "EDM": [
+    7,
+    1,
+    1,
+    2,
+    1,
+    1,
+    5,
+    0,
+    0,
+    7,
+    1,
+    1,
+    "W2",
+    41,
+    27,
+    14,
+    14,
+    27,
+    13
+   ],
+   "BOS": [
+    7,
+    2,
+    1,
+    3,
+    1,
+    0,
+    4,
+    1,
+    1,
+    7,
+    2,
+    1,
+    "OT1",
+    36,
+    22,
+    15,
+    6,
+    21,
+    16
+   ],
+   "NYR": [
+    7,
+    3,
+    1,
+    6,
+    0,
+    0,
+    1,
+    3,
+    1,
+    7,
+    2,
+    1,
+    "W1",
+    33,
+    24,
+    29,
+    10,
+    4,
+    14
+   ],
+   "TBL": [
+    7,
+    2,
+    0,
+    5,
+    0,
+    0,
+    2,
+    2,
+    0,
+    7,
+    2,
+    0,
+    "W3",
+    31,
+    23,
+    18,
+    9,
+    13,
+    14
+   ],
+   "UTA": [
+    7,
+    3,
+    0,
+    3,
+    1,
+    0,
+    4,
+    2,
+    0,
+    7,
+    3,
+    0,
+    "W1",
+    38,
+    31,
+    18,
+    14,
+    20,
+    17
+   ],
+   "MIN": [
+    6,
+    2,
+    2,
+    4,
+    0,
+    0,
+    2,
+    2,
+    2,
+    6,
+    2,
+    2,
+    "OT1",
+    31,
+    25,
+    15,
+    8,
+    16,
+    17
+   ],
+   "OTT": [
+    7,
+    3,
+    0,
+    4,
+    1,
+    0,
+    3,
+    2,
+    0,
+    7,
+    3,
+    0,
+    "W1",
+    29,
+    24,
+    14,
+    12,
+    15,
+    12
+   ],
+   "SEA": [
+    6,
+    3,
+    1,
+    2,
+    1,
+    0,
+    4,
+    2,
+    1,
+    6,
+    3,
+    1,
+    "W1",
+    39,
+    34,
+    12,
+    10,
+    27,
+    24
+   ],
+   "FLA": [
+    5,
+    3,
+    2,
+    2,
+    1,
+    0,
+    3,
+    2,
+    2,
+    5,
+    3,
+    2,
+    "L1",
+    31,
+    30,
+    12,
+    9,
+    19,
+    21
+   ],
+   "TOR": [
+    5,
+    4,
+    2,
+    3,
+    3,
+    1,
+    2,
+    1,
+    1,
+    5,
+    3,
+    2,
+    "W2",
+    38,
+    35,
+    19,
+    21,
+    19,
+    14
+   ],
+   "NYI": [
+    5,
+    3,
+    1,
+    4,
+    1,
+    0,
+    1,
+    2,
+    1,
+    5,
+    3,
+    1,
+    "W2",
+    27,
+    20,
+    19,
+    10,
+    8,
+    10
+   ],
+   "DAL": [
+    5,
+    3,
+    1,
+    2,
+    2,
+    0,
+    3,
+    1,
+    1,
+    5,
+    3,
+    1,
+    "W3",
+    23,
+    15,
+    10,
+    9,
+    13,
+    6
+   ],
+   "COL": [
+    5,
+    4,
+    1,
+    3,
+    1,
+    1,
+    2,
+    3,
+    0,
+    5,
+    4,
+    1,
+    "L2",
+    41,
+    31,
+    24,
+    16,
+    17,
+    15
+   ],
+   "SJS": [
+    5,
+    4,
+    1,
+    2,
+    2,
+    0,
+    3,
+    2,
+    1,
+    5,
+    4,
+    1,
+    "W1",
+    27,
+    35,
+    13,
+    16,
+    14,
+    19
+   ],
+   "WSH": [
+    5,
+    4,
+    0,
+    4,
+    2,
+    0,
+    1,
+    2,
+    0,
+    5,
+    4,
+    0,
+    "L1",
+    30,
+    29,
+    22,
+    20,
+    8,
+    9
+   ],
+   "WPG": [
+    4,
+    3,
+    2,
+    2,
+    2,
+    1,
+    2,
+    1,
+    1,
+    4,
+    3,
+    2,
+    "L2",
+    24,
+    26,
+    14,
+    16,
+    10,
+    10
+   ],
+   "NJD": [
+    5,
+    4,
+    0,
+    4,
+    2,
+    0,
+    1,
+    2,
+    0,
+    5,
+    4,
+    0,
+    "W1",
+    29,
+    30,
+    22,
+    16,
+    7,
+    14
+   ],
+   "MTL": [
+    4,
+    3,
+    2,
+    3,
+    2,
+    1,
+    1,
+    1,
+    1,
+    4,
+    3,
+    2,
+    "OT1",
+    30,
+    34,
+    18,
+    21,
+    12,
+    13
+   ],
+   "BUF": [
+    4,
+    4,
+    2,
+    3,
+    3,
+    0,
+    1,
+    1,
+    2,
+    4,
+    4,
+    2,
+    "L1",
+    28,
+    37,
+    14,
+    19,
+    14,
+    18
+   ],
+   "NSH": [
+    3,
+    2,
+    3,
+    2,
+    2,
+    1,
+    1,
+    0,
+    2,
+    3,
+    2,
+    3,
+    "W1",
+    23,
+    24,
+    12,
+    14,
+    11,
+    10
+   ],
+   "STL": [
+    4,
+    4,
+    1,
+    2,
+    0,
+    1,
+    2,
+    4,
+    0,
+    4,
+    4,
+    1,
+    "W1",
+    29,
+    29,
+    9,
+    7,
+    20,
+    22
+   ],
+   "DET": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    1,
+    0,
+    0,
+    2,
+    3,
+    3,
+    3,
+    "OT1",
+    23,
+    28,
+    20,
+    23,
+    3,
+    5
+   ],
+   "PHI": [
+    3,
+    6,
+    3,
+    2,
+    2,
+    2,
+    1,
+    4,
+    1,
+    3,
+    5,
+    2,
+    "W3",
+    20,
+    37,
+    11,
+    20,
+    9,
+    17
+   ],
+   "ANA": [
+    4,
+    5,
+    0,
+    1,
+    3,
+    0,
+    3,
+    2,
+    0,
+    4,
+    5,
+    0,
+    "L4",
+    26,
+    29,
+    9,
+    15,
+    17,
+    14
+   ],
+   "PIT": [
+    3,
+    6,
+    1,
+    2,
+    1,
+    0,
+    1,
+    5,
+    1,
+    3,
+    6,
+    1,
+    "L4",
+    33,
+    38,
+    10,
+    9,
+    23,
+    29
+   ],
+   "CBJ": [
+    3,
+    5,
+    0,
+    3,
+    3,
+    0,
+    0,
+    2,
+    0,
+    3,
+    5,
+    0,
+    "L2",
+    20,
+    29,
+    16,
+    22,
+    4,
+    7
+   ],
+   "CHI": [
+    3,
+    6,
+    0,
+    3,
+    2,
+    0,
+    0,
+    4,
+    0,
+    3,
+    6,
+    0,
+    "L1",
+    21,
+    36,
+    15,
+    17,
+    6,
+    19
+   ],
+   "VAN": [
+    2,
+    8,
+    1,
+    1,
+    3,
+    0,
+    1,
+    5,
+    1,
+    1,
+    8,
+    1,
+    "L2",
+    33,
+    51,
+    16,
+    19,
+    17,
+    32
+   ],
+   "LAK": [
+    1,
+    4,
+    2,
+    0,
+    3,
+    0,
+    1,
+    1,
+    2,
+    1,
+    4,
+    2,
+    "W1",
+    17,
+    27,
+    3,
+    10,
+    14,
+    17
+   ],
+   "CGY": [
+    2,
+    6,
+    0,
+    1,
+    3,
+    0,
+    1,
+    3,
+    0,
+    2,
+    6,
+    0,
+    "W1",
+    17,
+    37,
+    9,
+    19,
+    8,
+    18
+   ],
+   "_notes": "SJS 0 regulation wins (all 5 wins OT/SO); NYR road GF 4 in 5 games; DET road 0-0-2; LAK home 0-3-0 GF 3"
+  }
+ },
+ "euroleague": {
+  "standings_2026-10-22T03:06Z": {
+   "PAO": {
+    "rank": 1,
+    "gp": 6,
+    "w": 5,
+    "l": 1,
+    "pf": 528,
+    "pa": 438,
+    "diff": 90,
+    "home": "4-1",
+    "away": "1-0",
+    "ot": "0-0",
+    "l10": "5-1"
+   },
+   "FBT": {
+    "rank": 2,
+    "gp": 6,
+    "w": 5,
+    "l": 1,
+    "pf": 501,
+    "pa": 447,
+    "diff": 54,
+    "home": "5-0",
+    "away": "0-1",
+    "ot": "0-0",
+    "l10": "5-1"
+   },
+   "OLY": {
+    "rank": 3,
+    "gp": 6,
+    "w": 5,
+    "l": 1,
+    "pf": 564,
+    "pa": 524,
+    "diff": 40,
+    "home": "1-0",
+    "away": "4-1",
+    "ot": "2-0",
+    "l10": "5-1"
+   },
+   "HTA": {
+    "rank": 4,
+    "gp": 7,
+    "w": 5,
+    "l": 2,
+    "pf": 630,
+    "pa": 601,
+    "diff": 29,
+    "home": "3-1",
+    "away": "2-1",
+    "ot": "0-0",
+    "l10": "5-2"
+   },
+   "VBC": {
+    "rank": 5,
+    "gp": 6,
+    "w": 4,
+    "l": 2,
+    "pf": 583,
+    "pa": 537,
+    "diff": 46,
+    "home": "2-2",
+    "away": "2-0",
+    "ot": "0-1",
+    "l10": "4-2"
+   },
+   "CZV": {
+    "rank": 6,
+    "gp": 6,
+    "w": 4,
+    "l": 2,
+    "pf": 485,
+    "pa": 457,
+    "diff": 28,
+    "home": "2-2",
+    "away": "2-0",
+    "ot": "0-0",
+    "l10": "4-2"
+   },
+   "DUB": {
+    "rank": 7,
+    "gp": 6,
+    "w": 4,
+    "l": 2,
+    "pf": 490,
+    "pa": 493,
+    "diff": -3,
+    "home": "2-1",
+    "away": "2-1",
+    "ot": "0-0",
+    "l10": "4-2"
+   },
+   "VIR": {
+    "rank": 8,
+    "gp": 7,
+    "w": 4,
+    "l": 3,
+    "pf": 606,
+    "pa": 608,
+    "diff": -2,
+    "home": "2-0",
+    "away": "2-3",
+    "ot": "0-0",
+    "l10": "4-3"
+   },
+   "RMB": {
+    "rank": 9,
+    "gp": 6,
+    "w": 3,
+    "l": 3,
+    "pf": 554,
+    "pa": 531,
+    "diff": 23,
+    "home": "2-0",
+    "away": "1-3",
+    "ot": "0-0",
+    "l10": "3-3"
+   },
+   "BAR": {
+    "rank": 10,
+    "gp": 6,
+    "w": 3,
+    "l": 3,
+    "pf": 534,
+    "pa": 525,
+    "diff": 9,
+    "home": "2-2",
+    "away": "1-1",
+    "ot": "0-1",
+    "l10": "3-3"
+   },
+   "BJK": {
+    "rank": 11,
+    "gp": 6,
+    "w": 3,
+    "l": 3,
+    "pf": 554,
+    "pa": 555,
+    "diff": -1,
+    "home": "1-2",
+    "away": "2-1",
+    "ot": "0-0",
+    "l10": "3-3"
+   },
+   "PAR": {
+    "rank": 12,
+    "gp": 6,
+    "w": 3,
+    "l": 3,
+    "pf": 466,
+    "pa": 471,
+    "diff": -5,
+    "home": "1-1",
+    "away": "2-2",
+    "ot": "0-0",
+    "l10": "3-3"
+   },
+   "EFS": {
+    "rank": 13,
+    "gp": 6,
+    "w": 2,
+    "l": 4,
+    "pf": 492,
+    "pa": 510,
+    "diff": -18,
+    "home": "1-1",
+    "away": "1-3",
+    "ot": "0-0",
+    "l10": "2-4"
+   },
+   "ZAL": {
+    "rank": 14,
+    "gp": 6,
+    "w": 2,
+    "l": 4,
+    "pf": 490,
+    "pa": 517,
+    "diff": -27,
+    "home": "0-2",
+    "away": "2-2",
+    "ot": "0-0",
+    "l10": "2-4"
+   },
+   "BAY": {
+    "rank": 15,
+    "gp": 6,
+    "w": 2,
+    "l": 4,
+    "pf": 521,
+    "pa": 552,
+    "diff": -31,
+    "home": "0-2",
+    "away": "2-2",
+    "ot": "0-0",
+    "l10": "2-4"
+   },
+   "MTA": {
+    "rank": 16,
+    "gp": 6,
+    "w": 2,
+    "l": 4,
+    "pf": 509,
+    "pa": 540,
+    "diff": -31,
+    "home": "1-1",
+    "away": "1-3",
+    "ot": "0-0",
+    "l10": "2-4"
+   },
+   "ASV": {
+    "rank": 17,
+    "gp": 6,
+    "w": 2,
+    "l": 4,
+    "pf": 527,
+    "pa": 572,
+    "diff": -45,
+    "home": "1-2",
+    "away": "1-2",
+    "ot": "0-0",
+    "l10": "2-4"
+   },
+   "PBB": {
+    "rank": 18,
+    "gp": 6,
+    "w": 1,
+    "l": 5,
+    "pf": 504,
+    "pa": 545,
+    "diff": -41,
+    "home": "1-3",
+    "away": "0-2",
+    "ot": "0-0",
+    "l10": "1-5"
+   },
+   "MIL": {
+    "rank": 19,
+    "gp": 6,
+    "w": 1,
+    "l": 5,
+    "pf": 504,
+    "pa": 559,
+    "diff": -55,
+    "home": "1-2",
+    "away": "0-3",
+    "ot": "0-0",
+    "l10": "1-5"
+   },
+   "KBA": {
+    "rank": 20,
+    "gp": 6,
+    "w": 1,
+    "l": 5,
+    "pf": 504,
+    "pa": 564,
+    "diff": -60,
+    "home": "1-3",
+    "away": "0-2",
+    "ot": "0-0",
+    "l10": "1-5"
+   }
+  },
+  "round7_games": [
+   {
+    "code": 61,
+    "date": "2026-10-21",
+    "home": "Virtus Bologna",
+    "away": "Hapoel IBI Tel Aviv",
+    "venue": "Arena 8888 Sofia",
+    "result": "Hapoel 90-81 Virtus (played)"
+   },
+   {
+    "code": 64,
+    "date": "2026-10-22",
+    "utc": "17:30",
+    "home": "Anadolu Efes Istanbul",
+    "away": "Besiktas Istanbul",
+    "venue": "Turkcell Basketball Development Center"
+   },
+   {
+    "code": 65,
+    "date": "2026-10-22",
+    "utc": "18:00",
+    "home": "FC Bayern Munich",
+    "away": "Dubai Basketball",
+    "venue": "SAP Garden"
+   },
+   {
+    "code": 62,
+    "date": "2026-10-22",
+    "utc": "18:05",
+    "home": "Maccabi Rapyd Tel Aviv",
+    "away": "Real Madrid",
+    "venue": "Aleksandar Nikolic Hall"
+   },
+   {
+    "code": 67,
+    "date": "2026-10-22",
+    "utc": "18:15",
+    "home": "Panathinaikos AKTOR Athens",
+    "away": "Kosner Baskonia Vitoria-Gasteiz",
+    "venue": "Telekom Center Athens"
+   },
+   {
+    "code": 63,
+    "date": "2026-10-22",
+    "utc": "18:30",
+    "home": "Armani Olimpia Milan",
+    "away": "FC Barcelona",
+    "venue": "Unipol Forum"
+   },
+   {
+    "code": 66,
+    "date": "2026-10-22",
+    "utc": "18:45",
+    "home": "Partizan Mozzart Bet Belgrade",
+    "away": "Crvena Zvezda Meridianbet Belgrade",
+    "venue": "Belgrade Arena"
+   },
+   {
+    "code": 68,
+    "date": "2026-10-23",
+    "utc": "17:00",
+    "home": "Zalgiris Kaunas",
+    "away": "LDLC ASVEL Villeurbanne",
+    "venue": "Zalgirio Arena"
+   },
+   {
+    "code": 70,
+    "date": "2026-10-23",
+    "utc": "18:15",
+    "home": "Olympiacos Piraeus",
+    "away": "Fenerbahce Tarfin Istanbul",
+    "venue": "SUNEL Arena"
+   },
+   {
+    "code": 69,
+    "date": "2026-10-23",
+    "utc": "18:45",
+    "home": "Paris Basketball",
+    "away": "Valencia Basket",
+    "venue": "Adidas Arena"
+   }
+  ],
+  "time_note": "Game-centre page rendered tip-offs in US Eastern (13:30 for game 64); desk stores 17:30 UTC — consistent."
+ },
+ "nba": {
+  "schedule_2026-10-22T03:10Z": [
+   {
+    "game_id": "0022600006",
+    "date": "2026-10-22",
+    "tip_et": "19:00",
+    "away": "CLE",
+    "home": "PHI",
+    "venue": "Xfinity Mobile Arena"
+   },
+   {
+    "game_id": "0022600007",
+    "date": "2026-10-22",
+    "tip_et": "21:30",
+    "away": "DEN",
+    "home": "OKC",
+    "venue": "Paycom Center"
+   },
+   {
+    "game_id": "0022600099",
+    "date": "2026-10-23",
+    "tip_et": "16:00",
+    "away": "CHI",
+    "home": "MIL",
+    "venue": "Fiserv Forum"
+   },
+   {
+    "game_id": "0022600008",
+    "date": "2026-10-23",
+    "tip_et": "19:00",
+    "away": "NYK",
+    "home": "BOS",
+    "venue": "TD Garden"
+   },
+   {
+    "game_id": "0022600094",
+    "date": "2026-10-23",
+    "tip_et": "19:00",
+    "away": "ATL",
+    "home": "CHA",
+    "venue": "Spectrum Center"
+   },
+   {
+    "game_id": "0022600095",
+    "date": "2026-10-23",
+    "tip_et": "19:00",
+    "away": "DAL",
+    "home": "IND",
+    "venue": "Gainbridge Fieldhouse"
+   },
+   {
+    "game_id": "0022600096",
+    "date": "2026-10-23",
+    "tip_et": "19:00",
+    "away": "MIN",
+    "home": "ORL",
+    "venue": "Kia Center"
+   },
+   {
+    "game_id": "0022600097",
+    "date": "2026-10-23",
+    "tip_et": "19:00",
+    "away": "TOR",
+    "home": "WAS",
+    "venue": "Capital One Arena"
+   },
+   {
+    "game_id": "0022600098",
+    "date": "2026-10-23",
+    "tip_et": "20:00",
+    "away": "DET",
+    "home": "MIA",
+    "venue": "Kaseya Center"
+   },
+   {
+    "game_id": "0022600009",
+    "date": "2026-10-23",
+    "tip_et": "21:30",
+    "away": "HOU",
+    "home": "SAS",
+    "venue": "Moody Center (Austin, TX)"
+   },
+   {
+    "game_id": "0022600100",
+    "date": "2026-10-23",
+    "tip_et": "21:30",
+    "away": "NOP",
+    "home": "UTA",
+    "venue": "Delta Center"
+   },
+   {
+    "game_id": "0022600101",
+    "date": "2026-10-23",
+    "tip_et": "22:00",
+    "away": "MEM",
+    "home": "GSW",
+    "venue": "Chase Center"
+   },
+   {
+    "game_id": "0022600102",
+    "date": "2026-10-23",
+    "tip_et": "22:00",
+    "away": "LAC",
+    "home": "LAL",
+    "venue": "Crypto.com Arena"
+   },
+   {
+    "game_id": "0022600103",
+    "date": "2026-10-23",
+    "tip_et": "22:00",
+    "away": "POR",
+    "home": "SAC",
+    "venue": "Golden 1 Center"
+   }
+  ],
+  "results_2026-10-21_at_03:10Z": [
+   {
+    "game_id": "0022600085",
+    "away": "ATL",
+    "away_pts": 132,
+    "home": "ORL",
+    "home_pts": 125,
+    "status": "Final"
+   },
+   {
+    "game_id": "0022600086",
+    "away": "MIL",
+    "away_pts": 116,
+    "home": "WAS",
+    "home_pts": 128,
+    "status": "Final"
+   },
+   {
+    "game_id": "0022600004",
+    "away": "MIN",
+    "away_pts": 131,
+    "home": "MIA",
+    "home_pts": 106,
+    "status": "Final"
+   },
+   {
+    "game_id": "0022600087",
+    "away": "CHA",
+    "away_pts": 110,
+    "home": "BKN",
+    "home_pts": 103,
+    "status": "Final"
+   },
+   {
+    "game_id": "0022600088",
+    "away": "CHI",
+    "away_pts": 92,
+    "home": "TOR",
+    "home_pts": 135,
+    "status": "Final"
+   },
+   {
+    "game_id": "0022600089",
+    "away": "UTA",
+    "away_pts": 103,
+    "home": "MEM",
+    "home_pts": 123,
+    "status": "Final"
+   },
+   {
+    "game_id": "0022600090",
+    "away": "IND",
+    "away_pts": 123,
+    "home": "NOP",
+    "home_pts": 120,
+    "status": "Final"
+   },
+   {
+    "game_id": "0022600091",
+    "away": "DAL",
+    "home": "HOU",
+    "status": "LIVE 4th Qtr at fetch (85-103) — not final, not used"
+   },
+   {
+    "game_id": "0022600005",
+    "away": "GSW",
+    "home": "LAL",
+    "status": "LIVE 1st Qtr at fetch — not used"
+   },
+   {
+    "game_id": "0022600092",
+    "away": "PHX",
+    "home": "POR",
+    "status": "LIVE 1st Qtr at fetch — not used"
+   },
+   {
+    "game_id": "0022600093",
+    "away": "SAC",
+    "home": "LAC",
+    "status": "10:30 PM ET, not started at fetch"
+   }
+  ]
+ },
+ "rugby_lnr": {
+  "top14_j7_official_kickoffs_CEST": [
+   {
+    "id": "top14-11862",
+    "home": "RC Vannes",
+    "away": "ASM Clermont",
+    "local": "Sat 24 Oct 14h30",
+    "utc": "2026-10-24 12:30 UTC"
+   },
+   {
+    "id": "top14-11861",
+    "home": "Aviron Bayonnais",
+    "away": "LOU Rugby",
+    "local": "Sat 24 Oct 16h35",
+    "utc": "2026-10-24 14:35 UTC"
+   },
+   {
+    "id": "top14-11863",
+    "home": "Castres Olympique",
+    "away": "Stade Français Paris",
+    "local": "Sat 24 Oct 16h35",
+    "utc": "2026-10-24 14:35 UTC"
+   },
+   {
+    "id": "top14-11865",
+    "home": "Racing 92",
+    "away": "Montpellier Hérault Rugby",
+    "local": "Sat 24 Oct 16h35",
+    "utc": "2026-10-24 14:35 UTC"
+   },
+   {
+    "id": "top14-11867",
+    "home": "Stade Toulousain",
+    "away": "USA Perpignan",
+    "local": "Sat 24 Oct 16h35",
+    "utc": "2026-10-24 14:35 UTC"
+   },
+   {
+    "id": "top14-11866",
+    "home": "RC Toulon",
+    "away": "Section Paloise",
+    "local": "Sat 24 Oct 21h00",
+    "utc": "2026-10-24 19:00 UTC"
+   },
+   {
+    "id": "top14-11864",
+    "home": "Stade Rochelais",
+    "away": "Union Bordeaux-Bègles",
+    "local": "Sun 25 Oct 21h05 (CET — clocks change 25 Oct 01:00 UTC)",
+    "utc": "2026-10-25 20:05 UTC"
+   }
+  ],
+  "prod2_j8_official_kickoffs_CEST": [
+   {
+    "id": "prod2-12068",
+    "home": "US Montauban",
+    "away": "Oyonnax Rugby",
+    "local": "Thu 22 Oct 21h00",
+    "utc": "2026-10-22 19:00 UTC"
+   },
+   {
+    "id": "prod2-12069",
+    "home": "RC Narbonnais",
+    "away": "CA Brive",
+    "local": "Fri 23 Oct 19h00",
+    "utc": "2026-10-23 17:00 UTC"
+   },
+   {
+    "id": "prod2-12063",
+    "home": "SU Agen",
+    "away": "Nissa Rugby",
+    "local": "Fri 23 Oct 19h30",
+    "utc": "2026-10-23 17:30 UTC"
+   },
+   {
+    "id": "prod2-12065",
+    "home": "Soyaux-Angoulême XV",
+    "away": "US Dax",
+    "local": "Fri 23 Oct 19h30",
+    "utc": "2026-10-23 17:30 UTC"
+   },
+   {
+    "id": "prod2-12066",
+    "home": "Stade Aurillacois",
+    "away": "USON Nevers",
+    "local": "Fri 23 Oct 19h30",
+    "utc": "2026-10-23 17:30 UTC"
+   },
+   {
+    "id": "prod2-12070",
+    "home": "Valence Romans",
+    "away": "Colomiers Rugby",
+    "local": "Fri 23 Oct 19h30",
+    "utc": "2026-10-23 17:30 UTC"
+   },
+   {
+    "id": "prod2-12064",
+    "home": "Provence Rugby",
+    "away": "AS Béziers Hérault",
+    "local": "Fri 23 Oct 21h00",
+    "utc": "2026-10-23 19:00 UTC"
+   },
+   {
+    "id": "prod2-12067",
+    "home": "FC Grenoble Rugby",
+    "away": "Biarritz Olympique PB",
+    "local": "Fri 23 Oct 21h00",
+    "utc": "2026-10-23 19:00 UTC"
+   }
+  ],
+  "kickoff_discrepancies_vs_desk": [
+   {
+    "id": "top14-11867",
+    "desk": "2026-10-24 12:30 UTC",
+    "official": "2026-10-24 14:35 UTC (16h35 CEST)"
+   },
+   {
+    "id": "top14-11862",
+    "desk": "2026-10-24 14:35 UTC",
+    "official": "2026-10-24 12:30 UTC (14h30 CEST)"
+   },
+   {
+    "id": "prod2-12064",
+    "desk": "2026-10-23 17:30 UTC",
+    "official": "2026-10-23 19:00 UTC (21h00 CEST)"
+   },
+   {
+    "id": "prod2-12069",
+    "desk": "2026-10-23 17:30 UTC",
+    "official": "2026-10-23 17:00 UTC (19h00 CEST)"
+   }
+  ],
+  "top14_table_after_j6": {
+   "toulouse": [
+    1,
+    24,
+    6,
+    5,
+    0,
+    1,
+    4,
+    197,
+    124,
+    "V V V V V"
+   ],
+   "pau": [
+    2,
+    22,
+    6,
+    5,
+    0,
+    1,
+    2,
+    239,
+    181,
+    "V D V V V"
+   ],
+   "bordeaux-begles": [
+    3,
+    19,
+    6,
+    4,
+    0,
+    2,
+    3,
+    215,
+    151,
+    "D V D V V"
+   ],
+   "la-rochelle": [
+    4,
+    18,
+    6,
+    4,
+    0,
+    2,
+    2,
+    144,
+    135,
+    "V D D V V"
+   ],
+   "bayonne": [
+    5,
+    17,
+    6,
+    4,
+    0,
+    2,
+    1,
+    190,
+    214,
+    "D V V V D"
+   ],
+   "paris": [
+    6,
+    14,
+    6,
+    3,
+    0,
+    3,
+    2,
+    147,
+    158,
+    "D D V D V"
+   ],
+   "montpellier": [
+    7,
+    14,
+    6,
+    3,
+    0,
+    3,
+    2,
+    163,
+    122,
+    "V V D V D"
+   ],
+   "lyon": [
+    8,
+    14,
+    6,
+    3,
+    0,
+    3,
+    2,
+    193,
+    202,
+    "V V D D D"
+   ],
+   "perpignan": [
+    9,
+    13,
+    6,
+    3,
+    0,
+    3,
+    1,
+    166,
+    199,
+    "V D V D V"
+   ],
+   "toulon": [
+    10,
+    12,
+    6,
+    2,
+    0,
+    4,
+    4,
+    130,
+    130,
+    "D D V D V"
+   ],
+   "clermont": [
+    11,
+    11,
+    6,
+    2,
+    0,
+    4,
+    3,
+    140,
+    169,
+    "V D V D D"
+   ],
+   "racing-92": [
+    12,
+    10,
+    6,
+    2,
+    0,
+    4,
+    2,
+    143,
+    196,
+    "D V D V D"
+   ],
+   "castres": [
+    13,
+    9,
+    6,
+    2,
+    0,
+    4,
+    1,
+    126,
+    153,
+    "D V D D D"
+   ],
+   "vannes": [
+    14,
+    1,
+    6,
+    0,
+    0,
+    6,
+    1,
+    117,
+    176,
+    "D D D D D"
+   ]
+  },
+  "top14_recent_results_links": {
+   "toulouse_last5": [
+    "j2 11832 toulouse-bordeaux-begles V",
+    "j3 11835 vannes-toulouse V",
+    "j4 11846 toulouse-montpellier V",
+    "j5 11850 castres-toulouse V",
+    "j6 11860 toulouse-bayonne V"
+   ],
+   "perpignan_last5": [
+    "j2 11826 perpignan-castres V",
+    "j3 11839 montpellier-perpignan D",
+    "j4 11840 perpignan-bordeaux-begles V",
+    "j5 11853 racing-92-perpignan D",
+    "j6 11854 perpignan-vannes V"
+   ]
+  },
+  "prod2_table_after_j7": {
+   "oyonnax": [
+    1,
+    33,
+    7,
+    7,
+    0,
+    0,
+    5,
+    313,
+    154,
+    "V V V V V"
+   ],
+   "provence": [
+    2,
+    29,
+    7,
+    7,
+    0,
+    0,
+    1,
+    222,
+    158,
+    "V V V V V"
+   ],
+   "grenoble": [
+    3,
+    22,
+    7,
+    5,
+    0,
+    2,
+    2,
+    213,
+    176,
+    "D V V V V"
+   ],
+   "brive": [
+    4,
+    21,
+    7,
+    5,
+    0,
+    2,
+    1,
+    206,
+    164,
+    "V V V D D"
+   ],
+   "biarritz": [
+    5,
+    20,
+    7,
+    4,
+    1,
+    2,
+    2,
+    213,
+    191,
+    "V V V D N"
+   ],
+   "dax": [
+    6,
+    19,
+    7,
+    4,
+    0,
+    3,
+    3,
+    269,
+    264,
+    "V D V D V"
+   ],
+   "angouleme": [
+    7,
+    17,
+    7,
+    3,
+    1,
+    3,
+    3,
+    220,
+    180,
+    "V D V D N"
+   ],
+   "montauban": [
+    8,
+    17,
+    7,
+    4,
+    0,
+    3,
+    1,
+    182,
+    214,
+    "D V D V D"
+   ],
+   "aurillac": [
+    9,
+    16,
+    7,
+    3,
+    0,
+    4,
+    4,
+    240,
+    254,
+    "D D D V V"
+   ],
+   "agen": [
+    10,
+    15,
+    7,
+    3,
+    0,
+    4,
+    3,
+    189,
+    206,
+    "V D D V V"
+   ],
+   "valence-romans": [
+    11,
+    13,
+    7,
+    2,
+    0,
+    5,
+    5,
+    192,
+    190,
+    "D D D V D"
+   ],
+   "colomiers": [
+    12,
+    12,
+    7,
+    2,
+    0,
+    5,
+    4,
+    220,
+    207,
+    "D V D D V"
+   ],
+   "nice": [
+    13,
+    11,
+    7,
+    2,
+    0,
+    5,
+    3,
+    171,
+    213,
+    "D D D V D"
+   ],
+   "beziers": [
+    14,
+    9,
+    7,
+    2,
+    0,
+    5,
+    1,
+    147,
+    240,
+    "V D V D D"
+   ],
+   "narbonne": [
+    15,
+    9,
+    7,
+    2,
+    0,
+    5,
+    1,
+    186,
+    296,
+    "D V D D D"
+   ],
+   "nevers": [
+    16,
+    4,
+    7,
+    0,
+    0,
+    7,
+    4,
+    146,
+    222,
+    "D D D D D"
+   ]
+  }
+ },
+ "urc": {
+  "table_after_r3": {
+   "Edinburgh": [
+    14,
+    3,
+    3,
+    0,
+    0,
+    2,
+    80,
+    54,
+    26,
+    10,
+    7,
+    "W W W"
+   ],
+   "Glasgow Warriors": [
+    13,
+    3,
+    2,
+    1,
+    0,
+    3,
+    95,
+    72,
+    23,
+    14,
+    10,
+    "W D W"
+   ],
+   "Vodacom Bulls": [
+    11,
+    3,
+    2,
+    0,
+    1,
+    3,
+    126,
+    54,
+    72,
+    19,
+    7,
+    "W L W"
+   ],
+   "DHL Stormers": [
+    11,
+    3,
+    2,
+    0,
+    1,
+    3,
+    81,
+    54,
+    27,
+    11,
+    7,
+    "W L W"
+   ],
+   "Hollywoodbets Sharks": [
+    10,
+    3,
+    2,
+    0,
+    1,
+    2,
+    89,
+    83,
+    6,
+    12,
+    13,
+    "W W L"
+   ],
+   "Cardiff Rugby": [
+    9,
+    3,
+    2,
+    0,
+    1,
+    1,
+    66,
+    71,
+    -5,
+    10,
+    11,
+    "W W L"
+   ],
+   "10bet Lions": [
+    9,
+    3,
+    2,
+    0,
+    1,
+    1,
+    77,
+    102,
+    -25,
+    11,
+    16,
+    "W W L"
+   ],
+   "Dragons RFC": [
+    9,
+    3,
+    1,
+    1,
+    1,
+    3,
+    88,
+    83,
+    5,
+    13,
+    13,
+    "D W L"
+   ],
+   "Munster": [
+    9,
+    3,
+    1,
+    1,
+    1,
+    3,
+    72,
+    74,
+    -2,
+    10,
+    11,
+    "L W D"
+   ],
+   "Leinster": [
+    8,
+    3,
+    1,
+    0,
+    2,
+    4,
+    75,
+    58,
+    17,
+    12,
+    8,
+    "L L W"
+   ],
+   "Ulster": [
+    8,
+    3,
+    0,
+    2,
+    1,
+    4,
+    88,
+    93,
+    -5,
+    13,
+    13,
+    "L D D"
+   ],
+   "Scarlets": [
+    7,
+    3,
+    1,
+    0,
+    2,
+    3,
+    68,
+    85,
+    -17,
+    10,
+    13,
+    "L L W"
+   ],
+   "Ospreys": [
+    6,
+    3,
+    1,
+    0,
+    2,
+    2,
+    81,
+    107,
+    -26,
+    13,
+    15,
+    "L L W"
+   ],
+   "Connacht": [
+    5,
+    3,
+    1,
+    0,
+    2,
+    1,
+    56,
+    84,
+    -28,
+    9,
+    12,
+    "L W L"
+   ],
+   "Benetton": [
+    5,
+    3,
+    0,
+    1,
+    2,
+    3,
+    64,
+    68,
+    -4,
+    10,
+    11,
+    "D L L"
+   ],
+   "Zebre Parma": [
+    1,
+    3,
+    0,
+    0,
+    3,
+    1,
+    52,
+    116,
+    -64,
+    7,
+    17,
+    "L L L"
+   ]
+  },
+  "round3_results": [
+   "GLA 36-19 CON (Scotstoun)",
+   "DRA 31-38 OSP (Rodney Parade)",
+   "BUL 57-15 LIO (Loftus Versfeld)",
+   "STO 39-22 SHA (DHL Stadium)",
+   "ZEB 12-29 EDI (Lanfranchi)",
+   "SCA 27-26 BEN (Parc y Scarlets)",
+   "ULS 26-26 MUN (Affidea Stadium)",
+   "LEI 29-5 CAR (Laya Arena)"
+  ],
+  "round4_fixtures_rendered": [
+   [
+    "292608",
+    "Fri 23 Oct",
+    "14:45",
+    "Cardiff Rugby",
+    "Hollywoodbets Sharks",
+    "Cardiff Arms Park"
+   ],
+   [
+    "292609",
+    "Fri 23 Oct",
+    "14:45",
+    "Connacht",
+    "Zebre Parma",
+    "Dexcom Stadium"
+   ],
+   [
+    "292610",
+    "Fri 23 Oct",
+    "14:45",
+    "Edinburgh",
+    "10bet Lions",
+    "Hive Stadium"
+   ],
+   [
+    "292611",
+    "Sat 24 Oct",
+    "07:45",
+    "Vodacom Bulls",
+    "Ulster",
+    "Loftus Versfeld"
+   ],
+   [
+    "292612",
+    "Sat 24 Oct",
+    "10:00",
+    "DHL Stormers",
+    "Scarlets",
+    "DHL Stadium"
+   ],
+   [
+    "292613",
+    "Sat 24 Oct",
+    "10:00",
+    "Benetton",
+    "Glasgow Warriors",
+    "Stadio Monigo"
+   ],
+   [
+    "292614",
+    "Sat 24 Oct",
+    "13:00",
+    "Leinster",
+    "Munster",
+    "Aviva Stadium"
+   ],
+   [
+    "292615",
+    "Sat 24 Oct",
+    "14:00",
+    "Ospreys",
+    "Dragons RFC",
+    "St Helen's"
+   ]
+  ],
+  "round5_fixtures_rendered": [
+   [
+    "292618",
+    "Sat 31 Oct",
+    "08:45",
+    "DHL Stormers",
+    "Ulster",
+    "DHL Stadium"
+   ],
+   [
+    "292619",
+    "Sat 31 Oct",
+    "11:00",
+    "Vodacom Bulls",
+    "Scarlets",
+    "Loftus Versfeld"
+   ],
+   [
+    "292620",
+    "Sat 31 Oct",
+    "11:00",
+    "Benetton",
+    "Edinburgh",
+    "Stadio Monigo"
+   ],
+   [
+    "292621",
+    "Sat 31 Oct",
+    "13:30",
+    "Munster",
+    "Hollywoodbets Sharks",
+    "Thomond Park"
+   ],
+   [
+    "292622",
+    "Sat 31 Oct",
+    "13:30",
+    "Dragons RFC",
+    "Zebre Parma",
+    "Rodney Parade"
+   ],
+   [
+    "292623",
+    "Sat 31 Oct",
+    "15:45",
+    "Ospreys",
+    "Cardiff Rugby",
+    "St Helen's"
+   ]
+  ],
+  "time_irregularity": "stats.unitedrugby.com labels times 'Local' but renders them in the viewer's zone; the same fetcher rendered EuroLeague 17:30 UTC tip-offs as 13:30 and NBA/NHL in ET, so these values are US Eastern, not venue-local. The desk's '14:45 Local' labels are therefore mislabelled. Cardiff Arms Park on a Friday at 14:45 local is implausible; 14:45 ET = 18:45 UTC = 19:45 BST."
+ },
+ "pdc": {
+  "order_of_merit_2026-10-22": {
+   "Luke Littler": {
+    "rank": 1,
+    "prize_gbp": 3113500
+   },
+   "Luke Humphries": {
+    "rank": 2,
+    "prize_gbp": 1062500
+   },
+   "Gian van Veen": {
+    "rank": 3,
+    "prize_gbp": 1035750
+   },
+   "Gerwyn Price": {
+    "rank": 4,
+    "prize_gbp": 782000
+   },
+   "Jonny Clayton": {
+    "rank": 5,
+    "prize_gbp": 706000
+   },
+   "James Wade": {
+    "rank": 6,
+    "prize_gbp": 681250
+   },
+   "Danny Noppert": {
+    "rank": 7,
+    "prize_gbp": 608500
+   },
+   "Josh Rock": {
+    "rank": 8,
+    "prize_gbp": 606500
+   },
+   "Gary Anderson": {
+    "rank": 9,
+    "prize_gbp": 591750
+   },
+   "Michael van Gerwen": {
+    "rank": 10,
+    "prize_gbp": 587500
+   },
+   "Nathan Aspinall": {
+    "rank": 11,
+    "prize_gbp": 579500
+   },
+   "Wessel Nijman": {
+    "rank": 12,
+    "prize_gbp": 569500
+   },
+   "Ross Smith": {
+    "rank": 13,
+    "prize_gbp": 567250
+   },
+   "Stephen Bunting": {
+    "rank": 14,
+    "prize_gbp": 566250
+   },
+   "Ryan Searle": {
+    "rank": 15,
+    "prize_gbp": 562250
+   },
+   "Jermaine Wattimena": {
+    "rank": 16,
+    "prize_gbp": 538750
+   },
+   "Chris Dobey": {
+    "rank": 17,
+    "prize_gbp": 534750
+   },
+   "Luke Woodhouse": {
+    "rank": 18,
+    "prize_gbp": 506000
+   },
+   "Krzysztof Ratajski": {
+    "rank": 19,
+    "prize_gbp": 440000
+   },
+   "Dirk van Duijvenbode": {
+    "rank": 20,
+    "prize_gbp": 430500
+   },
+   "Damon Heta": {
+    "rank": 21,
+    "prize_gbp": 410750
+   },
+   "Rob Cross": {
+    "rank": 22,
+    "prize_gbp": 398500
+   },
+   "Ryan Joyce": {
+    "rank": 23,
+    "prize_gbp": 386500
+   },
+   "Martin Schindler": {
+    "rank": 24,
+    "prize_gbp": 386250
+   },
+   "Kevin Doets": {
+    "rank": 25,
+    "prize_gbp": 375250
+   },
+   "Cameron Menzies": {
+    "rank": 26,
+    "prize_gbp": 375000
+   },
+   "Andrew Gilding": {
+    "rank": 27,
+    "prize_gbp": 355750
+   },
+   "Daryl Gurney": {
+    "rank": 28,
+    "prize_gbp": 301500
+   },
+   "Niels Zonneveld": {
+    "rank": 29,
+    "prize_gbp": 281750
+   },
+   "Dave Chisnall": {
+    "rank": 30,
+    "prize_gbp": 281750
+   },
+   "Joe Cullen": {
+    "rank": 31,
+    "prize_gbp": 280000
+   },
+   "William O'Connor": {
+    "rank": 32,
+    "prize_gbp": 274500
+   },
+   "Ritchie Edhouse": {
+    "rank": 33,
+    "prize_gbp": 274500
+   },
+   "Mike De Decker": {
+    "rank": 34,
+    "prize_gbp": 266500
+   },
+   "Ricardo Pietreczko": {
+    "rank": 35,
+    "prize_gbp": 241500
+   },
+   "Niko Springer": {
+    "rank": 36,
+    "prize_gbp": 239750
+   },
+   "Peter Wright": {
+    "rank": 37,
+    "prize_gbp": 234500
+   },
+   "Michael Smith": {
+    "rank": 38,
+    "prize_gbp": 232250
+   },
+   "Karel Sedlacek": {
+    "rank": 44,
+    "prize_gbp": 177250
+   },
+   "Cristo Reyes": {
+    "rank": 71,
+    "prize_gbp": 95000
+   }
+  },
+  "european_championship_schedule_official": {
+   "venue": "Westfalenhalle, Dortmund",
+   "prize_fund_gbp": 750000,
+   "format_r1": "best of 11 legs (per PDC/ESPN)",
+   "thu_22_oct_1900_CEST_order": [
+    "Luke Woodhouse v Dirk van Duijvenbode",
+    "Danny Noppert v Stephen Bunting",
+    "Niels Zonneveld v Cameron Menzies",
+    "Gerwyn Price v Rob Cross",
+    "James Wade v Damon Heta",
+    "Luke Humphries v Ryan Searle",
+    "Gian van Veen v Andrew Gilding",
+    "Ross Smith v Karel Sedlacek"
+   ],
+   "fri_23_oct_1900_CEST_order": [
+    "Ryan Joyce v Jermaine Wattimena",
+    "Krzysztof Ratajski v Dave Chisnall",
+    "Nathan Aspinall v Cristo Reyes",
+    "Jonny Clayton v Niko Springer",
+    "Luke Littler v William O'Connor",
+    "Wessel Nijman v Martin Schindler",
+    "Kevin Doets v Michael van Gerwen",
+    "Josh Rock v Chris Dobey"
+   ],
+   "sat_24_oct": "R2 x4 afternoon 1300 CEST (Smith/Sedlacek v Wade/Heta; Van Veen/Gilding v Woodhouse/VdD; Zonneveld/Menzies v Price/Cross; Noppert/Bunting v Humphries/Searle) + R2 x4 evening 1900 CEST (Nijman/Schindler v Joyce/Wattimena; Clayton/Springer v Rock/Dobey; Ratajski/Chisnall v Doets/MvG; Aspinall/Reyes v Littler/O'Connor)",
+   "sun_25_oct": "QF 1300-1700 CET; SF + Final 1900-2300 CET",
+   "article_facts": "Van Veen reigning champion; Humphries 2025 runner-up; Cross two-time champion, Price v Cross is a rematch of the 2019 final; Wade and Smith former champions; MvG four-time champion; Searle a World Championship semi-finalist; Schindler German number one; Nijman number two seed"
+  },
+  "time_irregularity": "Desk darts rows carry times such as '2026-10-22 13:15' with no timezone; the official PDC schedule only publishes session start 19:00 CEST (17:00 UTC) and match order — individual start times are not official. Desk order of matches matches PDC order; the 30-minute increments appear to be OLBG's own estimates rendered in US Eastern (13:15 ET = 17:15 UTC = 19:15 CEST)."
+ },
+ "ehf": {
+  "standings_match_desk": true,
+  "today_fixtures": [
+   [
+    "202711020101019",
+    "MT Melsungen",
+    "Orlen Wisla Plock",
+    "18:45 CEST"
+   ],
+   [
+    "202711020101043",
+    "OTP Bank - PICK Szeged",
+    "GOG",
+    "18:45 CEST"
+   ],
+   [
+    "202711020101041",
+    "Sporting Clube de Portugal",
+    "IFK Kristianstad",
+    "20:45 CEST"
+   ],
+   [
+    "202711020101049",
+    "Barça",
+    "Montpellier Handball",
+    "20:45 CEST"
+   ],
+   [
+    "202711020101064",
+    "Kolstad Håndball",
+    "SC Magdeburg",
+    "20:45 CEST"
+   ]
+  ],
+  "group_tables": {
+   "A": [
+    [
+     "One Veszprém HC",
+     5,
+     5,
+     0,
+     0,
+     185,
+     146,
+     10
+    ],
+    [
+     "Füchse Berlin",
+     5,
+     3,
+     0,
+     2,
+     184,
+     172,
+     6
+    ],
+    [
+     "FC Porto",
+     5,
+     1,
+     1,
+     3,
+     158,
+     173,
+     3
+    ],
+    [
+     "RK Partizan AdmiralBet",
+     5,
+     0,
+     1,
+     4,
+     148,
+     184,
+     1
+    ]
+   ],
+   "B": [
+    [
+     "Orlen Wisla Plock",
+     4,
+     3,
+     0,
+     1,
+     115,
+     108,
+     6
+    ],
+    [
+     "HBC Nantes",
+     5,
+     3,
+     0,
+     2,
+     142,
+     143,
+     6
+    ],
+    [
+     "MT Melsungen",
+     4,
+     2,
+     0,
+     2,
+     110,
+     112,
+     4
+    ],
+    [
+     "HC Vardar 1961",
+     5,
+     1,
+     0,
+     4,
+     154,
+     158,
+     2
+    ]
+   ],
+   "C": [
+    [
+     "Aalborg Håndbold",
+     5,
+     4,
+     1,
+     0,
+     170,
+     145,
+     9
+    ],
+    [
+     "Paris Saint-Germain",
+     5,
+     3,
+     1,
+     1,
+     182,
+     157,
+     7
+    ],
+    [
+     "HC Zagreb",
+     5,
+     2,
+     0,
+     3,
+     146,
+     158,
+     4
+    ],
+    [
+     "RK Celje Pivovarna Laško",
+     5,
+     0,
+     0,
+     5,
+     150,
+     188,
+     0
+    ]
+   ],
+   "D": [
+    [
+     "Sporting Clube de Portugal",
+     4,
+     3,
+     1,
+     0,
+     149,
+     125,
+     7
+    ],
+    [
+     "GOG",
+     4,
+     3,
+     0,
+     1,
+     145,
+     139,
+     6
+    ],
+    [
+     "OTP Bank - PICK Szeged",
+     4,
+     1,
+     1,
+     2,
+     139,
+     136,
+     3
+    ],
+    [
+     "IFK Kristianstad",
+     4,
+     0,
+     0,
+     4,
+     122,
+     155,
+     0
+    ]
+   ],
+   "E": [
+    [
+     "Barça",
+     4,
+     4,
+     0,
+     0,
+     137,
+     104,
+     8
+    ],
+    [
+     "SAH - Aarhus",
+     5,
+     2,
+     1,
+     2,
+     150,
+     163,
+     5
+    ],
+    [
+     "Dinamo Bucuresti",
+     5,
+     1,
+     1,
+     3,
+     134,
+     145,
+     3
+    ],
+    [
+     "Montpellier Handball",
+     4,
+     1,
+     0,
+     3,
+     116,
+     125,
+     2
+    ]
+   ],
+   "F": [
+    [
+     "SC Magdeburg",
+     4,
+     4,
+     0,
+     0,
+     141,
+     108,
+     8
+    ],
+    [
+     "Industria Kielce",
+     5,
+     3,
+     0,
+     2,
+     155,
+     153,
+     6
+    ],
+    [
+     "HC Kriens-Luzern",
+     5,
+     2,
+     0,
+     3,
+     158,
+     161,
+     4
+    ],
+    [
+     "Kolstad Håndball",
+     4,
+     0,
+     0,
+     4,
+     111,
+     143,
+     0
+    ]
+   ]
+  }
+ },
+ "wst": {
+  "world_rankings_top36_2026-10-22": {
+   "Zhao Xintong": {
+    "rank": 1,
+    "prize_gbp": 1265550
+   },
+   "Wu Yize": {
+    "rank": 2,
+    "prize_gbp": 1238900
+   },
+   "Judd Trump": {
+    "rank": 3,
+    "prize_gbp": 1114050
+   },
+   "Neil Robertson": {
+    "rank": 4,
+    "prize_gbp": 1100200
+   },
+   "Mark Selby": {
+    "rank": 5,
+    "prize_gbp": 1070500
+   },
+   "John Higgins": {
+    "rank": 6,
+    "prize_gbp": 905000
+   },
+   "Shaun Murphy": {
+    "rank": 7,
+    "prize_gbp": 897350
+   },
+   "Mark Williams": {
+    "rank": 8,
+    "prize_gbp": 747400
+   },
+   "Kyren Wilson": {
+    "rank": 9,
+    "prize_gbp": 716800
+   },
+   "Barry Hawkins": {
+    "rank": 10,
+    "prize_gbp": 670050
+   },
+   "Chris Wakelin": {
+    "rank": 11,
+    "prize_gbp": 576550
+   },
+   "Mark Allen": {
+    "rank": 12,
+    "prize_gbp": 536050
+   },
+   "Ronnie O'Sullivan": {
+    "rank": 13,
+    "prize_gbp": 513750
+   },
+   "Xiao Guodong": {
+    "rank": 14,
+    "prize_gbp": 503900
+   },
+   "Ding Junhui": {
+    "rank": 15,
+    "prize_gbp": 479850
+   },
+   "Ali Carter": {
+    "rank": 16,
+    "prize_gbp": 414400
+   },
+   "Zhou Yuelong": {
+    "rank": 17,
+    "prize_gbp": 359100
+   },
+   "Jack Lisowski": {
+    "rank": 18,
+    "prize_gbp": 358100
+   },
+   "Stuart Bingham": {
+    "rank": 19,
+    "prize_gbp": 350550
+   },
+   "Chang Bingyu": {
+    "rank": 20,
+    "prize_gbp": 350200
+   },
+   "Zhang Anda": {
+    "rank": 21,
+    "prize_gbp": 332600
+   },
+   "Thepchaiya Un-Nooh": {
+    "rank": 22,
+    "prize_gbp": 329850
+   },
+   "Elliot Slessor": {
+    "rank": 23,
+    "prize_gbp": 329200
+   },
+   "Jak Jones": {
+    "rank": 24,
+    "prize_gbp": 319300
+   },
+   "Si Jiahui": {
+    "rank": 25,
+    "prize_gbp": 292500
+   },
+   "Yuan Sijun": {
+    "rank": 26,
+    "prize_gbp": 288400
+   },
+   "Gary Wilson": {
+    "rank": 27,
+    "prize_gbp": 286550
+   },
+   "Lei Peifan": {
+    "rank": 28,
+    "prize_gbp": 279050
+   },
+   "Pang Junxu": {
+    "rank": 29,
+    "prize_gbp": 272750
+   },
+   "Joe O'Connor": {
+    "rank": 30,
+    "prize_gbp": 245450
+   },
+   "Noppon Saengkham": {
+    "rank": 31,
+    "prize_gbp": 242500
+   },
+   "Hossein Vafaei": {
+    "rank": 32,
+    "prize_gbp": 242450
+   },
+   "Stephen Maguire": {
+    "rank": 33,
+    "prize_gbp": 235700
+   },
+   "David Gilbert": {
+    "rank": 34,
+    "prize_gbp": 221200
+   },
+   "Tom Ford": {
+    "rank": 35,
+    "prize_gbp": 199800
+   },
+   "Jackson Page": {
+    "rank": 36,
+    "prize_gbp": 198500
+   }
+  },
+  "ni_open_r3_22oct_rendered": [
+   [
+    "m50",
+    "08:00",
+    "Kyren Wilson",
+    "Pang Junxu",
+    "0444240f-c8b2-4382-ba57-bfab6d98f3a7"
+   ],
+   [
+    "m51",
+    "08:00",
+    "Matthew Selt",
+    "Sam Craigie",
+    "48c22dd7-97a3-48c3-ab9a-02f81c99d40c"
+   ],
+   [
+    "m52",
+    "09:00",
+    "Elliot Slessor",
+    "Ricky Walden",
+    "619c8075-153c-41f4-96a8-de15606cbdd8"
+   ],
+   [
+    "m49",
+    "09:00",
+    "Anthony McGill",
+    "Mateusz Baranowski",
+    "a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5"
+   ],
+   [
+    "m54",
+    "14:00",
+    "Mark Williams",
+    "Martin O'Donnell",
+    "eeff6e2d-f800-4831-a326-29a0e9e3cf6f"
+   ],
+   [
+    "m53",
+    "14:00",
+    "David Gilbert",
+    "Cheung Ka Wai",
+    "1e3806cf-eec4-42c7-b4fc-ed493bc6e236"
+   ],
+   [
+    "m56",
+    "15:00",
+    "Jordan Brown",
+    "Scott Donaldson",
+    "a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea"
+   ],
+   [
+    "m55",
+    "15:00",
+    "Jak Jones",
+    "Daniel Wells",
+    "ac39f86f-13b2-4688-9041-75fe72943900"
+   ]
+  ],
+  "season_stats_wilson_v_pang": {
+   "Kyren Wilson": {
+    "points": 9244,
+    "matches": 24,
+    "win_rate": "63%",
+    "avg_shot_time": 21.9,
+    "breaks_50plus": 48,
+    "centuries": 13
+   },
+   "Pang Junxu": {
+    "points": 8377,
+    "matches": 23,
+    "win_rate": "53%",
+    "avg_shot_time": 26.5,
+    "breaks_50plus": 52,
+    "centuries": 9
+   }
+  },
+  "irregularities": [
+   "Desk wst_top36 holds only 15 of the 36 ranked players; Kyren Wilson (#9, £716,800) is in the official top 36 but the desk row wst-2026-r3-m50 labels him 'prize value not captured'. Also missing from desk capture: Robertson #4, Selby #5, Allen #12, O'Sullivan #13, Xiao #14, Ding #15, Carter #16, Zhou #17, Lisowski #18, Chang #20, Un-Nooh #22, Si #25, Yuan #26, G. Wilson #27, Lei #28, J. O'Connor #30, Vafaei #32, Maguire #33, Ford #35, Page #36.",
+   "Desk snooker times (08:00/09:00/14:00/15:00, no zone) are the page-rendered values; the same renderer shows ET for every other site, so 08:00 = 12:00 UTC = 13:00 BST session, 14:00 = 18:00 UTC = 19:00 BST session."
+  ]
+ },
+ "cricket": {
+  "irregularities": [
+   "icc-271646 NZ v IND: desk says 2026-10-23 06:15 UTC; BCCI official match page says Thu 22 Oct 2026 07:00 UTC (Hagley Oval, Christchurch); ICC strip shows it in the 22 Oct list at 03:00 US-Eastern = 07:00 UTC. Desk date and time both wrong.",
+   "icc-269791 SA v AUS: desk lists as upcoming 2026-10-24 08:00 UTC; ICC shows this WTC Test already at Day 4 stumps on 22 Oct (SA 425/9d; AUS 99 & 156/4 following on, trail by 170). Row should be marked past/in-progress, not upcoming."
+  ]
+ },
+ "volleyball": {
+  "status": "not verifiable this session — plusliga.pl redirects to tauronliga.pl for the renderer; rows stay unlined"
+ },
+ "gaa": {
+  "status": "club championship fixtures not listed on gaa.ie national fixtures page; rows stay unlined/unverified"
+ }
+}

@@ -206,15 +206,19 @@ def main() -> None:
     # 5. Snooker: ensure all 6 existing rows + 2 originated WST Top-36 R2 matches carry official WST URLs
     snk = json.loads((EVENTS / "snooker.json").read_text())
     existing_snk = {r["match"] for r in snk}
+    # Originated WST ties keep their fixture-level match-centre URL on every
+    # run (idempotent); the remaining OLBG-listed rows point at the WST
+    # matches index.
+    originated_urls = {f"{s_row['p1']} v {s_row['p2']}": s_row["url"] for s_row in vin["snooker_originated"]}
     for r in snk:
-        r["official_fixture_source"] = "https://www.wst.tv/matches/"
+        r["official_fixture_source"] = originated_urls.get(r["match"], "https://www.wst.tv/matches/")
     for s_row in vin["snooker_originated"]:
         mname = f"{s_row['p1']} v {s_row['p2']}"
         if mname not in existing_snk:
             snk.append(
                 {
                     "match": mname,
-                    "competition": "BetVictor Northern Ireland Open — Round 2",
+                    "competition": "BetVictor Northern Ireland Open — Round 3" if s_row["id"].startswith("wst-2026-r3") else "BetVictor Northern Ireland Open — Round 2",
                     "listed_time": s_row["time"],
                     "market": "Win Match",
                     "top_selection": s_row["p1"],

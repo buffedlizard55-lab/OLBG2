@@ -1221,7 +1221,7 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 | R4 | Add fixtures for sports with no rows (Aussie Rules, eSports) if OLBG and an official body both confirm them | done — none published; both shown as zero-row sports | `arena/36f79c71-olbg2` | `data/verified/**`, `research/` |
 | R5 | High-confidence written predictions inside the required odds band | done — 13 band picks, 1.40–1.42, each with a ≥30-word prediction | `arena/36f79c71-olbg2` | `data/verified/predictions.json` |
 | R6 | Unified landing page and category pages over one deduplicated dataset | done — 10 root pages + 17 sport pages over 155 rows | `arena/36f79c71-olbg2` | root `index.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
-| R7 | Final integration: re-verify, link-check, PR, merge, Pages | in progress — build, 61 tests and 0 local link errors; PR/merge recorded below | `arena/36f79c71-olbg2` | shared outputs |
+| R7 | Final integration: re-verify, link-check, PR, merge, Pages | done — PR #50, #51 and #52 merged; Pages live | `arena/36f79c71-olbg2` | shared outputs |
 
 **Scope discipline.** This session is the final integration session: it may regenerate shared outputs
 (`index.html`, `sports/**`, navigation, the unified table data) because every earlier session's board is closed
@@ -1252,3 +1252,17 @@ governing body or league. A row whose event date has passed is labelled `past` r
 (VF-17), the NBA 2026-10-22 slate that no reachable NBA endpoint would render (VF-14), World Series Game 4 and the
 conditional Games 5–7 (VF-15), and the 63 rows whose official URL identifies the competition rather than the
 fixture (VF-11). No value was inferred to close any of them.
+
+## Merge and deployment record — 2026-10-22
+
+| Step | Reference | Result |
+|---|---|---|
+| Dashboard, data, tests and docs | [PR #50](https://github.com/buffedlizard55-lab/OLBG2/pull/50) | merged as `d49787c` at 01:37:17Z; validate check passed |
+| Pages deployment workflow | [PR #51](https://github.com/buffedlizard55-lab/OLBG2/pull/51) | merged as `545c62a`; `Deploy Pages` succeeded, deployment 01:45:19Z → SUCCESS 01:49:47Z |
+| Table-filter fix | [PR #52](https://github.com/buffedlizard55-lab/OLBG2/pull/52) | merged as `0df1e01`; deployment 01:59:37Z → SUCCESS 02:03:07Z |
+
+Live checks after the final deployment: `/index.html` returns the unified dashboard (155 rows, 112 originated, 13
+band picks, 33 predictions, 18 review items), `/matches.html` renders all 155 rows with a working filter
+(“155 of 155 rows”), `/verification.html` shows 92 fixture-scoped and 63 competition-scoped sources, and
+`/sports/snooker.html` is live. The site had been frozen since 2026-10-21 05:18Z because the Pages build of the
+PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push to `main`.

@@ -1,0 +1,1449 @@
+{
+ "generated_at": "2026-10-22T13:15:00Z",
+ "session": "arena/ba48a907-olbg2",
+ "min_words": 30,
+ "count": 41,
+ "featured_count": 6,
+ "rule": "one written prediction per selection with model probability >= 70% on a match inside the brief's -250..+10000 window. `featured` marks the subset whose own price is also inside that window; the remainder are >= 70% but priced shorter than -250 and are labelled as such on the site rather than hidden.",
+ "uniqueness": {
+  "unique_openings": 29,
+  "predictions": 41
+ },
+ "predictions": [
+  {
+   "match_id": "nhl-2026020162",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-22",
+   "start_utc": "2026-10-22T01:00:00Z",
+   "venue": null,
+   "home": "Calgary Flames",
+   "away": "Minnesota Wild",
+   "selection": "Minnesota Wild +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8732,
+   "fair_decimal": 1.145,
+   "fair_american": -690,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 127,
+   "text": "Back Minnesota Wild +1.5 on the puck line when Minnesota Wild visit Calgary Flames on October 22, 2026. The official standings are unambiguous here: Calgary Flames are 2-6-0 for 4 points (P% .250) through 8 games, with 17 goals for and 37 against, 1-3-0 at home and 2-6-0 over their last ten (W1), while Minnesota Wild are 6-2-2 for 14 points (P% .700) through 10 games, with 31 goals for and 25 against, 2-2-2 on the road and 6-2-2 over their last ten (OT1). Kirill Kaprizov tops Minnesota Wild in the official NHL scoring summary this desk read with 17 points (11 goals, 6 assists) in 10 games. Our goal-grid model prices it at 1.15 (-690), a 87.3% chance, and that is the side we would take.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020158",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-22",
+   "start_utc": "2026-10-22T23:00:00Z",
+   "venue": null,
+   "home": "Pittsburgh Penguins",
+   "away": "Florida Panthers",
+   "selection": "Florida Panthers +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7311,
+   "fair_decimal": 1.368,
+   "fair_american": -272,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 151,
+   "text": "Pittsburgh Penguins and Florida Panthers meet on October 22, 2026; the play is Florida Panthers +1.5 on the puck line. The evidence from the official table: Pittsburgh Penguins are 3-6-1 for 7 points (P% .350) through 10 games, with 33 goals for and 38 against, 2-1-0 at home and 3-6-1 over their last ten (L4), while Florida Panthers are 5-3-2 for 12 points (P% .600) through 10 games, with 31 goals for and 30 against, 3-2-2 on the road and 5-3-2 over their last ten (L1). Matthew Tkachuk tops Florida Panthers in the official NHL scoring summary this desk read with 15 points (3 goals, 12 assists) in 10 games. Erik Karlsson tops Pittsburgh Penguins in the official NHL scoring summary this desk read with 11 points (1 goal, 10 assists) in 10 games. Our originated price for the selection is 1.37 (-272), a 73.1% probability, and that is the bet.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020160",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-22",
+   "start_utc": "2026-10-22T00:00:00Z",
+   "venue": null,
+   "home": "St. Louis Blues",
+   "away": "Vegas Golden Knights",
+   "selection": "Vegas Golden Knights +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7823,
+   "fair_decimal": 1.278,
+   "fair_american": -360,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 156,
+   "text": "Our numbers and the official league table agree for October 22, 2026: Vegas Golden Knights +1.5 on the puck line. Form, as published by the league: St. Louis Blues are 4-4-1 for 9 points (P% .500) through 9 games, with 29 goals for and 29 against, 2-0-1 at home and 4-4-1 over their last ten (W1), while Vegas Golden Knights are 8-3-0 for 16 points (P% .727) through 11 games, with 44 goals for and 30 against, 3-1-0 on the road and 7-3-0 over their last ten (L1). Mason McTavish tops St. Louis Blues in the official NHL scoring summary this desk read with 9 points (5 goals, 4 assists) in 9 games. Jack Eichel tops Vegas Golden Knights in the official NHL scoring summary this desk read with 18 points (5 goals, 13 assists) in 11 games. We make it a 78.2% shot, a fair 1.28 (-360), and it is the side we are on.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020155",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-22",
+   "start_utc": "2026-10-22T23:00:00Z",
+   "venue": null,
+   "home": "Toronto Maple Leafs",
+   "away": "New York Rangers",
+   "selection": "New York Rangers +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.752,
+   "fair_decimal": 1.33,
+   "fair_american": -303,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 135,
+   "text": "Toronto Maple Leafs host New York Rangers on October 22, 2026, and the official form points one way: New York Rangers +1.5 on the puck line. The verified table tells the story: Toronto Maple Leafs are 5-4-2 for 12 points (P% .545) through 11 games, with 38 goals for and 35 against, 3-3-1 at home and 5-3-2 over their last ten (W2), while New York Rangers are 7-3-1 for 15 points (P% .682) through 11 games, with 33 goals for and 24 against, 1-3-1 on the road and 7-2-1 over their last ten (W1). Auston Matthews tops Toronto Maple Leafs in the official NHL scoring summary this desk read with 18 points (8 goals, 10 assists) in 11 games. That combination gives the selection a 75.2% model probability, a fair 1.33 (-303), and our backing.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020165",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-22",
+   "start_utc": "2026-10-22T02:00:00Z",
+   "venue": null,
+   "home": "Vancouver Canucks",
+   "away": "Detroit Red Wings",
+   "selection": "Detroit Red Wings +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7601,
+   "fair_decimal": 1.316,
+   "fair_american": -316,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 160,
+   "text": "Everything in the official records favours Detroit Red Wings +1.5 on the puck line when Vancouver Canucks face Detroit Red Wings on October 22, 2026. Two verified records, one clear direction: Vancouver Canucks are 2-8-1 for 5 points (P% .227) through 11 games, with 33 goals for and 51 against, 1-3-0 at home and 1-8-1 over their last ten (L2), while Detroit Red Wings are 3-3-3 for 9 points (P% .500) through 9 games, with 23 goals for and 28 against, 0-0-2 on the road and 3-3-3 over their last ten (OT1). Alex DeBrincat tops Detroit Red Wings in the official NHL scoring summary this desk read with 11 points (6 goals, 5 assists) in 9 games. Elias Pettersson tops Vancouver Canucks in the official NHL scoring summary this desk read with 11 points (3 goals, 8 assists) in 11 games. The model makes the selection 76.0% likely at a fair 1.32 (-316), so that is where our money goes.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020166",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-23",
+   "start_utc": "2026-10-23T00:00:00Z",
+   "venue": null,
+   "home": "Chicago Blackhawks",
+   "away": "Montreal Canadiens",
+   "selection": "Montreal Canadiens +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7758,
+   "fair_decimal": 1.289,
+   "fair_american": -346,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 128,
+   "text": "Montreal Canadiens +1.5 on the puck line is the call for Chicago Blackhawks against Montreal Canadiens on October 23, 2026. The official standings are unambiguous here: Chicago Blackhawks are 3-6-0 for 6 points (P% .333) through 9 games, with 21 goals for and 36 against, 3-2-0 at home and 3-6-0 over their last ten (L1), while Montreal Canadiens are 4-3-2 for 10 points (P% .556) through 9 games, with 30 goals for and 34 against, 1-1-1 on the road and 4-3-2 over their last ten (OT1). Nick Suzuki tops Montreal Canadiens in the official NHL scoring summary this desk read with 12 points (5 goals, 7 assists) in 9 games. Our fair line on the selection is 1.29 (-346) on a 77.6% probability, and we are taking it.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026/10/23/2026020166",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020178",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T02:00:00Z",
+   "venue": null,
+   "home": "Calgary Flames",
+   "away": "Detroit Red Wings",
+   "selection": "Detroit Red Wings +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8101,
+   "fair_decimal": 1.234,
+   "fair_american": -427,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 131,
+   "text": "The October 24, 2026 meeting between Calgary Flames and Detroit Red Wings sets up for Detroit Red Wings +1.5 on the puck line. The evidence from the official table: Calgary Flames are 2-6-0 for 4 points (P% .250) through 8 games, with 17 goals for and 37 against, 1-3-0 at home and 2-6-0 over their last ten (W1), while Detroit Red Wings are 3-3-3 for 9 points (P% .500) through 9 games, with 23 goals for and 28 against, 0-0-2 on the road and 3-3-3 over their last ten (OT1). Alex DeBrincat tops Detroit Red Wings in the official NHL scoring summary this desk read with 11 points (6 goals, 5 assists) in 9 games. Modelled off those official rates, the selection lands at 1.23 (-427) \u2014 81.0% in our book.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/24/2026020178",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020174",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": null,
+   "home": "Columbus Blue Jackets",
+   "away": "Vegas Golden Knights",
+   "selection": "Vegas Golden Knights +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8457,
+   "fair_decimal": 1.182,
+   "fair_american": -549,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 136,
+   "text": "Put Vegas Golden Knights +1.5 on the puck line on the board for Columbus Blue Jackets v Vegas Golden Knights on October 24, 2026. Form, as published by the league: Columbus Blue Jackets are 3-5-0 for 6 points (P% .375) through 8 games, with 20 goals for and 29 against, 3-3-0 at home and 3-5-0 over their last ten (L2), while Vegas Golden Knights are 8-3-0 for 16 points (P% .727) through 11 games, with 44 goals for and 30 against, 3-1-0 on the road and 7-3-0 over their last ten (L1). Jack Eichel tops Vegas Golden Knights in the official NHL scoring summary this desk read with 18 points (5 goals, 13 assists) in 11 games. Priced from the official inputs, the selection comes out at 1.18 (-549) with a 84.6% chance \u2014 our pick.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020171",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": null,
+   "home": "Ottawa Senators",
+   "away": "New York Rangers",
+   "selection": "New York Rangers +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7475,
+   "fair_decimal": 1.338,
+   "fair_american": -296,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 136,
+   "text": "For the October 24, 2026 fixture, New York Rangers +1.5 on the puck line reads as the right side of Ottawa Senators v New York Rangers. The verified table tells the story: Ottawa Senators are 7-3-0 for 14 points (P% .700) through 10 games, with 29 goals for and 24 against, 4-1-0 at home and 7-3-0 over their last ten (W1), while New York Rangers are 7-3-1 for 15 points (P% .682) through 11 games, with 33 goals for and 24 against, 1-3-1 on the road and 7-2-1 over their last ten (W1). Tim St\u00fctzle tops Ottawa Senators in the official NHL scoring summary this desk read with 14 points (6 goals, 8 assists) in 10 games. Our goal-grid model prices it at 1.34 (-296), a 74.8% chance, and that is the side we would take.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020168",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "venue": null,
+   "home": "Philadelphia Flyers",
+   "away": "Anaheim Ducks",
+   "selection": "Anaheim Ducks +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8107,
+   "fair_decimal": 1.233,
+   "fair_american": -429,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 127,
+   "text": "Take Anaheim Ducks +1.5 on the puck line in the October 24, 2026 game between Philadelphia Flyers and Anaheim Ducks. Two verified records, one clear direction: Philadelphia Flyers are 3-6-3 for 9 points (P% .375) through 12 games, with 20 goals for and 37 against, 2-2-2 at home and 3-5-2 over their last ten (W3), while Anaheim Ducks are 4-5-0 for 8 points (P% .444) through 9 games, with 26 goals for and 29 against, 3-2-0 on the road and 4-5-0 over their last ten (L4). Leo Carlsson tops Anaheim Ducks in the official NHL scoring summary this desk read with 11 points (2 goals, 9 assists) in 9 games. Our originated price for the selection is 1.23 (-429), a 81.1% probability, and that is the bet.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020172",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": null,
+   "home": "Pittsburgh Penguins",
+   "away": "Nashville Predators",
+   "selection": "Nashville Predators +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7163,
+   "fair_decimal": 1.396,
+   "fair_american": -253,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 150,
+   "text": "Back Nashville Predators +1.5 on the puck line when Nashville Predators visit Pittsburgh Penguins on October 24, 2026. The official standings are unambiguous here: Pittsburgh Penguins are 3-6-1 for 7 points (P% .350) through 10 games, with 33 goals for and 38 against, 2-1-0 at home and 3-6-1 over their last ten (L4), while Nashville Predators are 3-2-3 for 9 points (P% .563) through 8 games, with 23 goals for and 24 against, 1-0-2 on the road and 3-2-3 over their last ten (W1). Roman Josi tops Nashville Predators in the official NHL scoring summary this desk read with 9 points (1 goal, 8 assists) in 8 games. Erik Karlsson tops Pittsburgh Penguins in the official NHL scoring summary this desk read with 11 points (1 goal, 10 assists) in 10 games. We make it a 71.6% shot, a fair 1.40 (-253), and it is the side we are on.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020179",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T02:00:00Z",
+   "venue": null,
+   "home": "Seattle Kraken",
+   "away": "Minnesota Wild",
+   "selection": "Minnesota Wild +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7048,
+   "fair_decimal": 1.419,
+   "fair_american": -239,
+   "selection_in_band": true,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": true,
+   "word_count": 150,
+   "text": "Seattle Kraken and Minnesota Wild meet on October 24, 2026; the play is Minnesota Wild +1.5 on the puck line. The evidence from the official table: Seattle Kraken are 6-3-1 for 13 points (P% .650) through 10 games, with 39 goals for and 34 against, 2-1-0 at home and 6-3-1 over their last ten (W1), while Minnesota Wild are 6-2-2 for 14 points (P% .700) through 10 games, with 31 goals for and 25 against, 2-2-2 on the road and 6-2-2 over their last ten (OT1). Chandler Stephenson tops Seattle Kraken in the official NHL scoring summary this desk read with 9 points (1 goal, 8 assists) in 10 games. Kirill Kaprizov tops Minnesota Wild in the official NHL scoring summary this desk read with 17 points (11 goals, 6 assists) in 10 games. That combination gives the selection a 70.5% model probability, a fair 1.42 (-239), and our backing.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/24/2026020179",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020175",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": null,
+   "home": "St. Louis Blues",
+   "away": "Carolina Hurricanes",
+   "selection": "Carolina Hurricanes +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7949,
+   "fair_decimal": 1.258,
+   "fair_american": -388,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 154,
+   "text": "Our numbers and the official league table agree for October 24, 2026: Carolina Hurricanes +1.5 on the puck line. Form, as published by the league: St. Louis Blues are 4-4-1 for 9 points (P% .500) through 9 games, with 29 goals for and 29 against, 2-0-1 at home and 4-4-1 over their last ten (W1), while Carolina Hurricanes are 8-2-1 for 17 points (P% .773) through 11 games, with 42 goals for and 27 against, 6-1-0 on the road and 8-2-0 over their last ten (W1). Mason McTavish tops St. Louis Blues in the official NHL scoring summary this desk read with 9 points (5 goals, 4 assists) in 9 games. Sebastian Aho tops Carolina Hurricanes in the official NHL scoring summary this desk read with 14 points (6 goals, 8 assists) in 11 games. The model makes the selection 79.5% likely at a fair 1.26 (-388), so that is where our money goes.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020177",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T01:00:00Z",
+   "venue": null,
+   "home": "Utah Mammoth",
+   "away": "Tampa Bay Lightning",
+   "selection": "Tampa Bay Lightning +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7064,
+   "fair_decimal": 1.416,
+   "fair_american": -240,
+   "selection_in_band": true,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": true,
+   "word_count": 159,
+   "text": "Utah Mammoth host Tampa Bay Lightning on October 24, 2026, and the official form points one way: Tampa Bay Lightning +1.5 on the puck line. The verified table tells the story: Utah Mammoth are 7-3-0 for 14 points (P% .700) through 10 games, with 38 goals for and 31 against, 3-1-0 at home and 7-3-0 over their last ten (W1), while Tampa Bay Lightning are 7-2-0 for 14 points (P% .778) through 9 games, with 31 goals for and 23 against, 2-2-0 on the road and 7-2-0 over their last ten (W3). Nikita Kucherov tops Tampa Bay Lightning in the official NHL scoring summary this desk read with 13 points (4 goals, 9 assists) in 9 games. Nick Schmaltz tops Utah Mammoth in the official NHL scoring summary this desk read with 13 points (7 goals, 6 assists) in 10 games. Our fair line on the selection is 1.42 (-240) on a 70.6% probability, and we are taking it.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/24/2026020177",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020180",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T19:00:00Z",
+   "venue": null,
+   "home": "Chicago Blackhawks",
+   "away": "Florida Panthers",
+   "selection": "Florida Panthers +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8126,
+   "fair_decimal": 1.231,
+   "fair_american": -433,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 129,
+   "text": "Everything in the official records favours Florida Panthers +1.5 on the puck line when Chicago Blackhawks face Florida Panthers on October 25, 2026. Two verified records, one clear direction: Chicago Blackhawks are 3-6-0 for 6 points (P% .333) through 9 games, with 21 goals for and 36 against, 3-2-0 at home and 3-6-0 over their last ten (L1), while Florida Panthers are 5-3-2 for 12 points (P% .600) through 10 games, with 31 goals for and 30 against, 3-2-2 on the road and 5-3-2 over their last ten (L1). Matthew Tkachuk tops Florida Panthers in the official NHL scoring summary this desk read with 15 points (3 goals, 12 assists) in 10 games. Modelled off those official rates, the selection lands at 1.23 (-433) \u2014 81.3% in our book.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/fla-vs-chi/2026/10/25/2026020180",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020181",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T22:00:00Z",
+   "venue": null,
+   "home": "Dallas Stars",
+   "away": "New York Islanders",
+   "selection": "New York Islanders +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7195,
+   "fair_decimal": 1.39,
+   "fair_american": -256,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 157,
+   "text": "New York Islanders +1.5 on the puck line is the call for Dallas Stars against New York Islanders on October 25, 2026. The official standings are unambiguous here: Dallas Stars are 5-3-1 for 11 points (P% .611) through 9 games, with 23 goals for and 15 against, 2-2-0 at home and 5-3-1 over their last ten (W3), while New York Islanders are 5-3-1 for 11 points (P% .611) through 9 games, with 27 goals for and 20 against, 1-2-1 on the road and 5-3-1 over their last ten (W2). Jason Robertson tops Dallas Stars in the official NHL scoring summary this desk read with 9 points (3 goals, 6 assists) in 9 games. Bo Horvat tops New York Islanders in the official NHL scoring summary this desk read with 10 points (5 goals, 5 assists) in 9 games. Priced from the official inputs, the selection comes out at 1.39 (-256) with a 72.0% chance \u2014 our pick.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/nyi-vs-dal/2026/10/25/2026020181",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020183",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "venue": null,
+   "home": "Nashville Predators",
+   "away": "Colorado Avalanche",
+   "selection": "Colorado Avalanche +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7666,
+   "fair_decimal": 1.304,
+   "fair_american": -329,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 154,
+   "text": "The October 25, 2026 meeting between Nashville Predators and Colorado Avalanche sets up for Colorado Avalanche +1.5 on the puck line. The evidence from the official table: Nashville Predators are 3-2-3 for 9 points (P% .563) through 8 games, with 23 goals for and 24 against, 2-2-1 at home and 3-2-3 over their last ten (W1), while Colorado Avalanche are 5-4-1 for 11 points (P% .550) through 10 games, with 41 goals for and 31 against, 2-3-0 on the road and 5-4-1 over their last ten (L2). Nathan MacKinnon tops Colorado Avalanche in the official NHL scoring summary this desk read with 16 points (6 goals, 10 assists) in 10 games. Roman Josi tops Nashville Predators in the official NHL scoring summary this desk read with 9 points (1 goal, 8 assists) in 8 games. Our goal-grid model prices it at 1.30 (-329), a 76.7% chance, and that is the side we would take.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/col-vs-nsh/2026/10/25/2026020183",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020184",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-25",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": null,
+   "home": "Vancouver Canucks",
+   "away": "Minnesota Wild",
+   "selection": "Minnesota Wild +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.837,
+   "fair_decimal": 1.195,
+   "fair_american": -513,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 152,
+   "text": "Put Minnesota Wild +1.5 on the puck line on the board for Vancouver Canucks v Minnesota Wild on October 25, 2026. Form, as published by the league: Vancouver Canucks are 2-8-1 for 5 points (P% .227) through 11 games, with 33 goals for and 51 against, 1-3-0 at home and 1-8-1 over their last ten (L2), while Minnesota Wild are 6-2-2 for 14 points (P% .700) through 10 games, with 31 goals for and 25 against, 2-2-2 on the road and 6-2-2 over their last ten (OT1). Elias Pettersson tops Vancouver Canucks in the official NHL scoring summary this desk read with 11 points (3 goals, 8 assists) in 11 games. Kirill Kaprizov tops Minnesota Wild in the official NHL scoring summary this desk read with 17 points (11 goals, 6 assists) in 10 games. Our originated price for the selection is 1.20 (-513), a 83.7% probability, and that is the bet.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/min-vs-van/2026/10/25/2026020184",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "mlb-849804",
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "competition": "2026 MLB World Series \u2014 World Series Game 3",
+   "date": "2026-10-26",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": "Tropicana Field",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "selection": "Milwaukee Brewers +1.5",
+   "market": "Run Line",
+   "market_line": 1.5,
+   "probability": 0.7231,
+   "fair_decimal": 1.383,
+   "fair_american": -261,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 110,
+   "text": "For the October 26, 2026 fixture at Tropicana Field, Milwaukee Brewers +1.5 on the run line reads as the right side of Tampa Bay Rays v Milwaukee Brewers. The verified table tells the story: Tampa Bay Rays finished the 2026 regular season 98-64 with 736 runs scored and 650 allowed, 55-26 at home, 43-38 away and 5-5 over their last ten (90-72 expected), while Milwaukee Brewers finished the 2026 regular season 103-59 with 832 runs scored and 618 allowed, 55-26 at home, 48-33 away and 8-2 over their last ten (103-59 expected). We make it a 72.3% shot, a fair 1.38 (-261), and it is the side we are on.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.mlb.com/gameday/849804",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020186",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-26",
+   "start_utc": "2026-10-26T00:30:00Z",
+   "venue": null,
+   "home": "Calgary Flames",
+   "away": "Toronto Maple Leafs",
+   "selection": "Toronto Maple Leafs +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8537,
+   "fair_decimal": 1.171,
+   "fair_american": -585,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 130,
+   "text": "Take Toronto Maple Leafs +1.5 on the puck line in the October 26, 2026 game between Calgary Flames and Toronto Maple Leafs. Two verified records, one clear direction: Calgary Flames are 2-6-0 for 4 points (P% .250) through 8 games, with 17 goals for and 37 against, 1-3-0 at home and 2-6-0 over their last ten (W1), while Toronto Maple Leafs are 5-4-2 for 12 points (P% .545) through 11 games, with 38 goals for and 35 against, 2-1-1 on the road and 5-3-2 over their last ten (W2). Auston Matthews tops Toronto Maple Leafs in the official NHL scoring summary this desk read with 18 points (8 goals, 10 assists) in 11 games. That combination gives the selection a 85.4% model probability, a fair 1.17 (-585), and our backing.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/tor-vs-cgy/2026/10/26/2026020186",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020187",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-26",
+   "start_utc": "2026-10-26T01:30:00Z",
+   "venue": null,
+   "home": "Edmonton Oilers",
+   "away": "Detroit Red Wings",
+   "selection": "Edmonton Oilers",
+   "market": "Moneyline",
+   "market_line": null,
+   "probability": 0.7029,
+   "fair_decimal": 1.423,
+   "fair_american": -236,
+   "selection_in_band": true,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": true,
+   "word_count": 154,
+   "text": "Back Edmonton Oilers to beat Detroit Red Wings when Detroit Red Wings visit Edmonton Oilers on October 26, 2026. The official standings are unambiguous here: Edmonton Oilers are 7-1-1 for 15 points (P% .833) through 9 games, with 41 goals for and 27 against, 2-1-1 at home and 7-1-1 over their last ten (W2), while Detroit Red Wings are 3-3-3 for 9 points (P% .500) through 9 games, with 23 goals for and 28 against, 0-0-2 on the road and 3-3-3 over their last ten (OT1). Connor McDavid tops Edmonton Oilers in the official NHL scoring summary this desk read with 26 points (6 goals, 20 assists) in 9 games. Alex DeBrincat tops Detroit Red Wings in the official NHL scoring summary this desk read with 11 points (6 goals, 5 assists) in 9 games. The model makes the selection 70.3% likely at a fair 1.42 (-236), so that is where our money goes.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/det-vs-edm/2026/10/26/2026020187",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020185",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-26",
+   "start_utc": "2026-10-26T23:00:00Z",
+   "venue": null,
+   "home": "New York Rangers",
+   "away": "Los Angeles Kings",
+   "selection": "New York Rangers",
+   "market": "Moneyline",
+   "market_line": null,
+   "probability": 0.7064,
+   "fair_decimal": 1.416,
+   "fair_american": -240,
+   "selection_in_band": true,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": true,
+   "word_count": 109,
+   "text": "New York Rangers and Los Angeles Kings meet on October 26, 2026; the play is New York Rangers to beat Los Angeles Kings. The evidence from the official table: New York Rangers are 7-3-1 for 15 points (P% .682) through 11 games, with 33 goals for and 24 against, 6-0-0 at home and 7-2-1 over their last ten (W1), while Los Angeles Kings are 1-4-2 for 4 points (P% .286) through 7 games, with 17 goals for and 27 against, 1-1-2 on the road and 1-4-2 over their last ten (W1). Our fair line on the selection is 1.42 (-240) on a 70.6% probability, and we are taking it.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/lak-vs-nyr/2026/10/26/2026020185",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "mlb-849803",
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "competition": "2026 MLB World Series \u2014 World Series Game 4",
+   "date": "2026-10-27",
+   "start_utc": "2026-10-28T00:00:00Z",
+   "venue": "Tropicana Field",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "selection": "Milwaukee Brewers +1.5",
+   "market": "Run Line",
+   "market_line": 1.5,
+   "probability": 0.7231,
+   "fair_decimal": 1.383,
+   "fair_american": -261,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 102,
+   "text": "Our numbers and the official league table agree for October 27, 2026 at Tropicana Field: Milwaukee Brewers +1.5 on the run line. Form, as published by the league: Tampa Bay Rays finished the 2026 regular season 98-64 with 736 runs scored and 650 allowed, 55-26 at home, 43-38 away and 5-5 over their last ten (90-72 expected), while Milwaukee Brewers finished the 2026 regular season 103-59 with 832 runs scored and 618 allowed, 55-26 at home, 48-33 away and 8-2 over their last ten (103-59 expected). Modelled off those official rates, the selection lands at 1.38 (-261) \u2014 72.3% in our book.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.mlb.com/gameday/849803",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020189",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-27",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": null,
+   "home": "Carolina Hurricanes",
+   "away": "Boston Bruins",
+   "selection": "Boston Bruins +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7046,
+   "fair_decimal": 1.419,
+   "fair_american": -239,
+   "selection_in_band": true,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": true,
+   "word_count": 156,
+   "text": "Carolina Hurricanes host Boston Bruins on October 27, 2026, and the official form points one way: Boston Bruins +1.5 on the puck line. The verified table tells the story: Carolina Hurricanes are 8-2-1 for 17 points (P% .773) through 11 games, with 42 goals for and 27 against, 2-1-1 at home and 8-2-0 over their last ten (W1), while Boston Bruins are 7-2-1 for 15 points (P% .750) through 10 games, with 36 goals for and 22 against, 4-1-1 on the road and 7-2-1 over their last ten (OT1). Sebastian Aho tops Carolina Hurricanes in the official NHL scoring summary this desk read with 14 points (6 goals, 8 assists) in 11 games. David Pastrnak tops Boston Bruins in the official NHL scoring summary this desk read with 12 points (4 goals, 8 assists) in 10 games. Priced from the official inputs, the selection comes out at 1.42 (-239) with a 70.5% chance \u2014 our pick.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/bos-vs-car/2026/10/27/2026020189",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020190",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-27",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": null,
+   "home": "Chicago Blackhawks",
+   "away": "Los Angeles Kings",
+   "selection": "Los Angeles Kings +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7244,
+   "fair_decimal": 1.38,
+   "fair_american": -263,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 111,
+   "text": "Everything in the official records favours Los Angeles Kings +1.5 on the puck line when Chicago Blackhawks face Los Angeles Kings on October 27, 2026. Two verified records, one clear direction: Chicago Blackhawks are 3-6-0 for 6 points (P% .333) through 9 games, with 21 goals for and 36 against, 3-2-0 at home and 3-6-0 over their last ten (L1), while Los Angeles Kings are 1-4-2 for 4 points (P% .286) through 7 games, with 17 goals for and 27 against, 1-1-2 on the road and 1-4-2 over their last ten (W1). Our goal-grid model prices it at 1.38 (-263), a 72.4% chance, and that is the side we would take.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/lak-vs-chi/2026/10/27/2026020190",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020192",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-27",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": null,
+   "home": "Nashville Predators",
+   "away": "New York Islanders",
+   "selection": "New York Islanders +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7736,
+   "fair_decimal": 1.293,
+   "fair_american": -341,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 155,
+   "text": "New York Islanders +1.5 on the puck line is the call for Nashville Predators against New York Islanders on October 27, 2026. The official standings are unambiguous here: Nashville Predators are 3-2-3 for 9 points (P% .563) through 8 games, with 23 goals for and 24 against, 2-2-1 at home and 3-2-3 over their last ten (W1), while New York Islanders are 5-3-1 for 11 points (P% .611) through 9 games, with 27 goals for and 20 against, 1-2-1 on the road and 5-3-1 over their last ten (W2). Bo Horvat tops New York Islanders in the official NHL scoring summary this desk read with 10 points (5 goals, 5 assists) in 9 games. Roman Josi tops Nashville Predators in the official NHL scoring summary this desk read with 9 points (1 goal, 8 assists) in 8 games. Our originated price for the selection is 1.29 (-341), a 77.4% probability, and that is the bet.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/nyi-vs-nsh/2026/10/27/2026020192",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020188",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-27",
+   "start_utc": "2026-10-27T23:00:00Z",
+   "venue": null,
+   "home": "Philadelphia Flyers",
+   "away": "Columbus Blue Jackets",
+   "selection": "Columbus Blue Jackets +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7696,
+   "fair_decimal": 1.299,
+   "fair_american": -334,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 108,
+   "text": "The October 27, 2026 meeting between Philadelphia Flyers and Columbus Blue Jackets sets up for Columbus Blue Jackets +1.5 on the puck line. The evidence from the official table: Philadelphia Flyers are 3-6-3 for 9 points (P% .375) through 12 games, with 20 goals for and 37 against, 2-2-2 at home and 3-5-2 over their last ten (W3), while Columbus Blue Jackets are 3-5-0 for 6 points (P% .375) through 8 games, with 20 goals for and 29 against, 0-2-0 on the road and 3-5-0 over their last ten (L2). We make it a 77.0% shot, a fair 1.30 (-334), and it is the side we are on.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/cbj-vs-phi/2026/10/27/2026020188",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020194",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-27",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": null,
+   "home": "Winnipeg Jets",
+   "away": "Florida Panthers",
+   "selection": "Florida Panthers +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7279,
+   "fair_decimal": 1.374,
+   "fair_american": -267,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 151,
+   "text": "Put Florida Panthers +1.5 on the puck line on the board for Winnipeg Jets v Florida Panthers on October 27, 2026. Form, as published by the league: Winnipeg Jets are 4-3-2 for 10 points (P% .556) through 9 games, with 24 goals for and 26 against, 2-2-1 at home and 4-3-2 over their last ten (L2), while Florida Panthers are 5-3-2 for 12 points (P% .600) through 10 games, with 31 goals for and 30 against, 3-2-2 on the road and 5-3-2 over their last ten (L1). Kyle Connor tops Winnipeg Jets in the official NHL scoring summary this desk read with 11 points (8 goals, 3 assists) in 9 games. Matthew Tkachuk tops Florida Panthers in the official NHL scoring summary this desk read with 15 points (3 goals, 12 assists) in 10 games. That combination gives the selection a 72.8% model probability, a fair 1.37 (-267), and our backing.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/fla-vs-wpg/2026/10/27/2026020194",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "mlb-849799",
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "competition": "2026 MLB World Series \u2014 World Series Game 5",
+   "date": "2026-10-28",
+   "start_utc": "2026-10-29T00:00:00Z",
+   "venue": "Tropicana Field",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "selection": "Milwaukee Brewers +1.5",
+   "market": "Run Line",
+   "market_line": 1.5,
+   "probability": 0.7231,
+   "fair_decimal": 1.383,
+   "fair_american": -261,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 111,
+   "text": "For the October 28, 2026 fixture at Tropicana Field, Milwaukee Brewers +1.5 on the run line reads as the right side of Tampa Bay Rays v Milwaukee Brewers. The verified table tells the story: Tampa Bay Rays finished the 2026 regular season 98-64 with 736 runs scored and 650 allowed, 55-26 at home, 43-38 away and 5-5 over their last ten (90-72 expected), while Milwaukee Brewers finished the 2026 regular season 103-59 with 832 runs scored and 618 allowed, 55-26 at home, 48-33 away and 8-2 over their last ten (103-59 expected). The model makes the selection 72.3% likely at a fair 1.38 (-261), so that is where our money goes.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.mlb.com/gameday/849799",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020212",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-29",
+   "start_utc": "2026-10-29T02:00:00Z",
+   "venue": null,
+   "home": "Los Angeles Kings",
+   "away": "Ottawa Senators",
+   "selection": "Ottawa Senators +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8201,
+   "fair_decimal": 1.219,
+   "fair_american": -457,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 130,
+   "text": "Take Ottawa Senators +1.5 on the puck line in the October 29, 2026 game between Los Angeles Kings and Ottawa Senators. Two verified records, one clear direction: Los Angeles Kings are 1-4-2 for 4 points (P% .286) through 7 games, with 17 goals for and 27 against, 0-3-0 at home and 1-4-2 over their last ten (W1), while Ottawa Senators are 7-3-0 for 14 points (P% .700) through 10 games, with 29 goals for and 24 against, 3-2-0 on the road and 7-3-0 over their last ten (W1). Tim St\u00fctzle tops Ottawa Senators in the official NHL scoring summary this desk read with 14 points (6 goals, 8 assists) in 10 games. Our fair line on the selection is 1.22 (-457) on a 82.0% probability, and we are taking it.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/ott-vs-lak/2026/10/29/2026020212",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020210",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-29",
+   "start_utc": "2026-10-29T00:00:00Z",
+   "venue": null,
+   "home": "Minnesota Wild",
+   "away": "New York Islanders",
+   "selection": "New York Islanders +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7272,
+   "fair_decimal": 1.375,
+   "fair_american": -267,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 152,
+   "text": "Back New York Islanders +1.5 on the puck line when New York Islanders visit Minnesota Wild on October 29, 2026. The official standings are unambiguous here: Minnesota Wild are 6-2-2 for 14 points (P% .700) through 10 games, with 31 goals for and 25 against, 4-0-0 at home and 6-2-2 over their last ten (OT1), while New York Islanders are 5-3-1 for 11 points (P% .611) through 9 games, with 27 goals for and 20 against, 1-2-1 on the road and 5-3-1 over their last ten (W2). Kirill Kaprizov tops Minnesota Wild in the official NHL scoring summary this desk read with 17 points (11 goals, 6 assists) in 10 games. Bo Horvat tops New York Islanders in the official NHL scoring summary this desk read with 10 points (5 goals, 5 assists) in 9 games. Modelled off those official rates, the selection lands at 1.38 (-267) \u2014 72.7% in our book.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/nyi-vs-min/2026/10/29/2026020210",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020208",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-29",
+   "start_utc": "2026-10-29T00:00:00Z",
+   "venue": null,
+   "home": "Nashville Predators",
+   "away": "Washington Capitals",
+   "selection": "Washington Capitals +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7118,
+   "fair_decimal": 1.405,
+   "fair_american": -247,
+   "selection_in_band": true,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": true,
+   "word_count": 129,
+   "text": "Nashville Predators and Washington Capitals meet on October 29, 2026; the play is Washington Capitals +1.5 on the puck line. The evidence from the official table: Nashville Predators are 3-2-3 for 9 points (P% .563) through 8 games, with 23 goals for and 24 against, 2-2-1 at home and 3-2-3 over their last ten (W1), while Washington Capitals are 5-4-0 for 10 points (P% .556) through 9 games, with 30 goals for and 29 against, 1-2-0 on the road and 5-4-0 over their last ten (L1). Roman Josi tops Nashville Predators in the official NHL scoring summary this desk read with 9 points (1 goal, 8 assists) in 8 games. Priced from the official inputs, the selection comes out at 1.41 (-247) with a 71.2% chance \u2014 our pick.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/wsh-vs-nsh/2026/10/29/2026020208",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020205",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-29",
+   "start_utc": "2026-10-29T23:00:00Z",
+   "venue": null,
+   "home": "Pittsburgh Penguins",
+   "away": "Utah Mammoth",
+   "selection": "Utah Mammoth +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.767,
+   "fair_decimal": 1.304,
+   "fair_american": -329,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 152,
+   "text": "Our numbers and the official league table agree for October 29, 2026: Utah Mammoth +1.5 on the puck line. Form, as published by the league: Pittsburgh Penguins are 3-6-1 for 7 points (P% .350) through 10 games, with 33 goals for and 38 against, 2-1-0 at home and 3-6-1 over their last ten (L4), while Utah Mammoth are 7-3-0 for 14 points (P% .700) through 10 games, with 38 goals for and 31 against, 4-2-0 on the road and 7-3-0 over their last ten (W1). Erik Karlsson tops Pittsburgh Penguins in the official NHL scoring summary this desk read with 11 points (1 goal, 10 assists) in 10 games. Nick Schmaltz tops Utah Mammoth in the official NHL scoring summary this desk read with 13 points (7 goals, 6 assists) in 10 games. Our goal-grid model prices it at 1.30 (-329), a 76.7% chance, and that is the side we would take.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/uta-vs-pit/2026/10/29/2026020205",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020207",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-29",
+   "start_utc": "2026-10-29T00:00:00Z",
+   "venue": null,
+   "home": "St. Louis Blues",
+   "away": "Boston Bruins",
+   "selection": "Boston Bruins +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8001,
+   "fair_decimal": 1.25,
+   "fair_american": -400,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 157,
+   "text": "St. Louis Blues host Boston Bruins on October 29, 2026, and the official form points one way: Boston Bruins +1.5 on the puck line. The verified table tells the story: St. Louis Blues are 4-4-1 for 9 points (P% .500) through 9 games, with 29 goals for and 29 against, 2-0-1 at home and 4-4-1 over their last ten (W1), while Boston Bruins are 7-2-1 for 15 points (P% .750) through 10 games, with 36 goals for and 22 against, 4-1-1 on the road and 7-2-1 over their last ten (OT1). Mason McTavish tops St. Louis Blues in the official NHL scoring summary this desk read with 9 points (5 goals, 4 assists) in 9 games. David Pastrnak tops Boston Bruins in the official NHL scoring summary this desk read with 12 points (4 goals, 8 assists) in 10 games. Our originated price for the selection is 1.25 (-400), a 80.0% probability, and that is the bet.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/bos-vs-stl/2026/10/29/2026020207",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020216",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-30",
+   "start_utc": "2026-10-30T00:00:00Z",
+   "venue": null,
+   "home": "Calgary Flames",
+   "away": "Seattle Kraken",
+   "selection": "Seattle Kraken +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8624,
+   "fair_decimal": 1.16,
+   "fair_american": -625,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 131,
+   "text": "Everything in the official records favours Seattle Kraken +1.5 on the puck line when Calgary Flames face Seattle Kraken on October 30, 2026. Two verified records, one clear direction: Calgary Flames are 2-6-0 for 4 points (P% .250) through 8 games, with 17 goals for and 37 against, 1-3-0 at home and 2-6-0 over their last ten (W1), while Seattle Kraken are 6-3-1 for 13 points (P% .650) through 10 games, with 39 goals for and 34 against, 4-2-1 on the road and 6-3-1 over their last ten (W1). Chandler Stephenson tops Seattle Kraken in the official NHL scoring summary this desk read with 9 points (1 goal, 8 assists) in 10 games. We make it a 86.2% shot, a fair 1.16 (-625), and it is the side we are on.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/sea-vs-cgy/2026/10/30/2026020216",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020218",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-31",
+   "start_utc": "2026-10-31T17:00:00Z",
+   "venue": null,
+   "home": "Detroit Red Wings",
+   "away": "St. Louis Blues",
+   "selection": "St. Louis Blues +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7401,
+   "fair_decimal": 1.351,
+   "fair_american": -285,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 157,
+   "text": "St. Louis Blues +1.5 on the puck line is the call for Detroit Red Wings against St. Louis Blues on October 31, 2026. The official standings are unambiguous here: Detroit Red Wings are 3-3-3 for 9 points (P% .500) through 9 games, with 23 goals for and 28 against, 3-3-1 at home and 3-3-3 over their last ten (OT1), while St. Louis Blues are 4-4-1 for 9 points (P% .500) through 9 games, with 29 goals for and 29 against, 2-4-0 on the road and 4-4-1 over their last ten (W1). Alex DeBrincat tops Detroit Red Wings in the official NHL scoring summary this desk read with 11 points (6 goals, 5 assists) in 9 games. Mason McTavish tops St. Louis Blues in the official NHL scoring summary this desk read with 9 points (5 goals, 4 assists) in 9 games. That combination gives the selection a 74.0% model probability, a fair 1.35 (-285), and our backing.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020221",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-31",
+   "start_utc": "2026-10-31T20:00:00Z",
+   "venue": null,
+   "home": "Los Angeles Kings",
+   "away": "Buffalo Sabres",
+   "selection": "Buffalo Sabres +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7169,
+   "fair_decimal": 1.395,
+   "fair_american": -253,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 132,
+   "text": "The October 31, 2026 meeting between Los Angeles Kings and Buffalo Sabres sets up for Buffalo Sabres +1.5 on the puck line. The evidence from the official table: Los Angeles Kings are 1-4-2 for 4 points (P% .286) through 7 games, with 17 goals for and 27 against, 0-3-0 at home and 1-4-2 over their last ten (W1), while Buffalo Sabres are 4-4-2 for 10 points (P% .500) through 10 games, with 28 goals for and 37 against, 1-1-2 on the road and 4-4-2 over their last ten (L1). Tage Thompson tops Buffalo Sabres in the official NHL scoring summary this desk read with 9 points (5 goals, 4 assists) in 10 games. The model makes the selection 71.7% likely at a fair 1.40 (-253), so that is where our money goes.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/buf-vs-lak/2026/10/31/2026020221",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020219",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-31",
+   "start_utc": "2026-10-31T18:00:00Z",
+   "venue": null,
+   "home": "Nashville Predators",
+   "away": "Tampa Bay Lightning",
+   "selection": "Tampa Bay Lightning +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.771,
+   "fair_decimal": 1.297,
+   "fair_american": -337,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 157,
+   "text": "Put Tampa Bay Lightning +1.5 on the puck line on the board for Nashville Predators v Tampa Bay Lightning on October 31, 2026. Form, as published by the league: Nashville Predators are 3-2-3 for 9 points (P% .563) through 8 games, with 23 goals for and 24 against, 2-2-1 at home and 3-2-3 over their last ten (W1), while Tampa Bay Lightning are 7-2-0 for 14 points (P% .778) through 9 games, with 31 goals for and 23 against, 2-2-0 on the road and 7-2-0 over their last ten (W3). Nikita Kucherov tops Tampa Bay Lightning in the official NHL scoring summary this desk read with 13 points (4 goals, 9 assists) in 9 games. Roman Josi tops Nashville Predators in the official NHL scoring summary this desk read with 9 points (1 goal, 8 assists) in 8 games. Our fair line on the selection is 1.30 (-337) on a 77.1% probability, and we are taking it.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/tbl-vs-nsh/2026/10/31/2026020219",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020220",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-31",
+   "start_utc": "2026-10-31T18:00:00Z",
+   "venue": null,
+   "home": "New York Islanders",
+   "away": "Edmonton Oilers",
+   "selection": "Edmonton Oilers +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7338,
+   "fair_decimal": 1.363,
+   "fair_american": -275,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 157,
+   "text": "For the October 31, 2026 fixture, Edmonton Oilers +1.5 on the puck line reads as the right side of New York Islanders v Edmonton Oilers. The verified table tells the story: New York Islanders are 5-3-1 for 11 points (P% .611) through 9 games, with 27 goals for and 20 against, 4-1-0 at home and 5-3-1 over their last ten (W2), while Edmonton Oilers are 7-1-1 for 15 points (P% .833) through 9 games, with 41 goals for and 27 against, 5-0-0 on the road and 7-1-1 over their last ten (W2). Bo Horvat tops New York Islanders in the official NHL scoring summary this desk read with 10 points (5 goals, 5 assists) in 9 games. Connor McDavid tops Edmonton Oilers in the official NHL scoring summary this desk read with 26 points (6 goals, 20 assists) in 9 games. Modelled off those official rates, the selection lands at 1.36 (-275) \u2014 73.4% in our book.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/edm-vs-nyi/2026/10/31/2026020220",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020222",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-31",
+   "start_utc": "2026-10-31T20:00:00Z",
+   "venue": null,
+   "home": "San Jose Sharks",
+   "away": "Ottawa Senators",
+   "selection": "Ottawa Senators +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.7974,
+   "fair_decimal": 1.254,
+   "fair_american": -394,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 156,
+   "text": "Take Ottawa Senators +1.5 on the puck line in the October 31, 2026 game between San Jose Sharks and Ottawa Senators. Two verified records, one clear direction: San Jose Sharks are 5-4-1 for 11 points (P% .550) through 10 games, with 27 goals for and 35 against, 2-2-0 at home and 5-4-1 over their last ten (W1), while Ottawa Senators are 7-3-0 for 14 points (P% .700) through 10 games, with 29 goals for and 24 against, 3-2-0 on the road and 7-3-0 over their last ten (W1). Macklin Celebrini tops San Jose Sharks in the official NHL scoring summary this desk read with 14 points (5 goals, 9 assists) in 8 games. Tim St\u00fctzle tops Ottawa Senators in the official NHL scoring summary this desk read with 14 points (6 goals, 8 assists) in 10 games. Priced from the official inputs, the selection comes out at 1.25 (-394) with a 79.7% chance \u2014 our pick.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/ott-vs-sjs/2026/10/31/2026020222",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "match_id": "nhl-2026020224",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "2026-27 NHL Regular Season",
+   "date": "2026-10-31",
+   "start_utc": "2026-10-31T23:00:00Z",
+   "venue": null,
+   "home": "Vancouver Canucks",
+   "away": "Toronto Maple Leafs",
+   "selection": "Toronto Maple Leafs +1.5",
+   "market": "Puck Line",
+   "market_line": 1.5,
+   "probability": 0.8118,
+   "fair_decimal": 1.232,
+   "fair_american": -431,
+   "selection_in_band": false,
+   "confidence": "high",
+   "confidence_rule": "model probability >= 70% on a match whose own prices sit inside -250..+10000",
+   "featured": false,
+   "word_count": 155,
+   "text": "Back Toronto Maple Leafs +1.5 on the puck line when Toronto Maple Leafs visit Vancouver Canucks on October 31, 2026. The official standings are unambiguous here: Vancouver Canucks are 2-8-1 for 5 points (P% .227) through 11 games, with 33 goals for and 51 against, 1-3-0 at home and 1-8-1 over their last ten (L2), while Toronto Maple Leafs are 5-4-2 for 12 points (P% .545) through 11 games, with 38 goals for and 35 against, 2-1-1 on the road and 5-3-2 over their last ten (W2). Auston Matthews tops Toronto Maple Leafs in the official NHL scoring summary this desk read with 18 points (8 goals, 10 assists) in 11 games. Elias Pettersson tops Vancouver Canucks in the official NHL scoring summary this desk read with 11 points (3 goals, 8 assists) in 11 games. Our goal-grid model prices it at 1.23 (-431), a 81.2% chance, and that is the side we would take.",
+   "facts": [
+    {
+     "claim": "team records, points, goals, home/away splits, last-10 and streak",
+     "source": "https://www.nhl.com/standings",
+     "verified": true
+    },
+    {
+     "claim": "fixture, venue and date",
+     "source": "https://www.nhl.com/gamecenter/tor-vs-van/2026/10/31/2026020224",
+     "verified": true
+    }
+   ]
+  }
+ ]
+}

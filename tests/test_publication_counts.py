@@ -52,6 +52,9 @@ class PublicationCountTests(unittest.TestCase):
 
         self.assertIn(f"{root_data['counts']['total_rows']} rows", readme)
         self.assertIn(f"{final_summary['counts']['rows']} deduplicated rows", readme)
+        self.assertIn("14 price-band selections/writeups on the root dashboard", readme)
+        self.assertIn("16 additional research writeups", readme)
+        self.assertNotIn("30 written analyses", readme)
         self.assertNotIn("178 rows", readme)
         self.assertNotIn("80 tests", readme)
 

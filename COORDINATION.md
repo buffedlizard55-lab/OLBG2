@@ -1598,6 +1598,7 @@ Rules for this session: nothing is published unless an official page returned it
 
 **Session `arena/1619553b-olbg2` status:** N1 done and live; N2 (VF-14) and N3 (VF-22) re-checked, both still open with no rows published. Session closed.
 
+<<<<<<< HEAD
 ---
 
 ## Session `arena/7f261be1-olbg2` — OLBG reverse-engineering audit, live 2026-10-22 multi-sport verification & origination desk (`/slate/`), and player-backed `-250..+10000` predictions
@@ -1627,3 +1628,14 @@ All existing shared data files (`data/verified/**`, `data/forward/**`, `README.m
 | S6 | Rebase on latest `main`, run full repo build & link verification + unit tests, open PR → `main`, self-merge after CI passes, confirm GitHub Pages deploy & live URLs, and record PR + merge SHA + live verification in `COORDINATION.md` | pending | `arena/7f261be1-olbg2` | `COORDINATION.md` (plus root nav link **only** if no concurrent session holds `scripts/build_site.py` at merge time; otherwise logged request) |
 
 **Rules enforced in `arena/7f261be1-olbg2`:** Zero bookmaker prices or tipster consensus percentages are read or used. Every published value comes from an official governing-body/league/tour page fetched and logged with its UTC timestamp; anything unconfirmed server-side remains blank (`—`) and is published with its source link on `slate/flagged.html`.
+=======
+### Publication record — session `arena/d219b7cf-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#71](https://github.com/buffedlizard55-lab/OLBG2/pull/71) — README snapshot consistency corrections |
+| Merge | **Merged** 2026-10-22 07:23:30 UTC as `d8ae5adebca3c2fc57ca4dad22cf9b14c511aac7` |
+| Validate | `Validate Pages content` **success**, run [39740105648](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740105648) |
+| GitHub Pages | `Deploy Pages` **success**, run [39740166497](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740166497) |
+| Result | README/reconciliation report and coordination record published. Data and generated fixture pages unchanged by this documentation task. |
+>>>>>>> origin/main

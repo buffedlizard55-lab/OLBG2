@@ -2000,3 +2000,21 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 | Publication gate + tests | done | arena/17c50bb7-olbg2 | Local CI rebuild and 145 tests pass |
 | Official-source access / completeness | needs review | arena/17c50bb7-olbg2 | Published publication.html; no accessible official response content |
 | PR, merge, deploy | in progress | arena/17c50bb7-olbg2 | Remote verification follows |
+
+---
+
+## Session `arena/f048d3a9-olbg2` — Fresh line-by-line re-audit, staleness & in-band pick check (`/fresh/`)
+
+**Session ID:** `arena/f048d3a9-olbg2` · **Branch:** `arena/f048d3a9-olbg2` (fixed by Arena tracking) · **Claimed:** 2026-10-22 UTC, before implementation edits.
+
+**Prior scopes preserved (not edited):** all existing layers (`site/`, `survey/`, `live/`, `verified/`, `forward/`, `board/`, `hub/`, `slate/`, `center/`, `final/`, `portal/`, `evidence/`, `audit65/`), their data/scripts/tests, root generated HTML, `scripts/build_site.py`.
+
+| # | Task | Status | Owner | File scope (new files only) |
+|---|---|---|---|---|
+| N1 | Claim + repo recon (145 tests pass on arrival) | in progress | arena/f048d3a9-olbg2 | `COORDINATION.md` (append-only) |
+| N2 | Mechanical line-by-line audit of unified desk: duplicates, excluded-sport leakage, odds/probability math, confidence-gate (-250..+10000, >=70%), prediction word-count/uniqueness, source-link presence, staleness vs 2026-10-22 | unclaimed→claimed | arena/f048d3a9-olbg2 | `scripts/fresh_audit.py`, `data/fresh/audit.json`, `research/fresh-f048d3a9.md` |
+| N3 | Attempt first-hand official-source re-verification via available tools; blank/unverified anything not confirmed | unclaimed→claimed | arena/f048d3a9-olbg2 | `research/fresh-f048d3a9.md`, `data/fresh/audit.json` |
+| N4 | `/fresh/` dashboard: landing, all-rows table, picks check, flagged page, sources; deterministic builder + tests | unclaimed→claimed | arena/f048d3a9-olbg2 | `scripts/fresh_build.py`, `fresh/**`, `tests/test_fresh.py` |
+| N5 | Integration: full build/tests/link audit, PR → merge, confirm Pages live, record here | unclaimed→claimed | arena/f048d3a9-olbg2 | shared outputs at integration only |
+
+**Rules:** no existing dataset value is edited in place; discrepancies are published as flagged items with official source links and blank corrected values where unconfirmed. High = model prob ≥70% AND fair American in [-250,+10000].

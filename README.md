@@ -20,7 +20,7 @@ total prices. 154 rows are fully originated; 24 are blank with a written reason,
 
 | Layer | Entry point | Snapshot contents (not an external verification claim) |
 |---|---|---|
-| **Unified dashboard** | [`index.html`](index.html) | 178 rows, 13 sports with rows, 154 originated rows, 14 price-band picks, 30 written predictions (14 featured + 16 research), 34 review items. Built by `scripts/build_site.py` from `data/verified/**`. |
+| **Unified dashboard** | [`index.html`](index.html) | 178 rows, 13 sports with rows, 154 originated rows, 14 price-band picks, 30 written predictions (14 featured + 16 research), 35 review items. Built by `scripts/build_site.py` from `data/verified/**`. |
 | **Verified multi-sport desk** | [`verified/index.html`](verified/index.html) | The same 178 rows in their original layout, plus audit and methodology pages. Built by `scripts/verified_seed.py` → `verified_model.py` → `verified_build.py`. |
 | **Root-layer archive** | [`archive.html`](archive.html) | The earlier 47-row root capture, preserved with its own source links. Superseded for NHL, NBA, URC, cricket and handball, but not deleted. |
 | **Evidence desk v2** | [`site/index.html`](site/index.html) | Independent NHL/NBA layer with 25 stored fixture rows and 64 market records. Built by `scripts/engine.py` and `scripts/build.py`. |
@@ -60,14 +60,14 @@ question. It is recorded as an interpretation flag rather than resolved by assum
 
 Model prices are fair decimals derived from the models in [METHODOLOGY.md](METHODOLOGY.md), not bookmaker quotes.
 
-- Confidence: **high** ≥72% model probability, **or** a band selection at ≥70% priced inside −250..+10000;
+- Confidence (uniform odds-window gate): **high** only when model probability is ≥70% **and** the fair American price sits inside −250..+10000; ultra-short chalk is capped at **medium**;
   **medium** ≥60%; **low** below 60%. The same selection can no longer read HIGH on one page and MEDIUM on
   another (VF-26).
 - Price band from the brief: **−250 to +10000 American odds**, equivalent to decimal odds of **1.40–101.00**. A 70%+ probability cannot be priced above
   1.43, so the only window satisfying both a ≥70% probability and the −250 floor is 70.0–71.4%.
-- All **14** written predictions are **price-band** selections at **1.40–1.42** (70.0–71.4%), each with its own
-  ≥30-word write-up and sourced facts. Short-priced moneyline favourites keep their grade on the sport tables
-  without a write-up rather than padding the picks page.
+- All **14** featured written predictions are **price-band** selections at **1.40–1.42** (70.0–71.4%), each with
+  its own ≥30-word write-up and sourced facts (plus 16 research-desk write-ups). Short-priced moneyline favourites
+  are graded **medium** under the uniform gate rather than padding the high label with unbackable prices.
 - The 14 featured write-ups assert no individual player statistic (**VF-24**). The 16 research-desk write-ups
   added on 2026-10-22 (`/verified/predictions.html#research`) do name players, using only the NHL official score
   feed leaders, the PDC Order of Merit and WST match-centre statistics captured that day (see **VF-33**).

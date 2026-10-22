@@ -400,7 +400,7 @@ silently. <a href="sports/index.html">Open the category index</a>.</p>
   <div class="panel"><h3>Prices and confidence</h3><ul>
     <li>Confidence split: <strong>{conf.get('high', 0)} high</strong>, {conf.get('medium', 0)} medium, {conf.get('low', 0)} low, {conf.get('none', 0)} unlined/no pick.</li>
     <li><strong>{band_count} band picks</strong> sit at fair odds 1.40-1.42 with model probabilities of 70.0-71.4%, the only window satisfying both the ≥70% rule and the −250 floor.</li>
-    <li>Moneyline picks graded high (&ge;72%) whose fair price is shorter than the &minus;250 floor stay on the sport tables without a written prediction, rather than padding the picks page with ultra-short prices.</li>
+    <li>Uniform odds-window high gate: a pick is graded <strong>high</strong> only when its model probability is &ge;70% <em>and</em> its fair American price sits inside &minus;250&hellip;+10000. Ultra-short chalk (for example &minus;5000 favourites) is graded medium and never triggers the written-prediction duty, so the picks page never pads itself with unbackable prices.</li>
     <li>The longest fair price anywhere in the {pred_count} predictions is <strong>{max_price:.2f}</strong>, inside the +10000 ceiling.</li>
   </ul></div>
 </div>
@@ -445,7 +445,7 @@ plus the reason no price was originated.</p>
 </div>
 {filter_bar(sports)}
 {match_table(rows)}
-<p class="tiny">Confidence badge colours: <span class="badge high">high</span> model probability ≥72% (or a band pick ≥70%),
+<p class="tiny">Confidence badge colours: <span class="badge high">high</span> model probability ≥70% with fair American price inside −250…+10000,
 <span class="badge medium">medium</span> ≥60%, <span class="badge low">low</span> below 60%.
 The price-band picks are a separate, stricter list: model probability ≥70% <em>and</em> fair odds 1.40-101.00.</p>
 """
@@ -736,7 +736,7 @@ what was actually checked.</p>
   <li><strong>Verify</strong> the fixture on the governing body or league endpoint: ids, teams, local date, start time, venue.</li>
   <li><strong>Collect</strong> the model inputs from official standings: wins, losses, goals/points for and against, ranking money.</li>
   <li><strong>Originate</strong> moneyline, handicap and total prices from the sport-specific distribution below.</li>
-  <li><strong>Grade</strong> the selection: high ≥72% (≥70% for a price-band pick), medium ≥60%, low below 60%.</li>
+  <li><strong>Grade</strong> the selection under the uniform odds-window gate: high when probability ≥70% and the fair American price sits inside −250…+10000, medium ≥60%, low below 60% (ultra-short chalk is capped at medium).</li>
   <li><strong>Write</strong> a unique ≥30-word prediction for every published high-confidence or band pick, with sourced facts.</li>
   <li><strong>Disclose</strong> every blank, stale or unsupported value on <a href="flagged.html">Flagged for Review</a>.</li>
 </ol>
@@ -744,7 +744,7 @@ what was actually checked.</p>
 <h2>Confidence and the price band</h2>
 <div class="two-col">
 <div class="panel"><h3>Confidence</h3>
-<p><span class="badge high">high</span> model probability ≥72%. <span class="badge medium">medium</span> ≥60%.
+<p><span class="badge high">high</span> model probability ≥70% with fair American price inside −250…+10000 (uniform odds-window gate). <span class="badge medium">medium</span> ≥60% or out-of-window chalk.
 <span class="badge low">low</span> below 60%. NBA picks are capped at medium because the prior season's records
 do not reflect current rosters.</p></div>
 <div class="panel"><h3>Price band (−250 to +10000)</h3>

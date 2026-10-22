@@ -242,6 +242,16 @@
       "source_url": "https://www.nba.com/schedule?date=2026-10-24"
     },
     {
+      "id": "VF-35",
+      "severity": "low",
+      "category": "Corrected in this session",
+      "sport": "Cross-sport",
+      "item": "Uniform odds-window high gate adopted (PR #54 substance): out-of-window chalk regraded medium; probabilities and prices unchanged",
+      "detail": "PR #54 (session arena/1bb45081, claim stale since 2026-10-22 01:58Z) audited every high-confidence label and implemented a uniform rule: HIGH only when the model probability is >= 70% and the fair American price sits inside -250..+10000. The integration session adopted that rule onto the current tree instead of merging the stale branch (merging would have reverted sessions 50268b75, 26963a2d, 6a87eefa and this one). Effect on the published desks: 15 verified-desk row picks and 4 forward-slate row picks formerly labelled high at -256 to -5000 are now medium; the 3 in-window verified picks and the 30 written predictions (14 featured band picks + 16 research picks) are unchanged, and every pick labelled high now carries a written-prediction duty it can actually satisfy. Probabilities, fair prices and market lines were not altered.",
+      "source_name": "PR #54 (odds-window audit record, preserved in-repo)",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/odds-window-audit-1bb45081.md"
+    },
+    {
       "id": "VF-09",
       "severity": "low",
       "category": "Zero active markets",

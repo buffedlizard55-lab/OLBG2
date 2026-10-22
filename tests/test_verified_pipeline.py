@@ -231,26 +231,29 @@ class VerifiedPipelineTests(unittest.TestCase):
         self.assertGreater(scopes["competition"], 0)
 
     def test_confidence_badge_matches_the_published_grading_rule(self) -> None:
-        # Published rule: high >= 72%, OR a band selection >= 70% priced
-        # inside -250..+10000. The same selection must never read HIGH on the
-        # picks page and MEDIUM in its own match row (VF-26).
+        # Published rule (uniform odds-window gate; substance of PR #54 adopted
+        # onto the current tree): HIGH iff model probability >= 0.70 AND fair
+        # American price inside -250..+10000. Ultra-short chalk is graded
+        # medium, so the HIGH label always means an in-band selection with a
+        # written-prediction duty — never a -5000 favourite. The same selection
+        # must never read HIGH on the picks page and MEDIUM in its own match
+        # row (VF-26). NBA keeps its medium cap.
         checked = 0
         for m in self.matches["matches"]:
             pick = m.get("pick")
             if m["line_status"] != "originated" or not pick:
                 continue
-            if m["competition"].startswith("NBA"):
-                self.assertNotEqual(pick["confidence"], "high", m["id"])
-                continue
             in_band = (
                 pick["probability"] >= 0.70
                 and -250 <= pick["fair_american"] <= 10000
             )
-            if in_band:
+            if m["competition"].startswith("NBA"):
+                self.assertNotEqual(pick["confidence"], "high", m["id"])
+            elif in_band:
                 self.assertEqual(pick["confidence"], "high", m["id"])
                 checked += 1
-            if pick["probability"] >= 0.72:
-                self.assertEqual(pick["confidence"], "high", m["id"])
+            else:
+                self.assertNotEqual(pick["confidence"], "high", m["id"])
         self.assertGreaterEqual(checked, 3)
 
     def test_no_stale_fixtures_and_nba_never_featured(self) -> None:

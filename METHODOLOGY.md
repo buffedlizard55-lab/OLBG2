@@ -100,7 +100,7 @@ row always agree. Neither convention is a bookmaker quote.
 | Handball | p ≥ 70% and both clubs ≥ 4 group games | p ≥ 58% (≥ 4 games) | otherwise |
 
 The `/verified/` layer grades its own picks on a single published rule: **high** when the model probability is
-≥ 72%, **or** when the selection is a band pick (≥ 70% priced inside −250..+10000); **medium** ≥ 60%; **low**
+≥ 70% with the fair American price inside −250..+10000 (uniform odds-window gate); **medium** ≥ 60% or out-of-window; **low**
 below 60%. NBA picks are capped at medium because only prior-season records exist. Handicap and total picks are
 graded by the same rule; alternate lines only become featured when the moneyline pick already clears 70%.
 

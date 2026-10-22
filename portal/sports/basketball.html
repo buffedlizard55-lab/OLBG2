@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="../index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../../index.html">Root Dashboard</a> ·
       <a href="../../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../../hub/index.html">/hub/</a> ·
       <a href="../../evidence/index.html">/evidence/</a> ·
       <a href="../../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
         <section class="hero">
           <h1>Basketball — Official-Source Multi-Market Lines &amp; In-Band Predictions</h1>
@@ -38,7 +39,7 @@
           </p>
         </section>
 
-        <div class='sport-pills'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='active' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></div>
+        <nav class='sport-pills' aria-label='Eligible sports'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='active' aria-current='page' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></nav>
 
         <section class="section">
           <h2>Featured High-Confidence Basketball Predictions (3)</h2>
@@ -134,23 +135,31 @@
         <section class="section" data-filter-root="1">
           <h2>Basketball Match Board (83 Verified Rows)</h2>
           <div class="controls">
-            <input type="search" data-filter-search placeholder="Filter Basketball fixtures...">
-            <select data-filter-conf>
-              <option value="all">All Grades</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="blank">Unlined / Blank</option>
-            </select>
-            <span class="count-pill" data-filter-count></span>
+            <div class="filter-field">
+              <label for="basketball-search">Search Basketball fixtures</label>
+              <input id="basketball-search" type="search" data-filter-search aria-controls="basketball-matches-table" placeholder="Team, player, or competition...">
+            </div>
+            <div class="filter-field">
+              <label for="basketball-confidence">Confidence</label>
+              <select id="basketball-confidence" data-filter-conf aria-controls="basketball-matches-table">
+                <option value="all">All Grades</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="blank">Unlined / Blank</option>
+              </select>
+            </div>
+            <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
-          <div class="table-wrap">
-            <table>
+          <noscript><p class="filter-note">Filtering needs JavaScript; all Basketball rows remain listed below.</p></noscript>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="Basketball fixtures and markets">
+            <table id="basketball-matches-table">
+              <caption class="sr-only">Basketball fixtures, markets, confidence, and official-source links</caption>
               <thead>
                 <tr>
-                  <th>Date / UTC</th><th>Sport</th><th>Fixture, Venue &amp; Basis</th>
-                  <th>Win Match / 1X2</th><th>Standard .5 Line</th><th>Total O/U</th>
-                  <th>Winner &amp; Grade</th><th>Actionable [-250..+10000]</th><th>Official Source</th>
+                  <th scope="col">Date / UTC</th><th scope="col">Sport</th><th scope="col">Fixture, Venue &amp; Basis</th>
+                  <th scope="col">Win Match / 1X2</th><th scope="col">Standard .5 Line</th><th scope="col">Total O/U</th>
+                  <th scope="col">Winner &amp; Grade</th><th scope="col">Actionable [-250..+10000]</th><th scope="col">Official Source</th>
                 </tr>
               </thead>
               <tbody><tr id='el-E2026-64' data-row='1' data-sport='basketball' data-conf='low'><td class='num'>2026-10-22<div style='color:#6b7280;font-size:11.5px'>2026-10-22 17:30 UTC</div></td><td><a class='badge badge-sport' href='basketball.html'>Basketball</a></td><td><strong>Anadolu Efes Istanbul vs Besiktas Istanbul</strong><div style='font-size:12px;color:#4b5563'>2026-27 EuroLeague — Round 7 · Turkcell Basketball Development Center</div><div style='font-size:11.5px;color:#6b7280'>EuroLeague R6/R7: EFS 2-4 (492:510) vs BJK 3-3 (554:555)</div></td><td><div><strong>Anadolu Efes Istanbul:</strong> <span class='odds'>-123 (1.81) · 55.3%</span></div><div><strong>Besiktas Istanbul:</strong> <span class='odds'>+124 (2.24) · 44.7%</span></div></td><td><div><strong>Anadolu Efes Istanbul -2.5 pts:</strong> <span class='odds'>+115 (2.15) · 46.4%</span></div><div><strong>Opp:</strong> <span class='odds'>-115 (1.87) · 53.6%</span></div><div style='margin-top:3px;color:#0f4c81'><strong>Alt .5:</strong> Anadolu Efes Istanbul -1.5 pts <span class='odds'>+100 (2.00) · 50.0%</span></div></td><td><div><strong>O/U 175.5 pts Over:</strong> <span class='odds'>-103 (1.97) · 50.8%</span></div><div><strong>Under:</strong> <span class='odds'>+103 (2.03) · 49.2%</span></div></td><td><span class="badge badge-low">LOW</span><div><strong>Anadolu Efes Istanbul</strong></div><div><span class='odds'>-123 (1.81) · 55.3%</span></div></td><td><div><strong>Anadolu Efes Istanbul — Win Match</strong></div><div><span class='odds'>-123 (1.81) · 55.3%</span></div><div style='font-size:11.5px;color:#4b5563'>Moneyline / Match Winner</div></td><td><a href='https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Basketball/4' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr>
@@ -238,14 +247,16 @@
 <tr id='nba-0022600153' data-row='1' data-sport='basketball' data-conf='medium'><td class='num'>2026-10-31<div style='color:#6b7280;font-size:11.5px'>2026-10-31 20:30 ET</div></td><td><a class='badge badge-sport' href='basketball.html'>Basketball</a></td><td><strong>Houston Rockets vs Oklahoma City Thunder</strong><div style='font-size:12px;color:#4b5563'>2026-27 NBA Regular Season — Opening Week · Toyota Center</div><div style='font-size:11.5px;color:#6b7280'>NBA shrunk prior + Oct 20-21 opener: HOU (52-30 prior, 1-0 (beat DAL 128-110 Oct 21)) vs OKC (64-18 prior, 1-0 (beat SAS 108-100 Oct 20)); Total left blank (0-1 GP pace sample).</div></td><td><div><strong>Houston Rockets:</strong> <span class='odds'>+151 (2.51) · 39.9%</span></div><div><strong>Oklahoma City Thunder:</strong> <span class='odds'>-152 (1.66) · 60.2%</span></div></td><td><div><strong>Houston Rockets +3.5 pts:</strong> <span class='odds'>-106 (1.94) · 51.6%</span></div><div><strong>Opp:</strong> <span class='odds'>+106 (2.06) · 48.4%</span></div><div style='margin-top:3px;color:#0f4c81'><strong>Alt .5:</strong> Oklahoma City Thunder -0.5 pts <span class='odds'>-141 (1.71) · 58.5%</span></div></td><td><span class="blank-cell">—</span></td><td><span class="badge badge-medium">MEDIUM</span><div><strong>Oklahoma City Thunder</strong></div><div><span class='odds'>-152 (1.66) · 60.2%</span></div></td><td><div><strong>Oklahoma City Thunder — Win Match</strong></div><div><span class='odds'>-152 (1.66) · 60.2%</span></div><div style='font-size:11.5px;color:#4b5563'>Moneyline / Match Winner</div></td><td><a href='https://www.nba.com/games?date=2026-10-31' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Basketball/4' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr></tbody>
             </table>
           </div>
+          <p class="filter-empty" data-filter-empty hidden>No Basketball fixtures match the selected filters.</p>
         </section>
 
         
             <section class="section">
               <h2>Sport-Specific Audit &amp; Unverified Blank Notes</h2>
-              <div class="table-wrap">
+              <div class="table-wrap" role="region" tabindex="0" aria-label="Basketball review findings">
                 <table>
-                  <thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Disposition</th><th>Official Link</th></tr></thead>
+                  <caption class="sr-only">Basketball audit and unverified-item findings</caption>
+                  <thead><tr><th scope="col">ID</th><th scope="col">Severity</th><th scope="col">Item</th><th scope="col">Disposition</th><th scope="col">Official Link</th></tr></thead>
                   <tbody><tr><td class='num'><strong>PU-25</strong></td><td><span class="badge badge-low">LOW</span></td><td><strong>NBA Opening Week Over/Under Game Totals (14 fixtures)</strong><div style='font-size:12.5px;color:#4b5563'>Teams have completed only 0-1 games of the 2026-27 NBA season as of 2026-10-22; 2026-27 pace and offensive-efficiency totals are unconfirmed.</div></td><td>Originated Moneyline and half-point Spread from shrunk 82-game prior + Oct 20-21 results; left Total O/U blank (—).</td><td><a href='https://www.nba.com/games?date=2026-10-22' target='_blank' rel='noopener'>Official Source ↗</a></td></tr></tbody>
                 </table>
               </div>

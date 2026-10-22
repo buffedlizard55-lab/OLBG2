@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provenance · OLBG2 reconciliation console</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> OLBG2 · Reconciliation console</div>
+    <nav class="nav"><a href="index.html">Overview</a><a href="conflicts.html">Conflicts</a><a href="non-fixtures.html">Non-fixtures</a><a href="freshness.html">Freshness</a><a href="provenance.html">Provenance</a><a href="predictions.html">Predictions</a><a href="spot-checks.html">Spot checks</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="../index.html">Dashboard</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+
+<h1>Provenance</h1>
+<p class="lede">A row is only as good as the page it cites. This page measures citation granularity and host ownership,
+then lists the shared and shared-out URLs.</p>
+<div class="grid">
+<div class="kpi"><div class="kpi-v">1,547</div><div class="kpi-l">Rows with a source link</div><div class=kpi-n>of 1,619 (95.6%)</div></div>
+<div class="kpi"><div class="kpi-v">72</div><div class="kpi-l">Rows without a link</div><div class=kpi-n>must be unverified</div></div>
+<div class="kpi"><div class="kpi-v">362</div><div class="kpi-l">Distinct URLs</div><div class=kpi-n>for all rows</div></div>
+<div class="kpi"><div class="kpi-v">407</div><div class="kpi-l">Fixture-level citations</div><div class=kpi-n>page identifies the fixture</div></div>
+<div class="kpi"><div class="kpi-v">271</div><div class="kpi-l">Competition-level</div><div class=kpi-n>page identifies only the competition</div></div>
+</div>
+<div class="note"><strong>Reading the split.</strong> A competition-level citation can support a date and a team list but not the
+pairing itself. That is why the spot-check page marks such rows <span class="tag warn">unreadable</span> rather than
+<span class="tag ok">confirmed</span> when the pairing could not be read back.</div>
+
+<h2>URLs reused across rows</h2>
+<p class="lede">One URL supporting many rows is a granularity decision, not automatically an error — but when a single
+fixture-level URL is reused for different pairings it is a defect (see the non-fixtures and conflicts pages).</p>
+<div class="scroll"><table class="data"><thead><tr><th>URL</th><th>Rows</th><th>Layers</th><th>Sports</th></tr></thead><tbody>
+<tr><td><a href="https://www.pdc.tv/rankings" rel="noopener noreferrer" target="_blank">pdc.tv/rankings</a></td><td><span class="num">40</span></td><td>board, final, hub, verified</td><td>darts</td></tr>
+<tr><td><a href="https://www.euroleaguebasketball.net/en/eurocup/game-center/" rel="noopener noreferrer" target="_blank">euroleaguebasketball.net/en/eurocup/game-center/</a></td><td><span class="num">32</span></td><td>board, forward</td><td>basketball</td></tr>
+<tr><td><a href="https://stats.swehockey.se/ScheduleAndResults/Schedule/20961" rel="noopener noreferrer" target="_blank">stats.swehockey.se/ScheduleAndResults/Schedule/20961</a></td><td><span class="num">32</span></td><td>final, hub, portal</td><td>ice hockey</td></tr>
+<tr><td><a href="https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games" rel="noopener noreferrer" target="_blank">api-live.euroleague.net/v2/competitions/U/seasons/U2026/games</a></td><td><span class="num">32</span></td><td>final, hub</td><td>basketball</td></tr>
+<tr><td><a href="https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/" rel="noopener noreferrer" target="_blank">pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/</a></td><td><span class="num">32</span></td><td>final, hub</td><td>darts</td></tr>
+<tr><td><a href="https://www.afl.com.au/aflw" rel="noopener noreferrer" target="_blank">afl.com.au/aflw</a></td><td><span class="num">27</span></td><td>final, portal, slate</td><td>aussie rules</td></tr>
+<tr><td><a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener noreferrer" target="_blank">formula1.com/en/results/2026/drivers</a></td><td><span class="num">25</span></td><td>board, final, hub, portal, slate, verified</td><td>motor racing</td></tr>
+<tr><td><a href="https://www.gaa.ie/football" rel="noopener noreferrer" target="_blank">gaa.ie/football</a></td><td><span class="num">21</span></td><td>board, final, hub, portal, verified</td><td>gaelic football</td></tr>
+<tr><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener noreferrer" target="_blank">gbgb.org.uk/racing/open-races/2025-category-one-schedule/</a></td><td><span class="num">20</span></td><td>final, verified</td><td>greyhounds</td></tr>
+<tr><td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview" rel="noopener noreferrer" target="_blank">pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview</a></td><td><span class="num">16</span></td><td>slate</td><td>darts</td></tr>
+<tr><td><a href="https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-of-play" rel="noopener noreferrer" target="_blank">pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-of-play</a></td><td><span class="num">16</span></td><td>portal</td><td>darts</td></tr>
+<tr><td><a href="https://www.plusliga.pl/games.html" rel="noopener noreferrer" target="_blank">plusliga.pl/games.html</a></td><td><span class="num">15</span></td><td>board, final, hub, portal, verified</td><td>volleyball</td></tr>
+<tr><td><a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener noreferrer" target="_blank">atptour.com/en/scores/current/almaty/9410/daily-schedule</a></td><td><span class="num">14</span></td><td>final, portal, slate</td><td>tennis</td></tr>
+<tr><td><a href="https://www.atptour.com/en/scores/current/lyon/496/daily-schedule" rel="noopener noreferrer" target="_blank">atptour.com/en/scores/current/lyon/496/daily-schedule</a></td><td><span class="num">13</span></td><td>final, portal, slate</td><td>tennis</td></tr>
+<tr><td><a href="https://www.legavolley.it/calendario/?IdCampionato=999" rel="noopener noreferrer" target="_blank">legavolley.it/calendario/?IdCampionato=999</a></td><td><span class="num">12</span></td><td>final, hub</td><td>volleyball</td></tr>
+<tr><td><a href="https://www.nba.com/games?date=2026-10-23" rel="noopener noreferrer" target="_blank">nba.com/games?date=2026-10-23</a></td><td><span class="num">12</span></td><td>portal</td><td>basketball</td></tr>
+<tr><td><a href="https://www.nba.com/games?date=2026-10-28" rel="noopener noreferrer" target="_blank">nba.com/games?date=2026-10-28</a></td><td><span class="num">12</span></td><td>portal</td><td>basketball</td></tr>
+<tr><td><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/score/2026-10-22</a></td><td><span class="num">12</span></td><td>portal</td><td>ice hockey</td></tr>
+<tr><td><a href="https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule" rel="noopener noreferrer" target="_blank">atptour.com/en/scores/current/brussels/7485/daily-schedule</a></td><td><span class="num">11</span></td><td>final, portal, slate</td><td>tennis</td></tr>
+<tr><td><a href="https://www.nba.com/games?date=2026-10-30" rel="noopener noreferrer" target="_blank">nba.com/games?date=2026-10-30</a></td><td><span class="num">10</span></td><td>portal</td><td>basketball</td></tr>
+<tr><td><a href="https://www.nba.com/games?date=2026-10-26" rel="noopener noreferrer" target="_blank">nba.com/games?date=2026-10-26</a></td><td><span class="num">9</span></td><td>portal</td><td>basketball</td></tr>
+<tr><td><a href="https://www.nrl.com/draw/" rel="noopener noreferrer" target="_blank">nrl.com/draw/</a></td><td><span class="num">8</span></td><td>board, final, hub, portal, verified</td><td>rugby league</td></tr>
+<tr><td><a href="https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage" rel="noopener noreferrer" target="_blank">liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage</a></td><td><span class="num">8</span></td><td>slate</td><td>esports</td></tr>
+<tr><td><a href="https://www.nba.com/games?date=2026-10-24" rel="noopener noreferrer" target="_blank">nba.com/games?date=2026-10-24</a></td><td><span class="num">8</span></td><td>portal</td><td>basketball</td></tr>
+<tr><td><a href="https://lolesports.com/en-US/leagues/first_stand,lck,lcs,msi,worlds" rel="noopener noreferrer" target="_blank">lolesports.com/en-US/leagues/first_stand,lck,lcs,msi,worlds</a></td><td><span class="num">8</span></td><td>portal</td><td>esports</td></tr>
+<tr><td><a href="https://www.wst.tv/tournaments/northern-ireland-open-2026/" rel="noopener noreferrer" target="_blank">wst.tv/tournaments/northern-ireland-open-2026/</a></td><td><span class="num">8</span></td><td>portal</td><td>snooker</td></tr>
+<tr><td><a href="https://lolesports.com/en-US/leagues/worlds/schedule" rel="noopener noreferrer" target="_blank">lolesports.com/en-US/leagues/worlds/schedule</a></td><td><span class="num">8</span></td><td>final</td><td>esports</td></tr>
+<tr><td><a href="https://www.gbgb.org.uk/racing/race-courses/" rel="noopener noreferrer" target="_blank">gbgb.org.uk/racing/race-courses/</a></td><td><span class="num">7</span></td><td>final, hub</td><td>greyhounds</td></tr>
+<tr><td><a href="https://www.nba.com/games?date=2026-10-25" rel="noopener noreferrer" target="_blank">nba.com/games?date=2026-10-25</a></td><td><span class="num">7</span></td><td>portal</td><td>basketball</td></tr>
+<tr><td><a href="https://www.nba.com/games?date=2026-10-31" rel="noopener noreferrer" target="_blank">nba.com/games?date=2026-10-31</a></td><td><span class="num">7</span></td><td>portal</td><td>basketball</td></tr>
+</tbody></table></div>
+
+<h2>Hosts cited</h2>
+<div class="scroll"><table class="data"><thead><tr><th>Host</th><th>Rows</th></tr></thead><tbody>
+<tr><td>www.nba.com</td><td><span class="num">335</span></td></tr>
+<tr><td>www.nhl.com</td><td><span class="num">294</span></td></tr>
+<tr><td>www.euroleaguebasketball.net</td><td><span class="num">106</span></td></tr>
+<tr><td>www.pdc.tv</td><td><span class="num">104</span></td></tr>
+<tr><td>stats.unitedrugby.com</td><td><span class="num">88</span></td></tr>
+<tr><td>www.atptour.com</td><td><span class="num">64</span></td></tr>
+<tr><td>prod2.lnr.fr</td><td><span class="num">48</span></td></tr>
+<tr><td>www.wst.tv</td><td><span class="num">46</span></td></tr>
+<tr><td>ehfcl.eurohandball.com</td><td><span class="num">44</span></td></tr>
+<tr><td>top14.lnr.fr</td><td><span class="num">42</span></td></tr>
+<tr><td>www.gbgb.org.uk</td><td><span class="num">38</span></td></tr>
+<tr><td>www.mlb.com</td><td><span class="num">33</span></td></tr>
+<tr><td>www.formula1.com</td><td><span class="num">32</span></td></tr>
+<tr><td>stats.swehockey.se</td><td><span class="num">32</span></td></tr>
+<tr><td>api-live.euroleague.net</td><td><span class="num">32</span></td></tr>
+<tr><td>www.afl.com.au</td><td><span class="num">27</span></td></tr>
+<tr><td>www.nrl.com</td><td><span class="num">23</span></td></tr>
+<tr><td>www.gaa.ie</td><td><span class="num">22</span></td></tr>
+<tr><td>www.legavolley.it</td><td><span class="num">18</span></td></tr>
+<tr><td>www.icc-cricket.com</td><td><span class="num">16</span></td></tr>
+<tr><td>lolesports.com</td><td><span class="num">16</span></td></tr>
+<tr><td>www.plusliga.pl</td><td><span class="num">15</span></td></tr>
+<tr><td>www.pgatour.com</td><td><span class="num">15</span></td></tr>
+<tr><td>api-web.nhle.com</td><td><span class="num">12</span></td></tr>
+<tr><td>liquipedia.net</td><td><span class="num">8</span></td></tr>
+<tr><td>www.europeantour.com</td><td><span class="num">7</span></td></tr>
+<tr><td>statsapi.mlb.com</td><td><span class="num">7</span></td></tr>
+<tr><td>www.wtatennis.com</td><td><span class="num">7</span></td></tr>
+<tr><td>www.superleague.co.uk</td><td><span class="num">4</span></td></tr>
+<tr><td>munster.gaa.ie</td><td><span class="num">4</span></td></tr>
+<tr><td>wtafiles.wtatennis.com</td><td><span class="num">3</span></td></tr>
+<tr><td>cricket.co.za</td><td><span class="num">2</span></td></tr>
+<tr><td>www.tauronliga.pl</td><td><span class="num">1</span></td></tr>
+<tr><td>liiga.fi</td><td><span class="num">1</span></td></tr>
+<tr><td>www.daikin-hbl.de</td><td><span class="num">1</span></td></tr>
+</tbody></table></div>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Independent cross-layer audit of the published OLBG2 datasets. Read-only: no other session's data was edited.
+Every value below is machine-derived from committed JSON; spot checks link the official page that was read.</p>
+<p>Audit date 2026-10-22 · session <code>arena/3552df3e-olbg2</code> · <a href="flagged.html">Flagged for review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

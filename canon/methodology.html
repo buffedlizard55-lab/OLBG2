@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology - OLBG2 canon</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+       margin: 0; background: #f6f7fb; color: #1b2430; line-height: 1.55; }
+header.top { background: #0f172a; color: #fff; padding: 14px 24px; position: sticky; top: 0; z-index: 10; }
+header.top .brand { font-weight: 700; font-size: 1.15rem; margin-right: 24px; }
+header.top a { color: #cbd5e1; text-decoration: none; margin-right: 16px; font-size: 0.92rem; }
+header.top a:hover, header.top a.active { color: #fff; text-decoration: underline; }
+main { max-width: 1180px; margin: 0 auto; padding: 24px; }
+h1 { font-size: 1.7rem; margin-top: 0; }
+h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
+.lede { color: #475569; max-width: 760px; }
+.notice { background: #fff7ed; border: 1px solid #fdba74; border-radius: 8px; padding: 12px 16px; margin: 16px 0; }
+.notice.critical { background: #fef2f2; border-color: #fca5a5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 18px 0; }
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; }
+.card .num { font-size: 1.6rem; font-weight: 700; color: #0f172a; }
+.card .label { color: #64748b; font-size: 0.85rem; }
+.table-wrap { overflow-x: auto; background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #eef1f6; white-space: nowrap; }
+td.wrap, th.wrap { white-space: normal; }
+th { background: #f1f5f9; position: sticky; top: 0; }
+tr:hover td { background: #f8fafc; }
+.badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.76rem; font-weight: 600; }
+.badge.high { background: #dcfce7; color: #166534; }
+.badge.medium { background: #fef9c3; color: #854d0e; }
+.badge.low { background: #e2e8f0; color: #475569; }
+.badge.none { background: #f1f5f9; color: #94a3b8; }
+.badge.critical { background: #fee2e2; color: #991b1b; }
+.badge.high-sev { background: #ffedd5; color: #9a3412; }
+.badge.medium-sev { background: #fef9c3; color: #854d0e; }
+.badge.low-sev { background: #e2e8f0; color: #475569; }
+.pred { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+.pred h3 { margin: 0 0 6px 0; font-size: 1.02rem; }
+.pred .meta { color: #64748b; font-size: 0.82rem; margin-bottom: 8px; }
+.pred .sel { font-weight: 700; color: #0f172a; margin-top: 8px; }
+a.src { font-size: 0.82rem; }
+footer { max-width: 1180px; margin: 0 auto; padding: 24px; color: #94a3b8; font-size: 0.82rem; }
+.sport-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.sport-grid a { display: block; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px;
+                text-decoration: none; color: #0f172a; font-weight: 600; }
+.sport-grid a .count { display: block; font-weight: 400; color: #64748b; font-size: 0.82rem; margin-top: 4px; }
+code { background: #f1f5f9; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head><body>
+<header class="top"><span class="brand">OLBG2 / canon</span><a href="../index.html">Root dashboard</a><a href="index.html">Overview</a><a href="matches.html">All Matches</a><a href="picks.html">High-Confidence Picks</a><a href="sports/index.html">Sports</a><a href="flagged.html">Flagged for Review</a><a href="audit.html">Repo Audit</a><a href="methodology.html" class="active">Methodology</a><a href="sources.html">Sources</a></header>
+<main>
+
+<h1>Methodology</h1>
+<h2>Scope</h2>
+<p class="lede">The brief excludes soccer/football, boxing, UFC/MMA, American football, hurling, horse
+racing, cycling and specials. The remaining 17 OLBG-taxonomy sports are in scope: Basketball, Ice Hockey,
+Tennis, Darts, Snooker, Handball, Volleyball, Baseball, Motor Racing, Golf, Cricket, Rugby League, Gaelic
+Football, Greyhounds, Aussie Rules, eSports and Rugby Union.</p>
+<h2>Line origination</h2>
+<p class="lede">For each fixture, a model probability is estimated from official governing-body statistics
+(standings, recent results, rankings, head-to-head form) captured first-hand on 2026-10-22. That probability
+is converted to a no-vig fair price: <code>fair_decimal = 1 / probability</code>, and the American price is
+derived from the decimal price in the standard way. No bookmaker price is read, scraped, or invented
+anywhere in this layer.</p>
+<h2>Confidence rule (uniform across this repository)</h2>
+<p class="lede"><strong>High</strong> requires model probability &ge; 70% <em>and</em> a fair American price
+inside &minus;250 to +10000 (decimal 1.40&ndash;101.00). Because 1/0.70 = 1.4286, the only probability window
+that can satisfy both the 70% floor and the &minus;250 ceiling at the same time is 70.0%&ndash;71.4%.
+Anything priced shorter than &minus;250 is capped at <strong>medium</strong> even if the model probability is
+higher, because the brief's focus band excludes it. <strong>Medium</strong> is probability &ge; 60%.
+<strong>Low</strong> is below 60%, and unlined rows show no confidence badge at all.</p>
+<h2>Predictions</h2>
+<p class="lede">Every high-confidence pick gets one unique, non-templated written prediction of at least 30
+words. Each prediction names the competing teams or players, a verified current-form statistic, a dated
+recent result, and the explicit betting selection with its fair price. No individual fact in a prediction is
+asserted without a matching official source captured the same session.</p>
+<h2>Verification and blanks</h2>
+<p class="lede">Every published row links to the official governing-body page it was read from. Where an
+official input could not be confirmed (for example, GBGB's lack of an advance structured trap-draw card for
+ordinary greyhound meetings, or a fixture's starting pitcher not yet announced), the market is left blank and
+the reason is published on the <a href="flagged.html">Flagged for Review</a> page. Nothing is inferred or
+filled in to make a row look more complete than the evidence supports.</p>
+<h2>Reproduce</h2>
+<p class="lede"><code>python3 scripts/canon_data.py &amp;&amp; python3 scripts/canon_predictions.py &amp;&amp;
+python3 scripts/canon_flags.py &amp;&amp; python3 scripts/canon_sources.py &amp;&amp; python3 scripts/canon_build.py
+&amp;&amp; python3 scripts/canon_verify.py</code></p>
+
+</main>
+<footer>Session <code>arena/3de6d2ed-olbg2</code> &middot; captured 2026-10-22 12:08-12:18 UTC &middot;
+Research only, not betting advice. 18+. See <a href="methodology.html">methodology</a> for the model and confidence rule.</footer>
+</body></html>

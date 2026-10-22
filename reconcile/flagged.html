@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for review · OLBG2 reconciliation console</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> OLBG2 · Reconciliation console</div>
+    <nav class="nav"><a href="index.html">Overview</a><a href="conflicts.html">Conflicts</a><a href="non-fixtures.html">Non-fixtures</a><a href="freshness.html">Freshness</a><a href="provenance.html">Provenance</a><a href="predictions.html">Predictions</a><a href="spot-checks.html">Spot checks</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="../index.html">Dashboard</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+
+<h1>Flagged for review</h1>
+<p class="lede">Every item below is published with the evidence needed to judge it. Nothing here blocks the site:
+the console reports, it does not silently rewrite another layer's numbers. Items marked
+<span class="tag bad">material</span> contradict an official source or the project's own stated rule.</p>
+<div class="scroll"><table class="data"><thead><tr><th>#</th><th>Item</th><th>Detail</th><th>Scope</th><th>Severity</th><th>Source / evidence</th></tr></thead><tbody>
+<tr><td>R01</td><td>Tennis rows cite an official order of play that does not contain the published pairings</td><td>Spot check SC-04 read the ATP Almaty day-6 order of play for 2026-10-22. The published /slate/ pairings (e.g. Flavio Cobolli v Rinky Hijikata) do not appear; the official card is Atmane–Bellucci, Machac–Khachanov, Medvedev–Shimabukuro, Bublik–Marozsan plus doubles. Treat every /slate/ tennis row as unverified until re-read.</td><td>13 slate tennis fixtures</td><td><span class="tag bad">material</span></td><td><a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener noreferrer" target="_blank">https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule</a></td></tr>
+<tr><td>R02</td><td>Rows that are not head-to-head fixtures are published as matches</td><td>Outright futures, tournament fields, venue-vs-field pairings and greyhound race meetings carry match-style moneylines and confidence grades in several layers. They cannot be settled from a scoreline.</td><td>64 rows</td><td><span class="tag warn">review</span></td><td><a href="non-fixtures.html">non-fixtures.html</a></td></tr>
+<tr><td>R03</td><td>The same fixtures are published at several URLs with different prices</td><td>341 team-level price conflicts across 369 overlapping fixtures; the largest disagreement is over 16 decimal points on the same club on the same date.</td><td>341 conflicts</td><td><span class="tag warn">review</span></td><td><a href="conflicts.html">conflicts.html</a></td></tr>
+<tr><td>R04</td><td>The same selection is graded at different confidence levels</td><td>161 selections are graded high in one layer and medium/low in another.</td><td>161 selections</td><td><span class="tag warn">review</span></td><td><a href="conflicts.html#grades">conflicts.html#grades</a></td></tr>
+<tr><td>R05</td><td>Confidence grades break the project&#x27;s own rule</td><td>116 rows are graded high while either below 70% model probability or outside the −250…+10000 fair-price band. Slate and hub contain the majority.</td><td>116 rows</td><td><span class="tag bad">material</span></td><td><a href="conflicts.html#rules">conflicts.html#rules</a></td></tr>
+<tr><td>R06</td><td>Published fixtures already in the past</td><td>34 rows are dated before the stamp of the layer that publishes them (root 21, desk 13).</td><td>34 rows</td><td><span class="tag warn">review</span></td><td><a href="freshness.html">freshness.html</a></td></tr>
+<tr><td>R07</td><td>Citation URLs that no longer point at the competition they are used to cite</td><td>plusliga.pl/games.html resolves to tauronliga.pl and renders the women&#x27;s TAURON Liga list, not the men&#x27;s PlusLiga fixtures it supports. PDC rows cite a rankings page, not a fixture list.</td><td>3 volleyball + 18 darts rows</td><td><span class="tag warn">review</span></td><td><a href="https://www.plusliga.pl/games.html" rel="noopener noreferrer" target="_blank">https://www.plusliga.pl/games.html</a></td></tr>
+<tr><td>R08</td><td>Twenty-five predictions repeat a template opening</td><td>25 three-word openings are reused across 180 predictions (e.g. “Back Minnesota Wild” four times). Word counts and full-text uniqueness are otherwise clean.</td><td>25 openings</td><td><span class="tag warn">review</span></td><td><a href="predictions.html">predictions.html</a></td></tr>
+<tr><td>R09</td><td>The site presents eleven overlapping datasets with no single authoritative one</td><td>1,619 published rows resolve to 433 fixtures. Nothing in the navigation says which layer is authoritative for a given sport, and the README itself warns the layers must not be added together.</td><td>11 layers</td><td><span class="tag warn">review</span></td><td><a href="index.html">index.html</a></td></tr>
+</tbody></table></div>
+<div class="note"><strong>What is not flagged.</strong> Absence of another layer's rows from this page is not an endorsement.
+Only nine claims were re-read first-hand; everything else is audited mechanically and remains unverified against its source.
+The exhaustive mechanical results are on the conflicts, non-fixtures, freshness, provenance and predictions pages.</div>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Independent cross-layer audit of the published OLBG2 datasets. Read-only: no other session's data was edited.
+Every value below is machine-derived from committed JSON; spot checks link the official page that was read.</p>
+<p>Audit date 2026-10-22 · session <code>arena/3552df3e-olbg2</code> · <a href="flagged.html">Flagged for review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

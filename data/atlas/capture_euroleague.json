@@ -1,0 +1,91 @@
+{
+ "source": "EuroLeague official live API (api-live.euroleague.net) \u2014 competition code E, season E2026",
+ "url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games?roundNumber=7",
+ "captured_utc": "2026-10-22T12:40:00Z",
+ "session": "arena/ba48a907-olbg2",
+ "note": "Round 7. E2026_61 is already played and is therefore excluded from the pending-slate table.",
+ "games": [
+  {
+   "code": "E2026_61",
+   "home": "Hapoel IBI Tel Aviv",
+   "away": "Virtus Bologna",
+   "utc": "2026-10-21T16:00:00Z",
+   "venue": "ARENA 8888 SOFIA",
+   "played": true,
+   "homeScore": 90,
+   "awayScore": 81
+  },
+  {
+   "code": "E2026_62",
+   "home": "Maccabi Rapyd Tel Aviv",
+   "away": "Real Madrid",
+   "utc": "2026-10-22T18:05:00Z",
+   "venue": "ALEKSANDAR NIKOLIC HALL",
+   "played": false
+  },
+  {
+   "code": "E2026_64",
+   "home": "Anadolu Efes Istanbul",
+   "away": "Besiktas Istanbul",
+   "utc": "2026-10-22T17:30:00Z",
+   "venue": "TURKCELL BASKETBALL DEVELOPMENT CENTER",
+   "played": false
+  },
+  {
+   "code": "E2026_63",
+   "home": "Armani Olimpia Milan",
+   "away": "FC Barcelona",
+   "utc": "2026-10-22T18:30:00Z",
+   "venue": "UNIPOL FORUM",
+   "played": false
+  },
+  {
+   "code": "E2026_65",
+   "home": "FC Bayern Munich",
+   "away": "Dubai Basketball",
+   "utc": "2026-10-22T18:00:00Z",
+   "venue": "SAP GARDEN",
+   "played": false
+  },
+  {
+   "code": "E2026_67",
+   "home": "Panathinaikos AKTOR Athens",
+   "away": "Kosner Baskonia Vitoria-Gasteiz",
+   "utc": "2026-10-22T18:15:00Z",
+   "venue": "TELEKOM CENTER ATHENS",
+   "played": false
+  },
+  {
+   "code": "E2026_66",
+   "home": "Partizan Mozzart Bet Belgrade",
+   "away": "Crvena Zvezda Meridianbet Belgrade",
+   "utc": "2026-10-22T18:45:00Z",
+   "venue": "BELGRADE ARENA",
+   "played": false
+  },
+  {
+   "code": "E2026_68",
+   "home": "Zalgiris Kaunas",
+   "away": "LDLC ASVEL Villeurbanne",
+   "utc": "2026-10-23T17:00:00Z",
+   "venue": "ZALGIRIO ARENA",
+   "played": false
+  },
+  {
+   "code": "E2026_70",
+   "home": "Olympiacos Piraeus",
+   "away": "Fenerbahce Tarfin Istanbul",
+   "utc": "2026-10-23T18:15:00Z",
+   "venue": "SUNEL ARENA",
+   "played": false
+  },
+  {
+   "code": "E2026_69",
+   "home": "Paris Basketball",
+   "away": "Valencia Basket",
+   "utc": "2026-10-23T18:45:00Z",
+   "venue": "ADIDAS ARENA",
+   "played": false
+  }
+ ]
+}

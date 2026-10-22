@@ -1,0 +1,94 @@
+{
+  "checked_date": "2026-10-22",
+  "boundary": "Bounded independent findings, not a line-by-line external certification of the entire repository. Upstream owner scopes not modified.",
+  "items": [
+    {
+      "id": "CM-01",
+      "severity": "high",
+      "title": "Portal probability labels",
+      "finding": "27 of 34 portal predictions have structured prob < 0.70 while all 34 carry high confidence. This is a reproducible semantic mismatch, not proof of future outcomes. No replacement probability is inferred.",
+      "source_url": "https://www.olbg.com/betting-tips",
+      "file": "data/portal/predictions.json"
+    },
+    {
+      "id": "CM-02",
+      "severity": "high",
+      "title": "AFLW fixture mismatches",
+      "finding": "Portal lists Hawthorn–Melbourne, Geelong–Brisbane and Port Adelaide–Fremantle for Round 11. The official homepage ribbon read in this session instead shows Hawthorn–Essendon, Geelong–Fremantle, Port Adelaide–Collingwood. Other stored pairings also differ. All nine source-confirmed pairings are listed here without guessed dates/venues.",
+      "source_url": "https://www.afl.com.au/aflw",
+      "file": "data/portal/matches.json"
+    },
+    {
+      "id": "CM-03",
+      "severity": "high",
+      "title": "Tennis in-play picks",
+      "finding": "ATP live pages explicitly showed Machac–Khachanov and Collignon–Lehecka live; Vacherot–Van Assche warming up; Gojo–Altmaier live. Their pre-match picks must not be presented as currently actionable. No in-play probability is estimated.",
+      "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/live-scores",
+      "file": "data/portal/predictions.json"
+    },
+    {
+      "id": "CM-04",
+      "severity": "high",
+      "title": "Inherited tennis contradictions",
+      "finding": "Final desk retains Cobolli–Hijikata in Almaty and Khachanov–Struff; the actual daily schedule pairs Cobolli–Wawrinka in Lyon and Machac–Khachanov in Almaty. These inherited rows have not been certified in this audit.",
+      "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "file": "data/final/matches.json"
+    },
+    {
+      "id": "CM-05",
+      "severity": "medium",
+      "title": "Golf has started",
+      "finding": "PGA official leaderboard returned R1 In Progress. Existing 72-hole pre-match propositions cannot be treated as fresh pre-event picks. No live golfing probability or result has been copied from bookmaker fields.",
+      "source_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528",
+      "file": "data/portal/matches.json"
+    },
+    {
+      "id": "CM-06",
+      "severity": "medium",
+      "title": "Citations are not evidence of every field",
+      "finding": "Portal second NZ–India T20I row cites the same ICC match URL as its first T20I; the Afghanistan–Zimbabwe row cites a rankings page rather than a fixture. Row source host checks do not verify fixture dates or participants.",
+      "source_url": "https://www.bcci.tv/international/men/fixtures-results",
+      "file": "data/portal/matches.json"
+    },
+    {
+      "id": "CM-07",
+      "severity": "medium",
+      "title": "Source retrieval limits",
+      "finding": "NBA schedule returned filters but no fixture rows. PDC Order of Merit chunks 0 and 6 returned consent text rather than rankings. No current NBA or PDC numerical inputs were confirmed by these requests.",
+      "source_url": "https://www.nba.com/schedule?date=2026-10-24",
+      "file": "data/portal/inputs.json"
+    },
+    {
+      "id": "CM-08",
+      "severity": "medium",
+      "title": "Partial retrieval and non-exhaustive inventory",
+      "finding": "Only complete objects actually read were transcribed. NHL chunk 0 provided two complete fixtures, not the full twelve-game slate; MLB chunk 0 provided complete G1–G5, not complete G6–G7. Official links and stored counts alone cannot establish exhaustive coverage.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "file": "data/command/inputs.json"
+    },
+    {
+      "id": "CM-09",
+      "severity": "medium",
+      "title": "Source status/date conflicts",
+      "finding": "ATP Almaty daily schedule says Atmane–Bellucci completed on Thu 22 Oct, but the results page places the completed match under Fri 23 Oct. The conflicting row is not included in this desk. Do not resolve this by guessing a date.",
+      "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/results",
+      "file": "data/command/inputs.json"
+    },
+    {
+      "id": "CM-10",
+      "severity": "medium",
+      "title": "Modelling is not factual verification",
+      "finding": "Seven independent-Poisson scoring models use transcribed official GP/GF/GA. Independence, no home adjustment and 50/50 overtime ties are assumptions, not official facts. No backtest/calibration or lineup check establishes high confidence; all lines are capped at medium. SHL goal accounting may include shootout conventions.",
+      "source_url": "https://stats.swehockey.se/ScheduleAndResults/Standings/20961",
+      "file": "scripts/command_model.py"
+    },
+    {
+      "id": "CM-11",
+      "severity": "medium",
+      "title": "No exhaustive market coverage",
+      "finding": "Win, regulation result, regulation handicap and regulation total are investigated only for seven supported hockey rows. Player props, alternate lines, golf matchups, betting settlement rules and all other unsupported markets remain blank. No assertion that these synthetic lines are offered by a bookmaker.",
+      "source_url": "https://stats.swehockey.se/ScheduleAndResults/Live/20961",
+      "file": "data/command/matches.json"
+    }
+  ]
+}

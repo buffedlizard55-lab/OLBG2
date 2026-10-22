@@ -1,0 +1,91 @@
+{
+ "generated_at": "2026-10-22T12:55:00Z",
+ "generated_by": "arena/5fba1c42-olbg2",
+ "rule": "A full write-up is published for every selection graded HIGH (model probability >= 70% AND fair American price inside -250..+10000). Tonight, exactly one of 141 originated markets across 48 verified fixtures qualified; the desk does not loosen the band to manufacture more.",
+ "high_picks": [
+  {
+   "match_id": "nhl-2026020156",
+   "sport": "ice-hockey",
+   "selection": "Ottawa Senators win match (moneyline)",
+   "probability": 0.7041,
+   "fair_decimal": 1.42,
+   "fair_american": -238,
+   "confidence": "high",
+   "match": "San Jose Sharks at Ottawa Senators, Canadian Tire Centre, 2026-10-22 23:00 UTC (7:00 PM ET)",
+   "text": "Ottawa are the moneyline play at Canadian Tire Centre tonight: my model makes them a 70.4% proposition (fair price -238), against the -135 shown on the NHL's own official odds feed for context. The Senators stand 7-3-0 with 27 goals for and 24 against through ten games, while San Jose arrive 5-4-1 and have conceded 34. Tim Stützle (6 goals, 8 assists) spearheads the hosts and Linus Ullmark has won seven of Ottawa's ten; Macklin Celebrini (5 goals, 9 assists) leads the Sharks' reply. Selection: Ottawa Senators to win the match.",
+   "words": 98,
+   "verified_claims": [
+    {
+     "claim": "Ottawa 7-3-0, 27 GF / 24 GA in 10 GP; San Jose 5-4-1, 26 GF / 34 GA in 10 GP",
+     "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+    },
+    {
+     "claim": "Tim Stützle leads Ottawa team leaders with 6 goals, 8 assists; Linus Ullmark leads with 7 goalie wins",
+     "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+    },
+    {
+     "claim": "Macklin Celebrini leads San Jose team leaders with 5 goals, 9 assists",
+     "url": "https://api-web.nhle.com/v1/score/2026-10-22"
+    },
+    {
+     "claim": "Fixture, venue and 23:00 UTC start; NHL-published partner price OTT -135 / SJS +114 (DraftKings)",
+     "url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156"
+    }
+   ]
+  }
+ ],
+ "band_audit": {
+  "note": "Every market with model probability >= 0.70 on tonight's desk, and why it is or is not a HIGH pick. Fair American band for HIGH: -250 <= price <= +10000.",
+  "rows": [
+   {
+    "market": "Ottawa Senators moneyline v San Jose",
+    "p": 0.7041,
+    "fair": -238,
+    "verdict": "HIGH - inside band"
+   },
+   {
+    "market": "Boston Bruins moneyline v Nashville",
+    "p": 0.7313,
+    "fair": -272,
+    "verdict": "medium - reaches 70% but fair price heavier than -250"
+   },
+   {
+    "market": "Dallas Stars moneyline v Winnipeg",
+    "p": 0.7222,
+    "fair": -260,
+    "verdict": "medium - heavier than -250"
+   },
+   {
+    "market": "SU Agen moneyline v Nissa Rugby (Pro D2)",
+    "p": 0.7193,
+    "fair": -256,
+    "verdict": "medium - heavier than -250"
+   },
+   {
+    "market": "New York Islanders moneyline v Los Angeles",
+    "p": 0.8448,
+    "fair": -544,
+    "verdict": "medium - heavier than -250"
+   },
+   {
+    "market": "Minnesota Wild moneyline v Calgary",
+    "p": 0.8511,
+    "fair": -572,
+    "verdict": "medium - heavier than -250"
+   },
+   {
+    "market": "Gerwyn Price win match v Rob Cross (darts)",
+    "p": 0.7985,
+    "fair": -396,
+    "verdict": "medium - heavier than -250"
+   },
+   {
+    "market": "Toronto Maple Leafs +1.5 puck line v NY Rangers",
+    "p": 0.6997,
+    "fair": -233,
+    "verdict": "medium - 0.0003 under the 70% bar; documented, not rounded up"
+   }
+  ],
+  "market_price_angle": "On the NHL's own published partner prices tonight, no team is priced at -250 or shorter: the heaviest favourites are Dallas and Minnesota at -205 (DraftKings). So a market-implied 70%+ favourite does not exist on the 12-game slate; the desk's single HIGH pick comes from the model, not the market."
+ }
+}

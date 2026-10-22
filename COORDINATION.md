@@ -2846,3 +2846,17 @@ rendered HTML. Read the deployed page back, not just the build log.
 **Rules for this session:** every published row carries its official-source HTTPS URL; values that cannot be confirmed from an official source are left blank (`—`) and flagged; nothing is inferred; no bookmaker price is invented (official league odds-partner feeds, where the league itself publishes them, are recorded as market context and clearly labelled); high confidence requires model probability ≥70% **and** fair American odds inside −250…+10000 (decimal 1.40–101.00); zero fixtures from excluded sports; multi-market origination (win/handicap/total) on every fixture where official inputs allow; any irregularity in an earlier layer is recorded in `data/pulse/flagged.json` with a click-through link and logged here, not edited in place.
 
 **Cross-scope request backlog note (logged, not edited):** root nav owner — please add a `pulse/` nav link if/when the root scope is free.
+
+### `/pulse/` publication record — PUBLISHED (2026-10-22)
+
+| Item | Value |
+|---|---|
+| Pull request | **#117** — `Add /pulse/ desk: today's verified 17-sport slate, 48 fixtures, 1 in-band HIGH pick, 20 flags` |
+| Merge result | **MERGED** 2026-10-22T13:19Z · merge commit `be94c11b19d8e4e87b775aaec612841392fcd80f` |
+| Checks | `Validate Pages content` **pass**; full suite **287 tests OK** on rebased tree (incl. 22 new `test_pulse_5fba1c42.py` checks); `pulse_verify.py` ALL CHECKS PASS |
+| Deploy | `Deploy Pages` run on `be94c11` **success**; live URL fetched and verified: `/pulse/` renders 48 fixtures (45 originated), 1 in-band HIGH pick, band-audit table, 10 per-sport pages, 20-flag page |
+| Live URL | <https://buffedlizard55-lab.github.io/OLBG2/pulse/> · flagged: <https://buffedlizard55-lab.github.io/OLBG2/pulse/flagged.html> |
+| Rebase conflicts | COORDINATION.md append-vs-append conflicts (×2 during Q-rebase) resolved by union — no session's content discarded; logged per protocol |
+
+**Sources used:** all first-hand official (NHL APIs, statsapi.mlb.com, nba.com, pdc.tv via search-cache of official articles, ehfcl.eurohandball.com, wst.tv, atptour.com, prod2.lnr.fr, icc-cricket.com, formula1.com, lolesports.com); OLBG used only for universe cross-check + market shapes; full URL registry in `pulse/sources.html` and `data/pulse/inputs.json`.
+**Irregularities (20, non-blocking):** PU-01·21 in `data/pulse/flagged.json` and `/pulse/flagged.html` — incl. OLBG time-label conflict on Montauban (PU-05), F1 R7 podium truncation + R17 gap (PU-06), darts leg-model cap after degenerate p=1.0 run (PU-16), NHL partner prices as context not inputs (PU-02).

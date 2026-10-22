@@ -125,7 +125,7 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
         "headline": "Minnesota's 2.50 goals-against clamp meets Calgary's 2.13-per-game attack",
         "template": (
             "Back {selection} at Scotiabank Saddledome on Thursday night. "
-            "Minnesota have banked 14 points from ten games (6-2-2) on the back of just 25 goals conceded, the tightest defensive rate on tonight's slate, while Calgary sit 2-6-0 having scored only 17 goals in eight outings and shipped 37. "
+            "Minnesota have banked 14 points from ten games (6-2-2) on the back of just 25 goals conceded (2.50 per game), while Calgary sit 2-6-0 having scored only 17 goals in eight outings and shipped 37. "
             "Our shrunk Poisson model makes the visiting Wild a {prob_pct}% shot ({price} fair decimal, {american} American)."
         ),
         "facts": [

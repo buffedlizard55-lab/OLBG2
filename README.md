@@ -10,12 +10,19 @@ OLBG2 records OLBG's published sports taxonomy, collects dated event listings, a
 
 **Cross-layer integrity review:** <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
 
+## Latest integration (22 October 2026)
+
+The [current capture desk](current/index.html) is now linked from root and category navigation and rebuilt in CI. It stores **57 fixture rows across 7 sports**, **55 originated rows**, **2 blank rows**, and **29 model-band predictions across 4 sports**. Ten categories have zero rows. These are counts from `data/current/band.json` and `predictions.json`, not additional unique matches to add to other desks.
+
+**Not freshly externally verified in this integration session:** direct OLBG HTTPS access failed in this sandbox. Existing official captures remain dated evidence, not proof of current fixture status. See the [integration verification ledger](research/integration-83346ec9.md) and the published [Flagged for Review findings](integration.html). Five verified predictions per sport per day, exhaustive markets, observed bookmaker prices, independently calibrated confidence, and unattended fresh collection remain unmet. CI regenerates stored evidence; it does not fetch new fixtures.
+
 ## Start here
 
 The repository contains several independently collected, overlapping snapshots. **Do not add their row counts together.** The root dashboard is the `/verified/` desk; `/final/` is a deterministic de-duplicated view of five input layers. Neither is a guarantee of full real-world fixture coverage or of current bookmaker prices.
 
 | Desk | Entry point | Checked-in snapshot (2026-10-22) |
 |---|---|---|
+| **Current capture desk** | [`current/index.html`](current/index.html) | Independent 22 October capture; fixture, price, prediction, source and review tables. Overlaps other desks; counts must not be added. Rebuilt and drift-checked in CI. These are stored captures, not a live feed. |
 | **Root dashboard** | [`index.html`](index.html) | 188 rows across 14 of 17 eligible sports; 154 rows with originated lines, 34 unlined, and 14 price-band selections/writeups on the root dashboard. The separate `/verified/` research page has 16 additional research writeups. Price-band selections are a separate filter, not the count of rows labelled high confidence. |
 | **Consolidated desk** | [`final/index.html`](final/index.html) | 382 deduplicated rows across all 17 eligible sports; 339 originated and 43 unlined. The union uses `/verified/`, `/hub/`, `/board/`, `/slate/`, and `/forward/`. It contains 19 featured model picks. |
 | **Forensic origination portal** | [`portal/index.html`](portal/index.html) | Separate 244-row audit snapshot: 220 originated, 24 explicitly unlined; includes its own sport pages, predictions, sources, and review queue. |
@@ -58,6 +65,7 @@ COORDINATION.md                                                       shared tas
 The pipelines use Python's standard library. From the repository root, the principal generation order is:
 
 ```bash
+python3 scripts/current_seed.py && python3 scripts/current_model.py && python3 scripts/current_build.py
 python3 scripts/verified_seed.py && python3 scripts/verified_model.py && python3 scripts/verified_build.py
 python3 scripts/forward_seed.py && python3 scripts/forward_model.py && python3 scripts/forward_build.py
 python3 scripts/live_model.py && python3 scripts/live_build.py

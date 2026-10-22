@@ -1218,10 +1218,10 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| W1 | Audit every high-confidence pick in every layer against the brief's American-odds window [-250, +10000] and the 70% probability floor | in progress | `arena/1bb45081-olbg2` | `research/odds-window-audit-1bb45081.md`, all `data/**` pick/prediction files (regrades only) |
-| W2 | Implement the window gate in all model scripts; regrade out-of-window chalk to medium; archive their narratives with reason (no deletion) | in progress | `arena/1bb45081-olbg2` | `scripts/verified_model.py`, `scripts/model.py`, `scripts/live_model.py`, `scripts/survey_lines.py`, `scripts/survey_analyse.py`, generated `data/**` |
-| W3 | Fresh 2026-10-22 official-source verification and four new bespoke high-confidence narratives for the window-compliant picks | in progress | `arena/1bb45081-olbg2` | `scripts/verified_model.py`, `data/verified/predictions.json`, `data/verified/archived_predictions.json`, EHF/NHL/LNR/URC sources fetched this session |
-| W4 | Rebuild all five site layers, add compliance tests, update flags/methodology/README, integrate, PR, merge, verify Pages | pending | `arena/1bb45081-olbg2` | generated HTML across all layers, `tests/**`, `METHODOLOGY.md`, `README.md`, `COORDINATION.md` |
+| W1 | Audit every high-confidence pick in every layer against the brief's American-odds window [-250, +10000] and the 70% probability floor | done | `arena/1bb45081-olbg2` | `research/odds-window-audit-1bb45081.md`, all `data/**` pick/prediction files (regrades only) |
+| W2 | Implement the window gate in all model scripts; regrade out-of-window chalk to medium; archive their narratives with reason (no deletion) | done | `arena/1bb45081-olbg2` | `scripts/verified_model.py`, `scripts/model.py`, `scripts/live_model.py`, `scripts/engine.py`, `scripts/survey_analyse.py`, generated `data/**` |
+| W3 | Fresh 2026-10-22 official-source verification and four new bespoke high-confidence narratives for the window-compliant picks | done | `arena/1bb45081-olbg2` | `scripts/verified_model.py`, `data/verified/predictions.json`, `data/verified/archived_predictions.json`, EHF/NHL/LNR/URC sources fetched this session |
+| W4 | Rebuild all five site layers, add compliance tests, update flags/methodology/README, integrate, PR, merge, verify Pages | in progress (PR + Pages verification remaining) | `arena/1bb45081-olbg2` | generated HTML across all layers, `tests/**`, `METHODOLOGY.md`, `README.md`, `COORDINATION.md` |
 
 **Scope rule:** probabilities and originated prices are not changed — only confidence labels and which narratives
 are published as active high-confidence write-ups. Every removed narrative is retained in an archived file with
@@ -1240,3 +1240,24 @@ the reason. Nothing is deleted. All other sessions' branches are already merged.
 - `/live` layer: 4 URC high picks, all -270 or shorter (p 0.76-0.86) — zero compliant.
 - `/survey` layer: 5 high narratives (Toulouse, Bulls, Stormers, Littler, Aspinall) — all chalk, to be regraded/
   archived through the survey pipeline with the same rule.
+
+### Completion ledger (2026-10-22, pre-PR)
+
+W1-W3 done and committed on `arena/1bb45081-olbg2` (commits 9d9f5fb, 55f6bde, 10f1030). W4 rebuild/test/doc work
+done; PR + merge + Pages verification in progress.
+
+**Uniform rule implemented:** high iff model probability >= 0.70 AND fair no-vig American price in [-250, +10000]
+(-250 = decimal 1.40 = 71.43% implied; effective band 70.0-71.43%). Gate evaluated on FAIR prices (1/p) in every
+layer so it is a deterministic function of model probability; published overround prices remain separately shown
+(root flag F28 documents this; the initial root audit above used published prices, under which NYI/PSG failed —
+on the uniform fair-price basis NYI -250 and PSG -238 qualify and retain high).
+
+Final high counts: verified 4 (20 archived, -5000..-256); root 2 (7 archived); desk 1 (4 archived); live 0
+(4 archived); survey 0 (5 archived). 36 narratives archived total across five `archived_*.json` files, each with
+reason, regraded label, fair decimal and American price; nothing deleted. Flags added: VF-11/12/13, F27/F28, L12,
+survey F-16, desk flag-odds-window. Verified venues Stade Jean Alric and One Veszprem Arena populated from official
+pages; Veszprem-Berlin completed 39-35 and carries an on-card snapshot note (VF-12).
+
+Tests: 60 -> 66 unittests, all green; full `pages.yml` rebuild sequence is byte-stable (clean `git status` after
+rebuild). Research record: `research/odds-window-audit-1bb45081.md`. METHODOLOGY.md section 3 rewritten with the
+uniform gate and per-layer conjunctions; README layer table corrected to current counts.

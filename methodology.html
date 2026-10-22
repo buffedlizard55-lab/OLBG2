@@ -103,26 +103,33 @@ P(result)  = sum of Poisson(i; exp_home) * Poisson(j; exp_away) over the matchin
 <p>Match winner is three-way (draw included). Handicap uses a half-goal line set just beyond the expected
 margin, and match total uses a half-goal line just below the expected total, so no bet can push. Prices apply a
 4% theoretical margin to the model probability; no bookmaker price is used anywhere.
-A handball pick is graded <b>high</b> only when the model gives it at least 70% and both clubs have played four
-or more group games, <b>medium</b> from 58%, and <b>low</b> below that.</p>
+A handball pick is graded <b>high</b> only when the model gives it at least 70%, both clubs have played four
+or more group games, <b>and</b> its fair American price sits inside [-250, +10000], <b>medium</b> from 58%
+(including out-of-window chalk), and <b>low</b> below that.</p>
 
 <h2 class="section">5. Confidence rules</h2>
+<p>Since 2026-10-22 every layer applies one uniform gate on top of its sport-specific sample rules:
+<b>high requires p ≥ 70% and a fair no-vig American price within [-250, +10000]</b> (the -250 bound equals
+decimal 1.40 / 71.43% implied, so the practical high band is 70.0-71.43%). Chalk outside the window is capped
+at medium and its narrative is archived in <code>data/predictions_archived.json</code>, not deleted.</p>
 <table>
 <thead><tr><th>Sport</th><th>High</th><th>Medium</th><th>Low</th></tr></thead>
 <tbody>
-<tr><td>NHL</td><td>p ≥ 65% and both teams ≥ 7 games played</td><td>p ≥ 57% with ≥ 7 games, or p ≥ 68% with ≥ 5</td><td>everything else</td></tr>
+<tr><td>NHL</td><td>p ≥ 70%, fair American in [-250, +10000], both teams ≥ 7 games played</td><td>p ≥ 57% with ≥ 7 games, or p ≥ 68% with ≥ 5; sub-70% or out-of-window chalk is capped here</td><td>everything else</td></tr>
 <tr><td>NBA</td><td>not permitted — zero current-season games</td><td>p ≥ 68%</td><td>p &lt; 68%</td></tr>
 <tr><td>URC</td><td>not permitted — three rounds played</td><td>p ≥ 62%</td><td>p &lt; 62%</td></tr>
 </tbody></table>
-<p class="small muted" style="margin-top:10px">The rule is deliberately conservative: promoting a three-game sample to
-"high" would be a confidence trick, not a prediction.</p>
+<p class="small muted" style="margin-top:10px">The rule is deliberately conservative: promoting a three-game sample,
+or any heavy chalk shorter than -250, to "high" would be a confidence trick, not a prediction.</p>
 
 <h2 class="section">6. Predictions</h2>
 <p>Written predictions are attached to model-labeled high picks and include citations, but a citation link alone
 is not proof that its page supports the associated claim. The current cross-layer audit did not freshly verify every
 fact in these narratives. Treat existing prose as unverified where not checked against an official source; see
 <a href="integration.html">Evidence status</a> and open cited pages before relying on a statement. No automated
-gate checks the factual content of prediction text.</p>
+gate checks the factual content of prediction text. Narratives displaced by the odds-window rule remain available,
+with their original citations and a per-pick regrade reason, in
+<a href="picks.html#archived">the archive table on the Picks page</a> and <code>data/predictions_archived.json</code>.</p>
 
 <h2 class="section">7. Provenance</h2>
 <p>URLs and collection notes are recorded in <code>research/collection-log.md</code>; raw response captures are not

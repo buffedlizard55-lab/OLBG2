@@ -88,19 +88,47 @@ It is **not** a market price.
 
 ## 3. Confidence
 
-| Sport | High | Medium | Low |
+### 3.1 Uniform odds-window gate (since 2026-10-22)
+
+Across **every published layer** (root dashboard, desk `/site/`, survey `/survey/`, live `/live/`, verified
+`/verified/`), a selection is labelled **high only when both conditions hold**:
+
+1. model win probability `p ≥ 0.70`; and
+2. its fair, no-vig American price lies inside **[-250, +10000]**, where the fair decimal is `1/p` and
+   `American = round(-100 / (decimal − 1))` for prices below 2.00.
+
+Boundary: **-250 American = decimal 1.40 = 71.43% implied**, so the effective high band is 70.0%–71.43%.
+The gate is evaluated on fair no-vig prices so it is a deterministic function of the model probability and is
+applied identically in all five layers; displayed market rows keep their documented model overround separately.
+Selections failing the gate keep their probability and price but are capped at medium/low. Full remediation
+record: `research/odds-window-audit-1bb45081.md`.
+
+### 3.2 Layer-specific evidence gates (conjunctions with 3.1)
+
+| Layer / sport | Additional high requirements | Medium | Low |
 |---|---|---|---|
-| NHL | p ≥ 65% and both teams ≥ 7 games | p ≥ 57% (≥ 7 games) or p ≥ 68% (≥ 5 games) | otherwise |
-| NBA | not permitted (zero current-season games) | p ≥ 68% | p < 68% |
-| URC | not permitted (three rounds) | p ≥ 62% | p < 62% |
-| Handball | p ≥ 70% and both clubs ≥ 4 group games | p ≥ 58% (≥ 4 games) | otherwise |
+| Root NHL | both teams ≥ 7 games and the 3.1 window | p ≥ 57% (≥ 7 games) or p ≥ 68% (≥ 5 games) | otherwise |
+| Root NBA | not permitted (zero current-season games) | p ≥ 68% | p < 68% |
+| Root URC | not permitted (three rounds) | p ≥ 62% | p < 62% |
+| Root Handball | both clubs ≥ 4 group games and the 3.1 window | p ≥ 58% (≥ 4 games) | otherwise |
+| Desk `/site/` NHL/NBA | ≥ 13 pts model edge, evidence pack, min. games sample **and** the 3.1 window | ≥ 6 pts edge or capped edge-highs | otherwise |
+| Survey `/survey/` | tier 1/2, form verified, old 72% bar **and** the 3.1 window | p ≥ 60% | otherwise |
+| Live `/live/` | p ≥ 70% inside the 3.1 window | p ≥ 55% or out-of-window chalk | p < 55% |
+| Verified `/verified/` | p ≥ 70% inside the 3.1 window | layer rules | layer rules |
 
 ## 4. Predictions
 
-Only for high-confidence picks. Minimum 30 words (enforced by `scripts/build_site.py`), the selection stated in
-the first sentence, the team's record and scoring rate, at least one named player with a verified statistic, and
-the model probability. Every factual claim carries a source link on the Picks page. No injuries, line-ups,
-transfers or travel claims are made, because none could be verified.
+Only for high-confidence, window-compliant picks. Minimum 30 words (enforced by the build scripts), the
+selection stated in the first sentence, the team's record and scoring rate, at least one named player with a
+verified statistic, and the model probability. Every factual claim carries a source link on the picks page. No
+injuries, line-ups, transfers or travel claims are made, because none could be verified.
+
+Narratives displaced by the 2026-10-22 window rule are **archived, never deleted**, each with its original text,
+facts, sources, fair decimal/American price, regraded label and reason:
+`data/predictions_archived.json` (root), `data/desk/archived_picks.json`,
+`data/survey/archived_predictions.json`, `data/live/archived_predictions.json`, and
+`data/verified/archived_predictions.json`. Every layer renders an archive table or section and, where no
+selection qualifies, an explicit empty-state notice instead of an invented pick.
 
 ## 5. Known limitations
 

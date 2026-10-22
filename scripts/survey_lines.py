@@ -375,13 +375,27 @@ def build_darts_and_snooker_and_mlb():
     return out
 
 
+def _fair_decimal(p):
+    return round(1.0 / max(p, 1e-6), 2)
+
+
+def _american(decimal_odds):
+    if decimal_odds >= 2.0:
+        return round((decimal_odds - 1.0) * 100.0)
+    return round(-100.0 / (decimal_odds - 1.0))
+
+
 def confidence(rec):
+    # 2026-10-22: high additionally requires the [-250, +10000] fair-price
+    # window. survey_analyse.py applies the same gate again with its
+    # divergence caps and archive handling.
     p = rec.get("pick_probability")
     tier = rec.get("tier")
     has_form = rec.get("form_verified", False)
     if p is None or tier in (None, "none"):
         return "unverified"
-    if p >= 0.72 and tier in ("tier1", "tier2") and has_form:
+    in_window = -250 <= _american(_fair_decimal(p)) <= 10000
+    if p >= 0.70 and tier in ("tier1", "tier2") and has_form and in_window:
         return "high"
     if p >= 0.60 and tier in ("tier1", "tier2"):
         return "medium"

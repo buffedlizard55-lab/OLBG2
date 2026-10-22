@@ -12,13 +12,24 @@ OLBG2 is a static research project that examines [OLBG.com](https://www.olbg.com
 
 This repository contains multiple separately built snapshots. Their counts are **stored rows, not a verified count of unique upcoming matches**. The layers have known overlaps, different scopes, and different evidence limitations. Do not add their totals together.
 
-The official-source provenance audit (`python3 scripts/official_source_audit.py`) reports that **all 130 survey inventory rows lack an explicit official fixture-source field**. The OLBG URLs on those records document OLBG listing provenance; they do not independently confirm that the fixture, date, or competition is correct. For the survey's 15 prediction-fact citations, 4 URLs are on candidate official domains and 11 are outside the audit's conservative allowlist. A domain match is not proof that a page supports a claim. See the [audit report](research/official-source-audit-18eca832.md), [cross-layer review](integration.html), and [Flagged for Review](flagged.html).
+The official-source provenance audit (`python3 scripts/official_source_audit.py`) reports that **all 145 survey inventory rows lack an explicit official fixture-source field**. The OLBG URLs on those records document OLBG listing provenance; they do not independently confirm that the fixture, date, or competition is correct. The 14 prediction-fact citations now live in `data/survey/archived_predictions.json` after the odds-window regrade (see below); 4 URLs are on candidate official domains and the rest are outside the audit's conservative allowlist. A domain match is not proof that a page supports a claim. See the [audit report](research/official-source-audit-18eca832.md), [cross-layer review](integration.html), and [Flagged for Review](flagged.html).
 
 | Layer | Entry point | Snapshot contents (not an external verification claim) |
 |---|---|---|
-| **Root dashboard** | [`index.html`](index.html) | 47 stored match rows, 45 originated-line records, 9 written high-confidence picks; 22 open and 4 closed review items at the recorded snapshot. Built by `scripts/model.py` and `scripts/build_site.py`. |
-| **Evidence desk** | [`site/index.html`](site/index.html) | Separate NHL/NBA layer with 25 stored fixture rows and 64 market records, plus its own source register and flags. Built by `scripts/engine.py` and `scripts/build.py`. |
-| **Sport survey** | [`survey/index.html`](survey/index.html) | 130 OLBG-discovered inventory entries across its 15-sport taxonomy; 11 originated lines, 2 written predictions, and a separate review queue. The inventory rows are not all officially fixture-verified. |
+| **Root dashboard** | [`index.html`](index.html) | 47 stored match rows, 45 originated-line records, 2 active window-compliant high-confidence picks plus 7 archived narratives; 24 open and 4 closed review items. Built by `scripts/model.py` and `scripts/build_site.py`. |
+| **Evidence desk** | [`site/index.html`](site/index.html) | Separate NHL/NBA layer with 25 stored fixture rows and 64 market records, 1 active high pick and 4 archived narratives, plus its own source register and 10 flags. Built by `scripts/engine.py` and `scripts/build.py`. |
+| **Sport survey** | [`survey/index.html`](survey/index.html) | 145 OLBG-discovered inventory entries across its 15-sport taxonomy; 26 originated lines, 0 active high predictions and 5 narratives archived under the odds window, with 8 review flags. The inventory rows are not all officially fixture-verified. |
+| **Live slate** | [`live/index.html`](live/index.html) | 11 fresh URC/MLB fixtures with three originated markets each; 0 active highs and 4 archived URC narratives, 12 flags. |
+| **Verified desk** | [`verified/index.html`](verified/index.html) | 155 rows (112 originated, 43 unlined) across 17 eligible sports; 4 window-compliant high picks and 20 archived chalk narratives, 13 flagged items. |
+
+## Odds-window confidence rule (2026-10-22)
+
+A selection is labelled **high** in every layer only when its model probability is at least **70%** *and* its
+fair no-vig American price sits inside **[-250, +10000]** (-250 = decimal 1.40 = 71.43% implied, so the practical
+band is 70.0%–71.43%). Heavy chalk previously labelled high was regraded medium/low; its written prediction was
+moved verbatim into a per-layer `archived_*.json` file with the regrade reason, fair price and sources, and each
+site renders an archive section (or an explicit empty-state card where nothing qualifies). Full audit:
+[`research/odds-window-audit-1bb45081.md`](research/odds-window-audit-1bb45081.md).
 
 These are dated snapshots, not an automatically refreshed feed. Prior captures span 18–21 October 2026; the builders regenerate pages from checked-in data but do not retrieve new schedules. Recheck every event and source before treating it as upcoming or using its model output.
 
@@ -29,7 +40,9 @@ Each pairing, date and published throw-off time was read from the official EHF m
 (<https://ehfcl.eurohandball.com/men/2026-27/matches/>), and each club's group-phase wins, draws, losses, goals
 for and goals against came from the official standings on the same site
 (<https://ehfcl.eurohandball.com/men/2026-27/standings/>). All twelve were lined (three-way match winner,
-handicap and match total; 84 prices) and five high-confidence picks carry written predictions with per-fact
+handicap and match total; 84 prices). Of the five original high-confidence write-ups, only the Paris
+Saint-Germain pick (70.2%, fair -238) survives the 2026-10-22 odds window; the four chalk narratives (Aalborg,
+Barça, Sporting, Magdeburg, -370 to -588) are archived in `data/predictions_archived.json` with per-fact
 source links. The line-by-line table and the irregularities found are in
 [`research/handball-ehf-73620ec4.md`](research/handball-ehf-73620ec4.md).
 

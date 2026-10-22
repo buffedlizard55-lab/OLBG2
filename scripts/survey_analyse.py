@@ -98,7 +98,7 @@ def confidence(rec):
 
     if capped:
         return "low", notes
-    if tier in ("tier1", "tier2") and rec.get("form_verified") and p >= 0.72:
+    if tier in ("tier1", "tier2") and rec.get("form_verified") and p >= HIGH_PROB_FLOOR:
         if _window_high_eligible(p):
             return "high", notes
         notes.append(

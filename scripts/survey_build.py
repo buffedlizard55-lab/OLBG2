@@ -290,13 +290,16 @@ b.append(kpis([
 b.append(f"""<div class="note">Retrieval split: <strong>{live_rows}</strong> rows were read from a live fetch of
 OLBG on {e(RETRIEVED)}; <strong>{snap_rows}</strong> come from dated search-index snapshots
 (2026-10-18 to 2026-10-20). The two populations are never merged &mdash; each row carries
-<code>retrieved_via</code> and <code>as_of</code>. See <a href="flagged.html">F-16</a>.</div>""")
+<code>retrieved_via</code> and <code>as_of</code>. See the <a href="flagged.html">flagged register</a>.</div>""")
 
 b.append('<h2>Confidence breakdown</h2><div class="scroll"><table data-sortable><thead><tr>'
          '<th>Confidence</th><th class="num">Picks</th><th>Rule that produced it</th></tr></thead><tbody>')
 RULES = {"high": "Model probability &ge; 0.70 on verified Tier&nbsp;1/2 inputs with verified form, "
-                 "or a Tier&nbsp;1 rating gap &ge; 0.55 corroborated by a verified same-series head-to-head win.",
-         "medium": "Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates.",
+                 "or a Tier&nbsp;1 rating gap &ge; 0.55 corroborated by a verified same-series head-to-head win, "
+                 "<b>and</b> (since 2026-10-22) a fair no-vig American price inside [-250, +10000]. No current "
+                 "survey pick clears the window; displaced narratives are archived (see F-16).",
+         "medium": "Model probability &ge; 0.60 on verified Tier&nbsp;1/2 inputs, or &ge; 0.70 on Tier&nbsp;3 base rates; "
+                   "also any former high capped by the odds window (fair American shorter than -250).",
          "low": "Any other published line, and any line whose divergence from an official published "
                 "probability exceeds 15 percentage points.",
          "unverified": "No line could be originated from a verifiable official source."}

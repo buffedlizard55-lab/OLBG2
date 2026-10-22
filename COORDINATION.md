@@ -1334,3 +1334,34 @@ The picks introduction now handles an empty outside-band category without implyi
 ### Publication record — 2026-10-22
 
 [PR #59](https://github.com/buffedlizard55-lab/OLBG2/pull/59) merged into `main` as `3a48e3d`; PR validation passed. [Deploy Pages run 39713298932](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713298932) succeeded for that commit. Site: https://buffedlizard55-lab.github.io/OLBG2/picks.html . This records deployment status from GitHub Actions, not an independent browser fetch of the live URL.
+
+---
+
+## Session `arena/6a87eefa-olbg2` — forward-window slate capture + named gap closures (2026-10-22 02:55 UTC)
+
+**Session ID:** `arena/6a87eefa-olbg2` · **Branch:** `arena/6a87eefa-olbg2` (Arena-fixed; `session-…` naming not available) · **Claimed:** 2026-10-22 02:55 UTC, before any implementation edit.
+
+**Concurrent-session check at claim time** (all live branches fetched and read before claiming):
+
+| Branch | Claim | Live scope this session will NOT touch |
+|---|---|---|
+| `arena/1bb45081-olbg2` | PR #54 OPEN, odds-window gate W1–W4 | all five layers' confidence regrades, `scripts/*_model.py`, `scripts/engine.py`, `METHODOLOGY.md`, generated pick files |
+| `arena/072755db-olbg2` | V1–V5 verification + coverage completion + final integration | `data/verified/**`, `scripts/verified_seed.py`, `scripts/verified_model.py`, `tests/test_verified_pipeline.py`, root pages |
+| `arena/26963a2d-olbg2` | T1–T5 re-verify, research-grade in-band picks, coverage expansion | `research/reverify-26963a2d.md`, `data/verified/*_26963a2d.json`, tennis / WST / PDC / volleyball / handball capture |
+| `arena/9a2928c8-olbg2` | T2–T6 line-by-line verification, price-band audit, site polish | `data/verified/predictions.json`, `data/verified/band.json`, `picks.html`, `index.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
+| `arena/dbfb6608-olbg2` | A1 independent market-evidence audit | `research/market-evidence-audit-dbfb6608.md` (report only) |
+
+Three of those sessions (072755db V5, 26963a2d T5, 9a2928c8 T6) have each claimed **final integration**. This session does not take that role while they are live. Its own integration is **additive only** (see T6).
+
+| # | Task | Status | Owner | File scope (new files only until T6) |
+|---|---|---|---|---|
+| G1 | Claim + coordination check | done | `arena/6a87eefa-olbg2` | `COORDINATION.md` (append-only) |
+| G2 | Forward-window fixture capture 2026-10-23 → 2026-11-02 from official bodies only (NHL, MLB, NBA, EuroCup, GBGB), plus the named open gaps VF-14 (NBA 22–24 Oct slate), VF-15 (World Series Games 4–7), VF-20 (EuroCup Round 5), VF-22 (GBGB cards). Every row carries the official URL it came from and the capture timestamp. Anything a source will not render stays blank and is flagged. | in progress | `arena/6a87eefa-olbg2` | `data/forward/inputs.json`, `research/forward-slate-6a87eefa.md` |
+| G3 | Independent line origination (moneyline + handicap + total where inputs exist) + low/medium/high pick per match, applying the uniform high-confidence gate (model prob ≥ 0.70 AND fair American in −250…+10000) in this layer's own code | pending | `arena/6a87eefa-olbg2` | `scripts/forward_seed.py`, `scripts/forward_model.py`, `data/forward/matches.json`, `data/forward/flagged.json` |
+| G4 | In-band high-confidence written predictions: ≥30 words each, unique, human, team + player + current form + recent match history + explicit betting selection, every factual claim tied to an official source fetched in this session | pending | `arena/6a87eefa-olbg2` | `data/forward/predictions.json` |
+| G5 | Self-contained `forward/` dashboard layer (landing + matches + picks + flagged + sources + methodology), schema-compatible with `data/verified/matches.json` rows so the integration session can splice rows in with a one-command merge; unit tests for the layer | pending | `arena/6a87eefa-olbg2` | `scripts/forward_build.py`, `forward/**`, `tests/test_forward.py` |
+| G6 | Additive integration: PR of the new files + this board entry only. One root-nav link request is **logged here**, not edited into shared pages, while other sessions hold them. Merge only if `main` is green; confirm Pages deploy; record result here | pending | `arena/6a87eefa-olbg2` | shared outputs limited to `COORDINATION.md`; nav-link edits only if unclaimed at the time |
+
+**Scope rule (explicit):** this session does not re-verify, regrade, reprice or rewrite any existing row, pick, flag or page. It adds a dated forward slate that no live claim's window covers (their windows end 2026-10-27), and closes exactly the four named flags VF-14/VF-15/VF-20/VF-22 where an official source allows. Tennis, WST, PDC, volleyball and handball are excluded from this session because `26963a2d` named them. No bookmaker price is read; prices are this layer's own fair-model prices.
+
+**Nav-link request for the integration session (logged, not edited):** please add `forward/index.html` to the root dashboard navigation as "Forward slate (23 Oct–2 Nov)" once this PR merges, or say so here and this session will add the single link in a follow-up commit when the shared files are free.

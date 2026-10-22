@@ -1,0 +1,124 @@
+{
+  "findings": [
+    {
+      "id": "PA-01",
+      "severity": "critical",
+      "category": "Hallucinated Fixtures & Predictions",
+      "affected_layer": "slate (data/slate/matches.json, data/slate/predictions.json [0..5])",
+      "title": "12 of 13 ATP Tennis fixtures and 6 of 7 featured Tennis predictions in /slate/ do not exist on official ATP draws",
+      "detail": "Direct fetches of official ATP daily schedules for Almaty (9410), Brussels (7485), and Lyon (496) prove 12/13 ATP fixtures in data/slate/matches.json are non-existent pairings involving eliminated players (Rinky Hijikata lost Oct 20 to Terence Atmane; Martin Landaluce lost Oct 21 to Stan Wawrinka) or players competing in different countries (Tomas Machac is in Almaty vs Karen Khachanov, not in Brussels vs Lorenzo Musetti; Flavio Cobolli is top seed in Lyon vs Wawrinka, not in Almaty; Damir Dzumhur is in Brussels vs Zizou Bergs, not in Lyon vs Tommy Paul).",
+      "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "portal_resolution": "Replaced all fabricated pairings with 16 live ATP & WTA matches verified directly on atptour.com and wtatennis.com."
+    },
+    {
+      "id": "PA-02",
+      "severity": "critical",
+      "category": "Hallucinated Player Withdrawal",
+      "affected_layer": "slate (data/slate/matches.json pdc-32330, data/slate/predictions.json #9)",
+      "title": "Fabricated PDC withdrawal claiming Ritchie Edhouse replaced Stephen Bunting against Danny Noppert",
+      "detail": "data/slate/predictions.json #9 asserts an Oct 21 PDC preview replaced withdrawn (28) Stephen Bunting with #33 Ritchie Edhouse. Official PDC draw, schedule of play, and preview pages plus live olbg.com event_id=32330 confirm (5) Danny Noppert v (28) Stephen Bunting is active on Thursday Oct 22 in Dortmund.",
+      "source_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-of-play",
+      "portal_resolution": "Restored verified (5) Danny Noppert vs (28) Stephen Bunting across all PDC Round 1 tables and predictions."
+    },
+    {
+      "id": "PA-03",
+      "severity": "critical",
+      "category": "Completed Event Listed as Active",
+      "affected_layer": "verified, board, hub (golf-utah-2026)",
+      "title": "PGA Tour Bank of Utah Championship (ended Oct 4, won by Austin Smotherman -26) listed on Oct 22 active slates; Genesis field size misstated as 120",
+      "detail": "Official pgatour.com/tournaments/2026/bank-of-utah-championship/R2026554 confirms the tournament finished Oct 1-4, 2026. Meanwhile live Oct 22-25 OLBG Golf events Butterfield Bermuda Championship (R2026528, OLBG 101904) and Stifel Charity Classic (S2026625, OLBG 101903) were omitted, and DP World Tour Genesis Championship was labeled 120 players instead of official 126 (90 DPWT + 36 KPGA).",
+      "source_url": "https://www.pgatour.com/tournaments/2026/bank-of-utah-championship/R2026554",
+      "portal_resolution": "Removed completed Utah event; originated live Bermuda & Genesis 72-hole tournament matchups and flagged 120/126-player full-field outrights."
+    },
+    {
+      "id": "PA-04",
+      "severity": "high",
+      "category": "Wrong Tournament Attribution",
+      "affected_layer": "hub (data/hub/matches.json atp-902126, atp-902133, wta-902072, wta-902107)",
+      "title": "Live Oct 22-23 Lyon, Ningbo, and Osaka matches mislabeled as next week's Basel, Vienna, and Guangzhou tournaments",
+      "detail": "Swiss Indoors Basel (328), Erste Bank Open Vienna (337), and WTA Guangzhou (1023) run Oct 26 - Nov 1, 2026 with draws not yet made. Cobolli vs Wawrinka and Moutet vs Paul are live in Lyon (ATP 496), Shnaider vs Eala is in Ningbo (WTA 2092), and Gibson vs Krueger is in Osaka (WTA 405).",
+      "source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+      "portal_resolution": "Mapped every ATP/WTA fixture to its exact Oct 22-23 tournament venue and official draw URL."
+    },
+    {
+      "id": "PA-05",
+      "severity": "high",
+      "category": "Incomplete 17-Sport Origination",
+      "affected_layer": "root (5/17), verified (14/17), board (13/17), hub (11/17 lined), slate (15/17 lined)",
+      "title": "Zero prior repository layers originated lines across all 17 eligible OLBG sports",
+      "detail": "Prior layers either omitted Aussie Rules, Esports, and Tennis (verified/board), left Gaelic Football and Volleyball unlined (slate), or covered only 5 sports (root). /portal/ originates verified multi-market lines across all 17 eligible OLBG sports.",
+      "source_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "portal_resolution": "Originated multi-market fair lines across all 17/17 eligible OLBG sports while leaving unconfirmed sub-slates blank and flagged."
+    },
+    {
+      "id": "PA-06",
+      "severity": "high",
+      "category": "Non-Standard Engineered Quarter-Lines",
+      "affected_layer": "verified (11/14 picks), board (11/35 picks)",
+      "title": "Synthetic .25/.75 quarter-point spreads in Rugby Union & EuroLeague solved backwards to land at -238 to -250",
+      "detail": "Selections such as Stormers -0.75 @ -250, Glasgow -1.25 @ -244, Toulouse -3.25 @ -238, and Panathinaikos -5.75 @ -244 use quarter-point Asian handicaps not offered in standard basketball or rugby handicap markets.",
+      "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/",
+      "portal_resolution": "Restricted all spreads, set/frame/leg handicaps, puck lines, and totals strictly to standard .5 half-unit increments."
+    },
+    {
+      "id": "PA-07",
+      "severity": "high",
+      "category": "Missing Official Source Links & Stale Statuses",
+      "affected_layer": "root (data/matches.json)",
+      "title": "All 47 rows in root data/matches.json carry source_url = null and completed Oct 21 games remain 'scheduled'",
+      "detail": "47/47 records in data/matches.json have null source_url, 19/47 have null date, and completed Oct 21 NBA/NHL/EHF fixtures remain marked scheduled.",
+      "source_url": "https://www.nba.com/games?date=2026-10-21",
+      "portal_resolution": "Enforced non-empty governing-body HTTPS source_url and ISO date on 100% of rows in /portal/ via automated test gates."
+    },
+    {
+      "id": "PA-08",
+      "severity": "medium",
+      "category": "Community Wiki Citation Instead of Governing Body",
+      "affected_layer": "slate (data/slate/matches.json lol-w26-r1-1..8)",
+      "title": "All 8 Esports LoL Worlds rows in /slate/ cite fan-edited liquipedia.net and wrong OLBG ID /Esports/28",
+      "detail": "Riot Games' official LoL Esports schedule and Worlds 2026 Primer publish all 8 Swiss Stage Round 1 Bo1s directly on lolesports.com, and OLBG's eSports hub is /betting-tips/eSports/23 (ID 28 is Greyhounds).",
+      "source_url": "https://lolesports.com/en-US/leagues/first_stand,lck,lcs,msi,worlds",
+      "portal_resolution": "Cited official lolesports.com and /betting-tips/eSports/23 on all 8 LoL Worlds fixtures."
+    },
+    {
+      "id": "PA-09",
+      "severity": "medium",
+      "category": "Contradictory F1 Calendar Flag & Round Off-by-One",
+      "affected_layer": "verified & board (VF-17), slate (prediction #34)",
+      "title": "VF-17 claims no F1 race until Las Vegas despite Oct 25 US GP; /slate/ #34 states 18 completed rounds instead of 17",
+      "detail": "formula1.com/en/results/2026/races confirms 17 Grands Prix completed through Singapore (Oct 11) and Round 18 United States Grand Prix at COTA on Oct 25 (races/1297).",
+      "source_url": "https://www.formula1.com/en/results/2026/races/1297/united-states",
+      "portal_resolution": "Originated Round 18 US GP markets using exact 17-round standings (Antonelli 340, Norris 201, Piastri 138)."
+    },
+    {
+      "id": "PA-10",
+      "severity": "medium",
+      "category": "OLBG Taxonomy & Sport-ID Mis-Mappings",
+      "affected_layer": "REPO_REVIEW.md, survey, verified, board, slate",
+      "title": "REPO_REVIEW.md claims no Hurling endpoint exists (live at /Hurling/26); sport registries swap IDs 4/5/13/22/23/28",
+      "detail": "Live OLBG crawl confirms /Hurling/26 has active tips (714, 675 — excluded per brief), Aussie_Rules=22 (not 27), eSports=23 (not 28), Greyhounds=28 (not 5), Golf=5 (not 4), Basketball=4 (not 19), Ice_Hockey=13 (not 18).",
+      "source_url": "https://www.olbg.com/betting-tips/Hurling/26",
+      "portal_resolution": "Published verified ID=1..28 OLBG sport map in data/portal/sports.json and portal/excluded.html."
+    },
+    {
+      "id": "PA-11",
+      "severity": "medium",
+      "category": "Stale Standings Snapshots & Relegated Club Fixture",
+      "affected_layer": "verified, board, slate (EuroLeague GP=6; vb-suwalki-katowice)",
+      "title": "EuroLeague HTA & VIR frozen at GP=6 after Oct 21 R7 game (90-81); relegated GKS Katowice listed in PlusLiga",
+      "detail": "euroleaguebasketball.net standings on Oct 22 show Hapoel Tel Aviv at 5-2 (7 GP) and Virtus Bologna at 4-3 (7 GP). PlusLiga 2026-27 has 14 clubs with InPost ChKS Chelm promoted and GKS Katowice relegated.",
+      "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+      "portal_resolution": "Updated EuroLeague standings to post-Oct 21 records, updated NBA teams for Oct 20-21 results, and removed Katowice."
+    },
+    {
+      "id": "PA-12",
+      "severity": "low",
+      "category": "Model Probability vs Editorial Conviction Disclosure",
+      "affected_layer": "forward, board, hub, slate (documented in evidence/audit.json)",
+      "title": "Cross-layer ambiguity between >=70% probability picks (-250..-233) and multi-factor conviction picks (-225..+315)",
+      "detail": "As noted in evidence/audit.json, 2-way fair no-vig odds for p >= 70% occupy only [-250, -233] inside [-250, +10000], whereas broader in-band picks at -220..+315 have p < 70%.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "portal_resolution": "/portal/ labels both exact p_model and explicit sub-tier ('Tier H1: >=70% Probability In-Band' vs 'Tier H2: Multi-Factor High-Conviction In-Band') on every pick card."
+    }
+  ]
+}

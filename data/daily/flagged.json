@@ -1,0 +1,164 @@
+{
+ "flags": [
+  {
+   "id": "DA-01",
+   "sport": "tennis",
+   "kind": "zero-row sport",
+   "item": "No fixture row for tennis in 2026-10-23..2026-10-30 window",
+   "detail": "No upcoming fixture with both players' official ranking inputs was server-rendered in the ATP/WTA captures \u2014 no row originated.",
+   "official_url": "https://www.atptour.com/en/rankings/singles"
+  },
+  {
+   "id": "DA-02",
+   "sport": "snooker",
+   "kind": "zero-row sport",
+   "item": "No fixture row for snooker in 2026-10-23..2026-10-30 window",
+   "detail": "Northern Ireland Open Round 3 was played 2026-10-22; next-round pairings were not published in the official WST capture at seed time \u2014 no pairing invented.",
+   "official_url": "https://www.wst.tv/matches/"
+  },
+  {
+   "id": "DA-03",
+   "sport": "motor-racing",
+   "kind": "fewer than 5 originated picks",
+   "item": "motor-racing: only 1 originated upcoming match(es) \u2014 Top-5 target not met, slots left blank",
+   "detail": "The remaining Top-5 slots are deliberately blank: no further fixture with verified origination inputs exists in the window. Nothing was invented to fill the quota.",
+   "official_url": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  {
+   "id": "DA-04",
+   "sport": "volleyball",
+   "kind": "fewer than 5 originated picks",
+   "item": "volleyball: only 0 originated upcoming match(es) \u2014 Top-5 target not met, slots left blank",
+   "detail": "The remaining Top-5 slots are deliberately blank: no further fixture with verified origination inputs exists in the window. Nothing was invented to fill the quota.",
+   "official_url": "https://www.plusliga.pl/games.html"
+  },
+  {
+   "id": "DA-05",
+   "sport": "cricket",
+   "kind": "zero-row sport",
+   "item": "No fixture row for cricket in 2026-10-23..2026-10-30 window",
+   "detail": "Official ICC fixture verified, but no verified team-strength input (rankings table rendered empty in capture) \u2014 line left blank.",
+   "official_url": "https://www.icc-cricket.com/tournaments/mens-cricket-world-cup-league-2"
+  },
+  {
+   "id": "DA-06",
+   "sport": "golf",
+   "kind": "zero-row sport",
+   "item": "No fixture row for golf in 2026-10-23..2026-10-30 window",
+   "detail": "Tournament field verified on the official tour site; no verified player-form input captured \u2014 outright lines left blank.",
+   "official_url": "https://www.pgatour.com/schedule"
+  },
+  {
+   "id": "DA-07",
+   "sport": "rugby-league",
+   "kind": "zero-row sport",
+   "item": "No fixture row for rugby-league in 2026-10-23..2026-10-30 window",
+   "detail": "Futures market catalogued on OLBG; no verified 2027 squad/performance input from nrl.com captured \u2014 line left blank.",
+   "official_url": "https://www.nrl.com/draw/"
+  },
+  {
+   "id": "DA-08",
+   "sport": "gaelic-football",
+   "kind": "fewer than 5 originated picks",
+   "item": "gaelic-football: only 0 originated upcoming match(es) \u2014 Top-5 target not met, slots left blank",
+   "detail": "The remaining Top-5 slots are deliberately blank: no further fixture with verified origination inputs exists in the window. Nothing was invented to fill the quota.",
+   "official_url": "https://www.gaa.ie/football"
+  },
+  {
+   "id": "DA-09",
+   "sport": "greyhounds",
+   "kind": "fewer than 5 originated picks",
+   "item": "greyhounds: only 0 originated upcoming match(es) \u2014 Top-5 target not met, slots left blank",
+   "detail": "The remaining Top-5 slots are deliberately blank: no further fixture with verified origination inputs exists in the window. Nothing was invented to fill the quota.",
+   "official_url": "https://www.gbgb.org.uk/racing/results/"
+  },
+  {
+   "id": "DA-10",
+   "sport": "aussie-rules",
+   "kind": "zero-row sport",
+   "item": "No fixture row for aussie-rules in 2026-10-23..2026-10-30 window",
+   "detail": "AFL off-season after the Grand Final; the official fixture page lists no match in the window.",
+   "official_url": "https://www.afl.com.au/fixture"
+  },
+  {
+   "id": "DA-11",
+   "sport": "esports",
+   "kind": "zero-row sport",
+   "item": "No fixture row for esports in 2026-10-23..2026-10-30 window",
+   "detail": "LoL Worlds 2026 is listed on lolesports.com, but dated upcoming match pairings were not server-rendered in the capture read 2026-10-22 \u2014 no pairing invented.",
+   "official_url": "https://lolesports.com/schedule"
+  },
+  {
+   "id": "DA-12",
+   "sport": "darts",
+   "kind": "unlined fixture (blank price)",
+   "item": "32-Player Draw Outright v Field (2026-10-25)",
+   "detail": "No verified origination input captured \u2014 line left blank.",
+   "official_url": "https://www.pdc.tv/rankings"
+  },
+  {
+   "id": "DA-13",
+   "sport": "volleyball",
+   "kind": "unlined fixture (blank price)",
+   "item": "InPost ChKS Che\u0142m v Asseco Resovia Rzesz\u00f3w (2026-10-23)",
+   "detail": "No verified performance input (set/point rates) was captured from the official PlusLiga pages read; line left blank rather than inferred.",
+   "official_url": "https://www.plusliga.pl/games.html"
+  },
+  {
+   "id": "DA-14",
+   "sport": "gaelic-football",
+   "kind": "unlined fixture (blank price)",
+   "item": "St Finbarr's v Nemo Rangers (2026-10-25)",
+   "detail": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank.",
+   "official_url": "https://www.gaa.ie/football"
+  },
+  {
+   "id": "DA-15",
+   "sport": "gaelic-football",
+   "kind": "unlined fixture (blank price)",
+   "item": "Maigh Cuilinn (Moycullen) v Salthill-Knocknacarra (2026-10-25)",
+   "detail": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank.",
+   "official_url": "https://www.gaa.ie/football"
+  },
+  {
+   "id": "DA-16",
+   "sport": "gaelic-football",
+   "kind": "unlined fixture (blank price)",
+   "item": "Kanturk v \u00c9ire \u00d3g (Cork) (2026-10-25)",
+   "detail": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank.",
+   "official_url": "https://www.gaa.ie/football"
+  },
+  {
+   "id": "DA-17",
+   "sport": "gaelic-football",
+   "kind": "unlined fixture (blank price)",
+   "item": "Rathgormack v The Nire (2026-10-25)",
+   "detail": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank.",
+   "official_url": "https://www.gaa.ie/football"
+  },
+  {
+   "id": "DA-18",
+   "sport": "greyhounds",
+   "kind": "unlined fixture (blank price)",
+   "item": "Premier Greyhound Racing Champion Stakes v Romford (575m Flat) (2026-10-23)",
+   "detail": "GBGB Category One race date verified from the official 2026 schedule; confirmed runners/form not published in the official capture \u2014 line left blank.",
+   "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/"
+  },
+  {
+   "id": "DA-19",
+   "sport": "greyhounds",
+   "kind": "unlined fixture (blank price)",
+   "item": "Arena Racng Company Scurry Gold Cup v Dunstall Park (270m Flat) (2026-10-24)",
+   "detail": "GBGB Category One race date verified from the official 2026 schedule; confirmed runners/form not published in the official capture \u2014 line left blank.",
+   "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/"
+  },
+  {
+   "id": "DA-20",
+   "sport": "greyhounds",
+   "kind": "unlined fixture (blank price)",
+   "item": "Premier Greyhound Racing Oaks v Dunstall Park (480m Flat) (2026-10-24)",
+   "detail": "GBGB Category One race date verified from the official 2026 schedule; confirmed runners/form not published in the official capture \u2014 line left blank.",
+   "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/"
+  }
+ ]
+}

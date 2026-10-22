@@ -1,0 +1,115 @@
+{
+ "unlined": [
+  {
+   "id": "pdc-32338",
+   "sport": "darts",
+   "competition": "2026 PDC European Championship \u2014 Outright",
+   "date": "2026-10-25",
+   "home": "32-Player Draw Outright",
+   "away": "Field",
+   "official_url": "https://www.pdc.tv/rankings",
+   "source_name": "PDC Rankings",
+   "blank_reason": "No verified origination input captured \u2014 line left blank."
+  },
+  {
+   "id": "vb-chelm-rzeszow",
+   "sport": "volleyball",
+   "competition": "Polish PlusLiga 2026/27",
+   "date": "2026-10-23",
+   "home": "InPost ChKS Che\u0142m",
+   "away": "Asseco Resovia Rzesz\u00f3w",
+   "official_url": "https://www.plusliga.pl/games.html",
+   "source_name": "PlusLiga Schedule",
+   "blank_reason": "No verified performance input (set/point rates) was captured from the official PlusLiga pages read; line left blank rather than inferred."
+  },
+  {
+   "id": "gaa-3530",
+   "sport": "gaelic-football",
+   "competition": "Cork Premier Senior Football Championship",
+   "date": "2026-10-25",
+   "home": "St Finbarr's",
+   "away": "Nemo Rangers",
+   "official_url": "https://www.gaa.ie/football",
+   "source_name": "GAA Official",
+   "blank_reason": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank."
+  },
+  {
+   "id": "gaa-3532",
+   "sport": "gaelic-football",
+   "competition": "Galway Senior Football Championship",
+   "date": "2026-10-25",
+   "home": "Maigh Cuilinn (Moycullen)",
+   "away": "Salthill-Knocknacarra",
+   "official_url": "https://www.gaa.ie/football",
+   "source_name": "GAA Official",
+   "blank_reason": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank."
+  },
+  {
+   "id": "gaa-3531",
+   "sport": "gaelic-football",
+   "competition": "Cork Senior A Football Championship",
+   "date": "2026-10-25",
+   "home": "Kanturk",
+   "away": "\u00c9ire \u00d3g (Cork)",
+   "official_url": "https://www.gaa.ie/football",
+   "source_name": "GAA Official",
+   "blank_reason": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank."
+  },
+  {
+   "id": "gaa-3536",
+   "sport": "gaelic-football",
+   "competition": "Waterford Senior Football Championship",
+   "date": "2026-10-25",
+   "home": "Rathgormack",
+   "away": "The Nire",
+   "official_url": "https://www.gaa.ie/football",
+   "source_name": "GAA Official",
+   "blank_reason": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank."
+  },
+  {
+   "id": "gbgb-cat1-20261023-romford",
+   "sport": "greyhounds",
+   "competition": "GBGB 2026 Category One \u2014 Premier Greyhound Racing Champion Stakes",
+   "date": "2026-10-23",
+   "home": "Premier Greyhound Racing Champion Stakes",
+   "away": "Romford (575m Flat)",
+   "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+   "source_name": "GBGB 2026 Category One Schedule",
+   "blank_reason": "GBGB Category One race date verified from the official 2026 schedule; confirmed runners/form not published in the official capture \u2014 line left blank."
+  },
+  {
+   "id": "gbgb-cat1-20261024-dunstall-scurry",
+   "sport": "greyhounds",
+   "competition": "GBGB 2026 Category One \u2014 Arena Racng Company Scurry Gold Cup",
+   "date": "2026-10-24",
+   "home": "Arena Racng Company Scurry Gold Cup",
+   "away": "Dunstall Park (270m Flat)",
+   "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+   "source_name": "GBGB 2026 Category One Schedule",
+   "blank_reason": "GBGB Category One race date verified from the official 2026 schedule; confirmed runners/form not published in the official capture \u2014 line left blank."
+  },
+  {
+   "id": "gbgb-cat1-20261024-dunstall-oaks",
+   "sport": "greyhounds",
+   "competition": "GBGB 2026 Category One \u2014 Premier Greyhound Racing Oaks",
+   "date": "2026-10-24",
+   "home": "Premier Greyhound Racing Oaks",
+   "away": "Dunstall Park (480m Flat)",
+   "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+   "source_name": "GBGB 2026 Category One Schedule",
+   "blank_reason": "GBGB Category One race date verified from the official 2026 schedule; confirmed runners/form not published in the official capture \u2014 line left blank."
+  }
+ ],
+ "zero_row_reasons": {
+  "volleyball": "No verified performance input (set/point rates) was captured from the official PlusLiga pages read; line left blank rather than inferred.",
+  "cricket": "Official ICC fixture verified, but no verified team-strength input (rankings table rendered empty in capture) \u2014 line left blank.",
+  "golf": "Tournament field verified on the official tour site; no verified player-form input captured \u2014 outright lines left blank.",
+  "rugby-league": "Futures market catalogued on OLBG; no verified 2027 squad/performance input from nrl.com captured \u2014 line left blank.",
+  "gaelic-football": "County club fixture catalogued on OLBG; county-board performance data not captured from an official source \u2014 line left blank.",
+  "greyhounds": "GBGB Category One race date verified from the official 2026 schedule; confirmed runners/form not published in the official capture \u2014 line left blank.",
+  "tennis": "No upcoming fixture with both players' official ranking inputs was server-rendered in the ATP/WTA captures \u2014 no row originated.",
+  "snooker": "Northern Ireland Open Round 3 was played 2026-10-22; next-round pairings were not published in the official WST capture at seed time \u2014 no pairing invented.",
+  "aussie-rules": "AFL off-season after the Grand Final; the official fixture page lists no match in the window.",
+  "esports": "LoL Worlds 2026 is listed on lolesports.com, but dated upcoming match pairings were not server-rendered in the capture read 2026-10-22 \u2014 no pairing invented."
+ }
+}

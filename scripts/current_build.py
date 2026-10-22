@@ -256,14 +256,33 @@ def source_cell(m):
 
 
 # --------------------------------------------------------------------------- #
+def originated_by_sport(lines):
+    """Fixtures that actually carry originated prices, counted per sport slug."""
+    out = {}
+    for r in lines["rows"]:
+        if r["originated"]:
+            out[r["sport"]] = out.get(r["sport"], 0) + 1
+    return out
+
+
+def total_flag_ids(d, flags):
+    """Every distinct flag id published on flagged.html: the capture disclosure
+    flags plus one zero-row flag per sport that publishes no rows at all."""
+    zero = len([1 for slug in d["sport_order"] if d["sports"][slug]["zero_row_flag"]])
+    return len(flags) + zero, zero
+
+
 def build_index(d, lines, band, preds, flags):
     counts = lines["counts"]
     sports = d["sports"]
     window = d["capture_window"]
+    originated = originated_by_sport(lines)
+    n_flags, n_zero = total_flag_ids(d, flags)
     cards = []
     for slug in d["sport_order"]:
         info = sports[slug]
         n = info["fixture_rows"]
+        orig = originated.get(slug, 0)
         picks = len([b for b in band["selections"] if b["sport"] == slug])
         if n:
             cards.append(
@@ -272,7 +291,7 @@ def build_index(d, lines, band, preds, flags):
                 '<p>%d originated line%s &middot; %d high-confidence in-band pick%s</p>'
                 '<div class="metrics"><span>View sport page &rarr;</span></div></a>'
                 % (slug, esc(info["sport_name"]), n, "" if n == 1 else "s",
-                   n, "" if n == 1 else "s", picks, "" if picks == 1 else "s"))
+                   orig, "" if orig == 1 else "s", picks, "" if picks == 1 else "s"))
         else:
             cards.append(
                 '<div class="card"><div class="cardhead"><h3>%s</h3>'
@@ -324,12 +343,13 @@ exclusions, and the model constants that are ours rather than the sport's.</p></
             "%d-%d words each" % (preds["counts"]["min_word_count"],
                                   preds["counts"]["max_word_count"])),
         kpi(counts["blank_rows"], "Blank rows", "published with a reason"),
-        kpi(len(flags), "Disclosure flags", "none block publication"),
+        kpi(n_flags, "Disclosure flags",
+            "%d capture disclosures + %d zero-row" % (len(flags), n_zero)),
         esc(window["start"]), esc(window["end"]), counts["originated_rows"],
         counts["sports_with_rows"], 10,
         len([b for b in band["selections"] if b["market"] != "match winner"]),
-        counts["fixture_rows"], "".join(cards),
-        counts["prices_originated"], preds["counts"]["predictions"], len(flags))
+        counts["band_picks"], "".join(cards),
+        counts["prices_originated"], preds["counts"]["predictions"], n_flags)
     return page("Current Capture Desk — OLBG multi-sport fixtures, originated lines",
                 "index.html", body)
 
@@ -597,8 +617,10 @@ def build_flagged(d, lines, flags):
 <p class="crumb"><a href="index.html">Dashboard</a> &rsaquo; Flagged for Review</p>
 <h1>Flagged for Review</h1>
 <p class="lede">Nothing on this page blocks publication; everything on it is disclosed so a
-reviewer can check it by hand against the linked official source. %d flags, %d sports with
-zero rows, %d fixtures published blank and %d rows carrying a model caveat.</p>
+reviewer can check it by hand against the linked official source. %d distinct flag ids in
+total: %d capture disclosures listed below, plus one zero-row flag for each of the %d sports
+that publish no rows. Also disclosed here: %d fixtures published blank and %d rows carrying a
+model caveat.</p>
 <div class="notice bad"><strong>Deliberate blanks.</strong> Where an official source did not
 return a value the cell is left empty. No value anywhere on this layer was inferred, estimated
 from a third-party site, or carried over from another layer of this repository.</div>
@@ -617,7 +639,7 @@ from a third-party site, or carried over from another layer of this repository.<
 <h2>Rows carrying a model caveat</h2>
 <div class="table-wrap"><table class="data"><thead><tr>
 <th>Fixture</th><th>Sport</th><th>Caveat</th></tr></thead><tbody>%s</tbody></table></div>
-""" % (len(flags), len(zrows), len(brows), len(crows),
+""" % (len(flags) + len(zrows), len(flags), len(zrows), len(brows), len(crows),
        "".join(frows), "".join(zrows), "".join(brows), "".join(crows))
     return page("Flagged for Review — Current Capture Desk", "flagged.html", body)
 
@@ -922,13 +944,14 @@ third-party site or inferred.</p>
                        pr["p"], american(pr["fair_american"]), badge(pr["confidence"]), pred,
                        esc(m["official_url"])))
     n = len(rows)
+    orig = originated_by_sport(lines).get(slug, 0)
     picks = len([b for b in load("band.json")["selections"] if b["sport"] == slug])
     body = """
 <p class="crumb"><a href="../index.html">Dashboard</a> &rsaquo;
 <a href="index.html">By sport</a> &rsaquo; %s</p>
 <h1>%s</h1>
-<p class="lede">%d fixture%s captured first-hand on 22 October 2026, %d originated
-line%s and %d high-confidence in-band pick%s.</p>
+<p class="lede">%d fixture%s captured first-hand on 22 October 2026, %d of them
+carrying originated line%s, and %d high-confidence in-band pick%s.</p>
 <div class="kpis">%s%s%s</div>
 <div class="filters"><input id="f-q" type="search" placeholder="Filter %s fixtures&hellip;">
 <span id="f-count"></span></div>
@@ -940,7 +963,7 @@ line%s and %d high-confidence in-band pick%s.</p>
 <a href="../lines.html">Originated lines</a>. Anything this sport could not confirm from an
 official source is on <a href="../flagged.html">Flagged for Review</a>.</p>
 """ % (esc(info["sport_name"]), esc(info["sport_name"]), n, "" if n == 1 else "s",
-       n, "" if n == 1 else "s", picks, "" if picks == 1 else "s",
+       orig, "" if orig == 1 else "s", picks, "" if picks == 1 else "s",
        kpi(n, "Fixtures", "captured 2026-10-22"),
        kpi(picks, "High-confidence picks", "p >= 0.70 and in band"),
        kpi(len({r["id"] for r in rows if not lrows[r["id"]]["originated"]}), "Blank rows",

@@ -542,5 +542,108 @@ class TestPipelineReproducibility(unittest.TestCase):
         self.assertEqual(len(doc["predictions"]), doc["counts"]["predictions"])
 
 
+class TestHeadlineCounts(unittest.TestCase):
+    """Every headline number rendered on a page must equal the number in the data.
+
+    Three separate counts on the dashboard were once derived from the wrong field
+    (fixture rows instead of originated rows, fixture rows instead of band picks,
+    capture disclosures instead of all published flag ids). These tests pin each
+    rendered figure to its source of truth so that class of defect cannot return.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.d = data("matches.json")
+        cls.lines = data("lines.json")
+        cls.band = data("band.json")
+        cls.preds = data("predictions.json")
+        cls.counts = cls.lines["counts"]
+        cls.originated = {}
+        for row in cls.lines["rows"]:
+            if row["originated"]:
+                cls.originated[row["sport"]] = cls.originated.get(row["sport"], 0) + 1
+        cls.flag_ids = {f["reason_flag"] for f in cls.d["excluded"]}
+        cls.flag_ids |= {info["zero_row_flag"] for info in cls.d["sports"].values()
+                         if info["zero_row_flag"]}
+        with open(os.path.join(OUT, "index.html"), encoding="utf-8") as handle:
+            cls.index = handle.read()
+        with open(os.path.join(OUT, "flagged.html"), encoding="utf-8") as handle:
+            cls.flagged = handle.read()
+        # rendered copy is wrapped at ~90 columns, so compare against a flattened form
+        cls.flat_index = " ".join(cls.index.split())
+        cls.flat_flagged = " ".join(cls.flagged.split())
+
+    def test_index_kpis_match_the_data(self):
+        rendered = dict((k, int(v)) for v, k in
+                        re.findall(r'<div class="v">(\d+)</div><div class="k">([^<]+)</div>',
+                                   self.index))
+        self.assertEqual(rendered["Fixture rows"], self.counts["fixture_rows"])
+        self.assertEqual(rendered["Sports with rows"], self.counts["sports_with_rows"])
+        self.assertEqual(rendered["Originated prices"], self.counts["prices_originated"])
+        self.assertEqual(rendered["High-confidence picks"], self.counts["band_picks"])
+        self.assertEqual(rendered["Written predictions"],
+                         self.preds["counts"]["predictions"])
+        self.assertEqual(rendered["Blank rows"], self.counts["blank_rows"])
+        self.assertEqual(rendered["Disclosure flags"], len(self.flag_ids))
+
+    def test_flag_count_on_index_equals_flag_ids_on_flagged_page(self):
+        self.assertEqual(23, len(self.flag_ids))
+        self.assertIn("%d distinct flag ids in total" % len(self.flag_ids), self.flat_flagged)
+        published = set(re.findall(r"\bCU-\d+\b", self.flagged))
+        self.assertEqual(published, self.flag_ids)
+        self.assertEqual(int(re.search(r"(\d+) disclosure flags", self.flat_index).group(1)),
+                         len(self.flag_ids))
+
+    def test_alternate_line_sentence_uses_band_picks_as_denominator(self):
+        alt, total = re.search(r"which is why (\d+) of the (\d+) picks",
+                               self.flat_index).groups()
+        self.assertEqual(int(total), self.counts["band_picks"])
+        self.assertEqual(int(alt), len([b for b in self.band["selections"]
+                                        if b["market"] != "match winner"]))
+        self.assertLess(int(alt), int(total))
+
+    def test_every_sport_card_separates_fixtures_from_originated_lines(self):
+        cards = re.findall(
+            r'cardhead"><h3>([^<]+)</h3><span class="pill">(\d+) fixture\w*</span></div>'
+            r'<p>(\d+) originated line', self.index)
+        self.assertEqual(len(cards), self.counts["sports_with_rows"])
+        for name, fixtures, originated in cards:
+            slug = [k for k, v in self.d["sports"].items() if v["sport_name"] == name][0]
+            self.assertEqual(int(fixtures), self.d["sports"][slug]["fixture_rows"], name)
+            self.assertEqual(int(originated), self.originated.get(slug, 0), name)
+        # snooker is the fixture that proves the distinction: 6 fixtures, 4 originated
+        self.assertIn(("Snooker", "6", "4"), cards)
+        self.assertEqual(sum(int(o) for _, _, o in cards), self.counts["originated_rows"])
+
+    def test_every_sport_page_lede_separates_fixtures_from_originated_lines(self):
+        for slug, info in self.d["sports"].items():
+            if not info["fixture_rows"]:
+                continue
+            with open(os.path.join(OUT, "sports", slug + ".html"),
+                      encoding="utf-8") as handle:
+                html = handle.read()
+            fixtures, originated, picks = re.search(
+                r"(\d+) fixture\w* captured first-hand on 22 October 2026, (\d+) of them "
+                r"carrying originated line\w*, and (\d+) high-confidence",
+                " ".join(html.split())).groups()
+            self.assertEqual(int(fixtures), info["fixture_rows"], slug)
+            self.assertEqual(int(originated), self.originated.get(slug, 0), slug)
+            self.assertEqual(int(picks), len([b for b in self.band["selections"]
+                                              if b["sport"] == slug]), slug)
+            self.assertLessEqual(int(originated), int(fixtures), slug)
+
+    def test_flagged_page_lede_accounts_for_every_published_flag(self):
+        m = re.search(r"(\d+) distinct flag ids in total: (\d+) capture disclosures listed "
+                      r"below, plus one zero-row flag for each of the (\d+) sports",
+                      self.flat_flagged)
+        total, capture, zero = (int(g) for g in m.groups())
+        self.assertEqual(total, capture + zero)
+        self.assertEqual(total, len(self.flag_ids))
+        self.assertEqual(capture, len(self.d["excluded"]))
+        self.assertEqual(zero, len([1 for i in self.d["sports"].values()
+                                    if i["zero_row_flag"]]))
+
+
+
 if __name__ == "__main__":
     unittest.main()

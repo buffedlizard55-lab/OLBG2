@@ -1,0 +1,1004 @@
+{
+ "layer": "current",
+ "generated_by": "hand-authored against data/current/band.json; word counts and fact links validated by tests/test_current.py",
+ "rule": "Every high-confidence selection carries a unique written prediction of at least 30 words naming the club or player, its current form from an official standings table, a recent result read first-hand this session, and the exact betting selection with its fair price.",
+ "predictions": [
+  {
+   "id": "pred-ehfcl-202711020101019",
+   "match_id": "ehfcl-202711020101019",
+   "fixture": "MT Melsungen v Orlen Wisla Plock",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-22",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "18:45",
+   "market": "handicap",
+   "selection": "Orlen Wisla Plock +3.5",
+   "probability": 0.7011,
+   "fair_decimal": 1.43,
+   "fair_american": -235,
+   "confidence": "high",
+   "text": "Group B rivals collide on 22 October with Orlen Wisla Plock holding six points from four matches, 115 goals for and 108 against, while MT Melsungen sit on four points at 110 for and 112 against. Our Poisson rating calls the tie level, so Orlen Wisla Plock plus three and a half goals at a fair -235 is the bet.",
+   "word_count": 60,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group B: Orlen Wisla Plock 3-0-1, 115:108, 6 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group B: MT Melsungen 2-0-2, 110:112, 4 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101041",
+   "match_id": "ehfcl-202711020101041",
+   "fixture": "Sporting Clube de Portugal v IFK Kristianstad",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-22",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "20:45",
+   "market": "match total",
+   "selection": "Under 74.5",
+   "probability": 0.7089,
+   "fair_decimal": 1.41,
+   "fair_american": -244,
+   "confidence": "high",
+   "text": "Sporting Clube de Portugal lead Group D unbeaten with three wins and a draw, 149 goals for against 125. IFK Kristianstad have no points from four and sit on 122 for and 155 against. Our projected total is 70.0 goals, so Under 74.5 at a fair -244 is the high-confidence angle on the 20:45 tie.",
+   "word_count": 55,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group D: Sporting Clube de Portugal 3-1-0, 149:125, 7 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group D: IFK Kristianstad 0-0-4, 122:155, 0 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101049",
+   "match_id": "ehfcl-202711020101049",
+   "fixture": "Barca v Montpellier Handball",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-22",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "20:45",
+   "market": "handicap",
+   "selection": "Barca -2.5",
+   "probability": 0.7024,
+   "fair_decimal": 1.42,
+   "fair_american": -236,
+   "confidence": "high",
+   "text": "Barca have taken all four Group E matches, outscoring opponents 137 to 104, while Montpellier Handball hold two points from one win with 116 for and 125 against. We make Barca 6.6 goals clear at home on 22 October, so Barca minus two and a half goals at a fair -236 is a straightforward selection.",
+   "word_count": 55,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group E: Barca 4-0-0, 137:104, 8 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group E: Montpellier Handball 1-0-3, 116:125, 2 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-62",
+   "match_id": "euroleague-r7-62",
+   "fixture": "Maccabi Rapyd Tel Aviv v Real Madrid",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-22",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "ALEKSANDAR NIKOLIC HALL",
+   "time_note": "14:05",
+   "market": "handicap",
+   "selection": "Maccabi Rapyd Tel Aviv +4.5",
+   "probability": 0.705,
+   "fair_decimal": 1.42,
+   "fair_american": -239,
+   "confidence": "high",
+   "text": "Maccabi Rapyd Tel Aviv welcome Real Madrid to the Aleksandar Nikolic Hall on 22 October sitting sixteenth in the EuroLeague, 509 points for against 540. Real Madrid are ninth but have taken just one win from four on the road, and our rating splits the sides by 1.4 points, so take Maccabi plus four and a half at a fair -239.",
+   "word_count": 61,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "The official game centre lists ALEKSANDAR NIKOLIC HALL as the venue for Maccabi Rapyd Tel Aviv's home fixture. The feed does not state whether that is a neutral site, and this layer applies its uniform +3.0 home-point advantage regardless, so the home advantage in this row may be overstated. Disclosed, not adjusted.",
+   "facts_used": [
+    {
+     "fact": "Maccabi Rapyd Tel Aviv sixteenth, 509 for / 540 against, 1-1 at home",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "Real Madrid ninth, 554 for / 531 against, 1-3 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-63",
+   "match_id": "euroleague-r7-63",
+   "fixture": "Armani Olimpia Milan v FC Barcelona",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-22",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "UNIPOL FORUM",
+   "time_note": "14:30",
+   "market": "handicap",
+   "selection": "Armani Olimpia Milan +5.5",
+   "probability": 0.7107,
+   "fair_decimal": 1.41,
+   "fair_american": -246,
+   "confidence": "high",
+   "text": "Nineteenth-placed Armani Olimpia Milan have scored 504 and conceded 559 across six EuroLeague rounds, yet inside the Unipol Forum our ratings put them within a single point of tenth-placed FC Barcelona, who have given up 525. Milan plus five and a half at a fair -246 is the selection against a Barcelona side 1-1 away from home.",
+   "word_count": 57,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Armani Olimpia Milan nineteenth, 504 for / 559 against, 1-2 at home",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "FC Barcelona tenth, 534 for / 525 against, 1-1 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-64",
+   "match_id": "euroleague-r7-64",
+   "fixture": "Anadolu Efes Istanbul v Besiktas Istanbul",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-22",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "TURKCELL BASKETBALL DEVELOPMENT CENTER",
+   "time_note": "13:30",
+   "market": "handicap",
+   "selection": "Anadolu Efes Istanbul +1.5",
+   "probability": 0.7079,
+   "fair_decimal": 1.41,
+   "fair_american": -242,
+   "confidence": "high",
+   "text": "Anadolu Efes Istanbul and Besiktas Istanbul meet at the Turkcell Basketball Development Center on 22 October in an all-Istanbul Round 7 tie. Efes are thirteenth with the stouter defence, 510 points against to Besiktas' 555, and we rate them 4.5 points better on the night. Anadolu Efes plus one and a half at a fair -242 is the bet.",
+   "word_count": 59,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Anadolu Efes Istanbul thirteenth, 492 for / 510 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "Besiktas Istanbul eleventh, 554 for / 555 against, 2-1 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-66",
+   "match_id": "euroleague-r7-66",
+   "fixture": "Partizan Mozzart Bet Belgrade v Crvena Zvezda Meridianbet Belgrade",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-22",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "BELGRADE ARENA",
+   "time_note": "14:45",
+   "market": "handicap",
+   "selection": "Partizan Mozzart Bet Belgrade +2.5",
+   "probability": 0.7034,
+   "fair_decimal": 1.42,
+   "fair_american": -237,
+   "confidence": "high",
+   "text": "The Belgrade derby lands at the Belgrade Arena with twelfth-placed Partizan Mozzart Bet having conceded only 471 points in six rounds, while sixth-placed Crvena Zvezda Meridianbet are unbeaten on the road at 2-0. Our ratings still call it a three-point home game, so Partizan plus two and a half at a fair -237 is the play.",
+   "word_count": 56,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "The official game centre lists BELGRADE ARENA for Partizan Mozzart Bet Belgrade's home fixture against Crvena Zvezda Meridianbet Belgrade, a same-city derby. A shared-city derby dilutes home advantage; the uniform +3.0 is still applied and disclosed.",
+   "facts_used": [
+    {
+     "fact": "Partizan Mozzart Bet twelfth, 466 for / 471 against, 1-1 at home",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "Crvena Zvezda Meridianbet sixth, 485 for / 457 against, 2-0 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-67",
+   "match_id": "euroleague-r7-67",
+   "fixture": "Panathinaikos AKTOR Athens v Kosner Baskonia Vitoria-Gasteiz",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-22",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "TELEKOM CENTER ATHENS",
+   "time_note": "14:15",
+   "market": "handicap",
+   "selection": "Panathinaikos AKTOR Athens -12.5",
+   "probability": 0.7054,
+   "fair_decimal": 1.42,
+   "fair_american": -239,
+   "confidence": "high",
+   "text": "Panathinaikos AKTOR Athens lead the EuroLeague on 528 points for and 438 against and are 4-1 at the Telekom Center Athens. Bottom-placed Kosner Baskonia Vitoria-Gasteiz have lost both road games and conceded 564. We make the gap 18.4 points, which is why Panathinaikos minus twelve and a half at a fair -239 clears the high-confidence band.",
+   "word_count": 56,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Panathinaikos AKTOR Athens first, 5-1, 528 for / 438 against, 4-1 at home",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "Kosner Baskonia Vitoria-Gasteiz twentieth, 504 for / 564 against, 0-2 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-68",
+   "match_id": "euroleague-r7-68",
+   "fixture": "Zalgiris Kaunas v LDLC ASVEL Villeurbanne",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-23",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "ZALGIRIO ARENA",
+   "time_note": "13:00",
+   "market": "handicap",
+   "selection": "Zalgiris Kaunas -1.5",
+   "probability": 0.7036,
+   "fair_decimal": 1.42,
+   "fair_american": -237,
+   "confidence": "high",
+   "text": "Zalgiris Kaunas host LDLC ASVEL Villeurbanne at the Zalgirio Arena on 23 October. Fourteenth-placed Zalgiris have conceded 517 in six rounds, while seventeenth-placed ASVEL have shipped 572 and are 1-2 away from home. Our margin is 7.4 points to the hosts, so Zalgiris minus one and a half at a fair -237 is the pick despite their 0-2 home start.",
+   "word_count": 60,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Zalgiris Kaunas fourteenth, 490 for / 517 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "LDLC ASVEL Villeurbanne seventeenth, 527 for / 572 against, 1-2 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-69",
+   "match_id": "euroleague-r7-69",
+   "fixture": "Paris Basketball v Valencia Basket",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-23",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "ADIDAS ARENA",
+   "time_note": "14:45",
+   "market": "handicap",
+   "selection": "Valencia Basket +4.5",
+   "probability": 0.7042,
+   "fair_decimal": 1.42,
+   "fair_american": -238,
+   "confidence": "high",
+   "text": "Fifth-placed Valencia Basket carry the competition's most productive offence, 583 points in six rounds, plus a 2-0 road record into the Adidas Arena. Paris Basketball are eighteenth and 1-3 at home. Our rating has Valencia barely 1.4 points clear, so Valencia plus four and a half at a fair -238 is where the value sits.",
+   "word_count": 55,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Valencia Basket fifth, 583 for / 537 against, 2-0 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "Paris Basketball eighteenth, 504 for / 545 against, 1-3 at home",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-euroleague-r7-70",
+   "match_id": "euroleague-r7-70",
+   "fixture": "Olympiacos Piraeus v Fenerbahce Tarfin Istanbul",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "date": "2026-10-23",
+   "competition": "EuroLeague 2026-27 Regular Season, Round 7",
+   "venue": "SUNEL ARENA",
+   "time_note": "14:15",
+   "market": "handicap",
+   "selection": "Olympiacos Piraeus +1.5",
+   "probability": 0.7095,
+   "fair_decimal": 1.41,
+   "fair_american": -244,
+   "confidence": "high",
+   "text": "Third-placed Olympiacos Piraeus have put up 564 points and are 1-0 at the Sunel Arena, while second-placed Fenerbahce Tarfin Istanbul own the league's best defence with 447 conceded but are 0-1 away. We rate Olympiacos 4.6 points better here, making Olympiacos plus one and a half at a fair -244 the selection.",
+   "word_count": 52,
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "source_name": "EuroLeague Basketball official game centre and standings",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Olympiacos Piraeus third, 564 for / 524 against, 1-0 at home",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "fact": "Fenerbahce Tarfin Istanbul second, 501 for / 447 against, 0-1 away",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-urc-r4-292608",
+   "match_id": "urc-r4-292608",
+   "fixture": "Cardiff Rugby v Hollywoodbets Sharks",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "date": "2026-10-23",
+   "competition": "United Rugby Championship 2026/27",
+   "venue": "Cardiff Arms Park",
+   "time_note": "14:45",
+   "market": "handicap",
+   "selection": "Cardiff Rugby +2.5",
+   "probability": 0.7125,
+   "fair_decimal": 1.4,
+   "fair_american": -248,
+   "confidence": "high",
+   "text": "Both clubs lost in Round 3, Cardiff Rugby 5-29 at Leinster and Hollywoodbets Sharks 22-39 at the DHL Stormers, and both stand on two wins from three. Back at Cardiff Arms Park our table-based rating gives the hosts a 4.8-point edge, so Cardiff Rugby plus two and a half at a fair -248.",
+   "word_count": 53,
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Cardiff Rugby sixth, 9 points, 2-0-1, 66 for / 71 against, form WWL",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Round 3, 2026-10-10: Leinster Rugby 29-5 Cardiff Rugby at Laya Arena",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/3"
+    },
+    {
+     "fact": "Round 3, 2026-10-10: DHL Stormers 39-22 Hollywoodbets Sharks at DHL Stadium",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/3"
+    }
+   ]
+  },
+  {
+   "id": "pred-urc-r4-292609",
+   "match_id": "urc-r4-292609",
+   "fixture": "Connacht Rugby v Zebre Parma",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "date": "2026-10-23",
+   "competition": "United Rugby Championship 2026/27",
+   "venue": "Dexcom Stadium",
+   "time_note": "14:45",
+   "market": "handicap",
+   "selection": "Connacht Rugby -2.5",
+   "probability": 0.7094,
+   "fair_decimal": 1.41,
+   "fair_american": -244,
+   "confidence": "high",
+   "text": "Zebre Parma are bottom of the United Rugby Championship on one point, winless in three with 116 points conceded and beaten 12-29 at home by Edinburgh in Round 3. Connacht Rugby lost 19-36 at Glasgow but concede far less. We make Connacht 9.7 points clear at the Dexcom Stadium, so Connacht minus two and a half at -244.",
+   "word_count": 58,
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Zebre Parma sixteenth, 1 point, 0-0-3, 52 for / 116 against, form LLL",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Connacht Rugby fourteenth, 5 points, 1-0-2, 56 for / 84 against",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Round 3, 2026-10-09: Glasgow Warriors 36-19 Connacht Rugby at Scotstoun Stadium",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/3"
+    }
+   ]
+  },
+  {
+   "id": "pred-urc-r4-292610",
+   "match_id": "urc-r4-292610",
+   "fixture": "Edinburgh v 10bet Lions",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "date": "2026-10-23",
+   "competition": "United Rugby Championship 2026/27",
+   "venue": "Hive Stadium",
+   "time_note": "14:45",
+   "market": "handicap",
+   "selection": "Edinburgh -4.5",
+   "probability": 0.7092,
+   "fair_decimal": 1.41,
+   "fair_american": -244,
+   "confidence": "high",
+   "text": "Edinburgh top the table with three wins from three, 80 points for and 54 against, and beat Zebre Parma 29-12 in Italy in Round 3. The 10bet Lions were thrashed 57-15 by the Vodacom Bulls and have conceded 102 in three matches. Edinburgh minus four and a half at Hive Stadium, fair -244, is the call.",
+   "word_count": 56,
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Edinburgh first, 14 points, 3-0-0, 80 for / 54 against, form WWW",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "10bet Lions seventh, 9 points, 2-0-1, 77 for / 102 against",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Round 3, 2026-10-10: Vodacom Bulls 57-15 10bet Lions at Loftus Versfeld",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/3"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-2026020170",
+   "match_id": "nhl-2026020170",
+   "fixture": "Boston Bruins v San Jose Sharks",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "date": "2026-10-24",
+   "competition": "NHL 2026-27 Regular Season",
+   "venue": "TD Garden",
+   "time_note": "",
+   "market": "match total",
+   "selection": "Over 4.5",
+   "probability": 0.7142,
+   "fair_decimal": 1.4,
+   "fair_american": -250,
+   "confidence": "high",
+   "text": "Boston Bruins are 7-2-1 with Jeremy Swayman already on six wins and David Pastrnak contributing four goals and eight assists. San Jose Sharks answer through Macklin Celebrini, five goals and nine assists, with Alex Nedeljkovic on three wins. Our Poisson total at TD Garden is exactly 6.00 goals, so Over four and a half at a fair -250.",
+   "word_count": 58,
+   "official_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "caveat": "W-L-OTL records beside these fixtures are a 2026-10-21 snapshot: the official feed had not absorbed the twelve games played on 2026-10-22 when it was read. Published exactly as returned and disclosed as flag CU-01 rather than adjusted.",
+   "facts_used": [
+    {
+     "fact": "Boston Bruins 7-2-1; David Pastrnak 4 goals, 8 assists; Jeremy Swayman 6 wins",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170"
+    },
+    {
+     "fact": "San Jose Sharks 5-4-1; Macklin Celebrini 5 goals, 9 assists; Alex Nedeljkovic 3 wins",
+     "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170"
+    },
+    {
+     "fact": "32-club league average 3.0784 goals per team game, 2026-10-21 snapshot",
+     "source_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=gameTypeId%3D2%20and%20seasonId%3D20262027"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-2026020172",
+   "match_id": "nhl-2026020172",
+   "fixture": "Pittsburgh Penguins v Nashville Predators",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "date": "2026-10-24",
+   "competition": "NHL 2026-27 Regular Season",
+   "venue": "PPG Paints Arena",
+   "time_note": "",
+   "market": "match total",
+   "selection": "Under 7.5",
+   "probability": 0.7046,
+   "fair_decimal": 1.42,
+   "fair_american": -239,
+   "confidence": "high",
+   "text": "Pittsburgh Penguins sit 3-6-1 with Evgeni Malkin on five goals and Erik Karlsson on ten assists, while the Nashville Predators are 3-2-3 leaning on Roman Josi's eight assists and three Juuse Saros wins. Neither club is scoring freely and our projected total at PPG Paints Arena is 6.28 goals, so Under seven and a half at -239.",
+   "word_count": 57,
+   "official_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "caveat": "W-L-OTL records beside these fixtures are a 2026-10-21 snapshot: the official feed had not absorbed the twelve games played on 2026-10-22 when it was read. Published exactly as returned and disclosed as flag CU-01 rather than adjusted.",
+   "facts_used": [
+    {
+     "fact": "Pittsburgh Penguins 3-6-1; Evgeni Malkin 5 goals; Erik Karlsson 10 assists",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172"
+    },
+    {
+     "fact": "Nashville Predators 3-2-3; Ryan O'Reilly 4 goals; Roman Josi 8 assists; Juuse Saros 3 wins",
+     "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-2026020176",
+   "match_id": "nhl-2026020176",
+   "fixture": "Edmonton Oilers v Toronto Maple Leafs",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "date": "2026-10-24",
+   "competition": "NHL 2026-27 Regular Season",
+   "venue": "Rogers Place",
+   "time_note": "",
+   "market": "match total",
+   "selection": "Under 8.5",
+   "probability": 0.7084,
+   "fair_decimal": 1.41,
+   "fair_american": -243,
+   "confidence": "high",
+   "text": "Edmonton Oilers are 7-1-1 with Connor McDavid on twenty assists and Leon Draisaitl on eight goals, while the Toronto Maple Leafs stand 5-4-2 behind Auston Matthews' eight goals and ten assists. Two elite offences, but our projected total at Rogers Place is 7.16 goals, so Under eight and a half at a fair -243 is the selection.",
+   "word_count": 57,
+   "official_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "caveat": "W-L-OTL records beside these fixtures are a 2026-10-21 snapshot: the official feed had not absorbed the twelve games played on 2026-10-22 when it was read. Published exactly as returned and disclosed as flag CU-01 rather than adjusted.",
+   "facts_used": [
+    {
+     "fact": "Edmonton Oilers 7-1-1; Connor McDavid 20 assists; Leon Draisaitl 8 goals; Devon Levi 5 wins",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176"
+    },
+    {
+     "fact": "Toronto Maple Leafs 5-4-2; Auston Matthews 8 goals and 10 assists; Anthony Stolarz 3 wins",
+     "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176"
+    }
+   ]
+  },
+  {
+   "id": "pred-urc-r4-292612",
+   "match_id": "urc-r4-292612",
+   "fixture": "DHL Stormers v Scarlets",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "date": "2026-10-24",
+   "competition": "United Rugby Championship 2026/27",
+   "venue": "DHL Stadium",
+   "time_note": "10:00",
+   "market": "handicap",
+   "selection": "DHL Stormers -3.5",
+   "probability": 0.712,
+   "fair_decimal": 1.4,
+   "fair_american": -247,
+   "confidence": "high",
+   "text": "DHL Stormers beat the Hollywoodbets Sharks 39-22 at this same ground in Round 3 and hold eleven points from three with 81 for and 54 against. Scarlets, twelfth, scraped past Benetton Rugby 27-26 and have conceded 85. Our margin is 10.8 points, so DHL Stormers minus three and a half at a fair -247.",
+   "word_count": 54,
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "DHL Stormers fourth, 11 points, 2-0-1, 81 for / 54 against, 3 bonus points",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Scarlets twelfth, 7 points, 1-0-2, 68 for / 85 against",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Round 3, 2026-10-10: Scarlets 27-26 Benetton Rugby at Parc y Scarlets",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/3"
+    }
+   ]
+  },
+  {
+   "id": "pred-urc-r4-292614",
+   "match_id": "urc-r4-292614",
+   "fixture": "Leinster Rugby v Munster Rugby",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "date": "2026-10-24",
+   "competition": "United Rugby Championship 2026/27",
+   "venue": "Aviva Stadium",
+   "time_note": "13:00",
+   "market": "match winner",
+   "selection": "Leinster Rugby",
+   "probability": 0.7063,
+   "fair_decimal": 1.42,
+   "fair_american": -240,
+   "confidence": "high",
+   "text": "Leinster Rugby beat Cardiff Rugby 29-5 in Round 3 and have conceded only 58 points in three rounds, the tightest defence of the Irish provinces in the official table. Munster Rugby drew 26-26 at Ulster and have given up 74. At the Aviva Stadium we rate Leinster 8.1 points clear, so back Leinster to win at a fair -240.",
+   "word_count": 59,
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Leinster Rugby tenth, 8 points, 75 for / 58 against, 4 bonus points",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Munster Rugby ninth, 9 points, 72 for / 74 against, form LWD",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Round 3, 2026-10-10: Ulster Rugby 26-26 Munster Rugby at Affidea Stadium",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/3"
+    }
+   ]
+  },
+  {
+   "id": "pred-urc-r4-292615",
+   "match_id": "urc-r4-292615",
+   "fixture": "Ospreys v Dragons RFC",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "date": "2026-10-24",
+   "competition": "United Rugby Championship 2026/27",
+   "venue": "St Helen's",
+   "time_note": "14:00",
+   "market": "handicap",
+   "selection": "Ospreys +4.5",
+   "probability": 0.7032,
+   "fair_decimal": 1.42,
+   "fair_american": -237,
+   "confidence": "high",
+   "text": "Ospreys beat Dragons RFC 38-31 at Rodney Parade on 9 October and the Welsh derby reverses at St Helen's on 24 October. Thirteenth-placed Ospreys have shipped 107 points in three rounds while eighth-placed Dragons have scored 88. Our margin is only 2.4 points to the hosts, so Ospreys plus four and a half at a fair -237.",
+   "word_count": 57,
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "source_name": "United Rugby Championship official match centre (stats.unitedrugby.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Round 3, 2026-10-09: Dragons RFC 31-38 Ospreys at Rodney Parade",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/3"
+    },
+    {
+     "fact": "Ospreys thirteenth, 6 points, 81 for / 107 against",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "fact": "Dragons RFC eighth, 9 points, 88 for / 83 against",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-2026020177",
+   "match_id": "nhl-2026020177",
+   "fixture": "Utah Mammoth v Tampa Bay Lightning",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "date": "2026-10-25",
+   "competition": "NHL 2026-27 Regular Season",
+   "venue": "Delta Center",
+   "time_note": "",
+   "market": "handicap",
+   "selection": "Tampa Bay Lightning +1.5",
+   "probability": 0.7014,
+   "fair_decimal": 1.43,
+   "fair_american": -235,
+   "confidence": "high",
+   "text": "The Tampa Bay Lightning arrive at the Delta Center 7-2-0 with Brandon Hagel on seven goals, Nikita Kucherov on nine assists and Andrei Vasilevskiy on five wins. Utah Mammoth are 7-3-0 through Nick Schmaltz's seven goals and Clayton Keller's nine assists. We separate them by two tenths of a goal, so Tampa Bay plus one and a half at -235.",
+   "word_count": 60,
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "caveat": "W-L-OTL records beside these fixtures are a 2026-10-21 snapshot: the official feed had not absorbed the twelve games played on 2026-10-22 when it was read. Published exactly as returned and disclosed as flag CU-01 rather than adjusted.",
+   "facts_used": [
+    {
+     "fact": "Tampa Bay Lightning 7-2-0; Brandon Hagel 7 goals; Nikita Kucherov 9 assists; Andrei Vasilevskiy 5 wins",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177"
+    },
+    {
+     "fact": "Utah Mammoth 7-3-0; Nick Schmaltz 7 goals; Clayton Keller 9 assists; Karel Vejmelka 5 wins",
+     "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/25/2026020177"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-2026020178",
+   "match_id": "nhl-2026020178",
+   "fixture": "Calgary Flames v Detroit Red Wings",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "date": "2026-10-25",
+   "competition": "NHL 2026-27 Regular Season",
+   "venue": "Scotiabank Saddledome",
+   "time_note": "",
+   "market": "match total",
+   "selection": "Over 4.5",
+   "probability": 0.7028,
+   "fair_decimal": 1.42,
+   "fair_american": -236,
+   "confidence": "high",
+   "text": "Calgary Flames are 2-6-0 with Dustin Wolf on a single win and Morgan Frost on three goals, while the Detroit Red Wings are 3-3-3 and take their production from Alex DeBrincat's six goals and five assists. Calgary's leaky start is the story, and our total of 5.91 goals at the Scotiabank Saddledome makes Over four and a half at -236.",
+   "word_count": 60,
+   "official_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "source_name": "NHL official API (api-web.nhle.com) score feed",
+   "caveat": "W-L-OTL records beside these fixtures are a 2026-10-21 snapshot: the official feed had not absorbed the twelve games played on 2026-10-22 when it was read. Published exactly as returned and disclosed as flag CU-01 rather than adjusted.",
+   "facts_used": [
+    {
+     "fact": "Calgary Flames 2-6-0; Morgan Frost 3 goals; Joel Farabee 5 assists; Dustin Wolf 1 win",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178"
+    },
+    {
+     "fact": "Detroit Red Wings 3-3-3; Alex DeBrincat 6 goals and 5 assists; John Gibson 2 wins",
+     "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/25/2026020178"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101004",
+   "match_id": "ehfcl-202711020101004",
+   "fixture": "FC Porto v One Veszprem HC",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-28",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "18:45",
+   "market": "match total",
+   "selection": "Under 71.5",
+   "probability": 0.7129,
+   "fair_decimal": 1.4,
+   "fair_american": -248,
+   "confidence": "high",
+   "text": "FC Porto host One Veszprem HC on 28 October in Group A, where Veszprem are perfect at five wins from five with 185 goals for and 146 against while Porto hold three points at 158 for and 173 against. Expect Veszprem to control tempo rather than trade goals: our total is 67.0, so Under 71.5 at a fair -248.",
+   "word_count": 59,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101004/FCPorto-OneVeszpr%C3%A9mHC/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group A: One Veszprem HC 5-0-0, 185:146, 10 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group A: FC Porto 1-1-3, 158:173, 3 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101022",
+   "match_id": "ehfcl-202711020101022",
+   "fixture": "HC Vardar 1961 v MT Melsungen",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-28",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "18:45",
+   "market": "handicap",
+   "selection": "HC Vardar 1961 +3.5",
+   "probability": 0.7057,
+   "fair_decimal": 1.42,
+   "fair_american": -240,
+   "confidence": "high",
+   "text": "HC Vardar 1961 have played five Group B matches for two points, 154 goals for and 158 against, and MT Melsungen have four points from four at 110 for and 112 against. Our rating makes this close to level on 28 October, so HC Vardar 1961 plus three and a half goals at a fair -240 is the selection.",
+   "word_count": 59,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group B: HC Vardar 1961 1-0-4, 154:158, 2 points from 5",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group B: MT Melsungen 2-0-2, 110:112, 4 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101036",
+   "match_id": "ehfcl-202711020101036",
+   "fixture": "RK Celje Pivovarna Lasko v HC Zagreb",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-28",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "20:45",
+   "market": "match total",
+   "selection": "Under 68.5",
+   "probability": 0.7113,
+   "fair_decimal": 1.41,
+   "fair_american": -246,
+   "confidence": "high",
+   "text": "RK Celje Pivovarna Lasko are pointless in Group C after five matches with 150 goals for against 188, while HC Zagreb have four points at 146 for and 158 against. Both defences leak but neither attack is prolific, and our projected total of 64.2 goals makes Under 68.5 at a fair -246 the bet on 28 October.",
+   "word_count": 57,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101036/RKCeljePivovarnaLa%C5%A1ko-HCZagreb/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group C: RK Celje Pivovarna Lasko 0-0-5, 150:188, 0 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group C: HC Zagreb 2-0-3, 146:158, 4 points",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101065",
+   "match_id": "ehfcl-202711020101065",
+   "fixture": "SC Magdeburg v HC Kriens-Luzern",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-28",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "20:45",
+   "market": "handicap",
+   "selection": "SC Magdeburg -1.5",
+   "probability": 0.7101,
+   "fair_decimal": 1.41,
+   "fair_american": -245,
+   "confidence": "high",
+   "text": "SC Magdeburg are unbeaten in Group F with four wins from four, 141 goals for and only 108 against. HC Kriens-Luzern have four points from five at 158 for and 161 against. Our Poisson rating gives Magdeburg 5.9 goals at home on 28 October, so SC Magdeburg minus one and a half at a fair -245.",
+   "word_count": 56,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group F: SC Magdeburg 4-0-0, 141:108, 8 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group F: HC Kriens-Luzern 2-0-3, 158:161, 4 points from 5",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101067",
+   "match_id": "ehfcl-202711020101067",
+   "fixture": "Industria Kielce v Kolstad Handball",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-28",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "20:45",
+   "market": "match total",
+   "selection": "Under 66.5",
+   "probability": 0.7078,
+   "fair_decimal": 1.41,
+   "fair_american": -242,
+   "confidence": "high",
+   "text": "Industria Kielce hold six points from five Group F matches with 155 goals for and 153 against; Kolstad Handball have none from four, scoring just 111. A stifled game follows more often than a shootout when one attack is that blunt, and our projected total of 62.3 goals puts Under 66.5 at a fair -242.",
+   "word_count": 55,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group F: Industria Kielce 3-0-2, 155:153, 6 points from 5",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group F: Kolstad Handball 0-0-4, 111:143, 0 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101040",
+   "match_id": "ehfcl-202711020101040",
+   "fixture": "GOG v Sporting Clube de Portugal",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-29",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "18:45",
+   "market": "handicap",
+   "selection": "Sporting Clube de Portugal +2.5",
+   "probability": 0.7024,
+   "fair_decimal": 1.42,
+   "fair_american": -236,
+   "confidence": "high",
+   "text": "GOG host Sporting Clube de Portugal on 29 October with both in Group D: GOG six points from four at 145 for and 139 against, Sporting seven from four at 149 for and 125 against. We make GOG only two goals better at home, so Sporting plus two and a half at a fair -236 is the selection.",
+   "word_count": 58,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group D: GOG 3-0-1, 145:139, 6 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group D: Sporting Clube de Portugal 3-1-0, 149:125, 7 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  },
+  {
+   "id": "pred-ehfcl-202711020101054",
+   "match_id": "ehfcl-202711020101054",
+   "fixture": "SAH - Aarhus v Barca",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "date": "2026-10-29",
+   "competition": "EHF Champions League Men 2026/27",
+   "venue": "",
+   "time_note": "20:45",
+   "market": "match total",
+   "selection": "Under 65.5",
+   "probability": 0.7142,
+   "fair_decimal": 1.4,
+   "fair_american": -250,
+   "confidence": "high",
+   "text": "SAH - Aarhus have five points from five Group E matches with 150 goals for and 163 against; Barca are perfect at four from four and have conceded only 104. Barca control tempo rather than chase scores, and our total of 61.2 goals makes Under 65.5 at a fair -250 the strongest read on 29 October.",
+   "word_count": 56,
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101054/SAHAarhus-Bar%C3%A7a/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "source_name": "EHF Champions League Men official site (ehfcl.eurohandball.com)",
+   "caveat": "",
+   "facts_used": [
+    {
+     "fact": "Group E: SAH - Aarhus 2-1-2, 150:163, 5 points from 5",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    },
+    {
+     "fact": "Group E: Barca 4-0-0, 137:104, 8 points from 4",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+    }
+   ]
+  }
+ ],
+ "counts": {
+  "predictions": 29,
+  "min_word_count": 52,
+  "max_word_count": 61,
+  "unique_texts": 29,
+  "sports": [
+   "basketball",
+   "handball",
+   "ice-hockey",
+   "rugby-union"
+  ]
+ }
+}

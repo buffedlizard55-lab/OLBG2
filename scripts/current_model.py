@@ -456,6 +456,11 @@ VENUE_CAVEATS = {
 }
 
 
+NHL_RECORD_CAVEAT = ("W-L-OTL records beside these fixtures are a 2026-10-21 snapshot: the official feed had not "
+                     "absorbed the twelve games played on 2026-10-22 when it was read. Published exactly as returned "
+                     "and disclosed as flag CU-01 rather than adjusted.")
+
+
 def markets_for(match, dist, cfg):
     """Originate every market and every side; return the market list + band search."""
     markets = []
@@ -673,7 +678,8 @@ def main():
             "expected_away": round(cfg["expected_a"], 3),
             "expected_margin": round(mu, 3), "expected_total": round(mu_t, 3),
             "league_avg": round(cfg.get("league_avg", 0.0), 4),
-            "caveat": VENUE_CAVEATS.get(m["id"], ""),
+            "caveat": VENUE_CAVEATS.get(m["id"], "") or (
+                NHL_RECORD_CAVEAT if m["sport"] == "ice-hockey" else ""),
         })
         if band:
             band_picks.append({
@@ -684,7 +690,8 @@ def main():
                 "time_note": m["time_note"], "official_url": m["official_url"],
                 "capture_file": m["capture_file"], "source_name": m["source_name"],
                 "expected_margin": round(mu, 3), "expected_total": round(mu_t, 3),
-                "caveat": VENUE_CAVEATS.get(m["id"], ""),
+                "caveat": VENUE_CAVEATS.get(m["id"], "") or (
+                    NHL_RECORD_CAVEAT if m["sport"] == "ice-hockey" else ""),
                 **band})
 
     counts = {

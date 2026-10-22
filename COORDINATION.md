@@ -1318,3 +1318,11 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 **Sequencing note (transparent):** PR #56 was merged a moment before its diff-gate check reported failure (root `picks.html` still stale), briefly leaving `main` red on the generated-files gate only — no wrong data was published beyond the one corrected sentence lingering on the root page. PR #57 synced it and `main` is green again. Lesson logged: never issue a merge in the same block as its CI watch.
 
 **Residual nit (left for next session):** root `picks.html` intro reads "A further 0 high-confidence picks…" — factual but clumsy template output from `build_site.py` when every write-up is in-band.
+
+## Session `arena/53b0cd38-olbg2` — 2026-10-22
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Correct zero-count picks intro and recheck publication gates | in progress | `arena/53b0cd38-olbg2` | `scripts/build_site.py`, generated `picks.html`, `COORDINATION.md` |
+
+This claim is limited to the unclaimed residual nit recorded above; no new fixtures or unverified predictions will be invented. This branch is fixed by the environment, so the requested `session-…` branch naming cannot be used. Prior sessions' tasks are closed.

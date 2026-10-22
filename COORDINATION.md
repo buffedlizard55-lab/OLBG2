@@ -1206,3 +1206,21 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 | Live production URLs verified | `https://buffedlizard55-lab.github.io/OLBG2/`, `https://buffedlizard55-lab.github.io/OLBG2/verified/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/predictions.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/survey/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/integration.html` |
 
 
+
+---
+
+# Session `arena/4daa1e65-olbg2` — verified-desk audit, current-source remediation & final integration (2026-10-22)
+
+**Session ID:** `arena/4daa1e65-olbg2` · **Fixed Arena branch:** `arena/4daa1e65-olbg2` · **Base:** `main@f8a14b4` · **Claimed:** 2026-10-22 UTC before implementation edits.
+
+**Parallel-session check:** no open pull requests; the newest merged work is PR #49. Remote branches without merged work (`7043ea94`, `7499a763`, `8b1fdb8f`) contain completed/closed historical scopes and no active claim overlapping this work. Earlier `/verified/` tasks V1–V4 are marked done. Arena requires this fixed branch, so no `session-*` branch or worktree is created.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| A1 | Reproduce all builds/tests; audit the latest verified desk, stale claims, model/provenance gates and source register | in progress | `arena/4daa1e65-olbg2` | `research/verified-refresh-4daa1e65.md`, `data/verified/repo_audit.json` |
+| A2 | Re-check eligible OLBG taxonomy and current official match evidence; correct or explicitly flag unsupported/stale values without inference | pending | `arena/4daa1e65-olbg2` | `data/verified/{sports,inputs,flagged}.json`, `scripts/verified_seed.py` |
+| A3 | Strengthen multi-market origination, high-confidence selection/odds-band rules, sourced prediction validation and regression tests | pending | `arena/4daa1e65-olbg2` | `scripts/verified_model.py`, `data/verified/{matches,predictions}.json`, `tests/test_verified_pipeline.py` |
+| A4 | Rebuild the clean `/verified/` dashboard and per-sport pages; ensure every row/fact has an official review link and blanks are visibly flagged | pending | `arena/4daa1e65-olbg2` | `scripts/verified_build.py`, `verified/**` |
+| A5 | Final integration: update stale shared documentation/navigation, run all five layer gates and local-link checks, PR → `main`, merge, verify Pages deployment | pending | `arena/4daa1e65-olbg2` | `README.md`, `METHODOLOGY.md`, `scripts/integration_audit.py`, `tests/test_integration.py`, `integration.html`, `.github/workflows/pages.yml`, `COORDINATION.md` |
+
+Historical `site/**`, `survey/**`, `live/**`, root legacy match pipelines and their source datasets are outside the execution scope except read-only regression testing. No external fact will be marked verified solely because a URL or prior snapshot exists; failed confirmations remain blank and are published for review.

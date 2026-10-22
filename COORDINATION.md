@@ -2981,3 +2981,11 @@ Confirmed on the deployed `sports/snooker.html` after `129b0cc`: breadcrumb Dash
 **Merge conflicts encountered and how they were resolved:** one, in `COORDINATION.md` when merging `origin/main` at `c9b25e0` into this branch. Both sides were append-only logs, so the resolution kept **all 752 lines from `origin/main` and all 37 lines from this session** — no other session's entry was discarded or rewritten. No conflict touched any file this session owns.
 
 **Still open for the final integration session** (logged, deliberately not actioned here — all four files are outside this session's claimed scope): add `/current/` to `index.html` and the root navigation; add `'current'` to the folder list in `scripts/integration_audit.py::local_link_errors`; add the three `current_*` scripts and `current data/current` to `.github/workflows/pages.yml`; and do not sum layer row counts as unique matches in `README.md`.
+
+---
+
+### Session `arena/d44995c7-olbg2` — CLAIM `/peak/` fresh-capture desk (2026-10-22 ~20:50Z)
+
+**Scope (only):** `peak/**`, `data/peak/**`, `scripts/peak_seed.py`, `scripts/peak_model.py`, `scripts/peak_build.py`, `tests/test_peak_d44995c7.py`, `research/peak-capture-d44995c7.md`, append-only COORDINATION.md. No shared/root files edited; integration requests will be logged, not actioned.
+
+**Plan:** P1 claim; P2 first-hand official captures (NHL score 23/24/25 Oct 2026 + NHL team summary 32 clubs; MLB World Series schedule + TB/MIL team stats cross-checked on two endpoints; OLBG betting-tips page read first-hand for taxonomy/URL schema only — OLBG is not an official source and originates no values; F1 Mexico page = race 1 Nov, outside window; NBA cdn scoreboard HTTP 500 → zero rows flagged); P3 Poisson line origination (moneyline, regulation 3-way NHL, puck/run lines, totals + alternate grids) with low/med/high confidence and in-band search p≥0.70 & fair American −250…+10000 over every market; P4 hand-authored ≥30-word unique predictions for band picks; P5 dashboard + 17 sport subpages (15 zero-row sports carry first-hand reasons); P6 tests asserting on rendered HTML; P7 PR + merge + live verify.

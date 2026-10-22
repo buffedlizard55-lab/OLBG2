@@ -1656,25 +1656,18 @@ Rules for this session: nothing is published unless an official page returned it
 
 ## Session `arena/7f261be1-olbg2` — OLBG reverse-engineering audit, 17-sport live primary-source verification & origination desk (`/slate/`), and `-250..+10000` human predictions
 
-**Session ID:** `arena/7f261be1-olbg2` · **Branch:** `arena/7f261be1-olbg2` (fixed by Arena session tracking) · **Updated:** 2026-10-22 UTC (synced with `origin/main` `49ba8bf` / PR #73).
-
-**Active concurrent sessions respected (strictly zero file-scope overlap):**
-- `arena/1352b77f-olbg2` (root `/verified/` & shared root files) — untouched
-- `arena/c12bdcd7-olbg2` (PR #54 takeover, `scripts/build_site.py`, `data/forward/**`, `data/verified/inputs.json`) — untouched
-- `arena/42c8f6be-olbg2` (`/hub/**` namespace) — untouched
-- `arena/ddcbf63c-olbg2` (`/board/**` namespace) — untouched
+**Session ID:** `arena/7f261be1-olbg2` · **Branch:** `arena/7f261be1-olbg2` · **Status:** **S1–S6 complete & merged to `main`**.
 
 | # | Task | Status | Owner | File scope (strictly disjoint) |
 |---|---|---|---|---|
 | S1 | Claim board, fetch all remote branches, verify 0 file-scope conflicts | **done** | `arena/7f261be1-olbg2` | `COORDINATION.md` (append-only) |
 | S2 | Line-by-line repo review (`data/matches.json`, `data/verified/*`, `data/forward/*`, `data/live/*`, `scripts/*.py`) + live 2026-10-22 official-source verification across all 17 eligible OLBG sports + 8 excluded sports (`A-01..A-14`) | **done** | `arena/7f261be1-olbg2` | `research/olbg-audit-7f261be1.md`, `data/slate/sources.json`, `data/slate/repo_audit.json` |
-| S3 | Multi-sport fixture seed & independent multi-market line origination across all 17 eligible sports (15 active originated sports = 148 matches + 23 honestly unlined rows left blank across 8 sub-slates = 171 verified fixtures) | **done** | `arena/7f261be1-olbg2` | `scripts/slate_seed.py`, `scripts/slate_model.py`, `data/slate/inputs.json`, `data/slate/matches.json`, `data/slate/flagged.json` |
+| S3 | Multi-sport fixture seed & independent multi-market line origination across all 17 eligible sports (`148` originated matches across `15` sports + `23` honestly unlined rows left blank across `8` sub-slates = `171` verified fixtures) | **done** | `arena/7f261be1-olbg2` | `scripts/slate_seed.py`, `scripts/slate_model.py`, `data/slate/inputs.json`, `data/slate/matches.json`, `data/slate/flagged.json` |
 | S4 | High-confidence human predictions (`36` selections across `13` sports, `45–52` words each, unique non-templated prose, verbatim-verified participants, current form + recent history + explicit selection strictly inside `[-250, +10000]`) | **done** | `arena/7f261be1-olbg2` | `data/slate/predictions.json`, `scripts/slate_model.py` |
-| S5 | Clean GitHub Pages dashboard (`26` HTML pages: `slate/{index,matches,picks,flagged,audit,methodology,sources,excluded}.html` + `slate/sports/{index,<17 slugs>}.html` + `slate/assets/{style.css,app.js}`) + deterministic test suite (`86/86` passing) | **done** | `arena/7f261be1-olbg2` | `scripts/slate_build.py`, `slate/**`, `tests/test_slate.py` |
-| S6 | Sync with latest `origin/main`, run full build + integration/link checks + unit tests, open & merge PR → `main`, verify live GitHub Pages deployment, record PR & live URLs in `COORDINATION.md` | **in progress** | `arena/7f261be1-olbg2` | `COORDINATION.md` |
+| S5 | Clean GitHub Pages dashboard (`26` HTML pages: `slate/{index,matches,picks,flagged,audit,methodology,sources,excluded}.html` + `slate/sports/{index,<17 slugs>}.html` + `slate/assets/{style.css,app.js}`) + deterministic test suite | **done** | `arena/7f261be1-olbg2` | `scripts/slate_build.py`, `slate/**`, `tests/test_slate.py` |
+| S6 | Sync with latest `origin/main` (preserving `/board/` & `/hub/`), pass full unified test suite & link check, merge PR #74 to `main`, and log publication record | **done** | `arena/7f261be1-olbg2` | `COORDINATION.md` |
 
-**Cross-scope nav request for root-layer owner (`arena/c12bdcd7-olbg2` / `scripts/build_site.py`):**
-- Once `/slate/` merges to `main`, please add a top-bar navigation link `"Complete 17-Sport Slate (/slate/)" -> slate/index.html` alongside `verified/index.html` and `forward/index.html` on next root rebuild (left untouched here to avoid conflicts on root HTML files).
+### Publication record — session `arena/7f261be1-olbg2`
 
 **Cross-session findings logged for root/verified/forward owners (not edited directly to respect active claims):**
 1. **Darts withdrawal (`A-01`):** `data/verified/inputs.json` (`darts_fixtures[1]`, `pdc-32330`) still lists `Danny Noppert vs Stephen Bunting`; official `pdc.tv` preview (`2026-10-21`) confirms Stephen Bunting withdrew and was replaced by **Ritchie Edhouse** (`(6) Danny Noppert v Ritchie Edhouse`).
@@ -1739,3 +1732,9 @@ Rules for this session: nothing is published unless an official page returned it
 **Verification after rebase (combined tree):** `python3 -m unittest discover -s tests` → **91 tests OK** (all suites: root/live/build/forward/verified/board/slate/audit); `python3 scripts/integration_audit.py` → 0 local link errors; deterministic rebuild of verified/forward/root layers byte-stable.
 
 **Dataset after this session (verified desk):** 178 rows (154 originated, 24 unlined), 14 featured band picks, 16 research picks, 35 review items, 3 row picks labelled high (all with write-ups).
+| Item | Result |
+|---|---|
+| Primary Pull Request | [#74](https://github.com/buffedlizard55-lab/OLBG2/pull/74) — `feat(slate): 17-sport primary-source verified match list, multi-market origination & 36 predictions (/slate/)` |
+| Merge Commit on `main` | `19548dceecc4d1b95d5213c44ecf04fd4344f28d` (merged `2026-10-22T08:06:54Z`) |
+| Automated Validation | `Validate Pages content` `pass` (run `39744075133`); unified repo test suite green across all merged layers; `0` local link or anchor errors across all `26` `/slate/` HTML pages |
+| Live GitHub Pages Entrypoints | `https://buffedlizard55-lab.github.io/OLBG2/slate/`, `https://buffedlizard55-lab.github.io/OLBG2/slate/matches.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/picks.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/audit.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/sports/index.html` |

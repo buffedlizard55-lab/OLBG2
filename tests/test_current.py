@@ -645,5 +645,145 @@ class TestHeadlineCounts(unittest.TestCase):
 
 
 
+class TestSubpageChrome(unittest.TestCase):
+    """Chrome links must stay inside the layer on the pages one level deeper.
+
+    A previous revision rewrote finished HTML with blanket ``str.replace`` calls.
+    Because a bare ``index.html`` means the layer dashboard in the navigation but
+    the sport index in a breadcrumb, those replacements sent the sport pages'
+    Dashboard, Flagged for Review, brand and footer links to the repository root.
+    Every target still existed, so the link audit stayed green while 18 pages
+    navigated out of the layer.
+    """
+
+    NAV_HREFS = ["index.html", "matches.html", "lines.html", "picks.html",
+                 "predictions.html", "inputs.html", "flagged.html", "sources.html",
+                 "methodology.html", "sports/index.html"]
+    CROSS = ["index.html", "verified/index.html", "live/index.html",
+             "survey/index.html", "integration.html", "flagged.html"]
+
+    def subpages(self):
+        """Every page that lives one directory below current/."""
+        d = data("matches.json")
+        return ([os.path.join(OUT, "sports", slug + ".html") for slug in d["sport_order"]]
+                + [os.path.join(OUT, "sports", "index.html")])
+
+    @staticmethod
+    def hrefs(html, pattern):
+        return re.findall(pattern, html, re.S)
+
+    def test_every_sport_subpage_navigation_stays_one_level_down(self):
+        expected = ["../" + h for h in self.NAV_HREFS]
+        for path in self.subpages():
+            with open(path, encoding="utf-8") as handle:
+                html = handle.read()
+            nav = re.search(r'<nav class="nav".*?</nav>', html, re.S).group(0)
+            self.assertEqual(re.findall(r'<a href="([^"]+)"', nav), expected, path)
+            self.assertEqual(re.search(r'<a class="brand" href="([^"]+)"', html).group(1),
+                             "../index.html", path)
+            self.assertEqual(
+                re.search(r'<link rel="stylesheet" href="([^"]+)"', html).group(1),
+                "../assets/style.css", path)
+
+    def test_subpage_footer_and_breadcrumb_point_at_this_layer(self):
+        for path in self.subpages():
+            with open(path, encoding="utf-8") as handle:
+                html = handle.read()
+            footer = re.search(r"<footer>.*?</footer>", html, re.S).group(0)
+            self.assertEqual(re.findall(r'<a href="([^"]+)"', footer),
+                             ["../flagged.html", "../methodology.html"], path)
+            crumb = re.search(r'<p class="crumb">.*?</p>', html, re.S).group(0)
+            links = re.findall(r'<a href="([^"]+)"', crumb)
+            # a sport page names the sport index too; the index itself stops at Dashboard
+            expected = (["../index.html"] if os.path.basename(path) == "index.html"
+                        else ["../index.html", "index.html"])
+            self.assertEqual(links, expected, path)
+
+    def test_only_the_cross_layer_bar_may_leave_the_layer(self):
+        for path in self.subpages():
+            with open(path, encoding="utf-8") as handle:
+                html = handle.read()
+            cross = re.search(r'<div class="cross">.*?</div></div>', html, re.S).group(0)
+            self.assertEqual(re.findall(r'<a href="([^"]+)"', cross),
+                             ["../../" + c for c in self.CROSS], path)
+            # nothing in the header nav, brand or footer may escape to the repo root
+            chrome = (re.search(r"<header.*?</header>", html, re.S).group(0)
+                      + re.search(r"<footer>.*?</footer>", html, re.S).group(0))
+            self.assertNotIn("../../", chrome, path)
+
+    def test_top_level_pages_use_unprefixed_chrome(self):
+        for name in ("index.html", "matches.html", "lines.html", "picks.html",
+                     "predictions.html", "inputs.html", "flagged.html",
+                     "sources.html", "methodology.html"):
+            with open(os.path.join(OUT, name), encoding="utf-8") as handle:
+                html = handle.read()
+            nav = re.search(r'<nav class="nav".*?</nav>', html, re.S).group(0)
+            self.assertEqual(re.findall(r'<a href="([^"]+)"', nav), self.NAV_HREFS, name)
+            cross = re.search(r'<div class="cross">.*?</div></div>', html, re.S).group(0)
+            self.assertEqual(re.findall(r'<a href="([^"]+)"', cross),
+                             ["../" + c for c in self.CROSS], name)
+            self.assertEqual(re.search(r'<a class="brand" href="([^"]+)"', html).group(1),
+                             "index.html", name)
+
+    def test_every_chrome_target_resolves_to_a_file_that_exists(self):
+        for path in pages():
+            with open(path, encoding="utf-8") as handle:
+                html = handle.read()
+            chrome = (re.search(r"<header.*?</header>", html, re.S).group(0)
+                      + re.search(r'<div class="cross">.*?</div></div>', html, re.S).group(0)
+                      + re.search(r"<footer>.*?</footer>", html, re.S).group(0))
+            for href in re.findall(r'<a href="([^"]+)"', chrome):
+                self.assertFalse(href.startswith("http"), (path, href))
+                target = os.path.normpath(os.path.join(os.path.dirname(path), href))
+                self.assertTrue(os.path.isfile(target), "%s -> %s missing" % (path, href))
+            # layer chrome must never resolve above current/
+            for href in re.findall(r'<a href="([^"]+)"',
+                                   re.search(r"<header.*?</header>", html, re.S).group(0)
+                                   + re.search(r"<footer>.*?</footer>", html, re.S).group(0)):
+                target = os.path.normpath(os.path.join(os.path.dirname(path), href))
+                self.assertTrue(target.startswith(OUT + os.sep),
+                                "%s chrome escapes the layer: %s" % (path, href))
+
+
+class TestCoinFlipDisclosure(unittest.TestCase):
+    """A price the model cannot distinguish must never be published silently."""
+
+    def level_rows(self):
+        return [r for r in data("lines.json")["rows"]
+                if r["originated"] and r["primary"].get("level")]
+
+    def test_a_coin_flip_exists_and_is_identified(self):
+        rows = self.level_rows()
+        self.assertEqual([r["match_id"] for r in rows], ["snooker-niopen-r3-3"])
+        self.assertEqual(rows[0]["primary"]["p"], 0.5)
+        self.assertEqual(rows[0]["primary"]["confidence"], "low")
+        self.assertIn("coin flip", rows[0]["primary"]["note"])
+
+    def test_every_level_row_is_disclosed_on_all_three_pages_that_show_its_price(self):
+        for r in self.level_rows():
+            slug = r["sport"]
+            note = " ".join(r["primary"]["note"].split())
+            for path in (os.path.join(OUT, "matches.html"),
+                         os.path.join(OUT, "picks.html"),
+                         os.path.join(OUT, "sports", slug + ".html")):
+                with open(path, encoding="utf-8") as handle:
+                    flat = " ".join(handle.read().split())
+                row = [tr for tr in re.findall(r"<tr .*?</tr>", flat)
+                       if r["match_id"] in tr or (note[:40] in tr)]
+                self.assertIn("coin flip", flat, path)
+                self.assertIn(note, flat, "%s does not carry the note" % path)
+
+    def test_no_row_without_a_level_flag_carries_the_badge(self):
+        d = data("matches.json")
+        for slug in d["sport_order"]:
+            path = os.path.join(OUT, "sports", slug + ".html")
+            with open(path, encoding="utf-8") as handle:
+                html = handle.read()
+            levelled = len([r for r in self.level_rows() if r["sport"] == slug])
+            self.assertEqual(html.count('<span class="badge blank">coin flip</span>'),
+                             levelled, slug)
+
+
+
 if __name__ == "__main__":
     unittest.main()

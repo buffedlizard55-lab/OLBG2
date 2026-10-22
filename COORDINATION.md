@@ -1683,3 +1683,12 @@ Rules for this session: nothing is published unless an official page returned it
 | Cross-layer source-evidence audit and public review dashboard | in progress | arena/02095e6b-olbg2 | scripts/evidence_integrity.py, tests/test_evidence_integrity.py, evidence/**, research/evidence-integrity.md, COORDINATION.md (append only) |
 
 Scope is disjoint from prior layer owners. No inherited source or prediction is newly marked verified. Audit will distinguish linked sources from captured evidence, inspect confidence claims, and publish limitations. Assigned Arena branch is retained per environment constraints. Root navigation changes requested from its owner, not made here.
+
+### 02095e6b verification and scope completion
+
+- Scoped implementation done: `evidence/{index,flagged,inventory,nhl-check}.html`, machine-readable audit and selected-field NHL evidence, reproducible read-only generator, eight regression tests, `research/evidence-integrity.md`.
+- Audit: 778 overlapping stored rows, 118 predictions across five layers. 73 review findings (71 high labels below 70% model probability, two explicit prose/structured ATP ranking contradictions). All published at `/evidence/flagged.html`; no inherited facts or confidence labels silently changed.
+- Official retrieval actually performed: https://api-web.nhle.com/v1/score/2026-10-22 chunk 0 only. Two fixtures (2026020154, 2026020155) checked for date, UTC start, venue and team records against stored verified rows; matching. No blanket verification, no new model/prediction claims. Exact evidence and limitations: `/evidence/nhl-check.html`.
+- Local validation: 103/103 repository tests passed; existing integration link audit reported zero errors; all new evidence local links resolved.
+- Cross-scope request: root owner please link `evidence/index.html` in navigation. Existing root outputs are untouched. No active scope conflicts or merge conflicts encountered.
+- Coverage/exhaustive live verification remains **needs review**, not represented as complete. Publication task in progress.

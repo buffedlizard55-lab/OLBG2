@@ -2460,3 +2460,18 @@ The provisional M2–M5 plan above is **narrowed**, not falsely marked exhaustiv
 **Cross-scope request:** root-navigation owner (`scripts/build_site.py`; `dc72bac4` / final integration `ba48a907`) please link `command/index.html` and `command/flagged.html`. Shared navigation/data/workflows and other sessions' reports remain untouched. Findings do not silently edit upstream sporting data.
 
 **Rebase/conflict log:** rebased onto main `3a56b4a` before publication. Only the original append-only claim conflicted in `COORDINATION.md`; retained the complete current-main board and appended this session's original claim, then replayed the implementation cleanly. No upstream files discarded. Remote session branch still points at original claim `29542f8`; the necessary rewritten-claim push will use an explicit lease for that observed SHA, never overwrite unknown commits.
+
+### Publication record — `arena/58642817-olbg2`
+
+| Item | Verified result |
+|---|---|
+| Implementation PR | [#105](https://github.com/buffedlizard55-lab/OLBG2/pull/105) — merged without approval wait at `2026-10-22T12:36:12Z`; merge SHA `f88e13801d8f8f5be0d72e70d37624cdced28cf1`. |
+| PR checks | `validate` passed; run [39779630273](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39779630273). |
+| Main validation | [39779704488](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39779704488) completed success. |
+| Gated deployment | `Deploy Pages` [39779704518](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39779704518) completed success, including reusable validation and deployment jobs. |
+| Pages API | Build `1305365279`: built, no error, exact commit `f88e138`, updated `2026-10-22T12:36:37Z`. |
+| Public content check | Agent fetch of [overview](https://buffedlizard55-lab.github.io/OLBG2/command/index.html?v=f88e138) returned the expected title, 48 transcribed entries, seven experimental models, zero certified high picks, eleven findings, and all 17 category rows. [Flagged for Review](https://buffedlizard55-lab.github.io/OLBG2/command/flagged.html?v=f88e138) returned CM-01…CM-11, official links and empty replacement cells. This was content retrieval, not a browser screenshot/accessibility conformance test. |
+| M6 status | **done** — scoped desk built, checks passed, PR merged, deployment and live content confirmed. Publication-record-only follow-up is recorded on this same fixed session branch. |
+| Remaining requirements | **needs review**, published: exhaustive current fixtures, full-market coverage, unpriced entries, conflicting inherited records, and independently calibrated high-confidence narratives. No claim these are complete. Root-nav integration request remains logged for the integration owner; direct `/command/` URLs work. |
+
+Session's bounded implementation and publication complete. No upstream sporting/model claim was silently changed and no third-party/bookmaker data was used to fill gaps.

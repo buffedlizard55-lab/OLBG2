@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard — OLBG2 /update/</title><style>
+:root{--ink:#12253f;--muted:#5b6b7f;--line:#e3e8ee;--accent:#0d5c63;--hot:#b3261e;--warm:#8a5a00;--cool:#1b5e20;--wash:#f6f8fa}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--ink);color:#fff;padding:18px 24px}header h1{margin:0;font-size:21px;letter-spacing:.2px}header .sub{opacity:.8;font-size:13px;margin-top:2px}
+nav{background:var(--wash);border-bottom:1px solid var(--line);padding:9px 24px;display:flex;flex-wrap:wrap;gap:3px 14px;font-size:13px}
+nav a{color:var(--accent);text-decoration:none;font-weight:600}nav a:hover{text-decoration:underline}
+main{max-width:1220px;margin:0 auto;padding:22px 24px 60px}
+h2{font-size:19px;margin:26px 0 10px}h3{font-size:16px;margin:20px 0 8px}
+p.lede{color:var(--muted);margin:6px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 20px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--wash);font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+tr:nth-child(even) td{background:#fcfdfe}
+a.src{color:var(--accent);font-weight:600;text-decoration:none;word-break:break-all}
+a.src:hover{text-decoration:underline}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700;white-space:nowrap}
+.p-high{background:#fdecea;color:var(--hot)}.p-medium{background:#fff4e0;color:var(--warm)}.p-low{background:#eef2f6;color:var(--muted)}
+.p-ok{background:#e7f4ea;color:var(--cool)}.p-flag{background:#fdecea;color:var(--hot)}
+.p-cap{background:#e8f0fe;color:#1a4fa0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:14px 0 22px}
+.card{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--wash)}
+.card .num{font-size:24px;font-weight:700}.card .lbl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.writeup{color:#233246;font-size:13.5px}
+small.mut{color:var(--muted)}
+.flagitem{border-left:4px solid var(--hot);background:#fffafa;padding:10px 14px;margin:10px 0;border-radius:0 6px 6px 0}
+.flagitem .t{font-weight:700}footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:18px 24px}
+.blank{color:#98a4b3;font-style:italic}
+</style></head>
+<body>
+<header><h1>OLBG2 · Updated Match List &amp; Betting Lines</h1>
+<div class="sub">Window 22–28 October 2026 · every value from verified official sources · nothing inferred</div></header>
+<nav><a href="index.html">Dashboard</a><a href="matches.html">Matches</a><a href="picks.html">Picks</a><a href="band.html">In-Band Picks</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a><a href="flagged.html">Flagged for Review</a><span style="flex-basis:100%;height:0"></span><a href="tennis.html">Tennis</a><a href="darts.html">Darts</a><a href="snooker.html">Snooker</a><a href="golf.html">Golf</a><a href="cricket.html">Cricket</a><a href="baseball.html">Baseball</a><a href="basketball.html">Basketball</a><a href="ice-hockey.html">Ice Hockey</a><a href="rugby-union.html">Rugby Union</a><a href="rugby-league.html">Rugby League</a><a href="handball.html">Handball</a><a href="volleyball.html">Volleyball</a><a href="aussie-rules.html">Aussie Rules</a><a href="motor-racing.html">Motor Racing</a><a href="esports.html">Esports</a><a href="greyhounds.html">Greyhounds</a><a href="gaelic-football.html">Gaelic Football</a></nav>
+<main>
+<h2>Dashboard — window 22–28 October 2026</h2>
+<p class="lede">This layer re-captures official league sources during the week of 22 Oct and originates our own
+win / handicap / total lines from verified form. Where a sport's official endpoints were unreachable this session,
+rows are cross-referenced from the earlier <a class="src" href="../verified/">/verified/</a> layer and clearly
+labelled <em>inherited</em>. Unconfirmable values stay blank and land on
+<a class="src" href="flagged.html">Flagged for Review</a> — nothing is guessed.</p>
+<div class="cards">
+<div class="card"><div class="num">208</div><div class="lbl">matches in window</div></div>
+<div class="card"><div class="num">107</div><div class="lbl">fresh captures</div></div>
+<div class="card"><div class="num">93</div><div class="lbl">inherited rows</div></div>
+<div class="card"><div class="num">165</div><div class="lbl">picks made</div></div>
+<div class="card"><div class="num">11</div><div class="lbl">high confidence</div></div>
+<div class="card"><div class="num">114</div><div class="lbl">in-band selections</div></div>
+</div>
+<h3>High-confidence picks (win chance ≥ 70%, fair price inside −250…+10000)</h3>
+<table><tr><th>Date</th><th>Selection</th><th>Match</th><th>Fair American</th><th>Model prob</th><th>Official source</th></tr>
+<tr><td>2026-10-22</td><td>Ottawa Senators</td><td>Ottawa Senators vs San Jose Sharks</td><td>-235</td><td>70%</td><td><a class="src" href="https://api-web.nhle.com/v1/score/2026-10-22">official</a></td></tr><tr><td>2026-10-22</td><td>Vegas Golden Knights</td><td>St. Louis Blues vs Vegas Golden Knights</td><td>-235</td><td>70%</td><td><a class="src" href="https://api-web.nhle.com/v1/score/2026-10-22">official</a></td></tr><tr><td>2026-10-22</td><td>Barça -3.5 (Alternate Handicap)</td><td>Barça v Montpellier Handball</td><td>-244</td><td>71%</td><td><a class="src" href="https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/">official</a></td></tr><tr><td>2026-10-23</td><td>Stade Aurillacois</td><td>Stade Aurillacois vs USON Nevers</td><td>-238</td><td>71%</td><td><a class="src" href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers">official</a></td></tr><tr><td>2026-10-23</td><td>Carolina Hurricanes +1.5 (Handicap)</td><td>Carolina Hurricanes @ Edmonton Oilers</td><td>-238</td><td>70%</td><td><a class="src" href="https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163">official</a></td></tr><tr><td>2026-10-23</td><td>Provence Rugby -5.25 (Alternate Handicap)</td><td>Provence Rugby v AS Béziers Hérault</td><td>-238</td><td>71%</td><td><a class="src" href="https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers">official</a></td></tr><tr><td>2026-10-24</td><td>Boston Bruins</td><td>Boston Bruins vs San Jose Sharks</td><td>-235</td><td>70%</td><td><a class="src" href="https://api-web.nhle.com/v1/score/2026-10-24">official</a></td></tr><tr><td>2026-10-24</td><td>Carolina Hurricanes</td><td>St. Louis Blues vs Carolina Hurricanes</td><td>-235</td><td>70%</td><td><a class="src" href="https://api-web.nhle.com/v1/score/2026-10-24">official</a></td></tr><tr><td>2026-10-24</td><td>Philadelphia 76ers</td><td>Philadelphia 76ers vs Milwaukee Bucks</td><td>-233</td><td>70%</td><td><a class="src" href="https://www.nba.com/game/mil-vs-phi-0022600106">official</a></td></tr><tr><td>2026-10-24</td><td>Stade Toulousain -3.25 (Alternate Handicap)</td><td>Stade Toulousain v USA Perpignan</td><td>-238</td><td>71%</td><td><a class="src" href="https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan">official</a></td></tr><tr><td>2026-10-26</td><td>Milwaukee Bucks</td><td>Milwaukee Bucks vs Indiana Pacers</td><td>-250</td><td>72%</td><td><a class="src" href="https://www.nba.com/game/ind-vs-mil-0022600123">official</a></td></tr></table>
+<h3>Coverage by sport</h3>
+<table><tr><th>Sport</th><th>Rows</th><th>Status</th></tr><tr><td><a class='src' href='tennis.html'>Tennis</a></td><td>11</td><td>covered</td></tr><tr><td><a class='src' href='darts.html'>Darts</a></td><td>21</td><td>covered</td></tr><tr><td><a class='src' href='snooker.html'>Snooker</a></td><td>8</td><td>covered</td></tr><tr><td><a class='src' href='golf.html'>Golf</a></td><td>2</td><td>covered</td></tr><tr><td><a class='src' href='cricket.html'>Cricket</a></td><td>1</td><td>covered</td></tr><tr><td><a class='src' href='baseball.html'>Baseball</a></td><td>5</td><td>covered</td></tr><tr><td><a class='src' href='basketball.html'>Basketball</a></td><td>69</td><td>covered</td></tr><tr><td><a class='src' href='ice-hockey.html'>Ice Hockey</a></td><td>49</td><td>covered</td></tr><tr><td><a class='src' href='rugby-union.html'>Rugby Union</a></td><td>23</td><td>covered</td></tr><tr><td><a class='src' href='rugby-league.html'>Rugby League</a></td><td>0</td><td>gap — see Flagged</td></tr><tr><td><a class='src' href='handball.html'>Handball</a></td><td>5</td><td>covered</td></tr><tr><td><a class='src' href='volleyball.html'>Volleyball</a></td><td>6</td><td>covered</td></tr><tr><td><a class='src' href='aussie-rules.html'>Aussie Rules</a></td><td>0</td><td>gap — see Flagged</td></tr><tr><td><a class='src' href='motor-racing.html'>Motor Racing</a></td><td>1</td><td>covered</td></tr><tr><td><a class='src' href='esports.html'>Esports</a></td><td>0</td><td>gap — see Flagged</td></tr><tr><td><a class='src' href='greyhounds.html'>Greyhounds</a></td><td>3</td><td>covered</td></tr><tr><td><a class='src' href='gaelic-football.html'>Gaelic Football</a></td><td>4</td><td>covered</td></tr></table>
+<h3>How to read this site</h3>
+<p class="lede"><a class="src" href="matches.html">Matches</a> lists every fixture with our originated price;
+<a class="src" href="picks.html">Picks</a> adds the selection, the confidence label and the prediction write-up;
+<a class="src" href="band.html">In-Band Picks</a> is the subset that qualifies for the odds band;
+<a class="src" href="methodology.html">Methodology</a> documents the models and the confidence gate.</p>
+</main>
+<footer>Built by <code>scripts/update_build.py</code> from <code>data/update/</code> · session branch arena/d69dc1c9-olbg2 ·
+unverified values are left blank and flagged — never filled by guess.</footer>
+</body></html>

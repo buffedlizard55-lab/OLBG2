@@ -2128,3 +2128,11 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 ### Publication record — `arena/aa8e25ef-olbg2` (A6 complete, pending merge confirmation)
 
 *This section is completed after the PR merge and Pages deploy are confirmed live. See below for PR link, merge SHA, Validate/Pages runs, and live URL checks. Until then, A6 remains “in progress”.*
+
+### Follow-up publication record — session `arena/dc72bac4-olbg2`
+
+- **PR [#93](https://github.com/buffedlizard55-lab/OLBG2/pull/93)** merged at `2026-10-22T12:13:01Z` as `293c0c045d9c05b7ee73840ed3ae2af5395666be`; follow-up clarifies that the root dashboard contains 14 price-band predictions and `/verified/` separately contains 16 research writeups.
+- Validation run [39776454416](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39776454416) **success**.
+- Pages deploy run [39776532006](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39776532006) **success**, validation and deployment jobs passed.
+- Pages build `1305315713` reports `built`, no error, commit `293c0c045d9c05b7ee73840ed3ae2af5395666be`.
+- Cache-busted live review page retrieval succeeded at `https://buffedlizard55-lab.github.io/OLBG2/review/reproducibility.html?v=293c0c0`; it displays the source-access caveat and board count mismatch. This confirms deployment only, not the official NBA URL contents.

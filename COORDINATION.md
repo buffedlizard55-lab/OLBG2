@@ -1320,6 +1320,22 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 **Residual nit (left for next session):** root `picks.html` intro reads "A further 0 high-confidence picks…" — factual but clumsy template output from `build_site.py` when every write-up is in-band.
 
 
+## Session `arena/53b0cd38-olbg2` — 2026-10-22
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Correct zero-count picks intro and recheck publication gates | in progress | `arena/53b0cd38-olbg2` | `scripts/build_site.py`, generated `picks.html`, `COORDINATION.md` |
+
+This claim is limited to the unclaimed residual nit recorded above; no new fixtures or unverified predictions will be invented. This branch is fixed by the environment, so the requested `session-…` branch naming cannot be used. Prior sessions' tasks are closed.
+
+### Completion — `arena/53b0cd38-olbg2`
+
+The picks introduction now handles an empty outside-band category without implying nonexistent picks or quoting an invented range. No fixture, line, or narrative data changed. Verified by rerunning the complete CI generation pipeline, survey integrity validation (26 pages, 139 inventory rows), cross-layer link audit (0 internal errors), and 61 unit tests (all passing). Source links remain those in the existing verified dataset; this copy-only correction makes no new source claims. Irregularity: this snapshot is not an exhaustive live inventory of OLBG's fixtures; the 22 existing review flags remain open and non-blocking. Task status: **done**.
+
+### Publication record — 2026-10-22
+
+[PR #59](https://github.com/buffedlizard55-lab/OLBG2/pull/59) merged into `main` as `3a48e3d`; PR validation passed. [Deploy Pages run 39713298932](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713298932) succeeded for that commit. Site: https://buffedlizard55-lab.github.io/OLBG2/picks.html . This records deployment status from GitHub Actions, not an independent browser fetch of the live URL.
+
 ---
 
 ## Session `arena/072755db-olbg2` — line-by-line verification, coverage completion, final integration (2026-10-22 02:50 UTC)
@@ -1339,4 +1355,3 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 **File-scope overlap disclosure.** V3 necessarily touches `data/verified/**` and `scripts/verified_model.py`, which are also in stale PR #54's diff. #54's task (regrading confidence labels under the odds window) is **not** re-claimed here; this session only adds/repairs fixture, line and narrative coverage. If #54 is ever merged it must be rebased over this branch's data.
 
 **Rules applied.** A value is published only if an official source returned it during this session; otherwise it stays blank and is flagged. No bookmaker price is read. Prices remain our own fair-model prices. Every row keeps an official URL; every claim in a written prediction keeps its source.
-

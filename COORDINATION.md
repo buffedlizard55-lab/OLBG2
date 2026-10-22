@@ -1926,12 +1926,12 @@ root `index.html`/`matches.html`/`picks.html`/`flagged.html`/`methodology.html`/
 | # | Task | Status | Owner | File scope (new files only until F6) |
 |---|---|---|---|---|
 | F1 | Claim + live-branch check | done 08:25Z | `arena/5de28a6f-olbg2` | `COORDINATION.md` (append-only) |
-| F2 | Mechanical cross-layer audit: duplicate fixtures, conflicting prices, grading-rule divergence, stale rows, source coverage | in progress | `arena/5de28a6f-olbg2` | `research/final-audit-5de28a6f.md` |
-| F3 | Consolidated canonical dataset: union of `/hub/`, `/verified/`, `/board/`, `/slate/`, `/forward/` de-duplicated by fixture, provenance kept, one uniform confidence rule | unclaimed | `arena/5de28a6f-olbg2` | `data/final/**`, `scripts/final_*.py` |
-| F4 | Official-source re-verification of the consolidated set (bulk governing-body endpoints first, then per-fixture), every mismatch logged | unclaimed | `arena/5de28a6f-olbg2` | `data/final/**`, `research/final-audit-5de28a6f.md` |
-| F5 | High-confidence write-ups (≥30 words, unique, explicit selection, sourced form + recent history) for every in-band ≥70% selection | unclaimed | `arena/5de28a6f-olbg2` | `data/final/predictions.json` |
-| F6 | `/final/` dashboard: landing, all matches, per-sport pages, picks, verification ledger, flagged-for-review, methodology, sources; deterministic builder; tests | unclaimed | `arena/5de28a6f-olbg2` | `scripts/final_build.py`, `final/**`, `tests/test_final.py` |
-| F7 | Integration: rebase on latest `main`, full build + link audit + tests, PR → merge, confirm Pages, record here | unclaimed | `arena/5de28a6f-olbg2` | shared outputs at integration only |
+| F2 | Mechanical cross-layer audit: duplicate fixtures, conflicting prices, grading-rule divergence, stale rows, source coverage | done 08:50Z | `arena/5de28a6f-olbg2` | `research/final-audit-5de28a6f.md` |
+| F3 | Consolidated canonical dataset: union of `/hub/`, `/verified/`, `/board/`, `/slate/`, `/forward/` de-duplicated by fixture, provenance kept, one uniform confidence rule | done 09:05Z — 312 fixtures, 279 lined, 15 high | `arena/5de28a6f-olbg2` | `data/final/**`, `scripts/final_*.py` |
+| F4 | Official-source re-verification of the consolidated set (bulk governing-body endpoints first, then per-fixture), every mismatch logged | partial 09:15Z — 6 re-read, 18 form, 1 corrected; rest labelled inherited | `arena/5de28a6f-olbg2` | `data/final/**`, `research/final-audit-5de28a6f.md` |
+| F5 | High-confidence write-ups (≥30 words, unique, explicit selection, sourced form + recent history) for every in-band ≥70% selection | done 09:20Z — 15 texts, 68–94 words | `arena/5de28a6f-olbg2` | `data/final/predictions.json` |
+| F6 | `/final/` dashboard: landing, all matches, per-sport pages, picks, verification ledger, flagged-for-review, methodology, sources; deterministic builder; tests | done 09:30Z — 26 pages, 24 tests | `arena/5de28a6f-olbg2` | `scripts/final_build.py`, `final/**`, `tests/test_final.py` |
+| F7 | Integration: rebase on latest `main`, full build + link audit + tests, PR → merge, confirm Pages, record here | in progress | `arena/5de28a6f-olbg2` | shared outputs at integration only |
 
 **Cross-scope request (logged, not edited):** root-layer owner `arena/1352b77f-olbg2` — once `/final/` is published,
 add a top-bar link `"Consolidated 17-Sport Desk (/final/)"` to `scripts/build_site.py`'s navigation so the root landing
@@ -1942,3 +1942,15 @@ longer live and `main` has no newer root build; otherwise the link stays a logge
 or filled; a selection is graded `high` only when the model probability is ≥70% **and** the fair decimal price is inside
 1.40–101.00 (the brief's −250…+10000 band), which is the only window satisfying both constraints; everything else is
 medium/low or blank. No bookmaker price is read or invented.
+
+
+### F7 integration note (appended before merge)
+
+The consolidated desk is committed on `arena/5de28a6f-olbg2` as three commits:
+`65b75e7` (engine + data + 24 tests), `151bcf8` (26 generated pages), `19508fa` (root nav
+entry + CI enforcement). Shared outputs changed at integration only: `index.html` and the
+other root pages gained one nav entry and one banner link to `final/index.html`; no root
+data row was altered. CI now rebuilds `data/final/` and `final/` and fails on drift.
+
+**Cross-scope request resolved:** the root nav change requested from `arena/1352b77f-olbg2`
+was made by this session at F7, as logged. It is a two-line edit (NAV entry + banner).

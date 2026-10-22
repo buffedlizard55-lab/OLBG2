@@ -1,7 +1,7 @@
-"""Render the /daily/ desk from data/daily/*.json.
+"""Render the /daily-picks/ desk from data/daily/*.json.
 
 Stdlib only, deterministic. Every table row carries its official source link. Nothing
-here computes a sporting value: the numbers were produced by daily_data.py from the
+here computes a sporting value: the numbers were produced by daily_picks_data.py from the
 verified inputs recorded in that file.
 """
 from __future__ import annotations
@@ -11,8 +11,8 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data" / "daily"
-OUT = ROOT / "daily"
+DATA = ROOT / "data" / "daily-picks"
+OUT = ROOT / "daily-picks"
 
 SPORT_NAMES = {
     "ice-hockey": "Ice Hockey", "rugby-union": "Rugby Union", "aussie-rules": "Aussie Rules",
@@ -102,7 +102,7 @@ def chrome(active: str, depth: int = 0) -> str:
         link_bits.append(f'<a href="{prefix}{href}"{cls}>{escape(label)}</a>')
     links = "".join(link_bits)
     root = "../" * (depth + 1)
-    return (f'<header class="top"><span class="brand">OLBG2 <span>/daily</span></span>{links}'
+    return (f'<header class="top"><span class="brand">OLBG2 <span>/daily-picks</span></span>{links}'
             f'<a href="{root}index.html">Other desks</a></header>')
 
 
@@ -119,7 +119,7 @@ def page(title: str, active: str, body: str, depth: int = 0) -> str:
     prefix = "../" * depth
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">'
-            f'<title>{escape(title)} &middot; OLBG2 daily</title>'
+            f'<title>{escape(title)} &middot; OLBG2 daily picks</title>'
             f'<link rel="stylesheet" href="{prefix}assets/style.css"></head><body>'
             f'{chrome(active, depth)}<main>{body}</main>{footer(depth)}</body></html>')
 
@@ -518,7 +518,7 @@ on 2026-10-22 between roughly 21:00 and 21:45 UTC.</p>
     body = f"""
 <h1>Methodology</h1>
 <p class="lede">One model, declared parameters, no bookmaker input. Everything below is reproducible
-by running <code>python3 scripts/daily_data.py</code> and reading the JSON it writes.</p>
+by running <code>python3 scripts/daily_picks_data.py</code> and reading the JSON it writes.</p>
 
 <h2>1. Scope</h2>
 <p>The 17 eligible OLBG sports exclude soccer, boxing, UFC/MMA, American football, hurling, horse
@@ -584,7 +584,7 @@ model has no measured out-of-sample performance, so no strike rate is claimed.</
 """
     write("methodology.html", page("Methodology", "methodology.html", body))
 
-    print("built /daily:", len(list(OUT.rglob("*.html"))), "pages")
+    print("built /daily-picks:", len(list(OUT.rglob("*.html"))), "pages")
 
 
 if __name__ == "__main__":

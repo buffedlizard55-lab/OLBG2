@@ -1,4 +1,4 @@
-"""Checks for the /daily/ five-a-sport picks desk (session arena/6b4da610-olbg2)."""
+"""Checks for the /daily-picks/ five-a-sport picks desk (session arena/6b4da610-olbg2)."""
 import json
 import re
 import subprocess
@@ -7,8 +7,8 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data" / "daily"
-PAGES = ROOT / "daily"
+DATA = ROOT / "data" / "daily-picks"
+PAGES = ROOT / "daily-picks"
 
 ALLOWED_SPORTS = {
     "tennis", "golf", "rugby-league", "rugby-union", "cricket", "basketball", "baseball",
@@ -185,13 +185,13 @@ class DailySiteTests(unittest.TestCase):
 
     def test_rebuild_is_byte_identical(self):
         before = {p: p.read_bytes() for p in PAGES.rglob("*") if p.is_file()}
-        subprocess.run([sys.executable, "scripts/daily_data.py"], cwd=ROOT, check=True,
+        subprocess.run([sys.executable, "scripts/daily_picks_data.py"], cwd=ROOT, check=True,
                        capture_output=True)
-        subprocess.run([sys.executable, "scripts/daily_predictions.py"], cwd=ROOT, check=True,
+        subprocess.run([sys.executable, "scripts/daily_picks_predictions.py"], cwd=ROOT, check=True,
                        capture_output=True)
-        subprocess.run([sys.executable, "scripts/daily_flags.py"], cwd=ROOT, check=True,
+        subprocess.run([sys.executable, "scripts/daily_picks_flags.py"], cwd=ROOT, check=True,
                        capture_output=True)
-        subprocess.run([sys.executable, "scripts/daily_build.py"], cwd=ROOT, check=True,
+        subprocess.run([sys.executable, "scripts/daily_picks_build.py"], cwd=ROOT, check=True,
                        capture_output=True)
         after = {p: p.read_bytes() for p in PAGES.rglob("*") if p.is_file()}
         self.assertEqual(before, after)

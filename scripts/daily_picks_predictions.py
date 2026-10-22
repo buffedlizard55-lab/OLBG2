@@ -1,7 +1,7 @@
-"""Hand-written predictions for the /daily/ desk (session arena/6b4da610-olbg2).
+"""Hand-written predictions for the /daily-picks/ desk (session arena/6b4da610-olbg2).
 
 One paragraph per published pick, keyed by (match id, selection). Every factual claim
-is drawn from the input block in daily_data.py: NHL records and point streaks from
+is drawn from the input block in daily_picks_data.py: NHL records and point streaks from
 nhl.com/standings/2026-10-22, URC table rows from stats.unitedrugby.com, EuroLeague
 standings from euroleaguebasketball.net, MLB records from statsapi.mlb.com, RLWC pool
 positions from the NRL draw, AFLW ladder positions from the 22 October capture.
@@ -16,7 +16,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "daily"
+OUT = ROOT / "data" / "daily-picks"
 
 TEXT_FILE = OUT / "prediction_texts.json"
 

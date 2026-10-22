@@ -1,11 +1,11 @@
-"""Assemble the /daily/ Flagged for Review register.
+"""Assemble the /daily-picks/ Flagged for Review register.
 
 Two kinds of entry:
   * coverage gaps  - a sport, market or value this pass did not verify, with the reason;
   * irregularities - a conflict between this session's fresh official read and a value
                      already published in the repository, computed rather than claimed.
 
-Run daily_data.py and daily_predictions.py first.
+Run daily_picks_data.py and daily_picks_predictions.py first.
 """
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "daily"
+OUT = ROOT / "data" / "daily-picks"
 GENERATED = "2026-10-22T21:50:00Z"
 
 COVERED = ["ice-hockey", "rugby-union", "aussie-rules", "rugby-league", "basketball",
@@ -81,7 +81,7 @@ def nhl_conflicts() -> list[dict]:
     final = json.loads((ROOT / "data" / "final" / "matches.json").read_text())
     rows = final["matches"] if isinstance(final, dict) else final
     standing = {}
-    text = (ROOT / "scripts" / "daily_data.py").read_text()
+    text = (ROOT / "scripts" / "daily_picks_data.py").read_text()
     block = re.search(r"NHL = \{(.*?)\n\}", text, re.S).group(1)
     for name, gp, w, l, ot, gf, ga, streak in re.findall(
             r'"([^"]+)":\s*\((\d+), (\d+), (\d+), (\d+), (\d+), (\d+), "([^"]+)"\)', block):

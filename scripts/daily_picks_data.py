@@ -1,4 +1,4 @@
-"""Build the /daily/ five-a-sport picks desk (session arena/6b4da610-olbg2).
+"""Build the /daily-picks/ five-a-sport picks desk (session arena/6b4da610-olbg2).
 
 Deterministic, stdlib only. Nothing here reads the network: every number comes from
 an input block below that records the official page it was read from, whether this
@@ -30,7 +30,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "daily"
+OUT = ROOT / "data" / "daily-picks"
 SESSION = "arena/6b4da610-olbg2"
 GENERATED = "2026-10-22T21:50:00Z"
 

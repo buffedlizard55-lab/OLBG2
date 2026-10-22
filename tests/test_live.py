@@ -49,12 +49,41 @@ class LiveSlate(unittest.TestCase):
             self.assertEqual(row["pick"]["market"], "match_winner")
 
     def test_high_confidence_picks_have_long_predictions(self):
+        # 2026-10-22 odds-window rule: none of the 11 live fixtures clears both
+        # the 70% floor and the -250 fair-price bound, so there are no highs.
         highs = [r for r in self.rows if r["pick"]["confidence"] == "high"]
-        self.assertTrue(highs, "expected at least one high-confidence pick")
+        self.assertEqual(highs, [])
         for row in highs:
             self.assertIsNotNone(row["prediction"], row["id"])
             self.assertGreaterEqual(row["prediction"]["words"], 30, row["id"])
-            self.assertIn(row["home_name"], row["prediction"]["text"] + " " + row["prediction"]["text"].lower())
+
+    def test_every_high_pick_respects_the_odds_window(self):
+        def fair_decimal(p):
+            return round(1.0 / max(p, 1e-6), 2)
+
+        def american(decimal_price):
+            return (round((decimal_price - 1.0) * 100.0) if decimal_price >= 2.0
+                    else round(-100.0 / (decimal_price - 1.0)))
+
+        for row in self.rows:
+            if row["pick"]["confidence"] == "high":
+                p = row["pick"]["probability"]
+                self.assertGreaterEqual(p, 0.70, row["id"])
+                self.assertGreaterEqual(american(fair_decimal(p)), -250, row["id"])
+
+    def test_archived_chalk_narratives_are_retained_with_reasons(self):
+        doc = load("archived_predictions.json")
+        archived = doc["predictions"]
+        self.assertEqual(doc["count"], 4)
+        self.assertEqual(len(archived), 4)
+        active_high = {r["id"] for r in self.rows if r["pick"]["confidence"] == "high"}
+        for entry in archived:
+            self.assertNotIn(entry["fixture_id"], active_high)
+            self.assertEqual(entry["regraded_to"], "medium")
+            self.assertLess(entry["american_odds"], -250, entry["fixture_id"])
+            self.assertIn("[-250, +10000]", entry["archive_reason"])
+            self.assertGreaterEqual(len(entry["text"].split()), 30)
+            self.assertTrue(entry["facts_used"])
 
     def test_predictions_only_on_high_picks(self):
         for row in self.rows:

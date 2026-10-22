@@ -23,7 +23,7 @@
   <p class="lede">Known review items recorded during collection and later audits: blank model values, source conflicts,
   and evidence gaps. This queue is not a guarantee that every published claim or irregularity has been found.
   See <a href="integration.html">Evidence status</a> for cross-layer limitations.</p>
-  <p class="meta">22 open items · 4 closed since the first capture · 25 blank or unoriginated values</p>
+  <p class="meta">24 open items · 4 closed since the first capture · 25 blank or unoriginated values</p>
 </section>
 
 <div class="panel"><div class="table-scroll"><table>
@@ -58,6 +58,12 @@
       <td>Coverage gap</td>
       <td><b>Volleyball — events exist, none published</b><span class="sub" style="max-width:560px">OLBG&#x27;s volleyball hub listed at least fifteen events on the first page segment across Polish PlusLiga (LUK Lublin v Trefl Gdansk, Warta Zawiercie v Kedzierzyn Kozle, Slepsk Suwalki v GKS Katowice), the German Bundesliga (WWK Volleys Munchen v VfB Friedrichshafen, Netzhoppers KW v Helios Grizzlys Giesen) and Italian women&#x27;s Serie A1 (Bergamo v Milano, Novara v Marignano), with match-winner and set-score markets. The hub labels no competition for the event and no official league table was captured, so no volleyball fixture is published as verified and no line is originated.</span></td>
       <td class="small"><a href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F27</td>
+      <td><span class="badge b-sev-high">High</span></td>
+      <td>Confidence-rule remediation</td>
+      <td><b>Seven root-dashboard high-confidence picks regraded under the -250..+10000 odds window</b><span class="sub" style="max-width:560px">2026-10-22 audit: high confidence now requires model probability &gt;= 70% AND a fair no-vig American price within [-250, +10000]. Four handball chalk picks (Aalborg -556, Sporting -588, Barca -370, Magdeburg -526) breach the -250 bound; Buffalo (-189, 65.4%), Boston (-189, 65.3%) and Minnesota (-222, 68.9%) sit below the 70% floor. All seven are regraded medium and their narratives moved verbatim to data/predictions_archived.json with per-pick reasons. New York Islanders (71.2%, fair -250) and Paris Saint-Germain handball (70.2%, fair -238) remain high inside the window.</span></td>
+      <td class="small"><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/odds-window-audit-1bb45081.md" rel="noopener">official / source page</a></td>
     </tr><tr>
       <td class="mono">F06</td>
       <td><span class="badge b-sev-medium">Medium</span></td>
@@ -118,6 +124,12 @@
       <td>Data irregularity</td>
       <td><b>OLBG renders fixture times in US Eastern time, not site-local time</b><span class="sub" style="max-width:560px">On the handball hub, OLBG showed &#x27;HC Zagreb vs PSG Handball&#x27; as &#x27;Today 12:45&#x27;. The official EHF match page for the same fixture publishes 18:45 CEST on 21 October 2026, which is 16:45 UTC and 12:45 in US Eastern daylight time. The six-hour gap is explained by that offset, so OLBG&#x27;s listed_time is a viewer-timezone rendering and must not be read as the venue&#x27;s local start time. This also explains the earlier survey finding about conflicting OLBG times. No OLBG time is published in this layer; all handball start times come from EHF.</span></td>
       <td class="small"><a href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener">official / source page</a></td>
+    </tr><tr>
+      <td class="mono">F28</td>
+      <td><span class="badge b-sev-medium">Medium</span></td>
+      <td>Methodology disclosure</td>
+      <td><b>Odds window evaluated on fair no-vig prices; published market prices keep their model overround</b><span class="sub" style="max-width:560px">The window gate uses fair decimal = 1/probability (no vig), applied uniformly across all five site layers. Prices displayed on market rows still include the layer&#x27;s documented model overround, so a selection can show a published price slightly shorter than its fair price (e.g. PSG handball fair 1.42/-238 vs published 1.37/-270). The rule, its boundary (-250 = decimal 1.40 = 71.43% implied) and this distinction are documented in METHODOLOGY.md.</span></td>
+      <td class="small"><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/METHODOLOGY.md" rel="noopener">official / source page</a></td>
     </tr><tr>
       <td class="mono">F03</td>
       <td><span class="badge b-sev-low">Low</span></td>

@@ -6,7 +6,7 @@
     "fixtures": 11,
     "lines_originated": 33,
     "picks": 11,
-    "high_confidence": 4
+    "high_confidence": 0
   },
   "rows": [
     {
@@ -124,7 +124,7 @@
         "decimal": 1.93,
         "american": "-108",
         "confidence": "low",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
       "prediction": null
     },
@@ -242,23 +242,10 @@
         "probability": 0.8088,
         "decimal": 1.19,
         "american": "-530",
-        "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "confidence": "medium",
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
-      "prediction": {
-        "fixture_id": "urc-292617",
-        "selection": "Glasgow Warriors to win the match",
-        "confidence": "high",
-        "facts_used": [
-          "Glasgow Warriors: 2nd in the URC table, 13 points, 3 played, 2 wins 1 draw 0 losses, 95 points for and 72 against, form W-D-W",
-          "Glasgow beat Connacht 36-19 at Scotstoun Stadium on 9 October 2026",
-          "10bet Lions: 7th, 9 points, 2 wins 0 draws 1 loss, 77 points for and 102 against, form W-W-L",
-          "10bet Lions lost 15-57 away to the Vodacom Bulls at Loftus Versfeld on 10 October 2026",
-          "Fixture: Friday 30 October 2026, 15:45 local, Scotstoun Stadium"
-        ],
-        "text": "Glasgow Warriors are unbeaten through three rounds, sitting second on 13 points after outscoring Connacht 36-19 at Scotstoun in their last outing, and that same ground hosts this one. The 10bet Lions arrive with 102 points already conceded, the second-worst defensive record in the table, and fresh from being beaten 57-15 at Loftus Versfeld. Backing Glasgow on the match-winner market looks the sound play.",
-        "words": 64
-      }
+      "prediction": null
     },
     {
       "id": "urc-292618",
@@ -374,23 +361,10 @@
         "probability": 0.7618,
         "decimal": 1.26,
         "american": "-382",
-        "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "confidence": "medium",
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
-      "prediction": {
-        "fixture_id": "urc-292618",
-        "selection": "DHL Stormers to win the match",
-        "confidence": "high",
-        "facts_used": [
-          "DHL Stormers: 4th, 11 points, 3 played, 2 wins 1 loss, 81 points for and only 54 against, form W-L-W",
-          "Stormers beat the Hollywoodbets Sharks 39-22 at DHL Stadium on 10 October 2026",
-          "Ulster: 11th, 8 points, 0 wins 2 draws 1 loss, 88 for and 93 against, form L-D-D",
-          "Ulster drew 26-26 with Munster at Affidea Stadium on 10 October 2026",
-          "Fixture: Saturday 31 October 2026, 08:45 local, DHL Stadium"
-        ],
-        "text": "Ulster are still searching for a first win of the campaign, their three rounds producing two draws and a defeat, most recently a 26-26 stalemate with Munster. The DHL Stormers have conceded just 54 points in three matches, the tightest defence in the division, and put 39 past the Sharks in Cape Town last time out. With the Stormers at home in Cape Town again, the Stormers to win is the selection.",
-        "words": 72
-      }
+      "prediction": null
     },
     {
       "id": "urc-292619",
@@ -506,23 +480,10 @@
         "probability": 0.8586,
         "decimal": 1.12,
         "american": "-835",
-        "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "confidence": "medium",
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
-      "prediction": {
-        "fixture_id": "urc-292619",
-        "selection": "Vodacom Bulls to win the match",
-        "confidence": "high",
-        "facts_used": [
-          "Vodacom Bulls: 3rd, 11 points, 3 played, 2 wins 1 loss, 126 points for and 54 against, points difference +72, 19 tries scored",
-          "Bulls beat the 10bet Lions 57-15 at Loftus Versfeld on 10 October 2026",
-          "Scarlets: 12th, 7 points, 1 win 2 losses, 68 for and 85 against, form L-L-W",
-          "Scarlets beat Benetton 27-26 at Parc y Scarlets on 10 October 2026",
-          "Fixture: Saturday 31 October 2026, 11:00 local, Loftus Versfeld"
-        ],
-        "text": "The Vodacom Bulls have scored 126 points in three rounds, 19 of them tries, and hold a plus-72 points difference that no other club in the table comes close to, having thumped the Lions 57-15 in Pretoria. The Scarlets have won one of three, squeaking past Benetton by a single point at home, and now travel to Loftus Versfeld. Bulls to win the match is the pick.",
-        "words": 67
-      }
+      "prediction": null
     },
     {
       "id": "urc-292620",
@@ -639,7 +600,7 @@
         "decimal": 2.09,
         "american": "+109",
         "confidence": "low",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
       "prediction": null
     },
@@ -758,7 +719,7 @@
         "decimal": 1.7,
         "american": "-142",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
       "prediction": null
     },
@@ -876,23 +837,10 @@
         "probability": 0.8453,
         "decimal": 1.14,
         "american": "-727",
-        "confidence": "high",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "confidence": "medium",
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
-      "prediction": {
-        "fixture_id": "urc-292622",
-        "selection": "Dragons RFC to win the match",
-        "confidence": "high",
-        "facts_used": [
-          "Dragons RFC: 8th, 9 points, 3 played, 1 win 1 draw 1 loss, 88 points for and 83 against, form D-W-L",
-          "Dragons lost 31-38 at Rodney Parade to the Ospreys on 9 October 2026",
-          "Zebre Parma: 16th and bottom, 1 point, 3 played, 0 wins 3 losses, 52 for and 116 against, points difference -64, form L-L-L",
-          "Zebre lost 12-29 at Stadio Sergio Lanfranchi to Edinburgh on 10 October 2026",
-          "Fixture: Saturday 31 October 2026, 13:30 local, Rodney Parade"
-        ],
-        "text": "Zebre Parma sit bottom of the table on a single point, their three matches all defeats and their minus-64 points difference the worst in the championship, the latest a 12-29 home loss to Edinburgh. Dragons RFC have nine points from three rounds and put 31 points on the board in their last outing at Rodney Parade, where this fixture is played. Dragons RFC to win the match is the selection here.",
-        "words": 71
-      }
+      "prediction": null
     },
     {
       "id": "urc-292623",
@@ -1009,7 +957,7 @@
         "decimal": 1.88,
         "american": "-114",
         "confidence": "low",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
       "prediction": null
     },
@@ -1112,7 +1060,7 @@
         "decimal": 1.62,
         "american": "-162",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
       "prediction": null
     },
@@ -1215,7 +1163,7 @@
         "decimal": 1.62,
         "american": "-162",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
       "prediction": null
     },
@@ -1318,7 +1266,7 @@
         "decimal": 1.62,
         "american": "-162",
         "confidence": "medium",
-        "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection"
+        "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection"
       },
       "prediction": null
     }

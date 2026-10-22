@@ -266,9 +266,29 @@ def mlb_rows():
 
 
 # ----------------------------------------------------------------------------- picks
+# 2026-10-22 remediation: HIGH needs probability >= 70% AND a fair no-vig
+# American price inside the brief's [-250, +10000] window. Chalk shorter than
+# -250 is capped at medium and its narrative archived, never deleted.
+HIGH_PROB_FLOOR = 0.70
+ODDS_WINDOW_MIN_AMERICAN = -250
+ODDS_WINDOW_MAX_AMERICAN = 10000
+
+
+def _fair_decimal(prob: float) -> float:
+    return round(1.0 / max(prob, 1e-6), 2)
+
+
+def _american(decimal_odds: float) -> int:
+    if decimal_odds >= 2.0:
+        return round((decimal_odds - 1.0) * 100.0)
+    return round(-100.0 / (decimal_odds - 1.0))
+
+
 def confidence(prob: float) -> str:
-    if prob >= 0.62:
-        return "high"
+    if prob >= HIGH_PROB_FLOOR:
+        american = _american(_fair_decimal(prob))
+        if ODDS_WINDOW_MIN_AMERICAN <= american <= ODDS_WINDOW_MAX_AMERICAN:
+            return "high"
     if prob >= 0.55:
         return "medium"
     return "low"
@@ -299,7 +319,7 @@ def add_picks(rows):
             "decimal": row["markets"]["match_winner"]["options"][best_sel]["decimal"],
             "american": row["markets"]["match_winner"]["options"][best_sel]["american"],
             "confidence": confidence(best_prob),
-            "rule": "high >= 0.62, medium 0.55-0.62, low < 0.55 on the model probability of the selection",
+            "rule": "high = probability >= 0.70 with fair American odds inside [-250, +10000] (since 2026-10-22); medium 0.55-0.70 or out-of-window chalk; low < 0.55 on the model probability of the selection",
         }
         pred = preds.get(row["id"])
         if pred:

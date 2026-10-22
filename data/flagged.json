@@ -1,8 +1,8 @@
 {
   "meta": {
     "purpose": "Everything that could not be confirmed from an official source, every value deliberately left blank, and every irregularity found while reverse-engineering OLBG. Nothing here blocks publication; it is the reviewer's queue.",
-    "count": 21,
-    "resolved_count": 2,
+    "count": 24,
+    "resolved_count": 4,
     "note": "Two items (F01, F02) were closed on 2026-10-21 by session db99ed90 from official feeds; they are listed separately under 'Closed since the first capture' so the open count stays honest."
   },
   "items": [
@@ -181,6 +181,22 @@
       "item": "Handball venues blank on 11 of 12 fixtures",
       "detail": "The EHF fixtures listing does not publish venues. One match detail page (HC Zagreb v Paris Saint-Germain) was opened and confirms 'Arena Zagreb' as the venue; that value is published. The other eleven venues are left blank rather than inferred from club sites.",
       "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+    },
+    {
+      "id": "F27",
+      "severity": "high",
+      "category": "Confidence-rule remediation",
+      "item": "Seven root-dashboard high-confidence picks regraded under the -250..+10000 odds window",
+      "detail": "2026-10-22 audit: high confidence now requires model probability >= 70% AND a fair no-vig American price within [-250, +10000]. Four handball chalk picks (Aalborg -556, Sporting -588, Barca -370, Magdeburg -526) breach the -250 bound; Buffalo (-189, 65.4%), Boston (-189, 65.3%) and Minnesota (-222, 68.9%) sit below the 70% floor. All seven are regraded medium and their narratives moved verbatim to data/predictions_archived.json with per-pick reasons. New York Islanders (71.2%, fair -250) and Paris Saint-Germain handball (70.2%, fair -238) remain high inside the window.",
+      "source": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/odds-window-audit-1bb45081.md"
+    },
+    {
+      "id": "F28",
+      "severity": "medium",
+      "category": "Methodology disclosure",
+      "item": "Odds window evaluated on fair no-vig prices; published market prices keep their model overround",
+      "detail": "The window gate uses fair decimal = 1/probability (no vig), applied uniformly across all five site layers. Prices displayed on market rows still include the layer's documented model overround, so a selection can show a published price slightly shorter than its fair price (e.g. PSG handball fair 1.42/-238 vs published 1.37/-270). The rule, its boundary (-250 = decimal 1.40 = 71.43% implied) and this distinction are documented in METHODOLOGY.md.",
+      "source": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/METHODOLOGY.md"
     }
   ],
   "resolved": [

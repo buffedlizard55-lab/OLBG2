@@ -393,7 +393,7 @@ def build_sport_page(sport, matches, preds):
     return page(sport, f"sports/{meta['slug']}.html", body, meta["blurb"])
 
 
-def build_picks(matches, preds):
+def build_picks(matches, preds, archived):
     m_by_id = {m["id"]: m for m in matches["matches"]}
     cards = []
     for p in preds["predictions"]:
@@ -406,9 +406,29 @@ def build_picks(matches, preds):
           <div class="small muted">{match_name(m)} · {E(m.get('start_display') or '')}</div>
           <div class="sel" style="margin-top:10px">{E(p['selection'])}</div>
           <p>{E(p['text'])}</p>
-          <div class="foot">Model probability {m['pick']['probability']*100:.1f}% · our price {m['pick']['price']:.2f} · {len(p['text'].split())} words</div>
+          <div class="foot">Model probability {m['pick']['probability']*100:.1f}% · fair decimal {round(1.0/m['pick']['probability'], 2):.2f} (window rule) · published price {m['pick']['price']:.2f} · {len(p['text'].split())} words</div>
           <ul class="facts">{facts}</ul>
         </div>""")
+
+    archived_rows = []
+    for a in archived.get("predictions", []):
+        archived_rows.append(
+            "<tr><td>" + E(a["match_id"]) + "</td><td>" + E(a.get("selection", "")) + "</td>"
+            f"<td class='num'>{a['probability']*100:.1f}%</td>"
+            f"<td class='num'>{a['fair_odds']:.2f}</td>"
+            f"<td class='num'>{a['american_odds']:+d}</td>"
+            "<td>" + E(a["regraded_to"]) + "</td>"
+            "<td>" + E(a["archive_reason"]) + "</td></tr>"
+        )
+    archived_html = (
+        "<h2 class='section' id='archived'>Archived narratives (" + str(len(archived.get("predictions", []))) + ")</h2>"
+        "<p class='section-sub'>Earlier high-confidence write-ups removed from the active set by the 2026-10-22 odds-window rule "
+        "(probability &ge; 70% with fair American odds in [-250, +10000]). Full original text and citations remain in "
+        "<code>data/predictions_archived.json</code>.</p>"
+        "<div class='panel'><div class='table-scroll'><table>"
+        "<thead><tr><th>ID</th><th>Selection</th><th>Model %</th><th>Fair decimal</th><th>American</th><th>New grade</th><th>Reason</th></tr></thead>"
+        "<tbody>" + "".join(archived_rows) + "</tbody></table></div></div>"
+    ) if archived.get("predictions") else ""
 
     rows = []
     for m in sorted(matches["matches"], key=lambda x: ({"high": 0, "medium": 1, "low": 2}.get(x.get("confidence"), 3), x["sport"])):
@@ -421,11 +441,12 @@ def build_picks(matches, preds):
     body = f"""
 <section class="hero">
   <h1>Picks and predictions</h1>
-  <p class="lede">One model selection per originated fixture, with confidence labels calculated from recorded inputs. They are estimates, not verified certainty. Existing written predictions are preserved with citations, but their underlying factual claims have not all been re-checked in the current audit — see <a href="integration.html">Evidence status</a>.</p>
-  <p class="meta">{len(preds['predictions'])} written predictions · {matches['counts']['high']} high · {matches['counts']['medium']} medium · {matches['counts']['low']} low</p>
+  <p class="lede">One model selection per originated fixture, with confidence labels calculated from recorded inputs. They are estimates, not verified certainty. Since 2026-10-22 a pick is <strong>high</strong> only when its model probability is at least 70% and its fair American price sits inside <strong>[-250, +10000]</strong>; earlier chalk narratives are archived below. Written predictions keep their citations, but their underlying factual claims have not all been re-checked in the current audit — see <a href="integration.html">Evidence status</a>.</p>
+  <p class="meta">{len(preds['predictions'])} active written predictions · {matches['counts']['high']} high · {matches['counts']['medium']} medium · {matches['counts']['low']} low · {len(archived.get('predictions', []))} archived narratives</p>
 </section>
 
 <div class="grid picks">{''.join(cards)}</div>
+{archived_html}
 
 <h2 class="section">Every selection</h2>
 <p class="section-sub">Low-confidence rows are honest reads on thin samples, not recommendations.</p>
@@ -675,6 +696,7 @@ def collect_internal_links(pages):
 def main():
     matches = load("matches.json")
     preds = load("predictions.json")
+    archived = load("predictions_archived.json")
     flagged = load("flagged.json")
     sources = load("sources.json")
 
@@ -705,7 +727,7 @@ def main():
     pages = {
         "integration.html": page("Evidence status & integration review", "integration.html", integration_body()),
         "index.html": build_index(matches, preds, flagged),
-        "picks.html": build_picks(matches, preds),
+        "picks.html": build_picks(matches, preds, archived),
         "flagged.html": build_flagged(flagged, matches),
         "methodology.html": build_methodology(matches),
         "sources.html": build_sources(sources, matches),

@@ -152,6 +152,8 @@ def build():
     lines = json.load(open(os.path.join(LIVE_DATA, "lines.json")))
     coverage = json.load(open(os.path.join(LIVE_DATA, "coverage.json")))
     flags = json.load(open(os.path.join(LIVE_DATA, "flags.json")))
+    archived_doc = json.load(open(os.path.join(LIVE_DATA, "archived_predictions.json")))
+    archived = archived_doc["predictions"]
     rows = lines["rows"]
 
     os.makedirs(os.path.join(OUT, "sports"), exist_ok=True)
@@ -176,6 +178,7 @@ def build():
             ("High-confidence picks", len(by_conf["high"])),
             ("Medium", len(by_conf["medium"])),
             ("Low", len(by_conf["low"])),
+            ("Archived narratives (odds window)", len(archived)),
             ("Open flags", len(flags["flags"])),
         ]
     )
@@ -233,6 +236,28 @@ def build():
                 esc(p["text"]), esc(p["selection"]), p["words"], esc(r["source_url"]),
             )
         )
+    if not pred_blocks:
+        pred_blocks.append(
+            "<div class='quote'><b>No active high-confidence predictions.</b><p>Under the 2026-10-22 odds-window "
+            "rule a high label needs at least 70% model probability and a fair American price inside "
+            "[-250, +10000]. The four prior URC chalk picks all price shorter than -250 and were regraded "
+            "medium; their narratives are archived below and in <code>data/live/archived_predictions.json</code>.</p></div>"
+        )
+    archived_rows = "".join(
+        "<tr><td>%s</td><td>%s</td><td>%.1f%%</td><td>%.2f</td><td>%+d</td><td>%s</td><td>%s</td></tr>"
+        % (
+            esc(a["fixture_id"]), esc(a["selection"]), a["probability"] * 100,
+            a["fair_odds"], a["american_odds"], esc(a["regraded_to"]), esc(a["archive_reason"]),
+        )
+        for a in archived
+    )
+    archived_block = (
+        "<h2>Archived narratives (%d)</h2>"
+        "<p class='small muted'>High-confidence write-ups removed from the active set by the odds-window rule; "
+        "full original text and verified facts remain in <code>data/live/archived_predictions.json</code>.</p>"
+        "<table><tr><th>Fixture</th><th>Selection</th><th>Model %%</th><th>Fair decimal</th><th>American</th>"
+        "<th>New grade</th><th>Reason</th></tr>%s</table>" % (len(archived), archived_rows)
+    )
     pick_rows = "".join(
         "<tr><td>%s</td><td>%s @ %s</td><td>%s</td><td><span class='pill %s'>%s</span></td><td>%.1f%%</td><td>%s</td><td class='small'><a href='%s'>official source</a></td></tr>"
         % (
@@ -244,11 +269,13 @@ def build():
     )
     picks = page(
         "Picks and predictions",
-        "<p>One match-winner pick per fixture with a confidence label "
-        "(high &ge; 62%%, medium 55-62%%, low &lt; 55%% model probability). Written predictions accompany every "
-        "high-confidence pick.</p><h2>All picks</h2>"
+        "<p>One match-winner pick per fixture with a confidence label. Since 2026-10-22, high requires "
+        "model probability &ge; 70%% <b>and</b> a fair no-vig American price inside [-250, +10000]; medium "
+        "covers 55-70%% plus out-of-window chalk; low is below 55%%. Written predictions accompany every "
+        "high-confidence pick, and narratives displaced by the window rule are archived below.</p><h2>All picks</h2>"
         "<table><tr><th>Date</th><th>Match</th><th>Pick</th><th>Confidence</th><th>Model probability</th><th>Price</th><th>Source</th></tr>%s</table>"
-        "<h2>High-confidence predictions</h2>%s" % (pick_rows, "".join(pred_blocks)),
+        "<h2>High-confidence predictions</h2>%s"
+        "%s" % (pick_rows, "".join(pred_blocks), archived_block),
     )
 
     # ---- flagged
@@ -300,7 +327,9 @@ def build():
         "no league constant that was not captured is assumed. Tied scorelines are split 50/50 as extra innings. No home "
         "advantage is applied because no official home/away split was captured (flag L07).</p>"
         "<p><b>Pricing.</b> Fair prices are divided by 1.04, a disclosed 4% overround, then converted to American odds. "
-        "<b>Confidence.</b> high &ge; 0.62, medium 0.55-0.62, low &lt; 0.55 on the model probability of the match-winner "
+        "<b>Confidence.</b> high = model probability &ge; 0.70 with a fair no-vig American price inside [-250, +10000] "
+        "(rule applied 2026-10-22); medium = 0.55-0.70 or above-70% chalk outside the window; low &lt; 0.55, on the "
+        "model probability of the match-winner "
         "selection.</p>"
         "<h2>Rules this layer follows</h2>"
         "<p>A value is published only when an official source returned it in this session's capture. Anything "

@@ -126,15 +126,42 @@ def half_line(value: float) -> float:
 
 
 # ---------------------------------------------------------------- confidence
+# Brief (2026-10-22): HIGH requires model probability >= 70% AND a fair
+# no-vig American price inside [-250, +10000] (fair decimal 1.40..101.00).
+# Chalk shorter than -250 is capped at medium and narratives are archived.
+HIGH_PROB_FLOOR = 0.70
+ODDS_WINDOW_MIN_AMERICAN = -250
+ODDS_WINDOW_MAX_AMERICAN = 10000
+
+
+def fair_decimal(p: float) -> float:
+    return round(1.0 / max(p, 1e-6), 2)
+
+
+def american_from_decimal(decimal_odds: float) -> int:
+    if decimal_odds >= 2.0:
+        return round((decimal_odds - 1.0) * 100.0)
+    return round(-100.0 / (decimal_odds - 1.0))
+
+
+def window_high_eligible(p: float) -> bool:
+    american = american_from_decimal(fair_decimal(p))
+    return (
+        p >= HIGH_PROB_FLOOR
+        and ODDS_WINDOW_MIN_AMERICAN <= american <= ODDS_WINDOW_MAX_AMERICAN
+    )
+
+
 def confidence_for(sport: str, p: float, min_gp: int | None) -> str:
     """Deterministic confidence rule from METHODOLOGY.md."""
     if sport == "Basketball":
         # Current season sample is zero; only last season's prior exists.
         return "medium" if p >= 0.68 else "low"
     if sport == "Handball":
-        # Four group games per side is a thin sample, so high is reserved for clear favourites.
+        # Four group games per side is a thin sample, so high is reserved for
+        # clear favourites whose fair price still clears the -250 window.
         if min_gp is not None and min_gp >= 4:
-            if p >= 0.70:
+            if p >= 0.70 and window_high_eligible(p):
                 return "high"
             if p >= 0.58:
                 return "medium"
@@ -143,7 +170,7 @@ def confidence_for(sport: str, p: float, min_gp: int | None) -> str:
         # Three rounds played -> never above medium.
         return "medium" if p >= 0.62 else "low"
     if min_gp is not None and min_gp >= PARAMS["nhl_min_gp_high"]:
-        if p >= 0.65:
+        if p >= HIGH_PROB_FLOOR and window_high_eligible(p):
             return "high"
         if p >= 0.57:
             return "medium"

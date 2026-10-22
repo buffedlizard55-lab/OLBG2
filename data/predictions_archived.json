@@ -1,0 +1,271 @@
+{
+  "archived_at": "2026-10-22",
+  "rule": "fair American odds must fall within [-250, +10000] and probability >= 0.70",
+  "count": 7,
+  "predictions": [
+    {
+      "match_id": "nhl-2026020152",
+      "selection": "Buffalo Sabres to win (moneyline)",
+      "headline": "Sabres should outlast a shot-shy Flyers side",
+      "text": "Buffalo Sabres to win the moneyline against the Philadelphia Flyers at KeyBank Center. Buffalo are 4-3-2 through nine games and have scored 27 goals while conceding 33, a 3.00 goals-per-game attack that dwarfs Philadelphia's 1.55. The Flyers are 2-6-3 and have managed only 17 goals in 11 games, despite beating Colorado 3-2 on 19 October. Buffalo winger Tage Thompson leads the club with five goals and Ukko-Pekka Luukkonen has three wins in net, while Philadelphia's Matvei Michkov has six. The model puts Buffalo at 65.4%, which is why this selection is graded high confidence.",
+      "facts": [
+        {
+          "claim": "Buffalo are 4-3-2 and have scored 27 and conceded 33 in nine games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Philadelphia are 2-6-3 with 17 goals in 11 games (1.55 per game)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Philadelphia beat Colorado 3-2 on 19 October",
+          "source": "https://api-web.nhle.com/v1/scoreboard/2026-10-22"
+        },
+        {
+          "claim": "Tage Thompson 5 goals, Luukkonen 3 wins, Michkov 6 goals",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-21"
+        },
+        {
+          "claim": "Model probability 65.4%",
+          "source": "data/matches.json"
+        }
+      ],
+      "probability": 0.6543,
+      "fair_odds": 1.53,
+      "american_odds": -189,
+      "regraded_to": "medium",
+      "archive_reason": "Selection's fair no-vig price is shorter than -250 American (or below the 70% probability floor); outside the brief's [-250, +10000] high-confidence window. Regraded on 2026-10-22; narrative retained verbatim, not deleted."
+    },
+    {
+      "match_id": "nhl-2026020154",
+      "selection": "Boston Bruins to win (moneyline)",
+      "headline": "Bruins' defensive record points to a home win over Nashville",
+      "text": "Boston Bruins to win the moneyline when the Nashville Predators visit TD Garden. Boston sit at 7-2-1 after ten games, scoring 36 and conceding just 22, which works out at 2.20 goals against per game, comfortably better than Nashville's 2.75. The Predators are 3-2-3 and have found the net 23 times in eight outings. David Pastrnak has four goals and eight assists for Boston and Jeremy Swayman has already recorded six wins, while Roman Josi has eight assists and Ryan O'Reilly four goals for Nashville. Our model gives Boston a 65.3% chance.",
+      "facts": [
+        {
+          "claim": "Boston 7-2-1, 36 goals for, 22 against in 10 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Nashville 3-2-3, 23 goals for, 22 against in 8 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Pastrnak 4+8, Swayman 6 wins, Josi 8 assists, O'Reilly 4 goals",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Model probability 65.3%",
+          "source": "data/matches.json"
+        }
+      ],
+      "probability": 0.6534,
+      "fair_odds": 1.53,
+      "american_odds": -189,
+      "regraded_to": "medium",
+      "archive_reason": "Selection's fair no-vig price is shorter than -250 American (or below the 70% probability floor); outside the brief's [-250, +10000] high-confidence window. Regraded on 2026-10-22; narrative retained verbatim, not deleted."
+    },
+    {
+      "match_id": "nhl-2026020162",
+      "selection": "Minnesota Wild to win (moneyline)",
+      "headline": "Wild's scoring depth against Calgary's leaky defence",
+      "text": "Minnesota Wild to win the moneyline in Calgary. Minnesota are 6-2-2 with 31 goals for and 25 against in ten games, while the Flames are 2-6-0 and have conceded 37 goals in eight, an ugly 4.62 per game, scoring only 17 themselves. Kirill Kaprizov has 11 goals already and Quinn Hughes 11 assists for the Wild, with Jesper Wallstedt recording six wins. Calgary's scoring leader is Morgan Frost on three, and Dustin Wolf has one win. The model still lands on 68.9% for Minnesota even after applying its 1.05 home-ice adjustment in Calgary's favour, and the gap in goals conceded is what drives that number rather than any market signal.",
+      "facts": [
+        {
+          "claim": "Minnesota 6-2-2, 31 for, 25 against in 10 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Calgary 2-6-0, 17 for, 37 against in 8 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Kaprizov 11 goals, Quinn Hughes 11 assists, Wallstedt 6 wins, Frost 3 goals, Wolf 1 win",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Model probability 68.9%, modelled price 1.40",
+          "source": "data/matches.json"
+        }
+      ],
+      "words": 110,
+      "probability": 0.6886,
+      "fair_odds": 1.45,
+      "american_odds": -222,
+      "regraded_to": "medium",
+      "archive_reason": "Selection's fair no-vig price is shorter than -250 American (or below the 70% probability floor); outside the brief's [-250, +10000] high-confidence window. Regraded on 2026-10-22; narrative retained verbatim, not deleted."
+    },
+    {
+      "match_id": "ehfcl-202711020101029",
+      "selection": "Aalborg H\u00e5ndbold to win (match winner)",
+      "headline": "Celje's leaking defence should not hold up in Aalborg",
+      "text": "Aalborg H\u00e5ndbold to win the match-winner market at home to RK Celje Pivovarna La\u0161ko on 21 October. Aalborg are 3-1-0 in Group C with 136 goals scored and 115 conceded, while Celje have lost all four group games and shipped 154 goals, the second-worst defensive record in the competition so far. The model prices Aalborg at 84.5%, which is why this selection carries a high-confidence grade.",
+      "facts": [
+        {
+          "claim": "Aalborg are 3-1-0 in Group C with 136 goals scored and 115 conceded (7 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Celje are 0-4 with 120 goals scored and 154 conceded (0 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Only IFK Kristianstad (155) have conceded more than Celje (154) in the group phase",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Aalborg host Celje on 21 October, throw-off 20:45 CEST",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        },
+        {
+          "claim": "Model probability for Aalborg is 84.5%",
+          "source": "data/matches.json"
+        }
+      ],
+      "sources": [
+        {
+          "name": "EHF Champions League Men official standings",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "name": "EHF Champions League Men official matches page",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        }
+      ],
+      "probability": 0.8452,
+      "fair_odds": 1.18,
+      "american_odds": -556,
+      "regraded_to": "medium",
+      "archive_reason": "Selection's fair no-vig price is shorter than -250 American (or below the 70% probability floor); outside the brief's [-250, +10000] high-confidence window. Regraded on 2026-10-22; narrative retained verbatim, not deleted."
+    },
+    {
+      "match_id": "ehfcl-202711020101049",
+      "selection": "Bar\u00e7a to win (match winner)",
+      "headline": "Bar\u00e7a's defence gives Montpellier little room at home",
+      "text": "Bar\u00e7a to win the match-winner market against Montpellier Handball at home on 22 October. The Catalan side have won all four Group E fixtures, scoring 137 goals and conceding only 104, the fewest goals against of any team in the group phase so far. Montpellier are 1-0-3 and have conceded 125 in four matches. Our model puts Bar\u00e7a at 78.5% and grades the pick high confidence.",
+      "facts": [
+        {
+          "claim": "Bar\u00e7a are 4-0-0 in Group E with 137 goals scored and 104 conceded (8 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Bar\u00e7a's 104 goals conceded is the lowest total in the group phase",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Montpellier are 1-0-3 with 116 goals scored and 125 conceded (2 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Bar\u00e7a host Montpellier on 22 October, throw-off 20:45 CEST",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        },
+        {
+          "claim": "Model probability for Bar\u00e7a is 78.5%",
+          "source": "data/matches.json"
+        }
+      ],
+      "sources": [
+        {
+          "name": "EHF Champions League Men official standings",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "name": "EHF Champions League Men official matches page",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        }
+      ],
+      "probability": 0.7855,
+      "fair_odds": 1.27,
+      "american_odds": -370,
+      "regraded_to": "medium",
+      "archive_reason": "Selection's fair no-vig price is shorter than -250 American (or below the 70% probability floor); outside the brief's [-250, +10000] high-confidence window. Regraded on 2026-10-22; narrative retained verbatim, not deleted."
+    },
+    {
+      "match_id": "ehfcl-202711020101064",
+      "selection": "SC Magdeburg to win (match winner)",
+      "headline": "Perfect Magdeburg should extend Kolstad's losing run",
+      "text": "SC Magdeburg to win the match-winner market away to Kolstad H\u00e5ndball on 22 October. Magdeburg are 4-0 in Group F, scoring 141 goals and conceding 108, while Kolstad have lost all four of their group matches and conceded 143. The Norwegian side have scored 111 goals, the lowest tally of any team in Group F. The model gives Magdeburg an 84.1% chance and a high-confidence grade.",
+      "facts": [
+        {
+          "claim": "Magdeburg are 4-0-0 in Group F with 141 goals scored and 108 conceded (8 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Kolstad are 0-4 with 111 goals scored and 143 conceded (0 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Kolstad's 111 goals is the lowest total among the four Group F teams",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Kolstad host Magdeburg on 22 October, throw-off 20:45 CEST",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        },
+        {
+          "claim": "Model probability for Magdeburg is 84.1%",
+          "source": "data/matches.json"
+        }
+      ],
+      "sources": [
+        {
+          "name": "EHF Champions League Men official standings",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "name": "EHF Champions League Men official matches page",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        }
+      ],
+      "probability": 0.841,
+      "fair_odds": 1.19,
+      "american_odds": -526,
+      "regraded_to": "medium",
+      "archive_reason": "Selection's fair no-vig price is shorter than -250 American (or below the 70% probability floor); outside the brief's [-250, +10000] high-confidence window. Regraded on 2026-10-22; narrative retained verbatim, not deleted."
+    },
+    {
+      "match_id": "ehfcl-202711020101041",
+      "selection": "Sporting Clube de Portugal to win (match winner)",
+      "headline": "Sporting's scoring rate points to a clear home win",
+      "text": "Sporting Clube de Portugal to win the match-winner market at home to IFK Kristianstad on 22 October. Sporting are unbeaten in Group D at 3-1-0, with 149 goals scored and 125 conceded. Kristianstad have lost all four group games, scoring 122 and conceding 155, the most goals against of any team in the group phase. Our model gives Sporting 85.5%, the biggest edge on the handball slate, so the pick is graded high confidence.",
+      "facts": [
+        {
+          "claim": "Sporting are 3-1-0 in Group D with 149 goals scored and 125 conceded (7 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Kristianstad are 0-4 with 122 goals scored and 155 conceded (0 points)",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Kristianstad's 155 goals conceded is the highest in the group phase",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Sporting host Kristianstad on 22 October, throw-off 20:45 CEST",
+          "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        },
+        {
+          "claim": "Model probability for Sporting is 85.5%, the highest of the 12 handball fixtures",
+          "source": "data/matches.json"
+        }
+      ],
+      "sources": [
+        {
+          "name": "EHF Champions League Men official standings",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "name": "EHF Champions League Men official matches page",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+        }
+      ],
+      "probability": 0.8545,
+      "fair_odds": 1.17,
+      "american_odds": -588,
+      "regraded_to": "medium",
+      "archive_reason": "Selection's fair no-vig price is shorter than -250 American (or below the 70% probability floor); outside the brief's [-250, +10000] high-confidence window. Regraded on 2026-10-22; narrative retained verbatim, not deleted."
+    }
+  ]
+}

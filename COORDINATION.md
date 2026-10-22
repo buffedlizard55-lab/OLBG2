@@ -1206,3 +1206,30 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 | Live production URLs verified | `https://buffedlizard55-lab.github.io/OLBG2/`, `https://buffedlizard55-lab.github.io/OLBG2/verified/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/predictions.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/survey/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/integration.html` |
 
 
+
+---
+
+## Session `arena/36f79c71-olbg2` — refresh, line-by-line verification, unified site (2026-10-22)
+
+**Session ID:** `arena/36f79c71-olbg2` · **Branch:** `arena/36f79c71-olbg2` · **Claimed:** 2026-10-22 (UTC)
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| R1 | Record claim and inspect all five published layers | in progress | `arena/36f79c71-olbg2` | `COORDINATION.md` |
+| R2 | Re-verify every stored row that is still upcoming against its official source; flag stale/past rows | unclaimed | — | `data/verified/**`, `research/` |
+| R3 | Close the remaining unlined rows where an official input exists; keep blanks elsewhere | unclaimed | — | `data/verified/**`, `scripts/verified_model.py` |
+| R4 | Add fixtures for sports with no rows (Aussie Rules, eSports) if OLBG and an official body both confirm them | unclaimed | — | `data/verified/**`, `research/` |
+| R5 | High-confidence written predictions inside the required odds band | unclaimed | — | `data/verified/predictions.json` |
+| R6 | Unified landing page and category pages over one deduplicated dataset | unclaimed | — | root `index.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
+| R7 | Final integration: re-verify, link-check, PR, merge, Pages | unclaimed | — | shared outputs |
+
+**Scope discipline.** This session is the final integration session: it may regenerate shared outputs
+(`index.html`, `sports/**`, navigation, the unified table data) because every earlier session's board is closed
+and there are no live claims. Earlier layers (`site/`, `survey/`, `live/`) are preserved untouched; the new work
+lives in `data/verified/**`, `verified/**`, `scripts/verified_*.py`, `scripts/build_site.py`, root pages and
+`research/`. No earlier session's claim is being taken over — all their boards read `done`.
+
+**Method.** Every published value must come from a source fetched in this session (2026-10-22) or remain
+blank and be flagged. OLBG pages are used only for listing provenance; fixtures, times and results come from the
+governing body or league. A row whose event date has passed is labelled `past` rather than presented as upcoming.
+

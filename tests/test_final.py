@@ -36,7 +36,7 @@ class FinalDataTests(unittest.TestCase):
         cls.flags = load(DATA / "flagged.json")["items"]
 
     def test_row_count_and_unique_ids(self):
-        self.assertEqual(len(self.rows), 312)
+        self.assertEqual(len(self.rows), 322)
         ids = [r["id"] for r in self.rows]
         self.assertEqual(len(ids), len(set(ids)))
 
@@ -89,7 +89,7 @@ class FinalDataTests(unittest.TestCase):
             self.assertNotIn(token, blob)
 
     def test_unlined_count(self):
-        self.assertEqual(sum(1 for r in self.rows if r["line_status"] == "unlined"), 33)
+        self.assertEqual(sum(1 for r in self.rows if r["line_status"] == "unlined"), 43)
 
     def test_provenance_layers_are_real(self):
         allowed = {"verified", "hub", "board", "slate", "forward"}
@@ -182,7 +182,7 @@ class FinalSiteTests(unittest.TestCase):
         body = (SITE / "matches.html").read_text(encoding="utf-8")
         tbody = body.split("<tbody>", 1)[1]
         rows = re.findall(r"<tr class=.*?</tr>", tbody, flags=re.S)
-        self.assertEqual(len(rows), 312)
+        self.assertEqual(len(rows), 322)
         for row in rows:
             self.assertIn('<a href="https://', row)
 

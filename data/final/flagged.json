@@ -22,8 +22,8 @@
       "severity": "high",
       "category": "Duplicate fixtures and conflicting prices",
       "sport": "cross-sport",
-      "item": "755 layer rows collapse to 312 fixtures; 208 fixtures appear in two or more layers",
-      "detail": "208 of the 312 fixtures were captured by more than one session. The same game can carry different model probabilities because each layer ran its own model. Example: Minnesota Wild at Calgary is 70.84% on the verified row but 67.38% on the hub row; Boston v Nashville is 63.69% on the board row and 66.01% on the hub row. One row per fixture is kept, the layer used is recorded in provenance, and the other layers are not blended into the number.",
+      "item": "765 layer rows collapse to 322 fixtures; 208 fixtures appear in two or more layers",
+      "detail": "208 of the 322 fixtures were captured by more than one session. The same game can carry different model probabilities because each layer ran its own model. Example: Minnesota Wild at Calgary is 70.84% on the verified row but 67.38% on the hub row; Boston v Nashville is 63.69% on the board row and 66.01% on the hub row. One row per fixture is kept, the layer used is recorded in provenance, and the other layers are not blended into the number.",
       "source_name": "NHL GameCenter example",
       "source_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162"
     },
@@ -92,8 +92,8 @@
       "severity": "low",
       "category": "Blank unconfirmed market",
       "sport": "cross-sport",
-      "item": "33 fixtures are deliberately unlined",
-      "detail": "Unlined by sport: cricket 1, darts 2, esports 8, gaelic-football 5, golf 2, greyhounds 3, motor-racing 1, rugby-league 3, snooker 2, tennis 3, volleyball 3. Each row states its reason (client-rendered rankings, no pre-match scoring table, futures without rosters, or a sample too small to price). No value was estimated to fill a blank.",
+      "item": "43 fixtures are deliberately unlined",
+      "detail": "Unlined by sport: cricket 1, darts 2, esports 8, gaelic-football 5, golf 2, greyhounds 13, motor-racing 1, rugby-league 3, snooker 2, tennis 3, volleyball 3. Each row states its reason (client-rendered rankings, no pre-match scoring table, futures without rosters, or a sample too small to price). No value was estimated to fill a blank.",
       "source_name": "Flagged page",
       "source_url": "flagged.html"
     },
@@ -102,8 +102,8 @@
       "severity": "low",
       "category": "Source scope",
       "sport": "cross-sport",
-      "item": "196 of 312 rows do not link to an individual fixture page",
-      "detail": "116 rows cite a URL that identifies the fixture; 183 cite a competition, rankings or tournament page and 13 cite a player page. Two tennis rows (atp-902103 and atp-902133) link to player profiles because the layer did not capture a tournament-specific schedule URL; both are flagged rather than presented as fixture-level proof.",
+      "item": "206 of 322 rows do not link to an individual fixture page",
+      "detail": "116 rows cite a URL that identifies the fixture; 193 cite a competition, rankings or tournament page and 13 cite a player page. Two tennis rows (atp-902103 and atp-902133) link to player profiles because the layer did not capture a tournament-specific schedule URL; both are flagged rather than presented as fixture-level proof.",
       "source_name": "Example player page",
       "source_url": "https://www.atptour.com/en/players/valentin-vacherot/va25/overview"
     },

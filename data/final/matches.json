@@ -12,16 +12,16 @@
     }
   },
   "counts": {
-    "rows": 312,
+    "rows": 322,
     "originated": 279,
-    "unlined": 33,
+    "unlined": 43,
     "high": 15,
     "medium": 129,
     "low": 135,
     "sports": 17,
     "excluded_leaks": 0,
     "source_layers": {
-      "verified": 118,
+      "verified": 128,
       "hub": 189,
       "board": 207,
       "slate": 148,
@@ -42,13 +42,13 @@
       "golf": 5,
       "rugby-league": 8,
       "gaelic-football": 5,
-      "greyhounds": 5,
+      "greyhounds": 15,
       "aussie-rules": 9,
       "esports": 8
     },
     "provenance": {
       "hub": 147,
-      "verified": 39,
+      "verified": 49,
       "board": 73,
       "slate": 53
     }
@@ -28664,6 +28664,44 @@
       }
     },
     {
+      "id": "gbgb-cat1-20261023-romford",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Premier Greyhound Racing Champion Stakes",
+      "date": "2026-10-23",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "venue": "",
+      "home": "Premier Greyhound Racing Champion Stakes",
+      "away": "Romford (575m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261023-romford",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261023-romford"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
       "id": "gbgb-romford-h2h-1",
       "sport": "greyhounds",
       "sport_name": "Greyhounds",
@@ -28826,6 +28864,348 @@
         "status": "inherited",
         "checked_at": null,
         "source_url": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261024-dunstall-oaks",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Premier Greyhound Racing Oaks",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T00:00:00Z",
+      "venue": "",
+      "home": "Premier Greyhound Racing Oaks",
+      "away": "Dunstall Park (480m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261024-dunstall-oaks",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261024-dunstall-oaks"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261024-dunstall-scurry",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Arena Racng Company Scurry Gold Cup",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T00:00:00Z",
+      "venue": "",
+      "home": "Arena Racng Company Scurry Gold Cup",
+      "away": "Dunstall Park (270m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261024-dunstall-scurry",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261024-dunstall-scurry"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261108-hove-ballyregan",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — George Curtis Ballyregan Bob Memorial",
+      "date": "2026-11-08",
+      "start_utc": "2026-11-08T00:00:00Z",
+      "venue": "",
+      "home": "George Curtis Ballyregan Bob Memorial",
+      "away": "Hove (740m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261108-hove-ballyregan",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261108-hove-ballyregan"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261108-hove-goldcollar",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Coral Gold Collar",
+      "date": "2026-11-08",
+      "start_utc": "2026-11-08T00:00:00Z",
+      "venue": "",
+      "home": "Coral Gold Collar",
+      "away": "Hove (500m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261108-hove-goldcollar",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261108-hove-goldcollar"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261120-sunderland",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Premier Greyhound Racing Classic",
+      "date": "2026-11-20",
+      "start_utc": "2026-11-20T00:00:00Z",
+      "venue": "",
+      "home": "Premier Greyhound Racing Classic",
+      "away": "Sunderland (450m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261120-sunderland",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261120-sunderland"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261130-nottingham",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Premier Greyhound Racing Eclipse",
+      "date": "2026-11-30",
+      "start_utc": "2026-11-30T00:00:00Z",
+      "venue": "",
+      "home": "Premier Greyhound Racing Eclipse",
+      "away": "Nottingham (500m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261130-nottingham",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261130-nottingham"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261212-hove",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Coral Olympic",
+      "date": "2026-12-12",
+      "start_utc": "2026-12-12T00:00:00Z",
+      "venue": "",
+      "home": "Coral Olympic",
+      "away": "Hove (515m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261212-hove",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261212-hove"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261221-nottingham",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — ARC National Sprint",
+      "date": "2026-12-21",
+      "start_utc": "2026-12-21T00:00:00Z",
+      "venue": "",
+      "home": "ARC National Sprint",
+      "away": "Nottingham (305m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261221-nottingham",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261221-nottingham"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+        "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
+      }
+    },
+    {
+      "id": "gbgb-cat1-20261226-newcastle",
+      "sport": "greyhounds",
+      "sport_name": "Greyhounds",
+      "competition": "GBGB 2026 Category One — Premier Greyhound Racing All England Cup",
+      "date": "2026-12-26",
+      "start_utc": "2026-12-26T00:00:00Z",
+      "venue": "",
+      "home": "Premier Greyhound Racing All England Cup",
+      "away": "Newcastle (480m Flat)",
+      "home_summary": "",
+      "away_summary": "",
+      "line_status": "unlined",
+      "blank_reason": "The official Category One schedule publishes date, track, event and distance but no trap cards, runners or sectional ratings, and GBGB daily cards are client-rendered; lines are never inferred from uncaptured form (VF-22).",
+      "markets": [],
+      "pick": null,
+      "official_source": "GBGB 2026 Category One Schedule",
+      "official_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "source_scope": "competition",
+      "provenance": {
+        "layer_used": "verified",
+        "layers": [
+          "verified"
+        ],
+        "original_id": "gbgb-cat1-20261226-newcastle",
+        "original_ids": {
+          "verified": "gbgb-cat1-20261226-newcastle"
+        },
+        "captured_at": "2026-10-22"
+      },
+      "verification": {
+        "status": "inherited",
+        "checked_at": null,
+        "source_url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
         "note": "Fixture and values carried from the layer named in provenance; not re-read in this pass."
       }
     },

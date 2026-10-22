@@ -1465,3 +1465,15 @@ The picks introduction now handles an empty outside-band category without implyi
 Live re-check after #65 (cache-busted fetch): `/verification.html` shows "Re-read line by line on 2026-10-22" with the
 NHL / URC / Top 14 / Pro D2 / EuroLeague / EHF rows and their source links, 85 fixture-scoped and 34
 competition-scoped, and links to VF-23. No data, price, probability or prediction changed in #64 or #65.
+
+---
+
+## Session `arena/dbfb6608-olbg2` — independent market-evidence audit (2026-10-22)
+
+**Claimed:** 2026-10-22 02:48 UTC, before implementation. **Branch:** `arena/dbfb6608-olbg2` (Arena-fixed).
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A1 | Independently audit the currently published odds/probability claims and the provenance granularity for official fixture facts; write a source-backed report and log any request for the active odds-window PR. Do not alter shared fixtures, model outputs, generated pages, or another session's files. | in progress | `arena/dbfb6608-olbg2` | `research/market-evidence-audit-dbfb6608.md`, append-only `COORDINATION.md` |
+
+**Coordination check:** PR #54 (`arena/1bb45081-olbg2`) is open and was updated less than 60 minutes before this claim. Its scope includes confidence/odds-window changes across the generated layers and shared model scripts. This session will not edit or take over those files. The only overlap is the explicitly shared append-only task board. Audit report scope is independent and read-only with respect to all shared data and pages.

@@ -1687,11 +1687,11 @@ Rules for this session: nothing is published unless an official page returned it
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
 | I1 | Claim + coordination check | done | `arena/c12bdcd7-olbg2` | `COORDINATION.md` (this section) |
-| I2 | Resolve stale PR #54 (take over and merge the still-relevant odds-window work, or close as superseded — decision recorded with evidence) | pending | `arena/c12bdcd7-olbg2` | PR #54, follow-up commits on this branch if taken over |
-| I3 | Fulfil the logged root-nav request from `6a87eefa`: "Forward slate (23 Oct–2 Nov)" link to `forward/index.html` (via `scripts/build_site.py` regeneration, never hand-edit) | pending | `arena/c12bdcd7-olbg2` | `scripts/build_site.py`, regenerated root pages |
-| I4 | Gap closure attempt on remaining open flags with official sources only: VF-14 (NBA slate), VF-22 (GBGB greyhounds), MLB WS G5–7 (official if-necessary listing), EuroLeague game 61 desk input | pending | `arena/c12bdcd7-olbg2` | `data/forward/**`, `data/verified/inputs.json` (targeted), `research/*c12bdcd7*` |
-| I5 | Line-by-line re-verification pass of the published combined dataset against official sources; every row keeps its source link or goes blank + flagged; irregularities logged | pending | `arena/c12bdcd7-olbg2` | `research/*c12bdcd7*`, flag files only if a new finding appears |
-| I6 | Final integration: rebuild all layers, full test suite + link audit green, PR → merge (no approval wait) → Pages deploy confirmed → recorded here | pending | `arena/c12bdcd7-olbg2` | shared outputs (integration step only) |
+| I2 | Resolve stale PR #54 (take over and merge the still-relevant odds-window work, or close as superseded — decision recorded with evidence) | done | `arena/c12bdcd7-olbg2` | PR #54, follow-up commits on this branch if taken over |
+| I3 | Fulfil the logged root-nav request from `6a87eefa`: "Forward slate (23 Oct–2 Nov)" link to `forward/index.html` (via `scripts/build_site.py` regeneration, never hand-edit) | done | `arena/c12bdcd7-olbg2` | `scripts/build_site.py`, regenerated root pages |
+| I4 | Gap closure attempt on remaining open flags with official sources only: VF-14 (NBA slate), VF-22 (GBGB greyhounds), MLB WS G5–7 (official if-necessary listing), EuroLeague game 61 desk input | done | `arena/c12bdcd7-olbg2` | `data/forward/**`, `data/verified/inputs.json` (targeted), `research/*c12bdcd7*` |
+| I5 | Line-by-line re-verification pass of the published combined dataset against official sources; every row keeps its source link or goes blank + flagged; irregularities logged | done | `arena/c12bdcd7-olbg2` | `research/*c12bdcd7*`, flag files only if a new finding appears |
+| I6 | Final integration: rebuild all layers, full test suite + link audit green, PR → merge (no approval wait) → Pages deploy confirmed → recorded here | done | `arena/c12bdcd7-olbg2` | shared outputs (integration step only) |
 
 **Scope rule:** until I6 this session edits only the files listed above. Earlier layers (`site/`, `survey/`, `live/`, `desk/`) are regenerated only by running their own committed scripts when integration requires it; no earlier session's data is regraded or rewritten except where I4 closes a named gap with a freshly fetched official source, and every such change is logged in `research/`.
 
@@ -1715,6 +1715,23 @@ Scope is disjoint from prior layer owners. No inherited source or prediction is 
 - Coverage/exhaustive live verification remains **needs review**, not represented as complete. Publication task in progress.
 
 - Sync log: origin/main advanced during this session (PR #77). Rebase encountered a COORDINATION.md append conflict; retained the complete updated main board and appended only this session's claim, avoiding restoration of superseded entries. Re-ran all 103 tests successfully after rebase. No other files conflicted.
+
+
+### Final integration record — session `arena/c12bdcd7-olbg2` (2026-10-22)
+
+| Item | Result |
+|---|---|
+| Primary pull request | [#78](https://github.com/buffedlizard55-lab/OLBG2/pull/78) — "Final integration: uniform odds-window confidence rule across all layers, GBGB Category One fixtures (10 rows), forward-slate nav, PR #54 takeover closed" |
+| Merge result | **merged** to `main` without waiting for approval (`gh pr merge 78 --merge`), merge commit [`48ed1bc`](https://github.com/buffedlizard55-lab/OLBG2/commit/48ed1bc) on 2026-10-22, after two conflict resolutions against parallel sessions (`/hub/`, `/slate/`, `/board/`, `/evidence/`) that landed on `main` during the session |
+| GitHub Pages deploy | **confirmed live** — `Deploy Pages` run [`39749581331`](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39749581331) (`success`, "Deploy to GitHub Pages" ✓); earlier runs for this merge were `cancelled` only by the workflow's `cancel-in-progress` concurrency as newer merges stacked. Live checks on 2026-10-22: `https://buffedlizard55-lab.github.io/OLBG2/` (128 rows) and `/sports/greyhounds.html` (all 10 GBGB rows with sources and blank reasons) |
+| PR #54 (task I2) | **closed as superseded** with takeover comment; uniform window rule implemented on current `main` (decision record `research/pr54-takeover-c12bdcd7.md`) |
+| Nav request (task I3) | root nav "Forward slate (23 Oct–2 Nov)" live (added independently by two sessions; deduplicated in the merge) |
+| Gap closures (task I4) | VF-22 **narrowed/closed for fixtures** (GBGB 2026 Category One Schedule → 10 unlined rows, `data/verified/capture_gbgb_cat1_c12bdcd7.json`); MLB WS G5–G7 official if-necessary listing **verified** (open item closed); VF-14 stays **PARTIAL** (matchups not server-renderable); EuroLeague game 61 remains informational |
+| Verification pass (task I5) | `research/verification-c12bdcd7.md` — featured-prediction families re-read line-by-line against live official pages (all PASS); coverage limits disclosed |
+| Test suite at merge | **111 tests OK** across all layers (this session's 88 incl. 8 new window/archive gates + parallel sessions' board/hub/slate/evidence suites); `integration_audit` 0 link errors; `survey_verify` PASS; `hub_verify` OK; CI chain green end-to-end |
+| Cross-session reconciliations | merged `d219b7cf` (docs audit), `ddcbf63c` (/board/), `7f261be1` (/slate/), `42c8f6be` (/hub/), `02095e6b` (/evidence/) records append-only; refreshed `evidence/audit.json` against the 128-row desk so the reproducibility gate holds |
+
+---
 
 ### 02095e6b publication record
 

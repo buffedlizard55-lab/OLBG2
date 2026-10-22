@@ -66,8 +66,9 @@ Model prices are fair decimals derived from the models in [METHODOLOGY.md](METHO
 - All **14** written predictions are **price-band** selections at **1.40–1.42** (70.0–71.4%), each with its own
   ≥30-word write-up and sourced facts. Short-priced moneyline favourites keep their grade on the sport tables
   without a write-up rather than padding the picks page.
-- No individual player statistic is asserted in any write-up: no official player-level feed was captured in this
-  window. That gap against the brief is published as **VF-24**, not papered over.
+- The 14 featured write-ups assert no individual player statistic (**VF-24**). The 16 research-desk write-ups
+  added on 2026-10-22 (`/verified/predictions.html#research`) do name players, using only the NHL official score
+  feed leaders, the PDC Order of Merit and WST match-centre statistics captured that day (see **VF-33**).
 
 ## Repository layout
 

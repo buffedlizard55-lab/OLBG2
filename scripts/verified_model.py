@@ -726,7 +726,7 @@ def originate_snooker(players: dict, fixtures: list[dict]) -> list[dict]:
                 "id": f["id"],
                 "sport": "snooker",
                 "sport_name": "Snooker",
-                "competition": "BetVictor Northern Ireland Open 2026 — Round 2 (Best of 7 Frames)",
+                "competition": "BetVictor Northern Ireland Open 2026 — Round 3 (Best of 7 Frames)",
                 "date": f["date"],
                 "time": f["time"],
                 "home": f["p1"],
@@ -1183,6 +1183,57 @@ def main() -> None:
             }
         )
 
+    # Research-grade written selections (session 26963a2d): hand-written
+    # medium/high picks inside the -250..+10000 band whose every fact cites
+    # the official endpoint and fetch time. They are published alongside the
+    # featured write-ups (never replacing them) and re-validated here against
+    # the live rows so prose and table prices cannot drift apart.
+    research_doc = read_json(VERIFIED / "research_picks_26963a2d.json")
+    rows_by_id = {m["id"]: m for m in all_rows}
+    research: list[dict] = []
+    for rp in research_doc["picks"]:
+        row = rows_by_id.get(rp["match_id"])
+        if row is None or row["line_status"] != "originated":
+            raise RuntimeError(f"Research pick {rp['match_id']} has no originated desk row")
+        if rp["model_probability"] >= 0.5:
+            live_prob = row["pick"]["probability"]
+            if row["pick"]["selection"] != rp["selection"] or abs(live_prob - rp["model_probability"]) > 0.0051:
+                raise RuntimeError(f"Research pick {rp['match_id']} drifted from desk row: {row['pick']['selection']} {live_prob}")
+        else:  # price-band underdog side of the desk's own 2-way line
+            live_prob = round(1.0 - row["pick"]["probability"], 4)
+            if abs(live_prob - rp["model_probability"]) > 0.0051:
+                raise RuntimeError(f"Research underdog pick {rp['match_id']} drifted: {live_prob}")
+        words = len(rp["text"].split())
+        if words < 30 or rp["selection"].split(" (")[0] not in rp["text"]:
+            raise AssertionError(f"Research pick {rp['match_id']} fails the 30-word / named-selection rule")
+        if len(rp["facts"]) < 3:
+            raise AssertionError(f"Research pick {rp['match_id']} has fewer than 3 official facts")
+        research.append(
+            {
+                "match_id": rp["match_id"],
+                "sport": row["sport"],
+                "sport_name": row["sport_name"],
+                "competition": row["competition"],
+                "event": rp["event"],
+                "time": row["time"],
+                "selection": rp["selection"],
+                "market": rp["market"],
+                "match_type": "research",
+                "probability": live_prob,
+                "fair_odds": fair_decimal(live_prob),
+                "fair_american": fair_american(live_prob),
+                "confidence": rp["confidence"],
+                "headline": rp["headline"],
+                "text": rp["text"],
+                "word_count": words,
+                "facts": [{"claim": f["claim"], "source": f["source"], "fetched_utc": f.get("fetched_utc")} for f in rp["facts"]],
+                "caveats": rp.get("caveats", []),
+                "official_url": rp["official_url"],
+                "olbg_url": row.get("olbg_url"),
+            }
+        )
+        row["research_pick"] = {"selection": rp["selection"], "confidence": rp["confidence"], "fair_american": fair_american(live_prob)}
+
     counts = {
         "total_rows": len(all_rows),
         "originated_rows": len(originated),
@@ -1191,9 +1242,21 @@ def main() -> None:
         "medium_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "medium"),
         "low_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "low"),
         "featured": len(featured_rows),
+        "research": len(research),
     }
     write_json(VERIFIED / "matches.json", {"captured_at": captured_at, "counts": counts, "matches": all_rows})
-    write_json(VERIFIED / "predictions.json", {"captured_at": captured_at, "min_words": 30, "count": len(predictions), "predictions": predictions})
+    write_json(
+        VERIFIED / "predictions.json",
+        {
+            "captured_at": captured_at,
+            "min_words": 30,
+            "count": len(predictions),
+            "predictions": predictions,
+            "research_count": len(research),
+            "research_rule": research_doc["confidence_rule"],
+            "research": research,
+        },
+    )
     band_selections = [
         {
             "id": m["id"],

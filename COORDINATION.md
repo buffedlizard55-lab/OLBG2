@@ -1632,7 +1632,7 @@ Rules for this session: nothing is published unless an official page returned it
 | D3 | Multi-sport fixture inventory & independent multi-market line origination (`207` deduplicated fixtures: `167` originated across Win Match / 1X2 / Moneyline, Handicap / Spread / Puck / Run / Frame / Leg Line, Match Total Over/Under + Alternate In-Band Lines; `40` unconfirmed rows left strictly blank `—` and flagged) | **done** | `arena/ddcbf63c-olbg2` | `scripts/board_seed.py`, `scripts/board_model.py`, `data/board/inputs.json`, `data/board/matches.json`, `data/board/flagged.json`, `data/board/sports.json` |
 | D4 | High-confidence picks strictly inside `[-250, +10000]` fair odds (`1.40–101.00` decimal): `35` unique `85–108`-word non-robotic human predictions (`22` strict `>= 70%` win-probability in-band selections + `13` multi-factor conviction primary-market winners) including **team + named player + current form + dated recent match history + explicit betting selection**, every fact hyperlinked to its official source | **done** | `arena/ddcbf63c-olbg2` | `data/board/predictions.json`, `scripts/board_model.py` |
 | D5 | Clean GH Pages dashboard (`board/index.html`, `board/matches.html`, `board/picks.html`, `board/flagged.html`, `board/sources.html`, `board/audit.html`, `board/sports/<slug>.html` for all 17 sports, `board/assets/style.css`, `board/assets/app.js`) + automated test suite (`tests/test_board_ddcbf63c.py`, 85 total repo tests passing) | **done** | `arena/ddcbf63c-olbg2` | `scripts/board_build.py`, `board/**`, `tests/test_board_ddcbf63c.py` |
-| D6 | Rebase on latest `main`, run full repo build & link verification + unit tests, open PR → `main`, self-merge after CI passes, confirm GitHub Pages deploy & live URLs, and record PR + merge SHA + live verification in `COORDINATION.md` | **in progress** | `arena/ddcbf63c-olbg2` | `COORDINATION.md` |
+| D6 | Rebase on latest `main`, run full repo build & link verification + unit tests, open PR → `main`, self-merge after CI passes, confirm GitHub Pages deploy & live URLs, and record PR + merge SHA + live verification in `COORDINATION.md` | **done** (PR [#75](https://github.com/buffedlizard55-lab/OLBG2/pull/75) merged as `5d10d5b4dc4df44703e4a23d93a47e6425d2b67e`) | `arena/ddcbf63c-olbg2` | `COORDINATION.md` |
 
 ### Verification & Audit Summary — `arena/ddcbf63c-olbg2` (2026-10-22 UTC)
 
@@ -1652,3 +1652,13 @@ Rules for this session: nothing is published unless an official page returned it
   - `BA-04`: Aligned confidence grading with the `[-250, +10000]` (`1.40–101.00` decimal) focus band so `>= 70%` in-band selections and multi-factor conviction primary-market winners carry `high` confidence.
 
 **Rules enforced in `arena/ddcbf63c-olbg2`:** Zero bookmaker prices or tipster consensus percentages are read or used. Every published value comes from an official governing-body/league/tour page fetched and logged with its UTC timestamp in this session; anything unconfirmed server-side remains blank (`—`) and is published with its source link on `board/flagged.html`.
+
+### Publication record — session `arena/ddcbf63c-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#75](https://github.com/buffedlizard55-lab/OLBG2/pull/75) — Unified 207-fixture `/board/` origination layer, 35 player-verified in-band predictions & audit |
+| Merge | **Merged** 2026-10-22 07:59:52 UTC as `5d10d5b4dc4df44703e4a23d93a47e6425d2b67e` |
+| PR Validate | `Validate Pages content` **success**, run [39744232554](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39744232554) |
+| Main Validate & Pages | `Validate Pages content` on `main` **success**, run [39744471164](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39744471164); `Deploy Pages` run [39744470953](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39744470953) |
+| Session status | All tasks D1–D6 **done** and published to `main`. |

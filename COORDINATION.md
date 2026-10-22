@@ -1652,3 +1652,32 @@ Rules for this session: nothing is published unless an official page returned it
   - `BA-04`: Aligned confidence grading with the `[-250, +10000]` (`1.40–101.00` decimal) focus band so `>= 70%` in-band selections and multi-factor conviction primary-market winners carry `high` confidence.
 
 **Rules enforced in `arena/ddcbf63c-olbg2`:** Zero bookmaker prices or tipster consensus percentages are read or used. Every published value comes from an official governing-body/league/tour page fetched and logged with its UTC timestamp in this session; anything unconfirmed server-side remains blank (`—`) and is published with its source link on `board/flagged.html`.
+---
+
+## Session `arena/7f261be1-olbg2` — OLBG reverse-engineering audit, 17-sport live primary-source verification & origination desk (`/slate/`), and `-250..+10000` human predictions
+
+**Session ID:** `arena/7f261be1-olbg2` · **Branch:** `arena/7f261be1-olbg2` (fixed by Arena session tracking) · **Updated:** 2026-10-22 UTC (synced with `origin/main` `49ba8bf` / PR #73).
+
+**Active concurrent sessions respected (strictly zero file-scope overlap):**
+- `arena/1352b77f-olbg2` (root `/verified/` & shared root files) — untouched
+- `arena/c12bdcd7-olbg2` (PR #54 takeover, `scripts/build_site.py`, `data/forward/**`, `data/verified/inputs.json`) — untouched
+- `arena/42c8f6be-olbg2` (`/hub/**` namespace) — untouched
+- `arena/ddcbf63c-olbg2` (`/board/**` namespace) — untouched
+
+| # | Task | Status | Owner | File scope (strictly disjoint) |
+|---|---|---|---|---|
+| S1 | Claim board, fetch all remote branches, verify 0 file-scope conflicts | **done** | `arena/7f261be1-olbg2` | `COORDINATION.md` (append-only) |
+| S2 | Line-by-line repo review (`data/matches.json`, `data/verified/*`, `data/forward/*`, `data/live/*`, `scripts/*.py`) + live 2026-10-22 official-source verification across all 17 eligible OLBG sports + 8 excluded sports (`A-01..A-14`) | **done** | `arena/7f261be1-olbg2` | `research/olbg-audit-7f261be1.md`, `data/slate/sources.json`, `data/slate/repo_audit.json` |
+| S3 | Multi-sport fixture seed & independent multi-market line origination across all 17 eligible sports (15 active originated sports = 148 matches + 23 honestly unlined rows left blank across 8 sub-slates = 171 verified fixtures) | **done** | `arena/7f261be1-olbg2` | `scripts/slate_seed.py`, `scripts/slate_model.py`, `data/slate/inputs.json`, `data/slate/matches.json`, `data/slate/flagged.json` |
+| S4 | High-confidence human predictions (`36` selections across `13` sports, `45–52` words each, unique non-templated prose, verbatim-verified participants, current form + recent history + explicit selection strictly inside `[-250, +10000]`) | **done** | `arena/7f261be1-olbg2` | `data/slate/predictions.json`, `scripts/slate_model.py` |
+| S5 | Clean GitHub Pages dashboard (`26` HTML pages: `slate/{index,matches,picks,flagged,audit,methodology,sources,excluded}.html` + `slate/sports/{index,<17 slugs>}.html` + `slate/assets/{style.css,app.js}`) + deterministic test suite (`86/86` passing) | **done** | `arena/7f261be1-olbg2` | `scripts/slate_build.py`, `slate/**`, `tests/test_slate.py` |
+| S6 | Sync with latest `origin/main`, run full build + integration/link checks + unit tests, open & merge PR → `main`, verify live GitHub Pages deployment, record PR & live URLs in `COORDINATION.md` | **in progress** | `arena/7f261be1-olbg2` | `COORDINATION.md` |
+
+**Cross-scope nav request for root-layer owner (`arena/c12bdcd7-olbg2` / `scripts/build_site.py`):**
+- Once `/slate/` merges to `main`, please add a top-bar navigation link `"Complete 17-Sport Slate (/slate/)" -> slate/index.html` alongside `verified/index.html` and `forward/index.html` on next root rebuild (left untouched here to avoid conflicts on root HTML files).
+
+**Cross-session findings logged for root/verified/forward owners (not edited directly to respect active claims):**
+1. **Darts withdrawal (`A-01`):** `data/verified/inputs.json` (`darts_fixtures[1]`, `pdc-32330`) still lists `Danny Noppert vs Stephen Bunting`; official `pdc.tv` preview (`2026-10-21`) confirms Stephen Bunting withdrew and was replaced by **Ritchie Edhouse** (`(6) Danny Noppert v Ritchie Edhouse`).
+2. **Golf stale tournament (`A-02`):** `data/verified/inputs.json` (`golf-utah-2026`) lists `Bank of Utah Championship` on `2026-10-22`, which concluded on `2026-10-04` (won by Austin Smotherman at `-26`, `258`). The live 22–25 Oct 2026 PGA Tour event on `pgatour.com` is the **Butterfield Bermuda Championship** at Port Royal GC, Southampton.
+3. **Formula 1 active race (`A-03`):** `VF-17` states F1 is idle until Las Vegas (Nov 20–22); official `formula1.com/en/racing/2026/united-states` confirms the **2026 United States Grand Prix (Circuit of The Americas, Austin)** runs **23–25 Oct 2026** (Race Sun 25 Oct `20:00 UTC`).
+4. **Six previously empty sports resolved on official sources (`A-04..A-09`):** ATP 250 daily schedules (`Almaty 9410`, `Brussels 7485`, `Lyon 496`), ICC Men's ODI Tri-Series (`PAK/ENG/SL` in Rawalpindi & Lahore, `274144`), RLWC 2026 Men's Round 2 (`nrl.com/draw/?competition=131`), NAB AFLW Round 11 (`afl.com.au/aflw`), LoL Worlds 2026 Swiss Round 1 (`lolesports.com` / `liquipedia.net`), and 6 of 8 Belfast Northern Ireland Open Last 16 ties (`wst.tv/players/`).

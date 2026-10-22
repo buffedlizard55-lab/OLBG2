@@ -1334,3 +1334,29 @@ The picks introduction now handles an empty outside-band category without implyi
 ### Publication record — 2026-10-22
 
 [PR #59](https://github.com/buffedlizard55-lab/OLBG2/pull/59) merged into `main` as `3a48e3d`; PR validation passed. [Deploy Pages run 39713298932](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713298932) succeeded for that commit. Site: https://buffedlizard55-lab.github.io/OLBG2/picks.html . This records deployment status from GitHub Actions, not an independent browser fetch of the live URL.
+
+---
+
+## Session `arena/53f18e11-olbg2` — independent official-source repo audit, expanded 2026-10-22 multi-sport board & in-band match-winner/multi-market origination (2026-10-22)
+
+**Session ID:** `arena/53f18e11-olbg2` · **Branch:** `arena/53f18e11-olbg2` (fixed by the Arena environment; creating/switching to `session-*` branches is disabled here) · **Claimed:** 2026-10-22 02:51 UTC before any implementation edit.
+
+**Parallel-session coordination check before claim (`git fetch origin` across all heads):**
+- `origin/main` is at `f503c50` (`Merge pull request #60 from buffedlizard55-lab/arena/53b0cd38-olbg2` — `53b0cd38` completed and closed).
+- Active concurrent branches detected on `origin` and respected with **strictly disjoint file scopes** during task execution:
+  - `arena/072755db-olbg2`: owns `research/verification-072755db.md`, `scripts/verified_seed.py`, `scripts/verified_model.py`, `data/verified/**`, `tests/test_verified_pipeline.py` (plus deferred shared integration).
+  - `arena/dbfb6608-olbg2`: owns `research/market-evidence-audit-dbfb6608.md` (read-only audit).
+  - `arena/9a2928c8-olbg2`: owns `research/olbg-reverse-engineering-9a2928c8.md`, `research/line-by-line-verification-9a2928c8.md`, `data/verified/{sports,flagged,predictions,band}.json`, `verified/predictions.html`, `index.html`, `picks.html`, `sports/**`, `assets/**`, `scripts/build_site.py`.
+  - `arena/26963a2d-olbg2`: owns `research/reverify-26963a2d.md`, `data/verified/*_26963a2d.json`.
+  - `arena/1bb45081-olbg2` (open PR #54, <60 min old) & `arena/4daa1e65-olbg2` (<60 min old): untouched; neither taken over nor overwritten.
+
+| # | Task | Status | Owner | Exclusive file scope (zero overlap with active claims) |
+|---|---|---|---|---|
+| B1 | Line-by-line live official-source audit of all existing repo datasets (`data/verified/**`, `data/survey/**`, `data/live/**`, `data/desk/**`, archived `data/**`) + OLBG reverse-engineering re-verification; log cross-scope findings for files owned by active sessions rather than editing their files | in progress | `arena/53f18e11-olbg2` | `research/audit-53f18e11.md`, `data/board/repo_review.json`, `COORDINATION.md` (append-only) |
+| B2 | Capture fresh 2026-10-22 official governing-body schedules, standings, player stats & recent match history across all 17 eligible OLBG sports (strictly excluding soccer/football, boxing, ufc/mma, american football, hurling, horse racing, cycling, specials), closing unlined/missing sports where live official primary feeds exist and leaving unconfirmable fields blank (`null`) with explicit per-row flags | pending | `arena/53f18e11-olbg2` | `scripts/board_seed.py`, `data/board/{sports,inputs,flagged}.json` |
+| B3 | Multi-market line origination (`Win Match / Moneyline / 1X2`, `Handicap / Spread / Puck Line / Run Line / Set Handicap`, `Match Total Over/Under`, tournament markets) + match-winner picks (`low` / `medium` / `high`) + dedicated focus on in-band high-confidence selections (`-250` to `+10000` American odds) with unique ≥30-word human predictions citing verified team, player, current form, recent match history, and explicit betting selection | pending | `arena/53f18e11-olbg2` | `scripts/board_model.py`, `data/board/{matches,predictions}.json` |
+| B4 | Clean dashboard sub-site (`/board/`) with landing page, all 17 eligible sport subpages, all-matches table, in-band picks & predictions page, repo review page, methodology page, sources register, and dedicated `Flagged for Review` page (`board/flagged.html`), plus automated structural/source/link verification suite | pending | `arena/53f18e11-olbg2` | `scripts/board_build.py`, `scripts/board_verify.py`, `board/**`, `tests/test_board.py` |
+| B5 | Final integration after syncing `origin/main`: wire `/board/` cleanly into shared navigation/integration/CI without discarding any concurrent session's merged work, re-verify combined site line by line, run all test suites + build gates + cross-layer link check, open PR → merge → confirm GitHub Pages deployment | pending | `arena/53f18e11-olbg2` | shared integration outputs (only at final integration step after syncing `origin/main`) |
+
+**Strict non-hallucination rules:** every published value in `/board/` is verified directly from an official governing-body / league source fetched in this session with its exact official URL attached to the row; any unconfirmed field stays `null` (`—` in tables) and is published on `board/flagged.html`. No bookmaker odds are copied.
+

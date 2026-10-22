@@ -67,6 +67,12 @@ jobs:
           python scripts/atlas_verify.py
           python scripts/atlas_build.py
 
+      - name: Rebuild current capture desk (offline committed evidence)
+        run: |
+          python scripts/current_seed.py
+          python scripts/current_model.py
+          python scripts/current_build.py
+
       - name: Regenerate the root dashboard & integration layer
         run: python scripts/build_site.py
 
@@ -77,4 +83,4 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Fail if any generated page or data file is stale
-        run: git diff --exit-code -- verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets
+        run: git diff --exit-code -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets

@@ -234,3 +234,36 @@ official source consulted beside each. None blocks publication.
   touching a file other sessions own.
 * `scripts/integration_audit.py` reports zero cross-layer local link errors with this layer
   present.
+
+---
+
+## 9. Post-publication accuracy pass (same session, after PR #119 merged)
+
+Reading the deployed pages rather than the build log surfaced four headline numbers that were
+derived from the wrong field. None affected a price, a probability, a prediction or a flag, but
+each was a false statement on the landing page, so all four were fixed and then pinned by tests.
+
+| Rendered | Was | Should be | Cause |
+|---|---|---|---|
+| Index KPI "Disclosure flags" | 13 | **23** | counted only `matches.json["excluded"]`; the ten zero-row flags live in `sports[slug]["zero_row_flag"]` |
+| Index sentence "28 of the **57** picks" | 57 | **29** | denominator took `counts["fixture_rows"]` instead of `counts["band_picks"]` |
+| Index sport card "Snooker … **6** originated lines" | 6 | **4** | reused the fixture-row count for both halves of the sentence |
+| Sport page lede "6 fixtures … **6** originated lines" | 6 | **4** | same reuse, in `build_sport` |
+
+Fixes: two new helpers in `scripts/current_build.py` — `originated_by_sport()` and
+`total_flag_ids()` — so both figures are derived from `lines.json` and `matches.json` rather
+than restated. The flagged page lede now spells the accounting out ("23 distinct flag ids in
+total: 13 capture disclosures listed below, plus one zero-row flag for each of the 10 sports
+that publish no rows"), and the index KPI carries the same breakdown as its sub-label.
+
+Six tests were added as `TestHeadlineCounts` (`tests/test_current.py`, now **43 tests**): every
+index KPI equals its data field; the index flag count equals the set of distinct `CU-` ids
+published on the flagged page; the alternate-line sentence uses band picks as its denominator;
+every sport card and every sport page lede separates fixtures from originated lines and both
+sum to `counts["originated_rows"]`; and the flagged lede's arithmetic adds up. Repository suite
+**330 tests OK**, `integration_audit.py` reports 0 link errors, and the workflow's drift check
+is clean.
+
+**Lesson recorded for future sessions:** a deterministic rebuild and a green link audit both
+passed while four rendered numbers were wrong, because every test asserted on the data rather
+than on the rendered page. Assert on the HTML.

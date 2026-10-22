@@ -1,0 +1,258 @@
+{
+  "as_of": "2026-10-22 UTC",
+  "method": "Static repository scan + separately documented dated primary-source spot checks; not a live or exhaustive verification of every claim.",
+  "layers": {
+    "verified": {
+      "rows": 118,
+      "predictions": 14
+    },
+    "hub": {
+      "rows": 189,
+      "predictions": 25
+    },
+    "slate": {
+      "rows": 148,
+      "predictions": 36
+    },
+    "board": {
+      "rows": 207,
+      "predictions": 35
+    },
+    "forward": {
+      "rows": 93,
+      "predictions": 8
+    }
+  },
+  "scanned_rows": 755,
+  "scanned_predictions": 118,
+  "findings": [
+    {
+      "id": "A65-DARTS-board",
+      "sport": "Darts",
+      "layer": "board",
+      "row_id": "pdc-32330",
+      "published": "Danny Noppert vs Stephen Bunting",
+      "status": "PDC schedule supports pairing as of 21 Oct",
+      "issue": "The official PDC 19 Oct schedule and 21 Oct preview list Danny Noppert v Stephen Bunting. The slate asserts Bunting withdrew and Ritchie Edhouse replaced him, citing that 21 Oct preview, which does not support this replacement. A later PDC change is possible but has not been evidenced here.",
+      "official_value": "Danny Noppert vs Stephen Bunting (19–21 Oct PDC publications)",
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "secondary_official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+      "published_url": "https://www.pdc.tv/rankings",
+      "action": "Do not use slate's Edhouse selection, line or prediction until a newer PDC match source confirms replacement; revisit before play."
+    },
+    {
+      "id": "A65-DARTS-hub",
+      "sport": "Darts",
+      "layer": "hub",
+      "row_id": "pdc-32330",
+      "published": "Danny Noppert vs Stephen Bunting",
+      "status": "PDC schedule supports pairing as of 21 Oct",
+      "issue": "The official PDC 19 Oct schedule and 21 Oct preview list Danny Noppert v Stephen Bunting. The slate asserts Bunting withdrew and Ritchie Edhouse replaced him, citing that 21 Oct preview, which does not support this replacement. A later PDC change is possible but has not been evidenced here.",
+      "official_value": "Danny Noppert vs Stephen Bunting (19–21 Oct PDC publications)",
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "secondary_official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+      "published_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "action": "Do not use slate's Edhouse selection, line or prediction until a newer PDC match source confirms replacement; revisit before play."
+    },
+    {
+      "id": "A65-DARTS-slate",
+      "sport": "Darts",
+      "layer": "slate",
+      "row_id": "pdc-32330",
+      "published": "Danny Noppert vs Ritchie Edhouse",
+      "status": "Conflicting publisher snapshots; replacement unverified",
+      "issue": "The official PDC 19 Oct schedule and 21 Oct preview list Danny Noppert v Stephen Bunting. The slate asserts Bunting withdrew and Ritchie Edhouse replaced him, citing that 21 Oct preview, which does not support this replacement. A later PDC change is possible but has not been evidenced here.",
+      "official_value": "",
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "secondary_official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+      "published_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+      "action": "Do not use slate's Edhouse selection, line or prediction until a newer PDC match source confirms replacement; revisit before play."
+    },
+    {
+      "id": "A65-DARTS-verified",
+      "sport": "Darts",
+      "layer": "verified",
+      "row_id": "pdc-32330",
+      "published": "Danny Noppert vs Stephen Bunting",
+      "status": "PDC schedule supports pairing as of 21 Oct",
+      "issue": "The official PDC 19 Oct schedule and 21 Oct preview list Danny Noppert v Stephen Bunting. The slate asserts Bunting withdrew and Ritchie Edhouse replaced him, citing that 21 Oct preview, which does not support this replacement. A later PDC change is possible but has not been evidenced here.",
+      "official_value": "Danny Noppert vs Stephen Bunting (19–21 Oct PDC publications)",
+      "official_url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+      "secondary_official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+      "published_url": "https://www.pdc.tv/rankings",
+      "action": "Do not use slate's Edhouse selection, line or prediction until a newer PDC match source confirms replacement; revisit before play."
+    },
+    {
+      "id": "A65-GOLF-board",
+      "sport": "Golf",
+      "layer": "board",
+      "row_id": "golf-utah-2026",
+      "published": "Bank of Utah Championship — 22 Oct 2026",
+      "status": "Contradicted by PGA Tour calendar",
+      "issue": "Official PGA Tour event page dates the Bank of Utah Championship 1–4 Oct 2026, not 22 Oct. The 22–25 Oct tournament is the Butterfield Bermuda Championship; the Utah entry is a stale event, not a live fixture.",
+      "official_value": "Bank of Utah Championship: 1–4 Oct 2026; Butterfield Bermuda Championship: 22–25 Oct 2026",
+      "official_url": "https://www.pgatour.com/tournaments/2026/bank-of-utah-championship/R2026554/overview",
+      "secondary_official_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528/overview",
+      "published_url": "https://www.pgatour.com/schedule",
+      "action": "Suppress the stale row in originating layer; do not infer a field or market for the replacement."
+    },
+    {
+      "id": "A65-GOLF-hub",
+      "sport": "Golf",
+      "layer": "hub",
+      "row_id": "golf-utah-2026",
+      "published": "Bank of Utah Championship — 22 Oct 2026",
+      "status": "Contradicted by PGA Tour calendar",
+      "issue": "Official PGA Tour event page dates the Bank of Utah Championship 1–4 Oct 2026, not 22 Oct. The 22–25 Oct tournament is the Butterfield Bermuda Championship; the Utah entry is a stale event, not a live fixture.",
+      "official_value": "Bank of Utah Championship: 1–4 Oct 2026; Butterfield Bermuda Championship: 22–25 Oct 2026",
+      "official_url": "https://www.pgatour.com/tournaments/2026/bank-of-utah-championship/R2026554/overview",
+      "secondary_official_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528/overview",
+      "published_url": "https://www.pgatour.com/schedule",
+      "action": "Suppress the stale row in originating layer; do not infer a field or market for the replacement."
+    },
+    {
+      "id": "A65-GOLF-verified",
+      "sport": "Golf",
+      "layer": "verified",
+      "row_id": "golf-utah-2026",
+      "published": "Bank of Utah Championship — 22 Oct 2026",
+      "status": "Contradicted by PGA Tour calendar",
+      "issue": "Official PGA Tour event page dates the Bank of Utah Championship 1–4 Oct 2026, not 22 Oct. The 22–25 Oct tournament is the Butterfield Bermuda Championship; the Utah entry is a stale event, not a live fixture.",
+      "official_value": "Bank of Utah Championship: 1–4 Oct 2026; Butterfield Bermuda Championship: 22–25 Oct 2026",
+      "official_url": "https://www.pgatour.com/tournaments/2026/bank-of-utah-championship/R2026554/overview",
+      "secondary_official_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528/overview",
+      "published_url": "https://www.pgatour.com/schedule",
+      "action": "Suppress the stale row in originating layer; do not infer a field or market for the replacement."
+    },
+    {
+      "id": "A65-ES-1",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-1",
+      "published": "Gen.G Esports vs Invictus Gaming",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "Gen.G Esports vs Invictus Gaming",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    },
+    {
+      "id": "A65-ES-2",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-2",
+      "published": "Hanwha Life Esports vs Top Esports",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "Hanwha Life Esports vs Top Esports",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    },
+    {
+      "id": "A65-ES-3",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-3",
+      "published": "Bilibili Gaming vs Movistar KOI",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "Bilibili Gaming vs Movistar KOI",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    },
+    {
+      "id": "A65-ES-4",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-4",
+      "published": "Anyone's Legend vs Karmine Corp",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "Anyone's Legend vs Karmine Corp",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    },
+    {
+      "id": "A65-ES-5",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-5",
+      "published": "G2 Esports vs Dplus KIA",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "G2 Esports vs Dplus KIA",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    },
+    {
+      "id": "A65-ES-6",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-6",
+      "published": "Team Liquid vs CTBC Flying Oyster",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    },
+    {
+      "id": "A65-ES-7",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-7",
+      "published": "T1 vs LOS",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    },
+    {
+      "id": "A65-ES-8",
+      "sport": "eSports",
+      "layer": "slate",
+      "row_id": "lol-w26-r1-8",
+      "published": "Secret Whales vs LYON",
+      "status": "Fixture pairing on official schedule; published citation unverified",
+      "issue": "The published 'official_url' and player-input links point to Liquipedia, a community wiki, not Riot Games. The Riot schedule displays this pairing (some team names/order differ); model form inputs and price have NOT been reverified.",
+      "official_value": "",
+      "official_url": "https://lolesports.com/en-US/",
+      "published_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "action": "Replace fixture citation with Riot match/schedule URL; separately verify all model inputs before calling the line verified."
+    }
+  ],
+  "prediction_issues": [
+    {
+      "layer": "slate",
+      "match_id": "lol-w26-r1-1",
+      "issue": "non-primary main citation"
+    }
+  ],
+  "participant_conflicts": [
+    {
+      "row_id": "pdc-32330",
+      "layers": {
+        "verified": "Stephen Bunting",
+        "hub": "Stephen Bunting",
+        "slate": "Ritchie Edhouse",
+        "board": "Stephen Bunting"
+      }
+    },
+    {
+      "row_id": "nhl-2026020166",
+      "layers": {
+        "slate": "Montréal Canadiens",
+        "board": "Montreal Canadiens",
+        "forward": "Montreal Canadiens"
+      }
+    }
+  ]
+}

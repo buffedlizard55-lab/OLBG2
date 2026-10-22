@@ -52,15 +52,21 @@ def poisson_pmf(lam, n_max):
 
 
 def price(p):
-    """No-vig fair decimal + American from a model probability."""
+    """No-vig fair decimal + American from a model probability.
+
+    The probability is rounded to four decimals FIRST and every published price
+    is derived from that rounded number, so any reader can reproduce the decimal
+    and American figures from the probability printed beside them.
+    """
     if p <= 0.0:
         return {"p": 0.0, "fair_decimal": None, "fair_american": None, "american_exact": None}
-    decimal = 1.0 / p
+    pr = round(p, 4)
+    decimal = 1.0 / pr
     if decimal >= 2.0:
         american = 100.0 * (decimal - 1.0)
     else:
         american = -100.0 / (decimal - 1.0)
-    return {"p": round(p, 4), "fair_decimal": round(decimal, 2),
+    return {"p": pr, "fair_decimal": round(decimal, 2),
             "fair_american": int(round(american)), "american_exact": american}
 
 
@@ -500,8 +506,9 @@ def markets_for(match, dist, cfg):
             entry = {"side": side, "selection": "%s %+.1f" % (who, posted),
                      "line": line, "posted": posted, "p": p}
             entry.update(price(p))
-            entry["in_band"] = in_band(p)
-            entry["confidence"] = label(p, entry["in_band"])
+            entry["in_band"] = in_band(entry["p"])
+            entry["confidence"] = label(entry["p"], entry["in_band"])
+            entry.pop("american_exact", None)
             hc.append(entry)
     markets.append({"market": "handicap", "line": nat_line, "outcomes": hc})
 
@@ -517,8 +524,9 @@ def markets_for(match, dist, cfg):
         for side, p in (("over", p_over), ("under", 1.0 - p_over)):
             entry = {"side": side, "selection": "%s %.1f" % (side.title(), line), "line": line, "p": p}
             entry.update(price(p))
-            entry["in_band"] = in_band(p)
-            entry["confidence"] = label(p, entry["in_band"])
+            entry["in_band"] = in_band(entry["p"])
+            entry["confidence"] = label(entry["p"], entry["in_band"])
+            entry.pop("american_exact", None)
             tot.append(entry)
     markets.append({"market": "match total", "line": nat_t, "outcomes": tot})
     return markets, mu, mu_t
@@ -582,8 +590,9 @@ def originate_f1(match, inputs):
         entry = {"side": "driver", "selection": d["driver"], "line": "", "p": p,
                  "points": d["pts"], "pos": d["pos"], "team": d["team"]}
         entry.update(price(p))
-        entry["in_band"] = in_band(p)
-        entry["confidence"] = label(p, entry["in_band"])
+        entry["in_band"] = in_band(entry["p"])
+        entry["confidence"] = label(entry["p"], entry["in_band"])
+        entry.pop("american_exact", None)
         outrights.append(entry)
     outrights.sort(key=lambda o: -o["p"])
     top2 = cfg["drivers"][:2]
@@ -593,8 +602,9 @@ def originate_f1(match, inputs):
     for name, p in ((a["driver"], pa), (b["driver"], 1.0 - pa)):
         entry = {"side": "driver", "selection": name, "line": "", "p": p}
         entry.update(price(p))
-        entry["in_band"] = in_band(p)
-        entry["confidence"] = label(p, entry["in_band"])
+        entry["in_band"] = in_band(entry["p"])
+        entry["confidence"] = label(entry["p"], entry["in_band"])
+        entry.pop("american_exact", None)
         h2h.append(entry)
     markets = [
         {"market": "race winner (outright)", "line": "", "outcomes": outrights},

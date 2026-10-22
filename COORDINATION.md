@@ -2000,6 +2000,32 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 | Publication gate + tests | done | arena/17c50bb7-olbg2 | Local CI rebuild and 145 tests pass |
 | Official-source access / completeness | needs review | arena/17c50bb7-olbg2 | Published publication.html; no accessible official response content |
 | PR, merge, deploy | in progress | arena/17c50bb7-olbg2 | Remote verification follows |
+
+---
+
+## Session `arena/f048d3a9-olbg2` — Fresh line-by-line re-audit, staleness & in-band pick check (`/fresh/`)
+
+**Session ID:** `arena/f048d3a9-olbg2` · **Branch:** `arena/f048d3a9-olbg2` (fixed by Arena tracking) · **Claimed:** 2026-10-22 UTC, before implementation edits.
+
+**Prior scopes preserved (not edited):** all existing layers (`site/`, `survey/`, `live/`, `verified/`, `forward/`, `board/`, `hub/`, `slate/`, `center/`, `final/`, `portal/`, `evidence/`, `audit65/`), their data/scripts/tests, root generated HTML, `scripts/build_site.py`.
+
+| # | Task | Status | Owner | File scope (new files only) |
+|---|---|---|---|---|
+| N1 | Claim + repo recon (145 tests pass on arrival) | in progress | arena/f048d3a9-olbg2 | `COORDINATION.md` (append-only) |
+| N2 | Mechanical line-by-line audit of unified desk: duplicates, excluded-sport leakage, odds/probability math, confidence-gate (-250..+10000, >=70%), prediction word-count/uniqueness, source-link presence, staleness vs 2026-10-22 | unclaimed→claimed | arena/f048d3a9-olbg2 | `scripts/fresh_audit.py`, `data/fresh/audit.json`, `research/fresh-f048d3a9.md` |
+| N3 | Attempt first-hand official-source re-verification via available tools; blank/unverified anything not confirmed | unclaimed→claimed | arena/f048d3a9-olbg2 | `research/fresh-f048d3a9.md`, `data/fresh/audit.json` |
+| N4 | `/fresh/` dashboard: landing, all-rows table, picks check, flagged page, sources; deterministic builder + tests | unclaimed→claimed | arena/f048d3a9-olbg2 | `scripts/fresh_build.py`, `fresh/**`, `tests/test_fresh.py` |
+| N5 | Integration: full build/tests/link audit, PR → merge, confirm Pages live, record here | unclaimed→claimed | arena/f048d3a9-olbg2 | shared outputs at integration only |
+
+**Rules:** no existing dataset value is edited in place; discrepancies are published as flagged items with official source links and blank corrected values where unconfirmed. High = model prob ≥70% AND fair American in [-250,+10000].
+
+### Session f048d3a9 results (2026-10-22 UTC)
+- N2 done: `scripts/fresh_audit.py` → `data/fresh/audit.json`. 188 rows / 30 predictions mechanically audited: 0 excluded leaks, 0 duplicates, 0 probability/odds arithmetic failures, all predictions ≥30 words & unique & sourced.
+- **New flags FR-01…FR-11** (on `fresh/flagged.html`): FR-01 high — 2 research predictions labelled high below 70% (NY Islanders 69.71%, Gian van Veen 66.8%); FR-02 same-selection label conflicts (3); FR-03 README claims 178 rows vs actual 188; FR-04 tennis/Aussie rules/eSports zero rows; FR-05 44 competition-scope sources; FR-06 blanks (55 venue / 34 summary / 34 unlined); FR-07 local-vs-UTC date convention (10 rows); FR-08 sample-only first-hand verification; FR-09 EuroLeague 18:15 vs 14:15 ambiguity; FR-10 American-odds rounding convention (11); FR-11 duplicate "Back Vodacom Bulls" opening.
+- N3 done (sample): NHL NSH@BOS + MIN@CGY (nhl.com titles, Oct 22 2026), EuroLeague Panathinaikos v Baskonia (ranks 1/20 confirmed), OLBG hub URL schema re-confirmed live (incl. Price v Cross event_id=32325 = row pdc-32325). Sandbox curl to sports hosts returns empty; rest NOT re-verified. Detail: `research/fresh-f048d3a9.md`.
+- N4 done: `fresh/` 6 pages (dashboard, 188-row table, predictions check, flagged, sources, methodology) via `scripts/fresh_build.py`; `tests/test_fresh.py` 6 tests. Full suite: **151 tests OK**, no upstream generated-file drift.
+- Cross-scope requests: (1) verified-desk owner regrade FR-01/FR-02, fix README counts; (2) root nav owner add `/fresh/` link. Neither file edited by this session.
+- N5 in progress: PR → merge → Pages check follows.
 ---
 
 ## Session `arena/dc72bac4-olbg2` — reproducibility and publication-integrity audit
@@ -2081,6 +2107,10 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 | Open review | Board 207→277 rebuild mismatch and workflow drift coverage remain needs review/cross-scope requests. No external official-source content was freshly verified by this session. |
 
 **Post-merge copy clarification:** the root dashboard itself publishes 14 price-band writeups; the separate `/verified/` research page contains 16 additional writeups. The README now distinguishes these rather than summing them as 30 root predictions. This clarification is included in the follow-up publication record.
+
+**Merge-conflict log (f048d3a9, 2026-10-22):** merging `origin/main` (PR #92/#93, session dc72bac4: reproducibility audit, `review/`, README/root-count clarification) into this branch conflicted only at the COORDINATION.md append point. Resolved append-only: both sessions' records retained in full, no other file conflicted, no dc72bac4 file edited. Note: dc72bac4's README count clarification may partially address FR-03 — FR flags remain published as captured at audit time; upstream owner to confirm closure.
+
+**FR-03 closure (f048d3a9, on integration):** dc72bac4's merged README clarification (188 rows across 14 of 17 sports) resolves FR-03. `fresh_audit.py` was regenerated post-merge and no longer raises FR-03; the flag remains documented as historical in `research/fresh-f048d3a9.md`.
 ---
 
 ## Session `arena/aa8e25ef-olbg2` — final line-by-line verification, prediction audit, and publication integration (2026-10-22)
@@ -2129,6 +2159,7 @@ Local checks after the final page/test edits: `python3 -m unittest discover -s t
 
 *This section is completed after the PR merge and Pages deploy are confirmed live. See below for PR link, merge SHA, Validate/Pages runs, and live URL checks. Until then, A6 remains “in progress”.*
 
+**Second merge-conflict log (f048d3a9, 2026-10-22):** PR #95 (session aa8e25ef) merged while PR #94 waited; re-merging `origin/main` conflicted again only at the COORDINATION.md append point. Resolved append-only retaining both records; no aa8e25ef file edited.
 ---
 
 ## Session `arena/3552df3e-olbg2` — cross-layer reconciliation console (`/reconcile/`)

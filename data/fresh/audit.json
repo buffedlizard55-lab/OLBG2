@@ -1,0 +1,249 @@
+{
+ "session": "arena/f048d3a9-olbg2",
+ "captured_at": "2026-10-22",
+ "scope": "Mechanical audit of data/verified unified desk (188 rows, 30 predictions). No upstream value edited.",
+ "checks": {
+  "excluded_sport_leakage_rows": [],
+  "eligible_sports_total": 17,
+  "sports_with_rows": [
+   "baseball",
+   "basketball",
+   "cricket",
+   "darts",
+   "gaelic-football",
+   "golf",
+   "greyhounds",
+   "handball",
+   "ice-hockey",
+   "motor-racing",
+   "rugby-league",
+   "rugby-union",
+   "snooker",
+   "volleyball"
+  ],
+  "eligible_sports_with_zero_rows": [
+   "aussie-rules",
+   "esports",
+   "tennis"
+  ],
+  "duplicate_ids": [],
+  "duplicate_fixtures": [],
+  "rows_without_official_https_url": [],
+  "rows_without_olbg_url": [],
+  "source_scope_counts": {
+   "fixture": 144,
+   "competition": 44
+  },
+  "blank_venue_rows": 55,
+  "blank_summary_rows": 34,
+  "unlined_rows": 34,
+  "winner_prob_sum_failures": [],
+  "fair_odds_failures": [],
+  "american_conversion_failures": [
+   "ehfcl-202711020101041",
+   "ehfcl-202711020101049",
+   "f1-2026-drivers",
+   "nba-0022600017",
+   "nba-0022600110",
+   "nba-0022600128",
+   "nba-0022600130",
+   "nba-0022600133",
+   "nba-0022600141",
+   "nba-0022600142",
+   "pdc-32328"
+  ],
+  "handicap_total_prob_sum_failures": [],
+  "confidence_gate_violations": [
+   {
+    "match_id": "nhl-2026020159",
+    "field": "predictions.json:research",
+    "selection": "New York Islanders (Moneyline)",
+    "probability": 0.6971,
+    "fair_american": -233
+   },
+   {
+    "match_id": "pdc-32323",
+    "field": "predictions.json:research",
+    "selection": "Gian van Veen (Match Winner)",
+    "probability": 0.668,
+    "fair_american": -200
+   }
+  ],
+  "cross_field Confidence label_conflicts": [
+   {
+    "match_id": "nhl-2026020159",
+    "selection": "New York Islanders (Moneyline)",
+    "labels": {
+     "pick": "medium",
+     "research_pick": "high"
+    }
+   },
+   {
+    "match_id": "urc-292609",
+    "selection": "Connacht Rugby (1X2 Match Winner)",
+    "labels": {
+     "pick": "high",
+     "band_pick": "high",
+     "featured": "high",
+     "research_pick": "medium"
+    }
+   },
+   {
+    "match_id": "pdc-32323",
+    "selection": "Gian van Veen (Match Winner)",
+    "labels": {
+     "pick": "medium",
+     "research_pick": "high"
+    }
+   }
+  ],
+  "predictions_total": 30,
+  "predictions_under_30_words": [],
+  "prediction_word_count_field_mismatches": [],
+  "duplicate_prediction_texts": 0,
+  "duplicate_prediction_openings": [
+   "Back Vodacom Bulls"
+  ],
+  "predictions_with_unknown_match_id": [],
+  "predictions_without_fact_sources": [],
+  "high_predictions_in_band": 16,
+  "rows_dated_before_capture": [],
+  "date_vs_utc_time_mismatch_rows": [
+   "nhl-2026020160",
+   "nhl-2026020161",
+   "nhl-2026020162",
+   "nhl-2026020163",
+   "nhl-2026020164",
+   "nhl-2026020165",
+   "mlb-849805",
+   "mlb-849802",
+   "mlb-849804",
+   "mlb-849803"
+  ],
+  "counts_field_in_matches_json": {
+   "total_rows": 188,
+   "originated_rows": 154,
+   "unlined_rows": 34,
+   "high_confidence": 3,
+   "medium_confidence": 89,
+   "low_confidence": 62,
+   "featured": 14,
+   "research": 16
+  },
+  "flagged_items_upstream": 35,
+  "readme_claimed_rows": null,
+  "actual_rows": 188
+ },
+ "flags": [
+  {
+   "id": "FR-01",
+   "severity": "high",
+   "category": "Confidence gate violation",
+   "item": "2 selection(s) labelled 'high' below 70% model probability",
+   "detail": "Uniform gate (README/METHODOLOGY): high requires prob >= 0.70 AND fair American in [-250,+10000]. Offenders: nhl-2026020159 (predictions.json:research) prob=0.6971 amer=-233; pdc-32323 (predictions.json:research) prob=0.668 amer=-200. Example row pick in matches.json for pdc-32323 is 'medium' at 0.668 while the research write-up for the same selection says 'high' \u2014 same selection, two labels.",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "PDC Order of Merit / rankings (official)",
+   "source_url": "https://www.pdc.tv/rankings"
+  },
+  {
+   "id": "FR-02",
+   "severity": "medium",
+   "category": "Cross-field label conflict",
+   "item": "3 match(es) carry different confidence labels in different fields of the same row",
+   "detail": "Fields compared: pick / band_pick / featured / research_pick in data/verified/matches.json. nhl-2026020159: {'pick': 'medium', 'research_pick': 'high'}; urc-292609: {'pick': 'high', 'band_pick': 'high', 'featured': 'high', 'research_pick': 'medium'}; pdc-32323: {'pick': 'medium', 'research_pick': 'high'}",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "NHL GameCenter (official)",
+   "source_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159"
+  },
+  {
+   "id": "FR-04",
+   "severity": "medium",
+   "category": "Coverage gap",
+   "item": "Eligible sports with zero rows in unified desk: aussie-rules, esports, tennis",
+   "detail": "Per sports.json status summaries: Tennis had no server-rendered next-round order of play on capture day; Aussie Rules is in AFL off-season; eSports listed 0 active OLBG tips. No rows were invented to fill these sports.",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "ATP rankings (official)",
+   "source_url": "https://www.atptour.com/en/rankings/singles"
+  },
+  {
+   "id": "FR-05",
+   "severity": "low",
+   "category": "Source granularity",
+   "item": "44 of 188 rows cite a competition/rankings page, not a fixture-specific page",
+   "detail": "These rows keep their competition-level official URL; fixture detail on those rows is unverified at fixture level and is left as published with this flag (see also upstream VF-11).",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "EuroLeague standings (official)",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+  },
+  {
+   "id": "FR-06",
+   "severity": "low",
+   "category": "Blank values",
+   "item": "55 rows have blank venue; 34 rows have blank team summaries; 34 rows unlined",
+   "detail": "Blanks are published as blank (\u2014) per the no-inference rule; they are not errors in arithmetic but limit handicap/total origination on those rows.",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "GBGB racing (official)",
+   "source_url": "https://www.gbgb.org.uk/racing/results/"
+  },
+  {
+   "id": "FR-07",
+   "severity": "low",
+   "category": "Date/time labelling",
+   "item": "10 rows have a local `date` that differs from the UTC date in `time`",
+   "detail": "Example nhl-2026020162: date=2026-10-22, time=2026-10-23T01:00:00Z (22 Oct evening North America). Consistent with local-date convention, but the convention is not stated on the row; flagged so readers do not read it as a wrong date.",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "NHL GameCenter (official)",
+   "source_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162"
+  },
+  {
+   "id": "FR-08",
+   "severity": "medium",
+   "category": "First-hand re-verification limit",
+   "item": "This session re-read only a sample of official pages first-hand (NHL x2, EuroLeague x1, OLBG hub x1); remaining rows are mechanically audited, not re-verified",
+   "detail": "Direct sandbox HTTP to official sports hosts is blocked (empty curl responses); browser-fetch titles/content confirmed: NHL NSH@BOS and MIN@CGY on Oct 22 2026, EuroLeague Panathinaikos v Baskonia 22 Oct 2026 (PAO rank 1, Baskonia rank 20 as published). All other rows retain their upstream capture status and are NOT marked re-verified here.",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "EuroLeague game centre (official)",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/"
+  },
+  {
+   "id": "FR-09",
+   "severity": "low",
+   "category": "EuroLeague tip-time ambiguity",
+   "item": "EuroLeague game-centre page shows both '18:15' (page title) and '14:15' (stream line) for Panathinaikos v Baskonia; desk row publishes 18:15 UTC",
+   "detail": "The two times on the same official page could not be reconciled from the fetched content (likely different timezone renderings). Corrected value left blank; owner should state the timezone basis on the row.",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "EuroLeague game centre (official)",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/"
+  },
+  {
+   "id": "FR-10",
+   "severity": "low",
+   "category": "Rounding convention",
+   "item": "11 picks have fair_american derived from the 2dp-rounded fair odds rather than the 4dp probability",
+   "detail": "Example ehfcl-202711020101041: prob 0.8893 (fair 1.1245) but fair_american -833 = conversion of rounded 1.12. Difference is a rounding convention, not a pricing error; flagged so the convention is stated once in METHODOLOGY. Rows: ehfcl-202711020101041, ehfcl-202711020101049, f1-2026-drivers, nba-0022600017, nba-0022600110, nba-0022600128, nba-0022600130, nba-0022600133, nba-0022600141, nba-0022600142, pdc-32328",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "EHF Champions League (official)",
+   "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
+  },
+  {
+   "id": "FR-11",
+   "severity": "low",
+   "category": "Prediction uniqueness",
+   "item": "Duplicate 3-word opening(s): Back Vodacom Bulls",
+   "detail": "All 30 prediction texts are unique and >=30 words, but two Vodacom Bulls write-ups share the opening 'Back Vodacom Bulls', weakening the 'unique openings' claim made by earlier layers.",
+   "corrected_value": "",
+   "status": "unverified \u2014 blank, needs owner review",
+   "source_name": "URC (official)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609"
+  }
+ ]
+}

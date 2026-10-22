@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · OLBG2 Daily audit — 23 October 2026</title>
+<meta name="description" content="Dated research snapshot of officially verified fixtures, originated fair prices and written picks. Not a live feed and not betting advice.">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="assets/daily.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar"><div class="wrap bar">
+<a class="brand" href="../index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">daily audit</span></a>
+<nav class="nav" aria-label="Daily slate navigation"><a href="index.html">Dashboard</a><a href="matches.html">Matches</a><a href="lines.html">Lines</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="sports/index.html">By sport</a><a href="flagged.html" aria-current="page">Flagged for Review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></nav>
+</div></header>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 21:30 UTC</strong> · 17 fixtures · 2 sports with rows · 288 originated prices · 5 written picks · <a href="flagged.html">15 review items</a> · <a href="../current/index.html">current desk</a></div></div>
+<main><div class="wrap">
+
+<p class="crumb">Dashboard / Flagged for Review</p>
+<h1>Flagged for Review</h1>
+<p class="lede">Fifteen items where a value could not be confirmed from an official source, where two official sources disagree, or where the brief's
+target was not met. None of them blocks publication: every affected cell is blank or labelled rather than filled in, and each item links to the page
+that produced it. Flagged items are listed here so they can be checked by hand after the site is live.</p>
+<div class="notice warn">The shortfall that matters most: <strong>five written picks exist for tennis and none for cricket</strong>, because cricket has
+no official strength input in this session. See <a href="#DL-13">DL-13</a> and <a href="#DL-04">DL-04</a>.</div>
+<article class="panel" id="DL-01">
+<div class="cardhead"><span class="pill warn">DL-01</span><span class="pill">needs review</span></div>
+<h2>OLBG and the ATP disagree about the day label for the same tennis matches</h2>
+<p><strong>What was seen.</strong> All eight published tennis fixtures carry the ATP day heading &#x27;Fri, 23 October, 2026 (Day 7)&#x27;. OLBG lists the same players as &#x27;Tomorrow&#x27;, which from a 22 October capture also means 23 October, but OLBG prints no date and no timezone while the ATP prints a local start time with no zone either.</p>
+<p><strong>How it is handled.</strong> Both strings are stored verbatim. The published date is the ATP one because it is the only source that prints a date. No kickoff is converted to UTC, and no row asserts a UTC start time.</p>
+<p class="predfoot">Source: <a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener">www.atptour.com</a></p>
+</article><article class="panel" id="DL-02">
+<div class="cardhead"><span class="pill warn">DL-02</span><span class="pill">needs review</span></div>
+<h2>OLBG publishes no odds, so no bookmaker price is used or compared</h2>
+<p><strong>What was seen.</strong> The OLBG sport hubs and event pages render tip counts and percentages (for example &#x27;Medvedev 2/2 Win Tips 100%&#x27;) but no price for any selection.</p>
+<p><strong>How it is handled.</strong> Every price in this layer is originated from the model in scripts/daily_audit_model.py. No market price is quoted, averaged or implied, and the &#x27;in window&#x27; test is applied to our own fair price, not to a bookmaker&#x27;s.</p>
+<p class="predfoot">Source: <a href="https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Terence_Atmane/3?event_id=902145" rel="noopener">www.olbg.com</a></p>
+</article><article class="panel" id="DL-03">
+<div class="cardhead"><span class="pill warn">DL-03</span><span class="pill">needs review</span></div>
+<h2>Eight WTA fixtures seen on OLBG are not published as rows</h2>
+<p><strong>What was seen.</strong> OLBG lists sixteen tennis events. Eight are women&#x27;s matches: Ann Li v Lilli Tagger, Talia Gibson v Ashlyn Krueger, Leylah Fernandez v Ekaterina Alexandrova, Sara Bejlek v Marie Bouzkova, Iva Jovic v Diana Shnaider, Mary Stoiana v Katerina Siniakova, Katie Boulter v Antonia Ruzic and Elena Rybakina v Katarzyna Kawa.</p>
+<p><strong>How it is handled.</strong> The WTA official draws page for Hong Kong returned only site chrome and notifications, and the WTA scores page listed tournaments but no matches, so no official draw, seed or scoreline could be read for any of the eight. They are listed here rather than published as unsourced rows.</p>
+<p class="predfoot">Source: <a href="https://www.wtatennis.com/tournaments/1074/hong-kong/2026/draws" rel="noopener">www.wtatennis.com</a></p>
+</article><article class="panel" id="DL-04">
+<div class="cardhead"><span class="pill warn">DL-04</span><span class="pill">needs review</span></div>
+<h2>Nine cricket fixtures are published with blank prices</h2>
+<p><strong>What was seen.</strong> Nine upcoming ICC fixtures are published (AFG v ZIM ODI, NZ v IND T20I, IND v ZIM ODI, NGR v MOZ, ZAM v LES, GAM v UGA, DEN v KUW, QAT v KEN, AFG-U19 v BAN-U19). Every price column on those rows is blank.</p>
+<p><strong>How it is handled.</strong> The ICC men&#x27;s T20I team-rankings page rendered an empty table body, the ODI page was not captured, and the ICC match pages returned no scorecard or recent-results panel. With no official strength input, a line would be inference. Blank plus this flag is the published state.</p>
+<p class="predfoot">Source: <a href="https://www.icc-cricket.com/rankings/team-rankings/mens/t20i" rel="noopener">www.icc-cricket.com</a></p>
+</article><article class="panel" id="DL-05">
+<div class="cardhead"><span class="pill warn">DL-05</span><span class="pill">needs review</span></div>
+<h2>No originated price lands inside the brief&#x27;s -250 to +10000 window</h2>
+<p><strong>What was seen.</strong> The brief&#x27;s two conditions - a greater than 70% chance and a price between -250 and +10000 - intersect in a window 1.43 probability points wide (p from 0.7000 to 0.714286). The closest of the 288 originated prices is Under 24.5 games at p = 0.7242, a fair -263, which is 0.99 points above the window on the short side.</p>
+<p><strong>How it is handled.</strong> With half-point lines and a 4.5-game margin standard deviation, consecutive lines step by about four probability points, so a 1.43-point window is stepped over. The five published picks are the highest-confidence match winners (p from 0.7336 to 0.9216) and every one is labelled &#x27;outside the -250 window&#x27; on the picks page rather than reclassified. The alternative - publishing a quarter-game line purely to sit inside the window - would be a fabricated market, not a price.</p>
+<p class="predfoot">Source: <a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener">www.atptour.com</a></p>
+</article><article class="panel" id="DL-06">
+<div class="cardhead"><span class="pill warn">DL-06</span><span class="pill">needs review</span></div>
+<h2>Two priced fixtures have no verified scoreline this week</h2>
+<p><strong>What was seen.</strong> Francisco Cerundolo (No. 3 seed, Brussels) and Arthur Fils (No. 1 seed, Brussels) both entered on a first-round bye. Fils&#x27;s round-of-16 score was not in the chunk read, and Cerundolo&#x27;s round-of-16 opponent and score were not read either.</p>
+<p><strong>How it is handled.</strong> Their form input is therefore zero and their rating rests on official seeding alone. Both picks are still labelled high on the model probability, and every page repeats that the input gap exists. No scoreline is guessed for either player.</p>
+<p class="predfoot">Source: <a href="https://www.atptour.com/en/scores/current/brussels/7485/draws" rel="noopener">www.atptour.com</a></p>
+</article><article class="panel" id="DL-07">
+<div class="cardhead"><span class="pill warn">DL-07</span><span class="pill">needs review</span></div>
+<h2>OLBG prints two different kick-off times for one Gaelic football fixture</h2>
+<p><strong>What was seen.</strong> The Gaelic Football hub prints &#x27;St Finbarrs v Nemo Rangers 25 Oct 16:00&#x27;; the global tips page prints &#x27;25 Oct 12:00&#x27; for the same event.</p>
+<p><strong>How it is handled.</strong> Recorded, not resolved. Neither fixture is published as a row because no official GAA page for a club fixture was found (see DL-09).</p>
+<p class="predfoot">Source: <a href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener">www.olbg.com</a></p>
+</article><article class="panel" id="DL-08">
+<div class="cardhead"><span class="pill warn">DL-08</span><span class="pill">needs review</span></div>
+<h2>Cricket rows carry no date, and one fixture&#x27;s identity conflicts between sources</h2>
+<p><strong>What was seen.</strong> The ICC fixtures list prints a start time and &#x27;(Your time)&#x27; but no date on any row, so seven of the nine cricket rows have a blank date. Separately, OLBG names one fixture &#x27;India W vs Zimbabwe W 1st ODI&#x27; while the ICC row for the same start time prints IND v ZIM with no women&#x27;s marker.</p>
+<p><strong>How it is handled.</strong> Dates are left blank rather than inferred from the capture date. The NZ v IND date comes only from OLBG&#x27;s own label and is attributed to OLBG on the row. The IND v ZIM identity conflict is published as-is and not resolved to men&#x27;s or women&#x27;s.</p>
+<p class="predfoot">Source: <a href="https://www.icc-cricket.com/fixtures-results" rel="noopener">www.icc-cricket.com</a></p>
+</article><article class="panel" id="DL-09">
+<div class="cardhead"><span class="pill warn">DL-09</span><span class="pill">needs review</span></div>
+<h2>Gaelic football: two in-window club fixtures cannot be officially confirmed</h2>
+<p><strong>What was seen.</strong> OLBG lists St Finbarrs v Nemo Rangers (25 Oct) and Moycullen v Salthill-Knocknacarra (24 Oct) inside the capture window, plus three fixtures on 1 November outside it.</p>
+<p><strong>How it is handled.</strong> The official GAA fixtures page for October 2026 rendered a single 24 October entry, the Shinty-Hurling International, and no club football. No county-board page was fetched, so no official source exists in this session for either row. They are not published as rows.</p>
+<p class="predfoot">Source: <a href="https://www.gaa.ie/fixtures-results" rel="noopener">www.gaa.ie</a></p>
+</article><article class="panel" id="DL-10">
+<div class="cardhead"><span class="pill warn">DL-10</span><span class="pill">needs review</span></div>
+<h2>Darts: eight OLBG fixtures have no official data behind them in this session</h2>
+<p><strong>What was seen.</strong> OLBG lists eight darts match-ups for 23 October (Ryan Joyce v Jermaine Wattimena, Jonny Clayton v Niko Springer, Josh Rock v Chris Dobey, Krzysztof Ratajski v Dave Chisnall, Nathan Aspinall v Cristo Reyes, Wessel Nijman v Martin Schindler, Luke Littler v William OConnor, Kevin Doets v Michael van Gerwen) plus the European Championship outright.</p>
+<p><strong>How it is handled.</strong> The PDC official pages returned a cookie-consent wall with no fixture, score or order-of-merit content, so no official draw, seed, ranking or recent result could be read. None of the eight is published as a row and no darts prediction is claimed.</p>
+<p class="predfoot">Source: <a href="https://www.pdc.tv/matches" rel="noopener">www.pdc.tv</a></p>
+</article><article class="panel" id="DL-11">
+<div class="cardhead"><span class="pill warn">DL-11</span><span class="pill">needs review</span></div>
+<h2>eSports: OLBG&#x27;s own hub is empty</h2>
+<p><strong>What was seen.</strong> The OLBG eSports hub renders the literal text &#x27;No tips found.&#x27;</p>
+<p><strong>How it is handled.</strong> No event exists to verify, so the sport has zero rows for this capture. Nothing is inferred from other eSports calendars.</p>
+<p class="predfoot">Source: <a href="https://www.olbg.com/betting-tips/eSports/23" rel="noopener">www.olbg.com</a></p>
+</article><article class="panel" id="DL-12">
+<div class="cardhead"><span class="pill warn">DL-12</span><span class="pill">needs review</span></div>
+<h2>Rugby League: no 2026 fixture listed, only 2027 outrights</h2>
+<p><strong>What was seen.</strong> The OLBG rugby-league hub lists State of Origin 2027, Super League 2027 Grand Final and NRL 2027 Grand Final, and no match in the capture window.</p>
+<p><strong>How it is handled.</strong> With no fixture there is nothing to price. The three outrights are outside the brief&#x27;s match-level scope and are not published as rows.</p>
+<p class="predfoot">Source: <a href="https://www.olbg.com/betting-tips/Rugby_League/10" rel="noopener">www.olbg.com</a></p>
+</article><article class="panel" id="DL-13">
+<div class="cardhead"><span class="pill warn">DL-13</span><span class="pill">needs review</span></div>
+<h2>Five-picks-a-day target: met for tennis, not met for cricket</h2>
+<p><strong>What was seen.</strong> The brief asks for the five highest-confidence picks for every covered sport each day. This layer publishes five written tennis predictions and zero cricket predictions.</p>
+<p><strong>How it is handled.</strong> Tennis has eight officially verified quarter-finals with a seed-and-form strength input, which yields five selections at p &gt;= 0.70. Cricket has nine officially verified fixtures and no strength input, so no price, no pick and no prediction exists for it. The shortfall is published rather than filled with unsourced prose.</p>
+<p class="predfoot">Source: <a href="https://www.icc-cricket.com/fixtures-results" rel="noopener">www.icc-cricket.com</a></p>
+</article><article class="panel" id="DL-14">
+<div class="cardhead"><span class="pill warn">DL-14</span><span class="pill">needs review</span></div>
+<h2>Four eligible sports were not surveyed in this session</h2>
+<p><strong>What was seen.</strong> Golf, Greyhounds, Volleyball and Aussie Rules have no OLBG hub capture and no fixture row in this layer.</p>
+<p><strong>How it is handled.</strong> The session&#x27;s capture budget went to the sports where an official fixture source proved readable. These four are recorded as not surveyed, which is not the same claim as &#x27;no fixtures exist&#x27;. Prior layers cover motor racing; aussie rules is outside its season in late October, but that is not asserted here because no official calendar page was read.</p>
+<p class="predfoot">Source: <a href="https://www.olbg.com/betting-tips" rel="noopener">www.olbg.com</a></p>
+</article><article class="panel" id="DL-15">
+<div class="cardhead"><span class="pill warn">DL-15</span><span class="pill">needs review</span></div>
+<h2>Model constants are this layer&#x27;s assumptions, not the sport&#x27;s numbers</h2>
+<p><strong>What was seen.</strong> Seed ratings (1500 base, 25 per seed step), unseeded 1480, qualifier 1455, 6 per set won or lost, a 200-point logistic scale, a margin mean of 8 x (p - 0.5) games with a 4.5-game standard deviation, and a 22-game total with a 4.2-game standard deviation.</p>
+<p><strong>How it is handled.</strong> No official body publishes these. They are listed in full on the methodology page so any reader can re-run the arithmetic with different values and see how far the prices move.</p>
+<p class="predfoot">Source: <a href="../methodology.html">methodology page</a></p>
+</article>
+
+</div></main>
+<footer><div class="wrap">
+<p><strong>Research snapshot, not a live feed and not betting advice.</strong> Prices are this layer's own fair odds derived from the model on the
+<a href="methodology.html">methodology page</a>; they are not bookmaker quotes. A linked official page records provenance for the
+fixture and the inputs on that row — it is not proof that every value beside it is current. Values that could not be confirmed are blank and listed on
+<a href="flagged.html">Flagged for Review</a>. 18+.</p>
+<p class="tiny">Built by <code>scripts/daily_audit_build.py</code> from checked-in captures in <code>data/daily-audit/</code>. Other layers:
+<a href="../index.html">root dashboard</a> · <a href="../current/index.html">current desk</a> ·
+<a href="../final/index.html">consolidated desk</a>.</p>
+</div></footer>
+</body>
+</html>

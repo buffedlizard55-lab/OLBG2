@@ -2051,3 +2051,18 @@ To make RPA-02 and the CI coverage limitation discoverable without editing anoth
 | Task | Status | Owner | File scope |
 |---|---|---|---|
 | R8 | Publish source-linked reproducibility irregularities on a clearly labeled review page | in progress | new `review/reproducibility.html` only |
+
+### R1–R8 audit closeout (2026-10-22 UTC)
+
+| Task | Final status | Result |
+|---|---|---|
+| R1 | done | Read the coordination board, checked remote heads/open PRs, claimed report-only work first; rebase conflict after PR #91 was resolved additively, retaining both upstream and this session's records. |
+| R2 | done | Principal CI sequence rerun from checked-in snapshots; root build, survey verifier, portal verifier, hub verifier, cross-layer local-link checker, and full test suite executed. |
+| R3 | done | Detailed bounded report saved at `research/reproducibility-audit-dc72bac4.md`; external factual verification is explicitly not claimed. |
+| R4 | done | Removed stale hard-coded root counts and refreshed README; regenerated root pages. Current verified dataset is 188 rows, 14 row-bearing sports, 154 originated, 34 unlined, 14 price-band selections, 30 writeups, and 44 competition-scoped source links. |
+| R5 | needs review | Pages drift gate omits generated paths. Workflow is owned by merged PR #91; a cross-scope request is logged. |
+| R6 | needs review | Diagnostic board refresh exposed 207→277-row count drift and two hard-coded test failures. Generated outputs were reverted; no board or consolidated-data change is published. Owner request is logged. |
+| R7 | needs review | Not edited due PR #91 ownership; no claim of complete generated-page drift coverage. |
+| R8 | done | Added `review/reproducibility.html`, a source-linked **Flagged for Review** page; its 11 links include no broken local targets. |
+
+Local checks after the final page/test edits: `python3 -m unittest discover -s tests -q` → 149 passed; `scripts/integration_audit.py` → 0 local link errors in its scanned set; `scripts/portal_verify.py` → 707/707 source-linked table rows and 1,536 internal links/fragments; `scripts/hub_verify.py` → 524 source-linked table rows and 707 internal links/fragments. These are structural checks only. The official URL contents were not verified by this session.

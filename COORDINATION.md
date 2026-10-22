@@ -1318,3 +1318,24 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 **Sequencing note (transparent):** PR #56 was merged a moment before its diff-gate check reported failure (root `picks.html` still stale), briefly leaving `main` red on the generated-files gate only — no wrong data was published beyond the one corrected sentence lingering on the root page. PR #57 synced it and `main` is green again. Lesson logged: never issue a merge in the same block as its CI watch.
 
 **Residual nit (left for next session):** root `picks.html` intro reads "A further 0 high-confidence picks…" — factual but clumsy template output from `build_site.py` when every write-up is in-band.
+
+---
+
+## Session `arena/9a2928c8-olbg2` — final line-by-line verification, price-band focus & site polish (2026-10-22)
+
+**Session ID:** `arena/9a2928c8-olbg2` · **Branch:** `arena/9a2928c8-olbg2` · **Claimed:** 2026-10-22 UTC (before any edit, per protocol)
+
+**Why this session:** the brief requires a full line-by-line official-source verification, a price-band-focused high-confidence programme (-250…+10000) with ≥30-word human predictions, and a clean GH Pages dashboard with zero broken links — all without manual input. Prior session `arena/50268b75-olbg2` left a dated 2026-10-22 01:30 UTC snapshot (119 rows, 93 originated, 14 band picks, 22 flags) with one residual template nit.
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| T1 | Claim board, recon & coordination | in progress | `arena/9a2928c8-olbg2` | `COORDINATION.md` (append-only) |
+| T2 | OLBG reverse-engineering re-verification (taxonomy, IDs, URL schema, markets) | pending | `arena/9a2928c8-olbg2` | `research/olbg-reverse-engineering-9a2928c8.md`, `data/verified/sports.json` (if needed) |
+| T3 | Line-by-line official-source verification of all 119 rows (fixtures, inputs, prices, predictions) — every row must carry official URL or be flagged blank | pending | `arena/9a2928c8-olbg2` | `research/line-by-line-verification-9a2928c8.md`, `data/verified/flagged.json` (append-only new findings) |
+| T4 | Price-band audit: ensure all 14 high-confidence write-ups sit in -250…+10000, are ≥30 words, unique, human, and state team/player/current form/recent history/betting selection with verified facts | pending | `arena/9a2928c8-olbg2` | `data/verified/predictions.json`, `data/verified/band.json`, `verified/predictions.html`, `picks.html` |
+| T5 | Site polish & GH Pages verification: clean landing, subpages by category, table format, no broken links, Pages live | pending | `arena/9a2928c8-olbg2` | `index.html`, `picks.html`, `sports/**`, `assets/**`, `scripts/build_site.py` (template nit only) |
+| T6 | Final integration: rebuild all layers, 0 broken links, all tests green, PR → merge → Pages deploy | pending | `arena/9a2928c8-olbg2` | shared outputs (integration session) |
+
+**Concurrent-session check at claim:** no open PRs (`gh pr list` empty); `origin/main` = `c523300` (PR #58, 119 rows); all earlier sessions in this file are `done/merged`. This session does **not** touch: `data/inputs/**`, `data/matches.json`, `data/desk/**`, `data/live/**`, `data/survey/**`, `site/**`, `survey/**`, `live/**`, `scripts/model.py`, `scripts/engine.py`, `scripts/live_*.py`, `scripts/survey_*.py`, `scripts/build.py`, `scripts/verified_seed.py`, `scripts/verified_model.py` inputs (read-only verify). Request-only edits to shared outputs will be logged here.
+
+**Rules:** a value is published only when an official governing-body page returned it; anything else stays blank and flagged; no bookmaker price read; every table row carries its official source link for manual review.

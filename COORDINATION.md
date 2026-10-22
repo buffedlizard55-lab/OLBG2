@@ -3014,3 +3014,28 @@ Owner: `arena/103d996c-olbg2`. Branch fixed by Arena to `arena/103d996c-olbg2` (
 | R7 | Integration: merge main **after PR #124 merges**, rebuild, tests, link audit, PR → merge → Pages confirm, log here | unclaimed→this session | `arena/103d996c-olbg2` | shared outputs at integration only |
 
 Rules: a value is published only if an official governing-body/league/tour endpoint returned it in this session, with the verbatim response stored under `data/relay/capture/`; anything else stays blank + flagged. No bookmaker price is read; nothing is inferred. Root navigation, CI workflow, `integration_audit.py` and every other session's files stay untouched; requests for them are logged at R7.
+
+### Session `arena/103d996c-olbg2` — relay layer R2…R6 complete (2026-10-22 21:45 UTC)
+
+**Status: R1–R6 done; R7 (integration/publish) in progress.**
+
+| Task | Result |
+|---|---|
+| R2 capture | 3 fresh capture files under `data/relay/capture/` (NHL 23+24 Oct score feeds, MLB World Series schedule) read first-hand 20:55-20:57 UTC; plus first-hand reads of atptour.com, pdc.tv, wst.tv, icc-cricket.com (404) logged in `research/relay-103d996c.md`. 29 rows carry over verbatim from `/current/` captures (class B, disclosed per row). |
+| R3 lines | 38 fixtures, 113 markets, **1310 originated prices** (`scripts/relay_seed.py`, `scripts/relay_model.py`; math imported from `scripts/current_model.py`). |
+| R4 picks | **20 in-band high-confidence picks** (p ≥ 0.70 AND fair American −250…+10000) and **20 unique hand-authored predictions ≥ 30 words** (`data/relay/predictions.json`). Per sport: Rugby Union 6, Handball 6, Ice Hockey 5 (quota met), Basketball 3, Baseball 0, Motor Racing 0 — shortfalls disclosed (RL-05/06/07). |
+| R5 site | `relay/**` — 28 pages (dashboard, matches, lines, picks, predictions, inputs, flagged, sources, methodology, 17 sport pages, sport index, stylesheet). |
+| R6 tests | `tests/test_relay_103d996c.py` — 32 tests incl. independent recomputation of two fixtures from raw captures, band-gate re-check over all 1310 prices, byte-identical rebuild, exact subpage chrome hrefs. Repository suite **375 OK**; `integration_audit.py` **0 link errors**. |
+| R7 | merging latest `origin/main`, PR, merge, Pages confirm — result appended below. |
+
+**Fetch-tool outage disclosure (RL-01):** the agent web-fetch proxy failed on roughly half of
+all calls this session (`SignatureDoesNotMatch`), including every attempt at api.nhle.com,
+stats.nba.com/cdn.nba.com, icc-cricket.com/match-list, and all later-chunk requests. Where a
+first-hand read failed, the row either carries over the `/current/` verbatim capture with the
+snapshot disclosed, or the sport publishes zero rows with the failed endpoint named. Nothing
+was inferred to fill a gap.
+
+**Requests to the final integration session (logged, not actioned — shared files):**
+1. `index.html` / root navigation: add `/relay/` to the root layer table.
+2. `.github/workflows/pages.yml`: add `python scripts/relay_seed.py && python scripts/relay_model.py && python scripts/relay_prose.py && python scripts/relay_build.py` to the rebuild steps and `relay data/relay` to the drift paths.
+3. `scripts/integration_audit.py`: include `relay` in cross-layer link checking if the folder list is still explicit.

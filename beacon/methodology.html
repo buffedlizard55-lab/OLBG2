@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology &amp; Math — OLBG Beacon Verified Origination Desk</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">OLBG Beacon Origination &amp; Forensic Desk <span>2026-10-22 Verified</span></a>
+      <nav class="nav" aria-label="Beacon Navigation">
+        <a href="index.html">Dashboard</a><a href="picks.html">High Picks (19)</a><a href="matches.html">All Matches (226)</a><a href="sports/index.html">17 Sports (17/17)</a><a href="flagged.html" class="nav-flag">Flagged for Review (33)</a><a href="audit.html">Repo Audit (BF-01..16)</a><a href="methodology.html" class="active">Methodology</a><a href="sources.html">Sources (27)</a><a href="excluded.html">Excluded (10)</a><a href="../index.html">Root Overview ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    
+    <section class="hero">
+      <h1>Origination Methodology &amp; Uniform Confidence Law</h1>
+      <p>Every price in <code>/beacon/</code> is originated from verified governing-body standings, scoring differentials, prize-money rankings, and match formats—zero bookmaker odds scraped or copied.</p>
+    </section>
+    <section class="section">
+      <h2>Uniform Confidence &amp; Target Odds-Window Specification</h2>
+      <p class="lead">Applied identically across all 17 sports with exact unrounded IEEE-754 floating-point bounds (eliminating <code>BF-01</code> and <code>BF-04</code>).</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Grade</th>
+              <th>Exact Probability Gate</th>
+              <th>Exact Fair Decimal Window</th>
+              <th>Fair American Window</th>
+              <th>Eligibility Rule &amp; Rationale</th>
+              <th>Official Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge-high">HIGH</span></td>
+              <td class="mono">0.7000 &le; p &le; 5/7 (0.7142857)</td>
+              <td class="mono">1.4000 &le; 1/p &le; 1.4286</td>
+              <td class="mono">-250 to -233</td>
+              <td>Upcoming pre-match fixtures only; satisfies both &ge;70% win/cover conviction and the <code>[-250, +10000]</code> anti-chalk window.</td>
+              <td><a href="https://www.olbg.com/sitemap-betting-tips.xml" target="_blank" rel="noopener">OLBG Market Specification ↗</a></td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-medium">MEDIUM</span></td>
+              <td class="mono">0.6000 &le; p &lt; 0.7000 OR p &gt; 5/7</td>
+              <td class="mono">1.4286 &lt; 1/p &le; 1.6667 OR 1/p &lt; 1.4000</td>
+              <td class="mono">-232 to -150 (or chalk &lt; -250)</td>
+              <td>Solid favorites below 70% OR heavy moneyline chalk shorter than <code>-250</code> (where half-unit <code>.5</code> handicaps are investigated for actionable <code>[-250, -233]</code> value).</td>
+              <td><a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" target="_blank" rel="noopener">EuroLeague Margin Calibration ↗</a></td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-low">LOW</span></td>
+              <td class="mono">p &lt; 0.6000</td>
+              <td class="mono">1/p &gt; 1.6667</td>
+              <td class="mono">-149 or longer</td>
+              <td>Competitive coin-flips or multi-runner tournament/track fields (Golf 120-man, F1 20-car, GBGB 5-trap final).</td>
+              <td><a href="https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528" target="_blank" rel="noopener">PGA Field Structure ↗</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Sport-Family Origination Models</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Sport Family</th>
+              <th>Verified Official Inputs</th>
+              <th>Mathematical Pricing Kernel</th>
+              <th>Markets Originated</th>
+              <th>Official Data Endpoint</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Darts &amp; Snooker</strong> (Race-to-W)</td>
+              <td>2026 PDC Order of Merit (£) &amp; WST Johnstone's Paint World Rankings (£)</td>
+              <td>Log-prize / log-rank single-leg/frame skill &rarr; exact discrete negative-binomial distribution over scores <code>(W, 0)..(0, W)</code></td>
+              <td>Win Match, <code>&plusmn;1.5 / &plusmn;2.5</code> Leg/Frame Handicap, <code>5.5 / 9.5</code> Total</td>
+              <td><a href="https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false" target="_blank" rel="noopener">WST Official Rankings ↗</a></td>
+            </tr>
+            <tr>
+              <td><strong>Ice Hockey &amp; Baseball</strong></td>
+              <td>NHL 2026-27 GP/GF/GA (4-GP Bayesian shrinkage to 3.05), SHL 20961 table, MLB Pythagorean RS/RA</td>
+              <td>Shrunk goal/run expectancy differential + home-ice/field edge &rarr; normal/Skellam margin &amp; total</td>
+              <td>Moneyline, <code>&plusmn;1.5</code> Puck / Run Line, <code>.5</code> Goal / Run Total</td>
+              <td><a href="https://api-web.nhle.com/v1/score/2026-10-22" target="_blank" rel="noopener">NHL Official Score API ↗</a></td>
+            </tr>
+            <tr>
+              <td><strong>Basketball, Rugby, Handball, AFLW &amp; GAA</strong></td>
+              <td>NBA/EuroLeague W-L &amp; net rating, Top 14/Pro D2/URC/RLWC/EHF/AFLW/GAA scoring differentials</td>
+              <td>Gaussian margin distribution (with explicit regulation draw band on 3-way 1X2 sports) + half-unit <code>.5</code> handicap search</td>
+              <td>2-Way ML or 3-Way 1X2, <code>.5</code> Point/Goal Handicap, <code>.5</code> Match Total</td>
+              <td><a href="https://stats.unitedrugby.com/match-centre/table/2026-27" target="_blank" rel="noopener">URC 2026-27 Table ↗</a></td>
+            </tr>
+            <tr>
+              <td><strong>Tennis, Volleyball, Cricket &amp; eSports</strong></td>
+              <td>ATP/WTA live rankings &amp; surface, SuperLega R1 set/point ratios, ICC ODI ratings &amp; NRR, Riot Worlds seeds</td>
+              <td>Logistic rank/Elo win curve paired with calibrated game/point/run/kill margin variance</td>
+              <td>Win Match, <code>.5</code> Game/Point/Run/Kill Handicap, <code>.5</code> Total</td>
+              <td><a href="https://www.atptour.com/en/scores/current/lyon/496/daily-schedule" target="_blank" rel="noopener">ATP Official Schedule ↗</a></td>
+            </tr>
+            <tr>
+              <td><strong>Golf, Motor Racing &amp; Greyhounds</strong></td>
+              <td>PGA Bermuda R2026528, DPWT Genesis field, FIA F1 2026 standings, GBGB Romford 5-runner final</td>
+              <td>Explicit multi-runner <code>outright_field</code> leader-vs-field probability (synthetic 1v1 H2Hs strictly banned)</td>
+              <td>Tournament / Race / Category-One Final Outright</td>
+              <td><a href="https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/" target="_blank" rel="noopener">GBGB Cat 1 Final Report ↗</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <div>Snapshot: <span class="mono">2026-10-22T12:25:00Z</span> · Session <span class="mono">arena/3babcd0d-olbg2</span> · 17/17 Eligible OLBG Sports · 0 Excluded Sports</div>
+      <div>Every table row links directly to an official governing-body source · Unconfirmed values left blank (<code>—</code>) and <a href="flagged.html">Flagged for Review</a>.</div>
+    </footer>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

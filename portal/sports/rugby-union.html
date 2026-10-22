@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="../index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../../index.html">Root Dashboard</a> ·
       <a href="../../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../../hub/index.html">/hub/</a> ·
       <a href="../../evidence/index.html">/evidence/</a> ·
       <a href="../../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
         <section class="hero">
           <h1>Rugby Union — Official-Source Multi-Market Lines &amp; In-Band Predictions</h1>
@@ -38,7 +39,7 @@
           </p>
         </section>
 
-        <div class='sport-pills'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='active' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></div>
+        <nav class='sport-pills' aria-label='Eligible sports'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='active' aria-current='page' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></nav>
 
         <section class="section">
           <h2>Featured High-Confidence Rugby Union Predictions (2)</h2>
@@ -106,23 +107,31 @@
         <section class="section" data-filter-root="1">
           <h2>Rugby Union Match Board (23 Verified Rows)</h2>
           <div class="controls">
-            <input type="search" data-filter-search placeholder="Filter Rugby Union fixtures...">
-            <select data-filter-conf>
-              <option value="all">All Grades</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="blank">Unlined / Blank</option>
-            </select>
-            <span class="count-pill" data-filter-count></span>
+            <div class="filter-field">
+              <label for="rugby-union-search">Search Rugby Union fixtures</label>
+              <input id="rugby-union-search" type="search" data-filter-search aria-controls="rugby-union-matches-table" placeholder="Team, player, or competition...">
+            </div>
+            <div class="filter-field">
+              <label for="rugby-union-confidence">Confidence</label>
+              <select id="rugby-union-confidence" data-filter-conf aria-controls="rugby-union-matches-table">
+                <option value="all">All Grades</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="blank">Unlined / Blank</option>
+              </select>
+            </div>
+            <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
-          <div class="table-wrap">
-            <table>
+          <noscript><p class="filter-note">Filtering needs JavaScript; all Rugby Union rows remain listed below.</p></noscript>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="Rugby Union fixtures and markets">
+            <table id="rugby-union-matches-table">
+              <caption class="sr-only">Rugby Union fixtures, markets, confidence, and official-source links</caption>
               <thead>
                 <tr>
-                  <th>Date / UTC</th><th>Sport</th><th>Fixture, Venue &amp; Basis</th>
-                  <th>Win Match / 1X2</th><th>Standard .5 Line</th><th>Total O/U</th>
-                  <th>Winner &amp; Grade</th><th>Actionable [-250..+10000]</th><th>Official Source</th>
+                  <th scope="col">Date / UTC</th><th scope="col">Sport</th><th scope="col">Fixture, Venue &amp; Basis</th>
+                  <th scope="col">Win Match / 1X2</th><th scope="col">Standard .5 Line</th><th scope="col">Total O/U</th>
+                  <th scope="col">Winner &amp; Grade</th><th scope="col">Actionable [-250..+10000]</th><th scope="col">Official Source</th>
                 </tr>
               </thead>
               <tbody><tr id='urc-292608' data-row='1' data-sport='rugby-union' data-conf='low'><td class='num'>2026-10-23<div style='color:#6b7280;font-size:11.5px'>2026-10-23 18:45 UTC</div></td><td><a class='badge badge-sport' href='rugby-union.html'>Rugby Union</a></td><td><strong>Cardiff Rugby vs Hollywoodbets Sharks</strong><div style='font-size:12px;color:#4b5563'>2026-27 BKT URC — Round 4 · Cardiff Arms Park</div><div style='font-size:11.5px;color:#6b7280'>2026-27 BKT URC table: Cardiff Rugby (2-0-1, 66:71) vs Hollywoodbets Sharks (2-0-1, 89:83)</div></td><td><div><strong>Cardiff Rugby:</strong> <span class='odds'>-122 (1.82) · 55.0%</span></div><div><strong>Draw:</strong> <span class='odds'>+3200 (33.00) · 3.0%</span></div><div><strong>Hollywoodbets Sharks:</strong> <span class='odds'>+138 (2.38) · 41.9%</span></div></td><td><div><strong>Cardiff Rugby -2.5 pts:</strong> <span class='odds'>+105 (2.05) · 48.9%</span></div><div><strong>Opp:</strong> <span class='odds'>-104 (1.96) · 51.1%</span></div></td><td><div><strong>O/U 51.5 pts Over:</strong> <span class='odds'>-102 (1.98) · 50.5%</span></div><div><strong>Under:</strong> <span class='odds'>+102 (2.02) · 49.5%</span></div></td><td><span class="badge badge-low">LOW</span><div><strong>Cardiff Rugby</strong></div><div><span class='odds'>-122 (1.82) · 55.0%</span></div></td><td><div><strong>Cardiff Rugby — Win Match</strong></div><div><span class='odds'>-122 (1.82) · 55.0%</span></div><div style='font-size:11.5px;color:#4b5563'>Match Winner (1X2)</div></td><td><a href='https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Rugby_Union/9' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr>
@@ -150,14 +159,16 @@
 <tr id='prod2-12067' data-row='1' data-sport='rugby-union' data-conf='medium'><td class='num'>2026-10-23<div style='color:#6b7280;font-size:11.5px'>2026-10-23 19:00 UTC</div></td><td><a class='badge badge-sport' href='rugby-union.html'>Rugby Union</a></td><td><strong>FC Grenoble Rugby vs Biarritz Olympique PB</strong><div style='font-size:12px;color:#4b5563'>2026-27 French Pro D2 — Round 8 · FC Grenoble Rugby Stadium</div><div style='font-size:11.5px;color:#6b7280'>2026-27 French Pro D2 table: FC Grenoble Rugby (5-0-2, 213:176) vs Biarritz Olympique PB (4-1-2, 213:191)</div></td><td><div><strong>FC Grenoble Rugby:</strong> <span class='odds'>-169 (1.59) · 62.9%</span></div><div><strong>Draw:</strong> <span class='odds'>+3384 (34.84) · 2.9%</span></div><div><strong>Biarritz Olympique PB:</strong> <span class='odds'>+192 (2.92) · 34.3%</span></div></td><td><div><strong>FC Grenoble Rugby -5.5 pts:</strong> <span class='odds'>+109 (2.09) · 47.8%</span></div><div><strong>Opp:</strong> <span class='odds'>-110 (1.91) · 52.2%</span></div><div style='margin-top:3px;color:#0f4c81'><strong>Alt .5:</strong> FC Grenoble Rugby -0.5 pts <span class='odds'>-169 (1.59) · 62.9%</span></div></td><td><div><strong>O/U 56.5 pts Over:</strong> <span class='odds'>-102 (1.98) · 50.5%</span></div><div><strong>Under:</strong> <span class='odds'>+102 (2.02) · 49.5%</span></div></td><td><span class="badge badge-medium">MEDIUM</span><div><strong>FC Grenoble Rugby</strong></div><div><span class='odds'>-169 (1.59) · 62.9%</span></div></td><td><div><strong>FC Grenoble Rugby — Win Match</strong></div><div><span class='odds'>-169 (1.59) · 62.9%</span></div><div style='font-size:11.5px;color:#4b5563'>Match Winner (1X2)</div></td><td><a href='https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Rugby_Union/9' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr></tbody>
             </table>
           </div>
+          <p class="filter-empty" data-filter-empty hidden>No Rugby Union fixtures match the selected filters.</p>
         </section>
 
         
             <section class="section">
               <h2>Sport-Specific Audit &amp; Unverified Blank Notes</h2>
-              <div class="table-wrap">
+              <div class="table-wrap" role="region" tabindex="0" aria-label="Rugby Union review findings">
                 <table>
-                  <thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Disposition</th><th>Official Link</th></tr></thead>
+                  <caption class="sr-only">Rugby Union audit and unverified-item findings</caption>
+                  <thead><tr><th scope="col">ID</th><th scope="col">Severity</th><th scope="col">Item</th><th scope="col">Disposition</th><th scope="col">Official Link</th></tr></thead>
                   <tbody><tr><td class='num'><strong>PA-06</strong></td><td><span class="badge badge-critical">HIGH</span></td><td><strong>Synthetic .25/.75 quarter-point spreads in Rugby Union &amp; EuroLeague solved backwards to land at -238 to -250</strong><div style='font-size:12.5px;color:#4b5563'>Selections such as Stormers -0.75 @ -250, Glasgow -1.25 @ -244, Toulouse -3.25 @ -238, and Panathinaikos -5.75 @ -244 use quarter-point Asian handicaps not offered in standard basketball or rugby handicap markets.</div></td><td>Restricted all spreads, set/frame/leg handicaps, puck lines, and totals strictly to standard .5 half-unit increments.</td><td><a href='https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/' target='_blank' rel='noopener'>Official Source ↗</a></td></tr></tbody>
                 </table>
               </div>

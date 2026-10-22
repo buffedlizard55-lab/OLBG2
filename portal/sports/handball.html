@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="../index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../../index.html">Root Dashboard</a> ·
       <a href="../../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../../hub/index.html">/hub/</a> ·
       <a href="../../evidence/index.html">/evidence/</a> ·
       <a href="../../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
         <section class="hero">
           <h1>Handball — Official-Source Multi-Market Lines &amp; In-Band Predictions</h1>
@@ -38,7 +39,7 @@
           </p>
         </section>
 
-        <div class='sport-pills'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='active' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></div>
+        <nav class='sport-pills' aria-label='Eligible sports'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='active' aria-current='page' href='handball.html'>Handball (5)</a><a class='' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></nav>
 
         <section class="section">
           <h2>Featured High-Confidence Handball Predictions (2)</h2>
@@ -106,23 +107,31 @@
         <section class="section" data-filter-root="1">
           <h2>Handball Match Board (6 Verified Rows)</h2>
           <div class="controls">
-            <input type="search" data-filter-search placeholder="Filter Handball fixtures...">
-            <select data-filter-conf>
-              <option value="all">All Grades</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="blank">Unlined / Blank</option>
-            </select>
-            <span class="count-pill" data-filter-count></span>
+            <div class="filter-field">
+              <label for="handball-search">Search Handball fixtures</label>
+              <input id="handball-search" type="search" data-filter-search aria-controls="handball-matches-table" placeholder="Team, player, or competition...">
+            </div>
+            <div class="filter-field">
+              <label for="handball-confidence">Confidence</label>
+              <select id="handball-confidence" data-filter-conf aria-controls="handball-matches-table">
+                <option value="all">All Grades</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="blank">Unlined / Blank</option>
+              </select>
+            </div>
+            <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
-          <div class="table-wrap">
-            <table>
+          <noscript><p class="filter-note">Filtering needs JavaScript; all Handball rows remain listed below.</p></noscript>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="Handball fixtures and markets">
+            <table id="handball-matches-table">
+              <caption class="sr-only">Handball fixtures, markets, confidence, and official-source links</caption>
               <thead>
                 <tr>
-                  <th>Date / UTC</th><th>Sport</th><th>Fixture, Venue &amp; Basis</th>
-                  <th>Win Match / 1X2</th><th>Standard .5 Line</th><th>Total O/U</th>
-                  <th>Winner &amp; Grade</th><th>Actionable [-250..+10000]</th><th>Official Source</th>
+                  <th scope="col">Date / UTC</th><th scope="col">Sport</th><th scope="col">Fixture, Venue &amp; Basis</th>
+                  <th scope="col">Win Match / 1X2</th><th scope="col">Standard .5 Line</th><th scope="col">Total O/U</th>
+                  <th scope="col">Winner &amp; Grade</th><th scope="col">Actionable [-250..+10000]</th><th scope="col">Official Source</th>
                 </tr>
               </thead>
               <tbody><tr id='ehfcl-202711020101043' data-row='1' data-sport='handball' data-conf='low'><td class='num'>2026-10-22<div style='color:#6b7280;font-size:11.5px'>2026-10-22T16:45:00Z</div></td><td><a class='badge badge-sport' href='handball.html'>Handball</a></td><td><strong>OTP Bank - PICK Szeged vs GOG</strong><div style='font-size:12px;color:#4b5563'>2026-27 EHF Men&#x27;s Champions League — Group D Round 5 · OTP Bank - PICK Szeged Arena</div><div style='font-size:11.5px;color:#6b7280'>EHF CL Group D Poisson: OTP Bank - PICK Szeged (1-1-2, 139:136) vs GOG (3-0-1, 145:139)</div></td><td><div><strong>OTP Bank - PICK Szeged:</strong> <span class='odds'>+103 (2.03) · 49.3%</span></div><div><strong>Draw:</strong> <span class='odds'>+2005 (21.05) · 4.8%</span></div><div><strong>GOG:</strong> <span class='odds'>+118 (2.18) · 45.9%</span></div></td><td><div><strong>OTP Bank - PICK Szeged -0.5 goals:</strong> <span class='odds'>+103 (2.03) · 49.3%</span></div><div><strong>Opp:</strong> <span class='odds'>-103 (1.97) · 50.7%</span></div></td><td><div><strong>O/U 70.5 goals Over:</strong> <span class='odds'>-105 (1.95) · 51.3%</span></div><div><strong>Under:</strong> <span class='odds'>+105 (2.05) · 48.7%</span></div></td><td><span class="badge badge-low">LOW</span><div><strong>OTP Bank - PICK Szeged</strong></div><div><span class='odds'>+103 (2.03) · 49.3%</span></div></td><td><div><strong>OTP Bank - PICK Szeged — Win Match</strong></div><div><span class='odds'>+103 (2.03) · 49.3%</span></div><div style='font-size:11.5px;color:#4b5563'>Match Winner (1X2)</div></td><td><a href='https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Handball/20' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr>
@@ -133,14 +142,16 @@
 <tr id='hb-dom-hbl' data-row='1' data-sport='handball' data-conf='blank'><td class='num'>2026-10-22<div style='color:#6b7280;font-size:11.5px'>2026-10-22 — Official TBC</div></td><td><a class='badge badge-sport' href='handball.html'>Handball</a></td><td><strong>SC DHfK Leipzig vs TBV Lemgo Lippe</strong><div style='font-size:12px;color:#4b5563'>DAIKIN Handball-Bundesliga (HBL) · Official Venue (see governing-body link)</div><div style='font-size:11.5px;color:#6b7280'>daikin-hbl.de table renders via client-side JS; EHF Champions League originated in full, domestic HBL row left blank.</div></td><td><span class="blank-cell">— (Unverified / Left Blank)</span></td><td><span class="blank-cell">—</span></td><td><span class="blank-cell">—</span></td><td><span class="badge badge-blank">UNLINED / BLANK</span><span class="blank-cell">—</span></td><td><span class="blank-cell">—</span></td><td><a href='https://www.daikin-hbl.de/de/hbl/tabelle' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Handball/20' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr></tbody>
             </table>
           </div>
+          <p class="filter-empty" data-filter-empty hidden>No Handball fixtures match the selected filters.</p>
         </section>
 
         
             <section class="section">
               <h2>Sport-Specific Audit &amp; Unverified Blank Notes</h2>
-              <div class="table-wrap">
+              <div class="table-wrap" role="region" tabindex="0" aria-label="Handball review findings">
                 <table>
-                  <thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Disposition</th><th>Official Link</th></tr></thead>
+                  <caption class="sr-only">Handball audit and unverified-item findings</caption>
+                  <thead><tr><th scope="col">ID</th><th scope="col">Severity</th><th scope="col">Item</th><th scope="col">Disposition</th><th scope="col">Official Link</th></tr></thead>
                   <tbody><tr><td class='num'><strong>PU-24</strong></td><td><span class="badge badge-low">INFO</span></td><td><strong>DAIKIN Handball-Bundesliga (HBL): SC DHfK Leipzig vs TBV Lemgo Lippe</strong><div style='font-size:12.5px;color:#4b5563'>daikin-hbl.de table renders via client-side JS; EHF Champions League originated in full, domestic HBL row left blank.</div></td><td>Fixture listed with official governing-body link; odds &amp; winner fields left strictly blank (—) rather than inferred.</td><td><a href='https://www.daikin-hbl.de/de/hbl/tabelle' target='_blank' rel='noopener'>Official Source ↗</a></td></tr></tbody>
                 </table>
               </div>

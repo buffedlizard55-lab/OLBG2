@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot checks · OLBG2 reconciliation console</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> OLBG2 · Reconciliation console</div>
+    <nav class="nav"><a href="index.html">Overview</a><a href="conflicts.html">Conflicts</a><a href="non-fixtures.html">Non-fixtures</a><a href="freshness.html">Freshness</a><a href="provenance.html">Provenance</a><a href="predictions.html">Predictions</a><a href="spot-checks.html">Spot checks</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="../index.html">Dashboard</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+
+<h1>First-hand spot checks</h1>
+<p class="lede">Nine published claims were re-read from the official page they cite during this session.
+This is a sample, not a re-verification of all 1,619 rows: anything not read is left unverified rather than assumed correct.</p>
+<div class="grid">
+<div class="kpi"><div class="kpi-v">9</div><div class="kpi-l">Checks performed</div><div class=kpi-n>read first-hand, 2026-10-22</div></div>
+<div class="kpi"><div class="kpi-v">3</div><div class="kpi-l">Confirmed</div><div class=kpi-n>value read back exactly</div></div>
+<div class="kpi"><div class="kpi-v">3</div><div class="kpi-l">Partially confirmed</div><div class=kpi-n>some values not rendered</div></div>
+<div class="kpi"><div class="kpi-v">1</div><div class="kpi-l">Contradicted</div><div class=kpi-n>official page disagrees</div></div>
+<div class="kpi"><div class="kpi-v">2</div><div class="kpi-l">Unreadable</div><div class=kpi-n>cookie wall, redirect, client-rendered</div></div>
+</div>
+<div class="note"><strong>The single most important result.</strong> The tennis rows in <code>/slate/</code> cite the official
+Almaty order of play, and that page does not contain the pairings published. Under the brief's “no hallucinations” rule those
+rows cannot stand as verified; they are listed on the flagged page.</div>
+<div class="scroll"><table class="data"><thead><tr><th>ID</th><th>Subject</th><th>Claim checked</th><th>What the official page showed</th><th>Verdict</th><th>Official page</th></tr></thead><tbody>
+<tr><td>SC-01</td><td>NHL slate for 2026-10-22 (12 games)</td><td>12 NHL fixtures on 2026-10-22, including Boston Bruins v Nashville Predators, Toronto Maple Leafs v New York Rangers and Ottawa Senators v San Jose Sharks, all at 23:00Z</td><td>The feed returns numberOfGames=12 for 2026-10-22. Game 2026020154 NSH at BOS, TD Garden, startTimeUTC 2026-10-22T23:00:00Z; game 2026020155 NYR at TOR, Scotiabank Arena, 23:00Z; game 2026020156 SJS at OTT, Canadian Tire Centre, 23:00Z.</td><td><span class="tag ok">confirmed</span></td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-22" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/schedule/2026-10-22</a></td></tr>
+<tr><td>SC-02</td><td>Boston Bruins v San Jose Sharks, 2026-10-24</td><td>Fixture exists on 2026-10-24 at TD Garden</td><td>Game 2026020170: away SJS, home BOS, venue TD Garden, gameDate 2026-10-24, startTimeUTC 2026-10-24T23:00:00Z.</td><td><span class="tag ok">confirmed</span></td><td><a href="https://api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24</a></td></tr>
+<tr><td>SC-03</td><td>Carolina Hurricanes v Boston Bruins, 2026-10-27</td><td>Fixture date 2026-10-27</td><td>Game 2026020189: away BOS, home CAR, Lenovo Center, gameDate 2026-10-27, startTimeUTC 2026-10-28T00:00:00Z. The published fixture date matches the venue-local date; the UTC puck-drop falls on 28 October.</td><td><span class="tag warn">partially confirmed</span></td><td><a href="https://api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24" rel="noopener noreferrer" target="_blank">api-web.nhle.com/v1/club-schedule/BOS/week/2026-10-24</a></td></tr>
+<tr><td>SC-04</td><td>ATP Almaty round of 16, 2026-10-22 (13 tennis rows published, including atp-alm-r16-1 Flav</td><td>The published Almaty pairings played on 2026-10-22</td><td>Day 6 (Thu, 22 October 2026) Centre Court orders of play: T. Atmane defeated M. Bellucci; T. Machac v (5) K. Khachanov; (1) D. Medvedev v S. Shimabukuro; (3) A. Bublik v F. Marozsan. Court 1: Bhambri/Seggerman d. Donski/Pieczonka; Lammons/Withrow d. Kubler/Peers. Neither Flavio Cobolli nor Rinky Hijikata appears anywhere on the Almaty order of play.</td><td><span class="tag bad">contradicted</span></td><td><a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener noreferrer" target="_blank">atptour.com/en/scores/current/almaty/9410/daily-schedule</a></td></tr>
+<tr><td>SC-05</td><td>GBGB Category One greyhound events: 23 Oct Romford Champion Stakes, 24 Oct Dunstall Park S</td><td>Event dates, tracks and distances</td><td>Page title is &#x27;2026 Category One Schedule&#x27;. Rows include &#x27;Fri 23 Oct | Romford | Premier Greyhound Racing Champion Stakes | 575m Flat&#x27;, &#x27;Sat 24 Oct | Dunstall Park | Arena Racng Company Scurry Gold Cup | 270m Flat&#x27; and &#x27;Sat 24 Oct | Dunstall Park | Premier Greyhound Racing Oaks | 480m Flat&#x27;. Later rows (8 Nov, 20 Nov, 30 Nov, 12 Dec, 21 Dec, 26 Dec) also match the published dat</td><td><span class="tag ok">confirmed</span></td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener noreferrer" target="_blank">gbgb.org.uk/racing/open-races/2025-category-one-schedule/</a></td></tr>
+<tr><td>SC-06</td><td>PDC European Championship round-one pairings (Luke Woodhouse v Dirk van Duijvenbode and 15</td><td>Published pairings exist on the cited official page</td><td>The tournament page returned only a cookie-consent wall in this session; no draw or order of play was readable. The rows themselves cite https://www.pdc.tv/rankings, which is a rankings table rather than a fixture list.</td><td><span class="tag info">unreadable</span></td><td><a href="https://www.pdc.tv/tournaments/machineseeker-european-championship" rel="noopener noreferrer" target="_blank">pdc.tv/tournaments/machineseeker-european-championship</a></td></tr>
+<tr><td>SC-07</td><td>2026 F1 drivers&#x27; championship row: &#x27;Kimi Antonelli (Mercedes)&#x27; with 340 poi</td><td>Antonelli drives for Mercedes in 2026; published points total</td><td>The 2026 drivers&#x27; standings page loads and lists Antonelli, Kimi with a Mercedes asset path (common/f1/2026/mercedes/andant01). The points column is not present in the server-rendered text returned to this session.</td><td><span class="tag warn">partially confirmed</span></td><td><a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener noreferrer" target="_blank">formula1.com/en/results/2026/drivers</a></td></tr>
+<tr><td>SC-08</td><td>Polish PlusLiga fixtures: Ślepsk Malow Suwałki v GKS Katowice, PGE GiEK Skra Bełchatów v P</td><td>Fixtures and dates readable on the cited page</td><td>The URL resolves to https://www.tauronliga.pl/games.html and renders the TAURON Liga (women&#x27;s) fixture list, whose visible dates are 16–17 October 2026 (e.g. GKS Katowice v Aluron CMC Warta Zawiercie; PGE Projekt Warszawa v Energa Indykpol AZS Olsztyn). No men&#x27;s PlusLiga fixtures and none of the three published pairings were visible.</td><td><span class="tag info">unreadable</span></td><td><a href="https://www.plusliga.pl/games.html" rel="noopener noreferrer" target="_blank">plusliga.pl/games.html</a></td></tr>
+<tr><td>SC-09</td><td>EuroLeague 2026-27 round 7 fixtures published for 2026-10-22 and 2026-10-23</td><td>Round-7 fixtures on those dates</td><td>The results feed returns completed RS7 games with scores, the latest dated 21 Oct 2026 (Hapoel 90–81 Virtus Bologna). Teams named on the published rows (KOSNER BASKONIA VITORIA-GASTEIZ, PANATHINAIKOS AKTOR ATHENS, FENERBAHCE TARFIN ISTANBUL) are confirmed participants in E2026.</td><td><span class="tag warn">partially confirmed</span></td><td><a href="https://api-live.euroleague.net/v1/results?seasonCode=E2026&amp;round=7" rel="noopener noreferrer" target="_blank">api-live.euroleague.net/v1/results?seasonCode=E2026&amp;round=7</a></td></tr>
+</tbody></table></div>
+<h2>Verdict definitions</h2>
+<ul class="tight"><li><strong>confirmed</strong> — the published value was read back from the official page exactly as published</li><li><strong>partially_confirmed</strong> — some published values were read back, other values on the same row were not visible</li><li><strong>contradicted</strong> — the official page shows something incompatible with the published row</li><li><strong>unreadable</strong> — the page could not be read in this session, so the row stays unverified</li></ul>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Independent cross-layer audit of the published OLBG2 datasets. Read-only: no other session's data was edited.
+Every value below is machine-derived from committed JSON; spot checks link the official page that was read.</p>
+<p>Audit date 2026-10-22 · session <code>arena/3552df3e-olbg2</code> · <a href="flagged.html">Flagged for review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

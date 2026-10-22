@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verification</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header><h1>OLBG2 · Atlas desk</h1><nav><a href="index.html" class="">Overview</a><a href="matches.html" class="">All matches</a><a href="picks.html" class="">Predictions</a><a href="sports/index.html" class="">By sport</a><a href="verification.html" class="on">Verification</a><a href="flagged.html" class="">Flagged</a><a href="methodology.html" class="">Methodology</a><a href="sources.html" class="">Sources</a></nav></header>
+<main>
+<h2>Line-by-line verification ledger</h2>
+<p class="lead">Every row this desk republished was checked against the governing body named on the row.
+The table below is the audit trail: what was compared, where, how many rows agreed, how many did not.</p>
+<div class="cards">
+<div class="card"><div class="n">210</div><div class="l">rows compared</div></div>
+<div class="card"><div class="n">174</div><div class="l">confirmed</div></div>
+<div class="card"><div class="n">17</div><div class="l">mismatched</div></div>
+<div class="card"><div class="n">19</div><div class="l">outside window</div></div>
+</div>
+<div class="tw"><table><thead><tr><th>Family</th><th>Official source</th><th>Window</th><th>Compared</th>
+<th>Confirmed</th><th>Mismatched</th><th>Outside window</th><th>Note</th></tr></thead>
+<tbody><tr><td><b>NHL</b></td><td><a href="https://api.nhle.com/stats/rest/en/game?limit=-1&amp;cayenneExp=gameDate%3E%3D%222026-10-22%22%20and%20gameDate%3C%3D%222026-10-31%22">NHL Stats REST API (official api.nhle.com)</a></td><td class="mono">2026-10-22 .. 2026-10-31</td><td class="mono">82</td><td class="mono">73</td><td class="mono">0</td><td class="mono">9</td><td>Every in-window NHL row in the previously published desk reproduces the NHL Stats REST feed exactly — game id, date and home/away orientation. The 9 rows dated 1-2 November sit outside the window this session queried and were not re-read.</td></tr><tr><td><b>NBA</b></td><td><a href="https://www.nba.com/schedule">NBA.com official schedule (www.nba.com/schedule)</a></td><td class="mono">2026-10-22 .. 2026-10-31</td><td class="mono">74</td><td class="mono">74</td><td class="mono">0</td><td class="mono">0</td><td>All 74 NBA rows reproduce nba.com/schedule by game id and date. Note that the official page lists only 2 games on 22 October, 12 on 23 October and 3 on 29 October, which is worth knowing when reading the shape of the slate.</td></tr><tr><td><b>MLB</b></td><td><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-23&amp;endDate=2026-11-01">MLB Stats API (official statsapi.mlb.com)</a></td><td class="mono">2026-10-23 .. 2026-10-31</td><td class="mono">7</td><td class="mono">7</td><td class="mono">0</td><td class="mono">0</td><td>All seven World Series games confirmed against the MLB Stats API, including the ifNecessary flag on games 5, 6 and 7.</td></tr><tr><td><b>EuroLeague</b></td><td><a href="https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games?roundNumber=7">EuroLeague official live API (api-live.euroleague.net) — competition code E, season E2026</a></td><td class="mono">Round 7 (22-23 October 2026)</td><td class="mono">19</td><td class="mono">9</td><td class="mono">0</td><td class="mono">10</td><td>Nine unplayed Round 7 fixtures confirmed team-for-team and minute-for-minute against the EuroLeague live API. E2026_61 (Hapoel IBI Tel Aviv 90-81 Virtus Bologna) had already been played when it was captured, so it is not republished as a pending fixture.</td></tr><tr><td><b>ATP tennis</b></td><td><a href="https://www.atptour.com/en/scores/current/{almaty|brussels|lyon}/daily-schedule">ATP Tour official daily schedules (atptour.com)</a></td><td class="mono">Thu 22 October 2026</td><td class="mono">28</td><td class="mono">11</td><td class="mono">17</td><td class="mono">0</td><td>Ten round-of-16 pairings confirmed on the official ATP daily schedules for Almaty, Brussels and Lyon. 17 of the 28 tennis rows in the previously published desk pair players who are not scheduled to meet on the page those rows cite; they are listed individually on the flagged page and are not republished by this desk.</td></tr></tbody></table></div>
+<div class="note warn"><b>The tennis mismatches matter.</b> Each of the
+17 failing rows is itemised individually on the
+<a href="flagged.html">flagged page</a> with the official schedule it claims to come from, so you can open
+the page and see for yourself that the pairing is not there.</div>
+</main>
+<footer>Generated 2026-10-22T13:25:00Z · session <code>arena/ba48a907-olbg2</code> · every price on this site is
+originated by this project, never taken from a bookmaker · every row links to the official page it was
+read from.</footer>
+<script src="assets/app.js"></script>
+</body></html>

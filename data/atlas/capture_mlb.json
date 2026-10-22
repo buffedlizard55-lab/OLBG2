@@ -1,0 +1,112 @@
+{
+ "source": "MLB Stats API (official statsapi.mlb.com)",
+ "captured_utc": "2026-10-22T12:45:00Z",
+ "session": "arena/ba48a907-olbg2",
+ "schedule_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-01",
+ "standings_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+ "games": [
+  {
+   "gamePk": 849805,
+   "officialDate": "2026-10-23",
+   "utc": "2026-10-24T00:00:00Z",
+   "away": "Tampa Bay Rays",
+   "home": "Milwaukee Brewers",
+   "venue": "American Family Field",
+   "description": "World Series Game 1",
+   "ifNecessary": "N"
+  },
+  {
+   "gamePk": 849802,
+   "officialDate": "2026-10-24",
+   "utc": "2026-10-25T00:00:00Z",
+   "away": "Tampa Bay Rays",
+   "home": "Milwaukee Brewers",
+   "venue": "American Family Field",
+   "description": "World Series Game 2",
+   "ifNecessary": "N"
+  },
+  {
+   "gamePk": 849804,
+   "officialDate": "2026-10-26",
+   "utc": "2026-10-27T00:00:00Z",
+   "away": "Milwaukee Brewers",
+   "home": "Tampa Bay Rays",
+   "venue": "Tropicana Field",
+   "description": "World Series Game 3",
+   "ifNecessary": "N"
+  },
+  {
+   "gamePk": 849803,
+   "officialDate": "2026-10-27",
+   "utc": "2026-10-28T00:00:00Z",
+   "away": "Milwaukee Brewers",
+   "home": "Tampa Bay Rays",
+   "venue": "Tropicana Field",
+   "description": "World Series Game 4",
+   "ifNecessary": "N"
+  },
+  {
+   "gamePk": 849799,
+   "officialDate": "2026-10-28",
+   "utc": "2026-10-29T00:00:00Z",
+   "away": "Milwaukee Brewers",
+   "home": "Tampa Bay Rays",
+   "venue": "Tropicana Field",
+   "description": "World Series Game 5",
+   "ifNecessary": "Y"
+  },
+  {
+   "gamePk": 849801,
+   "officialDate": "2026-10-30",
+   "utc": "2026-10-31T00:00:00Z",
+   "away": "Tampa Bay Rays",
+   "home": "Milwaukee Brewers",
+   "venue": "American Family Field",
+   "description": "World Series Game 6",
+   "ifNecessary": "Y"
+  },
+  {
+   "gamePk": 849800,
+   "officialDate": "2026-10-31",
+   "utc": "2026-11-01T00:00:00Z",
+   "away": "Tampa Bay Rays",
+   "home": "Milwaukee Brewers",
+   "venue": "American Family Field",
+   "description": "World Series Game 7",
+   "ifNecessary": "Y"
+  }
+ ],
+ "teams": [
+  {
+   "id": 139,
+   "name": "Tampa Bay Rays",
+   "w": 98,
+   "l": 64,
+   "runsScored": 736,
+   "runsAllowed": 650,
+   "gamesPlayed": 162,
+   "divisionRank": "1",
+   "home": "55-26",
+   "away": "43-38",
+   "last10": "5-5",
+   "x_winloss": "90-72",
+   "streak": "L1"
+  },
+  {
+   "id": 158,
+   "name": "Milwaukee Brewers",
+   "w": 103,
+   "l": 59,
+   "runsScored": 832,
+   "runsAllowed": 618,
+   "gamesPlayed": 162,
+   "divisionRank": "1",
+   "home": "55-26",
+   "away": "48-33",
+   "last10": "8-2",
+   "x_winloss": "103-59",
+   "streak": "W1"
+  }
+ ],
+ "note": "2026 regular-season final records and runs, read from the official MLB standings endpoint. home/away/last10/x_winloss splits come from the same endpoint's splitRecords block."
+}

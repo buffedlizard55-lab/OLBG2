@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="index.html" class="active">Overview</a><a href="sports/index.html" class="">17 Sports</a><a href="matches.html" class="">All Matches</a><a href="picks.html" class="">In-Band Picks (34)</a><a href="flagged.html" class="">Flagged for Review (38)</a><a href="audit.html" class="">Repo Audit</a><a href="methodology.html" class="">Methodology</a><a href="sources.html" class="">Official Sources</a><a href="excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="index.html" class="active" aria-current="page">Overview</a><a href="sports/index.html" class="">17 Sports</a><a href="matches.html" class="">All Matches</a><a href="picks.html" class="">In-Band Picks (34)</a><a href="flagged.html" class="">Flagged for Review (38)</a><a href="audit.html" class="">Repo Audit</a><a href="methodology.html" class="">Methodology</a><a href="sources.html" class="">Official Sources</a><a href="excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../index.html">Root Dashboard</a> ·
       <a href="../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../hub/index.html">/hub/</a> ·
       <a href="../evidence/index.html">/evidence/</a> ·
       <a href="../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
     <section class="hero">
       <h1>Complete 17-Sport Official-Source Line Origination &amp; Forensic Audit Portal</h1>
@@ -46,22 +47,23 @@
       <div class="kpi"><div class="kpi-label">Row Official Link Rate</div><div class="kpi-val">100%</div><div class="kpi-sub">29 primary governing-body feeds</div></div>
     </div>
 
-    <div class='sport-pills'><a class='' href='sports/aussie-rules.html'>Aussie Rules (9)</a><a class='' href='sports/baseball.html'>Baseball (4)</a><a class='' href='sports/basketball.html'>Basketball (83)</a><a class='' href='sports/cricket.html'>Cricket (7)</a><a class='' href='sports/darts.html'>Darts (16)</a><a class='' href='sports/esports.html'>Esports (8)</a><a class='' href='sports/gaelic-football.html'>Gaelic Football (2)</a><a class='' href='sports/golf.html'>Golf (5)</a><a class='' href='sports/greyhounds.html'>Greyhounds (3)</a><a class='' href='sports/handball.html'>Handball (5)</a><a class='' href='sports/ice-hockey.html'>Ice Hockey (18)</a><a class='' href='sports/motor-racing.html'>Motor Racing (5)</a><a class='' href='sports/rugby-league.html'>Rugby League (5)</a><a class='' href='sports/rugby-union.html'>Rugby Union (23)</a><a class='' href='sports/snooker.html'>Snooker (5)</a><a class='' href='sports/tennis.html'>Tennis (16)</a><a class='' href='sports/volleyball.html'>Volleyball (6)</a></div>
+    <nav class='sport-pills' aria-label='Eligible sports'><a class='' href='sports/aussie-rules.html'>Aussie Rules (9)</a><a class='' href='sports/baseball.html'>Baseball (4)</a><a class='' href='sports/basketball.html'>Basketball (83)</a><a class='' href='sports/cricket.html'>Cricket (7)</a><a class='' href='sports/darts.html'>Darts (16)</a><a class='' href='sports/esports.html'>Esports (8)</a><a class='' href='sports/gaelic-football.html'>Gaelic Football (2)</a><a class='' href='sports/golf.html'>Golf (5)</a><a class='' href='sports/greyhounds.html'>Greyhounds (3)</a><a class='' href='sports/handball.html'>Handball (5)</a><a class='' href='sports/ice-hockey.html'>Ice Hockey (18)</a><a class='' href='sports/motor-racing.html'>Motor Racing (5)</a><a class='' href='sports/rugby-league.html'>Rugby League (5)</a><a class='' href='sports/rugby-union.html'>Rugby Union (23)</a><a class='' href='sports/snooker.html'>Snooker (5)</a><a class='' href='sports/tennis.html'>Tennis (16)</a><a class='' href='sports/volleyball.html'>Volleyball (6)</a></nav>
 
     <section class="section">
       <h2>17 Eligible OLBG Sports — Origination &amp; Official Source Matrix</h2>
       <p class="section-lead">Every row links directly to both the official governing body used for verification/inputs and the live OLBG sport discovery endpoint.</p>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Coverage by eligible sport">
         <table>
+          <caption class="sr-only">Sport coverage, originated and blank rows, picks, competitions, and verification links</caption>
           <thead>
             <tr>
-              <th>Sport (OLBG ID)</th>
-              <th>Official Governing Authority</th>
-              <th>Originated</th>
-              <th>Blank / Unlined</th>
-              <th>High Picks</th>
-              <th>Active Verified Competitions (22–28 Oct 2026)</th>
-              <th>Manual Review Links</th>
+              <th scope="col">Sport (OLBG ID)</th>
+              <th scope="col">Official Governing Authority</th>
+              <th scope="col">Originated</th>
+              <th scope="col">Blank / Unlined</th>
+              <th scope="col">High Picks</th>
+              <th scope="col">Active Verified Competitions (22–28 Oct 2026)</th>
+              <th scope="col">Manual Review Links</th>
             </tr>
           </thead>
           <tbody>
@@ -74,10 +76,11 @@
     <section class="section">
       <h2>Critical Cross-Layer Repository Audit Highlights (<a href="flagged.html">See All 38 Flagged Items →</a>)</h2>
       <p class="section-lead">Summary of major factual defects uncovered during line-by-line review of inherited repository datasets against live governing-body feeds.</p>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" tabindex="0" aria-label="Critical repository audit highlights">
         <table>
+          <caption class="sr-only">Critical cross-layer findings and official verification links</caption>
           <thead>
-            <tr><th>ID</th><th>Severity</th><th>Inherited Layer</th><th>Finding &amp; Portal Remediation</th><th>Official Proof</th></tr>
+            <tr><th scope="col">ID</th><th scope="col">Severity</th><th scope="col">Inherited Layer</th><th scope="col">Finding &amp; Portal Remediation</th><th scope="col">Official Proof</th></tr>
           </thead>
           <tbody><tr><td class='num'><strong>PA-01</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><code>slate (data/slate/matches.json, data/slate/predictions.json [0..5])</code></td><td><strong>12 of 13 ATP Tennis fixtures and 6 of 7 featured Tennis predictions in /slate/ do not exist on official ATP draws</strong><div style='font-size:12.5px;color:#4b5563'>Replaced all fabricated pairings with 16 live ATP &amp; WTA matches verified directly on atptour.com and wtatennis.com.</div></td><td><a href='https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule' target='_blank' rel='noopener'>Verify Official Source ↗</a></td></tr><tr><td class='num'><strong>PA-02</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><code>slate (data/slate/matches.json pdc-32330, data/slate/predictions.json #9)</code></td><td><strong>Fabricated PDC withdrawal claiming Ritchie Edhouse replaced Stephen Bunting against Danny Noppert</strong><div style='font-size:12.5px;color:#4b5563'>Restored verified (5) Danny Noppert vs (28) Stephen Bunting across all PDC Round 1 tables and predictions.</div></td><td><a href='https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-of-play' target='_blank' rel='noopener'>Verify Official Source ↗</a></td></tr><tr><td class='num'><strong>PA-03</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><code>verified, board, hub (golf-utah-2026)</code></td><td><strong>PGA Tour Bank of Utah Championship (ended Oct 4, won by Austin Smotherman -26) listed on Oct 22 active slates; Genesis field size misstated as 120</strong><div style='font-size:12.5px;color:#4b5563'>Removed completed Utah event; originated live Bermuda &amp; Genesis 72-hole tournament matchups and flagged 120/126-player full-field outrights.</div></td><td><a href='https://www.pgatour.com/tournaments/2026/bank-of-utah-championship/R2026554' target='_blank' rel='noopener'>Verify Official Source ↗</a></td></tr><tr><td class='num'><strong>PA-04</strong></td><td><span class="badge badge-critical">HIGH</span></td><td><code>hub (data/hub/matches.json atp-902126, atp-902133, wta-902072, wta-902107)</code></td><td><strong>Live Oct 22-23 Lyon, Ningbo, and Osaka matches mislabeled as next week&#x27;s Basel, Vienna, and Guangzhou tournaments</strong><div style='font-size:12.5px;color:#4b5563'>Mapped every ATP/WTA fixture to its exact Oct 22-23 tournament venue and official draw URL.</div></td><td><a href='https://www.atptour.com/en/scores/current/lyon/496/daily-schedule' target='_blank' rel='noopener'>Verify Official Source ↗</a></td></tr><tr><td class='num'><strong>PA-05</strong></td><td><span class="badge badge-critical">HIGH</span></td><td><code>root (5/17), verified (14/17), board (13/17), hub (11/17 lined), slate (15/17 lined)</code></td><td><strong>Zero prior repository layers originated lines across all 17 eligible OLBG sports</strong><div style='font-size:12.5px;color:#4b5563'>Originated multi-market fair lines across all 17/17 eligible OLBG sports while leaving unconfirmed sub-slates blank and flagged.</div></td><td><a href='https://www.olbg.com/sitemap-betting-tips.xml' target='_blank' rel='noopener'>Verify Official Source ↗</a></td></tr><tr><td class='num'><strong>PA-06</strong></td><td><span class="badge badge-critical">HIGH</span></td><td><code>verified (11/14 picks), board (11/35 picks)</code></td><td><strong>Synthetic .25/.75 quarter-point spreads in Rugby Union &amp; EuroLeague solved backwards to land at -238 to -250</strong><div style='font-size:12.5px;color:#4b5563'>Restricted all spreads, set/frame/leg handicaps, puck lines, and totals strictly to standard .5 half-unit increments.</div></td><td><a href='https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/' target='_blank' rel='noopener'>Verify Official Source ↗</a></td></tr></tbody>
         </table>

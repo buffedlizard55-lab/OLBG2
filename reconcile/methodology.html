@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method · OLBG2 reconciliation console</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> OLBG2 · Reconciliation console</div>
+    <nav class="nav"><a href="index.html">Overview</a><a href="conflicts.html">Conflicts</a><a href="non-fixtures.html">Non-fixtures</a><a href="freshness.html">Freshness</a><a href="provenance.html">Provenance</a><a href="predictions.html">Predictions</a><a href="spot-checks.html">Spot checks</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="../index.html">Dashboard</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+
+<h1>Method</h1>
+<p class="lede">The audit is deterministic and reproduces exactly from committed JSON. No network call, no clock,
+no randomness, no hand-entered number.</p>
+
+<h2>Pipeline</h2>
+<ul class="tight">
+<li><code>python3 scripts/reconcile_audit.py</code> — reads the eleven published layers, normalises each row, and writes
+<code>data/reconcile/rows.json</code> and <code>data/reconcile/report.json</code>.</li>
+<li><code>python3 scripts/reconcile_build.py</code> — renders this console from those two files plus the hand-read
+<code>data/reconcile/spot_checks.json</code>.</li>
+<li><code>python3 scripts/reconcile_verify.py</code> — structural gate: every listed row keeps a source link, every internal
+link resolves, no upstream data file changed, published counts match the report.</li>
+<li><code>python3 -m unittest tests.test_reconcile</code> — unit tests over the normaliser, the classifier and the report.</li>
+</ul>
+
+<h2>Normalisation</h2>
+<p class="lede">The layers publish five different market shapes (flat selection lists, per-market dicts with outcomes,
+home/away dicts, winner/handicap/total objects, and survey lines keyed by side_a/side_b). Each is parsed into one record:
+sport slug, date, home/away (club codes expanded from the repository's own captured team tables), moneyline decimals and
+probabilities mapped by team name, pick, grade, source URL, and the layer's own capture stamp.</p>
+<p class="lede">A fixture's identity is <code>(sport, date, sorted team names)</code> after accent stripping, alias
+resolution and parenthetical removal. That is deliberately strict: two rows only merge when they describe the same two clubs
+on the same date.</p>
+
+<h2>Checks</h2>
+<div class="scroll"><table class="data"><thead><tr><th>ID</th><th>Check</th><th>Definition</th></tr></thead><tbody>
+<tr><td>C1</td><td>Overlap</td><td>The same fixture published by more than one layer.</td></tr>
+<tr><td>C2</td><td>Price conflict</td><td>The same team priced at different fair decimals by different layers.</td></tr>
+<tr><td>C3</td><td>Grade conflict</td><td>The same fixture and selection graded differently across layers.</td></tr>
+<tr><td>C4</td><td>Non-fixture</td><td>Row is an outright, tournament field, venue pairing or race card, not a head-to-head fixture.</td></tr>
+<tr><td>C5</td><td>Staleness</td><td>Fixture date before the layer's capture stamp, or before the audit date.</td></tr>
+<tr><td>C6</td><td>Citation</td><td>Missing URLs, shared URLs, and hosts outside the governing-body list.</td></tr>
+<tr><td>C7</td><td>Prediction quality</td><td>Word count, duplication, selection named, market explicit, grade vs band.</td></tr>
+<tr><td>C8</td><td>One URL, incompatible pairs</td><td>A fixture-scoped URL cited by rows describing different pairings.</td></tr>
+<tr><td>C9</td><td>Within-layer duplicate</td><td>The same fixture published twice by one layer.</td></tr>
+<tr><td>C10</td><td>Scope</td><td>Rows under the brief's excluded sports; coverage of the 17 eligible sports.</td></tr>
+</tbody></table></div>
+
+<h2>Limits, stated plainly</h2>
+<ul class="tight">
+<li>Only nine claims were re-read from an official page (spot-checks page). The rest of the audit is mechanical, so it can
+prove inconsistency between layers but not that any single layer matches the outside world.</li>
+<li>“Non-fixture” is a classification from the row's own text and structure. It is a defect report, not a deletion.</li>
+<li>Price and grade conflicts are expected when layers run independent models. The finding is that no reconciliation exists,
+not that a specific model is wrong.</li>
+<li>The audit date is fixed at 2026-10-22 so rebuilds are reproducible; it is not read from the clock.</li>
+</ul>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Independent cross-layer audit of the published OLBG2 datasets. Read-only: no other session's data was edited.
+Every value below is machine-derived from committed JSON; spot checks link the official page that was read.</p>
+<p>Audit date 2026-10-22 · session <code>arena/3552df3e-olbg2</code> · <a href="flagged.html">Flagged for review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

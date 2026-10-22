@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freshness · OLBG2 reconciliation console</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> OLBG2 · Reconciliation console</div>
+    <nav class="nav"><a href="index.html">Overview</a><a href="conflicts.html">Conflicts</a><a href="non-fixtures.html">Non-fixtures</a><a href="freshness.html">Freshness</a><a href="provenance.html">Provenance</a><a href="predictions.html">Predictions</a><a href="spot-checks.html">Spot checks</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="../index.html">Dashboard</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+
+<h1>Freshness</h1>
+<p class="lede">A row is stale when its fixture date is earlier than the stamp on the layer that publishes it,
+or earlier than this audit date while still being presented as an upcoming fixture.</p>
+<div class="grid">
+<div class="kpi"><div class="kpi-v">34</div><div class="kpi-l">Stale rows</div><div class=kpi-n>fixture date before capture / audit date</div></div>
+<div class="kpi"><div class="kpi-v">25</div><div class="kpi-l">Rows with no date</div><div class=kpi-n>cannot be scheduled or settled</div></div>
+<div class="kpi"><div class="kpi-v">2026-10-22</div><div class="kpi-l">Audit date</div><div class=kpi-n>all comparisons are against this</div></div>
+</div>
+<div class="scroll"><table class="data"><thead><tr><th>Layer</th><th>Sport</th><th>Fixture date</th><th>Layer capture</th><th>Fixture</th><th>Why it is stale</th></tr></thead><tbody>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Orlando Magic v Atlanta Hawks</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Washington Wizards v Milwaukee Bucks</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Miami Heat v Minnesota Timberwolves</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Brooklyn Nets v Charlotte Hornets</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Toronto Raptors v Chicago Bulls</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>New Orleans Pelicans v Indiana Pacers</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Memphis Grizzlies v Utah Jazz</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Houston Rockets v Dallas Mavericks</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Los Angeles Lakers v Golden State Warriors</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>Portland Trail Blazers v Phoenix Suns</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>basketball</td><td>2026-10-21</td><td>2026-10-22</td><td>LA Clippers v Sacramento Kings</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>cricket</td><td>2026-10-21</td><td>2026-10-22</td><td>Afghanistan v Bangladesh</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>handball</td><td>2026-10-21</td><td>2026-10-22</td><td>Dinamo Bucuresti v SAH - Aarhus</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>handball</td><td>2026-10-21</td><td>2026-10-22</td><td>RK Partizan AdmiralBet v FC Porto</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>handball</td><td>2026-10-21</td><td>2026-10-22</td><td>One Veszprém HC v Füchse Berlin</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>handball</td><td>2026-10-21</td><td>2026-10-22</td><td>HC Zagreb v Paris Saint-Germain</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>handball</td><td>2026-10-21</td><td>2026-10-22</td><td>HBC Nantes v HC Vardar 1961</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>handball</td><td>2026-10-21</td><td>2026-10-22</td><td>Aalborg Håndbold v RK Celje Pivovarna Laško</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>handball</td><td>2026-10-21</td><td>2026-10-22</td><td>HC Kriens-Luzern v Industria Kielce</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>ice hockey</td><td>2026-10-21</td><td>2026-10-22</td><td>Buffalo Sabres v Philadelphia Flyers</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>root</td><td>ice hockey</td><td>2026-10-21</td><td>2026-10-22</td><td>Ottawa Senators v Florida Panthers</td><td>fixture dated before the layer&#x27;s own capture stamp</td></tr>
+<tr><td>desk</td><td>ice hockey</td><td>2026-10-21</td><td>2026-10-21</td><td>Buffalo Sabres v Philadelphia Flyers</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>ice hockey</td><td>2026-10-21</td><td>2026-10-21</td><td>Ottawa Senators v Florida Panthers</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>ORL v ATL</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>WAS v MIL</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>MIA v Minnesota Wild</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>BKN v CHA</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>Toronto Maple Leafs v Chicago Blackhawks</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>NOP v IND</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>MEM v Utah Mammoth</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>HOU v Dallas Stars</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>LAL v GSW</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>POR v PHX</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+<tr><td>desk</td><td>basketball</td><td>2026-10-21</td><td>2026-10-21</td><td>LAC v SAC</td><td>fixture dated before the audit date, still published as scheduled</td></tr>
+</tbody></table></div>
+<h2>Rows with no fixture date</h2>
+<p class="lede">These rows exist in a layer but publish no date, so they cannot be placed on a schedule. They are listed rather
+than guessed.</p>
+<div class="scroll"><table class="data"><thead><tr><th>Layer</th><th>Sport</th><th>Home / side A</th><th>Away / side B</th><th>Reason</th></tr></thead><tbody>
+<tr><td>survey</td><td>rugby union</td><td>Toulouse</td><td>Perpignan</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>rugby union</td><td>Bayonne</td><td>Lyon</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>rugby union</td><td>La Rochelle</td><td>Bordeaux</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>rugby union</td><td>Connacht</td><td>Zebre Parma</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>rugby union</td><td>Bulls</td><td>Ulster</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>rugby union</td><td>Stormers</td><td>Scarlets</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>rugby union</td><td>Leinster</td><td>Munster</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Luke Woodhouse</td><td>Dirk van Duijvenbode</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Danny Noppert</td><td>Stephen Bunting</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Niels Zonneveld</td><td>Cameron Menzies</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Gerwyn Price</td><td>Rob Cross</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>James Wade</td><td>Damon Heta</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Luke Humphries</td><td>Ryan Searle</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Gian van Veen</td><td>Andrew Gilding</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Ross Smith</td><td>Karel Sedlacek</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Ryan Joyce</td><td>Jermaine Wattimena</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Krzysztof Ratajski</td><td>Dave Chisnall</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Nathan Aspinall</td><td>Cristo Reyes</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Jonny Clayton</td><td>Niko Springer</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Luke Littler</td><td>William O&#x27;Connor</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Wessel Nijman</td><td>Martin Schindler</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Kevin Doets</td><td>Michael van Gerwen</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>darts</td><td>Josh Rock</td><td>Chris Dobey</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>snooker</td><td>Kyren Wilson</td><td>Pang Junxu</td><td>no fixture date published on the row</td></tr>
+<tr><td>survey</td><td>baseball</td><td>TB Rays</td><td>MIL Brewers</td><td>no fixture date published on the row</td></tr>
+</tbody></table></div>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Independent cross-layer audit of the published OLBG2 datasets. Read-only: no other session's data was edited.
+Every value below is machine-derived from committed JSON; spot checks link the official page that was read.</p>
+<p>Audit date 2026-10-22 · session <code>arena/3552df3e-olbg2</code> · <a href="flagged.html">Flagged for review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

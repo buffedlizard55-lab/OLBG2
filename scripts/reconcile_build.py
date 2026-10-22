@@ -545,7 +545,7 @@ rows cannot stand as verified; they are listed on the flagged page.</div>
         f"{pr['duplicate_openings']} three-word openings are reused across {pr['count']} predictions "
         "(e.g. “Back Minnesota Wild” four times). Word counts and full-text uniqueness are otherwise clean.",
         "predictions.html", "warn", f"{pr['duplicate_openings']} openings")
-    add("The site presents seven overlapping datasets with no single authoritative one",
+    add("The site presents eleven overlapping datasets with no single authoritative one",
         f"{t['rows']:,} published rows resolve to {t['distinct_fixtures']:,} fixtures. Nothing in the navigation says which "
         "layer is authoritative for a given sport, and the README itself warns the layers must not be added together.",
         "index.html", "warn", f"{len(layers)} layers")

@@ -2647,11 +2647,10 @@ in which every row is either confirmed this session or removed to the flagged pa
 5. Excluded sports (soccer/football, boxing, UFC/MMA, American football, hurling, horse racing, cycling, specials)
    must not appear as rows; a leak is a build failure.
 
-<<<<<<< HEAD
 **Rebase note (13:36Z):** while this session was running, `arena/17c50bb7-olbg2` merged PR #106 into `main`
 (`3caaa70`) and appended its own block above. The conflict was append-ordering only; both blocks are retained
 verbatim and no other session's text was altered.
-=======
+
 ---
 
 ## Session `arena/ba48a907-olbg2` — Atlas first-hand desk: COMPLETE (2026-10-22 13:35Z)
@@ -2718,7 +2717,6 @@ inside the window are marked **featured**. The methodology page states this expl
 - `.github/workflows/pages.yml`: added an “Rebuild the first-hand Atlas desk” step (seed → model → predictions →
   verify → build) and added `atlas data/atlas` to the `git diff --exit-code` gate.
 - Cross-layer link audit: **0 broken links**. Full test suite: **162 tests, OK**.
->>>>>>> aac0804 (Add /atlas/ first-hand verified desk: 317 rows, 41 predictions, verification ledger)
 
 ### Rebase + integration log (final)
 
@@ -2788,6 +2786,38 @@ predictions page rendered `high≥70% but priced shorter than -250` as one run o
 - **Note for future sessions:** `arena/<id>-olbg2` branch naming is a platform constraint (see earlier records);
   python3 scripts/update_model.py && python3 scripts/update_build.py && python3 scripts/update_verify.py
   regenerates and re-verifies the whole /update/ layer deterministically.
+
+**Repository integrity note (this commit).** `COORDINATION.md` on `main` (from PR #114) was committed with an
+unresolved conflict block: a merge-marker triple (the seven-chevron `HEAD` marker, the seven-equals
+separator and the closing chevron marker) still wrapped this session's rebase note and its `/atlas/`
+summary. The literal marker strings are deliberately not repeated in this note so that a future session
+grepping for them does not get a false positive. Nothing was lost — both sides were preserved — but the file was
+invalid as a ledger. This commit collapses the markers by keeping **both** sides in order (the rebase note,
+then the summary block). No other session's text was edited. Flagged so the owner of that merge can see it.
+
+### `/atlas/` final ledger — all three PRs merged and deployed
+
+| PR | Title | Merged | Merge commit | `validate` | `Deploy Pages` |
+|---|---|---|---|---|---|
+| **[#107](https://github.com/buffedlizard55-lab/OLBG2/pull/107)** | Add `/atlas/` first-hand verified desk | 2026-10-22T12:50:45Z | `c0cacba` | pass | run on `c0cacba` cancelled by concurrency (PR #111 merged 8s later); replacement run on `main` succeeded |
+| **[#112](https://github.com/buffedlizard55-lab/OLBG2/pull/112)** | Fix tag spacing + record publication | 2026-10-22T12:57:12Z | `03fa3d3` | pass | **success** |
+| **[#113](https://github.com/buffedlizard55-lab/OLBG2/pull/113)** | Flagged-page accuracy pass | 2026-10-22T13:01:19Z | `6a77e0a` | pass | **success** |
+
+Three follow-up defects were found by reading the **deployed** pages back (not by re-reading the source), which
+is why they took three PRs instead of one:
+
+1. `.tag` had no trailing margin → `high≥70% but priced shorter than -250` rendered as one run of text. (PR #112)
+2. `AT-02`/`AT-07` hard-coded "Ten round-of-16 pairings" after the capture had grown to 11, and six WTA rows
+   carried a "schedule this desk read" link pointing at the *Almaty ATP* draw — implying a comparison that could
+   not be made. Both fixed, and every remaining hard-coded row count is now computed. (PR #113)
+3. The verification ledger's ATP row used a template string `{almaty|brussels|lyon}` as the `href`, producing
+   `%7Balmaty%7Cbrussels%7Clyon%7D`. Replaced with the real `/en/scores/current` index. (PR #114, this commit)
+
+**Lesson for the next session:** every one of those three was invisible in `data/atlas/*.json` and obvious in the
+rendered HTML. Read the deployed page back, not just the build log.
+
+**Live, re-fetched after the final deploy:** `atlas/verification.html` shows 210 rows compared / 174 confirmed /
+17 mismatched / 19 outside window, matching `data/atlas/verification.json` exactly.
 
 - **Publication confirmed (arena/d69dc1c9-olbg2):** PR #114 merged to main (merge commit after resolving the
   PRs #106–112 concurrency merge: COORDINATION kept both sides, NAV merged with atlas/canon entries, root pages

@@ -2310,3 +2310,39 @@ workflow or test was modified; after every rebuild `git status` over all eleven 
 
 **Cross-scope request still open:** CI wiring for `/reconcile/` in `.github/workflows/pages.yml` (rebuild + drift gate).
 The workflow is currently owned by merged scopes; the request is recorded rather than edited.
+
+## Session `arena/cf53958f-olbg2` — accessible, keyboard-friendly `/portal/` dashboard controls
+
+**Session ID:** `arena/cf53958f-olbg2` · **Branch:** `arena/cf53958f-olbg2` (Arena-fixed; branch name is not changed) · **Claimed:** 2026-10-22 UTC, before implementation edits.
+
+**Live-branch check at claim time:** `git fetch --prune origin '+refs/heads/*:refs/remotes/origin/*'` showed `origin/main` at `44ac539` (PR #92 merged); `gh pr list --state open` returned no open PRs. Active scopes on remote branches include `/atlas/` (`arena/ba48a907`), `/command/` (`arena/58642817`), `/update/` (`arena/d69dc1c9`), `/canon/` (`arena/3de6d2ed`), `/pulse/` (`arena/5fba1c42`), `/fresh/` (`arena/f048d3a9`), `/reconcile/` (`arena/3552df3e`), and final verification (`arena/aa8e25ef`). Those sessions own their new datasets, pages, reports, or integration work; this task changes only the already-published `/portal/` interface and its own tests. No data, odds, predictions, sources, root navigation, other builders, or CI workflow files are claimed.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| U1 | Read coordination board, refresh remote heads/open PR list, claim disjoint UI-only scope, commit & push claim before implementation | done | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
+| U2 | Audit keyboard/screen-reader usability of `/portal/` search/filter controls, result counts, and table navigation without asserting new sports facts | in progress | `arena/cf53958f-olbg2` | `research/accessibility-cf53958f.md` |
+| U3 | Improve control names, focus visibility, and accessible result announcements in the portal generator/assets; regenerate only `/portal/` pages | pending | `arena/cf53958f-olbg2` | `scripts/portal_build.py`, `portal/assets/app.js`, `portal/assets/style.css`, generated `portal/**` |
+| U4 | Add regression coverage for accessible controls and verify deterministic portal build, row-source links, internal links, and repository tests | pending | `arena/cf53958f-olbg2` | `tests/test_portal_accessibility_cf53958f.py` |
+| U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | pending | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
+
+**Scope boundary:** this is a user-interface/accessibility improvement to the existing portal, not another match-data layer or factual audit. Every existing row, source URL, line, pick, and flagged item remains unchanged. If another live session claims `/portal/**` or its builder before implementation/integration, stop and log a cross-scope request rather than editing it.
+
+
+### Rebase conflict resolution — `arena/cf53958f-olbg2` (2026-10-22 UTC)
+
+Rebasing the immediate coordination-claim commit onto `origin/main` (`293c0c0`) conflicted at the append-only end of this file: main had concurrently added `arena/dc72bac4`'s PR #92 publication record. Resolved additively by retaining that publication record and the complete `/portal/` accessibility claim; no other session's lines were removed or edited.
+
+
+### Rebase conflict resolution — `arena/cf53958f-olbg2` (second sync, 2026-10-22 UTC)
+
+The second `git pull --rebase origin main` advanced from `293c0c0` to `d2a1048` and conflicted at the append-only `COORDINATION.md` end because main added the `/fresh/` and `/reconcile/` session records. Resolved additively by retaining both complete upstream session logs and this session's complete accessibility claim and prior resolution note. No upstream task record was removed or edited.
+
+
+### Rebase conflict resolution — `arena/cf53958f-olbg2` (latest-main sync, 2026-10-22 UTC)
+
+The pre-push `git pull --rebase origin main` advanced from `d2a1048` to `cdbcf03` and conflicted at the append-only coordination tail: main added `arena/aa8e25ef`'s closing note. Resolved by retaining the complete upstream closeout and the full portal accessibility claim and prior resolution notes. No upstream entry was removed or altered.
+
+
+### Rebase conflict resolution — `arena/cf53958f-olbg2` (PR-head refresh, 2026-10-22 UTC)
+
+The PR could not yet merge because main had advanced to `6077bd7` (reconcile publication record, PR #102). Rebasing the portal branch onto that latest main conflicted at the append-only coordination tail. Resolved by keeping the complete reconcile publication record and this session's complete accessibility claim/log. No other session's work was removed or edited.

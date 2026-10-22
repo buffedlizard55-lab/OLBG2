@@ -14,11 +14,11 @@
     <nav class="nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="matches.html">All matches</a><a href="sports/index.html">Sports</a><a href="picks.html">Picks</a><a href="forward/index.html">Forward slate (23 Oct–2 Nov)</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sources.html">Sources</a><a href="archive.html">Archive</a><a href="integration.html">Cross-layer review</a></nav>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 01:30 UTC</strong> · 128 stored rows · 94 originated lines · 14 price-band picks · every row carries its official source link · <a href="flagged.html">33 open review items</a></div></div>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 08:15 UTC</strong> · 188 stored rows · 154 originated lines · 14 price-band picks · every row carries its official source link · <a href="flagged.html">35 open review items</a></div></div>
 <main class="wrap">
 
 <h1>Methodology &amp; models</h1>
-<p class="lede">How the 94 originated lines, the confidence labels and the 14 predictions are produced — and where the
+<p class="lede">How the 154 originated lines, the confidence labels and the 14 predictions are produced — and where the
 limits are. This is a research model, not a bookmaker. Rows include source links to the official input page, but a link
 does not by itself prove the page supported every field; the <a href="verification.html">verification ledger</a> records
 what was actually checked.</p>
@@ -29,7 +29,7 @@ what was actually checked.</p>
   <li><strong>Verify</strong> the fixture on the governing body or league endpoint: ids, teams, local date, start time, venue.</li>
   <li><strong>Collect</strong> the model inputs from official standings: wins, losses, goals/points for and against, ranking money.</li>
   <li><strong>Originate</strong> moneyline, handicap and total prices from the sport-specific distribution below.</li>
-  <li><strong>Grade</strong> the selection: high ≥72% (≥70% for a price-band pick), medium ≥60%, low below 60%.</li>
+  <li><strong>Grade</strong> the selection under the uniform odds-window gate: high when probability ≥70% and the fair American price sits inside −250…+10000, medium ≥60%, low below 60% (ultra-short chalk is capped at medium).</li>
   <li><strong>Write</strong> a unique ≥30-word prediction for every published high-confidence or band pick, with sourced facts.</li>
   <li><strong>Disclose</strong> every blank, stale or unsupported value on <a href="flagged.html">Flagged for Review</a>.</li>
 </ol>
@@ -37,7 +37,7 @@ what was actually checked.</p>
 <h2>Confidence and the price band</h2>
 <div class="two-col">
 <div class="panel"><h3>Confidence</h3>
-<p><span class="badge high">high</span> model probability ≥72%. <span class="badge medium">medium</span> ≥60%.
+<p><span class="badge high">high</span> model probability ≥70% with fair American price inside −250…+10000 (uniform odds-window gate). <span class="badge medium">medium</span> ≥60% or out-of-window chalk.
 <span class="badge low">low</span> below 60%. NBA picks are capped at medium because the prior season's records
 do not reflect current rosters.</p></div>
 <div class="panel"><h3>Price band (−250 to +10000)</h3>

@@ -121,9 +121,12 @@ class VerifiedPipelineTests(unittest.TestCase):
         # 2026-10-22 (session 26963a2d): Wilson v Pang priced from the full
         # official WST top-36 (+1 originated) and the in-progress SA v AUS Test
         # retired (-1 unlined); NZ v IND corrected to 22 Oct 07:00 UTC.
-        # 2026-10-22 (session c12bdcd7): +10 unlined GBGB Category One open
-        # races (23 Oct-26 Dec) from the official GBGB schedule (VF-22).
-        self.assertEqual(orig, 94)
+        # 2026-10-22 (session arena/1352b77f-olbg2): +60 NBA fixtures for
+        # 24-31 Oct captured from the official week schedule (VF-14 closed),
+        # so originated moves 94 -> 154. 2026-10-22 (session c12bdcd7): +10
+        # unlined GBGB Category One open races (23 Oct-26 Dec) from the
+        # official GBGB schedule (VF-22), so unlined moves 24 -> 34.
+        self.assertEqual(orig, 154)
         self.assertEqual(unl, 34)
 
     def test_research_desk_picks_are_in_band_verified_and_player_aware(self) -> None:
@@ -230,26 +233,29 @@ class VerifiedPipelineTests(unittest.TestCase):
         self.assertGreater(scopes["competition"], 0)
 
     def test_confidence_badge_matches_the_published_grading_rule(self) -> None:
-        # Published rule: high >= 72%, OR a band selection >= 70% priced
-        # inside -250..+10000. The same selection must never read HIGH on the
-        # picks page and MEDIUM in its own match row (VF-26).
+        # Published rule (uniform odds-window gate; substance of PR #54 adopted
+        # onto the current tree): HIGH iff model probability >= 0.70 AND fair
+        # American price inside -250..+10000. Ultra-short chalk is graded
+        # medium, so the HIGH label always means an in-band selection with a
+        # written-prediction duty — never a -5000 favourite. The same selection
+        # must never read HIGH on the picks page and MEDIUM in its own match
+        # row (VF-26). NBA keeps its medium cap.
         checked = 0
         for m in self.matches["matches"]:
             pick = m.get("pick")
             if m["line_status"] != "originated" or not pick:
                 continue
-            if m["competition"].startswith("NBA"):
-                self.assertNotEqual(pick["confidence"], "high", m["id"])
-                continue
             in_band = (
                 pick["probability"] >= 0.70
                 and -250 <= pick["fair_american"] <= 10000
             )
-            if in_band:
+            if m["competition"].startswith("NBA"):
+                self.assertNotEqual(pick["confidence"], "high", m["id"])
+            elif in_band:
                 self.assertEqual(pick["confidence"], "high", m["id"])
                 checked += 1
-            if pick["probability"] >= 0.72:
-                self.assertEqual(pick["confidence"], "high", m["id"])
+            else:
+                self.assertNotEqual(pick["confidence"], "high", m["id"])
         self.assertGreaterEqual(checked, 3)
 
     def test_no_stale_fixtures_and_nba_never_featured(self) -> None:

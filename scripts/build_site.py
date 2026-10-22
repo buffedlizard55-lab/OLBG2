@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the unified OLBG2 research dashboard at the repository root.
 
-The published dataset is the /verified/ primary-source desk (155 rows across 15
+The published dataset is the /verified/ primary-source desk (178 rows across 13
 of the 17 eligible sports). The four earlier layers are preserved untouched and
 indexed from archive.html; none of their rows is counted twice here.
 
@@ -25,7 +25,7 @@ VERIFIED = DATA / "verified"
 SITE = ROOT
 
 AS_OF = "2026-10-22"
-AS_OF_CLOCK = "2026-10-22 01:30 UTC"
+AS_OF_CLOCK = "2026-10-22 08:15 UTC"
 TODAY = "2026-10-22"
 
 
@@ -370,7 +370,7 @@ def build_index(matches, preds=None, flagged=None) -> str:
   <div class="kpi"><div class="v">{originated}</div><div class="k">originated lines</div><div class="s">moneyline, handicap, total</div></div>
   <div class="kpi"><div class="v">{band_count}</div><div class="k">price-band picks</div><div class="s">≥70% and −250 to +10000</div></div>
   <div class="kpi"><div class="v">{pred_count}</div><div class="k">written predictions</div><div class="s">all {band_count} in the −250…+10000 band, 30+ words</div></div>
-  <div class="kpi"><div class="v">6</div><div class="k">source families re-read 22 Oct</div><div class="s">NHL · URC · Top 14 · Pro D2 · EuroLeague · EHF</div></div>
+  <div class="kpi"><div class="v">11</div><div class="k">source families re-read 22 Oct</div><div class="s">NHL · NBA · MLB · PDC · WST · URC · Top 14 · Pro D2 · EuroLeague · EHF · FIA</div></div>
   <div class="kpi"><div class="v">{flag_count}</div><div class="k">open review items</div><div class="s">blank, stale or irregular</div></div>
 </div>
 
@@ -400,7 +400,7 @@ silently. <a href="sports/index.html">Open the category index</a>.</p>
   <div class="panel"><h3>Prices and confidence</h3><ul>
     <li>Confidence split: <strong>{conf.get('high', 0)} high</strong>, {conf.get('medium', 0)} medium, {conf.get('low', 0)} low, {conf.get('none', 0)} unlined/no pick.</li>
     <li><strong>{band_count} band picks</strong> sit at fair odds 1.40-1.42 with model probabilities of 70.0-71.4%, the only window satisfying both the ≥70% rule and the −250 floor.</li>
-    <li>Moneyline picks graded high (&ge;72%) whose fair price is shorter than the &minus;250 floor stay on the sport tables without a written prediction, rather than padding the picks page with ultra-short prices.</li>
+    <li>Uniform odds-window high gate: a pick is graded <strong>high</strong> only when its model probability is &ge;70% <em>and</em> its fair American price sits inside &minus;250&hellip;+10000. Ultra-short chalk (for example &minus;5000 favourites) is graded medium and never triggers the written-prediction duty, so the picks page never pads itself with unbackable prices.</li>
     <li>The longest fair price anywhere in the {pred_count} predictions is <strong>{max_price:.2f}</strong>, inside the +10000 ceiling.</li>
   </ul></div>
 </div>
@@ -445,7 +445,7 @@ plus the reason no price was originated.</p>
 </div>
 {filter_bar(sports)}
 {match_table(rows)}
-<p class="tiny">Confidence badge colours: <span class="badge high">high</span> model probability ≥72% (or a band pick ≥70%),
+<p class="tiny">Confidence badge colours: <span class="badge high">high</span> model probability ≥70% with fair American price inside −250…+10000,
 <span class="badge medium">medium</span> ≥60%, <span class="badge low">low</span> below 60%.
 The price-band picks are a separate, stricter list: model probability ≥70% <em>and</em> fair odds 1.40-101.00.</p>
 """
@@ -510,8 +510,9 @@ def build_sports_index() -> str:
     body = f"""
 <p class="crumb"><a href="../index.html">Dashboard</a> / Sports</p>
 <h1>Sports</h1>
-<p class="lede">17 eligible OLBG sports. 15 carry rows in this snapshot; Aussie Rules and eSports were surveyed
-and had no active fixtures. The eight excluded categories are listed at the bottom with the reason.</p>
+<p class="lede">17 eligible OLBG sports. 13 carry rows in this snapshot; Aussie Rules, eSports, Tennis and
+Greyhounds carry zero rows (their bodies published no verifiable fixture in this window). The eight excluded
+categories are listed at the bottom with the reason.</p>
 <div class="grid sports">{"".join(cards)}</div>
 <h2>Excluded by the brief</h2>
 <ul class="excluded">{excluded}</ul>
@@ -598,7 +599,7 @@ No value on this site was inferred from memory or copied from a secondary outlet
 
 <div class="kpis">
   <div class="kpi"><div class="v">{len(rows)}</div><div class="k">published rows</div></div>
-  <div class="kpi"><div class="v">6</div><div class="k">source families re-read 2026-10-22</div><div class="s">NHL · URC · Top 14 · Pro D2 · EuroLeague · EHF</div></div>
+  <div class="kpi"><div class="v">11</div><div class="k">source families re-read 2026-10-22</div><div class="s">NHL · NBA · MLB · PDC · WST · URC · Top 14 · Pro D2 · EuroLeague · EHF · FIA</div></div>
   <div class="kpi"><div class="v">{fixture_scope}</div><div class="k">fixture-scoped source</div><div class="s">URL identifies the match</div></div>
   <div class="kpi"><div class="v">{comp_scope}</div><div class="k">competition-scoped source</div><div class="s">URL confirms the league, not the match</div></div>
   <div class="kpi"><div class="v">{len(unlined)}</div><div class="k">unlined rows</div><div class="s">price deliberately blank</div></div>
@@ -611,7 +612,8 @@ This is disclosed as <a href="flagged.html#VF-11">VF-11</a>.</div>
 
 <h2>Re-read line by line on 2026-10-22</h2>
 <p class="sub">Every figure below was re-fetched from the governing body in this session and compared with the published row.
-The rows that were <em>not</em> re-read are named in <a href="flagged.html#VF-23">VF-23</a> rather than implied to be checked.</p>
+The rows that were <em>not</em> re-read are named in <a href="flagged.html#VF-23">VF-23</a> and
+<a href="flagged.html#VF-34">VF-34</a> rather than implied to be checked.</p>
 <div class="table-wrap"><table class="data"><thead><tr><th>Source family</th><th>What was compared</th><th>Result</th><th>Official page</th></tr></thead><tbody>
 <tr><td>NHL team rates</td><td>MIN 6-2-2 (31/25), CGY 2-6-0 (17/37), CAR 8-2-1 (42/27), EDM 7-1-1 (41/27), BOS 7-2-1 (36/22), NSH 3-2-3 (23/22)</td><td>All match</td><td><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">api.nhle.com</a></td></tr>
 <tr><td>NHL fixtures</td><td>12 games, ids, venues and 23:00Z start times on 22 October</td><td>Match</td><td><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">api-web.nhle.com</a></td></tr>
@@ -620,8 +622,17 @@ The rows that were <em>not</em> re-read are named in <a href="flagged.html#VF-23
 <tr><td>Pro D2</td><td>Provence 7-0-0 (222/158), Aurillac 16 pts (240/254), Béziers 2-0-5 (147/240), Nevers 0-0-7 (146/222)</td><td>Match; one form sentence corrected (VF-25)</td><td><a href="https://prod2.lnr.fr/classement" rel="noopener">prod2.lnr.fr</a></td></tr>
 <tr><td>EuroLeague</td><td>Panathinaikos 5-1 (528/438, +90, 4-1 home); Baskonia 20th 1-5 (504/564, 0-2 away)</td><td>Both match exactly</td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></td></tr>
 <tr><td>EHF Champions League</td><td>Group E: Barça 4-0-0 (137:104), Montpellier 1-0-3 (116:125); fixture 202711020101049</td><td>Match</td><td><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></td></tr>
+<tr><td>NHL score feed (second pass)</td><td>12/12 rows of 22 Oct: game ids 2026020154–2026020165, matchups, venues, UTC starts, W-L-OTL records</td><td>All match</td><td><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">api-web.nhle.com</a></td></tr>
+<tr><td>NBA schedule + 2025-26 standings</td><td>14/14 published rows matched (tip ET, venue, game id); 60 further games captured 24–31 Oct; 30/30 club priors matched</td><td>All match; slate captured (VF-14)</td><td><a href="https://www.nba.com/schedule?date=2026-10-24" rel="noopener">nba.com</a></td></tr>
+<tr><td>MLB World Series</td><td>11 rows (4 desk + 7 forward): gamePks 849799–849805, dates, venues, G5–G7 if-necessary flags</td><td>All match</td><td><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-21&amp;endDate=2026-10-28&amp;hydrate=team" rel="noopener">statsapi.mlb.com</a></td></tr>
+<tr><td>PDC World Rankings</td><td>18/18 darts players: rank and prize money (Littler 1st £3,113,500 … Reyes 71st £95,000)</td><td>All match</td><td><a href="https://www.pdc.tv/rankings" rel="noopener">pdc.tv</a></td></tr>
+<tr><td>WST Johnstone's Paint Rankings</td><td>8/8 snooker rows: every named rank/prize pair; every "outside top 36" player absent from the official list</td><td>All match</td><td><a href="https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8" rel="noopener">wst.tv</a></td></tr>
+<tr><td>URC table + Round 4</td><td>16/16 club records (W-D-L, PF/PA) and fixtures 292608–292610 (Cardiff Arms Park / Dexcom / Hive)</td><td>All match</td><td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4" rel="noopener">stats.unitedrugby.com</a></td></tr>
+<tr><td>Top 14 table (second pass)</td><td>All 14 clubs' W-D-L, PF/PA and the seven J7 fixture links 11861–11867</td><td>All match</td><td><a href="https://top14.lnr.fr/classement" rel="noopener">top14.lnr.fr</a></td></tr>
+<tr><td>Pro D2 table (second pass)</td><td>All 16 clubs' W-D-L, PF/PA and the eight J8 fixture links 12063–12070</td><td>All match</td><td><a href="https://prod2.lnr.fr/classement" rel="noopener">prod2.lnr.fr</a></td></tr>
+<tr><td>FIA F1 drivers' standings</td><td>Antonelli 340, Russell 238, Hamilton 229, Verstappen 221</td><td>Match</td><td><a href="https://www.formula1.com/en/results/2026/drivers" rel="noopener">formula1.com</a></td></tr>
 </tbody></table></div>
-<p class="tiny">Full comparison table and the list of rows not re-read: <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">research/verification-072755db.md</a>.</p>
+<p class="tiny">Full comparison table and the list of rows not re-read: <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">research/verification-072755db.md</a> (first pass) and <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-1352b77f.md">research/verification-1352b77f.md</a> (second pass).</p>
 
 <h2>Evidence by sport</h2>
 <div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Rows</th><th>Fixture-scoped URL</th>
@@ -629,7 +640,7 @@ The rows that were <em>not</em> re-read are named in <a href="flagged.html#VF-23
 
 <h2>What “verified” means here</h2>
 <table class="data plain"><thead><tr><th>Badge</th><th>Meaning</th></tr></thead><tbody>
-<tr><td><span class="badge warn">captured 22 Oct</span></td><td>The value was read from the cited official page on 2026-10-22 and is preserved with that provenance. Six source families (NHL, URC, Top 14, Pro D2, EuroLeague, EHF) were additionally re-read line by line that day; see <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">the verification report</a> and VF-23 for what was and was not re-checked.</td></tr>
+<tr><td><span class="badge warn">captured 22 Oct</span></td><td>The value was read from the cited official page on 2026-10-22 and is preserved with that provenance. Eleven source families (NHL, NBA, MLB, PDC, WST, URC, Top 14, Pro D2, EuroLeague, EHF, FIA) were additionally re-read line by line that day; see <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">the first verification report</a>, <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-1352b77f.md">the second</a> and VF-23/VF-34 for what was and was not re-checked.</td></tr>
 <tr><td><span class="badge none">blank</span></td><td>The official source did not publish the value. The cell stays empty and the reason is on the flagged page.</td></tr>
 </tbody></table>
 """
@@ -725,7 +736,7 @@ what was actually checked.</p>
   <li><strong>Verify</strong> the fixture on the governing body or league endpoint: ids, teams, local date, start time, venue.</li>
   <li><strong>Collect</strong> the model inputs from official standings: wins, losses, goals/points for and against, ranking money.</li>
   <li><strong>Originate</strong> moneyline, handicap and total prices from the sport-specific distribution below.</li>
-  <li><strong>Grade</strong> the selection: high ≥72% (≥70% for a price-band pick), medium ≥60%, low below 60%.</li>
+  <li><strong>Grade</strong> the selection under the uniform odds-window gate: high when probability ≥70% and the fair American price sits inside −250…+10000, medium ≥60%, low below 60% (ultra-short chalk is capped at medium).</li>
   <li><strong>Write</strong> a unique ≥30-word prediction for every published high-confidence or band pick, with sourced facts.</li>
   <li><strong>Disclose</strong> every blank, stale or unsupported value on <a href="flagged.html">Flagged for Review</a>.</li>
 </ol>
@@ -733,7 +744,7 @@ what was actually checked.</p>
 <h2>Confidence and the price band</h2>
 <div class="two-col">
 <div class="panel"><h3>Confidence</h3>
-<p><span class="badge high">high</span> model probability ≥72%. <span class="badge medium">medium</span> ≥60%.
+<p><span class="badge high">high</span> model probability ≥70% with fair American price inside −250…+10000 (uniform odds-window gate). <span class="badge medium">medium</span> ≥60% or out-of-window chalk.
 <span class="badge low">low</span> below 60%. NBA picks are capped at medium because the prior season's records
 do not reflect current rosters.</p></div>
 <div class="panel"><h3>Price band (−250 to +10000)</h3>

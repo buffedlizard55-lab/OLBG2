@@ -1669,6 +1669,69 @@ Rules for this session: nothing is published unless an official page returned it
 
 ### Publication record — session `arena/7f261be1-olbg2`
 
+**Cross-session findings logged for root/verified/forward owners (not edited directly to respect active claims):**
+1. **Darts withdrawal (`A-01`):** `data/verified/inputs.json` (`darts_fixtures[1]`, `pdc-32330`) still lists `Danny Noppert vs Stephen Bunting`; official `pdc.tv` preview (`2026-10-21`) confirms Stephen Bunting withdrew and was replaced by **Ritchie Edhouse** (`(6) Danny Noppert v Ritchie Edhouse`).
+2. **Golf stale tournament (`A-02`):** `data/verified/inputs.json` (`golf-utah-2026`) lists `Bank of Utah Championship` on `2026-10-22`, which concluded on `2026-10-04` (won by Austin Smotherman at `-26`, `258`). The live 22–25 Oct 2026 PGA Tour event on `pgatour.com` is the **Butterfield Bermuda Championship** at Port Royal GC, Southampton.
+3. **Formula 1 active race (`A-03`):** `VF-17` states F1 is idle until Las Vegas (Nov 20–22); official `formula1.com/en/racing/2026/united-states` confirms the **2026 United States Grand Prix (Circuit of The Americas, Austin)** runs **23–25 Oct 2026** (Race Sun 25 Oct `20:00 UTC`).
+4. **Six previously empty sports resolved on official sources (`A-04..A-09`):** ATP 250 daily schedules (`Almaty 9410`, `Brussels 7485`, `Lyon 496`), ICC Men's ODI Tri-Series (`PAK/ENG/SL` in Rawalpindi & Lahore, `274144`), RLWC 2026 Men's Round 2 (`nrl.com/draw/?competition=131`), NAB AFLW Round 11 (`afl.com.au/aflw`), LoL Worlds 2026 Swiss Round 1 (`lolesports.com` / `liquipedia.net`), and 6 of 8 Belfast Northern Ireland Open Last 16 ties (`wst.tv/players/`).
+## Session `arena/1352b77f-olbg2` — full line-by-line re-verification, named-gap closure, in-band picks refresh, final integration (2026-10-22 from 07:20 UTC)
+
+**Session ID:** `arena/1352b77f-olbg2` · **Branch:** `arena/1352b77f-olbg2` (Arena-fixed; `session-…` naming not available) · **Claimed:** 2026-10-22 07:20 UTC, before any implementation edit (this commit is the claim).
+
+**Concurrent-session check at claim time** (`git fetch` + `gh pr list` at 07:18 UTC):
+
+| Branch / PR | Claim | Treatment by this session |
+|---|---|---|
+| `arena/1bb45081-olbg2`, PR #54 OPEN since 01:58Z, `mergeable: CONFLICTING`, no commits since 01:58Z | odds-window confidence gate W1–W4 across five layers | Claim is **>60 minutes old with no commits** — takeover permitted by the board rules. Its substance will be reviewed at integration (V5) and either adopted without discarding its work or closed with a recorded reason; this session does not blindly merge or revert it. |
+| all other recorded sessions | closed / merged (latest merge PR #69 at 04:04Z) | none live; shared files free |
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| V1 | Claim + coordination check (this commit) | done 07:20Z | `arena/1352b77f-olbg2` | `COORDINATION.md` (append-only until V5) |
+| V2 | **Full line-by-line re-verification of every published row** (verified desk 118 rows + forward desk 93 rows) against the official source each row cites: fixture id, date, start time, venue, participants, records/standings shown. Every mismatch corrected with provenance or left blank + flagged. Closes the VF-23 coverage limit (previous pass re-read only 6 source families) | in progress | `arena/1352b77f-olbg2` | `research/verification-1352b77f.md`, `data/verified/flagged.json`, `data/forward/flagged.json`, capture files `data/verified/capture_1352b77f.*` |
+| V3 | **Named gap closure attempts**, official sources only: VF-14 (NBA 22–24 Oct matchup lists), VF-22 (GBGB cards), VF-03 (WST #37+ ranks/prize money), VF-32 (tennis order of play, PlusLiga, gaa.ie), plus same-day freshness for 22 Oct. Anything a source will not render stays blank and is flagged — never inferred | in progress | `arena/1352b77f-olbg2` | `research/verification-1352b77f.md`, `data/verified/*1352b77f*`, `data/forward/*1352b77f*` |
+| V4 | **In-band high-confidence pick refresh**: written predictions ≥30 words, unique, human, team + player + current form + recent match history + explicit betting selection, every fact tied to an official URL fetched this session, only where the originated fair price sits in −250…+10000 | in progress | `arena/1352b77f-olbg2` | `data/verified/predictions.json`, `data/verified/band.json` |
+| V5 | **Final integration**: fulfil the logged root-nav request (add `forward/` link to root nav), review PR #54 per takeover rule, rebuild all layers, tests + link audit green, PR → merge → Pages deploy confirmed, board + ledger updated | pending | `arena/1352b77f-olbg2` | shared outputs |
+
+**Scope rule (explicit):** no other session is live. This session may edit shared outputs at V5 only. No bookmaker price is read anywhere; all prices are this repo's own fair-model prices. A value is published only if an official governing-body/league/tour endpoint returned it in this session's capture (timestamp logged per fetch); otherwise the cell stays blank with a reason on the flagged page.
+
+**Nav-link request status:** the request logged by `arena/6a87eefa-olbg2` (add `forward/index.html` to the root dashboard nav as "Forward slate (23 Oct–2 Nov)") is **taken over by this session at V5** — root pages are no longer live-claimed.
+
+---
+
+- Session: `arena/1352b77f-olbg2`
+- Claim: V1–V5 (in this integration session) — committed and pushed first (commit `d4318cf`).
+- Status: V1 done · V2 done · V3 done · V4 done · V5 in progress
+- Files claimed: `scripts/verified_seed.py`, `scripts/verified_model.py`, `scripts/build_site.py`, `tests/test_verified_pipeline.py`, `data/verified/**`, `data/inputs/nba_teams.json` (verify only), `research/verification-1352b77f.md`, `README.md`, `COORDINATION.md`.
+- V2: line-by-line re-verification of the published desk against official sources, 2026-10-22 07:25–08:10 UTC. 11 source families re-read; 0 published values wrong. Full record: `research/verification-1352b77f.md`. Coverage limit published as VF-34 (EuroLeague/EuroCup rows, URC R5 fixtures, golf, GAA, RL, cricket, volleyball and forward NHL 26 Oct–2 Nov not re-read today).
+- V3: VF-14 closed at matchup level for 22–31 Oct — the official server-rendered NBA week page (`nba.com/schedule?date=2026-10-24`) was discovered to publish future fixtures (game ids, tip-off ET, venues); all 74 games of 22–31 Oct now captured and originated (60 new rows this session, incl. the ten 30 Oct Emirates NBA Cup group games). 1–2 Nov not rendered — not invented. GBGB retried (`/racecards/` = official 404 page) — VF-22 stays open. WST ranks below 36 remain blank (VF-03).
+- V4: 14 featured band picks + 16 research write-ups all re-checked this session; their cited records/player facts still match the official feeds re-read today (NHL teamLeaders: Kaprizov 11 G, Pastrnak 4 G/8 A; Sorokin 5 W; MLB WS facts). New NBA rows are prior-based and medium-capped (VF-02), so no new featured write-ups are added — the rule "high-confidence ⇒ written prediction" holds (30/30).
+- V5: root nav now links the forward slate (fulfils the request logged by `6a87eefa`): "Forward slate (23 Oct–2 Nov)" → `forward/index.html`. PR #54 handling and merge/Pages confirmation recorded below.
+- Dataset after this session: 178 rows (154 originated, 24 unlined), 34 review items, 80 tests passing.
+- No conflicts encountered; no other session's files were touched.
+
+---
+
+## Session `arena/1352b77f-olbg2` — V1–V5 integration: line-by-line re-verification, NBA slate capture, uniform odds-window gate on /verified/ + /forward/ (2026-10-22)
+
+**Session ID:** `arena/1352b77f-olbg2` · **Branch:** `arena/1352b77f-olbg2` · **Claimed:** 2026-10-22 07:10Z (commit `d4318cf`, pushed first). V1 done · V2 done · V3 done · V4 done · V5 done (this entry; publication record appended post-merge).
+
+| # | Task | Result |
+|---|---|---|
+| V2 | Line-by-line re-verification of the published desk against official sources | **done** — 11 source families re-read 07:25–08:10Z; **0 published values wrong**. Record: `research/verification-1352b77f.md`. Not re-read (named in VF-34): EuroLeague/EuroCup rows, URC R5 fixtures, golf, GAA, RL, cricket, volleyball, forward NHL 26 Oct–2 Nov. |
+| V3 | Gap closures | **VF-14 closed at matchup level for 22–31 Oct**: `nba.com/schedule?date=2026-10-24` server-renders future weeks (game ids, tip-off ET, venues); all 74 games captured (60 new originated rows incl. 10 Emirates NBA Cup group games of 30 Oct). 1–2 Nov not rendered — not invented. **VF-22**: retried (`/racecards/` = official 404); consistent with `arena/1619553b`'s finding that dated cards are client-rendered — flag stays open, wording note for the flag owner retained. **VF-03** reconfirmed (WST ranks below 36 stay blank). |
+| V4 | In-band written predictions | 14 featured band + 16 research write-ups re-checked against the official feeds re-read in V2 (all cited records/player facts still correct). New NBA rows are prior-based and medium-capped (VF-02) — no new featured write-ups; the "high ⇒ written prediction" duty holds 100% under the new gate (V5). |
+| V5 | Integration | Root nav already linked by `arena/1619553b` N1 (kept). **PR #54**: taken over/closed at 08:00:43Z by `arena/c12bdcd7-olbg2` before this session's close attempt; their referenced commit `140130e`/file `research/pr54-takeover-c12bdcd7.md` are not on `main` or any remote ref as of 08:35Z — treated as an unmerged parallel workstream. Their audit substance is preserved at `research/odds-window-audit-1bb45081.md` (verbatim + provenance header). |
+
+**Uniform odds-window gate adopted on `/verified/` and `/forward/` (VF-35).** High confidence now iff model probability ≥ 70% **and** fair American price inside −250..+10000. Effect: 15 verified + 4 forward ultra-short chalk picks (−256..−5000) regraded medium; probabilities/prices unchanged; every HIGH label now carries a written-prediction duty it can satisfy (brief requirement). **Rule-unification note for `arena/c12bdcd7-olbg2` and all layer owners:** the closing comment on PR #54 states the uniform rule as "≥72% outright, or ≥70% in-window". That clause leaves ultra-short chalk labelled high without write-ups and is **superseded on `/verified/` and `/forward/`** by the strict in-window gate. Legacy layers (`/`, `/live/`, `/survey/`, `/site/`) should adopt the same strict gate in the c12bdcd7 follow-up so all six layers match; tests on each layer encode its current rule.
+
+**Scope-overlap log (protocol):** this session regenerated `data/forward/**` (via a one-function gate in `scripts/forward_model.py`, not claimed by any other session) which overlaps `arena/c12bdcd7`'s claimed `data/forward/**` data scope; the regeneration preserved all forward rows/predictions (8 band picks intact) and only regraded 4 chalk labels. `scripts/build_site.py` was jointly claimed (this session's `d4318cf` + c12bdcd7's claim) — the upstream `arena/1619553b` NAV entry and this session's copy refresh were both kept in the rebase. No other session's files were otherwise modified.
+
+**Rebase/conflict log:** `git pull --rebase origin main` at ~08:30Z replayed 3 commits over `19548dc` (PRs #70–#75 + /slate/ + /board/). Append-only conflicts in `COORDINATION.md` (kept all upstream records + appended) and 3 count hunks in `README.md` (kept the 178-row snapshot side; upstream side was reconciled to the pre-NBA 118-row snapshot). Nothing upstream discarded. The `/slate/` layer derives its inputs from `data/verified/` and `data/forward/`: its determinism test regenerated `data/slate/**` + `slate/**` against the updated 178-row desk (148→208 originated matches) and those regenerated outputs are committed here so `test_slate.py` passes on the combined tree.
+
+**Verification after rebase (combined tree):** `python3 -m unittest discover -s tests` → **91 tests OK** (all suites: root/live/build/forward/verified/board/slate/audit); `python3 scripts/integration_audit.py` → 0 local link errors; deterministic rebuild of verified/forward/root layers byte-stable.
+
+**Dataset after this session (verified desk):** 178 rows (154 originated, 24 unlined), 14 featured band picks, 16 research picks, 35 review items, 3 row picks labelled high (all with write-ups).
 | Item | Result |
 |---|---|
 | Primary Pull Request | [#74](https://github.com/buffedlizard55-lab/OLBG2/pull/74) — `feat(slate): 17-sport primary-source verified match list, multi-market origination & 36 predictions (/slate/)` |

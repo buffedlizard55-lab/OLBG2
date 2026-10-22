@@ -427,7 +427,7 @@ def originate_nba(teams: dict, fixtures: list[dict]) -> list[dict]:
                 "id": f"nba-{gid or idx}",
                 "sport": "basketball",
                 "sport_name": "Basketball",
-                "competition": "NBA Regular Season 2026-27 (Opening Week)",
+                "competition": f.get("competition") or "NBA Regular Season 2026-27 (Opening Week)",
                 "date": f["date"],
                 "time": f"{f['date']} {f['tip_et']} ET",
                 "home": h["name"],
@@ -1078,17 +1078,23 @@ def main() -> None:
     for row in originated:
         pick = row["pick"]
         pick["fair_american"] = fair_american(pick["probability"])
-        # The published grading copy (root pages, /verified/ methodology) reads
-        # "high >= 72%, or a band pick >= 70%". Apply that second clause to the
-        # row's own pick as well: three rows previously showed the same
-        # selection as HIGH on the picks page and MEDIUM in their match row.
-        # NBA keeps its medium cap (prior-season records only).
-        if (
+        # Uniform odds-window high gate (substance of PR #54, session
+        # arena/1bb45081, adopted onto the current tree by the integration
+        # session): a row pick reads HIGH only when its model probability is
+        # >= FEATURED_MIN_PROB and its fair American price sits inside
+        # [-250, +10000]. Ultra-short chalk is graded medium, so the HIGH label
+        # always denotes an in-band selection (and its written-prediction
+        # duty), never a -5000 favourite. Probabilities and prices are
+        # untouched. NBA keeps its medium cap (prior-season records only).
+        in_band_high = (
             not row["competition"].startswith("NBA")
             and pick["probability"] >= FEATURED_MIN_PROB
             and AMERICAN_MIN <= pick["fair_american"] <= AMERICAN_MAX
-        ):
+        )
+        if in_band_high:
             pick["confidence"] = "high"
+        else:
+            pick["confidence"] = "medium" if pick["probability"] >= MEDIUM_THRESHOLD else "low"
         row["source_scope"] = source_scope(row["official_url"])
         row["featured"] = featured_selection(row)
         # band_pick mirrors `featured` for the root dashboard / band.json

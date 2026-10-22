@@ -131,7 +131,16 @@ class ForwardPipelineTests(unittest.TestCase):
                 continue
             p = r["pick"]
             if p["confidence"] == "high":
-                self.assertGreaterEqual(p["probability"], fm.HIGH_THRESHOLD, r["id"])
+                self.assertGreaterEqual(p["probability"], fm.FEATURED_MIN_PROB, r["id"])
+                self.assertGreaterEqual(p["fair_american"], fm.AMERICAN_MIN, r["id"])
+                self.assertLessEqual(p["fair_american"], fm.AMERICAN_MAX, r["id"])
+            else:
+                in_band = (
+                    p["probability"] >= fm.FEATURED_MIN_PROB
+                    and fm.AMERICAN_MIN <= p["fair_american"] <= fm.AMERICAN_MAX
+                )
+                if in_band:
+                    self.assertEqual(p["confidence"], "high", r["id"])
 
     # ---- predictions ------------------------------------------------------
     def test_prediction_language_rules(self):

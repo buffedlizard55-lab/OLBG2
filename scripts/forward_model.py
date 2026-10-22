@@ -228,6 +228,14 @@ def grade(prob: float, cap: str | None = None) -> str:
     return raw
 
 
+def pick_confidence(prob: float) -> str:
+    """Uniform odds-window high gate (PR #54 substance): HIGH only for a
+    >= 70% selection whose fair American price sits inside -250..+10000."""
+    if prob >= FEATURED_MIN_PROB and AMERICAN_MIN <= fair_american(prob) <= AMERICAN_MAX:
+        return "high"
+    return "medium" if prob >= MEDIUM_THRESHOLD else "low"
+
+
 def _in_band(prob: float) -> bool:
     return prob >= FEATURED_MIN_PROB and AMERICAN_MIN <= fair_american(prob) <= AMERICAN_MAX
 
@@ -424,7 +432,7 @@ def originate_nhl(inputs: dict) -> list[dict]:
                     "team": win_side,
                     "probability": round(win_prob, 4),
                     "fair_odds": fair_decimal(win_prob),
-                    "confidence": grade(win_prob),
+                    "confidence": pick_confidence(win_prob),
                     "fair_american": fair_american(win_prob),
                 },
                 "_dist": {"margin_probs": margin_probs, "total_probs": total_probs, "unit": "goals"},
@@ -514,7 +522,7 @@ def originate_mlb(inputs: dict) -> list[dict]:
                     "team": fav_name,
                     "probability": round(win_prob, 4),
                     "fair_odds": fair_decimal(win_prob),
-                    "confidence": grade(win_prob),
+                    "confidence": pick_confidence(win_prob),
                     "fair_american": fair_american(win_prob),
                 },
                 "_dist": {"margin_probs": margin_probs, "total_probs": total_probs, "unit": "runs"},

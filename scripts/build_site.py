@@ -529,18 +529,12 @@ def build_picks() -> str:
   <a href="sports/{esc(p['sport'])}.html">All {esc(p['sport_name'])} rows</a></div>
 </article>'''
 
-    # Graceful wording when all high-confidence selections are already inside the band.
-    if len(primary) == 0:
-        lede_extra = "All qualifying high-confidence selections are inside the −250…+10000 window, so no additional picks are listed outside the band — nothing is hidden."
-    else:
-        lede_extra = f"A further <strong>{len(primary)} high-confidence picks</strong> are strong model selections but priced shorter than −250, so they are labelled as outside the requested band rather than passed off as compliant."
-
     body = f"""
 <h1>Picks &amp; predictions</h1>
 <p class="lede">Two clearly separated lists. <strong>{len(band_preds)} price-band picks</strong> satisfy both rules in the brief:
 model probability ≥70% and fair odds between −250 (1.40) and +10000 (101.00). Because a 70%+ probability cannot be
 priced above 1.43, the qualifying window is narrow; we enumerated handicap and total ladders to find selections inside it.
-{lede_extra}</p>
+{f'A further <strong>{len(primary)} high-confidence picks</strong> are strong model selections but priced shorter than −250, so they are labelled as outside the requested band rather than passed off as compliant.' if primary else 'There are no additional high-confidence picks outside the requested price band in this snapshot.'}</p>
 <div class="notice"><strong>How the numbers are produced.</strong> Probabilities come from the sport-specific models documented in
 <a href="methodology.html">Methodology</a>; prices are fair decimals (1/probability), not bookmaker quotes. Every prediction is
 ≥30 words, unique, and carries at least two facts with the official source that published them.</div>
@@ -550,8 +544,7 @@ priced above 1.43, the qualifying window is narrow; we enumerated handicap and t
 <div class="preds">{"".join(pred_card(p) for p in band_preds)}</div>
 
 <h2>High-confidence picks outside the price band ({len(primary)})</h2>
-<p class="sub">These are the pre-existing 72%+ moneyline selections. Their fair odds run from 1.02 to 1.39,
-so they sit below the brief's −250 floor. They are preserved and disclosed, not re-labelled.</p>
+<p class="sub">{('These selections are priced shorter than −250 and are disclosed separately, not re-labelled.' if primary else 'No selections in this category at this snapshot.')}</p>
 <div class="preds">{"".join(pred_card(p) for p in primary)}</div>
 """
     return page("Picks and predictions", "picks.html", body)

@@ -1319,13 +1319,33 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 
 **Residual nit (left for next session):** root `picks.html` intro reads "A further 0 high-confidence picks…" — factual but clumsy template output from `build_site.py` when every write-up is in-band.
 
+## Session `arena/53b0cd38-olbg2` — 2026-10-22
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Correct zero-count picks intro and recheck publication gates | in progress | `arena/53b0cd38-olbg2` | `scripts/build_site.py`, generated `picks.html`, `COORDINATION.md` |
+
+This claim is limited to the unclaimed residual nit recorded above; no new fixtures or unverified predictions will be invented. This branch is fixed by the environment, so the requested `session-…` branch naming cannot be used. Prior sessions' tasks are closed.
+
+### Completion — `arena/53b0cd38-olbg2`
+
+The picks introduction now handles an empty outside-band category without implying nonexistent picks or quoting an invented range. No fixture, line, or narrative data changed. Verified by rerunning the complete CI generation pipeline, survey integrity validation (26 pages, 139 inventory rows), cross-layer link audit (0 internal errors), and 61 unit tests (all passing). Source links remain those in the existing verified dataset; this copy-only correction makes no new source claims. Irregularity: this snapshot is not an exhaustive live inventory of OLBG's fixtures; the 22 existing review flags remain open and non-blocking. Task status: **done**.
+
+### Publication record — 2026-10-22
+
+[PR #59](https://github.com/buffedlizard55-lab/OLBG2/pull/59) merged into `main` as `3a48e3d`; PR validation passed. [Deploy Pages run 39713298932](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713298932) succeeded for that commit. Site: https://buffedlizard55-lab.github.io/OLBG2/picks.html . This records deployment status from GitHub Actions, not an independent browser fetch of the live URL.
+
+### Publication record — PR #60
+
+[PR #60](https://github.com/buffedlizard55-lab/OLBG2/pull/60) merged into `main` as `f503c50`; follow-up publish ledger (PR #60) recorded. Deploy Pages run succeeded after PR #59 fix.
+
 ---
 
 ## Session `arena/9a2928c8-olbg2` — final line-by-line verification, price-band focus & site polish (2026-10-22)
 
 **Session ID:** `arena/9a2928c8-olbg2` · **Branch:** `arena/9a2928c8-olbg2` · **Claimed:** 2026-10-22 UTC (before any edit, per protocol)
 
-**Why this session:** the brief requires a full line-by-line official-source verification, a price-band-focused high-confidence programme (-250…+10000) with ≥30-word human predictions, and a clean GH Pages dashboard with zero broken links — all without manual input. Prior session `arena/50268b75-olbg2` left a dated 2026-10-22 01:30 UTC snapshot (119 rows, 93 originated, 14 band picks, 22 flags) with one residual template nit.
+**Why this session:** the brief requires a full line-by-line official-source verification, a price-band-focused high-confidence programme (-250…+10000) with ≥30-word human predictions, and a clean GH Pages dashboard with zero broken links — all without manual input. Prior session `arena/50268b75-olbg2` left a dated 2026-10-22 01:30 UTC snapshot (119 rows, 93 originated, 14 band picks, 22 flags) with one residual template nit (now fixed in PR #59/60).
 
 | # | Task | Status | Owner | File scope (non-overlapping) |
 |---|---|---|---|---|
@@ -1333,23 +1353,25 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 | T2 | OLBG reverse-engineering re-verification (taxonomy, IDs, URL schema, markets) | done | `arena/9a2928c8-olbg2` | `research/olbg-reverse-engineering-9a2928c8.md`, `data/verified/sports.json` (if needed) |
 | T3 | Line-by-line official-source verification of all 119 rows (fixtures, inputs, prices, predictions) — every row must carry official URL or be flagged blank | done | `arena/9a2928c8-olbg2` | `research/line-by-line-verification-9a2928c8.md`, `data/verified/flagged.json` (append-only new findings) |
 | T4 | Price-band audit: ensure all 14 high-confidence write-ups sit in -250…+10000, are ≥30 words, unique, human, and state team/player/current form/recent history/betting selection with verified facts | done | `arena/9a2928c8-olbg2` | `data/verified/predictions.json`, `data/verified/band.json`, `verified/predictions.html`, `picks.html` |
-| T5 | Site polish & GH Pages verification: clean landing, subpages by category, table format, no broken links, Pages live | done | `arena/9a2928c8-olbg2` | `index.html`, `picks.html`, `sports/**`, `assets/**`, `scripts/build_site.py` (template nit only) |
+| T5 | Site polish & GH Pages verification: clean landing, subpages by category, table format, no broken links, Pages live | done | `arena/9a2928c8-olbg2` | `index.html`, `picks.html`, `sports/**`, `assets/**`, `scripts/build_site.py` (template nit only, now resolved via PR #60 baseline) |
 | T6 | Final integration: rebuild all layers, 0 broken links, all tests green, PR → merge → Pages deploy | in progress | `arena/9a2928c8-olbg2` | shared outputs (integration session) |
 
-**Concurrent-session check at claim:** no open PRs (`gh pr list` empty); `origin/main` = `c523300` (PR #58, 119 rows); all earlier sessions in this file are `done/merged`. This session does **not** touch: `data/inputs/**`, `data/matches.json`, `data/desk/**`, `data/live/**`, `data/survey/**`, `site/**`, `survey/**`, `live/**`, `scripts/model.py`, `scripts/engine.py`, `scripts/live_*.py`, `scripts/survey_*.py`, `scripts/build.py`, `scripts/verified_seed.py`, `scripts/verified_model.py` inputs (read-only verify). Request-only edits to shared outputs will be logged here.
+**Concurrent-session check at claim:** no open PRs (`gh pr list` empty); `origin/main` = `c523300` (PR #58, 119 rows); all earlier sessions in this file are `done/merged`. While this branch was in verification, `origin/main` advanced through PRs #59/#60 (same picks-intro fix). On merging `origin/main`, this session took their `scripts/build_site.py` + `picks.html` version (identical functionality) and kept both ledgers additively. No upstream file discarded.
 
 **Rules:** a value is published only when an official governing-body page returned it; anything else stays blank and flagged; no bookmaker price read; every table row carries its official source link for manual review.
 
-### Completion — session `arena/9a2928c8-olbg2` (2026-10-22 03:00 UTC)
+### Completion — session `arena/9a2928c8-olbg2` (2026-10-22 03:15 UTC)
 
 | # | Deliverable | Evidence |
 |---|---|---|
 | T2 | OLBG taxonomy verified: 25 OLBG sports (8 excluded → 17 eligible), URL schema `/betting-tips/{Sport}/{id}`, markets Win Match / Handicap / Total per sport, no price scraping | `research/olbg-reverse-engineering-9a2928c8.md` — fetched live OLBG feed + searched taxonomy, confirmed 20+ sports, excluded ids 1,2,11,6,27,26 |
 | T3 | Line-by-line verification of 119 rows: every row has official_url; 93 originated with ML+Handicap+Total, 26 blank with per-row reason; 12 NHL, 9 EuroLeague, 16 URC, 7 Top14, 4 MLB, 5 EHF, 16 Darts all match official feeds fetched 2026-10-22 | `research/line-by-line-verification-9a2928c8.md` — 8 source families fetched, spot-checked leaders, standings, tables; no hallucinations; VF-01…VF-22 remain open |
 | T4 | Price-band audit: 14 band picks 70.2–71.4% at 1.40–1.42 (-250…-236 American) — only window satisfying ≥70% + -250 floor; each 61–75 words, unique headline, human voice, cites team + current form (e.g., Bulls 126 PF) + recent history (57-15, 29-12) + obvious alternate handicap selection | `data/verified/predictions.json` — word_count 61–75, facts link to official standings/fixture URLs |
-| T5 | Site polish: fixed `picks.html` “A further 0…” template nit → human sentence “All qualifying… nothing is hidden”; landing + 17 sport pages + verification ledger + flagged + sources + archive intact; 0 broken local links; 61 tests pass | `scripts/build_site.py` edit, `python scripts/build_site.py` → 10 root + 17 sport pages, `integration_audit.py` 0 errors |
+| T5 | Site polish: verified that `picks.html` “A further 0…” template nit is now fixed via PR #60 baseline (graceful empty-category wording); landing + 17 sport pages + verification ledger + flagged + sources + archive intact; 0 broken local links; 61 tests pass | `scripts/build_site.py` on main already handles empty outside-band case; `python scripts/build_site.py` → 10 root + 17 sport pages, `integration_audit.py` 0 errors |
 | T6 | Full rebuild green: verified_seed → verified_model → verified_build → build_site → build.py → survey_* → integration_audit all pass | gates in publish record below |
 
 **Verification sampling (2026-10-22 fetches):** NHL score API 2026-10-22 12 games (BOS 7-2-1 etc.), EuroLeague standings PAO 5-1 +90, EHF standings R5 5-live fixtures, URC table EDI 14pts 80PF, Top14 classement Toulouse 24pts W-W-W-W-W, MLB schedule 849805 G1, F1 drivers Antonelli 340pts, OLBG live feed 20+ sports — all match stored inputs. Full table in research file.
 
 **Irregularities disclosed, not fixed silently:** 22 verified flags VF-01…VF-22 remain open (competition-scoped URLs VF-11, small-sample handball, client-rendered PDC/ICC, one-game stale FLA/OTT VF-19, etc.). No row was inferred to close a flag.
+
+**Merge resolution (2026-10-22 03:15Z):** `origin/main` advanced to `f503c50` (PRs #59/#60) while this branch was verifying. Both sessions fixed the same picks-intro nit with slightly different wording; this merge takes the `main` version (identical logic) and preserves both COORDINATION ledgers. `scripts/build_site.py` and `picks.html` are now byte-identical to `origin/main`; only `COORDINATION.md` and new research docs differ. No data file changed.

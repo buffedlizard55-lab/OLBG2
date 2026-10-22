@@ -265,6 +265,7 @@ NAV = [
     ("methodology.html", "Methodology"),
     ("sources.html", "Sources"),
     ("archive.html", "Archive"),
+    ("forward/index.html", "Forward slate (23 Oct\u20132 Nov)"),
     ("integration.html", "Cross-layer review"),
 ]
 
@@ -815,6 +816,11 @@ def build_archive() -> str:
     for f in sorted((DATA / "survey" / "events").glob("*.json")):
         for e in json.loads(f.read_text()):
             survey_events.append((f.stem, e))
+    fwd = json.loads((DATA / "forward" / "matches.json").read_text())["counts"]
+    fwd_rows = fwd["total"]
+    fwd_nhl, fwd_mlb, fwd_ec = fwd["nhl"], fwd["mlb"], fwd["eurocup"]
+    fwd_lined = fwd["originated"]
+    fwd_preds = json.loads((DATA / "forward" / "predictions.json").read_text())["count"]
 
     root_rows = "".join(
         f'<tr><td>{esc(m["sport"])}</td><td>{esc(m["start_display"])}</td>'
@@ -865,6 +871,11 @@ pages replace its old sport pages; its full row-level data and source links are 
 <p class="sub">NHL and NBA. Preserved at <a href="site/index.html">/site/</a>.</p>
 <div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Date</th><th>Match</th><th>League</th><th>Source</th></tr></thead>
 <tbody>{desk_rows}</tbody></table></div>
+
+<h2>Forward slate layer <span class="pill">{fwd_rows} rows · 23 Oct–2 Nov 2026</span></h2>
+<p class="sub">Captured 2026-10-22 from official feeds: {fwd_nhl} NHL fixtures, {fwd_mlb} MLB World Series games and
+{fwd_ec} EuroCup Round 5 fixtures ({fwd_lined} originated lines, {fwd_preds} in-band write-ups). Published at
+<a href="forward/index.html">/forward/</a>.</p>
 
 <h2>All-sport survey inventory <span class="pill">{len(survey_events)} listings · 2026-10-20/21</span></h2>
 <p class="sub">OLBG discovery inventory; listing times are relative (“Today 16:30”) and fixtures are not all

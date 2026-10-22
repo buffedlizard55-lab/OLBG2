@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "created_at": "2026-10-22",
+    "reason": "Narratives whose selections failed the published high-confidence gate (70% probability floor and the -250..+10000 fair-price focus window). Nothing is deleted; each entry records the regrade and keeps every fact and source link. Research note: research/pr54-takeover-c12bdcd7.md",
+    "count": 3
+  },
+  "predictions": [
+    {
+      "match_id": "nhl-2026020152",
+      "selection": "Buffalo Sabres to win (moneyline)",
+      "headline": "Sabres should outlast a shot-shy Flyers side",
+      "text": "Buffalo Sabres to win the moneyline against the Philadelphia Flyers at KeyBank Center. Buffalo are 4-3-2 through nine games and have scored 27 goals while conceding 33, a 3.00 goals-per-game attack that dwarfs Philadelphia's 1.55. The Flyers are 2-6-3 and have managed only 17 goals in 11 games, despite beating Colorado 3-2 on 19 October. Buffalo winger Tage Thompson leads the club with five goals and Ukko-Pekka Luukkonen has three wins in net, while Philadelphia's Matvei Michkov has six. The model puts Buffalo at 65.4%, which is why this selection is graded high confidence.",
+      "facts": [
+        {
+          "claim": "Buffalo are 4-3-2 and have scored 27 and conceded 33 in nine games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Philadelphia are 2-6-3 with 17 goals in 11 games (1.55 per game)",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Philadelphia beat Colorado 3-2 on 19 October",
+          "source": "https://api-web.nhle.com/v1/scoreboard/2026-10-22"
+        },
+        {
+          "claim": "Tage Thompson 5 goals, Luukkonen 3 wins, Michkov 6 goals",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-21"
+        },
+        {
+          "claim": "Model probability 65.4%",
+          "source": "data/matches.json"
+        }
+      ],
+      "archive_reason": "Buffalo Sabres — 65.4% model probability is below the 70% floor, so the selection cannot be a high-confidence pick under the brief; narrative retained here verbatim.",
+      "regraded_to": "medium",
+      "probability": 0.6543,
+      "fair_american": -189,
+      "archived_at": "2026-10-22"
+    },
+    {
+      "match_id": "nhl-2026020154",
+      "selection": "Boston Bruins to win (moneyline)",
+      "headline": "Bruins' defensive record points to a home win over Nashville",
+      "text": "Boston Bruins to win the moneyline when the Nashville Predators visit TD Garden. Boston sit at 7-2-1 after ten games, scoring 36 and conceding just 22, which works out at 2.20 goals against per game, comfortably better than Nashville's 2.75. The Predators are 3-2-3 and have found the net 23 times in eight outings. David Pastrnak has four goals and eight assists for Boston and Jeremy Swayman has already recorded six wins, while Roman Josi has eight assists and Ryan O'Reilly four goals for Nashville. Our model gives Boston a 65.3% chance.",
+      "facts": [
+        {
+          "claim": "Boston 7-2-1, 36 goals for, 22 against in 10 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Nashville 3-2-3, 23 goals for, 22 against in 8 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Pastrnak 4+8, Swayman 6 wins, Josi 8 assists, O'Reilly 4 goals",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Model probability 65.3%",
+          "source": "data/matches.json"
+        }
+      ],
+      "archive_reason": "Boston Bruins — 65.3% model probability is below the 70% floor, so the selection cannot be a high-confidence pick under the brief; narrative retained here verbatim.",
+      "regraded_to": "medium",
+      "probability": 0.6534,
+      "fair_american": -189,
+      "archived_at": "2026-10-22"
+    },
+    {
+      "match_id": "nhl-2026020162",
+      "selection": "Minnesota Wild to win (moneyline)",
+      "headline": "Wild's scoring depth against Calgary's leaky defence",
+      "text": "Minnesota Wild to win the moneyline in Calgary. Minnesota are 6-2-2 with 31 goals for and 25 against in ten games, while the Flames are 2-6-0 and have conceded 37 goals in eight, an ugly 4.62 per game, scoring only 17 themselves. Kirill Kaprizov has 11 goals already and Quinn Hughes 11 assists for the Wild, with Jesper Wallstedt recording six wins. Calgary's scoring leader is Morgan Frost on three, and Dustin Wolf has one win. The model still lands on 68.9% for Minnesota even after applying its 1.05 home-ice adjustment in Calgary's favour, and the gap in goals conceded is what drives that number rather than any market signal.",
+      "facts": [
+        {
+          "claim": "Minnesota 6-2-2, 31 for, 25 against in 10 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Calgary 2-6-0, 17 for, 37 against in 8 games",
+          "source": "https://api.nhle.com/stats/rest/en/team/summary"
+        },
+        {
+          "claim": "Kaprizov 11 goals, Quinn Hughes 11 assists, Wallstedt 6 wins, Frost 3 goals, Wolf 1 win",
+          "source": "https://api-web.nhle.com/v1/score/2026-10-22"
+        },
+        {
+          "claim": "Model probability 68.9%, modelled price 1.40",
+          "source": "data/matches.json"
+        }
+      ],
+      "words": 110,
+      "archive_reason": "Minnesota Wild — 68.9% model probability is below the 70% floor, so the selection cannot be a high-confidence pick under the brief; narrative retained here verbatim.",
+      "regraded_to": "medium",
+      "probability": 0.6886,
+      "fair_american": -221,
+      "archived_at": "2026-10-22"
+    }
+  ]
+}

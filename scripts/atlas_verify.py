@@ -182,7 +182,7 @@ def main():
         "confirmed": len(confirmed),
         "mismatched": len(failed),
         "outside_window": len(ten_rows) - len(confirmed) - len(failed),
-        "note": ("Ten round-of-16 pairings confirmed on the official ATP daily schedules for Almaty, "
+        "note": (f"{len(confirmed)} round-of-16 pairings confirmed on the official ATP daily schedules for Almaty, "
                  f"Brussels and Lyon. {len(failed)} of the {len(ten_rows)} tennis rows in the previously "
                  "published desk pair players who are not scheduled to meet on the page those rows cite; "
                  "they are listed individually on the flagged page and are not republished by this desk."),
@@ -196,21 +196,34 @@ def main():
                         "detail": detail, "evidence": evidence, "action": action})
 
     for i, m in enumerate(failed, start=1):
+        cited = m.get("official_url") or ""
+        is_atp_schedule = "atptour.com/en/scores" in cited
+        evidence = [{"label": "the source this row cites (open it and search the page)", "url": cited}]
+        if is_atp_schedule:
+            evidence.append({"label": "the official schedule this desk re-read for 22 October 2026",
+                             "url": cited})
+        else:
+            evidence.append({"label": "the official ATP daily schedules this desk did read",
+                             "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"})
+        if not is_atp_schedule:
+            detail = (f"The published row {m['id']} cites {cited}, which is a rankings landing page rather "
+                      f"than a fixture page, and no official daily schedule this desk could read lists "
+                      f"{m['home']} against {m['away']} on 22 October 2026. The row is not republished.")
+        else:
+            detail = (f"The published row {m['id']} cites {cited} as its source, but that official ATP "
+                      f"daily-schedule page does not list {m['home']} against {m['away']}. The row is "
+                      f"therefore not republished by this desk.")
         flag(f"AT-01.{i:02d}", "high", "tennis",
-             f"Pairing not on the cited official ATP schedule: {m['home']} v {m['away']}",
-             (f"The published row {m['id']} cites {m.get('official_url')} as its source, but that official "
-              f"ATP daily-schedule page does not list {m['home']} against {m['away']}. The row is therefore "
-              f"not republished by this desk."),
-             [{"label": "cited source (opens the official ATP page)", "url": m.get("official_url")},
-              {"label": "the schedule this desk read for 22 Oct 2026",
-               "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"}],
+             f"Pairing not on the cited official schedule: {m['home']} v {m['away']}",
+             detail, evidence,
              "Excluded from the /atlas/ table; retained on this flagged page for manual review.")
 
     flag("AT-02", "medium", "tennis",
          "Tennis rows sourced to player profiles rather than to a fixture page",
-         ("Ten round-of-16 pairings in the published desk are real, but the rows cite an ATP player "
-          "biography page as their source. A player profile is not evidence that a match is scheduled. "
-          "This desk re-sources each of them to the tournament's official daily schedule and re-reads it."),
+         (f"{len(confirmed)} round-of-16 pairings in the published desk are real, but most of those rows "
+          "cite an ATP player biography page rather than a fixture page. A player profile is not evidence "
+          "that a match is scheduled, so this desk re-sourced every one of them to the tournament's "
+          "official daily schedule and re-read it there."),
          [{"label": "ATP daily schedule re-read by this desk",
            "url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule"}],
          "Re-sourced to the tournament schedule; the rows are republished with the fixture URL.")
@@ -247,7 +260,8 @@ def main():
           "EuroLeague fixtures are published with every price blank rather than with a fabricated rating."),
          [{"label": "the endpoint queried",
            "url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/standings"}],
-         "9 EuroLeague rows published, unlined, with the reason printed on the row.")
+         f"{sum(1 for r in final if r['sport'] == 'basketball' and 'el-' in r['id'])} EuroLeague rows "
+         "published, unlined, with the reason printed on the row.")
 
     flag("AT-06", "high", "basketball",
          "No official NBA team-strength figure could be read",
@@ -257,18 +271,20 @@ def main():
          [{"label": "the NBA schedule that was read (fixtures only)", "url": "https://www.nba.com/schedule"},
           {"label": "the endpoint that could not be reached",
            "url": "https://stats.nba.com/stats/leaguedashteamstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season"}],
-         "74 NBA rows published, unlined, with the reason printed on the row.")
+         f"{sum(1 for r in final if 'nba.com/game/' in (r.get('official_url') or ''))} NBA rows "
+         "published, unlined, with the reason printed on the row.")
 
     flag("AT-07", "medium", "tennis",
          "ATP singles rankings could not be read",
-         ("The official ATP rankings page returned only the ranking-date selector, so no ranking table was "
-          "readable. The ten verified round-of-16 ties are published with every price blank rather than "
-          "with a rating inferred from tournament seedings."),
+         (f"The official ATP rankings page returned only the ranking-date selector, so no ranking table was "
+          f"readable. The {len(confirmed)} verified round-of-16 ties are published with every price blank "
+          f"rather than with a rating inferred from tournament seedings."),
          [{"label": "the rankings page queried", "url": "https://www.atptour.com/en/rankings/singles"}],
-         "10 tennis rows published, unlined, with the reason printed on the row.")
+         f"{len(confirmed)} tennis rows published, unlined, with the reason printed on the row.")
 
     flag("AT-08", "high", "multiple",
-         "143 rows across 13 sports were not re-read this session",
+         (f"{sum(1 for r in final if r['sport'] not in ('ice-hockey', 'basketball', 'baseball', 'tennis'))} "
+          "rows across 13 sports were not re-read this session"),
          ("The previously published desk carries rows for aussie-rules, cricket, darts, esports, "
           "gaelic-football, golf, greyhounds, handball, motor-racing, rugby-league, rugby-union, snooker "
           "and volleyball. This session did not re-open those governing-body pages, so every one of those "

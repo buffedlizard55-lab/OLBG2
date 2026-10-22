@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview · OLBG2 reconciliation console</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> OLBG2 · Reconciliation console</div>
+    <nav class="nav"><a href="index.html">Overview</a><a href="conflicts.html">Conflicts</a><a href="non-fixtures.html">Non-fixtures</a><a href="freshness.html">Freshness</a><a href="provenance.html">Provenance</a><a href="predictions.html">Predictions</a><a href="spot-checks.html">Spot checks</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="../index.html">Dashboard</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<p class="kicker">OLBG2 · independent audit</p>
+
+<h1>Cross-layer reconciliation</h1>
+<p class="lede">Every published OLBG2 layer is checked against every other one. The question is not
+“is any single page internally consistent?” — it is “do the 1,619 rows the repository publishes actually
+describe 433 fixtures, at one price, with one grade, and a link that supports the row?”</p>
+
+<div class="grid">
+<div class="kpi"><div class="kpi-v">1,619</div><div class="kpi-l">Published rows audited</div><div class=kpi-n>across 11 layers</div></div>
+<div class="kpi"><div class="kpi-v">433</div><div class="kpi-l">Distinct fixtures</div><div class=kpi-n>17 eligible sports</div></div>
+<div class="kpi"><div class="kpi-v">64</div><div class="kpi-l">Rows that are not fixtures</div><div class=kpi-n>outrights, fields, race cards</div></div>
+<div class="kpi"><div class="kpi-v">369</div><div class="kpi-l">Cross-layer overlaps</div><div class=kpi-n>1,466 rows inside them</div></div>
+<div class="kpi"><div class="kpi-v">341</div><div class="kpi-l">Price conflicts</div><div class=kpi-n>same team, different price</div></div>
+<div class="kpi"><div class="kpi-v">161</div><div class="kpi-l">Grade conflicts</div><div class=kpi-n>same pick, different confidence</div></div>
+<div class="kpi"><div class="kpi-v">116</div><div class="kpi-l">Rule violations</div><div class=kpi-n>high grade outside the stated rule</div></div>
+<div class="kpi"><div class="kpi-v">0</div><div class="kpi-l">Excluded-sport rows</div><div class=kpi-n>brief&#x27;s exclusion list</div></div>
+</div>
+
+<h2>What this console found</h2>
+<div class="cards">
+  <div class="card"><h3>1 · The catalogue is 91% duplication</h3>
+  <p>1,619 published rows resolve to 433 distinct fixtures. 1,466 rows sit in
+  369 fixtures published by two or more layers. <a class="more" href="conflicts.html">See overlaps →</a></p></div>
+
+  <div class="card"><h3>2 · 64 rows are not matches</h3>
+  <p>Outright futures, tournament fields, “field v venue” and greyhound race cards are formatted as head-to-head
+  fixtures with their own moneylines. <a class="more" href="non-fixtures.html">List them →</a></p></div>
+
+  <div class="card"><h3>3 · The same team is priced 341 times differently</h3>
+  <p>Largest disagreement: see the conflicts page. Different layers run different models and nothing reconciles them,
+  so two URLs can quote the same club at very different prices. <a class="more" href="conflicts.html">Compare →</a></p></div>
+
+  <div class="card"><h3>4 · 116 grades break the project's own rule</h3>
+  <p>The published rule is “high only when p ≥ 0.70 and the fair price is inside −250…+10000”. Violations are listed row by row.
+  <a class="more" href="conflicts.html#grades">Check grades →</a></p></div>
+</div>
+
+<h2>Layers audited</h2>
+<div class="scroll"><table class="data"><thead><tr><th>Layer</th><th>Rows</th><th>Fixtures</th><th>Non-fixtures</th><th>Sports</th><th>With moneyline</th><th>Graded high</th><th>Capture date</th><th>Source file</th></tr></thead><tbody>
+<tr><td>final</td><td><span class="num">382</span></td><td><span class="num">367</span></td><td><span class="num">15</span></td><td><span class="num">17</span></td><td><span class="num">278</span></td><td><span class="num">19</span></td><td>2026-10-22</td><td><code>data/final/matches.json</code></td></tr>
+<tr><td>portal</td><td><span class="num">244</span></td><td><span class="num">229</span></td><td><span class="num">15</span></td><td><span class="num">17</span></td><td><span class="num">185</span></td><td><span class="num">34</span></td><td>2026-10-22</td><td><code>data/portal/matches.json</code></td></tr>
+<tr><td>slate</td><td><span class="num">208</span></td><td><span class="num">208</span></td><td><span class="num">0</span></td><td><span class="num">15</span></td><td><span class="num">142</span></td><td><span class="num">83</span></td><td>2026-10-22</td><td><code>data/slate/matches.json</code></td></tr>
+<tr><td>board</td><td><span class="num">207</span></td><td><span class="num">197</span></td><td><span class="num">10</span></td><td><span class="num">13</span></td><td><span class="num">167</span></td><td><span class="num">42</span></td><td>2026-10-22</td><td><code>data/board/matches.json</code></td></tr>
+<tr><td>hub</td><td><span class="num">189</span></td><td><span class="num">175</span></td><td><span class="num">14</span></td><td><span class="num">15</span></td><td><span class="num">114</span></td><td><span class="num">25</span></td><td>2026-10-22</td><td><code>data/hub/matches.json</code></td></tr>
+<tr><td>verified</td><td><span class="num">188</span></td><td><span class="num">178</span></td><td><span class="num">10</span></td><td><span class="num">14</span></td><td><span class="num">154</span></td><td><span class="num">3</span></td><td>2026-10-22</td><td><code>data/verified/matches.json</code></td></tr>
+<tr><td>forward</td><td><span class="num">93</span></td><td><span class="num">93</span></td><td><span class="num">0</span></td><td><span class="num">3</span></td><td><span class="num">77</span></td><td><span class="num">2</span></td><td>2026-10-22</td><td><code>data/forward/matches.json</code></td></tr>
+<tr><td>root</td><td><span class="num">47</span></td><td><span class="num">47</span></td><td><span class="num">0</span></td><td><span class="num">5</span></td><td><span class="num">33</span></td><td><span class="num">6</span></td><td>2026-10-22</td><td><code>data/matches.json</code></td></tr>
+<tr><td>desk</td><td><span class="num">25</span></td><td><span class="num">25</span></td><td><span class="num">0</span></td><td><span class="num">2</span></td><td><span class="num">0</span></td><td><span class="num">0</span></td><td>2026-10-21</td><td><code>data/desk/fixtures.json</code></td></tr>
+<tr><td>survey</td><td><span class="num">25</span></td><td><span class="num">25</span></td><td><span class="num">0</span></td><td><span class="num">4</span></td><td><span class="num">0</span></td><td><span class="num">5</span></td><td></td><td><code>data/survey/lines.json</code></td></tr>
+<tr><td>live</td><td><span class="num">11</span></td><td><span class="num">11</span></td><td><span class="num">0</span></td><td><span class="num">2</span></td><td><span class="num">0</span></td><td><span class="num">4</span></td><td></td><td><code>data/live/lines.json</code></td></tr>
+</tbody></table></div>
+
+<h2>Eligible-sport coverage</h2>
+<p class="lede">The brief excludes soccer, boxing, UFC/MMA, American football, hurling, horse racing, cycling and specials.
+All 17 eligible sports have at least one row; 17 have at least one genuine
+head-to-head fixture. No row is published under an excluded sport.</p>
+<div class="scroll"><table class="data"><thead><tr><th>Sport</th><th>Rows</th><th>Genuine fixtures</th><th>Layers</th></tr></thead><tbody>
+<tr><td>aussie rules</td><td><span class="num">27</span></td><td><span class="num">27</span></td><td>final, portal, slate</td></tr>
+<tr><td>baseball</td><td><span class="num">41</span></td><td><span class="num">41</span></td><td>board, final, forward, hub, live, portal, slate, survey, verified</td></tr>
+<tr><td>basketball</td><td><span class="num">484</span></td><td><span class="num">484</span></td><td>board, desk, final, forward, hub, portal, root, slate, verified</td></tr>
+<tr><td>cricket</td><td><span class="num">20</span></td><td><span class="num">19</span></td><td>board, final, hub, portal, root, slate, verified</td></tr>
+<tr><td>darts</td><td><span class="num">120</span></td><td><span class="num">112</span></td><td>board, final, hub, portal, slate, survey, verified</td></tr>
+<tr><td>esports</td><td><span class="num">24</span></td><td><span class="num">24</span></td><td>final, portal, slate</td></tr>
+<tr><td>gaelic football</td><td><span class="num">26</span></td><td><span class="num">21</span></td><td>board, final, hub, portal, verified</td></tr>
+<tr><td>golf</td><td><span class="num">22</span></td><td><span class="num">9</span></td><td>board, final, hub, portal, slate, verified</td></tr>
+<tr><td>greyhounds</td><td><span class="num">38</span></td><td><span class="num">26</span></td><td>final, hub, portal, slate, verified</td></tr>
+<tr><td>handball</td><td><span class="num">57</span></td><td><span class="num">57</span></td><td>board, final, hub, portal, root, slate, verified</td></tr>
+<tr><td>ice hockey</td><td><span class="num">353</span></td><td><span class="num">353</span></td><td>board, desk, final, forward, hub, portal, root, slate, verified</td></tr>
+<tr><td>motor racing</td><td><span class="num">32</span></td><td><span class="num">16</span></td><td>board, final, hub, portal, slate, verified</td></tr>
+<tr><td>rugby league</td><td><span class="num">27</span></td><td><span class="num">18</span></td><td>board, final, hub, portal, slate, verified</td></tr>
+<tr><td>rugby union</td><td><span class="num">193</span></td><td><span class="num">193</span></td><td>board, final, hub, live, portal, root, slate, survey, verified</td></tr>
+<tr><td>snooker</td><td><span class="num">47</span></td><td><span class="num">47</span></td><td>board, final, hub, portal, slate, survey, verified</td></tr>
+<tr><td>tennis</td><td><span class="num">74</span></td><td><span class="num">74</span></td><td>final, hub, portal, slate</td></tr>
+<tr><td>volleyball</td><td><span class="num">34</span></td><td><span class="num">34</span></td><td>board, final, hub, portal, verified</td></tr>
+</tbody></table></div>
+
+<h2>How to read this</h2>
+<div class="note"><strong>This page does not declare any other layer “wrong”.</strong> Two layers disagreeing about a price is
+expected when each runs its own model; what is not acceptable is publishing both as if each were the authoritative number.
+The console measures that gap, names the rows, and leaves the decision visible. Values are machine-derived from the committed
+JSON, so every finding can be reproduced by running <code>python3 scripts/reconcile_audit.py</code>.</div>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Independent cross-layer audit of the published OLBG2 datasets. Read-only: no other session's data was edited.
+Every value below is machine-derived from committed JSON; spot checks link the official page that was read.</p>
+<p>Audit date 2026-10-22 · session <code>arena/3552df3e-olbg2</code> · <a href="flagged.html">Flagged for review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

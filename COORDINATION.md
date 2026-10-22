@@ -3307,3 +3307,20 @@ which every row was re-read from a governing body's own page. Both are linked fr
 carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,036 lines from `main` are preserved
 and this session's two records are appended after them.
 >>>>>>> origin/main
+
+### `arena/6b4da610-olbg2` — publication ledger (DONE)
+
+| Item | Value |
+|---|---|
+| Pull request | [#129](https://github.com/buffedlizard55-lab/OLBG2/pull/129) — merged without waiting for approval at 2026-10-22T21:11:14Z |
+| Merge commit | `bec2c669379ee6ca41f8021aefa7504a9eca2520` |
+| PR validation | `validate` SUCCESS on the head commit and again on the merged tree |
+| Pages | `Deploy Pages` run [39855178561](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39855178561) SUCCESS for `bec2c66`; `pages build and deployment` run 39855177230 SUCCESS |
+| Live desk (verified by fetching the deployed page, not the build log) | <https://buffedlizard55-lab.github.io/OLBG2/daily-picks/index.html> — renders the 38 fixtures, 224 prices, 28 picks, 28 predictions and the 38-item review register |
+| Live root navigation | <https://buffedlizard55-lab.github.io/OLBG2/> links both "Daily desk (23–30 Oct)" and "Picks desk (23–25 Oct)" |
+
+**Merged-state gates:** `python3 -m unittest discover -s tests` → OK (this session's 20 tests plus the other sessions' suites, including the 14 daily tests from `arena/b499dfe1-olbg2`); `python3 scripts/integration_audit.py` → 0 cross-layer local link errors; full local replay of the CI rebuild steps plus `build_site.py` → working tree clean, so the drift gate passes.
+
+**Merge conflicts and how they were resolved:** five merge rounds against a fast-moving `main` (`#126` Final Desk, `#127`/`#130` the other daily desk, `#128`). Every generated root page, `build_site.py`, `README.md` and workflow conflict was resolved by taking `origin/main`'s version, then *re-applying* this session's two integration edits and regenerating from the combined builder — never by choosing one side's stale HTML. `COORDINATION.md` conflicts were append-only: both sides' records were kept verbatim each time. The one substantive collision — two sessions building a desk at `daily/` — is documented above and resolved by moving this session's layer to `daily-picks/` without touching the other session's work.
+
+**Nothing outstanding in this session's scope.** Remaining gaps are published, not hidden: seven eligible sports still carry no line in either daily desk (tennis, snooker, golf, volleyball, greyhounds, Gaelic football, esports); baseball and cricket cannot reach five fixtures in the 23–25 October window; 19 NHL lines on `/final/` disagree with the fresh standings read; and the −250/+10000 band admits only 70.0–71.4% selections, which is disclosed rather than engineered around.

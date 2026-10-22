@@ -722,6 +722,7 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
     <span><strong>Originated Fair Odds:</strong> {p['fair_odds']:.2f}</span>
   </div>
   <p class="pred-body">{esc(p['text'])}</p>
+  {'<div class="callout-warn" style="margin:0.6rem 0;"><strong>Snapshot note:</strong> ' + esc(p['note']) + '</div>' if p.get('note') else ''}
   <ul class="fact-list">
     {facts_html}
   </ul>
@@ -735,6 +736,7 @@ def main() -> None:
     sports_doc = json.loads((DATA / "sports.json").read_text())
     matches_doc = json.loads((DATA / "matches.json").read_text())
     preds_doc = json.loads((DATA / "predictions.json").read_text())
+    archived_doc = json.loads((DATA / "archived_predictions.json").read_text())
     flags_doc = json.loads((DATA / "flagged.json").read_text())
     audit_doc = json.loads((DATA / "repo_audit.json").read_text())
 
@@ -875,11 +877,25 @@ def main() -> None:
         for s in eligible
         if pred_sport_counts.get(s["slug"])
     )
+    archived = archived_doc["predictions"]
+    archived_rows_html = "".join(
+        f'<tr id="{esc(a["match_id"])}">'
+        f'<td class="mono"><strong>{esc(a["match_id"])}</strong></td>'
+        f"<td>{esc(a['sport_name'])}<br><span style=\"color:#64748b;font-size:0.82rem;\">{esc(a['competition'])}</span></td>"
+        f"<td>{esc(a['event'])}<br><span style=\"color:#64748b;font-size:0.82rem;\">{esc(a['selection'])}</span></td>"
+        f"<td>{a['probability']*100:.1f}%</td>"
+        f"<td>{a['fair_odds']:.2f}</td>"
+        f'<td class="mono"><strong>{a["american_odds"]:+d}</strong></td>'
+        f"<td>{esc(a['regraded_to'])}</td>"
+        f'<td><a href="{esc(a["official_url"])}" target="_blank" rel="noopener">Official Source ↗</a></td>'
+        f"</tr>"
+        for a in archived
+    )
     preds_body = f"""
 <section class="hero">
   <p class="eyebrow">Human Editorial Selection Desk · Strictly Verified Primary Facts</p>
   <h1>High-Confidence Predictions ({len(preds)} Picks)</h1>
-  <p>Every fixture graded <strong>HIGH</strong> (&ge;72.0% originated win probability backed by verified current-season primary data) carries an individual, natural human editorial write-up citing verified official form, recent match scores or rankings, and the exact betting selection.</p>
+  <p>A fixture is graded <strong>HIGH</strong> only when its originated win probability is at least 70% <strong>and</strong> its fair American price sits inside the brief's <strong>[-250, +10000]</strong> odds window (fair decimal 1.40–101.00). Each pick carries an individual, natural human editorial write-up citing verified official form, recent match scores or rankings, and the exact betting selection. Chalk shorter than -250 is regraded medium and its earlier write-up is archived below, not deleted.</p>
 </section>
 <div class="controls">
   <select id="pred-sport-filter" aria-label="Filter predictions by sport">
@@ -890,6 +906,17 @@ def main() -> None:
 </div>
 <div class="pred-list">
   {"".join(render_prediction_card(p, depth=0) for p in preds)}
+</div>
+
+<div class="section-head" id="archived">
+  <h2>Archived Narratives — Regraded Under the Odds Window ({len(archived)})</h2>
+  <p>These selections were labelled high on the 2026-10-21 snapshot but all price shorter than <strong>-250</strong> American, so under the 2026-10-22 rule they are medium-confidence picks. Their original write-ups are retained in <code>data/verified/archived_predictions.json</code>; the table below records the regrade with each row's official source.</p>
+</div>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>ID</th><th>Sport / Competition</th><th>Event / Selection</th><th>Model Prob</th><th>Fair Decimal</th><th>American</th><th>New Grade</th><th>Source</th></tr></thead>
+    <tbody>{archived_rows_html}</tbody>
+  </table>
 </div>
 """
     (SITE / "predictions.html").write_text(render_shell("High-Confidence Picks", "predictions", preds_body, depth=0))

@@ -127,7 +127,8 @@ class VerifiedPipelineTests(unittest.TestCase):
         preds = self.preds["predictions"]
         pred_ids = {p["match_id"] for p in preds}
         self.assertEqual(high_ids, pred_ids)
-        self.assertGreaterEqual(len(preds), 17)
+        # 2026-10-22 odds-window rule: only the four [-250, +10000]-compliant picks remain high
+        self.assertEqual(len(preds), 4)
         openings = set()
         headlines = set()
         for p in preds:
@@ -144,6 +145,38 @@ class VerifiedPipelineTests(unittest.TestCase):
                 self.assertNotIn(parsed.netloc, BANNED_DOMAINS)
         self.assertEqual(len(openings), len(preds), "Duplicate prediction openings found")
         self.assertEqual(len(headlines), len(preds), "Duplicate headlines found")
+
+    def test_every_high_pick_sits_inside_the_american_odds_window(self) -> None:
+        def american(decimal_price: float) -> int:
+            if decimal_price >= 2.0:
+                return round((decimal_price - 1.0) * 100.0)
+            return round(-100.0 / (decimal_price - 1.0))
+
+        for m in self.matches["matches"]:
+            if m["line_status"] != "originated":
+                continue
+            pick = m["pick"]
+            if pick["confidence"] == "high":
+                am = american(pick["fair_odds"])
+                self.assertGreaterEqual(pick["probability"], 0.70, m["id"])
+                self.assertGreaterEqual(am, -250, f"{m['id']} prices shorter than -250")
+                self.assertLessEqual(am, 10000, m["id"])
+
+    def test_archived_chalk_narratives_are_retained_with_reasons(self) -> None:
+        archived_doc = json.loads((DATA / "archived_predictions.json").read_text())
+        archived = archived_doc["predictions"]
+        self.assertEqual(archived_doc["count"], 20)
+        self.assertEqual(len(archived), 20)
+        active_ids = {p["match_id"] for p in self.preds["predictions"]}
+        for a in archived:
+            self.assertNotIn(a["match_id"], active_ids)
+            self.assertEqual(a["regraded_to"], "medium")
+            self.assertLess(a["american_odds"], -250, f"{a['match_id']} should be chalk")
+            self.assertIn("[-250, +10000]", a["archive_reason"])
+            self.assertGreaterEqual(len(a["text"].split()), 30)
+            self.assertTrue(a["facts"])
+        # no id appears both active and archived
+        self.assertFalse(active_ids & {a["match_id"] for a in archived})
 
     def test_html_pages_flagged_heading_and_zero_broken_internal_links(self) -> None:
         html_files = list(SITE.rglob("*.html"))

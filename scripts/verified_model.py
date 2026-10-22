@@ -19,8 +19,15 @@ ROOT = Path(__file__).resolve().parents[1]
 VERIFIED = ROOT / "data" / "verified"
 SHARED = ROOT / "data" / "inputs"
 
-HIGH_THRESHOLD = 0.72
+HIGH_THRESHOLD = 0.70
 MEDIUM_THRESHOLD = 0.60
+# Brief (2026-10-22 remediation): high-confidence picks must price inside the
+# American-odds window [-250, +10000]. -250 == decimal 1.40 == 71.43% implied,
+# so the high band is model probability in [0.70, 1/1.40]. Chalk shorter than
+# -250 is regraded to medium and its narrative archived, never deleted.
+ODDS_WINDOW_MIN_AMERICAN = -250
+ODDS_WINDOW_MAX_AMERICAN = 10000
+OLD_HIGH_THRESHOLD = 0.72
 
 
 def read_json(path: Path) -> dict:
@@ -69,8 +76,29 @@ def poisson_grid(lh: float, la: float) -> dict[tuple[int, int], float]:
     return {k: v / total_mass for k, v in grid.items()}
 
 
+def american_from_decimal(decimal_odds: float) -> int:
+    """Convert a fair decimal price to the nearest whole American price."""
+    if decimal_odds >= 2.0:
+        return round((decimal_odds - 1.0) * 100.0)
+    return round(-100.0 / (decimal_odds - 1.0))
+
+
+def within_odds_window(decimal_odds: float) -> bool:
+    """True when the selection's fair American price sits in [-250, +10000]."""
+    american = american_from_decimal(decimal_odds)
+    return ODDS_WINDOW_MIN_AMERICAN <= american <= ODDS_WINDOW_MAX_AMERICAN
+
+
 def grade(prob: float, cap: str | None = None) -> str:
-    raw = "high" if prob >= HIGH_THRESHOLD else ("medium" if prob >= MEDIUM_THRESHOLD else "low")
+    # HIGH needs both the 70% probability floor and an in-window fair price;
+    # selections shorter than -250 (p > ~71.4%) are deliberately excluded.
+    dec = fair_decimal(prob)
+    if prob >= HIGH_THRESHOLD and within_odds_window(dec):
+        raw = "high"
+    elif prob >= MEDIUM_THRESHOLD:
+        raw = "medium"
+    else:
+        raw = "low"
     order = ["low", "medium", "high"]
     if cap and order.index(raw) > order.index(cap):
         return cap
@@ -88,10 +116,14 @@ def best_of_race(p: float, target: int) -> list[tuple[int, int, float]]:
     return outcomes
 
 
-# Hand-crafted, non-templated human analyses for every HIGH-confidence selection.
-# Each entry uses verified official figures only and embeds {prob_pct} and {price}
-# directly from the live model run so prose and table numbers can never diverge.
-BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
+# Hand-crafted, non-templated human analyses from the 2026-10-21 snapshot.
+# On 2026-10-22 the brief's [-250, +10000] American-odds window was applied:
+# every one of these selections prices shorter than -250, so they can no longer
+# be labelled high confidence. They are retained here verbatim and published in
+# data/verified/archived_predictions.json with the regrade reason — nothing is
+# deleted. Each entry embeds {prob_pct} and {price} from the live model run so
+# archived prose and table numbers can never diverge either.
+ARCHIVED_NARRATIVES: dict[str, dict] = {
     "el-E2026-67": {
         "headline": "Athens fortress and +90 net differential make Panathinaikos overwhelming hosts",
         "template": (
@@ -499,6 +531,71 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
             {"claim": "John Higgins ranks #6 on £905,000 in official WST World Rankings", "source": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"},
             {"claim": "Jak Jones ranks #24 on £319,300 in official WST World Rankings", "source": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"},
             {"claim": "Northern Ireland Open Match 45 confirmed on WST Match Centre", "source": "https://www.wst.tv/match-centre/eba55492-fba6-4a53-90be-a04b3560ae65"},
+        ],
+    },
+}
+
+
+# The only four high-confidence selections under the 2026-10-22 rule: model
+# probability >= 70% with a fair American price inside [-250, +10000]. Every
+# fact below was independently re-fetched from the cited official source in
+# the 2026-10-22 session (see research/odds-window-audit-1bb45081.md).
+BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
+    "nhl-2026020162": {
+        "headline": "Wild's 6-2-2 start faces a Flames side bottom of the NHL on goal differential",
+        "template": (
+            "Back the Minnesota Wild on the moneyline when they visit the Calgary Flames at Scotiabank Saddledome. "
+            "NHL.com's standings have the Wild at 6-2-2 through ten games with 31 goals for and 25 against, a plus-six differential, "
+            "while Calgary sit 32nd and last overall at 2-6-0 having scored just 17 and conceded 37, a minus-twenty mark, despite "
+            "a win in their most recent outing. Minnesota's steadier two-way form prices them at {prob_pct}% ({price} fair decimal, -244 American) "
+            "in a window-compliant high-confidence selection."
+        ),
+        "facts": [
+            {"claim": "Minnesota Wild: 10 GP, 6-2-2, 31 GF, 25 GA (+6), 14 points (NHL standings, 22 Oct 2026)", "source": "https://api-web.nhle.com/v1/standings/now"},
+            {"claim": "Calgary Flames: 8 GP, 2-6-0, 17 GF, 37 GA (-20), 4 points, 32nd in league sequence", "source": "https://api-web.nhle.com/v1/standings/now"},
+            {"claim": "Fixture 2026020162 Minnesota at Calgary, 2026-10-23 01:00 UTC, Scotiabank Saddledome, state FUT", "source": "https://api-web.nhle.com/v1/schedule/2026-10-22"},
+        ],
+    },
+    "prod2-12066": {
+        "headline": "Aurillac's back-to-back wins host a winless Nevers still anchored to the foot of Pro D2",
+        "template": (
+            "Take Stade Aurillacois to beat USON Nevers on the 1X2 match-winner market at Stade Jean Alric. "
+            "The official LNR Pro D2 classement after Journee 7 places Aurillac ninth on 16 points at 3 wins and 4 losses (240 points scored, 254 conceded) "
+            "and arriving in form with consecutive victories over Biarritz and Beziers. Nevers prop up the table in 16th with no wins from seven, "
+            "146 scored against 222 conceded and five straight defeats, which leaves the home side at {prob_pct}% ({price} fair decimal, -238 American)."
+        ),
+        "facts": [
+            {"claim": "Aurillac 9th after J7: 16 pts, 7 played, 3W-0D-4L, 240 PF / 254 PA, form D-D-D-V-V", "source": "https://prod2.lnr.fr/classement"},
+            {"claim": "USON Nevers 16th (last) after J7: 4 pts, 0W-0D-7L, 146 PF / 222 PA, form D-D-D-D-D", "source": "https://prod2.lnr.fr/classement"},
+            {"claim": "J8 match sheet 12066: Aurillac v Nevers, 23 October 2026, 19:30, Stade Jean Alric, referee Damien Dauvissat", "source": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers"},
+        ],
+    },
+    "urc-292609": {
+        "headline": "Connacht welcome winless, bottom-of-table Zebre to Dexcom Stadium seeking a second URC win",
+        "template": (
+            "Back Connacht Rugby to defeat Zebre Parma in the United Rugby Championship match-winner market at Dexcom Stadium. "
+            "The official URC table has Connacht 14th on five points with one win from three (56 points for, 84 against, form L-W-L), "
+            "their last outing a 19-36 defeat at Glasgow. Zebre lie 16th and last with a single losing point, no wins from three and the league's worst "
+            "defensive record at 116 conceded, including a 12-29 home loss to Edinburgh, supporting Connacht at {prob_pct}% ({price} fair decimal, -238 American)."
+        ),
+        "facts": [
+            {"claim": "Connacht 14th in URC table: 5 pts, PL 3, 1W-0D-2L, 56 PF / 84 PA (-28), form L-W-L", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Zebre Parma 16th (last): 1 pt, PL 3, 0W-0D-3L, 52 PF / 116 PA (-64), form L-L-L; lost 12-29 to Edinburgh in R3", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Match centre 292609: Connacht v Zebre Parma, Fri 23 Oct 2026, 14:45 local, Dexcom Stadium", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609"},
+        ],
+    },
+    "ehfcl-202711020101001": {
+        "headline": "Unbeaten Veszprem hosted Berlin carrying a perfect group record into the Round 5 meeting",
+        "template": (
+            "Snapshot analysis from the 2026-10-21 capture: select One Veszprem HC on the 1X2 match-winner market against Fuchse Berlin at One Veszprem Arena. "
+            "The official EHF standings now show Veszprem a perfect 5-0 (185:146); subtracting this officially recorded 39-35 Round 5 result confirms their pre-match "
+            "4-0 record of 146 goals for and 111 against. Berlin's post-round 3-2 line (184:172) similarly confirms a pre-match 3-1, 149:133 standing, so the model's "
+            "{prob_pct}% ({price} fair decimal, -244 American) home price was the window-compliant high-confidence call."
+        ),
+        "note": "This fixture was played on 21 Oct 2026 before the 2026-10-22 audit; the EHF officially records One Veszprem HC 39-35 Fuchse Berlin (half-time 20-13, 5,090 spectators). The narrative is retained as the snapshot's pre-match reasoning, not a new tip.",
+        "facts": [
+            {"claim": "EHF match detail: Wed 21 Oct 2026 18:45 CEST, One Veszprem Arena, final One Veszprem HC 39-35 Fuchse Berlin (HT 20-13), 5,090 spectators", "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101001/OneVeszpr%C3%A9mHC-F%C3%BCchseBerlin/"},
+            {"claim": "Post-R5 EHF Group A: Veszprem 5-0 (185:146) and Berlin 3-2 (184:172); subtracting the 39-35 result yields pre-match 4-0 (146:111) and 3-1 (149:133)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
         ],
     },
 }
@@ -1097,6 +1194,18 @@ def main() -> None:
         )
 
     all_rows = originated + unlined
+
+    # Venues independently read from the cited official match pages on 2026-10-22
+    # (previously blank because no match page had been opened during the first
+    # capture). Each URL is the row's own official_url.
+    verified_venues = {
+        "prod2-12066": "Stade Jean Alric",
+        "ehfcl-202711020101001": "One Veszprem Arena",
+    }
+    for row in all_rows:
+        if row["id"] in verified_venues and not row.get("venue"):
+            row["venue"] = verified_venues[row["id"]]
+
     high_rows = [m for m in originated if m["pick"]["confidence"] == "high"]
 
     predictions: list[dict] = []
@@ -1128,6 +1237,54 @@ def main() -> None:
                 "text": text,
                 "word_count": plain_words,
                 "facts": spec["facts"],
+                "note": spec.get("note"),
+                "official_url": m["official_url"],
+                "olbg_url": m["olbg_url"],
+            }
+        )
+
+    # Archive (never delete) the narratives whose selections lost their high
+    # label solely because their fair price is shorter than -250 American.
+    archived: list[dict] = []
+    archive_reason = (
+        "Selection prices shorter than -250 American (fair decimal below 1.40); "
+        "outside the brief's [-250, +10000] high-confidence window, regraded on 2026-10-22."
+    )
+    # Rows capped at medium by sport-specific evidence rules (e.g. NBA) never
+    # held the high label and have no archived narrative; the regraded set is
+    # therefore exactly the old-high ids present in ARCHIVED_NARRATIVES.
+    archived_rows = [
+        m
+        for m in originated
+        if m["id"] in ARCHIVED_NARRATIVES
+        and m["pick"]["probability"] >= OLD_HIGH_THRESHOLD
+        and m["pick"]["confidence"] != "high"
+    ]
+    if not archived_rows:
+        raise RuntimeError("Expected archived chalk narratives, found none")
+    for m in archived_rows:
+        spec = ARCHIVED_NARRATIVES[m["id"]]
+        prob_pct = f"{m['pick']['probability'] * 100:.1f}"
+        price = f"{m['pick']['fair_odds']:.2f}"
+        text = spec["template"].format(prob_pct=prob_pct, price=price).replace("**", "")
+        archived.append(
+            {
+                "match_id": m["id"],
+                "sport": m["sport"],
+                "sport_name": m["sport_name"],
+                "competition": m["competition"],
+                "event": f"{m['away']} @ {m['home']}" if m["sport"] in {"ice-hockey", "baseball"} else f"{m['home']} v {m['away']}",
+                "time": m["time"],
+                "selection": m["pick"]["selection"],
+                "probability": m["pick"]["probability"],
+                "fair_odds": m["pick"]["fair_odds"],
+                "american_odds": american_from_decimal(m["pick"]["fair_odds"]),
+                "regraded_to": m["pick"]["confidence"],
+                "archive_reason": archive_reason,
+                "headline": spec["headline"],
+                "text": text,
+                "word_count": len(text.split()),
+                "facts": spec["facts"],
                 "official_url": m["official_url"],
                 "olbg_url": m["olbg_url"],
             }
@@ -1140,9 +1297,14 @@ def main() -> None:
         "high_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "high"),
         "medium_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "medium"),
         "low_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "low"),
+        "archived_predictions": len(archived),
     }
     write_json(VERIFIED / "matches.json", {"captured_at": "2026-10-21", "counts": counts, "matches": all_rows})
-    write_json(VERIFIED / "predictions.json", {"captured_at": "2026-10-21", "min_words": 30, "count": len(predictions), "predictions": predictions})
+    write_json(VERIFIED / "predictions.json", {"captured_at": "2026-10-22", "min_words": 30, "count": len(predictions), "odds_window": "[-250, +10000] American", "predictions": predictions})
+    write_json(
+        VERIFIED / "archived_predictions.json",
+        {"archived_at": "2026-10-22", "rule": "fair American odds must fall within [-250, +10000]", "count": len(archived), "predictions": archived},
+    )
     print(f"verified_model: {counts}")
 
 

@@ -4,9 +4,10 @@
     "total_rows": 155,
     "originated_rows": 112,
     "unlined_rows": 43,
-    "high_confidence": 20,
-    "medium_confidence": 38,
-    "low_confidence": 54
+    "high_confidence": 4,
+    "medium_confidence": 54,
+    "low_confidence": 54,
+    "archived_predictions": 20
   },
   "matches": [
     {
@@ -530,7 +531,7 @@
         "team": "Minnesota Wild",
         "probability": 0.7082,
         "fair_odds": 1.41,
-        "confidence": "medium"
+        "confidence": "high"
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
@@ -1365,7 +1366,7 @@
         "team": "Panathinaikos AKTOR Athens",
         "probability": 0.8614,
         "fair_odds": 1.16,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
@@ -1848,7 +1849,7 @@
         "team": "Stade Toulousain",
         "probability": 0.7767,
         "fair_odds": 1.29,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan",
@@ -2307,7 +2308,7 @@
         "team": "Provence Rugby",
         "probability": 0.8203,
         "fair_odds": 1.22,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers",
@@ -2374,7 +2375,7 @@
       "time": "2026-10-23 17:30 UTC",
       "home": "Stade Aurillacois",
       "away": "USON Nevers",
-      "venue": null,
+      "venue": "Stade Jean Alric",
       "line_status": "originated",
       "home_summary": "3W-0D-4L (240 PF / 254 PA)",
       "away_summary": "0W-0D-7L (146 PF / 222 PA)",
@@ -2409,7 +2410,7 @@
         "team": "Stade Aurillacois",
         "probability": 0.7053,
         "fair_odds": 1.42,
-        "confidence": "medium"
+        "confidence": "high"
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers",
@@ -2664,7 +2665,7 @@
         "team": "Connacht Rugby",
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "confidence": "medium"
+        "confidence": "high"
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
@@ -2715,7 +2716,7 @@
         "team": "Edinburgh Rugby",
         "probability": 0.736,
         "fair_odds": 1.36,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
@@ -2766,7 +2767,7 @@
         "team": "Vodacom Bulls",
         "probability": 0.789,
         "fair_odds": 1.27,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
@@ -2817,7 +2818,7 @@
         "team": "DHL Stormers",
         "probability": 0.7206,
         "fair_odds": 1.39,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
@@ -3072,7 +3073,7 @@
         "team": "Glasgow Warriors",
         "probability": 0.7294,
         "fair_odds": 1.37,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617",
@@ -3174,7 +3175,7 @@
         "team": "Vodacom Bulls",
         "probability": 0.8112,
         "fair_odds": 1.23,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619",
@@ -3327,7 +3328,7 @@
         "team": "Dragons RFC",
         "probability": 0.7734,
         "fair_odds": 1.29,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622",
@@ -3494,7 +3495,7 @@
       "time": "2026-10-21 18:45 CEST",
       "home": "One Veszprém HC",
       "away": "Füchse Berlin",
-      "venue": null,
+      "venue": "One Veszprem Arena",
       "line_status": "originated",
       "home_summary": "Grp A: 4W-0D-0L (146 GF / 111 GA)",
       "away_summary": "Grp A: 3W-0D-1L (149 GF / 133 GA)",
@@ -3528,7 +3529,7 @@
         "team": "One Veszprém HC",
         "probability": 0.7103,
         "fair_odds": 1.41,
-        "confidence": "medium"
+        "confidence": "high"
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101001/OneVeszpr%C3%A9mHC-F%C3%BCchseBerlin/",
@@ -3678,7 +3679,7 @@
         "team": "Aalborg Håndbold",
         "probability": 0.8795,
         "fair_odds": 1.14,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/",
@@ -3878,7 +3879,7 @@
         "team": "Barça",
         "probability": 0.8232,
         "fair_odds": 1.21,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
@@ -3928,7 +3929,7 @@
         "team": "Sporting Clube de Portugal",
         "probability": 0.8892,
         "fair_odds": 1.12,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
@@ -3978,7 +3979,7 @@
         "team": "SC Magdeburg",
         "probability": 0.8117,
         "fair_odds": 1.23,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/",
@@ -4506,7 +4507,7 @@
         "team": "Nathan Aspinall",
         "probability": 0.7683,
         "fair_odds": 1.3,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
@@ -4602,7 +4603,7 @@
         "team": "Luke Littler",
         "probability": 0.837,
         "fair_odds": 1.19,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
@@ -4794,7 +4795,7 @@
         "team": "Arthur Fils",
         "probability": 0.774,
         "fair_odds": 1.29,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008",
@@ -4842,7 +4843,7 @@
         "team": "Tommy Paul",
         "probability": 0.8184,
         "fair_odds": 1.22,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/rankings/singles",
@@ -4890,7 +4891,7 @@
         "team": "Andrey Rublev",
         "probability": 0.7516,
         "fair_odds": 1.33,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/tournaments/almaty/9410/overview",
@@ -4938,7 +4939,7 @@
         "team": "Luciano Darderi",
         "probability": 0.7421,
         "fair_odds": 1.35,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "ATP Tour Official",
       "official_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015",
@@ -5404,7 +5405,7 @@
         "team": "Kimi Antonelli (Mercedes)",
         "probability": 0.9867,
         "fair_odds": 1.02,
-        "confidence": "high"
+        "confidence": "medium"
       },
       "official_source": "Formula 1 Official Standings",
       "official_url": "https://www.formula1.com/en/results/2026/drivers",

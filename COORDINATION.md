@@ -1911,4 +1911,34 @@ A65-1 is **done**. A65-2 remains **in progress / external Pages queue**; the pub
   2. **`/slate/` Owner (`data/slate/matches.json`, `data/slate/predictions.json`):** See `PA-01`, `PA-02`, `PA-08`, `PA-09` in `research/audit-d81930c3.md` — 12 of 13 ATP fixtures and predictions `[0..5]` are non-existent pairings on official `atptour.com` daily schedules (`Almaty 9410`, `Brussels 7485`, `Lyon 496`); `pdc-32330` replaced active `(28) Stephen Bunting` with `Ritchie Edhouse`; 8 LoL Worlds rows cite `liquipedia.net`; F1 pick `#34` states `18` completed rounds instead of `17`.
   3. **`/verified/`, `/board/`, `/hub/` Owners:** See `PA-03`, `PA-04`, `PA-06` — `golf-utah-2026` concluded Oct 4 (won by Austin Smotherman `-26`); Genesis Championship field is `126` players (`90 DPWT + 36 KPGA`); `/hub/` mislabels Lyon/Ningbo/Osaka tennis ties as next week's `Basel`/`Vienna`/`Guangzhou`.
 
+## Session `arena/5de28a6f-olbg2` — consolidated 17-sport verification desk, strict in-band confidence regrade, and publication (`/final/`)
 
+**Session ID:** `arena/5de28a6f-olbg2` · **Branch:** `arena/5de28a6f-olbg2` · **Claimed:** 2026-10-22 08:25 UTC, before any implementation edit.
+
+**Live-branch check at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, tips listed with UTC times):
+`arena/02095e6b-olbg2` 08:23 (scoped evidence integrity audit claim), `arena/65ff36f0-olbg2` 08:23
+(publication-integrity audit claim), `arena/7f261be1-olbg2` 08:23 (PR #74 ledger), `arena/1352b77f-olbg2`
+08:10 (adopting PR #54 uniform odds-window gate in `scripts/build_site.py` / root picks), `arena/c12bdcd7-olbg2`
+08:00 (root METHODOLOGY). This session treats those scopes as owned and does **not** edit `scripts/build_site.py`,
+root `index.html`/`matches.html`/`picks.html`/`flagged.html`/`methodology.html`/`sources.html`/`verification.html`/
+`archive.html`/`integration.html`, `sports/**`, `assets/**`, `data/verified/**`, `data/forward/**`, or `scripts/verified_*.py`.
+
+| # | Task | Status | Owner | File scope (new files only until F6) |
+|---|---|---|---|---|
+| F1 | Claim + live-branch check | done 08:25Z | `arena/5de28a6f-olbg2` | `COORDINATION.md` (append-only) |
+| F2 | Mechanical cross-layer audit: duplicate fixtures, conflicting prices, grading-rule divergence, stale rows, source coverage | in progress | `arena/5de28a6f-olbg2` | `research/final-audit-5de28a6f.md` |
+| F3 | Consolidated canonical dataset: union of `/hub/`, `/verified/`, `/board/`, `/slate/`, `/forward/` de-duplicated by fixture, provenance kept, one uniform confidence rule | unclaimed | `arena/5de28a6f-olbg2` | `data/final/**`, `scripts/final_*.py` |
+| F4 | Official-source re-verification of the consolidated set (bulk governing-body endpoints first, then per-fixture), every mismatch logged | unclaimed | `arena/5de28a6f-olbg2` | `data/final/**`, `research/final-audit-5de28a6f.md` |
+| F5 | High-confidence write-ups (≥30 words, unique, explicit selection, sourced form + recent history) for every in-band ≥70% selection | unclaimed | `arena/5de28a6f-olbg2` | `data/final/predictions.json` |
+| F6 | `/final/` dashboard: landing, all matches, per-sport pages, picks, verification ledger, flagged-for-review, methodology, sources; deterministic builder; tests | unclaimed | `arena/5de28a6f-olbg2` | `scripts/final_build.py`, `final/**`, `tests/test_final.py` |
+| F7 | Integration: rebase on latest `main`, full build + link audit + tests, PR → merge, confirm Pages, record here | unclaimed | `arena/5de28a6f-olbg2` | shared outputs at integration only |
+
+**Cross-scope request (logged, not edited):** root-layer owner `arena/1352b77f-olbg2` — once `/final/` is published,
+add a top-bar link `"Consolidated 17-Sport Desk (/final/)"` to `scripts/build_site.py`'s navigation so the root landing
+points at the consolidated table. This session will make that one-line change itself at F7 only if the branch is no
+longer live and `main` has no newer root build; otherwise the link stays a logged request.
+
+**Rules for this session:** every published value keeps the official URL of the row it came from; no value is inferred
+or filled; a selection is graded `high` only when the model probability is ≥70% **and** the fair decimal price is inside
+1.40–101.00 (the brief's −250…+10000 band), which is the only window satisfying both constraints; everything else is
+medium/low or blank. No bookmaker price is read or invented.

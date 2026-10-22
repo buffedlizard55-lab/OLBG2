@@ -1,0 +1,87 @@
+{
+  "generated_utc": "2026-10-22T12:22:00Z",
+  "session": "arena/3de6d2ed-olbg2",
+  "count": 10,
+  "flags": [
+    {
+      "id": "F-01",
+      "severity": "critical",
+      "category": "Breaking same-day change",
+      "title": "PDC: Luke Humphries withdrew from the European Championship on 2026-10-22",
+      "detail": "Every prior repository layer, and the live OLBG.com event (32325) at capture time, priced 'Luke Humphries vs Ryan Searle'. The PDC's official site confirmed the same day that Humphries withdrew with gastroenteritis and was replaced under PDC rules by Kim Huybrechts. This session's /canon/ desk originates 'Kim Huybrechts vs Ryan Searle' instead and flags the superseded pairing.",
+      "source_url": "https://www.pdc.tv/news/2026/october/22/humphries-withdraws-from-machineseeker-european-championship"
+    },
+    {
+      "id": "F-02",
+      "severity": "critical",
+      "category": "Wrong season / stale data",
+      "title": "Prior layers listed 2025 GAA county finals as upcoming 2026-10-24/25 fixtures",
+      "detail": "'/portal/' and '/final/' list Moycullen v Tuam Stars, Ballyboden St Enda's v Na Fianna, Austin Stacks v Dingle, and Loughmacrory v Trillick as upcoming finals on 24-25 Oct 2026. Those matches were played in October 2025. The actual 2026 fixtures for this window, confirmed on munster.gaa.ie and gaa.ie, are the Tyrone SFC Final replay (Edendork v Errigal Ciaran, 23 Oct), the Kerry SFC Final (Dr Crokes v Kenmare Shamrocks, 25 Oct), the Waterford SFC Final (Rathgormack v The Nire, 25 Oct), and the Galway SFC Final (Salthill-Knocknacarra v Moycullen, 25 Oct).",
+      "source_url": "https://munster.gaa.ie/fixtures/events-calendar/"
+    },
+    {
+      "id": "F-03",
+      "severity": "critical",
+      "category": "Fabricated fixtures",
+      "title": "Prior layers fabricated AFLW Round 11 pairings that do not exist",
+      "detail": "'/portal/' and '/final/' invented 'North Melbourne vs Brisbane Lions', 'Hawthorn vs Adelaide Crows' (actually a men's AFL Round 11 fixture from May 2026), and 'Melbourne vs Port Adelaide'. The official AFL.com.au/aflw Round 11 draw (23-25 Oct 2026) is Port Adelaide v Collingwood, St Kilda v Brisbane Lions, Western Bulldogs v Melbourne, North Melbourne v Adelaide Crows, and Hawthorn v Essendon.",
+      "source_url": "https://www.afl.com.au/aflw/news/1634432/aflw-teams-dees-make-hore-call-freo-star-returns-another-pies-blow"
+    },
+    {
+      "id": "F-04",
+      "severity": "high",
+      "category": "Hallucinated market identity",
+      "title": "OLBG event_id 912 mislabelled as a 2027 F1 outright",
+      "detail": "'/portal/' describes OLBG Motor_Racing event_id=912 as the '2027 FIA Formula 1 Drivers Championship Outright'. The live OLBG event page for id 912 is actually 'Formula 1 Drivers Championship 2026 Without Kimi Antonelli', opened because Antonelli (Mercedes) leads the real 2026 championship on 340 points after 17 completed rounds.",
+      "source_url": "https://www.formula1.com/en/results/2026/drivers"
+    },
+    {
+      "id": "F-05",
+      "severity": "high",
+      "category": "Wrong fixtures",
+      "title": "Polish PlusLiga pairings did not match plusliga.pl's own schedule",
+      "detail": "'/portal/' mapped OLBG volleyball ids 36963-36965 to different club pairings than plusliga.pl's official Round schedule shows for the same ids. This session re-read plusliga.pl directly and originates lines only for the pairings and dates the league's own table confirms.",
+      "source_url": "https://plusliga.pl/table/tour/47.html"
+    },
+    {
+      "id": "F-06",
+      "severity": "high",
+      "category": "Non-existent participant",
+      "title": "LoL Worlds 2026 Swiss Stage: FlyQuest fabricated as a competing team",
+      "detail": "'/portal/' and '/final/' list 'LYON vs FlyQuest' in the Worlds 2026 Swiss Stage. FlyQuest did not qualify for Worlds 2026; the LCS's two Worlds representatives are Team Liquid and LYON. Riot's official Swiss Round 1 draw pairs LYON against Team Secret Whales (LCP #1), not FlyQuest.",
+      "source_url": "https://lolesports.com/en-US"
+    },
+    {
+      "id": "F-07",
+      "severity": "high",
+      "category": "Introduced data error",
+      "title": "'/final/' overwrote correct NHL player stats with incorrect ones",
+      "detail": "'/final/' corrections C-04 and C-05 changed David Pastrnak's point total from 12 to 6 and Roman Josi's assist total from 8 to 6, asserting the original figures were wrong. This session re-read the live NHL score feed directly on 2026-10-22 and confirms the ORIGINAL figures were correct: Pastrnak has 4 goals and 8 assists (12 points); Josi has 8 assists. '/final/' introduced the error it claimed to be fixing.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-22"
+    },
+    {
+      "id": "F-08",
+      "severity": "medium",
+      "category": "Missing confirmed detail",
+      "title": "World Series Game 1 probable starting pitchers were not captured by prior layers",
+      "detail": "No prior layer names Milwaukee's Game 1 starter. MLB's own schedule feed confirms Jacob Misiorowski (16-5, 1.80 ERA, 252 strikeouts in 174.2 innings) as Milwaukee's Game 1 starter; Tampa Bay's starter was not yet announced in the official feed at capture time and is left blank here rather than guessed.",
+      "source_url": "https://statsapi.mlb.com/api/v1/schedule?startDate=2026-10-22&endDate=2026-10-25&sportId=1"
+    },
+    {
+      "id": "F-09",
+      "severity": "low",
+      "category": "Unconfirmable value, left blank",
+      "title": "Greyhound trap draws are not published as a structured advance card by GBGB",
+      "detail": "GBGB (gbgb.org.uk) publishes historic results, trainer registrations, and Category One open-race previews, but does not publish a machine-readable advance trap-by-trap card for ordinary BAGS meetings far enough ahead of race time to originate a fair-odds market responsibly. The two greyhound rows on /canon/ are published with the fixture and official source link only; no market, trap number, or selection is inferred.",
+      "source_url": "https://www.gbgb.org.uk/racing/results/"
+    },
+    {
+      "id": "F-10",
+      "severity": "low",
+      "category": "Unconfirmable value, left blank",
+      "title": "Galway SFC Final has no official throw-in broadcaster market reference yet",
+      "detail": "The Galway Senior Football Championship Final (Salthill-Knocknacarra v Moycullen, 25 Oct 2026) is confirmed on gaa.ie's fixtures list, but no official pre-match form/injury release equivalent to the Munster-published previews for Kerry/Waterford/Tyrone was available at capture time, so the row is published with the fixture and source link but no originated market.",
+      "source_url": "https://www.gaa.ie/fixtures-results"
+    }
+  ]
+}

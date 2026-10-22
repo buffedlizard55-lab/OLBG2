@@ -1984,3 +1984,19 @@ Prior scopes are preserved; no fixture, prediction, or model dataset is claimed 
 | Integration, PR, merge, deployment confirmation | in progress | arena/17c50bb7-olbg2 | COORDINATION.md append-only |
 
 Finding: existing Pages workflow deploys independently of content validation, so a failing build can be published. This scope adds a validation dependency without changing other sessions' data. Official websites are outside this sandbox's network allowlist; linked sources alone will not be represented as first-hand verification.
+
+### Implementation and local verification — 17c50bb7
+
+Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (validation), correcting the provisional scope names above. Both are claimed here; no other session's dataset or builder was edited.
+
+- Added a reusable validation call and `deploy.needs: validate` so deployment cannot race failed content checks.
+- Added `tests/test_publication_gate.py`: two regression tests; full suite **145 tests passed**.
+- Executed every CI rebuild step successfully; no generated-file drift. Cross-layer local link errors: **0**.
+- Published `publication.html`, a clearly labeled Flagged for Review report with all three attempted official source URLs and blank confirmed-fixture values. Requests failed with TLS EOF; no fresh factual verification is claimed.
+- Audit details: `research/publication-17c50bb7.md`. Full current coverage, source factual accuracy, and live refresh remain **needs review**, not complete.
+
+| Task | Status | Owner | Result |
+|---|---|---|---|
+| Publication gate + tests | done | arena/17c50bb7-olbg2 | Local CI rebuild and 145 tests pass |
+| Official-source access / completeness | needs review | arena/17c50bb7-olbg2 | Published publication.html; no accessible official response content |
+| PR, merge, deploy | in progress | arena/17c50bb7-olbg2 | Remote verification follows |

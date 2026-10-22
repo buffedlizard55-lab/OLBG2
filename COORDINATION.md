@@ -3130,3 +3130,25 @@ Two entries now exist on purpose: `/daily/` is the broad top-five desk, `/daily-
 which every row was re-read from a governing body's own page. Both are linked from the root dashboard, which now
 carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,036 lines from `main` are preserved
 and this session's two records are appended after them.
+
+### `arena/46d0531f-olbg2` — PUBLICATION LEDGER (DONE and LIVE)
+
+| Item | Value |
+|---|---|
+| Pull request | [#128](https://github.com/buffedlizard55-lab/OLBG2/pull/128) |
+| Merged | 2026-10-22T21:08:50Z, merge commit `aaf32b7` |
+| Merge command | `gh pr merge 128 --merge` — merged without waiting for approval, per the standing brief |
+| Validation | `validate` pass, 27 s (run 39854707917) |
+| Deploy | `Deploy Pages` success (run 39854851052) · `Validate Pages content` success (run 39854850927) |
+| Live, fetched and read after deploy | <https://buffedlizard55-lab.github.io/OLBG2/daily-audit/index.html> · <.../prediction.html> (rendered: five paragraphs, every fact link, in-layer links resolving to `/daily-audit/`) · root <https://buffedlizard55-lab.github.io/OLBG2/index.html> (notice carries both new desks) |
+| Final gate results | 403 tests OK · `integration_audit.py` 0 link errors · drift gate clean on `current`, `verified`, `live`, `site`, `survey`, `final`, `canon`, `atlas`, `daily`, `daily-audit` and the root pages |
+
+**Merge conflicts encountered: three**, all append-only or generated:
+
+1. `COORDINATION.md` (twice, when `main` advanced through PRs #127 and #130). Both sides were append-only logs. The first resolution **accidentally truncated the file to 14 lines**; it was caught immediately, restored from `origin/main` and this session's block re-appended. The final file keeps all 3,042 lines from `main` plus this session's records — no other session's entry was lost or rewritten.
+2. 29 generated root pages and `sports/*.html` conflicted on the navigation change. They are generated artefacts: the conflicted copies were taken from `main` and regenerated with `scripts/build_site.py`, which now carries both desks in the nav.
+3. `scripts/build_site.py` NAV. Resolved by keeping **both** new entries (`/daily/` and `/daily-audit/`).
+
+**A test in another session's scope nearly broke.** `tests/test_integration_83346ec9.py` asserts the literal drift-gate string `-- current data/current `. Inserting the new paths before `current` broke it. Rather than editing another session's test, the new paths were appended **after** the existing list, so the asserted substring is preserved and both layers are drift-checked.
+
+**What "complete" means for this session.** The brief asks for a full list of upcoming matches for every eligible sport, five high-confidence predictions for each, and no invention. This session delivered a rigorous, fully sourced slice: every one of the 17 fixture rows was read from a governing body's own page, all 288 prices are reproducible from a documented model, and the five written picks each carry a fact list with official links. It did **not** deliver five predictions for every sport: cricket has official fixtures but no official strength input, and eleven further sports have a named, sourced reason for having no row. Those are on the flagged page, not smoothed over. The companion `/daily/` desk (session `b499dfe1`) covers seven sports with 132 fixtures and 25 picks; the two desks are complementary and their counts must not be added.

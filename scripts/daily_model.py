@@ -365,10 +365,7 @@ def write_prediction(fx, row, pick):
         prev = inp.get("previous_round", {})
         parts.append(f"The championship resumes at Round 18 in the United States (weekend rendered 23-25 Oct) after Round 17 in {prev.get('country','Singapore')} (09-11 Oct), so recent form is measured in season points and recorded race wins rather than a head-to-head.")
     elif fam == "darts":
-        parts.append(FORM_T[rnd(2) % len(FORM_T)].format(
-            home=fx["home"], away=fx["away"],
-            hform=f"PDC Werner Rankings Ladder No.{ht.get('rank')} with £{ht.get('prize_gbp',0):,} in ranking prize money",
-            aform=f"No.{at.get('rank')} with £{at.get('prize_gbp',0):,}"))
+        parts.append(f"The official PDC Werner Rankings Ladder puts {fx['home']} at No.{ht.get('rank')} with £{ht.get('prize_gbp',0):,} in ranking prize money, against {fx['away']} at No.{at.get('rank')} with £{at.get('prize_gbp',0):,} — a gulf of £{abs(ht.get('prize_gbp',0)-at.get('prize_gbp',0)):,} on the two-year ladder.")
         parts.append("It is a first-to-six-legs Round 1 tie at the European Championship, so the ranking gap is converted leg-by-leg in our model rather than treated as a coin flip over a short race.")
     elif fam == "nba_prior":
         parts.append(FORM_T[rnd(2) % len(FORM_T)].format(
@@ -405,13 +402,14 @@ def write_prediction(fx, row, pick):
                 break
     if fx.get("competition"):
         parts.append(f"It is {fx['competition']} business on {fx['date']}" + (f" at {venue}" if fx.get("venue") else "") + ".")
-    if row.get("confidence_cap_note") and pick["confidence"] != "high":
+    if row.get("confidence_cap_note") and pick["confidence"] != "high" and fam != "nba_prior":
         parts.append("Confidence note: " + row["confidence_cap_note"])
     if pick["confidence"] == "high":
         parts.append(CLOSE_T[rnd(6) % len(CLOSE_T)].format(
             pct=f"{pick['p']*100:.1f}", dec=pick["fair_decimal"], am=pick["fair_american"], sport=fx["sport"]))
     else:
-        parts.append(f"Our originated price makes it {pick['p']*100:.1f}% (fair {pick['fair_decimal']} / {pick['fair_american']}), graded {pick['confidence']} confidence — this is a Top-5 rating for {fx['sport']} this week, not a 70%-plus certainty, and the price is our own line rather than a bookmaker quote.")
+        why = ("the model probability clears 70% but the fair price sits outside the -250 to +10000 focus band (or a confidence cap applies), so it is not labelled high" if pick["p"] >= 0.70 else "below the 70% high-confidence threshold, so it is rated on Top-5 merit only")
+        parts.append(f"Our originated price makes it {pick['p']*100:.1f}% (fair {pick['fair_decimal']} / {pick['fair_american']}), graded {pick['confidence']} confidence because {why}; the price is our own line rather than a bookmaker quote.")
     text = " ".join(p.strip() for p in parts if p.strip())
     return {"match_id": fx["id"], "sport": fx["sport"], "date": fx["date"],
             "fixture": f"{fx['home']} v {fx['away']}" if fx["away"] else fx["home"],

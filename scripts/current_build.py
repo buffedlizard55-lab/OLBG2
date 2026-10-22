@@ -178,9 +178,22 @@ def badge(conf):
     return '<span class="badge %s">%s</span>' % (conf, conf)
 
 
-def page(title, active, body, extra_head="", script=""):
+def page(title, active, body, extra_head="", script="", depth=0):
+    """Render the layer chrome.
+
+    ``depth`` is how many directory levels below ``current/`` the page lives, so
+    every chrome link is *composed* with the right prefix rather than patched by
+    string surgery afterwards. A previous revision rewrote the finished HTML with
+    blanket ``str.replace`` calls; because a bare ``index.html`` means the layer
+    dashboard in the navigation but the sport index in a breadcrumb, those
+    replacements silently sent the sport pages' Dashboard, Flagged for Review,
+    brand and footer links up to the repository root instead.
+    """
+    layer = "../" * depth            # prefix that reaches current/
+    repo = "../" * (depth + 1)       # prefix that reaches the repository root
     nav = "".join(
-        '<a href="%s"%s>%s</a>' % (href, ' aria-current="page"' if href == active else "", label)
+        '<a href="%s%s"%s>%s</a>'
+        % (layer, href, ' aria-current="page"' if href == active else "", label)
         for href, label in NAV)
     return """<!DOCTYPE html>
 <html lang="en">
@@ -188,22 +201,22 @@ def page(title, active, body, extra_head="", script=""):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%s</title>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="%sassets/style.css">
 %s</head>
 <body>
 <header class="topbar"><div class="wrap bar">
-<a class="brand" href="index.html"><span>OLBG Current Capture Desk</span>
+<a class="brand" href="%sindex.html"><span>OLBG Current Capture Desk</span>
 <small>2026-10-22 first-hand official capture &middot; window 22&ndash;29 October 2026</small></a>
 <nav class="nav" aria-label="Primary navigation">%s</nav>
 </div></header>
 <div class="cross"><div class="wrap">
 <strong>Cross-layer:</strong>
-<a href="../index.html">Root dashboard</a> &middot;
-<a href="../verified/index.html">Verified desk</a> &middot;
-<a href="../live/index.html">Live slate</a> &middot;
-<a href="../survey/index.html">All-sport survey</a> &middot;
-<a href="../integration.html">Integration status</a> &middot;
-<a href="../flagged.html">Root review queue</a>
+<a href="%sindex.html">Root dashboard</a> &middot;
+<a href="%sverified/index.html">Verified desk</a> &middot;
+<a href="%slive/index.html">Live slate</a> &middot;
+<a href="%ssurvey/index.html">All-sport survey</a> &middot;
+<a href="%sintegration.html">Integration status</a> &middot;
+<a href="%sflagged.html">Root review queue</a>
 </div></div>
 <main class="wrap">
 %s
@@ -212,31 +225,32 @@ def page(title, active, body, extra_head="", script=""):
 <p>Every published value was returned by an official governing-body, league or tour endpoint
 during the 2026-10-22 capture session and is stored verbatim under
 <code>data/current/capture/</code>. Values no official source returned are left blank and
-listed on <a href="flagged.html">Flagged for Review</a>. No bookmaker price was read; all
-prices on this layer are originated from the models on <a href="methodology.html">Methodology</a>.</p>
+listed on <a href="%sflagged.html">Flagged for Review</a>. No bookmaker price was read; all
+prices on this layer are originated from the models on <a href="%smethodology.html">Methodology</a>.</p>
 </div></footer>
 %s
 </body>
 </html>
-""" % (esc(title), extra_head, nav, body, script)
+""" % (esc(title), layer, extra_head, layer, nav,
+       repo, repo, repo, repo, repo, repo,
+       body, layer, layer, script)
 
 
 def subpage(title, body, script=""):
-    """Sport subpage: same chrome, but paths are one level deeper."""
-    html = page(title, "", body, script=script)
-    html = html.replace('href="assets/style.css"', 'href="../assets/style.css"')
-    for href, _ in NAV:
-        html = html.replace('href="%s"' % href, 'href="../%s"' % href)
-    html = html.replace('href="../index.html"', 'href="../../index.html"')
-    html = html.replace('href="../verified/index.html"', 'href="../../verified/index.html"')
-    html = html.replace('href="../live/index.html"', 'href="../../live/index.html"')
-    html = html.replace('href="../survey/index.html"', 'href="../../survey/index.html"')
-    html = html.replace('href="../integration.html"', 'href="../../integration.html"')
-    html = html.replace('href="../flagged.html"', 'href="../../flagged.html"')
-    html = html.replace('href="flagged.html"', 'href="../flagged.html"')
-    html = html.replace('href="methodology.html"', 'href="../methodology.html"')
-    html = html.replace('href="index.html"', 'href="../index.html"')
-    return html
+    """Sport subpage: same chrome, composed one directory level deeper."""
+    return page(title, "", body, script=script, depth=1)
+
+
+def level_disclosure(pr):
+    """A priced row the model rates as a true coin flip must say so in place.
+
+    Returns ``(badge, note)``; both are empty strings for a row that carries a
+    model edge, so callers can concatenate them unconditionally.
+    """
+    if not pr or not pr.get("level"):
+        return "", ""
+    return ('<span class="badge blank">coin flip</span> ',
+            '<div class="tiny">%s</div>' % esc(pr["note"]))
 
 
 def kpi(value, key, sub=""):
@@ -370,10 +384,12 @@ def build_matches(d, lines):
             if m["away"] and m["away"].get("record"):
                 bits.append("%s %s" % (m["away"]["name"], m["away"]["record"]))
             rec = "<br>".join(esc(b) for b in bits) or '<span class="blank">not returned</span>'
-        conf = badge(r["primary"]["confidence"]) if r["originated"] else \
+        lvl_badge, lvl_note = level_disclosure(r["primary"] if r["originated"] else None)
+        conf = (lvl_badge + badge(r["primary"]["confidence"])) if r["originated"] else \
             '<span class="badge blank">blank</span>'
         caveat = ('<div class="notice warn" style="margin:.3rem 0;padding:.35rem .5rem">'
                   '%s</div>' % esc(r["caveat"])) if r.get("caveat") else ""
+        caveat += lvl_note
         trs.append(
             '<tr data-f="%s" data-s="%s"><td>%s</td><td>%s</td>'
             '<td class="teams">%s<div class="tiny">%s</div></td>'
@@ -932,6 +948,7 @@ third-party site or inferred.</p>
                 esc(tot["outcomes"][0]["selection"]) if tot and tot["outcomes"] else "&mdash;")
         pred = ('<a href="../predictions.html#%s">Prediction</a>' % preds_by_match[m["id"]]["id"]
                 if m["id"] in preds_by_match else "")
+        lvl_badge, lvl_note = level_disclosure(pr)
         trs.append('<tr data-f="%s" data-s="%s"><td>%s</td><td class="teams">%s'
                    '<div class="tiny">%s</div></td><td>%s</td><td>%s</td>'
                    '<td class="tiny">%s</td><td>%s</td>'
@@ -940,8 +957,9 @@ third-party site or inferred.</p>
                        esc(fixture_label(m)), esc(slug), esc(m["date"]), esc(fixture_label(m)),
                        esc(m["competition"]),
                        esc(m["venue"]) or '<span class="blank">not returned</span>',
-                       esc(m["time_note"] or m["start_utc"]), ml, esc(pr["market"]),
-                       pr["p"], american(pr["fair_american"]), badge(pr["confidence"]), pred,
+                       esc(m["time_note"] or m["start_utc"]), ml + lvl_note, esc(pr["market"]),
+                       pr["p"], american(pr["fair_american"]),
+                       lvl_badge + badge(pr["confidence"]), pred,
                        esc(m["official_url"])))
     n = len(rows)
     orig = originated_by_sport(lines).get(slug, 0)

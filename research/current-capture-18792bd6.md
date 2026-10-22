@@ -267,3 +267,48 @@ is clean.
 **Lesson recorded for future sessions:** a deterministic rebuild and a green link audit both
 passed while four rendered numbers were wrong, because every test asserted on the data rather
 than on the rendered page. Assert on the HTML.
+
+### Second accuracy pass: two defects the link audit could not see
+
+Continuing to read the deployed pages rather than the build log found two more, both invisible
+to a link checker because **every target existed** — they were simply the wrong target.
+
+**1. Sport subpages navigated out of the layer.** `subpage()` produced its chrome by running
+blanket `str.replace` calls over finished HTML. Because a bare `index.html` means the layer
+dashboard in the navigation but the sport index in a breadcrumb, and a bare `flagged.html`
+means this layer's review page in the footer but the root review queue in the cross-layer bar,
+the replacements clobbered each other. On all 18 pages under `current/sports/`:
+
+| Link | Pointed at | Should point at |
+|---|---|---|
+| nav "Dashboard", brand | `/OLBG2/index.html` (repo root) | `/OLBG2/current/index.html` |
+| nav "Flagged for Review" | `/OLBG2/flagged.html` (root queue) | `/OLBG2/current/flagged.html` |
+| footer "Flagged for Review" | `/OLBG2/flagged.html` (root queue) | `/OLBG2/current/flagged.html` |
+| breadcrumb "By sport" | `/OLBG2/index.html` (repo root) | `/OLBG2/current/sports/index.html` |
+
+`nav "All Fixtures"`, `"Originated Lines"`, `"Picks"`, `"Predictions"`, `"Model Inputs"`,
+`"Source Register"`, `"Methodology"`, the stylesheet and the cross-layer bar were all correct,
+which is why nothing looked broken. Fix: `page()` now takes a `depth` argument and *composes*
+every chrome href from `../ * depth`, and `subpage()` is a one-line call to it with `depth=1`.
+The string surgery is gone, so the two meanings of a bare filename can no longer collide.
+
+**2. A 50/50 price was published without saying it was one.** `Mark Williams v Martin
+O'Donnell` prices at 0.5000 / +100 / low because neither player appears in the 21 Round 1 and
+Round 2 results read from `wst.tv`, so the model shrinks both to exactly 0.500. `lines.json`
+already carried `level: true` and a written note ("the published selection follows the official
+listing order and carries no model edge"), and `picks.html` rendered it — but `matches.html`
+and `sports/snooker.html` showed only the number. A reader on those two pages saw an even-money
+price that looked like an opinion. Fix: `level_disclosure()` renders a `coin flip` badge beside
+the confidence and the full note under the prices, on every page that shows the price.
+
+**Tests added: 8** (`TestSubpageChrome`, `TestCoinFlipDisclosure`) — **51** for this layer,
+**338** repository-wide, all OK. They assert the exact expected href list for the nav, brand,
+stylesheet, breadcrumb, footer and cross-layer bar at both depths; that no header or footer link
+on any page resolves above `current/`; that every chrome target exists; that the one `level`
+row is disclosed on all three pages that show its price; and that no page carries the badge
+without a matching `level: true` row.
+
+**Why the link audit missed both.** `integration_audit.py` and this layer's own link test ask
+"does this href resolve?" — a question both defects answer yes to. Neither asks "does it
+resolve to the page the author meant?" Only reading the rendered page answers that, and only an
+assertion on the exact href string keeps it answered.

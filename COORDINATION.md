@@ -1545,3 +1545,27 @@ VF-15 **closed in forward layer** (WS G4 `mlb-ws-g4` originated 2026-10-27, Trop
 VF-20 **closed for the card** (all 16 EuroCup R5 fixtures captured; rows ship unlined because the EuroLeague standings endpoints return empty bodies — never inferred).
 VF-14 **partial**: official per-day NBA game counts captured from the rendered calendar (22 Oct: 2, 23: 12, 24: 8 … 31: 7) but future-date fixture lists still fail server-render and the CDN schedule JSON returns 500 — no NBA rows published, flag stays open.
 VF-22 **still blocked**: gbgb.org.uk returned fetch failures/500 on all three pages tried — no greyhound rows published, flag stays open.
+
+## Session `arena/1619553b-olbg2` — root nav link for the forward slate + blocked-gap re-check (2026-10-22)
+
+**Session ID:** `arena/1619553b-olbg2` · **Branch:** `arena/1619553b-olbg2` (fixed by the environment; `session-…` naming not available) · **Claimed:** 2026-10-22 07:20 UTC, before any edit, per protocol.
+
+**Concurrent-session check at claim time:** `origin/main` = `1aebda7` (PR #69, merged). The only open PR is #54 (`arena/1bb45081-olbg2`, CONFLICTING, stale since 2026-10-22 01:58Z, touches the odds-window gate across all layers). This session does **not** edit anything in PR #54's scope beyond the one `NAV` list entry below, and does not rebase or take over #54. No in-progress claim from another session is live (all other claims are closed or done).
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| N1 | Close the logged nav-link request from `6a87eefa` G6: add "Forward slate (23 Oct–2 Nov)" → `forward/index.html` to the root dashboard navigation, by editing the `NAV` list in the generator and rebuilding | **done** (commit `af32d1b`; diff = one nav line per page) | `arena/1619553b-olbg2` | `scripts/build_site.py` (NAV list only), generated root `index.html`, `matches.html`, `picks.html`, `verification.html`, `flagged.html`, `methodology.html`, `sources.html`, `archive.html`, `integration.html`, `COORDINATION.md` |
+| N2 | Re-check blocked gap VF-14 (NBA 22–24 Oct fixture list) against NBA.com — per-day counts only so far | **done — still blocked** (`research/gap-recheck-1619553b.md`) | `arena/1619553b-olbg2` | `research/gap-recheck-1619553b.md`, `COORDINATION.md` |
+| N3 | Re-check blocked gap VF-22 (GBGB greyhound cards) against gbgb.org.uk using the site's real fixtures navigation (the first guessed URL returned 404) | **done — still blocked** (`research/gap-recheck-1619553b.md`) | `arena/1619553b-olbg2` | `research/gap-recheck-1619553b.md`, `COORDINATION.md` |
+
+Rules for this session: nothing is published unless an official page returned it in this session; nothing is inferred; no bookmaker price is read.
+
+### Result — session `arena/1619553b-olbg2` (2026-10-22 UTC)
+
+| Item | Result |
+|---|---|
+| N1 | Root navigation now links "Forward slate (23 Oct–2 Nov)" → `forward/index.html` on all root and sport pages. Regenerated with `scripts/build_site.py`; the diff is that one nav line per page. `scripts/integration_audit.py`: 0 local link errors. `python3 -m unittest discover -s tests`: 80 OK. Closes the `6a87eefa` G6 nav request. |
+| N2 | **VF-14 still open.** NBA official pages checked: `https://www.nba.com/games?date=2026-10-23` (per-day counts only; body reads "Sorry, something went wrong") and `https://www.nba.com/schedule?season=2026` (no game rows in the captured HTML). No NBA row published. Details: `research/gap-recheck-1619553b.md`. |
+| N3 | **VF-22 still open.** GBGB official pages are reachable: `https://www.gbgb.org.uk/` (homepage), `https://www.gbgb.org.uk/racing/open-races/`, `https://www.gbgb.org.uk/racing/race-courses/` and `https://www.gbgb.org.uk/racing/results/` (returns "0 items in 0 pages"). Dated race cards are client-rendered and were not returned. The earlier "500 on all pages" description is not reproducible; the flag should be reworded (logged for the flag owner). The guessed `/racing/fixtures/` path is a 404. No greyhound row published. |
+| Irregularities | (1) VF-22 wording: "500 on all pages" not reproduced. (2) NBA calendar page shows its own error text ("Sorry, something went wrong"). Both are for manual review. |
+| Other | Did not edit PR #54's scope beyond the `NAV` entry. PR #54 remains open and stale; not taken over. |

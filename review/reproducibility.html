@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Flagged reproducibility and publication-integrity issues for the OLBG2 research dashboards.">
+  <title>Flagged for Review — Reproducibility | OLBG2</title>
+  <style>
+    :root{color-scheme:light;--bg:#f5f7fb;--card:#fff;--ink:#182230;--muted:#596579;--line:#d9e0ea;--accent:#1458a6;--warn:#8a4b00;--warnbg:#fff4dc}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    header{background:#102a43;color:#fff;padding:1.1rem max(1rem,calc((100vw - 980px)/2))}header a{color:#d4e8ff;margin-right:1rem}
+    main{max-width:980px;margin:2rem auto;padding:0 1rem}.badge{display:inline-block;padding:.18rem .55rem;border-radius:1rem;background:var(--warnbg);color:var(--warn);font-weight:700;font-size:.84rem}
+    h1{line-height:1.2;margin:.7rem 0}.lede{color:var(--muted);max-width:75ch}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.25rem;margin:1rem 0;box-shadow:0 2px 7px #102a4310}
+    h2{font-size:1.18rem;margin:.1rem 0 .6rem}ul{padding-left:1.35rem}a{color:var(--accent);overflow-wrap:anywhere}.notice{background:var(--warnbg);border-left:4px solid #d68b16;padding:.9rem 1rem;border-radius:4px;color:#553300}
+    .meta{color:var(--muted);font-size:.92rem}footer{border-top:1px solid var(--line);margin-top:2rem;padding:1.2rem 0;color:var(--muted);font-size:.92rem}
+  </style>
+</head>
+<body>
+<header><a href="../index.html">OLBG2 dashboard</a><a href="../final/index.html">Consolidated desk</a><a href="../final/flagged.html">Flagged fixtures</a></header>
+<main>
+  <span class="badge">Flagged for Review · not externally verified</span>
+  <h1>Reproducibility and publication-integrity findings</h1>
+  <p class="lede">Audit date: 22 October 2026 UTC. This page reports build/test discrepancies and verification limits. Official URLs below are stored source links for manual review; this audit did not fetch their page contents. Read the <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/reproducibility-audit-dc72bac4.md" rel="noopener">full audit notes</a>.</p>
+
+  <section class="card">
+    <h2>RPA-02 · Board snapshot differs from its deterministic rebuild</h2>
+    <p>The checked-in <code>/board/</code> dataset contains 207 rows (167 originated, 40 unlined). A diagnostic rebuild of the committed forward window produced 277 rows (227 originated, 50 unlined). Two existing tests still assert the former counts, so that generated refresh is <strong>not published</strong> by this change.</p>
+    <ul>
+      <li><code>test_matches_deduplication_and_counts</code>: expected 207; rebuild produced 277.</li>
+      <li><code>test_originated_vs_unlined_integrity_and_american_odds_math</code>: expected 167 originated; rebuild produced 227.</li>
+      <li>The two tests are in the board owner's scope. See the handoff and requested follow-up in <a href="../COORDINATION.md">COORDINATION.md</a>.</li>
+    </ul>
+    <p class="notice"><strong>Not a confirmed fixture correction.</strong> No game details were manually changed. The board page and its committed data remain at the prior snapshot until the owner resolves the count assertions and refreshes the layer.</p>
+    <p><strong>Recorded official-source links for manual review (not fetched in this audit):</strong></p>
+    <ul>
+      <li><a href="https://www.nba.com/schedule?date=2026-10-24" rel="noopener">NBA official schedule for 24 October 2026</a></li>
+      <li><a href="https://www.nba.com/game/mia-vs-cha-0022600104" rel="noopener">NBA game page recorded for game 0022600104</a></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>RPA-03 · CI drift checks do not cover every generated sub-site</h2>
+    <p>The current validation workflow rebuilds selected layers and checks a limited set of paths for generated-file drift. It does not list every independent output directory, including <code>board/</code>, <code>hub/</code>, <code>slate/</code>, <code>portal/</code>, <code>forward/</code>, <code>evidence/</code>, and <code>audit65/</code>.</p>
+    <p>This session did not edit the workflow because it is owned by the merged publication-gating task. See the <a href="../.github/workflows/pages.yml">validation workflow</a> and the <a href="https://github.com/buffedlizard55-lab/OLBG2/pull/91" rel="noopener">PR #91 publication-gate record</a>. The requested expansion is logged in the coordination board.</p>
+  </section>
+
+  <section class="card">
+    <h2>RPA-04 · What passing structural checks establish</h2>
+    <p>Local checks can establish that generated pages are reproducible from committed inputs, URLs are present, model constraints hold, and internal links resolve. They do not establish that an external official page currently confirms every adjacent fixture, statistic, form statement, or prediction.</p>
+    <p>PR #91 records failed source-access attempts (TLS EOF) and leaves those facts unverified: see the <a href="../publication.html">publication review</a> and <a href="../research/publication-17c50bb7.md">source-access report</a>. No new sports fact or pick is certified on this page.</p>
+  </section>
+
+  <footer>Static audit note · no live data feed · no bookmaker prices · research, not betting advice.</footer>
+</main>
+</body>
+</html>

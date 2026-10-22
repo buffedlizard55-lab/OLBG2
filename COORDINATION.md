@@ -2981,3 +2981,11 @@ Confirmed on the deployed `sports/snooker.html` after `129b0cc`: breadcrumb Dash
 **Merge conflicts encountered and how they were resolved:** one, in `COORDINATION.md` when merging `origin/main` at `c9b25e0` into this branch. Both sides were append-only logs, so the resolution kept **all 752 lines from `origin/main` and all 37 lines from this session** — no other session's entry was discarded or rewritten. No conflict touched any file this session owns.
 
 **Still open for the final integration session** (logged, deliberately not actioned here — all four files are outside this session's claimed scope): add `/current/` to `index.html` and the root navigation; add `'current'` to the folder list in `scripts/integration_audit.py::local_link_errors`; add the three `current_*` scripts and `current data/current` to `.github/workflows/pages.yml`; and do not sum layer row counts as unique matches in `README.md`.
+
+## Session arena/83346ec9-olbg2 — integration claim (2026-10-22)
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Close current-layer integration requests; broaden local link coverage; document verification boundary; publish | in progress | arena/83346ec9-olbg2 | COORDINATION.md (append only), scripts/integration_audit.py, scripts/build_site.py, .github/workflows/pages.yml, README.md, generated root HTML, tests/test_integration_83346ec9.py, research/integration-83346ec9.md |
+
+This is the final integration role, not another data collection layer. Existing owner data/model files remain untouched. Session branch is fixed by Arena to arena/83346ec9-olbg2 (naming deviation). Earlier completed /current/ owner explicitly requested these shared-output changes. No newly fetched official facts or exhaustive coverage is claimed. Network policy permits GitHub and package registries only; direct official sports-site verification may be unavailable and will be disclosed, not substituted with invented facts.

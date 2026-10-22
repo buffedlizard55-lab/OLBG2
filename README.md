@@ -4,9 +4,13 @@ OLBG2 records OLBG's published sports taxonomy, collects dated event listings, a
 
 **Published landing page:** <https://buffedlizard55-lab.github.io/OLBG2/>
 
+**Daily Top-5 desk (23 October 2026):** <https://buffedlizard55-lab.github.io/OLBG2/daily/index.html>
+
+**Daily audit desk (23 October 2026, row-by-row official capture):** <https://buffedlizard55-lab.github.io/OLBG2/daily-audit/index.html>
+
 **Consolidated 17-sport desk:** <https://buffedlizard55-lab.github.io/OLBG2/final/index.html>
 
-**Flagged for Review:** <https://buffedlizard55-lab.github.io/OLBG2/final/flagged.html> · <https://buffedlizard55-lab.github.io/OLBG2/publication.html> · <https://buffedlizard55-lab.github.io/OLBG2/review/reproducibility.html>
+**Flagged for Review:** <https://buffedlizard55-lab.github.io/OLBG2/daily/flagged.html> · <https://buffedlizard55-lab.github.io/OLBG2/daily-audit/flagged.html> · <https://buffedlizard55-lab.github.io/OLBG2/final/flagged.html> · <https://buffedlizard55-lab.github.io/OLBG2/publication.html> · <https://buffedlizard55-lab.github.io/OLBG2/review/reproducibility.html>
 
 **Cross-layer integrity review:** <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
 
@@ -22,8 +26,9 @@ The repository contains several independently collected, overlapping snapshots. 
 
 | Desk | Entry point | Checked-in snapshot (2026-10-22) |
 |---|---|---|
-| **Daily Top-5 desk** | [`daily/index.html`](daily/index.html) | Independent daily desk built by a parallel session: 132 fixtures across 7 sports (23–30 October), 45 predictions, 20 review items. Overlaps `/daily-picks/` on hockey, rugby union, basketball and baseball; the two sets of counts must not be added. |
-| **Daily picks desk** | [`daily-picks/index.html`](daily-picks/index.html) | This session's 23–25 October board: 38 fixtures across 7 sports, 224 originated prices, 28 picks (18 high confidence, 6 high **and** inside the −250/+10000 band), 28 hand-written predictions, and 10 sports named with the reason they carry no line. Built from pages read on 22 October; 19 conflicts with NHL team lines stored on `/final/` are published for review. |
+| **Daily Top-5 desk** | [`daily/index.html`](daily/index.html) | 132 originated upcoming fixtures (2026-10-23–30) across 7 sports, a top-five selection per sport, 25 high-confidence picks and 45 written predictions. Sources and limits in `research/daily-b499dfe1.md`. |
+| **Daily audit desk** | [`daily-audit/index.html`](daily-audit/index.html) | Narrower, row-by-row capture fetched 2026-10-22 21:30 UTC: 8 ATP quarter-finals verified against the ATP Tour's own order of play and draws, 9 ICC fixtures verified against the ICC, 288 originated prices, 5 written picks (≥30 words, each fact linked), 15 review items. Two sports have rows; the other 15 of the 17 eligible sports are each accounted for, with the reason, on the landing page and the flagged page. Rebuilt and drift-checked in CI. |
+| **Daily picks desk** | [`daily-picks/index.html`](daily-picks/index.html) | This session's 23–25 October board: 38 fixtures across 7 sports, 224 originated prices, 28 picks, 28 written predictions, 19 NHL conflict rows for review. |
 | **Current capture desk** | [`current/index.html`](current/index.html) | Independent 22 October capture; fixture, price, prediction, source and review tables. Overlaps other desks; counts must not be added. Rebuilt and drift-checked in CI. These are stored captures, not a live feed. |
 | **Root dashboard** | [`index.html`](index.html) | 188 rows across 14 of 17 eligible sports; 154 rows with originated lines, 34 unlined, and 14 price-band selections/writeups on the root dashboard. The separate `/verified/` research page has 16 additional research writeups. Price-band selections are a separate filter, not the count of rows labelled high confidence. |
 | **Consolidated desk** | [`final/index.html`](final/index.html) | 382 deduplicated rows across all 17 eligible sports; 339 originated and 43 unlined. The union uses `/verified/`, `/hub/`, `/board/`, `/slate/`, and `/forward/`. It contains 19 featured model picks. |
@@ -49,6 +54,8 @@ Prediction paragraphs are generated only where the selected data layer supplies 
 
 ```text
 index.html, matches.html, picks.html, flagged.html, verification.html  root research desk
+daily/                                                               daily top-five desk: 132 fixtures, 25 picks, 45 predictions
+daily-audit/                                                         daily audit: ATP + ICC rows re-read from the governing body
 final/                                                               consolidated 17-sport dashboard
 portal/                                                              independent origination / audit portal
 verified/, forward/, board/, hub/, slate/, live/, survey/, site/     overlapping evidence layers
@@ -56,6 +63,7 @@ integration.html, evidence/, audit65/, publication.html               integrity 
 sports/                                                               root desk's eligible-sport pages
 
 data/                                                                 committed inputs, snapshots, predictions, sources, flags
+data/daily-audit/capture/                                             verbatim rendered text of every page fetched for the daily audit
 scripts/                                                              deterministic builders, models, and structural verifiers
 tests/                                                                repository unittest suite
 research/                                                              capture notes and audit reports
@@ -67,6 +75,8 @@ COORDINATION.md                                                       shared tas
 The pipelines use Python's standard library. From the repository root, the principal generation order is:
 
 ```bash
+python3 scripts/daily_seed.py && python3 scripts/daily_model.py && python3 scripts/daily_verify.py && python3 scripts/daily_build.py
+python3 scripts/daily_audit_model.py && python3 scripts/daily_audit_build.py
 python3 scripts/daily_seed.py && python3 scripts/daily_model.py && python3 scripts/daily_build.py && python3 scripts/daily_verify.py
 python3 scripts/daily_picks_data.py && python3 scripts/daily_picks_predictions.py && python3 scripts/daily_picks_flags.py && python3 scripts/daily_picks_build.py
 python3 scripts/current_seed.py && python3 scripts/current_model.py && python3 scripts/current_build.py

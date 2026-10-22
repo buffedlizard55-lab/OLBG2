@@ -1,0 +1,207 @@
+{
+ "layer": "daily-audit",
+ "generated_by": "hand-authored 2026-10-22 against data/daily-audit/lines.json; word counts and fact links are validated by tests/test_daily_audit.py",
+ "rule": "Every published pick carries a written prediction of at least 30 words that names the player, states the current tournament form read first-hand from the official ATP draw, states a recent completed scoreline, and names the exact betting selection with its fair price.",
+ "predictions": [
+  {
+   "id": "pred-daily-01",
+   "fixture_id": "atp-almaty-qf-1",
+   "sport": "tennis",
+   "sport_name": "Tennis",
+   "competition": "Almaty Open 2026",
+   "round": "Quarter-final",
+   "date": "2026-10-23",
+   "match": "Daniil Medvedev v Terence Atmane",
+   "market": "Match winner",
+   "selection": "Daniil Medvedev to win",
+   "probability": 0.9216,
+   "fair_decimal": 1.09,
+   "fair_american": -1176,
+   "confidence": "high",
+   "in_window": false,
+   "text": "Daniil Medvedev, the top seed in Almaty, has not dropped a set in the tournament and brushed Sho Shimabukuro aside 6-2 6-1 in the round of 16. Terence Atmane has been living dangerously, needing three sets in both wins, most recently 6-7(4) 7-6(2) 7-6(5) against Mattia Bellucci. Back Medvedev to win the quarter-final at a fair -1176.",
+   "word_count": 57,
+   "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/draws",
+   "capture_file": "data/daily-audit/capture/atp_almaty_2026-10-22.md",
+   "source_name": "ATP Tour official singles draw and results (atptour.com)",
+   "facts_used": [
+    {
+     "fact": "Medvedev is the No. 1 seed in the official Almaty draw",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/draws"
+    },
+    {
+     "fact": "Round of 16: Medvedev beat Sho Shimabukuro 6-2 6-1",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/draws"
+    },
+    {
+     "fact": "Round of 16: Atmane beat Mattia Bellucci 6-7(4) 7-6(2) 7-6(5)",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/draws"
+    },
+    {
+     "fact": "Round of 32: Atmane beat Rinky Hijikata 7-6(5) 6-2",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/draws"
+    },
+    {
+     "fact": "The quarter-final is on the Day 7 order of play for Center Court",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+    }
+   ]
+  },
+  {
+   "id": "pred-daily-02",
+   "fixture_id": "atp-brussels-qf-1",
+   "sport": "tennis",
+   "sport_name": "Tennis",
+   "competition": "Brussels 2026",
+   "round": "Quarter-final",
+   "date": "2026-10-23",
+   "match": "Tallon Griekspoor v Jiri Lehecka",
+   "market": "Match winner",
+   "selection": "Jiri Lehecka to win",
+   "probability": 0.91,
+   "fair_decimal": 1.1,
+   "fair_american": -1011,
+   "confidence": "high",
+   "in_window": false,
+   "text": "Jiri Lehecka holds the second seed in Brussels and eased past Raphael Collignon 6-4 6-2 to reach the last eight. Tallon Griekspoor, unseeded, had to survive a 7-6(3) 6-7(7) 7-5 grind against Max Schoenhaus in his only completed match of the week. The selection is Lehecka in the match-winner market at a fair -1011.",
+   "word_count": 54,
+   "official_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+   "capture_file": "data/daily-audit/capture/atp_brussels_2026-10-22.md",
+   "source_name": "ATP Tour official singles draw and results (atptour.com)",
+   "facts_used": [
+    {
+     "fact": "Lehecka is the No. 2 seed in the official Brussels draw",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "Round of 16: Lehecka beat Raphael Collignon 6-4 6-2",
+     "source_url": "https://www.atptour.com/en/scores/current"
+    },
+    {
+     "fact": "Round of 32: Griekspoor beat Max Schoenhaus 7-6(3) 6-7(7) 7-5",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "The quarter-final is on the Day 7 order of play for Centre Court, not before 16:00",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule"
+    }
+   ]
+  },
+  {
+   "id": "pred-daily-03",
+   "fixture_id": "atp-brussels-qf-2",
+   "sport": "tennis",
+   "sport_name": "Tennis",
+   "competition": "Brussels 2026",
+   "round": "Quarter-final",
+   "date": "2026-10-23",
+   "match": "Clement Chidekh v Francisco Cerundolo",
+   "market": "Match winner",
+   "selection": "Francisco Cerundolo to win",
+   "probability": 0.8916,
+   "fair_decimal": 1.12,
+   "fair_american": -823,
+   "confidence": "high",
+   "in_window": false,
+   "text": "Francisco Cerundolo, seeded third in Brussels, walked into the quarter-finals on a first-round bye and has not yet been tested on court this week. Clement Chidekh came through qualifying and beat Botic van de Zandschulp 6-1 6-4, but that is his only main-draw result in the official draw. Take Cerundolo to win at a fair -823, with the missing scoreline disclosed.",
+   "word_count": 61,
+   "official_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+   "capture_file": "data/daily-audit/capture/atp_brussels_2026-10-22.md",
+   "source_name": "ATP Tour official singles draw and results (atptour.com)",
+   "facts_used": [
+    {
+     "fact": "F. Cerundolo is the No. 3 seed and had a Round of 32 bye",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "Chidekh is marked (Q) and beat Botic van de Zandschulp 6-1 6-4 in the Round of 32",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "The quarter-final is on the Day 7 order of play for Centre Court, starting 14:00",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule"
+    }
+   ]
+  },
+  {
+   "id": "pred-daily-04",
+   "fixture_id": "atp-brussels-qf-4",
+   "sport": "tennis",
+   "sport_name": "Tennis",
+   "competition": "Brussels 2026",
+   "round": "Quarter-final",
+   "date": "2026-10-23",
+   "match": "Jan-Lennard Struff v Zizou Bergs",
+   "market": "Match winner",
+   "selection": "Zizou Bergs to win",
+   "probability": 0.7359,
+   "fair_decimal": 1.36,
+   "fair_american": -279,
+   "confidence": "high",
+   "in_window": false,
+   "text": "Zizou Bergs, the sixth seed, has won both Brussels matches in straight sets, 6-3 7-6(3) over Toby Samuel and 6-2 6-4 over Damir Dzumhur. Jan-Lennard Struff is also unbeaten, having beaten Marcos Giron 7-6(3) 7-6(3) and Gauthier Onclin 6-4 6-2, so this is the tightest of the four Brussels quarter-finals. Bergs to win is the call at a fair -279.",
+   "word_count": 60,
+   "official_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+   "capture_file": "data/daily-audit/capture/atp_brussels_2026-10-22.md",
+   "source_name": "ATP Tour official singles draw and results (atptour.com)",
+   "facts_used": [
+    {
+     "fact": "Bergs is the No. 6 seed in the official Brussels draw",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "Round of 32: Bergs beat Toby Samuel 6-3 7-6(3)",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "Round of 16: Bergs beat Damir Dzumhur 6-2 6-4",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "Round of 32: Struff beat Marcos Giron 7-6(3) 7-6(3)",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "Round of 16: Struff beat Gauthier Onclin 6-4 6-2",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    }
+   ]
+  },
+  {
+   "id": "pred-daily-05",
+   "fixture_id": "atp-brussels-qf-3",
+   "sport": "tennis",
+   "sport_name": "Tennis",
+   "competition": "Brussels 2026",
+   "round": "Quarter-final",
+   "date": "2026-10-23",
+   "match": "Arthur Fils v Alex Michelsen",
+   "market": "Match winner",
+   "selection": "Arthur Fils to win",
+   "probability": 0.7336,
+   "fair_decimal": 1.36,
+   "fair_american": -275,
+   "confidence": "high",
+   "in_window": false,
+   "text": "Arthur Fils tops the Brussels seedings and reached the quarter-finals after a first-round bye, so his price rests on official seeding rather than on a scoreline this week. Alex Michelsen, seeded fifth, is match-sharp after beating David Goffin 6-3 6-4. The gap between those inputs is narrow, which is why the model gives Fils only a fair -275 to win this quarter-final.",
+   "word_count": 62,
+   "official_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+   "capture_file": "data/daily-audit/capture/atp_brussels_2026-10-22.md",
+   "source_name": "ATP Tour official singles draw and results (atptour.com)",
+   "facts_used": [
+    {
+     "fact": "Fils is the No. 1 seed and had a Round of 32 bye",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "Michelsen is the No. 5 seed and beat David Goffin 6-3 6-4 in the Round of 16",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"
+    },
+    {
+     "fact": "The quarter-final is on the Day 7 order of play for Centre Court, not before 18:30",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule"
+    }
+   ]
+  }
+ ]
+}

@@ -1598,37 +1598,6 @@ Rules for this session: nothing is published unless an official page returned it
 
 **Session `arena/1619553b-olbg2` status:** N1 done and live; N2 (VF-14) and N3 (VF-22) re-checked, both still open with no rows published. Session closed.
 
-<<<<<<< HEAD
----
-
-## Session `arena/7f261be1-olbg2` — OLBG reverse-engineering audit, live 2026-10-22 multi-sport verification & origination desk (`/slate/`), and player-backed `-250..+10000` predictions
-
-**Session ID:** `arena/7f261be1-olbg2` · **Branch:** `arena/7f261be1-olbg2` (fixed by the Arena environment; `session-…` branch naming is disallowed by platform tracking) · **Claimed:** 2026-10-22 07:22 UTC, committed and pushed before any implementation edit per protocol.
-
-**Concurrent-session check across all remote branches (`refs/heads/*`) at claim time (`origin/main` = `b650b4e`):**
-
-| Branch | Status at claim | Claimed file scope respected by `arena/7f261be1-olbg2` |
-|---|---|---|
-| `arena/1619553b-olbg2` | **Closed & merged** (PR #70 / PR #72 → `b650b4e`) | Completed; root nav now links `forward/index.html` |
-| `arena/d219b7cf-olbg2` | **In progress** (commits `5461db1`..`3b923d6`) | `README.md`, `research/repo-consistency-d219b7cf.md` — **untouched here** |
-| `arena/1352b77f-olbg2` | **In progress** (commit `d4318cf`) | `research/verification-1352b77f.md`, `data/verified/flagged.json`, `data/forward/flagged.json`, `data/verified/predictions.json`, `data/verified/band.json`, shared outputs at V5 — **untouched while live** |
-| `arena/c12bdcd7-olbg2` | **In progress** (commit `69b3a28`) | PR #54 review, `scripts/build_site.py`, `data/forward/**`, `data/verified/inputs.json`, `research/*c12bdcd7*`, shared outputs at I6 — **untouched while live** |
-| `arena/1bb45081-olbg2` | Stale PR #54 (open since 01:58Z, `CONFLICTING`) | Handled by `1352b77f` / `c12bdcd7` takeover claims — **untouched here** |
-
-**Why this disjoint scope (`data/slate/**`, `scripts/slate_*.py`, `slate/**`, `research/olbg-audit-7f261be1.md`, `tests/test_slate.py`):**
-All existing shared data files (`data/verified/**`, `data/forward/**`, `README.md`, `scripts/build_site.py`) have active concurrent claims right now (`d219b7cf`, `1352b77f`, `c12bdcd7`). Working inside a 100% disjoint path namespace guarantees zero file-scope overlap while delivering the full end-to-end brief cleanly on GitHub Pages (`/slate/`), and allows wiring a single root navigation link only once concurrent root claims close (or logging the nav-link request here if any concurrent claim is still active at merge time).
-
-| # | Task | Status | Owner | File scope (strictly disjoint) |
-|---|---|---|---|---|
-| S1 | Claim board, fetch all remote branches, verify 0 file-scope conflicts | **done** (this commit) | `arena/7f261be1-olbg2` | `COORDINATION.md` (append-only) |
-| S2 | Line-by-line repo review + live 2026-10-22 official-source verification across all 17 eligible OLBG sports + 8 excluded sports (live fetches of `olbg.com`, `api-web.nhle.com`, `api.nhle.com`, `nba.com`, `euroleaguebasketball.net` / `api-live.euroleague.net`, `ehfcl.eurohandball.com`, `top14.lnr.fr`, `prod2.lnr.fr`, `stats.unitedrugby.com`, `statsapi.mlb.com`, `pdc.tv`, `wst.tv`, `atptour.com`, `wtatennis.com`, `formula1.com`, `icc-cricket.com` / `bcci.tv`, `pgatour.com`, `europeantour.com`, `plusliga.pl`, `nrl.com`, `gaa.ie`, `gbgb.org.uk`, `afl.com.au`, `lolesports.com`) | in progress | `arena/7f261be1-olbg2` | `research/olbg-audit-7f261be1.md`, `data/slate/sources.json`, `data/slate/repo_audit.json` |
-| S3 | Fresh multi-sport fixture capture & independent multi-market line origination (Win Match / 1X2 / Moneyline, Handicap / Spread / Puck / Run / Set / Leg / Frame Line, Match Total Over/Under + Alternate In-Band Markets) — unconfirmed inputs strictly left blank (`—`) and flagged | pending | `arena/7f261be1-olbg2` | `scripts/slate_seed.py`, `scripts/slate_model.py`, `data/slate/inputs.json`, `data/slate/matches.json`, `data/slate/flagged.json` |
-| S4 | High-confidence picks strictly inside `[-250, +10000]` fair odds (`1.40–101.00` decimal, model probability `>= 70%`) with unique `>= 30`-word non-robotic human predictions including **team + named player + current form + dated recent match history + explicit betting selection**, every fact hyperlinked to its official source | pending | `arena/7f261be1-olbg2` | `data/slate/predictions.json`, `scripts/slate_model.py` |
-| S5 | Clean GH Pages dashboard (`slate/index.html`, `slate/matches.html`, `slate/picks.html`, `slate/flagged.html`, `slate/audit.html`, `slate/methodology.html`, `slate/sources.html`, `slate/excluded.html`, `slate/sports/index.html`, `slate/sports/<slug>.html`, `slate/assets/style.css`, `slate/assets/app.js`) + automated test suite | pending | `arena/7f261be1-olbg2` | `scripts/slate_build.py`, `slate/**`, `tests/test_slate.py` |
-| S6 | Rebase on latest `main`, run full repo build & link verification + unit tests, open PR → `main`, self-merge after CI passes, confirm GitHub Pages deploy & live URLs, and record PR + merge SHA + live verification in `COORDINATION.md` | pending | `arena/7f261be1-olbg2` | `COORDINATION.md` (plus root nav link **only** if no concurrent session holds `scripts/build_site.py` at merge time; otherwise logged request) |
-
-**Rules enforced in `arena/7f261be1-olbg2`:** Zero bookmaker prices or tipster consensus percentages are read or used. Every published value comes from an official governing-body/league/tour page fetched and logged with its UTC timestamp; anything unconfirmed server-side remains blank (`—`) and is published with its source link on `slate/flagged.html`.
-=======
 ### Publication record — session `arena/d219b7cf-olbg2`
 
 | Item | Result |
@@ -1638,4 +1607,30 @@ All existing shared data files (`data/verified/**`, `data/forward/**`, `README.m
 | Validate | `Validate Pages content` **success**, run [39740105648](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740105648) |
 | GitHub Pages | `Deploy Pages` **success**, run [39740166497](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740166497) |
 | Result | README/reconciliation report and coordination record published. Data and generated fixture pages unchanged by this documentation task. |
->>>>>>> origin/main
+
+---
+
+## Session `arena/7f261be1-olbg2` — OLBG reverse-engineering audit, 17-sport live primary-source verification & origination desk (`/slate/`), and `-250..+10000` human predictions
+
+**Session ID:** `arena/7f261be1-olbg2` · **Branch:** `arena/7f261be1-olbg2` (fixed by Arena session tracking) · **Updated:** 2026-10-22 UTC (synced with `origin/main` `49ba8bf` / PR #73).
+
+**Active concurrent sessions respected (strictly zero file-scope overlap):**
+- `arena/1352b77f-olbg2` (root `/verified/` & shared root files) — untouched
+- `arena/c12bdcd7-olbg2` (PR #54 takeover, `scripts/build_site.py`, `data/forward/**`, `data/verified/inputs.json`) — untouched
+- `arena/42c8f6be-olbg2` (`/hub/**` namespace) — untouched
+- `arena/ddcbf63c-olbg2` (`/board/**` namespace) — untouched
+
+| # | Task | Status | Owner | File scope (strictly disjoint) |
+|---|---|---|---|---|
+| S1 | Claim board, fetch all remote branches, verify 0 file-scope conflicts | **done** | `arena/7f261be1-olbg2` | `COORDINATION.md` (append-only) |
+| S2 | Line-by-line repo review (`data/matches.json`, `data/verified/*`, `data/forward/*`, `data/live/*`, `scripts/*.py`) + live 2026-10-22 official-source verification across all 17 eligible OLBG sports + 8 excluded sports (`A-01..A-14`) | **done** | `arena/7f261be1-olbg2` | `research/olbg-audit-7f261be1.md`, `data/slate/sources.json`, `data/slate/repo_audit.json` |
+| S3 | Multi-sport fixture seed & independent multi-market line origination across all 17 eligible sports (15 active originated sports + 2 honestly unlined sports with blank odds and review flags) | **in progress** | `arena/7f261be1-olbg2` | `scripts/slate_seed.py`, `scripts/slate_model.py`, `data/slate/inputs.json`, `data/slate/matches.json`, `data/slate/flagged.json` |
+| S4 | High-confidence human predictions (`>= 30` words each, unique non-templated prose, verified team/player + current form + recent match history + explicit selection in `[-250, +10000]`) | pending | `arena/7f261be1-olbg2` | `data/slate/predictions.json`, `scripts/slate_model.py` |
+| S5 | Clean GitHub Pages dashboard (`slate/index.html`, `slate/matches.html`, `slate/picks.html`, `slate/flagged.html`, `slate/audit.html`, `slate/methodology.html`, `slate/sources.html`, `slate/excluded.html`, `slate/sports/index.html`, `slate/sports/<slug>.html`, `slate/assets/{style.css,app.js}`) + unit tests | pending | `arena/7f261be1-olbg2` | `scripts/slate_build.py`, `slate/**`, `tests/test_slate.py` |
+| S6 | Sync with latest `origin/main`, run full build + integration/link checks + unit tests, open & merge PR → `main`, verify live GitHub Pages deployment, record PR & live URLs in `COORDINATION.md` | pending | `arena/7f261be1-olbg2` | `COORDINATION.md` |
+
+**Cross-session findings logged for root/verified/forward owners (not edited directly to respect active claims):**
+1. **Darts withdrawal (`A-01`):** `data/verified/inputs.json` (`darts_fixtures[1]`, `pdc-32330`) still lists `Danny Noppert vs Stephen Bunting`; official `pdc.tv` preview (`2026-10-21`) confirms Stephen Bunting withdrew and was replaced by **Ritchie Edhouse** (`(6) Danny Noppert v Ritchie Edhouse`).
+2. **Golf stale tournament (`A-02`):** `data/verified/inputs.json` (`golf-utah-2026`) lists `Bank of Utah Championship` on `2026-10-22`, which concluded on `2026-10-04` (won by Austin Smotherman at `-26`, `258`). The live 22–25 Oct 2026 PGA Tour event on `pgatour.com` is the **Butterfield Bermuda Championship** at Port Royal GC, Southampton.
+3. **Formula 1 active race (`A-03`):** `VF-17` states F1 is idle until Las Vegas (Nov 20–22); official `formula1.com/en/racing/2026/united-states` confirms the **2026 United States Grand Prix (Circuit of The Americas, Austin)** runs **23–25 Oct 2026** (Race Sun 25 Oct `20:00 UTC`).
+4. **Six previously empty sports resolved on official sources (`A-04..A-09`):** ATP 250 daily schedules (`Almaty 9410`, `Brussels 7485`, `Lyon 496`), ICC Men's ODI Tri-Series (`PAK/ENG/SL` in Rawalpindi & Lahore, `274144`), RLWC 2026 Men's Round 2 (`nrl.com/draw/?competition=131`), NAB AFLW Round 11 (`afl.com.au/aflw`), LoL Worlds 2026 Swiss Round 1 (`lolesports.com` / `liquipedia.net`), and 6 of 8 Belfast Northern Ireland Open Last 16 ties (`wst.tv/players/`).

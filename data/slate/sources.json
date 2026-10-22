@@ -1,0 +1,200 @@
+{
+  "captured_at": "2026-10-22T07:35:00Z",
+  "session": "arena/7f261be1-olbg2",
+  "bookmaker_odds_used": false,
+  "tipster_consensus_used": false,
+  "sources": [
+    {
+      "id": "olbg-hub",
+      "sport": "multi-sport",
+      "authority": "OLBG Event Discovery Index (fixture discovery & category taxonomy only — zero odds/consensus read)",
+      "url": "https://www.olbg.com/betting-tips",
+      "verified_at": "2026-10-22T07:10:00Z",
+      "usage": "25-sport taxonomy audit (17 eligible + 8 excluded) and live event slug cross-check"
+    },
+    {
+      "id": "atp-almaty-schedule",
+      "sport": "tennis",
+      "authority": "ATP Tour Official — Almaty Open (ATP 250) Order of Play",
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "verified_at": "2026-10-22T07:14:00Z",
+      "usage": "Almaty Arena Center Court & Court 1 R16 ties + QF Tsitsipas vs Duckworth"
+    },
+    {
+      "id": "atp-brussels-schedule",
+      "sport": "tennis",
+      "authority": "ATP Tour Official — European Open Brussels (ATP 250) Order of Play",
+      "url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+      "verified_at": "2026-10-22T07:14:00Z",
+      "usage": "ING Arena Brussels Center Court R16 singles schedule"
+    },
+    {
+      "id": "atp-lyon-schedule",
+      "sport": "tennis",
+      "authority": "ATP Tour Official — Grand Prix Auvergne-Rhône-Alpes Lyon (ATP 250) Order of Play",
+      "url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+      "verified_at": "2026-10-22T07:14:00Z",
+      "usage": "LDLC Arena Lyon-Décines Center Court & Court 1 R16 singles schedule"
+    },
+    {
+      "id": "atp-rankings",
+      "sport": "tennis",
+      "authority": "ATP Tour Official — PIF ATP Singles Rankings (2026.10.19)",
+      "url": "https://www.atptour.com/en/rankings/singles",
+      "verified_at": "2026-10-22T07:15:00Z",
+      "usage": "Official singles ranks and ranking points for all 25 ATP 250 entrants"
+    },
+    {
+      "id": "pdc-euro-preview",
+      "sport": "darts",
+      "authority": "Professional Darts Corporation — 2026 Machineseeker European Championship Preview & Official Draw",
+      "url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+      "verified_at": "2026-10-22T07:18:00Z",
+      "usage": "All 16 Round 1 ties at Westfalenhallen Dortmund (best of 11 legs), seeds, 2026 ET titles, and Ritchie Edhouse replacement for withdrawn Stephen Bunting"
+    },
+    {
+      "id": "pdc-rankings",
+      "sport": "darts",
+      "authority": "Professional Darts Corporation — Official World Rankings (Werner Ranking Ladder)",
+      "url": "https://www.pdc.tv/rankings",
+      "verified_at": "2026-10-22T07:25:00Z",
+      "usage": "Exact 2-year ranking prize money (£) for all 32 European Championship competitors"
+    },
+    {
+      "id": "nba-live-2026-27",
+      "sport": "basketball",
+      "authority": "NBA Official — 2026-27 Regular Season Game Pages & Live Opening Week Results",
+      "url": "https://www.nba.com/news/live-updates-latest-buzz-from-around-the-nba-to-start-2026-27-season",
+      "verified_at": "2026-10-22T07:19:00Z",
+      "usage": "Completed Oct 20-21 2026-27 scores, Oct 22-23 game pages (0022600006, 0022600007, etc.), and official 2026-27 starting lineups"
+    },
+    {
+      "id": "euroleague-r7",
+      "sport": "basketball",
+      "authority": "EuroLeague Basketball Official API — 2026-27 Round 7 & EuroCup Round 5",
+      "url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games?roundNumber=7",
+      "verified_at": "2026-10-22T07:11:00Z",
+      "usage": "Completed E2026_61 (HTA 90-81 VIR), 9 upcoming EuroLeague R7 fixtures (E2026_62..70), team standings, and EuroCup R5 schedule"
+    },
+    {
+      "id": "nhl-api",
+      "sport": "ice-hockey",
+      "authority": "National Hockey League Official Web API — 2026-27 Scoreboard & Standings",
+      "url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "verified_at": "2026-10-22T07:16:00Z",
+      "usage": "All 22 NHL regular-season games Oct 22-24 (2026020154..175), 32-club records/GF/GA, and 2026-27 skater/goalie leaders"
+    },
+    {
+      "id": "mlb-statsapi",
+      "sport": "baseball",
+      "authority": "Major League Baseball Official StatsAPI — 2026 Postseason & Standings",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&season=2026&gameTypes=L,W",
+      "verified_at": "2026-10-22T07:17:00Z",
+      "usage": "2026 World Series Games 1-7 (TB Rays 98-64 vs MIL Brewers 103-59), ALCS/NLCS results, run differentials, and G1 starter Jacob Misiorowski"
+    },
+    {
+      "id": "icc-tri-series",
+      "sport": "cricket",
+      "authority": "International Cricket Council — Men's ODI Tri-Series & Official Team Rankings (21 Oct 2026)",
+      "url": "https://www.icc-cricket.com/matches/274144/sri-lanka-vs-england",
+      "verified_at": "2026-10-22T07:21:00Z",
+      "usage": "PAK-ENG-SL ODI Tri-Series Rawalpindi/Lahore schedule, Oct 18 & Oct 20 match reports, and ICC Men's ODI ratings (PAK 103, ENG 94, SL 94)"
+    },
+    {
+      "id": "top14-lnr",
+      "sport": "rugby-union",
+      "authority": "Ligue Nationale de Rugby — TOP 14 & PRO D2 Official Fixtures & Standings",
+      "url": "https://top14.lnr.fr/classement",
+      "verified_at": "2026-10-22T07:22:00Z",
+      "usage": "7 TOP 14 J7 matches, 14-club J6 table, 8 PRO D2 J8 matches, and 16-club J7 table"
+    },
+    {
+      "id": "urc-official",
+      "sport": "rugby-union",
+      "authority": "United Rugby Championship Official Match Centre",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+      "verified_at": "2026-10-22T07:22:00Z",
+      "usage": "All 8 URC Round 4 fixtures (Oct 23-24) and 16-club Round 3 table"
+    },
+    {
+      "id": "rlwc-nrl",
+      "sport": "rugby-league",
+      "authority": "NRL.com Official Draw & International Rugby League (IRL) World Rankings",
+      "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+      "verified_at": "2026-10-22T07:23:00Z",
+      "usage": "All 5 Men's RLWC 2026 Round 2 Test fixtures (Oct 23-25), all 5 completed Round 1 scores (Oct 15-18), and IRL Men's World Rankings"
+    },
+    {
+      "id": "aflw-official",
+      "sport": "aussie-rules",
+      "authority": "AFL Official — 2026 NAB AFLW Round 11 Fixtures & 18-Club Premiership Ladder",
+      "url": "https://www.afl.com.au/aflw",
+      "verified_at": "2026-10-22T07:20:00Z",
+      "usage": "All 9 NAB AFLW Round 11 fixtures (Oct 23-25) and official 10-game premiership points & percentages"
+    },
+    {
+      "id": "f1-usgp-2026",
+      "sport": "motor-racing",
+      "authority": "Formula 1 Official — 2026 United States Grand Prix & Drivers' Standings",
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "verified_at": "2026-10-22T07:24:00Z",
+      "usage": "Austin COTA race schedule (Oct 23-25, 56 laps), all 23 classified 2026 drivers' championship points, and 2026 race winners"
+    },
+    {
+      "id": "wst-nio-2026",
+      "sport": "snooker",
+      "authority": "World Snooker Tour — BetVictor Northern Ireland Open Last 16 & Player Profiles",
+      "url": "https://www.wst.tv/rankings/",
+      "verified_at": "2026-10-22T07:27:00Z",
+      "usage": "All 8 Belfast Last 16 ties (best of 7 frames), Johnstone's Paint World Rankings Top 36, and 2026/27 WST player season match records"
+    },
+    {
+      "id": "ehf-cl-men",
+      "sport": "handball",
+      "authority": "European Handball Federation — EHF Champions League Men 2026/27",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+      "verified_at": "2026-10-22T07:12:00Z",
+      "usage": "All 5 Oct 22 Round 5 match detail pages including verified arenas, referees, and group tables"
+    },
+    {
+      "id": "lol-worlds-2026",
+      "sport": "esports",
+      "authority": "Riot Games LoL Esports & Liquipedia — 2026 World Championship Swiss Stage",
+      "url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "verified_at": "2026-10-22T07:26:00Z",
+      "usage": "All 8 Fri Oct 23 Swiss Stage Round 1 Bo1 matches at Credit Union of Texas Event Center (Allen, TX), regional qualification seeds, and active rosters"
+    },
+    {
+      "id": "pga-bermuda-2026",
+      "sport": "golf",
+      "authority": "PGA Tour Official & DP World Tour — Butterfield Bermuda Championship & Genesis Championship",
+      "url": "https://www.pgatour.com/article/news/betting-dfs/2026/10/19/odds-outlook-butterfield-bermuda-championship-betting-fantasy-picks-advice-fedexcup-fall",
+      "verified_at": "2026-10-22T07:26:00Z",
+      "usage": "Oct 22-25 Butterfield Bermuda Championship field & player FedExCup Fall form records at Port Royal GC; Genesis Championship schedule check"
+    },
+    {
+      "id": "gbgb-cat1-2026",
+      "sport": "greyhounds",
+      "authority": "Greyhound Board of Great Britain (GBGB) — Category One Open Race Reports",
+      "url": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/",
+      "verified_at": "2026-10-22T07:26:00Z",
+      "usage": "Fri Oct 23 Romford Coral 100 Champion Stakes 575m Final semi-final clockings & withdrawal notice; Sat Oct 24 Dunstall Park Scurry Gold Cup & Oaks double-header"
+    },
+    {
+      "id": "plusliga-2026",
+      "sport": "volleyball",
+      "authority": "PlusLiga / Polish Volleyball League — 2026 AL-KO Supercup & PlusLiga Round 1",
+      "url": "https://www.plusliga.pl/ppcup.html",
+      "verified_at": "2026-10-22T07:20:00Z",
+      "usage": "Verified Supercup (Bogdanka LUK Lublin vs Aluron CMC Warta Zawiercie) and PlusLiga opening fixtures; left unlined due to M=0..1 opening week sample"
+    },
+    {
+      "id": "gaa-munster-2026",
+      "sport": "gaelic-football",
+      "authority": "GAA Official & Munster GAA — 2026 County Senior Football Championship Finals",
+      "url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "verified_at": "2026-10-22T07:25:00Z",
+      "usage": "Verified Sun Oct 25 Kerry, Cork, Waterford, and Galway County SFC Finals; left unlined due to absence of unified county club scoring feed"
+    }
+  ]
+}

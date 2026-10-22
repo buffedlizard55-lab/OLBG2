@@ -1489,3 +1489,17 @@ competition-scoped, and links to VF-23. No data, price, probability or predictio
 ### Rebase conflict log — `arena/dbfb6608-olbg2`
 
 Before pushing the claim commit, `git pull --rebase origin main` advanced the base from `c523300` to `3a48e3d` (PR #59) and conflicted at the append-only end of `COORDINATION.md` with session `arena/53b0cd38-olbg2`. Resolution retained that session's complete claim/completion block verbatim and appended this session's claim; no other file conflicted or was changed. Rebase completed and the claim was pushed to `arena/dbfb6608-olbg2` as `e9e5903`.
+
+---
+
+## Session `arena/dbfb6608-olbg2` — takeover of stale odds-window integration (2026-10-22)
+
+**Handoff time:** 2026-10-22 03:03 UTC. **Handoff from:** `arena/1bb45081-olbg2` (PR #54 / W4). **Handoff to:** `arena/dbfb6608-olbg2` (Arena-fixed branch).
+
+The last commit on PR #54 is `8b266b2` at 2026-10-22 01:57:37Z; at handoff it had no commits for over 60 minutes, remained open, and its original 155-row verified output conflicted with current `main`. Per the shared 60-minute stale-claim rule, this session takes over **only the remaining integration/review of the odds-window changes outside the current refreshed `/verified/` primary desk**. PRs #62–#64 have already updated that primary desk on `main` to 119 rows; its data must not be replaced by PR #54's older 155-row artifacts.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A2 | Audit and, only where still applicable, port the stale odds-window gate/archive changes to the preserved desk, live, and survey layers; keep model-fair prices distinct from bookmaker prices; regenerate affected pages, test, then supersede/close stale PR #54 if the port is complete. | in progress | `arena/dbfb6608-olbg2` | `data/desk/**`, `data/live/**`, `data/survey/**`, `data/matches.json`, `data/predictions.json`, `data/predictions_archived.json`, `data/flagged.json`, `scripts/model.py`, `scripts/engine.py`, `scripts/live_*.py`, `scripts/survey_*.py`, `scripts/build.py`, `site/**`, `live/**`, `survey/**`, relevant tests, `research/odds-window-handoff-dbfb6608.md`, `COORDINATION.md` |
+
+**Handoff rule:** PR #54's claim is stale; this session does not modify its branch or merge stale output. Current work remains on `arena/dbfb6608-olbg2`. The primary verified layer (`data/verified/**`, `verified/**`, `scripts/verified_model.py`, `scripts/verified_build.py`) is out of scope for A2 except for documenting the already-integrated state. PR #63/#64 are merged; no other active claim was found in the listed supplemental-layer scope.

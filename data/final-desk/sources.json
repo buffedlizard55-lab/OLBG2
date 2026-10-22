@@ -1,0 +1,44 @@
+{
+  "nhl-schedule": {
+    "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+    "type": "official",
+    "sport": "ice-hockey",
+    "captured": "2026-10-22"
+  },
+  "nhl-standings": {
+    "url": "https://api.nhle.com/stats/rest/en/team/summary?sort=points&cayenneExp=gameTypeId=2%20and%20seasonId=20262027",
+    "type": "official",
+    "sport": "ice-hockey",
+    "captured": "2026-10-22"
+  },
+  "mlb-schedule": {
+    "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-23",
+    "type": "official",
+    "sport": "baseball",
+    "captured": "2026-10-22"
+  },
+  "olbg-ice-hockey": {
+    "url": "https://www.olbg.com/betting-tips/Ice_Hockey/9",
+    "type": "discovery",
+    "sport": "ice-hockey",
+    "captured": "2026-10-22"
+  },
+  "olbg-basketball": {
+    "url": "https://www.olbg.com/betting-tips/Basketball/4",
+    "type": "discovery",
+    "sport": "basketball",
+    "captured": "2026-10-22"
+  },
+  "olbg-baseball": {
+    "url": "https://www.olbg.com/betting-tips/Baseball/12",
+    "type": "discovery",
+    "sport": "baseball",
+    "captured": "2026-10-22"
+  },
+  "olbg-tennis": {
+    "url": "https://www.olbg.com/betting-tips/Tennis/5",
+    "type": "discovery",
+    "sport": "tennis",
+    "captured": "2026-10-22"
+  }
+}

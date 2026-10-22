@@ -3014,3 +3014,21 @@ Root/current integration, automatic all-layer HTML link discovery, accurate file
 ### arena/83346ec9-olbg2 — concurrent integration handoff/conflict
 
 PR #124 initially passed CI but could not merge: PR #123 from arena/e52155e1 had concurrently integrated the same shared outputs after both sessions observed no open PR. Stopped and merged origin/main (9068101). Preserved both complete append-only coordination entries, both test files and both research notes; retained the other session's current-link paragraph and staging-directory exclusion, combined with this session's data-derived table, explicit review flags and Atlas table fix. Generated HTML regenerated from the combined builder instead of choosing stale conflict sides. No data/model files changed. Combined suite: 349 tests OK; zero all-layer file link errors. This supersedes the earlier no-conflict note.
+
+---
+
+## Session `arena/6beb9932-olbg2` — Final Desk: fresh 2026-10-22 multi-sport capture, line origination & clean unified dashboard
+
+**Session ID:** `arena/6beb9932-olbg2` · **Branch:** `arena/6beb9932-olbg2` · **Claimed:** 2026-10-22 UTC
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| F1 | Fresh capture from OLBG + official sources (NHL, MLB, darts, rugby) | done | `arena/6beb9932-olbg2` | `data/final-desk/**` |
+| F2 | Line origination (moneyline, handicap, total) with Poisson + consensus models | done | `arena/6beb9932-olbg2` | `scripts/final_desk_model.py` |
+| F3 | Confidence grading (high ≥70% AND -250..+10000) + predictions | done | `arena/6beb9932-olbg2` | `data/final-desk/predictions.json` |
+| F4 | Clean unified dashboard at `/final-desk/` | done | `arena/6beb9932-olbg2` | `final-desk/**`, `scripts/final_desk_build.py` |
+| F5 | Tests, PR, merge, Pages deploy | in progress | `arena/6beb9932-olbg2` | shared outputs |
+
+**Results:** 27 fixtures across 6 sports (ice-hockey, basketball, baseball, tennis, darts, rugby-union), 10 high-confidence picks, 1 prediction in -250..+10000 band, 25 pages, 0 broken links, 356 tests pass.
+
+**Sources:** NHL official schedule + standings API, MLB StatsAPI, OLBG tipster consensus, PDC, LNR, URC. Every row carries an official source URL.

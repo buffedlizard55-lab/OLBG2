@@ -102,7 +102,7 @@ def page_shell(title: str, active: str, body: str, depth: int = 0) -> str:
     nav_items = [
         ("overview", f"{prefix}index.html", "Overview"),
         ("sports", f"{prefix}sports/index.html", "17 Sports"),
-        ("matches", f"{prefix}matches.html", "All Matches (184)"),
+        ("matches", f"{prefix}matches.html", "All Matches"),
         ("picks", f"{prefix}picks.html", "In-Band Picks (34)"),
         ("flagged", f"{prefix}flagged.html", "Flagged for Review (38)"),
         ("audit", f"{prefix}audit.html", "Repo Audit"),
@@ -350,9 +350,9 @@ def main() -> None:
     sport_opts = "".join(f"<option value='{esc(s['slug'])}'>{esc(s['name'])}</option>" for s in eligible_sports)
     matches_body = f"""
     <section class="hero">
-      <h1>All 184 Verified Fixtures &amp; Originated Multi-Market Fair Lines</h1>
+      <h1>All {len(matches_data)} Verified Fixtures &amp; Originated Multi-Market Fair Lines</h1>
       <p>
-        160 independently originated matches across all 17 eligible OLBG sports plus 24 fixtures left strictly blank (<code>—</code>) where
+        {len(lined_matches)} independently originated matches across all 17 eligible OLBG sports plus {len(blank_matches)} fixtures left strictly blank (<code>—</code>) where
         server-rendered governing-body feeds do not publish pre-match statistical inputs. Every row carries a direct official governing-body verification link.
       </p>
     </section>
@@ -394,7 +394,7 @@ def main() -> None:
       </div>
     </section>
     """
-    (PORTAL / "matches.html").write_text(page_shell("All 184 Verified Matches", "matches", matches_body, 0))
+    (PORTAL / "matches.html").write_text(page_shell(f"All {len(matches_data)} Verified Matches", "matches", matches_body, 0))
 
     # 3. PICKS PAGE (portal/picks.html)
     pick_table_rows = []

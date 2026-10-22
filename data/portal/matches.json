@@ -1,9 +1,9 @@
 {
   "generated_utc": "2026-10-22T05:50:00Z",
   "session": "arena/d81930c3-olbg2",
-  "originated_count": 160,
+  "originated_count": 220,
   "unlined_blank_count": 24,
-  "total_count": 184,
+  "total_count": 244,
   "originated_sports_count": 17,
   "matches": [
     {
@@ -3426,6 +3426,5166 @@
           "decimal": 1.4,
           "american": -250,
           "american_str": "-250",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600104",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 18:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Spectrum Center",
+      "home": "Charlotte Hornets",
+      "away": "Miami Heat",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.5938,
+            "decimal": 1.68,
+            "american": -147,
+            "american_str": "-147",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4062,
+            "decimal": 2.46,
+            "american": 146,
+            "american_str": "+146",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Charlotte Hornets -3.5 pts",
+          "line": -3.5,
+          "home": {
+            "prob": 0.4763,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5237,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Charlotte Hornets -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5773,
+            "decimal": 1.73,
+            "american": -137,
+            "american_str": "-137",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CHA (44-38 prior, 0-0) vs MIA (43-39 prior, 0-1 (lost vs MIN 106-131 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Charlotte Hornets",
+      "winner_quote": {
+        "prob": 0.5938,
+        "decimal": 1.68,
+        "american": -147,
+        "american_str": "-147",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Charlotte Hornets — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5938,
+          "decimal": 1.68,
+          "american": -147,
+          "american_str": "-147",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600105",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Rocket Arena",
+      "home": "Cleveland Cavaliers",
+      "away": "Brooklyn Nets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8965,
+            "decimal": 1.12,
+            "american": -833,
+            "american_str": "-833",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1035,
+            "decimal": 9.66,
+            "american": 866,
+            "american_str": "+866",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Cleveland Cavaliers -15.5 pts",
+          "line": -15.5,
+          "home": {
+            "prob": 0.4793,
+            "decimal": 2.09,
+            "american": 109,
+            "american_str": "+109",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5207,
+            "decimal": 1.92,
+            "american": -109,
+            "american_str": "-109",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Cleveland Cavaliers -8.5 pts",
+          "line": -8.5,
+          "quote": {
+            "prob": 0.7058,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CLE (52-30 prior, 0-0) vs BKN (20-62 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Cleveland Cavaliers",
+      "winner_quote": {
+        "prob": 0.8965,
+        "decimal": 1.12,
+        "american": -833,
+        "american_str": "-833",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Cleveland Cavaliers -8.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7058,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600106",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Xfinity Mobile Arena",
+      "home": "Philadelphia 76ers",
+      "away": "Milwaukee Bucks",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7388,
+            "decimal": 1.35,
+            "american": -286,
+            "american_str": "-286",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.2612,
+            "decimal": 3.83,
+            "american": 283,
+            "american_str": "+283",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Philadelphia 76ers -8.5 pts",
+          "line": -8.5,
+          "home": {
+            "prob": 0.4679,
+            "decimal": 2.14,
+            "american": 114,
+            "american_str": "+114",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5321,
+            "decimal": 1.88,
+            "american": -114,
+            "american_str": "-114",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Philadelphia 76ers -1.5 pts",
+          "line": -1.5,
+          "quote": {
+            "prob": 0.6959,
+            "decimal": 1.44,
+            "american": -227,
+            "american_str": "-227",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: PHI (45-37 prior, 1-0 (beat NYK Oct 20)) vs MIL (32-50 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Philadelphia 76ers",
+      "winner_quote": {
+        "prob": 0.7388,
+        "decimal": 1.35,
+        "american": -286,
+        "american_str": "-286",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Philadelphia 76ers -1.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6959,
+          "decimal": 1.44,
+          "american": -227,
+          "american_str": "-227",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600108",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "United Center",
+      "home": "Chicago Bulls",
+      "away": "Washington Wizards",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7539,
+            "decimal": 1.33,
+            "american": -303,
+            "american_str": "-303",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.2461,
+            "decimal": 4.06,
+            "american": 306,
+            "american_str": "+306",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Chicago Bulls -8.5 pts",
+          "line": -8.5,
+          "home": {
+            "prob": 0.4867,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5133,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Chicago Bulls -1.5 pts",
+          "line": -1.5,
+          "quote": {
+            "prob": 0.7122,
+            "decimal": 1.4,
+            "american": -250,
+            "american_str": "-250",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CHI (31-51 prior, 0-0) vs WAS (17-65 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Chicago Bulls",
+      "winner_quote": {
+        "prob": 0.7539,
+        "decimal": 1.33,
+        "american": -303,
+        "american_str": "-303",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Chicago Bulls -1.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7122,
+          "decimal": 1.4,
+          "american": -250,
+          "american_str": "-250",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600109",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "American Airlines Center",
+      "home": "Dallas Mavericks",
+      "away": "San Antonio Spurs",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.1483,
+            "decimal": 6.74,
+            "american": 574,
+            "american_str": "+574",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.8517,
+            "decimal": 1.17,
+            "american": -588,
+            "american_str": "-588",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Dallas Mavericks +12.5 pts",
+          "line": 12.5,
+          "home": {
+            "prob": 0.5062,
+            "decimal": 1.98,
+            "american": -102,
+            "american_str": "-102",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4938,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "San Antonio Spurs -6.5 pts",
+          "line": -6.5,
+          "quote": {
+            "prob": 0.689,
+            "decimal": 1.45,
+            "american": -222,
+            "american_str": "-222",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: DAL (26-56 prior, 0-1 (lost vs HOU 110-128 Oct 21)) vs SAS (62-20 prior, 0-1 (lost at OKC Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "San Antonio Spurs",
+      "winner_quote": {
+        "prob": 0.8517,
+        "decimal": 1.17,
+        "american": -588,
+        "american_str": "-588",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "San Antonio Spurs -6.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.689,
+          "decimal": 1.45,
+          "american": -222,
+          "american_str": "-222",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600107",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 20:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "State Farm Arena",
+      "home": "Atlanta Hawks",
+      "away": "Houston Rockets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.4771,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5229,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Atlanta Hawks +1.5 pts",
+          "line": 1.5,
+          "home": {
+            "prob": 0.5278,
+            "decimal": 1.89,
+            "american": -112,
+            "american_str": "-112",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4722,
+            "decimal": 2.12,
+            "american": 112,
+            "american_str": "+112",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Houston Rockets -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.506,
+            "decimal": 1.98,
+            "american": -102,
+            "american_str": "-102",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: ATL (46-36 prior, 0-0) vs HOU (52-30 prior, 1-0 (beat DAL 128-110 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Houston Rockets",
+      "winner_quote": {
+        "prob": 0.5229,
+        "decimal": 1.91,
+        "american": -110,
+        "american_str": "-110",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Houston Rockets — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5229,
+          "decimal": 1.91,
+          "american": -110,
+          "american_str": "-110",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600110",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 21:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Ball Arena",
+      "home": "Denver Nuggets",
+      "away": "New Orleans Pelicans",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8666,
+            "decimal": 1.15,
+            "american": -667,
+            "american_str": "-667",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1334,
+            "decimal": 7.5,
+            "american": 650,
+            "american_str": "+650",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Denver Nuggets -13.5 pts",
+          "line": -13.5,
+          "home": {
+            "prob": 0.4867,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5133,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Denver Nuggets -6.5 pts",
+          "line": -6.5,
+          "quote": {
+            "prob": 0.7122,
+            "decimal": 1.4,
+            "american": -250,
+            "american_str": "-250",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: DEN (54-28 prior, 0-0) vs NOP (26-56 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Denver Nuggets",
+      "winner_quote": {
+        "prob": 0.8666,
+        "decimal": 1.15,
+        "american": -667,
+        "american_str": "-667",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Denver Nuggets -6.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7122,
+          "decimal": 1.4,
+          "american": -250,
+          "american_str": "-250",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600111",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-24",
+      "time_utc": "2026-10-24 22:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Mortgage Matchup Center",
+      "home": "Phoenix Suns",
+      "away": "Golden State Warriors",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.6696,
+            "decimal": 1.49,
+            "american": -204,
+            "american_str": "-204",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.3304,
+            "decimal": 3.03,
+            "american": 203,
+            "american_str": "+203",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Phoenix Suns -5.5 pts",
+          "line": -5.5,
+          "home": {
+            "prob": 0.4891,
+            "decimal": 2.04,
+            "american": 104,
+            "american_str": "+104",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5109,
+            "decimal": 1.96,
+            "american": -104,
+            "american_str": "-104",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Phoenix Suns -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6541,
+            "decimal": 1.53,
+            "american": -189,
+            "american_str": "-189",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: PHX (45-37 prior, 0-1 (lost vs POR 83-124 Oct 21)) vs GSW (37-45 prior, 0-1 (lost at LAL 105-127 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Phoenix Suns",
+      "winner_quote": {
+        "prob": 0.6696,
+        "decimal": 1.49,
+        "american": -204,
+        "american_str": "-204",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Phoenix Suns — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6696,
+          "decimal": 1.49,
+          "american": -204,
+          "american_str": "-204",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600112",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-25",
+      "time_utc": "2026-10-25 17:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "Los Angeles Lakers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-25",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.184,
+            "decimal": 5.43,
+            "american": 443,
+            "american_str": "+443",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.816,
+            "decimal": 1.23,
+            "american": -435,
+            "american_str": "-435",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Utah Jazz +11.5 pts",
+          "line": 11.5,
+          "home": {
+            "prob": 0.5297,
+            "decimal": 1.89,
+            "american": -112,
+            "american_str": "-112",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4703,
+            "decimal": 2.13,
+            "american": 113,
+            "american_str": "+113",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Los Angeles Lakers -4.5 pts",
+          "line": -4.5,
+          "quote": {
+            "prob": 0.6981,
+            "decimal": 1.43,
+            "american": -233,
+            "american_str": "-233",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: UTA (22-60 prior, 0-0) vs LAL (53-29 prior, 1-0 (beat GSW 127-105 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Los Angeles Lakers",
+      "winner_quote": {
+        "prob": 0.816,
+        "decimal": 1.23,
+        "american": -435,
+        "american_str": "-435",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Los Angeles Lakers -4.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6981,
+          "decimal": 1.43,
+          "american": -233,
+          "american_str": "-233",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600113",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-25",
+      "time_utc": "2026-10-25 18:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Barclays Center",
+      "home": "Brooklyn Nets",
+      "away": "Indiana Pacers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-25",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.5857,
+            "decimal": 1.71,
+            "american": -141,
+            "american_str": "-141",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4143,
+            "decimal": 2.41,
+            "american": 141,
+            "american_str": "+141",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Brooklyn Nets -3.5 pts",
+          "line": -3.5,
+          "home": {
+            "prob": 0.4681,
+            "decimal": 2.14,
+            "american": 114,
+            "american_str": "+114",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5319,
+            "decimal": 1.88,
+            "american": -114,
+            "american_str": "-114",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Brooklyn Nets -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5691,
+            "decimal": 1.76,
+            "american": -132,
+            "american_str": "-132",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: BKN (20-62 prior, 0-0) vs IND (19-63 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Brooklyn Nets",
+      "winner_quote": {
+        "prob": 0.5857,
+        "decimal": 1.71,
+        "american": -141,
+        "american_str": "-141",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Brooklyn Nets — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5857,
+          "decimal": 1.71,
+          "american": -141,
+          "american_str": "-141",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600114",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-25",
+      "time_utc": "2026-10-25 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Madison Square Garden",
+      "home": "New York Knicks",
+      "away": "Orlando Magic",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-25",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.662,
+            "decimal": 1.51,
+            "american": -196,
+            "american_str": "-196",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.338,
+            "decimal": 2.96,
+            "american": 196,
+            "american_str": "+196",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "New York Knicks -5.5 pts",
+          "line": -5.5,
+          "home": {
+            "prob": 0.4808,
+            "decimal": 2.08,
+            "american": 108,
+            "american_str": "+108",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5192,
+            "decimal": 1.93,
+            "american": -108,
+            "american_str": "-108",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "New York Knicks -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6464,
+            "decimal": 1.55,
+            "american": -182,
+            "american_str": "-182",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: NYK (53-29 prior, 0-1 (lost at PHI Oct 20)) vs ORL (45-37 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "New York Knicks",
+      "winner_quote": {
+        "prob": 0.662,
+        "decimal": 1.51,
+        "american": -196,
+        "american_str": "-196",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "New York Knicks — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.662,
+          "decimal": 1.51,
+          "american": -196,
+          "american_str": "-196",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600115",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-25",
+      "time_utc": "2026-10-25 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Target Center",
+      "home": "Minnesota Timberwolves",
+      "away": "Toronto Raptors",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-25",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.6227,
+            "decimal": 1.61,
+            "american": -164,
+            "american_str": "-164",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.3773,
+            "decimal": 2.65,
+            "american": 165,
+            "american_str": "+165",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Minnesota Timberwolves -4.5 pts",
+          "line": -4.5,
+          "home": {
+            "prob": 0.4726,
+            "decimal": 2.12,
+            "american": 112,
+            "american_str": "+112",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5274,
+            "decimal": 1.9,
+            "american": -111,
+            "american_str": "-111",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Minnesota Timberwolves -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6065,
+            "decimal": 1.65,
+            "american": -154,
+            "american_str": "-154",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIN (49-33 prior, 1-0 (beat MIA 131-106 Oct 21)) vs TOR (46-36 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Minnesota Timberwolves",
+      "winner_quote": {
+        "prob": 0.6227,
+        "decimal": 1.61,
+        "american": -164,
+        "american_str": "-164",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Minnesota Timberwolves — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6227,
+          "decimal": 1.61,
+          "american": -164,
+          "american_str": "-164",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600116",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-25",
+      "time_utc": "2026-10-25 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Paycom Center",
+      "home": "Oklahoma City Thunder",
+      "away": "LA Clippers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-25",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8273,
+            "decimal": 1.21,
+            "american": -476,
+            "american_str": "-476",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1727,
+            "decimal": 5.79,
+            "american": 479,
+            "american_str": "+479",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Oklahoma City Thunder -11.5 pts",
+          "line": -11.5,
+          "home": {
+            "prob": 0.4877,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5123,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Oklahoma City Thunder -4.5 pts",
+          "line": -4.5,
+          "quote": {
+            "prob": 0.7131,
+            "decimal": 1.4,
+            "american": -250,
+            "american_str": "-250",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: OKC (64-18 prior, 1-0 (beat SAS 108-100 Oct 20)) vs LAC (42-40 prior, 1-0 (beat SAC 121-96 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Oklahoma City Thunder",
+      "winner_quote": {
+        "prob": 0.8273,
+        "decimal": 1.21,
+        "american": -476,
+        "american_str": "-476",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Oklahoma City Thunder -4.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7131,
+          "decimal": 1.4,
+          "american": -250,
+          "american_str": "-250",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600117",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-25",
+      "time_utc": "2026-10-25 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Xfinity Mobile Arena",
+      "home": "Philadelphia 76ers",
+      "away": "Detroit Pistons",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-25",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.3815,
+            "decimal": 2.62,
+            "american": 162,
+            "american_str": "+162",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.6185,
+            "decimal": 1.62,
+            "american": -161,
+            "american_str": "-161",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Philadelphia 76ers +4.5 pts",
+          "line": 4.5,
+          "home": {
+            "prob": 0.5319,
+            "decimal": 1.88,
+            "american": -114,
+            "american_str": "-114",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4681,
+            "decimal": 2.14,
+            "american": 114,
+            "american_str": "+114",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Detroit Pistons -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6022,
+            "decimal": 1.66,
+            "american": -152,
+            "american_str": "-152",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: PHI (45-37 prior, 1-0 (beat NYK Oct 20)) vs DET (60-22 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Detroit Pistons",
+      "winner_quote": {
+        "prob": 0.6185,
+        "decimal": 1.62,
+        "american": -161,
+        "american_str": "-161",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Detroit Pistons — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6185,
+          "decimal": 1.62,
+          "american": -161,
+          "american_str": "-161",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600118",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-25",
+      "time_utc": "2026-10-25 21:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Golden 1 Center",
+      "home": "Sacramento Kings",
+      "away": "Memphis Grizzlies",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-25",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.5169,
+            "decimal": 1.93,
+            "american": -108,
+            "american_str": "-108",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4831,
+            "decimal": 2.07,
+            "american": 107,
+            "american_str": "+107",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Sacramento Kings -1.5 pts",
+          "line": -1.5,
+          "home": {
+            "prob": 0.4662,
+            "decimal": 2.15,
+            "american": 115,
+            "american_str": "+115",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5338,
+            "decimal": 1.87,
+            "american": -115,
+            "american_str": "-115",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Sacramento Kings -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5,
+            "decimal": 2.0,
+            "american": 100,
+            "american_str": "+100",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: SAC (22-60 prior, 0-1 (lost vs LAC 96-121 Oct 21)) vs MEM (25-57 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Sacramento Kings",
+      "winner_quote": {
+        "prob": 0.5169,
+        "decimal": 1.93,
+        "american": -108,
+        "american_str": "-108",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Sacramento Kings — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5169,
+          "decimal": 1.93,
+          "american": -108,
+          "american_str": "-108",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600119",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Spectrum Center",
+      "home": "Charlotte Hornets",
+      "away": "Washington Wizards",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8674,
+            "decimal": 1.15,
+            "american": -667,
+            "american_str": "-667",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1326,
+            "decimal": 7.54,
+            "american": 654,
+            "american_str": "+654",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Charlotte Hornets -13.5 pts",
+          "line": -13.5,
+          "home": {
+            "prob": 0.488,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.512,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Charlotte Hornets -6.5 pts",
+          "line": -6.5,
+          "quote": {
+            "prob": 0.7133,
+            "decimal": 1.4,
+            "american": -250,
+            "american_str": "-250",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CHA (44-38 prior, 0-0) vs WAS (17-65 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Charlotte Hornets",
+      "winner_quote": {
+        "prob": 0.8674,
+        "decimal": 1.15,
+        "american": -667,
+        "american_str": "-667",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Charlotte Hornets -6.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7133,
+          "decimal": 1.4,
+          "american": -250,
+          "american_str": "-250",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600120",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Rocket Arena",
+      "home": "Cleveland Cavaliers",
+      "away": "Minnesota Timberwolves",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.596,
+            "decimal": 1.68,
+            "american": -147,
+            "american_str": "-147",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.404,
+            "decimal": 2.48,
+            "american": 148,
+            "american_str": "+148",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Cleveland Cavaliers -3.5 pts",
+          "line": -3.5,
+          "home": {
+            "prob": 0.4787,
+            "decimal": 2.09,
+            "american": 109,
+            "american_str": "+109",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5213,
+            "decimal": 1.92,
+            "american": -109,
+            "american_str": "-109",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Cleveland Cavaliers -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5795,
+            "decimal": 1.73,
+            "american": -137,
+            "american_str": "-137",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CLE (52-30 prior, 0-0) vs MIN (49-33 prior, 1-0 (beat MIA 131-106 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Cleveland Cavaliers",
+      "winner_quote": {
+        "prob": 0.596,
+        "decimal": 1.68,
+        "american": -147,
+        "american_str": "-147",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Cleveland Cavaliers — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.596,
+          "decimal": 1.68,
+          "american": -147,
+          "american_str": "-147",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600121",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "TD Garden",
+      "home": "Boston Celtics",
+      "away": "Chicago Bulls",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8434,
+            "decimal": 1.19,
+            "american": -526,
+            "american_str": "-526",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1566,
+            "decimal": 6.39,
+            "american": 539,
+            "american_str": "+539",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Boston Celtics -12.5 pts",
+          "line": -12.5,
+          "home": {
+            "prob": 0.4797,
+            "decimal": 2.08,
+            "american": 108,
+            "american_str": "+108",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5203,
+            "decimal": 1.92,
+            "american": -109,
+            "american_str": "-109",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Boston Celtics -5.5 pts",
+          "line": -5.5,
+          "quote": {
+            "prob": 0.7062,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: BOS (56-26 prior, 0-0) vs CHI (31-51 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Boston Celtics",
+      "winner_quote": {
+        "prob": 0.8434,
+        "decimal": 1.19,
+        "american": -526,
+        "american_str": "-526",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Boston Celtics -5.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7062,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600122",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Kaseya Center",
+      "home": "Miami Heat",
+      "away": "Dallas Mavericks",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7716,
+            "decimal": 1.3,
+            "american": -333,
+            "american_str": "-333",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.2284,
+            "decimal": 4.38,
+            "american": 338,
+            "american_str": "+338",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Miami Heat -9.5 pts",
+          "line": -9.5,
+          "home": {
+            "prob": 0.4758,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5242,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Miami Heat -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.7028,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIA (43-39 prior, 0-1 (lost vs MIN 106-131 Oct 21)) vs DAL (26-56 prior, 0-1 (lost vs HOU 110-128 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Miami Heat",
+      "winner_quote": {
+        "prob": 0.7716,
+        "decimal": 1.3,
+        "american": -333,
+        "american_str": "-333",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Miami Heat -2.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7028,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600123",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Fiserv Forum",
+      "home": "Milwaukee Bucks",
+      "away": "Indiana Pacers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7394,
+            "decimal": 1.35,
+            "american": -286,
+            "american_str": "-286",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.2606,
+            "decimal": 3.84,
+            "american": 284,
+            "american_str": "+284",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Milwaukee Bucks -8.5 pts",
+          "line": -8.5,
+          "home": {
+            "prob": 0.4685,
+            "decimal": 2.13,
+            "american": 113,
+            "american_str": "+113",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5315,
+            "decimal": 1.88,
+            "american": -114,
+            "american_str": "-114",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Milwaukee Bucks -1.5 pts",
+          "line": -1.5,
+          "quote": {
+            "prob": 0.6965,
+            "decimal": 1.44,
+            "american": -227,
+            "american_str": "-227",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIL (32-50 prior, 0-0) vs IND (19-63 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Milwaukee Bucks",
+      "winner_quote": {
+        "prob": 0.7394,
+        "decimal": 1.35,
+        "american": -286,
+        "american_str": "-286",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Milwaukee Bucks -1.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6965,
+          "decimal": 1.44,
+          "american": -227,
+          "american_str": "-227",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600124",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Paycom Center",
+      "home": "Oklahoma City Thunder",
+      "away": "Phoenix Suns",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8181,
+            "decimal": 1.22,
+            "american": -455,
+            "american_str": "-455",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1819,
+            "decimal": 5.5,
+            "american": 450,
+            "american_str": "+450",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Oklahoma City Thunder -11.5 pts",
+          "line": -11.5,
+          "home": {
+            "prob": 0.4735,
+            "decimal": 2.11,
+            "american": 111,
+            "american_str": "+111",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5265,
+            "decimal": 1.9,
+            "american": -111,
+            "american_str": "-111",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Oklahoma City Thunder -4.5 pts",
+          "line": -4.5,
+          "quote": {
+            "prob": 0.7008,
+            "decimal": 1.43,
+            "american": -233,
+            "american_str": "-233",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: OKC (64-18 prior, 1-0 (beat SAS 108-100 Oct 20)) vs PHX (45-37 prior, 0-1 (lost vs POR 83-124 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Oklahoma City Thunder",
+      "winner_quote": {
+        "prob": 0.8181,
+        "decimal": 1.22,
+        "american": -455,
+        "american_str": "-455",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Oklahoma City Thunder -4.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7008,
+          "decimal": 1.43,
+          "american": -233,
+          "american_str": "-233",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600125",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 20:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Toyota Center",
+      "home": "Houston Rockets",
+      "away": "Atlanta Hawks",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.6603,
+            "decimal": 1.51,
+            "american": -196,
+            "american_str": "-196",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.3397,
+            "decimal": 2.94,
+            "american": 194,
+            "american_str": "+194",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Houston Rockets -5.5 pts",
+          "line": -5.5,
+          "home": {
+            "prob": 0.479,
+            "decimal": 2.09,
+            "american": 109,
+            "american_str": "+109",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.521,
+            "decimal": 1.92,
+            "american": -109,
+            "american_str": "-109",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Houston Rockets -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6447,
+            "decimal": 1.55,
+            "american": -182,
+            "american_str": "-182",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: HOU (52-30 prior, 1-0 (beat DAL 128-110 Oct 21)) vs ATL (46-36 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Houston Rockets",
+      "winner_quote": {
+        "prob": 0.6603,
+        "decimal": 1.51,
+        "american": -196,
+        "american_str": "-196",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Houston Rockets — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6603,
+          "decimal": 1.51,
+          "american": -196,
+          "american_str": "-196",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600126",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 21:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "Memphis Grizzlies",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.5275,
+            "decimal": 1.9,
+            "american": -111,
+            "american_str": "-111",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4725,
+            "decimal": 2.12,
+            "american": 112,
+            "american_str": "+112",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Utah Jazz -1.5 pts",
+          "line": -1.5,
+          "home": {
+            "prob": 0.4769,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5231,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Utah Jazz -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5107,
+            "decimal": 1.96,
+            "american": -104,
+            "american_str": "-104",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: UTA (22-60 prior, 0-0) vs MEM (25-57 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Utah Jazz",
+      "winner_quote": {
+        "prob": 0.5275,
+        "decimal": 1.9,
+        "american": -111,
+        "american_str": "-111",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Utah Jazz — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5275,
+          "decimal": 1.9,
+          "american": -111,
+          "american_str": "-111",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600127",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-26",
+      "time_utc": "2026-10-26 22:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Ball Arena",
+      "home": "Denver Nuggets",
+      "away": "Golden State Warriors",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-26",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7783,
+            "decimal": 1.28,
+            "american": -357,
+            "american_str": "-357",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.2217,
+            "decimal": 4.51,
+            "american": 351,
+            "american_str": "+351",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Denver Nuggets -9.5 pts",
+          "line": -9.5,
+          "home": {
+            "prob": 0.4846,
+            "decimal": 2.06,
+            "american": 106,
+            "american_str": "+106",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5154,
+            "decimal": 1.94,
+            "american": -106,
+            "american_str": "-106",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Denver Nuggets -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.7105,
+            "decimal": 1.41,
+            "american": -244,
+            "american_str": "-244",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: DEN (54-28 prior, 0-0) vs GSW (37-45 prior, 0-1 (lost at LAL 105-127 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Denver Nuggets",
+      "winner_quote": {
+        "prob": 0.7783,
+        "decimal": 1.28,
+        "american": -357,
+        "american_str": "-357",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Denver Nuggets -2.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7105,
+          "decimal": 1.41,
+          "american": -244,
+          "american_str": "-244",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600128",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-27",
+      "time_utc": "2026-10-27 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "TD Garden",
+      "home": "Boston Celtics",
+      "away": "Brooklyn Nets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-27",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.9192,
+            "decimal": 1.09,
+            "american": -1111,
+            "american_str": "-1111",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.0808,
+            "decimal": 12.38,
+            "american": 1138,
+            "american_str": "+1138",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Boston Celtics -17.5 pts",
+          "line": -17.5,
+          "home": {
+            "prob": 0.4668,
+            "decimal": 2.14,
+            "american": 114,
+            "american_str": "+114",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5332,
+            "decimal": 1.88,
+            "american": -114,
+            "american_str": "-114",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Boston Celtics -10.5 pts",
+          "line": -10.5,
+          "quote": {
+            "prob": 0.6949,
+            "decimal": 1.44,
+            "american": -227,
+            "american_str": "-227",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: BOS (56-26 prior, 0-0) vs BKN (20-62 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Boston Celtics",
+      "winner_quote": {
+        "prob": 0.9192,
+        "decimal": 1.09,
+        "american": -1111,
+        "american_str": "-1111",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Boston Celtics -10.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6949,
+          "decimal": 1.44,
+          "american": -227,
+          "american_str": "-227",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600129",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-27",
+      "time_utc": "2026-10-27 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Madison Square Garden",
+      "home": "New York Knicks",
+      "away": "Detroit Pistons",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-27",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.4614,
+            "decimal": 2.17,
+            "american": 117,
+            "american_str": "+117",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5386,
+            "decimal": 1.86,
+            "american": -116,
+            "american_str": "-116",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "New York Knicks +1.5 pts",
+          "line": 1.5,
+          "home": {
+            "prob": 0.512,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.488,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Detroit Pistons -1.5 pts",
+          "line": -1.5,
+          "quote": {
+            "prob": 0.488,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: NYK (53-29 prior, 0-1 (lost at PHI Oct 20)) vs DET (60-22 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Detroit Pistons",
+      "winner_quote": {
+        "prob": 0.5386,
+        "decimal": 1.86,
+        "american": -116,
+        "american_str": "-116",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Detroit Pistons — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5386,
+          "decimal": 1.86,
+          "american": -116,
+          "american_str": "-116",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600130",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-27",
+      "time_utc": "2026-10-27 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Frost Bank Center",
+      "home": "San Antonio Spurs",
+      "away": "Sacramento Kings",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-27",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.9387,
+            "decimal": 1.07,
+            "american": -1429,
+            "american_str": "-1429",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.0613,
+            "decimal": 16.31,
+            "american": 1531,
+            "american_str": "+1531",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "San Antonio Spurs -18.5 pts",
+          "line": -18.5,
+          "home": {
+            "prob": 0.4905,
+            "decimal": 2.04,
+            "american": 104,
+            "american_str": "+104",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5095,
+            "decimal": 1.96,
+            "american": -104,
+            "american_str": "-104",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "San Antonio Spurs -12.5 pts",
+          "line": -12.5,
+          "quote": {
+            "prob": 0.686,
+            "decimal": 1.46,
+            "american": -217,
+            "american_str": "-217",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: SAS (62-20 prior, 0-1 (lost at OKC Oct 20)) vs SAC (22-60 prior, 0-1 (lost vs LAC 96-121 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "San Antonio Spurs",
+      "winner_quote": {
+        "prob": 0.9387,
+        "decimal": 1.07,
+        "american": -1429,
+        "american_str": "-1429",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "San Antonio Spurs -12.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.686,
+          "decimal": 1.46,
+          "american": -217,
+          "american_str": "-217",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600131",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-27",
+      "time_utc": "2026-10-27 23:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Crypto.com Arena",
+      "home": "Los Angeles Lakers",
+      "away": "Portland Trail Blazers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-27",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7063,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.2937,
+            "decimal": 3.4,
+            "american": 240,
+            "american_str": "+240",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Los Angeles Lakers -6.5 pts",
+          "line": -6.5,
+          "home": {
+            "prob": 0.4967,
+            "decimal": 2.01,
+            "american": 101,
+            "american_str": "+101",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5033,
+            "decimal": 1.99,
+            "american": -101,
+            "american_str": "-101",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Los Angeles Lakers -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6915,
+            "decimal": 1.45,
+            "american": -222,
+            "american_str": "-222",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: LAL (53-29 prior, 1-0 (beat GSW 127-105 Oct 21)) vs POR (42-40 prior, 1-0 (beat PHX 124-83 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Los Angeles Lakers",
+      "winner_quote": {
+        "prob": 0.7063,
+        "decimal": 1.42,
+        "american": -238,
+        "american_str": "-238",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Los Angeles Lakers — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.7063,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600132",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "State Farm Arena",
+      "home": "Atlanta Hawks",
+      "away": "Miami Heat",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.619,
+            "decimal": 1.62,
+            "american": -161,
+            "american_str": "-161",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.381,
+            "decimal": 2.62,
+            "american": 162,
+            "american_str": "+162",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Atlanta Hawks -4.5 pts",
+          "line": -4.5,
+          "home": {
+            "prob": 0.4687,
+            "decimal": 2.13,
+            "american": 113,
+            "american_str": "+113",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5313,
+            "decimal": 1.88,
+            "american": -114,
+            "american_str": "-114",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Atlanta Hawks -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6027,
+            "decimal": 1.66,
+            "american": -152,
+            "american_str": "-152",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: ATL (46-36 prior, 0-0) vs MIA (43-39 prior, 0-1 (lost vs MIN 106-131 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Atlanta Hawks",
+      "winner_quote": {
+        "prob": 0.619,
+        "decimal": 1.62,
+        "american": -161,
+        "american_str": "-161",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Atlanta Hawks — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.619,
+          "decimal": 1.62,
+          "american": -161,
+          "american_str": "-161",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600133",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Rocket Arena",
+      "home": "Cleveland Cavaliers",
+      "away": "Washington Wizards",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.9161,
+            "decimal": 1.09,
+            "american": -1111,
+            "american_str": "-1111",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.0839,
+            "decimal": 11.92,
+            "american": 1092,
+            "american_str": "+1092",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Cleveland Cavaliers -16.5 pts",
+          "line": -16.5,
+          "home": {
+            "prob": 0.4924,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5076,
+            "decimal": 1.97,
+            "american": -103,
+            "american_str": "-103",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Cleveland Cavaliers -10.5 pts",
+          "line": -10.5,
+          "quote": {
+            "prob": 0.6877,
+            "decimal": 1.45,
+            "american": -222,
+            "american_str": "-222",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CLE (52-30 prior, 0-0) vs WAS (17-65 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Cleveland Cavaliers",
+      "winner_quote": {
+        "prob": 0.9161,
+        "decimal": 1.09,
+        "american": -1111,
+        "american_str": "-1111",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Cleveland Cavaliers -10.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6877,
+          "decimal": 1.45,
+          "american": -222,
+          "american_str": "-222",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600134",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Little Caesars Arena",
+      "home": "Detroit Pistons",
+      "away": "Charlotte Hornets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.766,
+            "decimal": 1.31,
+            "american": -323,
+            "american_str": "-323",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.234,
+            "decimal": 4.27,
+            "american": 327,
+            "american_str": "+327",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Detroit Pistons -9.5 pts",
+          "line": -9.5,
+          "home": {
+            "prob": 0.4683,
+            "decimal": 2.14,
+            "american": 114,
+            "american_str": "+114",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5317,
+            "decimal": 1.88,
+            "american": -114,
+            "american_str": "-114",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Detroit Pistons -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.6963,
+            "decimal": 1.44,
+            "american": -227,
+            "american_str": "-227",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: DET (60-22 prior, 0-0) vs CHA (44-38 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Detroit Pistons",
+      "winner_quote": {
+        "prob": 0.766,
+        "decimal": 1.31,
+        "american": -323,
+        "american_str": "-323",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Detroit Pistons -2.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6963,
+          "decimal": 1.44,
+          "american": -227,
+          "american_str": "-227",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600135",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Gainbridge Fieldhouse",
+      "home": "Indiana Pacers",
+      "away": "Philadelphia 76ers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.2275,
+            "decimal": 4.4,
+            "american": 340,
+            "american_str": "+340",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.7725,
+            "decimal": 1.29,
+            "american": -345,
+            "american_str": "-345",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Indiana Pacers +9.5 pts",
+          "line": 9.5,
+          "home": {
+            "prob": 0.5231,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4769,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Philadelphia 76ers -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.7038,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: IND (19-63 prior, 0-0) vs PHI (45-37 prior, 1-0 (beat NYK Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Philadelphia 76ers",
+      "winner_quote": {
+        "prob": 0.7725,
+        "decimal": 1.29,
+        "american": -345,
+        "american_str": "-345",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Philadelphia 76ers -2.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7038,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600136",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Scotiabank Arena",
+      "home": "Toronto Raptors",
+      "away": "Orlando Magic",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.5835,
+            "decimal": 1.71,
+            "american": -141,
+            "american_str": "-141",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4165,
+            "decimal": 2.4,
+            "american": 140,
+            "american_str": "+140",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Toronto Raptors -2.5 pts",
+          "line": -2.5,
+          "home": {
+            "prob": 0.4996,
+            "decimal": 2.0,
+            "american": 100,
+            "american_str": "+100",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5004,
+            "decimal": 2.0,
+            "american": 100,
+            "american_str": "+100",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Toronto Raptors -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5669,
+            "decimal": 1.76,
+            "american": -132,
+            "american_str": "-132",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: TOR (46-36 prior, 0-0) vs ORL (45-37 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Toronto Raptors",
+      "winner_quote": {
+        "prob": 0.5835,
+        "decimal": 1.71,
+        "american": -141,
+        "american_str": "-141",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Toronto Raptors — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5835,
+          "decimal": 1.71,
+          "american": -141,
+          "american_str": "-141",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600137",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "United Center",
+      "home": "Chicago Bulls",
+      "away": "New York Knicks",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.3009,
+            "decimal": 3.32,
+            "american": 232,
+            "american_str": "+232",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.6991,
+            "decimal": 1.43,
+            "american": -233,
+            "american_str": "-233",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Chicago Bulls +6.5 pts",
+          "line": 6.5,
+          "home": {
+            "prob": 0.5116,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4884,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "New York Knicks -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6842,
+            "decimal": 1.46,
+            "american": -217,
+            "american_str": "-217",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CHI (31-51 prior, 0-0) vs NYK (53-29 prior, 0-1 (lost at PHI Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "New York Knicks",
+      "winner_quote": {
+        "prob": 0.6991,
+        "decimal": 1.43,
+        "american": -233,
+        "american_str": "-233",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "New York Knicks — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6991,
+          "decimal": 1.43,
+          "american": -233,
+          "american_str": "-233",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600138",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Fiserv Forum",
+      "home": "Milwaukee Bucks",
+      "away": "Houston Rockets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.3028,
+            "decimal": 3.3,
+            "american": 230,
+            "american_str": "+230",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.6972,
+            "decimal": 1.43,
+            "american": -233,
+            "american_str": "-233",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Milwaukee Bucks +6.5 pts",
+          "line": 6.5,
+          "home": {
+            "prob": 0.5138,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4862,
+            "decimal": 2.06,
+            "american": 106,
+            "american_str": "+106",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Houston Rockets -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6822,
+            "decimal": 1.47,
+            "american": -213,
+            "american_str": "-213",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIL (32-50 prior, 0-0) vs HOU (52-30 prior, 1-0 (beat DAL 128-110 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Houston Rockets",
+      "winner_quote": {
+        "prob": 0.6972,
+        "decimal": 1.43,
+        "american": -233,
+        "american_str": "-233",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Houston Rockets — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6972,
+          "decimal": 1.43,
+          "american": -233,
+          "american_str": "-233",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600139",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Target Center",
+      "home": "Minnesota Timberwolves",
+      "away": "Golden State Warriors",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7366,
+            "decimal": 1.36,
+            "american": -278,
+            "american_str": "-278",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.2634,
+            "decimal": 3.8,
+            "american": 280,
+            "american_str": "+280",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Minnesota Timberwolves -7.5 pts",
+          "line": -7.5,
+          "home": {
+            "prob": 0.499,
+            "decimal": 2.0,
+            "american": 100,
+            "american_str": "+100",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.501,
+            "decimal": 2.0,
+            "american": 100,
+            "american_str": "+100",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Minnesota Timberwolves -1.5 pts",
+          "line": -1.5,
+          "quote": {
+            "prob": 0.6935,
+            "decimal": 1.44,
+            "american": -227,
+            "american_str": "-227",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIN (49-33 prior, 1-0 (beat MIA 131-106 Oct 21)) vs GSW (37-45 prior, 0-1 (lost at LAL 105-127 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Minnesota Timberwolves",
+      "winner_quote": {
+        "prob": 0.7366,
+        "decimal": 1.36,
+        "american": -278,
+        "american_str": "-278",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Minnesota Timberwolves -1.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6935,
+          "decimal": 1.44,
+          "american": -227,
+          "american_str": "-227",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600140",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Smoothie King Center",
+      "home": "New Orleans Pelicans",
+      "away": "Denver Nuggets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.2252,
+            "decimal": 4.44,
+            "american": 344,
+            "american_str": "+344",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.7748,
+            "decimal": 1.29,
+            "american": -345,
+            "american_str": "-345",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "New Orleans Pelicans +9.5 pts",
+          "line": 9.5,
+          "home": {
+            "prob": 0.5201,
+            "decimal": 1.92,
+            "american": -109,
+            "american_str": "-109",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4799,
+            "decimal": 2.08,
+            "american": 108,
+            "american_str": "+108",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Denver Nuggets -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.7064,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: NOP (26-56 prior, 0-0) vs DEN (54-28 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Denver Nuggets",
+      "winner_quote": {
+        "prob": 0.7748,
+        "decimal": 1.29,
+        "american": -345,
+        "american_str": "-345",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Denver Nuggets -2.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7064,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600141",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 21:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "San Antonio Spurs",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.1227,
+            "decimal": 8.15,
+            "american": 715,
+            "american_str": "+715",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.8773,
+            "decimal": 1.14,
+            "american": -714,
+            "american_str": "-714",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Utah Jazz +14.5 pts",
+          "line": 14.5,
+          "home": {
+            "prob": 0.5269,
+            "decimal": 1.9,
+            "american": -111,
+            "american_str": "-111",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4731,
+            "decimal": 2.11,
+            "american": 111,
+            "american_str": "+111",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "San Antonio Spurs -7.5 pts",
+          "line": -7.5,
+          "quote": {
+            "prob": 0.7005,
+            "decimal": 1.43,
+            "american": -233,
+            "american_str": "-233",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: UTA (22-60 prior, 0-0) vs SAS (62-20 prior, 0-1 (lost at OKC Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "San Antonio Spurs",
+      "winner_quote": {
+        "prob": 0.8773,
+        "decimal": 1.14,
+        "american": -714,
+        "american_str": "-714",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "San Antonio Spurs -7.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7005,
+          "decimal": 1.43,
+          "american": -233,
+          "american_str": "-233",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600142",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 21:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "American Airlines Center",
+      "home": "Dallas Mavericks",
+      "away": "Oklahoma City Thunder",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.1182,
+            "decimal": 8.46,
+            "american": 746,
+            "american_str": "+746",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.8818,
+            "decimal": 1.13,
+            "american": -769,
+            "american_str": "-769",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Dallas Mavericks +14.5 pts",
+          "line": 14.5,
+          "home": {
+            "prob": 0.5179,
+            "decimal": 1.93,
+            "american": -108,
+            "american_str": "-108",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4821,
+            "decimal": 2.07,
+            "american": 107,
+            "american_str": "+107",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Oklahoma City Thunder -7.5 pts",
+          "line": -7.5,
+          "quote": {
+            "prob": 0.7082,
+            "decimal": 1.41,
+            "american": -244,
+            "american_str": "-244",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: DAL (26-56 prior, 0-1 (lost vs HOU 110-128 Oct 21)) vs OKC (64-18 prior, 1-0 (beat SAS 108-100 Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Oklahoma City Thunder",
+      "winner_quote": {
+        "prob": 0.8818,
+        "decimal": 1.13,
+        "american": -769,
+        "american_str": "-769",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Oklahoma City Thunder -7.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7082,
+          "decimal": 1.41,
+          "american": -244,
+          "american_str": "-244",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600143",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28 22:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Intuit Dome",
+      "home": "LA Clippers",
+      "away": "Los Angeles Lakers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-28",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.426,
+            "decimal": 2.35,
+            "american": 135,
+            "american_str": "+135",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.574,
+            "decimal": 1.74,
+            "american": -135,
+            "american_str": "-135",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "LA Clippers +2.5 pts",
+          "line": 2.5,
+          "home": {
+            "prob": 0.5101,
+            "decimal": 1.96,
+            "american": -104,
+            "american_str": "-104",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4899,
+            "decimal": 2.04,
+            "american": 104,
+            "american_str": "+104",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Los Angeles Lakers -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.4899,
+            "decimal": 2.04,
+            "american": 104,
+            "american_str": "+104",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: LAC (42-40 prior, 1-0 (beat SAC 121-96 Oct 21)) vs LAL (53-29 prior, 1-0 (beat GSW 127-105 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Los Angeles Lakers",
+      "winner_quote": {
+        "prob": 0.574,
+        "decimal": 1.74,
+        "american": -135,
+        "american_str": "-135",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Los Angeles Lakers — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.574,
+          "decimal": 1.74,
+          "american": -135,
+          "american_str": "-135",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600144",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-29",
+      "time_utc": "2026-10-29 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "State Farm Arena",
+      "home": "Atlanta Hawks",
+      "away": "Cleveland Cavaliers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-29",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.4913,
+            "decimal": 2.04,
+            "american": 104,
+            "american_str": "+104",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5087,
+            "decimal": 1.97,
+            "american": -103,
+            "american_str": "-103",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Atlanta Hawks +0.5 pts",
+          "line": 0.5,
+          "home": {
+            "prob": 0.5082,
+            "decimal": 1.97,
+            "american": -103,
+            "american_str": "-103",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4918,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Cleveland Cavaliers -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.4918,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: ATL (46-36 prior, 0-0) vs CLE (52-30 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Cleveland Cavaliers",
+      "winner_quote": {
+        "prob": 0.5087,
+        "decimal": 1.97,
+        "american": -103,
+        "american_str": "-103",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Cleveland Cavaliers — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5087,
+          "decimal": 1.97,
+          "american": -103,
+          "american_str": "-103",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600145",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-29",
+      "time_utc": "2026-10-29 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Smoothie King Center",
+      "home": "New Orleans Pelicans",
+      "away": "Sacramento Kings",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-29",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.6364,
+            "decimal": 1.57,
+            "american": -175,
+            "american_str": "-175",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.3636,
+            "decimal": 2.75,
+            "american": 175,
+            "american_str": "+175",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "New Orleans Pelicans -4.5 pts",
+          "line": -4.5,
+          "home": {
+            "prob": 0.4871,
+            "decimal": 2.05,
+            "american": 105,
+            "american_str": "+105",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5129,
+            "decimal": 1.95,
+            "american": -105,
+            "american_str": "-105",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "New Orleans Pelicans -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6204,
+            "decimal": 1.61,
+            "american": -164,
+            "american_str": "-164",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: NOP (26-56 prior, 0-0) vs SAC (22-60 prior, 0-1 (lost vs LAC 96-121 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "New Orleans Pelicans",
+      "winner_quote": {
+        "prob": 0.6364,
+        "decimal": 1.57,
+        "american": -175,
+        "american_str": "-175",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "New Orleans Pelicans — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6364,
+          "decimal": 1.57,
+          "american": -175,
+          "american_str": "-175",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600146",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-29",
+      "time_utc": "2026-10-29 22:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Moda Center",
+      "home": "Portland Trail Blazers",
+      "away": "Memphis Grizzlies",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-29",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.7831,
+            "decimal": 1.28,
+            "american": -357,
+            "american_str": "-357",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.2169,
+            "decimal": 4.61,
+            "american": 361,
+            "american_str": "+361",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Portland Trail Blazers -9.5 pts",
+          "line": -9.5,
+          "home": {
+            "prob": 0.4911,
+            "decimal": 2.04,
+            "american": 104,
+            "american_str": "+104",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5089,
+            "decimal": 1.97,
+            "american": -103,
+            "american_str": "-103",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Portland Trail Blazers -3.5 pts",
+          "line": -3.5,
+          "quote": {
+            "prob": 0.6865,
+            "decimal": 1.46,
+            "american": -217,
+            "american_str": "-217",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: POR (42-40 prior, 1-0 (beat PHX 124-83 Oct 21)) vs MEM (25-57 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Portland Trail Blazers",
+      "winner_quote": {
+        "prob": 0.7831,
+        "decimal": 1.28,
+        "american": -357,
+        "american_str": "-357",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Portland Trail Blazers -3.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6865,
+          "decimal": 1.46,
+          "american": -217,
+          "american_str": "-217",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600015",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Capital One Arena",
+      "home": "Washington Wizards",
+      "away": "Charlotte Hornets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.2242,
+            "decimal": 4.46,
+            "american": 346,
+            "american_str": "+346",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.7758,
+            "decimal": 1.29,
+            "american": -345,
+            "american_str": "-345",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Washington Wizards +9.5 pts",
+          "line": 9.5,
+          "home": {
+            "prob": 0.5188,
+            "decimal": 1.93,
+            "american": -108,
+            "american_str": "-108",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4812,
+            "decimal": 2.08,
+            "american": 108,
+            "american_str": "+108",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Charlotte Hornets -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.7075,
+            "decimal": 1.41,
+            "american": -244,
+            "american_str": "-244",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: WAS (17-65 prior, 0-0) vs CHA (44-38 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Charlotte Hornets",
+      "winner_quote": {
+        "prob": 0.7758,
+        "decimal": 1.29,
+        "american": -345,
+        "american_str": "-345",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Charlotte Hornets -2.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7075,
+          "decimal": 1.41,
+          "american": -244,
+          "american_str": "-244",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600016",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "TD Garden",
+      "home": "Boston Celtics",
+      "away": "Chicago Bulls",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8434,
+            "decimal": 1.19,
+            "american": -526,
+            "american_str": "-526",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1566,
+            "decimal": 6.39,
+            "american": 539,
+            "american_str": "+539",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Boston Celtics -12.5 pts",
+          "line": -12.5,
+          "home": {
+            "prob": 0.4797,
+            "decimal": 2.08,
+            "american": 108,
+            "american_str": "+108",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5203,
+            "decimal": 1.92,
+            "american": -109,
+            "american_str": "-109",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Boston Celtics -5.5 pts",
+          "line": -5.5,
+          "quote": {
+            "prob": 0.7062,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: BOS (56-26 prior, 0-0) vs CHI (31-51 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Boston Celtics",
+      "winner_quote": {
+        "prob": 0.8434,
+        "decimal": 1.19,
+        "american": -526,
+        "american_str": "-526",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Boston Celtics -5.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7062,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600017",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Barclays Center",
+      "home": "Brooklyn Nets",
+      "away": "Detroit Pistons",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.1174,
+            "decimal": 8.52,
+            "american": 752,
+            "american_str": "+752",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.8826,
+            "decimal": 1.13,
+            "american": -769,
+            "american_str": "-769",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Brooklyn Nets +14.5 pts",
+          "line": 14.5,
+          "home": {
+            "prob": 0.5163,
+            "decimal": 1.94,
+            "american": -106,
+            "american_str": "-106",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4837,
+            "decimal": 2.07,
+            "american": 107,
+            "american_str": "+107",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Detroit Pistons -7.5 pts",
+          "line": -7.5,
+          "quote": {
+            "prob": 0.7097,
+            "decimal": 1.41,
+            "american": -244,
+            "american_str": "-244",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: BKN (20-62 prior, 0-0) vs DET (60-22 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Detroit Pistons",
+      "winner_quote": {
+        "prob": 0.8826,
+        "decimal": 1.13,
+        "american": -769,
+        "american_str": "-769",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Detroit Pistons -7.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7097,
+          "decimal": 1.41,
+          "american": -244,
+          "american_str": "-244",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600018",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Xfinity Mobile Arena",
+      "home": "Philadelphia 76ers",
+      "away": "New York Knicks",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.4895,
+            "decimal": 2.04,
+            "american": 104,
+            "american_str": "+104",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5105,
+            "decimal": 1.96,
+            "american": -104,
+            "american_str": "-104",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Philadelphia 76ers +0.5 pts",
+          "line": 0.5,
+          "home": {
+            "prob": 0.5064,
+            "decimal": 1.97,
+            "american": -103,
+            "american_str": "-103",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4936,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "New York Knicks -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.4936,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: PHI (45-37 prior, 1-0 (beat NYK Oct 20)) vs NYK (53-29 prior, 0-1 (lost at PHI Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "New York Knicks",
+      "winner_quote": {
+        "prob": 0.5105,
+        "decimal": 1.96,
+        "american": -104,
+        "american_str": "-104",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "New York Knicks — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5105,
+          "decimal": 1.96,
+          "american": -104,
+          "american_str": "-104",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600019",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 19:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Scotiabank Arena",
+      "home": "Toronto Raptors",
+      "away": "Orlando Magic",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.5835,
+            "decimal": 1.71,
+            "american": -141,
+            "american_str": "-141",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4165,
+            "decimal": 2.4,
+            "american": 140,
+            "american_str": "+140",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Toronto Raptors -2.5 pts",
+          "line": -2.5,
+          "home": {
+            "prob": 0.4996,
+            "decimal": 2.0,
+            "american": 100,
+            "american_str": "+100",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5004,
+            "decimal": 2.0,
+            "american": 100,
+            "american_str": "+100",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Toronto Raptors -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5669,
+            "decimal": 1.76,
+            "american": -132,
+            "american_str": "-132",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: TOR (46-36 prior, 0-0) vs ORL (45-37 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Toronto Raptors",
+      "winner_quote": {
+        "prob": 0.5835,
+        "decimal": 1.71,
+        "american": -141,
+        "american_str": "-141",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Toronto Raptors — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5835,
+          "decimal": 1.71,
+          "american": -141,
+          "american_str": "-141",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600020",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Kaseya Center",
+      "home": "Miami Heat",
+      "away": "Indiana Pacers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.8354,
+            "decimal": 1.2,
+            "american": -500,
+            "american_str": "-500",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.1646,
+            "decimal": 6.08,
+            "american": 508,
+            "american_str": "+508",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Miami Heat -12.5 pts",
+          "line": -12.5,
+          "home": {
+            "prob": 0.4666,
+            "decimal": 2.14,
+            "american": 114,
+            "american_str": "+114",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5334,
+            "decimal": 1.87,
+            "american": -115,
+            "american_str": "-115",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Miami Heat -5.5 pts",
+          "line": -5.5,
+          "quote": {
+            "prob": 0.6948,
+            "decimal": 1.44,
+            "american": -227,
+            "american_str": "-227",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIA (43-39 prior, 0-1 (lost vs MIN 106-131 Oct 21)) vs IND (19-63 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Miami Heat",
+      "winner_quote": {
+        "prob": 0.8354,
+        "decimal": 1.2,
+        "american": -500,
+        "american_str": "-500",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Miami Heat -5.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.6948,
+          "decimal": 1.44,
+          "american": -227,
+          "american_str": "-227",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600021",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "American Airlines Center",
+      "home": "Dallas Mavericks",
+      "away": "Houston Rockets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.2271,
+            "decimal": 4.4,
+            "american": 340,
+            "american_str": "+340",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.7729,
+            "decimal": 1.29,
+            "american": -345,
+            "american_str": "-345",
+            "in_band": false
+          }
+        },
+        "handicap": {
+          "label": "Dallas Mavericks +9.5 pts",
+          "line": 9.5,
+          "home": {
+            "prob": 0.5225,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4775,
+            "decimal": 2.09,
+            "american": 109,
+            "american_str": "+109",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Houston Rockets -2.5 pts",
+          "line": -2.5,
+          "quote": {
+            "prob": 0.7043,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: DAL (26-56 prior, 0-1 (lost vs HOU 110-128 Oct 21)) vs HOU (52-30 prior, 1-0 (beat DAL 128-110 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Houston Rockets",
+      "winner_quote": {
+        "prob": 0.7729,
+        "decimal": 1.29,
+        "american": -345,
+        "american_str": "-345",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "Houston Rockets -2.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7043,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600022",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Target Center",
+      "home": "Minnesota Timberwolves",
+      "away": "LA Clippers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.6583,
+            "decimal": 1.52,
+            "american": -192,
+            "american_str": "-192",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.3417,
+            "decimal": 2.93,
+            "american": 193,
+            "american_str": "+193",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Minnesota Timberwolves -5.5 pts",
+          "line": -5.5,
+          "home": {
+            "prob": 0.4767,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5233,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Minnesota Timberwolves -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6426,
+            "decimal": 1.56,
+            "american": -179,
+            "american_str": "-179",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIN (49-33 prior, 1-0 (beat MIA 131-106 Oct 21)) vs LAC (42-40 prior, 1-0 (beat SAC 121-96 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Minnesota Timberwolves",
+      "winner_quote": {
+        "prob": 0.6583,
+        "decimal": 1.52,
+        "american": -192,
+        "american_str": "-192",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Minnesota Timberwolves — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6583,
+          "decimal": 1.52,
+          "american": -192,
+          "american_str": "-192",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600023",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 22:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Chase Center",
+      "home": "Golden State Warriors",
+      "away": "Los Angeles Lakers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.3402,
+            "decimal": 2.94,
+            "american": 194,
+            "american_str": "+194",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.6598,
+            "decimal": 1.52,
+            "american": -192,
+            "american_str": "-192",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Golden State Warriors +5.5 pts",
+          "line": 5.5,
+          "home": {
+            "prob": 0.5216,
+            "decimal": 1.92,
+            "american": -109,
+            "american_str": "-109",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4784,
+            "decimal": 2.09,
+            "american": 109,
+            "american_str": "+109",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Los Angeles Lakers -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6441,
+            "decimal": 1.55,
+            "american": -182,
+            "american_str": "-182",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: GSW (37-45 prior, 0-1 (lost at LAL 105-127 Oct 21)) vs LAL (53-29 prior, 1-0 (beat GSW 127-105 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Los Angeles Lakers",
+      "winner_quote": {
+        "prob": 0.6598,
+        "decimal": 1.52,
+        "american": -192,
+        "american_str": "-192",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Los Angeles Lakers — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6598,
+          "decimal": 1.52,
+          "american": -192,
+          "american_str": "-192",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600024",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30 22:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Mortgage Matchup Center",
+      "home": "Phoenix Suns",
+      "away": "Denver Nuggets",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-30",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.4405,
+            "decimal": 2.27,
+            "american": 127,
+            "american_str": "+127",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5595,
+            "decimal": 1.79,
+            "american": -127,
+            "american_str": "-127",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Phoenix Suns +2.5 pts",
+          "line": 2.5,
+          "home": {
+            "prob": 0.5248,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4752,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Denver Nuggets -1.5 pts",
+          "line": -1.5,
+          "quote": {
+            "prob": 0.509,
+            "decimal": 1.96,
+            "american": -104,
+            "american_str": "-104",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: PHX (45-37 prior, 0-1 (lost vs POR 83-124 Oct 21)) vs DEN (54-28 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Denver Nuggets",
+      "winner_quote": {
+        "prob": 0.5595,
+        "decimal": 1.79,
+        "american": -127,
+        "american_str": "-127",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Denver Nuggets — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5595,
+          "decimal": 1.79,
+          "american": -127,
+          "american_str": "-127",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600147",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-31",
+      "time_utc": "2026-10-31 15:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Delta Center",
+      "home": "Utah Jazz",
+      "away": "Portland Trail Blazers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-31",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.2961,
+            "decimal": 3.38,
+            "american": 238,
+            "american_str": "+238",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.7039,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Utah Jazz +6.5 pts",
+          "line": 6.5,
+          "home": {
+            "prob": 0.5061,
+            "decimal": 1.98,
+            "american": -102,
+            "american_str": "-102",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4939,
+            "decimal": 2.02,
+            "american": 102,
+            "american_str": "+102",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Portland Trail Blazers -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6891,
+            "decimal": 1.45,
+            "american": -222,
+            "american_str": "-222",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: UTA (22-60 prior, 0-0) vs POR (42-40 prior, 1-0 (beat PHX 124-83 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Portland Trail Blazers",
+      "winner_quote": {
+        "prob": 0.7039,
+        "decimal": 1.42,
+        "american": -238,
+        "american_str": "-238",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Portland Trail Blazers — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.7039,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600148",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-31",
+      "time_utc": "2026-10-31 18:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Spectrum Center",
+      "home": "Charlotte Hornets",
+      "away": "Philadelphia 76ers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-31",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.5437,
+            "decimal": 1.84,
+            "american": -119,
+            "american_str": "-119",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4563,
+            "decimal": 2.19,
+            "american": 119,
+            "american_str": "+119",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Charlotte Hornets -1.5 pts",
+          "line": -1.5,
+          "home": {
+            "prob": 0.493,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.507,
+            "decimal": 1.97,
+            "american": -103,
+            "american_str": "-103",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Charlotte Hornets -1.5 pts",
+          "line": -1.5,
+          "quote": {
+            "prob": 0.493,
+            "decimal": 2.03,
+            "american": 103,
+            "american_str": "+103",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: CHA (44-38 prior, 0-0) vs PHI (45-37 prior, 1-0 (beat NYK Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Charlotte Hornets",
+      "winner_quote": {
+        "prob": 0.5437,
+        "decimal": 1.84,
+        "american": -119,
+        "american_str": "-119",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Charlotte Hornets — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.5437,
+          "decimal": 1.84,
+          "american": -119,
+          "american_str": "-119",
+          "in_band": true
+        }
+      },
+      "confidence": "low",
+      "confidence_tier": "Low (<58.5% or high-variance)"
+    },
+    {
+      "id": "nba-0022600149",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-31",
+      "time_utc": "2026-10-31 19:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Smoothie King Center",
+      "home": "New Orleans Pelicans",
+      "away": "Atlanta Hawks",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-31",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.3133,
+            "decimal": 3.19,
+            "american": 219,
+            "american_str": "+219",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.6867,
+            "decimal": 1.46,
+            "american": -217,
+            "american_str": "-217",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "New Orleans Pelicans +6.5 pts",
+          "line": 6.5,
+          "home": {
+            "prob": 0.5257,
+            "decimal": 1.9,
+            "american": -111,
+            "american_str": "-111",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4743,
+            "decimal": 2.11,
+            "american": 111,
+            "american_str": "+111",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Atlanta Hawks -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6715,
+            "decimal": 1.49,
+            "american": -204,
+            "american_str": "-204",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: NOP (26-56 prior, 0-0) vs ATL (46-36 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Atlanta Hawks",
+      "winner_quote": {
+        "prob": 0.6867,
+        "decimal": 1.46,
+        "american": -217,
+        "american_str": "-217",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Atlanta Hawks — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6867,
+          "decimal": 1.46,
+          "american": -217,
+          "american_str": "-217",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600150",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-31",
+      "time_utc": "2026-10-31 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "FedExForum",
+      "home": "Memphis Grizzlies",
+      "away": "Sacramento Kings",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-31",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.6231,
+            "decimal": 1.6,
+            "american": -167,
+            "american_str": "-167",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.3769,
+            "decimal": 2.65,
+            "american": 165,
+            "american_str": "+165",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Memphis Grizzlies -4.5 pts",
+          "line": -4.5,
+          "home": {
+            "prob": 0.473,
+            "decimal": 2.11,
+            "american": 111,
+            "american_str": "+111",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.527,
+            "decimal": 1.9,
+            "american": -111,
+            "american_str": "-111",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Memphis Grizzlies -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6069,
+            "decimal": 1.65,
+            "american": -154,
+            "american_str": "-154",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MEM (25-57 prior, 0-0) vs SAC (22-60 prior, 0-1 (lost vs LAC 96-121 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Memphis Grizzlies",
+      "winner_quote": {
+        "prob": 0.6231,
+        "decimal": 1.6,
+        "american": -167,
+        "american_str": "-167",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Memphis Grizzlies — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6231,
+          "decimal": 1.6,
+          "american": -167,
+          "american_str": "-167",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600151",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-31",
+      "time_utc": "2026-10-31 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Fiserv Forum",
+      "home": "Milwaukee Bucks",
+      "away": "Cleveland Cavaliers",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-31",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.3153,
+            "decimal": 3.17,
+            "american": 217,
+            "american_str": "+217",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.6847,
+            "decimal": 1.46,
+            "american": -217,
+            "american_str": "-217",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Milwaukee Bucks +6.5 pts",
+          "line": 6.5,
+          "home": {
+            "prob": 0.5279,
+            "decimal": 1.89,
+            "american": -112,
+            "american_str": "-112",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4721,
+            "decimal": 2.12,
+            "american": 112,
+            "american_str": "+112",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Cleveland Cavaliers -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.6695,
+            "decimal": 1.49,
+            "american": -204,
+            "american_str": "-204",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: MIL (32-50 prior, 0-0) vs CLE (52-30 prior, 0-0); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Cleveland Cavaliers",
+      "winner_quote": {
+        "prob": 0.6847,
+        "decimal": 1.46,
+        "american": -217,
+        "american_str": "-217",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Cleveland Cavaliers — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6847,
+          "decimal": 1.46,
+          "american": -217,
+          "american_str": "-217",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600152",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-31",
+      "time_utc": "2026-10-31 20:00 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Frost Bank Center",
+      "home": "San Antonio Spurs",
+      "away": "Minnesota Timberwolves",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-31",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.717,
+            "decimal": 1.39,
+            "american": -256,
+            "american_str": "-256",
+            "in_band": false
+          },
+          "away": {
+            "prob": 0.283,
+            "decimal": 3.53,
+            "american": 253,
+            "american_str": "+253",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "San Antonio Spurs -7.5 pts",
+          "line": -7.5,
+          "home": {
+            "prob": 0.4754,
+            "decimal": 2.1,
+            "american": 110,
+            "american_str": "+110",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.5246,
+            "decimal": 1.91,
+            "american": -110,
+            "american_str": "-110",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "San Antonio Spurs -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.7025,
+            "decimal": 1.42,
+            "american": -238,
+            "american_str": "-238",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: SAS (62-20 prior, 0-1 (lost at OKC Oct 20)) vs MIN (49-33 prior, 1-0 (beat MIA 131-106 Oct 21)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "San Antonio Spurs",
+      "winner_quote": {
+        "prob": 0.717,
+        "decimal": 1.39,
+        "american": -256,
+        "american_str": "-256",
+        "in_band": false
+      },
+      "in_band_selection": {
+        "label": "San Antonio Spurs -0.5 pts",
+        "market": "Standard Handicap / Set / Leg Line",
+        "quote": {
+          "prob": 0.7025,
+          "decimal": 1.42,
+          "american": -238,
+          "american_str": "-238",
+          "in_band": true
+        }
+      },
+      "confidence": "medium",
+      "confidence_tier": "Medium (58.5%-69.9% non-featured)"
+    },
+    {
+      "id": "nba-0022600153",
+      "sport": "basketball",
+      "sport_name": "Basketball",
+      "olbg_id": 4,
+      "date": "2026-10-31",
+      "time_utc": "2026-10-31 20:30 ET",
+      "competition": "2026-27 NBA Regular Season — Opening Week",
+      "venue": "Toyota Center",
+      "home": "Houston Rockets",
+      "away": "Oklahoma City Thunder",
+      "status": "originated",
+      "source_url": "https://www.nba.com/games?date=2026-10-31",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "markets": {
+        "winner": {
+          "type": "2-way",
+          "home": {
+            "prob": 0.3985,
+            "decimal": 2.51,
+            "american": 151,
+            "american_str": "+151",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.6015,
+            "decimal": 1.66,
+            "american": -152,
+            "american_str": "-152",
+            "in_band": true
+          }
+        },
+        "handicap": {
+          "label": "Houston Rockets +3.5 pts",
+          "line": 3.5,
+          "home": {
+            "prob": 0.5157,
+            "decimal": 1.94,
+            "american": -106,
+            "american_str": "-106",
+            "in_band": true
+          },
+          "away": {
+            "prob": 0.4843,
+            "decimal": 2.06,
+            "american": 106,
+            "american_str": "+106",
+            "in_band": true
+          }
+        },
+        "total": null,
+        "alt_in_band": {
+          "label": "Oklahoma City Thunder -0.5 pts",
+          "line": -0.5,
+          "quote": {
+            "prob": 0.5851,
+            "decimal": 1.71,
+            "american": -141,
+            "american_str": "-141",
+            "in_band": true
+          }
+        }
+      },
+      "basis": "NBA shrunk prior + Oct 20-21 opener: HOU (52-30 prior, 1-0 (beat DAL 128-110 Oct 21)) vs OKC (64-18 prior, 1-0 (beat SAS 108-100 Oct 20)); Total left blank (0-1 GP pace sample).",
+      "winner_pick": "Oklahoma City Thunder",
+      "winner_quote": {
+        "prob": 0.6015,
+        "decimal": 1.66,
+        "american": -152,
+        "american_str": "-152",
+        "in_band": true
+      },
+      "in_band_selection": {
+        "label": "Oklahoma City Thunder — Win Match",
+        "market": "Moneyline / Match Winner",
+        "quote": {
+          "prob": 0.6015,
+          "decimal": 1.66,
+          "american": -152,
+          "american_str": "-152",
           "in_band": true
         }
       },

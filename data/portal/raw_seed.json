@@ -1,0 +1,4572 @@
+{
+  "nhl_teams": {
+    "ANA": {
+      "name": "Anaheim Ducks",
+      "gp": 9,
+      "w": 4,
+      "l": 5,
+      "otl": 0,
+      "gf": 26,
+      "ga": 29,
+      "points": 8
+    },
+    "BOS": {
+      "name": "Boston Bruins",
+      "gp": 10,
+      "w": 7,
+      "l": 2,
+      "otl": 1,
+      "gf": 36,
+      "ga": 22,
+      "points": 15
+    },
+    "BUF": {
+      "name": "Buffalo Sabres",
+      "gp": 10,
+      "w": 4,
+      "l": 4,
+      "otl": 2,
+      "gf": 28,
+      "ga": 36,
+      "points": 10
+    },
+    "CAR": {
+      "name": "Carolina Hurricanes",
+      "gp": 11,
+      "w": 8,
+      "l": 2,
+      "otl": 1,
+      "gf": 42,
+      "ga": 27,
+      "points": 17
+    },
+    "CBJ": {
+      "name": "Columbus Blue Jackets",
+      "gp": 8,
+      "w": 3,
+      "l": 5,
+      "otl": 0,
+      "gf": 19,
+      "ga": 29,
+      "points": 6
+    },
+    "CGY": {
+      "name": "Calgary Flames",
+      "gp": 8,
+      "w": 2,
+      "l": 6,
+      "otl": 0,
+      "gf": 17,
+      "ga": 37,
+      "points": 4
+    },
+    "CHI": {
+      "name": "Chicago Blackhawks",
+      "gp": 9,
+      "w": 3,
+      "l": 6,
+      "otl": 0,
+      "gf": 21,
+      "ga": 36,
+      "points": 6
+    },
+    "COL": {
+      "name": "Colorado Avalanche",
+      "gp": 10,
+      "w": 5,
+      "l": 4,
+      "otl": 1,
+      "gf": 41,
+      "ga": 30,
+      "points": 11
+    },
+    "DAL": {
+      "name": "Dallas Stars",
+      "gp": 9,
+      "w": 5,
+      "l": 3,
+      "otl": 1,
+      "gf": 22,
+      "ga": 14,
+      "points": 11
+    },
+    "DET": {
+      "name": "Detroit Red Wings",
+      "gp": 9,
+      "w": 3,
+      "l": 3,
+      "otl": 3,
+      "gf": 22,
+      "ga": 26,
+      "points": 9
+    },
+    "EDM": {
+      "name": "Edmonton Oilers",
+      "gp": 9,
+      "w": 7,
+      "l": 1,
+      "otl": 1,
+      "gf": 41,
+      "ga": 27,
+      "points": 15
+    },
+    "FLA": {
+      "name": "Florida Panthers",
+      "gp": 10,
+      "w": 5,
+      "l": 3,
+      "otl": 2,
+      "gf": 31,
+      "ga": 30,
+      "points": 12
+    },
+    "LAK": {
+      "name": "Los Angeles Kings",
+      "gp": 7,
+      "w": 1,
+      "l": 4,
+      "otl": 2,
+      "gf": 17,
+      "ga": 27,
+      "points": 4
+    },
+    "MIN": {
+      "name": "Minnesota Wild",
+      "gp": 10,
+      "w": 6,
+      "l": 2,
+      "otl": 2,
+      "gf": 31,
+      "ga": 25,
+      "points": 14
+    },
+    "MTL": {
+      "name": "Montréal Canadiens",
+      "gp": 9,
+      "w": 4,
+      "l": 3,
+      "otl": 2,
+      "gf": 28,
+      "ga": 34,
+      "points": 10
+    },
+    "NJD": {
+      "name": "New Jersey Devils",
+      "gp": 9,
+      "w": 5,
+      "l": 4,
+      "otl": 0,
+      "gf": 29,
+      "ga": 30,
+      "points": 10
+    },
+    "NSH": {
+      "name": "Nashville Predators",
+      "gp": 8,
+      "w": 3,
+      "l": 2,
+      "otl": 3,
+      "gf": 23,
+      "ga": 22,
+      "points": 9
+    },
+    "NYI": {
+      "name": "New York Islanders",
+      "gp": 9,
+      "w": 5,
+      "l": 3,
+      "otl": 1,
+      "gf": 27,
+      "ga": 19,
+      "points": 11
+    },
+    "NYR": {
+      "name": "New York Rangers",
+      "gp": 11,
+      "w": 7,
+      "l": 3,
+      "otl": 1,
+      "gf": 33,
+      "ga": 24,
+      "points": 15
+    },
+    "OTT": {
+      "name": "Ottawa Senators",
+      "gp": 10,
+      "w": 7,
+      "l": 3,
+      "otl": 0,
+      "gf": 27,
+      "ga": 24,
+      "points": 14
+    },
+    "PHI": {
+      "name": "Philadelphia Flyers",
+      "gp": 12,
+      "w": 3,
+      "l": 6,
+      "otl": 3,
+      "gf": 20,
+      "ga": 36,
+      "points": 9
+    },
+    "PIT": {
+      "name": "Pittsburgh Penguins",
+      "gp": 10,
+      "w": 3,
+      "l": 6,
+      "otl": 1,
+      "gf": 32,
+      "ga": 37,
+      "points": 7
+    },
+    "SEA": {
+      "name": "Seattle Kraken",
+      "gp": 10,
+      "w": 6,
+      "l": 3,
+      "otl": 1,
+      "gf": 37,
+      "ga": 34,
+      "points": 13
+    },
+    "SJS": {
+      "name": "San Jose Sharks",
+      "gp": 10,
+      "w": 5,
+      "l": 4,
+      "otl": 1,
+      "gf": 26,
+      "ga": 34,
+      "points": 11
+    },
+    "STL": {
+      "name": "St. Louis Blues",
+      "gp": 9,
+      "w": 4,
+      "l": 4,
+      "otl": 1,
+      "gf": 29,
+      "ga": 29,
+      "points": 9
+    },
+    "TBL": {
+      "name": "Tampa Bay Lightning",
+      "gp": 9,
+      "w": 7,
+      "l": 2,
+      "otl": 0,
+      "gf": 31,
+      "ga": 23,
+      "points": 14
+    },
+    "TOR": {
+      "name": "Toronto Maple Leafs",
+      "gp": 11,
+      "w": 5,
+      "l": 4,
+      "otl": 2,
+      "gf": 38,
+      "ga": 34,
+      "points": 12
+    },
+    "UTA": {
+      "name": "Utah Mammoth",
+      "gp": 10,
+      "w": 7,
+      "l": 3,
+      "otl": 0,
+      "gf": 38,
+      "ga": 31,
+      "points": 14
+    },
+    "VAN": {
+      "name": "Vancouver Canucks",
+      "gp": 11,
+      "w": 2,
+      "l": 8,
+      "otl": 1,
+      "gf": 33,
+      "ga": 51,
+      "points": 5
+    },
+    "VGK": {
+      "name": "Vegas Golden Knights",
+      "gp": 11,
+      "w": 8,
+      "l": 3,
+      "otl": 0,
+      "gf": 43,
+      "ga": 30,
+      "points": 16
+    },
+    "WPG": {
+      "name": "Winnipeg Jets",
+      "gp": 9,
+      "w": 4,
+      "l": 3,
+      "otl": 2,
+      "gf": 24,
+      "ga": 26,
+      "points": 10
+    },
+    "WSH": {
+      "name": "Washington Capitals",
+      "gp": 9,
+      "w": 5,
+      "l": 4,
+      "otl": 0,
+      "gf": 30,
+      "ga": 29,
+      "points": 10
+    }
+  },
+  "nhl_score_feed": {
+    "2026020154": {
+      "away": "NSH",
+      "away_record": "3-2-3",
+      "home": "BOS",
+      "home_record": "7-2-1",
+      "venue": "TD Garden",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "NSH": {
+          "goals": [
+            "Ryan O'Reilly",
+            4
+          ],
+          "assists": [
+            "Roman Josi",
+            8
+          ],
+          "wins": [
+            "Juuse Saros",
+            3
+          ]
+        },
+        "BOS": {
+          "goals": [
+            "David Pastrnak",
+            4
+          ],
+          "assists": [
+            "David Pastrnak",
+            8
+          ],
+          "wins": [
+            "Jeremy Swayman",
+            6
+          ]
+        }
+      }
+    },
+    "2026020155": {
+      "away": "NYR",
+      "away_record": "7-3-1",
+      "home": "TOR",
+      "home_record": "5-4-2",
+      "venue": "Scotiabank Arena",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "NYR": {
+          "goals": [
+            "Alexis Lafrenière",
+            7
+          ],
+          "assists": [
+            "Adam Fox",
+            10
+          ],
+          "wins": [
+            "Dylan Garand",
+            4
+          ]
+        },
+        "TOR": {
+          "goals": [
+            "Auston Matthews",
+            8
+          ],
+          "assists": [
+            "Auston Matthews",
+            10
+          ],
+          "wins": [
+            "Anthony Stolarz",
+            3
+          ]
+        }
+      }
+    },
+    "2026020156": {
+      "away": "SJS",
+      "away_record": "5-4-1",
+      "home": "OTT",
+      "home_record": "6-3-0",
+      "venue": "Canadian Tire Centre",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "SJS": {
+          "goals": [
+            "Macklin Celebrini",
+            5
+          ],
+          "assists": [
+            "Macklin Celebrini",
+            9
+          ],
+          "wins": [
+            "Alex Nedeljkovic",
+            3
+          ]
+        },
+        "OTT": {
+          "goals": [
+            "Tim Stützle",
+            5
+          ],
+          "assists": [
+            "Tim Stützle",
+            7
+          ],
+          "wins": [
+            "Linus Ullmark",
+            6
+          ]
+        }
+      }
+    },
+    "2026020157": {
+      "away": "ANA",
+      "away_record": "4-5-0",
+      "home": "NJD",
+      "home_record": "5-4-0",
+      "venue": "Prudential Center",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "ANA": {
+          "goals": [
+            "Beckett Sennecke",
+            5
+          ],
+          "assists": [
+            "Leo Carlsson",
+            9
+          ],
+          "wins": [
+            "Lukas Dostal",
+            3
+          ]
+        },
+        "NJD": {
+          "goals": [
+            "Nico Hischier",
+            4
+          ],
+          "assists": [
+            "Jack Hughes",
+            7
+          ],
+          "wins": [
+            "Jake Allen",
+            4
+          ]
+        }
+      }
+    },
+    "2026020158": {
+      "away": "FLA",
+      "away_record": "5-2-2",
+      "home": "PIT",
+      "home_record": "3-6-1",
+      "venue": "PPG Paints Arena",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "FLA": {
+          "goals": [
+            "Brady Tkachuk",
+            6
+          ],
+          "assists": [
+            "Matthew Tkachuk",
+            11
+          ],
+          "wins": [
+            "Jacob Markstrom",
+            3
+          ]
+        },
+        "PIT": {
+          "goals": [
+            "Evgeni Malkin",
+            5
+          ],
+          "assists": [
+            "Erik Karlsson",
+            10
+          ],
+          "wins": [
+            "Arturs Silovs",
+            3
+          ]
+        }
+      }
+    },
+    "2026020159": {
+      "away": "LAK",
+      "away_record": "1-4-2",
+      "home": "NYI",
+      "home_record": "5-3-1",
+      "venue": "UBS Arena",
+      "start_utc": "2026-10-22T23:30:00Z",
+      "state": "FUT",
+      "leaders": {
+        "LAK": {
+          "goals": [
+            "Artemi Panarin",
+            4
+          ],
+          "assists": [
+            "Brandt Clarke",
+            4
+          ],
+          "wins": [
+            "Darcy Kuemper",
+            1
+          ]
+        },
+        "NYI": {
+          "goals": [
+            "Bo Horvat",
+            5
+          ],
+          "assists": [
+            "Matthew Schaefer",
+            8
+          ],
+          "wins": [
+            "Ilya Sorokin",
+            5
+          ]
+        }
+      }
+    },
+    "2026020160": {
+      "away": "VGK",
+      "away_record": "8-3-0",
+      "home": "STL",
+      "home_record": "4-4-1",
+      "venue": "Enterprise Center",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "VGK": {
+          "goals": [
+            "Mark Stone",
+            8
+          ],
+          "assists": [
+            "Jack Eichel",
+            13
+          ],
+          "wins": [
+            "Carter Hart",
+            4
+          ]
+        },
+        "STL": {
+          "goals": [
+            "Mason McTavish",
+            5
+          ],
+          "assists": [
+            "Dylan Holloway",
+            6
+          ],
+          "wins": [
+            "Joel Hofer",
+            3
+          ]
+        }
+      }
+    },
+    "2026020161": {
+      "away": "WPG",
+      "away_record": "4-3-2",
+      "home": "DAL",
+      "home_record": "5-3-1",
+      "venue": "American Airlines Center",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "WPG": {
+          "goals": [
+            "Kyle Connor",
+            8
+          ],
+          "assists": [
+            "Mark Scheifele",
+            6
+          ],
+          "wins": [
+            "Stuart Skinner",
+            3
+          ]
+        },
+        "DAL": {
+          "goals": [
+            "Mikko Rantanen",
+            5
+          ],
+          "assists": [
+            "Jason Robertson",
+            6
+          ],
+          "wins": [
+            "Jake Oettinger",
+            4
+          ]
+        }
+      }
+    },
+    "2026020162": {
+      "away": "MIN",
+      "away_record": "6-2-2",
+      "home": "CGY",
+      "home_record": "2-6-0",
+      "venue": "Scotiabank Saddledome",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "MIN": {
+          "goals": [
+            "Kirill Kaprizov",
+            11
+          ],
+          "assists": [
+            "Quinn Hughes",
+            11
+          ],
+          "wins": [
+            "Jesper Wallstedt",
+            6
+          ]
+        },
+        "CGY": {
+          "goals": [
+            "Morgan Frost",
+            3
+          ],
+          "assists": [
+            "Joel Farabee",
+            5
+          ],
+          "wins": [
+            "Dustin Wolf",
+            1
+          ]
+        }
+      }
+    },
+    "2026020163": {
+      "away": "CAR",
+      "away_record": "8-2-1",
+      "home": "EDM",
+      "home_record": "7-1-1",
+      "venue": "Rogers Place",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "CAR": {
+          "goals": [
+            "Andrei Svechnikov",
+            6
+          ],
+          "assists": [
+            "Jackson Blake",
+            10
+          ],
+          "wins": [
+            "Pyotr Kochetkov",
+            6
+          ]
+        },
+        "EDM": {
+          "goals": [
+            "Leon Draisaitl",
+            8
+          ],
+          "assists": [
+            "Connor McDavid",
+            20
+          ],
+          "wins": [
+            "Devon Levi",
+            5
+          ]
+        }
+      }
+    },
+    "2026020164": {
+      "away": "UTA",
+      "away_record": "7-3-0",
+      "home": "SEA",
+      "home_record": "6-3-1",
+      "venue": "Climate Pledge Arena",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "UTA": {
+          "goals": [
+            "Nick Schmaltz",
+            7
+          ],
+          "assists": [
+            "Clayton Keller",
+            9
+          ],
+          "wins": [
+            "Karel Vejmelka",
+            5
+          ]
+        },
+        "SEA": {
+          "goals": [
+            "Frederick Gaudreau",
+            5
+          ],
+          "assists": [
+            "Chandler Stephenson",
+            8
+          ],
+          "wins": [
+            "Philipp Grubauer",
+            3
+          ]
+        }
+      }
+    },
+    "2026020165": {
+      "away": "DET",
+      "away_record": "3-3-3",
+      "home": "VAN",
+      "home_record": "2-8-1",
+      "venue": "Rogers Arena",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "state": "FUT",
+      "leaders": {
+        "DET": {
+          "goals": [
+            "Alex DeBrincat",
+            6
+          ],
+          "assists": [
+            "Alex DeBrincat",
+            5
+          ],
+          "wins": [
+            "John Gibson",
+            2
+          ]
+        },
+        "VAN": {
+          "goals": [
+            "Paul Cotter",
+            4
+          ],
+          "assists": [
+            "Elias Pettersson",
+            8
+          ],
+          "wins": [
+            "Leevi Meriläinen",
+            1
+          ]
+        }
+      }
+    }
+  },
+  "shl_teams": {
+    "FBK": {
+      "name": "Färjestad BK",
+      "gp": 10,
+      "w": 8,
+      "t": 2,
+      "l": 0,
+      "gf": 40,
+      "ga": 11,
+      "pts": 27,
+      "otw": 1,
+      "otl": 1
+    },
+    "FRO": {
+      "name": "Frölunda HC",
+      "gp": 11,
+      "w": 7,
+      "t": 2,
+      "l": 2,
+      "gf": 38,
+      "ga": 24,
+      "pts": 25,
+      "otw": 2,
+      "otl": 0
+    },
+    "SKE": {
+      "name": "Skellefteå AIK",
+      "gp": 10,
+      "w": 5,
+      "t": 3,
+      "l": 2,
+      "gf": 32,
+      "ga": 25,
+      "pts": 19,
+      "otw": 1,
+      "otl": 2
+    },
+    "IFB": {
+      "name": "IF Björklöven",
+      "gp": 10,
+      "w": 5,
+      "t": 1,
+      "l": 4,
+      "gf": 23,
+      "ga": 25,
+      "pts": 17,
+      "otw": 1,
+      "otl": 0
+    },
+    "BIF": {
+      "name": "Brynäs IF",
+      "gp": 10,
+      "w": 4,
+      "t": 1,
+      "l": 5,
+      "gf": 28,
+      "ga": 23,
+      "pts": 14,
+      "otw": 1,
+      "otl": 0
+    },
+    "RBK": {
+      "name": "Rögle BK",
+      "gp": 10,
+      "w": 4,
+      "t": 1,
+      "l": 5,
+      "gf": 23,
+      "ga": 21,
+      "pts": 14,
+      "otw": 1,
+      "otl": 0
+    },
+    "MIF": {
+      "name": "IF Malmö Redhawks",
+      "gp": 9,
+      "w": 3,
+      "t": 4,
+      "l": 2,
+      "gf": 26,
+      "ga": 25,
+      "pts": 14,
+      "otw": 1,
+      "otl": 3
+    },
+    "LHF": {
+      "name": "Luleå HF",
+      "gp": 10,
+      "w": 4,
+      "t": 2,
+      "l": 4,
+      "gf": 26,
+      "ga": 30,
+      "pts": 14,
+      "otw": 0,
+      "otl": 2
+    },
+    "OHK": {
+      "name": "Örebro HK",
+      "gp": 10,
+      "w": 4,
+      "t": 2,
+      "l": 4,
+      "gf": 20,
+      "ga": 29,
+      "pts": 14,
+      "otw": 0,
+      "otl": 2
+    },
+    "TIK": {
+      "name": "Timrå IK",
+      "gp": 10,
+      "w": 2,
+      "t": 3,
+      "l": 5,
+      "gf": 20,
+      "ga": 23,
+      "pts": 12,
+      "otw": 3,
+      "otl": 0
+    },
+    "VAX": {
+      "name": "Växjö Lakers HC",
+      "gp": 10,
+      "w": 3,
+      "t": 2,
+      "l": 5,
+      "gf": 29,
+      "ga": 34,
+      "pts": 12,
+      "otw": 1,
+      "otl": 1
+    },
+    "DIF": {
+      "name": "Djurgårdens IF",
+      "gp": 11,
+      "w": 2,
+      "t": 4,
+      "l": 5,
+      "gf": 23,
+      "ga": 33,
+      "pts": 12,
+      "otw": 2,
+      "otl": 2
+    },
+    "HV71": {
+      "name": "HV 71",
+      "gp": 11,
+      "w": 1,
+      "t": 5,
+      "l": 5,
+      "gf": 29,
+      "ga": 39,
+      "pts": 10,
+      "otw": 2,
+      "otl": 3
+    },
+    "LHC": {
+      "name": "Linköping HC",
+      "gp": 10,
+      "w": 2,
+      "t": 2,
+      "l": 6,
+      "gf": 17,
+      "ga": 32,
+      "pts": 9,
+      "otw": 1,
+      "otl": 1
+    }
+  },
+  "shl_fixtures": [
+    {
+      "id": "shl-2026-1022-ifb-mif",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "home": "IFB",
+      "away": "MIF",
+      "venue": "Visionite Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1022-rbk-fro",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "home": "RBK",
+      "away": "FRO",
+      "venue": "Catena Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1022-ske-dif",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "home": "SKE",
+      "away": "DIF",
+      "venue": "Skellefteå Kraft Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1022-tik-fbk",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "home": "TIK",
+      "away": "FBK",
+      "venue": "SCA Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1022-vax-lhf",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "home": "VAX",
+      "away": "LHF",
+      "venue": "Vida Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1022-ohk-bif",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "home": "OHK",
+      "away": "BIF",
+      "venue": "Behrn Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1024-ifb-ske",
+      "date": "2026-10-24",
+      "time": "2026-10-24 13:15 UTC",
+      "home": "IFB",
+      "away": "SKE",
+      "venue": "Visionite Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1024-mif-tik",
+      "date": "2026-10-24",
+      "time": "2026-10-24 13:15 UTC",
+      "home": "MIF",
+      "away": "TIK",
+      "venue": "Malmö Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1024-lhc-ohk",
+      "date": "2026-10-24",
+      "time": "2026-10-24 13:15 UTC",
+      "home": "LHC",
+      "away": "OHK",
+      "venue": "Saab Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1024-bif-rbk",
+      "date": "2026-10-24",
+      "time": "2026-10-24 16:00 UTC",
+      "home": "BIF",
+      "away": "RBK",
+      "venue": "Monitor ERP Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1024-hv71-fro",
+      "date": "2026-10-24",
+      "time": "2026-10-24 16:00 UTC",
+      "home": "HV71",
+      "away": "FRO",
+      "venue": "Husqvarna Garden",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1024-lhf-dif",
+      "date": "2026-10-24",
+      "time": "2026-10-24 16:00 UTC",
+      "home": "LHF",
+      "away": "DIF",
+      "venue": "Coop Norrbotten Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "shl-2026-1024-fbk-vax",
+      "date": "2026-10-24",
+      "time": "2026-10-24 16:00 UTC",
+      "home": "FBK",
+      "away": "VAX",
+      "venue": "Löfbergs Arena",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    }
+  ],
+  "nba_teams": {
+    "DET": {
+      "name": "Detroit Pistons",
+      "w": 60,
+      "l": 22,
+      "home_w": 31,
+      "home_l": 9,
+      "road_w": 28,
+      "road_l": 13
+    },
+    "BOS": {
+      "name": "Boston Celtics",
+      "w": 56,
+      "l": 26,
+      "home_w": 30,
+      "home_l": 11,
+      "road_w": 26,
+      "road_l": 15
+    },
+    "NYK": {
+      "name": "New York Knicks",
+      "w": 53,
+      "l": 29,
+      "home_w": 30,
+      "home_l": 10,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "CLE": {
+      "name": "Cleveland Cavaliers",
+      "w": 52,
+      "l": 30,
+      "home_w": 27,
+      "home_l": 14,
+      "road_w": 25,
+      "road_l": 16
+    },
+    "TOR": {
+      "name": "Toronto Raptors",
+      "w": 46,
+      "l": 36,
+      "home_w": 24,
+      "home_l": 17,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "ATL": {
+      "name": "Atlanta Hawks",
+      "w": 46,
+      "l": 36,
+      "home_w": 24,
+      "home_l": 17,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "PHI": {
+      "name": "Philadelphia 76ers",
+      "w": 45,
+      "l": 37,
+      "home_w": 23,
+      "home_l": 18,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "ORL": {
+      "name": "Orlando Magic",
+      "w": 45,
+      "l": 37,
+      "home_w": 25,
+      "home_l": 15,
+      "road_w": 19,
+      "road_l": 20
+    },
+    "CHA": {
+      "name": "Charlotte Hornets",
+      "w": 44,
+      "l": 38,
+      "home_w": 21,
+      "home_l": 20,
+      "road_w": 23,
+      "road_l": 18
+    },
+    "MIA": {
+      "name": "Miami Heat",
+      "w": 43,
+      "l": 39,
+      "home_w": 26,
+      "home_l": 15,
+      "road_w": 17,
+      "road_l": 24
+    },
+    "MIL": {
+      "name": "Milwaukee Bucks",
+      "w": 32,
+      "l": 50,
+      "home_w": 19,
+      "home_l": 22,
+      "road_w": 13,
+      "road_l": 28
+    },
+    "CHI": {
+      "name": "Chicago Bulls",
+      "w": 31,
+      "l": 51,
+      "home_w": 18,
+      "home_l": 23,
+      "road_w": 13,
+      "road_l": 28
+    },
+    "BKN": {
+      "name": "Brooklyn Nets",
+      "w": 20,
+      "l": 62,
+      "home_w": 12,
+      "home_l": 29,
+      "road_w": 8,
+      "road_l": 33
+    },
+    "IND": {
+      "name": "Indiana Pacers",
+      "w": 19,
+      "l": 63,
+      "home_w": 11,
+      "home_l": 30,
+      "road_w": 8,
+      "road_l": 33
+    },
+    "WAS": {
+      "name": "Washington Wizards",
+      "w": 17,
+      "l": 65,
+      "home_w": 11,
+      "home_l": 30,
+      "road_w": 6,
+      "road_l": 35
+    },
+    "OKC": {
+      "name": "Oklahoma City Thunder",
+      "w": 64,
+      "l": 18,
+      "home_w": 34,
+      "home_l": 7,
+      "road_w": 30,
+      "road_l": 10
+    },
+    "SAS": {
+      "name": "San Antonio Spurs",
+      "w": 62,
+      "l": 20,
+      "home_w": 32,
+      "home_l": 8,
+      "road_w": 29,
+      "road_l": 12
+    },
+    "DEN": {
+      "name": "Denver Nuggets",
+      "w": 54,
+      "l": 28,
+      "home_w": 28,
+      "home_l": 13,
+      "road_w": 26,
+      "road_l": 15
+    },
+    "LAL": {
+      "name": "Los Angeles Lakers",
+      "w": 53,
+      "l": 29,
+      "home_w": 28,
+      "home_l": 13,
+      "road_w": 25,
+      "road_l": 16
+    },
+    "HOU": {
+      "name": "Houston Rockets",
+      "w": 52,
+      "l": 30,
+      "home_w": 30,
+      "home_l": 11,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "MIN": {
+      "name": "Minnesota Timberwolves",
+      "w": 49,
+      "l": 33,
+      "home_w": 26,
+      "home_l": 15,
+      "road_w": 23,
+      "road_l": 18
+    },
+    "PHX": {
+      "name": "Phoenix Suns",
+      "w": 45,
+      "l": 37,
+      "home_w": 25,
+      "home_l": 16,
+      "road_w": 20,
+      "road_l": 21
+    },
+    "POR": {
+      "name": "Portland Trail Blazers",
+      "w": 42,
+      "l": 40,
+      "home_w": 24,
+      "home_l": 17,
+      "road_w": 18,
+      "road_l": 23
+    },
+    "LAC": {
+      "name": "LA Clippers",
+      "w": 42,
+      "l": 40,
+      "home_w": 23,
+      "home_l": 18,
+      "road_w": 19,
+      "road_l": 22
+    },
+    "GSW": {
+      "name": "Golden State Warriors",
+      "w": 37,
+      "l": 45,
+      "home_w": 22,
+      "home_l": 19,
+      "road_w": 15,
+      "road_l": 26
+    },
+    "NOP": {
+      "name": "New Orleans Pelicans",
+      "w": 26,
+      "l": 56,
+      "home_w": 17,
+      "home_l": 24,
+      "road_w": 9,
+      "road_l": 32
+    },
+    "DAL": {
+      "name": "Dallas Mavericks",
+      "w": 26,
+      "l": 56,
+      "home_w": 16,
+      "home_l": 25,
+      "road_w": 10,
+      "road_l": 30
+    },
+    "MEM": {
+      "name": "Memphis Grizzlies",
+      "w": 25,
+      "l": 57,
+      "home_w": 13,
+      "home_l": 27,
+      "road_w": 11,
+      "road_l": 29
+    },
+    "SAC": {
+      "name": "Sacramento Kings",
+      "w": 22,
+      "l": 60,
+      "home_w": 15,
+      "home_l": 26,
+      "road_w": 7,
+      "road_l": 34
+    },
+    "UTA": {
+      "name": "Utah Jazz",
+      "w": 22,
+      "l": 60,
+      "home_w": 14,
+      "home_l": 27,
+      "road_w": 8,
+      "road_l": 33
+    }
+  },
+  "nba_fixtures": [
+    {
+      "game_id": "0022600006",
+      "date": "2026-10-22",
+      "tip_et": "19:00",
+      "away": "CLE",
+      "home": "PHI",
+      "venue": "Xfinity Mobile Arena"
+    },
+    {
+      "game_id": "0022600007",
+      "date": "2026-10-22",
+      "tip_et": "21:30",
+      "away": "DEN",
+      "home": "OKC",
+      "venue": "Paycom Center"
+    },
+    {
+      "game_id": "0022600099",
+      "date": "2026-10-23",
+      "tip_et": "16:00",
+      "away": "CHI",
+      "home": "MIL",
+      "venue": "Fiserv Forum"
+    },
+    {
+      "game_id": "0022600008",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "NYK",
+      "home": "BOS",
+      "venue": "TD Garden"
+    },
+    {
+      "game_id": "0022600094",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "ATL",
+      "home": "CHA",
+      "venue": "Spectrum Center"
+    },
+    {
+      "game_id": "0022600095",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "DAL",
+      "home": "IND",
+      "venue": "Gainbridge Fieldhouse"
+    },
+    {
+      "game_id": "0022600096",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "MIN",
+      "home": "ORL",
+      "venue": "Kia Center"
+    },
+    {
+      "game_id": "0022600097",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "TOR",
+      "home": "WAS",
+      "venue": "Capital One Arena"
+    },
+    {
+      "game_id": "0022600098",
+      "date": "2026-10-23",
+      "tip_et": "20:00",
+      "away": "DET",
+      "home": "MIA",
+      "venue": "Kaseya Center"
+    },
+    {
+      "game_id": "0022600009",
+      "date": "2026-10-23",
+      "tip_et": "21:30",
+      "away": "HOU",
+      "home": "SAS",
+      "venue": "Moody Center"
+    },
+    {
+      "game_id": "0022600100",
+      "date": "2026-10-23",
+      "tip_et": "21:30",
+      "away": "NOP",
+      "home": "UTA",
+      "venue": "Delta Center"
+    },
+    {
+      "game_id": "0022600101",
+      "date": "2026-10-23",
+      "tip_et": "22:00",
+      "away": "MEM",
+      "home": "GSW",
+      "venue": "Chase Center"
+    },
+    {
+      "game_id": "0022600102",
+      "date": "2026-10-23",
+      "tip_et": "22:00",
+      "away": "LAC",
+      "home": "LAL",
+      "venue": "Crypto.com Arena"
+    },
+    {
+      "game_id": "0022600103",
+      "date": "2026-10-23",
+      "tip_et": "22:00",
+      "away": "POR",
+      "home": "SAC",
+      "venue": "Golden 1 Center"
+    },
+    {
+      "game_id": "0022600104",
+      "date": "2026-10-24",
+      "tip_et": "18:00",
+      "away": "MIA",
+      "home": "CHA",
+      "venue": "Spectrum Center"
+    },
+    {
+      "game_id": "0022600105",
+      "date": "2026-10-24",
+      "tip_et": "19:30",
+      "away": "BKN",
+      "home": "CLE",
+      "venue": "Rocket Arena"
+    },
+    {
+      "game_id": "0022600106",
+      "date": "2026-10-24",
+      "tip_et": "19:30",
+      "away": "MIL",
+      "home": "PHI",
+      "venue": "Xfinity Mobile Arena"
+    },
+    {
+      "game_id": "0022600108",
+      "date": "2026-10-24",
+      "tip_et": "20:00",
+      "away": "WAS",
+      "home": "CHI",
+      "venue": "United Center"
+    },
+    {
+      "game_id": "0022600109",
+      "date": "2026-10-24",
+      "tip_et": "20:00",
+      "away": "SAS",
+      "home": "DAL",
+      "venue": "American Airlines Center"
+    },
+    {
+      "game_id": "0022600107",
+      "date": "2026-10-24",
+      "tip_et": "20:30",
+      "away": "HOU",
+      "home": "ATL",
+      "venue": "State Farm Arena"
+    },
+    {
+      "game_id": "0022600110",
+      "date": "2026-10-24",
+      "tip_et": "21:00",
+      "away": "NOP",
+      "home": "DEN",
+      "venue": "Ball Arena"
+    },
+    {
+      "game_id": "0022600111",
+      "date": "2026-10-24",
+      "tip_et": "22:00",
+      "away": "GSW",
+      "home": "PHX",
+      "venue": "Mortgage Matchup Center"
+    },
+    {
+      "game_id": "0022600112",
+      "date": "2026-10-25",
+      "tip_et": "17:00",
+      "away": "LAL",
+      "home": "UTA",
+      "venue": "Delta Center"
+    },
+    {
+      "game_id": "0022600113",
+      "date": "2026-10-25",
+      "tip_et": "18:00",
+      "away": "IND",
+      "home": "BKN",
+      "venue": "Barclays Center"
+    },
+    {
+      "game_id": "0022600114",
+      "date": "2026-10-25",
+      "tip_et": "19:00",
+      "away": "ORL",
+      "home": "NYK",
+      "venue": "Madison Square Garden"
+    },
+    {
+      "game_id": "0022600115",
+      "date": "2026-10-25",
+      "tip_et": "19:00",
+      "away": "TOR",
+      "home": "MIN",
+      "venue": "Target Center"
+    },
+    {
+      "game_id": "0022600116",
+      "date": "2026-10-25",
+      "tip_et": "19:00",
+      "away": "LAC",
+      "home": "OKC",
+      "venue": "Paycom Center"
+    },
+    {
+      "game_id": "0022600117",
+      "date": "2026-10-25",
+      "tip_et": "19:30",
+      "away": "DET",
+      "home": "PHI",
+      "venue": "Xfinity Mobile Arena"
+    },
+    {
+      "game_id": "0022600118",
+      "date": "2026-10-25",
+      "tip_et": "21:00",
+      "away": "MEM",
+      "home": "SAC",
+      "venue": "Golden 1 Center"
+    },
+    {
+      "game_id": "0022600119",
+      "date": "2026-10-26",
+      "tip_et": "19:00",
+      "away": "WAS",
+      "home": "CHA",
+      "venue": "Spectrum Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600120",
+      "date": "2026-10-26",
+      "tip_et": "19:00",
+      "away": "MIN",
+      "home": "CLE",
+      "venue": "Rocket Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600121",
+      "date": "2026-10-26",
+      "tip_et": "19:30",
+      "away": "CHI",
+      "home": "BOS",
+      "venue": "TD Garden",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600122",
+      "date": "2026-10-26",
+      "tip_et": "19:30",
+      "away": "DAL",
+      "home": "MIA",
+      "venue": "Kaseya Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600123",
+      "date": "2026-10-26",
+      "tip_et": "20:00",
+      "away": "IND",
+      "home": "MIL",
+      "venue": "Fiserv Forum",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600124",
+      "date": "2026-10-26",
+      "tip_et": "20:00",
+      "away": "PHX",
+      "home": "OKC",
+      "venue": "Paycom Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600125",
+      "date": "2026-10-26",
+      "tip_et": "20:30",
+      "away": "ATL",
+      "home": "HOU",
+      "venue": "Toyota Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600126",
+      "date": "2026-10-26",
+      "tip_et": "21:00",
+      "away": "MEM",
+      "home": "UTA",
+      "venue": "Delta Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600127",
+      "date": "2026-10-26",
+      "tip_et": "22:00",
+      "away": "GSW",
+      "home": "DEN",
+      "venue": "Ball Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600128",
+      "date": "2026-10-27",
+      "tip_et": "19:30",
+      "away": "BKN",
+      "home": "BOS",
+      "venue": "TD Garden",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600129",
+      "date": "2026-10-27",
+      "tip_et": "20:00",
+      "away": "DET",
+      "home": "NYK",
+      "venue": "Madison Square Garden",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600130",
+      "date": "2026-10-27",
+      "tip_et": "20:00",
+      "away": "SAC",
+      "home": "SAS",
+      "venue": "Frost Bank Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600131",
+      "date": "2026-10-27",
+      "tip_et": "23:00",
+      "away": "POR",
+      "home": "LAL",
+      "venue": "Crypto.com Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600132",
+      "date": "2026-10-28",
+      "tip_et": "19:00",
+      "away": "MIA",
+      "home": "ATL",
+      "venue": "State Farm Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600133",
+      "date": "2026-10-28",
+      "tip_et": "19:00",
+      "away": "WAS",
+      "home": "CLE",
+      "venue": "Rocket Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600134",
+      "date": "2026-10-28",
+      "tip_et": "19:00",
+      "away": "CHA",
+      "home": "DET",
+      "venue": "Little Caesars Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600135",
+      "date": "2026-10-28",
+      "tip_et": "19:00",
+      "away": "PHI",
+      "home": "IND",
+      "venue": "Gainbridge Fieldhouse",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600136",
+      "date": "2026-10-28",
+      "tip_et": "19:30",
+      "away": "ORL",
+      "home": "TOR",
+      "venue": "Scotiabank Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600137",
+      "date": "2026-10-28",
+      "tip_et": "20:00",
+      "away": "NYK",
+      "home": "CHI",
+      "venue": "United Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600138",
+      "date": "2026-10-28",
+      "tip_et": "20:00",
+      "away": "HOU",
+      "home": "MIL",
+      "venue": "Fiserv Forum",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600139",
+      "date": "2026-10-28",
+      "tip_et": "20:00",
+      "away": "GSW",
+      "home": "MIN",
+      "venue": "Target Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600140",
+      "date": "2026-10-28",
+      "tip_et": "20:00",
+      "away": "DEN",
+      "home": "NOP",
+      "venue": "Smoothie King Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600141",
+      "date": "2026-10-28",
+      "tip_et": "21:00",
+      "away": "SAS",
+      "home": "UTA",
+      "venue": "Delta Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600142",
+      "date": "2026-10-28",
+      "tip_et": "21:30",
+      "away": "OKC",
+      "home": "DAL",
+      "venue": "American Airlines Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600143",
+      "date": "2026-10-28",
+      "tip_et": "22:30",
+      "away": "LAL",
+      "home": "LAC",
+      "venue": "Intuit Dome",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600144",
+      "date": "2026-10-29",
+      "tip_et": "19:00",
+      "away": "CLE",
+      "home": "ATL",
+      "venue": "State Farm Arena",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600145",
+      "date": "2026-10-29",
+      "tip_et": "20:00",
+      "away": "SAC",
+      "home": "NOP",
+      "venue": "Smoothie King Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600146",
+      "date": "2026-10-29",
+      "tip_et": "22:00",
+      "away": "MEM",
+      "home": "POR",
+      "venue": "Moda Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600015",
+      "date": "2026-10-30",
+      "tip_et": "19:00",
+      "away": "CHA",
+      "home": "WAS",
+      "venue": "Capital One Arena",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group C)"
+    },
+    {
+      "game_id": "0022600016",
+      "date": "2026-10-30",
+      "tip_et": "19:30",
+      "away": "CHI",
+      "home": "BOS",
+      "venue": "TD Garden",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group C)"
+    },
+    {
+      "game_id": "0022600017",
+      "date": "2026-10-30",
+      "tip_et": "19:30",
+      "away": "DET",
+      "home": "BKN",
+      "venue": "Barclays Center",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group A)"
+    },
+    {
+      "game_id": "0022600018",
+      "date": "2026-10-30",
+      "tip_et": "19:30",
+      "away": "NYK",
+      "home": "PHI",
+      "venue": "Xfinity Mobile Arena",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group B)"
+    },
+    {
+      "game_id": "0022600019",
+      "date": "2026-10-30",
+      "tip_et": "19:30",
+      "away": "ORL",
+      "home": "TOR",
+      "venue": "Scotiabank Arena",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group A)"
+    },
+    {
+      "game_id": "0022600020",
+      "date": "2026-10-30",
+      "tip_et": "20:00",
+      "away": "IND",
+      "home": "MIA",
+      "venue": "Kaseya Center",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — East Group B)"
+    },
+    {
+      "game_id": "0022600021",
+      "date": "2026-10-30",
+      "tip_et": "20:00",
+      "away": "HOU",
+      "home": "DAL",
+      "venue": "American Airlines Center",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group A)"
+    },
+    {
+      "game_id": "0022600022",
+      "date": "2026-10-30",
+      "tip_et": "20:00",
+      "away": "LAC",
+      "home": "MIN",
+      "venue": "Target Center",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group B)"
+    },
+    {
+      "game_id": "0022600023",
+      "date": "2026-10-30",
+      "tip_et": "22:00",
+      "away": "LAL",
+      "home": "GSW",
+      "venue": "Chase Center",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group C)"
+    },
+    {
+      "game_id": "0022600024",
+      "date": "2026-10-30",
+      "tip_et": "22:00",
+      "away": "DEN",
+      "home": "PHX",
+      "venue": "Mortgage Matchup Center",
+      "competition": "NBA Regular Season 2026-27 (Emirates NBA Cup — West Group A)"
+    },
+    {
+      "game_id": "0022600147",
+      "date": "2026-10-31",
+      "tip_et": "15:00",
+      "away": "POR",
+      "home": "UTA",
+      "venue": "Delta Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600148",
+      "date": "2026-10-31",
+      "tip_et": "18:00",
+      "away": "PHI",
+      "home": "CHA",
+      "venue": "Spectrum Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600149",
+      "date": "2026-10-31",
+      "tip_et": "19:00",
+      "away": "ATL",
+      "home": "NOP",
+      "venue": "Smoothie King Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600150",
+      "date": "2026-10-31",
+      "tip_et": "20:00",
+      "away": "SAC",
+      "home": "MEM",
+      "venue": "FedExForum",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600151",
+      "date": "2026-10-31",
+      "tip_et": "20:00",
+      "away": "CLE",
+      "home": "MIL",
+      "venue": "Fiserv Forum",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600152",
+      "date": "2026-10-31",
+      "tip_et": "20:00",
+      "away": "MIN",
+      "home": "SAS",
+      "venue": "Frost Bank Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    },
+    {
+      "game_id": "0022600153",
+      "date": "2026-10-31",
+      "tip_et": "20:30",
+      "away": "OKC",
+      "home": "HOU",
+      "venue": "Toyota Center",
+      "competition": "NBA Regular Season 2026-27 (Week 2)"
+    }
+  ],
+  "euroleague_teams": {
+    "PAO": {
+      "name": "Panathinaikos AKTOR Athens",
+      "gp": 6,
+      "w": 5,
+      "l": 1,
+      "pf": 528,
+      "pa": 438,
+      "home": "4-1",
+      "away": "1-0",
+      "rank": 1,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/panathinaikos-aktor-athens/pan/"
+    },
+    "FBT": {
+      "name": "Fenerbahce Tarfin Istanbul",
+      "gp": 6,
+      "w": 5,
+      "l": 1,
+      "pf": 501,
+      "pa": 447,
+      "home": "5-0",
+      "away": "0-1",
+      "rank": 2,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/fenerbahce-tarfin-istanbul/ulk/"
+    },
+    "OLY": {
+      "name": "Olympiacos Piraeus",
+      "gp": 6,
+      "w": 5,
+      "l": 1,
+      "pf": 564,
+      "pa": 524,
+      "home": "1-0",
+      "away": "4-1",
+      "rank": 3,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/olympiacos-piraeus/oly/"
+    },
+    "VBC": {
+      "name": "Valencia Basket",
+      "gp": 6,
+      "w": 4,
+      "l": 2,
+      "pf": 583,
+      "pa": 537,
+      "home": "2-2",
+      "away": "2-0",
+      "rank": 4,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/valencia-basket/pam/"
+    },
+    "CZV": {
+      "name": "Crvena Zvezda Meridianbet Belgrade",
+      "gp": 6,
+      "w": 4,
+      "l": 2,
+      "pf": 485,
+      "pa": 457,
+      "home": "2-2",
+      "away": "2-0",
+      "rank": 5,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/crvena-zvezda-meridianbet-belgrade/red/"
+    },
+    "HTA": {
+      "name": "Hapoel IBI Tel Aviv",
+      "gp": 7,
+      "w": 5,
+      "l": 2,
+      "pf": 630,
+      "pa": 601,
+      "home": "3-1",
+      "away": "2-1",
+      "rank": 6,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/hapoel-ibi-tel-aviv/hta/"
+    },
+    "VIR": {
+      "name": "Virtus Bologna",
+      "gp": 7,
+      "w": 4,
+      "l": 3,
+      "pf": 606,
+      "pa": 608,
+      "home": "2-0",
+      "away": "2-3",
+      "rank": 7,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/virtus-bologna/vir/"
+    },
+    "DUB": {
+      "name": "Dubai Basketball",
+      "gp": 6,
+      "w": 4,
+      "l": 2,
+      "pf": 490,
+      "pa": 493,
+      "home": "2-1",
+      "away": "2-1",
+      "rank": 8,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/dubai-basketball/dub/"
+    },
+    "RMB": {
+      "name": "Real Madrid",
+      "gp": 6,
+      "w": 3,
+      "l": 3,
+      "pf": 554,
+      "pa": 531,
+      "home": "2-0",
+      "away": "1-3",
+      "rank": 9,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/real-madrid/mad/"
+    },
+    "BAR": {
+      "name": "FC Barcelona",
+      "gp": 6,
+      "w": 3,
+      "l": 3,
+      "pf": 534,
+      "pa": 525,
+      "home": "2-2",
+      "away": "1-1",
+      "rank": 10,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/fc-barcelona/bar/"
+    },
+    "BJK": {
+      "name": "Besiktas Istanbul",
+      "gp": 6,
+      "w": 3,
+      "l": 3,
+      "pf": 554,
+      "pa": 555,
+      "home": "1-2",
+      "away": "2-1",
+      "rank": 11,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/besiktas-istanbul/bes/"
+    },
+    "PAR": {
+      "name": "Partizan Mozzart Bet Belgrade",
+      "gp": 6,
+      "w": 3,
+      "l": 3,
+      "pf": 466,
+      "pa": 471,
+      "home": "1-1",
+      "away": "2-2",
+      "rank": 12,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/partizan-mozzart-bet-belgrade/par/"
+    },
+    "EFS": {
+      "name": "Anadolu Efes Istanbul",
+      "gp": 6,
+      "w": 2,
+      "l": 4,
+      "pf": 492,
+      "pa": 510,
+      "home": "1-1",
+      "away": "1-3",
+      "rank": 13,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/anadolu-efes-istanbul/ist/"
+    },
+    "ZAL": {
+      "name": "Zalgiris Kaunas",
+      "gp": 6,
+      "w": 2,
+      "l": 4,
+      "pf": 490,
+      "pa": 517,
+      "home": "0-2",
+      "away": "2-2",
+      "rank": 14,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/zalgiris-kaunas/zal/"
+    },
+    "BAY": {
+      "name": "FC Bayern Munich",
+      "gp": 6,
+      "w": 2,
+      "l": 4,
+      "pf": 521,
+      "pa": 552,
+      "home": "0-2",
+      "away": "2-2",
+      "rank": 15,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/fc-bayern-munich/mun/"
+    },
+    "MTA": {
+      "name": "Maccabi Rapyd Tel Aviv",
+      "gp": 6,
+      "w": 2,
+      "l": 4,
+      "pf": 509,
+      "pa": 540,
+      "home": "1-1",
+      "away": "1-3",
+      "rank": 16,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/maccabi-rapyd-tel-aviv/tel/"
+    },
+    "ASV": {
+      "name": "LDLC ASVEL Villeurbanne",
+      "gp": 6,
+      "w": 2,
+      "l": 4,
+      "pf": 527,
+      "pa": 572,
+      "home": "1-2",
+      "away": "1-2",
+      "rank": 17,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/ldlc-asvel-villeurbanne/asv/"
+    },
+    "PBB": {
+      "name": "Paris Basketball",
+      "gp": 6,
+      "w": 1,
+      "l": 5,
+      "pf": 504,
+      "pa": 545,
+      "home": "1-3",
+      "away": "0-2",
+      "rank": 18,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/paris-basketball/prs/"
+    },
+    "MIL": {
+      "name": "Armani Olimpia Milan",
+      "gp": 6,
+      "w": 1,
+      "l": 5,
+      "pf": 504,
+      "pa": 559,
+      "home": "1-2",
+      "away": "0-3",
+      "rank": 19,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/armani-olimpia-milan/mil/"
+    },
+    "KBA": {
+      "name": "Kosner Baskonia Vitoria-Gasteiz",
+      "gp": 6,
+      "w": 1,
+      "l": 5,
+      "pf": 504,
+      "pa": 564,
+      "home": "1-3",
+      "away": "0-2",
+      "rank": 20,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/teams/kosner-baskonia-vitoria-gasteiz/bas/"
+    }
+  },
+  "euroleague_r7_fixtures": [
+    {
+      "id": "el-E2026-64",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:30 UTC",
+      "home": "EFS",
+      "away": "BJK",
+      "venue": "Turkcell Basketball Development Center",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-65",
+      "date": "2026-10-22",
+      "time": "2026-10-22 18:00 UTC",
+      "home": "BAY",
+      "away": "DUB",
+      "venue": "SAP Garden",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-62",
+      "date": "2026-10-22",
+      "time": "2026-10-22 18:05 UTC",
+      "home": "MTA",
+      "away": "RMB",
+      "venue": "Aleksandar Nikolic Hall",
+      "neutral": true,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-67",
+      "date": "2026-10-22",
+      "time": "2026-10-22 18:15 UTC",
+      "home": "PAO",
+      "away": "KBA",
+      "venue": "Telekom Center Athens",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-63",
+      "date": "2026-10-22",
+      "time": "2026-10-22 18:30 UTC",
+      "home": "MIL",
+      "away": "BAR",
+      "venue": "Unipol Forum",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-66",
+      "date": "2026-10-22",
+      "time": "2026-10-22 18:45 UTC",
+      "home": "PAR",
+      "away": "CZV",
+      "venue": "Belgrade Arena",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-68",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "home": "ZAL",
+      "away": "ASV",
+      "venue": "Zalgirio Arena",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-70",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:15 UTC",
+      "home": "OLY",
+      "away": "FBT",
+      "venue": "Sunel Arena",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    },
+    {
+      "id": "el-E2026-69",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:45 UTC",
+      "home": "PBB",
+      "away": "VBC",
+      "venue": "Adidas Arena",
+      "neutral": false,
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "round": 7
+    }
+  ],
+  "top14_teams": {
+    "toulouse": {
+      "name": "Stade Toulousain",
+      "rank": 1,
+      "pts": 24,
+      "gp": 6,
+      "w": 5,
+      "d": 0,
+      "l": 1,
+      "pf": 197,
+      "pa": 124,
+      "form": "W-W-W-W-W"
+    },
+    "pau": {
+      "name": "Section Paloise",
+      "rank": 2,
+      "pts": 22,
+      "gp": 6,
+      "w": 5,
+      "d": 0,
+      "l": 1,
+      "pf": 239,
+      "pa": 181,
+      "form": "W-L-W-W-W"
+    },
+    "bordeaux": {
+      "name": "Union Bordeaux-Bègles",
+      "rank": 3,
+      "pts": 19,
+      "gp": 6,
+      "w": 4,
+      "d": 0,
+      "l": 2,
+      "pf": 215,
+      "pa": 151,
+      "form": "L-W-L-W-W"
+    },
+    "la_rochelle": {
+      "name": "Stade Rochelais",
+      "rank": 4,
+      "pts": 18,
+      "gp": 6,
+      "w": 4,
+      "d": 0,
+      "l": 2,
+      "pf": 144,
+      "pa": 135,
+      "form": "W-L-L-W-W"
+    },
+    "bayonne": {
+      "name": "Aviron Bayonnais",
+      "rank": 5,
+      "pts": 17,
+      "gp": 6,
+      "w": 4,
+      "d": 0,
+      "l": 2,
+      "pf": 190,
+      "pa": 214,
+      "form": "L-W-W-W-L"
+    },
+    "paris": {
+      "name": "Stade Français Paris",
+      "rank": 6,
+      "pts": 14,
+      "gp": 6,
+      "w": 3,
+      "d": 0,
+      "l": 3,
+      "pf": 147,
+      "pa": 158,
+      "form": "L-L-W-L-W"
+    },
+    "montpellier": {
+      "name": "Montpellier Hérault Rugby",
+      "rank": 7,
+      "pts": 14,
+      "gp": 6,
+      "w": 3,
+      "d": 0,
+      "l": 3,
+      "pf": 163,
+      "pa": 122,
+      "form": "W-W-L-W-L"
+    },
+    "lyon": {
+      "name": "LOU Rugby",
+      "rank": 8,
+      "pts": 14,
+      "gp": 6,
+      "w": 3,
+      "d": 0,
+      "l": 3,
+      "pf": 193,
+      "pa": 202,
+      "form": "W-W-L-L-L"
+    },
+    "perpignan": {
+      "name": "USA Perpignan",
+      "rank": 9,
+      "pts": 13,
+      "gp": 6,
+      "w": 3,
+      "d": 0,
+      "l": 3,
+      "pf": 166,
+      "pa": 199,
+      "form": "W-L-W-L-W"
+    },
+    "toulon": {
+      "name": "RC Toulon",
+      "rank": 10,
+      "pts": 12,
+      "gp": 6,
+      "w": 2,
+      "d": 0,
+      "l": 4,
+      "pf": 130,
+      "pa": 130,
+      "form": "L-L-W-L-W"
+    },
+    "clermont": {
+      "name": "ASM Clermont",
+      "rank": 11,
+      "pts": 11,
+      "gp": 6,
+      "w": 2,
+      "d": 0,
+      "l": 4,
+      "pf": 140,
+      "pa": 169,
+      "form": "W-L-W-L-L"
+    },
+    "racing92": {
+      "name": "Racing 92",
+      "rank": 12,
+      "pts": 10,
+      "gp": 6,
+      "w": 2,
+      "d": 0,
+      "l": 4,
+      "pf": 143,
+      "pa": 196,
+      "form": "L-W-L-W-L"
+    },
+    "castres": {
+      "name": "Castres Olympique",
+      "rank": 13,
+      "pts": 9,
+      "gp": 6,
+      "w": 2,
+      "d": 0,
+      "l": 4,
+      "pf": 126,
+      "pa": 153,
+      "form": "L-W-L-L-L"
+    },
+    "vannes": {
+      "name": "RC Vannes",
+      "rank": 14,
+      "pts": 1,
+      "gp": 6,
+      "w": 0,
+      "d": 0,
+      "l": 6,
+      "pf": 117,
+      "pa": 176,
+      "form": "L-L-L-L-L"
+    }
+  },
+  "top14_fixtures": [
+    {
+      "id": "top14-11867",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:35 UTC",
+      "home": "toulouse",
+      "away": "perpignan",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "top14-11861",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:35 UTC",
+      "home": "bayonne",
+      "away": "lyon",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11861-bayonne-lyon",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "top14-11862",
+      "date": "2026-10-24",
+      "time": "2026-10-24 12:30 UTC",
+      "home": "vannes",
+      "away": "clermont",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "top14-11863",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:35 UTC",
+      "home": "castres",
+      "away": "paris",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11863-castres-paris",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "top14-11865",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:35 UTC",
+      "home": "racing92",
+      "away": "montpellier",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11865-racing-92-montpellier",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "top14-11866",
+      "date": "2026-10-24",
+      "time": "2026-10-24 19:00 UTC",
+      "home": "toulon",
+      "away": "pau",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "top14-11864",
+      "date": "2026-10-25",
+      "time": "2026-10-25 20:05 UTC",
+      "home": "la_rochelle",
+      "away": "bordeaux",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    }
+  ],
+  "prod2_teams": {
+    "oyonnax": {
+      "name": "Oyonnax Rugby",
+      "rank": 1,
+      "pts": 33,
+      "gp": 7,
+      "w": 7,
+      "d": 0,
+      "l": 0,
+      "pf": 313,
+      "pa": 154,
+      "form": "W-W-W-W-W"
+    },
+    "provence": {
+      "name": "Provence Rugby",
+      "rank": 2,
+      "pts": 29,
+      "gp": 7,
+      "w": 7,
+      "d": 0,
+      "l": 0,
+      "pf": 222,
+      "pa": 158,
+      "form": "W-W-W-W-W"
+    },
+    "grenoble": {
+      "name": "FC Grenoble Rugby",
+      "rank": 3,
+      "pts": 22,
+      "gp": 7,
+      "w": 5,
+      "d": 0,
+      "l": 2,
+      "pf": 213,
+      "pa": 176,
+      "form": "L-W-W-W-W"
+    },
+    "brive": {
+      "name": "CA Brive",
+      "rank": 4,
+      "pts": 21,
+      "gp": 7,
+      "w": 5,
+      "d": 0,
+      "l": 2,
+      "pf": 206,
+      "pa": 164,
+      "form": "W-W-W-L-L"
+    },
+    "biarritz": {
+      "name": "Biarritz Olympique PB",
+      "rank": 5,
+      "pts": 20,
+      "gp": 7,
+      "w": 4,
+      "d": 1,
+      "l": 2,
+      "pf": 213,
+      "pa": 191,
+      "form": "W-W-W-L-D"
+    },
+    "dax": {
+      "name": "US Dax",
+      "rank": 6,
+      "pts": 19,
+      "gp": 7,
+      "w": 4,
+      "d": 0,
+      "l": 3,
+      "pf": 269,
+      "pa": 264,
+      "form": "W-L-W-L-W"
+    },
+    "angouleme": {
+      "name": "Soyaux-Angoulême XV",
+      "rank": 7,
+      "pts": 17,
+      "gp": 7,
+      "w": 3,
+      "d": 1,
+      "l": 3,
+      "pf": 220,
+      "pa": 180,
+      "form": "W-L-W-L-D"
+    },
+    "montauban": {
+      "name": "US Montauban",
+      "rank": 8,
+      "pts": 17,
+      "gp": 7,
+      "w": 4,
+      "d": 0,
+      "l": 3,
+      "pf": 182,
+      "pa": 214,
+      "form": "L-W-L-W-L"
+    },
+    "aurillac": {
+      "name": "Stade Aurillacois",
+      "rank": 9,
+      "pts": 16,
+      "gp": 7,
+      "w": 3,
+      "d": 0,
+      "l": 4,
+      "pf": 240,
+      "pa": 254,
+      "form": "L-L-L-W-W"
+    },
+    "agen": {
+      "name": "SU Agen",
+      "rank": 10,
+      "pts": 15,
+      "gp": 7,
+      "w": 3,
+      "d": 0,
+      "l": 4,
+      "pf": 189,
+      "pa": 206,
+      "form": "W-L-L-W-W"
+    },
+    "valence": {
+      "name": "Valence Romans",
+      "rank": 11,
+      "pts": 13,
+      "gp": 7,
+      "w": 2,
+      "d": 0,
+      "l": 5,
+      "pf": 192,
+      "pa": 190,
+      "form": "L-L-L-W-L"
+    },
+    "colomiers": {
+      "name": "Colomiers Rugby",
+      "rank": 12,
+      "pts": 12,
+      "gp": 7,
+      "w": 2,
+      "d": 0,
+      "l": 5,
+      "pf": 220,
+      "pa": 207,
+      "form": "L-W-L-L-W"
+    },
+    "nice": {
+      "name": "Nissa Rugby",
+      "rank": 13,
+      "pts": 11,
+      "gp": 7,
+      "w": 2,
+      "d": 0,
+      "l": 5,
+      "pf": 171,
+      "pa": 213,
+      "form": "L-L-L-W-L"
+    },
+    "beziers": {
+      "name": "AS Béziers Hérault",
+      "rank": 14,
+      "pts": 9,
+      "gp": 7,
+      "w": 2,
+      "d": 0,
+      "l": 5,
+      "pf": 147,
+      "pa": 240,
+      "form": "W-L-W-L-L"
+    },
+    "narbonne": {
+      "name": "RC Narbonnais",
+      "rank": 15,
+      "pts": 9,
+      "gp": 7,
+      "w": 2,
+      "d": 0,
+      "l": 5,
+      "pf": 186,
+      "pa": 296,
+      "form": "L-W-L-L-L"
+    },
+    "nevers": {
+      "name": "USON Nevers",
+      "rank": 16,
+      "pts": 4,
+      "gp": 7,
+      "w": 0,
+      "d": 0,
+      "l": 7,
+      "pf": 146,
+      "pa": 222,
+      "form": "L-L-L-L-L"
+    }
+  },
+  "prod2_fixtures": [
+    {
+      "id": "prod2-12068",
+      "date": "2026-10-22",
+      "time": "2026-10-22 19:00 UTC",
+      "home": "montauban",
+      "away": "oyonnax",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "prod2-12063",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:30 UTC",
+      "home": "agen",
+      "away": "nice",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "prod2-12064",
+      "date": "2026-10-23",
+      "time": "2026-10-23 19:00 UTC",
+      "home": "provence",
+      "away": "beziers",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "prod2-12065",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:30 UTC",
+      "home": "angouleme",
+      "away": "dax",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "prod2-12066",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:30 UTC",
+      "home": "aurillac",
+      "away": "nevers",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "prod2-12069",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "home": "narbonne",
+      "away": "brive",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "prod2-12070",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:30 UTC",
+      "home": "valence",
+      "away": "colomiers",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "prod2-12067",
+      "date": "2026-10-23",
+      "time": "2026-10-23 19:00 UTC",
+      "home": "grenoble",
+      "away": "biarritz",
+      "url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    }
+  ],
+  "urc_teams": {
+    "EDI": {
+      "name": "Edinburgh Rugby",
+      "gp": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "pf": 80,
+      "pa": 54
+    },
+    "GLA": {
+      "name": "Glasgow Warriors",
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "pf": 95,
+      "pa": 72
+    },
+    "BUL": {
+      "name": "Vodacom Bulls",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 126,
+      "pa": 54
+    },
+    "STO": {
+      "name": "DHL Stormers",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 81,
+      "pa": 54
+    },
+    "SHA": {
+      "name": "Hollywoodbets Sharks",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 89,
+      "pa": 83
+    },
+    "CAR": {
+      "name": "Cardiff Rugby",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 66,
+      "pa": 71
+    },
+    "LIO": {
+      "name": "10bet Lions",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 77,
+      "pa": 102
+    },
+    "DRA": {
+      "name": "Dragons RFC",
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "pf": 88,
+      "pa": 83
+    },
+    "MUN": {
+      "name": "Munster Rugby",
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "pf": 72,
+      "pa": 74
+    },
+    "LEI": {
+      "name": "Leinster Rugby",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 75,
+      "pa": 58
+    },
+    "ULS": {
+      "name": "Ulster Rugby",
+      "gp": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "pf": 88,
+      "pa": 93
+    },
+    "SCA": {
+      "name": "Scarlets",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 68,
+      "pa": 85
+    },
+    "OSP": {
+      "name": "Ospreys",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 81,
+      "pa": 107
+    },
+    "CON": {
+      "name": "Connacht Rugby",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 56,
+      "pa": 84
+    },
+    "BEN": {
+      "name": "Benetton Rugby",
+      "gp": 3,
+      "w": 0,
+      "d": 1,
+      "l": 2,
+      "pf": 64,
+      "pa": 68
+    },
+    "ZEB": {
+      "name": "Zebre Parma",
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "pf": 52,
+      "pa": 116
+    }
+  },
+  "urc_r4_fixtures": [
+    {
+      "id": "urc-292608",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:45 UTC",
+      "home": "CAR",
+      "away": "SHA",
+      "venue": "Cardiff Arms Park",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292609",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:45 UTC",
+      "home": "CON",
+      "away": "ZEB",
+      "venue": "Dexcom Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292610",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:45 UTC",
+      "home": "EDI",
+      "away": "LIO",
+      "venue": "Hive Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292611",
+      "date": "2026-10-24",
+      "time": "2026-10-24 11:45 UTC",
+      "home": "BUL",
+      "away": "ULS",
+      "venue": "Loftus Versfeld",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292612",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:00 UTC",
+      "home": "STO",
+      "away": "SCA",
+      "venue": "DHL Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292613",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:00 UTC",
+      "home": "BEN",
+      "away": "GLA",
+      "venue": "Stadio Monigo",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292614",
+      "date": "2026-10-24",
+      "time": "2026-10-24 17:00 UTC",
+      "home": "LEI",
+      "away": "MUN",
+      "venue": "Aviva Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292615",
+      "date": "2026-10-24",
+      "time": "2026-10-24 18:00 UTC",
+      "home": "OSP",
+      "away": "DRA",
+      "venue": "St Helen's",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    }
+  ],
+  "ehf_teams": {
+    "veszprem": {
+      "name": "One Veszprém HC",
+      "group": "A",
+      "gp": 5,
+      "w": 5,
+      "d": 0,
+      "l": 0,
+      "gf": 185,
+      "ga": 146,
+      "pts": 10
+    },
+    "fuchse": {
+      "name": "Füchse Berlin",
+      "group": "A",
+      "gp": 5,
+      "w": 3,
+      "d": 0,
+      "l": 2,
+      "gf": 184,
+      "ga": 172,
+      "pts": 6
+    },
+    "porto": {
+      "name": "FC Porto",
+      "group": "A",
+      "gp": 5,
+      "w": 1,
+      "d": 1,
+      "l": 3,
+      "gf": 158,
+      "ga": 173,
+      "pts": 3
+    },
+    "partizan": {
+      "name": "RK Partizan AdmiralBet",
+      "group": "A",
+      "gp": 5,
+      "w": 0,
+      "d": 1,
+      "l": 4,
+      "gf": 148,
+      "ga": 184,
+      "pts": 1
+    },
+    "plock": {
+      "name": "Orlen Wisla Plock",
+      "group": "B",
+      "gp": 4,
+      "w": 3,
+      "d": 0,
+      "l": 1,
+      "gf": 115,
+      "ga": 108,
+      "pts": 6
+    },
+    "nantes": {
+      "name": "HBC Nantes",
+      "group": "B",
+      "gp": 5,
+      "w": 3,
+      "d": 0,
+      "l": 2,
+      "gf": 142,
+      "ga": 143,
+      "pts": 6
+    },
+    "melsungen": {
+      "name": "MT Melsungen",
+      "group": "B",
+      "gp": 4,
+      "w": 2,
+      "d": 0,
+      "l": 2,
+      "gf": 110,
+      "ga": 112,
+      "pts": 4
+    },
+    "vardar": {
+      "name": "HC Vardar 1961",
+      "group": "B",
+      "gp": 5,
+      "w": 1,
+      "d": 0,
+      "l": 4,
+      "gf": 154,
+      "ga": 158,
+      "pts": 2
+    },
+    "aalborg": {
+      "name": "Aalborg Håndbold",
+      "group": "C",
+      "gp": 5,
+      "w": 4,
+      "d": 1,
+      "l": 0,
+      "gf": 170,
+      "ga": 145,
+      "pts": 9
+    },
+    "psg": {
+      "name": "Paris Saint-Germain",
+      "group": "C",
+      "gp": 5,
+      "w": 3,
+      "d": 1,
+      "l": 1,
+      "gf": 182,
+      "ga": 157,
+      "pts": 7
+    },
+    "zagreb": {
+      "name": "HC Zagreb",
+      "group": "C",
+      "gp": 5,
+      "w": 2,
+      "d": 0,
+      "l": 3,
+      "gf": 146,
+      "ga": 158,
+      "pts": 4
+    },
+    "celje": {
+      "name": "RK Celje Pivovarna Laško",
+      "group": "C",
+      "gp": 5,
+      "w": 0,
+      "d": 0,
+      "l": 5,
+      "gf": 150,
+      "ga": 188,
+      "pts": 0
+    },
+    "sporting": {
+      "name": "Sporting Clube de Portugal",
+      "group": "D",
+      "gp": 4,
+      "w": 3,
+      "d": 1,
+      "l": 0,
+      "gf": 149,
+      "ga": 125,
+      "pts": 7
+    },
+    "gog": {
+      "name": "GOG",
+      "group": "D",
+      "gp": 4,
+      "w": 3,
+      "d": 0,
+      "l": 1,
+      "gf": 145,
+      "ga": 139,
+      "pts": 6
+    },
+    "szeged": {
+      "name": "OTP Bank - PICK Szeged",
+      "group": "D",
+      "gp": 4,
+      "w": 1,
+      "d": 1,
+      "l": 2,
+      "gf": 139,
+      "ga": 136,
+      "pts": 3
+    },
+    "kristianstad": {
+      "name": "IFK Kristianstad",
+      "group": "D",
+      "gp": 4,
+      "w": 0,
+      "d": 0,
+      "l": 4,
+      "gf": 122,
+      "ga": 155,
+      "pts": 0
+    },
+    "barca": {
+      "name": "Barça",
+      "group": "E",
+      "gp": 4,
+      "w": 4,
+      "d": 0,
+      "l": 0,
+      "gf": 137,
+      "ga": 104,
+      "pts": 8
+    },
+    "aarhus": {
+      "name": "SAH - Aarhus",
+      "group": "E",
+      "gp": 5,
+      "w": 2,
+      "d": 1,
+      "l": 2,
+      "gf": 150,
+      "ga": 163,
+      "pts": 5
+    },
+    "dinamo": {
+      "name": "Dinamo Bucuresti",
+      "group": "E",
+      "gp": 5,
+      "w": 1,
+      "d": 1,
+      "l": 3,
+      "gf": 134,
+      "ga": 145,
+      "pts": 3
+    },
+    "montpellier": {
+      "name": "Montpellier Handball",
+      "group": "E",
+      "gp": 4,
+      "w": 1,
+      "d": 0,
+      "l": 3,
+      "gf": 116,
+      "ga": 125,
+      "pts": 2
+    },
+    "magdeburg": {
+      "name": "SC Magdeburg",
+      "group": "F",
+      "gp": 4,
+      "w": 4,
+      "d": 0,
+      "l": 0,
+      "gf": 141,
+      "ga": 108,
+      "pts": 8
+    },
+    "kielce": {
+      "name": "Industria Kielce",
+      "group": "F",
+      "gp": 5,
+      "w": 3,
+      "d": 0,
+      "l": 2,
+      "gf": 155,
+      "ga": 153,
+      "pts": 6
+    },
+    "kriens": {
+      "name": "HC Kriens-Luzern",
+      "group": "F",
+      "gp": 5,
+      "w": 2,
+      "d": 0,
+      "l": 3,
+      "gf": 158,
+      "ga": 161,
+      "pts": 4
+    },
+    "kolstad": {
+      "name": "Kolstad Håndball",
+      "group": "F",
+      "gp": 4,
+      "w": 0,
+      "d": 0,
+      "l": 4,
+      "gf": 111,
+      "ga": 143,
+      "pts": 0
+    }
+  },
+  "ehf_r5_fixtures": [
+    {
+      "id": "ehfcl-202711020101043",
+      "ehf_match_id": "202711020101043",
+      "date": "2026-10-22",
+      "time_local": "18:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T16:45:00Z",
+      "home": "szeged",
+      "away": "gog",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/",
+      "venue": null,
+      "round": 5
+    },
+    {
+      "id": "ehfcl-202711020101019",
+      "ehf_match_id": "202711020101019",
+      "date": "2026-10-22",
+      "time_local": "18:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T16:45:00Z",
+      "home": "melsungen",
+      "away": "plock",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/",
+      "venue": null,
+      "round": 5
+    },
+    {
+      "id": "ehfcl-202711020101049",
+      "ehf_match_id": "202711020101049",
+      "date": "2026-10-22",
+      "time_local": "20:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T18:45:00Z",
+      "home": "barca",
+      "away": "montpellier",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
+      "venue": null,
+      "round": 5
+    },
+    {
+      "id": "ehfcl-202711020101041",
+      "ehf_match_id": "202711020101041",
+      "date": "2026-10-22",
+      "time_local": "20:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T18:45:00Z",
+      "home": "sporting",
+      "away": "kristianstad",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
+      "venue": null,
+      "round": 5
+    },
+    {
+      "id": "ehfcl-202711020101064",
+      "ehf_match_id": "202711020101064",
+      "date": "2026-10-22",
+      "time_local": "20:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T18:45:00Z",
+      "home": "kolstad",
+      "away": "magdeburg",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/",
+      "venue": null,
+      "round": 5
+    }
+  ],
+  "superlega_teams": {
+    "cisterna": {
+      "name": "Cisterna Volley",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "sw": 3,
+      "sl": 0,
+      "pf": 79,
+      "pa": 56,
+      "url": "https://www.legavolley.it/team/6859"
+    },
+    "piacenza": {
+      "name": "Gas Sales Bluenergy Piacenza",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "sw": 3,
+      "sl": 0,
+      "pf": 75,
+      "pa": 56,
+      "url": "https://www.legavolley.it/team/6861"
+    },
+    "trentino": {
+      "name": "Itas Trentino",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "sw": 3,
+      "sl": 0,
+      "pf": 75,
+      "pa": 61,
+      "url": "https://www.legavolley.it/team/6862"
+    },
+    "civitanova": {
+      "name": "Cucine Lube Civitanova",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "sw": 3,
+      "sl": 0,
+      "pf": 78,
+      "pa": 65,
+      "url": "https://www.legavolley.it/team/6860"
+    },
+    "pordenone": {
+      "name": "Tinet Prata di Pordenone",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "sw": 3,
+      "sl": 1,
+      "pf": 94,
+      "pa": 91,
+      "url": "https://www.legavolley.it/team/6897"
+    },
+    "perugia": {
+      "name": "Sir Susa Scai Perugia",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "sw": 3,
+      "sl": 2,
+      "pf": 114,
+      "pa": 95,
+      "url": "https://www.legavolley.it/team/6865"
+    },
+    "cuneo": {
+      "name": "Acqua Sant'Anna Cuneo",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "sw": 2,
+      "sl": 3,
+      "pf": 95,
+      "pa": 114,
+      "url": "https://www.legavolley.it/team/6863"
+    },
+    "monza": {
+      "name": "Vero Volley Monza",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "sw": 1,
+      "sl": 3,
+      "pf": 91,
+      "pa": 94,
+      "url": "https://www.legavolley.it/team/6868"
+    },
+    "verona": {
+      "name": "Rana Verona",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "sw": 0,
+      "sl": 3,
+      "pf": 65,
+      "pa": 78,
+      "url": "https://www.legavolley.it/team/6864"
+    },
+    "modena": {
+      "name": "Valsa Group Modena",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "sw": 0,
+      "sl": 3,
+      "pf": 61,
+      "pa": 75,
+      "url": "https://www.legavolley.it/team/6867"
+    },
+    "padova": {
+      "name": "Pallavolo Padova",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "sw": 0,
+      "sl": 3,
+      "pf": 56,
+      "pa": 75,
+      "url": "https://www.legavolley.it/team/6866"
+    },
+    "milano": {
+      "name": "Allianz Milano",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "sw": 0,
+      "sl": 3,
+      "pf": 56,
+      "pa": 79,
+      "url": "https://www.legavolley.it/team/6858"
+    }
+  },
+  "superlega_fixtures": [
+    {
+      "id": "superlega-r2-8-trentino-cisterna",
+      "date": "2026-10-25",
+      "time": "2026-10-25 16:00 UTC",
+      "home": "trentino",
+      "away": "cisterna",
+      "venue": "BTS Arena, Trento",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "superlega-r2-7-perugia-pordenone",
+      "date": "2026-10-25",
+      "time": "2026-10-25 17:00 UTC",
+      "home": "perugia",
+      "away": "pordenone",
+      "venue": "Pala Barton Energy, Perugia",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "superlega-r2-9-piacenza-modena",
+      "date": "2026-10-25",
+      "time": "2026-10-25 17:00 UTC",
+      "home": "piacenza",
+      "away": "modena",
+      "venue": "PalaBancaSport, Piacenza",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "superlega-r2-10-civitanova-padova",
+      "date": "2026-10-25",
+      "time": "2026-10-25 17:00 UTC",
+      "home": "civitanova",
+      "away": "padova",
+      "venue": "Eurosuole Forum, Civitanova Marche",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "superlega-r2-12-monza-verona",
+      "date": "2026-10-25",
+      "time": "2026-10-25 17:00 UTC",
+      "home": "monza",
+      "away": "verona",
+      "venue": "OpiquadArena, Monza",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "superlega-r2-11-milano-cuneo",
+      "date": "2026-10-25",
+      "time": "2026-10-25 18:00 UTC",
+      "home": "milano",
+      "away": "cuneo",
+      "venue": "Allianz Cloud (Palalido), Milano",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    }
+  ],
+  "aflw_teams": {
+    "NMFC": {
+      "name": "North Melbourne Tasmanian Kangaroos",
+      "gp": 10,
+      "pts": 36,
+      "pct": 251.9,
+      "rank": 1
+    },
+    "GEEL": {
+      "name": "Geelong Cats",
+      "gp": 10,
+      "pts": 36,
+      "pct": 167.2,
+      "rank": 2
+    },
+    "MELB": {
+      "name": "Melbourne Demons",
+      "gp": 10,
+      "pts": 32,
+      "pct": 177.2,
+      "rank": 3
+    },
+    "WB": {
+      "name": "Western Bulldogs",
+      "gp": 10,
+      "pts": 32,
+      "pct": 140.9,
+      "rank": 4
+    },
+    "HAW": {
+      "name": "Hawthorn Hawks",
+      "gp": 10,
+      "pts": 28,
+      "pct": 135.4,
+      "rank": 5
+    },
+    "BL": {
+      "name": "Brisbane Lions",
+      "gp": 10,
+      "pts": 28,
+      "pct": 131.8,
+      "rank": 6
+    },
+    "ADEL": {
+      "name": "Adelaide Crows",
+      "gp": 10,
+      "pts": 24,
+      "pct": 124.6,
+      "rank": 7
+    },
+    "ESS": {
+      "name": "Essendon Bombers",
+      "gp": 10,
+      "pts": 24,
+      "pct": 108.5,
+      "rank": 8
+    },
+    "FRE": {
+      "name": "Fremantle Dockers",
+      "gp": 10,
+      "pts": 20,
+      "pct": 99.4,
+      "rank": 9
+    },
+    "PORT": {
+      "name": "Port Adelaide Power",
+      "gp": 10,
+      "pts": 20,
+      "pct": 96.2,
+      "rank": 10
+    },
+    "SYD": {
+      "name": "Sydney Swans",
+      "gp": 10,
+      "pts": 20,
+      "pct": 94.8,
+      "rank": 11
+    },
+    "CARL": {
+      "name": "Carlton Blues",
+      "gp": 10,
+      "pts": 16,
+      "pct": 84.3,
+      "rank": 12
+    },
+    "STK": {
+      "name": "St Kilda Saints",
+      "gp": 10,
+      "pts": 16,
+      "pct": 81.7,
+      "rank": 13
+    },
+    "RICH": {
+      "name": "Richmond Tigers",
+      "gp": 10,
+      "pts": 12,
+      "pct": 76.5,
+      "rank": 14
+    },
+    "WCE": {
+      "name": "West Coast Eagles",
+      "gp": 10,
+      "pts": 12,
+      "pct": 72.1,
+      "rank": 15
+    },
+    "GWS": {
+      "name": "GWS Giants",
+      "gp": 10,
+      "pts": 8,
+      "pct": 66.8,
+      "rank": 16
+    },
+    "COLL": {
+      "name": "Collingwood Magpies",
+      "gp": 10,
+      "pts": 4,
+      "pct": 58.4,
+      "rank": 17
+    },
+    "GCFC": {
+      "name": "Gold Coast Suns",
+      "gp": 10,
+      "pts": 4,
+      "pct": 52.9,
+      "rank": 18
+    }
+  },
+  "aflw_fixtures": [
+    {
+      "id": "aflw-r11-1",
+      "date": "2026-10-23",
+      "time": "2026-10-23 08:15 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "Kinetic Stadium, Frankston",
+      "home": "HAW",
+      "away": "MELB",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-2",
+      "date": "2026-10-24",
+      "time": "2026-10-24 02:05 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "Arden Street Oval, Melbourne",
+      "home": "NMFC",
+      "away": "ADEL",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-3",
+      "date": "2026-10-24",
+      "time": "2026-10-24 04:05 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "GMHBA Stadium, Geelong",
+      "home": "GEEL",
+      "away": "BL",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-4",
+      "date": "2026-10-24",
+      "time": "2026-10-24 06:05 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "Mission Whitten Oval, Footscray",
+      "home": "WB",
+      "away": "ESS",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-5",
+      "date": "2026-10-24",
+      "time": "2026-10-24 08:15 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "Alberton Oval, Adelaide",
+      "home": "PORT",
+      "away": "FRE",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-6",
+      "date": "2026-10-25",
+      "time": "2026-10-25 02:05 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "Henson Park, Sydney",
+      "home": "SYD",
+      "away": "CARL",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-7",
+      "date": "2026-10-25",
+      "time": "2026-10-25 04:05 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "RSEA Park, Moorabbin",
+      "home": "STK",
+      "away": "RICH",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-8",
+      "date": "2026-10-25",
+      "time": "2026-10-25 06:05 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "Victoria Park, Melbourne",
+      "home": "COLL",
+      "away": "GWS",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    },
+    {
+      "id": "aflw-r11-9",
+      "date": "2026-10-25",
+      "time": "2026-10-25 08:05 UTC",
+      "competition": "2026 NAB AFLW Premiership — Round 11",
+      "venue": "Mineral Resources Park, Perth",
+      "home": "WCE",
+      "away": "GCFC",
+      "official_url": "https://www.afl.com.au/aflw",
+      "olbg_url": "https://www.olbg.com/betting-tips/Australian_Rules/27"
+    }
+  ],
+  "rlwc_teams": {
+    "AUS": {
+      "name": "Australia",
+      "irl_rank": 1,
+      "irl_pct": 100,
+      "r1_pf": 24,
+      "r1_pa": 22,
+      "r1_note": "Beat New Zealand 24-22 at Allianz Stadium, Sydney (15 Oct)"
+    },
+    "NZL": {
+      "name": "New Zealand",
+      "irl_rank": 2,
+      "irl_pct": 82,
+      "r1_pf": 22,
+      "r1_pa": 24,
+      "r1_note": "Edged 22-24 by Australia at Allianz Stadium, Sydney (15 Oct)"
+    },
+    "ENG": {
+      "name": "England",
+      "irl_rank": 3,
+      "irl_pct": 70,
+      "r1_pf": 12,
+      "r1_pa": 30,
+      "r1_note": "Lost 12-30 to Tonga at HBF Park, Perth (17 Oct)"
+    },
+    "SAM": {
+      "name": "Samoa",
+      "irl_rank": 4,
+      "irl_pct": 56,
+      "r1_pf": 78,
+      "r1_pa": 4,
+      "r1_note": "Defeated France 78-4 at CommBank Stadium, Sydney (16 Oct)"
+    },
+    "TON": {
+      "name": "Tonga",
+      "irl_rank": 5,
+      "irl_pct": 54,
+      "r1_pf": 30,
+      "r1_pa": 12,
+      "r1_note": "Beat England 30-12 at HBF Park, Perth (17 Oct)"
+    },
+    "PNG": {
+      "name": "Papua New Guinea",
+      "irl_rank": 6,
+      "irl_pct": 47,
+      "r1_pf": 42,
+      "r1_pa": 18,
+      "r1_note": "Beat Lebanon 42-18 in Port Moresby (17 Oct)"
+    },
+    "FIJ": {
+      "name": "Fiji",
+      "irl_rank": 7,
+      "irl_pct": 34,
+      "r1_pf": 40,
+      "r1_pa": 12,
+      "r1_note": "Beat Cook Islands 40-12 in Newcastle (18 Oct)"
+    },
+    "COK": {
+      "name": "Cook Islands",
+      "irl_rank": 8,
+      "irl_pct": 24,
+      "r1_pf": 12,
+      "r1_pa": 40,
+      "r1_note": "Lost 12-40 to Fiji in Newcastle (18 Oct)"
+    },
+    "FRA": {
+      "name": "France",
+      "irl_rank": 11,
+      "irl_pct": 21,
+      "r1_pf": 4,
+      "r1_pa": 78,
+      "r1_note": "Lost 4-78 to Samoa in Sydney (16 Oct)"
+    },
+    "LEB": {
+      "name": "Lebanon",
+      "irl_rank": 23,
+      "irl_pct": 7,
+      "r1_pf": 18,
+      "r1_pa": 42,
+      "r1_note": "Lost 18-42 to Papua New Guinea in Port Moresby (17 Oct)"
+    }
+  },
+  "rlwc_fixtures": [
+    {
+      "id": "rlwc-r2-ton-leb",
+      "date": "2026-10-23",
+      "time": "2026-10-23 09:05 UTC",
+      "competition": "2026 Men's Rugby League World Cup — Round 2",
+      "venue": "CommBank Stadium, Sydney",
+      "home": "TON",
+      "away": "LEB",
+      "neutral": true,
+      "official_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/tonga-v-lebanon/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    },
+    {
+      "id": "rlwc-r2-png-sam",
+      "date": "2026-10-24",
+      "time": "2026-10-24 04:25 UTC",
+      "competition": "2026 Men's Rugby League World Cup — Round 2",
+      "venue": "Santos National Football Stadium, Port Moresby",
+      "home": "PNG",
+      "away": "SAM",
+      "neutral": false,
+      "official_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/papua-new-guinea-v-samoa/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    },
+    {
+      "id": "rlwc-r2-eng-fra",
+      "date": "2026-10-24",
+      "time": "2026-10-24 06:35 UTC",
+      "competition": "2026 Men's Rugby League World Cup — Round 2",
+      "venue": "HBF Park, Perth",
+      "home": "ENG",
+      "away": "FRA",
+      "neutral": true,
+      "official_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/england-v-france/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    },
+    {
+      "id": "rlwc-r2-nzl-cok",
+      "date": "2026-10-25",
+      "time": "2026-10-25 05:05 UTC",
+      "competition": "2026 Men's Rugby League World Cup — Round 2",
+      "venue": "One NZ Stadium, Christchurch",
+      "home": "NZL",
+      "away": "COK",
+      "neutral": false,
+      "official_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/new-zealand-v-cook-islands/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    },
+    {
+      "id": "rlwc-r2-aus-fij",
+      "date": "2026-10-25",
+      "time": "2026-10-25 09:05 UTC",
+      "competition": "2026 Men's Rugby League World Cup — Round 2",
+      "venue": "Suncorp Stadium, Brisbane",
+      "home": "AUS",
+      "away": "FIJ",
+      "neutral": false,
+      "official_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    }
+  ],
+  "lol_teams": {
+    "GEN": {
+      "name": "Gen.G Esports",
+      "region": "LCK",
+      "seed": 1,
+      "qual": "LCK 2026 Season Champion",
+      "roster": "Kiin, Canyon, Chovy, Ruler, Duro"
+    },
+    "HLE": {
+      "name": "Hanwha Life Esports",
+      "region": "LCK",
+      "seed": 2,
+      "qual": "MSI 2026 Champion & LCK Runner-up",
+      "roster": "LCK #2 / MSI 2026 Champion"
+    },
+    "T1": {
+      "name": "T1",
+      "region": "LCK",
+      "seed": 3,
+      "qual": "LCK 2026 #3 Seed",
+      "roster": "LCK #3 Seed"
+    },
+    "DK": {
+      "name": "Dplus KIA",
+      "region": "LCK",
+      "seed": 4,
+      "qual": "LCK 2026 #4 Seed",
+      "roster": "LCK #4 Seed"
+    },
+    "AL": {
+      "name": "Anyone's Legend",
+      "region": "LPL",
+      "seed": 1,
+      "qual": "LPL 2026 Split 3 Champion",
+      "roster": "LPL #1 Seed"
+    },
+    "BLG": {
+      "name": "Bilibili Gaming",
+      "region": "LPL",
+      "seed": 2,
+      "qual": "LPL 2026 Championship Points Winner",
+      "roster": "LPL #2 Seed"
+    },
+    "TES": {
+      "name": "Top Esports",
+      "region": "LPL",
+      "seed": 3,
+      "qual": "LPL Regional Finals #1",
+      "roster": "LPL #3 Seed"
+    },
+    "IG": {
+      "name": "Invictus Gaming",
+      "region": "LPL",
+      "seed": 4,
+      "qual": "LPL Regional Finals #2",
+      "roster": "LPL #4 Seed"
+    },
+    "G2": {
+      "name": "G2 Esports",
+      "region": "LEC",
+      "seed": 1,
+      "qual": "LEC 2026 Summer Champion",
+      "roster": "LEC #1 Seed"
+    },
+    "MKOI": {
+      "name": "Movistar KOI",
+      "region": "LEC",
+      "seed": 2,
+      "qual": "LEC 2026 Summer Runner-up",
+      "roster": "LEC #2 Seed"
+    },
+    "KC": {
+      "name": "Karmine Corp",
+      "region": "LEC",
+      "seed": 3,
+      "qual": "LEC #3 Seed & Worlds Play-In Winner (Los Angeles)",
+      "roster": "kyeahoo (Play-In MVP)"
+    },
+    "TLAW": {
+      "name": "Team Liquid",
+      "region": "LCS",
+      "seed": 1,
+      "qual": "LCS 2026 Summer Champion",
+      "roster": "LCS #1 Seed"
+    },
+    "LYON": {
+      "name": "LYON",
+      "region": "LCS",
+      "seed": 2,
+      "qual": "LCS 2026 Summer Runner-up",
+      "roster": "LCS #2 Seed"
+    },
+    "TSW": {
+      "name": "Secret Whales",
+      "region": "LCP",
+      "seed": 1,
+      "qual": "LCP 2026 Split 3 Champion",
+      "roster": "LCP #1 Seed"
+    },
+    "CFO": {
+      "name": "CTBC Flying Oyster",
+      "region": "LCP",
+      "seed": 2,
+      "qual": "LCP 2026 Split 3 Runner-up",
+      "roster": "LCP #2 Seed"
+    },
+    "LOS": {
+      "name": "LOS",
+      "region": "CBLOL",
+      "seed": 1,
+      "qual": "CBLOL 2026 Split 2 Champion",
+      "roster": "CBLOL #1 Seed"
+    }
+  },
+  "lol_fixtures": [
+    {
+      "id": "lol-w26-r1-1",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "GEN",
+      "t2": "IG",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    },
+    {
+      "id": "lol-w26-r1-2",
+      "date": "2026-10-23",
+      "time": "2026-10-23 18:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "HLE",
+      "t2": "TES",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    },
+    {
+      "id": "lol-w26-r1-3",
+      "date": "2026-10-23",
+      "time": "2026-10-23 19:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "BLG",
+      "t2": "MKOI",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    },
+    {
+      "id": "lol-w26-r1-4",
+      "date": "2026-10-23",
+      "time": "2026-10-23 20:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "AL",
+      "t2": "KC",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    },
+    {
+      "id": "lol-w26-r1-5",
+      "date": "2026-10-23",
+      "time": "2026-10-23 21:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "G2",
+      "t2": "DK",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    },
+    {
+      "id": "lol-w26-r1-6",
+      "date": "2026-10-23",
+      "time": "2026-10-23 22:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "TLAW",
+      "t2": "CFO",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    },
+    {
+      "id": "lol-w26-r1-7",
+      "date": "2026-10-23",
+      "time": "2026-10-23 23:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "T1",
+      "t2": "LOS",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    },
+    {
+      "id": "lol-w26-r1-8",
+      "date": "2026-10-24",
+      "time": "2026-10-24 00:00 UTC",
+      "competition": "LoL Worlds 2026 — Swiss Stage Round 1 (Bo1)",
+      "venue": "Credit Union of Texas Event Center, Allen, TX",
+      "t1": "TSW",
+      "t2": "LYON",
+      "official_url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "olbg_url": "https://www.olbg.com/betting-tips/Esports/28"
+    }
+  ],
+  "pdc_players": {
+    "Luke Littler": {
+      "rank": 1,
+      "prize_gbp": 3113500
+    },
+    "Luke Humphries": {
+      "rank": 2,
+      "prize_gbp": 1062500
+    },
+    "Gian van Veen": {
+      "rank": 3,
+      "prize_gbp": 1035750
+    },
+    "Gerwyn Price": {
+      "rank": 4,
+      "prize_gbp": 782000
+    },
+    "Jonny Clayton": {
+      "rank": 5,
+      "prize_gbp": 706000
+    },
+    "James Wade": {
+      "rank": 6,
+      "prize_gbp": 681250
+    },
+    "Danny Noppert": {
+      "rank": 7,
+      "prize_gbp": 608500
+    },
+    "Josh Rock": {
+      "rank": 8,
+      "prize_gbp": 606500
+    },
+    "Michael van Gerwen": {
+      "rank": 10,
+      "prize_gbp": 587500
+    },
+    "Nathan Aspinall": {
+      "rank": 11,
+      "prize_gbp": 579500
+    },
+    "Wessel Nijman": {
+      "rank": 12,
+      "prize_gbp": 569500
+    },
+    "Ross Smith": {
+      "rank": 13,
+      "prize_gbp": 567250
+    },
+    "Stephen Bunting": {
+      "rank": 14,
+      "prize_gbp": 566250
+    },
+    "Ryan Searle": {
+      "rank": 15,
+      "prize_gbp": 562250
+    },
+    "Jermaine Wattimena": {
+      "rank": 16,
+      "prize_gbp": 538750
+    },
+    "Chris Dobey": {
+      "rank": 17,
+      "prize_gbp": 534750
+    },
+    "Luke Woodhouse": {
+      "rank": 18,
+      "prize_gbp": 506000
+    },
+    "Krzysztof Ratajski": {
+      "rank": 19,
+      "prize_gbp": 440000
+    },
+    "Dirk van Duijvenbode": {
+      "rank": 20,
+      "prize_gbp": 430500
+    },
+    "Damon Heta": {
+      "rank": 21,
+      "prize_gbp": 410750
+    },
+    "Rob Cross": {
+      "rank": 22,
+      "prize_gbp": 398500
+    },
+    "Ryan Joyce": {
+      "rank": 23,
+      "prize_gbp": 386500
+    },
+    "Martin Schindler": {
+      "rank": 24,
+      "prize_gbp": 386250
+    },
+    "Kevin Doets": {
+      "rank": 25,
+      "prize_gbp": 375250
+    },
+    "Cameron Menzies": {
+      "rank": 26,
+      "prize_gbp": 375000
+    },
+    "Andrew Gilding": {
+      "rank": 27,
+      "prize_gbp": 355750
+    },
+    "Niels Zonneveld": {
+      "rank": 29,
+      "prize_gbp": 281750
+    },
+    "Dave Chisnall": {
+      "rank": 30,
+      "prize_gbp": 281750
+    },
+    "William O'Connor": {
+      "rank": 32,
+      "prize_gbp": 274500
+    },
+    "Niko Springer": {
+      "rank": 36,
+      "prize_gbp": 239750
+    },
+    "Karel Sedlacek": {
+      "rank": 44,
+      "prize_gbp": 177250
+    },
+    "Cristo Reyes": {
+      "rank": 71,
+      "prize_gbp": 95000
+    },
+    "Ritchie Edhouse": {
+      "rank": 33,
+      "prize_gbp": 274500
+    }
+  },
+  "darts_fixtures": [
+    {
+      "id": "pdc-32324",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "Luke Woodhouse",
+      "p2": "Dirk van Duijvenbode",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Woodhouse_vs_Dirk_van_Duijvenbode/15?event_id=32324"
+    },
+    {
+      "id": "pdc-32330",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "Danny Noppert",
+      "p2": "Stephen Bunting",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Danny_Noppert_vs_Stephen_Bunting/15?event_id=32330"
+    },
+    {
+      "id": "pdc-32334",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "Niels Zonneveld",
+      "p2": "Cameron Menzies",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Niels_Zonneveld_vs_Cameron_Menzies/15?event_id=32334"
+    },
+    {
+      "id": "pdc-32325",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "Gerwyn Price",
+      "p2": "Rob Cross",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325"
+    },
+    {
+      "id": "pdc-32322",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "James Wade",
+      "p2": "Damon Heta",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/James_Wade_vs_Damon_Heta/15?event_id=32322"
+    },
+    {
+      "id": "pdc-32337",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "Luke Humphries",
+      "p2": "Ryan Searle",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Humphries_vs_Ryan_Searle/15?event_id=32337"
+    },
+    {
+      "id": "pdc-32323",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "Gian van Veen",
+      "p2": "Andrew Gilding",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323"
+    },
+    {
+      "id": "pdc-32329",
+      "date": "2026-10-22",
+      "time": "2026-10-22 17:00 UTC",
+      "p1": "Ross Smith",
+      "p2": "Karel Sedlacek",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329"
+    },
+    {
+      "id": "pdc-32332",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Ryan Joyce",
+      "p2": "Jermaine Wattimena",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15?event_id=32332"
+    },
+    {
+      "id": "pdc-32333",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Krzysztof Ratajski",
+      "p2": "Dave Chisnall",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Dave_Chisnall/15?event_id=32333"
+    },
+    {
+      "id": "pdc-32327",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Nathan Aspinall",
+      "p2": "Cristo Reyes",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327"
+    },
+    {
+      "id": "pdc-32335",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Jonny Clayton",
+      "p2": "Niko Springer",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335"
+    },
+    {
+      "id": "pdc-32328",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Luke Littler",
+      "p2": "William O'Connor",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328"
+    },
+    {
+      "id": "pdc-32326",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Wessel Nijman",
+      "p2": "Martin Schindler",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Wessel_Nijman_vs_Martin_Schindler/15?event_id=32326"
+    },
+    {
+      "id": "pdc-32331",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Kevin Doets",
+      "p2": "Michael van Gerwen",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331"
+    },
+    {
+      "id": "pdc-32336",
+      "date": "2026-10-23",
+      "time": "2026-10-23 17:00 UTC",
+      "p1": "Josh Rock",
+      "p2": "Chris Dobey",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336"
+    }
+  ],
+  "mlb_teams": {
+    "TB": {
+      "name": "Tampa Bay Rays",
+      "wins": 98,
+      "losses": 64,
+      "runs_scored": 736,
+      "runs_allowed": 650
+    },
+    "MIL": {
+      "name": "Milwaukee Brewers",
+      "wins": 103,
+      "losses": 59,
+      "runs_scored": 832,
+      "runs_allowed": 618
+    }
+  },
+  "mlb_fixtures": [
+    {
+      "id": "mlb-849805",
+      "game_pk": 849805,
+      "official_date": "2026-10-23",
+      "game_date_utc": "2026-10-24T00:00:00Z",
+      "away": "TB",
+      "home": "MIL",
+      "venue": "American Family Field",
+      "description": "World Series Game 1",
+      "human_url": "https://www.mlb.com/gameday/849805"
+    },
+    {
+      "id": "mlb-849802",
+      "game_pk": 849802,
+      "official_date": "2026-10-24",
+      "game_date_utc": "2026-10-25T00:00:00Z",
+      "away": "TB",
+      "home": "MIL",
+      "venue": "American Family Field",
+      "description": "World Series Game 2",
+      "human_url": "https://www.mlb.com/gameday/849802"
+    },
+    {
+      "id": "mlb-849804",
+      "game_pk": 849804,
+      "official_date": "2026-10-26",
+      "game_date_utc": "2026-10-27T00:00:00Z",
+      "away": "MIL",
+      "home": "TB",
+      "venue": "Tropicana Field",
+      "description": "World Series Game 3",
+      "human_url": "https://www.mlb.com/gameday/849804"
+    },
+    {
+      "id": "mlb-849803",
+      "game_pk": 849803,
+      "official_date": "2026-10-27",
+      "game_date_utc": "2026-10-28T00:00:00Z",
+      "away": "MIL",
+      "home": "TB",
+      "venue": "Tropicana Field",
+      "description": "World Series Game 4",
+      "human_url": "https://www.mlb.com/gameday/849803"
+    }
+  ],
+  "f1_drivers": [
+    {
+      "rank": 1,
+      "driver": "Kimi Antonelli",
+      "team": "Mercedes",
+      "points": 340
+    },
+    {
+      "rank": 2,
+      "driver": "George Russell",
+      "team": "Mercedes",
+      "points": 238
+    },
+    {
+      "rank": 3,
+      "driver": "Lewis Hamilton",
+      "team": "Ferrari",
+      "points": 229
+    },
+    {
+      "rank": 4,
+      "driver": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "points": 221
+    },
+    {
+      "rank": 5,
+      "driver": "Charles Leclerc",
+      "team": "Ferrari",
+      "points": 215
+    },
+    {
+      "rank": 6,
+      "driver": "Lando Norris",
+      "team": "McLaren",
+      "points": 201
+    },
+    {
+      "rank": 7,
+      "driver": "Oscar Piastri",
+      "team": "McLaren",
+      "points": 138
+    },
+    {
+      "rank": 8,
+      "driver": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "points": 97
+    }
+  ]
+}

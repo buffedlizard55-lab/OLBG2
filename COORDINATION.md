@@ -1218,7 +1218,7 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 | R2 | Migrate verified model NHL/NBA/URC/EHF inputs from shared `data/inputs/**` into `data/verified/inputs.json` (full-replacement fresh NHL/NBA literals; URC/EHF copied at seed time, EHF 21-Oct fixtures dropped as completed). Shared inputs are **not** edited. | done | `arena/50268b75-olbg2` | `scripts/verified_seed.py`, `scripts/verified_model.py`, `data/verified/**` |
 | R3 | Originate lines on refreshed slate; add fair American odds; featured written predictions only for selections with model probability ≥ 70% **and** fair American price in [−250, +10000] (handicap/total markets used when the moneyline is shorter than −250); ≥30 unique words each, official-source facts per claim. | done | `arena/50268b75-olbg2` | `scripts/verified_model.py`, `data/verified/**`, `verified/**` |
 | R4 | Rebuild `/verified/`, update pipeline tests, verify line by line (no row without official source, 0 broken local links, full suite green). | done | `arena/50268b75-olbg2` | `scripts/verified_build.py`, `verified/**`, `tests/test_verified_pipeline.py` |
-| R5 | Final integration: PR → merge → confirm Pages deploy; record here. | in progress | `arena/50268b75-olbg2` | shared outputs (integration), `COORDINATION.md` |
+| R5 | Final integration: PR → merge → confirm Pages deploy; record here. | done | `arena/50268b75-olbg2` | shared outputs (integration), `COORDINATION.md` |
 
 **Concurrent-session check at claim time:** no open PRs (`gh pr list` empty); `origin/main` = `f8a14b4` (PR #49); all earlier sessions in this file are closed/merged. This session does **not** create, edit or delete: `data/inputs/**`, `data/matches.json`, `data/predictions.json`, `data/flagged.json`, `data/sources.json`, `data/desk/**`, `data/live/**`, `data/survey/**`, `data/refresh/**`, root pages, `site/**`, `live/**`, `survey/**`, `sports/**`, `assets/**`, `scripts/model.py`, `scripts/build_site.py`, `scripts/build.py`, `scripts/engine.py`, `scripts/live_*.py`, `scripts/survey_*.py`, `scripts/official_source_audit.py`, `scripts/integration_audit.py`, other sessions' tests. If root navigation needs a touch it will be requested here instead of edited.
 
@@ -1304,3 +1304,17 @@ band picks, 33 predictions, 18 review items), `/matches.html` renders all 155 ro
 (“155 of 155 rows”), `/verification.html` shows 92 fixture-scoped and 63 competition-scoped sources, and
 `/sports/snooker.html` is live. The site had been frozen since 2026-10-21 05:18Z because the Pages build of the
 PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push to `main`.
+
+### Publish Record — Session `arena/50268b75-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull requests | [#53](https://github.com/buffedlizard55-lab/OLBG2/pull/53) refresh (merged `22d60cb`), [#56](https://github.com/buffedlizard55-lab/OLBG2/pull/56) Minnesota-narrative correction (merged `5f0ffc1`), [#57](https://github.com/buffedlizard55-lab/OLBG2/pull/57) root `picks.html` sync (merged `d34d852`) |
+| CI (`Validate Pages content`) | PASS on PRs #53/#57 and on `main` at `d34d852` |
+| GitHub Pages | `Deploy Pages` + `pages build and deployment` both `success` at `d34d852` |
+| Live URLs verified | `/` (119 rows · 93 originated · 14 price-band picks · 22 review items), `/picks.html`, `/verified/`, `/verified/predictions.html`, `/verified/flagged.html` |
+| Final desk | 119 rows (93 originated, 26 unlined), 14 featured/band write-ups ≥70% & −236…−250 American, 22 flags VF-01…VF-22 |
+
+**Sequencing note (transparent):** PR #56 was merged a moment before its diff-gate check reported failure (root `picks.html` still stale), briefly leaving `main` red on the generated-files gate only — no wrong data was published beyond the one corrected sentence lingering on the root page. PR #57 synced it and `main` is green again. Lesson logged: never issue a merge in the same block as its CI watch.
+
+**Residual nit (left for next session):** root `picks.html` intro reads "A further 0 high-confidence picks…" — factual but clumsy template output from `build_site.py` when every write-up is in-band.

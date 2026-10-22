@@ -1,0 +1,27 @@
+{
+  "source_url": "https://api-web.nhle.com/v1/score/2026-10-23",
+  "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+  "fetched_utc": "2026-10-22T20:56:00Z",
+  "fetch_note": "Read first-hand in session arena/103d996c-olbg2 via the agent web-fetch tool; sandbox has no direct egress. Fields below are exactly as returned.",
+  "week_counts": [
+    {"date": "2026-10-20", "numberOfGames": 11}, {"date": "2026-10-21", "numberOfGames": 2},
+    {"date": "2026-10-22", "numberOfGames": 12}, {"date": "2026-10-23", "numberOfGames": 2},
+    {"date": "2026-10-24", "numberOfGames": 12}, {"date": "2026-10-25", "numberOfGames": 5},
+    {"date": "2026-10-26", "numberOfGames": 3}
+  ],
+  "games": [
+    {"id": 2026020166, "gameDate": "2026-10-23", "startTimeUTC": "2026-10-24T00:00:00Z",
+     "venue": "United Center", "gameState": "FUT", "neutralSite": false,
+     "away": {"abbrev": "MTL", "team": "Canadiens", "record": "4-3-2"},
+     "home": {"abbrev": "CHI", "team": "Blackhawks", "record": "3-6-0"},
+     "leaders": {"MTL": {"goals": "Cole Caufield 6", "assists": "Nick Suzuki 7", "wins_g": "Jacob Fowler 3"},
+                 "CHI": {"goals": "Frank Nazar 3", "assists": "Anton Frondell 5", "wins_g": "Spencer Knight 3"}}},
+    {"id": 2026020167, "gameDate": "2026-10-23", "startTimeUTC": "2026-10-24T01:00:00Z",
+     "venue": "Ball Arena", "gameState": "FUT", "neutralSite": false,
+     "away": {"abbrev": "TBL", "team": "Lightning", "record": "7-2-0"},
+     "home": {"abbrev": "COL", "team": "Avalanche", "record": "5-4-1"},
+     "leaders": {"TBL": {"goals": "Brandon Hagel 7", "assists": "Nikita Kucherov 9"},
+                 "COL": {"goals": "Artturi Lehkonen 8", "assists": null}},
+     "note": "Home assists leader truncated in capture (Nathan MacKinnon, value not captured); not published."}
+  ]
+}

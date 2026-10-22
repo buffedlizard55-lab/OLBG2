@@ -1,0 +1,1085 @@
+{
+ "layer": "relay",
+ "generated_by": "scripts/relay_seed.py (session arena/103d996c-olbg2)",
+ "window": "2026-10-23 to 2026-10-29 (upcoming fixtures only at capture time 2026-10-22 21:00 UTC)",
+ "evidence_classes": {
+  "A": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+  "B": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time"
+ },
+ "counts": {
+  "fixtures": 38,
+  "by_sport": {
+   "Basketball": 3,
+   "Baseball": 2,
+   "Rugby Union": 8,
+   "Ice Hockey": 14,
+   "Motor Racing": 1,
+   "Handball": 10
+  },
+  "by_evidence": {
+   "A": 9,
+   "B": 29
+  }
+ },
+ "matches": [
+  {
+   "id": "el-E2026-68",
+   "kind": "fixture",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27, Round 7",
+   "date": "2026-10-23",
+   "time_note": "13:00 (tip time as rendered)",
+   "home": {
+    "name": "Zalgiris Kaunas",
+    "abbrev": "ZAL",
+    "record": ""
+   },
+   "away": {
+    "name": "LDLC ASVEL Villeurbanne",
+    "abbrev": "ASV",
+    "record": ""
+   },
+   "venue": "ZALGIRIO ARENA",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+   "source_name": "EuroLeague Basketball official game centre and official standings",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "el-E2026-69",
+   "kind": "fixture",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27, Round 7",
+   "date": "2026-10-23",
+   "time_note": "14:45 (tip time as rendered)",
+   "home": {
+    "name": "Paris Basketball",
+    "abbrev": "PBB",
+    "record": ""
+   },
+   "away": {
+    "name": "Valencia Basket",
+    "abbrev": "VBC",
+    "record": ""
+   },
+   "venue": "ADIDAS ARENA",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+   "source_name": "EuroLeague Basketball official game centre and official standings",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "el-E2026-70",
+   "kind": "fixture",
+   "sport": "basketball",
+   "sport_name": "Basketball",
+   "competition": "EuroLeague 2026-27, Round 7",
+   "date": "2026-10-23",
+   "time_note": "14:15 (tip time as rendered)",
+   "home": {
+    "name": "Olympiacos Piraeus",
+    "abbrev": "OLY",
+    "record": ""
+   },
+   "away": {
+    "name": "Fenerbahce Tarfin Istanbul",
+    "abbrev": "FBT",
+    "record": ""
+   },
+   "venue": "SUNEL ARENA",
+   "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
+   "source_name": "EuroLeague Basketball official game centre and official standings",
+   "source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
+   "capture_file": "data/current/capture/euroleague_round7_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "mlb-849805",
+   "kind": "fixture",
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "competition": "MLB World Series Game 1",
+   "date": "2026-10-23",
+   "time_note": "00:00 (UTC start)",
+   "home": {
+    "name": "Milwaukee Brewers",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Tampa Bay Rays",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "American Family Field",
+   "official_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/23/849805",
+   "source_name": "MLB official Stats API (statsapi.mlb.com) schedule feed",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-24",
+   "capture_file": "data/relay/capture/mlb_world_series_2026-10-22.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {}
+  },
+  {
+   "id": "urc-292608",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-23",
+   "time_note": "14:45 local (as rendered)",
+   "home": {
+    "name": "Cardiff Rugby",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Hollywoodbets Sharks",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "Cardiff Arms Park",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "urc-292609",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-23",
+   "time_note": "14:45 local (as rendered)",
+   "home": {
+    "name": "Connacht Rugby",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Zebre Parma",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "Dexcom Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "urc-292610",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-23",
+   "time_note": "14:45 local (as rendered)",
+   "home": {
+    "name": "Edinburgh",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "10bet Lions",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "Hive Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "mlb-849802",
+   "kind": "fixture",
+   "sport": "baseball",
+   "sport_name": "Baseball",
+   "competition": "MLB World Series Game 2",
+   "date": "2026-10-24",
+   "time_note": "00:00 (UTC start)",
+   "home": {
+    "name": "Milwaukee Brewers",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Tampa Bay Rays",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "American Family Field",
+   "official_url": "https://www.mlb.com/gameday/rays-vs-brewers/2026/10/24/849802",
+   "source_name": "MLB official Stats API (statsapi.mlb.com) schedule feed",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-24",
+   "capture_file": "data/relay/capture/mlb_world_series_2026-10-22.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {}
+  },
+  {
+   "id": "nhl-2026020166",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "00:00 (UTC start)",
+   "home": {
+    "name": "Blackhawks CHI",
+    "abbrev": "CHI",
+    "record": "3-6-0"
+   },
+   "away": {
+    "name": "Canadiens MTL",
+    "abbrev": "MTL",
+    "record": "4-3-2"
+   },
+   "venue": "United Center",
+   "official_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026-10-24/2026020166",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "capture_file": "data/relay/capture/nhl_score_2026-10-23.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {
+    "home_abbrev": "CHI",
+    "away_abbrev": "MTL"
+   }
+  },
+  {
+   "id": "nhl-2026020167",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "01:00 (UTC start)",
+   "home": {
+    "name": "Avalanche COL",
+    "abbrev": "COL",
+    "record": "5-4-1"
+   },
+   "away": {
+    "name": "Lightning TBL",
+    "abbrev": "TBL",
+    "record": "7-2-0"
+   },
+   "venue": "Ball Arena",
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026-10-24/2026020167",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "capture_file": "data/relay/capture/nhl_score_2026-10-23.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {
+    "home_abbrev": "COL",
+    "away_abbrev": "TBL"
+   }
+  },
+  {
+   "id": "nhl-2026020168",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "17:00 (UTC start)",
+   "home": {
+    "name": "Flyers PHI",
+    "abbrev": "PHI",
+    "record": "3-6-3"
+   },
+   "away": {
+    "name": "Ducks ANA",
+    "abbrev": "ANA",
+    "record": "4-5-0"
+   },
+   "venue": "Xfinity Mobile Arena",
+   "official_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026-10-24/2026020168",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/relay/capture/nhl_score_2026-10-24.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {
+    "home_abbrev": "PHI",
+    "away_abbrev": "ANA"
+   }
+  },
+  {
+   "id": "nhl-2026020169",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "19:30 (UTC start)",
+   "home": {
+    "name": "Devils NJD",
+    "abbrev": "NJD",
+    "record": "5-4-0"
+   },
+   "away": {
+    "name": "Kings LAK",
+    "abbrev": "LAK",
+    "record": "1-4-2"
+   },
+   "venue": "Prudential Center",
+   "official_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026-10-24/2026020169",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/relay/capture/nhl_score_2026-10-24.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {
+    "home_abbrev": "NJD",
+    "away_abbrev": "LAK"
+   }
+  },
+  {
+   "id": "nhl-2026020170",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "23:00 (UTC start)",
+   "home": {
+    "name": "Bruins BOS",
+    "abbrev": "BOS",
+    "record": "7-2-1"
+   },
+   "away": {
+    "name": "Sharks SJS",
+    "abbrev": "SJS",
+    "record": "5-4-1"
+   },
+   "venue": "TD Garden",
+   "official_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026-10-24/2026020170",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/relay/capture/nhl_score_2026-10-24.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {
+    "home_abbrev": "BOS",
+    "away_abbrev": "SJS"
+   }
+  },
+  {
+   "id": "nhl-2026020171",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "23:00 (UTC start)",
+   "home": {
+    "name": "Senators OTT",
+    "abbrev": "OTT",
+    "record": "7-3-0"
+   },
+   "away": {
+    "name": "Rangers NYR",
+    "abbrev": "NYR",
+    "record": "7-3-1"
+   },
+   "venue": "Canadian Tire Centre",
+   "official_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026-10-24/2026020171",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/relay/capture/nhl_score_2026-10-24.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {
+    "home_abbrev": "OTT",
+    "away_abbrev": "NYR"
+   }
+  },
+  {
+   "id": "nhl-2026020172",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "23:00 (UTC start)",
+   "home": {
+    "name": "Penguins PIT",
+    "abbrev": "PIT",
+    "record": "3-6-1"
+   },
+   "away": {
+    "name": "Predators NSH",
+    "abbrev": "NSH",
+    "record": "3-2-3"
+   },
+   "venue": "PPG Paints Arena",
+   "official_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026-10-24/2026020172",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/relay/capture/nhl_score_2026-10-24.json",
+   "evidence": "A",
+   "evidence_note": "captured first-hand 2026-10-22 20:55-21:05 UTC by session arena/103d996c-olbg2 (data/relay/capture/)",
+   "inputs": {
+    "home_abbrev": "PIT",
+    "away_abbrev": "NSH"
+   }
+  },
+  {
+   "id": "nhl-2026020173",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "23:00 (UTC start)",
+   "home": {
+    "name": "Capitals WSH",
+    "abbrev": "WSH",
+    "record": "5-4-0"
+   },
+   "away": {
+    "name": "Sabres BUF",
+    "abbrev": "BUF",
+    "record": "4-4-2"
+   },
+   "venue": "Capital One Arena",
+   "official_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026-10-24/2026020173",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {
+    "home_abbrev": "WSH",
+    "away_abbrev": "BUF"
+   }
+  },
+  {
+   "id": "nhl-2026020174",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "23:00 (UTC start)",
+   "home": {
+    "name": "Blue Jackets CBJ",
+    "abbrev": "CBJ",
+    "record": "3-5-0"
+   },
+   "away": {
+    "name": "Golden Knights VGK",
+    "abbrev": "VGK",
+    "record": "8-3-0"
+   },
+   "venue": "Nationwide Arena",
+   "official_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026-10-24/2026020174",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {
+    "home_abbrev": "CBJ",
+    "away_abbrev": "VGK"
+   }
+  },
+  {
+   "id": "nhl-2026020175",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "23:00 (UTC start)",
+   "home": {
+    "name": "Blues STL",
+    "abbrev": "STL",
+    "record": "4-4-1"
+   },
+   "away": {
+    "name": "Hurricanes CAR",
+    "abbrev": "CAR",
+    "record": "8-2-1"
+   },
+   "venue": "Enterprise Center",
+   "official_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026-10-24/2026020175",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {
+    "home_abbrev": "STL",
+    "away_abbrev": "CAR"
+   }
+  },
+  {
+   "id": "nhl-2026020176",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-24",
+   "time_note": "23:00 (UTC start)",
+   "home": {
+    "name": "Oilers EDM",
+    "abbrev": "EDM",
+    "record": "7-1-1"
+   },
+   "away": {
+    "name": "Maple Leafs TOR",
+    "abbrev": "TOR",
+    "record": "5-4-2"
+   },
+   "venue": "Rogers Place",
+   "official_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026-10-24/2026020176",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {
+    "home_abbrev": "EDM",
+    "away_abbrev": "TOR"
+   }
+  },
+  {
+   "id": "urc-292611",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-24",
+   "time_note": "07:45 local (as rendered)",
+   "home": {
+    "name": "Vodacom Bulls",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Ulster Rugby",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "Loftus Versfeld",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "urc-292612",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-24",
+   "time_note": "10:00 local (as rendered)",
+   "home": {
+    "name": "DHL Stormers",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Scarlets",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "DHL Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "urc-292613",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-24",
+   "time_note": "10:00 local (as rendered)",
+   "home": {
+    "name": "Benetton Rugby",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Glasgow Warriors",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "Stadio Monigo",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "urc-292614",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-24",
+   "time_note": "13:00 local (as rendered)",
+   "home": {
+    "name": "Leinster Rugby",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Munster Rugby",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "Aviva Stadium",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "urc-292615",
+   "kind": "fixture",
+   "sport": "rugby-union",
+   "sport_name": "Rugby Union",
+   "competition": "United Rugby Championship 2026/27, Round 4",
+   "date": "2026-10-24",
+   "time_note": "14:00 local (as rendered)",
+   "home": {
+    "name": "Ospreys",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Dragons RFC",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "St Helen's",
+   "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+   "source_name": "United Rugby Championship official match centre, Round 4 (URC)",
+   "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "capture_file": "data/current/capture/urc_round4_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "f1-2026-r18",
+   "kind": "event",
+   "sport": "motor-racing",
+   "sport_name": "Motor Racing",
+   "competition": "FIA Formula 1 World Championship 2026, Round 18",
+   "date": "2026-10-25",
+   "time_note": "race day; event dates as rendered: 23 - 25 OCT",
+   "event": "United States Grand Prix (Austin)",
+   "venue": "",
+   "official_url": "https://www.formula1.com/en/racing/2026/united-states",
+   "source_name": "Formula 1 official 2026 race calendar (formula1.com)",
+   "source_url": "https://www.formula1.com/en/racing/2026",
+   "capture_file": "data/current/capture/f1_calendar_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "nhl-2026020177",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-25",
+   "time_note": "01:00 (UTC start)",
+   "home": {
+    "name": "Mammoth UTA",
+    "abbrev": "UTA",
+    "record": "7-3-0"
+   },
+   "away": {
+    "name": "Lightning TBL",
+    "abbrev": "TBL",
+    "record": "7-2-0"
+   },
+   "venue": "Delta Center",
+   "official_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026-10-25/2026020177",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {
+    "home_abbrev": "UTA",
+    "away_abbrev": "TBL"
+   }
+  },
+  {
+   "id": "nhl-2026020178",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-25",
+   "time_note": "02:00 (UTC start)",
+   "home": {
+    "name": "Flames CGY",
+    "abbrev": "CGY",
+    "record": "2-6-0"
+   },
+   "away": {
+    "name": "Red Wings DET",
+    "abbrev": "DET",
+    "record": "3-3-3"
+   },
+   "venue": "Scotiabank Saddledome",
+   "official_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026-10-25/2026020178",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {
+    "home_abbrev": "CGY",
+    "away_abbrev": "DET"
+   }
+  },
+  {
+   "id": "nhl-2026020179",
+   "kind": "fixture",
+   "sport": "ice-hockey",
+   "sport_name": "Ice Hockey",
+   "competition": "NHL 2026-27 regular season",
+   "date": "2026-10-25",
+   "time_note": "02:00 (UTC start)",
+   "home": {
+    "name": "Kraken SEA",
+    "abbrev": "SEA",
+    "record": "6-3-1"
+   },
+   "away": {
+    "name": "Wild MIN",
+    "abbrev": "MIN",
+    "record": "6-2-2"
+   },
+   "venue": "Climate Pledge Arena",
+   "official_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026-10-25/2026020179",
+   "source_name": "NHL official API (api-web.nhle.com) score/schedule feed",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "capture_file": "data/current/capture/nhl_score_2026-10-24.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {
+    "home_abbrev": "SEA",
+    "away_abbrev": "MIN"
+   }
+  },
+  {
+   "id": "ehfcl-202711020101004",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-28",
+   "time_note": "18:45 (as rendered)",
+   "home": {
+    "name": "FC Porto",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "One Veszprem HC",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101004/FCPorto-OneVeszpr%C3%A9mHC/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101016",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-28",
+   "time_note": "18:45 (as rendered)",
+   "home": {
+    "name": "Orlen Wisla Plock",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "HBC Nantes",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101016/OrlenWislaPlock-HBCNantes/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101022",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-28",
+   "time_note": "18:45 (as rendered)",
+   "home": {
+    "name": "HC Vardar 1961",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "MT Melsungen",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101026",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-28",
+   "time_note": "20:45 (as rendered)",
+   "home": {
+    "name": "Paris Saint-Germain",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Aalborg Handbold",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101026/ParisSaintGermain-AalborgH%C3%A5ndbold/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101036",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-28",
+   "time_note": "20:45 (as rendered)",
+   "home": {
+    "name": "RK Celje Pivovarna Lasko",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "HC Zagreb",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101036/RKCeljePivovarnaLa%C5%A1ko-HCZagreb/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101065",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-28",
+   "time_note": "20:45 (as rendered)",
+   "home": {
+    "name": "SC Magdeburg",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "HC Kriens-Luzern",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101067",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-28",
+   "time_note": "20:45 (as rendered)",
+   "home": {
+    "name": "Industria Kielce",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Kolstad Handball",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101009",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-29",
+   "time_note": "18:45 (as rendered)",
+   "home": {
+    "name": "Fuchse Berlin",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "RK Partizan AdmiralBet",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101009/F%C3%BCchseBerlin-RKPartizanAdmiralBet/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101040",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-29",
+   "time_note": "18:45 (as rendered)",
+   "home": {
+    "name": "GOG",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "Sporting Clube de Portugal",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  },
+  {
+   "id": "ehfcl-202711020101046",
+   "kind": "fixture",
+   "sport": "handball",
+   "sport_name": "Handball",
+   "competition": "EHF Champions League Men 2026/27, group phase",
+   "date": "2026-10-29",
+   "time_note": "18:45 (as rendered)",
+   "home": {
+    "name": "IFK Kristianstad",
+    "abbrev": "",
+    "record": ""
+   },
+   "away": {
+    "name": "OTP Bank - PICK Szeged",
+    "abbrev": "",
+    "record": ""
+   },
+   "venue": "",
+   "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101046/IFKKristianstad-OTPBankPICKSzeged/",
+   "source_name": "EHF Champions League Men official live-scores/calendar listing (ehfcl.eurohandball.com)",
+   "source_url": "https://ehfcl.eurohandball.com/",
+   "capture_file": "data/current/capture/ehf_2026-10-22.json",
+   "evidence": "B",
+   "evidence_note": "carried over verbatim from the /current/ session's first-hand capture of 2026-10-22 12:20-13:05 UTC (data/current/capture/); this session's fetch proxy failed on the live endpoint at re-read time",
+   "inputs": {}
+  }
+ ]
+}

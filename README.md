@@ -28,6 +28,7 @@ The repository contains several independently collected, overlapping snapshots. 
 |---|---|---|
 | **Daily Top-5 desk** | [`daily/index.html`](daily/index.html) | 132 originated upcoming fixtures (2026-10-23–30) across 7 sports, a top-five selection per sport, 25 high-confidence picks and 45 written predictions. Sources and limits in `research/daily-b499dfe1.md`. |
 | **Daily audit desk** | [`daily-audit/index.html`](daily-audit/index.html) | Narrower, row-by-row capture fetched 2026-10-22 21:30 UTC: 8 ATP quarter-finals verified against the ATP Tour's own order of play and draws, 9 ICC fixtures verified against the ICC, 288 originated prices, 5 written picks (≥30 words, each fact linked), 15 review items. Two sports have rows; the other 15 of the 17 eligible sports are each accounted for, with the reason, on the landing page and the flagged page. Rebuilt and drift-checked in CI. |
+| **Daily picks desk** | [`daily-picks/index.html`](daily-picks/index.html) | This session's 23–25 October board: 38 fixtures across 7 sports, 224 originated prices, 28 picks, 28 written predictions, 19 NHL conflict rows for review. |
 | **Current capture desk** | [`current/index.html`](current/index.html) | Independent 22 October capture; fixture, price, prediction, source and review tables. Overlaps other desks; counts must not be added. Rebuilt and drift-checked in CI. These are stored captures, not a live feed. |
 | **Root dashboard** | [`index.html`](index.html) | 188 rows across 14 of 17 eligible sports; 154 rows with originated lines, 34 unlined, and 14 price-band selections/writeups on the root dashboard. The separate `/verified/` research page has 16 additional research writeups. Price-band selections are a separate filter, not the count of rows labelled high confidence. |
 | **Consolidated desk** | [`final/index.html`](final/index.html) | 382 deduplicated rows across all 17 eligible sports; 339 originated and 43 unlined. The union uses `/verified/`, `/hub/`, `/board/`, `/slate/`, and `/forward/`. It contains 19 featured model picks. |
@@ -76,6 +77,8 @@ The pipelines use Python's standard library. From the repository root, the princ
 ```bash
 python3 scripts/daily_seed.py && python3 scripts/daily_model.py && python3 scripts/daily_verify.py && python3 scripts/daily_build.py
 python3 scripts/daily_audit_model.py && python3 scripts/daily_audit_build.py
+python3 scripts/daily_seed.py && python3 scripts/daily_model.py && python3 scripts/daily_build.py && python3 scripts/daily_verify.py
+python3 scripts/daily_picks_data.py && python3 scripts/daily_picks_predictions.py && python3 scripts/daily_picks_flags.py && python3 scripts/daily_picks_build.py
 python3 scripts/current_seed.py && python3 scripts/current_model.py && python3 scripts/current_build.py
 python3 scripts/verified_seed.py && python3 scripts/verified_model.py && python3 scripts/verified_build.py
 python3 scripts/forward_seed.py && python3 scripts/forward_model.py && python3 scripts/forward_build.py

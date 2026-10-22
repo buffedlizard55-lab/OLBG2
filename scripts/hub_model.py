@@ -764,7 +764,7 @@ def build_all_matches(inputs: dict) -> list[dict]:
     })
 
     # Championship title outright (102-pt lead -> heavy chalk shorter than -250 -> strictly medium confidence per HF-08)
-    champ_raw = [math.exp((d["points"] - f1[0]["points"]) / 28.0) for d in f1]
+    champ_raw = [max(math.exp((d["points"] - f1[0]["points"]) / 28.0), 0.006) for d in f1]
     sc = sum(champ_raw)
     champ_outcomes = [{"label": f"{d['driver']} ({d['team']})", **fair_quote(w / sc)} for d, w in zip(f1, champ_raw)]
     ch_best = champ_outcomes[0]

@@ -2323,7 +2323,7 @@ The workflow is currently owned by merged scopes; the request is recorded rather
 | U2 | Audit keyboard/screen-reader usability of `/portal/` search/filter controls, result counts, and table navigation without asserting new sports facts | done | `arena/cf53958f-olbg2` | `research/accessibility-cf53958f.md` |
 | U3 | Improve control names, focus visibility, and accessible result announcements in the portal generator/assets; regenerate only `/portal/` pages | done | `arena/cf53958f-olbg2` | `scripts/portal_build.py`, `portal/assets/app.js`, `portal/assets/style.css`, generated `portal/**` |
 | U4 | Add regression coverage for accessible controls and verify deterministic portal build, row-source links, internal links, and repository tests | done (190 tests after rebase) | `arena/cf53958f-olbg2` | `tests/test_portal_accessibility_cf53958f.py` |
-| U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | in progress (PR #103 open; refreshed on `6077bd7`; 190 tests pass) | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
+| U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | done (PR #103 merged; Pages build 1305340903 built) | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
 
 **Scope boundary:** this is a user-interface/accessibility improvement to the existing portal, not another match-data layer or factual audit. Every existing row, source URL, line, pick, and flagged item remains unchanged. If another live session claims `/portal/**` or its builder before implementation/integration, stop and log a cross-scope request rather than editing it.
 
@@ -2404,3 +2404,19 @@ Applying the final pre-publication note onto `6077bd7` conflicted only in `COORD
 - Rebased onto latest `origin/main` `6077bd7`, preserving the new `/reconcile/` publication entry. Conflicts were limited to the append-only coordination tail; portal code had no conflicts.
 - On the refreshed tree, `py_compile`, portal build, `portal_verify.py`, `git diff --check`, and the full suite all pass; **190 tests**. Verifier remains 26 pages / 707 sourced rows / 1,562 internal links; `data/portal` is unchanged.
 - The PR still points at old head `e3db327` and is currently conflicting until the refreshed branch is pushed. Latest fetch confirms remote branch `arena/cf53958f-olbg2` is still exactly `e3db327`; the refreshed local head is `e2718eb`. Next push will use an explicit lease pinned to `e3db327`, then CI must rerun before merge. U5 and Pages verification remain open.
+
+
+### Publication record — `arena/cf53958f-olbg2` (2026-10-22 UTC)
+
+| Item | Result |
+|---|---|
+| Pull request | [#103](https://github.com/buffedlizard55-lab/OLBG2/pull/103) — a11y(portal): improve filter labels and keyboard accessibility |
+| Merge | **MERGED** at `2026-10-22T12:25:10Z`; merge commit `8480c2f841b462c911175f93c66d9f305ccfca2f` |
+| PR validation | `Validate Pages content` run [39778102194](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39778102194) passed on refreshed PR head `52091d8`. The merge attempt after an earlier main advance was non-mergeable; the branch was rebased on `6077bd7`, tests rerun, and the PR then merged without waiting for review. |
+| Main validation | `Validate Pages content` run [39778182504](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39778182504) succeeded on merge commit `8480c2f`. |
+| Deployment workflows | `Deploy Pages` run [39778182672](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39778182672) succeeded; `pages build and deployment` run [39778181522](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39778181522) also succeeded. |
+| GitHub Pages build | API build [1305340903](https://api.github.com/repos/buffedlizard55-lab/OLBG2/pages/builds/1305340903) reports **built**, commit `8480c2f`, updated `2026-10-22T12:25:35Z`. Pages configuration points to `https://buffedlizard55-lab.github.io/OLBG2/`; the portal is under `/portal/`. |
+| Final local verification | On the refreshed branch: 190 full-suite tests passed; portal verifier reports 26 pages, 707 source-linked rows, and 1,562 internal links/fragments; JSON match/source inputs unchanged. |
+| Limit | Deployment is confirmed by the successful Actions jobs and Pages API build. No direct public-site browser/screen-reader check was performed; no formal WCAG conformance claim is made. |
+
+All U1–U5 tasks are **done**. The merge changed only `/portal/` interface files, the scoped audit/test, and coordination documentation; no match data, odds, prediction, source, root-navigation, or workflow file was changed.

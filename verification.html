@@ -32,14 +32,22 @@ No value on this site was inferred from memory or copied from a secondary outlet
 
 <div class="notice warn"><strong>The 34 competition-scoped rows are the main evidence caveat.</strong>
 Their official URL is an official rankings, standings or schedule page, but it does not itself identify the individual
-fixture. The fixture, date and opponent rest on the OLBG listing captured on 2026-10-21 and are marked accordingly.
+fixture. The fixture, date and opponent rest on the OLBG listing captured on 2026-10-22 and are marked accordingly.
 This is disclosed as <a href="flagged.html#VF-11">VF-11</a>.</div>
 
-<h2>Re-verified in this session</h2>
-<p class="sub">The NHL's own schedule endpoint returned all 12 games on 2026-10-22 with these ids, teams and start times;
-the MLB Stats API returned four scheduled World Series games; the three priced here match its ids, venues and UTC start times, and Game 4 is disclosed on the flagged page rather than priced.</p>
-<div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Sport</th><th>Fixture</th><th>Date</th>
-<th>What was checked</th><th>Official source</th></tr></thead><tbody></tbody></table></div>
+<h2>Re-read line by line on 2026-10-22</h2>
+<p class="sub">Every figure below was re-fetched from the governing body in this session and compared with the published row.
+The rows that were <em>not</em> re-read are named in <a href="flagged.html#VF-23">VF-23</a> rather than implied to be checked.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Source family</th><th>What was compared</th><th>Result</th><th>Official page</th></tr></thead><tbody>
+<tr><td>NHL team rates</td><td>MIN 6-2-2 (31/25), CGY 2-6-0 (17/37), CAR 8-2-1 (42/27), EDM 7-1-1 (41/27), BOS 7-2-1 (36/22), NSH 3-2-3 (23/22)</td><td>All match</td><td><a href="https://api.nhle.com/stats/rest/en/team/summary" rel="noopener">api.nhle.com</a></td></tr>
+<tr><td>NHL fixtures</td><td>12 games, ids, venues and 23:00Z start times on 22 October</td><td>Match</td><td><a href="https://api-web.nhle.com/v1/score/2026-10-22" rel="noopener">api-web.nhle.com</a></td></tr>
+<tr><td>URC table + Round 3</td><td>All 16 clubs' PTS/PF/PA and five Round 3 scorelines</td><td>All match</td><td><a href="https://stats.unitedrugby.com/match-centre/table/2026-27" rel="noopener">stats.unitedrugby.com</a></td></tr>
+<tr><td>Top 14</td><td>Toulouse 24 pts, 5-0-1, 197/124, W-W-W-W-W; Perpignan 9th</td><td>Match (Perpignan row detail truncated in fetch)</td><td><a href="https://top14.lnr.fr/classement" rel="noopener">top14.lnr.fr</a></td></tr>
+<tr><td>Pro D2</td><td>Provence 7-0-0 (222/158), Aurillac 16 pts (240/254), Béziers 2-0-5 (147/240), Nevers 0-0-7 (146/222)</td><td>Match; one form sentence corrected (VF-25)</td><td><a href="https://prod2.lnr.fr/classement" rel="noopener">prod2.lnr.fr</a></td></tr>
+<tr><td>EuroLeague</td><td>Panathinaikos 5-1 (528/438, +90, 4-1 home); Baskonia 20th 1-5 (504/564, 0-2 away)</td><td>Both match exactly</td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/standings/" rel="noopener">euroleaguebasketball.net</a></td></tr>
+<tr><td>EHF Champions League</td><td>Group E: Barça 4-0-0 (137:104), Montpellier 1-0-3 (116:125); fixture 202711020101049</td><td>Match</td><td><a href="https://ehfcl.eurohandball.com/men/2026-27/standings/" rel="noopener">ehfcl.eurohandball.com</a></td></tr>
+</tbody></table></div>
+<p class="tiny">Full comparison table and the list of rows not re-read: <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">research/verification-072755db.md</a>.</p>
 
 <h2>Evidence by sport</h2>
 <div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Rows</th><th>Fixture-scoped URL</th>

@@ -2000,3 +2000,16 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 | Publication gate + tests | done | arena/17c50bb7-olbg2 | Local CI rebuild and 145 tests pass |
 | Official-source access / completeness | needs review | arena/17c50bb7-olbg2 | Published publication.html; no accessible official response content |
 | PR, merge, deploy | in progress | arena/17c50bb7-olbg2 | Remote verification follows |
+---
+
+## Session `arena/dc72bac4-olbg2` — reproducibility and publication-integrity audit
+
+**Session ID:** `arena/dc72bac4-olbg2` · **Branch:** `arena/dc72bac4-olbg2` (Arena-fixed) · **Claimed:** 2026-10-22 UTC before implementation/audit edits.
+
+**Claim scope:** independent mechanical audit of the checked-in site's deterministic build/test state and cross-layer publication disclosures. No sports data, source assertions, shared builders, generated pages, or another session's report will be edited. The audit's bounded deliverables are `research/reproducibility-audit-dc72bac4.md` and this append-only coordination record. This is distinct from prior fixture/fact audits: it checks reproducibility, test/build gates, internal-link integrity, and whether published limitations are clearly disclosed; it does not represent primary-source verification of match facts.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R1 | Audit active remote branches and claim a disjoint report-only scope | in progress | `COORDINATION.md` (append-only) |
+| R2 | Run repository tests/builds/link audit; record exact command outcomes and uncovered checks | unclaimed | `research/reproducibility-audit-dc72bac4.md` |
+| R3 | Report only reproducible findings and source/verification limitations; no unsupported claim of exhaustive fixtures or verified odds | unclaimed | `research/reproducibility-audit-dc72bac4.md`, `COORDINATION.md` (append-only) |

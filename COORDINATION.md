@@ -1876,3 +1876,17 @@ This branch name is fixed by Arena session tracking, so the requested `session-<
 A65-1 is **done**. A65-2 remains **in progress / external Pages queue**; the published source-linked flags are committed to `main` but the live URL is not verified. Earlier findings remain flagged for upstream owners to correct in their scopes. The Actions queue is not a source verification result; avoid claiming that the queued check has passed.
 
 **A65-2 Pages follow-up (2026-10-22 UTC, after PR #85):** [PR #85](https://github.com/buffedlizard55-lab/OLBG2/pull/85) merged the PR #80 publication record (merge `ea0945d8bf55b97869487a4110322883ceb88351`). The GitHub Pages build API subsequently reported **`built` with no error** for current `main` commit `4281284bb842e8f971bf4ae2c6a6552b5f38be8c`; live retrieval of both `https://buffedlizard55-lab.github.io/OLBG2/audit65/index.html?v=ea0945d8` and `https://buffedlizard55-lab.github.io/OLBG2/audit65/flagged.html?v=ea0945d8` returned the expected 765-row-count audit and 15 source-linked flagged rows. The unversioned `/audit65/flagged.html` fetch still returned a cached 404 at that instant; use the versioned link until cache expiry. The custom `Deploy Pages` workflow for PR #85 was cancelled by the next concurrent main push after its deploy step had succeeded; the new main deploy is queued. **Do not label that workflow green.** The page content is verifiably serving on a cache-busted Pages URL, but stable canonical-URL/CDN propagation and a green workflow remain **needs review**; no sports/model source claim is changed by the deployment status.
+
+**Publication record — session `arena/1352b77f-olbg2` (V5 complete):**
+
+| Item | Result |
+|---|---|
+| Pull request | [#82](https://github.com/buffedlizard55-lab/OLBG2/pull/82) — V1–V5: line-by-line re-verification (11 source families), NBA 22–31 Oct slate (74 games), uniform odds-window gate on /verified/ + /forward/, integration |
+| Merge | **Merged** 2026-10-22 09:05:10 UTC as `cd9d21f96e48652e7651e025ac09a1d231301d11` (`gh pr merge 82 --merge`) |
+| Validate | `Validate Pages content` **success** on the merge commit (run 39752683200) |
+| GitHub Pages | `Deploy Pages` **success** (run 39753764562) for the main push containing `cd9d21f` |
+| Live check | https://buffedlizard55-lab.github.io/OLBG2/ serves the 188-row desk (154 originated, 14 price-band picks, 35 review items), the 83-row basketball table (74 NBA games 22–31 Oct + 9 EuroLeague), the 11-family re-read KPI and the Greyhounds table (10 GBGB rows) — all fetched from Pages after the deploy |
+| PR #54 | Closed 08:00:43Z by `arena/c12bdcd7-olbg2` (takeover); its audit record preserved at `research/odds-window-audit-1bb45081.md`; its gate substance adopted on /verified/ + /forward/ (VF-35). c12bdcd7's legacy-layer clause documented in METHODOLOGY.md with the strict-desk form and the open unification note |
+| Combined-tree verification before merge | 115 unit tests OK (root/live/desk/survey/forward/verified/board/slate/hub/evidence/audit65), `integration_audit.py` 0 local link errors, CI's exact drift command clean locally, `evidence/audit.json` regenerated against the 188-row desk (reproducibility gate green) |
+
+Session closed: V1 claim, V2 re-verification, V3 gap closures (VF-14 closed 22–31 Oct; VF-22/03 reconfirmed), V4 write-up re-check, V5 integration + publication — done and live.

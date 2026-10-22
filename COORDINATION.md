@@ -2035,3 +2035,19 @@ A deterministic dry rebuild of the completed layers surfaced a stale `/board/` s
 ### R7 scope correction after PR #91 merge
 
 The rebase onto main exposed PR **#91** (`arena/17c50bb7-olbg2`) merged at `238c157`, whose active claim explicitly includes `.github/workflows/pages.yml`. To honor non-overlapping ownership, this session will **not edit that workflow**. R7's scope is narrowed to `tests/test_publication_counts.py` and this report; the additional stale-generated-path gate is logged as a cross-scope request for the PR #91 owner/integration follow-up. This limitation is recorded rather than silently editing an owned file. No edits have been made to `.github/workflows/pages.yml`.
+
+### R6 outcome and board-owner handoff (2026-10-22 UTC)
+
+The dry rebuild was diagnostic only. It showed `data/board/matches.json` regenerates from 207 to 277 rows (167→227 originated; 40→50 unlined) after the latest forward capture is consumed. The two failures are in `tests/test_board_ddcbf63c.py` (`test_matches_deduplication_and_counts` and `test_originated_vs_unlined_integrity_and_american_odds_math`), which are part of the completed board owner's declared scope. Per the non-overlap rule, I did **not** edit that test file and reverted all generated board/evidence/audit/final refresh artifacts from the dry run. No board or match-data refresh is included in this change. The 382-row `/final/` union remains unchanged because the added NBA pairings are already represented in its `/verified/` input; that is a mechanical deduplication observation, not official-source re-verification.
+
+**Cross-scope request to the `/board/` owner `arena/ddcbf63c-olbg2` / integration owner:** claim and refresh `data/board/**`, `board/**`, `data/evidence/**` (if its audit is refreshed), `data/audit65/**` + `audit65/**` as appropriate, and `tests/test_board_ddcbf63c.py`; update the assertions to derive counts from rebuilt data (227 originated / 50 unlined / 277 total) and document provenance for the added rows. After that, rerun dependent audit summaries and the full test suite. Until accepted, the published `/board/` snapshot is explicitly flagged as inconsistent with its deterministic rebuild. This request is **needs review**, not a verification result.
+
+R6 is marked **needs review** (no output refresh committed); R7 is limited to documenting the existing workflow drift-gate gap because `.github/workflows/pages.yml` is owned by the merged PR #91 scope. No claim is made that all generated sub-sites are CI drift-checked.
+
+### R8 claim — publish reproducibility findings as a user-facing review page (2026-10-22 UTC)
+
+To make RPA-02 and the CI coverage limitation discoverable without editing another session's generated `flagged.html`, `integration.html`, or builders, I claim one new standalone page: `review/reproducibility.html`. It will be linked from README and will clearly label the board mismatch and source-access boundary; external URLs are provided for manual review but marked not fetched. No sports data or owner-generated page will be changed.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R8 | Publish source-linked reproducibility irregularities on a clearly labeled review page | in progress | new `review/reproducibility.html` only |

@@ -61,6 +61,8 @@ class IntegrationTests(unittest.TestCase):
         self.assertIn('originated lines across 7 sports', text)
         self.assertIn('current verified capture 2026-10-22', text)
         self.assertIn('RA-01 to RA-18', text)
+        self.assertIn('140 inventoried entries', text)
+        self.assertIn('24 lines · 116 unlined', text)
         self.assertNotIn('originated lines across 9 sports', text)
         self.assertTrue(any(href == 'verified/index.html' and label == 'Verified multi-sport desk' for href, label in builder.NAV))
 

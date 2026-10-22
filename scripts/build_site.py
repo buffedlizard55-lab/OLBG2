@@ -37,7 +37,7 @@ NAV = [
     ("flagged.html", "Flagged for review"),
     ("methodology.html", "Methodology"),
     ("sources.html", "Sources"),
-    ("survey/index.html", "Survey (145 events)"),
+    ("survey/index.html", "Sport survey"),
     ("live/index.html", "Live slate (2026-10-21)"),
     ("site/index.html", "Evidence desk v2"),
     ("integration.html", "Evidence status"),

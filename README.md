@@ -18,11 +18,11 @@ This repository contains five separately built snapshots. Their counts are **sto
 | **Live slate** | [`live/index.html`](live/index.html) | **21 October 2026:** 11 URC/MLB fixture rows, 33 market-line records, and four written High picks. This is a separate historical capture, not part of the verified desk's 166-row total. |
 | **Root dashboard** | [`index.html`](index.html) | 47 stored match rows, 45 originated-line records, and nine written High picks at its recorded snapshot. Built by `scripts/model.py` and `scripts/build_site.py`. |
 | **Evidence desk** | [`site/index.html`](site/index.html) | Separate NHL/NBA snapshot with 25 fixture rows and 64 market records, plus its own source register and flags. Built by `scripts/engine.py` and `scripts/build.py`. |
-| **Sport survey** | [`survey/index.html`](survey/index.html) | 145 inventoried entries, 26 line records, and a separate review queue. Its rows are not all independently fixture-verified. |
+| **Sport survey** | [`survey/index.html`](survey/index.html) | 140 inventoried entries, 24 line records, and a separate review queue after deterministic regeneration from the refreshed verified source register. Its rows are not all independently fixture-verified. |
 
 These are dated snapshots, not an automatically refreshed feed. Captures span 18–22 October 2026; builders regenerate pages from checked-in data but do not retrieve new schedules. Recheck every event and official source before treating a row as upcoming or using its model output.
 
-The read-only provenance classifier (`python3 scripts/official_source_audit.py`) currently reports **145/145 survey inventory rows** and **14/14 survey prediction-fact citations** on official-domain candidates. A domain match is not proof that a page supports a claim. See the [audit report](research/official-source-audit-18eca832.md), [cross-layer review](integration.html), and each layer's Flagged for Review page.
+The read-only provenance classifier (`python3 scripts/official_source_audit.py`) currently reports **140/140 survey inventory rows** and **14/14 survey prediction-fact citations** on official-domain candidates. A domain match is not proof that a page supports a claim. See the [audit report](research/official-source-audit-18eca832.md), [cross-layer review](integration.html), and each layer's Flagged for Review page.
 
 ## Current verified-desk scope and limits
 

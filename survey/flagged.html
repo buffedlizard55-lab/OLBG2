@@ -9,8 +9,8 @@
 <h1>OLBG2</h1><span class="tag">Reverse-engineered OLBG match intelligence &middot; retrieved 2026-10-21</span>
 </div><nav><a href="../index.html" class="">Main dashboard</a><a href="../verified/index.html" class="">Verified Desk</a><a href="index.html" class="">Survey dashboard</a><a href="sports.html" class="">Sports</a><a href="lines.html" class="">Our Lines</a><a href="picks.html" class="">Picks</a><a href="predictions.html" class="">Predictions</a><a href="methodology.html" class="">Methodology</a><a href="verification.html" class="">Verification</a><a href="flagged.html" class="on">Flagged for Review</a><a href="excluded.html" class="">Excluded Sports</a></nav></div></header>
 <main class="wrap"><h2>Flagged for Review</h2>
-<p class="lead">7 flags. A flag never blocks publication; it marks something a human should look at &mdash; a source conflict, a scope decision, a coverage gap, or a value we could not verify. 119 individual event rows carry no originated line and are itemised under F-15.</p>
-<div class="kpis"><div class="kpi"><div class="n">7</div><div class="l">flags</div></div><div class="kpi"><div class="n">0</div><div class="l">source conflicts</div></div><div class="kpi"><div class="n">0</div><div class="l">irregularities</div></div><div class="kpi"><div class="n">2</div><div class="l">scope decisions</div></div><div class="kpi"><div class="n">1</div><div class="l">coverage gaps</div></div><div class="kpi"><div class="n">119</div><div class="l">unverified rows</div></div></div>
+<p class="lead">7 flags. A flag never blocks publication; it marks something a human should look at &mdash; a source conflict, a scope decision, a coverage gap, or a value we could not verify. 116 individual event rows carry no originated line and are itemised under F-15.</p>
+<div class="kpis"><div class="kpi"><div class="n">7</div><div class="l">flags</div></div><div class="kpi"><div class="n">0</div><div class="l">source conflicts</div></div><div class="kpi"><div class="n">0</div><div class="l">irregularities</div></div><div class="kpi"><div class="n">2</div><div class="l">scope decisions</div></div><div class="kpi"><div class="n">1</div><div class="l">coverage gaps</div></div><div class="kpi"><div class="n">116</div><div class="l">unverified rows</div></div></div>
 <div class="flag sev-environment" id="F-01"><div class="id">F-01 &middot; environment &middot; collection</div><h4>Sandbox bash egress is restricted; all primary feeds fetched via fetch_page</h4><p>Direct curl to sports domains is blocked in bash; every OLBG hub and governing-body table was read live on 2026-10-21 via fetch_page.</p>
 <p class="act"><strong>Action:</strong> Documented for reproducibility.</p>
 </div>
@@ -30,8 +30,8 @@
 <div class="flag sev-model-divergence" id="F-14"><div class="id">F-14 &middot; model-divergence &middot; rugby-union</div><h4>La Rochelle v Bordeaux capped at LOW against official LNR club win probability</h4><p>LNR club pages publish 46.24% La Rochelle / 53.18% Bordeaux / 0.58% draw versus our points-difference logistic output; divergence exceeds 15 pp so confidence is capped at LOW.</p>
 <p class="act"><strong>Action:</strong> Retained as automatic divergence safeguard.</p>
 </div>
-<div class="flag sev-coverage-gap" id="F-15"><div class="id">F-15 &middot; coverage-gap &middot; lines</div><h4>119 inventoried events left blank pending server-rendered official ratings</h4><p>Every unlined row is itemized below with its OLBG listing link, official governing-body link, and exact reason.</p>
-<div class="controls"><input type="search" placeholder="Filter the 119 unverified rows..." data-filter="#t-f15"></div>
+<div class="flag sev-coverage-gap" id="F-15"><div class="id">F-15 &middot; coverage-gap &middot; lines</div><h4>116 inventoried events left blank pending server-rendered official ratings</h4><p>Every unlined row is itemized below with its OLBG listing link, official governing-body link, and exact reason.</p>
+<div class="controls"><input type="search" placeholder="Filter the 116 unverified rows..." data-filter="#t-f15"></div>
 <div class="scroll"><table id="t-f15" data-sortable data-require-source><thead><tr><th>Sport</th><th>Event</th><th>Market</th><th>Listed time</th><th>As of</th><th>Retrieval</th><th>Why no line was originated</th><th>Provenance</th></tr></thead><tbody>
 <tr data-sport="basketball"><td>basketball</td>
 <td><strong>MIL Bucks @ WAS Wizards</strong></td><td>Money Line</td>
@@ -174,28 +174,33 @@
 <td class="small">live fetch</td>
 <td class="small">Official icc-cricket.com renders team ratings and match scorecards client-side; third-party mirrors refused.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Blast_2027/7?event_id=188350" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="gaelic_football"><td>gaelic football</td>
-<td><strong>St Finbarr&#x27;s v Nemo Rangers</strong></td><td>Match Winner / Outright</td>
-<td class="small">2026-10-25 16:00</td><td class="small">2026-10-21</td>
+<td><strong>St Finbarrs v Nemo Rangers</strong></td><td>Match Winner / Outright</td>
+<td class="small">OLBG card label: 25 Oct 12:00</td><td class="small">2026-10-21</td>
 <td class="small">live fetch</td>
 <td class="small">County championship markets lack public official GAA club Elo/points tables (https://www.gaa.ie/football).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="gaelic_football"><td>gaelic football</td>
-<td><strong>Maigh Cuilinn (Moycullen) v Salthill-Knocknacarra</strong></td><td>Match Winner / Outright</td>
-<td class="small">2026-10-25 14:00</td><td class="small">2026-10-21</td>
+<td><strong>Moycullen v Salthill-Knocknacarra</strong></td><td>Match Winner / Outright</td>
+<td class="small">OLBG card label: 24 Oct 14:00</td><td class="small">2026-10-21</td>
 <td class="small">live fetch</td>
 <td class="small">County championship markets lack public official GAA club Elo/points tables (https://www.gaa.ie/football).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="gaelic_football"><td>gaelic football</td>
-<td><strong>Kanturk v Éire Óg (Cork)</strong></td><td>Match Winner / Outright</td>
-<td class="small">2026-10-25 14:00</td><td class="small">2026-10-21</td>
+<td><strong>Kanturk v Eire Og Cor</strong></td><td>Match Winner / Outright</td>
+<td class="small">OLBG card label: 01 Nov 09:00</td><td class="small">2026-10-21</td>
 <td class="small">live fetch</td>
 <td class="small">County championship markets lack public official GAA club Elo/points tables (https://www.gaa.ie/football).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="gaelic_football"><td>gaelic football</td>
 <td><strong>Rathgormack v The Nire</strong></td><td>Match Winner / Outright</td>
-<td class="small">2026-10-25 14:30</td><td class="small">2026-10-21</td>
+<td class="small">OLBG card label: 01 Nov 10:30</td><td class="small">2026-10-21</td>
 <td class="small">live fetch</td>
 <td class="small">County championship markets lack public official GAA club Elo/points tables (https://www.gaa.ie/football).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="gaelic_football"><td>gaelic football</td>
-<td><strong>Inter-County Outright</strong></td><td>Match Winner / Outright</td>
-<td class="small">2027-07-25 15:30</td><td class="small">2026-10-21</td>
+<td><strong>Fr Caseys v Kildimo Pallaskenry</strong></td><td>Match Winner / Outright</td>
+<td class="small">OLBG card label: 01 Nov 10:30</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">County championship markets lack public official GAA club Elo/points tables (https://www.gaa.ie/football).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="gaelic_football"><td>gaelic football</td>
+<td><strong>Inter-County Field v Outright</strong></td><td>Match Winner / Outright</td>
+<td class="small">OLBG card label: 25 Jul 2027 10:30</td><td class="small">2026-10-21</td>
 <td class="small">live fetch</td>
 <td class="small">County championship markets lack public official GAA club Elo/points tables (https://www.gaa.ie/football).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Gaelic_Football/25" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="golf"><td>golf</td>
@@ -248,36 +253,6 @@
 <td class="small">25 Oct 08:00</td><td class="small">2026-10-21</td>
 <td class="small">live fetch</td>
 <td class="small">Tournament field strokes-gained distribution not available on static PGA/DP World Tour schedule pages.</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Golf/All_Golf/All_Events/Hero_Womens_Indian_Open/5?event_id=101909" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
-<tr data-sport="greyhounds"><td>greyhounds</td>
-<td><strong>10:32 Harlow (6-Trap Race)</strong></td><td>Win Race</td>
-<td class="small">2026-10-21 10:32</td><td class="small">2026-10-21</td>
-<td class="small">live fetch</td>
-<td class="small">Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
-<tr data-sport="greyhounds"><td>greyhounds</td>
-<td><strong>10:48 Harlow (6-Trap Race)</strong></td><td>Win Race</td>
-<td class="small">2026-10-21 10:48</td><td class="small">2026-10-21</td>
-<td class="small">live fetch</td>
-<td class="small">Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
-<tr data-sport="greyhounds"><td>greyhounds</td>
-<td><strong>11:03 Monmore (6-Trap Race)</strong></td><td>Win Race</td>
-<td class="small">2026-10-21 11:03</td><td class="small">2026-10-21</td>
-<td class="small">live fetch</td>
-<td class="small">Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
-<tr data-sport="greyhounds"><td>greyhounds</td>
-<td><strong>11:04 Harlow (6-Trap Race)</strong></td><td>Win Race</td>
-<td class="small">2026-10-21 11:04</td><td class="small">2026-10-21</td>
-<td class="small">live fetch</td>
-<td class="small">Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
-<tr data-sport="greyhounds"><td>greyhounds</td>
-<td><strong>11:09 Nottingham (6-Trap Race)</strong></td><td>Win Race</td>
-<td class="small">2026-10-21 11:09</td><td class="small">2026-10-21</td>
-<td class="small">live fetch</td>
-<td class="small">Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
-<tr data-sport="greyhounds"><td>greyhounds</td>
-<td><strong>11:14 Kinsley (6-Trap Race)</strong></td><td>Win Race</td>
-<td class="small">2026-10-21 11:14</td><td class="small">2026-10-21</td>
-<td class="small">live fetch</td>
-<td class="small">Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="handball"><td>handball</td>
 <td><strong>GOG vs KIF Kolding</strong></td><td>Money Line</td>
 <td class="small">Today 15:00</td><td class="small">2026-10-18</td>
@@ -494,10 +469,20 @@
 <td class="small">live fetch</td>
 <td class="small">One or both players rank outside WST&#x27;s server-rendered Top 36 (https://www.wst.tv/rankings/).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Luca_Brecel_v_Martin_O_Donnell/8?event_id=9932" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="snooker"><td>snooker</td>
+<td><strong>John Higgins v Jak Jones</strong></td><td>Win Match</td>
+<td class="small">Today 08:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">One or both players rank outside WST&#x27;s server-rendered Top 36 (https://www.wst.tv/rankings/).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
 <td><strong>Sam Craigie v Xu Si</strong></td><td>Win Match</td>
 <td class="small">Today 09:00</td><td class="small">2026-10-21</td>
 <td class="small">live fetch</td>
 <td class="small">One or both players rank outside WST&#x27;s server-rendered Top 36 (https://www.wst.tv/rankings/).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Sam_Craigie_v_Xu_Si/8?event_id=9930" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
+<tr data-sport="snooker"><td>snooker</td>
+<td><strong>Zhang Anda v Mark Williams</strong></td><td>Win Match</td>
+<td class="small">2026-10-21 09:00</td><td class="small">2026-10-21</td>
+<td class="small">live fetch</td>
+<td class="small">One or both players rank outside WST&#x27;s server-rendered Top 36 (https://www.wst.tv/rankings/).</td><td><a class="src t-olbg" href="https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936" rel="noopener noreferrer" target="_blank">OLBG &#8599;</a></td></tr>
 <tr data-sport="tennis"><td>tennis</td>
 <td><strong>Leylah Fernandez vs Aliaksandra Sasnovich</strong></td><td>Win Match</td>
 <td class="small">Today 02:30</td><td class="small">2026-10-21</td>

@@ -348,7 +348,7 @@ def refresh_inputs(inputs: dict) -> dict:
     inputs["eurocup_teams"] = {}
     inputs["eurocup_fixtures"] = []
     inputs["ehf_fixture_ids"] = sorted(EHF_ACTIVE_IDS)
-    inputs["ehf_olbg_map"] = {row_id: HUBS["handball"] for row_id in EHF_ACTIVE_IDS}
+    inputs["ehf_olbg_map"] = {row_id: HUBS["handball"] for row_id in sorted(EHF_ACTIVE_IDS)}
     inputs.pop("nba_extra_game_ids", None)
     inputs["shl_teams"] = SHL_TEAMS
     inputs["shl_fixtures"] = SHL_FIXTURES
@@ -380,7 +380,7 @@ def refresh_inputs(inputs: dict) -> dict:
     urc_raw = json.loads((ROOT / "data" / "inputs" / "urc.json").read_text(encoding="utf-8"))
     for f in urc_raw["fixtures"]:
         prov.setdefault(f["id"], provenance(URC_OLBG_IDS.get(f["id"]), "rugby-union"))
-    for row_id in EHF_ACTIVE_IDS:
+    for row_id in sorted(EHF_ACTIVE_IDS):
         prov[row_id] = provenance(EHF_OLBG_IDS[row_id], "handball")
     for f in SHL_FIXTURES:
         prov[f["id"]] = provenance(f.get("olbg_event_id"), "ice-hockey")

@@ -1782,3 +1782,15 @@ This branch name is fixed by Arena session tracking, so the requested `session-<
 **Third append-only conflict (A65-2, 2026-10-22 UTC):** PR #81 recorded the `/evidence/` desk's publication while our PR #80 was still queued. Rebasing onto that new `main` tip again conflicted only at the COORDINATION.md append point; preserved the full upstream #81 publication record and this session's evidence/claim. Ran 107 repository tests successfully after reconciliation. No other owner's scope was modified.
 
 **Integration correction after PR #78 merged (A65-2, 2026-10-22 UTC):** PR #78 added ten official GBGB greyhound fixture rows to `data/verified/matches.json`. The audit generator was rerun on the new `main` base; the current report now scans **765** overlapping row instances (including 128 verified-desk rows) and 118 prediction instances. There are still 15 flagged row instances and one featured prediction with a non-primary publisher URL. The earlier 755-row count is a historical pre-#78 snapshot, not the final published count. The official-host classification is now 757/765; no inference about the ten new rows' factual details is made.
+
+### Publication record — `arena/65ff36f0-olbg2` (2026-10-22 UTC)
+
+| Item | Result |
+|---|---|
+| Primary pull request | [#80](https://github.com/buffedlizard55-lab/OLBG2/pull/80) |
+| Merge result | **MERGED** at 2026-10-22T08:33:53Z; `main` merge commit `6902e92ebe67fe7790a0058b2d85c8f171b5fa3a` |
+| Local verification before merge | Full deterministic build, 115 unit tests passed, zero local-link errors, byte-identical `audit65/` outputs after regeneration; no upstream file edits |
+| GitHub Actions and Pages | **NOT YET VERIFIED LIVE** as of this record: [Validate run 39748598750](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39748598750) and [Deploy run 39748684468](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39748684468) remain queued (no failure reported). Pages build API reports `building` for this merge; the new `/audit65/flagged.html` URL currently returns 404 from the previous deployment. A manual Pages rebuild POST was rejected by GitHub with HTTP 403 (`Resource not accessible by integration`); no credentials were requested or stored. **Do not call the audit page live until the deploy succeeds and the URL resolves.** |
+| Public URL after successful deploy | `https://buffedlizard55-lab.github.io/OLBG2/audit65/flagged.html` (pending availability) |
+
+A65-1 is **done**. A65-2 remains **in progress / external Pages queue**; the published source-linked flags are committed to `main` but the live URL is not verified. Earlier findings remain flagged for upstream owners to correct in their scopes. The Actions queue is not a source verification result; avoid claiming that the queued check has passed.

@@ -1992,3 +1992,27 @@ was made by this session at F7, as logged. It is a two-line edit (NAV entry + ba
 **Scope rule:** this session creates only new files (`data/update/**`, `scripts/update_*.py`, `update/**`, `tests/test_update_d69dc1c9.py`, `research/update-d69dc1c9.md`) until D6. It does **not** edit any earlier layer (`site/`, `survey/`, `live/`, `desk/`, `verified/`, `forward/`, `board/`, `slate/`, `hub/`, `evidence/`, `audit65/`, `portal/`, `final/`), any earlier dataset, or any CI-owned generated path except the root NAV entry at integration, which is logged here. Cross-scope needs will be logged below instead of edited.
 
 **Verified-data rule (unchanged from the board):** every published value carries the official URL of the row it came from; nothing inferred or filled; unconfirmed values stay blank with a reason; a selection is `high` only when model probability ≥ 70% **and** the fair American price sits inside −250..+10000 (decimal 1.40–101.00); no bookmaker prices are read or invented.
+
+### Session record — arena/d69dc1c9-olbg2 (2026-10-22) — /update/ layer, window 22–28 Oct 2026
+
+- **Scope (as claimed above):** D1–D6 complete. New layer `/update/` + `data/update/` (only new files until D6).
+- **Fresh official captures:** NHL 49 (api-web.nhle.com score feeds; records + leaders), MLB WS G1–G5
+  (statsapi.mlb.com), URC R4 ×8 (stats.unitedrugby.com), WST NIO R3 ×8 (wst.tv), ATP Almaty/Brussels/Lyon
+  (atptour.com), EuroLeague R7+R8 (euroleaguebasketball.net widget), PDC European Championship R1
+  (pdc.tv, consent wall → search rendering of official URLs, flagged), F1 US GP + 2026 results/standings
+  (formula1.com), TAURON Liga/Polish Super Cup (tauronliga.pl).
+- **Deliverables:** `scripts/update_model.py` (origination), `scripts/update_build.py` (site),
+  `scripts/update_verify.py` (8 gates, all pass), `data/update/{inputs,sources,matches,predictions,band,flagged}.json`
+  (208 rows · 165 picks · 114 in-band · 11 high under the >70% + −250..+10000 gate · 143 flagged),
+  `update/**` 24 pages, `tests/test_update_d69dc1c9.py` (21 tests; suite 164 green), `research/update-d69dc1c9.md`.
+- **Inherited/cross-ref (labelled, never fresh):** NBA 22–28 Oct slate (cdn.nba.com endpoints HTTP 500 this
+  session) + EHFCL/Pro D2/Top 14/GAA/greyhounds/golf/cricket rows from `data/verified` (PR #82); URC form
+  labels cross-ref'd from same window's verified rows. AFLW + esports = documented gaps (no rows invented).
+- **Flagged irregularities:** PDC consent-wall sourcing; Humphries→Huybrechts R1 substitution (illness,
+  22 Oct official statement); URC/EuroLeague/TAURON local times unconverted; EuroLeague R8 28 Oct games not
+  rendered; prior-layer volleyball date/name clash resolved in favour of official game centre (flagged).
+- **PR:** #114 (this branch → main). D6 shared edits limited to root NAV entry in `scripts/build_site.py`
+  + regenerated root pages; `integration_audit.py` 0 link errors at publish.
+- **Note for future sessions:** `arena/<id>-olbg2` branch naming is a platform constraint (see earlier records);
+  python3 scripts/update_model.py && python3 scripts/update_build.py && python3 scripts/update_verify.py
+  regenerates and re-verifies the whole /update/ layer deterministically.

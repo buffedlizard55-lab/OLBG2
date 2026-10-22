@@ -1,0 +1,88 @@
+{
+  "captured_at": "2026-10-22T09:35:00Z",
+  "session": "arena/42c8f6be-olbg2",
+  "items_count": 8,
+  "unlined_count": 30,
+  "items": [
+    {
+      "id": "HF-01",
+      "severity": "high",
+      "category": "Upstream Sport ID Error (Fixed in /hub/)",
+      "sport": "basketball",
+      "title": "Basketball & Golf OLBG Sport IDs Swapped Upstream (HA-01, HA-02) + Boxing/Cycling IDs Fixed (HA-03)",
+      "detail": "Live OLBG sitemap-betting-tips.xml maps Basketball to id=4 (/Basketball/4), Golf to id=5 (/Golf/5), Boxing to id=16 (/Boxing/16), and Cycling to id=17 (/Cycling/17). Upstream scripts/verified_seed.py mapped Basketball to 19, Golf to 4, Boxing to 6, and Cycling to None. Fixed across all 189 /hub/ rows and category metadata.",
+      "official_source": "OLBG Sitemap Index",
+      "official_url": "https://www.olbg.com/sitemap-betting-tips.xml"
+    },
+    {
+      "id": "HF-02",
+      "severity": "high",
+      "category": "Stale Standings Update (Fixed in /hub/)",
+      "sport": "basketball",
+      "title": "EuroLeague Round 7 opener E2026_61 (Hapoel IBI Tel Aviv 90-81 Virtus Bologna) missing from upstream club records (HA-04)",
+      "detail": "Official EuroLeague Live API confirms E2026_61 finished 90-81 on 2026-10-21T16:00:00Z, bringing HTA to 5-2 (630:601, GP=7) and VIR to 4-3 (606:608, GP=7). Recomputed all 20 EuroLeague clubs (10,546:10,546 zero-sum) and all 32 BKT EuroCup clubs at GP=4 before pricing all 49 Basketball fixtures.",
+      "official_source": "EuroLeague Official Live API (E2026)",
+      "official_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games"
+    },
+    {
+      "id": "HF-03",
+      "severity": "medium",
+      "category": "Partial Market Blank (Zero Hallucination)",
+      "sport": "basketball",
+      "title": "NBA Over/Under Totals Left Blank (—) Across All 14 Games",
+      "detail": "Official nba.com server-side schedule/standings payloads confirm win-loss records and opening-night final scores but omit full 30-team season PF/PA totals in static HTML/JSON. Spreads and moneylines are originated from verified win rates; totals remain strictly blank (—) rather than copied from secondary sites.",
+      "official_source": "NBA Official Schedule",
+      "official_url": "https://www.nba.com/schedule"
+    },
+    {
+      "id": "HF-04",
+      "severity": "medium",
+      "category": "Primary Endpoint Limitation (Left Blank)",
+      "sport": "tennis",
+      "title": "3 WTA Singles Ties Left Blank — api.wtatennis.com HTTP 400 (All 13 ATP Ties Originated)",
+      "detail": "All 26 ATP players across 13 live ATP Tour singles ties were verified directly from PIF ATP Singles Rankings (2026.10.19) and originated across all 3 markets. Official api.wtatennis.com returned HTTP 400 on ranking requests, so the 3 WTA ties (Rybakina-Kudermetova, Eala-Shnaider, Gibson-Krueger) are held blank.",
+      "official_source": "ATP Tour Official Rankings & WTA Portal",
+      "official_url": "https://www.atptour.com/en/rankings/singles"
+    },
+    {
+      "id": "HF-05",
+      "severity": "medium",
+      "category": "Primary Endpoint Truncation & Broadcaster Note",
+      "sport": "snooker",
+      "title": "7 of 8 Snooker Northern Ireland Open R3 Ties Outside Server-Rendered WST Top 36 + Frame Format Note",
+      "detail": "Official wst.tv server-renders ranks #1-#36 only. #9 Kyren Wilson (£716,800) vs #29 Pang Junxu (£272,750) has both players verified inside the Top 36 and is originated under best-of-7 frame format (broadcaster/tour format disclosure); the other 7 R3 ties have >=1 player outside #36 and remain blank (—).",
+      "official_source": "World Snooker Tour Official Rankings",
+      "official_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+    },
+    {
+      "id": "HF-06",
+      "severity": "low",
+      "category": "Small Opening Sample Disclosure",
+      "sport": "volleyball",
+      "title": "Italian SuperLega Round 2 Priced with 25% Shrinkage & Capped at Low Confidence; 3 PlusLiga Ties Blank",
+      "detail": "Lega Pallavolo Serie A publishes exact zero-sum Round 1 set and rally-point totals (939:939 across 12 clubs), so all 6 Round 2 SuperLega matches are originated with 75% shrinkage toward 0.50 and capped at low confidence (GP=1). PlusLiga redirects plusliga.pl/games.html -> tauronliga.pl, so 3 Polish ties stay blank.",
+      "official_source": "Lega Pallavolo Serie A Official Standings",
+      "official_url": "https://www.legavolley.it/classifica/"
+    },
+    {
+      "id": "HF-07",
+      "severity": "low",
+      "category": "Client-Rendered / Off-Season Primary Feeds",
+      "sport": "greyhounds",
+      "title": "Cricket (1), Golf (2), Rugby League 2027 Outrights (2), GAA Club Ties (5), Greyhounds (4), Outrights (3) Held Blank",
+      "detail": "Confirmed first-hand on gbgb.org.uk (HTTP 200 shell, client-rendered trap sectionals — correcting upstream HTTP 500 note HA-10), icc-cricket.com, pgatour.com, europeantour.com, nrl.com, superleague.co.uk, and gaa.ie. All 17 non-modelable rows are listed transparently with official links and — in every odds cell.",
+      "official_source": "GBGB, ICC, PGA Tour, NRL & GAA Official Portals",
+      "official_url": "https://www.gbgb.org.uk/racing/results/"
+    },
+    {
+      "id": "HF-08",
+      "severity": "low",
+      "category": "Chalk-Avoidance Confidence Cap",
+      "sport": "all",
+      "title": "Heavy Chalk Shorter Than -250 (1.40 Decimal) Capped at Medium Confidence",
+      "detail": "Per explicit brief instructions to focus high-confidence recommendations inside -250 to +10000 American odds (1.40 to 101.00 decimal), heavy favorites whose fair moneyline price is shorter than -250 remain fully priced across all markets in every sport table, with match-winner confidence capped at medium rather than high.",
+      "official_source": "/hub/ Methodology Specification",
+      "official_url": "https://www.olbg.com/sitemap-betting-tips.xml"
+    }
+  ]
+}

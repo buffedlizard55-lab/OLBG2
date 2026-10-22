@@ -2996,3 +2996,29 @@ No fresh sports facts are claimed. Official sports hosts are outside this sandbo
 ### `arena/e52155e1-olbg2` — implementation and verification complete
 
 Root/current integration, automatic all-layer HTML link discovery, accurate file-check disclosures, current seed/model/build CI and drift gate, README entry, and five regression tests completed. Full workflow rebuild replay succeeded; 343 tests passed; zero local file link errors across discovered HTML. No current data or predictions changed. Sources, limits, unresolved coverage and verification gaps: `research/integration-e52155e1.md`; public review links on `integration.html` and `current/flagged.html`. Source verification is **not** freshly certified. Publication follows. Initial branch pull returned “remote ref not found” because the Arena branch was new; pulled/rebased against main before its first push, then published the claim successfully. No merge conflict or other session scope edit.
+
+## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
+
+Claimed 2026-10-22 21:05 UTC. Branch `arena/46d0531f-olbg2` (Arena fixes the branch name for this session).
+Open PR #125 (`arena/e52155e1-olbg2`, +9 lines in `COORDINATION.md`, GitHub reports it `CONFLICTING`) is left
+untouched — it is another session's record, not this session's scope.
+
+**What is different this session.** Prior sessions recorded that official sports hosts are unreachable from the
+sandbox shell and could not be re-certified. That is true of `bash`, but the agent `fetch_page` tool does reach
+`olbg.com` and the governing-body sites: this session captured them first-hand at 21:00–23:00 UTC on 22 October
+2026. Every fixture, form line and result in the new layer is read from a page fetched in this session, and the
+capture is stored verbatim under `data/daily/capture/`.
+
+| # | Task | Status | File scope |
+|---|---|---|---|
+| 1 | Live OLBG taxonomy + event capture for eligible sports with no rows in the existing layers | in progress | `data/daily/capture/**`, `research/daily-46d0531f.md` |
+| 2 | Official-source verification of every fixture and model input | in progress | `data/daily/*.json` |
+| 3 | Line origination (winner, handicap, total) + confidence gate | in progress | `scripts/daily_model.py`, `data/daily/lines.json` |
+| 4 | Five highest-confidence picks per covered sport with written predictions ≥30 words | in progress | `data/daily/predictions.json` |
+| 5 | Clean dashboard, per-sport subpages, flagged page, sources page | in progress | `daily/**`, `scripts/daily_build.py` |
+| 6 | Root navigation, link audit, CI rebuild, README, tests | in progress | `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, `tests/test_daily.py` |
+| 7 | Verify, PR, merge, confirm Pages deploy | not started | `COORDINATION.md` (append-only) |
+
+No other session's data, builder, generated page or test is modified. `current/`, `final/`, `canon/`, `atlas/`,
+`verified/`, `live/`, `survey/`, `site/`, `portal/`, `board/`, `hub/`, `slate/`, `forward/`, `evidence/`,
+`audit65/`, `pulse/`, `reconcile/`, `update/`, `fresh/`, `beacon/`, `command/`, `atlas/` stay byte-identical.

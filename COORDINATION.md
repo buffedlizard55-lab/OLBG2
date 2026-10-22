@@ -2018,3 +2018,11 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 | N5 | Integration: full build/tests/link audit, PR → merge, confirm Pages live, record here | unclaimed→claimed | arena/f048d3a9-olbg2 | shared outputs at integration only |
 
 **Rules:** no existing dataset value is edited in place; discrepancies are published as flagged items with official source links and blank corrected values where unconfirmed. High = model prob ≥70% AND fair American in [-250,+10000].
+
+### Session f048d3a9 results (2026-10-22 UTC)
+- N2 done: `scripts/fresh_audit.py` → `data/fresh/audit.json`. 188 rows / 30 predictions mechanically audited: 0 excluded leaks, 0 duplicates, 0 probability/odds arithmetic failures, all predictions ≥30 words & unique & sourced.
+- **New flags FR-01…FR-11** (on `fresh/flagged.html`): FR-01 high — 2 research predictions labelled high below 70% (NY Islanders 69.71%, Gian van Veen 66.8%); FR-02 same-selection label conflicts (3); FR-03 README claims 178 rows vs actual 188; FR-04 tennis/Aussie rules/eSports zero rows; FR-05 44 competition-scope sources; FR-06 blanks (55 venue / 34 summary / 34 unlined); FR-07 local-vs-UTC date convention (10 rows); FR-08 sample-only first-hand verification; FR-09 EuroLeague 18:15 vs 14:15 ambiguity; FR-10 American-odds rounding convention (11); FR-11 duplicate "Back Vodacom Bulls" opening.
+- N3 done (sample): NHL NSH@BOS + MIN@CGY (nhl.com titles, Oct 22 2026), EuroLeague Panathinaikos v Baskonia (ranks 1/20 confirmed), OLBG hub URL schema re-confirmed live (incl. Price v Cross event_id=32325 = row pdc-32325). Sandbox curl to sports hosts returns empty; rest NOT re-verified. Detail: `research/fresh-f048d3a9.md`.
+- N4 done: `fresh/` 6 pages (dashboard, 188-row table, predictions check, flagged, sources, methodology) via `scripts/fresh_build.py`; `tests/test_fresh.py` 6 tests. Full suite: **151 tests OK**, no upstream generated-file drift.
+- Cross-scope requests: (1) verified-desk owner regrade FR-01/FR-02, fix README counts; (2) root nav owner add `/fresh/` link. Neither file edited by this session.
+- N5 in progress: PR → merge → Pages check follows.

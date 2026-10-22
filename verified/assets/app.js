@@ -50,7 +50,7 @@
         c.style.display = ok ? '' : 'none';
         if (ok) shown += 1;
       });
-      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' HIGH confidence picks';
+      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' predictions';
     });
   }
 

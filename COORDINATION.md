@@ -1215,13 +1215,13 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| R1 | Record claim and inspect all five published layers | in progress | `arena/36f79c71-olbg2` | `COORDINATION.md` |
-| R2 | Re-verify every stored row that is still upcoming against its official source; flag stale/past rows | unclaimed | — | `data/verified/**`, `research/` |
-| R3 | Close the remaining unlined rows where an official input exists; keep blanks elsewhere | unclaimed | — | `data/verified/**`, `scripts/verified_model.py` |
-| R4 | Add fixtures for sports with no rows (Aussie Rules, eSports) if OLBG and an official body both confirm them | unclaimed | — | `data/verified/**`, `research/` |
-| R5 | High-confidence written predictions inside the required odds band | unclaimed | — | `data/verified/predictions.json` |
-| R6 | Unified landing page and category pages over one deduplicated dataset | unclaimed | — | root `index.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
-| R7 | Final integration: re-verify, link-check, PR, merge, Pages | unclaimed | — | shared outputs |
+| R1 | Record claim and inspect all five published layers | done | `arena/36f79c71-olbg2` | `COORDINATION.md` |
+| R2 | Re-verify every stored row that is still upcoming against its official source; flag stale/past rows | done — 15 rows re-read on 2026-10-22; 140 keep the 2026-10-21 stamp; 59 past rows labelled | `arena/36f79c71-olbg2` | `data/verified/**`, `research/` |
+| R3 | Close the remaining unlined rows where an official input exists; keep blanks elsewhere | done — 43 rows stay blank with a per-row reason | `arena/36f79c71-olbg2` | `data/verified/**`, `scripts/verified_model.py` |
+| R4 | Add fixtures for sports with no rows (Aussie Rules, eSports) if OLBG and an official body both confirm them | done — none published; both shown as zero-row sports | `arena/36f79c71-olbg2` | `data/verified/**`, `research/` |
+| R5 | High-confidence written predictions inside the required odds band | done — 13 band picks, 1.40–1.42, each with a ≥30-word prediction | `arena/36f79c71-olbg2` | `data/verified/predictions.json` |
+| R6 | Unified landing page and category pages over one deduplicated dataset | done — 10 root pages + 17 sport pages over 155 rows | `arena/36f79c71-olbg2` | root `index.html`, `sports/**`, `assets/**`, `scripts/build_site.py` |
+| R7 | Final integration: re-verify, link-check, PR, merge, Pages | in progress — build, 61 tests and 0 local link errors; PR/merge recorded below | `arena/36f79c71-olbg2` | shared outputs |
 
 **Scope discipline.** This session is the final integration session: it may regenerate shared outputs
 (`index.html`, `sports/**`, navigation, the unified table data) because every earlier session's board is closed
@@ -1233,3 +1233,22 @@ lives in `data/verified/**`, `verified/**`, `scripts/verified_*.py`, `scripts/bu
 blank and be flagged. OLBG pages are used only for listing provenance; fixtures, times and results come from the
 governing body or league. A row whose event date has passed is labelled `past` rather than presented as upcoming.
 
+
+## Results — session `arena/36f79c71-olbg2`
+
+| Check | Result |
+|---|---|
+| Unified dataset | 155 fixtures, 15 sports, 47 competition labels, 20 governing-body domains |
+| Origination | 112 rows lined (moneyline + handicap; totals where scoring data exists), 43 blank with a reason |
+| Source scope | 92 rows cite a fixture-specific official URL; 63 cite a competition/rankings page (VF-11) |
+| Re-verification | 15 rows re-read on 2026-10-22 (12 NHL, 3 MLB); 140 keep the 2026-10-21 capture stamp |
+| Predictions | 33 total: 13 price-band (1.40–1.42, 70.0–71.4%) + 20 high confidence outside the band |
+| Review queue | 18 items, VF-01 … VF-18, each with an official source link; non-blocking by design |
+| Build | `verified_seed → verified_model → verified_build → build_site` clean; integration audit 0 link errors |
+| Tests | 61 passing, including a new price-band gate (13 picks, exact price bounds, unique ids, valid hockey lines) |
+| Pages | Root dashboard + 17 sport pages + verification ledger + picks + flagged + methodology + sources + archive |
+
+**Not resolved in this session, and published rather than guessed:** the ICC date disagreement for match 271646
+(VF-17), the NBA 2026-10-22 slate that no reachable NBA endpoint would render (VF-14), World Series Game 4 and the
+conditional Games 5–7 (VF-15), and the 63 rows whose official URL identifies the competition rather than the
+fixture (VF-11). No value was inferred to close any of them.

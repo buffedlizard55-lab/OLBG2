@@ -491,7 +491,7 @@ JS = """\
         c.style.display = ok ? '' : 'none';
         if (ok) shown += 1;
       });
-      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' HIGH confidence picks';
+      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' predictions';
     });
   }
 
@@ -541,7 +541,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
     <div class="topbar-inner">
       <a class="brand" href="{prefix}index.html">
         <span>OLBG Verified Research &amp; Origination Desk</span>
-        <span class="brand-badge">2026-10-21 Primary Audit</span>
+        <span class="brand-badge">2026-10-22 refresh</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
         {nav_html}
@@ -564,7 +564,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
 {body}
   </main>
   <footer>
-    <div>Every value published on <code>/verified/</code> is traced to an official governing-body or league endpoint captured on <strong>2026-10-21</strong>. Unconfirmed fields are left strictly blank (<code>—</code>) and listed on <a href="{prefix}flagged.html">Flagged for Review</a>.</div>
+    <div>Every value published on <code>/verified/</code> is traced to an official governing-body or league endpoint captured on <strong>2026-10-21</strong> and the NHL/MLB fixtures were re-read on <strong>2026-10-22</strong>. Unconfirmed fields are left strictly blank (<code>—</code>) and listed on <a href="{prefix}flagged.html">Flagged for Review</a>.</div>
     <div>Excluded per brief: Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, Specials.</div>
   </footer>
   <script src="{prefix}assets/app.js"></script>
@@ -708,7 +708,7 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
     return f"""<article class="pred-card" id="{esc(p['match_id'])}" data-pred-card="1" data-sport="{esc(p['sport'])}">
   <div class="pred-header">
     <div>
-      <span class="pill pill-high">HIGH CONFIDENCE</span>
+      <span class="pill pill-high">{"PRICE-BAND PICK" if p.get("match_type") == "band" else "HIGH CONFIDENCE"}</span>
       <a href="{prefix}sports/{esc(p['sport'])}.html" style="margin-left:0.45rem;font-weight:600;">{esc(p['sport_name'])}</a>
       <span style="color:#64748b;font-size:0.84rem;"> · {esc(p['competition'])} · {esc(p['time'])}</span>
     </div>
@@ -799,21 +799,22 @@ def main() -> None:
 <section class="hero">
   <p class="eyebrow">Independent Primary-Source Verification &amp; Line Origination</p>
   <h1>OLBG Multi-Sport Verified Origination Desk</h1>
-  <p>Cleanroom reverse-engineering of <strong>OLBG.com</strong> across all <strong>{len(eligible)} eligible sports</strong> on <strong>2026-10-21</strong>, strictly excluding Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, and Specials. Every fixture, team record, goal/point tally, ranking points total, and prize sum is verified directly from official governing-body feeds, with zero third-party or inferred values.</p>
+  <p>Cleanroom reverse-engineering of <strong>OLBG.com</strong> across all <strong>{len(eligible)} eligible sports</strong> on <strong>2026-10-21</strong>, refreshed on <strong>2026-10-22</strong>, strictly excluding Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, and Specials. Every fixture, team record, goal/point tally, ranking points total, and prize sum is verified directly from official governing-body feeds, with zero third-party or inferred values.</p>
 </section>
 
 <div class="kpi-grid">
   <div class="kpi"><div class="kpi-val">{len(eligible)}</div><div class="kpi-label">Eligible OLBG Sports Audited (8 Excluded)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['total_rows']}</div><div class="kpi-label">Verified Match &amp; Market Rows</div></div>
   <div class="kpi"><div class="kpi-val">{counts['originated_rows']}</div><div class="kpi-label">Independently Originated Lines (9 Sports)</div></div>
-  <div class="kpi"><div class="kpi-val">{counts['high_confidence']}</div><div class="kpi-label">Bespoke Human HIGH Picks (&ge;30 Words)</div></div>
+  <div class="kpi"><div class="kpi-val">{counts['high_confidence']}</div><div class="kpi-label">HIGH Picks &ge;72% (Outside Price Band)</div></div>
+  <div class="kpi"><div class="kpi-val">{counts.get('band_picks', 0)}</div><div class="kpi-label">Price-Band Picks 1.40-1.42</div></div>
   <div class="kpi"><div class="kpi-val">{counts['unlined_rows']}</div><div class="kpi-label">Unconfirmed Rows Left Blank &amp; Flagged</div></div>
   <div class="kpi"><div class="kpi-val">{len(audits)}</div><div class="kpi-label">Existing Repo Audit Findings Documented</div></div>
 </div>
 
 <div class="section-head">
   <h2>Featured High-Confidence Human Predictions</h2>
-  <p><a href="predictions.html">View all {len(preds)} bespoke HIGH-confidence write-ups →</a></p>
+  <p><a href="predictions.html">View all {len(preds)} bespoke write-ups ({counts.get('band_picks', 0)} price-band, {counts['high_confidence']} high) →</a></p>
 </div>
 <div class="pred-list">
   {top_preds_preview}
@@ -878,15 +879,15 @@ def main() -> None:
     preds_body = f"""
 <section class="hero">
   <p class="eyebrow">Human Editorial Selection Desk · Strictly Verified Primary Facts</p>
-  <h1>High-Confidence Predictions ({len(preds)} Picks)</h1>
-  <p>Every fixture graded <strong>HIGH</strong> (&ge;72.0% originated win probability backed by verified current-season primary data) carries an individual, natural human editorial write-up citing verified official form, recent match scores or rankings, and the exact betting selection.</p>
+  <h1>Predictions ({len(preds)} Picks)</h1>
+  <p><strong>{counts.get('band_picks', 0)} price-band picks</strong> meet both rules in the brief: model probability &ge;70% and fair odds 1.40-101.00 (&minus;250 to +10000). Because a 70%+ chance cannot be priced above 1.43, those picks sit at 1.40-1.42 and are labelled PRICE-BAND PICK. A further <strong>{counts['high_confidence']} high-confidence picks</strong> are &ge;72% but priced 1.02-1.39, below the band's &minus;250 floor; they remain published and are labelled HIGH CONFIDENCE.</p>
 </section>
 <div class="controls">
   <select id="pred-sport-filter" aria-label="Filter predictions by sport">
-    <option value="all">All Sports with HIGH Picks ({len(preds)})</option>
+    <option value="all">All sports with predictions ({len(preds)})</option>
     {pred_sport_opts}
   </select>
-  <span id="pred-filter-count" class="count-note">Showing {len(preds)} of {len(preds)} HIGH confidence picks</span>
+  <span id="pred-filter-count" class="count-note">Showing {len(preds)} of {len(preds)} predictions</span>
 </div>
 <div class="pred-list">
   {"".join(render_prediction_card(p, depth=0) for p in preds)}
@@ -1083,7 +1084,7 @@ def main() -> None:
 
     print(
         f"verified_build: built 5 core HTML pages + {len(eligible)} sport pages "
-        f"({counts['total_rows']} rows, {len(preds)} HIGH predictions)"
+        f"({counts['total_rows']} rows, {len(preds)} predictions)"
     )
 
 

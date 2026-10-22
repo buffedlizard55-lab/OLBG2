@@ -77,6 +77,111 @@ def grade(prob: float, cap: str | None = None) -> str:
     return raw
 
 
+BAND_MIN_DECIMAL = 1.40   # American -250
+BAND_MAX_DECIMAL = 101.00  # American +10000
+BAND_MIN_PROB = 0.70
+
+
+def band_qualified(prob: float) -> bool:
+    """True when a selection is both >=70% likely and priced -250..+10000."""
+    if prob < BAND_MIN_PROB:
+        return False
+    # Compare the exact decimal price, not the rounded display price: a 71.6%
+    # selection is 1.397 and therefore shorter than -250 even though it rounds
+    # to 1.40. The window is 70.000%-71.4286% (1.400-1.429).
+    exact = 1.0 / prob
+    return BAND_MIN_DECIMAL <= exact <= BAND_MAX_DECIMAL
+
+
+def _half_lines(lo: float, hi: float) -> list[float]:
+    start = int(round(lo * 2))
+    end = int(round(hi * 2))
+    return [x / 2 for x in range(start, end + 1) if x % 2 != 0]
+
+
+def band_candidates(row: dict) -> list[tuple[str, float, str, float | None]]:
+    """Enumerate moneyline, handicap-ladder and total-ladder selections.
+
+    Returns (selection, probability, market kind, line). Only selections with a
+    model probability of 70.0-71.4% can satisfy both the 70% confidence rule and
+    the -250 floor, so this enumerates the ladder and lets the caller take the
+    highest qualifying price.
+    """
+    params = row.get("model_params") or {}
+    kind = params.get("kind")
+    home, away = row["home"], row["away"]
+    out: list[tuple[str, float, str, float | None]] = []
+
+    if kind == "poisson":
+        grid = poisson_grid(params["lh"], params["la"])
+        p_home = sum(p for (i, j), p in grid.items() if i > j)
+        p_away = sum(p for (i, j), p in grid.items() if j > i)
+        out.append((f"{home} (Moneyline)", p_home, "moneyline", None))
+        out.append((f"{away} (Moneyline)", p_away, "moneyline", None))
+        spread = max(3.0, min(12.0, abs(params["lh"] - params["la"]) * 2.2 + 3.0))
+        for line in _half_lines(-spread, spread):
+            # Ice hockey has no draw: ±0.5 lines would silently price "win or
+            # regulation tie", which is not a real market. Only puck lines apply.
+            if params.get("draws") is False and abs(line) < 1.0:
+                continue
+            p = sum(pr for (i, j), pr in grid.items() if (i - j) + line > 0)
+            q = sum(pr for (i, j), pr in grid.items() if (j - i) + line > 0)
+            out.append((f"{home} {line:+.1f} (Handicap)", p, "handicap", line))
+            out.append((f"{away} {line:+.1f} (Handicap)", q, "handicap", line))
+        total = params["lh"] + params["la"]
+        for line in _half_lines(max(4.5, total - 3.0), total + 3.0):
+            p_over = sum(pr for (i, j), pr in grid.items() if (i + j) > line)
+            out.append((f"Over {line} (Match Total)", p_over, "total", line))
+            out.append((f"Under {line} (Match Total)", 1.0 - p_over, "total", line))
+
+    elif kind == "normal":
+        margin, sigma = params["margin"], params["sigma"]
+        p_home = 1.0 - normal_cdf(-margin / sigma)  # P(margin > 0)
+        out.append((f"{home} (Moneyline)", p_home, "moneyline", None))
+        out.append((f"{away} (Moneyline)", 1.0 - p_home, "moneyline", None))
+        span = max(6.0, min(28.0, abs(margin) * 1.8 + 6.0))
+        for line in _half_lines(-span, span):
+            p = 1.0 - normal_cdf((-line - margin) / sigma)
+            q = 1.0 - normal_cdf((-line + margin) / sigma)
+            out.append((f"{home} {line:+.1f} (Handicap)", p, "handicap", line))
+            out.append((f"{away} {line:+.1f} (Handicap)", q, "handicap", line))
+        if params.get("total"):
+            total, sig_t = params["total"], params.get("sigma_total") or sigma
+            for line in _half_lines(total - 12.0, total + 12.0):
+                p_over = 1.0 - normal_cdf((line - total) / sig_t)
+                out.append((f"Over {line} (Match Total)", p_over, "total", line))
+                out.append((f"Under {line} (Match Total)", 1.0 - p_over, "total", line))
+
+    elif kind == "bestof":
+        dist = [(a, b, p) for a, b, p in params["dist"]]
+        m1 = sum(p for a, b, p in dist if a > b)
+        out.append((f"{home} (Match Winner)", m1, "moneyline", None))
+        out.append((f"{away} (Match Winner)", 1.0 - m1, "moneyline", None))
+        for line in _half_lines(-4.5, 4.5):
+            p = sum(pr for a, b, pr in dist if (a - b) + line > 0)
+            q = sum(pr for a, b, pr in dist if (b - a) + line > 0)
+            out.append((f"{home} {line:+.1f} (Handicap)", p, "handicap", line))
+            out.append((f"{away} {line:+.1f} (Handicap)", q, "handicap", line))
+    return out
+
+
+def best_band_pick(row: dict) -> dict | None:
+    """Highest-probability selection that satisfies probability >=70% AND price >=1.40."""
+    qualified = [(s, p, k, l) for (s, p, k, l) in band_candidates(row) if band_qualified(p)]
+    if not qualified:
+        return None
+    selection, prob, market, line = max(qualified, key=lambda x: x[1])
+    return {
+        "selection": selection,
+        "market": market,
+        "line": line,
+        "probability": round(prob, 4),
+        "fair_odds": fair_decimal(prob),
+        "confidence": "high",
+        "price_band": "in-band",
+    }
+
+
 def best_of_race(p: float, target: int) -> list[tuple[int, int, float]]:
     """Exact score distribution for first-to-`target` legs/frames/sets."""
     outcomes: list[tuple[int, int, float]] = []
@@ -297,7 +402,7 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
         "template": (
             "Sporting Clube de Portugal to win the match-winner market at home over IFK Kristianstad in Thursday's EHF Champions League Round 5 tie. "
             "Sporting stand unbeaten in Group D at 3W-1D-0L (7 points, 149 goals scored, 125 conceded). "
-            "Winless Kristianstad sit 0W-0D-4L having conceded a competition-high 155 goals (122 scored), making Sporting {prob_pct}% favourites ({price} fair price)."
+            "Winless Kristianstad sit 0W-0D-4L having conceded 155 goals while scoring 122, making Sporting {prob_pct}% favourites ({price} fair price)."
         ),
         "facts": [
             {"claim": "Sporting lead Group D unbeaten at 3W-1D-0L (7 pts, 149 GF, 125 GA)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
@@ -335,11 +440,11 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
         "headline": "Competition-best defence gives unbeaten Barça commanding home control over Montpellier",
         "template": (
             "Barça to beat Montpellier Handball at Palau Blaugrana in Thursday's EHF Champions League Group E clash. "
-            "Barça have won all four group fixtures (4W-0D-0L, 8 points) while conceding only 104 goals — the stingiest mark among all 24 clubs — alongside 137 goals scored. "
+            "Barça have won all four group fixtures (4W-0D-0L, 8 points) while conceding only 104 goals across four games alongside 137 scored. "
             "Against 1W-0D-3L Montpellier (116 GF, 125 GA), Barça project at {prob_pct}% ({price})."
         ),
         "facts": [
-            {"claim": "Barça lead Group E at 4W-0D-0L with 137 GF and 104 GA (fewest goals allowed in EHF CL)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
+            {"claim": "Barça lead Group E at 4W-0D-0L with 137 GF and 104 GA", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
             {"claim": "Montpellier Handball stand 3rd in Group E at 1W-0D-3L (116 GF, 125 GA)", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
             {"claim": "EHF Round 5 match 202711020101049 scheduled 22 Oct 20:45 CEST", "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/"},
         ],
@@ -361,7 +466,7 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
         "headline": "World No. 11 Nathan Aspinall holds a six-fold ranking money edge on qualifier Cristo Reyes",
         "template": (
             "Nathan Aspinall to defeat Cristo Reyes in Friday's PDC European Championship Round 1 contest (contrarian to casual tipster upset chatter). "
-            "Official PDC standings place Aspinall 11th on £579,500 against No. 71 Reyes on £95,000 — the widest ranking-position gap in the entire 16-match draw. "
+            "Official PDC standings place Aspinall 11th on £579,500 against No. 71 Reyes on £95,000 — a 60-place ranking gap. "
             "Across a first-to-six-legs race our binomial leg model prices Aspinall at {prob_pct}% ({price})."
         ),
         "facts": [
@@ -503,6 +608,195 @@ BESPOKE_HIGH_NARRATIVES: dict[str, dict] = {
     },
 }
 
+# ---------------------------------------------------------------------------
+# Bespoke analyses for price-band selections (>=70% probability AND -250..+10000).
+# Written 2026-10-22 against the official standings captured for the underlying
+# model. Each template quotes the band selection's own probability and price.
+# ---------------------------------------------------------------------------
+BAND_NARRATIVES: dict[str, dict] = {
+    "el-E2026-64": {
+        "headline": "Istanbul derby total sits 7.6 above a 174.9-point projection",
+        "template": (
+            "Take **under 182.5 points** in the Istanbul derby between Anadolu Efes and Besiktas. "
+            "Efes have scored 492 and conceded 510 across six EuroLeague rounds, while Besiktas have scored 554 and conceded 555. "
+            "The 182.5 line sits 7.6 points above our possession-adjusted projection of 174.9, and the under is priced at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Anadolu Efes stand 13th at 2-4 with 492 points scored and 510 conceded", "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"},
+            {"claim": "Besiktas stand 11th at 3-3 with 554 points scored and 555 conceded", "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"},
+            {"claim": "Round 7 fixture Efes v Besiktas confirmed on the EuroLeague game centre", "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/"},
+        ],
+    },
+    "el-E2026-66": {
+        "headline": "Partizan's low-scoring profile supports a +4.5 cushion in the Eternal Derby",
+        "template": (
+            "Back **Partizan Mozzart Bet Belgrade +4.5** in the Eternal Derby. "
+            "Partizan are 3-3 with 466 points scored and 471 conceded, a near-even profile that keeps games close. "
+            "Crvena Zvezda are 4-2 but have scored 485 points in six outings, the lowest total among the top five clubs. "
+            "Our normal-margin model gives the four-and-a-half-point cushion {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Partizan stand 12th at 3-3 with 466 PF and 471 PA", "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"},
+            {"claim": "Crvena Zvezda stand 5th at 4-2 with 485 PF and 457 PA", "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"},
+            {"claim": "Round 7 Eternal Derby confirmed at Stark Arena on 22 October 2026", "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/"},
+        ],
+    },
+    "el-E2026-67": {
+        "headline": "Seventeen and a half points is a heavy ask for league-leading Panathinaikos",
+        "template": (
+            "Take **Kosner Baskonia Vitoria-Gasteiz +17.5** at Telekom Center Athens. "
+            "Baskonia are bottom of the EuroLeague at 1-5, with 504 points scored and 564 conceded, and 0-2 on the road. "
+            "Panathinaikos lead the table at 5-1 with a +90 differential (528 scored, 438 conceded) and a 4-1 home record. "
+            "Even so, our margin model gives the visitors a {prob_pct}% ({price}) chance of staying within seventeen."
+        ),
+        "facts": [
+            {"claim": "Panathinaikos lead the 2026-27 EuroLeague at 5-1 with 528 PF, 438 PA and a 4-1 home record", "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"},
+            {"claim": "Kosner Baskonia are 20th at 1-5 with 504 PF, 564 PA and an 0-2 road record", "source": "https://www.euroleaguebasketball.net/en/euroleague/standings/"},
+            {"claim": "Round 7 fixture confirmed at Telekom Center Athens", "source": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/"},
+        ],
+    },
+    "ehfcl-202711020101049": {
+        "headline": "Barça's four-from-four defence meets a Montpellier side with three defeats",
+        "template": (
+            "Back **Barça -3.5** against Montpellier Handball in EHF Champions League Group E. "
+            "Barça have won all four group games, scoring 137 goals and conceding 104, an average of 26.0 against per match. "
+            "Montpellier are 1-3, with 116 goals scored and 125 conceded. "
+            "Our bivariate Poisson grid gives the hosts a {prob_pct}% ({price}) chance of winning by four or more."
+        ),
+        "facts": [
+            {"claim": "Barça top Group E at 4-0 with 137 GF and 104 GA", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
+            {"claim": "Montpellier stand third in Group E at 1-3 with 116 GF and 125 GA", "source": "https://ehfcl.eurohandball.com/men/2026-27/standings/"},
+            {"claim": "Round 5 fixture Barça v Montpellier confirmed at Palau Blaugrana", "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/"},
+        ],
+    },
+    "urc-292609": {
+        "headline": "Two of the URC's lowest-scoring sides point under 59.5 in Galway",
+        "template": (
+            "Take **under 59.5 points** as Connacht host Zebre Parma in URC Round 4. "
+            "Connacht have scored 56 and conceded 84 in three matches; Zebre have scored 52 and conceded 116. "
+            "That is 308 combined points across six team-matches, 51.3 per game, and the line asks for 8.2 more than the observed rate. "
+            "Our points model prices the under at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Connacht stand 14th after three rounds with 56 PF and 84 PA", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Zebre stand 16th after three rounds with 52 PF and 116 PA", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Round 4 fixture Connacht v Zebre confirmed at Dexcom Stadium on 23 October 2026", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609"},
+        ],
+    },
+    "urc-292611": {
+        "headline": "Bulls' +72 differential meets a winless Ulster at Loftus Versfeld",
+        "template": (
+            "Back **Vodacom Bulls -3.5** against Ulster Rugby in Pretoria. "
+            "The Bulls have scored 126 points in three URC rounds and conceded 54, a +72 differential that is the best in the table. "
+            "Ulster are 0-2-1, with 88 points scored and 93 conceded, and are still without a win after three rounds. "
+            "A four-point margin is modest against that scoring gap; our normal model prices the cover at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Vodacom Bulls have 126 PF, 54 PA and a +72 differential after three rounds", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Ulster are 0-2-1 with 88 PF and 93 PA", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Round 4 fixture Bulls v Ulster confirmed at Loftus Versfeld on 24 October 2026", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611"},
+        ],
+    },
+    "urc-292612": {
+        "headline": "Stormers and Scarlets have been combining for 48 points a game",
+        "template": (
+            "Take **over 42.5 points** when DHL Stormers host Scarlets in Cape Town. "
+            "The Stormers have scored 81 and conceded 54 in three matches; the Scarlets have scored 68 and conceded 85. "
+            "Those 288 points across six team-matches average 48.0 per fixture, 5.5 above the line. "
+            "Our total model prices the over at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "DHL Stormers have 81 PF and 54 PA after three rounds", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Scarlets have 68 PF and 85 PA after three rounds", "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"},
+            {"claim": "Round 4 fixture Stormers v Scarlets confirmed at DHL Stadium on 24 October 2026", "source": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612"},
+        ],
+    },
+    "top14-11867": {
+        "headline": "Toulouse and Perpignan have combined for 57 points per fixture",
+        "template": (
+            "Back **over 48.5 points** as Stade Toulousain host USA Perpignan in Top 14 Round 7. "
+            "Toulouse have scored 197 and conceded 124 in six matches, an average of 32.8 scored and 20.7 conceded. "
+            "Perpignan have scored 166 and conceded 199, an average of 33.2 conceded. "
+            "The combined 686 points across twelve team-matches is 57.2 per fixture; our total model prices the over at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Stade Toulousain are 5-0-1 with 197 PF and 124 PA after six rounds", "source": "https://top14.lnr.fr/classement"},
+            {"claim": "USA Perpignan are 3-3 with 166 PF and 199 PA", "source": "https://top14.lnr.fr/classement"},
+            {"claim": "Journee 7 fixture confirmed at Stade Ernest-Wallon on 24 October 2026", "source": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan"},
+        ],
+    },
+    "mlb-849805": {
+        "headline": "Rays' 98-win season earns a two-and-a-half-run cushion in World Series Game 1",
+        "template": (
+            "Take **Tampa Bay Rays +2.5** on the run line in World Series Game 1 at American Family Field. "
+            "The Rays finished 98-64 with 736 runs scored and 650 allowed. "
+            "Milwaukee were the stronger regular-season side at 103-59, scoring 832 and allowing 618, and are rightful favourites. "
+            "Our Poisson run model still gives Tampa Bay a {prob_pct}% ({price}) chance of covering the two-and-a-half-run cushion."
+        ),
+        "facts": [
+            {"claim": "Tampa Bay finished 98-64 with 736 RS and 650 RA in 2026", "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"},
+            {"claim": "Milwaukee finished 103-59 with 832 RS and 618 RA in 2026", "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason"},
+            {"claim": "World Series Game 1 confirmed at American Family Field for 23 October 2026", "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-27"},
+        ],
+    },
+    "nhl-2026020164": {
+        "headline": "Seattle's one-goal cushion covers a tight Pacific matchup with Utah",
+        "template": (
+            "Back **Seattle Kraken +1.5** on the puck line against Utah Mammoth. "
+            "Seattle are 6-3-1 with 37 goals scored and 34 conceded in ten games. "
+            "Utah are 7-3-0 with 38 scored and 31 conceded, a slightly better defensive record over the same number of games. "
+            "With both clubs on ten games played, our Poisson model gives the Kraken a {prob_pct}% ({price}) chance of avoiding a two-goal defeat."
+        ),
+        "facts": [
+            {"claim": "Seattle are 6-3-1 with 37 GF and 34 GA in ten games", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "Utah are 7-3-0 with 38 GF and 31 GA in ten games", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "Game 2026020164 Utah at Seattle confirmed for 22 October 2026", "source": "https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164"},
+        ],
+    },
+    "nhl-2026020159": {
+        "headline": "A two-and-a-half-goal cushion for a Kings side that has conceded 27",
+        "template": (
+            "Take **Los Angeles Kings +2.5** on the puck line against the New York Islanders. "
+            "Los Angeles are 1-4-2, with 17 goals scored and 27 conceded in seven games. "
+            "The Islanders are 5-3-1, scoring 27 and conceding 19 in nine games, the tighter defensive record. "
+            "The +2.5 line sits more than two goals above the model's expected margin, and the cover is priced at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Los Angeles are 1-4-2 with 17 GF and 27 GA in seven games", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "New York Islanders are 5-3-1 with 27 GF and 19 GA in nine games", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "Game 2026020159 Los Angeles at New York Islanders confirmed for 22 October 2026", "source": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159"},
+        ],
+    },
+    "nhl-2026020163": {
+        "headline": "Two top-scoring clubs meet with a 5.5 total that the model clears",
+        "template": (
+            "Back **over 5.5 goals** as Edmonton Oilers host Carolina Hurricanes. "
+            "Edmonton have scored 41 goals in nine games (4.6 per game) and conceded 27. "
+            "Carolina have scored 42 in eleven (3.8 per game) and conceded 27. "
+            "Edmonton average 4.6 goals per game and Carolina 3.8; with the model projecting 7.03, over 5.5 is priced at {prob_pct}% ({price})."
+        ),
+        "facts": [
+            {"claim": "Edmonton are 7-1-1 with 41 GF and 27 GA in nine games", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "Carolina are 8-2-1 with 42 GF and 27 GA in eleven games", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "Game 2026020163 Carolina at Edmonton confirmed for 22 October 2026", "source": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163"},
+        ],
+    },
+    "nhl-2026020155": {
+        "headline": "Toronto games average 6.5 goals and Rangers games 5.2 this season",
+        "template": (
+            "Take **over 4.5 goals** in Toronto's meeting with the New York Rangers. "
+            "Toronto's games have averaged 6.5 total goals, and the Rangers' 5.2. "
+            "The Maple Leafs have scored 38 and conceded 34 in eleven games; New York have scored 33 and conceded 24 in eleven. "
+            "With the model projecting 5.92, over 4.5 is a {prob_pct}% ({price}) selection."
+        ),
+        "facts": [
+            {"claim": "Toronto have 38 GF and 34 GA in eleven games (6.5 combined goals per game)", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "New York Rangers have 33 GF and 24 GA in eleven games (5.2 combined goals per game)", "source": "https://api-web.nhle.com/v1/standings/2026-10-21"},
+            {"claim": "Game 2026020155 Rangers at Maple Leafs confirmed for 22 October 2026", "source": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155"},
+        ],
+    },
+}
+
 
 def originate_nhl(nhl_teams: dict, fixtures: list[dict]) -> list[dict]:
     teams = {k: dict(v) for k, v in nhl_teams["teams"].items()}
@@ -554,6 +848,7 @@ def originate_nhl(nhl_teams: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": -1.5, "label": f"{h['name']} -1.5 / {a['name']} +1.5", "fav_prob": round(p_h_pl, 4), "dog_prob": round(p_a_pl, 4), "fav_odds": fair_decimal(p_h_pl), "dog_odds": fair_decimal(p_a_pl)},
                 "total_market": {"line": tot_line, "projected": round(lh + la, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Moneyline)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": conf},
+                "model_params": {"kind": "poisson", "lh": round(lh, 4), "la": round(la, 4), "draws": False},
                 "official_source": "NHL GameCenter & Stats API",
                 "official_url": f"https://www.nhl.com/gamecenter/{f['away'].lower()}-vs-{f['home'].lower()}/{f['date'].replace('-', '/')}/{f['game_id']}",
                 "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
@@ -602,6 +897,7 @@ def originate_nba(nba_teams: dict, fixtures: list[dict], extra_ids: dict) -> lis
                 "handicap_market": {"line": hcap, "label": f"{h['name']} {hcap:+.1f}", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": None,  # Explicitly left blank: nba.com standings omit team points for/against
                 "pick": {"selection": f"{win_side} (Moneyline)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": conf},
+                "model_params": {"kind": "normal", "margin": round(exp_margin, 4), "sigma": 12.0, "total": None, "sigma_total": None},
                 "official_source": "NBA Official Game Page",
                 "official_url": slug_url,
                 "data_url": "https://www.nba.com/standings?Season=2025-26",
@@ -653,6 +949,7 @@ def originate_euro_hoops(teams: dict, fixtures: list[dict], comp: str, standings
                 "handicap_market": {"line": hcap, "label": f"{h['name']} {hcap:+.1f}", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": tline, "projected": round(exp_total, 1), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Moneyline)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "model_params": {"kind": "normal", "margin": round(exp_margin, 4), "sigma": 10.8, "total": round(exp_total, 4), "sigma_total": 13.5},
                 "official_source": "Euroleague Basketball Official",
                 "official_url": f["url"],
                 "data_url": standings_url,
@@ -716,6 +1013,7 @@ def originate_rugby(teams: dict, fixtures: list[dict], comp: str, standings_url:
                 "handicap_market": {"line": hcap, "label": f"{h['name']} {hcap:+.1f}", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": tline, "projected": round(exp_total, 1), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (1X2 Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "model_params": {"kind": "normal", "margin": round(exp_margin, 4), "sigma": 12.6, "total": round(exp_total, 4), "sigma_total": 14.2},
                 "official_source": source_label,
                 "official_url": f["url"],
                 "data_url": standings_url,
@@ -767,6 +1065,7 @@ def originate_handball(ehf_data: dict, olbg_map: dict) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{h['name']} {hcap:+.1f}", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": tline, "projected": round(lh + la, 1), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (1X2 Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "model_params": {"kind": "poisson", "lh": round(lh, 4), "la": round(la, 4)},
                 "official_source": "EHF Official Match Details",
                 "official_url": f["detail_url"],
                 "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
@@ -809,6 +1108,7 @@ def originate_darts(players: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{f['p1']} {hcap:+.1f} legs", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": 9.5, "projected": round(exp_legs, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "model_params": {"kind": "bestof", "dist": [[a, b, round(pr, 8)] for a, b, pr in dist]},
                 "official_source": "PDC Official Rankings",
                 "official_url": "https://www.pdc.tv/rankings",
                 "data_url": "https://www.pdc.tv/rankings",
@@ -851,6 +1151,7 @@ def originate_tennis(players: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{f['p1']} {hcap:+.1f} sets", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": 2.5, "projected": round(exp_sets, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "model_params": {"kind": "bestof", "dist": [[a, b, round(pr, 8)] for a, b, pr in dist]},
                 "official_source": "ATP Tour Official",
                 "official_url": f["url"],
                 "data_url": "https://www.atptour.com/en/rankings/singles",
@@ -893,6 +1194,7 @@ def originate_snooker(players: dict, fixtures: list[dict]) -> list[dict]:
                 "handicap_market": {"line": hcap, "label": f"{f['p1']} {hcap:+.1f} frames", "fav_prob": round(p_cover, 4), "dog_prob": round(1.0 - p_cover, 4), "fav_odds": fair_decimal(p_cover), "dog_odds": fair_decimal(1.0 - p_cover)},
                 "total_market": {"line": 5.5, "projected": round(exp_frames, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{win_side} (Match Winner)", "team": win_side, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "model_params": {"kind": "bestof", "dist": [[a, b, round(pr, 8)] for a, b, pr in dist]},
                 "official_source": "WST Official Match Centre",
                 "official_url": f["url"],
                 "data_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
@@ -943,6 +1245,7 @@ def originate_mlb(ws: dict, live_mlb: dict) -> list[dict]:
                 "handicap_market": {"line": -1.5, "label": f"{fav_name} -1.5 / {dog_name} +1.5", "fav_prob": round(p_rl, 4), "dog_prob": round(1.0 - p_rl, 4), "fav_odds": fair_decimal(p_rl), "dog_odds": fair_decimal(1.0 - p_rl)},
                 "total_market": {"line": 7.5, "projected": round(lh + la, 2), "over_prob": round(p_over, 4), "under_prob": round(1.0 - p_over, 4), "over_odds": fair_decimal(p_over), "under_odds": fair_decimal(1.0 - p_over)},
                 "pick": {"selection": f"{fav_name} (Moneyline)", "team": fav_name, "probability": round(win_prob, 4), "fair_odds": fair_decimal(win_prob), "confidence": grade(win_prob)},
+                "model_params": {"kind": "poisson", "lh": round(lh, 4), "la": round(la, 4)},
                 "official_source": "MLB Stats API Official",
                 "official_url": f["human_url"],
                 "data_url": live_mlb["meta"]["standings_source"]["url"],
@@ -1097,6 +1400,52 @@ def main() -> None:
         )
 
     all_rows = originated + unlined
+
+    # Which rows did this session re-read from the official feed on 2026-10-22?
+    # Everything else keeps the 2026-10-21 capture provenance and is disclosed as such.
+    reverified = {f"nhl-{gid}" for gid in range(2026020154, 2026020166)}
+    reverified |= {"mlb-849805", "mlb-849802", "mlb-849804"}
+    for m in all_rows:
+        url = m.get("official_url") or ""
+        fixture_markers = (
+            "gamecenter/", "gameday/", "/game/", "match-centre/", "feuille-de-match/",
+            "/details/", "game-center/", "icc-cricket.com/matches/",
+        )
+        m["source_scope"] = "fixture" if any(x in url for x in fixture_markers) else "competition"
+        if m["id"] in reverified:
+            m["verification"] = {
+                "status": "reverified",
+                "checked": "2026-10-22",
+                "scope": "fixture id, teams, local date and start time",
+                "source": url,
+            }
+        else:
+            m["verification"] = {
+                "status": "captured",
+                "checked": "2026-10-21",
+                "scope": "fixture id and teams captured from the cited official page on 2026-10-21; not re-read on 2026-10-22",
+                "source": url,
+            }
+
+    # Price-band selection: the brief asks for high-confidence picks priced between
+    # -250 (1.40) and +10000 (101.00). Because a 70%+ probability caps the price at
+    # 1.43, only a narrow 70.0-71.4% window can satisfy both rules. The ladder is
+    # enumerated in band_candidates(); the best qualifying selection is attached.
+    band_found: list[dict] = []
+    for m in all_rows:
+        params = m.pop("model_params", None)
+        if m["line_status"] != "originated" or not params:
+            continue
+        m["model_params"] = params
+        bp = best_band_pick(m)
+        del m["model_params"]
+        # A band selection is published as a pick only when a bespoke, sourced
+        # write-up exists for it; otherwise it stays an unpromoted model output.
+        if bp and m["id"] in BAND_NARRATIVES:
+            m["band_pick"] = bp
+            band_found.append({"id": m["id"], "date": m["date"], "sport": m["sport"], **bp})
+    print(f"verified_model: {len(band_found)} band-qualified selections")
+
     high_rows = [m for m in originated if m["pick"]["confidence"] == "high"]
 
     predictions: list[dict] = []
@@ -1114,6 +1463,7 @@ def main() -> None:
             raise AssertionError(f"Prediction {m['id']} has only {plain_words} words (< 30)")
         predictions.append(
             {
+                "match_type": "primary",
                 "match_id": m["id"],
                 "sport": m["sport"],
                 "sport_name": m["sport_name"],
@@ -1133,15 +1483,51 @@ def main() -> None:
             }
         )
 
+    for m in originated:
+        bp = m.get("band_pick")
+        if not bp:
+            continue
+        spec = BAND_NARRATIVES[m["id"]]
+        prob_pct = f"{bp['probability'] * 100:.1f}"
+        price = f"{bp['fair_odds']:.2f}"
+        text = spec["template"].format(prob_pct=prob_pct, price=price).replace("**", "")
+        plain_words = len(text.split())
+        if plain_words < 30:
+            raise AssertionError(f"Band prediction {m['id']} has only {plain_words} words (< 30)")
+        predictions.append(
+            {
+                "match_type": "band",
+                "match_id": m["id"],
+                "sport": m["sport"],
+                "sport_name": m["sport_name"],
+                "competition": m["competition"],
+                "event": f"{m['away']} @ {m['home']}" if m["sport"] in {"ice-hockey", "baseball"} else f"{m['home']} v {m['away']}",
+                "time": m["time"],
+                "selection": bp["selection"],
+                "probability": bp["probability"],
+                "fair_odds": bp["fair_odds"],
+                "confidence": "high",
+                "price_band": "in-band (-250 to +10000)",
+                "headline": spec["headline"],
+                "text": text,
+                "word_count": plain_words,
+                "facts": spec["facts"],
+                "official_url": m["official_url"],
+                "olbg_url": m["olbg_url"],
+            }
+        )
+
     counts = {
         "total_rows": len(all_rows),
         "originated_rows": len(originated),
         "unlined_rows": len(unlined),
         "high_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "high"),
+        "band_picks": len(band_found),
         "medium_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "medium"),
         "low_confidence": sum(1 for m in originated if m["pick"]["confidence"] == "low"),
     }
-    write_json(VERIFIED / "matches.json", {"captured_at": "2026-10-21", "counts": counts, "matches": all_rows})
+    write_json(VERIFIED / "matches.json", {"captured_at": "2026-10-22", "counts": counts, "matches": all_rows})
+    write_json(VERIFIED / "band.json", {"captured_at": "2026-10-22", "definition": {"min_decimal": BAND_MIN_DECIMAL, "max_decimal": BAND_MAX_DECIMAL, "min_probability": BAND_MIN_PROB}, "selections": band_found})
     write_json(VERIFIED / "predictions.json", {"captured_at": "2026-10-21", "min_words": 30, "count": len(predictions), "predictions": predictions})
     print(f"verified_model: {counts}")
 

@@ -1,0 +1,261 @@
+{
+ "generated": "session arena/d69dc1c9-olbg2",
+ "rule": "links verified reachable at capture time",
+ "sources": [
+  {
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-28",
+   "sport": "baseball",
+   "note": "World Series confirmed by official MLB Stats API schedule feed; Brewers earned home-field advantage and host Games 1-2"
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/",
+   "sport": "basketball",
+   "note": "widget rank in parentheses is the live standings position rendered beside the club abbreviation; timezone of render time not inferred"
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/crvena-zvezda-meridianbet-belgrade-maccabi-rapyd-tel-aviv/E2026/71/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/dubai-basketball-paris-basketball/E2026/72/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-fc-barcelona/E2026/74/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/kosner-baskonia-vitoria-gasteiz-real-madrid/E2026/73/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-armani-olimpia-milan/E2026/76/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/valencia-basket-fenerbahce-tarfin-istanbul/E2026/75/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
+   "sport": "basketball",
+   "note": ""
+  },
+  {
+   "url": "https://www.pdc.tv/calendar/",
+   "sport": "darts",
+   "note": "event dates/venue from official PDC calendar (consent wall; search rendering) \u2014 U-D3; draw not yet published at capture"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "sport": "darts",
+   "note": "U-D1; rematch of the 2019 final per official schedule page"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/october/22/Van-Veen-relishing-title-defence-in-Dortmund",
+   "sport": "darts",
+   "note": "U-D1; defending champion Van Veen begins title defence"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/october/22/humphries-withdraws-from-machineseeker-european-championship",
+   "sport": "darts",
+   "note": "pdc.tv content served behind consent wall; schedule text retrieved via search rendering of this official PDC page \u2014 flagged U-D1 for manual review"
+  },
+  {
+   "url": "https://www.pdc.tv/tournaments/machineseeker-european-championship",
+   "sport": "darts",
+   "note": "pairings depend on R1 results \u2014 blank by policy"
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-22",
+   "sport": "ice-hockey",
+   "note": ""
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "sport": "ice-hockey",
+   "note": ""
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "sport": "ice-hockey",
+   "note": ""
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-25",
+   "sport": "ice-hockey",
+   "note": "supersedes record-blank nhl-2026020180"
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-26",
+   "sport": "ice-hockey",
+   "note": ""
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-27",
+   "sport": "ice-hockey",
+   "note": ""
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-28",
+   "sport": "ice-hockey",
+   "note": ""
+  },
+  {
+   "url": "https://www.formula1.com/en/results/2026/races/1297/united-states/race-result",
+   "sport": "motor-racing",
+   "note": "official race page renders 23 - 25 Oct 2026 (race day 25 Oct); race result table empty at capture as event not yet run; start time not rendered \u2014 blank per policy"
+  },
+  {
+   "url": "https://www.formula1.com/en/results/2026/races/1298/mexico/race-result",
+   "sport": "motor-racing",
+   "note": "official race page renders 30 Oct - 01 Nov 2026; OUTSIDE the 22-28 Oct window \u2014 listed for calendar completeness, no line originated"
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+   "sport": "rugby-union",
+   "note": ""
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+   "sport": "rugby-union",
+   "note": "times rendered by stats.unitedrugby.com labelled Local; timezone not inferred"
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+   "sport": "rugby-union",
+   "note": ""
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+   "sport": "rugby-union",
+   "note": ""
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+   "sport": "rugby-union",
+   "note": ""
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+   "sport": "rugby-union",
+   "note": ""
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+   "sport": "rugby-union",
+   "note": ""
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+   "sport": "rugby-union",
+   "note": ""
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
+   "sport": "snooker",
+   "note": ""
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236",
+   "sport": "snooker",
+   "note": ""
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c",
+   "sport": "snooker",
+   "note": "venue not rendered on matches page; blank per policy"
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8",
+   "sport": "snooker",
+   "note": ""
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5",
+   "sport": "snooker",
+   "note": ""
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea",
+   "sport": "snooker",
+   "note": ""
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900",
+   "sport": "snooker",
+   "note": ""
+  },
+  {
+   "url": "https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f",
+   "sport": "snooker",
+   "note": ""
+  },
+  {
+   "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "sport": "tennis",
+   "note": ""
+  },
+  {
+   "url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+   "sport": "tennis",
+   "note": ""
+  },
+  {
+   "url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+   "sport": "tennis",
+   "note": ""
+  },
+  {
+   "url": "https://www.tauronliga.pl/games.html",
+   "sport": "volleyball",
+   "note": "plusliga.pl/games.html redirects to the official tauronliga.pl game centre; time as rendered on the official page; first-meeting result shown on page but set scores left blank pending confirmation of which fixture it refers to"
+  },
+  {
+   "url": "https://www.tauronliga.pl/spcup/id/19/gid/236.html",
+   "sport": "volleyball",
+   "note": "official Super Cup match page on tauronliga.pl; competition name exactly as rendered (AL-KO sponsor)"
+  }
+ ]
+}

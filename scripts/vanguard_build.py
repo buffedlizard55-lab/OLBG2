@@ -193,9 +193,21 @@ can recompute the price. The flags column repeats anything published on Flagged 
 <table><thead><tr><th>ID</th><th>Sport</th><th>Fixture</th><th>Input basis</th><th>Prices</th><th>In band</th><th>Flags</th><th>Source</th></tr></thead><tbody>{arows}</tbody></table>""")
 
 # ---------------------------------------------------------------- flagged
+ids = {m["id"]: m["source_url"] for m in M["matches"]}
+sports_set = {m["sport"] for m in M["matches"]}
+
+
+def flag_source(f):
+    if f["fixture"] in ids:
+        return f'<a href="{escape(ids[f["fixture"]])}" rel="noopener">official source</a>'
+    if f["fixture"] in sports_set:
+        return f'<a href="sports/{f["fixture"]}.html">sport page</a>'
+    return '<span class="muted">this page</span>'
+
+
 frows = "".join(
     f'<tr><td>{escape(f["fixture"])}</td><td>{escape(f["kind"])}</td><td>{escape(f["text"])}</td>'
-    f'<td><a href="{escape(next((m["source_url"] for m in M["matches"] if m["id"]==f["fixture"]), ""))}" rel="noopener">source</a></td></tr>'
+    f'<td>{flag_source(f)}</td></tr>'
     for f in FL["flags"])
 srows = "".join(f'<tr><td>{escape(x["sport"])}</td><td>{x["predictions"]}</td><td>{escape(x["reason"])}</td></tr>'
                 for x in PR["shortfall"])

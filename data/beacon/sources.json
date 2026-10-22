@@ -1,0 +1,299 @@
+{
+  "snapshot_utc": "2026-10-22T12:25:00Z",
+  "verified_count": 27,
+  "sources": [
+    {
+      "id": "S-BEACON-01",
+      "sport": "all",
+      "authority": "OLBG Sitemap & Sport Hub Directory",
+      "url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Canonical OLBG sport IDs 1..28, category routing, and excluded-sport boundary verification"
+    },
+    {
+      "id": "S-BEACON-02",
+      "sport": "tennis",
+      "authority": "ATP Tour \u2014 Almaty Open (9410) Daily Schedule",
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Oct 22 R16 order of play & live results (Atmane def. Bellucci; Machac v Khachanov; Medvedev v Shimabukuro; Bublik v Marozsan)"
+    },
+    {
+      "id": "S-BEACON-03",
+      "sport": "tennis",
+      "authority": "ATP Tour \u2014 European Open Brussels (7485) Daily Schedule",
+      "url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Oct 22 R16 order of play (Collignon v Lehecka; Goffin v Michelsen; Dzumhur v Bergs) \u2014 refutes fabricated Fils v Mannarino"
+    },
+    {
+      "id": "S-BEACON-04",
+      "sport": "tennis",
+      "authority": "ATP Tour \u2014 Grand Prix Auvergne-Rhone-Alpes Lyon (496) Daily Schedule",
+      "url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Oct 22 R16 & Oct 23 QF draw (Vacherot v Van Assche; Herbert v Fritz; Cobolli v Wawrinka; Jacquet v Nakashima; Moutet v Paul)"
+    },
+    {
+      "id": "S-BEACON-05",
+      "sport": "tennis",
+      "authority": "WTA Tour \u2014 2026 Asian Swing Calendar (Osaka 250 / Ningbo 500)",
+      "url": "https://www.wtatennis.com/tournaments/1023/guangzhou/2026",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Confirms Guangzhou runs Oct 26\u2013Nov 1, 2026; Oct 23 WTA QFs belong to WTA 250 Osaka and WTA 500 Ningbo"
+    },
+    {
+      "id": "S-BEACON-06",
+      "sport": "basketball",
+      "authority": "NBA Official Game & Standings Feed",
+      "url": "https://www.nba.com/games?date=2026-10-22",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "74 NBA regular-season games Oct 22\u201331, 2026 + opening-night results (OKC 116-104 SAS, PHI 106-100 NYK)"
+    },
+    {
+      "id": "S-BEACON-07",
+      "sport": "basketball",
+      "authority": "EuroLeague Basketball 2026-27 Standings & Round 7 Game Center",
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "All 20 EuroLeague clubs' Round 6 W-L & point differentials + 9 Round 7 fixtures Oct 22\u201323"
+    },
+    {
+      "id": "S-BEACON-08",
+      "sport": "golf",
+      "authority": "PGA Tour \u2014 Butterfield Bermuda Championship (R2026528)",
+      "url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Port Royal Golf Course, Southampton, Bermuda (Oct 22\u201325, 2026; Round 1 in progress)"
+    },
+    {
+      "id": "S-BEACON-09",
+      "sport": "golf",
+      "authority": "DP World Tour \u2014 2026 Genesis Championship (Woo Jeong Hills CC)",
+      "url": "https://www.europeantour.com/dpworld-tour/news/articles/detail/genesis-championship-to-welcome-multiple-winners-eugenio-chacarra-casey-jarvis-and-jayden-schaper-in-south-korea/",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Cheonan, South Korea ($4M purse, par 71, Oct 22\u201325, 2026; led by Race to Dubai #1 Eugenio Chacarra, Junghwan Lee, Si Woo Kim, Sungjae Im)"
+    },
+    {
+      "id": "S-BEACON-10",
+      "sport": "cricket",
+      "authority": "ICC / ESPNcricinfo \u2014 2026 UAE ODI Tri-Series Final & Bilateral ODIs",
+      "url": "https://www.icc-cricket.com/tournaments/mens-odi-tri-series-2026",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Afghanistan vs Zimbabwe Final at Sharjah (Oct 23 11:30 UTC), Pakistan ODI Tri-Series, India W vs Zimbabwe W 1st ODI"
+    },
+    {
+      "id": "S-BEACON-11",
+      "sport": "snooker",
+      "authority": "World Snooker Tour \u2014 Official Johnstone's Paint World Rankings",
+      "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Official 2026 two-year prize rankings (#1 Zhao Xintong \u00a31,265,550, #2 Wu Yize \u00a31,238,900, #8 Mark Williams, #9 Kyren Wilson)"
+    },
+    {
+      "id": "S-BEACON-12",
+      "sport": "rugby-union",
+      "authority": "United Rugby Championship Official Stats & 2026-27 Table",
+      "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "16-club URC Round 3 standings + Round 4 & Round 5 match-centre URLs (replaces HTTP-404 unitedrugby.com/standings)"
+    },
+    {
+      "id": "S-BEACON-13",
+      "sport": "rugby-union",
+      "authority": "LNR Top 14 Official Classement & J7 Match Sheets",
+      "url": "https://top14.lnr.fr/classement",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "14-club Top 14 Round 6 standings (Toulouse 1st 24 pts, Pau 2nd 22 pts) + 7 Round 7 fixtures Oct 24\u201325"
+    },
+    {
+      "id": "S-BEACON-14",
+      "sport": "rugby-union",
+      "authority": "LNR Pro D2 Official Classement & J8 Match Sheets",
+      "url": "https://prod2.lnr.fr/classement",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "16-club Pro D2 Round 7 standings (Oyonnax 1st 33 pts 7-0-0, Provence 2nd 29 pts 7-0-0) + 8 Round 8 fixtures Oct 22\u201323"
+    },
+    {
+      "id": "S-BEACON-15",
+      "sport": "rugby-league",
+      "authority": "NRL / IRL \u2014 2026 Men's Rugby League World Cup Round 2 Draw & Round 1 Wrap",
+      "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "5 RLWC Men's Round 2 fixtures Oct 23\u201325 + verified Round 1 scores (AUS 24-22 NZ, TON 30-12 ENG, SAM 78-4 FRA, PNG 42-18 LEB, FIJ 40-12 COK)"
+    },
+    {
+      "id": "S-BEACON-16",
+      "sport": "baseball",
+      "authority": "MLB StatsAPI \u2014 2026 World Series Schedule & Active 26-Man Rosters",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-31",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "2026 World Series Games 1\u20137 Tampa Bay Rays (139) vs Milwaukee Brewers (158) + active rosters (Peralta, Caminero, D\u00edaz; Misiorowski, Chourio, Contreras)"
+    },
+    {
+      "id": "S-BEACON-17",
+      "sport": "ice-hockey",
+      "authority": "NHL Official Web API \u2014 Daily Scoreboard, Standings & Team Summary",
+      "url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "All 12 NHL games on 2026-10-22 + 32-team 2026-27 GP/GF/GA/PP%/PK% + official skater/goalie game leaders"
+    },
+    {
+      "id": "S-BEACON-18",
+      "sport": "ice-hockey",
+      "authority": "Swedish Ice Hockey Association \u2014 2026-27 SHL Standings & Schedule (20961)",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Standings/20961",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "14-team SHL standings (F\u00e4rjestad 27 pts 40:11, Fr\u00f6lunda 25 pts, Skellefte\u00e5 19 pts) + 6 Oct 22 games"
+    },
+    {
+      "id": "S-BEACON-19",
+      "sport": "motor-racing",
+      "authority": "Formula 1 \u2014 2026 Drivers' Standings & United States Grand Prix (COTA)",
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "2026 Drivers' Championship standings (Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201)"
+    },
+    {
+      "id": "S-BEACON-20",
+      "sport": "darts",
+      "authority": "PDC Official \u2014 European Championship Withdrawal & Updated Oct 22-23 Schedule",
+      "url": "https://www.pdc.tv/news/2026/october/22/humphries-withdraws-from-machineseeker-european-championship",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Official Oct 22 confirmation that World No. 2 Luke Humphries withdrew (gastroenteritis), replaced by Kim Huybrechts vs Ryan Searle"
+    },
+    {
+      "id": "S-BEACON-21",
+      "sport": "darts",
+      "authority": "PDC Werner Rankings Ladder (Order of Merit)",
+      "url": "https://www.pdc.tv/rankings",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "2026 PDC Order of Merit (#1 Littler \u00a33,113,500, #3 van Veen \u00a31,035,750, #4 Price \u00a3782,000, #5 Clayton \u00a3706,000, #15 Searle \u00a3562,250)"
+    },
+    {
+      "id": "S-BEACON-22",
+      "sport": "handball",
+      "authority": "EHF Champions League Men 2026-27 Standings & Round 5 Match Details",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "All 6 EHF CL group tables + 5 Round 5 games on 2026-10-22 (Bar\u00e7a 4-0, Magdeburg 4-0, Sporting 3-1, Wisla Plock 3-1)"
+    },
+    {
+      "id": "S-BEACON-23",
+      "sport": "volleyball",
+      "authority": "Lega Pallavolo Serie A \u2014 2026-27 SuperLega Credem Banca Standings & R2 Calendar",
+      "url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "12-club SuperLega Round 1 standings + 6 Round 2 matches on Sunday 2026-10-25"
+    },
+    {
+      "id": "S-BEACON-24",
+      "sport": "aussie-rules",
+      "authority": "AFL.com.au \u2014 2026 NAB AFLW Round 11 Official Teams, Venues & Ladder",
+      "url": "https://www.afl.com.au/aflw/news/1634432/aflw-teams-dees-make-hore-call-freo-star-returns-another-pies-blow",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Verified 9-game AFLW Round 11 draw Oct 23\u201325 + 18-club Round 10 ladder (North Melbourne 36 pts 251.9%, Geelong 36 pts, Melbourne 32 pts)"
+    },
+    {
+      "id": "S-BEACON-25",
+      "sport": "esports",
+      "authority": "Riot Games LoL Esports \u2014 Worlds 2026 Primer & Swiss Stage Round 1 Draw",
+      "url": "https://lolesports.com/en-US/news/worlds-2026-primer",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "16-team Swiss Stage field in Allen, TX + 8 Round 1 Bo1 matches on Oct 23, 2026 (replaces community wiki liquipedia.net)"
+    },
+    {
+      "id": "S-BEACON-26",
+      "sport": "gaelic-football",
+      "authority": "Munster GAA / GAA.ie \u2014 2026 County Senior Football Finals",
+      "url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Cork Premier SFC Final (St Finbarr's v Nemo Rangers, Oct 25 16:00 UTC) & Galway SFC Final (Moycullen v Salthill-Knocknacarra)"
+    },
+    {
+      "id": "S-BEACON-27",
+      "sport": "greyhounds",
+      "authority": "GBGB \u2014 Coral 100 Champion Stakes Category One Final Preview (Romford)",
+      "url": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/",
+      "http_status": 200,
+      "verified_utc": "2026-10-22T12:25:00Z",
+      "scope": "Confirms Newinn Jolly withdrawal (urine infection) leaving 5-runner \u00a320,000 Final on Friday Oct 23 (Grouchos Gregor 35.36s fastest semi)"
+    }
+  ],
+  "banned_or_broken_urls": [
+    {
+      "url": "https://www.wst.tv/tournaments/northern-ireland-open-2026/",
+      "http_status": 404,
+      "found_in": "data/portal/matches.json (8 rows), data/portal/predictions.json",
+      "replacement": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+    },
+    {
+      "url": "https://www.wst.tv/matches",
+      "http_status": 502,
+      "found_in": "ad-hoc snooker checks",
+      "replacement": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+    },
+    {
+      "url": "https://www.unitedrugby.com/standings",
+      "http_status": 404,
+      "found_in": "data/survey/lines.json",
+      "replacement": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+      "url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "http_status": 200,
+      "found_in": "29 files across /board/, /forward/, /final/ (ID=19 is excluded Politics!)",
+      "replacement": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "url": "https://www.olbg.com/betting-tips/Australian_Rules/27",
+      "http_status": 200,
+      "found_in": "9 files across /slate/, /portal/, /final/ (ID=27 is excluded UFC/MMA!)",
+      "replacement": "https://www.olbg.com/betting-tips/Aussie_Rules/22"
+    },
+    {
+      "url": "https://www.olbg.com/betting-tips/Esports/28",
+      "http_status": 200,
+      "found_in": "14 files across /slate/, /portal/, /final/ (ID=28 is Greyhounds!)",
+      "replacement": "https://www.olbg.com/betting-tips/eSports/23"
+    },
+    {
+      "url": "https://liquipedia.net/leagueoflegends/World_Championship/2026/Swiss_Stage",
+      "http_status": 200,
+      "found_in": "25 files across /slate/, /portal/, /audit65/ (community wiki, non-official)",
+      "replacement": "https://lolesports.com/en-US/news/worlds-2026-primer"
+    },
+    {
+      "url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "http_status": 200,
+      "found_in": "19 files across /verified/, /forward/, /final/ (stale 2025 calendar URL)",
+      "replacement": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/"
+    }
+  ]
+}

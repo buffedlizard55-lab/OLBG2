@@ -2996,3 +2996,12 @@ No fresh sports facts are claimed. Official sports hosts are outside this sandbo
 ### `arena/e52155e1-olbg2` — implementation and verification complete
 
 Root/current integration, automatic all-layer HTML link discovery, accurate file-check disclosures, current seed/model/build CI and drift gate, README entry, and five regression tests completed. Full workflow rebuild replay succeeded; 343 tests passed; zero local file link errors across discovered HTML. No current data or predictions changed. Sources, limits, unresolved coverage and verification gaps: `research/integration-e52155e1.md`; public review links on `integration.html` and `current/flagged.html`. Source verification is **not** freshly certified. Publication follows. Initial branch pull returned “remote ref not found” because the Arena branch was new; pulled/rebased against main before its first push, then published the claim successfully. No merge conflict or other session scope edit.
+
+### `arena/e52155e1-olbg2` — publication ledger (DONE)
+
+- Integration PR [#123](https://github.com/buffedlizard55-lab/OLBG2/pull/123) **MERGED** without waiting for approval, merge SHA `9068101de4a4c577fcced046c7c0e1dc0a40b15b`.
+- PR validation passed (22 seconds); merged-tree validation passed (25 seconds), including current rebuild, 343 tests and clean generated drift gate.
+- [Deploy Pages run 39852683620](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39852683620) **SUCCESS**, deploy job completed successfully (27 seconds). Pages publication confirmed via GitHub Actions; direct deployed-page HTTP fetching is not claimed because the Pages domain is outside this sandbox allowlist.
+- Published landing: https://buffedlizard55-lab.github.io/OLBG2/ ; capture desk: https://buffedlizard55-lab.github.io/OLBG2/current/index.html ; public review: https://buffedlizard55-lab.github.io/OLBG2/current/flagged.html .
+- Both claimed tasks done. Unmet full daily coverage and freshly verified sports data remain **needs review**, as documented in the integration research note and public review pages. No invented values supplied.
+- Non-blocking CI annotations: GitHub reports forced Node 24 execution for older action versions and the ubuntu-latest image migration; these did not fail validation or deployment. Existing test ResourceWarnings remain noted in the research report.

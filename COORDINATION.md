@@ -2950,3 +2950,34 @@ Continuing to read the **deployed** pages found two further defects that a link 
 **8 tests added** (`TestSubpageChrome`, `TestCoinFlipDisclosure`): exact expected href lists for nav, brand, stylesheet, breadcrumb, footer and cross-layer bar at both depths; no header or footer link on any page may resolve above `current/`; every chrome target must exist; the one `level` row must be disclosed on all three pages showing its price; and no page may carry the badge without a matching `level: true` row. This layer now has **51** tests, the repository **338**, all OK. `integration_audit.py` still reports 0 link errors and the workflow drift check is clean.
 
 **Generalisable lesson, logged for every session that publishes a generated site:** `integration_audit.py` and per-layer link tests ask "does this href resolve?", which both defects answer yes to. Neither asks "does it resolve to the page the author meant?". Assert on the **exact rendered href string**, and read the deployed page rather than the build log. Files touched: `scripts/current_build.py`, `current/**`, `tests/test_current.py`, `research/current-capture-18792bd6.md`, `COORDINATION.md` — all inside this session's claimed scope; no shared output edited. Detail in `research/current-capture-18792bd6.md` §9.
+
+### Session `arena/18792bd6-olbg2` — FINAL PUBLICATION LEDGER for `/current/`
+
+**Status: DONE and LIVE.** No further work outstanding on this session's scope.
+
+| PR | Merged | Merge commit | Content |
+|---|---|---|---|
+| [#119](https://github.com/buffedlizard55-lab/OLBG2/pull/119) | 2026-10-22T13:25:15Z | `a0c99ce` | The layer: 12 verbatim official captures, seed + model + build, 57 fixture rows / 7 sports, 1931 originated prices / 164 markets, 29 in-band high-confidence picks, 29 hand-authored predictions, 23 flags, 28 pages, 37 tests, research note |
+| [#120](https://github.com/buffedlizard55-lab/OLBG2/pull/120) | 2026-10-22T13:32:14Z | `3ef437b` | Four mis-derived headline numbers on the landing and sport pages (flag count 13→23, band-pick denominator 57→29, snooker originated lines 6→4 in two places); 6 rendered-page tests |
+| [#121](https://github.com/buffedlizard55-lab/OLBG2/pull/121) | 2026-10-22T13:41:38Z | `129b0cc` | All 18 `current/sports/*.html` pages navigated out of the layer (nav Dashboard, brand, nav + footer Flagged for Review, breadcrumb By sport all pointed at the repository root) because `subpage()` patched finished HTML with blanket `str.replace`; plus a 0.5000 / +100 coin-flip price published on two pages without its disclosure. 8 tests |
+
+Every PR was merged without waiting for approval, per the standing brief. `validate` passed on each (13–20 s), and `Deploy Pages` completed `success` for each merge SHA — `39786676989` for `a0c99ce`, `39787708980` for `3ef437b`, `39789282719` for `129b0cc`.
+
+**Live and verified by fetching the deployed pages, not the build log:**
+* <https://buffedlizard55-lab.github.io/OLBG2/current/index.html> — dashboard
+* <https://buffedlizard55-lab.github.io/OLBG2/current/matches.html> — all 57 fixtures with per-fixture official source links
+* <https://buffedlizard55-lab.github.io/OLBG2/current/lines.html> — all 1931 originated prices
+* <https://buffedlizard55-lab.github.io/OLBG2/current/picks.html> — picks and confidence
+* <https://buffedlizard55-lab.github.io/OLBG2/current/predictions.html> — the 29 written predictions
+* <https://buffedlizard55-lab.github.io/OLBG2/current/flagged.html> — **Flagged for Review**, 23 flag ids, 10 zero-row sports, 2 blank fixtures, 16 row caveats
+* <https://buffedlizard55-lab.github.io/OLBG2/current/sources.html> — source register
+* <https://buffedlizard55-lab.github.io/OLBG2/current/inputs.html>, <https://buffedlizard55-lab.github.io/OLBG2/current/methodology.html>
+* <https://buffedlizard55-lab.github.io/OLBG2/current/sports/index.html> and the 17 per-sport pages
+
+Confirmed on the deployed `sports/snooker.html` after `129b0cc`: breadcrumb Dashboard resolves to `/OLBG2/current/index.html`, By sport to `/OLBG2/current/sports/index.html`, the body's Flagged for Review link to `/OLBG2/current/flagged.html`, and the Mark Williams v Martin O'Donnell row now carries the `coin flip` badge plus its full note beside the 0.5000 / +100 price. (GitHub Pages served a cached pre-fix copy for several minutes after the deploy succeeded; re-fetching with a cache-busting query string returned the fixed page.)
+
+**Final gate results on the merged tree:** `python3 -m unittest discover -s tests` → **338 tests OK** (51 for this layer); `python3 scripts/integration_audit.py` → **0 cross-layer local link errors**; full rebuild of every workflow layer plus `current_seed → current_model → current_build` → `git diff --exit-code` on the workflow's drift paths **clean**; byte-identical rebuild of `current/**` verified.
+
+**Merge conflicts encountered and how they were resolved:** one, in `COORDINATION.md` when merging `origin/main` at `c9b25e0` into this branch. Both sides were append-only logs, so the resolution kept **all 752 lines from `origin/main` and all 37 lines from this session** — no other session's entry was discarded or rewritten. No conflict touched any file this session owns.
+
+**Still open for the final integration session** (logged, deliberately not actioned here — all four files are outside this session's claimed scope): add `/current/` to `index.html` and the root navigation; add `'current'` to the folder list in `scripts/integration_audit.py::local_link_errors`; add the three `current_*` scripts and `current data/current` to `.github/workflows/pages.yml`; and do not sum layer row counts as unique matches in `README.md`.

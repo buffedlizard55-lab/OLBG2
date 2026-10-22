@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology · Pulse Desk · OLBG2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header><div class="wrap">
+<div class="brand"><span class="logo">◍</span> Pulse <span class="dim">· verified match desk</span></div>
+<nav><a class="" href="index.html">Home</a><a class="" href="matches.html">All Matches</a><a class="" href="picks.html">High-Confidence Picks</a><a class="" href="sports/index.html">By Sport</a><a class="" href="flagged.html">Flagged for Review</a><a class="" href="sources.html">Sources</a><a class="on" href="methodology.html">Methodology</a></nav>
+</div></header>
+<main class="wrap">
+<h1>Methodology</h1>
+<h2>Pipeline</h2>
+<ol>
+<li><b>First-hand capture</b> — fixtures and team inputs are read only from official governing-body pages/feeds on 2026-10-22 and frozen in <code>data/pulse/inputs.json</code> with the URL of each row.</li>
+<li><b>Origination</b> — <code>scripts/pulse_model.py</code> turns those inputs into probabilities. No bookmaker price is read, copied or implied. The NHL's league-published odds-partner prices are shown on a row as <i>market context</i> only and are never an input.</li>
+<li><b>Grading</b> — a selection is <span class="bdg high">HIGH</span> only with model probability ≥70% <i>and</i> fair American odds between −250 and +10000 (decimal 1.40–101.00). 57.5–70% (or ≥70% but heavier than −250) is <span class="bdg medium">MEDIUM</span>; below is <span class="bdg low">LOW</span>. Nothing is nudged across a boundary.</li>
+<li><b>Verification</b> — <code>scripts/pulse_verify.py</code> re-reads every generated page: every table row must carry an official HTTPS source link; blanks must be labelled; predictions must be ≥30 words with per-claim links.</li>
+</ol>
+<h2>Models (all deterministic, stdlib-only)</h2>
+<table><thead><tr><th>Sport</th><th>Win model</th><th>Handicap / total</th></tr></thead><tbody>
+<tr><td>Ice hockey (NHL)</td><td>Independent Poisson goals: λ_home = GF_h × GA_away / league_avg × 1.045 home edge; ties split 55% to the home side for OT/SO.</td><td>Puck line ±1.5 from the regulation margin grid; total 5.5 from the summed Poisson.</td></tr>
+<tr><td>Baseball (MLB)</td><td>Log5 on the blend of actual win% and Pythagorean expectation (RS²/(RS²+RA²)), ×1.13 documented home-boost factor.</td><td>Not originated this session (no verified probable-pitcher data) — PU-19.</td></tr>
+<tr><td>Darts (PDC)</td><td>Leg rating = seed^(−1.15) on the official 1–32 European Tour seeds; race to 6 legs via the binomial race formula.</td><td>−1.5/+1.5 legs and over/under 9.5 total legs from the full 6-0…6-5 distribution.</td></tr>
+<tr><td>Handball (EHF)</td><td>Poisson goals from official group GF/GA (×1.03 home edge); winner market quoted draw-no-bet (tie removed and renormalised).</td><td>Goal handicap at floor(|Δλ|)+0.5; match total at floor(λ_h+λ_a)+0.5.</td></tr>
+<tr><td>Snooker (WST)</td><td>Frame share this tournament with a +2/±4 shrinkage prior, Bradley–Terry frame probability, race to 4 frames.</td><td>−1.5/+1.5 frames and over/under 6.5 frames from the 4-0…4-3 distribution.</td></tr>
+<tr><td>Tennis (ATP)</td><td>Set rating = seed^(−0.55); unseeded = placeholder 33 (PU-14); match = race to 2 sets.</td><td>−1.5/+1.5 sets and over/under 2.5 sets.</td></tr>
+<tr><td>Rugby union (Pro D2)</td><td>Home margin ~ N(3.5 + 1.35×(away_pos − home_pos), 13), positions straight from the official LNR J8 list.</td><td>Handicap at floor(|μ|)+0.5 via the same normal; totals not originated (no verified points data) — PU-20.</td></tr>
+<tr><td>Motor racing (F1)</td><td>Season score = wins + 0.5×P2 + 0.25×P3 over official R1–R16 results, normalised over the full 28-point pool.</td><td>Outright only.</td></tr>
+</tbody></table>
+<h2>Sensitivity (disclosed, computed on the featured pick)</h2>
+<table><thead><tr><th>Constant</th><th>Value</th><th>Ottawa moneyline p</th><th>Grade consequence</th></tr></thead><tbody>
+<tr><td>NHL home edge</td><td>1.02 / <b>1.045</b> / 1.07</td><td>68.6% / <b>70.4%</b> / 72.2%</td><td>MEDIUM / <b>HIGH</b> / MEDIUM (heavier than −250)</td></tr>
+<tr><td>NHL OT home share</td><td>0.50 / <b>0.55</b> / 0.60</td><td>69.6% / <b>70.4%</b> / 71.2%</td><td>MEDIUM / <b>HIGH</b> / HIGH</td></tr>
+</tbody></table>
+<p class="note">The featured pick lives inside the narrow 70.00–71.43% sliver the brief's band creates for favourites; the desk publishes the constants and their sensitivity rather than hiding it.</p>
+<h2>What we deliberately do not do</h2>
+<ul>
+<li>No value is inferred or back-filled — blanks stay blank and are flagged.</li>
+<li>No fixture from an excluded sport is collected or originated.</li>
+<li>No tip percentage from OLBG (a community measure) is used as a probability, and no bookmaker price is treated as truth; market prices appear only as labelled context.</li>
+<li>Write-ups are required to contain ≥30 words, a named team and player, current form, recent verified results and an explicit selection.</li>
+</ul>
+</main>
+<footer class="wrap">Built 2026-10-22 by session <code>arena/5fba1c42-olbg2</code> from first-hand official-source captures. Every row links to an official governing-body page. Values that could not be confirmed are blank and appear on the <a href="flagged.html">Flagged for Review</a> page. · <a href="../index.html">Repo dashboard</a></footer>
+</body></html>

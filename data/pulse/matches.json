@@ -1,0 +1,4358 @@
+[
+ {
+  "id": "nhl-2026020154",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T23:00:00Z",
+  "home": "Boston Bruins",
+  "away": "Nashville Predators",
+  "venue": "TD Garden",
+  "home_form": "7-2-1 (36 GF / 22 GA in 10 GP)",
+  "away_form": "3-2-3 (23 GF / 22 GA in 8 GP)",
+  "leaders": {
+   "home": "David Pastrnak 4G/8A; Jeremy Swayman 6 wins",
+   "away": "Ryan O'Reilly 4G; Roman Josi 8A; Juuse Saros 3 wins"
+  },
+  "market_context": {
+   "home": "-155 (DraftKings)",
+   "away": "+130 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 3.36,
+   "away_goals": 1.97,
+   "total": 5.33
+  },
+  "winner_market": [
+   {
+    "selection": "Boston Bruins win match (moneyline)",
+    "probability": 0.7313,
+    "fair_decimal": 1.367,
+    "fair_american": -272,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Nashville Predators win match (moneyline)",
+    "probability": 0.2687,
+    "fair_decimal": 3.722,
+    "fair_american": 272,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Boston Bruins -1.5 (puck line)",
+    "probability": 0.4727,
+    "fair_decimal": 2.116,
+    "fair_american": 112,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Nashville Predators +1.5 (puck line)",
+    "probability": 0.5273,
+    "fair_decimal": 1.896,
+    "fair_american": -112,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.4412,
+    "fair_decimal": 2.267,
+    "fair_american": 127,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.5588,
+    "fair_decimal": 1.789,
+    "fair_american": -127,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Boston Bruins win match (moneyline)",
+   "probability": 0.7313,
+   "fair_decimal": 1.367,
+   "fair_american": -272,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Boston Bruins +1.5 (puck line)",
+   "probability": 0.9019,
+   "fair_decimal": 1.109,
+   "fair_american": -919,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020155",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T23:00:00Z",
+  "home": "Toronto Maple Leafs",
+  "away": "New York Rangers",
+  "venue": "Scotiabank Arena",
+  "home_form": "5-4-2 (38 GF / 34 GA in 11 GP)",
+  "away_form": "7-3-1 (33 GF / 24 GA in 11 GP)",
+  "leaders": {
+   "home": "Auston Matthews 8G/10A; Anthony Stolarz 3 wins",
+   "away": "Alexis Lafrenière 7G; Adam Fox 10A; Dylan Garand 4 wins"
+  },
+  "market_context": {
+   "home": "-108 (DraftKings)",
+   "away": "-112 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 2.56,
+   "away_goals": 2.88,
+   "total": 5.44
+  },
+  "winner_market": [
+   {
+    "selection": "Toronto Maple Leafs win match (moneyline)",
+    "probability": 0.4548,
+    "fair_decimal": 2.199,
+    "fair_american": 120,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "New York Rangers win match (moneyline)",
+    "probability": 0.5452,
+    "fair_decimal": 1.834,
+    "fair_american": -120,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "New York Rangers -1.5 (puck line)",
+    "probability": 0.3003,
+    "fair_decimal": 3.33,
+    "fair_american": 233,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Toronto Maple Leafs +1.5 (puck line)",
+    "probability": 0.6997,
+    "fair_decimal": 1.429,
+    "fair_american": -233,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.4609,
+    "fair_decimal": 2.169,
+    "fair_american": 117,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.5391,
+    "fair_decimal": 1.855,
+    "fair_american": -117,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "New York Rangers win match (moneyline)",
+   "probability": 0.5452,
+   "fair_decimal": 1.834,
+   "fair_american": -120,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "New York Rangers +1.5 (puck line)",
+   "probability": 0.7888,
+   "fair_decimal": 1.268,
+   "fair_american": -374,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020156",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T23:00:00Z",
+  "home": "Ottawa Senators",
+  "away": "San Jose Sharks",
+  "venue": "Canadian Tire Centre",
+  "home_form": "7-3-0 (27 GF / 24 GA in 10 GP)",
+  "away_form": "5-4-1 (26 GF / 34 GA in 10 GP)",
+  "leaders": {
+   "home": "Tim Stützle 6G/8A; Linus Ullmark 7 wins",
+   "away": "Macklin Celebrini 5G/9A; Alex Nedeljkovic 3 wins"
+  },
+  "market_context": {
+   "home": "-135 (DraftKings)",
+   "away": "+114 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 3.12,
+   "away_goals": 1.94,
+   "total": 5.06
+  },
+  "winner_market": [
+   {
+    "selection": "Ottawa Senators win match (moneyline)",
+    "probability": 0.7041,
+    "fair_decimal": 1.42,
+    "fair_american": -238,
+    "confidence": "high",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "San Jose Sharks win match (moneyline)",
+    "probability": 0.2959,
+    "fair_decimal": 3.379,
+    "fair_american": 238,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Ottawa Senators -1.5 (puck line)",
+    "probability": 0.4333,
+    "fair_decimal": 2.308,
+    "fair_american": 131,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "San Jose Sharks +1.5 (puck line)",
+    "probability": 0.5667,
+    "fair_decimal": 1.765,
+    "fair_american": -131,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.3939,
+    "fair_decimal": 2.539,
+    "fair_american": 154,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.6061,
+    "fair_decimal": 1.65,
+    "fair_american": -154,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Ottawa Senators win match (moneyline)",
+   "probability": 0.7041,
+   "fair_decimal": 1.42,
+   "fair_american": -238,
+   "confidence": "high",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Ottawa Senators +1.5 (puck line)",
+   "probability": 0.89,
+   "fair_decimal": 1.124,
+   "fair_american": -809,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020157",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T23:00:00Z",
+  "home": "New Jersey Devils",
+  "away": "Anaheim Ducks",
+  "venue": "Prudential Center",
+  "home_form": "5-4-0 (29 GF / 30 GA in 9 GP)",
+  "away_form": "4-5-0 (26 GF / 29 GA in 9 GP)",
+  "leaders": {
+   "home": "Nico Hischier 4G; Jack Hughes 7A; Jake Allen 4 wins",
+   "away": "Beckett Sennecke 5G; Leo Carlsson 9A; Lukas Dostal 3 wins"
+  },
+  "market_context": {
+   "home": "-198 (DraftKings)",
+   "away": "+164 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 3.52,
+   "away_goals": 2.99,
+   "total": 6.52
+  },
+  "winner_market": [
+   {
+    "selection": "New Jersey Devils win match (moneyline)",
+    "probability": 0.5887,
+    "fair_decimal": 1.699,
+    "fair_american": -143,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Anaheim Ducks win match (moneyline)",
+    "probability": 0.4113,
+    "fair_decimal": 2.431,
+    "fair_american": 143,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "New Jersey Devils -1.5 (puck line)",
+    "probability": 0.3466,
+    "fair_decimal": 2.885,
+    "fair_american": 189,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Anaheim Ducks +1.5 (puck line)",
+    "probability": 0.6534,
+    "fair_decimal": 1.53,
+    "fair_american": -189,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.6336,
+    "fair_decimal": 1.578,
+    "fair_american": -173,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.3664,
+    "fair_decimal": 2.729,
+    "fair_american": 173,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "New Jersey Devils win match (moneyline)",
+   "probability": 0.5887,
+   "fair_decimal": 1.699,
+   "fair_american": -143,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "New Jersey Devils +1.5 (puck line)",
+   "probability": 0.7916,
+   "fair_decimal": 1.263,
+   "fair_american": -380,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020158",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T23:00:00Z",
+  "home": "Pittsburgh Penguins",
+  "away": "Florida Panthers",
+  "venue": "PPG Paints Arena",
+  "home_form": "3-6-1 (32 GF / 37 GA in 10 GP)",
+  "away_form": "5-3-2 (31 GF / 30 GA in 10 GP)",
+  "leaders": {
+   "home": "Evgeni Malkin 5G; Erik Karlsson 10A; Arturs Silovs 3 wins",
+   "away": "Brady Tkachuk 7G; Matthew Tkachuk 12A; Jacob Markstrom 3 wins"
+  },
+  "market_context": {
+   "home": "-115 (DraftKings)",
+   "away": "-105 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 3.26,
+   "away_goals": 3.57,
+   "total": 6.82
+  },
+  "winner_market": [
+   {
+    "selection": "Pittsburgh Penguins win match (moneyline)",
+    "probability": 0.4619,
+    "fair_decimal": 2.165,
+    "fair_american": 117,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Florida Panthers win match (moneyline)",
+    "probability": 0.5381,
+    "fair_decimal": 1.858,
+    "fair_american": -117,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Florida Panthers -1.5 (puck line)",
+    "probability": 0.3189,
+    "fair_decimal": 3.135,
+    "fair_american": 214,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Pittsburgh Penguins +1.5 (puck line)",
+    "probability": 0.6811,
+    "fair_decimal": 1.468,
+    "fair_american": -214,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.6763,
+    "fair_decimal": 1.479,
+    "fair_american": -209,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.3237,
+    "fair_decimal": 3.089,
+    "fair_american": 209,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Florida Panthers win match (moneyline)",
+   "probability": 0.5381,
+   "fair_decimal": 1.858,
+   "fair_american": -117,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Florida Panthers +1.5 (puck line)",
+   "probability": 0.7599,
+   "fair_decimal": 1.316,
+   "fair_american": -317,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020159",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T23:30:00Z",
+  "home": "New York Islanders",
+  "away": "Los Angeles Kings",
+  "venue": "UBS Arena",
+  "home_form": "5-3-1 (27 GF / 19 GA in 9 GP)",
+  "away_form": "1-4-2 (17 GF / 27 GA in 7 GP)",
+  "leaders": {
+   "home": "Bo Horvat 5G; Matthew Schaefer 8A; Ilya Sorokin 5 wins",
+   "away": "Artemi Panarin 4G; Brandt Clarke 4A; Darcy Kuemper 1 win"
+  },
+  "market_context": {
+   "home": "-115 (DraftKings)",
+   "away": "-105 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 3.93,
+   "away_goals": 1.59,
+   "total": 5.52
+  },
+  "winner_market": [
+   {
+    "selection": "New York Islanders win match (moneyline)",
+    "probability": 0.8448,
+    "fair_decimal": 1.184,
+    "fair_american": -544,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Los Angeles Kings win match (moneyline)",
+    "probability": 0.1552,
+    "fair_decimal": 6.443,
+    "fair_american": 544,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "New York Islanders -1.5 (puck line)",
+    "probability": 0.6313,
+    "fair_decimal": 1.584,
+    "fair_american": -171,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Los Angeles Kings +1.5 (puck line)",
+    "probability": 0.3687,
+    "fair_decimal": 2.712,
+    "fair_american": 171,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.4748,
+    "fair_decimal": 2.106,
+    "fair_american": 111,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.5252,
+    "fair_decimal": 1.904,
+    "fair_american": -111,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "New York Islanders win match (moneyline)",
+   "probability": 0.8448,
+   "fair_decimal": 1.184,
+   "fair_american": -544,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "New York Islanders +1.5 (puck line)",
+   "probability": 0.9562,
+   "fair_decimal": 1.046,
+   "fair_american": -2183,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020160",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T00:00:00Z",
+  "home": "St. Louis Blues",
+  "away": "Vegas Golden Knights",
+  "venue": "Enterprise Center",
+  "home_form": "4-4-1 (29 GF / 29 GA in 9 GP)",
+  "away_form": "8-3-0 (43 GF / 30 GA in 11 GP)",
+  "leaders": {
+   "home": "Mason McTavish 5G; Dylan Holloway 6A; Joel Hofer 3 wins",
+   "away": "Mark Stone 8G; Jack Eichel 13A; Carter Hart 4 wins"
+  },
+  "market_context": {
+   "home": "+105 (DraftKings)",
+   "away": "-125 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 2.98,
+   "away_goals": 3.92,
+   "total": 6.9
+  },
+  "winner_market": [
+   {
+    "selection": "St. Louis Blues win match (moneyline)",
+    "probability": 0.3708,
+    "fair_decimal": 2.697,
+    "fair_american": 170,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Vegas Golden Knights win match (moneyline)",
+    "probability": 0.6292,
+    "fair_decimal": 1.589,
+    "fair_american": -170,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Vegas Golden Knights -1.5 (puck line)",
+    "probability": 0.4088,
+    "fair_decimal": 2.446,
+    "fair_american": 145,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "St. Louis Blues +1.5 (puck line)",
+    "probability": 0.5912,
+    "fair_decimal": 1.692,
+    "fair_american": -145,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.6862,
+    "fair_decimal": 1.457,
+    "fair_american": -219,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.3138,
+    "fair_decimal": 3.186,
+    "fair_american": 219,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Vegas Golden Knights win match (moneyline)",
+   "probability": 0.6292,
+   "fair_decimal": 1.589,
+   "fair_american": -170,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Vegas Golden Knights +1.5 (puck line)",
+   "probability": 0.8273,
+   "fair_decimal": 1.209,
+   "fair_american": -479,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020161",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T00:00:00Z",
+  "home": "Dallas Stars",
+  "away": "Winnipeg Jets",
+  "venue": "American Airlines Center",
+  "home_form": "5-3-1 (22 GF / 14 GA in 9 GP)",
+  "away_form": "4-3-2 (24 GF / 26 GA in 9 GP)",
+  "leaders": {
+   "home": "Mikko Rantanen 5G; Jason Robertson 6A; Jake Oettinger 4 wins",
+   "away": "Kyle Connor 8G; Mark Scheifele 6A; Stuart Skinner 3 wins"
+  },
+  "market_context": {
+   "home": "-205 (DraftKings)",
+   "away": "+170 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 2.4,
+   "away_goals": 1.29,
+   "total": 3.69
+  },
+  "winner_market": [
+   {
+    "selection": "Dallas Stars win match (moneyline)",
+    "probability": 0.7222,
+    "fair_decimal": 1.385,
+    "fair_american": -260,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Winnipeg Jets win match (moneyline)",
+    "probability": 0.2778,
+    "fair_decimal": 3.6,
+    "fair_american": 260,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Dallas Stars -1.5 (puck line)",
+    "probability": 0.404,
+    "fair_decimal": 2.475,
+    "fair_american": 148,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Winnipeg Jets +1.5 (puck line)",
+    "probability": 0.596,
+    "fair_decimal": 1.678,
+    "fair_american": -148,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.168,
+    "fair_decimal": 5.952,
+    "fair_american": 495,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.832,
+    "fair_decimal": 1.202,
+    "fair_american": -495,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Dallas Stars win match (moneyline)",
+   "probability": 0.7222,
+   "fair_decimal": 1.385,
+   "fair_american": -260,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Dallas Stars +1.5 (puck line)",
+   "probability": 0.9223,
+   "fair_decimal": 1.084,
+   "fair_american": -1187,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020162",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T01:00:00Z",
+  "home": "Calgary Flames",
+  "away": "Minnesota Wild",
+  "venue": "Scotiabank Saddledome",
+  "home_form": "2-6-0 (17 GF / 37 GA in 8 GP)",
+  "away_form": "6-2-2 (31 GF / 25 GA in 10 GP)",
+  "leaders": {
+   "home": "Morgan Frost 3G; Joel Farabee 5A; Dustin Wolf 1 win",
+   "away": "Kirill Kaprizov 11G; Quinn Hughes 11A; Jesper Wallstedt 6 wins"
+  },
+  "market_context": {
+   "home": "+170 (DraftKings)",
+   "away": "-205 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 1.8,
+   "away_goals": 4.46,
+   "total": 6.26
+  },
+  "winner_market": [
+   {
+    "selection": "Calgary Flames win match (moneyline)",
+    "probability": 0.1488,
+    "fair_decimal": 6.719,
+    "fair_american": 572,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Minnesota Wild win match (moneyline)",
+    "probability": 0.8511,
+    "fair_decimal": 1.175,
+    "fair_american": -572,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Minnesota Wild -1.5 (puck line)",
+    "probability": 0.6726,
+    "fair_decimal": 1.487,
+    "fair_american": -205,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Calgary Flames +1.5 (puck line)",
+    "probability": 0.3274,
+    "fair_decimal": 3.054,
+    "fair_american": 205,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.5952,
+    "fair_decimal": 1.68,
+    "fair_american": -147,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.4048,
+    "fair_decimal": 2.47,
+    "fair_american": 147,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Minnesota Wild win match (moneyline)",
+   "probability": 0.8511,
+   "fair_decimal": 1.175,
+   "fair_american": -572,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Minnesota Wild +1.5 (puck line)",
+   "probability": 0.9584,
+   "fair_decimal": 1.043,
+   "fair_american": -2304,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020163",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T01:00:00Z",
+  "home": "Edmonton Oilers",
+  "away": "Carolina Hurricanes",
+  "venue": "Rogers Place",
+  "home_form": "7-1-1 (41 GF / 27 GA in 9 GP)",
+  "away_form": "8-2-1 (42 GF / 27 GA in 11 GP)",
+  "leaders": {
+   "home": "Leon Draisaitl 8G; Connor McDavid 20A; Devon Levi 5 wins",
+   "away": "Andrei Svechnikov 6G; Jackson Blake 10A; Pyotr Kochetkov 6 wins"
+  },
+  "market_context": {
+   "home": "-102 (DraftKings)",
+   "away": "-118 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 3.8,
+   "away_goals": 3.56,
+   "total": 7.36
+  },
+  "winner_market": [
+   {
+    "selection": "Edmonton Oilers win match (moneyline)",
+    "probability": 0.5414,
+    "fair_decimal": 1.847,
+    "fair_american": -118,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Carolina Hurricanes win match (moneyline)",
+    "probability": 0.4586,
+    "fair_decimal": 2.181,
+    "fair_american": 118,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Edmonton Oilers -1.5 (puck line)",
+    "probability": 0.316,
+    "fair_decimal": 3.164,
+    "fair_american": 216,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Carolina Hurricanes +1.5 (puck line)",
+    "probability": 0.684,
+    "fair_decimal": 1.462,
+    "fair_american": -216,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.7425,
+    "fair_decimal": 1.347,
+    "fair_american": -288,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.2575,
+    "fair_decimal": 3.883,
+    "fair_american": 288,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Edmonton Oilers win match (moneyline)",
+   "probability": 0.5414,
+   "fair_decimal": 1.847,
+   "fair_american": -118,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Edmonton Oilers +1.5 (puck line)",
+   "probability": 0.743,
+   "fair_decimal": 1.346,
+   "fair_american": -289,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020164",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T02:00:00Z",
+  "home": "Seattle Kraken",
+  "away": "Utah Mammoth",
+  "venue": "Climate Pledge Arena",
+  "home_form": "6-3-1 (37 GF / 34 GA in 10 GP)",
+  "away_form": "7-3-0 (38 GF / 31 GA in 10 GP)",
+  "leaders": {
+   "home": "Frederick Gaudreau 5G; Chandler Stephenson 8A; Philipp Grubauer 3 wins",
+   "away": "Nick Schmaltz 7G; Clayton Keller 9A; Karel Vejmelka 5 wins"
+  },
+  "market_context": {
+   "home": "+142 (DraftKings)",
+   "away": "-170 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 3.89,
+   "away_goals": 4.02,
+   "total": 7.91
+  },
+  "winner_market": [
+   {
+    "selection": "Seattle Kraken win match (moneyline)",
+    "probability": 0.4901,
+    "fair_decimal": 2.04,
+    "fair_american": 104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Utah Mammoth win match (moneyline)",
+    "probability": 0.5099,
+    "fair_decimal": 1.961,
+    "fair_american": -104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Utah Mammoth -1.5 (puck line)",
+    "probability": 0.3082,
+    "fair_decimal": 3.245,
+    "fair_american": 224,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Seattle Kraken +1.5 (puck line)",
+    "probability": 0.6918,
+    "fair_decimal": 1.446,
+    "fair_american": -224,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.8004,
+    "fair_decimal": 1.249,
+    "fair_american": -401,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.1996,
+    "fair_decimal": 5.009,
+    "fair_american": 401,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Utah Mammoth win match (moneyline)",
+   "probability": 0.5099,
+   "fair_decimal": 1.961,
+   "fair_american": -104,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Over 5.5 total goals",
+   "probability": 0.8004,
+   "fair_decimal": 1.249,
+   "fair_american": -401,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "nhl-2026020165",
+  "sport": "ice-hockey",
+  "competition": "NHL Regular Season 2026-27",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T02:00:00Z",
+  "home": "Vancouver Canucks",
+  "away": "Detroit Red Wings",
+  "venue": "Rogers Arena",
+  "home_form": "2-8-1 (33 GF / 51 GA in 11 GP)",
+  "away_form": "3-3-3 (22 GF / 26 GA in 9 GP)",
+  "leaders": {
+   "home": "Paul Cotter 4G; Elias Pettersson 8A; Leevi Meriläinen 1 win",
+   "away": "Alex DeBrincat 6G/5A; John Gibson 2 wins"
+  },
+  "market_context": {
+   "home": "+142 (DraftKings)",
+   "away": "-170 (DraftKings)"
+  },
+  "expected": {
+   "home_goals": 2.94,
+   "away_goals": 3.52,
+   "total": 6.46
+  },
+  "winner_market": [
+   {
+    "selection": "Vancouver Canucks win match (moneyline)",
+    "probability": 0.4191,
+    "fair_decimal": 2.386,
+    "fair_american": 139,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Detroit Red Wings win match (moneyline)",
+    "probability": 0.5809,
+    "fair_decimal": 1.722,
+    "fair_american": -139,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Detroit Red Wings -1.5 (puck line)",
+    "probability": 0.3532,
+    "fair_decimal": 2.831,
+    "fair_american": 183,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Vancouver Canucks +1.5 (puck line)",
+    "probability": 0.6468,
+    "fair_decimal": 1.546,
+    "fair_american": -183,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 5.5 total goals",
+    "probability": 0.6258,
+    "fair_decimal": 1.598,
+    "fair_american": -167,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 5.5 total goals",
+    "probability": 0.3742,
+    "fair_decimal": 2.673,
+    "fair_american": 167,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Detroit Red Wings win match (moneyline)",
+   "probability": 0.5809,
+   "fair_decimal": 1.722,
+   "fair_american": -139,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Detroit Red Wings +1.5 (puck line)",
+   "probability": 0.7983,
+   "fair_decimal": 1.253,
+   "fair_american": -396,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165",
+  "official_source": "NHL official Score API + Stats REST + GameCenter pages",
+  "data_urls": [
+   "https://api-web.nhle.com/v1/score/2026-10-22",
+   "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+  ]
+ },
+ {
+  "id": "mlb-849805",
+  "sport": "baseball",
+  "competition": "World Series Game 1 - 2026 MLB World Series",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-24T00:00:00Z",
+  "home": "Milwaukee Brewers",
+  "away": "Tampa Bay Rays",
+  "venue": "American Family Field",
+  "home_form": "103-59 (832 RS / 618 RA), home 55-26",
+  "away_form": "98-64 (736 RS / 650 RA), away 43-38",
+  "winner_market": [
+   {
+    "selection": "Milwaukee Brewers win match (moneyline)",
+    "probability": 0.5894,
+    "fair_decimal": 1.697,
+    "fair_american": -144,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Tampa Bay Rays win match (moneyline)",
+    "probability": 0.4106,
+    "fair_decimal": 2.435,
+    "fair_american": 144,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": "not originated - needs verified probable-pitcher data (blank, PU-19)",
+  "total_market": "not originated - same reason (blank, PU-19)",
+  "pick": {
+   "selection": "Milwaukee Brewers win match (moneyline)",
+   "probability": 0.5894,
+   "fair_decimal": 1.697,
+   "fair_american": -144,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Milwaukee Brewers win match (moneyline)",
+   "probability": 0.5894,
+   "fair_decimal": 1.697,
+   "fair_american": -144,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.mlb.com/gameday/849805",
+  "official_source": "MLB Stats API (statsapi.mlb.com) schedule + standings",
+  "data_urls": [
+   "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28&hydrate=team,venue",
+   "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason&fields=records,teamRecords,team,name,wins,losses,runsScored,runsAllowed,divisionRank"
+  ]
+ },
+ {
+  "id": "mlb-849802",
+  "sport": "baseball",
+  "competition": "World Series Game 2 - 2026 MLB World Series",
+  "date": "2026-10-24",
+  "start_utc": "2026-10-25T00:00:00Z",
+  "home": "Milwaukee Brewers",
+  "away": "Tampa Bay Rays",
+  "venue": "American Family Field",
+  "home_form": "103-59 (832 RS / 618 RA), home 55-26",
+  "away_form": "98-64 (736 RS / 650 RA), away 43-38",
+  "winner_market": [
+   {
+    "selection": "Milwaukee Brewers win match (moneyline)",
+    "probability": 0.5894,
+    "fair_decimal": 1.697,
+    "fair_american": -144,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Tampa Bay Rays win match (moneyline)",
+    "probability": 0.4106,
+    "fair_decimal": 2.435,
+    "fair_american": 144,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": "not originated - needs verified probable-pitcher data (blank, PU-19)",
+  "total_market": "not originated - same reason (blank, PU-19)",
+  "pick": {
+   "selection": "Milwaukee Brewers win match (moneyline)",
+   "probability": 0.5894,
+   "fair_decimal": 1.697,
+   "fair_american": -144,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Milwaukee Brewers win match (moneyline)",
+   "probability": 0.5894,
+   "fair_decimal": 1.697,
+   "fair_american": -144,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.mlb.com/gameday/849802",
+  "official_source": "MLB Stats API (statsapi.mlb.com) schedule + standings",
+  "data_urls": [
+   "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28&hydrate=team,venue",
+   "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason&fields=records,teamRecords,team,name,wins,losses,runsScored,runsAllowed,divisionRank"
+  ]
+ },
+ {
+  "id": "mlb-849804",
+  "sport": "baseball",
+  "competition": "World Series Game 3 - 2026 MLB World Series",
+  "date": "2026-10-26",
+  "start_utc": "2026-10-27T00:00:00Z",
+  "home": "Tampa Bay Rays",
+  "away": "Milwaukee Brewers",
+  "venue": "Tropicana Field",
+  "home_form": "98-64 (736 RS / 650 RA), home 55-26",
+  "away_form": "103-59 (832 RS / 618 RA), away 48-33",
+  "winner_market": [
+   {
+    "selection": "Tampa Bay Rays win match (moneyline)",
+    "probability": 0.4405,
+    "fair_decimal": 2.27,
+    "fair_american": 127,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Milwaukee Brewers win match (moneyline)",
+    "probability": 0.5595,
+    "fair_decimal": 1.787,
+    "fair_american": -127,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": "not originated - needs verified probable-pitcher data (blank, PU-19)",
+  "total_market": "not originated - same reason (blank, PU-19)",
+  "pick": {
+   "selection": "Milwaukee Brewers win match (moneyline)",
+   "probability": 0.5595,
+   "fair_decimal": 1.787,
+   "fair_american": -127,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Milwaukee Brewers win match (moneyline)",
+   "probability": 0.5595,
+   "fair_decimal": 1.787,
+   "fair_american": -127,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.mlb.com/gameday/849804",
+  "official_source": "MLB Stats API (statsapi.mlb.com) schedule + standings",
+  "data_urls": [
+   "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-28&hydrate=team,venue",
+   "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason&fields=records,teamRecords,team,name,wins,losses,runsScored,runsAllowed,divisionRank"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-1",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "Luke Woodhouse",
+  "away": "Dirk van Duijvenbode",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (9)",
+  "away_form": "seed (24)",
+  "seed_model": "leg-win p(Luke Woodhouse) = 0.700 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "Luke Woodhouse win match",
+    "probability": 0.9218,
+    "fair_decimal": 1.085,
+    "fair_american": -1178,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Dirk van Duijvenbode win match",
+    "probability": 0.0782,
+    "fair_decimal": 12.784,
+    "fair_american": 1178,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Luke Woodhouse -1.5 legs",
+    "probability": 0.8497,
+    "fair_decimal": 1.177,
+    "fair_american": -565,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Dirk van Duijvenbode +1.5 legs",
+    "probability": 0.1503,
+    "fair_decimal": 6.655,
+    "fair_american": 565,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.245,
+    "fair_decimal": 4.081,
+    "fair_american": 308,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.755,
+    "fair_decimal": 1.325,
+    "fair_american": -308,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Luke Woodhouse win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Luke Woodhouse win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+   "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Woodhouse_vs_Dirk_van_Duijvenbode/15?event_id=32324"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-2",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "Danny Noppert",
+  "away": "Stephen Bunting",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (5)",
+  "away_form": "seed (28)",
+  "seed_model": "leg-win p(Danny Noppert) = 0.700 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "Danny Noppert win match",
+    "probability": 0.9218,
+    "fair_decimal": 1.085,
+    "fair_american": -1178,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Stephen Bunting win match",
+    "probability": 0.0782,
+    "fair_decimal": 12.784,
+    "fair_american": 1178,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Danny Noppert -1.5 legs",
+    "probability": 0.8497,
+    "fair_decimal": 1.177,
+    "fair_american": -565,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Stephen Bunting +1.5 legs",
+    "probability": 0.1503,
+    "fair_decimal": 6.655,
+    "fair_american": 565,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.245,
+    "fair_decimal": 4.081,
+    "fair_american": 308,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.755,
+    "fair_decimal": 1.325,
+    "fair_american": -308,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Danny Noppert win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Danny Noppert win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+   "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Danny_Noppert_vs_Stephen_Bunting/15?event_id=32330"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-3",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "Niels Zonneveld",
+  "away": "Cameron Menzies",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (4)",
+  "away_form": "seed (29)",
+  "seed_model": "leg-win p(Niels Zonneveld) = 0.700 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "Niels Zonneveld win match",
+    "probability": 0.9218,
+    "fair_decimal": 1.085,
+    "fair_american": -1178,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Cameron Menzies win match",
+    "probability": 0.0782,
+    "fair_decimal": 12.784,
+    "fair_american": 1178,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Niels Zonneveld -1.5 legs",
+    "probability": 0.8497,
+    "fair_decimal": 1.177,
+    "fair_american": -565,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Cameron Menzies +1.5 legs",
+    "probability": 0.1503,
+    "fair_decimal": 6.655,
+    "fair_american": 565,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.245,
+    "fair_decimal": 4.081,
+    "fair_american": 308,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.755,
+    "fair_decimal": 1.325,
+    "fair_american": -308,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Niels Zonneveld win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Niels Zonneveld win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+   "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Niels_Zonneveld_vs_Cameron_Menzies/15?event_id=32334"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-4",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "Gerwyn Price",
+  "away": "Rob Cross",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (13)",
+  "away_form": "seed (20)",
+  "seed_model": "leg-win p(Gerwyn Price) = 0.621 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "Gerwyn Price win match",
+    "probability": 0.7985,
+    "fair_decimal": 1.252,
+    "fair_american": -396,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Rob Cross win match",
+    "probability": 0.2015,
+    "fair_decimal": 4.963,
+    "fair_american": 396,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Gerwyn Price -1.5 legs",
+    "probability": 0.6856,
+    "fair_decimal": 1.459,
+    "fair_american": -218,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Rob Cross +1.5 legs",
+    "probability": 0.3144,
+    "fair_decimal": 3.181,
+    "fair_american": 218,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.386,
+    "fair_decimal": 2.59,
+    "fair_american": 159,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.614,
+    "fair_decimal": 1.629,
+    "fair_american": -159,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Gerwyn Price win match",
+   "probability": 0.7985,
+   "fair_decimal": 1.252,
+   "fair_american": -396,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Gerwyn Price win match",
+   "probability": 0.7985,
+   "fair_decimal": 1.252,
+   "fair_american": -396,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+   "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-5",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "James Wade",
+  "away": "Damon Heta",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (16)",
+  "away_form": "seed (17)",
+  "seed_model": "leg-win p(James Wade) = 0.517 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "James Wade win match",
+    "probability": 0.5471,
+    "fair_decimal": 1.828,
+    "fair_american": -121,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Damon Heta win match",
+    "probability": 0.4529,
+    "fair_decimal": 2.208,
+    "fair_american": 121,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "James Wade -1.5 legs",
+    "probability": 0.4205,
+    "fair_decimal": 2.378,
+    "fair_american": 138,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Damon Heta +1.5 legs",
+    "probability": 0.5795,
+    "fair_decimal": 1.726,
+    "fair_american": -138,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.4898,
+    "fair_decimal": 2.042,
+    "fair_american": 104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.5102,
+    "fair_decimal": 1.96,
+    "fair_american": -104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "James Wade win match",
+   "probability": 0.5471,
+   "fair_decimal": 1.828,
+   "fair_american": -121,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Damon Heta +1.5 legs",
+   "probability": 0.5795,
+   "fair_decimal": 1.726,
+   "fair_american": -138,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-6",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "Luke Humphries",
+  "away": "Ryan Searle",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (12)",
+  "away_form": "seed (21)",
+  "seed_model": "leg-win p(Luke Humphries) = 0.656 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "Luke Humphries win match",
+    "probability": 0.8605,
+    "fair_decimal": 1.162,
+    "fair_american": -617,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Ryan Searle win match",
+    "probability": 0.1395,
+    "fair_decimal": 7.17,
+    "fair_american": 617,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Luke Humphries -1.5 legs",
+    "probability": 0.7636,
+    "fair_decimal": 1.31,
+    "fair_american": -323,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Ryan Searle +1.5 legs",
+    "probability": 0.2364,
+    "fair_decimal": 4.229,
+    "fair_american": 323,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.3276,
+    "fair_decimal": 3.053,
+    "fair_american": 205,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.6724,
+    "fair_decimal": 1.487,
+    "fair_american": -205,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Luke Humphries win match",
+   "probability": 0.8605,
+   "fair_decimal": 1.162,
+   "fair_american": -617,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Luke Humphries win match",
+   "probability": 0.8605,
+   "fair_decimal": 1.162,
+   "fair_american": -617,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-7",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "Gian van Veen",
+  "away": "Andrew Gilding",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (8)",
+  "away_form": "seed (25)",
+  "seed_model": "leg-win p(Gian van Veen) = 0.700 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "Gian van Veen win match",
+    "probability": 0.9218,
+    "fair_decimal": 1.085,
+    "fair_american": -1178,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Andrew Gilding win match",
+    "probability": 0.0782,
+    "fair_decimal": 12.784,
+    "fair_american": 1178,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Gian van Veen -1.5 legs",
+    "probability": 0.8497,
+    "fair_decimal": 1.177,
+    "fair_american": -565,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Andrew Gilding +1.5 legs",
+    "probability": 0.1503,
+    "fair_decimal": 6.655,
+    "fair_american": 565,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.245,
+    "fair_decimal": 4.081,
+    "fair_american": 308,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.755,
+    "fair_decimal": 1.325,
+    "fair_american": -308,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Gian van Veen win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Gian van Veen win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview"
+  ]
+ },
+ {
+  "id": "pdc-ec-r1-8",
+  "sport": "darts",
+  "competition": "2026 Machineseeker European Championship (Westfalenhallen, Dortmund, 22-25 Oct) - Round 1, best of 11 legs (first to 6)",
+  "date": "2026-10-22",
+  "start_utc": "Thursday 22 October 2026, 1900-2300 CEST (1800-2200 BST)",
+  "home": "Ross Smith",
+  "away": "Karel Sedlacek",
+  "venue": "Westfalenhallen, Dortmund",
+  "home_form": "seed (1)",
+  "away_form": "seed (32)",
+  "seed_model": "leg-win p(Ross Smith) = 0.700 from official ET one-year seeds, k=1.15",
+  "winner_market": [
+   {
+    "selection": "Ross Smith win match",
+    "probability": 0.9218,
+    "fair_decimal": 1.085,
+    "fair_american": -1178,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Karel Sedlacek win match",
+    "probability": 0.0782,
+    "fair_decimal": 12.784,
+    "fair_american": 1178,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Ross Smith -1.5 legs",
+    "probability": 0.8497,
+    "fair_decimal": 1.177,
+    "fair_american": -565,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Karel Sedlacek +1.5 legs",
+    "probability": 0.1503,
+    "fair_decimal": 6.655,
+    "fair_american": 565,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 9.5 total legs",
+    "probability": 0.245,
+    "fair_decimal": 4.081,
+    "fair_american": 308,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 9.5 total legs",
+    "probability": 0.755,
+    "fair_decimal": 1.325,
+    "fair_american": -308,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Ross Smith win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Ross Smith win match",
+   "probability": 0.9218,
+   "fair_decimal": 1.085,
+   "fair_american": -1178,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview",
+  "official_source": "PDC official site (pdc.tv) tournament schedule & preview",
+  "data_urls": [
+   "https://www.pdc.tv/news/2026/october/19/2026-machineseeker-european-championship-schedule-confirmed/",
+   "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview"
+  ]
+ },
+ {
+  "id": "ehf-202711020101019",
+  "sport": "handball",
+  "competition": "EHF Champions League Men 2026/27, Group Phase (09.09.2026 - 29.10.2026)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T16:45:00Z",
+  "home": "MT Melsungen",
+  "away": "Orlen Wisla Plock",
+  "venue": "home venue per EHF match page",
+  "home_form": "Group B: 2-0-2 (110:112, 4 pts in 4 GP)",
+  "away_form": "Group B: 3-0-1 (115:108, 6 pts in 4 GP)",
+  "expected": {
+   "home_goals": 24.0,
+   "away_goals": 24.6,
+   "total": 48.6,
+   "tie_probability": 0.057
+  },
+  "winner_market": [
+   {
+    "selection": "MT Melsungen win match (draw no bet)",
+    "probability": 0.4681,
+    "fair_decimal": 2.136,
+    "fair_american": 114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Orlen Wisla Plock win match (draw no bet)",
+    "probability": 0.5319,
+    "fair_decimal": 1.88,
+    "fair_american": -114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Orlen Wisla Plock -0.5 (handicap)",
+    "probability": 0.5587,
+    "fair_decimal": 1.79,
+    "fair_american": -127,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "MT Melsungen +0.5 (handicap)",
+    "probability": 0.4413,
+    "fair_decimal": 2.266,
+    "fair_american": 127,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 48.5 total goals",
+    "probability": 0.4953,
+    "fair_decimal": 2.019,
+    "fair_american": 102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 48.5 total goals",
+    "probability": 0.5047,
+    "fair_decimal": 1.981,
+    "fair_american": -102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Orlen Wisla Plock win match (draw no bet)",
+   "probability": 0.5319,
+   "fair_decimal": 1.88,
+   "fair_american": -114,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Orlen Wisla Plock -0.5 (handicap)",
+   "probability": 0.5587,
+   "fair_decimal": 1.79,
+   "fair_american": -127,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/",
+  "official_source": "EHF official competition site ehfcl.eurohandball.com",
+  "data_urls": [
+   "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+  ]
+ },
+ {
+  "id": "ehf-202711020101043",
+  "sport": "handball",
+  "competition": "EHF Champions League Men 2026/27, Group Phase (09.09.2026 - 29.10.2026)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T16:45:00Z",
+  "home": "OTP Bank - PICK Szeged",
+  "away": "GOG",
+  "venue": "home venue per EHF match page",
+  "home_form": "Group D: 1-1-2 (139:136, 3 pts in 4 GP)",
+  "away_form": "Group D: 3-0-1 (145:139, 6 pts in 4 GP)",
+  "expected": {
+   "home_goals": 39.1,
+   "away_goals": 37.6,
+   "total": 76.7,
+   "tie_probability": 0.045
+  },
+  "winner_market": [
+   {
+    "selection": "OTP Bank - PICK Szeged win match (draw no bet)",
+    "probability": 0.5703,
+    "fair_decimal": 1.754,
+    "fair_american": -133,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "GOG win match (draw no bet)",
+    "probability": 0.4297,
+    "fair_decimal": 2.327,
+    "fair_american": 133,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "OTP Bank - PICK Szeged -1.5 (handicap)",
+    "probability": 0.5446,
+    "fair_decimal": 1.836,
+    "fair_american": -120,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "GOG +1.5 (handicap)",
+    "probability": 0.4554,
+    "fair_decimal": 2.196,
+    "fair_american": 120,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 76.5 total goals",
+    "probability": 0.5004,
+    "fair_decimal": 1.998,
+    "fair_american": -100,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 76.5 total goals",
+    "probability": 0.4996,
+    "fair_decimal": 2.002,
+    "fair_american": 100,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "OTP Bank - PICK Szeged win match (draw no bet)",
+   "probability": 0.5703,
+   "fair_decimal": 1.754,
+   "fair_american": -133,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "OTP Bank - PICK Szeged win match (draw no bet)",
+   "probability": 0.5703,
+   "fair_decimal": 1.754,
+   "fair_american": -133,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/",
+  "official_source": "EHF official competition site ehfcl.eurohandball.com",
+  "data_urls": [
+   "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+  ]
+ },
+ {
+  "id": "ehf-202711020101041",
+  "sport": "handball",
+  "competition": "EHF Champions League Men 2026/27, Group Phase (09.09.2026 - 29.10.2026)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T18:45:00Z",
+  "home": "Sporting Clube de Portugal",
+  "away": "IFK Kristianstad",
+  "venue": "home venue per EHF match page",
+  "home_form": "Group D: 3-1-0 (149:125, 7 pts in 4 GP)",
+  "away_form": "Group D: 0-0-4 (122:155, 0 pts in 4 GP)",
+  "expected": {
+   "home_goals": 46.7,
+   "away_goals": 29.1,
+   "total": 75.8,
+   "tie_probability": 0.006
+  },
+  "winner_market": [
+   {
+    "selection": "Sporting Clube de Portugal win match (draw no bet)",
+    "probability": 0.982,
+    "fair_decimal": 1.018,
+    "fair_american": -5442,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "IFK Kristianstad win match (draw no bet)",
+    "probability": 0.018,
+    "fair_decimal": 55.425,
+    "fair_american": 5442,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Sporting Clube de Portugal -17.5 (handicap)",
+    "probability": 0.5503,
+    "fair_decimal": 1.817,
+    "fair_american": -122,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "IFK Kristianstad +17.5 (handicap)",
+    "probability": 0.4497,
+    "fair_decimal": 2.224,
+    "fair_american": 122,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 75.5 total goals",
+    "probability": 0.5055,
+    "fair_decimal": 1.978,
+    "fair_american": -102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 75.5 total goals",
+    "probability": 0.4945,
+    "fair_decimal": 2.022,
+    "fair_american": 102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Sporting Clube de Portugal win match (draw no bet)",
+   "probability": 0.982,
+   "fair_decimal": 1.018,
+   "fair_american": -5442,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Sporting Clube de Portugal win match (draw no bet)",
+   "probability": 0.982,
+   "fair_decimal": 1.018,
+   "fair_american": -5442,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
+  "official_source": "EHF official competition site ehfcl.eurohandball.com",
+  "data_urls": [
+   "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+  ]
+ },
+ {
+  "id": "ehf-202711020101049",
+  "sport": "handball",
+  "competition": "EHF Champions League Men 2026/27, Group Phase (09.09.2026 - 29.10.2026)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T18:45:00Z",
+  "home": "Barça",
+  "away": "Montpellier Handball",
+  "venue": "home venue per EHF match page",
+  "home_form": "Group E: 4-0-0 (137:104, 8 pts in 4 GP)",
+  "away_form": "Group E: 1-0-3 (116:125, 2 pts in 4 GP)",
+  "expected": {
+   "home_goals": 34.6,
+   "away_goals": 23.0,
+   "total": 57.6,
+   "tie_probability": 0.016
+  },
+  "winner_market": [
+   {
+    "selection": "Barça win match (draw no bet)",
+    "probability": 0.9451,
+    "fair_decimal": 1.058,
+    "fair_american": -1722,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Montpellier Handball win match (draw no bet)",
+    "probability": 0.0549,
+    "fair_decimal": 18.225,
+    "fair_american": 1722,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Barça -11.5 (handicap)",
+    "probability": 0.558,
+    "fair_decimal": 1.792,
+    "fair_american": -126,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Montpellier Handball +11.5 (handicap)",
+    "probability": 0.442,
+    "fair_decimal": 2.262,
+    "fair_american": 126,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 57.5 total goals",
+    "probability": 0.4985,
+    "fair_decimal": 2.006,
+    "fair_american": 101,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 57.5 total goals",
+    "probability": 0.5015,
+    "fair_decimal": 1.994,
+    "fair_american": -101,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Barça win match (draw no bet)",
+   "probability": 0.9451,
+   "fair_decimal": 1.058,
+   "fair_american": -1722,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Barça win match (draw no bet)",
+   "probability": 0.9451,
+   "fair_decimal": 1.058,
+   "fair_american": -1722,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
+  "official_source": "EHF official competition site ehfcl.eurohandball.com",
+  "data_urls": [
+   "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+  ]
+ },
+ {
+  "id": "ehf-202711020101064",
+  "sport": "handball",
+  "competition": "EHF Champions League Men 2026/27, Group Phase (09.09.2026 - 29.10.2026)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T18:45:00Z",
+  "home": "Kolstad Håndball",
+  "away": "SC Magdeburg",
+  "venue": "home venue per EHF match page",
+  "home_form": "Group F: 0-0-4 (111:143, 0 pts in 4 GP)",
+  "away_form": "Group F: 4-0-0 (141:108, 8 pts in 4 GP)",
+  "expected": {
+   "home_goals": 24.2,
+   "away_goals": 38.4,
+   "total": 62.7,
+   "tie_probability": 0.01
+  },
+  "winner_market": [
+   {
+    "selection": "Kolstad Håndball win match (draw no bet)",
+    "probability": 0.0312,
+    "fair_decimal": 32.092,
+    "fair_american": 3109,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "SC Magdeburg win match (draw no bet)",
+    "probability": 0.9688,
+    "fair_decimal": 1.032,
+    "fair_american": -3109,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "SC Magdeburg -14.5 (handicap)",
+    "probability": 0.5331,
+    "fair_decimal": 1.876,
+    "fair_american": -114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Kolstad Håndball +14.5 (handicap)",
+    "probability": 0.4669,
+    "fair_decimal": 2.142,
+    "fair_american": 114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 62.5 total goals",
+    "probability": 0.5011,
+    "fair_decimal": 1.996,
+    "fair_american": -100,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 62.5 total goals",
+    "probability": 0.4989,
+    "fair_decimal": 2.004,
+    "fair_american": 100,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "SC Magdeburg win match (draw no bet)",
+   "probability": 0.9688,
+   "fair_decimal": 1.032,
+   "fair_american": -3109,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "SC Magdeburg win match (draw no bet)",
+   "probability": 0.9688,
+   "fair_decimal": 1.032,
+   "fair_american": -3109,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/",
+  "official_source": "EHF official competition site ehfcl.eurohandball.com",
+  "data_urls": [
+   "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+   "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+  ]
+ },
+ {
+  "id": "wst-r3-49",
+  "sport": "snooker",
+  "competition": "BetVictor Northern Ireland Open 2026 (Belfast, 18-25 Oct) - Round 3 (last 16), best of 7 frames (first to 4)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22 09:00 (session time per WST)",
+  "home": "Anthony McGill",
+  "away": "Mateusz Baranowski",
+  "venue": "Belfast (Titanic Exhibition Centre per WST tournament page area)",
+  "home_form": "this event 8-2 frames (4-1 v Stephen Maguire; 4-1 v Jack Lisowski)",
+  "away_form": "this event 8-6 frames (4-3 v Gary Wilson; 4-3 v Wang Xinbo)",
+  "winner_market": [
+   {
+    "selection": "Anthony McGill win match",
+    "probability": 0.6346,
+    "fair_decimal": 1.576,
+    "fair_american": -174,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Mateusz Baranowski win match",
+    "probability": 0.3654,
+    "fair_decimal": 2.737,
+    "fair_american": 174,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Anthony McGill -1.5 frames",
+    "probability": 0.4669,
+    "fair_decimal": 2.142,
+    "fair_american": 114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Mateusz Baranowski +1.5 frames",
+    "probability": 0.5331,
+    "fair_decimal": 1.876,
+    "fair_american": -114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Match goes to 6.5+ frames (over 6.5)",
+    "probability": 0.6056,
+    "fair_decimal": 1.651,
+    "fair_american": -154,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 6.5 frames",
+    "probability": 0.3944,
+    "fair_decimal": 2.536,
+    "fair_american": 154,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Anthony McGill win match",
+   "probability": 0.6346,
+   "fair_decimal": 1.576,
+   "fair_american": -174,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Anthony McGill win match",
+   "probability": 0.6346,
+   "fair_decimal": 1.576,
+   "fair_american": -174,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5",
+  "official_source": "World Snooker Tour official match centre (wst.tv)",
+  "data_urls": [
+   "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578"
+  ]
+ },
+ {
+  "id": "wst-r3-50",
+  "sport": "snooker",
+  "competition": "BetVictor Northern Ireland Open 2026 (Belfast, 18-25 Oct) - Round 3 (last 16), best of 7 frames (first to 4)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22 09:00 (session time per WST)",
+  "home": "Elliot Slessor",
+  "away": "Ricky Walden",
+  "venue": "Belfast (Titanic Exhibition Centre per WST tournament page area)",
+  "home_form": "this event 8-1 frames (4-0 v He Guoqiang; 4-1 v Jamie Jones)",
+  "away_form": "this event 8-4 frames (4-1 v Neil Robertson; 4-3 v Joe O'Connor)",
+  "winner_market": [
+   {
+    "selection": "Elliot Slessor win match",
+    "probability": 0.6119,
+    "fair_decimal": 1.634,
+    "fair_american": -158,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Ricky Walden win match",
+    "probability": 0.3881,
+    "fair_decimal": 2.577,
+    "fair_american": 158,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Elliot Slessor -1.5 frames",
+    "probability": 0.445,
+    "fair_decimal": 2.247,
+    "fair_american": 125,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Ricky Walden +1.5 frames",
+    "probability": 0.555,
+    "fair_decimal": 1.802,
+    "fair_american": -125,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Match goes to 6.5+ frames (over 6.5)",
+    "probability": 0.6117,
+    "fair_decimal": 1.635,
+    "fair_american": -158,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 6.5 frames",
+    "probability": 0.3883,
+    "fair_decimal": 2.575,
+    "fair_american": 158,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Elliot Slessor win match",
+   "probability": 0.6119,
+   "fair_decimal": 1.634,
+   "fair_american": -158,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Elliot Slessor win match",
+   "probability": 0.6119,
+   "fair_decimal": 1.634,
+   "fair_american": -158,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8",
+  "official_source": "World Snooker Tour official match centre (wst.tv)",
+  "data_urls": [
+   "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578"
+  ]
+ },
+ {
+  "id": "wst-r3-53",
+  "sport": "snooker",
+  "competition": "BetVictor Northern Ireland Open 2026 (Belfast, 18-25 Oct) - Round 3 (last 16), best of 7 frames (first to 4)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22 14:00 (session time per WST)",
+  "home": "Mark Williams",
+  "away": "Martin O'Donnell",
+  "venue": "Belfast (Titanic Exhibition Centre per WST tournament page area)",
+  "home_form": "this event 8-4 frames (4-2 v Robbie Williams; 4-2 v Zhang Anda)",
+  "away_form": "this event 8-5 frames (4-3 v Judd Trump; 4-2 v Luca Brecel)",
+  "winner_market": [
+   {
+    "selection": "Mark Williams win match",
+    "probability": 0.5331,
+    "fair_decimal": 1.876,
+    "fair_american": -114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Martin O'Donnell win match",
+    "probability": 0.4669,
+    "fair_decimal": 2.142,
+    "fair_american": 114,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Mark Williams -1.5 frames",
+    "probability": 0.3726,
+    "fair_decimal": 2.684,
+    "fair_american": 168,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Martin O'Donnell +1.5 frames",
+    "probability": 0.6274,
+    "fair_decimal": 1.594,
+    "fair_american": -168,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Match goes to 6.5+ frames (over 6.5)",
+    "probability": 0.6239,
+    "fair_decimal": 1.603,
+    "fair_american": -166,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 6.5 frames",
+    "probability": 0.3761,
+    "fair_decimal": 2.659,
+    "fair_american": 166,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Mark Williams win match",
+   "probability": 0.5331,
+   "fair_decimal": 1.876,
+   "fair_american": -114,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Martin O'Donnell +1.5 frames",
+   "probability": 0.6274,
+   "fair_decimal": 1.594,
+   "fair_american": -168,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f",
+  "official_source": "World Snooker Tour official match centre (wst.tv)",
+  "data_urls": [
+   "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578"
+  ]
+ },
+ {
+  "id": "wst-r3-54",
+  "sport": "snooker",
+  "competition": "BetVictor Northern Ireland Open 2026 (Belfast, 18-25 Oct) - Round 3 (last 16), best of 7 frames (first to 4)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22 14:00 (session time per WST)",
+  "home": "David Gilbert",
+  "away": "Cheung Ka Wai",
+  "venue": "Belfast (Titanic Exhibition Centre per WST tournament page area)",
+  "home_form": "this event 8-4 frames (4-1 v Oliver Sykes; 4-3 v Gao Yang)",
+  "away_form": "this event 8-3 frames (4-3 v Ronnie O'Sullivan; 4-0 v Stuart Bingham)",
+  "winner_market": [
+   {
+    "selection": "David Gilbert win match",
+    "probability": 0.4648,
+    "fair_decimal": 2.152,
+    "fair_american": 115,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Cheung Ka Wai win match",
+    "probability": 0.5352,
+    "fair_decimal": 1.868,
+    "fair_american": -115,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "David Gilbert -1.5 frames",
+    "probability": 0.314,
+    "fair_decimal": 3.185,
+    "fair_american": 218,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Cheung Ka Wai +1.5 frames",
+    "probability": 0.686,
+    "fair_decimal": 1.458,
+    "fair_american": -218,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Match goes to 6.5+ frames (over 6.5)",
+    "probability": 0.6237,
+    "fair_decimal": 1.603,
+    "fair_american": -166,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 6.5 frames",
+    "probability": 0.3763,
+    "fair_decimal": 2.657,
+    "fair_american": 166,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Cheung Ka Wai win match",
+   "probability": 0.5352,
+   "fair_decimal": 1.868,
+   "fair_american": -115,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Cheung Ka Wai +1.5 frames",
+   "probability": 0.686,
+   "fair_decimal": 1.458,
+   "fair_american": -218,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236",
+  "official_source": "World Snooker Tour official match centre (wst.tv)",
+  "data_urls": [
+   "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578"
+  ]
+ },
+ {
+  "id": "wst-r3-55",
+  "sport": "snooker",
+  "competition": "BetVictor Northern Ireland Open 2026 (Belfast, 18-25 Oct) - Round 3 (last 16), best of 7 frames (first to 4)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22 15:00 (session time per WST)",
+  "home": "Jordan Brown",
+  "away": "Scott Donaldson",
+  "venue": "Belfast (Titanic Exhibition Centre per WST tournament page area)",
+  "home_form": "this event 8-5 frames (4-2 v Mark Allen; 4-3 v Michael Holt)",
+  "away_form": "this event 8-1 frames (4-0 v Wu Yize; 4-1 v Noppon Saengkham)",
+  "winner_market": [
+   {
+    "selection": "Jordan Brown win match",
+    "probability": 0.3567,
+    "fair_decimal": 2.803,
+    "fair_american": 180,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Scott Donaldson win match",
+    "probability": 0.6433,
+    "fair_decimal": 1.555,
+    "fair_american": -180,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Jordan Brown -1.5 frames",
+    "probability": 0.2284,
+    "fair_decimal": 4.378,
+    "fair_american": 338,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Scott Donaldson +1.5 frames",
+    "probability": 0.7716,
+    "fair_decimal": 1.296,
+    "fair_american": -338,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Match goes to 6.5+ frames (over 6.5)",
+    "probability": 0.603,
+    "fair_decimal": 1.658,
+    "fair_american": -152,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 6.5 frames",
+    "probability": 0.397,
+    "fair_decimal": 2.519,
+    "fair_american": 152,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Scott Donaldson win match",
+   "probability": 0.6433,
+   "fair_decimal": 1.555,
+   "fair_american": -180,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Scott Donaldson +1.5 frames",
+   "probability": 0.7716,
+   "fair_decimal": 1.296,
+   "fair_american": -338,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea",
+  "official_source": "World Snooker Tour official match centre (wst.tv)",
+  "data_urls": [
+   "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578"
+  ]
+ },
+ {
+  "id": "wst-r3-56",
+  "sport": "snooker",
+  "competition": "BetVictor Northern Ireland Open 2026 (Belfast, 18-25 Oct) - Round 3 (last 16), best of 7 frames (first to 4)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22 15:00 (session time per WST)",
+  "home": "Jak Jones",
+  "away": "Daniel Wells",
+  "venue": "Belfast (Titanic Exhibition Centre per WST tournament page area)",
+  "home_form": "this event 8-3 frames (4-1 v Tom Ford; 4-2 v John Higgins)",
+  "away_form": "this event 8-5 frames (4-2 v Barry Hawkins; 4-3 v Ryan Day)",
+  "winner_market": [
+   {
+    "selection": "Jak Jones win match",
+    "probability": 0.5681,
+    "fair_decimal": 1.76,
+    "fair_american": -132,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Daniel Wells win match",
+    "probability": 0.4319,
+    "fair_decimal": 2.315,
+    "fair_american": 132,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Jak Jones -1.5 frames",
+    "probability": 0.404,
+    "fair_decimal": 2.475,
+    "fair_american": 148,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Daniel Wells +1.5 frames",
+    "probability": 0.596,
+    "fair_decimal": 1.678,
+    "fair_american": -148,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Match goes to 6.5+ frames (over 6.5)",
+    "probability": 0.6201,
+    "fair_decimal": 1.613,
+    "fair_american": -163,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Under 6.5 frames",
+    "probability": 0.3799,
+    "fair_decimal": 2.632,
+    "fair_american": 163,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Jak Jones win match",
+   "probability": 0.5681,
+   "fair_decimal": 1.76,
+   "fair_american": -132,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Match goes to 6.5+ frames (over 6.5)",
+   "probability": 0.6201,
+   "fair_decimal": 1.613,
+   "fair_american": -163,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900",
+  "official_source": "World Snooker Tour official match centre (wst.tv)",
+  "data_urls": [
+   "https://www.wst.tv/matches/b4533c9e-8d2c-4ecc-8dfd-c6b284705578"
+  ]
+ },
+ {
+  "id": "atp-9410-r16-3",
+  "sport": "tennis",
+  "competition": "ATP 250 Almaty 2026 (tournament 9410), Round of 16",
+  "date": "2026-10-22",
+  "start_utc": "Center Court, follows Machac v Khachanov",
+  "home": "Daniil Medvedev",
+  "away": "Sho Shimabukuro",
+  "venue": "Almaty Arena, Center Court (per ATP daily schedule)",
+  "home_form": "(1)",
+  "away_form": "unseeded (modelled as 33 - beyond the 32 seeds)",
+  "seed_model": "set-win p(Daniil Medvedev) = 0.872 from official draw seeds, k=0.55; PU-14 unseeded proxy",
+  "winner_market": [
+   {
+    "selection": "Daniil Medvedev win match",
+    "probability": 0.9554,
+    "fair_decimal": 1.047,
+    "fair_american": -2140,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Sho Shimabukuro win match",
+    "probability": 0.0446,
+    "fair_decimal": 22.404,
+    "fair_american": 2140,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Daniil Medvedev -1.5 sets",
+    "probability": 0.7612,
+    "fair_decimal": 1.314,
+    "fair_american": -319,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Sho Shimabukuro +1.5 sets",
+    "probability": 0.2388,
+    "fair_decimal": 4.188,
+    "fair_american": 319,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 2.5 sets",
+    "probability": 0.2225,
+    "fair_decimal": 4.494,
+    "fair_american": 349,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 2.5 sets",
+    "probability": 0.7775,
+    "fair_decimal": 1.286,
+    "fair_american": -349,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Daniil Medvedev win match",
+   "probability": 0.9554,
+   "fair_decimal": 1.047,
+   "fair_american": -2140,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Daniil Medvedev win match",
+   "probability": 0.9554,
+   "fair_decimal": 1.047,
+   "fair_american": -2140,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+  "official_source": "ATP Tour official scores (atptour.com)",
+  "data_urls": [
+   "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "https://www.atptour.com/en/scores/current"
+  ]
+ },
+ {
+  "id": "atp-9410-r16-4",
+  "sport": "tennis",
+  "competition": "ATP 250 Almaty 2026 (tournament 9410), Round of 16",
+  "date": "2026-10-22",
+  "start_utc": "Center Court, Not Before 19:30 local (14:30 UTC)",
+  "home": "Alexander Bublik",
+  "away": "Fabian Marozsan",
+  "venue": "Almaty Arena, Center Court (per ATP daily schedule)",
+  "home_form": "(3)",
+  "away_form": "unseeded (modelled as 33 - beyond the 32 seeds)",
+  "seed_model": "set-win p(Alexander Bublik) = 0.789 from official draw seeds, k=0.55; PU-14 unseeded proxy",
+  "winner_market": [
+   {
+    "selection": "Alexander Bublik win match",
+    "probability": 0.8852,
+    "fair_decimal": 1.13,
+    "fair_american": -771,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Fabian Marozsan win match",
+    "probability": 0.1148,
+    "fair_decimal": 8.712,
+    "fair_american": 771,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Alexander Bublik -1.5 sets",
+    "probability": 0.6225,
+    "fair_decimal": 1.606,
+    "fair_american": -165,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Fabian Marozsan +1.5 sets",
+    "probability": 0.3775,
+    "fair_decimal": 2.649,
+    "fair_american": 165,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": [
+   {
+    "selection": "Over 2.5 sets",
+    "probability": 0.333,
+    "fair_decimal": 3.003,
+    "fair_american": 200,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Under 2.5 sets",
+    "probability": 0.667,
+    "fair_decimal": 1.499,
+    "fair_american": -200,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "pick": {
+   "selection": "Alexander Bublik win match",
+   "probability": 0.8852,
+   "fair_decimal": 1.13,
+   "fair_american": -771,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Alexander Bublik win match",
+   "probability": 0.8852,
+   "fair_decimal": 1.13,
+   "fair_american": -771,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+  "official_source": "ATP Tour official scores (atptour.com)",
+  "data_urls": [
+   "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "https://www.atptour.com/en/scores/current"
+  ]
+ },
+ {
+  "id": "prod2-j8-12068",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T19:00:00Z",
+  "home": "US Montauban",
+  "away": "Oyonnax Rugby",
+  "venue": "jeudi 22 octobre 21h00 local, per LNR",
+  "home_form": "8e of 16 (official LNR J8 fixture list)",
+  "away_form": "1e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(-6.0, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "US Montauban win match",
+    "probability": 0.3236,
+    "fair_decimal": 3.09,
+    "fair_american": 209,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Oyonnax Rugby win match",
+    "probability": 0.6764,
+    "fair_decimal": 1.478,
+    "fair_american": -209,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Oyonnax Rugby -5.5 (handicap)",
+    "probability": 0.5138,
+    "fair_decimal": 1.946,
+    "fair_american": -106,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "US Montauban +5.5 (handicap)",
+    "probability": 0.4862,
+    "fair_decimal": 2.057,
+    "fair_american": 106,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "Oyonnax Rugby win match",
+   "probability": 0.6764,
+   "fair_decimal": 1.478,
+   "fair_american": -209,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Oyonnax Rugby win match",
+   "probability": 0.6764,
+   "fair_decimal": 1.478,
+   "fair_american": -209,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "prod2-j8-12069",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T17:00:00Z",
+  "home": "RC Narbonnais",
+  "away": "CA Brive",
+  "venue": "vendredi 23 octobre 19h00 local, per LNR",
+  "home_form": "15e of 16 (official LNR J8 fixture list)",
+  "away_form": "4e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(-11.4, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "RC Narbonnais win match",
+    "probability": 0.1913,
+    "fair_decimal": 5.227,
+    "fair_american": 423,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "CA Brive win match",
+    "probability": 0.8087,
+    "fair_decimal": 1.237,
+    "fair_american": -423,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "CA Brive -11.5 (handicap)",
+    "probability": 0.4954,
+    "fair_decimal": 2.019,
+    "fair_american": 102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "RC Narbonnais +11.5 (handicap)",
+    "probability": 0.5046,
+    "fair_decimal": 1.982,
+    "fair_american": -102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "CA Brive win match",
+   "probability": 0.8087,
+   "fair_decimal": 1.237,
+   "fair_american": -423,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "CA Brive win match",
+   "probability": 0.8087,
+   "fair_decimal": 1.237,
+   "fair_american": -423,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "prod2-j8-12063",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T17:30:00Z",
+  "home": "SU Agen",
+  "away": "Nissa Rugby (Nice)",
+  "venue": "vendredi 23 octobre 19h30 local, per LNR",
+  "home_form": "10e of 16 (official LNR J8 fixture list)",
+  "away_form": "13e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(+7.6, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "SU Agen win match",
+    "probability": 0.7193,
+    "fair_decimal": 1.39,
+    "fair_american": -256,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Nissa Rugby (Nice) win match",
+    "probability": 0.2807,
+    "fair_decimal": 3.563,
+    "fair_american": 256,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "SU Agen -7.5 (handicap)",
+    "probability": 0.5015,
+    "fair_decimal": 1.994,
+    "fair_american": -101,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Nissa Rugby (Nice) +7.5 (handicap)",
+    "probability": 0.4985,
+    "fair_decimal": 2.006,
+    "fair_american": 101,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "SU Agen win match",
+   "probability": 0.7193,
+   "fair_decimal": 1.39,
+   "fair_american": -256,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "SU Agen win match",
+   "probability": 0.7193,
+   "fair_decimal": 1.39,
+   "fair_american": -256,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "prod2-j8-12065",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T17:30:00Z",
+  "home": "Soyaux-Angoulême XV",
+  "away": "US Dax",
+  "venue": "vendredi 23 octobre 19h30 local, per LNR",
+  "home_form": "7e of 16 (official LNR J8 fixture list)",
+  "away_form": "6e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(+2.1, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "Soyaux-Angoulême XV win match",
+    "probability": 0.5657,
+    "fair_decimal": 1.768,
+    "fair_american": -130,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "US Dax win match",
+    "probability": 0.4343,
+    "fair_decimal": 2.302,
+    "fair_american": 130,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Soyaux-Angoulême XV -2.5 (handicap)",
+    "probability": 0.4893,
+    "fair_decimal": 2.044,
+    "fair_american": 104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "US Dax +2.5 (handicap)",
+    "probability": 0.5107,
+    "fair_decimal": 1.958,
+    "fair_american": -104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "Soyaux-Angoulême XV win match",
+   "probability": 0.5657,
+   "fair_decimal": 1.768,
+   "fair_american": -130,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Soyaux-Angoulême XV win match",
+   "probability": 0.5657,
+   "fair_decimal": 1.768,
+   "fair_american": -130,
+   "confidence": "low",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "prod2-j8-12066",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T17:30:00Z",
+  "home": "Stade Aurillacois (Aurillac)",
+  "away": "USON Nevers",
+  "venue": "vendredi 23 octobre 19h30 local, per LNR",
+  "home_form": "9e of 16 (official LNR J8 fixture list)",
+  "away_form": "16e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(+13.0, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "Stade Aurillacois (Aurillac) win match",
+    "probability": 0.8404,
+    "fair_decimal": 1.19,
+    "fair_american": -527,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "USON Nevers win match",
+    "probability": 0.1596,
+    "fair_decimal": 6.266,
+    "fair_american": 527,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Stade Aurillacois (Aurillac) -12.5 (handicap)",
+    "probability": 0.5138,
+    "fair_decimal": 1.946,
+    "fair_american": -106,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "USON Nevers +12.5 (handicap)",
+    "probability": 0.4862,
+    "fair_decimal": 2.057,
+    "fair_american": 106,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "Stade Aurillacois (Aurillac) win match",
+   "probability": 0.8404,
+   "fair_decimal": 1.19,
+   "fair_american": -527,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Stade Aurillacois (Aurillac) win match",
+   "probability": 0.8404,
+   "fair_decimal": 1.19,
+   "fair_american": -527,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "prod2-j8-12070",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T17:30:00Z",
+  "home": "Valence Romans",
+  "away": "Colomiers Rugby",
+  "venue": "vendredi 23 octobre 19h30 local, per LNR",
+  "home_form": "11e of 16 (official LNR J8 fixture list)",
+  "away_form": "12e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(+4.8, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "Valence Romans win match",
+    "probability": 0.6455,
+    "fair_decimal": 1.549,
+    "fair_american": -182,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Colomiers Rugby win match",
+    "probability": 0.3545,
+    "fair_decimal": 2.821,
+    "fair_american": 182,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Valence Romans -4.5 (handicap)",
+    "probability": 0.5107,
+    "fair_decimal": 1.958,
+    "fair_american": -104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Colomiers Rugby +4.5 (handicap)",
+    "probability": 0.4893,
+    "fair_decimal": 2.044,
+    "fair_american": 104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "Valence Romans win match",
+   "probability": 0.6455,
+   "fair_decimal": 1.549,
+   "fair_american": -182,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Valence Romans win match",
+   "probability": 0.6455,
+   "fair_decimal": 1.549,
+   "fair_american": -182,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "prod2-j8-12064",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T19:00:00Z",
+  "home": "Provence Rugby",
+  "away": "AS Béziers Hérault",
+  "venue": "vendredi 23 octobre 21h00 local, per LNR",
+  "home_form": "2e of 16 (official LNR J8 fixture list)",
+  "away_form": "14e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(+19.7, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "Provence Rugby win match",
+    "probability": 0.9352,
+    "fair_decimal": 1.069,
+    "fair_american": -1442,
+    "confidence": "medium",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "AS Béziers Hérault win match",
+    "probability": 0.0648,
+    "fair_decimal": 15.423,
+    "fair_american": 1442,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "Provence Rugby -19.5 (handicap)",
+    "probability": 0.5061,
+    "fair_decimal": 1.976,
+    "fair_american": -102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "AS Béziers Hérault +19.5 (handicap)",
+    "probability": 0.4939,
+    "fair_decimal": 2.025,
+    "fair_american": 102,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "Provence Rugby win match",
+   "probability": 0.9352,
+   "fair_decimal": 1.069,
+   "fair_american": -1442,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "Provence Rugby win match",
+   "probability": 0.9352,
+   "fair_decimal": 1.069,
+   "fair_american": -1442,
+   "confidence": "medium",
+   "in_band": false,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "prod2-j8-12067",
+  "sport": "rugby-union",
+  "competition": "Pro D2 2026-2027, Journée 8 (France)",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T19:00:00Z",
+  "home": "FC Grenoble Rugby",
+  "away": "Biarritz Olympique PB",
+  "venue": "vendredi 23 octobre 21h00 local, per LNR",
+  "home_form": "3e of 16 (official LNR J8 fixture list)",
+  "away_form": "5e of 16",
+  "expected": {
+   "margin_model": "home margin ~ N(+6.2, 13.0)"
+  },
+  "winner_market": [
+   {
+    "selection": "FC Grenoble Rugby win match",
+    "probability": 0.6833,
+    "fair_decimal": 1.464,
+    "fair_american": -216,
+    "confidence": "medium",
+    "in_band": true,
+    "note": ""
+   },
+   {
+    "selection": "Biarritz Olympique PB win match",
+    "probability": 0.3167,
+    "fair_decimal": 3.157,
+    "fair_american": 216,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "handicap_market": [
+   {
+    "selection": "FC Grenoble Rugby -6.5 (handicap)",
+    "probability": 0.4908,
+    "fair_decimal": 2.038,
+    "fair_american": 104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   },
+   {
+    "selection": "Biarritz Olympique PB +6.5 (handicap)",
+    "probability": 0.5092,
+    "fair_decimal": 1.964,
+    "fair_american": -104,
+    "confidence": "low",
+    "in_band": false,
+    "note": ""
+   }
+  ],
+  "total_market": "not originated - LNR J8 page lists positions only, no verified points data (blank, PU-20)",
+  "pick": {
+   "selection": "FC Grenoble Rugby win match",
+   "probability": 0.6833,
+   "fair_decimal": 1.464,
+   "fair_american": -216,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "best_confident_market": {
+   "selection": "FC Grenoble Rugby win match",
+   "probability": 0.6833,
+   "fair_decimal": 1.464,
+   "fair_american": -216,
+   "confidence": "medium",
+   "in_band": true,
+   "note": ""
+  },
+  "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz",
+  "official_source": "LNR official Pro D2 site (prod2.lnr.fr) calendrier et résultats, journée 8",
+  "data_urls": [
+   "https://prod2.lnr.fr/calendrier-et-resultats"
+  ]
+ },
+ {
+  "id": "f1-usgp-2026",
+  "sport": "motor-racing",
+  "competition": "FIA Formula 1 United States Grand Prix 2026 (Round 18), Austin, 23-25 Oct; race Sunday 25 Oct",
+  "date": "2026-10-25",
+  "start_utc": "2026-10-25 (race day; weekend 23-25 Oct)",
+  "home": "Field (Austin, COTA)",
+  "away": "-",
+  "venue": "Circuit of The Americas, Austin",
+  "home_form": "R18 of the 2026 FIA F1 season; previous round R17 Singapore (09-11 Oct)",
+  "winner_market": [
+   {
+    "selection": "Kimi Antonelli wins the United States GP",
+    "probability": 0.3571,
+    "fair_decimal": 2.8,
+    "fair_american": 180,
+    "confidence": "low",
+    "in_band": false,
+    "note": "8W 3xP2 2xP3 in R1-R16"
+   },
+   {
+    "selection": "George Russell wins the United States GP",
+    "probability": 0.1875,
+    "fair_decimal": 5.333,
+    "fair_american": 433,
+    "confidence": "low",
+    "in_band": false,
+    "note": "3W 4xP2 1xP3 in R1-R16"
+   },
+   {
+    "selection": "Max Verstappen wins the United States GP",
+    "probability": 0.1339,
+    "fair_decimal": 7.467,
+    "fair_american": 647,
+    "confidence": "low",
+    "in_band": false,
+    "note": "1W 4xP2 3xP3 in R1-R16"
+   },
+   {
+    "selection": "Lando Norris wins the United States GP",
+    "probability": 0.0982,
+    "fair_decimal": 10.182,
+    "fair_american": 918,
+    "confidence": "low",
+    "in_band": false,
+    "note": "2W 1xP2 1xP3 in R1-R16"
+   },
+   {
+    "selection": "Lewis Hamilton wins the United States GP",
+    "probability": 0.0982,
+    "fair_decimal": 10.182,
+    "fair_american": 918,
+    "confidence": "low",
+    "in_band": false,
+    "note": "1W 2xP2 3xP3 in R1-R16"
+   },
+   {
+    "selection": "Charles Leclerc wins the United States GP",
+    "probability": 0.0714,
+    "fair_decimal": 14.0,
+    "fair_american": 1300,
+    "confidence": "low",
+    "in_band": false,
+    "note": "1W 1xP2 2xP3 in R1-R16"
+   },
+   {
+    "selection": "Oscar Piastri wins the United States GP",
+    "probability": 0.0268,
+    "fair_decimal": 37.333,
+    "fair_american": 3633,
+    "confidence": "low",
+    "in_band": false,
+    "note": "0W 1xP2 1xP3 in R1-R16"
+   },
+   {
+    "selection": "Isack Hadjar wins the United States GP",
+    "probability": 0.0179,
+    "fair_decimal": 56.0,
+    "fair_american": 5500,
+    "confidence": "low",
+    "in_band": false,
+    "note": "0W 0xP2 2xP3 in R1-R16"
+   },
+   {
+    "selection": "Any other driver wins",
+    "probability": 0.0089,
+    "fair_decimal": 112.0,
+    "fair_american": 11100,
+    "confidence": "low",
+    "in_band": false,
+    "note": "remainder incl. unverified R7 third place - PU-06"
+   }
+  ],
+  "handicap_market": "n/a (outright market)",
+  "total_market": "n/a",
+  "pick": {
+   "selection": "Kimi Antonelli wins the United States GP",
+   "probability": 0.3571,
+   "fair_decimal": 2.8,
+   "fair_american": 180,
+   "confidence": "low",
+   "in_band": false,
+   "note": "8W 3xP2 2xP3 in R1-R16"
+  },
+  "best_confident_market": {
+   "selection": "Kimi Antonelli wins the United States GP",
+   "probability": 0.3571,
+   "fair_decimal": 2.8,
+   "fair_american": 180,
+   "confidence": "low",
+   "in_band": false,
+   "note": "8W 3xP2 2xP3 in R1-R16"
+  },
+  "official_url": "https://www.formula1.com/en/racing/2026",
+  "official_source": "FIA Formula One official calendar with official per-round results (formula1.com)",
+  "data_urls": [
+   "https://www.formula1.com/en/racing/2026",
+   "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913"
+  ]
+ },
+ {
+  "id": "nba-0022600006",
+  "sport": "basketball",
+  "competition": "NBA Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-22T23:00:00Z",
+  "home": "Philadelphia 76ers",
+  "away": "Cleveland Cavaliers",
+  "venue": "Xfinity Mobile Arena, Philadelphia",
+  "home_form": "1-0",
+  "away_form": "0-0",
+  "line_status": "blank - waiting for official 2026-27 data (PU-01)",
+  "pick": null,
+  "winner_market": null,
+  "handicap_market": null,
+  "total_market": null,
+  "official_url": "https://www.nba.com/game/cle-vs-phi-0022600006",
+  "official_source": "NBA.com official game pages and games calendar",
+  "data_urls": [
+   "https://www.nba.com/games?date=2026-10-22"
+  ]
+ },
+ {
+  "id": "nba-0022600007",
+  "sport": "basketball",
+  "competition": "NBA Regular Season 2026-27",
+  "date": "2026-10-22",
+  "start_utc": "2026-10-23T01:30:00Z",
+  "home": "Oklahoma City Thunder",
+  "away": "Denver Nuggets",
+  "venue": "Paycom Center, Oklahoma City",
+  "home_form": "1-0",
+  "away_form": "0-0",
+  "line_status": "blank - waiting for official 2026-27 data (PU-01)",
+  "pick": null,
+  "winner_market": null,
+  "handicap_market": null,
+  "total_market": null,
+  "official_url": "https://www.nba.com/game/den-vs-okc-0022600007",
+  "official_source": "NBA.com official game pages and games calendar",
+  "data_urls": [
+   "https://www.nba.com/games?date=2026-10-22"
+  ]
+ },
+ {
+  "id": "icc-nzind-t20i-2",
+  "sport": "cricket",
+  "competition": "New Zealand v India T20I series 2026 (5 matches)",
+  "date": "2026-10-24",
+  "start_utc": "2026-10-24",
+  "home": "New Zealand",
+  "away": "India",
+  "venue": "Christchurch (Hagley Oval per series venue note for matches 1-2)",
+  "line_status": "blank - team-strength inputs not captured from official source (PU-03)",
+  "pick": null,
+  "winner_market": null,
+  "handicap_market": null,
+  "total_market": null,
+  "official_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
+  "official_source": "ICC official site (icc-cricket.com) match page + series news",
+  "data_urls": [
+   "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
+   "https://icc-cricket.com/news/iyer-backs-india-s-adaptability-ahead-of-new-zealand-t20is"
+  ]
+ }
+]

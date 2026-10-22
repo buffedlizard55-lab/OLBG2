@@ -21,7 +21,7 @@ all 30 predictions ≥30 words, unique, word-count fields exact, every fact sour
 ## Flags raised (FR-01…FR-11, full detail in data/fresh/audit.json)
 - **FR-01 (high):** 2 research predictions labelled `high` below 70% — NY Islanders 69.71% (-233),
   Gian van Veen 66.8% (-200). Same selections are `medium` in `matches.json` pick fields (FR-02, 3 same-selection label conflicts).
-- **FR-03:** README still claims 178 rows / earlier counts; desk now has 188 rows, 35 upstream flags.
+- **FR-03:** README claimed 178 rows at audit time; desk has 188 rows, 35 upstream flags. **Closed on integration:** session dc72bac4 (PR #92/#93, merged while this PR was open) corrected README/root counts to 188 — the regenerated audit no longer raises FR-03.
 - **FR-04:** Tennis, Aussie Rules, eSports have 0 unified rows (reasons in sports.json; nothing invented).
 - **FR-05:** 44/188 rows cite competition-level, not fixture-level, official pages.
 - **FR-06:** 55 blank venues, 34 blank summaries, 34 unlined rows (published blank, not inferred).

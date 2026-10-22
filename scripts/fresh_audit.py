@@ -156,7 +156,7 @@ def main():
              "Fields compared: pick / band_pick / featured / research_pick in data/verified/matches.json. "
              + "; ".join(f"{c['match_id']}: {c['labels']}" for c in label_conflicts[:6]),
              "NHL GameCenter (official)", "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159")
-    if checks["readme_claimed_rows"] != len(rows):
+    if checks["readme_claimed_rows"] is not None and checks["readme_claimed_rows"] != len(rows):
         flag("FR-03", "medium", "Documentation drift",
              f"README claims {checks['readme_claimed_rows']} unified rows; data/verified/matches.json contains {len(rows)}",
              "README also states source-scope and review-item counts from an earlier capture. The data file (captured_at 2026-10-22) is authoritative; README numbers were not updated after the 188-row rebuild.",

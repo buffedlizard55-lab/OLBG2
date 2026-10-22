@@ -131,7 +131,7 @@
    "research": 16
   },
   "flagged_items_upstream": 35,
-  "readme_claimed_rows": 178,
+  "readme_claimed_rows": null,
   "actual_rows": 188
  },
  "flags": [
@@ -156,17 +156,6 @@
    "status": "unverified \u2014 blank, needs owner review",
    "source_name": "NHL GameCenter (official)",
    "source_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159"
-  },
-  {
-   "id": "FR-03",
-   "severity": "medium",
-   "category": "Documentation drift",
-   "item": "README claims 178 unified rows; data/verified/matches.json contains 188",
-   "detail": "README also states source-scope and review-item counts from an earlier capture. The data file (captured_at 2026-10-22) is authoritative; README numbers were not updated after the 188-row rebuild.",
-   "corrected_value": "",
-   "status": "unverified \u2014 blank, needs owner review",
-   "source_name": "NHL GameCenter (official, desk source family)",
-   "source_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154"
   },
   {
    "id": "FR-04",

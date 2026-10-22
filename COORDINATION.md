@@ -1206,3 +1206,37 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 | Live production URLs verified | `https://buffedlizard55-lab.github.io/OLBG2/`, `https://buffedlizard55-lab.github.io/OLBG2/verified/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/predictions.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/survey/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/integration.html` |
 
 
+
+---
+
+## Session `arena/1bb45081-olbg2` — odds-window (-250..+10000) compliance remediation (2026-10-22)
+
+**Branch:** `arena/1bb45081-olbg2` · **Claim committed:** 2026-10-22 (UTC) · **Role:** integration session
+(all prior session tasks are merged/done; no open unclaimed work item conflicts with this scope).
+
+### Claim (task board)
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| W1 | Audit every high-confidence pick in every layer against the brief's American-odds window [-250, +10000] and the 70% probability floor | in progress | `arena/1bb45081-olbg2` | `research/odds-window-audit-1bb45081.md`, all `data/**` pick/prediction files (regrades only) |
+| W2 | Implement the window gate in all model scripts; regrade out-of-window chalk to medium; archive their narratives with reason (no deletion) | in progress | `arena/1bb45081-olbg2` | `scripts/verified_model.py`, `scripts/model.py`, `scripts/live_model.py`, `scripts/survey_lines.py`, `scripts/survey_analyse.py`, generated `data/**` |
+| W3 | Fresh 2026-10-22 official-source verification and four new bespoke high-confidence narratives for the window-compliant picks | in progress | `arena/1bb45081-olbg2` | `scripts/verified_model.py`, `data/verified/predictions.json`, `data/verified/archived_predictions.json`, EHF/NHL/LNR/URC sources fetched this session |
+| W4 | Rebuild all five site layers, add compliance tests, update flags/methodology/README, integrate, PR, merge, verify Pages | pending | `arena/1bb45081-olbg2` | generated HTML across all layers, `tests/**`, `METHODOLOGY.md`, `README.md`, `COORDINATION.md` |
+
+**Scope rule:** probabilities and originated prices are not changed — only confidence labels and which narratives
+are published as active high-confidence write-ups. Every removed narrative is retained in an archived file with
+the reason. Nothing is deleted. All other sessions' branches are already merged.
+
+### Initial audit finding (2026-10-22, before any edit)
+
+- `/verified` layer: all **20/20** high-confidence picks price shorter than **-250** (range -256 to -5000 American);
+  the brief restricts high-confidence picks to [-250, +10000]. Four originated picks fall in the compliant band
+  (model probability >= 70% with fair American odds in-window): `nhl-2026020162` Minnesota Wild (-244),
+  `prod2-12066` Stade Aurillacois (-238), `urc-292609` Connacht Rugby (-238),
+  `ehfcl-202711020101001` One Veszprém HC (-244).
+- Root dashboard: 9 high picks — 5 handball/NYI chalk picks breach -250; Buffalo/Boston sit below the 70% floor;
+  Minnesota is exactly -250 but below the 70% floor in that layer's model. Zero compliant high picks under the
+  uniform rule.
+- `/live` layer: 4 URC high picks, all -270 or shorter (p 0.76-0.86) — zero compliant.
+- `/survey` layer: 5 high narratives (Toulouse, Bulls, Stormers, Littler, Aspinall) — all chalk, to be regraded/
+  archived through the survey pipeline with the same rule.

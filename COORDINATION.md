@@ -2275,3 +2275,18 @@ reported on `/reconcile/flagged.html` as unverified, not silently corrected (the
    `python scripts/reconcile_audit.py && python scripts/reconcile_build.py && python scripts/reconcile_verify.py`
    to the validation job, and add `data/reconcile reconcile` to the `git diff --exit-code` drift gate. Not edited here.
 3. **`/slate/` owner**: SC-04 above. The tennis rows cite an order of play that does not contain the published pairings.
+
+---
+
+## Session `arena/aa8e25ef-olbg2` — closing note (2026-10-22 12:20 UTC)
+
+**Branch:** `arena/aa8e25ef-olbg2` · **Final state:** PR #95 merged (d273833, 2026-10-22 12:14:38Z) + follow-up PR #98 merged (fa296cf, 2026-10-22 12:19:01Z). Both Validate checks passed; fa296cf Pages build **built** (130531...), live at https://buffedlizard55-lab.github.io/OLBG2/ and https://buffedlizard55-lab.github.io/OLBG2/final/index.html. Subsequent main commits (c02faa9 errored, d2a1048 built) kept the site live.
+
+**Deliverables on `main`:**
+- `research/final-verification-aa8e25ef.md` — 382-row consolidated + 188-row verified desk audit, 19 picks in -250…+10000, 30-word+ predictions, source links, flagged A-03/RPA-02/RPA-03.
+- Updated `COORDINATION.md` with A1–A6 ledger and publication records (PR #95 + #98).
+
+**Verification at close:** `python3 -m unittest discover -s tests -q` → 185 tests OK; `integration_audit` 0 local link errors; `portal_verify` 707/707 rows linked; `hub_verify` 524/524 rows linked; `reconcile_verify` 1807 rows, 0 broken links (on d2a1048). All generated pages deterministic (`git diff --exit-code` 0 on CI-validated layers). No new fixture/price/player hallucinated; blanks left as “—” with reason.
+
+**Handoff:** No further edits from this session. Flagged review items remain on `final/flagged.html`, `flagged.html`, `review/reproducibility.html`, `publication.html`, `reconcile/flagged.html`. Parallel sessions' scopes (fresh, reconcile, dc72bac4) were preserved append-only.
+

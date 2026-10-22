@@ -1,0 +1,698 @@
+{
+  "matches": [
+    {
+      "id": "nhl-2026020166",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Chicago Blackhawks",
+      "away_team": "Montr\u00e9al Canadiens",
+      "date": "2026-10-24T00:00:00Z",
+      "venue": "United Center",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_BOS_Bruins/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 2.22,
+            "american": "+122",
+            "prob": 0.4502
+          },
+          "away": {
+            "decimal": 1.82,
+            "american": "-122",
+            "prob": 0.5497
+          }
+        }
+      },
+      "confidence": "low",
+      "pick": "Montr\u00e9al Canadiens",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "nhl-2026020167",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Colorado Avalanche",
+      "away_team": "Tampa Bay Lightning",
+      "date": "2026-10-24T01:00:00Z",
+      "venue": "Ball Arena",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_OTT_Senators/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 1.92,
+            "american": "-109",
+            "prob": 0.5204
+          },
+          "away": {
+            "decimal": 2.09,
+            "american": "+109",
+            "prob": 0.4796
+          }
+        }
+      },
+      "confidence": "low",
+      "pick": "Colorado Avalanche",
+      "fair_odds": {
+        "decimal": 1.92,
+        "american": "-109"
+      }
+    },
+    {
+      "id": "nhl-nsn-bos",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Boston Bruins",
+      "away_team": "Nashville Predators",
+      "date": "2026-10-23T00:07:00Z",
+      "venue": "TD Garden",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_BOS_Bruins/13",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Boston Bruins",
+          "prob": 0.88,
+          "decimal": 1.14,
+          "american": "-714"
+        }
+      },
+      "confidence": "high",
+      "pick": "Boston Bruins",
+      "fair_odds": {
+        "decimal": 1.14,
+        "american": "-714"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "nhl-sjs-ott",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Ottawa Senators",
+      "away_team": "San Jose Sharks",
+      "date": "2026-10-23T00:07:00Z",
+      "venue": "Canadian Tire Centre",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_OTT_Senators/13",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Ottawa Senators",
+          "prob": 0.78,
+          "decimal": 1.28,
+          "american": "-357"
+        }
+      },
+      "confidence": "high",
+      "pick": "Ottawa Senators",
+      "fair_odds": {
+        "decimal": 1.28,
+        "american": "-357"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "nhl-fla-pit",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Pittsburgh Penguins",
+      "away_team": "Florida Panthers",
+      "date": "2026-10-23T00:07:00Z",
+      "venue": "PPG Paints Arena",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/FLA_Panthers_@_PIT_Penguins/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 2.28,
+            "american": "+128",
+            "prob": 0.4391
+          },
+          "away": {
+            "decimal": 1.78,
+            "american": "-128",
+            "prob": 0.5609
+          }
+        }
+      },
+      "confidence": "medium",
+      "pick": "Florida Panthers",
+      "fair_odds": {
+        "decimal": 1.78,
+        "american": "-128"
+      }
+    },
+    {
+      "id": "nhl-vgk-stl",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "St. Louis Blues",
+      "away_team": "Vegas Golden Knights",
+      "date": "2026-10-23T01:07:00Z",
+      "venue": "Enterprise Center",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_STL_Blues/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 2.22,
+            "american": "+122",
+            "prob": 0.4501
+          },
+          "away": {
+            "decimal": 1.82,
+            "american": "-122",
+            "prob": 0.5499
+          }
+        }
+      },
+      "confidence": "low",
+      "pick": "Vegas Golden Knights",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "nhl-car-edm",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Edmonton Oilers",
+      "away_team": "Carolina Hurricanes",
+      "date": "2026-10-23T02:07:00Z",
+      "venue": "Rogers Place",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/CAR_Hurricanes_@_EDM_Oilers/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 1.92,
+            "american": "-109",
+            "prob": 0.5206
+          },
+          "away": {
+            "decimal": 2.09,
+            "american": "+109",
+            "prob": 0.4794
+          }
+        }
+      },
+      "confidence": "low",
+      "pick": "Edmonton Oilers",
+      "fair_odds": {
+        "decimal": 1.92,
+        "american": "-109"
+      }
+    },
+    {
+      "id": "nhl-det-van",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Vancouver Canucks",
+      "away_team": "Detroit Red Wings",
+      "date": "2026-10-23T03:07:00Z",
+      "venue": "Rogers Arena",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_VAN_Canucks/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 2.25,
+            "american": "+125",
+            "prob": 0.444
+          },
+          "away": {
+            "decimal": 1.8,
+            "american": "-125",
+            "prob": 0.556
+          }
+        }
+      },
+      "confidence": "medium",
+      "pick": "Detroit Red Wings",
+      "fair_odds": {
+        "decimal": 1.8,
+        "american": "-125"
+      }
+    },
+    {
+      "id": "nba-cle-phi",
+      "sport": "basketball",
+      "competition": "NBA",
+      "home_team": "Philadelphia 76ers",
+      "away_team": "Cleveland Cavaliers",
+      "date": "2026-10-23T00:10:00Z",
+      "venue": "Wells Fargo Center",
+      "official_url": "https://www.nba.com/games?date=2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CLE_Cavaliers_@_PHI_76ers/4",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "Philadelphia 76ers",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "nba-den-okc",
+      "sport": "basketball",
+      "competition": "NBA",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "Denver Nuggets",
+      "date": "2026-10-23T02:40:00Z",
+      "venue": "Paycom Center",
+      "official_url": "https://www.nba.com/games?date=2026-10-22",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DEN_Nuggets_@_OKC_Thunder/4",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "Oklahoma City Thunder",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "nba-hou-sas",
+      "sport": "basketball",
+      "competition": "NBA",
+      "home_team": "San Antonio Spurs",
+      "away_team": "Houston Rockets",
+      "date": "2026-10-24T02:40:00Z",
+      "venue": "Frost Bank Center",
+      "official_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_SA_Spurs/4",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "San Antonio Spurs",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "nba-chi-mil",
+      "sport": "basketball",
+      "competition": "NBA",
+      "home_team": "Milwaukee Bucks",
+      "away_team": "Chicago Bulls",
+      "date": "2026-10-23T21:10:00Z",
+      "venue": "Fiserv Forum",
+      "official_url": "https://www.nba.com/games?date=2026-10-23",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_MIL_Bucks/4",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "Milwaukee Bucks",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "mlb-849805",
+      "sport": "baseball",
+      "competition": "MLB World Series",
+      "home_team": "Milwaukee Brewers",
+      "away_team": "Tampa Bay Rays",
+      "date": "2026-10-24T00:00:00Z",
+      "venue": "American Family Field",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-23",
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "Milwaukee Brewers",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "tennis-li-tagger",
+      "sport": "tennis",
+      "competition": "WTA",
+      "home_team": "Lilli Tagger",
+      "away_team": "Ann Li",
+      "date": "2026-10-22T22:30:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.wtatennis.com/scores",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ann_Li_vs_Lilli_Tagger/3",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "Lilli Tagger",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "tennis-gibson-krueger",
+      "sport": "tennis",
+      "competition": "WTA",
+      "home_team": "Ashlyn Krueger",
+      "away_team": "Talia Gibson",
+      "date": "2026-10-23T00:00:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.wtatennis.com/scores",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Talia_Gibson_vs_Ashlyn_Krueger/3",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "Ashlyn Krueger",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "tennis-tsitsipas-duckworth",
+      "sport": "tennis",
+      "competition": "ATP",
+      "home_team": "James Duckworth",
+      "away_team": "Stefanos Tsitsipas",
+      "date": "2026-10-23T04:00:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.atptour.com/scores",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stefanos_Tsitsipas_vs_James_Duckworth/3",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": "James Duckworth",
+      "fair_odds": {
+        "decimal": 1.82,
+        "american": "-122"
+      }
+    },
+    {
+      "id": "nhl-2026020168",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Philadelphia Flyers",
+      "away_team": "Anaheim Ducks",
+      "date": "2026-10-24T17:00:00Z",
+      "venue": "Xfinity Mobile Arena",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 2.16,
+            "american": "+116",
+            "prob": 0.4622
+          },
+          "away": {
+            "decimal": 1.86,
+            "american": "-116",
+            "prob": 0.5378
+          }
+        }
+      },
+      "confidence": "low",
+      "pick": "Anaheim Ducks",
+      "fair_odds": {
+        "decimal": 1.86,
+        "american": "-116"
+      }
+    },
+    {
+      "id": "nhl-2026020169",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "New Jersey Devils",
+      "away_team": "Los Angeles Kings",
+      "date": "2026-10-24T19:30:00Z",
+      "venue": "Prudential Center",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "status": "upcoming",
+      "markets": {
+        "moneyline": {
+          "home": {
+            "decimal": 1.71,
+            "american": "-141",
+            "prob": 0.5836
+          },
+          "away": {
+            "decimal": 2.4,
+            "american": "+140",
+            "prob": 0.4164
+          }
+        }
+      },
+      "confidence": "medium",
+      "pick": "New Jersey Devils",
+      "fair_odds": {
+        "decimal": 1.71,
+        "american": "-141"
+      }
+    },
+    {
+      "id": "nhl-2026020170",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Boston Bruins",
+      "away_team": "San Jose Sharks",
+      "date": "2026-10-24T23:00:00Z",
+      "venue": "TD Garden",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Boston Bruins",
+          "prob": 0.82,
+          "decimal": 1.22,
+          "american": "-455"
+        }
+      },
+      "confidence": "high",
+      "pick": "Boston Bruins",
+      "fair_odds": {
+        "decimal": 1.22,
+        "american": "-455"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "nhl-2026020171",
+      "sport": "ice-hockey",
+      "competition": "NHL",
+      "home_team": "Ottawa Senators",
+      "away_team": "New York Rangers",
+      "date": "2026-10-24T23:00:00Z",
+      "venue": "Canadian Tire Centre",
+      "official_url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "status": "upcoming",
+      "markets": {},
+      "confidence": "low",
+      "pick": null,
+      "fair_odds": null
+    },
+    {
+      "id": "darts-32332",
+      "sport": "darts",
+      "competition": "PDC European Championship",
+      "home_team": "Jermaine Wattimena",
+      "away_team": "Ryan Joyce",
+      "date": "2026-10-23T13:15:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.pdc.tv",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Ryan Joyce",
+          "prob": 0.82,
+          "decimal": 1.22,
+          "american": "-455"
+        }
+      },
+      "confidence": "high",
+      "pick": "Ryan Joyce",
+      "fair_odds": {
+        "decimal": 1.22,
+        "american": "-455"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "darts-32335",
+      "sport": "darts",
+      "competition": "PDC European Championship",
+      "home_team": "Niko Springer",
+      "away_team": "Jonny Clayton",
+      "date": "2026-10-23T14:45:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.pdc.tv",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Jonny Clayton",
+          "prob": 0.73,
+          "decimal": 1.37,
+          "american": "-270"
+        }
+      },
+      "confidence": "high",
+      "pick": "Jonny Clayton",
+      "fair_odds": {
+        "decimal": 1.37,
+        "american": "-270"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "darts-32336",
+      "sport": "darts",
+      "competition": "PDC European Championship",
+      "home_team": "Chris Dobey",
+      "away_team": "Josh Rock",
+      "date": "2026-10-23T16:45:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.pdc.tv",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Josh Rock",
+          "prob": 0.78,
+          "decimal": 1.28,
+          "american": "-357"
+        }
+      },
+      "confidence": "high",
+      "pick": "Josh Rock",
+      "fair_odds": {
+        "decimal": 1.28,
+        "american": "-357"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "rugby-aurillac-nevers",
+      "sport": "rugby-union",
+      "competition": "Pro D2",
+      "home_team": "Nevers",
+      "away_team": "Aurillac",
+      "date": "2026-10-23T13:30:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.lnr.fr",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Aurillac_v_Nevers/9",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Aurillac",
+          "prob": 0.75,
+          "decimal": 1.33,
+          "american": "-303"
+        }
+      },
+      "confidence": "high",
+      "pick": "Aurillac",
+      "fair_odds": {
+        "decimal": 1.33,
+        "american": "-303"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "rugby-connacht-zebre",
+      "sport": "rugby-union",
+      "competition": "URC",
+      "home_team": "Zebre Parma",
+      "away_team": "Connacht",
+      "date": "2026-10-23T14:45:00Z",
+      "venue": "TBD",
+      "official_url": "https://stats.unitedrugby.com",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Connacht_v_Zebre_Parma/9",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Connacht",
+          "prob": 0.71,
+          "decimal": 1.41,
+          "american": "-244"
+        }
+      },
+      "confidence": "high",
+      "pick": "Connacht",
+      "fair_odds": {
+        "decimal": 1.41,
+        "american": "-244"
+      }
+    },
+    {
+      "id": "rugby-grenoble-biarritz",
+      "sport": "rugby-union",
+      "competition": "Pro D2",
+      "home_team": "Biarritz",
+      "away_team": "Grenoble",
+      "date": "2026-10-23T15:00:00Z",
+      "venue": "TBD",
+      "official_url": "https://www.lnr.fr",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Grenoble_v_Biarritz/9",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Grenoble",
+          "prob": 0.8,
+          "decimal": 1.25,
+          "american": "-400"
+        }
+      },
+      "confidence": "high",
+      "pick": "Grenoble",
+      "fair_odds": {
+        "decimal": 1.25,
+        "american": "-400"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    },
+    {
+      "id": "rugby-leinster-munster",
+      "sport": "rugby-union",
+      "competition": "URC",
+      "home_team": "Munster",
+      "away_team": "Leinster",
+      "date": "2026-10-24T13:00:00Z",
+      "venue": "TBD",
+      "official_url": "https://stats.unitedrugby.com",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Leinster_v_Munster/9",
+      "status": "upcoming",
+      "markets": {
+        "consensus": {
+          "pick": "Leinster",
+          "prob": 0.95,
+          "decimal": 1.05,
+          "american": "-2000"
+        }
+      },
+      "confidence": "high",
+      "pick": "Leinster",
+      "fair_odds": {
+        "decimal": 1.05,
+        "american": "-2000"
+      },
+      "note": "High confidence but odds shorter than -250 (outside target band)"
+    }
+  ],
+  "generated_at": "2026-10-22T12:00:00Z"
+}

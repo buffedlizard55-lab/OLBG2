@@ -1,0 +1,60 @@
+{
+  "layer": "daily-audit",
+  "generated_by": "hand-authored 2026-10-22 from the official ATP draw and results captured in data/daily-audit/capture/; every numeric input below is a count read from those pages or a constant of this layer's model",
+  "constants": {
+    "seed_rating_base": 1500,
+    "seed_rating_step": 25,
+    "seed_rating_anchor": 9,
+    "unseeded_rating": 1480,
+    "qualifier_rating": 1455,
+    "form_per_set": 6,
+    "rating_scale": 200,
+    "margin_games_per_probability_unit": 8.0,
+    "margin_sd_games": 4.5,
+    "total_mean_games": 22.0,
+    "total_sd_games": 4.2,
+    "demonstration": "rating = 1500 + 25 * (9 - seed) for a seeded player, 1480 unseeded, 1455 for a qualifier, plus 6 per verified set won and minus 6 per verified set lost. p(A wins) = 1 / (1 + 10^(-(rating_a - rating_b) / 200)). Games margin ~ Normal(8 * (p - 0.5), 4.5). Total games ~ Normal(22, 4.2)."
+  },
+  "fixtures": [
+    {
+      "id": "atp-almaty-qf-1",
+      "a": {"seed": 1, "status": "seeded", "sets_won": 2, "sets_lost": 0, "scorelines": ["R16 d. S. Shimabukuro 6-2 6-1"]},
+      "b": {"seed": null, "status": "unseeded", "sets_won": 4, "sets_lost": 1, "scorelines": ["R32 d. R. Hijikata 7-6(5) 6-2", "R16 d. M. Bellucci 6-7(4) 7-6(2) 7-6(5)"]}
+    },
+    {
+      "id": "atp-almaty-qf-2",
+      "a": {"seed": 3, "status": "seeded", "sets_won": 0, "sets_lost": 0, "scorelines": ["R16 w/o F. Marozsan (walkover, no sets played)"]},
+      "b": {"seed": 5, "status": "seeded", "sets_won": 4, "sets_lost": 1, "scorelines": ["R32 d. R. Sakamoto 6-2 6-4", "R16 d. T. Machac 6-2 4-6 7-6(7)"]}
+    },
+    {
+      "id": "atp-almaty-qf-3",
+      "a": {"seed": null, "status": "qualifier", "sets_won": 2, "sets_lost": 0, "scorelines": ["R32 d. M. Cilic 6-2 7-5"]},
+      "b": {"seed": null, "status": "unseeded", "sets_won": 2, "sets_lost": 1, "scorelines": ["R32 d. A. Vukic 7-6(4) 4-6 6-3"]}
+    },
+    {
+      "id": "atp-almaty-qf-4",
+      "a": {"seed": 7, "status": "seeded", "sets_won": 2, "sets_lost": 1, "scorelines": ["R32 d. A. Kovacevic 7-6(9) 3-6 6-3"]},
+      "b": {"seed": null, "status": "unseeded", "sets_won": 2, "sets_lost": 0, "scorelines": ["R32 d. M. Kecmanovic 6-4 6-3"]}
+    },
+    {
+      "id": "atp-brussels-qf-1",
+      "a": {"seed": null, "status": "unseeded", "sets_won": 2, "sets_lost": 1, "scorelines": ["R32 d. M. Schoenhaus 7-6(3) 6-7(7) 7-5"]},
+      "b": {"seed": 2, "status": "seeded", "sets_won": 2, "sets_lost": 0, "scorelines": ["R16 d. R. Collignon 6-4 6-2"]}
+    },
+    {
+      "id": "atp-brussels-qf-2",
+      "a": {"seed": null, "status": "qualifier", "sets_won": 2, "sets_lost": 0, "scorelines": ["R32 d. B. van de Zandschulp 6-1 6-4"]},
+      "b": {"seed": 3, "status": "seeded", "sets_won": 0, "sets_lost": 0, "scorelines": ["R32 bye"]}
+    },
+    {
+      "id": "atp-brussels-qf-3",
+      "a": {"seed": 1, "status": "seeded", "sets_won": 0, "sets_lost": 0, "scorelines": ["R32 bye"]},
+      "b": {"seed": 5, "status": "seeded", "sets_won": 2, "sets_lost": 0, "scorelines": ["R16 d. D. Goffin 6-3 6-4"]}
+    },
+    {
+      "id": "atp-brussels-qf-4",
+      "a": {"seed": null, "status": "unseeded", "sets_won": 4, "sets_lost": 0, "scorelines": ["R32 d. M. Giron 7-6(3) 7-6(3)", "R16 d. G. Onclin 6-4 6-2"]},
+      "b": {"seed": 6, "status": "seeded", "sets_won": 4, "sets_lost": 1, "scorelines": ["R32 d. T. Samuel 6-3 7-6(3)", "R16 d. D. Dzumhur 6-2 6-4"]}
+    }
+  ]
+}

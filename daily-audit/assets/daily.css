@@ -1,0 +1,21 @@
+/* Daily-slate additions on top of /assets/style.css. Scoped to /daily/ only. */
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:#fff;box-shadow:var(--shadow);margin:.6rem 0 1rem}
+.tablewrap table{margin:0}
+table.data{min-width:760px}
+table.data td{font-size:.82rem}
+tr.note td{background:#fffbeb;color:#78350f;font-size:.76rem;border-bottom:1px solid var(--border)}
+.muted{color:var(--subtle)}
+.small{font-size:.76rem;color:var(--muted)}
+.conf{display:inline-block;border-radius:999px;padding:.08rem .5rem;font-size:.7rem;font-weight:800;text-transform:capitalize;letter-spacing:.02em}
+.conf.high{background:var(--high-bg);color:var(--high)}
+.conf.medium{background:var(--med-bg);color:var(--med)}
+.conf.low{background:var(--low-bg);color:var(--low)}
+.pill.ok{background:var(--high-bg);border-color:#bbf7d0;color:var(--high)}
+.pill.warn{background:var(--warn-bg);border-color:#fcd34d;color:var(--warn)}
+footer{border-top:1px solid var(--border);background:#fff;padding:1.2rem 0 2.4rem;color:var(--muted);font-size:.8rem;margin-top:2rem}
+footer p{margin:.35rem 0;max-width:80rem}
+.tiny{font-size:.74rem;color:var(--subtle)}
+.panel h2{font-size:1.1rem;margin:.2rem 0 .4rem}
+article.panel{margin:.9rem 0}
+.kpis.small .kpi .v{font-size:1.2rem}
+@media(max-width:640px){.tablewrap{border-radius:8px}table.data{min-width:640px}}

@@ -2031,3 +2031,7 @@ A deterministic dry rebuild of the completed layers surfaced a stale `/board/` s
 |---|---|---|---|
 | R6 | Rebuild affected board + dependent final/evidence/audit outputs from checked-in captures; verify no manual facts added | in progress | `data/board/**`, `board/**`, `data/{final,evidence,audit65}/**`, `final/**`, `evidence/**`, `audit65/**`, `scripts/{board_*,final_*,evidence_integrity.py,audit65.py}` |
 | R7 | Expand CI to rebuild/check the claimed generated layers and add regression assertions for published counts | unclaimed | `.github/workflows/pages.yml`, `tests/test_publication_counts.py` |
+
+### R7 scope correction after PR #91 merge
+
+The rebase onto main exposed PR **#91** (`arena/17c50bb7-olbg2`) merged at `238c157`, whose active claim explicitly includes `.github/workflows/pages.yml`. To honor non-overlapping ownership, this session will **not edit that workflow**. R7's scope is narrowed to `tests/test_publication_counts.py` and this report; the additional stale-generated-path gate is logged as a cross-scope request for the PR #91 owner/integration follow-up. This limitation is recorded rather than silently editing an owned file. No edits have been made to `.github/workflows/pages.yml`.

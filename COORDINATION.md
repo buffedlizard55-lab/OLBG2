@@ -1681,3 +1681,25 @@ Rules for this session: nothing is published unless an official page returned it
 2. **Golf stale tournament (`A-02`):** `data/verified/inputs.json` (`golf-utah-2026`) lists `Bank of Utah Championship` on `2026-10-22`, which concluded on `2026-10-04` (won by Austin Smotherman at `-26`, `258`). The live 22–25 Oct 2026 PGA Tour event on `pgatour.com` is the **Butterfield Bermuda Championship** at Port Royal GC, Southampton.
 3. **Formula 1 active race (`A-03`):** `VF-17` states F1 is idle until Las Vegas (Nov 20–22); official `formula1.com/en/racing/2026/united-states` confirms the **2026 United States Grand Prix (Circuit of The Americas, Austin)** runs **23–25 Oct 2026** (Race Sun 25 Oct `20:00 UTC`).
 4. **Six previously empty sports resolved on official sources (`A-04..A-09`):** ATP 250 daily schedules (`Almaty 9410`, `Brussels 7485`, `Lyon 496`), ICC Men's ODI Tri-Series (`PAK/ENG/SL` in Rawalpindi & Lahore, `274144`), RLWC 2026 Men's Round 2 (`nrl.com/draw/?competition=131`), NAB AFLW Round 11 (`afl.com.au/aflw`), LoL Worlds 2026 Swiss Round 1 (`lolesports.com` / `liquipedia.net`), and 6 of 8 Belfast Northern Ireland Open Last 16 ties (`wst.tv/players/`).
+## Session `arena/1352b77f-olbg2` — full line-by-line re-verification, named-gap closure, in-band picks refresh, final integration (2026-10-22 from 07:20 UTC)
+
+**Session ID:** `arena/1352b77f-olbg2` · **Branch:** `arena/1352b77f-olbg2` (Arena-fixed; `session-…` naming not available) · **Claimed:** 2026-10-22 07:20 UTC, before any implementation edit (this commit is the claim).
+
+**Concurrent-session check at claim time** (`git fetch` + `gh pr list` at 07:18 UTC):
+
+| Branch / PR | Claim | Treatment by this session |
+|---|---|---|
+| `arena/1bb45081-olbg2`, PR #54 OPEN since 01:58Z, `mergeable: CONFLICTING`, no commits since 01:58Z | odds-window confidence gate W1–W4 across five layers | Claim is **>60 minutes old with no commits** — takeover permitted by the board rules. Its substance will be reviewed at integration (V5) and either adopted without discarding its work or closed with a recorded reason; this session does not blindly merge or revert it. |
+| all other recorded sessions | closed / merged (latest merge PR #69 at 04:04Z) | none live; shared files free |
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| V1 | Claim + coordination check (this commit) | done 07:20Z | `arena/1352b77f-olbg2` | `COORDINATION.md` (append-only until V5) |
+| V2 | **Full line-by-line re-verification of every published row** (verified desk 118 rows + forward desk 93 rows) against the official source each row cites: fixture id, date, start time, venue, participants, records/standings shown. Every mismatch corrected with provenance or left blank + flagged. Closes the VF-23 coverage limit (previous pass re-read only 6 source families) | in progress | `arena/1352b77f-olbg2` | `research/verification-1352b77f.md`, `data/verified/flagged.json`, `data/forward/flagged.json`, capture files `data/verified/capture_1352b77f.*` |
+| V3 | **Named gap closure attempts**, official sources only: VF-14 (NBA 22–24 Oct matchup lists), VF-22 (GBGB cards), VF-03 (WST #37+ ranks/prize money), VF-32 (tennis order of play, PlusLiga, gaa.ie), plus same-day freshness for 22 Oct. Anything a source will not render stays blank and is flagged — never inferred | in progress | `arena/1352b77f-olbg2` | `research/verification-1352b77f.md`, `data/verified/*1352b77f*`, `data/forward/*1352b77f*` |
+| V4 | **In-band high-confidence pick refresh**: written predictions ≥30 words, unique, human, team + player + current form + recent match history + explicit betting selection, every fact tied to an official URL fetched this session, only where the originated fair price sits in −250…+10000 | in progress | `arena/1352b77f-olbg2` | `data/verified/predictions.json`, `data/verified/band.json` |
+| V5 | **Final integration**: fulfil the logged root-nav request (add `forward/` link to root nav), review PR #54 per takeover rule, rebuild all layers, tests + link audit green, PR → merge → Pages deploy confirmed, board + ledger updated | pending | `arena/1352b77f-olbg2` | shared outputs |
+
+**Scope rule (explicit):** no other session is live. This session may edit shared outputs at V5 only. No bookmaker price is read anywhere; all prices are this repo's own fair-model prices. A value is published only if an official governing-body/league/tour endpoint returned it in this session's capture (timestamp logged per fetch); otherwise the cell stays blank with a reason on the flagged page.
+
+**Nav-link request status:** the request logged by `arena/6a87eefa-olbg2` (add `forward/index.html` to the root dashboard nav as "Forward slate (23 Oct–2 Nov)") is **taken over by this session at V5** — root pages are no longer live-claimed.

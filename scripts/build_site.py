@@ -214,7 +214,7 @@ def filter_bar(sports: list[tuple[str, str]], *, status=True, conf=True) -> str:
   <span id="f-count" class="tiny"></span>
 </div>
 <script>
-(function () {{
+document.addEventListener('DOMContentLoaded', function () {{
   var rows = Array.prototype.slice.call(document.querySelectorAll('table.data tbody tr'));
   var t = document.getElementById('f-text'), s = document.getElementById('f-sport');
   var st = document.getElementById('f-status'), c = document.getElementById('f-conf');
@@ -233,7 +233,7 @@ def filter_bar(sports: list[tuple[str, str]], *, status=True, conf=True) -> str:
   }}
   [t, s, st, c].forEach(function (el) {{ if (el) el.addEventListener('input', apply); }});
   apply();
-}})();
+}});
 </script>'''
 
 

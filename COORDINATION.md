@@ -2000,3 +2000,14 @@ Actual workflow filenames are `deploy-pages.yml` (deployment) and `pages.yml` (v
 | Publication gate + tests | done | arena/17c50bb7-olbg2 | Local CI rebuild and 145 tests pass |
 | Official-source access / completeness | needs review | arena/17c50bb7-olbg2 | Published publication.html; no accessible official response content |
 | PR, merge, deploy | in progress | arena/17c50bb7-olbg2 | Remote verification follows |
+
+### Publication result — session 17c50bb7 (complete)
+
+- PR **[#91](https://github.com/buffedlizard55-lab/OLBG2/pull/91)** merged without waiting for user review at **2026-10-22T12:03:50Z**.
+- Merge commit: `238c157ba4c75cfd91e90c3d0f82b68e77f14a60`.
+- GitHub Actions [Deploy Pages run 39775335124](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39775335124): **success**, including reusable validation and actual Pages deployment. This confirms deployment, not live factual verification.
+- Dashboard: https://buffedlizard55-lab.github.io/OLBG2/
+- Published review report: https://buffedlizard55-lab.github.io/OLBG2/publication.html
+- Integration task: **done**. Official factual freshness/completeness remains **needs review** on the published report.
+- Non-blocking runner warnings: Node 20 action-runtime deprecation and ubuntu-latest image migration; deployment still succeeded.
+- This post-deployment ledger is saved on the session branch after the merged implementation, so the success record itself is not part of the already-deployed commit.

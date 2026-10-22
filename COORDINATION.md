@@ -2322,7 +2322,7 @@ The workflow is currently owned by merged scopes; the request is recorded rather
 | U1 | Read coordination board, refresh remote heads/open PR list, claim disjoint UI-only scope, commit & push claim before implementation | done | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
 | U2 | Audit keyboard/screen-reader usability of `/portal/` search/filter controls, result counts, and table navigation without asserting new sports facts | done | `arena/cf53958f-olbg2` | `research/accessibility-cf53958f.md` |
 | U3 | Improve control names, focus visibility, and accessible result announcements in the portal generator/assets; regenerate only `/portal/` pages | done | `arena/cf53958f-olbg2` | `scripts/portal_build.py`, `portal/assets/app.js`, `portal/assets/style.css`, generated `portal/**` |
-| U4 | Add regression coverage for accessible controls and verify deterministic portal build, row-source links, internal links, and repository tests | done (154 local tests) | `arena/cf53958f-olbg2` | `tests/test_portal_accessibility_cf53958f.py` |
+| U4 | Add regression coverage for accessible controls and verify deterministic portal build, row-source links, internal links, and repository tests | done (190 tests after rebase) | `arena/cf53958f-olbg2` | `tests/test_portal_accessibility_cf53958f.py` |
 | U5 | Publish additive change on the fixed Arena branch and record PR/deploy status; do not edit another session's root nav or data | in progress | `arena/cf53958f-olbg2` | `COORDINATION.md` (append-only) |
 
 **Scope boundary:** this is a user-interface/accessibility improvement to the existing portal, not another match-data layer or factual audit. Every existing row, source URL, line, pick, and flagged item remains unchanged. If another live session claims `/portal/**` or its builder before implementation/integration, stop and log a cross-scope request rather than editing it.
@@ -2353,7 +2353,7 @@ The PR could not yet merge because main had advanced to `6077bd7` (reconcile pub
 - **UI changes:** added visible labels and `aria-controls` for all 41 filters; polite live result counts and no-match messages; keyboard-focusable named scroll regions and captions for all 42 tables; explicit `scope=col` on all 293 headers; named nav landmarks/current-page markers; skip-to-main links; two-color keyboard focus; responsive filter fields; and a no-JavaScript notice. `app.js` now toggles the `hidden` property for rows and the empty state.
 - **Verification:** the portal builder ran twice with identical generated-HTML checksums; `data/portal/*.json` SHA-256 inventory did not change. `scripts/portal_verify.py` passes: 26 pages, 707/707 source-linked table rows, 1,562 internal links/fragments, 17 sport categories, 220 originated rows, 24 blank rows, 34 predictions, and 38 flags. The new suite (5 tests), prior portal suite (4 tests), and full suite on this branch's then-current base (`293c0c0`) pass: **154 tests**.
 - **Boundary/irregularities:** structural source-link checks do not fetch each governing-body URL or verify fixture facts. No browser, keyboard-device, or screen-reader session was run, so this is not a formal WCAG conformance claim. No data values or external-source assertions were edited.
-- **Status:** U2, U3, U4 **done**. U5 **in progress**; rebase and full-suite rerun on latest `origin/main` precede publication.
+- **Status:** U2, U3, U4 **done**. U5 **in progress**; rebased onto `origin/main` at `d2a1048` and reran the full suite; PR, merge, and deployment verification remain.
 
 
 ### Rebase conflict resolution — `arena/cf53958f-olbg2` (implementation sync, 2026-10-22 UTC)
@@ -2369,3 +2369,19 @@ Reapplying the portal implementation after `cdbcf03` conflicted only in `COORDIN
 ### Rebase conflict resolution — `arena/cf53958f-olbg2` (implementation refresh, 2026-10-22 UTC)
 
 Reapplying the portal implementation onto `6077bd7` conflicted only in `COORDINATION.md`: the reconcile publication record on main met this session's U2–U4 implementation notes. Both are retained; the portal generator, assets, generated pages, tests, and audit applied without conflict. No other session's scope was edited.
+
+### Post-rebase verification — `arena/cf53958f-olbg2` (2026-10-22 UTC)
+
+Rebased the implementation onto latest `origin/main` at `d2a1048`. Rebuilt the portal; `python3 scripts/portal_verify.py` again passed (26 pages, 707 source-linked rows, 1,562 checked internal links/fragments; all match, pick, sport, and flag counts intact). `python3 -m unittest discover -s tests -q` passed **190 tests** on the rebased tree. `python3 -m py_compile scripts/portal_build.py` and `git diff --check` passed, and the worktree is clean. Portal JSON data remained unchanged. GitHub currently has no open PRs before this session opens its PR.
+
+The repository's latest mainline validation and Pages deployment at `d2a1048` are successful (runs 39777388020 and 39777388091); these validate the current published main, not this feature branch. PR-specific validation and a successful post-merge Pages deployment are still required to close U5.
+
+
+### Rebase conflict resolution — `arena/cf53958f-olbg2` (verification note sync, 2026-10-22 UTC)
+
+Applying the post-rebase verification record after `cdbcf03` conflicted only at the coordination append point. Retained the implementation-sync log and the prior valid `d2a1048` verification note; this run will be repeated against `cdbcf03` before publication.
+
+
+### Rebase conflict resolution — `arena/cf53958f-olbg2` (test-record refresh, 2026-10-22 UTC)
+
+Applying the earlier test-record commit onto `6077bd7` conflicted only at the append-only coordination end. Retained the reconcile publication record, the implementation-refresh note, and the prior `d2a1048` verification history; the complete-suite verification is rerun on the current mainline before merging.

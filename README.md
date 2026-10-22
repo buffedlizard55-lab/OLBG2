@@ -14,14 +14,14 @@ advice, and not a complete snapshot of world sport: it is a dated capture with i
 ## What the root site is
 
 The dashboard at the repository root is the unified, deduplicated view over the multi-sport desk in
-[`verified/`](verified/index.html). It carries **118 fixtures across 13 of the 17 eligible sports**, each row with
+[`verified/`](verified/index.html). It carries **178 rows across 13 of the 17 eligible sports**, each row with
 its official source link, a verification badge, and — where the model could be supported — moneyline, handicap and
-total prices. 94 rows are originated; 24 remain unlined with a written reason. Four eligible sports have no rows in this snapshot; see their sport pages and the flagged page for the recorded coverage limits.
+total prices. 154 rows are fully originated; 24 are blank with a written reason, and four eligible sports (Aussie Rules, eSports, Tennis, Greyhounds) have no verified rows in this window.
 
 | Layer | Entry point | Snapshot contents (not an external verification claim) |
 |---|---|---|
-| **Unified dashboard** | [`index.html`](index.html) | 118 fixtures, 13 sports with rows, 94 originated rows, 24 unlined rows, 14 price-band picks and featured predictions, 33 review items. Built by `scripts/build_site.py` from `data/verified/**`. |
-| **Verified multi-sport desk** | [`verified/index.html`](verified/index.html) | The same 118 rows in their original layout, plus audit and methodology pages. Built by `scripts/verified_seed.py` → `verified_model.py` → `verified_build.py`. |
+| **Unified dashboard** | [`index.html`](index.html) | 178 rows, 13 sports with rows, 154 originated rows, 14 price-band picks, 30 written predictions (14 featured + 16 research), 34 review items. Built by `scripts/build_site.py` from `data/verified/**`. |
+| **Verified multi-sport desk** | [`verified/index.html`](verified/index.html) | The same 178 rows in their original layout, plus audit and methodology pages. Built by `scripts/verified_seed.py` → `verified_model.py` → `verified_build.py`. |
 | **Root-layer archive** | [`archive.html`](archive.html) | The earlier 47-row root capture, preserved with its own source links. Superseded for NHL, NBA, URC, cricket and handball, but not deleted. |
 | **Evidence desk v2** | [`site/index.html`](site/index.html) | Independent NHL/NBA layer with 25 stored fixture rows and 64 market records. Built by `scripts/engine.py` and `scripts/build.py`. |
 | **Sport survey** | [`survey/index.html`](survey/index.html) | 130 OLBG-discovered inventory entries across its 15-sport taxonomy; 11 originated lines, 2 predictions. Inventory rows are not all fixture-verified. |
@@ -43,14 +43,16 @@ question. It is recorded as an interpretation flag rather than resolved by assum
 ## Verification, blanks and freshness
 
 - Every published row carries a link to an official governing-body, league or tour page.
-- 84 of the 118 rows cite a URL that identifies the individual fixture; the other 34 cite a competition or
+- 144 of the 178 rows cite a URL that identifies the individual fixture; the other 34 cite a competition or
   rankings page. That difference is shown on every table and disclosed as **VF-11** on the flagged page.
 - Where an official input was missing (client-rendered rankings, one-match samples, unconfirmed venues, 2027
   futures without rosters), the value is **blank** and the reason is published. Nothing was inferred.
-- On **2026-10-22** a separate verification pass re-fetched the official tables behind the NHL, URC, Top 14,
-  Pro D2, EuroLeague and EHF rows and compared them line by line; all matched except one Pro D2 form sentence,
-  which was corrected (VF-25). That pass covered 6 source families, not all 118 rows; the coverage limit and the
-  rows that were **not** re-read are published as **VF-23** (see [verification.html](verification.html)).
+- On **2026-10-22** two verification passes re-fetched the official tables behind the published rows and
+  compared them line by line. The first (6 families: NHL, URC, Top 14, Pro D2, EuroLeague, EHF) corrected one
+  Pro D2 form sentence (VF-25). The second (11 families: NHL, NBA, MLB, PDC, WST, URC, Top 14, Pro D2, EHF,
+  FIA, plus the NBA standings priors) matched every published value it re-read and captured the NBA 24–31 Oct
+  slate (VF-14). Coverage limits and the rows **not** re-read are published as **VF-23** and **VF-34**
+  (see [verification.html](verification.html) and `research/verification-1352b77f.md`).
 - The remaining rows keep the 2026-10-22 capture stamp of the session that collected them. The snapshot is dated,
   not continuously refreshed, and no row predates its capture date (enforced by a test).
 
@@ -111,8 +113,8 @@ python3 scripts/integration_audit.py
 python3 -m unittest discover -s tests
 ```
 
-Expected: the builder reports `10 root pages + 17 sport pages / 118 rows, 94 originated, 14 band picks / 14
-predictions (14 band) / 33 verified review items`; the integration audit reports zero local link errors; the suite
+Expected: the builder reports `10 root pages + 17 sport pages / 178 rows, 154 originated, 14 band picks / 14
+predictions (14 band) / 34 verified review items`; the integration audit reports zero local link errors; the suite
 reports 80 tests passing.
 
 The builders and tests validate internal structure, model rules, source allowlists and local links. They do not

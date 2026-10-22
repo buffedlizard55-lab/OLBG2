@@ -1703,3 +1703,16 @@ Rules for this session: nothing is published unless an official page returned it
 **Scope rule (explicit):** no other session is live. This session may edit shared outputs at V5 only. No bookmaker price is read anywhere; all prices are this repo's own fair-model prices. A value is published only if an official governing-body/league/tour endpoint returned it in this session's capture (timestamp logged per fetch); otherwise the cell stays blank with a reason on the flagged page.
 
 **Nav-link request status:** the request logged by `arena/6a87eefa-olbg2` (add `forward/index.html` to the root dashboard nav as "Forward slate (23 Oct–2 Nov)") is **taken over by this session at V5** — root pages are no longer live-claimed.
+
+---
+
+- Session: `arena/1352b77f-olbg2`
+- Claim: V1–V5 (in this integration session) — committed and pushed first (commit `d4318cf`).
+- Status: V1 done · V2 done · V3 done · V4 done · V5 in progress
+- Files claimed: `scripts/verified_seed.py`, `scripts/verified_model.py`, `scripts/build_site.py`, `tests/test_verified_pipeline.py`, `data/verified/**`, `data/inputs/nba_teams.json` (verify only), `research/verification-1352b77f.md`, `README.md`, `COORDINATION.md`.
+- V2: line-by-line re-verification of the published desk against official sources, 2026-10-22 07:25–08:10 UTC. 11 source families re-read; 0 published values wrong. Full record: `research/verification-1352b77f.md`. Coverage limit published as VF-34 (EuroLeague/EuroCup rows, URC R5 fixtures, golf, GAA, RL, cricket, volleyball and forward NHL 26 Oct–2 Nov not re-read today).
+- V3: VF-14 closed at matchup level for 22–31 Oct — the official server-rendered NBA week page (`nba.com/schedule?date=2026-10-24`) was discovered to publish future fixtures (game ids, tip-off ET, venues); all 74 games of 22–31 Oct now captured and originated (60 new rows this session, incl. the ten 30 Oct Emirates NBA Cup group games). 1–2 Nov not rendered — not invented. GBGB retried (`/racecards/` = official 404 page) — VF-22 stays open. WST ranks below 36 remain blank (VF-03).
+- V4: 14 featured band picks + 16 research write-ups all re-checked this session; their cited records/player facts still match the official feeds re-read today (NHL teamLeaders: Kaprizov 11 G, Pastrnak 4 G/8 A; Sorokin 5 W; MLB WS facts). New NBA rows are prior-based and medium-capped (VF-02), so no new featured write-ups are added — the rule "high-confidence ⇒ written prediction" holds (30/30).
+- V5: root nav now links the forward slate (fulfils the request logged by `6a87eefa`): "Forward slate (23 Oct–2 Nov)" → `forward/index.html`. PR #54 handling and merge/Pages confirmation recorded below.
+- Dataset after this session: 178 rows (154 originated, 24 unlined), 34 review items, 80 tests passing.
+- No conflicts encountered; no other session's files were touched.

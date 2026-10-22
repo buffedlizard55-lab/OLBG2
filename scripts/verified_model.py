@@ -427,7 +427,7 @@ def originate_nba(teams: dict, fixtures: list[dict]) -> list[dict]:
                 "id": f"nba-{gid or idx}",
                 "sport": "basketball",
                 "sport_name": "Basketball",
-                "competition": "NBA Regular Season 2026-27 (Opening Week)",
+                "competition": f.get("competition") or "NBA Regular Season 2026-27 (Opening Week)",
                 "date": f["date"],
                 "time": f"{f['date']} {f['tip_et']} ET",
                 "home": h["name"],

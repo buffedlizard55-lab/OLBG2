@@ -121,7 +121,10 @@ class VerifiedPipelineTests(unittest.TestCase):
         # 2026-10-22 (session 26963a2d): Wilson v Pang priced from the full
         # official WST top-36 (+1 originated) and the in-progress SA v AUS Test
         # retired (-1 unlined); NZ v IND corrected to 22 Oct 07:00 UTC.
-        self.assertEqual(orig, 94)
+        # 2026-10-22 (session arena/1352b77f-olbg2): +60 NBA fixtures for
+        # 24-31 Oct captured from the official week schedule (VF-14 closed),
+        # so originated moves 94 -> 154; unlined unchanged at 24.
+        self.assertEqual(orig, 154)
         self.assertEqual(unl, 24)
 
     def test_research_desk_picks_are_in_band_verified_and_player_aware(self) -> None:

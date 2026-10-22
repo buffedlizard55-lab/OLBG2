@@ -126,8 +126,8 @@
       "severity": "medium",
       "category": "Verification coverage",
       "sport": "Cross-sport",
-      "item": "Independent re-read on 2026-10-22 covered 6 of the 18 source families, not all 119 rows",
-      "detail": "Session 072755db re-fetched and compared every published figure against the governing body for: the NHL Stats REST team summary (MIN, CGY, CAR, EDM, BOS, NSH), the URC official table plus its Round 3 results (10 clubs, 5 results), the LNR Top 14 table (Toulouse, Perpignan rank), the LNR Pro D2 table (Provence, Aurillac, Beziers, Nevers), the EuroLeague standings (Panathinaikos, Baskonia) and the EHF Champions League Group E table (Barca, Montpellier), plus the EHF and EuroLeague fixture listings. All compared values matched except the Beziers form sentence corrected under VF-25. The remaining rows (darts, snooker, MLB, F1, golf, cricket, volleyball, rugby league, Gaelic football, NBA) were NOT re-read against their official page in this session; they carry the 2026-10-22 capture of the previous session and the source link on each row for manual review. This is a coverage limit of the verification pass, not a claim that those rows were checked today.",
+      "item": "Independent re-read on 2026-10-22 covered 6 of the 18 source families, not all 119 rows [extended by VF-34]",
+      "detail": "Session 072755db re-fetched and compared every published figure against the governing body for: the NHL Stats REST team summary (MIN, CGY, CAR, EDM, BOS, NSH), the URC official table plus its Round 3 results (10 clubs, 5 results), the LNR Top 14 table (Toulouse, Perpignan rank), the LNR Pro D2 table (Provence, Aurillac, Beziers, Nevers), the EuroLeague standings (Panathinaikos, Baskonia) and the EHF Champions League Group E table (Barca, Montpellier), plus the EHF and EuroLeague fixture listings. All compared values matched except the Beziers form sentence corrected under VF-25. The remaining rows (darts, snooker, MLB, F1, golf, cricket, volleyball, rugby league, Gaelic football, NBA) were NOT re-read against their official page in that session. Session arena/1352b77f-olbg2 then re-read eleven source families line by line (see VF-34), covering the darts, snooker, MLB, F1 and NBA families as well; golf, cricket, volleyball, rugby league and Gaelic football rows still carry their earlier capture with the source link on each row for manual review.",
       "source_name": "URC official table (verification example)",
       "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
     },
@@ -232,6 +232,16 @@
       "source_url": "https://api-web.nhle.com/v1/score/2026-10-22"
     },
     {
+      "id": "VF-34",
+      "severity": "medium",
+      "category": "Verification coverage",
+      "sport": "Cross-sport",
+      "item": "Session arena/1352b77f-olbg2 line-by-line re-read, 2026-10-22 07:25–08:10 UTC: 11 source families, 0 published values corrected, coverage limit disclosed",
+      "detail": "Every cited figure below was compared row by row against the official page named, at the fetch times logged in research/verification-1352b77f-olbg2.md: NHL api-web score feed 2026-10-22 (12/12 rows — game ids, matchups, venues, UTC starts, W-L-OTL records all matched); NBA official week schedule page (14/14 published rows matched; 60 new rows captured — VF-14) and NBA 2025-26 standings (30/30 club records and home/road splits matched the model priors exactly); MLB Stats API schedule (4 verified-desk + 7 forward-desk World Series rows matched, incl. G5–G7 if-necessary flags); PDC World Rankings (18/18 darts players matched on rank and prize money, ladder read through rank 76); WST Johnstone's Paint rankings (8/8 snooker rows matched — every named rank/prize pair correct and every 'outside top 36' player indeed absent from the official 36-row list); EHF CL standings + calendar (5/5 rows matched on group W-D-L, GF-GA and tip times); URC official table (16/16 club summaries matched) and Round 4 listing (fixture ids 292608–292610 confirmed); LNR Top 14 table (14/14 club summaries + all seven J7 fixture links matched); LNR Pro D2 table (16/16 club summaries + all eight J8 fixture links matched); FIA Formula 1 drivers' standings on formula1.com (Antonelli 340, Russell 238, Hamilton 229, Verstappen 221 matched). NOT re-read this session: EuroLeague/EuroCup game-centre rows (9 + 16), URC Round 5 fixtures (8), golf (2), Gaelic football (5), rugby league (3), cricket (1), volleyball (3) and the forward NHL slate for 26 Oct–2 Nov (58 rows) — those rows keep their capture-date provenance and per-row source links. GBGB retried twice (https://www.gbgb.org.uk/racecards/ returned the official 404 page at 08:05 UTC) — VF-22 remains open.",
+      "source_name": "NBA official week schedule (re-read example)",
+      "source_url": "https://www.nba.com/schedule?date=2026-10-24"
+    },
+    {
       "id": "VF-09",
       "severity": "low",
       "category": "Zero active markets",
@@ -283,13 +293,13 @@
     },
     {
       "id": "VF-14",
-      "severity": "medium",
-      "category": "Missing competition",
+      "severity": "low",
+      "category": "Resolved in this session",
       "sport": "Basketball (NBA)",
-      "item": "All 11 NBA rows are 2026-10-21 fixtures; the 2026-10-22 slate was not captured",
-      "detail": "nba.com's games calendar rendered 2 games for 22 October 2026, 12 for 23 October and 8 for 24 October, but the page returned 'Sorry, something went wrong' for the fixture list. The NBA static scoreboard endpoint returned HTTP 500 and stats.nba.com did not respond. No NBA fixture was invented to fill the gap. [Resolved 2026-10-22, session 50268b75: the official nba.com/schedule page rendered the 22–23 Oct fixtures (14 games with IDs, tip times and venues), which are now captured and originated.]",
-      "source_name": "NBA Games calendar",
-      "source_url": "https://www.nba.com/games?date=10%2F22%2F2026"
+      "item": "[Resolved 2026-10-22, session arena/1352b77f-olbg2] NBA 22–31 Oct slate captured at matchup level",
+      "detail": "nba.com's games calendar rendered per-day counts but the /games fixture list returned 'Sorry, something went wrong', the static scoreboard endpoint returned HTTP 500, and stats.nba.com did not respond — so VF-14 opened with no matchup data. Sessions 50268b75 (22–23 Oct) and arena/1352b77f-olbg2 (24–31 Oct) then read the official server-rendered week page https://www.nba.com/schedule?date=2026-10-24 line by line and captured all 74 games of 22–31 Oct (game id, tip-off ET, venue, home/away), including the 10 Emirates NBA Cup group games of 30 Oct. Games of 1–2 Nov 2026 were not part of that page's server render and are not invented; the flag stays open only for those two dates.",
+      "source_name": "NBA Official Schedule (week page, server-rendered)",
+      "source_url": "https://www.nba.com/schedule?date=2026-10-24"
     },
     {
       "id": "VF-15",

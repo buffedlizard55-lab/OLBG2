@@ -141,9 +141,11 @@ class VerifiedPipelineTests(unittest.TestCase):
             self.assertGreaterEqual(p["probability"], 0.70)
             self.assertGreaterEqual(p["fair_american"], -250)
             self.assertLessEqual(p["fair_american"], 10000)
-            dec = 1.0 / p["probability"]
+            # The published American price must agree with the published
+            # decimal price on the same row (both derive from fair_decimal).
+            dec = p["fair_odds"]
             exp_am = round((dec - 1) * 100) if dec >= 2 else round(-100 / (dec - 1))
-            self.assertAlmostEqual(p["fair_american"], exp_am, delta=2)
+            self.assertAlmostEqual(p["fair_american"], exp_am, delta=1)
             self.assertIn(p["selection"], p["text"], "Narrative must name its selection")
         openings = set()
         headlines = set()
@@ -161,6 +163,47 @@ class VerifiedPipelineTests(unittest.TestCase):
                 self.assertNotIn(parsed.netloc, BANNED_DOMAINS)
         self.assertEqual(len(openings), len(preds), "Duplicate prediction openings found")
         self.assertEqual(len(headlines), len(preds), "Duplicate headlines found")
+
+    def test_source_scope_is_published_for_every_row(self) -> None:
+        # The dashboard prints "N of M rows cite a fixture page". That number
+        # must come from the data, not be hardcoded (it read 0 of 119 while the
+        # field was missing), and it must reflect the URL a reader can click.
+        scopes = {"fixture": 0, "competition": 0}
+        for m in self.matches["matches"]:
+            scope = m.get("source_scope")
+            self.assertIn(scope, scopes, m["id"])
+            scopes[scope] += 1
+            url = m["official_url"]
+            if "feuille-de-match/" in url or "/gamecenter/" in url or "/matches/details/" in url:
+                self.assertEqual(scope, "fixture", m["id"])
+            if url.endswith("/classement") or "match-centre/table/" in url:
+                self.assertEqual(scope, "competition", m["id"])
+        self.assertEqual(sum(scopes.values()), len(self.matches["matches"]))
+        self.assertGreater(scopes["fixture"], 0)
+        self.assertGreater(scopes["competition"], 0)
+
+    def test_confidence_badge_matches_the_published_grading_rule(self) -> None:
+        # Published rule: high >= 72%, OR a band selection >= 70% priced
+        # inside -250..+10000. The same selection must never read HIGH on the
+        # picks page and MEDIUM in its own match row (VF-26).
+        checked = 0
+        for m in self.matches["matches"]:
+            pick = m.get("pick")
+            if m["line_status"] != "originated" or not pick:
+                continue
+            if m["competition"].startswith("NBA"):
+                self.assertNotEqual(pick["confidence"], "high", m["id"])
+                continue
+            in_band = (
+                pick["probability"] >= 0.70
+                and -250 <= pick["fair_american"] <= 10000
+            )
+            if in_band:
+                self.assertEqual(pick["confidence"], "high", m["id"])
+                checked += 1
+            if pick["probability"] >= 0.72:
+                self.assertEqual(pick["confidence"], "high", m["id"])
+        self.assertGreaterEqual(checked, 3)
 
     def test_no_stale_fixtures_and_nba_never_featured(self) -> None:
         captured = self.matches["captured_at"]

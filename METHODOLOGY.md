@@ -86,6 +86,10 @@ Source: EHF Champions League Men official group standings and matches page (S33,
 `price = round(1 / (p * 1.04), 2)`, clamped to 1.05–12.00. This is a fair price plus a 4% theoretical margin.
 It is **not** a market price.
 
+The multi-sport `/verified/` layer (the unified dashboard's source dataset) prices **no-vig**: `fair_decimal =
+round(1 / p, 2)` and the American figure is derived from that same rounded decimal, so the two prices printed on a
+row always agree. Neither convention is a bookmaker quote.
+
 ## 3. Confidence
 
 | Sport | High | Medium | Low |
@@ -95,12 +99,23 @@ It is **not** a market price.
 | URC | not permitted (three rounds) | p ≥ 62% | p < 62% |
 | Handball | p ≥ 70% and both clubs ≥ 4 group games | p ≥ 58% (≥ 4 games) | otherwise |
 
+The `/verified/` layer grades its own picks on a single published rule: **high** when the model probability is
+≥ 72%, **or** when the selection is a band pick (≥ 70% priced inside −250..+10000); **medium** ≥ 60%; **low**
+below 60%. NBA picks are capped at medium because only prior-season records exist. Handicap and total picks are
+graded by the same rule; alternate lines only become featured when the moneyline pick already clears 70%.
+
 ## 4. Predictions
 
 Only for high-confidence picks. Minimum 30 words (enforced by `scripts/build_site.py`), the selection stated in
-the first sentence, the team's record and scoring rate, at least one named player with a verified statistic, and
-the model probability. Every factual claim carries a source link on the Picks page. No injuries, line-ups,
-transfers or travel claims are made, because none could be verified.
+the first sentence, the team's record and scoring rate, at least one dated recent result, and the model
+probability. Every factual claim carries a source link on the Picks page. No injuries, line-ups, transfers or
+travel claims are made, because none could be verified.
+
+**Player-level detail.** The brief asks each prediction to name a player. This snapshot does **not** assert an
+individual player statistic: no official player feed (NHL club stats, URC/LNR player statistics, EuroLeague or
+EHF scorer tables) was captured in the window, and inventing one would be unverified. The gap is published as
+**VF-24** on the Flagged for Review page rather than hidden by an earlier, inaccurate claim that the write-ups
+named players.
 
 ## 5. Known limitations
 

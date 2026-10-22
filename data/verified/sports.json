@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-10-21",
+  "captured_at": "2026-10-22",
   "excluded_keywords": [
     "soccer",
     "boxing",
@@ -60,14 +60,14 @@
       "label": "Cycling",
       "olbg_sport_id": null,
       "olbg_url": "https://www.olbg.com/betting-tips",
-      "reason": "Excluded by project scope ('cycling'); no active OLBG sport hub on 2026-10-21"
+      "reason": "Excluded by project scope ('cycling'); no active OLBG sport hub on 2026-10-22"
     },
     {
       "slug": "specials",
       "label": "Specials / Entertainment & Politics",
       "olbg_sport_id": null,
       "olbg_url": "https://www.olbg.com/betting-tips",
-      "reason": "Excluded by project scope ('specials'); no active OLBG sport hub on 2026-10-21"
+      "reason": "Excluded by project scope ('specials'); no active OLBG sport hub on 2026-10-22"
     }
   ],
   "eligible_sports": [
@@ -76,56 +76,56 @@
       "name": "Ice Hockey",
       "olbg_sport_id": 13,
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
-      "governing_body": "National Hockey League (NHL)",
+      "governing_body": "National Hockey League, Swedish Ice Hockey Federation & Liiga",
       "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
       "markets_investigated": [
         "Moneyline (2-way)",
         "Puck Line (-1.5 / +1.5)",
         "Game Total (Over/Under)"
       ],
-      "status_summary": "16 NHL fixtures verified (21–23 Oct 2026) and fully originated across all 3 markets from official 2026-27 team goal rates."
+      "status_summary": "19 originated rows: all 12 official NHL games on 22 October, all six SHL games (three OLBG-discovered), and JYP–HPK. NHL and three SHL additions are official supplements, not claimed OLBG cards."
     },
     {
       "slug": "basketball",
       "name": "Basketball",
-      "olbg_sport_id": 19,
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
-      "governing_body": "NBA & Euroleague Basketball (EuroLeague + BKT EuroCup)",
-      "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
+      "olbg_sport_id": 4,
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "governing_body": "NBA & Euroleague Basketball; KBL/NBB review links",
+      "official_url": "https://www.nba.com/games?date=2026-10-23",
       "markets_investigated": [
         "Moneyline (2-way)",
         "Point Spread / Handicap",
         "Game Total (Over/Under)"
       ],
-      "status_summary": "25 fixtures verified and originated: 11 NBA opening-week games (Moneyline + Spread; Totals blank because nba.com standings omit team points for/against), 10 EuroLeague R7 games (all 3 markets), and 4 BKT EuroCup R4 games (all 3 markets)."
+      "status_summary": "25 rows: 14 official NBA games (four OLBG cards), nine current EuroLeague games (four cards), and two unlined KBL/NBB cards. Three expired 21 October NBA cards were removed."
     },
     {
       "slug": "rugby-union",
       "name": "Rugby Union",
       "olbg_sport_id": 9,
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
-      "governing_body": "Ligue Nationale de Rugby (Top 14 & Pro D2) & United Rugby Championship",
-      "official_url": "https://top14.lnr.fr/classement",
+      "governing_body": "LNR, United Rugby Championship & Six Nations Rugby",
+      "official_url": "https://prod2.lnr.fr/classement",
       "markets_investigated": [
         "Match Result 1X2 & Draw-No-Bet Winner",
         "Point Handicap",
         "Match Total Points"
       ],
-      "status_summary": "23 fixtures verified and originated across all 3 markets: 7 Top 14 J7 matches, 8 Pro D2 J8 matches, and 8 URC Round 4 matches."
+      "status_summary": "24 rows: seven Top 14, eight Pro D2 and eight URC fixtures originated; the Six Nations outright is unlined and its OLBG date label conflicts with the official 13 March conclusion."
     },
     {
       "slug": "handball",
       "name": "Handball",
       "olbg_sport_id": 20,
       "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
-      "governing_body": "European Handball Federation (EHF Champions League Men)",
+      "governing_body": "European Handball Federation plus domestic review sources",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
       "markets_investigated": [
         "Match Result 1X2 & 2-Way Winner",
         "Goal Handicap",
         "Match Total Goals"
       ],
-      "status_summary": "12 EHF Champions League Men Round 5 fixtures verified (with all 12 OLBG match IDs mapped) and originated across all 3 markets from full-support bivariate Poisson distributions."
+      "status_summary": "20 visible cards: five current EHF Champions League fixtures originated and 15 domestic/international cards left unlined pending precise official fixture and ratings verification."
     },
     {
       "slug": "darts",
@@ -139,7 +139,7 @@
         "Leg Handicap (-1.5 / +1.5)",
         "Total Legs (Over/Under 9.5)"
       ],
-      "status_summary": "All 16 PDC European Championship Round 1 ties (22–23 Oct 2026) verified and originated from official PDC Werner Ranking Ladder prize sums for all 32 players, plus 2 tournament outrights catalogued."
+      "status_summary": "18 visible cards: 16 European Championship ties originated from official ranking prize sums; two outrights remain unlined. Fixture labels come from OLBG and are not represented as PDC fixture verification."
     },
     {
       "slug": "tennis",
@@ -147,13 +147,13 @@
       "olbg_sport_id": 3,
       "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3",
       "governing_body": "ATP Tour & WTA Tour",
-      "official_url": "https://www.atptour.com/en/rankings/singles",
+      "official_url": "https://www.atptour.com/en/scores/current",
       "markets_investigated": [
         "Match Winner (Best of 3 Sets)",
         "Set Handicap (-1.5 / +1.5 Sets)",
         "Total Sets (Over/Under 2.5)"
       ],
-      "status_summary": "7 ATP Tour singles matches where both players hold verified Top-100 PIF ATP rankings originated across all 3 markets; 8 WTA / Challenger / #101+ matches catalogued with blank unconfirmed rankings."
+      "status_summary": "20 current visible cards catalogued in displayed order. All are unlined because the precise event and both players' current official inputs were not re-verified; stale 21 October pairs were removed."
     },
     {
       "slug": "snooker",
@@ -167,7 +167,7 @@
         "Frame Handicap (-1.5 / +1.5)",
         "Total Frames (Over/Under 5.5)"
       ],
-      "status_summary": "All 11 BetVictor Northern Ireland Open Round 2 matches verified on WST Match Centre: 2 all-Top-36 matches originated across all 3 markets; 9 matches involving players ranked outside WST's server-rendered Top 36 left unlined with blank rank cells."
+      "status_summary": "The current OLBG hub displays 'No tips found'; zero active rows are published."
     },
     {
       "slug": "baseball",
@@ -175,13 +175,13 @@
       "olbg_sport_id": 12,
       "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
       "governing_body": "Major League Baseball (MLB)",
-      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-27&hydrate=team,venue",
       "markets_investigated": [
         "Moneyline (2-way)",
         "Run Line (-1.5 / +1.5)",
         "Game Total (Over/Under 7.5 & Alt 5.5)"
       ],
-      "status_summary": "2026 MLB World Series Game 1 (Tampa Bay Rays @ Milwaukee Brewers, gamePk=849805) verified and originated across all 3 markets from official 162-game run-scoring and pitching records."
+      "status_summary": "Three World Series games originated from official season run rates. Only Game 1 has a visible OLBG card; Games 2 and 3 are official supplements."
     },
     {
       "slug": "motor-racing",
@@ -189,54 +189,54 @@
       "olbg_sport_id": 14,
       "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
       "governing_body": "FIA Formula One World Championship",
-      "official_url": "https://www.formula1.com/en/results/2026/drivers",
+      "official_url": "https://www.formula1.com/en/racing/2026/united-states",
       "markets_investigated": [
         "Grand Prix Outright Winner",
         " Championship Outright Leader",
         "Podium / Head-to-Head Margin"
       ],
-      "status_summary": "2026 United States Grand Prix and 2026 F1 Drivers' World Championship originated from official 17-round FIA championship standings (Kimi Antonelli 340 pts, George Russell 238 pts); 2027 World Championship left unlined."
+      "status_summary": "Three current OLBG markets originated: US Grand Prix, 2026 Drivers' Championship, and Championship Without Kimi Antonelli. Standings retain their stored official capture date; the race time is corrected from the official COTA page."
     },
     {
       "slug": "volleyball",
       "name": "Volleyball",
       "olbg_sport_id": 21,
       "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
-      "governing_body": "Polska Liga Siatkówki (PlusLiga) & CEV",
-      "official_url": "https://www.plusliga.pl/games.html",
+      "governing_body": "Czech Volleyball Federation, PlusLiga & TAURON Liga",
+      "official_url": "https://www.cvf.cz/extraliga/extraliga-muzi?filteredGroupId=29147",
       "markets_investigated": [
         "Match Winner",
         "Set Handicap",
         "Total Points / Sets"
       ],
-      "status_summary": "4 Polish PlusLiga fixtures verified on live OLBG and PLS schedule; lines intentionally left blank because every club has played only M=1 match in 2026/27 and plusliga.pl/table.html cross-redirects to tauronliga.pl/table.html."
+      "status_summary": "Nine visible cards catalogued and unlined. CVF confirms five Czech fixtures; PlusLiga's URL redirected to TAURON Liga and is not treated as fixture confirmation."
     },
     {
       "slug": "cricket",
       "name": "Cricket",
       "olbg_sport_id": 7,
       "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
-      "governing_body": "International Cricket Council (ICC)",
-      "official_url": "https://www.icc-cricket.com/tournaments/mens-cricket-world-cup-league-2",
+      "governing_body": "ICC, ECB, NZC, Cricket Ireland, Cricket Australia, CSA & ACB",
+      "official_url": "https://www.cricket.com.au/matches",
       "markets_investigated": [
         "Match Winner (ODI / T20I / Test)",
         "Innings Runs",
         "Series Outright"
       ],
-      "status_summary": "3 international matches verified on official ICC match URLs (274658, 271646, 269791); lines deliberately left blank because ICC ranking tables and match scorecards render client-side."
+      "status_summary": "12 visible cards: seven match rows and five outrights, all unlined. Official fixture confirmations and pending states are shown per row; no third-party ratings were substituted."
     },
     {
       "slug": "golf",
       "name": "Golf",
-      "olbg_sport_id": 4,
-      "olbg_url": "https://www.olbg.com/betting-tips/Golf/4",
-      "governing_body": "PGA Tour & DP World Tour",
-      "official_url": "https://www.pgatour.com/schedule",
+      "olbg_sport_id": 5,
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/5",
+      "governing_body": "PGA Tour, PGA Tour Champions, Legends Tour & Sunshine Tour",
+      "official_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528/overview",
       "markets_investigated": [
         "Tournament Outright Winner",
         "Each-Way Top 5 / Top 10"
       ],
-      "status_summary": "2 tour events verified on live OLBG (Bank of Utah Championship, Genesis Championship); lines intentionally left blank pending full field strokes-gained feed."
+      "status_summary": "Four current tournament cards catalogued and unlined. Official start dates are linked; later OLBG labels are preserved and flagged as potentially different round semantics."
     },
     {
       "slug": "rugby-league",
@@ -249,7 +249,7 @@
         "2027 Grand Final / Premiership Outright",
         "Series Winner"
       ],
-      "status_summary": "3 active 2027 futures verified on live OLBG (2695857, 2801554, 2801600 — correcting empty survey snapshot); lines left blank during pre-2027 off-season."
+      "status_summary": "Three 2027 futures catalogued with corrected event IDs and raw card dates: State of Origin 2695857, Super League 2801554 and NRL 2801600. All remain unlined."
     },
     {
       "slug": "gaelic-football",
@@ -263,7 +263,7 @@
         "Handicap",
         "All-Ireland Outright"
       ],
-      "status_summary": "5 live OLBG markets catalogued (4 county club ties + All-Ireland 2027); lines left blank because county club points tables are not published in unified GAA standings."
+      "status_summary": "Six visible cards: five club fixtures including Fr Caseys–Kildimo Pallaskenry and the 2027 All-Ireland outright. All remain unlined pending unified official inputs."
     },
     {
       "slug": "greyhounds",
@@ -276,7 +276,7 @@
         "Win Trap",
         "Forecast / Tricast"
       ],
-      "status_summary": "6 live 21 October race cards catalogued across Kinsley, Harlow, Monmore, and Nottingham; lines left blank because trap sectional ratings require a licensed GBGB data feed."
+      "status_summary": "The current OLBG hub displays 'No tips found'; stale 21 October race cards were removed."
     },
     {
       "slug": "aussie-rules",
@@ -290,7 +290,7 @@
         "Line / Handicap",
         "Total Score"
       ],
-      "status_summary": "Live OLBG hub opened on 2026-10-21 and confirmed to list 0 active tips during the post-Grand-Final AFL off-season."
+      "status_summary": "The current OLBG hub displays 'No tips found' on 22 October 2026."
     },
     {
       "slug": "esports",
@@ -304,7 +304,7 @@
         "Map Handicap",
         "Total Maps"
       ],
-      "status_summary": "Live OLBG hub opened on 2026-10-21 and confirmed to list 0 active tips ('No tips found')."
+      "status_summary": "The current OLBG hub displays 'No tips found' on 22 October 2026."
     }
   ]
 }

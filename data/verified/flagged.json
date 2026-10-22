@@ -1,105 +1,155 @@
 {
-  "captured_at": "2026-10-21",
+  "captured_at": "2026-10-22",
   "items": [
     {
       "id": "VF-01",
-      "severity": "medium",
-      "category": "Blank unconfirmed market",
-      "sport": "Basketball (NBA)",
-      "item": "All 11 NBA Game Totals left blank ('—')",
-      "detail": "Official 2025-26 NBA standings on nba.com publish W, L, Home and Road records without points scored/conceded per team. Moneyline and spread are originated from prior-season records; totals are deliberately left blank rather than estimated.",
-      "source_name": "NBA Official Standings (2025-26)",
-      "source_url": "https://www.nba.com/standings?Season=2025-26"
+      "severity": "high",
+      "category": "Dynamic coverage limitation",
+      "sport": "Cross-sport",
+      "item": "Load More Tips remains unresolved on ten active hubs",
+      "detail": "The 126 current static cards are covered, but hidden results behind Load More are not claimed. Basketball pagination probes did not advance the inventory. This dashboard is therefore a fullest supportable static capture, not exhaustive dynamic OLBG coverage.",
+      "source_name": "OLBG global tips and sport hubs",
+      "source_url": "https://www.olbg.com/betting-tips"
     },
     {
       "id": "VF-02",
-      "severity": "medium",
-      "category": "Model cap",
-      "sport": "Basketball (NBA)",
-      "item": "All 11 NBA picks capped at Medium confidence",
-      "detail": "Every club on the 21 October NBA card enters 2026-27 at 0-0. Because lines rely on completed 2025-26 records prior to off-season roster movement taking effect on court, confidence is strictly capped at 'medium'.",
-      "source_name": "NBA 2026-27 Standings",
-      "source_url": "https://www.nba.com/standings"
+      "severity": "high",
+      "category": "Stale event removal",
+      "sport": "Cross-sport",
+      "item": "Expired 21 October rows removed",
+      "detail": "Stale NHL, NBA, EuroLeague/EuroCup, tennis, snooker, volleyball, cricket and greyhound entries are excluded from the active desk. Three still-visible but expired NBA cards (534839, 535674, 534893) are logged rather than published as upcoming picks.",
+      "source_name": "NBA official calendar",
+      "source_url": "https://www.nba.com/games?date=2026-10-22"
     },
     {
       "id": "VF-03",
       "severity": "medium",
-      "category": "Blank unconfirmed input",
-      "sport": "Snooker",
-      "item": "9 of 11 WST Northern Ireland Open R2 matches left unlined ('—')",
-      "detail": "World Snooker Tour's official rankings page renders ranks #1–#36 server-side and loads #37+ dynamically. Only the two all-Top-36 ties (Higgins #6 vs Jak Jones #24; Zhang Anda #21 vs Mark Williams #8) are priced; the 9 ties with a #37+ player keep rank and odds blank.",
-      "source_name": "WST Official World Rankings",
-      "source_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+      "category": "Discovery provenance",
+      "sport": "Cross-sport",
+      "item": "Official supplements separated from OLBG-discovered rows",
+      "detail": "Forty official-only supplements (12 NHL, 10 NBA, five EuroLeague, eight rugby union, three SHL and two MLB) carry 'official supplementary' provenance and no OLBG link. The dashboard never presents them as proof of OLBG coverage.",
+      "source_name": "NHL official daily schedule",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-22"
     },
     {
       "id": "VF-04",
       "severity": "medium",
-      "category": "Blank unconfirmed input",
-      "sport": "Tennis",
-      "item": "8 WTA / Challenger / #101+ matches left unlined ('—')",
-      "detail": "ATP Tour renders singles ranks #1–#100 server-side (7 Top-100 matches priced). WTA singles rankings render client-side and ATP ranks > #100 require dynamic pagination, so those 8 matches keep player points and prices blank.",
-      "source_name": "WTA Singles Rankings",
-      "source_url": "https://www.wtatennis.com/rankings/singles"
+      "category": "Blank market and model cap",
+      "sport": "Basketball (NBA)",
+      "item": "14 NBA totals blank; all NBA picks capped Medium",
+      "detail": "Moneyline and spread use completed official 2025-26 records. Current totals are not inferred from unavailable current PF/PA inputs, and off-season roster uncertainty caps every NBA selection at Medium.",
+      "source_name": "NBA official standings",
+      "source_url": "https://www.nba.com/standings?Season=2025-26"
     },
     {
       "id": "VF-05",
-      "severity": "high",
-      "category": "Statistical & CMS guard",
-      "sport": "Volleyball",
-      "item": "4 Polish PlusLiga fixtures left unlined ('—')",
-      "detail": "Clubs have played only M=1 match in 2026/27 (N=1 is insufficient to originate independent prices) and plusliga.pl/table.html redirects to the shared PLS tauronliga.pl template.",
-      "source_name": "PlusLiga Official Games",
-      "source_url": "https://www.plusliga.pl/games.html"
-    },
-    {
-      "id": "VF-06",
-      "severity": "high",
-      "category": "Client-rendered source",
-      "sport": "Cricket",
-      "item": "3 ICC international fixtures left unlined ('—')",
-      "detail": "ICC match centres confirm the fixtures (274658, 271646, 269791) in page metadata, while team rating tables and scorecards render 'Loading' client-side. No secondary cricket site was used as a substitute.",
-      "source_name": "ICC Match 274658",
-      "source_url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh"
-    },
-    {
-      "id": "VF-07",
-      "severity": "low",
-      "category": "Blank unconfirmed venue",
-      "sport": "Handball & EuroCup",
-      "item": "11 EHF CL venues & 4 EuroCup venues left blank ('—')",
-      "detail": "Only venues explicitly confirmed on opened official match pages (Arena Zagreb for Zagreb–PSG and the 10 EuroLeague arenas) are populated; unverified venues remain blank.",
-      "source_name": "EHF Champions League Matches",
-      "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"
-    },
-    {
-      "id": "VF-08",
-      "severity": "low",
-      "category": "Unlined futures / specialist feeds",
-      "sport": "Golf, Rugby League, Gaelic Football, Greyhounds",
-      "item": "16 specialist/futures markets catalogued without prices ('—')",
-      "detail": "PGA/DP World Tour 132-man strokes-gained feeds, 2027 pre-roster NRL/Super League futures, county GAA club tables, and licensed GBGB greyhound sectional data are not publicly server-rendered; fixtures are linked and prices left blank.",
-      "source_name": "OLBG Sitemap",
+      "severity": "medium",
+      "category": "Blank unconfirmed inputs",
+      "sport": "Cross-sport",
+      "item": "74 visible cards deliberately unlined",
+      "detail": "Rows lacking precise official fixture confirmation or comparable current strength inputs retain blank winner, handicap, total and pick cells. Official review links are not mislabeled as proof of verification.",
+      "source_name": "OLBG sitemap and hubs",
       "source_url": "https://www.olbg.com/sitemap-betting-tips.xml"
     },
     {
+      "id": "VF-06",
+      "severity": "medium",
+      "category": "Date/time semantics",
+      "sport": "Cross-sport",
+      "item": "Relative OLBG labels retained without UTC inference",
+      "detail": "Today/Tomorrow labels and viewer-timezone renders are preserved as raw card text. ISO date/time fields are used only where official pages independently establish them.",
+      "source_name": "OLBG Tennis hub",
+      "source_url": "https://www.olbg.com/betting-tips/Tennis/3"
+    },
+    {
+      "id": "VF-07",
+      "severity": "medium",
+      "category": "Official/date mismatch",
+      "sport": "Rugby Union",
+      "item": "Six Nations OLBG 14 March label vs official 13 March finish",
+      "detail": "The official 2027 schedule concludes with Ireland–France on 13 March at 20:10 GMT. OLBG's 14 March 20:00 label is retained as raw text and not treated as an official fixture date.",
+      "source_name": "Six Nations official 2027 schedule",
+      "source_url": "https://www.sixnationsrugby.com/en/m6n/news/mens-six-nations-2027-fixtures-and-schedule-confirmed"
+    },
+    {
+      "id": "VF-08",
+      "severity": "medium",
+      "category": "Tournament-round semantics",
+      "sport": "Golf",
+      "item": "Four OLBG labels differ from official tournament starts",
+      "detail": "Official sources confirm Bermuda, Senior Italian Open and Stella Artois beginning 22 October, and Stifel beginning 23 October. Later OLBG labels are preserved but flagged as potentially later rounds rather than overwritten.",
+      "source_name": "PGA Tour Bermuda official page",
+      "source_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528/overview"
+    },
+    {
       "id": "VF-09",
-      "severity": "low",
-      "category": "Zero active markets",
-      "sport": "Aussie Rules & eSports",
-      "item": "0 live events on OLBG hubs on 2026-10-21",
-      "detail": "Both hubs were fetched directly on 2026-10-21 and returned 'No tips found' (AFL off-season; between LoL Worlds knockout stages on OLBG). Dedicated sport pages confirm the empty check without inventing fixtures.",
-      "source_name": "OLBG Aussie Rules Hub",
-      "source_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22"
+      "severity": "medium",
+      "category": "Stored capture / corrected start",
+      "sport": "Motor Racing",
+      "item": "F1 race time corrected; standings remain tied to stored capture",
+      "detail": "Formula 1's official US GP page gives 25 October at 16:00 track time. Stored standings inputs are explicitly dated 2026-10-21 and are not described as newly refreshed on 22 October.",
+      "source_name": "Formula 1 United States GP",
+      "source_url": "https://www.formula1.com/en/racing/2026/united-states"
     },
     {
       "id": "VF-10",
-      "severity": "medium",
-      "category": "OLBG platform irregularity",
+      "severity": "high",
+      "category": "Official-source redirect",
+      "sport": "Volleyball",
+      "item": "PlusLiga URL redirected to TAURON Liga",
+      "detail": "Three Polish PlusLiga cards remain official confirmation pending. A redirect to a different competition's shell is not accepted as fixture or ratings verification.",
+      "source_name": "PlusLiga review URL",
+      "source_url": "https://www.plusliga.pl/games.html"
+    },
+    {
+      "id": "VF-11",
+      "severity": "high",
+      "category": "Participant confirmation pending",
+      "sport": "Cricket",
+      "item": "Afghanistan–Zimbabwe displayed as 23 October final",
+      "detail": "ACB officially confirms the final date but its schedule does not pre-confirm participants. The pairing and start label remain OLBG-sourced and unlined; no third-party report is used as official proof.",
+      "source_name": "Afghanistan Cricket Board schedule",
+      "source_url": "https://acb.af/en-US/post/afghanistan-to-host-bangladesh-and-zimbabwe-for-multi-format-series-in-uae"
+    },
+    {
+      "id": "VF-12",
+      "severity": "low",
+      "category": "Zero active markets",
+      "sport": "Snooker, Greyhounds, Aussie Rules & eSports",
+      "item": "Four eligible hubs display no tips",
+      "detail": "Their category pages remain present with zero rows so the empty checks are visible; no substitute fixtures are invented.",
+      "source_name": "OLBG Snooker hub",
+      "source_url": "https://www.olbg.com/betting-tips/Snooker/8"
+    },
+    {
+      "id": "VF-13",
+      "severity": "low",
+      "category": "Taxonomy / event-ID corrections",
+      "sport": "Basketball, Golf & Rugby League",
+      "item": "Correct routes and futures IDs enforced",
+      "detail": "Basketball uses sport ID 4 and Golf 5. Rugby League maps State of Origin 2695857, Super League 2801554 and NRL 2801600; the previous State of Origin/NRL swap is removed.",
+      "source_name": "OLBG betting-tips sitemap",
+      "source_url": "https://www.olbg.com/sitemap-betting-tips.xml"
+    },
+    {
+      "id": "VF-14",
+      "severity": "low",
+      "category": "Neutral-site handling",
+      "sport": "Basketball (NBA)",
+      "item": "HOU @ SAS at Moody Center has no home-court adjustment",
+      "detail": "San Antonio remains the official designated home team, but the official Austin neutral venue is shown and the NBA model's home-court logit adjustment is set to zero for this game.",
+      "source_name": "NBA official HOU–SAS game page",
+      "source_url": "https://www.nba.com/game/hou-vs-sas-0022600009"
+    },
+    {
+      "id": "VF-15",
+      "severity": "low",
+      "category": "Confidence price-band gate",
       "sport": "Cross-sport",
-      "item": "Viewer-timezone rendering, abbreviated names & cached global /betting-tips cards",
-      "detail": "OLBG hub pages display kick-offs in US Eastern time on US runners (e.g. 12:45 vs 18:45 CEST for EHF Handball), abbreviate club names ('Eire Og Cor'), and cache stale soccer cards on the global /betting-tips landing page.",
-      "source_name": "OLBG Global Tips Page",
-      "source_url": "https://www.olbg.com/betting-tips"
+      "item": "Probability alone cannot produce High",
+      "detail": "High requires p > 0.70 and fair American odds from -250 through +10000 inclusive. Stronger favourites shorter than -250 are capped Medium and expose the failed price-band gate in matches.json.",
+      "source_name": "Methodology and deterministic tests",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2"
     }
   ]
 }

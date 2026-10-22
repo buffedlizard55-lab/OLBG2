@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-10-21",
+  "captured_at": "2026-10-22",
   "findings": [
     {
       "id": "RA-01",
@@ -110,6 +110,94 @@
       "source_name": "EHF Official Standings",
       "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
       "resolution": "Explicit '3W-1D-0L' notation enforced across all /verified/ and /survey/ narratives."
+    },
+    {
+      "id": "RA-11",
+      "severity": "high",
+      "layer": "Verified (/verified/)",
+      "file": "scripts/verified_seed.py & data/verified/matches.json",
+      "published": "Baseline active desk retained stale 21 October events and used Basketball/19 and Golf/4.",
+      "official": "Current sitemap and hubs use Basketball/4 and Golf/5; expired cards are not upcoming official fixtures.",
+      "source_name": "OLBG betting-tips sitemap",
+      "source_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "resolution": "Replaced active inventory, corrected taxonomy and added exact per-event provenance."
+    },
+    {
+      "id": "RA-12",
+      "severity": "high",
+      "layer": "Verified (/verified/)",
+      "file": "scripts/verified_model.py",
+      "published": "HIGH_THRESHOLD=0.72 with no American odds gate; 20 High picks included stale or unsupported narratives.",
+      "official": "Requested rule is strict p>0.70 plus fair American -250 through +10000; each High narrative needs unique officially supported form facts.",
+      "source_name": "NHL official MIN–CGY game feed",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+      "resolution": "Implemented two-part gate and regenerated only qualifying current High narratives."
+    },
+    {
+      "id": "RA-13",
+      "severity": "high",
+      "layer": "Verified (/verified/)",
+      "file": "data/verified/matches.json",
+      "published": "Official-only NHL/rugby/baseball fixtures were indistinguishable from OLBG-discovered cards.",
+      "official": "The current Ice Hockey hub shows four SHL/Liiga cards and no current NHL card; official schedules can supplement but cannot prove OLBG discovery.",
+      "source_name": "OLBG Ice Hockey hub",
+      "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "resolution": "Added OLBG-discovered vs official supplementary states and removed OLBG links from supplements."
+    },
+    {
+      "id": "RA-14",
+      "severity": "medium",
+      "layer": "Verified (/verified/)",
+      "file": "scripts/verified_model.py (f1-2026-usgp)",
+      "published": "US Grand Prix stored as 2026-10-25T20:00:00Z and old 2027 championship row substituted for event 912.",
+      "official": "Official COTA page gives 25 October at 16:00 track time; current event 912 is 2026 Championship Without Kimi Antonelli.",
+      "source_name": "Formula 1 United States GP",
+      "source_url": "https://www.formula1.com/en/racing/2026/united-states",
+      "resolution": "Corrected race label/time, replaced the wrong future and originated the actual without-Antonelli market."
+    },
+    {
+      "id": "RA-15",
+      "severity": "medium",
+      "layer": "Verified (/verified/)",
+      "file": "data/verified/matches.json",
+      "published": "Six Nations and golf card dates were treated as ordinary fixture start times.",
+      "official": "Six Nations ends 13 March 2027; official golf tournament windows begin 22 or 23 October while several OLBG labels are later.",
+      "source_name": "Six Nations official schedule",
+      "source_url": "https://www.sixnationsrugby.com/en/m6n/news/mens-six-nations-2027-fixtures-and-schedule-confirmed",
+      "resolution": "Separated official dates from raw OLBG labels and added explicit semantic flags."
+    },
+    {
+      "id": "RA-16",
+      "severity": "medium",
+      "layer": "Verified (/verified/)",
+      "file": "scripts/verified_model.py (NBA)",
+      "published": "NBA model applied a standard home-court adjustment to every fixture and omitted venues.",
+      "official": "NBA lists HOU@SAS at Moody Center in Austin; it is not a normal San Antonio home-court fixture.",
+      "source_name": "NBA official HOU–SAS page",
+      "source_url": "https://www.nba.com/game/hou-vs-sas-0022600009",
+      "resolution": "Added all official venues and disabled home-court adjustment for the neutral-site game."
+    },
+    {
+      "id": "RA-17",
+      "severity": "medium",
+      "layer": "Verified (/verified/)",
+      "file": "data/verified/matches.json & sports.json",
+      "published": "Coverage wording implied all active OLBG events were captured despite Load More controls.",
+      "official": "Static rendered chunks expose 126 current cards; dynamic controls remain unresolved and pagination probes are not valid page advancement.",
+      "source_name": "OLBG Basketball hub",
+      "source_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "resolution": "Publish static coverage plus labelled supplements and flag the unresolved dynamic limitation on every relevant page."
+    },
+    {
+      "id": "RA-18",
+      "severity": "low",
+      "layer": "Verified (/verified/)",
+      "file": "scripts/verified_build.py",
+      "published": "Generic 'Official Fixture' labels and hard-coded 21 October counts, dates, thresholds and another session's branch name.",
+      "official": "Some rows have only official review pages or stored stats captures; those states must not be described as newly verified fixtures.",
+      "source_name": "Verified methodology source",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2",
+      "resolution": "Generate labels and methodology from current data, capture date and per-row provenance."
     }
   ]
 }

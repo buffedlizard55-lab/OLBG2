@@ -1,24 +1,27 @@
 #!/usr/bin/env python3
-"""Write cleanroom, primary-source-verified multi-sport inputs to data/verified/.
+"""Write the verified multi-sport source register to data/verified/.
 
-Every single fixture ID, start time, venue, team record, points tally, ranking
-position, and two-year prize sum in this module was retrieved directly from an
-official governing-body or league endpoint on 2026-10-21. Where an official
-page did not publish a value server-side (e.g. NBA team points for/against on
-nba.com/standings, WTA singles rankings, ATP ranks > 100, WST snooker ranks > 36,
-ICC cricket ratings/scorecards behind client JS shells, county GAA tables, or
-licensed GBGB trap form), the corresponding field is explicitly None so
-downstream tables render it blank ('—') and register it on verified/flagged.html.
+The constants below are the 2026-10-21 baseline library of official rating
+captures.  verified_refresh_data.py replaces the active event inventory for
+2026-10-22, removes stale rows, corrects taxonomy and attaches per-row
+provenance.  A stored baseline value is never described as freshly re-fetched.
+Where official inputs are unavailable, active rows remain explicitly unlined.
 """
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
+from verified_refresh_data import (
+    CAPTURE_DATE,
+    _sports_refresh,
+    refresh_audit,
+    refresh_flags,
+    refresh_inputs,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "verified"
-
-CAPTURE_DATE = "2026-10-21"
 
 EXCLUDED_SPORTS = [
     {"slug": "soccer", "label": "Soccer / Football", "olbg_sport_id": 1, "olbg_url": "https://www.olbg.com/betting-tips/Football/1", "reason": "Excluded by project scope ('soccer', 'football')"},
@@ -666,7 +669,7 @@ def write_json(path: Path, payload: object) -> None:
 def main() -> None:
     write_json(
         OUT / "sports.json",
-        {
+        _sports_refresh({
             "captured_at": CAPTURE_DATE,
             "excluded_keywords": [
                 "soccer",
@@ -682,11 +685,11 @@ def main() -> None:
             ],
             "excluded_sports": EXCLUDED_SPORTS,
             "eligible_sports": ELIGIBLE_SPORTS,
-        },
+        }),
     )
     write_json(
         OUT / "inputs.json",
-        {
+        refresh_inputs({
             "captured_at": CAPTURE_DATE,
             "nba_extra_game_ids": {"Sacramento Kings|LA Clippers|2026-10-21": "0022600093"},
             "euroleague_teams": EUROLEAGUE_TEAMS,
@@ -707,11 +710,11 @@ def main() -> None:
             "mlb_world_series": MLB_WORLD_SERIES,
             "f1_drivers": F1_DRIVERS,
             "unlined_rows": UNLINED_ROWS,
-        },
+        }),
     )
-    write_json(OUT / "repo_audit.json", {"captured_at": CAPTURE_DATE, "findings": REPO_AUDIT})
-    write_json(OUT / "flagged.json", {"captured_at": CAPTURE_DATE, "items": FLAGGED_ITEMS})
-    print(f"verified_seed: wrote sports ({len(ELIGIBLE_SPORTS)} eligible / {len(EXCLUDED_SPORTS)} excluded), inputs, {len(REPO_AUDIT)} audit rows, {len(FLAGGED_ITEMS)} flags")
+    write_json(OUT / "repo_audit.json", {"captured_at": CAPTURE_DATE, "findings": refresh_audit(REPO_AUDIT)})
+    write_json(OUT / "flagged.json", {"captured_at": CAPTURE_DATE, "items": refresh_flags(FLAGGED_ITEMS)})
+    print(f"verified_seed: wrote {CAPTURE_DATE} sports, inputs, {len(refresh_audit(REPO_AUDIT))} audit rows, {len(refresh_flags(FLAGGED_ITEMS))} flags")
 
 
 if __name__ == "__main__":

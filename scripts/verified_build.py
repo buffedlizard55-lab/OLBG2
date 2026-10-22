@@ -364,6 +364,21 @@ tr:hover td { background: #f8fafc; }
   font-size: 0.78rem;
   white-space: nowrap;
 }
+.provenance {
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--ink-muted);
+  max-width: 32rem;
+}
+.provenance strong { color: var(--accent-ink); }
+.gate-note {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  max-width: 24rem;
+}
+.table-wrap table { min-width: 1180px; }
 
 .pred-list {
   display: grid;
@@ -510,6 +525,7 @@ def esc(val: object) -> str:
 
 
 def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
+    capture = json.loads((DATA / "sports.json").read_text(encoding="utf-8"))["captured_at"]
     prefix = "../" * depth
     root_prefix = "../" * (depth + 1)
     nav_items = [
@@ -541,7 +557,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
     <div class="topbar-inner">
       <a class="brand" href="{prefix}index.html">
         <span>OLBG Verified Research &amp; Origination Desk</span>
-        <span class="brand-badge">2026-10-21 Primary Audit</span>
+        <span class="brand-badge">{capture} Source Audit</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
         {nav_html}
@@ -564,7 +580,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
 {body}
   </main>
   <footer>
-    <div>Every value published on <code>/verified/</code> is traced to an official governing-body or league endpoint captured on <strong>2026-10-21</strong>. Unconfirmed fields are left strictly blank (<code>—</code>) and listed on <a href="{prefix}flagged.html">Flagged for Review</a>.</div>
+    <div>Capture: <strong>{capture}</strong>. Every row carries an official source or review link plus a discovery/confirmation state. Unconfirmed fields remain blank (<code>—</code>) and are listed on <a href="{prefix}flagged.html">Flagged for Review</a>. Stored inputs retain their own capture caveats.</div>
     <div>Excluded per brief: Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, Specials.</div>
   </footer>
   <script src="{prefix}assets/app.js"></script>
@@ -633,9 +649,20 @@ def render_match_table(rows: list[dict], depth: int = 0, show_sport_col: bool = 
 
         if m.get("pick"):
             p = m["pick"]
+            american = p.get("fair_american")
+            american_text = f"{american:+d}" if isinstance(american, int) else "—"
+            gate = p.get("high_gate") or {}
+            gate_html = ""
+            if conf == "high":
+                gate_html = '<div class="gate-note">High gate passed: probability and fair price both qualify.</div>'
+            elif gate.get("probability_gt_70") and not gate.get("eligible"):
+                gate_html = f'<div class="gate-note">High blocked: fair American {american_text} fails the required price band.</div>'
+            elif m.get("confidence_cap") == "medium":
+                gate_html = '<div class="gate-note">Medium cap: prior-season NBA baseline.</div>'
             pick_html = (
                 f"<div><strong>{esc(p['selection'])}</strong></div>"
-                f"<div>Fair <strong>{p['fair_odds']:.2f}</strong> ({p['probability']*100:.1f}%)</div>"
+                f"<div>Fair <strong>{p['fair_odds']:.2f}</strong> · American <strong>{american_text}</strong> ({p['probability']*100:.1f}%)</div>"
+                + gate_html
                 + (
                     f'<div><a href="{prefix}predictions.html#{esc(m["id"])}">Read full write-up →</a></div>'
                     if conf == "high"
@@ -647,17 +674,31 @@ def render_match_table(rows: list[dict], depth: int = 0, show_sport_col: bool = 
             pick_html = f'<span class="blank-cell">— (<a href="{prefix}flagged.html#{esc(m["id"])}">Flagged</a>)</span>'
             badge_html = '<span class="pill pill-unlined">Unlined</span>'
 
-        links = [f'<a href="{esc(m["official_url"])}" target="_blank" rel="noopener">Official Fixture ↗</a>']
+        official_label = m.get("official_source") or "Official source"
+        if m["line_status"] == "unlined":
+            official_label = f"Official review: {official_label}"
+        links = [f'<a href="{esc(m["official_url"])}" target="_blank" rel="noopener">{esc(official_label)} ↗</a>']
         if m.get("data_url"):
-            links.append(f'<a href="{esc(m["data_url"])}" target="_blank" rel="noopener">Official Standings/Stats ↗</a>')
+            links.append(f'<a href="{esc(m["data_url"])}" target="_blank" rel="noopener">Official model input / standings ↗</a>')
         if m.get("olbg_url"):
-            links.append(f'<a href="{esc(m["olbg_url"])}" target="_blank" rel="noopener">OLBG Market ↗</a>')
+            event_label = f"OLBG card #{m['olbg_event_id']}" if m.get("olbg_event_id") else "OLBG market"
+            links.append(f'<a href="{esc(m["olbg_url"])}" target="_blank" rel="noopener">{esc(event_label)} ↗</a>')
+        prov = m.get("provenance") or {}
+        prov_html = ""
+        if prov:
+            prov_html = (
+                f'<div class="provenance"><strong>{esc(prov.get("discovery"))}</strong>'
+                f' · {esc(prov.get("official_status"))}<br>{esc(prov.get("time_basis"))}</div>'
+            )
+        date_html = ""
+        if m.get("date") and m["date"] not in str(m.get("time")):
+            date_html = f'<div class="mono">Official/raw date: {esc(m["date"])}</div>'
 
         body_rows.append(
             f'<tr id="{esc(m["id"])}" data-match-row="1" data-sport="{esc(m["sport"])}" '
             f'data-conf="{esc(conf)}" data-status="{esc(status)}">'
             f"{sport_td}"
-            f"<td><div><strong>{esc(m['competition'])}</strong></div><div class=\"mono\">{esc(m['time'])}</div></td>"
+            f"<td><div><strong>{esc(m['competition'])}</strong></div>{date_html}<div class=\"mono\">{esc(m['time'])}</div></td>"
             f"<td><div><strong>{esc(m['home'])}</strong> vs <strong>{esc(m['away'])}</strong></div>"
             f"<div style=\"font-size:0.78rem;color:#64748b;\">Venue: {venue_html}</div></td>"
             f"<td>{form_html}</td>"
@@ -666,7 +707,7 @@ def render_match_table(rows: list[dict], depth: int = 0, show_sport_col: bool = 
             f"<td>{fmt_total(m.get('total_market'))}</td>"
             f"<td>{pick_html}</td>"
             f"<td>{badge_html}</td>"
-            f'<td><div class="source-links">{"".join(links)}</div></td>'
+            f'<td><div class="source-links">{"".join(links)}</div>{prov_html}</td>'
             f"</tr>"
         )
 
@@ -677,13 +718,13 @@ def render_match_table(rows: list[dict], depth: int = 0, show_sport_col: bool = 
         {sport_th}
         <th>Competition &amp; Time</th>
         <th>Match &amp; Venue</th>
-        <th>Verified Official Form / Ranking</th>
+        <th>Official Form / Ranking / Blank Reason</th>
         <th>Originated Winner Line</th>
         <th>Handicap / Spread</th>
         <th>Match Total</th>
         <th>Model Pick &amp; Price</th>
         <th>Confidence</th>
-        <th>Official Sources</th>
+        <th>Official / Review Sources &amp; Provenance</th>
       </tr>
     </thead>
     <tbody>
@@ -701,7 +742,7 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
         for f in p["facts"]
     )
     olbg_link = (
-        f' · <a href="{esc(p["olbg_url"])}" target="_blank" rel="noopener">OLBG Event Page ↗</a>'
+        f' · <a href="{esc(p["olbg_url"])}" target="_blank" rel="noopener">OLBG Hub / Card ↗</a>'
         if p.get("olbg_url")
         else ""
     )
@@ -719,7 +760,8 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
     <span><strong>Fixture:</strong> {esc(p['event'])}</span> ·
     <span><strong>Selection:</strong> {esc(p['selection'])}</span> ·
     <span><strong>Model Win Prob:</strong> {p['probability']*100:.1f}%</span> ·
-    <span><strong>Originated Fair Odds:</strong> {p['fair_odds']:.2f}</span>
+    <span><strong>Originated Fair Odds:</strong> {p['fair_odds']:.2f}</span> ·
+    <span><strong>Fair American:</strong> {p['fair_american']:+d}</span>
   </div>
   <p class="pred-body">{esc(p['text'])}</p>
   <ul class="fact-list">
@@ -745,6 +787,10 @@ def main() -> None:
     flags = flags_doc["items"]
     audits = audit_doc["findings"]
     counts = matches_doc["counts"]
+    captured_at = matches_doc["captured_at"]
+    discovered_count = sum(1 for m in matches if (m.get("provenance") or {}).get("discovery") == "OLBG-discovered")
+    supplement_count = sum(1 for m in matches if (m.get("provenance") or {}).get("discovery") == "official supplementary")
+    originated_sports = len({m["sport"] for m in matches if m["line_status"] == "originated"})
 
     (SITE / "assets").mkdir(parents=True, exist_ok=True)
     (SITE / "sports").mkdir(parents=True, exist_ok=True)
@@ -799,13 +845,13 @@ def main() -> None:
 <section class="hero">
   <p class="eyebrow">Independent Primary-Source Verification &amp; Line Origination</p>
   <h1>OLBG Multi-Sport Verified Origination Desk</h1>
-  <p>Cleanroom reverse-engineering of <strong>OLBG.com</strong> across all <strong>{len(eligible)} eligible sports</strong> on <strong>2026-10-21</strong>, strictly excluding Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, and Specials. Every fixture, team record, goal/point tally, ranking points total, and prize sum is verified directly from official governing-body feeds, with zero third-party or inferred values.</p>
+  <p>Cleanroom review of <strong>OLBG.com</strong> across all <strong>{len(eligible)} eligible sports</strong> on <strong>{captured_at}</strong>, strictly excluding Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, and Specials. The desk contains <strong>{discovered_count} static OLBG-discovered cards</strong> plus <strong>{supplement_count} clearly labelled official supplements</strong>. Confirmation and pending states are shown per row; no third-party or inferred values fill official-data gaps.</p>
 </section>
 
 <div class="kpi-grid">
   <div class="kpi"><div class="kpi-val">{len(eligible)}</div><div class="kpi-label">Eligible OLBG Sports Audited (8 Excluded)</div></div>
-  <div class="kpi"><div class="kpi-val">{counts['total_rows']}</div><div class="kpi-label">Verified Match &amp; Market Rows</div></div>
-  <div class="kpi"><div class="kpi-val">{counts['originated_rows']}</div><div class="kpi-label">Independently Originated Lines (9 Sports)</div></div>
+  <div class="kpi"><div class="kpi-val">{counts['total_rows']}</div><div class="kpi-label">Catalogued Match &amp; Market Rows</div></div>
+  <div class="kpi"><div class="kpi-val">{counts['originated_rows']}</div><div class="kpi-label">Independently Originated Lines ({originated_sports} Sports)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['high_confidence']}</div><div class="kpi-label">Bespoke Human HIGH Picks (&ge;30 Words)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['unlined_rows']}</div><div class="kpi-label">Unconfirmed Rows Left Blank &amp; Flagged</div></div>
   <div class="kpi"><div class="kpi-val">{len(audits)}</div><div class="kpi-label">Existing Repo Audit Findings Documented</div></div>
@@ -828,8 +874,8 @@ def main() -> None:
 </div>
 
 <div class="section-head" id="master-schedule">
-  <h2>Master Multi-Sport Origination Table ({counts['total_rows']} Verified Rows)</h2>
-  <p>Every row links directly to its official governing-body fixture record. Unconfirmed inputs render as <code>—</code> rather than guesses.</p>
+  <h2>Master Multi-Sport Origination Table ({counts['total_rows']} Catalogued Rows)</h2>
+  <p>Every row links to an official fixture, standings page, or explicitly labelled review source. Unconfirmed inputs render as <code>—</code> rather than guesses.</p>
 </div>
 <div class="controls">
   <input id="filter-search" type="search" placeholder="Search team, player, competition, or venue…">
@@ -879,7 +925,7 @@ def main() -> None:
 <section class="hero">
   <p class="eyebrow">Human Editorial Selection Desk · Strictly Verified Primary Facts</p>
   <h1>High-Confidence Predictions ({len(preds)} Picks)</h1>
-  <p>Every fixture graded <strong>HIGH</strong> (&ge;72.0% originated win probability backed by verified current-season primary data) carries an individual, natural human editorial write-up citing verified official form, recent match scores or rankings, and the exact betting selection.</p>
+  <p>Every <strong>HIGH</strong> pick has a published model probability strictly greater than 70% <em>and</em> a fair American price from -250 through +10000 inclusive. Each carries a unique write-up of at least 30 words with an explicit selection and relevant official form or recent-match evidence. Stronger favourites outside the price band remain Medium.</p>
 </section>
 <div class="controls">
   <select id="pred-sport-filter" aria-label="Filter predictions by sport">
@@ -927,7 +973,7 @@ def main() -> None:
 </section>
 
 <div class="callout-warn">
-  <strong>Anti-Hallucination Policy Active:</strong> Across all {counts['total_rows']} rows in <code>/verified/</code>, <strong>{counts['unlined_rows']} rows</strong> lack primary server-rendered strength inputs (such as WST rankings outside the Top 36, ATP rankings outside the Top 100, WTA singles rankings, client-rendered ICC scorecards, off-season 2027 Rugby League futures, and 1-match Polish PlusLiga tables) plus NBA Game Totals (<code>nba.com/standings</code> omits team points scored/allowed). Every such value is left blank (<code>—</code>) below.
+  <strong>Anti-Hallucination Policy Active:</strong> Across {counts['total_rows']} rows, <strong>{counts['unlined_rows']}</strong> have no originated price because a precise official fixture, final field, or comparable current strength input remains unconfirmed. NBA totals are also blank. Official review links are not represented as factual verification, and raw OLBG date labels are not silently converted to UTC.
 </div>
 
 <div class="section-head">
@@ -973,7 +1019,7 @@ def main() -> None:
 
 <div class="section-head">
   <h2>3. Unlined &amp; Blank-Field Match Rows ({len(unlined_rows)} Rows)</h2>
-  <p>All verified fixtures and futures whose betting lines were intentionally left blank rather than estimated without primary inputs.</p>
+  <p>All catalogued cards and futures whose betting lines were intentionally left blank rather than estimated without sufficient official inputs. Some fixtures are confirmed; others remain explicitly pending.</p>
 </div>
 {render_match_table(unlined_rows, depth=0, show_sport_col=True)}
 """
@@ -982,39 +1028,23 @@ def main() -> None:
     # 4. Line-by-Line Audit Page (/verified/audit.html)
     audit_body = f"""
 <section class="hero">
-  <p class="eyebrow">Forensic Line-by-Line Repository Verification</p>
-  <h1>Line-by-Line Audit of Existing Repository Layers</h1>
-  <p>Before originating a single new line on branch <code>arena/4d77e99a-olbg2</code>, we inspected every JSON file, Python generator, and HTML surface already present in the repository against live official governing-body endpoints on <strong>2026-10-21</strong>, respecting active branch file locks in <code>COORDINATION.md</code>.</p>
+  <p class="eyebrow">Forensic Repository Review · Historical Baseline Plus Current Refresh</p>
+  <h1>Line-by-Line Repository Audit</h1>
+  <p>The active verified desk was reviewed against official governing-body sources on <strong>{captured_at}</strong>. RA-01–RA-10 preserve the earlier cross-layer baseline; RA-11–RA-18 record this refresh's taxonomy, stale-event, provenance, confidence, date/time and presentation findings. Overlapping <code>/</code>, <code>/site/</code>, <code>/survey/</code>, <code>/live/</code> and <code>/verified/</code> rows are never summed.</p>
 </section>
-
 <div class="sport-grid">
-  <div class="card">
-    <div class="card-top"><h3>Layer 1 — Root Dashboard (<code>/</code>)</h3><span class="pill pill-originated">Core Tables Verified</span></div>
-    <p>Checked all 16 NHL team rows, 30 NBA prior rows, 16 URC Round 4 rows, and 24 EHF Champions League rows against official APIs: <strong>0 numerical errors</strong>. Logged missing <code>SAC @ LAC</code> ID <code>0022600093</code>, Oct 22 scoreboard URL citation on an Oct 19 game, and unlabeled handball <code>W-D-L</code> notation for active owner <code>e3c5f898</code>.</p>
-  </div>
-  <div class="card">
-    <div class="card-top"><h3>Layer 2 — Live Slate (<code>/live/</code>)</h3><span class="pill pill-originated">Clean Architecture</span></div>
-    <p>Reviewed read-only in deference to active session <code>d4b9d560</code>. Clean official-source separation; cross-linked directly from all <code>/verified/</code> pages.</p>
-  </div>
-  <div class="card">
-    <div class="card-top"><h3>Layer 3 — All-Sports Survey (<code>/survey/</code>)</h3><span class="pill pill-sev-high">Remediated in V3</span></div>
-    <p>Uncovered Wikipedia citation + fabricated Top 14 table in <code>P-01</code> (claimed Toulouse 2nd at 4-0-2 and Perpignan 14th at 0-0-6 vs official LNR #1 5-0-1 &amp; #9 3-0-3), third-party cricket URLs + 200-run vs 81-run desync, empty <code>rugby_league.json</code>, missing <code>Hurling/26</code> exclusion, and missing row-level official URLs. All remediated in <code>V3</code>.</p>
-  </div>
-  <div class="card">
-    <div class="card-top"><h3>Layer 4 — Evidence Desk v2 (<code>/site/</code>)</h3><span class="pill pill-originated">Fixed &amp; Rebuilt</span></div>
-    <p>Verified all 25 rows line by line against <code>api-web.nhle.com/v1/score/2026-10-21</code>; caught stale <code>Tage Thompson: 3 goals</code> (official live leader is <code>Tage Thompson: 5 goals; Zach Benson: 6 assists</code>), updated <code>data/desk/picks.json</code>, and rebuilt <code>site/</code> cleanly.</p>
-  </div>
+  <div class="card"><h3>Current verified desk</h3><p>{counts['total_rows']} rows, {counts['originated_rows']} originated and {counts['unlined_rows']} unlined. Every row has an official/review URL, discovery state, confirmation state and time basis. See <code>research/verified-refresh-4daa1e65.md</code> for the evidence audit.</p></div>
+  <div class="card"><h3>Stale events and taxonomy</h3><p>Expired 21 October events were removed; Basketball now uses OLBG sport ID 4, Golf ID 5, and Rugby League futures use their corrected event IDs. Still-visible expired NBA cards are excluded rather than repriced.</p></div>
+  <div class="card"><h3>Coverage and provenance</h3><p>{discovered_count} static OLBG cards and {supplement_count} official supplements are labelled separately. Load More remains unresolved, so exhaustive dynamic coverage is not claimed.</p></div>
+  <div class="card"><h3>Historical findings retained</h3><p>Older findings remain visible for manual review even where another session owned or remediated that layer. Their presence in this ledger does not claim a new fix in the current refresh.</p></div>
 </div>
-
 <div class="section-head">
-  <h2>Complete Audit Ledger ({len(audits)} Findings with Official Proof URLs)</h2>
-  <p>Full markdown narrative also archived in <code>research/line-by-line-audit-4d77e99a.md</code>.</p>
+  <h2>Complete Audit Ledger ({len(audits)} Findings with Review URLs)</h2>
+  <p>Published/existing values, official comparisons and recorded resolutions are preserved line by line.</p>
 </div>
 <div class="table-wrap">
   <table>
-    <thead>
-      <tr><th>ID</th><th>Severity</th><th>Layer &amp; File</th><th>Published Value</th><th>Official Primary Value</th><th>Action Taken</th><th>Official Proof</th></tr>
-    </thead>
+    <thead><tr><th>ID</th><th>Severity</th><th>Layer &amp; File</th><th>Published / Existing Value</th><th>Official Comparison</th><th>Recorded Resolution</th><th>Official / Review Proof</th></tr></thead>
     <tbody>{audit_rows_html}</tbody>
   </table>
 </div>
@@ -1022,22 +1052,23 @@ def main() -> None:
     (SITE / "audit.html").write_text(render_shell("Line-by-Line Repo Audit", "audit", audit_body, depth=0))
 
     # 5. Methodology Page (/verified/methodology.html)
-    meth_body = """
+    meth_body = f"""
 <section class="hero">
   <p class="eyebrow">Cleanroom Mathematical Origination &amp; Verification Rules</p>
   <h1>Origination Models, Market Coverage &amp; Confidence Grading</h1>
-  <p>All fair probabilities and decimal prices (<code>1 / p</code>, zero bookmaker overround) are computed deterministically in <code>scripts/verified_model.py</code> using only the Python standard library and verified primary inputs from <code>scripts/verified_seed.py</code> and <code>data/inputs/*.json</code>.</p>
+  <p>Fair probabilities and no-vig decimal prices (<code>1 / p</code>) are computed deterministically in <code>scripts/verified_model.py</code> using only Python's standard library and official-input registers. No bookmaker price, OLBG tipster consensus, or third-party rating enters an equation. The active output contains {counts['originated_rows']} originated rows across {originated_sports} sports and {counts['unlined_rows']} deliberately unlined rows.</p>
 </section>
-
 <div class="sport-grid">
-  <div class="card"><h3>1. Ice Hockey (NHL — 16 Games)</h3><p>Empirical-Bayes shrunk attack/defence goal rates (<code>k = 8</code> games shrinkage toward league mean goals/game) feeding a 0–25 bivariate Poisson grid with 52%/48% home/away OT/SO split. Originates 2-way Moneyline, -1.5/+1.5 Puck Line, and 5.5/6.5 Total Goals.</p></div>
-  <div class="card"><h3>2. Basketball (NBA, EuroLeague, EuroCup — 25 Games)</h3><p>NBA uses shrunk 2025-26 win-rate logit prior (capped at <code>MEDIUM</code>; totals left blank because <code>nba.com/standings</code> omits PF/PA). EuroLeague (10 R7 games) &amp; BKT EuroCup (4 R4 games) use shrunk net efficiency margin normal models across Moneyline, Spread, and Over/Under Total Points.</p></div>
-  <div class="card"><h3>3. Rugby Union (Top 14, Pro D2, URC — 23 Matches)</h3><p>Normal scoring-margin &amp; total-points distribution with empirical-Bayes shrinkage (<code>k = 4</code> matches) and home advantage (+4.5 pts) across 1X2 Match Result, Half-Point Handicap, and Total Points.</p></div>
-  <div class="card"><h3>4. Handball (EHF Champions League — 12 Matches)</h3><p>Full-support 0–60 bivariate Poisson model trained on official 4-match Group Phase GF/GA tables (<code>k = 4</code>), originating 1X2 Match Winner, Half-Goal Handicap, and Over/Under Total Goals.</p></div>
-  <div class="card"><h3>5. Darts (PDC European Championship — 16 Ties)</h3><p>Exact negative-binomial / binomial race-to-6-legs Markov calculation from log two-year official PDC Werner Ranking Ladder prize sums for all 32 players, pricing Match Winner, -1.5/+1.5 Leg Handicap, and Over/Under 9.5 Total Legs.</p></div>
-  <div class="card"><h3>6. Tennis &amp; Snooker (7 ATP + 2 WST Matches)</h3><p>Exact best-of-3 sets (ATP Top-100 points) and best-of-7 frames (WST Top-36 prize money) combinatorial models pricing Match Winner, -1.5/+1.5 Set/Frame Handicap, and Over/Under Total Sets/Frames. Matches involving unconfirmed ranks outside SSR pages are left blank.</p></div>
-  <div class="card"><h3>7. Baseball &amp; Motor Racing (MLB WS G1 + 2 F1 Markets)</h3><p>MLB World Series Game 1 (<code>TB 98-64, 736 RS / 650 RA</code> at <code>MIL 103-59, 832 RS / 618 RA</code>) uses shrunk run-rate Poisson across Moneyline, Run Line, and Total Runs. FIA Formula 1 prices Round 18 &amp; 2026 Drivers' Championship from official 17-round points shares.</p></div>
-  <div class="card"><h3>8. Confidence Thresholds</h3><p><strong>HIGH:</strong> &ge;72.0% model probability backed by current-season official stats (requires bespoke &ge;30-word human editorial preview). <strong>MEDIUM:</strong> 60.0%–71.99% (or prior-season cap). <strong>LOW:</strong> &lt;60.0%. <strong>Unlined:</strong> Any missing primary input.</p></div>
+  <div class="card"><h3>1. Ice Hockey — 19 Originated Rows</h3><p>Twelve NHL, six SHL and one Liiga fixture use eight-game empirical-Bayes shrinkage of official GF/GA toward a scoring baseline, a Poisson score grid, and a 52% home share of tied regulation outcomes for two-way moneyline. Puck line -1.5/+1.5 and 5.5/6.5 totals are also priced. Liiga's baseline uses only JYP/HPK because a complete current league table was not captured.</p></div>
+  <div class="card"><h3>2. Basketball — 23 Originated Rows</h3><p>Fourteen NBA games use ten-game shrinkage of completed official 2025–26 win records, a win-rate logit and normal spread model. Every NBA pick is Medium-capped and every total is blank. HOU@SAS has zero home-court adjustment at neutral Moody Center. Nine current EuroLeague games use three-game PF/PA shrinkage, 3.4-point home advantage, moneyline, spread and totals; expired EuroCup rows are removed.</p></div>
+  <div class="card"><h3>3. Rugby Union — 23 Originated Rows</h3><p>Seven Top 14, eight Pro D2 and eight URC Round 4 fixtures use three-match PF/PA shrinkage, 4.2-point home advantage and normal scoring distributions (margin SD 12.6; total SD 14.2). Markets are 1X2 match result, half-point handicap and total points. The Six Nations future remains unlined.</p></div>
+  <div class="card"><h3>4. Handball — Five Originated Rows</h3><p>Only the five current EHF Champions League fixtures are priced. Three-match GF/GA shrinkage and a Poisson grid produce 1X2, handicap and total-goal lines. Fifteen other visible domestic/international cards remain unlined pending exact official fixture and ratings confirmation.</p></div>
+  <div class="card"><h3>5. Darts — 16 Originated Rows</h3><p>Official PDC ranking prize sums enter a log-ratio leg-strength model; an exact race-to-six distribution prices match winner, leg handicap and 9.5 total legs. PDC inputs are official, while fixture/date labels remain OLBG-sourced. Two outrights are unlined.</p></div>
+  <div class="card"><h3>6. Baseball &amp; Motor Racing — Six Originated Rows</h3><p>Three official World Series games use team season run rates in a Poisson model for moneyline, run line and totals. Formula 1 uses official-standing points raised to 1.65 with an explicit 8% residual, a race market, title market, and the actual without-Antonelli market. The US race is 25 October at 16:00 track time; standings retain their stored 21 October capture caveat.</p></div>
+  <div class="card"><h3>7. Unlined Markets — {counts['unlined_rows']} Rows</h3><p>Tennis has 20 current cards but zero originated lines; Snooker, Greyhounds, Aussie Rules and eSports have zero active rows. Volleyball, cricket, golf, rugby league and Gaelic football are catalogued with blank markets where exact fixtures, final fields or comparable current official inputs are insufficient. NBA totals and not-applicable outright handicap/total cells are also blank.</p></div>
+  <div class="card"><h3>8. Strict High Confidence Gate</h3><p><strong>High requires both:</strong> published <code>p &gt; 0.70</code> and fair American <code>-250 &lt;= odds &lt;= +10000</code>. American prices are derived from the same probability: favourites <code>-100p/(1-p)</code>, underdogs <code>+100(1-p)/p</code>. Exactly 70% is not High; -250 and +10000 are inclusive. High also requires a unique official-fact narrative of at least 30 words.</p></div>
+  <div class="card"><h3>9. Medium, Low &amp; Explicit Caps</h3><p>Medium applies from 60% upward when the High gate is not passed, including strong favourites shorter than -250, and to every NBA pick regardless of probability. Low applies below 60%. Each pick stores its fair American price and both gate booleans in <code>matches.json</code>; the table exposes blocked High cases.</p></div>
+  <div class="card"><h3>10. Discovery, Dates &amp; Coverage</h3><p>The desk contains {discovered_count} static OLBG-discovered cards and {supplement_count} official supplements. Supplements do not claim OLBG coverage. Relative Today/Tomorrow labels and later golf/futures labels remain raw text unless an official page independently establishes date/time. Load More is unresolved, so this is the fullest supportable static capture—not exhaustive dynamic coverage.</p></div>
 </div>
 """
     (SITE / "methodology.html").write_text(render_shell("Methodology & Models", "methodology", meth_body, depth=0))
@@ -1056,7 +1087,7 @@ def main() -> None:
         rows_section = (
             render_match_table(s_rows, depth=1, show_sport_col=False)
             if s_rows
-            else '<div class="callout-warn">Official governing-body and live OLBG hub checks confirmed <strong>0 active fixtures</strong> on 2026-10-21 (off-season / between matchdays).</div>'
+            else f'<div class="callout-warn">The live OLBG hub displayed <strong>No tips found</strong> on {captured_at}; zero active rows are published rather than substitutes.</div>'
         )
         sp_body = f"""
 <p style="margin:0 0 0.75rem;font-size:0.85rem;"><a href="../index.html">← Back to All 17 Eligible Sports</a></p>
@@ -1072,8 +1103,8 @@ def main() -> None:
 </section>
 {pred_section}
 <div class="section-head">
-  <h2>Verified {esc(s['name'])} Schedule &amp; Originated Lines ({len(s_rows)} Rows)</h2>
-  <p>Every row carries direct links to its official governing-body record. Unconfirmed cells render as <code>—</code>.</p>
+  <h2>Catalogued {esc(s['name'])} Schedule &amp; Originated Lines ({len(s_rows)} Rows)</h2>
+  <p>Every row carries an official or explicitly labelled review link plus provenance. Unconfirmed cells render as <code>—</code>.</p>
 </div>
 {rows_section}
 """

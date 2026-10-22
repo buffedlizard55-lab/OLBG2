@@ -257,6 +257,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 # --------------------------------------------------------------------------- shell
 NAV = [
     ("final/index.html", "Consolidated desk (all 17 sports)"),
+    ("update/index.html", "Update 22–28 Oct (fresh capture)"),
     ("index.html", "Verified desk"),
     ("matches.html", "All matches"),
     ("sports/index.html", "Sports"),

@@ -274,7 +274,7 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
     <nav class="nav" aria-label="Main navigation">{nav}</nav>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · 155 stored rows · 112 originated lines · 13 price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">18 open review items</a></div></div>
+<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · 119 stored rows · 93 originated lines · 14 price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">22 open review items</a></div></div>
 <main class="wrap">
 {body}
 </main>
@@ -351,7 +351,7 @@ def build_index(matches, preds=None, flagged=None) -> str:
   <div class="kpi"><div class="v">{total}</div><div class="k">stored rows</div><div class="s">{sports_with_rows} sports · {competitions} competitions</div></div>
   <div class="kpi"><div class="v">{originated}</div><div class="k">originated lines</div><div class="s">moneyline, handicap, total</div></div>
   <div class="kpi"><div class="v">{band_count}</div><div class="k">price-band picks</div><div class="s">≥70% and −250 to +10000</div></div>
-  <div class="kpi"><div class="v">{pred_count}</div><div class="k">written predictions</div><div class="s">{band_count} band + {high_pred} high, 30+ words</div></div>
+  <div class="kpi"><div class="v">{pred_count}</div><div class="k">written predictions</div><div class="s">all {band_count} in the −250…+10000 band, 30+ words</div></div>
   <div class="kpi"><div class="v">{reverified}</div><div class="k">re-verified today</div><div class="s">NHL and MLB feeds</div></div>
   <div class="kpi"><div class="v">{flag_count}</div><div class="k">open review items</div><div class="s">blank, stale or irregular</div></div>
 </div>
@@ -382,7 +382,7 @@ silently. <a href="sports/index.html">Open the category index</a>.</p>
   <div class="panel"><h3>Prices and confidence</h3><ul>
     <li>Confidence split: <strong>{conf.get('high', 0)} high</strong>, {conf.get('medium', 0)} medium, {conf.get('low', 0)} low, {conf.get('none', 0)} unlined/no pick.</li>
     <li><strong>{band_count} band picks</strong> sit at fair odds 1.40-1.42 with model probabilities of 70.0-71.4%, the only window satisfying both the ≥70% rule and the −250 floor.</li>
-    <li>The {high_pred} original high-confidence picks are priced 1.02-1.39 and are labelled <em>outside band</em>; they are not presented as meeting the brief's price rule.</li>
+    <li>Moneyline picks graded high (&ge;72%) whose fair price is shorter than the &minus;250 floor stay on the sport tables without a written prediction, rather than padding the picks page with ultra-short prices.</li>
     <li>The longest fair price anywhere in the {pred_count} predictions is <strong>{max_price:.2f}</strong>, inside the +10000 ceiling.</li>
   </ul></div>
 </div>

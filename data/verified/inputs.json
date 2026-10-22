@@ -1,8 +1,811 @@
 {
-  "captured_at": "2026-10-21",
-  "nba_extra_game_ids": {
-    "Sacramento Kings|LA Clippers|2026-10-21": "0022600093"
+  "captured_at": "2026-10-22",
+  "nhl_teams": {
+    "ANA": {
+      "name": "Anaheim Ducks",
+      "gp": 9,
+      "w": 4,
+      "l": 5,
+      "otl": 0,
+      "gf": 26,
+      "ga": 29,
+      "points": 8
+    },
+    "BOS": {
+      "name": "Boston Bruins",
+      "gp": 10,
+      "w": 7,
+      "l": 2,
+      "otl": 1,
+      "gf": 36,
+      "ga": 22,
+      "points": 15
+    },
+    "BUF": {
+      "name": "Buffalo Sabres",
+      "gp": 9,
+      "w": 4,
+      "l": 3,
+      "otl": 2,
+      "gf": 27,
+      "ga": 33,
+      "points": 10
+    },
+    "CAR": {
+      "name": "Carolina Hurricanes",
+      "gp": 11,
+      "w": 8,
+      "l": 2,
+      "otl": 1,
+      "gf": 42,
+      "ga": 27,
+      "points": 17
+    },
+    "CBJ": {
+      "name": "Columbus Blue Jackets",
+      "gp": 8,
+      "w": 3,
+      "l": 5,
+      "otl": 0,
+      "gf": 19,
+      "ga": 29,
+      "points": 6
+    },
+    "CGY": {
+      "name": "Calgary Flames",
+      "gp": 8,
+      "w": 2,
+      "l": 6,
+      "otl": 0,
+      "gf": 17,
+      "ga": 37,
+      "points": 4
+    },
+    "CHI": {
+      "name": "Chicago Blackhawks",
+      "gp": 9,
+      "w": 3,
+      "l": 6,
+      "otl": 0,
+      "gf": 21,
+      "ga": 36,
+      "points": 6
+    },
+    "COL": {
+      "name": "Colorado Avalanche",
+      "gp": 10,
+      "w": 5,
+      "l": 4,
+      "otl": 1,
+      "gf": 41,
+      "ga": 30,
+      "points": 11
+    },
+    "DAL": {
+      "name": "Dallas Stars",
+      "gp": 9,
+      "w": 5,
+      "l": 3,
+      "otl": 1,
+      "gf": 22,
+      "ga": 14,
+      "points": 11
+    },
+    "DET": {
+      "name": "Detroit Red Wings",
+      "gp": 9,
+      "w": 3,
+      "l": 3,
+      "otl": 3,
+      "gf": 22,
+      "ga": 26,
+      "points": 9
+    },
+    "EDM": {
+      "name": "Edmonton Oilers",
+      "gp": 9,
+      "w": 7,
+      "l": 1,
+      "otl": 1,
+      "gf": 41,
+      "ga": 27,
+      "points": 15
+    },
+    "FLA": {
+      "name": "Florida Panthers",
+      "gp": 9,
+      "w": 5,
+      "l": 2,
+      "otl": 2,
+      "gf": 30,
+      "ga": 25,
+      "points": 12
+    },
+    "LAK": {
+      "name": "Los Angeles Kings",
+      "gp": 7,
+      "w": 1,
+      "l": 4,
+      "otl": 2,
+      "gf": 17,
+      "ga": 27,
+      "points": 4
+    },
+    "MIN": {
+      "name": "Minnesota Wild",
+      "gp": 10,
+      "w": 6,
+      "l": 2,
+      "otl": 2,
+      "gf": 31,
+      "ga": 25,
+      "points": 14
+    },
+    "MTL": {
+      "name": "Montréal Canadiens",
+      "gp": 9,
+      "w": 4,
+      "l": 3,
+      "otl": 2,
+      "gf": 28,
+      "ga": 34,
+      "points": 10
+    },
+    "NJD": {
+      "name": "New Jersey Devils",
+      "gp": 9,
+      "w": 5,
+      "l": 4,
+      "otl": 0,
+      "gf": 29,
+      "ga": 30,
+      "points": 10
+    },
+    "NSH": {
+      "name": "Nashville Predators",
+      "gp": 8,
+      "w": 3,
+      "l": 2,
+      "otl": 3,
+      "gf": 23,
+      "ga": 22,
+      "points": 9
+    },
+    "NYI": {
+      "name": "New York Islanders",
+      "gp": 9,
+      "w": 5,
+      "l": 3,
+      "otl": 1,
+      "gf": 27,
+      "ga": 19,
+      "points": 11
+    },
+    "NYR": {
+      "name": "New York Rangers",
+      "gp": 11,
+      "w": 7,
+      "l": 3,
+      "otl": 1,
+      "gf": 33,
+      "ga": 24,
+      "points": 15
+    },
+    "OTT": {
+      "name": "Ottawa Senators",
+      "gp": 9,
+      "w": 6,
+      "l": 3,
+      "otl": 0,
+      "gf": 22,
+      "ga": 23,
+      "points": 12
+    },
+    "PHI": {
+      "name": "Philadelphia Flyers",
+      "gp": 11,
+      "w": 2,
+      "l": 6,
+      "otl": 3,
+      "gf": 17,
+      "ga": 35,
+      "points": 7
+    },
+    "PIT": {
+      "name": "Pittsburgh Penguins",
+      "gp": 10,
+      "w": 3,
+      "l": 6,
+      "otl": 1,
+      "gf": 32,
+      "ga": 37,
+      "points": 7
+    },
+    "SEA": {
+      "name": "Seattle Kraken",
+      "gp": 10,
+      "w": 6,
+      "l": 3,
+      "otl": 1,
+      "gf": 37,
+      "ga": 34,
+      "points": 13
+    },
+    "SJS": {
+      "name": "San Jose Sharks",
+      "gp": 10,
+      "w": 5,
+      "l": 4,
+      "otl": 1,
+      "gf": 26,
+      "ga": 34,
+      "points": 11
+    },
+    "STL": {
+      "name": "St. Louis Blues",
+      "gp": 9,
+      "w": 4,
+      "l": 4,
+      "otl": 1,
+      "gf": 29,
+      "ga": 29,
+      "points": 9
+    },
+    "TBL": {
+      "name": "Tampa Bay Lightning",
+      "gp": 9,
+      "w": 7,
+      "l": 2,
+      "otl": 0,
+      "gf": 31,
+      "ga": 23,
+      "points": 14
+    },
+    "TOR": {
+      "name": "Toronto Maple Leafs",
+      "gp": 11,
+      "w": 5,
+      "l": 4,
+      "otl": 2,
+      "gf": 38,
+      "ga": 34,
+      "points": 12
+    },
+    "UTA": {
+      "name": "Utah Mammoth",
+      "gp": 10,
+      "w": 7,
+      "l": 3,
+      "otl": 0,
+      "gf": 38,
+      "ga": 31,
+      "points": 14
+    },
+    "VAN": {
+      "name": "Vancouver Canucks",
+      "gp": 11,
+      "w": 2,
+      "l": 8,
+      "otl": 1,
+      "gf": 33,
+      "ga": 51,
+      "points": 5
+    },
+    "VGK": {
+      "name": "Vegas Golden Knights",
+      "gp": 11,
+      "w": 8,
+      "l": 3,
+      "otl": 0,
+      "gf": 43,
+      "ga": 30,
+      "points": 16
+    },
+    "WPG": {
+      "name": "Winnipeg Jets",
+      "gp": 9,
+      "w": 4,
+      "l": 3,
+      "otl": 2,
+      "gf": 24,
+      "ga": 26,
+      "points": 10
+    },
+    "WSH": {
+      "name": "Washington Capitals",
+      "gp": 9,
+      "w": 5,
+      "l": 4,
+      "otl": 0,
+      "gf": 30,
+      "ga": 29,
+      "points": 10
+    }
   },
+  "nhl_fixtures": [
+    {
+      "game_id": 2026020154,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": "NSH",
+      "home": "BOS",
+      "venue": "TD Garden"
+    },
+    {
+      "game_id": 2026020155,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": "NYR",
+      "home": "TOR",
+      "venue": "Scotiabank Arena"
+    },
+    {
+      "game_id": 2026020156,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": "SJS",
+      "home": "OTT",
+      "venue": "Canadian Tire Centre"
+    },
+    {
+      "game_id": 2026020157,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": "ANA",
+      "home": "NJD",
+      "venue": "Prudential Center"
+    },
+    {
+      "game_id": 2026020158,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:00:00Z",
+      "away": "FLA",
+      "home": "PIT",
+      "venue": "PPG Paints Arena"
+    },
+    {
+      "game_id": 2026020159,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-22T23:30:00Z",
+      "away": "LAK",
+      "home": "NYI",
+      "venue": "UBS Arena"
+    },
+    {
+      "game_id": 2026020160,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "away": "VGK",
+      "home": "STL",
+      "venue": "Enterprise Center"
+    },
+    {
+      "game_id": 2026020161,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T00:00:00Z",
+      "away": "WPG",
+      "home": "DAL",
+      "venue": "American Airlines Center"
+    },
+    {
+      "game_id": 2026020162,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "away": "MIN",
+      "home": "CGY",
+      "venue": "Scotiabank Saddledome"
+    },
+    {
+      "game_id": 2026020163,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T01:00:00Z",
+      "away": "CAR",
+      "home": "EDM",
+      "venue": "Rogers Place"
+    },
+    {
+      "game_id": 2026020164,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "away": "UTA",
+      "home": "SEA",
+      "venue": "Climate Pledge Arena"
+    },
+    {
+      "game_id": 2026020165,
+      "date": "2026-10-22",
+      "start_utc": "2026-10-23T02:00:00Z",
+      "away": "DET",
+      "home": "VAN",
+      "venue": "Rogers Arena"
+    }
+  ],
+  "nba_teams": {
+    "DET": {
+      "name": "Detroit Pistons",
+      "w": 60,
+      "l": 22,
+      "home_w": 31,
+      "home_l": 9,
+      "road_w": 28,
+      "road_l": 13
+    },
+    "BOS": {
+      "name": "Boston Celtics",
+      "w": 56,
+      "l": 26,
+      "home_w": 30,
+      "home_l": 11,
+      "road_w": 26,
+      "road_l": 15
+    },
+    "NYK": {
+      "name": "New York Knicks",
+      "w": 53,
+      "l": 29,
+      "home_w": 30,
+      "home_l": 10,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "CLE": {
+      "name": "Cleveland Cavaliers",
+      "w": 52,
+      "l": 30,
+      "home_w": 27,
+      "home_l": 14,
+      "road_w": 25,
+      "road_l": 16
+    },
+    "TOR": {
+      "name": "Toronto Raptors",
+      "w": 46,
+      "l": 36,
+      "home_w": 24,
+      "home_l": 17,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "ATL": {
+      "name": "Atlanta Hawks",
+      "w": 46,
+      "l": 36,
+      "home_w": 24,
+      "home_l": 17,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "PHI": {
+      "name": "Philadelphia 76ers",
+      "w": 45,
+      "l": 37,
+      "home_w": 23,
+      "home_l": 18,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "ORL": {
+      "name": "Orlando Magic",
+      "w": 45,
+      "l": 37,
+      "home_w": 25,
+      "home_l": 15,
+      "road_w": 19,
+      "road_l": 20
+    },
+    "CHA": {
+      "name": "Charlotte Hornets",
+      "w": 44,
+      "l": 38,
+      "home_w": 21,
+      "home_l": 20,
+      "road_w": 23,
+      "road_l": 18
+    },
+    "MIA": {
+      "name": "Miami Heat",
+      "w": 43,
+      "l": 39,
+      "home_w": 26,
+      "home_l": 15,
+      "road_w": 17,
+      "road_l": 24
+    },
+    "MIL": {
+      "name": "Milwaukee Bucks",
+      "w": 32,
+      "l": 50,
+      "home_w": 19,
+      "home_l": 22,
+      "road_w": 13,
+      "road_l": 28
+    },
+    "CHI": {
+      "name": "Chicago Bulls",
+      "w": 31,
+      "l": 51,
+      "home_w": 18,
+      "home_l": 23,
+      "road_w": 13,
+      "road_l": 28
+    },
+    "BKN": {
+      "name": "Brooklyn Nets",
+      "w": 20,
+      "l": 62,
+      "home_w": 12,
+      "home_l": 29,
+      "road_w": 8,
+      "road_l": 33
+    },
+    "IND": {
+      "name": "Indiana Pacers",
+      "w": 19,
+      "l": 63,
+      "home_w": 11,
+      "home_l": 30,
+      "road_w": 8,
+      "road_l": 33
+    },
+    "WAS": {
+      "name": "Washington Wizards",
+      "w": 17,
+      "l": 65,
+      "home_w": 11,
+      "home_l": 30,
+      "road_w": 6,
+      "road_l": 35
+    },
+    "OKC": {
+      "name": "Oklahoma City Thunder",
+      "w": 64,
+      "l": 18,
+      "home_w": 34,
+      "home_l": 7,
+      "road_w": 30,
+      "road_l": 10
+    },
+    "SAS": {
+      "name": "San Antonio Spurs",
+      "w": 62,
+      "l": 20,
+      "home_w": 32,
+      "home_l": 8,
+      "road_w": 29,
+      "road_l": 12
+    },
+    "DEN": {
+      "name": "Denver Nuggets",
+      "w": 54,
+      "l": 28,
+      "home_w": 28,
+      "home_l": 13,
+      "road_w": 26,
+      "road_l": 15
+    },
+    "LAL": {
+      "name": "Los Angeles Lakers",
+      "w": 53,
+      "l": 29,
+      "home_w": 28,
+      "home_l": 13,
+      "road_w": 25,
+      "road_l": 16
+    },
+    "HOU": {
+      "name": "Houston Rockets",
+      "w": 52,
+      "l": 30,
+      "home_w": 30,
+      "home_l": 11,
+      "road_w": 22,
+      "road_l": 19
+    },
+    "MIN": {
+      "name": "Minnesota Timberwolves",
+      "w": 49,
+      "l": 33,
+      "home_w": 26,
+      "home_l": 15,
+      "road_w": 23,
+      "road_l": 18
+    },
+    "PHX": {
+      "name": "Phoenix Suns",
+      "w": 45,
+      "l": 37,
+      "home_w": 25,
+      "home_l": 16,
+      "road_w": 20,
+      "road_l": 21
+    },
+    "POR": {
+      "name": "Portland Trail Blazers",
+      "w": 42,
+      "l": 40,
+      "home_w": 24,
+      "home_l": 17,
+      "road_w": 18,
+      "road_l": 23
+    },
+    "LAC": {
+      "name": "LA Clippers",
+      "w": 42,
+      "l": 40,
+      "home_w": 23,
+      "home_l": 18,
+      "road_w": 19,
+      "road_l": 22
+    },
+    "GSW": {
+      "name": "Golden State Warriors",
+      "w": 37,
+      "l": 45,
+      "home_w": 22,
+      "home_l": 19,
+      "road_w": 15,
+      "road_l": 26
+    },
+    "NOP": {
+      "name": "New Orleans Pelicans",
+      "w": 26,
+      "l": 56,
+      "home_w": 17,
+      "home_l": 24,
+      "road_w": 9,
+      "road_l": 32
+    },
+    "DAL": {
+      "name": "Dallas Mavericks",
+      "w": 26,
+      "l": 56,
+      "home_w": 16,
+      "home_l": 25,
+      "road_w": 10,
+      "road_l": 30
+    },
+    "MEM": {
+      "name": "Memphis Grizzlies",
+      "w": 25,
+      "l": 57,
+      "home_w": 13,
+      "home_l": 27,
+      "road_w": 11,
+      "road_l": 29
+    },
+    "SAC": {
+      "name": "Sacramento Kings",
+      "w": 22,
+      "l": 60,
+      "home_w": 15,
+      "home_l": 26,
+      "road_w": 7,
+      "road_l": 34
+    },
+    "UTA": {
+      "name": "Utah Jazz",
+      "w": 22,
+      "l": 60,
+      "home_w": 14,
+      "home_l": 27,
+      "road_w": 8,
+      "road_l": 33
+    }
+  },
+  "nba_fixtures": [
+    {
+      "game_id": "0022600006",
+      "date": "2026-10-22",
+      "tip_et": "19:00",
+      "away": "CLE",
+      "home": "PHI",
+      "venue": "Xfinity Mobile Arena"
+    },
+    {
+      "game_id": "0022600007",
+      "date": "2026-10-22",
+      "tip_et": "21:30",
+      "away": "DEN",
+      "home": "OKC",
+      "venue": "Paycom Center"
+    },
+    {
+      "game_id": "0022600099",
+      "date": "2026-10-23",
+      "tip_et": "16:00",
+      "away": "CHI",
+      "home": "MIL",
+      "venue": "Fiserv Forum"
+    },
+    {
+      "game_id": "0022600008",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "NYK",
+      "home": "BOS",
+      "venue": "TD Garden"
+    },
+    {
+      "game_id": "0022600094",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "ATL",
+      "home": "CHA",
+      "venue": "Spectrum Center"
+    },
+    {
+      "game_id": "0022600095",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "DAL",
+      "home": "IND",
+      "venue": "Gainbridge Fieldhouse"
+    },
+    {
+      "game_id": "0022600096",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "MIN",
+      "home": "ORL",
+      "venue": "Kia Center"
+    },
+    {
+      "game_id": "0022600097",
+      "date": "2026-10-23",
+      "tip_et": "19:00",
+      "away": "TOR",
+      "home": "WAS",
+      "venue": "Capital One Arena"
+    },
+    {
+      "game_id": "0022600098",
+      "date": "2026-10-23",
+      "tip_et": "20:00",
+      "away": "DET",
+      "home": "MIA",
+      "venue": "Kaseya Center"
+    },
+    {
+      "game_id": "0022600009",
+      "date": "2026-10-23",
+      "tip_et": "21:30",
+      "away": "HOU",
+      "home": "SAS",
+      "venue": "Moody Center"
+    },
+    {
+      "game_id": "0022600100",
+      "date": "2026-10-23",
+      "tip_et": "21:30",
+      "away": "NOP",
+      "home": "UTA",
+      "venue": "Delta Center"
+    },
+    {
+      "game_id": "0022600101",
+      "date": "2026-10-23",
+      "tip_et": "22:00",
+      "away": "MEM",
+      "home": "GSW",
+      "venue": "Chase Center"
+    },
+    {
+      "game_id": "0022600102",
+      "date": "2026-10-23",
+      "tip_et": "22:00",
+      "away": "LAC",
+      "home": "LAL",
+      "venue": "Crypto.com Arena"
+    },
+    {
+      "game_id": "0022600103",
+      "date": "2026-10-23",
+      "tip_et": "22:00",
+      "away": "POR",
+      "home": "SAC",
+      "venue": "Golden 1 Center"
+    }
+  ],
   "euroleague_teams": {
     "PAO": {
       "name": "Panathinaikos AKTOR Athens",
@@ -247,17 +1050,6 @@
   },
   "euroleague_fixtures": [
     {
-      "id": "el-E2026-61",
-      "date": "2026-10-21",
-      "time": "2026-10-21 18:00 UTC",
-      "home": "HTA",
-      "away": "VIR",
-      "venue": "Arena 8888 Sofia",
-      "neutral": true,
-      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/hapoel-ibi-tel-aviv-virtus-bologna/E2026/61/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
-    },
-    {
       "id": "el-E2026-64",
       "date": "2026-10-22",
       "time": "2026-10-22 17:30 UTC",
@@ -455,52 +1247,7 @@
       "rank": 7
     }
   },
-  "eurocup_fixtures": [
-    {
-      "id": "ec-R4-paok-ulm",
-      "date": "2026-10-21",
-      "time": "2026-10-21 17:15 UTC",
-      "home": "PBC",
-      "away": "ULM",
-      "venue": null,
-      "neutral": false,
-      "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
-    },
-    {
-      "id": "ec-R4-bosna-bks",
-      "date": "2026-10-21",
-      "time": "2026-10-21 17:30 UTC",
-      "home": "BOS",
-      "away": "BKS",
-      "venue": null,
-      "neutral": false,
-      "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
-    },
-    {
-      "id": "ec-R4-jlm-rig",
-      "date": "2026-10-21",
-      "time": "2026-10-21 18:00 UTC",
-      "home": "JLM",
-      "away": "RIG",
-      "venue": null,
-      "neutral": true,
-      "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
-    },
-    {
-      "id": "ec-R4-ubt-ldn",
-      "date": "2026-10-21",
-      "time": "2026-10-21 16:00 UTC",
-      "home": "UBT",
-      "away": "LDN",
-      "venue": null,
-      "neutral": false,
-      "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"
-    }
-  ],
+  "eurocup_fixtures": [],
   "top14_teams": {
     "toulouse": {
       "name": "Stade Toulousain",
@@ -1004,6 +1751,644 @@
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
     }
   ],
+  "urc_teams": {
+    "EDI": {
+      "name": "Edinburgh Rugby",
+      "gp": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "pf": 80,
+      "pa": 54
+    },
+    "GLA": {
+      "name": "Glasgow Warriors",
+      "gp": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "pf": 95,
+      "pa": 72
+    },
+    "BUL": {
+      "name": "Vodacom Bulls",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 126,
+      "pa": 54
+    },
+    "STO": {
+      "name": "DHL Stormers",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 81,
+      "pa": 54
+    },
+    "SHA": {
+      "name": "Hollywoodbets Sharks",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 89,
+      "pa": 83
+    },
+    "CAR": {
+      "name": "Cardiff Rugby",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 66,
+      "pa": 71
+    },
+    "LIO": {
+      "name": "10bet Lions",
+      "gp": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "pf": 77,
+      "pa": 102
+    },
+    "DRA": {
+      "name": "Dragons RFC",
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "pf": 88,
+      "pa": 83
+    },
+    "MUN": {
+      "name": "Munster Rugby",
+      "gp": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "pf": 72,
+      "pa": 74
+    },
+    "LEI": {
+      "name": "Leinster Rugby",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 75,
+      "pa": 58
+    },
+    "ULS": {
+      "name": "Ulster Rugby",
+      "gp": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "pf": 88,
+      "pa": 93
+    },
+    "SCA": {
+      "name": "Scarlets",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 68,
+      "pa": 85
+    },
+    "OSP": {
+      "name": "Ospreys",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 81,
+      "pa": 107
+    },
+    "CON": {
+      "name": "Connacht Rugby",
+      "gp": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "pf": 56,
+      "pa": 84
+    },
+    "BEN": {
+      "name": "Benetton Rugby",
+      "gp": 3,
+      "w": 0,
+      "d": 1,
+      "l": 2,
+      "pf": 64,
+      "pa": 68
+    },
+    "ZEB": {
+      "name": "Zebre Parma",
+      "gp": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "pf": 52,
+      "pa": 116
+    }
+  },
+  "urc_r4_fixtures": [
+    {
+      "id": "urc-292608",
+      "date": "2026-10-23",
+      "time": "2026-10-23 14:45 Local",
+      "home": "CAR",
+      "away": "SHA",
+      "venue": "Cardiff Arms Park",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292609",
+      "date": "2026-10-23",
+      "time": "2026-10-23 14:45 Local",
+      "home": "CON",
+      "away": "ZEB",
+      "venue": "Dexcom Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292610",
+      "date": "2026-10-23",
+      "time": "2026-10-23 14:45 Local",
+      "home": "EDI",
+      "away": "LIO",
+      "venue": "Hive Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292611",
+      "date": "2026-10-24",
+      "time": "2026-10-24 07:45 Local",
+      "home": "BUL",
+      "away": "ULS",
+      "venue": "Loftus Versfeld",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292612",
+      "date": "2026-10-24",
+      "time": "2026-10-24 10:00 Local",
+      "home": "STO",
+      "away": "SCA",
+      "venue": "DHL Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292613",
+      "date": "2026-10-24",
+      "time": "2026-10-24 10:00 Local",
+      "home": "BEN",
+      "away": "GLA",
+      "venue": "Stadio Monigo",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292614",
+      "date": "2026-10-24",
+      "time": "2026-10-24 13:00 Local",
+      "home": "LEI",
+      "away": "MUN",
+      "venue": "Aviva Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292615",
+      "date": "2026-10-24",
+      "time": "2026-10-24 14:00 Local",
+      "home": "OSP",
+      "away": "DRA",
+      "venue": "St Helen's",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    }
+  ],
+  "urc_r5_fixtures": [
+    {
+      "id": "urc-292616",
+      "date": "2026-10-30",
+      "time": "2026-10-30 15:45 Local",
+      "home": "CON",
+      "away": "LEI",
+      "venue": "Dexcom Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292617",
+      "date": "2026-10-30",
+      "time": "2026-10-30 15:45 Local",
+      "home": "GLA",
+      "away": "LIO",
+      "venue": "Scotstoun Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292618",
+      "date": "2026-10-31",
+      "time": "2026-10-31 08:45 Local",
+      "home": "STO",
+      "away": "ULS",
+      "venue": "DHL Stadium",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292619",
+      "date": "2026-10-31",
+      "time": "2026-10-31 11:00 Local",
+      "home": "BUL",
+      "away": "SCA",
+      "venue": "Loftus Versfeld",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292620",
+      "date": "2026-10-31",
+      "time": "2026-10-31 11:00 Local",
+      "home": "BEN",
+      "away": "EDI",
+      "venue": "Stadio Monigo",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292621",
+      "date": "2026-10-31",
+      "time": "2026-10-31 13:30 Local",
+      "home": "MUN",
+      "away": "SHA",
+      "venue": "Thomond Park",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292622",
+      "date": "2026-10-31",
+      "time": "2026-10-31 13:30 Local",
+      "home": "DRA",
+      "away": "ZEB",
+      "venue": "Rodney Parade",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "urc-292623",
+      "date": "2026-10-31",
+      "time": "2026-10-31 15:45 Local",
+      "home": "OSP",
+      "away": "CAR",
+      "venue": "St Helen's",
+      "url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    }
+  ],
+  "ehf_teams": {
+    "veszprem": {
+      "name": "One Veszprém HC",
+      "group": "A",
+      "gp": 5,
+      "w": 5,
+      "d": 0,
+      "l": 0,
+      "gf": 185,
+      "ga": 146,
+      "pts": 10
+    },
+    "fuchse": {
+      "name": "Füchse Berlin",
+      "group": "A",
+      "gp": 5,
+      "w": 3,
+      "d": 0,
+      "l": 2,
+      "gf": 184,
+      "ga": 172,
+      "pts": 6
+    },
+    "porto": {
+      "name": "FC Porto",
+      "group": "A",
+      "gp": 5,
+      "w": 1,
+      "d": 1,
+      "l": 3,
+      "gf": 158,
+      "ga": 173,
+      "pts": 3
+    },
+    "partizan": {
+      "name": "RK Partizan AdmiralBet",
+      "group": "A",
+      "gp": 5,
+      "w": 0,
+      "d": 1,
+      "l": 4,
+      "gf": 148,
+      "ga": 184,
+      "pts": 1
+    },
+    "plock": {
+      "name": "Orlen Wisla Plock",
+      "group": "B",
+      "gp": 4,
+      "w": 3,
+      "d": 0,
+      "l": 1,
+      "gf": 115,
+      "ga": 108,
+      "pts": 6
+    },
+    "nantes": {
+      "name": "HBC Nantes",
+      "group": "B",
+      "gp": 5,
+      "w": 3,
+      "d": 0,
+      "l": 2,
+      "gf": 142,
+      "ga": 143,
+      "pts": 6
+    },
+    "melsungen": {
+      "name": "MT Melsungen",
+      "group": "B",
+      "gp": 4,
+      "w": 2,
+      "d": 0,
+      "l": 2,
+      "gf": 110,
+      "ga": 112,
+      "pts": 4
+    },
+    "vardar": {
+      "name": "HC Vardar 1961",
+      "group": "B",
+      "gp": 5,
+      "w": 1,
+      "d": 0,
+      "l": 4,
+      "gf": 154,
+      "ga": 158,
+      "pts": 2
+    },
+    "aalborg": {
+      "name": "Aalborg Håndbold",
+      "group": "C",
+      "gp": 5,
+      "w": 4,
+      "d": 1,
+      "l": 0,
+      "gf": 170,
+      "ga": 145,
+      "pts": 9
+    },
+    "psg": {
+      "name": "Paris Saint-Germain",
+      "group": "C",
+      "gp": 5,
+      "w": 3,
+      "d": 1,
+      "l": 1,
+      "gf": 182,
+      "ga": 157,
+      "pts": 7
+    },
+    "zagreb": {
+      "name": "HC Zagreb",
+      "group": "C",
+      "gp": 5,
+      "w": 2,
+      "d": 0,
+      "l": 3,
+      "gf": 146,
+      "ga": 158,
+      "pts": 4
+    },
+    "celje": {
+      "name": "RK Celje Pivovarna Laško",
+      "group": "C",
+      "gp": 5,
+      "w": 0,
+      "d": 0,
+      "l": 5,
+      "gf": 150,
+      "ga": 188,
+      "pts": 0
+    },
+    "sporting": {
+      "name": "Sporting Clube de Portugal",
+      "group": "D",
+      "gp": 4,
+      "w": 3,
+      "d": 1,
+      "l": 0,
+      "gf": 149,
+      "ga": 125,
+      "pts": 7
+    },
+    "gog": {
+      "name": "GOG",
+      "group": "D",
+      "gp": 4,
+      "w": 3,
+      "d": 0,
+      "l": 1,
+      "gf": 145,
+      "ga": 139,
+      "pts": 6
+    },
+    "szeged": {
+      "name": "OTP Bank - PICK Szeged",
+      "group": "D",
+      "gp": 4,
+      "w": 1,
+      "d": 1,
+      "l": 2,
+      "gf": 139,
+      "ga": 136,
+      "pts": 3
+    },
+    "kristianstad": {
+      "name": "IFK Kristianstad",
+      "group": "D",
+      "gp": 4,
+      "w": 0,
+      "d": 0,
+      "l": 4,
+      "gf": 122,
+      "ga": 155,
+      "pts": 0
+    },
+    "barca": {
+      "name": "Barça",
+      "group": "E",
+      "gp": 4,
+      "w": 4,
+      "d": 0,
+      "l": 0,
+      "gf": 137,
+      "ga": 104,
+      "pts": 8
+    },
+    "aarhus": {
+      "name": "SAH - Aarhus",
+      "group": "E",
+      "gp": 5,
+      "w": 2,
+      "d": 1,
+      "l": 2,
+      "gf": 150,
+      "ga": 163,
+      "pts": 5
+    },
+    "dinamo": {
+      "name": "Dinamo Bucuresti",
+      "group": "E",
+      "gp": 5,
+      "w": 1,
+      "d": 1,
+      "l": 3,
+      "gf": 134,
+      "ga": 145,
+      "pts": 3
+    },
+    "montpellier": {
+      "name": "Montpellier Handball",
+      "group": "E",
+      "gp": 4,
+      "w": 1,
+      "d": 0,
+      "l": 3,
+      "gf": 116,
+      "ga": 125,
+      "pts": 2
+    },
+    "magdeburg": {
+      "name": "SC Magdeburg",
+      "group": "F",
+      "gp": 4,
+      "w": 4,
+      "d": 0,
+      "l": 0,
+      "gf": 141,
+      "ga": 108,
+      "pts": 8
+    },
+    "kielce": {
+      "name": "Industria Kielce",
+      "group": "F",
+      "gp": 5,
+      "w": 3,
+      "d": 0,
+      "l": 2,
+      "gf": 155,
+      "ga": 153,
+      "pts": 6
+    },
+    "kriens": {
+      "name": "HC Kriens-Luzern",
+      "group": "F",
+      "gp": 5,
+      "w": 2,
+      "d": 0,
+      "l": 3,
+      "gf": 158,
+      "ga": 161,
+      "pts": 4
+    },
+    "kolstad": {
+      "name": "Kolstad Håndball",
+      "group": "F",
+      "gp": 4,
+      "w": 0,
+      "d": 0,
+      "l": 4,
+      "gf": 111,
+      "ga": 143,
+      "pts": 0
+    }
+  },
+  "ehf_fixtures": [
+    {
+      "id": "ehfcl-202711020101043",
+      "ehf_match_id": "202711020101043",
+      "date": "2026-10-22",
+      "time_local": "18:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T16:45:00Z",
+      "home": "szeged",
+      "away": "gog",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/",
+      "venue": null
+    },
+    {
+      "id": "ehfcl-202711020101019",
+      "ehf_match_id": "202711020101019",
+      "date": "2026-10-22",
+      "time_local": "18:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T16:45:00Z",
+      "home": "melsungen",
+      "away": "plock",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/",
+      "venue": null
+    },
+    {
+      "id": "ehfcl-202711020101049",
+      "ehf_match_id": "202711020101049",
+      "date": "2026-10-22",
+      "time_local": "20:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T18:45:00Z",
+      "home": "barca",
+      "away": "montpellier",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
+      "venue": null
+    },
+    {
+      "id": "ehfcl-202711020101041",
+      "ehf_match_id": "202711020101041",
+      "date": "2026-10-22",
+      "time_local": "20:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T18:45:00Z",
+      "home": "sporting",
+      "away": "kristianstad",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
+      "venue": null
+    },
+    {
+      "id": "ehfcl-202711020101064",
+      "ehf_match_id": "202711020101064",
+      "date": "2026-10-22",
+      "time_local": "20:45",
+      "timezone": "CEST",
+      "start_utc": "2026-10-22T18:45:00Z",
+      "home": "kolstad",
+      "away": "magdeburg",
+      "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/",
+      "venue": null
+    }
+  ],
   "ehf_olbg_map": {
     "ehfcl-202711020101059": "https://www.olbg.com/betting-tips/Handball/20",
     "ehfcl-202711020101012": "https://www.olbg.com/betting-tips/Handball/20",
@@ -1385,78 +2770,7 @@
       "url": "https://www.atptour.com/en/players/benjamin-bonzi/bm95/overview"
     }
   },
-  "tennis_originated": [
-    {
-      "id": "atp-7485-MS008",
-      "competition": "ATP 250 BNP Paribas Fortis European Open (Brussels R16)",
-      "date": "2026-10-21",
-      "time": "2026-10-21 15:00",
-      "p1": "Arthur Fils",
-      "p2": "Jaume Munar",
-      "url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
-    },
-    {
-      "id": "atp-902102",
-      "competition": "ATP Tour Indoor Singles",
-      "date": "2026-10-21",
-      "time": "2026-10-21 14:30",
-      "p1": "Benjamin Bonzi",
-      "p2": "Tommy Paul",
-      "url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Benjamin_Bonzi_vs_Tommy_Paul/3?event_id=902102"
-    },
-    {
-      "id": "atp-902037",
-      "competition": "ATP 250 Almaty Open",
-      "date": "2026-10-21",
-      "time": "2026-10-21 05:30",
-      "p1": "Adrian Mannarino",
-      "p2": "Andrey Rublev",
-      "url": "https://www.atptour.com/en/tournaments/almaty/9410/overview",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Adrian_Mannarino_vs_Andrey_Rublev/3?event_id=902037"
-    },
-    {
-      "id": "atp-9410-MS015",
-      "competition": "ATP 250 Almaty Open (Round of 16)",
-      "date": "2026-10-21",
-      "time": "2026-10-21 08:00",
-      "p1": "James Duckworth",
-      "p2": "Luciano Darderi",
-      "url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
-    },
-    {
-      "id": "atp-9410-MS019",
-      "competition": "ATP 250 Almaty Open (Round of 32)",
-      "date": "2026-10-21",
-      "time": "2026-10-21 08:00",
-      "p1": "Mattia Bellucci",
-      "p2": "Tomas Martin Etcheverry",
-      "url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS019",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
-    },
-    {
-      "id": "atp-902085",
-      "competition": "ATP Tour Singles",
-      "date": "2026-10-21",
-      "time": "2026-10-21 07:00",
-      "p1": "Mariano Navone",
-      "p2": "Tallon Griekspoor",
-      "url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mariano_Navone_vs_Tallon_Griekspoor/3?event_id=902085"
-    },
-    {
-      "id": "atp-901896",
-      "competition": "ATP Tour Singles",
-      "date": "2026-10-21",
-      "time": "2026-10-21 05:30",
-      "p1": "Dino Prizmic",
-      "p2": "Damir Dzumhur",
-      "url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Dino_Prizmic_vs_Damir_Dzumhur/3?event_id=901896"
-    }
-  ],
+  "tennis_originated": [],
   "wst_top36": {
     "Zhao Xintong": {
       "rank": 1,
@@ -1519,32 +2833,28 @@
       "prize_gbp": 221200
     }
   },
-  "snooker_originated": [
-    {
-      "id": "wst-9934",
-      "date": "2026-10-21",
-      "time": "2026-10-21 08:00",
-      "p1": "John Higgins",
-      "p2": "Jak Jones",
-      "url": "https://www.wst.tv/match-centre/eba55492-fba6-4a53-90be-a04b3560ae65",
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934"
+  "snooker_originated": [],
+  "mlb_teams": {
+    "TB": {
+      "name": "Tampa Bay Rays",
+      "wins": 98,
+      "losses": 64,
+      "runs_scored": 736,
+      "runs_allowed": 650
     },
-    {
-      "id": "wst-9936",
-      "date": "2026-10-21",
-      "time": "2026-10-21 09:00",
-      "p1": "Zhang Anda",
-      "p2": "Mark Williams",
-      "url": "https://www.wst.tv/match-centre/480e5abf-5766-44ad-9918-f822ceefd4a5",
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936"
+    "MIL": {
+      "name": "Milwaukee Brewers",
+      "wins": 103,
+      "losses": 59,
+      "runs_scored": 832,
+      "runs_allowed": 618
     }
-  ],
+  },
   "mlb_world_series": {
     "id": "mlb-849805",
     "competition": "2026 MLB World Series — Game 1",
-    "date": "2026-10-24",
-    "time": "2026-10-24 00:00 UTC",
-    "venue": "American Family Field, Milwaukee",
+    "date": "2026-10-23",
+    "venue": "American Family Field",
     "away": {
       "code": "TB",
       "name": "Tampa Bay Rays",
@@ -1563,9 +2873,55 @@
       "rs": 832,
       "ra": 618
     },
-    "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
+    "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-31",
     "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
   },
+  "mlb_fixtures": [
+    {
+      "id": "mlb-849805",
+      "game_pk": 849805,
+      "official_date": "2026-10-23",
+      "game_date_utc": "2026-10-24T00:00:00Z",
+      "away": "TB",
+      "home": "MIL",
+      "venue": "American Family Field",
+      "description": "World Series Game 1",
+      "human_url": "https://www.mlb.com/gameday/849805"
+    },
+    {
+      "id": "mlb-849802",
+      "game_pk": 849802,
+      "official_date": "2026-10-24",
+      "game_date_utc": "2026-10-25T00:00:00Z",
+      "away": "TB",
+      "home": "MIL",
+      "venue": "American Family Field",
+      "description": "World Series Game 2",
+      "human_url": "https://www.mlb.com/gameday/849802"
+    },
+    {
+      "id": "mlb-849804",
+      "game_pk": 849804,
+      "official_date": "2026-10-26",
+      "game_date_utc": "2026-10-27T00:00:00Z",
+      "away": "MIL",
+      "home": "TB",
+      "venue": "Tropicana Field",
+      "description": "World Series Game 3",
+      "human_url": "https://www.mlb.com/gameday/849804"
+    },
+    {
+      "id": "mlb-849803",
+      "game_pk": 849803,
+      "official_date": "2026-10-27",
+      "game_date_utc": "2026-10-28T00:00:00Z",
+      "away": "MIL",
+      "home": "TB",
+      "venue": "Tropicana Field",
+      "description": "World Series Game 4",
+      "human_url": "https://www.mlb.com/gameday/849803"
+    }
+  ],
   "f1_drivers": [
     {
       "rank": 1,
@@ -1618,218 +2974,108 @@
   ],
   "unlined_rows": [
     {
-      "id": "wst-9933",
+      "id": "wst-2026-r3-m50",
       "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 05:00",
-      "home": "Cheung Ka Wai (rank unconfirmed > #36)",
-      "away": "Stuart Bingham (#19, £350,550)",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 50)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 08:00",
+      "home": "Kyren Wilson (prize value not captured)",
+      "away": "Pang Junxu (#29, £272,750)",
       "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/matches/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Cheung_Ka_Wai_v_Stuart_Bingham/8?event_id=9933",
-      "blank_reason": "Cheung Ka Wai sits outside WST's server-rendered Top-36 rankings table; opponent prize input left blank rather than guessed."
+      "official_url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Kyren Wilson's official WST ranking prize value is outside this desk's captured Top-36 excerpt, and the official pages read do not state the Round 3 frame format; left blank rather than inferred."
     },
     {
-      "id": "wst-9929",
+      "id": "wst-2026-r3-m51",
       "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 05:00",
-      "home": "Pang Junxu (#29, £272,750)",
-      "away": "Liam Davies (rank unconfirmed > #36)",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 51)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 08:00",
+      "home": "Matthew Selt (prize value not captured)",
+      "away": "Sam Craigie (prize value not captured)",
       "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/matches/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Pang_Junxu_v_Liam_Davies/8?event_id=9929",
-      "blank_reason": "Liam Davies (who beat #7 Shaun Murphy 4-2 in R1) sits outside WST's server-rendered Top-36 table."
+      "official_url": "https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."
     },
     {
-      "id": "wst-9937",
+      "id": "wst-2026-r3-m49",
       "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 08:00",
-      "home": "Daniel Wells (rank unconfirmed > #36)",
-      "away": "Ryan Day (rank unconfirmed > #36)",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 49)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 09:00",
+      "home": "Anthony McGill (prize value not captured)",
+      "away": "Mateusz Baranowski (prize value not captured)",
       "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/e9c15ae6-b9b8-4cea-a83a-49c58eb14046",
-      "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."
+      "official_url": "https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."
     },
     {
-      "id": "wst-9930",
+      "id": "wst-2026-r3-m52",
       "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 09:00",
-      "home": "Sam Craigie (rank unconfirmed > #36)",
-      "away": "Xu Si (rank unconfirmed > #36)",
-      "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/afb42fc9-9654-479e-997e-d33d8a1a6888",
-      "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."
-    },
-    {
-      "id": "wst-9935",
-      "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 14:00",
-      "home": "Michael Holt (rank unconfirmed > #36)",
-      "away": "Jordan Brown (rank unconfirmed > #36)",
-      "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/e58a00e5-e6a7-479b-98d0-5c7867af28a8",
-      "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."
-    },
-    {
-      "id": "wst-9938",
-      "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 14:00",
-      "home": "Noppon Saengkham (#31, £242,500)",
-      "away": "Scott Donaldson (rank unconfirmed > #36)",
-      "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/3a24076e-455c-497b-abd5-976e194abc5e",
-      "blank_reason": "Scott Donaldson (who whitewashed #2 Wu Yize 4-0 in R1) sits outside WST's server-rendered Top-36 table."
-    },
-    {
-      "id": "wst-9939",
-      "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 14:00",
-      "home": "Gao Yang (rank unconfirmed > #36)",
-      "away": "David Gilbert (#34, £221,200)",
-      "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/4fb27af0-7db4-4ec2-b93b-137de3f66135",
-      "blank_reason": "Gao Yang sits outside WST's server-rendered Top-36 prize table (#1–#36)."
-    },
-    {
-      "id": "wst-9931",
-      "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 15:00",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 52)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 09:00",
       "home": "Elliot Slessor (#23, £329,200)",
-      "away": "Jamie Jones (rank unconfirmed > #36)",
+      "away": "Ricky Walden (prize value not captured)",
       "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/f6536f1f-6c2d-47cd-b802-a81e6f04e4cc",
-      "blank_reason": "Jamie Jones (who beat #11 Chris Wakelin 4-1 in R1) sits outside WST's server-rendered Top-36 table."
+      "official_url": "https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Ricky Walden's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."
     },
     {
-      "id": "wst-9932",
+      "id": "wst-2026-r3-m53",
       "sport": "snooker",
-      "competition": "BetVictor Northern Ireland Open — Round 2",
-      "date": "2026-10-21",
-      "time": "2026-10-21 15:00",
-      "home": "Luca Brecel (rank unconfirmed > #36)",
-      "away": "Martin O'Donnell (rank unconfirmed > #36)",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 53)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 14:00",
+      "home": "David Gilbert (#34, £221,200)",
+      "away": "Cheung Ka Wai (prize value not captured)",
       "official_source": "WST Match Centre",
-      "official_url": "https://www.wst.tv/match-centre/0c49ba0c-2d21-481e-a2ac-fbece616f591",
-      "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."
+      "official_url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Cheung Ka Wai's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."
     },
     {
-      "id": "ten-902084",
-      "sport": "tennis",
-      "competition": "WTA Tour Singles",
-      "date": "2026-10-21",
-      "time": "2026-10-21 07:00",
-      "home": "Ekaterina Alexandrova",
-      "away": "Marta Kostyuk",
-      "official_source": "WTA Rankings Hub",
-      "official_url": "https://www.wtatennis.com/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ekaterina_Alexandrova_vs_Marta_Kostyuk/3?event_id=902084",
-      "blank_reason": "WTA singles ranking table renders client-side; player points left blank rather than guessed."
+      "id": "wst-2026-r3-m54",
+      "sport": "snooker",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 54)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 14:00",
+      "home": "Mark Williams (#8, £747,400)",
+      "away": "Martin O'Donnell (prize value not captured)",
+      "official_source": "WST Match Centre",
+      "official_url": "https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Martin O'Donnell's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."
     },
     {
-      "id": "ten-902074",
-      "sport": "tennis",
-      "competition": "WTA Tour Singles",
-      "date": "2026-10-21",
-      "time": "2026-10-21 04:00",
-      "home": "Sorana Cirstea",
-      "away": "Sara Bejlek",
-      "official_source": "WTA Rankings Hub",
-      "official_url": "https://www.wtatennis.com/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Sorana_Cirstea_vs_Sara_Bejlek/3?event_id=902074",
-      "blank_reason": "WTA singles ranking table renders client-side; player points left blank rather than guessed."
+      "id": "wst-2026-r3-m55",
+      "sport": "snooker",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 55)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 15:00",
+      "home": "Jak Jones (#24, £319,300)",
+      "away": "Daniel Wells (prize value not captured)",
+      "official_source": "WST Match Centre",
+      "official_url": "https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Daniel Wells's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."
     },
     {
-      "id": "ten-901935",
-      "sport": "tennis",
-      "competition": "ATP 250 Almaty Open",
-      "date": "2026-10-21",
-      "time": "2026-10-21 04:00",
-      "home": "Zangar Nurlanuly (rank > #100)",
-      "away": "Tomas Machac (#72, 779 pts)",
-      "official_source": "ATP Rankings",
-      "official_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Zangar_Nurlanuly_vs_Tomas_Machac/3?event_id=901935",
-      "blank_reason": "Wildcard Zangar Nurlanuly ranks outside the server-rendered ATP Top 100."
-    },
-    {
-      "id": "ten-901974",
-      "sport": "tennis",
-      "competition": "ATP Tour / Challenger",
-      "date": "2026-10-21",
-      "time": "2026-10-21 08:00",
-      "home": "Stan Wawrinka (rank > #100)",
-      "away": "Martin Landaluce (#67, 822 pts)",
-      "official_source": "ATP Rankings",
-      "official_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Martin_Landaluce/3?event_id=901974",
-      "blank_reason": "Stan Wawrinka ranks outside the server-rendered ATP Top 100 on 2026.10.19."
-    },
-    {
-      "id": "ten-902083",
-      "sport": "tennis",
-      "competition": "ATP Tour Singles",
-      "date": "2026-10-21",
-      "time": "2026-10-21 10:30",
-      "home": "Stefanos Tsitsipas (#39, 1,330 pts)",
-      "away": "Mikhail Kukushkin (rank > #100)",
-      "official_source": "ATP Rankings",
-      "official_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stefanos_Tsitsipas_vs_Mikhail_Kukushkin/3?event_id=902083",
-      "blank_reason": "Mikhail Kukushkin ranks outside the server-rendered ATP Top 100."
-    },
-    {
-      "id": "ten-902028",
-      "sport": "tennis",
-      "competition": "ATP Tour / Challenger",
-      "date": "2026-10-21",
-      "time": "2026-10-21 12:00",
-      "home": "David Goffin (rank > #100)",
-      "away": "Remy Bertola (rank > #100)",
-      "official_source": "ATP Rankings",
-      "official_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/David_Goffin_vs_Remy_Bertola/3?event_id=902028",
-      "blank_reason": "Both players sit outside the server-rendered ATP Top 100."
-    },
-    {
-      "id": "ten-902059",
-      "sport": "tennis",
-      "competition": "ATP 250 Brussels",
-      "date": "2026-10-21",
-      "time": "2026-10-21 13:00",
-      "home": "Moise Kouame (rank > #100)",
-      "away": "Lorenzo Musetti (#26, 1,870 pts)",
-      "official_source": "ATP Rankings",
-      "official_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Moise_Kouame_vs_Lorenzo_Musetti/3?event_id=902059",
-      "blank_reason": "Moise Kouame sits outside the server-rendered ATP Top 100."
-    },
-    {
-      "id": "ten-902094",
-      "sport": "tennis",
-      "competition": "ATP Tour / Challenger",
-      "date": "2026-10-21",
-      "time": "2026-10-21 08:30",
-      "home": "Clement Chidekh (rank > #100)",
-      "away": "Jacob Fearnley (#87, 686 pts)",
-      "official_source": "ATP Rankings",
-      "official_url": "https://www.atptour.com/en/rankings/singles",
-      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Clement_Chidekh_vs_Jacob_Fearnley/3?event_id=902094",
-      "blank_reason": "Clement Chidekh sits outside the server-rendered ATP Top 100."
+      "id": "wst-2026-r3-m56",
+      "sport": "snooker",
+      "competition": "BetVictor Northern Ireland Open — Round 3 (Match 56)",
+      "date": "2026-10-22",
+      "time": "2026-10-22 15:00",
+      "home": "Jordan Brown (prize value not captured)",
+      "away": "Scott Donaldson (prize value not captured)",
+      "official_source": "WST Match Centre",
+      "official_url": "https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."
     },
     {
       "id": "pdc-32338",
@@ -1871,19 +3117,6 @@
       "blank_reason": "Next-season championship market prior to 2027 car testing; left blank rather than speculated."
     },
     {
-      "id": "vb-lublin-gdansk",
-      "sport": "volleyball",
-      "competition": "Polish PlusLiga 2026/27",
-      "date": "2026-10-21",
-      "time": "2026-10-21 16:30",
-      "home": "BOGDANKA LUK Lublin",
-      "away": "Trefl Gdańsk",
-      "official_source": "PlusLiga Schedule",
-      "official_url": "https://www.plusliga.pl/games.html",
-      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
-      "blank_reason": "Clubs have played only M=1 match in 2026/27 and plusliga.pl/table.html cross-redirects to shared PLS tauronliga.pl shell."
-    },
-    {
       "id": "vb-suwalki-katowice",
       "sport": "volleyball",
       "competition": "Polish PlusLiga 2026/27",
@@ -1921,19 +3154,6 @@
       "official_url": "https://www.plusliga.pl/games.html",
       "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21",
       "blank_reason": "Opening-round M=1 sample size insufficient for reliable independent line origination."
-    },
-    {
-      "id": "icc-274658",
-      "sport": "cricket",
-      "competition": "ODI Tri-Series in UAE 2026",
-      "date": "2026-10-21",
-      "time": "2026-10-21 09:00 UTC",
-      "home": "Afghanistan",
-      "away": "Bangladesh",
-      "official_source": "ICC Match Centre",
-      "official_url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh",
-      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7",
-      "blank_reason": "ICC team-rankings table and match centre statistics render via client JS ('Loading'); prices left blank."
     },
     {
       "id": "icc-271646",
@@ -2090,84 +3310,6 @@
       "official_url": "https://www.gaa.ie/football",
       "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
       "blank_reason": "2027 inter-county season not started; left unlined."
-    },
-    {
-      "id": "dog-689384",
-      "sport": "greyhounds",
-      "competition": "Harlow — 21 Oct Race Card",
-      "date": "2026-10-21",
-      "time": "2026-10-21 10:32",
-      "home": "10:32 Harlow (6-Trap Race)",
-      "away": "Field",
-      "official_source": "GBGB Licensed Track Hub",
-      "official_url": "https://www.gbgb.org.uk/racing/results/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-      "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."
-    },
-    {
-      "id": "dog-689385",
-      "sport": "greyhounds",
-      "competition": "Harlow — 21 Oct Race Card",
-      "date": "2026-10-21",
-      "time": "2026-10-21 10:48",
-      "home": "10:48 Harlow (6-Trap Race)",
-      "away": "Field",
-      "official_source": "GBGB Licensed Track Hub",
-      "official_url": "https://www.gbgb.org.uk/racing/results/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-      "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."
-    },
-    {
-      "id": "dog-689387",
-      "sport": "greyhounds",
-      "competition": "Monmore — 21 Oct Race Card",
-      "date": "2026-10-21",
-      "time": "2026-10-21 11:03",
-      "home": "11:03 Monmore (6-Trap Race)",
-      "away": "Field",
-      "official_source": "GBGB Licensed Track Hub",
-      "official_url": "https://www.gbgb.org.uk/racing/results/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-      "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."
-    },
-    {
-      "id": "dog-689383",
-      "sport": "greyhounds",
-      "competition": "Harlow — 21 Oct Race Card",
-      "date": "2026-10-21",
-      "time": "2026-10-21 11:04",
-      "home": "11:04 Harlow (6-Trap Race)",
-      "away": "Field",
-      "official_source": "GBGB Licensed Track Hub",
-      "official_url": "https://www.gbgb.org.uk/racing/results/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-      "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."
-    },
-    {
-      "id": "dog-689386",
-      "sport": "greyhounds",
-      "competition": "Nottingham — 21 Oct Race Card",
-      "date": "2026-10-21",
-      "time": "2026-10-21 11:09",
-      "home": "11:09 Nottingham (6-Trap Race)",
-      "away": "Field",
-      "official_source": "GBGB Licensed Track Hub",
-      "official_url": "https://www.gbgb.org.uk/racing/results/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-      "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."
-    },
-    {
-      "id": "dog-689390",
-      "sport": "greyhounds",
-      "competition": "Kinsley — 21 Oct Race Card",
-      "date": "2026-10-21",
-      "time": "2026-10-21 11:14",
-      "home": "11:14 Kinsley (6-Trap Race)",
-      "away": "Field",
-      "official_source": "GBGB Licensed Track Hub",
-      "official_url": "https://www.gbgb.org.uk/racing/results/",
-      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-      "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."
     }
   ]
 }

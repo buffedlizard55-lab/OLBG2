@@ -1206,6 +1206,33 @@ document it. Session `arena/d4b9d560-olbg2` closes here: tasks L1-L5 done, 11 fl
 | Live production URLs verified | `https://buffedlizard55-lab.github.io/OLBG2/`, `https://buffedlizard55-lab.github.io/OLBG2/verified/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/predictions.html`, `https://buffedlizard55-lab.github.io/OLBG2/verified/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/survey/index.html`, `https://buffedlizard55-lab.github.io/OLBG2/integration.html` |
 
 
+## Session `arena/50268b75-olbg2` — daily slate refresh of the `/verified/` desk + in-band high-confidence focus (2026-10-22)
+
+**Session ID:** `arena/50268b75-olbg2` · **Branch:** `arena/50268b75-olbg2` · **Claimed:** 2026-10-22 01:23 UTC (before any implementation edit)
+
+**Why this session:** the `/verified/` desk was captured 2026-10-21. Its 21 Oct NHL/NBA/EuroCup/EHF/tennis/snooker/greyhound rows are now played, its NHL/NBA team inputs are one game day stale, and a new 22 Oct NHL + NBA slate exists. The brief also asks to focus high-confidence written picks on selections priced between **−250 and +10000** (American) rather than ultra-short moneylines; the current desk's 20 written picks are mostly sub-−250 moneylines.
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| R1 | Fresh 2026-10-22 capture from official governing-body sources only (NHL score/stats APIs, NBA official schedule + standings, MLB stats API, spot-verify EuroLeague R7 / Pro D2 J8 / PDC EC R1 / EHF R5 22-Oct fixtures). One official URL per row; anything unreachable stays blank and is flagged. | done | `arena/50268b75-olbg2` | `scripts/verified_seed.py`, `data/verified/**`, `research/refresh-50268b75.md` |
+| R2 | Migrate verified model NHL/NBA/URC/EHF inputs from shared `data/inputs/**` into `data/verified/inputs.json` (full-replacement fresh NHL/NBA literals; URC/EHF copied at seed time, EHF 21-Oct fixtures dropped as completed). Shared inputs are **not** edited. | done | `arena/50268b75-olbg2` | `scripts/verified_seed.py`, `scripts/verified_model.py`, `data/verified/**` |
+| R3 | Originate lines on refreshed slate; add fair American odds; featured written predictions only for selections with model probability ≥ 70% **and** fair American price in [−250, +10000] (handicap/total markets used when the moneyline is shorter than −250); ≥30 unique words each, official-source facts per claim. | done | `arena/50268b75-olbg2` | `scripts/verified_model.py`, `data/verified/**`, `verified/**` |
+| R4 | Rebuild `/verified/`, update pipeline tests, verify line by line (no row without official source, 0 broken local links, full suite green). | done | `arena/50268b75-olbg2` | `scripts/verified_build.py`, `verified/**`, `tests/test_verified_pipeline.py` |
+| R5 | Final integration: PR → merge → confirm Pages deploy; record here. | in progress | `arena/50268b75-olbg2` | shared outputs (integration), `COORDINATION.md` |
+
+**Concurrent-session check at claim time:** no open PRs (`gh pr list` empty); `origin/main` = `f8a14b4` (PR #49); all earlier sessions in this file are closed/merged. This session does **not** create, edit or delete: `data/inputs/**`, `data/matches.json`, `data/predictions.json`, `data/flagged.json`, `data/sources.json`, `data/desk/**`, `data/live/**`, `data/survey/**`, `data/refresh/**`, root pages, `site/**`, `live/**`, `survey/**`, `sports/**`, `assets/**`, `scripts/model.py`, `scripts/build_site.py`, `scripts/build.py`, `scripts/engine.py`, `scripts/live_*.py`, `scripts/survey_*.py`, `scripts/official_source_audit.py`, `scripts/integration_audit.py`, other sessions' tests. If root navigation needs a touch it will be requested here instead of edited.
+
+**Rules for this session (same as prior desks):** a value is published only when an official source returned it in this session's capture; unreachable values stay blank and are flagged; completed 21-Oct rows are removed from the upcoming desk and the removal is logged in `research/refresh-50268b75.md` (earlier layers keep their snapshots untouched); no bookmaker odds are read or used — the −250/+10000 band is applied to our own originated fair prices.
+
+### Progress Log — Session `arena/50268b75-olbg2`
+
+- **R1 DONE** — Fresh 2026-10-22 capture transcribed into `scripts/verified_seed.py`: NHL 12 fixtures / 32 teams (Stats REST), NBA 14 fixtures (official schedule), EuroLeague 9 live R7 fixtures (HTA/VIR updated, `el-E2026-61` retired), EHF 24 clubs / 5 fixtures post-Round-5, MLB World Series G1–G4. LNR Pro D2 confirmed J7/J8 inputs unchanged. PDC rankings returned a consent wall (VF-13, 21-Oct ladder retained); EuroCup R5 + ATP order of play not server-rendered (VF-12); FLA/OTT one game stale behind a live 21-Oct game (VF-11); greyhound cards retired as completed coverage gap (VF-14).
+- **R2 DONE** — Model reads only `data/verified/inputs.json`. Seed copies NBA 2025-26 priors and URC tables/fixtures through deterministic transforms. Regenerated survey outputs via integration step after restoring a derived `mlb_world_series` compat key (survey_lines consumer).
+- **R3 DONE** — 93 originated rows; every pick carries fair American price. 14 featured written predictions (prob ≥ 0.70, American −236…−250, 64–75 unique words each) using alternate handicaps where moneylines are sub-−250. 26 unlined rows listed blank with reasons.
+- **R4 DONE** — Full CI pipeline run locally: all generators green, `survey_verify` PASS, `integration_audit` 0 link errors, `unittest` 61/61 OK.
+
+---
+
 
 ---
 
@@ -1253,6 +1280,17 @@ governing body or league. A row whose event date has passed is labelled `past` r
 conditional Games 5–7 (VF-15), and the 63 rows whose official URL identifies the competition rather than the
 fixture (VF-11). No value was inferred to close any of them.
 
+### Merge-conflict resolution — Session `arena/50268b75-olbg2` × `arena/36f79c71-olbg2` (PR #53)
+
+Session `36f79c71` merged PRs #50–#52 (unified 155-row dashboard, price-band layer, Pages workflow) into `main` while this session's PR #53 was open; PR #53's CI was green but `mergeable: CONFLICTING`. Resolution (merge of `origin/main` into this branch, nothing discarded silently):
+
+- **Both sessions worked the same brief in parallel.** `36f79c71` added an additive price-band layer (`band_pick`, `data/verified/band.json`, 13 band narratives) over the stale 2026-10-21 desk, and its own flags VF-13/VF-14/VF-15 record that its desk still carried 59 played 21-Oct rows, no 22-Oct NBA slate, and no World Series Game 4. This session re-captured the desk fresh on 2026-10-22, closing exactly those gaps, so the fresh-capture architecture (`featured`) is the base; every compatible element of `36f79c71` was preserved:
+  - Pages deployment workflow, root table-filter fix, root dashboard + integration changes — untouched in `main`.
+  - Flags VF-11…VF-18 kept verbatim in the register; this session's flags renumbered **VF-19…VF-22** to end the ID collision, and dated resolution notes were appended to VF-11/12/13/14/15/18 rather than rewriting their findings.
+  - `data/verified/band.json` + `band_pick` contract preserved: `verified_model.py` now emits both from the fresh featured selections (14 picks), so the root dashboard and integration page read live data (119 rows, 93 originated, 14 band picks, 22 review items). Three hardcoded stale numbers in `build_site.py` copy were corrected to the merged snapshot.
+  - Narrative superlatives softened by `36f79c71` (Barça goals-against, Panathinaikos differential) were re-verified computationally against the fresh tables — both are factually correct (104 GA is the 24-club minimum; +90 is the best EuroLeague differential) and stand.
+  - `36f79c71`'s 13 `BAND_NARRATIVES` and additive-model tests could not carry over: they price retired 21-Oct fixtures from the superseded slate. They remain in Git history at `585d2be`.
+- **Post-resolution gate:** full pipeline regenerated (verified/live/desk/survey/root), `survey_verify` PASS, `integration_audit` 0 errors, 61/61 unit tests OK.
 ## Merge and deployment record — 2026-10-22
 
 | Step | Reference | Result |

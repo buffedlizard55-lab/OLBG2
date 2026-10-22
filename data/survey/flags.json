@@ -52,7 +52,7 @@
     "id": "F-15",
     "severity": "coverage-gap",
     "area": "lines",
-    "title": "119 inventoried events left blank pending server-rendered official ratings",
+    "title": "115 inventoried events left blank pending server-rendered official ratings",
     "detail": "Every unlined row is itemized below with its OLBG listing link, official governing-body link, and exact reason.",
     "items": [
       {
@@ -529,72 +529,6 @@
         "reason": "Tournament field strokes-gained distribution not available on static PGA/DP World Tour schedule pages."
       },
       {
-        "sport": "greyhounds",
-        "match": "10:32 Harlow (6-Trap Race)",
-        "market": "Win Race",
-        "listed_time": "2026-10-21 10:32",
-        "as_of": "2026-10-21",
-        "retrieved_via": "live_fetch",
-        "source_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-        "official_fixture_source": "https://www.gbgb.org.uk/racing/results/",
-        "reason": "Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk)."
-      },
-      {
-        "sport": "greyhounds",
-        "match": "10:48 Harlow (6-Trap Race)",
-        "market": "Win Race",
-        "listed_time": "2026-10-21 10:48",
-        "as_of": "2026-10-21",
-        "retrieved_via": "live_fetch",
-        "source_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-        "official_fixture_source": "https://www.gbgb.org.uk/racing/results/",
-        "reason": "Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk)."
-      },
-      {
-        "sport": "greyhounds",
-        "match": "11:03 Monmore (6-Trap Race)",
-        "market": "Win Race",
-        "listed_time": "2026-10-21 11:03",
-        "as_of": "2026-10-21",
-        "retrieved_via": "live_fetch",
-        "source_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-        "official_fixture_source": "https://www.gbgb.org.uk/racing/results/",
-        "reason": "Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk)."
-      },
-      {
-        "sport": "greyhounds",
-        "match": "11:04 Harlow (6-Trap Race)",
-        "market": "Win Race",
-        "listed_time": "2026-10-21 11:04",
-        "as_of": "2026-10-21",
-        "retrieved_via": "live_fetch",
-        "source_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-        "official_fixture_source": "https://www.gbgb.org.uk/racing/results/",
-        "reason": "Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk)."
-      },
-      {
-        "sport": "greyhounds",
-        "match": "11:09 Nottingham (6-Trap Race)",
-        "market": "Win Race",
-        "listed_time": "2026-10-21 11:09",
-        "as_of": "2026-10-21",
-        "retrieved_via": "live_fetch",
-        "source_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-        "official_fixture_source": "https://www.gbgb.org.uk/racing/results/",
-        "reason": "Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk)."
-      },
-      {
-        "sport": "greyhounds",
-        "match": "11:14 Kinsley (6-Trap Race)",
-        "market": "Win Race",
-        "listed_time": "2026-10-21 11:14",
-        "as_of": "2026-10-21",
-        "retrieved_via": "live_fetch",
-        "source_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
-        "official_fixture_source": "https://www.gbgb.org.uk/racing/results/",
-        "reason": "Trap sectional times and form require licensed GBGB data feeds (https://www.gbgb.org.uk)."
-      },
-      {
         "sport": "handball",
         "match": "GOG vs KIF Kolding",
         "market": "Money Line",
@@ -1069,12 +1003,34 @@
       },
       {
         "sport": "snooker",
+        "match": "John Higgins v Jak Jones",
+        "market": "Win Match",
+        "listed_time": "Today 08:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934",
+        "official_fixture_source": "https://www.wst.tv/matches/",
+        "reason": "One or both players rank outside WST's server-rendered Top 36 (https://www.wst.tv/rankings/)."
+      },
+      {
+        "sport": "snooker",
         "match": "Sam Craigie v Xu Si",
         "market": "Win Match",
         "listed_time": "Today 09:00",
         "as_of": "2026-10-21",
         "retrieved_via": "live_fetch",
         "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Sam_Craigie_v_Xu_Si/8?event_id=9930",
+        "official_fixture_source": "https://www.wst.tv/matches/",
+        "reason": "One or both players rank outside WST's server-rendered Top 36 (https://www.wst.tv/rankings/)."
+      },
+      {
+        "sport": "snooker",
+        "match": "Zhang Anda v Mark Williams",
+        "market": "Win Match",
+        "listed_time": "2026-10-21 09:00",
+        "as_of": "2026-10-21",
+        "retrieved_via": "live_fetch",
+        "source_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936",
         "official_fixture_source": "https://www.wst.tv/matches/",
         "reason": "One or both players rank outside WST's server-rendered Top 36 (https://www.wst.tv/rankings/)."
       },

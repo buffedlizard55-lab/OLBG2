@@ -74,7 +74,8 @@ class VerifiedPipelineTests(unittest.TestCase):
 
     def test_every_row_has_trusted_official_source_url_and_no_third_party_domains(self) -> None:
         rows = self.matches["matches"]
-        self.assertGreaterEqual(len(rows), 140)
+        self.assertEqual(len(rows), self.matches["counts"]["total_rows"])
+        self.assertGreaterEqual(len(rows), 100)
         for m in rows:
             url = m.get("official_url") or ""
             parsed = urlparse(url)
@@ -115,25 +116,35 @@ class VerifiedPipelineTests(unittest.TestCase):
                 self.assertIsNone(m["handicap_market"])
                 self.assertIsNone(m["total_market"])
                 self.assertIsNone(m["pick"])
-        self.assertEqual(orig, 112)
-        self.assertEqual(unl, 43)
+        self.assertEqual(orig, self.matches["counts"]["originated_rows"])
+        self.assertEqual(unl, self.matches["counts"]["unlined_rows"])
+        self.assertEqual(orig, 93)
+        self.assertEqual(unl, 26)
 
-    def test_high_confidence_predictions_are_unique_human_and_ge_30_words(self) -> None:
-        high_ids = {
-            m["id"]
+    def test_featured_predictions_are_unique_human_and_ge_30_words(self) -> None:
+        # Written predictions are the per-match FEATURED selections: model
+        # probability >= 0.70 priced between -250 and +10000 American, so the
+        # desk never pads the page with ultra-short moneyline favourites.
+        featured = {
+            m["id"]: m["featured"]
             for m in self.matches["matches"]
-            if m["line_status"] == "originated" and m["pick"]["confidence"] == "high"
+            if m["line_status"] == "originated" and m.get("featured")
         }
         preds = self.preds["predictions"]
         pred_ids = {p["match_id"] for p in preds}
-        # Every high-confidence row has a prediction. Band picks add a second,
-        # separately labelled prediction on rows that are not primary-high.
-        self.assertTrue(high_ids <= pred_ids, f"Missing predictions for {high_ids - pred_ids}")
-        band_ids = {
-            m["id"] for m in self.matches["matches"] if m.get("band_pick")
-        }
-        self.assertTrue(band_ids <= pred_ids, f"Missing band predictions for {band_ids - pred_ids}")
-        self.assertGreaterEqual(len(preds), 30)
+        self.assertEqual(set(featured), pred_ids)
+        self.assertGreaterEqual(len(preds), 10)
+        for p in preds:
+            feat = featured[p["match_id"]]
+            self.assertEqual(p["selection"], feat["selection"])
+            self.assertEqual(p["confidence"], "high")
+            self.assertGreaterEqual(p["probability"], 0.70)
+            self.assertGreaterEqual(p["fair_american"], -250)
+            self.assertLessEqual(p["fair_american"], 10000)
+            dec = 1.0 / p["probability"]
+            exp_am = round((dec - 1) * 100) if dec >= 2 else round(-100 / (dec - 1))
+            self.assertAlmostEqual(p["fair_american"], exp_am, delta=2)
+            self.assertIn(p["selection"], p["text"], "Narrative must name its selection")
         openings = set()
         headlines = set()
         for p in preds:
@@ -151,33 +162,13 @@ class VerifiedPipelineTests(unittest.TestCase):
         self.assertEqual(len(openings), len(preds), "Duplicate prediction openings found")
         self.assertEqual(len(headlines), len(preds), "Duplicate headlines found")
 
-    def test_price_band_picks_sit_inside_the_requested_odds_window(self) -> None:
-        band = json.loads((DATA / "band.json").read_text())
-        rows = band["selections"]
-        self.assertEqual(len(rows), 13, "Price-band layer must hold exactly 13 picks")
-        match_by_id = {m["id"]: m for m in self.matches["matches"]}
-        for row in rows:
-            prob = row["probability"]
-            price = row["fair_odds"]
-            self.assertGreaterEqual(prob, 0.70, f"{row['id']} below 70% implied probability")
-            self.assertGreaterEqual(price, 1.40, f"{row['id']} below the -250 bound")
-            self.assertLessEqual(price, 101.00, f"{row['id']} above the +10000 bound")
-            # The published price must be the exact reciprocal of the model
-            # probability, never a rounded display value that drifts out of band.
-            self.assertAlmostEqual(price, 1.0 / prob, delta=0.0051)
-            self.assertEqual(row["confidence"], "high")
-            self.assertIn(row["id"], match_by_id, f"{row['id']} has no stored fixture")
-            self.assertEqual(match_by_id[row["id"]]["band_pick"]["fair_odds"], price)
-            if row["sport"] == "ice-hockey" and row["market"] == "handicap":
-                # Ice hockey has no draw, so a half-puck handicap at +/-0.5
-                # would be an impossible market; the smallest valid line is 1.5.
-                self.assertGreaterEqual(abs(row["line"]), 1.0)
-        band_preds = [p for p in self.preds["predictions"] if p.get("match_type") == "band"]
-        self.assertEqual(len(band_preds), 13)
-        self.assertEqual({p["match_id"] for p in band_preds}, {r["id"] for r in rows})
-        for pred in band_preds:
-            self.assertTrue(pred["price_band"].startswith("in-band"))
-            self.assertGreaterEqual(len(pred["text"].split()), 30)
+    def test_no_stale_fixtures_and_nba_never_featured(self) -> None:
+        captured = self.matches["captured_at"]
+        for m in self.matches["matches"]:
+            self.assertGreaterEqual(m["date"], captured, f"Stale row {m['id']} dated {m['date']}")
+            if m["competition"].startswith("NBA"):
+                self.assertIsNone(m.get("featured"))
+        self.assertEqual(self.preds["captured_at"], captured)
 
     def test_html_pages_flagged_heading_and_zero_broken_internal_links(self) -> None:
         html_files = list(SITE.rglob("*.html"))

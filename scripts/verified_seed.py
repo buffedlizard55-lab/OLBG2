@@ -18,7 +18,148 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "verified"
 
-CAPTURE_DATE = "2026-10-21"
+CAPTURE_DATE = "2026-10-22"
+
+# ---------------------------------------------------------------------------
+# 2026-10-22 refresh datasets (session arena/50268b75-olbg2).
+# NHL team summary: official NHL Stats REST, seasonId=20262027, gameTypeId=2
+# (https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2&start=0&limit=50),
+# read 2026-10-22 ~01:35Z; all 32 clubs. The two games dated 2026-10-21
+# (PHI @ BUF, FLA @ OTT) were still LIVE at capture (2nd intermission), so
+# those four clubs' rows exclude that in-progress game — flagged VF-19.
+# Goal totals use the Stats REST convention (shootout-winning goal excluded;
+# see existing F19 disclosure). W-L-OTL cross-checked 24/24 against the
+# per-game records on https://api-web.nhle.com/v1/score/2026-10-22.
+NHL_TEAMS = {
+    "ANA": {"name": "Anaheim Ducks", "gp": 9, "w": 4, "l": 5, "otl": 0, "gf": 26, "ga": 29, "points": 8},
+    "BOS": {"name": "Boston Bruins", "gp": 10, "w": 7, "l": 2, "otl": 1, "gf": 36, "ga": 22, "points": 15},
+    "BUF": {"name": "Buffalo Sabres", "gp": 9, "w": 4, "l": 3, "otl": 2, "gf": 27, "ga": 33, "points": 10},
+    "CAR": {"name": "Carolina Hurricanes", "gp": 11, "w": 8, "l": 2, "otl": 1, "gf": 42, "ga": 27, "points": 17},
+    "CBJ": {"name": "Columbus Blue Jackets", "gp": 8, "w": 3, "l": 5, "otl": 0, "gf": 19, "ga": 29, "points": 6},
+    "CGY": {"name": "Calgary Flames", "gp": 8, "w": 2, "l": 6, "otl": 0, "gf": 17, "ga": 37, "points": 4},
+    "CHI": {"name": "Chicago Blackhawks", "gp": 9, "w": 3, "l": 6, "otl": 0, "gf": 21, "ga": 36, "points": 6},
+    "COL": {"name": "Colorado Avalanche", "gp": 10, "w": 5, "l": 4, "otl": 1, "gf": 41, "ga": 30, "points": 11},
+    "DAL": {"name": "Dallas Stars", "gp": 9, "w": 5, "l": 3, "otl": 1, "gf": 22, "ga": 14, "points": 11},
+    "DET": {"name": "Detroit Red Wings", "gp": 9, "w": 3, "l": 3, "otl": 3, "gf": 22, "ga": 26, "points": 9},
+    "EDM": {"name": "Edmonton Oilers", "gp": 9, "w": 7, "l": 1, "otl": 1, "gf": 41, "ga": 27, "points": 15},
+    "FLA": {"name": "Florida Panthers", "gp": 9, "w": 5, "l": 2, "otl": 2, "gf": 30, "ga": 25, "points": 12},
+    "LAK": {"name": "Los Angeles Kings", "gp": 7, "w": 1, "l": 4, "otl": 2, "gf": 17, "ga": 27, "points": 4},
+    "MIN": {"name": "Minnesota Wild", "gp": 10, "w": 6, "l": 2, "otl": 2, "gf": 31, "ga": 25, "points": 14},
+    "MTL": {"name": "Montréal Canadiens", "gp": 9, "w": 4, "l": 3, "otl": 2, "gf": 28, "ga": 34, "points": 10},
+    "NJD": {"name": "New Jersey Devils", "gp": 9, "w": 5, "l": 4, "otl": 0, "gf": 29, "ga": 30, "points": 10},
+    "NSH": {"name": "Nashville Predators", "gp": 8, "w": 3, "l": 2, "otl": 3, "gf": 23, "ga": 22, "points": 9},
+    "NYI": {"name": "New York Islanders", "gp": 9, "w": 5, "l": 3, "otl": 1, "gf": 27, "ga": 19, "points": 11},
+    "NYR": {"name": "New York Rangers", "gp": 11, "w": 7, "l": 3, "otl": 1, "gf": 33, "ga": 24, "points": 15},
+    "OTT": {"name": "Ottawa Senators", "gp": 9, "w": 6, "l": 3, "otl": 0, "gf": 22, "ga": 23, "points": 12},
+    "PHI": {"name": "Philadelphia Flyers", "gp": 11, "w": 2, "l": 6, "otl": 3, "gf": 17, "ga": 35, "points": 7},
+    "PIT": {"name": "Pittsburgh Penguins", "gp": 10, "w": 3, "l": 6, "otl": 1, "gf": 32, "ga": 37, "points": 7},
+    "SEA": {"name": "Seattle Kraken", "gp": 10, "w": 6, "l": 3, "otl": 1, "gf": 37, "ga": 34, "points": 13},
+    "SJS": {"name": "San Jose Sharks", "gp": 10, "w": 5, "l": 4, "otl": 1, "gf": 26, "ga": 34, "points": 11},
+    "STL": {"name": "St. Louis Blues", "gp": 9, "w": 4, "l": 4, "otl": 1, "gf": 29, "ga": 29, "points": 9},
+    "TBL": {"name": "Tampa Bay Lightning", "gp": 9, "w": 7, "l": 2, "otl": 0, "gf": 31, "ga": 23, "points": 14},
+    "TOR": {"name": "Toronto Maple Leafs", "gp": 11, "w": 5, "l": 4, "otl": 2, "gf": 38, "ga": 34, "points": 12},
+    "UTA": {"name": "Utah Mammoth", "gp": 10, "w": 7, "l": 3, "otl": 0, "gf": 38, "ga": 31, "points": 14},
+    "VAN": {"name": "Vancouver Canucks", "gp": 11, "w": 2, "l": 8, "otl": 1, "gf": 33, "ga": 51, "points": 5},
+    "VGK": {"name": "Vegas Golden Knights", "gp": 11, "w": 8, "l": 3, "otl": 0, "gf": 43, "ga": 30, "points": 16},
+    "WPG": {"name": "Winnipeg Jets", "gp": 9, "w": 4, "l": 3, "otl": 2, "gf": 24, "ga": 26, "points": 10},
+    "WSH": {"name": "Washington Capitals", "gp": 9, "w": 5, "l": 4, "otl": 0, "gf": 30, "ga": 29, "points": 10},
+}
+
+# NHL fixtures for 2026-10-22 (all 12 games, gameState FUT) from
+# https://api-web.nhle.com/v1/score/2026-10-22, read 2026-10-22.
+NHL_FIXTURES = [
+    {"game_id": 2026020154, "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "NSH", "home": "BOS", "venue": "TD Garden"},
+    {"game_id": 2026020155, "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "NYR", "home": "TOR", "venue": "Scotiabank Arena"},
+    {"game_id": 2026020156, "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "SJS", "home": "OTT", "venue": "Canadian Tire Centre"},
+    {"game_id": 2026020157, "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "ANA", "home": "NJD", "venue": "Prudential Center"},
+    {"game_id": 2026020158, "date": "2026-10-22", "start_utc": "2026-10-22T23:00:00Z", "away": "FLA", "home": "PIT", "venue": "PPG Paints Arena"},
+    {"game_id": 2026020159, "date": "2026-10-22", "start_utc": "2026-10-22T23:30:00Z", "away": "LAK", "home": "NYI", "venue": "UBS Arena"},
+    {"game_id": 2026020160, "date": "2026-10-22", "start_utc": "2026-10-23T00:00:00Z", "away": "VGK", "home": "STL", "venue": "Enterprise Center"},
+    {"game_id": 2026020161, "date": "2026-10-22", "start_utc": "2026-10-23T00:00:00Z", "away": "WPG", "home": "DAL", "venue": "American Airlines Center"},
+    {"game_id": 2026020162, "date": "2026-10-22", "start_utc": "2026-10-23T01:00:00Z", "away": "MIN", "home": "CGY", "venue": "Scotiabank Saddledome"},
+    {"game_id": 2026020163, "date": "2026-10-22", "start_utc": "2026-10-23T01:00:00Z", "away": "CAR", "home": "EDM", "venue": "Rogers Place"},
+    {"game_id": 2026020164, "date": "2026-10-22", "start_utc": "2026-10-23T02:00:00Z", "away": "UTA", "home": "SEA", "venue": "Climate Pledge Arena"},
+    {"game_id": 2026020165, "date": "2026-10-22", "start_utc": "2026-10-23T02:00:00Z", "away": "DET", "home": "VAN", "venue": "Rogers Arena"},
+]
+
+# NBA Week-1 fixtures for 2026-10-22 (2 games) and 2026-10-23 (12 games) from the
+# official NBA schedule page (https://www.nba.com/schedule?date=2026-10-22),
+# read 2026-10-22. Team strength priors remain the completed 2025-26 records in
+# data/inputs/nba_teams.json, copied into inputs.json at seed time (VF-01/VF-02).
+NBA_FIXTURES = [
+    {"game_id": "0022600006", "date": "2026-10-22", "tip_et": "19:00", "away": "CLE", "home": "PHI", "venue": "Xfinity Mobile Arena"},
+    {"game_id": "0022600007", "date": "2026-10-22", "tip_et": "21:30", "away": "DEN", "home": "OKC", "venue": "Paycom Center"},
+    {"game_id": "0022600099", "date": "2026-10-23", "tip_et": "16:00", "away": "CHI", "home": "MIL", "venue": "Fiserv Forum"},
+    {"game_id": "0022600008", "date": "2026-10-23", "tip_et": "19:00", "away": "NYK", "home": "BOS", "venue": "TD Garden"},
+    {"game_id": "0022600094", "date": "2026-10-23", "tip_et": "19:00", "away": "ATL", "home": "CHA", "venue": "Spectrum Center"},
+    {"game_id": "0022600095", "date": "2026-10-23", "tip_et": "19:00", "away": "DAL", "home": "IND", "venue": "Gainbridge Fieldhouse"},
+    {"game_id": "0022600096", "date": "2026-10-23", "tip_et": "19:00", "away": "MIN", "home": "ORL", "venue": "Kia Center"},
+    {"game_id": "0022600097", "date": "2026-10-23", "tip_et": "19:00", "away": "TOR", "home": "WAS", "venue": "Capital One Arena"},
+    {"game_id": "0022600098", "date": "2026-10-23", "tip_et": "20:00", "away": "DET", "home": "MIA", "venue": "Kaseya Center"},
+    {"game_id": "0022600009", "date": "2026-10-23", "tip_et": "21:30", "away": "HOU", "home": "SAS", "venue": "Moody Center"},
+    {"game_id": "0022600100", "date": "2026-10-23", "tip_et": "21:30", "away": "NOP", "home": "UTA", "venue": "Delta Center"},
+    {"game_id": "0022600101", "date": "2026-10-23", "tip_et": "22:00", "away": "MEM", "home": "GSW", "venue": "Chase Center"},
+    {"game_id": "0022600102", "date": "2026-10-23", "tip_et": "22:00", "away": "LAC", "home": "LAL", "venue": "Crypto.com Arena"},
+    {"game_id": "0022600103", "date": "2026-10-23", "tip_et": "22:00", "away": "POR", "home": "SAC", "venue": "Golden 1 Center"},
+]
+
+# EHF Champions League Men 2026/27 group standings after the 21-Oct Round 5
+# games (https://ehfcl.eurohandball.com/men/2026-27/standings/), read
+# 2026-10-22. Clubs at GP5 have completed Round 5; clubs at GP4 play on 22 Oct.
+EHF_TEAMS = {
+    "veszprem": {"name": "One Veszprém HC", "group": "A", "gp": 5, "w": 5, "d": 0, "l": 0, "gf": 185, "ga": 146, "pts": 10},
+    "fuchse": {"name": "Füchse Berlin", "group": "A", "gp": 5, "w": 3, "d": 0, "l": 2, "gf": 184, "ga": 172, "pts": 6},
+    "porto": {"name": "FC Porto", "group": "A", "gp": 5, "w": 1, "d": 1, "l": 3, "gf": 158, "ga": 173, "pts": 3},
+    "partizan": {"name": "RK Partizan AdmiralBet", "group": "A", "gp": 5, "w": 0, "d": 1, "l": 4, "gf": 148, "ga": 184, "pts": 1},
+    "plock": {"name": "Orlen Wisla Plock", "group": "B", "gp": 4, "w": 3, "d": 0, "l": 1, "gf": 115, "ga": 108, "pts": 6},
+    "nantes": {"name": "HBC Nantes", "group": "B", "gp": 5, "w": 3, "d": 0, "l": 2, "gf": 142, "ga": 143, "pts": 6},
+    "melsungen": {"name": "MT Melsungen", "group": "B", "gp": 4, "w": 2, "d": 0, "l": 2, "gf": 110, "ga": 112, "pts": 4},
+    "vardar": {"name": "HC Vardar 1961", "group": "B", "gp": 5, "w": 1, "d": 0, "l": 4, "gf": 154, "ga": 158, "pts": 2},
+    "aalborg": {"name": "Aalborg Håndbold", "group": "C", "gp": 5, "w": 4, "d": 1, "l": 0, "gf": 170, "ga": 145, "pts": 9},
+    "psg": {"name": "Paris Saint-Germain", "group": "C", "gp": 5, "w": 3, "d": 1, "l": 1, "gf": 182, "ga": 157, "pts": 7},
+    "zagreb": {"name": "HC Zagreb", "group": "C", "gp": 5, "w": 2, "d": 0, "l": 3, "gf": 146, "ga": 158, "pts": 4},
+    "celje": {"name": "RK Celje Pivovarna Laško", "group": "C", "gp": 5, "w": 0, "d": 0, "l": 5, "gf": 150, "ga": 188, "pts": 0},
+    "sporting": {"name": "Sporting Clube de Portugal", "group": "D", "gp": 4, "w": 3, "d": 1, "l": 0, "gf": 149, "ga": 125, "pts": 7},
+    "gog": {"name": "GOG", "group": "D", "gp": 4, "w": 3, "d": 0, "l": 1, "gf": 145, "ga": 139, "pts": 6},
+    "szeged": {"name": "OTP Bank - PICK Szeged", "group": "D", "gp": 4, "w": 1, "d": 1, "l": 2, "gf": 139, "ga": 136, "pts": 3},
+    "kristianstad": {"name": "IFK Kristianstad", "group": "D", "gp": 4, "w": 0, "d": 0, "l": 4, "gf": 122, "ga": 155, "pts": 0},
+    "barca": {"name": "Barça", "group": "E", "gp": 4, "w": 4, "d": 0, "l": 0, "gf": 137, "ga": 104, "pts": 8},
+    "aarhus": {"name": "SAH - Aarhus", "group": "E", "gp": 5, "w": 2, "d": 1, "l": 2, "gf": 150, "ga": 163, "pts": 5},
+    "dinamo": {"name": "Dinamo Bucuresti", "group": "E", "gp": 5, "w": 1, "d": 1, "l": 3, "gf": 134, "ga": 145, "pts": 3},
+    "montpellier": {"name": "Montpellier Handball", "group": "E", "gp": 4, "w": 1, "d": 0, "l": 3, "gf": 116, "ga": 125, "pts": 2},
+    "magdeburg": {"name": "SC Magdeburg", "group": "F", "gp": 4, "w": 4, "d": 0, "l": 0, "gf": 141, "ga": 108, "pts": 8},
+    "kielce": {"name": "Industria Kielce", "group": "F", "gp": 5, "w": 3, "d": 0, "l": 2, "gf": 155, "ga": 153, "pts": 6},
+    "kriens": {"name": "HC Kriens-Luzern", "group": "F", "gp": 5, "w": 2, "d": 0, "l": 3, "gf": 158, "ga": 161, "pts": 4},
+    "kolstad": {"name": "Kolstad Håndball", "group": "F", "gp": 4, "w": 0, "d": 0, "l": 4, "gf": 111, "ga": 143, "pts": 0},
+}
+
+# EHF Round 5 fixtures on 2026-10-22, re-verified 2026-10-22 on the official
+# match centre (https://ehfcl.eurohandball.com/men/2026-27/matches/); the seven
+# R5 fixtures played on 21 Oct are retired as completed.
+EHF_FIXTURES = [
+    {"id": "ehfcl-202711020101043", "ehf_match_id": "202711020101043", "date": "2026-10-22", "time_local": "18:45", "timezone": "CEST", "start_utc": "2026-10-22T16:45:00Z", "home": "szeged", "away": "gog", "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/", "venue": None},
+    {"id": "ehfcl-202711020101019", "ehf_match_id": "202711020101019", "date": "2026-10-22", "time_local": "18:45", "timezone": "CEST", "start_utc": "2026-10-22T16:45:00Z", "home": "melsungen", "away": "plock", "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/", "venue": None},
+    {"id": "ehfcl-202711020101049", "ehf_match_id": "202711020101049", "date": "2026-10-22", "time_local": "20:45", "timezone": "CEST", "start_utc": "2026-10-22T18:45:00Z", "home": "barca", "away": "montpellier", "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/", "venue": None},
+    {"id": "ehfcl-202711020101041", "ehf_match_id": "202711020101041", "date": "2026-10-22", "time_local": "20:45", "timezone": "CEST", "start_utc": "2026-10-22T18:45:00Z", "home": "sporting", "away": "kristianstad", "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/", "venue": None},
+    {"id": "ehfcl-202711020101064", "ehf_match_id": "202711020101064", "date": "2026-10-22", "time_local": "20:45", "timezone": "CEST", "start_utc": "2026-10-22T18:45:00Z", "home": "kolstad", "away": "magdeburg", "detail_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/", "venue": None},
+]
+
+# MLB 2026 World Series Games 1-4 (the guaranteed games; Games 5-7 are
+# 'if necessary' in the official feed and are not published), verified
+# 2026-10-22 on https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-31.
+# Team run totals are the official 2026 regular-season standings values
+# (https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason).
+MLB_TEAMS = {
+    "TB": {"name": "Tampa Bay Rays", "wins": 98, "losses": 64, "runs_scored": 736, "runs_allowed": 650},
+    "MIL": {"name": "Milwaukee Brewers", "wins": 103, "losses": 59, "runs_scored": 832, "runs_allowed": 618},
+}
+
+MLB_FIXTURES = [
+    {"id": "mlb-849805", "game_pk": 849805, "official_date": "2026-10-23", "game_date_utc": "2026-10-24T00:00:00Z", "away": "TB", "home": "MIL", "venue": "American Family Field", "description": "World Series Game 1", "human_url": "https://www.mlb.com/gameday/849805"},
+    {"id": "mlb-849802", "game_pk": 849802, "official_date": "2026-10-24", "game_date_utc": "2026-10-25T00:00:00Z", "away": "TB", "home": "MIL", "venue": "American Family Field", "description": "World Series Game 2", "human_url": "https://www.mlb.com/gameday/849802"},
+    {"id": "mlb-849804", "game_pk": 849804, "official_date": "2026-10-26", "game_date_utc": "2026-10-27T00:00:00Z", "away": "MIL", "home": "TB", "venue": "Tropicana Field", "description": "World Series Game 3", "human_url": "https://www.mlb.com/gameday/849804"},
+    {"id": "mlb-849803", "game_pk": 849803, "official_date": "2026-10-27", "game_date_utc": "2026-10-28T00:00:00Z", "away": "MIL", "home": "TB", "venue": "Tropicana Field", "description": "World Series Game 4", "human_url": "https://www.mlb.com/gameday/849803"},
+]
 
 EXCLUDED_SPORTS = [
     {"slug": "soccer", "label": "Soccer / Football", "olbg_sport_id": 1, "olbg_url": "https://www.olbg.com/betting-tips/Football/1", "reason": "Excluded by project scope ('soccer', 'football')"},
@@ -40,7 +181,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "National Hockey League (NHL)",
         "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
         "markets_investigated": ["Moneyline (2-way)", "Puck Line (-1.5 / +1.5)", "Game Total (Over/Under)"],
-        "status_summary": "14 NHL fixtures verified (21–22 Oct 2026) and fully originated across all 3 markets from official 2026-27 team goal rates; the 12 games on 22 October were re-read against the NHL schedule today.",
+        "status_summary": "12 NHL fixtures on 22 Oct 2026 verified and fully originated across all 3 markets from fresh official 2026-27 team goal rates (NHL Stats REST, captured 2026-10-22). The two 21 Oct rows are completed and retired.",
     },
     {
         "slug": "basketball",
@@ -50,7 +191,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "NBA & Euroleague Basketball (EuroLeague + BKT EuroCup)",
         "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
         "markets_investigated": ["Moneyline (2-way)", "Point Spread / Handicap", "Game Total (Over/Under)"],
-        "status_summary": "25 fixtures verified and originated: 11 NBA opening-week games (Moneyline + Spread; Totals blank because nba.com standings omit team points for/against), 10 EuroLeague R7 games (all 3 markets), and 4 BKT EuroCup R4 games (all 3 markets).",
+        "status_summary": "23 fixtures verified and originated: 14 NBA opening-week games on 22–23 Oct from the official NBA schedule (Moneyline + Spread with 2025-26 priors; Totals blank — no official PF/PA feed) and 9 EuroLeague Round 7 games. BKT EuroCup Round 4 rows are completed and retired; Round 5 was not captured this refresh (VF-20).",
     },
     {
         "slug": "rugby-union",
@@ -70,7 +211,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "European Handball Federation (EHF Champions League Men)",
         "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
         "markets_investigated": ["Match Result 1X2 & 2-Way Winner", "Goal Handicap", "Match Total Goals"],
-        "status_summary": "12 EHF Champions League Men Round 5 fixtures verified (with all 12 OLBG match IDs mapped) and originated across all 3 markets from full-support bivariate Poisson distributions.",
+        "status_summary": "5 EHF Champions League Men Round 5 fixtures on 22 Oct 2026 verified and originated across all 3 markets from the fresh official 24-club standings (post 21-Oct Round 5 games); the 7 fixtures completed on 21 Oct are retired.",
     },
     {
         "slug": "darts",
@@ -90,7 +231,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "ATP Tour & WTA Tour",
         "official_url": "https://www.atptour.com/en/rankings/singles",
         "markets_investigated": ["Match Winner (Best of 3 Sets)", "Set Handicap (-1.5 / +1.5 Sets)", "Total Sets (Over/Under 2.5)"],
-        "status_summary": "7 ATP Tour singles matches where both players hold verified Top-100 PIF ATP rankings originated across all 3 markets; 8 WTA / Challenger / #101+ matches catalogued with blank unconfirmed rankings.",
+        "status_summary": "No originated tennis rows on 2026-10-22: the seven 21-Oct ATP ties are completed and retired, and the official ATP scores page read today published only completed results with no server-rendered next-round order of play (VF-20).",
     },
     {
         "slug": "snooker",
@@ -100,7 +241,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "World Snooker Tour (WST)",
         "official_url": "https://www.wst.tv/matches/",
         "markets_investigated": ["Match Winner (Best of 7 Frames)", "Frame Handicap (-1.5 / +1.5)", "Total Frames (Over/Under 5.5)"],
-        "status_summary": "All 11 BetVictor Northern Ireland Open Round 2 matches verified on WST Match Centre: 2 all-Top-36 matches originated across all 3 markets; 9 matches involving players ranked outside WST's server-rendered Top 36 left unlined with blank rank cells.",
+        "status_summary": "All 8 BetVictor Northern Ireland Open Round 3 ties on 22 Oct 2026 verified on the WST Match Centre and listed without prices: no Round 3 tie pairs two players with captured WST Top-36 prize values, and the official pages read do not state the Round 3 frame format, so no price is inferred (see flagged page). Round 2 was completed on 21 Oct and its rows are retired.",
     },
     {
         "slug": "baseball",
@@ -110,7 +251,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "Major League Baseball (MLB)",
         "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
         "markets_investigated": ["Moneyline (2-way)", "Run Line (-1.5 / +1.5)", "Game Total (Over/Under 7.5 & Alt 5.5)"],
-        "status_summary": "2026 MLB World Series Games 1-3 (Tampa Bay Rays v Milwaukee Brewers, gamePk 849805/849802/849804) verified and originated across all 3 markets from official 162-game run-scoring records.",
+        "status_summary": "2026 MLB World Series Games 1–4 (Tampa Bay Rays v Milwaukee Brewers, gamePk 849805/849802/849804/849803) verified and originated across all 3 markets from official 162-game run records; conditional Games 5–7 are not published.",
     },
     {
         "slug": "motor-racing",
@@ -130,7 +271,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "Polska Liga Siatkówki (PlusLiga) & CEV",
         "official_url": "https://www.plusliga.pl/games.html",
         "markets_investigated": ["Match Winner", "Set Handicap", "Total Points / Sets"],
-        "status_summary": "4 Polish PlusLiga fixtures verified on live OLBG and PLS schedule; lines intentionally left blank because every club has played only M=1 match in 2026/27 and plusliga.pl/table.html cross-redirects to tauronliga.pl/table.html.",
+        "status_summary": "3 Polish PlusLiga fixtures listed without prices: every club has played only a handful of 2026/27 matches, so no defensible line can be originated yet; the 21-Oct Lublin v Gdańsk row is completed and retired.",
     },
     {
         "slug": "cricket",
@@ -140,7 +281,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "International Cricket Council (ICC)",
         "official_url": "https://www.icc-cricket.com/tournaments/mens-cricket-world-cup-league-2",
         "markets_investigated": ["Match Winner (ODI / T20I / Test)", "Innings Runs", "Series Outright"],
-        "status_summary": "3 international matches verified on official ICC match URLs (274658, 271646, 269791); lines deliberately left blank because ICC ranking tables and match scorecards render client-side.",
+        "status_summary": "2 international matches verified on official ICC match URLs (271646, 269791); lines deliberately left blank because ICC ratings render client-side. The 21-Oct tri-series row (274658) is completed and retired.",
     },
     {
         "slug": "golf",
@@ -180,7 +321,7 @@ ELIGIBLE_SPORTS = [
         "governing_body": "Greyhound Board of Great Britain (GBGB)",
         "official_url": "https://www.gbgb.org.uk/racing/results/",
         "markets_investigated": ["Win Trap", "Forecast / Tricast"],
-        "status_summary": "6 live 21 October race cards catalogued across Kinsley, Harlow, Monmore, and Nottingham; lines left blank because trap sectional ratings require a licensed GBGB data feed.",
+        "status_summary": "No greyhound rows on 2026-10-22: the six 21-Oct cards are completed and retired, and trap sectional ratings require a licensed GBGB feed that was not captured this refresh (VF-22).",
     },
     {
         "slug": "aussie-rules",
@@ -229,7 +370,7 @@ EUROLEAGUE_TEAMS = {
 }
 
 EUROLEAGUE_FIXTURES = [
-    {"id": "el-E2026-61", "date": "2026-10-21", "time": "2026-10-21 18:00 UTC", "home": "HTA", "away": "VIR", "venue": "Arena 8888 Sofia", "neutral": True, "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/hapoel-ibi-tel-aviv-virtus-bologna/E2026/61/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
+    # el-E2026-61 (HTA v VIR, 21 Oct) retired as completed in the 22-Oct refresh.
     {"id": "el-E2026-64", "date": "2026-10-22", "time": "2026-10-22 17:30 UTC", "home": "EFS", "away": "BJK", "venue": "Turkcell Basketball Development Center", "neutral": False, "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
     {"id": "el-E2026-65", "date": "2026-10-22", "time": "2026-10-22 18:00 UTC", "home": "BAY", "away": "DUB", "venue": "SAP Garden", "neutral": False, "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
     {"id": "el-E2026-62", "date": "2026-10-22", "time": "2026-10-22 18:05 UTC", "home": "MTA", "away": "RMB", "venue": "Aleksandar Nikolic Hall", "neutral": True, "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
@@ -253,12 +394,10 @@ EUROCUP_TEAMS = {
     "BOS": {"name": "BOSNA BH Telecom Sarajevo", "group": "D", "gp": 3, "w": 0, "l": 3, "pf": 237, "pa": 252, "home": "0-1", "away": "0-2", "rank": 7},
 }
 
-EUROCUP_FIXTURES = [
-    {"id": "ec-R4-paok-ulm", "date": "2026-10-21", "time": "2026-10-21 17:15 UTC", "home": "PBC", "away": "ULM", "venue": None, "neutral": False, "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
-    {"id": "ec-R4-bosna-bks", "date": "2026-10-21", "time": "2026-10-21 17:30 UTC", "home": "BOS", "away": "BKS", "venue": None, "neutral": False, "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
-    {"id": "ec-R4-jlm-rig", "date": "2026-10-21", "time": "2026-10-21 18:00 UTC", "home": "JLM", "away": "RIG", "venue": None, "neutral": True, "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
-    {"id": "ec-R4-ubt-ldn", "date": "2026-10-21", "time": "2026-10-21 16:00 UTC", "home": "UBT", "away": "LDN", "venue": None, "neutral": False, "url": "https://www.euroleaguebasketball.net/en/eurocup/standings/", "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19"},
-]
+# Retired in the 22-Oct refresh: the four BKT EuroCup R4 fixtures were played
+# on 2026-10-21. Round 5 fixtures were not captured in this refresh (VF-20),
+# so the list is intentionally empty rather than carried stale.
+EUROCUP_FIXTURES = []
 
 # Official Top 14 2026-27 standings after J6 (https://top14.lnr.fr/classement)
 TOP14_TEAMS = {
@@ -415,15 +554,11 @@ ATP_PLAYERS = {
     "Benjamin Bonzi": {"rank": 100, "points": 605, "url": "https://www.atptour.com/en/players/benjamin-bonzi/bm95/overview"},
 }
 
-TENNIS_ORIGINATED = [
-    {"id": "atp-7485-MS008", "competition": "ATP 250 BNP Paribas Fortis European Open (Brussels R16)", "date": "2026-10-21", "time": "2026-10-21 15:00", "p1": "Arthur Fils", "p2": "Jaume Munar", "url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS008", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"},
-    {"id": "atp-902102", "competition": "ATP Tour Indoor Singles", "date": "2026-10-21", "time": "2026-10-21 14:30", "p1": "Benjamin Bonzi", "p2": "Tommy Paul", "url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Benjamin_Bonzi_vs_Tommy_Paul/3?event_id=902102"},
-    {"id": "atp-902037", "competition": "ATP 250 Almaty Open", "date": "2026-10-21", "time": "2026-10-21 05:30", "p1": "Adrian Mannarino", "p2": "Andrey Rublev", "url": "https://www.atptour.com/en/tournaments/almaty/9410/overview", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Adrian_Mannarino_vs_Andrey_Rublev/3?event_id=902037"},
-    {"id": "atp-9410-MS015", "competition": "ATP 250 Almaty Open (Round of 16)", "date": "2026-10-21", "time": "2026-10-21 08:00", "p1": "James Duckworth", "p2": "Luciano Darderi", "url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS015", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"},
-    {"id": "atp-9410-MS019", "competition": "ATP 250 Almaty Open (Round of 32)", "date": "2026-10-21", "time": "2026-10-21 08:00", "p1": "Mattia Bellucci", "p2": "Tomas Martin Etcheverry", "url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS019", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"},
-    {"id": "atp-902085", "competition": "ATP Tour Singles", "date": "2026-10-21", "time": "2026-10-21 07:00", "p1": "Mariano Navone", "p2": "Tallon Griekspoor", "url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Mariano_Navone_vs_Tallon_Griekspoor/3?event_id=902085"},
-    {"id": "atp-901896", "competition": "ATP Tour Singles", "date": "2026-10-21", "time": "2026-10-21 05:30", "p1": "Dino Prizmic", "p2": "Damir Dzumhur", "url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Dino_Prizmic_vs_Damir_Dzumhur/3?event_id=901896"},
-]
+# Retired in the 22-Oct refresh: all seven originated ties were played on
+# 2026-10-21. The official ATP scores page read on 2026-10-22 published only
+# completed Round-of-16 results with no server-rendered next-round order of
+# play, so no replacement ties could be verified (VF-20).
+TENNIS_ORIGINATED = []
 
 # Official WST Top-36 rankings (https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false)
 WST_TOP36 = {
@@ -444,23 +579,14 @@ WST_TOP36 = {
     "David Gilbert": {"rank": 34, "prize_gbp": 221200},
 }
 
-SNOOKER_ORIGINATED = [
-    {"id": "wst-9934", "date": "2026-10-21", "time": "2026-10-21 08:00", "p1": "John Higgins", "p2": "Jak Jones", "url": "https://www.wst.tv/match-centre/eba55492-fba6-4a53-90be-a04b3560ae65", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/John_Higgins_v_Jak_Jones/8?event_id=9934"},
-    {"id": "wst-9936", "date": "2026-10-21", "time": "2026-10-21 09:00", "p1": "Zhang Anda", "p2": "Mark Williams", "url": "https://www.wst.tv/match-centre/480e5abf-5766-44ad-9918-f822ceefd4a5", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Zhang_Anda_v_Mark_Williams/8?event_id=9936"},
-]
+# Retired in the 22-Oct refresh: both priced Round 2 ties were played on
+# 2026-10-21 (Jak Jones and Mark Williams advanced). None of the eight Round 3
+# ties can be priced yet because no tie has both players in the captured
+# ranking input; they are listed as unlined rows below (VF-04).
+SNOOKER_ORIGINATED = []
 
-# MLB 2026 World Series Game 1 (https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26)
-MLB_WORLD_SERIES = {
-    "id": "mlb-849805",
-    "competition": "2026 MLB World Series — Game 1",
-    "date": "2026-10-24",
-    "time": "2026-10-24 00:00 UTC",
-    "venue": "American Family Field, Milwaukee",
-    "away": {"code": "TB", "name": "Tampa Bay Rays", "gp": 162, "w": 98, "l": 64, "rs": 736, "ra": 650},
-    "home": {"code": "MIL", "name": "Milwaukee Brewers", "gp": 162, "w": 103, "l": 59, "rs": 832, "ra": 618},
-    "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-21&endDate=2026-10-26",
-    "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
-}
+# MLB World Series fixtures/teams are defined in the 2026-10-22 refresh block
+# at the top of this module (MLB_TEAMS / MLB_FIXTURES, Games 1-4).
 
 # FIA 2026 Formula 1 Drivers' Standings through Round 17 (https://www.formula1.com/en/results/2026/drivers)
 F1_DRIVERS = [
@@ -476,37 +602,30 @@ F1_DRIVERS = [
 
 # Unlined rows where official fixture/market pages exist, while missing strength inputs are left strictly blank
 UNLINED_ROWS = [
-    # Snooker Round 2 matches involving players ranked outside WST server-rendered Top 36
-    {"id": "wst-9933", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 05:00", "home": "Cheung Ka Wai (rank unconfirmed > #36)", "away": "Stuart Bingham (#19, £350,550)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/matches/", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Cheung_Ka_Wai_v_Stuart_Bingham/8?event_id=9933", "blank_reason": "Cheung Ka Wai sits outside WST's server-rendered Top-36 rankings table; opponent prize input left blank rather than guessed."},
-    {"id": "wst-9929", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 05:00", "home": "Pang Junxu (#29, £272,750)", "away": "Liam Davies (rank unconfirmed > #36)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/matches/", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Pang_Junxu_v_Liam_Davies/8?event_id=9929", "blank_reason": "Liam Davies (who beat #7 Shaun Murphy 4-2 in R1) sits outside WST's server-rendered Top-36 table."},
-    {"id": "wst-9937", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 08:00", "home": "Daniel Wells (rank unconfirmed > #36)", "away": "Ryan Day (rank unconfirmed > #36)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/e9c15ae6-b9b8-4cea-a83a-49c58eb14046", "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."},
-    {"id": "wst-9930", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 09:00", "home": "Sam Craigie (rank unconfirmed > #36)", "away": "Xu Si (rank unconfirmed > #36)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/afb42fc9-9654-479e-997e-d33d8a1a6888", "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."},
-    {"id": "wst-9935", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 14:00", "home": "Michael Holt (rank unconfirmed > #36)", "away": "Jordan Brown (rank unconfirmed > #36)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/e58a00e5-e6a7-479b-98d0-5c7867af28a8", "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."},
-    {"id": "wst-9938", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 14:00", "home": "Noppon Saengkham (#31, £242,500)", "away": "Scott Donaldson (rank unconfirmed > #36)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/3a24076e-455c-497b-abd5-976e194abc5e", "blank_reason": "Scott Donaldson (who whitewashed #2 Wu Yize 4-0 in R1) sits outside WST's server-rendered Top-36 table."},
-    {"id": "wst-9939", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 14:00", "home": "Gao Yang (rank unconfirmed > #36)", "away": "David Gilbert (#34, £221,200)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/4fb27af0-7db4-4ec2-b93b-137de3f66135", "blank_reason": "Gao Yang sits outside WST's server-rendered Top-36 prize table (#1–#36)."},
-    {"id": "wst-9931", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 15:00", "home": "Elliot Slessor (#23, £329,200)", "away": "Jamie Jones (rank unconfirmed > #36)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/f6536f1f-6c2d-47cd-b802-a81e6f04e4cc", "blank_reason": "Jamie Jones (who beat #11 Chris Wakelin 4-1 in R1) sits outside WST's server-rendered Top-36 table."},
-    {"id": "wst-9932", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 2", "date": "2026-10-21", "time": "2026-10-21 15:00", "home": "Luca Brecel (rank unconfirmed > #36)", "away": "Martin O'Donnell (rank unconfirmed > #36)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/0c49ba0c-2d21-481e-a2ac-fbece616f591", "blank_reason": "Both players sit outside WST's server-rendered Top-36 prize table (#1–#36)."},
-    # Tennis WTA & ATP #101+ matches
-    {"id": "ten-902084", "sport": "tennis", "competition": "WTA Tour Singles", "date": "2026-10-21", "time": "2026-10-21 07:00", "home": "Ekaterina Alexandrova", "away": "Marta Kostyuk", "official_source": "WTA Rankings Hub", "official_url": "https://www.wtatennis.com/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ekaterina_Alexandrova_vs_Marta_Kostyuk/3?event_id=902084", "blank_reason": "WTA singles ranking table renders client-side; player points left blank rather than guessed."},
-    {"id": "ten-902074", "sport": "tennis", "competition": "WTA Tour Singles", "date": "2026-10-21", "time": "2026-10-21 04:00", "home": "Sorana Cirstea", "away": "Sara Bejlek", "official_source": "WTA Rankings Hub", "official_url": "https://www.wtatennis.com/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Sorana_Cirstea_vs_Sara_Bejlek/3?event_id=902074", "blank_reason": "WTA singles ranking table renders client-side; player points left blank rather than guessed."},
-    {"id": "ten-901935", "sport": "tennis", "competition": "ATP 250 Almaty Open", "date": "2026-10-21", "time": "2026-10-21 04:00", "home": "Zangar Nurlanuly (rank > #100)", "away": "Tomas Machac (#72, 779 pts)", "official_source": "ATP Rankings", "official_url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Zangar_Nurlanuly_vs_Tomas_Machac/3?event_id=901935", "blank_reason": "Wildcard Zangar Nurlanuly ranks outside the server-rendered ATP Top 100."},
-    {"id": "ten-901974", "sport": "tennis", "competition": "ATP Tour / Challenger", "date": "2026-10-21", "time": "2026-10-21 08:00", "home": "Stan Wawrinka (rank > #100)", "away": "Martin Landaluce (#67, 822 pts)", "official_source": "ATP Rankings", "official_url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Martin_Landaluce/3?event_id=901974", "blank_reason": "Stan Wawrinka ranks outside the server-rendered ATP Top 100 on 2026.10.19."},
-    {"id": "ten-902083", "sport": "tennis", "competition": "ATP Tour Singles", "date": "2026-10-21", "time": "2026-10-21 10:30", "home": "Stefanos Tsitsipas (#39, 1,330 pts)", "away": "Mikhail Kukushkin (rank > #100)", "official_source": "ATP Rankings", "official_url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stefanos_Tsitsipas_vs_Mikhail_Kukushkin/3?event_id=902083", "blank_reason": "Mikhail Kukushkin ranks outside the server-rendered ATP Top 100."},
-    {"id": "ten-902028", "sport": "tennis", "competition": "ATP Tour / Challenger", "date": "2026-10-21", "time": "2026-10-21 12:00", "home": "David Goffin (rank > #100)", "away": "Remy Bertola (rank > #100)", "official_source": "ATP Rankings", "official_url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/David_Goffin_vs_Remy_Bertola/3?event_id=902028", "blank_reason": "Both players sit outside the server-rendered ATP Top 100."},
-    {"id": "ten-902059", "sport": "tennis", "competition": "ATP 250 Brussels", "date": "2026-10-21", "time": "2026-10-21 13:00", "home": "Moise Kouame (rank > #100)", "away": "Lorenzo Musetti (#26, 1,870 pts)", "official_source": "ATP Rankings", "official_url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Moise_Kouame_vs_Lorenzo_Musetti/3?event_id=902059", "blank_reason": "Moise Kouame sits outside the server-rendered ATP Top 100."},
-    {"id": "ten-902094", "sport": "tennis", "competition": "ATP Tour / Challenger", "date": "2026-10-21", "time": "2026-10-21 08:30", "home": "Clement Chidekh (rank > #100)", "away": "Jacob Fearnley (#87, 686 pts)", "official_source": "ATP Rankings", "official_url": "https://www.atptour.com/en/rankings/singles", "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Clement_Chidekh_vs_Jacob_Fearnley/3?event_id=902094", "blank_reason": "Clement Chidekh sits outside the server-rendered ATP Top 100."},
+    # Snooker Round 3 (22 Oct, verified on the WST Match Centre 2026-10-22): no tie
+    # pairs two players with captured WST Top-36 prize values, and the official
+    # pages read do not state the Round 3 frame format, so prices stay blank.
+    # The nine Round 2 rows and eight tennis rows of 21 Oct are retired as played.
+    {"id": "wst-2026-r3-m50", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 50)", "date": "2026-10-22", "time": "2026-10-22 08:00", "home": "Kyren Wilson (prize value not captured)", "away": "Pang Junxu (#29, £272,750)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Kyren Wilson's official WST ranking prize value is outside this desk's captured Top-36 excerpt, and the official pages read do not state the Round 3 frame format; left blank rather than inferred."},
+    {"id": "wst-2026-r3-m51", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 51)", "date": "2026-10-22", "time": "2026-10-22 08:00", "home": "Matthew Selt (prize value not captured)", "away": "Sam Craigie (prize value not captured)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."},
+    {"id": "wst-2026-r3-m49", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 49)", "date": "2026-10-22", "time": "2026-10-22 09:00", "home": "Anthony McGill (prize value not captured)", "away": "Mateusz Baranowski (prize value not captured)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."},
+    {"id": "wst-2026-r3-m52", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 52)", "date": "2026-10-22", "time": "2026-10-22 09:00", "home": "Elliot Slessor (#23, £329,200)", "away": "Ricky Walden (prize value not captured)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Ricky Walden's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."},
+    {"id": "wst-2026-r3-m53", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 53)", "date": "2026-10-22", "time": "2026-10-22 14:00", "home": "David Gilbert (#34, £221,200)", "away": "Cheung Ka Wai (prize value not captured)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Cheung Ka Wai's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."},
+    {"id": "wst-2026-r3-m54", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 54)", "date": "2026-10-22", "time": "2026-10-22 14:00", "home": "Mark Williams (#8, £747,400)", "away": "Martin O'Donnell (prize value not captured)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Martin O'Donnell's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."},
+    {"id": "wst-2026-r3-m55", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 55)", "date": "2026-10-22", "time": "2026-10-22 15:00", "home": "Jak Jones (#24, £319,300)", "away": "Daniel Wells (prize value not captured)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Daniel Wells's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."},
+    {"id": "wst-2026-r3-m56", "sport": "snooker", "competition": "BetVictor Northern Ireland Open — Round 3 (Match 56)", "date": "2026-10-22", "time": "2026-10-22 15:00", "home": "Jordan Brown (prize value not captured)", "away": "Scott Donaldson (prize value not captured)", "official_source": "WST Match Centre", "official_url": "https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea", "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8", "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read."},
     # Darts futures
     {"id": "pdc-32338", "sport": "darts", "competition": "2026 PDC European Championship — Outright", "date": "2026-10-25", "time": "2026-10-25 14:00", "home": "32-Player Draw Outright", "away": "Field", "official_source": "PDC Rankings", "official_url": "https://www.pdc.tv/rankings", "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338", "blank_reason": "Full bracket path across 5 rounds depends on exact draw-half seeding verification; match-by-match R1 lines originated above."},
     {"id": "pdc-26023", "sport": "darts", "competition": "2027 PDC World Darts Championship — Outright", "date": "2027-01-03", "time": "2027-01-03 12:00", "home": "96-Player Field Outright", "away": "Field", "official_source": "PDC Rankings", "official_url": "https://www.pdc.tv/rankings", "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/PDC_World_Championship_2027/15?event_id=26023", "blank_reason": "Qualifying field not yet finalised in October 2026; left unlined."},
     # Motor Racing 2027 outright
     {"id": "f1-2027-champ", "sport": "motor-racing", "competition": "2027 FIA Formula 1 Drivers' World Championship", "date": "2027-03-07", "time": "2027-03-07 05:00", "home": "2027 Season Outright", "away": "20-Driver Grid", "official_source": "Formula 1 Official", "official_url": "https://www.formula1.com/en/results/2026/drivers", "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14", "blank_reason": "Next-season championship market prior to 2027 car testing; left blank rather than speculated."},
     # Polish Volleyball (F22)
-    {"id": "vb-lublin-gdansk", "sport": "volleyball", "competition": "Polish PlusLiga 2026/27", "date": "2026-10-21", "time": "2026-10-21 16:30", "home": "BOGDANKA LUK Lublin", "away": "Trefl Gdańsk", "official_source": "PlusLiga Schedule", "official_url": "https://www.plusliga.pl/games.html", "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21", "blank_reason": "Clubs have played only M=1 match in 2026/27 and plusliga.pl/table.html cross-redirects to shared PLS tauronliga.pl shell."},
+
     {"id": "vb-suwalki-katowice", "sport": "volleyball", "competition": "Polish PlusLiga 2026/27", "date": "2026-10-22", "time": "2026-10-22 16:30", "home": "Ślepsk Malow Suwałki", "away": "GKS Katowice", "official_source": "PlusLiga Schedule", "official_url": "https://www.plusliga.pl/games.html", "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21", "blank_reason": "Opening-round M=1 sample size insufficient for reliable independent line origination."},
     {"id": "vb-belchatow-warszawa", "sport": "volleyball", "competition": "Polish PlusLiga 2026/27", "date": "2026-10-22", "time": "2026-10-22 18:30", "home": "PGE GiEK Skra Bełchatów", "away": "PGE Projekt Warszawa", "official_source": "PlusLiga Schedule", "official_url": "https://www.plusliga.pl/games.html", "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21", "blank_reason": "Opening-round M=1 sample size insufficient for reliable independent line origination."},
     {"id": "vb-chelm-rzeszow", "sport": "volleyball", "competition": "Polish PlusLiga 2026/27", "date": "2026-10-23", "time": "2026-10-23 18:30", "home": "InPost ChKS Chełm", "away": "Asseco Resovia Rzeszów", "official_source": "PlusLiga Schedule", "official_url": "https://www.plusliga.pl/games.html", "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21", "blank_reason": "Opening-round M=1 sample size insufficient for reliable independent line origination."},
     # Cricket ICC matches (F11)
-    {"id": "icc-274658", "sport": "cricket", "competition": "ODI Tri-Series in UAE 2026", "date": "2026-10-21", "time": "2026-10-21 09:00 UTC", "home": "Afghanistan", "away": "Bangladesh", "official_source": "ICC Match Centre", "official_url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh", "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7", "blank_reason": "ICC team-rankings table and match centre statistics render via client JS ('Loading'); prices left blank."},
+
     {"id": "icc-271646", "sport": "cricket", "competition": "New Zealand v India T20I Series", "date": "2026-10-23", "time": "2026-10-23 06:15 UTC", "home": "New Zealand", "away": "India", "official_source": "ICC Match Centre", "official_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india", "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7", "blank_reason": "ICC T20I team-rankings table renders client-side; prices left blank rather than copied from secondary sites."},
     {"id": "icc-269791", "sport": "cricket", "competition": "ICC World Test Championship", "date": "2026-10-24", "time": "2026-10-24 08:00 UTC", "home": "South Africa", "away": "Australia", "official_source": "ICC Match Centre", "official_url": "https://www.icc-cricket.com/matches/269791/south-africa-vs-australia", "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7", "blank_reason": "ICC Test rankings table renders client-side; prices left blank."},
     # Golf tour events
@@ -522,13 +641,8 @@ UNLINED_ROWS = [
     {"id": "gaa-3531", "sport": "gaelic-football", "competition": "Cork Senior A Football Championship", "date": "2026-10-25", "time": "2026-10-25 14:00", "home": "Kanturk", "away": "Éire Óg (Cork)", "official_source": "GAA Official", "official_url": "https://www.gaa.ie/football", "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "blank_reason": "OLBG abbreviates club name as 'Eire Og Cor'; county club scoring feed unavailable."},
     {"id": "gaa-3536", "sport": "gaelic-football", "competition": "Waterford Senior Football Championship", "date": "2026-10-25", "time": "2026-10-25 14:30", "home": "Rathgormack", "away": "The Nire", "official_source": "GAA Official", "official_url": "https://www.gaa.ie/football", "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "blank_reason": "County board club championship scoring tables not available in a unified official feed."},
     {"id": "gaa-3327", "sport": "gaelic-football", "competition": "All-Ireland Senior Football Championship 2027", "date": "2027-07-25", "time": "2027-07-25 15:30", "home": "Inter-County Outright", "away": "Field", "official_source": "GAA Official", "official_url": "https://www.gaa.ie/football", "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "blank_reason": "2027 inter-county season not started; left unlined."},
-    # Greyhounds live Oct 21 race cards
-    {"id": "dog-689384", "sport": "greyhounds", "competition": "Harlow — 21 Oct Race Card", "date": "2026-10-21", "time": "2026-10-21 10:32", "home": "10:32 Harlow (6-Trap Race)", "away": "Field", "official_source": "GBGB Licensed Track Hub", "official_url": "https://www.gbgb.org.uk/racing/results/", "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28", "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."},
-    {"id": "dog-689385", "sport": "greyhounds", "competition": "Harlow — 21 Oct Race Card", "date": "2026-10-21", "time": "2026-10-21 10:48", "home": "10:48 Harlow (6-Trap Race)", "away": "Field", "official_source": "GBGB Licensed Track Hub", "official_url": "https://www.gbgb.org.uk/racing/results/", "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28", "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."},
-    {"id": "dog-689387", "sport": "greyhounds", "competition": "Monmore — 21 Oct Race Card", "date": "2026-10-21", "time": "2026-10-21 11:03", "home": "11:03 Monmore (6-Trap Race)", "away": "Field", "official_source": "GBGB Licensed Track Hub", "official_url": "https://www.gbgb.org.uk/racing/results/", "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28", "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."},
-    {"id": "dog-689383", "sport": "greyhounds", "competition": "Harlow — 21 Oct Race Card", "date": "2026-10-21", "time": "2026-10-21 11:04", "home": "11:04 Harlow (6-Trap Race)", "away": "Field", "official_source": "GBGB Licensed Track Hub", "official_url": "https://www.gbgb.org.uk/racing/results/", "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28", "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."},
-    {"id": "dog-689386", "sport": "greyhounds", "competition": "Nottingham — 21 Oct Race Card", "date": "2026-10-21", "time": "2026-10-21 11:09", "home": "11:09 Nottingham (6-Trap Race)", "away": "Field", "official_source": "GBGB Licensed Track Hub", "official_url": "https://www.gbgb.org.uk/racing/results/", "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28", "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."},
-    {"id": "dog-689390", "sport": "greyhounds", "competition": "Kinsley — 21 Oct Race Card", "date": "2026-10-21", "time": "2026-10-21 11:14", "home": "11:14 Kinsley (6-Trap Race)", "away": "Field", "official_source": "GBGB Licensed Track Hub", "official_url": "https://www.gbgb.org.uk/racing/results/", "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28", "blank_reason": "GBGB sectional times and trap form require licensed commercial data feed; left blank."},
+    # Greyhounds: the six 21-Oct race cards are completed and retired in the
+    # 22-Oct refresh; 22-Oct cards were not captured (licensed GBGB feed, VF-22).
 ]
 
 REPO_AUDIT = [
@@ -652,17 +766,21 @@ FLAGGED_ITEMS = [
     {"id": "VF-05", "severity": "high", "category": "Statistical & CMS guard", "sport": "Volleyball", "item": "4 Polish PlusLiga fixtures left unlined ('—')", "detail": "Clubs have played only M=1 match in 2026/27 (N=1 is insufficient to originate independent prices) and plusliga.pl/table.html redirects to the shared PLS tauronliga.pl template.", "source_name": "PlusLiga Official Games", "source_url": "https://www.plusliga.pl/games.html"},
     {"id": "VF-06", "severity": "high", "category": "Client-rendered source", "sport": "Cricket", "item": "3 ICC international fixtures left unlined ('—')", "detail": "ICC match centres confirm the fixtures (274658, 271646, 269791) in page metadata, while team rating tables and scorecards render 'Loading' client-side. No secondary cricket site was used as a substitute.", "source_name": "ICC Match 274658", "source_url": "https://www.icc-cricket.com/matches/274658/afghanistan-vs-bangladesh"},
     {"id": "VF-07", "severity": "low", "category": "Blank unconfirmed venue", "sport": "Handball & EuroCup", "item": "11 EHF CL venues & 4 EuroCup venues left blank ('—')", "detail": "Only venues explicitly confirmed on opened official match pages (Arena Zagreb for Zagreb–PSG and the 10 EuroLeague arenas) are populated; unverified venues remain blank.", "source_name": "EHF Champions League Matches", "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/"},
-    {"id": "VF-08", "severity": "low", "category": "Unlined futures / specialist feeds", "sport": "Golf, Rugby League, Gaelic Football, Greyhounds", "item": "16 specialist/futures markets catalogued without prices ('—')", "detail": "PGA/DP World Tour 132-man strokes-gained feeds, 2027 pre-roster NRL/Super League futures, county GAA club tables, and licensed GBGB greyhound sectional data are not publicly server-rendered; fixtures are linked and prices left blank.", "source_name": "OLBG Sitemap", "source_url": "https://www.olbg.com/sitemap-betting-tips.xml"},
+    {"id": "VF-08", "severity": "low", "category": "Unlined futures / specialist feeds", "sport": "Golf, Rugby League, Gaelic Football", "item": "10 specialist/futures markets catalogued without prices ('—')", "detail": "PGA/DP World Tour 132-man strokes-gained feeds, 2027 pre-roster NRL/Super League futures, and county GAA club tables are not publicly server-rendered; fixtures are linked and prices left blank.", "source_name": "OLBG Sitemap", "source_url": "https://www.olbg.com/sitemap-betting-tips.xml"},
+    {"id": "VF-19", "severity": "medium", "category": "Capture-time limitation", "sport": "Ice Hockey (NHL)", "item": "FLA/OTT team inputs exclude their still-live 21-Oct game", "detail": "The NHL Stats REST summary and standings were read on 2026-10-22 at ~01:35Z while PHI @ BUF (2-1 PHI after two periods) and FLA @ OTT (3-1 OTT after two periods) were still LIVE on the official Score API. Florida and Ottawa play again on 22 Oct, so their inputs are one in-progress game behind; the effect is bounded (one game of 10) and is disclosed rather than estimated from a live score.", "source_name": "NHL Official Score API (2026-10-21)", "source_url": "https://api-web.nhle.com/v1/score/2026-10-21"},
+    {"id": "VF-20", "severity": "medium", "category": "Coverage gap this refresh", "sport": "Basketball (EuroCup) & Tennis", "item": "EuroCup Round 5 and ATP next-round fixtures not captured on 2026-10-22", "detail": "The four BKT EuroCup R4 games were completed on 21 Oct and are retired; the EuroCup game-center page read on 2026-10-22 did not expose a server-rendered Round 5 fixture list in the chunks fetched, so EuroCup carries no rows until a later session captures Round 5 (due ~27-28 Oct). The same applies to ATP quarter-final orders of play (see VF-04). Neither gap was filled from secondary sources.", "source_name": "EuroCup Official Game Center", "source_url": "https://www.euroleaguebasketball.net/en/eurocup/game-center/"},
+    {"id": "VF-21", "severity": "low", "category": "Re-verification limit", "sport": "Darts (PDC)", "item": "PDC ranking ladder retained from 21-Oct capture", "detail": "pdc.tv/rankings read on 2026-10-22 returned a cookie-consent wall with no server-rendered ladder rows in the fetched content. The 21-Oct captured Werner Ranking Ladder values are retained because no PDC ranking event has been completed between the two captures (the European Championship itself starts on the evening of 22 Oct); flagged so the next session re-reads the ladder after the event.", "source_name": "PDC Official Rankings", "source_url": "https://www.pdc.tv/rankings"},
+    {"id": "VF-22", "severity": "low", "category": "Coverage gap this refresh", "sport": "Greyhounds", "item": "No 22-Oct GBGB race cards captured", "detail": "The six 21-Oct cards (Harlow, Monmore, Nottingham, Kinsley) are completed and retired. Trap sectional ratings require a licensed GBGB data feed and no 22-Oct card was captured from an official source in this refresh, so the Greyhounds page currently lists zero rows rather than stale ones.", "source_name": "GBGB Official Results", "source_url": "https://www.gbgb.org.uk/racing/results/"},
     {"id": "VF-09", "severity": "low", "category": "Zero active markets", "sport": "Aussie Rules & eSports", "item": "0 live events on OLBG hubs on 2026-10-21", "detail": "Both hubs were fetched directly on 2026-10-21 and returned 'No tips found' (AFL off-season; between LoL Worlds knockout stages on OLBG). Dedicated sport pages confirm the empty check without inventing fixtures.", "source_name": "OLBG Aussie Rules Hub", "source_url": "https://www.olbg.com/betting-tips/Aussie_Rules/22"},
     {"id": "VF-10", "severity": "medium", "category": "OLBG platform irregularity", "sport": "Cross-sport", "item": "Viewer-timezone rendering, abbreviated names & cached global /betting-tips cards", "detail": "OLBG hub pages display kick-offs in US Eastern time on US runners (e.g. 12:45 vs 18:45 CEST for EHF Handball), abbreviate club names ('Eire Og Cor'), and cache stale soccer cards on the global /betting-tips landing page.", "source_name": "OLBG Global Tips Page", "source_url": "https://www.olbg.com/betting-tips"},
-    {"id": "VF-11", "severity": "high", "category": "Source scope", "sport": "Darts, Tennis, Greyhounds, Golf, Gaelic Football, Rugby League, Volleyball, Motor Racing, Snooker, EuroCup, NBA", "item": "63 rows cite a competition or rankings page, not the individual fixture", "detail": "The official URL on these rows is an official governing-body or league page, but it does not itself identify the fixture. Examples: all 18 darts rows cite pdc.tv/rankings; all 15 tennis rows cite the ATP/WTA rankings or tournament overview; all 6 greyhound rows cite the GBGB results index; the 4 EuroCup rows cite the EuroCup standings. The fixture ID, date and opponent on those rows rest on the OLBG listing captured on 2026-10-21. They are published with the source scope disclosed as 'competition', not 'fixture'.", "source_name": "PDC Rankings (example)", "source_url": "https://www.pdc.tv/rankings"},
-    {"id": "VF-12", "severity": "medium", "category": "Price band", "sport": "Cross-sport", "item": "20 pre-existing high-confidence picks are all shorter than -250; 13 band picks priced 1.40-1.42 were added", "detail": "The brief asks for high-confidence picks between -250 (decimal 1.40) and +10000 (decimal 101.00). A selection with a 70%+ model probability cannot be priced above 1.43, so only a 70.0-71.4% window satisfies both rules. All 20 original high-confidence selections carry fair odds of 1.02-1.39 and therefore fall outside the requested band; they remain published and labelled 'outside band'. Thirteen handicap/total selections at 1.40-1.42, each with a written prediction and official facts, were originated to meet the band.", "source_name": "Methodology (this repository)", "source_url": "https://www.olbg.com/betting-tips"},
-    {"id": "VF-13", "severity": "medium", "category": "Snapshot freshness", "sport": "Cross-sport", "item": "59 of 155 rows are dated 2026-10-21 and had already started or finished at the 2026-10-22 01:30Z snapshot", "detail": "This is a dated capture, not a live feed. Rows dated before 2026-10-22 are labelled 'past' on every table; 36 rows are dated 2026-10-22 and 60 are dated later. No result has been back-filled and no past row is presented as an upcoming tip.", "source_name": "NHL schedule feed (capture reference)", "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-21"},
-    {"id": "VF-14", "severity": "medium", "category": "Missing competition", "sport": "Basketball (NBA)", "item": "All 11 NBA rows are 2026-10-21 fixtures; the 2026-10-22 slate was not captured", "detail": "nba.com's games calendar rendered 2 games for 22 October 2026, 12 for 23 October and 8 for 24 October, but the page returned 'Sorry, something went wrong' for the fixture list. The NBA static scoreboard endpoint returned HTTP 500 and stats.nba.com did not respond. No NBA fixture was invented to fill the gap.", "source_name": "NBA Games calendar", "source_url": "https://www.nba.com/games?date=10%2F22%2F2026"},
-    {"id": "VF-15", "severity": "low", "category": "Missing fixture", "sport": "Baseball", "item": "World Series Game 4 (gamePk 849803) confirmed but not originated", "detail": "The MLB Stats API confirms four scheduled games: Game 1 on 23 Oct (849805), Game 2 on 24 Oct (849802), Game 3 on 26 Oct (849804) and Game 4 on 27 Oct (849803) at Tropicana Field. The verified desk prices the first three only; Game 4 and the conditional Games 5-7 are left out rather than priced from an incomplete series state.", "source_name": "MLB Stats API schedule", "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-27"},
+    {"id": "VF-11", "severity": "high", "category": "Source scope", "sport": "Darts, Tennis, Greyhounds, Golf, Gaelic Football, Rugby League, Volleyball, Motor Racing, Snooker, EuroCup, NBA", "item": "63 rows cite a competition or rankings page, not the individual fixture", "detail": "The official URL on these rows is an official governing-body or league page, but it does not itself identify the fixture. Examples: all 18 darts rows cite pdc.tv/rankings; all 15 tennis rows cite the ATP/WTA rankings or tournament overview; all 6 greyhound rows cite the GBGB results index; the 4 EuroCup rows cite the EuroCup standings. The fixture ID, date and opponent on those rows rest on the OLBG listing captured on 2026-10-21. They are published with the source scope disclosed as 'competition', not 'fixture'. [Update 2026-10-22, session 50268b75: the desk was re-captured the same day — tennis and greyhound rows were retired as completed, EuroCup rows retired, and every originated fixture now carries a fixture-level official URL; darts ties still cite the official rankings ladder, which is also their model input.]", "source_name": "PDC Rankings (example)", "source_url": "https://www.pdc.tv/rankings"},
+    {"id": "VF-12", "severity": "medium", "category": "Price band", "sport": "Cross-sport", "item": "20 pre-existing high-confidence picks are all shorter than -250; 13 band picks priced 1.40-1.42 were added", "detail": "The brief asks for high-confidence picks between -250 (decimal 1.40) and +10000 (decimal 101.00). A selection with a 70%+ model probability cannot be priced above 1.43, so only a 70.0-71.4% window satisfies both rules. All 20 original high-confidence selections carry fair odds of 1.02-1.39 and therefore fall outside the requested band; they remain published and labelled 'outside band'. Thirteen handicap/total selections at 1.40-1.42, each with a written prediction and official facts, were originated to meet the band. [Update 2026-10-22, session 50268b75: superseded — the written predictions were re-cut around the band itself, so all 14 current write-ups are in-band selections; short-priced moneyline favourites keep their HIGH grade on sport pages without a write-up.]", "source_name": "Methodology (this repository)", "source_url": "https://www.olbg.com/betting-tips"},
+    {"id": "VF-13", "severity": "medium", "category": "Snapshot freshness", "sport": "Cross-sport", "item": "59 of 155 rows are dated 2026-10-21 and had already started or finished at the 2026-10-22 01:30Z snapshot", "detail": "This is a dated capture, not a live feed. Rows dated before 2026-10-22 are labelled 'past' on every table; 36 rows are dated 2026-10-22 and 60 are dated later. No result has been back-filled and no past row is presented as an upcoming tip. [Resolved 2026-10-22, session 50268b75: all 21-Oct rows were retired in the same-day re-capture; an automated test now asserts no row predates the capture date.]", "source_name": "NHL schedule feed (capture reference)", "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-21"},
+    {"id": "VF-14", "severity": "medium", "category": "Missing competition", "sport": "Basketball (NBA)", "item": "All 11 NBA rows are 2026-10-21 fixtures; the 2026-10-22 slate was not captured", "detail": "nba.com's games calendar rendered 2 games for 22 October 2026, 12 for 23 October and 8 for 24 October, but the page returned 'Sorry, something went wrong' for the fixture list. The NBA static scoreboard endpoint returned HTTP 500 and stats.nba.com did not respond. No NBA fixture was invented to fill the gap. [Resolved 2026-10-22, session 50268b75: the official nba.com/schedule page rendered the 22–23 Oct fixtures (14 games with IDs, tip times and venues), which are now captured and originated.]", "source_name": "NBA Games calendar", "source_url": "https://www.nba.com/games?date=10%2F22%2F2026"},
+    {"id": "VF-15", "severity": "low", "category": "Missing fixture", "sport": "Baseball", "item": "World Series Game 4 (gamePk 849803) confirmed but not originated", "detail": "The MLB Stats API confirms four scheduled games: Game 1 on 23 Oct (849805), Game 2 on 24 Oct (849802), Game 3 on 26 Oct (849804) and Game 4 on 27 Oct (849803) at Tropicana Field. The verified desk prices the first three only; Game 4 and the conditional Games 5-7 are left out rather than priced from an incomplete series state. [Resolved 2026-10-22, session 50268b75: Game 4 (849803) is now originated alongside Games 1–3; conditional Games 5–7 remain unpublished.]", "source_name": "MLB Stats API schedule", "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-27"},
     {"id": "VF-16", "severity": "high", "category": "Unverified fixture provenance", "sport": "Darts", "item": "PDC event page returned only a cookie-consent wall on 2026-10-22", "detail": "A re-fetch of https://www.pdc.tv/tournament/2026-european-championship on 2026-10-22 returned CookieYes consent text and no match data. The 16 first-round ties and 2 outrights are therefore listed from OLBG and priced only from the official PDC ranking ladder, not from a PDC fixture page.", "source_name": "PDC European Championship (re-fetch)", "source_url": "https://www.pdc.tv/tournament/2026-european-championship"},
     {"id": "VF-17", "severity": "high", "category": "Date disagreement", "sport": "Cricket", "item": "New Zealand v India is dated 2026-10-23 06:15 UTC in the verified desk and 2026-10-22 in the root layer", "detail": "ICC match 271646 is cited by both layers, but the root dashboard stores 2026-10-22 03:00 while the verified desk stores 2026-10-23 06:15 UTC. The ICC page did not render a date on re-fetch on 2026-10-22, so the disagreement cannot be resolved from the official source and both values are left as captured. The verified desk value is the one used in its table.", "source_name": "ICC match 271646", "source_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india"},
-    {"id": "VF-18", "severity": "low", "category": "Blank unconfirmed market", "sport": "Basketball (BKT EuroCup), Volleyball, Cricket, Golf, Rugby League, Gaelic Football, Greyhounds", "item": "43 rows remain unlined and no price was invented", "detail": "Unlined rows keep winner, handicap, total and pick fields null. Reasons are recorded per row: one-match volleyball samples, non-rendered cricket ratings, strokeplay fields without a verified field rating, 2027 futures without rosters, county GAA tables behind client rendering, and licensed GBGB sectional data. The site shows an em dash and the reason for every one.", "source_name": "PlusLiga official games (example)", "source_url": "https://www.plusliga.pl/games.html"},
+    {"id": "VF-18", "severity": "low", "category": "Blank unconfirmed market", "sport": "Basketball (BKT EuroCup), Volleyball, Cricket, Golf, Rugby League, Gaelic Football, Greyhounds", "item": "43 rows remain unlined and no price was invented", "detail": "Unlined rows keep winner, handicap, total and pick fields null. Reasons are recorded per row: one-match volleyball samples, non-rendered cricket ratings, strokeplay fields without a verified field rating, 2027 futures without rosters, county GAA tables behind client rendering, and licensed GBGB sectional data. The site shows an em dash and the reason for every one. [Update 2026-10-22, session 50268b75: 26 rows remain unlined on the refreshed desk, each with its reason recorded.]", "source_name": "PlusLiga official games (example)", "source_url": "https://www.plusliga.pl/games.html"},
 ]
 
 
@@ -671,7 +789,47 @@ def write_json(path: Path, payload: object) -> None:
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def load_shared(rel: str) -> dict:
+    return json.loads((ROOT / rel).read_text(encoding="utf-8"))
+
+
+def shared_urc() -> tuple[dict, list[dict], list[dict]]:
+    """Copy the verified 2026-10-21 URC capture into this desk's inputs.
+
+    URC Rounds 4 (23-24 Oct) and 5 (30-31 Oct) have no intervening matches
+    since capture, so the table and fixtures are current. The copies are
+    written into inputs.json so the model reads one self-contained file; CI's
+    diff gate makes any upstream drift visible.
+    """
+    raw = load_shared("data/inputs/urc.json")
+    r5_raw = load_shared("data/live/urc.json")
+    teams = {
+        k: {"name": v["name"], "gp": v["pl"], "w": v["w"], "d": v["d"], "l": v["l"], "pf": v["pf"], "pa": v["pa"]}
+        for k, v in raw["table"].items()
+    }
+
+    def conv(fixtures: list[dict]) -> list[dict]:
+        return [
+            {
+                "id": f["id"],
+                "date": f["date_local"],
+                "time": f"{f['date_local']} {f['time_local']} Local",
+                "home": f["home"],
+                "away": f["away"],
+                "venue": f["venue"],
+                "url": f["url"],
+                "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+            }
+            for f in fixtures
+        ]
+
+    return teams, conv(raw["fixtures"]), conv(r5_raw["fixtures"])
+
+
 def main() -> None:
+    urc_teams, urc_r4_fixtures, urc_r5_fixtures = shared_urc()
+    # 2025-26 completed-season records used as the NBA strength prior (VF-01/02).
+    nba_teams = load_shared("data/inputs/nba_teams.json")["teams"]
     write_json(
         OUT / "sports.json",
         {
@@ -696,7 +854,10 @@ def main() -> None:
         OUT / "inputs.json",
         {
             "captured_at": CAPTURE_DATE,
-            "nba_extra_game_ids": {"Sacramento Kings|LA Clippers|2026-10-21": "0022600093"},
+            "nhl_teams": NHL_TEAMS,
+            "nhl_fixtures": NHL_FIXTURES,
+            "nba_teams": nba_teams,
+            "nba_fixtures": NBA_FIXTURES,
             "euroleague_teams": EUROLEAGUE_TEAMS,
             "euroleague_fixtures": EUROLEAGUE_FIXTURES,
             "eurocup_teams": EUROCUP_TEAMS,
@@ -705,6 +866,11 @@ def main() -> None:
             "top14_fixtures": TOP14_FIXTURES,
             "prod2_teams": PROD2_TEAMS,
             "prod2_fixtures": PROD2_FIXTURES,
+            "urc_teams": urc_teams,
+            "urc_r4_fixtures": urc_r4_fixtures,
+            "urc_r5_fixtures": urc_r5_fixtures,
+            "ehf_teams": EHF_TEAMS,
+            "ehf_fixtures": EHF_FIXTURES,
             "ehf_olbg_map": EHF_OLBG_MAP,
             "pdc_players": PDC_PLAYERS,
             "darts_fixtures": DARTS_FIXTURES,
@@ -712,12 +878,28 @@ def main() -> None:
             "tennis_originated": TENNIS_ORIGINATED,
             "wst_top36": WST_TOP36,
             "snooker_originated": SNOOKER_ORIGINATED,
-            "mlb_world_series": MLB_WORLD_SERIES,
+            "mlb_teams": MLB_TEAMS,
+            # Cross-layer compatibility view: scripts/survey_lines.py prices
+            # its World Series Game 1 row from this key. Derived from the
+            # same verified MLB_TEAMS / MLB_FIXTURES literals so it cannot
+            # drift from this desk's own numbers.
+            "mlb_world_series": {
+                "id": MLB_FIXTURES[0]["id"],
+                "competition": "2026 MLB World Series — Game 1",
+                "date": MLB_FIXTURES[0]["official_date"],
+                "venue": MLB_FIXTURES[0]["venue"],
+                "away": {"code": "TB", "name": MLB_TEAMS["TB"]["name"], "gp": MLB_TEAMS["TB"]["wins"] + MLB_TEAMS["TB"]["losses"], "w": MLB_TEAMS["TB"]["wins"], "l": MLB_TEAMS["TB"]["losses"], "rs": MLB_TEAMS["TB"]["runs_scored"], "ra": MLB_TEAMS["TB"]["runs_allowed"]},
+                "home": {"code": "MIL", "name": MLB_TEAMS["MIL"]["name"], "gp": MLB_TEAMS["MIL"]["wins"] + MLB_TEAMS["MIL"]["losses"], "w": MLB_TEAMS["MIL"]["wins"], "l": MLB_TEAMS["MIL"]["losses"], "rs": MLB_TEAMS["MIL"]["runs_scored"], "ra": MLB_TEAMS["MIL"]["runs_allowed"]},
+                "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-31",
+                "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+            },
+            "mlb_fixtures": MLB_FIXTURES,
             "f1_drivers": F1_DRIVERS,
             "unlined_rows": UNLINED_ROWS,
         },
     )
-    write_json(OUT / "repo_audit.json", {"captured_at": CAPTURE_DATE, "findings": REPO_AUDIT})
+    # The repo audit is the 2026-10-21 session's findings; keep its own date.
+    write_json(OUT / "repo_audit.json", {"captured_at": "2026-10-21", "findings": REPO_AUDIT})
     write_json(OUT / "flagged.json", {"captured_at": CAPTURE_DATE, "items": FLAGGED_ITEMS})
     print(f"verified_seed: wrote sports ({len(ELIGIBLE_SPORTS)} eligible / {len(EXCLUDED_SPORTS)} excluded), inputs, {len(REPO_AUDIT)} audit rows, {len(FLAGGED_ITEMS)} flags")
 

@@ -491,7 +491,7 @@ JS = """\
         c.style.display = ok ? '' : 'none';
         if (ok) shown += 1;
       });
-      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' predictions';
+      if (countEl) countEl.textContent = 'Showing ' + shown + ' of ' + cards.length + ' HIGH confidence picks';
     });
   }
 
@@ -501,6 +501,9 @@ JS = """\
   });
 })();
 """
+
+
+CAPTURED_AT = ""  # set from matches.json in main(); labels the live desk capture
 
 
 def esc(val: object) -> str:
@@ -514,7 +517,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
     root_prefix = "../" * (depth + 1)
     nav_items = [
         ("index", f"{prefix}index.html", "Overview & All Matches", ""),
-        ("predictions", f"{prefix}predictions.html", "High-Confidence Picks", ""),
+        ("predictions", f"{prefix}predictions.html", "Featured High-Confidence Picks", ""),
         ("flagged", f"{prefix}flagged.html", "Flagged for Review", "nav-flag"),
         ("audit", f"{prefix}audit.html", "Line-by-Line Repo Audit", ""),
         ("methodology", f"{prefix}methodology.html", "Methodology & Models", ""),
@@ -541,7 +544,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
     <div class="topbar-inner">
       <a class="brand" href="{prefix}index.html">
         <span>OLBG Verified Research &amp; Origination Desk</span>
-        <span class="brand-badge">2026-10-22 refresh</span>
+        <span class="brand-badge">{CAPTURED_AT} Primary Capture</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
         {nav_html}
@@ -564,7 +567,7 @@ def render_shell(title: str, active: str, body: str, depth: int = 0) -> str:
 {body}
   </main>
   <footer>
-    <div>Every value published on <code>/verified/</code> is traced to an official governing-body or league endpoint captured on <strong>2026-10-21</strong> and the NHL/MLB fixtures were re-read on <strong>2026-10-22</strong>. Unconfirmed fields are left strictly blank (<code>—</code>) and listed on <a href="{prefix}flagged.html">Flagged for Review</a>.</div>
+    <div>Every value published on <code>/verified/</code> is traced to an official governing-body or league endpoint captured on <strong>{CAPTURED_AT}</strong>. Unconfirmed fields are left strictly blank (<code>—</code>) and listed on <a href="{prefix}flagged.html">Flagged for Review</a>.</div>
     <div>Excluded per brief: Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, Specials.</div>
   </footer>
   <script src="{prefix}assets/app.js"></script>
@@ -635,13 +638,16 @@ def render_match_table(rows: list[dict], depth: int = 0, show_sport_col: bool = 
             p = m["pick"]
             pick_html = (
                 f"<div><strong>{esc(p['selection'])}</strong></div>"
-                f"<div>Fair <strong>{p['fair_odds']:.2f}</strong> ({p['probability']*100:.1f}%)</div>"
-                + (
-                    f'<div><a href="{prefix}predictions.html#{esc(m["id"])}">Read full write-up →</a></div>'
-                    if conf == "high"
-                    else ""
-                )
+                f"<div>Fair <strong>{p['fair_odds']:.2f}</strong> ({p.get('fair_american', 0):+d} US) · {p['probability']*100:.1f}%</div>"
             )
+            feat = m.get("featured")
+            if feat:
+                pick_html += (
+                    f'<div style="margin-top:0.3rem;"><span class="pill pill-originated">★ Featured</span> '
+                    f"<strong>{esc(feat['selection'])}</strong></div>"
+                    f"<div>Fair <strong>{feat['fair_odds']:.2f}</strong> ({feat['fair_american']:+d} US) · {feat['probability']*100:.1f}%</div>"
+                    f'<div><a href="{prefix}predictions.html#{esc(m["id"])}">Read full write-up →</a></div>'
+                )
             badge_html = f'<span class="pill pill-{esc(conf)}">{esc(conf)}</span>'
         else:
             pick_html = f'<span class="blank-cell">— (<a href="{prefix}flagged.html#{esc(m["id"])}">Flagged</a>)</span>'
@@ -708,7 +714,7 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
     return f"""<article class="pred-card" id="{esc(p['match_id'])}" data-pred-card="1" data-sport="{esc(p['sport'])}">
   <div class="pred-header">
     <div>
-      <span class="pill pill-high">{"PRICE-BAND PICK" if p.get("match_type") == "band" else "HIGH CONFIDENCE"}</span>
+      <span class="pill pill-high">HIGH CONFIDENCE</span>
       <a href="{prefix}sports/{esc(p['sport'])}.html" style="margin-left:0.45rem;font-weight:600;">{esc(p['sport_name'])}</a>
       <span style="color:#64748b;font-size:0.84rem;"> · {esc(p['competition'])} · {esc(p['time'])}</span>
     </div>
@@ -718,8 +724,9 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
   <div class="pred-pick-bar">
     <span><strong>Fixture:</strong> {esc(p['event'])}</span> ·
     <span><strong>Selection:</strong> {esc(p['selection'])}</span> ·
+    <span><strong>Market:</strong> {esc(p.get('market', 'Match Winner'))}</span> ·
     <span><strong>Model Win Prob:</strong> {p['probability']*100:.1f}%</span> ·
-    <span><strong>Originated Fair Odds:</strong> {p['fair_odds']:.2f}</span>
+    <span><strong>Originated Fair Odds:</strong> {p['fair_odds']:.2f} ({p.get('fair_american', 0):+d} US)</span>
   </div>
   <p class="pred-body">{esc(p['text'])}</p>
   <ul class="fact-list">
@@ -732,6 +739,7 @@ def render_prediction_card(p: dict, depth: int = 0) -> str:
 
 
 def main() -> None:
+    global CAPTURED_AT
     sports_doc = json.loads((DATA / "sports.json").read_text())
     matches_doc = json.loads((DATA / "matches.json").read_text())
     preds_doc = json.loads((DATA / "predictions.json").read_text())
@@ -745,6 +753,7 @@ def main() -> None:
     flags = flags_doc["items"]
     audits = audit_doc["findings"]
     counts = matches_doc["counts"]
+    CAPTURED_AT = matches_doc["captured_at"]
 
     (SITE / "assets").mkdir(parents=True, exist_ok=True)
     (SITE / "sports").mkdir(parents=True, exist_ok=True)
@@ -799,22 +808,21 @@ def main() -> None:
 <section class="hero">
   <p class="eyebrow">Independent Primary-Source Verification &amp; Line Origination</p>
   <h1>OLBG Multi-Sport Verified Origination Desk</h1>
-  <p>Cleanroom reverse-engineering of <strong>OLBG.com</strong> across all <strong>{len(eligible)} eligible sports</strong> on <strong>2026-10-21</strong>, refreshed on <strong>2026-10-22</strong>, strictly excluding Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, and Specials. Every fixture, team record, goal/point tally, ranking points total, and prize sum is verified directly from official governing-body feeds, with zero third-party or inferred values.</p>
+  <p>Cleanroom reverse-engineering of <strong>OLBG.com</strong> across all <strong>{len(eligible)} eligible sports</strong> on <strong>{CAPTURED_AT}</strong>, strictly excluding Soccer/Football, Horse Racing, American Football, Boxing, UFC/MMA, Hurling, Cycling, and Specials. Every fixture, team record, goal/point tally, ranking points total, and prize sum is verified directly from official governing-body feeds, with zero third-party or inferred values. Featured selections are the strongest model angles priced between <strong>-250 and +10000 (American)</strong> — no ultra-short-price padding.</p>
 </section>
 
 <div class="kpi-grid">
   <div class="kpi"><div class="kpi-val">{len(eligible)}</div><div class="kpi-label">Eligible OLBG Sports Audited (8 Excluded)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['total_rows']}</div><div class="kpi-label">Verified Match &amp; Market Rows</div></div>
   <div class="kpi"><div class="kpi-val">{counts['originated_rows']}</div><div class="kpi-label">Independently Originated Lines (9 Sports)</div></div>
-  <div class="kpi"><div class="kpi-val">{counts['high_confidence']}</div><div class="kpi-label">HIGH Picks &ge;72% (Outside Price Band)</div></div>
-  <div class="kpi"><div class="kpi-val">{counts.get('band_picks', 0)}</div><div class="kpi-label">Price-Band Picks 1.40-1.42</div></div>
+  <div class="kpi"><div class="kpi-val">{counts['featured']}</div><div class="kpi-label">Bespoke Featured Write-Ups (&ge;30 Words, -250..+10000 US)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['unlined_rows']}</div><div class="kpi-label">Unconfirmed Rows Left Blank &amp; Flagged</div></div>
   <div class="kpi"><div class="kpi-val">{len(audits)}</div><div class="kpi-label">Existing Repo Audit Findings Documented</div></div>
 </div>
 
 <div class="section-head">
   <h2>Featured High-Confidence Human Predictions</h2>
-  <p><a href="predictions.html">View all {len(preds)} bespoke write-ups ({counts.get('band_picks', 0)} price-band, {counts['high_confidence']} high) →</a></p>
+  <p><a href="predictions.html">View all {len(preds)} bespoke HIGH-confidence write-ups →</a></p>
 </div>
 <div class="pred-list">
   {top_preds_preview}
@@ -879,21 +887,21 @@ def main() -> None:
     preds_body = f"""
 <section class="hero">
   <p class="eyebrow">Human Editorial Selection Desk · Strictly Verified Primary Facts</p>
-  <h1>Predictions ({len(preds)} Picks)</h1>
-  <p><strong>{counts.get('band_picks', 0)} price-band picks</strong> meet both rules in the brief: model probability &ge;70% and fair odds 1.40-101.00 (&minus;250 to +10000). Because a 70%+ chance cannot be priced above 1.43, those picks sit at 1.40-1.42 and are labelled PRICE-BAND PICK. A further <strong>{counts['high_confidence']} high-confidence picks</strong> are &ge;72% but priced 1.02-1.39, below the band's &minus;250 floor; they remain published and are labelled HIGH CONFIDENCE.</p>
+  <h1>Featured High-Confidence Predictions ({len(preds)} Picks)</h1>
+  <p Each featured selection is the strongest originated angle in its match — match winner, handicap, alternate handicap or total — with a model probability of at least <strong>70.0%</strong> and a fair American price between <strong>-250 and +10000</strong>, so the desk never pads this page with prohibitive short-priced favourites. Every selection carries an individual, natural human editorial write-up of at least 30 words citing verified official form, recent results or rankings, and the exact bet to place. Moneyline picks graded HIGH (&ge;72.0%) whose only prices fall shorter than -250 stay on their sport pages without a write-up.</p>
 </section>
 <div class="controls">
   <select id="pred-sport-filter" aria-label="Filter predictions by sport">
-    <option value="all">All sports with predictions ({len(preds)})</option>
+    <option value="all">All Sports with HIGH Picks ({len(preds)})</option>
     {pred_sport_opts}
   </select>
-  <span id="pred-filter-count" class="count-note">Showing {len(preds)} of {len(preds)} predictions</span>
+  <span id="pred-filter-count" class="count-note">Showing {len(preds)} of {len(preds)} HIGH confidence picks</span>
 </div>
 <div class="pred-list">
   {"".join(render_prediction_card(p, depth=0) for p in preds)}
 </div>
 """
-    (SITE / "predictions.html").write_text(render_shell("High-Confidence Picks", "predictions", preds_body, depth=0))
+    (SITE / "predictions.html").write_text(render_shell("Featured High-Confidence Picks", "predictions", preds_body, depth=0))
 
     # 3. Flagged for Review Page (/verified/flagged.html)
     audit_rows_html = "".join(
@@ -928,7 +936,7 @@ def main() -> None:
 </section>
 
 <div class="callout-warn">
-  <strong>Anti-Hallucination Policy Active:</strong> Across all {counts['total_rows']} rows in <code>/verified/</code>, <strong>{counts['unlined_rows']} rows</strong> lack primary server-rendered strength inputs (such as WST rankings outside the Top 36, ATP rankings outside the Top 100, WTA singles rankings, client-rendered ICC scorecards, off-season 2027 Rugby League futures, and 1-match Polish PlusLiga tables) plus NBA Game Totals (<code>nba.com/standings</code> omits team points scored/allowed). Every such value is left blank (<code>—</code>) below.
+  <strong>Anti-Hallucination Policy Active:</strong> Across all {counts['total_rows']} rows in <code>/verified/</code>, <strong>{counts['unlined_rows']} rows</strong> lack primary server-rendered strength inputs — Northern Ireland Open Round 3 ties without both players in the captured WST ranking table, client-rendered ICC scorecards, thin early-season volleyball tables, golf/rugby-league futures without verifiable fields — plus NBA Game Totals (<code>nba.com/standings</code> omits team points scored/allowed, so every NBA totals cell is blank). Capture gaps and blocked re-verifications from the {CAPTURED_AT} refresh (EuroCup Round 5, ATP order of play, the PDC rankings consent wall, Florida Panthers/Ottawa Senators in-progress 21 Oct game) are itemised as flags VF-19 to VF-22 below. Every such value is left blank (<code>—</code>) rather than inferred.
 </div>
 
 <div class="section-head">
@@ -1023,22 +1031,22 @@ def main() -> None:
     (SITE / "audit.html").write_text(render_shell("Line-by-Line Repo Audit", "audit", audit_body, depth=0))
 
     # 5. Methodology Page (/verified/methodology.html)
-    meth_body = """
+    meth_body = f"""
 <section class="hero">
   <p class="eyebrow">Cleanroom Mathematical Origination &amp; Verification Rules</p>
   <h1>Origination Models, Market Coverage &amp; Confidence Grading</h1>
-  <p>All fair probabilities and decimal prices (<code>1 / p</code>, zero bookmaker overround) are computed deterministically in <code>scripts/verified_model.py</code> using only the Python standard library and verified primary inputs from <code>scripts/verified_seed.py</code> and <code>data/inputs/*.json</code>.</p>
+  <p>All fair probabilities and prices (decimal <code>1 / p</code> with the equivalent American moneyline, zero bookmaker overround) are computed deterministically in <code>scripts/verified_model.py</code> using only the Python standard library and the single self-contained official capture in <code>data/verified/inputs.json</code>, written by <code>scripts/verified_seed.py</code> on {CAPTURED_AT}.</p>
 </section>
 
 <div class="sport-grid">
-  <div class="card"><h3>1. Ice Hockey (NHL — 16 Games)</h3><p>Empirical-Bayes shrunk attack/defence goal rates (<code>k = 8</code> games shrinkage toward league mean goals/game) feeding a 0–25 bivariate Poisson grid with 52%/48% home/away OT/SO split. Originates 2-way Moneyline, -1.5/+1.5 Puck Line, and 5.5/6.5 Total Goals.</p></div>
-  <div class="card"><h3>2. Basketball (NBA, EuroLeague, EuroCup — 25 Games)</h3><p>NBA uses shrunk 2025-26 win-rate logit prior (capped at <code>MEDIUM</code>; totals left blank because <code>nba.com/standings</code> omits PF/PA). EuroLeague (10 R7 games) &amp; BKT EuroCup (4 R4 games) use shrunk net efficiency margin normal models across Moneyline, Spread, and Over/Under Total Points.</p></div>
-  <div class="card"><h3>3. Rugby Union (Top 14, Pro D2, URC — 23 Matches)</h3><p>Normal scoring-margin &amp; total-points distribution with empirical-Bayes shrinkage (<code>k = 4</code> matches) and home advantage (+4.5 pts) across 1X2 Match Result, Half-Point Handicap, and Total Points.</p></div>
-  <div class="card"><h3>4. Handball (EHF Champions League — 12 Matches)</h3><p>Full-support 0–60 bivariate Poisson model trained on official 4-match Group Phase GF/GA tables (<code>k = 4</code>), originating 1X2 Match Winner, Half-Goal Handicap, and Over/Under Total Goals.</p></div>
-  <div class="card"><h3>5. Darts (PDC European Championship — 16 Ties)</h3><p>Exact negative-binomial / binomial race-to-6-legs Markov calculation from log two-year official PDC Werner Ranking Ladder prize sums for all 32 players, pricing Match Winner, -1.5/+1.5 Leg Handicap, and Over/Under 9.5 Total Legs.</p></div>
-  <div class="card"><h3>6. Tennis &amp; Snooker (7 ATP + 2 WST Matches)</h3><p>Exact best-of-3 sets (ATP Top-100 points) and best-of-7 frames (WST Top-36 prize money) combinatorial models pricing Match Winner, -1.5/+1.5 Set/Frame Handicap, and Over/Under Total Sets/Frames. Matches involving unconfirmed ranks outside SSR pages are left blank.</p></div>
-  <div class="card"><h3>7. Baseball &amp; Motor Racing (MLB WS G1 + 2 F1 Markets)</h3><p>MLB World Series Game 1 (<code>TB 98-64, 736 RS / 650 RA</code> at <code>MIL 103-59, 832 RS / 618 RA</code>) uses shrunk run-rate Poisson across Moneyline, Run Line, and Total Runs. FIA Formula 1 prices Round 18 &amp; 2026 Drivers' Championship from official 17-round points shares.</p></div>
-  <div class="card"><h3>8. Confidence Thresholds</h3><p><strong>HIGH:</strong> &ge;72.0% model probability backed by current-season official stats (requires bespoke &ge;30-word human editorial preview). <strong>MEDIUM:</strong> 60.0%–71.99% (or prior-season cap). <strong>LOW:</strong> &lt;60.0%. <strong>Unlined:</strong> Any missing primary input.</p></div>
+  <div class="card"><h3>1. Ice Hockey (NHL — 12 Games)</h3><p>Empirical-Bayes shrunk attack/defence goal rates (<code>k = 8</code> games toward the league mean from the official NHL Stats REST summary, shootout-deciding goals excluded) feeding a full-support bivariate Poisson grid with a 52%/48% home/away OT/SO split. Originates 2-way Moneyline, -1.5/+1.5 Puck Line, and 5.5/6.5 Total Goals.</p></div>
+  <div class="card"><h3>2. Basketball (NBA 14, EuroLeague 9, EuroCup —)</h3><p>Opening-week NBA uses completed 2025-26 records as a shrunk win-rate logit prior, confidence capped at <code>MEDIUM</code>, featured write-ups disabled, and totals left blank because <code>nba.com/standings</code> omits PF/PA. EuroLeague Round 7 uses a shrunk efficiency margin normal model (<code>k = 3</code>) across Moneyline, Spread, and Total Points. EuroCup Round 5 was not captured this refresh (flag VF-20).</p></div>
+  <div class="card"><h3>3. Rugby Union (Top 14 7, Pro D2 8, URC 16)</h3><p>Normal scoring-margin and total-points distributions with empirical-Bayes shrinkage (<code>k = 3</code> matches) and +4.2 home advantage across 1X2 Match Result (with exact draw mass), Half-Point Handicap, and Total Points.</p></div>
+  <div class="card"><h3>4. Handball (EHF Champions League — 5 Matches)</h3><p>Full-support bivariate Poisson model (<code>k = 3</code>) on the fresh official 24-club standings after the 21 Oct Round 5 games, originating 1X2 Match Winner, Half-Goal Handicap, and Over/Under Total Goals.</p></div>
+  <div class="card"><h3>5. Darts (PDC European Championship — 16 Ties)</h3><p>Exact negative-binomial race-to-6-legs calculation from log two-year PDC Werner Ranking Ladder prize sums for all 32 qualifiers, pricing Match Winner, -1.5/+1.5 Leg Handicap, and Over/Under 9.5 Total Legs. The 22 Oct rankings re-read was blocked by the PDC consent wall, so the 21 Oct ladder stands — no ranking event was completed in between (flag VF-21).</p></div>
+  <div class="card"><h3>6. Tennis &amp; Snooker (Currently Unlined)</h3><p>Exact best-of-3 sets / best-of-7 frames combinatorial models stand ready, but the {CAPTURED_AT} capture could verify no ATP order of play and none of the eight WST Northern Ireland Open Round 3 ties has both players in the captured ranking input — all are listed blank on <a href="flagged.html">Flagged for Review</a> rather than estimated.</p></div>
+  <div class="card"><h3>7. Baseball &amp; Motor Racing (MLB WS G1–G4, 2 F1 Markets)</h3><p>World Series Games 1–4 (Tampa Bay Rays 98-64, 736 RS / 650 RA vs Milwaukee Brewers 103-59, 832 RS / 618 RA) use run-rate Poisson with the league rate derived from the two clubs' own verified totals across Moneyline, -1.5/+1.5 Run Line, and 7.5 Total Runs; if-necessary Games 5–7 are not published. Formula 1 prices the US Grand Prix and the 2026 Drivers' Championship from official points shares.</p></div>
+  <div class="card"><h3>8. Confidence &amp; Featured Rules</h3><p><strong>HIGH:</strong> &ge;72.0% pick probability. <strong>MEDIUM:</strong> 60.0%–71.99% (or prior-season cap). <strong>LOW:</strong> &lt;60.0%. <strong>Unlined:</strong> any missing primary input. A <strong>featured</strong> selection is the strongest market per match with probability &ge;70.0% and fair American price inside <strong>-250..+10000</strong>; strong favourites are repriced into the band with alternate handicaps (including Asian quarter lines on normal-margin sports) drawn from the same model distribution, never by padding with ultra-short moneylines. Every featured selection carries a unique &ge;30-word human write-up.</p></div>
 </div>
 """
     (SITE / "methodology.html").write_text(render_shell("Methodology & Models", "methodology", meth_body, depth=0))
@@ -1057,7 +1065,7 @@ def main() -> None:
         rows_section = (
             render_match_table(s_rows, depth=1, show_sport_col=False)
             if s_rows
-            else '<div class="callout-warn">Official governing-body and live OLBG hub checks confirmed <strong>0 active fixtures</strong> on 2026-10-21 (off-season / between matchdays).</div>'
+            else f'<div class="callout-warn">Official governing-body and live OLBG hub checks confirmed <strong>0 active fixtures</strong> on {CAPTURED_AT} (off-season / between matchdays / not captured this refresh).</div>'
         )
         sp_body = f"""
 <p style="margin:0 0 0.75rem;font-size:0.85rem;"><a href="../index.html">← Back to All 17 Eligible Sports</a></p>
@@ -1084,7 +1092,7 @@ def main() -> None:
 
     print(
         f"verified_build: built 5 core HTML pages + {len(eligible)} sport pages "
-        f"({counts['total_rows']} rows, {len(preds)} predictions)"
+        f"({counts['total_rows']} rows, {len(preds)} featured predictions)"
     )
 
 

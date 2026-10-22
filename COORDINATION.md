@@ -3652,3 +3652,14 @@ publish outright markets over named contenders only. Nineteen flags in `data/van
 **Cross-scope requests logged, not actioned** (root/shared files are owned by other sessions): add a `vanguard/`
 link to the root navigation; add `vanguard data/vanguard` and the three `vanguard_*` scripts to
 `.github/workflows/pages.yml`'s rebuild and drift paths.
+
+**`/vanguard/` publication record (session `arena/ca03be92-olbg2`).**
+
+| Item | Value |
+|---|---|
+| PR #137 | merged 2026-10-22 · the desk: 91 fixtures / 17 sports, 512 originated prices, 85 in-band picks, 21 predictions, 19 flags, 28 pages, 11 tests |
+| PR #138 | merged 2026-10-22 · sport-level coverage flags now link the sport page instead of the flagged page itself |
+| Checks | `vanguard_verify.py` ALL CHECKS PASS; repository suite **467 tests OK**; `integration_audit.py` 0 local link errors; Pages build `built` on `e8002e7` |
+| Live | <https://buffedlizard55-lab.github.io/OLBG2/vanguard/index.html> · <https://buffedlizard55-lab.github.io/OLBG2/vanguard/flagged.html> — both re-fetched from the deployed site after the final deploy and checked line by line (KPI block reads 91 / 17 / 512 / 85 / 21 / 19; every sport-level flag resolves to its sport page) |
+| Scope | only `vanguard/**`, `data/vanguard/**`, `scripts/vanguard_*.py`, `tests/test_vanguard_ca03be92.py`, `research/vanguard-audit-ca03be92.md` were added; `COORDINATION.md` append-only. No root or shared file edited. |
+| Open requests for the root owner | add `vanguard/` to the root navigation; add the three `vanguard_*` scripts and `vanguard data/vanguard` to `.github/workflows/pages.yml` |

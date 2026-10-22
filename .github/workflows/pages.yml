@@ -73,6 +73,13 @@ jobs:
           python scripts/current_model.py
           python scripts/current_build.py
 
+      - name: Rebuild the daily five-a-sport picks desk
+        run: |
+          python scripts/daily_data.py
+          python scripts/daily_predictions.py
+          python scripts/daily_flags.py
+          python scripts/daily_build.py
+
       - name: Regenerate the root dashboard & integration layer
         run: python scripts/build_site.py
 
@@ -83,4 +90,4 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Fail if any generated page or data file is stale
-        run: git diff --exit-code -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets
+        run: git diff --exit-code -- daily data/daily current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets

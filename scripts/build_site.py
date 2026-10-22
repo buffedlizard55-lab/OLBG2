@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
+    ("daily/index.html", "Daily picks (23–25 Oct)"),
     ("current/index.html", "Current capture (22 Oct)"),
     ("final/index.html", "Consolidated desk (all 17 sports)"),
     ("update/index.html", "Update 22–28 Oct (fresh capture)"),

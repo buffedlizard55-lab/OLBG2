@@ -2996,3 +2996,57 @@ No fresh sports facts are claimed. Official sports hosts are outside this sandbo
 ### `arena/e52155e1-olbg2` — implementation and verification complete
 
 Root/current integration, automatic all-layer HTML link discovery, accurate file-check disclosures, current seed/model/build CI and drift gate, README entry, and five regression tests completed. Full workflow rebuild replay succeeded; 343 tests passed; zero local file link errors across discovered HTML. No current data or predictions changed. Sources, limits, unresolved coverage and verification gaps: `research/integration-e52155e1.md`; public review links on `integration.html` and `current/flagged.html`. Source verification is **not** freshly certified. Publication follows. Initial branch pull returned “remote ref not found” because the Arena branch was new; pulled/rebased against main before its first push, then published the claim successfully. No merge conflict or other session scope edit.
+
+## Session `arena/6b4da610-olbg2` — daily five-a-sport picks desk (`/daily/`)
+
+**Claimed and worked 2026-10-22 21:00–22:10 UTC.** Baseline `main` at `9068101` (merge of PR #123). Arena
+requires this fixed branch rather than a session-named branch, so the branch is `arena/6b4da610-olbg2`. At
+claim time `gh pr list` showed PR #125 open on `arena/e52155e1-olbg2` (an append-only COORDINATION record for
+the completed current-desk integration) and no other in-flight claims.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Fresh official-source capture for the 23–25 October window and a five-a-sport picks board | done | `arena/6b4da610-olbg2` | `scripts/daily_data.py`, `scripts/daily_predictions.py`, `scripts/daily_flags.py`, `scripts/daily_build.py`, `data/daily/**`, `daily/**` |
+| Integration: root navigation entry, `integration.html` paragraph, CI rebuild + drift gate, README, tests | done | `arena/6b4da610-olbg2` | `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml`, `README.md`, `tests/test_daily.py`, generated root HTML |
+| Publication, merge, Pages verification | in progress | `arena/6b4da610-olbg2` | `COORDINATION.md`, `research/daily-refresh-6b4da610.md` |
+
+No other session's data files were edited. `data/final/**` is unchanged: the 19 NHL conflicts found are
+published on `/daily/flagged.html` for review instead.
+
+### Verification performed this session
+
+| Source | Verified | Result |
+|---|---|---|
+| `api-web.nhle.com/v1/schedule/2026-10-23` | NHL fixtures, 23–25 Oct, start times in UTC | 10 fixtures carried into `/daily/` |
+| `nhl.com/standings/2026-10-22/wildcard` | Records, GF/GA, streaks for all 32 clubs | Inputs for 10 NHL lines; 19 conflicts with stored `/final/` values logged as IR-NHL-01…19 |
+| `statsapi.mlb.com` schedule + standings | World Series G1–G2, Brewers 103-59, Rays 98-64 | 2 fixtures, 2 picks |
+| `stats.unitedrugby.com` match centre + table | 8 Round 4 fixtures, 16-club table with PF/PA and form | 8 fixtures, 5 picks, 4 of them high and in band |
+| `nrl.com` RLWC Round 2 draw | 5 fixtures, venues, pool positions | 5 fixtures, 5 picks (IRL rating points carried over) |
+| `euroleaguebasketball.net` standings | 20-club table, records, PF/PA | 3 fixtures, 5 picks |
+| `afl.com.au/aflw/ladder`, `pdc.tv`, `api-live.euroleague.net` | Attempted, no usable data | Recorded as failed reads; AFLW inputs carried from the 22 October capture and disclosed |
+
+`python3 -m unittest discover -s tests` → **363 tests OK** (20 new in `tests/test_daily.py`);
+`python3 scripts/integration_audit.py` → **0 cross-layer local link errors**; `/daily/` rebuild is byte-identical
+and is now inside the CI drift gate.
+
+### Delivered
+
+38 fixtures across 7 sports (`ice-hockey` 10, `rugby-union` 8, `aussie-rules` 9, `rugby-league` 5,
+`basketball` 3, `baseball` 2, `cricket` 1); 224 originated prices; 28 picks; 18 high confidence; 6 high and
+inside the −250/+10000 band; 28 hand-written predictions of 48–82 words; 38 review items including 10 sports
+with no line and 19 NHL discrepancies.
+
+### Known shortfalls, published rather than hidden
+
+Four sports reach five picks; basketball reaches five by using three markets on three fixtures; baseball and
+cricket cannot reach five distinct fixtures in this window. Ten of the seventeen eligible sports carry no line
+from this pass, each with its reason on `/daily/flagged.html`. No bookmaker price was read, so no value claim is
+made. No player-level fact was verified, so no prediction names a player.
+
+### Publish record
+
+| Item | Value |
+|---|---|
+| Branch | `arena/6b4da610-olbg2` |
+| Pull request | see the ledger line appended below after merge |
+| Pages | <https://buffedlizard55-lab.github.io/OLBG2/daily/index.html> |

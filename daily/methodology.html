@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Methodology &middot; OLBG2 daily</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="top"><span class="brand">OLBG2 <span>/daily</span></span><a href="index.html">Dashboard</a><a href="matches.html">All fixtures</a><a href="lines.html">Originated prices</a><a href="picks.html">Five-a-sport picks</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="flagged.html">Flagged for Review</a><a href="methodology.html" class="active">Methodology</a><a href="sources.html">Sources</a><a href="../index.html">Other desks</a></header><main>
+<h1>Methodology</h1>
+<p class="lede">One model, declared parameters, no bookmaker input. Everything below is reproducible
+by running <code>python3 scripts/daily_data.py</code> and reading the JSON it writes.</p>
+
+<h2>1. Scope</h2>
+<p>The 17 eligible OLBG sports exclude soccer, boxing, UFC/MMA, American football, hurling, horse
+racing, cycling and specials. This pass priced 7 of them. The remaining 10 are named on
+<a href="flagged.html">Flagged for Review</a> with the reason no line was originated.</p>
+
+<h2>2. Inputs</h2>
+<p>Only figures read on a governing-body page are used: NHL standings (record, goals for, goals
+against, point streak), MLB season records, the URC table (played, won, drawn, lost, points for,
+points against), EuroLeague standings (games, record, points for and against), the NRL World Cup
+pool positions, and the AFLW and ICC tables carried over from the 22 October capture. A team with no
+verified input gets no line, and its fixture is not published on this desk.</p>
+
+<h2>3. Model</h2>
+<h3>Ice hockey</h3>
+<p>Independent Poisson goals for each side, with expected goals blending each attack with the
+opposing defence:
+<code>&lambda;<sub>home</sub> = ((GF<sub>home</sub>/GP) + (GA<sub>away</sub>/GP)) / 2 &times;
+1.03</code> and the mirror image for the visitors at
+0.97. Moneyline includes overtime and a shootout
+(0.5 split on ties), the puck line is P(margin &ge; 2), and the totals
+are 5.5 and 6.5.</p>
+<h3>Baseball</h3>
+<p>Log5 on the two season win percentages with a 0.02 home-field
+adjustment. Moneyline only: the World Series games carry no verified run-scoring input here, so no
+run line or total is offered.</p>
+<h3>Rugby union</h3>
+<p>Expected points from the URC table's points-for and points-against per game, multiplied by
+1.04 at home and 0.96 away. The margin
+uses a normal distribution with &sigma; = 13.0, totals with
+&sigma; = 15.0, at the handicap lines [3.5, 7.5] and total
+lines [43.5, 47.5].</p>
+<h3>Basketball</h3>
+<p>The same expected-points construction from EuroLeague points for and against, with a
+1.6-point home edge, &sigma; = 11.0 for the
+margin and 14.0 for totals, at handicaps
+[2.5, 5.5] and totals [163.5, 170.5].</p>
+<h3>Aussie rules</h3>
+<p>Ladder percentage, with 4.0 percentage points added to the home side;
+the two adjusted percentages are normalised into a win probability. No margin or total market is
+offered, because percentage alone does not give an absolute scoring level.</p>
+<h3>Rugby league and cricket</h3>
+<p>A logistic on the published rating difference (scale 38.0 for rugby
+league, 11.0 for cricket) with a small home bonus. Moneyline only.</p>
+
+<h2>4. Prices, confidence and the band</h2>
+<p>Prices are fair and margin-free: decimal = 1 / probability, American as published. Confidence is a
+threshold on the model probability &mdash; high at 70% or more,
+medium at 60%, low below. The focus band is
+-250 to +10000. Because a 70% chance already prices
+at -233, the overlap between "high confidence" and "inside the band" is only 70.0% to 71.4%; this desk
+reports both facts separately instead of moving a line to manufacture compliance.</p>
+
+<h2>5. Selection rule</h2>
+<p>Top five per sport, ranked by: selections that clear 70% and sit in the band first; then by model
+probability. Where a sport has fewer than five fixtures the list takes additional markets on the same
+fixture and says so.</p>
+
+<h2>6. Limits</h2>
+<p>This is a dated snapshot, not a live feed. It ignores team news, injuries, rotations, weather,
+travel and rest, and it does not compare its prices with any bookmaker. Two-way markets only. The
+model has no measured out-of-sample performance, so no strike rate is claimed.</p>
+</main><footer>Independent research, not betting advice. Prices are fair, no-margin model prices derived from the verified inputs listed on each row &mdash; they are not bookmaker quotes. Generated 2026-10-22 21:50 UTC by session arena/6b4da610-olbg2. <a href="flagged.html">Flagged for Review</a> &middot; <a href="methodology.html">Methodology</a> &middot; 18+</footer></body></html>

@@ -93,10 +93,12 @@ def body():
 {_atlas_row()}
 {_current_row()}
 </tbody></table></div>
+<h2>Current capture desk</h2>
+<p><a href="current/index.html">22 October capture dashboard</a> · <a href="current/matches.html">Fixture table</a> · <a href="current/lines.html">Originated prices</a> · <a href="current/predictions.html">Predictions</a> · <a href="current/sources.html">Source links</a> · <a href="current/flagged.html">Flagged for Review</a>. This is a separate overlapping snapshot, not an incremental addition to other desks. No fresh official-source verification is claimed by this integration.</p>
 <h2>Cross-layer findings &amp; narrative claims needing review</h2>
 <p>All existing layers are preserved and cross-linked. Rows below summarize cross-layer status and enumerate every survey narrative fact alongside its official source link for manual review.</p>
 <div class="table-wrap"><table><thead><tr><th>Entry / claim</th><th>Status</th><th>Finding</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>
-<h2>Automation boundary</h2><p>CI rebuilds selected static layers (<code>/verified/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, checks local file targets across all published HTML layers (not external facts or URL fragments), and runs full unit tests.</p>'''
+<h2>Automation boundary</h2><p>CI rebuilds selected static layers (<code>/verified/</code>, <code>/</code>, <code>/survey/</code>, and <code>/site/</code>), enforces <code>git diff --exit-code</code> against stale generated HTML, checks local file targets across all published HTML layers (fragment anchors and external URLs are not checked), and runs full unit tests.</p>'''
 
 
 class Links(HTMLParser):
@@ -114,7 +116,7 @@ def local_link_errors(root=ROOT):
     errors = []
     # Discover every published layer; an allowlist silently misses new desks.
     pages = [p for p in root.rglob('*.html')
-             if not any(part.startswith('.') or part in ('node_modules', '__pycache__')
+             if not any(part.startswith('.') or part in ('node_modules', '_site', 'venv', '__pycache__')
                         for part in p.relative_to(root).parts)]
     for page in pages:
         parser = Links()

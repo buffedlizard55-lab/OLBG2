@@ -2022,3 +2022,12 @@ The reproducibility pass exposed stale current-state copy (root builder docstrin
 |---|---|---|---|
 | R4 | Reconcile stale root/README count and scope copy from committed data; test published count disclosure | in progress | `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py` |
 | R5 | Ensure generated layers outside the current drift gate are covered where reproducible, then rerun full pipeline/tests | unclaimed | `.github/workflows/pages.yml`, `research/reproducibility-audit-dc72bac4.md` |
+
+### R6 integration-scope claim (2026-10-22 UTC)
+
+A deterministic dry rebuild of the completed layers surfaced a stale `/board/` snapshot: its committed 207 rows were reproducibly regenerated as 277 after `forward_seed.py` supplied the newly captured NBA games, while the checked-in `/evidence/` and `/audit65/` reports still reflected 207 board rows. These are generated integration artifacts, not manual source corrections. `gh pr list --state open` is empty; the historical layer owners have completed/merged their work. I am taking the integration-only scope to rebuild the existing board layer from its committed official-source captures, regenerate dependent consolidated/audit outputs, update corresponding generated pages/tests/CI drift paths, and document any resulting source-verification boundary. No new fixture facts will be typed or inferred. Scope expansion: `data/board/**`, `board/**`, `data/{final,evidence,audit65}/**`, `final/**`, `evidence/**`, `audit65/**`, `scripts/{board_*,final_*,evidence_integrity.py,audit65.py}`, `.github/workflows/pages.yml`, `tests/test_publication_counts.py`, `research/reproducibility-audit-dc72bac4.md`, `scripts/build_site.py`, `README.md`, and append-only `COORDINATION.md`. Other data layers remain unchanged.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| R6 | Rebuild affected board + dependent final/evidence/audit outputs from checked-in captures; verify no manual facts added | in progress | `data/board/**`, `board/**`, `data/{final,evidence,audit65}/**`, `final/**`, `evidence/**`, `audit65/**`, `scripts/{board_*,final_*,evidence_integrity.py,audit65.py}` |
+| R7 | Expand CI to rebuild/check the claimed generated layers and add regression assertions for published counts | unclaimed | `.github/workflows/pages.yml`, `tests/test_publication_counts.py` |

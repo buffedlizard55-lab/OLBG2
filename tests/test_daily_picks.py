@@ -100,6 +100,11 @@ class DailyDataTests(unittest.TestCase):
             self.assertIn(p["selection"].lower(), p["prediction"].lower(), p["match_id"])
             self.assertTrue(p["prediction"].endswith("."), p["match_id"])
 
+    def test_quoted_prices_match_the_published_price(self):
+        for p in self.preds:
+            for quoted in re.findall(r"at a fair ([-+]?\d+)", p["prediction"]):
+                self.assertEqual(quoted, str(p["fair_american"]), p["match_id"])
+
     def test_predictions_are_unique_prose(self):
         texts = [p["prediction"] for p in self.preds]
         self.assertEqual(len(texts), len(set(texts)))

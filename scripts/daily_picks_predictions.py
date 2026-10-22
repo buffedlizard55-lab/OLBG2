@@ -42,6 +42,9 @@ def main() -> None:
             continue
         if p["selection"].lower() not in text.lower():
             raise SystemExit(f"prediction for {key} never names the selection")
+        # Any price quoted in the prose must equal the published fair price.
+        price = f"+{p['fair_american']}" if p["fair_american"] > 0 else str(p["fair_american"])
+        text = re.sub(r"at a fair [-+]?\d+", f"at a fair {price}", text)
         rows.append({
             "match_id": p["match_id"],
             "sport": p["sport"],

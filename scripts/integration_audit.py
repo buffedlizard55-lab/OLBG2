@@ -93,6 +93,8 @@ def body():
 {_atlas_row()}
 {_current_row()}
 </tbody></table></div>
+<h2>Daily Top-5 desk</h2>
+<p><a href="daily/index.html">23–30 October Top-5 dashboard</a> · <a href="daily/matches.html">fixtures</a> · <a href="daily/predictions.html">Top-5 picks and predictions</a> · <a href="daily/flagged.html">Flagged for Review</a>. An independent daily desk built by a different session from official captures: 132 fixtures across 7 sports, 45 predictions and 20 review items. It overlaps the daily-picks desk below on hockey, rugby union, basketball and baseball; their counts must not be added together.</p>
 <h2>Daily five-a-sport picks desk</h2>
 <p><a href="daily-picks/index.html">23–25 October picks dashboard</a> · <a href="daily-picks/matches.html">fixtures</a> · <a href="daily-picks/lines.html">originated prices</a> · <a href="daily-picks/picks.html">five-a-sport picks</a> · <a href="daily-picks/predictions.html">predictions</a> · <a href="daily-picks/flagged.html">Flagged for Review</a>. Seven sports were priced from freshly read governing-body pages (NHL, URC, NRL World Cup, EuroLeague, MLB) plus two carried-over inputs (AFLW, ICC). Ten sports carry no line and say so. Nineteen NHL team lines in <code>/final/</code> disagree with the 22 October standings read and are listed for review rather than edited.</p>
 <h2>Current capture desk</h2>

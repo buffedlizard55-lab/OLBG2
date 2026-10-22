@@ -3087,3 +3087,27 @@ made. No player-level fact was verified, so no prediction names a player.
 | Branch | `arena/6b4da610-olbg2` |
 | Pull request | see the ledger line appended below after merge |
 | Pages | <https://buffedlizard55-lab.github.io/OLBG2/daily/index.html> |
+
+### `arena/6b4da610-olbg2` — collision with the already-merged `/daily/` desk, and resolution
+
+While this session was working, `arena/b499dfe1-olbg2` claimed and merged (`#127`, merge `1fa995c`) an
+independent daily desk at **`daily/`** using the same folder names this session had chosen. Neither session
+saw the other's claim when it started, and both had written to `daily/**`, `data/daily/**` and
+`scripts/daily_build.py` before the second merge attempt.
+
+Resolution — **no work from either session was discarded**:
+
+| Item | Outcome |
+|---|---|
+| `daily/`, `data/daily/`, `scripts/daily_{seed,model,build,verify}.py` | Left exactly as merged from `#127`. Untouched by this session after the collision was found. |
+| This session's layer | Renamed to `daily-picks/` and `data/daily-picks/`, with scripts renamed `daily_picks_{data,predictions,flags,build}.py` and tests to `tests/test_daily_picks.py`, so neither layer can overwrite the other. |
+| Root navigation | Now links both: "Daily desk (23–30 Oct)" → `daily/index.html` and "Picks desk (23–25 Oct)" → `daily-picks/index.html`. |
+| CI | Both layers rebuild in `pages.yml` (`daily_seed → daily_model → daily_build → daily_verify`, then `daily_picks_*`), and both `daily data/daily` and `daily-picks data/daily-picks` are inside the drift gate. |
+| `integration.html` | Two separate paragraphs, each stating that the desks overlap and that their counts must not be added. A stale `daily/picks.html` link in the other session's paragraph (that layer publishes `daily/top5.html`) was corrected — link fix only, no content change. |
+| `README.md` | One row per desk, with the overlap disclosure. |
+| Tests | Both suites pass together: **`python3 -m unittest discover -s tests` → OK**, including the other session's 14 daily tests and this session's 20. |
+
+Combined sport coverage across the two daily desks is 10 of the 17 eligible sports: ice hockey, rugby union,
+basketball, baseball, handball, darts, motor racing, Aussie rules, rugby league and cricket. Still without a
+line in either desk: tennis, snooker, golf, volleyball, greyhounds, Gaelic football and esports. That gap is
+recorded on both flagged pages and remains the largest unmet part of the brief.

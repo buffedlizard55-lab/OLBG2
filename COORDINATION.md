@@ -1597,3 +1597,13 @@ Rules for this session: nothing is published unless an official page returned it
 **Flag raised for the forward-layer owner (not edited here):** `forward/index.html` and `forward/gaps.html` state that gbgb.org.uk "did not serve any page" (homepage, results and race-cards returned fetch failures or HTTP 500) on 2026-10-22. This session's fetch of `https://www.gbgb.org.uk/`, `/racing/open-races/`, `/racing/race-courses/` and `/racing/results/` returned normal pages on the same date (see `research/gap-recheck-1619553b.md`). The VF-22 gap stays open, but its stated reason should be corrected to "dated race cards are client-rendered" in the next forward-layer edit. Logged as an irregularity for manual review.
 
 **Session `arena/1619553b-olbg2` status:** N1 done and live; N2 (VF-14) and N3 (VF-22) re-checked, both still open with no rows published. Session closed.
+
+### Publication record — session `arena/d219b7cf-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#71](https://github.com/buffedlizard55-lab/OLBG2/pull/71) — README snapshot consistency corrections |
+| Merge | **Merged** 2026-10-22 07:23:30 UTC as `d8ae5adebca3c2fc57ca4dad22cf9b14c511aac7` |
+| Validate | `Validate Pages content` **success**, run [39740105648](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740105648) |
+| GitHub Pages | `Deploy Pages` **success**, run [39740166497](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39740166497) |
+| Result | README/reconciliation report and coordination record published. Data and generated fixture pages unchanged by this documentation task. |

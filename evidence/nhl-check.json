@@ -1,0 +1,11 @@
+{
+  "checked_date": "2026-10-22",
+  "official_url": "https://api-web.nhle.com/v1/score/2026-10-22",
+  "retrieval": "fetch_page chunk 0; response reported six chunks; only chunk 0 was read",
+  "scope": "Selected fields in the first two complete games only. No odds, statistics outside these records, or other fixtures verified.",
+  "games": [
+    {"id": 2026020154, "gameDate": "2026-10-22", "venue": "TD Garden", "startTimeUTC": "2026-10-22T23:00:00Z", "awayAbbrev": "NSH", "awayRecord": "3-2-3", "homeAbbrev": "BOS", "homeRecord": "7-2-1", "gameState": "FUT"},
+    {"id": 2026020155, "gameDate": "2026-10-22", "venue": "Scotiabank Arena", "startTimeUTC": "2026-10-22T23:00:00Z", "awayAbbrev": "NYR", "awayRecord": "7-3-1", "homeAbbrev": "TOR", "homeRecord": "5-4-2", "gameState": "FUT"}
+  ],
+  "evidence_type": "Selected-field transcription of retrieved official API response, not a full raw response archive"
+}

@@ -1,0 +1,231 @@
+{
+  "generated_at": "2026-10-22T00:00:00Z",
+  "session_branch": "arena/399eb9ae-olbg2",
+  "sources": [
+    {
+      "source_id": "olbg-sitemap",
+      "sport": "all",
+      "authority": "OLBG.com",
+      "title": "OLBG Betting Tips Sitemap & 24-Sport Taxonomy",
+      "url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "verified_on": "2026-10-22",
+      "data_extracted": "All 24 OLBG sport category URLs and numeric IDs (17 eligible, 7 excluded)."
+    },
+    {
+      "source_id": "atp-almaty-9410",
+      "sport": "tennis",
+      "authority": "ATP Tour",
+      "title": "ATP 250 Almaty Open 2026 Daily Schedule & Main Draw",
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Official Oct 22 R16 & QF order of play (Atmane-Bellucci, Machac-Khachanov, Medvedev-Shimabukuro, Bublik-Marozsan, Tsitsipas-Duckworth)."
+    },
+    {
+      "source_id": "atp-brussels-7485",
+      "sport": "tennis",
+      "authority": "ATP Tour",
+      "title": "ATP 250 European Open Brussels 2026 Daily Schedule & Main Draw",
+      "url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Official Oct 22 R16 order of play (Dzumhur-Bergs, Goffin-Michelsen, Collignon-Lehecka, Fils-Munar) and QF qualifiers."
+    },
+    {
+      "source_id": "atp-lyon-496",
+      "sport": "tennis",
+      "authority": "ATP Tour",
+      "title": "ATP 250 Grand Prix Auvergne-Rhone-Alpes Lyon 2026 Daily Schedule & Draw",
+      "url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Official Oct 22 R16 & Oct 23 QF fixtures (Vacherot-Van Assche, Herbert-Fritz, Cobolli-Wawrinka, Jacquet-Nakashima, Moutet-Paul)."
+    },
+    {
+      "source_id": "atp-rankings-20261019",
+      "sport": "tennis",
+      "authority": "ATP Tour",
+      "title": "PIF ATP Singles Rankings (Week of 2026-10-19)",
+      "url": "https://www.atptour.com/en/rankings/singles",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Official ranks and points for all players in Almaty, Brussels, and Lyon draws (#1-#200)."
+    },
+    {
+      "source_id": "wta-ningbo-osaka",
+      "sport": "tennis",
+      "authority": "Women's Tennis Association (WTA)",
+      "title": "WTA 500 Ningbo Open (2092) & WTA 250 Japan Open Osaka (405)",
+      "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Verified live tournament fixtures (Rybakina-P.Kudermetova, Bejlek-Bouzkova in Ningbo; Gibson-Krueger in Osaka); current WTA rankings table is client-side JS."
+    },
+    {
+      "source_id": "nba-schedule-standings",
+      "sport": "basketball",
+      "authority": "National Basketball Association (NBA)",
+      "title": "NBA Official 2026-27 Schedule & 2025-26/2026-27 Standings",
+      "url": "https://www.nba.com/schedule",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Oct 22 NBA doubleheader (SAS @ DAL, DEN @ LAC), Oct 21 opening results, and official 82-game 2025-26 regular-season records."
+    },
+    {
+      "source_id": "euroleague-e2026",
+      "sport": "basketball",
+      "authority": "EuroLeague Basketball",
+      "title": "EuroLeague 2026-27 (E2026) Official Game Center & R1-R7 Results",
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/",
+      "verified_on": "2026-10-22",
+      "data_extracted": "All 60 Round 1-6 final scores, Oct 21 Round 7 opener (Hapoel Tel Aviv 90-81 Virtus), and 9 Round 7 fixtures on Oct 22-23."
+    },
+    {
+      "source_id": "pga-bermuda-r2026528",
+      "sport": "golf",
+      "authority": "PGA Tour",
+      "title": "2026 Butterfield Bermuda Championship (R2026528)",
+      "url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Verified Oct 22-25 tournament dates, Port Royal Golf Course venue, and $6.0M purse."
+    },
+    {
+      "source_id": "icc-fixtures-202610",
+      "sport": "cricket",
+      "authority": "International Cricket Council (ICC)",
+      "title": "ICC International Match Centre (Matches 274144, 275410, 271646, 269791)",
+      "url": "https://www.icc-cricket.com/matches/274144/pakistan-vs-zimbabwe",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Verified ODI Tri-Series in Pakistan, Namibia vs Ireland T20I, New Zealand vs India ODI, and South Africa Women vs Australia Women 2nd ODI."
+    },
+    {
+      "source_id": "wst-ni-open-2026",
+      "sport": "snooker",
+      "authority": "World Snooker Tour (WST)",
+      "title": "2026 BetVictor Northern Ireland Open Match Centre & Player Profiles",
+      "url": "https://www.wst.tv/tournaments/northern-ireland-open-2026/",
+      "verified_on": "2026-10-22",
+      "data_extracted": "All 8 Oct 22 Last 16 Best-of-7 ties, match-centre UUIDs, and all 16 server-rendered player profiles (world rank, 2026/27 matches, wins, 50+ breaks, centuries)."
+    },
+    {
+      "source_id": "lnr-top14-prod2",
+      "sport": "rugby-union",
+      "authority": "Ligue Nationale de Rugby (LNR)",
+      "title": "Top 14 J7 & Pro D2 J8 Official Calendars and Standings",
+      "url": "https://top14.lnr.fr/calendrier-et-resultats",
+      "verified_on": "2026-10-22",
+      "data_extracted": "7 Top 14 J7 matches (Oct 24-25), 8 Pro D2 J8 matches (Oct 22-23), and full 2026-27 points tables, PF, PA, and bonus points."
+    },
+    {
+      "source_id": "urc-round4-2026",
+      "sport": "rugby-union",
+      "authority": "United Rugby Championship (URC)",
+      "title": "BKT URC 2026-27 Round 4 Fixtures & Official Standings",
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "verified_on": "2026-10-22",
+      "data_extracted": "All 8 URC Round 4 fixtures (Oct 23-24, match IDs 292609-292616) and 16-club Round 3 standings."
+    },
+    {
+      "source_id": "intrl-rlwc-2026",
+      "sport": "rugby-league",
+      "authority": "International Rugby League (IRL) & NRL",
+      "title": "2026 Men's Rugby League World Cup Round 2 Draw & IRL World Rankings",
+      "url": "https://www.nrl.com/draw/?competition=167&round=2&season=2026",
+      "verified_on": "2026-10-22",
+      "data_extracted": "5 RLWC Round 2 fixtures (Oct 23-25), Round 1 final scores (AUS 26-10 NZL, FIJ 26-24 COK, TON 20-16 ENG, FRA 36-4 PNG, SAM 72-4 LEB), and IRL rankings."
+    },
+    {
+      "source_id": "mlb-ws-2026",
+      "sport": "baseball",
+      "authority": "Major League Baseball (MLB)",
+      "title": "2026 MLB World Series Schedule & 162-Game Regular-Season Standings",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-22&endDate=2026-10-28",
+      "verified_on": "2026-10-22",
+      "data_extracted": "World Series Games 1-2 (Tampa Bay Rays 98-64 +86 RD @ Milwaukee Brewers 103-59 +214 RD, American Family Field, Jacob Misiorowski G1 starter)."
+    },
+    {
+      "source_id": "nhl-api-20261022",
+      "sport": "ice-hockey",
+      "authority": "National Hockey League (NHL)",
+      "title": "NHL Official Schedule, Standings & Player Leaders (2026-10-22)",
+      "url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "verified_on": "2026-10-22",
+      "data_extracted": "12 Oct 22 NHL games (2026020154-2026020165), 32-club standings (GP, W-L-OTL, GF, GA, L10, streak), and skater/goalie leaders."
+    },
+    {
+      "source_id": "shl-swehockey-20961",
+      "sport": "ice-hockey",
+      "authority": "Svenska Ishockeyförbundet / SHL",
+      "title": "SHL 2026-27 Official Schedule & Standings (Group 20961)",
+      "url": "https://stats.swehockey.se/ScheduleAndResults/Overview/20961",
+      "verified_on": "2026-10-22",
+      "data_extracted": "6 Oct 22 + 7 Oct 24 SHL regular-season games and 14-club 2026-27 table (including promoted IF Björklöven)."
+    },
+    {
+      "source_id": "f1-usgp-2026",
+      "sport": "motor-racing",
+      "authority": "Formula 1 / FIA",
+      "title": "2026 Formula 1 United States Grand Prix & Drivers Standings",
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Oct 23-25 COTA Sprint-weekend timetable and 18-round 2026 WDC standings (Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138)."
+    },
+    {
+      "source_id": "pdc-euro-champ-2026",
+      "sport": "darts",
+      "authority": "Professional Darts Corporation (PDC)",
+      "title": "2026 Machineseeker European Championship Draw & PDC World Rankings",
+      "url": "https://www.pdc.tv/news/2026/10/21/2026-machineseeker-european-championship-preview",
+      "verified_on": "2026-10-22",
+      "data_extracted": "All 16 Round 1 Dortmund ties (Oct 22-23, Best of 11 Legs) including (5) Noppert vs (28) Bunting, plus PDC Werner Ranking Ladder prize money."
+    },
+    {
+      "source_id": "ehfcl-men-2026-27",
+      "sport": "handball",
+      "authority": "European Handball Federation (EHF)",
+      "title": "Machineseeker EHF Champions League Men 2026/27 Matches & Standings",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/",
+      "verified_on": "2026-10-22",
+      "data_extracted": "5 Oct 22 Round 5 matches, 11 Oct 28-29 Round 6 matches, Oct 21 R5 final scores, and Group A-F standings (GP, W-D-L, GF, GA, pts)."
+    },
+    {
+      "source_id": "legavolley-999",
+      "sport": "volleyball",
+      "authority": "Lega Pallavolo Serie A",
+      "title": "SuperLega Credem Banca 2026/27 Calendar & Standings (IdCampionato=999)",
+      "url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "verified_on": "2026-10-22",
+      "data_extracted": "6 Oct 25 Round 2 matches (39525-39530) and Round 1 official results."
+    },
+    {
+      "source_id": "aflw-round11-2026",
+      "sport": "aussie-rules",
+      "authority": "Australian Football League (NAB AFLW)",
+      "title": "2026 NAB AFLW Round 11 Fixtures (8970-8979) & 10-Round Ladder",
+      "url": "https://www.afl.com.au/aflw",
+      "verified_on": "2026-10-22",
+      "data_extracted": "All 9 official AFLW Round 11 fixtures (Oct 23-25) and 18-club ladder (W-L-D, PF, PA, %, premiership points)."
+    },
+    {
+      "source_id": "lolesports-gpr-2026",
+      "sport": "esports",
+      "authority": "Riot Games LoL Esports",
+      "title": "LoL Esports 2026 Worlds Schedule & Official Global Power Rankings",
+      "url": "https://lolesports.com/en-US/gpr/2026/current",
+      "verified_on": "2026-10-22",
+      "data_extracted": "8 Worlds 2026 Swiss Round 1 Bo1 pairings and official Riot GPR ratings for all 16 teams."
+    },
+    {
+      "source_id": "gaa-club-football",
+      "sport": "gaelic-football",
+      "authority": "Gaelic Athletic Association (GAA)",
+      "title": "GAA AIB Provincial & County Senior Club Football Championships",
+      "url": "https://www.gaa.ie/football",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Verified Oct 24-25 Senior Club Football Championship fixtures; no official numeric club rating system published."
+    },
+    {
+      "source_id": "gbgb-romford-champion-stakes",
+      "sport": "greyhounds",
+      "authority": "Greyhound Board of Great Britain (GBGB)",
+      "title": "Category One Glory Beckons in Coral 100 Champion Stakes Final (Romford, Oct 23, 2026)",
+      "url": "https://www.gbgb.org.uk/category-one-glory-beckons-in-coral-100-champion-stakes-final/",
+      "verified_on": "2026-10-22",
+      "data_extracted": "Verified 5-runner Category One 575m final field at Romford (Grouchos Gregor 35.36s, Fortanach Col, Aayamza Legend 35.75s, Don Cici, Bubbly Holly 35.95s; Newinn Jolly withdrawn)."
+    }
+  ]
+}

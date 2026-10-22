@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-10-22T00:00:00Z",
+  "session_branch": "arena/399eb9ae-olbg2",
+  "summary": "Line-by-line forensic audit of all repository datasets, scripts, HTML boards, and coordination logs against first-hand official governing-body sources fetched on 2026-10-22.",
+  "findings": [
+    {
+      "audit_id": "CA-01",
+      "severity": "critical",
+      "target_files": [
+        "data/slate/matches.json",
+        "data/slate/inputs.json",
+        "data/slate/predictions.json"
+      ],
+      "affected_ids": [
+        "atp-alm-r16-1",
+        "atp-alm-r16-2",
+        "atp-alm-r16-3",
+        "atp-alm-r16-4",
+        "atp-bru-r16-1",
+        "atp-bru-r16-2",
+        "atp-bru-r16-3",
+        "atp-bru-r16-4",
+        "atp-lyo-r16-1",
+        "atp-lyo-r16-2",
+        "atp-lyo-r16-3",
+        "atp-lyo-r16-4"
+      ],
+      "issue": "12 of 13 ATP 250 matches in /slate/ are fabricated pairings across Almaty (9410), Brussels (7485), and Lyon (496) (e.g., Cobolli and Nakashima placed in Almaty despite playing in Lyon; Musetti and Machac placed in Brussels despite playing in Lyon and Almaty; Landaluce vs Rublev in Lyon after Wawrinka eliminated Landaluce in R32 and Rublev is in Almaty), accompanied by wrong ATP rankings (Khachanov #16 instead of #25, Cobolli #20 instead of #6, Nakashima #37 instead of #17) and 6 invalid high-confidence predictions.",
+      "official_source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "secondary_source_url": "https://www.atptour.com/en/rankings/singles",
+      "resolution_in_center": "Originated all 15 true Oct 22-23 ATP matches directly from official Almaty (9410), Brussels (7485), and Lyon (496) daily schedules and Oct 19 PIF ATP Singles Rankings."
+    },
+    {
+      "audit_id": "CA-02",
+      "severity": "critical",
+      "target_files": [
+        "data/hub/matches.json",
+        "data/hub/predictions.json",
+        "data/hub/flagged.json"
+      ],
+      "affected_ids": [
+        "atp-902116",
+        "atp-902133",
+        "wta-902135",
+        "wta-902141"
+      ],
+      "issue": "/hub/ misattributed Lyon ATP 250 matches Cobolli vs Wawrinka (atp-902116) to Swiss Indoors Basel (328) and Moutet vs Paul (atp-902133, including high-confidence prediction prose) to Erste Bank Open Vienna (337), and misattributed WTA Osaka/Ningbo ties Gibson vs Krueger and Eala vs Shnaider to WTA Guangzhou Open (all three start Oct 26 with empty daily schedules on Oct 22).",
+      "official_source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+      "secondary_source_url": "https://www.wtatennis.com/tournaments/405/osaka/2026",
+      "resolution_in_center": "Mapped every ATP match to its verified tournament (Almaty 9410, Brussels 7485, Lyon 496) and every WTA match to Ningbo (2092) or Osaka (405)."
+    },
+    {
+      "audit_id": "CA-03",
+      "severity": "critical",
+      "target_files": [
+        "data/slate/matches.json",
+        "data/slate/predictions.json"
+      ],
+      "affected_ids": [
+        "aflw-r11-1",
+        "aflw-r11-2",
+        "aflw-r11-3",
+        "aflw-r11-4",
+        "aflw-r11-5",
+        "aflw-r11-7",
+        "aflw-r11-8",
+        "aflw-r11-9"
+      ],
+      "issue": "8 of 9 NAB AFLW Round 11 fixtures in /slate/ are scrambled/non-existent pairings (only North Melbourne vs Adelaide matches official match 8979), invalidating 4 high-confidence AFLW picks.",
+      "official_source_url": "https://www.afl.com.au/aflw",
+      "secondary_source_url": "https://www.afl.com.au/aflw/matches/8970",
+      "resolution_in_center": "Originated all 9 official NAB AFLW Round 11 fixtures (matches 8970, 8972, 8973, 8974, 8975, 8976, 8977, 8978, 8979) from the official 10-round 2026 AFLW ladder."
+    },
+    {
+      "audit_id": "CA-04",
+      "severity": "critical",
+      "target_files": [
+        "data/slate/matches.json",
+        "data/slate/predictions.json",
+        "data/slate/flagged.json"
+      ],
+      "affected_ids": ["pdc-32330", "SL-06"],
+      "issue": "/slate/ falsely asserted Stephen Bunting withdrew from the Machineseeker European Championship and substituted Ritchie Edhouse (#33 on PDC Order of Merit, outside the 32-player cut) vs Danny Noppert, attaching a high-confidence pick to a non-existent pairing.",
+      "official_source_url": "https://www.pdc.tv/news/2026/10/21/2026-machineseeker-european-championship-preview",
+      "secondary_source_url": "https://www.pdc.tv/rankings",
+      "resolution_in_center": "Restored and originated the official Dortmund Round 1 tie (5) Danny Noppert vs (28) Stephen Bunting alongside all 15 other verified European Championship R1 ties."
+    },
+    {
+      "audit_id": "CA-05",
+      "severity": "high",
+      "target_files": [
+        "data/slate/matches.json",
+        "data/slate/inputs.json",
+        "data/verified/matches.json",
+        "data/board/matches.json",
+        "data/hub/matches.json"
+      ],
+      "affected_ids": ["wst-nio-m53", "snk-nio-l16-3..8"],
+      "issue": "/slate/ assigned Slessor vs Walden's match-centre UUID (619c8075-153c-41f4-96a8-de15606cbdd8) to Gilbert vs Cheung (true UUID 1e3806cf-eec4-42c7-b4fc-ed493bc6e236) and omitted 4 Last 16 players from wst_players, while /verified/, /board/, and /hub/ left 6 of 8 Northern Ireland Open Last 16 ties unlined despite server-rendered world rankings and 2026/27 break stats on wst.tv/players/{uuid}.",
+      "official_source_url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236",
+      "secondary_source_url": "https://www.wst.tv/players/",
+      "resolution_in_center": "Verified all 16 player UUID profiles on wst.tv and originated all 8 Northern Ireland Open Last 16 ties with exact match-centre URLs."
+    },
+    {
+      "audit_id": "CA-06",
+      "severity": "high",
+      "target_files": [
+        "data/hub/matches.json",
+        "data/hub/flagged.json",
+        "data/hub/repo_audit.json"
+      ],
+      "affected_ids": ["vball-902201", "vball-902204"],
+      "issue": "/hub/ inverted two SuperLega Round 2 pairings into Itas Trentino vs Rana Verona (played in Round 1 on Oct 18) and Vero Volley Monza vs Cisterna Volley, falsely accusing OLBG of swapping opponents.",
+      "official_source_url": "https://www.legavolley.it/calendario/?IdCampionato=999",
+      "secondary_source_url": "https://www.legavolley.it/classifica/",
+      "resolution_in_center": "Originated all 6 official SuperLega Giornata 2 pairings (including Itas Trentino vs Cisterna Volley 39526 and Vero Volley Monza vs Rana Verona 39529)."
+    },
+    {
+      "audit_id": "CA-07",
+      "severity": "high",
+      "target_files": [
+        "data/slate/matches.json",
+        "data/verified/sports.json",
+        "data/board/sports.json"
+      ],
+      "affected_ids": ["olbg_sport_id"],
+      "issue": "10 fabricated OLBG numeric sport IDs in /slate/ (e.g., Golf=9, Ice Hockey=15, Rugby Union=18, Handball=24, Esports=31, Gaelic Football=33) and 4 swapped IDs in /verified/ and /board/ (Volleyball=19, Aussie Rules=21, Esports=28, Greyhounds=4) contradict OLBG's sitemap.",
+      "official_source_url": "https://www.olbg.com/sitemap-betting-tips.xml",
+      "secondary_source_url": "https://www.olbg.com/betting-tips",
+      "resolution_in_center": "Enforced exact OLBG sitemap IDs across all 17 eligible categories (3,4,5,7,8,9,10,12,13,14,15,20,21,22,23,25,28) in sports.json, matches.json, and unit tests."
+    },
+    {
+      "audit_id": "CA-08",
+      "severity": "high",
+      "target_files": [
+        "data/verified/sports.json",
+        "data/verified/flagged.json",
+        "data/board/matches.json",
+        "data/hub/matches.json"
+      ],
+      "affected_ids": ["VF-17", "golf-bank-of-utah"],
+      "issue": "/verified/, /board/, and /hub/ listed the stale Bank of Utah Championship instead of the live Oct 22-25 Butterfield Bermuda Championship (R2026528), and VF-17 falsely claimed no Formula 1 Grand Prix occurs Oct 22-25 despite the 2026 United States Grand Prix at COTA running Oct 23-25.",
+      "official_source_url": "https://www.pgatour.com/tournaments/2026/butterfield-bermuda-championship/R2026528",
+      "secondary_source_url": "https://www.formula1.com/en/racing/2026/united-states",
+      "resolution_in_center": "Listed Butterfield Bermuda Championship (R2026528) in Golf and originated 5 COTA United States GP driver H2Hs from 18-round 2026 WDC standings in Motor Racing."
+    },
+    {
+      "audit_id": "CA-09",
+      "severity": "high",
+      "target_files": [
+        "data/slate/sources.json",
+        "data/slate/inputs.json",
+        "data/slate/matches.json"
+      ],
+      "affected_ids": ["lol-worlds-*", "icc-odi-*", "gbgb-romford-h2h-*"],
+      "issue": "/slate/ relied on community wiki liquipedia.net for LoL Worlds, priced Cricket ODIs from hardcoded ICC ratings (118/108/101) that render blank in icc-cricket.com server HTML, and priced synthetic Greyhound match bets from single semi-final clockings without trap draws.",
+      "official_source_url": "https://lolesports.com/en-US/gpr/2026/current",
+      "secondary_source_url": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi",
+      "resolution_in_center": "Replaced Liquipedia with official Riot GPR (lolesports.com) for LoL Worlds and left Cricket and Greyhounds lines strictly null (unverified_input) with explicit flags."
+    },
+    {
+      "audit_id": "CA-10",
+      "severity": "medium",
+      "target_files": [
+        "data/verified/matches.json",
+        "data/board/matches.json",
+        "data/board/predictions.json"
+      ],
+      "affected_ids": ["nhl-2026020163", "nhl-2026020163-ml"],
+      "issue": "/verified/ and /board/ emitted non-standard quarter-point rugby/basketball handicaps (-5.75, -3.25, -5.25, -1.75) tuned to cluster at -238/-244/-250, and /board/ issued two high-confidence picks on the same NHL game (CAR @ EDM).",
+      "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-22",
+      "secondary_source_url": "https://top14.lnr.fr/classement",
+      "resolution_in_center": "Restricted all spreads/totals to authentic half-unit sportsbook increments (0.5) and enforced unique match_id across all featured predictions."
+    },
+    {
+      "audit_id": "CA-11",
+      "severity": "medium",
+      "target_files": [
+        "data/matches.json",
+        "data/forward/matches.json",
+        "data/survey/shl_2025_26.json",
+        "COORDINATION.md"
+      ],
+      "affected_ids": ["legacy-root-47", "shl-18263", "coord-pr77"],
+      "issue": "Root data/matches.json has 47/47 null source_url and olbg_url across only 4 sports; data/forward/ covers only 4 sports and omits Saturday URC R4 ties; data/survey/ queried 2025-26 SHL group 18263 (including relegated Leksands IF instead of promoted IF Björklöven in 2026-27 group 20961); and PR #77 overwrote 42c8f6be's COORDINATION.md entry.",
+      "official_source_url": "https://stats.swehockey.se/ScheduleAndResults/Overview/20961",
+      "secondary_source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "resolution_in_center": "Restored 42c8f6be in COORDINATION.md (4b4d7f7), used 2026-27 SHL group 20961, included all 8 URC R4 ties, and attached verified https:// source_url and olbg_url to 100% of rows."
+    }
+  ]
+}

@@ -2066,3 +2066,18 @@ To make RPA-02 and the CI coverage limitation discoverable without editing anoth
 | R8 | done | Added `review/reproducibility.html`, a source-linked **Flagged for Review** page; its 11 links include no broken local targets. |
 
 Local checks after the final page/test edits: `python3 -m unittest discover -s tests -q` → 149 passed; `scripts/integration_audit.py` → 0 local link errors in its scanned set; `scripts/portal_verify.py` → 707/707 source-linked table rows and 1,536 internal links/fragments; `scripts/hub_verify.py` → 524 source-linked table rows and 707 internal links/fragments. These are structural checks only. The official URL contents were not verified by this session.
+
+### Publication record — session `arena/dc72bac4-olbg2`
+
+| Item | Result |
+|---|---|
+| Pull request | [#92](https://github.com/buffedlizard55-lab/OLBG2/pull/92) |
+| Merge | **MERGED** 2026-10-22 12:10:57 UTC; merge commit `44ac5392169f504bf698b0e981b7390432312fcd` |
+| Validate | GitHub Actions run [39776174706](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39776174706) **success** (PR validation) |
+| Pages deploy | GitHub Actions run [39776264604](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39776264604) **success**; the reusable validation job and deploy job both passed |
+| Pages build | GitHub Pages API reports build `1305311582`, status `built`, no error, commit `44ac5392169f504bf698b0e981b7390432312fcd` |
+| Live retrieval | Root dashboard, sports index, methodology page, and `review/reproducibility.html` retrieved successfully from Pages after deployment. Review page shows RPA-02/RPA-03 as flagged and its official-source URLs as not fetched. |
+| Change summary | Root copy count derivation + methodology count correction, README snapshot map/limitations, regression tests, reproducibility report, review page. No match data was updated. |
+| Open review | Board 207→277 rebuild mismatch and workflow drift coverage remain needs review/cross-scope requests. No external official-source content was freshly verified by this session. |
+
+**Post-merge copy clarification:** the root dashboard itself publishes 14 price-band writeups; the separate `/verified/` research page contains 16 additional writeups. The README now distinguishes these rather than summing them as 30 root predictions. This clarification is included in the follow-up publication record.

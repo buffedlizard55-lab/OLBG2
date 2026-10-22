@@ -3592,3 +3592,19 @@ was inferred to fill a gap.
 1. `index.html` / root navigation: add `/relay/` to the root layer table.
 2. `.github/workflows/pages.yml`: add `python scripts/relay_seed.py && python scripts/relay_model.py && python scripts/relay_prose.py && python scripts/relay_build.py` to the rebuild steps and `relay data/relay` to the drift paths.
 3. `scripts/integration_audit.py`: include `relay` in cross-layer link checking if the folder list is still explicit.
+
+### Session `arena/103d996c-olbg2` — R7 publication ledger (final)
+
+**Status: DONE and LIVE.**
+
+| Item | Value |
+|---|---|
+| PR | [#135](https://github.com/buffedlizard55-lab/OLBG2/pull/135) — merged 2026-10-22T21:25:15Z, merge commit `50baa1f` |
+| CI | `validate` COMPLETED/SUCCESS on the PR head; `Validate Pages content` success and `Deploy Pages` completed/success on `50baa1f` |
+| Live | <https://buffedlizard55-lab.github.io/OLBG2/relay/index.html> fetched after deploy and rendering the published numbers (38 fixtures, 1310 prices, 20 in-band picks, 20 predictions, 6 sports with rows, 17 flags). The remaining 27 pages ship in the same atomic Pages artifact; every local link and anchor was audited by `tests/test_relay_103d996c.py` and by the CI rebuild. The fetch proxy's flakiness (RL-01) prevented a second post-deploy page fetch at close time. |
+| Merge conflict | One, in `COORDINATION.md` when merging `origin/main` (16d1171) into the branch. Resolved per house rule: kept the full main version and appended this session's entries — no other session's text discarded. |
+| Tests on merged tree | 455 OK; `integration_audit.py` 0 local link errors. |
+
+Still open for the final integration session (logged, not actioned): root navigation entry for
+`/relay/`, CI rebuild + drift-path entries for the four `relay_*` scripts, and `relay` in the
+cross-layer link audit if its folder list is still explicit.

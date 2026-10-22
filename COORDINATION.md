@@ -1675,3 +1675,11 @@ Rules for this session: nothing is published unless an official page returned it
 | Merge Commit on `main` | `19548dceecc4d1b95d5213c44ecf04fd4344f28d` (merged `2026-10-22T08:06:54Z`) |
 | Automated Validation | `Validate Pages content` `pass` (run `39744075133`); unified repo test suite green across all merged layers; `0` local link or anchor errors across all `26` `/slate/` HTML pages |
 | Live GitHub Pages Entrypoints | `https://buffedlizard55-lab.github.io/OLBG2/slate/`, `https://buffedlizard55-lab.github.io/OLBG2/slate/matches.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/picks.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/flagged.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/audit.html`, `https://buffedlizard55-lab.github.io/OLBG2/slate/sports/index.html` |
+
+## Session arena/02095e6b-olbg2 — Evidence integrity integration audit
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Cross-layer source-evidence audit and public review dashboard | in progress | arena/02095e6b-olbg2 | scripts/evidence_integrity.py, tests/test_evidence_integrity.py, evidence/**, research/evidence-integrity.md, COORDINATION.md (append only) |
+
+Scope is disjoint from prior layer owners. No inherited source or prediction is newly marked verified. Audit will distinguish linked sources from captured evidence, inspect confidence claims, and publish limitations. Assigned Arena branch is retained per environment constraints. Root navigation changes requested from its owner, not made here.

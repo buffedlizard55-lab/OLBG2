@@ -1442,3 +1442,14 @@ The picks introduction now handles an empty outside-band category without implyi
 | Tests | 63 passing |
 
 **What remains genuinely open** (all published, none hidden): no player-level fact in any write-up (VF-24); rows outside the six re-read source families were not re-checked today (VF-23); 9 of 16 WST players still lack a published prize value so the 8 snooker rows stay blank (VF-03); tennis/Aussie Rules/eSports/Greyhounds have no active fixtures or no capturable feed (VF-09, VF-20, VF-22); PDC ladder and ICC dates remain as captured (VF-16, VF-17, VF-21).
+
+### Follow-up publications (same session)
+
+| PR | Purpose | Merge | Deploy |
+|---|---|---|---|
+| [#64](https://github.com/buffedlizard55-lab/OLBG2/pull/64) | Record the #62 merge, CI and Pages runs, and the final desk state | merged `2f52638` at 03:02:17Z | `Deploy Pages` success, Pages `built` |
+| [#65](https://github.com/buffedlizard55-lab/OLBG2/pull/65) | Replace the empty "re-verified" table on `/verification.html` with the seven official pages actually compared, and fix the stale 21-Oct reference in the competition-scope notice | merged `05b6d1d` | `Validate`, `Deploy Pages` and `pages-build-deployment` all success; Pages `built` |
+
+Live re-check after #65 (cache-busted fetch): `/verification.html` shows "Re-read line by line on 2026-10-22" with the
+NHL / URC / Top 14 / Pro D2 / EuroLeague / EHF rows and their source links, 85 fixture-scoped and 34
+competition-scoped, and links to VF-23. No data, price, probability or prediction changed in #64 or #65.

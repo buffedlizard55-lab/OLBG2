@@ -814,7 +814,7 @@ def main() -> None:
 <div class="kpi-grid">
   <div class="kpi"><div class="kpi-val">{len(eligible)}</div><div class="kpi-label">Eligible OLBG Sports Audited (8 Excluded)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['total_rows']}</div><div class="kpi-label">Verified Match &amp; Market Rows</div></div>
-  <div class="kpi"><div class="kpi-val">{counts['originated_rows']}</div><div class="kpi-label">Independently Originated Lines (9 Sports)</div></div>
+  <div class="kpi"><div class="kpi-val">{counts['originated_rows']}</div><div class="kpi-label">Independently Originated Lines (7 Sports)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['featured']}</div><div class="kpi-label">Bespoke Featured Write-Ups (&ge;30 Words, -250..+10000 US)</div></div>
   <div class="kpi"><div class="kpi-val">{counts['unlined_rows']}</div><div class="kpi-label">Unconfirmed Rows Left Blank &amp; Flagged</div></div>
   <div class="kpi"><div class="kpi-val">{len(audits)}</div><div class="kpi-label">Existing Repo Audit Findings Documented</div></div>

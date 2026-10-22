@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source layers · OLBG2 consolidated desk</title>
+<meta name="description" content="Consolidated OLBG reverse-engineering desk: 312 de-duplicated fixtures across 17 eligible sports, originated lines, strict confidence grades and sourced predictions.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap bar">
+<a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">consolidated desk</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="matches.html">All matches</a><a href="sports/index.html">Sports</a><a href="picks.html">High-confidence picks</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Methodology</a><a href="sources.html">Sources</a><a href="archive.html" aria-current=page>Source layers</a></nav>
+</div></header>
+<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 08:22 UTC</strong> · 312 de-duplicated fixtures · 17 eligible sports · every row carries its official source link · <a href="flagged.html">open review items</a></div></div>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">Provenance</p><h1>Source layers</h1><p class="lede">The consolidated desk is a merge, not a sum. These five layers remain published exactly as their own sessions left them, so every merged value can be traced back. Do not add their counts together: they overlap heavily.</p></section><div class="tablewrap"><table><thead><tr><th>Layer</th><th>Rows</th><th>Lined</th><th>What it contributes</th><th>Link</th></tr></thead><tbody><tr><td><strong>hub</strong></td><td>189</td><td>159</td><td>Primary-source hub, newest capture (15 sports). Its own ≥65% threshold labels more picks high than the strict rule used here.</td><td><a href="../hub/index.html" rel="noopener">open /hub/</a></td></tr><tr><td><strong>slate</strong></td><td>148</td><td>148</td><td>Widest sport list, including Aussie Rules and eSports. Row-level confidence used a price-only band; synthetic book columns are dropped here.</td><td><a href="../slate/index.html" rel="noopener">open /slate/</a></td></tr><tr><td><strong>board</strong></td><td>207</td><td>167</td><td>Forward window rows plus World Series games. Board prices come from the same model family as the verified desk.</td><td><a href="../board/index.html" rel="noopener">open /board/</a></td></tr><tr><td><strong>verified</strong></td><td>118</td><td>94</td><td>The primary-source desk re-read line by line earlier on 22 Oct; the source of most band picks.</td><td><a href="../verified/index.html" rel="noopener">open /verified/</a></td></tr><tr><td><strong>forward</strong></td><td>93</td><td>77</td><td>Forward window 23 Oct–2 Nov across NHL, NBA and MLB.</td><td><a href="../forward/index.html" rel="noopener">open /forward/</a></td></tr></tbody></table></div><h2>Overlap</h2><div class="panel"><p>312 unique fixtures came from 755 layer rows. 208 fixtures appeared in two or more layers; the same fixture can carry different model probabilities because each layer ran its own model on its own capture. The consolidated desk keeps one row per fixture and records the other layers in provenance rather than blending the numbers.</p></div><h2>Root pages</h2><p class="sub">The earlier root dashboard and its evidence pages remain at <a href="../index.html">/index.html</a>, <a href="../verification.html">/verification.html</a>, <a href="../integration.html">/integration.html</a>. They describe the earlier 118-row desk, not this consolidated table.</p>
+</main>
+<footer><div class="wrap">
+Research, not betting advice. 18+. Prices are our own fair (no-vig) model prices, never bookmaker quotes.
+Every inherited value keeps the official URL of the layer that captured it; rows not re-read in this pass are labelled.
+<a href="methodology.html">Methodology</a> · <a href="verification.html">Verification ledger</a> · <a href="flagged.html">Flagged for review</a>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

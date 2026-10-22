@@ -4,8 +4,8 @@
     "total_rows": 119,
     "originated_rows": 93,
     "unlined_rows": 26,
-    "high_confidence": 15,
-    "medium_confidence": 29,
+    "high_confidence": 18,
+    "medium_confidence": 26,
     "low_confidence": 49,
     "featured": 14
   },
@@ -58,6 +58,7 @@
       "official_url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -109,6 +110,7 @@
       "official_url": "https://www.nhl.com/gamecenter/nyr-vs-tor/2026/10/22/2026020155",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -154,12 +156,13 @@
         "probability": 0.5831,
         "fair_odds": 1.72,
         "confidence": "low",
-        "fair_american": -140
+        "fair_american": -141
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -205,12 +208,13 @@
         "probability": 0.5469,
         "fair_odds": 1.83,
         "confidence": "low",
-        "fair_american": -121
+        "fair_american": -120
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/ana-vs-njd/2026/10/22/2026020157",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -256,12 +260,13 @@
         "probability": 0.5632,
         "fair_odds": 1.78,
         "confidence": "low",
-        "fair_american": -129
+        "fair_american": -128
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/fla-vs-pit/2026/10/22/2026020158",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -307,12 +312,13 @@
         "probability": 0.6969,
         "fair_odds": 1.43,
         "confidence": "medium",
-        "fair_american": -230
+        "fair_american": -233
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/lak-vs-nyi/2026/10/22/2026020159",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -358,12 +364,13 @@
         "probability": 0.5797,
         "fair_odds": 1.72,
         "confidence": "low",
-        "fair_american": -138
+        "fair_american": -137
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/vgk-vs-stl/2026/10/22/2026020160",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -409,12 +416,13 @@
         "probability": 0.6204,
         "fair_odds": 1.61,
         "confidence": "medium",
-        "fair_american": -163
+        "fair_american": -164
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/wpg-vs-dal/2026/10/22/2026020161",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -459,19 +467,20 @@
         "team": "Minnesota Wild",
         "probability": 0.7082,
         "fair_odds": 1.41,
-        "confidence": "medium",
-        "fair_american": -243
+        "confidence": "high",
+        "fair_american": -244
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/min-vs-cgy/2026/10/22/2026020162",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Minnesota Wild (Moneyline)",
         "market": "Match Winner",
         "probability": 0.7082,
         "fair_odds": 1.41,
-        "fair_american": -243,
+        "fair_american": -244,
         "confidence": "high"
       },
       "band_pick": {
@@ -480,7 +489,7 @@
         "line": null,
         "probability": 0.7082,
         "fair_odds": 1.41,
-        "fair_american": -243,
+        "fair_american": -244,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -533,12 +542,13 @@
       "official_url": "https://www.nhl.com/gamecenter/car-vs-edm/2026/10/22/2026020163",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Carolina Hurricanes +1.5 (Handicap)",
         "market": "Handicap",
         "probability": 0.7034,
         "fair_odds": 1.42,
-        "fair_american": -237,
+        "fair_american": -238,
         "confidence": "high"
       },
       "band_pick": {
@@ -547,7 +557,7 @@
         "line": 1.5,
         "probability": 0.7034,
         "fair_odds": 1.42,
-        "fair_american": -237,
+        "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -600,6 +610,7 @@
       "official_url": "https://www.nhl.com/gamecenter/uta-vs-sea/2026/10/22/2026020164",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -645,12 +656,13 @@
         "probability": 0.5672,
         "fair_odds": 1.76,
         "confidence": "low",
-        "fair_american": -131
+        "fair_american": -132
       },
       "official_source": "NHL GameCenter & Stats API",
       "official_url": "https://www.nhl.com/gamecenter/det-vs-van/2026/10/22/2026020165",
       "data_url": "https://api.nhle.com/stats/rest/en/team/summary",
       "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -695,6 +707,7 @@
       "official_url": "https://www.nba.com/game/cle-vs-phi-0022600006",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -739,6 +752,7 @@
       "official_url": "https://www.nba.com/game/den-vs-okc-0022600007",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -777,12 +791,13 @@
         "probability": 0.5806,
         "fair_odds": 1.72,
         "confidence": "low",
-        "fair_american": -138
+        "fair_american": -139
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/chi-vs-mil-0022600099",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -821,12 +836,13 @@
         "probability": 0.6042,
         "fair_odds": 1.66,
         "confidence": "medium",
-        "fair_american": -153
+        "fair_american": -152
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/nyk-vs-bos-0022600008",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -865,12 +881,13 @@
         "probability": 0.5479,
         "fair_odds": 1.83,
         "confidence": "low",
-        "fair_american": -121
+        "fair_american": -120
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/atl-vs-cha-0022600094",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -915,6 +932,7 @@
       "official_url": "https://www.nba.com/game/dal-vs-ind-0022600095",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -959,6 +977,7 @@
       "official_url": "https://www.nba.com/game/min-vs-orl-0022600096",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -997,12 +1016,13 @@
         "probability": 0.7495,
         "fair_odds": 1.33,
         "confidence": "medium",
-        "fair_american": -299
+        "fair_american": -303
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/tor-vs-was-0022600097",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1047,6 +1067,7 @@
       "official_url": "https://www.nba.com/game/det-vs-mia-0022600098",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1085,12 +1106,13 @@
         "probability": 0.6853,
         "fair_odds": 1.46,
         "confidence": "medium",
-        "fair_american": -218
+        "fair_american": -217
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/hou-vs-sas-0022600009",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1129,12 +1151,13 @@
         "probability": 0.5196,
         "fair_odds": 1.92,
         "confidence": "low",
-        "fair_american": -108
+        "fair_american": -109
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/nop-vs-uta-0022600100",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1173,12 +1196,13 @@
         "probability": 0.6967,
         "fair_odds": 1.44,
         "confidence": "medium",
-        "fair_american": -230
+        "fair_american": -227
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/mem-vs-gsw-0022600101",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1217,12 +1241,13 @@
         "probability": 0.6837,
         "fair_odds": 1.46,
         "confidence": "medium",
-        "fair_american": -216
+        "fair_american": -217
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/lac-vs-lal-0022600102",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1261,12 +1286,13 @@
         "probability": 0.6552,
         "fair_odds": 1.53,
         "confidence": "medium",
-        "fair_american": -190
+        "fair_american": -189
       },
       "official_source": "NBA Official Game Page",
       "official_url": "https://www.nba.com/game/por-vs-sac-0022600103",
       "data_url": "https://www.nba.com/standings?Season=2025-26",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1312,12 +1338,13 @@
         "probability": 0.5899,
         "fair_odds": 1.7,
         "confidence": "low",
-        "fair_american": -144
+        "fair_american": -143
       },
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/anadolu-efes-istanbul-besiktas-istanbul/E2026/64/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1363,12 +1390,13 @@
         "probability": 0.5678,
         "fair_odds": 1.76,
         "confidence": "low",
-        "fair_american": -131
+        "fair_american": -132
       },
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/fc-bayern-munich-dubai-basketball/E2026/65/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1420,6 +1448,7 @@
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/maccabi-rapyd-tel-aviv-real-madrid/E2026/62/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1465,18 +1494,19 @@
         "probability": 0.8614,
         "fair_odds": 1.16,
         "confidence": "high",
-        "fair_american": -622
+        "fair_american": -625
       },
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/panathinaikos-aktor-athens-kosner-baskonia-vitoria-gasteiz/E2026/67/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Panathinaikos AKTOR Athens -5.75 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.7102,
         "fair_odds": 1.41,
-        "fair_american": -245,
+        "fair_american": -244,
         "confidence": "high"
       },
       "band_pick": {
@@ -1485,7 +1515,7 @@
         "line": -5.75,
         "probability": 0.7102,
         "fair_odds": 1.41,
-        "fair_american": -245,
+        "fair_american": -244,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -1538,6 +1568,7 @@
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/armani-olimpia-milan-fc-barcelona/E2026/63/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1583,12 +1614,13 @@
         "probability": 0.5577,
         "fair_odds": 1.79,
         "confidence": "low",
-        "fair_american": -126
+        "fair_american": -127
       },
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/partizan-mozzart-bet-belgrade-crvena-zvezda-meridianbet-belgrade/E2026/66/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1640,6 +1672,7 @@
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/zalgiris-kaunas-ldlc-asvel-villeurbanne/E2026/68/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1691,6 +1724,7 @@
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/olympiacos-piraeus-fenerbahce-tarfin-istanbul/E2026/70/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1736,12 +1770,13 @@
         "probability": 0.5528,
         "fair_odds": 1.81,
         "confidence": "low",
-        "fair_american": -124
+        "fair_american": -123
       },
       "official_source": "Euroleague Basketball Official",
       "official_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/2026-27/paris-basketball-valencia-basket/E2026/69/",
       "data_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Basketball/19",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1790,18 +1825,19 @@
         "probability": 0.7767,
         "fair_odds": 1.29,
         "confidence": "high",
-        "fair_american": -348
+        "fair_american": -345
       },
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11867-toulouse-perpignan",
       "data_url": "https://top14.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Stade Toulousain -3.25 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.7064,
         "fair_odds": 1.42,
-        "fair_american": -241,
+        "fair_american": -238,
         "confidence": "high"
       },
       "band_pick": {
@@ -1810,7 +1846,7 @@
         "line": -3.25,
         "probability": 0.7064,
         "fair_odds": 1.42,
-        "fair_american": -241,
+        "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -1860,12 +1896,13 @@
         "probability": 0.59,
         "fair_odds": 1.69,
         "confidence": "low",
-        "fair_american": -144
+        "fair_american": -145
       },
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11861-bayonne-lyon",
       "data_url": "https://top14.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1914,12 +1951,13 @@
         "probability": 0.5641,
         "fair_odds": 1.77,
         "confidence": "low",
-        "fair_american": -129
+        "fair_american": -130
       },
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont",
       "data_url": "https://top14.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -1974,6 +2012,7 @@
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11863-castres-paris",
       "data_url": "https://top14.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2022,12 +2061,13 @@
         "probability": 0.5165,
         "fair_odds": 1.94,
         "confidence": "low",
-        "fair_american": -107
+        "fair_american": -106
       },
       "official_source": "LNR Official Top 14",
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11865-racing-92-montpellier",
       "data_url": "https://top14.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2082,6 +2122,7 @@
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau",
       "data_url": "https://top14.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2136,6 +2177,7 @@
       "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles",
       "data_url": "https://top14.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2184,12 +2226,13 @@
         "probability": 0.6499,
         "fair_odds": 1.54,
         "confidence": "medium",
-        "fair_american": -186
+        "fair_american": -185
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12068-montauban-oyonnax",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2238,12 +2281,13 @@
         "probability": 0.6528,
         "fair_odds": 1.53,
         "confidence": "medium",
-        "fair_american": -188
+        "fair_american": -189
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12063-agen-nice",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2292,18 +2336,19 @@
         "probability": 0.8203,
         "fair_odds": 1.22,
         "confidence": "high",
-        "fair_american": -456
+        "fair_american": -455
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12064-provence-rugby-beziers",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Provence Rugby -5.25 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.7053,
         "fair_odds": 1.42,
-        "fair_american": -239,
+        "fair_american": -238,
         "confidence": "high"
       },
       "band_pick": {
@@ -2312,7 +2357,7 @@
         "line": -5.25,
         "probability": 0.7053,
         "fair_odds": 1.42,
-        "fair_american": -239,
+        "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -2362,12 +2407,13 @@
         "probability": 0.6673,
         "fair_odds": 1.5,
         "confidence": "medium",
-        "fair_american": -201
+        "fair_american": -200
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12065-angouleme-dax",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2415,19 +2461,20 @@
         "team": "Stade Aurillacois",
         "probability": 0.7053,
         "fair_odds": 1.42,
-        "confidence": "medium",
-        "fair_american": -239
+        "confidence": "high",
+        "fair_american": -238
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12066-aurillac-nevers",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Stade Aurillacois (1X2 Match Winner)",
         "market": "Match Winner",
         "probability": 0.7053,
         "fair_odds": 1.42,
-        "fair_american": -239,
+        "fair_american": -238,
         "confidence": "high"
       },
       "band_pick": {
@@ -2436,7 +2483,7 @@
         "line": null,
         "probability": 0.7053,
         "fair_odds": 1.42,
-        "fair_american": -239,
+        "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -2486,12 +2533,13 @@
         "probability": 0.591,
         "fair_odds": 1.69,
         "confidence": "low",
-        "fair_american": -144
+        "fair_american": -145
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12069-narbonne-brive",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2546,6 +2594,7 @@
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12070-valence-romans-colomiers",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2594,12 +2643,13 @@
         "probability": 0.638,
         "fair_odds": 1.57,
         "confidence": "medium",
-        "fair_american": -176
+        "fair_american": -175
       },
       "official_source": "LNR Official Pro D2",
       "official_url": "https://prod2.lnr.fr/feuille-de-match/2026-2027/j8/12067-grenoble-biarritz",
       "data_url": "https://prod2.lnr.fr/classement",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2648,12 +2698,13 @@
         "probability": 0.5874,
         "fair_odds": 1.7,
         "confidence": "low",
-        "fair_american": -142
+        "fair_american": -143
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/cardiff-rugby-vs-hollywoodbets-sharks-2026-10-23/292608",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -2701,19 +2752,20 @@
         "team": "Connacht Rugby",
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "confidence": "medium",
-        "fair_american": -236
+        "confidence": "high",
+        "fair_american": -238
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-zebre-parma-2026-10-23/292609",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Connacht Rugby (1X2 Match Winner)",
         "market": "Match Winner",
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "fair_american": -236,
+        "fair_american": -238,
         "confidence": "high"
       },
       "band_pick": {
@@ -2722,7 +2774,7 @@
         "line": null,
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "fair_american": -236,
+        "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -2772,18 +2824,19 @@
         "probability": 0.736,
         "fair_odds": 1.36,
         "confidence": "high",
-        "fair_american": -279
+        "fair_american": -278
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/edinburgh-rugby-vs-10bet-lions-2026-10-23/292610",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Edinburgh Rugby -1.75 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "fair_american": -236,
+        "fair_american": -238,
         "confidence": "high"
       },
       "band_pick": {
@@ -2792,7 +2845,7 @@
         "line": -1.75,
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "fair_american": -236,
+        "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -2842,18 +2895,19 @@
         "probability": 0.789,
         "fair_odds": 1.27,
         "confidence": "high",
-        "fair_american": -374
+        "fair_american": -370
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Vodacom Bulls -3.75 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.7071,
         "fair_odds": 1.41,
-        "fair_american": -241,
+        "fair_american": -244,
         "confidence": "high"
       },
       "band_pick": {
@@ -2862,7 +2916,7 @@
         "line": -3.75,
         "probability": 0.7071,
         "fair_odds": 1.41,
-        "fair_american": -241,
+        "fair_american": -244,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -2912,12 +2966,13 @@
         "probability": 0.7206,
         "fair_odds": 1.39,
         "confidence": "high",
-        "fair_american": -258
+        "fair_american": -256
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "DHL Stormers -0.75 (Alternate Handicap)",
         "market": "Alternate Handicap",
@@ -2988,6 +3043,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3042,6 +3098,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3096,6 +3153,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3150,6 +3208,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/connacht-rugby-vs-leinster-rugby-2026-10-30/292616",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3204,6 +3263,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/glasgow-warriors-vs-10bet-lions-2026-10-30/292617",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Glasgow Warriors -1.25 (Alternate Handicap)",
         "market": "Alternate Handicap",
@@ -3268,12 +3328,13 @@
         "probability": 0.6933,
         "fair_odds": 1.44,
         "confidence": "medium",
-        "fair_american": -226
+        "fair_american": -227
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-ulster-rugby-2026-10-31/292618",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3322,18 +3383,19 @@
         "probability": 0.8112,
         "fair_odds": 1.23,
         "confidence": "high",
-        "fair_american": -430
+        "fair_american": -435
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-scarlets-2026-10-31/292619",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Vodacom Bulls -4.75 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.7071,
         "fair_odds": 1.41,
-        "fair_american": -241,
+        "fair_american": -244,
         "confidence": "high"
       },
       "band_pick": {
@@ -3342,7 +3404,7 @@
         "line": -4.75,
         "probability": 0.7071,
         "fair_odds": 1.41,
-        "fair_american": -241,
+        "fair_american": -244,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -3398,6 +3460,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-edinburgh-rugby-2026-10-31/292620",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3452,6 +3515,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/munster-rugby-vs-hollywoodbets-sharks-2026-10-31/292621",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3500,18 +3564,19 @@
         "probability": 0.7734,
         "fair_odds": 1.29,
         "confidence": "high",
-        "fair_american": -341
+        "fair_american": -345
       },
       "official_source": "URC Official Match Centre",
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dragons-rfc-vs-zebre-parma-2026-10-31/292622",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Dragons RFC -3.25 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "fair_american": -236,
+        "fair_american": -238,
         "confidence": "high"
       },
       "band_pick": {
@@ -3520,7 +3585,7 @@
         "line": -3.25,
         "probability": 0.7025,
         "fair_odds": 1.42,
-        "fair_american": -236,
+        "fair_american": -238,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -3576,6 +3641,7 @@
       "official_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-cardiff-rugby-2026-10-31/292623",
       "data_url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3629,6 +3695,7 @@
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101043/OTPBankPICKSzeged-GOG/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3682,6 +3749,7 @@
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101019/MTMelsungen-OrlenWislaPlock/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3729,18 +3797,19 @@
         "probability": 0.8233,
         "fair_odds": 1.21,
         "confidence": "high",
-        "fair_american": -466
+        "fair_american": -476
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101049/Bar%C3%A7a-MontpellierHandball/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
       "featured": {
         "selection": "Barça -3.5 (Alternate Handicap)",
         "market": "Alternate Handicap",
         "probability": 0.707,
         "fair_odds": 1.41,
-        "fair_american": -241,
+        "fair_american": -244,
         "confidence": "high"
       },
       "band_pick": {
@@ -3749,7 +3818,7 @@
         "line": -3.5,
         "probability": 0.707,
         "fair_odds": 1.41,
-        "fair_american": -241,
+        "fair_american": -244,
         "confidence": "high",
         "price_band": "in-band"
       }
@@ -3798,12 +3867,13 @@
         "probability": 0.8893,
         "fair_odds": 1.12,
         "confidence": "high",
-        "fair_american": -803
+        "fair_american": -833
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101041/SportingClubedePortugal-IFKKristianstad/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3851,12 +3921,13 @@
         "probability": 0.8118,
         "fair_odds": 1.23,
         "confidence": "high",
-        "fair_american": -431
+        "fair_american": -435
       },
       "official_source": "EHF Official Match Details",
       "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101064/KolstadH%C3%A5ndball-SCMagdeburg/",
       "data_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
       "olbg_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -3908,6 +3979,7 @@
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Woodhouse_vs_Dirk_van_Duijvenbode/15?event_id=32324",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -3959,6 +4031,7 @@
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Danny_Noppert_vs_Stephen_Bunting/15?event_id=32330",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4010,6 +4083,7 @@
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Niels_Zonneveld_vs_Cameron_Menzies/15?event_id=32334",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4055,12 +4129,13 @@
         "probability": 0.6081,
         "fair_odds": 1.64,
         "confidence": "medium",
-        "fair_american": -155
+        "fair_american": -156
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Rob_Cross/15?event_id=32325",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4112,6 +4187,7 @@
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/James_Wade_vs_Damon_Heta/15?event_id=32322",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4157,12 +4233,13 @@
         "probability": 0.6022,
         "fair_odds": 1.66,
         "confidence": "medium",
-        "fair_american": -151
+        "fair_american": -152
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Humphries_vs_Ryan_Searle/15?event_id=32337",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4208,12 +4285,13 @@
         "probability": 0.668,
         "fair_odds": 1.5,
         "confidence": "medium",
-        "fair_american": -201
+        "fair_american": -200
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Andrew_Gilding/15?event_id=32323",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4259,12 +4337,13 @@
         "probability": 0.6818,
         "fair_odds": 1.47,
         "confidence": "medium",
-        "fair_american": -214
+        "fair_american": -213
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Karel_Sedlacek/15?event_id=32329",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4310,12 +4389,13 @@
         "probability": 0.5538,
         "fair_odds": 1.81,
         "confidence": "low",
-        "fair_american": -124
+        "fair_american": -123
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15?event_id=32332",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4361,12 +4441,13 @@
         "probability": 0.572,
         "fair_odds": 1.75,
         "confidence": "low",
-        "fair_american": -134
+        "fair_american": -133
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Dave_Chisnall/15?event_id=32333",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4412,12 +4493,13 @@
         "probability": 0.7683,
         "fair_odds": 1.3,
         "confidence": "high",
-        "fair_american": -332
+        "fair_american": -333
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4463,12 +4545,13 @@
         "probability": 0.6697,
         "fair_odds": 1.49,
         "confidence": "medium",
-        "fair_american": -203
+        "fair_american": -204
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4514,12 +4597,13 @@
         "probability": 0.837,
         "fair_odds": 1.19,
         "confidence": "high",
-        "fair_american": -513
+        "fair_american": -526
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4565,12 +4649,13 @@
         "probability": 0.5628,
         "fair_odds": 1.78,
         "confidence": "low",
-        "fair_american": -129
+        "fair_american": -128
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Wessel_Nijman_vs_Martin_Schindler/15?event_id=32326",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4616,12 +4701,13 @@
         "probability": 0.5724,
         "fair_odds": 1.75,
         "confidence": "low",
-        "fair_american": -134
+        "fair_american": -133
       },
       "official_source": "PDC Official Rankings",
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4673,6 +4759,7 @@
       "official_url": "https://www.pdc.tv/rankings",
       "data_url": "https://www.pdc.tv/rankings",
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4718,12 +4805,13 @@
         "probability": 0.6232,
         "fair_odds": 1.6,
         "confidence": "medium",
-        "fair_american": -165
+        "fair_american": -167
       },
       "official_source": "MLB Stats API Official",
       "official_url": "https://www.mlb.com/gameday/849805",
       "data_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
       "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -4769,12 +4857,13 @@
         "probability": 0.6232,
         "fair_odds": 1.6,
         "confidence": "medium",
-        "fair_american": -165
+        "fair_american": -167
       },
       "official_source": "MLB Stats API Official",
       "official_url": "https://www.mlb.com/gameday/849802",
       "data_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
       "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -4820,12 +4909,13 @@
         "probability": 0.5763,
         "fair_odds": 1.74,
         "confidence": "low",
-        "fair_american": -136
+        "fair_american": -135
       },
       "official_source": "MLB Stats API Official",
       "official_url": "https://www.mlb.com/gameday/849804",
       "data_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
       "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -4871,12 +4961,13 @@
         "probability": 0.5763,
         "fair_odds": 1.74,
         "confidence": "low",
-        "fair_american": -136
+        "fair_american": -135
       },
       "official_source": "MLB Stats API Official",
       "official_url": "https://www.mlb.com/gameday/849803",
       "data_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
       "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "source_scope": "fixture",
       "featured": null,
       "band_pick": null
     },
@@ -4921,6 +5012,7 @@
       "official_url": "https://www.formula1.com/en/results/2026/drivers",
       "data_url": "https://www.formula1.com/en/results/2026/drivers",
       "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4959,12 +5051,13 @@
         "probability": 0.9867,
         "fair_odds": 1.02,
         "confidence": "high",
-        "fair_american": -7419
+        "fair_american": -5000
       },
       "official_source": "Formula 1 Official Standings",
       "official_url": "https://www.formula1.com/en/results/2026/drivers",
       "data_url": "https://www.formula1.com/en/results/2026/drivers",
       "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "source_scope": "competition",
       "featured": null,
       "band_pick": null
     },
@@ -4990,6 +5083,7 @@
       "blank_reason": "Kyren Wilson's official WST ranking prize value is outside this desk's captured Top-36 excerpt, and the official pages read do not state the Round 3 frame format; left blank rather than inferred.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/0444240f-c8b2-4382-ba57-bfab6d98f3a7",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5015,6 +5109,7 @@
       "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/48c22dd7-97a3-48c3-ab9a-02f81c99d40c",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5040,6 +5135,7 @@
       "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/a93c8f6b-ce8e-4ad0-87ad-de4a03594ee5",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5065,6 +5161,7 @@
       "blank_reason": "Ricky Walden's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/619c8075-153c-41f4-96a8-de15606cbdd8",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5090,6 +5187,7 @@
       "blank_reason": "Cheung Ka Wai's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/1e3806cf-eec4-42c7-b4fc-ed493bc6e236",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5115,6 +5213,7 @@
       "blank_reason": "Martin O'Donnell's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/eeff6e2d-f800-4831-a326-29a0e9e3cf6f",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5140,6 +5239,7 @@
       "blank_reason": "Daniel Wells's prize value is outside this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/ac39f86f-13b2-4688-9041-75fe72943900",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5165,6 +5265,7 @@
       "blank_reason": "Neither player's prize value is in this desk's captured WST Top-36 excerpt; Round 3 frame format not stated on the official pages read.",
       "official_source": "WST Match Centre",
       "official_url": "https://www.wst.tv/match-centre/a9ceb4e5-ac12-4aea-94cb-c85b70fbe8ea",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
     },
@@ -5190,6 +5291,7 @@
       "blank_reason": "Full bracket path across 5 rounds depends on exact draw-half seeding verification; match-by-match R1 lines originated above.",
       "official_source": "PDC Rankings",
       "official_url": "https://www.pdc.tv/rankings",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338"
     },
@@ -5215,6 +5317,7 @@
       "blank_reason": "Qualifying field not yet finalised in October 2026; left unlined.",
       "official_source": "PDC Rankings",
       "official_url": "https://www.pdc.tv/rankings",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/PDC_World_Championship_2027/15?event_id=26023"
     },
@@ -5240,6 +5343,7 @@
       "blank_reason": "Next-season championship market prior to 2027 car testing; left blank rather than speculated.",
       "official_source": "Formula 1 Official",
       "official_url": "https://www.formula1.com/en/results/2026/drivers",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"
     },
@@ -5265,6 +5369,7 @@
       "blank_reason": "Opening-round M=1 sample size insufficient for reliable independent line origination.",
       "official_source": "PlusLiga Schedule",
       "official_url": "https://www.plusliga.pl/games.html",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
     },
@@ -5290,6 +5395,7 @@
       "blank_reason": "Opening-round M=1 sample size insufficient for reliable independent line origination.",
       "official_source": "PlusLiga Schedule",
       "official_url": "https://www.plusliga.pl/games.html",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
     },
@@ -5315,6 +5421,7 @@
       "blank_reason": "Opening-round M=1 sample size insufficient for reliable independent line origination.",
       "official_source": "PlusLiga Schedule",
       "official_url": "https://www.plusliga.pl/games.html",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
     },
@@ -5340,6 +5447,7 @@
       "blank_reason": "ICC T20I team-rankings table renders client-side; prices left blank rather than copied from secondary sites.",
       "official_source": "ICC Match Centre",
       "official_url": "https://www.icc-cricket.com/matches/271646/new-zealand-vs-india",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"
     },
@@ -5365,6 +5473,7 @@
       "blank_reason": "ICC Test rankings table renders client-side; prices left blank.",
       "official_source": "ICC Match Centre",
       "official_url": "https://www.icc-cricket.com/matches/269791/south-africa-vs-australia",
+      "source_scope": "fixture",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"
     },
@@ -5390,6 +5499,7 @@
       "blank_reason": "Full 132-golfer strokes-gained distribution not published in static HTML; left unlined.",
       "official_source": "PGA Tour Schedule",
       "official_url": "https://www.pgatour.com/schedule",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Golf/4"
     },
@@ -5415,6 +5525,7 @@
       "blank_reason": "Full field strokes-gained feed not published in static HTML; left unlined.",
       "official_source": "DP World Tour Schedule",
       "official_url": "https://www.europeantour.com/dpworld-tour/schedule/",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Golf/4"
     },
@@ -5440,6 +5551,7 @@
       "blank_reason": "Off-season 2027 outright market prior to final squad registrations; left unlined.",
       "official_source": "NRL Official Draw",
       "official_url": "https://www.nrl.com/draw/",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
     },
@@ -5465,6 +5577,7 @@
       "blank_reason": "Off-season 2027 outright market prior to pre-season; left unlined.",
       "official_source": "Super League Official",
       "official_url": "https://www.superleague.co.uk/match-centre",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
     },
@@ -5490,6 +5603,7 @@
       "blank_reason": "2027 representative squads selected next May; left unlined.",
       "official_source": "NRL Official",
       "official_url": "https://www.nrl.com/draw/",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
     },
@@ -5515,6 +5629,7 @@
       "blank_reason": "County board club championship scoring tables not available in a unified official feed.",
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
     },
@@ -5540,6 +5655,7 @@
       "blank_reason": "County board club championship scoring tables not available in a unified official feed.",
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
     },
@@ -5565,6 +5681,7 @@
       "blank_reason": "OLBG abbreviates club name as 'Eire Og Cor'; county club scoring feed unavailable.",
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
     },
@@ -5590,6 +5707,7 @@
       "blank_reason": "County board club championship scoring tables not available in a unified official feed.",
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
     },
@@ -5615,6 +5733,7 @@
       "blank_reason": "2027 inter-county season not started; left unlined.",
       "official_source": "GAA Official",
       "official_url": "https://www.gaa.ie/football",
+      "source_scope": "competition",
       "data_url": null,
       "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
     }

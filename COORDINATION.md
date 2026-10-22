@@ -1319,6 +1319,7 @@ PR #50 merge errored; the new `Deploy Pages` workflow now publishes every push t
 
 **Residual nit (left for next session):** root `picks.html` intro reads "A further 0 high-confidence picks…" — factual but clumsy template output from `build_site.py` when every write-up is in-band.
 
+
 ## Session `arena/53b0cd38-olbg2` — 2026-10-22
 
 | Task | Status | Owner | Scope |
@@ -1334,6 +1335,7 @@ The picks introduction now handles an empty outside-band category without implyi
 ### Publication record — 2026-10-22
 
 [PR #59](https://github.com/buffedlizard55-lab/OLBG2/pull/59) merged into `main` as `3a48e3d`; PR validation passed. [Deploy Pages run 39713298932](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713298932) succeeded for that commit. Site: https://buffedlizard55-lab.github.io/OLBG2/picks.html . This records deployment status from GitHub Actions, not an independent browser fetch of the live URL.
+
 
 ### Publication record — PR #60
 
@@ -1375,3 +1377,41 @@ The picks introduction now handles an empty outside-band category without implyi
 **Irregularities disclosed, not fixed silently:** 22 verified flags VF-01…VF-22 remain open (competition-scoped URLs VF-11, small-sample handball, client-rendered PDC/ICC, one-game stale FLA/OTT VF-19, etc.). No row was inferred to close a flag.
 
 **Merge resolution (2026-10-22 03:15Z):** `origin/main` advanced to `f503c50` (PRs #59/#60) while this branch was verifying. Both sessions fixed the same picks-intro nit with slightly different wording; this merge takes the `main` version (identical logic) and preserves both COORDINATION ledgers. `scripts/build_site.py` and `picks.html` are now byte-identical to `origin/main`; only `COORDINATION.md` and new research docs differ. No data file changed.
+
+---
+
+## Session `arena/072755db-olbg2` — line-by-line verification, coverage completion, final integration (2026-10-22 02:50 UTC)
+
+**Session ID:** `arena/072755db-olbg2` · **Branch:** `arena/072755db-olbg2` · **Claimed:** 2026-10-22 02:50 UTC (committed and pushed before any implementation edit)
+
+**Concurrent-session check at claim time.** `origin/main` = `c523300` (PR #58). Two PRs are open and were **not** created by this session: **#59** (`arena/53b0cd38-olbg2`, created 02:46Z, three files: `COORDINATION.md`, `picks.html`, `scripts/build_site.py`) and **#54** (`arena/1bb45081-olbg2`, created 01:58Z, 79 files, odds-window gate; no commits in the 52 minutes since). This session does **not** take over #59 or #54, does not merge them, and does not revert their intent. #59 is active and is left alone. #54 is recorded below as a stale parallel claim.
+
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|---|---|---|---|
+| V1 | Claim, baseline build + test run | done — baseline 61 tests green, generators byte-stable | `arena/072755db-olbg2` | `COORDINATION.md` |
+| V2 | Independent line-by-line verification of the published rows and the 14 featured predictions' factual claims, re-fetched from the governing body in this session | done — 6 source families re-read (NHL, URC, Top 14, Pro D2, EuroLeague, EHF); every compared figure matched except one corrected form sentence; the rows NOT re-read are listed in VF-23 | `arena/072755db-olbg2` | `research/verification-072755db.md` |
+| V3 | Repair the defects the verification found, and close only the gaps an official source supports | done — Béziers form corrected, confidence grading unified, price rounding fixed, `source_scope` emitted, capture badges corrected. **Not done:** no new fixtures were added; tennis, Aussie Rules, eSports and Greyhounds still carry zero rows, and 9 of 16 WST players still lack a published prize value, so the 8 snooker rows stay blank (VF-03). | `arena/072755db-olbg2` | `scripts/verified_seed.py`, `scripts/verified_model.py`, `scripts/build_site.py`, `data/verified/**`, `tests/test_verified_pipeline.py` |
+| V4 | Publish verification results on the site (flagged/verification pages) and re-run every generator | done — VF-23…VF-26 published, 26 review items, 85 fixture-scoped / 34 competition-scoped URLs, `captured 22 Oct` badges, 63 tests green, 0 link errors | `arena/072755db-olbg2` | `scripts/build_site.py`, root pages, `verified/**` |
+| V5 | Final integration: PR → merge → Pages deploy confirmation → record here | pending | `arena/072755db-olbg2` | shared outputs |
+
+**File-scope overlap disclosure.** V3 necessarily touches `data/verified/**` and `scripts/verified_model.py`, which are also in stale PR #54's diff. #54's task (regrading confidence labels under the odds window) is **not** re-claimed here; this session only adds/repairs fixture, line and narrative coverage. If #54 is ever merged it must be rebased over this branch's data.
+
+**Rules applied.** A value is published only if an official source returned it during this session; otherwise it stays blank and is flagged. No bookmaker price is read. Prices remain our own fair-model prices. Every row keeps an official URL; every claim in a written prediction keeps its source.
+
+### Verification findings (detail in `research/verification-072755db.md`)
+
+| # | Finding | Action |
+|---|---|---|
+| 1 | Béziers' form was described as "dropped four of their last five"; LNR shows V-D-V-D-D (three defeats) | Corrected the sentence (VF-25) |
+| 2 | Minnesota (70.82%), Aurillac (70.53%) and Connacht (70.25%) were HIGH on the picks page but MEDIUM in their own match row | Model now applies the published "or band pick ≥70%" clause; high 15 → 18 (VF-26) |
+| 3 | `fair_american()` and `fair_decimal()` were derived independently, so three rows quoted two prices for one selection | American now derives from the published decimal; test asserts it |
+| 4 | The dashboard printed "0 of 119 rows cite a fixture page" because `source_scope` was never emitted | Field derived from each URL; 85 fixture / 34 competition |
+| 5 | Every row was badged "captured 21 Oct" while the dataset is a 2026-10-22 capture | Badge now reads `captured_at` from the data |
+| 6 | README and METHODOLOGY still described the 155-row snapshot and claimed named-player facts that no write-up contains | Both corrected; the player gap is now VF-24, not an untrue claim |
+
+### Concurrent-session note (added at merge time)
+
+`main` advanced while this branch was open: PR #59 → merged as PR #60 (`f503c50`, picks-intro copy) and merged into this branch with the `COORDINATION.md` conflict resolved by keeping **both** session records. Two PRs remain open and are **not** merged here:
+
+- **#61** (`arena/9a2928c8-olbg2`, opened 02:51Z, one minute after this claim, "Final line-by-line verification, price-band polish & OLBG re-audit"). Overlapping scope. This session did not take it over and did not revert it; if it merges it must be rebased over this branch's `data/verified/**` and `scripts/build_site.py`, and its rows must be re-verified against the corrected figures above.
+- **#54** (`arena/1bb45081-olbg2`, 01:58Z, no commits since). Stale parallel claim, left untouched.

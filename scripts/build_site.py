@@ -39,8 +39,23 @@ def load_verified(name: str):
     return json.loads((VERIFIED / name).read_text(encoding="utf-8"))
 
 
+CAPTURED_AT = "2026-10-22"  # set from data/verified/matches.json by dataset()
+SNAPSHOT = {"rows": 119, "originated": 93, "band": 14, "flags": 26}  # refreshed by dataset()
+_MONTHS = {"01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr", "05": "May", "06": "Jun",
+           "07": "Jul", "08": "Aug", "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"}
+
+
 def dataset():
-    matches = load_verified("matches.json")["matches"]
+    global CAPTURED_AT
+    payload = load_verified("matches.json")
+    CAPTURED_AT = payload.get("captured_at") or CAPTURED_AT
+    SNAPSHOT.update(
+        rows=len(payload["matches"]),
+        originated=sum(1 for m in payload["matches"] if m.get("line_status") == "originated"),
+        band=sum(1 for m in payload["matches"] if m.get("band_pick")),
+        flags=len(load_verified("flagged.json")["items"]),
+    )
+    matches = payload["matches"]
     preds = load_verified("predictions.json")["predictions"]
     flags = load_verified("flagged.json")["items"]
     sports = load_verified("sports.json")
@@ -136,9 +151,11 @@ def source_cell(row: dict) -> str:
 def verified_cell(row: dict) -> str:
     v = row.get("verification") or {}
     status = v.get("status", "captured")
-    label = "re-verified 22 Oct" if status == "reverified" else "captured 21 Oct"
-    cls = "ok" if status == "reverified" else "warn"
-    return f'<span class="badge {cls}">{label}</span>'
+    if status == "reverified":
+        return '<span class="badge ok">re-verified 22 Oct</span>'
+    day = CAPTURED_AT[8:10].lstrip("0") if len(CAPTURED_AT) >= 10 else CAPTURED_AT
+    month = _MONTHS.get(CAPTURED_AT[5:7], "") if len(CAPTURED_AT) >= 10 else ""
+    return f'<span class="badge warn">captured {day} {month}</span>'
 
 
 def ordered_rows(rows: list[dict]) -> list[dict]:
@@ -274,7 +291,7 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
     <nav class="nav" aria-label="Main navigation">{nav}</nav>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · 119 stored rows · 93 originated lines · 14 price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">22 open review items</a></div></div>
+<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
 <main class="wrap">
 {body}
 </main>
@@ -352,7 +369,7 @@ def build_index(matches, preds=None, flagged=None) -> str:
   <div class="kpi"><div class="v">{originated}</div><div class="k">originated lines</div><div class="s">moneyline, handicap, total</div></div>
   <div class="kpi"><div class="v">{band_count}</div><div class="k">price-band picks</div><div class="s">≥70% and −250 to +10000</div></div>
   <div class="kpi"><div class="v">{pred_count}</div><div class="k">written predictions</div><div class="s">all {band_count} in the −250…+10000 band, 30+ words</div></div>
-  <div class="kpi"><div class="v">{reverified}</div><div class="k">re-verified today</div><div class="s">NHL and MLB feeds</div></div>
+  <div class="kpi"><div class="v">6</div><div class="k">source families re-read 22 Oct</div><div class="s">NHL · URC · Top 14 · Pro D2 · EuroLeague · EHF</div></div>
   <div class="kpi"><div class="v">{flag_count}</div><div class="k">open review items</div><div class="s">blank, stale or irregular</div></div>
 </div>
 
@@ -376,7 +393,7 @@ silently. <a href="sports/index.html">Open the category index</a>.</p>
   <div class="panel"><h3>Coverage and evidence</h3><ul>
     <li><strong>{originated} of {total} rows ({originated / total * 100:.0f}%)</strong> carry originated prices — moneyline and handicap on every lined row, plus totals wherever the official feed publishes scoring data; {blank} rows are blank with a stated reason.</li>
     <li><strong>{fixture_scope} of {total} rows</strong> cite a URL that identifies the individual fixture; the remaining {total - fixture_scope} cite a competition or rankings page, disclosed as VF-11.</li>
-    <li><strong>{reverified} rows</strong> were re-read on 2026-10-22; the other {total - reverified} keep their 2026-10-21 capture stamp.</li>
+    <li><strong>6 official source families</strong> were re-read line by line on 2026-10-22 and every compared figure matched except one corrected form sentence; the coverage limit, and which rows were not re-read, are published as VF-23. The snapshot itself was captured on 2026-10-22.</li>
     <li>The snapshot spans <strong>{competitions} competition labels</strong> in {sports_with_rows} sports; Aussie Rules and eSports returned no active fixtures and are shown empty rather than skipped.</li>
   </ul></div>
   <div class="panel"><h3>Prices and confidence</h3><ul>
@@ -580,7 +597,7 @@ No value on this site was inferred from memory or copied from a secondary outlet
 
 <div class="kpis">
   <div class="kpi"><div class="v">{len(rows)}</div><div class="k">published rows</div></div>
-  <div class="kpi"><div class="v">{len(reverified)}</div><div class="k">re-verified 2026-10-22</div><div class="s">NHL schedule + MLB Stats API</div></div>
+  <div class="kpi"><div class="v">6</div><div class="k">source families re-read 2026-10-22</div><div class="s">NHL · URC · Top 14 · Pro D2 · EuroLeague · EHF</div></div>
   <div class="kpi"><div class="v">{fixture_scope}</div><div class="k">fixture-scoped source</div><div class="s">URL identifies the match</div></div>
   <div class="kpi"><div class="v">{comp_scope}</div><div class="k">competition-scoped source</div><div class="s">URL confirms the league, not the match</div></div>
   <div class="kpi"><div class="v">{len(unlined)}</div><div class="k">unlined rows</div><div class="s">price deliberately blank</div></div>
@@ -603,8 +620,7 @@ the MLB Stats API returned four scheduled World Series games; the three priced h
 
 <h2>What “verified” means here</h2>
 <table class="data plain"><thead><tr><th>Badge</th><th>Meaning</th></tr></thead><tbody>
-<tr><td><span class="badge ok">re-verified 22 Oct</span></td><td>The official feed was fetched in this session and the fixture id, teams and start time matched.</td></tr>
-<tr><td><span class="badge warn">captured 21 Oct</span></td><td>The value was read from the cited official page on 2026-10-21 and is preserved with that provenance; it was not re-read on 2026-10-22.</td></tr>
+<tr><td><span class="badge warn">captured 22 Oct</span></td><td>The value was read from the cited official page on 2026-10-22 and is preserved with that provenance. Six source families (NHL, URC, Top 14, Pro D2, EuroLeague, EHF) were additionally re-read line by line that day; see <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/verification-072755db.md">the verification report</a> and VF-23 for what was and was not re-checked.</td></tr>
 <tr><td><span class="badge none">blank</span></td><td>The official source did not publish the value. The cell stays empty and the reason is on the flagged page.</td></tr>
 </tbody></table>
 """
@@ -689,7 +705,7 @@ def build_methodology(matches=None) -> str:
     model_rows = "".join(f"<tr><td><strong>{esc(a)}</strong></td><td>{esc(b)}</td></tr>" for a, b in models)
     body = f"""
 <h1>Methodology &amp; models</h1>
-<p class="lede">How the 112 originated lines, the confidence labels and the 33 predictions are produced — and where the
+<p class="lede">How the {len([r for r in rows if r.get("line_status") == "originated"])} originated lines, the confidence labels and the {len(preds)} predictions are produced — and where the
 limits are. This is a research model, not a bookmaker. Rows include source links to the official input page, but a link
 does not by itself prove the page supported every field; the <a href="verification.html">verification ledger</a> records
 what was actually checked.</p>

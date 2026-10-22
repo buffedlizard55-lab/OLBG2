@@ -14,14 +14,14 @@ advice, and not a complete snapshot of world sport: it is a dated capture with i
 ## What the root site is
 
 The dashboard at the repository root is the unified, deduplicated view over the multi-sport desk in
-[`verified/`](verified/index.html). It carries **155 fixtures across 15 of the 17 eligible sports**, each row with
+[`verified/`](verified/index.html). It carries **119 fixtures across 13 of the 17 eligible sports**, each row with
 its official source link, a verification badge, and — where the model could be supported — moneyline, handicap and
-total prices. 112 rows are fully originated; 43 are blank with a written reason.
+total prices. 93 rows are fully originated; 26 are blank with a written reason, and two eligible sports (Aussie Rules, eSports) have no active fixtures in this window.
 
 | Layer | Entry point | Snapshot contents (not an external verification claim) |
 |---|---|---|
-| **Unified dashboard** | [`index.html`](index.html) | 155 fixtures, 15 sports, 112 originated rows, 13 price-band picks, 33 written predictions, 18 open review items. Built by `scripts/build_site.py` from `data/verified/**`. |
-| **Verified multi-sport desk** | [`verified/index.html`](verified/index.html) | The same 155 rows in their original layout, plus audit and methodology pages. Built by `scripts/verified_seed.py` → `verified_model.py` → `verified_build.py`. |
+| **Unified dashboard** | [`index.html`](index.html) | 119 fixtures, 13 sports with rows, 93 originated rows, 14 price-band picks, 14 written predictions, 26 review items. Built by `scripts/build_site.py` from `data/verified/**`. |
+| **Verified multi-sport desk** | [`verified/index.html`](verified/index.html) | The same 119 rows in their original layout, plus audit and methodology pages. Built by `scripts/verified_seed.py` → `verified_model.py` → `verified_build.py`. |
 | **Root-layer archive** | [`archive.html`](archive.html) | The earlier 47-row root capture, preserved with its own source links. Superseded for NHL, NBA, URC, cricket and handball, but not deleted. |
 | **Evidence desk v2** | [`site/index.html`](site/index.html) | Independent NHL/NBA layer with 25 stored fixture rows and 64 market records. Built by `scripts/engine.py` and `scripts/build.py`. |
 | **Sport survey** | [`survey/index.html`](survey/index.html) | 130 OLBG-discovered inventory entries across its 15-sport taxonomy; 11 originated lines, 2 predictions. Inventory rows are not all fixture-verified. |
@@ -43,25 +43,31 @@ question. It is recorded as an interpretation flag rather than resolved by assum
 ## Verification, blanks and freshness
 
 - Every published row carries a link to an official governing-body, league or tour page.
-- 92 of the 155 rows cite a URL that identifies the individual fixture; the other 63 cite a competition or
+- 85 of the 119 rows cite a URL that identifies the individual fixture; the other 34 cite a competition or
   rankings page. That difference is shown on every table and disclosed as **VF-11** on the flagged page.
 - Where an official input was missing (client-rendered rankings, one-match samples, unconfirmed venues, 2027
   futures without rosters), the value is **blank** and the reason is published. Nothing was inferred.
-- 15 rows (12 NHL fixtures, 3 MLB World Series games) were re-read on **2026-10-22**; the other 140 retain their
-  **2026-10-21** capture stamp. The snapshot is dated, not continuously refreshed.
-- 59 rows are dated 2026-10-21 and are labelled **past** everywhere; they stay visible for audit and are never
-  presented as upcoming tips.
+- On **2026-10-22** a separate verification pass re-fetched the official tables behind the NHL, URC, Top 14,
+  Pro D2, EuroLeague and EHF rows and compared them line by line; all matched except one Pro D2 form sentence,
+  which was corrected (VF-25). That pass covered 6 source families, not all 119 rows; the coverage limit and the
+  rows that were **not** re-read are published as **VF-23** (see [verification.html](verification.html)).
+- The remaining rows keep the 2026-10-22 capture stamp of the session that collected them. The snapshot is dated,
+  not continuously refreshed, and no row predates its capture date (enforced by a test).
 
 ## Prices and confidence
 
 Model prices are fair decimals derived from the models in [METHODOLOGY.md](METHODOLOGY.md), not bookmaker quotes.
 
-- Confidence: **high** ≥72% model probability, **medium** ≥60%, **low** below 60%.
+- Confidence: **high** ≥72% model probability, **or** a band selection at ≥70% priced inside −250..+10000;
+  **medium** ≥60%; **low** below 60%. The same selection can no longer read HIGH on one page and MEDIUM on
+  another (VF-26).
 - Price band from the brief: **−250 to +10000** decimal (1.40–101.00). A 70%+ probability cannot be priced above
   1.43, so the only window satisfying both a ≥70% probability and the −250 floor is 70.0–71.4%.
-- The 20 original high-confidence picks are priced 1.02–1.39 and are labelled **outside band**.
-- 13 additional handicap/total picks at **1.40–1.42** carry their own ≥30-word predictions and official facts;
-  these are the **price-band** picks the brief asked for.
+- All **14** written predictions are **price-band** selections at **1.40–1.42** (70.0–71.4%), each with its own
+  ≥30-word write-up and sourced facts. Short-priced moneyline favourites keep their grade on the sport tables
+  without a write-up rather than padding the picks page.
+- No individual player statistic is asserted in any write-up: no official player-level feed was captured in this
+  window. That gap against the brief is published as **VF-24**, not papered over.
 
 ## Repository layout
 
@@ -104,9 +110,9 @@ python3 scripts/integration_audit.py
 python3 -m unittest discover -s tests
 ```
 
-Expected: the builder reports `10 root pages + 17 sport pages / 155 rows, 112 originated, 13 band picks / 33
-predictions (13 band) / 18 verified review items`; the integration audit reports zero local link errors; the suite
-reports 61 tests passing.
+Expected: the builder reports `10 root pages + 17 sport pages / 119 rows, 93 originated, 14 band picks / 14
+predictions (14 band) / 26 verified review items`; the integration audit reports zero local link errors; the suite
+reports 63 tests passing.
 
 The builders and tests validate internal structure, model rules, source allowlists and local links. They do not
 fetch pages, and a passing check is not proof that every external page supports every adjacent claim. CI rebuilds

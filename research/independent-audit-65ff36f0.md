@@ -6,12 +6,12 @@
 
 `python3 scripts/audit65.py` reads every committed row in the five `data/<layer>/matches.json` snapshots, checks whether its `official_url` has HTTPS and an identified governing-body/operator hostname, then reads every featured prediction to check its publisher hostname and 30-word minimum. It also compares shared IDs for conflicting away participants. It emits `data/audit65/report.json` and a two-page static evidence desk at `audit65/`. The layers overlap and must not be added to obtain a unique-fixture count. **The audit does not claim that all rows were verified against original match pages.** Hostname classification is structural; market prices are model outputs, not independently verifiable official results.
 
-- `verified`: 118 fixture rows / 14 featured predictions.
+- `verified`: 128 fixture rows / 14 featured predictions (10 GBGB greyhound fixtures were added by PR #78 while this audit was integrating).
 - `hub`: 189 / 25.
 - `slate`: 148 / 36 (plus 23 unlined fixtures in a separate `unlined_fixtures` field, outside this scan).
 - `board`: 207 / 35.
 - `forward`: 93 / 8.
-- Totals *with overlaps*: **755 row instances**, **118 prediction instances**; 15 source/date/participant findings (8 eSports + 3 golf + 4 darts), 1 featured prediction with non-primary `official_url` (`lol-w26-r1-1`), zero featured predictions under 30 words. Exact details are in the generated report and the site review table.
+- Totals *with overlaps*: **765 row instances**, **118 prediction instances**; 15 source/date/participant findings (8 eSports + 3 golf + 4 darts), 1 featured prediction with non-primary `official_url` (`lol-w26-r1-1`), zero featured predictions under 30 words. Exact details are in the generated report and the site review table.
 
 ### A65-DARTS — PDC participant dispute (4 published layer instances)
 

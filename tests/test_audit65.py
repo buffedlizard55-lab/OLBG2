@@ -67,6 +67,11 @@ class Audit65Tests(unittest.TestCase):
         ])
 
     def test_generated_files_match_builder_and_every_flagged_row_links_to_official_source(self):
+        published = [ROOT / "audit65/index.html", ROOT / "audit65/flagged.html", ROOT / "data/audit65/report.json"]
+        before = {path: path.read_bytes() for path in published}
+        audit65.build(self.report)
+        for path in published:
+            self.assertEqual(path.read_bytes(), before[path], f"Stale generated output: {path}")
         for file in ("index.html", "flagged.html"):
             contents = (ROOT / "audit65" / file).read_text()
             parser = Links()

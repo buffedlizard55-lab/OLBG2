@@ -1356,7 +1356,7 @@ The picks introduction now handles an empty outside-band category without implyi
 | T3 | Line-by-line official-source verification of all 119 rows (fixtures, inputs, prices, predictions) — every row must carry official URL or be flagged blank | done | `arena/9a2928c8-olbg2` | `research/line-by-line-verification-9a2928c8.md`, `data/verified/flagged.json` (append-only new findings) |
 | T4 | Price-band audit: ensure all 14 high-confidence write-ups sit in -250…+10000, are ≥30 words, unique, human, and state team/player/current form/recent history/betting selection with verified facts | done | `arena/9a2928c8-olbg2` | `data/verified/predictions.json`, `data/verified/band.json`, `verified/predictions.html`, `picks.html` |
 | T5 | Site polish & GH Pages verification: clean landing, subpages by category, table format, no broken links, Pages live | done | `arena/9a2928c8-olbg2` | `index.html`, `picks.html`, `sports/**`, `assets/**`, `scripts/build_site.py` (template nit only, now resolved via PR #60 baseline) |
-| T6 | Final integration: rebuild all layers, 0 broken links, all tests green, PR → merge → Pages deploy | in progress | `arena/9a2928c8-olbg2` | shared outputs (integration session) |
+| T6 | Final integration: rebuild all layers, 0 broken links, all tests green, PR → merge → Pages deploy | done | `arena/9a2928c8-olbg2` | shared outputs (integration session) |
 
 **Concurrent-session check at claim:** no open PRs (`gh pr list` empty); `origin/main` = `c523300` (PR #58, 119 rows); all earlier sessions in this file are `done/merged`. While this branch was in verification, `origin/main` advanced through PRs #59/#60 (same picks-intro fix). On merging `origin/main`, this session took their `scripts/build_site.py` + `picks.html` version (identical functionality) and kept both ledgers additively. No upstream file discarded.
 
@@ -1377,6 +1377,18 @@ The picks introduction now handles an empty outside-band category without implyi
 **Irregularities disclosed, not fixed silently:** 22 verified flags VF-01…VF-22 remain open (competition-scoped URLs VF-11, small-sample handball, client-rendered PDC/ICC, one-game stale FLA/OTT VF-19, etc.). No row was inferred to close a flag.
 
 **Merge resolution (2026-10-22 03:15Z):** `origin/main` advanced to `f503c50` (PRs #59/#60) while this branch was verifying. Both sessions fixed the same picks-intro nit with slightly different wording; this merge takes the `main` version (identical logic) and preserves both COORDINATION ledgers. `scripts/build_site.py` and `picks.html` are now byte-identical to `origin/main`; only `COORDINATION.md` and new research docs differ. No data file changed.
+
+### Publication record — session `arena/9a2928c8-olbg2`
+
+| Item | Value |
+|---|---|
+| Pull request | [#61](https://github.com/buffedlizard55-lab/OLBG2/pull/61) — Final line-by-line verification, price-band polish & OLBG re-audit (119 rows, 14 picks) |
+| Merge | `317647c` on `main` at 2026-10-22T02:55:01Z (PR #61) |
+| CI | `Validate Pages content` PASS — [run 39713838092](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713838092) and post-merge [39713984046](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713984046) + [39713984071](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39713984071) both `success` |
+| Pages | `Deploy Pages` for 317647c superseded by higher-priority Pages build at `f8852c2` (PR #62) — site live at https://buffedlizard55-lab.github.io/OLBG2/picks.html |
+| Follow-on main | [#62](https://github.com/buffedlizard55-lab/OLBG2/pull/62) merged as `f8852c2`, incorporating this branch's ledger additively (merge 361611c) — no data overwritten |
+| Research docs | `research/olbg-reverse-engineering-9a2928c8.md`, `research/line-by-line-verification-9a2928c8.md` landed via PR #61 |
+| Note | T6 now `done`; ledger appended post-merge and rebased on current `main` (`f8852c2`) |
 
 ---
 

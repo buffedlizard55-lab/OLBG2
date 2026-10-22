@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="../index.html">OLBG2 /portal/ <span>17-Sport Official-Source Origination &amp; Forensic Audit (2026-10-22 UTC)</span></a>
-      <nav class="topnav"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
+      <nav class="topnav" aria-label="Portal navigation"><a href="../index.html" class="">Overview</a><a href="../sports/index.html" class="active">17 Sports</a><a href="../matches.html" class="">All Matches</a><a href="../picks.html" class="">In-Band Picks (34)</a><a href="../flagged.html" class="">Flagged for Review (38)</a><a href="../audit.html" class="">Repo Audit</a><a href="../methodology.html" class="">Methodology</a><a href="../sources.html" class="">Official Sources</a><a href="../excluded.html" class="">Excluded Gate</a></nav>
     </div>
   </header>
   <div class="subbar">
-    <div class="subbar-inner">
+    <nav class="subbar-inner" aria-label="Other repository dashboards">
       <span><strong>Repository Desks:</strong></span>
       <a href="../../index.html">Root Dashboard</a> ·
       <a href="../../verified/index.html">/verified/</a> ·
@@ -24,9 +25,9 @@
       <a href="../../hub/index.html">/hub/</a> ·
       <a href="../../evidence/index.html">/evidence/</a> ·
       <a href="../../audit65/flagged.html">/audit65/</a>
-    </div>
+    </nav>
   </div>
-  <main class="container">
+  <main id="main-content" class="container" tabindex="-1">
     
         <section class="hero">
           <h1>Ice Hockey — Official-Source Multi-Market Lines &amp; In-Band Predictions</h1>
@@ -38,7 +39,7 @@
           </p>
         </section>
 
-        <div class='sport-pills'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='active' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></div>
+        <nav class='sport-pills' aria-label='Eligible sports'><a class='' href='aussie-rules.html'>Aussie Rules (9)</a><a class='' href='baseball.html'>Baseball (4)</a><a class='' href='basketball.html'>Basketball (83)</a><a class='' href='cricket.html'>Cricket (7)</a><a class='' href='darts.html'>Darts (16)</a><a class='' href='esports.html'>Esports (8)</a><a class='' href='gaelic-football.html'>Gaelic Football (2)</a><a class='' href='golf.html'>Golf (5)</a><a class='' href='greyhounds.html'>Greyhounds (3)</a><a class='' href='handball.html'>Handball (5)</a><a class='active' aria-current='page' href='ice-hockey.html'>Ice Hockey (18)</a><a class='' href='motor-racing.html'>Motor Racing (5)</a><a class='' href='rugby-league.html'>Rugby League (5)</a><a class='' href='rugby-union.html'>Rugby Union (23)</a><a class='' href='snooker.html'>Snooker (5)</a><a class='' href='tennis.html'>Tennis (16)</a><a class='' href='volleyball.html'>Volleyball (6)</a></nav>
 
         <section class="section">
           <h2>Featured High-Confidence Ice Hockey Predictions (4)</h2>
@@ -162,23 +163,31 @@
         <section class="section" data-filter-root="1">
           <h2>Ice Hockey Match Board (19 Verified Rows)</h2>
           <div class="controls">
-            <input type="search" data-filter-search placeholder="Filter Ice Hockey fixtures...">
-            <select data-filter-conf>
-              <option value="all">All Grades</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="blank">Unlined / Blank</option>
-            </select>
-            <span class="count-pill" data-filter-count></span>
+            <div class="filter-field">
+              <label for="ice-hockey-search">Search Ice Hockey fixtures</label>
+              <input id="ice-hockey-search" type="search" data-filter-search aria-controls="ice-hockey-matches-table" placeholder="Team, player, or competition...">
+            </div>
+            <div class="filter-field">
+              <label for="ice-hockey-confidence">Confidence</label>
+              <select id="ice-hockey-confidence" data-filter-conf aria-controls="ice-hockey-matches-table">
+                <option value="all">All Grades</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+                <option value="blank">Unlined / Blank</option>
+              </select>
+            </div>
+            <span class="count-pill" data-filter-count role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
-          <div class="table-wrap">
-            <table>
+          <noscript><p class="filter-note">Filtering needs JavaScript; all Ice Hockey rows remain listed below.</p></noscript>
+          <div class="table-wrap" role="region" tabindex="0" aria-label="Ice Hockey fixtures and markets">
+            <table id="ice-hockey-matches-table">
+              <caption class="sr-only">Ice Hockey fixtures, markets, confidence, and official-source links</caption>
               <thead>
                 <tr>
-                  <th>Date / UTC</th><th>Sport</th><th>Fixture, Venue &amp; Basis</th>
-                  <th>Win Match / 1X2</th><th>Standard .5 Line</th><th>Total O/U</th>
-                  <th>Winner &amp; Grade</th><th>Actionable [-250..+10000]</th><th>Official Source</th>
+                  <th scope="col">Date / UTC</th><th scope="col">Sport</th><th scope="col">Fixture, Venue &amp; Basis</th>
+                  <th scope="col">Win Match / 1X2</th><th scope="col">Standard .5 Line</th><th scope="col">Total O/U</th>
+                  <th scope="col">Winner &amp; Grade</th><th scope="col">Actionable [-250..+10000]</th><th scope="col">Official Source</th>
                 </tr>
               </thead>
               <tbody><tr id='nhl-2026020154' data-row='1' data-sport='ice-hockey' data-conf='high'><td class='num'>2026-10-22<div style='color:#6b7280;font-size:11.5px'>2026-10-22T23:00:00Z</div></td><td><a class='badge badge-sport' href='ice-hockey.html'>Ice Hockey</a></td><td><strong>Boston Bruins vs Nashville Predators</strong><div style='font-size:12px;color:#4b5563'>2026-27 NHL Regular Season · TD Garden</div><div style='font-size:11.5px;color:#6b7280'>NHL Poisson (api.nhle.com reg+OT GF/GA): BOS (7-2-1, 36:22) vs NSH (3-2-3, 23:22)</div></td><td><div><strong>Boston Bruins:</strong> <span class='odds'>-189 (1.53) · 65.3%</span></div><div><strong>Nashville Predators:</strong> <span class='odds'>+188 (2.88) · 34.7%</span></div></td><td><div><strong>Boston Bruins -1.5 goals:</strong> <span class='odds'>+148 (2.48) · 40.4%</span></div><div><strong>Opp:</strong> <span class='odds'>-147 (1.68) · 59.6%</span></div></td><td><div><strong>O/U 5.5 goals Over:</strong> <span class='odds'>-104 (1.96) · 51.1%</span></div><div><strong>Under:</strong> <span class='odds'>+104 (2.04) · 48.9%</span></div></td><td><span class="badge badge-high">HIGH</span><div><strong>Boston Bruins</strong></div><div><span class='odds'>-189 (1.53) · 65.3%</span></div></td><td><div><strong>Boston Bruins — Win Match</strong></div><div><span class='odds'>-189 (1.53) · 65.3%</span></div><div style='font-size:11.5px;color:#4b5563'>Moneyline / Match Winner</div></td><td><a href='https://api-web.nhle.com/v1/score/2026-10-22' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Ice_Hockey/13' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr>
@@ -202,14 +211,16 @@
 <tr id='liiga-199912-jyp-hpk' data-row='1' data-sport='ice-hockey' data-conf='blank'><td class='num'>2026-10-22<div style='color:#6b7280;font-size:11.5px'>2026-10-22 — Official TBC</div></td><td><a class='badge badge-sport' href='ice-hockey.html'>Ice Hockey</a></td><td><strong>JYP Jyväskylä vs HPK Hämeenlinna (OLBG 199912)</strong><div style='font-size:12px;color:#4b5563'>2026-27 Finnish Liiga · Official Venue (see governing-body link)</div><div style='font-size:11.5px;color:#6b7280'>liiga.fi renders standings exclusively via client-side Next.js bundle; left blank rather than inferring GF/GA.</div></td><td><span class="blank-cell">— (Unverified / Left Blank)</span></td><td><span class="blank-cell">—</span></td><td><span class="blank-cell">—</span></td><td><span class="badge badge-blank">UNLINED / BLANK</span><span class="blank-cell">—</span></td><td><span class="blank-cell">—</span></td><td><a href='https://liiga.fi/fi/ottelut' target='_blank' rel='noopener'>Official Governing Source ↗</a><div style='margin-top:4px;font-size:12px'><a href='https://www.olbg.com/betting-tips/Ice_Hockey/13' target='_blank' rel='noopener'>OLBG Hub ↗</a></div></td></tr></tbody>
             </table>
           </div>
+          <p class="filter-empty" data-filter-empty hidden>No Ice Hockey fixtures match the selected filters.</p>
         </section>
 
         
             <section class="section">
               <h2>Sport-Specific Audit &amp; Unverified Blank Notes</h2>
-              <div class="table-wrap">
+              <div class="table-wrap" role="region" tabindex="0" aria-label="Ice Hockey review findings">
                 <table>
-                  <thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Disposition</th><th>Official Link</th></tr></thead>
+                  <caption class="sr-only">Ice Hockey audit and unverified-item findings</caption>
+                  <thead><tr><th scope="col">ID</th><th scope="col">Severity</th><th scope="col">Item</th><th scope="col">Disposition</th><th scope="col">Official Link</th></tr></thead>
                   <tbody><tr><td class='num'><strong>PU-16</strong></td><td><span class="badge badge-low">INFO</span></td><td><strong>2026-27 Finnish Liiga: JYP Jyväskylä vs HPK Hämeenlinna (OLBG 199912)</strong><div style='font-size:12.5px;color:#4b5563'>liiga.fi renders standings exclusively via client-side Next.js bundle; left blank rather than inferring GF/GA.</div></td><td>Fixture listed with official governing-body link; odds &amp; winner fields left strictly blank (—) rather than inferred.</td><td><a href='https://liiga.fi/fi/ottelut' target='_blank' rel='noopener'>Official Source ↗</a></td></tr></tbody>
                 </table>
               </div>

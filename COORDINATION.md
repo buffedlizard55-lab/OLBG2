@@ -1545,3 +1545,22 @@ VF-15 **closed in forward layer** (WS G4 `mlb-ws-g4` originated 2026-10-27, Trop
 VF-20 **closed for the card** (all 16 EuroCup R5 fixtures captured; rows ship unlined because the EuroLeague standings endpoints return empty bodies — never inferred).
 VF-14 **partial**: official per-day NBA game counts captured from the rendered calendar (22 Oct: 2, 23: 12, 24: 8 … 31: 7) but future-date fixture lists still fail server-render and the CDN schedule JSON returns 500 — no NBA rows published, flag stays open.
 VF-22 **still blocked**: gbgb.org.uk returned fetch failures/500 on all three pages tried — no greyhound rows published, flag stays open.
+
+---
+
+## Session `arena/c12bdcd7-olbg2` — final integration + open-item closure (2026-10-22)
+
+**Session ID:** `arena/c12bdcd7-olbg2` · **Branch:** `arena/c12bdcd7-olbg2` (environment-fixed) · **Claimed:** 2026-10-22 (UTC), before any implementation edit.
+
+**Concurrent-session check at claim time:** `origin/main` = `1aebda7` (PR #69, `arena/6a87eefa-olbg2`, merged 04:04Z). All earlier boards in this file read `done`/closed. One PR is open — [#54](https://github.com/buffedlizard55-lab/OLBG2/pull/54) (`arena/1bb45081-olbg2`, odds-window confidence gate), last commit 01:57Z, previously judged `CONFLICTING` and left alone by `26963a2d` and `6a87eefa` as stale. Its claim is now >60 minutes old with no commits, so per this board's takeover rule this session may handle it (task I2) and will note the handoff below. No other live claims exist.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| I1 | Claim + coordination check | done | `arena/c12bdcd7-olbg2` | `COORDINATION.md` (this section) |
+| I2 | Resolve stale PR #54 (take over and merge the still-relevant odds-window work, or close as superseded — decision recorded with evidence) | pending | `arena/c12bdcd7-olbg2` | PR #54, follow-up commits on this branch if taken over |
+| I3 | Fulfil the logged root-nav request from `6a87eefa`: "Forward slate (23 Oct–2 Nov)" link to `forward/index.html` (via `scripts/build_site.py` regeneration, never hand-edit) | pending | `arena/c12bdcd7-olbg2` | `scripts/build_site.py`, regenerated root pages |
+| I4 | Gap closure attempt on remaining open flags with official sources only: VF-14 (NBA slate), VF-22 (GBGB greyhounds), MLB WS G5–7 (official if-necessary listing), EuroLeague game 61 desk input | pending | `arena/c12bdcd7-olbg2` | `data/forward/**`, `data/verified/inputs.json` (targeted), `research/*c12bdcd7*` |
+| I5 | Line-by-line re-verification pass of the published combined dataset against official sources; every row keeps its source link or goes blank + flagged; irregularities logged | pending | `arena/c12bdcd7-olbg2` | `research/*c12bdcd7*`, flag files only if a new finding appears |
+| I6 | Final integration: rebuild all layers, full test suite + link audit green, PR → merge (no approval wait) → Pages deploy confirmed → recorded here | pending | `arena/c12bdcd7-olbg2` | shared outputs (integration step only) |
+
+**Scope rule:** until I6 this session edits only the files listed above. Earlier layers (`site/`, `survey/`, `live/`, `desk/`) are regenerated only by running their own committed scripts when integration requires it; no earlier session's data is regraded or rewritten except where I4 closes a named gap with a freshly fetched official source, and every such change is logged in `research/`.

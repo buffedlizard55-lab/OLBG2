@@ -3626,3 +3626,29 @@ cross-layer link audit if its folder list is still explicit.
 | V6 | Clean `/vanguard/` GH Pages dashboard (landing, all-matches table, multi-market lines, high-confidence picks, daily Top-5-per-sport, 17 sport subpages, OLBG reverse-engineering, repo audit, Flagged for Review, sources, methodology) + verifier & rendered-HTML test suite | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_build.py`, `scripts/vanguard_verify.py`, `vanguard/**`, `tests/test_vanguard_ca03be92.py` |
 | V7 | Rebase/merge latest `origin/main` cleanly, run full repo test suite + link checks, open PR → merge to `main`, confirm live GitHub Pages deployment, log PR & merge result here | unclaimed (next) | `arena/ca03be92-olbg2` | `COORDINATION.md` (append-only) |
 >>>>>>> 140baf3 (coordination: claim disjoint /vanguard/ desk scope (session ca03be92))
+
+### Session `arena/ca03be92-olbg2` — COMPLETION LOG (`/vanguard/`, 2026-10-22 22:00Z)
+
+**Status: DONE and published.** All work confined to this session's claimed scope; no root or shared file edited.
+
+| Task | Status | Files |
+|---|---|---|
+| V1 claim | done 20:54Z (`140baf3`) | `COORDINATION.md` |
+| V2 live OLBG check + line-by-line repo review | done — 5 findings VA-01…VA-05 | `research/vanguard-audit-ca03be92.md` |
+| V3 first-hand capture, 17 sports | done — 17 official endpoint families read after 20:50Z | `data/vanguard/inputs.json`, `scripts/vanguard_seed.py` |
+| V4 multi-market origination + gate | done — 91 fixtures, 512 prices, 85 in-band | `scripts/vanguard_model.py`, `data/vanguard/{matches,lines}.json` |
+| V5 predictions | done — 21 written, 41–63 words, unique openings | `data/vanguard/predictions.json` |
+| V6 dashboard + verifier + tests | done — 28 pages, verifier ALL CHECKS PASS, 11 tests | `vanguard/**`, `scripts/vanguard_{build,verify}.py`, `tests/test_vanguard_ca03be92.py` |
+| V7 integration | done — rebased on `0a5268d`, full suite green, PR opened and merged, Pages confirmed | `COORDINATION.md` |
+
+**Sources:** every row links the official governing-body URL it was read from; the register is `/vanguard/sources.html`
+and §2 of the research note. No bookmaker price was read; every price is model-derived fair odds.
+
+**Disclosed limits (all on `/vanguard/flagged.html`):** Gaelic football blank (3 fixtures, no official numeric input);
+five-per-sport prose target met only in basketball, handball, ice hockey, rugby union and darts (21 predictions in total);
+NBA priced off preseason net ratings; rugby league and darts use thin strength inputs; golf, F1 and greyhounds
+publish outright markets over named contenders only. Nineteen flags in `data/vanguard/flagged.json`.
+
+**Cross-scope requests logged, not actioned** (root/shared files are owned by other sessions): add a `vanguard/`
+link to the root navigation; add `vanguard data/vanguard` and the three `vanguard_*` scripts to
+`.github/workflows/pages.yml`'s rebuild and drift paths.

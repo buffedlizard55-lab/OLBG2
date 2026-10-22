@@ -2420,3 +2420,24 @@ Applying the final pre-publication note onto `6077bd7` conflicted only in `COORD
 | Limit | Deployment is confirmed by the successful Actions jobs and Pages API build. No direct public-site browser/screen-reader check was performed; no formal WCAG conformance claim is made. |
 
 All U1–U5 tasks are **done**. The merge changed only `/portal/` interface files, the scoped audit/test, and coordination documentation; no match data, odds, prediction, source, root-navigation, or workflow file was changed.
+
+---
+
+## Session `arena/58642817-olbg2` — 12:05 UTC First-Hand Official-Source Verification, Cross-Layer Repo Audit (incl. `/portal/` & `/final/`), Multi-Market Origination & Strict `-250..+10000` Predictions Command Desk (`/command/`)
+
+**Session ID:** `arena/58642817-olbg2` · **Branch:** `arena/58642817-olbg2` (fixed by Arena session tracking; `session-<id>/<task>` branch creation is disallowed by platform tracking) · **Claimed:** `2026-10-22 12:05 UTC`, committed and pushed immediately before any implementation edit per protocol.
+
+**Concurrent-session check across all remote branches (`refs/heads/*`) at claim time (`origin/main` = `238c157`, PR #91):**
+- `arena/17c50bb7-olbg2` (`12:03 UTC`, PR #91 merged): `.github/workflows/{deploy-pages,pages}.yml`, `publication.html`, `research/publication-17c50bb7.md`, `tests/test_publication_gate.py` — **untouched**
+- `arena/dc72bac4-olbg2` (`12:03 UTC`, active): `scripts/build_site.py`, `README.md`, `tests/test_publication_counts.py`, `.github/workflows/pages.yml`, `research/reproducibility-audit-dc72bac4.md` — **untouched**
+- `arena/ba48a907-olbg2` (`12:03 UTC`, active): `atlas/**`, `data/atlas/**`, `scripts/atlas_*.py`, `research/atlas-verification.md`, `tests/test_atlas.py`, and shared root nav at integration — **untouched**
+- All previously merged disjoint layers (`root`, `/site/`, `/survey/`, `/live/`, `/verified/`, `/forward/`, `/board/`, `/slate/`, `/hub/`, `/evidence/`, `/audit65/`, `/portal/`, `/final/`) — **untouched**
+
+| # | Task | Status | Owner | Exclusive File Scope (Strictly Disjoint) |
+|---|---|---|---|---|
+| M1 | Read `COORDINATION.md`, audit active remote branches, claim strictly disjoint `/command/` scope, commit & push immediately | **in progress** | `arena/58642817-olbg2` | `COORDINATION.md` (append-only) |
+| M2 | Live 12:05 UTC OLBG.com reverse-engineering & line-by-line forensic audit of ALL repository layers (including first-ever independent audit of `/portal/`, `/final/`, and `publication.html` alongside `/verified/`, `/forward/`, `/board/`, `/slate/`, `/hub/`, `/live/`, `/site/`, `/survey/`) against official governing-body websites via `fetch_page` | **unclaimed** | `arena/58642817-olbg2` | `research/audit-58642817.md`, `data/command/sources.json`, `data/command/repo_audit.json`, `data/command/sports.json` |
+| M3 | Full 17-sport updated match schedule (retiring matches already completed/in-play by 12:05 UTC Oct 22 or marking live status honestly; zero excluded sports) & independent multi-market line origination (`Win Match / Moneyline / 1X2`, `Handicap / Spread / Puck / Run / Set / Frame / Leg Line`, `Match Total Over/Under`, plus actionable in-band markets; unconfirmed values left strictly blank `—` and flagged) | **unclaimed** | `arena/58642817-olbg2` | `scripts/command_seed.py`, `scripts/command_model.py`, `data/command/inputs.json`, `data/command/matches.json`, `data/command/flagged.json` |
+| M4 | Uniform confidence grading (`high` iff model win probability `>= 70%` AND fair American price inside `[-250, +10000]` / `1.40..101.00` decimal, plus multi-market investigation of `-250..+10000` edges) & bespoke, non-robotic `>= 30`-word human predictions naming verified team + player + current form + dated match history + explicit betting selection | **unclaimed** | `arena/58642817-olbg2` | `data/command/predictions.json`, `scripts/command_model.py` |
+| M5 | Clean, user-friendly GitHub Pages dashboard at `/command/` (`command/{index,matches,picks,flagged,audit,methodology,sources,excluded}.html` + `command/sports/{index,<17-slugs>}.html` + `command/assets/{style.css,app.js}`) + strict line-by-line row-source/link verifier & unit test suite | **unclaimed** | `arena/58642817-olbg2` | `scripts/command_build.py`, `scripts/command_verify.py`, `command/**`, `tests/test_command_58642817.py` |
+| M6 | Sync with `origin/main` via `git pull --rebase`, run full repository validation & test suite (`0` broken links), open PR → `main`, merge without approval wait, confirm GitHub Pages deployment, and record PR link, merge SHA, sources, verification, and irregularities in `COORDINATION.md` (logging root nav request if `dc72bac4` or `ba48a907` still holds `scripts/build_site.py`, or integrating cleanly if all other claims are done) | **unclaimed** | `arena/58642817-olbg2` | `COORDINATION.md` (append-only; shared root nav only if all other claims are done) |

@@ -1546,6 +1546,26 @@ VF-20 **closed for the card** (all 16 EuroCup R5 fixtures captured; rows ship un
 VF-14 **partial**: official per-day NBA game counts captured from the rendered calendar (22 Oct: 2, 23: 12, 24: 8 … 31: 7) but future-date fixture lists still fail server-render and the CDN schedule JSON returns 500 — no NBA rows published, flag stays open.
 VF-22 **still blocked**: gbgb.org.uk returned fetch failures/500 on all three pages tried — no greyhound rows published, flag stays open.
 
+---
+
+## Session `arena/d219b7cf-olbg2` — documentation/data-count consistency audit (2026-10-22)
+
+**Claimed:** 2026-10-22 UTC, before implementation edits. **Branch:** fixed Arena branch `arena/d219b7cf-olbg2`.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Reconcile README snapshot counts and coverage statements against the checked-in verified dataset and generated dashboard; document the audit and any remaining scope limits without changing sporting data | done | `arena/d219b7cf-olbg2` | `README.md`, `research/repo-consistency-d219b7cf.md`, append-only `COORDINATION.md` |
+
+This is a documentation-only task. It does not claim new external-source verification, does not alter fixture/price/prediction data, and does not edit generated pages or pipeline code. No other live task is known to claim these files on this checkout; historical claims are treated as complete where their publish records say so.
+
+### Completion — session `arena/d219b7cf-olbg2`
+
+Reconciled README figures against `data/verified/matches.json`, its 118 row records and `source_scope` labels, `data/verified/predictions.json`, `data/verified/flagged.json`, the generated dashboard, and actual local build/test output. Corrected stale counts (119→118 rows, 93→94 originated, 26→24 unlined, 85→84 fixture-scoped links, 26→33 flags), the zero-row category statement, repository test count (61/63→80), and the American-versus-decimal odds description. Added `research/repo-consistency-d219b7cf.md` with reconciliation details, reproducible checks, and the explicit limitation that no external sporting fact or source page was newly checked in this task.
+
+**Verification performed:** `python3 -m unittest discover -s tests -v` (80 passed); `python3 scripts/build_site.py` (118 rows, 94 originated, 14 band picks/predictions, 33 review items); `python3 scripts/integration_audit.py` (0 local link errors); `git diff --check` (clean). Source links remain on individual rows; this task makes no new verification claim. **Irregularities left disclosed:** 34 of 118 rows cite competition/ranking rather than individual fixture pages; 33 review flags remain; this is a dated partial snapshot, not a live exhaustive slate.
+
+---
+
 ## Session `arena/1619553b-olbg2` — root nav link for the forward slate + blocked-gap re-check (2026-10-22)
 
 **Session ID:** `arena/1619553b-olbg2` · **Branch:** `arena/1619553b-olbg2` (fixed by the environment; `session-…` naming not available) · **Claimed:** 2026-10-22 07:20 UTC, before any edit, per protocol.
@@ -1569,6 +1589,8 @@ Rules for this session: nothing is published unless an official page returned it
 | N3 | **VF-22 still open.** GBGB official pages are reachable: `https://www.gbgb.org.uk/` (homepage), `https://www.gbgb.org.uk/racing/open-races/`, `https://www.gbgb.org.uk/racing/race-courses/` and `https://www.gbgb.org.uk/racing/results/` (returns "0 items in 0 pages"). Dated race cards are client-rendered and were not returned. The earlier "500 on all pages" description is not reproducible; the flag should be reworded (logged for the flag owner). The guessed `/racing/fixtures/` path is a 404. No greyhound row published. |
 | Irregularities | (1) VF-22 wording: "500 on all pages" not reproduced. (2) NBA calendar page shows its own error text ("Sorry, something went wrong"). Both are for manual review. |
 | Other | Did not edit PR #54's scope beyond the `NAV` entry. PR #54 remains open and stale; not taken over. |
+
+**Sync note — session `arena/d219b7cf-olbg2` (2026-10-22):** PR #71 initially could not be merged because `main` advanced to PR #70 (session `arena/1619553b-olbg2`). Fetched and merged `origin/main`; resolved the append-only `COORDINATION.md` conflict by retaining both the current session's audit record and the upstream N1–N3 record. All upstream navigation/gap-recheck files were preserved. The required `git pull --rebase origin arena/d219b7cf-olbg2` before pushing attempted to replay the upstream session commits already included by the merge and conflicted in the coordination ledger; the rebase was aborted without discarding work. Merge ancestry was confirmed fast-forwardable from the remote session branch. While checks completed, `main` advanced again through PR #72 (same upstream session); the next merge attempt reported a conflict. Merged the new `origin/main` tip, retained the newer publish/flag records as well as this audit record, reran all 80 tests and the integration link audit (0 errors), and revalidated merge ancestry. No data or upstream edits were discarded.
 
 **Merge record — `arena/1619553b-olbg2`:** PR https://github.com/buffedlizard55-lab/OLBG2/pull/70 (validate check `pass`, run 39739781475) merged with `gh pr merge 70 --merge` at 2026-10-22 07:20:41Z, merge commit `7380145`. Post-merge `Validate Pages content` and `Deploy Pages` on `main` both `success`. Live check: https://buffedlizard55-lab.github.io/OLBG2/forward/index.html serves the forward slate that the new root nav link points to.
 

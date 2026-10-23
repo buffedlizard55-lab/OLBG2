@@ -1,0 +1,208 @@
+{
+  "as_of": "2026-10-23",
+  "note": "Items that could not be confirmed, that conflict with another source, or that need a human decision. None of them blocks the publication of this desk. Each item links to the source it came from.",
+  "flags": [
+    {
+      "id": "FL-01",
+      "sport": "All",
+      "severity": "decision",
+      "title": "Literal band gate makes the high-confidence window very narrow",
+      "detail": "The brief asks for picks with more than 70% probability AND fair prices between -250 and +10000. A 70% favourite is priced about -233, so the literal band admits only probabilities from 70.0% to about 71.4%. This desk applies both conditions literally. Please confirm the intended reading.",
+      "source_urls": []
+    },
+    {
+      "id": "FL-02",
+      "sport": "All",
+      "severity": "decision",
+      "title": "Scope: 'Gaelic Sports' and 'Rugby League' interpretation",
+      "detail": "OLBG lists Gaelic football and hurling separately. This desk treats 'Gaelic Sports' as both, which is why the Shinty-Hurling International row appears. Rugby League is treated as the rugby league competition on nrl.com (Rugby League World Cup 2026), which is the only league-level fixture source read in this session.",
+      "source_urls": [
+        "https://www.olbg.com/betting-tips",
+        "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+      ]
+    },
+    {
+      "id": "FL-03",
+      "sport": "Ice Hockey",
+      "severity": "limit",
+      "title": "NHL line inputs are 9-10 games per team",
+      "detail": "Team points percentages come from the 23 Oct score feed (MTL 4-3-2, CHI 3-6-0, TBL 7-2-0, COL 5-4-1). The shrinkage prior (K=10) and the home-ice shift (0.25 log-odds) are this desk's assumptions. Both lines are low confidence.",
+      "source_urls": [
+        "https://api-web.nhle.com/v1/score/2026-10-23"
+      ]
+    },
+    {
+      "id": "FL-04",
+      "sport": "Basketball",
+      "severity": "limit",
+      "title": "NBA records are one game per team",
+      "detail": "Each team has 0-1 or 1-0 on the NBA.com games page for 23 Oct, so every NBA line sits between 41% and 59% and is labelled low. NBA.com does not state the home side on the games page, so the NBA lines are neutral. No rating input from the prior season was captured.",
+      "source_urls": [
+        "https://www.nba.com/games?date=2026-10-23"
+      ]
+    },
+    {
+      "id": "FL-05",
+      "sport": "Baseball",
+      "severity": "limit",
+      "title": "World Series Game 1: no team input captured",
+      "detail": "The MLB feed reports 0-0 for both teams in the postseason record field. Probable pitchers are listed (Nick Martinez, TB; Jacob Misiorowski, MIL), but no pitcher statistics were captured, so no line was originated.",
+      "source_urls": [
+        "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-23&hydrate=probablePitcher,team,linescore"
+      ]
+    },
+    {
+      "id": "FL-06",
+      "sport": "Motor Racing",
+      "severity": "limit",
+      "title": "US GP session times: time basis not stated",
+      "detail": "formula1.com lists sessions as 23 Oct 13:30-14:30 and 17:00-18:00, 24 Oct 13:30-14:30 and 17:00-18:00, and the race on 25 Oct at 16:00. The page's time-zone toggle ('My time' / 'Track time') was not captured. No race-winner line was originated, since no race-pace input was captured (only championship points).",
+      "source_urls": [
+        "https://www.formula1.com/en/racing/2026/united-states",
+        "https://www.formula1.com/en/results/2026/drivers"
+      ]
+    },
+    {
+      "id": "FL-07",
+      "sport": "Rugby League",
+      "severity": "irregular",
+      "title": "Tonga v Lebanon listed as Full Time on a Friday 23 Oct fixture",
+      "detail": "The nrl.com draw shows Tonga v Lebanon for Friday 23rd October with status 'Full Time' and scores 36-0. It is excluded from the upcoming list. The kick-off times on the page (for example 'Kick off: 12:25am') carry no time-zone label, so the basis is unverified.",
+      "source_urls": [
+        "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+      ]
+    },
+    {
+      "id": "FL-08",
+      "sport": "Rugby League",
+      "severity": "limit",
+      "title": "Rugby League World Cup: no rating input for a line",
+      "detail": "The draw shows only group positions (for example 'England 4th', 'Fiji 1st'). These are not used as strength inputs. No line was originated.",
+      "source_urls": [
+        "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+      ]
+    },
+    {
+      "id": "FL-09",
+      "sport": "Snooker",
+      "severity": "limit",
+      "title": "WST times: time zone not stated",
+      "detail": "wst.tv lists quarter-finals on Fri 23 Oct at 14:00 for Jones v Donaldson and Gilbert v Williams. The page does not state the time zone. Match 57 (McGill 1-6 Wilson) and Match 58 (Craigie 6-2 Slessor) are shown as completed on 23 Oct and are excluded. No ranking input was captured, so no line was originated.",
+      "source_urls": [
+        "https://www.wst.tv/matches/"
+      ]
+    },
+    {
+      "id": "FL-10",
+      "sport": "Gaelic Sports",
+      "severity": "irregular",
+      "title": "GAA page lists a 24 Oct fixture under 'Previous results'",
+      "detail": "gaa.ie shows the Shinty-Hurling International (Ireland v Scotland, Saturday 24 October, 18:00, Páirc Uí Chaoimh, Cork) under a 'Previous results' heading without a score. Both the heading and the missing score conflict with a future date, so status is unclear. No line was originated.",
+      "source_urls": [
+        "https://www.gaa.ie/fixtures-results"
+      ]
+    },
+    {
+      "id": "FL-11",
+      "sport": "Tennis",
+      "severity": "limit",
+      "title": "No upcoming tennis fixture list captured",
+      "detail": "The ATP scores page shows six quarter-final rows for the event in Brussels (per a hot-shot caption on the page): three completed, three in progress or live at capture. Only observed rows are listed. The ATP week URL returned 404. No line was originated.",
+      "source_urls": [
+        "https://www.atptour.com/en/scores/current"
+      ]
+    },
+    {
+      "id": "FL-12",
+      "sport": "Darts",
+      "severity": "unverified",
+      "title": "Darts fixtures are OLBG-only; PDC not captured",
+      "detail": "OLBG lists 12 darts matches as Today or Tomorrow, and the PDC World Championship 2027 and the European Championship as outright events. The pdc.tv fixtures page returned a cookie wall with no fixture text, so these matches are not source-confirmed. No line was originated.",
+      "source_urls": [
+        "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/15",
+        "https://www.pdc.tv/fixtures"
+      ]
+    },
+    {
+      "id": "FL-13",
+      "sport": "Golf",
+      "severity": "unverified",
+      "title": "PGA Tour: event listed, dates not captured",
+      "detail": "The PGA Tour schedule lists the Butterfield Bermuda Championship (2026, R2026528). The captured chunks did not include its dates or field, so no golf fixture is source-confirmed.",
+      "source_urls": [
+        "https://www.pgatour.com/schedule"
+      ]
+    },
+    {
+      "id": "FL-14",
+      "sport": "Cricket",
+      "severity": "unverified",
+      "title": "ICC match list returned 404",
+      "detail": "https://www.icc-cricket.com/matches returned a 404 page. No cricket fixture is source-confirmed in this snapshot.",
+      "source_urls": [
+        "https://www.icc-cricket.com/matches"
+      ]
+    },
+    {
+      "id": "FL-15",
+      "sport": "Rugby Union",
+      "severity": "unverified",
+      "title": "URC and Premiership fixture pages returned 404",
+      "detail": "https://www.unitedrugby.com/fixtures and https://www.premrugby.com/fixtures both returned 404. No rugby union fixture is source-confirmed in this snapshot.",
+      "source_urls": [
+        "https://www.unitedrugby.com/fixtures",
+        "https://www.premrugby.com/fixtures"
+      ]
+    },
+    {
+      "id": "FL-16",
+      "sport": "Volleyball",
+      "severity": "unverified",
+      "title": "FIVB page is an index without fixtures",
+      "detail": "The FIVB competitions index lists events and years but no match. No volleyball fixture is source-confirmed in this snapshot.",
+      "source_urls": [
+        "https://www.fivb.com/volleyball/fivb-competitions/"
+      ]
+    },
+    {
+      "id": "FL-17",
+      "sport": "Handball",
+      "severity": "unverified",
+      "title": "EHF Champions League fixture page returned 404",
+      "detail": "https://www.ehfcl.com/men/matches/ returned 404. No handball fixture is source-confirmed in this snapshot.",
+      "source_urls": [
+        "https://www.ehfcl.com/men/matches/"
+      ]
+    },
+    {
+      "id": "FL-18",
+      "sport": "Greyhounds",
+      "severity": "unverified",
+      "title": "GBGB racecards page returned 404",
+      "detail": "https://www.gbgb.org.uk/racecards/ returned 404. No greyhound race is source-confirmed in this snapshot.",
+      "source_urls": [
+        "https://www.gbgb.org.uk/racecards/"
+      ]
+    },
+    {
+      "id": "FL-19",
+      "sport": "All",
+      "severity": "irregular",
+      "title": "OLBG 'Today' and 'Tomorrow' labels: time basis unknown",
+      "detail": "OLBG labels events 'Today' or 'Tomorrow' and shows clock times without stating the time zone. The darts clock times are therefore not source-confirmed.",
+      "source_urls": [
+        "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/15"
+      ]
+    },
+    {
+      "id": "FL-20",
+      "sport": "All",
+      "severity": "irregular",
+      "title": "Shared board COORDINATION.md has leftover conflict markers",
+      "detail": "The shared board contains six leftover merge-marker lines (for example '=======' and '>>>>>>> origin/main') at lines 3216, 3307, 3437, 3549, 3609 and 3628, from earlier merges. They sit in other sessions' sections, so this session did not edit them. Recommend a clean-up pass by the integration owner.",
+      "source_urls": [
+        "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md"
+      ]
+    }
+  ]
+}

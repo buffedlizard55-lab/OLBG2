@@ -42,7 +42,8 @@ class SourceToPriceRegressionTests(unittest.TestCase):
         finbarrs_margin = gaelic_points(scores[2]) - gaelic_points(scores[3])
         self.assertEqual((nemo_margin, finbarrs_margin), (2, 2))
         self.assertIn("margins +2 v +2 points", row["evidence"])
-        self.assertEqual(row["home_win_probability"], 0.5)
+        self.assertIsNone(row["home_win_probability"])  # three-way summary, not a two-way probability
+        self.assertEqual(row["favourite_probability"], 0.48)
         self.assertEqual(row["confidence"], "low")
         pick = self.picks["gaa-cork-psfc-pick"]
         self.assertEqual(pick["probability"], 0.48)  # 50% two-way strength less 4% draw mass
@@ -66,6 +67,25 @@ class SourceToPriceRegressionTests(unittest.TestCase):
                 continue
             self.assertTrue(any(f"event_id={event_id}" in url for url in event_urls),
                             f"{row['id']}: unsupported OLBG event id {event_id}")
+
+    def test_match_summary_is_the_actual_primary_selection(self):
+        for row in self.matches.values():
+            if row["status"] != "originated":
+                continue
+            primary = self.picks.get(f"{row['id']}-pick")
+            self.assertIsNotNone(primary, row["id"])
+            self.assertEqual(row["favourite"], primary["selection"], row["id"])
+            self.assertEqual(row["favourite_probability"], round(primary["probability"], 4), row["id"])
+            self.assertEqual(row["confidence"], primary["confidence"], row["id"])
+            if not row.get("away"):
+                self.assertIsNone(row["home_win_probability"], row["id"])
+
+    def test_outright_pages_do_not_render_a_phantom_opponent(self):
+        matches_html = (ROOT / "cadence" / "matches.html").read_text(encoding="utf-8")
+        predictions_html = (ROOT / "cadence" / "predictions.html").read_text(encoding="utf-8")
+        self.assertIn("<strong>Butterfield Bermuda Championship</strong>", matches_html)
+        self.assertNotIn("Butterfield Bermuda Championship v", matches_html)
+        self.assertNotIn("Formula 1 Drivers&#x27; Championship 2026 v", predictions_html)
 
 
 if __name__ == "__main__":

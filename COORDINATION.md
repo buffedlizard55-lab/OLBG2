@@ -3717,3 +3717,7 @@ No earlier data, prose or claimed verification is promoted without independently
 - Local validation: **493 tests passed** (467 existing + 26 monitor tests); **0 local link errors**, byte-identical 22-page monitor rebuild, evidence hashes and line arithmetic checked.
 - Shared-file takeover confined to claimed integration files; historical data and other sessions' source files untouched. Root now links the monitor prominently and collapses the historical dashboard.
 - Next: run hosted diagnostic/CI, review generated artifact, open and merge PR, confirm Pages deployment. Publication remains in progress.
+
+### Session `8226c94a` — concurrent integration resolution
+
+`git pull --rebase origin main` discovered PRs #140/#141 from `33e9eee7` after the initial claim. Stopped on conflicts. Preserved the full new main board and appended our claim; retained the Focus navigation link, README pointer, CI rebuild and drift paths. Regenerated root HTML from the combined builder instead of choosing either generated-page version. No `focus/**`, `data/focus/**`, `scripts/focus_*` or Focus tests changed. The published claim commit was rebased, so the next push uses an explicit lease against this session's own previously pushed commit, not a blind force push. PR #142 belongs to another active session and is not modified or merged here.

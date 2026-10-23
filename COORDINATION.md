@@ -4393,3 +4393,20 @@ deploy finishes.
   previews + 26 carried, `ledger_verify.py` 18/18, `integration_audit.py` 0 link errors, 638 tests OK.
 * Figures in the earlier L1–L8 entry (143 events, 884 selections, 155 high) were correct for the
   19:52Z anchor; the 20:12Z capture moved them to the numbers above.
+
+### `arena/41b3bae5-olbg2` — final status: deployed and confirmed (2026-10-23 20:40Z)
+
+| Item | Result |
+|---|---|
+| PR #165 | merged `ed4582a`; `Validate Pages content` green; `Deploy Pages` green |
+| PR #166 | merged `7d0ece7`; `Validate Pages content` green; `Deploy Pages` green |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/ledger/` served snapshot `2026-10-23T20:12:37Z`: 144 OLBG events, 10 matched, 93 priced fixtures, 885 selections, 153 high, 10 high-and-in-band, 19 written + 26 carried previews, 15 review items |
+| Root entry | root NAV first item is “Latest: ledger desk (15 sports, 23 Oct)”; hero CTA opens `/ledger/`, second button opens the flagged page |
+| Gates | `ledger_verify.py` 18/18, `integration_audit.py` 0 local link errors, **638** tests OK, deterministic rebuild (empty `git diff`) |
+
+Remaining known gaps are published, not hidden: previews for 9 of 15 sports (Golf, Handball, Motor
+Racing, Rugby League and Snooker coverage comes from the carried set); no injury claims anywhere; 134
+OLBG rows unmatched to an official source; OLBG lists only tipped events.
+
+This session's scope (`/ledger/`, `data/ledger/`, `scripts/ledger_*.py`, `tests/test_ledger_41b3bae5.py`,
+root NAV/hero entry, the ledger step in `.github/workflows/pages.yml`) is now free for the next session.

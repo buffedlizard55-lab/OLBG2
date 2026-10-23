@@ -3822,3 +3822,21 @@ Hosted branch validation run [39987045033](https://github.com/buffedlizard55-lab
 
 
 Integration follow-up: merged PR #142 from main without editing its `/desk/` data or builders. Board append conflict resolved by preserving all main history and this session’s complete records.
+
+### Session `8226c94a` — publication record and final handoff
+
+| Task | Final status | Evidence / result |
+|---|---|---|
+| Monitor, source ledger, fail-closed pricing, accessible 15-category UI | done | `monitor/**`, `scripts/monitor_*.py`, `tests/test_monitor.py`; independent raw/selected evidence distinctions preserved |
+| Selected official field audit and repository findings | done (partial audit, not exhaustive) | `research/monitor-8226c94a.md`, `data/monitor/seed.json`, `/monitor/sources.html` |
+| Exhaustive inventory, every market, 5 supported predictions per sport daily | needs review | Published M01–M10 and 15 sport coverage flags at `/monitor/flagged.html`; not silently marked complete |
+| Integration PR | done | [PR #145](https://github.com/buffedlizard55-lab/OLBG2/pull/145), MERGED 2026-10-23T16:32:10Z, merge `a2d6a71369406a956b41bd076834289fcf55db78` |
+| GitHub Pages | done, live | [Deploy Pages run 39987579199](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39987579199) SUCCESS, including validation, source collection and artifact deployment. Pages API status `built`, commit `a2d6a71369406a956b41bd076834289fcf55db78`. |
+| Live content check | done | Re-fetched root, `/monitor/`, `/monitor/flagged.html`; cache-busted `/monitor/index.html?audit=145` confirms the runtime artifact and automated attempt `2026-10-23T16:32:53Z`. `/data/monitor/runtime/latest.json` exists. |
+| Hosted source collection | needs review (limits published) | Diagnostic notices: 31 attempts, 1 official MLB fixture parsed, 0 usable OLBG links, 24 failures/error-page responses. Source retrieval is still partial. |
+
+**Important live/seed distinction:** the checked-in selected capture has 24 official fixture rows, 19 OLBG pairings and one experimental moneyline. The fresh runtime artifact retains 24 rows but replaces the MLB row without carrying forward unsupported OLBG/line fields: 18 pairings, zero originated matches, zero high-confidence picks. This conservative downgrade is intentional, not a new assertion of full verification. The source ledger explains the refresh; the seed remains available for audit.
+
+The repository's Pages settings are legacy mode; an API attempt to change build_type was denied (403). No credential requested or permission restriction bypassed. The custom deployment nonetheless completed successfully with explicit job permissions. Scheduled six-hour attempts are configured. Cached page responses can show the seed before the latest runtime artifact; the live cache-busted page was checked. No guarantees of future remote-source availability or 75 daily picks are made.
+
+**Concurrent work preserved:** Focus (#140/#141), Desk (#142), Covered (#144) are included from main without modifying their data/builders. Their claims are not independently re-certified by this session. The first merge flattening attempt from `git pull --rebase` was aborted without data loss; `git pull --rebase=merges` retained the actual shared merge history. Root, workflow and board conflicts were resolved without dropping any session's records.

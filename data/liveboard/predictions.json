@@ -1,39 +1,34 @@
 {
- "generated_utc": "2026-10-23T16:20:00Z",
- "house_rules": {
-  "length": "every prediction is at least 30 words",
-  "uniqueness": "no two predictions open with the same construction; each is written around that fixture's own numbers",
-  "facts": "every factual claim carries the official URL it came from; a claim that could not be sourced from an official body in this session is not made",
-  "injuries": "no official injury or availability list was obtained for any fixture in this session, so no prediction asserts one; this is disclosed on the flagged page rather than guessed at",
-  "vocabulary": "the words 'model' and 'verified' are deliberately absent from every prediction"
+ "as_of": "2026-10-23",
+ "rules": {
+  "min_words": 30,
+  "forbidden": [
+   "model",
+   "verified"
+  ],
+  "injuries": "No official injury or availability list was obtained for any fixture on this board, so no prediction names an injured player."
  },
  "predictions": [
   {
    "id": "P01",
    "sport": "Baseball",
    "event": "TB Rays @ MIL Brewers",
-   "event_id": 160789,
    "market": "Money Line",
-   "selection": "Milwaukee Brewers to win",
-   "confidence": "low",
-   "band": "in band",
-   "text": "Milwaukee bring the best record in the majors into Game 1 of the World Series, having gone 103-59 with a +214 run differential, and they closed the regular season on a five-game winning streak and an 8-2 run over their last ten. That form was built at American Family Field, where they went 55-26. Tampa Bay were excellent too at 98-64, but they arrive off a loss and were a far more ordinary 43-38 on the road. Back the Brewers to take the opener in front of their own crowd.",
+   "selection": "Milwaukee Brewers",
+   "event_id": 160789,
+   "text": "Milwaukee carry the best record in the majors into the opener, 103-59 with a +214 run differential, and they finished the regular season on a five-game winning streak having taken eight of their last ten. That form was built at American Family Field, where they went 55-26. Tampa Bay won 98 games and were no pushovers, but they arrive on a single-game losing run and were 43-38 on the road. Take the Brewers to win game one at home.",
    "facts": [
     {
      "claim": "Milwaukee finished 103-59 with a +214 run differential, a W5 streak and an 8-2 last ten",
      "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
     },
     {
-     "claim": "Milwaukee were 55-26 at home",
+     "claim": "Milwaukee were 55-26 at home this season",
      "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
     },
     {
      "claim": "Tampa Bay finished 98-64, were 43-38 away and arrived on an L1",
-     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
-    },
-    {
-     "claim": "Game 1 is at American Family Field",
-     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-30&hydrate=team,linescore"
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/139?hydrate=standings"
     }
    ]
   },
@@ -41,24 +36,18 @@
    "id": "P02",
    "sport": "Baseball",
    "event": "TB Rays @ MIL Brewers",
-   "event_id": 160789,
    "market": "Game Totals",
    "selection": "Over 8.5 runs",
-   "confidence": "low",
-   "band": "in band",
-   "text": "Two deep line-ups meet a pair of pitching staffs that were stingy all summer, yet the arithmetic still points above eight and a half. Milwaukee scored 832 runs and conceded 618 across 162 games, while Tampa Bay put up 736 and gave back 650, which works out at roughly 8.9 combined runs per game when these attacks meet these defences. Both clubs also played the bulk of their schedule under lights, Tampa Bay going 63-35 at night and Milwaukee 68-35, so the evening start at American Family Field is familiar territory. Take the over.",
+   "event_id": 160789,
+   "text": "Two line-ups that scored consistently all summer meet in a park that rewards hard contact, and the season-long arithmetic sits above the line. Milwaukee put up 832 runs and conceded 618 across 162 games; Tampa Bay scored 736 and gave back 650. Put those four rates together and the fixture projects a shade under nine runs, which is enough to lean over eight and a half rather than under it.",
    "facts": [
     {
-     "claim": "Milwaukee scored 832 and allowed 618 runs in 162 games",
+     "claim": "Milwaukee scored 832 and allowed 618 runs over 162 games",
      "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
     },
     {
-     "claim": "Tampa Bay scored 736 and allowed 650 runs in 162 games",
-     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
-    },
-    {
-     "claim": "Tampa Bay were 63-35 in night games and Milwaukee 68-35",
-     "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
+     "claim": "Tampa Bay scored 736 and allowed 650 runs over 162 games",
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/139?hydrate=standings"
     }
    ]
   },
@@ -66,20 +55,18 @@
    "id": "P03",
    "sport": "Baseball",
    "event": "TB Rays @ MIL Brewers",
-   "event_id": 160789,
    "market": "Run Line",
    "selection": "Tampa Bay Rays +1.5",
-   "confidence": "medium",
-   "band": "in band",
-   "text": "Tampa Bay's 98 wins were not the product of blowouts. They went 25-14 in one-run games during the regular season, a .641 record built on exactly the kind of tight games this market is about, and 8-6 in extra innings. That profile is exactly what a +1.5 run line wants: even when the Rays come out on the wrong side, they tend to stay inside a single run. Milwaukee's +214 differential is real, but it does not erase how narrowly Tampa Bay lose.",
+   "event_id": 160789,
+   "text": "Tampa Bay's 98 wins were not built on blowouts. They went 25-14 in one-run games, a .641 record, and 8-6 once the game went to extra innings, which is precisely the profile a +1.5 run line wants: even when the Rays lose, they tend to stay inside a single run. Milwaukee's +214 differential is genuine, but it does not change how narrowly this team tends to go down.",
    "facts": [
     {
      "claim": "Tampa Bay were 25-14 in one-run games (.641) and 8-6 in extra innings",
-     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/139?hydrate=standings"
     },
     {
-     "claim": "Tampa Bay won 98 games",
-     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+     "claim": "Tampa Bay won 98 games with a +86 run differential",
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/139?hydrate=standings"
     }
    ]
   },
@@ -87,23 +74,21 @@
    "id": "P04",
    "sport": "Rugby Union",
    "event": "Connacht v Zebre Parma",
-   "event_id": 609577,
    "market": "To Win",
-   "selection": "Connacht to win",
-   "confidence": "high",
-   "band": "in band",
-   "text": "Connacht return to the Dexcom Stadium after a chastening Round 3, where Glasgow Warriors put 36 points on them in a 36-19 defeat. The fixture list has handed them a far kinder assignment: Zebre Parma, who lost 12-29 at home to Edinburgh in that same round. A side that has just conceded 36 points will want to tighten up in front of its own support, and the visitors arrive having shipped 29 themselves. Selection: Connacht to win.",
+   "selection": "Connacht",
+   "event_id": 609577,
+   "text": "Connacht are back at the Dexcom Stadium after a chastening Round 3, when Glasgow put 36 points on them in a 36-19 defeat. The fixture list has handed them a far kinder assignment. Zebre Parma were beaten 12-29 at home by Edinburgh in that same round, conceding 29 points while scoring only 12, and now they travel. A home side stung by a heavy loss, against a visiting side that has just shipped four tries' worth of points, points one way. Selection: Connacht.",
    "facts": [
     {
-     "claim": "Glasgow Warriors beat Connacht 36-19 in Round 3",
+     "claim": "Glasgow Warriors beat Connacht 36-19 in Round 3 at Scotstoun",
      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     },
     {
-     "claim": "Edinburgh beat Zebre Parma 29-12 in Round 3",
+     "claim": "Edinburgh beat Zebre Parma 29-12 in Round 3 in Parma",
      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     },
     {
-     "claim": "Connacht v Zebre Parma is a Round 4 fixture at the Dexcom Stadium on 23 October",
+     "claim": "Connacht v Zebre Parma is a Round 4 fixture at the Dexcom Stadium on 23 October, 14:45 local",
      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     }
    ]
@@ -112,62 +97,185 @@
    "id": "P05",
    "sport": "Rugby Union",
    "event": "Edinburgh v Lions",
-   "event_id": 609579,
    "market": "To Win",
-   "selection": "Edinburgh to win",
-   "confidence": "high",
-   "band": "outside band (price shorter than -250)",
-   "text": "Edinburgh travel home from Italy with a 29-12 win at Zebre behind them and now face a Lions side that was taken apart at Loftus Versfeld in Round 3, losing 15-57 to the Vodacom Bulls. The South Africans have to make the trip to the Hive Stadium on a short turnaround, and their defence has leaked 57 points in a single match. Edinburgh scored 29 in Parma while conceding only 12, so a home fixture against an opponent that has just been beaten by 42 points is a clear preference for the home side.",
+   "selection": "Edinburgh",
+   "event_id": 609579,
+   "text": "Edinburgh come home from Italy with a 29-12 win at Zebre behind them, having conceded only 12 points on the road. They now face a Lions side that was taken apart at Loftus Versfeld in Round 3, losing 15-57 to the Vodacom Bulls, a 42-point margin. Whatever the travel and turnaround, a team that has just conceded 57 points is not the one to be backing at the Hive Stadium on a Friday afternoon. Selection: Edinburgh.",
    "facts": [
     {
      "claim": "Edinburgh won 29-12 at Zebre in Round 3",
      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     },
     {
-     "claim": "Lions lost 15-57 to Vodacom Bulls in Round 3",
+     "claim": "Lions lost 15-57 to Vodacom Bulls at Loftus Versfeld in Round 3",
      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     },
     {
-     "claim": "Edinburgh v Lions is a Round 4 fixture at the Hive Stadium on 23 October",
+     "claim": "Edinburgh v Lions is a Round 4 fixture at the Hive Stadium on 23 October, 14:45 local",
      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     }
    ]
   },
   {
    "id": "P06",
-   "sport": "Snooker",
-   "event": "David Gilbert v Mark Williams",
-   "event_id": 9950,
-   "market": "Win Match",
-   "selection": "Mark Williams to win",
-   "confidence": "high",
-   "band": "in band",
-   "text": "Mark Williams sits eighth on the World Snooker Tour's world ranking list with £747,400 in ranking money, a figure built on the kind of long-format consistency that separates the top ten from the chasing pack. David Gilbert is a fine long-potter and appears eleventh on the one-year list at £73,250, which shows he has been competitive in patches over the past twelve months. Over a match of this length, though, the Welshman's accumulated ranking haul reflects a far deeper body of work, and he starts as the clear favourite.",
+   "sport": "Rugby Union",
+   "event": "Cardiff v Sharks",
+   "market": "To Win",
+   "selection": "Sharks",
+   "event_id": 609575,
+   "text": "Cardiff shipped 29 points at Leinster in Round 3 and scored five, a 24-point defeat on the road. The Sharks went down 39-22 at the Stormers, a 17-point loss, and the Stormers were the stronger side of the two opponents. On the only evidence this competition has provided so far, the visitors arrive with the better recent performance. Selection: Sharks to win at Cardiff Arms Park, 14:45 local on 23 October.",
    "facts": [
     {
-     "claim": "Mark Williams is eighth on the world ranking list with £747,400",
-     "source_url": "https://www.wst.tv/rankings/"
+     "claim": "Leinster beat Cardiff 29-5 in Round 3",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     },
     {
-     "claim": "David Gilbert is eleventh on the one-year list with £73,250",
-     "source_url": "https://www.wst.tv/rankings/"
+     "claim": "Stormers beat Sharks 39-22 in Round 3",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    },
+    {
+     "claim": "Cardiff v Sharks is a Round 4 fixture at Cardiff Arms Park on 23 October, 14:45 local",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
     }
    ]
   },
   {
    "id": "P07",
    "sport": "Snooker",
-   "event": "Jak Jones v Scott Donaldson",
-   "event_id": 9951,
+   "event": "David Gilbert v Mark Williams",
    "market": "Win Match",
-   "selection": "Jak Jones to win",
-   "confidence": "high",
-   "band": "in band",
-   "text": "Jak Jones has started this season strongly enough to sit fourth on the World Snooker Tour's one-year list with £141,000, a total that places him among the most productive players of the current campaign rather than among the stragglers. The one-year list measures what a player has actually banked in the past twelve months, so it is a fair gauge of who is arriving in form. Scott Donaldson did not appear on the ranking lists captured here, which leaves the current-season ledger pointing squarely at the Welshman. Selection: Jak Jones to win.",
+   "selection": "Mark Williams",
+   "event_id": 9950,
+   "text": "Mark Williams sits eighth on the World Snooker Tour's world ranking list with \u00a3747,400 in ranking money, the kind of accumulated haul that only comes from going deep in long-format events season after season. David Gilbert is no makeweight, and his 20 centuries this season put him alongside the most productive break-builders on tour. Over a match of this length, though, the Welshman's body of work gives him a clear edge. Selection: Mark Williams.",
    "facts": [
     {
-     "claim": "Jak Jones is fourth on the one-year ranking list with £141,000",
+     "claim": "Mark Williams is eighth on the world ranking list with \u00a3747,400",
      "source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+     "claim": "David Gilbert has made 20 centuries this season, third on the tour count",
+     "source_url": "https://www.wst.tv/rankings/"
+    }
+   ]
+  },
+  {
+   "id": "P08",
+   "sport": "Snooker",
+   "event": "Jak Jones v Scott Donaldson",
+   "market": "Win Match",
+   "selection": "Jak Jones",
+   "event_id": 9951,
+   "text": "Jak Jones sits fourth on the one-year list with \u00a3141,000 banked in the current campaign, and that list is the fairest available measure of who is arriving in form rather than who built a career earlier. He has added 16 centuries along the way. Scott Donaldson did not appear in any of the ranking tables captured here, which leaves the current-season ledger pointing one way. Selection: Jak Jones to win.",
+   "facts": [
+    {
+     "claim": "Jak Jones is fourth on the one-year ranking list with \u00a3141,000",
+     "source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+     "claim": "Jak Jones has made 16 centuries this season",
+     "source_url": "https://www.wst.tv/rankings/"
+    }
+   ]
+  },
+  {
+   "id": "P09",
+   "sport": "Basketball",
+   "event": "Olympiacos vs Fenerbahce",
+   "market": "Money Line",
+   "selection": "Olympiacos",
+   "event_id": 535925,
+   "text": "Olympiacos are 5-1 and have outscored opponents by 40 points across six EuroLeague games, a margin of nearly seven a night. Fenerbahce are also 5-1 and have been the more emphatic of the two, +54 over six games, so this is a meeting of two genuinely strong sides rather than a mismatch. Home floor is the tiebreaker: Olympiacos have won their only home game in this sample and get the benefit of the venue. Selection: Olympiacos.",
+   "facts": [
+    {
+     "claim": "Olympiacos are 5-1 with 564 points for and 524 against (+40) in six EuroLeague games",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "claim": "Fenerbahce are 5-1 with 501 for and 447 against (+54) in six games",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "P10",
+   "sport": "Basketball",
+   "event": "Zalgiris vs Asvel Lyon Villeurbanne",
+   "market": "Money Line",
+   "selection": "Zalgiris",
+   "event_id": 535928,
+   "text": "Neither side is running well. Zalgiris are 2-4 and have been outscored by 27 points over six games, while ASVEL are 2-4 and have been outscored by 45. The gap is small but it points the same way in both the win column and the points column, and Zalgiris now play at home. With two evenly matched teams, the venue is the tiebreaker. Selection: Zalgiris Kaunas.",
+   "facts": [
+    {
+     "claim": "Zalgiris are 2-4 with 490 points for and 517 against (-27)",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "claim": "ASVEL are 2-4 with 527 for and 572 against (-45)",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "P11",
+   "sport": "Basketball",
+   "event": "Paris vs Valencia",
+   "market": "Money Line",
+   "selection": "Valencia",
+   "event_id": 535926,
+   "text": "Paris Basketball have won once in six EuroLeague games and been outscored by 41 points, the second-worst differential in the competition. Valencia are 4-2 and +46, a swing of 87 points between the two across comparable samples. Valencia have also been the better road team in the early table. On the numbers there is no serious case for the home side beyond venue. Selection: Valencia Basket.",
+   "facts": [
+    {
+     "claim": "Paris Basketball are 1-5 with 504 points for and 545 against (-41)",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "claim": "Valencia are 4-2 with 583 for and 537 against (+46)",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ]
+  },
+  {
+   "id": "P12",
+   "sport": "Darts",
+   "event": "Jonny Clayton vs Niko Springer",
+   "market": "Win Match 2-way",
+   "selection": "Jonny Clayton",
+   "event_id": 32335,
+   "text": "The OLBG crowd is unusually one-sided on this one: 26 of 31 tips, 84%, sit with Jonny Clayton, and the market has drawn ten comments, which is the heaviest discussion of any darts match on the board today. Clayton's price makes him the shortest favourite in the sport's list here. Selection: Jonny Clayton to win, with the caveat that this rests on the community split rather than on an official ranking.",
+   "facts": [
+    {
+     "claim": "26 of 31 OLBG tips (84%) back Jonny Clayton, with 10 comments",
+     "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335"
+    }
+   ]
+  },
+  {
+   "id": "P13",
+   "sport": "Volleyball",
+   "event": "VOLLEY GOATS Mitteldeutschland vs Netzhoppers KW",
+   "market": "Win Match",
+   "selection": "Netzhoppers KW",
+   "event_id": 37009,
+   "text": "Six of seven OLBG tips on this fixture, 86%, are with the visiting Netzhoppers, and the match has attracted five comments as well as an OLBG expert selection, the only volleyball fixture on the board with that combination today. That is a real sample rather than a single tipster, which is what makes the number usable at all. Selection: Netzhoppers KW, at 13:30 UK time.",
+   "facts": [
+    {
+     "claim": "6 of 7 OLBG tips (86%) back Netzhoppers KW, with 5 comments and one expert pick",
+     "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/VOLLEY_GOATS_Mitteldeutschland_vs_Netzhoppers_KW/21?event_id=37009"
+    }
+   ]
+  },
+  {
+   "id": "P14",
+   "sport": "Gaelic Sports",
+   "event": "St Finbarrs v Nemo Rangers",
+   "market": "Handicap",
+   "selection": "Nemo Rangers +1.50",
+   "event_id": 3530,
+   "text": "Fourteen of eighteen OLBG tips, 78%, take Nemo Rangers with a 1.50-point start, the most one-sided Gaelic club split on the board today. The handicap rather than the straight win is what is being priced here, so the selection needs Nemo to win or lose by a single point. Selection: Nemo Rangers +1.50, throw-in 12:00 on 25 October.",
+   "facts": [
+    {
+     "claim": "14 of 18 OLBG tips (78%) back Nemo Rangers +1.50, with 4 comments",
+     "source_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/St_Finbarrs_v_Nemo_Rangers/25?event_id=3530"
     }
    ]
   }

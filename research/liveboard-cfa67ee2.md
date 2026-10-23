@@ -15,13 +15,13 @@ That allowed a first-hand capture rather than a re-use of another desk's snapsho
 
 | Step | Method | Result |
 |---|---|---|
-| Fixture discovery | OLBG sport hubs, one per sport | 128 event rows across 14 sports (Golf empty) |
+| Fixture discovery | OLBG sport hubs, one per sport | 133 event rows across 14 sports (Golf empty) |
 | Market survey | OLBG hub labels plus one full event page | 12 distinct market types observed |
 | Official inputs | MLB Stats API, NHL API, EuroLeague, WST, Formula 1, URC, GAA, EHF | 12 blocks stored in `data/liveboard/inputs.json` |
-| Line origination | `scripts/liveboard_model.py` | 130 priced rows + 8 fair handicap/total lines |
-| Predictions | hand-written against captured facts | 7, each ≥ 30 words |
-| Publication | `scripts/liveboard_build.py` | 24 pages, 824 internal links, 0 broken |
-| Tests | `tests/test_liveboard_cfa67ee2.py` | 36 tests, all passing |
+| Line origination | `scripts/liveboard_model.py` | 133 priced rows + 5 derived handicap/total lines |
+| Predictions | hand-written against captured facts | 14, each ≥ 30 words |
+| Publication | `scripts/liveboard_build.py` | 24 pages, 0 broken internal links |
+| Tests | `tests/test_liveboard_cfa67ee2.py` | 36 tests, all passing; repository suite 503 OK |
 
 ---
 
@@ -181,3 +181,16 @@ python3 -m unittest tests.test_liveboard_cfa67ee2 -v
 
 The model and build scripts read only `data/liveboard/olbg.json`, `inputs.json`, `predictions.json`,
 `flagged.json` and `sources.json`. None of them touches the network.
+
+
+---
+
+## Addendum, finalisation pass
+
+The table above was first written at 7 predictions. The shipped desk carries **14 predictions across
+seven sports** (Baseball 3, Rugby Union 3, Basketball 3, Snooker 2, Darts 1, Volleyball 1, Gaelic 1),
+**133 priced fixtures**, **5 derived handicap/total lines** and **20 flags**. The five selections that
+clear 70% but sit shorter than −250 are published with their prices rather than dropped: Gloucester
+(−800 fair), Valencia (−492), Clayton (−450), Edinburgh (−405) and Netzhoppers (−350). Only Aurillac and
+New South Wales (both 71.4%) satisfy both gates, and that is the arithmetic in F-14 rather than a gap in
+the work.

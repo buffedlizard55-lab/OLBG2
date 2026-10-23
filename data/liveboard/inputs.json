@@ -1,162 +1,142 @@
 {
-  "captured_utc": "2026-10-23T16:20:00Z",
-  "rule": "Only numbers returned by an official governing-body / league endpoint in this session are stored here. Every block carries the URL it was read from. Nothing is inferred or copied from a secondary site.",
+  "fetched_utc": "2026-10-23T16:35:00Z",
+  "rule": "Only numbers read directly from a governing body or official league page are stored here. Each block carries one URL. Nothing is estimated, interpolated or carried over from another desk.",
   "blocks": [
     {
-      "id": "MLB-STANDINGS-TB",
+      "id": "MLB-MIL-2026",
       "sport": "Baseball",
-      "subject": "Tampa Bay Rays (team id 139)",
-      "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
-      "source_name": "MLB Stats API (official)",
-      "fields": {"wins": 98, "losses": 64, "pct": ".605", "runsScored": 736, "runsAllowed": 650, "runDifferential": 86, "streak": "L1", "lastTen": "5-5", "home": "55-26", "away": "43-38", "divisionRank": "1", "clinched": true}
+      "subject": "Milwaukee Brewers",
+      "url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings",
+      "values": {
+        "wins": 103, "losses": 59, "pct": 0.636,
+        "runs_scored": 832, "runs_allowed": 618, "run_differential": 214,
+        "home": "55-26", "away": "48-33", "last_ten": "8-2", "streak": "W5",
+        "one_run": "27-20", "extra_innings": "11-5", "day": "35-24", "night": "68-35",
+        "division_rank": 1, "clinch": "z", "venue": "American Family Field"
+      }
     },
     {
-      "id": "MLB-STANDINGS-MIL",
+      "id": "MLB-TB-2026",
       "sport": "Baseball",
-      "subject": "Milwaukee Brewers (team id 158)",
-      "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings",
-      "source_name": "MLB Stats API (official)",
-      "fields": {"wins": 103, "losses": 59, "pct": ".636", "runsScored": 832, "runsAllowed": 618, "runDifferential": 214, "streak": "W5", "lastTen": "8-2", "home": "55-26", "away": "48-33", "divisionRank": "1", "clinched": true}
+      "subject": "Tampa Bay Rays",
+      "url": "https://statsapi.mlb.com/api/v1/teams/139?hydrate=standings",
+      "values": {
+        "wins": 98, "losses": 64, "pct": 0.605,
+        "runs_scored": 736, "runs_allowed": 650, "run_differential": 86,
+        "home": "55-26", "away": "43-38", "last_ten": "5-5", "streak": "L1",
+        "one_run": "25-14", "extra_innings": "8-6", "day": "35-29", "night": "63-35",
+        "division_rank": 1, "clinch": "z", "venue": "Tropicana Field"
+      }
     },
     {
-      "id": "MLB-WS-SCHEDULE",
-      "sport": "Baseball",
-      "subject": "2026 World Series, Tampa Bay Rays vs Milwaukee Brewers",
-      "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-30&hydrate=team,linescore",
-      "source_name": "MLB Stats API (official)",
-      "fixtures": [
-        {"gamePk": 849805, "date": "2026-10-23", "start_utc": "2026-10-24T00:00:00Z", "away": "Tampa Bay Rays", "home": "Milwaukee Brewers", "venue": "American Family Field", "description": "World Series Game 1"},
-        {"gamePk": 849802, "date": "2026-10-24", "start_utc": "2026-10-25T00:00:00Z", "away": "Tampa Bay Rays", "home": "Milwaukee Brewers", "venue": "American Family Field", "description": "World Series Game 2"},
-        {"gamePk": 849804, "date": "2026-10-26", "start_utc": "2026-10-27T00:00:00Z", "away": "Milwaukee Brewers", "home": "Tampa Bay Rays", "venue": "Tropicana Field", "description": "World Series Game 3"}
-      ]
-    },
-    {
-      "id": "NHL-SCHEDULE-2324",
-      "sport": "Ice Hockey",
-      "subject": "NHL games 2026-10-23 (2 games) and the 2026-10-24 card",
-      "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
-      "source_name": "NHL API (official)",
-      "fixtures": [
-        {"gameId": 2026020166, "date": "2026-10-23", "start_utc": "2026-10-24T00:00:00Z", "away": "MTL Canadiens", "home": "CHI Blackhawks", "venue": "United Center", "gameState": "FUT"},
-        {"gameId": 2026020167, "date": "2026-10-23", "start_utc": "2026-10-24T01:00:00Z", "away": "TBL Lightning", "home": "COL Avalanche", "venue": "Ball Arena", "gameState": "FUT"}
-      ],
-      "published_odds_moneyline": {
-        "2026020166": {"MTL": ["-170", "-170", "-162"], "CHI": ["+138", "+142", "+134"]},
-        "2026020167": {"TBL": ["+105", "+106", "+105"], "COL": ["-129", "-128", "-125"]}
-      },
-      "odds_note": "The NHL's own schedule endpoint returns a moneyline for each club from several providers. These are the official feed's published prices, read first-hand; they are used here as the market input for the two NHL games because the NHL does not return club win-loss records on this endpoint."
-    },
-    {
-      "id": "NHL-RECENT-RESULTS",
-      "sport": "Ice Hockey",
-      "subject": "Recent completed NHL games returned in the same scoreboard feed",
-      "source_url": "https://api-web.nhle.com/v1/scoreboard/2026-10-23",
-      "source_name": "NHL API (official)",
-      "results": [
-        {"date": "2026-10-20", "away": "SJS", "away_score": 4, "home": "MTL", "home_score": 3, "period": "OT"},
-        {"date": "2026-10-20", "away": "COL", "away_score": 3, "home": "NJD", "home_score": 4, "period": "REG"}
-      ]
-    },
-    {
-      "id": "EL-STANDINGS",
+      "id": "EUROLEAGUE-2026-27",
       "sport": "Basketball",
-      "subject": "EuroLeague 2026-27 regular season standings",
-      "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-      "source_name": "EuroLeague Basketball (official)",
-      "teams": {
-        "Panathinaikos AKTOR Athens": {"gp": 7, "w": 6, "l": 1, "pts_plus": 613, "pts_minus": 517, "diff": 96, "l10": "6-1"},
-        "Fenerbahce Tarfin Istanbul": {"gp": 6, "w": 5, "l": 1, "pts_plus": 501, "pts_minus": 447, "diff": 54, "l10": "5-1"},
-        "Olympiacos Piraeus": {"gp": 6, "w": 5, "l": 1, "pts_plus": 564, "pts_minus": 524, "diff": 40, "l10": "5-1"},
-        "Hapoel IBI Tel Aviv": {"gp": 7, "w": 5, "l": 2, "pts_plus": 630, "pts_minus": 601, "diff": 29, "l10": "5-2"},
-        "Dubai Basketball": {"gp": 7, "w": 5, "l": 2, "pts_plus": 597, "pts_minus": 584, "diff": 13, "l10": "5-2"},
-        "Valencia Basket": {"gp": 6, "w": 4, "l": 2, "pts_plus": 583, "pts_minus": 537, "diff": 46, "l10": "4-2"},
-        "Real Madrid": {"gp": 7, "w": 4, "l": 3, "pts_plus": 667, "pts_minus": 630, "diff": 37, "l10": "4-3"},
-        "Crvena Zvezda Meridianbet Belgrade": {"gp": 7, "w": 4, "l": 3, "pts_plus": 560, "pts_minus": 532, "diff": 28, "l10": "4-3"},
-        "FC Barcelona": {"gp": 7, "w": 4, "l": 3, "pts_plus": 623, "pts_minus": 606, "diff": 17, "l10": "4-3"},
-        "Virtus Bologna": {"gp": 7, "w": 4, "l": 3, "pts_plus": 606, "pts_minus": 608, "diff": -2, "l10": "4-3"},
-        "Partizan Mozzart Bet Belgrade": {"gp": 7, "w": 4, "l": 3, "pts_plus": 541, "pts_minus": 546, "diff": -5, "l10": "4-3"},
-        "Anadolu Efes Istanbul": {"gp": 7, "w": 3, "l": 4, "pts_plus": 581, "pts_minus": 590, "diff": -9, "l10": "3-4"},
-        "Besiktas Istanbul": {"gp": 7, "w": 3, "l": 4, "pts_plus": 634, "pts_minus": 644, "diff": -10, "l10": "3-4"},
-        "Zalgiris Kaunas": {"gp": 6, "w": 2, "l": 4, "pts_plus": 490, "pts_minus": 517, "diff": -27, "l10": "2-4"},
-        "LDLC ASVEL Villeurbanne": {"gp": 6, "w": 2, "l": 4, "pts_plus": 527, "pts_minus": 572, "diff": -45, "l10": "2-4"},
-        "Maccabi Rapyd Tel Aviv": {"gp": 7, "w": 2, "l": 5, "pts_plus": 608, "pts_minus": 653, "diff": -45, "l10": "2-5"},
-        "FC Bayern Munich": {"gp": 7, "w": 2, "l": 5, "pts_plus": 612, "pts_minus": 659, "diff": -47, "l10": "2-5"},
-        "Paris Basketball": {"gp": 6, "w": 1, "l": 5, "pts_plus": 504, "pts_minus": 545, "diff": -41, "l10": "1-5"},
-        "Armani Olimpia Milan": {"gp": 7, "w": 1, "l": 6, "pts_plus": 585, "pts_minus": 648, "diff": -63, "l10": "1-6"},
-        "Kosner Baskonia Vitoria-Gasteiz": {"gp": 7, "w": 1, "l": 6, "pts_plus": 583, "pts_minus": 649, "diff": -66, "l10": "1-6"}
+      "subject": "EuroLeague regular season table",
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+      "values": {
+        "PAO": {"club": "Panathinaikos AKTOR Athens", "gp": 7, "w": 6, "l": 1, "pf": 613, "pa": 517},
+        "FBT": {"club": "Fenerbahce Tarfin Istanbul", "gp": 6, "w": 5, "l": 1, "pf": 501, "pa": 447},
+        "OLY": {"club": "Olympiacos Piraeus", "gp": 6, "w": 5, "l": 1, "pf": 564, "pa": 524},
+        "HTA": {"club": "Hapoel IBI Tel Aviv", "gp": 7, "w": 5, "l": 2, "pf": 630, "pa": 601},
+        "DUB": {"club": "Dubai Basketball", "gp": 7, "w": 5, "l": 2, "pf": 597, "pa": 584},
+        "VBC": {"club": "Valencia Basket", "gp": 6, "w": 4, "l": 2, "pf": 583, "pa": 537},
+        "RMB": {"club": "Real Madrid", "gp": 7, "w": 4, "l": 3, "pf": 667, "pa": 630},
+        "CZV": {"club": "Crvena Zvezda Meridianbet Belgrade", "gp": 7, "w": 4, "l": 3, "pf": 560, "pa": 532},
+        "BAR": {"club": "FC Barcelona", "gp": 7, "w": 4, "l": 3, "pf": 623, "pa": 606},
+        "VIR": {"club": "Virtus Bologna", "gp": 7, "w": 4, "l": 3, "pf": 606, "pa": 608},
+        "PAR": {"club": "Partizan Mozzart Bet Belgrade", "gp": 7, "w": 4, "l": 3, "pf": 541, "pa": 546},
+        "EFS": {"club": "Anadolu Efes Istanbul", "gp": 7, "w": 3, "l": 4, "pf": 581, "pa": 590},
+        "BJK": {"club": "Besiktas Istanbul", "gp": 7, "w": 3, "l": 4, "pf": 634, "pa": 644},
+        "ZAL": {"club": "Zalgiris Kaunas", "gp": 6, "w": 2, "l": 4, "pf": 490, "pa": 517},
+        "ASV": {"club": "LDLC ASVEL Villeurbanne", "gp": 6, "w": 2, "l": 4, "pf": 527, "pa": 572},
+        "MTA": {"club": "Maccabi Rapyd Tel Aviv", "gp": 7, "w": 2, "l": 5, "pf": 608, "pa": 653},
+        "BAY": {"club": "FC Bayern Munich", "gp": 7, "w": 2, "l": 5, "pf": 612, "pa": 659},
+        "PBB": {"club": "Paris Basketball", "gp": 6, "w": 1, "l": 5, "pf": 504, "pa": 545},
+        "MIL": {"club": "Armani Olimpia Milan", "gp": 7, "w": 1, "l": 6, "pf": 585, "pa": 648},
+        "KBA": {"club": "Kosner Baskonia Vitoria-Gasteiz", "gp": 7, "w": 1, "l": 6, "pf": 583, "pa": 649}
       }
     },
     {
-      "id": "F1-DRIVERS-2026",
-      "sport": "Motor Racing",
-      "subject": "2026 FIA Formula One World Championship drivers' standings",
-      "source_url": "https://www.formula1.com/en/results/2026/drivers",
-      "source_name": "Formula 1 (official)",
-      "drivers": [
-        {"pos": 1, "driver": "Kimi Antonelli", "code": "ANT", "team": "Mercedes", "points": 340},
-        {"pos": 2, "driver": "George Russell", "code": "RUS", "team": "Mercedes", "points": 238},
-        {"pos": 3, "driver": "Lewis Hamilton", "code": "HAM", "team": "Ferrari", "points": 229},
-        {"pos": 4, "driver": "Max Verstappen", "code": "VER", "team": "Red Bull Racing", "points": 221},
-        {"pos": 5, "driver": "Charles Leclerc", "code": "LEC", "team": "Ferrari", "points": 215},
-        {"pos": 6, "driver": "Lando Norris", "code": "NOR", "team": "McLaren", "points": 201},
-        {"pos": 7, "driver": "Oscar Piastri", "code": "PIA", "team": "McLaren", "points": 138},
-        {"pos": 8, "driver": "Isack Hadjar", "code": "HAD", "team": "Red Bull Racing", "points": 97}
-      ]
-    },
-    {
-      "id": "WST-RANKINGS",
+      "id": "WST-WORLD-RANKING",
       "sport": "Snooker",
-      "subject": "World Snooker Tour rankings",
-      "source_url": "https://www.wst.tv/rankings/",
-      "source_name": "World Snooker Tour (official)",
-      "world": {
-        "Zhao Xintong": 1265550, "Wu Yize": 1238900, "Judd Trump": 1114050, "Neil Robertson": 1100200,
-        "Mark Selby": 1070500, "John Higgins": 905000, "Shaun Murphy": 897350, "Mark Williams": 747400,
-        "Kyren Wilson": 716800, "Barry Hawkins": 670050, "Chris Wakelin": 576550
-      },
-      "one_year": {
-        "Mark Selby": 348350, "Chang Bingyu": 207100, "Wu Yize": 204000, "Jak Jones": 141000,
-        "Ali Carter": 134750, "Noppon Saengkham": 118500, "Yuan Sijun": 102500, "Judd Trump": 89700,
-        "Zhao Xintong": 89000, "Shaun Murphy": 79350, "David Gilbert": 73250
-      }
-    },
-    {
-      "id": "URC-R4",
-      "sport": "Rugby Union",
-      "subject": "United Rugby Championship 2026-27 Round 4 fixtures (Fri 23 Oct 2026) and Round 3 results",
-      "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
-      "source_name": "United Rugby Championship (official)",
-      "fixtures": [
-        {"home": "Cardiff Rugby", "away": "Hollywoodbets Sharks", "date": "2026-10-23", "local_time": "14:45", "venue": "Cardiff Arms Park"},
-        {"home": "Connacht", "away": "Zebre Parma", "date": "2026-10-23", "local_time": "14:45", "venue": "Dexcom Stadium"},
-        {"home": "Edinburgh", "away": "10bet Lions", "date": "2026-10-23", "local_time": "14:45", "venue": "Hive Stadium"}
-      ],
-      "round3_results": [
-        {"home": "Glasgow Warriors", "home_score": 36, "away": "Connacht", "away_score": 19},
-        {"home": "Dragons", "home_score": 31, "away": "Ospreys", "away_score": 38},
-        {"home": "Vodacom Bulls", "home_score": 57, "away": "Lions", "away_score": 15},
-        {"home": "DHL Stormers", "home_score": 39, "away": "Hollywoodbets Sharks", "away_score": 22},
-        {"home": "Zebre Parma", "home_score": 12, "away": "Edinburgh", "away_score": 29},
-        {"home": "Scarlets", "home_score": 27, "away": "Benetton", "away_score": 26},
-        {"home": "Ulster", "home_score": 26, "away": "Munster", "away_score": 26},
-        {"home": "Leinster", "home_score": 29, "away": "Cardiff Rugby", "away_score": 5}
+      "subject": "Johnstone's Paint World Rankings",
+      "url": "https://www.wst.tv/rankings/",
+      "values": [
+        {"rank": 1, "player": "Zhao Xintong", "money": 1265550},
+        {"rank": 2, "player": "Wu Yize", "money": 1238900},
+        {"rank": 3, "player": "Judd Trump", "money": 1114050},
+        {"rank": 4, "player": "Neil Robertson", "money": 1100200},
+        {"rank": 5, "player": "Mark Selby", "money": 1070500},
+        {"rank": 6, "player": "John Higgins", "money": 905000},
+        {"rank": 7, "player": "Shaun Murphy", "money": 897350},
+        {"rank": 8, "player": "Mark Williams", "money": 747400},
+        {"rank": 9, "player": "Kyren Wilson", "money": 716800},
+        {"rank": 10, "player": "Barry Hawkins", "money": 670050},
+        {"rank": 11, "player": "Chris Wakelin", "money": 576550}
       ]
     },
     {
-      "id": "GAA-FIXTURES",
-      "sport": "Gaelic Sports",
-      "subject": "GAA national fixture list, October 2026",
-      "source_url": "https://www.gaa.ie/fixtures-results",
-      "source_name": "GAA (official)",
-      "finding": "The national fixtures page listed only one October fixture at capture time: Ireland v Scotland, Shinty-Hurling International, Sat 24 Oct, 18:00, SuperValu Páirc Uí Chaoimh. No club Gaelic football fixture matching the OLBG card was published on this page, so the OLBG club fixtures could not be corroborated from the national body."
+      "id": "WST-ONE-YEAR",
+      "sport": "Snooker",
+      "subject": "One Year List",
+      "url": "https://www.wst.tv/rankings/",
+      "values": [
+        {"rank": 1, "player": "Mark Selby", "money": 348350},
+        {"rank": 2, "player": "Chang Bingyu", "money": 207100},
+        {"rank": 3, "player": "Wu Yize", "money": 204000},
+        {"rank": 4, "player": "Jak Jones", "money": 141000},
+        {"rank": 5, "player": "Ali Carter", "money": 134750},
+        {"rank": 6, "player": "Noppon Saengkham", "money": 118500},
+        {"rank": 7, "player": "Yuan Sijun", "money": 102500},
+        {"rank": 8, "player": "Judd Trump", "money": 89700},
+        {"rank": 9, "player": "Zhao Xintong", "money": 89000},
+        {"rank": 10, "player": "Shaun Murphy", "money": 79350},
+        {"rank": 11, "player": "David Gilbert", "money": 73250}
+      ]
     },
     {
-      "id": "EHF-CL",
-      "sport": "Handball",
-      "subject": "EHF Champions League Men 2026/27",
-      "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
-      "source_name": "European Handball Federation (official)",
-      "finding": "The EHF Champions League calendar for the capture window lists fixtures on 28 and 29 October 2026 (e.g. Orlen Wisla Plock v HBC Nantes, FC Porto v One Veszprém HC, Paris Saint-Germain v Aalborg Håndbold). None of the domestic-league handball fixtures on OLBG's hub appear on this EHF list, and no domestic-league table was read, so no handball fixture has an official input."
+      "id": "WST-CENTURIES",
+      "sport": "Snooker",
+      "subject": "Centuries Count (season)",
+      "url": "https://www.wst.tv/rankings/",
+      "values": [
+        {"rank": 1, "player": "Zhao Xintong", "centuries": 25},
+        {"rank": 2, "player": "Wu Yize", "centuries": 20},
+        {"rank": 3, "player": "David Gilbert", "centuries": 20},
+        {"rank": 4, "player": "Chang Bingyu", "centuries": 20},
+        {"rank": 5, "player": "Mark Selby", "centuries": 19},
+        {"rank": 6, "player": "Judd Trump", "centuries": 17},
+        {"rank": 7, "player": "Jak Jones", "centuries": 16},
+        {"rank": 8, "player": "Liam Highfield", "centuries": 16},
+        {"rank": 9, "player": "Zhang Anda", "centuries": 15}
+      ]
+    },
+    {
+      "id": "URC-R3-RESULTS",
+      "sport": "Rugby Union",
+      "subject": "United Rugby Championship Round 3 results",
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "values": [
+        {"home": "Glasgow Warriors", "away": "Connacht", "score": "36-19", "venue": "Scotstoun Stadium", "date": "2026-10-09"},
+        {"home": "Dragons", "away": "Ospreys", "score": "31-38", "venue": "Rodney Parade", "date": "2026-10-09"},
+        {"home": "Vodacom Bulls", "away": "Lions", "score": "57-15", "venue": "Loftus Versfeld", "date": "2026-10-10"},
+        {"home": "Stormers", "away": "Sharks", "score": "39-22", "venue": "DHL Stadium", "date": "2026-10-10"},
+        {"home": "Zebre Parma", "away": "Edinburgh", "score": "12-29", "venue": "Stadio Sergio Lanfranchi", "date": "2026-10-10"},
+        {"home": "Scarlets", "away": "Benetton", "score": "27-26", "venue": "Parc y Scarlets", "date": "2026-10-10"},
+        {"home": "Ulster", "away": "Munster", "score": "26-26", "venue": "Affidea Stadium", "date": "2026-10-10"},
+        {"home": "Leinster", "away": "Cardiff", "score": "29-5", "venue": "Laya Arena", "date": "2026-10-10"}
+      ]
+    },
+    {
+      "id": "URC-R4-FIXTURES",
+      "sport": "Rugby Union",
+      "subject": "United Rugby Championship Round 4 fixtures",
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "values": [
+        {"fixture": "Cardiff v Sharks", "local": "2026-10-23 14:45", "venue": "Cardiff Arms Park", "match_id": 292608},
+        {"fixture": "Connacht v Zebre Parma", "local": "2026-10-23 14:45", "venue": "Dexcom Stadium", "match_id": 292609},
+        {"fixture": "Edinburgh v Lions", "local": "2026-10-23 14:45", "venue": "Hive Stadium", "match_id": 292610}
+      ]
     }
   ]
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verified fixtures · OLBG2 desk</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header><h1>Verified fixtures</h1><p>OLBG 15-sport desk · captured 23 October 2026</p></header>
+<nav><a class="" href="index.html">Overview</a><a class="on" href="matches.html">Verified fixtures</a><a class="" href="olbg.html">OLBG event list</a><a class="" href="lines.html">Originated lines</a><a class="" href="picks.html">Top-5 picks</a><a class="" href="predictions.html">Predictions</a><a class="" href="audit.html">Repo audit</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="" href="methodology.html">Methodology</a></nav>
+<main>
+<p class="lede">A fixture enters this table only when its date, venue and teams were read on an official
+league page in this session. Ten did. Everything else OLBG listed stays on the
+<a href="olbg.html">OLBG list</a> and is flagged as not re-read.</p>
+<div class="scroll"><table>
+<thead><tr><th>Sport</th><th>Competition</th><th>Fixture</th><th>Start (UTC)</th><th>Venue</th>
+<th>Board status</th><th>Source</th></tr></thead><tbody><tr><td>Ice Hockey</td><td>NHL</td><td><b>Montreal Canadiens</b> at <b>Chicago Blackhawks</b></td><td>2026-10-24T00:00:00Z</td><td>United Center</td><td>8 markets</td><td><a href='https://api-web.nhle.com/v1/score/2026-10-23'>governing body</a></td></tr><tr><td>Ice Hockey</td><td>NHL</td><td><b>Tampa Bay Lightning</b> at <b>Colorado Avalanche</b></td><td>2026-10-24T01:00:00Z</td><td>Ball Arena</td><td>8 markets</td><td><a href='https://api-web.nhle.com/v1/score/2026-10-23'>governing body</a></td></tr><tr><td>Ice Hockey</td><td>NHL</td><td><b>Anaheim Ducks</b> at <b>Philadelphia Flyers</b></td><td>2026-10-24T17:00:00Z</td><td>Xfinity Mobile Arena</td><td>8 markets</td><td><a href='https://api-web.nhle.com/v1/score/2026-10-24'>governing body</a></td></tr><tr><td>Ice Hockey</td><td>NHL</td><td><b>Los Angeles Kings</b> at <b>New Jersey Devils</b></td><td>2026-10-24T19:30:00Z</td><td>Prudential Center</td><td>8 markets</td><td><a href='https://api-web.nhle.com/v1/score/2026-10-24'>governing body</a></td></tr><tr><td>Ice Hockey</td><td>NHL</td><td><b>San Jose Sharks</b> at <b>Boston Bruins</b></td><td>2026-10-24T23:00:00Z</td><td>TD Garden</td><td>8 markets</td><td><a href='https://api-web.nhle.com/v1/score/2026-10-24'>governing body</a></td></tr><tr><td>Ice Hockey</td><td>NHL</td><td><b>New York Rangers</b> at <b>Ottawa Senators</b></td><td>2026-10-24T23:00:00Z</td><td>Canadian Tire Centre</td><td>8 markets</td><td><a href='https://api-web.nhle.com/v1/score/2026-10-24'>governing body</a></td></tr><tr><td>Rugby Union</td><td>United Rugby Championship R4</td><td><b>Hollywoodbets Sharks</b> at <b>Cardiff Rugby</b></td><td>2026-10-23T13:45:00Z</td><td>Cardiff Arms Park</td><td><span class="pill warn">unlined</span></td><td><a href='https://stats.unitedrugby.com/match-centre/2026-27/4'>governing body</a></td></tr><tr><td>Rugby Union</td><td>United Rugby Championship R4</td><td><b>Zebre Parma</b> at <b>Connacht Rugby</b></td><td>2026-10-23T13:45:00Z</td><td>Dexcom Stadium</td><td><span class="pill warn">unlined</span></td><td><a href='https://stats.unitedrugby.com/match-centre/2026-27/4'>governing body</a></td></tr><tr><td>Rugby Union</td><td>United Rugby Championship R4</td><td><b>10bet Lions</b> at <b>Edinburgh Rugby</b></td><td>2026-10-23T13:45:00Z</td><td>Hive Stadium</td><td><span class="pill warn">unlined</span></td><td><a href='https://stats.unitedrugby.com/match-centre/2026-27/4'>governing body</a></td></tr><tr><td>Baseball</td><td>World Series Game 1</td><td><b>Tampa Bay Rays</b> at <b>Milwaukee Brewers</b></td><td>2026-10-24T00:00:00Z</td><td>American Family Field</td><td><span class="pill warn">unlined</span></td><td><a href='https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;date=2026-10-23'>governing body</a></td></tr></tbody></table></div>
+<div class="card"><h3 style="margin-top:0">Why three of the ten are unlined</h3>
+<ul class="tight">
+<li><b>Cardiff v Sharks, Connacht v Zebre, Edinburgh v Lions</b> — the URC table renders client-side and
+returned no numeric columns, so there are no points-for/points-against inputs to price from. Flag F-03.</li>
+<li><b>Rays at Brewers</b> — the MLB standings capture returned the American League East block only.
+Milwaukee's season totals were never read, so the World Series opener stays blank. Flag F-04.</li>
+</ul></div>
+</main>
+<footer>
+Research, not betting advice. Every price on this desk is originated here; none is a bookmaker quote.
+Selections carry a probability, not a guarantee. 18+.
+Rows without a governing-body source are labelled and listed on
+<a href="flagged.html">Flagged for review</a>. Built from committed captures by
+<code>scripts/desk_build.py</code>.
+</footer></body></html>

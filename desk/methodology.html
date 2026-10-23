@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology · OLBG2 desk</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header><h1>Methodology</h1><p>OLBG 15-sport desk · captured 23 October 2026</p></header>
+<nav><a class="" href="index.html">Overview</a><a class="" href="matches.html">Verified fixtures</a><a class="" href="olbg.html">OLBG event list</a><a class="" href="lines.html">Originated lines</a><a class="" href="picks.html">Top-5 picks</a><a class="" href="predictions.html">Predictions</a><a class="" href="audit.html">Repo audit</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="on" href="methodology.html">Methodology</a></nav>
+<main>
+<p class="lede">How a row gets on this board, how a price is built, and what the labels mean. Nothing here
+is a bookmaker quote.</p>
+<div class="card"><h3 style="margin-top:0">1. Event discovery</h3>
+<p>Each of the fifteen requested OLBG sport hubs was read once on 23 October 2026. Every rendered event
+became a row: sport, event name, OLBG's displayed start, the most-tipped market, the most-tipped
+selection, the tip split, and the OLBG event id. Golf returned “No tips found.” The hubs paginate, so the
+list is what OLBG showed above the fold (F-09).</p></div>
+<div class="card"><h3 style="margin-top:0">2. Fixture confirmation</h3>
+<p>A fixture is promoted to the verified table only when its clubs, date and venue were read on a league
+page. Ten qualified: six NHL games, three URC Round 4 fixtures and World Series Game 1. OLBG's displayed
+time is never used as UTC; the leagues' own timestamps are.</p></div>
+<div class="card"><h3 style="margin-top:0">3. Prices</h3>
+<p><b>Official basis.</b> NHL goals are modelled as independent Poisson counts. Each club's goals for and
+goals against per game are shrunk toward the league mean with an eight-game prior, the home side gets a
++0.10 goal edge, and the away side −0.10. The grid runs to twelve goals. A regulation tie is split 50/50
+between the two clubs to represent overtime and the shootout. Money line, puck line ±1.5 and totals 5.5
+and 6.5 are read off the same grid.</p>
+<p><b>Consensus basis.</b> Where no official numeric input exists, the price comes from OLBG's published
+tip split: the selection's share is shrunk toward 0.50 with a twelve-tip prior. A 1-in-1 tip split
+therefore does not become a 98% probability. This is a crowd signal; it is labelled
+<i>consensus</i> on every row and is never described as a market price.</p>
+<p><b>Fair odds</b> are 1/p rounded to two decimals and converted to American. The brief's focus band is
+−250 to +10000, i.e. decimal 1.40 to 101.00 inclusive.</p></div>
+<div class="card"><h3 style="margin-top:0">4. Confidence</h3>
+<p>High: probability of 70% or better. Medium: 65% to 69.9%. Low: below 65%. The band filter is a
+separate column, because a fair price of −345 implies 77.5% and therefore cannot sit inside a band whose
+short end is −250. Every such case is shown rather than dropped.</p></div>
+<div class="card"><h3 style="margin-top:0">5. Predictions</h3>
+<p>Written only for high-confidence selections that rest on a governing-body numeric input, and only from
+figures in the stored capture. Each is at least 30 words, opens differently, and names the competition,
+both clubs, their records, goals for and against, and the leading scorers where the feed supplied them.
+No injury sentence appears because no official injury report was captured (F-11).</p></div>
+<div class="card"><h3 style="margin-top:0">6. Blanks</h3>
+<p>A value that could not be read is left blank. It is never inferred, back-filled from a similar club,
+or copied from a tipster comment. The review page lists each blank and the route that failed.</p></div>
+</main>
+<footer>
+Research, not betting advice. Every price on this desk is originated here; none is a bookmaker quote.
+Selections carry a probability, not a guarantee. 18+.
+Rows without a governing-body source are labelled and listed on
+<a href="flagged.html">Flagged for review</a>. Built from committed captures by
+<code>scripts/desk_build.py</code>.
+</footer></body></html>

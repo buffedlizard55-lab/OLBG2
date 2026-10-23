@@ -4421,3 +4421,44 @@ deploy finishes.
 | CD7 | Rebase on `origin/main`, run full repo test suite + `integration_audit.py`, open PR → `main`, merge, verify GitHub Pages live deployment, record PR & deploy result in `COORDINATION.md` | unclaimed→this session | `arena/a0c8b7f3-olbg2` | `COORDINATION.md` (append-only) |
 
 **Integration request to active root-scope owners (`arena/41b3bae5-olbg2` / `arena/7a073c9a-olbg2`):** once `/cadence/` is merged, please add a navigation link to `cadence/index.html` in `scripts/build_site.py` / `README.md` and include `cadence data/cadence` in `.github/workflows/pages.yml` if doing a root integration pass. Deterministic drift checks for `/cadence/` are also enforced directly inside `tests/test_cadence_a0c8b7f3.py` so `Validate Pages content` validates `/cadence/` automatically without editing `.github/workflows/pages.yml`.
+
+---
+
+## Session `arena/a0c8b7f3-olbg2` — `/cadence/` COMPLETION LOG (2026-10-23 20:30Z)
+
+**Status: built, verified, tests green. Publication record appended after the merge.**
+
+| Task | Status | Files |
+|---|---|---|
+| CD1 claim | done 19:30Z (`99cca98`, `b10515f`) | `COORDINATION.md` |
+| CD2 OLBG reverse-engineering + line-by-line repo audit | done — 16 findings, 4 live OLBG defects, 16-sport id map | `research/cadence-a0c8b7f3.md`, `data/cadence/repo_audit.json` |
+| CD3 first-hand official capture | done — **93 fixtures across all 15 sports**, 59 official sources, 25 capture bundles | `data/cadence/fixtures.json`, `sources.json`, `captures/**` |
+| CD4 multi-market origination | done — **728 prices** (money line, handicap/spread, totals, outrights), 83 of 93 fixtures priced, 10 left blank with a stated reason | `scripts/cadence_model.py`, `data/cadence/{matches,lines,picks}.json` |
+| CD5 predictions | done — **33 unique write-ups**, min 51 words, zero prohibited words, every number traceable to a stored official fact | `scripts/cadence_predictions.py`, `data/cadence/predictions.json` |
+| CD6 dashboard + verifier + tests | done — 27 pages, 1,254 table rows, 0 broken local links; verifier 11 check groups / 0 errors; 24 tests | `scripts/cadence_{build,verify}.py`, `cadence/**`, `tests/test_cadence_a0c8b7f3.py` |
+
+**Verification performed.** `python3 scripts/cadence_verify.py` → 11 check groups, 0 errors: every fixture and
+every fact carries an https official link; every price recomputes from its own published probability; every
+band flag matches its own price; every confidence label matches its own probability; every prediction is ≥30
+words, has a unique opening, contains no prohibited word and quotes only facts present in the capture; every
+data-table row links out; every local link resolves; every table row has the same cell count as its header.
+Repository suite on this branch: **606 tests OK**; `integration_audit.py` → 0 cross-layer link errors.
+
+**Honest limits, published not hidden.**
+- No fixture starting 23 October UTC carries a high-confidence selection; the executive summary says so
+  rather than promoting a one-game sample.
+- The brief's two gates intersect only in 70.00–71.43% (a fair −250 is 71.43%). The desk publishes each
+  selection's own price, marks it in or out of band, and quotes an alternate line at the band ceiling where a
+  ladder exists. 22 selections grade high; 8 are in band on their natural price; 13 more clear it on an
+  alternate line; 9 high picks are shorter than −250 and are shown with their real prices.
+- Five sports have fewer than five top-five picks because their card has fewer than five priced fixtures
+  (Ice Hockey 2, Baseball 2, Snooker 3). Golf, Greyhounds and Gaelic Sports have no written prediction because
+  no selection there reached medium confidence; their prices are still published.
+- Ten fixtures are blank: five snooker rows (no ranking-money input for both players, or an unpublished
+  wildcard opponent) and three EHF Champions League rows plus two snooker rows with no comparative input.
+- The NBA sample is one or two games, so NBA selections are capped at medium and every NBA row links the
+  league's own 10/23 injury report rather than asserting an injury independently.
+
+**Shared root files — request only, not edited.** `README.md`, `scripts/build_site.py`, the root generated
+pages and `.github/workflows/**` remain untouched (other sessions claimed them). `/cadence/` deploys
+automatically because Pages serves the repository root; a root navigation entry is still the integrator's call.

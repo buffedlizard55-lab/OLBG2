@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive summary · Cadence desk</title>
+<style>
+:root{--bg:#0b1220;--card:#121c2e;--line:#22304a;--ink:#e8eef8;--dim:#93a4c0;--accent:#4da3ff;
+--good:#2fbf71;--warn:#f2b134;--bad:#ef5b5b;--chip:#1b2942}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:#0e1728;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.top .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{font-weight:700;font-size:17px;letter-spacing:.2px}
+.brand small{color:var(--dim);font-weight:400;font-size:12px;display:block}
+nav.links{display:flex;flex-wrap:wrap;gap:6px}
+nav.links a{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;color:var(--ink)}
+nav.links a.on{background:var(--accent);color:#04101f;border-color:var(--accent);font-weight:600}
+main{padding:26px 0 60px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:19px;margin:30px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:15px;margin:20px 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+p.lede{color:var(--dim);max-width:88ch;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 6px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi b{display:block;font-size:25px;line-height:1.1}
+.kpi span{color:var(--dim);font-size:12px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#16233a;color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.05em;position:sticky;top:0}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:#101a2b}
+.pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.high{background:rgba(47,191,113,.16);color:#5ee49b;border:1px solid rgba(47,191,113,.4)}
+.medium{background:rgba(242,177,52,.16);color:#f6c968;border:1px solid rgba(242,177,52,.4)}
+.low{background:rgba(147,164,192,.14);color:#a9b8d1;border:1px solid rgba(147,164,192,.35)}
+.in{background:rgba(77,163,255,.16);color:#8cc6ff;border:1px solid rgba(77,163,255,.4)}
+.out{background:rgba(239,91,91,.14);color:#ff9a9a;border:1px solid rgba(239,91,91,.35)}
+.blank{background:#1b2942;color:#93a4c0;border:1px dashed #3a4d6e}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:13px 15px;margin:14px 0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+.note b{color:var(--ink)}
+.mono{font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--dim)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h4{margin:0 0 6px;font-size:15px}
+.card .row{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--dim);margin:2px 0}
+.pred{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+.pred h4{margin:0 0 2px;font-size:16px}
+.pred .meta{color:var(--dim);font-size:12.5px;margin-bottom:8px}
+.pred .sel{font-weight:600;color:#9ed0ff;margin:6px 0}
+.pred p{margin:8px 0}
+.pred .facts{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}
+.pred .facts li{font-size:12.5px;color:var(--dim);margin:3px 0}
+ul{padding-left:20px}
+footer{border-top:1px solid var(--line);color:var(--dim);font-size:12.5px;padding:18px 0 40px}
+@media (max-width:640px){.top .wrap{gap:8px}h1{font-size:22px}}
+</style></head><body>
+<header class="top"><div class="wrap">
+  <div class="brand">Cadence · OLBG 15-sport desk<small>Captured 2026-10-23T20:10:00Z · research, not betting advice · 18+</small></div>
+  <nav class="links"><a href="index.html" class="on">Overview</a><a href="band.html">Band board</a><a href="picks.html">Top five by sport</a><a href="matches.html">All matches</a><a href="lines.html">Originated lines</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="olbg.html">OLBG</a><a href="audit.html">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Method</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Executive summary — 23 October 2026</h1>
+<p class="lede">Fifteen sports, 93 official fixtures, 728 originated prices and
+122 graded selections built from today's governing-body pages. Every row carries the official
+page it came from; nothing is filled in from memory or from a bookmaker.</p>
+
+<div class="grid">
+  <div class="kpi"><b>15</b><span>sports covered</span></div>
+  <div class="kpi"><b>93</b><span>fixtures (83 priced)</span></div>
+  <div class="kpi"><b>728</b><span>originated markets</span></div>
+  <div class="kpi"><b>22</b><span>high-confidence selections</span></div>
+  <div class="kpi"><b>8</b><span>high confidence inside −250…+10000</span></div>
+  <div class="kpi"><b>33</b><span>written predictions</span></div>
+  <div class="kpi"><b>18</b><span>review items</span></div>
+</div>
+
+<div class="note">
+  <b>How to read the confidence labels.</b> <span class="pill high">high</span> means the desk's probability
+  for the selection is at least 70% and the official input behind it is a full-season table or ranking, or a
+  4–9 match current-season sample. <span class="pill medium">medium</span> is 60–70%, or 70%+ on a 1–3 match
+  sample. <span class="pill low">low</span> is everything else. A price is marked
+  <span class="pill in">in band</span> when its fair American odds sit between −250 and +10000.
+</div>
+
+<div class="note warn">
+  <b>The two rules in the brief meet in a 1.4-point window.</b> A fair −250 <i>is</i> a 71.43% chance, so
+  “above 70%” and “priced −250 to +10000” overlap only between 70.00% and 71.43%. The desk does not widen
+  either rule silently. It publishes every selection's own price and band status, and on the
+  <a href="band.html">band board</a> it quotes the alternate line at the band ceiling for every fixture whose
+  line ladder allows one. Today 8 of 22 high-confidence top-five selections are inside
+  the band without an alternate line, and 8
+  more clear it on an alternate line.
+</div>
+
+<h2>Today's matches — 23 October 2026</h2>
+
+<div class="note warn">
+  <b>No fixture that starts today carries a high-confidence selection.</b> Today's card holds
+  5 confirmed fixtures (Basketball) and every one of them is either a
+  one-to-three match sample or was already in play when the desk captured it. Rather than promote a weak row,
+  the desk publishes the strongest graded selection on each of those fixtures — see
+  <a href="picks.html">top five by sport</a> and <a href="matches.html">all matches</a> — and shows the next
+  confirmed high-confidence picks below.
+</div>
+<div class="table-wrap"><table><thead><tr><th>Sport</th><th>Fixture</th><th>Start (UTC)</th><th>Favourite</th><th>Prob</th><th>Grade</th><th>Official source</th></tr></thead><tbody><tr><td><a href="sports/basketball.html">Basketball</a></td><td>Boston Celtics v New York Knicks</td><td class="mono">2026-10-23T23:00:00Z</td><td>Boston Celtics</td><td class="mono">52.6%</td><td><span class="pill low">low</span></td><td><a href="https://www.nba.com/games?date=2026-10-23" rel="noopener">www.nba.com</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td>Washington Wizards v Toronto Raptors</td><td class="mono">2026-10-23T23:00:00Z</td><td>Washington Wizards</td><td class="mono">52.6%</td><td><span class="pill low">low</span></td><td><a href="https://www.nba.com/games?date=2026-10-23" rel="noopener">www.nba.com</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td>Charlotte Hornets v Atlanta Hawks</td><td class="mono">2026-10-23T23:00:00Z</td><td>Charlotte Hornets</td><td class="mono">52.6%</td><td><span class="pill low">low</span></td><td><a href="https://www.nba.com/games?date=2026-10-23" rel="noopener">www.nba.com</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td>Orlando Magic v Minnesota Timberwolves</td><td class="mono">2026-10-23T23:00:00Z</td><td>Minnesota Timberwolves</td><td class="mono">56.5%</td><td><span class="pill low">low</span></td><td><a href="https://www.nba.com/games?date=2026-10-23" rel="noopener">www.nba.com</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td>Indiana Pacers v Dallas Mavericks</td><td class="mono">2026-10-23T23:00:00Z</td><td>Indiana Pacers</td><td class="mono">61.5%</td><td><span class="pill medium">medium</span></td><td><a href="https://www.nba.com/games?date=2026-10-23" rel="noopener">www.nba.com</a></td></tr></tbody></table></div>
+
+<h2>Next high-confidence selections</h2>
+<p class="lede">The strongest picks whose official start is confirmed, in kick-off order. Each row shows the
+start the publisher gave; where a publisher stated only a local time, that string is carried verbatim and the
+UTC column stays blank rather than being converted.</p>
+<div class="table-wrap"><table><thead><tr><th>Sport</th><th>Start (UTC)</th><th>Fixture</th><th>Selection</th><th>Market</th><th>Prob</th><th>Fair price</th><th>Band</th><th>Grade</th><th>Source</th></tr></thead><tbody><tr><td><a href="sports/ice-hockey.html">Ice Hockey</a></td><td><span class="mono">2026-10-24T01:00:00Z</span></td><td>Colorado Avalanche v Tampa Bay Lightning</td><td><strong>Tampa Bay Lightning</strong></td><td>Money line</td><td><span class="mono">72.4%</span></td><td><span class="mono">-263</span></td><td><span class="pill out">outside band</span></td><td><span class="pill high">high</span></td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></td></tr><tr><td><a href="sports/ice-hockey.html">Ice Hockey</a></td><td><span class="mono">2026-10-24T01:00:00Z</span></td><td>Colorado Avalanche v Tampa Bay Lightning</td><td><strong>Over 5.5</strong></td><td>Total goals</td><td><span class="mono">70.4%</span></td><td><span class="mono">-237</span></td><td><span class="pill in">in band</span></td><td><span class="pill high">high</span></td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td><span class="mono">2026-10-27 15:15 local</span></td><td>Panathinaikos AKTOR Athens v Armani Olimpia Milan</td><td><strong>Panathinaikos AKTOR Athens</strong></td><td>Money line</td><td><span class="mono">83.3%</span></td><td><span class="mono">-499</span></td><td><span class="pill out">outside band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026" rel="noopener">www.euroleaguebasketball.net</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td><span class="mono">2026-10-27 15:30 local</span></td><td>Valencia Basket v Fenerbahce Tarfin Istanbul</td><td><strong>Over 163.5</strong></td><td>Game total</td><td><span class="mono">70.6%</span></td><td><span class="mono">-241</span></td><td><span class="pill in">in band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026" rel="noopener">www.euroleaguebasketball.net</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td><span class="mono">2026-10-27 16:00 local</span></td><td>Kosner Baskonia Vitoria-Gasteiz v Real Madrid</td><td><strong>Over 171.5</strong></td><td>Game total</td><td><span class="mono">71.3%</span></td><td><span class="mono">-248</span></td><td><span class="pill in">in band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026" rel="noopener">www.euroleaguebasketball.net</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td><span class="mono">2026-10-28 14:00 local</span></td><td>Hapoel IBI Tel Aviv v Anadolu Efes Istanbul</td><td><strong>Over 162.5</strong></td><td>Game total</td><td><span class="mono">71.1%</span></td><td><span class="mono">-246</span></td><td><span class="pill in">in band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026" rel="noopener">www.euroleaguebasketball.net</a></td></tr><tr><td><a href="sports/basketball.html">Basketball</a></td><td><span class="mono">2026-10-28 local TBC</span></td><td>Virtus Bologna v Zalgiris Kaunas</td><td><strong>Over 163.5</strong></td><td>Game total</td><td><span class="mono">70.4%</span></td><td><span class="mono">-238</span></td><td><span class="pill in">in band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026" rel="noopener">www.euroleaguebasketball.net</a></td></tr><tr><td><a href="sports/snooker.html">Snooker</a></td><td><span class="mono">24 October 2026, 08:00 (WST site clock)</span></td><td>Kyren Wilson v Sam Craigie</td><td><strong>Kyren Wilson</strong></td><td>Match winner</td><td><span class="mono">74.2%</span></td><td><span class="mono">-288</span></td><td><span class="pill out">outside band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.wst.tv/matches/" rel="noopener">www.wst.tv</a></td></tr><tr><td><a href="sports/darts.html">Darts</a></td><td><span class="mono">24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)</span></td><td>Ross Smith v Damon Heta</td><td><strong>Ross Smith</strong></td><td>Match winner</td><td><span class="mono">72.0%</span></td><td><span class="mono">-257</span></td><td><span class="pill out">outside band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/" rel="noopener">www.pdc.tv</a></td></tr><tr><td><a href="sports/tennis.html">Tennis</a></td><td><span class="mono">2026-10-24 Not before 18:00 local</span></td><td>Daniil Medvedev v Alexander Bublik</td><td><strong>Daniil Medvedev -1.5</strong></td><td>Games handicap</td><td><span class="mono">70.8%</span></td><td><span class="mono">-242</span></td><td><span class="pill in">in band</span></td><td><span class="pill high">high</span></td><td><a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule" rel="noopener">www.atptour.com</a></td></tr></tbody></table></div>
+
+<h2>Coverage across the fifteen sports</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Sport</th><th>Fixtures</th><th>Originated</th><th>Markets</th><th>Top-five picks</th>
+<th>High</th><th>In band (high)</th><th>Predictions</th><th>Shortfall</th></tr></thead><tbody>
+<tr><td><a href="sports/golf.html"><strong>Golf</strong></a></td><td class="mono">2</td><td class="mono">2</td><td class="mono">16</td><td class="mono">5</td><td class="mono">0</td><td class="mono">0</td><td class="mono">0</td><td class="small">2 official fixtures on the card; 0 predictions</td></tr><tr><td><a href="sports/volleyball.html"><strong>Volleyball</strong></a></td><td class="mono">10</td><td class="mono">10</td><td class="mono">60</td><td class="mono">5</td><td class="mono">2</td><td class="mono">0</td><td class="mono">3</td><td class="small">3 predictions</td></tr><tr><td><a href="sports/rugby-union.html"><strong>Rugby Union</strong></a></td><td class="mono">8</td><td class="mono">8</td><td class="mono">77</td><td class="mono">5</td><td class="mono">0</td><td class="mono">0</td><td class="mono">1</td><td class="small">1 predictions</td></tr><tr><td><a href="sports/cricket.html"><strong>Cricket</strong></a></td><td class="mono">6</td><td class="mono">6</td><td class="mono">35</td><td class="mono">5</td><td class="mono">0</td><td class="mono">0</td><td class="mono">5</td><td class="small">—</td></tr><tr><td><a href="sports/snooker.html"><strong>Snooker</strong></a></td><td class="mono">8</td><td class="mono">3</td><td class="mono">18</td><td class="mono">3</td><td class="mono">1</td><td class="mono">0</td><td class="mono">1</td><td class="small">1 predictions</td></tr><tr><td><a href="sports/darts.html"><strong>Darts</strong></a></td><td class="mono">8</td><td class="mono">6</td><td class="mono">36</td><td class="mono">5</td><td class="mono">1</td><td class="mono">0</td><td class="mono">3</td><td class="small">3 predictions</td></tr><tr><td><a href="sports/baseball.html"><strong>Baseball</strong></a></td><td class="mono">2</td><td class="mono">2</td><td class="mono">14</td><td class="mono">2</td><td class="mono">0</td><td class="mono">0</td><td class="mono">1</td><td class="small">2 official fixtures on the card; 1 predictions</td></tr><tr><td><a href="sports/gaelic-sports.html"><strong>Gaelic Sports</strong></a></td><td class="mono">5</td><td class="mono">5</td><td class="mono">45</td><td class="mono">5</td><td class="mono">0</td><td class="mono">0</td><td class="mono">0</td><td class="small">0 predictions</td></tr><tr><td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td><td class="mono">2</td><td class="mono">2</td><td class="mono">6</td><td class="mono">5</td><td class="mono">0</td><td class="mono">0</td><td class="mono">0</td><td class="small">2 official fixtures on the card; 0 predictions</td></tr><tr><td><a href="sports/tennis.html"><strong>Tennis</strong></a></td><td class="mono">5</td><td class="mono">5</td><td class="mono">35</td><td class="mono">5</td><td class="mono">1</td><td class="mono">1</td><td class="mono">1</td><td class="small">1 predictions</td></tr><tr><td><a href="sports/motor-racing.html"><strong>Motor Racing</strong></a></td><td class="mono">2</td><td class="mono">2</td><td class="mono">16</td><td class="mono">5</td><td class="mono">1</td><td class="mono">0</td><td class="mono">1</td><td class="small">2 official fixtures on the card; 1 predictions</td></tr><tr><td><a href="sports/handball.html"><strong>Handball</strong></a></td><td class="mono">6</td><td class="mono">3</td><td class="mono">29</td><td class="mono">5</td><td class="mono">4</td><td class="mono">2</td><td class="mono">4</td><td class="small">4 predictions</td></tr><tr><td><a href="sports/ice-hockey.html"><strong>Ice Hockey</strong></a></td><td class="mono">2</td><td class="mono">2</td><td class="mono">15</td><td class="mono">3</td><td class="mono">2</td><td class="mono">1</td><td class="mono">3</td><td class="small">2 official fixtures on the card; 3 predictions</td></tr><tr><td><a href="sports/basketball.html"><strong>Basketball</strong></a></td><td class="mono">18</td><td class="mono">18</td><td class="mono">256</td><td class="mono">5</td><td class="mono">5</td><td class="mono">4</td><td class="mono">5</td><td class="small">—</td></tr><tr><td><a href="sports/rugby-league.html"><strong>Rugby League</strong></a></td><td class="mono">9</td><td class="mono">9</td><td class="mono">70</td><td class="mono">5</td><td class="mono">5</td><td class="mono">0</td><td class="mono">5</td><td class="small">—</td></tr>
+</tbody></table></div>
+
+<h2>What is not here</h2>
+<ul>
+  <li>No observed bookmaker prices. OLBG publishes tip counts and percentages for a logged-out visitor, not
+  odds; the NHL schedule feed does publish moneylines and they are shown only as a comparison column.</li>
+  <li>No injury claim outside the NBA's own game-day report, which is linked on every NBA row.</li>
+  <li>No fixture whose participants an official source did not name: three International Championship
+  pre-qualifiers list only “Wildcard 1/3/4” and carry no line.</li>
+  <li>No prediction in golf, greyhounds or Gaelic sports: the strongest selection in each is below medium
+  confidence, so a ≥30-word write-up would be inventing an edge. Their prices are still published.</li>
+</ul>
+</div></main>
+<footer><div class="wrap">
+  Every published row links to the official governing-body page it came from. Values that an official
+  source did not publish are left blank and listed on <a href="flagged.html">Flagged for review</a>.
+  Prices are the desk's own fair lines, never observed bookmaker quotes unless a row says so.
+</div></footer></body></html>

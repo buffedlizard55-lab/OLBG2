@@ -146,11 +146,11 @@
       "id": "RA-13",
       "severity": "medium",
       "category": "External Source Defect (OLBG)",
-      "file_path": "olbg.com/?event_id=902140, 199984, 536036, 902163",
+      "file_path": "olbg.com/?event_id=199984, 160789, 536036, 902163",
       "lines": "Most Popular Tip header pill",
       "issue": "OLBG concatenates tip counts as strings instead of summing integers in the Most Popular Tip denominator: 4 & 2 renders '4 / 042 | 95%', 6 & 2 renders '6 / 062 | 97%', 9 & 0 renders '9 / 090 | 100%', and 2 & 1 renders '2 / 021 | 95%'.",
       "official_check": "Verified directly on live olbg.com event pages against the market breakdown table immediately below each header.",
-      "manual_review_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13?event_id=902140",
+      "manual_review_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13?event_id=199984",
       "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
     },
     {
@@ -159,8 +159,8 @@
       "category": "External Source Defect (OLBG)",
       "file_path": "olbg.com/?event_id=32384 & 902163",
       "lines": "Market selection odds column & event status badge",
-      "issue": "From US egress IPs, OLBG suppresses UK affiliate bookmaker prices leaving blank 'WIN @' strings and displays false 'Expired' badges on unstarted Oct 24 fixtures (Bunting v Huybrechts and PNG v Samoa).",
-      "official_check": "Confirmed both fixtures are scheduled for Saturday 24 October 2026 via PDC.tv and NRL.com RLWC draw.",
+      "issue": "From US egress IPs, OLBG suppresses UK affiliate bookmaker prices leaving blank 'WIN @' strings and displays false 'Expired' badges on unstarted Oct 24 fixtures (Bunting v Huybrechts event_id=32384 and Rybakina v Shnaider event_id=902163).",
+      "official_check": "Confirmed both fixtures are scheduled for Saturday 24 October 2026 via PDC.tv and WTA/OLBG event schedules.",
       "manual_review_url": "https://www.olbg.com/betting-tips/Darts/15?event_id=32384",
       "official_source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
     },

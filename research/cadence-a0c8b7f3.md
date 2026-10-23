@@ -35,16 +35,16 @@ Out-of-scope OLBG hubs (`Football/1`, `Horse_Racing/2`, `Boxing/6`, `American_Fo
 
 ### 1.2 Event-Page Architecture & Four Verified OLBG Frontend Defects
 
-Inspecting direct OLBG `?event_id=` pages (`32335`, `902140`, `199984`, `536036`, `32384`, `902163`) revealed four concrete platform defects on `olbg.com`:
+Inspecting direct OLBG `?event_id=` pages (`32335`, `199984`, `160789`, `536036`, `32384`, `902163`) revealed four concrete platform defects on `olbg.com`:
 
 1. **US-IP Geo-Filtered Hub Lists (`No tips found.`)**: Requests from US egress IPs to `/betting-tips/{Sport}/{id}` render the navigation chrome and an empty `No tips found.` container once UK bookmaker affiliate feeds are suppressed, while direct `?event_id={id}` URLs continue to serve full tipster markets, comment bodies, and consensus counts.
 2. **`Most Popular Tip` String-Concatenation Bug**: In the `Most Popular Tip` summary pill on `?event_id=` pages, OLBG's frontend template concatenates tip counts as strings instead of summing integers before computing `tips / total_tips`:
-   - `event_id=902140` (`MTL Canadiens @ CHI Blackhawks`): `4` tips on Canadiens + `2` elsewhere -> renders `4 / 042 | 95%` (while the breakdown table directly below correctly states `4/42 tips`).
-   - `event_id=199984` (`TB Rays @ MIL Brewers` World Series Game 1): renders `6 / 062 | 97%`.
-   - `event_id=536036` (`IND Pacers @ ORL Magic`): renders `9 / 090 | 100%`.
-   - `event_id=902163` (`PNG Kumuls v Samoa` RLWC): renders `2 / 021 | 95%`.
-3. **Blank `WIN @` Odds Cells Under Geo-IP Bookmaker Suppression**: On `event_id=32384` (`Stephen Bunting v Kim Huybrechts`) and `event_id=902163` (`Papua New Guinea v Samoa`), selection rows render `WIN @` with an empty odds string because UK affiliate odds widgets return null to US visitors.
-4. **False `Expired` Badges & US-Eastern Clock Drift**: Unstarted Saturday fixtures (`event_id=32384` Darts R2 on Oct 24 and `event_id=902163` RLWC R2 on Oct 24) display `Expired` badges alongside US-Eastern local timestamps (`03:00` EDT for `07:00 UTC`), creating false expiry states ahead of kickoff.
+   - `event_id=199984` (`MTL Canadiens @ CHI Blackhawks`): `4` tips on Canadiens + `2` elsewhere -> renders `4 / 042 | 95%` (while the breakdown table directly below states `4/42 tips`).
+   - `event_id=160789` (`TB Rays @ MIL Brewers` World Series Game 1): renders `6 / 062 | 97%`.
+   - `event_id=536036` (`MIN Timberwolves @ ORL Magic`): renders `9 / 090 | 100%`.
+   - `event_id=902163` (`Elena Rybakina vs Diana Shnaider`): renders `2 / 021 | 95%`.
+3. **Blank `WIN @` Odds Cells Under Geo-IP Bookmaker Suppression**: On `event_id=32384` (`Stephen Bunting v Kim Huybrechts`) and `event_id=902163` (`Elena Rybakina v Diana Shnaider`), selection rows render `WIN @` with an empty odds string because UK affiliate odds widgets return null to US visitors.
+4. **False `Expired` Badges & US-Eastern Clock Drift**: Unstarted Saturday fixtures (`event_id=32384` Darts R2 on Oct 24 and `event_id=902163` WTA Tokyo SF on Oct 24) display `Expired` badges alongside US-Eastern local timestamps, creating false expiry states ahead of match start.
 
 ---
 

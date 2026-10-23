@@ -1,0 +1,24 @@
+{
+ "generated_utc": "2026-10-23T20:20:00Z",
+ "count": 2,
+ "flags": [
+  {
+   "id": "CD-PR1",
+   "severity": "medium",
+   "category": "Prediction coverage",
+   "item": "Written predictions by sport",
+   "finding": "Written predictions exist for the graded selections listed on /cadence/predictions.html. Three sports carry no prediction because no selection in them reached medium confidence: golf (best outright 9.1%), greyhounds (best runner 50.4% off semi-final times alone) and Gaelic sports (no numeric strength input for both sides). Their strongest selections are still published with their prices and probabilities.",
+   "source_url": "https://www.pgatour.com/leaderboard",
+   "status": "published"
+  },
+  {
+   "id": "CD-PR2",
+   "severity": "high",
+   "category": "Price-band arithmetic",
+   "item": "The two rules in the brief intersect in 1.43 percentage points",
+   "finding": "'High confidence above 70%' and 'price between -250 and +10000' intersect only in 70.00%-71.43%, because a fair -250 is 71.43%. The desk therefore publishes each selection's own fair price and marks whether it is in band, and additionally quotes an alternate line at the band ceiling wherever a continuous line ladder exists. It never relabels a shorter price as in band. Today 8 of the 22 high-confidence selections fall inside the band without an alternate line.",
+   "source_url": "https://www.olbg.com/betting-tips",
+   "status": "published"
+  }
+ ]
+}

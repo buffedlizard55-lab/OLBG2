@@ -152,7 +152,7 @@ def main():
         hrows += (f"<tr><td>{esc(l['sport'])}</td><td>{esc(l['fixture'])}</td>"
                   f"<td>{esc(l['market'])}</td><td><b>{esc(l['selection'])}</b></td>"
                   f"<td class='num'>{l['p']*100:.1f}%</td><td class='num'>{money(l)}</td>"
-                  f"<td>{'yes' if l['in_band'] else 'no'}</td>{pill(l['confidence'])}"
+                  f"<td>{'yes' if l['in_band'] else 'no'}</td><td>{pill(l['confidence'])}</td>"
                   f"<td>{'official' if l['basis']=='official' else 'consensus only'}</td></tr>")
     high_table = f"""<div class="scroll"><table>
 <thead><tr><th>Sport</th><th>Fixture</th><th>Market</th><th>Selection</th><th>Probability</th>
@@ -166,10 +166,13 @@ def main():
         n_f = len(fx_by_sport.get(sport, []))
         n_h = len([l for l in lines_by_sport.get(sport, []) if l["confidence"] == "high"])
         n_p = len([p for p in preds if p["sid"] in {l["sid"] for l in lines_by_sport.get(sport, [])}])
+        n_off = len([l for l in lines_by_sport.get(sport, []) if l["basis"] == "official"])
         if sport == "Golf":
             state = '<span class="pill warn">no OLBG events</span>'
+        elif n_off:
+            state = '<span class="pill hi">priced from official inputs</span>'
         elif n_f and n_l:
-            state = '<span class="pill hi">lined</span>'
+            state = '<span class="pill med">fixtures confirmed; consensus prices</span>'
         elif n_l:
             state = '<span class="pill med">consensus prices only</span>'
         else:
@@ -301,7 +304,7 @@ Milwaukee's season totals were never read, so the World Series opener stays blan
                   f"<td>{esc(l['market'])}</td><td><b>{esc(l['selection'])}</b></td>"
                   f"<td class='num'>{l['p']*100:.1f}%</td><td class='num'>{l['fair_decimal']:.2f}</td>"
                   f"<td class='num'>{money(l)}</td><td>{'yes' if l['in_band'] else 'no'}</td>"
-                  f"{pill(l['confidence'])}<td>{ev}</td>"
+                  f"<td>{pill(l['confidence'])}</td><td>{ev}</td>"
                   f"<td><a href='{esc(l['src'])}'>source</a></td></tr>")
     body = f"""
 <p class="lede">Every market originated on this board. A price is the inverse of the stated probability,
@@ -334,7 +337,7 @@ inside one price.</p>
             rws += (f"<tr><td class='num'>{i}</td><td>{esc(l['fixture'])}</td>"
                     f"<td><b>{esc(l['selection'])}</b></td><td class='num'>{l['p']*100:.1f}%</td>"
                     f"<td class='num'>{money(l)}</td><td>{'yes' if l['in_band'] else 'no'}</td>"
-                    f"{pill(l['confidence'])}<td>{'official' if l['basis']=='official' else 'consensus'}</td></tr>")
+                    f"<td>{pill(l['confidence'])}</td><td>{'official' if l['basis']=='official' else 'consensus'}</td></tr>")
         blocks += f"""<h3>{esc(sport)} <span class="muted" style="font-weight:400">— {len(pl)} of 5</span></h3>
 <div class="scroll"><table><thead><tr><th>#</th><th>Fixture</th><th>Selection</th><th>Probability</th>
 <th>Fair price</th><th>Band</th><th>Confidence</th><th>Evidence</th></tr></thead><tbody>{rws}</tbody></table></div>"""
@@ -359,7 +362,7 @@ promoted to fill a quota.</p>
     withheld = [l for l in highs if l["basis"] != "official"]
     wrows = "".join(f"<tr><td>{esc(l['sport'])}</td><td>{esc(l['fixture'])}</td>"
                     f"<td>{esc(l['selection'])}</td><td class='num'>{l['p']*100:.1f}%</td>"
-                    f"{pill(l['confidence'])}<td>no official numeric fact base captured</td></tr>"
+                    f"<td>{pill(l['confidence'])}</td><td>no official numeric fact base captured</td></tr>"
                     for l in withheld)
     body = f"""
 <p class="lede">Six predictions, one per high-confidence Ice Hockey selection, each at least 30 words,
@@ -393,7 +396,7 @@ preferable to a guess.</p>
         sl_html = "".join(
             f"<tr><td>{esc(l['fixture'])}</td><td>{esc(l['market'])}</td><td><b>{esc(l['selection'])}</b></td>"
             f"<td class='num'>{l['p']*100:.1f}%</td><td class='num'>{money(l)}</td>"
-            f"<td>{'yes' if l['in_band'] else 'no'}</td>{pill(l['confidence'])}"
+            f"<td>{'yes' if l['in_band'] else 'no'}</td><td>{pill(l['confidence'])}</td>"
             f"<td>{'official' if l['basis']=='official' else 'consensus'}</td></tr>"
             for l in slines)
         sfx = fx_by_sport.get(sport, [])

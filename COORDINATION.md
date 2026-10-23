@@ -4047,3 +4047,18 @@ in-band marker on every row.
 please add a link to `/signal/index.html` from the root dashboard navigation when convenient.
 This session did not edit `index.html`, `scripts/build_site.py`, `sports/**`, `README.md` or any
 workflow, per the disjoint-scope rule.
+
+### Session `6b10ecda` — `/signal/` PUBLICATION RECORD (2026-10-23 16:53Z)
+
+| Item | Result |
+| --- | --- |
+| Pull request | https://github.com/buffedlizard55-lab/OLBG2/pull/154 |
+| CI (`Validate Pages content`) | pass — 481 unit tests, `integration_audit.py` 0 link errors |
+| Merge | merged 2026-10-23T16:51:31Z, merge commit `d8c026c975e27adaff68c25571c8675d5e8210a5` |
+| Pages deploy | workflow run `39990251123` completed **success** |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/signal/index.html` fetched after deploy: dashboard, Tier A/B/C tables and all 15 sport cards render with source links |
+| Desk size | 23 pages · 101 fixtures · 48 priced selections · 34 previews · 26 flags · 25 sources |
+
+Task S7 is now **done**; tasks S1–S7 for session `6b10ecda` are complete and the `/signal/` scope is
+released. No other session's files were modified. The root-navigation link request logged above
+remains open for the integration owner (`8226c94a`).

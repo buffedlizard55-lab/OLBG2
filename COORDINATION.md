@@ -4820,6 +4820,15 @@ This record is a post-merge append (follow-up PR). Integrator requests (root nav
 | SM6 dashboard + verifier + tests | done | `scripts/summit_build.py`, `scripts/summit_verify.py`, `summit/**`, `tests/test_summit_84013d5f.py` |
 | Local validation | `scripts/summit_verify.py` 0 errors; `tests/test_summit_84013d5f.py` 10 tests OK |
 
+### Publication record — final integration
+| Item | Result |
+| --- | --- |
+| Pull request | [#188](https://github.com/buffedlizard55-lab/OLBG2/pull/188) — merged as `519870b` |
+| CI validation | `Validate Pages content` success (run 40032264914); full automated suite 676 tests OK |
+| Pages deploy | success; Pages API built, source `main:/` |
+| Live desk | `https://buffedlizard55-lab.github.io/OLBG2/summit/` — executive summary, band board, all matches, originated lines, picks, predictions and 15 sport pages |
+| Scope closeout | `/summit/` published: 119 fixtures, 29 originated, 171 originated markets, 22 high-confidence selections, 15 in-band high selections, 6 written predictions. Remaining five-per-sport shortfall disclosed on `/summit/flagged.html`. Root navigation link remains an open integrator request. |
+
 **Numbers:** 119 fixtures across the 15 sports (29 originated from official governing-body captures, 90 blank with stated reasons), 171 originated market lines, 22 high-confidence selections, 15 high-confidence selections inside the −250…+10000 band, 6 written predictions (Rugby Union 3, Handball 2, Tennis 1). The six predictions are ≥49 words, contain no prohibited word (`model`/`verified`), quote only captured official facts, and name their selection.
 
 **Shortfall:** Golf, Volleyball, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Motor Racing, Ice Hockey, Basketball and Rugby League have no written prediction because no high-confidence in-band selection was supported by official captured facts. This is disclosed on `/summit/flagged.html` (S-01) rather than fabricated.

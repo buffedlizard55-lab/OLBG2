@@ -3973,3 +3973,27 @@ session's scope.
 "Validate Pages content" and "Deploy Pages"; GitHub Pages reports `status: built` for
 https://buffedlizard55-lab.github.io/OLBG2/, and `/liveboard/` was fetched live after the deploy and
 rendered the board (15 sports, 133 fixtures, 10 high grades, 2 in band, 14 predictions, 20 flags).
+## Session `arena/6b10ecda-olbg2` — CLAIM: `/signal/` 2026-10-23 15-sport desk (OLBG reverse-engineering, first-hand official capture, multi-market origination, in-band high-confidence predictions, repo review)
+
+- **Session ID:** `arena/6b10ecda-olbg2` · **Branch:** `arena/6b10ecda-olbg2` (branch name fixed by the Arena harness; the `session-<id>/<task>` convention in the brief cannot be honoured — recorded here as a protocol deviation).
+- **Claimed:** 2026-10-23 16:20 UTC, before any implementation edit.
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, `origin/main` = `2999cc0`, PR #139):
+  - `arena/0006d3c3-olbg2` — claimed 16:17Z — owns `meridian/**`, `data/meridian/**`, `scripts/meridian_*.py`, `tests/test_meridian_0006d3c3.py`, `research/meridian-0006d3c3.md`.
+  - `arena/8226c94a-olbg2` — claimed 16:16Z — owns `monitor/**`, `data/monitor/**`, `scripts/monitor_*.py`, `research/monitor-8226c94a.md`, `tests/test_monitor.py` **and the shared root integration scope** (`scripts/build_site.py`, generated root pages, `sports/**`, `.github/workflows/*.yml`, `README.md`).
+  - `arena/33e9eee7-olbg2` — claimed 16:15Z — owns `focus/**`, `data/focus/**`, `scripts/focus_*.py`, `tests/test_focus_33e9eee7.py`, `research/focus-33e9eee7.md`.
+- **Strict non-overlapping file scope for this session (nothing else is touched):**
+  `signal/**`, `data/signal/**`, `scripts/signal_*.py`, `tests/test_signal_6b10ecda.py`, `research/signal-6b10ecda.md`, and append-only additions to `COORDINATION.md`.
+  Shared root files are claimed by `8226c94a`; every change this session would like there is **logged below as a request, not actioned**.
+- **Sport scope (exactly the 15 named in the brief):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League. Soccer/Football, American Football, Horse Racing, Boxing/UFC/MMA, Aussie Rules, eSports, Hurling-only specials and Specials markets are out of scope.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| S1 | Board read, live concurrent-branch scan, claim, immediate commit + push | in progress | `arena/6b10ecda-olbg2` | `COORDINATION.md` (append-only) |
+| S2 | OLBG.com reverse-engineering (taxonomy, URL schema, market types, tip structure) for 2026-10-23 + line-by-line review of the merged repo | unclaimed→this session | `research/signal-6b10ecda.md`, `data/signal/olbg_taxonomy.json`, `data/signal/repo_review.json` |
+| S3 | First-hand official governing-body capture for 2026-10-23 and upcoming fixtures across the 15 sports | unclaimed→this session | `scripts/signal_seed.py`, `data/signal/inputs.json`, `data/signal/sources.json` |
+| S4 | Multi-market origination (match winner, handicap/spread, totals, outrights), confidence labels, strict in-band high gate (p ≥ 0.70 AND fair American odds within −250…+10000) | unclaimed→this session | `scripts/signal_model.py`, `data/signal/matches.json`, `data/signal/lines.json` |
+| S5 | Unique ≥30-word human predictions for the top picks (target 5 per sport where in-band picks exist), sourced only from official pages | unclaimed→this session | `scripts/signal_predictions.py`, `data/signal/predictions.json`, `data/signal/flagged.json` |
+| S6 | `/signal/` dashboard: executive summary, all-matches table, lines, picks, 15 sport subpages, flagged-for-review, sources, methodology, repo review | unclaimed→this session | `scripts/signal_build.py`, `scripts/signal_verify.py`, `signal/**`, `tests/test_signal_6b10ecda.py` |
+| S7 | Rebase on `origin/main`, full repo test suite + link audit, PR → merge, confirm Pages deploy, log result | unclaimed→this session | `COORDINATION.md` (append-only) |
+
+**Rule this session follows:** no value is published without a first-hand read of an official page in this session; anything that cannot be read is left blank and listed on `/signal/flagged.html` with the endpoint that failed.

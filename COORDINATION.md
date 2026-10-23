@@ -4082,3 +4082,18 @@ Scope extension (no concurrent open PR): `scripts/monitor_build.py` and generate
 - `python scripts/integration_audit.py`: **0 local link errors**. External-source accuracy remains unconfirmed.
 - Irregularities published on `monitor/flagged.html#collector-nhl-review` and `research/collector-6cd8cc4c.md`. Complete OLBG inventory, every-market origination and five supported picks per sport remain needs review, not done.
 - Integration/publication in progress; this session serves as integrator only for its claimed scope. Existing tasks/data remain intact.
+
+### `6cd8cc4c` publication record — 2026-10-23 19:32 UTC
+
+| Item | Result |
+|---|---|
+| Implementation PR | https://github.com/buffedlizard55-lab/OLBG2/pull/156 |
+| Merge | Merged 2026-10-23T19:29:53Z; `57d4a462c34df516a40bc7e3466fe8433166b8c9` |
+| PR validation | pass (29 seconds) |
+| Pages validation + deployment | **success** — https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40011868924 |
+| Pages API after deployment | `status: built`; https://buffedlizard55-lab.github.io/OLBG2/ |
+| Runtime workflow notices | 31 attempts, 3 official fixture rows, 0 OLBG links, 23 failures. These counts are workflow output, not a manual re-verification of fixture facts. |
+| Live HTTP content check | Not available from this sandbox: Pages host outside outbound allowlist. Deployment success confirmed using GitHub workflow/API, not a browser content claim. |
+| Public review page | https://buffedlizard55-lab.github.io/OLBG2/monitor/flagged.html#collector-nhl-review |
+
+Scoped software task **done**, live-source/schema confirmation and full brief coverage **needs review** on the public review page. No forecast success, complete inventory or unsupported 75-pick quota is claimed. Scope released. This append records the publication in a documentation-only follow-up on the same fixed branch.

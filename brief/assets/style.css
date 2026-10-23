@@ -31,6 +31,7 @@ tr:last-child td{border-bottom:0}
 tbody tr:hover{background:#f8fafc}
 .tbl-scroll{overflow-x:auto;border-radius:10px}
 .badge{display:inline-block;padding:.1rem .45rem;border-radius:999px;font-size:.72rem;font-weight:700;white-space:nowrap}
+.badge+.badge{margin-left:.3rem}
 .high{background:var(--highbg);color:var(--high)}.medium{background:var(--medbg);color:var(--med)}.low{background:var(--lowbg);color:var(--low)}
 .tA{background:#d1fae5;color:#065f46}.tB{background:#fee2e2;color:#991b1b}.tC{background:#e0e7ff;color:#3730a3}.tD{background:#e5e7eb;color:#374151}
 .pill{display:inline-block;padding:.1rem .45rem;border-radius:6px;font-size:.72rem;font-weight:600;background:#eef2f7;color:#334155}

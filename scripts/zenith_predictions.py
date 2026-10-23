@@ -16,7 +16,7 @@ def main():
     seen=set()
     for p in source:
         match=matches.get(p['fixture_id'])
-        if not match:
+        if not match or match.get('temporal_state') != 'upcoming_at_capture':
             continue
         zline=line_map.get(p['pick_id'])
         # Only retain previews whose selection is represented in the independently published ledger.

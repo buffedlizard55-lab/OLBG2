@@ -1,6 +1,6 @@
 {
   "generated_utc": "2026-10-23T21:45:00Z",
-  "count": 23,
+  "count": 24,
   "findings": [
     {
       "id": "AUDIT-PROSE-atlas",
@@ -177,6 +177,14 @@
       "detail": "The tip hub objects are a dated (20:31–20:36Z) capture. Direct event pages read in this session showed string-concatenated header denominators and false Expired badges for upcoming fixtures; displayed tip percentages therefore are published as source fields, not reused as probabilities.",
       "artifact": "data/zenith/olbg_events.json",
       "source_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "AUDIT-ACTIONABILITY-WINDOW",
+      "severity": "high",
+      "title": "Most of the fixture rows are not confirmed upcoming at the declared cutoff",
+      "detail": "Only fixtures whose official start timestamp is strictly later than 2026-10-23 21:45 UTC receive an actionable market/pick. The other rows remain in the source ledger, but started or time-unconfirmed rows are deliberately blank rather than described as bettable.",
+      "artifact": "data/zenith/matches.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/zenith/matches.json"
     },
     {
       "id": "AUDIT-OLBG-SPORTID",

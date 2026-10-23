@@ -898,6 +898,90 @@
    "sport": "Snooker",
    "kind": "official-html",
    "note": "WST official match centre"
+  },
+  {
+   "key": "cricket_com_au_results",
+   "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=1",
+   "sport": "Cricket",
+   "kind": "official-html",
+   "note": "Cricket Australia completed matches (recent results)"
+  },
+  {
+   "key": "cricket_icc_t20_rankings",
+   "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/t20i",
+   "sport": "Cricket",
+   "kind": "official-html",
+   "note": "ICC official T20I team rankings"
+  },
+  {
+   "key": "cricket_icc_odi_rankings",
+   "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/odi",
+   "sport": "Cricket",
+   "kind": "official-html",
+   "note": "ICC official ODI team rankings"
+  },
+  {
+   "key": "tennis_wta_singles",
+   "url": "https://www.wtatennis.com/rankings/singles",
+   "sport": "Tennis",
+   "kind": "official-html",
+   "note": "WTA official singles rankings"
+  },
+  {
+   "key": "tennis_wta_scores_current",
+   "url": "https://www.wtatennis.com/scores/current",
+   "sport": "Tennis",
+   "kind": "official-html",
+   "note": "WTA official current scores"
+  },
+  {
+   "key": "darts_pdc_euro_2026",
+   "url": "https://www.pdc.tv/tournament/european-championship/2026",
+   "sport": "Darts",
+   "kind": "official-html",
+   "note": "PDC European Championship 2026"
+  },
+  {
+   "key": "snooker_wst_calendar",
+   "url": "https://www.wst.tv/calendar",
+   "sport": "Snooker",
+   "kind": "official-html",
+   "note": "WST official calendar"
+  },
+  {
+   "key": "handball_ehf_competitions",
+   "url": "https://www.eurohandball.com/en/competitions/",
+   "sport": "Handball",
+   "kind": "official-html",
+   "note": "EHF competitions index"
+  },
+  {
+   "key": "volleyball_cev_competitions",
+   "url": "https://www.cev.eu/competitions/",
+   "sport": "Volleyball",
+   "kind": "official-html",
+   "note": "CEV competitions index"
+  },
+  {
+   "key": "gaelic_gaa_club_fixtures",
+   "url": "https://www.gaa.ie/fixtures-results?type=club",
+   "sport": "Gaelic Sports",
+   "kind": "official-html",
+   "note": "GAA club fixtures"
+  },
+  {
+   "key": "greyhounds_gbgb_results",
+   "url": "https://www.gbgb.org.uk/racing/results/",
+   "sport": "Greyhounds",
+   "kind": "official-html",
+   "note": "GBGB official results"
+  },
+  {
+   "key": "rugby_union_urc_matchcentre",
+   "url": "https://www.unitedrugby.com/match-centre",
+   "sport": "Rugby Union",
+   "kind": "official-html",
+   "note": "URC official match centre"
   }
  ]
 }

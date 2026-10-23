@@ -453,6 +453,9 @@ def build() -> dict:
     picks = []
     for m in sorted(matches, key=lambda x: (SPORT_ORDER.get(x["sport"], 99), x["start_utc"], x["id"])):
         for mk in m["markets"]:
+            # round at the source: libm exp/erf can differ in the last bits between hosts,
+            # and the drift gate compares generated files byte for byte
+            mk["prob"] = round(mk["prob"], 6)
             price = american(mk["prob"])
             mk["fair_american"] = price
             mk["fair_decimal"] = decimal_from_american(price)

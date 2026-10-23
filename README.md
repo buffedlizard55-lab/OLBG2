@@ -2,7 +2,47 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
-## Newest: OLBG daily desk — `/olbg/` (23 October 2026)
+## Start here: consolidated 15-sport desk — `/master/` (23 October 2026, 22:00 UTC)
+
+**Live:** <https://buffedlizard55-lab.github.io/OLBG2/master/> ·
+[all matches](master/matches.html) · [picks and prices](master/picks.html) ·
+[written predictions](master/predictions.html) · [sports](master/sports/index.html) ·
+[sources](master/sources.html) · [Flagged for Review](master/flagged.html) ·
+[methodology](master/methodology.html) · [session record](research/master-73cee7ef.md).
+
+One desk across all fifteen sports. It merges today's OLBG listing (142 in-scope events parsed from OLBG's own
+embedded payload) with the official NHL, MLB and EuroLeague fixtures and records captured the same evening, then
+originates its own money line, puck line/handicap and totals for **93 official fixtures** and grades one selection
+per match.
+
+| Item | Value |
+|---|---|
+| Matches | **232** (142 OLBG-listed, 93 with an official fixture link, 3 with both) |
+| Graded picks | **207** |
+| High confidence (≥70%) | **87** |
+| High confidence **and** inside −250…+10000 | **8** |
+| Written predictions (≥30 words, sourced) | **11** — Ice Hockey 6, Basketball 5 |
+| Review items | **16**, including 60 failed captures listed with URL and HTTP status |
+
+```sh
+python scripts/master_data.py     # merge listing + official records, originate lines
+python scripts/master_build.py    # write /master/
+python scripts/master_verify.py   # 2,888 structural and numerical assertions
+python -m unittest tests.test_master_73cee7ef   # 20 tests
+```
+
+**What it will not do.** It will not infer a missing value. Fifty-seven of the 181 official captures returned a
+non-200 status and three more returned an error page; no value on the desk comes from one of them. Thirty-two
+captures were truncated at 300,000 bytes, so the OLBG event count is a floor. Only three sports have official
+per-match numbers, so only those three can be priced from data — the other twelve carry OLBG quotes, labelled
+"market-implied", with the bookmaker margin left in. No injury is asserted anywhere. Five predictions per sport is
+not reached and the reason is printed sport by sport.
+
+CI rebuilds and re-verifies the desk on every push and fails if the committed output drifts.
+
+---
+
+## Earlier: OLBG daily desk — `/olbg/` (23 October 2026)
 
 **Start here:** <https://buffedlizard55-lab.github.io/OLBG2/olbg/> ·
 [all matches](olbg/matches.html) · [picks and predictions](olbg/picks.html) ·

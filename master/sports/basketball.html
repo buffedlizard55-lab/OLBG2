@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basketball · OLBG2 consolidated desk</title>
+<meta name="description" content="Consolidated 15-sport desk: OLBG-listed matches, our own originated lines, confidence-graded picks and sourced predictions.">
+<style>*{box-sizing:border-box}
+:root{--ink:#0f172a;--muted:#5b6474;--line:#dfe3ea;--bg:#f6f7f9;--card:#fff;--accent:#0f766e;--accent2:#134e4a;--warn:#92400e;--hi:#166534;--med:#a16207;--low:#475569}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:#0b5fa5;text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+header.top{background:var(--ink);color:#fff}
+header.top .bar{display:flex;align-items:center;gap:18px;min-height:58px;flex-wrap:wrap}
+.brand{color:#fff;font-weight:700;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
+.brand:hover{text-decoration:none}
+.dot{width:10px;height:10px;border-radius:50%;background:#2dd4bf;display:inline-block}
+nav.main{display:flex;gap:2px;flex-wrap:wrap}
+nav.main a{color:#cbd5e1;font-size:.86rem;padding:.4rem .6rem;border-radius:7px}
+nav.main a:hover{background:#1e293b;color:#fff;text-decoration:none}
+nav.main a[aria-current]{background:var(--accent2);color:#5eead4;font-weight:600}
+.stripe{background:#e8f5f3;border-bottom:1px solid #cfe7e3;font-size:.86rem;color:#134e4a;padding:.5rem 0}
+main{padding:26px 0 60px}
+h1{font-size:2rem;line-height:1.15;margin:.2em 0 .35em}
+h2{font-size:1.3rem;margin:2rem 0 .6rem}
+h3{font-size:1.05rem;margin:0 0 .35rem}
+p.lede{font-size:1.06rem;color:#334155;max-width:76ch}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;color:var(--accent);font-weight:700;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi b{display:block;font-size:1.5rem;line-height:1.1}
+.kpi span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.card.sport:hover{border-color:#94a3b8;text-decoration:none}
+.card .metrics{display:flex;gap:12px;font-size:.8rem;color:var(--muted);margin-top:8px;flex-wrap:wrap}
+.pill{display:inline-block;font-size:.72rem;padding:.12rem .5rem;border-radius:999px;background:#eef2f7;color:#334155;border:1px solid #dbe2ea}
+.pill.high{background:#dcfce7;color:var(--hi);border-color:#bbf7d0}
+.pill.medium{background:#fef3c7;color:var(--med);border-color:#fde68a}
+.pill.low{background:#eef2f7;color:var(--low)}
+.pill.band{background:#e0f2fe;color:#075985;border-color:#bae6fd}
+.pill.out{background:#f1f5f9;color:#64748b}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:.88rem}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f1f5f9;font-size:.76rem;text-transform:uppercase;letter-spacing:.04em;color:#475569;position:sticky;top:0}
+tbody tr:hover{background:#fafbfc}
+.tablewrap{overflow:auto;max-height:74vh;border:1px solid var(--line);border-radius:12px}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mono{font-variant-numeric:tabular-nums}
+.notice{border-left:4px solid #94a3b8;background:#fff;padding:12px 16px;border-radius:8px;margin:16px 0}
+.notice.warn{border-color:#f59e0b;background:#fffbeb}
+.notice.blue{border-color:#38bdf8;background:#f0f9ff}
+.notice.good{border-color:#22c55e;background:#f0fdf4}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.tools input,.tools select{padding:.45rem .6rem;border:1px solid #cbd5e1;border-radius:8px;background:#fff;font-size:.88rem}
+.pred{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.pred h3{margin-bottom:.2rem}
+.pred .meta{font-size:.8rem;color:var(--muted);margin-bottom:.6rem}
+.pred p{margin:.5rem 0}
+.facts{font-size:.84rem;color:#334155;background:#f8fafc;border:1px dashed #dbe2ea;border-radius:8px;padding:8px 12px;margin:.6rem 0}
+.src{font-size:.82rem}
+.footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.84rem}
+.tiny{font-size:.78rem;color:#6b7280}
+.crumb{font-size:.82rem;color:var(--muted);margin-bottom:6px}
+.tag{font-size:.7rem;padding:.1rem .45rem;border-radius:6px;background:#f1f5f9;color:#475569;border:1px solid #e2e8f0}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%232dd4bf'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="../index.html"><span class="dot"></span>OLBG2 <span class="tag">consolidated desk</span></a>
+<nav class="main" aria-label="Desk navigation"><a href="../index.html">Overview</a><a href="../matches.html">All matches</a><a href="../picks.html">Picks &amp; lines</a><a href="../predictions.html">Predictions</a><a href="../sports/index.html" aria-current="page">Sports</a><a href="../sources.html">Sources</a><a href="../flagged.html">Flagged for Review</a><a href="../methodology.html">Methodology</a></nav>
+</div></header>
+<main class="wrap">
+
+<p class="crumb"><a href="../index.html">Overview</a> · <a href="index.html">Sports</a> / Basketball</p>
+<h1>Basketball</h1>
+<p class="lede">36 matches, 34 graded picks,
+15 at high confidence, 1 of those
+inside the price window, 5 written predictions.</p>
+
+<div class="tablewrap"><table><thead><tr><th>Start</th><th>Match</th><th>Competition</th><th>Venue</th><th>Featured selection</th><th>Our price</th><th>Grade</th><th>Sources</th></tr></thead><tbody><tr data-sport="Basketball" data-conf="medium"><td>23 Oct 22:30</td><td>Bauru vs Mogi das Cruzes</td><td>Brazil NBB</td><td>—</td><td>Mogi das Cruzes</td><td class="num">-154</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/Other/Brazil_NBB/Bauru_vs_Mogi_das_Cruzes/4?event_id=536060" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>23 Oct 23:10</td><td>ATL Hawks @ CHA Hornets</td><td>NBA</td><td>—</td><td>ATL Hawks</td><td class="num">-138</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/ATL_Hawks_@_CHA_Hornets/4?event_id=536035" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>23 Oct 23:10</td><td>DAL Mavericks @ IND Pacers</td><td>NBA</td><td>—</td><td>IND Pacers</td><td class="num">-250</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DAL_Mavericks_@_IND_Pacers/4?event_id=536037" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>23 Oct 23:10</td><td>MIN Timberwolves @ ORL Magic</td><td>NBA</td><td>—</td><td>MIN Timberwolves</td><td class="num">+105</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIN_Timberwolves_@_ORL_Magic/4?event_id=536036" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>23 Oct 23:10</td><td>NY Knicks @ BOS Celtics</td><td>NBA</td><td>—</td><td>BOS Celtics</td><td class="num">-133</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NY_Knicks_@_BOS_Celtics/4?event_id=534842" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>23 Oct 23:10</td><td>TOR Raptors @ WAS Wizards</td><td>NBA</td><td>—</td><td>TOR Raptors</td><td class="num">-303</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/TOR_Raptors_@_WAS_Wizards/4?event_id=536034" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>24 Oct 00:00</td><td>Argentino Junin vs Quimsa</td><td>Argentina Liga Nacional</td><td>—</td><td>Argentino Junin</td><td class="num">+230</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/Other/Argentina_Liga_Nacional/Argentino_Junin_vs_Quimsa/4?event_id=536058" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>24 Oct 00:10</td><td>DET Pistons @ MIA Heat</td><td>NBA</td><td>—</td><td>DET Pistons</td><td class="num">-120</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DET_Pistons_@_MIA_Heat/4?event_id=536038" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>24 Oct 00:30</td><td>Atenas vs Lanus</td><td>Argentina Liga Nacional</td><td>—</td><td>Atenas</td><td class="num">-330</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/Other/Argentina_Liga_Nacional/Atenas_vs_Lanus/4?event_id=536073" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>24 Oct 01:05</td><td>Racing de Chivilcoy vs Boca Juniors</td><td>Argentina Liga Nacional</td><td>—</td><td>Boca Juniors</td><td class="num">-143</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/Other/Argentina_Liga_Nacional/Racing_de_Chivilcoy_vs_Boca_Juniors/4?event_id=536059" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="medium"><td>24 Oct 01:40</td><td>HOU Rockets @ SA Spurs</td><td>NBA</td><td>—</td><td>SA Spurs</td><td class="num">-175</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_SA_Spurs/4?event_id=534841" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>24 Oct 01:40</td><td>NO Pelicans @ UTA Jazz</td><td>NBA</td><td>—</td><td>UTA Jazz</td><td class="num">-115</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_UTA_Jazz/4?event_id=536040" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>24 Oct 02:10</td><td>LA Clippers @ LA Lakers</td><td>NBA</td><td>—</td><td>LA Lakers</td><td class="num">-333</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/LA_Clippers_@_LA_Lakers/4?event_id=536042" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>24 Oct 02:10</td><td>MEM Grizzlies @ GS Warriors</td><td>NBA</td><td>—</td><td>Under 237.50</td><td class="num">-109</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MEM_Grizzlies_@_GS_Warriors/4?event_id=536039" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>24 Oct 02:10</td><td>POR Trail Blazers @ SAC Kings</td><td>NBA</td><td>—</td><td>POR Trail Blazers</td><td class="num">-431</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/NBA/NBA/POR_Trail_Blazers_@_SAC_Kings/4?event_id=536043" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>24 Oct 17:30</td><td>Slask Wroclaw vs Astoria Bydgoszcz</td><td>Poland PLK</td><td>—</td><td>Astoria Bydgoszcz</td><td class="num">+400</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.olbg.com/betting-tips/Basketball/European/Poland_PLK/Slask_Wroclaw_vs_Astoria_Bydgoszcz/4?event_id=536075" rel="noopener">OLBG ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>27 Oct 17:00 (venue time)</td><td>Dubai Basketball v Paris Basketball</td><td>EuroLeague</td><td>COCA-COLA ARENA</td><td>Dubai Basketball</td><td class="num">-733</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_72/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>27 Oct 20:00 (venue time)</td><td>FC Bayern Munich v FC Barcelona</td><td>EuroLeague</td><td>SAP GARDEN</td><td>FC Barcelona</td><td class="num">-370</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_74/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>27 Oct 20:00 (venue time)</td><td>Crvena Zvezda Meridianbet Belgrade v Maccabi Rapyd Tel Aviv</td><td>EuroLeague</td><td>BELGRADE ARENA</td><td>Crvena Zvezda Meridianbet Belgrade</td><td class="num">-518</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_71/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>27 Oct 20:15 (venue time)</td><td>Panathinaikos AKTOR Athens v Armani Olimpia Milan</td><td>EuroLeague</td><td>TELEKOM CENTER ATHENS</td><td>Panathinaikos AKTOR Athens</td><td class="num">-733</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_76/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="medium"><td>27 Oct 20:30 (venue time)</td><td>Valencia Basket v Fenerbahce Tarfin Istanbul</td><td>EuroLeague</td><td>ROIG ARENA</td><td>Fenerbahce Tarfin Istanbul</td><td class="num">-151</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_75/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf=""><td>27 Oct 21:00 (venue time)</td><td>KOSNER BASKONIA VITORIA-GASTEIZ v REAL MADRID</td><td>EuroLeague</td><td>BUESA ARENA</td><td>—</td><td class="num">—</td><td>—</td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_73/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>28 Oct 18:30 (venue time)</td><td>Besiktas Istanbul v Olympiacos Piraeus</td><td>EuroLeague</td><td>TURKCELL BASKETBALL DEVELOPMENT CENTER</td><td>Olympiacos Piraeus</td><td class="num">-466</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_79/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>28 Oct 19:00 (venue time)</td><td>Hapoel IBI Tel Aviv v Anadolu Efes Istanbul</td><td>EuroLeague</td><td>ARENA BOTEVGRAD</td><td>Hapoel IBI Tel Aviv</td><td class="num">-356</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_77/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>28 Oct 20:00 (venue time)</td><td>LDLC ASVEL Villeurbanne v Partizan Mozzart Bet Belgrade</td><td>EuroLeague</td><td>LDLC ARENA</td><td>Partizan Mozzart Bet Belgrade</td><td class="num">-355</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_78/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="medium"><td>28 Oct 20:30 (venue time)</td><td>Virtus Bologna v Zalgiris Kaunas</td><td>EuroLeague</td><td>PALADOZZA</td><td>Virtus Bologna</td><td class="num">-172</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_80/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>29 Oct 20:00 (venue time)</td><td>Crvena Zvezda Meridianbet Belgrade v FC Bayern Munich</td><td>EuroLeague</td><td>BELGRADE ARENA</td><td>Crvena Zvezda Meridianbet Belgrade</td><td class="num">-529</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_81/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="medium"><td>29 Oct 20:05 (venue time)</td><td>Maccabi Rapyd Tel Aviv v Paris Basketball</td><td>EuroLeague</td><td>ALEKSANDAR NIKOLIC HALL</td><td>Maccabi Rapyd Tel Aviv</td><td class="num">-158</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_82/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="medium"><td>29 Oct 20:45 (venue time)</td><td>Real Madrid v Fenerbahce Tarfin Istanbul</td><td>EuroLeague</td><td>MOVISTAR ARENA</td><td>Fenerbahce Tarfin Istanbul</td><td class="num">-232</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_83/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>30 Oct 17:00 (venue time)</td><td>Dubai Basketball v Hapoel IBI Tel Aviv</td><td>EuroLeague</td><td>COCA-COLA ARENA</td><td>Hapoel IBI Tel Aviv</td><td class="num">-105</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_84/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>30 Oct 18:30 (venue time)</td><td>Anadolu Efes Istanbul v Panathinaikos AKTOR Athens</td><td>EuroLeague</td><td>TURKCELL BASKETBALL DEVELOPMENT CENTER</td><td>Panathinaikos AKTOR Athens</td><td class="num">-733</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_88/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="low"><td>30 Oct 19:00 (venue time)</td><td>Zalgiris Kaunas v Partizan Mozzart Bet Belgrade</td><td>EuroLeague</td><td>ZALGIRIO ARENA</td><td>Partizan Mozzart Bet Belgrade</td><td class="num">-131</td><td><span class="pill low">low</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_86/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf=""><td>30 Oct 20:00 (venue time)</td><td>LDLC ASVEL VILLEURBANNE v KOSNER BASKONIA VITORIA-GASTEIZ</td><td>EuroLeague</td><td>LDLC ARENA</td><td>—</td><td class="num">—</td><td>—</td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_85/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="high"><td>30 Oct 20:15 (venue time)</td><td>Olympiacos Piraeus v Armani Olimpia Milan</td><td>EuroLeague</td><td>SUNEL ARENA</td><td>Olympiacos Piraeus</td><td class="num">-733</td><td><span class="pill high">high</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_90/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="medium"><td>30 Oct 20:30 (venue time)</td><td>FC Barcelona v Valencia Basket</td><td>EuroLeague</td><td>PALAU BLAUGRANA</td><td>Valencia Basket</td><td class="num">-168</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_87/" rel="noopener">official ↗</a></td></tr><tr data-sport="Basketball" data-conf="medium"><td>30 Oct 20:30 (venue time)</td><td>Virtus Bologna v Besiktas Istanbul</td><td>EuroLeague</td><td>PALADOZZA</td><td>Virtus Bologna</td><td class="num">-178</td><td><span class="pill medium">medium</span></td><td class="src"><a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_89/" rel="noopener">official ↗</a></td></tr></tbody></table></div>
+
+</main>
+<footer class="footer"><div class="wrap">
+<p><strong>Research, not betting advice.</strong> Prices shown as "our price" are our own estimates built from the linked official records; prices shown as "OLBG quote" are quoted by OLBG and reproduce the bookmaker margin. 18+.</p>
+<p class="tiny">Built by <code>scripts/master_build.py</code> from <code>data/master/</code>. Earlier desks are preserved unchanged under <a href="../../index.html">the repository root</a>.</p>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var q=document.getElementById('q'), s=document.getElementById('sport'), c=document.getElementById('conf'), out=document.getElementById('count');
+  var rows=[].slice.call(document.querySelectorAll('tbody tr[data-sport]'));
+  function apply(){
+    var n=0;
+    rows.forEach(function(r){
+      var ok=(!q.value||r.textContent.toLowerCase().indexOf(q.value.toLowerCase())!==-1)
+        &&(!s.value||r.dataset.sport===s.value)
+        &&(!c.value||r.dataset.conf===c.value);
+      r.style.display=ok?'':'none'; if(ok)n++;
+    });
+    if(out) out.textContent=n+' of '+rows.length+' rows';
+  }
+  [q,s,c].forEach(function(el){if(el){el.addEventListener('input',apply);el.addEventListener('change',apply);}});
+  apply();
+});
+</script>
+</body>
+</html>

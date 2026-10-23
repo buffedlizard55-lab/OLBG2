@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Predictions · OLBG2 consolidated desk</title>
+<meta name="description" content="Consolidated 15-sport desk: OLBG-listed matches, our own originated lines, confidence-graded picks and sourced predictions.">
+<style>*{box-sizing:border-box}
+:root{--ink:#0f172a;--muted:#5b6474;--line:#dfe3ea;--bg:#f6f7f9;--card:#fff;--accent:#0f766e;--accent2:#134e4a;--warn:#92400e;--hi:#166534;--med:#a16207;--low:#475569}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:#0b5fa5;text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+header.top{background:var(--ink);color:#fff}
+header.top .bar{display:flex;align-items:center;gap:18px;min-height:58px;flex-wrap:wrap}
+.brand{color:#fff;font-weight:700;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
+.brand:hover{text-decoration:none}
+.dot{width:10px;height:10px;border-radius:50%;background:#2dd4bf;display:inline-block}
+nav.main{display:flex;gap:2px;flex-wrap:wrap}
+nav.main a{color:#cbd5e1;font-size:.86rem;padding:.4rem .6rem;border-radius:7px}
+nav.main a:hover{background:#1e293b;color:#fff;text-decoration:none}
+nav.main a[aria-current]{background:var(--accent2);color:#5eead4;font-weight:600}
+.stripe{background:#e8f5f3;border-bottom:1px solid #cfe7e3;font-size:.86rem;color:#134e4a;padding:.5rem 0}
+main{padding:26px 0 60px}
+h1{font-size:2rem;line-height:1.15;margin:.2em 0 .35em}
+h2{font-size:1.3rem;margin:2rem 0 .6rem}
+h3{font-size:1.05rem;margin:0 0 .35rem}
+p.lede{font-size:1.06rem;color:#334155;max-width:76ch}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;color:var(--accent);font-weight:700;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi b{display:block;font-size:1.5rem;line-height:1.1}
+.kpi span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.card.sport:hover{border-color:#94a3b8;text-decoration:none}
+.card .metrics{display:flex;gap:12px;font-size:.8rem;color:var(--muted);margin-top:8px;flex-wrap:wrap}
+.pill{display:inline-block;font-size:.72rem;padding:.12rem .5rem;border-radius:999px;background:#eef2f7;color:#334155;border:1px solid #dbe2ea}
+.pill.high{background:#dcfce7;color:var(--hi);border-color:#bbf7d0}
+.pill.medium{background:#fef3c7;color:var(--med);border-color:#fde68a}
+.pill.low{background:#eef2f7;color:var(--low)}
+.pill.band{background:#e0f2fe;color:#075985;border-color:#bae6fd}
+.pill.out{background:#f1f5f9;color:#64748b}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:.88rem}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f1f5f9;font-size:.76rem;text-transform:uppercase;letter-spacing:.04em;color:#475569;position:sticky;top:0}
+tbody tr:hover{background:#fafbfc}
+.tablewrap{overflow:auto;max-height:74vh;border:1px solid var(--line);border-radius:12px}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mono{font-variant-numeric:tabular-nums}
+.notice{border-left:4px solid #94a3b8;background:#fff;padding:12px 16px;border-radius:8px;margin:16px 0}
+.notice.warn{border-color:#f59e0b;background:#fffbeb}
+.notice.blue{border-color:#38bdf8;background:#f0f9ff}
+.notice.good{border-color:#22c55e;background:#f0fdf4}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.tools input,.tools select{padding:.45rem .6rem;border:1px solid #cbd5e1;border-radius:8px;background:#fff;font-size:.88rem}
+.pred{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.pred h3{margin-bottom:.2rem}
+.pred .meta{font-size:.8rem;color:var(--muted);margin-bottom:.6rem}
+.pred p{margin:.5rem 0}
+.facts{font-size:.84rem;color:#334155;background:#f8fafc;border:1px dashed #dbe2ea;border-radius:8px;padding:8px 12px;margin:.6rem 0}
+.src{font-size:.82rem}
+.footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.84rem}
+.tiny{font-size:.78rem;color:#6b7280}
+.crumb{font-size:.82rem;color:var(--muted);margin-bottom:6px}
+.tag{font-size:.7rem;padding:.1rem .45rem;border-radius:6px;background:#f1f5f9;color:#475569;border:1px solid #e2e8f0}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%232dd4bf'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="tag">consolidated desk</span></a>
+<nav class="main" aria-label="Desk navigation"><a href="index.html">Overview</a><a href="matches.html">All matches</a><a href="picks.html">Picks &amp; lines</a><a href="predictions.html" aria-current="page">Predictions</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a><a href="methodology.html">Methodology</a></nav>
+</div></header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">Overview</a> / Predictions</p>
+<h1>Written predictions</h1>
+<p class="lede">11 write-ups, one per high-confidence pick that has official statistics behind it. Each is
+at least 30 words, names the selection in plain words, and uses only figures that appear on the linked official
+page. None of them claims an injury, because no official injury feed was captured today.</p>
+<div class="notice blue"><strong>Coverage.</strong> Ice Hockey 6,
+Basketball 5, every other sport 0.
+Twelve of the fifteen sports have no official per-match statistical input in today's capture, so a write-up there
+would have nothing to stand on. The gap is itemised on <a href="flagged.html">Flagged for Review</a>.</div>
+<h2>Coverage against the five-a-sport target</h2>
+<div class="tablewrap"><table><thead><tr><th>Sport</th><th>Matches</th><th>High-confidence picks</th><th>In band</th><th>Predictions</th><th>Why not five</th></tr></thead><tbody><tr><td>Golf</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>No golf event in the captured OLBG payload; outright market, no two-sided line.</td></tr><tr><td>Volleyball</td><td class="num">22</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td>OLBG quotes only; no official per-match statistics captured.</td></tr><tr><td>Rugby Union</td><td class="num">13</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td>OLBG quotes only; the URC table and fixtures captures both returned 404.</td></tr><tr><td>Cricket</td><td class="num">13</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td>OLBG quotes only; the ICC matches page returned 404.</td></tr><tr><td>Snooker</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>No snooker event in the captured payload; WST rankings were read but no fixture list was captured.</td></tr><tr><td>Darts</td><td class="num">9</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td>OLBG quotes only; no official per-match statistics captured.</td></tr><tr><td>Baseball</td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>Official records exist but no selection reached 70%; the World Series games price close to even.</td></tr><tr><td>Gaelic Sports</td><td class="num">7</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td>OLBG quotes only; GAA fixtures were captured but a county final has no statistical input here.</td></tr><tr><td>Greyhounds</td><td class="num">18</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>Outright race markets; no two-sided line and no statistical model.</td></tr><tr><td>Tennis</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>OLBG quotes only; the ATP scores capture returned 403 and WTA current scores returned 404.</td></tr><tr><td>Motor Racing</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>Outright and podium markets; no two-sided line.</td></tr><tr><td>Handball</td><td class="num">30</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td>OLBG quotes only; EHF and HBL captures returned 404.</td></tr><tr><td>Ice Hockey</td><td class="num">67</td><td class="num">54</td><td class="num">6</td><td class="num">6</td><td>Five-plus available; six written.</td></tr><tr><td>Basketball</td><td class="num">36</td><td class="num">15</td><td class="num">1</td><td class="num">5</td><td>Five written, all EuroLeague. NBA rows have OLBG prices only.</td></tr><tr><td>Rugby League</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td>OLBG quotes only; the NRL and Super League captures failed.</td></tr></tbody></table></div>
+
+<article class="pred">
+  <div class="metrics"><span class="pill">Ice Hockey</span><span class="pill high">high</span><span class="pill band">in band</span></div>
+  <h3 style="margin-top:6px">Dallas Stars v New York Islanders</h3>
+  <p class="meta">NHL · 25 Oct 22:00 UTC · American Airlines Center
+  · <strong>Islanders +1.5</strong> (Puck line +1.5) at our -235</p>
+  <p>Take the New York Islanders +1.5 on the puck line in Dallas. The Islanders have banked 12 points from ten games, scoring 29 times and conceding 23, and their last ten reads 5-3-2, so they have stayed in almost every game this season. Dallas are on a four-game run and have allowed only 17 goals, but the Stars&#x27; scoring rate of 2.6 a night leaves little room to win by two. The visitors only need to lose by one or win.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>New York Islanders: 10 GP, 5-3-2, 12 points, 29 GF, 23 GA, road 1-2-1, last ten 5-3-2</li><li>Dallas Stars: 10 GP, 6-3-1, 13 points, 26 GF, 17 GA, home 3-2-0, on a four-game winning run</li></ul></div>
+  <p class="src">Sources: <a href="https://www.nhl.com/gamecenter/nyi-vs-dal/2026/10/25/2026020181" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-web.nhle.com/v1/standings/now" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Basketball</span><span class="pill high">high</span><span class="pill out">outside band</span></div>
+  <h3 style="margin-top:6px">Dubai Basketball v Paris Basketball</h3>
+  <p class="meta">EuroLeague · 27 Oct 17:00 UTC · Coca-Cola Arena
+  · <strong>Dubai Basketball</strong> (Money line) at our -733</p>
+  <p>Dubai Basketball to win on the money line at the Coca-Cola Arena. The home side are fifth in the EuroLeague at 5-2 after seven rounds, with 597 points scored and 584 conceded. Paris are 1-5 and have scored only 504 points across six games while giving up 545, a scoring margin of minus 41, and that 504 is the lowest points-for total of any club in the competition. Dubai&#x27;s plus 13 differential is modest but the gap to Paris is wide.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Dubai Basketball: 7 games, 5-2, 597 points for, 584 against, fifth in the standings</li><li>Paris Basketball: 6 games, 1-5, 504 points for, 545 against, eighteenth</li></ul></div>
+  <p class="src">Sources: <a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_72/" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-live.euroleague.net/v1/standings?seasonCode=E2026&amp;gameNumber=7" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Basketball</span><span class="pill high">high</span><span class="pill out">outside band</span></div>
+  <h3 style="margin-top:6px">Crvena Zvezda Meridianbet Belgrade v Maccabi Rapyd Tel Aviv</h3>
+  <p class="meta">EuroLeague · 27 Oct 20:00 UTC · Belgrade Arena
+  · <strong>Crvena Zvezda Meridianbet Belgrade</strong> (Money line) at our -518</p>
+  <p>Crvena Zvezda are the money-line selection in Belgrade. The hosts are 4-3 and eighth, and their 560 points scored against 532 conceded gives a differential of plus 28. Maccabi are 2-5 and have conceded 653 points in seven games, the third-highest total in the competition, while scoring 608. That is a minus 45 differential for the visitors against a home side whose defence has conceded 121 points fewer across the same number of games.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Crvena Zvezda: 7 games, 4-3, 560 points for, 532 against, eighth</li><li>Maccabi Rapyd Tel Aviv: 7 games, 2-5, 608 points for, 653 against, fifteenth</li></ul></div>
+  <p class="src">Sources: <a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_71/" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-live.euroleague.net/v1/standings?seasonCode=E2026&amp;gameNumber=7" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Basketball</span><span class="pill high">high</span><span class="pill out">outside band</span></div>
+  <h3 style="margin-top:6px">FC Bayern Munich v FC Barcelona</h3>
+  <p class="meta">EuroLeague · 27 Oct 20:00 UTC · SAP Garden
+  · <strong>FC Barcelona</strong> (Money line) at our -370</p>
+  <p>Barcelona to win at Bayern Munich is the pick. Barcelona are 4-3 and ninth, with 623 points scored and 606 allowed across seven rounds for a differential of plus 17. Bayern are 2-5 and sixteenth, and the 659 points they have conceded is the second-highest total in the competition after seven games. Munich have scored 612, so their differential sits at minus 47, and Barcelona&#x27;s scoring output is the fourth-highest in the league.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>FC Barcelona: 7 games, 4-3, 623 points for, 606 against, ninth</li><li>FC Bayern Munich: 7 games, 2-5, 612 points for, 659 against, sixteenth</li></ul></div>
+  <p class="src">Sources: <a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_74/" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-live.euroleague.net/v1/standings?seasonCode=E2026&amp;gameNumber=7" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Basketball</span><span class="pill high">high</span><span class="pill out">outside band</span></div>
+  <h3 style="margin-top:6px">Panathinaikos AKTOR Athens v Armani Olimpia Milan</h3>
+  <p class="meta">EuroLeague · 27 Oct 20:15 UTC · Telekom Center Athens
+  · <strong>Panathinaikos AKTOR Athens</strong> (Money line) at our -733</p>
+  <p>Panathinaikos should win this money-line bet in Athens. The leaders are 6-1 with 613 points scored and just 517 conceded, a differential of plus 96 that is the best in the EuroLeague after seven rounds. Milan are 1-6 and nineteenth, have given up 648 points while scoring 585, and sit at minus 63. Three clubs have conceded more than Milan this season, and the worst of them is Baskonia on 649.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Panathinaikos AKTOR Athens: 7 games, 6-1, 613 points for, 517 against, first</li><li>Armani Olimpia Milan: 7 games, 1-6, 585 points for, 648 against, nineteenth</li></ul></div>
+  <p class="src">Sources: <a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_76/" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-live.euroleague.net/v1/standings?seasonCode=E2026&amp;gameNumber=7" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Basketball</span><span class="pill high">high</span><span class="pill out">outside band</span></div>
+  <h3 style="margin-top:6px">Besiktas Istanbul v Olympiacos Piraeus</h3>
+  <p class="meta">EuroLeague · 28 Oct 18:30 UTC · Turkcell Basketball Development Center
+  · <strong>Olympiacos Piraeus</strong> (Money line) at our -466</p>
+  <p>Olympiacos are the away money-line pick in Istanbul. The Greeks are third at 5-1, with 564 points scored and 524 conceded, a differential of plus 40 that is the third-best in the competition. Besiktas are 3-4 and fourteenth: they have scored 634 points but conceded 644, and that figure is among the six highest totals given up by any club. Olympiacos have played one fewer game than most of the league and still sit in the top three.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Olympiacos Piraeus: 6 games, 5-1, 564 points for, 524 against, third</li><li>Besiktas Istanbul: 7 games, 3-4, 634 points for, 644 against, fourteenth</li></ul></div>
+  <p class="src">Sources: <a href="https://www.euroleaguebasketball.net/euroleague/game-center/E2026_79/" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-live.euroleague.net/v1/standings?seasonCode=E2026&amp;gameNumber=7" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Ice Hockey</span><span class="pill high">high</span><span class="pill band">in band</span></div>
+  <h3 style="margin-top:6px">Seattle Kraken v Toronto Maple Leafs</h3>
+  <p class="meta">NHL · 29 Oct 02:00 UTC · Climate Pledge Arena
+  · <strong>Maple Leafs +1.5</strong> (Puck line +1.5) at our -235</p>
+  <p>Toronto +1.5 on the puck line is the selection in Seattle. The Leafs sit on 14 points from 12 games with 43 goals scored and 39 conceded, and they arrive on a three-game winning run with a road record of 2-1-1. Seattle have started well at 7-3-1 and are 3-1-0 at Climate Pledge Arena, yet their goal difference is only plus seven across 11 games, which is close enough that a one-goal finish is the likeliest single outcome.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Toronto Maple Leafs: 12 GP, 6-4-2, 14 points, 43 GF, 39 GA, road 2-1-1, on a three-game winning run</li><li>Seattle Kraken: 11 GP, 7-3-1, 15 points, 44 GF, 37 GA, home 3-1-0</li></ul></div>
+  <p class="src">Sources: <a href="https://www.nhl.com/gamecenter/tor-vs-sea/2026/10/29/2026020202" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-web.nhle.com/v1/standings/now" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Ice Hockey</span><span class="pill high">high</span><span class="pill band">in band</span></div>
+  <h3 style="margin-top:6px">Carolina Hurricanes v Columbus Blue Jackets</h3>
+  <p class="meta">NHL · 29 Oct 23:00 UTC · Lenovo Center
+  · <strong>Hurricanes -1.5</strong> (Puck line -1.5) at our -242</p>
+  <p>Back Carolina to cover the -1.5 puck line at home to Columbus. The Hurricanes top the standings on 18 points from 12 games, with 47 goals for and 33 against, and their last ten reads 8-1-1. Columbus have six points from eight games, are 0-2-0 on the road, and have scored 20 goals while allowing 29. A two-goal margin for the home side is the natural read from those two records.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Carolina Hurricanes: 12 GP, 8-2-2, 18 points, 47 GF, 33 GA, road 6-1-1, last ten 8-1-1</li><li>Columbus Blue Jackets: 8 GP, 3-5-0, 6 points, 20 GF, 29 GA, road 0-2-0</li></ul></div>
+  <p class="src">Sources: <a href="https://www.nhl.com/gamecenter/cbj-vs-car/2026/10/29/2026020206" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-web.nhle.com/v1/standings/now" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Ice Hockey</span><span class="pill high">high</span><span class="pill band">in band</span></div>
+  <h3 style="margin-top:6px">Anaheim Ducks v Buffalo Sabres</h3>
+  <p class="meta">NHL · 30 Oct 02:00 UTC · Honda Center
+  · <strong>Sabres +1.5</strong> (Puck line +1.5) at our -235</p>
+  <p>The Sabres +1.5 puck line is the pick in Anaheim. Buffalo have taken 10 points from ten games and have been competitive on the road at 1-1-2, with two of those games going beyond regulation. Anaheim have lost five in a row, are 1-3-0 at the Honda Center, and have scored 27 goals while conceding 33. The Ducks need a two-goal win to beat this line, and nothing in their current run suggests that is likely.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Buffalo Sabres: 10 GP, 4-4-2, 10 points, 28 GF, 37 GA, road 1-1-2</li><li>Anaheim Ducks: 10 GP, 4-6-0, 8 points, 27 GF, 33 GA, home 1-3-0, five straight defeats</li></ul></div>
+  <p class="src">Sources: <a href="https://www.nhl.com/gamecenter/buf-vs-ana/2026/10/30/2026020211" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-web.nhle.com/v1/standings/now" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Ice Hockey</span><span class="pill high">high</span><span class="pill band">in band</span></div>
+  <h3 style="margin-top:6px">Calgary Flames v Seattle Kraken</h3>
+  <p class="meta">NHL · 31 Oct 00:00 UTC · Scotiabank Saddledome
+  · <strong>Flames +1.5</strong> (Puck line +1.5) at our -246</p>
+  <p>Calgary +1.5 at home is the play against Seattle. The Flames are 3-6-0 and have been outscored 38-19, but they have won their last two and return to the Saddledome where they are 2-3-0. Seattle are the stronger side at 7-3-1 with 44 goals, though their road record of 4-2-1 is good rather than dominant. Asking the Kraken to win by two in Calgary is a bigger step than their season line implies.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Calgary Flames: 9 GP, 3-6-0, 6 points, 19 GF, 38 GA, home 2-3-0, two straight wins</li><li>Seattle Kraken: 11 GP, 7-3-1, 15 points, 44 GF, 37 GA, road 4-2-1</li></ul></div>
+  <p class="src">Sources: <a href="https://www.nhl.com/gamecenter/sea-vs-cgy/2026/10/31/2026020216" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-web.nhle.com/v1/standings/now" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+<article class="pred">
+  <div class="metrics"><span class="pill">Ice Hockey</span><span class="pill high">high</span><span class="pill band">in band</span></div>
+  <h3 style="margin-top:6px">Anaheim Ducks v Ottawa Senators</h3>
+  <p class="meta">NHL · 02 Nov 01:00 UTC · Honda Center
+  · <strong>Senators -1.5</strong> (Puck line -1.5) at our -246</p>
+  <p>Ottawa -1.5 on the puck line is the call in Anaheim. The Senators have 14 points from 11 games, a 3-2-0 road record and a goal difference of plus one, and they have won six of their last ten. Anaheim are on a five-game losing run, are 1-3-0 at home, and have been outscored 33-27 across ten games. A two-goal Ottawa win is a fair target against a side that has taken eight points all season.</p>
+  <div class="facts"><strong>Figures used</strong><ul><li>Ottawa Senators: 11 GP, 7-4-0, 14 points, 31 GF, 30 GA, road 3-2-0</li><li>Anaheim Ducks: 10 GP, 4-6-0, 8 points, 27 GF, 33 GA, home 1-3-0, five straight defeats</li></ul></div>
+  <p class="src">Sources: <a href="https://www.nhl.com/gamecenter/ott-vs-ana/2026/11/02/2026020231" rel="noopener">official fixture page ↗</a> ·
+  <a href="https://api-web.nhle.com/v1/standings/now" rel="noopener">official record/feed used for the numbers ↗</a></p>
+</article>
+
+</main>
+<footer class="footer"><div class="wrap">
+<p><strong>Research, not betting advice.</strong> Prices shown as "our price" are our own estimates built from the linked official records; prices shown as "OLBG quote" are quoted by OLBG and reproduce the bookmaker margin. 18+.</p>
+<p class="tiny">Built by <code>scripts/master_build.py</code> from <code>data/master/</code>. Earlier desks are preserved unchanged under <a href="../index.html">the repository root</a>.</p>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var q=document.getElementById('q'), s=document.getElementById('sport'), c=document.getElementById('conf'), out=document.getElementById('count');
+  var rows=[].slice.call(document.querySelectorAll('tbody tr[data-sport]'));
+  function apply(){
+    var n=0;
+    rows.forEach(function(r){
+      var ok=(!q.value||r.textContent.toLowerCase().indexOf(q.value.toLowerCase())!==-1)
+        &&(!s.value||r.dataset.sport===s.value)
+        &&(!c.value||r.dataset.conf===c.value);
+      r.style.display=ok?'':'none'; if(ok)n++;
+    });
+    if(out) out.textContent=n+' of '+rows.length+' rows';
+  }
+  [q,s,c].forEach(function(el){if(el){el.addEventListener('input',apply);el.addEventListener('change',apply);}});
+  apply();
+});
+</script>
+</body>
+</html>

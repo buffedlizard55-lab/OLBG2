@@ -254,7 +254,8 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
-    ("ledger/index.html", "Latest: ledger desk (15 sports, 23 Oct)"),
+    ("master/index.html", "Consolidated desk (current)"),
+    ("ledger/index.html", "Ledger desk (15 sports, 23 Oct)"),
     ("cadence/index.html", "Exact 15-sport card & evidence audit"),
     ("olbg/index.html", "OLBG daily desk (23 Oct)"),
     ("brief/index.html", "Daily brief (15 sports, 23 Oct)"),
@@ -291,17 +292,19 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
         links.append(f'<a href="{prefix}{esc(href)}"{current}>{esc(label)}</a>')
     nav = "".join(links)
     if active == "index.html":
-        body = '''<section class="hero"><p class="eyebrow">Latest research · exact 15-sport scope</p>
-<h1>Start with the OLBG daily desk.</h1>
-<p class="lede">The latest desk separates official fixture facts, OLBG discovery provenance, independent fair prices and missing evidence.
-It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
-<div class="cta"><a class="button primary" href="ledger/index.html">Open the 15-sport ledger →</a>
-<a class="button" href="cadence/index.html">Exact 15-sport card & evidence audit</a>
-<a class="button" href="ledger/flagged.html">Flagged for Review</a>
-<a class="button" href="olbg/index.html">OLBG daily desk</a></div>
-<p><strong>One consolidated desk, 15 sports.</strong> Every value carries the first-hand capture it came from; gaps are left blank and listed on the review page.
-Earlier overlapping research is retained below for audit only.</p></section>
-<details><summary><strong>Open historical 22 October dashboard (not newly verified)</strong></summary>''' + body + '</details>'
+        body = '''<section class="hero"><p class="eyebrow">Start here · exact 15-sport scope</p>
+<h1>One consolidated desk for all fifteen sports.</h1>
+<p class="lede">The <a href="master/index.html">consolidated desk</a> merges the latest OLBG listing with the official
+fixture and record captures, originates our own prices for every match it can support, grades one selection per match
+and publishes the written predictions that have real statistics behind them. Anything that could not be confirmed is
+left blank and listed on the review page rather than filled in.</p>
+<div class="cta"><a class="button primary" href="master/index.html">Open the consolidated desk →</a>
+<a class="button" href="master/picks.html">Picks &amp; prices</a>
+<a class="button" href="cadence/index.html">Exact 15-sport card &amp; evidence audit</a>
+<a class="button" href="master/flagged.html">Flagged for Review</a></div>
+<p><strong>15 sports, one table.</strong> Every value carries the first-hand capture it came from. The older desks below are
+kept unchanged so this work can be audited, and they are not merged into the current counts.</p></section>
+<details><summary><strong>Open the older 22 October verified dashboard (not newly verified)</strong></summary>''' + body + '</details>'
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -320,8 +323,7 @@ Earlier overlapping research is retained below for audit only.</p></section>
 </header>
 <div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
 <main class="wrap">
-<div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk, not the current clock.
-<a href="{prefix}ledger/index.html">Use the 15-sport ledger</a> for today's OLBG slate, our own prices and the review queue.</div>
+<div class="notice blue"><strong>This is the 22 October verified layer, kept for audit.</strong> For the current slate, our own prices and the review queue use the <a href="{prefix}master/index.html">consolidated desk</a>.</div>
 {body}
 </main>
 <footer class="footer"><div class="wrap">

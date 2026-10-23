@@ -28,7 +28,7 @@ The root landing page now uses the latest corrected 23 October snapshot rather t
 
 **Coverage boundary:** the 93 rows are not represented as 93 current OLBG listings. One row retains a recorded OLBG event id with a matching registered event URL, but its integration re-read displayed “No tips found.” The other rows are official-context fixtures. The separate [OLBG discovery desk](olbg/index.html) and its review page preserve that distinct provenance. No complete OLBG inventory, every-market coverage, current bookmaker price feed, or five-high-write-ups-per-sport completion is claimed.
 
-Final integration corrected two source/display defects before publication: Cork Gaelic semi-final margins now calculate as +2/+2 from the official scores, and outright/three-way fixture summaries now name the actual leading selection with the corresponding probability. The unsupported Gaelic `olbg_event_id` was removed. Corrections and five open review items are published with evidence links on [Flagged for Review](integration.html).
+Final integration corrected two source/display defects before publication: Cork Gaelic semi-final margins now calculate as +2/+2 from the official scores, and outright/three-way fixture summaries now name the actual leading selection with the corresponding probability. The unsupported Gaelic `olbg_event_id` was removed. Corrections, six open integration items, and two independent audit additions are published with evidence links on [Flagged for Review](integration.html).
 
 ```sh
 python scripts/cadence_seed.py

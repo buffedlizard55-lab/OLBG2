@@ -133,6 +133,7 @@ def main() -> None:
             "price_status": match.get("status"),
             "start_representation": "UTC" if fixture.get("start_utc") else "publisher time string; no UTC inferred",
             "blank_fields": blank_fields,
+            "review_notes": (["official participant order differs: Cork GAA lists Nemo Rangers first"] if fid == "gaa-cork-psfc" else []),
             "recorded_olbg_event_id": event_id,
             "active_olbg_listing_confirmed": False if event_id == 199984 else None,
             "internal_check": "fail" if row_errors else "pass",
@@ -245,6 +246,13 @@ def main() -> None:
             "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/cadence/repo_audit.json",
             "review_url": "https://buffedlizard55-lab.github.io/OLBG2/cadence/audit.html",
         },
+        {
+            "id": "FI-09", "severity": "medium", "status": "needs review",
+            "item": "Cork official participant ordering differs between sources",
+            "finding": "Cork GAA lists Nemo Rangers v St Finbarrs, while the stored Munster source string and generated row list St Finbarr's v Nemo Rangers. The final is at a neutral venue; no home/away designation is inferred and the underlying 48% low-confidence selection mapping is unchanged. The ordering discrepancy remains explicit for manual review.",
+            "source_url": "https://gaacork.ie/league/215999/",
+            "review_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+        },
     ]
 
     external_spot_checks = [
@@ -266,7 +274,7 @@ def main() -> None:
         {
             "checked_utc": CHECK_UTC,
             "url": "https://gaacork.ie/league/215999/",
-            "result": "Cork GAA page retrieved; it listed Nemo Rangers v St Finbarrs on 25 October at 16:00 and the two semi-final scorelines used in FI-01.",
+            "result": "Cork GAA page retrieved; it listed Nemo Rangers v St Finbarrs on 25 October at 16:00 and the two semi-final scorelines used in FI-01. Its participant order differs from the stored Munster source string, as disclosed in FI-09.",
         },
         {
             "checked_utc": CHECK_UTC,
@@ -389,6 +397,7 @@ def render_markdown(payload: dict) -> str:
             blank.append("recorded OLBG id; active listing not confirmed")
         else:
             blank.append("OLBG listing unestablished")
+        blank.extend(row.get("review_notes") or [])
         fixture = row["fixture"].replace("|", "\\|")
         lines.append(
             f"| {index} | {row['sport']} | {fixture} | {row['facts_checked']} | {row['price_status']} | "

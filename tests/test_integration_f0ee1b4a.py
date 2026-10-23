@@ -139,6 +139,8 @@ class RootIntegrationTests(unittest.TestCase):
         self.assertIn("AUDIT-ODDS-02", self.review)
         self.assertEqual(self.audit["summary"]["row_internal_fail"], 0)
         self.assertEqual(len(self.audit["row_checks"]), 93)
+        cork = next(row for row in self.audit["row_checks"] if row["id"] == "gaa-cork-psfc")
+        self.assertIn("Nemo Rangers first", " ".join(cork["review_notes"]))
         self.assertEqual(self.audit["summary"]["errors"], [])
 
     def test_workflow_rebuilds_and_drift_checks_current_integration(self):

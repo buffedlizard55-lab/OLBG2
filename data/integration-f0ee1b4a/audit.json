@@ -102,6 +102,15 @@
       "finding": "Older overlapping desks retain their own stale taxonomy, prose and source-link findings. They are preserved for audit, not added to the current 93-row snapshot. The existing 16-findings repository audit remains linked from the current desk.",
       "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/cadence/repo_audit.json",
       "review_url": "https://buffedlizard55-lab.github.io/OLBG2/cadence/audit.html"
+    },
+    {
+      "id": "FI-09",
+      "severity": "medium",
+      "status": "needs review",
+      "item": "Cork official participant ordering differs between sources",
+      "finding": "Cork GAA lists Nemo Rangers v St Finbarrs, while the stored Munster source string and generated row list St Finbarr's v Nemo Rangers. The final is at a neutral venue; no home/away designation is inferred and the underlying 48% low-confidence selection mapping is unchanged. The ordering discrepancy remains explicit for manual review.",
+      "source_url": "https://gaacork.ie/league/215999/",
+      "review_url": "https://munster.gaa.ie/fixtures/events-calendar/"
     }
   ],
   "external_spot_checks": [
@@ -123,7 +132,7 @@
     {
       "checked_utc": "2026-10-23T21:30:02Z",
       "url": "https://gaacork.ie/league/215999/",
-      "result": "Cork GAA page retrieved; it listed Nemo Rangers v St Finbarrs on 25 October at 16:00 and the two semi-final scorelines used in FI-01."
+      "result": "Cork GAA page retrieved; it listed Nemo Rangers v St Finbarrs on 25 October at 16:00 and the two semi-final scorelines used in FI-01. Its participant order differs from the stored Munster source string, as disclosed in FI-09."
     },
     {
       "checked_utc": "2026-10-23T21:30:02Z",
@@ -142,6 +151,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": 199984,
       "active_olbg_listing_confirmed": false,
       "internal_check": "pass",
@@ -157,6 +167,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -174,6 +185,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -191,6 +203,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -208,6 +221,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -225,6 +239,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -242,6 +257,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -259,6 +275,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -276,6 +293,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -293,6 +311,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -310,6 +329,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -327,6 +347,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -344,6 +365,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -361,6 +383,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -378,6 +401,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -395,6 +419,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -412,6 +437,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -429,6 +455,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -446,6 +473,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -463,6 +491,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -478,6 +507,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -493,6 +523,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -508,6 +539,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -523,6 +555,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -538,6 +571,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -553,6 +587,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -568,6 +603,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -583,6 +619,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -598,6 +635,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -613,6 +651,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -628,6 +667,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -643,6 +683,7 @@
       "price_status": "blank",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -658,6 +699,7 @@
       "price_status": "blank",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -673,6 +715,7 @@
       "price_status": "blank",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -688,6 +731,7 @@
       "price_status": "blank",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -703,6 +747,7 @@
       "price_status": "blank",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -718,6 +763,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -733,6 +779,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -748,6 +795,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -763,6 +811,7 @@
       "price_status": "blank",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -778,6 +827,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -793,6 +843,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -808,6 +859,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -823,6 +875,7 @@
       "price_status": "blank",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -840,6 +893,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -857,6 +911,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -874,6 +929,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -891,6 +947,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -908,6 +965,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -923,6 +981,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -938,6 +997,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -953,6 +1013,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -968,6 +1029,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -985,6 +1047,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1002,6 +1065,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1019,6 +1083,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1036,6 +1101,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1053,6 +1119,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1070,6 +1137,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1085,6 +1153,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1102,6 +1171,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1117,6 +1187,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1132,6 +1203,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1147,6 +1219,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1162,6 +1235,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1177,6 +1251,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1192,6 +1267,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1207,6 +1283,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1222,6 +1299,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1237,6 +1315,7 @@
       "price_status": "originated",
       "start_representation": "UTC",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1254,6 +1333,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1271,6 +1351,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1288,6 +1369,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1305,6 +1387,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1322,6 +1405,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1339,6 +1423,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1356,6 +1441,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1373,6 +1459,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1390,6 +1477,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1407,6 +1495,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1424,6 +1513,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1441,6 +1531,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1458,6 +1549,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1475,6 +1567,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1492,6 +1585,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1509,6 +1603,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1526,6 +1621,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1543,6 +1639,7 @@
       "blank_fields": [
         "venue"
       ],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1558,6 +1655,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1573,6 +1671,9 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [
+        "official participant order differs: Cork GAA lists Nemo Rangers first"
+      ],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1588,6 +1689,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1603,6 +1705,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",
@@ -1618,6 +1721,7 @@
       "price_status": "originated",
       "start_representation": "publisher time string; no UTC inferred",
       "blank_fields": [],
+      "review_notes": [],
       "recorded_olbg_event_id": null,
       "active_olbg_listing_confirmed": null,
       "internal_check": "pass",

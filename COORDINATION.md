@@ -3694,3 +3694,16 @@ Status: DONE, publication in progress. F1-F6 complete.
 | PR | https://github.com/buffedlizard55-lab/OLBG2/pull/140 — MERGED 2026-10-23T16:21:13Z, merge commit e78d46d, validate PASS |
 | Pages | `pages build and deployment` SUCCESS; `gh api .../pages` status built; live https://buffedlizard55-lab.github.io/OLBG2/focus/index.html re-fetched after deploy and renders 40/31/236/32/11/26 KPIs |
 | Note | Custom `Deploy Pages` run 39986055576 failed at the deploy-pages id-token step (403 on re-dispatch also); the legacy pages-build-deployment that serves the site succeeded and the live page is updated. |
+
+
+## Session `arena/8226c94a-olbg2` — 15-sport evidence gate and final integration
+
+Claimed 2026-10-23 16:16 UTC. Read the full local board; checked remote heads and open PRs (none). The shared-root integration claims from October 22 are over 60 minutes old with completed publication logs; taking over ONLY the shared integration scope below. Previous desks are preserved, not overwritten or recounted as new evidence. Arena fixes this branch name; no session branch will be created.
+
+| Task | Status | Owner | Exclusive files |
+|---|---|---|---|
+| Fresh official/OLBG access audit, source ledger, fail-closed 15-sport pipeline | in progress | `8226c94a` | `scripts/monitor_*.py`, `data/monitor/**`, `research/monitor-8226c94a.md` |
+| Accessible dashboard, exact requested categories, review queue and tests | in progress | `8226c94a` | `monitor/**`, `tests/test_monitor.py` |
+| Final integration: root notice/navigation, automatic updates, documentation, CI and publication | in progress | `8226c94a` | `scripts/build_site.py`, generated root pages + `sports/**`, `.github/workflows/monitor.yml`, `.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`, `README.md`, append-only `COORDINATION.md` |
+
+No earlier data, prose or claimed verification is promoted without independently inspecting evidence. Exact scope is the user's 15 sports (not historical 17-sport scope). Missing fixture/market/fact evidence stays blank and is published for review. All pushes remain on `arena/8226c94a-olbg2`; pull --rebase before each push.

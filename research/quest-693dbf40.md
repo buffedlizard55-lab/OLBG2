@@ -42,8 +42,10 @@ sessions' scopes):
 5. Two source desks price NHL from two different official goal conventions
    (standings incl. shootout goal vs stats-API excl.; e.g. Montréal 30 vs 28 GF in
    9 games). Disclosed as quest flag **Q-DQ1**; each row links its own feed.
-6. One inherited OLBG event id (`gaa-cork-psfc` = 14) reads like a sport id
-   (Motor Racing), not an event id — flagged in **Q-OLBG1**, not trusted.
+6. One inherited OLBG event id (`gaa-cork-psfc` = 14) read like a sport id
+   (Motor Racing), not an event id — flagged in **Q-OLBG1**; the final-integration
+   session removed the unsupported value upstream (PR #178) and this desk was
+   regenerated from the corrected layer before merge.
 7. Open PRs #161/#167 from other sessions touch coordination records only.
 8. Cadence's `offered_*` price columns (fair probability scaled by a margin factor,
    producing longer-than-fair decimals) are not carried over; Quest publishes fair

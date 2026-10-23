@@ -660,7 +660,7 @@ def main():
          "source_url": "https://www.wst.tv/matches/", "status": "needs review"},
         {"id": "Q-OLBG1", "severity": "high", "category": "OLBG inventory",
          "item": "OLBG event tables are not readable without a browser",
-         "finding": "Both OLBG pages re-read first-hand on 2026-10-23 (~21:30Z) returned the literal text 'No tips found' where the event table renders client-side, so a complete server-side OLBG event inventory still cannot be captured. Fixtures therefore come from each governing body and are joined to OLBG at sport level. Only 2 of 93 cadence fixtures carry an OLBG event id, and one of them (gaa-cork-psfc, id 14) reads like a sport id rather than an event id — that value needs review before any event-level join is trusted.",
+         "finding": "Both OLBG pages re-read first-hand on 2026-10-23 (~21:30Z) returned the literal text 'No tips found' where the event table renders client-side, so a complete server-side OLBG event inventory still cannot be captured. Fixtures therefore come from each governing body and are joined to OLBG at sport level. Only 1 of 93 cadence fixtures carries an OLBG event id (an unsupported Gaelic value was removed upstream by the final-integration session in PR #178), so no event-level join is trusted yet.",
          "source_url": "https://www.olbg.com/betting-tips", "status": "needs review"},
         {"id": "Q-MKT1", "severity": "high", "category": "Market cross-check",
          "item": "One originated favourite disagrees with the only observed market price",

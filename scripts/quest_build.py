@@ -560,8 +560,8 @@ and <a href="https://www.olbg.com/betting-tips/Basketball/4" rel="noopener">the 
 <div class="note"><b>Hard limit (flag Q-OLBG1).</b> The event tables render client-side: both pages read tonight returned the literal
 text “No tips found” to a server-side fetch, even though the sports are in season. A complete OLBG event inventory therefore
 cannot be captured without a browser. This board reproduces OLBG's taxonomy and market vocabulary, takes fixtures from each
-governing body instead, and joins to OLBG at sport level on every row. Only 2 of 93 inherited fixtures carry an OLBG event id,
-and one of those values (gaa-cork-psfc = 14) looks like a sport id rather than an event id — flagged, not trusted.</div>
+governing body instead, and joins to OLBG at sport level on every row. Only 1 of 93 inherited fixtures carries an OLBG event id
+(an unsupported Gaelic value was removed upstream in PR #178), so no event-level join is trusted yet.</div>
 <h3>The 15 mandated sports on OLBG</h3>
 <div class="tw"><table><thead><tr><th>Sport</th><th>OLBG id</th><th>OLBG tips page</th><th>Market families originated here</th></tr></thead>
 <tbody>{olbg_rows}</tbody></table></div>

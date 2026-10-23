@@ -494,7 +494,7 @@ def match_row(m):
     venue = m.get("venue") or ""
     return (f'<tr><td><a href="sports/{SLUG[m["sport"]]}.html">{escape(m["sport"])}</a></td>'
             f'<td class="small">{escape(m["competition"])}</td>'
-            f'<td><strong>{escape(m["home"])}</strong> v {escape(m["away"] or "")}</td>'
+            f'<td><strong>{label(m["home"], m["away"])}</strong></td>'
             f'<td class="small">{escape(venue)}</td>'
             f'<td class="small">{escape(m.get("time_display") or m.get("start_utc") or "—")}</td>'
             f'<td>{status}</td>'
@@ -545,7 +545,7 @@ def build_predictions():
   <h4>{escape(p['headline'])}</h4>
   <div class="meta">{escape(p['sport'])} · {escape(p['competition'])} · {escape(p['time_display'] or '')} ·
     {p['word_count']} words · {confpill(p['confidence'])} {bandpill(p['in_band'])}</div>
-  <div class="sel">{escape(p['home'])} v {escape(p['away'] or '')} — {escape(p['selection'])}
+  <div class="sel">{label(p['home'], p['away'])} — {escape(p['selection'])}
     ({escape(p['market'])}{', line ' + escape(str(p['line'])) if p['line'] is not None else ''})
     at {fmt_p(p['probability'])} / {fmt_am(p['fair_american'])}</div>
   <p>{escape(p['text'])}</p>

@@ -1048,41 +1048,6 @@
   "Gaelic Sports": [
    {
     "rank": 1,
-    "pick_id": "gaa-cork-psfc-pick",
-    "fixture_id": "gaa-cork-psfc",
-    "best_inband_line": {
-     "selection": "Over 38.5",
-     "market": "Total points",
-     "line": 38.5,
-     "probability": 0.651321,
-     "fair_american": -187,
-     "fair_decimal": 1.535,
-     "confidence": "medium"
-    },
-    "sport": "Gaelic Sports",
-    "competition": "Cork Premier Senior Football Championship Final",
-    "home": "St Finbarr's",
-    "away": "Nemo Rangers",
-    "venue": "SuperValu Páirc Uí Chaoimh",
-    "start_utc": "2026-10-25T16:00:00Z",
-    "time_display": "25 October 2026, 16:00",
-    "time_status": "venue-local-converted",
-    "selection": "St Finbarr's",
-    "market": "Match winner (three-way)",
-    "line": null,
-    "probability": 0.54912,
-    "fair_american": -122,
-    "fair_decimal": 1.821,
-    "in_band": true,
-    "confidence": "low",
-    "evidence": "published semi-final winning margins +8 v +2 points, weighted 0.012 per point; draw mass 4.0%, single championship result disclosed on the row",
-    "basis": "published semi-final winning margins +8 v +2 points, weighted 0.012 per point; draw mass 4.0%, single championship result disclosed on the row",
-    "official_source_url": "https://gaacork.ie/fixtures/",
-    "stats_source_url": "https://munster.gaa.ie/fixtures/events-calendar/",
-    "olbg_sport_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
-   },
-   {
-    "rank": 2,
     "pick_id": "gaa-waterford-sfc-pick",
     "fixture_id": "gaa-waterford-sfc",
     "best_inband_line": {
@@ -1117,7 +1082,7 @@
     "olbg_sport_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
    },
    {
-    "rank": 3,
+    "rank": 2,
     "pick_id": "gaa-shinty-hurling-pick",
     "fixture_id": "gaa-shinty-hurling",
     "best_inband_line": {
@@ -1152,7 +1117,7 @@
     "olbg_sport_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
    },
    {
-    "rank": 4,
+    "rank": 3,
     "pick_id": "gaa-kerry-sfc-pick",
     "fixture_id": "gaa-kerry-sfc",
     "best_inband_line": {
@@ -1187,7 +1152,7 @@
     "olbg_sport_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
    },
    {
-    "rank": 5,
+    "rank": 4,
     "pick_id": "gaa-limerick-shc-pick",
     "fixture_id": "gaa-limerick-shc",
     "best_inband_line": {
@@ -1218,6 +1183,41 @@
     "evidence": "no numeric strength input captured for both sides; league-average prior with a 2% home term; draw mass 4.0%, single championship result disclosed on the row",
     "basis": "no numeric strength input captured for both sides; league-average prior with a 2% home term; draw mass 4.0%, single championship result disclosed on the row",
     "official_source_url": "https://limerickgaa.ie/na-piarsaigh-gaa-club-notes-213/",
+    "stats_source_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+    "olbg_sport_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+   },
+   {
+    "rank": 5,
+    "pick_id": "gaa-cork-psfc-pick",
+    "fixture_id": "gaa-cork-psfc",
+    "best_inband_line": {
+     "selection": "Over 38.5",
+     "market": "Total points",
+     "line": 38.5,
+     "probability": 0.651321,
+     "fair_american": -187,
+     "fair_decimal": 1.535,
+     "confidence": "medium"
+    },
+    "sport": "Gaelic Sports",
+    "competition": "Cork Premier Senior Football Championship Final",
+    "home": "St Finbarr's",
+    "away": "Nemo Rangers",
+    "venue": "SuperValu Páirc Uí Chaoimh",
+    "start_utc": "2026-10-25T16:00:00Z",
+    "time_display": "25 October 2026, 16:00",
+    "time_status": "venue-local-converted",
+    "selection": "St Finbarr's",
+    "market": "Match winner (three-way)",
+    "line": null,
+    "probability": 0.48,
+    "fair_american": 108,
+    "fair_decimal": 2.083,
+    "in_band": true,
+    "confidence": "low",
+    "evidence": "published semi-final winning margins +2 v +2 points, weighted 0.012 per point; draw mass 4.0%, single championship result disclosed on the row",
+    "basis": "published semi-final winning margins +2 v +2 points, weighted 0.012 per point; draw mass 4.0%, single championship result disclosed on the row",
+    "official_source_url": "https://gaacork.ie/fixtures/",
     "stats_source_url": "https://munster.gaa.ie/fixtures/events-calendar/",
     "olbg_sport_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
    }

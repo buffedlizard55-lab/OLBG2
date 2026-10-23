@@ -20,6 +20,8 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 VERIFIED = DATA / "verified"
+CADENCE = DATA / "cadence"
+INTEGRATION_AUDIT = DATA / "integration-f0ee1b4a" / "audit.json"
 SITE = ROOT
 
 AS_OF = "2026-10-22"
@@ -41,6 +43,24 @@ CAPTURED_AT = "2026-10-22"  # set from data/verified/matches.json by dataset()
 SNAPSHOT = {"rows": 119, "originated": 93, "band": 14, "flags": 26}  # refreshed by dataset()
 _MONTHS = {"01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr", "05": "May", "06": "Jun",
            "07": "Jul", "08": "Aug", "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"}
+CURRENT_SPORTS = [
+    ("Golf", "golf"), ("Volleyball", "volleyball"), ("Rugby Union", "rugby-union"),
+    ("Cricket", "cricket"), ("Snooker", "snooker"), ("Darts", "darts"),
+    ("Baseball", "baseball"), ("Gaelic Sports", "gaelic-sports"),
+    ("Greyhounds", "greyhounds"), ("Tennis", "tennis"), ("Motor Racing", "motor-racing"),
+    ("Handball", "handball"), ("Ice Hockey", "ice-hockey"), ("Basketball", "basketball"),
+    ("Rugby League", "rugby-league"),
+]
+
+
+def load_current(name: str):
+    return json.loads((CADENCE / name).read_text(encoding="utf-8"))
+
+
+def current_dataset():
+    return tuple(load_current(name) for name in
+                 ("matches.json", "lines.json", "picks.json", "predictions.json", "sources.json",
+                  "flagged.json", "repo_audit.json"))
 
 
 def dataset():
@@ -254,9 +274,16 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
-    ("ledger/index.html", "Latest: ledger desk (15 sports, 23 Oct)"),
-    ("cadence/index.html", "Exact 15-sport card & evidence audit"),
-    ("olbg/index.html", "OLBG daily desk (23 Oct)"),
+    ("cadence/index.html", "Current: Exact 15-sport card & evidence audit"),
+    ("cadence/matches.html", "Current matches"),
+    ("cadence/picks.html", "Current top-five picks"),
+    ("cadence/lines.html", "Current originated lines"),
+    ("cadence/predictions.html", "Current predictions"),
+    ("cadence/sports/index.html", "Current sport categories"),
+    ("cadence/flagged.html", "Current desk review"),
+    ("integration.html", "Final integration findings"),
+    ("ledger/index.html", "Ledger snapshot (15 sports, 23 Oct)"),
+    ("olbg/index.html", "OLBG discovery snapshot (23 Oct)"),
     ("brief/index.html", "Daily brief (15 sports, 23 Oct)"),
     ("monitor/index.html", "Evidence-first 15-sport monitor"),
     ("focus/index.html", "Focus desk (15 sports, 23 Oct)"),
@@ -269,17 +296,16 @@ NAV = [
     ("update/index.html", "Update 22–28 Oct (fresh capture)"),
     ("atlas/index.html", "Atlas desk (first-hand)"),
     ("canon/index.html", "Canon desk (all 17 sports)"),
-    ("index.html", "Verified desk"),
-    ("matches.html", "All matches"),
-    ("sports/index.html", "Sports"),
-    ("picks.html", "Picks"),
+    ("verified/index.html", "Verified historical desk"),
+    ("matches.html", "Historical root matches"),
+    ("sports/index.html", "Historical root sports"),
+    ("picks.html", "Historical root picks"),
     ("forward/index.html", "Forward slate (23 Oct–2 Nov)"),
     ("verification.html", "Verification"),
     ("flagged.html", "Flagged"),
     ("methodology.html", "Methodology"),
     ("sources.html", "Sources"),
     ("archive.html", "Archive"),
-    ("integration.html", "Cross-layer review"),
     ("reconcile/index.html", "Reconciliation console"),
 ]
 
@@ -290,18 +316,35 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
         current = ' aria-current="page"' if href == active else ""
         links.append(f'<a href="{prefix}{esc(href)}"{current}>{esc(label)}</a>')
     nav = "".join(links)
+    is_current = active in {"cadence/index.html", "integration.html"}
     if active == "index.html":
-        body = '''<section class="hero"><p class="eyebrow">Latest research · exact 15-sport scope</p>
-<h1>Start with the OLBG daily desk.</h1>
-<p class="lede">The latest desk separates official fixture facts, OLBG discovery provenance, independent fair prices and missing evidence.
-It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
-<div class="cta"><a class="button primary" href="ledger/index.html">Open the 15-sport ledger →</a>
-<a class="button" href="cadence/index.html">Exact 15-sport card & evidence audit</a>
-<a class="button" href="ledger/flagged.html">Flagged for Review</a>
-<a class="button" href="olbg/index.html">OLBG daily desk</a></div>
-<p><strong>One consolidated desk, 15 sports.</strong> Every value carries the first-hand capture it came from; gaps are left blank and listed on the review page.
-Earlier overlapping research is retained below for audit only.</p></section>
-<details><summary><strong>Open historical 22 October dashboard (not newly verified)</strong></summary>''' + body + '</details>'
+        # Kept for the historical builder's regression tests and archived pages. The actual
+        # root is generated by build_current_index() below.
+        body = '''<section class="hero"><p class="eyebrow">Current research · exact 15-sport scope</p>
+<h1>Start with the current 15-sport dashboard.</h1>
+<p class="lede">The current desk separates official fixture facts, OLBG discovery provenance, independent fair prices and missing evidence.</p>
+<div class="cta"><a class="button primary" href="cadence/index.html">Open the current dashboard →</a>
+<a class="button" href="integration.html">Final integration findings</a></div>
+<p>Earlier overlapping research is retained below for audit only and is never added to current counts.</p></section>
+<details><summary><strong>Open historical 22 October dashboard (not newly re-read)</strong></summary>''' + body + '</details>'
+    if is_current:
+        cm, cl, cp, cpr, _cs, cf, ca = current_dataset()
+        desk_reviews = cf["count"] + ca["summary"]["irregularities_logged"]
+        stripe = (f'<strong>Current stored snapshot {esc(cm["generated_utc"])}</strong> · '
+                  f'{cm["count"]} official-source fixture records · {cl["count"]} originated prices · '
+                  f'{cp["high"]} high selections · <a href="cadence/flagged.html">{desk_reviews} desk review items</a> · '
+                  f'<a href="integration.html">final integration findings</a>')
+        notice = ""
+        footer_lead = ("<strong>Dated, partial research snapshot — not a complete OLBG inventory, live feed or betting advice.</strong> "
+                       "Probabilities are estimates, not guarantees. Unconfirmed values remain blank and are listed on the review pages. 18+.")
+    else:
+        stripe = (f'<strong>Historical snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · '
+                  f'{SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · '
+                  f'<a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a>')
+        notice = (f'<div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk. '
+                  f'<a href="{prefix}cadence/index.html">Use the current 15-sport dashboard</a>; do not add overlapping counts.</div>')
+        footer_lead = ("<strong>Dated, partial historical snapshot — not a live feed and not betting advice.</strong> "
+                       "Probabilities are estimates, not guarantees. Unconfirmed values are blank and listed for review. 18+.")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -315,25 +358,262 @@ Earlier overlapping research is retained below for audit only.</p></section>
 <header class="topbar">
   <div class="wrap bar">
     <a class="brand" href="{prefix}index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
-    <details><summary>Research navigation & archives</summary><nav class="nav" aria-label="Main navigation">{nav}</nav></details>
+    <details><summary>Current & historical navigation</summary><nav class="nav" aria-label="Main navigation">{nav}</nav></details>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
+<div class="stripe"><div class="wrap">{stripe}</div></div>
 <main class="wrap">
-<div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk, not the current clock.
-<a href="{prefix}ledger/index.html">Use the 15-sport ledger</a> for today's OLBG slate, our own prices and the review queue.</div>
+{notice}
 {body}
 </main>
 <footer class="footer"><div class="wrap">
-  <p><strong>Dated, partial research snapshot — not a live feed and not betting advice.</strong> Model probabilities are estimates, not guarantees. Rows dated before {TODAY} are labelled <em>past</em> and are not presented as upcoming. Unconfirmed values are blank (<code>—</code>) and listed on <a href="{prefix}flagged.html">Flagged for Review</a>. 18+.</p>
-  <p class="tiny">Built by <code>scripts/build_site.py</code> from checked-in data. Earlier layers are preserved at <a href="{prefix}verified/index.html">/verified/</a>, <a href="{prefix}live/index.html">/live/</a>, <a href="{prefix}survey/index.html">/survey/</a>, <a href="{prefix}site/index.html">/site/</a> and indexed in the <a href="{prefix}archive.html">archive</a>.</p>
+  <p>{footer_lead}</p>
+  <p class="tiny">Built deterministically from checked-in data. Earlier layers are preserved at <a href="{prefix}verified/index.html">/verified/</a>, <a href="{prefix}live/index.html">/live/</a>, <a href="{prefix}survey/index.html">/survey/</a>, <a href="{prefix}site/index.html">/site/</a> and indexed in the <a href="{prefix}archive.html">archive</a>.</p>
 </div></footer>
 </body>
 </html>
 """
 
 
-# --------------------------------------------------------------------------- pages
+# --------------------------------------------------------------------------- current 15-sport integration
+def current_fixture_label(row: dict) -> str:
+    return esc(row["home"]) + (f' <span>v</span> {esc(row["away"])}' if row.get("away") else "")
+
+
+def current_source_link(url: str) -> str:
+    if not url:
+        return '<span class="blank">—</span>'
+    return f'<a href="{esc(url)}" rel="noopener">{esc(domain(url))}</a>'
+
+
+def current_american(value: int) -> str:
+    return f"+{value}" if value > 0 else str(value)
+
+
+def current_confidence(value: str) -> str:
+    return f'<span class="badge {esc(value)}">{esc(value)}</span>'
+
+
+def current_pick_table(rows: list[dict]) -> str:
+    body = []
+    slug = dict(CURRENT_SPORTS)
+    for pick in rows:
+        band = "alternate in band" if pick.get("band_board") else ("in band" if pick["in_band"] else "outside band")
+        band_class = "band" if pick["in_band"] else "outband"
+        prediction_url = f'cadence/predictions.html#pred-{esc(pick["id"])}'
+        body.append(
+            '<tr>'
+            f'<td><a href="cadence/sports/{esc(slug[pick["sport"]])}.html">{esc(pick["sport"])}</a></td>'
+            f'<td class="tiny">{esc(pick.get("start_utc") or pick.get("time_display") or "—")}</td>'
+            f'<td><div class="teams">{current_fixture_label(pick)}</div><div class="tiny">{esc(pick["competition"])}</div></td>'
+            f'<td><a class="pick" href="{prediction_url}">{esc(pick["selection"])}</a><div class="tiny">{esc(pick["market"])}</div></td>'
+            f'<td class="nowrap">{pick["probability"] * 100:.1f}%</td>'
+            f'<td class="nowrap">{current_american(pick["fair_american"])}</td>'
+            f'<td><span class="badge {band_class}">{band}</span></td>'
+            f'<td>{current_confidence(pick["confidence"])}</td>'
+            f'<td>{current_source_link(pick["official_source_url"])}</td>'
+            '</tr>'
+        )
+    return (
+        '<div class="table-wrap"><table class="data"><thead><tr>'
+        '<th>Sport</th><th>Official start / display</th><th>Fixture</th><th>Selection & analysis</th>'
+        '<th>Probability</th><th>Fair American</th><th>Band</th><th>Grade</th><th>Official source</th>'
+        f'</tr></thead><tbody>{"".join(body)}</tbody></table></div>'
+    )
+
+
+def current_match_table(rows: list[dict]) -> str:
+    body = []
+    slug = dict(CURRENT_SPORTS)
+    for row in rows:
+        probability = row.get("favourite_probability")
+        body.append(
+            '<tr>'
+            f'<td><a href="cadence/sports/{esc(slug[row["sport"]])}.html">{esc(row["sport"])}</a></td>'
+            f'<td><div class="teams">{current_fixture_label(row)}</div><div class="tiny">{esc(row["competition"])}</div></td>'
+            f'<td class="tiny">{esc(row.get("start_utc") or row.get("time_display") or "—")}</td>'
+            f'<td>{esc(row.get("favourite") or "—")}</td>'
+            f'<td>{f"{probability * 100:.1f}%" if probability is not None else "—"}</td>'
+            f'<td>{current_confidence(row["confidence"]) if row.get("confidence") else "—"}</td>'
+            f'<td>{current_source_link(row["official_source_url"])}</td>'
+            '</tr>'
+        )
+    return (
+        '<div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Fixture</th><th>Start (UTC)</th>'
+        '<th>Primary selection</th><th>Probability</th><th>Grade</th><th>Official source</th></tr></thead>'
+        f'<tbody>{"".join(body)}</tbody></table></div>'
+    )
+
+
+def build_current_index() -> str:
+    matches, lines, picks, predictions, sources, flagged, audit = current_dataset()
+    rows = matches["matches"]
+    all_picks = picks["picks"]
+    all_predictions = predictions["predictions"]
+    captured_date = matches["generated_utc"][:10]
+    highs = [p for p in all_picks if p["confidence"] == "high" and p.get("sport_rank")]
+    natural_band = [p for p in highs if p["in_band"] and not p.get("band_board")]
+    alternate_band = [p for p in highs if p["in_band"] and p.get("band_board")]
+    today_rows = sorted(
+        [row for row in rows if (row.get("start_utc") or "").startswith(captured_date)],
+        key=lambda row: (row.get("start_utc") or "", row["sport"], row["id"]),
+    )
+    today_highs = [p for p in highs if (p.get("start_utc") or "").startswith(captured_date)]
+
+    def start_key(pick):
+        return (not bool(pick.get("start_utc")), pick.get("start_utc") or pick.get("time_display") or "")
+
+    seen = set()
+    next_highs = []
+    for pick in sorted(highs, key=start_key):
+        key = (pick["fixture_id"], pick["market"])
+        if key not in seen:
+            seen.add(key)
+            next_highs.append(pick)
+    alternate_band = sorted(alternate_band, key=lambda p: (-p["probability"], p["id"]))
+    high_predictions = [p for p in all_predictions if p["confidence"] == "high"]
+    high_counts = Counter(p["sport"] for p in high_predictions)
+    five_high_sports = [sport for sport in high_counts if high_counts[sport] >= 5]
+    recorded_olbg = sum(row.get("olbg_event_id") is not None for row in rows)
+    blank_venues = sum(not row.get("venue") for row in rows)
+    publisher_time = sum(not row.get("start_utc") for row in rows)
+
+    cards = []
+    for sport, slug in CURRENT_SPORTS:
+        sport_rows = [row for row in rows if row["sport"] == sport]
+        sport_predictions = [p for p in all_predictions if p["sport"] == sport]
+        priced = sum(row["status"] == "originated" for row in sport_rows)
+        high_written = high_counts[sport]
+        cards.append(
+            f'<a class="card sport" href="cadence/sports/{esc(slug)}.html">'
+            f'<div class="cardhead"><h3>{esc(sport)}</h3><span class="pill">{len(sport_rows)} fixtures</span></div>'
+            f'<p>{priced} priced · {len(sport_predictions)} write-ups · {high_written} high-confidence write-ups</p>'
+            f'<div class="metrics"><span><b>{len(sport_rows) - priced}</b> blank-price rows</span>'
+            f'<span><b>{max(0, 5 - high_written)}</b> high-write-up shortfall</span></div></a>'
+        )
+
+    if today_highs:
+        today_summary = f'{len(today_highs)} high-confidence selections start on {captured_date} UTC.'
+    else:
+        today_summary = (f'No high-confidence selection starts on {captured_date} UTC. The card below keeps '
+                         'the actual low/medium grades rather than promoting a row to fill a quota.')
+    review_count = flagged["count"] + audit["summary"]["irregularities_logged"]
+    body = f"""
+<section class="hero">
+  <p class="eyebrow">Final integration · exact 15-sport scope · stored {esc(matches['generated_utc'])}</p>
+  <h1>OLBG research with the evidence and the gaps in plain sight.</h1>
+  <p class="lede">{matches['count']} official-source fixture records, {lines['count']} independently originated prices and
+  {predictions['count']} unique write-ups across the 15 requested sports. This is a dated research snapshot, not a live feed or a claim of complete OLBG coverage.</p>
+  <div class="cta"><a class="button primary" href="cadence/index.html">Open the full current dashboard →</a>
+  <a class="button" href="cadence/matches.html">Browse all {matches['count']} fixtures</a>
+  <a class="button" href="cadence/picks.html">Top five by sport</a>
+  <a class="button" href="cadence/predictions.html">Read all {predictions['count']} predictions</a>
+  <a class="button" href="integration.html">Flagged for Review</a></div>
+</section>
+
+<div class="notice warn"><strong>OLBG coverage boundary.</strong> Only {recorded_olbg} row retains a recorded OLBG event id with a matching registered URL;
+its integration re-read displayed “No tips found.” The dashboard therefore confirms <strong>zero currently readable active OLBG listings</strong>.
+The remaining rows are official-context fixtures, not asserted OLBG listings. Use the <a href="olbg/index.html">separate OLBG discovery snapshot</a>
+and its <a href="olbg/flagged.html">review queue</a> for that provenance. Do not add overlapping desk counts.</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="v">15</div><div class="k">requested sports</div><div class="s">Gaelic Football + Hurling grouped</div></div>
+  <div class="kpi"><div class="v">{matches['count']}</div><div class="k">fixture records</div><div class="s">{matches['originated']} priced · {matches['blank']} blank with reasons</div></div>
+  <div class="kpi"><div class="v">{lines['count']}</div><div class="k">originated prices</div><div class="s">winner, handicap, totals and outrights where supported</div></div>
+  <div class="kpi"><div class="v">{len(highs)}</div><div class="k">high-confidence selections</div><div class="s">{len(high_predictions)} high + {len(all_predictions) - len(high_predictions)} medium write-ups</div></div>
+  <div class="kpi"><div class="v">{len(natural_band)} / {len(alternate_band)}</div><div class="k">natural / alternate high picks in band</div><div class="s">fair American −250…+10000</div></div>
+  <div class="kpi"><div class="v">{sources['count']}</div><div class="k">registered sources</div><div class="s">official links on every fixture row</div></div>
+</div>
+
+<div class="two-col">
+  <div class="panel"><h2>Today's executive call</h2><p>{esc(today_summary)}</p>
+  <p>The UTC-start card contains {len(today_rows)} fixtures. Late North American games whose UTC date is the following day remain on the all-matches page with their official start values.</p></div>
+  <div class="panel"><h2>The −250…+10000 constraint</h2><p>A fair −250 implies 71.43%, so a ≥70% high-confidence rule and this price band overlap only from 70.00% to 71.43%.
+  <strong>{len(natural_band)} natural high selections</strong> qualify; <strong>{len(alternate_band)} alternate totals or handicaps</strong> qualify with their own probabilities. Prices are not relabelled to force a fit.</p></div>
+</div>
+
+<h2>Today's matches — {esc(captured_date)} UTC starts</h2>
+{current_match_table(today_rows)}
+
+<h2>Next high-confidence selections</h2>
+<p class="sub">The next {min(10, len(next_highs))} deduplicated high selections, with ISO-dated rows before publisher-local display strings; times are not converted. Selection names link to their sourced write-ups, and fair prices are the desk's own estimates.</p>
+{current_pick_table(next_highs[:10])}
+
+<h2>High-confidence alternate lines inside the requested band</h2>
+<p class="sub">All {len(alternate_band)} qualifying band-board selections. These are different totals or handicaps, not shortened moneyline prices.</p>
+{current_pick_table(alternate_band)}
+
+<h2>Browse the 15 covered sports</h2>
+<p class="sub">Five high-confidence write-ups per sport are present for {len(five_high_sports)} sports ({esc(', '.join(five_high_sports))}). Other shortfalls stay visible rather than being padded with low-evidence prose.</p>
+<div class="grid sports">{''.join(cards)}</div>
+
+<h2>Open coverage and evidence items</h2>
+<div class="two-col">
+  <div class="panel"><h3>Not claimed</h3><ul>
+    <li>No complete OLBG fixture inventory or currently active listing is claimed.</li>
+    <li>No current bookmaker quote is substituted for the desk's fair price.</li>
+    <li>No five-per-sport quota is filled by upgrading low or medium confidence.</li>
+    <li>Historical 17-sport and other overlapping dashboards are not part of these totals.</li>
+  </ul></div>
+  <div class="panel"><h3>Left blank or for review</h3><ul>
+    <li>{blank_venues} venue values are blank; no venue was inferred.</li>
+    <li>{publisher_time} rows retain publisher time strings without an invented UTC conversion.</li>
+    <li>{matches['blank']} fixtures have blank prices with stated reasons.</li>
+    <li>{review_count} current-desk review items plus the final integration and independent audit findings remain published.</li>
+  </ul></div>
+</div>
+<div class="cta"><a class="button" href="integration.html">Open final integration findings</a>
+<a class="button" href="cadence/flagged.html">Open current desk review</a>
+<a class="button" href="research/integration-f0ee1b4a.md">Read the 93-row audit</a></div>
+"""
+    return page("15-sport executive dashboard", "cadence/index.html", body)
+
+
+INDEPENDENT_AUDIT_ROWS = """
+<tr id="AUDIT-GREY-01"><td class="nowrap">AUDIT-GREY-01</td><td><span class="badge medium">medium</span></td><td><strong>Source/year mismatch.</strong> The stored capture identifies the Scurry Gold Cup and Oaks finals as 24 October 2026 fixtures, but cites a GBGB URL whose path is explicitly <code>2025-category-one-schedule</code>. This checkout contains a summary capture, not the official page response, so the source-to-claim match was not confirmed. Treat the dates and event details as unverified until a current official 2026 schedule is checked.</td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener">GBGB page cited</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/cadence/captures/gbgb_schedule.json">Stored capture</a></td></tr>
+<tr id="AUDIT-ODDS-02"><td class="nowrap">AUDIT-ODDS-02</td><td><span class="badge medium">medium</span></td><td><strong>Displayed offered prices are constructed, not captured market quotes.</strong> The cadence generator sets <code>offered_decimal</code> and <code>offered_american</code> by applying a code-defined margin to its own probability. The repository has no saved OLBG odds response for these lines. Use the desk's probabilities and fair prices as originated estimates only; do not read the offered column or odds-window label as current bookmaker availability. Capture and link the actual OLBG market price if that is required for selection eligibility.</td><td><a href="https://www.olbg.com/betting-tips" rel="noopener">OLBG betting-tips hub</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/cadence_model.py">Price-generation code</a></td></tr>
+"""
+
+
+def build_current_integration_findings() -> str:
+    payload = json.loads(INTEGRATION_AUDIT.read_text(encoding="utf-8"))
+    summary = payload["summary"]
+    rows = []
+    for finding in payload["findings"]:
+        status_class = "ok" if finding["status"] == "corrected" else "warn"
+        rows.append(
+            f'<tr><td class="nowrap">{esc(finding["id"])}</td>'
+            f'<td><span class="badge {status_class}">{esc(finding["status"])}</span></td>'
+            f'<td><strong>{esc(finding["item"])}</strong><div class="tiny">{esc(finding["finding"])}</div></td>'
+            f'<td>{current_source_link(finding["source_url"])}<div class="tiny"><a href="{esc(finding["review_url"])}" rel="noopener">manual review</a></div></td></tr>'
+        )
+    return f"""
+<h1>Flagged for Review — final integration</h1>
+<p class="lede">Checked {esc(payload['integration_check_utc'])} against the stored {esc(payload['stored_snapshot_utc'])} snapshot.
+{summary['row_internal_pass']} of {summary['fixture_rows']} fixture rows pass the internal source-to-record checks; {summary['fact_rows_checked']} sourced fact entries were checked.
+External live reads were targeted spot checks, not a fresh read of every source.</p>
+<div class="notice warn"><strong>Open items do not block publication, but they are not hidden.</strong>
+Zero currently readable active OLBG listings were established in the integration spot check. The 93 official-context records are not represented as a complete OLBG inventory.</div>
+<div class="kpis small">
+  <div class="kpi"><div class="v">{summary['row_internal_pass']}/{summary['fixture_rows']}</div><div class="k">internal row checks</div></div>
+  <div class="kpi"><div class="v">{summary['blank_venues']}</div><div class="k">blank venues retained</div></div>
+  <div class="kpi"><div class="v">{summary['publisher_time_only']}</div><div class="k">publisher-time rows</div></div>
+  <div class="kpi"><div class="v">{summary['active_olbg_listings_confirmed']}</div><div class="k">active OLBG listings confirmed</div></div>
+  <div class="kpi"><div class="v">{len(payload['findings'])}</div><div class="k">findings, including corrections</div></div>
+</div>
+<div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Status</th><th>Finding</th><th>Evidence / review</th></tr></thead>
+<tbody>{''.join(rows)}</tbody></table></div>
+<h2>Independent audit additions <span class="pill">2 open items · 23 Oct 2026</span></h2>
+<p class="sub">These current-desk findings arrived during final integration. They remain open and are preserved here as well as on the <a href="flagged.html">root review archive</a>; neither is represented as a confirmed false fact.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Severity</th><th>Finding and review action</th><th>Sources</th></tr></thead>
+<tbody>{INDEPENDENT_AUDIT_ROWS}</tbody></table></div>
+<p><a class="button" href="research/integration-f0ee1b4a.md">Read all 93 row checks and external spot-check notes</a>
+<a class="button" href="cadence/flagged.html">Current desk review</a></p>
+<details><summary><strong>Open the older cross-layer audit (historical snapshots)</strong></summary>
+"""
+
+
+# --------------------------------------------------------------------------- historical pages
 def build_index(matches, preds=None, flagged=None) -> str:
     rows, predictions, flags, sports, band = dataset()
     counts = Counter(m["sport"] for m in rows)
@@ -743,8 +1023,7 @@ depends on a source that does not fully support it. <em>medium</em> means a valu
 {sections[4]}
 <h2>Independent audit additions <span class="pill">2 items · 23 Oct 2026</span></h2>
 <div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Severity</th><th>Finding and review action</th><th>Sources</th></tr></thead><tbody>
-<tr id="AUDIT-GREY-01"><td class="nowrap">AUDIT-GREY-01</td><td><span class="badge medium">medium</span></td><td><strong>Source/year mismatch.</strong> The stored capture identifies the Scurry Gold Cup and Oaks finals as 24 October 2026 fixtures, but cites a GBGB URL whose path is explicitly <code>2025-category-one-schedule</code>. This checkout contains a summary capture, not the official page response, so the source-to-claim match was not confirmed. Treat the dates and event details as unverified until a current official 2026 schedule is checked.</td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener">GBGB page cited</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/cadence/captures/gbgb_schedule.json">Stored capture</a></td></tr>
-<tr id="AUDIT-ODDS-02"><td class="nowrap">AUDIT-ODDS-02</td><td><span class="badge medium">medium</span></td><td><strong>Displayed offered prices are constructed, not captured market quotes.</strong> The cadence generator sets <code>offered_decimal</code> and <code>offered_american</code> by applying a code-defined margin to its own probability. The repository has no saved OLBG odds response for these lines. Use the desk's probabilities and fair prices as originated estimates only; do not read the offered column or odds-window label as current bookmaker availability. Capture and link the actual OLBG market price if that is required for selection eligibility.</td><td><a href="https://www.olbg.com/betting-tips" rel="noopener">OLBG betting-tips hub</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/cadence_model.py">Price-generation code</a></td></tr>
+{INDEPENDENT_AUDIT_ROWS}
 </tbody></table></div>
 """
     return page("Flagged for Review", "flagged.html", body)
@@ -1053,7 +1332,7 @@ def main() -> None:
     (ROOT / "assets").mkdir(exist_ok=True)
     (ROOT / "assets" / "style.css").write_text(build_css(), encoding="utf-8")
 
-    (ROOT / "index.html").write_text(build_index(load("matches.json"), preds, flags), encoding="utf-8")
+    (ROOT / "index.html").write_text(build_current_index(), encoding="utf-8")
     (ROOT / "matches.html").write_text(build_matches(), encoding="utf-8")
     (ROOT / "verification.html").write_text(build_verification(), encoding="utf-8")
     (ROOT / "picks.html").write_text(build_picks(), encoding="utf-8")
@@ -1075,12 +1354,17 @@ def main() -> None:
     from integration_audit import body as integration_body
 
     (ROOT / "integration.html").write_text(
-        page("Evidence status & integration review", "integration.html", integration_body()),
+        page(
+            "Flagged for Review — final integration",
+            "integration.html",
+            build_current_integration_findings() + integration_body() + "\n</details>",
+        ),
         encoding="utf-8",
     )
+    current_matches = load_current("matches.json")
     lines = [
-        f"build_site: 10 root pages + {len(meta_by_slug)} sport pages",
-        f"  {len(rows)} rows, {sum(1 for m in rows if m['line_status'] == 'originated')} originated, "
+        f"build_site: current 15-sport root ({current_matches['count']} fixture records) + historical root/category pages",
+        f"  historical root data: {len(rows)} rows, {sum(1 for m in rows if m['line_status'] == 'originated')} originated, "
         f"{sum(1 for m in rows if m.get('band_pick'))} band picks",
         f"  {len(preds)} predictions ({sum(1 for p in preds if p.get('match_type') == 'band')} band)",
         f"  {len(flags)} verified review items",

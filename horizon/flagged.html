@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flagged for Review — Horizon 15-Sport Desk (2026-10-23)</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-top">
+        <a class="brand" href="index.html">HORIZON // 15-Sport Line Origination &amp; Verification Desk</a>
+        <span class="stamp">Snapshot: 2026-10-23T21:40:00Z &middot; Session: arena/9c5af337-olbg2 &middot; Scope: Strictly 15 Sports</span>
+      </div>
+      <nav class="nav-strip" aria-label="Desk navigation">
+      <a href="index.html">Executive Summary</a>
+      <a href="flagged.html" class="active">Flagged for Review</a>
+      <a href="olbg-audit.html">OLBG Platform Audit</a>
+      <a href="repo-audit.html">Repository Audit</a>
+      <a href="sports/golf.html">Golf</a>
+      <a href="sports/volleyball.html">Volleyball</a>
+      <a href="sports/rugby-union.html">Rugby Union</a>
+      <a href="sports/cricket.html">Cricket</a>
+      <a href="sports/snooker.html">Snooker</a>
+      <a href="sports/darts.html">Darts</a>
+      <a href="sports/baseball.html">Baseball</a>
+      <a href="sports/gaelic-sports.html">Gaelic Sports</a>
+      <a href="sports/greyhounds.html">Greyhounds</a>
+      <a href="sports/tennis.html">Tennis</a>
+      <a href="sports/motor-racing.html">Motor Racing</a>
+      <a href="sports/handball.html">Handball</a>
+      <a href="sports/ice-hockey.html">Ice Hockey</a>
+      <a href="sports/basketball.html">Basketball</a>
+      <a href="sports/rugby-league.html">Rugby League</a>
+      <a href="../index.html">Repo Root Hub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Flagged for Review — Unconfirmed &amp; Blank Values (38 Items)</h1>
+    <div class="callout flag">
+      <strong>Strict non-hallucination policy:</strong> Whenever an opponent slot is still a live quarter-final / wildcard placeholder, a player
+      sits outside the captured top rankings table, a league table URL returns HTTP 404, or a probable pitcher has an empty 2026 regular-season MLB
+      stat split, the corresponding cells on our sport pages are left <strong>blank</strong> (never guessed or interpolated) and logged below with
+      a direct link to the official source inspected on 23 October 2026.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sport</th>
+            <th>Competition</th>
+            <th>Fixture / Runner / Target</th>
+            <th>Blank Field</th>
+            <th>Status</th>
+            <th>Official Verification Note</th>
+            <th>Official Source</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><a href="sports/baseball.html"><strong>Baseball</strong></a></td>
+          <td>MLB World Series</td>
+          <td>Tampa Bay Rays @ Milwaukee Brewers (Game 2)</td>
+          <td class="mono">Logan Henderson 2026 regular-season pitching split (GS, IP, ERA, WHIP, K)</td>
+          <td><span class="badge flag">Blank — MLB StatsAPI returns empty stats=[] for personId 801403 in 2026 regularSeason</span></td>
+          <td>Logan Henderson is named probable starter on the MLB schedule feed, but his 2026 regular-season MLB pitching split has no innings recorded.</td>
+          <td><a href="https://statsapi.mlb.com/api/v1/Schedule?sportId=1&amp;teamId=158&amp;startDate=2026-10-22&amp;endDate=2026-11-02&amp;hydrate=team,probablePitcher,linescore,decisions">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/cricket.html"><strong>Cricket</strong></a></td>
+          <td>One-Day Cup 2026-27</td>
+          <td>Victoria @ Tasmanian Tigers</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Cricket Australia&#x27;s match hub lists the fixture date and venue, while team season tables or series scorecards for these sides are not present in the captured feed.</td>
+          <td><a href="https://www.cricket.com.au/matches">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/cricket.html"><strong>Cricket</strong></a></td>
+          <td>One-Day Cup 2026-27</td>
+          <td>New South Wales @ Western Australia</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Cricket Australia&#x27;s match hub lists the fixture date and venue, while team season tables or series scorecards for these sides are not present in the captured feed.</td>
+          <td><a href="https://www.cricket.com.au/matches">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/cricket.html"><strong>Cricket</strong></a></td>
+          <td>South Africa v Australia Tests 2026</td>
+          <td>Australia @ South Africa</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Cricket Australia&#x27;s match hub lists the fixture date and venue, while team season tables or series scorecards for these sides are not present in the captured feed.</td>
+          <td><a href="https://www.cricket.com.au/matches">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td>BetVictor Northern Ireland Open 2026</td>
+          <td>Winner of Match 60 (Jak Jones / Scott Donaldson) @ Mark Williams</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Mark Williams beat David Gilbert 6-4 in QF Match 59, but QF Match 60 (Jak Jones 4-4 Scott Donaldson) was still live in Frame 9 at capture time; no line is originated until the opponent is confirmed.</td>
+          <td><a href="https://www.wst.tv/matches/">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td>International Championship 2026</td>
+          <td>Louis Heathcote @ Liu Hongyu</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Both players are outside the published top-36 ranking-money list captured here; no numeric strength input, so no line is originated.</td>
+          <td><a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td>International Championship 2026</td>
+          <td>Mark Selby @ Jimmy White</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Jimmy White&#x27;s ranking-money figure is not on the top-36 WST rankings page captured here; no line is originated.</td>
+          <td><a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td>International Championship 2026</td>
+          <td>Wildcard 1 @ Michal Szubarczyk</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.</td>
+          <td><a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td>International Championship 2026</td>
+          <td>Wildcard 3 @ Steven Hallworth</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.</td>
+          <td><a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td>International Championship 2026</td>
+          <td>Wildcard 4 @ Liu Wenwei</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.</td>
+          <td><a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/darts.html"><strong>Darts</strong></a></td>
+          <td>Machineseeker European Championship</td>
+          <td>Kim Huybrechts @ Stephen Bunting</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>One entrant has no published 2026 European Tour seeding in the PDC schedule release (Kim Huybrechts entered as a replacement; Luke Littler&#x27;s European Tour seed number is not listed in the draw text).</td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/darts.html"><strong>Darts</strong></a></td>
+          <td>Machineseeker European Championship</td>
+          <td>Luke Littler @ Nathan Aspinall</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>One entrant has no published 2026 European Tour seeding in the PDC schedule release (Kim Huybrechts entered as a replacement; Luke Littler&#x27;s European Tour seed number is not listed in the draw text).</td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/tennis.html"><strong>Tennis</strong></a></td>
+          <td>ATP 250 Almaty</td>
+          <td>Stefanos Tsitsipas @ Nikoloz Basilashvili</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>At least one player is outside the PIF ATP Top 100 rankings table captured on 23 October 2026, so ATP points are not available for both sides.</td>
+          <td><a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/tennis.html"><strong>Tennis</strong></a></td>
+          <td>ATP 250 Lyon</td>
+          <td>Winner of Van Assche / Musetti @ Flavio Cobolli</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>Flavio Cobolli beat Brandon Nakashima 4-6 6-4 6-4 in the quarter-final, but Luca Van Assche v Lorenzo Musetti was still live in Set 3 (0-6, 7-6(5), 3-2) at capture time; no line is originated.</td>
+          <td><a href="https://www.atptour.com/en/scores/current/lyon/496/daily-schedule">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td>GBGB Category One</td>
+          <td>Arena Racing Company Scurry Gold Cup Final — Ballinakill Liam</td>
+          <td class="mono">Individual semi-final clock (s)</td>
+          <td><span class="badge flag">Blank — GBGB race result publishes winning time only for heat winners</span></td>
+          <td>Ballinakill Liam qualified by finishing second in the semi-final; GBGB publishes the heat winner&#x27;s clock and beaten distance rather than a separate runner time.</td>
+          <td><a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198332">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td>GBGB Category One</td>
+          <td>Arena Racing Company Scurry Gold Cup Final — Magical Jason</td>
+          <td class="mono">Individual semi-final clock (s)</td>
+          <td><span class="badge flag">Blank — GBGB race result publishes winning time only for heat winners</span></td>
+          <td>Magical Jason qualified by finishing second in the semi-final; GBGB publishes the heat winner&#x27;s clock and beaten distance rather than a separate runner time.</td>
+          <td><a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198332">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td>GBGB Category One</td>
+          <td>Arena Racing Company Scurry Gold Cup Final — Newinn Souly</td>
+          <td class="mono">Individual semi-final clock (s)</td>
+          <td><span class="badge flag">Blank — GBGB race result publishes winning time only for heat winners</span></td>
+          <td>Newinn Souly qualified by finishing second in the semi-final; GBGB publishes the heat winner&#x27;s clock and beaten distance rather than a separate runner time.</td>
+          <td><a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198332">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td>GBGB Category One</td>
+          <td>Premier Greyhound Racing Oaks Final — Strike It Skye</td>
+          <td class="mono">Individual semi-final clock (s)</td>
+          <td><span class="badge flag">Blank — GBGB race result publishes winning time only for heat winners</span></td>
+          <td>Strike It Skye qualified by finishing second in the semi-final; GBGB publishes the heat winner&#x27;s clock and beaten distance rather than a separate runner time.</td>
+          <td><a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198335">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td>GBGB Category One</td>
+          <td>Premier Greyhound Racing Oaks Final — Holding Hollie</td>
+          <td class="mono">Individual semi-final clock (s)</td>
+          <td><span class="badge flag">Blank — GBGB race result publishes winning time only for heat winners</span></td>
+          <td>Holding Hollie qualified by finishing second in the semi-final; GBGB publishes the heat winner&#x27;s clock and beaten distance rather than a separate runner time.</td>
+          <td><a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198335">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td>GBGB Category One</td>
+          <td>Premier Greyhound Racing Oaks Final — Ballydoyle Tina</td>
+          <td class="mono">Individual semi-final clock (s)</td>
+          <td><span class="badge flag">Blank — GBGB race result publishes winning time only for heat winners</span></td>
+          <td>Ballydoyle Tina qualified by finishing second in the semi-final; GBGB publishes the heat winner&#x27;s clock and beaten distance rather than a separate runner time.</td>
+          <td><a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198335">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html"><strong>Handball</strong></a></td>
+          <td>EHF Champions League</td>
+          <td>Aalborg @ Paris</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>LNH&#x27;s EHF Champions League calendar lists the fixture date and French club, but full EHF group tables for non-French opponents are not published on lnh.fr.</td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html"><strong>Handball</strong></a></td>
+          <td>EHF Champions League</td>
+          <td>Bucarest @ Montpellier</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>LNH&#x27;s EHF Champions League calendar lists the fixture date and French club, but full EHF group tables for non-French opponents are not published on lnh.fr.</td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html"><strong>Handball</strong></a></td>
+          <td>EHF Champions League</td>
+          <td>Nantes @ Plock</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>LNH&#x27;s EHF Champions League calendar lists the fixture date and French club, but full EHF group tables for non-French opponents are not published on lnh.fr.</td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/volleyball.html"><strong>Volleyball</strong></a></td>
+          <td>1. Bundesliga Männer</td>
+          <td>BADEN VOLLEYS Karlsruhe @ VfB Friedrichshafen</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.</td>
+          <td><a href="https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/volleyball.html"><strong>Volleyball</strong></a></td>
+          <td>1. Bundesliga Männer</td>
+          <td>SV Warnemünde @ SVG Lüneburg</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.</td>
+          <td><a href="https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/volleyball.html"><strong>Volleyball</strong></a></td>
+          <td>1. Bundesliga Männer</td>
+          <td>BERLIN RECYCLING Volleys @ Helios GRIZZLYS Giesen</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.</td>
+          <td><a href="https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/volleyball.html"><strong>Volleyball</strong></a></td>
+          <td>1. Bundesliga Männer</td>
+          <td>WWK Volleys München @ SWD powervolleys Düren</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.</td>
+          <td><a href="https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/gaelic-sports.html"><strong>Gaelic Sports</strong></a></td>
+          <td>Hurling-Shinty International</td>
+          <td>Scotland @ Ireland</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>The county/GAA fixture page confirms the final date, venue, and referee, while semi-final scorelines for both finalists are not published on the captured page.</td>
+          <td><a href="https://www.gaa.ie/fixtures-results">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/gaelic-sports.html"><strong>Gaelic Sports</strong></a></td>
+          <td>Kerry Senior Football Championship Final</td>
+          <td>Kenmare Shamrocks @ Dr Crokes</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>The county/GAA fixture page confirms the final date, venue, and referee, while semi-final scorelines for both finalists are not published on the captured page.</td>
+          <td><a href="https://www.kerrygaa.ie/fixtures-results/">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/gaelic-sports.html"><strong>Gaelic Sports</strong></a></td>
+          <td>Limerick Senior Hurling Championship Final</td>
+          <td>Kilmallock @ Na Piarsaigh</td>
+          <td class="mono">Originated Moneyline / Handicap / Total</td>
+          <td><span class="badge flag">Blank — unverified numeric input</span></td>
+          <td>The county/GAA fixture page confirms the final date, venue, and referee, while semi-final scorelines for both finalists are not published on the captured page.</td>
+          <td><a href="https://limerickgaa.ie/fixtures-results/">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/baseball.html"><strong>Baseball</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Baseball: 2 priced fixtures (2 verified fixtures in window)</td>
+          <td class="mono">Remaining 3 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 2 Baseball fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-23&amp;endDate=2026-11-02">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/cricket.html"><strong>Cricket</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Cricket: 3 priced fixtures (6 verified fixtures in window)</td>
+          <td class="mono">Remaining 2 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 3 Cricket fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://www.cricket.com.au/matches">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/gaelic-sports.html"><strong>Gaelic Sports</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Gaelic Sports: 2 priced fixtures (5 verified fixtures in window)</td>
+          <td class="mono">Remaining 3 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 2 Gaelic Sports fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://www.gaa.ie/fixtures-results">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/golf.html"><strong>Golf</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Golf: 2 priced fixtures (2 verified fixtures in window)</td>
+          <td class="mono">Remaining 3 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 2 Golf fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://www.pgatour.com/leaderboard">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Greyhounds: 2 priced fixtures (2 verified fixtures in window)</td>
+          <td class="mono">Remaining 3 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 2 Greyhounds fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://www.gbgb.org.uk/open-race-schedule/">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html"><strong>Handball</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Handball: 3 priced fixtures (6 verified fixtures in window)</td>
+          <td class="mono">Remaining 2 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 3 Handball fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/motor-racing.html"><strong>Motor Racing</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Motor Racing: 2 priced fixtures (2 verified fixtures in window)</td>
+          <td class="mono">Remaining 3 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 2 Motor Racing fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://www.formula1.com/en/racing/2026/united-states">Official source</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td>Daily 5-pick target audit</td>
+          <td>Snooker: 3 priced fixtures (9 verified fixtures in window)</td>
+          <td class="mono">Remaining 2 daily pick slot(s)</td>
+          <td><span class="badge flag">Left unfilled — never fabricated</span></td>
+          <td>Only 3 Snooker fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.</td>
+          <td><a href="https://www.wst.tv/matches/">Official source</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+  <footer>
+    <div class="masthead-inner">
+      Horizon research publication (<span class="mono">/horizon/</span>, session <span class="mono">arena/9c5af337-olbg2</span>).
+      Every table row links directly to the official governing-body feed fetched on 2026-10-23. Unconfirmed inputs are left blank and routed to
+      <a href="flagged.html">Flagged for Review</a>.
+    </div>
+  </footer>
+</body>
+</html>

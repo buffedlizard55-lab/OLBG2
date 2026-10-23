@@ -4648,6 +4648,38 @@ The same final visual audit found two remaining outright-label concatenations in
 
 **Concurrent PR boundary.** PR #177 (`arena/73cee7ef-olbg2`, `/master/`) was reviewed when it appeared at 21:38Z. It was open with failing checks at inspection and is not merged into this branch. No `/master/` data, generated pages or claims are used here, and none of that session's files were removed or overwritten. If `main` advances before this PR merges, FI will rebase and preserve newly merged work rather than discarding it.
 
+---
+
+## Session `arena/9c5af337-olbg2` — `/horizon/` 15-SPORT RESEARCH DESK CLAIM (2026-10-23 21:29 UTC)
+
+- **Session ID / Fixed Branch:** `arena/9c5af337-olbg2` (branched from `origin/main` `8b4435f`). Per the Arena platform branch constraint, all commits, pushes, and PRs for this session remain on `arena/9c5af337-olbg2`.
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-23 21:27–21:29 UTC):
+  - `arena/f0ee1b4a-olbg2` (active at 21:27:20 UTC) — claimed `research/integration-f0ee1b4a.md`, `scripts/integration_f0ee1b4a_audit.py`, `tests/test_integration_f0ee1b4a.py`, `data/integration-f0ee1b4a/**`, and the shared root integration scope (`README.md`, `scripts/build_site.py`, generated root pages, `assets/**`, `sports/**`, `.github/workflows/pages.yml`).
+  - `arena/a0c8b7f3-olbg2` (completed and merged to `main` as PR #168–#174 at 20:58 UTC) — owns `cadence/**`, `data/cadence/**`, `scripts/cadence_*.py`, `tests/test_cadence_a0c8b7f3.py`, `research/cadence-a0c8b7f3.md`.
+  - Earlier desks (`ledger`, `olbg`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`, `current`, `atlas`, `canon`, `final`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`, `relay`, `vanguard`, `pulse`, `update`, `covered`, `desk`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`) are preserved untouched.
+- **Strict disjoint file scope for `arena/9c5af337-olbg2`:**
+  - `horizon/**` (static GitHub Pages dashboard, category subpages for all 15 covered sports, executive summary, markets & lines table, Top-5 picks & predictions, OLBG reverse-engineering & repo review page, Flagged for Review page, official sources & methodology page)
+  - `data/horizon/**` (reverse-engineered OLBG inventory, official governing-body verification records, multi-market originated lines, confidence & `-250` to `+10000` odds-band selections, unique ≥30-word human predictions, line-by-line repo review findings, and flagged irregularities)
+  - `scripts/horizon_*.py` (`horizon_seed.py`, `horizon_model.py`, `horizon_predictions.py`, `horizon_build.py`, `horizon_verify.py`)
+  - `tests/test_horizon_9c5af337.py` (unit, schema, math, prose, link, and deterministic rebuild drift tests wired into `unittest discover`)
+  - `research/horizon-9c5af337.md` (OLBG reverse-engineering report, line-by-line repo review, official source verification log)
+  - `COORDINATION.md` (append-only updates)
+  - Note on CI drift gate: because `.github/workflows/pages.yml` runs `scripts/ledger_report.py` and `scripts/ledger_build.py` (which count top-level directories containing `index.html` and `tests/test_*.py` modules) and checks `git diff --exit-code` on `data/ledger/repo_review.json` and `ledger/repo-review.html`, we will run `python3 scripts/ledger_report.py && python3 scripts/ledger_build.py` unmodified before pushing if needed to keep the hosted CI drift gate green, without hand-editing any `/ledger/` file.
+- **Sport scope (exact 15 sports requested):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| HZ1 | Read `COORDINATION.md`, scan live remote branches, claim disjoint `/horizon/` scope, commit & push claim immediately | done | `arena/9c5af337-olbg2` | `COORDINATION.md` (append-only) |
+| HZ2 | Reverse-engineer OLBG.com across the 15 covered sports + conduct line-by-line audit of repository layers & flag irregularities with official links | in progress | `arena/9c5af337-olbg2` | `research/horizon-9c5af337.md`, `data/horizon/olbg_taxonomy.json`, `data/horizon/repo_audit.json` |
+| HZ3 | Verify fixtures, standings, form, player/team statistics & injury reports line-by-line against official governing-body sources for 2026-10-23 and upcoming slate across all 15 covered sports | unclaimed→this session | `arena/9c5af337-olbg2` | `scripts/horizon_seed.py`, `data/horizon/fixtures.json`, `data/horizon/sources.json` |
+| HZ4 | Originate multi-market betting lines (Match Winner / Moneyline / 1X2 / Outright, Handicap / Spread / Puck Line / Run Line / Frame / Set / Leg Handicap, Match Total Over/Under), assign Low/Medium/High confidence, and evaluate `-250` to `+10000` odds band | unclaimed→this session | `arena/9c5af337-olbg2` | `scripts/horizon_model.py`, `data/horizon/matches.json`, `data/horizon/lines.json`, `data/horizon/picks.json` |
+| HZ5 | Write unique, non-repetitive human predictions (≥30 words each, targeting 5 highest-confidence picks per covered sport where official data supports them, zero forbidden words `model`/`verified`, citing team, player, form, recent history, game stats & injury status) | unclaimed→this session | `arena/9c5af337-olbg2` | `scripts/horizon_predictions.py`, `data/horizon/predictions.json`, `data/horizon/flagged.json` |
+| HZ6 | Build `/horizon/` GitHub Pages dashboard (`index.html`, `matches.html`, `lines.html`, `picks.html`, `band.html`, `predictions.html`, `olbg.html`, `audit.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/index.html`, 15 `sports/<slug>.html` pages, `assets/style.css`) + line-by-line verifier + unit tests | unclaimed→this session | `arena/9c5af337-olbg2` | `scripts/horizon_build.py`, `scripts/horizon_verify.py`, `horizon/**`, `tests/test_horizon_9c5af337.py` |
+| HZ7 | Rebase onto `origin/main`, run full test suite + `integration_audit.py`, open PR → `main`, merge PR, verify GitHub Pages deployment, and log PR & merge result in `COORDINATION.md` | unclaimed→this session | `arena/9c5af337-olbg2` | `COORDINATION.md` (append-only) |
+
+**Cross-session request to root integrator (`arena/f0ee1b4a-olbg2`):** Because `arena/f0ee1b4a-olbg2` holds the active claim on `README.md`, `scripts/build_site.py`, root HTML, and `.github/workflows/pages.yml`, this session will not edit those files. Once `/horizon/` is merged to `main`, any subsequent root integration pass may link `horizon/index.html` from the root dashboard.
+
+
 
 ---
 

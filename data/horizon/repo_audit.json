@@ -1,0 +1,202 @@
+{
+ "generated_utc": "2026-10-23T21:40:00Z",
+ "session": "arena/9c5af337-olbg2",
+ "summary": {
+  "irregularities_logged": 19,
+  "out_of_scope_html_files": 4,
+  "predictions_with_forbidden_words": 5,
+  "html_files_with_unlinked_rows": 26
+ },
+ "findings": [
+  {
+   "id": "HZ-AUD-01",
+   "severity": "high",
+   "category": "Out-of-scope sports in legacy layers",
+   "file_path": "data/fixtures.json",
+   "lines": "753-899",
+   "issue": "Legacy data/fixtures.json and verify/sports/{american-football,australian-rules,boxing,esports}.html retain 4 sports outside the 15-sport mandate.",
+   "official_check": "Cross-checked against the 15-sport mandate on OLBG.com.",
+   "official_source_url": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "HZ-AUD-02",
+   "severity": "high",
+   "category": "Out-of-scope sport pages in /verify/",
+   "file_path": "verify/sports/american-football.html",
+   "lines": "1-48",
+   "issue": "Four HTML sport pages under verify/sports/ render American Football, Australian Rules, Boxing, and Esports.",
+   "official_check": "Confirmed file presence on disk in verify/sports/.",
+   "official_source_url": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "HZ-AUD-03",
+   "severity": "high",
+   "category": "Prohibited words in legacy prediction JSON",
+   "file_path": "data/audit91/predictions.json",
+   "lines": "1-120",
+   "issue": "Five legacy prediction JSON files (data/audit91/predictions.json, data/canonical/predictions.json, data/clean_room/predictions_audit.json, data/final_audit/predictions_audit.json, data/next_step/predictions_audit.json) contain the words 'model' or 'verified'.",
+   "official_check": "Scanned all data/**/predictions*.json files with regex \\b(model|verified)\\b.",
+   "official_source_url": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "HZ-AUD-04",
+   "severity": "high",
+   "category": "Unlinked table rows in earlier static layers",
+   "file_path": "audit/flagged.html",
+   "lines": "26-100",
+   "issue": "26 legacy HTML pages across audit/, verify/,board/, and pulse/ contain data-table rows without an anchor tag to an official source.",
+   "official_check": "Parsed every <tbody><tr> across all repository HTML files.",
+   "official_source_url": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "HZ-AUD-05",
+   "severity": "high",
+   "category": "Fabricated Oct 19-20 fixtures in legacy data/fixtures.json",
+   "file_path": "data/fixtures.json",
+   "lines": "16-1405",
+   "issue": "Legacy data/fixtures.json contains 75 fabricated Oct 19-20 fixtures (e.g., Ryder Cup, Presidents Cup, ATP Stockholm/Antwerp, fake PBA bowling/volleyball) with synthetic source_verified=True flags.",
+   "official_check": "Verified against live PGA TOUR, ATP Tour, MLB, and NHL schedules for 2026-10-23.",
+   "official_source_url": "https://www.pgatour.com/leaderboard"
+  },
+  {
+   "id": "HZ-AUD-06",
+   "severity": "high",
+   "category": "Stale Northern Ireland Open QF3 status in earlier 2026-10-23 desks",
+   "file_path": "data/signal/matches.json",
+   "lines": "1-160",
+   "issue": "Earlier 2026-10-23 desks captured David Gilbert v Mark Williams while Gilbert led 4-2 in-play; WST now confirms Mark Williams won 6-4 to advance to Semi-Final 2.",
+   "official_check": "Fetched https://www.wst.tv/matches/ at 21:40 UTC confirming Match 59 Completed: David Gilbert 4-6 Mark Williams.",
+   "official_source_url": "https://www.wst.tv/matches/"
+  },
+  {
+   "id": "HZ-AUD-07",
+   "severity": "medium",
+   "category": "Missing Saturday ATP 250 Brussels & Lyon Semifinals in earlier desks",
+   "file_path": "data/cadence/fixtures.json",
+   "lines": "1-420",
+   "issue": "Earlier 2026-10-23 desks captured only Almaty SFs and Vienna Q1s because Brussels and Lyon QFs were still in play; ATP Tour has now published Brussels SFs (Fils v Struff, Cerundolo v Griekspoor) and Lyon SF2 (Paul v Fritz).",
+   "official_check": "Fetched https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule and lyon/496/daily-schedule at 21:35 UTC.",
+   "official_source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule"
+  },
+  {
+   "id": "HZ-AUD-08",
+   "severity": "medium",
+   "category": "URC Round 4 Saturday fixtures lacked league-table inputs in earlier desks",
+   "file_path": "scripts/cadence_model.py",
+   "lines": "443-447",
+   "issue": "Earlier 2026-10-23 desks treated all 5 Saturday URC Round 4 fixtures as having no numeric strength input; the official URC table publishes 3-round W-D-L, PF, PA, DIFF, and PTS for all 10 Saturday clubs.",
+   "official_check": "Fetched https://stats.unitedrugby.com/match-centre/table/2026-27 at 21:35 UTC.",
+   "official_source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+  },
+  {
+   "id": "HZ-AUD-09",
+   "severity": "medium",
+   "category": "Completed Friday URC Round 4 and LNH StarLigue J08 fixtures",
+   "file_path": "data/signal/matches.json",
+   "lines": "1-220",
+   "issue": "Three Friday URC Round 4 matches (Cardiff 21-36 Sharks, Connacht 48-27 Zebre, Edinburgh 31-10 Lions) and five Friday LNH J08 matches (Aix 32-26 Toulouse, Chartres 32-33 Nîmes, Limoges 32-24 Dunkerque, Sélestat 24-26 Caen, Tremblay 34-29 Cesson-Rennes) are now Full Time.",
+   "official_check": "Fetched URC Match Centre and LNH Calendrier at 21:34 UTC.",
+   "official_source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+  },
+  {
+   "id": "HZ-AUD-10",
+   "severity": "medium",
+   "category": "PGA TOUR Butterfield Bermuda Championship R2 completion and -5 cut line",
+   "file_path": "data/cadence/fixtures.json",
+   "lines": "350-380",
+   "issue": "Earlier captures recorded Eric Cole through 17 holes and a -4 cut line; Cole has now finished R2 with 65-65 (-12, 130) in a five-way tie for T3 behind Hirata and Blanchet (-13), and the projected cut moved to -5.",
+   "official_check": "Fetched https://www.pgatour.com/leaderboard at 21:34 UTC.",
+   "official_source_url": "https://www.pgatour.com/leaderboard"
+  },
+  {
+   "id": "HZ-AUD-11",
+   "severity": "high",
+   "category": "OLBG header tip-count string-concatenation defect",
+   "file_path": "research/horizon-9c5af337.md",
+   "lines": "18-32",
+   "issue": "OLBG event headers render '4 / 042' instead of '4 / 42' by concatenating selection tips with market totals; any naive scraper reading header pills corrupts tip denominators.",
+   "official_check": "Verified on event_id=199984, 160789, 536036, and 902163.",
+   "official_source_url": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "HZ-AUD-12",
+   "severity": "high",
+   "category": "High-confidence (>70%) vs -250..+10000 fair-odds band intersection",
+   "file_path": "research/horizon-9c5af337.md",
+   "lines": "75-88",
+   "issue": "Fair -250 equals 71.43% implied probability, so P >= 70% and fair odds >= -250 intersect only in [70.00%, 71.43%]. Desks that label -300 moneylines as in-band violate arithmetic.",
+   "official_check": "Verified across all originated lines in scripts/horizon_verify.py.",
+   "official_source_url": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "HZ-AUD-13",
+   "severity": "medium",
+   "category": "MLB Game 2 starter Logan Henderson has no 2026 regular-season MLB pitching split",
+   "file_path": "scripts/horizon_seed.py",
+   "lines": "210-228",
+   "issue": "MLB StatsAPI lists Logan Henderson (id 801403) as Milwaukee's probable Game 2 starter, but his 2026 regular-season MLB pitching stats split is empty.",
+   "official_check": "Verified on statsapi.mlb.com/api/v1/people?personIds=801403; left blank rather than inferred.",
+   "official_source_url": "https://statsapi.mlb.com/api/v1/people?personIds=694813,608379,801403,656876&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+  },
+  {
+   "id": "HZ-AUD-14",
+   "severity": "medium",
+   "category": "Three WST International Championship pre-qualifiers list unconfirmed Wildcard opponents",
+   "file_path": "scripts/horizon_seed.py",
+   "lines": "325-336",
+   "issue": "WST match centre lists Michal Szubarczyk v Wildcard 1, Steven Hallworth v Wildcard 3, and Liu Wenwei v Wildcard 4 without naming the wildcard players.",
+   "official_check": "Verified on https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890; left unpriced.",
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+  },
+  {
+   "id": "HZ-AUD-15",
+   "severity": "medium",
+   "category": "PDC European Championship Round Two unseeded entrants (Luke Littler & Kim Huybrechts)",
+   "file_path": "scripts/horizon_seed.py",
+   "lines": "340-375",
+   "issue": "Kim Huybrechts entered Dortmund as a late replacement for Luke Humphries without a European Tour seeding, and Luke Littler's European Tour prize money is outside the top-three table published in the PDC schedule release.",
+   "official_check": "Verified on pdc.tv schedule and Day One reports; both fixtures are left unpriced rather than guessing European Tour earnings.",
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+  },
+  {
+   "id": "HZ-AUD-16",
+   "severity": "medium",
+   "category": "ATP Almaty SF1 (Basilashvili) and Lyon SF1 (Cobolli v Van Assche/Musetti) unconfirmed inputs",
+   "file_path": "scripts/horizon_seed.py",
+   "lines": "430-448",
+   "issue": "Qualifier Nikoloz Basilashvili sits outside the PIF ATP Top 100 table, and Flavio Cobolli's Lyon semifinal opponent was still in play in Set 3 (Van Assche 3-2 Musetti) at capture time.",
+   "official_check": "Verified on atptour.com rankings and live scores; both rows are left unpriced and flagged.",
+   "official_source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule"
+  },
+  {
+   "id": "HZ-AUD-17",
+   "severity": "medium",
+   "category": "GBGB Category One finals publish semi-final winning times only for heat winners",
+   "file_path": "scripts/horizon_seed.py",
+   "lines": "485-515",
+   "issue": "GBGB results pages publish winning clockings for the three semi-final winners in the Scurry Gold Cup and Oaks finals, but do not publish individual runner clockings for the three second-placed qualifiers.",
+   "official_check": "Verified on gbgb.org.uk meetingId=435688; non-winning finalist times are left blank.",
+   "official_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+  },
+  {
+   "id": "HZ-AUD-18",
+   "severity": "medium",
+   "category": "EHF Champions League Round 6 opponents outside French LNH table",
+   "file_path": "scripts/horizon_seed.py",
+   "lines": "540-560",
+   "issue": "Aalborg, Dinamo Bucarest, and Orlen Wisla Plock appear on LNH's EHF Champions League calendar without domestic league tables on lnh.fr.",
+   "official_check": "Verified on https://www.lnh.fr/autres-competitions/ligue-des-champions; left unpriced.",
+   "official_source_url": "https://www.lnh.fr/autres-competitions/ligue-des-champions"
+  },
+  {
+   "id": "HZ-AUD-19",
+   "severity": "medium",
+   "category": "Multi-session namespace proliferation across the repository",
+   "file_path": "COORDINATION.md",
+   "lines": "1-4600",
+   "issue": "More than thirty parallel session namespaces exist in the repository. Horizon publishes in its own disjoint /horizon/ scope to avoid overwriting concurrent sessions.",
+   "official_check": "Inspected COORDINATION.md and git branches on origin.",
+   "official_source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md"
+  }
+ ]
+}

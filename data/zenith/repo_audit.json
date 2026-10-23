@@ -1,0 +1,190 @@
+{
+  "generated_utc": "2026-10-23T21:45:00Z",
+  "count": 23,
+  "findings": [
+    {
+      "id": "AUDIT-PROSE-atlas",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "29 of 41 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/atlas/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/atlas/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-board",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "2 of 35 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/board/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/board/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-daily",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "24 of 45 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/daily/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/daily/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-daily-audit",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "1 of 5 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/daily-audit/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/daily-audit/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-daily-picks",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "8 of 28 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/daily-picks/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/daily-picks/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-final",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "17 of 19 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/final/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/final/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-forward",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "4 of 8 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/forward/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/forward/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-hub",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "1 of 25 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/hub/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/hub/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-portal",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "34 of 34 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/portal/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/portal/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-data",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "6 of 6 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-data",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "3 of 3 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/predictions_archived.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/predictions_archived.json"
+    },
+    {
+      "id": "AUDIT-PROSE-relay",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "4 of 20 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/relay/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/relay/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-update",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "70 of 165 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/update/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/update/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-vanguard",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "2 of 21 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/vanguard/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/vanguard/predictions.json"
+    },
+    {
+      "id": "AUDIT-PROSE-verified",
+      "severity": "review",
+      "title": "Reader-facing prose requires a wording pass",
+      "detail": "2 of 14 entries contain prohibited internal terminology; this is a repository-wide inherited finding, not part of Zenith's prediction prose.",
+      "artifact": "data/verified/predictions.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/verified/predictions.json"
+    },
+    {
+      "id": "AUDIT-GIT-CONFLICT-MARKERS",
+      "severity": "high",
+      "title": "Conflict-marker-like lines remain in the shared coordination history",
+      "detail": "Structural scan found 6 marker-like lines in COORDINATION.md (historical append/rebase remnants). The file is documentation; no runtime code depends on these lines. Review before editing because board history is append-only.",
+      "artifact": "COORDINATION.md",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md"
+    },
+    {
+      "id": "AUDIT-TEMPORAL-SNAPSHOT",
+      "severity": "high",
+      "title": "The published sporting slate is a dated snapshot, not a live feed",
+      "detail": "This desk's official source bundle is dated 2026-10-23; scheduled fixtures can start or change after capture. Re-check the governing-body source before treating a row as current or bettable.",
+      "artifact": "data/zenith/fixtures.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/zenith/fixtures.json"
+    },
+    {
+      "id": "AUDIT-OLBG-QUOTE-GEOGATE",
+      "severity": "high",
+      "title": "OLBG consensus/odds widgets vary by visitor region",
+      "detail": "Live OLBG event detail pages accessed from the US show false Expired badges and blank WIN @ values on upcoming events; header percentage denominators visibly concatenate strings. OLBG tip counts and any absent quote are not used as line inputs.",
+      "artifact": "data/zenith/olbg_events.json",
+      "source_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "AUDIT-INVENTORY-LIMIT",
+      "severity": "high",
+      "title": "Captured OLBG hubs are not a complete worldwide match inventory",
+      "detail": "The inventory is the hub-tip data present in the dated capture, and only event rows discoverable there are listed. Golf returned no live tip objects; Snooker had expired tips at hub capture; Rugby League listings were 2027 outright futures, not 2026 matches. Official fixture tables may contain matches OLBG did not list.",
+      "artifact": "data/zenith/olbg_events.json",
+      "source_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "AUDIT-PRICE-AVAILABILITY",
+      "severity": "high",
+      "title": "Fair prices are not bookmaker offers or evidence of market availability",
+      "detail": "Zenith prices are reciprocal fair prices from stored probabilities. No claim is made that a bookmaker lists the exact handicap/total, accepts a wager, or offers the displayed price. The user's requested range is screened on our fair American price only.",
+      "artifact": "data/zenith/lines.json",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/zenith/lines.json"
+    },
+    {
+      "id": "AUDIT-INJURY-FEED",
+      "severity": "medium",
+      "title": "Injury reporting is available only for NBA in the checked official material",
+      "detail": "An official NBA report for 2026-10-23 5:15 PM ET was read. Other sources in this sample did not supply a comprehensive fixture-specific injury report, so blank injury fields mean not captured, not no injuries. One inherited row-level parse in the source bundle appears to misalign a player/team cell; Zenith withholds those parsed player claims instead of repeating them.",
+      "artifact": "data/cadence/fixtures.json (source layer); Zenith fixture injury facts withheld",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_05_15PM.pdf"
+    },
+    {
+      "id": "AUDIT-QUOTE-ATTRIBUTION",
+      "severity": "medium",
+      "title": "OLBG hub odds and tip percentages have location-sensitive and arithmetic defects",
+      "detail": "The tip hub objects are a dated (20:31–20:36Z) capture. Direct event pages read in this session showed string-concatenated header denominators and false Expired badges for upcoming fixtures; displayed tip percentages therefore are published as source fields, not reused as probabilities.",
+      "artifact": "data/zenith/olbg_events.json",
+      "source_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "AUDIT-OLBG-SPORTID",
+      "severity": "medium",
+      "title": "Gaelic Sports is split into two OLBG sport routes",
+      "detail": "OLBG lists Gaelic Football id 25 and Hurling id 26 as separate routes; this desk groups both beneath the requested Gaelic Sports category while preserving the original sub-sport value.",
+      "artifact": "data/zenith/sources.json",
+      "source_url": "https://www.olbg.com/betting-tips"
+    }
+  ]
+}

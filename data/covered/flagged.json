@@ -15,7 +15,7 @@
       "sport": "All",
       "severity": "decision",
       "title": "Scope: 'Gaelic Sports' and 'Rugby League' interpretation",
-      "detail": "OLBG lists Gaelic football and hurling separately. This desk treats 'Gaelic Sports' as both, which is why the Shinty-Hurling International row appears. Rugby League is treated as the rugby league competition on nrl.com (Rugby League World Cup 2026), which is the only league-level fixture source read in this session.",
+      "detail": "The only Gaelic Sports fixture captured is the GAA Shinty-Hurling International (Ireland v Scotland, Sat 24 Oct, 18:00). No GAA football fixture was captured, so Gaelic football has no rows in this desk. Whether OLBG lists Gaelic football and hurling separately was not checked. Rugby League is treated as the Rugby League World Cup 2026 on nrl.com, the only league-level fixture source read this session.",
       "source_urls": [
         "https://www.olbg.com/betting-tips",
         "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
@@ -56,7 +56,7 @@
       "sport": "Motor Racing",
       "severity": "limit",
       "title": "US GP session times: time basis not stated",
-      "detail": "formula1.com lists sessions as 23 Oct 13:30-14:30 and 17:00-18:00, 24 Oct 13:30-14:30 and 17:00-18:00, and the race on 25 Oct at 16:00. The page's time-zone toggle ('My time' / 'Track time') was not captured. No race-winner line was originated, since no race-pace input was captured (only championship points).",
+      "detail": "formula1.com lists sessions as 23 Oct 13:30-14:30 and 17:00-18:00, 24 Oct 13:30-14:30 and 17:00-18:00, and the race on 25 Oct at 16:00. The captured text does not state the time zone or time basis of these times. No race-winner line was originated, since no race-pace input was captured (only championship points).",
       "source_urls": [
         "https://www.formula1.com/en/racing/2026/united-states",
         "https://www.formula1.com/en/results/2026/drivers"

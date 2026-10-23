@@ -4598,3 +4598,7 @@ The two added NHL previews change the current Ice Hockey preview count from 5 to
 
 The reproducible report step (`scripts/ledger_report.py`) derives the shortfall copy from `predictions.json` and the repository-review page from the current root landing page. It is included in final QA so that (a) the preview count in `data/ledger/flagged.json` is regenerated rather than hand-maintained, and (b) review finding RR-03 no longer describes the old root call-to-action after this integration promotes `/ledger/`. The generated `data/ledger/flagged.json` and `data/ledger/repo_review.json` are included as report outputs; no sporting input data changes.
 
+### `arena/1cb7d5b7-olbg2` — board-review wording correction (2026-10-23)
+
+Correction to the claim note above: the first full-file display of `COORDINATION.md` was truncated. Before claiming, I checked the status/headings, recent ledger and cadence handoffs, remote branch heads, and open PRs, but I did not read all 4,549 lines sequentially. The phrase “Read the full shared board” overstated what I inspected; older completed history was not fully reconciled. No conflicting active code scope was found in the checked status sections or open PRs. Future coordination statements in this record use that narrower description.
+

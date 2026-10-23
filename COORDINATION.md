@@ -3822,6 +3822,14 @@ Hosted branch validation run [39987045033](https://github.com/buffedlizard55-lab
 
 
 Integration follow-up: merged PR #142 from main without editing its `/desk/` data or builders. Board append conflict resolved by preserving all main history and this session’s complete records.
+
+### Session `arena/a509fb48-olbg2` — C8 integration result (append-only, 2026-10-23 UTC)
+
+- **PR #144** (`covered: 15-sport /covered/ desk`): merged to `main` as `33772521` (2026-10-23 16:31Z). `validate` passed on the final head, with the full suite and the stale-output check. Pages: the legacy build for `33772521` reported `built`. Its "Deploy Pages" run was cancelled by the next push to `main` (PR #145), which is expected with `cancel-in-progress`, and the latest Pages build for `main` reports `built`.
+- **Live check:** `https://buffedlizard55-lab.github.io/OLBG2/covered/` and `.../covered/flagged.html` fetched and read after deploy. Dashboard KPIs: 15 sports, 7 with source-confirmed fixtures, 23 fixture rows, 14 originated lines, 0 high-confidence picks, 20 flags.
+- **Follow-up PR #147** corrects the wording of FL-02 (Gaelic split not checked) and FL-06 (time-basis toggle not seen). No data or gate change. Merge result is on the PR page.
+- **Known limits, unchanged:** no high-confidence picks, so no predictions; FL-01 (literal −250…+10000 band with p ≥ 0.70) needs a decision; six sports have no fixture captured; darts is OLBG-only; tennis has observed rows only.
+- Local checks at the final head: `unittest discover -s tests` OK (487 tests before the follow-up; 13 covered tests after it); `integration_audit.py` 0 local link errors.
 ## Session `arena/b8a1ce4c-olbg2` — CLAIM: `/desk/` 15-sport OLBG event inventory, fresh 2026-10-23 official capture, origination, Top-5 predictions, and line-by-line repo audit
 
 - **Session ID:** `arena/b8a1ce4c-olbg2` · **Branch:** `arena/b8a1ce4c-olbg2` (fixed by the Arena harness)

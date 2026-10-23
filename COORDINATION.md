@@ -3694,3 +3694,21 @@ Status: DONE, publication in progress. F1-F6 complete.
 | PR | https://github.com/buffedlizard55-lab/OLBG2/pull/140 — MERGED 2026-10-23T16:21:13Z, merge commit e78d46d, validate PASS |
 | Pages | `pages build and deployment` SUCCESS; `gh api .../pages` status built; live https://buffedlizard55-lab.github.io/OLBG2/focus/index.html re-fetched after deploy and renders 40/31/236/32/11/26 KPIs |
 | Note | Custom `Deploy Pages` run 39986055576 failed at the deploy-pages id-token step (403 on re-dispatch also); the legacy pages-build-deployment that serves the site succeeded and the live page is updated. |
+## Session `arena/a509fb48-olbg2` — CLAIM: `/covered/` desk for the 15-sport brief (2026-10-23)
+
+- **Session ID:** `arena/a509fb48-olbg2` · **Branch:** `arena/a509fb48-olbg2` (fixed by Arena; the `session-<id>/<task>` naming deviation is recorded per protocol, as in prior sessions).
+- **Claimed:** 2026-10-23 (UTC), before any implementation edit.
+- **Concurrency check:** `git fetch origin '+refs/heads/*'` at claim time. No open PRs (`gh pr list --state open` empty). Every other `arena/*` branch listed on origin is for a session already marked done. No active claim overlaps the scope below.
+- **Brief scope (15 sports):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League. Soccer, American football, eSports, Aussie Rules, boxing, MMA, horse racing and cycling are outside this brief.
+- **Strict file scope:** new files only in `covered/**`, `data/covered/**`, `scripts/covered_*.py`, `tests/test_covered_a509fb48.py`, `research/covered-a509fb48.md`. `COORDINATION.md` is append-only. Root `index.html`, `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml` and every other session's files stay untouched. Any root-navigation or CI request is logged below for the owner.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| C1 | Claim board, concurrency check, commit and push the claim | done | `arena/a509fb48-olbg2` | `COORDINATION.md` |
+| C2 | Reverse-engineer OLBG for the 15 sports: URL schema, sport and event IDs, markets listed | in progress | `arena/a509fb48-olbg2` | `research/covered-a509fb48.md`, `data/covered/olbg_taxonomy.json` |
+| C3 | First-hand official-source fixture capture (2026-10-23 onward) per sport | unclaimed→this session | `arena/a509fb48-olbg2` | `data/covered/captures/**`, `data/covered/inputs.json`, `data/covered/sources.json` |
+| C4 | Independent line origination (win, handicap, total), low/medium/high labels, band gate, Top-5 per sport | unclaimed→this session | `arena/a509fb48-olbg2` | `scripts/covered_model.py`, `data/covered/matches.json`, `data/covered/lines.json` |
+| C5 | Unique ≥30-word predictions with verified team, form, history, injuries; no banned words | unclaimed→this session | `arena/a509fb48-olbg2` | `scripts/covered_predictions.py`, `data/covered/predictions.json`, `data/covered/flagged.json` |
+| C6 | `covered/` GitHub Pages site: landing, all-matches table, sport pages, picks, flagged, sources, methodology | unclaimed→this session | `arena/a509fb48-olbg2` | `scripts/covered_build.py`, `covered/**` |
+| C7 | Regression tests: rebuild drift check, link check, word-count and banned-word checks | unclaimed→this session | `arena/a509fb48-olbg2` | `tests/test_covered_a509fb48.py` |
+| C8 | Integration: rebase on `origin/main`, full test suite, PR → merge → Pages confirm, log result | unclaimed→this session | `arena/a509fb48-olbg2` | `COORDINATION.md` (append-only) |

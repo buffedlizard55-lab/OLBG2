@@ -4209,7 +4209,6 @@ from desk chrome outside the predictions) is published separately and does not c
 which are recorded in the claim table above.
 
 ---
----
 
 ## Session `21a0c524` — `/ledger/` 15-sport desk — CLAIM (2026-10-23)
 
@@ -4224,3 +4223,13 @@ which are recorded in the claim table above.
 
 Scope is disjoint: this session does not edit root `index.html`, `sports/**`, any existing desk, `scripts/build*.py`, workflows, or another session's data.
 Maths note: p>70% with fair American odds ≥-250 intersect only at 70.00–71.43%; the desk will state this and tier picks rather than relabelling shorter prices as in-band.
+
+### Session `21a0c524` — `/ledger/` STATUS (2026-10-23)
+
+Tasks L1–L5 **done**; L6 in progress (PR next). Conflict note: `main` advanced during this session (PRs #158/#159, session `7a073c9a`, plus a `6cd8cc4c` monitor section). The branch was rebased; the only conflict was the append point in this file and was resolved by keeping both sections in order — no other session's text or files were changed.
+
+**Numbers:** 80 fixtures (40 priced), 310 originated selections, 4 Tier A, 26 previews (min 78 words), 23 flags, 30 sources, 26 pages at `/ledger/`. Full repo suite passes; `scripts/ledger_verify.py` 2,008 checks / 0 errors; `scripts/integration_audit.py` 0 link errors.
+
+**Sources (first-hand 2026-10-23):** OLBG index/hubs/sitemap; NHL Web+Stats APIs; MLB Stats API; EuroLeague live feed; NRL.com RLWC R1–R2; wst.tv fixtures+rankings; atptour.com scores+draw; cricket.com.au; europeantour.com leaderboard; formula1.com calendar+standings; eurohandball.com; gaa.ie. Failed attempts (NBA 500, premrugby empty, URC 404, pdc.tv cookie-only, GBGB filters-only, CEV news-only) are flags LG-BK1/RU1/DA1/GH1/VB1 on `/ledger/flagged.html`.
+
+**Request to root integration owner:** please add `/ledger/index.html` to the root navigation when convenient; this session did not edit root files.

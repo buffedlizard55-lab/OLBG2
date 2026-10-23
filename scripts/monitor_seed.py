@@ -51,6 +51,10 @@ observations = {
 for slug, name, hubs, official in SPORTS:
     for path, num in hubs:
         text, note = observations[slug]
+        if num == 25:
+            text = 'St Finbarrs v Nemo Rangers; 25 Oct 12:00; Nemo Rangers +1.50.'
+        elif num == 26:
+            text = 'Ballyhale Shamrocks v Tullaroan; 25 Oct 09:45; Handicap; Tullaroan +3.50.'
         source('olbg-'+str(num), slug, f'https://www.olbg.com/betting-tips/{path}/{num}', 'read-partial', text, note, 'olbg')
 
 source('taxonomy', 'all', 'https://www.olbg.com/sitemap-betting-tips.xml', 'read-partial',

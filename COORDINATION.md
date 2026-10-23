@@ -4062,3 +4062,27 @@ workflow, per the disjoint-scope rule.
 Task S7 is now **done**; tasks S1–S7 for session `6b10ecda` are complete and the `/signal/` scope is
 released. No other session's files were modified. The root-navigation link request logged above
 remains open for the integration owner (`8226c94a`).
+
+## Session `arena/41b3bae5-olbg2` — CLAIM: `/ledger/` consolidated 15-sport desk + final root integration (2026-10-23 19:30Z)
+
+- **Session ID:** `arena/41b3bae5-olbg2` · **Branch:** `arena/41b3bae5-olbg2` (branch name fixed by the Arena harness; the `session-<id>/<task>` convention in the brief cannot be honoured — recorded here as a protocol deviation, as in prior sessions).
+- **Claimed:** 2026-10-23 19:30 UTC, before any implementation edit.
+- **Board read:** full 4,064-line board read; `origin/main` = `81f46ac` (merge of PR #155). Live remote scan performed at claim time.
+- **Stale-claim takeover (60-minute rule):** the shared-root integration scope was last claimed by `arena/8226c94a-olbg2` (last commit 16:41Z) and by `arena/6b10ecda-olbg2` (published 16:53Z). Both are more than 60 minutes old with published completion logs, so this session takes over **only** the root integration files listed below and logs the handoff here.
+- **Non-overlapping new scope (this session only):** `ledger/**`, `data/ledger/**`, `scripts/ledger_*.py`, `tests/test_ledger_41b3bae5.py`, `research/ledger-41b3bae5.md`, `.github/workflows/ledger-capture.yml`, append-only `COORDINATION.md`.
+- **Takeover scope (stale, published):** `scripts/build_site.py`, generated root pages (`index.html`, `matches.html`, `picks.html`, `flagged.html`, `sources.html`, `verification.html`, `methodology.html`, `archive.html`, `sports/**`), `.github/workflows/pages.yml` (append a build step + drift paths for the new layer only).
+- **Sport scope (exactly the 15 named in the brief):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| L1 | Board read, live-branch scan, claim, commit + push | in progress | `arena/41b3bae5-olbg2` | `COORDINATION.md` (append-only) |
+| L2 | Automated first-hand capture on a GitHub runner (OLBG 15 sport hubs + governing-body endpoints), verbatim bodies + timestamped manifest, committed back | unclaimed→this session | `.github/workflows/ledger-capture.yml`, `scripts/ledger_capture.py`, `data/ledger/raw/**`, `data/ledger/manifest.json` | 
+| L3 | Line-by-line repo review of every merged layer (schemas, dates, duplicates, contradictions, dead source links, conflict markers) | unclaimed→this session | `scripts/ledger_review.py`, `data/ledger/repo_review.json`, `research/ledger-41b3bae5.md` |
+| L4 | Canonical merge of verified fixtures across layers with per-row provenance, dedupe and freshness state | unclaimed→this session | `scripts/ledger_merge.py`, `data/ledger/matches.json`, `data/ledger/sources.json` |
+| L5 | Multi-market origination + low/medium/high grading under one rule; strict in-band high gate (p ≥ 0.70 and fair American inside −250…+10000) | unclaimed→this session | `scripts/ledger_model.py`, `data/ledger/lines.json`, `data/ledger/picks.json` |
+| L6 | Unique ≥30-word written predictions, target five per sport, only from captured official facts | unclaimed→this session | `scripts/ledger_predictions.py`, `data/ledger/predictions.json`, `data/ledger/flagged.json` |
+| L7 | `/ledger/` dashboard: executive summary, all matches, picks, write-ups, 15 sport pages, flagged, sources, verification, repo review + tests | unclaimed→this session | `scripts/ledger_build.py`, `scripts/ledger_verify.py`, `ledger/**`, `tests/test_ledger_41b3bae5.py` |
+| L8 | Root integration: make `/ledger/` the primary dashboard entry, rebuild generated root pages, CI step + drift paths | unclaimed→this session | `scripts/build_site.py`, root pages, `sports/**`, `.github/workflows/pages.yml` |
+| L9 | Rebase, full suite, link audit, PR → merge, confirm Pages, log | unclaimed→this session | `COORDINATION.md` (append-only) |
+
+**Rule this session follows:** a value is published only when a first-hand capture of an official page is stored in `data/ledger/raw/` with an HTTP status and UTC timestamp. Anything not captured is blank and listed on `/ledger/flagged.html` with the endpoint that failed. No earlier session's numbers are re-published as new evidence; each merged row carries its source layer and its own recheck state.

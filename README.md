@@ -2,6 +2,8 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
+**15-sport Focus desk (23 October 2026, this brief only):** <https://buffedlizard55-lab.github.io/OLBG2/focus/index.html>
+
 **Published landing page:** <https://buffedlizard55-lab.github.io/OLBG2/>
 
 **Daily Top-5 desk (23 October 2026):** <https://buffedlizard55-lab.github.io/OLBG2/daily/index.html>

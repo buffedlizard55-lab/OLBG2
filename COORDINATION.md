@@ -3680,3 +3680,10 @@ link to the root navigation; add `vanguard data/vanguard` and the three `vanguar
 | F6 | Final integration: root nav link, CI drift gate, README pointer, full tests, PR→merge, Pages live check | unclaimed→this session (integration role, after F2-F5 done) | `index.html` nav only via `scripts/build_site.py` if present else direct nav edit, `.github/workflows/pages.yml`, `README.md`, `COORDINATION.md` |
 
 Rule: never edit another layer's data/builders. If a shared file must change before F6, log it here instead.
+
+### Session `arena/33e9eee7-olbg2` — COMPLETION LOG (`/focus/`, 2026-10-23)
+Status: DONE, publication in progress. F1-F6 complete.
+- Built: 40 fixtures across exactly 15 sports, 236 originated lines, 32 in-band selections, 11 written predictions (Handball 4, Rugby Union 5, Ice Hockey 2; >=30 words, unique, selection named), 26 flags, 24 pages (`focus/**`), verifier ALL CHECKS PASS, 7 new tests (repo total 474 OK), integration_audit 0 errors.
+- Fresh this session: NHL 25-Oct slate + standings and MLB World Series schedule/standings re-read 2026-10-23 via official APIs (see research/focus-33e9eee7.md). Other priced rows disclose their 2026-10-22 official capture in-row.
+- Integration edits (F6 role): root NAV gains "Focus desk (15 sports, 23 Oct)" via scripts/build_site.py (30 root pages, nav-only diff); CI pages.yml rebuilds focus and drift-checks `focus data/focus` (appended at end to preserve other sessions' asserted substrings); README pointer added.
+- Flagged (non-blocking, on focus/flagged.html): five-per-sport aim met in no sport (band is 70.0-71.4% wide); Tennis/Darts/Snooker/Golf/Greyhounds/Cricket blank with named reasons; Gaelic blank (no numeric input); NBA net-proxy thin input; MLB G5/G6 if-necessary; no injury claims made (none stated by official pages read).

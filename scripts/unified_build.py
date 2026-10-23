@@ -99,6 +99,45 @@ def notice(kind, title, body):
     return f'<div class="notice {kind}"><strong>{title}</strong> {body}</div>'
 
 
+PACIFIC = dt.timezone(dt.timedelta(hours=-7), "PDT")
+
+
+def local_dt(start_utc):
+    """Convert a stored UTC/offset timestamp to the reader's day. Returns None if unparsable."""
+    if not start_utc:
+        return None
+    try:
+        moment = dt.datetime.fromisoformat(str(start_utc).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=dt.timezone.utc)
+    return moment.astimezone(PACIFIC)
+
+
+def when(start_utc, fallback=None):
+    """Render a start time. Precision only, never an invented value.
+
+    A source that printed a day but no clock time keeps its own wording; a real instant is shown in
+    the reader's zone with that zone named, so two rows are never silently mixed.
+    """
+    moment = local_dt(start_utc)
+    if moment is None:
+        return e(fallback or "start not published")
+
+
+def stamp(start_utc, fallback=None):
+    moment = local_dt(start_utc)
+    if moment is None:
+        return e(fallback or "start not published")
+    return f"{moment.strftime('%a %-d %b')}, {moment.strftime('%-I:%M %p')} PDT"
+
+
+def capture_day(official_clock):
+    moment = dt.datetime.fromisoformat(str(official_clock).replace("Z", "+00:00"))
+    return moment.astimezone(PACIFIC).date()
+
+
 def fixture_label(f):
     if f.get("away"):
         return f'{e(f["home"])} <span class="vs">v</span> {e(f["away"])}'
@@ -151,10 +190,15 @@ def page(title, current, body):
     return head + body + tail
 
 
+def evidence_clock():
+    """Latest fetch time in the stored capture manifest — the desk's idea of 'now'."""
+    official = load("data/ledger/manifest.json")["captures"]
+    return max((c.get("fetched_at") or "" for c in official), default="") or "1970-01-01T00:00:00Z"
+
+
 def snapshot_strip(inv, audit):
     win = inv["generated_from"]["capture_window"]
-    official = load("data/ledger/manifest.json")["captures"]
-    official_clock = max((c.get("fetched_at") or "" for c in official), default="") or "unknown"
+    official_clock = evidence_clock()
     c = audit["counts"]
     return f"""<div class="stripe"><div class="wrap"><strong>Evidence snapshot</strong> · OLBG pages read
 {win.get("first")} → {win.get("last")} · official pages read {official_clock} · {c["olbg_events"]} OLBG events
@@ -183,12 +227,21 @@ def build_index(inv, audit, picks, preds):
     c = audit["counts"]
     high = sorted([p for p in picks if p["confidence"] == "high"], key=lambda p: -p["probability"])
     in_band = [p for p in high if p.get("in_band")]
-    todays = [p for p in picks if str(p.get("start_utc") or "").startswith("2026-10-23")]
-    todays_high = [p for p in todays if p["confidence"] == "high"]
+    today = capture_day(evidence_clock())
+    todays = [p for p in picks if local_dt(p.get("start_utc")) and local_dt(p["start_utc"]).date() == today]
+    todays_high = sorted([p for p in todays if p["confidence"] == "high"], key=lambda p: -p["probability"])
+    undated = [p for p in picks if not p.get("start_utc")]
 
+    today_rows = [[e(p["sport"]), f'<strong>{e(p["selection"])}</strong><div class="tiny">{fixture_label(p)}</div>',
+                   pct(p["probability"]), am(p.get("fair_american")), e(p["market"]),
+                   badge("ok", "inside band") if p.get("in_band") else badge("muted", "outside band"),
+                   f'{stamp(p.get("start_utc"))}<div class="tiny">{e(p.get("time_display") or "")}</div>',
+                   link(p.get("official_source_url"), "official")] for p in todays_high]
     if todays_high:
-        exec_intro = (f"<p>{len(todays_high)} of the {len(todays)} selections that start today grade high, "
-                      "listed first with the price and the band check on every row.</p>")
+        exec_intro = (f"<p><strong>{len(todays_high)} of today's {len(todays)} priced selections grade high.</strong> "
+                      f"Times are {today.strftime('%-d %B')} local to the reader (PDT, UTC−7); the same instant "
+                      f"falls on 24 October in UTC for the two late-night rows, which is why the date shown beside "
+                      f"each one is the local one.</p>")
     elif todays:
         best = max(todays, key=lambda p: p["probability"])
         sports_today = sorted({p["sport"] for p in todays})
@@ -217,7 +270,7 @@ hidden. <a href="/band.html">The band page sets out the arithmetic</a>.</p>"""
   <div class="pr-num"><span class="big">{pct(p["probability"])}</span><span class="tiny">{am(p.get("fair_american"))} fair</span></div>
   <div class="pr-badges">{badge(p["confidence"], p["confidence"].upper())}
     {badge("ok", "in band") if p.get("in_band") else badge("muted", "outside band")}</div>
-  <div class="pr-when">{e(p.get("time_display") or "start not published")}</div>
+  <div class="pr-when">{stamp(p.get("start_utc"), p.get("time_display") or "start not published")}</div>
 </div>""")
 
     band_rows = [[e(p["sport"]),
@@ -270,16 +323,23 @@ hidden. <a href="/band.html">The band page sets out the arithmetic</a>.</p>"""
 <h2>Executive summary</h2>
 <div class="two-col">
   <div class="card pad">
-    <h3>Today · 23 October</h3>
+    <h3>Today · {today.strftime("%-d %B %Y")}</h3>
     {exec_intro}
-    <p class="small">Start times are shown exactly as the source printed them. A blank start means the source
-    published a day but not a clock time; the desk does not fill it in.</p>
+    <p class="small">A stored instant is converted to the reader's day and labelled PDT. A row with no clock
+    time keeps the source's own wording — the desk does not invent a time. {len(undated)} of the
+    {len(picks)} graded selections have no clock time at all, so they cannot be placed on any day and are left
+    out of this summary rather than guessed (<a href="/flagged.html">flagged</a>).</p>
   </div>
   <div class="card pad">
     <h3>Band arithmetic</h3>
     {band_sentence}
   </div>
 </div>
+
+<h3 class="sub">Today's high-confidence picks</h3>
+<p class="small">Selections whose start falls on {today.strftime("%-d %B")} in the reader's zone. Sorted by our
+own chance. Every row carries the price that was quoted and a link to the source it came from.</p>
+{table(["Sport", "Selection", "Chance", "Fair price", "Market", "Band", "Start (PDT)", "Source"], today_rows) if today_rows else '<p class="empty">No selection with a known clock time starts today.</p>'}
 
 <h3 class="sub">Highest-confidence selections in the snapshot</h3>
 <p class="small">Sorted by our own modelled chance. “In band” means the fair price sits between −250 and +10000.</p>

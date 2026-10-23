@@ -4622,3 +4622,25 @@ sandbox cannot reach any sports host, which is stated on `/verification.html` an
 **Gate results on this branch.** `python -m unittest discover -s tests` → **679 tests OK** (17 new in
 `tests/test_unified_875d643b.py`); `integration_audit.py` → 0 cross-layer local link errors; the drift gate over
 `data/unified`, the root pages and `sports/` is clean immediately after a full local replay of every CI step.
+
+## Session `arena/875d643b-olbg2` — CONSOLIDATED DESK CLAIM (integration session)
+
+**Claimed:** 2026-10-23 21:40 UTC · **Task:** U1–U5 (evidence re-parse, audit, consolidated root site, CI, PR/merge).
+**Scope claimed (exclusive):** `scripts/unified_inventory.py`, `scripts/unified_audit.py`, `scripts/unified_build.py`,
+`tests/test_unified_875d643b.py`, `data/unified/**`, `research/unified-875d643b.md`, `assets/unified.*`, and these
+root files **at the end of the CI chain only**: `index.html`, `matches.html`, `lines.html`, `picks.html`,
+`predictions.html`, `band.html`, `sources.html`, `verification.html`, `flagged.html`, `methodology.html`,
+`archive.html`, `repo-review.html`, `olbg-events.html`, `sports/*.html`.
+
+**Deliberately NOT touched** (another session's file, logged as a cross-scope request instead of edited):
+`scripts/integration_audit.py`, `scripts/build_site.py`, `data/cadence/**`, `data/ledger/**`, and the 38 earlier
+layer directories. Read-only sourcing from `data/cadence/` and `data/ledger/` is declared here.
+
+**Why a final integration session:** 38 complete desks exist under separate directories with contradictory counts
+and no single front door; the root `index.html` was rebuilt by `build_site.py` from a layer captured on 22 October.
+This session reconciles them, publishes one canonical front door, and keeps every earlier layer linked.
+
+**Evidence rule for this session:** no live fetch is possible from the authoring sandbox, so the desk is built from
+the repository's verbatim captures only (`data/ledger/raw/`, hashes in `data/ledger/manifest.json`, fetched
+2026-10-23 on a GitHub-hosted runner) plus the transcribed fixture layer in `data/cadence/`. Anything that cannot
+be traced to a stored file is left blank and flagged.

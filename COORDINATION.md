@@ -3663,3 +3663,24 @@ link to the root navigation; add `vanguard data/vanguard` and the three `vanguar
 | Live | <https://buffedlizard55-lab.github.io/OLBG2/vanguard/index.html> · <https://buffedlizard55-lab.github.io/OLBG2/vanguard/flagged.html> — both re-fetched from the deployed site after the final deploy and checked line by line (KPI block reads 91 / 17 / 512 / 85 / 21 / 19; every sport-level flag resolves to its sport page) |
 | Scope | only `vanguard/**`, `data/vanguard/**`, `scripts/vanguard_*.py`, `tests/test_vanguard_ca03be92.py`, `research/vanguard-audit-ca03be92.md` were added; `COORDINATION.md` append-only. No root or shared file edited. |
 | Open requests for the root owner | add `vanguard/` to the root navigation; add the three `vanguard_*` scripts and `vanguard data/vanguard` to `.github/workflows/pages.yml` |
+
+---
+
+## Session `arena/a509fb48-olbg2` — CLAIM: `/covered/` desk for the 15-sport brief (2026-10-23)
+
+- **Session ID:** `arena/a509fb48-olbg2` · **Branch:** `arena/a509fb48-olbg2` (fixed by Arena; the `session-<id>/<task>` naming deviation is recorded per protocol, as in prior sessions).
+- **Claimed:** 2026-10-23 (UTC), before any implementation edit.
+- **Concurrency check:** `git fetch origin '+refs/heads/*'` at claim time. No open PRs (`gh pr list --state open` empty). Every other `arena/*` branch listed on origin is for a session already marked done. No active claim overlaps the scope below.
+- **Brief scope (15 sports):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League. Soccer, American football, eSports, Aussie Rules, boxing, MMA, horse racing and cycling are outside this brief.
+- **Strict file scope:** new files only in `covered/**`, `data/covered/**`, `scripts/covered_*.py`, `tests/test_covered_a509fb48.py`, `research/covered-a509fb48.md`. `COORDINATION.md` is append-only. Root `index.html`, `scripts/build_site.py`, `scripts/integration_audit.py`, `.github/workflows/pages.yml` and every other session's files stay untouched. Any root-navigation or CI request is logged below for the owner.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| C1 | Claim board, concurrency check, commit and push the claim | done | `arena/a509fb48-olbg2` | `COORDINATION.md` |
+| C2 | Reverse-engineer OLBG for the 15 sports: URL schema, sport and event IDs, markets listed | in progress | `arena/a509fb48-olbg2` | `research/covered-a509fb48.md`, `data/covered/olbg_taxonomy.json` |
+| C3 | First-hand official-source fixture capture (2026-10-23 onward) per sport | unclaimed→this session | `arena/a509fb48-olbg2` | `data/covered/captures/**`, `data/covered/inputs.json`, `data/covered/sources.json` |
+| C4 | Independent line origination (win, handicap, total), low/medium/high labels, band gate, Top-5 per sport | unclaimed→this session | `arena/a509fb48-olbg2` | `scripts/covered_model.py`, `data/covered/matches.json`, `data/covered/lines.json` |
+| C5 | Unique ≥30-word predictions with verified team, form, history, injuries; no banned words | unclaimed→this session | `arena/a509fb48-olbg2` | `scripts/covered_predictions.py`, `data/covered/predictions.json`, `data/covered/flagged.json` |
+| C6 | `covered/` GitHub Pages site: landing, all-matches table, sport pages, picks, flagged, sources, methodology | unclaimed→this session | `arena/a509fb48-olbg2` | `scripts/covered_build.py`, `covered/**` |
+| C7 | Regression tests: rebuild drift check, link check, word-count and banned-word checks | unclaimed→this session | `arena/a509fb48-olbg2` | `tests/test_covered_a509fb48.py` |
+| C8 | Integration: rebase on `origin/main`, full test suite, PR → merge → Pages confirm, log result | unclaimed→this session | `arena/a509fb48-olbg2` | `COORDINATION.md` (append-only) |

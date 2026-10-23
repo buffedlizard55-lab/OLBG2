@@ -3830,3 +3830,71 @@ Integration follow-up: merged PR #142 from main without editing its `/desk/` dat
 - **Follow-up PR #147** corrects the wording of FL-02 (Gaelic split not checked) and FL-06 (time-basis toggle not seen). No data or gate change. Merge result is on the PR page.
 - **Known limits, unchanged:** no high-confidence picks, so no predictions; FL-01 (literal −250…+10000 band with p ≥ 0.70) needs a decision; six sports have no fixture captured; darts is OLBG-only; tennis has observed rows only.
 - Local checks at the final head: `unittest discover -s tests` OK (487 tests before the follow-up; 13 covered tests after it); `integration_audit.py` 0 local link errors.
+## Session `arena/b8a1ce4c-olbg2` — CLAIM: `/desk/` 15-sport OLBG event inventory, fresh 2026-10-23 official capture, origination, Top-5 predictions, and line-by-line repo audit
+
+- **Session ID:** `arena/b8a1ce4c-olbg2` · **Branch:** `arena/b8a1ce4c-olbg2` (fixed by the Arena harness)
+- **Claimed:** 2026-10-23 16:20 UTC, before any implementation edit.
+- **Concurrent-session check at claim time** (`git fetch origin '+refs/heads/*'`): `origin/main` = `2999cc0` (PR #139). Two branches were pushed within the previous five minutes and are treated as **active**:
+  - `arena/33e9eee7-olbg2` → claims `/focus/`, `data/focus/**`, `scripts/focus_*`, `research/focus-33e9eee7.md`, and later root nav/CI/README integration (task F6).
+  - `arena/8226c94a-olbg2` → claims `/monitor/`, `data/monitor/**`, `scripts/monitor_*`, `tests/test_monitor.py`, **and the shared root files** (`scripts/build_site.py`, root generated pages, `sports/**`, `.github/workflows/*`, `README.md`).
+- **Therefore this session claims a third, disjoint namespace only.** I will not create `/focus/` or `/monitor/`, and I will not edit root generated pages, `scripts/build_site.py`, `.github/workflows/**`, or `README.md`. Integration requests (root nav entry, CI drift paths) are logged here for the root owner instead.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| D1 | Board check, live-branch scan, claim disjoint `/desk/` scope, commit & push immediately | in progress | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+| D2 | OLBG reverse-engineering refresh 2026-10-23: read all 15 requested sport hubs, record every listed event + market + tip split, verbatim, with timestamp | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/olbg/**`, `scripts/desk_olbg.py`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 | Fresh first-hand official governing-body capture for the same 15 sports (ranking/table/result inputs only), verbatim text stored | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/capture/**`, `data/desk/inputs.json`, `data/desk/sources.json`, `scripts/desk_seed.py` | 
+| D4 | Independent line origination (winner / handicap / total where an official numeric input exists) + low/medium/high + strict gate p>=0.70 and fair American in [-250,+10000] + Top-5 per sport | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_model.py`, `data/desk/{matches,lines}.json` |
+| D5 | Unique >=30-word predictions for high-confidence picks, every claim tied to a stored official capture; blanks stay blank | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_predictions.py`, `data/desk/{predictions,flagged}.json` |
+| D6 | Line-by-line audit of the already-merged layers (row -> official source re-read today), irregularity register | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/audit.json`, `research/desk-audit-b8a1ce4c.md` |
+| D7 | `/desk/` dashboard (exec summary, matches, lines, Top-5, predictions, 15 sport subpages, OLBG inventory, audit, flagged, sources, methodology) + verifier + tests | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_build.py`, `scripts/desk_verify.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+| D8 | Rebase on `origin/main`, full test suite, PR -> merge, confirm Pages live, log result here | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+
+### Session `arena/b8a1ce4c-olbg2` — COMPLETION LOG (`/desk/`, 2026-10-23 16:50Z)
+
+**Status: built and verified; publication follows.**
+
+| Task | Status | Files |
+|---|---|---|
+| D1 claim | done 16:20Z (`24f4e03`) | `COORDINATION.md` |
+| D2 OLBG refresh, 15 hubs | done — 125 events, 14 sports, Golf returned "No tips found." | `data/olbgdesk/olbg_inventory.json`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 official capture | partial — 10 fixtures (6 NHL, 3 URC, 1 MLB) from governing bodies | `data/olbgdesk/inputs.json` |
+| D4 origination | done — 173 markets, 48 from NHL goal aggregates, 125 consensus-derived; 8 high confidence | `scripts/desk_model.py`, `data/olbgdesk/lines.json` |
+| D5 predictions | done — 6, all Ice Hockey, 67–77 words, unique openings; Darts/Baseball high picks published without narrative | `scripts/desk_predictions.py`, `data/olbgdesk/{predictions,flagged}.json` |
+| D6 repo audit | done — 6 findings A-01…A-06 | `desk/audit.html`, `research/desk-audit-b8a1ce4c.md` |
+| D7 dashboard | done — 25 pages, verifier 2,511 checks, 12 tests | `scripts/desk_{build,verify}.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+
+**Sources.** NHL club statistics and scores endpoints; MLB schedule and standings; URC match centre.
+Every row on `/desk/matches.html`, `/desk/lines.html` and `/desk/olbg.html` carries an https link and the
+verifier fails the build if one is missing. No bookmaker price was read or used; OLBG publishes none.
+
+**Verification performed.** `desk_verify.py` → 2,511 checks, 0 errors (price arithmetic, band logic,
+confidence rule, prediction word count/uniqueness/banned words, every quoted number must exist in the
+stored fact list, every local link resolves, every table row has a source). Full repository suite on the
+merged tree: **479 tests OK**. `integration_audit.py`: 0 cross-layer local link errors.
+
+**Conflict encountered and resolved (logged per protocol).** On first build this session wrote its data
+into `data/desk/`, which is the existing namespace owned by `scripts/build.py` (`/site/` layer), and
+overwrote `data/desk/flagged.json`. Detected immediately by the failing `tests/test_build.py`, restored
+with `git checkout -- data/desk`, and this session's data moved to `data/olbgdesk/`. No other session's
+file now carries a modification from this session: `git status data/desk` is clean.
+
+**Root/shared files — request only, not edited.** Please add `desk/` to the root navigation and
+`desk data/olbgdesk` plus the four `desk_*` scripts to `.github/workflows/pages.yml`'s drift paths.
+This session did not touch `index.html`, `scripts/build_site.py`, `.github/workflows/**` or `README.md`,
+because `33e9eee7` (F6) and `8226c94a` claim those files.
+
+**Disclosed gaps.** The five-predictions-per-sport target is not met: six exist, all Ice Hockey. Twelve
+sports have consensus-derived prices only because no official numeric page rendered (ATP 404, NBA 500,
+PDC/URC/WST client-rendered). Seventeen flags are published on `/desk/flagged.html`. No injury sentence
+was written because no official injury report was captured.
+
+**`/desk/` publication record (session `arena/b8a1ce4c-olbg2`).**
+
+| Item | Value |
+|---|---|
+| PR #142 | merged 2026-10-23T16:29:42Z, merge commit `3921512` |
+| Live | <https://buffedlizard55-lab.github.io/OLBG2/desk/index.html> — fetched after deploy and read line by line: KPI block shows 125 events / 14 of 15 sports / 10 fixtures / 173 markets / 8 high picks / 6 predictions / 17 flags |
+| Checks | `desk_verify.py` 3,257 checks 0 errors; 12 desk tests; full suite green on the merged tree; `integration_audit.py` 0 link errors |
+| Fix after first deploy | Confidence pills were emitted outside a `<td>` and the URC/Baseball status label overstated price coverage; both corrected, and the verifier now asserts every table row has the same cell count as its header |
+| Merge conflicts | Two, both in `COORDINATION.md` while merging `origin/main` (`#140`, then `#141`). Resolved per house rule: main's full version kept, this session's block appended. No other session's text discarded. |

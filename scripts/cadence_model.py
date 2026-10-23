@@ -623,7 +623,11 @@ def model_motor_race(f):
 
 
 def model_gaelic(f):
-    margins = {"gaa-cork-psfc": (8, 2), "gaa-waterford-sfc": (2, 7), "gaa-limerick-shc": (7, None)}
+    # Gaelic football/hurling scores are goals-points; a goal is worth three points.
+    # Cork: Nemo 1-15 (18) to 0-16 (16) = +2; St Finbarr's 2-12 (18) to 0-16 (16) = +2.
+    # Waterford: Rathgormack +2, The Nire +7. Limerick: Na Piarsaigh 2-24 (30)
+    # to 3-16 (25) = +5; no opponent margin is used for that fixture.
+    margins = {"gaa-cork-psfc": (2, 2), "gaa-waterford-sfc": (2, 7), "gaa-limerick-shc": (5, None)}
     hm, am = margins.get(f["id"], (None, None))
     no_numeric = hm is None or am is None
     if no_numeric:
@@ -702,12 +706,13 @@ def main():
         row["evidence_tier"] = res["tier"]
         row["evidence"] = res["evidence"]
         p_home = res["p_home"]
-        p_fav = max(p_home, 1 - p_home)
-        row["home_win_probability"] = round(p_home, 4)
-        row["favourite"] = f["home"] if p_home >= 0.5 else f["away"]
-        row["favourite_probability"] = round(p_fav, 4)
-        row["confidence"] = confidence(p_fav, res["tier"])
-        row["confidence_cap"] = (res["tier"] == "C" and p_fav >= HIGH_P)
+        # Outrights have no opponent, so 1 - p_home is not an opposing probability.
+        # The summary is populated from the actual leading natural selection below.
+        row["home_win_probability"] = None if res.get("outright_only") else round(p_home, 4)
+        row["favourite"] = None
+        row["favourite_probability"] = None
+        row["confidence"] = None
+        row["confidence_cap"] = False
 
         for k, m in enumerate(res["markets"]):
             m2 = dict(m)
@@ -735,6 +740,13 @@ def main():
             "Race winner", "Drivers' Championship")]
         natural.sort(key=lambda m: -m["probability"])
         if natural:
+            leader = natural[0]
+            row["favourite"] = leader["selection"]
+            row["favourite_probability"] = round(leader["probability"], 4)
+            row["confidence"] = confidence(leader["probability"], res["tier"])
+            row["confidence_cap"] = (res["tier"] == "C" and leader["probability"] >= HIGH_P)
+            if leader.get("three_way"):
+                row["home_win_probability"] = None
             picks.append(base_pick(natural[0]))
         for j, m in enumerate(res.get("outright_top") or []):
             picks.append(base_pick(m, f"out{j}"))

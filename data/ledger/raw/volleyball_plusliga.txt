@@ -53,7 +53,7 @@
 
     <script src='https://www.google.com/recaptcha/api.js?hl=pl'></script>
     
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" nonce='00cc8241fa771cdaad10f275b216628b'></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" nonce='13ced917d99e5c910e28cc60d678527b'></script>
 
 	
 	<meta name="twitter:card" content="summary_large_image">
@@ -64,8 +64,8 @@
 	<meta property="og:title" content="Strona główna">
 	<meta property="og:description" content="TAURON Liga">
 	<meta property="og:image" content="https://www.tauronliga.pl/_images/account/men/ogimage.jpg">
-	<script nonce='00cc8241fa771cdaad10f275b216628b'>$(document).on("cookieManager:consentChange", function(e, categoryData) {if(categoryData[3].enabled) {location.reload();}});</script>
-		<script type="module" nonce="00cc8241fa771cdaad10f275b216628b">
+	<script nonce='13ced917d99e5c910e28cc60d678527b'>$(document).on("cookieManager:consentChange", function(e, categoryData) {if(categoryData[3].enabled) {location.reload();}});</script>
+		<script type="module" nonce="13ced917d99e5c910e28cc60d678527b">
     import { Url } from '/js/modules/Url.module.js';
 
     // Niedestrukcyjnie tworzymy przestrzeń nazw;
@@ -141,7 +141,7 @@
             
 <ul class="top-menu profile-menu">
     <li><a rel="nofollow" href="https://profil.siatkarskaliga.pl/profile/action/register.html">Rejestracja</a></li>
-    <li><a rel="nofollow" href="https://www.tauronliga.pl/profile/action/preLogin/pageUrl/FZN9Ed63E4t5M4KsKmPXZKWyH1vPQCP0HZ8qR6TXKHycdKAWS48KKRL2GuiRk7owy7W0EMjGFEglWbmEo4hZMIuAlSpvyknPrsEvVtcwZpzCvPlzlhS7StNmssiOcNODyADc3PqzeLT3W11WBu0WBSvNX2WSIzg6QJE9umMKeVz2.html">Logowanie</a></li>
+    <li><a rel="nofollow" href="https://www.tauronliga.pl/profile/action/preLogin/pageUrl/DUojiDPUXJlPpx9WthgeFQkNg5GelRhzJTyAeqadh1lYk1PIRGaDy2rqhdQxqvqwpJrlPAXoiAo6jQuUAFN5tWFSCY01cugAT7RFPSBhIR2eWkFpKXcnm4Osk0x7aTYdPsvRvyduICY3vtbLLlY5CgEtzfAfEfWoL6Dxo2tqzufe.html">Logowanie</a></li>
 </ul>
 
 
@@ -2559,7 +2559,7 @@
                                                        
                 <a class="btn btn-default btn-sm" 
                     href="https://www.tauronliga.pl/games/action/show/id/1104816.html#stats"
-                     style="display: none;" 
+                     
                     data-synced-games-hide-if="planned">Statystyki</a>
                                 
                                 <a class="btn btn-default btn-sm" 
@@ -4749,4 +4749,5 @@
             </div>
 
                         <div class="gamesbox-panel-teams gold" style="display: none;" data-synced-games-show-if="hasGoldSet">
-                <div class="title">Wyniki pierws
+                <div class="title">Wyniki pierwszego meczu</div>
+      

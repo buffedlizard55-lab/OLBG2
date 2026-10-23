@@ -4207,3 +4207,18 @@ from desk chrome outside the predictions) is published separately and does not c
 **Scope released.** No file outside this session's claim was modified except append-only `COORDINATION.md`,
 `README.md`, `scripts/build_site.py`, the regenerated root pages and `.github/workflows/pages.yml`, all of
 which are recorded in the claim table above.
+
+### Session `7a073c9a` — follow-up publication record
+
+| Item | Result |
+| --- | --- |
+| Follow-up pull request | https://github.com/buffedlizard55-lab/OLBG2/pull/159 |
+| Contents | coverage-table reasons made sport-specific, badge spacing, the word "verified" removed from desk chrome outside the predictions, no data value changed |
+| CI | pass — run `40013671982` (31 s) |
+| Merge | merged 2026-10-23T19:44:24Z, merge commit `6b1026bb948304672ce11a1d72a813488faa9aa6` |
+| Pages deploy | run `40013784089` — `validate` success, `deploy` success, deployed SHA `6b1026bb` |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/brief/picks.html` fetched after deploy: 39 in-band rows, Tier A badge on Boston Bruins −245, six Tier B rows at the foot, every row carrying its source |
+
+**Concurrent activity observed (not edited):** branch `arena/21a0c524-olbg2` pushed twice during this
+window and its own validation runs were in progress at merge time. Nothing from that branch was touched,
+and this session's merge was rebased onto `eadfabb` before landing. No overlap was detected in file scope.

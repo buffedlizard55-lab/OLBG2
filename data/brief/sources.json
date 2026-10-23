@@ -1,0 +1,202 @@
+{
+ "sources": [
+  {
+   "key": "nhl-schedule",
+   "name": "NHL official schedule feed (api-web.nhle.com)",
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "sport": "Ice Hockey",
+   "used_for": "14 fixtures, start times, venues, game ids",
+   "captured_utc": "2026-10-23T16:30:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "nhl-teams",
+   "name": "NHL official team summary (api.nhle.com stats REST)",
+   "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+   "sport": "Ice Hockey",
+   "used_for": "games played, goals for/against, W-L-OTL for all 32 clubs",
+   "captured_utc": "2026-10-23T16:25:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "mlb-schedule",
+   "name": "MLB official Stats API - schedule",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-28",
+   "sport": "Baseball",
+   "used_for": "World Series fixtures, start times, venues, game ids",
+   "captured_utc": "2026-10-23T16:40:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "mlb-standings",
+   "name": "MLB official Stats API - 2026 regular-season standings (AL and NL)",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+   "sport": "Baseball",
+   "used_for": "wins, losses, runs scored/allowed for both World Series clubs",
+   "captured_utc": "2026-10-23T16:40:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "el-schedule",
+   "name": "EuroLeague Basketball official schedules feed",
+   "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "sport": "Basketball",
+   "used_for": "Round 8 fixtures (10 games), venues, tip times",
+   "captured_utc": "2026-10-23T17:08:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "el-standings",
+   "name": "EuroLeague Basketball official standings feed after Round 7",
+   "url": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026&gameNumber=7",
+   "sport": "Basketball",
+   "used_for": "games played, W-L, points for/against",
+   "captured_utc": "2026-10-23T17:08:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "wst-fixtures",
+   "name": "World Snooker Tour official Live & Upcoming matches module",
+   "url": "https://www.wst.tv/",
+   "sport": "Snooker",
+   "used_for": "match list, rounds, dates, match-centre links",
+   "captured_utc": "2026-10-23T16:45:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "wst-rankings",
+   "name": "World Snooker Tour official world ranking (prize money, top 36)",
+   "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+   "sport": "Snooker",
+   "used_for": "prize-money strength inputs",
+   "captured_utc": "2026-10-23T17:05:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "ehf-calendar",
+   "name": "European Handball Federation official match calendar",
+   "url": "https://www.eurohandball.com/en/",
+   "sport": "Handball",
+   "used_for": "17 fixtures with dates, local tip times and first-leg scores",
+   "captured_utc": "2026-10-23T16:42:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "nrl-r1",
+   "name": "NRL.com official Rugby League World Cup 2026 draw - Round 1",
+   "url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+   "sport": "Rugby League",
+   "used_for": "Round 1 results and scores",
+   "captured_utc": "2026-10-23T17:12:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "nrl-r2",
+   "name": "NRL.com official Rugby League World Cup 2026 draw - Round 2",
+   "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "sport": "Rugby League",
+   "used_for": "Round 2 fixtures, venues, kick-off times",
+   "captured_utc": "2026-10-23T17:12:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "prem-fixtures",
+   "name": "PREM Rugby official fixtures & results - Gallagher PREM Round 4",
+   "url": "https://www.premrugby.com/fixtures-results?competition=gallagher-prem&round=4",
+   "sport": "Rugby Union",
+   "used_for": "Round 4 fixtures, venues, last-three form strings",
+   "captured_utc": "2026-10-23T16:55:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "olbg-darts",
+   "name": "OLBG official darts tips index (operator source, not a governing body)",
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "sport": "Darts",
+   "used_for": "12 fixtures and OLBG event ids",
+   "captured_utc": "2026-10-23T17:02:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "atp-scores",
+   "name": "ATP Tour official Tour Scores board",
+   "url": "https://www.atptour.com/en/scores/current",
+   "sport": "Tennis",
+   "used_for": "quarter-final results; refreshed first-hand in this session",
+   "captured_utc": "2026-10-23T19:34:00Z",
+   "first_hand": "this session"
+  },
+  {
+   "key": "atp-capture",
+   "name": "ATP Tour official Tour Scores board (earlier same-day read)",
+   "url": "https://www.atptour.com/en/scores/current",
+   "sport": "Tennis",
+   "used_for": "quarter-final results and semi-final slots",
+   "captured_utc": "2026-10-23T16:47:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "cricket-au",
+   "name": "Cricket Australia official live & upcoming matches",
+   "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "sport": "Cricket",
+   "used_for": "5 upcoming fixtures, series, venues",
+   "captured_utc": "2026-10-23T17:18:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "dpwt-leaderboard",
+   "name": "DP World Tour official leaderboard - Genesis Championship",
+   "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "sport": "Golf",
+   "used_for": "36-hole leaderboard",
+   "captured_utc": "2026-10-23T17:10:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "f1-calendar",
+   "name": "Formula 1 official 2026 race calendar",
+   "url": "https://www.formula1.com/en/racing/2026",
+   "sport": "Motor Racing",
+   "used_for": "United States Grand Prix dates and rounds",
+   "captured_utc": "2026-10-23T16:58:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "f1-standings",
+   "name": "Formula 1 official 2026 drivers' standings",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "sport": "Motor Racing",
+   "used_for": "drivers' points after Round 17 (top 8 captured)",
+   "captured_utc": "2026-10-23T16:58:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "gaa-fixtures",
+   "name": "GAA official fixtures & results",
+   "url": "https://www.gaa.ie/fixtures-results",
+   "sport": "Gaelic Sports",
+   "used_for": "the single October fixture listed nationally",
+   "captured_utc": "2026-10-23T16:45:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "gbgb",
+   "name": "Greyhound Board of Great Britain official open-race calendar",
+   "url": "https://www.gbgb.org.uk/racing/open-races/",
+   "sport": "Greyhounds",
+   "used_for": "5 open races (track, distance, category, grade)",
+   "captured_utc": "2026-10-23T17:20:00Z",
+   "first_hand": "session 6b10ecda, same day"
+  },
+  {
+   "key": "vbw-schedule",
+   "name": "Volleyball World official global schedule",
+   "url": "https://en.volleyballworld.com/global-schedule#fromDate=2026-10-23&yearseason=2026",
+   "sport": "Volleyball",
+   "used_for": "10 fixtures for 2026-10-24 and four same-day results",
+   "captured_utc": "2026-10-23T19:40:00Z",
+   "first_hand": "this session"
+  }
+ ]
+}

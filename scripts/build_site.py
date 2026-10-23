@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
+    ("brief/index.html", "Today's 15-sport brief (23 Oct)"),
     ("monitor/index.html", "Latest 15-sport research desk"),
     ("focus/index.html", "Focus desk (15 sports, 23 Oct)"),
     ("liveboard/index.html", "Live board (15 sports, 23 Oct)"),
@@ -291,7 +292,8 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
 <h1>Start with the evidence-first dashboard.</h1>
 <p class="lede">The latest desk separates official fixture facts, independent fair prices, actual bookmaker odds and missing evidence.
 It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
-<div class="cta"><a class="button primary" href="monitor/index.html">Open the 15-sport dashboard →</a>
+<div class="cta"><a class="button primary" href="brief/index.html">Open today's 15-sport brief →</a>
+<a class="button" href="brief/predictions.html">39 sourced predictions</a>
 <a class="button" href="monitor/flagged.html">Flagged for Review</a></div>
 <p><strong>Partial coverage, not a complete live slate.</strong> No high-confidence picks are asserted without the required evidence.
 Earlier overlapping research is retained below for audit only.</p></section>

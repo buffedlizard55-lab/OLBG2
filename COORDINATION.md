@@ -4097,3 +4097,94 @@ Scope extension (no concurrent open PR): `scripts/monitor_build.py` and generate
 | Public review page | https://buffedlizard55-lab.github.io/OLBG2/monitor/flagged.html#collector-nhl-review |
 
 Scoped software task **done**, live-source/schema confirmation and full brief coverage **needs review** on the public review page. No forecast success, complete inventory or unsupported 75-pick quota is claimed. Scope released. This append records the publication in a documentation-only follow-up on the same fixed branch.
+---
+
+## Session `arena/7a073c9a-olbg2` — `/brief/` desk + final integration (claimed 2026-10-23 19:30Z)
+
+**Concurrency scan at claim time:** `git ls-remote --heads origin` lists `main` plus 70 historical
+`arena/*` branches; none is newer than the merged work on `main` (HEAD `81f46ac`), and no branch was
+updated in this session's window. This session therefore takes **both** a fresh research scope and the
+final-integration role recorded below. It does not edit another session's claimed desk directories.
+
+| # | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| B1 | Board read, concurrency scan, claim, commit + push | in progress | `7a073c9a` | `COORDINATION.md` (append-only) |
+| B2 | OLBG reverse-engineering refresh: complete 15-sport numeric ID map, URL schema, market vocabulary, what OLBG does **not** serve to a non-JS client | in progress | `7a073c9a` | `data/brief/olbg_taxonomy.json`, `research/brief-7a073c9a.md` |
+| B3 | Fresh first-hand capture of fixtures/standings for the 15 named sports, 2026-10-23→30 | in progress | `7a073c9a` | `data/brief/captures/*.json` |
+| B4 | Line origination for **every** published match across moneyline, handicap/spread and totals; confidence labels; strict in-band gate (−250…+10000) | unclaimed | `7a073c9a` | `scripts/brief_model.py`, `data/brief/matches.json` |
+| B5 | Written predictions: top five per sport where fixtures exist, ≥30 words each, every fact traceable to a capture entry | unclaimed | `7a073c9a` | `scripts/brief_predictions.py`, `data/brief/predictions.json` |
+| B6 | `/brief/` dashboard + 15 sport subpages + sources + flagged + methodology + repo review | unclaimed | `7a073c9a` | `scripts/brief_build.py`, `scripts/brief_verify.py`, `brief/**`, `tests/test_brief.py` |
+| B7 | Final integration: nav from root, README, link audit, full test suite, PR → `main`, merge, Pages deploy confirmation | unclaimed | `7a073c9a` | `scripts/build_site.py`, root generated pages, `README.md` |
+
+**Rules this session follows:** no fixture, price, record or prose claim is published unless it is
+present in a committed capture with a URL and a fetch timestamp. Anything that cannot be read from an
+official source is left blank and listed on `/brief/flagged.html`. OLBG tip percentages are stored as a
+description of how OLBG presents a market and are never used as an input to an originated price.
+
+### Session `7a073c9a` — `/brief/` desk: implementation, verification and integration record
+
+**Status: B1–B7 done.** Files written (all inside the claimed scope): `data/brief/**`, `brief/**`,
+`scripts/brief_model.py`, `scripts/brief_predictions.py`, `scripts/brief_build.py`,
+`scripts/brief_verify.py`, `tests/test_brief.py`, `research/brief-7a073c9a.md`, plus the integration
+edits to `scripts/build_site.py`, the regenerated root pages, `README.md`, `.github/workflows/pages.yml`
+and this append-only log.
+
+**Published desk:** <https://buffedlizard55-lab.github.io/OLBG2/brief/>
+
+| Item | Value |
+| --- | --- |
+| Sports | exactly the 15 named in the brief |
+| Fixtures published | 113 (87 upcoming at the 19:45Z cut-off) |
+| Fixtures with originated markets | 50 across 11 sports |
+| Markets originated | money line / match winner, puck line, run line, spread, handicap, totals 5.5 and 6.5 / 8.5 / 160.5-style model lines, tournament winner, race winner |
+| In-band selections (−250…+10000) | 39 |
+| Tier A (≥70% **and** in band) | 1 — Boston Bruins ML −245 |
+| Tier B (≥70%, shorter than −250) | 6 — Panathinaikos, Dubai, Sloga Doboj, England RL, Samoa RL, New Zealand RL |
+| Written predictions | 39, min 84 words, max 102 |
+| Official sources | 22 |
+| Review items | 10 (BR-01…BR-10) |
+| Structural checks | 1,547 (`scripts/brief_verify.py`), 0 failures |
+| Tests | 18 new (`tests/test_brief.py`); repository total 594, all passing |
+| Cross-layer link audit | 0 errors |
+
+**First-hand reads made by this session (19:29Z–20:05Z):**
+`olbg.com/betting-tips` (all 21 sport ids), `olbg.com/betting-tips/Tennis/3`,
+`/Ice_Hockey/13` and one darts event page (all three returned "No tips found"), `atptour.com/en/scores/current`
+(six quarter-finals, no semi-final line-up), `wtatennis.com/scores` (0 tournaments live),
+`en.volleyballworld.com/global-schedule` (two chunks; 10 fixtures for 24 Oct and four same-day results),
+`pdc.tv/rankings` (cookie wall), `cev.eu/matches/` (404), `en.volleyballworld.com/volleyball/schedule/` (404),
+`en.volleyballworld.com/.../svleague-women/standings/` (empty).
+
+**Same-day captures reused and labelled as such:** NHL schedule + team summary, MLB schedule + standings,
+EuroLeague schedule + standings, WST fixtures + top-36 ranking, EHF calendar, NRL World Cup draw,
+Premiership fixtures, OLBG darts list, DP World Tour leaderboard, F1 calendar + drivers' standings,
+GAA fixtures, GBGB open races, Cricket Australia fixtures, ATP scores. Every row shows the capture time.
+
+**Verification actually performed:** every published fixture has an https source from the ledger; every
+priced fixture records the input used; every two-way market sums to 1; every probability sits in the
+5–95% clamp; the in-band flag was recomputed from the American price on all 470 market rows; no pick
+exists on a fixture whose favourite is shorter than −250 or whose start time had passed; no prediction
+names a market/selection that does not exist; the two words the brief forbids ("model", "verified") were
+grepped out of all 39 write-ups; no two write-ups share a four-word opening and no sentence is reused.
+
+**Irregularities (all published on `/brief/flagged.html` with evidence links):**
+`BR-01` OLBG serves no event table to a non-JS client (three pages, "No tips found") — the blocking
+finding for "the full list of matches listed on OLBG";
+`BR-02` PDC rankings behind a cookie wall — no darts price;
+`BR-03` no ATP semi-final pairing published at 19:34Z — no tennis price;
+`BR-04` no volleyball standings feed;
+`BR-05` Tauron Liga gender label conflicts on the schedule page — gender not asserted;
+`BR-06` CEV match list 404;
+`BR-07` WTA idle window;
+`BR-08` snooker top-36 prize-money bound used and disclosed;
+`BR-09` eight OLBG darts events already started;
+`BR-10` four sports (Tennis, Cricket, Gaelic Sports, Greyhounds) plus Darts carry fixtures with blank markets.
+
+**Repo review (this session):** 576 pre-existing tests pass; `integration_audit.py` reports 0 link errors;
+729 HTML pages before this desk; stray merge closers remain in `COORDINATION.md` (lines 3216, 3307, 3437,
+3549, 3609, 3628) and in `METHODOLOGY.md` (line 125) — left untouched because both files are outside this
+session's write scope apart from this append. Findings R1–R6 are published on `/brief/review.html`.
+
+**Notes for any later session:** `/brief/` is fully generated. Do not hand-edit anything under `brief/` or
+`data/brief/`; run `brief_model.py`, `brief_predictions.py`, `brief_build.py`, `brief_verify.py` in that
+order. The CI workflow now rebuilds the desk and includes `brief` and `data/brief` in the drift gate.

@@ -1,0 +1,142 @@
+{
+ "meta": {
+  "session": "arena/7a073c9a-olbg2",
+  "generated_for": "2026-10-23",
+  "rule": "Second prose batch: Rugby League, Rugby Union, Volleyball, Golf and Motor Racing selections."
+ },
+ "predictions": [
+  {
+   "id": "rl-2",
+   "selection": "England",
+   "market": "Money line (2-way)",
+   "fact_source": "nrl-r1",
+   "text": "England to beat France in Round 2 of the Rugby League World Cup at HBF Park, Perth. England lost their opener 12-30 to Tonga, while France were beaten 4-78 by Samoa, so both sides arrive on a defeat but the margin of France's is far heavier. England scored twelve points against a Tongan side that conceded thirty, and their defence held Tonga to thirty, which is a better platform than France's four-point return. The fair price is shorter than the -250 floor, so the selection sits outside the requested window."
+  },
+  {
+   "id": "rl-1",
+   "selection": "Samoa",
+   "market": "Money line (2-way)",
+   "fact_source": "nrl-r1",
+   "text": "Samoa to beat Papua New Guinea in Port Moresby. Samoa opened with a 78-4 win over France, the largest margin of Round 1, while Papua New Guinea beat Lebanon 42-18. Samoa's points difference of plus 74 is the strongest single number in the group, but the venue matters: the Santos National Football Stadium is a hostile trip and PNG have won there. The one-match sample is thin, and Round 1 totals are shaded towards the mean at 50% to avoid over-reading a single blowout. A high-confidence price that falls outside the band."
+  },
+  {
+   "id": "rl-3",
+   "selection": "New Zealand",
+   "market": "Money line (2-way)",
+   "fact_source": "nrl-r1",
+   "text": "New Zealand to beat the Cook Islands in Round 2. New Zealand lost 22-24 to Australia in their opener, a two-point margin against the tournament favourites, and scored twenty-two points in the process. The Cook Islands were beaten 12-40 by Fiji, conceding forty. The defensive numbers separate the sides: New Zealand shipped 24 to Australia, the Cook Islands shipped 40 to Fiji. That is the basis for the pick rather than the win-loss column, which shows a defeat for both. The price is shorter than the -250 floor, so the selection is logged as a high-confidence call that the price window excludes."
+  },
+  {
+   "id": "rl-4",
+   "selection": "Fiji",
+   "market": "Money line (2-way)",
+   "fact_source": "nrl-r1",
+   "text": "Fiji to beat Australia in Round 2 of the Rugby League World Cup. This is the contrarian selection of the round. Fiji beat the Cook Islands 40-12, scoring forty points in the process, while Australia edged New Zealand 24-22 by two. On that single-match evidence Fiji's scoring and defensive numbers are the better pair. Australia remain the tournament favourites and the squad depth gap is real, which is why the pick is flagged: it follows the only Round 1 evidence available and the sample is one game, not a season."
+  },
+  {
+   "id": "ru-2",
+   "selection": "Leicester Tigers",
+   "market": "Money line (2-way)",
+   "fact_source": "prem-fixtures",
+   "text": "Leicester Tigers to beat Northampton Saints at Mattioli Woods Welford Road. Leicester's last three results read L,W,W; Northampton's read W,L,W. Both have won two of three, so the differentiator is the venue and the direction of travel, with Leicester winning their most recent two. Welford Road remains one of the harder away trips in the Gallagher Premiership. The caveat is candid: no league table or scoring data could be read from the official site, so this price rests on published form strings alone and confidence is correspondingly medium."
+  },
+  {
+   "id": "ru-3",
+   "selection": "Bristol Bears",
+   "market": "Money line (2-way)",
+   "fact_source": "prem-fixtures",
+   "text": "Bristol Bears to beat Exeter Chiefs at Ashton Gate. Bristol arrive with W,W,L from their last three; Exeter with L,L,W, so Bristol have won twice as many of those fixtures and won more recently. The home venue adds to it. Nothing else is available from the official fixtures page: the standings table renders client-side and returned no rows, so there is no published league-points or scoring input for this match. The selection is therefore a form-and-venue call at medium confidence, not a data-rich one, and the handicap and total markets are left blank."
+  },
+  {
+   "id": "ru-4",
+   "selection": "Saracens",
+   "market": "Money line (2-way)",
+   "fact_source": "prem-fixtures",
+   "text": "Saracens to win at Harlequins. Harlequins' last three results read L,L,L, while Saracens' read W,L,W. That is the widest form gap on the Round 4 card, and it points away from the home side even at the Twickenham Stoop. Harlequins have lost three straight and Saracens have won two of three, including their most recent. The absence of a readable league table is the main caveat, so the price reflects form strings only. Confidence is medium and the pick is inside the requested band."
+  },
+  {
+   "id": "vb-4",
+   "selection": "Osaka Marvelous",
+   "market": "Money line (2-way)",
+   "fact_source": "vbw-schedule",
+   "text": "Osaka Marvelous to beat Aleeza Aichi in Kariya, a rematch of the previous day's fixture. Osaka won that match 3-1, taking the sets 25-19, 25-23, 27-29 and 25-19, so they dropped only one set and won the other three by six, two and six points. The same two clubs meet again inside twenty-four hours at the same venue, which limits travel and preparation effects. No league table was readable, so the price rests on that single head-to-head result and the selection carries medium confidence rather than high."
+  },
+  {
+   "id": "vb-5",
+   "selection": "Hisamitsu Springs",
+   "market": "Money line (2-way)",
+   "fact_source": "vbw-schedule",
+   "text": "Hisamitsu Springs to beat Denso Airybees in Koriyama. The sides met on 23 October and Hisamitsu won 3-1, taking the sets 22-25, 32-30, 25-20 and 25-19. The second set went to 32-30 and Hisamitsu won it, which is the sort of long set that reveals which side holds up under pressure. Denso did take the opening set and led early, so this is not a mismatch. With no standings feed available, the pick is built on that single result and is rated medium confidence."
+  },
+  {
+   "id": "golf-genesis-1",
+   "selection": "Antoine Rozner",
+   "market": "Tournament winner",
+   "fact_source": "dpwt-leaderboard",
+   "text": "Antoine Rozner to win the Genesis Championship at the halfway stage. Rozner is tied for the lead at ten under par after rounds of 67 and 65, with the second round the joint-best score of the captured top 25. He shares the lead with Casey Jarvis, so the outright price is naturally long. Two rounds remain and a two-shot cushion over the group at seven under is thin, which is why this is a speculative position rather than a confident one. The leaderboard is the only input: no strokes-gained or tee-to-green feed was readable."
+  },
+  {
+   "id": "golf-genesis-2",
+   "selection": "Casey Jarvis",
+   "market": "Tournament winner",
+   "fact_source": "dpwt-leaderboard",
+   "text": "Casey Jarvis to win the Genesis Championship. Jarvis opened with a 65, the lowest first round among the captured leaders, then added 67 to reach ten under and a share of the lead with Antoine Rozner. He is level with the leader rather than chasing, which matters over 36 holes. The field is compressed: six players sit within three shots, so the win probability is spread thinly and the price is long. This is a value position on a co-leader, not a forecast that the tournament is settled."
+  },
+  {
+   "id": "golf-genesis-3",
+   "selection": "Martin Couvra",
+   "market": "Tournament winner",
+   "fact_source": "dpwt-leaderboard",
+   "text": "Martin Couvra to win the Genesis Championship from three shots back. Couvra carded 69 and 66 to reach seven under, part of a four-way tie for third. His second round of 66 was four shots better than his first, which is the direction of travel you want at halfway. Three shots is recoverable over 36 holes at this venue, and the leaders have not separated. The price reflects that he needs both leaders to stall. A long-shot position with a documented statistical basis rather than a hunch."
+  },
+  {
+   "id": "golf-genesis-4",
+   "selection": "Filippo Celli",
+   "market": "Tournament winner",
+   "fact_source": "dpwt-leaderboard",
+   "text": "Filippo Celli to win the Genesis Championship. Celli is seven under after rounds of 69 and 66, tied third with three others and three shots behind the co-leaders. His scoring improved by three shots between rounds, and 66 on the second day is among the best rounds in the captured field. The case is that the leaderboard is bunched: six players are within three shots and none has broken clear. The price is long and the confidence low, which is appropriate for an outright from three back."
+  },
+  {
+   "id": "golf-genesis-5",
+   "selection": "Ryan Fox",
+   "market": "Tournament winner",
+   "fact_source": "dpwt-leaderboard",
+   "text": "Ryan Fox to win the Genesis Championship from seven under. Fox has gone 68 and 67, improving by a shot, and sits in the four-way tie for third, three behind Antoine Rozner and Casey Jarvis. His two rounds are among the most consistent in the captured top 25, with no round worse than 68. Consistency matters over a weekend where the leaders are compressed. The price is long because he still needs to make up three shots, and the write-up is explicit that this is a low-confidence outright rather than a headline pick."
+  },
+  {
+   "id": "f1-us-gp-1",
+   "selection": "Kimi Antonelli",
+   "market": "Race winner",
+   "fact_source": "f1-standings",
+   "text": "Kimi Antonelli to win the United States Grand Prix at Circuit of the Americas. Antonelli leads the drivers' championship on 340 points after Round 17, 102 clear of George Russell on 238 and 111 ahead of Lewis Hamilton. He has also won six of the seven races recorded on the captured calendar page, including Miami and Canada. The championship gap is the clearest strength input available, though only the top eight positions were captured and qualifying form was not read. The price is long because a race has many failure points."
+  },
+  {
+   "id": "f1-us-gp-2",
+   "selection": "George Russell",
+   "market": "Race winner",
+   "fact_source": "f1-standings",
+   "text": "George Russell to win the United States Grand Prix. Russell sits second in the championship on 238 points, 102 behind Kimi Antonelli but nine ahead of Lewis Hamilton. He won the opening round in Australia according to the race winners listed on the official calendar page, so he has already converted a weekend this season. The gap to the leader is the obstacle, and the price reflects it. Only the top eight championship positions were captured, so the field beyond that is not priced and the market is normalised over eight drivers."
+  },
+  {
+   "id": "f1-us-gp-3",
+   "selection": "Lewis Hamilton",
+   "market": "Race winner",
+   "fact_source": "f1-standings",
+   "text": "Lewis Hamilton to win the United States Grand Prix. Hamilton is third on 229 points, nine behind George Russell and 111 behind Kimi Antonelli. He won in Barcelona-Catalunya, the seventh round listed on the official calendar page, which shows he can still beat the Mercedes pair on a given weekend. Circuit of the Americas has suited him historically, although that is not something the captured data proves and is not used as an input here. The championship gap is the reason the price is long."
+  },
+  {
+   "id": "f1-us-gp-4",
+   "selection": "Max Verstappen",
+   "market": "Race winner",
+   "fact_source": "f1-standings",
+   "text": "Max Verstappen to win the United States Grand Prix. Verstappen is fourth in the championship on 221 points after seventeen rounds, 119 behind Kimi Antonelli. The captured calendar page lists race winners for the first seven rounds only and Verstappen does not appear among them, so this selection rests on championship position rather than a recorded 2026 win. That is a genuine weakness in the case. The price is therefore long, and the pick should be treated as a low-confidence position on a driver who is still scoring heavily."
+  },
+  {
+   "id": "f1-us-gp-5",
+   "selection": "Charles Leclerc",
+   "market": "Race winner",
+   "fact_source": "f1-standings",
+   "text": "Charles Leclerc to win the United States Grand Prix. Leclerc is fifth on 215 points, 125 behind the leader Kimi Antonelli but only six behind Max Verstappen. Ferrari's scoring rate puts him in the same bracket as the drivers immediately ahead. As with the other selections here, the market uses the top eight championship positions captured after Round 17 and applies a residual for the rest of the grid. No practice or qualifying times were read, so the pick is a low-confidence outright based on season-long points."
+  }
+ ]
+}

@@ -2,7 +2,42 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
-## Latest: evidence-first 15-sport monitor (23 October 2026)
+## Newest: 15-sport daily brief — `/brief/` (23 October 2026)
+
+**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/brief/> ·
+[all matches](brief/matches.html) · [picks](brief/picks.html) · [39 predictions](brief/predictions.html) ·
+[OLBG reverse-engineering](brief/olbg.html) · [source ledger](brief/sources.html) ·
+[Flagged for review](brief/flagged.html) · [method](brief/methodology.html) · [repo review](brief/review.html).
+
+This desk is built from first-hand reads of 22 official sources and is deterministic from committed captures:
+
+| Item | Value |
+|---|---|
+| Sports | exactly the 15 named in the brief (Gaelic Football and Hurling under Gaelic Sports) |
+| Fixtures published | 113 (87 still upcoming at the 19:45Z cut-off) |
+| Fixtures with our own lines | 50, across 11 sports — money line / match winner, handicaps and totals per sport |
+| In-band selections (−250…+10000) | 39, one per priced fixture |
+| High-confidence picks | 1 inside the price window (Tier A), 6 inside 70% but shorter than −250 (Tier B) |
+| Written predictions | 39, minimum 84 words, each fact traceable to its capture |
+| Official sources | 22, every one linked on the row it supports |
+| Review queue | 10 items, including four sports with fixtures but no price |
+
+**What it will not do.** OLBG's public tips pages render their event tables client-side: three pages returned the literal
+text "No tips found" at 19:29Z, 19:30Z and 19:44Z today, so no complete OLBG event inventory can be read by a
+non-browser client. The desk reproduces OLBG's sport IDs, URL schema and market vocabulary (see
+`/brief/olbg.html`) and takes fixtures from each governing body instead. No OLBG price or tip percentage is used as a
+pricing input. Tennis, Cricket, Gaelic Sports, Greyhounds and Darts carry fixtures but no line today; each reason is on
+the review page. No prediction asserts an injury, because no official injury feed was readable.
+
+```sh
+python scripts/brief_model.py        # captures -> fixtures, inputs, originated markets
+python scripts/brief_predictions.py  # validates the 39 write-ups and assigns tiers
+python scripts/brief_build.py        # writes /brief/
+python scripts/brief_verify.py       # 1,547 structural checks
+python -m unittest tests.test_brief   # 18 tests
+```
+
+## Previous: evidence-first 15-sport monitor (23 October 2026)
 
 **Start here:** <https://buffedlizard55-lab.github.io/OLBG2/monitor/> ·
 [Flagged for Review](monitor/flagged.html) · [source ledger](monitor/sources.html) ·

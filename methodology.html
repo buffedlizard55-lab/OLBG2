@@ -3,76 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Methodology · OLBG2</title>
-<meta name="description" content="Dated OLBG reverse-engineering research: officially sourced fixtures, independently originated lines, confidence-graded picks and open review items.">
-<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
+<title>Method · OLBG2 unified desk</title>
+<meta name="description" content="Consolidated, source-linked OLBG sports research: OLBG-listed events, our own prices, graded picks and written predictions across fifteen sports.">
+<link rel="stylesheet" href="assets/unified.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Cpath d='M8 22l5-12 5 8 3-5 3 9z' fill='%2314b8a6'/%3E%3C/svg%3E">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="wrap bar">
-    <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
-    <details><summary>Research navigation & archives</summary><nav class="nav" aria-label="Main navigation"><a href="ledger/index.html">Latest: ledger desk (15 sports, 23 Oct)</a><a href="olbg/index.html">OLBG daily desk (23 Oct)</a><a href="brief/index.html">Daily brief (15 sports, 23 Oct)</a><a href="monitor/index.html">Evidence-first 15-sport monitor</a><a href="focus/index.html">Focus desk (15 sports, 23 Oct)</a><a href="liveboard/index.html">Live board (15 sports, 23 Oct)</a><a href="daily-picks/index.html">Picks desk (23–25 Oct)</a><a href="daily/index.html">Daily Top-5 desk (23 Oct)</a><a href="daily-audit/index.html">Daily audit (23 Oct)</a><a href="current/index.html">Current capture (22–29 Oct, not live)</a><a href="final/index.html">Consolidated desk (all 17 sports)</a><a href="update/index.html">Update 22–28 Oct (fresh capture)</a><a href="atlas/index.html">Atlas desk (first-hand)</a><a href="canon/index.html">Canon desk (all 17 sports)</a><a href="index.html">Verified desk</a><a href="matches.html">All matches</a><a href="sports/index.html">Sports</a><a href="picks.html">Picks</a><a href="forward/index.html">Forward slate (23 Oct–2 Nov)</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged</a><a href="methodology.html" aria-current="page">Methodology</a><a href="sources.html">Sources</a><a href="archive.html">Archive</a><a href="integration.html">Cross-layer review</a><a href="reconcile/index.html">Reconciliation console</a></nav></details>
+    <a class="brand" href="index.html"><span class="mark"></span>OLBG2 <span class="sub">unified desk</span></a>
+    <nav class="nav" aria-label="Sections"><a href="index.html">Overview</a><a href="olbg-events.html">OLBG list</a><a href="matches.html">Fixtures</a><a href="lines.html">Our prices</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="band.html">Band</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="verification.html">Verification</a><a href="repo-review.html">Repo review</a><a href="flagged.html">Flagged</a><a href="methodology.html" aria-current="page">Method</a><a href="archive.html">Archive</a></nav>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot 2026-10-22 08:15 UTC</strong> · 188 stored rows · 154 originated lines · 14 price-band picks · every row carries its official source link · <a href="flagged.html">35 open review items</a></div></div>
-<main class="wrap">
-<div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk, not the current clock.
-<a href="ledger/index.html">Use the 15-sport ledger</a> for today's OLBG slate, our own prices and the review queue.</div>
-
-<h1>Methodology &amp; models</h1>
-<p class="lede">How the 154 originated lines, the confidence labels and the 14 predictions are produced — and where the
-limits are. This is a research model, not a bookmaker. Rows include source links to the official input page, but a link
-does not by itself prove the page supported every field; the <a href="verification.html">verification ledger</a> records
-what was actually checked.</p>
-
-<h2>Pipeline</h2>
-<ol class="steps">
-  <li><strong>Discover</strong> the sport and event on OLBG. OLBG is used only for discovery and market vocabulary.</li>
-  <li><strong>Verify</strong> the fixture on the governing body or league endpoint: ids, teams, local date, start time, venue.</li>
-  <li><strong>Collect</strong> the model inputs from official standings: wins, losses, goals/points for and against, ranking money.</li>
-  <li><strong>Originate</strong> moneyline, handicap and total prices from the sport-specific distribution below.</li>
-  <li><strong>Grade</strong> the selection under the uniform odds-window gate: high when probability ≥70% and the fair American price sits inside −250…+10000, medium ≥60%, low below 60% (ultra-short chalk is capped at medium).</li>
-  <li><strong>Write</strong> a unique ≥30-word prediction for every published high-confidence or band pick, with sourced facts.</li>
-  <li><strong>Disclose</strong> every blank, stale or unsupported value on <a href="flagged.html">Flagged for Review</a>.</li>
-</ol>
-
-<h2>Confidence and the price band</h2>
-<div class="two-col">
-<div class="panel"><h3>Confidence</h3>
-<p><span class="badge high">high</span> model probability ≥70% with fair American price inside −250…+10000 (uniform odds-window gate). <span class="badge medium">medium</span> ≥60% or out-of-window chalk.
-<span class="badge low">low</span> below 60%. NBA picks are capped at medium because the prior season's records
-do not reflect current rosters.</p></div>
-<div class="panel"><h3>Price band (−250 to +10000)</h3>
-<p>Decimal 1.40 to 101.00. A 70%+ probability is at most 1.43 decimal, so only a 70.0–71.4% selection can satisfy both
-the confidence rule and the −250 floor. The builder enumerates moneyline, handicap ladders and total ladders, then takes
-the highest-probability qualifying selection. The 20 original high picks are 1.02–1.39 and are disclosed as outside the band.</p></div>
-</div>
-
-<h2>Sport models</h2>
-<div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Model and markets</th></tr></thead>
-<tbody><tr><td><strong>Ice Hockey</strong></td><td>Bivariate Poisson goal grid, 8-game shrinkage to the league mean, +5% home attack, 52% of regulation ties to the home side. Markets: moneyline, ±1.5 puck line, 5.5/6.5 total.</td></tr><tr><td><strong>Basketball (EuroLeague / EuroCup)</strong></td><td>Normal margin model from points for/against, 3-game shrinkage, +3.4 home court, σ=10.8; totals σ=13.5. Markets: moneyline, handicap, total.</td></tr><tr><td><strong>Basketball (NBA)</strong></td><td>Logistic model from 2025-26 win records, +0.28 home logit, margin σ=12. Totals deliberately blank because nba.com standings omit points for/against. Confidence capped at medium.</td></tr><tr><td><strong>Rugby Union</strong></td><td>Normal points model from league tables, 3-game shrinkage, +4.2 home advantage, σ=12.6; draw band included; totals σ=14.2. Markets: 1X2, draw-no-bet, handicap, total.</td></tr><tr><td><strong>Handball</strong></td><td>Poisson goal grid from EHF group standings, +6% home attack, no draw split. Markets: 1X2, handicap, total.</td></tr><tr><td><strong>Darts</strong></td><td>Binomial leg model from official PDC prize-money rankings; best-of-11 legs. Markets: match winner, leg handicap, total legs.</td></tr><tr><td><strong>Tennis</strong></td><td>Best-of-three set model from ATP ranking points. Markets: match winner, set handicap, total sets.</td></tr><tr><td><strong>Snooker</strong></td><td>Best-of-seven frame model from WST two-year ranking money. Markets: match winner, frame handicap, total frames.</td></tr><tr><td><strong>Baseball</strong></td><td>Poisson run model from 162-game runs scored/allowed, 4% home factor. Markets: moneyline, run line, total.</td></tr><tr><td><strong>Motor Racing</strong></td><td>Plackett-Luce-style weights from official FIA points (exponent 1.65) with an 8% residual field share; championship model uses a normal CDF over the points gap.</td></tr></tbody></table></div>
-
-<h2>Evidence rules</h2>
-<ul>
-  <li>A fixture is published only with an official URL. If the URL is a competition page rather than a fixture page, the row says so (44 rows in this snapshot).</li>
-  <li>A value that the official page did not return is <code>null</code>, rendered as <code>—</code>, and explained on the flagged page. No value is inferred.</li>
-  <li>No bookmaker price, tipster percentage or secondary outlet enters any equation.</li>
-  <li>Rows dated before 2026-10-22 are labelled <em>past</em>. The snapshot does not pretend to be live.</li>
-  <li><strong>Rows include source links</strong>; the audit trail records whether each was re-read on 2026-10-22.</li>
-</ul>
-
-<h2>Known limits</h2>
-<ul>
-  <li>Sample sizes are small early in the season (3–11 matches per club), so shrinkage is heavy and prices move with one result.</li>
-  <li>No injury, suspension, lineup, weather or travel information is modelled.</li>
-  <li>No home-advantage term is applied to neutral-site or tournament fixtures beyond the venue flag.</li>
-  <li>Futures (F1 title, 2027 rugby league) rest on roster assumptions that are not verifiable in October 2026.</li>
-</ul>
-
+<div class="stripe"><div class="wrap"><strong>Evidence snapshot</strong> · OLBG pages read
+2026-10-23T19:28:51Z → 2026-10-23T20:32:10Z · official pages read 2026-10-23T20:36:17Z · 216 OLBG events
+(127 upcoming) · 93 fixtures · 728 prices ·
+33 predictions · <a href="flagged.html">13 open items</a></div></div>
+<main class="wrap" id="main">
+<h1>Method</h1>
+<p class="lede">How a match gets from an OLBG listing to a price, a confidence label and — sometimes — a written
+prediction. Every step is executed by a script in <code>scripts/</code>, and the pages are rendered from the JSON
+those scripts write.</p>
+<h2>1 · Scope</h2>
+<p>Fifteen sports, exactly as the brief lists them: Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball,
+Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball and Rugby League. Gaelic football
+and hurling sit under Gaelic Sports. Aussie Rules, esports, football, horse racing, American football, boxing and MMA
+are out of scope and are not published here.</p>
+<h2>2 · Where the fixture list comes from</h2>
+<p>The stored OLBG listing pages are re-parsed by <code>scripts/unified_inventory.py</code>. Each tip object in the
+page payload contributes an event name, an OLBG event id, a start timestamp and a market name. Events are
+de-duplicated on sport plus event id, and an event is marked <em>upcoming</em> only when its recorded start is later
+than the capture clock. The parser re-hashes every stored body against the manifest and refuses a file whose hash has
+moved.</p>
+<h2>3 · What proves a fixture</h2>
+<p>Preference order, strongest first: a machine-readable body from the league itself (MLB <code>statsapi</code>, NHL
+<code>api-web</code>, EuroLeague schedule XML), joined on the fixture id and checked on both sides; then the publishing
+session's captured reading of the competition's page, labelled as such. A fixture that neither family supports is not
+published.</p>
+<h2>4 · How a price is originated</h2>
+<p>Each sport has a strength input taken from the competition's own published numbers: league points or win
+percentages, goals or points scored and conceded, and a home term where the competition has one. Those become a win
+probability, a handicap distribution or a total expectation. The fair price is the inverse of the probability; the
+offered price applies a fixed margin. The basis column on <a href="lines.html">Our prices</a> prints the arithmetic
+so a reader can redo it.</p>
+<h2>5 · Confidence</h2>
+<p>High is a chance of 70% or more, medium is 60–70%, low is under 60%. One documented exception: an alternate band
+line on a thin sample is capped at medium even when its probability clears 70%. Those rows are marked
+<code>band_line</code> in the data, and the audit counts them separately (37 rows)
+rather than letting the cap go unrecorded.</p>
+<h2>6 · Which picks get written up</h2>
+<p>Only selections at medium confidence or better receive prose, one per fixture-market. Where a sport has fewer than
+five such selections it gets fewer than five write-ups: the desk does not promote a low-confidence row to meet a
+quota. The current shortfall is on <a href="index.html">the overview</a> and in flag U-05.</p>
+<h2>7 · What the prose may contain</h2>
+<p>At least thirty words; a unique opening three words; the selection named in the text; only figures that appear in
+that fixture's stored facts, inputs or prices; and none of the words the brief bans from output. The last two rules
+are machine-checked by <code>scripts/unified_audit.py</code> (checks A3 and A8), not left to proofreading.</p>
+<h2>8 · Reproducing this site</h2>
+<pre class="code">python3 scripts/unified_inventory.py   # re-parse the stored OLBG bodies
+python3 scripts/unified_audit.py       # re-derive every number and every check
+python3 scripts/unified_build.py       # render these pages</pre>
+<p>The three scripts read only committed files and write deterministic output, so the validation workflow can prove
+the published pages match the published data.</p>
 </main>
-<footer class="footer"><div class="wrap">
-  <p><strong>Dated, partial research snapshot — not a live feed and not betting advice.</strong> Model probabilities are estimates, not guarantees. Rows dated before 2026-10-22 are labelled <em>past</em> and are not presented as upcoming. Unconfirmed values are blank (<code>—</code>) and listed on <a href="flagged.html">Flagged for Review</a>. 18+.</p>
-  <p class="tiny">Built by <code>scripts/build_site.py</code> from checked-in data. Earlier layers are preserved at <a href="verified/index.html">/verified/</a>, <a href="live/index.html">/live/</a>, <a href="survey/index.html">/survey/</a>, <a href="site/index.html">/site/</a> and indexed in the <a href="archive.html">archive</a>.</p>
+<footer class="foot"><div class="wrap">
+  <p><strong>What this desk is.</strong> A dated, source-linked research record of sport listed on OLBG, of our
+  own originated prices, and of confidence-graded selections. It is not a live odds feed and it does not place bets.</p>
+  <p>Every price, probability and confidence label is our own estimate, derived from the official statistics named
+  on the row. Values that could not be confirmed are left blank and listed on
+  <a href="flagged.html">Flagged for review</a>. Capture times and source files are printed on every table.</p>
 </div></footer>
+<script src="assets/unified.js" defer></script>
 </body>
 </html>

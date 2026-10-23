@@ -1,4 +1,44 @@
-# OLBG2 — multi-sport schedule research and line origination
+
+## Read this first: the consolidated desk at the site root
+
+**<https://buffedlizard55-lab.github.io/OLBG2/>**
+
+The repository root is now one desk rather than thirty-eight. It presents, for the fifteen sports in the brief:
+
+| Page | What it holds |
+|---|---|
+| [`index.html`](index.html) | executive summary, headline counts, per-sport coverage, band arithmetic |
+| [`olbg-events.html`](olbg-events.html) | **every event OLBG was listing**, re-parsed from the stored page bodies |
+| [`matches.html`](matches.html) | our 93 fixtures with the evidence that corroborates each one |
+| [`lines.html`](lines.html) | 728 originated prices, with the arithmetic behind each |
+| [`picks.html`](picks.html) · [`band.html`](band.html) | 122 graded picks; the −250…+10000 analysis |
+| [`predictions.html`](predictions.html) | 33 written predictions, 51–88 words each |
+| [`sports/`](sports/index.html) | one page per sport |
+| [`sources.html`](sources.html) · [`verification.html`](verification.html) | source and capture registers; checks A1–A9 |
+| [`flagged.html`](flagged.html) · [`repo-review.html`](repo-review.html) | 13 open items and the repository audit |
+| [`archive.html`](archive.html) | every earlier layer, kept and linked, never summed |
+
+```sh
+python scripts/unified_inventory.py   # re-parse the stored OLBG bodies (sport hub + all-events page)
+python scripts/unified_audit.py       # re-derive every number; write the checks and the flags
+python scripts/unified_build.py       # render 32 pages from data/unified/ and data/cadence/
+```
+
+Three rules the desk will not break:
+
+1. **Nothing is fetched at build time.** The sandbox that authors this repository has no general internet access,
+   so the evidence is the repository's own verbatim captures. The OLBG pages were read on a GitHub-hosted runner
+   at 2026-10-23T20:32Z (`data/ledger/manifest.json`, bodies in `data/ledger/raw/`); the fixture, price and
+   prediction layer was captured at 20:05Z (`data/cadence/`). Every row names its file.
+2. **A value that cannot be confirmed is blank, not guessed.** Blanks are enumerated on the flagged page.
+3. **Confidence is ours.** A high grade means our own probability clears 70%; it is not a market price and not a
+   claim about the result.
+
+**Current state, honestly.** 216 OLBG events were read (127 of them starting after the capture clock) and 93
+fixtures priced. 22 of 122 graded picks reach high confidence; 8 of those are also inside the brief's band, and
+all 8 are alternate lines quoted at the band ceiling because a price of −250 is already 71.43%. Twelve of the
+fifteen sports fall short of five written predictions; the shortfall is published per sport rather than filled
+with prose the evidence cannot support. No selection starting on 23 October reaches high confidence.
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 

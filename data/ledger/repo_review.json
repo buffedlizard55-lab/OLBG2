@@ -23,7 +23,7 @@
    "code": "RR-03",
    "title": "The root dashboard advertises a stale snapshot and points at the weakest desk",
    "detail": "The root page's status stripe still reads 2026-10-22 08:15 UTC and its primary call to action opens `/monitor/`, which states that no high-confidence picks cleared. The most complete desk from the same day, `/signal/`, is not linked from the root navigation at all.",
-   "evidence": "index.html stripe: Snapshot 2026-10-22 08:15 UTC; root navigation references to /signal/: 0; /monitor/ page text: 'No high-confidence picks cleared.'",
+   "evidence": "index.html stripe: not found; root navigation references to /signal/: 0; /monitor/ page text: 'No high-confidence picks cleared.'",
    "severity": "high"
   },
   {

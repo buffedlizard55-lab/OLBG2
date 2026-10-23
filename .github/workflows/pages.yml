@@ -101,6 +101,12 @@ jobs:
       - name: Regenerate the root dashboard & integration layer
         run: python scripts/build_site.py
 
+      - name: Rebuild the consolidated unified desk (root front door)
+        run: |
+          python scripts/unified_inventory.py
+          python scripts/unified_audit.py
+          python scripts/unified_build.py
+
       - name: Rebuild the 15-sport daily brief desk
         run: |
           python scripts/brief_model.py
@@ -141,4 +147,4 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Fail if any generated page or data file is stale
-        run: git diff --exit-code -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets daily data/daily daily-audit data/daily-audit focus data/focus monitor data/monitor liveboard data/liveboard brief data/brief olbg data/olbg ledger data/ledger/olbg.json data/ledger/official.json data/ledger/matches.json data/ledger/lines.json data/ledger/picks.json data/ledger/predictions.json data/ledger/flagged.json data/ledger/sources.json data/ledger/repo_review.json data/ledger/verify.json data/ledger/inherited.json
+        run: git diff --exit-code -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets daily data/daily daily-audit data/daily-audit focus data/focus monitor data/monitor liveboard data/liveboard brief data/brief olbg data/olbg ledger data/ledger/olbg.json data/ledger/official.json data/ledger/matches.json data/ledger/lines.json data/ledger/picks.json data/ledger/predictions.json data/ledger/flagged.json data/ledger/sources.json data/ledger/repo_review.json data/ledger/verify.json data/ledger/inherited.json data/unified olbg-events.html lines.html predictions.html band.html verification.html repo-review.html assets

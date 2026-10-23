@@ -1,0 +1,293 @@
+{
+ "generated_for": "2026-10-23",
+ "note": "Probe run: reachability of OLBG and of one official endpoint per sport.",
+ "requests": [
+  {
+   "key": "olbg_home",
+   "url": "https://www.olbg.com/",
+   "sport": "OLBG",
+   "kind": "html",
+   "note": "OLBG homepage: navigation, sport taxonomy"
+  },
+  {
+   "key": "olbg_tips_index",
+   "url": "https://www.olbg.com/betting-tips",
+   "sport": "OLBG",
+   "kind": "html",
+   "note": "OLBG betting-tips index: sport hub ids"
+  },
+  {
+   "key": "olbg_darts",
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "sport": "Darts",
+   "kind": "html",
+   "note": "OLBG darts hub (id 15 as published by an earlier session)"
+  },
+  {
+   "key": "olbg_golf",
+   "url": "https://www.olbg.com/betting-tips/Golf/6",
+   "sport": "Golf",
+   "kind": "html",
+   "note": "OLBG golf hub (id 6 to be confirmed)"
+  },
+  {
+   "key": "olbg_tennis",
+   "url": "https://www.olbg.com/betting-tips/Tennis/2",
+   "sport": "Tennis",
+   "kind": "html",
+   "note": "OLBG tennis hub (id 2 to be confirmed)"
+  },
+  {
+   "key": "olbg_cricket",
+   "url": "https://www.olbg.com/betting-tips/Cricket/13",
+   "sport": "Cricket",
+   "kind": "html",
+   "note": "OLBG cricket hub (id 13 to be confirmed)"
+  },
+  {
+   "key": "olbg_snooker",
+   "url": "https://www.olbg.com/betting-tips/Snooker/19",
+   "sport": "Snooker",
+   "kind": "html",
+   "note": "OLBG snooker hub (id 19 to be confirmed)"
+  },
+  {
+   "key": "olbg_basketball",
+   "url": "https://www.olbg.com/betting-tips/Basketball/3",
+   "sport": "Basketball",
+   "kind": "html",
+   "note": "OLBG basketball hub (id 3 to be confirmed)"
+  },
+  {
+   "key": "olbg_ice_hockey",
+   "url": "https://www.olbg.com/betting-tips/Ice-Hockey/4",
+   "sport": "Ice Hockey",
+   "kind": "html",
+   "note": "OLBG ice hockey hub (id 4 to be confirmed)"
+  },
+  {
+   "key": "olbg_rugby_union",
+   "url": "https://www.olbg.com/betting-tips/Rugby-Union/5",
+   "sport": "Rugby Union",
+   "kind": "html",
+   "note": "OLBG rugby union hub (id 5 to be confirmed)"
+  },
+  {
+   "key": "olbg_rugby_league",
+   "url": "https://www.olbg.com/betting-tips/Rugby-League/16",
+   "sport": "Rugby League",
+   "kind": "html",
+   "note": "OLBG rugby league hub"
+  },
+  {
+   "key": "olbg_handball",
+   "url": "https://www.olbg.com/betting-tips/Handball/18",
+   "sport": "Handball",
+   "kind": "html",
+   "note": "OLBG handball hub"
+  },
+  {
+   "key": "olbg_volleyball",
+   "url": "https://www.olbg.com/betting-tips/Volleyball/20",
+   "sport": "Volleyball",
+   "kind": "html",
+   "note": "OLBG volleyball hub"
+  },
+  {
+   "key": "olbg_baseball",
+   "url": "https://www.olbg.com/betting-tips/Baseball/21",
+   "sport": "Baseball",
+   "kind": "html",
+   "note": "OLBG baseball hub"
+  },
+  {
+   "key": "olbg_gaelic",
+   "url": "https://www.olbg.com/betting-tips/Gaelic-Sports/22",
+   "sport": "Gaelic Sports",
+   "kind": "html",
+   "note": "OLBG gaelic sports hub"
+  },
+  {
+   "key": "olbg_greyhounds",
+   "url": "https://www.olbg.com/betting-tips/Greyhounds/8",
+   "sport": "Greyhounds",
+   "kind": "html",
+   "note": "OLBG greyhounds hub"
+  },
+  {
+   "key": "olbg_motor_racing",
+   "url": "https://www.olbg.com/betting-tips/Motor-Racing/24",
+   "sport": "Motor Racing",
+   "kind": "html",
+   "note": "OLBG motor racing hub"
+  },
+  {
+   "key": "ieh_schedule",
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "sport": "Ice Hockey",
+   "kind": "json",
+   "note": "NHL official schedule feed for today"
+  },
+  {
+   "key": "ieh_team_summary",
+   "url": "https://api.nhle.com/stats/rest/en/team/summary",
+   "sport": "Ice Hockey",
+   "kind": "json",
+   "note": "NHL official club summary (GP, W, L, OTL, GF, GA)"
+  },
+  {
+   "key": "baseball_schedule",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-29",
+   "sport": "Baseball",
+   "kind": "json",
+   "note": "MLB official schedule and probable pitchers"
+  },
+  {
+   "key": "baseball_standings_al",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "sport": "Baseball",
+   "kind": "json",
+   "note": "MLB American League final standings"
+  },
+  {
+   "key": "baseball_standings_nl",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+   "sport": "Baseball",
+   "kind": "json",
+   "note": "MLB National League final standings"
+  },
+  {
+   "key": "basketball_el_schedule",
+   "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "sport": "Basketball",
+   "kind": "json",
+   "note": "EuroLeague official round 8 schedule"
+  },
+  {
+   "key": "basketball_el_standings",
+   "url": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026&gameNumber=7",
+   "sport": "Basketball",
+   "kind": "json",
+   "note": "EuroLeague official standings after round 7"
+  },
+  {
+   "key": "rugby_union_prem_fixtures",
+   "url": "https://www.premrugby.com/fixtures",
+   "sport": "Rugby Union",
+   "kind": "html",
+   "note": "Premiership Rugby official fixtures"
+  },
+  {
+   "key": "rugby_union_urc",
+   "url": "https://www.unitedrugby.com/match-centre",
+   "sport": "Rugby Union",
+   "kind": "html",
+   "note": "United Rugby Championship official match centre"
+  },
+  {
+   "key": "cricket_icc",
+   "url": "https://www.icc-cricket.com/matches/upcoming",
+   "sport": "Cricket",
+   "kind": "html",
+   "note": "ICC official upcoming matches"
+  },
+  {
+   "key": "cricket_com_au",
+   "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "sport": "Cricket",
+   "kind": "html",
+   "note": "Cricket Australia official upcoming matches"
+  },
+  {
+   "key": "snooker_wst",
+   "url": "https://www.wst.tv/matches",
+   "sport": "Snooker",
+   "kind": "html",
+   "note": "WST official match centre"
+  },
+  {
+   "key": "darts_pdc",
+   "url": "https://www.pdc.tv/tournaments",
+   "sport": "Darts",
+   "kind": "html",
+   "note": "PDC official tournament index"
+  },
+  {
+   "key": "golf_european_tour",
+   "url": "https://www.europeantour.com/dpworld-tour/schedule/",
+   "sport": "Golf",
+   "kind": "html",
+   "note": "DP World Tour official schedule"
+  },
+  {
+   "key": "golf_pga",
+   "url": "https://www.pgatour.com/schedule",
+   "sport": "Golf",
+   "kind": "html",
+   "note": "PGA Tour official schedule"
+  },
+  {
+   "key": "volleyball_cev",
+   "url": "https://www.cev.eu/competitions/",
+   "sport": "Volleyball",
+   "kind": "html",
+   "note": "CEV official competitions"
+  },
+  {
+   "key": "handball_ehf",
+   "url": "https://www.eurohandball.com/en/calendar/",
+   "sport": "Handball",
+   "kind": "html",
+   "note": "EHF official calendar"
+  },
+  {
+   "key": "tennis_atp",
+   "url": "https://www.atptour.com/en/scores/current/",
+   "sport": "Tennis",
+   "kind": "html",
+   "note": "ATP Tour official current scores"
+  },
+  {
+   "key": "tennis_wta",
+   "url": "https://www.wtatennis.com/scores",
+   "sport": "Tennis",
+   "kind": "html",
+   "note": "WTA official scores"
+  },
+  {
+   "key": "motor_f1_calendar",
+   "url": "https://www.formula1.com/en/racing/2026.html",
+   "sport": "Motor Racing",
+   "kind": "html",
+   "note": "Formula 1 official 2026 calendar"
+  },
+  {
+   "key": "motor_f1_standings",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "sport": "Motor Racing",
+   "kind": "html",
+   "note": "Formula 1 official 2026 driver standings"
+  },
+  {
+   "key": "gaelic_gaa",
+   "url": "https://www.gaa.ie/fixtures-results",
+   "sport": "Gaelic Sports",
+   "kind": "html",
+   "note": "GAA official fixtures and results"
+  },
+  {
+   "key": "greyhounds_gbgb",
+   "url": "https://www.gbgb.org.uk/racing/open-races/",
+   "sport": "Greyhounds",
+   "kind": "html",
+   "note": "GBGB official open races"
+  },
+  {
+   "key": "rugby_league_nrl",
+   "url": "https://www.nrl.com/draw/",
+   "sport": "Rugby League",
+   "kind": "html",
+   "note": "NRL official draw"
+  }
+ ]
+}

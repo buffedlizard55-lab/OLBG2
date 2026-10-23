@@ -41,6 +41,10 @@ FIELD_RE = re.compile(
 OBJ_START = re.compile(r'\{id:"([0-9a-f]{40})"')
 
 
+def norm_event(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+
+
 def unquote(v: str):
     v = v.strip()
     if v.startswith('"') and v.endswith('"'):
@@ -153,7 +157,7 @@ def main() -> int:
                 "olbg_win_tips": f.get("win_tips"),
                 "olbg_comments": f.get("comments_count"),
                 "olbg_expired": str(f.get("expired") or ""),
-                "event_url": ("https://www.olbg.com" + f["eventUrl"]) if str(f.get("eventUrl", "")).startswith("/") else (f.get("eventUrl") or ""),
+                "event_url": ("https://www.olbg.com" + f["eventUrl"]) if str(f.get("eventUrl", "")).startswith("/") else (f.get("eventUrl") or (cap.get("final_url") if str(key).startswith("olbg_event") else "")),
                 "capture_key": key,
                 "captured_at": cap.get("fetched_at"),
                 "page_url": cap.get("final_url"),
@@ -162,7 +166,14 @@ def main() -> int:
             rowkey = (row["sport"], row["event_id"] or row["event"], row["market"], row["selection"])
             if rowkey not in tips or (row["captured_at"] or "") > (tips[rowkey]["captured_at"] or ""):
                 tips[rowkey] = row
-    rows = sorted(tips.values(), key=lambda r: (r["start"], r["sport"], r["event"]))
+    # collapse duplicate objects for the same tip; keep whichever copy carries the event link
+    collapsed: dict[tuple, dict] = {}
+    for r in tips.values():
+        k = (r["sport"], norm_event(r["event"]), r["market"], r["selection"])
+        cur = collapsed.get(k)
+        if cur is None or (not cur.get("event_url") and r.get("event_url")):
+            collapsed[k] = r
+    rows = sorted(collapsed.values(), key=lambda r: (r["start"], r["sport"], r["event"]))
     out = {
         "meta": {
             "generated_at": ANCHOR,

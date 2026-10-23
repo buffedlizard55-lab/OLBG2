@@ -1,0 +1,79 @@
+{
+ "generated_at": "2026-10-23T19:52:16Z",
+ "checks": 14,
+ "passed": 14,
+ "failed": 0,
+ "failures": [],
+ "detail": [
+  {
+   "check": "capture bodies match their stored sha256",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "every OLBG tip links its OLBG event page",
+   "ok": true,
+   "detail": "0 without a link"
+  },
+  {
+   "check": "every matched event links an official URL and its capture time",
+   "ok": true,
+   "detail": "0 incomplete"
+  },
+  {
+   "check": "every selection links a source",
+   "ok": true,
+   "detail": "0 without a source"
+  },
+  {
+   "check": "every selection states its basis",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "every preview passes the publication rules",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "internal links resolve (397 checked)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "published selection count matches the data",
+   "ok": true,
+   "detail": "884 vs 884"
+  },
+  {
+   "check": "high-confidence count matches the data",
+   "ok": true,
+   "detail": "155 vs 155"
+  },
+  {
+   "check": "in-band high count matches the data",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "source register matches the manifest",
+   "ok": true,
+   "detail": "181 vs 181"
+  },
+  {
+   "check": "every answered OLBG row keeps its quoted price",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "all fifteen sport pages exist",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "no page is trivially short",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "audit_cutoff": "2026-10-23T21:32:48Z",
+  "timestamp_note": "The audit cutoff is the completion time of this manual review batch. Raw API captures retain their own exact fetch timestamps and hashes.",
+  "olbg_scope_note": "Each result describes only the inspected hub render (chunk 0). It is not a claim that every OLBG event, tournament or market is globally empty.",
+  "olbg_checks": [
+    {"sport": "golf", "label": "Golf", "url": "https://www.olbg.com/betting-tips/Golf/5", "observed_text": "No tips found"},
+    {"sport": "volleyball", "label": "Volleyball", "url": "https://www.olbg.com/betting-tips/Volleyball/21", "observed_text": "No tips found"},
+    {"sport": "rugby-union", "label": "Rugby Union", "url": "https://www.olbg.com/betting-tips/Rugby_Union/9", "observed_text": "No tips found"},
+    {"sport": "cricket", "label": "Cricket", "url": "https://www.olbg.com/betting-tips/Cricket/7", "observed_text": "No tips found"},
+    {"sport": "snooker", "label": "Snooker", "url": "https://www.olbg.com/betting-tips/Snooker/8", "observed_text": "No tips found"},
+    {"sport": "darts", "label": "Darts", "url": "https://www.olbg.com/betting-tips/Darts/15", "observed_text": "No tips found"},
+    {"sport": "baseball", "label": "Baseball", "url": "https://www.olbg.com/betting-tips/Baseball/12", "observed_text": "No tips found"},
+    {"sport": "gaelic-sports", "label": "Gaelic Football", "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25", "observed_text": "No tips found"},
+    {"sport": "gaelic-sports", "label": "Hurling", "url": "https://www.olbg.com/betting-tips/Hurling/26", "observed_text": "No tips found"},
+    {"sport": "greyhounds", "label": "Greyhounds", "url": "https://www.olbg.com/betting-tips/Greyhounds/28", "observed_text": "No tips found"},
+    {"sport": "tennis", "label": "Tennis", "url": "https://www.olbg.com/betting-tips/Tennis/3", "observed_text": "No tips found"},
+    {"sport": "motor-racing", "label": "Motor Racing", "url": "https://www.olbg.com/betting-tips/Motor_Racing/14", "observed_text": "No tips found; no tournament tips found"},
+    {"sport": "handball", "label": "Handball", "url": "https://www.olbg.com/betting-tips/Handball/20", "observed_text": "No tips found"},
+    {"sport": "ice-hockey", "label": "Ice Hockey", "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13", "observed_text": "No tips found"},
+    {"sport": "basketball", "label": "Basketball", "url": "https://www.olbg.com/betting-tips/Basketball/4", "observed_text": "No tips found"},
+    {"sport": "rugby-league", "label": "Rugby League", "url": "https://www.olbg.com/betting-tips/Rugby_League/10", "observed_text": "No tips found; no tournament tips found"}
+  ],
+  "input_reconciliations": [
+    {
+      "id": "NBA-ROAD-COLUMN-18",
+      "subject": "LA Clippers 2025-26 venue split",
+      "result": "The official standings row shows HOME 23-18 and ROAD 19-22. The pricing input remains road_wins=19 and road_losses=22; the home value is not substituted.",
+      "url": "https://www.nba.com/standings?Season=2025-26"
+    }
+  ],
+  "event_reviews": {
+    "nba-0022600008": {
+      "review_scope": "NBA game preview, complete 2025-26 standings table and the clearly parsed Celtics row in the 3:15 PM ET injury report.",
+      "prose": "Bet the Boston Celtics on the moneyline. Boston’s 30–11 home record last season supplies the venue baseline against New York’s 22–19 away mark. The Celtics lost their opener 121–113 in Detroit despite Paul George’s game-high 38 points; the Knicks also lost, 106–100 to Philadelphia. Devin Carter was listed out with illness on the 3:15 PM ET report.",
+      "facts": [
+        {"kind": "team_form", "text": "Boston were 30–11 at home and New York 22–19 on the road in the completed 2025–26 regular season.", "source_url": "https://www.nba.com/standings?Season=2025-26"},
+        {"kind": "recent_history", "text": "Boston lost 121–113 at Detroit after leading by 22; New York lost 106–100 at home to Philadelphia in their openers.", "source_url": "https://www.nba.com/game/nyk-vs-bos-0022600008"},
+        {"kind": "player", "text": "Paul George scored a game-high 38 points in his Boston debut.", "source_url": "https://www.nba.com/game/nyk-vs-bos-0022600008"},
+        {"kind": "availability", "text": "Devin Carter was listed out with illness on the 23 October 3:15 PM ET report.", "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"}
+      ]
+    },
+    "nba-0022600102": {
+      "review_scope": "NBA game preview, complete 2025-26 standings table and the clearly parsed Clippers rows in the 3:15 PM ET injury report; the malformed Lakers row was not interpreted.",
+      "prose": "Bet the Los Angeles Lakers on the moneyline. Los Angeles opened with a 127–105 win over Golden State, shooting 56.8%, while the Clippers beat Sacramento 121–96. Luka Doncic scored 28 points, Walker Kessler made all 12 shots and Darius Garland scored 30. The Lakers’ 28–13 home split opposes the Clippers’ 19–22 away mark. Bradley Beal and Brandon Ingram were listed out at 3:15 PM ET.",
+      "facts": [
+        {"kind": "team_form", "text": "The Lakers were 28–13 at home and the Clippers 19–22 on the road in the completed 2025–26 regular season.", "source_url": "https://www.nba.com/standings?Season=2025-26"},
+        {"kind": "recent_history", "text": "The Lakers beat Golden State 127–105 while shooting 56.8%, and the Clippers beat Sacramento 121–96 in their season openers.", "source_url": "https://www.nba.com/game/lac-vs-lal-0022600102"},
+        {"kind": "player", "text": "Luka Doncic scored 28 points, Walker Kessler made all 12 shots and Darius Garland scored 30 in those openers.", "source_url": "https://www.nba.com/game/lac-vs-lal-0022600102"},
+        {"kind": "availability", "text": "Bradley Beal and Brandon Ingram were listed out for the Clippers on the 23 October 3:15 PM ET report; the malformed Lakers row was not interpreted.", "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"}
+      ]
+    },
+    "nhl-2026020166": {
+      "review_scope": "NHL gamecentre landing chunk 0 and current team-summary inputs; no game-specific availability bulletin appeared in the inspected preview content.",
+      "prose": "Bet the Montréal Canadiens on the two-way moneyline. Montréal brings a 4–3–2 record and 10 points from nine games against Chicago’s 3–6–0 start. Nick Suzuki has 12 season points, Cole Caufield eight, and Caufield has six points over the last five. No game-specific availability bulletin was confirmed, so keep the selection price-sensitive.",
+      "facts": [
+        {"kind": "team_form", "text": "Montréal are 4–3–2 with 10 points in nine games; Chicago are 3–6–0 with six points.", "source_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"},
+        {"kind": "recent_form", "text": "Cole Caufield has six points, including four goals, over the last five games; Patrick Kane has four points for Chicago.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020166/landing"},
+        {"kind": "player", "text": "Suzuki has 12 season points (five goals, seven assists) and Caufield eight (six goals, two assists).", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020166/landing"},
+        {"kind": "availability", "text": "The inspected gamecentre preview did not provide a dated game-specific availability bulletin; no lineup or injury adjustment is made.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020166/landing"}
+      ]
+    },
+    "nhl-2026020169": {
+      "review_scope": "NHL gamecentre landing chunk 0 and current team-summary inputs; no game-specific availability bulletin appeared in the inspected preview content.",
+      "prose": "Bet the New Jersey Devils on the two-way moneyline against Los Angeles. New Jersey is 6–4–0 with 12 points from ten games, while the Kings are 2–4–2. Jack Hughes has six points and four assists over the last five, while Artemi Panarin has six points and four goals. The checked preview did not confirm a game-specific lineup update.",
+      "facts": [
+        {"kind": "team_form", "text": "New Jersey are 6–4–0 with 12 points in ten games; Los Angeles are 2–4–2 with six points in eight.", "source_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"},
+        {"kind": "recent_form", "text": "Jack Hughes has six points and four assists over the last five; Artemi Panarin has six points and four goals.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020169/landing"},
+        {"kind": "player", "text": "Hughes leads New Jersey with four assists over the last five; Panarin leads Los Angeles with four goals in that span.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020169/landing"},
+        {"kind": "availability", "text": "The inspected gamecentre preview did not provide a dated game-specific availability bulletin; no lineup or injury adjustment is made.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020169/landing"}
+      ]
+    },
+    "nhl-2026020175": {
+      "review_scope": "NHL gamecentre landing chunk 0 and current team-summary inputs; no game-specific availability bulletin appeared in the inspected preview content.",
+      "prose": "Bet the Carolina Hurricanes on the two-way moneyline at St. Louis. Carolina owns an 8–2–2 record and 18 points, with 47 goals for and 32 allowed through 12 games. Nikolaj Ehlers has six points across the last five, while Sebastian Aho has four assists in that span. Pyotr Kochetkov adds a 6–0–0 record and 1.98 goals-against average. With no dated team availability report in the inspected preview, late lineup news still matters.",
+      "facts": [
+        {"kind": "team_form", "text": "Carolina are 8–2–2 with 18 points, 47 goals for and 32 against in 12 games; St. Louis are 5–4–1 with 11 points in ten.", "source_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"},
+        {"kind": "recent_form", "text": "Nikolaj Ehlers has six points over the last five; St. Louis forward Dylan Holloway has seven.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020175/landing"},
+        {"kind": "player", "text": "Sebastian Aho has four assists over the last five games.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020175/landing"},
+        {"kind": "goalie", "text": "Pyotr Kochetkov is 6–0–0 with a 1.98 goals-against average and .899 save percentage.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020175/landing"},
+        {"kind": "availability", "text": "The inspected gamecentre preview did not provide a dated game-specific availability bulletin; no lineup or injury adjustment is made.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020175/landing"}
+      ]
+    },
+    "nhl-2026020178": {
+      "review_scope": "NHL gamecentre landing chunk 0 and current team-summary inputs; no game-specific availability bulletin appeared in the inspected preview content.",
+      "prose": "Bet the Detroit Red Wings on the two-way moneyline in Calgary. Detroit’s 4–3–3 record and 11 points edge Calgary’s 3–6–0 start and six points. Alex DeBrincat leads the Red Wings’ last-five scoring with seven points, including four goals; Daniil Tarasov adds a 1.40 goals-against average and .940 save percentage. The official preview did not supply a fresh availability report, so late goalie news still matters.",
+      "facts": [
+        {"kind": "team_form", "text": "Detroit are 4–3–3 with 11 points in ten games; Calgary are 3–6–0 with six points in nine.", "source_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"},
+        {"kind": "recent_form", "text": "Alex DeBrincat has seven points (four goals, three assists) over the last five; Calgary forward Matt Coronato has five.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020178/landing"},
+        {"kind": "player", "text": "Michael Brandsegg-Nygård has four assists over the last five games for Detroit.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020178/landing"},
+        {"kind": "goalie", "text": "Daniil Tarasov has a 1.40 goals-against average and .940 save percentage.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020178/landing"},
+        {"kind": "availability", "text": "The inspected gamecentre preview did not provide a dated game-specific availability bulletin; no lineup or injury adjustment is made.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020178/landing"}
+      ]
+    },
+    "nhl-2026020180": {
+      "review_scope": "NHL gamecentre landing chunk 0, the 25 October score feed and current team-summary inputs; no game-specific availability bulletin appeared in the inspected preview content.",
+      "prose": "Bet the Florida Panthers on the two-way moneyline at Chicago. Florida is 5–4–2 with 12 points through 11 games, twice the total of 3–6–0 Chicago. Brady Tkachuk has ten points over the last five and seven season goals, while Matthew Tkachuk has ten assists in that recent span. Late availability remains a review point because the checked gamecentre content did not include a team bulletin.",
+      "facts": [
+        {"kind": "team_form", "text": "Florida are 5–4–2 with 12 points in 11 games; Chicago are 3–6–0 with six points in nine.", "source_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"},
+        {"kind": "recent_form", "text": "Brady Tkachuk has ten points (seven goals, three assists) and Matthew Tkachuk ten assists over the last five; Patrick Kane has four points for Chicago.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020180/landing"},
+        {"kind": "player", "text": "Brady Tkachuk has 11 season points, composed of seven goals and four assists.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020180/landing"},
+        {"kind": "availability", "text": "The inspected gamecentre preview did not provide a dated game-specific availability bulletin; no lineup or injury adjustment is made.", "source_url": "https://api-web.nhle.com/v1/gamecenter/2026020180/landing"}
+      ]
+    }
+  }
+}

@@ -144,7 +144,7 @@ class MasterDeskTests(unittest.TestCase):
     def test_root_landing_points_at_the_desk(self):
         root = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("master/index.html", root)
-        self.assertIn("Consolidated desk (current)", root)
+        self.assertIn("Consolidated desk", root)
 
 
     def test_every_sport_has_at_least_one_row(self):
@@ -196,12 +196,12 @@ class MasterDeskTests(unittest.TestCase):
             self.assertEqual(p["basis"], "originated", p["id"])
             self.assertNotEqual(p["confidence"], "high", f'{p["id"]} claims a 70% floor it cannot support')
 
-    def test_root_landing_shows_the_current_counts(self):
+    def test_root_landing_links_the_desk_without_merging_the_counts(self):
         root = (ROOT / "index.html").read_text(encoding="utf-8")
-        for href in ("master/top5.html", "master/matches.html", "master/picks.html", "master/flagged.html"):
+        for href in ("master/index.html", "master/top5.html"):
             self.assertIn(href, root)
-        self.assertIn(str(self.summary["matches"]), root)
-        self.assertIn("Archive: the 22 October verified dashboard", root)
+        # the root desk is a different layer; it must say so rather than folding these rows in
+        self.assertIn("separate layer with its own counts", root)
 
     def test_methodology_states_the_five_per_sport_ceiling(self):
         page = (OUT / "methodology.html").read_text(encoding="utf-8")

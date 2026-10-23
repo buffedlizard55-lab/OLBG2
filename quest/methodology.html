@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Quest board (23 Oct 2026)</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><h1>OLBG2 Quest board — 15-sport originated lines</h1>
+<p>Snapshot cut-off <b>2026-10-23T21:30:00Z</b>. Our own fair lines from stored official inputs — not bookmaker prices, not betting advice. 18+.</p></header>
+<nav class="main"><a href="index.html">Summary</a><a href="today.html">Next 24 hours</a><a href="matches.html">All matches</a><a href="markets.html">Originated markets</a><a href="picks.html">Picks</a><a href="top5.html">Top 5 by sport</a><a href="predictions.html">Predictions</a><a href="olbg.html">OLBG map</a><a href="methodology.html" class=on>Methodology</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+<main>
+<h2>Methodology — how every number on this board was produced</h2>
+<h3>1. Scope</h3>
+<p>Exactly the 15 mandated sports, under OLBG's own taxonomy (<a href="olbg.html">OLBG map</a>). Gaelic Football and Hurling
+sit together under Gaelic Sports. Cut-off 2026-10-23T21:30:00Z: only matches starting after that instant (or dated after it) are listed.</p>
+<h3>2. Fixtures and inputs (nothing fetched live by the site)</h3>
+<ul>
+<li><b>Cadence layer (93 fixtures)</b>: first-hand official capture 2026-10-23T20:05Z held in <code>data/cadence/</code> — NHL and NBA feeds, MLB stats API, EuroLeague, Cricket Australia, WST, PDC, ATP, PGA TOUR/DP World Tour, GBGB, LNH, LegaVolley/VBL, Premiership Rugby/URC, NRL (Rugby League World Cup), Formula 1 and GAA county sources. Its prices, picks and prose are carried over unchanged; each price still carries its own basis string naming its inputs.</li>
+<li><b>Brief NHL layer (12 fixtures, Sat 24 Oct)</b>: fixtures, venues and stored team inputs from <code>data/brief/</code> (capture 16:30Z, official NHL schedule + stats API). Prices were re-originated for this board by the engine in §4 so that one documented method covers the whole Saturday slate; the resulting money-line probabilities agree with the brief desk's own within four points on all twelve games.</li>
+<li><b>NHL 25–26 Oct (8 fixtures)</b>: read first-hand from NHL.com tonight; priced only where both clubs have stored inputs (4 games), otherwise listed blank with the reason (flag Q-BLANK).</li>
+</ul>
+<h3>3. Start times</h3>
+<p>Five provenance classes, printed on each row: published UTC/offset (52), venue-local converted with DST-correct rules (18),
+session-window starts for darts (8), viewer-zone clocks converted as America/New_York on published triangulation (9, flag Q-TZ1),
+and date-only with <code>start_utc</code> left blank (26, flag Q-TZ2). Europe's 25 October clock change is applied by the timezone
+database, not by hand.</p>
+<h3>4. The added NHL engine (quest layer)</h3>
+<p>Expected goals are the simple average of a club's scoring rate and its opponent's conceding rate from the stored inputs,
+with a 4% lift for the home club (none at the neutral-site game). A Poisson score matrix settles money line, puck line ∓1.5
+and totals 5.5/6.5; a regulation tie is awarded in proportion to expected goals, counts as a one-goal margin and adds one goal
+to the total. League mean across the 27 stored club lines: 3.1552 goals. Where the favourite prices shorter
+than −250, a band-ceiling alternate is quoted from the totals/puck ladders if one still grades high inside the window — the
+same convention the cadence layer uses.</p>
+<h3>5. Prices, confidence and the window</h3>
+<ul>
+<li>Fair decimal = 1/probability; fair American follows from it. No margin, no bookmaker quote anywhere.</li>
+<li><b>High</b> ≥70%, <b>medium</b> ≥60%, else <b>low</b>; inherited tier caps (small samples) can only lower a label, never raise it. The labels are probability bands, not a backtested strike rate (flag Q-CONF).</li>
+<li>Window test: −250 ≤ fair American ≤ +10000. A fair −250 is 71.43%, so high ∩ window = 70.00–71.43% exactly.</li>
+<li>Picks: match-winner favourite per priced match, plus a band alternate where applicable. Top 5 per sport: matches ranked by display-selection probability (in-window preferred), with the best in-window line shown alongside.</li>
+</ul>
+<h3>6. Written predictions</h3>
+<p>At least 30 words each, unique, selection stated in plain words (“X to win”, “Over 171.5”), built only from facts stored
+with the fixture (form, scoring rates, rankings, venues). Internal process words are banned from the prose by an automated
+check. No piece asserts an injury — no official availability feed beyond the NBA's was readable (flag Q-INJ); NBA rows link
+the league report instead of paraphrasing it.</p>
+<h3>7. Verification (what was actually checked)</h3>
+<ul>
+<li>Every fixture, pick, price and fact row carries an https official link; blank values stay blank with a reason.</li>
+<li><code>scripts/quest_verify.py</code> recomputes every fair price from its probability, re-derives every window flag and confidence ceiling, checks prediction length/uniqueness/banned words, confirms no start precedes the cut-off, and crawls every generated page for broken local links.</li>
+<li>Cross-checks tonight: NHL.com's two published moneylines (flag Q-MKT1), NBA calendar counts (Q-COV1), NHL week strip (Q-COV2), quest-vs-brief money-line agreement within 0.04 on twelve games.</li>
+</ul>
+<h3>8. Repository review (summary)</h3>
+<p>The repository holds 38 overlapping desk directories from earlier sessions, several generations of the same brief, an
+append-only 516&nbsp;KB <code>COORDINATION.md</code> that still preserves merge-conflict markers from concurrent rebases
+(cadence audit RA-01), legacy pages for sports outside the mandate (RA-02), and older prediction files whose prose would
+fail this desk's word rules (RA-03/RA-04). Those layers were left untouched — they belong to other sessions' scopes — and are
+disclosed here and in flag CD-PR3 rather than silently superseded. This desk is one more layer; choosing a single
+authoritative desk remains an integration decision for the repository owner. Line-by-line detail:
+<a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/quest-693dbf40.md">research/quest-693dbf40.md</a>.</p>
+
+<div class="card"><h3 style="margin-top:0">Sports</h3><p class="small"><a href="sports/golf.html">Golf</a> · <a href="sports/volleyball.html">Volleyball</a> · <a href="sports/rugby-union.html">Rugby Union</a> · <a href="sports/cricket.html">Cricket</a> · <a href="sports/snooker.html">Snooker</a> · <a href="sports/darts.html">Darts</a> · <a href="sports/baseball.html">Baseball</a> · <a href="sports/gaelic-sports.html">Gaelic Sports</a> · <a href="sports/greyhounds.html">Greyhounds</a> · <a href="sports/tennis.html">Tennis</a> · <a href="sports/motor-racing.html">Motor Racing</a> · <a href="sports/handball.html">Handball</a> · <a href="sports/ice-hockey.html">Ice Hockey</a> · <a href="sports/basketball.html">Basketball</a> · <a href="sports/rugby-league.html">Rugby League</a></p></div>
+</main>
+<footer>Quest desk (session 693dbf40). Built from the cadence capture 2026-10-23T20:05Z, the brief NHL capture 2026-10-23T16:30Z and an NHL.com read at ~21:30Z the same evening. Every price is an originated fair price; an empty cell means the value could not be confirmed from an official source. Full session record: <a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/research/quest-693dbf40.md">research/quest-693dbf40.md</a>. Other desks: <a href="../cadence/index.html">/cadence/</a> · <a href="../brief/index.html">/brief/</a> · <a href="../index.html">root dashboard</a>.</footer>
+<script>
+document.querySelectorAll('input.flt').forEach(function(inp){
+ var tbl=document.getElementById(inp.dataset.target);if(!tbl)return;
+ inp.addEventListener('input',function(){var q=inp.value.toLowerCase();
+  tbl.querySelectorAll('tbody tr').forEach(function(r){
+   r.style.display=r.textContent.toLowerCase().includes(q)?'':'none';});});});
+</script></body></html>

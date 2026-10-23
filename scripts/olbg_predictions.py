@@ -28,6 +28,13 @@ for line in lines:
     assert re.match(r"^Bet\s", text), f"selection is not explicit: {event['id']}"
     assert line["selection"].lower() in text.lower(), f"selection absent from prose: {event['id']}"
     assert line["probability"] > 0.70 and -250 <= line["fair_american"] <= 10000
+    facts = event.get("facts") or []
+    assert len(facts) >= 4 and event.get("reviewed_at"), f"missing fact review: {event['id']}"
+    official_urls = {s["url"] for s in event["official_sources"] if s["kind"] == "official"}
+    assert all(f["source_url"] in official_urls for f in facts), f"unregistered fact source: {event['id']}"
+    assert {f["kind"] for f in facts} >= {"team_form", "availability"}
+    assert any(f["kind"] in {"recent_form", "recent_history"} for f in facts)
+    assert any(f["kind"] in {"player", "goalie"} for f in facts)
     seen.add(normalized)
     predictions.append({
         "event_id": event["id"], "sport": event["sport"], "match": event["name"],
@@ -35,6 +42,7 @@ for line in lines:
         "fair_american": line["fair_american"], "confidence": "high", "text": text,
         "word_count": len(words), "provenance": event["provenance"],
         "official_sources": event["official_sources"], "olbg_url": event["olbg_url"],
+        "facts": facts, "reviewed_at": event["reviewed_at"], "review_scope": event["review_scope"],
     })
 
 flags = list(source["flags"])
@@ -51,6 +59,7 @@ for line in lines:
         event = by_event[line["event_id"]]
         reason = ("The independent-Poisson market is deliberately low confidence because the early-season scoring sample and distribution assumptions do not pass the detailed high-confidence evidence gate."
                   if not line["primary"] else
+                  event.get("cap_reason") or
                   "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.")
         flags.append({
             "id": "CAP-" + line["id"], "severity": "limitation",

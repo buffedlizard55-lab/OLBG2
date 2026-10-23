@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Executive Summary — Horizon 15-Sport Desk (2026-10-23)</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-top">
+        <a class="brand" href="index.html">HORIZON // 15-Sport Line Origination &amp; Verification Desk</a>
+        <span class="stamp">Snapshot: 2026-10-23T21:40:00Z &middot; Session: arena/9c5af337-olbg2 &middot; Scope: Strictly 15 Sports</span>
+      </div>
+      <nav class="nav-strip" aria-label="Desk navigation">
+      <a href="index.html" class="active">Executive Summary</a>
+      <a href="flagged.html">Flagged for Review</a>
+      <a href="olbg-audit.html">OLBG Platform Audit</a>
+      <a href="repo-audit.html">Repository Audit</a>
+      <a href="sports/golf.html">Golf</a>
+      <a href="sports/volleyball.html">Volleyball</a>
+      <a href="sports/rugby-union.html">Rugby Union</a>
+      <a href="sports/cricket.html">Cricket</a>
+      <a href="sports/snooker.html">Snooker</a>
+      <a href="sports/darts.html">Darts</a>
+      <a href="sports/baseball.html">Baseball</a>
+      <a href="sports/gaelic-sports.html">Gaelic Sports</a>
+      <a href="sports/greyhounds.html">Greyhounds</a>
+      <a href="sports/tennis.html">Tennis</a>
+      <a href="sports/motor-racing.html">Motor Racing</a>
+      <a href="sports/handball.html">Handball</a>
+      <a href="sports/ice-hockey.html">Ice Hockey</a>
+      <a href="sports/basketball.html">Basketball</a>
+      <a href="sports/rugby-league.html">Rugby League</a>
+      <a href="../index.html">Repo Root Hub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Executive Summary — 2026-10-23 15-Sport Origination Desk</h1>
+    <p class="lede">
+      Independent reverse-engineering of <a href="https://www.olbg.com/betting-tips">OLBG.com</a> and line origination across strictly the
+      15 mandated sports on Friday 23 October 2026 (<span class="mono">21:40 UTC</span> capture). Every fixture, standings row, player ranking,
+      semi-final clock, and injury status on this desk is anchored to an official governing-body source. Where an opponent or numeric rating input
+      is not confirmed on the official feed, the line cells are left blank and documented on <a href="flagged.html">Flagged for Review</a>.
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Covered Sports</div>
+        <div class="kpi-val">15 / 15</div>
+        <div class="kpi-sub">Zero out-of-scope sports</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Official Fixtures Captured</div>
+        <div class="kpi-val">112</div>
+        <div class="kpi-sub">89 priced &middot; 23 blank/flagged</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">High-Confidence Picks (&ge;70%)</div>
+        <div class="kpi-val">42</div>
+        <div class="kpi-sub">7 ML in [-250,+10000] &middot; 35 shorter than -250</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">High-Conf w/ In-Band Line</div>
+        <div class="kpi-val">42 / 42</div>
+        <div class="kpi-sub">Every &gt;71.4% pick paired w/ spread/puck/set/total in [-250,+10000]</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Editorial Predictions</div>
+        <div class="kpi-val">54</div>
+        <div class="kpi-sub">82&ndash;128 words &middot; 0 forbidden terms</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Flagged &amp; Repo Audit Items</div>
+        <div class="kpi-val">38 + 19</div>
+        <div class="kpi-sub">Blank cells &amp; repo-wide irregularities logged</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Why high-confidence (&ge;70%) moneylines collide with the -250 ceiling — and how this desk resolves it:</strong>
+      A 70.0% win probability converts to a fair moneyline of <span class="mono">-233</span>, and <span class="mono">-250</span> corresponds to
+      <span class="mono">5/7 &approx; 71.43%</span>. Therefore any match winner with win probability above 71.43% has a fair moneyline shorter than
+      <span class="mono">-250</span>. Across our 42 high-confidence fixtures, 7
+      sit directly inside <span class="mono">[-233, -250]</span> on the moneyline (<span class="mono">70.0%&ndash;71.4%</span>), while the other
+      35 exceed 71.4% on the moneyline and are paired with an originated puck line, run line,
+      point spread, set handicap, leg handicap, or runner-up matchbet priced inside <span class="mono">[-250, +10000]</span>.
+    </div>
+
+    <h2 id="horizon-coverage-matrix">15-Sport Coverage &amp; Daily 5-Pick Target Matrix</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sport</th>
+            <th>Fixtures</th>
+            <th>Priced</th>
+            <th>Blank / Flagged</th>
+            <th>High (&ge;70%)</th>
+            <th>Medium (55&ndash;69%)</th>
+            <th>Low (&lt;55%)</th>
+            <th>Written Picks</th>
+            <th>Daily 5-Pick Status</th>
+            <th>Primary Source</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><a href="sports/golf.html"><strong>Golf</strong></a></td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num"></td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td>2/5 priced (remaining 3 flagged)</td>
+          <td><a href="https://www.pgatour.com/leaderboard">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/volleyball.html"><strong>Volleyball</strong></a></td>
+          <td class="num">10</td>
+          <td class="num">6</td>
+          <td class="num">4</td>
+          <td class="num">2</td>
+          <td class="num">3</td>
+          <td class="num">1</td>
+          <td class="num">5</td>
+          <td>Full 5-pick slate</td>
+          <td><a href="https://www.legavolley.it/calendario/?idCampionato=999">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-union.html"><strong>Rugby Union</strong></a></td>
+          <td class="num">8</td>
+          <td class="num">8</td>
+          <td class="num"></td>
+          <td class="num">6</td>
+          <td class="num">2</td>
+          <td class="num">0</td>
+          <td class="num">5</td>
+          <td>Full 5-pick slate</td>
+          <td><a href="https://www.premrugby.com/fixtures-results">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/cricket.html"><strong>Cricket</strong></a></td>
+          <td class="num">6</td>
+          <td class="num">3</td>
+          <td class="num">3</td>
+          <td class="num">1</td>
+          <td class="num">1</td>
+          <td class="num">1</td>
+          <td class="num">3</td>
+          <td>3/5 priced (remaining 2 flagged)</td>
+          <td><a href="https://www.cricket.com.au/matches">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html"><strong>Snooker</strong></a></td>
+          <td class="num">9</td>
+          <td class="num">3</td>
+          <td class="num">6</td>
+          <td class="num">1</td>
+          <td class="num">2</td>
+          <td class="num">0</td>
+          <td class="num">3</td>
+          <td>3/5 priced (remaining 2 flagged)</td>
+          <td><a href="https://www.wst.tv/matches/">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/darts.html"><strong>Darts</strong></a></td>
+          <td class="num">8</td>
+          <td class="num">6</td>
+          <td class="num">2</td>
+          <td class="num">4</td>
+          <td class="num">1</td>
+          <td class="num">1</td>
+          <td class="num">5</td>
+          <td>Full 5-pick slate</td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/baseball.html"><strong>Baseball</strong></a></td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num"></td>
+          <td class="num">1</td>
+          <td class="num">1</td>
+          <td class="num">0</td>
+          <td class="num">2</td>
+          <td>2/5 priced (remaining 3 flagged)</td>
+          <td><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-23&amp;endDate=2026-11-02">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/gaelic-sports.html"><strong>Gaelic Sports</strong></a></td>
+          <td class="num">5</td>
+          <td class="num">2</td>
+          <td class="num">3</td>
+          <td class="num">0</td>
+          <td class="num">1</td>
+          <td class="num">1</td>
+          <td class="num">2</td>
+          <td>2/5 priced (remaining 3 flagged)</td>
+          <td><a href="https://www.gaa.ie/fixtures-results">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/greyhounds.html"><strong>Greyhounds</strong></a></td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num"></td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td>2/5 priced (remaining 3 flagged)</td>
+          <td><a href="https://www.gbgb.org.uk/open-race-schedule/">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/tennis.html"><strong>Tennis</strong></a></td>
+          <td class="num">11</td>
+          <td class="num">9</td>
+          <td class="num">2</td>
+          <td class="num">1</td>
+          <td class="num">6</td>
+          <td class="num">2</td>
+          <td class="num">5</td>
+          <td>Full 5-pick slate</td>
+          <td><a href="https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/motor-racing.html"><strong>Motor Racing</strong></a></td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num"></td>
+          <td class="num">1</td>
+          <td class="num">0</td>
+          <td class="num">1</td>
+          <td class="num">2</td>
+          <td>2/5 priced (remaining 3 flagged)</td>
+          <td><a href="https://www.formula1.com/en/racing/2026/united-states">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html"><strong>Handball</strong></a></td>
+          <td class="num">6</td>
+          <td class="num">3</td>
+          <td class="num">3</td>
+          <td class="num">3</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">3</td>
+          <td>3/5 priced (remaining 2 flagged)</td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html"><strong>Ice Hockey</strong></a></td>
+          <td class="num">14</td>
+          <td class="num">14</td>
+          <td class="num"></td>
+          <td class="num">8</td>
+          <td class="num">4</td>
+          <td class="num">2</td>
+          <td class="num">5</td>
+          <td>Full 5-pick slate</td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html"><strong>Basketball</strong></a></td>
+          <td class="num">18</td>
+          <td class="num">18</td>
+          <td class="num"></td>
+          <td class="num">7</td>
+          <td class="num">7</td>
+          <td class="num">4</td>
+          <td class="num">5</td>
+          <td>Full 5-pick slate</td>
+          <td><a href="https://www.nba.com/games?date=2026-10-23">Official feed</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html"><strong>Rugby League</strong></a></td>
+          <td class="num">9</td>
+          <td class="num">9</td>
+          <td class="num"></td>
+          <td class="num">7</td>
+          <td class="num">2</td>
+          <td class="num">0</td>
+          <td class="num">5</td>
+          <td>Full 5-pick slate</td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Official feed</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="horizon-high-confidence-board">High-Confidence Board (&ge;70% Win Probability) &amp; Actionable [-250, +10000] Lines</h2>
+    <p class="lede">
+      All 42 fixtures where the originated winner probability reaches at least 70%. Both the fair match-winner moneyline and the
+      actionable market inside <span class="mono">[-250, +10000]</span> are shown with direct official source links.
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sport</th>
+            <th>Competition</th>
+            <th>Fixture</th>
+            <th>Start / Window</th>
+            <th>Winner Pick</th>
+            <th>Win Prob</th>
+            <th>Fair ML</th>
+            <th>ML Band Status</th>
+            <th>Actionable Market in [-250, +10000]</th>
+            <th>Confidence</th>
+            <th>Official Sources</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><a href="sports/rugby-union.html">Rugby Union</a></td>
+          <td>Gallagher PREM</td>
+          <td>Saracens @ Harlequins</td>
+          <td class="mono">Sun 25 Oct, 11:00 viewer-local</td>
+          <td><strong>Saracens</strong></td>
+          <td class="num">94.0%</td>
+          <td class="num">-1567</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Saracens -35 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.premrugby.com/fixtures-results">Schedule</a> &middot; <a href="https://www.premrugby.com/standings">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-union.html">Rugby Union</a></td>
+          <td>United Rugby Championship</td>
+          <td>Ulster @ Vodacom Bulls</td>
+          <td class="mono">Sat 24 Oct, 07:45 (URC local)</td>
+          <td><strong>Vodacom Bulls</strong></td>
+          <td class="num">92.3%</td>
+          <td class="num">-1194</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Vodacom Bulls -23.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Schedule</a> &middot; <a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-union.html">Rugby Union</a></td>
+          <td>United Rugby Championship</td>
+          <td>Glasgow Warriors @ Benetton Rugby</td>
+          <td class="mono">Sat 24 Oct, 10:00 (URC local)</td>
+          <td><strong>Glasgow Warriors</strong></td>
+          <td class="num">90.6%</td>
+          <td class="num">-967</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Glasgow Warriors -21.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Schedule</a> &middot; <a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/motor-racing.html">Motor Racing</a></td>
+          <td>Formula 1</td>
+          <td>Formula 1 Drivers&#x27; Championship 2026</td>
+          <td class="mono">Season ends 6 December 2026</td>
+          <td><strong>Kimi Antonelli</strong></td>
+          <td class="num">90.0%</td>
+          <td class="num">-900</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Runner-Up Championship Matchbet (Russell 238 pts vs Hamilton 229 pts): George Russell</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.formula1.com/en/results/2026/drivers">Schedule</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-union.html">Rugby Union</a></td>
+          <td>United Rugby Championship</td>
+          <td>Scarlets @ DHL Stormers</td>
+          <td class="mono">Sat 24 Oct, 10:00 (URC local)</td>
+          <td><strong>DHL Stormers</strong></td>
+          <td class="num">89.2%</td>
+          <td class="num">-823</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: DHL Stormers -20 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Schedule</a> &middot; <a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html">Basketball</a></td>
+          <td>EuroLeague</td>
+          <td>Armani Olimpia Milan @ Panathinaikos AKTOR Athens</td>
+          <td class="mono">2026-10-27 20:15 local (Telekom Center Athens)</td>
+          <td><strong>Panathinaikos AKTOR Athens</strong></td>
+          <td class="num">88.0%</td>
+          <td class="num">-733</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Point Spread: Panathinaikos AKTOR Athens -19.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026">Schedule</a> &middot; <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html">Rugby League</a></td>
+          <td>Rugby League World Cup 2026</td>
+          <td>France @ England</td>
+          <td class="mono">24 October, 2:35am ET (NRL display)</td>
+          <td><strong>England</strong></td>
+          <td class="num">87.0%</td>
+          <td class="num">-670</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: England -21 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Schedule</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/volleyball.html">Volleyball</a></td>
+          <td>SuperLega</td>
+          <td>Pallavolo Padova @ Cucine Lube Civitanova</td>
+          <td class="mono">Sun 25 Oct, 18:00 local</td>
+          <td><strong>Cucine Lube Civitanova</strong></td>
+          <td class="num">86.0%</td>
+          <td class="num">-614</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Set Handicap: Cucine Lube Civitanova -1.5 (-213)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.legavolley.it/calendario/?idCampionato=999">Schedule</a> &middot; <a href="https://www.legavolley.it/classifica/?IdCampionato=999">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/volleyball.html">Volleyball</a></td>
+          <td>SuperLega</td>
+          <td>Valsa Group Modena @ Gas Sales Bluenergy Piacenza</td>
+          <td class="mono">Sun 25 Oct, 18:00 local</td>
+          <td><strong>Gas Sales Bluenergy Piacenza</strong></td>
+          <td class="num">86.0%</td>
+          <td class="num">-614</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Set Handicap: Gas Sales Bluenergy Piacenza -1.5 (-213)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.legavolley.it/calendario/?idCampionato=999">Schedule</a> &middot; <a href="https://www.legavolley.it/classifica/?IdCampionato=999">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html">Rugby League</a></td>
+          <td>Rugby League World Cup 2026</td>
+          <td>France @ Lebanon</td>
+          <td class="mono">1 November, 1:40am ET (NRL display)</td>
+          <td><strong>Lebanon</strong></td>
+          <td class="num">84.9%</td>
+          <td class="num">-563</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Lebanon -19 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Schedule</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html">Rugby League</a></td>
+          <td>Rugby League World Cup 2026</td>
+          <td>Samoa @ Tonga</td>
+          <td class="mono">1 November, 4:05am ET (NRL display)</td>
+          <td><strong>Samoa</strong></td>
+          <td class="num">79.5%</td>
+          <td class="num">-388</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Samoa -15 (+108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Schedule</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/cricket.html">Cricket</a></td>
+          <td>India v Zimbabwe ODIs 2026 (Women)</td>
+          <td>Zimbabwe Women @ India Women</td>
+          <td class="mono">25 October 2026, 4:30 am viewer-local</td>
+          <td><strong>India Women</strong></td>
+          <td class="num">78.0%</td>
+          <td class="num">-355</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">First-Innings Runs Line: India Women -45.5 (-138)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.cricket.com.au/matches">Schedule</a> &middot; <a href="https://www.cricket.com.au/matches?tab=completed">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>San Jose Sharks @ Boston Bruins</td>
+          <td class="mono">2026-10-24T23:00:00Z (NHL schedule feed)</td>
+          <td><strong>Boston Bruins</strong></td>
+          <td class="num">78.0%</td>
+          <td class="num">-355</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Puck Line: Boston Bruins -1.5 (-113)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>Nashville Predators @ Pittsburgh Penguins</td>
+          <td class="mono">2026-10-24T23:00:00Z (NHL schedule feed)</td>
+          <td><strong>Pittsburgh Penguins</strong></td>
+          <td class="num">78.0%</td>
+          <td class="num">-355</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Puck Line: Pittsburgh Penguins -1.5 (-113)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>Toronto Maple Leafs @ Edmonton Oilers</td>
+          <td class="mono">2026-10-24T23:00:00Z (NHL schedule feed)</td>
+          <td><strong>Edmonton Oilers</strong></td>
+          <td class="num">78.0%</td>
+          <td class="num">-355</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Puck Line: Edmonton Oilers -1.5 (-113)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>Buffalo Sabres @ Washington Capitals</td>
+          <td class="mono">2026-10-24T23:00:00Z (NHL schedule feed)</td>
+          <td><strong>Washington Capitals</strong></td>
+          <td class="num">77.6%</td>
+          <td class="num">-346</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Puck Line: Washington Capitals -1.5 (-111)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html">Handball</a></td>
+          <td>Daikin StarLigue</td>
+          <td>Chambéry @ Nantes</td>
+          <td class="mono">Sat 24 October, 19:00 local</td>
+          <td><strong>Nantes</strong></td>
+          <td class="num">77.1%</td>
+          <td class="num">-337</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Goal Handicap (2-way): Nantes -6.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Schedule</a> &middot; <a href="https://www.lnh.fr/daikin-starligue/classement">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-union.html">Rugby Union</a></td>
+          <td>Gallagher PREM</td>
+          <td>Exeter Chiefs @ Bristol Bears</td>
+          <td class="mono">Sat 24 Oct, 12:30 viewer-local</td>
+          <td><strong>Bristol Bears</strong></td>
+          <td class="num">76.9%</td>
+          <td class="num">-333</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Bristol Bears -11.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.premrugby.com/fixtures-results">Schedule</a> &middot; <a href="https://www.premrugby.com/standings">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>New York Rangers @ Ottawa Senators</td>
+          <td class="mono">2026-10-24T23:00:00Z (NHL schedule feed)</td>
+          <td><strong>Ottawa Senators</strong></td>
+          <td class="num">76.7%</td>
+          <td class="num">-329</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Puck Line: Ottawa Senators -1.5 (-107)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html">Rugby League</a></td>
+          <td>Rugby League World Cup 2026</td>
+          <td>Samoa @ Papua New Guinea</td>
+          <td class="mono">24 October, 12:25am ET (NRL display)</td>
+          <td><strong>Samoa</strong></td>
+          <td class="num">76.5%</td>
+          <td class="num">-326</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Samoa -13 (+108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Schedule</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html">Basketball</a></td>
+          <td>NBA</td>
+          <td>Dallas Mavericks @ Indiana Pacers</td>
+          <td class="mono">7:00 PM ET</td>
+          <td><strong>Indiana Pacers</strong></td>
+          <td class="num">76.0%</td>
+          <td class="num">-317</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Point Spread: Indiana Pacers -8.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nba.com/games?date=2026-10-23">Schedule</a> &middot; <a href="https://www.nba.com/standings">Stats</a> &middot; <a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf">Injuries</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html">Basketball</a></td>
+          <td>NBA</td>
+          <td>LA Clippers @ Los Angeles Lakers</td>
+          <td class="mono">10:00 PM ET</td>
+          <td><strong>Los Angeles Lakers</strong></td>
+          <td class="num">76.0%</td>
+          <td class="num">-317</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Point Spread: Los Angeles Lakers -8 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nba.com/games?date=2026-10-23">Schedule</a> &middot; <a href="https://www.nba.com/standings">Stats</a> &middot; <a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf">Injuries</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html">Rugby League</a></td>
+          <td>Rugby League World Cup 2026</td>
+          <td>Cook Islands @ Australia</td>
+          <td class="mono">31 October, 5:05am ET (NRL display)</td>
+          <td><strong>Australia</strong></td>
+          <td class="num">75.9%</td>
+          <td class="num">-314</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Australia -12.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Schedule</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html">Basketball</a></td>
+          <td>EuroLeague</td>
+          <td>Real Madrid @ Kosner Baskonia Vitoria-Gasteiz</td>
+          <td class="mono">2026-10-27 21:00 local (Buesa Arena)</td>
+          <td><strong>Real Madrid</strong></td>
+          <td class="num">75.7%</td>
+          <td class="num">-312</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Point Spread: Real Madrid -7.5 (+108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026">Schedule</a> &middot; <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html">Handball</a></td>
+          <td>Daikin StarLigue</td>
+          <td>Saran @ Montpellier</td>
+          <td class="mono">Sun 25 October, 17:00 local</td>
+          <td><strong>Montpellier</strong></td>
+          <td class="num">75.5%</td>
+          <td class="num">-309</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Goal Handicap (2-way): Montpellier -6 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Schedule</a> &middot; <a href="https://www.lnh.fr/daikin-starligue/classement">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html">Basketball</a></td>
+          <td>EuroLeague</td>
+          <td>Anadolu Efes Istanbul @ Hapoel IBI Tel Aviv</td>
+          <td class="mono">2026-10-28 19:00 local (Arena Botevgrad)</td>
+          <td><strong>Hapoel IBI Tel Aviv</strong></td>
+          <td class="num">74.9%</td>
+          <td class="num">-299</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Point Spread: Hapoel IBI Tel Aviv -7 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026">Schedule</a> &middot; <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-union.html">Rugby Union</a></td>
+          <td>United Rugby Championship</td>
+          <td>Dragons RFC @ Ospreys</td>
+          <td class="mono">Sat 24 Oct, 14:00 (URC local)</td>
+          <td><strong>Dragons RFC</strong></td>
+          <td class="num">74.7%</td>
+          <td class="num">-295</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Dragons RFC -10.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Schedule</a> &middot; <a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/baseball.html">Baseball</a></td>
+          <td>MLB World Series</td>
+          <td>Tampa Bay Rays @ Milwaukee Brewers</td>
+          <td class="mono">World Series Game 1, 2026-10-24T00:00Z</td>
+          <td><strong>Milwaukee Brewers</strong></td>
+          <td class="num">74.0%</td>
+          <td class="num">-285</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Run Line: Milwaukee Brewers -1.5 (-122)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-23&amp;endDate=2026-11-02">Schedule</a> &middot; <a href="https://statsapi.mlb.com/api/v1/Schedule?sportId=1&amp;teamId=158&amp;startDate=2026-10-22&amp;endDate=2026-11-02&amp;hydrate=team,probablePitcher,linescore,decisions">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>Carolina Hurricanes @ St. Louis Blues</td>
+          <td class="mono">2026-10-24T23:00:00Z (NHL schedule feed)</td>
+          <td><strong>Carolina Hurricanes</strong></td>
+          <td class="num">73.8%</td>
+          <td class="num">-282</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Puck Line: Carolina Hurricanes -1.5 (+105)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html">Rugby League</a></td>
+          <td>Rugby League World Cup 2026</td>
+          <td>Cook Islands @ New Zealand</td>
+          <td class="mono">25 October, 1:05am ET (NRL display)</td>
+          <td><strong>New Zealand</strong></td>
+          <td class="num">73.7%</td>
+          <td class="num">-280</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: New Zealand -11.5 (-108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Schedule</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>Tampa Bay Lightning @ Utah Mammoth</td>
+          <td class="mono">2026-10-25T01:00:00Z (NHL schedule feed)</td>
+          <td><strong>Tampa Bay Lightning</strong></td>
+          <td class="num">72.8%</td>
+          <td class="num">-268</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Puck Line: Tampa Bay Lightning -1.5 (+109)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/rugby-league.html">Rugby League</a></td>
+          <td>Rugby League World Cup 2026</td>
+          <td>Papua New Guinea @ England</td>
+          <td class="mono">30 October, 5:05am ET (NRL display)</td>
+          <td><strong>Papua New Guinea</strong></td>
+          <td class="num">72.1%</td>
+          <td class="num">-258</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Points Handicap: Papua New Guinea -10.5 (+108)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Schedule</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/darts.html">Darts</a></td>
+          <td>Machineseeker European Championship</td>
+          <td>Damon Heta @ Ross Smith</td>
+          <td class="mono">24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)</td>
+          <td><strong>Ross Smith</strong></td>
+          <td class="num">72.0%</td>
+          <td class="num">-257</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Leg Handicap (best of 11): Ross Smith -1.5 (-163)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Schedule</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/darts.html">Darts</a></td>
+          <td>Machineseeker European Championship</td>
+          <td>Michael van Gerwen @ Krzysztof Ratajski</td>
+          <td class="mono">24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)</td>
+          <td><strong>Krzysztof Ratajski</strong></td>
+          <td class="num">72.0%</td>
+          <td class="num">-257</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Leg Handicap (best of 11): Krzysztof Ratajski -1.5 (-163)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Schedule</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/darts.html">Darts</a></td>
+          <td>Machineseeker European Championship</td>
+          <td>Ryan Joyce @ Wessel Nijman</td>
+          <td class="mono">24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)</td>
+          <td><strong>Wessel Nijman</strong></td>
+          <td class="num">71.7%</td>
+          <td class="num">-253</td>
+          <td><span class="badge band-short">shorter than -250</span></td>
+          <td class="mono">Leg Handicap (best of 11): Wessel Nijman -1.5 (-161)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Schedule</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/ice-hockey.html">Ice Hockey</a></td>
+          <td>NHL</td>
+          <td>Montreal Canadiens @ Chicago Blackhawks</td>
+          <td class="mono">2026-10-24T00:00:00Z (NHL schedule feed)</td>
+          <td><strong>Montreal Canadiens</strong></td>
+          <td class="num">71.3%</td>
+          <td class="num">-249</td>
+          <td><span class="badge band-ok">in [-250, +10000]</span></td>
+          <td class="mono">Moneyline / Match Winner: Montreal Canadiens to win (-249)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Schedule</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/tennis.html">Tennis</a></td>
+          <td>ATP 250 Brussels</td>
+          <td>Jan-Lennard Struff @ Arthur Fils</td>
+          <td class="mono">2026-10-24 Not before 18:30 local (Centre Court)</td>
+          <td><strong>Arthur Fils</strong></td>
+          <td class="num">70.4%</td>
+          <td class="num">-238</td>
+          <td><span class="badge band-ok">in [-250, +10000]</span></td>
+          <td class="mono">Moneyline / Match Winner: Arthur Fils to win (-238)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule">Schedule</a> &middot; <a href="https://www.atptour.com/en/rankings/singles?rankRange=0-100">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/snooker.html">Snooker</a></td>
+          <td>BetVictor Northern Ireland Open 2026</td>
+          <td>Sam Craigie @ Kyren Wilson</td>
+          <td class="mono">24 October 2026, 08:00 (WST site clock)</td>
+          <td><strong>Kyren Wilson</strong></td>
+          <td class="num">70.3%</td>
+          <td class="num">-237</td>
+          <td><span class="badge band-ok">in [-250, +10000]</span></td>
+          <td class="mono">Moneyline / Match Winner: Kyren Wilson to win (-237)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.wst.tv/matches/">Schedule</a> &middot; <a href="https://www.wst.tv/rankings/">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html">Basketball</a></td>
+          <td>NBA</td>
+          <td>Minnesota Timberwolves @ Orlando Magic</td>
+          <td class="mono">7:00 PM ET</td>
+          <td><strong>Minnesota Timberwolves</strong></td>
+          <td class="num">70.3%</td>
+          <td class="num">-236</td>
+          <td><span class="badge band-ok">in [-250, +10000]</span></td>
+          <td class="mono">Moneyline / Match Winner: Minnesota Timberwolves to win (-236)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nba.com/games?date=2026-10-23">Schedule</a> &middot; <a href="https://www.nba.com/standings">Stats</a> &middot; <a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf">Injuries</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/basketball.html">Basketball</a></td>
+          <td>NBA</td>
+          <td>Memphis Grizzlies @ Golden State Warriors</td>
+          <td class="mono">10:00 PM ET</td>
+          <td><strong>Memphis Grizzlies</strong></td>
+          <td class="num">70.3%</td>
+          <td class="num">-236</td>
+          <td><span class="badge band-ok">in [-250, +10000]</span></td>
+          <td class="mono">Moneyline / Match Winner: Memphis Grizzlies to win (-236)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.nba.com/games?date=2026-10-23">Schedule</a> &middot; <a href="https://www.nba.com/standings">Stats</a> &middot; <a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf">Injuries</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/handball.html">Handball</a></td>
+          <td>Daikin StarLigue</td>
+          <td>Paris @ Saint-Raphaël</td>
+          <td class="mono">Sun 25 October, 16:00 local</td>
+          <td><strong>Paris</strong></td>
+          <td class="num">70.1%</td>
+          <td class="num">-234</td>
+          <td><span class="badge band-ok">in [-250, +10000]</span></td>
+          <td class="mono">Moneyline / Match Winner: Paris to win (-234)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.lnh.fr/daikin-starligue/calendrier">Schedule</a> &middot; <a href="https://www.lnh.fr/daikin-starligue/classement">Stats</a></td>
+        </tr>
+        <tr>
+          <td><a href="sports/darts.html">Darts</a></td>
+          <td>Machineseeker European Championship</td>
+          <td>Gerwyn Price @ Cameron Menzies</td>
+          <td class="mono">24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)</td>
+          <td><strong>Gerwyn Price</strong></td>
+          <td class="num">70.0%</td>
+          <td class="num">-233</td>
+          <td><span class="badge band-ok">in [-250, +10000]</span></td>
+          <td class="mono">Moneyline / Match Winner: Gerwyn Price to win (-233)</td>
+          <td><span class="badge high">high</span></td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Schedule</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Stats</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="horizon-predictions">Editorial Predictions (54 Match Previews Across All 15 Sports)</h2>
+    <p class="lede">
+      Up to five highest-confidence predictions per covered sport (54 total; sports with fewer than five officially
+      priced fixtures leave the remaining slots unfilled and logged on <a href="flagged.html">Flagged for Review</a>).
+    </p>
+    <article class="pred-card" id="pred-mlb-849805">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/baseball.html">Baseball</a> &middot; Tampa Bay Rays @ Milwaukee Brewers</div>
+        <div class="pred-meta">MLB World Series &middot; World Series Game 1, 2026-10-24T00:00Z &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Milwaukee Brewers host the Tampa Bay Rays in World Series Game 1 at American Family Field riding a five-game winning streak, an 8-2 mark over their last ten, and a 103-59 regular season (832 runs scored, 618 allowed, 55-26 at home, 68-35 in night games). Tampa Bay went 98-64 (736 scored, 650 allowed, 43-38 away, 5-5 in ten, L1). Jacob Misiorowski starts for Milwaukee after posting a 16-5 record, 1.80 ERA, 0.80 WHIP, and 252 strikeouts in 174.2 innings across 30 starts against Nick Martinez (31 starts, 15-6, 3.10 ERA, 1.09 WHIP, 109 K in 180.0 IP), with no injury scratches on either starter. Milwaukee&#x27;s fair moneyline is -285 (74.0%), so we pick Milwaukee Brewers to win and play Milwaukee Brewers -1.5 on the run line at -122.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Milwaukee Brewers (-285, 74.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Run Line: Milwaukee Brewers -1.5 (-122)</span></span>
+        <span><strong>Words:</strong> <span class="mono">128</span></span>
+        <span><strong>Sources:</strong> <a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-23&amp;endDate=2026-11-02">Official fixture source</a> &middot; <a href="https://statsapi.mlb.com/api/v1/Schedule?sportId=1&amp;teamId=158&amp;startDate=2026-10-22&amp;endDate=2026-11-02&amp;hydrate=team,probablePitcher,linescore,decisions">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-mlb-849802">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/baseball.html">Baseball</a> &middot; Tampa Bay Rays @ Milwaukee Brewers</div>
+        <div class="pred-meta">MLB World Series &middot; World Series Game 2, 2026-10-25T00:00Z &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">World Series Game 2 keeps the Tampa Bay Rays (98-64, 736 runs for, 650 against, 43-38 road, L1) at American Family Field against the Milwaukee Brewers (103-59, 832 runs for, 618 against, 55-26 home, W5, 8-2 in ten). Tampa Bay hand the ball to right-hander Drew Rasmussen, who went 16-5 with a 2.67 ERA, 0.91 WHIP, 174 strikeouts, and 32 walks across 172.0 innings in 30 starts, while Milwaukee name Logan Henderson, whose 2026 regular-season MLB pitching split is blank on StatsAPI and flagged rather than estimated; neither club lists an injury replacement for the starters. We select Milwaukee Brewers to win at a fair moneyline of -134 (57.4%, medium confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Milwaukee Brewers (-134, 57.4%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Milwaukee Brewers to win (-134)</span></span>
+        <span><strong>Words:</strong> <span class="mono">111</span></span>
+        <span><strong>Sources:</strong> <a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-23&amp;endDate=2026-11-02">Official fixture source</a> &middot; <a href="https://statsapi.mlb.com/api/v1/Schedule?sportId=1&amp;teamId=158&amp;startDate=2026-10-22&amp;endDate=2026-11-02&amp;hydrate=team,probablePitcher,linescore,decisions">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-el-E2026_76">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/basketball.html">Basketball</a> &middot; Armani Olimpia Milan @ Panathinaikos AKTOR Athens</div>
+        <div class="pred-meta">EuroLeague &middot; 2026-10-27 20:15 local (Telekom Center Athens) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Panathinaikos AKTOR Athens host Armani Olimpia Milan in EuroLeague Round 8 at Telekom Center Athens sitting 6-1 through seven rounds with 613 points scored and 517 allowed (87.6 PF/G vs 73.9 PA/G, a +96 cumulative margin). Milan arrive at 1-6 with 585 points for and 648 against (83.6 PF/G vs 92.6 PA/G, -63 net). EuroLeague&#x27;s Round 8 game centre lists no pre-game injury exclusions at capture time. Panathinaikos price at -733 (88.0%) on the fair moneyline, so we pair the Panathinaikos match winner pick with Panathinaikos -19.5 on the point spread at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Panathinaikos AKTOR Athens (-733, 88.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Point Spread: Panathinaikos AKTOR Athens -19.5 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026">Official fixture source</a> &middot; <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-nba-0022600095">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/basketball.html">Basketball</a> &middot; Dallas Mavericks @ Indiana Pacers</div>
+        <div class="pred-meta">NBA &middot; 7:00 PM ET &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Indiana Pacers open their home clash with the Dallas Mavericks at 1-0 after opening night while Dallas travel in at 0-1. The official 3:15 PM ET NBA Referee Injury Report rules Dallas big men Dereck Lively II (right foot surgery) and Santi Aldama (right knee surgery) plus wing Caleb Martin (right thumb sprain) Out, while Indiana list T.J. McConnell (right hamstring strain) and Johnny Furphy (right ACL repair) Out. With Dallas missing both interior rotation pieces, Indiana&#x27;s fair moneyline reaches -317 (76.0%); we select Indiana Pacers to win and take Indiana Pacers -8.5 at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Indiana Pacers (-317, 76.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Point Spread: Indiana Pacers -8.5 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">95</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.nba.com/games?date=2026-10-23">Official fixture source</a> &middot; <a href="https://www.nba.com/standings">Official stats source</a> &middot; <a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf">Official injury report</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-nba-0022600102">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/basketball.html">Basketball</a> &middot; LA Clippers @ Los Angeles Lakers</div>
+        <div class="pred-meta">NBA &middot; 10:00 PM ET &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Los Angeles Lakers and LA Clippers meet at 10:00 PM ET with both clubs holding 1-0 records from their season openers, but the 3:15 PM ET NBA injury bulletin tilts the rotation sharply: the Clippers list Bradley Beal (right knee injury management), Brandon Ingram (right heel surgery), Jordan Miller (left rotator cuff surgery), and Max Strus (right plantar fascia) all Out, while the Lakers have zero players on the injury report. That four-man wing absence pushes the Lakers&#x27; fair moneyline to -317 (76.0%), so we pick Los Angeles Lakers to win and back Los Angeles Lakers -8 at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Los Angeles Lakers (-317, 76.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Point Spread: Los Angeles Lakers -8 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">99</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.nba.com/games?date=2026-10-23">Official fixture source</a> &middot; <a href="https://www.nba.com/standings">Official stats source</a> &middot; <a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf">Official injury report</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-el-E2026_73">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/basketball.html">Basketball</a> &middot; Real Madrid @ Kosner Baskonia Vitoria-Gasteiz</div>
+        <div class="pred-meta">EuroLeague &middot; 2026-10-27 21:00 local (Buesa Arena) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Real Madrid visit Kosner Baskonia Vitoria-Gasteiz at Buesa Arena for EuroLeague Round 8 carrying a 4-3 record across seven games with 667 points scored and 630 conceded (95.3 PF/G vs 90.0 PA/G, +37 net). Baskonia sit bottom of the table at 1-6 having scored 583 points and surrendered 649 (83.3 PF/G vs 92.7 PA/G, -66 net). No injury exclusions appear on the EuroLeague Round 8 game-centre sheet. Real Madrid&#x27;s fair moneyline is -312 (75.7%), so we select Real Madrid as match winner and play the in-band Real Madrid -7.5 point spread at +108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Real Madrid (-312, 75.7%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Point Spread: Real Madrid -7.5 (+108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026">Official fixture source</a> &middot; <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-el-E2026_77">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/basketball.html">Basketball</a> &middot; Anadolu Efes Istanbul @ Hapoel IBI Tel Aviv</div>
+        <div class="pred-meta">EuroLeague &middot; 2026-10-28 19:00 local (Arena Botevgrad) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Hapoel IBI Tel Aviv host Anadolu Efes Istanbul at Arena Botevgrad in EuroLeague Round 8 holding a 5-2 record after seven games with 630 points scored and 601 allowed (90.0 PF/G vs 85.9 PA/G, +29 differential). Efes enter at 3-4 with 581 points for and 590 against (83.0 PF/G vs 84.3 PA/G, -9 net). EuroLeague&#x27;s official Round 8 match listing records no injury absences at capture time. Hapoel&#x27;s fair moneyline prices at -299 (74.9%), so we back Hapoel IBI Tel Aviv to win and take Hapoel IBI Tel Aviv -7 on the spread at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Hapoel IBI Tel Aviv (-299, 74.9%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Point Spread: Hapoel IBI Tel Aviv -7 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">95</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&amp;season=E2026">Official fixture source</a> &middot; <a href="https://www.euroleaguebasketball.net/en/euroleague/standings/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-cri-40394">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/cricket.html">Cricket</a> &middot; Zimbabwe Women @ India Women</div>
+        <div class="pred-meta">India v Zimbabwe ODIs 2026 (Women) &middot; 25 October 2026, 4:30 am viewer-local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">India Women meet Zimbabwe Women in the 2nd ODI at Vadodara International Cricket Stadium two days after winning the series opener on 23 October by 9 wickets: Zimbabwe Women were bowled out for 197 in 49.5 overs before India Women chased 1-200 in just 27.1 overs at 7.38 runs per over. Cricket Australia&#x27;s match hub lists no injury withdrawals for either squad ahead of Sunday&#x27;s fixture. India Women price at -355 (78.0%) on the fair match-winner line, so our selection is India Women to win paired with the in-band India Women -45.5 first-innings runs handicap at -138.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">India Women (-355, 78.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">First-Innings Runs Line: India Women -45.5 (-138)</span></span>
+        <span><strong>Words:</strong> <span class="mono">97</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.cricket.com.au/matches">Official fixture source</a> &middot; <a href="https://www.cricket.com.au/matches?tab=completed">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-cri-41095">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/cricket.html">Cricket</a> &middot; India @ New Zealand</div>
+        <div class="pred-meta">New Zealand v India T20Is 2026 &middot; 24 October 2026, 3:00 am viewer-local &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">New Zealand and India contest the 2nd T20I at Hagley Oval in Christchurch on 24 October after India took the opening T20I at the same venue on 22 October by 4 wickets, overhauling New Zealand&#x27;s 4-225 (20.0 overs) with 6-230 in 19.4 overs for a combined 455 runs across 39.4 overs. Neither camp has an injury scratch posted on the Cricket Australia match centre. With both batting line-ups clearing 11.2 runs per over on the Hagley Oval surface, we pick India to win at -127 (56.0%, medium confidence) and also note Over 195.5 first-innings runs at -127.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">India (-127, 56.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: India to win (-127)</span></span>
+        <span><strong>Words:</strong> <span class="mono">97</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.cricket.com.au/matches">Official fixture source</a> &middot; <a href="https://www.cricket.com.au/matches?tab=completed">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-cri-40981">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/cricket.html">Cricket</a> &middot; England @ Pakistan</div>
+        <div class="pred-meta">Pakistan ODI Tri-Series 2026 &middot; 25 October 2026, 4:00 am viewer-local &middot; <span class="badge low">low</span></div>
+      </div>
+      <p class="pred-body">Pakistan host England at Gaddafi Stadium in Lahore in the Pakistan ODI Tri-Series on 25 October after England&#x27;s high-scoring 2-wicket defeat to Sri Lanka in Rawalpindi on 22 October, where England piled up 4-429 from 50.0 overs (8.58 runs per over) and Sri Lanka replied with 8-430 in 49.5 overs. Cricket Australia&#x27;s fixture feed reports no injury absences for the Lahore leg, and Pakistan have not yet batted in the captured tri-series results. We select England to win at a fair moneyline of -108 (52.0%, low confidence) with Over 315.5 first-innings runs at -122.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">England (-108, 52.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: England to win (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">94</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.cricket.com.au/matches">Official fixture source</a> &middot; <a href="https://www.cricket.com.au/matches?tab=completed">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-drt-r2-1">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/darts.html">Darts</a> &middot; Damon Heta @ Ross Smith</div>
+        <div class="pred-meta">Machineseeker European Championship &middot; 24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Top seed Ross Smith (£158,000 on the 2026 European Tour Rankings) meets 17th seed Damon Heta in Saturday afternoon&#x27;s Machineseeker European Championship Round Two at Westfalenhalle, Dortmund over the best of 11 legs. Smith defeated Karel Sedlacek 6-4 in Thursday&#x27;s opening round, while Heta survived a deciding-leg 6-5 win over James Wade, and both players came through Day One with no medical withdrawals reported by the PDC. Ross Smith&#x27;s fair moneyline sits at -257 (72.0%), just shorter than -250, so we select Ross Smith as match winner and take Ross Smith -1.5 legs at -163.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Ross Smith (-257, 72.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Leg Handicap (best of 11): Ross Smith -1.5 (-163)</span></span>
+        <span><strong>Words:</strong> <span class="mono">95</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official fixture source</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-drt-r2-7">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/darts.html">Darts</a> &middot; Michael van Gerwen @ Krzysztof Ratajski</div>
+        <div class="pred-meta">Machineseeker European Championship &middot; 24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Third seed Krzysztof Ratajski (£89,500 on the 2026 European Tour Order of Merit) takes on 19th seed and four-time European Champion Michael van Gerwen in Saturday evening&#x27;s Round Two session in Dortmund over the best of 11 legs. Ratajski&#x27;s top-three European Tour qualification campaign puts him 16 seed places ahead of van Gerwen in the official PDC bracket, and neither player is listed with an injury withdrawal on the tournament hub. With Ratajski&#x27;s fair moneyline at -257 (72.0%), we pick Krzysztof Ratajski to win and play the in-band Krzysztof Ratajski -1.5 leg handicap at -163.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Krzysztof Ratajski (-257, 72.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Leg Handicap (best of 11): Krzysztof Ratajski -1.5 (-163)</span></span>
+        <span><strong>Words:</strong> <span class="mono">95</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official fixture source</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-drt-r2-5">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/darts.html">Darts</a> &middot; Ryan Joyce @ Wessel Nijman</div>
+        <div class="pred-meta">Machineseeker European Championship &middot; 24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Second seed Wessel Nijman (£124,000 on the 2026 European Tour Rankings) faces 15th seed Ryan Joyce in Saturday evening&#x27;s best-of-11 Round Two tie at Dortmund&#x27;s Westfalenhalle. Nijman qualified second across the 14-event European Tour season behind only Ross Smith, whereas Joyce enters from the middle of the 32-man seed list with no injury issues reported on the PDC schedule release. Nijman&#x27;s fair moneyline prices at -253 (71.7%), four ticks shorter than -250, so our selection is Wessel Nijman to win paired with Wessel Nijman -1.5 legs at -161.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Wessel Nijman (-253, 71.7%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Leg Handicap (best of 11): Wessel Nijman -1.5 (-161)</span></span>
+        <span><strong>Words:</strong> <span class="mono">88</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official fixture source</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-drt-r2-3">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/darts.html">Darts</a> &middot; Gerwyn Price @ Cameron Menzies</div>
+        <div class="pred-meta">Machineseeker European Championship &middot; 24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Thirteenth seed Gerwyn Price meets 29th seed Cameron Menzies in Saturday afternoon&#x27;s Round Two session in Dortmund over the best of 11 legs. Price dispatched Rob Cross 6-2 in Thursday&#x27;s opening round while Menzies upset fourth seed Niels Zonneveld 6-3 on Day One, and both players are confirmed fit on the PDC order of play. Seated 16 places higher on the European Tour table and fresh off a four-leg Round One victory margin, Gerwyn Price prices right on the high-confidence threshold at -233 (70.0%), giving us an in-band moneyline selection on Gerwyn Price to win.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Gerwyn Price (-233, 70.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Gerwyn Price to win (-233)</span></span>
+        <span><strong>Words:</strong> <span class="mono">95</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official fixture source</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-drt-r2-6">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/darts.html">Darts</a> &middot; Josh Rock @ Jonny Clayton</div>
+        <div class="pred-meta">Machineseeker European Championship &middot; 24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST) &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Seventh seed Jonny Clayton and tenth seed Josh Rock lock horns in Saturday evening&#x27;s Machineseeker European Championship Round Two at Westfalenhalle over the best of 11 legs. Separated by only three places on the 2026 European Tour seeding ladder and with no injury withdrawals affecting the Saturday evening card, this matchup projects as the tightest seeded clash of the night. Our fair line makes Jonny Clayton a -124 favourite (55.3%, medium confidence), and we pair Jonny Clayton to win with Over 9.5 total legs at -117.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Jonny Clayton (-124, 55.3%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Jonny Clayton to win (-124)</span></span>
+        <span><strong>Words:</strong> <span class="mono">86</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official fixture source</a> &middot; <a href="https://www.pdc.tv/order-of-merit-rules">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-gaa-waterford-sfc">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/gaelic-sports.html">Gaelic Sports</a> &middot; The Nire @ Rathgormack</div>
+        <div class="pred-meta">Waterford Senior Football Championship Final &middot; 25 October 2026, 14:30 &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Rathgormack and The Nire contest the Waterford Senior Football Championship Final at Cappoquin Logistics Fraher Field, Dungarvan on Sunday 25 October at 14:30 with Killian O&#x27;Sullivan appointed referee and no injury withdrawals listed on Waterford GAA&#x27;s fixture sheet. In the county semi-finals, The Nire held Abbeyside-Ballinacourty to just five points in a 0-12 to 0-5 victory (+7 margin), whereas Rathgormack edged Gaultier 1-14 to 0-15 (17-15, +2 margin). Driven by The Nire&#x27;s seven-point defensive shutout, we select The Nire to win at -216 (68.3%, medium confidence) and The Nire -2.5 points at -113.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">The Nire (-216, 68.3%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: The Nire to win (-216)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.waterfordgaa.ie/fixtures-results/">Official fixture source</a> &middot; <a href="https://munster.gaa.ie/fixtures-results/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-gaa-cork-psfc">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/gaelic-sports.html">Gaelic Sports</a> &middot; Nemo Rangers @ St Finbarr&#x27;s</div>
+        <div class="pred-meta">Cork Premier Senior Football Championship Final &middot; 25 October 2026, 16:00 &middot; <span class="badge low">low</span></div>
+      </div>
+      <p class="pred-body">St Finbarr&#x27;s and Nemo Rangers meet in the Cork Premier Senior Football Championship Final at SuperValu Páirc Uí Chaoimh on Sunday 25 October at 16:00 under referee David Murnane, with no injury withdrawals posted by Cork GAA. Both clubs won their semi-finals by identical 18-16 margins on 12 October: St Finbarr&#x27;s defeated Clonakilty 2-12 to 0-16 while Nemo Rangers beat Carrigaline 1-15 to 0-16. With St Finbarr&#x27;s finding two semi-final goals to Nemo&#x27;s one, our selection is St Finbarr&#x27;s to win at -109 (52.2%, low confidence) and Over 31.5 total points at -117.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">St Finbarr&#x27;s (-109, 52.2%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: St Finbarr&#x27;s to win (-109)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://gaacork.ie/fixtures-results/">Official fixture source</a> &middot; <a href="https://munster.gaa.ie/fixtures-results/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-golf-genesis">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/golf.html">Golf</a> &middot; Genesis Championship</div>
+        <div class="pred-meta">DP World Tour &middot; Round 3 from 24 October 2026, tee times from 09:06 local &middot; <span class="badge low">low</span></div>
+      </div>
+      <p class="pred-body">Antoine Rozner and Casey Jarvis share the 36-hole lead at the DP World Tour&#x27;s Genesis Championship in Korea on 10-under 132 after Rozner carded rounds of 67 and 65 and Jarvis posted 65 and 67, three strokes clear of Martin Couvra (69-66), Filippo Celli (69-66), Ryan Fox (68-67), and Sanghun Shin (66-69) tied on 7-under 135, with Si Woo Kim and Daihan Lee at 6-under 136 and no withdrawals among the leaders. Rozner&#x27;s second-round 65 gives him the momentum entering Saturday&#x27;s 09:06 tee times, so we select Antoine Rozner outright at +304 (24.8%, low confidence) and Rozner at -104 in the co-leader matchbet against Jarvis.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Antoine Rozner (+304, 24.8%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Outright Winner: Antoine Rozner to win Genesis Championship</span></span>
+        <span><strong>Words:</strong> <span class="mono">105</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard?round=2">Official fixture source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-golf-bermuda">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/golf.html">Golf</a> &middot; Butterfield Bermuda Championship</div>
+        <div class="pred-meta">PGA TOUR &middot; 22-25 October 2026, Round 3 tee times Saturday 24 October &middot; <span class="badge low">low</span></div>
+      </div>
+      <p class="pred-body">Kensei Hirata (65-64) and Chandler Blanchet (62-67) sit tied atop the PGA TOUR&#x27;s Butterfield Bermuda Championship at Port Royal Golf Course on 13-under 129 after 36 holes, one shot ahead of Seamus Power (66-64), Corey Conners (63-67), Eric Cole (65-65), Ben Silverman (63-67), and Danny Walker (63-67) all finished on 12-under 130, with the projected cut at -5 and no injury withdrawals among the top nine. Hirata&#x27;s bogey-free Friday 64 outpaced Blanchet&#x27;s 67 by three strokes, so we select Kensei Hirata to win outright at +649 (13.4%, low confidence) and Hirata at -104 in the 36-hole co-leader matchbet over Blanchet.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Kensei Hirata (+649, 13.4%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Outright Winner: Kensei Hirata to win Butterfield Bermuda Championship</span></span>
+        <span><strong>Words:</strong> <span class="mono">100</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.pgatour.com/leaderboard">Official fixture source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-grey-oaks">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/greyhounds.html">Greyhounds</a> &middot; Premier Greyhound Racing Oaks Final</div>
+        <div class="pred-meta">GBGB Category One &middot; 24 October 2026 (evening card) &middot; <span class="badge low">low</span></div>
+      </div>
+      <p class="pred-body">G D Holland&#x27;s Fahrenheit Jess heads the six-runner Premier Greyhound Racing Oaks Final over 480m at Dunstall Park on Saturday 24 October (£20,000 to the winner) after making all in Semi-Final 2 on 17 October in a fastest-of-the-round 27.87 seconds (-10 going) ahead of Holding Hollie. B Fairbairn&#x27;s Slingshot Poppy won Semi-Final 3 in 27.90s (-10) from Ballydoyle Tina, while K R Hutton&#x27;s Signet Nayla took Semi-Final 1 in 28.35s (-10) from Strike It Skye, and all six bitches are declared fit on the GBGB card. Holding a 0.03s edge over Slingshot Poppy and 0.48s over Signet Nayla, our selection is Fahrenheit Jess to win at +150 (40.0%, low confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Fahrenheit Jess (+150, 40.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Outright Winner: Fahrenheit Jess to win Premier Greyhound Racing Oaks Final</span></span>
+        <span><strong>Words:</strong> <span class="mono">110</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.gbgb.org.uk/open-race-schedule/">Official fixture source</a> &middot; <a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198335">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-grey-scurry">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/greyhounds.html">Greyhounds</a> &middot; Arena Racing Company Scurry Gold Cup Final</div>
+        <div class="pred-meta">GBGB Category One &middot; 24 October 2026 (evening card) &middot; <span class="badge low">low</span></div>
+      </div>
+      <p class="pred-body">Richard Rees&#x27;s Shadow Storm leads the Arena Racing Company Scurry Gold Cup Final over 270m at Dunstall Park on Saturday 24 October (£12,500 winner&#x27;s prize) after clocking 15.66 seconds (-5 going) to win Semi-Final 3 by 1¼ lengths from Newinn Souly on 17 October. M P Brown&#x27;s Roanna Mamba won Semi-Final 2 in 15.73s (-5) ahead of Magical Jason, while kennelmate Avarua Lake took Semi-Final 1 in 15.86s (-5) from Ballinakill Liam, with all six finalists declared on the GBGB open-race sheet. With a 0.07s cushion over Roanna Mamba and 0.20s over Avarua Lake, we select Shadow Storm to win at +162 (38.1%, low confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Shadow Storm (+162, 38.1%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Outright Winner: Shadow Storm to win Arena Racing Company Scurry Gold Cup Final</span></span>
+        <span><strong>Words:</strong> <span class="mono">105</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.gbgb.org.uk/open-race-schedule/">Official fixture source</a> &middot; <a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198332">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-hb-nantes-chambery">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/handball.html">Handball</a> &middot; Chambéry @ Nantes</div>
+        <div class="pred-meta">Daikin StarLigue &middot; Sat 24 October, 19:00 local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">HBC Nantes welcome Chambéry to H Arena in Daikin StarLigue Journée 08 on Saturday 24 October at 19:00 local sitting second in the table at 6-1-0 with 244 goals scored and 203 conceded across seven games (34.9 GF/G vs 29.0 GA/G, +41 goal difference). Chambéry arrive 12th at 2-3-2 with 224 goals for and 231 against (32.0 GF/G vs 33.0 GA/G, -7). LNH lists no injury scratches for the Saturday fixture. Nantes price at -337 (77.1%) on the three-way moneyline, so we pair Nantes to win with the in-band Nantes -6.5 goal handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Nantes (-337, 77.1%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Goal Handicap (2-way): Nantes -6.5 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">95</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.lnh.fr/daikin-starligue/calendrier">Official fixture source</a> &middot; <a href="https://www.lnh.fr/daikin-starligue/classement">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-hb-montpellier-saran">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/handball.html">Handball</a> &middot; Saran @ Montpellier</div>
+        <div class="pred-meta">Daikin StarLigue &middot; Sun 25 October, 17:00 local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Montpellier Handball host Saran on Sunday 25 October at 17:00 local in Daikin StarLigue Journée 08 holding a 4-1-2 record through seven matches with 234 goals scored and 205 conceded (33.4 GF/G vs 29.3 GA/G, +29 differential). Saran enter 11th at 3-4-0 with 202 goals for and 216 against (28.9 GF/G vs 30.9 GA/G, -14), and no player injury exclusions are published on the LNH calendar page. Montpellier&#x27;s fair three-way moneyline sits at -309 (75.5%), so our selection is Montpellier to win alongside Montpellier -6 on the two-way goal handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Montpellier (-309, 75.5%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Goal Handicap (2-way): Montpellier -6 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">92</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.lnh.fr/daikin-starligue/calendrier">Official fixture source</a> &middot; <a href="https://www.lnh.fr/daikin-starligue/classement">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-hb-sr-paris">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/handball.html">Handball</a> &middot; Paris @ Saint-Raphaël</div>
+        <div class="pred-meta">Daikin StarLigue &middot; Sun 25 October, 16:00 local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Paris Saint-Germain Handball travel to Saint-Raphaël on Sunday 25 October at 16:00 local unbeaten at 7-0-0 atop the Daikin StarLigue standings with 239 goals scored and 190 allowed across seven outings (34.1 GF/G vs 27.1 GA/G, +49 goal difference). Saint-Raphaël sit 14th at 2-5-0 with 207 goals for and 225 against (29.6 GF/G vs 32.1 GA/G, -18), with no injury withdrawals listed on the LNH fixture feed. Even accounting for the 8% three-way draw allocation and road venue, Paris price at -234 (70.1%, high confidence), right inside the -250 ceiling, so we select Paris to win.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Paris (-234, 70.1%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Paris to win (-234)</span></span>
+        <span><strong>Words:</strong> <span class="mono">96</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.lnh.fr/daikin-starligue/calendrier">Official fixture source</a> &middot; <a href="https://www.lnh.fr/daikin-starligue/classement">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-nhl-2026020170">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/ice-hockey.html">Ice Hockey</a> &middot; San Jose Sharks @ Boston Bruins</div>
+        <div class="pred-meta">NHL &middot; 2026-10-24T23:00:00Z (NHL schedule feed) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Boston Bruins host the San Jose Sharks at TD Garden holding an 8-2-1 record (17 points, 7-2-1 in their last ten, W1) with 41 goals scored against 29 allowed (3.73 GF/G vs 2.64 GA/G) and a 5-1-0 home mark. San Jose arrive at 1-7-2 (4 points, L4, 0-4-1 on the road) with 20 goals for and 40 against (4.00 GA/G). Neither club lists an injury scratch on the NHL schedule feed for this matchup. Our fair moneyline prices Boston at -355 (78.0%), shorter than the -250 ceiling, so the selection is Boston Bruins to win and Boston Bruins -1.5 on the puck line at -113.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Boston Bruins (-355, 78.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Puck Line: Boston Bruins -1.5 (-113)</span></span>
+        <span><strong>Words:</strong> <span class="mono">105</span></span>
+        <span><strong>Sources:</strong> <a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Official fixture source</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-nhl-2026020172">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/ice-hockey.html">Ice Hockey</a> &middot; Nashville Predators @ Pittsburgh Penguins</div>
+        <div class="pred-meta">NHL &middot; 2026-10-24T23:00:00Z (NHL schedule feed) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Pittsburgh Penguins welcome the Nashville Predators to PPG Paints Arena sitting 6-3-1 through ten games (13 points, W1, 3-1-1 at home) with 33 goals for and 29 against (3.30 GF/G, 2.90 GA/G). Nashville enter on a three-game slide at 2-6-1 (5 points, 1-3-0 on the road) while scoring 21 goals and conceding 33 across nine outings (2.33 GF/G, 3.67 GA/G). No player injury designations are attached to the official NHL game entry. With Pittsburgh&#x27;s fair moneyline at -355 (78.0%), we pair the Pittsburgh Penguins match winner call with the in-band Pittsburgh Penguins -1.5 puck line at -113.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Pittsburgh Penguins (-355, 78.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Puck Line: Pittsburgh Penguins -1.5 (-113)</span></span>
+        <span><strong>Words:</strong> <span class="mono">97</span></span>
+        <span><strong>Sources:</strong> <a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Official fixture source</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-nhl-2026020176">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/ice-hockey.html">Ice Hockey</a> &middot; Toronto Maple Leafs @ Edmonton Oilers</div>
+        <div class="pred-meta">NHL &middot; 2026-10-24T23:00:00Z (NHL schedule feed) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Edmonton Oilers return to Rogers Place on a five-game winning streak at 8-1-1 (17 points, 8-1-1 over ten games, 4-0-1 at home) after piling up 41 goals and yielding 29 (4.10 GF/G vs 2.90 GA/G). Visiting Toronto Maple Leafs stand 4-4-2 (10 points, L1, 1-2-1 on the road) with 31 goals scored and 33 conceded in ten games. The NHL game feed carries no injury exclusions for either roster at capture time. Because Edmonton&#x27;s fair moneyline sits at -355 (78.0%), our selection is Edmonton Oilers to win alongside Edmonton Oilers -1.5 on the puck line at -113.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Edmonton Oilers (-355, 78.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Puck Line: Edmonton Oilers -1.5 (-113)</span></span>
+        <span><strong>Words:</strong> <span class="mono">97</span></span>
+        <span><strong>Sources:</strong> <a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Official fixture source</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-nhl-2026020173">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/ice-hockey.html">Ice Hockey</a> &middot; Buffalo Sabres @ Washington Capitals</div>
+        <div class="pred-meta">NHL &middot; 2026-10-24T23:00:00Z (NHL schedule feed) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Washington Capitals skate onto Capital One Arena ice at 7-2-1 (15 points, W2, 5-1-0 at home) having outscored opponents 34-23 across ten games (3.40 GF/G and a league-low 2.30 GA/G among Saturday hosts). Buffalo Sabres travel south at 4-5-1 (9 points, L1, 2-3-0 away) with 29 goals scored and 32 allowed. No injury scratches are posted on the official NHL schedule endpoint for this contest. Washington&#x27;s fair moneyline is -346 (77.6%), so we back the Washington Capitals as match winner and take the actionable Washington Capitals -1.5 puck line at -111.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Washington Capitals (-346, 77.6%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Puck Line: Washington Capitals -1.5 (-111)</span></span>
+        <span><strong>Words:</strong> <span class="mono">91</span></span>
+        <span><strong>Sources:</strong> <a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Official fixture source</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-nhl-2026020171">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/ice-hockey.html">Ice Hockey</a> &middot; New York Rangers @ Ottawa Senators</div>
+        <div class="pred-meta">NHL &middot; 2026-10-24T23:00:00Z (NHL schedule feed) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Ottawa Senators host the New York Rangers at Canadian Tire Centre with a 6-2-1 record (13 points, W1, 4-1-0 on home ice) and a 32-26 goal differential over nine appearances (3.56 GF/G vs 2.89 GA/G). New York arrive at 3-5-2 (8 points, L2, 2-2-1 on the road) having scored 27 times while surrendering 33 goals in ten games. Neither side has a separate injury report attached on the NHL schedule feed. Ottawa&#x27;s fair moneyline prices at -329 (76.7%), making our selection Ottawa Senators to win paired with the in-band Ottawa Senators -1.5 puck line at -107.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Ottawa Senators (-329, 76.7%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Puck Line: Ottawa Senators -1.5 (-107)</span></span>
+        <span><strong>Words:</strong> <span class="mono">96</span></span>
+        <span><strong>Sources:</strong> <a href="https://api-web.nhle.com/v1/schedule/2026-10-23">Official fixture source</a> &middot; <a href="https://api-web.nhle.com/v1/standings/2026-10-23">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-f1-wdc">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/motor-racing.html">Motor Racing</a> &middot; Formula 1 Drivers&#x27; Championship 2026</div>
+        <div class="pred-meta">Formula 1 &middot; Season ends 6 December 2026 &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">After 17 rounds of the 2026 FIA Formula One World Championship, Kimi Antonelli leads the Drivers&#x27; Standings on 340 points, 102 clear of Mercedes teammate George Russell (238), with Lewis Hamilton on 229, Max Verstappen on 221, Charles Leclerc on 215, Lando Norris on 201, and Oscar Piastri on 138, and all contenders active in Austin with no injury stand-ins. Antonelli&#x27;s 102-point cushion prices him at -900 (90.0%, high confidence) for the title, shorter than -250, so we pair Kimi Antonelli to win the Drivers&#x27; Championship with the in-band Runner-Up Championship Matchbet backing George Russell (238 pts, +0.326s in Austin FP1) over Lewis Hamilton (229 pts) at -127.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Kimi Antonelli (-900, 90.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Runner-Up Championship Matchbet (Russell 238 pts vs Hamilton 229 pts): George Russell</span></span>
+        <span><strong>Words:</strong> <span class="mono">108</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.formula1.com/en/results/2026/drivers">Official fixture source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-f1-usgp">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/motor-racing.html">Motor Racing</a> &middot; United States Grand Prix</div>
+        <div class="pred-meta">Formula 1 &middot; 25 October 2026, 16:00 track time (UTC-5, per F1 schedule) &middot; <span class="badge low">low</span></div>
+      </div>
+      <p class="pred-body">Charles Leclerc topped Friday&#x27;s Practice 1 at the 5.513-km, 56-lap Circuit of The Americas in Austin with a 1:36.052 benchmark, 0.084s ahead of Max Verstappen, 0.245s clear of Lando Norris, 0.326s ahead of George Russell (238 season points), and 0.481s up on championship leader Kimi Antonelli (340 points), with all 20 drivers taking part and no medical substitutions. Weighting FP1 pace at COTA with 17-round season points makes Leclerc the +234 race-winner favourite (30.0%, low confidence) and -113 in an FP1 top-two head-to-head matchbet over Verstappen.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Charles Leclerc (+234, 30.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Outright Winner: Charles Leclerc to win United States Grand Prix</span></span>
+        <span><strong>Words:</strong> <span class="mono">86</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.formula1.com/en/racing/2026/united-states">Official fixture source</a> &middot; <a href="https://www.formula1.com/en/results/2026/drivers">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-rlwc-eng-fra">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-league.html">Rugby League</a> &middot; France @ England</div>
+        <div class="pred-meta">Rugby League World Cup 2026 &middot; 24 October, 2:35am ET (NRL display) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">England meet France in Rugby League World Cup Round 2 at HBF Park, Perth on 24 October looking to rebound from their 12-30 Round 1 defeat to Tonga (-18 differential), while France sit sixth on the ladder after suffering a 4-78 Round 1 thrashing against Samoa (-74 differential). NRL.com&#x27;s official match centre lists both nations without injury-forced team-list withdrawals at capture time. That 56-point gap in Round 1 scoring margin puts England&#x27;s fair moneyline at -670 (87.0%), so we pick England as match winner and take the in-band England -21 points handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">England (-670, 87.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: England -21 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">94</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Official fixture source</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-rlwc-r3-leb-fra">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-league.html">Rugby League</a> &middot; France @ Lebanon</div>
+        <div class="pred-meta">Rugby League World Cup 2026 &middot; 1 November, 1:40am ET (NRL display) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Lebanon and France square off in RLWC Round 3 at CommBank Stadium, Sydney on 1 November. Lebanon opened with an 18-42 loss to Papua New Guinea (-24 margin) before falling 0-36 to Tonga in Round 2, whereas France were overwhelmed 4-78 by Samoa in Round 1 (-74 margin) at the same Sydney venue, and NRL&#x27;s draw hub carries no injury exclusions for this fixture. Because Lebanon&#x27;s fair moneyline prices at -563 (84.9%) off the Round 1 margin baseline, our selection is Lebanon to win paired with the actionable Lebanon -19 points handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Lebanon (-563, 84.9%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Lebanon -19 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">94</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Official fixture source</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-rlwc-r3-ton-sam">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-league.html">Rugby League</a> &middot; Samoa @ Tonga</div>
+        <div class="pred-meta">Rugby League World Cup 2026 &middot; 1 November, 4:05am ET (NRL display) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Tonga and Samoa collide in a heavyweight Pacific RLWC Round 3 showdown at CommBank Stadium, Sydney on 1 November. Tonga beat England 30-12 (+18) in Round 1 and shut out Lebanon 36-0 in Round 2, while Samoa sit second on points differential after dismantling France 78-4 (+74) in Round 1 at CommBank Stadium, with no injury withdrawals posted on the NRL draw feed. Samoa&#x27;s explosive +74 opening margin prices them at -388 (79.5%) on the fair moneyline, so we back Samoa to win and play Samoa -15 on the handicap at +108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Samoa (-388, 79.5%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Samoa -15 (+108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">92</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Official fixture source</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-rlwc-png-samoa">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-league.html">Rugby League</a> &middot; Samoa @ Papua New Guinea</div>
+        <div class="pred-meta">Rugby League World Cup 2026 &middot; 24 October, 12:25am ET (NRL display) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Papua New Guinea host Samoa at Santos National Football Stadium in Port Moresby in RLWC Round 2 on 24 October after beating Lebanon 42-18 (+24 margin, 3rd on the ladder) in Round 1, while second-placed Samoa arrive off a 78-4 (+74 margin) demolition of France in Sydney. Neither team has an injury scratch recorded on the NRL draw page at capture time. Samoa&#x27;s 50-point superior Round 1 margin puts their fair moneyline at -326 (76.5%), so we select Samoa as match winner and take Samoa -13 on the points handicap at +108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Samoa (-326, 76.5%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Samoa -13 (+108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">92</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Official fixture source</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-rlwc-r3-aus-cook">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-league.html">Rugby League</a> &middot; Cook Islands @ Australia</div>
+        <div class="pred-meta">Rugby League World Cup 2026 &middot; 31 October, 5:05am ET (NRL display) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Australia face the Cook Islands in RLWC Round 3 at Queensland Country Bank Stadium in Townsville on 31 October. The Kangaroos edged New Zealand 24-22 (+2 margin, 2nd on the ladder) in their tournament opener, whereas the fourth-placed Cook Islands lost 12-40 (-28 margin) to Fiji in Round 1, and NRL&#x27;s match hub lists no injury withdrawals. With Australia&#x27;s fair moneyline sitting at -314 (75.9%), shorter than the -250 ceiling, we select Australia to win and back the in-band Australia -12.5 points handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Australia (-314, 75.9%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Australia -12.5 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">85</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.nrl.com/draw/?competition=131&amp;round=2&amp;season=2026">Official fixture source</a> &middot; <a href="https://www.nrl.com/draw/?competition=131&amp;round=1&amp;season=2026">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ru-quins-saracens">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-union.html">Rugby Union</a> &middot; Saracens @ Harlequins</div>
+        <div class="pred-meta">Gallagher PREM &middot; Sun 25 Oct, 11:00 viewer-local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Harlequins host London rivals Saracens at Twickenham Stoop on Sunday 25 October in Gallagher PREM Round 4 sitting 10th and last at 0-0-3 with a -68 points difference and 2 league points after three rounds. Saracens arrive third at 2-0-1 with a +21 points difference and 11 league points, and Premiership Rugby&#x27;s fixture feed lists no injury withdrawals at capture time. That nine-point and 89-point-differential gulf puts Saracens at -1567 (94.0%) on the fair moneyline, so we pick Saracens to win and play the in-band Saracens -35 points handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Saracens (-1567, 94.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Saracens -35 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">91</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.premrugby.com/fixtures-results">Official fixture source</a> &middot; <a href="https://www.premrugby.com/standings">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ru-bulls-ulster">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-union.html">Rugby Union</a> &middot; Ulster @ Vodacom Bulls</div>
+        <div class="pred-meta">United Rugby Championship &middot; Sat 24 Oct, 07:45 (URC local) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Vodacom Bulls welcome Ulster to Loftus Versfeld on Saturday 24 October in United Rugby Championship Round 4 sitting second in the 16-club table at 2-0-1 with 126 points scored, 54 conceded (+72 differential), and 11 league points through three rounds. Ulster enter seventh at 0-2-1 with 88 points for, 93 against (-5 differential), and 8 league points, with no injury withdrawals listed on the URC match centre. Backed by a +77 points-difference edge at altitude in Pretoria, the Bulls price at -1194 (92.3%) on the moneyline, so we select Vodacom Bulls to win and take Vodacom Bulls -23.5 on the handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Vodacom Bulls (-1194, 92.3%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Vodacom Bulls -23.5 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">103</span></span>
+        <span><strong>Sources:</strong> <a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Official fixture source</a> &middot; <a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ru-benetton-glasgow">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-union.html">Rugby Union</a> &middot; Glasgow Warriors @ Benetton Rugby</div>
+        <div class="pred-meta">United Rugby Championship &middot; Sat 24 Oct, 10:00 (URC local) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Benetton Rugby host table-topping Glasgow Warriors at Stadio Monigo in Treviso on Saturday 24 October in URC Round 4. Glasgow lead the URC standings at 2-1-0 with 95 points scored, 72 conceded (+23 differential), and 13 league points, whereas 10th-placed Benetton stand 0-1-2 with 64 points for, 68 against (-4 differential), and 5 league points, and no injury scratches appear on the URC Round 4 feed. Glasgow&#x27;s eight-point table lead prices them at -967 (90.6%) on the fair moneyline, so we pick Glasgow Warriors to win and back Glasgow Warriors -21.5 at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Glasgow Warriors (-967, 90.6%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Glasgow Warriors -21.5 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Official fixture source</a> &middot; <a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ru-stormers-scarlets">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-union.html">Rugby Union</a> &middot; Scarlets @ DHL Stormers</div>
+        <div class="pred-meta">United Rugby Championship &middot; Sat 24 Oct, 10:00 (URC local) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">DHL Stormers host Scarlets at DHL Stadium in Cape Town on Saturday 24 October in URC Round 4 holding third place on the official URC table at 2-0-1 with 81 points scored, 54 conceded (+27 differential), and 11 league points after three rounds. Eighth-placed Scarlets travel south at 1-0-2 with 68 points for, 85 against (-17 differential), and 7 league points, with no injury exclusions listed on the URC match centre. With the Stormers&#x27; fair moneyline at -823 (89.2%), our selection is DHL Stormers to win paired with the in-band DHL Stormers -20 points handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">DHL Stormers (-823, 89.2%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: DHL Stormers -20 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">97</span></span>
+        <span><strong>Sources:</strong> <a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Official fixture source</a> &middot; <a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ru-bristol-exeter">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/rugby-union.html">Rugby Union</a> &middot; Exeter Chiefs @ Bristol Bears</div>
+        <div class="pred-meta">Gallagher PREM &middot; Sat 24 Oct, 12:30 viewer-local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Bristol Bears welcome West Country rivals Exeter Chiefs to Ashton Gate on Saturday 24 October in Gallagher PREM Round 4 holding sixth place at 2-0-1 with a +2 points difference and 10 league points after three rounds. Exeter sit eighth at 1-0-2 with a -21 points difference and 8 league points, and no injury withdrawals are posted on the Premiership Rugby match listing. Bristol&#x27;s home advantage and 23-point superior differential put their fair moneyline at -333 (76.9%), so we select Bristol Bears to win and play Bristol Bears -11.5 on the handicap at -108.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Bristol Bears (-333, 76.9%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Points Handicap: Bristol Bears -11.5 (-108)</span></span>
+        <span><strong>Words:</strong> <span class="mono">94</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.premrugby.com/fixtures-results">Official fixture source</a> &middot; <a href="https://www.premrugby.com/standings">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-snk-ni-sf1">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/snooker.html">Snooker</a> &middot; Sam Craigie @ Kyren Wilson</div>
+        <div class="pred-meta">BetVictor Northern Ireland Open 2026 &middot; 24 October 2026, 08:00 (WST site clock) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Kyren Wilson faces Sam Craigie in the first BetVictor Northern Ireland Open semi-final at Waterfront Hall, Belfast on Saturday 24 October over the best of 11 frames. World number nine Wilson holds £716,800 on the Johnstone&#x27;s Paint World Rankings and swept past Anthony McGill 6-1 in Friday&#x27;s quarter-final after edging He Guoqiang 4-3 in Round 3, whereas Craigie (#44 on £132,000) beat Elliot Slessor 6-2 in the quarter-final and Matthew Selt 4-2 in Round 3, with no medical withdrawals reported by WST. We select Kyren Wilson to win at -237 (70.3%, high confidence, inside the -250 ceiling).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Kyren Wilson (-237, 70.3%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Kyren Wilson to win (-237)</span></span>
+        <span><strong>Words:</strong> <span class="mono">97</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.wst.tv/matches/">Official fixture source</a> &middot; <a href="https://www.wst.tv/rankings/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-snk-ic-murphy">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/snooker.html">Snooker</a> &middot; Mitchell Mann @ Shaun Murphy</div>
+        <div class="pred-meta">International Championship 2026 &middot; 30 October 2026, 21:30 (WST match centre) &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Shaun Murphy meets Mitchell Mann in Round 2 of the International Championship in Nanjing over the best of 11 frames. Murphy sits seventh on the Johnstone&#x27;s Paint World Rankings with £897,350 and has compiled a 65% match win rate across 20 appearances in the 2026/27 season with a 21.0-second average shot time, 46 breaks of 50+, and 15 centuries. Mann enters with a 48% win rate across 17 matches, a 31.5-second average shot time, 23 half-centuries, and 4 centuries, and WST lists both players active without injury withdrawals. Our selection is Shaun Murphy to win at -219 (68.6%, medium confidence) and Shaun Murphy -1.5 frames at -136.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Shaun Murphy (-219, 68.6%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Shaun Murphy to win (-219)</span></span>
+        <span><strong>Words:</strong> <span class="mono">107</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official fixture source</a> &middot; <a href="https://www.wst.tv/rankings/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-snk-ic-zhou">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/snooker.html">Snooker</a> &middot; Liam Davies @ Zhou Yuelong</div>
+        <div class="pred-meta">International Championship 2026 &middot; 30 October 2026, 21:30 (WST match centre) &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Zhou Yuelong and Liam Davies clash in Nanjing in the International Championship Round 2 over the best of 11 frames. Although Zhou is world number 17 on £359,100 with a 57% win rate over 23 season matches (26.4s shot time, 51 breaks of 50+, 14 centuries), WST&#x27;s match centre records Davies at a 75% win rate across 28 matches in 2026/27 with a faster 24.9-second average shot time, 57 breaks of 50+, and 11 centuries, and neither player has an injury withdrawal. Driven by Davies&#x27;s superior 28-match season win rate and scoring volume, we pick Liam Davies to win at -152 (60.2%, medium confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Liam Davies (-152, 60.2%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Liam Davies to win (-152)</span></span>
+        <span><strong>Words:</strong> <span class="mono">104</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official fixture source</a> &middot; <a href="https://www.wst.tv/rankings/">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ten-brussels-sf2">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/tennis.html">Tennis</a> &middot; Jan-Lennard Struff @ Arthur Fils</div>
+        <div class="pred-meta">ATP 250 Brussels &middot; 2026-10-24 Not before 18:30 local (Centre Court) &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Top seed Arthur Fils and unseeded German veteran Jan-Lennard Struff meet in Saturday evening&#x27;s second ATP 250 Brussels semifinal on Centre Court (not before 18:30 local). World number 10 Fils carries 3,325 points on the 19 October PIF ATP Singles Rankings and advanced past fifth seed Alex Michelsen 6-4, 7-6(12) in Friday&#x27;s quarter-final, while world number 58 Struff holds 929 ATP points after eliminating Zizou Bergs in straight sets, with neither semifinalist listing an injury withdrawal. That 3,325-to-929 points edge prices Arthur Fils at -238 (70.4%, high confidence), right inside our -250 ceiling, so the selection is Arthur Fils to win.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Arthur Fils (-238, 70.4%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Arthur Fils to win (-238)</span></span>
+        <span><strong>Words:</strong> <span class="mono">101</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule">Official fixture source</a> &middot; <a href="https://www.atptour.com/en/rankings/singles?rankRange=0-100">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ten-brussels-sf1">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/tennis.html">Tennis</a> &middot; Tallon Griekspoor @ Francisco Cerundolo</div>
+        <div class="pred-meta">ATP 250 Brussels &middot; 2026-10-24 Not before 16:00 local (Centre Court) &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Third seed Francisco Cerundolo faces Dutchman Tallon Griekspoor in Saturday&#x27;s opening ATP 250 Brussels semifinal on Centre Court (not before 16:00 local). Cerundolo sits at world number 21 with 2,220 PIF ATP points after winning his quarter-final in straight sets, whereas Griekspoor stands at world number 60 on 885 ATP points, and the ATP Tour daily schedule reports no injury withdrawals for either player. Backed by a 2,220-to-885 ranking-points advantage, our selection is Francisco Cerundolo to win at -187 (65.1%, medium confidence) and Cerundolo -3.5 games at -113.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Francisco Cerundolo (-187, 65.1%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Francisco Cerundolo to win (-187)</span></span>
+        <span><strong>Words:</strong> <span class="mono">88</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule">Official fixture source</a> &middot; <a href="https://www.atptour.com/en/rankings/singles?rankRange=0-100">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ten-almaty-sf1">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/tennis.html">Tennis</a> &middot; Alexander Bublik @ Daniil Medvedev</div>
+        <div class="pred-meta">ATP 250 Almaty &middot; 2026-10-24 Not before 18:00 local (Center Court) &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Daniil Medvedev and Alexander Bublik contest the second semifinal of the ATP 250 Almaty Open on Center Court (not before 18:00 local on Saturday 24 October). World number 5 Medvedev holds 3,660 PIF ATP points and defeated Terence Atmane 6-4, 6-4 in Friday&#x27;s quarter-final, while eighth-seeded home favourite Bublik sits at world number 19 with 2,275 points after outlasting Karen Khachanov 4-6, 7-6(5), 7-6(5) in two tiebreak sets, with no medical withdrawals on the ATP sheet. We select Daniil Medvedev to win at -138 (58.0%, medium confidence) alongside Over 22.5 games at -113.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Daniil Medvedev (-138, 58.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Daniil Medvedev to win (-138)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule">Official fixture source</a> &middot; <a href="https://www.atptour.com/en/rankings/singles?rankRange=0-100">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ten-vienna-q1f">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/tennis.html">Tennis</a> &middot; Lorenzo Sonego @ Adolfo Daniel Vallejo</div>
+        <div class="pred-meta">ATP 500 Vienna Qualifying &middot; 2026-10-24 Followed by on Glaubandich Court &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Adolfo Daniel Vallejo takes on Italian veteran Lorenzo Sonego in Saturday&#x27;s Erste Bank Open Qualifying Round 1 on Glaubandich Court in Vienna. Second qualifying seed Vallejo is ranked world number 54 with 997 points on the 19 October PIF ATP Singles table, while unseeded Sonego enters at world number 89 with 658 ATP points, and the official Vienna order of play lists both players active with no medical withdrawals. Holding a 339-point cushion in the ATP standings, our selection is Adolfo Daniel Vallejo to win at -133 (57.0%, medium confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Adolfo Daniel Vallejo (-133, 57.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Adolfo Daniel Vallejo to win (-133)</span></span>
+        <span><strong>Words:</strong> <span class="mono">90</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.atptour.com/en/scores/current/vienna/337/daily-schedule">Official fixture source</a> &middot; <a href="https://www.atptour.com/en/rankings/singles?rankRange=0-100">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-ten-vienna-q1d">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/tennis.html">Tennis</a> &middot; Adrian Mannarino @ Thiago Agustin Tirante</div>
+        <div class="pred-meta">ATP 500 Vienna Qualifying &middot; 2026-10-24 Not before 18:00 local (Centre Court) &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Top qualifying seed Thiago Agustin Tirante faces French left-hander Adrian Mannarino in Saturday&#x27;s Erste Bank Open Qualifying Round 1 on Centre Court in Vienna (not before 18:00 local). Tirante sits at world number 50 with 1,032 PIF ATP Singles points compared with world number 79 Mannarino on 743 points, and neither player carries an injury tag on the ATP Tour Vienna schedule. Supported by Tirante&#x27;s 289-point ranking lead over best-of-three sets, we pick Thiago Agustin Tirante to win at -125 (55.6%, medium confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Thiago Agustin Tirante (-125, 55.6%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Thiago Agustin Tirante to win (-125)</span></span>
+        <span><strong>Words:</strong> <span class="mono">83</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.atptour.com/en/scores/current/vienna/337/daily-schedule">Official fixture source</a> &middot; <a href="https://www.atptour.com/en/rankings/singles?rankRange=0-100">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-vb-civitanova-padova">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/volleyball.html">Volleyball</a> &middot; Pallavolo Padova @ Cucine Lube Civitanova</div>
+        <div class="pred-meta">SuperLega &middot; Sun 25 Oct, 18:00 local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Cucine Lube Civitanova host Pallavolo Padova on Sunday 25 October at 18:00 local in Italian SuperLega Credem Banca Round 2 after sweeping their Round 1 opener 3-0 in sets (78 points won, 65 conceded, 3 league points). Padova were swept 0-3 in Round 1, scoring just 56 points while conceding 75 (0 league points), and LegaVolley&#x27;s calendar lists no injury absences for Sunday&#x27;s clash. Civitanova&#x27;s fair moneyline is -614 (86.0%), shorter than -250, so we select Cucine Lube Civitanova to win and take the in-band Cucine Lube Civitanova -1.5 set handicap at -213.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Cucine Lube Civitanova (-614, 86.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Set Handicap: Cucine Lube Civitanova -1.5 (-213)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.legavolley.it/calendario/?idCampionato=999">Official fixture source</a> &middot; <a href="https://www.legavolley.it/classifica/?IdCampionato=999">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-vb-piacenza-modena">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/volleyball.html">Volleyball</a> &middot; Valsa Group Modena @ Gas Sales Bluenergy Piacenza</div>
+        <div class="pred-meta">SuperLega &middot; Sun 25 Oct, 18:00 local &middot; <span class="badge high">high</span></div>
+      </div>
+      <p class="pred-body">Gas Sales Bluenergy Piacenza welcome Valsa Group Modena on Sunday 25 October at 18:00 local in SuperLega Round 2 sitting second on the table after a 3-0 Round 1 sweep (75 points won, 56 conceded, 3 league points). Modena lost their opener 0-3 (61 points won, 75 conceded, 0 points), and LegaVolley publishes no injury scratches for either squad. With Piacenza&#x27;s fair moneyline at -614 (86.0%), our selection is Gas Sales Bluenergy Piacenza to win paired with the in-band Gas Sales Bluenergy Piacenza -1.5 set handicap at -213.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Gas Sales Bluenergy Piacenza (-614, 86.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Set Handicap: Gas Sales Bluenergy Piacenza -1.5 (-213)</span></span>
+        <span><strong>Words:</strong> <span class="mono">88</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.legavolley.it/calendario/?idCampionato=999">Official fixture source</a> &middot; <a href="https://www.legavolley.it/classifica/?IdCampionato=999">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-vb-monza-verona">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/volleyball.html">Volleyball</a> &middot; Rana Verona @ Vero Volley Monza</div>
+        <div class="pred-meta">SuperLega &middot; Sun 25 Oct, 18:00 local &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Vero Volley Monza host Rana Verona on Sunday 25 October at 18:00 local in SuperLega Round 2 after taking a set and scoring 91 points against 94 conceded in their 1-3 Round 1 loss to Tinet Prata di Pordenone. Verona were swept 0-3 in their opener (65 points won, 78 conceded), and no player injury exclusions are listed on LegaVolley&#x27;s schedule page. Monza&#x27;s stronger Round 1 point ratio (49.2% vs 45.5%) and home court price them at -213 (68.0%, medium confidence), giving us an in-band moneyline selection on Vero Volley Monza to win.</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Vero Volley Monza (-213, 68.0%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Vero Volley Monza to win (-213)</span></span>
+        <span><strong>Words:</strong> <span class="mono">93</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.legavolley.it/calendario/?idCampionato=999">Official fixture source</a> &middot; <a href="https://www.legavolley.it/classifica/?IdCampionato=999">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-vb-milano-cuneo">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/volleyball.html">Volleyball</a> &middot; Acqua Sant&#x27;Anna Cuneo @ Allianz Milano</div>
+        <div class="pred-meta">SuperLega &middot; Sun 25 Oct, 19:00 local &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Allianz Milano host Acqua Sant&#x27;Anna Cuneo on Sunday 25 October at 19:00 local in SuperLega Round 2 after suffering the heaviest defeat of Round 1, a 0-3 sweep against Cisterna Volley in which Milano scored 56 points and conceded 79 (0 points). Cuneo pushed reigning powerhouse Perugia to five sets in Round 1 (2-3, 95 points won vs 114 conceded, 1 league point), with no injury scratches reported by LegaVolley. We select Acqua Sant&#x27;Anna Cuneo to win at -189 (65.4%, medium confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Acqua Sant&#x27;Anna Cuneo (-189, 65.4%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Acqua Sant&#x27;Anna Cuneo to win (-189)</span></span>
+        <span><strong>Words:</strong> <span class="mono">82</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.legavolley.it/calendario/?idCampionato=999">Official fixture source</a> &middot; <a href="https://www.legavolley.it/classifica/?IdCampionato=999">Official stats source</a></span>
+      </div>
+    </article>
+    <article class="pred-card" id="pred-vb-perugia-prata">
+      <div class="pred-head">
+        <div class="pred-title"><a href="sports/volleyball.html">Volleyball</a> &middot; Tinet Prata di Pordenone @ Sir Susa Scai Perugia</div>
+        <div class="pred-meta">SuperLega &middot; Sun 25 Oct, 18:00 local &middot; <span class="badge medium">medium</span></div>
+      </div>
+      <p class="pred-body">Sir Susa Scai Perugia host Tinet Prata di Pordenone on Sunday 25 October at 18:00 local in SuperLega Round 2 after prevailing 3-2 in Round 1 over Cuneo while scoring 114 total points and conceding 95 (2 league points). Newly promoted Prata di Pordenone beat Monza 3-1 in their opener (94 points won, 91 conceded, 3 league points), and neither side carries an injury exclusion on LegaVolley&#x27;s fixture hub. Perugia&#x27;s superior 54.5% point share and PalaBarton home edge make our selection Sir Susa Scai Perugia to win at -137 (57.8%, medium confidence).</p>
+      <div class="pred-foot">
+        <span><strong>Match Winner:</strong> <span class="mono">Sir Susa Scai Perugia (-137, 57.8%)</span></span>
+        <span><strong>Actionable Market [-250..+10000]:</strong> <span class="mono">Moneyline / Match Winner: Sir Susa Scai Perugia to win (-137)</span></span>
+        <span><strong>Words:</strong> <span class="mono">92</span></span>
+        <span><strong>Sources:</strong> <a href="https://www.legavolley.it/calendario/?idCampionato=999">Official fixture source</a> &middot; <a href="https://www.legavolley.it/classifica/?IdCampionato=999">Official stats source</a></span>
+      </div>
+    </article>
+
+  </main>
+  <footer>
+    <div class="masthead-inner">
+      Horizon research publication (<span class="mono">/horizon/</span>, session <span class="mono">arena/9c5af337-olbg2</span>).
+      Every table row links directly to the official governing-body feed fetched on 2026-10-23. Unconfirmed inputs are left blank and routed to
+      <a href="flagged.html">Flagged for Review</a>.
+    </div>
+  </footer>
+</body>
+</html>

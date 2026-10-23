@@ -172,7 +172,7 @@ def verify_data():
     return source, matches, lines, predictions, flags
 
 
-def verify_html(matches):
+def verify_html(matches, cutoff):
     pages = sorted(OUT.rglob("*.html"))
     ok(len(pages) == 22, f"22 HTML pages expected, got {len(pages)}")
     for slug, _ in EXPECTED_SPORTS:
@@ -184,7 +184,7 @@ def verify_html(matches):
         text = page.read_text(encoding="utf-8")
         parser = Links()
         parser.feed(text)
-        ok("Snapshot 2026-10-23T19:40:38Z" in text, f"visible cutoff: {page.name}")
+        ok(f"Snapshot {cutoff}" in text, f"visible cutoff: {page.name}")
         ok("Flagged for Review" in text, f"review navigation: {page}")
         for href in parser.targets:
             parsed = urlsplit(href)
@@ -202,7 +202,7 @@ def verify_html(matches):
 
 def main():
     source, matches, lines, predictions, flags = verify_data()
-    verify_html(matches)
+    verify_html(matches, source["research_cutoff"])
     print(f"OLBG verification passed: {checks} checks; {len(matches)} matches; {len(lines)} markets; {len(predictions)} predictions; {len(flags)} flags; 22 pages")
 
 

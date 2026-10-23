@@ -7,14 +7,16 @@ The build/pricing stages consume data/olbg/source.json, not the other desks.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import shutil
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "olbg"
 OUT.mkdir(parents=True, exist_ok=True)
-CUTOFF = "2026-10-23T19:40:38Z"
+CUTOFF = "2026-10-23T21:32:48Z"
 FRESH_WINDOW = "2026-10-23 19:27–19:40 UTC"
 INVENTORY_TIME = "2026-10-23T16:20:00Z"
 
@@ -62,6 +64,10 @@ def event(**kw):
         "market_note": "Handicap and total markets were investigated; no supportable price was originated.",
         "note": "",
         "prose": None,
+        "facts": [],
+        "review_scope": None,
+        "reviewed_at": None,
+        "cap_reason": None,
     }
     base.update(kw)
     if base["provenance"] == "official_context":
@@ -84,6 +90,8 @@ def olbg_inventory_fields(inventory):
 
 inventory = load("data/olbgdesk/olbg_inventory.json")
 inv = olbg_inventory_fields(inventory)
+review = load("data/olbg/review.json")
+assert review["audit_cutoff"] == CUTOFF
 events = []
 inputs = {}
 
@@ -120,10 +128,6 @@ nba_names = {
     "nba-0022600103": "Portland Trail Blazers @ Sacramento Kings",
 }
 nba_direct = {"nba-0022600099", "nba-0022600008", "nba-0022600102"}
-nba_prose = {
-    "nba-0022600008": "Bet the Boston Celtics on the moneyline. Boston’s official 30–11 home record from last season supplies the venue-specific baseline against New York’s 22–19 away mark. Both teams lost their openers, but Paul George’s 38-point Boston debut provides a concrete offensive reference. Devin Carter was listed out with illness at 3:15 PM ET.",
-    "nba-0022600102": "Bet the Los Angeles Lakers on the moneyline. They opened with a 127–105 win, shooting 56.8%, while Luka Doncic posted 28 points and Walker Kessler made all 12 shots. The 3:15 PM ET report also listed Bradley Beal and Brandon Ingram out for the Clippers, although later availability changes remain possible.",
-}
 nba_observed = {
     "nba-0022600008": "Expired OLBG page: moneyline; Boston −2.5 / New York +2.5; total 221.5. A comment instead says 223.5 and is flagged, not used.",
     "nba-0022600102": "Expired OLBG page: moneyline; Lakers −8.5 / Clippers +8.5; total 225.5. A comment instead says −9.5 and is flagged, not used.",
@@ -158,7 +162,7 @@ for old in nba_seed["events"]:
         high_detail=eid in {"nba-0022600008", "nba-0022600102"},
         market_note=observed + " Spread and total prices remain blank because an official scoring distribution was not captured.",
         note="Price uses only completed 2025-26 road/home records. Current opener details and the dated injury report are context, not numerical adjustments.",
-        prose=nba_prose.get(eid),
+        prose=None,
     ))
 
 # EuroLeague Round 8: official schedule and standings after Round 7.
@@ -179,40 +183,109 @@ for r in el["fixtures_round8"]:
         note="Only 6–7 current-season games per club; detailed official availability review was not captured, so high-confidence eligibility is off.",
     ))
 
-# NHL: all fourteen future games in the dated official schedule/team-summary capture.
+# NHL: reconcile the existing card with hash-checked official team/schedule captures,
+# then add every FUT game on the official 25 October schedule. Five games receive
+# fresh detailed reviews; the daily cap remains a cap, not a reason to invent rows.
 nhl = load("data/signal/captures/nhl_fixtures.json")
-nhl_teams = load("data/signal/captures/nhl_team_summary_20262027.json")
-inputs["nhl"] = {"teams": {r[0]: {"gp": r[1], "gf": r[2], "ga": r[3], "w": r[4], "l": r[5], "otl": r[6], "points": r[7]} for r in nhl_teams["teams"]}}
-nhl_direct = {2026020166, 2026020167}
-nhl_prose = {
-    2026020166: "Bet the Montréal Canadiens on the two-way moneyline. Montréal has 10 points through nine games compared with Chicago’s six, while Cole Caufield has eight season points and Nick Suzuki has 12. The early sample remains small, and no game-specific official availability bulletin was found in the checked NHL pages, so the selection is price-sensitive rather than certain."
+capture_manifest = load("data/olbg/captures/manifest.json")
+capture_dir = OUT / "captures"
+raw_nhl = {}
+capture_by_key = {}
+for item in capture_manifest["captures"]:
+    blob = (capture_dir / item["path"]).read_bytes()
+    assert len(blob) == item["bytes"], item["key"]
+    assert hashlib.sha256(blob).hexdigest() == item["sha256"], item["key"]
+    raw_nhl[item["key"]] = json.loads(blob)
+    capture_by_key[item["key"]] = item
+
+
+def nhl_key(name):
+    """Use ASCII keys while retaining Montréal in every public display field."""
+    return unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
+
+
+def nhl_display(name):
+    return name.replace("Montreal", "Montréal")
+
+
+nhl_summary_url = "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+nhl_team_capture = capture_by_key["nhl_team_summary"]
+nhl_team_rows = raw_nhl["nhl_team_summary"]["data"]
+assert len(nhl_team_rows) == 32
+inputs["nhl"] = {
+    "captured": nhl_team_capture["fetched_at"],
+    "source": source("NHL official team summary API", nhl_team_capture["url"], nhl_team_capture["fetched_at"], "Hash-checked 32-team capture; exact integer inputs used."),
+    "teams": {
+        nhl_key(r["teamFullName"]): {
+            "team_id": r["teamId"], "gp": r["gamesPlayed"], "gf": r["goalsFor"], "ga": r["goalsAgainst"],
+            "w": r["wins"], "l": r["losses"], "otl": r["otLosses"], "points": r["points"],
+        } for r in nhl_team_rows
+    },
 }
+nhl_team_ids = {r["teamId"]: nhl_key(r["teamFullName"]) for r in nhl_team_rows}
+nhl_rows = []
 for r in nhl["games"]:
+    row = dict(r)
+    row["schedule_url"] = nhl["source_urls"].get(r["date"], nhl["source_urls"]["2026-10-24"])
+    row["schedule_captured"] = nhl["captured_utc"]
+    row["neutral_site"] = False
+    nhl_rows.append(row)
+existing_nhl_ids = {r["id"] for r in nhl_rows}
+schedule25 = capture_by_key["nhl_schedule_2026-10-25"]
+new_nhl_rows = []
+for day in raw_nhl["nhl_schedule_2026-10-25"]["gameWeek"]:
+    if day["date"] != "2026-10-25":
+        continue
+    for g in day["games"]:
+        if g["id"] in existing_nhl_ids:
+            continue
+        assert g["gameState"] == "FUT" and g["gameType"] == 2
+        new_nhl_rows.append({
+            "id": g["id"], "date": day["date"], "startUTC": g["startTimeUTC"],
+            "away": nhl_team_ids[g["awayTeam"]["id"]], "home": nhl_team_ids[g["homeTeam"]["id"]],
+            "venue": g["venue"]["default"], "state": g["gameState"],
+            "gamecenter": "https://www.nhl.com" + g["gameCenterLink"],
+            "schedule_url": schedule25["url"], "schedule_captured": schedule25["fetched_at"],
+            "neutral_site": g["neutralSite"], "new_official_row": True,
+        })
+assert len(new_nhl_rows) == 5, [r["id"] for r in new_nhl_rows]
+nhl_rows.extend(new_nhl_rows)
+nhl_direct = {2026020166, 2026020167}
+nhl_detailed = {2026020166, 2026020169, 2026020175, 2026020178, 2026020180}
+for r in nhl_rows:
     direct = r["id"] in nhl_direct
-    away_key = "Montreal Canadiens" if r["away"] == "Montreal Canadiens" else r["away"]
-    display_name = ("Montréal Canadiens @ Chicago Blackhawks" if r["id"] == 2026020166 else f"{r['away']} @ {r['home']}")
-    official = [
-        source("NHL official game centre", r["gamecenter"], nhl["captured_utc"], f"Game {r['id']}; FUT at capture."),
-        source("NHL official schedule", nhl["source_urls"].get(r["date"], nhl["source_urls"]["2026-10-24"]), nhl["captured_utc"], "Official participants, UTC start, venue and state."),
-        source("NHL official team summary API", "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2", nhl_teams["captured_utc"], "Games, goals, wins, losses, overtime losses and points; exact integer inputs used."),
-    ]
-    if direct:
-        official.append(source("NHL official gamecenter landing feed", f"https://api-web.nhle.com/v1/gamecenter/{r['id']}/landing", FRESH_WINDOW, "FUT state, records and matchup statistics read again in the detailed review window."))
+    detailed = r["id"] in nhl_detailed
+    away_key, home_key = nhl_key(r["away"]), nhl_key(r["home"])
+    assert away_key in inputs["nhl"]["teams"] and home_key in inputs["nhl"]["teams"]
+    display_name = f"{nhl_display(r['away'])} @ {nhl_display(r['home'])}"
+    official = []
+    if not r.get("new_official_row"):
+        official.append(source("NHL official game centre", r["gamecenter"], nhl["captured_utc"], f"Game {r['id']}; FUT at capture."))
+    official.extend([
+        source("NHL official schedule", r["schedule_url"], r["schedule_captured"], "Official participants, UTC start, venue and FUT state in the hash-checked or dated capture."),
+        source("NHL official team summary API", nhl_summary_url, nhl_team_capture["fetched_at"], "Games, goals, wins, losses, overtime losses and points; exact integer inputs used; capture SHA-256 checked."),
+    ])
+    if r.get("new_official_row"):
+        official.append(source("NHL official 25 October score feed", "https://api-web.nhle.com/v1/score/2026-10-25", CUTOFF, "Fresh audit re-read: five FUT games on the official 25 October date; later UTC starts retain that official date."))
+    if direct and not detailed:
+        official.append(source("NHL official gamecenter landing feed", f"https://api-web.nhle.com/v1/gamecenter/{r['id']}/landing", FRESH_WINDOW, "Detailed matchup read retained from the prior review window."))
+    if r["id"] == 2026020170:
+        official.append(source("NHL Boston gamecenter landing feed — ranking review", "https://api-web.nhle.com/v1/gamecenter/2026020170/landing", CUTOFF, "Inspected during the fresh candidate review; sixth in-band estimate, retained below the five-game high-confidence daily card."))
     events.append(event(
         id=f"nhl-{r['id']}", sport="ice-hockey", competition="NHL 2026-27 regular season",
         name=display_name, date=r["date"], start_utc=r["startUTC"], display_time=r["startUTC"].replace("T", " ").replace(":00Z", " UTC"),
-        timezone_note="UTC is published directly by the NHL API.", venue=r["venue"],
+        timezone_note="UTC is published directly by the NHL API.", venue=r["venue"], neutral_site=r["neutral_site"],
         provenance="last_seen" if direct else "official_context",
         olbg_url=(f"https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/{'MTL_Canadiens_@_CHI_Blackhawks' if r['id']==2026020166 else 'TB_Lightning_@_COL_Avalanche'}/13?event_id={199984 if r['id']==2026020166 else 199985}" if direct else None),
         olbg_event_id=(199984 if r["id"] == 2026020166 else 199985) if direct else None,
         olbg_state="Expired at direct check" if direct else None,
-        official_status="FUT on official NHL schedule/gamecentre at capture",
+        official_status="FUT on official NHL schedule at the research cutoff" + ("; neutral-site game" if r["neutral_site"] else ""),
         official_sources=official,
-        pricing={"method": "nhl_points_log5", "away": away_key, "home": r["home"], "derive_markets": direct},
-        high_detail=direct,
+        pricing={"method": "nhl_points_log5", "away": away_key, "home": home_key, "derive_markets": direct},
+        high_detail=detailed,
         market_note=("Expired OLBG page exposes moneyline, puck line 1.5 and total 6.5. Those two extra markets are originated with a disclosed independent-Poisson regulation calculation and a one-goal tie resolution." if direct else "No individual OLBG puck-line or total offer was observed; only the two-way moneyline is originated."),
-        note="Early-season sample. Detailed high-confidence review exists only for the two OLBG-linked games; other games are capped below high.",
-        prose=nhl_prose.get(r["id"]),
+        note=("Fresh detailed official matchup review is attached below. The early-season sample and absence of a game-specific availability bulletin remain explicit limitations." if detailed else "Early-season sample. This row did not receive one of the five fresh detailed NHL reviews, so arithmetic alone cannot promote it to high confidence."),
+        cap_reason=("Boston’s estimate is the sixth in-band NHL candidate, behind the five promoted detailed reviews. The official preview was inspected, but this row remains medium so the daily card contains the five highest estimated in-band selections." if r["id"] == 2026020170 else None),
     ))
 
 # MLB World Series schedule and regular-season records.
@@ -420,6 +493,33 @@ for r in nrl["round2"]:
     ))
 
 # Manual findings: source-linked, specific, and separate from automatic blank rows.
+# Attach fact-level evidence to each freshly reviewed high-confidence candidate.
+# A fact can only cite an official HTTPS URL registered on the same event.
+reviewed_event_ids = set()
+for e in events:
+    detail = review["event_reviews"].get(e["id"])
+    if not detail:
+        continue
+    reviewed_event_ids.add(e["id"])
+    e["prose"] = detail["prose"]
+    e["facts"] = detail["facts"]
+    e["review_scope"] = detail["review_scope"]
+    e["reviewed_at"] = CUTOFF
+    assert e["high_detail"], e["id"]
+    assert {f["kind"] for f in e["facts"]} >= {"team_form", "availability"}, e["id"]
+    assert any(f["kind"] in {"recent_form", "recent_history"} for f in e["facts"]), e["id"]
+    assert any(f["kind"] in {"player", "goalie"} for f in e["facts"]), e["id"]
+    registered = {s["url"] for s in e["official_sources"]}
+    for fact in e["facts"]:
+        url = fact["source_url"]
+        assert url.startswith("https://"), (e["id"], url)
+        if url not in registered:
+            label = "NHL official gamecenter landing feed — fresh detail review" if "nhle.com" in url else "Official detail review"
+            e["official_sources"].append(source(label, url, CUTOFF, "Freshly inspected evidence attached to the prediction facts."))
+            registered.add(url)
+    assert all(f["source_url"] in registered for f in e["facts"])
+assert reviewed_event_ids == set(review["event_reviews"]), reviewed_event_ids ^ set(review["event_reviews"])
+
 flags = [
     {"id": "OLBG-ACTIVE-01", "severity": "review", "title": "No active tips were visible on the checked OLBG hubs", "detail": "All 16 main hub renders checked in this session showed no active tip set, and league-specific NHL/NBA/MLB/EuroLeague/cricket/ATP pages said ‘No tips found.’ This is a checked-page result, not proof that every OLBG market is empty. Zero rows are labelled active.", "links": [source("OLBG tips index", "https://www.olbg.com/betting-tips", FRESH_WINDOW, "Checked hub family.", "olbg")]},
     {"id": "OLBG-EXPIRED-02", "severity": "review", "title": "Expired OLBG pages can still describe officially upcoming events", "detail": "Direct event pages for Boston–New York, Lakers–Clippers, Montréal–Chicago, Tampa Bay–Colorado, Rays–Brewers, the US Grand Prix and four PDC matches showed Expired while official schedules still listed the events ahead. Both states are preserved; no Expired page is called an active offer.", "links": [source("Expired OLBG Celtics event", "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NY_Knicks_@_BOS_Celtics/4?event_id=534842", FRESH_WINDOW, "Expired.", "olbg"), source("NBA official Celtics game page", "https://www.nba.com/game/nyk-vs-bos-0022600008", FRESH_WINDOW, "Friday 7:00 PM ET.")]},
@@ -427,7 +527,7 @@ flags = [
     {"id": "OLBG-NBA-04", "severity": "irregularity", "title": "Lakers spread differs between the OLBG selection and comment", "detail": "The expired page displays Lakers −8.5 / Clippers +8.5 while the quoted comment says −9.5. The comment is not evidence for the originated price.", "links": [source("OLBG Lakers event — inspect spread", "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/LA_Clippers_@_LA_Lakers/4?event_id=536042", FRESH_WINDOW, "8.5 selection versus 9.5 comment.", "olbg")]},
     {"id": "OLBG-F1-05", "severity": "irregularity", "title": "Malformed OLBG tip-count rendering on the Formula 1 page", "detail": "The expired US Grand Prix render concatenates counts into strings such as ‘14 / 014644…’. Those fields are not parsed as meaningful totals, and tipster shares are never used as probabilities.", "links": [source("OLBG US Grand Prix event", "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913", FRESH_WINDOW, "Malformed count rendering.", "olbg")]},
     {"id": "NBA-INJ-06", "severity": "limitation", "title": "NBA availability is timestamped and one rendered Lakers row is garbled", "detail": "The official injury report is valid only as of 3:15 PM ET on 23 October. Clearly parsed Celtics and Clippers absences are quoted in prose; the malformed Lakers row is not interpreted. Later updates can change availability.", "links": [source("NBA official injury report", "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf", FRESH_WINDOW, "10/23/26 03:15 PM.")]},
-    {"id": "NHL-INJ-07", "severity": "limitation", "title": "No game-specific official NHL availability bulletin was captured", "detail": "The official gamecentre and team-summary pages support fixtures, records and statistics but did not supply a dated game-specific availability report in the checked content. No NHL injury claim or injury adjustment is made; this limitation remains attached to the Montréal high-confidence row.", "links": [source("NHL Montréal–Chicago landing feed", "https://api-web.nhle.com/v1/gamecenter/2026020166/landing", FRESH_WINDOW, "Detailed matchup read; no availability bulletin promoted.")]},
+    {"id": "NHL-INJ-07", "severity": "limitation", "title": "No game-specific official NHL availability bulletin was captured", "detail": "The five freshly reviewed official gamecentre previews support fixtures, records, last-five skater leaders and goaltending statistics but did not supply a dated game-specific availability report in the inspected content. No NHL injury claim or injury adjustment is made; this limitation remains attached to all five high-confidence NHL rows.", "links": [source(f"NHL game {gid} landing feed", f"https://api-web.nhle.com/v1/gamecenter/{gid}/landing", CUTOFF, "Fresh detailed matchup read; no availability bulletin promoted.") for gid in sorted(nhl_detailed)]},
     {"id": "PDC-TIME-08", "severity": "irregularity", "title": "PDC and OLBG darts clocks do not agree", "detail": "The official PDC hub displays staggered 07:15, 08:15, 09:15 and 10:15 clocks, while the 16:20 OLBG inventory showed 13:15 for all four. Neither zone is silently inferred; official pairings and ranking inputs remain usable.", "links": [source("PDC official tournament hub", pdc_hub, FRESH_WINDOW, "Staggered last-16 clocks.")]},
     {"id": "ATP-RANK-09", "severity": "limitation", "title": "Incomplete ATP ranking fields stay blank", "detail": "Seven of the 15 named qualifiers lack an exact captured ranking value for at least one participant. The Bertola–‘Player Competing’ row is incomplete and excluded. No wildcard ranking or secondary-site figure is substituted.", "links": [source("ATP Basel official order of play", "https://www.protennislive.com/posting/2026/328/op.pdf", FRESH_WINDOW, "Qualifying list."), source("ATP official rankings", atp_rank_url, FRESH_WINDOW, "19 October rankings.")]},
     {"id": "CRICKET-TZ-10", "severity": "limitation", "title": "Cricket clocks and one women’s fixture date are not promoted", "detail": "Cricket Australia labels clocks ‘your time’; only calendar dates are published. The India Women–Zimbabwe Women second ODI is excluded because its captured date was not clean. ICC women’s ODI ratings rendered empty, and men’s ODI ratings are not used for T20Is.", "links": [source("Cricket Australia upcoming list", ca["source_url"], ca["captured_utc"], ca["timezone_note"])]},
@@ -439,6 +539,13 @@ flags = [
     {"id": "REPO-16", "severity": "repository", "title": "Historical repository contains conflict-marker text and overlapping desks", "detail": "Review found leftover conflict-marker lines in COORDINATION.md and METHODOLOGY.md plus many overlapping dashboards with different dates and counts. Shared historical content is preserved; this desk has a separate /olbg/ namespace and does not add counts across layers.", "links": [source("Repository methodology at main", "https://github.com/buffedlizard55-lab/OLBG2/blob/main/METHODOLOGY.md#L125", CUTOFF, "Manual repository review link.", "repository"), source("Repository coordination ledger at main", "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md", CUTOFF, "Append-only shared ledger; marker text retained for owner review.", "repository")]},
     {"id": "PRICE-17", "severity": "limitation", "title": "No current bookmaker odds were captured", "detail": "All odds on this desk are originated fair American prices derived from the displayed estimate, not bookmaker offers. A selection is not a claim that a current wager is available at that price.", "links": [source("Expired OLBG moneyline example", "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MTL_Canadiens_@_CHI_Blackhawks/13?event_id=199984", FRESH_WINDOW, "Expired; no current quote used.", "olbg")]},
 ]
+
+flags.append({
+    "id": "NBA-ROAD-COLUMN-18", "severity": "irregularity",
+    "title": "NBA home/road columns were explicitly reconciled",
+    "detail": "A manual review note briefly conflated the Clippers’ home and away splits. A direct re-read of the official standings resolved it before publication: HOME is 23–18 and ROAD is 19–22. The canonical pricing input remains 19–22 away; no probability change was hidden.",
+    "links": [source("NBA official 2025-26 standings", "https://www.nba.com/standings?Season=2025-26", CUTOFF, "Complete standings table re-read; Clippers HOME 23–18, ROAD 19–22.")],
+})
 
 # Per-sport narrative shown even when the event table is empty.
 category_notes = {
@@ -452,16 +559,20 @@ payload = {
     "schema_version": 1,
     "research_cutoff": CUTOFF,
     "fresh_read_window": FRESH_WINDOW,
+    "latest_access_audit": CUTOFF,
     "inventory_captured": INVENTORY_TIME,
     "sports": SPORTS,
     "events": events,
     "inputs": inputs,
     "flags": flags,
     "category_notes": category_notes,
+    "review": review,
+    "capture_manifest": capture_manifest,
     "discovery": [
-        {"sport": s["slug"], "url": s["hub"], "checked": FRESH_WINDOW, "result": "No active tip set visible in the checked render; earlier 16:20 inventory retained separately."}
-        for s in SPORTS
-    ] + [{"sport": "gaelic-sports", "url": "https://www.olbg.com/betting-tips/Hurling/26", "checked": FRESH_WINDOW, "result": "Second Gaelic hub checked; still one requested Gaelic Sports category."}],
+        {"sport": c["sport"], "url": c["url"], "checked": CUTOFF,
+         "result": c["observed_text"] + ". Inspected hub render only; not a global empty-market claim."}
+        for c in review["olbg_checks"]
+    ],
 }
 (OUT / "source.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 shutil.copyfile(ROOT / "data" / "olbgdesk" / "olbg_inventory.json", OUT / "olbg_inventory_2026-10-23.json")

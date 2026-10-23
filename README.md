@@ -2,49 +2,85 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
-## Start here: consolidated 15-sport desk — `/master/` (23 October 2026, 22:00 UTC)
+## Consolidated desk — `/master/` (23 October 2026, 22:30 UTC)
 
-**Live:** <https://buffedlizard55-lab.github.io/OLBG2/master/> ·
-[five per sport](master/top5.html) · [all matches](master/matches.html) · [picks and prices](master/picks.html) ·
-[written predictions](master/predictions.html) · [sports](master/sports/index.html) ·
-[sources](master/sources.html) · [Flagged for Review](master/flagged.html) ·
-[methodology](master/methodology.html) · [session record](research/master-73cee7ef.md).
+**Desk:** <https://buffedlizard55-lab.github.io/OLBG2/master/> ·
+[five per sport](master/top5.html) · [all matches](master/matches.html) · [picks & prices](master/picks.html) ·
+[predictions](master/predictions.html) · [sources](master/sources.html) ·
+[Flagged for Review](master/flagged.html) · [methodology](master/methodology.html) ·
+[session record](research/master-73cee7ef.md).
 
-One desk across all fifteen sports. It merges today's OLBG listing (142 in-scope events parsed from OLBG's own
-embedded payload) with the official NHL, MLB and EuroLeague fixtures and records captured the same evening, plus the
-PGA Tour leaderboard and the World Snooker Tour draw read directly at 22:06Z and 22:12Z. It originates its own money
-line, puck line/handicap and totals wherever official numbers exist, and grades one selection per match.
+The second half of the nightly work: one desk that joins today's OLBG listing to the official captures, prices the
+fixtures that have official numbers, grades one selection per match, and applies the brief's five-per-sport ceiling
+literally instead of printing every short-priced favourite.
 
 | Item | Value |
 |---|---|
-| Matches | **235** (142 OLBG-listed, 96 with an official fixture link, 3 with both) |
+| Matches | **235** — 142 OLBG-listed, 96 with an official fixture link, 3 with both |
 | Sports with at least one row | **15 of 15** |
 | Graded picks | **218** |
-| Five-per-sport card | **28** selections, 7 inside the price window |
-| High confidence (≥70%) | **87** |
+| High confidence | **87** |
 | High confidence **and** inside −250…+10000 | **8** |
-| Written predictions (≥30 words, sourced) | **11** — Ice Hockey 6, Basketball 5 |
-| Review items | **19**, including 60 failed captures listed with URL and HTTP status |
+| Five-per-sport card | **28** selections across 14 sports, 7 in band |
+| Written predictions (≥30 words, 2+ sourced figures) | **11** — Ice Hockey 6, Basketball 5 |
+| Review items | **19**, including 60 failed captures with URL and HTTP status |
 
 ```sh
-python scripts/master_data.py     # merge listing + official records, originate lines
-python scripts/master_extra.py    # fold in the golf and snooker captures read first-hand
+python scripts/master_data.py     # join listing + official records, originate lines
+python scripts/master_extra.py    # golf and snooker captures read first-hand
 python scripts/master_top5.py     # apply the five-per-sport ceiling
 python scripts/master_build.py    # write /master/
-python scripts/master_verify.py   # 2,888 structural and numerical assertions
-python -m unittest tests.test_master_73cee7ef   # 20 tests
+python scripts/master_verify.py   # 3,196 assertions
 ```
 
-**What it will not do.** It will not infer a missing value. Fifty-seven of the 181 official captures returned a
-non-200 status and three more returned an error page; no value on the desk comes from one of them. Thirty-two
-captures were truncated at 300,000 bytes, so the OLBG event count is a floor. Only three sports have official
-per-match numbers, so only those three can be priced from data — the other twelve carry OLBG quotes, labelled
-"market-implied", with the bookmaker margin left in. No injury is asserted anywhere. Five predictions per sport is
-not reached and the reason is printed sport by sport.
-
-CI rebuilds and re-verifies the desk on every push and fails if the committed output drifts.
+Two sports that no earlier layer could fill (Golf, Snooker) were closed with first-hand reads at 22:06Z and 22:12Z:
+the PGA Tour leaderboard for the Butterfield Bermuda Championship and the World Snooker Tour draw for the Northern
+Ireland Open. The golf prices are FanDuel's, embedded in the tour page and labelled market-implied; the snooker price
+is ours from frames won and lost, and it lands at 66%, below the high-confidence floor, where it was left.
 
 ---
+
+## Current: final 15-sport integration — `/` + `/cadence/` (23 October 2026)
+
+**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/> ·
+[all 93 fixture records](cadence/matches.html) · [top-five picks](cadence/picks.html) ·
+[728 originated prices](cadence/lines.html) · [33 sourced write-ups](cadence/predictions.html) ·
+[15 sport categories](cadence/sports/index.html) · [Flagged for Review](integration.html) ·
+[93-row integration audit](research/integration-f0ee1b4a.md).
+
+The root landing page now uses the latest corrected 23 October snapshot rather than presenting the older 22 October, 17-sport dashboard as current. It covers exactly the 15 requested sports and keeps historical desks separate; their counts are never added together.
+
+| Current snapshot item | Result |
+|---|---:|
+| Official-source fixture records | 93 across 15 sports |
+| Priced / deliberately blank-price fixtures | 83 / 10 |
+| Originated prices / graded selections | 728 / 122 |
+| High-confidence shortlisted selections | 22 |
+| Natural / alternate-line high selections inside −250…+10000 | 0 / 8 |
+| Written predictions | 33: 22 high, 11 medium |
+| Sports with at least five high-confidence write-ups | 2 of 15 (Basketball, Rugby League) |
+| Registered sources / sourced fact entries internally checked | 59 / 245 |
+| Blank venue fields retained | 48 |
+| Publisher-local/display times retained without UTC inference | 61 |
+| Currently readable active OLBG listings established by the integration spot check | 0 |
+
+**Coverage boundary:** the 93 rows are not represented as 93 current OLBG listings. One row retains a recorded OLBG event id with a matching registered event URL, but its integration re-read displayed “No tips found.” The other rows are official-context fixtures. The separate [OLBG discovery desk](olbg/index.html) and its review page preserve that distinct provenance. No complete OLBG inventory, every-market coverage, current bookmaker price feed, or five-high-write-ups-per-sport completion is claimed.
+
+Final integration corrected two source/display defects before publication: Cork Gaelic semi-final margins now calculate as +2/+2 from the official scores, and outright/three-way fixture summaries now name the actual leading selection with the corresponding probability. The unsupported Gaelic `olbg_event_id` was removed. Corrections, six open integration items, and two independent audit additions are published with evidence links on [Flagged for Review](integration.html).
+
+```sh
+python scripts/cadence_seed.py
+python scripts/cadence_model.py
+python scripts/cadence_predictions.py
+python scripts/cadence_build.py
+python scripts/cadence_verify.py
+python scripts/integration_f0ee1b4a_audit.py
+python scripts/build_site.py
+python scripts/integration_audit.py
+python -m unittest tests.test_integration_f0ee1b4a -v
+```
+
+The internal audit passes all 93 fixture rows and 245 sourced fact entries. External official pages were re-read only for the documented NHL, OLBG and Cork GAA spot checks; the audit does not claim that every external source was freshly re-read during integration. CI rebuilds the same artifacts, checks local links, runs the full test suite and drift-checks the current desk, root and audit outputs.
 
 ## Earlier: OLBG daily desk — `/olbg/` (23 October 2026)
 
@@ -52,9 +88,11 @@ CI rebuilds and re-verifies the desk on every push and fails if the committed ou
 [all matches](olbg/matches.html) · [picks and predictions](olbg/picks.html) ·
 [originated markets](olbg/markets.html) · [sources](olbg/sources.html) ·
 [Flagged for Review](olbg/flagged.html) · [methodology](olbg/methodology.html) ·
-[research record](research/olbg-758c0623.md).
+[latest research and audit record](research/olbg-refresh-1b2c50af.md) · [original desk record](research/olbg-758c0623.md).
 
-The 19:40:38 UTC snapshot contains **89 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **65 official-context-only** rows distinct. There are **54 priced matches**, **58 originated market rows**, and **3 high-confidence predictions**. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and the other limitations remain visible with official links.
+The 21:32:48 UTC snapshot contains **94 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **70 official-context-only** rows distinct. There are **59 priced matches**, **63 originated market rows**, and **7 high-confidence predictions**—five Ice Hockey and two Basketball. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and 56 total review items remain visible with official links.
+
+The latest refresh adds all five FUT NHL games on the official 25 October schedule. Three committed raw NHL captures are SHA-256 checked during every offline seed. The Sources page includes 16 checked-page OLBG hub results, fact-level prediction evidence, input reconciliation, and a review state for every fixture row.
 
 ```sh
 python scripts/olbg_seed.py
@@ -62,7 +100,7 @@ python scripts/olbg_model.py
 python scripts/olbg_predictions.py
 python scripts/olbg_build.py
 python scripts/olbg_verify.py
-python -m unittest tests.test_olbg_758c0623 -v
+python -m unittest discover -s tests -q
 ```
 
 The offline rebuild is deterministic. CI runs the same pipeline and drift-checks `olbg/` and `data/olbg/`; it does not refresh the snapshot.
@@ -165,7 +203,7 @@ The [current capture desk](current/index.html) is now linked from root and categ
 
 ## Start here
 
-The repository contains several independently collected, overlapping snapshots. **Do not add their row counts together.** The root dashboard is the `/verified/` desk; `/final/` is a deterministic de-duplicated view of five input layers. Neither is a guarantee of full real-world fixture coverage or of current bookmaker prices.
+The repository contains several independently collected, overlapping snapshots. **Do not add their row counts together.** The current landing page is the final integration of `/cadence/`; historical root match pages use the `/verified/` dataset, and `/final/` is a deterministic de-duplicated view of five older input layers. None is a guarantee of full real-world fixture coverage or of current bookmaker prices.
 
 | Desk | Entry point | Checked-in snapshot (2026-10-22) |
 |---|---|---|
@@ -173,7 +211,7 @@ The repository contains several independently collected, overlapping snapshots. 
 | **Daily audit desk** | [`daily-audit/index.html`](daily-audit/index.html) | Narrower, row-by-row capture fetched 2026-10-22 21:30 UTC: 8 ATP quarter-finals verified against the ATP Tour's own order of play and draws, 9 ICC fixtures verified against the ICC, 288 originated prices, 5 written picks (≥30 words, each fact linked), 15 review items. Two sports have rows; the other 15 of the 17 eligible sports are each accounted for, with the reason, on the landing page and the flagged page. Rebuilt and drift-checked in CI. |
 | **Daily picks desk** | [`daily-picks/index.html`](daily-picks/index.html) | This session's 23–25 October board: 38 fixtures across 7 sports, 224 originated prices, 28 picks, 28 written predictions, 19 NHL conflict rows for review. |
 | **Current capture desk** | [`current/index.html`](current/index.html) | Independent 22 October capture; fixture, price, prediction, source and review tables. Overlaps other desks; counts must not be added. Rebuilt and drift-checked in CI. These are stored captures, not a live feed. |
-| **Root dashboard** | [`index.html`](index.html) | 188 rows across 14 of 17 eligible sports; 154 rows with originated lines, 34 unlined, and 14 price-band selections/writeups on the root dashboard. The separate `/verified/` research page has 16 additional research writeups. Price-band selections are a separate filter, not the count of rows labelled high confidence. |
+| **Historical root match pages** | [`matches.html`](matches.html) | Historical 22 October data: 188 rows across 14 of 17 eligible sports; 154 rows with originated lines, 34 unlined, and 14 price-band selections/writeups on the root dashboard archive. The separate `/verified/` research page has 16 additional research writeups. These pages are not the current landing snapshot. |
 | **Consolidated desk** | [`final/index.html`](final/index.html) | 382 deduplicated rows across all 17 eligible sports; 339 originated and 43 unlined. The union uses `/verified/`, `/hub/`, `/board/`, `/slate/`, and `/forward/`. It contains 19 featured model picks. |
 | **Forensic origination portal** | [`portal/index.html`](portal/index.html) | Separate 244-row audit snapshot: 220 originated, 24 explicitly unlined; includes its own sport pages, predictions, sources, and review queue. |
 | **Board** | [`board/index.html`](board/index.html) | Checked-in 207-row snapshot. A deterministic rebuild using the current forward-window capture produces 277 rows; the generated update is held for review because two tests in the board owner's scope still assert the older 207/167 counts. See `research/reproducibility-audit-dc72bac4.md`. |

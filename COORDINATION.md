@@ -3788,3 +3788,13 @@ because `33e9eee7` (F6) and `8226c94a` claim those files.
 sports have consensus-derived prices only because no official numeric page rendered (ATP 404, NBA 500,
 PDC/URC/WST client-rendered). Seventeen flags are published on `/desk/flagged.html`. No injury sentence
 was written because no official injury report was captured.
+
+**`/desk/` publication record (session `arena/b8a1ce4c-olbg2`).**
+
+| Item | Value |
+|---|---|
+| PR #142 | merged 2026-10-23T16:29:42Z, merge commit `3921512` |
+| Live | <https://buffedlizard55-lab.github.io/OLBG2/desk/index.html> — fetched after deploy and read line by line: KPI block shows 125 events / 14 of 15 sports / 10 fixtures / 173 markets / 8 high picks / 6 predictions / 17 flags |
+| Checks | `desk_verify.py` 3,257 checks 0 errors; 12 desk tests; full suite green on the merged tree; `integration_audit.py` 0 link errors |
+| Fix after first deploy | Confidence pills were emitted outside a `<td>` and the URC/Baseball status label overstated price coverage; both corrected, and the verifier now asserts every table row has the same cell count as its header |
+| Merge conflicts | Two, both in `COORDINATION.md` while merging `origin/main` (`#140`, then `#141`). Resolved per house rule: main's full version kept, this session's block appended. No other session's text discarded. |

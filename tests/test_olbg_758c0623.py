@@ -64,6 +64,13 @@ class OLGDeskTests(unittest.TestCase):
             self.assertLessEqual(abs(expected-line["fair_american"]), 1)
             self.assertAlmostEqual(line["fair_decimal"], 1/line["probability"])
 
+    def test_poisson_outputs_are_platform_stable(self):
+        poisson = [x for x in self.lines if x["method"].startswith("NHL independent-Poisson")]
+        self.assertEqual(len(poisson), 4)
+        for line in poisson:
+            self.assertEqual(line["probability"], round(line["probability"], 12))
+            self.assertEqual(line["fair_decimal"], round(line["fair_decimal"], 12))
+
     def test_high_gate_and_prediction_content(self):
         high = [x for x in self.lines if x["primary"] and x["confidence"] == "high"]
         self.assertEqual(len(high), len(self.predictions))

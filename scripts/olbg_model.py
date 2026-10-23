@@ -170,9 +170,12 @@ def nhl_additional_lines(event):
                 home_by_two += joint
     under = 1.0 - over
     total_sel, total_p = ("Over 6.5", over) if over >= under else ("Under 6.5", under)
+    # libm can differ in the last bits across Python/platform versions. Normalize
+    # only the serialized low-confidence Poisson outputs, not the exact-input gate.
+    total_p = round(total_p, 12)
     inputs = {"expected_away_goals": round(away_xg, 4), "expected_home_goals": round(home_xg, 4), "distribution": "Independent Poisson through regulation; a tie adds exactly one goal; each marginal truncated at 40 and normalized."}
     common = {"event_id": event["id"], "sport": event["sport"], "primary": False, "confidence": "low", "market_price": None, "market_price_source": None, "inputs": inputs}
-    total = dict(common, id=event["id"]+"-total-6-5", market="Game total", line="6.5", selection=total_sel, probability=total_p, fair_american=american(Fraction(total_p).limit_denominator(10**12)), fair_decimal=1/total_p, method="NHL independent-Poisson total", formula=inputs["distribution"], observed_line="6.5 on expired OLBG event page")
+    total = dict(common, id=event["id"]+"-total-6-5", market="Game total", line="6.5", selection=total_sel, probability=total_p, fair_american=american(Fraction(total_p).limit_denominator(10**12)), fair_decimal=round(1/total_p, 12), method="NHL independent-Poisson total", formula=inputs["distribution"], observed_line="6.5 on expired OLBG event page")
     if event["id"] == "nhl-2026020166":
         away_cover, home_cover = away_by_two, 1-away_by_two
         away_text, home_text = "Montréal Canadiens −1.5", "Chicago Blackhawks +1.5"
@@ -180,7 +183,8 @@ def nhl_additional_lines(event):
         away_cover, home_cover = 1-home_by_two, home_by_two
         away_text, home_text = "Tampa Bay Lightning +1.5", "Colorado Avalanche −1.5"
     puck_sel, puck_p = (away_text, away_cover) if away_cover >= home_cover else (home_text, home_cover)
-    puck = dict(common, id=event["id"]+"-puck-line", market="Puck line", line="1.5", selection=puck_sel, probability=puck_p, fair_american=american(Fraction(puck_p).limit_denominator(10**12)), fair_decimal=1/puck_p, method="NHL independent-Poisson puck line", formula=inputs["distribution"] + " A one-goal or tied-regulation decision does not cover −1.5.", observed_line="1.5 on expired OLBG event page")
+    puck_p = round(puck_p, 12)
+    puck = dict(common, id=event["id"]+"-puck-line", market="Puck line", line="1.5", selection=puck_sel, probability=puck_p, fair_american=american(Fraction(puck_p).limit_denominator(10**12)), fair_decimal=round(1/puck_p, 12), method="NHL independent-Poisson puck line", formula=inputs["distribution"] + " A one-goal or tied-regulation decision does not cover −1.5.", observed_line="1.5 on expired OLBG event page")
     return [total, puck]
 
 

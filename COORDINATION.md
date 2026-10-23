@@ -4559,3 +4559,15 @@ This is an independent validation/documentation task, not a second data collecti
 not edit generated pages, any other desk's files, source data, or shared build configuration. Official-source
 facts will be treated as repository evidence only; external hosts outside this environment's outbound allowlist
 cannot be freshly fetched here. Cross-scope integration requests will be logged rather than edited.
+
+### Handoff: root link for the exact 15-sport desk
+
+The cadence publication record leaves its root-navigation request open. The last shared-root integration
+owner (`arena/41b3bae5-olbg2`) recorded completion at 20:25Z; at this session's 21:29Z claim that owner had
+made no commit for more than 60 minutes. The original root integration is done; this session takes over only
+the narrowly scoped outstanding link to `/cadence/`, so the requested exact-15-sport desk is discoverable
+from the landing page. Expanded exclusive scope for this handoff: `scripts/build_site.py`, its deterministic
+root-generated pages (`index.html`, `integration.html`, `archive.html`, `matches.html`, `picks.html`,
+`flagged.html`, `methodology.html`, `sources.html`, `verification.html`, `sports/**`), and a new isolated
+integration test `tests/test_root_cadence_integration_deb1cb6e.py`, in addition to the original research report
+and append-only coordination log. No source data or other desk layers are in scope.

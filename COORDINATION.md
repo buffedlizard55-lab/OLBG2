@@ -4070,3 +4070,15 @@ remains open for the integration owner (`8226c94a`).
 | Audit existing production collector; add strict NHL schedule adapter and regression tests; integrate, publish | in progress | `6cd8cc4c` | `scripts/monitor_core.py`, `scripts/monitor_collect.py`, `tests/test_monitor_nhl.py`, `research/collector-6cd8cc4c.md`, append-only `COORDINATION.md` |
 
 Claim check: no open PRs; `origin/main` is `81f46ac`; previous monitor owner recorded completed publication. No other active remote task branch is visible. Existing root dashboard already points to the evidence-first 15-sport monitor. This session will improve that pipeline rather than introduce another competing dashboard. Branch stays `arena/6cd8cc4c-olbg2` as required by the environment. Official hosts are outside this environment's outbound allowlist: live verification is unavailable here, so new live match facts or predictions will not be asserted. Adapter tests use explicitly synthetic fixtures, not purported current evidence.
+
+Scope extension (no concurrent open PR): `scripts/monitor_build.py` and generated `monitor/*.html`, to update the runtime summary and methodology so NHL parsing is not incorrectly labeled MLB-only. NHL score endpoint corrected to `api-web.nhle.com`, matching the source URL recorded in `data/current/capture/nhl_score_2026-10-23.json`; that stored transcription is not treated as a new live capture.
+
+### `6cd8cc4c` implementation and verification
+
+- Software work complete: strict NHL score adapter, corrected endpoint host, runtime reporting, public `COL-NHL` review flag and audit notes. No new live event facts or predictions added.
+- Sources/manual targets: https://api-web.nhle.com/v1/score/2026-10-23 and https://www.nhl.com/; stored URL provenance at `data/current/capture/nhl_score_2026-10-23.json`. These links are check targets, not a claim of successful first-hand access this session.
+- `python -m unittest discover -s tests`: **582 tests pass** (including six new synthetic contract tests).
+- `python scripts/monitor_build.py`: 22 pages rebuilt, 24 historical fixture rows preserved.
+- `python scripts/integration_audit.py`: **0 local link errors**. External-source accuracy remains unconfirmed.
+- Irregularities published on `monitor/flagged.html#collector-nhl-review` and `research/collector-6cd8cc4c.md`. Complete OLBG inventory, every-market origination and five supported picks per sport remain needs review, not done.
+- Integration/publication in progress; this session serves as integrator only for its claimed scope. Existing tasks/data remain intact.

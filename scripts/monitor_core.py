@@ -18,7 +18,7 @@ SPORTS = [
     ('tennis', 'Tennis', [('Tennis', 3)], 'https://www.atptour.com/en/scores/current/basel/328/daily-schedule'),
     ('motor-racing', 'Motor Racing', [('Motor_Racing', 14)], 'https://www.formula1.com/en/racing/2026'),
     ('handball', 'Handball', [('Handball', 20)], 'https://www.eurohandball.com/en/matches/'),
-    ('ice-hockey', 'Ice Hockey', [('Ice_Hockey', 13)], 'https://api.nhle.com/v1/score/{date}'),
+    ('ice-hockey', 'Ice Hockey', [('Ice_Hockey', 13)], 'https://api-web.nhle.com/v1/score/{date}'),
     ('basketball', 'Basketball', [('Basketball', 4)], 'https://www.nba.com/games?date={date}'),
     ('rugby-league', 'Rugby League', [('Rugby_League', 10)], 'https://www.nrl.com/draw/'),
 ]
@@ -146,4 +146,58 @@ def parse_mlb(payload, source_id, captured_at):
                          'probability': None, 'confidence': None, 'fair_american': None, 'market_price': None,
                          'injuries': None, 'prediction': None, 'calibrated': False,
                          'note': 'Official schedule only. OLBG event identity, odds, inputs and injuries need confirmation.'})
+    return rows
+
+
+def parse_nhl(payload, source_id, captured_at):
+    """Parse the NHL web score schema conservatively. No odds/form inference.
+
+    A malformed candidate fails the capture atomically, rather than making a
+    partly parsed response appear to be a complete fixture list.
+    """
+    now = stamp(captured_at)
+    if not isinstance(payload, dict) or not isinstance(payload.get('games'), list):
+        raise ValueError('Unrecognized NHL score response')
+    rows, seen = [], set()
+    for game in payload['games']:
+        if not isinstance(game, dict):
+            raise ValueError('Invalid NHL game object')
+        # PRE can indicate pregame; LIVE, CRIT, FINAL, OFF and unknown states
+        # must never become upcoming selections.
+        if game.get('gameState') not in ('FUT', 'PRE'):
+            continue
+        if game.get('gameScheduleState') != 'OK':
+            continue
+        key = game.get('id')
+        if type(key) is not int or key <= 0 or key in seen:
+            raise ValueError('Invalid or duplicate NHL game id')
+        seen.add(key)
+        start = game.get('startTimeUTC')
+        if not isinstance(start, str) or not start.endswith('Z'):
+            raise ValueError('Missing explicit NHL UTC start')
+        if stamp(start) <= now:
+            continue
+        date = game.get('gameDate')
+        if not isinstance(date, str):
+            raise ValueError('Missing NHL official game date')
+        # Validate the calendar date, but do not infer it from the UTC start.
+        datetime.strptime(date, '%Y-%m-%d')
+        names = []
+        for side in ('awayTeam', 'homeTeam'):
+            team = game.get(side)
+            name = team.get('name') if isinstance(team, dict) else None
+            name = name.get('default') if isinstance(name, dict) else None
+            if not isinstance(name, str) or not name.strip():
+                raise ValueError('Missing NHL official team name')
+            names.append(name.strip())
+        rows.append(dict(
+            id=f'nhl-{key}', sport='ice-hockey', name=f'{names[0]} @ {names[1]}',
+            date=date, display_time=start, start_utc=start, status='scheduled',
+            fixture_status='confirmed', source_id=source_id,
+            official_url=f'https://www.nhl.com/gamecenter/{key}',
+            captured_at=captured_at, olbg_url=None, olbg_status='unverified',
+            probability=None, confidence=None, fair_american=None,
+            market_price=None, injuries=None, prediction=None, calibrated=False,
+            note='Official schedule only. OLBG identity, offered odds, form and injuries remain unconfirmed.'
+        ))
     return rows

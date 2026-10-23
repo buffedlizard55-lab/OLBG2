@@ -3912,6 +3912,12 @@ was written because no official injury report was captured.
 | Live content check | done | Re-fetched root, `/monitor/`, `/monitor/flagged.html`; cache-busted `/monitor/index.html?audit=145` confirms the runtime artifact and automated attempt `2026-10-23T16:32:53Z`. `/data/monitor/runtime/latest.json` exists. |
 | Hosted source collection | needs review (limits published) | Diagnostic notices: 31 attempts, 1 official MLB fixture parsed, 0 usable OLBG links, 24 failures/error-page responses. Source retrieval is still partial. |
 
+Post-publication final field-attribution check (`8226c94a`): split the Gaelic Football and Hurling selected OLBG extracts by their individual source URLs rather than repeating a combined category extract under both. No fixture, probability or status changed. Added a regression check; 27 monitor tests pass and local links remain valid. PR #148 merged successfully; final Pages run [39988146536](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39988146536) SUCCESS. This small evidence-attribution correction is in the same claimed scope.
+
+PR #150: append-only board conflict after main advanced to d312e56 resolved by keeping the full newer main board and this attribution note. Other sessions’ records preserved.
+
+A subsequent append-only board conflict at main 5048b3d was resolved by placing this session’s new attribution notes inside its existing publication section instead of contending with other sessions at the file tail. All other-session records retained. Final combined local suite: 562 tests passed; zero local link errors.
+
 **Important live/seed distinction:** the checked-in selected capture has 24 official fixture rows, 19 OLBG pairings and one experimental moneyline. The fresh runtime artifact retains 24 rows but replaces the MLB row without carrying forward unsupported OLBG/line fields: 18 pairings, zero originated matches, zero high-confidence picks. This conservative downgrade is intentional, not a new assertion of full verification. The source ledger explains the refresh; the seed remains available for audit.
 
 The repository's Pages settings are legacy mode; an API attempt to change build_type was denied (403). No credential requested or permission restriction bypassed. The custom deployment nonetheless completed successfully with explicit job permissions. Scheduled six-hour attempts are configured. Cached page responses can show the seed before the latest runtime artifact; the live cache-busted page was checked. No guarantees of future remote-source availability or 75 daily picks are made.
@@ -3960,8 +3966,166 @@ fifteen sports had no reachable official current-form input, and inventing one w
 `COORDINATION.md` and one in `METHODOLOGY.md`, left by an earlier merge. They are plain text and do not
 break rendering, but they are not content. They were left untouched here because neither file is in this
 session's scope.
+## Session `arena/b8a1ce4c-olbg2` — CLAIM: `/desk/` 15-sport OLBG event inventory, fresh 2026-10-23 official capture, origination, Top-5 predictions, and line-by-line repo audit
+
+- **Session ID:** `arena/b8a1ce4c-olbg2` · **Branch:** `arena/b8a1ce4c-olbg2` (fixed by the Arena harness)
+- **Claimed:** 2026-10-23 16:20 UTC, before any implementation edit.
+- **Concurrent-session check at claim time** (`git fetch origin '+refs/heads/*'`): `origin/main` = `2999cc0` (PR #139). Two branches were pushed within the previous five minutes and are treated as **active**:
+  - `arena/33e9eee7-olbg2` → claims `/focus/`, `data/focus/**`, `scripts/focus_*`, `research/focus-33e9eee7.md`, and later root nav/CI/README integration (task F6).
+  - `arena/8226c94a-olbg2` → claims `/monitor/`, `data/monitor/**`, `scripts/monitor_*`, `tests/test_monitor.py`, **and the shared root files** (`scripts/build_site.py`, root generated pages, `sports/**`, `.github/workflows/*`, `README.md`).
+- **Therefore this session claims a third, disjoint namespace only.** I will not create `/focus/` or `/monitor/`, and I will not edit root generated pages, `scripts/build_site.py`, `.github/workflows/**`, or `README.md`. Integration requests (root nav entry, CI drift paths) are logged here for the root owner instead.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| D1 | Board check, live-branch scan, claim disjoint `/desk/` scope, commit & push immediately | in progress | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+| D2 | OLBG reverse-engineering refresh 2026-10-23: read all 15 requested sport hubs, record every listed event + market + tip split, verbatim, with timestamp | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/olbg/**`, `scripts/desk_olbg.py`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 | Fresh first-hand official governing-body capture for the same 15 sports (ranking/table/result inputs only), verbatim text stored | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/capture/**`, `data/desk/inputs.json`, `data/desk/sources.json`, `scripts/desk_seed.py` | 
+| D4 | Independent line origination (winner / handicap / total where an official numeric input exists) + low/medium/high + strict gate p>=0.70 and fair American in [-250,+10000] + Top-5 per sport | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_model.py`, `data/desk/{matches,lines}.json` |
+| D5 | Unique >=30-word predictions for high-confidence picks, every claim tied to a stored official capture; blanks stay blank | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_predictions.py`, `data/desk/{predictions,flagged}.json` |
+| D6 | Line-by-line audit of the already-merged layers (row -> official source re-read today), irregularity register | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/audit.json`, `research/desk-audit-b8a1ce4c.md` |
+| D7 | `/desk/` dashboard (exec summary, matches, lines, Top-5, predictions, 15 sport subpages, OLBG inventory, audit, flagged, sources, methodology) + verifier + tests | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_build.py`, `scripts/desk_verify.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+| D8 | Rebase on `origin/main`, full test suite, PR -> merge, confirm Pages live, log result here | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+
+### Session `arena/b8a1ce4c-olbg2` — COMPLETION LOG (`/desk/`, 2026-10-23 16:50Z)
+
+**Status: built and verified; publication follows.**
+
+| Task | Status | Files |
+|---|---|---|
+| D1 claim | done 16:20Z (`24f4e03`) | `COORDINATION.md` |
+| D2 OLBG refresh, 15 hubs | done — 125 events, 14 sports, Golf returned "No tips found." | `data/olbgdesk/olbg_inventory.json`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 official capture | partial — 10 fixtures (6 NHL, 3 URC, 1 MLB) from governing bodies | `data/olbgdesk/inputs.json` |
+| D4 origination | done — 173 markets, 48 from NHL goal aggregates, 125 consensus-derived; 8 high confidence | `scripts/desk_model.py`, `data/olbgdesk/lines.json` |
+| D5 predictions | done — 6, all Ice Hockey, 67–77 words, unique openings; Darts/Baseball high picks published without narrative | `scripts/desk_predictions.py`, `data/olbgdesk/{predictions,flagged}.json` |
+| D6 repo audit | done — 6 findings A-01…A-06 | `desk/audit.html`, `research/desk-audit-b8a1ce4c.md` |
+| D7 dashboard | done — 25 pages, verifier 2,511 checks, 12 tests | `scripts/desk_{build,verify}.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+
+**Sources.** NHL club statistics and scores endpoints; MLB schedule and standings; URC match centre.
+Every row on `/desk/matches.html`, `/desk/lines.html` and `/desk/olbg.html` carries an https link and the
+verifier fails the build if one is missing. No bookmaker price was read or used; OLBG publishes none.
+
+**Verification performed.** `desk_verify.py` → 2,511 checks, 0 errors (price arithmetic, band logic,
+confidence rule, prediction word count/uniqueness/banned words, every quoted number must exist in the
+stored fact list, every local link resolves, every table row has a source). Full repository suite on the
+merged tree: **479 tests OK**. `integration_audit.py`: 0 cross-layer local link errors.
+
+**Conflict encountered and resolved (logged per protocol).** On first build this session wrote its data
+into `data/desk/`, which is the existing namespace owned by `scripts/build.py` (`/site/` layer), and
+overwrote `data/desk/flagged.json`. Detected immediately by the failing `tests/test_build.py`, restored
+with `git checkout -- data/desk`, and this session's data moved to `data/olbgdesk/`. No other session's
+file now carries a modification from this session: `git status data/desk` is clean.
+
+**Root/shared files — request only, not edited.** Please add `desk/` to the root navigation and
+`desk data/olbgdesk` plus the four `desk_*` scripts to `.github/workflows/pages.yml`'s drift paths.
+This session did not touch `index.html`, `scripts/build_site.py`, `.github/workflows/**` or `README.md`,
+because `33e9eee7` (F6) and `8226c94a` claim those files.
+
+**Disclosed gaps.** The five-predictions-per-sport target is not met: six exist, all Ice Hockey. Twelve
+sports have consensus-derived prices only because no official numeric page rendered (ATP 404, NBA 500,
+PDC/URC/WST client-rendered). Seventeen flags are published on `/desk/flagged.html`. No injury sentence
+was written because no official injury report was captured.
 
 
-Post-publication final field-attribution check (`8226c94a`): split the Gaelic Football and Hurling selected OLBG extracts by their individual source URLs rather than repeating a combined category extract under both. No fixture, probability or status changed. Added a regression check; 27 monitor tests pass and local links remain valid. PR #148 merged successfully; final Pages run [39988146536](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39988146536) SUCCESS. This small evidence-attribution correction is in the same claimed scope.
+## Session `arena/8226c94a-olbg2` — 15-sport evidence gate and final integration
 
-PR #150: append-only board conflict after main advanced to d312e56 resolved by keeping the full newer main board and this attribution note. Other sessions’ records preserved.
+Claimed 2026-10-23 16:16 UTC. Read the full local board; checked remote heads and open PRs (none). The shared-root integration claims from October 22 are over 60 minutes old with completed publication logs; taking over ONLY the shared integration scope below. Previous desks are preserved, not overwritten or recounted as new evidence. Arena fixes this branch name; no session branch will be created.
+
+| Task | Status | Owner | Exclusive files |
+|---|---|---|---|
+| Fresh official/OLBG access audit, source ledger, fail-closed 15-sport pipeline | in progress | `8226c94a` | `scripts/monitor_*.py`, `data/monitor/**`, `research/monitor-8226c94a.md` |
+| Accessible dashboard, exact requested categories, review queue and tests | in progress | `8226c94a` | `monitor/**`, `tests/test_monitor.py` |
+| Final integration: root notice/navigation, automatic updates, documentation, CI and publication | in progress | `8226c94a` | `scripts/build_site.py`, generated root pages + `sports/**`, `.github/workflows/monitor.yml`, `.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`, `README.md`, append-only `COORDINATION.md` |
+
+No earlier data, prose or claimed verification is promoted without independently inspecting evidence. Exact scope is the user's 15 sports (not historical 17-sport scope). Missing fixture/market/fact evidence stays blank and is published for review. All pushes remain on `arena/8226c94a-olbg2`; pull --rebase before each push.
+
+### Session `8226c94a` — implementation and selected field audit complete
+
+- 15 exact requested categories; Gaelic Sports includes both Football and Hurling. Older 17-sport desks preserved as archives; no prior claim of verification promoted.
+- Agent fetch-page reads of all 15 sport hubs plus Hurling, with official-source checks across all categories. Source evidence, URLs, selected extracts and limits: `data/monitor/seed.json`, `research/monitor-8226c94a.md`, `/monitor/sources.html`.
+- 24 official pairing/date rows, 19 OLBG participant matches, one experimental moneyline (both outcomes), zero qualified high-confidence picks. Incomplete inventory/markets/75-prediction target recorded as **needs review**, publicly at `/monitor/flagged.html` (M01–M10 and 15 category shortfalls). Unknown clocks, odds, injuries and inputs remain null. No claim of exhaustive line-by-line external verification of the old repository.
+- Implemented unattended public-source checks, OLBG event-link parser, MLB schedule parser, raw-response/failure ledger and six-hour Pages refresh. Other official fixture adapters and supported automatic prose remain incomplete and flagged. Collector failure does not relabel stored evidence as fresh.
+- Local validation: **493 tests passed** (467 existing + 26 monitor tests); **0 local link errors**, byte-identical 22-page monitor rebuild, evidence hashes and line arithmetic checked.
+- Shared-file takeover confined to claimed integration files; historical data and other sessions' source files untouched. Root now links the monitor prominently and collapses the historical dashboard.
+- Next: run hosted diagnostic/CI, review generated artifact, open and merge PR, confirm Pages deployment. Publication remains in progress.
+
+### Session `8226c94a` — concurrent integration resolution
+
+`git pull --rebase origin main` discovered PRs #140/#141 from `33e9eee7` after the initial claim. Stopped on conflicts. Preserved the full new main board and appended our claim; retained the Focus navigation link, README pointer, CI rebuild and drift paths. Regenerated root HTML from the combined builder instead of choosing either generated-page version. No `focus/**`, `data/focus/**`, `scripts/focus_*` or Focus tests changed. The published claim commit was rebased, so the next push uses an explicit lease against this session's own previously pushed commit, not a blind force push. PR #142 belongs to another active session and is not modified or merged here.
+
+### Session `8226c94a` — hosted checks and browser validation
+
+Hosted branch validation run [39987045033](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39987045033) SUCCESS; hosted monitor diagnostic [39987045247](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39987045247) SUCCESS. Raw artifact download is blocked by this sandbox's external-host restriction, so a subsequent diagnostic emits source-status/count notices accessible through the GitHub API; no unseen hosted fixture count is asserted. Desktop Chromium and 390px mobile checks passed: 15 coverage rows, 24 fixture rows, search filtering to one baseball row, empty-search state, no JS errors or horizontal mobile page overflow. Screenshots inspected locally, not committed. Prior custom Pages failure has an id-token-permission annotation; adding explicit deploy-job permissions before publication and checking actual deployment rather than assuming success.
+
+
+Integration follow-up: merged PR #142 from main without editing its `/desk/` data or builders. Board append conflict resolved by preserving all main history and this session’s complete records.
+## Session `arena/b8a1ce4c-olbg2` — CLAIM: `/desk/` 15-sport OLBG event inventory, fresh 2026-10-23 official capture, origination, Top-5 predictions, and line-by-line repo audit
+
+- **Session ID:** `arena/b8a1ce4c-olbg2` · **Branch:** `arena/b8a1ce4c-olbg2` (fixed by the Arena harness)
+- **Claimed:** 2026-10-23 16:20 UTC, before any implementation edit.
+- **Concurrent-session check at claim time** (`git fetch origin '+refs/heads/*'`): `origin/main` = `2999cc0` (PR #139). Two branches were pushed within the previous five minutes and are treated as **active**:
+  - `arena/33e9eee7-olbg2` → claims `/focus/`, `data/focus/**`, `scripts/focus_*`, `research/focus-33e9eee7.md`, and later root nav/CI/README integration (task F6).
+  - `arena/8226c94a-olbg2` → claims `/monitor/`, `data/monitor/**`, `scripts/monitor_*`, `tests/test_monitor.py`, **and the shared root files** (`scripts/build_site.py`, root generated pages, `sports/**`, `.github/workflows/*`, `README.md`).
+- **Therefore this session claims a third, disjoint namespace only.** I will not create `/focus/` or `/monitor/`, and I will not edit root generated pages, `scripts/build_site.py`, `.github/workflows/**`, or `README.md`. Integration requests (root nav entry, CI drift paths) are logged here for the root owner instead.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| D1 | Board check, live-branch scan, claim disjoint `/desk/` scope, commit & push immediately | in progress | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+| D2 | OLBG reverse-engineering refresh 2026-10-23: read all 15 requested sport hubs, record every listed event + market + tip split, verbatim, with timestamp | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/olbg/**`, `scripts/desk_olbg.py`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 | Fresh first-hand official governing-body capture for the same 15 sports (ranking/table/result inputs only), verbatim text stored | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/capture/**`, `data/desk/inputs.json`, `data/desk/sources.json`, `scripts/desk_seed.py` | 
+| D4 | Independent line origination (winner / handicap / total where an official numeric input exists) + low/medium/high + strict gate p>=0.70 and fair American in [-250,+10000] + Top-5 per sport | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_model.py`, `data/desk/{matches,lines}.json` |
+| D5 | Unique >=30-word predictions for high-confidence picks, every claim tied to a stored official capture; blanks stay blank | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_predictions.py`, `data/desk/{predictions,flagged}.json` |
+| D6 | Line-by-line audit of the already-merged layers (row -> official source re-read today), irregularity register | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/audit.json`, `research/desk-audit-b8a1ce4c.md` |
+| D7 | `/desk/` dashboard (exec summary, matches, lines, Top-5, predictions, 15 sport subpages, OLBG inventory, audit, flagged, sources, methodology) + verifier + tests | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_build.py`, `scripts/desk_verify.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+| D8 | Rebase on `origin/main`, full test suite, PR -> merge, confirm Pages live, log result here | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+
+### Session `arena/b8a1ce4c-olbg2` — COMPLETION LOG (`/desk/`, 2026-10-23 16:50Z)
+
+**Status: built and verified; publication follows.**
+
+| Task | Status | Files |
+|---|---|---|
+| D1 claim | done 16:20Z (`24f4e03`) | `COORDINATION.md` |
+| D2 OLBG refresh, 15 hubs | done — 125 events, 14 sports, Golf returned "No tips found." | `data/olbgdesk/olbg_inventory.json`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 official capture | partial — 10 fixtures (6 NHL, 3 URC, 1 MLB) from governing bodies | `data/olbgdesk/inputs.json` |
+| D4 origination | done — 173 markets, 48 from NHL goal aggregates, 125 consensus-derived; 8 high confidence | `scripts/desk_model.py`, `data/olbgdesk/lines.json` |
+| D5 predictions | done — 6, all Ice Hockey, 67–77 words, unique openings; Darts/Baseball high picks published without narrative | `scripts/desk_predictions.py`, `data/olbgdesk/{predictions,flagged}.json` |
+| D6 repo audit | done — 6 findings A-01…A-06 | `desk/audit.html`, `research/desk-audit-b8a1ce4c.md` |
+| D7 dashboard | done — 25 pages, verifier 2,511 checks, 12 tests | `scripts/desk_{build,verify}.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+
+**Sources.** NHL club statistics and scores endpoints; MLB schedule and standings; URC match centre.
+Every row on `/desk/matches.html`, `/desk/lines.html` and `/desk/olbg.html` carries an https link and the
+verifier fails the build if one is missing. No bookmaker price was read or used; OLBG publishes none.
+
+**Verification performed.** `desk_verify.py` → 2,511 checks, 0 errors (price arithmetic, band logic,
+confidence rule, prediction word count/uniqueness/banned words, every quoted number must exist in the
+stored fact list, every local link resolves, every table row has a source). Full repository suite on the
+merged tree: **479 tests OK**. `integration_audit.py`: 0 cross-layer local link errors.
+
+**Conflict encountered and resolved (logged per protocol).** On first build this session wrote its data
+into `data/desk/`, which is the existing namespace owned by `scripts/build.py` (`/site/` layer), and
+overwrote `data/desk/flagged.json`. Detected immediately by the failing `tests/test_build.py`, restored
+with `git checkout -- data/desk`, and this session's data moved to `data/olbgdesk/`. No other session's
+file now carries a modification from this session: `git status data/desk` is clean.
+
+**Root/shared files — request only, not edited.** Please add `desk/` to the root navigation and
+`desk data/olbgdesk` plus the four `desk_*` scripts to `.github/workflows/pages.yml`'s drift paths.
+This session did not touch `index.html`, `scripts/build_site.py`, `.github/workflows/**` or `README.md`,
+because `33e9eee7` (F6) and `8226c94a` claim those files.
+
+**Disclosed gaps.** The five-predictions-per-sport target is not met: six exist, all Ice Hockey. Twelve
+sports have consensus-derived prices only because no official numeric page rendered (ATP 404, NBA 500,
+PDC/URC/WST client-rendered). Seventeen flags are published on `/desk/flagged.html`. No injury sentence
+was written because no official injury report was captured.
+
+**`/desk/` publication record (session `arena/b8a1ce4c-olbg2`).**
+
+| Item | Value |
+|---|---|
+| PR #142 | merged 2026-10-23T16:29:42Z, merge commit `3921512` |
+| Live | <https://buffedlizard55-lab.github.io/OLBG2/desk/index.html> — fetched after deploy and read line by line: KPI block shows 125 events / 14 of 15 sports / 10 fixtures / 173 markets / 8 high picks / 6 predictions / 17 flags |
+| Checks | `desk_verify.py` 3,257 checks 0 errors; 12 desk tests; full suite green on the merged tree; `integration_audit.py` 0 link errors |
+| Fix after first deploy | Confidence pills were emitted outside a `<td>` and the URC/Baseball status label overstated price coverage; both corrected, and the verifier now asserts every table row has the same cell count as its header |
+| Merge conflicts | Two, both in `COORDINATION.md` while merging `origin/main` (`#140`, then `#141`). Resolved per house rule: main's full version kept, this session's block appended. No other session's text discarded. |
+
+| PR #146 | merged 2026-10-23T16:34:18Z, merge commit `c80b8db` — table-cell structure, coverage labels, row-width assertion |
+| Live re-check after #146 | <https://buffedlizard55-lab.github.io/OLBG2/desk/index.html?v=2> read line by line post-deploy: eight confidence cells now read `high`; Ice Hockey status reads “priced from official inputs”; Rugby Union and Baseball read “fixtures confirmed; consensus prices”. The first fetch without a query string returned the pre-deploy CDN copy, which is why the cache-buster is recorded here. |

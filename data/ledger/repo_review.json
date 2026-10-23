@@ -43,7 +43,7 @@
   {
    "code": "RR-06",
    "title": "CI rebuilds many layers and checks them for drift",
-   "detail": "The Pages workflow rebuilds 49 test modules' worth of layers and fails if generated HTML differs from what is committed. Any new layer has to be added to both the rebuild steps and the drift list or it will silently rot. This layer adds its own step and drift paths.",
+   "detail": "The Pages workflow rebuilds 50 test modules' worth of layers and fails if generated HTML differs from what is committed. Any new layer has to be added to both the rebuild steps and the drift list or it will silently rot. This layer adds its own step and drift paths.",
    "evidence": ".github/workflows/pages.yml \u2014 'Fail if any generated page or data file is stale'",
    "severity": "info"
   },

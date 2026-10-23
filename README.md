@@ -50,9 +50,11 @@ The internal audit passes all 93 fixture rows and 245 sourced fact entries. Exte
 [all matches](olbg/matches.html) · [picks and predictions](olbg/picks.html) ·
 [originated markets](olbg/markets.html) · [sources](olbg/sources.html) ·
 [Flagged for Review](olbg/flagged.html) · [methodology](olbg/methodology.html) ·
-[research record](research/olbg-758c0623.md).
+[latest research and audit record](research/olbg-refresh-1b2c50af.md) · [original desk record](research/olbg-758c0623.md).
 
-The 19:40:38 UTC snapshot contains **89 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **65 official-context-only** rows distinct. There are **54 priced matches**, **58 originated market rows**, and **3 high-confidence predictions**. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and the other limitations remain visible with official links.
+The 21:32:48 UTC snapshot contains **94 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **70 official-context-only** rows distinct. There are **59 priced matches**, **63 originated market rows**, and **7 high-confidence predictions**—five Ice Hockey and two Basketball. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and 56 total review items remain visible with official links.
+
+The latest refresh adds all five FUT NHL games on the official 25 October schedule. Three committed raw NHL captures are SHA-256 checked during every offline seed. The Sources page includes 16 checked-page OLBG hub results, fact-level prediction evidence, input reconciliation, and a review state for every fixture row.
 
 ```sh
 python scripts/olbg_seed.py
@@ -60,7 +62,7 @@ python scripts/olbg_model.py
 python scripts/olbg_predictions.py
 python scripts/olbg_build.py
 python scripts/olbg_verify.py
-python -m unittest tests.test_olbg_758c0623 -v
+python -m unittest discover -s tests -q
 ```
 
 The offline rebuild is deterministic. CI runs the same pipeline and drift-checks `olbg/` and `data/olbg/`; it does not refresh the snapshot.

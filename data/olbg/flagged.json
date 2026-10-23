@@ -1,5 +1,5 @@
 {
-  "research_cutoff": "2026-10-23T19:40:38Z",
+  "research_cutoff": "2026-10-23T21:32:48Z",
   "items": [
     {
       "id": "OLBG-ACTIVE-01",
@@ -102,13 +102,41 @@
       "id": "NHL-INJ-07",
       "severity": "limitation",
       "title": "No game-specific official NHL availability bulletin was captured",
-      "detail": "The official gamecentre and team-summary pages support fixtures, records and statistics but did not supply a dated game-specific availability report in the checked content. No NHL injury claim or injury adjustment is made; this limitation remains attached to the Montréal high-confidence row.",
+      "detail": "The five freshly reviewed official gamecentre previews support fixtures, records, last-five skater leaders and goaltending statistics but did not supply a dated game-specific availability report in the inspected content. No NHL injury claim or injury adjustment is made; this limitation remains attached to all five high-confidence NHL rows.",
       "links": [
         {
-          "label": "NHL Montréal–Chicago landing feed",
+          "label": "NHL game 2026020166 landing feed",
           "url": "https://api-web.nhle.com/v1/gamecenter/2026020166/landing",
-          "captured": "2026-10-23 19:27–19:40 UTC",
-          "note": "Detailed matchup read; no availability bulletin promoted.",
+          "captured": "2026-10-23T21:32:48Z",
+          "note": "Fresh detailed matchup read; no availability bulletin promoted.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL game 2026020169 landing feed",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020169/landing",
+          "captured": "2026-10-23T21:32:48Z",
+          "note": "Fresh detailed matchup read; no availability bulletin promoted.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL game 2026020175 landing feed",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020175/landing",
+          "captured": "2026-10-23T21:32:48Z",
+          "note": "Fresh detailed matchup read; no availability bulletin promoted.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL game 2026020178 landing feed",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020178/landing",
+          "captured": "2026-10-23T21:32:48Z",
+          "note": "Fresh detailed matchup read; no availability bulletin promoted.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL game 2026020180 landing feed",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020180/landing",
+          "captured": "2026-10-23T21:32:48Z",
+          "note": "Fresh detailed matchup read; no availability bulletin promoted.",
           "kind": "official"
         }
       ]
@@ -270,14 +298,14 @@
         {
           "label": "Repository methodology at main",
           "url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/METHODOLOGY.md#L125",
-          "captured": "2026-10-23T19:40:38Z",
+          "captured": "2026-10-23T21:32:48Z",
           "note": "Manual repository review link.",
           "kind": "repository"
         },
         {
           "label": "Repository coordination ledger at main",
           "url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md",
-          "captured": "2026-10-23T19:40:38Z",
+          "captured": "2026-10-23T21:32:48Z",
           "note": "Append-only shared ledger; marker text retained for owner review.",
           "kind": "repository"
         }
@@ -295,6 +323,21 @@
           "captured": "2026-10-23 19:27–19:40 UTC",
           "note": "Expired; no current quote used.",
           "kind": "olbg"
+        }
+      ]
+    },
+    {
+      "id": "NBA-ROAD-COLUMN-18",
+      "severity": "irregularity",
+      "title": "NBA home/road columns were explicitly reconciled",
+      "detail": "A manual review note briefly conflated the Clippers’ home and away splits. A direct re-read of the official standings resolved it before publication: HOME is 23–18 and ROAD is 19–22. The canonical pricing input remains 19–22 away; no probability change was hidden.",
+      "links": [
+        {
+          "label": "NBA official 2025-26 standings",
+          "url": "https://www.nba.com/standings?Season=2025-26",
+          "captured": "2026-10-23T21:32:48Z",
+          "note": "Complete standings table re-read; Clippers HOME 23–18, ROAD 19–22.",
+          "kind": "official"
         }
       ]
     },
@@ -953,50 +996,21 @@
           "label": "NHL official schedule",
           "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
           "captured": "2026-10-23T16:30:00Z",
-          "note": "Official participants, UTC start, venue and state.",
+          "note": "Official participants, UTC start, venue and FUT state in the hash-checked or dated capture.",
           "kind": "official"
         },
         {
           "label": "NHL official team summary API",
           "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
-          "captured": "2026-10-23T16:25:00Z",
-          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "captured": "2026-10-23T20:32:15Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used; capture SHA-256 checked.",
           "kind": "official"
         },
         {
           "label": "NHL official gamecenter landing feed",
           "url": "https://api-web.nhle.com/v1/gamecenter/2026020167/landing",
           "captured": "2026-10-23 19:27–19:40 UTC",
-          "note": "FUT state, records and matchup statistics read again in the detailed review window.",
-          "kind": "official"
-        }
-      ]
-    },
-    {
-      "id": "CAP-nhl-2026020169-winner",
-      "severity": "limitation",
-      "title": "High-confidence cap: New Jersey Devils",
-      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
-      "links": [
-        {
-          "label": "NHL official game centre",
-          "url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
-          "captured": "2026-10-23T16:30:00Z",
-          "note": "Game 2026020169; FUT at capture.",
-          "kind": "official"
-        },
-        {
-          "label": "NHL official schedule",
-          "url": "https://api-web.nhle.com/v1/score/2026-10-24",
-          "captured": "2026-10-23T16:30:00Z",
-          "note": "Official participants, UTC start, venue and state.",
-          "kind": "official"
-        },
-        {
-          "label": "NHL official team summary API",
-          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
-          "captured": "2026-10-23T16:25:00Z",
-          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "note": "Detailed matchup read retained from the prior review window.",
           "kind": "official"
         }
       ]
@@ -1005,7 +1019,7 @@
       "id": "CAP-nhl-2026020170-winner",
       "severity": "limitation",
       "title": "High-confidence cap: Boston Bruins",
-      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
+      "detail": "Boston’s estimate is the sixth in-band NHL candidate, behind the five promoted detailed reviews. The official preview was inspected, but this row remains medium so the daily card contains the five highest estimated in-band selections.",
       "links": [
         {
           "label": "NHL official game centre",
@@ -1018,72 +1032,21 @@
           "label": "NHL official schedule",
           "url": "https://api-web.nhle.com/v1/score/2026-10-24",
           "captured": "2026-10-23T16:30:00Z",
-          "note": "Official participants, UTC start, venue and state.",
+          "note": "Official participants, UTC start, venue and FUT state in the hash-checked or dated capture.",
           "kind": "official"
         },
         {
           "label": "NHL official team summary API",
           "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
-          "captured": "2026-10-23T16:25:00Z",
-          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
-          "kind": "official"
-        }
-      ]
-    },
-    {
-      "id": "CAP-nhl-2026020175-winner",
-      "severity": "limitation",
-      "title": "High-confidence cap: Carolina Hurricanes",
-      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
-      "links": [
-        {
-          "label": "NHL official game centre",
-          "url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
-          "captured": "2026-10-23T16:30:00Z",
-          "note": "Game 2026020175; FUT at capture.",
+          "captured": "2026-10-23T20:32:15Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used; capture SHA-256 checked.",
           "kind": "official"
         },
         {
-          "label": "NHL official schedule",
-          "url": "https://api-web.nhle.com/v1/score/2026-10-24",
-          "captured": "2026-10-23T16:30:00Z",
-          "note": "Official participants, UTC start, venue and state.",
-          "kind": "official"
-        },
-        {
-          "label": "NHL official team summary API",
-          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
-          "captured": "2026-10-23T16:25:00Z",
-          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
-          "kind": "official"
-        }
-      ]
-    },
-    {
-      "id": "CAP-nhl-2026020178-winner",
-      "severity": "limitation",
-      "title": "High-confidence cap: Detroit Red Wings",
-      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
-      "links": [
-        {
-          "label": "NHL official game centre",
-          "url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/24/2026020178",
-          "captured": "2026-10-23T16:30:00Z",
-          "note": "Game 2026020178; FUT at capture.",
-          "kind": "official"
-        },
-        {
-          "label": "NHL official schedule",
-          "url": "https://api-web.nhle.com/v1/score/2026-10-24",
-          "captured": "2026-10-23T16:30:00Z",
-          "note": "Official participants, UTC start, venue and state.",
-          "kind": "official"
-        },
-        {
-          "label": "NHL official team summary API",
-          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
-          "captured": "2026-10-23T16:25:00Z",
-          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "label": "NHL Boston gamecenter landing feed — ranking review",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020170/landing",
+          "captured": "2026-10-23T21:32:48Z",
+          "note": "Inspected during the fresh candidate review; sixth in-band estimate, retained below the five-game high-confidence daily card.",
           "kind": "official"
         }
       ]

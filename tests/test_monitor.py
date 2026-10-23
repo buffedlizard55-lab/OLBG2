@@ -121,6 +121,12 @@ class MonitorPublication(unittest.TestCase):
     @classmethod
     def setUpClass(cls): cls.data=build.load()
     def test_evidence_integrity(self): self.assertTrue(build.validate(self.data))
+    def test_gaelic_extracts_have_separate_source_attribution(self):
+        sources={s['id']:s for s in self.data['sources']}
+        self.assertIn('St Finbarrs',sources['olbg-25']['excerpt'])
+        self.assertNotIn('Ballyhale',sources['olbg-25']['excerpt'])
+        self.assertIn('Ballyhale',sources['olbg-26']['excerpt'])
+        self.assertNotIn('St Finbarrs',sources['olbg-26']['excerpt'])
     def test_modified_extract_rejected(self):
         d=copy.deepcopy(self.data);d['sources'][0]['excerpt']+='invented'
         with self.assertRaises(AssertionError):build.validate(d)

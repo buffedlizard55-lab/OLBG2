@@ -67,6 +67,7 @@ tr:last-child td{border-bottom:0}
 tbody tr:hover{background:#f8fafc}
 .tbl-scroll{overflow-x:auto;border-radius:10px}
 .badge{display:inline-block;padding:.1rem .45rem;border-radius:999px;font-size:.72rem;font-weight:700;white-space:nowrap}
+.badge+.badge{margin-left:.3rem}
 .high{background:var(--highbg);color:var(--high)}.medium{background:var(--medbg);color:var(--med)}.low{background:var(--lowbg);color:var(--low)}
 .tA{background:#d1fae5;color:#065f46}.tB{background:#fee2e2;color:#991b1b}.tC{background:#e0e7ff;color:#3730a3}.tD{background:#e5e7eb;color:#374151}
 .pill{display:inline-block;padding:.1rem .45rem;border-radius:6px;font-size:.72rem;font-weight:600;background:#eef2f7;color:#334155}
@@ -303,7 +304,7 @@ taxonomy, sport IDs and market vocabulary are reproduced there, and the fixtures
 governing body.</li>
 <li>It is <strong>not a live feed</strong>. Every row carries the capture time of the page it came from. Rows whose
 start time had passed by 19:45Z are labelled as such and excluded from selections.</li>
-<li>It does <strong>not invent prices for matches with no verified input</strong>. Four sports have fixtures but no
+<li>It does <strong>not invent prices for matches with no official input</strong>. Four sports have fixtures but no
 line today: tennis (no pairing published), cricket, Gaelic sports and greyhounds. Darts has fixtures but no ranking
 source. Each is named with its reason.</li>
 <li>No prediction asserts an injury, a suspension or a team-news item. No official injury feed could be read in this
@@ -537,7 +538,7 @@ number below. Prices are fair probabilities, not bookmaker quotes, and no margin
 <tr><td>Handball</td><td>Poisson on a 30-goal baseline shifted by half the first-leg margin</td><td>EHF calendar and first-leg score</td><td>Money line, total</td><td>Second legs with no captured first leg</td></tr>
 <tr><td>Rugby League</td><td>Poisson on Round 1 points for/against, shrunk 70% to the 28.2-point mean</td><td>NRL World Cup Round 1 results</td><td>Money line, handicap ±6.5, total</td><td>Nothing further</td></tr>
 <tr><td>Rugby Union</td><td>Log5 on a last-three-win rate mapped to a 35–65% band, 18-point home adjustment</td><td>Official form strings only</td><td>Money line</td><td>Handicap and total (no scoring or table input)</td></tr>
-<tr><td>Volleyball</td><td>Even-chance prior moved 8 points per set of margin in the same pairing's verified result</td><td>Volleyball World global schedule, same-day set scores</td><td>Money line</td><td>Every fixture without a same-pairing result</td></tr>
+<tr><td>Volleyball</td><td>Even-chance prior moved 8 points per set of margin in the same pairing's recorded result</td><td>Volleyball World global schedule, same-day set scores</td><td>Money line</td><td>Every fixture without a same-pairing result</td></tr>
 <tr><td>Golf</td><td>Softmax over the 36-hole leaderboard with a 22% residual for players outside the captured top 25</td><td>DP World Tour leaderboard after Round 2</td><td>Tournament winner</td><td>3-balls, top-10 (no strokes-gained feed)</td></tr>
 <tr><td>Motor Racing</td><td>Bradley-Terry on championship points with a 15% residual</td><td>F1 drivers' standings after Round 17, top 8</td><td>Race winner</td><td>Podium, fastest lap, head-to-head (no session times)</td></tr>
 <tr><td>Darts</td><td>—</td><td>None: PDC rankings unreachable</td><td>—</td><td>All markets</td></tr>
@@ -680,11 +681,22 @@ def tier_of(p):
     return "C"
 
 
+SPORT_REASON = {
+    "Cricket": "no official ranking or form table was readable",
+    "Darts": "PDC rankings sit behind a cookie wall",
+    "Gaelic Sports": "single fixture, no scoring input published",
+    "Greyhounds": "GBGB publishes no runners",
+    "Tennis": "no semi-final pairing published by the ATP",
+}
+
+
 def reason_for(sport, fixtures, flags):
+    if sport in SPORT_REASON:
+        return SPORT_REASON[sport]
     for f in fixtures:
         if f["sport"] == sport and f["flags"]:
-            return f["flags"][0][:60]
-    return "no verified input"
+            return f["flags"][0]
+    return "no official input"
 
 
 if __name__ == "__main__":

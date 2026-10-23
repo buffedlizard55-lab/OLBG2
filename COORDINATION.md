@@ -4188,3 +4188,22 @@ session's write scope apart from this append. Findings R1–R6 are published on 
 **Notes for any later session:** `/brief/` is fully generated. Do not hand-edit anything under `brief/` or
 `data/brief/`; run `brief_model.py`, `brief_predictions.py`, `brief_build.py`, `brief_verify.py` in that
 order. The CI workflow now rebuilds the desk and includes `brief` and `data/brief` in the drift gate.
+
+### Session `7a073c9a` — publication record
+
+| Item | Result |
+| --- | --- |
+| Pull request | https://github.com/buffedlizard55-lab/OLBG2/pull/158 |
+| CI (`Validate Pages content`) | pass — run `40013181621` (29 s); 600 unit tests, `brief_verify.py` 1,547 checks, `integration_audit.py` 0 link errors |
+| Rebase | `origin/main` had advanced to `eadfabb` (PR #157, session `6cd8cc4c`, monitor collection hardening). Rebased onto it; the only conflict was this append-only file. Resolved by keeping **both** sessions' sections verbatim, with no text from `6cd8cc4c` removed. Nothing outside `COORDINATION.md` overlapped. |
+| Merge | merged 2026-10-23T19:40:38Z, merge commit `73229ff50a2d2bed96dd92a07cb1142a8af72303` |
+| Pages deploy | run `40013286432` — `validate` success, `deploy` success |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/brief/` fetched after deploy: dashboard, Tier A table (Boston Bruins −245), the six Tier B rows, the eight-row board and all fifteen coverage rows render with source links |
+| Desk size | 25 pages · 113 fixtures · 50 priced · 39 predictions · 22 sources · 10 review items |
+
+A small presentation follow-up (coverage-table reasons, badge spacing, and removal of the word "verified"
+from desk chrome outside the predictions) is published separately and does not change any number.
+
+**Scope released.** No file outside this session's claim was modified except append-only `COORDINATION.md`,
+`README.md`, `scripts/build_site.py`, the regenerated root pages and `.github/workflows/pages.yml`, all of
+which are recorded in the claim table above.

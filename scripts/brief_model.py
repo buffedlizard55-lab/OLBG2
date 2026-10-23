@@ -384,7 +384,7 @@ def build_snooker():
         if s2 is None:
             s2, bounded = bound, True
         if bounded:
-            f["flags"].append(f"at least one player is outside the published top 36; the 36th-placed figure (GBP {bound:,}) is used as a verified upper bound and flagged BR-08")
+            f["flags"].append(f"at least one player is outside the published top 36; the 36th-placed figure (GBP {bound:,}) is used as a published upper bound and flagged BR-08")
         if money.get(p1) is None and money.get(p2) is None:
             f["flags"].append("both players sit outside the published top 36, so the same upper bound applies to each and no strength separation exists; left unlined")
             continue
@@ -421,7 +421,7 @@ def build_handball():
                 if score:
                     f["input_note_leg"] = f"first leg: {t1} {g1}-{g2} {t2}"
         if not score or "-" not in score or (m.get("status", "").startswith("scheduled") and not f.get("input_note_leg")):
-            f["flags"].append("no verified score or strength input for either side; left unlined")
+            f["flags"].append("no official score or strength input for either side; left unlined")
             continue
         try:
             hs, as_ = [int(x) for x in score.split("-")]
@@ -540,7 +540,7 @@ def build_darts():
             home=m["p1"], away=m["p2"], date=m["date"], start_utc=m.get("kickoff_utc"), venue="",
             source_key="olbg-darts", source_url=m["url"], as_of=d["captured_utc"], inputs=[],
         )
-        f["flags"].append("PDC rankings unreachable (BR-02): no verified strength input, so every market is left blank")
+        f["flags"].append("PDC rankings unreachable (BR-02): no official strength input, so every market is left blank")
 
 
 # ------------------------------------------------------------------ Tennis
@@ -695,7 +695,7 @@ def build_volleyball():
                                    "even-chance prior moved 8 points per set of margin in the verified same-pairing result")]
             f["flags"].append("no league table or rating feed was readable (BR-04); the price uses the reverse-fixture result only")
         else:
-            f["flags"].append("no verified strength input for either side; left unlined (BR-04)")
+            f["flags"].append("no official strength input for either side; left unlined (BR-04)")
 
 
 # ------------------------------------------------------------------ assemble
@@ -754,7 +754,7 @@ def main():
     flags = SESSION["flags"] + [
         {"id": "BR-08", "subject": "Ranking-money bound used for players outside the top 36",
          "severity": "low",
-         "detail": "Where a snooker participant is outside the captured top 36, the 36th-placed prize-money figure (GBP 198,500) is used as a verified upper bound on that player's ranking money. The row says so. No rank or money figure is invented.",
+         "detail": "Where a snooker participant is outside the captured top 36, the 36th-placed prize-money figure (GBP 198,500) is used as a published upper bound on that player's ranking money. The row says so. No rank or money figure is invented.",
          "evidence": ["https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"]},
         {"id": "BR-09", "subject": "Eight OLBG darts events had already started",
          "severity": "low",

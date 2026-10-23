@@ -4592,3 +4592,16 @@ ledger owner's full unmodified pipeline (`ledger_seed.py` → `ledger_verify.py`
 `data/ledger/repo_review.json` and `ledger/repo-review.html`, both changing that count to 46. No ledger source,
 fixture, price, pick, prediction or finding was changed. These generated outputs are included so the required
 repository-wide drift gate can pass; recorded as a cross-scope regeneration for the ledger owner.
+
+### Publication record — final completion (2026-10-23)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#175](https://github.com/buffedlizard55-lab/OLBG2/pull/175) — merged 21:36:35Z; merge commit `1ac44fe3994fac482f2a72d2460e37aba2c835b5` |
+| Validation workflow | [Run 40028019335](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019335) — success, including full tests, link audit and generated-file drift gate |
+| Pages deploy | [Run 40028019381](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019381) — success; GitHub Pages API status `built`, source `main:/` |
+| Published site | <https://buffedlizard55-lab.github.io/OLBG2/> — exact-15-sport desk is linked from the root landing page; `/cadence/` is the dedicated desk |
+| Final scope | Root navigation/CTA, generated root review flags, `research/deb1cb6e-independent-audit.md`, regression tests, and generated ledger repository inventory count refreshed through its own builder |
+| Remaining limitation | Snapshot is dated and not a live feed. The two audit flags remain unresolved; official external pages were not freshly fetched in this session. Five predictions per sport are not yet achieved. |
+
+This publication record is a post-merge append. The PR and deployment above contain the implementation and earlier audit; this board update itself is being recorded as a follow-up documentation change.

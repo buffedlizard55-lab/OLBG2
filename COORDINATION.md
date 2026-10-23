@@ -3712,3 +3712,21 @@ Status: DONE, publication in progress. F1-F6 complete.
 | C6 | `covered/` GitHub Pages site: landing, all-matches table, sport pages, picks, flagged, sources, methodology | unclaimed→this session | `arena/a509fb48-olbg2` | `scripts/covered_build.py`, `covered/**` |
 | C7 | Regression tests: rebuild drift check, link check, word-count and banned-word checks | unclaimed→this session | `arena/a509fb48-olbg2` | `tests/test_covered_a509fb48.py` |
 | C8 | Integration: rebase on `origin/main`, full test suite, PR → merge → Pages confirm, log result | unclaimed→this session | `arena/a509fb48-olbg2` | `COORDINATION.md` (append-only) |
+
+### Session `arena/a509fb48-olbg2` — status log (append-only, 2026-10-23 UTC)
+
+| Task | Status | Evidence |
+|---|---|---|
+| C1 | done | claim commit on `origin/arena/a509fb48-olbg2` (push confirmed with `ls-remote`) |
+| C2 | done | OLBG sport IDs confirmed for darts 15, tennis 3, basketball 4, golf 5, snooker 8, baseball 12, motor racing 14, football 1, horse racing 2. Ice hockey, cricket, volleyball, rugby union, rugby league, handball, Gaelic and greyhounds IDs not captured. `data/covered/olbg_taxonomy.json`. No `research/covered-a509fb48.md` was written. |
+| C3 | done, partial coverage | 23 source-confirmed fixture rows (NHL 2, MLB 1, NBA 12, F1 1, RLWC 4, snooker 2, GAA 1), plus observed ATP and darts rows. Sources S01–S18 and failed attempts F01–F10 in `data/covered/sources.json`. Golf, volleyball, rugby union, cricket, handball and greyhounds have no fixture captured (attempts F04–F10). |
+| C4 | done | `scripts/covered_model.py`: 14 win-match lines (NHL 2, NBA 12), all labelled low. Zero high-confidence picks. Band-gate decision recorded as FL-01. |
+| C5 | done, no predictions | Gate passed by zero selections, so `data/covered/predictions.json` is empty, with the reason recorded. Predictions are written only for gate-passing selections. |
+| C6 | done | `scripts/covered_build.py` → `covered/` (25 pages: landing, matches, lines, picks, predictions, OLBG, flagged, sources, methodology, 15 sport pages). |
+| C7 | done | `tests/test_covered_a509fb48.py` (13 tests): rebuild-equals-committed, internal links, source hosts, row links, flags, wording and gate rules. Full suite 487 tests OK; `integration_audit.py` 0 local link errors. |
+| C8 | in progress | PR and merge follow in the next entry. |
+
+**Open requests for the root owner (shared files, not edited by this session):**
+1. Add a root navigation link to `/covered/` in `index.html`.
+2. Add `scripts/covered_build.py`, `scripts/covered_model.py`, the `covered/` and `data/covered/` paths, and `tests/test_covered_a509fb48.py` to the `pages.yml` validate and drift steps. The test already rebuilds and compares `covered/`, so this is optional for correctness.
+3. FL-20: the leftover merge markers on `main` (`=======` and `>>>>>>>` near lines 3216, 3307, 3437, 3549, 3609 and 3628) are still present. Not edited here.

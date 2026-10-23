@@ -1,0 +1,187 @@
+{
+ "count": 26,
+ "flags": [
+  {
+   "id": "FO-net-nba-0022600008",
+   "sport": "basketball",
+   "kind": "thin input",
+   "text": "NBA priced from preseason net rating only; handicap and total left unoriginated for this fixture.",
+   "source": "https://www.nba.com/game/0022600008"
+  },
+  {
+   "id": "FO-net-nba-0022600009",
+   "sport": "basketball",
+   "kind": "thin input",
+   "text": "NBA priced from preseason net rating only; handicap and total left unoriginated for this fixture.",
+   "source": "https://www.nba.com/game/0022600009"
+  },
+  {
+   "id": "FO-cricket-next",
+   "sport": "cricket",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "The ICC fixtures page returned 404 on 2026-10-23 and no dated upcoming fixture with a ranking input was captured, so cricket is left blank and flagged.",
+   "source": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi"
+  },
+  {
+   "id": "FO-darts-next",
+   "sport": "darts",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "No upcoming pairing with an official numeric strength input was read from PDC on 2026-10-23, so the market is left blank rather than estimated.",
+   "source": "https://www.pdc.tv/tournaments/calendar"
+  },
+  {
+   "id": "FO-gaa-kerry-sfc",
+   "sport": "gaelic-football",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "The Kerry final is scheduled for 14:00 on 25 October at Fitzgerald Stadium, refereed by Sean Joy.",
+   "source": "https://munster.gaa.ie/event/2026-kerry-county-senior-football-championship-final-dr-crokes-v-kenmare-shamrocks/"
+  },
+  {
+   "id": "FO-gaa-waterford-sfc",
+   "sport": "gaelic-football",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "The Waterford final throws in at 14:30 on 25 October at Fraher Field, Dungarvan. Rathgormack beat Abbeyside-Ballinacourty 2-10 to 0-8 in the 2024 final.",
+   "source": "https://munster.gaa.ie/fixtures/events-calendar/"
+  },
+  {
+   "id": "FO-gaa-cork-psfc",
+   "sport": "gaelic-football",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "St Finbarrs beat Nemo Rangers 1-14 to 1-13 in the 2025 final at SuperValu Pairc Ui Chaoimh. The 2026 final throws in at 16:00 on 25 October at the same venue.",
+   "source": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/"
+  },
+  {
+   "id": "FO-golf-next",
+   "sport": "golf",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "A full-field outright requires a strokes-gained distribution for all 132 players, which the official schedule page does not publish; left unlined.",
+   "source": "https://www.pgatour.com/schedule"
+  },
+  {
+   "id": "FO-greyhounds-next",
+   "sport": "greyhounds",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "No complete official trap-by-trap timed field was read on 2026-10-23, so no greyhound price is originated.",
+   "source": "https://www.gbgb.org.uk/"
+  },
+  {
+   "id": "FO-f1-usgp",
+   "sport": "motor-racing",
+   "kind": "partial outright",
+   "text": "Outright prices only the contenders named in the official table; rest of field not priced.",
+   "source": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  {
+   "id": "FO-snooker-next",
+   "sport": "snooker",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "No upcoming pairing with both players on an official ranking list read on 2026-10-23 was captured, so no price is originated.",
+   "source": "https://www.wst.tv/"
+  },
+  {
+   "id": "FO-tennis-next",
+   "sport": "tennis",
+   "kind": "blank \u2014 no official numeric input",
+   "text": "Semi-final pairings were not yet set when the official ATP score page was read on 2026-10-23 (quarter-finals live), so no fixture or price is published.",
+   "source": "https://www.atptour.com/en/scores/current"
+  },
+  {
+   "id": "FO-short-golf",
+   "sport": "golf",
+   "kind": "top-5 shortfall",
+   "text": "Golf: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.pgatour.com/schedule"
+  },
+  {
+   "id": "FO-short-volleyball",
+   "sport": "volleyball",
+   "kind": "top-5 shortfall",
+   "text": "Volleyball: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.legavolley.it/calendario/?idCampionato=999"
+  },
+  {
+   "id": "FO-short-cricket",
+   "sport": "cricket",
+   "kind": "top-5 shortfall",
+   "text": "Cricket: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi"
+  },
+  {
+   "id": "FO-short-snooker",
+   "sport": "snooker",
+   "kind": "top-5 shortfall",
+   "text": "Snooker: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.wst.tv/"
+  },
+  {
+   "id": "FO-short-darts",
+   "sport": "darts",
+   "kind": "top-5 shortfall",
+   "text": "Darts: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.pdc.tv/tournaments/calendar"
+  },
+  {
+   "id": "FO-short-baseball",
+   "sport": "baseball",
+   "kind": "top-5 shortfall",
+   "text": "Baseball: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-30"
+  },
+  {
+   "id": "FO-short-gaelic-football",
+   "sport": "gaelic-football",
+   "kind": "top-5 shortfall",
+   "text": "Gaelic Sports: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://munster.gaa.ie/event/2026-kerry-county-senior-football-championship-final-dr-crokes-v-kenmare-shamrocks/"
+  },
+  {
+   "id": "FO-short-greyhounds",
+   "sport": "greyhounds",
+   "kind": "top-5 shortfall",
+   "text": "Greyhounds: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.gbgb.org.uk/"
+  },
+  {
+   "id": "FO-short-tennis",
+   "sport": "tennis",
+   "kind": "top-5 shortfall",
+   "text": "Tennis: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.atptour.com/en/scores/current"
+  },
+  {
+   "id": "FO-short-motor-racing",
+   "sport": "motor-racing",
+   "kind": "top-5 shortfall",
+   "text": "Motor Racing: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  {
+   "id": "FO-short-handball",
+   "sport": "handball",
+   "kind": "top-5 shortfall",
+   "text": "Handball: 4 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101016/OrlenWislaPlock-HBCNantes/"
+  },
+  {
+   "id": "FO-short-ice-hockey",
+   "sport": "ice-hockey",
+   "kind": "top-5 shortfall",
+   "text": "Ice Hockey: 2 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://api-web.nhle.com/v1/score/2026-10-25"
+  },
+  {
+   "id": "FO-short-basketball",
+   "sport": "basketball",
+   "kind": "top-5 shortfall",
+   "text": "Basketball: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.nba.com/game/0022600008"
+  },
+  {
+   "id": "FO-short-rugby-league",
+   "sport": "rugby-league",
+   "kind": "top-5 shortfall",
+   "text": "Rugby League: 0 fixture(s) with an in-band high selection from captured official inputs \u2014 fewer than the five-per-sport aim. No price was invented to fill the gap.",
+   "source": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/england-v-france/"
+  }
+ ]
+}

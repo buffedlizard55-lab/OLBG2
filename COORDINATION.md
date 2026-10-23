@@ -3663,3 +3663,25 @@ link to the root navigation; add `vanguard data/vanguard` and the three `vanguar
 | Live | <https://buffedlizard55-lab.github.io/OLBG2/vanguard/index.html> · <https://buffedlizard55-lab.github.io/OLBG2/vanguard/flagged.html> — both re-fetched from the deployed site after the final deploy and checked line by line (KPI block reads 91 / 17 / 512 / 85 / 21 / 19; every sport-level flag resolves to its sport page) |
 | Scope | only `vanguard/**`, `data/vanguard/**`, `scripts/vanguard_*.py`, `tests/test_vanguard_ca03be92.py`, `research/vanguard-audit-ca03be92.md` were added; `COORDINATION.md` append-only. No root or shared file edited. |
 | Open requests for the root owner | add `vanguard/` to the root navigation; add the three `vanguard_*` scripts and `vanguard data/vanguard` to `.github/workflows/pages.yml` |
+
+---
+
+## Session `arena/b8a1ce4c-olbg2` — CLAIM: `/desk/` 15-sport OLBG event inventory, fresh 2026-10-23 official capture, origination, Top-5 predictions, and line-by-line repo audit
+
+- **Session ID:** `arena/b8a1ce4c-olbg2` · **Branch:** `arena/b8a1ce4c-olbg2` (fixed by the Arena harness)
+- **Claimed:** 2026-10-23 16:20 UTC, before any implementation edit.
+- **Concurrent-session check at claim time** (`git fetch origin '+refs/heads/*'`): `origin/main` = `2999cc0` (PR #139). Two branches were pushed within the previous five minutes and are treated as **active**:
+  - `arena/33e9eee7-olbg2` → claims `/focus/`, `data/focus/**`, `scripts/focus_*`, `research/focus-33e9eee7.md`, and later root nav/CI/README integration (task F6).
+  - `arena/8226c94a-olbg2` → claims `/monitor/`, `data/monitor/**`, `scripts/monitor_*`, `tests/test_monitor.py`, **and the shared root files** (`scripts/build_site.py`, root generated pages, `sports/**`, `.github/workflows/*`, `README.md`).
+- **Therefore this session claims a third, disjoint namespace only.** I will not create `/focus/` or `/monitor/`, and I will not edit root generated pages, `scripts/build_site.py`, `.github/workflows/**`, or `README.md`. Integration requests (root nav entry, CI drift paths) are logged here for the root owner instead.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| D1 | Board check, live-branch scan, claim disjoint `/desk/` scope, commit & push immediately | in progress | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+| D2 | OLBG reverse-engineering refresh 2026-10-23: read all 15 requested sport hubs, record every listed event + market + tip split, verbatim, with timestamp | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/olbg/**`, `scripts/desk_olbg.py`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 | Fresh first-hand official governing-body capture for the same 15 sports (ranking/table/result inputs only), verbatim text stored | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/capture/**`, `data/desk/inputs.json`, `data/desk/sources.json`, `scripts/desk_seed.py` | 
+| D4 | Independent line origination (winner / handicap / total where an official numeric input exists) + low/medium/high + strict gate p>=0.70 and fair American in [-250,+10000] + Top-5 per sport | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_model.py`, `data/desk/{matches,lines}.json` |
+| D5 | Unique >=30-word predictions for high-confidence picks, every claim tied to a stored official capture; blanks stay blank | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_predictions.py`, `data/desk/{predictions,flagged}.json` |
+| D6 | Line-by-line audit of the already-merged layers (row -> official source re-read today), irregularity register | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/audit.json`, `research/desk-audit-b8a1ce4c.md` |
+| D7 | `/desk/` dashboard (exec summary, matches, lines, Top-5, predictions, 15 sport subpages, OLBG inventory, audit, flagged, sources, methodology) + verifier + tests | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_build.py`, `scripts/desk_verify.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+| D8 | Rebase on `origin/main`, full test suite, PR -> merge, confirm Pages live, log result here | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |

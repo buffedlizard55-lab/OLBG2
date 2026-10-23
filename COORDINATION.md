@@ -4284,3 +4284,26 @@ Tasks L1–L6 are **done** and the `/ledger/` scope is released. Note for integr
 | Integration in progress | CI rebuild/drift entries for `olbg data/olbg`; root navigation/README now identify `/olbg/` as latest while preserving other desks. PR 161 was open and documentation-only at this check. |
 
 O2–O6 are locally done. O7 remains open until the full suite, PR CI, merge, Pages deployment and live-content checks are recorded. No active offer, current bookmaker quote, complete global OLBG inventory or five-per-sport quota is claimed.
+
+---
+
+## Session `arena/758c0623-olbg2` — O1–O7 DONE; PR 163 MERGED AND PAGES LIVE (${stamp})
+
+| Item | Final result |
+| --- | --- |
+| Implementation PR | https://github.com/buffedlizard55-lab/OLBG2/pull/163 — merged 2026-10-23T19:58:24Z |
+| Merge commit | `e57b896937e08fd80387bf3b62caaeb48dcba136` |
+| PR validation | **success** — run `40015484081`; 622 tests, 1,825 OLBG structural checks and zero drift |
+| Main validation | **success** — run `40015588211` (23 seconds) |
+| Pages deployment | **success** — `Deploy Pages` run `40015588371`; reusable validation and deploy jobs both passed; legacy `pages-build-deployment` run `40015588416` also passed |
+| Pages API | `status: built`; https://buffedlizard55-lab.github.io/OLBG2/ |
+| Live desk | https://buffedlizard55-lab.github.io/OLBG2/olbg/ — executive counts, 15 category links and three high-confidence analyses rendered |
+| Live review queue | https://buffedlizard55-lab.github.io/OLBG2/olbg/flagged.html — 58 source-linked findings rendered; zero-row sport page also checked |
+| Final desk size | 22 HTML pages; 89 upcoming rows across 11 sports; all 15 categories represented; 54 priced matches; 58 originated markets; 25 shortlisted selections; 3 high-confidence analyses |
+| Local validation | 622 repository tests; 13 dedicated tests; `integration_audit.py` 0 local-link errors; deterministic offline rebuild |
+
+**Publication boundary:** 0 active offers, 24 last-seen OLBG rows and 65 official-context-only rows remain distinct. No current bookmaker quote, complete global OLBG inventory, unsupported injury claim or five-per-sport quota is asserted. Every blank row and capped high-probability/low-detail selection remains in the public review queue.
+
+**CI irregularity resolved:** early runs failed only on last-bit Python 3.11/3.12 differences in two NHL Poisson totals. Serialized Poisson probabilities and decimal reciprocals are now normalized to 12 places, with regression coverage; American prices, selections, confidence grades and displayed percentages did not change. The corrected PR and main pipelines are green.
+
+O1–O7 are **done** and the `/olbg/` implementation scope is released. Shared historical files and other desks were preserved. This append is a documentation-only publication record on the same fixed Arena branch.

@@ -4129,3 +4129,6 @@ was written because no official injury report was captured.
 
 | PR #146 | merged 2026-10-23T16:34:18Z, merge commit `c80b8db` — table-cell structure, coverage labels, row-width assertion |
 | Live re-check after #146 | <https://buffedlizard55-lab.github.io/OLBG2/desk/index.html?v=2> read line by line post-deploy: eight confidence cells now read `high`; Ice Hockey status reads “priced from official inputs”; Rugby Union and Baseball read “fixtures confirmed; consensus prices”. The first fetch without a query string returned the pre-deploy CDN copy, which is why the cache-buster is recorded here. |
+
+| PR #149 | merged 2026-10-23T16:40:54Z, merge commit `e825a44` — documentation-only. Records the #146 merge and the post-deploy re-read. `git diff origin/main -- COORDINATION.md` was a pure insert, zero deletions. |
+| Post-merge integrity | After #149, `origin/main` advanced to `5048b3d` (PR #151, `liveboard` namespace). `git diff e825a44..5048b3d --name-only -- desk data/olbgdesk` returns nothing, so the desk surfaces were not touched by that merge. The Ice Hockey subpage was re-read from the live site and matches the built file row for row. |

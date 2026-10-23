@@ -1,0 +1,2661 @@
+{
+ "counts": {
+  "fixtures": 40,
+  "lines": 236,
+  "in_band": 32
+ },
+ "matches": [
+  {
+   "id": "mlb-849802",
+   "sport": "baseball",
+   "competition": "MLB World Series",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-30",
+   "basis": "Fixture read 2026-10-23 from the official MLB schedule API; runs scored/allowed from the official MLB regular-season standings (Tampa Bay re-read 2026-10-23, Milwaukee from the 2026-10-22 capture of the same standings), shrunk gp/(gp+20) toward 4.4811; home +0.12",
+   "facts": "World Series Game 2 at American Family Field. Tampa Bay went 98-64 scoring 736 and allowing 650; Milwaukee went 103-59, the best record in MLB.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Milwaukee Brewers",
+     "p": 0.6034,
+     "decimal": 1.66,
+     "american": -152
+    },
+    {
+     "market": "match winner",
+     "selection": "Tampa Bay Rays",
+     "p": 0.3966,
+     "decimal": 2.52,
+     "american": 152
+    },
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Rays -2",
+     "p": 0.7273,
+     "decimal": 1.37,
+     "american": -270
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -1",
+     "p": 0.6705,
+     "decimal": 1.49,
+     "american": -204
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -2",
+     "p": 0.7856,
+     "decimal": 1.27,
+     "american": -370
+    },
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Rays -1",
+     "p": 0.6018,
+     "decimal": 1.66,
+     "american": -152
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6.5",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10.5",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 4.6524,
+    "mu_away": 3.876
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "mlb-849804",
+   "sport": "baseball",
+   "competition": "MLB World Series",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-30",
+   "basis": "Fixture read 2026-10-23 from the official MLB schedule API; runs scored/allowed from the official MLB regular-season standings (Tampa Bay re-read 2026-10-23, Milwaukee from the 2026-10-22 capture of the same standings), shrunk gp/(gp+20) toward 4.4811; home +0.12",
+   "facts": "World Series Game 3 at Tropicana Field, the series switching to Tampa Bay. Tampa Bay were 55-26 at home in the regular season as published in the official MLB standings.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Tampa Bay Rays",
+     "p": 0.4282,
+     "decimal": 2.34,
+     "american": 134
+    },
+    {
+     "market": "match winner",
+     "selection": "Milwaukee Brewers",
+     "p": 0.5718,
+     "decimal": 1.75,
+     "american": -133
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -1",
+     "p": 0.7606,
+     "decimal": 1.31,
+     "american": -323
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -0",
+     "p": 0.6401,
+     "decimal": 1.56,
+     "american": -179
+    },
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Rays -2",
+     "p": 0.6331,
+     "decimal": 1.58,
+     "american": -172
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -2",
+     "p": 0.8544,
+     "decimal": 1.17,
+     "american": -588
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6.5",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10.5",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 3.996,
+    "mu_away": 4.5324
+   },
+   "confidence": "low"
+  },
+  {
+   "id": "mlb-849803",
+   "sport": "baseball",
+   "competition": "MLB World Series",
+   "start_utc": "2026-10-28T00:00:00Z",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-30",
+   "basis": "Fixture read 2026-10-23 from the official MLB schedule API; runs scored/allowed from the official MLB regular-season standings (Tampa Bay re-read 2026-10-23, Milwaukee from the 2026-10-22 capture of the same standings), shrunk gp/(gp+20) toward 4.4811; home +0.12",
+   "facts": "World Series Game 4 at Tropicana Field. Milwaukee scored 832 and allowed 618 in the regular season; Tampa Bay scored 736 and allowed 650.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Tampa Bay Rays",
+     "p": 0.4282,
+     "decimal": 2.34,
+     "american": 134
+    },
+    {
+     "market": "match winner",
+     "selection": "Milwaukee Brewers",
+     "p": 0.5718,
+     "decimal": 1.75,
+     "american": -133
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -1",
+     "p": 0.7606,
+     "decimal": 1.31,
+     "american": -323
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -0",
+     "p": 0.6401,
+     "decimal": 1.56,
+     "american": -179
+    },
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Rays -2",
+     "p": 0.6331,
+     "decimal": 1.58,
+     "american": -172
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -2",
+     "p": 0.8544,
+     "decimal": 1.17,
+     "american": -588
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6.5",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10.5",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 3.996,
+    "mu_away": 4.5324
+   },
+   "confidence": "low"
+  },
+  {
+   "id": "mlb-849799",
+   "sport": "baseball",
+   "competition": "MLB World Series",
+   "start_utc": "2026-10-29T00:00:00Z",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-30",
+   "basis": "Fixture read 2026-10-23 from the official MLB schedule API; runs scored/allowed from the official MLB regular-season standings (Tampa Bay re-read 2026-10-23, Milwaukee from the 2026-10-22 capture of the same standings), shrunk gp/(gp+20) toward 4.4811; home +0.12",
+   "facts": "World Series Game 5 at Tropicana Field, listed by MLB as if-necessary, so it is played only if the series is not already decided.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Tampa Bay Rays",
+     "p": 0.4282,
+     "decimal": 2.34,
+     "american": 134
+    },
+    {
+     "market": "match winner",
+     "selection": "Milwaukee Brewers",
+     "p": 0.5718,
+     "decimal": 1.75,
+     "american": -133
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -1",
+     "p": 0.7606,
+     "decimal": 1.31,
+     "american": -323
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -0",
+     "p": 0.6401,
+     "decimal": 1.56,
+     "american": -179
+    },
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Rays -2",
+     "p": 0.6331,
+     "decimal": 1.58,
+     "american": -172
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -2",
+     "p": 0.8544,
+     "decimal": 1.17,
+     "american": -588
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6.5",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10.5",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 3.996,
+    "mu_away": 4.5324
+   },
+   "confidence": "low"
+  },
+  {
+   "id": "mlb-849801",
+   "sport": "baseball",
+   "competition": "MLB World Series",
+   "start_utc": "2026-10-31T00:00:00Z",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-30",
+   "basis": "Fixture read 2026-10-23 from the official MLB schedule API; runs scored/allowed from the official MLB regular-season standings (Tampa Bay re-read 2026-10-23, Milwaukee from the 2026-10-22 capture of the same standings), shrunk gp/(gp+20) toward 4.4811; home +0.12",
+   "facts": "World Series Game 6 at American Family Field, listed by MLB as if-necessary and played only if the series reaches a sixth game.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Milwaukee Brewers",
+     "p": 0.6034,
+     "decimal": 1.66,
+     "american": -152
+    },
+    {
+     "market": "match winner",
+     "selection": "Tampa Bay Rays",
+     "p": 0.3966,
+     "decimal": 2.52,
+     "american": 152
+    },
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Rays -2",
+     "p": 0.7273,
+     "decimal": 1.37,
+     "american": -270
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -1",
+     "p": 0.6705,
+     "decimal": 1.49,
+     "american": -204
+    },
+    {
+     "market": "handicap",
+     "selection": "Milwaukee Brewers -2",
+     "p": 0.7856,
+     "decimal": 1.27,
+     "american": -370
+    },
+    {
+     "market": "handicap",
+     "selection": "Tampa Bay Rays -1",
+     "p": 0.6018,
+     "decimal": 1.66,
+     "american": -152
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Over 6.5",
+     "p": 0.7468,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    },
+    {
+     "market": "match total",
+     "selection": "Under 10.5",
+     "p": 0.7602,
+     "decimal": 1.32,
+     "american": -312
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 4.6524,
+    "mu_away": 3.876
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "nba-0022600008",
+   "sport": "basketball",
+   "competition": "NBA",
+   "start_utc": "2026-10-23T23:00:00Z",
+   "home": "Boston Celtics",
+   "away": "New York Knicks",
+   "source_url": "https://www.nba.com/game/0022600008",
+   "basis": "preseason net rating from NBA.com's official Week 1 power rankings, used as a points-per-100 proxy with a league-average prior where the table published no value; flagged on the review page because preseason data is not regular-season form",
+   "facts": "Boston went 4-0 in preseason with a +17.7 net rating, the best in the league, and Jaylen Brown has moved to Philadelphia. New York are the defending champions.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Boston Celtics",
+     "p": 0.8678,
+     "decimal": 1.15,
+     "american": -667
+    },
+    {
+     "market": "match winner",
+     "selection": "New York Knicks",
+     "p": 0.1322,
+     "decimal": 7.56,
+     "american": 656
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "net_proxy": true
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "nba-0022600009",
+   "sport": "basketball",
+   "competition": "NBA",
+   "start_utc": "2026-10-24T01:30:00Z",
+   "home": "San Antonio Spurs",
+   "away": "Houston Rockets",
+   "source_url": "https://www.nba.com/game/0022600009",
+   "basis": "preseason net rating from NBA.com's official Week 1 power rankings, used as a points-per-100 proxy with a league-average prior where the table published no value; flagged on the review page because preseason data is not regular-season form",
+   "facts": "San Antonio's preseason net rating was +8.4, third in the league; Houston's figure was not published in the same official table.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "San Antonio Spurs",
+     "p": 0.7381,
+     "decimal": 1.35,
+     "american": -286
+    },
+    {
+     "market": "match winner",
+     "selection": "Houston Rockets",
+     "p": 0.2619,
+     "decimal": 3.82,
+     "american": 282
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "net_proxy": true
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "cricket-next",
+   "sport": "cricket",
+   "competition": "ICC \u2014 upcoming internationals",
+   "start_utc": "",
+   "home": "Next ICC fixture",
+   "away": "",
+   "source_url": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi",
+   "basis": "no numeric official input captured \u2014 blank, not estimated",
+   "facts": "The ICC fixtures page returned 404 on 2026-10-23 and no dated upcoming fixture with a ranking input was captured, so cricket is left blank and flagged.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "darts-next",
+   "sport": "darts",
+   "competition": "PDC European Championship \u2014 next round",
+   "start_utc": "",
+   "home": "Next-round pairings",
+   "away": "",
+   "source_url": "https://www.pdc.tv/tournaments/calendar",
+   "basis": "no numeric official input captured \u2014 blank, not estimated",
+   "facts": "No upcoming pairing with an official numeric strength input was read from PDC on 2026-10-23, so the market is left blank rather than estimated.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "gaa-kerry-sfc",
+   "sport": "gaelic-football",
+   "competition": "Kerry Senior Football final",
+   "start_utc": "2026-10-25T14:00:00Z",
+   "home": "Dr Crokes",
+   "away": "Kenmare Shamrocks",
+   "source_url": "https://munster.gaa.ie/event/2026-kerry-county-senior-football-championship-final-dr-crokes-v-kenmare-shamrocks/",
+   "basis": "no numeric official input was published for these club sides, so no price is originated",
+   "facts": "The Kerry final is scheduled for 14:00 on 25 October at Fitzgerald Stadium, refereed by Sean Joy.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "gaa-waterford-sfc",
+   "sport": "gaelic-football",
+   "competition": "Waterford Senior Football final",
+   "start_utc": "2026-10-25T14:30:00Z",
+   "home": "Rathgormack",
+   "away": "The Nire",
+   "source_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+   "basis": "no numeric official input was published for these club sides, so no price is originated",
+   "facts": "The Waterford final throws in at 14:30 on 25 October at Fraher Field, Dungarvan. Rathgormack beat Abbeyside-Ballinacourty 2-10 to 0-8 in the 2024 final.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "gaa-cork-psfc",
+   "sport": "gaelic-football",
+   "competition": "Cork Premier Senior Football final",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "home": "St Finbarrs",
+   "away": "Nemo Rangers",
+   "source_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+   "basis": "no numeric official input was published for these club sides, so no price is originated",
+   "facts": "St Finbarrs beat Nemo Rangers 1-14 to 1-13 in the 2025 final at SuperValu Pairc Ui Chaoimh. The 2026 final throws in at 16:00 on 25 October at the same venue.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "golf-next",
+   "sport": "golf",
+   "competition": "PGA Tour \u2014 Bank of Utah Championship",
+   "start_utc": "",
+   "home": "132-player field (outright)",
+   "away": "",
+   "source_url": "https://www.pgatour.com/schedule",
+   "basis": "no numeric official input captured \u2014 blank, not estimated",
+   "facts": "A full-field outright requires a strokes-gained distribution for all 132 players, which the official schedule page does not publish; left unlined.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "greyhounds-next",
+   "sport": "greyhounds",
+   "competition": "GBGB \u2014 Romford Champion Stakes",
+   "start_utc": "",
+   "home": "Romford 575m final field",
+   "away": "",
+   "source_url": "https://www.gbgb.org.uk/",
+   "basis": "no numeric official input captured \u2014 blank, not estimated",
+   "facts": "No complete official trap-by-trap timed field was read on 2026-10-23, so no greyhound price is originated.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "ehf-202711020101016",
+   "sport": "handball",
+   "competition": "EHF Champions League men group phase",
+   "start_utc": "2026-10-28T17:45:00Z",
+   "home": "Orlen Wisla Plock",
+   "away": "HBC Nantes",
+   "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101016/OrlenWislaPlock-HBCNantes/",
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Plock lead Group B on six points with a +5 goal difference. Nantes are level on six points with 142 scored and 143 conceded.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Orlen Wisla Plock",
+     "p": 0.5322,
+     "decimal": 1.88,
+     "american": -114
+    },
+    {
+     "market": "match winner",
+     "selection": "HBC Nantes",
+     "p": 0.4143,
+     "decimal": 2.41,
+     "american": 141
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0535,
+     "decimal": 18.69,
+     "american": 1769
+    },
+    {
+     "market": "handicap",
+     "selection": "HBC Nantes -5",
+     "p": 0.7248,
+     "decimal": 1.38,
+     "american": -263
+    },
+    {
+     "market": "handicap",
+     "selection": "Orlen Wisla Plock -3",
+     "p": 0.6872,
+     "decimal": 1.46,
+     "american": -217
+    },
+    {
+     "market": "handicap",
+     "selection": "Orlen Wisla Plock -4",
+     "p": 0.7335,
+     "decimal": 1.36,
+     "american": -278
+    },
+    {
+     "market": "handicap",
+     "selection": "HBC Nantes -4",
+     "p": 0.6778,
+     "decimal": 1.48,
+     "american": -208
+    },
+    {
+     "market": "match total",
+     "selection": "Over 50",
+     "p": 0.7085,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 50.5",
+     "p": 0.7085,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 58",
+     "p": 0.7033,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 58.5",
+     "p": 0.7033,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    }
+   ],
+   "in_band": [
+    {
+     "market": "match total",
+     "selection": "Over 50",
+     "p": 0.7085,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 50.5",
+     "p": 0.7085,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 58",
+     "p": 0.7033,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 58.5",
+     "p": 0.7033,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_home": 27.8869,
+    "mu_away": 26.7878
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "ehf-202711020101004",
+   "sport": "handball",
+   "competition": "EHF Champions League men group phase",
+   "start_utc": "2026-10-28T17:45:00Z",
+   "home": "FC Porto",
+   "away": "One Veszprem HC",
+   "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101004/FCPorto-OneVeszpremHC/",
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Porto are third in Group A on three points, 15 goals down. Veszprem lead the group with five wins from five and a +39 difference.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "FC Porto",
+     "p": 0.1953,
+     "decimal": 5.12,
+     "american": 412
+    },
+    {
+     "market": "match winner",
+     "selection": "One Veszprem HC",
+     "p": 0.7691,
+     "decimal": 1.3,
+     "american": -333
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0356,
+     "decimal": 28.09,
+     "american": 2709
+    },
+    {
+     "market": "handicap",
+     "selection": "One Veszprem HC +3",
+     "p": 0.6881,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "handicap",
+     "selection": "One Veszprem HC +2",
+     "p": 0.7301,
+     "decimal": 1.37,
+     "american": -270
+    },
+    {
+     "market": "handicap",
+     "selection": "One Veszprem HC +1",
+     "p": 0.7691,
+     "decimal": 1.3,
+     "american": -333
+    },
+    {
+     "market": "handicap",
+     "selection": "One Veszprem HC +4",
+     "p": 0.6435,
+     "decimal": 1.55,
+     "american": -182
+    },
+    {
+     "market": "match total",
+     "selection": "Over 62",
+     "p": 0.7047,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 62.5",
+     "p": 0.7047,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 71",
+     "p": 0.7128,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 71.5",
+     "p": 0.7128,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "in_band": [
+    {
+     "market": "match total",
+     "selection": "Over 62",
+     "p": 0.7047,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 62.5",
+     "p": 0.7047,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 71",
+     "p": 0.7128,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 71.5",
+     "p": 0.7128,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_home": 30.2505,
+    "mu_away": 36.7692
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "ehf-202711020101067",
+   "sport": "handball",
+   "competition": "EHF Champions League men group phase",
+   "start_utc": "2026-10-28T19:45:00Z",
+   "home": "Industria Kielce",
+   "away": "Kolstad Handball",
+   "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadHandball/",
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Kielce are second in Group F on six points, +2. Kolstad are bottom of the group, winless with a -35 difference.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Industria Kielce",
+     "p": 0.7125,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match winner",
+     "selection": "Kolstad Handball",
+     "p": 0.2459,
+     "decimal": 4.07,
+     "american": 307
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0416,
+     "decimal": 24.04,
+     "american": 2304
+    },
+    {
+     "market": "handicap",
+     "selection": "Industria Kielce +0",
+     "p": 0.7125,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Industria Kielce +1",
+     "p": 0.6678,
+     "decimal": 1.5,
+     "american": -200
+    },
+    {
+     "market": "handicap",
+     "selection": "Industria Kielce -1",
+     "p": 0.7541,
+     "decimal": 1.33,
+     "american": -303
+    },
+    {
+     "market": "handicap",
+     "selection": "Kolstad Handball -7",
+     "p": 0.6277,
+     "decimal": 1.59,
+     "american": -169
+    },
+    {
+     "market": "match total",
+     "selection": "Over 58",
+     "p": 0.6977,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Over 58.5",
+     "p": 0.6977,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Under 66",
+     "p": 0.6891,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "match total",
+     "selection": "Under 66.5",
+     "p": 0.6891,
+     "decimal": 1.45,
+     "american": -222
+    }
+   ],
+   "in_band": [
+    {
+     "market": "match winner",
+     "selection": "Industria Kielce",
+     "p": 0.7125,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Industria Kielce +0",
+     "p": 0.7125,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_home": 33.8299,
+    "mu_away": 28.8918
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "ehf-202711020101065",
+   "sport": "handball",
+   "competition": "EHF Champions League men group phase",
+   "start_utc": "2026-10-28T19:45:00Z",
+   "home": "SC Magdeburg",
+   "away": "HC Kriens-Luzern",
+   "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriens-Luzern/",
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "Magdeburg have won all five Group F games with a +36 difference. Kriens-Luzern are third on four points at -3.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "SC Magdeburg",
+     "p": 0.7258,
+     "decimal": 1.38,
+     "american": -263
+    },
+    {
+     "market": "match winner",
+     "selection": "HC Kriens-Luzern",
+     "p": 0.2339,
+     "decimal": 4.28,
+     "american": 328
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0403,
+     "decimal": 24.81,
+     "american": 2381
+    },
+    {
+     "market": "handicap",
+     "selection": "SC Magdeburg +0",
+     "p": 0.7258,
+     "decimal": 1.38,
+     "american": -263
+    },
+    {
+     "market": "handicap",
+     "selection": "SC Magdeburg +1",
+     "p": 0.6823,
+     "decimal": 1.47,
+     "american": -213
+    },
+    {
+     "market": "handicap",
+     "selection": "SC Magdeburg -1",
+     "p": 0.7661,
+     "decimal": 1.31,
+     "american": -323
+    },
+    {
+     "market": "handicap",
+     "selection": "SC Magdeburg +2",
+     "p": 0.6362,
+     "decimal": 1.57,
+     "american": -175
+    },
+    {
+     "market": "match total",
+     "selection": "Under 67",
+     "p": 0.6982,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Under 67.5",
+     "p": 0.6982,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Over 59",
+     "p": 0.686,
+     "decimal": 1.46,
+     "american": -217
+    },
+    {
+     "market": "match total",
+     "selection": "Over 59.5",
+     "p": 0.686,
+     "decimal": 1.46,
+     "american": -217
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 34.3836,
+    "mu_away": 29.1039
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "ehf-202711020101026",
+   "sport": "handball",
+   "competition": "EHF Champions League men group phase",
+   "start_utc": "2026-10-28T19:45:00Z",
+   "home": "Paris Saint-Germain",
+   "away": "Aalborg Handbold",
+   "source_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101026/ParisSaint-Germain-AalborgHandbold/",
+   "basis": "goals for and against from the EHF Champions League group tables, shrunk gp/(gp+3) toward the league average of 31.8273 goals per team; home +0.40",
+   "facts": "PSG are second in Group C on seven points with 182 scored. Aalborg lead the group on nine points and are unbeaten.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Paris Saint-Germain",
+     "p": 0.4878,
+     "decimal": 2.05,
+     "american": 105
+    },
+    {
+     "market": "match winner",
+     "selection": "Aalborg Handbold",
+     "p": 0.4629,
+     "decimal": 2.16,
+     "american": 116
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0493,
+     "decimal": 20.28,
+     "american": 1928
+    },
+    {
+     "market": "handicap",
+     "selection": "Aalborg Handbold -4",
+     "p": 0.7004,
+     "decimal": 1.43,
+     "american": -233,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Paris Saint-Germain -5",
+     "p": 0.7217,
+     "decimal": 1.39,
+     "american": -256
+    },
+    {
+     "market": "handicap",
+     "selection": "Paris Saint-Germain -4",
+     "p": 0.6787,
+     "decimal": 1.47,
+     "american": -213
+    },
+    {
+     "market": "handicap",
+     "selection": "Aalborg Handbold -5",
+     "p": 0.7419,
+     "decimal": 1.35,
+     "american": -286
+    },
+    {
+     "market": "match total",
+     "selection": "Over 61",
+     "p": 0.6911,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "match total",
+     "selection": "Over 61.5",
+     "p": 0.6911,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "match total",
+     "selection": "Under 69",
+     "p": 0.6876,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "match total",
+     "selection": "Under 69.5",
+     "p": 0.6876,
+     "decimal": 1.45,
+     "american": -222
+    }
+   ],
+   "in_band": [
+    {
+     "market": "handicap",
+     "selection": "Aalborg Handbold -4",
+     "p": 0.7004,
+     "decimal": 1.43,
+     "american": -233,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_home": 32.9595,
+    "mu_away": 32.7068
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "nhl-2026020180",
+   "sport": "ice-hockey",
+   "competition": "NHL",
+   "start_utc": "2026-10-25T19:00:00Z",
+   "home": "Chicago Blackhawks",
+   "away": "Florida Panthers",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-25",
+   "basis": "Fixture, records and leaders read 2026-10-23 from the official NHL score feed; goals for/against per game from the 2026-10-22 official NHL team-summary capture, shrunk gp/(gp+8) toward 3.0784; home +0.10 goals",
+   "facts": "Florida are 5-4-2 with Brady Tkachuk on seven goals and Matthew Tkachuk on twelve assists; Chicago are 3-6-0 with Spencer Knight on three wins.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Chicago Blackhawks",
+     "p": 0.3714,
+     "decimal": 2.69,
+     "american": 169
+    },
+    {
+     "market": "match winner",
+     "selection": "Florida Panthers",
+     "p": 0.6286,
+     "decimal": 1.59,
+     "american": -169
+    },
+    {
+     "market": "handicap",
+     "selection": "Florida Panthers -0",
+     "p": 0.7062,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Chicago Blackhawks -3",
+     "p": 0.7546,
+     "decimal": 1.33,
+     "american": -303
+    },
+    {
+     "market": "handicap",
+     "selection": "Chicago Blackhawks -2",
+     "p": 0.6116,
+     "decimal": 1.64,
+     "american": -156
+    },
+    {
+     "market": "handicap",
+     "selection": "Florida Panthers -1",
+     "p": 0.8303,
+     "decimal": 1.2,
+     "american": -500
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7",
+     "p": 0.7123,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7.5",
+     "p": 0.7123,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 4",
+     "p": 0.7441,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Over 4.5",
+     "p": 0.7441,
+     "decimal": 1.34,
+     "american": -294
+    }
+   ],
+   "in_band": [
+    {
+     "market": "handicap",
+     "selection": "Florida Panthers -0",
+     "p": 0.7062,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7",
+     "p": 0.7123,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7.5",
+     "p": 0.7123,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_home": 2.696,
+    "mu_away": 3.5302
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "nhl-2026020181",
+   "sport": "ice-hockey",
+   "competition": "NHL",
+   "start_utc": "2026-10-25T22:00:00Z",
+   "home": "Dallas Stars",
+   "away": "New York Islanders",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-25",
+   "basis": "Fixture, records and leaders read 2026-10-23 from the official NHL score feed; goals for/against per game from the 2026-10-22 official NHL team-summary capture, shrunk gp/(gp+8) toward 3.0784; home +0.10 goals",
+   "facts": "Dallas are 6-3-1 with Mikko Rantanen on five goals, Jason Robertson on eight assists and Jake Oettinger on five wins; the Islanders are 5-3-2 with Bo Horvat on five goals and Ilya Sorokin on five wins.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Dallas Stars",
+     "p": 0.5264,
+     "decimal": 1.9,
+     "american": -111
+    },
+    {
+     "market": "match winner",
+     "selection": "New York Islanders",
+     "p": 0.4736,
+     "decimal": 2.11,
+     "american": 111
+    },
+    {
+     "market": "handicap",
+     "selection": "New York Islanders -1",
+     "p": 0.7459,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "handicap",
+     "selection": "Dallas Stars -2",
+     "p": 0.7878,
+     "decimal": 1.27,
+     "american": -370
+    },
+    {
+     "market": "handicap",
+     "selection": "Dallas Stars -1",
+     "p": 0.623,
+     "decimal": 1.61,
+     "american": -164
+    },
+    {
+     "market": "handicap",
+     "selection": "New York Islanders -0",
+     "p": 0.5702,
+     "decimal": 1.75,
+     "american": -133
+    },
+    {
+     "market": "match total",
+     "selection": "Under 5",
+     "p": 0.6981,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Under 5.5",
+     "p": 0.6981,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Over 3",
+     "p": 0.6624,
+     "decimal": 1.51,
+     "american": -196
+    },
+    {
+     "market": "match total",
+     "selection": "Over 3.5",
+     "p": 0.6624,
+     "decimal": 1.51,
+     "american": -196
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 2.3365,
+    "mu_away": 2.1916
+   },
+   "confidence": "low"
+  },
+  {
+   "id": "nhl-2026020182",
+   "sport": "ice-hockey",
+   "competition": "NHL",
+   "start_utc": "2026-10-25T23:00:00Z",
+   "home": "Winnipeg Jets",
+   "away": "Montreal Canadiens",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-25",
+   "basis": "Fixture, records and leaders read 2026-10-23 from the official NHL score feed; goals for/against per game from the 2026-10-22 official NHL team-summary capture, shrunk gp/(gp+8) toward 3.0784; home +0.10 goals",
+   "facts": "Winnipeg are 4-3-3 with Kyle Connor on nine goals; Montreal are 4-3-2 with Cole Caufield on six goals and Nick Suzuki on seven assists.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Winnipeg Jets",
+     "p": 0.5485,
+     "decimal": 1.82,
+     "american": -122
+    },
+    {
+     "market": "match winner",
+     "selection": "Montreal Canadiens",
+     "p": 0.4515,
+     "decimal": 2.21,
+     "american": 121
+    },
+    {
+     "market": "handicap",
+     "selection": "Montreal Canadiens -1",
+     "p": 0.6894,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "handicap",
+     "selection": "Winnipeg Jets -2",
+     "p": 0.7714,
+     "decimal": 1.3,
+     "american": -333
+    },
+    {
+     "market": "handicap",
+     "selection": "Winnipeg Jets -1",
+     "p": 0.6298,
+     "decimal": 1.59,
+     "american": -169
+    },
+    {
+     "market": "handicap",
+     "selection": "Montreal Canadiens -2",
+     "p": 0.816,
+     "decimal": 1.23,
+     "american": -435
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7",
+     "p": 0.7161,
+     "decimal": 1.4,
+     "american": -250
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7.5",
+     "p": 0.7161,
+     "decimal": 1.4,
+     "american": -250
+    },
+    {
+     "market": "match total",
+     "selection": "Over 4",
+     "p": 0.7407,
+     "decimal": 1.35,
+     "american": -286
+    },
+    {
+     "market": "match total",
+     "selection": "Over 4.5",
+     "p": 0.7407,
+     "decimal": 1.35,
+     "american": -286
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 3.2545,
+    "mu_away": 2.9448
+   },
+   "confidence": "low"
+  },
+  {
+   "id": "nhl-2026020183",
+   "sport": "ice-hockey",
+   "competition": "NHL",
+   "start_utc": "2026-10-26T00:00:00Z",
+   "home": "Nashville Predators",
+   "away": "Colorado Avalanche",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-25",
+   "basis": "Fixture, records and leaders read 2026-10-23 from the official NHL score feed; goals for/against per game from the 2026-10-22 official NHL team-summary capture, shrunk gp/(gp+8) toward 3.0784; home +0.10 goals",
+   "facts": "Colorado are 5-4-1 with Artturi Lehkonen on eight goals and Nathan MacKinnon on ten assists; Nashville are 3-3-3 with Ryan O'Reilly on four goals and Roman Josi on eight assists.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Nashville Predators",
+     "p": 0.4358,
+     "decimal": 2.29,
+     "american": 129
+    },
+    {
+     "market": "match winner",
+     "selection": "Colorado Avalanche",
+     "p": 0.5642,
+     "decimal": 1.77,
+     "american": -130
+    },
+    {
+     "market": "handicap",
+     "selection": "Nashville Predators -2",
+     "p": 0.6715,
+     "decimal": 1.49,
+     "american": -204
+    },
+    {
+     "market": "handicap",
+     "selection": "Colorado Avalanche -0",
+     "p": 0.6439,
+     "decimal": 1.55,
+     "american": -182
+    },
+    {
+     "market": "handicap",
+     "selection": "Colorado Avalanche -1",
+     "p": 0.7808,
+     "decimal": 1.28,
+     "american": -357
+    },
+    {
+     "market": "handicap",
+     "selection": "Nashville Predators -3",
+     "p": 0.8007,
+     "decimal": 1.25,
+     "american": -400
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7",
+     "p": 0.6893,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "match total",
+     "selection": "Under 7.5",
+     "p": 0.6893,
+     "decimal": 1.45,
+     "american": -222
+    },
+    {
+     "market": "match total",
+     "selection": "Over 4",
+     "p": 0.7633,
+     "decimal": 1.31,
+     "american": -323
+    },
+    {
+     "market": "match total",
+     "selection": "Over 4.5",
+     "p": 0.7633,
+     "decimal": 1.31,
+     "american": -323
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "mu_home": 2.9846,
+    "mu_away": 3.4015
+   },
+   "confidence": "low"
+  },
+  {
+   "id": "nhl-2026020184",
+   "sport": "ice-hockey",
+   "competition": "NHL",
+   "start_utc": "2026-10-26T02:00:00Z",
+   "home": "Vancouver Canucks",
+   "away": "Minnesota Wild",
+   "source_url": "https://api-web.nhle.com/v1/score/2026-10-25",
+   "basis": "Fixture, records and leaders read 2026-10-23 from the official NHL score feed; goals for/against per game from the 2026-10-22 official NHL team-summary capture, shrunk gp/(gp+8) toward 3.0784; home +0.10 goals",
+   "facts": "Minnesota are 6-3-2 in the official NHL score feed; Vancouver are 2-9-1, the weakest record in this five-game set.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Vancouver Canucks",
+     "p": 0.327,
+     "decimal": 3.06,
+     "american": 206
+    },
+    {
+     "market": "match winner",
+     "selection": "Minnesota Wild",
+     "p": 0.673,
+     "decimal": 1.49,
+     "american": -204
+    },
+    {
+     "market": "handicap",
+     "selection": "Vancouver Canucks -3",
+     "p": 0.7022,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Minnesota Wild -0",
+     "p": 0.7443,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "handicap",
+     "selection": "Minnesota Wild +1",
+     "p": 0.6016,
+     "decimal": 1.66,
+     "american": -152
+    },
+    {
+     "market": "handicap",
+     "selection": "Minnesota Wild -1",
+     "p": 0.8544,
+     "decimal": 1.17,
+     "american": -588
+    },
+    {
+     "market": "match total",
+     "selection": "Over 5",
+     "p": 0.6611,
+     "decimal": 1.51,
+     "american": -196
+    },
+    {
+     "market": "match total",
+     "selection": "Over 5.5",
+     "p": 0.6611,
+     "decimal": 1.51,
+     "american": -196
+    },
+    {
+     "market": "match total",
+     "selection": "Under 8",
+     "p": 0.7658,
+     "decimal": 1.31,
+     "american": -323
+    },
+    {
+     "market": "match total",
+     "selection": "Under 8.5",
+     "p": 0.7658,
+     "decimal": 1.31,
+     "american": -323
+    }
+   ],
+   "in_band": [
+    {
+     "market": "handicap",
+     "selection": "Vancouver Canucks -3",
+     "p": 0.7022,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_home": 2.7664,
+    "mu_away": 3.9459
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "f1-usgp",
+   "sport": "motor-racing",
+   "competition": "Formula 1 United States Grand Prix",
+   "start_utc": "2026-10-25T19:00:00Z",
+   "home": "United States Grand Prix",
+   "away": "Outright",
+   "source_url": "https://www.formula1.com/en/results/2026/drivers",
+   "basis": "share of 2026 drivers' championship points from formula1.com; a points share is a season-long measure, not a single-race model, so every price here is capped at low confidence",
+   "facts": "Kimi Antonelli leads the championship on 340 points from 17 rounds, 102 clear of George Russell on 238. Max Verstappen has won the last two races in Bahrain and Singapore.",
+   "prices": [
+    {
+     "market": "outright winner",
+     "selection": "Kimi Antonelli",
+     "p": 0.2355,
+     "decimal": 4.25,
+     "american": 325
+    },
+    {
+     "market": "outright winner",
+     "selection": "George Russell",
+     "p": 0.1648,
+     "decimal": 6.07,
+     "american": 507
+    },
+    {
+     "market": "outright winner",
+     "selection": "Lewis Hamilton",
+     "p": 0.1586,
+     "decimal": 6.31,
+     "american": 531
+    },
+    {
+     "market": "outright winner",
+     "selection": "Max Verstappen",
+     "p": 0.153,
+     "decimal": 6.54,
+     "american": 554
+    },
+    {
+     "market": "outright winner",
+     "selection": "Charles Leclerc",
+     "p": 0.1489,
+     "decimal": 6.72,
+     "american": 572
+    },
+    {
+     "market": "outright winner",
+     "selection": "Lando Norris",
+     "p": 0.1392,
+     "decimal": 7.18,
+     "american": 618
+    }
+   ],
+   "in_band": [],
+   "confidence": "low"
+  },
+  {
+   "id": "rlwc-england-v-france",
+   "sport": "rugby-league",
+   "competition": "Rugby League World Cup round 2",
+   "start_utc": "2026-10-24T01:35:00Z",
+   "home": "England",
+   "away": "France",
+   "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/england-v-france/",
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "England lost 30-12 to Tonga in round one despite a Herbie Farnworth try. France were beaten 78-4 by Samoa.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "England",
+     "p": 0.9866,
+     "decimal": 1.01,
+     "american": -10000
+    },
+    {
+     "market": "match winner",
+     "selection": "France",
+     "p": 0.0134,
+     "decimal": 74.63,
+     "american": 7363
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": 56.0
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "rlwc-new-zealand-v-cook-islands",
+   "sport": "rugby-league",
+   "competition": "Rugby League World Cup round 2",
+   "start_utc": "2026-10-25T00:05:00Z",
+   "home": "New Zealand",
+   "away": "Cook Islands",
+   "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/new-zealand-v-cook-islands/",
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "New Zealand lost 24-22 to Australia in round one, with Keano Kini at fullback. The Cook Islands lost 40-12 to Fiji.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "New Zealand",
+     "p": 0.8803,
+     "decimal": 1.14,
+     "american": -714
+    },
+    {
+     "market": "match winner",
+     "selection": "Cook Islands",
+     "p": 0.1197,
+     "decimal": 8.35,
+     "american": 735
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": 26.0
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "rlwc-australia-v-fiji",
+   "sport": "rugby-league",
+   "competition": "Rugby League World Cup round 2",
+   "start_utc": "2026-10-25T04:05:00Z",
+   "home": "Australia",
+   "away": "Fiji",
+   "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+   "basis": "round-one score differential from the official NRL.com World Cup draw; difference divided by a 30-point scale. No ladder or rating table exists after one round, so this is flagged as a thin input",
+   "facts": "Australia beat New Zealand 24-22 in round one. Fiji beat the Cook Islands 40-12.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Australia",
+     "p": 0.1197,
+     "decimal": 8.35,
+     "american": 735
+    },
+    {
+     "market": "match winner",
+     "selection": "Fiji",
+     "p": 0.8803,
+     "decimal": 1.14,
+     "american": -714
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": -26.0
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "urc-292611",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship round 4",
+   "start_utc": "2026-10-24T06:45:00Z",
+   "home": "Vodacom Bulls",
+   "away": "Ulster Rugby",
+   "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/vodacom-bulls-vs-ulster-rugby-2026-10-24/292611",
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "The Bulls are third on eleven points with 126 points scored, the most in the table, after beating the Lions 57-15. Ulster are eleventh, drawing with Munster and losing to Glasgow.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Vodacom Bulls",
+     "p": 0.9833,
+     "decimal": 1.02,
+     "american": -5000
+    },
+    {
+     "market": "match winner",
+     "selection": "Ulster Rugby",
+     "p": 0.0112,
+     "decimal": 89.29,
+     "american": 8829
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0054,
+     "decimal": 185.19,
+     "american": 18419
+    },
+    {
+     "market": "handicap",
+     "selection": "Vodacom Bulls +12",
+     "p": 0.9001,
+     "decimal": 1.11,
+     "american": -909
+    },
+    {
+     "market": "handicap",
+     "selection": "Vodacom Bulls +11",
+     "p": 0.9129,
+     "decimal": 1.1,
+     "american": -1000
+    },
+    {
+     "market": "handicap",
+     "selection": "Vodacom Bulls +10",
+     "p": 0.9245,
+     "decimal": 1.08,
+     "american": -1250
+    },
+    {
+     "market": "handicap",
+     "selection": "Vodacom Bulls +9",
+     "p": 0.9348,
+     "decimal": 1.07,
+     "american": -1429
+    },
+    {
+     "market": "match total",
+     "selection": "Over 51.5",
+     "p": 0.706,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 69",
+     "p": 0.7096,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 68.5",
+     "p": 0.6988,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Over 51",
+     "p": 0.7166,
+     "decimal": 1.4,
+     "american": -250
+    }
+   ],
+   "in_band": [
+    {
+     "market": "match total",
+     "selection": "Over 51.5",
+     "p": 0.706,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 69",
+     "p": 0.7096,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_margin": 28.6667,
+    "mu_total": 60.1667
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "urc-292612",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship round 4",
+   "start_utc": "2026-10-24T09:00:00Z",
+   "home": "DHL Stormers",
+   "away": "Scarlets",
+   "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/dhl-stormers-vs-scarlets-2026-10-24/292612",
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "The Stormers are fourth on eleven points after a 39-22 win over the Sharks at this ground. The Scarlets are twelfth on seven points, conceding 85.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "DHL Stormers",
+     "p": 0.9001,
+     "decimal": 1.11,
+     "american": -909
+    },
+    {
+     "market": "match winner",
+     "selection": "Scarlets",
+     "p": 0.0755,
+     "decimal": 13.25,
+     "american": 1225
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0244,
+     "decimal": 40.98,
+     "american": 3998
+    },
+    {
+     "market": "handicap",
+     "selection": "DHL Stormers +11",
+     "p": 0.696,
+     "decimal": 1.44,
+     "american": -227
+    },
+    {
+     "market": "handicap",
+     "selection": "DHL Stormers +10",
+     "p": 0.7223,
+     "decimal": 1.38,
+     "american": -263
+    },
+    {
+     "market": "handicap",
+     "selection": "DHL Stormers +12",
+     "p": 0.6685,
+     "decimal": 1.5,
+     "american": -200
+    },
+    {
+     "market": "handicap",
+     "selection": "DHL Stormers +9",
+     "p": 0.7475,
+     "decimal": 1.34,
+     "american": -294
+    },
+    {
+     "market": "match total",
+     "selection": "Over 39.5",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 56.5",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 39",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 57",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "in_band": [
+    {
+     "market": "match total",
+     "selection": "Over 39.5",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 56.5",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 39",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 57",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_margin": 17.6667,
+    "mu_total": 48.0
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "urc-292613",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship round 4",
+   "start_utc": "2026-10-24T09:00:00Z",
+   "home": "Benetton Rugby",
+   "away": "Glasgow Warriors",
+   "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/benetton-rugby-vs-glasgow-warriors-2026-10-24/292613",
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "Benetton are fifteenth on five points, drawing with Ulster and losing twice. Glasgow are second on 13 points, unbeaten, with 95 points scored.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Benetton Rugby",
+     "p": 0.2951,
+     "decimal": 3.39,
+     "american": 239
+    },
+    {
+     "market": "match winner",
+     "selection": "Glasgow Warriors",
+     "p": 0.6497,
+     "decimal": 1.54,
+     "american": -185
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0551,
+     "decimal": 18.15,
+     "american": 1715
+    },
+    {
+     "market": "handicap",
+     "selection": "Glasgow Warriors -1",
+     "p": 0.7049,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Glasgow Warriors -2",
+     "p": 0.7308,
+     "decimal": 1.37,
+     "american": -270
+    },
+    {
+     "market": "handicap",
+     "selection": "Benetton Rugby -12",
+     "p": 0.6778,
+     "decimal": 1.48,
+     "american": -208
+    },
+    {
+     "market": "handicap",
+     "selection": "Glasgow Warriors -0",
+     "p": 0.6778,
+     "decimal": 1.48,
+     "american": -208
+    },
+    {
+     "market": "match total",
+     "selection": "Under 58.5",
+     "p": 0.706,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 41",
+     "p": 0.7096,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 41.5",
+     "p": 0.6988,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Under 59",
+     "p": 0.7166,
+     "decimal": 1.4,
+     "american": -250
+    }
+   ],
+   "in_band": [
+    {
+     "market": "handicap",
+     "selection": "Glasgow Warriors -1",
+     "p": 0.7049,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 58.5",
+     "p": 0.706,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 41",
+     "p": 0.7096,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_margin": -6.0,
+    "mu_total": 49.8333
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "urc-292614",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship round 4",
+   "start_utc": "2026-10-24T12:00:00Z",
+   "home": "Leinster Rugby",
+   "away": "Munster Rugby",
+   "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/leinster-rugby-vs-munster-rugby-2026-10-24/292614",
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "Leinster are tenth on eight points but have conceded only 58, the fewest in the table, and beat Cardiff 29-5 in round three. Munster are ninth on nine points.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Leinster Rugby",
+     "p": 0.7392,
+     "decimal": 1.35,
+     "american": -286
+    },
+    {
+     "market": "match winner",
+     "selection": "Munster Rugby",
+     "p": 0.2133,
+     "decimal": 4.69,
+     "american": 369
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0474,
+     "decimal": 21.1,
+     "american": 2010
+    },
+    {
+     "market": "handicap",
+     "selection": "Leinster Rugby +2",
+     "p": 0.7137,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Leinster Rugby +3",
+     "p": 0.6869,
+     "decimal": 1.46,
+     "american": -217
+    },
+    {
+     "market": "handicap",
+     "selection": "Leinster Rugby +1",
+     "p": 0.7392,
+     "decimal": 1.35,
+     "american": -286
+    },
+    {
+     "market": "handicap",
+     "selection": "Leinster Rugby +4",
+     "p": 0.6592,
+     "decimal": 1.52,
+     "american": -192
+    },
+    {
+     "market": "match total",
+     "selection": "Over 38",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 55",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 37.5",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 55.5",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "in_band": [
+    {
+     "market": "handicap",
+     "selection": "Leinster Rugby +2",
+     "p": 0.7137,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 38",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 55",
+     "p": 0.7024,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 37.5",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 55.5",
+     "p": 0.7131,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_margin": 9.3333,
+    "mu_total": 46.5
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "urc-292615",
+   "sport": "rugby-union",
+   "competition": "United Rugby Championship round 4",
+   "start_utc": "2026-10-24T13:00:00Z",
+   "home": "Ospreys",
+   "away": "Dragons RFC",
+   "source_url": "https://stats.unitedrugby.com/match-centre/202601/united-rugby-championship/ospreys-vs-dragons-rfc-2026-10-24/292615",
+   "basis": "points for and against per game from the URC table, shrunk pl/(pl+6) toward the league average of 26.2083 points per team; home +3.0",
+   "facts": "The Ospreys are thirteenth on six points, conceding 107. Dragons are eighth on nine points and drew 26-26 at Ulster after beating the Ospreys 31-38 earlier this month.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Ospreys",
+     "p": 0.2608,
+     "decimal": 3.83,
+     "american": 283
+    },
+    {
+     "market": "match winner",
+     "selection": "Dragons RFC",
+     "p": 0.6869,
+     "decimal": 1.46,
+     "american": -217
+    },
+    {
+     "market": "match winner",
+     "selection": "Draw",
+     "p": 0.0523,
+     "decimal": 19.12,
+     "american": 1812
+    },
+    {
+     "market": "handicap",
+     "selection": "Dragons RFC -0",
+     "p": 0.7137,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "handicap",
+     "selection": "Dragons RFC +1",
+     "p": 0.6869,
+     "decimal": 1.46,
+     "american": -217
+    },
+    {
+     "market": "handicap",
+     "selection": "Dragons RFC -1",
+     "p": 0.7392,
+     "decimal": 1.35,
+     "american": -286
+    },
+    {
+     "market": "handicap",
+     "selection": "Dragons RFC +2",
+     "p": 0.6592,
+     "decimal": 1.52,
+     "american": -192
+    },
+    {
+     "market": "match total",
+     "selection": "Under 68.5",
+     "p": 0.706,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 51",
+     "p": 0.7096,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 51.5",
+     "p": 0.6988,
+     "decimal": 1.43,
+     "american": -233
+    },
+    {
+     "market": "match total",
+     "selection": "Under 69",
+     "p": 0.7166,
+     "decimal": 1.4,
+     "american": -250
+    }
+   ],
+   "in_band": [
+    {
+     "market": "handicap",
+     "selection": "Dragons RFC -0",
+     "p": 0.7137,
+     "decimal": 1.4,
+     "american": -250,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Under 68.5",
+     "p": 0.706,
+     "decimal": 1.42,
+     "american": -238,
+     "in_band": true
+    },
+    {
+     "market": "match total",
+     "selection": "Over 51",
+     "p": 0.7096,
+     "decimal": 1.41,
+     "american": -244,
+     "in_band": true
+    }
+   ],
+   "model": {
+    "mu_margin": -7.3333,
+    "mu_total": 59.8333
+   },
+   "confidence": "high"
+  },
+  {
+   "id": "snooker-next",
+   "sport": "snooker",
+   "competition": "World Snooker Tour \u2014 Northern Ireland Open",
+   "start_utc": "",
+   "home": "Next-round pairings",
+   "away": "",
+   "source_url": "https://www.wst.tv/",
+   "basis": "no numeric official input captured \u2014 blank, not estimated",
+   "facts": "No upcoming pairing with both players on an official ranking list read on 2026-10-23 was captured, so no price is originated.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "tennis-next",
+   "sport": "tennis",
+   "competition": "ATP Tour \u2014 next round",
+   "start_utc": "",
+   "home": "ATP quarter-finals in progress",
+   "away": "",
+   "source_url": "https://www.atptour.com/en/scores/current",
+   "basis": "no numeric official input captured \u2014 blank, not estimated",
+   "facts": "Semi-final pairings were not yet set when the official ATP score page was read on 2026-10-23 (quarter-finals live), so no fixture or price is published.",
+   "prices": [],
+   "in_band": [],
+   "confidence": "blank"
+  },
+  {
+   "id": "vb-trentino-cisterna",
+   "sport": "volleyball",
+   "competition": "SuperLega round 2",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "home": "Trentino",
+   "away": "Cisterna",
+   "source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Trentino swept Modena 3-0 in round one, 75 points to 61. Cisterna swept Milano 3-0 and top the early table on point ratio.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Trentino",
+     "p": 0.3328,
+     "decimal": 3.0,
+     "american": 200
+    },
+    {
+     "market": "match winner",
+     "selection": "Cisterna",
+     "p": 0.6672,
+     "decimal": 1.5,
+     "american": -200
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": -18.1206
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "vb-perugia-pordenone",
+   "sport": "volleyball",
+   "competition": "SuperLega round 2",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "home": "Perugia",
+   "away": "Pordenone",
+   "source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Perugia took two points from round one, beating Cuneo 3-2 after 114 points scored and 95 conceded. Prata beat Monza 3-1.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Perugia",
+     "p": 0.655,
+     "decimal": 1.53,
+     "american": -189
+    },
+    {
+     "market": "match winner",
+     "selection": "Pordenone",
+     "p": 0.345,
+     "decimal": 2.9,
+     "american": 190
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": 16.7033
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "vb-piacenza-modena",
+   "sport": "volleyball",
+   "competition": "SuperLega round 2",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "home": "Piacenza",
+   "away": "Modena",
+   "source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Piacenza swept Padova 3-0 in round one, scoring 75 and conceding 56. Modena were swept 3-0 by Trentino.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Piacenza",
+     "p": 0.8827,
+     "decimal": 1.13,
+     "american": -769
+    },
+    {
+     "market": "match winner",
+     "selection": "Modena",
+     "p": 0.1173,
+     "decimal": 8.53,
+     "american": 753
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": 52.5952
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "vb-civitanova-padova",
+   "sport": "volleyball",
+   "competition": "SuperLega round 2",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "home": "Civitanova",
+   "away": "Padova",
+   "source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Civitanova won 3-0 at Verona, 78 points to 65. Padova lost 3-0 at home to Piacenza.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Civitanova",
+     "p": 0.8507,
+     "decimal": 1.18,
+     "american": -556
+    },
+    {
+     "market": "match winner",
+     "selection": "Padova",
+     "p": 0.1493,
+     "decimal": 6.7,
+     "american": 570
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": 45.3333
+   },
+   "confidence": "medium"
+  },
+  {
+   "id": "vb-milano-cuneo",
+   "sport": "volleyball",
+   "competition": "SuperLega round 2",
+   "start_utc": "2026-10-25T18:00:00Z",
+   "home": "Milano",
+   "away": "Cuneo",
+   "source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "basis": "points scored divided by points conceded in round one, from the official SuperLega calendar; difference divided by a 60-point scale. One match is a very thin sample and is flagged",
+   "facts": "Milano were swept 3-0 by Cisterna, scoring 56. Cuneo took a point off Perugia in a 3-2 defeat.",
+   "prices": [
+    {
+     "market": "match winner",
+     "selection": "Milano",
+     "p": 0.3828,
+     "decimal": 2.61,
+     "american": 161
+    },
+    {
+     "market": "match winner",
+     "selection": "Cuneo",
+     "p": 0.6172,
+     "decimal": 1.62,
+     "american": -161
+    }
+   ],
+   "in_band": [],
+   "model": {
+    "strength_diff": -12.4473
+   },
+   "confidence": "medium"
+  }
+ ]
+}

@@ -4920,3 +4920,36 @@ FI5 is complete for merge and deployment. This publication record is a documenta
 This record is a post-merge append (follow-up PR). Integrator requests (root nav link, CI drift steps for `quest`) remain open above.
 
 ---
+
+---
+
+## Session `arena/110cf432-olbg2` — CLAIM: `/zenith/` 15-sport live OLBG reverse-engineering, official-source verification, multi-market origination, Top-5 predictions, and line-by-line repo review (2026-10-23 21:31 UTC)
+
+- **Session ID:** `arena/110cf432-olbg2` · **Branch:** `arena/110cf432-olbg2` (fixed by the Arena platform harness; `session-<id>/<task>` branches cannot be created here and are documented as a platform constraint).
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-23 21:30 UTC):
+  - `arena/f0ee1b4a-olbg2` (active at 21:27:20Z) — claims `research/integration-f0ee1b4a.md`, `scripts/integration_f0ee1b4a_audit.py`, `tests/test_integration_f0ee1b4a.py`, `data/integration-f0ee1b4a/**`, and shared root integration files (`README.md`, `scripts/build_site.py`, generated root pages, `assets/**`, `sports/**`, `.github/workflows/pages.yml`).
+  - `arena/1b2c50af-olbg2` (active at 21:29:18Z) — claims `olbg/**`, `data/olbg/**`, `scripts/olbg_*.py`, `tests/test_olbg_1b2c50af.py`, `research/integration-1b2c50af.md`, `research/olbg-refresh-1b2c50af.md`, and shared root files if unclaimed.
+  - `arena/9c5af337-olbg2` (active at 21:29:41Z) — claims `horizon/**`, `data/horizon/**`, `scripts/horizon_*.py`, `tests/test_horizon_9c5af337.py`, `research/horizon-9c5af337.md`.
+  - `arena/deb1cb6e-olbg2` (merged PR #175 and PR #176 at `7bda387`).
+  - Earlier merged desks (`cadence`, `ledger`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`, `current`, `atlas`, `canon`, `final`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`, `relay`, `vanguard`, `pulse`, `update`, `covered`, `desk`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`) remain untouched.
+- **Strict non-overlapping file scope for `arena/110cf432-olbg2`:**
+  - `zenith/**` (clean GitHub Pages dashboard, executive summary, all matches table, originated markets & lines table, `-250` to `+10000` odds-band board, Top-5 picks & human predictions, 15 sport category subpages, OLBG reverse-engineering & line-by-line repo review page, Flagged for Review page, official sources & methodology page)
+  - `data/zenith/**` (live OLBG reverse-engineering captures, official governing-body verification records & inputs, multi-market originated lines, confidence & `-250` to `+10000` band evaluations, unique ≥30-word human predictions, line-by-line repo audit findings, and flagged irregularities)
+  - `scripts/zenith_*.py` (`zenith_seed.py`, `zenith_model.py`, `zenith_predictions.py`, `zenith_audit.py`, `zenith_build.py`, `zenith_verify.py`)
+  - `tests/test_zenith_110cf432.py` (unit, math, prose, provenance, link, and deterministic rebuild tests picked up automatically by `unittest discover`)
+  - `research/zenith-110cf432.md` (first-hand OLBG reverse-engineering & line-by-line repository review report)
+  - `COORDINATION.md` (append-only updates)
+- **Sport scope (exact 15 sports requested):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+- **Rebase conflict log (2026-10-23 21:44 UTC):** Rebased `arena/110cf432-olbg2` onto `origin/main` (`7bda387`, after PR #175/#176 merged). Resolved append-only tail conflict in `COORDINATION.md` by retaining 100% of `deb1cb6e`'s audit and publication records intact followed by this session's claim block.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| ZN1 | Read `COORDINATION.md`, scan live remote branches, claim disjoint `/zenith/` scope, commit & push immediately | done | `arena/110cf432-olbg2` | `COORDINATION.md` (append-only) |
+| ZN2 | Live OLBG.com reverse-engineering across all 15 covered sports (URL routing, sport IDs, competition hubs, listed matches, market types, tip counts/value ratings, anomalies) + line-by-line audit of existing repository layers | done | `arena/110cf432-olbg2` | `research/zenith-110cf432.md`, `data/zenith/olbg_events.json`, `data/zenith/repo_audit.json` |
+| ZN3 | Live official governing-body verification & capture for 2026-10-23 and upcoming fixtures across all 15 covered sports (schedules, standings, form, match stats, and official injury reports where published) | done | `arena/110cf432-olbg2` | `data/zenith/sources.json`, `scripts/zenith_seed.py` |
+| ZN4 | Independent multi-market line origination (match winner / moneyline / 1X2 / outright, handicap / spread / puck line / run line / frame-leg-set handicap, match totals), Low/Medium/High confidence grading, and `-250` to `+10000` odds-band evaluation | in progress | `arena/110cf432-olbg2` | `scripts/zenith_model.py`, `data/zenith/matches.json`, `data/zenith/lines.json`, `data/zenith/picks.json` |
+| ZN5 | Unique ≥30-word human predictions (targeting 5 highest-confidence picks per covered sport where official evidence supports them; zero forbidden words `model`/`verified`; unconfirmed items left blank and flagged) | unclaimed→this session | `arena/110cf432-olbg2` | `scripts/zenith_predictions.py`, `data/zenith/predictions.json`, `data/zenith/flagged.json` |
+| ZN6 | Build `/zenith/` GitHub Pages dashboard + 15 sport category subpages + Flagged for Review + strict line-by-line verifier + unit tests | unclaimed→this session | `arena/110cf432-olbg2` | `scripts/zenith_build.py`, `scripts/zenith_verify.py`, `zenith/**`, `tests/test_zenith_110cf432.py` |
+| ZN7 | Rebase on `origin/main`, run full repo test suite + `integration_audit.py`, open PR → `main`, merge, confirm GitHub Pages deployment, record PR & merge result in `COORDINATION.md` | unclaimed→this session | `arena/110cf432-olbg2` | `COORDINATION.md` (append-only) |
+
+**Cross-scope request to active root integrators (`arena/f0ee1b4a-olbg2` / `arena/1b2c50af-olbg2`):** Because shared root files (`README.md`, `scripts/build_site.py`, root HTML, `.github/workflows/pages.yml`) are actively claimed, this session does not edit them. Please add a link to `zenith/index.html` during root integration once `/zenith/` merges. Note: if `.github/workflows/pages.yml` still checks `data/ledger/repo_review.json` and `ledger/repo-review.html` (generated by `scripts/ledger_report.py` + `scripts/ledger_build.py` which count publishing directories and `tests/test_*.py` modules), those two scripts will be run unmodified before opening the PR solely to keep the hosted CI drift gate green.

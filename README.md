@@ -2,7 +2,28 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
-## Newest: 15-sport daily brief — `/brief/` (23 October 2026)
+## Newest: OLBG daily desk — `/olbg/` (23 October 2026)
+
+**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/olbg/> ·
+[all matches](olbg/matches.html) · [picks and predictions](olbg/picks.html) ·
+[originated markets](olbg/markets.html) · [sources](olbg/sources.html) ·
+[Flagged for Review](olbg/flagged.html) · [methodology](olbg/methodology.html) ·
+[research record](research/olbg-758c0623.md).
+
+The 19:40:38 UTC snapshot contains **89 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **65 official-context-only** rows distinct. There are **54 priced matches**, **58 originated market rows**, and **3 high-confidence predictions**. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and the other limitations remain visible with official links.
+
+```sh
+python scripts/olbg_seed.py
+python scripts/olbg_model.py
+python scripts/olbg_predictions.py
+python scripts/olbg_build.py
+python scripts/olbg_verify.py
+python -m unittest tests.test_olbg_758c0623 -v
+```
+
+The offline rebuild is deterministic. CI runs the same pipeline and drift-checks `olbg/` and `data/olbg/`; it does not refresh the snapshot.
+
+## Earlier: 15-sport daily brief — `/brief/` (23 October 2026)
 
 **Start here:** <https://buffedlizard55-lab.github.io/OLBG2/brief/> ·
 [all matches](brief/matches.html) · [picks](brief/picks.html) · [39 predictions](brief/predictions.html) ·

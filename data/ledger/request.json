@@ -737,6 +737,167 @@
    "sport": "Rugby League",
    "kind": "olbg-api",
    "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "nba_games",
+   "url": "https://www.nba.com/games?date=2026-10-23",
+   "sport": "Basketball",
+   "kind": "official-html",
+   "note": "NBA official games page for the date"
+  },
+  {
+   "key": "nba_stats_scoreboard",
+   "url": "https://stats.nba.com/stats/scoreboardv3?GameDate=2026-10-23&LeagueID=00",
+   "sport": "Basketball",
+   "kind": "official-html",
+   "note": "NBA official stats scoreboard endpoint"
+  },
+  {
+   "key": "nba_standings_page",
+   "url": "https://www.nba.com/standings",
+   "sport": "Basketball",
+   "kind": "official-html",
+   "note": "NBA official standings page"
+  },
+  {
+   "key": "tennis_wta_tournaments",
+   "url": "https://www.wtatennis.com/tournaments",
+   "sport": "Tennis",
+   "kind": "official-html",
+   "note": "WTA official tournament calendar"
+  },
+  {
+   "key": "tennis_wta_news",
+   "url": "https://www.wtatennis.com/news",
+   "sport": "Tennis",
+   "kind": "official-html",
+   "note": "WTA official news (draws and results)"
+  },
+  {
+   "key": "darts_pdc_news",
+   "url": "https://www.pdc.tv/news",
+   "sport": "Darts",
+   "kind": "official-html",
+   "note": "PDC official news"
+  },
+  {
+   "key": "darts_pdc_euro_champs",
+   "url": "https://www.pdc.tv/tournament/european-championship",
+   "sport": "Darts",
+   "kind": "official-html",
+   "note": "PDC European Championship page"
+  },
+  {
+   "key": "handball_hbl",
+   "url": "https://www.handball-bundesliga.de/spielplan/",
+   "sport": "Handball",
+   "kind": "official-html",
+   "note": "German HBL official schedule"
+  },
+  {
+   "key": "handball_danish",
+   "url": "https://www.topphandball.dk/kampprogram/",
+   "sport": "Handball",
+   "kind": "official-html",
+   "note": "Danish handball official schedule"
+  },
+  {
+   "key": "handball_norway",
+   "url": "https://www.handball.no/",
+   "sport": "Handball",
+   "kind": "official-html",
+   "note": "Norwegian handball federation"
+  },
+  {
+   "key": "handball_spain",
+   "url": "https://www.asobal.es/",
+   "sport": "Handball",
+   "kind": "official-html",
+   "note": "Spanish ASOBAL"
+  },
+  {
+   "key": "handball_france",
+   "url": "https://www.lnh.fr/",
+   "sport": "Handball",
+   "kind": "official-html",
+   "note": "French LNH"
+  },
+  {
+   "key": "volleyball_plusliga",
+   "url": "https://www.plusliga.pl/",
+   "sport": "Volleyball",
+   "kind": "official-html",
+   "note": "Polish PlusLiga official"
+  },
+  {
+   "key": "volleyball_superliga",
+   "url": "https://superliga.cbv.com.br/",
+   "sport": "Volleyball",
+   "kind": "official-html",
+   "note": "Brazilian Superliga official"
+  },
+  {
+   "key": "volleyball_bundesliga",
+   "url": "https://www.volleyball-bundesliga.de/",
+   "sport": "Volleyball",
+   "kind": "official-html",
+   "note": "German Volleyball Bundesliga"
+  },
+  {
+   "key": "volleyball_legavolley",
+   "url": "https://www.legavolley.it/",
+   "sport": "Volleyball",
+   "kind": "official-html",
+   "note": "Italian Lega Volley official"
+  },
+  {
+   "key": "rugby_union_lnr",
+   "url": "https://www.lnr.fr/calendrier-resultats",
+   "sport": "Rugby Union",
+   "kind": "official-html",
+   "note": "French LNR official calendar (Top 14 / Pro D2)"
+  },
+  {
+   "key": "rugby_league_superleague",
+   "url": "https://www.superleague.co.uk/fixtures",
+   "sport": "Rugby League",
+   "kind": "official-html",
+   "note": "Super League official fixtures"
+  },
+  {
+   "key": "rugby_league_nrl_fixtures",
+   "url": "https://www.nrl.com/fixtures/",
+   "sport": "Rugby League",
+   "kind": "official-html",
+   "note": "NRL official fixtures"
+  },
+  {
+   "key": "cricket_icc_tournaments",
+   "url": "https://www.icc-cricket.com/tournaments",
+   "sport": "Cricket",
+   "kind": "official-html",
+   "note": "ICC official tournaments"
+  },
+  {
+   "key": "gaelic_gaa_club",
+   "url": "https://www.gaa.ie/club/",
+   "sport": "Gaelic Sports",
+   "kind": "official-html",
+   "note": "GAA official club hub"
+  },
+  {
+   "key": "snooker_wst_tournaments",
+   "url": "https://www.wst.tv/tournaments",
+   "sport": "Snooker",
+   "kind": "official-html",
+   "note": "WST official tournaments"
+  },
+  {
+   "key": "snooker_wst_matches",
+   "url": "https://www.wst.tv/matches",
+   "sport": "Snooker",
+   "kind": "official-html",
+   "note": "WST official match centre"
   }
  ]
 }

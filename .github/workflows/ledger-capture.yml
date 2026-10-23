@@ -1,0 +1,54 @@
+name: Ledger capture (first-hand public sources)
+
+# The authoring sandbox cannot reach the public internet. This job performs the
+# first-hand HTTP reads on a GitHub-hosted runner, stores the verbatim bodies with a
+# timestamped manifest, and commits them back to the branch that asked for them.
+# It never fails the build on an individual source: a 403 or a timeout is evidence
+# and is published on the /ledger/ flagged page.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/ledger/request.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ledger-capture-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Capture public responses
+        run: python scripts/ledger_capture.py
+
+      - name: Commit the captures back to this branch
+        run: |
+          git config user.name "ledger-capture"
+          git config user.email "ledger-capture@users.noreply.github.com"
+          git add data/ledger
+          if git diff --cached --quiet; then
+            echo "no capture changes"
+            exit 0
+          fi
+          git commit -m "ledger: first-hand capture run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            sleep 5
+          done
+
+      - name: Summarise the run
+        if: always()
+        run: python scripts/ledger_capture_summary.py

@@ -1,196 +1,144 @@
 {
  "meta": {
-  "desk": "ledger",
-  "flags": 23
+  "generated_at": "2026-10-23T19:52:16Z",
+  "items": 15,
+  "high": 3
  },
- "flags": [
+ "items": [
   {
-   "id": "LG-01",
-   "area": "OLBG discovery",
-   "detail": "OLBG sport hubs read first-hand on 2026-10-23 served 'No tips found' with no event rows in fetched HTML. OLBG is used here for taxonomy, URL schema and market names only; every fixture comes from the official league/federation source linked on its row.",
-   "source_keys": [
-    "olbg-tips",
-    "olbg-darts",
-    "olbg-nhl"
-   ]
+   "code": "L-01",
+   "severity": "high",
+   "sport": "Several",
+   "title": "Eleven sports carry no written preview today",
+   "detail": "The brief asks for five previews per sport. Previews were published for Baseball (5), Basketball (5), Cricket (4), Ice Hockey (5). No preview is published for Golf, Volleyball, Rugby Union, Snooker, Darts, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Rugby League because no official current-form, table or result input for those fixtures could be captured today. A preview written without one would be invention.",
+   "source": "",
+   "impact": "Shortfall against the five-per-sport target; disclosed rather than filled."
   },
   {
-   "id": "LG-BAND",
-   "area": "Brief maths",
-   "detail": "The brief's two rules overlap: high confidence above 70% with a fair price no shorter than -250 can only both hold between 70.00% and 71.43% (-250 is exactly 71.43%). The site labels that strict window Tier A, prices above 70% but shorter than -250 Tier B, and the strongest remaining in-band prices Tier C, rather than quietly widening either rule.",
-   "source_keys": []
+   "code": "L-02",
+   "severity": "high",
+   "sport": "Multiple",
+   "title": "133 of 143 OLBG-listed events could not be matched to an official source",
+   "detail": "Per sport: Basketball 15, Cricket 9, Darts 9, Gaelic Sports 7, Greyhounds 22, Handball 30, Motor Racing 2, Rugby League 3, Rugby Union 12, Tennis 5, Volleyball 19. The OLBG event is still listed and its quoted price is shown, but no official fixture page was found in today's captures, so no line was originated and no preview was written for those rows.",
+   "source": "https://www.olbg.com/betting-tips",
+   "impact": "Those rows are published as unverified listings."
   },
   {
-   "id": "LG-NH1",
-   "area": "Ice Hockey",
-   "detail": "Calgary Flames goals for/against were cut off in the NHL Stats chunk read (record and point percentage only). Detroit at Calgary is published unpriced instead of estimated.",
-   "source_keys": [
-    "nhl-summary"
-   ]
+   "code": "L-03",
+   "severity": "high",
+   "sport": "Basketball",
+   "title": "Every NBA endpoint refused the capture",
+   "detail": "cdn.nba.com returned 403 for both the scoreboard and the league schedule, nba.com/games returned 403 and stats.nba.com timed out. The eleven NBA fixtures OLBG lists therefore have no official verification and no originated line. EuroLeague responded normally and carries the basketball pricing.",
+   "source": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
+   "impact": "11 NBA rows unverified; basketball previews use EuroLeague fixtures only."
   },
   {
-   "id": "LG-NH2",
-   "area": "Ice Hockey",
-   "detail": "The NHL score feed embeds third-party bookmaker odds (its 'odds partners'). Those prices were ignored completely; every NHL price here is originated from goals data.",
-   "source_keys": [
-    "nhl-score23"
-   ]
+   "code": "L-04",
+   "severity": "medium",
+   "sport": "Golf",
+   "title": "OLBG's golf hub rendered no tip objects",
+   "detail": "The golf hub was fetched successfully (HTTP 200, 183 KB) but contained no market or event objects, so no golf fixture was listed by the source the brief is built on. The DP World Tour schedule and leaderboard pages also render client-side, so no golf market was originated.",
+   "source": "https://www.olbg.com/betting-tips/Golf/5",
+   "impact": "Zero golf rows today."
   },
   {
-   "id": "LG-BK1",
-   "area": "Basketball",
-   "detail": "The NBA live scoreboard JSON returned HTTP 500 on 2026-10-23. No NBA fixtures are published; basketball coverage is EuroLeague Round 8 only.",
-   "source_keys": [
-    "nba-cdn"
-   ]
+   "code": "L-05",
+   "severity": "medium",
+   "sport": "Snooker",
+   "title": "All four OLBG snooker tips had already expired at capture time",
+   "detail": "The hub returned four tips, all flagged expired by OLBG itself and all dated before the capture. Nothing upcoming was listed, so snooker has no rows today. world table pages on wst.tv render client-side.",
+   "source": "https://www.olbg.com/betting-tips/Snooker/8",
+   "impact": "Zero snooker rows today."
   },
   {
-   "id": "LG-EL1",
-   "area": "Basketball",
-   "detail": "The EuroLeague feed returns two clock times per game without a legend in the text served, and some teams show 6 games played against others' 7. Dates/times are stored 'as served', per-game rates are used throughout, and the margin/total standard deviations (13/18) are stated assumptions on the method page.",
-   "source_keys": [
-    "el-sched",
-    "el-stand"
-   ]
+   "code": "L-06",
+   "severity": "medium",
+   "sport": "Rugby League",
+   "title": "OLBG lists only outright markets for rugby league",
+   "detail": "The three rugby league entries are 2027 futures (State of Origin, Super League, NRL), not matches. Outright futures are outside the match-winner, handicap and total markets this desk prices.",
+   "source": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "impact": "No rugby league match priced."
   },
   {
-   "id": "LG-ML1",
-   "area": "Baseball",
-   "detail": "Probable pitchers were not present in the MLB feeds read, and run rates use a two-team baseline built from the finalists' own runs scored (stated on each row). Game-by-game pitching matchups would normally move these prices.",
-   "source_keys": [
-    "mlb-sched",
-    "mlb-al",
-    "mlb-nl"
-   ]
+   "code": "L-07",
+   "severity": "medium",
+   "sport": "OLBG",
+   "title": "OLBG's JSON tip endpoint returns 404 when called directly",
+   "detail": "The hub pages call /sports/<Sport>/top_tips?paginate=1-100&... and the path is visible in the page payload, but a direct request without the page's own headers returns OLBG's 404 page (98 KB) for all sixteen sports. The desk therefore parses the server-rendered hub payload instead.",
+   "source": "https://www.olbg.com/sports/Darts/top_tips?paginate=1-100",
+   "impact": "Capture falls back to hub HTML."
   },
   {
-   "id": "LG-ML2",
-   "area": "Baseball",
-   "detail": "World Series Game 6 (30 Oct) appeared only as a truncated chunk and Game 7 was not read in full, so only Games 1-5 are published.",
-   "source_keys": [
-    "mlb-sched"
-   ]
+   "code": "L-08",
+   "severity": "medium",
+   "sport": "Basketball",
+   "title": "EuroLeague tip times are served in venue-local time",
+   "detail": "api-live.euroleague.net returns a date and a start time without an offset. The desk publishes the time exactly as served and marks the column, rather than converting it to UTC and implying a precision the feed does not give.",
+   "source": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "impact": "Times marked 'as served'."
   },
   {
-   "id": "LG-RL1",
-   "area": "Rugby League",
-   "detail": "Every nation has played one or two World Cup matches. On those differentials alone Fiji grade above Australia and New Zealand's line is flattered by a narrow loss; both rows are published as the data reads, capped at Medium, with this warning attached. The round-2 'positions' as served (for example two different 3rds) appear pool-relative and are quoted verbatim, not interpreted as an overall table.",
-   "source_keys": [
-    "rlwc-r1",
-    "rlwc-r2"
-   ]
+   "code": "L-09",
+   "severity": "medium",
+   "sport": "Multiple",
+   "title": "Official-page matches are evidence of a fixture row, not of a kick-off time",
+   "detail": "For seven fixtures the two participants sit either side of a versus marker on an official competition page. That confirms the pairing appears on an official page; it does not confirm the start time OLBG publishes. Those rows are labelled official-page, not official-fixture.",
+   "source": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "impact": "Verification strength is stated per row."
   },
   {
-   "id": "LG-RU1",
-   "area": "Rugby Union",
-   "detail": "The PREM Rugby fixtures page served no fixture rows in fetched HTML and the URC fixtures URL returned 404. Rugby Union therefore has zero fixtures today rather than borrowed data from another desk.",
-   "source_keys": [
-    "prem-r4",
-    "urc"
-   ]
+   "code": "L-10",
+   "severity": "medium",
+   "sport": "Multiple",
+   "title": "No official injury feed could be read",
+   "detail": "None of the captured official pages carried a team-news or injury list for these fixtures. No preview asserts an injury, a return date or a suspension. Where a reader expects an injury line, the honest answer is that it could not be confirmed today.",
+   "source": "",
+   "impact": "Injury field omitted rather than guessed."
   },
   {
-   "id": "LG-SN1",
-   "area": "Snooker",
-   "detail": "The readable ranking table stops at 36th place (£198,500). Opponents below that line are priced using £198,500 as a ceiling, so favourite prices are floors and are labelled bounded; Liu Hongyu v Louis Heathcote (neither in top 36) is left unpriced. Match formats were not on the pages read, so no frame handicaps or totals are offered.",
-   "source_keys": [
-    "wst-rank",
-    "wst-home"
-   ]
+   "code": "L-11",
+   "severity": "info",
+   "sport": "Multiple",
+   "title": "The 70% rule and the -250 to +10000 band only overlap between 70.0% and 71.4%",
+   "detail": "Any selection above 70% is shorter than -233, so it falls outside a band that starts at -250. Today 155 selections are graded high and 10 of those are also inside the price band. The desk publishes both counts rather than moving the thresholds.",
+   "source": "",
+   "impact": "Both counts are shown on every summary."
   },
   {
-   "id": "LG-TE1",
-   "area": "Tennis",
-   "detail": "Quarter-final results were readable on the ATP scoreboard, but semi-final pairings could not be confirmed from the readable draw chunks. Completed quarter-finals are listed for the record and no tennis price is originated.",
-   "source_keys": [
-    "atp-scores",
-    "atp-draw"
-   ]
+   "code": "L-12",
+   "severity": "info",
+   "sport": "Multiple",
+   "title": "OLBG quotes one side of each market, so implied probabilities are not margin-free",
+   "detail": "Each OLBG tip carries a single price. 1/price therefore overstates the chance slightly because the bookmaker margin has not been removed. Market-implied rows say so, and they are never mixed into the originated totals.",
+   "source": "https://www.olbg.com/betting-tips",
+   "impact": "Labelled 'market-implied'."
   },
   {
-   "id": "LG-CR1",
-   "area": "Cricket",
-   "detail": "No official table, ranking or results feed was read for these sides, so all 13 cricket fixtures are published without prices. Start times render in the viewer's timezone ('your time') and are stored verbatim; one venue is spelled 'Hnry Stadium' on the source page and is quoted as served.",
-   "source_keys": [
-    "ca-matches"
-   ]
+   "code": "L-13",
+   "severity": "info",
+   "sport": "Baseball",
+   "title": "Probable pitchers are published for two of the seven World Series games",
+   "detail": "statsapi.mlb.com lists Nick Martinez against Jacob Misiorowski for game one and Drew Rasmussen against Logan Henderson for game two. Games three to seven carry no probable pitcher at capture time, and the previews for those games say so.",
+   "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31",
+   "impact": "Two of five baseball previews cite a starting pitcher."
   },
   {
-   "id": "LG-GO1",
-   "area": "Golf",
-   "detail": "Only players at -4 or better appear in the leaderboard chunk read. Outright shares are normalised over those 16 players and are therefore upper bounds; the full weekend field would dilute them.",
-   "source_keys": [
-    "dpwt-lb"
-   ]
+   "code": "L-14",
+   "severity": "info",
+   "sport": "Greyhounds / Tennis / Darts / Handball / Volleyball",
+   "title": "Five sports publish fixtures but no readable form line",
+   "detail": "GBGB publishes meetings and race times without runners; WTA, PDC and WST render their draw and ranking pages client-side; the domestic handball and volleyball league sites publish tables that did not parse into a form line. Those fixtures are listed and priced only where OLBG quotes a price, and none carries a preview.",
+   "source": "https://www.gbgb.org.uk/racing/",
+   "impact": "No originated line in these sports."
   },
   {
-   "id": "LG-MR1",
-   "area": "Motor Racing",
-   "detail": "No practice, qualifying or grid information had been published on the Formula 1 pages read. United States GP outright shares follow championship points for the top ten only and are Low confidence by construction.",
-   "source_keys": [
-    "f1-cal",
-    "f1-stand"
-   ]
-  },
-  {
-   "id": "LG-HB1",
-   "area": "Handball",
-   "detail": "Only two of the fourteen 24 October fixtures involve a pairing with an official result from 23 October; only those two are priced, from that single result, at Low confidence. Both pairs also show the unusual pattern of the same clubs meeting on consecutive days with the home/away listing flipped, quoted as served.",
-   "source_keys": [
-    "ehf"
-   ]
-  },
-  {
-   "id": "LG-GA1",
-   "area": "Gaelic Sports",
-   "detail": "OLBG splits 'Gaelic Football' (sport 25) from 'Hurling' (26), while the users brief says 'Gaelic Sports'. The only fixture on the GAA page read is the Shinty-Hurling International final, Ireland v Scotland in Cork; it is published under Gaelic Sports with this scope note and no price (no form data read).",
-   "source_keys": [
-    "gaa",
-    "olbg-sitemap"
-   ]
-  },
-  {
-   "id": "LG-GH1",
-   "area": "Greyhounds",
-   "detail": "The GBGB open-races page served its filter interface but no meetings, races or runners in fetched HTML. Greyhounds has zero fixtures rather than invented cards.",
-   "source_keys": [
-    "gbgb"
-   ]
-  },
-  {
-   "id": "LG-VB1",
-   "area": "Volleyball",
-   "detail": "The CEV homepage served news only (Champions League Volley 2027 early rounds under way) with no fixture list. Volleyball has zero fixtures today.",
-   "source_keys": [
-    "cev"
-   ]
-  },
-  {
-   "id": "LG-DA1",
-   "area": "Darts",
-   "detail": "pdc.tv/calendar served cookie-consent markup only and the OLBG darts hub served 'No tips found'. Darts has zero fixtures; OLBG's darts market guide (Win Match, Handicap, Total Legs, Total 180s) is documented on the OLBG page for when an official draw is readable.",
-   "source_keys": [
-    "pdc",
-    "olbg-darts"
-   ]
-  },
-  {
-   "id": "LG-INJ1",
-   "area": "All sports",
-   "detail": "No official injury, team-news or availability feed was readable for any fixture today. Previews therefore assert no injuries at all; late team news could move any of these prices.",
-   "source_keys": []
-  },
-  {
-   "id": "LG-TZ1",
-   "area": "All sports",
-   "detail": "NHL and MLB start times are UTC in their official feeds and are labelled as such. EuroLeague, EHF, NRL, WST, GAA and Cricket Australia times are stored exactly 'as served' because those pages render in a viewer-local zone or do not state one; no silent conversion is applied.",
-   "source_keys": []
-  },
-  {
-   "id": "LG-REPO1",
-   "area": "Repository",
-   "detail": "COORDINATION.md on main still contains leftover merge-conflict separator lines (around lines 3216-3628, tagged 'origin/main' and commit 140baf3). That file is the shared append-only board, so this session logs the defect here for the integration owner instead of rewriting other sessions' records.",
-   "source_keys": []
+   "code": "L-15",
+   "severity": "info",
+   "sport": "Multiple",
+   "title": "Two sources were only stored in part",
+   "detail": "33 responses exceeded the 300 KB storage cap and were stored truncated. The cap is recorded in the register next to the row, and no parsed figure depends on the part that was cut.",
+   "source": "/ledger/sources.html",
+   "impact": "Truncation disclosed per capture."
   }
  ]
 }

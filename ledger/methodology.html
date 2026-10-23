@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method | OLBG2 ledger</title>
+<link rel="stylesheet" href="assets/ledger.css">
+</head><body>
+<header class="top"><div class="wrap">
+<h1>OLBG2 <span>ledger</span></h1>
+<p class="sub">Fifteen sports, one table. Every value traces to a captured official response.</p>
+<nav><a class="" href="index.html">Overview</a><a class="" href="matches.html">OLBG matches</a><a class="" href="fixtures.html">Fixtures &amp; prices</a><a class="" href="picks.html">Picks</a><a class="" href="predictions.html">Previews</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="" href="verification.html">Verification</a><a class="" href="repo-review.html">Repo review</a><a class="here" href="methodology.html">Method</a><a class="" href="../index.html">OLBG2 home</a></nav></div></header>
+<main class="wrap">
+<h2>Method</h2>
+<h3>1. What the desk collects</h3>
+<p>The slate is OLBG's: every upcoming event in the fifteen requested sports at capture time. The verification and the numbers are
+ours. OLBG's quoted price is carried in its own column and never used to build a price of ours.</p>
+<h3>2. How a price is originated</h3>
+<p>Only official season records are inputs: wins, losses, goals or points for and against, games played. From them:</p>
+<pre>rating      = 1500 + 400 × (points_pct − 0.5) + 30 × (score_difference_per_game)
+home edge   = +45 rating points
+p(home)     = 1 / (1 + 10^(−((rating_home + 45) − rating_away) / 400))
+expected    = attack_home × defence_away ÷ league_average   (and the mirror for the away side)
+total       = Poisson over the two expected scores (normal approximation above 30 combined points)
+handicap    = the same distribution, ±1.5 for the side we make favourite</pre>
+<p>The fair decimal is 1/p. No margin is added and no bookmaker price is an input. The expected score behind every fixture is
+printed on <a href="fixtures.html">Fixtures &amp; prices</a> so the arithmetic can be checked.</p>
+<h3>3. Confidence</h3>
+<p>high = 70% or better, medium = 60–69.9%, low = below 60%. The same thresholds apply to a market-implied price, which is
+labelled separately because it is not our number.</p>
+<h3>4. The price band</h3>
+<p>The brief asks for selections between −250 and +10000 and for a chance above 70%. A 70% chance is −233, so the two rules only
+overlap between 70.0% and 71.4%. The desk publishes the intersection honestly: 155 high-confidence selections,
+10 of them inside the band.</p>
+<h3>5. What is never done</h3>
+<ul class="plain">
+<li>A missing value is left blank, never filled from another sport, another day or an average.</li>
+<li>No injury, suspension or team-news claim is made without an official page that says it.</li>
+<li>No preview is written for a fixture without a captured fact to write around. Eleven sports therefore have none today.</li>
+<li>The words "model" and "verified" do not appear in a published preview; the method is described here instead.</li>
+</ul>
+<h3>6. Reproducing this</h3>
+<pre>python3 scripts/ledger_capture.py      # on a runner with internet access
+python3 scripts/ledger_seed.py         # OLBG payload -> data/ledger/olbg.json
+python3 scripts/ledger_official.py     # official payloads -> data/ledger/official.json
+python3 scripts/ledger_merge.py        # match OLBG events to official sources
+python3 scripts/ledger_model.py        # originate prices
+python3 scripts/ledger_picks.py        # grade and rank selections
+python3 scripts/ledger_predictions.py  # validate the written previews
+python3 scripts/ledger_report.py       # sources, flags, repository review
+python3 scripts/ledger_build.py        # this site
+python3 scripts/ledger_verify.py       # audit the result</pre>
+</main>
+<footer><div class="wrap">
+<p>Snapshot built 2026-10-23T19:52:16Z from captures taken 2026-10-23T19:28:51Z to 2026-10-23T19:52:16Z. Prices are fair prices with no margin, published for
+analysis, not as betting advice. 18+.</p>
+<p>Rows whose official source could not be found are marked unmatched and listed on
+<a href="flagged.html">Flagged for review</a>. This desk does not fill a gap with an estimate.</p>
+</div></footer></body></html>

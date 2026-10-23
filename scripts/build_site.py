@@ -254,9 +254,9 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
-    ("olbg/index.html", "Latest: OLBG daily desk (23 Oct)"),
+    ("ledger/index.html", "Latest: ledger desk (15 sports, 23 Oct)"),
+    ("olbg/index.html", "OLBG daily desk (23 Oct)"),
     ("brief/index.html", "Daily brief (15 sports, 23 Oct)"),
-    ("ledger/index.html", "Ledger desk (15 sports, 23 Oct)"),
     ("monitor/index.html", "Evidence-first 15-sport monitor"),
     ("focus/index.html", "Focus desk (15 sports, 23 Oct)"),
     ("liveboard/index.html", "Live board (15 sports, 23 Oct)"),
@@ -294,10 +294,10 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
 <h1>Start with the OLBG daily desk.</h1>
 <p class="lede">The latest desk separates official fixture facts, OLBG discovery provenance, independent fair prices and missing evidence.
 It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
-<div class="cta"><a class="button primary" href="olbg/index.html">Open the OLBG daily desk →</a>
-<a class="button" href="olbg/picks.html">3 high-confidence predictions</a>
-<a class="button" href="olbg/flagged.html">Flagged for Review</a></div>
-<p><strong>89 upcoming rows · 54 priced matches · 58 originated markets.</strong> No active OLBG offer or current bookmaker price is claimed.
+<div class="cta"><a class="button primary" href="ledger/index.html">Open the 15-sport ledger →</a>
+<a class="button" href="ledger/flagged.html">Flagged for Review</a>
+<a class="button" href="olbg/index.html">OLBG daily desk</a></div>
+<p><strong>One consolidated desk, 15 sports.</strong> Every value carries the first-hand capture it came from; gaps are left blank and listed on the review page.
 Earlier overlapping research is retained below for audit only.</p></section>
 <details><summary><strong>Open historical 22 October dashboard (not newly verified)</strong></summary>''' + body + '</details>'
     return f"""<!DOCTYPE html>
@@ -319,7 +319,7 @@ Earlier overlapping research is retained below for audit only.</p></section>
 <div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
 <main class="wrap">
 <div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk, not the current clock.
-<a href="{prefix}olbg/index.html">Use the latest OLBG daily dashboard</a> for current research provenance, fair prices and the review queue.</div>
+<a href="{prefix}ledger/index.html">Use the 15-sport ledger</a> for today's OLBG slate, our own prices and the review queue.</div>
 {body}
 </main>
 <footer class="footer"><div class="wrap">

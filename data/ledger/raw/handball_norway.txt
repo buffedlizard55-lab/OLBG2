@@ -1,0 +1,742 @@
+
+
+<!DOCTYPE html>
+<html lang="no" id="StartPage_838">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta property="og:site_name" content="handball.no - Norges Håndballforbund" />
+<meta property="og:title" content="Norges H&#xE5;ndballforbund" />
+<meta property="og:description" content="handball.no er Norges H&#xE5;ndballforbunds offisielle hjemmeside. Her finner du terminlister, resultater, fagstoff, nyheter og informasjon om landslag med mer." />
+<meta property="og:image" content="https://www.handball.no/globalassets/system/nhf-logo.jpg" />
+<meta property="og:type" content="website" />
+
+        <meta name="description" content="handball.no er Norges H&#xE5;ndballforbunds offisielle hjemmeside. Her finner du terminlister, resultater, fagstoff, nyheter og informasjon om landslag med mer." />
+    <meta name="format-detection" content="telephone=no">      
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="https://www.handball.no/favicon.ico?v=2" />    
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="handball.no">
+    <meta name="application-name" content="handball.no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+        <!-- Google Tag Manager -->   
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TPTSLZ');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <title>Norges H&#xE5;ndballforbund | handball.no</title>
+<link href="https://www.handball.no/" rel="canonical" />            
+    <link rel="stylesheet" href="/css/new-main.css?v=36l3i0st-rhT-61Y36EZXKJ_0DGN48eZgdhUWQEzoKY" />
+    <script>        
+        window.appEnv = "Production";
+        window.appRelease = "HandballNo.Web@2026.6.1.1";
+    </script>    
+    <script src="/js/main.bundle.js?v=agDVwoorKCz_69bauNKFTrucoFqU9KBKa5Hh4EbLnMw" defer></script>
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        
+    <script src="https://tags.adnuntius.com/custom/nifRequest.js" async></script>
+    <meta name="google-site-verification" content="mB9hWO86L-uo6DJK0afd0Xh_b6pbcCf_M5oITuKWJd8" />
+</head>
+
+<body class="background-secondary">
+    <div class="no-print">
+        
+    </div>
+
+    
+
+        <script>try{sessionStorage.removeItem('regionNavigationContext')}catch(e){}</script>
+
+    <div id="app">
+        <header class="header-container no-print">
+
+
+
+<app-header logo-image-url="/gfx/nhflogo.svg"
+            logo-link-url="/"
+            logo-alt-text="Norges H&#xE5;ndballforbund"
+            search-url="/system/sok/"
+            :region-id="372"
+            title-suffix=" | handball.no"
+            :ai-search-enabled="false"            
+            :menu-items='[{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/regioner/","linkText":"Regioner","target":null,"landingPage":"","children":[{"href":"/regioner/region-ost/","linkText":"Region \u00D8st","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/regioninnlandet/","linkText":"Region Innlandet","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/region-sor/","linkText":"Region S\u00F8r","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/region-sorvest/","linkText":"Region S\u00F8rVest","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/region-vest/","linkText":"Region Vest","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/region-nord/","linkText":"Region Nord","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/","linkText":"NHF","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/om-oss/","linkText":"Om oss","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/kampaktivitet/","linkText":"Kampaktivitet","target":null,"landingPage":"/regioner/nhf-sentralt/kampaktivitet/","children":[{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/kampaktivitet/topphandball/","linkText":"Topph\u00E5ndball","target":null,"landingPage":"/regioner/nhf-sentralt/kampaktivitet/topphandball/","children":[{"href":"/regioner/nhf-sentralt/kampaktivitet/topphandball/eliteserien/","linkText":"Elkj\u00F8p-ligaen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/topphandball/1.-divisjon","linkText":"1. divisjon","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/topphandball/2.divisjon","linkText":"2. divisjon","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/topphandball/nm-senior/","linkText":"NM Senior","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/topphandball/norske-lag-i-e-cup/","linkText":"Norske lag i E-cup","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/topphandball/handball-pa-tv/","linkText":"TV og streaming","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/topphandball/gtp/","linkText":"GTP","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/system/live-kamper/","linkText":"H\u00E5ndball LIVE","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/kampaktivitet/nasjonale-serier/","linkText":"Nasjonale serier","target":null,"landingPage":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/","children":[{"href":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/hummel-bylagsturnering/","linkText":"Hummel Bylagsturnering","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/iceserien/","linkText":"iceserien 16  \u00E5r","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/skarpnesserien/","linkText":"Skarpnesserien 18 \u00E5r","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/nm-junior/","linkText":"NM Junior","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/nm-veteran/","linkText":"NM Veteran","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/nm-beach-handball/","linkText":"NM Beachh\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/nasjonale-serier/nm-i-rullestolhandball/","linkText":"NM i rullestolh\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/kampaktivitet/andre-kamptilbud/","linkText":"Andre kamptilbud","target":null,"landingPage":"/regioner/nhf-sentralt/kampaktivitet/andre-kamptilbud/","children":[{"href":"/regioner/nhf-sentralt/kampaktivitet/andre-kamptilbud/landsturneringen/","linkText":"Landsturneringen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/andre-kamptilbud/turneringer/","linkText":"Turneringer i Norge","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/andre-kamptilbud/turneringer-i-utlandet/","linkText":"Turneringer i utlandet","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://hjerteligaen.handball.no/","linkText":"REMA 1000 Hjerteligaen","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/kampaktivitet/dommer/","linkText":"Dommer","target":null,"landingPage":"/regioner/nhf-sentralt/kampaktivitet/dommere/","children":[{"href":"/regioner/nhf-sentralt/kampaktivitet/dommere/dommerutvikling/","linkText":"Dommerutvikling","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/dommere/utdanning-for-dommere-og-dommerstotte/","linkText":"Dommerutdanning","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/dommere/reglement/","linkText":"Reglement og regelpr\u00F8ver","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/dommere/regional-aktivitet/","linkText":"Regional aktivitet","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/dommere/dokumenter-for-dommere/","linkText":"Dommerarbeid i klubb","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/kampaktivitet/landslagene/","linkText":"Landslagene","target":null,"landingPage":"/regioner/nhf-sentralt/kampaktivitet/landslag/","children":[{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/handballjentene/","linkText":"H\u00E5ndballjentene","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/lk06/","linkText":"LK06 (Juniorjentene)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/lk08/","linkText":"LK08 (Juniorjentene)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/lk10/","linkText":"LK10 (U-jentene)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/handballgutta/","linkText":"H\u00E5ndballgutta","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/lm06/","linkText":"LM06 (Juniorgutta)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/lm08-guttelandslaget/","linkText":"LM08 (U-gutta)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/rullestollandslaget/","linkText":"Rullestollandslaget","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/beachjentene-lk-beach/","linkText":"Beachjentene","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/beachgutta-lm-beach/","linkText":"Beachgutta ","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/lkb09/","linkText":"LKB09 (Beachjuniorjentene)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/lmb09/","linkText":"LMB09 (Beachjuniorgutta)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/spillerhandboka/","linkText":"Spillerh\u00E5ndboka","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/billettsalg/","linkText":"Billettsalg","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/utvikling/","linkText":"Utvikling","target":null,"landingPage":"/regioner/nhf-sentralt/utvikling/","children":[{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/utvikling/utdanning/","linkText":"Utdanning","target":null,"landingPage":"/regioner/nhf-sentralt/utvikling/utdanning/","children":[{"href":"/regioner/nhf-sentralt/utvikling/utdanning/kursoversikt/","linkText":"Kursoversikt","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/utdanning/trener/","linkText":"Trenerutdanning","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/utdanning/malvaktstrener/","linkText":"M\u00E5lvaktstrener","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/utdanning/instruktor/","linkText":"Instrukt\u00F8rutdanning","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/utdanning/dommerutdanning/","linkText":"Dommerutdanning","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/utdanning/dommerutvikler/","linkText":"Dommerutvikler","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/utdanning/ehf-plotter/","linkText":"EHF-plotter","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/utdanning/topphandballseminar/","linkText":"Topph\u00E5ndballseminaret","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/utvikling/handballtrening/","linkText":"H\u00E5ndballtrening","target":null,"landingPage":"/regioner/nhf-sentralt/utvikling/ht/","children":[{"href":"/regioner/nhf-sentralt/utvikling/ht/kast-ballen/","linkText":"Kast ballen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/utviklingstrappa/","linkText":"Utviklingstrappa","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/barnehandball/","linkText":"Barneh\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/ungdomshandball/","linkText":"Ungdomsh\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://www.xn--hndballfysikk-pfb.no/","linkText":"H\u00E5ndballfysikk","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/valgskolen/","linkText":"Valgskolen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/forsvarsskolen/","linkText":"Forsvarsskolen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://www.xn--mlvaktskolen-tcb.no/?utm_source=handball.no\u0026utm_medium=hovedmeny\u0026utm_campaign=handballtrening","linkText":"M\u00E5lvaktskolen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/skuddskolen/","linkText":"Skuddskolen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/skuddkraft/","linkText":"Skuddkraft","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://www.ovelsesbanken.no/","linkText":"\u00D8velsesbanken","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/handballtreneren/","linkText":"H\u00E5ndballtreneren","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/goog-skadefri/","linkText":"Go\u0060og skadefri","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/spillerutviklingstrapp/","linkText":"Spillerutvikling","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/ht/fagarkivet/","linkText":"Fagarkivet","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/utvikling/beachhandball/","linkText":"Beachh\u00E5ndball","target":null,"landingPage":"/regioner/nhf-sentralt/utvikling/beachhandball/","children":[{"href":"/regioner/nhf-sentralt/utvikling/beachhandball/innforing/","linkText":"Introduksjon","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/beachhandball/spilleregler-beachhandball/","linkText":"Spilleregler Beachh\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/beachhandball/video/","linkText":"Beachh\u00E5ndballvideoer","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/beachhandball/bane-og-anlegg/","linkText":"Bane og anlegg","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/beachhandball/kurs/","linkText":"Kurs og utdanning i beachh\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/beachhandball/e-laringskurs/","linkText":"E-l\u00E6ringskurs","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/beachhandball/webinar/","linkText":"Beachh\u00E5ndball \u00F8kt","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/utvikling/klubbhuset/","linkText":"Klubbhuset","target":null,"landingPage":"/regioner/nhf-sentralt/utvikling/klubbhuset/","children":[{"href":"/regioner/nhf-sentralt/utvikling/klubbhuset/artikler/klubbhuset-niva1-3/","linkText":"Klubbhuset niv\u00E5 1-3","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/klubbhuset/klubbanalysen/","linkText":"Klubbanalysen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/klubbhuset/moduler/","linkText":"Moduler","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/utvikling/inkludering/","linkText":"Inkludering","target":null,"landingPage":"/regioner/nhf-sentralt/utvikling/inkludering/","children":[{"href":"/regioner/nhf-sentralt/utvikling/inkludering/Fargerik-handball/","linkText":"Flerkulturell h\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://hjerteligaen.handball.no/","linkText":"Tilrettelagt h\u00E5ndball (TH)","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/inkludering/rullestolhandball/","linkText":"Rullestolh\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/inkludering/funksjonshemmede/","linkText":"H\u00F8rsels- og synshemmede","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/inkludering/Skeiv-i-handballen/","linkText":"Skeiv i h\u00E5ndballen","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/praktisk-info/","linkText":"Praktisk info","target":null,"landingPage":"/regioner/nhf-sentralt/praktisk-info/","children":[{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/praktisk-info/brukerveiledninger/","linkText":"Brukerveiledninger","target":null,"landingPage":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/","children":[{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/brukerveiledning-turneringsadmin/","linkText":"TurneringsAdmin","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/brukerveiledning-handball-live/","linkText":"H\u00E5ndball Live","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/brukerveiledning-digital-dommerregning/","linkText":"Dommerregninger","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/brukerveiledning-digital-samarbeidssoknad/","linkText":"Digital samarbeidss\u00F8knad","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/digital-soknad-om-dispensasjon/","linkText":"Digital Dispensasjons\u00F8knad","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/brukerveiledning-min-handball/","linkText":"Min H\u00E5ndball appen","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/brukerveiledning-adgangskort/","linkText":"Adgangskort","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://www.idrettsforbundet.no/digital/minidrett/","linkText":"Min idrett","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://www.idrettsforbundet.no/digital/sportsadmin/","linkText":"SportsAdmin","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"https://www.idrettsforbundet.no/digital/klubbadmin/","linkText":"KlubbAdmin","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/personvern/","linkText":"Personvern","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/praktisk-info/klubber-og-haller/","linkText":"Anlegg og haller","target":null,"landingPage":"/regioner/nhf-sentralt/praktisk-info/klubber-og-haller/","children":[{"href":"/regioner/nhf-sentralt/praktisk-info/klubber-og-haller/handballarenaer/","linkText":"Anleggsveileder","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/system/haller/","linkText":"Haller","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/klubber-og-haller/arenakrav-topphandball/","linkText":"Arenakrav topph\u00E5ndball","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/klubber-og-haller/filming-og-stromming/","linkText":"Filming og str\u00F8mming","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/praktisk-info/praktiske-verktoy/","linkText":"Praktiske verkt\u00F8y","target":null,"landingPage":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/","children":[{"href":"/system/finnklubb/","linkText":"Finn klubb","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/administrative-bestemmelser/","linkText":"Aldersbestemmelser, spilletider og ballst\u00F8rrelser","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/overganger/","linkText":"Overganger","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/okonomi/","linkText":"\u00D8konomi","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/system/partnerklubber/","linkText":"Prestasjon- og partnerklubber","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/spillerkontrakter/","linkText":"Spillerkontrakter","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/handballskoler/","linkText":"H\u00E5ndballskoler","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/skjemaer/","linkText":"Skjemaer","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/min-handball/","linkText":"Min H\u00E5ndball app","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"http://www.nhfshop.no/","linkText":"NHFshop","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/ren-utover/","linkText":"Ren ut\u00F8ver","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/lenker/","linkText":"Lenker","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/praktisk-info/lover-og-regler/","linkText":"Lover og regler","target":null,"landingPage":"/regioner/nhf-sentralt/praktisk-info/lover-og-regler/","children":[{"href":"/regioner/nhf-sentralt/praktisk-info/lover-og-regler/spilleregler-handball/","linkText":"Spilleregler","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lover-og-regler/lover-og-bestemmelser/","linkText":"Lov, reglement og bestemmelser","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lover-og-regler/tabellberegning/","linkText":"Rekkef\u00F8lgeberegning","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lover-og-regler/lover-og-bestemmelser/elitelisens/","linkText":"Elitelisens","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/utvikling/verdiloftet/","linkText":"Verdil\u00F8ftet","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lover-og-regler/forbud-mot-frimerke/","linkText":"Frimerkeforbud","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lover-og-regler/varslinger/","linkText":"Varslinger","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/meny/norges-handballforbund/praktisk-info/lisens-og-forsikring/","linkText":"Lisens og forsikring","target":null,"landingPage":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/","children":[{"href":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/aldersinndeling-og-lisensbelop/","linkText":"Alder og bel\u00F8p","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/melde-skade/","linkText":"Melde skade","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/frilisens/","linkText":"Frilisens","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/okonomisk-stotte-til-lisens/","linkText":"\u00D8konomisk st\u00F8tte til lisens","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/ofte-stilte-sporsmal/","linkText":"Ofte stilte sp\u00F8rsm\u00E5l","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/reglement-for-lisens-og-deltakerberettigelse/","linkText":"Lisens og deltakerberettigelse","target":null,"landingPage":null,"children":[],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/lisens-og-forsikring-th-lag/","linkText":"Lisens og forsikring TH-lag","target":null,"landingPage":null,"children":[],"showAsOpen":false}],"showAsOpen":false}],"showAsOpen":false},{"href":"/regioner/nhf-sentralt/kampaktivitet/landslag/billettsalg/","linkText":"Billetter","target":null,"landingPage":null,"children":[],"showAsOpen":false}]'>
+</app-header>
+
+<sub-header title="Norges H&#xE5;ndballforbund"
+            url=""
+            :is-subpage="false"
+            :hide-on-scroll="true"></sub-header>
+
+
+
+        </header>
+
+        <main class="main-content grid-container no-padding background-secondary">
+                <div style="height: 1rem;"></div>
+            
+
+<section class="frontpage">   
+
+    <div class="grid-container no-padding">
+        <div class="grid-x"><div>
+    <div>
+        <div id="carousel-container">
+            <carousel-block :items='[{&quot;imageUrl&quot;:&quot;/contentassets/15746f208eee4dd0b0abbde9bddf7c66/20260927-norge-danmark-karusell.jpg?width=1000\u0026format=webp&quot;,&quot;title&quot;:&quot;Golden League, kvinner:&quot;,&quot;description&quot;:&quot;Danmark - Norge, s\u00F8ndag kl. 13.30 p\u00E5 TV 2!&quot;,&quot;isVideo&quot;:false,&quot;link&quot;:&quot;/link/7123ce0a228f4315ba9d492ced8c06cf.aspx&quot;},{&quot;imageUrl&quot;:&quot;/contentassets/cd8eb3be81c242e28ad77f0c145ed0c8/lyden-av-handballjentene-karusellbilde.jpg?width=1000\u0026format=webp&quot;,&quot;title&quot;:&quot;Nye episoder ute n\u00E5! &quot;,&quot;description&quot;:null,&quot;isVideo&quot;:false,&quot;link&quot;:&quot;/link/48a707b7a0f44c649c591eef3fd57ab5.aspx&quot;},{&quot;imageUrl&quot;:&quot;/globalassets/bilderblokker-til-karusell/2025-26/2025_verdiloftet_karusell.jpg?width=1000\u0026format=webp&quot;,&quot;title&quot;:&quot;Verdil\u00F8ftet&quot;,&quot;description&quot;:null,&quot;isVideo&quot;:false,&quot;link&quot;:&quot;/link/3a6a5ed3e72444448f35770ac29ca634.aspx&quot;}]'
+            :config='{&quot;dots&quot;:true,&quot;arrows&quot;:true,&quot;slidesToScroll&quot;:1,&quot;slidesToShow&quot;:1,&quot;autoplay&quot;:false,&quot;autoplaySpeed&quot;:4000,&quot;fade&quot;:false,&quot;touchMode&quot;:false,&quot;cssEase&quot;:null,&quot;centerMode&quot;:false,&quot;adaptiveHeight&quot;:false}'></carousel-block>
+        </div>
+    </div>
+</div></div>        
+    </div>
+    <div class="grid-container grid-container-flush-desktop panel-container">
+        <div class="grid-x grid-padding-x small-up-2 medium-up-4">
+                    <div class="cell">
+                        <a href="/system/kamper/?regionId=372"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>Kamps&#xF8;k</h2>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/system/live-kamper/"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>H&#xE5;ndball LIVE</h2>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/regioner/nhf-sentralt/utvikling/ht/"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>H&#xE5;ndballtrening</h2>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/regioner/nhf-sentralt/kampaktivitet/landslag/"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>Landslagene</h2>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/regioner/nhf-sentralt/kampaktivitet/topphandball/handball-pa-tv/"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>TV og streaming</h2>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/regioner/nhf-sentralt/utvikling/verdiloftet/"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>Verdil&#xF8;ftet</h2>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/regioner/nhf-sentralt/praktisk-info/lisens-og-forsikring/"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>Husk lisensen</h2>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="/regioner/nhf-sentralt/praktisk-info/lover-og-regler/varslinger/"
+                            class="box-icon text-center" 
+                            data-analytics="navigation_link">
+                            <h2>Varsling</h2>
+                        </a>
+                    </div>
+        </div>
+    </div>
+
+
+        <div class="grid-container grid-container-flush-desktop">
+            <div class="grid-x grid-padding-x">
+                <div class="block editorialblock cell small-12">
+    <div class="editorial-content">
+        
+<div class="header1" style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(240,240,240,1)); border-bottom: 0px; border-radius: 0px; border-top: 0px; padding: 10px; margin-bottom: 10px;"><img src="/gfx/nhflogo-svg.svg" alt="NHF Logo" width="48" height="48" /> Neste landskamper</div>
+    </div>
+</div>
+            
+                <div class="block matchblock cell small-12 medium-6">
+
+<div class="panel panel-pad">
+  <strong>H&#xE5;ndballgutta</strong>
+    <a href="https://ehfeuro.eurohandball.com/men/2028/" target="_blank" class="panel">
+        <h2 class="header2">EM-kvalifisering og Gjensidige Cup</h2>
+    </a>
+<p class="ng-scope">H&aring;ndballguttas neste kamp er <a href="https://www.eventim.no/artist/handballgutta-em-kvalifisering-norge-georgia/"><span style="text-decoration: underline;">EM-kval mot Georgia</span></a> 5. november, i &Aring;sane Arena.&nbsp;7.-10. januar venter <a href="https://www.eventim.no/artist/handballgutta-gjensidige-cup-2027/"><span style="text-decoration: underline;">Gjensidige Cup i Larvik</span></a>!</p></div>
+</div>
+            
+                <div class="block matchblock cell small-12 medium-6">
+
+<div class="panel panel-pad">
+  <strong>H&#xE5;ndballjentene</strong>
+    <a href="/link/78bd693ba6e74f769977fdcda36b9bc3.aspx" target="_blank" class="panel">
+        <h2 class="header2">Golden League og ice Cup</h2>
+    </a>
+<p class="ng-scope">H&aring;ndballjentene spiller Golden League i Danmark i oktober, f&oslash;r det er klart for ice Cup i Stj&oslash;rdal i november. <span style="text-decoration: underline;"><a href="/regioner/nhf-sentralt/kampaktivitet/landslag/handballjentene/2026/ice-cup/">Kj&oslash;p billetter her!</a></span></p></div>
+</div>
+            </div>                            
+        </div>
+    <div class="grid-container grid-container-flush-desktop news-reel">
+        <div class="grid-x grid-padding-x">
+            <!-- Left 2/3 Section -->
+            <div class="cell small-12 medium-8">                
+                <div class="grid-x grid-padding-x">
+                        <div class="cell small-12">
+                            <div>
+                                <h2 class="frontpage-header">Aktuelle saker</h2>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- News Items - 2 items per row -->
+                <div class="grid-x grid-padding-x">
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/null-nye-poeng-til-u-jentene/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/2026-bilder-yngre-landslag/lk10/2026-portretter-og-lagbilde/2026-helle-soldal-risa-lk10-web.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Null nye poeng til Norges u-jenter</h2>
+    <p class="fixedHeightIntro show-for-medium">Norges u-landslag slet mot Spanias utgrupperte forsvar fredag. </p>
+    <p class="hide-for-medium">Norges u-landslag slet mot Spanias utgrupperte forsvar fredag. </p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/seriens-beste-forsvarslag-gjorde-scoop-med-kente/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/2627-bilder-e-cupelkjop-ligaen/menn/fjellhammer/image0.jpeg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Seriens beste forsvarslag gjorde scoop med &quot;Kente&quot;</h2>
+    <p class="fixedHeightIntro show-for-medium">Fjellhammer gj&#xF8;r det bra. Og sikkert enda bedre med Kent Robin T&#xF8;nnesen neste &#xE5;r.&#xA;</p>
+    <p class="hide-for-medium">Fjellhammer gj&#xF8;r det bra. Og sikkert enda bedre med Kent Robin T&#xF8;nnesen neste &#xE5;r.&#xA;</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/hoy-puls-og-raske-avgjorelser-for-dommertalentene/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/contentassets/5812a0250bd1442b94fe1399509ad758/20261010-oda-hermansen.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">H&#xF8;y puls og raske avgj&#xF8;relser for dommertalentene</h2>
+    <p class="fixedHeightIntro show-for-medium">Hvordan tar man gode avgj&#xF8;relser n&#xE5;r pulsen er h&#xF8;y og presset &#xF8;ker? Fire dommerpar fikk testet seg p&#xE5; talentsamling.</p>
+    <p class="hide-for-medium">Hvordan tar man gode avgj&#xF8;relser n&#xE5;r pulsen er h&#xF8;y og presset &#xF8;ker? Fire dommerpar fikk testet seg p&#xE5; talentsamling.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/knepent-tap-for-kolstad-i-mesterligaen2/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/2627-bilder-e-cupelkjop-ligaen/menn/kolstad/2026-simon-jeppson-1.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Knepent tap for Kolstad i mesterligaen</h2>
+    <p class="fixedHeightIntro show-for-medium">Kolstad ledet lenge, men Magdeburg tok igjen ledelsen i andre omgang og seiret til slutt 35-32. </p>
+    <p class="hide-for-medium">Kolstad ledet lenge, men Magdeburg tok igjen ledelsen i andre omgang og seiret til slutt 35-32. </p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/forste-hjemmekamp--forste-hjemmeseier/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/2026-bilder-yngre-landslag/lk10/20261022-lk10-norge-portugal-scandiberico-foto-svein-andre-svendsen.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">F&#xF8;rste hjemmekamp &#x2013; f&#xF8;rste hjemmeseier</h2>
+    <p class="fixedHeightIntro show-for-medium">De norske U-jentene laget akkurat passe show i Nordstrand Arena: litt spennende f&#xF8;rst, betryggende etterp&#xE5;.</p>
+    <p class="hide-for-medium">De norske U-jentene laget akkurat passe show i Nordstrand Arena: litt spennende f&#xF8;rst, betryggende etterp&#xE5;.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/klart-for-kvartfinaletrekning-i-nm-junior-jenter/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/contentassets/3f8173e6adc845b59a7ad9af156422d4/2026-trekning-nmjr.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Slik spilles kvartfinalene i NM junior, jenter</h2>
+    <p class="fixedHeightIntro show-for-medium">Tirsdag ettermiddag ble kvartfinalene i NM Junior, jenter trukket. Her ser du resultatene.</p>
+    <p class="hide-for-medium">Tirsdag ettermiddag ble kvartfinalene i NM Junior, jenter trukket. Her ser du resultatene.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/juniorgutta-og-u-gutta-samles-i-skien/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/contentassets/ca0ad95069454070adef60b87ad6ba93/29072026-nor-pol_dusan_sandic__19_-x3.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Juniorgutta og U-gutta samles i Skien</h2>
+    <p class="fixedHeightIntro show-for-medium">B&#xE5;de U-gutta og Juniorgutta samles i Skien Fritidspark i begynnelsen av november for en kampfri samling.</p>
+    <p class="hide-for-medium">B&#xE5;de U-gutta og Juniorgutta samles i Skien Fritidspark i begynnelsen av november for en kampfri samling.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/slik-blir-avdelingene-i-iceserien-og-skarpnesserien/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/nhf-sentralt/kampaktivitet/nasjonale-aktiviteter/iceserien/2025-26/2025-26-bringsluttspill-illustrasjon---foto-janebjornstadstad.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Slik blir avdelingene i iceserien og Skarpnesserien</h2>
+    <p class="fixedHeightIntro show-for-medium">Avdelingsoppsettet for sesongens nasjonale serier for 16- og 18-&#xE5;ringer er klart. F&#xF8;rste spillerunde er 14.-15.11.</p>
+    <p class="hide-for-medium">Avdelingsoppsettet for sesongens nasjonale serier for 16- og 18-&#xE5;ringer er klart. F&#xF8;rste spillerunde er 14.-15.11.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/18-spillere-tatt-ut-i-landslagssjefens-forste-tropp/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/nhf-sentralt/kampaktivitet/landslag/handballgutta/2024/20240110-em-i-tyskland/2024-em-christian-o-sullivan-foto-liselotte-sabroe-ritzau-ntb-640-360.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">18 spillere tatt ut i landslagssjefens f&#xF8;rste tropp</h2>
+    <p class="fixedHeightIntro show-for-medium">Magnus Andersson har funnet plass til en tidligere landslagskaptein i sitt aller f&#xF8;rste uttak.</p>
+    <p class="hide-for-medium">Magnus Andersson har funnet plass til en tidligere landslagskaptein i sitt aller f&#xF8;rste uttak.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/knallsterk-sola-seier-i-champions-league/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/2627-bilder-e-cupelkjop-ligaen/kvinner/sola/20261004_sola_borussia-dortmund_hans_lie__nz92798_1.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Historisk Sola-seier i Champions League</h2>
+    <p class="fixedHeightIntro show-for-medium">Sola leverte en meget imponerende prestasjon da de sikret seg sin aller f&#xF8;rste seier i Champions League.</p>
+    <p class="hide-for-medium">Sola leverte en meget imponerende prestasjon da de sikret seg sin aller f&#xF8;rste seier i Champions League.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/runar-hadde-ingen-problemer-med-nilufer/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/2627-bilder-e-cupelkjop-ligaen/menn/runar/20261009-christoffer-rambo.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">Runar hadde ingen problemer med Nil&#xFC;fer</h2>
+    <p class="fixedHeightIntro show-for-medium">Runar vant enkelt 37-28 over Nil&#xFC;fer i f&#xF8;rste kamp i 2. runde av European Cup s&#xF8;ndag ettermiddag.</p>
+    <p class="hide-for-medium">Runar vant enkelt 37-28 over Nil&#xFC;fer i f&#xF8;rste kamp i 2. runde av European Cup s&#xF8;ndag ettermiddag.</p>
+</div>    
+</a>
+
+
+
+                        </div>
+                        <div class="cell small-12 medium-6">
+                            
+
+<a href="/nyheter/2026/10/narbo-tapte-forste-oppgjor-mot-dukla-praha/" class="panel white clearfix ">
+<div style="text-align: center;">
+    <img src="/globalassets/202526-bilder-e-cuprema-1000/menn/narbo/2025-theodor-svendsgard-1.jpg?width=420&amp;format=webp" alt="" />
+</div>
+<div class="panel-pad">
+    <h2 class="header2 fixedHeightHeader">N&#xE6;rb&#xF8; tapte f&#xF8;rste oppgj&#xF8;r mot Dukla Praha</h2>
+    <p class="fixedHeightIntro show-for-medium">N&#xE6;rb&#xF8; tapte 33&#x2013;28 borte mot Dukla Praha i det f&#xF8;rste kvalifiseringsoppgj&#xF8;ret i EHF European Cup. </p>
+    <p class="hide-for-medium">N&#xE6;rb&#xF8; tapte 33&#x2013;28 borte mot Dukla Praha i det f&#xF8;rste kvalifiseringsoppgj&#xF8;ret i EHF European Cup. </p>
+</div>    
+</a>
+
+
+
+                        </div>
+                </div>
+
+                <!-- "Vis alle Nyheter" Button spanning full width -->
+                <div class="grid-x grid-padding-x">
+                        <div class="cell small-12">
+                            <div>
+                                <search-block :block-id="'135854'"
+                                                load-url="https://www.handball.no/api/ServiceData/GetSearchListBlockModel"
+                                                archive-url="/nyheter/"
+                                                :region-id="372"
+                                                :exclude-ids="[140611,140555,139544,140601,140599,139506,139512,139505,139494,139460,139459,139451]">
+                                </search-block>
+                            </div>
+                        </div>
+                </div>
+            </div>            
+            <div class="cell small-12 medium-4">
+                <div class="grid-x grid-padding-x">
+                    <div class="block imagelinkblock cell small-12">
+
+<div class="margin-bottom-small">
+    <figure>
+        <a href="/regioner/nhf-sentralt/utvikling/ht/kast-ballen/bli-var-nye-handballvenn/" target="_self">
+
+            <img class="" alt="Vil du bli min h&#xE5;ndballvenn?"
+                 src="/globalassets/nhf-sentralt/utvikling/handballtrening/bilder_ht/hoyre-marg/vildubliminhandballvenn2.jpg?format=webp" />
+        </a>
+
+    </figure>
+</div>
+
+</div>
+                
+                    <div class="block imagelinkblock cell small-12">
+
+<div class="margin-bottom-small">
+    <figure>
+        <a href="/regioner/nhf-sentralt/utvikling/klubbhuset/artikler/klubbhuset-niva1-3/" target="_self">
+
+            <img class="" alt="Klubbhuset"
+                 src="/globalassets/annonser/2023-annonse-klubbhuset.jpg?width=0" />
+        </a>
+
+    </figure>
+</div>
+
+</div>
+                
+                    <div class="block imagelinkblock cell small-12">
+
+<div class="margin-bottom-small">
+    <figure>
+        <a href="/regioner/nhf-sentralt/praktisk-info/lover-og-regler/varslinger/" target="_self">
+
+            <img class="" alt="#stopp"
+                 src="/globalassets/illustrasjoner/diverse-illustrasjoner/knapp_varsling.jpg?width=0" />
+        </a>
+
+    </figure>
+</div>
+
+</div>
+                
+                    <div class="block imagelinkblock cell small-12">
+
+<div class="margin-bottom-small">
+    <figure>
+        <a href="/regioner/nhf-sentralt/praktisk-info/praktiske-verktoy/ren-utover/" target="_self">
+
+            <img class="" alt="Bli ren ut&#xF8;ver!"
+                 src="/globalassets/logoer/andre-logoer/logo-ren-utover_640x360web.jpg?width=0" />
+        </a>
+
+    </figure>
+</div>
+
+</div>
+                
+                    <div class="block editorialblock cell small-12">
+    <div class="editorial-content">
+        
+<p><a title="Annonse p&aring; handball.no?" href="/regioner/nhf-sentralt/om-oss/onsker-du-a-annonsere-pa-handball.no"><img src="/globalassets/nhf-sentralt/om-oss/vil-du-annonsere-pa-handball.no_640x360.jpg" alt="Vil du annonsere på handball.no_640x360.jpg" width="640" height="360" /></a></p>
+    </div>
+</div>
+                
+                    <div class="block imagelinkblock cell small-12">
+
+<div class="margin-bottom-small">
+    <figure>
+        <a href="/regioner/nhf-sentralt/om-oss/samfunnsansvar/#Milj&#xF8;fyrt&#xE5;rn" target="_blank">
+
+            <img class="" alt="Milj&#xF8;fyrt&#xE5;rn"
+                 src="/globalassets/nhf-sentralt/bilder/hoyre-marg/miljofyrtarn_hoyre-kolonne.jpg?format=webp" />
+        </a>
+
+    </figure>
+</div>
+
+</div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</section>
+
+        </main>
+    </div> <!-- end #app -->
+
+    <footer class="footer-container no-print">
+
+
+
+
+    <section class="sponsor">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell small-12">
+                    
+<ul class="sponsor-list clearfix">
+        <li>
+            <a href="https://www.ice.no/">
+                <img alt="ice" src="/contentassets/79e360bdc2bb4344a35ba62e676ceb82/ice-til-bunnlinja.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="https://www.gjensidige.no/">
+                <img alt="Gjensidige" src="/globalassets/nhf-sentralt/om-oss/samarbeidspartnere/gjensidige_logo_bunnside.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="https://www.rema.no/">
+                <img alt="REMA 1000" src="/globalassets/nhf-sentralt/om-oss/samarbeidspartnere/rema-1000_bannlinje.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="https://www.assistco.no/">
+                <img alt="Hummel" src="/globalassets/nhf-sentralt/om-oss/samarbeidspartnere/hummel-logo-bunnlinje.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="https://www.norsk-tipping.no/">
+                <img alt="Norsk Tipping" src="/globalassets/nhf-sentralt/om-oss/samarbeidspartnere/norsk-tipping-bunnlinje.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="https://www.skarpnes.com/">
+                <img alt="Skarpnes" src="/globalassets/nhf-sentralt/om-oss/samarbeidspartnere/skarpnes-logo-bunnlinje.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="https://www.scandichotels.com/no/om-oss/sport">
+                <img alt="Scandic" src="/globalassets/nhf-sentralt/om-oss/samarbeidspartnere/scandic-ny.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="https://www.vg.no/">
+                <img alt="VG" src="/globalassets/nhf-sentralt/om-oss/samarbeidspartnere/vg-ny.png?width=0" />
+            </a>            
+        </li>
+        <li>
+            <a href="http://www.elkj&#xF8;p.no/">
+                <img alt="Elkj&#xF8;p" src="/contentassets/4ee6b66b121c44438cb980a864fc029a/elkjop-til-bunnlinje.png?width=0" />
+            </a>            
+        </li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container footer">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell small-12 medium-4">
+                    <div class="border-holder">
+                        <div class="header4">
+                            Norges H&#xE5;ndballforbund
+                        </div>
+
+                        <p>
+                            <strong>Besøksadresse</strong><br />
+                            <span>
+                                
+<p>Sognsveien 75 A (4. etg. Ullevaal Stadion)<br />0855 OSLO</p>
+<p>Org.nummer: 969 989 336 MVA</p>
+<p>Fakturaadresse: <a class="email" href="mailto:969989336@autoinvoice.no">969989336@autoinvoice.no</a></p>
+                            </span>
+                        </p>
+
+                        <div class="show-for-small-only">
+                            <p>
+                                <strong>Postadresse:</strong><br />
+                                
+<p>Norges H&aring;ndballforbund<br />Postboks 5000<br />0840&nbsp; OSLO</p>
+
+    <div class="editorial-content">
+        
+<p><a class="email" title="Meld deg p&aring; nyhetsbrev" href="https://pub.dialogapi.no/s/MjE4MDg6N2I2NDhjYmYtM2ZhZS00NTRiLTgzNjAtMzJlMDgwYmUxYzhl" target="_blank" rel="noopener" data-analytics="newsletter_signup">Meld deg p&aring; nyhetsbrev</a><br /><br /><a class="email" title="Om cookies" href="/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/personvern/" target="_top">Om cookies/informasjonskapsler</a></p>
+    </div>
+
+                            </p>
+                        </div>
+
+                        <p>
+                            E-post:
+                                <a href="/regioner/nhf-sentralt/om-oss/administrasjon/epost/" class="email">Klikk her</a>
+                            <br />
+                            <span>
+                                Tlf:
+                                970 02520 kl. 9-15
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-4 show-for-medium">
+                    <div class="border-holder">
+                        <p>
+                            <strong>Postadresse:</strong><br />
+                            <span>
+                                
+<p>Norges H&aring;ndballforbund<br />Postboks 5000<br />0840&nbsp; OSLO</p>
+
+    <div class="editorial-content">
+        
+<p><a class="email" title="Meld deg p&aring; nyhetsbrev" href="https://pub.dialogapi.no/s/MjE4MDg6N2I2NDhjYmYtM2ZhZS00NTRiLTgzNjAtMzJlMDgwYmUxYzhl" target="_blank" rel="noopener" data-analytics="newsletter_signup">Meld deg p&aring; nyhetsbrev</a><br /><br /><a class="email" title="Om cookies" href="/regioner/nhf-sentralt/praktisk-info/brukerveiledninger/personvern/" target="_top">Om cookies/informasjonskapsler</a></p>
+    </div>
+
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-4 hide-for-small-only">
+                    <div class="border-holder">
+                        <ul class="social">
+                                <li>
+                                    <a class="facebook"
+                                           href="https://www.facebook.com/norgeshandballforbund"
+                                           aria-label="Facebook"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           data-analytics="social_media_link">
+                                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="instagram"
+                                           href="https://www.instagram.com/norgeshandballforbund/"
+                                           aria-label="Instagram"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           data-analytics="social_media_link">
+                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+            <div class="cell small-12 show-for-small-only">
+                <div class="border-holder">
+                    <ul class="social inline-list">
+                            <li>
+                                <a class="facebook"
+                                       href="https://www.facebook.com/norgeshandballforbund"
+                                       aria-label="Facebook"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="instagram"
+                                       href="https://www.instagram.com/norgeshandballforbund/"
+                                       aria-label="Instagram"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-x grid-padding-x copyright">
+            <div class="cell small-12 text-center">
+                <p class="meta">&copy; 2015 - Norges Håndballforbund - (04)</p>
+                <p class="meta">Alt innhold er beskyttet i henhold til lov om opphavsrett til åndsverk (Åndsverkloven). Innholdet kan ikke benyttes kommersielt uten samtykke fra Norges Håndballforbund.</p>
+            </div>
+        </div>
+    </section>
+    </footer>
+
+    <script defer="defer" src="/Util/Find/epi-util/find.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}})
+</script>
+
+
+    <script>
+        window.adn = window.adn || { calls: [] };
+        adn.calls.push(function () {
+            nifRequestAds([
+                ["nif-toppbanner", "3589df"],
+                ["nif-midtbanner-1", "3589e1"],
+                ["nif-midtbanner-2", "3589e2"],
+                ["nif-bunnbanner", "3589e0"],
+            ],
+                { adLabel: 'Annonse' }
+            )
+        });
+    </script>
+    
+</body>
+</html>
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'LNNEBIOAOHKHPPHMPCLBHAJILJALMKAAOMJPKFNHIFJCPMLBLDPOJALLMKHHPEGMNINBAFLMAADEBKADGCBADHEOAAKBFKCADONFHFJJIHLHDGKLDDLIHAAGEGMELDNE',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr1144172220aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script>

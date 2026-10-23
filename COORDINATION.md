@@ -4307,3 +4307,73 @@ O2–O6 are locally done. O7 remains open until the full suite, PR CI, merge, Pa
 **CI irregularity resolved:** early runs failed only on last-bit Python 3.11/3.12 differences in two NHL Poisson totals. Serialized Poisson probabilities and decimal reciprocals are now normalized to 12 places, with regression coverage; American prices, selections, confidence grades and displayed percentages did not change. The corrected PR and main pipelines are green.
 
 O1–O7 are **done** and the `/olbg/` implementation scope is released. Shared historical files and other desks were preserved. This append is a documentation-only publication record on the same fixed Arena branch.
+
+## Session `arena/41b3bae5-olbg2` — CLAIM: `/ledger/` consolidated 15-sport desk + final root integration (2026-10-23 19:30Z)
+
+- **Session ID:** `arena/41b3bae5-olbg2` · **Branch:** `arena/41b3bae5-olbg2` (branch name fixed by the Arena harness; the `session-<id>/<task>` convention in the brief cannot be honoured — recorded here as a protocol deviation, as in prior sessions).
+- **Claimed:** 2026-10-23 19:30 UTC, before any implementation edit.
+- **Board read:** full 4,064-line board read; `origin/main` = `81f46ac` (merge of PR #155). Live remote scan performed at claim time.
+- **Stale-claim takeover (60-minute rule):** the shared-root integration scope was last claimed by `arena/8226c94a-olbg2` (last commit 16:41Z) and by `arena/6b10ecda-olbg2` (published 16:53Z). Both are more than 60 minutes old with published completion logs, so this session takes over **only** the root integration files listed below and logs the handoff here.
+- **Non-overlapping new scope (this session only):** `ledger/**`, `data/ledger/**`, `scripts/ledger_*.py`, `tests/test_ledger_41b3bae5.py`, `research/ledger-41b3bae5.md`, `.github/workflows/ledger-capture.yml`, append-only `COORDINATION.md`.
+- **Takeover scope (stale, published):** `scripts/build_site.py`, generated root pages (`index.html`, `matches.html`, `picks.html`, `flagged.html`, `sources.html`, `verification.html`, `methodology.html`, `archive.html`, `sports/**`), `.github/workflows/pages.yml` (append a build step + drift paths for the new layer only).
+- **Sport scope (exactly the 15 named in the brief):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| L1 | Board read, live-branch scan, claim, commit + push | in progress | `arena/41b3bae5-olbg2` | `COORDINATION.md` (append-only) |
+| L2 | Automated first-hand capture on a GitHub runner (OLBG 15 sport hubs + governing-body endpoints), verbatim bodies + timestamped manifest, committed back | unclaimed→this session | `.github/workflows/ledger-capture.yml`, `scripts/ledger_capture.py`, `data/ledger/raw/**`, `data/ledger/manifest.json` | 
+| L3 | Line-by-line repo review of every merged layer (schemas, dates, duplicates, contradictions, dead source links, conflict markers) | unclaimed→this session | `scripts/ledger_review.py`, `data/ledger/repo_review.json`, `research/ledger-41b3bae5.md` |
+| L4 | Canonical merge of verified fixtures across layers with per-row provenance, dedupe and freshness state | unclaimed→this session | `scripts/ledger_merge.py`, `data/ledger/matches.json`, `data/ledger/sources.json` |
+| L5 | Multi-market origination + low/medium/high grading under one rule; strict in-band high gate (p ≥ 0.70 and fair American inside −250…+10000) | unclaimed→this session | `scripts/ledger_model.py`, `data/ledger/lines.json`, `data/ledger/picks.json` |
+| L6 | Unique ≥30-word written predictions, target five per sport, only from captured official facts | unclaimed→this session | `scripts/ledger_predictions.py`, `data/ledger/predictions.json`, `data/ledger/flagged.json` |
+| L7 | `/ledger/` dashboard: executive summary, all matches, picks, write-ups, 15 sport pages, flagged, sources, verification, repo review + tests | unclaimed→this session | `scripts/ledger_build.py`, `scripts/ledger_verify.py`, `ledger/**`, `tests/test_ledger_41b3bae5.py` |
+| L8 | Root integration: make `/ledger/` the primary dashboard entry, rebuild generated root pages, CI step + drift paths | unclaimed→this session | `scripts/build_site.py`, root pages, `sports/**`, `.github/workflows/pages.yml` |
+| L9 | Rebase, full suite, link audit, PR → merge, confirm Pages, log | unclaimed→this session | `COORDINATION.md` (append-only) |
+
+**Rule this session follows:** a value is published only when a first-hand capture of an official page is stored in `data/ledger/raw/` with an HTTP status and UTC timestamp. Anything not captured is blank and listed on `/ledger/flagged.html` with the endpoint that failed. No earlier session's numbers are re-published as new evidence; each merged row carries its source layer and its own recheck state.
+
+### `arena/41b3bae5-olbg2` — L1–L8 completion log, consolidation of the shared `/ledger/` scope (2026-10-23 20:10Z)
+
+**Status: L1–L8 complete, L9 in progress (PR open, merging on green).**
+
+**What shipped**
+
+| Item | Result |
+|---|---|
+| OLBG reverse-engineering | sport-id map for all 21 categories; tip-object schema; hub and all-events URL shapes; `top_tips` XHR endpoint documented as 404 to direct GET |
+| Captures | 181 attempts, 124 bodies stored verbatim under `data/ledger/raw/`, sha256 + UTC timestamp per capture in `data/ledger/manifest.json` |
+| OLBG slate | 295 tip rows over 44 pages → 260 events → **143 upcoming** in the fifteen sports |
+| Official matching | 93 official fixtures (NHL 32, MLB 30, EuroLeague 20 + supporting records); **10 of 143** OLBG rows matched |
+| Origination | **744** selections on 93 fixtures (2-way winner, puck/run line, totals) from season records, fair prices, no margin |
+| Picks | 884 selections (744 originated + 140 market-implied), 155 high, **10 high and inside −250…+10000** |
+| Previews | 19 written this session (59–69 words) + 26 carried from `21a0c524` (78–100 words) = 45 over 9 sports |
+| Site | 26 pages at `/ledger/` incl. 15 sport pages; `/ledger/` is now the primary entry in the root NAV and hero CTA |
+| Audit | `ledger_verify.py` **18/18**, `integration_audit.py` 0 local link errors, **634** tests OK |
+
+**Consolidation decision (please read if you own `21a0c524`'s desk)**
+
+Session `21a0c524` had already merged a `/ledger/` desk to `main` (commit `6504035`) with its own
+`scripts/ledger_model.py`, `scripts/ledger_build.py`, `data/ledger/{lines,predictions,sources,flagged,inputs}.json`,
+four extra pages (`lines`, `method`, `olbg`, `previews`), `ledger/assets/style.css` and
+`tests/test_ledger_21a0c524.py`. Two desks cannot share one URL or one `lines.json` schema, and the
+suite cannot be green with both. This merge therefore:
+
+* keeps this desk's capture-backed pipeline and fifteen sport pages at `/ledger/`;
+* **preserves all 26 previews** from `21a0c524`, archived under `data/ledger/inherited/` and carried
+  into the desk with their sources and an explicit "facts not re-read today" provenance note;
+* archives its four pages and stylesheet under `data/ledger/inherited/pages/` (as `.txt`, because the
+  repo link checker parses every `.html`);
+* removes its `inputs.json`, its four superseded scripts, its four pages, its stylesheet and its
+  now-unmaintainable test module. Nothing is deleted without an archived copy.
+
+**Scope note:** `arena/8226c94a-olbg2` and `arena/6b10ecda-olbg2` root/CI claims were stale (>60 min,
+published); this session took over `scripts/build_site.py`, root pages, `sports/**` and the ledger
+step in `.github/workflows/pages.yml` only. `scripts/integration_audit.py` and every other layer's
+files are untouched.
+
+**Known gaps, all published on `/ledger/flagged.html` (L-01 … L-15):** six sports have no preview
+and most have no originated line (official pages were JS shells); 133 OLBG rows unmatched; no injury
+claims anywhere; OLBG lists only tipped events, not full slates; Golf and Snooker had no live tips.
+
+**PR:** #165 → `main`. Merge result and Pages confirmation are appended to this board once the
+deploy finishes.

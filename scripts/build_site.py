@@ -254,12 +254,9 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
-<<<<<<< HEAD
     ("monitor/index.html", "Latest 15-sport research desk"),
     ("focus/index.html", "Focus desk (15 sports, 23 Oct)"),
-=======
     ("liveboard/index.html", "Live board (15 sports, 23 Oct)"),
->>>>>>> 7109f31 (liveboard: wire layer into root nav and CI; add cross-desk links)
     ("daily-picks/index.html", "Picks desk (23–25 Oct)"),
     ("daily/index.html", "Daily Top-5 desk (23 Oct)"),
     ("daily-audit/index.html", "Daily audit (23 Oct)"),

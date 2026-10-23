@@ -4393,3 +4393,31 @@ deploy finishes.
   previews + 26 carried, `ledger_verify.py` 18/18, `integration_audit.py` 0 link errors, 638 tests OK.
 * Figures in the earlier L1–L8 entry (143 events, 884 selections, 155 high) were correct for the
   19:52Z anchor; the 20:12Z capture moved them to the numbers above.
+
+## Session `arena/a0c8b7f3-olbg2` — CLAIM: `/cadence/` 15-sport OLBG reverse-engineering, official-source capture, multi-market origination, Top-5 predictions, and line-by-line repo review (2026-10-23)
+
+- **Session ID:** `arena/a0c8b7f3-olbg2` · **Branch:** `arena/a0c8b7f3-olbg2` (fixed by the Arena harness; the `session-<id>/<task>` branch naming convention in the brief cannot be created here and is noted as an environment constraint).
+- **Claimed:** 2026-10-23 19:29 UTC, before any implementation edit.
+- **Rebase conflict log (2026-10-23 19:30Z):** `git pull --rebase origin main` encountered an append-tail conflict in `COORDINATION.md` after `origin/main` advanced from `81f46ac` to `57d4a46` (`6cd8cc4c` publication). Resolved by preserving `6cd8cc4c`'s complete section verbatim and appending this session's claim below it without discarding any session's work.
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`):
+  - `arena/6cd8cc4c-olbg2` (merged to `main` `57d4a46` at 19:30Z) — claimed `scripts/monitor_core.py`, `scripts/monitor_collect.py`, `scripts/monitor_build.py`, `monitor/*.html`, `tests/test_monitor_nhl.py`, `research/collector-6cd8cc4c.md`.
+  - `arena/21a0c524-olbg2` (active, 19:27Z) — claims `ledger/**`, `data/ledger/**`, `scripts/ledger_*.py`, `tests/test_ledger_21a0c524.py`, `research/ledger-21a0c524.md`.
+  - `arena/758c0623-olbg2` (active, 19:27Z) — claims `olbg/**`, `data/olbg/**`, `scripts/olbg_*.py`, `tests/test_olbg_758c0623.py`, `research/olbg-758c0623.md`.
+  - `arena/41b3bae5-olbg2` (active, 19:27Z–19:28Z) — claims `ledger/**`, `.github/workflows/ledger-capture.yml`, **and shared root files** (`scripts/build_site.py`, generated root pages, `sports/**`, `.github/workflows/pages.yml`).
+  - `arena/7a073c9a-olbg2` (active, 19:28Z) — claims `brief/**`, `data/brief/**`, `scripts/brief_*.py`, `tests/test_brief.py`, `research/brief-7a073c9a.md`, **and shared root files** (`scripts/build_site.py`, generated root pages, `README.md`).
+- **Strict disjoint file scope for this session:**
+  `cadence/**`, `data/cadence/**`, `scripts/cadence_*.py`, `tests/test_cadence_a0c8b7f3.py`, `research/cadence-a0c8b7f3.md`, plus append-only updates to `COORDINATION.md`.
+  Because active concurrent sessions (`41b3bae5`, `7a073c9a`, `6cd8cc4c`) have claimed shared root files (`scripts/build_site.py`, root HTML, `sports/**`, `.github/workflows/pages.yml`, `README.md`) and monitor scripts within the last five minutes, this session **does not touch any file outside its claimed scope** and logs a root-navigation / CI drift-path integration request below per protocol.
+- **Sport scope (exact 15 sports requested):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| CD1 | Board read, live concurrent-branch scan, claim disjoint `/cadence/` scope, commit & push immediately | done | `arena/a0c8b7f3-olbg2` | `COORDINATION.md` (append-only) |
+| CD2 | First-hand OLBG.com reverse-engineering across all 15 covered sports (URL schema, sport IDs, competition structure, listed matches, market types, tip counts/percentages) + line-by-line audit of existing repo layers | in progress | `arena/a0c8b7f3-olbg2` | `research/cadence-a0c8b7f3.md`, `data/cadence/olbg_inventory.json`, `data/cadence/repo_audit.json` |
+| CD3 | First-hand official governing-body verification & capture for 2026-10-23 and upcoming fixtures across the 15 covered sports (schedules, standings, team/player stats, official injury reports where reachable) | unclaimed→this session | `arena/a0c8b7f3-olbg2` | `data/cadence/captures/**`, `data/cadence/sources.json`, `scripts/cadence_seed.py` |
+| CD4 | Multi-market independent line origination (match winner, handicap/spread, match total, tournament/race markets where applicable), low/medium/high confidence grading, and `-250` to `+10000` odds-band analysis | unclaimed→this session | `arena/a0c8b7f3-olbg2` | `scripts/cadence_model.py`, `data/cadence/matches.json`, `data/cadence/lines.json`, `data/cadence/picks.json` |
+| CD5 | Unique ≥30-word human predictions (target 5 highest-confidence picks per covered sport where official data supports them; zero prohibited words; strict fact-check against official captures; unconfirmed items left blank and flagged) | unclaimed→this session | `arena/a0c8b7f3-olbg2` | `scripts/cadence_predictions.py`, `data/cadence/predictions.json`, `data/cadence/flagged.json` |
+| CD6 | Clean `/cadence/` GitHub Pages dashboard (executive summary, all matches table, originated markets table, Top-5 picks & predictions, 15 sport category subpages, OLBG reverse-engineering & repo audit page, Flagged for Review page, official sources & methodology) + strict line-by-line verifier + unit tests | unclaimed→this session | `arena/a0c8b7f3-olbg2` | `scripts/cadence_build.py`, `scripts/cadence_verify.py`, `cadence/**`, `tests/test_cadence_a0c8b7f3.py` |
+| CD7 | Rebase on `origin/main`, run full repo test suite + `integration_audit.py`, open PR → `main`, merge, verify GitHub Pages live deployment, record PR & deploy result in `COORDINATION.md` | unclaimed→this session | `arena/a0c8b7f3-olbg2` | `COORDINATION.md` (append-only) |
+
+**Integration request to active root-scope owners (`arena/41b3bae5-olbg2` / `arena/7a073c9a-olbg2`):** once `/cadence/` is merged, please add a navigation link to `cadence/index.html` in `scripts/build_site.py` / `README.md` and include `cadence data/cadence` in `.github/workflows/pages.yml` if doing a root integration pass. Deterministic drift checks for `/cadence/` are also enforced directly inside `tests/test_cadence_a0c8b7f3.py` so `Validate Pages content` validates `/cadence/` automatically without editing `.github/workflows/pages.yml`.

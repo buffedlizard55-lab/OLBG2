@@ -1,0 +1,14 @@
+/* ledger desk */
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#17202a;background:#f6f8fa}
+header{background:#0b2a4a;color:#fff;padding:14px 18px}header b{font-size:20px}header span{opacity:.85;font-size:13px;margin-left:8px}
+nav{background:#123c66;padding:8px 18px;display:flex;flex-wrap:wrap;gap:6px}nav a{color:#dcebfb;text-decoration:none;padding:5px 10px;border-radius:6px;font-size:14px}nav:c{color:#fff}nav a:hover{background:#1d4f82;color:#fff}
+main{max-width:1180px;margin:0 auto;padding:20px 16px 48px}h1{font-size:26px;margin:.2em 0 .4em}h2{font-size:20px;margin:1.4em 0 .5em;border-bottom:2px solid #0b2a4a;padding-bottom:4px}h3{margin:1.2em 0 .4em}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:14px;margin:.5em 0 1em}th,td{border:1px solid #d5dde5;padding:6px 8px;text-align:left;vertical-align:top}th{background:#0b2a4a;color:#fff}tr:nth-child(even) td{background:#f0f4f8}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:12px 0}.card{background:#fff;border:1px solid #d5dde5;border-radius:10px;padding:12px}.card b{font-size:22px;display:block}
+.sportgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.sport{background:#fff;border:1px solid #d5dde5;border-radius:10px;padding:12px}.sport a{font-weight:700;font-size:17px}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;font-weight:700}.A{background:#0a7a42;color:#fff}.B{background:#b45309;color:#fff}.C{background:#334155;color:#fff}
+.High{background:#0a7a42;color:#fff}.Medium{background:#d97706;color:#fff}.Low{background:#64748b;color:#fff}
+.preview{background:#fff;border:1px solid #d5dde5;border-left:5px solid #0b2a4a;border-radius:8px;padding:14px;margin:12px 0}.preview h3{margin-top:0}
+.note{background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px;margin:12px 0}.ok{background:#ecfdf5;border-color:#a7f3d0}
+small{color:#475569}footer{max-width:1180px;margin:0 auto;padding:0 16px 30px;color:#475569;font-size:13px}
+a{color:#0b5cad}@media(max-width:720px){table{font-size:12px}th,td{padding:4px}}

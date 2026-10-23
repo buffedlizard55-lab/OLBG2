@@ -1,0 +1,196 @@
+{
+ "meta": {
+  "desk": "ledger",
+  "flags": 23
+ },
+ "flags": [
+  {
+   "id": "LG-01",
+   "area": "OLBG discovery",
+   "detail": "OLBG sport hubs read first-hand on 2026-10-23 served 'No tips found' with no event rows in fetched HTML. OLBG is used here for taxonomy, URL schema and market names only; every fixture comes from the official league/federation source linked on its row.",
+   "source_keys": [
+    "olbg-tips",
+    "olbg-darts",
+    "olbg-nhl"
+   ]
+  },
+  {
+   "id": "LG-BAND",
+   "area": "Brief maths",
+   "detail": "The brief's two rules overlap: high confidence above 70% with a fair price no shorter than -250 can only both hold between 70.00% and 71.43% (-250 is exactly 71.43%). The site labels that strict window Tier A, prices above 70% but shorter than -250 Tier B, and the strongest remaining in-band prices Tier C, rather than quietly widening either rule.",
+   "source_keys": []
+  },
+  {
+   "id": "LG-NH1",
+   "area": "Ice Hockey",
+   "detail": "Calgary Flames goals for/against were cut off in the NHL Stats chunk read (record and point percentage only). Detroit at Calgary is published unpriced instead of estimated.",
+   "source_keys": [
+    "nhl-summary"
+   ]
+  },
+  {
+   "id": "LG-NH2",
+   "area": "Ice Hockey",
+   "detail": "The NHL score feed embeds third-party bookmaker odds (its 'odds partners'). Those prices were ignored completely; every NHL price here is originated from goals data.",
+   "source_keys": [
+    "nhl-score23"
+   ]
+  },
+  {
+   "id": "LG-BK1",
+   "area": "Basketball",
+   "detail": "The NBA live scoreboard JSON returned HTTP 500 on 2026-10-23. No NBA fixtures are published; basketball coverage is EuroLeague Round 8 only.",
+   "source_keys": [
+    "nba-cdn"
+   ]
+  },
+  {
+   "id": "LG-EL1",
+   "area": "Basketball",
+   "detail": "The EuroLeague feed returns two clock times per game without a legend in the text served, and some teams show 6 games played against others' 7. Dates/times are stored 'as served', per-game rates are used throughout, and the margin/total standard deviations (13/18) are stated assumptions on the method page.",
+   "source_keys": [
+    "el-sched",
+    "el-stand"
+   ]
+  },
+  {
+   "id": "LG-ML1",
+   "area": "Baseball",
+   "detail": "Probable pitchers were not present in the MLB feeds read, and run rates use a two-team baseline built from the finalists' own runs scored (stated on each row). Game-by-game pitching matchups would normally move these prices.",
+   "source_keys": [
+    "mlb-sched",
+    "mlb-al",
+    "mlb-nl"
+   ]
+  },
+  {
+   "id": "LG-ML2",
+   "area": "Baseball",
+   "detail": "World Series Game 6 (30 Oct) appeared only as a truncated chunk and Game 7 was not read in full, so only Games 1-5 are published.",
+   "source_keys": [
+    "mlb-sched"
+   ]
+  },
+  {
+   "id": "LG-RL1",
+   "area": "Rugby League",
+   "detail": "Every nation has played one or two World Cup matches. On those differentials alone Fiji grade above Australia and New Zealand's line is flattered by a narrow loss; both rows are published as the data reads, capped at Medium, with this warning attached. The round-2 'positions' as served (for example two different 3rds) appear pool-relative and are quoted verbatim, not interpreted as an overall table.",
+   "source_keys": [
+    "rlwc-r1",
+    "rlwc-r2"
+   ]
+  },
+  {
+   "id": "LG-RU1",
+   "area": "Rugby Union",
+   "detail": "The PREM Rugby fixtures page served no fixture rows in fetched HTML and the URC fixtures URL returned 404. Rugby Union therefore has zero fixtures today rather than borrowed data from another desk.",
+   "source_keys": [
+    "prem-r4",
+    "urc"
+   ]
+  },
+  {
+   "id": "LG-SN1",
+   "area": "Snooker",
+   "detail": "The readable ranking table stops at 36th place (£198,500). Opponents below that line are priced using £198,500 as a ceiling, so favourite prices are floors and are labelled bounded; Liu Hongyu v Louis Heathcote (neither in top 36) is left unpriced. Match formats were not on the pages read, so no frame handicaps or totals are offered.",
+   "source_keys": [
+    "wst-rank",
+    "wst-home"
+   ]
+  },
+  {
+   "id": "LG-TE1",
+   "area": "Tennis",
+   "detail": "Quarter-final results were readable on the ATP scoreboard, but semi-final pairings could not be confirmed from the readable draw chunks. Completed quarter-finals are listed for the record and no tennis price is originated.",
+   "source_keys": [
+    "atp-scores",
+    "atp-draw"
+   ]
+  },
+  {
+   "id": "LG-CR1",
+   "area": "Cricket",
+   "detail": "No official table, ranking or results feed was read for these sides, so all 13 cricket fixtures are published without prices. Start times render in the viewer's timezone ('your time') and are stored verbatim; one venue is spelled 'Hnry Stadium' on the source page and is quoted as served.",
+   "source_keys": [
+    "ca-matches"
+   ]
+  },
+  {
+   "id": "LG-GO1",
+   "area": "Golf",
+   "detail": "Only players at -4 or better appear in the leaderboard chunk read. Outright shares are normalised over those 16 players and are therefore upper bounds; the full weekend field would dilute them.",
+   "source_keys": [
+    "dpwt-lb"
+   ]
+  },
+  {
+   "id": "LG-MR1",
+   "area": "Motor Racing",
+   "detail": "No practice, qualifying or grid information had been published on the Formula 1 pages read. United States GP outright shares follow championship points for the top ten only and are Low confidence by construction.",
+   "source_keys": [
+    "f1-cal",
+    "f1-stand"
+   ]
+  },
+  {
+   "id": "LG-HB1",
+   "area": "Handball",
+   "detail": "Only two of the fourteen 24 October fixtures involve a pairing with an official result from 23 October; only those two are priced, from that single result, at Low confidence. Both pairs also show the unusual pattern of the same clubs meeting on consecutive days with the home/away listing flipped, quoted as served.",
+   "source_keys": [
+    "ehf"
+   ]
+  },
+  {
+   "id": "LG-GA1",
+   "area": "Gaelic Sports",
+   "detail": "OLBG splits 'Gaelic Football' (sport 25) from 'Hurling' (26), while the users brief says 'Gaelic Sports'. The only fixture on the GAA page read is the Shinty-Hurling International final, Ireland v Scotland in Cork; it is published under Gaelic Sports with this scope note and no price (no form data read).",
+   "source_keys": [
+    "gaa",
+    "olbg-sitemap"
+   ]
+  },
+  {
+   "id": "LG-GH1",
+   "area": "Greyhounds",
+   "detail": "The GBGB open-races page served its filter interface but no meetings, races or runners in fetched HTML. Greyhounds has zero fixtures rather than invented cards.",
+   "source_keys": [
+    "gbgb"
+   ]
+  },
+  {
+   "id": "LG-VB1",
+   "area": "Volleyball",
+   "detail": "The CEV homepage served news only (Champions League Volley 2027 early rounds under way) with no fixture list. Volleyball has zero fixtures today.",
+   "source_keys": [
+    "cev"
+   ]
+  },
+  {
+   "id": "LG-DA1",
+   "area": "Darts",
+   "detail": "pdc.tv/calendar served cookie-consent markup only and the OLBG darts hub served 'No tips found'. Darts has zero fixtures; OLBG's darts market guide (Win Match, Handicap, Total Legs, Total 180s) is documented on the OLBG page for when an official draw is readable.",
+   "source_keys": [
+    "pdc",
+    "olbg-darts"
+   ]
+  },
+  {
+   "id": "LG-INJ1",
+   "area": "All sports",
+   "detail": "No official injury, team-news or availability feed was readable for any fixture today. Previews therefore assert no injuries at all; late team news could move any of these prices.",
+   "source_keys": []
+  },
+  {
+   "id": "LG-TZ1",
+   "area": "All sports",
+   "detail": "NHL and MLB start times are UTC in their official feeds and are labelled as such. EuroLeague, EHF, NRL, WST, GAA and Cricket Australia times are stored exactly 'as served' because those pages render in a viewer-local zone or do not state one; no silent conversion is applied.",
+   "source_keys": []
+  },
+  {
+   "id": "LG-REPO1",
+   "area": "Repository",
+   "detail": "COORDINATION.md on main still contains leftover merge-conflict separator lines (around lines 3216-3628, tagged 'origin/main' and commit 140baf3). That file is the shared append-only board, so this session logs the defect here for the integration owner instead of rewriting other sessions' records.",
+   "source_keys": []
+  }
+ ]
+}

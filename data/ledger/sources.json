@@ -1,0 +1,218 @@
+{
+ "meta": {
+  "desk": "ledger",
+  "captured": "2026-10-23"
+ },
+ "sources": [
+  {
+   "key": "olbg-tips",
+   "name": "OLBG betting tips index",
+   "url": "https://www.olbg.com/betting-tips",
+   "sport": "Reverse engineering",
+   "used_for": "Sport list, hub URLs, tip-row definitions (read 2026-10-23)"
+  },
+  {
+   "key": "olbg-sitemap",
+   "name": "OLBG betting-tips sitemap",
+   "url": "https://www.olbg.com/sitemap-betting-tips.xml",
+   "sport": "Reverse engineering",
+   "used_for": "Numeric sport IDs + URL schema (lastmod 2026-10-23 as served)"
+  },
+  {
+   "key": "olbg-darts",
+   "name": "OLBG darts hub",
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "sport": "Darts",
+   "used_for": "Hub served 'No tips found'; market guide (Win Match, Handicap, Total Legs, 180s)"
+  },
+  {
+   "key": "olbg-nhl",
+   "name": "OLBG ice hockey hub",
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "sport": "Ice Hockey",
+   "used_for": "Hub served 'No tips found'; market guide (Money Line, Puck Line, Totals)"
+  },
+  {
+   "key": "nhl-score23",
+   "name": "NHL Web API score 2026-10-23",
+   "url": "https://api-web.nhle.com/v1/score/2026-10-23",
+   "sport": "Ice Hockey",
+   "used_for": "2 fixtures, records, venues, team leaders, start times UTC"
+  },
+  {
+   "key": "nhl-score24",
+   "name": "NHL Web API score 2026-10-24",
+   "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "sport": "Ice Hockey",
+   "used_for": "12 fixtures, records, venues, team leaders"
+  },
+  {
+   "key": "nhl-summary",
+   "name": "NHL Stats API team summary 2026-27",
+   "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+   "sport": "Ice Hockey",
+   "used_for": "GP/GF/GA/pointPct for 31 teams complete; Calgary goals truncated in chunk read"
+  },
+  {
+   "key": "mlb-sched",
+   "name": "MLB Stats API schedule",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31",
+   "sport": "Baseball",
+   "used_for": "World Series Games 1-5 fully read (Game 6 chunk truncated)"
+  },
+  {
+   "key": "mlb-al",
+   "name": "MLB Stats API standings AL 2026",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "sport": "Baseball",
+   "used_for": "Rays 98-64, RS 736 RA 650, splits"
+  },
+  {
+   "key": "mlb-nl",
+   "name": "MLB Stats API standings NL 2026",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+   "sport": "Baseball",
+   "used_for": "Brewers 103-59, RS 832 RA 618, splits"
+  },
+  {
+   "key": "el-sched",
+   "name": "EuroLeague feed Round 8 schedule",
+   "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "sport": "Basketball",
+   "used_for": "10 fixtures, venues, dates/times as served"
+  },
+  {
+   "key": "el-stand",
+   "name": "EuroLeague feed standings R7",
+   "url": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026&gameNumber=7",
+   "sport": "Basketball",
+   "used_for": "GP/W/L/PF/PA for 20 teams"
+  },
+  {
+   "key": "nba-cdn",
+   "name": "NBA live scoreboard JSON (attempt)",
+   "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
+   "sport": "Basketball",
+   "used_for": "HTTP 500 on 2026-10-23 \u2014 no NBA rows published"
+  },
+  {
+   "key": "rlwc-r1",
+   "name": "NRL.com RLWC draw Round 1",
+   "url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+   "sport": "Rugby League",
+   "used_for": "5 Round 1 results"
+  },
+  {
+   "key": "rlwc-r2",
+   "name": "NRL.com RLWC draw Round 2",
+   "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "sport": "Rugby League",
+   "used_for": "1 result + 4 fixtures, venues, positions as served"
+  },
+  {
+   "key": "prem-r4",
+   "name": "PREM Rugby fixtures (attempt)",
+   "url": "https://www.premrugby.com/fixtures-results?competition=gallagher-prem&round=4",
+   "sport": "Rugby Union",
+   "used_for": "Page chrome only in fetched HTML \u2014 no fixture rows served"
+  },
+  {
+   "key": "urc",
+   "name": "United Rugby Championship fixtures (attempt)",
+   "url": "https://www.unitedrugby.com/fixtures-results",
+   "sport": "Rugby Union",
+   "used_for": "404 Page Not Found"
+  },
+  {
+   "key": "wst-home",
+   "name": "World Snooker Tour live & upcoming",
+   "url": "https://www.wst.tv/",
+   "sport": "Snooker",
+   "used_for": "NI Open QFs live, SF Wilson v Craigie, International Championship R2 ties"
+  },
+  {
+   "key": "wst-rank",
+   "name": "WST world ranking (full table link)",
+   "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+   "sport": "Snooker",
+   "used_for": "Ranking money to 36th place (\u00a3198,500); below-36 values not served in chunk read"
+  },
+  {
+   "key": "atp-scores",
+   "name": "ATP Tour current scores",
+   "url": "https://www.atptour.com/en/scores/current",
+   "sport": "Tennis",
+   "used_for": "Quarter-final results + one live QF across Almaty/Brussels/Lyon"
+  },
+  {
+   "key": "atp-draw",
+   "name": "ATP Brussels 7485 draw",
+   "url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+   "sport": "Tennis",
+   "used_for": "Draw list read; semi-final pairings not confirmable in readable chunks"
+  },
+  {
+   "key": "ca-matches",
+   "name": "Cricket Australia live & upcoming",
+   "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "sport": "Cricket",
+   "used_for": "Fixture list 23-29 Oct, venues; times rendered 'your time'"
+  },
+  {
+   "key": "dpwt-lb",
+   "name": "DP World Tour Genesis leaderboard",
+   "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "sport": "Golf",
+   "used_for": "36-hole scores; co-leaders -10"
+  },
+  {
+   "key": "f1-cal",
+   "name": "Formula 1 2026 calendar",
+   "url": "https://www.formula1.com/en/racing/2026",
+   "sport": "Motor Racing",
+   "used_for": "R18 United States 23-25 Oct LIVE; R19 Mexico; R20 Brazil; R1-R7 winners"
+  },
+  {
+   "key": "f1-stand",
+   "name": "Formula 1 2026 drivers standings",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "sport": "Motor Racing",
+   "used_for": "Points: Antonelli 340 ... Gasly 41 (top 10 used)"
+  },
+  {
+   "key": "ehf",
+   "name": "European Handball Federation home/calendar",
+   "url": "https://www.eurohandball.com/en/",
+   "sport": "Handball",
+   "used_for": "23 Oct results + 24 Oct European Cup / WCh qualifier fixtures"
+  },
+  {
+   "key": "gaa",
+   "name": "GAA fixtures & results",
+   "url": "https://www.gaa.ie/fixtures-results",
+   "sport": "Gaelic Sports",
+   "used_for": "Ireland v Scotland Shinty-Hurling International Final, 24 Oct Cork"
+  },
+  {
+   "key": "gbgb",
+   "name": "GBGB open races (attempt)",
+   "url": "https://www.gbgb.org.uk/racing/open-races/",
+   "sport": "Greyhounds",
+   "used_for": "Filter UI only in fetched HTML \u2014 no races or runners served"
+  },
+  {
+   "key": "cev",
+   "name": "CEV home (attempt)",
+   "url": "https://www.cev.eu/",
+   "sport": "Volleyball",
+   "used_for": "News only \u2014 no fixture list served; CL Volley 2027 early rounds under way per headlines"
+  },
+  {
+   "key": "pdc",
+   "name": "PDC calendar (attempt)",
+   "url": "https://www.pdc.tv/calendar",
+   "sport": "Darts",
+   "used_for": "Cookie-consent markup only across chunk read \u2014 no draw/fixtures served"
+  }
+ ]
+}

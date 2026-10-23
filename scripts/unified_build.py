@@ -1000,8 +1000,9 @@ def build_archive(inv, audit):
     for p in sorted(ROOT.iterdir()):
         idx = p / "index.html"
         if p.is_dir() and idx.exists() and p.name not in ("sports", "assets"):
-            stamp = dt.datetime.fromtimestamp(idx.stat().st_mtime, dt.timezone.utc).strftime("%Y-%m-%d %H:%M")
-            dirs.append([f'<a href="/{e(p.name)}/index.html"><strong>{e(p.name)}/</strong></a>', e(stamp)])
+            # No mtimes: a fresh checkout changes them, which would make this page differ in CI.
+            pages_in_layer = len(list(p.rglob("*.html")))
+            dirs.append([f'<a href="/{e(p.name)}/index.html"><strong>{e(p.name)}/</strong></a>', pages_in_layer])
     known = {href.replace("/", "") for href, _ in NAV} | {"index.html", "olbg-events.html", "repo-review.html"}
     extras = sorted(p.name for p in ROOT.glob("*.html") if p.name not in known and p.name != "index.html")
     body = f"""{snapshot_strip(inv, audit)}
@@ -1015,9 +1016,9 @@ page exists so the front door can be one page while nothing is lost.</p>
         "and 0.651 by four different layers. They are different snapshots taken with different inputs, not four "
         "independent confirmations. <a href='/repo-review.html'>Repo review</a> records the detail.")}
 <h2>Layer front pages</h2>
-<p class="sub">The timestamp is the last-modified time of the layer's own <code>index.html</code> on disk — a build
-artefact, not a claim about how current its data is.</p>
-{table(["Layer", "index.html last modified (UTC)"], dirs, filterable=True)}
+<p class="sub">Each layer is listed with the number of pages it publishes. No build time is shown: a timestamp
+would be a checkout artefact rather than a statement about how current the layer's data is.</p>
+{table(["Layer", "Pages in layer"], dirs, filterable=True)}
 <h2>Other root-level pages left in place</h2>
 <p class="sub">Older front-page artefacts that belong to no layer directory.</p>
 <p class="chips">{"".join(f'<a class="chip" href="/{e(n)}">{e(n)}</a>' for n in extras)}</p>

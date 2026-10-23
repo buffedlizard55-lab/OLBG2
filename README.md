@@ -35,34 +35,17 @@ Three rules the desk will not break:
    claim about the result.
 
 **Current state, honestly.** 216 OLBG events were read (127 of them starting after the capture clock) and 93
-fixtures priced, of which 42 are recognisably the same event OLBG was listing. 22 of 122 graded picks reach high confidence; 8 of those are also inside the brief's band, and
-all 8 are alternate lines quoted at the band ceiling because a price of −250 is already 71.43%. Twelve of the
-fifteen sports fall short of five written predictions; the shortfall is published per sport rather than filled
-with prose the evidence cannot support. Four selections starting on 23 October in the reader's own day reach
-high confidence; all 22 high-confidence picks carry a written prediction.
+fixtures priced, of which 42 are recognisably the same event OLBG was listing. 22 of 122 graded picks reach high
+confidence; 8 of those are also inside the brief's band, and all 8 are alternate lines quoted at the band ceiling
+because a price of −250 is already 71.43%. Every high-confidence pick carries a written prediction; the volume
+target of five per sport is not met (33 of 75), and the shortfall is printed per sport instead of being filled with
+prose the evidence cannot support. Four selections starting on 23 October in the reader's own day reach high
+confidence, and they lead the front page.
 
-OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
-
-## Newest: OLBG daily desk — `/olbg/` (23 October 2026)
-
-**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/olbg/> ·
-[all matches](olbg/matches.html) · [picks and predictions](olbg/picks.html) ·
-[originated markets](olbg/markets.html) · [sources](olbg/sources.html) ·
-[Flagged for Review](olbg/flagged.html) · [methodology](olbg/methodology.html) ·
-[research record](research/olbg-758c0623.md).
-
-The 19:40:38 UTC snapshot contains **89 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **65 official-context-only** rows distinct. There are **54 priced matches**, **58 originated market rows**, and **3 high-confidence predictions**. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and the other limitations remain visible with official links.
-
-```sh
-python scripts/olbg_seed.py
-python scripts/olbg_model.py
-python scripts/olbg_predictions.py
-python scripts/olbg_build.py
-python scripts/olbg_verify.py
-python -m unittest tests.test_olbg_758c0623 -v
-```
-
-The offline rebuild is deterministic. CI runs the same pipeline and drift-checks `olbg/` and `data/olbg/`; it does not refresh the snapshot.
+**What that means for the brief.** The list of OLBG's events, our own prices, the graded picks, the write-ups and
+the flags are all here and all sourced. What is not here is a price for every match OLBG lists: 86 of the 127
+upcoming events have no captured strength input behind them, so they are shown with OLBG's own market names and no
+number of ours. That is the single largest gap against the brief, and it is on `/analysis.html` in table form.
 
 ## Earlier: 15-sport daily brief — `/brief/` (23 October 2026)
 

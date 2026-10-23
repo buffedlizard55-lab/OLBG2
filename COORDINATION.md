@@ -4768,6 +4768,100 @@ The same final visual audit found two remaining outright-label concatenations in
 | HZ6 | Static `/horizon/` GitHub Pages site + verifier + unit tests | done | `scripts/horizon_build.py`, `scripts/horizon_verify.py`, `horizon/index.html`, `horizon/flagged.html`, `horizon/olbg-audit.html`, `horizon/repo-audit.html`, `horizon/sports/*.html` (15 sport pages), `tests/test_horizon_9c5af337.py` (19 HTML files, 376 linked table rows, 0 unlinked rows, 672 local links checked, 0 broken links) |
 | HZ7 | Rebase, test suite, PR #182 merge & GitHub Pages verification | done | PR [#182](https://github.com/buffedlizard55-lab/OLBG2/pull/182) merged to `main` at `2026-10-23T21:51:48Z` as `68a58d6ce57902b9ca96127b56ad2b5bd91a0d12`; `Validate Pages content` passed on both PR ([40029598977](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029598977)) and `main` ([40029785603](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029785603)) |
 
+---
+
+### FI5 publication record — final integration live (2026-10-23 21:52Z)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#178](https://github.com/buffedlizard55-lab/OLBG2/pull/178) — merged 21:47:26Z; merge commit `2dbc3ee3d7756ac2c05b0035104a804d46965cf1` |
+| PR validation | Runs [40029061523](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029061523) and [40029083168](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029083168) — both success at head `6979063`; merge state CLEAN |
+| Main validation | [40029293389](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293389) — success on merge `2dbc3ee` |
+| Pages deployment | Explicit [Deploy Pages run 40029293264](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293264) and dynamic [pages-build-deployment run 40029292238](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029292238) — both success; Pages API `built`, source `main:/` |
+| Live root | <https://buffedlizard55-lab.github.io/OLBG2/> fetched after deployment with a merge-specific cache buster; title `15-sport executive dashboard`, 93 records, 728 prices, 33 write-ups, 15 sport cards, 0 natural / 8 alternate in-band highs, 48 blank venues and 61 publisher-time rows all present |
+| Live review and linked pages | `/integration.html` fetched with all nine integration findings, FI-09 and both independent additions; `/cadence/index.html`, `/cadence/sports/index.html`, `/cadence/predictions.html` and `/research/integration-f0ee1b4a.md` also fetched successfully and matched the published counts/disclosures |
+
+FI5 is complete for merge and deployment. This publication record is a documentation-only follow-up; the implementation and evidence above are already merged and live. Open evidence items remain open by design and are not represented as resolved by the successful deployment.
+
+### Session `693dbf40` — `/quest/` PUBLICATION RECORD (2026-10-23)
+
+| Item | Value |
+|---|---|
+| Pull request | [#181](https://github.com/buffedlizard55-lab/OLBG2/pull/181) — merged 21:55:22Z as `b8368d1` |
+| CI | `Validate Pages content` success on PR head and on `main` (40030186477); local merged-tree suite green before each push |
+| Pages | `pages-build-deployment` [40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) build+deploy success on `main` containing `/quest/` (earlier deploys cancelled by concurrent merges #179/#185) |
+| Live | https://buffedlizard55-lab.github.io/OLBG2/quest/ — today/top5/flagged/ice-hockey pages read after deploy; 113 fixtures, 856 prices, 9 in-window high picks, 34 predictions, 13 flags |
+
+This record is a post-merge append (follow-up PR). Integrator requests (root nav link, CI drift steps for `quest`) remain open above.
+
+---
+
+## Session `arena/1b2c50af-olbg2` — I1–I6 COMPLETE / CANONICAL `/olbg/` PUBLISHED (2026-10-23 22:06 UTC)
+
+**Publication:** PR [#179](https://github.com/buffedlizard55-lab/OLBG2/pull/179) merged at `2026-10-23T22:00:31Z`, head `67c58ab`, merge commit `716f64b`. Both final PR validation runs ([40030310495](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030310495), [40030316363](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030316363)) and main validation [40030754570](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030754570) passed. Final local/CI scope: **700 tests**, **2,139 canonical checks**, **0 local-link errors**; Ledger's regenerated 50-module inventory passed **18/18** checks.
+
+**Pages:** native [pages-build-deployment 40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) succeeded on `667e69d`, which includes PR #179. Two explicit deploy runs were cancelled only because newer `main` commits triggered concurrency cancellation. The live <https://buffedlizard55-lab.github.io/OLBG2/olbg/> smoke test returned the refreshed 94-match overview, seven high-confidence selections, 63 originated markets and 56 review items with evidence navigation.
+
+**Scope closeout:** canonical research, pricing, prose, source audit, dashboard, regression coverage, README discovery, PR merge and live deployment are complete. PR #178's Cadence root was preserved; the earlier root-builder edit was deliberately not retained. `/horizon/`, `/quest/`, `/master/` and all other sessions' desks remain untouched. Evidence gaps and unsupported quotas remain explicitly open in `/olbg/flagged.html`, not resolved by publication. Full immutable publication details are appended to `research/olbg-refresh-1b2c50af.md`.
+---
+
+## Session `arena/84013d5f-olbg2` — `/summit/` completion log (2026-10-23)
+
+**Session ID / Branch:** `arena/84013d5f-olbg2` (fixed by Arena; all work remains on this branch). Scope was claimed earlier in this file and is disjoint from other desks.
+
+| Item | Result |
+| --- | --- |
+| Scope | `/summit/` only: `summit/**`, `data/summit/**`, `scripts/summit_*.py`, `tests/test_summit_84013d5f.py`, `research/summit-84013d5f.md`, append-only `COORDINATION.md`. |
+| SM1 claim | done | `COORDINATION.md` |
+| SM2 OLBG reverse-engineering + repo audit | done | `research/summit-84013d5f.md`, `data/summit/repo_audit.json` |
+| SM3 official verification/capture | done | `scripts/summit_seed.py`, `data/summit/{fixtures,sources,captures/manifest}.json` |
+| SM4 multi-market origination + band | done | `scripts/summit_model.py`, `data/summit/{lines,picks}.json` |
+| SM5 predictions | done | `scripts/summit_predictions.py`, `data/summit/predictions.json`, `data/summit/flagged.json` |
+| SM6 dashboard + verifier + tests | done | `scripts/summit_build.py`, `scripts/summit_verify.py`, `summit/**`, `tests/test_summit_84013d5f.py` |
+| Local validation | `scripts/summit_verify.py` 0 errors; `tests/test_summit_84013d5f.py` 10 tests OK |
+
+**Numbers:** 119 fixtures across the 15 sports (29 originated from official governing-body captures, 90 blank with stated reasons), 171 originated market lines, 22 high-confidence selections, 15 high-confidence selections inside the −250…+10000 band, 6 written predictions (Rugby Union 3, Handball 2, Tennis 1). The six predictions are ≥49 words, contain no prohibited word (`model`/`verified`), quote only captured official facts, and name their selection.
+
+**Shortfall:** Golf, Volleyball, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Motor Racing, Ice Hockey, Basketball and Rugby League have no written prediction because no high-confidence in-band selection was supported by official captured facts. This is disclosed on `/summit/flagged.html` (S-01) rather than fabricated.
+
+**Sources:** NHL API, MLB StatsAPI, URC match centre/table, LNH Daikin StarLigue/EHFCL, Lega Pallavolo Serie A, VBL, ATP Tour, PDC, World Snooker Tour, Formula 1, GBGB, GAA/Cork/Kerry, cricket.com.au. All captured under `data/summit/captures/manifest.json` and registered in `data/summit/sources.json`.
+
+**Cross-session request:** `/summit/` is not yet linked from the root navigation. The root integration owner (`arena/f0ee1b4a-olbg2` or `arena/1b2c50af-olbg2`) may add `summit/index.html` on a later root pass. Before pushing, run `python3 scripts/ledger_report.py && python3 scripts/ledger_build.py` unmodified so the ledger layer count includes `/summit/` and the hosted CI drift gate stays green.
+
+
+---
+
+## Session `arena/84013d5f-olbg2` — CLAIM: `/summit/` 15-sport OLBG reverse-engineering, official-source verification, multi-market origination, Top-5 predictions & repo review (2026-10-23 21:31 UTC)
+
+- **Session ID / Fixed Branch:** `arena/84013d5f-olbg2` (branched from `origin/main` `8b4435f`). Per the Arena platform branch constraint, all commits, pushes, and PRs for this session remain on `arena/84013d5f-olbg2` (the `session-<id>/<task>` branch naming convention cannot be created in this harness and is recorded here as an environment constraint).
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-23 21:30–21:31 UTC):
+  - `arena/f0ee1b4a-olbg2` (active, 21:27 UTC) — claims `research/integration-f0ee1b4a.md`, `scripts/integration_f0ee1b4a_audit.py`, `tests/test_integration_f0ee1b4a.py`, `data/integration-f0ee1b4a/**`, and shared root files (`README.md`, `scripts/build_site.py`, generated root pages, `assets/**`, `sports/**`, `.github/workflows/pages.yml`).
+  - `arena/1b2c50af-olbg2` (active, 21:29 UTC) — claims `olbg/**`, `data/olbg/**`, `scripts/olbg_*.py`, `tests/test_olbg_1b2c50af.py`, `research/*1b2c50af*`, plus deferred shared integration files.
+  - `arena/9c5af337-olbg2` (active, 21:29 UTC) — claims `horizon/**`, `data/horizon/**`, `scripts/horizon_*.py`, `tests/test_horizon_9c5af337.py`, `research/horizon-9c5af337.md`.
+  - `arena/deb1cb6e-olbg2` (active, 21:29 UTC) — claims `research/deb1cb6e-independent-audit.md`.
+  - All earlier desks (`cadence`, `ledger`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`, `daily-picks`, `current`, `atlas`, `canon`, `final`, `final-desk`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`, `relay`, `vanguard`, `pulse`, `update`, `covered`, `desk`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`) remain untouched.
+- **Strict disjoint file scope for `arena/84013d5f-olbg2`:**
+  - `summit/**` (clean static GitHub Pages dashboard at `/summit/`: executive summary & landing page, full matches table, multi-market originated lines table, Top-5 picks & predictions page, `-250` to `+10000` odds-band analysis page, OLBG reverse-engineering & repo review page, Flagged for Review page, official sources & methodology page, and 15 sport category subpages)
+  - `data/summit/**` (first-hand OLBG discovery records, official governing-body verification records, multi-market originated lines, confidence & `-250` to `+10000` band grading, unique ≥30-word human predictions, line-by-line repo review findings, and flagged irregularities)
+  - `scripts/summit_*.py` (`summit_seed.py`, `summit_model.py`, `summit_predictions.py`, `summit_build.py`, `summit_verify.py`)
+  - `tests/test_summit_84013d5f.py` (unit, schema, math, prose, official-source, link, and deterministic rebuild drift tests wired into `unittest discover`)
+  - `research/summit-84013d5f.md` (OLBG reverse-engineering report, line-by-line repo audit, official source verification log)
+  - `COORDINATION.md` (append-only updates)
+  - Note on CI drift gate: `.github/workflows/pages.yml` runs `scripts/ledger_report.py` and `scripts/ledger_build.py` (which enumerate top-level directories containing `index.html` and `tests/test_*.py` modules) and checks `git diff --exit-code` on `data/ledger/repo_review.json` and `ledger/repo-review.html`. Before opening our PR, we will run `python3 scripts/ledger_report.py && python3 scripts/ledger_build.py` unmodified (zero hand edits) if needed so the hosted CI drift gate stays green.
+- **Covered sports (exact 15 requested):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| SM1 | Read `COORDINATION.md`, scan live remote branches, claim disjoint `/summit/` scope, commit & push immediately | done | `arena/84013d5f-olbg2` | `COORDINATION.md` (append-only) |
+| SM2 | Reverse-engineer OLBG.com across the 15 covered sports (URL taxonomy, sport IDs, markets, live listed events, structural anomalies) + line-by-line repo review with official source links & flagged irregularities | in progress | `arena/84013d5f-olbg2` | `research/summit-84013d5f.md`, `data/summit/olbg_taxonomy.json`, `data/summit/repo_audit.json` |
+| SM3 | First-hand verification & capture from official governing-body sources for 2026-10-23 ("today") and upcoming fixtures across all 15 covered sports (schedules, standings, form, match stats, official injury reports where published; unconfirmed fields left blank and flagged) | unclaimed→this session | `arena/84013d5f-olbg2` | `scripts/summit_seed.py`, `data/summit/fixtures.json`, `data/summit/sources.json` |
+| SM4 | Independent multi-market line origination (Match Winner / Moneyline / 1X2 / Outright, Handicap / Spread / Puck Line / Run Line / Frame / Set / Leg Handicap, Match Total Over/Under), Low/Medium/High confidence grading, and `-250` to `+10000` odds-band analysis | unclaimed→this session | `arena/84013d5f-olbg2` | `scripts/summit_model.py`, `data/summit/matches.json`, `data/summit/lines.json`, `data/summit/picks.json` |
+| SM5 | Unique, non-repetitive human predictions (≥30 words each, targeting 5 highest-confidence picks per covered sport where official data supports them, zero forbidden words `model`/`verified`, citing team, player, current form, recent history, relevant game stats & injury status) | unclaimed→this session | `arena/84013d5f-olbg2` | `scripts/summit_predictions.py`, `data/summit/predictions.json`, `data/summit/flagged.json` |
+| SM6 | Clean `/summit/` GitHub Pages dashboard (`index.html`, `matches.html`, `lines.html`, `picks.html`, `band.html`, `predictions.html`, `olbg.html`, `audit.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/index.html`, 15 `sports/<slug>.html` pages, `assets/style.css`, `assets/app.js`) + strict line-by-line verifier + unit tests | unclaimed→this session | `arena/84013d5f-olbg2` | `scripts/summit_build.py`, `scripts/summit_verify.py`, `summit/**`, `tests/test_summit_84013d5f.py` |
+| SM7 | Rebase onto `origin/main`, run full repo test suite + `integration_audit.py`, open PR → `main`, merge PR, confirm GitHub Pages deployment, and record PR & merge result in `COORDINATION.md` | unclaimed→this session | `arena/84013d5f-olbg2` | `COORDINATION.md` (append-only) |
+
+**Cross-session request to active root integrators (`arena/f0ee1b4a-olbg2` / `arena/1b2c50af-olbg2`):** Because active sessions hold claims on `README.md`, `scripts/build_site.py`, root HTML, and `.github/workflows/pages.yml`, this session will not edit those files. Once `/summit/` is merged to `main`, please add a navigation link to `summit/index.html` on any subsequent root integration pass.
+
 ## Session `arena/73cee7ef-olbg2` — FINAL INTEGRATION (claimed 2026-10-23 21:35Z)
 
 **Session ID:** `arena/73cee7ef-olbg2` · **Branch:** `arena/73cee7ef-olbg2` · **Status:** active
@@ -4789,3 +4883,31 @@ prominent link), which is regenerated deterministically, and `COORDINATION.md` /
 
 **Baseline check performed before any edit:** `python3 -m unittest discover -s tests` → **OK**, 45 test
 modules; existing drift gate list read from `.github/workflows/pages.yml`.
+=======
+---
+
+### FI5 publication record — final integration live (2026-10-23 21:52Z)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#178](https://github.com/buffedlizard55-lab/OLBG2/pull/178) — merged 21:47:26Z; merge commit `2dbc3ee3d7756ac2c05b0035104a804d46965cf1` |
+| PR validation | Runs [40029061523](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029061523) and [40029083168](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029083168) — both success at head `6979063`; merge state CLEAN |
+| Main validation | [40029293389](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293389) — success on merge `2dbc3ee` |
+| Pages deployment | Explicit [Deploy Pages run 40029293264](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293264) and dynamic [pages-build-deployment run 40029292238](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029292238) — both success; Pages API `built`, source `main:/` |
+| Live root | <https://buffedlizard55-lab.github.io/OLBG2/> fetched after deployment with a merge-specific cache buster; title `15-sport executive dashboard`, 93 records, 728 prices, 33 write-ups, 15 sport cards, 0 natural / 8 alternate in-band highs, 48 blank venues and 61 publisher-time rows all present |
+| Live review and linked pages | `/integration.html` fetched with all nine integration findings, FI-09 and both independent additions; `/cadence/index.html`, `/cadence/sports/index.html`, `/cadence/predictions.html` and `/research/integration-f0ee1b4a.md` also fetched successfully and matched the published counts/disclosures |
+
+FI5 is complete for merge and deployment. This publication record is a documentation-only follow-up; the implementation and evidence above are already merged and live. Open evidence items remain open by design and are not represented as resolved by the successful deployment.
+
+### Session `693dbf40` — `/quest/` PUBLICATION RECORD (2026-10-23)
+
+| Item | Value |
+|---|---|
+| Pull request | [#181](https://github.com/buffedlizard55-lab/OLBG2/pull/181) — merged 21:55:22Z as `b8368d1` |
+| CI | `Validate Pages content` success on PR head and on `main` (40030186477); local merged-tree suite green before each push |
+| Pages | `pages-build-deployment` [40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) build+deploy success on `main` containing `/quest/` (earlier deploys cancelled by concurrent merges #179/#185) |
+| Live | https://buffedlizard55-lab.github.io/OLBG2/quest/ — today/top5/flagged/ice-hockey pages read after deploy; 113 fixtures, 856 prices, 9 in-window high picks, 34 predictions, 13 flags |
+
+This record is a post-merge append (follow-up PR). Integrator requests (root nav link, CI drift steps for `quest`) remain open above.
+
+---

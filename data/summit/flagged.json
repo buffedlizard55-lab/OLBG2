@@ -1,0 +1,70 @@
+{
+  "generated_utc": "2026-10-23T22:00:00Z",
+  "session": "arena/84013d5f-olbg2",
+  "count": 7,
+  "flags": [
+    {
+      "code": "S-01",
+      "severity": "high",
+      "sport": "All 15 sports",
+      "title": "Five-per-sport prediction target is not met for 12 sports",
+      "detail": "Written predictions are published only for Rugby Union (3), Handball (2) and Tennis (1), because those are the only shortlisted high-confidence selections with enough official captured facts to price inside the -250…+10000 band. Golf, Volleyball, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Motor Racing, Ice Hockey, Basketball and Rugby League have no written prediction. Prices are still published where an official fixture was captured; predictions are not invented to fill a quota.",
+      "source": "https://www.olbg.com/betting-tips",
+      "impact": "Shortfall against the five-per-sport target; disclosed rather than fabricated."
+    },
+    {
+      "code": "S-02",
+      "severity": "high",
+      "sport": "Several",
+      "title": "90 of 118 OLBG-listed fixtures have no official governing-body source",
+      "detail": "These rows are listed as discovered on OLBG but left blank and unpriced. No official fixture, standing, form or injury page was captured for them this session. They are flagged rather than priced or predicted.",
+      "source": "https://www.olbg.com/betting-tips",
+      "impact": "Unverified listings are visibly separated from verified, priced fixtures."
+    },
+    {
+      "code": "S-03",
+      "severity": "medium",
+      "sport": "OLBG",
+      "title": "OLBG hub pages do not expose a complete event table to a non-JS client",
+      "detail": "Prior direct reads of OLBG sport hubs returned “No tips found.” The desk therefore relies on committed OLBG captures and matches them to official governing-body pages where possible; it does not claim a full live OLBG inventory.",
+      "source": "https://www.olbg.com/betting-tips",
+      "impact": "The published list is a capture snapshot, not a continuous live feed."
+    },
+    {
+      "code": "S-04",
+      "severity": "medium",
+      "sport": "Darts",
+      "title": "PDC rankings are behind a cookie wall",
+      "detail": "pdc.tv/rankings returns a consent layer, so no darts ranking-derived price is originated. The European Championship round-two fixtures are still published from the PDC official schedule/news pages.",
+      "source": "https://www.pdc.tv/rankings/pdc-rankings-rules",
+      "impact": "Darts has fixture rows but no ranking-based line."
+    },
+    {
+      "code": "S-05",
+      "severity": "medium",
+      "sport": "Basketball",
+      "title": "NBA official endpoints were not reachable",
+      "detail": "NBA scoreboard/standings endpoints refused or errored in this session. NBA fixtures listed by OLBG are left blank and unpriced; EuroLeague is used for basketball where official EuroLeague pages were captured.",
+      "source": "https://official.nba.com/nba-injury-report-2026-27-season/",
+      "impact": "11 NBA rows unverified; basketball prices use EuroLeague only."
+    },
+    {
+      "code": "S-06",
+      "severity": "medium",
+      "sport": "Snooker",
+      "title": "World Snooker Tour upcoming slate is partial",
+      "detail": "WST shows the Northern Ireland Open semifinals and International Championship Round 2. No full match slate or both players’ ranking-money inputs are available for every OLBG-listed snooker event, so snooker has no high-confidence prediction.",
+      "source": "https://www.wst.tv/matches/",
+      "impact": "Snooker rows are published where an official match centre page exists; prices are conservative."
+    },
+    {
+      "code": "S-07",
+      "severity": "info",
+      "sport": "Golf, Greyhounds, Gaelic Sports, Motor Racing",
+      "title": "Outright/tournament events are not match fixtures",
+      "detail": "Golf, greyhound finals, Gaelic county finals and the US Grand Prix are tournament or race events. Outright prices are not originated as high-confidence match winners because no single competitor reaches a 70% line from the captured official facts.",
+      "source": "https://www.pgatour.com/leaderboard",
+      "impact": "These sports have rows but no written prediction."
+    }
+  ]
+}

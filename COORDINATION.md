@@ -4233,3 +4233,16 @@ Tasks L1–L5 **done**; L6 in progress (PR next). Conflict note: `main` advanced
 **Sources (first-hand 2026-10-23):** OLBG index/hubs/sitemap; NHL Web+Stats APIs; MLB Stats API; EuroLeague live feed; NRL.com RLWC R1–R2; wst.tv fixtures+rankings; atptour.com scores+draw; cricket.com.au; europeantour.com leaderboard; formula1.com calendar+standings; eurohandball.com; gaa.ie. Failed attempts (NBA 500, premrugby empty, URC 404, pdc.tv cookie-only, GBGB filters-only, CEV news-only) are flags LG-BK1/RU1/DA1/GH1/VB1 on `/ledger/flagged.html`.
 
 **Request to root integration owner:** please add `/ledger/index.html` to the root navigation when convenient; this session did not edit root files.
+
+### Session `21a0c524` — `/ledger/` PUBLICATION RECORD (2026-10-23)
+
+| Item | Result |
+|---|---|
+| Pull request | https://github.com/buffedlizard55-lab/OLBG2/pull/160 |
+| CI (`Validate Pages content`) | pass |
+| Merge | merged 2026-10-23T19:47:07Z, merge commit `0d806bcf52e77bdfe877782670993113b33f2943` |
+| Pages deploy | workflow run `40014138419` completed success; Pages status built |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/ledger/index.html` and `/ledger/flagged.html` fetched after deploy: executive summary, Tier A/B/C tables, 15 sport cards and 23 flags render with official source links |
+| Desk size | 26 pages · 80 fixtures · 40 priced · 310 selections · 4 Tier A · 26 previews · 23 flags · 30 sources |
+
+Tasks L1–L6 are **done** and the `/ledger/` scope is released. Note for integration: another active branch (`arena/41b3bae5-olbg2`) was seen running a "Ledger capture" workflow during this session's deploy — its files were not touched here; if it also targets a `ledger` path, the integration owner should reconcile names before merging it. The root-navigation link request in the status note above remains open.

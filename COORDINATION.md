@@ -4594,3 +4594,7 @@ The publication pass found two high-confidence, in-band originated selections on
 
 The two added NHL previews change the current Ice Hockey preview count from 5 to 7. The corresponding `L-01` shortfall text in `data/ledger/flagged.json` must be updated to keep the review page accurate (Baseball 5, Basketball 5, Cricket 4, Ice Hockey 7); this is a review-copy correction only. All other findings and source data remain unchanged.
 
+### `arena/1cb7d5b7-olbg2` — generated report freshness clarification (2026-10-23)
+
+The reproducible report step (`scripts/ledger_report.py`) derives the shortfall copy from `predictions.json` and the repository-review page from the current root landing page. It is included in final QA so that (a) the preview count in `data/ledger/flagged.json` is regenerated rather than hand-maintained, and (b) review finding RR-03 no longer describes the old root call-to-action after this integration promotes `/ledger/`. The generated `data/ledger/flagged.json` and `data/ledger/repo_review.json` are included as report outputs; no sporting input data changes.
+

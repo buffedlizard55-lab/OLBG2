@@ -4548,6 +4548,64 @@ without an alternate line”, the phrasing corrected on the summary in #169. It 
 survived; the desk's own verifier did not catch it because the sentence is free text, so the correction was
 made by re-reading the rendered page rather than by the gate.
 
+## Session `arena/deb1cb6e-olbg2` — independent repository and publication audit (2026-10-23)
+
+| Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|
+| Independent offline validation of the merged 15-sport desk, cross-layer navigation/link integration, reproducibility, and publication limitations; document only checked findings | in progress | `arena/deb1cb6e-olbg2` | `research/deb1cb6e-independent-audit.md`, append-only `COORDINATION.md` |
+
+Claimed after reading this board and confirming the checkout is clean at `main`/PR #174 merge `8b4435f`.
+This is an independent validation/documentation task, not a second data collection or prediction desk. It does
+not edit generated pages, any other desk's files, source data, or shared build configuration. Official-source
+facts will be treated as repository evidence only; external hosts outside this environment's outbound allowlist
+cannot be freshly fetched here. Cross-scope integration requests will be logged rather than edited.
+
+### Handoff: root link for the exact 15-sport desk
+
+The cadence publication record leaves its root-navigation request open. The last shared-root integration
+owner (`arena/41b3bae5-olbg2`) recorded completion at 20:25Z; at this session's 21:29Z claim that owner had
+made no commit for more than 60 minutes. The original root integration is done; this session takes over only
+the narrowly scoped outstanding link to `/cadence/`, so the requested exact-15-sport desk is discoverable
+from the landing page. Expanded exclusive scope for this handoff: `scripts/build_site.py`, its deterministic
+root-generated pages (`index.html`, `integration.html`, `archive.html`, `matches.html`, `picks.html`,
+`flagged.html`, `methodology.html`, `sources.html`, `verification.html`, `sports/**`), and a new isolated
+integration test `tests/test_root_cadence_integration_deb1cb6e.py`, in addition to the original research report
+and append-only coordination log. No source data or other desk layers are in scope.
+
+### Independent validation and integration result — 2026-10-23
+
+**Status: done locally; PR and Pages confirmation pending.**
+
+- Added a discoverable link to the exact-15-sport `/cadence/` desk from root navigation and the root landing CTA. The root remains anchored on `/ledger/`; `/cadence/` is a dated supporting desk.
+- Published audit findings `AUDIT-GREY-01` (the 2026 greyhound finals are linked to a GBGB URL containing `2025-category-one-schedule`; source-to-claim support was not confirmed) and `AUDIT-ODDS-02` (cadence `offered_*` fields are calculated using code margins, not captured OLBG/bookmaker quotes) in the root Flagged for Review page. Both are explicitly unresolved; neither is represented as a confirmed false fact.
+- Independent audit: `research/deb1cb6e-independent-audit.md`. Manual source review links are included for all 15 sports; external official pages were not freshly fetched in this environment.
+- Commands: `python3 scripts/cadence_verify.py` — 11 groups pass, 0 errors (93 fixtures, 728 prices, 33 predictions); `python3 scripts/integration_audit.py` — 0 local-link errors; `python3 -m unittest discover -s tests -v` — **664 tests pass**; root rebuild completed; `git diff --check` clean.
+- Repository evidence URLs: `https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/`; OLBG hub `https://www.olbg.com/betting-tips`; price formula `scripts/cadence_model.py` (`offered_decimal = dec(p)/(1-margin)`, `offered_american = american(p*(1-margin))`). Full source ledger: [`cadence/sources.html`](cadence/sources.html).
+- Coverage target remains unmet in the checked-in snapshot: 33 predictions total; only Basketball, Cricket and Rugby League have five each; Golf, Greyhounds and Gaelic Sports have none. The report details per-sport fixture/pick/prediction counts. This is disclosed, not padded.
+
+### CI follow-up — regenerated repository-inventory artifacts
+
+PR #175's first `Validate Pages content` run reached the final drift gate and failed only because the new
+integration test increases the ledger repository-review test-module count from 45 to 46. As with the earlier
+Cadence integration note above, this is generated inventory, not an editorial change to ledger evidence. Ran the
+ledger owner's full unmodified pipeline (`ledger_seed.py` → `ledger_verify.py`); the only tracked deltas are
+`data/ledger/repo_review.json` and `ledger/repo-review.html`, both changing that count to 46. No ledger source,
+fixture, price, pick, prediction or finding was changed. These generated outputs are included so the required
+repository-wide drift gate can pass; recorded as a cross-scope regeneration for the ledger owner.
+
+### Publication record — final completion (2026-10-23)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#175](https://github.com/buffedlizard55-lab/OLBG2/pull/175) — merged 21:36:35Z; merge commit `1ac44fe3994fac482f2a72d2460e37aba2c835b5` |
+| Validation workflow | [Run 40028019335](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019335) — success, including full tests, link audit and generated-file drift gate |
+| Pages deploy | [Run 40028019381](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019381) — success; GitHub Pages API status `built`, source `main:/` |
+| Published site | <https://buffedlizard55-lab.github.io/OLBG2/> — exact-15-sport desk is linked from the root landing page; `/cadence/` is the dedicated desk |
+| Final scope | Root navigation/CTA, generated root review flags, `research/deb1cb6e-independent-audit.md`, regression tests, and generated ledger repository inventory count refreshed through its own builder |
+| Remaining limitation | Snapshot is dated and not a live feed. The two audit flags remain unresolved; official external pages were not freshly fetched in this session. Five predictions per sport are not yet achieved. |
+
+This publication record is a post-merge append. The PR and deployment above contain the implementation and earlier audit; this board update itself is being recorded as a follow-up documentation change.
+
 ---
 
 ## Session `693dbf40` — `/quest/` integrated current-board desk (2026-10-23 21:30Z)

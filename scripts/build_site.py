@@ -255,6 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 # --------------------------------------------------------------------------- shell
 NAV = [
     ("ledger/index.html", "Latest: ledger desk (15 sports, 23 Oct)"),
+    ("cadence/index.html", "Exact 15-sport card & evidence audit"),
     ("olbg/index.html", "OLBG daily desk (23 Oct)"),
     ("brief/index.html", "Daily brief (15 sports, 23 Oct)"),
     ("monitor/index.html", "Evidence-first 15-sport monitor"),
@@ -295,6 +296,7 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
 <p class="lede">The latest desk separates official fixture facts, OLBG discovery provenance, independent fair prices and missing evidence.
 It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
 <div class="cta"><a class="button primary" href="ledger/index.html">Open the 15-sport ledger →</a>
+<a class="button" href="cadence/index.html">Exact 15-sport card & evidence audit</a>
 <a class="button" href="ledger/flagged.html">Flagged for Review</a>
 <a class="button" href="olbg/index.html">OLBG daily desk</a></div>
 <p><strong>One consolidated desk, 15 sports.</strong> Every value carries the first-hand capture it came from; gaps are left blank and listed on the review page.
@@ -739,6 +741,11 @@ depends on a source that does not fully support it. <em>medium</em> means a valu
 {sections[2]}
 {sections[3]}
 {sections[4]}
+<h2>Independent audit additions <span class="pill">2 items · 23 Oct 2026</span></h2>
+<div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Severity</th><th>Finding and review action</th><th>Sources</th></tr></thead><tbody>
+<tr id="AUDIT-GREY-01"><td class="nowrap">AUDIT-GREY-01</td><td><span class="badge medium">medium</span></td><td><strong>Source/year mismatch.</strong> The stored capture identifies the Scurry Gold Cup and Oaks finals as 24 October 2026 fixtures, but cites a GBGB URL whose path is explicitly <code>2025-category-one-schedule</code>. This checkout contains a summary capture, not the official page response, so the source-to-claim match was not confirmed. Treat the dates and event details as unverified until a current official 2026 schedule is checked.</td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener">GBGB page cited</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/cadence/captures/gbgb_schedule.json">Stored capture</a></td></tr>
+<tr id="AUDIT-ODDS-02"><td class="nowrap">AUDIT-ODDS-02</td><td><span class="badge medium">medium</span></td><td><strong>Displayed offered prices are constructed, not captured market quotes.</strong> The cadence generator sets <code>offered_decimal</code> and <code>offered_american</code> by applying a code-defined margin to its own probability. The repository has no saved OLBG odds response for these lines. Use the desk's probabilities and fair prices as originated estimates only; do not read the offered column or odds-window label as current bookmaker availability. Capture and link the actual OLBG market price if that is required for selection eligibility.</td><td><a href="https://www.olbg.com/betting-tips" rel="noopener">OLBG betting-tips hub</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/cadence_model.py">Price-generation code</a></td></tr>
+</tbody></table></div>
 """
     return page("Flagged for Review", "flagged.html", body)
 

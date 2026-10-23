@@ -1,0 +1,34 @@
+name: Monitor refresh diagnostic
+
+on:
+  push:
+    branches: ["arena/8226c94a-olbg2"]
+    paths:
+      - 'scripts/monitor_*.py'
+      - 'data/monitor/**'
+      - '.github/workflows/monitor.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Capture public-source attempts without publishing
+        run: |
+          python scripts/monitor_collect.py
+          python scripts/monitor_build.py --runtime data/monitor/runtime/latest.json
+          python scripts/integration_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: monitor-refresh-diagnostic
+          path: |
+            data/monitor/runtime/
+            monitor/
+          retention-days: 7

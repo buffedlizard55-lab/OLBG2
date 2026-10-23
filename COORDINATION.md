@@ -3788,3 +3788,37 @@ because `33e9eee7` (F6) and `8226c94a` claim those files.
 sports have consensus-derived prices only because no official numeric page rendered (ATP 404, NBA 500,
 PDC/URC/WST client-rendered). Seventeen flags are published on `/desk/flagged.html`. No injury sentence
 was written because no official injury report was captured.
+
+
+## Session `arena/8226c94a-olbg2` — 15-sport evidence gate and final integration
+
+Claimed 2026-10-23 16:16 UTC. Read the full local board; checked remote heads and open PRs (none). The shared-root integration claims from October 22 are over 60 minutes old with completed publication logs; taking over ONLY the shared integration scope below. Previous desks are preserved, not overwritten or recounted as new evidence. Arena fixes this branch name; no session branch will be created.
+
+| Task | Status | Owner | Exclusive files |
+|---|---|---|---|
+| Fresh official/OLBG access audit, source ledger, fail-closed 15-sport pipeline | in progress | `8226c94a` | `scripts/monitor_*.py`, `data/monitor/**`, `research/monitor-8226c94a.md` |
+| Accessible dashboard, exact requested categories, review queue and tests | in progress | `8226c94a` | `monitor/**`, `tests/test_monitor.py` |
+| Final integration: root notice/navigation, automatic updates, documentation, CI and publication | in progress | `8226c94a` | `scripts/build_site.py`, generated root pages + `sports/**`, `.github/workflows/monitor.yml`, `.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`, `README.md`, append-only `COORDINATION.md` |
+
+No earlier data, prose or claimed verification is promoted without independently inspecting evidence. Exact scope is the user's 15 sports (not historical 17-sport scope). Missing fixture/market/fact evidence stays blank and is published for review. All pushes remain on `arena/8226c94a-olbg2`; pull --rebase before each push.
+
+### Session `8226c94a` — implementation and selected field audit complete
+
+- 15 exact requested categories; Gaelic Sports includes both Football and Hurling. Older 17-sport desks preserved as archives; no prior claim of verification promoted.
+- Agent fetch-page reads of all 15 sport hubs plus Hurling, with official-source checks across all categories. Source evidence, URLs, selected extracts and limits: `data/monitor/seed.json`, `research/monitor-8226c94a.md`, `/monitor/sources.html`.
+- 24 official pairing/date rows, 19 OLBG participant matches, one experimental moneyline (both outcomes), zero qualified high-confidence picks. Incomplete inventory/markets/75-prediction target recorded as **needs review**, publicly at `/monitor/flagged.html` (M01–M10 and 15 category shortfalls). Unknown clocks, odds, injuries and inputs remain null. No claim of exhaustive line-by-line external verification of the old repository.
+- Implemented unattended public-source checks, OLBG event-link parser, MLB schedule parser, raw-response/failure ledger and six-hour Pages refresh. Other official fixture adapters and supported automatic prose remain incomplete and flagged. Collector failure does not relabel stored evidence as fresh.
+- Local validation: **493 tests passed** (467 existing + 26 monitor tests); **0 local link errors**, byte-identical 22-page monitor rebuild, evidence hashes and line arithmetic checked.
+- Shared-file takeover confined to claimed integration files; historical data and other sessions' source files untouched. Root now links the monitor prominently and collapses the historical dashboard.
+- Next: run hosted diagnostic/CI, review generated artifact, open and merge PR, confirm Pages deployment. Publication remains in progress.
+
+### Session `8226c94a` — concurrent integration resolution
+
+`git pull --rebase origin main` discovered PRs #140/#141 from `33e9eee7` after the initial claim. Stopped on conflicts. Preserved the full new main board and appended our claim; retained the Focus navigation link, README pointer, CI rebuild and drift paths. Regenerated root HTML from the combined builder instead of choosing either generated-page version. No `focus/**`, `data/focus/**`, `scripts/focus_*` or Focus tests changed. The published claim commit was rebased, so the next push uses an explicit lease against this session's own previously pushed commit, not a blind force push. PR #142 belongs to another active session and is not modified or merged here.
+
+### Session `8226c94a` — hosted checks and browser validation
+
+Hosted branch validation run [39987045033](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39987045033) SUCCESS; hosted monitor diagnostic [39987045247](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39987045247) SUCCESS. Raw artifact download is blocked by this sandbox's external-host restriction, so a subsequent diagnostic emits source-status/count notices accessible through the GitHub API; no unseen hosted fixture count is asserted. Desktop Chromium and 390px mobile checks passed: 15 coverage rows, 24 fixture rows, search filtering to one baseball row, empty-search state, no JS errors or horizontal mobile page overflow. Screenshots inspected locally, not committed. Prior custom Pages failure has an id-token-permission annotation; adding explicit deploy-job permissions before publication and checking actual deployment rather than assuming success.
+
+
+Integration follow-up: merged PR #142 from main without editing its `/desk/` data or builders. Board append conflict resolved by preserving all main history and this session’s complete records.

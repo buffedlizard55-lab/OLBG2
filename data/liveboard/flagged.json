@@ -1,0 +1,186 @@
+{
+  "as_of": "2026-10-23",
+  "note": "Every item below is a known gap, disagreement or irregularity on this board. None of them has been smoothed over, and none blocks publication. Items are ordered by how much they limit the coverage.",
+  "flags": [
+    {
+      "id": "F-01",
+      "severity": "high",
+      "sport": "Golf",
+      "title": "OLBG published no golf events at all",
+      "detail": "Both /betting-tips/Golf/5 and /betting-tips/Golf/All_Golf/5 rendered 'No tips found.' at 16:20Z, and the sport menu reset itself to All Sports. This is an empty hub, not a failed request: the page shell, navigation and help text all loaded. Zero golf fixtures, zero golf lines and zero golf predictions are therefore published. Nothing was substituted from another competition.",
+      "action": "Recorded and left empty. Re-check the hub later; do not backfill from memory or from another season.",
+      "sources": ["https://www.olbg.com/betting-tips/Golf/5"]
+    },
+    {
+      "id": "F-02",
+      "severity": "high",
+      "sport": "Rugby League",
+      "title": "Rugby League has outrights only, no matches",
+      "detail": "The Rugby League hub carried three 2027 season markets (State of Origin, Super League Grand Final, NRL Grand Final) and no upcoming fixture. The 2026 Super League and NRL seasons are finished, so there is nothing to price as a match. The three outrights are priced and labelled separately so they are not mistaken for fixtures.",
+      "action": "Published as outrights with no match-level prediction.",
+      "sources": ["https://www.olbg.com/betting-tips/Rugby_League/10"]
+    },
+    {
+      "id": "F-03",
+      "severity": "high",
+      "sport": "Gaelic Sports",
+      "title": "GAA's national fixture list does not corroborate OLBG's club fixtures",
+      "detail": "OLBG lists St Finbarrs v Nemo Rangers, Moycullen v Salthill-Knocknacarra, Kanturk v Eire Og and Fr Caseys v Kildimo Pallaskenry. gaa.ie's fixtures page carried only the Ireland v Scotland shinty-hurling match on 24 October and no club football fixture matching any of these. The club championship fixtures are therefore sourced to OLBG alone.",
+      "action": "Rows kept, marked as OLBG-sourced, and no club form or result is asserted.",
+      "sources": ["https://www.gaa.ie/fixtures-results", "https://www.olbg.com/betting-tips/Gaelic_Football/25"]
+    },
+    {
+      "id": "F-04",
+      "severity": "high",
+      "sport": "Handball",
+      "title": "EHF Champions League calendar does not contain OLBG's handball fixtures",
+      "detail": "OLBG's handball board is almost entirely domestic: French Lidl Starligue, German HBL, Spanish Liga Asobal, Danish and Balkan fixtures. The EHF Champions League calendar for 2026-27 lists 28-29 October matches (Wisla Plock v Nantes, Porto v Veszprem, PSG v Aalborg) and none of them is on OLBG's board. No domestic league table could be read, so no handball row carries an official input.",
+      "action": "Fourteen handball fixtures priced from the published tip share only, every one labelled accordingly.",
+      "sources": ["https://ehfcl.eurohandball.com/men/2026-27/standings/", "https://www.olbg.com/betting-tips/Handball/20"]
+    },
+    {
+      "id": "F-05",
+      "severity": "high",
+      "sport": "Handball",
+      "title": "German handball league table is behind a bot wall",
+      "detail": "handball-bundesliga.de/tabelle redirects to opel-hbl.de/de/hbl/tabelle, which serves a JavaScript shell plus reCAPTCHA. The table never rendered. Seven of the fourteen handball fixtures on the board are German, so this is the single largest missing input on the desk.",
+      "action": "Recorded as blocked. No German handball standing is quoted anywhere.",
+      "sources": ["https://www.opel-hbl.de/de/hbl/tabelle"]
+    },
+    {
+      "id": "F-06",
+      "severity": "high",
+      "sport": "Darts",
+      "title": "PDC order of merit and tournament pages serve a cookie wall",
+      "detail": "pdc.tv returns a consent overlay instead of content on both the tournaments and order-of-merit paths. No PDC ranking, prize money or tournament schedule was obtained, so the twelve darts matches are priced from the OLBG split alone and no player ranking is quoted.",
+      "action": "Recorded as blocked. Darts confidence rests on sample size, not on official ranking.",
+      "sources": ["https://www.pdc.tv/order-of-merit", "https://www.pdc.tv/tournaments"]
+    },
+    {
+      "id": "F-07",
+      "severity": "high",
+      "sport": "Tennis",
+      "title": "ATP ranking table does not render",
+      "detail": "atptour.com/en/rankings/singles returns navigation, filters and the ranking-date list, but the ranking rows themselves never appear in the served content. Nine tennis fixtures are therefore priced from the OLBG split only, and no player ranking or points total is quoted anywhere on this board.",
+      "action": "Recorded. Tennis predictions were not written, because a prediction without a ranking, a recent result or a head-to-head would be invention.",
+      "sources": ["https://www.atptour.com/en/rankings/singles"]
+    },
+    {
+      "id": "F-08",
+      "severity": "medium",
+      "sport": "Basketball",
+      "title": "NBA data endpoints return HTTP 500",
+      "detail": "cdn.nba.com scheduleLeagueV2_1.json and liveData/scoreboard/todaysScoreboard_00.json both returned a server error, so no NBA record, score or injury report was read. Ten NBA fixtures are on the board; all are priced from the OLBG split. The three EuroLeague fixtures do carry an official input.",
+      "action": "NBA rows kept and labelled 'OLBG tip share'. No NBA standing is quoted.",
+      "sources": ["https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_1.json"]
+    },
+    {
+      "id": "F-09",
+      "severity": "medium",
+      "sport": "Volleyball",
+      "title": "Men's Polish league table not obtainable",
+      "detail": "plusliga.pl/table.html redirects to tauronliga.pl, which is the women's competition, and that page serves a widget shell rather than a table. Nine of the fourteen volleyball fixtures are European club matches across Poland, Italy, Austria, Brazil, Czechia and Russia; none has an official table behind it.",
+      "action": "All volleyball rows priced from the published split, with the 6-tip gate applied before any high grade.",
+      "sources": ["https://www.tauronliga.pl/table.html"]
+    },
+    {
+      "id": "F-10",
+      "severity": "high",
+      "sport": "All",
+      "title": "OLBG publishes no prices to a logged-out visitor",
+      "detail": "The event page for Olympiacos v Fenerbahce lists Money Line, Pointspread and Game Totals, the per-selection tip split and tipster comments, but every price field renders empty. The hub's own help text claims each pick shows the odds; it does not. The only numbers on the page are handicap lines quoted inside individual comments, which are one tipster's taken line, not a market.",
+      "action": "No bookmaker price is quoted anywhere on this board. Every price is originated here and labelled as such.",
+      "sources": ["https://www.olbg.com/betting-tips/Basketball/European/Euroleague/Olympiacos_vs_Fenerbahce/4?event_id=535925"]
+    },
+    {
+      "id": "F-11",
+      "severity": "medium",
+      "sport": "All",
+      "title": "OLBG's time strings mix two time zones",
+      "detail": "North American events display US Eastern: MLB's World Series opener reads 'Today 20:00' against an official first pitch of 2026-10-24T00:00:00Z, i.e. 20:00 EDT. European events display UK local: URC's own match centre gives 14:45 local for Cardiff v Sharks and OLBG shows 14:45. The strings are stored exactly as displayed and are never silently converted, so a reader should not treat them as UTC.",
+      "action": "Every table shows the original display string and says so in the column header. Official UTC times are quoted only where a governing body published them.",
+      "sources": ["https://stats.unitedrugby.com/match-centre/2026-27/4", "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"]
+    },
+    {
+      "id": "F-12",
+      "severity": "high",
+      "sport": "All",
+      "title": "No official injury or availability list was obtained",
+      "detail": "No league, club or governing body on this board publishes an injury report that could be read in this session. The brief asks for verified injury facts in the write-ups; none can be given without a source, so none is given. No prediction names an injured or returning player.",
+      "action": "Stated on every prediction card. Injuries are a blank field, not a guessed one.",
+      "sources": ["https://www.olbg.com/betting-tips"]
+    },
+    {
+      "id": "F-13",
+      "severity": "high",
+      "sport": "All",
+      "title": "Five predictions per sport was not reached",
+      "detail": "Fourteen predictions were written, covering Baseball (3), Rugby Union (3), Basketball (3), Snooker (2), Darts (1), Volleyball (1) and Gaelic Sports (1). The brief asked for five per sport. In Golf and Rugby League there is no match to write about. In Tennis, Handball, Volleyball, Cricket, Greyhounds, Motor Racing and the NBA half of Basketball no official current-form input could be reached, so a thirty-word write-up would have had to invent form, recent results or statistics.",
+      "action": "Counts per sport are published on the coverage page. The gap is named rather than filled.",
+      "sources": ["https://www.olbg.com/betting-tips"]
+    },
+    {
+      "id": "F-14",
+      "severity": "high",
+      "sport": "All",
+      "title": "The two published gates are nearly mutually exclusive",
+      "detail": "-250 is an implied 71.4%. Requiring at least 70% confidence AND a price no shorter than -250 therefore describes a window of roughly one and a half percentage points. On this board ten selections clear 70% and exactly two of them (Aurillac at 71.4%, New South Wales at 71.4%) sit inside the band; the rest are too short. Five per sport inside that window is not attainable from these fixtures without dropping one of the two gates.",
+      "action": "Both gate results are published separately so the reader can see which gate excludes what. The band was not widened.",
+      "sources": ["liveboard/methodology.html"]
+    },
+    {
+      "id": "F-15",
+      "severity": "medium",
+      "sport": "All",
+      "title": "OLBG pagination was not followed",
+      "detail": "Every sport hub ends with a 'Load More Tips' control. Only the first page of each hub was read. The 133 fixtures here are slices of each card, not complete worldwide schedules, and the counts should not be read as market size.",
+      "action": "Stated on the matches page and in the method.",
+      "sources": ["https://www.olbg.com/betting-tips"]
+    },
+    {
+      "id": "F-16",
+      "severity": "low",
+      "sport": "All",
+      "title": "Six rows were cut off mid-row and excluded",
+      "detail": "The last visible row on several hubs was truncated by the page's own rendering: LA Clippers @ LA Lakers, Fribourg Gotteron v EHC Biel (partial), Stormers v Scarlets, VfB Friedrichshafen v SSC Karlsruhe, the 6:23 Sunderland race and HC Erlangen v THW Kiel. Their tip counts could not be read, so they were dropped rather than completed by eye.",
+      "action": "Excluded. They are not priced and do not appear in any count.",
+      "sources": ["https://www.olbg.com/betting-tips/Basketball/4"]
+    },
+    {
+      "id": "F-17",
+      "severity": "medium",
+      "sport": "Snooker",
+      "title": "Scott Donaldson is absent from both ranking lists",
+      "detail": "Donaldson does not appear in the captured world top 11, the one-year top 11 or the centuries list, so his strength cannot be measured from an official source. His opponent's figure is used with a floor value for an unranked player, and the resulting price is deliberately not graded high.",
+      "action": "Row kept at medium confidence with the reason attached.",
+      "sources": ["https://www.wst.tv/rankings/"]
+    },
+    {
+      "id": "F-18",
+      "severity": "medium",
+      "sport": "Rugby Union",
+      "title": "URC league table renders as an empty widget",
+      "detail": "stats.unitedrugby.com/match-centre/table/2026-27 returns column headers and no rows. Only the round-by-round scores are readable, which is why the three URC prices use a single round of results shrunk hard towards the mean rather than a season-long rating. The four French and English club fixtures have no table at all.",
+      "action": "Documented in the method. URC prices are marked as one-round estimates.",
+      "sources": ["https://stats.unitedrugby.com/match-centre/table/2026-27"]
+    },
+    {
+      "id": "F-19",
+      "severity": "low",
+      "sport": "Motor Racing",
+      "title": "No session times, grid or weather for the USA Grand Prix",
+      "detail": "OLBG gives 25 October 16:00 for the race and 38 tips spread over Verstappen and the field. No official session schedule, starting grid or forecast was captured, and qualifying had not happened, so no grid-based read is possible. The three motor racing markets are priced from the split alone.",
+      "action": "Published as a split-only market, labelled accordingly.",
+      "sources": ["https://www.olbg.com/betting-tips/Motor_Racing/14"]
+    },
+    {
+      "id": "F-20",
+      "severity": "medium",
+      "sport": "Baseball",
+      "title": "One baseball fixture exists, and it is the World Series opener",
+      "detail": "The MLB hub carried a single game, TB Rays @ MIL Brewers, on 23 October. A five-pick baseball card is therefore impossible from fixtures alone; the three markets on that one game (money line, run line, total) are what the board can offer.",
+      "action": "All three markets written up rather than padding the card with other competitions.",
+      "sources": ["https://www.olbg.com/betting-tips/Baseball/12"]
+    }
+  ]
+}

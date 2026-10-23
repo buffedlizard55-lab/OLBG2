@@ -256,6 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 NAV = [
     ("monitor/index.html", "Latest 15-sport research desk"),
     ("focus/index.html", "Focus desk (15 sports, 23 Oct)"),
+    ("liveboard/index.html", "Live board (15 sports, 23 Oct)"),
     ("daily-picks/index.html", "Picks desk (23–25 Oct)"),
     ("daily/index.html", "Daily Top-5 desk (23 Oct)"),
     ("daily-audit/index.html", "Daily audit (23 Oct)"),

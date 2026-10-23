@@ -1,0 +1,175 @@
+{
+ "generated_utc": "2026-10-23T16:20:00Z",
+ "house_rules": {
+  "length": "every prediction is at least 30 words",
+  "uniqueness": "no two predictions open with the same construction; each is written around that fixture's own numbers",
+  "facts": "every factual claim carries the official URL it came from; a claim that could not be sourced from an official body in this session is not made",
+  "injuries": "no official injury or availability list was obtained for any fixture in this session, so no prediction asserts one; this is disclosed on the flagged page rather than guessed at",
+  "vocabulary": "the words 'model' and 'verified' are deliberately absent from every prediction"
+ },
+ "predictions": [
+  {
+   "id": "P01",
+   "sport": "Baseball",
+   "event": "TB Rays @ MIL Brewers",
+   "event_id": 160789,
+   "market": "Money Line",
+   "selection": "Milwaukee Brewers to win",
+   "confidence": "low",
+   "band": "in band",
+   "text": "Milwaukee bring the best record in the majors into Game 1 of the World Series, having gone 103-59 with a +214 run differential, and they closed the regular season on a five-game winning streak and an 8-2 run over their last ten. That form was built at American Family Field, where they went 55-26. Tampa Bay were excellent too at 98-64, but they arrive off a loss and were a far more ordinary 43-38 on the road. Back the Brewers to take the opener in front of their own crowd.",
+   "facts": [
+    {
+     "claim": "Milwaukee finished 103-59 with a +214 run differential, a W5 streak and an 8-2 last ten",
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
+    },
+    {
+     "claim": "Milwaukee were 55-26 at home",
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
+    },
+    {
+     "claim": "Tampa Bay finished 98-64, were 43-38 away and arrived on an L1",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    },
+    {
+     "claim": "Game 1 is at American Family Field",
+     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-30&hydrate=team,linescore"
+    }
+   ]
+  },
+  {
+   "id": "P02",
+   "sport": "Baseball",
+   "event": "TB Rays @ MIL Brewers",
+   "event_id": 160789,
+   "market": "Game Totals",
+   "selection": "Over 8.5 runs",
+   "confidence": "low",
+   "band": "in band",
+   "text": "Two deep line-ups meet a pair of pitching staffs that were stingy all summer, yet the arithmetic still points above eight and a half. Milwaukee scored 832 runs and conceded 618 across 162 games, while Tampa Bay put up 736 and gave back 650, which works out at roughly 8.9 combined runs per game when these attacks meet these defences. Both clubs also played the bulk of their schedule under lights, Tampa Bay going 63-35 at night and Milwaukee 68-35, so the evening start at American Family Field is familiar territory. Take the over.",
+   "facts": [
+    {
+     "claim": "Milwaukee scored 832 and allowed 618 runs in 162 games",
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
+    },
+    {
+     "claim": "Tampa Bay scored 736 and allowed 650 runs in 162 games",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    },
+    {
+     "claim": "Tampa Bay were 63-35 in night games and Milwaukee 68-35",
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings"
+    }
+   ]
+  },
+  {
+   "id": "P03",
+   "sport": "Baseball",
+   "event": "TB Rays @ MIL Brewers",
+   "event_id": 160789,
+   "market": "Run Line",
+   "selection": "Tampa Bay Rays +1.5",
+   "confidence": "medium",
+   "band": "in band",
+   "text": "Tampa Bay's 98 wins were not the product of blowouts. They went 25-14 in one-run games during the regular season, a .641 record built on exactly the kind of tight games this market is about, and 8-6 in extra innings. That profile is exactly what a +1.5 run line wants: even when the Rays come out on the wrong side, they tend to stay inside a single run. Milwaukee's +214 differential is real, but it does not erase how narrowly Tampa Bay lose.",
+   "facts": [
+    {
+     "claim": "Tampa Bay were 25-14 in one-run games (.641) and 8-6 in extra innings",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    },
+    {
+     "claim": "Tampa Bay won 98 games",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    }
+   ]
+  },
+  {
+   "id": "P04",
+   "sport": "Rugby Union",
+   "event": "Connacht v Zebre Parma",
+   "event_id": 609577,
+   "market": "To Win",
+   "selection": "Connacht to win",
+   "confidence": "high",
+   "band": "in band",
+   "text": "Connacht return to the Dexcom Stadium after a chastening Round 3, where Glasgow Warriors put 36 points on them in a 36-19 defeat. The fixture list has handed them a far kinder assignment: Zebre Parma, who lost 12-29 at home to Edinburgh in that same round. A side that has just conceded 36 points will want to tighten up in front of its own support, and the visitors arrive having shipped 29 themselves. Selection: Connacht to win.",
+   "facts": [
+    {
+     "claim": "Glasgow Warriors beat Connacht 36-19 in Round 3",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    },
+    {
+     "claim": "Edinburgh beat Zebre Parma 29-12 in Round 3",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    },
+    {
+     "claim": "Connacht v Zebre Parma is a Round 4 fixture at the Dexcom Stadium on 23 October",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    }
+   ]
+  },
+  {
+   "id": "P05",
+   "sport": "Rugby Union",
+   "event": "Edinburgh v Lions",
+   "event_id": 609579,
+   "market": "To Win",
+   "selection": "Edinburgh to win",
+   "confidence": "high",
+   "band": "outside band (price shorter than -250)",
+   "text": "Edinburgh travel home from Italy with a 29-12 win at Zebre behind them and now face a Lions side that was taken apart at Loftus Versfeld in Round 3, losing 15-57 to the Vodacom Bulls. The South Africans have to make the trip to the Hive Stadium on a short turnaround, and their defence has leaked 57 points in a single match. Edinburgh scored 29 in Parma while conceding only 12, so a home fixture against an opponent that has just been beaten by 42 points is a clear preference for the home side.",
+   "facts": [
+    {
+     "claim": "Edinburgh won 29-12 at Zebre in Round 3",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    },
+    {
+     "claim": "Lions lost 15-57 to Vodacom Bulls in Round 3",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    },
+    {
+     "claim": "Edinburgh v Lions is a Round 4 fixture at the Hive Stadium on 23 October",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    }
+   ]
+  },
+  {
+   "id": "P06",
+   "sport": "Snooker",
+   "event": "David Gilbert v Mark Williams",
+   "event_id": 9950,
+   "market": "Win Match",
+   "selection": "Mark Williams to win",
+   "confidence": "high",
+   "band": "in band",
+   "text": "Mark Williams sits eighth on the World Snooker Tour's world ranking list with £747,400 in ranking money, a figure built on the kind of long-format consistency that separates the top ten from the chasing pack. David Gilbert is a fine long-potter and appears eleventh on the one-year list at £73,250, which shows he has been competitive in patches over the past twelve months. Over a match of this length, though, the Welshman's accumulated ranking haul reflects a far deeper body of work, and he starts as the clear favourite.",
+   "facts": [
+    {
+     "claim": "Mark Williams is eighth on the world ranking list with £747,400",
+     "source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+     "claim": "David Gilbert is eleventh on the one-year list with £73,250",
+     "source_url": "https://www.wst.tv/rankings/"
+    }
+   ]
+  },
+  {
+   "id": "P07",
+   "sport": "Snooker",
+   "event": "Jak Jones v Scott Donaldson",
+   "event_id": 9951,
+   "market": "Win Match",
+   "selection": "Jak Jones to win",
+   "confidence": "high",
+   "band": "in band",
+   "text": "Jak Jones has started this season strongly enough to sit fourth on the World Snooker Tour's one-year list with £141,000, a total that places him among the most productive players of the current campaign rather than among the stragglers. The one-year list measures what a player has actually banked in the past twelve months, so it is a fair gauge of who is arriving in form. Scott Donaldson did not appear on the ranking lists captured here, which leaves the current-season ledger pointing squarely at the Welshman. Selection: Jak Jones to win.",
+   "facts": [
+    {
+     "claim": "Jak Jones is fourth on the one-year ranking list with £141,000",
+     "source_url": "https://www.wst.tv/rankings/"
+    }
+   ]
+  }
+ ]
+}

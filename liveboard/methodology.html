@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method · OLBG live board</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">OLBG <span>live board</span></a>
+      <p class="stamp">Captured 23 Oct 2026 · 15 sports · every row carries its source</p></div>
+    <nav class="main"><a class="" href="index.html">Dashboard</a><a class="" href="picks.html">Top picks</a><a class="" href="matches.html">All matches</a><a class="" href="lines.html">Originated lines</a><a class="" href="predictions.html">Predictions</a><a class="" href="coverage.html">Coverage</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="on" href="methodology.html">Method</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section>
+  <h1>Method</h1>
+  <p class="lede">Short enough to check line by line. The script that produces every number is
+  <code>scripts/liveboard_model.py</code>; the script that produces this site is <code>scripts/liveboard_build.py</code>.
+  Both read only the two JSON files in <code>data/liveboard/</code>.</p>
+</section>
+<section>
+  <h2>1. Fixtures come from OLBG</h2>
+  <p>Each sport hub is <code>/betting-tips/{Sport}/{id}</code>. The hub lists the event, the market OLBG is showing
+  for it, the most-tipped selection and the tip split. Those five fields are copied verbatim, including OLBG's own
+  time string. No timezone conversion is applied because OLBG's display is not a UTC source.</p>
+  <h2>2. Probability comes from one of two places</h2>
+  <p><b>Official inputs.</b> Baseball uses Bill James' log5 on the two clubs' regular-season winning percentages with a
+  home term; run lines and totals come from a normal approximation on season runs scored and allowed. The two NHL games
+  use the mean implied probability of the moneylines the NHL's own feed publishes, because that endpoint carries prices
+  but not club records. EuroLeague uses point differential per game. Snooker uses the log of World Snooker Tour ranking
+  money. Formula 1 uses championship points share, discounted for single-race variance.</p>
+  <p><b>OLBG tip share.</b> Everywhere else the probability is the Laplace-smoothed tip split,
+  <code>(tips + 1) / (total + 2)</code>. The smoothing is what stops a 1-of-1 tip becoming a 100% chance. These rows are
+  labelled on every table; they are our own transformation of OLBG's sentiment, not a bookmaker price.</p>
+  <h2>3. Prices</h2>
+  <p>Fair decimal is 1 ÷ probability. Our offered price divides that by (1 − margin), with the margin listed per sport
+  in the script. American odds are derived from the decimal in the usual way.</p>
+  <h2>4. Labels</h2>
+  <ul>
+    <li><b>high</b> — probability at or above 70%, and at least six tips behind it when the price is tip-share based.</li>
+    <li><b>medium</b> — probability at or above 60%.</li>
+    <li><b>low</b> — everything else.</li>
+    <li><b>in band</b> — our offered American price sits between −250 and +10000, as the brief specifies.</li>
+  </ul>
+  <h2>5. What the band really does</h2>
+  <p>A fair 70% shot is about −233, and a fair 75% shot is about −300 once a five per cent margin is applied. So
+  “70% or better” and “−250 or longer” overlap in a window of roughly 70–75%. That is not a bug: it is the consequence of
+  asking for both a high strike rate and a price that is not prohibitively short. Strong favourites such as Gloucester at
+  89% are correctly excluded from the band while still appearing in the per-sport top five.</p>
+  <h2>6. Rules that were not bent</h2>
+  <p>No value is inferred, filled forward or copied from a secondary site. A fixture without an official input and
+  without a tip sample is left unlined. A claim without an official page is not written into a prediction.</p>
+</section>
+
+</main>
+<footer class="wrap">
+  <p>Research aid, not betting advice. Prices here are originated by this project, not quotes from a bookmaker.
+  OLBG supplies the fixture list and its published tip shares; governing bodies supply every other number.
+  Where an official number was not obtained, the value is blank and the row appears on
+  <a href="flagged.html">Flagged for review</a>.</p>
+  <details><summary>Sports</summary><div class="sports"><a href="sports/golf.html">Golf</a><a href="sports/volleyball.html">Volleyball</a><a href="sports/rugby-union.html">Rugby Union</a><a href="sports/cricket.html">Cricket</a><a href="sports/snooker.html">Snooker</a><a href="sports/darts.html">Darts</a><a href="sports/baseball.html">Baseball</a><a href="sports/gaelic-sports.html">Gaelic Sports</a><a href="sports/greyhounds.html">Greyhounds</a><a href="sports/tennis.html">Tennis</a><a href="sports/motor-racing.html">Motor Racing</a><a href="sports/handball.html">Handball</a><a href="sports/ice-hockey.html">Ice Hockey</a><a href="sports/basketball.html">Basketball</a><a href="sports/rugby-league.html">Rugby League</a></div></details>
+</footer>
+</body>
+</html>

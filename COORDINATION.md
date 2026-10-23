@@ -4968,3 +4968,17 @@ This record is a post-merge append (follow-up PR). Integrator requests (root nav
 **Sources actually re-read:** Official NHL schedule/standings; NBA schedule/standings/injury report; MLB schedule/standings/pitcher stats; PGA Tour and DP World Tour; URC and Premiership Rugby; Cricket Australia match hubs; WST matches/rankings; PDC withdrawal/day-two reports; ATP and WTA official reports/results; GAA/Munster GAA; GBGB; LegaVolley/VBL; EHF; NRL; Formula 1. The source log and per-row URLs in the desk link to the underlying pages. No raw HTML response bodies from the tool calls are represented as stored files.
 
 **Important limitations / items for Flagged for Review:** The OLBG capture predates the final cutoff by about 69 minutes; the official fixture/fact bundle predates it by about 2 hours. A page re-read at 22:xx showed ATP and WST events from the earlier schedule already completed/live, so those remain historical capture rows rather than live picks. Only 32 of 93 fixture rows have a confirmed start after 21:45Z; untimed official fixtures remain labeled time-unconfirmed. Golf had no captured OLBG tip object; Snooker hub tips were expired; Rugby League OLBG captured only 2027 outright futures. An MLB schedule response's preview status conflicted with live linescore fields. A parsed NBA injury row had uncertain team/player alignment and is withheld. No bookmakers were queried; probabilities are not calibrated guarantees.
+
+### ZN7 publication record — first release and follow-up
+
+| Item | Result |
+|---|---|
+| Implementation PR | [#191](https://github.com/buffedlizard55-lab/OLBG2/pull/191) — merged 2026-10-23 22:34:35Z as `feaffadd15ba4bfdf6eec295fb86cbce0e052e5a` |
+| PR validation | `Validate Pages content` run [40034387531](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40034387531) passed on PR head `9d3f040` |
+| Main validation | `Validate Pages content` run [40034502346](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40034502346) passed on merge commit `feaffadd` |
+| Pages deployment | `Deploy Pages` run [40034502475](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40034502475) passed; Pages API returned `built` for `main:/` |
+| Live check after deployment | `/zenith/index.html`, `/zenith/flagged.html`, and `/zenith/sports/ice-hockey.html` fetched and read. The first live fixture table exposed a display-only join bug: pick rows appeared on picks/previews but not in the match table. |
+| Follow-up | Fixed the join to match fixture/market/selection/line and added a regression assertion. No probabilities, fair prices, confidence grades or preview prose changed. Follow-up PR and deployment details to be appended after its checks. |
+| Root integration | `/zenith/` is live at its direct Pages URL. Root navigation request remains with the active root-consolidation owner for their shared-root integration PR. |
+
+**Current post-merge state:** the change above is in the working branch as a follow-up patch and is not yet deployed; until its PR passes and deploys, use the first-release Pages content with the explicit limitation that the `Matches` page omitted displayed selections for some priced fixtures. The lines/picks tables remained available and source-linked.

@@ -68,7 +68,7 @@ def main() -> None:
             lines.append(rec); local.append(rec)
         candidates = pick_by_fixture.get(f["id"], [])
         selected = max(candidates, key=lambda p: (p["probability"], p["market"] == "Money line")) if candidates else None
-        chosen_line = next((x for x in local if selected and x["source_probability_id"] == selected["id"]), None)
+        chosen_line = next((x for x in local if selected and x["selection"] == selected["selection"] and x["market"] == selected["market"] and x.get("line") == selected.get("line")), None)
         matches.append({**f,
             "our_selection": chosen_line["selection"] if chosen_line else "",
             "our_market": chosen_line["market"] if chosen_line else "",

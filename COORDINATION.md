@@ -4246,3 +4246,23 @@ Tasks L1–L5 **done**; L6 in progress (PR next). Conflict note: `main` advanced
 | Desk size | 26 pages · 80 fixtures · 40 priced · 310 selections · 4 Tier A · 26 previews · 23 flags · 30 sources |
 
 Tasks L1–L6 are **done** and the `/ledger/` scope is released. Note for integration: another active branch (`arena/41b3bae5-olbg2`) was seen running a "Ledger capture" workflow during this session's deploy — its files were not touched here; if it also targets a `ledger` path, the integration owner should reconcile names before merging it. The root-navigation link request in the status note above remains open.
+
+---
+
+## Session `arena/758c0623-olbg2` — CLAIM: canonical `/olbg/` exact 15-sport desk and final integration (2026-10-23)
+
+**Claimed:** 2026-10-23 19:28 UTC, before implementation edits. **Branch:** `arena/758c0623-olbg2` (fixed by Arena; the requested `session-<id>/<task>` branch cannot be created in this environment).
+
+**Concurrent-session check:** no open pull requests; `origin/main` = `81f46ac`. Active branch `arena/6cd8cc4c-olbg2` claims only `scripts/monitor_core.py`, `scripts/monitor_collect.py`, `tests/test_monitor_nhl.py`, `research/collector-6cd8cc4c.md`, and its board entry. This claim does not touch those files or the existing monitor. All older sessions inspected are marked done. Shared navigation/workflow changes are deferred until the final integration check and will be re-checked for claims then.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| O1 | Read board, inspect active claims, record claim, baseline audit | in progress | `arena/758c0623-olbg2` | `COORDINATION.md` (append-only), `research/olbg-758c0623.md` |
+| O2 | Fresh OLBG discovery and official-source capture for the exact 15 requested sports; store evidence and failures without inference | unclaimed→this session | `arena/758c0623-olbg2` | `data/olbg/**`, `scripts/olbg_seed.py` |
+| O3 | Independently originate supportable match-winner, handicap and total markets; grade confidence and apply the requested price band without substituting estimates for missing facts | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_model.py`, `data/olbg/{matches,lines,picks}.json` |
+| O4 | Write unique sourced predictions only for qualifying high-confidence selections; target five per sport where evidence and fixtures exist, otherwise publish the shortfall | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_predictions.py`, `data/olbg/{predictions,flagged}.json` |
+| O5 | Build clean `/olbg/` landing, executive summary, tables, 15 sport subpages, sources, methodology and Flagged for Review | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_build.py`, `olbg/**` |
+| O6 | Add deterministic, source-link, market-arithmetic, prediction-content and internal-link verification | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_verify.py`, `tests/test_olbg_758c0623.py` |
+| O7 | Final integration only after O2–O6: re-check active claims, full suite/link audit, PR→merge, Pages confirmation and publication ledger | pending | `arena/758c0623-olbg2` | shared outputs only if unclaimed at integration; `COORDINATION.md` |
+
+**Integrity rule:** OLBG is discovery provenance, not an official sporting body. Fixture facts and narrative statistics require an official league, governing-body, club or tour source read in this session. Unconfirmed values remain blank and are linked from the review queue. No bookmaker price, injury, player status or market availability will be invented. Historical layer counts will not be summed or presented as a fresh deduplicated slate.

@@ -14,17 +14,17 @@
   },
   {
    "code": "RR-02",
-   "title": "Thirty-three published dashboards overlap the same brief",
-   "detail": "Each of these directories publishes a full dashboard for the same 15-sport brief, with different counts and different levels of evidence. There is no marker of which one is authoritative, so a reader landing on any of them can be misled.",
+   "title": "Multiple overlapping historical dashboards remain accessible",
+   "detail": "The repository retains many full dashboards with different capture windows and evidence levels. The root landing now identifies `/ledger/` as the primary 15-sport desk and `/cadence/` as a separate earlier cross-check; older layers remain available for audit, but their counts must not be treated as live or added together.",
    "evidence": "38 directories with an index.html: atlas, audit65, beacon, board, brief, cadence, canon, command, covered, current, daily, daily-audit, daily-picks, desk, evidence, final, final-desk, focus, forward, fresh, hub, ledger, live, liveboard, monitor, olbg, portal, pulse, reconcile, relay, signal, site, slate, sports, survey, update, vanguard, verified",
-   "severity": "high"
+   "severity": "medium"
   },
   {
    "code": "RR-03",
-   "title": "The root dashboard advertises a stale snapshot and points at the weakest desk",
-   "detail": "The root page's status stripe still reads 2026-10-22 08:15 UTC and its primary call to action opens `/monitor/`, which states that no high-confidence picks cleared. The most complete desk from the same day, `/signal/`, is not linked from the root navigation at all.",
-   "evidence": "index.html stripe: Snapshot 2026-10-22 08:15 UTC; root navigation references to /signal/: 0; /monitor/ page text: 'No high-confidence picks cleared.'",
-   "severity": "high"
+   "title": "The root landing distinguishes the current desk from historical root data",
+   "detail": "The primary call to action opens `/ledger/`; `/cadence/` is explicitly labelled an earlier independent capture. The older root tables remain inside a historical-details disclosure, and the status stripe labels their `/verified/` snapshot date as historical while linking to the current ledger.",
+   "evidence": "Primary ledger CTA: 1; cadence links: 3; historical stripe: Historical root /verified snapshot: 2026-10-22 08:15 UTC",
+   "severity": "info"
   },
   {
    "code": "RR-04",
@@ -43,7 +43,7 @@
   {
    "code": "RR-06",
    "title": "CI rebuilds many layers and checks them for drift",
-   "detail": "The Pages workflow rebuilds 45 test modules' worth of layers and fails if generated HTML differs from what is committed. Any new layer has to be added to both the rebuild steps and the drift list or it will silently rot. This layer adds its own step and drift paths.",
+   "detail": "The Pages workflow rebuilds 46 test modules' worth of layers and fails if generated HTML differs from what is committed. Any new layer has to be added to both the rebuild steps and the drift list or it will silently rot. This layer adds its own step and drift paths.",
    "evidence": ".github/workflows/pages.yml \u2014 'Fail if any generated page or data file is stale'",
    "severity": "info"
   },

@@ -2,7 +2,30 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
-## Newest: OLBG daily desk — `/olbg/` (23 October 2026)
+## Current primary desk: 15-sport OLBG ledger — `/ledger/` (23 October 2026, 20:36 UTC)
+
+**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/ledger/> ·
+[all OLBG matches](ledger/matches.html) · [originated picks](ledger/picks.html) ·
+[previews](ledger/predictions.html) · [sources](ledger/sources.html) ·
+[Flagged for Review](ledger/flagged.html) · [methodology](ledger/methodology.html) ·
+[repo review](ledger/repo-review.html) · [publication QA report](research/publication-qa-1cb7d5b7.md).
+
+This is a dated snapshot, not a live feed. It records **142 OLBG events** across the fifteen named sports: **12** matched to an official source (9 page-level pairings and 3 schedule fixtures), while **130** remain unmatched. Only the 3 official-fixture matches have our own originated lines; the other OLBG entries stay unpriced or are shown only with OLBG's own one-sided quote. The executive picks table is restricted to the three source-matched OLBG matches: **2 high-confidence picks, both in the −250…+10000 band**. Seven current write-ups are joined to OLBG events (five low- and two high-confidence); both high-confidence picks now have unique, source-linked previews using the captured NHL standings. No injury feed was readable, so injuries are not asserted.
+
+A separate official-schedule layer has **93 fixtures** from NHL, MLB and EuroLeague with **744 originated market selections**; **90 fixtures were not in the captured OLBG list** and are context only. Another **139 selections are market-implied references**, not our prices. Do not mix these counts with OLBG-listed matches. The 26 carried previews are from an earlier snapshot and their facts were not reread today. The full unmatched list and shortfalls are on the flagged page.
+
+```sh
+python scripts/ledger_seed.py && python scripts/ledger_official.py
+python scripts/ledger_merge.py && python scripts/ledger_model.py
+python scripts/ledger_picks.py && python scripts/ledger_predictions.py
+python scripts/ledger_report.py && python scripts/ledger_build.py && python scripts/ledger_verify.py
+```
+
+The checked-in capture is reproducible offline; rebuilding does not refresh public sources.
+
+**Independent cross-check:** <https://buffedlizard55-lab.github.io/OLBG2/cadence/> is a separate 23 October capture (20:10 UTC) with 93 official fixtures, 728 originated selections and 33 write-ups. It overlaps this ledger and is not a live update; do not add its counts to the ledger.
+
+## Independent OLBG daily desk — `/olbg/` (23 October 2026, 19:40 UTC)
 
 **Start here:** <https://buffedlizard55-lab.github.io/OLBG2/olbg/> ·
 [all matches](olbg/matches.html) · [picks and predictions](olbg/picks.html) ·
@@ -10,7 +33,7 @@ OLBG2 records OLBG's published sports taxonomy, collects dated event listings, a
 [Flagged for Review](olbg/flagged.html) · [methodology](olbg/methodology.html) ·
 [research record](research/olbg-758c0623.md).
 
-The 19:40:38 UTC snapshot contains **89 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **65 official-context-only** rows distinct. There are **54 priced matches**, **58 originated market rows**, and **3 high-confidence predictions**. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and the other limitations remain visible with official links.
+This separate OLBG snapshot contains **89 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **65 official-context-only** rows distinct. There are **54 priced matches**, **58 originated market rows**, and **3 high-confidence predictions**. No current bookmaker quote is claimed. Counts overlap other desks; they are not a live update to the ledger.
 
 ```sh
 python scripts/olbg_seed.py
@@ -113,15 +136,15 @@ low confidence regardless of its numeric output.
 
 **Cross-layer integrity review:** <https://buffedlizard55-lab.github.io/OLBG2/integration.html>
 
-## Latest integration (22 October 2026)
+## Earlier integration (22 October 2026)
 
 The [current capture desk](current/index.html) is now linked from root and category navigation and rebuilt in CI. It stores **57 fixture rows across 7 sports**, **55 originated rows**, **2 blank rows**, and **29 model-band predictions across 4 sports**. Ten categories have zero rows. These are counts from `data/current/band.json` and `predictions.json`, not additional unique matches to add to other desks.
 
 **Not freshly externally verified in this integration session:** direct OLBG HTTPS access failed in this sandbox. Existing official captures remain dated evidence, not proof of current fixture status. See the [integration verification ledger](research/integration-83346ec9.md) and the published [Flagged for Review findings](integration.html). Five verified predictions per sport per day, exhaustive markets, observed bookmaker prices, independently calibrated confidence, and unattended fresh collection remain unmet. CI regenerates stored evidence; it does not fetch new fixtures.
 
-## Start here
+## Historical snapshot index
 
-The repository contains several independently collected, overlapping snapshots. **Do not add their row counts together.** The root dashboard is the `/verified/` desk; `/final/` is a deterministic de-duplicated view of five input layers. Neither is a guarantee of full real-world fixture coverage or of current bookmaker prices.
+The root landing page points readers to the current primary `/ledger/` desk and the independent `/cadence/` cross-check. The repository also contains independently collected, overlapping historical snapshots; **do not add their row counts together**. The root legacy tables still represent the `/verified/` data layer, and `/final/` is a deterministic de-duplicated view of five older input layers. Neither is a guarantee of full real-world fixture coverage or current bookmaker prices.
 
 | Desk | Entry point | Checked-in snapshot (2026-10-22) |
 |---|---|---|
@@ -152,10 +175,12 @@ Prediction paragraphs are generated only where the selected data layer supplies 
 ## Repository map
 
 ```text
-index.html, matches.html, picks.html, flagged.html, verification.html  root research desk
-daily/                                                               daily top-five desk: 132 fixtures, 25 picks, 45 predictions
-daily-audit/                                                         daily audit: ATP + ICC rows re-read from the governing body
-final/                                                               consolidated 17-sport dashboard
+index.html, matches.html, picks.html, flagged.html, verification.html  root landing + legacy research tables
+ledger/                                                              current primary 15-sport OLBG ledger; dated, not live
+cadence/                                                             independent 15-sport official-source cross-check; overlapping snapshot
+daily/                                                               historical daily top-five desk: 132 fixtures, 25 picks, 45 predictions
+daily-audit/                                                         historical daily audit: ATP + ICC rows re-read from the governing body
+final/                                                               historical consolidated 17-sport dashboard
 portal/                                                              independent origination / audit portal
 verified/, forward/, board/, hub/, slate/, live/, survey/, site/     overlapping evidence layers
 integration.html, evidence/, audit65/, publication.html               integrity and review pages

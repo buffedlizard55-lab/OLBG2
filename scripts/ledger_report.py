@@ -69,21 +69,22 @@ def repo_review() -> dict:
             "medium")
 
     layers = sorted(p.name for p in ROOT.iterdir() if p.is_dir() and (p / "index.html").exists() and not p.name.startswith("."))
-    add("RR-02", "Thirty-three published dashboards overlap the same brief",
-        "Each of these directories publishes a full dashboard for the same 15-sport brief, with different counts and different "
-        "levels of evidence. There is no marker of which one is authoritative, so a reader landing on any of them can be misled.",
+    add("RR-02", "Multiple overlapping historical dashboards remain accessible",
+        "The repository retains many full dashboards with different capture windows and evidence levels. The root landing now "
+        "identifies `/ledger/` as the primary 15-sport desk and `/cadence/` as a separate earlier cross-check; older layers remain "
+        "available for audit, but their counts must not be treated as live or added together.",
         f"{len(layers)} directories with an index.html: " + ", ".join(layers),
-        "high")
+        "medium")
 
     root_html = (ROOT / "index.html").read_text(encoding="utf-8", errors="replace")
-    stale = re.search(r"Snapshot (20\d\d-\d\d-\d\d \d\d:\d\d) UTC", root_html)
-    add("RR-03", "The root dashboard advertises a stale snapshot and points at the weakest desk",
-        "The root page's status stripe still reads 2026-10-22 08:15 UTC and its primary call to action opens `/monitor/`, "
-        "which states that no high-confidence picks cleared. The most complete desk from the same day, `/signal/`, is not linked "
-        "from the root navigation at all.",
-        f"index.html stripe: {stale.group(0) if stale else 'not found'}; root navigation references to /signal/: "
-        f"{root_html.count('signal/')}; /monitor/ page text: 'No high-confidence picks cleared.'",
-        "high")
+    stale = re.search(r"Historical root /verified snapshot: (20\d\d-\d\d-\d\d \d\d:\d\d) UTC", root_html)
+    add("RR-03", "The root landing distinguishes the current desk from historical root data",
+        "The primary call to action opens `/ledger/`; `/cadence/` is explicitly labelled an earlier independent capture. The older "
+        "root tables remain inside a historical-details disclosure, and the status stripe labels their `/verified/` snapshot date "
+        "as historical while linking to the current ledger.",
+        f"Primary ledger CTA: {root_html.count('Open the 15-sport ledger')}; cadence links: {root_html.count('cadence/index.html')}; "
+        f"historical stripe: {stale.group(0) if stale else 'not found'}",
+        "info")
 
     add("RR-04", "The cross-layer link checker trips over any non-UTF-8 file",
         "`scripts/integration_audit.py` reads every `*.html` under the repository as UTF-8 with no fallback. A single Latin-1 "

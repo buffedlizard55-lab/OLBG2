@@ -12,7 +12,6 @@ import datetime as _dt
 import html
 import json
 import pathlib
-import re
 from collections import defaultdict
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -105,11 +104,23 @@ analysis, not as betting advice. 18+.</p>
 
 
 def table(headers, rows, cls=""):
+    """Render semantic table cells from escaped text or trusted markup fragments.
+
+    Call sites escape dynamic text with ``E`` before passing it here; markup helpers such
+    as ``link`` and ``badge`` return trusted fragments. The wrapper must always put each
+    fragment inside a <td>. Previously, any string beginning with '<' was emitted as a
+    direct child of <tr>, creating invalid tables and double-escaping already escaped text.
+    """
     if not rows:
         return '<p class="empty">No rows.</p>'
-    head = "".join(f"<th>{E(h)}</th>" for h in headers)
-    body = "".join("<tr>" + "".join(c if str(c).startswith("<") else f"<td>{E(str(c))}</td>" for c in r) + "</tr>" for r in rows)
-    return f'<div class="scroll"><table class="{cls}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+    head = "".join(f'<th scope="col">{E(h)}</th>' for h in headers)
+
+    def cell(value):
+        content = "" if value is None else str(value)
+        return f"<td>{content}</td>"
+
+    body = "".join("<tr>" + "".join(cell(c) for c in r) + "</tr>" for r in rows)
+    return f'<div class="scroll"><table class="{E(cls)}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
 
 
 def kpi(value, label, note=""):
@@ -123,7 +134,6 @@ def build():
     picks = load("picks.json")
     preds = load("predictions.json")
     inh = load("inherited.json")
-    PREVIEW_SPORTS = sorted(set(preds["meta"]["by_sport"]) | set(inh["meta"]["by_sport"]))
     flags = load("flagged.json")
     sources = load("sources.json")
     review = load("repo_review.json")
@@ -135,7 +145,6 @@ def build():
     CAPTURE_WINDOW = f"{sources['meta']['first_capture']} to {sources['meta']['last_capture']}"
 
     events = matches["events"]
-    picks_by_id = {p["id"]: p for p in picks["picks"]}
     per_sport = defaultdict(lambda: {"events": 0, "verified": 0, "priced": 0, "previews": 0})
     for e in events:
         per_sport[e["sport"]]["events"] += 1
@@ -143,91 +152,140 @@ def build():
             per_sport[e["sport"]]["verified"] += 1
         if e.get("our_markets"):
             per_sport[e["sport"]]["priced"] += 1
-    for p in preds["predictions"]:
+    priced_fixtures = [f for f in lines["fixtures"] if f.get("markets")]
+    all_high = [p for p in picks["picks"] if p["confidence"] == "high"]
+    originated_high = [p for p in all_high if p["basis"] == "originated"]
+    market_reference_high = [p for p in all_high if p["basis"] == "market-implied"]
+    all_high_band = [p for p in all_high if p["in_band"]]
+
+    # The user-facing recommendation card is limited to OLBG-listed events that also
+    # have an official fixture URL and our own originated prices. Other official
+    # schedule fixtures and OLBG's one-sided price references remain separate context.
+    olbg_fixture_urls = {
+        e["verify"].get("official_url")
+        for e in events
+        if e["verify"].get("state") == "official-fixture"
+        and e.get("our_markets")
+        and e["verify"].get("official_url")
+    }
+    olbg_events_with_lines = [e for e in events if e.get("our_markets")]
+    olbg_originated_picks = [
+        p for p in picks["picks"]
+        if p.get("basis") == "originated" and p.get("official_url") in olbg_fixture_urls
+    ]
+    olbg_picks_by_fixture = defaultdict(list)
+    for p in olbg_originated_picks:
+        olbg_picks_by_fixture[p["official_url"]].append(p)
+    olbg_recommendations = [
+        max(rows_for_fixture, key=lambda p: (p["prob"], "win" in p["market_group"].lower()))
+        for _, rows_for_fixture in sorted(olbg_picks_by_fixture.items())
+    ]
+    olbg_high = [p for p in olbg_recommendations if p["confidence"] == "high"]
+    olbg_high_band = [p for p in olbg_high if p["in_band"]]
+    olbg_all_high_band = [p for p in olbg_originated_picks if p["confidence"] == "high" and p["in_band"]]
+    market_implied = [p for p in picks["picks"] if p["basis"] == "market-implied"]
+
+    olbg_listing_urls = {e.get("olbg_url") for e in events if e.get("olbg_url")}
+    current_olbg_previews = [
+        p for p in preds["predictions"]
+        if p.get("olbg_url") in olbg_listing_urls
+        or p.get("official_url") in olbg_fixture_urls
+    ]
+    current_olbg_preview_ids = {p["id"] for p in current_olbg_previews}
+    context_previews = [p for p in preds["predictions"] if p["id"] not in current_olbg_preview_ids]
+    olbg_preview_pick_keys = {
+        (p.get("official_url"), p.get("selection", "").casefold(), p.get("market", "").casefold())
+        for p in current_olbg_previews
+    }
+    olbg_high_with_preview = [
+        p for p in olbg_high
+        if (p.get("official_url"), p.get("selection", "").casefold(), p.get("market", "").casefold())
+        in olbg_preview_pick_keys
+    ]
+    for p in current_olbg_previews:
         per_sport[p["sport"]]["previews"] += 1
 
-    priced_fixtures = [f for f in lines["fixtures"] if f.get("markets")]
-    high = [p for p in picks["picks"] if p["confidence"] == "high"]
-    high_band = [p for p in high if p["in_band"]]
-
     # ---------------------------------------------------------------- overview
-    # match-winner selections first: a preview desk should lead with who wins, not with a total
-    top = sorted(high, key=lambda p: (0 if p["in_band"] else 1, 0 if "win" in p["market_group"].lower() else 1, -p["prob"]))[:10]
+    top = sorted(olbg_recommendations,
+                 key=lambda p: ({"high": 0, "medium": 1, "low": 2}.get(p["confidence"], 3), -p["prob"], p["start_utc"]))[:10]
     rows = []
     for p in top:
         rows.append([
             f'<a href="sports/{SLUG[p["sport"]]}.html">{E(p["sport"])}</a>',
             E(p["event"]),
-            f'<b>{E(p["selection"])}</b> {E(p["market"])}',
-            f'<b>{E(p["american"] or "—")}</b>',
+            f'<b>{E(p["selection"])}</b>',
+            E(p["market"]),
+            E(p["american"] or "—"),
             f'{p["prob"]*100:.1f}%',
-            conf_tag(p["confidence"]) + (badge("in band", "good") if p["in_band"] else badge("outside band", "warn")),
-            basis_tag(p["basis"]),
+            conf_tag(p["confidence"]),
+            badge("in band", "good") if p["in_band"] else badge("outside band", "warn"),
             E(p["start_utc"][:16].replace("T", " ")),
             link(p["official_url"], "official"),
         ])
 
-    soon = sorted([e for e in events if BUILD_NOW <= e["start_utc"] <= "2026-10-25T23:59:00Z"],
+    window_start = _dt.datetime.strptime(BUILD_NOW, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=_dt.timezone.utc)
+    window_end = (window_start + _dt.timedelta(hours=36)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    soon = sorted([e for e in events if BUILD_NOW <= e["start_utc"] <= window_end],
                   key=lambda e: e["start_utc"])[:12]
-    soon_rows = [[E(e["sport"]), E(e["start_utc"][11:16] + " UTC"), E(e["event"]),
+    soon_rows = [[E(e["sport"]), E(e["start_utc"][:16].replace("T", " ") + " UTC"), E(e["event"]),
                   E(e["competition"] or "—"), state_tag(e["verify"]["state"]),
-                  (link(e["verify"]["official_url"], "official") if e["verify"]["official_url"] else link(e["olbg_url"], "OLBG"))] for e in soon]
+                  link(e["verify"]["official_url"], "official"), link(e["olbg_url"], "OLBG listing")] for e in soon]
 
     cover_rows = []
     for s in SPORTS:
         d = per_sport[s]
         rows_sport = [e for e in events if e["sport"] == s]
-        best = max((p["prob"] for p in picks["picks"] if p["sport"] == s), default=0)
+        best = max((p["prob"] for p in olbg_recommendations if p["sport"] == s), default=0)
+        evidence_url = next((e["verify"].get("official_url") for e in rows_sport if e["verify"].get("official_url")), "")
         cover_rows.append([
             f'<a href="sports/{SLUG[s]}.html"><b>{E(s)}</b></a>',
             d["events"], d["verified"], d["priced"], d["previews"],
             f"{best*100:.1f}%" if best else '<span class="blank">—</span>',
             "" if d["events"] else '<span class="warn-text">no OLBG listing at capture</span>',
+            link(evidence_url, "official") if evidence_url else '<span class="blank">—</span>',
+            link(f"sports/{SLUG[s]}.html", "rows & review"),
         ])
 
     body = f"""
 <section class="lede">
 <p class="eyebrow">Snapshot · {E(matches["meta"]["generated_at"])} · session arena/41b3bae5-olbg2</p>
 <h2>Executive summary</h2>
-<p>OLBG listed <b>{len(events)}</b> upcoming events in the fifteen requested sports when the pages were captured.
-<b>{sum(1 for e in events if e["verify"]["state"] != "unmatched")}</b> of them were matched to an official source,
-<b>{sum(1 for e in events if e.get("our_markets"))}</b> carry our own price, and <b>{len(preds["predictions"])}</b> written previews
-were published, with <b>{len(inh["previews"])}</b> more carried over from this desk's predecessor. Alongside that, <b>{len(priced_fixtures)}</b> official schedule fixtures (NHL, MLB, EuroLeague) were priced from
-official season records, producing <b>{picks["meta"]["selections"]}</b> selections.</p>
-<p class="note">Where a sport has no official numeric input today, the desk says so and leaves the market blank. It never borrows a
-price from a bookmaker and calls it ours, and it never writes a preview without a fact behind it.</p>
+<p>OLBG listed <b>{len(events)}</b> upcoming events across the fifteen requested sports. <b>{sum(1 for e in events if e["verify"]["state"] != "unmatched")}</b> were matched to an official page or fixture feed, but only <b>{len(olbg_events_with_lines)}</b> have our own originated lines. The recommendations below are limited to those source-matched OLBG events.</p>
+<p>Separately, <b>{len(priced_fixtures)}</b> official NHL, MLB and EuroLeague schedule fixtures have <b>{picks["meta"]["originated"]}</b> originated market selections. Only <b>{len(olbg_fixture_urls)}</b> of those fixtures also appeared on the captured OLBG slate; the rest are context, not OLBG picks. Another <b>{len(market_implied)}</b> selections are derived from OLBG's one-sided quoted prices and are not our lines.</p>
+<p>There are <b>{len(current_olbg_previews)}</b> current write-ups tied to OLBG-listed events: {sum(1 for p in current_olbg_previews if p["confidence"] == "low")} low-, {sum(1 for p in current_olbg_previews if p["confidence"] == "medium")} medium- and {sum(1 for p in current_olbg_previews if p["confidence"] == "high")} high-confidence. <b>{len(olbg_high_with_preview)}</b> of {len(olbg_high)} high-confidence OLBG recommendations have a matching written preview; {len(olbg_high) - len(olbg_high_with_preview)} remain without one. The <b>{len(inh["previews"])}</b> carried previews are from an earlier snapshot and were not re-read today.</p>
+<p class="note">Values with no official support remain blank and are listed for review. No missing form, player or injury information is inferred, and no OLBG quote is labelled as our price.</p>
 </section>
 <div class="kpis">
-{kpi(len(events), "OLBG events in scope", "the fifteen requested sports")}
-{kpi(sum(1 for e in events if e["verify"]["state"] != "unmatched"), "matched to an official source", "fixture feed or official page")}
-{kpi(len(priced_fixtures), "fixtures with our prices", "NHL, MLB, EuroLeague")}
-{kpi(picks["meta"]["selections"], "selections priced", "winner, handicap, total")}
-{kpi(len(high), "high-confidence picks", "≥ 70% on our price")}
-{kpi(len(high_band), "high and inside −250…+10000", "the brief's two rules together")}
-{kpi(len(preds["predictions"]), "written previews", f"{preds['meta']['min_words']}–{preds['meta']['max_words']} words each")}
-{kpi(len(inh["previews"]), "previews carried in", f"prose rules re-checked; {len(PREVIEW_SPORTS)} of 15 sports covered in total")}
+{kpi(len(events), "OLBG events", "the fifteen requested sports")}
+{kpi(sum(1 for e in events if e["verify"]["state"] != "unmatched"), "officially matched", "9 official-page, 3 fixture-feed")}
+{kpi(len(olbg_events_with_lines), "OLBG matches with our lines", "only source-matched fixtures")}
+{kpi(len(olbg_high), "high OLBG picks", "originated selections only")}
+{kpi(len(olbg_high_band), "high + in-band OLBG picks", "−250…+10000")}
+{kpi(len(current_olbg_previews), "current OLBG-linked previews", f"{sum(1 for p in current_olbg_previews if p['confidence'] == 'low')} low · {sum(1 for p in current_olbg_previews if p['confidence'] == 'medium')} medium · {sum(1 for p in current_olbg_previews if p['confidence'] == 'high')} high")}
+{kpi(len(priced_fixtures), "official context fixtures", f"{len(priced_fixtures) - len(olbg_fixture_urls)} not on the OLBG list")}
+{kpi(len(market_implied), "market-implied references", "not our originated prices")}
 {kpi(flags["meta"]["items"], "open review items", "see Flagged for review")}
 </div>
 
-<h2>Highest-confidence picks</h2>
-<p class="note">Selections that satisfy both rules lead the table, then match-winner picks, then the strongest of the rest. Every price shown is ours, with no margin.
-The band column applies the brief's −250 to +10000 filter to that price.</p>
-{table(["Sport", "Match", "Selection", "Our price", "Chance", "Confidence", "Basis", "Start (UTC)", "Source"], rows)}
+<h2>Best originated selection per source-confirmed OLBG match</h2>
+<p class="note">One highest-probability originated selection is shown for each of the {len(olbg_recommendations)} OLBG-listed matches with an official fixture URL. These are our fair lines, not bookmaker prices; the rows link to the official game page. The complete market set is on <a href="fixtures.html">Fixtures &amp; prices</a>.</p>
+{table(["Sport", "Match", "Selection", "Market", "Fair price", "Chance", "Confidence", "Band", "Start (UTC)", "Official source"], rows)}
 
-<h2>Starting in the next 36 hours</h2>
-<p class="note">From the OLBG slate. "Source" opens the official page where one was found, otherwise the OLBG listing.</p>
-{table(["Sport", "Start", "Event", "Competition", "Official check", "Source"], soon_rows)}
+<h2>OLBG listings starting within 36 hours (first 12)</h2>
+<p class="note">The time window is calculated from the capture timestamp. The official-source cell is blank when no governing-body match was found; the original OLBG listing is linked separately for every row. Unmatched rows remain flagged.</p>
+{table(["Sport", "Start (UTC)", "Event", "Competition", "Official check", "Official source", "OLBG listing"], soon_rows)}
 
 <h2>Coverage by sport</h2>
-<p class="note">Events counted from OLBG's own listing. Verified means an official fixture feed or official page confirmed the
-pairing. Priced means a line was originated for that row. Previews counted from the write-ups page.</p>
-{table(["Sport", "OLBG events", "Verified", "Priced", "Previews", "Best chance", "Note"], cover_rows)}
+<p class="note">Event totals come from the captured OLBG pages. “Officially matched” confirms a fixture feed or participant pairing on an official page; the latter does not by itself confirm start time or form. “Our lines” counts only matches with an originated price. Official schedules outside the OLBG list are not included.</p>
+{table(["Sport", "OLBG events", "Officially matched", "Our lines", "OLBG previews", "Best chance", "Note", "Official source (where found)", "Rows & review"], cover_rows)}
 
 <h2>What this page does not claim</h2>
 <ul class="plain">
-<li>It is not a complete live slate. It is what OLBG listed at {E(CAPTURE_WINDOW.split(' to ')[-1])} plus the official schedules captured alongside it.</li>
-<li>Previews exist for {len(PREVIEW_SPORTS)} of 15 sports. The rest are named individually on the flagged page rather than filled with words that no capture supports.</li>
-<li>{len(inh["previews"])} of the previews were written by this desk's predecessor in the same scope and are marked <em>carried</em>: their facts were not re-read today, only their wording rules re-checked.</li>
+<li>This is a dated capture, not a complete live slate. It records what OLBG listed at {E(CAPTURE_WINDOW.split(' to ')[-1])} and the official schedules captured alongside it.</li>
+<li>Only {len(olbg_events_with_lines)} OLBG-listed events have our own lines; {len(events) - len(olbg_events_with_lines)} are unpriced. Of those, {sum(1 for e in events if e["verify"]["state"] == "unmatched")} remain unmatched to an official source.</li>
+<li>The 93 official schedule fixtures include {len(priced_fixtures) - len(olbg_fixture_urls)} matches absent from the captured OLBG slate. Their lines are supplementary context, not OLBG picks.</li>
+<li>{len(olbg_high)} high-confidence originated selections are attached to OLBG-listed matches; {len(olbg_high_with_preview)} have a matching current preview. The prediction page explains the shortfall.</li>
+<li>{len(inh["previews"])} carried previews are from a predecessor snapshot and their facts were not re-read today.</li>
 <li>Injuries are absent by design: no official team-news feed was readable, so none is asserted.</li>
 </ul>
 <p><a class="button" href="flagged.html">Read the {flags["meta"]["items"]} review items</a>
@@ -289,13 +347,9 @@ capture time, with OLBG's own quoted price kept separate from ours. The OLBG quo
             link(f["official_url"], "official"),
         ])
     body = f"""
-<h2>Official fixtures and our prices</h2>
-<p class="note">{len(priced_fixtures)} fixtures from the official NHL, MLB and EuroLeague feeds. Each row carries three markets:
-a two-way winner, a 1.5-line handicap and a match total. The expected score is the number the price was built from, so a reader can
-check the arithmetic. A blank would mean no official input; there are none today, because every fixture below has both sides on
-record.</p>
-<p class="note">EuroLeague tip times are served without an offset. Those times are published exactly as served and are marked on the
-<a href="flagged.html">flagged page</a>.</p>
+<h2>Supplementary official fixtures and our prices</h2>
+<p class="note">These {len(priced_fixtures)} NHL, MLB and EuroLeague fixtures come from official schedule feeds. Only {len(olbg_fixture_urls)} also appear on the captured OLBG list; the remaining {len(priced_fixtures) - len(olbg_fixture_urls)} are supplementary context and are not counted as OLBG matches or OLBG picks. Each row carries winner, handicap and total markets. The expected score is the number the price was built from, so a reader can check the arithmetic.</p>
+<p class="note">EuroLeague tip times are served without an offset and are published as served, not converted to UTC. This is flagged on the <a href="flagged.html">review page</a>.</p>
 {table(["Sport", "Start (UTC)", "Fixture", "Venue", "Winner market", "Handicap", "Total", "Expected score", "Source"], frows)}
 <h2>Market notes</h2>
 <ul class="plain">
@@ -307,50 +361,66 @@ record.</p>
     pages["fixtures.html"] = shell("fixtures.html", "Fixtures & prices", body)
 
     # ---------------------------------------------------------------- picks
-    top5 = picks["meta"]["top5_by_sport"]
-    sections = []
-    for s in SPORTS:
-        ids = top5.get(s, [])
-        if not ids:
-            continue
-        rows = []
-        for i in ids:
-            p = picks_by_id.get(i)
-            if not p:
-                continue
-            rows.append([f'<b>{E(p["selection"])}</b>', E(p["event"]), E(p["market"]), E(p["american"] or "—"),
-                         f'{p["prob"]*100:.1f}%', conf_tag(p["confidence"]),
-                         badge("in band", "good") if p["in_band"] else badge("outside", "warn"),
-                         basis_tag(p["basis"]), link(p["official_url"] or p["source_url"], "source")])
-        sections.append(f'<h3 id="{SLUG[s]}">{E(s)}</h3>'
-                        + table(["Selection", "Match", "Market", "Price", "Chance", "Confidence", "Band", "Basis", "Source"], rows))
-    inband = sorted([p for p in picks["picks"] if p["in_band"] and p["confidence"] == "high"], key=lambda p: -p["prob"])
-    band_rows = [[E(p["sport"]), E(p["event"]), f'<b>{E(p["selection"])}</b>', E(p["market"]), E(p["american"]),
-                  f'{p["prob"]*100:.2f}%', conf_tag(p["confidence"]), basis_tag(p["basis"]), link(p["official_url"], "source")] for p in inband]
+    recommendations = sorted(olbg_recommendations, key=lambda p: (SPORTS.index(p["sport"]), p["start_utc"]))
+    recommendation_rows = [[
+        f'<a href="sports/{SLUG[p["sport"]]}.html">{E(p["sport"])}</a>',
+        E(p["event"]), f'<b>{E(p["selection"])}</b>', E(p["market"]), E(p["american"] or "—"),
+        f'{p["prob"]*100:.1f}%', conf_tag(p["confidence"]),
+        badge("in band", "good") if p["in_band"] else badge("outside", "warn"),
+        link(p["official_url"], "official"),
+    ] for p in recommendations]
+    all_market_rows = [[
+        f'<a href="sports/{SLUG[p["sport"]]}.html">{E(p["sport"])}</a>', E(p["event"]),
+        f'<b>{E(p["selection"])}</b>', E(p["market"]), E(p["american"] or "—"),
+        f'{p["prob"]*100:.1f}%', conf_tag(p["confidence"]),
+        badge("in band", "good") if p["in_band"] else badge("outside band", "warn"),
+        link(p["official_url"], "official"),
+    ] for p in sorted(olbg_originated_picks, key=lambda p: (SPORTS.index(p["sport"]), p["start_utc"], p["market"], -p["prob"]))]
+    band_rows = [[
+        f'<a href="sports/{SLUG[p["sport"]]}.html">{E(p["sport"])}</a>', E(p["event"]),
+        f'<b>{E(p["selection"])}</b>', E(p["market"]), E(p["american"]),
+        f'{p["prob"]*100:.2f}%', conf_tag(p["confidence"]), link(p["official_url"], "official"),
+    ] for p in sorted(olbg_all_high_band, key=lambda p: -p["prob"])]
+    unpriced_sports = [s for s in SPORTS if s not in {e["sport"] for e in olbg_events_with_lines}]
+    unpriced_sport_list = ", ".join(E(s) for s in unpriced_sports)
     body = f"""
-<h2>Picks — the five strongest per sport</h2>
-<p class="note">A match-winner selection is preferred for these five. Where a sport has fewer than five match-winner picks, the
-strongest handicap or total selections fill the rest. Every row states whether the number is ours or taken from OLBG's quote.</p>
+<h2>Originated recommendations for OLBG-listed matches</h2>
+<p class="note">Only OLBG events that also have a captured official fixture URL and an originated price appear as recommendations.
+There are {len(recommendations)} such matches: {len(olbg_high)} high-confidence picks, {len(olbg_high_band)} both high and inside
+−250…+10000. One best-probability selection is shown per match; all other originated markets for those matches follow below.
+A market-implied price from OLBG is not our line and is not counted here.</p>
 <div class="kpis">
-{kpi(picks["meta"]["selections"], "selections", "all markets")}
-{kpi(len(high), "high confidence", "≥ 70%")}
-{kpi(len(high_band), "high + in band", "−250…+10000")}
-{kpi(picks["meta"]["medium"], "medium", "60–69.9%")}
+{kpi(len(recommendations), "OLBG matches with picks", "one recommendation per fixture")}
+{kpi(len(olbg_high), "high confidence", "originated selections only")}
+{kpi(len(olbg_high_band), "high + in band", "−250…+10000")}
+{kpi(len(olbg_originated_picks), "originated market selections", "across the matched OLBG fixtures")}
 </div>
-<h2>High confidence and inside the price band</h2>
-<p class="note">These {len(high_band)} rows satisfy both rules at once. The intersection is narrow by construction: a 70% chance is
-about −233, which is shorter than the band's −250 floor, so only selections between 70.0% and 71.4% can appear here.</p>
-{table(["Sport", "Match", "Selection", "Market", "Price", "Chance", "Confidence", "Basis", "Source"], band_rows)}
-<h2>Top five by sport</h2>
-{"".join(sections)}
+{table(["Sport", "Match", "Selection", "Market", "Fair price", "Chance", "Confidence", "Band", "Official source"], recommendation_rows)}
+
+<h2>High-confidence OLBG picks inside the requested price band</h2>
+<p class="note">Only originated selections for the official-source-matched OLBG fixtures are included. The matching official page is linked in each row.</p>
+{table(["Sport", "Match", "Selection", "Market", "Fair price", "Chance", "Confidence", "Official source"], band_rows)}
+
+<h2>All originated markets on these OLBG-listed matches</h2>
+<p class="note">Winner, handicap and total selections for the {len(olbg_events_with_lines)} source-matched fixtures. The inputs and probabilities are the desk's; each row links to its official game page.</p>
+{table(["Sport", "Match", "Selection", "Market", "Fair price", "Chance", "Confidence", "Band", "Official source"], all_market_rows)}
+
+<h2>Shortfall against the five-per-sport target</h2>
+<p>Only Baseball and Ice Hockey currently have an OLBG-listed match with an official fixture match and our own line. The following remaining listed sports have no originated OLBG selection in this capture: <b>{unpriced_sport_list}</b>. Their values remain blank on the relevant sport page and unmatched listings remain on <a href="flagged.html">Flagged for Review</a>; no prices are inferred to fill the target.</p>
+<p><b>{len(events) - len(olbg_events_with_lines)}</b> other OLBG listings have no originated line: {sum(1 for e in events if e["verify"]["state"] == "unmatched")} are unmatched to an official source and {sum(1 for e in events if e["verify"]["state"] == "official-page")} have a page-level pairing only. The {len(market_implied)} market-implied references remain visible on <a href="matches.html">OLBG matches</a>, separated from our fair prices.</p>
+<p>The supplementary schedule page contains {len(priced_fixtures) - len(olbg_fixture_urls)} official fixtures not found on the captured OLBG list. Those lines are context only; see <a href="fixtures.html">Fixtures &amp; prices</a>.</p>
 """
     pages["picks.html"] = shell("picks.html", "Picks", body)
 
     # ---------------------------------------------------------------- previews
-    cards = []
-    for p in sorted(preds["predictions"], key=lambda x: (SPORTS.index(x["sport"]) if x["sport"] in SPORTS else 99, -x["prob"])):
-        facts = "".join(f"<li>{E(f)}</li>" for f in p["facts"])
-        cards.append(f"""
+    def render_current_previews(preview_rows):
+        rendered = []
+        for p in sorted(preview_rows, key=lambda x: (SPORTS.index(x["sport"]) if x["sport"] in SPORTS else 99, -x["prob"])):
+            facts = "".join(f"<li>{E(f)}</li>" for f in p["facts"])
+            source_line = f'Official source: {link(p["prediction_source"], "fact source")}'
+            if p.get("official_url") and p["official_url"] != p["prediction_source"]:
+                source_line += f' · Fixture page: {link(p["official_url"], "official game page")}'
+            rendered.append(f"""
 <article class="preview" id="{E(p['id'])}">
 <div class="pv-head"><h3>{E(p['sport'])} · {E(p['event'])}</h3>
 <div class="pv-tags">{conf_tag(p['confidence'])}{badge(p['selection'] + ' ' + (p['american'] or ''), 'pick')}{basis_tag(p['basis'])}
@@ -359,8 +429,12 @@ about −233, which is shorter than the band's −250 floor, so only selections 
 <span class="muted">({E(p['start_utc'][:16].replace('T',' '))} UTC · {E(p['competition'] or '')})</span></p>
 <p class="pv-text">{E(p['text'])}</p>
 <details><summary>The facts behind it</summary><ul class="facts">{facts}</ul>
-<p class="src">Official source: {link(p['prediction_source'], p['prediction_source'])}</p></details>
+<p class="src">{source_line}</p></details>
 </article>""")
+        return "".join(rendered)
+
+    olbg_cards = render_current_previews(current_olbg_previews)
+    context_cards = render_current_previews(context_previews)
     inh_cards = []
     for p in sorted(inh["previews"], key=lambda x: (SPORTS.index(x["sport"]) if x["sport"] in SPORTS else 99, -x["prob"])):
         srcs = "".join(f'<li>{link(sv["url"], sv["name"] or sv["url"])} <span class="muted">{E(sv["used_for"])}</span></li>'
@@ -376,11 +450,12 @@ about −233, which is shorter than the band's −250 floor, so only selections 
 <details><summary>Sources it was written from</summary><ul class="facts">{srcs}</ul></details>
 </article>""")
     body = f"""
-<h2>Written previews — {len(preds['predictions'])}</h2>
-<p class="note">Each preview is at least 30 words, unique, names the selection, and cites at least two facts taken from the official
-capture linked beneath it. Injury status is omitted everywhere: no official team-news feed was readable today, so no preview
-asserts one. Preview coverage is {len(PREVIEW_SPORTS)} of 15 sports; the shortfall is item L-01 on the flagged page.</p>
-<div class="previews">{"".join(cards)}</div>
+<h2>Previews tied to OLBG-listed events — {len(current_olbg_previews)}</h2>
+<p class="note">These are the current write-ups joined to OLBG events in the captured slate: {sum(1 for p in current_olbg_previews if p["basis"] == "originated")} use originated lines and {sum(1 for p in current_olbg_previews if p["basis"] == "market-implied")} use OLBG's one-sided quote as a reference. They include {sum(1 for p in current_olbg_previews if p["confidence"] == "low")} low-, {sum(1 for p in current_olbg_previews if p["confidence"] == "medium")} medium- and {sum(1 for p in current_olbg_previews if p["confidence"] == "high")} high-confidence previews; {len(olbg_high_with_preview)} of {len(olbg_high)} high-confidence OLBG recommendations have matching write-ups. No player or injury claims are added without support in a captured official source.</p>
+<div class="previews">{olbg_cards if olbg_cards else '<p class="empty">No preview is joined to an OLBG-listed match in this capture.</p>'}</div>
+<h2>Other official-schedule previews — {len(context_previews)}</h2>
+<p class="note">These fact-linked previews are not joined to an OLBG listing in this snapshot. They are supplementary official-schedule research, not OLBG picks. The capture's official schedule and price rows remain on <a href="fixtures.html">Fixtures &amp; prices</a>.</p>
+<div class="previews">{context_cards if context_cards else '<p class="empty">No supplementary preview.</p>'}</div>
 <h2>Carried previews — {len(inh['previews'])}</h2>
 <p class="note">These were written against this desk's predecessor in the same <code>/ledger/</code> scope (session
 <code>{E(inh['meta']['source_layer'])}</code>) and are carried here rather than dropped. Their fixture ids belong to the earlier
@@ -392,20 +467,46 @@ re-checked here is the prose rule: length, uniqueness, no forbidden wording, and
     pages["predictions.html"] = shell("predictions.html", "Previews", body)
 
     # ---------------------------------------------------------------- flagged
+    olbg_event_by_official_url = {
+        e["verify"].get("official_url"): e
+        for e in olbg_events_with_lines
+        if e["verify"].get("official_url")
+    }
+    high_preview_gap_rows = []
+    for p in olbg_high:
+        if p not in olbg_high_with_preview:
+            event = olbg_event_by_official_url.get(p.get("official_url"), {})
+            high_preview_gap_rows.append([
+                E(p["sport"]), E(p["event"]), f'<b>{E(p["selection"])}</b>', E(p["market"]),
+                f'{p["prob"]*100:.1f}%', E(p["american"] or "—"),
+                link(p.get("official_url"), "official"), link(event.get("olbg_url"), "OLBG listing"),
+            ])
+    if high_preview_gap_rows:
+        high_preview_gap_section = f"""
+<h3>High-confidence OLBG picks without a matching preview — {len(high_preview_gap_rows)}</h3>
+<p class="note">These selections meet the numeric confidence and price-band rules, but this capture contains no matching written preview for the exact selection. The official game page and OLBG listing are linked for manual review. Player and injury facts were not added without an official source.</p>
+{table(["Sport", "Match", "Selection", "Market", "Chance", "Fair price", "Official source", "OLBG listing"], high_preview_gap_rows)}
+"""
+    else:
+        high_preview_gap_section = f"""
+<h3>High-confidence OLBG preview coverage</h3>
+<p class="note">All {len(olbg_high)} high-confidence originated OLBG recommendations in this capture have a matching source-linked written preview. The fact source and official game page are shown with each preview; no unsupported player or injury claims were added.</p>
+"""
     frows = [[badge(f["code"], "code"), E(f["sport"]), f'<b>{E(f["title"])}</b><br><span class="muted">{E(f["detail"])}</span>',
               badge(f["severity"], {"high": "bad", "medium": "warn"}.get(f["severity"], "neutral")),
               src_link(f["source"]), E(f["impact"])] for f in flags["items"]]
-    unmatched_rows = [[E(e["sport"]), E(e["start_utc"][:16].replace("T", " ")), E(e["event"]), link(e["olbg_url"], "OLBG listing")]
+    unmatched_rows = [[E(e["sport"]), E(e["start_utc"][:16].replace("T", " ")), E(e["event"]),
+                       link(e["verify"]["official_url"], "official"), link(e["olbg_url"], "OLBG listing")]
                       for e in events if e["verify"]["state"] == "unmatched"]
     body = f"""
 <h2>Flagged for review</h2>
-<p class="note">Everything this desk could not confirm, could not price, or chose not to assert. Nothing here blocks publication;
-each item says what is missing, which source failed, and how the row was handled.</p>
+<p class="note">Everything this desk could not confirm, could not price, or chose not to assert. Missing values remain blank; OLBG-only listings are not given an official source by inference.</p>
+{high_preview_gap_section}
+<h3>Other open findings — {len(frows)}</h3>
 {table(["Ref", "Sport", "Finding", "Severity", "Source", "Effect on the desk"], frows)}
 <h2>Unmatched OLBG rows ({len(unmatched_rows)})</h2>
-<p class="note">These are listed by OLBG but were not found on any official source captured today. They keep their OLBG price in
-the OLBG column and carry no price of ours.</p>
-{table(["Sport", "Start (UTC)", "Event", "Listing"], unmatched_rows)}
+<p class="note">These are listed by OLBG but were not found on any official source captured today. The official-source cells remain blank; the OLBG listing is linked for follow-up. They carry no price of ours.</p>
+{table(["Sport", "Start (UTC)", "Event", "Official source", "OLBG listing"], unmatched_rows)}
 """
     pages["flagged.html"] = shell("flagged.html", "Flagged for review", body)
 
@@ -469,9 +570,9 @@ evidence.</li>
              for f in review["findings"]]
     body = f"""
 <h2>Repository review</h2>
-<p class="note">A line-by-line pass over the merged repository before this layer was added. {review['meta']['findings']} findings,
-each one reproducible from the evidence column. None of them is repaired silently: files owned by other sessions are left alone and
-the finding is recorded here.</p>
+<p class="note">A repository-level review refreshed for this publication integration. {review['meta']['findings']} observations remain, each
+with supporting evidence. Root navigation now separates the current ledger from dated archives; findings owned by other sessions
+are left unchanged and kept visible for coordination.</p>
 {table(["Ref", "Finding", "Severity", "Evidence"], rrows)}
 <h2>What was run</h2>
 <ul class="plain">
@@ -488,8 +589,7 @@ the finding is recorded here.</p>
     body = f"""
 <h2>Method</h2>
 <h3>1. What the desk collects</h3>
-<p>The slate is OLBG's: every upcoming event in the fifteen requested sports at capture time. The verification and the numbers are
-ours. OLBG's quoted price is carried in its own column and never used to build a price of ours.</p>
+<p>The event list is OLBG's: every upcoming event captured in the fifteen requested sports. This snapshot contains {len(events)} events; {sum(1 for e in events if e["verify"]["state"] != "unmatched")} were matched to an official page or fixture feed, but only {len(olbg_events_with_lines)} also have an originated line. The 93 official schedule fixtures are a separate comparison layer, and {len(priced_fixtures) - len(olbg_fixture_urls)} were not found in the captured OLBG list. OLBG's one-sided quoted prices stay in their own column and are not our lines.</p>
 <h3>2. How a price is originated</h3>
 <p>Only official season records are inputs: wins, losses, goals or points for and against, games played. From them:</p>
 <pre>rating      = 1500 + 400 × (points_pct − 0.5) + 30 × (score_difference_per_game)
@@ -503,15 +603,13 @@ printed on <a href="fixtures.html">Fixtures &amp; prices</a> so the arithmetic c
 <h3>3. Confidence</h3>
 <p>high = 70% or better, medium = 60–69.9%, low = below 60%. The same thresholds apply to a market-implied price, which is
 labelled separately because it is not our number.</p>
-<h3>4. The price band</h3>
-<p>The brief asks for selections between −250 and +10000 and for a chance above 70%. A 70% chance is −233, so the two rules only
-overlap between 70.0% and 71.4%. The desk publishes the intersection honestly: {picks['meta']['high']} high-confidence selections,
-{picks['meta']['high_in_band']} of them inside the band.</p>
+<h3>4. The price band and the OLBG-only view</h3>
+<p>The brief asks for selections between −250 and +10000 and for a chance above 70%. A 70% chance is about −233, so the two rules overlap only between 70.0% and 71.4%. Across the full combined dataset there are {len(all_high)} high-confidence selections ({len(originated_high)} originated and {len(market_reference_high)} market-implied references), with {len(all_high_band)} inside the band. The OLBG-only executive view is narrower: {len(olbg_high)} high recommendations, {len(olbg_high_band)} high and in-band, from {len(olbg_events_with_lines)} source-matched OLBG fixtures.</p>
 <h3>5. What is never done</h3>
 <ul class="plain">
 <li>A missing value is left blank, never filled from another sport, another day or an average.</li>
 <li>No injury, suspension or team-news claim is made without an official page that says it.</li>
-<li>No preview is written for a fixture without a captured fact to write around. Eleven sports therefore have none today.</li>
+<li>Only {len(current_olbg_previews)} current previews are joined to OLBG-listed events; the other {len(context_previews)} are separate official-schedule context, and {len(inh["previews"])} carried previews were not re-read today.</li>
 <li>The words "model" and "verified" do not appear in a published preview; the method is described here instead.</li>
 </ul>
 <h3>6. Reproducing this</h3>
@@ -529,15 +627,17 @@ python3 scripts/ledger_verify.py       # audit the result</pre>
     pages["methodology.html"] = shell("methodology.html", "Method", body)
 
     # ---------------------------------------------------------------- sport pages
-    NO_FEED_HTML = '<p class="empty">No official schedule feed carried this sport in the captures for today.</p>' 
+    NO_FEED_HTML = '<p class="empty">No official schedule feed carried this sport in the captures for today.</p>'
     for s in SPORTS:
         evs = [e for e in events if e["sport"] == s]
-        preds_s = [p for p in preds["predictions"] if p["sport"] == s]
-        picks_s = [picks_by_id[i] for i in top5.get(s, []) if i in picks_by_id]
+        preds_s = [p for p in current_olbg_previews if p["sport"] == s]
+        context_preds_s = [p for p in context_previews if p["sport"] == s]
+        picks_s = [p for p in olbg_recommendations if p["sport"] == s]
         fxs = [f for f in priced_fixtures if f["sport"] == s]
         mrows = [[E(e["start_utc"][:16].replace("T", " ")), E(e["event"]), E(e["competition"] or "—"),
                   E(", ".join(f'{m["selection"]} {m["olbg_decimal"]}' for m in e["markets"][:2] if m["olbg_decimal"]) or "—"),
-                  state_tag(e["verify"]["state"]), link(e["verify"]["official_url"] or e["olbg_url"], "source")] for e in evs]
+                  state_tag(e["verify"]["state"]), link(e["verify"]["official_url"], "official"),
+                  link(e["olbg_url"], "OLBG listing")] for e in evs]
         prows = [[f'<b>{E(p["selection"])}</b>', E(p["market"]), E(p["american"]), f'{p["prob"]*100:.1f}%',
                   conf_tag(p["confidence"]), basis_tag(p["basis"]), link(p["official_url"], "source")] for p in picks_s]
         frows2 = [[E(f["start_utc"][:16].replace("T", " ")), f'{E(f["away"])} at {E(f["home"])}' if s in ("Ice Hockey", "Baseball") else f'{E(f["home"])} v {E(f["away"])}',
@@ -545,30 +645,34 @@ python3 scripts/ledger_verify.py       # audit the result</pre>
                    E(f'{f["markets"]["win"][0]["selection"]} {f["markets"]["win"][0]["american"]} / {f["markets"]["win"][1]["selection"]} {f["markets"]["win"][1]["american"]}'),
                    link(f["official_url"], "official")] for f in fxs]
         inh_s = [p for p in inh["previews"] if p["sport"] == s]
-        pv = "".join(f'<article class="preview"><h3>{E(p["event"])} — {E(p["selection"])}</h3><p>{E(p["text"])}</p>'
-                     f'<p class="src">{link(p["prediction_source"], "official source")} · {p["words"]} words</p></article>'
-                     for p in preds_s)
-        pv += "".join(f'<article class="preview"><h3>{E(p["event"])} — {E(p["selection"])}</h3><p>{E(p["text"])}</p>'
-                      f'<p class="src">carried from the earlier ledger pass · '
-                      + " ".join(link(sv["url"], "source") for sv in p["sources"])
-                      + f' · {p["words"]} words</p></article>' for p in inh_s)
+        pv = render_current_previews(preds_s)
+        context_pv = render_current_previews(context_preds_s)
+        carried_pv = "".join(f'<article class="preview"><h3>{E(p["event"])} — {E(p["selection"])}</h3><p>{E(p["text"])}</p>'
+                              f'<p class="src">carried from the earlier ledger pass · '
+                              + " ".join(link(sv["url"], "source") for sv in p["sources"])
+                              + f' · {p["words"]} words · not re-read today</p></article>' for p in inh_s)
         body = f"""
 <p class="crumb"><a href="../index.html">Overview</a> / <a href="../matches.html">OLBG matches</a> / {E(s)}</p>
 <h2>{E(s)}</h2>
 <div class="kpis">
 {kpi(len(evs), "OLBG events", "upcoming at capture")}
-{kpi(len([e for e in evs if e["verify"]["state"] != "unmatched"]), "verified", "official source found")}
-{kpi(len(fxs), "priced fixtures", "our own markets")}
-{kpi(len(preds_s) + len(inh_s), "previews", f"{len(preds_s)} written here, {len(inh_s)} carried")}
+{kpi(len([e for e in evs if e["verify"]["state"] != "unmatched"]), "officially matched", "fixture feed or page-level pairing")}
+{kpi(len(picks_s), "OLBG matches with our picks", "one per fixture")}
+{kpi(len([p for p in picks_s if p["confidence"] == "high"]), "high-confidence picks", "originated OLBG matches only")}
+{kpi(len(preds_s), "OLBG-linked previews", "current capture")}
 </div>
 <h3>OLBG listings</h3>
-{table(["Start (UTC)", "Event", "Competition", "OLBG quote", "Official check", "Source"], mrows)}
-<h3>Our picks</h3>
-{table(["Selection", "Market", "Price", "Chance", "Confidence", "Basis", "Source"], prows) if prows else '<p class="empty">No selection priced for this sport today.</p>'}
-<h3>Official fixtures priced</h3>
-{table(["Start (UTC)", "Fixture", "Venue", "Winner market", "Source"], frows2) if frows2 else NO_FEED_HTML}
-<h3>Previews</h3>
-{pv if pv else '<p class="empty">No preview published for this sport. The reason is item L-01 on the <a href="../flagged.html">flagged page</a>.</p>'}
+{table(["Start (UTC)", "Event", "Competition", "OLBG quote", "Official check", "Official source", "OLBG listing"], mrows)}
+<h3>Best originated selections for OLBG-listed matches</h3>
+{table(["Selection", "Market", "Fair price", "Chance", "Confidence", "Basis", "Official source"], prows) if prows else '<p class="empty">No OLBG-listed match in this capture has an official fixture match and our own line. See <a href="../flagged.html">Flagged for Review</a>.</p>'}
+<h3>Supplementary official fixtures (not all listed on OLBG)</h3>
+{table(["Start (UTC)", "Fixture", "Venue", "Winner market", "Official source"], frows2) if frows2 else NO_FEED_HTML}
+<h3>Previews for OLBG-listed events</h3>
+{pv if pv else '<p class="empty">No current preview is joined to an OLBG-listed event in this capture.</p>'}
+<h3>Other official-schedule previews (not joined to OLBG)</h3>
+{context_pv if context_pv else '<p class="empty">No supplementary preview for this sport.</p>'}
+<h3>Carried previews from an earlier snapshot (not re-read)</h3>
+{carried_pv if carried_pv else '<p class="empty">No carried preview.</p>'}
 """
         pages[f"sports/{SLUG[s]}.html"] = shell(f"sports/{SLUG[s]}.html" if s == "Golf" else "",
                                                 s, body, prefix="../")
@@ -577,18 +681,20 @@ python3 scripts/ledger_verify.py       # audit the result</pre>
     for s in SPORTS:
         evs = [e for e in events if e["sport"] == s]
         n_ok = len([e for e in evs if e["verify"]["state"] != "unmatched"])
-        n_pv = len([p for p in preds["predictions"] if p["sport"] == s]) + len([p for p in inh["previews"] if p["sport"] == s])
-        n_hi = len([p for p in picks["picks"] if p["sport"] == s and p["confidence"] == "high"])
+        n_recs = len([p for p in olbg_recommendations if p["sport"] == s])
+        n_pv = len([p for p in current_olbg_previews if p["sport"] == s])
+        n_hi = len([p for p in olbg_recommendations if p["sport"] == s and p["confidence"] == "high"])
+        n_context = len([p for p in context_previews if p["sport"] == s])
+        n_carried = len([p for p in inh["previews"] if p["sport"] == s])
         cards.append(f"""<a class="card" href="{SLUG[s]}.html">
 <h3>{E(s)}</h3>
-<p><b>{len(evs)}</b> OLBG events · <b>{n_ok}</b> matched to an official source</p>
-<p><b>{n_hi}</b> high-confidence picks · <b>{n_pv}</b> previews</p>
+<p><b>{len(evs)}</b> OLBG events · <b>{n_ok}</b> matched to an official page/feed</p>
+<p><b>{n_recs}</b> originated OLBG picks · <b>{n_hi}</b> high · <b>{n_pv}</b> OLBG-linked previews</p>
+<p class="muted">{n_context} supplementary previews · {n_carried} carried from earlier snapshot</p>
 <p class="muted">Open the sport page →</p></a>""")
     pages["sports/index.html"] = shell("sports/index.html", "Sports",
         f"""<h2>Fifteen sports</h2>
-<p class="note">Each sport page carries its OLBG listing, the official source check for every row, our own prices, the priced
-official fixtures and the previews. Sports with no readable official input today say so on the card and in detail on the
-<a href="../flagged.html">flagged page</a>.</p>
+<p class="note">Each page separates the OLBG event list from official-source matches, originated OLBG picks, supplementary official schedules, current OLBG-linked previews and carried previews. Blank or unmatched values are explained on <a href="../flagged.html">Flagged for Review</a>.</p>
 <div class="cards">{"".join(cards)}</div>""", prefix="../")
 
     return pages

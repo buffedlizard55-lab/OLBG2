@@ -11,8 +11,7 @@
 <main class="wrap">
 <h2>Method</h2>
 <h3>1. What the desk collects</h3>
-<p>The slate is OLBG's: every upcoming event in the fifteen requested sports at capture time. The verification and the numbers are
-ours. OLBG's quoted price is carried in its own column and never used to build a price of ours.</p>
+<p>The event list is OLBG's: every upcoming event captured in the fifteen requested sports. This snapshot contains 142 events; 12 were matched to an official page or fixture feed, but only 3 also have an originated line. The 93 official schedule fixtures are a separate comparison layer, and 90 were not found in the captured OLBG list. OLBG's one-sided quoted prices stay in their own column and are not our lines.</p>
 <h3>2. How a price is originated</h3>
 <p>Only official season records are inputs: wins, losses, goals or points for and against, games played. From them:</p>
 <pre>rating      = 1500 + 400 × (points_pct − 0.5) + 30 × (score_difference_per_game)
@@ -26,15 +25,13 @@ printed on <a href="fixtures.html">Fixtures &amp; prices</a> so the arithmetic c
 <h3>3. Confidence</h3>
 <p>high = 70% or better, medium = 60–69.9%, low = below 60%. The same thresholds apply to a market-implied price, which is
 labelled separately because it is not our number.</p>
-<h3>4. The price band</h3>
-<p>The brief asks for selections between −250 and +10000 and for a chance above 70%. A 70% chance is −233, so the two rules only
-overlap between 70.0% and 71.4%. The desk publishes the intersection honestly: 149 high-confidence selections,
-11 of them inside the band.</p>
+<h3>4. The price band and the OLBG-only view</h3>
+<p>The brief asks for selections between −250 and +10000 and for a chance above 70%. A 70% chance is about −233, so the two rules overlap only between 70.0% and 71.4%. Across the full combined dataset there are 149 high-confidence selections (125 originated and 24 market-implied references), with 11 inside the band. The OLBG-only executive view is narrower: 2 high recommendations, 2 high and in-band, from 3 source-matched OLBG fixtures.</p>
 <h3>5. What is never done</h3>
 <ul class="plain">
 <li>A missing value is left blank, never filled from another sport, another day or an average.</li>
 <li>No injury, suspension or team-news claim is made without an official page that says it.</li>
-<li>No preview is written for a fixture without a captured fact to write around. Eleven sports therefore have none today.</li>
+<li>Only 7 current previews are joined to OLBG-listed events; the other 14 are separate official-schedule context, and 26 carried previews were not re-read today.</li>
 <li>The words "model" and "verified" do not appear in a published preview; the method is described here instead.</li>
 </ul>
 <h3>6. Reproducing this</h3>

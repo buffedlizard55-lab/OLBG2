@@ -255,6 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 # --------------------------------------------------------------------------- shell
 NAV = [
     ("ledger/index.html", "Latest: ledger desk (15 sports, 23 Oct)"),
+    ("cadence/index.html", "Independent cross-check (23 Oct, 20:10Z)"),
     ("olbg/index.html", "OLBG daily desk (23 Oct)"),
     ("brief/index.html", "Daily brief (15 sports, 23 Oct)"),
     ("monitor/index.html", "Evidence-first 15-sport monitor"),
@@ -296,9 +297,10 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
 It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
 <div class="cta"><a class="button primary" href="ledger/index.html">Open the 15-sport ledger →</a>
 <a class="button" href="ledger/flagged.html">Flagged for Review</a>
-<a class="button" href="olbg/index.html">OLBG daily desk</a></div>
-<p><strong>One consolidated desk, 15 sports.</strong> Every value carries the first-hand capture it came from; gaps are left blank and listed on the review page.
-Earlier overlapping research is retained below for audit only.</p></section>
+<a class="button" href="cadence/index.html">Independent capture cross-check</a></div>
+<p><strong>One primary desk, 15 sports.</strong> Every value carries the capture it came from; gaps are left blank and listed on the review page.
+The separate <a href="cadence/index.html">Cadence cross-check</a> is an earlier 23 October snapshot (20:10 UTC), not a live update. Its counts overlap the ledger and must not be added.</p>
+<p>Earlier overlapping research is retained below for audit only.</p></section>
 <details><summary><strong>Open historical 22 October dashboard (not newly verified)</strong></summary>''' + body + '</details>'
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -316,7 +318,7 @@ Earlier overlapping research is retained below for audit only.</p></section>
     <details><summary>Research navigation & archives</summary><nav class="nav" aria-label="Main navigation">{nav}</nav></details>
   </div>
 </header>
-<div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
+<div class="stripe"><div class="wrap"><strong>Historical root /verified snapshot: {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a> · <a href="{prefix}ledger/index.html">Current 15-sport OLBG ledger</a></div></div>
 <main class="wrap">
 <div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk, not the current clock.
 <a href="{prefix}ledger/index.html">Use the 15-sport ledger</a> for today's OLBG slate, our own prices and the review queue.</div>

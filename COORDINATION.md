@@ -4586,3 +4586,7 @@ Two generator side effects require a narrow scope clarification before the full 
 
 These additions are outputs of the already claimed final-publication integration, not a change to the sports-data scope.
 
+### `arena/1cb7d5b7-olbg2` — scoped preview-completion clarification (2026-10-23)
+
+The publication pass found two high-confidence, in-band originated selections on official-fixture matches in the OLBG list but no matching written previews. To meet the standing prose requirement without inventing fresh inputs, this scope now includes `data/ledger/prose.json` (two unique, 30+ word write-ups), regenerated `data/ledger/predictions.json`, the affected `/ledger/` preview and Ice Hockey pages, plus the publication regression test/report. The facts will be taken only from the already captured NHL official standings response (`data/ledger/raw/ieh_standings.json`, fetched 2026-10-23 20:32:14Z, HTTP 200, SHA-256 recorded in `data/ledger/manifest.json`); both the official standings URL and each NHL game page will be linked. This is prose completion only: no fixture, probability, fair price, market, or raw source capture is changed. If either source capture does not support every fact, the corresponding statement will be omitted and the gap retained on `Flagged for Review`.
+

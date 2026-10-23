@@ -14,7 +14,7 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen, build_opener, HTTPRedirectHandler
-from monitor_core import SPORTS, OLBGLinks, parse_mlb, stamp
+from monitor_core import SPORTS, OLBGLinks, parse_mlb, parse_nhl, stamp
 
 MAX_BYTES = 2_000_000
 ERROR_BODY = re.compile(r'(?:<title[^>]*>[^<]*(?:404|access denied)|page not found|# 404 Not Found|captcha|just a moment)', re.I)
@@ -54,10 +54,11 @@ def fetch_task(task, folder, captured_at):
             for d in record['discovery']: d['source_id']=key
             record['status']='discovery-only'
             record['note']=f'{len(parser.events)} distinct event links; no date, odds, status or complete pagination claim. Load-more/API routes are not reverse-engineered.'
-        elif sport=='baseball':
-            record['events']=parse_mlb(json.loads(text),key,captured_at)
+        elif sport in ('baseball', 'ice-hockey'):
+            adapter = parse_mlb if sport == 'baseball' else parse_nhl
+            record['events']=adapter(json.loads(text),key,captured_at)
             record['status']='parsed'
-            record['note']='Official MLB schedule parsed; OLBG mapping and betting inputs are not auto-confirmed.'
+            record['note']='Official schedule parsed; OLBG mapping and betting inputs are not auto-confirmed.'
         else:
             record['note']='Response archived for review. No trusted structured fixture adapter implemented for this source.'
     except (OSError, ValueError, KeyError, TypeError) as exc:

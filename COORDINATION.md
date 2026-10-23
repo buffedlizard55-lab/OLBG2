@@ -4593,7 +4593,18 @@ ledger owner's full unmodified pipeline (`ledger_seed.py` → `ledger_verify.py`
 fixture, price, pick, prediction or finding was changed. These generated outputs are included so the required
 repository-wide drift gate can pass; recorded as a cross-scope regeneration for the ledger owner.
 
----
+### Publication record — final completion (2026-10-23)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#175](https://github.com/buffedlizard55-lab/OLBG2/pull/175) — merged 21:36:35Z; merge commit `1ac44fe3994fac482f2a72d2460e37aba2c835b5` |
+| Validation workflow | [Run 40028019335](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019335) — success, including full tests, link audit and generated-file drift gate |
+| Pages deploy | [Run 40028019381](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019381) — success; GitHub Pages API status `built`, source `main:/` |
+| Published site | <https://buffedlizard55-lab.github.io/OLBG2/> — exact-15-sport desk is linked from the root landing page; `/cadence/` is the dedicated desk |
+| Final scope | Root navigation/CTA, generated root review flags, `research/deb1cb6e-independent-audit.md`, regression tests, and generated ledger repository inventory count refreshed through its own builder |
+| Remaining limitation | Snapshot is dated and not a live feed. The two audit flags remain unresolved; official external pages were not freshly fetched in this session. Five predictions per sport are not yet achieved. |
+
+This publication record is a post-merge append. The PR and deployment above contain the implementation and earlier audit; this board update itself is being recorded as a follow-up documentation change.
 
 ## Session `arena/73cee7ef-olbg2` — FINAL INTEGRATION (claimed 2026-10-23 21:35Z)
 
@@ -4617,15 +4628,35 @@ prominent link), which is regenerated deterministically, and `COORDINATION.md` /
 **Baseline check performed before any edit:** `python3 -m unittest discover -s tests` → **OK**, 45 test
 modules; existing drift gate list read from `.github/workflows/pages.yml`.
 
-### Publication record — final completion (2026-10-23)
 
-| Item | Result |
-|---|---|
-| Integration PR | [#175](https://github.com/buffedlizard55-lab/OLBG2/pull/175) — merged 21:36:35Z; merge commit `1ac44fe3994fac482f2a72d2460e37aba2c835b5` |
-| Validation workflow | [Run 40028019335](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019335) — success, including full tests, link audit and generated-file drift gate |
-| Pages deploy | [Run 40028019381](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40028019381) — success; GitHub Pages API status `built`, source `main:/` |
-| Published site | <https://buffedlizard55-lab.github.io/OLBG2/> — exact-15-sport desk is linked from the root landing page; `/cadence/` is the dedicated desk |
-| Final scope | Root navigation/CTA, generated root review flags, `research/deb1cb6e-independent-audit.md`, regression tests, and generated ledger repository inventory count refreshed through its own builder |
-| Remaining limitation | Snapshot is dated and not a live feed. The two audit flags remain unresolved; official external pages were not freshly fetched in this session. Five predictions per sport are not yet achieved. |
+## Session `arena/73cee7ef-olbg2` — final integration (2026-10-23)
 
-This publication record is a post-merge append. The PR and deployment above contain the implementation and earlier audit; this board update itself is being recorded as a follow-up documentation change.
+| Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|
+| FI1–FI7: consolidated 15-sport desk, five-per-sport card, capture audit, root landing integration, CI, docs, PR/merge | done | `arena/73cee7ef-olbg2` | `scripts/master_*.py`, `data/master/**`, `master/**`, `tests/test_master_73cee7ef.py`, `research/master-73cee7ef.md`, append-only `COORDINATION.md`; root `scripts/build_site.py` + regenerated root pages; `README.md`; `.github/workflows/pages.yml` |
+
+### What landed
+
+- `/master/` published: **235 matches across all 15 sports** (142 OLBG-listed, 96 with an official fixture link),
+  **218 graded picks**, **8 high-confidence selections inside −250…+10000**, **11 written predictions**, **19 review
+  items** and a full failed/truncated capture audit (60 failed, 32 truncated).
+- `/master/top5.html` applies the brief's five-per-sport ceiling literally: 28 selections across 14 sports, with the
+  shortfall printed per sport instead of padded with promoted favourites.
+- Two sports that had no row at all (Golf, Snooker) were closed with first-hand reads at 22:06Z and 22:12Z:
+  the PGA Tour leaderboard (Butterfield Bermuda Championship, nine priced outrights, FanDuel odds labelled
+  market-implied) and the World Snooker Tour draw (two semi-finals, our own frame-based price at 66% — below the
+  high floor, and left there).
+- Root landing rewritten to lead with the consolidated desk, its live counts and the strongest pick per sport; the
+  22 October dashboard and every earlier layer are preserved under an "Archive" disclosure.
+- CI now runs `master_data.py → master_extra.py → master_top5.py → master_build.py → master_verify.py` before the
+  drift gate, with `master` and `data/master` in the drift list.
+- Verification: `master_verify.py` **3,196 assertions, 0 failures**; `python3 -m unittest discover -s tests`
+  **684 tests OK** (29 in `tests/test_master_73cee7ef.py`); `integration_audit.py` 0 cross-layer link errors.
+
+### Irregularities logged (published on `/master/flagged.html`)
+
+MR-01 two sets of WST ranking figures; MR-06 every NBA capture is a 403 page; MR-07/MR-16 60 failed and 32
+truncated captures, so the OLBG event count is a floor; MR-09/MR-10 only three sports carry official per-match
+statistics, so five predictions per sport is unreachable today; MR-11 no injury feed captured, nothing asserts one;
+MR-15 EuroLeague times are venue-local; MR-17 golf prices are bookmaker odds; MR-18 WST times carry no timezone;
+MR-19 second snooker semi-final has no opponent. None block publication.

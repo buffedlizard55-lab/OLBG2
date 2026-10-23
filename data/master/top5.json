@@ -1,0 +1,646 @@
+{
+ "meta": {
+  "rule": "At most five high-confidence picks per sport per day; selections inside -250..+10000 first, then the price closest to that window, then the shortest price, then the earliest start.",
+  "limit": 5,
+  "sports_with_rows": 14,
+  "featured_total": 28,
+  "featured_in_band": 7,
+  "featured_with_prediction": 5
+ },
+ "board": {
+  "Baseball": {
+   "sport": "Baseball",
+   "high_available": 0,
+   "featured": [],
+   "best_alternative": {
+    "pick_id": "olbg-160789-TB-Rays-MIL-Brewers|Money Line|MIL Brewers",
+    "selection": "MIL Brewers",
+    "confidence": "medium",
+    "prob": 0.6454,
+    "fair_american": -182
+   }
+  },
+  "Basketball": {
+   "sport": "Basketball",
+   "high_available": 15,
+   "featured": [
+    {
+     "pick_id": "olbg-536037-DAL-Mavericks-IND-Pacers|Money Line|IND Pacers",
+     "match_id": "olbg-536037-DAL-Mavericks-IND-Pacers",
+     "event": "DAL Mavericks v IND Pacers",
+     "competition": "NBA",
+     "start_utc": "2026-10-23T23:10:00Z",
+     "market": "Money Line",
+     "selection": "IND Pacers",
+     "fair_american": -250,
+     "prob": 0.7143,
+     "in_band": true,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DAL_Mavericks_@_IND_Pacers/4?event_id=536037",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-536034-TOR-Raptors-WAS-Wizards|Money Line|TOR Raptors",
+     "match_id": "olbg-536034-TOR-Raptors-WAS-Wizards",
+     "event": "TOR Raptors v WAS Wizards",
+     "competition": "NBA",
+     "start_utc": "2026-10-23T23:10:00Z",
+     "market": "Money Line",
+     "selection": "TOR Raptors",
+     "fair_american": -303,
+     "prob": 0.7519,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/TOR_Raptors_@_WAS_Wizards/4?event_id=536034",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-536073-Atenas-vs-Lanus|Money Line|Atenas",
+     "match_id": "olbg-536073-Atenas-vs-Lanus",
+     "event": "Atenas v Lanus",
+     "competition": "Argentina Liga Nacional",
+     "start_utc": "2026-10-24T00:30:00Z",
+     "market": "Money Line",
+     "selection": "Atenas",
+     "fair_american": -330,
+     "prob": 0.7674,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Argentina_Liga_Nacional/Atenas_vs_Lanus/4?event_id=536073",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-536042-LA-Clippers-LA-Lakers|Money Line|LA Lakers",
+     "match_id": "olbg-536042-LA-Clippers-LA-Lakers",
+     "event": "LA Clippers v LA Lakers",
+     "competition": "NBA",
+     "start_utc": "2026-10-24T02:10:00Z",
+     "market": "Money Line",
+     "selection": "LA Lakers",
+     "fair_american": -333,
+     "prob": 0.7691,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/LA_Clippers_@_LA_Lakers/4?event_id=536042",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "el-E2026_78|Money line|Partizan Mozzart Bet Belgrade",
+     "match_id": "el-E2026_78",
+     "event": "LDLC ASVEL Villeurbanne v Partizan Mozzart Bet Belgrade",
+     "competition": "EuroLeague",
+     "start_utc": "2026-10-28T20:00:00",
+     "market": "Money line",
+     "selection": "Partizan Mozzart Bet Belgrade",
+     "fair_american": -355,
+     "prob": 0.78,
+     "in_band": false,
+     "basis": "originated",
+     "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_78/",
+     "olbg_url": "",
+     "has_prediction": false,
+     "venue": "LDLC ARENA"
+    }
+   ],
+   "best_alternative": null
+  },
+  "Cricket": {
+   "sport": "Cricket",
+   "high_available": 2,
+   "featured": [
+    {
+     "pick_id": "olbg-188842-Eastern-Cape-Iinyathi-vs-Warriors-T20|Win Match|Warriors",
+     "match_id": "olbg-188842-Eastern-Cape-Iinyathi-vs-Warriors-T20",
+     "event": "Eastern Cape Iinyathi v Warriors T20",
+     "competition": "International and domestic",
+     "start_utc": "2026-10-24T11:00:00Z",
+     "market": "Win Match",
+     "selection": "Warriors",
+     "fair_american": -278,
+     "prob": 0.7354,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Eastern_Cape_Iinyathi_vs_Warriors_T20/7?event_id=188842",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-188841-Lions-vs-Limpopo-Impalas-T20|Win Match|Lions",
+     "match_id": "olbg-188841-Lions-vs-Limpopo-Impalas-T20",
+     "event": "Lions v Limpopo Impalas T20",
+     "competition": "International and domestic",
+     "start_utc": "2026-10-24T11:00:00Z",
+     "market": "Win Match",
+     "selection": "Lions",
+     "fair_american": -500,
+     "prob": 0.8333,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Lions_vs_Limpopo_Impalas_T20/7?event_id=188841",
+     "has_prediction": false,
+     "venue": ""
+    }
+   ],
+   "best_alternative": {
+    "pick_id": "olbg-188832-New-Zealand-vs-India-2nd-T20-Match|Win Match|India",
+    "selection": "India",
+    "confidence": "low",
+    "prob": 0.5781,
+    "fair_american": -137
+   }
+  },
+  "Darts": {
+   "sport": "Darts",
+   "high_available": 1,
+   "featured": [
+    {
+     "pick_id": "olbg-32383-Cameron-Menzies-vs-Gerwyn-Price|Win Match 2-way|Gerwyn Price",
+     "match_id": "olbg-32383-Cameron-Menzies-vs-Gerwyn-Price",
+     "event": "Cameron Menzies v Gerwyn Price",
+     "competition": "PDC tour",
+     "start_utc": "2026-10-24T17:15:00Z",
+     "market": "Win Match 2-way",
+     "selection": "Gerwyn Price",
+     "fair_american": -333,
+     "prob": 0.7691,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383",
+     "has_prediction": false,
+     "venue": ""
+    }
+   ],
+   "best_alternative": {
+    "pick_id": "olbg-26023-PDC-World-Championship-2027|Win Tournament|Luke Littler",
+    "selection": "Luke Littler",
+    "confidence": "low",
+    "prob": 0.5556,
+    "fair_american": -125
+   }
+  },
+  "Gaelic Sports": {
+   "sport": "Gaelic Sports",
+   "high_available": 2,
+   "featured": [
+    {
+     "pick_id": "olbg-3537-Fr-Caseys-v-Kildimo-Pallaskenry|Quoted market|Fr Caseys",
+     "match_id": "olbg-3537-Fr-Caseys-v-Kildimo-Pallaskenry",
+     "event": "Fr Caseys v Kildimo Pallaskenry",
+     "competition": "GAA",
+     "start_utc": "2026-11-01T15:30:00Z",
+     "market": "Quoted market",
+     "selection": "Fr Caseys",
+     "fair_american": -250,
+     "prob": 0.7143,
+     "in_band": true,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Fr_Caseys_v_Kildimo_Pallaskenry/25?event_id=3537",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-3532-Moycullen-v-Salthill-Knocknacarra|Quoted market|Moycullen",
+     "match_id": "olbg-3532-Moycullen-v-Salthill-Knocknacarra",
+     "event": "Moycullen v Salthill-Knocknacarra",
+     "competition": "GAA",
+     "start_utc": "2026-10-25T16:00:00Z",
+     "market": "Quoted market",
+     "selection": "Moycullen",
+     "fair_american": -330,
+     "prob": 0.7674,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Moycullen_v_Salthill-Knocknacarra/25?event_id=3532",
+     "has_prediction": false,
+     "venue": ""
+    }
+   ],
+   "best_alternative": {
+    "pick_id": "olbg-3530-St-Finbarrs-v-Nemo-Rangers|Quoted market|Nemo Rangers +1.50",
+    "selection": "Nemo Rangers +1.50",
+    "confidence": "low",
+    "prob": 0.5455,
+    "fair_american": -120
+   }
+  },
+  "Golf": {
+   "sport": "Golf",
+   "high_available": 0,
+   "featured": [],
+   "best_alternative": {
+    "pick_id": "golf-pgat-2026-r528|Outright winner|Corey Conners",
+    "selection": "Corey Conners",
+    "confidence": "low",
+    "prob": 0.142857,
+    "fair_american": 600
+   }
+  },
+  "Handball": {
+   "sport": "Handball",
+   "high_available": 4,
+   "featured": [
+    {
+     "pick_id": "olbg-12084-Saint-Raphael-vs-PSG-Handball|Money Line|PSG Handball",
+     "match_id": "olbg-12084-Saint-Raphael-vs-PSG-Handball",
+     "event": "Saint Raphael v PSG Handball",
+     "competition": "European leagues and EHF",
+     "start_utc": "2026-10-25T15:00:00Z",
+     "market": "Money Line",
+     "selection": "PSG Handball",
+     "fair_american": -667,
+     "prob": 0.8696,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Saint_Raphael_vs_PSG_Handball/20?event_id=12084",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-12102-BM-Granollers-vs-Angel-Ximenez-Puente-Genil|Money Line|BM Granollers",
+     "match_id": "olbg-12102-BM-Granollers-vs-Angel-Ximenez-Puente-Genil",
+     "event": "BM Granollers v Angel Ximenez Puente Genil",
+     "competition": "European leagues and EHF",
+     "start_utc": "2026-10-25T11:30:00Z",
+     "market": "Money Line",
+     "selection": "BM Granollers",
+     "fair_american": -769,
+     "prob": 0.8849,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Granollers_vs_Angel_Ximenez_Puente_Genil/20?event_id=12102",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-12082-Nantes-vs-Chambery-Savoie|Money Line|Nantes",
+     "match_id": "olbg-12082-Nantes-vs-Chambery-Savoie",
+     "event": "Nantes v Chambery Savoie",
+     "competition": "European leagues and EHF",
+     "start_utc": "2026-10-24T17:00:00Z",
+     "market": "Money Line",
+     "selection": "Nantes",
+     "fair_american": -833,
+     "prob": 0.8928,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Nantes_vs_Chambery_Savoie/20?event_id=12082",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-12076-Skive-FH-vs-Aalborg-Handbold|Money Line|Aalborg Handbold",
+     "match_id": "olbg-12076-Skive-FH-vs-Aalborg-Handbold",
+     "event": "Skive FH v Aalborg Handbold",
+     "competition": "European leagues and EHF",
+     "start_utc": "2026-10-24T13:00:00Z",
+     "market": "Money Line",
+     "selection": "Aalborg Handbold",
+     "fair_american": -909,
+     "prob": 0.9009,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Skive_FH_vs_Aalborg_Handbold/20?event_id=12076",
+     "has_prediction": false,
+     "venue": ""
+    }
+   ],
+   "best_alternative": {
+    "pick_id": "olbg-12139-Elverum-vs-OIF-Arendal|Match Handicap|Elverum -6.50",
+    "selection": "Elverum -6.50",
+    "confidence": "low",
+    "prob": 0.5556,
+    "fair_american": -125
+   }
+  },
+  "Ice Hockey": {
+   "sport": "Ice Hockey",
+   "high_available": 54,
+   "featured": [
+    {
+     "pick_id": "nhl-2026020231|Puck line -1.5|Senators -1.5",
+     "match_id": "nhl-2026020231",
+     "event": "Anaheim Ducks v Ottawa Senators",
+     "competition": "NHL",
+     "start_utc": "2026-11-02T01:00:00Z",
+     "market": "Puck line -1.5",
+     "selection": "Senators -1.5",
+     "fair_american": -246,
+     "prob": 0.711,
+     "in_band": true,
+     "basis": "originated",
+     "official_url": "https://www.nhl.com/gamecenter/ott-vs-ana/2026/11/02/2026020231",
+     "olbg_url": "",
+     "has_prediction": true,
+     "venue": "Honda Center"
+    },
+    {
+     "pick_id": "nhl-2026020216|Puck line +1.5|Flames +1.5",
+     "match_id": "nhl-2026020216",
+     "event": "Calgary Flames v Seattle Kraken",
+     "competition": "NHL",
+     "start_utc": "2026-10-31T00:00:00Z",
+     "market": "Puck line +1.5",
+     "selection": "Flames +1.5",
+     "fair_american": -246,
+     "prob": 0.7107,
+     "in_band": true,
+     "basis": "originated",
+     "official_url": "https://www.nhl.com/gamecenter/sea-vs-cgy/2026/10/31/2026020216",
+     "olbg_url": "",
+     "has_prediction": true,
+     "venue": "Scotiabank Saddledome"
+    },
+    {
+     "pick_id": "nhl-2026020206|Puck line -1.5|Hurricanes -1.5",
+     "match_id": "nhl-2026020206",
+     "event": "Carolina Hurricanes v Columbus Blue Jackets",
+     "competition": "NHL",
+     "start_utc": "2026-10-29T23:00:00Z",
+     "market": "Puck line -1.5",
+     "selection": "Hurricanes -1.5",
+     "fair_american": -242,
+     "prob": 0.7078,
+     "in_band": true,
+     "basis": "originated",
+     "official_url": "https://www.nhl.com/gamecenter/cbj-vs-car/2026/10/29/2026020206",
+     "olbg_url": "",
+     "has_prediction": true,
+     "venue": "Lenovo Center"
+    },
+    {
+     "pick_id": "nhl-2026020181|Puck line +1.5|Islanders +1.5",
+     "match_id": "nhl-2026020181",
+     "event": "Dallas Stars v New York Islanders",
+     "competition": "NHL",
+     "start_utc": "2026-10-25T22:00:00Z",
+     "market": "Puck line +1.5",
+     "selection": "Islanders +1.5",
+     "fair_american": -235,
+     "prob": 0.7019,
+     "in_band": true,
+     "basis": "originated",
+     "official_url": "https://www.nhl.com/gamecenter/nyi-vs-dal/2026/10/25/2026020181",
+     "olbg_url": "",
+     "has_prediction": true,
+     "venue": "American Airlines Center"
+    },
+    {
+     "pick_id": "nhl-2026020211|Puck line +1.5|Sabres +1.5",
+     "match_id": "nhl-2026020211",
+     "event": "Anaheim Ducks v Buffalo Sabres",
+     "competition": "NHL",
+     "start_utc": "2026-10-30T02:00:00Z",
+     "market": "Puck line +1.5",
+     "selection": "Sabres +1.5",
+     "fair_american": -235,
+     "prob": 0.7019,
+     "in_band": true,
+     "basis": "originated",
+     "official_url": "https://www.nhl.com/gamecenter/buf-vs-ana/2026/10/30/2026020211",
+     "olbg_url": "",
+     "has_prediction": true,
+     "venue": "Honda Center"
+    }
+   ],
+   "best_alternative": null
+  },
+  "Motor Racing": {
+   "sport": "Motor Racing",
+   "high_available": 0,
+   "featured": [],
+   "best_alternative": {
+    "pick_id": "olbg-913-USA-Grand-Prix|Win Race|Max Verstappen",
+    "selection": "Max Verstappen",
+    "confidence": "low",
+    "prob": 0.4545,
+    "fair_american": 120
+   }
+  },
+  "Rugby League": {
+   "sport": "Rugby League",
+   "high_available": 0,
+   "featured": [],
+   "best_alternative": {
+    "pick_id": "olbg-2695857-State-of-Origin-2027|Win Tournament|New South Wales",
+    "selection": "New South Wales",
+    "confidence": "low",
+    "prob": 0.5708,
+    "fair_american": -133
+   }
+  },
+  "Rugby Union": {
+   "sport": "Rugby Union",
+   "high_available": 5,
+   "featured": [
+    {
+     "pick_id": "olbg-609581-Ospreys-v-Dragons|To Win|Ospreys",
+     "match_id": "olbg-609581-Ospreys-v-Dragons",
+     "event": "Ospreys v Dragons",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-24T18:00:00Z",
+     "market": "To Win",
+     "selection": "Ospreys",
+     "fair_american": -275,
+     "prob": 0.7333,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Ospreys_v_Dragons/9?event_id=609581",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-609554-La-Rochelle-v-Bordeaux|To Win|La Rochelle",
+     "match_id": "olbg-609554-La-Rochelle-v-Bordeaux",
+     "event": "La Rochelle v Bordeaux",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-25T20:05:00Z",
+     "market": "To Win",
+     "selection": "La Rochelle",
+     "fair_american": -303,
+     "prob": 0.7519,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/La_Rochelle_v_Bordeaux/9?event_id=609554",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-609564-Bayonne-v-Lyon|To Win|Bayonne",
+     "match_id": "olbg-609564-Bayonne-v-Lyon",
+     "event": "Bayonne v Lyon",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-24T14:35:00Z",
+     "market": "To Win",
+     "selection": "Bayonne",
+     "fair_american": -450,
+     "prob": 0.8182,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Bayonne_v_Lyon/9?event_id=609564",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-609578-Leinster-v-Munster|To Win|Leinster",
+     "match_id": "olbg-609578-Leinster-v-Munster",
+     "event": "Leinster v Munster",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-24T17:00:00Z",
+     "market": "To Win",
+     "selection": "Leinster",
+     "fair_american": -1000,
+     "prob": 0.9091,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Leinster_v_Munster/9?event_id=609578",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-609580-Stormers-v-Scarlets|To Win|Stormers",
+     "match_id": "olbg-609580-Stormers-v-Scarlets",
+     "event": "Stormers v Scarlets",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-24T14:00:00Z",
+     "market": "To Win",
+     "selection": "Stormers",
+     "fair_american": -3333,
+     "prob": 0.9709,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Stormers_v_Scarlets/9?event_id=609580",
+     "has_prediction": false,
+     "venue": ""
+    }
+   ],
+   "best_alternative": null
+  },
+  "Snooker": {
+   "sport": "Snooker",
+   "high_available": 0,
+   "featured": [],
+   "best_alternative": {
+    "pick_id": "snooker-nio-2026-sf1|Match winner|Kyren Wilson",
+    "selection": "Kyren Wilson",
+    "confidence": "medium",
+    "prob": 0.66,
+    "fair_american": -194
+   }
+  },
+  "Tennis": {
+   "sport": "Tennis",
+   "high_available": 0,
+   "featured": [],
+   "best_alternative": {
+    "pick_id": "olbg-902162-Katie-Boulter-vs-Katerina-Siniakova|Win Match|Katerina Siniakova",
+    "selection": "Katerina Siniakova",
+    "confidence": "medium",
+    "prob": 0.6169,
+    "fair_american": -161
+   }
+  },
+  "Volleyball": {
+   "sport": "Volleyball",
+   "high_available": 4,
+   "featured": [
+    {
+     "pick_id": "olbg-36965-CHKS-Chelm-vs-Resovia-Rzeszow|Win Match|Resovia Rzeszow",
+     "match_id": "olbg-36965-CHKS-Chelm-vs-Resovia-Rzeszow",
+     "event": "CHKS Chelm v Resovia Rzeszow",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-25T17:00:00Z",
+     "market": "Win Match",
+     "selection": "Resovia Rzeszow",
+     "fair_american": -351,
+     "prob": 0.7783,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/CHKS_Chelm_vs_Resovia_Rzeszow/21?event_id=36965",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-36964-PGE-Skra-Belchatow-vs-Projekt-Warszawa|Win Match|Projekt Warszawa",
+     "match_id": "olbg-36964-PGE-Skra-Belchatow-vs-Projekt-Warszawa",
+     "event": "PGE Skra Belchatow v Projekt Warszawa",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-24T16:00:00Z",
+     "market": "Win Match",
+     "selection": "Projekt Warszawa",
+     "fair_american": -400,
+     "prob": 0.8,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/PGE_Skra_Belchatow_vs_Projekt_Warszawa/21?event_id=36964",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-37032-SK-Aich-Dob-vs-SG-VCA-Amstetten|Win Match|SK Aich/Dob",
+     "match_id": "olbg-37032-SK-Aich-Dob-vs-SG-VCA-Amstetten",
+     "event": "SK Aich-Dob v SG VCA Amstetten",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-24T17:00:00Z",
+     "market": "Win Match",
+     "selection": "SK Aich/Dob",
+     "fair_american": -500,
+     "prob": 0.8333,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SK_Aich-Dob_vs_SG_VCA_Amstetten/21?event_id=37032",
+     "has_prediction": false,
+     "venue": ""
+    },
+    {
+     "pick_id": "olbg-37031-UVC-Ried-vs-VBK-Klagenfurt|Win Match|UVC Ried",
+     "match_id": "olbg-37031-UVC-Ried-vs-VBK-Klagenfurt",
+     "event": "UVC Ried v VBK Klagenfurt",
+     "competition": "League and cup fixtures",
+     "start_utc": "2026-10-24T16:00:00Z",
+     "market": "Win Match",
+     "selection": "UVC Ried",
+     "fair_american": -833,
+     "prob": 0.8928,
+     "in_band": false,
+     "basis": "market-implied",
+     "official_url": "",
+     "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/UVC_Ried_vs_VBK_Klagenfurt/21?event_id=37031",
+     "has_prediction": false,
+     "venue": ""
+    }
+   ],
+   "best_alternative": {
+    "pick_id": "olbg-37029-Liberec-W-vs-Prostejov-W|Win Match|Liberec W",
+    "selection": "Liberec W",
+    "confidence": "medium",
+    "prob": 0.654,
+    "fair_american": -189
+   }
+  }
+ }
+}

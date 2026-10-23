@@ -70,7 +70,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 <body>
 <header class="top"><div class="wrap bar">
 <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="tag">consolidated desk</span></a>
-<nav class="main" aria-label="Desk navigation"><a href="index.html">Overview</a><a href="matches.html">All matches</a><a href="picks.html">Picks &amp; lines</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a><a href="methodology.html" aria-current="page">Methodology</a></nav>
+<nav class="main" aria-label="Desk navigation"><a href="index.html">Overview</a><a href="top5.html">Five per sport</a><a href="matches.html">All matches</a><a href="picks.html">Picks &amp; lines</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a><a href="methodology.html" aria-current="page">Methodology</a></nav>
 </div></header>
 <main class="wrap">
 
@@ -83,7 +83,7 @@ of everything that could not be supported.</p>
 <p>Two pools are joined. The OLBG pool is every in-scope tip parsed from the embedded payload of OLBG's own pages,
 captured 2026-10-23 between 19:28Z and 20:32Z; it supplies 142 matches and their quoted prices.
 The official pool is every fixture in the NHL, MLB and EuroLeague responses captured in the same window; it supplies
-93 fixtures. They are joined on club nickname plus an eight-hour start-time window, never on
+96 fixtures. They are joined on club nickname plus an eight-hour start-time window, never on
 a guessed id, and 3 rows carry both.</p>
 
 <h2>2. Where a price comes from</h2>
@@ -117,9 +117,20 @@ unique sentence, name the selection, and quote at least two figures that appear 
 validator rejects any write-up containing the words "model" or "verified", any duplicate opening, and any fact that
 is not present in the stored record for that match.</p>
 
-<h2>6. What the desk will not do</h2>
+<h2>6. Five per sport, as a ceiling</h2>
+<p>For each sport the desk keeps at most five high-confidence selections for the day: in-band selections first,
+then the price closest to the window, then the shortest price, then the earliest start. Sports that cannot field
+five are shown with the number actually available and the next best alternative, never padded with a promoted
+favourite. The card is at <a href="top5.html">Five per sport</a>.</p>
+
+<h2>7. What the desk will not do</h2>
 <p>It will not fill a blank with an inference, quote a price it did not compute or receive, call a market-implied
 number our own, assert an injury without an official report, or present a started match as an upcoming pick.</p>
+<p>Two additions were read first-hand at 22:06Z and 22:12Z on 23 October and are marked with their capture time
+everywhere they appear: the PGA Tour leaderboard for the Butterfield Bermuda Championship (positions, round scores,
+cut line, and the FanDuel odds module) and the World Snooker Tour match page for the Northern Ireland Open (round
+results and semi-final pairings). The golf prices are the bookmaker's, labelled market-implied; the snooker price is
+ours, built from the frames each player won and lost in the rounds captured.</p>
 
 </main>
 <footer class="footer"><div class="wrap">

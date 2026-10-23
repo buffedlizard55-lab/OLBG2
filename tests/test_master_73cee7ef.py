@@ -146,6 +146,68 @@ class MasterDeskTests(unittest.TestCase):
         self.assertIn("master/index.html", root)
         self.assertIn("Consolidated desk (current)", root)
 
+
+    def test_every_sport_has_at_least_one_row(self):
+        seen = {m["sport"] for m in self.matches}
+        missing = [s for s in SPORTS if s not in seen]
+        self.assertEqual(missing, [], f"sports with no row: {missing}")
+
+    def test_golf_and_snooker_rows_carry_a_first_hand_https_source(self):
+        for sport in ("Golf", "Snooker"):
+            rows = [m for m in self.matches if m["sport"] == sport]
+            self.assertTrue(rows, sport)
+            for m in rows:
+                self.assertTrue(m["official_url"].startswith("https://"), m["id"])
+                self.assertTrue(m["official_captured_at"].endswith("Z"), m["id"])
+
+    def test_five_per_sport_card_respects_the_ceiling(self):
+        board = load("top5.json")["board"]
+        meta = load("top5.json")["meta"]
+        self.assertEqual(meta["limit"], 5)
+        for sport, entry in board.items():
+            self.assertLessEqual(len(entry["featured"]), 5, sport)
+            self.assertLessEqual(len(entry["featured"]), entry["high_available"], sport)
+            for f in entry["featured"]:
+                self.assertTrue((f["official_url"] or f["olbg_url"]).startswith("https://"), f["pick_id"])
+
+    def test_featured_selections_are_high_confidence_picks(self):
+        picks = {p["id"]: p for p in self.picks}
+        for entry in load("top5.json")["board"].values():
+            for f in entry["featured"]:
+                self.assertEqual(picks[f["pick_id"]]["confidence"], "high", f["pick_id"])
+
+    def test_new_capture_flags_are_published_with_sources(self):
+        ids = {f["id"]: f for f in self.flagged}
+        for fid in ("MR-17", "MR-18", "MR-19"):
+            self.assertIn(fid, ids)
+            self.assertTrue(ids[fid]["sources"])
+            for url in ids[fid]["sources"]:
+                self.assertTrue(url.startswith("https://"), fid)
+
+    def test_golf_prices_are_labelled_market_implied(self):
+        for p in self.picks:
+            if p["sport"] == "Golf":
+                self.assertEqual(p["basis"], "market-implied", p["id"])
+
+    def test_snooker_price_is_our_own_and_is_not_high(self):
+        rows = [p for p in self.picks if p["sport"] == "Snooker"]
+        self.assertTrue(rows)
+        for p in rows:
+            self.assertEqual(p["basis"], "originated", p["id"])
+            self.assertNotEqual(p["confidence"], "high", f'{p["id"]} claims a 70% floor it cannot support')
+
+    def test_root_landing_shows_the_current_counts(self):
+        root = (ROOT / "index.html").read_text(encoding="utf-8")
+        for href in ("master/top5.html", "master/matches.html", "master/picks.html", "master/flagged.html"):
+            self.assertIn(href, root)
+        self.assertIn(str(self.summary["matches"]), root)
+        self.assertIn("Archive: the 22 October verified dashboard", root)
+
+    def test_methodology_states_the_five_per_sport_ceiling(self):
+        page = (OUT / "methodology.html").read_text(encoding="utf-8")
+        self.assertIn("Five per sport, as a ceiling", page)
+        self.assertIn("never padded", page)
+
     def test_no_prediction_claims_an_injury(self):
         for pred in self.predictions:
             for word in ("injur", "hamstring", "suspended", "ruled out"):

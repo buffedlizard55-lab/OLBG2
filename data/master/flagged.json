@@ -170,6 +170,42 @@
    "sources": [
     "https://www.olbg.com/betting-tips"
    ]
+  },
+  {
+   "id": "MR-17",
+   "title": "The PGA Tour leaderboard carries bookmaker odds, not tour data",
+   "severity": "info",
+   "status": "needs review",
+   "detail": "Every golf price on this desk comes from the FanDuel odds module embedded in the official PGA Tour leaderboard page. It is a bookmaker quote with the margin left in, shown next to genuine tour data (positions, scores, rounds). The rows are labelled market-implied so the two are not confused.",
+   "verified_at": "2026-10-23T22:06:00Z",
+   "sources": [
+    "https://www.pgatour.com/leaderboard"
+   ],
+   "sport": "Golf"
+  },
+  {
+   "id": "MR-18",
+   "title": "World Snooker Tour session times carry no timezone",
+   "severity": "medium",
+   "status": "needs review",
+   "detail": "The match page prints session start times as bare clock values, including 05:00 for a Belfast tournament. That is not a plausible local start, so the desk stores the value without a timezone and marks it as a venue time rather than converting it to UTC.",
+   "verified_at": "2026-10-23T22:12:00Z",
+   "sources": [
+    "https://www.wst.tv/matches/"
+   ],
+   "sport": "Snooker"
+  },
+  {
+   "id": "MR-19",
+   "title": "The second snooker semi-final has no opponent yet",
+   "severity": "low",
+   "status": "needs review",
+   "detail": "Jak Jones and Scott Donaldson were level at 4-4 in the last quarter-final when the page was read, so Mark Williams' next opponent was undecided. The fixture is published with no price rather than priced against an assumed opponent.",
+   "verified_at": "2026-10-23T22:12:00Z",
+   "sources": [
+    "https://www.wst.tv/matches/"
+   ],
+   "sport": "Snooker"
   }
  ]
 }

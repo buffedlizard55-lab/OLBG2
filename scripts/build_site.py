@@ -285,6 +285,70 @@ NAV = [
 ]
 
 
+
+def master_home() -> str:
+    """Compact dashboard built from data/master, shown above the historical root page."""
+    base = ROOT / "data" / "master"
+
+    def load(name):
+        try:
+            return json.loads((base / name).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return None
+
+    summary = load("summary.json")
+    board = load("top5.json")
+    flagged = load("flagged.json")
+    preds = load("predictions.json")
+    if not summary or not board:
+        return ""
+    meta = board["meta"]
+    tiles = [
+        (summary["matches"], "matches on the desk", "15 sports"),
+        (summary["with_official"], "with an official fixture link", "NHL, MLB, EuroLeague"),
+        (summary["picks"], "graded picks", "one per match"),
+        (summary["high_in_band"], "high &amp; inside &minus;250&hellip;+10000", "the tightest gate"),
+        (meta["featured_total"], "on the five-per-sport card", f'{meta["featured_in_band"]} in band'),
+        (len(preds["predictions"]) if preds else 0, "written predictions", "30+ words, sourced"),
+        (len(flagged["items"]) if flagged else 0, "review items", "none blocking"),
+    ]
+    kpis = "".join(
+        f'<div class="kpi"><div class="v">{v}</div><div class="k">{k}</div><div class="s">{sub}</div></div>'
+        for v, k, sub in tiles
+    )
+    rows = []
+    for sport, entry in board["board"].items():
+        if not entry["featured"]:
+            continue
+        f = entry["featured"][0]
+        href = f["official_url"] or f["olbg_url"]
+        rows.append(
+            '<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><a href="%s">source</a></td></tr>'
+            % (esc(sport), esc(f["event"]), esc(f["selection"]), esc(f["market"]),
+               esc(f'{f["fair_american"]:+d} · {f["prob"]*100:.1f}%'), esc(href))
+        )
+    card = "".join(rows)
+    return f"""
+<section style="margin-top:1.1rem">
+  <div class="kpis">{kpis}</div>
+  <div class="cta">
+    <a class="button primary" href="master/index.html">Open the consolidated desk</a>
+    <a class="button" href="master/top5.html">Five per sport</a>
+    <a class="button" href="master/matches.html">All {summary["matches"]} matches</a>
+    <a class="button" href="master/picks.html">Picks &amp; prices</a>
+    <a class="button" href="master/flagged.html">Flagged for Review</a>
+  </div>
+</section>
+<section style="margin-top:1.4rem">
+  <h2 style="margin-bottom:.2rem">The strongest pick in each sport</h2>
+  <p class="sub">One line per sport from the five-per-sport card. Sports without a high-confidence selection are not
+  promoted; the reason is printed on <a href="master/top5.html">Five per sport</a>.</p>
+  <div class="tablewrap"><table><thead><tr><th>Sport</th><th>Fixture</th><th>Selection</th><th>Market</th>
+  <th>Fair price · estimate</th><th>Source</th></tr></thead><tbody>{card}</tbody></table></div>
+</section>
+"""
+
+
 def page(title: str, active: str, body: str, prefix: str = "") -> str:
     links = []
     for href, label in NAV:
@@ -303,8 +367,8 @@ left blank and listed on the review page rather than filled in.</p>
 <a class="button" href="cadence/index.html">Exact 15-sport card &amp; evidence audit</a>
 <a class="button" href="master/flagged.html">Flagged for Review</a></div>
 <p><strong>15 sports, one table.</strong> Every value carries the first-hand capture it came from. The older desks below are
-kept unchanged so this work can be audited, and they are not merged into the current counts.</p></section>
-<details><summary><strong>Open the older 22 October verified dashboard (not newly verified)</strong></summary>''' + body + '</details>'
+kept unchanged so this work can be audited, and they are not merged into the current counts.</p></section>''' + master_home() + '''
+<details style="margin-top:1.6rem"><summary><strong>Archive: the 22 October verified dashboard and every earlier layer</strong></summary>''' + body + '</details>'
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>

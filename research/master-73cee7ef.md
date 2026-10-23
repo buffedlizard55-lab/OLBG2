@@ -82,3 +82,29 @@ produced confidently wrong picks:
 - OLBG prices carry the bookmaker margin. A market-implied probability is therefore not our estimate and is
   labelled as such on every row.
 - No injury, suspension or line-up information is asserted anywhere on the desk.
+
+## 7. Late additions (22:00Z–22:40Z)
+
+Two sports had no row at all in the 22:00Z build. Both were closed with first-hand reads rather than by copying
+another layer:
+
+| Capture | URL | What was read | Used for |
+|---|---|---|---|
+| LC-08 | `https://www.wst.tv/matches/` | Northern Ireland Open 2026: every completed round result, the first semi-final pairing (Kyren Wilson v Sam Craigie, 24 Oct 08:00) and the unfinished quarter-final (Jak Jones 4-4 Scott Donaldson) | two snooker fixtures, our own frame-based price, MR-18, MR-19 |
+| LC-09 | `https://www.pgatour.com/leaderboard` | Butterfield Bermuda Championship, Port Royal: cut line &minus;5, second-round leaderboard with both round scores, positions, and the tour page's FanDuel odds module | one golf outright event with nine priced selections, MR-17 |
+
+Consequences recorded rather than glossed over:
+
+- The snooker price is ours, built from frames won and lost in the rounds captured (Wilson 10-4, Craigie 18-10).
+  It gives Wilson 66%, which is **below** the 70% floor, so snooker contributes a medium-confidence pick and no
+  prediction. It is not inflated to reach the grade.
+- The golf prices are FanDuel's, embedded in the official tour page. They are labelled market-implied and kept
+  apart from tour data on the same row.
+- The second semi-final has no opponent (MR-19), so it is published unpriced.
+
+## 8. The five-per-sport ceiling
+
+The brief calls five high-confidence picks per sport per day a maximum, not a quota. `scripts/master_top5.py`
+applies that ceiling literally and `master/top5.html` prints the result sport by sport: 28 selections across 14
+sports, 7 inside the price window, and a printed shortfall wherever five were not available. Nothing below high
+confidence is promoted to fill a slot, and the verifier fails if any sport shows six.

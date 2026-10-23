@@ -213,6 +213,27 @@ def main() -> int:
     ):
         check(str(value) in overview, f"overview does not print the {label} count {value}")
 
+    # ------------------------------------------------------------------- 13
+    board = load("top5.json")
+    check(board["meta"]["limit"] == 5, "five-per-sport limit is not 5")
+    check(len(board["board"]) == len({p["sport"] for p in picks}),
+          "five-per-sport board does not cover every sport that has a pick")
+    for sport, entry in board["board"].items():
+        shown = entry["featured"]
+        check(len(shown) <= 5, f"{sport}: {len(shown)} featured selections, cap is 5")
+        check(entry["high_available"] >= len(shown), f"{sport}: more featured than available high picks")
+        for f in shown:
+            src = f["official_url"] or f["olbg_url"]
+            check(bool(src) and src.startswith("https://"), f"{sport}/{f['pick_id']}: featured row without https source")
+            pick = next((p for p in picks if p["id"] == f["pick_id"]), None)
+            check(pick is not None, f"{sport}: featured pick {f['pick_id']} is not in picks.json")
+            if pick:
+                check(pick["confidence"] == "high", f"{sport}: featured pick is not high confidence")
+                check(pick["fair_american"] == f["fair_american"], f"{sport}: featured price does not match the pick")
+        if len(shown) < 5:
+            check(len(shown) == entry["high_available"],
+                  f"{sport}: shortage reported without listing every available high pick")
+
     sports_pages = list((OUT / "sports").glob("*.html"))
     check(len(sports_pages) == 16, f"expected 15 sport pages plus an index, found {len(sports_pages)}")
 

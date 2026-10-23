@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 NAV = [
     ("index.html", "Overview"),
+    ("top5.html", "Five per sport"),
     ("matches.html", "All matches"),
     ("picks.html", "Picks &amp; lines"),
     ("predictions.html", "Predictions"),
@@ -211,6 +212,66 @@ def band_pill(in_band: bool) -> str:
     return '<span class="pill band">in band</span>' if in_band else '<span class="pill out">outside band</span>'
 
 
+
+def top5_body(board, preds) -> str:
+    """The brief's five-per-sport card, with the shortfall stated rather than padded."""
+    pred_ids = {p["id"] for p in preds}
+    sections = []
+    for name, slug in SPORTS:
+        entry = board.get(name)
+        if not entry:
+            sections.append(
+                '<section><h2>%s</h2><p class="notice warn">No priceable fixture in the captured board, so no pick '
+                'can be shown. The sport still appears on <a href="sports/%s.html">its own page</a>.</p></section>'
+                % (esc(name), esc(slug))
+            )
+            continue
+        rows = []
+        for f in entry["featured"]:
+            rows.append(
+                '<tr data-sport="%s" data-conf="high"><td>%s</td><td>%s</td><td><strong>%s</strong></td>'
+                '<td>%s</td><td class="num">%s</td><td class="num">%.1f%%</td><td>%s %s</td><td class="src">%s</td></tr>'
+                % (esc(name), esc(fmt_time(f["start_utc"])), esc(f["event"]), esc(f["selection"]),
+                   esc(f["market"]), price(f["fair_american"]), f["prob"] * 100,
+                   confidence_pill("high"), band_pill(f["in_band"]),
+                   source_cell(f.get("official_url", ""), f.get("olbg_url", "")))
+            )
+        gap = ""
+        if len(entry["featured"]) < 5:
+            alt = entry.get("best_alternative")
+            if alt:
+                gap = ('<p class="notice blue">Only %d high-confidence pick%s available for this sport in the captured '
+                       'board. Next best: <strong>%s</strong> at %s, graded %s. The five is a ceiling, not a quota, so '
+                       'nothing below high confidence is promoted into the card.</p>'
+                       % (len(entry["featured"]), "" if len(entry["featured"]) == 1 else "s",
+                          esc(alt["selection"]), price(alt["fair_american"]), esc(alt["confidence"])))
+            else:
+                gap = '<p class="notice warn">No high-confidence pick for this sport in the captured board.</p>'
+        written = sum(1 for f in entry["featured"] if f["pick_id"] in pred_ids)
+        sections.append(
+            '<section><h2>%s</h2><p class="meta">%d high-confidence selection%s available, %d shown, %d inside '
+            '&minus;250&hellip;+10000, %d with a written prediction.</p>%s'
+            '<div class="tablewrap"><table><thead><tr><th>Start</th><th>Fixture</th><th>Selection</th><th>Market</th>'
+            '<th>Fair price</th><th>Est.</th><th>Grade</th><th>Source</th></tr></thead><tbody>%s</tbody></table></div>'
+            '</section>'
+            % (esc(name), entry["high_available"], "" if entry["high_available"] == 1 else "s",
+               len(entry["featured"]), sum(1 for f in entry["featured"] if f["in_band"]), written, gap, "".join(rows))
+        )
+    body = """
+<p class="crumb"><a href="index.html">Overview</a> / Five per sport</p>
+<h1>The day's card, five per sport at most</h1>
+<p class="lede">The brief asks for up to five high-confidence picks per sport per day and says that is a maximum,
+not a quota. This page applies the ceiling literally. Selections inside the &minus;250 to +10000 window come first,
+then the price nearest that window, then the shortest price, then the earliest start.</p>
+<div class="notice warn"><strong>Where the card is short.</strong> Only three sports carry official per-match
+statistics in the captured evidence, so most sports cannot produce a statistically earned high-confidence pick.
+Rather than promote a short-priced favourite into the slot, the shortfall is printed under each sport and repeated
+on <a href="predictions.html">Predictions</a> and <a href="flagged.html">Flagged for Review</a>.</div>
+%s
+""" % "".join(sections)
+    return body
+
+
 def build():
     matches = load("matches.json")["matches"]
     picks = load("picks.json")["picks"]
@@ -226,6 +287,8 @@ def build():
     high_band = sorted([p for p in high if p["in_band"]], key=lambda p: (p["start_utc"], -p["prob"]))
     pred_by_id = {p["match_id"]: p for p in preds}
     m_by_id = {m["id"]: m for m in matches}
+
+    featured_total = sum(len(v["featured"]) for v in load("top5.json")["board"].values())
 
     def match_name(m):
         return m["label"] if m.get("label") else (
@@ -290,6 +353,7 @@ picks that have real statistics behind them. Rows we could not support are left 
   <div class="kpi"><b>{summary["picks"]}</b><span>graded picks</span></div>
   <div class="kpi"><b>{summary["high"]}</b><span>high confidence</span></div>
   <div class="kpi"><b>{summary["high_in_band"]}</b><span>high &amp; in band</span></div>
+  <div class="kpi"><b>{featured_total}</b><span>selections on the five-per-sport card</span></div>
   <div class="kpi"><b>{len(preds)}</b><span>written predictions</span></div>
   <div class="kpi"><b>{len(flagged["items"])}</b><span>review items</span></div>
 </div>
@@ -402,11 +466,11 @@ selections are inside the window. The alternative — stretching the estimate to
 
     # ------------------------------------------------------------ predictions
     why = {
-        "Golf": "No golf event in the captured OLBG payload; outright market, no two-sided line.",
+        "Golf": "Outright winner market only, priced from the tour leaderboard's odds module; no two-sided match market exists, so no selection reaches the 70% floor.",
         "Volleyball": "OLBG quotes only; no official per-match statistics captured.",
         "Rugby Union": "OLBG quotes only; the URC table and fixtures captures both returned 404.",
         "Cricket": "OLBG quotes only; the ICC matches page returned 404.",
-        "Snooker": "No snooker event in the captured payload; WST rankings were read but no fixture list was captured.",
+        "Snooker": "Two semi-finals read from the World Snooker Tour draw; the frame-based estimate lands at 66%, so nothing clears the 70% floor.",
         "Darts": "OLBG quotes only; no official per-match statistics captured.",
         "Baseball": "Official records exist but no selection reached 70%; the World Series games price close to even.",
         "Gaelic Sports": "OLBG quotes only; GAA fixtures were captured but a county final has no statistical input here.",
@@ -649,11 +713,27 @@ unique sentence, name the selection, and quote at least two figures that appear 
 validator rejects any write-up containing the words "model" or "verified", any duplicate opening, and any fact that
 is not present in the stored record for that match.</p>
 
-<h2>6. What the desk will not do</h2>
+<h2>6. Five per sport, as a ceiling</h2>
+<p>For each sport the desk keeps at most five high-confidence selections for the day: in-band selections first,
+then the price closest to the window, then the shortest price, then the earliest start. Sports that cannot field
+five are shown with the number actually available and the next best alternative, never padded with a promoted
+favourite. The card is at <a href="top5.html">Five per sport</a>.</p>
+
+<h2>7. What the desk will not do</h2>
 <p>It will not fill a blank with an inference, quote a price it did not compute or receive, call a market-implied
 number our own, assert an injury without an official report, or present a started match as an upcoming pick.</p>
+<p>Two additions were read first-hand at 22:06Z and 22:12Z on 23 October and are marked with their capture time
+everywhere they appear: the PGA Tour leaderboard for the Butterfield Bermuda Championship (positions, round scores,
+cut line, and the FanDuel odds module) and the World Snooker Tour match page for the Northern Ireland Open (round
+results and semi-final pairings). The golf prices are the bookmaker's, labelled market-implied; the snooker price is
+ours, built from the frames each player won and lost in the rounds captured.</p>
 """
     (OUT / "methodology.html").write_text(page("Methodology", "methodology.html", method), encoding="utf-8")
+
+    board = load("top5.json")
+    (OUT / "top5.html").write_text(
+        page("Five per sport", "top5.html", top5_body(board["board"], preds)), encoding="utf-8"
+    )
 
     print(f"master/: built with {len(matches)} matches, {len(picks)} picks, {len(preds)} predictions")
 

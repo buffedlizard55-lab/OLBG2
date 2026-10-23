@@ -137,6 +137,8 @@ jobs:
       - name: Rebuild and verify the consolidated 15-sport desk
         run: |
           python scripts/master_data.py
+          python scripts/master_extra.py
+          python scripts/master_top5.py
           python scripts/master_build.py
           python scripts/master_verify.py
 

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "description": "Byte-for-byte copies of committed official NHL API captures used by the canonical /olbg/ refresh. The seed verifies every SHA-256 before pricing.",
+  "captures": [
+    {
+      "key": "nhl_team_summary",
+      "path": "nhl_team_summary_2026-10-23.json",
+      "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027",
+      "fetched_at": "2026-10-23T20:32:15Z",
+      "status": 200,
+      "bytes": 16617,
+      "sha256": "a3293d5f2d9859255fc8c0564f28b190ff85e29c5a6044ced9730eaa9a372e8e"
+    },
+    {
+      "key": "nhl_schedule_2026-10-24",
+      "path": "nhl_schedule_2026-10-24.json",
+      "url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+      "fetched_at": "2026-10-23T20:32:11Z",
+      "status": 200,
+      "bytes": 92887,
+      "sha256": "4d7ef26a4ab4f15bd24f3bdd461cdb7192b2007ce10b40bf2c1e77a2fe999e00"
+    },
+    {
+      "key": "nhl_schedule_2026-10-25",
+      "path": "nhl_schedule_2026-10-25.json",
+      "url": "https://api-web.nhle.com/v1/schedule/2026-10-25",
+      "fetched_at": "2026-10-23T20:32:12Z",
+      "status": 200,
+      "bytes": 89139,
+      "sha256": "9b020d7fa6ca042414737bfdfcff2bf76a079ff42030425204e4f8bbf859c03b"
+    }
+  ]
+}

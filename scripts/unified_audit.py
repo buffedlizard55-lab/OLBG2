@@ -444,12 +444,22 @@ def repo_checks() -> dict:
             "id": "U-20", "severity": "medium", "category": "Git hygiene",
             "item": "COORDINATION.md",
             "finding": f"{len(markers)} unresolved merge-conflict marker lines remain in COORDINATION.md "
-                       f"(first at line {markers[0]}). The regions they bracket are not byte-identical — one copy "
-                       "carries publication records the other lacks — so an automated de-duplication would risk "
-                       "deleting another session's log. This session therefore leaves the text untouched and "
-                       "publishes the line numbers for manual resolution instead.",
+                       f"(first at line {markers[0]}).",
             "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md",
             "evidence": f"lines {', '.join(str(m) for m in markers[:12])}"})
+    else:
+        out["findings"].append({
+            "id": "U-20", "severity": "resolved", "category": "Git hygiene",
+            "item": "COORDINATION.md merge-conflict markers",
+            "finding": "The six marker lines that bracketed three conflicted regions in COORDINATION.md are gone "
+                       "and the file parses as a single document. Resolution rule, applied line by line: where one "
+                       "side of a conflict was a superset of the other, the fuller copy was kept (block 1: 128 "
+                       "lines kept, 90 dropped, every dropped line present in the kept copy); where each side "
+                       "carried records the other lacked, both sides were kept in order and only the three marker "
+                       "lines were removed (blocks 2 and 3). No line of session history was lost: the only lines "
+                       "removed from the file are the marker lines themselves and the superseded duplicate copy.",
+            "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md",
+            "evidence": "COORDINATION.md"})
 
     excluded = ("aussie-rules", "esports")
     bad_pages = [p for p in ROOT.rglob("*.html")

@@ -623,7 +623,11 @@ def model_motor_race(f):
 
 
 def model_gaelic(f):
-    margins = {"gaa-cork-psfc": (8, 2), "gaa-waterford-sfc": (2, 7), "gaa-limerick-shc": (7, None)}
+    # Gaelic football/hurling scores are goals-points; a goal is worth three points.
+    # Cork: Nemo 1-15 (18) to 0-16 (16) = +2; St Finbarr's 2-12 (18) to 0-16 (16) = +2.
+    # Waterford: Rathgormack +2, The Nire +7. Limerick: Na Piarsaigh 2-24 (30)
+    # to 3-16 (25) = +5; no opponent margin is used for that fixture.
+    margins = {"gaa-cork-psfc": (2, 2), "gaa-waterford-sfc": (2, 7), "gaa-limerick-shc": (5, None)}
     hm, am = margins.get(f["id"], (None, None))
     no_numeric = hm is None or am is None
     if no_numeric:

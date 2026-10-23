@@ -733,7 +733,7 @@ GAA = [
      "SuperValu Páirc Uí Chaoimh, Cork", "gaa_fixtures", None,
      [("Fixture", "Hurling-Shinty International, Ireland v Scotland, SuperValu Páirc Uí Chaoimh, 24 October 2026, 18:00, referee Eamonn Furlong", "gaa_fixtures")]),
     ("gaa-cork-psfc", "St Finbarr's", "Nemo Rangers", "Cork Premier Senior Football Championship Final", "25 October 2026, 16:00",
-     "SuperValu Páirc Uí Chaoimh", "gaacork", 14,
+     "SuperValu Páirc Uí Chaoimh", "gaacork", None,
      [("Semi-finals", "Nemo Rangers beat Carrigaline 1-15 to 0-16; St Finbarr's beat Clonakilty 2-12 to 0-16", "gaacork"),
       ("Fixture", "Cork Premier Senior Football Championship Final, St Finbarr's v Nemo Rangers, 25 October 2026, 16:00, referee David Murnane", "munster_gaa")]),
     ("gaa-kerry-sfc", "Dr Crokes", "Kenmare Shamrocks", "Kerry Senior Football Championship Final", "25 October 2026, 14:00",

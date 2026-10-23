@@ -374,7 +374,6 @@ for r in wst["matches"]:
 f1 = load("data/signal/captures/motor_racing_f1.json")
 for oid, name, date, clock, blank in [
     (913, "United States Grand Prix 2026 — race", "2026-10-25", "16:00", "Qualifying had not supplied a final grid and a complete official field-performance distribution was not captured; no race-winner probability is invented."),
-    (828, "Formula 1 Drivers’ Championship 2026", "2026-12-06", "08:00", "Official standings alone do not supply a remaining-race outcome distribution; no championship probability is invented."),
 ]:
     events.append(event(
         id=f"f1-{oid}", sport="motor-racing", competition="Formula 1", name=name, date=date, display_time=clock,

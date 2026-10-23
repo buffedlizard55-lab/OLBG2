@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
+    ("monitor/index.html", "Latest 15-sport research desk"),
     ("focus/index.html", "Focus desk (15 sports, 23 Oct)"),
     ("daily-picks/index.html", "Picks desk (23–25 Oct)"),
     ("daily/index.html", "Daily Top-5 desk (23 Oct)"),
@@ -284,6 +285,16 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
         current = ' aria-current="page"' if href == active else ""
         links.append(f'<a href="{prefix}{esc(href)}"{current}>{esc(label)}</a>')
     nav = "".join(links)
+    if active == "index.html":
+        body = '''<section class="hero"><p class="eyebrow">Latest research · exact 15-sport scope</p>
+<h1>Start with the evidence-first dashboard.</h1>
+<p class="lede">The latest desk separates official fixture facts, independent fair prices, actual bookmaker odds and missing evidence.
+It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
+<div class="cta"><a class="button primary" href="monitor/index.html">Open the 15-sport dashboard →</a>
+<a class="button" href="monitor/flagged.html">Flagged for Review</a></div>
+<p><strong>Partial coverage, not a complete live slate.</strong> No high-confidence picks are asserted without the required evidence.
+Earlier overlapping research is retained below for audit only.</p></section>
+<details><summary><strong>Open historical 22 October dashboard (not newly verified)</strong></summary>''' + body + '</details>'
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -297,11 +308,13 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
 <header class="topbar">
   <div class="wrap bar">
     <a class="brand" href="{prefix}index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">research desk</span></a>
-    <nav class="nav" aria-label="Main navigation">{nav}</nav>
+    <details><summary>Research navigation & archives</summary><nav class="nav" aria-label="Main navigation">{nav}</nav></details>
   </div>
 </header>
 <div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
 <main class="wrap">
+<div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk, not the current clock.
+<a href="{prefix}monitor/index.html">Use the latest 15-sport dashboard</a> for the new evidence gate, capture ages and review queue.</div>
 {body}
 </main>
 <footer class="footer"><div class="wrap">

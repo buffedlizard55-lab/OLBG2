@@ -2,6 +2,47 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
+## Latest: evidence-first 15-sport monitor (23 October 2026)
+
+**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/monitor/> ·
+[Flagged for Review](monitor/flagged.html) · [source ledger](monitor/sources.html) ·
+[field-audit notes](research/monitor-8226c94a.md).
+
+The current request is **15 sports**, not the older 17-sport taxonomy. The new monitor
+includes Gaelic Football and Hurling under Gaelic Sports; it does not include esports
+or Aussie Rules. Older desks below remain **historical research**, not freshly checked data.
+
+The selected session capture has **24 official-source fixture rows**, **19 OLBG participant
+matches**, and **one experimental originated moneyline** (both outcomes). No high-confidence
+selection clears the evidence gate. **Full OLBG inventory, exhaustive markets, and five
+supported predictions per sport per day remain unmet** and are explicitly flagged.
+Missing bookmaker prices, injury reports and unsupported probabilities remain null.
+
+`Deploy Pages` now attempts public-source collection every six hours and on main updates.
+It deploys the attempt ledger and raw successful responses without committing bot changes.
+A failed refresh never changes the age of stored evidence. The collector extracts OLBG
+links and parses MLB schedules; other official fixture parsers, market-price feeds and
+unattended evidence-backed prose are not complete. No claim of live full coverage is made.
+
+```sh
+python scripts/monitor_seed.py      # reproduce selected agent-read extracts (offline)
+python scripts/monitor_build.py     # deterministic monitor from those extracts
+python -m unittest discover -s tests
+python scripts/integration_audit.py
+# Optional diagnostic; the Pages workflow does this unattended:
+python scripts/monitor_collect.py
+python scripts/monitor_build.py --runtime data/monitor/runtime/latest.json
+```
+
+**Price rule:** observed bookmaker American odds must be in −250…+10000. Our fair odds
+are separate estimates, never substituted for a missing quote. OLBG tip percentages
+are not independently estimated win probabilities. An uncalibrated calculation remains
+low confidence regardless of its numeric output.
+
+---
+
+## Historical desks and prior integration records
+
 **15-sport Focus desk (23 October 2026, this brief only):** <https://buffedlizard55-lab.github.io/OLBG2/focus/index.html>
 
 **Published landing page:** <https://buffedlizard55-lab.github.io/OLBG2/>

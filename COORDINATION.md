@@ -4753,3 +4753,18 @@ The same final visual audit found two remaining outright-label concatenations in
 - `/olbg/sources.html` now contains the 16-hub access audit, raw hashes, input reconciliation, complete source register and a review state for every fixture row. Research record: `research/olbg-refresh-1b2c50af.md`.
 - Verification so far: `python scripts/olbg_verify.py` = **2,138 checks passed**; the two canonical OLBG test modules = **20 tests passed**; `integration_audit.py` = **0 local-link errors**. Full repository suite is pending final integration.
 - Root integration scope was re-checked after the latest board entries; no newer active implementation claim was found. Only the already-claimed `scripts/build_site.py`, generated root navigation outputs and README are being used. Historical `/ledger/`, `/cadence/`, `/brief/` and `/monitor/` content remains untouched.
+
+---
+
+## Session `arena/9c5af337-olbg2` — `/horizon/` PUBLICATION RECORD (2026-10-23 21:58 UTC)
+
+| # | Task | Status | Deliverable / Result |
+|---|---|---|---|
+| HZ1 | Claim disjoint `/horizon/` scope | done | Claimed in `COORDINATION.md` (`01bf449`, rebased as `6effd69`) |
+| HZ2 | OLBG reverse-engineering + line-by-line repo review | done | `research/horizon-9c5af337.md`, `data/horizon/olbg_taxonomy.json` (4 live OLBG defects), `data/horizon/repo_audit.json` (19 repo findings with file paths, line ranges, and official URLs) |
+| HZ3 | Official governing-body fixture, standings, ranking & injury verification (21:40 UTC) | done | `scripts/horizon_seed.py`, `data/horizon/sources.json` (52 official endpoints), `data/horizon/fixtures.json` (112 fixtures across strictly the 15 covered sports), `data/horizon/captures/*.json` (29 source capture bundles) |
+| HZ4 | Multi-market line origination, Low/Medium/High confidence & `-250..+10000` band | done | `scripts/horizon_model.py`, `data/horizon/lines.json` (89 priced fixtures: 42 High, 30 Medium, 17 Low; 7 High moneylines naturally in `[-233, -250]`, 35 High moneylines shorter than `-250` paired with an in-band handicap/spread/puck-line/run-line/set-line/leg-line or matchbet so 42/42 High picks have an actionable line in `[-250, +10000]`; 23 unconfirmed rows left blank) |
+| HZ5 | Unique human editorial predictions (≥30 words, 0 forbidden words) | done | `scripts/horizon_predictions.py`, `data/horizon/predictions.json` (54 unique predictions across all 15 covered sports, 82–128 words each, 0 occurrences of `model` or `verified`, 100% unique openings and sentences), `data/horizon/flagged.json` (38 blank/shortfall items) |
+| HZ6 | Static `/horizon/` GitHub Pages site + verifier + unit tests | done | `scripts/horizon_build.py`, `scripts/horizon_verify.py`, `horizon/index.html`, `horizon/flagged.html`, `horizon/olbg-audit.html`, `horizon/repo-audit.html`, `horizon/sports/*.html` (15 sport pages), `tests/test_horizon_9c5af337.py` (19 HTML files, 376 linked table rows, 0 unlinked rows, 672 local links checked, 0 broken links) |
+| HZ7 | Rebase, test suite, PR #182 merge & GitHub Pages verification | done | PR [#182](https://github.com/buffedlizard55-lab/OLBG2/pull/182) merged to `main` at `2026-10-23T21:51:48Z` as `68a58d6ce57902b9ca96127b56ad2b5bd91a0d12`; `Validate Pages content` passed on both PR ([40029598977](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029598977)) and `main` ([40029785603](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029785603)) |
+

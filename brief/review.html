@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repo review · OLBG 15-sport brief</title>
+<meta name="description" content="Independent fair lines, confidence labels and sourced predictions for the 15 sports named in the brief.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="bar"><div class="wrap"><div class="brand"><strong>OLBG 15-sport brief</strong>
+<span>2026-10-23 · independent lines · every row carries its source</span></div>
+<nav class="top" aria-label="Brief navigation"><a href="index.html">Today's brief</a><a href="matches.html">All matches</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="olbg.html">OLBG &amp; markets</a><a href="review.html" aria-current="page">Repo review</a></nav></div></header>
+<main><div class="wrap">
+<p class="eyebrow">Repository review, 2026-10-23</p>
+<h1>Repo review</h1>
+<p class="lede">A line-by-line pass over the checkout this session inherited, with the checks that were run and the
+irregularities that remain. Nothing was deleted or rewritten outside this session's claimed scope.</p>
+<h2>Checks run</h2>
+<div class="tbl-scroll"><table><thead><tr><th>Check</th><th>Command</th><th>Result</th></tr></thead><tbody>
+<tr><td>Test suite</td><td><code>python3 -m unittest discover -s tests</code></td><td>576 tests, all passing</td></tr>
+<tr><td>Cross-layer link audit</td><td><code>python3 scripts/integration_audit.py</code></td><td>0 local link errors</td></tr>
+<tr><td>Published pages</td><td><code>find . -name '*.html'</code></td><td>729 HTML files before this desk; 20 added by /brief/</td></tr>
+<tr><td>Merge markers</td><td><code>grep -rn '^&lt;&lt;&lt;&lt;&lt;&lt;&lt;\|^&gt;&gt;&gt;&gt;&gt;&gt;&gt;'</code></td><td>Stray closing markers in COORDINATION.md and METHODOLOGY.md (see below)</td></tr>
+<tr><td>TODO/FIXME in scripts</td><td><code>grep -rn 'TODO\|FIXME' scripts</code></td><td>none</td></tr>
+<tr><td>Working tree at start</td><td><code>git status</code></td><td>clean, on <code>arena/7a073c9a-olbg2</code> from <code>main</code> 81f46ac</td></tr>
+</tbody></table></div>
+<h2>Findings</h2>
+<div class="tbl-scroll"><table><thead><tr><th>#</th><th>Finding</th><th>Where</th><th>Action taken</th></tr></thead><tbody>
+<tr><td>R1</td><td>Six stray merge-closing lines remain in the shared board from earlier merges.</td>
+<td><code>COORDINATION.md</code> lines 3216, 3307, 3437, 3549, 3609, 3628</td><td>Left in place: the file is append-only
+and shared. Logged again here for the next integrator.</td></tr>
+<tr><td>R2</td><td>A stray <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/main</code> line remains in the methodology document.</td>
+<td><code>METHODOLOGY.md</code> line 125</td><td>Left in place; outside this session's claimed scope.</td></tr>
+<tr><td>R3</td><td>The repository now carries more than twenty overlapping research desks whose row counts must not be
+added together, and the root navigation lists all of them.</td><td>root <code>index.html</code>, <code>README.md</code></td>
+<td>This desk is added as one clearly labelled entry and does not modify any other desk's data.</td></tr>
+<tr><td>R4</td><td>Several older desks describe a 17-sport taxonomy, while the current brief names exactly fifteen sports
+and folds Gaelic Football and Hurling into Gaelic Sports.</td><td>README, several <code>*/methodology.html</code></td>
+<td>This desk uses the fifteen-sport scope only; the conflict is named rather than silently resolved in old pages.</td></tr>
+<tr><td>R5</td><td>The CI drift gate does not cover every generated sub-site, so a local rebuild succeeding is not proof
+of a fresh factual audit.</td><td><code>.github/workflows/pages.yml</code></td>
+<td>Unchanged; the <code>/brief/</code> pipeline is deterministic and self-validating.</td></tr>
+<tr><td>R6</td><td>Previous desks sourced fixtures from governing bodies but used older capture times, so some rows on
+those pages have already started.</td><td>e.g. <code>data/signal/captures/*</code> (16:25–17:22Z)</td>
+<td>Reused only where the desk marks the capture time; this session re-read tennis and volleyball first-hand.</td></tr>
+</tbody></table></div>
+<h2>What was verified first-hand in this session</h2>
+<ul>
+<li>OLBG sport ids on <code>/betting-tips</code>, and the three "No tips found" responses.</li>
+<li>ATP Tour scores at 19:34Z (six quarter-finals, no semi-final line-up published).</li>
+<li>WTA scores at 19:36Z (zero live tournaments).</li>
+<li>Volleyball World global schedule, two chunks, at 19:40Z and 19:51Z.</li>
+<li>PDC rankings blocked at 19:52Z; CEV match list 404; Volleyball World schedule page 404; SV-Women standings empty.</li>
+</ul>
+<h2>What was taken from the same day's earlier capture and is labelled as such</h2>
+<p class="small">NHL schedule and team summary, MLB schedule and standings, EuroLeague schedule and standings, WST
+fixtures and rankings, EHF calendar, NRL World Cup draw, Premiership fixtures, OLBG darts list, DP World Tour
+leaderboard, Formula 1 calendar and standings, GAA fixtures, GBGB open races, Cricket Australia fixtures, and the ATP
+scores capture. Every one of those rows shows the original capture time, and none of them is presented as a fresh read
+from this session.</p>
+</div></main>
+<footer><div class="wrap">Research, not betting advice. 18+. Prices are our own fair estimates, not bookmaker quotes.
+Every value on this desk is traceable to a capture listed on the <a href="sources.html">source ledger</a>;
+anything that could not be read is blank and listed on <a href="flagged.html">Flagged for review</a>.</div></footer>
+</body></html>

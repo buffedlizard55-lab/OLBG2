@@ -1,0 +1,100 @@
+{
+ "flags": [
+  {
+   "id": "BR-01",
+   "subject": "OLBG publishes no server-rendered event list",
+   "severity": "high",
+   "detail": "Three OLBG pages (two sport indexes and one event page) returned 'No tips found' to a client that does not execute JavaScript. A complete OLBG event inventory therefore cannot be read first-hand, so this desk publishes OLBG's sport taxonomy and market vocabulary, and sources each fixture from the governing body instead.",
+   "evidence": [
+    "https://www.olbg.com/betting-tips/Tennis/3",
+    "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328"
+   ]
+  },
+  {
+   "id": "BR-02",
+   "subject": "PDC rankings unreachable",
+   "severity": "medium",
+   "detail": "www.pdc.tv/rankings serves a cookie-consent wall only, so no Order of Merit figure exists for this desk. Darts prices therefore use OLBG's published tip-share as the only strength input, shrunk 30% toward an even chance, and are labelled operator-derived.",
+   "evidence": [
+    "https://www.pdc.tv/rankings"
+   ]
+  },
+  {
+   "id": "BR-03",
+   "subject": "No tennis pairing published",
+   "severity": "high",
+   "detail": "The ATP scoreboard carried no semi-final line-up at 19:34Z; three of four semi-finals still had an undecided opponent, and a bracket pairing cannot be inferred from two results alone. Tennis is published as results plus unpaired scheduled slots, with no price and no selection.",
+   "evidence": [
+    "https://www.atptour.com/en/scores/current"
+   ]
+  },
+  {
+   "id": "BR-04",
+   "subject": "Volleyball has no standings feed",
+   "severity": "medium",
+   "detail": "The SV-Women standings page returned a title with no rows. Only the two fixtures that are an immediate rematch of a match whose set scores were read on the same page can be priced.",
+   "evidence": [
+    "https://en.volleyballworld.com/volleyball/competitions/svleague-women/standings/"
+   ]
+  },
+  {
+   "id": "BR-05",
+   "subject": "Volleyball schedule gender label conflict",
+   "severity": "low",
+   "detail": "The Tauron Liga block is labelled 'Men' in the page filter but carries no gender label in its own rows. No gender is asserted for those rows.",
+   "evidence": [
+    "https://en.volleyballworld.com/global-schedule#fromDate=2026-10-23&yearseason=2026"
+   ]
+  },
+  {
+   "id": "BR-06",
+   "subject": "CEV match list absent",
+   "severity": "low",
+   "detail": "https://www.cev.eu/matches/ returns 404 and https://en.volleyballworld.com/volleyball/schedule/ returns Page Not Found. The global schedule endpoint is the only working volleyball fixture source found.",
+   "evidence": [
+    "https://www.cev.eu/matches/",
+    "https://en.volleyballworld.com/volleyball/schedule/"
+   ]
+  },
+  {
+   "id": "BR-07",
+   "subject": "WTA idle window",
+   "severity": "low",
+   "detail": "The WTA scores page reported zero live tournaments at 19:36Z, so no WTA fixture is published even though WTA 125 draws for next week exist.",
+   "evidence": [
+    "https://www.wtatennis.com/scores"
+   ]
+  },
+  {
+   "id": "BR-08",
+   "subject": "Ranking-money bound used for players outside the top 36",
+   "severity": "low",
+   "detail": "Where a snooker participant is outside the captured top 36, the 36th-placed prize-money figure (GBP 198,500) is used as a verified upper bound on that player's ranking money. The row says so. No rank or money figure is invented.",
+   "evidence": [
+    "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false"
+   ]
+  },
+  {
+   "id": "BR-09",
+   "subject": "Eight OLBG darts events had already started",
+   "severity": "low",
+   "detail": "Eight darts events listed by OLBG for 2026-10-23 had a start time before this desk's 19:45Z cut-off. Their results could not be read (see BR-01/BR-02), so they are published with that status and excluded from selections.",
+   "evidence": [
+    "https://www.olbg.com/betting-tips/Darts/15"
+   ]
+  },
+  {
+   "id": "BR-10",
+   "subject": "Four sports carry no originated price",
+   "severity": "high",
+   "detail": "Tennis (no published pairing), Cricket (no official ranking or form table read), Gaelic Sports (single fixture, no scoring input) and Greyhounds (no runners published) carry fixtures with blank markets. They are shown with the reason on every row and are not written up.",
+   "evidence": [
+    "https://www.atptour.com/en/scores/current",
+    "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+    "https://www.gaa.ie/fixtures-results",
+    "https://www.gbgb.org.uk/racing/open-races/"
+   ]
+  }
+ ]
+}

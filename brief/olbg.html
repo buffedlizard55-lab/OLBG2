@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OLBG &amp; markets · OLBG 15-sport brief</title>
+<meta name="description" content="Independent fair lines, confidence labels and sourced predictions for the 15 sports named in the brief.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="bar"><div class="wrap"><div class="brand"><strong>OLBG 15-sport brief</strong>
+<span>2026-10-23 · independent lines · every row carries its source</span></div>
+<nav class="top" aria-label="Brief navigation"><a href="index.html">Today's brief</a><a href="matches.html">All matches</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">Method</a><a href="olbg.html" aria-current="page">OLBG &amp; markets</a><a href="review.html">Repo review</a></nav></div></header>
+<main><div class="wrap">
+<p class="eyebrow">Reverse-engineering notes</p>
+<h1>OLBG: taxonomy, URLs and markets</h1>
+<p class="lede">What the site actually exposes to a client that does not run JavaScript, read first-hand today. This is
+the evidence behind the desk's choice to take fixtures from governing bodies while mirroring OLBG's categories and
+market vocabulary.</p>
+<h2>Sport IDs, read from the links on OLBG's own tips index</h2>
+<p class="small muted">Source: <a href="https://www.olbg.com/betting-tips" rel="noopener">www.olbg.com/betting-tips</a> · captured 2026-10-23T19:31:00Z. The brief's
+fifteen sports map to these numeric ids; Gaelic Sports is covered by Gaelic Football (25) and Hurling (26).</p>
+<div class="tbl-scroll"><table><thead><tr><th>OLBG category</th><th>Sport id</th><th>Relation to this brief</th></tr></thead><tbody><tr><td>Football</td><td><code>1</code></td><td>out of scope</td></tr><tr><td>Horse Racing</td><td><code>2</code></td><td>out of scope</td></tr><tr><td>Tennis</td><td><code>3</code></td><td>in scope</td></tr><tr><td>Basketball</td><td><code>4</code></td><td>in scope</td></tr><tr><td>Golf</td><td><code>5</code></td><td>in scope</td></tr><tr><td>Cricket</td><td><code>7</code></td><td>in scope</td></tr><tr><td>Snooker</td><td><code>8</code></td><td>in scope</td></tr><tr><td>Rugby Union</td><td><code>9</code></td><td>in scope</td></tr><tr><td>Rugby League</td><td><code>10</code></td><td>in scope</td></tr><tr><td>American Football</td><td><code>11</code></td><td>out of scope</td></tr><tr><td>Baseball</td><td><code>12</code></td><td>in scope</td></tr><tr><td>Ice Hockey</td><td><code>13</code></td><td>in scope</td></tr><tr><td>Motor Racing</td><td><code>14</code></td><td>in scope</td></tr><tr><td>Darts</td><td><code>15</code></td><td>in scope</td></tr><tr><td>Boxing</td><td><code>16</code></td><td>out of scope</td></tr><tr><td>Cycling</td><td><code>17</code></td><td>out of scope</td></tr><tr><td>Handball</td><td><code>20</code></td><td>in scope</td></tr><tr><td>Volleyball</td><td><code>21</code></td><td>in scope</td></tr><tr><td>Gaelic Football</td><td><code>25</code></td><td>mapped to Gaelic Sports</td></tr><tr><td>Hurling</td><td><code>26</code></td><td>mapped to Gaelic Sports</td></tr><tr><td>Greyhounds</td><td><code>28</code></td><td>out of scope</td></tr></tbody></table></div>
+<h2>URL patterns observed</h2>
+<div class="tbl-scroll"><table><thead><tr><th>Pattern</th><th>Example</th></tr></thead><tbody>
+<tr><td>Sport index</td><td><code>https://www.olbg.com/betting-tips/{Sport_With_Underscores}/{sportId}</code></td></tr>
+<tr><td>Event page</td><td><code>https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328</code></td></tr>
+<tr><td>Outright/tournament</td><td><code>https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338</code></td></tr>
+</tbody></table></div>
+<h2>The blocking finding</h2>
+<div class="note"><strong>OLBG does not serve its event tables to a non-browser client.</strong> Two sport index pages
+and one event page returned the literal text "No tips found." on requests made at 19:29Z, 19:30Z and 19:44Z today.
+The editorial copy arrives, the rows do not. The same behaviour was recorded by the preceding desk session at 17:02Z.
+Consequences:
+<ul>
+<li>The desk can reproduce OLBG's taxonomy and market vocabulary, and does.</li>
+<li>It cannot produce "the full list of matches listed on OLBG" from OLBG itself. The fixture list is therefore taken
+from each governing body and marked with that body's link.</li>
+<li>No OLBG price, tip percentage or consensus figure is used as an input to any line here.</li>
+</ul></div>
+<h2>Market vocabulary quoted from OLBG's own explanatory copy</h2>
+<div class="tbl-scroll"><table><thead><tr><th>Sport</th><th>Markets OLBG names on its page</th></tr></thead><tbody><tr><td>Ice Hockey</td><td>Money Line (2-way, includes OT/SO), Puck Line (spread +/-1.5), Totals (e.g. 5.5)</td></tr><tr><td>Tennis</td><td>Tournament Winner, Win Match, Set Betting, Total Games, 1st Set Winner, Games Won (games handicap)</td></tr><tr><td>Darts</td><td>Win Match 2-way, Win Tournament (outright)</td></tr><tr><td>Baseball</td><td>Money Line, Run Line, Totals</td></tr></tbody></table></div>
+<p class="small muted">These names are the vocabulary this desk mirrors when it originates markets. A market name is not
+a price: nothing numeric is taken from these pages.</p>
+<h2>What OLBG does show, and what we do with it</h2>
+<ul>
+<li><strong>Sport menu and ids</strong> — reproduced above.</li>
+<li><strong>Event ids</strong> — the darts capture carries twelve, including <code>32328</code> for Littler v O'Connor
+and <code>32338</code> for the European Championship outright. They are recorded for traceability only.</li>
+<li><strong>Editorial definitions</strong> — money line, puck line, totals, set betting, games handicap. Quoted, not
+priced from.</li>
+<li><strong>Tip counts and Value Rating</strong> — described by OLBG as tip share versus implied probability. Not
+readable today without JavaScript, and not used.</li>
+</ul>
+</div></main>
+<footer><div class="wrap">Research, not betting advice. 18+. Prices are our own fair estimates, not bookmaker quotes.
+Every value on this desk is traceable to a capture listed on the <a href="sources.html">source ledger</a>;
+anything that could not be read is blank and listed on <a href="flagged.html">Flagged for review</a>.</div></footer>
+</body></html>

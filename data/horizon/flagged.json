@@ -1,0 +1,387 @@
+{
+ "generated_utc": "2026-10-23T21:40:00Z",
+ "session": "arena/9c5af337-olbg2",
+ "count": 38,
+ "items": [
+  {
+   "fixture_id": "mlb-849802",
+   "sport": "Baseball",
+   "competition": "MLB World Series",
+   "matchup": "Tampa Bay Rays @ Milwaukee Brewers (Game 2)",
+   "field": "Logan Henderson 2026 regular-season pitching split (GS, IP, ERA, WHIP, K)",
+   "status": "Blank — MLB StatsAPI returns empty stats=[] for personId 801403 in 2026 regularSeason",
+   "reason": "Logan Henderson is named probable starter on the MLB schedule feed, but his 2026 regular-season MLB pitching split has no innings recorded.",
+   "official_source_url": "https://statsapi.mlb.com/api/v1/Schedule?sportId=1&teamId=158&startDate=2026-10-22&endDate=2026-11-02&hydrate=team,probablePitcher,linescore,decisions"
+  },
+  {
+   "fixture_id": "cri-40681",
+   "sport": "Cricket",
+   "competition": "One-Day Cup 2026-27",
+   "matchup": "Victoria @ Tasmanian Tigers",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Cricket Australia's match hub lists the fixture date and venue, while team season tables or series scorecards for these sides are not present in the captured feed.",
+   "official_source_url": "https://www.cricket.com.au/matches"
+  },
+  {
+   "fixture_id": "cri-40683",
+   "sport": "Cricket",
+   "competition": "One-Day Cup 2026-27",
+   "matchup": "New South Wales @ Western Australia",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Cricket Australia's match hub lists the fixture date and venue, while team season tables or series scorecards for these sides are not present in the captured feed.",
+   "official_source_url": "https://www.cricket.com.au/matches"
+  },
+  {
+   "fixture_id": "cri-39992",
+   "sport": "Cricket",
+   "competition": "South Africa v Australia Tests 2026",
+   "matchup": "Australia @ South Africa",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Cricket Australia's match hub lists the fixture date and venue, while team season tables or series scorecards for these sides are not present in the captured feed.",
+   "official_source_url": "https://www.cricket.com.au/matches"
+  },
+  {
+   "fixture_id": "snk-ni-sf2",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026",
+   "matchup": "Winner of Match 60 (Jak Jones / Scott Donaldson) @ Mark Williams",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Mark Williams beat David Gilbert 6-4 in QF Match 59, but QF Match 60 (Jak Jones 4-4 Scott Donaldson) was still live in Frame 9 at capture time; no line is originated until the opponent is confirmed.",
+   "official_source_url": "https://www.wst.tv/matches/"
+  },
+  {
+   "fixture_id": "snk-ic-liu",
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "matchup": "Louis Heathcote @ Liu Hongyu",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Both players are outside the published top-36 ranking-money list captured here; no numeric strength input, so no line is originated.",
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+  },
+  {
+   "fixture_id": "snk-ic-white",
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "matchup": "Mark Selby @ Jimmy White",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Jimmy White's ranking-money figure is not on the top-36 WST rankings page captured here; no line is originated.",
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+  },
+  {
+   "fixture_id": "snk-ic-szubarczyk",
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "matchup": "Wildcard 1 @ Michal Szubarczyk",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.",
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+  },
+  {
+   "fixture_id": "snk-ic-hallworth",
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "matchup": "Wildcard 3 @ Steven Hallworth",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.",
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+  },
+  {
+   "fixture_id": "snk-ic-liuwenwei",
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "matchup": "Wildcard 4 @ Liu Wenwei",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.",
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+  },
+  {
+   "fixture_id": "drt-r2-4",
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "matchup": "Kim Huybrechts @ Stephen Bunting",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "One entrant has no published 2026 European Tour seeding in the PDC schedule release (Kim Huybrechts entered as a replacement; Luke Littler's European Tour seed number is not listed in the draw text).",
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+  },
+  {
+   "fixture_id": "drt-r2-8",
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "matchup": "Luke Littler @ Nathan Aspinall",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "One entrant has no published 2026 European Tour seeding in the PDC schedule release (Kim Huybrechts entered as a replacement; Luke Littler's European Tour seed number is not listed in the draw text).",
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+  },
+  {
+   "fixture_id": "ten-almaty-sf2",
+   "sport": "Tennis",
+   "competition": "ATP 250 Almaty",
+   "matchup": "Stefanos Tsitsipas @ Nikoloz Basilashvili",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "At least one player is outside the PIF ATP Top 100 rankings table captured on 23 October 2026, so ATP points are not available for both sides.",
+   "official_source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+  },
+  {
+   "fixture_id": "ten-lyon-sf1",
+   "sport": "Tennis",
+   "competition": "ATP 250 Lyon",
+   "matchup": "Winner of Van Assche / Musetti @ Flavio Cobolli",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "Flavio Cobolli beat Brandon Nakashima 4-6 6-4 6-4 in the quarter-final, but Luca Van Assche v Lorenzo Musetti was still live in Set 3 (0-6, 7-6(5), 3-2) at capture time; no line is originated.",
+   "official_source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule"
+  },
+  {
+   "fixture_id": "grey-scurry",
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "matchup": "Arena Racing Company Scurry Gold Cup Final — Ballinakill Liam",
+   "field": "Individual semi-final clock (s)",
+   "status": "Blank — GBGB race result publishes winning time only for heat winners",
+   "reason": "Ballinakill Liam qualified by finishing second in the semi-final; GBGB publishes the heat winner's clock and beaten distance rather than a separate runner time.",
+   "official_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+  },
+  {
+   "fixture_id": "grey-scurry",
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "matchup": "Arena Racing Company Scurry Gold Cup Final — Magical Jason",
+   "field": "Individual semi-final clock (s)",
+   "status": "Blank — GBGB race result publishes winning time only for heat winners",
+   "reason": "Magical Jason qualified by finishing second in the semi-final; GBGB publishes the heat winner's clock and beaten distance rather than a separate runner time.",
+   "official_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+  },
+  {
+   "fixture_id": "grey-scurry",
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "matchup": "Arena Racing Company Scurry Gold Cup Final — Newinn Souly",
+   "field": "Individual semi-final clock (s)",
+   "status": "Blank — GBGB race result publishes winning time only for heat winners",
+   "reason": "Newinn Souly qualified by finishing second in the semi-final; GBGB publishes the heat winner's clock and beaten distance rather than a separate runner time.",
+   "official_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+  },
+  {
+   "fixture_id": "grey-oaks",
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "matchup": "Premier Greyhound Racing Oaks Final — Strike It Skye",
+   "field": "Individual semi-final clock (s)",
+   "status": "Blank — GBGB race result publishes winning time only for heat winners",
+   "reason": "Strike It Skye qualified by finishing second in the semi-final; GBGB publishes the heat winner's clock and beaten distance rather than a separate runner time.",
+   "official_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335"
+  },
+  {
+   "fixture_id": "grey-oaks",
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "matchup": "Premier Greyhound Racing Oaks Final — Holding Hollie",
+   "field": "Individual semi-final clock (s)",
+   "status": "Blank — GBGB race result publishes winning time only for heat winners",
+   "reason": "Holding Hollie qualified by finishing second in the semi-final; GBGB publishes the heat winner's clock and beaten distance rather than a separate runner time.",
+   "official_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335"
+  },
+  {
+   "fixture_id": "grey-oaks",
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "matchup": "Premier Greyhound Racing Oaks Final — Ballydoyle Tina",
+   "field": "Individual semi-final clock (s)",
+   "status": "Blank — GBGB race result publishes winning time only for heat winners",
+   "reason": "Ballydoyle Tina qualified by finishing second in the semi-final; GBGB publishes the heat winner's clock and beaten distance rather than a separate runner time.",
+   "official_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335"
+  },
+  {
+   "fixture_id": "hb-paris-aalborg",
+   "sport": "Handball",
+   "competition": "EHF Champions League",
+   "matchup": "Aalborg @ Paris",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "LNH's EHF Champions League calendar lists the fixture date and French club, but full EHF group tables for non-French opponents are not published on lnh.fr.",
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "fixture_id": "hb-montpellier-bucarest",
+   "sport": "Handball",
+   "competition": "EHF Champions League",
+   "matchup": "Bucarest @ Montpellier",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "LNH's EHF Champions League calendar lists the fixture date and French club, but full EHF group tables for non-French opponents are not published on lnh.fr.",
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "fixture_id": "hb-plock-nantes",
+   "sport": "Handball",
+   "competition": "EHF Champions League",
+   "matchup": "Nantes @ Plock",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "LNH's EHF Champions League calendar lists the fixture date and French club, but full EHF group tables for non-French opponents are not published on lnh.fr.",
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "fixture_id": "vb-friedrichshafen-karlsruhe",
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "matchup": "BADEN VOLLEYS Karlsruhe @ VfB Friedrichshafen",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.",
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "fixture_id": "vb-lueneburg-warnemuende",
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "matchup": "SV Warnemünde @ SVG Lüneburg",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.",
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "fixture_id": "vb-giesen-berlin",
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "matchup": "BERLIN RECYCLING Volleys @ Helios GRIZZLYS Giesen",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.",
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "fixture_id": "vb-dueren-muenchen",
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "matchup": "WWK Volleys München @ SWD powervolleys Düren",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "The German Volleyball Bundesliga standings URL returned HTTP 404 on 23 October 2026, so only the Round 2 fixture schedule is verified.",
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "fixture_id": "gaa-shinty-hurling",
+   "sport": "Gaelic Sports",
+   "competition": "Hurling-Shinty International",
+   "matchup": "Scotland @ Ireland",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "The county/GAA fixture page confirms the final date, venue, and referee, while semi-final scorelines for both finalists are not published on the captured page.",
+   "official_source_url": "https://www.gaa.ie/fixtures-results"
+  },
+  {
+   "fixture_id": "gaa-kerry-sfc",
+   "sport": "Gaelic Sports",
+   "competition": "Kerry Senior Football Championship Final",
+   "matchup": "Kenmare Shamrocks @ Dr Crokes",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "The county/GAA fixture page confirms the final date, venue, and referee, while semi-final scorelines for both finalists are not published on the captured page.",
+   "official_source_url": "https://www.kerrygaa.ie/fixtures-results/"
+  },
+  {
+   "fixture_id": "gaa-limerick-shc",
+   "sport": "Gaelic Sports",
+   "competition": "Limerick Senior Hurling Championship Final",
+   "matchup": "Kilmallock @ Na Piarsaigh",
+   "field": "Originated Moneyline / Handicap / Total",
+   "status": "Blank — unverified numeric input",
+   "reason": "The county/GAA fixture page confirms the final date, venue, and referee, while semi-final scorelines for both finalists are not published on the captured page.",
+   "official_source_url": "https://limerickgaa.ie/fixtures-results/"
+  },
+  {
+   "fixture_id": "shortfall-baseball",
+   "sport": "Baseball",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Baseball: 2 priced fixtures (2 verified fixtures in window)",
+   "field": "Remaining 3 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 2 Baseball fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02"
+  },
+  {
+   "fixture_id": "shortfall-cricket",
+   "sport": "Cricket",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Cricket: 3 priced fixtures (6 verified fixtures in window)",
+   "field": "Remaining 2 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 3 Cricket fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://www.cricket.com.au/matches"
+  },
+  {
+   "fixture_id": "shortfall-gaelic-sports",
+   "sport": "Gaelic Sports",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Gaelic Sports: 2 priced fixtures (5 verified fixtures in window)",
+   "field": "Remaining 3 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 2 Gaelic Sports fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://www.gaa.ie/fixtures-results"
+  },
+  {
+   "fixture_id": "shortfall-golf",
+   "sport": "Golf",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Golf: 2 priced fixtures (2 verified fixtures in window)",
+   "field": "Remaining 3 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 2 Golf fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://www.pgatour.com/leaderboard"
+  },
+  {
+   "fixture_id": "shortfall-greyhounds",
+   "sport": "Greyhounds",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Greyhounds: 2 priced fixtures (2 verified fixtures in window)",
+   "field": "Remaining 3 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 2 Greyhounds fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://www.gbgb.org.uk/open-race-schedule/"
+  },
+  {
+   "fixture_id": "shortfall-handball",
+   "sport": "Handball",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Handball: 3 priced fixtures (6 verified fixtures in window)",
+   "field": "Remaining 2 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 3 Handball fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "fixture_id": "shortfall-motor-racing",
+   "sport": "Motor Racing",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Motor Racing: 2 priced fixtures (2 verified fixtures in window)",
+   "field": "Remaining 3 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 2 Motor Racing fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://www.formula1.com/en/racing/2026/united-states"
+  },
+  {
+   "fixture_id": "shortfall-snooker",
+   "sport": "Snooker",
+   "competition": "Daily 5-pick target audit",
+   "matchup": "Snooker: 3 priced fixtures (9 verified fixtures in window)",
+   "field": "Remaining 2 daily pick slot(s)",
+   "status": "Left unfilled — never fabricated",
+   "reason": "Only 3 Snooker fixture(s) in the active window have both confirmed opponents and numeric strength inputs from the official governing-body source.",
+   "official_source_url": "https://www.wst.tv/matches/"
+  }
+ ]
+}

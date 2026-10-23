@@ -1,0 +1,154 @@
+{
+ "captured_utc": "2026-10-23T21:40:00Z",
+ "session": "arena/9c5af337-olbg2",
+ "source_url": "https://www.olbg.com/betting-tips",
+ "sports": [
+  {
+   "sport": "Golf",
+   "olbg_ids": [
+    "5"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Golf/5",
+   "markets": "Win Tournament"
+  },
+  {
+   "sport": "Volleyball",
+   "olbg_ids": [
+    "21"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+   "markets": "Win Match, Set Score"
+  },
+  {
+   "sport": "Rugby Union",
+   "olbg_ids": [
+    "9"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+   "markets": "To Win"
+  },
+  {
+   "sport": "Cricket",
+   "olbg_ids": [
+    "7"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Cricket/7",
+   "markets": "Win Match"
+  },
+  {
+   "sport": "Snooker",
+   "olbg_ids": [
+    "8"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Snooker/8",
+   "markets": "Win Match"
+  },
+  {
+   "sport": "Darts",
+   "olbg_ids": [
+    "15"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Darts/15",
+   "markets": "Win Match 2-way, Handicap 2-way, Total Legs"
+  },
+  {
+   "sport": "Baseball",
+   "olbg_ids": [
+    "12"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Baseball/12",
+   "markets": "Money Line, Run Line, Game Totals"
+  },
+  {
+   "sport": "Gaelic Sports",
+   "olbg_ids": [
+    "25",
+    "26"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+   "markets": "Handicap, Win Match"
+  },
+  {
+   "sport": "Greyhounds",
+   "olbg_ids": [
+    "28"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+   "markets": "Daily Races"
+  },
+  {
+   "sport": "Tennis",
+   "olbg_ids": [
+    "3"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "markets": "Win Match, Set Betting, Total Games, Games Won"
+  },
+  {
+   "sport": "Motor Racing",
+   "olbg_ids": [
+    "14"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+   "markets": "Win Race, Win Tournament"
+  },
+  {
+   "sport": "Handball",
+   "olbg_ids": [
+    "20"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Handball/20",
+   "markets": "Money Line (three-way, includes Tie)"
+  },
+  {
+   "sport": "Ice Hockey",
+   "olbg_ids": [
+    "13"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "markets": "Money Line, Puck Line, Game Totals"
+  },
+  {
+   "sport": "Basketball",
+   "olbg_ids": [
+    "4"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Basketball/4",
+   "markets": "Money Line, Pointspread, Game Totals"
+  },
+  {
+   "sport": "Rugby League",
+   "olbg_ids": [
+    "10"
+   ],
+   "hub_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "markets": "To Win, Grand Final Winner"
+  }
+ ],
+ "defects": [
+  {
+   "id": "OLBG-D1",
+   "title": "US egress IPs receive empty sport hubs",
+   "evidence": "All 16 /betting-tips/{Sport}/{id} routes render 'No tips found.' from a US IP while direct ?event_id= routes resolve.",
+   "source_url": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "OLBG-D2",
+   "title": "Header tip denominators are string-concatenated",
+   "evidence": "event_id=199984 renders '4 / 042 | 95%' where the market table shows 4 of 42; 160789 renders '6 / 062'; 536036 renders '9 / 090'; 902163 renders '2 / 021'.",
+   "source_url": "https://www.olbg.com/betting-tips/Rugby_League/International/Rugby_League_World_Cup/Australia_v_Fiji/10?event_id=199984"
+  },
+  {
+   "id": "OLBG-D3",
+   "title": "Bookmaker odds cells are geo-stripped for logged-out US visitors",
+   "evidence": "event_id=32384 and 902163 render 'WIN @' with no price string following.",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/USA/NBA/Chicago_Bulls_at_Milwaukee_Bucks/4?event_id=902163"
+  },
+  {
+   "id": "OLBG-D4",
+   "title": "False Expired badges and unlabelled US-Eastern timestamps",
+   "evidence": "Unstarted 24 October fixtures display 'Expired' badges alongside viewer-local EDT times.",
+   "source_url": "https://www.olbg.com/betting-tips"
+  }
+ ]
+}

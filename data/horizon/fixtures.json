@@ -1,0 +1,5281 @@
+{
+ "captured_utc": "2026-10-23T21:40:00Z",
+ "session": "arena/9c5af337-olbg2",
+ "sport_count": 15,
+ "count": 112,
+ "fixtures": [
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020166",
+   "home": "Chicago Blackhawks",
+   "away": "Montreal Canadiens",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_display": "2026-10-24T00:00:00Z (NHL schedule feed)",
+   "venue": "United Center",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 3,
+     "l": 5,
+     "otl": 2,
+     "pts": 8,
+     "gf": 26,
+     "ga": 32,
+     "l10": "3-5-2",
+     "streak": "L1",
+     "home": "1-2-1",
+     "road": "2-3-1"
+    },
+    "away": {
+     "gp": 9,
+     "w": 6,
+     "l": 2,
+     "otl": 1,
+     "pts": 13,
+     "gf": 33,
+     "ga": 27,
+     "l10": "6-2-1",
+     "streak": "W2",
+     "home": "4-1-0",
+     "road": "2-1-1"
+    },
+    "published_ml": {
+     "away": -170,
+     "home": 138
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Chicago Blackhawks",
+     "value": "3-5-2 in 10 games, 26 GF / 32 GA, 8 pts, streak L1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Montreal Canadiens",
+     "value": "6-2-1 in 9 games, 33 GF / 27 GA, 13 pts, streak W2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Montreal Canadiens at Chicago Blackhawks, United Center, 2026-10-24T00:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    },
+    {
+     "team_or_item": "NHL feed price",
+     "value": "Montreal Canadiens -170 / Chicago Blackhawks +138 published on NHL schedule feed",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020167",
+   "home": "Colorado Avalanche",
+   "away": "Tampa Bay Lightning",
+   "start_utc": "2026-10-24T01:00:00Z",
+   "time_display": "2026-10-24T01:00:00Z (NHL schedule feed)",
+   "venue": "Ball Arena",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 5,
+     "l": 4,
+     "otl": 1,
+     "pts": 11,
+     "gf": 41,
+     "ga": 31,
+     "l10": "5-4-1",
+     "streak": "L2",
+     "home": "3-1-1",
+     "road": "2-3-0"
+    },
+    "away": {
+     "gp": 9,
+     "w": 7,
+     "l": 2,
+     "otl": 0,
+     "pts": 14,
+     "gf": 31,
+     "ga": 23,
+     "l10": "7-2-0",
+     "streak": "W3",
+     "home": "5-0-0",
+     "road": "2-2-0"
+    },
+    "published_ml": {
+     "away": 104,
+     "home": -126
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Colorado Avalanche",
+     "value": "5-4-1 in 10 games, 41 GF / 31 GA, 11 pts, streak L2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Tampa Bay Lightning",
+     "value": "7-2-0 in 9 games, 31 GF / 23 GA, 14 pts, streak W3",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Tampa Bay Lightning at Colorado Avalanche, Ball Arena, 2026-10-24T01:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    },
+    {
+     "team_or_item": "NHL feed price",
+     "value": "Tampa Bay Lightning +104 / Colorado Avalanche -126 published on NHL schedule feed",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020168",
+   "home": "Philadelphia Flyers",
+   "away": "Anaheim Ducks",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "time_display": "2026-10-24T17:00:00Z (NHL schedule feed)",
+   "venue": "Xfinity Mobile Arena",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 9,
+     "w": 2,
+     "l": 5,
+     "otl": 2,
+     "pts": 6,
+     "gf": 23,
+     "ga": 34,
+     "l10": "2-5-2",
+     "streak": "L3",
+     "home": "1-2-1",
+     "road": "1-3-1"
+    },
+    "away": {
+     "gp": 9,
+     "w": 3,
+     "l": 5,
+     "otl": 1,
+     "pts": 7,
+     "gf": 23,
+     "ga": 31,
+     "l10": "3-5-1",
+     "streak": "L2",
+     "home": "2-2-0",
+     "road": "1-3-1"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Philadelphia Flyers",
+     "value": "2-5-2 in 9 games, 23 GF / 34 GA, 6 pts, streak L3",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Anaheim Ducks",
+     "value": "3-5-1 in 9 games, 23 GF / 31 GA, 7 pts, streak L2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Anaheim Ducks at Philadelphia Flyers, Xfinity Mobile Arena, 2026-10-24T17:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020169",
+   "home": "New Jersey Devils",
+   "away": "Los Angeles Kings",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "time_display": "2026-10-24T17:00:00Z (NHL schedule feed)",
+   "venue": "Prudential Center",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 6,
+     "l": 4,
+     "otl": 0,
+     "pts": 12,
+     "gf": 33,
+     "ga": 29,
+     "l10": "6-4-0",
+     "streak": "L1",
+     "home": "3-2-0",
+     "road": "3-2-0"
+    },
+    "away": {
+     "gp": 10,
+     "w": 4,
+     "l": 4,
+     "otl": 2,
+     "pts": 10,
+     "gf": 28,
+     "ga": 31,
+     "l10": "4-4-2",
+     "streak": "L1",
+     "home": "2-1-1",
+     "road": "2-3-1"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "New Jersey Devils",
+     "value": "6-4-0 in 10 games, 33 GF / 29 GA, 12 pts, streak L1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Los Angeles Kings",
+     "value": "4-4-2 in 10 games, 28 GF / 31 GA, 10 pts, streak L1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Los Angeles Kings at New Jersey Devils, Prudential Center, 2026-10-24T17:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020170",
+   "home": "Boston Bruins",
+   "away": "San Jose Sharks",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_display": "2026-10-24T23:00:00Z (NHL schedule feed)",
+   "venue": "TD Garden",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 11,
+     "w": 8,
+     "l": 2,
+     "otl": 1,
+     "pts": 17,
+     "gf": 41,
+     "ga": 29,
+     "l10": "7-2-1",
+     "streak": "W1",
+     "home": "5-1-0",
+     "road": "3-1-1"
+    },
+    "away": {
+     "gp": 10,
+     "w": 1,
+     "l": 7,
+     "otl": 2,
+     "pts": 4,
+     "gf": 20,
+     "ga": 40,
+     "l10": "1-7-2",
+     "streak": "L4",
+     "home": "1-3-1",
+     "road": "0-4-1"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Boston Bruins",
+     "value": "8-2-1 in 11 games, 41 GF / 29 GA, 17 pts, streak W1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "San Jose Sharks",
+     "value": "1-7-2 in 10 games, 20 GF / 40 GA, 4 pts, streak L4",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "San Jose Sharks at Boston Bruins, TD Garden, 2026-10-24T23:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020171",
+   "home": "Ottawa Senators",
+   "away": "New York Rangers",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_display": "2026-10-24T23:00:00Z (NHL schedule feed)",
+   "venue": "Canadian Tire Centre",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 9,
+     "w": 6,
+     "l": 2,
+     "otl": 1,
+     "pts": 13,
+     "gf": 32,
+     "ga": 26,
+     "l10": "6-2-1",
+     "streak": "W1",
+     "home": "4-1-0",
+     "road": "2-1-1"
+    },
+    "away": {
+     "gp": 10,
+     "w": 3,
+     "l": 5,
+     "otl": 2,
+     "pts": 8,
+     "gf": 27,
+     "ga": 33,
+     "l10": "3-5-2",
+     "streak": "L2",
+     "home": "1-3-1",
+     "road": "2-2-1"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Ottawa Senators",
+     "value": "6-2-1 in 9 games, 32 GF / 26 GA, 13 pts, streak W1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "New York Rangers",
+     "value": "3-5-2 in 10 games, 27 GF / 33 GA, 8 pts, streak L2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "New York Rangers at Ottawa Senators, Canadian Tire Centre, 2026-10-24T23:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020172",
+   "home": "Pittsburgh Penguins",
+   "away": "Nashville Predators",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_display": "2026-10-24T23:00:00Z (NHL schedule feed)",
+   "venue": "PPG Paints Arena",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 6,
+     "l": 3,
+     "otl": 1,
+     "pts": 13,
+     "gf": 33,
+     "ga": 29,
+     "l10": "6-3-1",
+     "streak": "W1",
+     "home": "3-1-1",
+     "road": "3-2-0"
+    },
+    "away": {
+     "gp": 9,
+     "w": 2,
+     "l": 6,
+     "otl": 1,
+     "pts": 5,
+     "gf": 21,
+     "ga": 33,
+     "l10": "2-6-1",
+     "streak": "L3",
+     "home": "1-3-1",
+     "road": "1-3-0"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Pittsburgh Penguins",
+     "value": "6-3-1 in 10 games, 33 GF / 29 GA, 13 pts, streak W1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Nashville Predators",
+     "value": "2-6-1 in 9 games, 21 GF / 33 GA, 5 pts, streak L3",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Nashville Predators at Pittsburgh Penguins, PPG Paints Arena, 2026-10-24T23:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020173",
+   "home": "Washington Capitals",
+   "away": "Buffalo Sabres",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_display": "2026-10-24T23:00:00Z (NHL schedule feed)",
+   "venue": "Capital One Arena",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 7,
+     "l": 2,
+     "otl": 1,
+     "pts": 15,
+     "gf": 34,
+     "ga": 23,
+     "l10": "7-2-1",
+     "streak": "W2",
+     "home": "5-1-0",
+     "road": "2-1-1"
+    },
+    "away": {
+     "gp": 10,
+     "w": 4,
+     "l": 5,
+     "otl": 1,
+     "pts": 9,
+     "gf": 29,
+     "ga": 32,
+     "l10": "4-5-1",
+     "streak": "L1",
+     "home": "2-2-1",
+     "road": "2-3-0"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Washington Capitals",
+     "value": "7-2-1 in 10 games, 34 GF / 23 GA, 15 pts, streak W2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Buffalo Sabres",
+     "value": "4-5-1 in 10 games, 29 GF / 32 GA, 9 pts, streak L1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Buffalo Sabres at Washington Capitals, Capital One Arena, 2026-10-24T23:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020174",
+   "home": "Columbus Blue Jackets",
+   "away": "Vegas Golden Knights",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_display": "2026-10-24T23:00:00Z (NHL schedule feed)",
+   "venue": "Nationwide Arena",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 9,
+     "w": 3,
+     "l": 5,
+     "otl": 1,
+     "pts": 7,
+     "gf": 26,
+     "ga": 33,
+     "l10": "3-5-1",
+     "streak": "L2",
+     "home": "2-3-0",
+     "road": "1-2-1"
+    },
+    "away": {
+     "gp": 12,
+     "w": 8,
+     "l": 4,
+     "otl": 0,
+     "pts": 16,
+     "gf": 40,
+     "ga": 35,
+     "l10": "6-4-0",
+     "streak": "W1",
+     "home": "5-2-0",
+     "road": "3-2-0"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Columbus Blue Jackets",
+     "value": "3-5-1 in 9 games, 26 GF / 33 GA, 7 pts, streak L2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Vegas Golden Knights",
+     "value": "8-4-0 in 12 games, 40 GF / 35 GA, 16 pts, streak W1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Vegas Golden Knights at Columbus Blue Jackets, Nationwide Arena, 2026-10-24T23:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020175",
+   "home": "St. Louis Blues",
+   "away": "Carolina Hurricanes",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_display": "2026-10-24T23:00:00Z (NHL schedule feed)",
+   "venue": "Enterprise Center",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 9,
+     "w": 4,
+     "l": 5,
+     "otl": 0,
+     "pts": 8,
+     "gf": 25,
+     "ga": 29,
+     "l10": "4-5-0",
+     "streak": "L2",
+     "home": "2-2-0",
+     "road": "2-3-0"
+    },
+    "away": {
+     "gp": 12,
+     "w": 8,
+     "l": 2,
+     "otl": 2,
+     "pts": 18,
+     "gf": 43,
+     "ga": 30,
+     "l10": "6-2-2",
+     "streak": "W1",
+     "home": "4-1-0",
+     "road": "4-1-2"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "St. Louis Blues",
+     "value": "4-5-0 in 9 games, 25 GF / 29 GA, 8 pts, streak L2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Carolina Hurricanes",
+     "value": "8-2-2 in 12 games, 43 GF / 30 GA, 18 pts, streak W1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Carolina Hurricanes at St. Louis Blues, Enterprise Center, 2026-10-24T23:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020176",
+   "home": "Edmonton Oilers",
+   "away": "Toronto Maple Leafs",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "time_display": "2026-10-24T23:00:00Z (NHL schedule feed)",
+   "venue": "Rogers Place",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 8,
+     "l": 1,
+     "otl": 1,
+     "pts": 17,
+     "gf": 41,
+     "ga": 29,
+     "l10": "8-1-1",
+     "streak": "W5",
+     "home": "4-0-1",
+     "road": "4-1-0"
+    },
+    "away": {
+     "gp": 10,
+     "w": 4,
+     "l": 4,
+     "otl": 2,
+     "pts": 10,
+     "gf": 31,
+     "ga": 33,
+     "l10": "4-4-2",
+     "streak": "L1",
+     "home": "3-2-1",
+     "road": "1-2-1"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Edmonton Oilers",
+     "value": "8-1-1 in 10 games, 41 GF / 29 GA, 17 pts, streak W5",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Toronto Maple Leafs",
+     "value": "4-4-2 in 10 games, 31 GF / 33 GA, 10 pts, streak L1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Toronto Maple Leafs at Edmonton Oilers, Rogers Place, 2026-10-24T23:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020177",
+   "home": "Utah Mammoth",
+   "away": "Tampa Bay Lightning",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "time_display": "2026-10-25T01:00:00Z (NHL schedule feed)",
+   "venue": "Delta Center",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 4,
+     "l": 5,
+     "otl": 1,
+     "pts": 9,
+     "gf": 28,
+     "ga": 33,
+     "l10": "4-5-1",
+     "streak": "L2",
+     "home": "2-2-1",
+     "road": "2-3-0"
+    },
+    "away": {
+     "gp": 9,
+     "w": 7,
+     "l": 2,
+     "otl": 0,
+     "pts": 14,
+     "gf": 31,
+     "ga": 23,
+     "l10": "7-2-0",
+     "streak": "W3",
+     "home": "5-0-0",
+     "road": "2-2-0"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Utah Mammoth",
+     "value": "4-5-1 in 10 games, 28 GF / 33 GA, 9 pts, streak L2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Tampa Bay Lightning",
+     "value": "7-2-0 in 9 games, 31 GF / 23 GA, 14 pts, streak W3",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Tampa Bay Lightning at Utah Mammoth, Delta Center, 2026-10-25T01:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020178",
+   "home": "Calgary Flames",
+   "away": "Detroit Red Wings",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "time_display": "2026-10-25T02:00:00Z (NHL schedule feed)",
+   "venue": "Scotiabank Saddledome",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 5,
+     "l": 4,
+     "otl": 1,
+     "pts": 11,
+     "gf": 29,
+     "ga": 31,
+     "l10": "5-4-1",
+     "streak": "L1",
+     "home": "3-2-0",
+     "road": "2-2-1"
+    },
+    "away": {
+     "gp": 10,
+     "w": 7,
+     "l": 2,
+     "otl": 1,
+     "pts": 15,
+     "gf": 35,
+     "ga": 25,
+     "l10": "7-2-1",
+     "streak": "W3",
+     "home": "4-1-1",
+     "road": "3-1-0"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Calgary Flames",
+     "value": "5-4-1 in 10 games, 29 GF / 31 GA, 11 pts, streak L1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Detroit Red Wings",
+     "value": "7-2-1 in 10 games, 35 GF / 25 GA, 15 pts, streak W3",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Detroit Red Wings at Calgary Flames, Scotiabank Saddledome, 2026-10-25T02:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "id": "nhl-2026020179",
+   "home": "Seattle Kraken",
+   "away": "Minnesota Wild",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "time_display": "2026-10-25T02:00:00Z (NHL schedule feed)",
+   "venue": "Climate Pledge Arena",
+   "source": "nhle_schedule",
+   "stats_source": "nhle_standings",
+   "inputs": {
+    "home": {
+     "gp": 10,
+     "w": 4,
+     "l": 3,
+     "otl": 3,
+     "pts": 11,
+     "gf": 28,
+     "ga": 29,
+     "l10": "4-3-3",
+     "streak": "OT1",
+     "home": "2-1-2",
+     "road": "2-2-1"
+    },
+    "away": {
+     "gp": 10,
+     "w": 6,
+     "l": 2,
+     "otl": 2,
+     "pts": 14,
+     "gf": 36,
+     "ga": 30,
+     "l10": "6-2-2",
+     "streak": "W2",
+     "home": "3-1-1",
+     "road": "3-1-1"
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Seattle Kraken",
+     "value": "4-3-3 in 10 games, 28 GF / 29 GA, 11 pts, streak OT1",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Minnesota Wild",
+     "value": "6-2-2 in 10 games, 36 GF / 30 GA, 14 pts, streak W2",
+     "source_key": "nhle_standings",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Minnesota Wild at Seattle Kraken, Climate Pledge Arena, 2026-10-25T02:00:00Z",
+     "source_key": "nhle_schedule",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "stats_source_url": "https://api-web.nhle.com/v1/standings/2026-10-23"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600099",
+   "home": "Milwaukee Bucks",
+   "away": "Chicago Bulls",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_display": "8:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "0-1"
+   },
+   "facts": [
+    {
+     "team_or_item": "Milwaukee Bucks",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Chicago Bulls",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "8:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Chicago Bulls",
+     "value": "Nic Claxton Out — Left hamstring strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600008",
+   "home": "Boston Celtics",
+   "away": "New York Knicks",
+   "start_utc": "2026-10-23T23:00:00Z",
+   "time_display": "7:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "0-1"
+   },
+   "facts": [
+    {
+     "team_or_item": "Boston Celtics",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "New York Knicks",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "7:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Boston Celtics",
+     "value": "Devin Carter Out — Illness",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600097",
+   "home": "Washington Wizards",
+   "away": "Toronto Raptors",
+   "start_utc": "2026-10-23T23:00:00Z",
+   "time_display": "7:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "1-0",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "Washington Wizards",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Toronto Raptors",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "7:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Toronto Raptors",
+     "value": "Nate Bittle Out — Right foot avulsion fracture",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Washington Wizards",
+     "value": "AJ Dybantsa Out — Left ankle sprain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Washington Wizards",
+     "value": "Tristan Vukcevic Out — Left hip impingement",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Washington Wizards",
+     "value": "Jamir Watkins Out — Left ACL repair/surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600094",
+   "home": "Charlotte Hornets",
+   "away": "Atlanta Hawks",
+   "start_utc": "2026-10-23T23:00:00Z",
+   "time_display": "7:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "1-0",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "Charlotte Hornets",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Atlanta Hawks",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "7:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Atlanta Hawks",
+     "value": "Mouhamed Gueye Out — Left foot fracture",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Atlanta Hawks",
+     "value": "Henri Veesaar Out — Right ACL tear",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Charlotte Hornets",
+     "value": "Kon Knueppel Out — Left hamstring strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Charlotte Hornets",
+     "value": "Coby White Out — Left calf strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Charlotte Hornets",
+     "value": "Grant Williams Out — Right hamstring strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Charlotte Hornets",
+     "value": "Kylan Boswell Out — Right knee surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600096",
+   "home": "Orlando Magic",
+   "away": "Minnesota Timberwolves",
+   "start_utc": "2026-10-23T23:00:00Z",
+   "time_display": "7:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "Orlando Magic",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Minnesota Timberwolves",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "7:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Minnesota Timberwolves",
+     "value": "Donte DiVincenzo Out — Right Achilles repair/surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Orlando Magic",
+     "value": "Anthony Black Out — Right ankle sprain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Orlando Magic",
+     "value": "Jonathan Isaac Out — Left knee injury management",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Orlando Magic",
+     "value": "Izaiyah Nelson Out — Left ankle injury recovery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Orlando Magic",
+     "value": "Noah Penda Out — Right partially torn hamstring",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600095",
+   "home": "Indiana Pacers",
+   "away": "Dallas Mavericks",
+   "start_utc": "2026-10-23T23:00:00Z",
+   "time_display": "7:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "1-0",
+    "away_record": "0-1"
+   },
+   "facts": [
+    {
+     "team_or_item": "Indiana Pacers",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Dallas Mavericks",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "7:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Dallas Mavericks",
+     "value": "Santi Aldama Out — Right knee surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Dallas Mavericks",
+     "value": "Dereck Lively II Out — Right foot surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Dallas Mavericks",
+     "value": "Caleb Martin Out — Right thumb sprain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Indiana Pacers",
+     "value": "T.J. McConnell Out — Right hamstring strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Indiana Pacers",
+     "value": "Johnny Furphy Out — Right ACL repair/surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600098",
+   "home": "Miami Heat",
+   "away": "Detroit Pistons",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_display": "8:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "Miami Heat",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Detroit Pistons",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "8:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Detroit Pistons",
+     "value": "Taurean Prince Available — Personal reasons",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Miami Heat",
+     "value": "Vladislav Goldin Available — Right ankle sprain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600009",
+   "home": "San Antonio Spurs",
+   "away": "Houston Rockets",
+   "start_utc": "2026-10-24T01:30:00Z",
+   "time_display": "9:30 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "San Antonio Spurs",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Houston Rockets",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "9:30 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Houston Rockets",
+     "value": "Steven Adams Questionable — Right calf tightness",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Houston Rockets",
+     "value": "Reed Sheppard Questionable — Left knee contusion",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "San Antonio Spurs",
+     "value": "De'Aaron Fox Questionable — Right wrist sprain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "San Antonio Spurs",
+     "value": "Tobias Harris Out — Left calf strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "San Antonio Spurs",
+     "value": "Keldon Johnson Questionable — Mouth laceration",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "San Antonio Spurs",
+     "value": "Jayden Quaintance Out — Right knee surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600100",
+   "home": "Utah Jazz",
+   "away": "New Orleans Pelicans",
+   "start_utc": "2026-10-24T01:30:00Z",
+   "time_display": "9:30 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "0-1"
+   },
+   "facts": [
+    {
+     "team_or_item": "Utah Jazz",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "New Orleans Pelicans",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "9:30 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Utah Jazz",
+     "value": "Jusuf Nurkic Out — Right 2nd plantar plate tear",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Utah Jazz",
+     "value": "Tony Bradley Available — Left quadriceps strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600101",
+   "home": "Golden State Warriors",
+   "away": "Memphis Grizzlies",
+   "start_utc": "2026-10-24T02:00:00Z",
+   "time_display": "10:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "Golden State Warriors",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Memphis Grizzlies",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "10:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Memphis Grizzlies",
+     "value": "Cedric Coward Doubtful — Left wrist sprain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Golden State Warriors",
+     "value": "Jimmy Butler III Out — Right ACL repair/surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Golden State Warriors",
+     "value": "Moses Moody Out — Left patellar tendon repair/surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Golden State Warriors",
+     "value": "Kristaps Porzingis Out — Not with team",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Golden State Warriors",
+     "value": "Brandin Podziemski Questionable — Bilateral low back soreness",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600102",
+   "home": "Los Angeles Lakers",
+   "away": "LA Clippers",
+   "start_utc": "2026-10-24T02:00:00Z",
+   "time_display": "10:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "1-0",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "Los Angeles Lakers",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "LA Clippers",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "10:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "LA Clippers",
+     "value": "Bradley Beal Out — Right knee injury management",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "LA Clippers",
+     "value": "Brandon Ingram Out — Right heel surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "LA Clippers",
+     "value": "Jordan Miller Out — Left rotator cuff surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "LA Clippers",
+     "value": "Max Strus Out — Right plantar fascia",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "NBA",
+   "id": "nba-0022600103",
+   "home": "Sacramento Kings",
+   "away": "Portland Trail Blazers",
+   "start_utc": "2026-10-24T02:00:00Z",
+   "time_display": "10:00 PM ET",
+   "venue": null,
+   "source": "nba_games",
+   "stats_source": "nba_standings",
+   "injury_source": "nba_injury",
+   "inputs": {
+    "home_record": "0-1",
+    "away_record": "1-0"
+   },
+   "facts": [
+    {
+     "team_or_item": "Sacramento Kings",
+     "value": "0-1 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Portland Trail Blazers",
+     "value": "1-0 after opening games",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings"
+    },
+    {
+     "team_or_item": "Tip time",
+     "value": "10:00 PM ET",
+     "source_key": "nba_games",
+     "source_url": "https://www.nba.com/games?date=2026-10-23"
+    },
+    {
+     "team_or_item": "Portland Trail Blazers",
+     "value": "Shaedon Sharpe Out — Right meniscus surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Portland Trail Blazers",
+     "value": "Chris Youngblood Out — Left ankle soreness",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Sacramento Kings",
+     "value": "Dylan Cardwell Out — Left calf strain",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Sacramento Kings",
+     "value": "Malik Monk Probable — Left ankle soreness",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Sacramento Kings",
+     "value": "Maxime Raynaud Out — Right patella subluxation",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+     "team_or_item": "Sacramento Kings",
+     "value": "Ben Simmons Out — Right Achilles repair/surgery",
+     "source_key": "nba_injury",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    }
+   ],
+   "official_source_url": "https://www.nba.com/games?date=2026-10-23",
+   "stats_source_url": "https://www.nba.com/standings",
+   "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "id": "el-E2026_76",
+   "home": "Panathinaikos AKTOR Athens",
+   "away": "Armani Olimpia Milan",
+   "start_utc": null,
+   "time_display": "2026-10-27 20:15 local (Telekom Center Athens)",
+   "source": "el_game_center",
+   "venue": null,
+   "stats_source": "el_standings",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 6,
+     "l": 1,
+     "pf": 613,
+     "pa": 517
+    },
+    "away": {
+     "gp": 7,
+     "w": 1,
+     "l": 6,
+     "pf": 585,
+     "pa": 648
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Panathinaikos AKTOR Athens",
+     "value": "6-1 in 7 EuroLeague games, 613 points for, 517 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "team_or_item": "Armani Olimpia Milan",
+     "value": "1-6 in 7 EuroLeague games, 585 points for, 648 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "stats_source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "id": "el-E2026_75",
+   "home": "Valencia Basket",
+   "away": "Fenerbahce Tarfin Istanbul",
+   "start_utc": null,
+   "time_display": "2026-10-27 20:30 local (Roig Arena)",
+   "source": "el_game_center",
+   "venue": null,
+   "stats_source": "el_standings",
+   "inputs": {
+    "home": {
+     "gp": 6,
+     "w": 4,
+     "l": 2,
+     "pf": 583,
+     "pa": 537
+    },
+    "away": {
+     "gp": 6,
+     "w": 5,
+     "l": 1,
+     "pf": 501,
+     "pa": 447
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Valencia Basket",
+     "value": "4-2 in 6 EuroLeague games, 583 points for, 537 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "team_or_item": "Fenerbahce Tarfin Istanbul",
+     "value": "5-1 in 6 EuroLeague games, 501 points for, 447 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "stats_source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "id": "el-E2026_73",
+   "home": "Kosner Baskonia Vitoria-Gasteiz",
+   "away": "Real Madrid",
+   "start_utc": null,
+   "time_display": "2026-10-27 21:00 local (Buesa Arena)",
+   "source": "el_game_center",
+   "venue": null,
+   "stats_source": "el_standings",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 1,
+     "l": 6,
+     "pf": 583,
+     "pa": 649
+    },
+    "away": {
+     "gp": 7,
+     "w": 4,
+     "l": 3,
+     "pf": 667,
+     "pa": 630
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Kosner Baskonia Vitoria-Gasteiz",
+     "value": "1-6 in 7 EuroLeague games, 583 points for, 649 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "team_or_item": "Real Madrid",
+     "value": "4-3 in 7 EuroLeague games, 667 points for, 630 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "stats_source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "id": "el-E2026_79",
+   "home": "Besiktas Istanbul",
+   "away": "Olympiacos Piraeus",
+   "start_utc": null,
+   "time_display": "2026-10-28 18:30 local (Turkcell Basketball Development Center)",
+   "source": "el_game_center",
+   "venue": null,
+   "stats_source": "el_standings",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 3,
+     "l": 4,
+     "pf": 634,
+     "pa": 644
+    },
+    "away": {
+     "gp": 6,
+     "w": 5,
+     "l": 1,
+     "pf": 564,
+     "pa": 524
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Besiktas Istanbul",
+     "value": "3-4 in 7 EuroLeague games, 634 points for, 644 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "team_or_item": "Olympiacos Piraeus",
+     "value": "5-1 in 6 EuroLeague games, 564 points for, 524 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "stats_source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "id": "el-E2026_77",
+   "home": "Hapoel IBI Tel Aviv",
+   "away": "Anadolu Efes Istanbul",
+   "start_utc": null,
+   "time_display": "2026-10-28 19:00 local (Arena Botevgrad)",
+   "source": "el_game_center",
+   "venue": null,
+   "stats_source": "el_standings",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 5,
+     "l": 2,
+     "pf": 630,
+     "pa": 601
+    },
+    "away": {
+     "gp": 7,
+     "w": 3,
+     "l": 4,
+     "pf": 581,
+     "pa": 590
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Hapoel IBI Tel Aviv",
+     "value": "5-2 in 7 EuroLeague games, 630 points for, 601 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "team_or_item": "Anadolu Efes Istanbul",
+     "value": "3-4 in 7 EuroLeague games, 581 points for, 590 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "stats_source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+  },
+  {
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "id": "el-E2026_80",
+   "home": "Virtus Bologna",
+   "away": "Zalgiris Kaunas",
+   "start_utc": null,
+   "time_display": "2026-10-28 20:30 local (PalaDozza)",
+   "source": "el_game_center",
+   "venue": null,
+   "stats_source": "el_standings",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 4,
+     "l": 3,
+     "pf": 606,
+     "pa": 608
+    },
+    "away": {
+     "gp": 7,
+     "w": 3,
+     "l": 4,
+     "pf": 595,
+     "pa": 602
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Virtus Bologna",
+     "value": "4-3 in 7 EuroLeague games, 606 points for, 608 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    },
+    {
+     "team_or_item": "Zalgiris Kaunas",
+     "value": "3-4 in 7 EuroLeague games, 595 points for, 602 against",
+     "source_key": "el_standings",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "stats_source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/"
+  },
+  {
+   "sport": "Baseball",
+   "competition": "MLB World Series",
+   "id": "mlb-849805",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_display": "World Series Game 1, 2026-10-24T00:00Z",
+   "venue": "American Family Field",
+   "source": "mlb_schedule",
+   "stats_source": "mlb_brewers",
+   "inputs": {
+    "home": {
+     "w": 103,
+     "l": 59,
+     "pct": 0.636,
+     "rs": 832,
+     "ra": 618,
+     "home": "55-26",
+     "night": "68-35",
+     "l10": "8-2",
+     "streak": "W5"
+    },
+    "away": {
+     "w": 98,
+     "l": 64,
+     "pct": 0.605,
+     "rs": 736,
+     "ra": 650,
+     "away": "43-38",
+     "night": "63-35",
+     "l10": "5-5",
+     "streak": "L1"
+    },
+    "home_sp": {
+     "name": "Jacob Misiorowski",
+     "gs": 30,
+     "ip": 174.2,
+     "era": 1.8,
+     "k": 252,
+     "bb": 44,
+     "whip": 0.8,
+     "k9": 12.98,
+     "avg": 0.157
+    },
+    "away_sp": {
+     "name": "Nick Martinez",
+     "gs": 31,
+     "ip": 180.0,
+     "era": 3.1,
+     "k": 109,
+     "bb": 26,
+     "whip": 1.09,
+     "k9": 5.45,
+     "avg": 0.249
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Milwaukee",
+     "value": "103-59, .636, 832 scored, 618 allowed, 55-26 at home, 68-35 at night, W5, 8-2 in ten",
+     "source_key": "mlb_brewers",
+     "source_url": "https://statsapi.mlb.com/api/v1/Schedule?sportId=1&teamId=158&startDate=2026-10-22&endDate=2026-11-02&hydrate=team,probablePitcher,linescore,decisions"
+    },
+    {
+     "team_or_item": "Tampa Bay",
+     "value": "98-64, .605, 736 scored, 650 allowed, 43-38 on the road, 63-35 at night, L1, 5-5 in ten",
+     "source_key": "mlb_standings",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    },
+    {
+     "team_or_item": "Jacob Misiorowski",
+     "value": "2026: 30 starts, 16-5, 1.80 ERA, 174.2 IP, 252 K, 44 BB, 0.80 WHIP, .157 opponents average",
+     "source_key": "mlb_pitchers",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=694813,608379,801403,656876&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+    },
+    {
+     "team_or_item": "Nick Martinez",
+     "value": "2026: 31 starts, 15-6, 3.10 ERA, 180.0 IP, 109 K, 26 BB, 1.09 WHIP, .249 opponents average",
+     "source_key": "mlb_pitchers",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=694813,608379,801403,656876&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "World Series Game 1 at American Family Field, first pitch 2026-10-24T00:00Z",
+     "source_key": "mlb_schedule",
+     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02"
+    }
+   ],
+   "official_source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02",
+   "stats_source_url": "https://statsapi.mlb.com/api/v1/Schedule?sportId=1&teamId=158&startDate=2026-10-22&endDate=2026-11-02&hydrate=team,probablePitcher,linescore,decisions"
+  },
+  {
+   "sport": "Baseball",
+   "competition": "MLB World Series",
+   "id": "mlb-849802",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "time_display": "World Series Game 2, 2026-10-25T00:00Z",
+   "venue": "American Family Field",
+   "source": "mlb_schedule",
+   "stats_source": "mlb_brewers",
+   "inputs": {
+    "home": {
+     "w": 103,
+     "l": 59,
+     "pct": 0.636,
+     "rs": 832,
+     "ra": 618,
+     "home": "55-26",
+     "night": "68-35",
+     "l10": "8-2",
+     "streak": "W5"
+    },
+    "away": {
+     "w": 98,
+     "l": 64,
+     "pct": 0.605,
+     "rs": 736,
+     "ra": 650,
+     "away": "43-38",
+     "night": "63-35",
+     "l10": "5-5",
+     "streak": "L1"
+    },
+    "home_sp": {
+     "name": "Logan Henderson",
+     "gs": null,
+     "ip": null,
+     "era": null,
+     "k": null,
+     "bb": null,
+     "whip": null,
+     "k9": null,
+     "avg": null
+    },
+    "away_sp": {
+     "name": "Drew Rasmussen",
+     "gs": 30,
+     "ip": 172.0,
+     "era": 2.67,
+     "k": 174,
+     "bb": 32,
+     "whip": 0.91,
+     "k9": 9.1,
+     "avg": 0.199
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Milwaukee",
+     "value": "103-59, .636, 832 scored, 618 allowed, 55-26 at home, W5, 8-2 in ten",
+     "source_key": "mlb_brewers",
+     "source_url": "https://statsapi.mlb.com/api/v1/Schedule?sportId=1&teamId=158&startDate=2026-10-22&endDate=2026-11-02&hydrate=team,probablePitcher,linescore,decisions"
+    },
+    {
+     "team_or_item": "Tampa Bay",
+     "value": "98-64, .605, 736 scored, 650 allowed, 43-38 on the road, L1",
+     "source_key": "mlb_standings",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+    },
+    {
+     "team_or_item": "Drew Rasmussen",
+     "value": "2026: 30 starts, 16-5, 2.67 ERA, 172.0 IP, 174 K, 32 BB, 0.91 WHIP, .199 opponents average",
+     "source_key": "mlb_pitchers",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=694813,608379,801403,656876&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+    },
+    {
+     "team_or_item": "Logan Henderson",
+     "value": "Named Game 2 starter on MLB schedule feed; 2026 regular-season MLB pitching split is empty and left blank",
+     "source_key": "mlb_pitchers",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=694813,608379,801403,656876&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "World Series Game 2 at American Family Field, first pitch 2026-10-25T00:00Z",
+     "source_key": "mlb_schedule",
+     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02"
+    }
+   ],
+   "official_source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02",
+   "stats_source_url": "https://statsapi.mlb.com/api/v1/Schedule?sportId=1&teamId=158&startDate=2026-10-22&endDate=2026-11-02&hydrate=team,probablePitcher,linescore,decisions"
+  },
+  {
+   "sport": "Cricket",
+   "competition": "One-Day Cup 2026-27",
+   "id": "cri-40681",
+   "home": "Tasmanian Tigers",
+   "away": "Victoria",
+   "time_display": "23 October 2026, 7:30 pm viewer-local",
+   "venue": "Bellerive Oval, Hobart",
+   "source": "cricket_au",
+   "stats_source": "cricket_au_done",
+   "inputs": {
+    "format": "List A",
+    "home_note": "Tasmania",
+    "away_note": "Victoria"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "One-Day Cup 2026-27, Tasmanian Tigers v Victoria, Bellerive Oval, Hobart, 23 October 2026",
+     "source_key": "cricket_au",
+     "source_url": "https://www.cricket.com.au/matches"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches",
+   "stats_source_url": "https://www.cricket.com.au/matches?tab=completed"
+  },
+  {
+   "sport": "Cricket",
+   "competition": "One-Day Cup 2026-27",
+   "id": "cri-40683",
+   "home": "Western Australia",
+   "away": "New South Wales",
+   "time_display": "24 October 2026, 2:00 am viewer-local",
+   "venue": "WACA Ground, Perth",
+   "source": "cricket_au",
+   "stats_source": "cricket_au_done",
+   "inputs": {
+    "format": "List A"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "One-Day Cup 2026-27, Western Australia v New South Wales, WACA Ground, Perth, 24 October 2026",
+     "source_key": "cricket_au",
+     "source_url": "https://www.cricket.com.au/matches"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches",
+   "stats_source_url": "https://www.cricket.com.au/matches?tab=completed"
+  },
+  {
+   "sport": "Cricket",
+   "competition": "New Zealand v India T20Is 2026",
+   "id": "cri-41095",
+   "home": "New Zealand",
+   "away": "India",
+   "time_display": "24 October 2026, 3:00 am viewer-local",
+   "venue": "Hagley Oval, Christchurch",
+   "source": "cricket_au",
+   "stats_source": "cricket_au_done",
+   "inputs": {
+    "format": "T20I",
+    "home_form": "lost 1st T20I by 4 wickets",
+    "away_form": "won 1st T20I by 4 wickets"
+   },
+   "facts": [
+    {
+     "team_or_item": "1st T20I",
+     "value": "India won by 4 wickets: New Zealand 4-225 (20.0), India 6-230 (19.4), Hagley Oval, 22 October 2026",
+     "source_key": "cricket_au_done",
+     "source_url": "https://www.cricket.com.au/matches?tab=completed"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "2nd T20I, Hagley Oval, Christchurch, 24 October 2026",
+     "source_key": "cricket_au",
+     "source_url": "https://www.cricket.com.au/matches"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches",
+   "stats_source_url": "https://www.cricket.com.au/matches?tab=completed"
+  },
+  {
+   "sport": "Cricket",
+   "competition": "Pakistan ODI Tri-Series 2026",
+   "id": "cri-40981",
+   "home": "Pakistan",
+   "away": "England",
+   "time_display": "25 October 2026, 4:00 am viewer-local",
+   "venue": "Gaddafi Stadium, Lahore",
+   "source": "cricket_au",
+   "stats_source": "cricket_au_done",
+   "inputs": {
+    "format": "ODI",
+    "home_form": "not captured in this series",
+    "away_form": "lost to Sri Lanka by 2 wickets"
+   },
+   "facts": [
+    {
+     "team_or_item": "Sri Lanka v England",
+     "value": "Sri Lanka won by 2 wickets: England 4-429 (50.0), Sri Lanka 8-430 (49.5), Rawalpindi, 22 October 2026",
+     "source_key": "cricket_au_done",
+     "source_url": "https://www.cricket.com.au/matches?tab=completed"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Pakistan v England, Pakistan ODI Tri-Series, Gaddafi Stadium, Lahore, 25 October 2026",
+     "source_key": "cricket_au",
+     "source_url": "https://www.cricket.com.au/matches"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches",
+   "stats_source_url": "https://www.cricket.com.au/matches?tab=completed"
+  },
+  {
+   "sport": "Cricket",
+   "competition": "India v Zimbabwe ODIs 2026 (Women)",
+   "id": "cri-40394",
+   "home": "India Women",
+   "away": "Zimbabwe Women",
+   "time_display": "25 October 2026, 4:30 am viewer-local",
+   "venue": "Vadodara International Cricket Stadium",
+   "source": "cricket_au",
+   "stats_source": "cricket_au_done",
+   "inputs": {
+    "format": "WODI",
+    "home_form": "won 1st ODI by 9 wickets",
+    "away_form": "lost 1st ODI by 9 wickets"
+   },
+   "facts": [
+    {
+     "team_or_item": "1st ODI",
+     "value": "India Women won by 9 wickets: Zimbabwe Women 197 (49.5), India Women 1-200 (27.1), Vadodara, 23 October 2026",
+     "source_key": "cricket_au_done",
+     "source_url": "https://www.cricket.com.au/matches?tab=completed"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "2nd ODI, Vadodara International Cricket Stadium, 25 October 2026",
+     "source_key": "cricket_au",
+     "source_url": "https://www.cricket.com.au/matches"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches",
+   "stats_source_url": "https://www.cricket.com.au/matches?tab=completed"
+  },
+  {
+   "sport": "Cricket",
+   "competition": "South Africa v Australia Tests 2026",
+   "id": "cri-39992",
+   "home": "South Africa",
+   "away": "Australia",
+   "time_display": "27-31 October 2026, 4:30 am viewer-local",
+   "venue": "Newlands, Cape Town",
+   "source": "cricket_au",
+   "stats_source": "cricket_au_done",
+   "inputs": {
+    "format": "Test"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "3rd Test, South Africa v Australia, Newlands, Cape Town, 27-31 October 2026",
+     "source_key": "cricket_au",
+     "source_url": "https://www.cricket.com.au/matches"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches",
+   "stats_source_url": "https://www.cricket.com.au/matches?tab=completed"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026",
+   "id": "snk-ni-sf1",
+   "home": "Kyren Wilson",
+   "away": "Sam Craigie",
+   "time_display": "24 October 2026, 08:00 (WST site clock)",
+   "venue": "Waterfront Hall, Belfast",
+   "source": "wst_matches",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "best of 11 frames",
+    "home_rank_money": 716800,
+    "away_rank_money": 132000,
+    "home_note": "world no.9, £716,800",
+    "away_note": "Northern Ireland Open semi-finalist, beat Elliot Slessor 6-2"
+   },
+   "facts": [
+    {
+     "team_or_item": "Kyren Wilson",
+     "value": "world no.9 with £716,800 on the Johnstone's Paint World Rankings; beat Anthony McGill 6-1 in the quarter-final",
+     "source_key": "wst_rankings",
+     "source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+     "team_or_item": "Sam Craigie",
+     "value": "beat Elliot Slessor 6-2 in the quarter-final and Matthew Selt 4-2 in Round 3",
+     "source_key": "wst_matches",
+     "source_url": "https://www.wst.tv/matches/"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Northern Ireland Open Semi-Final 1 (Match 61), 24 October 2026, 08:00 WST clock",
+     "source_key": "wst_matches",
+     "source_url": "https://www.wst.tv/matches/"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/matches/",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026",
+   "id": "snk-ni-sf2",
+   "home": "Mark Williams",
+   "away": "Winner of Match 60 (Jak Jones / Scott Donaldson)",
+   "time_display": "24 October 2026, 14:00 (WST site clock)",
+   "venue": "Waterfront Hall, Belfast",
+   "source": "wst_matches",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "best of 11 frames",
+    "home_rank_money": 747400,
+    "away_rank_money": null
+   },
+   "line_blocked": "Mark Williams beat David Gilbert 6-4 in QF Match 59, but QF Match 60 (Jak Jones 4-4 Scott Donaldson) was still live in Frame 9 at capture time; no line is originated until the opponent is confirmed.",
+   "facts": [
+    {
+     "team_or_item": "Mark Williams",
+     "value": "world no.8 with £747,400; defeated David Gilbert 6-4 in Quarter-Final Match 59 on 23 October 2026",
+     "source_key": "wst_matches",
+     "source_url": "https://www.wst.tv/matches/"
+    },
+    {
+     "team_or_item": "Quarter-Final Match 60",
+     "value": "Jak Jones tied 4-4 with Scott Donaldson (29-0 in Frame 9 of 11) at 21:40 UTC",
+     "source_key": "wst_matches",
+     "source_url": "https://www.wst.tv/matches/"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Northern Ireland Open Semi-Final 2 (Match 62), 24 October 2026, 14:00 WST clock",
+     "source_key": "wst_matches",
+     "source_url": "https://www.wst.tv/matches/"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/matches/",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "id": "snk-ic-murphy",
+   "home": "Shaun Murphy",
+   "away": "Mitchell Mann",
+   "time_display": "30 October 2026, 21:30 (WST match centre)",
+   "venue": "Nanjing, China",
+   "source": "wst_ic",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "best of 11 frames",
+    "home_rank_money": 897350,
+    "away_rank_money": null,
+    "home_season": {
+     "matches": 20,
+     "win_rate": 0.65,
+     "ast": 21.0,
+     "breaks50": 46,
+     "centuries": 15
+    },
+    "away_season": {
+     "matches": 17,
+     "win_rate": 0.48,
+     "ast": 31.5,
+     "breaks50": 23,
+     "centuries": 4
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Shaun Murphy",
+     "value": "world no.7 with £897,350; 2026/27 season 20 matches, 65% win rate, 21.0s average shot time, 46 breaks of 50+, 15 centuries",
+     "source_key": "wst_rankings",
+     "source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+     "team_or_item": "Mitchell Mann",
+     "value": "2026/27 season 17 matches, 48% match win rate, 31.5s average shot time, 23 breaks of 50+, 4 centuries",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "International Championship Round 2, Nanjing, 30 October 2026, 21:30 per the match centre",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "id": "snk-ic-zhou",
+   "home": "Zhou Yuelong",
+   "away": "Liam Davies",
+   "time_display": "30 October 2026, 21:30 (WST match centre)",
+   "venue": "Nanjing, China",
+   "source": "wst_ic",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "best of 11 frames",
+    "home_rank_money": 359100,
+    "away_rank_money": null,
+    "home_season": {
+     "matches": 23,
+     "win_rate": 0.57,
+     "ast": 26.4,
+     "breaks50": 51,
+     "centuries": 14
+    },
+    "away_season": {
+     "matches": 28,
+     "win_rate": 0.75,
+     "ast": 24.9,
+     "breaks50": 57,
+     "centuries": 11
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Zhou Yuelong",
+     "value": "world no.17 with £359,100; 2026/27 season 23 matches, 57% win rate, 26.4s average shot time, 51 breaks of 50+, 14 centuries",
+     "source_key": "wst_rankings",
+     "source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+     "team_or_item": "Liam Davies",
+     "value": "2026/27 season 28 matches, 75% match win rate, 24.9s average shot time, 57 breaks of 50+, 11 centuries",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "International Championship Round 2, Nanjing, 30 October 2026",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "id": "snk-ic-liu",
+   "home": "Liu Hongyu",
+   "away": "Louis Heathcote",
+   "time_display": "30 October 2026, 21:30 (WST match centre)",
+   "venue": "Nanjing, China",
+   "source": "wst_ic",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "best of 11 frames",
+    "home_rank_money": null,
+    "away_rank_money": null
+   },
+   "line_blocked": "Both players are outside the published top-36 ranking-money list captured here; no numeric strength input, so no line is originated.",
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "International Championship Round 2, Nanjing, Liu Hongyu v Louis Heathcote",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "id": "snk-ic-white",
+   "home": "Jimmy White",
+   "away": "Mark Selby",
+   "time_display": "30 October 2026, 21:30 (WST match centre)",
+   "venue": "Nanjing, China",
+   "source": "wst_ic",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "best of 11 frames",
+    "home_rank_money": null,
+    "away_rank_money": 1070500,
+    "away_note": "world no.5, £1,070,500; one-year list leader £348,350"
+   },
+   "line_blocked": "Jimmy White's ranking-money figure is not on the top-36 WST rankings page captured here; no line is originated.",
+   "facts": [
+    {
+     "team_or_item": "Mark Selby",
+     "value": "world no.5 with £1,070,500 and top of the 2026/27 One Year List on £348,350",
+     "source_key": "wst_rankings",
+     "source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "International Championship Round 2, Nanjing, Jimmy White v Mark Selby",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "id": "snk-ic-szubarczyk",
+   "home": "Michal Szubarczyk",
+   "away": "Wildcard 1",
+   "time_display": "30 October 2026, 21:30 (WST match centre)",
+   "venue": "Nanjing, China",
+   "source": "wst_ic",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "pre-qualifier"
+   },
+   "line_blocked": "Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.",
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "International Championship pre-qualifier, Michal Szubarczyk v Wildcard 1 (opponent identity not published)",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "id": "snk-ic-hallworth",
+   "home": "Steven Hallworth",
+   "away": "Wildcard 3",
+   "time_display": "30 October 2026, 21:30 (WST match centre)",
+   "venue": "Nanjing, China",
+   "source": "wst_ic",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "pre-qualifier"
+   },
+   "line_blocked": "Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.",
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "International Championship pre-qualifier, Steven Hallworth v Wildcard 3 (opponent identity not published)",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Snooker",
+   "competition": "International Championship 2026",
+   "id": "snk-ic-liuwenwei",
+   "home": "Liu Wenwei",
+   "away": "Wildcard 4",
+   "time_display": "30 October 2026, 21:30 (WST match centre)",
+   "venue": "Nanjing, China",
+   "source": "wst_ic",
+   "stats_source": "wst_rankings",
+   "inputs": {
+    "format": "pre-qualifier"
+   },
+   "line_blocked": "Opponent is published only as a wildcard slot, so identity is unconfirmed; no line is originated.",
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "International Championship pre-qualifier, Liu Wenwei v Wildcard 4 (opponent identity not published)",
+     "source_key": "wst_ic",
+     "source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "stats_source_url": "https://www.wst.tv/rankings/"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-1",
+   "home": "Ross Smith",
+   "away": "Damon Heta",
+   "time_display": "24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": 158000,
+    "away_et_money": null,
+    "home_seed": 1,
+    "away_seed": 17,
+    "session": "Saturday afternoon"
+   },
+   "facts": [
+    {
+     "team_or_item": "Ross Smith",
+     "value": "top seed on the 2026 European Tour Rankings with £158,000; beat Karel Sedlacek 6-4 in Round One",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    },
+    {
+     "team_or_item": "Damon Heta",
+     "value": "17th seed; beat James Wade 6-5 in Round One",
+     "source_key": "pdc_day_one",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-2",
+   "home": "Gian van Veen",
+   "away": "Luke Woodhouse",
+   "time_display": "24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": null,
+    "away_et_money": null,
+    "home_seed": 8,
+    "away_seed": 9,
+    "session": "Saturday afternoon"
+   },
+   "facts": [
+    {
+     "team_or_item": "Gian van Veen",
+     "value": "eighth seed and reigning champion; beat Andrew Gilding 6-4; set a 120.24 European Tour record average in Maastricht",
+     "source_key": "pdc_day_one",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    },
+    {
+     "team_or_item": "Luke Woodhouse",
+     "value": "ninth seed; hit a nine-dart finish in a 6-3 Round One win over Dirk van Duijvenbode",
+     "source_key": "pdc_day_one",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-3",
+   "home": "Cameron Menzies",
+   "away": "Gerwyn Price",
+   "time_display": "24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": null,
+    "away_et_money": null,
+    "home_seed": 29,
+    "away_seed": 13,
+    "session": "Saturday afternoon"
+   },
+   "facts": [
+    {
+     "team_or_item": "Cameron Menzies",
+     "value": "29th seed; beat fourth seed Niels Zonneveld 6-3 in Round One",
+     "source_key": "pdc_day_one",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    },
+    {
+     "team_or_item": "Gerwyn Price",
+     "value": "13th seed; beat Rob Cross 6-2 in Round One",
+     "source_key": "pdc_day_one",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-4",
+   "home": "Stephen Bunting",
+   "away": "Kim Huybrechts",
+   "time_display": "24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": null,
+    "away_et_money": null,
+    "home_seed": 28,
+    "away_seed": null,
+    "session": "Saturday afternoon"
+   },
+   "facts": [
+    {
+     "team_or_item": "Stephen Bunting",
+     "value": "28th seed; beat fifth seed Danny Noppert 6-5 with a 160 checkout in the deciding leg",
+     "source_key": "pdc_day_one",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    },
+    {
+     "team_or_item": "Kim Huybrechts",
+     "value": "late replacement for the withdrawn Luke Humphries; holds no 2026 European Tour seeding; beat Ryan Searle 6-1 at a 103.81 average",
+     "source_key": "pdc_day_one",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-5",
+   "home": "Wessel Nijman",
+   "away": "Ryan Joyce",
+   "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": 124000,
+    "away_et_money": null,
+    "home_seed": 2,
+    "away_seed": 15,
+    "session": "Saturday evening"
+   },
+   "facts": [
+    {
+     "team_or_item": "Wessel Nijman",
+     "value": "second seed with £124,000 on the 2026 European Tour Rankings",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    },
+    {
+     "team_or_item": "Ryan Joyce",
+     "value": "15th seed",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-6",
+   "home": "Jonny Clayton",
+   "away": "Josh Rock",
+   "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": null,
+    "away_et_money": null,
+    "home_seed": 7,
+    "away_seed": 10,
+    "session": "Saturday evening"
+   },
+   "facts": [
+    {
+     "team_or_item": "Jonny Clayton",
+     "value": "seventh seed for the event",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    },
+    {
+     "team_or_item": "Josh Rock",
+     "value": "tenth seed for the event",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-7",
+   "home": "Krzysztof Ratajski",
+   "away": "Michael van Gerwen",
+   "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": 89500,
+    "away_et_money": null,
+    "home_seed": 3,
+    "away_seed": 19,
+    "session": "Saturday evening"
+   },
+   "facts": [
+    {
+     "team_or_item": "Krzysztof Ratajski",
+     "value": "third seed with £89,500 on the 2026 European Tour Rankings",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    },
+    {
+     "team_or_item": "Michael van Gerwen",
+     "value": "four-time European Championship winner; 19th seed",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "id": "drt-r2-8",
+   "home": "Nathan Aspinall",
+   "away": "Luke Littler",
+   "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
+   "venue": "Westfalenhalle, Dortmund",
+   "source": "pdc_schedule",
+   "stats_source": "pdc_rules",
+   "inputs": {
+    "format": "best of 11 legs",
+    "home_et_money": null,
+    "away_et_money": null,
+    "home_seed": 6,
+    "away_seed": null,
+    "session": "Saturday evening"
+   },
+   "facts": [
+    {
+     "team_or_item": "Nathan Aspinall",
+     "value": "sixth seed for the event",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    },
+    {
+     "team_or_item": "Luke Littler",
+     "value": "world number one and reigning World Champion; his 2026 European Tour seeding is not published in the draw bracket captured here",
+     "source_key": "pdc_schedule",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "stats_source_url": "https://www.pdc.tv/order-of-merit-rules"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 250 Brussels",
+   "id": "ten-brussels-sf2",
+   "home": "Arthur Fils",
+   "away": "Jan-Lennard Struff",
+   "time_display": "2026-10-24 Not before 18:30 local (Centre Court)",
+   "source": "atp_brussels",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 3325,
+    "away_points": 929
+   },
+   "facts": [
+    {
+     "team_or_item": "Arthur Fils",
+     "value": "world no.10 with 3,325 ATP points, top seed in Brussels; defeated fifth seed Alex Michelsen 6-4 7-6(12) in the quarter-final",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Jan-Lennard Struff",
+     "value": "world no.58 with 929 ATP points; defeated Zizou Bergs in the Brussels quarter-final",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Brussels Semifinal 2, Centre Court, Saturday 24 October 2026 Not Before 18:30 local",
+     "source_key": "atp_brussels",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 250 Brussels",
+   "id": "ten-brussels-sf1",
+   "home": "Francisco Cerundolo",
+   "away": "Tallon Griekspoor",
+   "time_display": "2026-10-24 Not before 16:00 local (Centre Court)",
+   "source": "atp_brussels",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 2220,
+    "away_points": 885
+   },
+   "facts": [
+    {
+     "team_or_item": "Francisco Cerundolo",
+     "value": "world no.21 with 2,220 ATP points, seeded third in Brussels",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Tallon Griekspoor",
+     "value": "world no.60 with 885 ATP points; reached the Brussels semi-finals",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Brussels Semifinal 1, Centre Court, Saturday 24 October 2026 Not Before 16:00 local",
+     "source_key": "atp_brussels",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 250 Almaty",
+   "id": "ten-almaty-sf1",
+   "home": "Daniil Medvedev",
+   "away": "Alexander Bublik",
+   "time_display": "2026-10-24 Not before 18:00 local (Center Court)",
+   "source": "atp_almaty",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 3660,
+    "away_points": 2275
+   },
+   "facts": [
+    {
+     "team_or_item": "Daniil Medvedev",
+     "value": "world no.5 with 3,660 ATP points; beat Terence Atmane 6-4 6-4 in the quarter-final",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Alexander Bublik",
+     "value": "world no.19 with 2,275 ATP points; beat Karen Khachanov 4-6 7-6(5) 7-6(5)",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Almaty Semifinal 2, Center Court, Saturday 24 October 2026 Not Before 18:00 local",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 250 Lyon",
+   "id": "ten-lyon-sf2",
+   "home": "Tommy Paul",
+   "away": "Taylor Fritz",
+   "time_display": "2026-10-24 Saturday Semifinal (Court Central Auvergne-Rhone-Alpes)",
+   "source": "atp_lyon",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 2575,
+    "away_points": 2880
+   },
+   "facts": [
+    {
+     "team_or_item": "Taylor Fritz",
+     "value": "world no.14 with 2,880 ATP points, second seed; beat Daniel Altmaier 7-6(5) 6-2 in the Lyon quarter-final",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Tommy Paul",
+     "value": "world no.15 with 2,575 ATP points, fourth seed; beat Corentin Moutet 6-4 3-6 6-3 in the Lyon quarter-final",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Grand Prix Auvergne-Rhone-Alpes (Lyon) Semifinal, Tommy Paul (4) v Taylor Fritz (2)",
+     "source_key": "atp_lyon",
+     "source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 500 Vienna Qualifying",
+   "id": "ten-vienna-q1f",
+   "home": "Adolfo Daniel Vallejo",
+   "away": "Lorenzo Sonego",
+   "time_display": "2026-10-24 Followed by on Glaubandich Court",
+   "source": "atp_vienna",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 997,
+    "away_points": 658
+   },
+   "facts": [
+    {
+     "team_or_item": "Adolfo Daniel Vallejo",
+     "value": "world no.54 with 997 ATP points, seeded second in Vienna qualifying",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Lorenzo Sonego",
+     "value": "world no.89 with 658 ATP points",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Erste Bank Open Vienna Qualifying Round 1, Glaubandich Court, 24 October 2026",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/scores/current/vienna/337/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/vienna/337/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 500 Vienna Qualifying",
+   "id": "ten-vienna-q1d",
+   "home": "Thiago Agustin Tirante",
+   "away": "Adrian Mannarino",
+   "time_display": "2026-10-24 Not before 18:00 local (Centre Court)",
+   "source": "atp_vienna",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 1032,
+    "away_points": 743
+   },
+   "facts": [
+    {
+     "team_or_item": "Thiago Agustin Tirante",
+     "value": "world no.50 with 1,032 ATP points, top seed in Vienna qualifying",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Adrian Mannarino",
+     "value": "world no.79 with 743 ATP points",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Erste Bank Open Vienna Qualifying Round 1, Centre Court, 24 October 2026 Not Before 18:00 local",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/scores/current/vienna/337/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/vienna/337/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 500 Basel Qualifying",
+   "id": "ten-basel-q1a",
+   "home": "Marcos Giron",
+   "away": "Yannick Hanfmann",
+   "time_display": "2026-10-24 Starts at 11:00 local (Center Court)",
+   "source": "atp_basel",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 676,
+    "away_points": 923
+   },
+   "facts": [
+    {
+     "team_or_item": "Yannick Hanfmann",
+     "value": "world no.59 with 923 ATP points, sixth seed in Basel qualifying",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Marcos Giron",
+     "value": "world no.88 with 676 ATP points",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Swiss Indoors Basel Qualifying Round 1, Center Court, 24 October 2026 at 11:00 local",
+     "source_key": "atp_basel",
+     "source_url": "https://www.atptour.com/en/scores/current/basel/328/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/basel/328/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 500 Basel Qualifying",
+   "id": "ten-basel-q1e",
+   "home": "Miomir Kecmanovic",
+   "away": "Rinky Hijikata",
+   "time_display": "2026-10-24 Starts at 11:00 local (IWB Court 1)",
+   "source": "atp_basel",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 930,
+    "away_points": 689
+   },
+   "facts": [
+    {
+     "team_or_item": "Miomir Kecmanovic",
+     "value": "world no.57 with 930 ATP points, fourth seed in Basel qualifying",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Rinky Hijikata",
+     "value": "world no.86 with 689 ATP points",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Swiss Indoors Basel Qualifying Round 1, IWB Court 1, 24 October 2026 at 11:00 local",
+     "source_key": "atp_basel",
+     "source_url": "https://www.atptour.com/en/scores/current/basel/328/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/basel/328/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 500 Basel Qualifying",
+   "id": "ten-basel-q1f",
+   "home": "Juan Manuel Cerundolo",
+   "away": "Zachary Svajda",
+   "time_display": "2026-10-24 Followed by on IWB Court 1",
+   "source": "atp_basel",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 1000,
+    "away_points": 759
+   },
+   "facts": [
+    {
+     "team_or_item": "Juan Manuel Cerundolo",
+     "value": "world no.53 with 1,000 ATP points, second seed in Basel qualifying",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Zachary Svajda",
+     "value": "world no.77 with 759 ATP points",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Swiss Indoors Basel Qualifying Round 1, IWB Court 1, 24 October 2026",
+     "source_key": "atp_basel",
+     "source_url": "https://www.atptour.com/en/scores/current/basel/328/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/basel/328/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 250 Almaty",
+   "id": "ten-almaty-sf2",
+   "home": "Nikoloz Basilashvili",
+   "away": "Stefanos Tsitsipas",
+   "time_display": "2026-10-24 Not before 15:00 local (Center Court)",
+   "source": "atp_almaty",
+   "stats_source": "atp_rankings",
+   "line_blocked": null,
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": null,
+    "away_points": 1330
+   },
+   "facts": [
+    {
+     "team_or_item": "Stefanos Tsitsipas",
+     "value": "world no.39 with 1,330 ATP points, seeded seventh in Almaty",
+     "source_key": "atp_rankings",
+     "source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+    },
+    {
+     "team_or_item": "Nikoloz Basilashvili",
+     "value": "qualified for the Almaty main draw; outside the published Top 100 rankings table captured here",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Tennis",
+   "competition": "ATP 250 Lyon",
+   "id": "ten-lyon-sf1",
+   "home": "Flavio Cobolli",
+   "away": "Winner of Van Assche / Musetti",
+   "time_display": "2026-10-24 Saturday Semifinal (Court Central Auvergne-Rhone-Alpes)",
+   "source": "atp_lyon",
+   "stats_source": "atp_rankings",
+   "line_blocked": "Flavio Cobolli beat Brandon Nakashima 4-6 6-4 6-4 in the quarter-final, but Luca Van Assche v Lorenzo Musetti was still live in Set 3 (0-6, 7-6(5), 3-2) at capture time; no line is originated.",
+   "inputs": {
+    "format": "best of three sets",
+    "home_points": 3640,
+    "away_points": null
+   },
+   "facts": [
+    {
+     "team_or_item": "Flavio Cobolli",
+     "value": "world no.6 with 3,640 ATP points, top seed in Lyon; defeated Brandon Nakashima 4-6 6-4 6-4 in QF",
+     "source_key": "atp_lyon",
+     "source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule"
+    },
+    {
+     "team_or_item": "Quarter-final in play",
+     "value": "Luca Van Assche (#48, 1,065 pts) led Lorenzo Musetti (#26, 1,870 pts) 0-6 7-6(5) 3-2 in Set 3 at 21:40 UTC",
+     "source_key": "atp_lyon",
+     "source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+   "stats_source_url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100"
+  },
+  {
+   "sport": "Golf",
+   "competition": "PGA TOUR",
+   "id": "golf-bermuda",
+   "home": "Butterfield Bermuda Championship",
+   "away": null,
+   "time_display": "22-25 October 2026, Round 3 tee times Saturday 24 October",
+   "venue": "Port Royal Golf Course, Southampton, Bermuda",
+   "source": "pgatour",
+   "stats_source": "pgatour",
+   "inputs": {
+    "market": "outright",
+    "after_round": 2,
+    "cut_line": -5,
+    "field": [
+     [
+      "Kensei Hirata",
+      "JPN",
+      -13,
+      65,
+      64,
+      129,
+      "F"
+     ],
+     [
+      "Chandler Blanchet",
+      "USA",
+      -13,
+      62,
+      67,
+      129,
+      "F"
+     ],
+     [
+      "Seamus Power",
+      "IRL",
+      -12,
+      66,
+      64,
+      130,
+      "F*"
+     ],
+     [
+      "Corey Conners",
+      "CAN",
+      -12,
+      63,
+      67,
+      130,
+      "F*"
+     ],
+     [
+      "Eric Cole",
+      "USA",
+      -12,
+      65,
+      65,
+      130,
+      "F"
+     ],
+     [
+      "Ben Silverman",
+      "CAN",
+      -12,
+      63,
+      67,
+      130,
+      "F"
+     ],
+     [
+      "Danny Walker",
+      "USA",
+      -12,
+      63,
+      67,
+      130,
+      "F"
+     ],
+     [
+      "David Skinns",
+      "ENG",
+      -11,
+      68,
+      63,
+      131,
+      "F"
+     ],
+     [
+      "Denny McCarthy",
+      "USA",
+      -11,
+      67,
+      64,
+      131,
+      "F"
+     ]
+    ]
+   },
+   "facts": [
+    {
+     "team_or_item": "Leaderboard",
+     "value": "After 36 holes: Hirata (65-64) and Blanchet (62-67) T1 at -13 (129); Power, Conners, Cole, Silverman, and Walker T3 at -12 (130)",
+     "source_key": "pgatour",
+     "source_url": "https://www.pgatour.com/leaderboard"
+    },
+    {
+     "team_or_item": "Cut line",
+     "value": "-5 projected 36-hole cut at Port Royal Golf Course",
+     "source_key": "pgatour",
+     "source_url": "https://www.pgatour.com/leaderboard"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Butterfield Bermuda Championship, Port Royal Golf Course, 22-25 October 2026",
+     "source_key": "pgatour",
+     "source_url": "https://www.pgatour.com/leaderboard"
+    }
+   ],
+   "official_source_url": "https://www.pgatour.com/leaderboard",
+   "stats_source_url": "https://www.pgatour.com/leaderboard"
+  },
+  {
+   "sport": "Golf",
+   "competition": "DP World Tour",
+   "id": "golf-genesis",
+   "home": "Genesis Championship",
+   "away": null,
+   "time_display": "Round 3 from 24 October 2026, tee times from 09:06 local",
+   "venue": "Korea",
+   "source": "dpwt",
+   "stats_source": "dpwt",
+   "inputs": {
+    "market": "outright",
+    "after_round": 2,
+    "field": [
+     [
+      "Antoine Rozner",
+      "FRA",
+      -10,
+      67,
+      65,
+      132
+     ],
+     [
+      "Casey Jarvis",
+      "RSA",
+      -10,
+      65,
+      67,
+      132
+     ],
+     [
+      "Martin Couvra",
+      "FRA",
+      -7,
+      69,
+      66,
+      135
+     ],
+     [
+      "Filippo Celli",
+      "ITA",
+      -7,
+      69,
+      66,
+      135
+     ],
+     [
+      "Ryan Fox",
+      "NZL",
+      -7,
+      68,
+      67,
+      135
+     ],
+     [
+      "Sanghun Shin",
+      "KOR",
+      -7,
+      66,
+      69,
+      135
+     ],
+     [
+      "Si Woo Kim",
+      "KOR",
+      -6,
+      67,
+      69,
+      136
+     ],
+     [
+      "Daihan Lee",
+      "KOR",
+      -6,
+      69,
+      67,
+      136
+     ]
+    ]
+   },
+   "facts": [
+    {
+     "team_or_item": "Leaderboard",
+     "value": "After two rounds: Rozner and Jarvis -10 (132), Couvra, Celli, Fox and Shin -7 (135)",
+     "source_key": "dpwt",
+     "source_url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard?round=2"
+    },
+    {
+     "team_or_item": "Schedule",
+     "value": "Genesis Championship, DP World Tour, round three from 24 October 2026",
+     "source_key": "dpwt",
+     "source_url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard?round=2"
+    }
+   ],
+   "official_source_url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard?round=2",
+   "stats_source_url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard?round=2"
+  },
+  {
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "id": "grey-scurry",
+   "home": "Arena Racing Company Scurry Gold Cup Final",
+   "away": null,
+   "time_display": "24 October 2026 (evening card)",
+   "venue": "Dunstall Park, Wolverhampton",
+   "source": "gbgb_schedule",
+   "stats_source": "gbgb_scurry",
+   "inputs": {
+    "market": "outright",
+    "distance_m": 270,
+    "purse_gbp": 12500,
+    "runners": [
+     [
+      "Shadow Storm",
+      "R P Rees",
+      15.66
+     ],
+     [
+      "Avarua Lake",
+      "R P Rees",
+      15.86
+     ],
+     [
+      "Roanna Mamba",
+      "M P Brown",
+      15.73
+     ],
+     [
+      "Ballinakill Liam",
+      "M A Wallis",
+      null
+     ],
+     [
+      "Magical Jason",
+      "K R Hutton",
+      null
+     ],
+     [
+      "Newinn Souly",
+      "unknown",
+      null
+     ]
+    ]
+   },
+   "facts": [
+    {
+     "team_or_item": "Final",
+     "value": "Arena Racing Company Scurry Gold Cup Final, 270m, Dunstall Park, 24 October 2026, £12,500 to the winner",
+     "source_key": "gbgb_schedule",
+     "source_url": "https://www.gbgb.org.uk/open-race-schedule/"
+    },
+    {
+     "team_or_item": "Semi-final 3",
+     "value": "Shadow Storm won in 15.66s (-5), a length and a quarter clear of Newinn Souly",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+    },
+    {
+     "team_or_item": "Semi-final 1",
+     "value": "Avarua Lake won in 15.86s (-5) from Ballinakill Liam",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+    },
+    {
+     "team_or_item": "Semi-final 2",
+     "value": "Roanna Mamba won in 15.73s (-5) from Magical Jason",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+    }
+   ],
+   "official_source_url": "https://www.gbgb.org.uk/open-race-schedule/",
+   "stats_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332"
+  },
+  {
+   "sport": "Greyhounds",
+   "competition": "GBGB Category One",
+   "id": "grey-oaks",
+   "home": "Premier Greyhound Racing Oaks Final",
+   "away": null,
+   "time_display": "24 October 2026 (evening card)",
+   "venue": "Dunstall Park, Wolverhampton",
+   "source": "gbgb_schedule",
+   "stats_source": "gbgb_oaks",
+   "inputs": {
+    "market": "outright",
+    "distance_m": 480,
+    "purse_gbp": 20000,
+    "runners": [
+     [
+      "Fahrenheit Jess",
+      "G D Holland",
+      27.87
+     ],
+     [
+      "Slingshot Poppy",
+      "B Fairbairn",
+      27.9
+     ],
+     [
+      "Signet Nayla",
+      "K R Hutton",
+      28.35
+     ],
+     [
+      "Strike It Skye",
+      "M A Wallis",
+      null
+     ],
+     [
+      "Holding Hollie",
+      "R Taberner",
+      null
+     ],
+     [
+      "Ballydoyle Tina",
+      "G D Holland",
+      null
+     ]
+    ]
+   },
+   "facts": [
+    {
+     "team_or_item": "Final",
+     "value": "Premier Greyhound Racing Oaks Final, 480m, Dunstall Park, 24 October 2026, £20,000 to the winner",
+     "source_key": "gbgb_schedule",
+     "source_url": "https://www.gbgb.org.uk/open-race-schedule/"
+    },
+    {
+     "team_or_item": "Semi-final 2",
+     "value": "Fahrenheit Jess made all in a fastest-of-the-round 27.87s (-10) from Holding Hollie",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335"
+    },
+    {
+     "team_or_item": "Semi-final 3",
+     "value": "Slingshot Poppy won in 27.90s (-10) from Ballydoyle Tina",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335"
+    },
+    {
+     "team_or_item": "Semi-final 1",
+     "value": "Signet Nayla won in 28.35s (-10) from Strike It Skye",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335"
+    }
+   ],
+   "official_source_url": "https://www.gbgb.org.uk/open-race-schedule/",
+   "stats_source_url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335"
+  },
+  {
+   "sport": "Handball",
+   "competition": "Daikin StarLigue",
+   "id": "hb-nantes-chambery",
+   "home": "Nantes",
+   "away": "Chambéry",
+   "start_utc": "2026-10-24T19:00:00+02:00",
+   "time_display": "Sat 24 October, 19:00 local",
+   "venue": null,
+   "source": "lnh_cal",
+   "stats_source": "lnh_table",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 6,
+     "l": 1,
+     "d": 0,
+     "gf": 244,
+     "ga": 203
+    },
+    "away": {
+     "gp": 7,
+     "w": 2,
+     "l": 3,
+     "d": 2,
+     "gf": 224,
+     "ga": 231
+    },
+    "competition": "Daikin StarLigue"
+   },
+   "facts": [
+    {
+     "team_or_item": "Nantes",
+     "value": "6-1-0 in 7 games, 244 goals for, 203 against",
+     "source_key": "lnh_table",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+    },
+    {
+     "team_or_item": "Chambéry",
+     "value": "2-3-2 in 7 games, 224 goals for, 231 against",
+     "source_key": "lnh_table",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+    },
+    {
+     "team_or_item": "Journée 08",
+     "value": "Nantes v Chambéry, Sat 24 October, 19:00 local (following Friday's five completed J08 games)",
+     "source_key": "lnh_cal",
+     "source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "stats_source_url": "https://www.lnh.fr/daikin-starligue/classement"
+  },
+  {
+   "sport": "Handball",
+   "competition": "Daikin StarLigue",
+   "id": "hb-sr-paris",
+   "home": "Saint-Raphaël",
+   "away": "Paris",
+   "start_utc": "2026-10-25T16:00:00+01:00",
+   "time_display": "Sun 25 October, 16:00 local",
+   "venue": null,
+   "source": "lnh_cal",
+   "stats_source": "lnh_table",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 2,
+     "l": 5,
+     "d": 0,
+     "gf": 207,
+     "ga": 225
+    },
+    "away": {
+     "gp": 7,
+     "w": 7,
+     "l": 0,
+     "d": 0,
+     "gf": 239,
+     "ga": 190
+    },
+    "competition": "Daikin StarLigue"
+   },
+   "facts": [
+    {
+     "team_or_item": "Saint-Raphaël",
+     "value": "2-5-0 in 7 games, 207 goals for, 225 against",
+     "source_key": "lnh_table",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+    },
+    {
+     "team_or_item": "Paris",
+     "value": "7-0-0 in 7 games, 239 goals for, 190 against",
+     "source_key": "lnh_table",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+    },
+    {
+     "team_or_item": "Journée 08",
+     "value": "Saint-Raphaël v Paris, Sun 25 October, 16:00 local (following Friday's five completed J08 games)",
+     "source_key": "lnh_cal",
+     "source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "stats_source_url": "https://www.lnh.fr/daikin-starligue/classement"
+  },
+  {
+   "sport": "Handball",
+   "competition": "Daikin StarLigue",
+   "id": "hb-montpellier-saran",
+   "home": "Montpellier",
+   "away": "Saran",
+   "start_utc": "2026-10-25T17:00:00+01:00",
+   "time_display": "Sun 25 October, 17:00 local",
+   "venue": null,
+   "source": "lnh_cal",
+   "stats_source": "lnh_table",
+   "inputs": {
+    "home": {
+     "gp": 7,
+     "w": 4,
+     "l": 1,
+     "d": 2,
+     "gf": 234,
+     "ga": 205
+    },
+    "away": {
+     "gp": 7,
+     "w": 3,
+     "l": 4,
+     "d": 0,
+     "gf": 202,
+     "ga": 216
+    },
+    "competition": "Daikin StarLigue"
+   },
+   "facts": [
+    {
+     "team_or_item": "Montpellier",
+     "value": "4-1-2 in 7 games, 234 goals for, 205 against",
+     "source_key": "lnh_table",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+    },
+    {
+     "team_or_item": "Saran",
+     "value": "3-4-0 in 7 games, 202 goals for, 216 against",
+     "source_key": "lnh_table",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+    },
+    {
+     "team_or_item": "Journée 08",
+     "value": "Montpellier v Saran, Sun 25 October, 17:00 local (following Friday's five completed J08 games)",
+     "source_key": "lnh_cal",
+     "source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "stats_source_url": "https://www.lnh.fr/daikin-starligue/classement"
+  },
+  {
+   "sport": "Handball",
+   "competition": "EHF Champions League",
+   "id": "hb-paris-aalborg",
+   "home": "Paris",
+   "away": "Aalborg",
+   "start_utc": "2026-10-28T20:45:00+01:00",
+   "time_display": "Wed 28 October, 20:45 local (EHF CL R6)",
+   "venue": null,
+   "source": "lnh_cal",
+   "stats_source": "lnh_table",
+   "inputs": {
+    "competition": "EHF Champions League"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "EHF Champions League Round 6, Paris v Aalborg, 2026",
+     "source_key": "lnh_ehf",
+     "source_url": "https://www.lnh.fr/autres-competitions/ligue-des-champions"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "stats_source_url": "https://www.lnh.fr/daikin-starligue/classement"
+  },
+  {
+   "sport": "Handball",
+   "competition": "EHF Champions League",
+   "id": "hb-montpellier-bucarest",
+   "home": "Montpellier",
+   "away": "Bucarest",
+   "start_utc": "2026-10-29T20:45:00+01:00",
+   "time_display": "Thu 29 October, 20:45 local (EHF CL R6)",
+   "venue": null,
+   "source": "lnh_cal",
+   "stats_source": "lnh_table",
+   "inputs": {
+    "competition": "EHF Champions League"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "EHF Champions League Round 6, Montpellier v Bucarest, 2026",
+     "source_key": "lnh_ehf",
+     "source_url": "https://www.lnh.fr/autres-competitions/ligue-des-champions"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "stats_source_url": "https://www.lnh.fr/daikin-starligue/classement"
+  },
+  {
+   "sport": "Handball",
+   "competition": "EHF Champions League",
+   "id": "hb-plock-nantes",
+   "home": "Plock",
+   "away": "Nantes",
+   "start_utc": "2026-10-28T18:45:00+01:00",
+   "time_display": "Wed 28 October, 18:45 local (EHF CL R6)",
+   "venue": null,
+   "source": "lnh_cal",
+   "stats_source": "lnh_table",
+   "inputs": {
+    "competition": "EHF Champions League"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "EHF Champions League Round 6, Plock v Nantes, 2026",
+     "source_key": "lnh_ehf",
+     "source_url": "https://www.lnh.fr/autres-competitions/ligue-des-champions"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "stats_source_url": "https://www.lnh.fr/daikin-starligue/classement"
+  },
+  {
+   "sport": "Motor Racing",
+   "competition": "Formula 1",
+   "id": "f1-usgp",
+   "home": "United States Grand Prix",
+   "away": null,
+   "start_utc": "2026-10-25T20:00:00Z",
+   "time_display": "25 October 2026, 16:00 track time (UTC-5, per F1 schedule)",
+   "venue": "Circuit of The Americas, Austin",
+   "source": "f1_usgp",
+   "stats_source": "f1_drivers",
+   "inputs": {
+    "market": "race winner",
+    "circuit_km": 5.513,
+    "laps": 56,
+    "distance_km": 308.432,
+    "fp1": [
+     [
+      "Charles Leclerc",
+      "1:36.052"
+     ],
+     [
+      "Max Verstappen",
+      "+0.084s"
+     ],
+     [
+      "Lando Norris",
+      "+0.245s"
+     ],
+     [
+      "George Russell",
+      "+0.326s"
+     ],
+     [
+      "Kimi Antonelli",
+      "+0.481s"
+     ]
+    ],
+    "points": {
+     "Kimi Antonelli": 340,
+     "George Russell": 238,
+     "Lewis Hamilton": 229,
+     "Max Verstappen": 221,
+     "Charles Leclerc": 215,
+     "Lando Norris": 201,
+     "Oscar Piastri": 138,
+     "Isack Hadjar": 97,
+     "Liam Lawson": 75,
+     "Pierre Gasly": 41,
+     "Arvid Lindblad": 38,
+     "Franco Colapinto": 27,
+     "Oliver Bearman": 23,
+     "Nico Hulkenberg": 13,
+     "Gabriel Bortoleto": 10
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Circuit",
+     "value": "Circuit of The Americas: 5.513 km, 56 laps, 308.432 km race distance",
+     "source_key": "f1_usgp",
+     "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+    },
+    {
+     "team_or_item": "FP1",
+     "value": "Leclerc 1:36.052 from Verstappen +0.084s, Norris +0.245s, Russell +0.326s, Antonelli +0.481s",
+     "source_key": "f1_usgp",
+     "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+    },
+    {
+     "team_or_item": "Standings",
+     "value": "Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201 after Round 17",
+     "source_key": "f1_drivers",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers"
+    },
+    {
+     "team_or_item": "Session",
+     "value": "Qualifying 24 October 17:00 track time; race 25 October 16:00 track time",
+     "source_key": "f1_usgp",
+     "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+    }
+   ],
+   "official_source_url": "https://www.formula1.com/en/racing/2026/united-states",
+   "stats_source_url": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  {
+   "sport": "Motor Racing",
+   "competition": "Formula 1",
+   "id": "f1-wdc",
+   "home": "Formula 1 Drivers' Championship 2026",
+   "away": null,
+   "time_display": "Season ends 6 December 2026",
+   "venue": null,
+   "source": "f1_drivers",
+   "stats_source": "f1_drivers",
+   "inputs": {
+    "market": "outright",
+    "rounds_completed": 17,
+    "points": {
+     "Kimi Antonelli": 340,
+     "George Russell": 238,
+     "Lewis Hamilton": 229,
+     "Max Verstappen": 221,
+     "Charles Leclerc": 215,
+     "Lando Norris": 201,
+     "Oscar Piastri": 138
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Drivers' Championship",
+     "value": "After 17 rounds: Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138",
+     "source_key": "f1_drivers",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers"
+    }
+   ],
+   "official_source_url": "https://www.formula1.com/en/results/2026/drivers",
+   "stats_source_url": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-png-samoa",
+   "home": "Papua New Guinea",
+   "away": "Samoa",
+   "start_utc": "2026-10-24T04:25:00Z",
+   "time_display": "24 October, 12:25am ET (NRL display)",
+   "venue": "Santos National Football Stadium, Port Moresby",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "3rd",
+    "away_ladder": "2nd",
+    "home_margin": 24,
+    "away_margin": 74
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "Papua New Guinea beat Lebanon 42-18 in Port Moresby",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Round 1",
+     "value": "Samoa beat France 78-4 at CommBank Stadium",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Ladder",
+     "value": "Samoa are 2nd and Papua New Guinea 3rd after Round 1",
+     "source_key": "nrl_r2",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-eng-fra",
+   "home": "England",
+   "away": "France",
+   "start_utc": "2026-10-24T06:35:00Z",
+   "time_display": "24 October, 2:35am ET (NRL display)",
+   "venue": "HBF Park, Perth",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "4th",
+    "away_ladder": "6th",
+    "home_margin": -18,
+    "away_margin": -74
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "England lost 12-30 to Tonga at HBF Park",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Round 1",
+     "value": "France lost 4-78 to Samoa",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Ladder",
+     "value": "England 4th, France 6th",
+     "source_key": "nrl_r2",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-nz-cook",
+   "home": "New Zealand",
+   "away": "Cook Islands",
+   "start_utc": "2026-10-25T05:05:00Z",
+   "time_display": "25 October, 1:05am ET (NRL display)",
+   "venue": "One NZ Stadium, Christchurch",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "3rd",
+    "away_ladder": "4th",
+    "home_margin": -2,
+    "away_margin": -28
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "New Zealand lost 22-24 to Australia",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Round 1",
+     "value": "Cook Islands lost 12-40 to Fiji",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Ladder",
+     "value": "New Zealand 3rd, Cook Islands 4th",
+     "source_key": "nrl_r2",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-aus-fiji",
+   "home": "Australia",
+   "away": "Fiji",
+   "start_utc": "2026-10-25T09:05:00Z",
+   "time_display": "25 October, 5:05am ET (NRL display)",
+   "venue": "Suncorp Stadium, Brisbane",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "2nd",
+    "away_ladder": "1st",
+    "home_margin": 2,
+    "away_margin": 28
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "Australia beat New Zealand 24-22",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Round 1",
+     "value": "Fiji beat Cook Islands 40-12",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    },
+    {
+     "team_or_item": "Ladder",
+     "value": "Fiji are 1st and Australia 2nd on points difference after Round 1",
+     "source_key": "nrl_r2",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-r3-eng-png",
+   "home": "England",
+   "away": "Papua New Guinea",
+   "start_utc": "2026-10-30T09:05:00Z",
+   "time_display": "30 October, 5:05am ET (NRL display)",
+   "venue": "WIN Stadium, Wollongong",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "4th",
+    "away_ladder": "3rd",
+    "home_margin": -18,
+    "away_margin": 24
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "England lost 12-30 to Tonga; Papua New Guinea beat Lebanon 42-18",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-r3-nz-fiji",
+   "home": "New Zealand",
+   "away": "Fiji",
+   "start_utc": "2026-10-31T04:30:00Z",
+   "time_display": "31 October, 12:30am ET (NRL display)",
+   "venue": "Cbus Super Stadium, Gold Coast",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "3rd",
+    "away_ladder": "1st",
+    "home_margin": -2,
+    "away_margin": 28
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "New Zealand lost 22-24 to Australia; Fiji beat Cook Islands 40-12",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-r3-aus-cook",
+   "home": "Australia",
+   "away": "Cook Islands",
+   "start_utc": "2026-10-31T09:05:00Z",
+   "time_display": "31 October, 5:05am ET (NRL display)",
+   "venue": "Queensland Country Bank Stadium, Townsville",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "2nd",
+    "away_ladder": "4th",
+    "home_margin": 2,
+    "away_margin": -28
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "Australia beat New Zealand 24-22; Cook Islands lost 12-40 to Fiji",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-r3-leb-fra",
+   "home": "Lebanon",
+   "away": "France",
+   "start_utc": "2026-11-01T05:40:00Z",
+   "time_display": "1 November, 1:40am ET (NRL display)",
+   "venue": "CommBank Stadium, Sydney",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "5th",
+    "away_ladder": "6th",
+    "home_margin": -24,
+    "away_margin": -74
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "Lebanon lost 18-42 to Papua New Guinea (and 0-36 to Tonga in R2); France lost 4-78 to Samoa",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "id": "rlwc-r3-ton-sam",
+   "home": "Tonga",
+   "away": "Samoa",
+   "start_utc": "2026-11-01T08:05:00Z",
+   "time_display": "1 November, 4:05am ET (NRL display)",
+   "venue": "CommBank Stadium, Sydney",
+   "source": "nrl_r2",
+   "stats_source": "nrl_r1",
+   "inputs": {
+    "home_ladder": "1st",
+    "away_ladder": "2nd",
+    "home_margin": 18,
+    "away_margin": 74
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 1",
+     "value": "Tonga beat England 30-12 (and Lebanon 36-0 in R2); Samoa beat France 78-4",
+     "source_key": "nrl_r1",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "stats_source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM",
+   "id": "ru-leicester-northampton",
+   "home": "Leicester Tigers",
+   "away": "Northampton Saints",
+   "time_display": "Sat 24 Oct, 10:05 viewer-local",
+   "venue": "Mattioli Woods Welford Road",
+   "source": "prem_fixtures",
+   "stats_source": "prem_table",
+   "inputs": {
+    "competition": "Gallagher PREM",
+    "home": {
+     "p": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pd": 10,
+     "pts": 11
+    },
+    "away": {
+     "p": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pd": 41,
+     "pts": 11
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Leicester Tigers",
+     "value": "2-0-1 after three rounds, points difference +10, 11 league points",
+     "source_key": "prem_table",
+     "source_url": "https://www.premrugby.com/standings"
+    },
+    {
+     "team_or_item": "Northampton Saints",
+     "value": "2-0-1 after three rounds, points difference +41, 11 league points",
+     "source_key": "prem_table",
+     "source_url": "https://www.premrugby.com/standings"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "Leicester Tigers v Northampton Saints, Gallagher PREM Round 4, Sat 24 Oct, 10:05 viewer-local",
+     "source_key": "prem_fixtures",
+     "source_url": "https://www.premrugby.com/fixtures-results"
+    }
+   ],
+   "official_source_url": "https://www.premrugby.com/fixtures-results",
+   "stats_source_url": "https://www.premrugby.com/standings"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM",
+   "id": "ru-bristol-exeter",
+   "home": "Bristol Bears",
+   "away": "Exeter Chiefs",
+   "time_display": "Sat 24 Oct, 12:30 viewer-local",
+   "venue": "Ashton Gate",
+   "source": "prem_fixtures",
+   "stats_source": "prem_table",
+   "inputs": {
+    "competition": "Gallagher PREM",
+    "home": {
+     "p": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pd": 2,
+     "pts": 10
+    },
+    "away": {
+     "p": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pd": -21,
+     "pts": 8
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Bristol Bears",
+     "value": "2-0-1 after three rounds, points difference +2, 10 league points",
+     "source_key": "prem_table",
+     "source_url": "https://www.premrugby.com/standings"
+    },
+    {
+     "team_or_item": "Exeter Chiefs",
+     "value": "1-0-2 after three rounds, points difference -21, 8 league points",
+     "source_key": "prem_table",
+     "source_url": "https://www.premrugby.com/standings"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "Bristol Bears v Exeter Chiefs, Gallagher PREM Round 4, Sat 24 Oct, 12:30 viewer-local",
+     "source_key": "prem_fixtures",
+     "source_url": "https://www.premrugby.com/fixtures-results"
+    }
+   ],
+   "official_source_url": "https://www.premrugby.com/fixtures-results",
+   "stats_source_url": "https://www.premrugby.com/standings"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM",
+   "id": "ru-quins-saracens",
+   "home": "Harlequins",
+   "away": "Saracens",
+   "time_display": "Sun 25 Oct, 11:00 viewer-local",
+   "venue": "Twickenham Stoop",
+   "source": "prem_fixtures",
+   "stats_source": "prem_table",
+   "inputs": {
+    "competition": "Gallagher PREM",
+    "home": {
+     "p": 3,
+     "w": 0,
+     "d": 0,
+     "l": 3,
+     "pd": -68,
+     "pts": 2
+    },
+    "away": {
+     "p": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pd": 21,
+     "pts": 11
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Harlequins",
+     "value": "0-0-3 after three rounds, points difference -68, 2 league points",
+     "source_key": "prem_table",
+     "source_url": "https://www.premrugby.com/standings"
+    },
+    {
+     "team_or_item": "Saracens",
+     "value": "2-0-1 after three rounds, points difference +21, 11 league points",
+     "source_key": "prem_table",
+     "source_url": "https://www.premrugby.com/standings"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "Harlequins v Saracens, Gallagher PREM Round 4, Sun 25 Oct, 11:00 viewer-local",
+     "source_key": "prem_fixtures",
+     "source_url": "https://www.premrugby.com/fixtures-results"
+    }
+   ],
+   "official_source_url": "https://www.premrugby.com/fixtures-results",
+   "stats_source_url": "https://www.premrugby.com/standings"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "United Rugby Championship",
+   "id": "ru-bulls-ulster",
+   "home": "Vodacom Bulls",
+   "away": "Ulster",
+   "time_display": "Sat 24 Oct, 07:45 (URC local)",
+   "venue": "Loftus Versfeld",
+   "source": "urc_round4",
+   "stats_source": "urc_table",
+   "inputs": {
+    "competition": "United Rugby Championship",
+    "home": {
+     "p": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pd": 72,
+     "pts": 11,
+     "pf": 126,
+     "pa": 54
+    },
+    "away": {
+     "p": 3,
+     "w": 0,
+     "d": 2,
+     "l": 1,
+     "pd": -5,
+     "pts": 8,
+     "pf": 88,
+     "pa": 93
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Vodacom Bulls",
+     "value": "2-0-1 after three rounds (126 PF / 54 PA), points difference +72, 11 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Ulster",
+     "value": "0-2-1 after three rounds (88 PF / 93 PA), points difference -5, 8 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "Vodacom Bulls v Ulster, URC Round 4, Sat 24 Oct, 07:45 (URC local) at Loftus Versfeld",
+     "source_key": "urc_round4",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    }
+   ],
+   "official_source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "stats_source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "United Rugby Championship",
+   "id": "ru-stormers-scarlets",
+   "home": "DHL Stormers",
+   "away": "Scarlets",
+   "time_display": "Sat 24 Oct, 10:00 (URC local)",
+   "venue": "DHL Stadium",
+   "source": "urc_round4",
+   "stats_source": "urc_table",
+   "inputs": {
+    "competition": "United Rugby Championship",
+    "home": {
+     "p": 3,
+     "w": 2,
+     "d": 0,
+     "l": 1,
+     "pd": 27,
+     "pts": 11,
+     "pf": 81,
+     "pa": 54
+    },
+    "away": {
+     "p": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pd": -17,
+     "pts": 7,
+     "pf": 68,
+     "pa": 85
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "DHL Stormers",
+     "value": "2-0-1 after three rounds (81 PF / 54 PA), points difference +27, 11 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Scarlets",
+     "value": "1-0-2 after three rounds (68 PF / 85 PA), points difference -17, 7 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "DHL Stormers v Scarlets, URC Round 4, Sat 24 Oct, 10:00 (URC local) at DHL Stadium",
+     "source_key": "urc_round4",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    }
+   ],
+   "official_source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "stats_source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "United Rugby Championship",
+   "id": "ru-benetton-glasgow",
+   "home": "Benetton Rugby",
+   "away": "Glasgow Warriors",
+   "time_display": "Sat 24 Oct, 10:00 (URC local)",
+   "venue": "Stadio Monigo",
+   "source": "urc_round4",
+   "stats_source": "urc_table",
+   "inputs": {
+    "competition": "United Rugby Championship",
+    "home": {
+     "p": 3,
+     "w": 0,
+     "d": 1,
+     "l": 2,
+     "pd": -4,
+     "pts": 5,
+     "pf": 64,
+     "pa": 68
+    },
+    "away": {
+     "p": 3,
+     "w": 2,
+     "d": 1,
+     "l": 0,
+     "pd": 23,
+     "pts": 13,
+     "pf": 95,
+     "pa": 72
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Benetton Rugby",
+     "value": "0-1-2 after three rounds (64 PF / 68 PA), points difference -4, 5 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Glasgow Warriors",
+     "value": "2-1-0 after three rounds (95 PF / 72 PA), points difference +23, 13 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "Benetton Rugby v Glasgow Warriors, URC Round 4, Sat 24 Oct, 10:00 (URC local) at Stadio Monigo",
+     "source_key": "urc_round4",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    }
+   ],
+   "official_source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "stats_source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "United Rugby Championship",
+   "id": "ru-leinster-munster",
+   "home": "Leinster",
+   "away": "Munster",
+   "time_display": "Sat 24 Oct, 13:00 (URC local)",
+   "venue": "Aviva Stadium",
+   "source": "urc_round4",
+   "stats_source": "urc_table",
+   "inputs": {
+    "competition": "United Rugby Championship",
+    "home": {
+     "p": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pd": 17,
+     "pts": 8,
+     "pf": 75,
+     "pa": 58
+    },
+    "away": {
+     "p": 3,
+     "w": 1,
+     "d": 1,
+     "l": 1,
+     "pd": -2,
+     "pts": 9,
+     "pf": 72,
+     "pa": 74
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Leinster",
+     "value": "1-0-2 after three rounds (75 PF / 58 PA), points difference +17, 8 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Munster",
+     "value": "1-1-1 after three rounds (72 PF / 74 PA), points difference -2, 9 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "Leinster v Munster, URC Round 4, Sat 24 Oct, 13:00 (URC local) at Aviva Stadium",
+     "source_key": "urc_round4",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    }
+   ],
+   "official_source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "stats_source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+  },
+  {
+   "sport": "Rugby Union",
+   "competition": "United Rugby Championship",
+   "id": "ru-ospreys-dragons",
+   "home": "Ospreys",
+   "away": "Dragons RFC",
+   "time_display": "Sat 24 Oct, 14:00 (URC local)",
+   "venue": "St Helen's",
+   "source": "urc_round4",
+   "stats_source": "urc_table",
+   "inputs": {
+    "competition": "United Rugby Championship",
+    "home": {
+     "p": 3,
+     "w": 1,
+     "d": 0,
+     "l": 2,
+     "pd": -26,
+     "pts": 6,
+     "pf": 81,
+     "pa": 107
+    },
+    "away": {
+     "p": 3,
+     "w": 1,
+     "d": 1,
+     "l": 1,
+     "pd": 5,
+     "pts": 9,
+     "pf": 88,
+     "pa": 83
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Ospreys",
+     "value": "1-0-2 after three rounds (81 PF / 107 PA), points difference -26, 6 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Dragons RFC",
+     "value": "1-1-1 after three rounds (88 PF / 83 PA), points difference +5, 9 league points",
+     "source_key": "urc_table",
+     "source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+    },
+    {
+     "team_or_item": "Round 4",
+     "value": "Ospreys v Dragons RFC, URC Round 4, Sat 24 Oct, 14:00 (URC local) at St Helen's",
+     "source_key": "urc_round4",
+     "source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4"
+    }
+   ],
+   "official_source_url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "stats_source_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "id": "vb-perugia-prata",
+   "home": "Sir Susa Scai Perugia",
+   "away": "Tinet Prata di Pordenone",
+   "time_display": "Sun 25 Oct, 18:00 local",
+   "source": "legavolley_cal",
+   "stats_source": "legavolley_table",
+   "inputs": {
+    "competition": "SuperLega",
+    "home": {
+     "pts": 2,
+     "played": 1,
+     "sets_w": 3,
+     "sets_l": 2,
+     "pf": 114,
+     "pa": 95
+    },
+    "away": {
+     "pts": 3,
+     "played": 1,
+     "sets_w": 3,
+     "sets_l": 1,
+     "pf": 94,
+     "pa": 91
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Sir Susa Scai Perugia",
+     "value": "1 match played, 3-2 sets, 114 points for and 95 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Tinet Prata di Pordenone",
+     "value": "1 match played, 3-1 sets, 94 points for and 91 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Round 2",
+     "value": "Sir Susa Scai Perugia v Tinet Prata di Pordenone, Sun 25 Oct, 18:00 local",
+     "source_key": "legavolley_cal",
+     "source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "stats_source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "id": "vb-trentino-cisterna",
+   "home": "Itas Trentino",
+   "away": "Cisterna Volley",
+   "time_display": "Sun 25 Oct, 17:00 local",
+   "source": "legavolley_cal",
+   "stats_source": "legavolley_table",
+   "inputs": {
+    "competition": "SuperLega",
+    "home": {
+     "pts": 3,
+     "played": 1,
+     "sets_w": 3,
+     "sets_l": 0,
+     "pf": 75,
+     "pa": 61
+    },
+    "away": {
+     "pts": 3,
+     "played": 1,
+     "sets_w": 3,
+     "sets_l": 0,
+     "pf": 79,
+     "pa": 56
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Itas Trentino",
+     "value": "1 match played, 3-0 sets, 75 points for and 61 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Cisterna Volley",
+     "value": "1 match played, 3-0 sets, 79 points for and 56 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Round 2",
+     "value": "Itas Trentino v Cisterna Volley, Sun 25 Oct, 17:00 local",
+     "source_key": "legavolley_cal",
+     "source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "stats_source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "id": "vb-piacenza-modena",
+   "home": "Gas Sales Bluenergy Piacenza",
+   "away": "Valsa Group Modena",
+   "time_display": "Sun 25 Oct, 18:00 local",
+   "source": "legavolley_cal",
+   "stats_source": "legavolley_table",
+   "inputs": {
+    "competition": "SuperLega",
+    "home": {
+     "pts": 3,
+     "played": 1,
+     "sets_w": 3,
+     "sets_l": 0,
+     "pf": 75,
+     "pa": 56
+    },
+    "away": {
+     "pts": 0,
+     "played": 1,
+     "sets_w": 0,
+     "sets_l": 3,
+     "pf": 61,
+     "pa": 75
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Gas Sales Bluenergy Piacenza",
+     "value": "1 match played, 3-0 sets, 75 points for and 56 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Valsa Group Modena",
+     "value": "1 match played, 0-3 sets, 61 points for and 75 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Round 2",
+     "value": "Gas Sales Bluenergy Piacenza v Valsa Group Modena, Sun 25 Oct, 18:00 local",
+     "source_key": "legavolley_cal",
+     "source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "stats_source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "id": "vb-civitanova-padova",
+   "home": "Cucine Lube Civitanova",
+   "away": "Pallavolo Padova",
+   "time_display": "Sun 25 Oct, 18:00 local",
+   "source": "legavolley_cal",
+   "stats_source": "legavolley_table",
+   "inputs": {
+    "competition": "SuperLega",
+    "home": {
+     "pts": 3,
+     "played": 1,
+     "sets_w": 3,
+     "sets_l": 0,
+     "pf": 78,
+     "pa": 65
+    },
+    "away": {
+     "pts": 0,
+     "played": 1,
+     "sets_w": 0,
+     "sets_l": 3,
+     "pf": 56,
+     "pa": 75
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Cucine Lube Civitanova",
+     "value": "1 match played, 3-0 sets, 78 points for and 65 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Pallavolo Padova",
+     "value": "1 match played, 0-3 sets, 56 points for and 75 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Round 2",
+     "value": "Cucine Lube Civitanova v Pallavolo Padova, Sun 25 Oct, 18:00 local",
+     "source_key": "legavolley_cal",
+     "source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "stats_source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "id": "vb-milano-cuneo",
+   "home": "Allianz Milano",
+   "away": "Acqua Sant'Anna Cuneo",
+   "time_display": "Sun 25 Oct, 19:00 local",
+   "source": "legavolley_cal",
+   "stats_source": "legavolley_table",
+   "inputs": {
+    "competition": "SuperLega",
+    "home": {
+     "pts": 0,
+     "played": 1,
+     "sets_w": 0,
+     "sets_l": 3,
+     "pf": 56,
+     "pa": 79
+    },
+    "away": {
+     "pts": 1,
+     "played": 1,
+     "sets_w": 2,
+     "sets_l": 3,
+     "pf": 95,
+     "pa": 114
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Allianz Milano",
+     "value": "1 match played, 0-3 sets, 56 points for and 79 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Acqua Sant'Anna Cuneo",
+     "value": "1 match played, 2-3 sets, 95 points for and 114 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Round 2",
+     "value": "Allianz Milano v Acqua Sant'Anna Cuneo, Sun 25 Oct, 19:00 local",
+     "source_key": "legavolley_cal",
+     "source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "stats_source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "id": "vb-monza-verona",
+   "home": "Vero Volley Monza",
+   "away": "Rana Verona",
+   "time_display": "Sun 25 Oct, 18:00 local",
+   "source": "legavolley_cal",
+   "stats_source": "legavolley_table",
+   "inputs": {
+    "competition": "SuperLega",
+    "home": {
+     "pts": 0,
+     "played": 1,
+     "sets_w": 1,
+     "sets_l": 3,
+     "pf": 91,
+     "pa": 94
+    },
+    "away": {
+     "pts": 0,
+     "played": 1,
+     "sets_w": 0,
+     "sets_l": 3,
+     "pf": 65,
+     "pa": 78
+    }
+   },
+   "facts": [
+    {
+     "team_or_item": "Vero Volley Monza",
+     "value": "1 match played, 1-3 sets, 91 points for and 94 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Rana Verona",
+     "value": "1 match played, 0-3 sets, 65 points for and 78 against in Round 1",
+     "source_key": "legavolley_table",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+    },
+    {
+     "team_or_item": "Round 2",
+     "value": "Vero Volley Monza v Rana Verona, Sun 25 Oct, 18:00 local",
+     "source_key": "legavolley_cal",
+     "source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "stats_source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "id": "vb-friedrichshafen-karlsruhe",
+   "home": "VfB Friedrichshafen",
+   "away": "BADEN VOLLEYS Karlsruhe",
+   "time_display": "Sat 24 Oct, 6:30 PM (VBL schedule)",
+   "source": "vbl_schedule",
+   "stats_source": "vbl_table",
+   "inputs": {
+    "competition": "1. Bundesliga Männer"
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 2",
+     "value": "VfB Friedrichshafen v BADEN VOLLEYS Karlsruhe, Sat 24 Oct, 6:30 PM (VBL schedule)",
+     "source_key": "vbl_schedule",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+    }
+   ],
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml",
+   "stats_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "id": "vb-lueneburg-warnemuende",
+   "home": "SVG Lüneburg",
+   "away": "SV Warnemünde",
+   "time_display": "Sat 24 Oct, 7:00 PM (VBL schedule)",
+   "source": "vbl_schedule",
+   "stats_source": "vbl_table",
+   "inputs": {
+    "competition": "1. Bundesliga Männer"
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 2",
+     "value": "SVG Lüneburg v SV Warnemünde, Sat 24 Oct, 7:00 PM (VBL schedule)",
+     "source_key": "vbl_schedule",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+    }
+   ],
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml",
+   "stats_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "id": "vb-giesen-berlin",
+   "home": "Helios GRIZZLYS Giesen",
+   "away": "BERLIN RECYCLING Volleys",
+   "time_display": "Sat 24 Oct, 7:30 PM (VBL schedule)",
+   "source": "vbl_schedule",
+   "stats_source": "vbl_table",
+   "inputs": {
+    "competition": "1. Bundesliga Männer"
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 2",
+     "value": "Helios GRIZZLYS Giesen v BERLIN RECYCLING Volleys, Sat 24 Oct, 7:30 PM (VBL schedule)",
+     "source_key": "vbl_schedule",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+    }
+   ],
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml",
+   "stats_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "sport": "Volleyball",
+   "competition": "1. Bundesliga Männer",
+   "id": "vb-dueren-muenchen",
+   "home": "SWD powervolleys Düren",
+   "away": "WWK Volleys München",
+   "time_display": "Sat 24 Oct, 7:30 PM (VBL schedule)",
+   "source": "vbl_schedule",
+   "stats_source": "vbl_table",
+   "inputs": {
+    "competition": "1. Bundesliga Männer"
+   },
+   "facts": [
+    {
+     "team_or_item": "Round 2",
+     "value": "SWD powervolleys Düren v WWK Volleys München, Sat 24 Oct, 7:30 PM (VBL schedule)",
+     "source_key": "vbl_schedule",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+    }
+   ],
+   "official_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml",
+   "stats_source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml"
+  },
+  {
+   "sport": "Gaelic Sports",
+   "competition": "Hurling-Shinty International",
+   "id": "gaa-shinty-hurling",
+   "home": "Ireland",
+   "away": "Scotland",
+   "time_display": "24 October 2026, 18:00",
+   "venue": "SuperValu Páirc Uí Chaoimh, Cork",
+   "source": "gaa_fixtures",
+   "stats_source": "munster_gaa",
+   "olbg_event_id": null,
+   "inputs": {
+    "format": "championship"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "Hurling-Shinty International, Ireland v Scotland, SuperValu Páirc Uí Chaoimh, 24 October 2026, 18:00, referee Eamonn Furlong",
+     "source_key": "gaa_fixtures",
+     "source_url": "https://www.gaa.ie/fixtures-results"
+    }
+   ],
+   "official_source_url": "https://www.gaa.ie/fixtures-results",
+   "stats_source_url": "https://munster.gaa.ie/fixtures-results/"
+  },
+  {
+   "sport": "Gaelic Sports",
+   "competition": "Cork Premier Senior Football Championship Final",
+   "id": "gaa-cork-psfc",
+   "home": "St Finbarr's",
+   "away": "Nemo Rangers",
+   "time_display": "25 October 2026, 16:00",
+   "venue": "SuperValu Páirc Uí Chaoimh",
+   "source": "gaacork",
+   "stats_source": "munster_gaa",
+   "olbg_event_id": 14,
+   "inputs": {
+    "format": "championship"
+   },
+   "facts": [
+    {
+     "team_or_item": "Semi-finals",
+     "value": "Nemo Rangers beat Carrigaline 1-15 to 0-16; St Finbarr's beat Clonakilty 2-12 to 0-16",
+     "source_key": "gaacork",
+     "source_url": "https://gaacork.ie/fixtures-results/"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Cork Premier Senior Football Championship Final, St Finbarr's v Nemo Rangers, 25 October 2026, 16:00, referee David Murnane",
+     "source_key": "munster_gaa",
+     "source_url": "https://munster.gaa.ie/fixtures-results/"
+    }
+   ],
+   "official_source_url": "https://gaacork.ie/fixtures-results/",
+   "stats_source_url": "https://munster.gaa.ie/fixtures-results/"
+  },
+  {
+   "sport": "Gaelic Sports",
+   "competition": "Kerry Senior Football Championship Final",
+   "id": "gaa-kerry-sfc",
+   "home": "Dr Crokes",
+   "away": "Kenmare Shamrocks",
+   "time_display": "25 October 2026, 14:00",
+   "venue": "Fitzgerald Stadium, Killarney",
+   "source": "kerrygaa",
+   "stats_source": "munster_gaa",
+   "olbg_event_id": null,
+   "inputs": {
+    "format": "championship"
+   },
+   "facts": [
+    {
+     "team_or_item": "Fixture",
+     "value": "Kerry Senior Football Championship Final, Dr Crokes v Kenmare Shamrocks, Fitzgerald Stadium, 25 October 2026, 14:00, referee Sean Joy",
+     "source_key": "kerrygaa",
+     "source_url": "https://www.kerrygaa.ie/fixtures-results/"
+    }
+   ],
+   "official_source_url": "https://www.kerrygaa.ie/fixtures-results/",
+   "stats_source_url": "https://munster.gaa.ie/fixtures-results/"
+  },
+  {
+   "sport": "Gaelic Sports",
+   "competition": "Waterford Senior Football Championship Final",
+   "id": "gaa-waterford-sfc",
+   "home": "Rathgormack",
+   "away": "The Nire",
+   "time_display": "25 October 2026, 14:30",
+   "venue": "Cappoquin Logistics Fraher Field, Dungarvan",
+   "source": "waterfordgaa",
+   "stats_source": "munster_gaa",
+   "olbg_event_id": null,
+   "inputs": {
+    "format": "championship"
+   },
+   "facts": [
+    {
+     "team_or_item": "Semi-finals",
+     "value": "Rathgormack beat Gaultier 1-14 to 0-15; The Nire beat Abbeyside-Ballinacourty 0-12 to 0-5",
+     "source_key": "waterfordgaa",
+     "source_url": "https://www.waterfordgaa.ie/fixtures-results/"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Waterford Senior Football Championship Final, Rathgormack v The Nire, Fraher Field, 25 October 2026, 14:30, referee Killian O'Sullivan",
+     "source_key": "munster_gaa",
+     "source_url": "https://munster.gaa.ie/fixtures-results/"
+    }
+   ],
+   "official_source_url": "https://www.waterfordgaa.ie/fixtures-results/",
+   "stats_source_url": "https://munster.gaa.ie/fixtures-results/"
+  },
+  {
+   "sport": "Gaelic Sports",
+   "competition": "Limerick Senior Hurling Championship Final",
+   "id": "gaa-limerick-shc",
+   "home": "Na Piarsaigh",
+   "away": "Kilmallock",
+   "time_display": "25 October 2026, 15:45",
+   "venue": "TUS Gaelic Grounds, Limerick",
+   "source": "limerickgaa",
+   "stats_source": "munster_gaa",
+   "olbg_event_id": null,
+   "inputs": {
+    "format": "championship"
+   },
+   "facts": [
+    {
+     "team_or_item": "Semi-final",
+     "value": "Na Piarsaigh beat Doon 2-24 to 3-16 to reach the final",
+     "source_key": "limerickgaa",
+     "source_url": "https://limerickgaa.ie/fixtures-results/"
+    },
+    {
+     "team_or_item": "Fixture",
+     "value": "Limerick Senior Hurling Championship Final, Na Piarsaigh v Kilmallock, TUS Gaelic Grounds, 25 October 2026, 15:45, referee John O'Halloran",
+     "source_key": "munster_gaa",
+     "source_url": "https://munster.gaa.ie/fixtures-results/"
+    }
+   ],
+   "official_source_url": "https://limerickgaa.ie/fixtures-results/",
+   "stats_source_url": "https://munster.gaa.ie/fixtures-results/"
+  }
+ ]
+}

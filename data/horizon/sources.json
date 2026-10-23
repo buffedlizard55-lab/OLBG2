@@ -1,0 +1,423 @@
+{
+ "captured_utc": "2026-10-23T21:40:00Z",
+ "session": "arena/9c5af337-olbg2",
+ "count": 52,
+ "sources": [
+  {
+   "key": "olbg_hub",
+   "publisher": "OLBG",
+   "url": "https://www.olbg.com/betting-tips",
+   "what": "OLBG 15-sport taxonomy and US-egress hub/event route verification",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "nhle_schedule",
+   "publisher": "National Hockey League",
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "what": "Official NHL schedule feed for 2026-10-23 through 2026-10-25 with startTimeUTC, venues, and provider moneylines",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "nhle_standings",
+   "publisher": "National Hockey League",
+   "url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+   "what": "Official NHL standings feed as of 2026-10-23T21:27:30Z with games played, points, goals for/against, L10, and streaks",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "nba_games",
+   "publisher": "National Basketball Association",
+   "url": "https://www.nba.com/games?date=2026-10-23",
+   "what": "Official NBA slate for Friday 23 October 2026 with tip times and opening records",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "nba_standings",
+   "publisher": "National Basketball Association",
+   "url": "https://www.nba.com/standings",
+   "what": "Official 2026-27 NBA standings after opening-night games",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "nba_injury",
+   "publisher": "National Basketball Association",
+   "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf",
+   "what": "Official NBA Referee Injury Report dated 10/23/2026 03:15 PM ET",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "el_standings",
+   "publisher": "EuroLeague Basketball",
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+   "what": "Official 2026-27 EuroLeague regular-season table after seven rounds with points for and against",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "el_game_center",
+   "publisher": "EuroLeague Basketball",
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "what": "Official EuroLeague Round 8 schedule for 27-28 October 2026",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "mlb_schedule",
+   "publisher": "Major League Baseball",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02",
+   "what": "Official MLB StatsAPI 2026 World Series schedule (Tampa Bay Rays vs Milwaukee Brewers)",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "mlb_brewers",
+   "publisher": "Major League Baseball",
+   "url": "https://statsapi.mlb.com/api/v1/Schedule?sportId=1&teamId=158&startDate=2026-10-22&endDate=2026-11-02&hydrate=team,probablePitcher,linescore,decisions",
+   "what": "Official MLB StatsAPI hydrated World Series schedule with probable pitchers and season records",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "mlb_standings",
+   "publisher": "Major League Baseball",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+   "what": "Official 2026 MLB 162-game regular-season standings, run totals, and home/road splits",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "mlb_pitchers",
+   "publisher": "Major League Baseball",
+   "url": "https://statsapi.mlb.com/api/v1/people?personIds=694813,608379,801403,656876&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)",
+   "what": "Official 2026 MLB pitching statistics for Jacob Misiorowski, Nick Martinez, Logan Henderson, and Drew Rasmussen",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "cricket_au",
+   "publisher": "Cricket Australia",
+   "url": "https://www.cricket.com.au/matches",
+   "what": "Official Cricket Australia match centre listing upcoming domestic One-Day Cup and international fixtures",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "cricket_au_done",
+   "publisher": "Cricket Australia",
+   "url": "https://www.cricket.com.au/matches?tab=completed",
+   "what": "Official Cricket Australia completed match results through 23 October 2026",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "wst_matches",
+   "publisher": "World Snooker Tour",
+   "url": "https://www.wst.tv/matches/",
+   "what": "Official WST BetVictor Northern Ireland Open 2026 quarter-final results and semi-final schedule",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "wst_rankings",
+   "publisher": "World Snooker Tour",
+   "url": "https://www.wst.tv/rankings/",
+   "what": "Official Johnstone's Paint World Rankings and 2026/27 One Year List",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "wst_ic",
+   "publisher": "World Snooker Tour",
+   "url": "https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890",
+   "what": "Official WST International Championship 2026 match-centre draw and player season statistics",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "pdc_schedule",
+   "publisher": "Professional Darts Corporation",
+   "url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play",
+   "what": "Official 2026 Machineseeker European Championship draw, seedings, and Dortmund session schedule",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "pdc_day_one",
+   "publisher": "Professional Darts Corporation",
+   "url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund",
+   "what": "Official PDC European Championship Day One Round One results and averages",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "pdc_rules",
+   "publisher": "Professional Darts Corporation",
+   "url": "https://www.pdc.tv/order-of-merit-rules",
+   "what": "Official PDC European Tour Order of Merit ranking rules and format regulations",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "atp_almaty",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "what": "Official ATP 250 Almaty Open Day 8 (Saturday 24 October 2026) semifinal schedule and QF results",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "atp_brussels",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule",
+   "what": "Official ATP 250 Brussels Day 8 (Saturday 24 October 2026) semifinal schedule and QF results",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "atp_lyon",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current/lyon/496/daily-schedule",
+   "what": "Official ATP 250 Grand Prix Auvergne-Rhone-Alpes (Lyon) QF results and semifinal draw",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "atp_basel",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current/basel/328/daily-schedule",
+   "what": "Official ATP 500 Swiss Indoors Basel Day 1 (Saturday 24 October 2026) qualifying schedule",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "atp_vienna",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current/vienna/337/daily-schedule",
+   "what": "Official ATP 500 Erste Bank Open Vienna Day 1 (Saturday 24 October 2026) qualifying schedule",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "atp_rankings",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+   "what": "Official PIF ATP Singles Rankings Top 100 dated 2026.10.19",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "pgatour",
+   "publisher": "PGA TOUR",
+   "url": "https://www.pgatour.com/leaderboard",
+   "what": "Official 2026 Butterfield Bermuda Championship 36-hole leaderboard at Port Royal Golf Course",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "dpwt",
+   "publisher": "DP World Tour",
+   "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard?round=2",
+   "what": "Official 2026 Genesis Championship 36-hole leaderboard on the DP World Tour",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "gbgb_schedule",
+   "publisher": "Greyhound Board of Great Britain",
+   "url": "https://www.gbgb.org.uk/open-race-schedule/",
+   "what": "Official GBGB Category One open-race schedule for Dunstall Park (24 October 2026)",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "gbgb_scurry",
+   "publisher": "Greyhound Board of Great Britain",
+   "url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198332",
+   "what": "Official GBGB Dunstall Park Scurry Gold Cup semi-final results and winning times",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "gbgb_oaks",
+   "publisher": "Greyhound Board of Great Britain",
+   "url": "https://www.gbgb.org.uk/racing-results/?meetingId=435688&raceId=1198335",
+   "what": "Official GBGB Dunstall Park Premier Greyhound Racing Oaks semi-final results and winning times",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "lnh_cal",
+   "publisher": "Ligue Nationale de Handball",
+   "url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "what": "Official LNH Daikin StarLigue 2026/27 Journée 08 results (23 Oct) and weekend fixtures (24-25 Oct)",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "lnh_table",
+   "publisher": "Ligue Nationale de Handball",
+   "url": "https://www.lnh.fr/daikin-starligue/classement",
+   "what": "Official LNH Daikin StarLigue 2026/27 standings table",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "lnh_ehf",
+   "publisher": "Ligue Nationale de Handball",
+   "url": "https://www.lnh.fr/autres-competitions/ligue-des-champions",
+   "what": "Official LNH EHF Champions League Round 6 schedule for French clubs",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "f1_usgp",
+   "publisher": "Formula 1",
+   "url": "https://www.formula1.com/en/racing/2026/united-states",
+   "what": "Official 2026 Formula 1 United States Grand Prix hub, circuit specs, and FP1 classification",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "f1_drivers",
+   "publisher": "Formula 1",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "what": "Official 2026 FIA Formula One World Championship Drivers' Standings after 17 rounds",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "nrl_r2",
+   "publisher": "National Rugby League",
+   "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "what": "Official RLWC 2026 Round 2 draw and results (including Tonga 36-0 Lebanon)",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "nrl_r1",
+   "publisher": "National Rugby League",
+   "url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+   "what": "Official RLWC 2026 Round 1 completed results and margins",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "prem_fixtures",
+   "publisher": "Premiership Rugby",
+   "url": "https://www.premrugby.com/fixtures-results",
+   "what": "Official Gallagher PREM 2026/27 Round 4 fixtures",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "prem_table",
+   "publisher": "Premiership Rugby",
+   "url": "https://www.premrugby.com/standings",
+   "what": "Official Gallagher PREM 2026/27 standings after Round 3",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "urc_round4",
+   "publisher": "United Rugby Championship",
+   "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "what": "Official URC 2026/27 Round 4 Friday full-time results and Saturday fixtures",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "urc_table",
+   "publisher": "United Rugby Championship",
+   "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+   "what": "Official URC 2026/27 league table with W-D-L, PF, PA, DIFF, TF, TA, and league points",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "legavolley_cal",
+   "publisher": "Lega Pallavolo Serie A",
+   "url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "what": "Official Italian SuperLega Credem Banca 2026/27 Round 2 schedule (25 October 2026)",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "legavolley_table",
+   "publisher": "Lega Pallavolo Serie A",
+   "url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+   "what": "Official Italian SuperLega Credem Banca 2026/27 standings and Round 1 set/point records",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "vbl_schedule",
+   "publisher": "Volleyball Bundesliga",
+   "url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml",
+   "what": "Official German 1. Bundesliga Männer Round 2 schedule (24 October 2026)",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "vbl_table",
+   "publisher": "Volleyball Bundesliga",
+   "url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/spielplan.xhtml",
+   "what": "Official German 1. Bundesliga Männer opener context",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "gaa_fixtures",
+   "publisher": "Gaelic Athletic Association",
+   "url": "https://www.gaa.ie/fixtures-results",
+   "what": "Official GAA fixtures hub for the 2026 Hurling-Shinty International in Cork",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "munster_gaa",
+   "publisher": "Munster GAA",
+   "url": "https://munster.gaa.ie/fixtures-results/",
+   "what": "Official Munster GAA county final schedule and referee appointments",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "gaacork",
+   "publisher": "Cork GAA",
+   "url": "https://gaacork.ie/fixtures-results/",
+   "what": "Official Cork GAA Premier Senior Football Championship semi-final results and final fixture",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "kerrygaa",
+   "publisher": "Kerry GAA",
+   "url": "https://www.kerrygaa.ie/fixtures-results/",
+   "what": "Official Kerry GAA Senior Football Championship Final fixture",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "waterfordgaa",
+   "publisher": "Waterford GAA",
+   "url": "https://www.waterfordgaa.ie/fixtures-results/",
+   "what": "Official Waterford GAA Senior Football Championship semi-final results and final fixture",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  },
+  {
+   "key": "limerickgaa",
+   "publisher": "Limerick GAA",
+   "url": "https://limerickgaa.ie/fixtures-results/",
+   "what": "Official Limerick GAA Senior Hurling Championship semi-final result and final fixture",
+   "fetched_utc": "2026-10-23T21:40:00Z",
+   "session": "arena/9c5af337-olbg2"
+  }
+ ]
+}

@@ -4782,3 +4782,14 @@ The same final visual audit found two remaining outright-label concatenations in
 | Live review and linked pages | `/integration.html` fetched with all nine integration findings, FI-09 and both independent additions; `/cadence/index.html`, `/cadence/sports/index.html`, `/cadence/predictions.html` and `/research/integration-f0ee1b4a.md` also fetched successfully and matched the published counts/disclosures |
 
 FI5 is complete for merge and deployment. This publication record is a documentation-only follow-up; the implementation and evidence above are already merged and live. Open evidence items remain open by design and are not represented as resolved by the successful deployment.
+
+### Session `693dbf40` — `/quest/` PUBLICATION RECORD (2026-10-23)
+
+| Item | Value |
+|---|---|
+| Pull request | [#181](https://github.com/buffedlizard55-lab/OLBG2/pull/181) — merged 21:55:22Z as `b8368d1` |
+| CI | `Validate Pages content` success on PR head and on `main` (40030186477); local merged-tree suite green before each push |
+| Pages | `pages-build-deployment` [40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) build+deploy success on `main` containing `/quest/` (earlier deploys cancelled by concurrent merges #179/#185) |
+| Live | https://buffedlizard55-lab.github.io/OLBG2/quest/ — today/top5/flagged/ice-hockey pages read after deploy; 113 fixtures, 856 prices, 9 in-window high picks, 34 predictions, 13 flags |
+
+This record is a post-merge append (follow-up PR). Integrator requests (root nav link, CI drift steps for `quest`) remain open above.

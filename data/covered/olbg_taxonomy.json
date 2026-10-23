@@ -1,0 +1,31 @@
+{
+  "as_of": "2026-10-23",
+  "url_schema": {
+    "sport_listing": "https://www.olbg.com/betting-tips/{Sport}/{Sport_Group}/All_Events/{sport_id}   (example: /betting-tips/Darts/All_Darts/All_Events/15)",
+    "sport_landing": "https://www.olbg.com/betting-tips/{Sport}/{sport_id}   (example: /betting-tips/Tennis/3 from search index; /betting-tips/Golf/5)",
+    "event_page": "https://www.olbg.com/betting-tips/{Sport}/{Competition_Group}/{Competition}/{Event_Slug}/{sport_id}?event_id={event_id}   (example: /betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789)",
+    "outright_event_page": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/PDC_World_Championship_2027/15?event_id=26023",
+    "note": "The sport_id is the numeric suffix. Event slugs use '_v_' for head-to-head and '_@_' for away-at-home listings. The 'Today' and 'Tomorrow' labels and clock times on OLBG are shown in the viewer's time zone; the basis was not stated on the pages read."
+  },
+  "sports_in_brief": [
+    {"sport": "Golf", "olbg_sport_id": 5, "olbg_path_seen": "/betting-tips/Golf/5", "markets_seen": ["Tournament Outright Winner", "First Round Leader"], "source": "S15 (search snippet)"},
+    {"sport": "Volleyball", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG sport name listed on OLBG tipster-competition page (search snippet); ID not captured"},
+    {"sport": "Rugby Union", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG sport name listed (search snippet); ID not captured"},
+    {"sport": "Cricket", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG sport name listed (search snippet); ID not captured"},
+    {"sport": "Snooker", "olbg_sport_id": 8, "olbg_path_seen": "/betting-tips/Snooker/8", "markets_seen": [], "source": "OLBG URL seen in search index (search snippet); markets not captured"},
+    {"sport": "Darts", "olbg_sport_id": 15, "olbg_path_seen": "/betting-tips/Darts/All_Darts/All_Events/15", "markets_seen": ["Win Match 2-way", "Win Tournament"], "source": "S13 (fetched)"},
+    {"sport": "Baseball", "olbg_sport_id": 12, "olbg_path_seen": "/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789", "markets_seen": ["Money Line"], "source": "S12 (fetched)"},
+    {"sport": "Gaelic Sports", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG lists 'Gaelic football betting tips' and 'Hurling predictions' separately (search snippet); IDs not captured"},
+    {"sport": "Greyhounds", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG 'Greyhound racing tips' listed (search snippet); ID not captured"},
+    {"sport": "Tennis", "olbg_sport_id": 3, "olbg_path_seen": "/betting-tips/Tennis/3", "markets_seen": ["Win Match", "Tournament Winner", "Set Score Betting"], "source": "S14 (search snippet)"},
+    {"sport": "Motor Racing", "olbg_sport_id": 14, "olbg_path_seen": "/betting-tips/Motor_Racing/14", "markets_seen": ["Fastest Qualifier", "Win Race", "Podium Finish", "Top 6 Finish", "Points Finish", "Fastest Lap", "Win Tournament"], "source": "S16 (search snippet)"},
+    {"sport": "Handball", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG sport name listed (search snippet); ID not captured"},
+    {"sport": "Ice Hockey", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG 'Ice hockey picks' listed (search snippet); ID not captured"},
+    {"sport": "Basketball", "olbg_sport_id": 4, "olbg_path_seen": "/betting-tips/Basketball/All_Basketball/All_Events/4", "markets_seen": ["Money Line", "Pointspread", "Game Totals"], "source": "S17 (search snippet)"},
+    {"sport": "Rugby League", "olbg_sport_id": null, "olbg_path_seen": null, "markets_seen": [], "source": "OLBG sport name listed (search snippet); ID not captured"}
+  ],
+  "olbg_market_names_seen_on_pages_read": ["Win Match 2-way", "Money Line", "Full Time Result (football, out of brief)", "Win Tournament", "Win Match", "Pointspread", "Game Totals"],
+  "olbg_listing_snapshot_darts": "See data/covered/inputs.json (darts_olbg_listing): 12 darts matches listed as Today or Tomorrow on S13 at capture.",
+  "olbg_listing_snapshot_baseball": "TB Rays @ MIL Brewers, MLB, 'Today 20:00', Money Line, event 160789 (S12). Matches the MLB World Series Game 1 fixture on S03.",
+  "olbg_scope_note": "OLBG is used only as a reference listing. Nothing on OLBG (including its prices, tip percentages and 'Win Tips' counts) is used in any line, label or prediction in this desk."
+}

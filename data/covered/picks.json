@@ -1,0 +1,108 @@
+{
+  "as_of": "2026-10-23",
+  "high_confidence_qualifying": [],
+  "top5_by_sport": {
+    "Golf": [],
+    "Volleyball": [],
+    "Rugby Union": [],
+    "Cricket": [],
+    "Snooker": [],
+    "Darts": [],
+    "Baseball": [],
+    "Gaelic Sports": [],
+    "Greyhounds": [],
+    "Tennis": [],
+    "Motor Racing": [],
+    "Handball": [],
+    "Ice Hockey": [
+      {
+        "fixture_id": "NHL-20261023-TBL-COL",
+        "sport": "Ice Hockey",
+        "selection": "Tampa Bay Lightning",
+        "selection_side": "side_a",
+        "p": 0.5471,
+        "fair_american": -121,
+        "label": "low",
+        "label_note": "",
+        "band_check": "in band (-250..+10000)",
+        "qualifies_high_confidence": false
+      },
+      {
+        "fixture_id": "NHL-20261023-MTL-CHI",
+        "sport": "Ice Hockey",
+        "selection": "Montreal Canadiens",
+        "selection_side": "side_a",
+        "p": 0.5433,
+        "fair_american": -119,
+        "label": "low",
+        "label_note": "",
+        "band_check": "in band (-250..+10000)",
+        "qualifies_high_confidence": false
+      }
+    ],
+    "Basketball": [
+      {
+        "fixture_id": "NBA-20261023-DAL-IND",
+        "sport": "Basketball",
+        "selection": "Indiana Pacers",
+        "selection_side": "side_b",
+        "p": 0.5902,
+        "fair_american": -144,
+        "label": "low",
+        "label_note": "",
+        "band_check": "in band (-250..+10000)",
+        "qualifies_high_confidence": false
+      },
+      {
+        "fixture_id": "NBA-20261023-DET-MIA",
+        "sport": "Basketball",
+        "selection": "Detroit Pistons",
+        "selection_side": "side_a",
+        "p": 0.5902,
+        "fair_american": -144,
+        "label": "low",
+        "label_note": "",
+        "band_check": "in band (-250..+10000)",
+        "qualifies_high_confidence": false
+      },
+      {
+        "fixture_id": "NBA-20261023-HOU-SAS",
+        "sport": "Basketball",
+        "selection": "Houston Rockets",
+        "selection_side": "side_a",
+        "p": 0.5902,
+        "fair_american": -144,
+        "label": "low",
+        "label_note": "",
+        "band_check": "in band (-250..+10000)",
+        "qualifies_high_confidence": false
+      },
+      {
+        "fixture_id": "NBA-20261023-MEM-GSW",
+        "sport": "Basketball",
+        "selection": "Memphis Grizzlies",
+        "selection_side": "side_a",
+        "p": 0.5902,
+        "fair_american": -144,
+        "label": "low",
+        "label_note": "",
+        "band_check": "in band (-250..+10000)",
+        "qualifies_high_confidence": false
+      },
+      {
+        "fixture_id": "NBA-20261023-MIN-ORL",
+        "sport": "Basketball",
+        "selection": "Minnesota Timberwolves",
+        "selection_side": "side_a",
+        "p": 0.5902,
+        "fair_american": -144,
+        "label": "low",
+        "label_note": "",
+        "band_check": "in band (-250..+10000)",
+        "qualifies_high_confidence": false
+      }
+    ],
+    "Rugby League": []
+  },
+  "gate": "high-confidence = p >= 0.70 AND fair American price in -250..+10000 AND >= 20 games per side"
+}

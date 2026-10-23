@@ -1,0 +1,649 @@
+{
+  "as_of": "2026-10-23",
+  "parameters": {
+    "K_PRIOR": 10.0,
+    "HOME_LOGIT": 0.25,
+    "SAMPLE_HIGH": 20,
+    "BAND": [
+      -250,
+      10000
+    ],
+    "label_thresholds": {
+      "high": 0.7,
+      "medium": 0.6
+    },
+    "note": "K_PRIOR, HOME_LOGIT and SAMPLE_HIGH are modelling assumptions set by this desk, not facts from any source."
+  },
+  "lines": [
+    {
+      "fixture_id": "NHL-20261023-MTL-CHI",
+      "sport": "Ice Hockey",
+      "market": "Win match (moneyline)",
+      "method": "NHL: shrunk points pct (pts + 10) / (2GP + 20); log5; home-ice shift +0.25 log-odds to the home side (assumption)",
+      "inputs": {
+        "side_a": {
+          "name": "Montreal Canadiens",
+          "record": "4-3-2",
+          "gp": 9
+        },
+        "side_b": {
+          "name": "Chicago Blackhawks",
+          "record": "3-6-0",
+          "gp": 9
+        }
+      },
+      "strength": {
+        "side_a": 0.5263,
+        "side_b": 0.4211
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5433,
+          "fair_american": -119,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.4567,
+          "fair_american": 119,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money line / win (originated)",
+        "Puck line (not originated)",
+        "Game total (not originated)"
+      ],
+      "markets_not_originated": {
+        "Puck line (not originated)": "needs verified goals-for and goals-against per game; not captured",
+        "Game total (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NHL-20261023-TBL-COL",
+      "sport": "Ice Hockey",
+      "market": "Win match (moneyline)",
+      "method": "NHL: shrunk points pct (pts + 10) / (2GP + 20); log5; home-ice shift +0.25 log-odds to the home side (assumption)",
+      "inputs": {
+        "side_a": {
+          "name": "Tampa Bay Lightning",
+          "record": "7-2-0",
+          "gp": 9
+        },
+        "side_b": {
+          "name": "Colorado Avalanche",
+          "record": "5-4-1",
+          "gp": 10
+        }
+      },
+      "strength": {
+        "side_a": 0.6316,
+        "side_b": 0.525
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5471,
+          "fair_american": -121,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.4529,
+          "fair_american": 121,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money line / win (originated)",
+        "Puck line (not originated)",
+        "Game total (not originated)"
+      ],
+      "markets_not_originated": {
+        "Puck line (not originated)": "needs verified goals-for and goals-against per game; not captured",
+        "Game total (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-CHI-MIL",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Chicago Bulls",
+          "record": "0-1",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Milwaukee Bucks",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.4545,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-NYK-BOS",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "New York Knicks",
+          "record": "0-1",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Boston Celtics",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.4545,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-TOR-WAS",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Toronto Raptors",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Washington Wizards",
+          "record": "1-0",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.5455
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-ATL-CHA",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Atlanta Hawks",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Charlotte Hornets",
+          "record": "1-0",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.5455
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-MIN-ORL",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Minnesota Timberwolves",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Orlando Magic",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5902,
+          "fair_american": -144,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.4098,
+          "fair_american": 144,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-DAL-IND",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Dallas Mavericks",
+          "record": "0-1",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Indiana Pacers",
+          "record": "1-0",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.4545,
+        "side_b": 0.5455
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.4098,
+          "fair_american": 144,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.5902,
+          "fair_american": -144,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-DET-MIA",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Detroit Pistons",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Miami Heat",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5902,
+          "fair_american": -144,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.4098,
+          "fair_american": 144,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-HOU-SAS",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Houston Rockets",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "San Antonio Spurs",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5902,
+          "fair_american": -144,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.4098,
+          "fair_american": 144,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-NOP-UTA",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "New Orleans Pelicans",
+          "record": "0-1",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Utah Jazz",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.4545,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-MEM-GSW",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Memphis Grizzlies",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Golden State Warriors",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5902,
+          "fair_american": -144,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.4098,
+          "fair_american": 144,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-LAC-LAL",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "LA Clippers",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Los Angeles Lakers",
+          "record": "1-0",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.5455
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.5,
+          "fair_american": -100,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    },
+    {
+      "fixture_id": "NBA-20261023-POR-SAC",
+      "sport": "Basketball",
+      "market": "Win match (moneyline)",
+      "method": "NBA: shrunk win pct (W + 5) / (GP + 10); neutral court (home side not stated on source)",
+      "inputs": {
+        "side_a": {
+          "name": "Portland Trail Blazers",
+          "record": "1-0",
+          "gp": 1
+        },
+        "side_b": {
+          "name": "Sacramento Kings",
+          "record": "0-1",
+          "gp": 1
+        }
+      },
+      "strength": {
+        "side_a": 0.5455,
+        "side_b": 0.4545
+      },
+      "sides": {
+        "side_a": {
+          "p": 0.5902,
+          "fair_american": -144,
+          "label": "low",
+          "label_note": ""
+        },
+        "side_b": {
+          "p": 0.4098,
+          "fair_american": 144,
+          "label": "low",
+          "label_note": ""
+        }
+      },
+      "markets_considered": [
+        "Money Line (originated)",
+        "Pointspread (not originated)",
+        "Game Totals (not originated)"
+      ],
+      "markets_not_originated": {
+        "Pointspread (not originated)": "needs verified points-for and points-against per game; not captured",
+        "Game Totals (not originated)": "needs verified scoring rates; not captured"
+      }
+    }
+  ]
+}

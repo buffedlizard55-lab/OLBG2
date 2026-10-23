@@ -1,0 +1,194 @@
+{
+  "as_of": "2026-10-23",
+  "note": "Every source below was read first-hand in this session with the fetch tool unless marked 'search snippet'. 'Official' means the governing body, league, tour or broadcaster-owned official site. OLBG is a reference site, not an official source.",
+  "sources": [
+    {
+      "id": "S01",
+      "name": "NHL Stats API (api-web.nhle.com) score feed for 2026-10-23",
+      "url": "https://api-web.nhle.com/v1/score/2026-10-23",
+      "kind": "official",
+      "used_for": "NHL fixtures, start times (UTC), venues, team W-L-OTL records"
+    },
+    {
+      "id": "S02",
+      "name": "NHL standings feed (api-web.nhle.com) as of 2026-10-23",
+      "url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+      "kind": "official",
+      "used_for": "Context only (first chunk read): CAR 8-2-2, EDM 8-1-1, BOS 8-2-1, VGK 8-4-0. Not used in any line."
+    },
+    {
+      "id": "S03",
+      "name": "MLB Stats API schedule for 2026-10-23 with probable pitchers",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-23&hydrate=probablePitcher,team,linescore",
+      "kind": "official",
+      "used_for": "MLB World Series Game 1 fixture, venue, probable pitchers"
+    },
+    {
+      "id": "S04",
+      "name": "NBA.com games page for October 2026 (date 23 Oct)",
+      "url": "https://www.nba.com/games?date=2026-10-23",
+      "kind": "official",
+      "used_for": "NBA fixtures (12 games), listed start times (ET), team records, game URLs"
+    },
+    {
+      "id": "S05",
+      "name": "formula1.com United States Grand Prix 2026 page",
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "kind": "official",
+      "used_for": "US GP session times and race date, circuit"
+    },
+    {
+      "id": "S06",
+      "name": "formula1.com 2026 Drivers' Standings",
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "kind": "official",
+      "used_for": "Championship points (context only, not used in any line)"
+    },
+    {
+      "id": "S07",
+      "name": "World Snooker Tour matches page, BetVictor Northern Ireland Open 2026",
+      "url": "https://www.wst.tv/matches/",
+      "kind": "official",
+      "used_for": "Snooker quarter-final fixtures for Fri 23 Oct and completed results on that day"
+    },
+    {
+      "id": "S08",
+      "name": "NRL.com draw, Rugby League World Cup 2026, Round 2",
+      "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+      "kind": "official",
+      "used_for": "Rugby League World Cup 2026 Round 2 fixtures, venues, displayed kick-off times, group position labels"
+    },
+    {
+      "id": "S09",
+      "name": "GAA.ie fixtures and results",
+      "url": "https://www.gaa.ie/fixtures-results",
+      "kind": "official",
+      "used_for": "Shinty-Hurling International, Ireland v Scotland, Sat 24 Oct 18:00 (listed under a 'Previous results' heading)"
+    },
+    {
+      "id": "S10",
+      "name": "ATP Tour scores page (current)",
+      "url": "https://www.atptour.com/en/scores/current",
+      "kind": "official",
+      "used_for": "Tennis quarter-final rows and their displayed status at capture"
+    },
+    {
+      "id": "S11",
+      "name": "PGA Tour tournament schedule 2026",
+      "url": "https://www.pgatour.com/schedule",
+      "kind": "official",
+      "used_for": "Only the existence of the Butterfield Bermuda Championship entry (R2026528); dates not captured"
+    },
+    {
+      "id": "S12",
+      "name": "OLBG Betting Tips Today",
+      "url": "https://www.olbg.com/betting-tips",
+      "kind": "reference",
+      "used_for": "OLBG URL schema, OLBG listing for Baseball (TB Rays @ MIL Brewers, event 160789), market names 'Win Match 2-way' and 'Money Line'"
+    },
+    {
+      "id": "S13",
+      "name": "OLBG Darts All Events Tips (sport id 15)",
+      "url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/15",
+      "kind": "reference",
+      "used_for": "OLBG darts listing for 'Today' and 'Tomorrow' with OLBG event ids"
+    },
+    {
+      "id": "S14",
+      "name": "OLBG Tennis betting tips (sport id 3), search snippet",
+      "url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "kind": "reference",
+      "used_for": "Tennis market names (Win Match, Tournament Winner, Set Score Betting). Search snippet, not fetched."
+    },
+    {
+      "id": "S15",
+      "name": "OLBG Golf betting tips (sport id 5), search snippet",
+      "url": "https://www.olbg.com/betting-tips/Golf/5",
+      "kind": "reference",
+      "used_for": "Golf market names (Tournament Outright Winner, First Round Leader). Search snippet, not fetched."
+    },
+    {
+      "id": "S16",
+      "name": "OLBG Motor Racing predictions (sport id 14), search snippet",
+      "url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "kind": "reference",
+      "used_for": "Motor-racing market names (Fastest Qualifier, Win Race, Podium Finish, Top 6 Finish, Points Finish, Fastest Lap, Win Tournament). Search snippet, not fetched."
+    },
+    {
+      "id": "S17",
+      "name": "OLBG Basketball betting tips (sport id 4), search snippet",
+      "url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "kind": "reference",
+      "used_for": "Basketball market names (Money Line, Pointspread, Game Total). Search snippet, not fetched."
+    },
+    {
+      "id": "S18",
+      "name": "FIVB Competitions index",
+      "url": "https://www.fivb.com/volleyball/fivb-competitions/",
+      "kind": "official",
+      "used_for": "Confirms the FIVB competition list only; it does not list any fixture for 23-25 Oct 2026"
+    }
+  ],
+  "attempts_failed_or_unreadable": [
+    {
+      "id": "F01",
+      "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
+      "result": "HTTP 500",
+      "affects": "Basketball: alternative NBA scoreboard feed not available; NBA.com games page used instead"
+    },
+    {
+      "id": "F02",
+      "url": "https://www.atptour.com/en/scores/current-week",
+      "result": "404 page not found",
+      "affects": "Tennis: ATP scores page used instead; no upcoming tennis order of play captured"
+    },
+    {
+      "id": "F03",
+      "url": "https://www.pdc.tv/fixtures",
+      "result": "Cookie-consent wall returned; no fixture text in the first capture chunk",
+      "affects": "Darts: official PDC fixtures not captured; OLBG darts listing is reference only"
+    },
+    {
+      "id": "F04",
+      "url": "https://www.icc-cricket.com/matches",
+      "result": "404 page not found",
+      "affects": "Cricket: no official fixture list captured"
+    },
+    {
+      "id": "F05",
+      "url": "https://www.unitedrugby.com/fixtures",
+      "result": "404 page not found",
+      "affects": "Rugby Union: URC fixtures not captured"
+    },
+    {
+      "id": "F06",
+      "url": "https://www.premrugby.com/fixtures",
+      "result": "404 page not found (premiershiprugby.com/fixtures redirected to the same 404)",
+      "affects": "Rugby Union: Premiership fixtures not captured"
+    },
+    {
+      "id": "F07",
+      "url": "https://www.gbgb.org.uk/racecards/",
+      "result": "404 page not found",
+      "affects": "Greyhounds: GBGB racecards not captured"
+    },
+    {
+      "id": "F08",
+      "url": "https://www.ehfcl.com/men/matches/",
+      "result": "404 page not found",
+      "affects": "Handball: EHF Champions League fixtures not captured"
+    },
+    {
+      "id": "F09",
+      "url": "https://www.fivb.com/en/volleyball/competitions",
+      "result": "Redirected to competitions index without fixtures",
+      "affects": "Volleyball: no fixture list captured"
+    },
+    {
+      "id": "F10",
+      "url": "https://www.pgatour.com/schedule (chunks 0-6 of 7 read)",
+      "result": "Partly read: 2026 schedule read through March and the Butterfield Bermuda Championship link; October dates not captured",
+      "affects": "Golf: no dated fixture captured"
+    }
+  ]
+}

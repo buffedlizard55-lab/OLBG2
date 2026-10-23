@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repository audit · OLBG2 desk</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header><h1>Repository audit</h1><p>OLBG 15-sport desk · captured 23 October 2026</p></header>
+<nav><a class="" href="index.html">Overview</a><a class="" href="matches.html">Verified fixtures</a><a class="" href="olbg.html">OLBG event list</a><a class="" href="lines.html">Originated lines</a><a class="" href="picks.html">Top-5 picks</a><a class="" href="predictions.html">Predictions</a><a class="on" href="audit.html">Repo audit</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="" href="methodology.html">Methodology</a></nav>
+<main>
+<p class="lede">A line-by-line read of the merged repository, done on the same tree this desk was built
+from. Findings are recorded, not silently fixed: shared files are owned by other sessions.</p>
+<div class="scroll"><table>
+<thead><tr><th>ID</th><th>Area</th><th>Finding</th><th>Evidence</th><th>Status</th></tr></thead><tbody>
+<tr><td><b>A-01</b></td><td>COORDINATION.md</td><td>Three unresolved merge-conflict blocks remain in the
+committed file: six marker lines (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>,
+<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>) at lines 3216/3307, 3437/3549 and 3609/3628.</td>
+<td><code>grep -n '^=======$\|^&gt;&gt;&gt;&gt;&gt;&gt;&gt;' COORDINATION.md</code> → 6 hits</td>
+<td><span class="pill warn">open</span></td></tr>
+<tr><td><b>A-02</b></td><td>Scope</td><td>The repository now carries 34 published desks/layers
+(<code>atlas, beacon, board, canon, command, current, daily, daily-audit, daily-picks, final, final-desk,
+forward, fresh, hub, live, portal, pulse, reconcile, relay, site, slate, survey, vanguard, verified</code>
+and others). Their row counts overlap and must not be summed.</td>
+<td><code>ls -d */</code></td><td><span class="pill warn">open</span></td></tr>
+<tr><td><b>A-03</b></td><td>README</td><td>README states the consolidated desk has 382 rows “across all 17
+eligible sports”, while this brief names 15 sports and excludes Aussie Rules and eSports. The two scopes
+coexist without a single stated mapping.</td>
+<td>README.md, “Consolidated desk” row</td><td><span class="pill warn">open</span></td></tr>
+<tr><td><b>A-04</b></td><td>Coverage claims</td><td>Earlier desks report “25 high-confidence picks” and
+“85 in-band picks”. Those labels were produced by other models with their own gates; they are not
+comparable with this desk's eight and must not be added to them.</td>
+<td>README.md; vanguard/index.html</td><td><span class="pill med">disclosed</span></td></tr>
+<tr><td><b>A-05</b></td><td>Tests</td><td>The full suite (467 tests) passes on this tree before any edit.</td>
+<td><code>python3 -m unittest discover -s tests</code> → OK</td><td><span class="pill hi">clear</span></td></tr>
+<tr><td><b>A-06</b></td><td>Shared files</td><td>Two sessions claim the same root integration files
+(<code>33e9eee7</code> task F6 and <code>8226c94a</code>). This session therefore edits none of them and
+logs its navigation request instead.</td>
+<td>COORDINATION.md claims, 16:15–16:16 UTC</td><td><span class="pill med">handled by scope</span></td></tr>
+</tbody></table></div>
+<div class="note">Request to the root owner: add a <code>desk/</code> entry to the root navigation and a
+<code>desk data/olbgdesk</code> drift path to the Pages workflow. This session does not touch
+<code>index.html</code>, <code>scripts/build_site.py</code> or <code>.github/workflows/**</code>.</div>
+</main>
+<footer>
+Research, not betting advice. Every price on this desk is originated here; none is a bookmaker quote.
+Selections carry a probability, not a guarantee. 18+.
+Rows without a governing-body source are labelled and listed on
+<a href="flagged.html">Flagged for review</a>. Built from committed captures by
+<code>scripts/desk_build.py</code>.
+</footer></body></html>

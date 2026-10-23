@@ -1,0 +1,107 @@
+{
+ "generated_utc": "2026-10-23T16:40:00Z",
+ "flags": [
+  {
+   "id": "F-01",
+   "sport": "Golf",
+   "finding": "OLBG's Golf hub returned \"No tips found.\" at capture time, so no Golf event existed to list. No official golf fixture was captured either. Golf therefore publishes zero rows on this desk.",
+   "source": "https://www.olbg.com/betting-tips/Golf/5"
+  },
+  {
+   "id": "F-02",
+   "sport": "Rugby League",
+   "finding": "OLBG lists only 2027 outright markets (State of Origin, Super League Grand Final, NRL Grand Final) for this sport. No match fixture was listed, so no match row or match price exists.",
+   "source": "https://www.olbg.com/betting-tips/Rugby_League/10"
+  },
+  {
+   "id": "F-03",
+   "sport": "Rugby Union",
+   "finding": "The URC table page returns its standings client-side and rendered no numeric columns in this environment, so points-for and points-against inputs are absent. All URC rows are published unlined rather than filled with estimates.",
+   "source": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+  },
+  {
+   "id": "F-04",
+   "sport": "Baseball",
+   "finding": "Only the American League East block of the MLB standings rendered before the capture window closed. Milwaukee's season totals were not captured, so World Series Game 1 is published unlined.",
+   "source": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+  },
+  {
+   "id": "F-05",
+   "sport": "Ice Hockey",
+   "finding": "The NHL club-statistics capture began mid-record for Nashville and did not include Winnipeg. Both clubs' goal totals are absent, so any fixture needing them is excluded rather than estimated.",
+   "source": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=teamFullName&dir=ASC&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027"
+  },
+  {
+   "id": "F-06",
+   "sport": "12 sports",
+   "finding": "Twelve sports have OLBG events but no official numeric input was captured for them in this window. Their prices are consensus-derived only and are labelled that way on every row; no narrative is written for them.",
+   "source": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "F-07",
+   "sport": "All sports",
+   "finding": "OLBG renders no price on the hub and no price on the event page (checked on event_id 32335, where the win price field is blank). No OLBG price is recorded anywhere in this dataset, and every price here is originated independently.",
+   "source": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335"
+  },
+  {
+   "id": "F-08",
+   "sport": "Darts, Baseball",
+   "finding": "Two high-confidence selections (Jonny Clayton, Milwaukee Brewers) have no official numeric fact base captured. Their selection and confidence are published, but the narrative is withheld rather than written from unverified material.",
+   "source": "https://www.olbg.com/betting-tips/Darts/15"
+  },
+  {
+   "id": "F-09",
+   "sport": "All sports",
+   "finding": "OLBG sport hubs are paginated behind \"Load More Tips\" and \"Show Expired Events\". Only the first rendered page of each hub was captured, so the 125-row inventory is what OLBG displayed above the fold, not a guarantee of the complete slate.",
+   "source": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "F-10",
+   "sport": "All sports",
+   "finding": "OLBG's displayed start times do not reconcile to UTC. The NHL row shows \"Today 20:07\" for a game the NHL feed puts at 2026-10-24T00:00:00Z (20:00 ET). Displayed strings are stored verbatim and never used as the authoritative kick-off.",
+   "source": "https://api-web.nhle.com/v1/score/2026-10-23"
+  },
+  {
+   "id": "F-11",
+   "sport": "All sports",
+   "finding": "No official injury or team-news report was captured for any fixture. Injury sentences are therefore omitted from every prediction rather than inferred.",
+   "source": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=teamFullName&dir=ASC&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027"
+  },
+  {
+   "id": "F-12",
+   "sport": "All sports",
+   "finding": "The target of five written predictions per sport is not met. Six predictions exist, all Ice Hockey, because that is the only sport for which official numeric inputs were captured. This is a coverage gap, not a completed target.",
+   "source": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=teamFullName&dir=ASC&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027"
+  },
+  {
+   "id": "F-13",
+   "sport": "Tennis",
+   "finding": "The ATP order-of-play route tried returned HTTP 404, so no ATP fixture or ranking input was captured. All nine Tennis rows remain OLBG-listed only.",
+   "source": "https://www.atptour.com/en/scores/current/vienna/336/order-of-play"
+  },
+  {
+   "id": "F-14",
+   "sport": "Basketball",
+   "finding": "The NBA scoreboard endpoint returned HTTP 500 and no EuroLeague numeric page was captured. All fourteen Basketball rows remain OLBG-listed only.",
+   "source": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
+  },
+  {
+   "id": "F-15",
+   "sport": "Darts",
+   "finding": "The PDC tournament route returned a cookie-consent shell with no match data. The twelve Darts fixtures are OLBG-listed only and were not confirmed against the governing body.",
+   "source": "https://www.pdc.tv/tournaments/machineseeker-european-championship"
+  },
+  {
+   "id": "F-16",
+   "sport": "Snooker",
+   "finding": "The WST matches page rendered completed Round 1 results only; the two quarter-finals OLBG lists were not visible in the captured window. They remain unconfirmed against WST.",
+   "source": "https://www.wst.tv/matches/"
+  },
+  {
+   "id": "F-17",
+   "sport": "Repo",
+   "finding": "COORDINATION.md still contains three unresolved merge-conflict blocks (six marker lines at 3216/3307, 3437/3549 and 3609/3628). This desk leaves them untouched because they belong to other sessions' records, and flags them for the integration owner.",
+   "source": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md"
+  }
+ ]
+}

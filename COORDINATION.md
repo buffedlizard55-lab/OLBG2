@@ -4529,3 +4529,13 @@ The golf, greyhounds, Formula 1 outrights and the Drivers' Championship still pr
 applied to some row builders. All five builders now use it, so a fixture with no opponent prints as a single
 name. No probability, price, grade, pick or prediction changed; `cadence_verify.py` → 11 check groups, 0
 errors; 24 desk tests; 0 cross-layer link errors.
+
+### Follow-up 4: last “v” on the sport pages, and a duplicate source link
+
+`fixture_block()` was the final builder still concatenating the opponent, so the golf, greyhounds and F1 rows on
+each sport page ended with a bare “v”. It now uses the same helper as the other four builders. The same function
+printed the official and statistical source links twice when a fixture uses one page for both; the duplicate is
+now suppressed.
+
+No probability, price, grade, pick or prediction changed. `cadence_verify.py` → 11 check groups, 0 errors;
+24 desk tests.

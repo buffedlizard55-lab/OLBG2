@@ -623,12 +623,13 @@ def fixture_block(rows):
                             for f in m["facts"])
         status_html = "priced" if m["status"] == "originated" else '<span class="pill blank">no line</span>'
         extra = ""
-        if m.get("stats_source_url"):
+        if m.get("stats_source_url") and m["stats_source_url"] != m["official_source_url"]:
             extra += '<div class="small">' + src(m["stats_source_url"]) + "</div>"
         if m.get("injury_source_url"):
             extra += '<div class="small">' + src(m["injury_source_url"], "NBA injury report") + "</div>"
         note = ("<br>" + escape(m["note"])) if m.get("note") else ""
-        out.append(f'<tr><td><strong>{escape(m["home"])}</strong> v {escape(m["away"] or "")}'
+        opponent = " v " + escape(m["away"]) if m["away"] else ""
+        out.append(f'<tr><td><strong>{escape(m["home"])}</strong>{opponent}'
                    f'<div class="small">{escape(m.get("venue") or "")}</div></td>'
                    f'<td class="small">{escape(m["competition"])}</td>'
                    f'<td class="small">{escape(m.get("time_display") or m.get("start_utc") or "—")}</td>'

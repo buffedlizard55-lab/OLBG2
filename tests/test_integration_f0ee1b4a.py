@@ -88,5 +88,64 @@ class SourceToPriceRegressionTests(unittest.TestCase):
         self.assertNotIn("Formula 1 Drivers&#x27; Championship 2026 v", predictions_html)
 
 
+class RootIntegrationTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.index = (ROOT / "index.html").read_text(encoding="utf-8")
+        cls.review = (ROOT / "integration.html").read_text(encoding="utf-8")
+        cls.audit = json.loads((ROOT / "data" / "integration-f0ee1b4a" / "audit.json").read_text(encoding="utf-8"))
+
+    def test_root_uses_the_current_fifteen_sport_snapshot(self):
+        matches = load("matches.json")
+        self.assertIn(matches["generated_utc"], self.index)
+        self.assertIn(f"Browse all {matches['count']} fixtures", self.index)
+        self.assertIn("exact 15-sport scope", self.index)
+        self.assertNotIn("Every eligible OLBG sport, one verified table", self.index)
+        self.assertEqual(self.index.count('class="card sport"'), 15)
+
+    def test_olbg_coverage_boundary_is_prominent(self):
+        self.assertIn("zero currently readable active OLBG listings", self.index)
+        self.assertIn("official-context fixtures, not asserted OLBG listings", self.index)
+        self.assertIn("not a live feed or a claim of complete OLBG coverage", self.index)
+
+    def test_band_counts_and_writeup_shortfall_are_data_derived(self):
+        picks = load("picks.json")["picks"]
+        highs = [p for p in picks if p["confidence"] == "high" and p.get("sport_rank")]
+        natural = sum(p["in_band"] and not p.get("band_board") for p in highs)
+        alternate = sum(p["in_band"] and bool(p.get("band_board")) for p in highs)
+        self.assertIn(f'<div class="v">{natural} / {alternate}</div>', self.index)
+        self.assertIn("Five high-confidence write-ups per sport are present for 2 sports", self.index)
+
+    def test_every_root_data_row_has_an_external_source_link(self):
+        rows = re.findall(r"<tr>(.*?)</tr>", self.index, flags=re.S)
+        data_rows = [row for row in rows if "<td" in row]
+        self.assertGreaterEqual(len(data_rows), 20)
+        for row in data_rows:
+            self.assertIn('href="https://', row, row[:160])
+
+    def test_prediction_anchors_resolve(self):
+        prediction_page = (ROOT / "cadence" / "predictions.html").read_text(encoding="utf-8")
+        anchors = re.findall(r'href="cadence/predictions\.html#([^"]+)"', self.index)
+        self.assertGreaterEqual(len(anchors), 18)
+        for anchor in anchors:
+            self.assertIn(f'id="{anchor}"', prediction_page, anchor)
+
+    def test_review_publishes_corrections_and_open_findings(self):
+        for finding in self.audit["findings"]:
+            self.assertIn(finding["id"], self.review)
+            self.assertIn(finding["item"], self.review)
+        self.assertIn("Open the older cross-layer audit", self.review)
+        self.assertEqual(self.audit["summary"]["row_internal_fail"], 0)
+        self.assertEqual(len(self.audit["row_checks"]), 93)
+        self.assertEqual(self.audit["summary"]["errors"], [])
+
+    def test_workflow_rebuilds_and_drift_checks_current_integration(self):
+        workflow = (ROOT / ".github" / "workflows" / "pages.yml").read_text(encoding="utf-8")
+        for script in ("cadence_seed.py", "cadence_model.py", "cadence_predictions.py",
+                       "cadence_build.py", "cadence_verify.py", "integration_f0ee1b4a_audit.py"):
+            self.assertIn(f"python scripts/{script}", workflow)
+        self.assertIn("cadence data/cadence data/integration-f0ee1b4a", workflow)
+
+
 if __name__ == "__main__":
     unittest.main()

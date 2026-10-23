@@ -1,0 +1,64 @@
+{
+  "captured_utc": "2026-10-23T16:30:00Z",
+  "session": "arena/b8a1ce4c-olbg2",
+  "official_sources": {
+    "nhl_team_summary": {
+      "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=teamFullName&dir=ASC&factCayenneExp=gamesPlayed%3E=1&cayenneExp=gameTypeId=2%20and%20seasonId%3C=20262027%20and%20seasonId%3E=20262027",
+      "label": "NHL.com official club statistics, 2026-27 regular season",
+      "fields": "gamesPlayed, goalsFor, goalsAgainst, wins, losses, otLosses, points per club",
+      "limit": "The rendered capture began mid-record for Nashville and did not include Winnipeg, so those two clubs' goal totals are absent here and any fixture needing them is left unlined."
+    },
+    "nhl_score_2026_10_23": {
+      "url": "https://api-web.nhle.com/v1/score/2026-10-23",
+      "label": "NHL.com official scores and schedule, 23 October 2026",
+      "fields": "game id, venue, startTimeUTC, club records, team leaders"
+    },
+    "nhl_score_2026_10_24": {
+      "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "label": "NHL.com official scores and schedule, 24 October 2026",
+      "fields": "game id, venue, startTimeUTC, club records"
+    },
+    "mlb_schedule_2026_10_23": {
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-23",
+      "label": "MLB.com official schedule, 23 October 2026",
+      "fields": "gamePk, World Series Game 1, clubs, venue, first pitch UTC"
+    },
+    "mlb_standings_2026": {
+      "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+      "label": "MLB.com official 2026 regular-season standings",
+      "fields": "W-L, runs scored, runs allowed, home/away splits",
+      "limit": "Only the American League East block was rendered before the capture window closed. Milwaukee's season totals were not captured, so the World Series fixture is published unlined rather than inferred."
+    },
+    "urc_round_4": {
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "label": "United Rugby Championship official match centre, Round 4",
+      "fields": "fixture, venue, local kick-off, broadcasters",
+      "limit": "The league table page renders client-side and returned no numeric table in this environment, so no points-for/against inputs exist and URC rows are unlined."
+    }
+  },
+  "nhl_club_stats": {
+    "ANA": [10,27,33,4,6,0,8], "BOS": [11,42,22,8,2,1,17], "BUF": [10,28,36,4,4,2,10],
+    "CGY": [9,19,38,3,6,0,6], "CAR": [12,47,32,8,2,2,18], "CHI": [9,21,36,3,6,0,6],
+    "COL": [10,41,30,5,4,1,11], "CBJ": [8,19,29,3,5,0,6], "DAL": [10,25,16,6,3,1,13],
+    "DET": [10,27,28,4,3,3,11], "EDM": [10,46,32,8,1,1,17], "FLA": [11,31,34,5,4,2,12],
+    "LAK": [8,20,29,2,4,2,6], "MIN": [11,32,27,6,3,2,14], "MTL": [9,28,34,4,3,2,10],
+    "NJD": [10,33,31,6,4,0,12], "NYI": [10,29,22,5,3,2,12], "NYR": [12,37,29,7,4,1,15],
+    "OTT": [11,29,30,7,4,0,14], "PHI": [12,20,36,3,6,3,9], "PIT": [11,36,37,4,6,1,9],
+    "SJS": [11,32,36,6,4,1,13], "SEA": [11,42,37,7,3,1,15], "STL": [10,35,31,5,4,1,11],
+    "TBL": [9,31,23,7,2,0,14], "TOR": [12,43,38,6,4,2,14], "UTA": [11,41,36,7,4,0,14],
+    "VAN": [12,35,56,2,9,1,5], "VGK": [12,45,36,8,4,0,16], "WSH": [9,30,29,5,4,0,10]
+  },
+  "nhl_stat_fields": ["gp","gf","ga","w","l","otl","pts"],
+  "fixtures": [
+    {"sid":"nhl-2026020166","sport":"Ice Hockey","comp":"NHL","home":"Chicago Blackhawks","away":"Montreal Canadiens","home_abbr":"CHI","away_abbr":"MTL","start_utc":"2026-10-24T00:00:00Z","venue":"United Center","src":"https://api-web.nhle.com/v1/score/2026-10-23","olbg":"MTL Canadiens @ CHI Blackhawks","facts":"Montreal are 4-3-2 with 28 goals for and 34 against in nine games; Cole Caufield has six goals, Nick Suzuki seven assists and Jacob Fowler three wins. Chicago are 3-6-0 with 21 goals for and 36 against in nine games; Frank Nazar has three goals, Anton Frondell five assists and Spencer Knight three wins."},
+    {"sid":"nhl-2026020167","sport":"Ice Hockey","comp":"NHL","home":"Colorado Avalanche","away":"Tampa Bay Lightning","home_abbr":"COL","away_abbr":"TBL","start_utc":"2026-10-24T01:00:00Z","venue":"Ball Arena","src":"https://api-web.nhle.com/v1/score/2026-10-23","olbg":null,"facts":"Colorado are 5-4-1 with 41 goals for and 30 against in ten games. Tampa Bay are 7-2-0 with 31 goals for and 23 against in nine games."},
+    {"sid":"nhl-2026020168","sport":"Ice Hockey","comp":"NHL","home":"Philadelphia Flyers","away":"Anaheim Ducks","home_abbr":"PHI","away_abbr":"ANA","start_utc":"2026-10-24T17:00:00Z","venue":"Xfinity Mobile Arena","src":"https://api-web.nhle.com/v1/score/2026-10-24","olbg":null,"facts":"Philadelphia are 3-6-3 with 20 goals for and 36 against in twelve games; Matvei Michkov has six goals, Trevor Zegras five assists and Dan Vladar two wins. Anaheim are 4-6-0 with 27 goals for and 33 against in ten games; Beckett Sennecke has five goals, Leo Carlsson nine assists and Lukas Dostal three wins."},
+    {"sid":"nhl-2026020169","sport":"Ice Hockey","comp":"NHL","home":"New Jersey Devils","away":"Los Angeles Kings","home_abbr":"NJD","away_abbr":"LAK","start_utc":"2026-10-24T19:30:00Z","venue":"Prudential Center","src":"https://api-web.nhle.com/v1/score/2026-10-24","olbg":null,"facts":"New Jersey are 6-4-0 with 33 goals for and 31 against in ten games; Arseny Gritsyuk has five goals. Los Angeles are 2-4-2 with 20 goals for and 29 against in eight games; Artemi Panarin has six goals and Brandt Clarke four assists."},
+    {"sid":"nhl-2026020170","sport":"Ice Hockey","comp":"NHL","home":"Boston Bruins","away":"San Jose Sharks","home_abbr":"BOS","away_abbr":"SJS","start_utc":"2026-10-24T23:00:00Z","venue":"TD Garden","src":"https://api-web.nhle.com/v1/score/2026-10-24","olbg":null,"facts":"Boston are 8-2-1 with 42 goals for and 22 against in eleven games. San Jose are 6-4-1 with 32 goals for and 36 against in eleven games."},
+    {"sid":"nhl-2026020171","sport":"Ice Hockey","comp":"NHL","home":"Ottawa Senators","away":"New York Rangers","home_abbr":"OTT","away_abbr":"NYR","start_utc":"2026-10-24T23:00:00Z","venue":"Canadian Tire Centre","src":"https://api-web.nhle.com/v1/score/2026-10-24","olbg":null,"facts":"Ottawa are 7-4-0 with 29 goals for and 30 against in eleven games. The Rangers are 7-4-1 with 37 goals for and 29 against in twelve games; Alexis Lafreniere has seven goals and Adam Fox ten assists."},
+    {"sid":"urc-292608","sport":"Rugby Union","comp":"United Rugby Championship R4","home":"Cardiff Rugby","away":"Hollywoodbets Sharks","home_abbr":"CAR","away_abbr":"SHA","start_utc":"2026-10-23T13:45:00Z","venue":"Cardiff Arms Park","src":"https://stats.unitedrugby.com/match-centre/2026-27/4","olbg":"Cardiff v Sharks","facts":"Round 4 fixture at Cardiff Arms Park. The URC table page rendered client-side only, so no league points-for or points-against inputs were captured."},
+    {"sid":"urc-292609","sport":"Rugby Union","comp":"United Rugby Championship R4","home":"Connacht Rugby","away":"Zebre Parma","home_abbr":"CON","away_abbr":"ZEB","start_utc":"2026-10-23T13:45:00Z","venue":"Dexcom Stadium","src":"https://stats.unitedrugby.com/match-centre/2026-27/4","olbg":"Connacht v Zebre Parma","facts":"Round 4 fixture at Dexcom Stadium. No league points-for or points-against inputs were captured."},
+    {"sid":"urc-292610","sport":"Rugby Union","comp":"United Rugby Championship R4","home":"Edinburgh Rugby","away":"10bet Lions","home_abbr":"EDI","away_abbr":"LIO","start_utc":"2026-10-23T13:45:00Z","venue":"Hive Stadium","src":"https://stats.unitedrugby.com/match-centre/2026-27/4","olbg":"Edinburgh v Lions","facts":"Round 4 fixture at Hive Stadium. No league points-for or points-against inputs were captured."},
+    {"sid":"mlb-849805","sport":"Baseball","comp":"World Series Game 1","home":"Milwaukee Brewers","away":"Tampa Bay Rays","home_abbr":"MIL","away_abbr":"TB","start_utc":"2026-10-24T00:00:00Z","venue":"American Family Field","src":"https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-23","olbg":"TB Rays @ MIL Brewers","facts":"World Series Game 1 at American Family Field. Tampa Bay finished 98-64 with 736 runs scored and 650 allowed, including 55-26 at home. Milwaukee's season totals were not captured in the rendered standings window, so this fixture is left unlined."}
+  ]
+}

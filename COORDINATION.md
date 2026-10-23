@@ -3685,3 +3685,42 @@ link to the root navigation; add `vanguard data/vanguard` and the three `vanguar
 | D6 | Line-by-line audit of the already-merged layers (row -> official source re-read today), irregularity register | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `data/desk/audit.json`, `research/desk-audit-b8a1ce4c.md` |
 | D7 | `/desk/` dashboard (exec summary, matches, lines, Top-5, predictions, 15 sport subpages, OLBG inventory, audit, flagged, sources, methodology) + verifier + tests | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `scripts/desk_build.py`, `scripts/desk_verify.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
 | D8 | Rebase on `origin/main`, full test suite, PR -> merge, confirm Pages live, log result here | unclaimed→this session | `arena/b8a1ce4c-olbg2` | `COORDINATION.md` (append-only) |
+
+### Session `arena/b8a1ce4c-olbg2` — COMPLETION LOG (`/desk/`, 2026-10-23 16:50Z)
+
+**Status: built and verified; publication follows.**
+
+| Task | Status | Files |
+|---|---|---|
+| D1 claim | done 16:20Z (`24f4e03`) | `COORDINATION.md` |
+| D2 OLBG refresh, 15 hubs | done — 125 events, 14 sports, Golf returned "No tips found." | `data/olbgdesk/olbg_inventory.json`, `research/desk-olbg-b8a1ce4c.md` |
+| D3 official capture | partial — 10 fixtures (6 NHL, 3 URC, 1 MLB) from governing bodies | `data/olbgdesk/inputs.json` |
+| D4 origination | done — 173 markets, 48 from NHL goal aggregates, 125 consensus-derived; 8 high confidence | `scripts/desk_model.py`, `data/olbgdesk/lines.json` |
+| D5 predictions | done — 6, all Ice Hockey, 67–77 words, unique openings; Darts/Baseball high picks published without narrative | `scripts/desk_predictions.py`, `data/olbgdesk/{predictions,flagged}.json` |
+| D6 repo audit | done — 6 findings A-01…A-06 | `desk/audit.html`, `research/desk-audit-b8a1ce4c.md` |
+| D7 dashboard | done — 25 pages, verifier 2,511 checks, 12 tests | `scripts/desk_{build,verify}.py`, `desk/**`, `tests/test_desk_b8a1ce4c.py` |
+
+**Sources.** NHL club statistics and scores endpoints; MLB schedule and standings; URC match centre.
+Every row on `/desk/matches.html`, `/desk/lines.html` and `/desk/olbg.html` carries an https link and the
+verifier fails the build if one is missing. No bookmaker price was read or used; OLBG publishes none.
+
+**Verification performed.** `desk_verify.py` → 2,511 checks, 0 errors (price arithmetic, band logic,
+confidence rule, prediction word count/uniqueness/banned words, every quoted number must exist in the
+stored fact list, every local link resolves, every table row has a source). Full repository suite on the
+merged tree: **479 tests OK**. `integration_audit.py`: 0 cross-layer local link errors.
+
+**Conflict encountered and resolved (logged per protocol).** On first build this session wrote its data
+into `data/desk/`, which is the existing namespace owned by `scripts/build.py` (`/site/` layer), and
+overwrote `data/desk/flagged.json`. Detected immediately by the failing `tests/test_build.py`, restored
+with `git checkout -- data/desk`, and this session's data moved to `data/olbgdesk/`. No other session's
+file now carries a modification from this session: `git status data/desk` is clean.
+
+**Root/shared files — request only, not edited.** Please add `desk/` to the root navigation and
+`desk data/olbgdesk` plus the four `desk_*` scripts to `.github/workflows/pages.yml`'s drift paths.
+This session did not touch `index.html`, `scripts/build_site.py`, `.github/workflows/**` or `README.md`,
+because `33e9eee7` (F6) and `8226c94a` claim those files.
+
+**Disclosed gaps.** The five-predictions-per-sport target is not met: six exist, all Ice Hockey. Twelve
+sports have consensus-derived prices only because no official numeric page rendered (ATP 404, NBA 500,
+PDC/URC/WST client-rendered). Seventeen flags are published on `/desk/flagged.html`. No injury sentence
+was written because no official injury report was captured.

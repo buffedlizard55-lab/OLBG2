@@ -504,7 +504,8 @@ def build_current_index() -> str:
   <h1>OLBG research with the evidence and the gaps in plain sight.</h1>
   <p class="lede">{matches['count']} official-source fixture records, {lines['count']} independently originated prices and
   {predictions['count']} unique write-ups across the 15 requested sports. This is a dated research snapshot, not a live feed or a claim of complete OLBG coverage.</p>
-  <div class="cta"><a class="button primary" href="cadence/matches.html">Browse all {matches['count']} fixtures</a>
+  <div class="cta"><a class="button primary" href="cadence/index.html">Open the full current dashboard →</a>
+  <a class="button" href="cadence/matches.html">Browse all {matches['count']} fixtures</a>
   <a class="button" href="cadence/picks.html">Top five by sport</a>
   <a class="button" href="cadence/predictions.html">Read all {predictions['count']} predictions</a>
   <a class="button" href="integration.html">Flagged for Review</a></div>

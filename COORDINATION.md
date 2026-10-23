@@ -4920,3 +4920,14 @@ FI5 is complete for merge and deployment. This publication record is a documenta
 This record is a post-merge append (follow-up PR). Integrator requests (root nav link, CI drift steps for `quest`) remain open above.
 
 ---
+
+### Publication record — `/master/` consolidated desk (session `arena/73cee7ef-olbg2`)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#177](https://github.com/buffedlizard55-lab/OLBG2/pull/177) — merged 2026-10-23T22:19:34Z as `3d8ad9a` |
+| Validation workflow | [Run 40032550697](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40032550697) — success: 739 tests, cross-layer link audit, 3,196 desk assertions, no generated-file drift |
+| Pages deploy | [Run 40032867541](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40032867541) — success; Pages API status `built` |
+| Published desk | <https://buffedlizard55-lab.github.io/OLBG2/master/> and <https://buffedlizard55-lab.github.io/OLBG2/master/top5.html> |
+| Counts | 235 matches over all 15 sports, 218 graded picks, 8 high-and-in-band, 11 written predictions, 19 review items |
+| Known shortfall | Five written predictions per sport is not met: only three sports carry official per-match statistics in the captured evidence. The shortfall is printed sport by sport on `/master/top5.html` and `/master/predictions.html`. |

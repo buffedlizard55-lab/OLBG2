@@ -236,26 +236,32 @@ def top5_body(board, preds) -> str:
                    confidence_pill("high"), band_pill(f["in_band"]),
                    source_cell(f.get("official_url", ""), f.get("olbg_url", "")))
             )
-        gap = ""
-        if len(entry["featured"]) < 5:
-            alt = entry.get("best_alternative")
-            if alt:
-                gap = ('<p class="notice blue">Only %d high-confidence pick%s available for this sport in the captured '
-                       'board. Next best: <strong>%s</strong> at %s, graded %s. The five is a ceiling, not a quota, so '
-                       'nothing below high confidence is promoted into the card.</p>'
-                       % (len(entry["featured"]), "" if len(entry["featured"]) == 1 else "s",
-                          esc(alt["selection"]), price(alt["fair_american"]), esc(alt["confidence"])))
-            else:
-                gap = '<p class="notice warn">No high-confidence pick for this sport in the captured board.</p>'
+        table = ""
+        if rows:
+            table = ('<div class="tablewrap"><table><thead><tr><th>Start</th><th>Fixture</th><th>Selection</th>'
+                     '<th>Market</th><th>Fair price</th><th>Est.</th><th>Grade</th><th>Source</th></tr></thead>'
+                     '<tbody>%s</tbody></table></div>' % "".join(rows))
+        alt = entry.get("best_alternative")
+        shown = len(entry["featured"])
+        if shown == 0 and alt:
+            gap = ('<p class="notice blue">No high-confidence selection in the captured board for this sport. Best '
+                   'available: <strong>%s</strong> at %s, graded %s. Nothing below high confidence is promoted into '
+                   'the card.</p>' % (esc(alt["selection"]), price(alt["fair_american"]), esc(alt["confidence"])))
+        elif shown == 0:
+            gap = '<p class="notice warn">No priceable selection for this sport in the captured board.</p>'
+        elif shown < 5 and alt:
+            gap = ('<p class="notice blue">%d high-confidence pick%s available, so the card stops there. Next best: '
+                   '<strong>%s</strong> at %s, graded %s. The five is a ceiling, not a quota.</p>'
+                   % (shown, "" if shown == 1 else "s", esc(alt["selection"]),
+                      price(alt["fair_american"]), esc(alt["confidence"])))
+        else:
+            gap = ""
         written = sum(1 for f in entry["featured"] if f["pick_id"] in pred_ids)
         sections.append(
             '<section><h2>%s</h2><p class="meta">%d high-confidence selection%s available, %d shown, %d inside '
-            '&minus;250&hellip;+10000, %d with a written prediction.</p>%s'
-            '<div class="tablewrap"><table><thead><tr><th>Start</th><th>Fixture</th><th>Selection</th><th>Market</th>'
-            '<th>Fair price</th><th>Est.</th><th>Grade</th><th>Source</th></tr></thead><tbody>%s</tbody></table></div>'
-            '</section>'
+            '&minus;250&hellip;+10000, %d with a written prediction.</p>%s%s</section>'
             % (esc(name), entry["high_available"], "" if entry["high_available"] == 1 else "s",
-               len(entry["featured"]), sum(1 for f in entry["featured"] if f["in_band"]), written, gap, "".join(rows))
+               shown, sum(1 for f in entry["featured"] if f["in_band"]), written, gap, table)
         )
     body = """
 <p class="crumb"><a href="index.html">Overview</a> / Five per sport</p>

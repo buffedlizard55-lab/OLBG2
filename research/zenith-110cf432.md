@@ -60,6 +60,10 @@ The following primary sources were directly read through the agent's web/fetch t
 
 No historical source files belonging to other sessions were edited. A root navigation request to the active integration owner is recorded in `COORDINATION.md`.
 
+## Post-deployment presentation follow-up
+
+The first live read of `/zenith/sports/ice-hockey.html` showed the fixture table's selection/confidence cells were blank even though its official-input market ledger contained picks. The standings/facts and market records were present; the issue was a display join that compared a pick-row ID to a market-row ID. The join was corrected to match exact fixture, market, selection and line, with a regression assertion that priced fixtures have a visible selected market. No probability, fair price, confidence, or prediction text changed. This post-deployment correction is being carried in the follow-up PR and re-checked against the live page after deployment.
+
 ## Reproduction and checks
 
 ```sh

@@ -126,7 +126,7 @@
       "id": "AUDIT-GIT-CONFLICT-MARKERS",
       "severity": "high",
       "title": "Conflict-marker-like lines remain in the shared coordination history",
-      "detail": "Structural scan found 6 marker-like lines in COORDINATION.md (historical append/rebase remnants). The file is documentation; no runtime code depends on these lines. Review before editing because board history is append-only.",
+      "detail": "Structural scan found 7 marker-like lines in COORDINATION.md (historical append/rebase remnants). The file is documentation; no runtime code depends on these lines. Review before editing because board history is append-only.",
       "artifact": "COORDINATION.md",
       "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md"
     },

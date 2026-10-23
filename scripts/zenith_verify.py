@@ -25,6 +25,8 @@ for m in matches['matches']:
  for f in m['facts']:
   ck(f.get('source_url','').startswith('https://'),f"{m['id']}: fact missing official URL")
   ck(bool(f.get('source_key')),f"{m['id']}: fact missing source key")
+for m in matches['matches']:
+ ck((m['market_count']==0)==(not bool(m['our_selection'])),f"{m['id']}: displayed pick does not match market availability")
 for r in lines['lines']:
  ck(r['fixture_id'] in by,f"{r['id']}: orphan line")
  ck(0<r['probability']<1,f"{r['id']}: probability out of bounds")

@@ -4547,3 +4547,37 @@ without an alternate line”, the phrasing corrected on the summary in #169. It 
 / 14 genuinely outside, matching the summary and the band board. This was the last place the old wording
 survived; the desk's own verifier did not catch it because the sentence is free text, so the correction was
 made by re-reading the rendered page rather than by the gate.
+
+---
+
+## Session `arena/181705f4-olbg2` — `/prism/` 15-SPORT RESEARCH DESK CLAIM (2026-10-23 21:31 UTC)
+
+- **Session ID & Fixed Branch:** `arena/181705f4-olbg2` (branched from `origin/main` `8b4435f`, PR #174). Because the Arena platform fixes the working branch to `arena/181705f4-olbg2`, the `session-<id>/<task>` branch convention in the brief cannot be created; all commits, pushes, and PRs for this session stay on `arena/181705f4-olbg2` (logged here as an environment constraint, consistent with prior sessions).
+- **Live concurrent-session scan before claiming** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-23 21:30 UTC):
+  - `arena/f0ee1b4a-olbg2` (active, 21:27:20 UTC) — claims `research/integration-f0ee1b4a.md`, `scripts/integration_f0ee1b4a_audit.py`, `tests/test_integration_f0ee1b4a.py`, `data/integration-f0ee1b4a/**`, and shared root files (`README.md`, `scripts/build_site.py`, generated root pages, `assets/**`, `sports/**`, `.github/workflows/pages.yml`).
+  - `arena/1b2c50af-olbg2` (active, 21:29:18 UTC) — claims `olbg/**`, `data/olbg/**`, `scripts/olbg_*.py`, `tests/test_olbg_1b2c50af.py`, `research/integration-1b2c50af.md`, `research/olbg-refresh-1b2c50af.md` (plus shared integration files if unclaimed).
+  - `arena/9c5af337-olbg2` (active, 21:29:41 UTC) — claims `horizon/**`, `data/horizon/**`, `scripts/horizon_*.py`, `tests/test_horizon_9c5af337.py`, `research/horizon-9c5af337.md`.
+  - `arena/deb1cb6e-olbg2` (active, 21:30:27 UTC) — claims `research/deb1cb6e-independent-audit.md` and stale `/cadence/` root-link integration.
+  - All previously merged desks (`cadence`, `ledger`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`, `current`, `atlas`, `canon`, `final`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`, `relay`, `vanguard`, `pulse`, `update`, `covered`, `desk`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`) remain untouched.
+- **Strict disjoint file scope for `arena/181705f4-olbg2`:**
+  - `prism/**` — static GitHub Pages dashboard (`index.html`, `matches.html`, `lines.html`, `picks.html`, `band.html`, `predictions.html`, `olbg.html`, `audit.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/index.html`, 15 category subpages `sports/<slug>.html`, `assets/style.css`, `assets/app.js`).
+  - `data/prism/**` — reverse-engineered OLBG sport/market inventory, first-hand official governing-body verification records, multi-market originated lines, confidence & `-250` to `+10000` odds-band selections, unique ≥30-word human predictions, line-by-line repo review findings, and flagged irregularities.
+  - `scripts/prism_*.py` — `prism_seed.py`, `prism_model.py`, `prism_predictions.py`, `prism_build.py`, `prism_verify.py`.
+  - `tests/test_prism_181705f4.py` — automated schema, math, prose, link, and deterministic rebuild drift tests (automatically picked up by `python -m unittest discover -s tests -v` in CI).
+  - `research/prism-181705f4.md` — OLBG reverse-engineering report, line-by-line repository audit, and official-source verification log.
+  - `COORDINATION.md` — append-only task claims, cross-scope requests, verification summary, and PR/merge publication record.
+  - Note on hosted CI drift check: `.github/workflows/pages.yml` executes `scripts/ledger_report.py` and `scripts/ledger_build.py` (which enumerate top-level directories containing `index.html` and `tests/test_*.py` files) and enforces `git diff --exit-code` on `data/ledger/repo_review.json` and `ledger/repo-review.html`. Before opening our PR, we will run `python3 scripts/ledger_report.py && python3 scripts/ledger_build.py` unmodified (zero hand edits) if required to keep the `pages.yml` drift check green.
+- **Exact 15 covered sports:** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| PR1 | Read `COORDINATION.md`, scan live remote branches, claim disjoint `/prism/` scope, commit & push immediately | done | `arena/181705f4-olbg2` | `COORDINATION.md` (append-only) |
+| PR2 | Reverse-engineer OLBG.com across all 15 covered sports (URL taxonomy, sport IDs, markets, active & upcoming fixtures) + line-by-line review of repository layers & irregularities | in progress | `arena/181705f4-olbg2` | `research/prism-181705f4.md`, `data/prism/olbg_inventory.json`, `data/prism/repo_audit.json` |
+| PR3 | First-hand verification of fixtures, standings, form, match history, game statistics & official injury reports across all 15 covered sports | unclaimed→this session | `arena/181705f4-olbg2` | `scripts/prism_seed.py`, `data/prism/fixtures.json`, `data/prism/sources.json` |
+| PR4 | Multi-market independent line origination (win match / moneyline / 1X2 / outright, handicap / spread / puck / run / frame / set / leg line, match total over/under), Low/Medium/High confidence grading, and `-250` to `+10000` odds-band evaluation | unclaimed→this session | `arena/181705f4-olbg2` | `scripts/prism_model.py`, `data/prism/matches.json`, `data/prism/lines.json`, `data/prism/picks.json` |
+| PR5 | Unique, non-robotic ≥30-word human predictions (targeting 5 highest-confidence picks per covered sport where official data supports them; zero forbidden words `model`/`verified`; unconfirmed items left blank and flagged) | unclaimed→this session | `arena/181705f4-olbg2` | `scripts/prism_predictions.py`, `data/prism/predictions.json`, `data/prism/flagged.json` |
+| PR6 | Build `/prism/` GitHub Pages dashboard (executive summary, category subpages for all 15 sports, full match & market tables, Top-5 predictions, OLBG & repo audit, Flagged for Review page, official sources & methodology) + line-by-line verifier + unit tests | unclaimed→this session | `arena/181705f4-olbg2` | `scripts/prism_build.py`, `scripts/prism_verify.py`, `prism/**`, `tests/test_prism_181705f4.py` |
+| PR7 | Rebase onto `origin/main`, run full repository test suite + `integration_audit.py`, open PR → `main`, merge PR, confirm GitHub Pages deployment, and record PR & merge result in `COORDINATION.md` | unclaimed→this session | `arena/181705f4-olbg2` | `COORDINATION.md` (append-only) |
+
+**Cross-scope integration request (logged per protocol, not edited):** Because `arena/f0ee1b4a-olbg2` and `arena/deb1cb6e-olbg2` currently claim the shared root files (`README.md`, `scripts/build_site.py`, root HTML, `.github/workflows/pages.yml`), this session will not edit those files. Once `/prism/` merges to `main`, any subsequent root integration pass may add a link to `prism/index.html` from the root navigation and add `prism data/prism` to `pages.yml` (deterministic drift checks are already enforced inside `tests/test_prism_181705f4.py`).
+

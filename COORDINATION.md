@@ -4521,3 +4521,11 @@ review counts publishing directories (`layers` 37 → 38). They were regenerated
 **Still open for the integrator.** `/cadence/` has no link from the root dashboard. This session did not edit
 `README.md`, `scripts/build_site.py`, the root generated pages or `.github/workflows/**`, which other sessions
 claim. The desk deploys regardless because Pages serves the repository root.
+
+### Follow-up 3: trailing “v” removed from outright rows
+
+The golf, greyhounds, Formula 1 outrights and the Drivers' Championship still printed a bare “v” on
+`picks.html`, `band.html`, `lines.html`, `matches.html` and the sport pages: the label helper had only been
+applied to some row builders. All five builders now use it, so a fixture with no opponent prints as a single
+name. No probability, price, grade, pick or prediction changed; `cadence_verify.py` → 11 check groups, 0
+errors; 24 desk tests; 0 cross-layer link errors.

@@ -323,7 +323,7 @@ def top_table(rows, show_sport=False, show_date=False, matches_only=False):
                '<th>Favourite</th><th>Prob</th><th>Grade</th><th>Official source</th></tr></thead><tbody>']
         for m in rows:
             out.append(f'<tr><td><a href="sports/{SLUG[m["sport"]]}.html">{escape(m["sport"])}</a></td>'
-                       f'<td>{escape(m["home"])} v {escape(m["away"] or "")}</td>'
+                       f'<td>{label(m["home"], m["away"])}</td>'
                        f'<td class="mono">{escape(m.get("start_utc") or m.get("time_display") or "—")}</td>'
                        f'<td>{escape(m.get("favourite") or "—")}</td>'
                        f'<td class="mono">{fmt_p(m["favourite_probability"]) if m.get("favourite_probability") else "—"}</td>'
@@ -446,7 +446,7 @@ def pick_row(p):
     st = SP[p["sport"]]
     return (f'<tr><td class="mono">{p["sport_rank"]}</td>'
             f'<td><a href="sports/{SLUG[p["sport"]]}.html">{escape(p["sport"])}</a></td>'
-            f'<td>{escape(p["home"])} v {escape(p["away"] or "")}</td>'
+            f'<td>{label(p["home"], p["away"])}</td>'
             f'<td class="small">{escape(p.get("time_display") or p.get("start_utc") or "—")}</td>'
             f'<td><strong>{escape(p["selection"])}</strong></td><td>{escape(p["market"])}</td>'
             f'<td class="mono">{fmt_p(p["probability"])}</td><td class="mono">{fmt_am(p["fair_american"])}</td>'
@@ -524,7 +524,7 @@ fair price, which is the stricter test.</p>
 def line_row(l):
     f = FIX[l["fixture_id"]]
     return (f'<tr><td class="small">{escape(l["sport"])}</td>'
-            f'<td class="small">{escape(f["home"])} v {escape(f["away"] or "")}</td>'
+            f'<td class="small">{label(f["home"], f["away"])}</td>'
             f'<td>{escape(l["market"])}</td><td>{escape(l["selection"])}</td>'
             f'<td class="mono">{escape(str(l["line"])) if l["line"] is not None else "—"}</td>'
             f'<td class="mono">{fmt_p(l["probability"])}</td>'
@@ -606,7 +606,7 @@ def picks_block(rows):
            '<th>Fair</th><th>Band</th><th>Grade</th><th>Source</th></tr></thead><tbody>']
     for p in rows:
         out.append(f'<tr><td class="mono">{p["sport_rank"]}</td>'
-                   f'<td>{escape(p["home"])} v {escape(p["away"] or "")}</td>'
+                   f'<td>{label(p["home"], p["away"])}</td>'
                    f'<td><strong>{escape(p["selection"])}</strong><div class="small">{escape(p["market"])}</div></td>'
                    f'<td class="mono">{fmt_p(p["probability"])}</td><td class="mono">{fmt_am(p["fair_american"])}</td>'
                    f'<td>{bandpill(p["in_band"])}</td><td>{confpill(p["confidence"])}</td>'
@@ -839,7 +839,7 @@ def build_flagged():
 <th>Finding</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>
 <h2>Values left blank rather than inferred</h2>
 <div class="table-wrap"><table><thead><tr><th>Sport</th><th>Fixture</th><th>Why it is blank</th><th>Official source</th></tr></thead><tbody>
-{''.join(f'<tr><td>{escape(m["sport"])}</td><td>{escape(m["home"])} v {escape(m["away"] or "")}</td>'
+{''.join(f'<tr><td>{escape(m["sport"])}</td><td>{label(m["home"], m["away"])}</td>'
          f'<td class="small">{escape(m["note"] or "")}</td><td>{src(m["official_source_url"])}</td></tr>'
          for m in M["matches"] if m["status"] == "blank")}
 </tbody></table></div>

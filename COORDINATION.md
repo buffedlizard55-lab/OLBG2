@@ -4723,3 +4723,20 @@ The same final visual audit found two remaining outright-label concatenations in
 **Honest limits, published not hidden.** 13 flags on `/quest/flagged.html`: no server-side OLBG inventory (Q-OLBG1), one market disagreement (Q-MKT1), 9 inferred + 26 date-only times (Q-TZ1/2), Saturday NBA omitted (Q-COV1), NHL stops 26 Oct (Q-COV2), dual NHL goal conventions (Q-DQ1), 14 blanks (Q-BLANK), no availability feed beyond NBA (Q-INJ), uncalibrated confidence (Q-CONF), plus carried CD-PR1/2/3. The desk is a dated snapshot (cut-off printed on every page), not a live feed.
 
 **Merge note (693dbf40, 2026-10-23).** `main` advanced twice during this session (PR #175/#176, then the final-integration PR #178). Merged forward both times: this board kept whole with each session's block preserved in order; `/quest/` data regenerated from the corrected cadence layer (#178 fixed the unsupported Gaelic OLBG id this session had flagged as Q-OLBG1, and corrected Gaelic margins); ledger inventory regenerated through its owner's builders. No other session's work was discarded.
+
+## Session `arena/1b2c50af-olbg2` — CLAIM: canonical `/olbg/` refresh, evidence audit and final integration (2026-10-23 21:30 UTC)
+
+**Concurrency check.** `origin/main` is `8b4435f` (PR #174). Open PRs #161 and #167 are coordination-only publication ledgers, last updated over 60 minutes ago; they are left untouched. The most recent Cadence, OLBG and Ledger implementation sessions all record completion and deployment. No active implementation claim was found. Arena fixes this session's branch, so no additional session/integration branch can be created; the PR will use this fixed branch as required by the hosting environment.
+
+**Goal.** Improve the existing canonical 15-sport desk instead of creating another overlapping namespace. Re-read accessible OLBG and official sources, preserve blank/flagged outcomes where evidence is unavailable, originate only supportable markets, publish only source-backed prose, repair integration/discoverability, run the full regression suite, open and merge a PR, and confirm Pages. Five predictions per sport is an evidence-limited target, never a reason to invent selections.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| I1 | Claim, repo baseline and coordination | in progress | `arena/1b2c50af-olbg2` | `COORDINATION.md` (append-only), `research/integration-1b2c50af.md` |
+| I2 | Fresh OLBG/official-source access audit and targeted canonical-data refresh | unclaimed→this session | `arena/1b2c50af-olbg2` | `data/olbg/**`, `scripts/olbg_seed.py`, `research/olbg-refresh-1b2c50af.md` |
+| I3 | Market/confidence/prose integrity corrections; no unsupported quota filling | unclaimed→this session | `arena/1b2c50af-olbg2` | `scripts/olbg_model.py`, `scripts/olbg_predictions.py`, `data/olbg/{matches,lines,picks,predictions,flagged}.json` |
+| I4 | Canonical dashboard, verification and regression tests | unclaimed→this session | `arena/1b2c50af-olbg2` | `scripts/olbg_build.py`, `scripts/olbg_verify.py`, `olbg/**`, `tests/test_olbg_1b2c50af.py` |
+| I5 | Final shared integration and automatic refresh reliability | unclaimed→this session | `arena/1b2c50af-olbg2` | `scripts/build_site.py`, generated root pages/`sports/**`, `README.md`, `.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`, `METHODOLOGY.md` (conflict-marker repair only if needed) |
+| I6 | Full verification, PR from fixed Arena branch to main, merge, Pages confirmation and ledger | pending | `arena/1b2c50af-olbg2` | shared outputs; `COORDINATION.md` append-only |
+
+**Rules.** Every published sporting value needs a committed source capture and an official URL. OLBG is discovery provenance, not a governing body. Missing facts, injuries, markets and prices remain null and appear on Flagged for Review. No bookmaker availability or current quote is implied. Historical desk counts are not summed. No other session's desk or data is edited. Shared integration files will be re-checked for newer claims before I5 begins.

@@ -45,7 +45,10 @@ def main() -> None:
 
     lines, matches = [], []
     for f in fixtures:
-        supported = by_fixture.get(f["id"], [])
+        # Never present a pick/line as actionable if its official start is before the
+        # cutoff or the official source did not confirm an exact start time.
+        actionable = f.get("temporal_state") == "upcoming_at_capture"
+        supported = by_fixture.get(f["id"], []) if actionable else []
         local = []
         for idx, row in enumerate(supported):
             p = round(float(row["probability"]), 6)
@@ -76,7 +79,7 @@ def main() -> None:
             "our_fair_american": chosen_line["our_fair_american"] if chosen_line else None,
             "confidence": chosen_line["confidence"] if chosen_line else "",
             "market_count": len(local),
-            "markets_status": "originated from official numeric evidence" if local else "blank: no official comparative numeric inputs in the captured evidence",
+            "markets_status": "originated from official numeric evidence" if local else ("blank: not a confirmed upcoming fixture at the 21:45 UTC cutoff" if not actionable else "blank: no official comparative numeric inputs in the captured evidence"),
         })
 
     (OUT / "lines.json").write_text(json.dumps({"as_of_utc": "2026-10-23T21:45:00Z", "count": len(lines), "lines": lines}, indent=2, ensure_ascii=False)+"\n")
@@ -84,7 +87,7 @@ def main() -> None:
     picks=[]
     for old in base_picks:
         f=next((x for x in fixtures if x['id']==old['fixture_id']),None)
-        if not f: continue
+        if not f or f.get('temporal_state') != 'upcoming_at_capture': continue
         match=next(x for x in matches if x['id']==f['id'])
         rec={k:old.get(k) for k in ('id','fixture_id','sport','competition','home','away','start_utc','time_display','selection','market','line','probability','confidence','evidence_tier','evidence','basis','sport_rank')}
         rec.update({"fair_american":american(float(old['probability'])),"fair_decimal":decimal(float(old['probability'])),"in_user_odds_band":-250<=american(float(old['probability']))<=10000,"official_fixture_url":match['official_fixture_url'],"official_stats_url":match['official_stats_url'],"olbg_event_url":match['olbg_event_url'],"olbg_quote_used":False})

@@ -16,13 +16,13 @@ This is **not** an exhaustive worldwide match schedule or a live betting feed. T
 |---|---:|---|
 | Covered OLBG event IDs | 218 | Unique event IDs grouped from stored OLBG tip objects; excludes non-covered sports. |
 | Official-evidence fixtures | 93 | Fixture rows in the same-day official-source bundle across all 15 covered sports. |
-| Originated selections | 728 | Captured official-input probability records with fair American/decimal prices recalculated by Zenith; no OLBG quote is used as a probability input. |
-| Graded picks | 122 | One selected candidate for eligible priced fixtures; inherited evidence-tier grade is retained. |
-| Human previews | 33 | Unique official-fact-linked writeups of at least 30 words; target is five per sport where support exists. |
-| Review findings | 23 | 12 coverage/shortfall findings plus 11 generated repository/source-integrity findings (see `data/zenith/flagged.json` and `repo_audit.json`). |
+| Originated selections | 317 | Fair American/decimal prices recalculated for fixtures with a confirmed official start after the 21:45 UTC cutoff; started or untimed fixtures have no actionable line. |
+| Graded picks | 44 | One selected candidate for eligible priced, confirmed-future fixtures; inherited evidence-tier grade is retained. |
+| Human previews | 13 | Unique official-fact-linked writeups of at least 30 words for confirmed-future picks; target is five per sport where support exists. |
+| Review findings | 38 | 14 coverage/shortfall flags plus 24 repository/source-integrity findings (see `data/zenith/flagged.json` and `repo_audit.json`). |
 | Static pages | 26 | Overview, evidence tables, review pages and 15 sport subpages. |
 
-These totals describe this layer only. They are not additive to other overlapping repository snapshots.
+Only 32 of the 93 official-evidence fixture rows have an exact source start after the cutoff. The 317 lines, 44 picks and 13 previews are restricted to that confirmed-future subset; the remaining rows stay in the fixture ledger but have blank actionable-market/pick fields when their start is at/before cutoff or unconfirmed. These totals describe this layer only and are not additive to other overlapping repository snapshots.
 
 ## OLBG reverse-engineering
 
@@ -62,7 +62,7 @@ No historical source files belonging to other sessions were edited. A root navig
 
 ## Post-deployment presentation follow-up
 
-The first live read of `/zenith/sports/ice-hockey.html` showed the fixture table's selection/confidence cells were blank even though its official-input market ledger contained picks. The standings/facts and market records were present; the issue was a display join that compared a pick-row ID to a market-row ID. The join was corrected to match exact fixture, market, selection and line, with a regression assertion that priced fixtures have a visible selected market. No probability, fair price, confidence, or prediction text changed. This post-deployment correction is being carried in the follow-up PR and re-checked against the live page after deployment.
+The first live read of `/zenith/sports/ice-hockey.html` showed the fixture table's selection/confidence cells were blank even though its official-input market ledger contained picks. The standings/facts and market records were present; the issue was a display join that compared a pick-row ID to a market-row ID. The join was corrected to match exact fixture, market, selection and line, with a regression assertion that priced fixtures have a visible selected market. A second fail-closed pass now excludes all picks/lines/previews whose official start was at/before the 21:45 UTC cutoff or whose official start was unconfirmed. Retained market probabilities and fair prices are unchanged; rows removed from the actionable ledger are still visible in the fixture/source inventory with a time/status explanation. These follow-up changes are in a new PR and will be re-checked after deployment.
 
 ## Reproduction and checks
 

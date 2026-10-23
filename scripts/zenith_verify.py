@@ -29,12 +29,15 @@ for m in matches['matches']:
  ck((m['market_count']==0)==(not bool(m['our_selection'])),f"{m['id']}: displayed pick does not match market availability")
 for r in lines['lines']:
  ck(r['fixture_id'] in by,f"{r['id']}: orphan line")
+ ck(by[r['fixture_id']]['temporal_state']=='upcoming_at_capture',f"{r['id']}: line on started or time-unconfirmed fixture")
  ck(0<r['probability']<1,f"{r['id']}: probability out of bounds")
  ck(r['our_fair_american']==(int(round(-100*r['probability']/(1-r['probability']))) if r['probability']>=.5 else int(round(100*(1-r['probability'])/r['probability']))),f"{r['id']}: fair American arithmetic")
  ck(r['in_user_odds_band']==(-250<=r['our_fair_american']<=10000),f"{r['id']}: band arithmetic")
  ck(r.get('official_fixture_url','').startswith('https://'),f"{r['id']}: line missing official source")
+for p in picks['picks']:
+ ck(p['fixture_id'] in by and by[p['fixture_id']]['temporal_state']=='upcoming_at_capture',f"{p['id']}: pick is not a confirmed future fixture")
 for p in preds['predictions']:
- ck(p['fixture_id'] in by,f"{p['id']}: orphan prediction")
+ ck(p['fixture_id'] in by and by[p['fixture_id']]['temporal_state']=='upcoming_at_capture',f"{p['id']}: prediction is not for a confirmed future fixture")
  ck(p['word_count']>=30 and p['word_count']==len(p['text'].split()),f"{p['id']}: word count")
  ck(not BAD.search(p['text']) and not BAD.search(p['headline']),f"{p['id']}: prohibited word")
  ck(p.get('official_fixture_url','').startswith('https://'),f"{p['id']}: no official fixture link")

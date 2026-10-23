@@ -2,6 +2,44 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
+## Consolidated desk — `/master/` (23 October 2026, 22:30 UTC)
+
+**Desk:** <https://buffedlizard55-lab.github.io/OLBG2/master/> ·
+[five per sport](master/top5.html) · [all matches](master/matches.html) · [picks & prices](master/picks.html) ·
+[predictions](master/predictions.html) · [sources](master/sources.html) ·
+[Flagged for Review](master/flagged.html) · [methodology](master/methodology.html) ·
+[session record](research/master-73cee7ef.md).
+
+The second half of the nightly work: one desk that joins today's OLBG listing to the official captures, prices the
+fixtures that have official numbers, grades one selection per match, and applies the brief's five-per-sport ceiling
+literally instead of printing every short-priced favourite.
+
+| Item | Value |
+|---|---|
+| Matches | **235** — 142 OLBG-listed, 96 with an official fixture link, 3 with both |
+| Sports with at least one row | **15 of 15** |
+| Graded picks | **218** |
+| High confidence | **87** |
+| High confidence **and** inside −250…+10000 | **8** |
+| Five-per-sport card | **28** selections across 14 sports, 7 in band |
+| Written predictions (≥30 words, 2+ sourced figures) | **11** — Ice Hockey 6, Basketball 5 |
+| Review items | **19**, including 60 failed captures with URL and HTTP status |
+
+```sh
+python scripts/master_data.py     # join listing + official records, originate lines
+python scripts/master_extra.py    # golf and snooker captures read first-hand
+python scripts/master_top5.py     # apply the five-per-sport ceiling
+python scripts/master_build.py    # write /master/
+python scripts/master_verify.py   # 3,196 assertions
+```
+
+Two sports that no earlier layer could fill (Golf, Snooker) were closed with first-hand reads at 22:06Z and 22:12Z:
+the PGA Tour leaderboard for the Butterfield Bermuda Championship and the World Snooker Tour draw for the Northern
+Ireland Open. The golf prices are FanDuel's, embedded in the tour page and labelled market-implied; the snooker price
+is ours from frames won and lost, and it lands at 66%, below the high-confidence floor, where it was left.
+
+---
+
 ## Current: final 15-sport integration — `/` + `/cadence/` (23 October 2026)
 
 **Start here:** <https://buffedlizard55-lab.github.io/OLBG2/> ·

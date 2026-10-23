@@ -1,0 +1,211 @@
+{
+ "meta": {
+  "desk": "master",
+  "written_at": "2026-10-23T22:00:00Z",
+  "rule": "A finding is listed when it changed what could be published, or when two sources disagree. Where two sources disagree both values are kept and linked; nothing is silently corrected."
+ },
+ "items": [
+  {
+   "id": "MR-01",
+   "title": "WST world rankings disagree with the earlier desk for the same page",
+   "sport": "Snooker",
+   "severity": "high",
+   "detail": "Read live at 21:31Z: Zhao Xintong \u00a31,265,550; Wu Yize \u00a31,238,900; Judd Trump \u00a31,114,050; Neil Robertson \u00a31,100,200; Mark Selby \u00a31,070,500. The desk note research/cadence-a0c8b7f3.md records Wu Yize \u00a3815,800, Judd Trump \u00a3799,850 and Mark Selby \u00a3793,350 from the same URL earlier the same evening. Zhao's total and the #8/#9 totals match exactly, so this is not a wholesale page change. The page carries an Official/Live toggle; the earlier figures may be the live projection. Neither set has been deleted. No snooker price on this desk depends on either set.",
+   "sources": [
+    "https://www.wst.tv/rankings/"
+   ]
+  },
+  {
+   "id": "MR-02",
+   "title": "OLBG hub pages render 'No tips found' while their own payload contains tips",
+   "sport": "All",
+   "severity": "medium",
+   "detail": "The rendered Tennis hub at 21:27Z showed navigation plus the literal text 'No tips found.', yet the committed capture of the same pages contains an embedded payload with event ids, selections and decimal prices. The inventory on this desk is parsed from that payload. Consequence: the OLBG listing cannot be confirmed by eye on the rendered page from this location, and anyone reviewing should open the individual event URL instead.",
+   "sources": [
+    "https://www.olbg.com/betting-tips/Tennis/3",
+    "https://www.olbg.com/betting-tips"
+   ]
+  },
+  {
+   "id": "MR-03",
+   "title": "OLBG event URL stored by an earlier desk does not match the page it names",
+   "sport": "Darts",
+   "severity": "medium",
+   "detail": "The ledger row for event_id 32383 stores a URL slug built from the selection name ('Luke_Littler_v_Gerwyn_Price' in the cadence note, 'Gerwyn_Price' in another). The page that actually exists is 'Cameron_Menzies_vs_Gerwyn_Price'. The fixture is the same, but the stored link was constructed rather than captured. This desk links the page that was actually read; rows whose stored link does not resolve are shown with the OLBG link as captured and nothing else.",
+   "sources": [
+    "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383"
+   ]
+  },
+  {
+   "id": "MR-04",
+   "title": "OLBG concatenates tip counts in its own 'Most Popular Tip' percentage",
+   "sport": "Darts",
+   "severity": "low",
+   "detail": "The event page prints '3 / 031 | 97%' where the breakdown table directly below states 3 of 4 tips (75%). The percentage is computed from a string concatenation of counts. The desk uses the breakdown table's share, never the pill. The same defect was recorded independently by the cadence desk on other events.",
+   "sources": [
+    "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383"
+   ]
+  },
+  {
+   "id": "MR-05",
+   "title": "OLBG marks an unstarted 24 October fixture as Expired and shows blank prices",
+   "sport": "Darts",
+   "severity": "medium",
+   "detail": "Both selections in Menzies v Price carry an 'Expired' badge and every row prints 'WIN @' with no price, while the fixture is timed by OLBG for 24 October and had not started at the read time. The prices exist only in the embedded payload (1.30 for Price). UK-visitor rendering cannot be checked from this location, so the desk publishes the payload price with its basis labelled.",
+   "sources": [
+    "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383"
+   ]
+  },
+  {
+   "id": "MR-06",
+   "title": "No NBA row has machine-captured evidence",
+   "sport": "Basketball",
+   "severity": "high",
+   "detail": "The repository's own capture of nba.com/games is an Akamai 'Access Denied' page, as are the NBA scoreboard and standings captures. The official page is readable in a browser-style fetch (this session read eight games for 24 October at 21:36Z), but nothing here is stored in a machine-readable capture. NBA fixtures therefore appear only as OLBG-listed rows with OLBG quotes, never as originated prices.",
+   "sources": [
+    "https://www.nba.com/games?date=2026-10-24"
+   ]
+  },
+  {
+   "id": "MR-07",
+   "title": "Sixty official captures failed outright; no value here comes from one",
+   "sport": "All",
+   "severity": "high",
+   "detail": "data/ledger/manifest.json records 181 captures. 57 returned a non-200 status and 3 more returned a 200 page that is not the requested content (nrl.com served a form; nba.com served Access Denied). The full list, with each requested URL and its HTTP status, is printed on this page. Worst affected: NBA (403 on four endpoints), ATP Tour (403), ICC (404 on its matches and tournaments pages), United Rugby Championship (404 on table and fixtures), Super League (500), CEV volleyball (404), EHF (404 on the matches page) and the German handball league (404). No value on this desk is taken from any failed capture: Cricket, Rugby Union, Rugby League, Handball, Volleyball and Tennis rows carry OLBG quotes only.",
+   "sources": [
+    "https://www.nba.com/games",
+    "https://www.atptour.com/en/scores/current/",
+    "https://www.unitedrugby.com/table"
+   ]
+  },
+  {
+   "id": "MR-08",
+   "title": "An unused capture holds 1980-81 to 2025-26 season summaries",
+   "sport": "Ice Hockey",
+   "severity": "low",
+   "detail": "data/ledger/raw/ieh_team_summary.json contains 50 rows spanning seasonId 19801981 to 20252026. It is a franchise history series, not current form. No script in the repository reads it and no value on this desk comes from it. Flagged because a later session could mistake it for current-season data.",
+   "sources": [
+    "https://api-web.nhle.com/v1/club-stats/PHI/now"
+   ]
+  },
+  {
+   "id": "MR-09",
+   "title": "Twelve of the fifteen sports have no official per-match statistics",
+   "sport": "All",
+   "severity": "high",
+   "detail": "Only Ice Hockey (NHL, 32 club records), Baseball (MLB, 30 club records) and Basketball (EuroLeague, 20 club records) have numeric inputs. For the other twelve sports the only price available is an OLBG quote, so this desk publishes market-implied picks there and writes no prediction. That is why prediction coverage is 6 Ice Hockey and 5 Basketball rather than five per sport.",
+   "sources": [
+    "https://api-web.nhle.com/v1/standings/now",
+    "https://api-live.euroleague.net/v1/standings?seasonCode=E2026&gameNumber=7"
+   ]
+  },
+  {
+   "id": "MR-10",
+   "title": "Five per sport is not reachable from today's OLBG payload",
+   "sport": "All",
+   "severity": "medium",
+   "detail": "The in-scope OLBG payload holds 142 events: Handball 30, Volleyball 22, Greyhounds 18, Basketball 16, Cricket 13, Rugby Union 13, Darts 9, Gaelic Sports 7, Tennis 5, Ice Hockey 3, Rugby League 3, Motor Racing 2, Baseball 1, and zero for Snooker and Golf. Two covered sports have no event at all, and four more have fewer than five. Five high-confidence picks each is impossible for a sport with one event.",
+   "sources": [
+    "https://www.olbg.com/betting-tips/Golf/5",
+    "https://www.olbg.com/betting-tips/Snooker/8"
+   ]
+  },
+  {
+   "id": "MR-11",
+   "title": "No official injury or team-news feed was captured",
+   "sport": "All",
+   "severity": "medium",
+   "detail": "No prediction on this desk asserts an injury, a suspension, a return or a line-up change, because no official injury report is stored for these fixtures. The NBA injury-report PDF endpoint that earlier desks used was not re-read here. Anything a reader needs on availability must be checked on the linked official page on the day.",
+   "sources": [
+    "https://www.nhl.com/info/statistics"
+   ]
+  },
+  {
+   "id": "MR-12",
+   "title": "Market-implied probabilities carry the bookmaker margin",
+   "sport": "All",
+   "severity": "medium",
+   "detail": "A 1.30 decimal quote implies 76.9% before any margin is removed. Where both sides of a market are quoted the margin could be stripped, but OLBG's payload here usually quotes one side per market. The raw reciprocal is therefore printed with the basis labelled 'market-implied', and such a row can never be described as our own estimate.",
+   "sources": [
+    "https://www.olbg.com/betting-tips/Rugby_Union/9"
+   ]
+  },
+  {
+   "id": "MR-13",
+   "title": "Three of fifteen sports carry an outright or single-entrant market, not a match",
+   "sport": "Golf",
+   "severity": "low",
+   "detail": "Golf, Motor Racing and Greyhounds rows are outright or single-runner markets (win tournament, podium, daily race). A two-sided money line cannot be originated for them from team records, and none is printed. Greyhound rows are named by venue and time only, as OLBG lists them.",
+   "sources": [
+    "https://www.olbg.com/betting-tips/Greyhounds/28",
+    "https://www.olbg.com/betting-tips/Motor_Racing/14"
+   ]
+  },
+  {
+   "id": "MR-14",
+   "title": "Out-of-scope sports appear in the same OLBG payload and are excluded",
+   "sport": "All",
+   "severity": "low",
+   "detail": "The captured payloads also contain Football (26 tips), Boxing (13), Horse Racing (4) and American Football (2). None of them is in the fifteen requested sports and none appears on any page of this desk. They are counted in data/master/matches.json meta as out-of-scope so the exclusion is auditable.",
+   "sources": [
+    "https://www.olbg.com/betting-tips"
+   ]
+  },
+  {
+   "id": "MR-15",
+   "title": "EuroLeague tip times are stored as served, not converted",
+   "sport": "Basketball",
+   "severity": "low",
+   "detail": "EuroLeague fixtures are stored with the time the official feed serves, which is venue-local. Every NBA and NHL row is UTC. The desk prints the stored value and labels the column 'Start (UTC)' only where the source is UTC; EuroLeague rows keep their original time basis on the source row in data/ledger/official.json. A reader comparing a EuroLeague row against a UK clock must convert it.",
+   "sources": [
+    "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8"
+   ]
+  },
+  {
+   "id": "MR-16",
+   "title": "OLBG hub captures were truncated at 300,000 bytes, so the event count is a floor",
+   "sport": "All",
+   "severity": "high",
+   "detail": "32 of the 181 captures hit the collector's 300,000-byte ceiling, including the OLBG Basketball, Cricket, Darts, Golf, Handball, Rugby Union and Tennis hubs. A truncated payload can only lose events from the end of the page, so the 142 in-scope events on this desk are a minimum, not the whole OLBG board. Anyone comparing this list with OLBG should expect OLBG to show more.",
+   "sources": [
+    "https://www.olbg.com/betting-tips"
+   ]
+  },
+  {
+   "id": "MR-17",
+   "title": "The PGA Tour leaderboard carries bookmaker odds, not tour data",
+   "severity": "info",
+   "status": "needs review",
+   "detail": "Every golf price on this desk comes from the FanDuel odds module embedded in the official PGA Tour leaderboard page. It is a bookmaker quote with the margin left in, shown next to genuine tour data (positions, scores, rounds). The rows are labelled market-implied so the two are not confused.",
+   "verified_at": "2026-10-23T22:06:00Z",
+   "sources": [
+    "https://www.pgatour.com/leaderboard"
+   ],
+   "sport": "Golf"
+  },
+  {
+   "id": "MR-18",
+   "title": "World Snooker Tour session times carry no timezone",
+   "severity": "medium",
+   "status": "needs review",
+   "detail": "The match page prints session start times as bare clock values, including 05:00 for a Belfast tournament. That is not a plausible local start, so the desk stores the value without a timezone and marks it as a venue time rather than converting it to UTC.",
+   "verified_at": "2026-10-23T22:12:00Z",
+   "sources": [
+    "https://www.wst.tv/matches/"
+   ],
+   "sport": "Snooker"
+  },
+  {
+   "id": "MR-19",
+   "title": "The second snooker semi-final has no opponent yet",
+   "severity": "low",
+   "status": "needs review",
+   "detail": "Jak Jones and Scott Donaldson were level at 4-4 in the last quarter-final when the page was read, so Mark Williams' next opponent was undecided. The fixture is published with no price rather than priced against an assumed opponent.",
+   "verified_at": "2026-10-23T22:12:00Z",
+   "sources": [
+    "https://www.wst.tv/matches/"
+   ],
+   "sport": "Snooker"
+  }
+ ]
+}

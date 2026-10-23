@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
+    ("master/index.html", "Consolidated desk (my own lines, 23 Oct 22:00)"),
     ("cadence/index.html", "Current: Exact 15-sport card & evidence audit"),
     ("cadence/matches.html", "Current matches"),
     ("cadence/picks.html", "Current top-five picks"),
@@ -508,8 +509,14 @@ def build_current_index() -> str:
   <a class="button" href="cadence/matches.html">Browse all {matches['count']} fixtures</a>
   <a class="button" href="cadence/picks.html">Top five by sport</a>
   <a class="button" href="cadence/predictions.html">Read all {predictions['count']} predictions</a>
-  <a class="button" href="integration.html">Flagged for Review</a></div>
+  <a class="button" href="integration.html">Flagged for Review</a>
+  <a class="button" href="master/index.html">Consolidated desk (my own lines)</a></div>
 </section>
+
+<div class="notice blue"><strong>Also published: a consolidated desk with our own prices.</strong>
+<a href="master/index.html">/master/</a> merges the OLBG listing with the official fixture captures, originates money
+lines, puck lines and totals for every fixture that has official numbers, and prints a <a href="master/top5.html">five-per-sport
+card</a>. It is a separate layer with its own counts; do not add them to the rows above.</div>
 
 <div class="notice warn"><strong>OLBG coverage boundary.</strong> Only {recorded_olbg} row retains a recorded OLBG event id with a matching registered URL;
 its integration re-read displayed “No tips found.” The dashboard therefore confirms <strong>zero currently readable active OLBG listings</strong>.

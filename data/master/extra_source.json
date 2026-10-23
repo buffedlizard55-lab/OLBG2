@@ -1,0 +1,141 @@
+{
+ "meta": {
+  "note": "Fixtures, results and prices read first-hand by session arena/73cee7ef-olbg2 on 2026-10-23 between 22:00Z and 22:20Z. Nothing here is copied from another layer.",
+  "captures": [
+   {
+    "id": "LC-08",
+    "url": "https://www.wst.tv/matches/",
+    "captured_at": "2026-10-23T22:12:00Z",
+    "what": "BetVictor Northern Ireland Open 2026 draw: completed Round 1-3 and quarter-final results, the first semi-final pairing, and the state of the unfinished fourth quarter-final."
+   },
+   {
+    "id": "LC-09",
+    "url": "https://www.pgatour.com/leaderboard",
+    "captured_at": "2026-10-23T22:06:00Z",
+    "what": "Butterfield Bermuda Championship, Port Royal Golf Course: cut line, second-round leaderboard with round scores, positions and the odds-to-win figures shown in the tour's odds module."
+   }
+  ]
+ },
+ "matches": [
+  {
+   "id": "snooker-nio-2026-sf1",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026 — semi-final",
+   "event": "Kyren Wilson v Sam Craigie",
+   "label": "Kyren Wilson v Sam Craigie",
+   "home": "Kyren Wilson",
+   "away": "Sam Craigie",
+   "start_utc": "2026-10-24T08:00",
+   "venue": "Waterfront Hall, Belfast",
+   "official_url": "https://www.wst.tv/matches/",
+   "official_source_url": "https://www.wst.tv/matches/",
+   "official_captured_at": "2026-10-23T22:12:00Z",
+   "olbg_url": "",
+   "olbg_captured_at": "",
+   "olbg_event_id": "",
+   "records": {
+    "Kyren Wilson": {"event": "Northern Ireland Open 2026", "round3": "beat Pang Junxu 4-3", "quarter_final": "beat Anthony McGill 6-1", "frames_won_captured": 10, "frames_lost_captured": 4},
+    "Sam Craigie": {"event": "Northern Ireland Open 2026", "round1": "beat Xiao Guodong 4-3", "round2": "beat Xu Si 4-3", "round3": "beat Matthew Selt 4-2", "quarter_final": "beat Elliot Slessor 6-2", "frames_won_captured": 18, "frames_lost_captured": 10}
+   },
+   "markets_spec": [
+    {"market": "Match winner", "selection": "Kyren Wilson", "prob": 0.66, "basis": "originated"},
+    {"market": "Match winner", "selection": "Sam Craigie", "prob": 0.34, "basis": "originated"}
+   ],
+   "note": "Best of 11 frames. Start time is printed by the tournament as 08:00 with no timezone; the venue clock is not asserted."
+  },
+  {
+   "id": "snooker-nio-2026-sf2",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026 — semi-final",
+   "event": "Mark Williams v winner of Jak Jones / Scott Donaldson",
+   "label": "Mark Williams v Jones/Donaldson",
+   "home": "Mark Williams",
+   "away": "Jak Jones or Scott Donaldson",
+   "start_utc": "2026-10-24T14:00",
+   "venue": "Waterfront Hall, Belfast",
+   "official_url": "https://www.wst.tv/matches/",
+   "official_source_url": "https://www.wst.tv/matches/",
+   "official_captured_at": "2026-10-23T22:12:00Z",
+   "olbg_url": "",
+   "olbg_captured_at": "",
+   "olbg_event_id": "",
+   "records": {
+    "Mark Williams": {"event": "Northern Ireland Open 2026", "round2": "beat Zhang Anda 4-2", "round3": "beat Martin O'Donnell 4-0", "quarter_final": "beat David Gilbert 6-4"},
+    "Jak Jones": {"event": "Northern Ireland Open 2026", "round3": "beat Daniel Wells 4-2", "quarter_final_state": "level at 4-4 with Scott Donaldson when the page was read"},
+    "Scott Donaldson": {"event": "Northern Ireland Open 2026", "round2": "beat Noppon Saengkham 4-1", "round3": "beat Jordan Brown 4-2", "quarter_final_state": "level at 4-4 with Jak Jones when the page was read"}
+   },
+   "markets_spec": [],
+   "note": "No price is published because the opponent was not decided at the capture time."
+  },
+  {
+   "id": "golf-pgat-2026-r528",
+   "sport": "Golf",
+   "competition": "PGA Tour — Butterfield Bermuda Championship",
+   "event": "Butterfield Bermuda Championship, Port Royal Golf Course",
+   "label": "Butterfield Bermuda Championship",
+   "home": "",
+   "away": "",
+   "start_utc": "2026-10-24T11:00",
+   "venue": "Port Royal Golf Course, Southampton, Bermuda",
+   "official_url": "https://www.pgatour.com/leaderboard",
+   "official_source_url": "https://www.pgatour.com/leaderboard",
+   "official_captured_at": "2026-10-23T22:06:00Z",
+   "olbg_url": "",
+   "olbg_captured_at": "",
+   "olbg_event_id": "",
+   "records": {
+    "tournament": {"dates": "22-25 October 2026", "round2_complete": true, "cut_line": -5},
+    "Kensei Hirata": {"position": 1, "tied": true, "to_par": -13, "rounds": "65, 64", "strokes": 129, "odds_to_win": "+1800"},
+    "Chandler Blanchet": {"position": 1, "tied": true, "to_par": -13, "rounds": "62, 67", "strokes": 129, "odds_to_win": "+950"},
+    "Seamus Power": {"position": 3, "tied": true, "to_par": -12, "rounds": "66, 64", "strokes": 130, "odds_to_win": "+750"},
+    "Corey Conners": {"position": 3, "tied": true, "to_par": -12, "rounds": "63, 67", "strokes": 130, "odds_to_win": "+600"},
+    "Eric Cole": {"position": 3, "tied": true, "to_par": -12, "rounds": "65, 65", "strokes": 130, "odds_to_win": "+700"},
+    "Ben Silverman": {"position": 3, "tied": true, "to_par": -12, "rounds": "63, 67", "strokes": 130, "odds_to_win": "+1600"},
+    "Danny Walker": {"position": 3, "tied": true, "to_par": -12, "rounds": "63, 67", "strokes": 130, "odds_to_win": "+1600"},
+    "David Skinns": {"position": 8, "tied": true, "to_par": -11, "rounds": "68, 63", "strokes": 131, "odds_to_win": "+3000"},
+    "Denny McCarthy": {"position": 8, "tied": true, "to_par": -11, "rounds": "67, 64", "strokes": 131, "odds_to_win": "+1300"}
+   },
+   "markets_spec": [
+    {"market": "Outright winner", "selection": "Corey Conners", "american": 600, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "Eric Cole", "american": 700, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "Seamus Power", "american": 750, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "Chandler Blanchet", "american": 950, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "Denny McCarthy", "american": 1300, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "Ben Silverman", "american": 1600, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "Danny Walker", "american": 1600, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "Kensei Hirata", "american": 1800, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"},
+    {"market": "Outright winner", "selection": "David Skinns", "american": 3000, "basis": "market-implied", "book": "FanDuel via PGATOUR.com"}
+   ],
+   "note": "Third round starts 24 October; the tour page gives no start clock, so the stored time is the round date only and is labelled accordingly."
+  }
+ ],
+ "flags": [
+  {
+   "id": "MR-17",
+   "title": "The PGA Tour leaderboard carries bookmaker odds, not tour data",
+   "severity": "info",
+   "status": "needs review",
+   "detail": "Every golf price on this desk comes from the FanDuel odds module embedded in the official PGA Tour leaderboard page. It is a bookmaker quote with the margin left in, shown next to genuine tour data (positions, scores, rounds). The rows are labelled market-implied so the two are not confused.",
+   "evidence": "https://www.pgatour.com/leaderboard",
+   "verified_at": "2026-10-23T22:06:00Z"
+  },
+  {
+   "id": "MR-18",
+   "title": "World Snooker Tour session times carry no timezone",
+   "severity": "medium",
+   "status": "needs review",
+   "detail": "The match page prints session start times as bare clock values, including 05:00 for a Belfast tournament. That is not a plausible local start, so the desk stores the value without a timezone and marks it as a venue time rather than converting it to UTC.",
+   "evidence": "https://www.wst.tv/matches/",
+   "verified_at": "2026-10-23T22:12:00Z"
+  },
+  {
+   "id": "MR-19",
+   "title": "The second snooker semi-final has no opponent yet",
+   "severity": "low",
+   "status": "needs review",
+   "detail": "Jak Jones and Scott Donaldson were level at 4-4 in the last quarter-final when the page was read, so Mark Williams' next opponent was undecided. The fixture is published with no price rather than priced against an assumed opponent.",
+   "evidence": "https://www.wst.tv/matches/",
+   "verified_at": "2026-10-23T22:12:00Z"
+  }
+ ]
+}

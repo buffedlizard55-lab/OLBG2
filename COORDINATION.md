@@ -4871,3 +4871,52 @@ This record is a post-merge append (follow-up PR). Integrator requests (root nav
 
 **Cross-session request to active root integrators (`arena/f0ee1b4a-olbg2` / `arena/1b2c50af-olbg2`):** Because active sessions hold claims on `README.md`, `scripts/build_site.py`, root HTML, and `.github/workflows/pages.yml`, this session will not edit those files. Once `/summit/` is merged to `main`, please add a navigation link to `summit/index.html` on any subsequent root integration pass.
 
+## Session `arena/73cee7ef-olbg2` — FINAL INTEGRATION (claimed 2026-10-23 21:35Z)
+
+**Session ID:** `arena/73cee7ef-olbg2` · **Branch:** `arena/73cee7ef-olbg2` · **Status:** active
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| FI1 | Claim + repo recon line by line | in progress | `arena/73cee7ef-olbg2` | `COORDINATION.md`, `research/master-73cee7ef.md` |
+| FI2 | Fresh first-hand official capture (2026-10-23 21:30Z onward) | unclaimed (mine) | `arena/73cee7ef-olbg2` | `data/master/captures/**` |
+| FI3 | Multi-market line origination + confidence grading | unclaimed (mine) | `arena/73cee7ef-olbg2` | `data/master/**`, `scripts/master_*.py` |
+| FI4 | High-confidence written predictions (>=30 words, sourced) | unclaimed (mine) | `arena/73cee7ef-olbg2` | `data/master/predictions.json` |
+| FI5 | Clean consolidated dashboard + verifier + tests | unclaimed (mine) | `arena/73cee7ef-olbg2` | `master/**`, `tests/test_master_73cee7ef.py` |
+| FI6 | Root landing-page pointer, README, CI drift gate | unclaimed (mine) | `arena/73cee7ef-olbg2` | `scripts/build_site.py` (nav only), `README.md`, `.github/workflows/pages.yml` |
+| FI7 | Publish: PR, merge, confirm Pages deploy | unclaimed (mine) | `arena/73cee7ef-olbg2` | shared outputs |
+
+**Coordination note.** No other session is active on this repository as of the claim time; the newest merged
+work is `8b4435f` (PR #174, `/olbg/`). This session does **not** modify any other desk's files. The only
+shared file it edits is the root navigation list in `scripts/build_site.py` (one inserted tuple plus one
+prominent link), which is regenerated deterministically, and `COORDINATION.md` / `README.md`.
+
+**Baseline check performed before any edit:** `python3 -m unittest discover -s tests` → **OK**, 45 test
+modules; existing drift gate list read from `.github/workflows/pages.yml`.
+=======
+---
+
+### FI5 publication record — final integration live (2026-10-23 21:52Z)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#178](https://github.com/buffedlizard55-lab/OLBG2/pull/178) — merged 21:47:26Z; merge commit `2dbc3ee3d7756ac2c05b0035104a804d46965cf1` |
+| PR validation | Runs [40029061523](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029061523) and [40029083168](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029083168) — both success at head `6979063`; merge state CLEAN |
+| Main validation | [40029293389](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293389) — success on merge `2dbc3ee` |
+| Pages deployment | Explicit [Deploy Pages run 40029293264](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293264) and dynamic [pages-build-deployment run 40029292238](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029292238) — both success; Pages API `built`, source `main:/` |
+| Live root | <https://buffedlizard55-lab.github.io/OLBG2/> fetched after deployment with a merge-specific cache buster; title `15-sport executive dashboard`, 93 records, 728 prices, 33 write-ups, 15 sport cards, 0 natural / 8 alternate in-band highs, 48 blank venues and 61 publisher-time rows all present |
+| Live review and linked pages | `/integration.html` fetched with all nine integration findings, FI-09 and both independent additions; `/cadence/index.html`, `/cadence/sports/index.html`, `/cadence/predictions.html` and `/research/integration-f0ee1b4a.md` also fetched successfully and matched the published counts/disclosures |
+
+FI5 is complete for merge and deployment. This publication record is a documentation-only follow-up; the implementation and evidence above are already merged and live. Open evidence items remain open by design and are not represented as resolved by the successful deployment.
+
+### Session `693dbf40` — `/quest/` PUBLICATION RECORD (2026-10-23)
+
+| Item | Value |
+|---|---|
+| Pull request | [#181](https://github.com/buffedlizard55-lab/OLBG2/pull/181) — merged 21:55:22Z as `b8368d1` |
+| CI | `Validate Pages content` success on PR head and on `main` (40030186477); local merged-tree suite green before each push |
+| Pages | `pages-build-deployment` [40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) build+deploy success on `main` containing `/quest/` (earlier deploys cancelled by concurrent merges #179/#185) |
+| Live | https://buffedlizard55-lab.github.io/OLBG2/quest/ — today/top5/flagged/ice-hockey pages read after deploy; 113 fixtures, 856 prices, 9 in-window high picks, 34 predictions, 13 flags |
+
+This record is a post-merge append (follow-up PR). Integrator requests (root nav link, CI drift steps for `quest`) remain open above.
+
+---

@@ -1,0 +1,84 @@
+{
+ "meta": {
+  "session": "arena/73cee7ef-olbg2",
+  "read_at": "2026-10-23T21:26:00Z to 2026-10-23T21:50:00Z",
+  "method": "Each page below was fetched once in this session and the value recorded here is the value that was printed on the page at that moment. No value is copied from another desk without saying so."
+ },
+ "checks": [
+  {
+   "id": "LC-01",
+   "sport": "Snooker",
+   "kind": "official-ranking-table",
+   "url": "https://www.wst.tv/rankings/",
+   "read_at": "2026-10-23T21:31:00Z",
+   "read": "Johnstone's Paint World Rankings: 1 Zhao Xintong £1,265,550; 2 Wu Yize £1,238,900; 3 Judd Trump £1,114,050; 4 Neil Robertson £1,100,200; 5 Mark Selby £1,070,500; 8 Mark Williams £747,400; 9 Kyren Wilson £716,800; 11 Chris Wakelin £576,550.",
+   "verdict": "conflict",
+   "conflicts_with": "research/cadence-a0c8b7f3.md line 57, which records #2 Wu Yize £815,800, #3 Judd Trump £799,850 and #4 Mark Selby £793,350 from the same wst.tv URL earlier the same evening.",
+   "note": "The #1 value and the #8/#9 values agree exactly; the middle of the table does not. The page carries an Official/Live toggle, and the earlier figures may have been read from the live projection. Both readings are published; neither is deleted."
+  },
+  {
+   "id": "LC-02",
+   "sport": "Ice Hockey",
+   "kind": "official-standings",
+   "url": "https://api-web.nhle.com/v1/standings/now",
+   "read_at": "2026-10-23T21:28:15Z",
+   "read": "Standings timestamp 2026-10-23T21:28:15Z. Carolina 12 GP, 8-2-2, 18 points, 47 GF, 33 GA, L10 8-1-1. Edmonton 10 GP, 8-1-1, 17 points, 47 GF, 32 GA, W3. Boston 11 GP, 8-2-1, 17 points, 42 GF, 22 GA. Vegas 12 GP, 8-4-0, 16 points, 46 GF, 36 GA, L2.",
+   "verdict": "agrees",
+   "matches": "data/ledger/raw/ieh_standings.json, captured 2026-10-23T20:32:00Z, which carries the same four records.",
+   "note": "Two independent reads of the same official endpoint, 56 minutes apart, with identical values for the four teams compared."
+  },
+  {
+   "id": "LC-03",
+   "sport": "Basketball",
+   "kind": "official-schedule",
+   "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "read_at": "2026-10-23T21:40:00Z",
+   "read": "Round 8 fixtures include E2026_79 Besiktas Istanbul v Olympiacos Piraeus at 18:30 on 28 October at Turkcell Basketball Development Center, and E2026_72 Dubai Basketball v Paris Basketball at 17:00 on 27 October at Coca-Cola Arena.",
+   "verdict": "agrees",
+   "matches": "data/ledger/raw/basketball_el_schedule.xml and data/ledger/official.json fixtures.",
+   "note": "Venue and tip time agree; the stored rows keep the time basis 'as served', which is venue-local."
+  },
+  {
+   "id": "LC-04",
+   "sport": "Baseball",
+   "kind": "official-schedule",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-26&hydrate=team,linescore",
+   "read_at": "2026-10-23T21:35:00Z",
+   "read": "Three World Series games in the range: Game 1, gamePk 849805, Tampa Bay Rays at Milwaukee Brewers, officialDate 2026-10-23, start 2026-10-24T00:00Z, American Family Field; Game 2, gamePk 849802, 2026-10-24; Game 3, 2026-10-26. Game 1 status 'Pre-Game'.",
+   "verdict": "agrees",
+   "matches": "data/ledger/raw/baseball_schedule2.json.",
+   "note": "The officialDate/gameDate offset is reproduced exactly as served; the desk shows the UTC start and the official date."
+  },
+  {
+   "id": "LC-05",
+   "sport": "Basketball",
+   "kind": "official-schedule",
+   "url": "https://www.nba.com/games?date=2026-10-24",
+   "read_at": "2026-10-23T21:36:00Z",
+   "read": "Eight NBA games listed for 24 October, including Heat at Hornets 6:00 PM ET, Bucks at 76ers 7:30 PM ET, Nets at Cavaliers 7:30 PM ET, Spurs at Mavericks 8:00 PM ET, Wizards at Bulls 8:00 PM ET, Rockets at Hawks 8:30 PM ET.",
+   "verdict": "informational",
+   "note": "The repository's own automated capture of the same property (data/ledger/raw/nba_games.txt) is an Akamai 'Access Denied' page, so no NBA row in this repository has machine-captured evidence. The NBA fixtures are therefore published as context only and never priced."
+  },
+  {
+   "id": "LC-06",
+   "sport": "Darts",
+   "kind": "olbg-event-page",
+   "url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383",
+   "read_at": "2026-10-23T21:44:00Z",
+   "read": "Page title 'Cameron Menzies vs Gerwyn Price Tips'. Win Match 2-way: Gerwyn Price 3 of 4 tips (75%), Cameron Menzies 1 of 4 (25%). The 'Most Popular Tip' pill prints '3 / 031 | 97%'. Every selection row prints 'WIN @' with no price. Both selections carry an 'Expired' badge for a fixture OLBG times at 24 October.",
+   "verdict": "agrees-with-price-conflict",
+   "matches": "data/ledger/olbg.json records event_id 32383, Gerwyn Price, 1.30 decimal, tip share 75.",
+   "note": "The tip share agrees, the embedded payload's price (1.30) cannot be seen on the rendered page, and the stored OLBG URL in an earlier desk was built from the selection name rather than the captured page. The desk links the page it actually read."
+  },
+  {
+   "id": "LC-07",
+   "sport": "Tennis",
+   "kind": "olbg-hub",
+   "url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "read_at": "2026-10-23T21:27:00Z",
+   "read": "The hub renders its navigation and the text 'No tips found.'; there is no event table in the rendered document.",
+   "verdict": "informational",
+   "note": "Confirms the documented geo-filter behaviour. The same capture contains an embedded payload with tips, which is what the inventory is parsed from, and that is stated on every row."
+  }
+ ]
+}

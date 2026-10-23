@@ -4576,3 +4576,13 @@ market-implied rows are included, and its “next 36 hours” query uses a fixed
 points to `/ledger/` but omits the independently captured `/cadence/` desk; README still lists `/olbg/` as newest.
 These are publication defects, not new sporting facts.
 
+
+### `arena/1cb7d5b7-olbg2` — scope clarification (2026-10-23 21:55Z)
+
+Two generator side effects require a narrow scope clarification before the full integration run:
+
+1. `scripts/build_site.py` shares the root navigation across the root tables and `sports/*.html`, so adding the `/cadence/` entry regenerates those pages as well as `index.html`. The claim therefore includes the generated root pages `matches.html`, `picks.html`, `flagged.html`, `verification.html`, `methodology.html`, `sources.html`, `archive.html`, `integration.html`, and `sports/*.html` (navigation-only output; no underlying row data changed).
+2. `scripts/ledger_verify.py` writes `data/ledger/verify.json` as its verification report. That file is included as a generated verification artifact only; no fixture, line, price, prediction, or source inputs are changed.
+
+These additions are outputs of the already claimed final-publication integration, not a change to the sports-data scope.
+

@@ -25,7 +25,7 @@
    "severity": "high",
    "category": "Price-band arithmetic",
    "item": "The two rules in the brief intersect in 1.43 percentage points",
-   "finding": "'High confidence above 70%' and 'price between -250 and +10000' intersect only in 70.00%-71.43%, because a fair -250 is 71.43%. The desk therefore publishes each selection's own fair price and marks whether it is in band, and additionally quotes an alternate line at the band ceiling wherever a continuous line ladder exists. It never relabels a shorter price as in band. Today 8 of the 22 high-confidence selections fall inside the band without an alternate line.",
+   "finding": "'High confidence above 70%' and 'price between -250 and +10000' intersect only in 70.00%-71.43%, because a fair -250 is 71.43%. The desk therefore publishes each selection's own fair price and marks whether it is in band, and additionally quotes an alternate line at the band ceiling wherever a continuous line ladder exists. It never relabels a shorter price as in band. Today 0 of the 22 high-confidence selections are inside the band on their natural price (all 22 sit above 71.43%), 8 clear it on an alternate line set at the ceiling, and 14 are genuinely outside because they are outright or money-line markets with no ladder.",
    "source_url": "https://www.olbg.com/betting-tips",
    "status": "published"
   }

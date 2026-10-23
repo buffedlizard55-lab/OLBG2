@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T20:12:37Z",
+ "generated_at": "2026-10-23T20:36:17Z",
  "checks": 18,
  "passed": 18,
  "failed": 0,
@@ -63,12 +63,12 @@
   {
    "check": "published selection count matches the data",
    "ok": true,
-   "detail": "885 vs 885"
+   "detail": "883 vs 883"
   },
   {
    "check": "high-confidence count matches the data",
    "ok": true,
-   "detail": "153 vs 153"
+   "detail": "149 vs 149"
   },
   {
    "check": "in-band high count matches the data",

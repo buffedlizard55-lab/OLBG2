@@ -1,19 +1,19 @@
 {
  "meta": {
-  "generated_at": "2026-10-23T20:12:37Z",
+  "generated_at": "2026-10-23T20:36:17Z",
   "note": "OLBG-listed upcoming events in the fifteen requested sports, each matched against an official source captured today.",
-  "events": 144,
+  "events": 142,
   "states": {
-   "unmatched": 134,
-   "official-page": 7,
+   "unmatched": 130,
+   "official-page": 9,
    "official-fixture": 3
   },
   "by_sport": {
    "Greyhounds": {
-    "events": 21,
+    "events": 18,
     "official-fixture": 0,
     "official-page": 0,
-    "unmatched": 21
+    "unmatched": 18
    },
    "Darts": {
     "events": 9,
@@ -21,17 +21,17 @@
     "official-page": 0,
     "unmatched": 9
    },
-   "Basketball": {
-    "events": 17,
-    "official-fixture": 0,
-    "official-page": 0,
-    "unmatched": 17
-   },
    "Volleyball": {
     "events": 22,
     "official-fixture": 0,
     "official-page": 3,
     "unmatched": 19
+   },
+   "Basketball": {
+    "events": 16,
+    "official-fixture": 0,
+    "official-page": 0,
+    "unmatched": 16
    },
    "Cricket": {
     "events": 13,
@@ -46,10 +46,10 @@
     "unmatched": 0
    },
    "Ice Hockey": {
-    "events": 2,
+    "events": 3,
     "official-fixture": 2,
     "official-page": 0,
-    "unmatched": 0
+    "unmatched": 1
    },
    "Tennis": {
     "events": 5,
@@ -58,16 +58,16 @@
     "unmatched": 5
    },
    "Rugby Union": {
-    "events": 12,
+    "events": 13,
     "official-fixture": 0,
     "official-page": 0,
-    "unmatched": 12
+    "unmatched": 13
    },
    "Handball": {
     "events": 30,
     "official-fixture": 0,
-    "official-page": 0,
-    "unmatched": 30
+    "official-page": 2,
+    "unmatched": 28
    },
    "Motor Racing": {
     "events": 2,
@@ -309,112 +309,18 @@
    "start_utc": "2026-10-23T20:03:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:03_Sunderland/28?event_id=689857",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T19:29:16Z",
    "markets": [
     {
      "market": "Daily Races",
      "selection": "Kilshenane Diva",
      "olbg_decimal": "6.00",
      "olbg_american": "500",
-     "olbg_confidence": 50
-    },
-    {
-     "market": "Daily Races",
-     "selection": "Foulkscourt Bono",
-     "olbg_decimal": "2.75",
-     "olbg_american": "175",
-     "olbg_confidence": 50
+     "olbg_confidence": 100
     }
    ],
    "side_a": "9:03 Sunderland",
    "side_b": "",
-   "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
-   }
-  },
-  {
-   "sport": "Greyhounds",
-   "olbg_sport": "Greyhounds",
-   "event": "9:08 Nottingham",
-   "event_id": "689858",
-   "competition": "",
-   "start_utc": "2026-10-23T20:08:00Z",
-   "venue": "",
-   "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:08_Nottingham/28?event_id=689858",
-   "captured_at": "2026-10-23T20:08:20Z",
-   "markets": [
-    {
-     "market": "Daily Races",
-     "selection": "Swift Kipper",
-     "olbg_decimal": "2.75",
-     "olbg_american": "175",
-     "olbg_confidence": 100
-    }
-   ],
-   "side_a": "9:08 Nottingham",
-   "side_b": "",
-   "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
-   }
-  },
-  {
-   "sport": "Greyhounds",
-   "olbg_sport": "Greyhounds",
-   "event": "9:09 Harlow",
-   "event_id": "689859",
-   "competition": "",
-   "start_utc": "2026-10-23T20:09:00Z",
-   "venue": "",
-   "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:09_Harlow/28?event_id=689859",
-   "captured_at": "2026-10-23T20:08:20Z",
-   "markets": [
-    {
-     "market": "Daily Races",
-     "selection": "Glasheen Zoey",
-     "olbg_decimal": "2.75",
-     "olbg_american": "175",
-     "olbg_confidence": 50
-    }
-   ],
-   "side_a": "9:09 Harlow",
-   "side_b": "",
-   "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
-   }
-  },
-  {
-   "sport": "Basketball",
-   "olbg_sport": "Basketball",
-   "event": "CHI Bulls @ MIL Bucks",
-   "event_id": "536041",
-   "competition": "NBA",
-   "start_utc": "2026-10-23T20:10:00Z",
-   "venue": "",
-   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_MIL_Bucks/4?event_id=536041",
-   "captured_at": "2026-10-23T20:08:33Z",
-   "markets": [
-    {
-     "market": "Money Line",
-     "selection": "MIL Bucks",
-     "olbg_decimal": "1.91",
-     "olbg_american": "-110",
-     "olbg_confidence": 83
-    }
-   ],
-   "side_a": "CHI Bulls",
-   "side_b": "MIL Bucks",
    "verify": {
     "state": "unmatched",
     "official_url": "",
@@ -432,14 +338,14 @@
    "start_utc": "2026-10-23T20:13:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:13_Romford/28?event_id=689717",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T19:29:16Z",
    "markets": [
     {
      "market": "Daily Races",
      "selection": "Grouchos Gregor",
      "olbg_decimal": "1.62",
      "olbg_american": "-162",
-     "olbg_confidence": 60
+     "olbg_confidence": 67
     }
    ],
    "side_a": "9:13 Romford",
@@ -461,14 +367,14 @@
    "start_utc": "2026-10-23T20:15:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T19:28:54Z",
    "markets": [
     {
      "market": "Win Match 2-way",
      "selection": "Michael van Gerwen",
      "olbg_decimal": "2.15",
      "olbg_american": "115",
-     "olbg_confidence": 63
+     "olbg_confidence": 59
     },
     {
      "market": "Total Legs",
@@ -498,42 +404,13 @@
   {
    "sport": "Greyhounds",
    "olbg_sport": "Greyhounds",
-   "event": "9:18 Sheffield",
-   "event_id": "689860",
-   "competition": "",
-   "start_utc": "2026-10-23T20:18:00Z",
-   "venue": "",
-   "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:18_Sheffield/28?event_id=689860",
-   "captured_at": "2026-10-23T20:08:20Z",
-   "markets": [
-    {
-     "market": "Daily Races",
-     "selection": "Russanda Zara",
-     "olbg_decimal": "3.00",
-     "olbg_american": "200",
-     "olbg_confidence": 100
-    }
-   ],
-   "side_a": "9:18 Sheffield",
-   "side_b": "",
-   "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
-   }
-  },
-  {
-   "sport": "Greyhounds",
-   "olbg_sport": "Greyhounds",
    "event": "9:23 Sunderland",
    "event_id": "689862",
    "competition": "",
    "start_utc": "2026-10-23T20:23:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:23_Sunderland/28?event_id=689862",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
@@ -562,14 +439,14 @@
    "start_utc": "2026-10-23T20:26:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:26_Harlow/28?event_id=689863",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
      "selection": "Jumbos Mia",
      "olbg_decimal": "4.50",
      "olbg_american": "350",
-     "olbg_confidence": 100
+     "olbg_confidence": 50
     }
    ],
    "side_a": "9:26 Harlow",
@@ -591,7 +468,7 @@
    "start_utc": "2026-10-23T20:28:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:28_Nottingham/28?event_id=689864",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
@@ -620,14 +497,14 @@
    "start_utc": "2026-10-23T20:33:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:33_Romford/28?event_id=689866",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
      "selection": "Puntos Opinion",
      "olbg_decimal": "1.73",
      "olbg_american": "-137",
-     "olbg_confidence": 100
+     "olbg_confidence": 67
     }
    ],
    "side_a": "9:33 Romford",
@@ -649,7 +526,7 @@
    "start_utc": "2026-10-23T20:43:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:43_Sunderland/28?event_id=689867",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
@@ -678,14 +555,14 @@
    "start_utc": "2026-10-23T20:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T20:32:07Z",
    "markets": [
     {
      "market": "Win Match 2-way",
      "selection": "Josh Rock",
      "olbg_decimal": "2.15",
      "olbg_american": "115",
-     "olbg_confidence": 54
+     "olbg_confidence": 52
     },
     {
      "market": "Total Legs",
@@ -714,7 +591,7 @@
    "start_utc": "2026-10-23T20:48:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:48_Nottingham/28?event_id=689869",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
@@ -743,13 +620,13 @@
    "start_utc": "2026-10-23T20:53:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:53_Romford/28?event_id=689871",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
      "selection": "Bombay Flash",
-     "olbg_decimal": "7.50",
-     "olbg_american": "650",
+     "olbg_decimal": "8.00",
+     "olbg_american": "700",
      "olbg_confidence": 100
     }
    ],
@@ -772,7 +649,7 @@
    "start_utc": "2026-10-23T20:58:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:58_Sheffield/28?event_id=689872",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
@@ -801,7 +678,7 @@
    "start_utc": "2026-10-23T21:03:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/10:03_Sunderland/28?event_id=689873",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
@@ -830,7 +707,7 @@
    "start_utc": "2026-10-23T21:13:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/10:13_Romford/28?event_id=689875",
-   "captured_at": "2026-10-23T20:08:20Z",
+   "captured_at": "2026-10-23T20:31:56Z",
    "markets": [
     {
      "market": "Daily Races",
@@ -859,14 +736,14 @@
    "start_utc": "2026-10-23T21:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Brasilia_W_vs_Sesc_RJ_Flamengo_W/21?event_id=37001",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
      "selection": "Brasilia W",
      "olbg_decimal": "7.50",
      "olbg_american": "650",
-     "olbg_confidence": 55
+     "olbg_confidence": 50
     }
    ],
    "side_a": "Brasilia W",
@@ -888,7 +765,7 @@
    "start_utc": "2026-10-23T21:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Minas_W_vs_Paulistano-Barueri_W/21?event_id=37022",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -917,13 +794,13 @@
    "start_utc": "2026-10-23T22:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Brazil_NBB/Bauru_vs_Mogi_das_Cruzes/4?event_id=536060",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "Mogi das Cruzes",
-     "olbg_decimal": "1.67",
-     "olbg_american": "-149",
+     "olbg_decimal": "1.65",
+     "olbg_american": "-154",
      "olbg_confidence": 100
     }
    ],
@@ -946,7 +823,7 @@
    "start_utc": "2026-10-23T23:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Toronto_Kings_vs_Vancouver_Guardians_T20/7?event_id=188845",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Top Team1 Batsman",
@@ -987,9 +864,9 @@
     {
      "market": "Money Line",
      "selection": "ATL Hawks",
-     "olbg_decimal": "1.75",
-     "olbg_american": "-133",
-     "olbg_confidence": 80
+     "olbg_decimal": "1.72",
+     "olbg_american": "-138",
+     "olbg_confidence": 83
     }
    ],
    "side_a": "ATL Hawks",
@@ -1011,13 +888,13 @@
    "start_utc": "2026-10-23T23:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DAL_Mavericks_@_IND_Pacers/4?event_id=536037",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "IND Pacers",
-     "olbg_decimal": "1.38",
-     "olbg_american": "-260",
+     "olbg_decimal": "1.40",
+     "olbg_american": "-250",
      "olbg_confidence": 100
     },
     {
@@ -1047,7 +924,7 @@
    "start_utc": "2026-10-23T23:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIN_Timberwolves_@_ORL_Magic/4?event_id=536036",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
@@ -1076,14 +953,14 @@
    "start_utc": "2026-10-23T23:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NY_Knicks_@_BOS_Celtics/4?event_id=534842",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "BOS Celtics",
-     "olbg_decimal": "1.80",
-     "olbg_american": "-125",
-     "olbg_confidence": 86
+     "olbg_decimal": "1.75",
+     "olbg_american": "-133",
+     "olbg_confidence": 88
     },
     {
      "market": "Pointspread",
@@ -1112,14 +989,14 @@
    "start_utc": "2026-10-23T23:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/TOR_Raptors_@_WAS_Wizards/4?event_id=536034",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "TOR Raptors",
-     "olbg_decimal": "1.35",
-     "olbg_american": "-286",
-     "olbg_confidence": 83
+     "olbg_decimal": "1.33",
+     "olbg_american": "-303",
+     "olbg_confidence": 86
     }
    ],
    "side_a": "TOR Raptors",
@@ -1141,7 +1018,7 @@
    "start_utc": "2026-10-23T23:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Tasmania_vs_Victoria_One_Day_Match/7?event_id=188839",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Win Match",
@@ -1157,7 +1034,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T20:08:49Z",
+    "captured_at": "2026-10-23T20:32:25Z",
     "detail": "the two participants sit either side of a versus marker on the official cricket_com_au2 page",
     "evidence": "es year 2026 all men women upcoming view match centre one day cup 2026 27 tasmanian tigers v victoria upcoming 23 october 2026 23 oct 2026 tasmanian tigers men upcoming victoria men follow on "
    }
@@ -1171,14 +1048,14 @@
    "start_utc": "2026-10-24T00:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789",
-   "captured_at": "2026-10-23T20:08:14Z",
+   "captured_at": "2026-10-23T20:31:52Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "MIL Brewers",
      "olbg_decimal": "1.55",
      "olbg_american": "-182",
-     "olbg_confidence": 79
+     "olbg_confidence": 77
     },
     {
      "market": "Game Totals",
@@ -1201,7 +1078,7 @@
     "state": "official-fixture",
     "official_url": "https://www.mlb.com/gameday/849805",
     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-    "captured_at": "2026-10-23T20:08:44Z",
+    "captured_at": "2026-10-23T20:32:20Z",
     "detail": "matched Tampa Bay Rays at Milwaukee Brewers (MLB) in the official schedule feed",
     "fixture_id": "mlb-849805",
     "official_start_utc": "2026-10-24T00:00:00Z",
@@ -1312,7 +1189,7 @@
    "start_utc": "2026-10-24T00:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Argentina_Liga_Nacional/Argentino_Junin_vs_Quimsa/4?event_id=536058",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
@@ -1341,7 +1218,7 @@
    "start_utc": "2026-10-24T00:07:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MTL_Canadiens_@_CHI_Blackhawks/13?event_id=199984",
-   "captured_at": "2026-10-23T20:08:26Z",
+   "captured_at": "2026-10-23T20:32:03Z",
    "markets": [
     {
      "market": "Money Line",
@@ -1468,14 +1345,14 @@
    "start_utc": "2026-10-24T00:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DET_Pistons_@_MIA_Heat/4?event_id=536038",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "DET Pistons",
      "olbg_decimal": "1.83",
      "olbg_american": "-120",
-     "olbg_confidence": 80
+     "olbg_confidence": 83
     }
    ],
    "side_a": "DET Pistons",
@@ -1497,7 +1374,7 @@
    "start_utc": "2026-10-24T00:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Argentina_Liga_Nacional/Atenas_vs_Lanus/4?event_id=536073",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
@@ -1526,7 +1403,7 @@
    "start_utc": "2026-10-24T01:05:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Argentina_Liga_Nacional/Racing_de_Chivilcoy_vs_Boca_Juniors/4?event_id=536059",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
@@ -1555,14 +1432,21 @@
    "start_utc": "2026-10-24T01:07:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TB_Lightning_@_COL_Avalanche/13?event_id=199985",
-   "captured_at": "2026-10-23T20:08:26Z",
+   "captured_at": "2026-10-23T20:32:03Z",
    "markets": [
+    {
+     "market": "Game Totals",
+     "selection": "Over 6.50",
+     "olbg_decimal": "2.30",
+     "olbg_american": "130",
+     "olbg_confidence": 75
+    },
     {
      "market": "Money Line",
      "selection": "COL Avalanche",
      "olbg_decimal": "1.80",
      "olbg_american": "-125",
-     "olbg_confidence": 60
+     "olbg_confidence": 50
     }
    ],
    "side_a": "TB Lightning",
@@ -1682,13 +1566,13 @@
    "start_utc": "2026-10-24T01:40:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_SA_Spurs/4?event_id=534841",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "SA Spurs",
-     "olbg_decimal": "1.55",
-     "olbg_american": "-182",
+     "olbg_decimal": "1.57",
+     "olbg_american": "-175",
      "olbg_confidence": 80
     }
    ],
@@ -1711,7 +1595,7 @@
    "start_utc": "2026-10-24T01:40:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_UTA_Jazz/4?event_id=536040",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
@@ -1740,7 +1624,7 @@
    "start_utc": "2026-10-24T02:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/LA_Clippers_@_LA_Lakers/4?event_id=536042",
-   "captured_at": "2026-10-23T19:29:03Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Pointspread",
@@ -1752,8 +1636,8 @@
     {
      "market": "Money Line",
      "selection": "LA Lakers",
-     "olbg_decimal": "1.29",
-     "olbg_american": "-350",
+     "olbg_decimal": "1.30",
+     "olbg_american": "-333",
      "olbg_confidence": 100
     }
    ],
@@ -1776,13 +1660,20 @@
    "start_utc": "2026-10-24T02:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MEM_Grizzlies_@_GS_Warriors/4?event_id=536039",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T19:29:03Z",
    "markets": [
     {
      "market": "Game Totals",
      "selection": "Under 237.50",
-     "olbg_decimal": "1.95",
-     "olbg_american": "-105",
+     "olbg_decimal": "1.92",
+     "olbg_american": "-109",
+     "olbg_confidence": 60
+    },
+    {
+     "market": "Game Totals",
+     "selection": "Under 236.50",
+     "olbg_decimal": "1.98",
+     "olbg_american": "-102",
      "olbg_confidence": 60
     }
    ],
@@ -1805,13 +1696,20 @@
    "start_utc": "2026-10-24T02:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/POR_Trail_Blazers_@_SAC_Kings/4?event_id=536043",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:31:39Z",
    "markets": [
     {
      "market": "Pointspread",
      "selection": "POR Trail Blazers -10.50",
      "olbg_decimal": "1.95",
      "olbg_american": "-105",
+     "olbg_confidence": 100
+    },
+    {
+     "market": "Money Line",
+     "selection": "POR Trail Blazers",
+     "olbg_decimal": "1.23",
+     "olbg_american": "-431",
      "olbg_confidence": 100
     }
    ],
@@ -1834,8 +1732,15 @@
    "start_utc": "2026-10-24T03:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ann_Li_vs_Ashlyn_Krueger/3?event_id=902157",
-   "captured_at": "2026-10-23T20:08:22Z",
+   "captured_at": "2026-10-23T20:31:58Z",
    "markets": [
+    {
+     "market": "Win Match",
+     "selection": "Ashlyn Krueger",
+     "olbg_decimal": "2.30",
+     "olbg_american": "130",
+     "olbg_confidence": 67
+    },
     {
      "market": "Total Games",
      "selection": "Over 22.50",
@@ -1863,13 +1768,20 @@
    "start_utc": "2026-10-24T04:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Katie_Boulter_vs_Katerina_Siniakova/3?event_id=902162",
-   "captured_at": "2026-10-23T20:08:22Z",
+   "captured_at": "2026-10-23T20:31:58Z",
    "markets": [
     {
      "market": "Win Match",
      "selection": "Katerina Siniakova",
      "olbg_decimal": "1.62",
      "olbg_american": "-161",
+     "olbg_confidence": 50
+    },
+    {
+     "market": "Win Match",
+     "selection": "Katie Boulter",
+     "olbg_decimal": "2.40",
+     "olbg_american": "140",
      "olbg_confidence": 50
     }
    ],
@@ -1892,7 +1804,7 @@
    "start_utc": "2026-10-24T05:50:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Japan_v_Fiji/9?event_id=609582",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
@@ -1902,11 +1814,11 @@
      "olbg_confidence": 50
     },
     {
-     "market": "To Win",
-     "selection": "Japan",
-     "olbg_decimal": "1.25",
-     "olbg_american": "-400",
-     "olbg_confidence": 50
+     "market": "Handicap",
+     "selection": "Fiji +10.50",
+     "olbg_decimal": "1.86",
+     "olbg_american": "-116",
+     "olbg_confidence": 100
     }
    ],
    "side_a": "Japan",
@@ -1928,7 +1840,7 @@
    "start_utc": "2026-10-24T06:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Western_Australia_vs_New_South_Wales_One_Day_Match/7?event_id=188840",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Win Match",
@@ -1944,7 +1856,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T20:08:49Z",
+    "captured_at": "2026-10-23T20:32:25Z",
     "detail": "the two participants sit either side of a versus marker on the official cricket_com_au2 page",
     "evidence": "v victoria bellerive oval hobart view match centre one day cup 2026 27 western australia v new south wales upcoming 24 october 2026 24 oct 2026 western australia men upcoming nsw men follow "
    }
@@ -1958,14 +1870,14 @@
    "start_utc": "2026-10-24T07:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_2nd_T20_Match/7?event_id=188832",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Win Match",
      "selection": "India",
      "olbg_decimal": "1.73",
      "olbg_american": "-137",
-     "olbg_confidence": 71
+     "olbg_confidence": 75
     }
    ],
    "side_a": "New Zealand",
@@ -1974,7 +1886,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T20:08:49Z",
+    "captured_at": "2026-10-23T20:32:25Z",
     "detail": "the two participants sit either side of a versus marker on the official cricket_com_au2 page",
     "evidence": "6 27 western australia v new south wales waca ground perth view match centre new zealand v india t20is 2026 men 2nd t20i upcoming 24 october 2026 24 oct 2026 new zealand men upcoming india"
    }
@@ -1988,7 +1900,7 @@
    "start_utc": "2026-10-24T07:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Leylah_Fernandez_vs_Marie_Bouzkova/3?event_id=902160",
-   "captured_at": "2026-10-23T20:08:22Z",
+   "captured_at": "2026-10-23T20:31:58Z",
    "markets": [
     {
      "market": "Win Match",
@@ -1998,10 +1910,17 @@
      "olbg_confidence": 50
     },
     {
+     "market": "Win Match",
+     "selection": "Marie Bouzkova",
+     "olbg_decimal": "1.91",
+     "olbg_american": "-110",
+     "olbg_confidence": 50
+    },
+    {
      "market": "Set Betting",
      "selection": "Marie Bouzkova to win 2 - 1",
-     "olbg_decimal": "4.40",
-     "olbg_american": "340",
+     "olbg_decimal": "4.50",
+     "olbg_american": "350",
      "olbg_confidence": 100
     }
    ],
@@ -2024,7 +1943,7 @@
    "start_utc": "2026-10-24T09:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Elena_Rybakina_vs_Diana_Shnaider/3?event_id=902163",
-   "captured_at": "2026-10-23T20:08:22Z",
+   "captured_at": "2026-10-23T20:31:58Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2053,7 +1972,7 @@
    "start_utc": "2026-10-24T10:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Nikoloz_Basilashvili_vs_Stefanos_Tsitsipas/3?event_id=902159",
-   "captured_at": "2026-10-23T20:08:22Z",
+   "captured_at": "2026-10-23T20:31:58Z",
    "markets": [
     {
      "market": "Set Betting",
@@ -2082,7 +2001,7 @@
    "start_utc": "2026-10-24T11:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Eastern_Cape_Iinyathi_vs_Warriors_T20/7?event_id=188842",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2111,7 +2030,7 @@
    "start_utc": "2026-10-24T11:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Lions_vs_Limpopo_Impalas_T20/7?event_id=188841",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2140,7 +2059,7 @@
    "start_utc": "2026-10-24T11:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Bulls_v_Ulster/9?event_id=609576",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
@@ -2169,7 +2088,7 @@
    "start_utc": "2026-10-24T13:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Skive_FH_vs_Aalborg_Handbold/20?event_id=12076",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -2198,7 +2117,7 @@
    "start_utc": "2026-10-24T13:15:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Elverum_vs_OIF_Arendal/20?event_id=12139",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Match Handicap",
@@ -2219,6 +2138,35 @@
    }
   },
   {
+   "sport": "Ice Hockey",
+   "olbg_sport": "Ice Hockey",
+   "event": "IF Bjorkloven vs Skelleftea AIK",
+   "event_id": "199986",
+   "competition": "Swedish Hockey League",
+   "start_utc": "2026-10-24T13:15:00Z",
+   "venue": "",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Swedish_Hockey_League/IF_Bjorkloven_vs_Skelleftea_AIK/13?event_id=199986",
+   "captured_at": "2026-10-23T20:32:03Z",
+   "markets": [
+    {
+     "market": "Game Totals",
+     "selection": "Over 5.50",
+     "olbg_decimal": "2.05",
+     "olbg_american": "105",
+     "olbg_confidence": 100
+    }
+   ],
+   "side_a": "IF Bjorkloven",
+   "side_b": "Skelleftea AIK",
+   "verify": {
+    "state": "unmatched",
+    "official_url": "",
+    "source_url": "",
+    "captured_at": "",
+    "detail": "no official counterpart found in today's captures"
+   }
+  },
+  {
    "sport": "Handball",
    "olbg_sport": "Handball",
    "event": "Skjern Handbold vs Ribe Esbjerg HH",
@@ -2227,7 +2175,7 @@
    "start_utc": "2026-10-24T14:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Skjern_Handbold_vs_Ribe_Esbjerg_HH/20?event_id=12077",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -2256,7 +2204,7 @@
    "start_utc": "2026-10-24T14:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Stormers_v_Scarlets/9?event_id=609580",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
@@ -2285,7 +2233,7 @@
    "start_utc": "2026-10-24T14:05:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Leicester_Tigers_v_Northampton_Saints/9?event_id=609572",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
@@ -2314,15 +2262,8 @@
    "start_utc": "2026-10-24T14:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SG_Sokol-Post_W_vs_TSV_Hartberg_W/21?event_id=37017",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "SG Sokol/Post W",
-     "olbg_decimal": "1.05",
-     "olbg_american": "-2000",
-     "olbg_confidence": 50
-    },
     {
      "market": "Set Score",
      "selection": "SG Sokol/Post W to win 3-1",
@@ -2350,13 +2291,13 @@
    "start_utc": "2026-10-24T14:35:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Bayonne_v_Lyon/9?event_id=609564",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
-     "selection": "Lyon",
-     "olbg_decimal": "4.00",
-     "olbg_american": "300",
+     "selection": "Bayonne",
+     "olbg_decimal": "1.22",
+     "olbg_american": "-450",
      "olbg_confidence": 50
     }
    ],
@@ -2379,7 +2320,7 @@
    "start_utc": "2026-10-24T14:35:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Castres_v_Stade_Francais/9?event_id=609565",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
@@ -2408,20 +2349,13 @@
    "start_utc": "2026-10-24T14:35:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Toulouse_v_Perpignan/9?event_id=609567",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
      "selection": "Perpignan",
      "olbg_decimal": "12.00",
      "olbg_american": "1100",
-     "olbg_confidence": 50
-    },
-    {
-     "market": "To Win",
-     "selection": "Toulouse",
-     "olbg_decimal": "1.01",
-     "olbg_american": "-10000",
      "olbg_confidence": 50
     }
    ],
@@ -2444,7 +2378,7 @@
    "start_utc": "2026-10-24T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Knights_vs_Mpumalanga_Rhinos_T20/7?event_id=188843",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2473,7 +2407,7 @@
    "start_utc": "2026-10-24T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/HC_Erlangen_vs_THW_Kiel/20?event_id=12091",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -2502,7 +2436,7 @@
    "start_utc": "2026-10-24T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Liberec_W_vs_Prostejov_W/21?event_id=37029",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2531,7 +2465,7 @@
    "start_utc": "2026-10-24T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/PGE_Skra_Belchatow_vs_Projekt_Warszawa/21?event_id=36964",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2560,15 +2494,8 @@
    "start_utc": "2026-10-24T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Sternberk_W_vs_VK_Lvice_Praha_W/21?event_id=37026",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "Sternberk W",
-     "olbg_decimal": "3.50",
-     "olbg_american": "250",
-     "olbg_confidence": 50
-    },
     {
      "market": "Set Score",
      "selection": "Sternberk W to win 3-1",
@@ -2596,7 +2523,7 @@
    "start_utc": "2026-10-24T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/UVC_Ried_vs_VBK_Klagenfurt/21?event_id=37031",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2625,7 +2552,7 @@
    "start_utc": "2026-10-24T16:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Bristol_Bears_v_Exeter_Chiefs/9?event_id=609569",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "Handicap",
@@ -2654,15 +2581,8 @@
    "start_utc": "2026-10-24T16:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/VfB_Friedrichshafen_vs_SSC_Karlsruhe/21?event_id=37010",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "VfB Friedrichshafen",
-     "olbg_decimal": "1.07",
-     "olbg_american": "-1408",
-     "olbg_confidence": 50
-    },
     {
      "market": "Set Score",
      "selection": "VfB Friedrichshafen to win 3-1",
@@ -2690,7 +2610,7 @@
    "start_utc": "2026-10-24T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Nava_vs_Atletico_Valladolid/20?event_id=12104",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -2719,14 +2639,14 @@
    "start_utc": "2026-10-24T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Nantes_vs_Chambery_Savoie/20?event_id=12082",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
      "selection": "Nantes",
      "olbg_decimal": "1.12",
      "olbg_american": "-833",
-     "olbg_confidence": 50
+     "olbg_confidence": 67
     }
    ],
    "side_a": "Nantes",
@@ -2748,7 +2668,7 @@
    "start_utc": "2026-10-24T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Villa_De_Aranda_vs_Puerto_Sagunto/20?event_id=12107",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -2777,7 +2697,7 @@
    "start_utc": "2026-10-24T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Leinster_v_Munster/9?event_id=609578",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
@@ -2806,7 +2726,7 @@
    "start_utc": "2026-10-24T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/ASKO_Purgstall_W_vs_VBV_Trofaiach-WSV_Eisenerz_W/21?event_id=37018",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2835,7 +2755,7 @@
    "start_utc": "2026-10-24T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SK_Aich-Dob_vs_SG_VCA_Amstetten/21?event_id=37032",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -2864,15 +2784,8 @@
    "start_utc": "2026-10-24T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SVG_Luneburg_vs_SV_Warnemunde/21?event_id=37011",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "SVG Luneburg",
-     "olbg_decimal": "1.05",
-     "olbg_american": "-2000",
-     "olbg_confidence": 50
-    },
     {
      "market": "Set Score",
      "selection": "SVG Luneburg to win 3-1",
@@ -2900,7 +2813,7 @@
    "start_utc": "2026-10-24T17:15:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T20:32:07Z",
    "markets": [
     {
      "market": "Win Match 2-way",
@@ -2929,7 +2842,7 @@
    "start_utc": "2026-10-24T17:15:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Luke_Woodhouse/15?event_id=32385",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T20:32:07Z",
    "markets": [
     {
      "market": "Win Match 2-way",
@@ -2958,7 +2871,7 @@
    "start_utc": "2026-10-24T17:15:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Damon_Heta/15?event_id=32386",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T20:32:07Z",
    "markets": [
     {
      "market": "Win Match 2-way",
@@ -2987,7 +2900,7 @@
    "start_utc": "2026-10-24T17:15:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Stephen_Bunting_vs_Kim_Huybrechts/15?event_id=32384",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T20:32:07Z",
    "markets": [
     {
      "market": "Win Match 2-way",
@@ -3016,7 +2929,7 @@
    "start_utc": "2026-10-24T17:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Basketball/European/Poland_PLK/Slask_Wroclaw_vs_Astoria_Bydgoszcz/4?event_id=536075",
-   "captured_at": "2026-10-23T20:08:33Z",
+   "captured_at": "2026-10-23T20:32:10Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3045,7 +2958,7 @@
    "start_utc": "2026-10-24T17:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Logrono_La_Rioja_vs_BM_Cangas/20?event_id=12103",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3074,15 +2987,8 @@
    "start_utc": "2026-10-24T17:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Helios_Grizzlys_Giesen_vs_Berlin_Volleys/21?event_id=37013",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "Helios Grizzlys Giesen",
-     "olbg_decimal": "3.00",
-     "olbg_american": "200",
-     "olbg_confidence": 100
-    },
     {
      "market": "Set Score",
      "selection": "Helios Grizzlys Giesen to win 3-1",
@@ -3097,7 +3003,7 @@
     "state": "official-page",
     "official_url": "https://www.volleyball-bundesliga.de/",
     "source_url": "https://www.volleyball-bundesliga.de/",
-    "captured_at": "2026-10-23T20:12:02Z",
+    "captured_at": "2026-10-23T20:35:40Z",
     "detail": "the two participants sit either side of a versus marker on the official volleyball_bundesliga page",
     "evidence": "g l neburg vs vfb friedrichshafen finale so 18 10 2026 18 00 uhr helios grizzlys giesen vs berlin recycling volleys unter folgendem link finden sie bilder die sie unter angabe der jeweilige"
    }
@@ -3111,15 +3017,8 @@
    "start_utc": "2026-10-24T17:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SWD_Duren_vs_WWK_Volleys_Munchen/21?event_id=37012",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "SWD Duren",
-     "olbg_decimal": "1.22",
-     "olbg_american": "-450",
-     "olbg_confidence": 50
-    },
     {
      "market": "Set Score",
      "selection": "WWK Volleys Munchen to win 3-1",
@@ -3147,7 +3046,7 @@
    "start_utc": "2026-10-24T18:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/HBW_Balingen_Weilstetten_vs_MT_Melsungen/20?event_id=12090",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3168,6 +3067,35 @@
    }
   },
   {
+   "sport": "Rugby Union",
+   "olbg_sport": "Rugby Union",
+   "event": "Ospreys v Dragons",
+   "event_id": "609581",
+   "competition": "",
+   "start_utc": "2026-10-24T18:00:00Z",
+   "venue": "",
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Ospreys_v_Dragons/9?event_id=609581",
+   "captured_at": "2026-10-23T20:31:45Z",
+   "markets": [
+    {
+     "market": "To Win",
+     "selection": "Ospreys",
+     "olbg_decimal": "1.36",
+     "olbg_american": "-275",
+     "olbg_confidence": 100
+    }
+   ],
+   "side_a": "Ospreys",
+   "side_b": "Dragons",
+   "verify": {
+    "state": "unmatched",
+    "official_url": "",
+    "source_url": "",
+    "captured_at": "",
+    "detail": "no official counterpart found in today's captures"
+   }
+  },
+  {
    "sport": "Volleyball",
    "olbg_sport": "Volleyball",
    "event": "UVC Graz W vs Sportunion St Polten W",
@@ -3176,15 +3104,8 @@
    "start_utc": "2026-10-24T18:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/UVC_Graz_W_vs_Sportunion_St_Polten_W/21?event_id=37019",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "UVC Graz W",
-     "olbg_decimal": "1.03",
-     "olbg_american": "-3333",
-     "olbg_confidence": 50
-    },
     {
      "market": "Win Match",
      "selection": "Sportunion St Polten W",
@@ -3212,7 +3133,7 @@
    "start_utc": "2026-10-24T19:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Mackenzie_W_vs_Osasco_W/21?event_id=37002",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3241,7 +3162,7 @@
    "start_utc": "2026-10-24T21:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=911",
-   "captured_at": "2026-10-23T20:08:24Z",
+   "captured_at": "2026-10-23T20:32:00Z",
    "markets": [
     {
      "market": "Fastest Qualifier",
@@ -3270,7 +3191,7 @@
    "start_utc": "2026-10-25T00:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Abel-Moda_Brusque_W_vs_Praia_Clube_W/21?event_id=37003",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3286,7 +3207,7 @@
     "state": "official-page",
     "official_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
     "source_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
-    "captured_at": "2026-10-23T20:11:59Z",
+    "captured_at": "2026-10-23T20:35:35Z",
     "detail": "the two participants sit either side of a versus marker on the official volleyball_superliga page",
     "evidence": "0 16h00 mec batavo mackenzie ovc osasco s o crist v o sa de s b 24 10 21h00 bru brusque v lei dpc dentil praia clube seg 26 10 18h30 ssv sancor seguros volei svb sesi volei bauru seg 3"
    }
@@ -3300,7 +3221,7 @@
    "start_utc": "2026-10-25T08:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Pakistan_vs_England_One_Day_Match/7?event_id=188838",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3316,7 +3237,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T20:08:49Z",
+    "captured_at": "2026-10-23T20:32:25Z",
     "detail": "the two participants sit either side of a versus marker on the official cricket_com_au2 page",
     "evidence": "i hagley oval christchurch view match centre pakistan odi tri series 2026 men pakistan v england upcoming 25 october 2026 25 oct 2026 pakistan men upcoming england men follow on pakistan o"
    }
@@ -3330,7 +3251,7 @@
    "start_utc": "2026-10-25T11:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/CBM_Sporting_Alicante_vs_Ademar_Leon/20?event_id=12106",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3359,7 +3280,7 @@
    "start_utc": "2026-10-25T11:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Granollers_vs_Angel_Ximenez_Puente_Genil/20?event_id=12102",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3388,7 +3309,7 @@
    "start_utc": "2026-10-25T13:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Hurling/All_Hurling/All_Events/Ballyhale_Shamrocks_v_Tullaroan/26?event_id=714",
-   "captured_at": "2026-10-23T20:08:19Z",
+   "captured_at": "2026-10-23T20:31:55Z",
    "markets": [
     {
      "market": "Handicap",
@@ -3424,7 +3345,7 @@
    "start_utc": "2026-10-25T14:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Lithuania_W_vs_Belgium_W/20?event_id=12125",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3453,7 +3374,7 @@
    "start_utc": "2026-10-25T14:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3482,7 +3403,7 @@
    "start_utc": "2026-10-25T15:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Luxembourg_W_vs_Great_Britain_W/20?event_id=12126",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3511,7 +3432,7 @@
    "start_utc": "2026-10-25T15:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Saint_Raphael_vs_PSG_Handball/20?event_id=12084",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3540,7 +3461,7 @@
    "start_utc": "2026-10-25T15:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Harlequins_v_Saracens/9?event_id=609571",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "Handicap",
@@ -3569,7 +3490,7 @@
    "start_utc": "2026-10-25T15:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Fuchse_Berlin_vs_HSG_Wetzlar/20?event_id=12089",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3598,7 +3519,7 @@
    "start_utc": "2026-10-25T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Moycullen_v_Salthill-Knocknacarra/25?event_id=3532",
-   "captured_at": "2026-10-23T20:08:17Z",
+   "captured_at": "2026-10-23T20:31:53Z",
    "markets": [
     {
      "market": "",
@@ -3634,7 +3555,7 @@
    "start_utc": "2026-10-25T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/St_Finbarrs_v_Nemo_Rangers/25?event_id=3530",
-   "captured_at": "2026-10-23T20:08:17Z",
+   "captured_at": "2026-10-23T20:31:53Z",
    "markets": [
     {
      "market": "",
@@ -3670,15 +3591,8 @@
    "start_utc": "2026-10-25T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Barock_Volleys_Ludwigsburg_vs_TV_Rottenburg/21?event_id=37014",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
-    {
-     "market": "Win Match",
-     "selection": "TV Rottenburg",
-     "olbg_decimal": "7.00",
-     "olbg_american": "600",
-     "olbg_confidence": 100
-    },
     {
      "market": "Set Score",
      "selection": "TV Rottenburg to win 3-1",
@@ -3693,7 +3607,7 @@
     "state": "official-page",
     "official_url": "https://www.volleyball-bundesliga.de/",
     "source_url": "https://www.volleyball-bundesliga.de/",
-    "captured_at": "2026-10-23T20:12:02Z",
+    "captured_at": "2026-10-23T20:35:40Z",
     "detail": "the two participants sit either side of a versus marker on the official volleyball_bundesliga page",
     "evidence": "n publikum zug nglich der 1 spieltag im berblick di 20 10 26 18 30 uhr tv rottenburg vs swd powervolleys d ren di 20 10 26 19 00 uhr vc olympia berlin vs ft 1844 freiburg di 20 10 26 "
    }
@@ -3707,7 +3621,7 @@
    "start_utc": "2026-10-25T16:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3736,7 +3650,7 @@
    "start_utc": "2026-10-25T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Torrelavega_vs_BM_Proin/20?event_id=12105",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3765,7 +3679,7 @@
    "start_utc": "2026-10-25T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/CHKS_Chelm_vs_Resovia_Rzeszow/21?event_id=36965",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3794,7 +3708,7 @@
    "start_utc": "2026-10-25T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Civitanova_vs_Padova/21?event_id=36995",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3823,7 +3737,7 @@
    "start_utc": "2026-10-25T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Monza_vs_Verona/21?event_id=36996",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3852,7 +3766,7 @@
    "start_utc": "2026-10-25T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997",
-   "captured_at": "2026-10-23T20:08:07Z",
+   "captured_at": "2026-10-23T20:31:44Z",
    "markets": [
     {
      "market": "Win Match",
@@ -3881,7 +3795,7 @@
    "start_utc": "2026-10-25T18:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T20:32:07Z",
    "markets": [
     {
      "market": "Win Tournament",
@@ -3910,7 +3824,7 @@
    "start_utc": "2026-10-25T18:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Italy_W_vs_Bulgaria_W/20?event_id=12141",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -3939,7 +3853,7 @@
    "start_utc": "2026-10-25T20:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913",
-   "captured_at": "2026-10-23T20:08:24Z",
+   "captured_at": "2026-10-23T20:32:00Z",
    "markets": [
     {
      "market": "Win Race",
@@ -3975,7 +3889,7 @@
    "start_utc": "2026-10-25T20:05:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/La_Rochelle_v_Bordeaux/9?event_id=609554",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "To Win",
@@ -4004,7 +3918,7 @@
    "start_utc": "2026-10-28T17:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/FC_Porto_vs_Veszprem/20?event_id=12127",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4033,7 +3947,7 @@
    "start_utc": "2026-10-28T17:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/HC_Vardar_vs_MT_Melsungen/20?event_id=12130",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4046,11 +3960,12 @@
    "side_a": "HC Vardar",
    "side_b": "MT Melsungen",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.lnh.fr/",
+    "source_url": "https://www.lnh.fr/",
+    "captured_at": "2026-10-23T20:35:26Z",
+    "detail": "the two participants sit either side of a versus marker on the official handball_france page",
+    "evidence": "r 28 oct 18h45 plock vs nantes infos ligue des champions j06 mer 28 oct 18h45 vardar vs melsungen infos calendrier complet un nouveau test nantes chamb ry publi il y a 22 heures montp"
    }
   },
   {
@@ -4062,7 +3977,7 @@
    "start_utc": "2026-10-28T17:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Wisla_Plock_vs_Nantes/20?event_id=12138",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4075,11 +3990,12 @@
    "side_a": "Wisla Plock",
    "side_b": "Nantes",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.lnh.fr/",
+    "source_url": "https://www.lnh.fr/",
+    "captured_at": "2026-10-23T20:35:26Z",
+    "detail": "the two participants sit either side of a versus marker on the official handball_france page",
+    "evidence": "blay vs cesson rennes infos billetterie ligue des champions j06 mer 28 oct 18h45 plock vs nantes infos ligue des champions j06 mer 28 oct 18h45 vardar vs melsungen infos calendrier compl"
    }
   },
   {
@@ -4091,7 +4007,7 @@
    "start_utc": "2026-10-28T19:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/KS_Kielce_vs_Kolstad/20?event_id=12132",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4120,7 +4036,7 @@
    "start_utc": "2026-10-28T19:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/PSG_Handball_vs_Aalborg_Handbold/20?event_id=12134",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4149,7 +4065,7 @@
    "start_utc": "2026-10-28T19:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/RK_Celje_vs_RK_Zagreb/20?event_id=12135",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4178,7 +4094,7 @@
    "start_utc": "2026-10-28T19:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/SC_Magdeburg_vs_HC_Kriens_Luzern/20?event_id=12136",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4207,7 +4123,7 @@
    "start_utc": "2026-10-29T17:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Fuchse_Berlin_vs_RK_Partizan/20?event_id=12128",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4236,7 +4152,7 @@
    "start_utc": "2026-10-29T17:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/GOG_vs_Sporting_CP/20?event_id=12129",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4265,7 +4181,7 @@
    "start_utc": "2026-10-29T17:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/IFK_Kristianstad_vs_Pick_Szeged/20?event_id=12131",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4294,7 +4210,7 @@
    "start_utc": "2026-10-29T19:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Montpellier_vs_Dinamo_Bucuresti/20?event_id=12133",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4323,7 +4239,7 @@
    "start_utc": "2026-10-29T19:45:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Skanderborg_Handbold_vs_FC_Barcelona/20?event_id=12137",
-   "captured_at": "2026-10-23T20:08:25Z",
+   "captured_at": "2026-10-23T20:32:01Z",
    "markets": [
     {
      "market": "Money Line",
@@ -4352,7 +4268,7 @@
    "start_utc": "2026-11-01T14:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Kanturk_v_Eire_Og_Cor/25?event_id=3531",
-   "captured_at": "2026-10-23T20:08:17Z",
+   "captured_at": "2026-10-23T20:31:53Z",
    "markets": [
     {
      "market": "",
@@ -4381,7 +4297,7 @@
    "start_utc": "2026-11-01T15:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Fr_Caseys_v_Kildimo_Pallaskenry/25?event_id=3537",
-   "captured_at": "2026-10-23T20:08:17Z",
+   "captured_at": "2026-10-23T20:31:53Z",
    "markets": [
     {
      "market": "",
@@ -4410,7 +4326,7 @@
    "start_utc": "2026-12-05T08:10:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Big_Bash_Women_2026/7?event_id=187184",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Outright Winner",
@@ -4439,7 +4355,7 @@
    "start_utc": "2026-12-12T08:15:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Big_Bash_2026-27/7?event_id=187503",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Outright Winner",
@@ -4468,7 +4384,7 @@
    "start_utc": "2027-01-03T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/PDC_World_Championship_2027/15?event_id=26023",
-   "captured_at": "2026-10-23T20:08:32Z",
+   "captured_at": "2026-10-23T20:32:07Z",
    "markets": [
     {
      "market": "Win Tournament",
@@ -4497,7 +4413,7 @@
    "start_utc": "2027-01-24T16:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/SA20_2026-27/7?event_id=187504",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Outright Winner",
@@ -4526,7 +4442,7 @@
    "start_utc": "2027-03-14T20:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Six_Nations_2027/9?event_id=609013",
-   "captured_at": "2026-10-23T20:08:08Z",
+   "captured_at": "2026-10-23T20:31:45Z",
    "markets": [
     {
      "market": "Win Tournament",
@@ -4555,7 +4471,7 @@
    "start_utc": "2027-05-27T10:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/All_Rugby_League/All_Events/State_of_Origin_2027/10?event_id=2695857",
-   "captured_at": "2026-10-23T20:08:30Z",
+   "captured_at": "2026-10-23T20:32:05Z",
    "markets": [
     {
      "market": "Win Tournament",
@@ -4584,7 +4500,7 @@
    "start_utc": "2027-07-18T14:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Hurling/All_Hurling/All_Events/All_Ireland_Hurling_Championship_2027/26?event_id=675",
-   "captured_at": "2026-10-23T20:08:19Z",
+   "captured_at": "2026-10-23T20:31:55Z",
    "markets": [
     {
      "market": "Win Hurling",
@@ -4613,7 +4529,7 @@
    "start_utc": "2027-07-18T15:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Blast_2027/7?event_id=188350",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Outright Winner",
@@ -4642,7 +4558,7 @@
    "start_utc": "2027-07-25T14:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/All_Ireland_Football_Championship_2027/25?event_id=3327",
-   "captured_at": "2026-10-23T20:08:17Z",
+   "captured_at": "2026-10-23T20:31:53Z",
    "markets": [
     {
      "market": "",
@@ -4671,7 +4587,7 @@
    "start_utc": "2027-10-02T17:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/All_Rugby_League/All_Events/Super_League_2027/10?event_id=2801554",
-   "captured_at": "2026-10-23T20:08:30Z",
+   "captured_at": "2026-10-23T20:32:05Z",
    "markets": [
     {
      "market": "Grand Final Winner",
@@ -4707,7 +4623,7 @@
    "start_utc": "2027-10-03T08:30:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/All_Rugby_League/All_Events/NRL_2027/10?event_id=2801600",
-   "captured_at": "2026-10-23T20:08:30Z",
+   "captured_at": "2026-10-23T20:32:05Z",
    "markets": [
     {
      "market": "Grand Final Winner",
@@ -4736,7 +4652,7 @@
    "start_utc": "2027-11-21T10:00:00Z",
    "venue": "",
    "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/World_Cup_2027/7?event_id=182606",
-   "captured_at": "2026-10-23T20:08:10Z",
+   "captured_at": "2026-10-23T20:31:47Z",
    "markets": [
     {
      "market": "Outright Winner",

@@ -135,16 +135,16 @@ catch(e){console.error('@ Search Initing: error',e);}});
 <script type="text/javascript">
 var app_device = 'desktop';
         var uid = '0';
-        var ti_param = '18001d53ac1d09bf85d922c75e34c6db1792786243:ouk:Chrome:unknown:124.0';
+        var ti_param = '6c797d9a3b3127079ec441b48735a8cb1792787661:ouk:Chrome:unknown:124.0';
         var is_olbg_vpn = '';
         var device_type = 'D';
         var is_first_visit = 1;
-        var ip = '20.221.69.179';
+        var ip = '172.185.47.209';
         var baseURL = 'https://www.olbg.com';
         var base_url = 'https://www.olbg.com';
         var bookies_review_url = 'https://www.olbg.com/{bookie_name}_Free_Bet.html';
         var user_current_country = 'US';
-        var user_current_state = 'ia';
+        var user_current_state = 'ca';
 
         var ads_api = 'https://a.olbg.info/';
         var offers_api = 'https://a.olbg.info/offers/';
@@ -210,7 +210,7 @@ var app_device = 'desktop';
             ads_api_banner: false,
             ads_api_device_id: 'D',
             ads_api_ip: ip,
-            ads_api_ts: '1792786243',
+            ads_api_ts: '1792787661',
             ads_api_location_id: 'L9',
             ads_api_site_type: 'D',
             ads_api_member_id: '0',
@@ -250,7 +250,7 @@ var app_device = 'desktop';
 		
 	</style>
 
-<link rel="stylesheet" style="text/css" href="https://www.olbg.com/olbgcombine/css-404-a191d4308f446e1553d84d0f302fa09e-1792786243.css">
+<link rel="stylesheet" style="text/css" href="https://www.olbg.com/olbgcombine/css-404-a191d4308f446e1553d84d0f302fa09e-1792787661.css">
 <!-- cssPool end -->
 
 
@@ -3000,7 +3000,7 @@ return false;}
 function injectJs(path){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=path;var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);jsInjected.push(path);}}
 </script>
 
-<script defer src="https://www.olbg.com/olbgcombine/scripts-404-ce4c576247eb6ece8c187aa7555b586a-1792786244.js"></script>
+<script defer src="https://www.olbg.com/olbgcombine/scripts-404-ce4c576247eb6ece8c187aa7555b586a-1792787661.js"></script>
 
 
 <!-- global lazy load -->

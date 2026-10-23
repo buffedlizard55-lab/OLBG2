@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -83,8 +84,13 @@ def collect(output, now=None):
     # Atomic ledger, even if all remote sources fail. A failed fetch never changes seed evidence dates.
     path=output/'latest.json'; temp=output/'latest.tmp'
     temp.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n'); temp.replace(path)
-    print(json.dumps({'attempts':len(records),'official_fixtures':len(result['events']),
-                      'olbg_links':len(result['discovery']),'failed':sum(s['status'] in ('fetch-failed','http-error','soft-error') for s in records)}))
+    summary=json.dumps({'attempts':len(records),'official_fixtures':len(result['events']),
+                        'olbg_links':len(result['discovery']),'failed':sum(s['status'] in ('fetch-failed','http-error','soft-error') for s in records)})
+    print(summary)
+    if os.environ.get('GITHUB_ACTIONS')=='true':
+        print('::notice title=Monitor source-check result::'+summary)
+        for s in records:
+            print('::notice title=Monitor source status::'+s['id']+' '+s['status'])
     return result
 
 if __name__=='__main__':

@@ -1,5 +1,7 @@
 import importlib.util
 import json
+import subprocess
+import sys
 import re
 import unittest
 from html.parser import HTMLParser
@@ -106,6 +108,10 @@ class ZenithDataTests(unittest.TestCase):
                 if target.is_dir(): target/= "index.html"
                 self.assertTrue(target.is_relative_to(ROOT.resolve()),href)
                 self.assertTrue(target.is_file(),f"{page.relative_to(ROOT)}: {href}")
+
+    def test_strict_cli_verifier_passes(self):
+        run=subprocess.run([sys.executable,str(ROOT/"scripts"/"zenith_verify.py")],cwd=ROOT,text=True,capture_output=True)
+        self.assertEqual(run.returncode,0,run.stdout+run.stderr)
 
     def test_deterministic_rebuild_and_flagged_findings(self):
         before={p.relative_to(ROOT):p.read_bytes() for p in SITE.rglob("*") if p.is_file()}

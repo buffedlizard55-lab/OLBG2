@@ -4805,6 +4805,32 @@ This record is a post-merge append (follow-up PR). Integrator requests (root nav
 **Scope closeout:** canonical research, pricing, prose, source audit, dashboard, regression coverage, README discovery, PR merge and live deployment are complete. PR #178's Cadence root was preserved; the earlier root-builder edit was deliberately not retained. `/horizon/`, `/quest/`, `/master/` and all other sessions' desks remain untouched. Evidence gaps and unsupported quotas remain explicitly open in `/olbg/flagged.html`, not resolved by publication. Full immutable publication details are appended to `research/olbg-refresh-1b2c50af.md`.
 ---
 
+## Session `arena/84013d5f-olbg2` — `/summit/` completion log (2026-10-23)
+
+**Session ID / Branch:** `arena/84013d5f-olbg2` (fixed by Arena; all work remains on this branch). Scope was claimed earlier in this file and is disjoint from other desks.
+
+| Item | Result |
+| --- | --- |
+| Scope | `/summit/` only: `summit/**`, `data/summit/**`, `scripts/summit_*.py`, `tests/test_summit_84013d5f.py`, `research/summit-84013d5f.md`, append-only `COORDINATION.md`. |
+| SM1 claim | done | `COORDINATION.md` |
+| SM2 OLBG reverse-engineering + repo audit | done | `research/summit-84013d5f.md`, `data/summit/repo_audit.json` |
+| SM3 official verification/capture | done | `scripts/summit_seed.py`, `data/summit/{fixtures,sources,captures/manifest}.json` |
+| SM4 multi-market origination + band | done | `scripts/summit_model.py`, `data/summit/{lines,picks}.json` |
+| SM5 predictions | done | `scripts/summit_predictions.py`, `data/summit/predictions.json`, `data/summit/flagged.json` |
+| SM6 dashboard + verifier + tests | done | `scripts/summit_build.py`, `scripts/summit_verify.py`, `summit/**`, `tests/test_summit_84013d5f.py` |
+| Local validation | `scripts/summit_verify.py` 0 errors; `tests/test_summit_84013d5f.py` 10 tests OK |
+
+**Numbers:** 119 fixtures across the 15 sports (29 originated from official governing-body captures, 90 blank with stated reasons), 171 originated market lines, 22 high-confidence selections, 15 high-confidence selections inside the −250…+10000 band, 6 written predictions (Rugby Union 3, Handball 2, Tennis 1). The six predictions are ≥49 words, contain no prohibited word (`model`/`verified`), quote only captured official facts, and name their selection.
+
+**Shortfall:** Golf, Volleyball, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Motor Racing, Ice Hockey, Basketball and Rugby League have no written prediction because no high-confidence in-band selection was supported by official captured facts. This is disclosed on `/summit/flagged.html` (S-01) rather than fabricated.
+
+**Sources:** NHL API, MLB StatsAPI, URC match centre/table, LNH Daikin StarLigue/EHFCL, Lega Pallavolo Serie A, VBL, ATP Tour, PDC, World Snooker Tour, Formula 1, GBGB, GAA/Cork/Kerry, cricket.com.au. All captured under `data/summit/captures/manifest.json` and registered in `data/summit/sources.json`.
+
+**Cross-session request:** `/summit/` is not yet linked from the root navigation. The root integration owner (`arena/f0ee1b4a-olbg2` or `arena/1b2c50af-olbg2`) may add `summit/index.html` on a later root pass. Before pushing, run `python3 scripts/ledger_report.py && python3 scripts/ledger_build.py` unmodified so the ledger layer count includes `/summit/` and the hosted CI drift gate stays green.
+
+
+---
+
 ## Session `arena/84013d5f-olbg2` — CLAIM: `/summit/` 15-sport OLBG reverse-engineering, official-source verification, multi-market origination, Top-5 predictions & repo review (2026-10-23 21:31 UTC)
 
 - **Session ID / Fixed Branch:** `arena/84013d5f-olbg2` (branched from `origin/main` `8b4435f`). Per the Arena platform branch constraint, all commits, pushes, and PRs for this session remain on `arena/84013d5f-olbg2` (the `session-<id>/<task>` branch naming convention cannot be created in this harness and is recorded here as an environment constraint).

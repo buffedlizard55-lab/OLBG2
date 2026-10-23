@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repo audit · Summit desk</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="brand">Summit · OLBG 15-sport desk<small>Captured 2026-10-23T22:00:00Z · research, not betting advice · 18+</small></div>
+  <nav class="links"><a href="index.html">Overview</a><a href="band.html">Band board</a><a href="picks.html">All picks</a><a href="matches.html">All matches</a><a href="lines.html">Originated lines</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="olbg.html">OLBG</a><a href="audit.html" class="on">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Method</a></nav>
+</div></header>
+<main><div class="wrap"><h1>Repository audit — /summit/</h1>
+<p class="small">5 findings logged; 46 out-of-scope HTML files observed in other desk trees.</p>
+<div class="table-wrap"><table><thead><tr><th>Code</th><th>Title</th><th>Detail</th><th>Evidence</th><th>Note</th></tr></thead><tbody><tr><td>RA-01</td><td>Out-of-scope sport pages are published in other desk trees</td><td>46 HTML files under desk directories publish aussie-rules.html or esports.html, neither of which is in the 15-sport scope. Example: sports/esports.html, atlas/sports/esports.html, beacon/sports/esports.html.</td><td>Repository file listing under */sports/*.html</td><td>Does not affect /summit/, which publishes only the 15 requested sports.</td></tr><tr><td>RA-02</td><td>Other layers’ prediction data contains forbidden words</td><td>data/daily-picks/predictions.json, data/portal/predictions.json and data/update/predictions.json contain reader-facing occurrences of model or verified. /summit/ predictions exclude those words.</td><td>data/*/predictions.json files in the repository</td><td>Historical layers are preserved; /summit/ is audited separately.</td></tr><tr><td>RA-03</td><td>Unresolved merge-conflict markers remain in COORDINATION.md</td><td>COORDINATION.md carries six closing conflict markers (lines 3216, 3307, 3437, 3549, 3609, 3628). They are plain text and do not break builds, but they make the shared board harder to read.</td><td>COORDINATION.md lines 3216-3628</td><td>Left for the owning sessions; not edited by /summit/.</td></tr><tr><td>RA-04</td><td>Root dashboard points to a stale snapshot</td><td>The root dashboard still advertises a 2026-10-22 snapshot and its primary call to action opens /monitor/, which reports no high-confidence picks. /summit/ is a separate current desk and is not yet linked from root navigation.</td><td>index.html and /monitor/ pages in the repository</td><td>Root integration is deferred to the integration session.</td></tr><tr><td>RA-05</td><td>51 HTML files in other layers have table rows without external official links</td><td>Verification requires every sourced data row to link to an official site. 51 published HTML files have table rows with no external http(s) link in other desk trees.</td><td>scripts/integration_audit.py local scan</td><td>/summit/ flags unverified rows instead of hiding them.</td></tr></tbody></table></div>
+</div></main>
+<footer><div class="wrap">
+  Every sourced row links to the official governing-body page it came from. Values that an official source did not publish are left blank and listed on <a href="flagged.html">Flagged for review</a>.
+  Prices are the desk’s own fair lines, never observed bookmaker quotes unless a row says so.
+</div></footer></body></html>

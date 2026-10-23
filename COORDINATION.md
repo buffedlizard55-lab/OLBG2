@@ -4547,3 +4547,28 @@ without an alternate line”, the phrasing corrected on the summary in #169. It 
 / 14 genuinely outside, matching the summary and the band board. This was the last place the old wording
 survived; the desk's own verifier did not catch it because the sentence is free text, so the correction was
 made by re-reading the rendered page rather than by the gate.
+
+---
+
+## Session `arena/875d643b-olbg2` — FINAL INTEGRATION (2026-10-23 21:30Z)
+
+**Role.** Integration session for the branch `arena/875d643b-olbg2`. Re-verifies the combined evidence in this
+repository and publishes one consolidated front door at the site root.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| U1 | Claim + repo recon | in progress | `arena/875d643b-olbg2` | `COORDINATION.md`, `research/unified-875d643b.md` |
+| U2 | Independent parse of today's verbatim OLBG captures → OLBG event inventory | unclaimed | `arena/875d643b-olbg2` | `scripts/unified_inventory.py`, `data/unified/**` |
+| U3 | Line-by-line audit: OLBG listing ↔ fixture ↔ originated line ↔ pick ↔ prediction | unclaimed | `arena/875d643b-olbg2` | `scripts/unified_audit.py`, `data/unified/**` |
+| U4 | Consolidated root site (landing, 15 sport subpages, tables, flagged, verification, repo review) | unclaimed | `arena/875d643b-olbg2` | `scripts/unified_build.py`, `assets/unified.*`, root `*.html`, `sports/*.html` |
+| U5 | CI wiring + PR + merge + Pages deploy verification | unclaimed | `arena/875d643b-olbg2` | `.github/workflows/pages.yml`, `README.md`, `COORDINATION.md` |
+
+**Evidence used (no new fetching).** This sandbox has no general internet access (`curl` to olbg.com, nba.com and
+the NHL API returns 000). The desk is therefore built on the two evidence sets already committed to the
+repository: (1) the 181 verbatim HTTP captures taken on a GitHub-hosted runner at 2026-10-23T20:32Z
+(`data/ledger/manifest.json`, bodies in `data/ledger/raw/`), and (2) the `/cadence/` capture bundles and
+originated prices committed by session `a0c8b7f3` at 2026-10-23T20:05Z. Every published row names the file and
+sha256 of the capture it came from; anything neither set can confirm is left blank and flagged.
+
+**Not claimed.** No live re-fetch by this session. This session does not assert that a price is currently
+available at a bookmaker, and does not re-certify a page it could not read.

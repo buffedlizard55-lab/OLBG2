@@ -3707,3 +3707,13 @@ Claimed 2026-10-23 16:16 UTC. Read the full local board; checked remote heads an
 | Final integration: root notice/navigation, automatic updates, documentation, CI and publication | in progress | `8226c94a` | `scripts/build_site.py`, generated root pages + `sports/**`, `.github/workflows/monitor.yml`, `.github/workflows/pages.yml`, `.github/workflows/deploy-pages.yml`, `README.md`, append-only `COORDINATION.md` |
 
 No earlier data, prose or claimed verification is promoted without independently inspecting evidence. Exact scope is the user's 15 sports (not historical 17-sport scope). Missing fixture/market/fact evidence stays blank and is published for review. All pushes remain on `arena/8226c94a-olbg2`; pull --rebase before each push.
+
+### Session `8226c94a` — implementation and selected field audit complete
+
+- 15 exact requested categories; Gaelic Sports includes both Football and Hurling. Older 17-sport desks preserved as archives; no prior claim of verification promoted.
+- Agent fetch-page reads of all 15 sport hubs plus Hurling, with official-source checks across all categories. Source evidence, URLs, selected extracts and limits: `data/monitor/seed.json`, `research/monitor-8226c94a.md`, `/monitor/sources.html`.
+- 24 official pairing/date rows, 19 OLBG participant matches, one experimental moneyline (both outcomes), zero qualified high-confidence picks. Incomplete inventory/markets/75-prediction target recorded as **needs review**, publicly at `/monitor/flagged.html` (M01–M10 and 15 category shortfalls). Unknown clocks, odds, injuries and inputs remain null. No claim of exhaustive line-by-line external verification of the old repository.
+- Implemented unattended public-source checks, OLBG event-link parser, MLB schedule parser, raw-response/failure ledger and six-hour Pages refresh. Other official fixture adapters and supported automatic prose remain incomplete and flagged. Collector failure does not relabel stored evidence as fresh.
+- Local validation: **493 tests passed** (467 existing + 26 monitor tests); **0 local link errors**, byte-identical 22-page monitor rebuild, evidence hashes and line arithmetic checked.
+- Shared-file takeover confined to claimed integration files; historical data and other sessions' source files untouched. Root now links the monitor prominently and collapses the historical dashboard.
+- Next: run hosted diagnostic/CI, review generated artifact, open and merge PR, confirm Pages deployment. Publication remains in progress.

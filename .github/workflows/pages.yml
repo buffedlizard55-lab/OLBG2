@@ -96,6 +96,11 @@ jobs:
       - name: Regenerate the root dashboard & integration layer
         run: python scripts/build_site.py
 
+      - name: Rebuild the evidence-first 15-sport monitor
+        run: |
+          python scripts/monitor_seed.py
+          python scripts/monitor_build.py
+
       - name: Check links across all published layers
         run: python scripts/integration_audit.py
 
@@ -103,4 +108,4 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Fail if any generated page or data file is stale
-        run: git diff --exit-code -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets daily data/daily daily-audit data/daily-audit focus data/focus
+        run: git diff --exit-code -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets daily data/daily daily-audit data/daily-audit focus data/focus monitor data/monitor

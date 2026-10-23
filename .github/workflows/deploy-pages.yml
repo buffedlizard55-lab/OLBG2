@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
 
 permissions:
   contents: read
@@ -30,6 +32,16 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Attempt fresh public-source collection (failures remain visible)
+        run: |
+          python scripts/monitor_collect.py
+          python scripts/monitor_build.py --runtime data/monitor/runtime/latest.json
+          python scripts/integration_audit.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
@@ -40,6 +52,8 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='_site' \
+            --exclude='node_modules' \
+            --exclude='__pycache__' \
             ./ _site/
           test -f _site/index.html
 

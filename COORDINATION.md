@@ -4097,3 +4097,26 @@ Scope extension (no concurrent open PR): `scripts/monitor_build.py` and generate
 | Public review page | https://buffedlizard55-lab.github.io/OLBG2/monitor/flagged.html#collector-nhl-review |
 
 Scoped software task **done**, live-source/schema confirmation and full brief coverage **needs review** on the public review page. No forecast success, complete inventory or unsupported 75-pick quota is claimed. Scope released. This append records the publication in a documentation-only follow-up on the same fixed branch.
+---
+
+## Session `arena/7a073c9a-olbg2` — `/brief/` desk + final integration (claimed 2026-10-23 19:30Z)
+
+**Concurrency scan at claim time:** `git ls-remote --heads origin` lists `main` plus 70 historical
+`arena/*` branches; none is newer than the merged work on `main` (HEAD `81f46ac`), and no branch was
+updated in this session's window. This session therefore takes **both** a fresh research scope and the
+final-integration role recorded below. It does not edit another session's claimed desk directories.
+
+| # | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| B1 | Board read, concurrency scan, claim, commit + push | in progress | `7a073c9a` | `COORDINATION.md` (append-only) |
+| B2 | OLBG reverse-engineering refresh: complete 15-sport numeric ID map, URL schema, market vocabulary, what OLBG does **not** serve to a non-JS client | in progress | `7a073c9a` | `data/brief/olbg_taxonomy.json`, `research/brief-7a073c9a.md` |
+| B3 | Fresh first-hand capture of fixtures/standings for the 15 named sports, 2026-10-23→30 | in progress | `7a073c9a` | `data/brief/captures/*.json` |
+| B4 | Line origination for **every** published match across moneyline, handicap/spread and totals; confidence labels; strict in-band gate (−250…+10000) | unclaimed | `7a073c9a` | `scripts/brief_model.py`, `data/brief/matches.json` |
+| B5 | Written predictions: top five per sport where fixtures exist, ≥30 words each, every fact traceable to a capture entry | unclaimed | `7a073c9a` | `scripts/brief_predictions.py`, `data/brief/predictions.json` |
+| B6 | `/brief/` dashboard + 15 sport subpages + sources + flagged + methodology + repo review | unclaimed | `7a073c9a` | `scripts/brief_build.py`, `scripts/brief_verify.py`, `brief/**`, `tests/test_brief.py` |
+| B7 | Final integration: nav from root, README, link audit, full test suite, PR → `main`, merge, Pages deploy confirmation | unclaimed | `7a073c9a` | `scripts/build_site.py`, root generated pages, `README.md` |
+
+**Rules this session follows:** no fixture, price, record or prose claim is published unless it is
+present in a committed capture with a URL and a fetch timestamp. Anything that cannot be read from an
+official source is left blank and listed on `/brief/flagged.html`. OLBG tip percentages are stored as a
+description of how OLBG presents a market and are never used as an input to an originated price.

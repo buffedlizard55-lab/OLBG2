@@ -1,0 +1,18 @@
+{
+  "source_urls": ["https://www.olbg.com/", "https://www.olbg.com/betting-tips", "https://www.olbg.com/betting-tips/Darts/15"],
+  "captured_utc": "2026-10-23T17:22:00Z",
+  "url_schema": "https://www.olbg.com/betting-tips/{Sport}/{Region}/{Competition}/{Event_Name}/{sportId}?event_id={eventId}",
+  "sport_index_schema": "https://www.olbg.com/betting-tips/{Sport}/{sportId}",
+  "confirmed_sport_ids": {"Football": 1, "Horse_Racing": 2, "Baseball": 12, "Darts": 15},
+  "unconfirmed_sport_ids_note": "Numeric IDs for the other twelve in-scope sports were not exposed in any page read first-hand. They are left blank rather than guessed.",
+  "markets_observed": ["Full Time Result", "Win Match 2-way", "Money Line", "Win Tournament", "Daily Racing"],
+  "tip_row_fields_observed": ["selection", "market", "tips count (e.g. 26/31 Win Tips)", "percentage of tips", "comments count", "OLBG Expert count", "Value Rating"],
+  "ordering_rule_published_by_olbg": "Default ordering is by number of community tips received; the percentage shown is the share of tips on that selection, and the Value Rating compares a selection's odds with the share of tips it holds.",
+  "in_scope_events_observed_2026_10_23": [
+    {"sport": "Darts", "event": "Jonny Clayton vs Niko Springer", "event_id": 32335, "consensus_pct": 84},
+    {"sport": "Darts", "event": "Wessel Nijman vs Martin Schindler", "event_id": 32326, "consensus_pct": 78},
+    {"sport": "Darts", "event": "Ryan Joyce vs Jermaine Wattimena", "event_id": 32332, "consensus_pct": 64},
+    {"sport": "Baseball", "event": "TB_Rays_@_MIL_Brewers", "event_id": 160789, "consensus_pct": 81}
+  ],
+  "note": "OLBG community tip percentages are recorded here only as a description of how the source site presents a market. They are never used as an input to an originated price on this desk."
+}

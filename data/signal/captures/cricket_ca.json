@@ -1,0 +1,22 @@
+{
+  "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+  "source_name": "Cricket Australia official Live & Upcoming matches list",
+  "captured_utc": "2026-10-23T17:18:00Z",
+  "timezone_note": "cricket.com.au prints start times as 'your time' in the viewer's zone; the served zone could not be confirmed, so start times are left blank and only the published calendar date is used. Flagged SG-CR1.",
+  "flag_id": "SG-CR1",
+  "live": [
+    {"date": "2026-10-23", "series": "UAE Tri-Nations ODI Series 2026 - Men", "stage": "Final", "teams": "Afghanistan Men v Zimbabwe Men", "state_at_capture": "Zimbabwe 169 all out; Afghanistan 1-74 (10.5 ov) needing 97 from 39.3 with 9 wickets in hand", "venue": "Sharjah Cricket Association Stadium, Sharjah", "url": "https://www.cricket.com.au/matches/CA:41008/afghanistan-men-zimbabwe-men-uae-tri-nations-odi-series-2026-men"}
+  ],
+  "upcoming": [
+    {"date": "2026-10-23", "series": "One-Day Cup 2026-27", "teams": "Tasmanian Tigers v Victoria", "venue": "Bellerive Oval, Hobart", "url": "https://www.cricket.com.au/matches/CA:40681/tasmanian-tigers-men-victoria-men-one-day-cup-2026-27"},
+    {"date": "2026-10-24", "series": "One-Day Cup 2026-27", "teams": "Western Australia v New South Wales", "venue": "WACA Ground, Perth", "url": "https://www.cricket.com.au/matches/CA:40683/western-australia-men-nsw-men-one-day-cup-2026-27"},
+    {"date": "2026-10-24", "series": "New Zealand v India T20Is 2026 - Men", "stage": "2nd T20I", "teams": "New Zealand v India", "venue": "Hagley Oval, Christchurch", "url": "https://www.cricket.com.au/matches/CA:41095/new-zealand-men-india-men-new-zealand-v-india-t20is-2026-men"},
+    {"date": "2026-10-25", "series": "Pakistan ODI Tri-Series 2026 - Men", "teams": "Pakistan v England", "venue": "Gaddafi Stadium, Lahore", "url": "https://www.cricket.com.au/matches/CA:40981/pakistan-men-england-men-pakistan-odi-tri-series-2026-men"},
+    {"date": "2026-10-25", "series": "India v Zimbabwe ODIs 2026 - Women", "stage": "2nd ODI", "teams": "India Women v Zimbabwe Women", "venue": "not captured", "url": "https://www.cricket.com.au/matches/CA:40394/india-women-zimbabwe-women-india-v-zimbabwe-odis-2026-women", "date_flag": "Calendar date for the 2nd ODI was truncated in the captured chunk; listed in the Upcoming block immediately after the 25 October fixture. Flagged SG-CR2."}
+  ],
+  "official_results_available": [
+    {"match": "India Women v Zimbabwe Women, 1st ODI", "result": "India Women won by 9 wickets (India 1-200 in 27.1 ov chasing Zimbabwe 197 all out in 49.5 ov)", "url": "https://www.cricket.com.au/matches/CA:40393/india-women-zimbabwe-women-india-v-zimbabwe-odis-2026-women"},
+    {"match": "Pakistan ODI Tri-Series - England v Sri Lanka", "result": "Sri Lanka chased 430 to beat England despite Harry Brook's 202", "url": "https://www.cricket.com.au/news/4597605/harry-brook-double-century-england-sri-lanka-odi-chase-430-record-series-rawalpindi-tri-series"},
+    {"match": "South Africa v Australia, 2nd Test, Gqeberha", "result": "South Africa won by an innings", "url": "https://www.cricket.com.au/news/4597270/day-five-report-australia-south-africa-second-test-gqeberha-port-elizabeth"}
+  ]
+}

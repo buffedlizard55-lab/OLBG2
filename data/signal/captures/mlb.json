@@ -1,0 +1,25 @@
+{
+  "source_urls": {
+    "schedule": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-28",
+    "standings_nl": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+    "standings_al": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason"
+  },
+  "source_name": "MLB official Stats API (statsapi.mlb.com)",
+  "captured_utc": "2026-10-23T16:40:00Z",
+  "series": "World Series 2026 - Tampa Bay Rays v Milwaukee Brewers (best-of-seven)",
+  "games": [
+    {"gamePk": 849805, "date": "2026-10-23", "startUTC": "2026-10-24T00:00:00Z", "away": "Tampa Bay Rays", "home": "Milwaukee Brewers", "venue": "American Family Field", "description": "World Series Game 1", "status": "Scheduled", "ifNecessary": "N"},
+    {"gamePk": 849802, "date": "2026-10-24", "startUTC": "2026-10-25T00:00:00Z", "away": "Tampa Bay Rays", "home": "Milwaukee Brewers", "venue": "American Family Field", "description": "World Series Game 2", "status": "Scheduled", "ifNecessary": "N"},
+    {"gamePk": 849804, "date": "2026-10-26", "startUTC": "2026-10-27T00:00:00Z", "away": "Milwaukee Brewers", "home": "Tampa Bay Rays", "venue": "Tropicana Field", "description": "World Series Game 3", "status": "Scheduled", "ifNecessary": "N"},
+    {"gamePk": 849803, "date": "2026-10-27", "startUTC": "2026-10-28T00:00:00Z", "away": "Milwaukee Brewers", "home": "Tampa Bay Rays", "venue": "Tropicana Field", "description": "World Series Game 4", "status": "Scheduled", "ifNecessary": "N"},
+    {"gamePk": 849799, "date": "2026-10-28", "startUTC": "2026-10-29T00:00:00Z", "away": "Milwaukee Brewers", "home": "Tampa Bay Rays", "venue": "Tropicana Field", "description": "World Series Game 5", "status": "Scheduled", "ifNecessary": "Y"}
+  ],
+  "regular_season_2026": {
+    "Tampa Bay Rays": {"wins": 98, "losses": 64, "runsScored": 736, "runsAllowed": 650, "winPct": 0.605, "league": "AL"},
+    "Milwaukee Brewers": {"wins": 103, "losses": 59, "runsScored": 832, "runsAllowed": 618, "winPct": 0.636, "league": "NL"}
+  },
+  "context_teams_same_feed": {
+    "Dodgers": [100, 62, 801, 600], "Cubs": [89, 73, 850, 703], "Braves": [94, 68, 742, 626],
+    "Yankees": [93, 68, 739, 601], "Padres": [91, 71, 722, 681], "Phillies": [88, 74, 713, 698]
+  }
+}

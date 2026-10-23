@@ -1,0 +1,23 @@
+{
+  "source_urls": {
+    "round1": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+    "round2": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+  },
+  "source_name": "NRL.com official Rugby League World Cup 2026 draw",
+  "captured_utc": "2026-10-23T17:12:00Z",
+  "timezone_note": "Kick-off times are rendered in the viewer's zone; the proxy resolved to US Eastern (UTC-4). UTC = listed time + 4h. Flagged SG-TZ1.",
+  "round1_results": [
+    {"date": "2026-10-15", "home": "Australia", "home_score": 24, "away": "New Zealand", "away_score": 22, "venue": "Allianz Stadium, Sydney", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-1/australia-v-new-zealand/"},
+    {"date": "2026-10-16", "home": "Samoa", "home_score": 78, "away": "France", "away_score": 4, "venue": "CommBank Stadium, Sydney", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-1/samoa-v-france/"},
+    {"date": "2026-10-17", "home": "Papua New Guinea", "home_score": 42, "away": "Lebanon", "away_score": 18, "venue": "Santos National Football Stadium, Port Moresby", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-1/papua-new-guinea-v-lebanon/"},
+    {"date": "2026-10-17", "home": "England", "home_score": 12, "away": "Tonga", "away_score": 30, "venue": "HBF Park, Perth", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-1/england-v-tonga/"},
+    {"date": "2026-10-18", "home": "Fiji", "home_score": 40, "away": "Cook Islands", "away_score": 12, "venue": "McDonald Jones Stadium, Newcastle", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-1/fiji-v-cook-islands/"}
+  ],
+  "round2": [
+    {"date": "2026-10-23", "home": "Tonga", "home_score": 36, "away": "Lebanon", "away_score": 0, "status": "Full Time", "venue": "CommBank Stadium, Sydney", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/tonga-v-lebanon/"},
+    {"date": "2026-10-24", "time_et": "00:25", "kickoff_utc": "2026-10-24T04:25:00Z", "home": "Papua New Guinea", "away": "Samoa", "status": "Upcoming", "venue": "Santos National Football Stadium, Port Moresby", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/papua-new-guinea-v-samoa/"},
+    {"date": "2026-10-24", "time_et": "02:35", "kickoff_utc": "2026-10-24T06:35:00Z", "home": "England", "away": "France", "status": "Upcoming", "venue": "HBF Park, Perth", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/england-v-france/"},
+    {"date": "2026-10-25", "time_et": "01:05", "kickoff_utc": "2026-10-25T05:05:00Z", "home": "New Zealand", "away": "Cook Islands", "status": "Upcoming", "venue": "One NZ Stadium, Christchurch", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/new-zealand-v-cook-islands/"},
+    {"date": "2026-10-25", "time_et": "05:05", "kickoff_utc": "2026-10-25T09:05:00Z", "home": "Australia", "away": "Fiji", "status": "Upcoming", "venue": "Suncorp Stadium, Brisbane", "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/"}
+  ]
+}

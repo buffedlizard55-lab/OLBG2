@@ -25,7 +25,14 @@ import math
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from ledger_common import anchor  # noqa: E402
 DATA = ROOT / "data" / "ledger"
+ANCHOR = anchor()
+import datetime as _dtmod
+ANCHOR_DT = _dtmod.datetime.strptime(ANCHOR, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=_dtmod.timezone.utc)
 
 HOME_EDGE = 45.0
 
@@ -60,6 +67,13 @@ def grade(p: float) -> str:
 
 def poisson(k: int, lam: float) -> float:
     return math.exp(-lam) * lam ** k / math.factorial(k)
+
+
+def normal_over(mu: float, sigma: float, line: float) -> float:
+    """P(total > line) using a normal approximation (used when scoring is high)."""
+    import math as _m
+    z = (line + 0.5 - mu) / sigma
+    return 0.5 * (1 - _m.erf(z / _m.sqrt(2)))
 
 
 def poisson_probs(lam_home: float, lam_away: float, maxg: int = 15):
@@ -148,10 +162,10 @@ def lookup(records: dict, name: str):
     n = norm(name)
     if n in records:
         return records[n]
-    words = [w for w in n.split() if len(w) >= 5]
+    words = [w for w in n.split() if len(w) >= 3]
     for w in reversed(words):
         for k in records:
-            if w in k.split():
+            if w in k.split() or k.endswith(" " + w):
                 return records[k]
     return None
 
@@ -165,7 +179,26 @@ def build_market_block(sport: str, home: str, away: str, rh: dict, ra: dict, lea
 
     lam_h = (rh["attack"] * ra["defence"] / league_avg) if league_avg else 0
     lam_a = (ra["attack"] * rh["defence"] / league_avg) if league_avg else 0
-    if lam_h and lam_a:
+    if lam_h and lam_a and (lam_h + lam_a) > 30:
+        # high-scoring sport: normal approximation, ties are not possible
+        import math as _m
+        mu_margin, sd_margin = lam_h - lam_a, _m.sqrt(lam_h + lam_a)
+        mu_total, sd_total = lam_h + lam_a, _m.sqrt(lam_h + lam_a)
+        p_home_fav = 1 / (1 + _m.exp(-1.0 * (mu_margin / (sd_margin * 1.7))))
+        p_home_minus = 0.5 * (1 - _m.erf((1.5 - mu_margin) / (sd_margin * _m.sqrt(2))))
+        p_away_minus = 1 - p_home_minus
+        if p_home >= 0.5:
+            out["handicap"].append({"selection": f"{home} -1.5", "market": "Handicap", **fair(p_home_minus)})
+            out["handicap"].append({"selection": f"{away} +1.5", "market": "Handicap", **fair(1 - p_home_minus)})
+        else:
+            out["handicap"].append({"selection": f"{away} -1.5", "market": "Handicap", **fair(p_away_minus)})
+            out["handicap"].append({"selection": f"{home} +1.5", "market": "Handicap", **fair(p_home_minus)})
+        for line in lines:
+            p_over = normal_over(mu_total, sd_total, line)
+            out["total"].append({"selection": f"Over {line}", "market": "Match total", **fair(p_over)})
+            out["total"].append({"selection": f"Under {line}", "market": "Match total", **fair(1 - p_over)})
+        out["_expected"] = {"home": round(lam_h, 2), "away": round(lam_a, 2), "total": round(mu_total, 2)}
+    elif lam_h and lam_a:
         win, draw, loss, margin2, ph, pa = poisson_probs(lam_h, lam_a)
         p_reg_home = win + 0.5 * draw
         # the -1.5 line goes to the side we make favourite, +1.5 to the other
@@ -249,7 +282,7 @@ def main() -> int:
 
     out = {
         "meta": {
-            "generated_at": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "generated_at": ANCHOR,
             "method": "see scripts/ledger_model.py header and the methodology page",
             "official_fixtures": len(official["fixtures"]),
             "fixtures_with_lines": len(priced),

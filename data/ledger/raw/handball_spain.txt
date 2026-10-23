@@ -6,14 +6,14 @@
 	<meta charset="iso-8859-1">
 	<meta charset="utf-8">
 <title>ASOBAL, Liga profesional de Balonmano</title>
-<meta name="description" content="Página web oficial de ASOBAL, Liga Profesional de Balonmano. Vive el mejor balonmano en directo con LaLiga+" />
+<meta name="description" content="PÃ¡gina web oficial de ASOBAL, Liga Profesional de Balonmano. Vive el mejor balonmano en directo con LaLiga+" />
 <meta http-equiv="Content-Language" content="spanish" />
 <meta http-equiv="audiencie" content="general" />
 <meta name="language" content="es" />
 <meta name="rating" content="General" />
 <meta name="distribution" content="Global" />
 <meta name="robots" content="Index, Follow" />
-<meta name="author" content="Plan b Comunicaciï¿½n - @comunicacionpb">
+<meta name="author" content="Plan b ComunicaciÃ¯Â¿Â½n - @comunicacionpb">
 <meta http-equiv="Cache-control" content="public">
 <link href="assets/css/all.min.css" rel="stylesheet">
 
@@ -73,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	  <div class="enlaceapp text-center">
         <div id="app-banner" style="display: none; position: relative; text-align: center; padding: 15px; background-color: #002c58; color: #ffffff;">
             <button onclick="cerrarAppBanner()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: #ffffff; font-size: 20px; cursor: pointer; padding: 0; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center;">&times;</button>
-            <p style="margin: 10px 0; font-size: 14px; color: #ffffff; line-height: 1.4;">Descarga la app oficial de ASOBAL y vive una experiencia más rápida, adaptada 100% a tu móvil.</p>
+            <p style="margin: 10px 0; font-size: 14px; color: #ffffff; line-height: 1.4;">Descarga la app oficial de ASOBAL y vive una experiencia mÃ¡s rÃ¡pida, adaptada 100% a tu mÃ³vil.</p>
             <a id="app-download-link" href="#" target="_blank" class="btn-app-download" style="display: inline-block; margin-top: 10px;">
                 <img id="app-download-img" src="" alt="" style="height: 40px;">
             </a>
@@ -81,7 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <script>
-        // Funciones para detectar dispositivos móviles con JavaScript
+        // Funciones para detectar dispositivos mÃ³viles con JavaScript
         function esMobile() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 return;
             }
             
-            // Solo mostrar en dispositivos móviles
+            // Solo mostrar en dispositivos mÃ³viles
             if (!esMobile()) {
                 return;
             }
@@ -128,14 +128,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             banner.style.display = "block";
         }
         
-        // Ejecutar cuando el DOM esté listo
+        // Ejecutar cuando el DOM estÃ© listo
         document.addEventListener("DOMContentLoaded", function() {
             mostrarBannerApp();
         });
     </script>		<div class="container">
 			<!--c-->
     
-    <div class="clubs text-center"><a href="/equipos/BID/"><img src="imagenes/jornada/club8.svg" class="imgclubmenu" alt="1 - IRUDEK Bidasoa Irun" title="1 - IRUDEK Bidasoa Irun" ></a><a href="/equipos/BAR/"><img src="imagenes/jornada/club1.svg" class="imgclubmenu" alt="2 - Barça" title="2 - Barça" ></a><a href="/equipos/ATV/"><img src="imagenes/jornada/club113.svg" class="imgclubmenu" alt="3 - Recoletas Salud At. Valladolid" title="3 - Recoletas Salud At. Valladolid" ></a><a href="/equipos/GRA/"><img src="imagenes/jornada/club7.svg" class="imgclubmenu" alt="4 - Fraikin BM. Granollers" title="4 - Fraikin BM. Granollers" ></a><a href="/equipos/LOG/"><img src="imagenes/jornada/club22.svg" class="imgclubmenu" alt="5 - Dicorpebal Logroño La Rioja" title="5 - Dicorpebal Logroño La Rioja" ></a><a href="/equipos/TLV/"><img src="imagenes/jornada/club141.svg" class="imgclubmenu" alt="6 - Bathco BM. Torrelavega" title="6 - Bathco BM. Torrelavega" ></a><a href="/equipos/CAS/"><img src="imagenes/jornada/club157.svg" class="imgclubmenu" alt="7 - BM Caserío Ciudad Real" title="7 - BM Caserío Ciudad Real" ></a><a href="/equipos/EON/"><img src="imagenes/jornada/club156.svg" class="imgclubmenu" alt="8 - HORNEO BM. Alicante" title="8 - HORNEO BM. Alicante" ></a><a href="/equipos/CQN/"><img src="imagenes/jornada/club25.svg" class="imgclubmenu" alt="9 - REBI Balonmano Cuenca" title="9 - REBI Balonmano Cuenca" ></a><a href="/equipos/SEV/"><img src="imagenes/jornada/club158.svg" class="imgclubmenu" alt="10 - Cajasol Sevilla Bm. Proin" title="10 - Cajasol Sevilla Bm. Proin" ></a><a href="/equipos/PSG/"><img src="imagenes/jornada/club28.svg" class="imgclubmenu" alt="11 - Fertiberia Puerto Sagunto" title="11 - Fertiberia Puerto Sagunto" ></a><a href="/equipos/ADE/"><img src="imagenes/jornada/club3.svg" class="imgclubmenu" alt="12 - ABANCA Ademar León" title="12 - ABANCA Ademar León" ></a><a href="/equipos/PGE/"><img src="imagenes/jornada/club35.svg" class="imgclubmenu" alt="13 - Cajasol Ángel Ximénez P. Genil" title="13 - Cajasol Ángel Ximénez P. Genil" ></a><a href="/equipos/CNG/"><img src="imagenes/jornada/club15.svg" class="imgclubmenu" alt="14 - Frigoríficos del Morrazo" title="14 - Frigoríficos del Morrazo" ></a><a href="/equipos/NAV/"><img src="imagenes/jornada/club135.svg" class="imgclubmenu" alt="15 - Viveros Herol BM. Nava" title="15 - Viveros Herol BM. Nava" ></a><a href="/equipos/VDA/"><img src="imagenes/jornada/club33.svg" class="imgclubmenu" alt="16 - Tubos Aranda Villa de Aranda" title="16 - Tubos Aranda Villa de Aranda" ></a>
+    <div class="clubs text-center"><a href="/equipos/BID/"><img src="imagenes/jornada/club8.svg" class="imgclubmenu" alt="1 - IRUDEK Bidasoa Irun" title="1 - IRUDEK Bidasoa Irun" ></a><a href="/equipos/BAR/"><img src="imagenes/jornada/club1.svg" class="imgclubmenu" alt="2 - BarÃ§a" title="2 - BarÃ§a" ></a><a href="/equipos/ATV/"><img src="imagenes/jornada/club113.svg" class="imgclubmenu" alt="3 - Recoletas Salud At. Valladolid" title="3 - Recoletas Salud At. Valladolid" ></a><a href="/equipos/GRA/"><img src="imagenes/jornada/club7.svg" class="imgclubmenu" alt="4 - Fraikin BM. Granollers" title="4 - Fraikin BM. Granollers" ></a><a href="/equipos/LOG/"><img src="imagenes/jornada/club22.svg" class="imgclubmenu" alt="5 - Dicorpebal LogroÃ±o La Rioja" title="5 - Dicorpebal LogroÃ±o La Rioja" ></a><a href="/equipos/TLV/"><img src="imagenes/jornada/club141.svg" class="imgclubmenu" alt="6 - Bathco BM. Torrelavega" title="6 - Bathco BM. Torrelavega" ></a><a href="/equipos/CAS/"><img src="imagenes/jornada/club157.svg" class="imgclubmenu" alt="7 - BM CaserÃ­o Ciudad Real" title="7 - BM CaserÃ­o Ciudad Real" ></a><a href="/equipos/EON/"><img src="imagenes/jornada/club156.svg" class="imgclubmenu" alt="8 - HORNEO BM. Alicante" title="8 - HORNEO BM. Alicante" ></a><a href="/equipos/CQN/"><img src="imagenes/jornada/club25.svg" class="imgclubmenu" alt="9 - REBI Balonmano Cuenca" title="9 - REBI Balonmano Cuenca" ></a><a href="/equipos/SEV/"><img src="imagenes/jornada/club158.svg" class="imgclubmenu" alt="10 - Cajasol Sevilla Bm. Proin" title="10 - Cajasol Sevilla Bm. Proin" ></a><a href="/equipos/PSG/"><img src="imagenes/jornada/club28.svg" class="imgclubmenu" alt="11 - Fertiberia Puerto Sagunto" title="11 - Fertiberia Puerto Sagunto" ></a><a href="/equipos/ADE/"><img src="imagenes/jornada/club3.svg" class="imgclubmenu" alt="12 - ABANCA Ademar LeÃ³n" title="12 - ABANCA Ademar LeÃ³n" ></a><a href="/equipos/PGE/"><img src="imagenes/jornada/club35.svg" class="imgclubmenu" alt="13 - Cajasol Ãngel XimÃ©nez P. Genil" title="13 - Cajasol Ãngel XimÃ©nez P. Genil" ></a><a href="/equipos/CNG/"><img src="imagenes/jornada/club15.svg" class="imgclubmenu" alt="14 - FrigorÃ­ficos del Morrazo" title="14 - FrigorÃ­ficos del Morrazo" ></a><a href="/equipos/NAV/"><img src="imagenes/jornada/club135.svg" class="imgclubmenu" alt="15 - Viveros Herol BM. Nava" title="15 - Viveros Herol BM. Nava" ></a><a href="/equipos/VDA/"><img src="imagenes/jornada/club33.svg" class="imgclubmenu" alt="16 - Tubos Aranda Villa de Aranda" title="16 - Tubos Aranda Villa de Aranda" ></a>
         <a href="/"><img src="img/clubs-logos/esp.png" alt="ESP" class="bandera"   width="20px"></a><a href="/eng/"><img src="img/clubs-logos/bri.png" alt="BRI"  class="align-middle bandera" style="opacity: 0.3;  margin-left:5px;" width="17px"></a> <a href="/" title="Liga NEXUS ENERGIA ASOBAL">
                                        
                                     </a><a href="/" title=" Liga NEXUS ENERGIA ASOBAL">                                        <img src="img/logonexus.png" class=" logo_img2" alt="Logo Liga NEXUS ENERGIA ASOBAL">
@@ -210,7 +210,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="liga/clasificacion/">Liga NEXUS ENERGIA ASOBAL</a>
         <ul class="sub-current">
             <li>
-                <a href="liga/clasificacion/">Clasificación</a>
+                <a href="liga/clasificacion/">ClasificaciÃ³n</a>
             </li>
             <li>
                 <a href="liga/resultados/">Resultados</a>
@@ -222,10 +222,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="equipos/">Equipos</a>
             </li>
             <li>
-                <a href="liga/estadisticas/">Estadísticas</a>
+                <a href="liga/estadisticas/">EstadÃ­sticas</a>
             </li>
             <li>
-                <a href="liga/palmares/">Palmarés</a>
+                <a href="liga/palmares/">PalmarÃ©s</a>
             </li>
             <li>
                 <a href="liga/plantilla-arbitral/">Plantilla arbitral</a>
@@ -257,7 +257,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!--
         
             <li>
-                <a href="videos/resumenes/">Resúmenes</a>
+                <a href="videos/resumenes/">ResÃºmenes</a>
             </li>
             <li>
                 <a href="videos/completos/">Partidos completos</a>
@@ -325,7 +325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="liga/clasificacion/">Liga NEXUS ENERGIA ASOBAL</a>
         <ul>
             <li>
-                <a href="liga/clasificacion/">Clasificación</a>
+                <a href="liga/clasificacion/">ClasificaciÃ³n</a>
             </li>
             <li>
                 <a href="liga/resultados/">Resultados</a>
@@ -337,10 +337,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="equipos/">Equipos</a>
             </li>
             <li>
-                <a href="liga/estadisticas/">Estadísticas</a>
+                <a href="liga/estadisticas/">EstadÃ­sticas</a>
             </li>
             <li>
-                <a href="liga/palmares/">Palmarés</a>
+                <a href="liga/palmares/">PalmarÃ©s</a>
             </li>
             <li>
                 <a href="liga/plantilla-arbitral/">Plantilla arbitral</a>
@@ -372,7 +372,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              <!--
             
             <li>
-                <a href="videos/resumenes/">Resúmenes</a>
+                <a href="videos/resumenes/">ResÃºmenes</a>
             </li>
             <li>
                 <a href="videos/completos/">Partidos completos</a>
@@ -430,7 +430,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        <div class="club-ranking text-center">
             
             <div class="info-ranking text-left paddingranking">
-            <h4 class="text-center pt-2"><a href="liga/clasificacion/">37ª Liga NEXUS ENERGIA ASOBAL</a></h4>
+            <h4 class="text-center pt-2"><a href="liga/clasificacion/">37Âª Liga NEXUS ENERGIA ASOBAL</a></h4>
                 <ul><li>
                       <span class="position">
                           1
@@ -445,8 +445,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           2
                       </span>
                        <a href="equipos/BAR/">
-                            <img src="imagenes/jornada/club1.svg" alt="Barça">
-                            <span>Barça</span>
+                            <img src="imagenes/jornada/club1.svg" alt="BarÃ§a">
+                            <span>BarÃ§a</span>
                         </a>
         <span class="points">12</span>
     </li><li>
@@ -472,8 +472,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           5
                       </span>
                        <a href="equipos/LOG/">
-                            <img src="imagenes/jornada/club22.svg" alt="Dicorpebal Logroño La Rioja">
-                            <span>Dicorpebal Logroño La Rioja</span>
+                            <img src="imagenes/jornada/club22.svg" alt="Dicorpebal LogroÃ±o La Rioja">
+                            <span>Dicorpebal LogroÃ±o La Rioja</span>
                         </a>
         <span class="points">9</span>
     </li><li>
@@ -490,8 +490,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           7
                       </span>
                        <a href="equipos/CAS/">
-                            <img src="imagenes/jornada/club157.svg" alt="BM Caserío Ciudad Real">
-                            <span>BM Caserío Ciudad Real</span>
+                            <img src="imagenes/jornada/club157.svg" alt="BM CaserÃ­o Ciudad Real">
+                            <span>BM CaserÃ­o Ciudad Real</span>
                         </a>
         <span class="points">7</span>
     </li><li>
@@ -535,8 +535,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           12
                       </span>
                        <a href="equipos/ADE/">
-                            <img src="imagenes/jornada/club3.svg" alt="ABANCA Ademar León">
-                            <span>ABANCA Ademar León</span>
+                            <img src="imagenes/jornada/club3.svg" alt="ABANCA Ademar LeÃ³n">
+                            <span>ABANCA Ademar LeÃ³n</span>
                         </a>
         <span class="points">4</span>
     </li><li>
@@ -544,8 +544,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           13
                       </span>
                        <a href="equipos/PGE/">
-                            <img src="imagenes/jornada/club35.svg" alt="Cajasol Ángel Ximénez P. Genil">
-                            <span>Cajasol Ángel Ximénez P. Genil</span>
+                            <img src="imagenes/jornada/club35.svg" alt="Cajasol Ãngel XimÃ©nez P. Genil">
+                            <span>Cajasol Ãngel XimÃ©nez P. Genil</span>
                         </a>
         <span class="points">3</span>
     </li><li>
@@ -553,8 +553,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           14
                       </span>
                        <a href="equipos/CNG/">
-                            <img src="imagenes/jornada/club15.svg" alt="Frigoríficos del Morrazo">
-                            <span>Frigoríficos del Morrazo</span>
+                            <img src="imagenes/jornada/club15.svg" alt="FrigorÃ­ficos del Morrazo">
+                            <span>FrigorÃ­ficos del Morrazo</span>
                         </a>
         <span class="points">2</span>
     </li><li>
@@ -600,15 +600,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									href="noticias/irudek-bidasoa-irun-duerme-l-der-y-bar-a-supera-a-rebi-balonmano-cuenca-en-el-primer-tramo-de-j7/8776/"><img
 										width="100%"
 										src="https://asobal.es/image.php?image=/imagenes/fotos/8776-hallcuenca.jpg&width=1250"
-										alt="IRUDEK Bidasoa Irun duerme líder y Barça supera a REBI Balonmano Cuenca en el primer tramo de J7"
-										title="IRUDEK Bidasoa Irun duerme líder y Barça supera a REBI Balonmano Cuenca en el primer tramo de J7"
+										alt="IRUDEK Bidasoa Irun duerme lÃ­der y BarÃ§a supera a REBI Balonmano Cuenca en el primer tramo de J7"
+										title="IRUDEK Bidasoa Irun duerme lÃ­der y BarÃ§a supera a REBI Balonmano Cuenca en el primer tramo de J7"
 										class="imagen-1011"></a>
 								<a
 									href="noticias/irudek-bidasoa-irun-duerme-l-der-y-bar-a-supera-a-rebi-balonmano-cuenca-en-el-primer-tramo-de-j7/8776/">
 									<div
 										class="card-img-overlay  textoblanco d-flex align-items-end justify-content-center">
 										<h4 class="card-title2 textoblanco text-center">
-											IRUDEK Bidasoa Irun duerme líder y Barça supera a REBI Balonmano Cuenca en el primer tramo de J7										</h4>
+											IRUDEK Bidasoa Irun duerme lÃ­der y BarÃ§a supera a REBI Balonmano Cuenca en el primer tramo de J7										</h4>
 									</div>
 								</a>
 
@@ -625,15 +625,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									href="noticias/nagy--guardi-n-del-liderato-de-recoletas-salud-at--valladolid/8775/"><img
 										width="100%"
 										src="https://asobal.es/image.php?image=/imagenes/fotos/8775-nagyrepor.jpg&width=1250"
-										alt="Nagy, guardián del liderato de Recoletas Salud At. Valladolid"
-										title="Nagy, guardián del liderato de Recoletas Salud At. Valladolid"
+										alt="Nagy, guardiÃ¡n del liderato de Recoletas Salud At. Valladolid"
+										title="Nagy, guardiÃ¡n del liderato de Recoletas Salud At. Valladolid"
 										class="imagen-1011"></a>
 								<a
 									href="noticias/nagy--guardi-n-del-liderato-de-recoletas-salud-at--valladolid/8775/">
 									<div
 										class="card-img-overlay  textoblanco d-flex align-items-end justify-content-center">
 										<h4 class="card-title2 textoblanco text-center">
-											Nagy, guardián del liderato de Recoletas Salud At. Valladolid										</h4>
+											Nagy, guardiÃ¡n del liderato de Recoletas Salud At. Valladolid										</h4>
 									</div>
 								</a>
 
@@ -672,7 +672,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<a href="noticias/" class="d-none d-md-block d-lg-block d-xl-none">
 								<div class="item-boxed-img small"
 									style="background: url('imagenes/noticiascap/30.webp');">
-									<h4>Más Noticias</h4>
+									<h4>MÃ¡s Noticias</h4>
 								</div>
 							</a>
 
@@ -694,13 +694,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											width="100%"
 											src="https://asobal.es/image.php?image=/imagenes/fotos/8775-nagyrepor.jpg&width=850"
 											class="card-img imagen-78"
-											alt="Nagy, guardián del liderato de Recoletas Salud At. Valladolid"
-											title="Nagy, guardián del liderato de Recoletas Salud At. Valladolid"></a>
+											alt="Nagy, guardiÃ¡n del liderato de Recoletas Salud At. Valladolid"
+											title="Nagy, guardiÃ¡n del liderato de Recoletas Salud At. Valladolid"></a>
 									<a
 										href="noticias/nagy--guardi-n-del-liderato-de-recoletas-salud-at--valladolid/8775/">
 										<div class="card-img-overlay d-flex align-items-center justify-content-center">
 											<h4 class="card-title textoblanco">
-												Nagy, guardián del liderato de Recoletas Salud At. Valladolid											</h4>
+												Nagy, guardiÃ¡n del liderato de Recoletas Salud At. Valladolid											</h4>
 										</div>
 									</a>
 								</div>
@@ -889,10 +889,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="player-ranking">
 
 								<img src="image.php?image=/imagenes/licencias/91260426-19_Gonzalo_Perez_Arce.png&width=850"
-									alt="Gonzalo Pérez Arce"
+									alt="Gonzalo PÃ©rez Arce"
 									class="topindeximg">
 								<h3><a
-										href="liga/estadisticas/">MÁS GOLES</a>
+										href="liga/estadisticas/">MÃS GOLES</a>
 								</h3>
 
 
@@ -903,10 +903,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											<span
 												class="position">1<img
 													src="imagenes/jornada/club3.svg"
-													alt="ABANCA Ademar León"
+													alt="ABANCA Ademar LeÃ³n"
 													width="27px" style="margin-left:4px"></span>
-											<a title="Gonzalo Pérez Arce"
-												href="jugadores/gonzalo-p-rez-arce/91260426/">Gonzalo Pérez Arce</a>
+											<a title="Gonzalo PÃ©rez Arce"
+												href="jugadores/gonzalo-p-rez-arce/91260426/">Gonzalo PÃ©rez Arce</a>
 											<span class="points">
 												53											</span>
 										</li>
@@ -917,8 +917,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 													src="imagenes/jornada/club28.svg"
 													alt="Fertiberia Puerto Sagunto"
 													width="27px" style="margin-left:4px"></span>
-											<a title="Antonio Capitán Barjola"
-												href="jugadores/antonio-capit-n-barjola/91261396/">Antonio Capitán Barjola</a>
+											<a title="Antonio CapitÃ¡n Barjola"
+												href="jugadores/antonio-capit-n-barjola/91261396/">Antonio CapitÃ¡n Barjola</a>
 											<span class="points">
 												50											</span>
 										</li>
@@ -981,7 +981,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									alt="Benedek Lazslo Nagy"
 									class="topindeximg">
 								<h3><a
-										href="liga/estadisticas/">MÁS PARADAS</a>
+										href="liga/estadisticas/">MÃS PARADAS</a>
 								</h3>
 
 
@@ -1004,7 +1004,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											<span
 												class="position">2<img
 													src="imagenes/jornada/club157.svg"
-													alt="BM Caserío Ciudad Real"
+													alt="BM CaserÃ­o Ciudad Real"
 													width="27px" style="margin-left:4px"></span>
 											<a title="Juan Manuel Bar"
 												href="jugadores/juan-manuel-bar-schoenfeld/91260901/">Juan Manuel Bar</a>
@@ -1028,7 +1028,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											<span
 												class="position">4<img
 													src="imagenes/jornada/club1.svg"
-													alt="Barça"
+													alt="BarÃ§a"
 													width="27px" style="margin-left:4px"></span>
 											<a title="Viktor Hallgrimsson"
 												href="jugadores/viktor-gisli-hallgrimsson/91261256/">Viktor Hallgrimsson</a>
@@ -1068,7 +1068,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="player-ranking">
 
 																<h3 class="topjugadorestitulo"><a
-										href="liga/estadisticas/">MÁS ASISTENCIAS</a>
+										href="liga/estadisticas/">MÃS ASISTENCIAS</a>
 								</h3>
 
 
@@ -1079,7 +1079,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											<span
 												class="position">1<img
 													src="imagenes/jornada/club157.svg"
-													alt="BM Caserío Ciudad Real"
+													alt="BM CaserÃ­o Ciudad Real"
 													width="27px" style="margin-left:4px"></span>
 											<a title="Sergi Mach"
 												href="jugadores/sergi-mach-eijo/91260919/">Sergi Mach</a>
@@ -1091,10 +1091,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											<span
 												class="position">2<img
 													src="imagenes/jornada/club3.svg"
-													alt="ABANCA Ademar León"
+													alt="ABANCA Ademar LeÃ³n"
 													width="27px" style="margin-left:4px"></span>
-											<a title="Javier Miñambres"
-												href="jugadores/javier-mi-ambres-calvo/91261021/">Javier Miñambres</a>
+											<a title="Javier MiÃ±ambres"
+												href="jugadores/javier-mi-ambres-calvo/91261021/">Javier MiÃ±ambres</a>
 											<span class="points">
 												19											</span>
 										</li>
@@ -1103,7 +1103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											<span
 												class="position">3<img
 													src="imagenes/jornada/club3.svg"
-													alt="ABANCA Ademar León"
+													alt="ABANCA Ademar LeÃ³n"
 													width="27px" style="margin-left:4px"></span>
 											<a title="Patryk Wasiak"
 												href="jugadores/patryk-radoslaw-wasiak/91261061/">Patryk Wasiak</a>
@@ -1127,7 +1127,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											<span
 												class="position">5<img
 													src="imagenes/jornada/club35.svg"
-													alt="Cajasol Ángel Ximénez P. Genil"
+													alt="Cajasol Ãngel XimÃ©nez P. Genil"
 													width="27px" style="margin-left:4px"></span>
 											<a title="Daniel Serrano"
 												href="jugadores/daniel-serrano-rodr-guez/91260884/">Daniel Serrano</a>
@@ -1229,13 +1229,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										width="100%"
 										src="image.php?image=/imagenes/fotos/8709-web_fantasy.jpg&width=850"
 										class="card-img imagen-cuadro"
-										alt="ASOBAL pone en marcha una nueva edición del juego 'ASOBAL Fantasy'"
-										title="ASOBAL pone en marcha una nueva edición del juego 'ASOBAL Fantasy'"></a>
+										alt="ASOBAL pone en marcha una nueva ediciÃ³n del juego 'ASOBAL Fantasy'"
+										title="ASOBAL pone en marcha una nueva ediciÃ³n del juego 'ASOBAL Fantasy'"></a>
 								<a
 									href="noticias/asobal-pone-en-marcha-una-nueva-edici-n-del-juego--asobal-fantasy-/8709/">
 									<div class="card-img-overlay d-flex align-items-center justify-content-center">
 										<h4 class="card-title textoblanco">
-											ASOBAL pone en marcha una nueva edición del juego 'ASOBAL Fantasy'										</h4>
+											ASOBAL pone en marcha una nueva ediciÃ³n del juego 'ASOBAL Fantasy'										</h4>
 									</div>
 								</a>
 							</div>
@@ -1255,13 +1255,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										width="100%"
 										src="image.php?image=/imagenes/fotos/8629-ASOBALFantasycierre2526.png&width=850"
 										class="card-img imagen-cuadro"
-										alt="ASOBAL completa la tercera edición de ASOBAL Fantasy con ‘New Team’ campeón de la temporada 2025/26"
-										title="ASOBAL completa la tercera edición de ASOBAL Fantasy con ‘New Team’ campeón de la temporada 2025/26"></a>
+										alt="ASOBAL completa la tercera ediciÃ³n de ASOBAL Fantasy con Â‘New TeamÂ’ campeÃ³n de la temporada 2025/26"
+										title="ASOBAL completa la tercera ediciÃ³n de ASOBAL Fantasy con Â‘New TeamÂ’ campeÃ³n de la temporada 2025/26"></a>
 								<a
 									href="noticias/asobal-completa-la-tercera-edici-n-de-asobal-fantasy-con--new-team--campe-n-de-la-temporada-2025-26/8629/">
 									<div class="card-img-overlay d-flex align-items-center justify-content-center">
 										<h4 class="card-title textoblanco">
-											ASOBAL completa la tercera edición de ASOBAL Fantasy con ‘New Team’ campeón de la temporada 2025/26										</h4>
+											ASOBAL completa la tercera ediciÃ³n de ASOBAL Fantasy con Â‘New TeamÂ’ campeÃ³n de la temporada 2025/26										</h4>
 									</div>
 								</a>
 							</div>
@@ -1281,13 +1281,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										width="100%"
 										src="image.php?image=/imagenes/fotos/8563-ASOBALFantasy_29042026.png&width=850"
 										class="card-img imagen-cuadro"
-										alt="La competitividad del tramo final de la competición se traslada a ASOBAL Fantasy"
-										title="La competitividad del tramo final de la competición se traslada a ASOBAL Fantasy"></a>
+										alt="La competitividad del tramo final de la competiciÃ³n se traslada a ASOBAL Fantasy"
+										title="La competitividad del tramo final de la competiciÃ³n se traslada a ASOBAL Fantasy"></a>
 								<a
 									href="noticias/la-competitividad-del-tramo-final-de-la-competici-n-se-traslada-a-asobal-fantasy/8563/">
 									<div class="card-img-overlay d-flex align-items-center justify-content-center">
 										<h4 class="card-title textoblanco">
-											La competitividad del tramo final de la competición se traslada a ASOBAL Fantasy										</h4>
+											La competitividad del tramo final de la competiciÃ³n se traslada a ASOBAL Fantasy										</h4>
 									</div>
 								</a>
 							</div>
@@ -1304,7 +1304,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 					<div class="row mb-3">
 						<div class="col-md-12 mt-2 player-ranking">
-							<h3>Más allá de las pistas</h3>
+							<h3>MÃ¡s allÃ¡ de las pistas</h3>
 						</div>
 
 												<!-- Post Item -->
@@ -1318,13 +1318,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										width="100%"
 										src="image.php?image=/imagenes/fotos/8770-DiaMundialCancerMama_2627.png&width=850"
 										class="card-img imagen-cuadro"
-										alt="ASOBAL se tiñe de rosa en la Jornada 7 contra el cáncer de mama"
-										title="ASOBAL se tiñe de rosa en la Jornada 7 contra el cáncer de mama"></a>
+										alt="ASOBAL se tiÃ±e de rosa en la Jornada 7 contra el cÃ¡ncer de mama"
+										title="ASOBAL se tiÃ±e de rosa en la Jornada 7 contra el cÃ¡ncer de mama"></a>
 								<a
 									href="noticias/asobal-se-ti-e-de-rosa-en-la-jornada-7-contra-el-c-ncer-de-mama/8770/">
 									<div class="card-img-overlay d-flex align-items-end justify-content-center">
 										<h4 class="card-title textoblanco">
-											ASOBAL se tiñe de rosa en la Jornada 7 contra el cáncer de mama										</h4>
+											ASOBAL se tiÃ±e de rosa en la Jornada 7 contra el cÃ¡ncer de mama										</h4>
 									</div>
 								</a>
 							</div>
@@ -1344,13 +1344,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										width="100%"
 										src="image.php?image=/imagenes/fotos/8765-premioarbi.jpg&width=850"
 										class="card-img imagen-cuadro"
-										alt="Ignacio García Serradilla y Andreu Marín reciben el premio a la 'Mejor Labor Arbitral' de la Liga NEXUS ENERGÍA ASOBAL 25/26"
-										title="Ignacio García Serradilla y Andreu Marín reciben el premio a la 'Mejor Labor Arbitral' de la Liga NEXUS ENERGÍA ASOBAL 25/26"></a>
+										alt="Ignacio GarcÃ­a Serradilla y Andreu MarÃ­n reciben el premio a la 'Mejor Labor Arbitral' de la Liga NEXUS ENERGÃA ASOBAL 25/26"
+										title="Ignacio GarcÃ­a Serradilla y Andreu MarÃ­n reciben el premio a la 'Mejor Labor Arbitral' de la Liga NEXUS ENERGÃA ASOBAL 25/26"></a>
 								<a
 									href="noticias/ignacio-garc-a-serradilla-y-andreu-mar-n-reciben-el-premio-a-la--mejor-labor-arbitral--de-la-liga-nexus-energ-a-asobal-25-26/8765/">
 									<div class="card-img-overlay d-flex align-items-end justify-content-center">
 										<h4 class="card-title textoblanco">
-											Ignacio García Serradilla y Andreu Marín reciben el premio a la 'Mejor Labor Arbitral' de la Liga NEXUS ENERGÍA ASOBAL 25/26										</h4>
+											Ignacio GarcÃ­a Serradilla y Andreu MarÃ­n reciben el premio a la 'Mejor Labor Arbitral' de la Liga NEXUS ENERGÃA ASOBAL 25/26										</h4>
 									</div>
 								</a>
 							</div>
@@ -1396,13 +1396,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 										width="100%"
 										src="image.php?image=/imagenes/fotos/8758-casweeb.jpg&width=850"
 										class="card-img imagen-cuadro"
-										alt="4.156 espectadores en el BM. Caserío Ciudad Real-Fraikin BM. Granollers para establecer el récord de asistencia de la temporada"
-										title="4.156 espectadores en el BM. Caserío Ciudad Real-Fraikin BM. Granollers para establecer el récord de asistencia de la temporada"></a>
+										alt="4.156 espectadores en el BM. CaserÃ­o Ciudad Real-Fraikin BM. Granollers para establecer el rÃ©cord de asistencia de la temporada"
+										title="4.156 espectadores en el BM. CaserÃ­o Ciudad Real-Fraikin BM. Granollers para establecer el rÃ©cord de asistencia de la temporada"></a>
 								<a
 									href="noticias/4-156-espectadores-en-el-bm--caser-o-ciudad-real-fraikin-bm--granollers-para-establecer-el-r-cord-de-asistencia-de-la-temporada/8758/">
 									<div class="card-img-overlay d-flex align-items-end justify-content-center">
 										<h4 class="card-title textoblanco">
-											4.156 espectadores en el BM. Caserío Ciudad Real-Fraikin BM. Granollers para establecer el récord de asistencia de la temporada										</h4>
+											4.156 espectadores en el BM. CaserÃ­o Ciudad Real-Fraikin BM. Granollers para establecer el rÃ©cord de asistencia de la temporada										</h4>
 									</div>
 								</a>
 							</div>

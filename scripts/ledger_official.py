@@ -16,7 +16,14 @@ import re
 import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from ledger_common import anchor  # noqa: E402
 DATA = ROOT / "data" / "ledger"
+ANCHOR = anchor()
+import datetime as _dtmod
+ANCHOR_DT = _dtmod.datetime.strptime(ANCHOR, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=_dtmod.timezone.utc)
 RAW = DATA / "raw"
 
 
@@ -284,6 +291,7 @@ def text_sources(caps: dict) -> list[dict]:
         text = strip_tags(raw)
         out.append({"key": key, "sport": sport, "label": label, "url": cap.get("final_url"),
                     "status": cap.get("status"), "captured_at": cap.get("fetched_at"),
+                    "stored_as": cap.get("stored_as", ""),
                     "truncated": cap.get("truncated", False), "text": text, "ok": len(text) > 500})
     return out
 
@@ -293,7 +301,7 @@ def main() -> int:
     fixtures = nhl_fixtures(caps) + mlb_fixtures(caps) + euroleague_fixtures(caps)
     out = {
         "meta": {
-            "generated_at": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "generated_at": ANCHOR,
             "note": "Fixtures and records parsed verbatim from the official responses captured in data/ledger/raw.",
             "counts": {
                 "fixtures": len(fixtures),
@@ -309,7 +317,7 @@ def main() -> int:
             "mlb": mlb_records(caps),
             "euroleague": euroleague_records(caps),
         },
-        "text_sources": [{"key": s["key"], "sport": s["sport"], "label": s["label"], "url": s["url"],
+        "text_sources": [{"key": s["key"], "sport": s["sport"], "label": s["label"], "url": s["url"], "stored_as": s.get("stored_as",""),
                           "status": s["status"], "captured_at": s["captured_at"], "ok": s["ok"],
                           "truncated": s.get("truncated", False), "chars": len(s["text"])}
                          for s in text_sources(caps)],

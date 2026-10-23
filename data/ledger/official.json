@@ -1,13 +1,13 @@
 {
  "meta": {
-  "generated_at": "2026-10-23T19:52:25Z",
+  "generated_at": "2026-10-23T19:52:16Z",
   "note": "Fixtures and records parsed verbatim from the official responses captured in data/ledger/raw.",
   "counts": {
    "fixtures": 93,
    "nhl_records": 32,
    "mlb_records": 30,
    "euroleague_records": 20,
-   "text_sources": 31
+   "text_sources": 37
   }
  },
  "fixtures": [
@@ -988,7 +988,7 @@
    "official_url": "https://www.nhl.com/gamecenter/njd-vs-vgk/2026/10/30/2026020214",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020214"
   },
   {
@@ -1008,7 +1008,7 @@
    "official_url": "https://www.nhl.com/gamecenter/wpg-vs-fla/2026/10/30/2026020215",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020215"
   },
   {
@@ -1028,7 +1028,7 @@
    "official_url": "https://www.nhl.com/gamecenter/sea-vs-cgy/2026/10/31/2026020216",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020216"
   },
   {
@@ -1048,7 +1048,7 @@
    "official_url": "https://www.nhl.com/gamecenter/chi-vs-bos/2026/10/31/2026020217",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020217"
   },
   {
@@ -1068,7 +1068,7 @@
    "official_url": "https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020218"
   },
   {
@@ -1088,7 +1088,7 @@
    "official_url": "https://www.nhl.com/gamecenter/tbl-vs-nsh/2026/10/31/2026020219",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020219"
   },
   {
@@ -1108,7 +1108,7 @@
    "official_url": "https://www.nhl.com/gamecenter/edm-vs-nyi/2026/10/31/2026020220",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020220"
   },
   {
@@ -1128,7 +1128,7 @@
    "official_url": "https://www.nhl.com/gamecenter/buf-vs-lak/2026/10/31/2026020221",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020221"
   },
   {
@@ -1148,7 +1148,7 @@
    "official_url": "https://www.nhl.com/gamecenter/ott-vs-sjs/2026/10/31/2026020222",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020222"
   },
   {
@@ -1168,7 +1168,7 @@
    "official_url": "https://www.nhl.com/gamecenter/pit-vs-mtl/2026/10/31/2026020223",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020223"
   },
   {
@@ -1188,7 +1188,7 @@
    "official_url": "https://www.nhl.com/gamecenter/tor-vs-van/2026/10/31/2026020224",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020224"
   },
   {
@@ -1208,7 +1208,7 @@
    "official_url": "https://www.nhl.com/gamecenter/cbj-vs-dal/2026/11/01/2026020225",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020225"
   },
   {
@@ -1228,7 +1228,7 @@
    "official_url": "https://www.nhl.com/gamecenter/cgy-vs-col/2026/11/01/2026020226",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020226"
   },
   {
@@ -1248,7 +1248,7 @@
    "official_url": "https://www.nhl.com/gamecenter/wpg-vs-car/2026/11/01/2026020227",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020227"
   },
   {
@@ -1268,7 +1268,7 @@
    "official_url": "https://www.nhl.com/gamecenter/min-vs-wsh/2026/11/01/2026020228",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020228"
   },
   {
@@ -1288,7 +1288,7 @@
    "official_url": "https://www.nhl.com/gamecenter/uta-vs-phi/2026/11/01/2026020229",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020229"
   },
   {
@@ -1308,7 +1308,7 @@
    "official_url": "https://www.nhl.com/gamecenter/edm-vs-nyr/2026/11/01/2026020230",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020230"
   },
   {
@@ -1328,7 +1328,7 @@
    "official_url": "https://www.nhl.com/gamecenter/ott-vs-ana/2026/11/02/2026020231",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:43:18Z",
+   "captured_at": "2026-10-23T19:48:31Z",
    "fixture_id": "nhl-2026020231"
   },
   {
@@ -1350,7 +1350,7 @@
    "official_url": "https://www.mlb.com/gameday/849805",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:43:24Z",
+   "captured_at": "2026-10-23T19:48:38Z",
    "fixture_id": "mlb-849805"
   },
   {
@@ -1372,7 +1372,7 @@
    "official_url": "https://www.mlb.com/gameday/849802",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:43:24Z",
+   "captured_at": "2026-10-23T19:48:38Z",
    "fixture_id": "mlb-849802"
   },
   {
@@ -1394,7 +1394,7 @@
    "official_url": "https://www.mlb.com/gameday/849804",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:43:24Z",
+   "captured_at": "2026-10-23T19:48:38Z",
    "fixture_id": "mlb-849804"
   },
   {
@@ -1416,7 +1416,7 @@
    "official_url": "https://www.mlb.com/gameday/849803",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:43:24Z",
+   "captured_at": "2026-10-23T19:48:38Z",
    "fixture_id": "mlb-849803"
   },
   {
@@ -1438,7 +1438,7 @@
    "official_url": "https://www.mlb.com/gameday/849799",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:43:24Z",
+   "captured_at": "2026-10-23T19:48:38Z",
    "fixture_id": "mlb-849799"
   },
   {
@@ -1460,7 +1460,7 @@
    "official_url": "https://www.mlb.com/gameday/849801",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:43:24Z",
+   "captured_at": "2026-10-23T19:48:38Z",
    "fixture_id": "mlb-849801"
   },
   {
@@ -1482,7 +1482,7 @@
    "official_url": "https://www.mlb.com/gameday/849800",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:43:24Z",
+   "captured_at": "2026-10-23T19:48:38Z",
    "fixture_id": "mlb-849800"
   },
   {
@@ -1713,7 +1713,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_81/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_81"
   },
   {
@@ -1734,7 +1734,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_82/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_82"
   },
   {
@@ -1755,7 +1755,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_83/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_83"
   },
   {
@@ -1776,7 +1776,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_84/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_84"
   },
   {
@@ -1797,7 +1797,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_88/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_88"
   },
   {
@@ -1818,7 +1818,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_86/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_86"
   },
   {
@@ -1839,7 +1839,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_85/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_85"
   },
   {
@@ -1860,7 +1860,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_90/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_90"
   },
   {
@@ -1881,7 +1881,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_87/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_87"
   },
   {
@@ -1902,7 +1902,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_89/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:43:23Z",
+   "captured_at": "2026-10-23T19:48:37Z",
    "fixture_id": "el-E2026_89"
   }
  ],
@@ -1929,7 +1929,7 @@
     "streak": "OT",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "oilers": {
     "name": "Edmonton Oilers",
@@ -1952,7 +1952,7 @@
     "streak": "W",
     "streak_count": 3,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "bruins": {
     "name": "Boston Bruins",
@@ -1975,7 +1975,7 @@
     "streak": "W",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "golden knights": {
     "name": "Vegas Golden Knights",
@@ -1998,7 +1998,7 @@
     "streak": "L",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "kraken": {
     "name": "Seattle Kraken",
@@ -2021,7 +2021,7 @@
     "streak": "W",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "rangers": {
     "name": "New York Rangers",
@@ -2044,7 +2044,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "lightning": {
     "name": "Tampa Bay Lightning",
@@ -2067,7 +2067,7 @@
     "streak": "W",
     "streak_count": 3,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "mammoth": {
     "name": "Utah Mammoth",
@@ -2090,7 +2090,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "wild": {
     "name": "Minnesota Wild",
@@ -2113,7 +2113,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "senators": {
     "name": "Ottawa Senators",
@@ -2136,7 +2136,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "maple leafs": {
     "name": "Toronto Maple Leafs",
@@ -2159,7 +2159,7 @@
     "streak": "W",
     "streak_count": 3,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "stars": {
     "name": "Dallas Stars",
@@ -2182,7 +2182,7 @@
     "streak": "W",
     "streak_count": 4,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "sharks": {
     "name": "San Jose Sharks",
@@ -2205,7 +2205,7 @@
     "streak": "W",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "islanders": {
     "name": "New York Islanders",
@@ -2228,7 +2228,7 @@
     "streak": "OT",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "devils": {
     "name": "New Jersey Devils",
@@ -2251,7 +2251,7 @@
     "streak": "W",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "panthers": {
     "name": "Florida Panthers",
@@ -2274,7 +2274,7 @@
     "streak": "L",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "avalanche": {
     "name": "Colorado Avalanche",
@@ -2297,7 +2297,7 @@
     "streak": "L",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "blues": {
     "name": "St. Louis Blues",
@@ -2320,7 +2320,7 @@
     "streak": "W",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "jets": {
     "name": "Winnipeg Jets",
@@ -2343,7 +2343,7 @@
     "streak": "OT",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "red wings": {
     "name": "Detroit Red Wings",
@@ -2366,7 +2366,7 @@
     "streak": "W",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "capitals": {
     "name": "Washington Capitals",
@@ -2389,7 +2389,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "canadiens": {
     "name": "Montr\u00e9al Canadiens",
@@ -2412,7 +2412,7 @@
     "streak": "OT",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "sabres": {
     "name": "Buffalo Sabres",
@@ -2435,7 +2435,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "predators": {
     "name": "Nashville Predators",
@@ -2458,7 +2458,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "penguins": {
     "name": "Pittsburgh Penguins",
@@ -2481,7 +2481,7 @@
     "streak": "W",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "flyers": {
     "name": "Philadelphia Flyers",
@@ -2504,7 +2504,7 @@
     "streak": "W",
     "streak_count": 3,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "ducks": {
     "name": "Anaheim Ducks",
@@ -2527,7 +2527,7 @@
     "streak": "L",
     "streak_count": 5,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "blue jackets": {
     "name": "Columbus Blue Jackets",
@@ -2550,7 +2550,7 @@
     "streak": "L",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "kings": {
     "name": "Los Angeles Kings",
@@ -2573,7 +2573,7 @@
     "streak": "W",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "flames": {
     "name": "Calgary Flames",
@@ -2596,7 +2596,7 @@
     "streak": "W",
     "streak_count": 2,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "blackhawks": {
     "name": "Chicago Blackhawks",
@@ -2619,7 +2619,7 @@
     "streak": "L",
     "streak_count": 1,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    },
    "canucks": {
     "name": "Vancouver Canucks",
@@ -2642,7 +2642,7 @@
     "streak": "L",
     "streak_count": 3,
     "source_url": "https://api-web.nhle.com/v1/standings/now",
-    "captured_at": "2026-10-23T19:43:19Z"
+    "captured_at": "2026-10-23T19:48:32Z"
    }
   },
   "mlb": {
@@ -3296,19 +3296,21 @@
    "sport": "Gaelic Sports",
    "label": "GAA fixtures & results",
    "url": "https://www.gaa.ie/fixtures-results",
+   "stored_as": "raw/gaelic_gaa_fixtures.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:55Z",
+   "captured_at": "2026-10-23T19:49:08Z",
    "ok": true,
    "truncated": true,
-   "chars": 84695
+   "chars": 15088
   },
   {
    "key": "volleyball_fivb",
    "sport": "Volleyball",
    "label": "Volleyball World competitions",
    "url": "https://en.volleyballworld.com/global-schedule",
+   "stored_as": "raw/volleyball_fivb.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:41Z",
+   "captured_at": "2026-10-23T19:48:54Z",
    "ok": true,
    "truncated": false,
    "chars": 5803
@@ -3318,8 +3320,9 @@
    "sport": "Volleyball",
    "label": "CEV club competitions",
    "url": "https://www.cev.eu/club/",
+   "stored_as": "raw/volleyball_cev_club.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:42Z",
+   "captured_at": "2026-10-23T19:48:56Z",
    "ok": true,
    "truncated": false,
    "chars": 3376
@@ -3329,8 +3332,9 @@
    "sport": "Handball",
    "label": "EHF calendar",
    "url": "https://www.eurohandball.com/en/calendar/",
+   "stored_as": "raw/handball_ehf_calendar.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:44:00Z",
+   "captured_at": "2026-10-23T19:49:13Z",
    "ok": true,
    "truncated": false,
    "chars": 5783
@@ -3340,8 +3344,9 @@
    "sport": "Handball",
    "label": "EHF matches",
    "url": "https://www.eurohandball.com/en/matches/",
+   "stored_as": "",
    "status": 404,
-   "captured_at": "2026-10-23T19:44:02Z",
+   "captured_at": "2026-10-23T19:49:14Z",
    "ok": false,
    "truncated": false,
    "chars": 0
@@ -3351,8 +3356,9 @@
    "sport": "Greyhounds",
    "label": "GBGB racing",
    "url": "https://www.gbgb.org.uk/racing/",
+   "stored_as": "raw/greyhounds_gbgb_races.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:58Z",
+   "captured_at": "2026-10-23T19:49:11Z",
    "ok": true,
    "truncated": false,
    "chars": 3018
@@ -3362,6 +3368,7 @@
    "sport": "Greyhounds",
    "label": "GBGB open races",
    "url": "https://www.gbgb.org.uk/racing/open-races/",
+   "stored_as": "raw/greyhounds_gbgb.txt",
    "status": 200,
    "captured_at": "2026-10-23T19:29:54Z",
    "ok": true,
@@ -3373,8 +3380,9 @@
    "sport": "Tennis",
    "label": "WTA scores",
    "url": "https://www.wtatennis.com/scores",
+   "stored_as": "raw/tennis_wta_scores.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:44:05Z",
+   "captured_at": "2026-10-23T19:49:18Z",
    "ok": true,
    "truncated": false,
    "chars": 2925
@@ -3384,8 +3392,9 @@
    "sport": "Tennis",
    "label": "WTA rankings",
    "url": "https://www.wtatennis.com/rankings/singles",
+   "stored_as": "raw/tennis_wta_rankings.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:44:06Z",
+   "captured_at": "2026-10-23T19:49:19Z",
    "ok": true,
    "truncated": true,
    "chars": 5255
@@ -3395,8 +3404,9 @@
    "sport": "Snooker",
    "label": "WST home",
    "url": "https://www.wst.tv/",
+   "stored_as": "raw/snooker_wst_home.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:30Z",
+   "captured_at": "2026-10-23T19:48:44Z",
    "ok": true,
    "truncated": false,
    "chars": 916
@@ -3406,8 +3416,9 @@
    "sport": "Snooker",
    "label": "WST rankings",
    "url": "https://www.wst.tv/rankings/",
+   "stored_as": "raw/snooker_wst_rankings.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:31Z",
+   "captured_at": "2026-10-23T19:48:45Z",
    "ok": true,
    "truncated": false,
    "chars": 937
@@ -3417,8 +3428,9 @@
    "sport": "Snooker",
    "label": "WST news",
    "url": "https://www.wst.tv/news/",
+   "stored_as": "raw/snooker_wst_news.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:33Z",
+   "captured_at": "2026-10-23T19:48:46Z",
    "ok": true,
    "truncated": false,
    "chars": 1115
@@ -3428,8 +3440,9 @@
    "sport": "Darts",
    "label": "PDC Order of Merit",
    "url": "https://www.pdc.tv/rankings",
+   "stored_as": "raw/darts_pdc_oom.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:34Z",
+   "captured_at": "2026-10-23T19:48:48Z",
    "ok": true,
    "truncated": true,
    "chars": 298884
@@ -3439,8 +3452,9 @@
    "sport": "Darts",
    "label": "PDC tournaments",
    "url": "https://www.pdc.tv/tournaments",
+   "stored_as": "raw/darts_pdc_tournaments.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:35Z",
+   "captured_at": "2026-10-23T19:48:49Z",
    "ok": true,
    "truncated": true,
    "chars": 298884
@@ -3450,8 +3464,9 @@
    "sport": "Golf",
    "label": "DP World Tour schedule",
    "url": "https://www.europeantour.com/dpworld-tour/schedule/",
+   "stored_as": "raw/golf_euro_schedule.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:36Z",
+   "captured_at": "2026-10-23T19:48:50Z",
    "ok": true,
    "truncated": false,
    "chars": 9061
@@ -3461,8 +3476,9 @@
    "sport": "Golf",
    "label": "DP World Tour leaderboard",
    "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "stored_as": "raw/golf_euro_lb.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:38Z",
+   "captured_at": "2026-10-23T19:48:52Z",
    "ok": true,
    "truncated": true,
    "chars": 3459
@@ -3472,19 +3488,21 @@
    "sport": "Golf",
    "label": "PGA Tour schedule",
    "url": "https://www.pgatour.com/schedule",
+   "stored_as": "raw/golf_pga_schedule.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:39Z",
+   "captured_at": "2026-10-23T19:48:53Z",
    "ok": true,
    "truncated": true,
-   "chars": 87886
+   "chars": 87891
   },
   {
    "key": "motor_f1_races",
    "sport": "Motor Racing",
    "label": "Formula 1 calendar",
    "url": "https://www.formula1.com/en/racing/2026",
+   "stored_as": "raw/motor_f1_races.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:44:04Z",
+   "captured_at": "2026-10-23T19:49:17Z",
    "ok": true,
    "truncated": true,
    "chars": 6737
@@ -3494,8 +3512,9 @@
    "sport": "Motor Racing",
    "label": "Formula 1 driver standings",
    "url": "https://www.formula1.com/en/results/2026/drivers",
+   "stored_as": "raw/motor_f1_standings2.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:44:03Z",
+   "captured_at": "2026-10-23T19:49:16Z",
    "ok": true,
    "truncated": true,
    "chars": 5947
@@ -3505,8 +3524,9 @@
    "sport": "Rugby Union",
    "label": "Premiership Rugby fixtures",
    "url": "https://www.premrugby.com/fixtures",
+   "stored_as": "raw/rugby_union_prem_fixtures2.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:46Z",
+   "captured_at": "2026-10-23T19:48:59Z",
    "ok": true,
    "truncated": true,
    "chars": 95313
@@ -3516,8 +3536,9 @@
    "sport": "Rugby Union",
    "label": "Premiership Rugby table",
    "url": "https://www.premrugby.com/table",
+   "stored_as": "raw/rugby_union_prem_table.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:44Z",
+   "captured_at": "2026-10-23T19:48:57Z",
    "ok": true,
    "truncated": true,
    "chars": 95316
@@ -3527,8 +3548,9 @@
    "sport": "Rugby Union",
    "label": "URC fixtures",
    "url": "https://www.unitedrugby.com/fixtures",
+   "stored_as": "",
    "status": 404,
-   "captured_at": "2026-10-23T19:43:48Z",
+   "captured_at": "2026-10-23T19:49:01Z",
    "ok": false,
    "truncated": false,
    "chars": 0
@@ -3538,8 +3560,9 @@
    "sport": "Rugby Union",
    "label": "URC table",
    "url": "https://www.unitedrugby.com/table",
+   "stored_as": "",
    "status": 404,
-   "captured_at": "2026-10-23T19:43:50Z",
+   "captured_at": "2026-10-23T19:49:03Z",
    "ok": false,
    "truncated": false,
    "chars": 0
@@ -3549,8 +3572,9 @@
    "sport": "Rugby League",
    "label": "RLWC 2026 fixtures",
    "url": "https://www.rlwc2026.com/fixtures",
+   "stored_as": "raw/rugby_league_rlwc.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:54Z",
+   "captured_at": "2026-10-23T19:49:06Z",
    "ok": false,
    "truncated": false,
    "chars": 252
@@ -3560,8 +3584,9 @@
    "sport": "Cricket",
    "label": "Cricket Australia matches",
    "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "stored_as": "raw/cricket_com_au2.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:29Z",
+   "captured_at": "2026-10-23T19:48:43Z",
    "ok": true,
    "truncated": false,
    "chars": 5247
@@ -3570,53 +3595,58 @@
    "key": "cricket_com_au_results",
    "sport": "Cricket",
    "label": "Cricket Australia recent results",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
-   "ok": false,
+   "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=1",
+   "stored_as": "raw/cricket_com_au_results.txt",
+   "status": 200,
+   "captured_at": "2026-10-23T19:51:57Z",
+   "ok": true,
    "truncated": false,
-   "chars": 0
+   "chars": 5247
   },
   {
    "key": "cricket_icc_t20_rankings",
    "sport": "Cricket",
    "label": "ICC T20I team rankings",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
-   "ok": false,
-   "truncated": false,
-   "chars": 0
+   "url": "https://www.icc-cricket.com/rankings/team-rankings/mens/t20i",
+   "stored_as": "raw/cricket_icc_t20_rankings.txt",
+   "status": 200,
+   "captured_at": "2026-10-23T19:51:59Z",
+   "ok": true,
+   "truncated": true,
+   "chars": 17993
   },
   {
    "key": "cricket_icc_odi_rankings",
    "sport": "Cricket",
    "label": "ICC ODI team rankings",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
-   "ok": false,
-   "truncated": false,
-   "chars": 0
+   "url": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi",
+   "stored_as": "raw/cricket_icc_odi_rankings.txt",
+   "status": 200,
+   "captured_at": "2026-10-23T19:52:00Z",
+   "ok": true,
+   "truncated": true,
+   "chars": 17377
   },
   {
    "key": "tennis_wta_singles",
    "sport": "Tennis",
    "label": "WTA singles rankings",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
-   "ok": false,
-   "truncated": false,
-   "chars": 0
+   "url": "https://www.wtatennis.com/rankings/singles",
+   "stored_as": "raw/tennis_wta_singles.txt",
+   "status": 200,
+   "captured_at": "2026-10-23T19:52:01Z",
+   "ok": true,
+   "truncated": true,
+   "chars": 5255
   },
   {
    "key": "tennis_wta_scores_current",
    "sport": "Tennis",
    "label": "WTA current scores",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
+   "url": "https://www.wtatennis.com/scores/current",
+   "stored_as": "",
+   "status": 404,
+   "captured_at": "2026-10-23T19:52:03Z",
    "ok": false,
    "truncated": false,
    "chars": 0
@@ -3626,8 +3656,9 @@
    "sport": "Darts",
    "label": "PDC news",
    "url": "https://www.pdc.tv/news/",
+   "stored_as": "raw/darts_pdc_news.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:45:53Z",
+   "captured_at": "2026-10-23T19:51:23Z",
    "ok": true,
    "truncated": true,
    "chars": 298798
@@ -3636,20 +3667,22 @@
    "key": "darts_pdc_euro_2026",
    "sport": "Darts",
    "label": "PDC European Championship 2026",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
-   "ok": false,
-   "truncated": false,
-   "chars": 0
+   "url": "https://www.pdc.tv/tournament/european-championship/2026",
+   "stored_as": "raw/darts_pdc_euro_2026.txt",
+   "status": 200,
+   "captured_at": "2026-10-23T19:52:04Z",
+   "ok": true,
+   "truncated": true,
+   "chars": 298884
   },
   {
    "key": "snooker_wst_tournaments",
    "sport": "Snooker",
    "label": "WST tournaments",
    "url": "https://www.wst.tv/tournaments/",
+   "stored_as": "raw/snooker_wst_tournaments.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:25Z",
+   "captured_at": "2026-10-23T19:51:54Z",
    "ok": true,
    "truncated": false,
    "chars": 918
@@ -3659,8 +3692,9 @@
    "sport": "Handball",
    "label": "ASOBAL (Spain)",
    "url": "https://www.asobal.es/",
+   "stored_as": "raw/handball_spain.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:02Z",
+   "captured_at": "2026-10-23T19:51:31Z",
    "ok": true,
    "truncated": false,
    "chars": 3409
@@ -3670,8 +3704,9 @@
    "sport": "Handball",
    "label": "LNH (France)",
    "url": "https://www.lnh.fr/",
+   "stored_as": "raw/handball_france.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:03Z",
+   "captured_at": "2026-10-23T19:51:33Z",
    "ok": true,
    "truncated": false,
    "chars": 6273
@@ -3681,8 +3716,9 @@
    "sport": "Handball",
    "label": "NHF (Norway)",
    "url": "https://www.handball.no/",
+   "stored_as": "raw/handball_norway.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:00Z",
+   "captured_at": "2026-10-23T19:51:29Z",
    "ok": true,
    "truncated": false,
    "chars": 4025
@@ -3692,8 +3728,9 @@
    "sport": "Volleyball",
    "label": "Volleyball Bundesliga",
    "url": "https://www.volleyball-bundesliga.de/",
+   "stored_as": "raw/volleyball_bundesliga.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:14Z",
+   "captured_at": "2026-10-23T19:51:44Z",
    "ok": true,
    "truncated": false,
    "chars": 65013
@@ -3703,8 +3740,9 @@
    "sport": "Volleyball",
    "label": "Lega Volley Serie A",
    "url": "https://www.legavolley.it/",
+   "stored_as": "raw/volleyball_legavolley.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:15Z",
+   "captured_at": "2026-10-23T19:51:45Z",
    "ok": true,
    "truncated": true,
    "chars": 14190
@@ -3714,8 +3752,9 @@
    "sport": "Volleyball",
    "label": "Brazilian Superliga",
    "url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
+   "stored_as": "raw/volleyball_superliga.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:12Z",
+   "captured_at": "2026-10-23T19:51:41Z",
    "ok": true,
    "truncated": true,
    "chars": 8180
@@ -3725,8 +3764,9 @@
    "sport": "Volleyball",
    "label": "Polish PlusLiga",
    "url": "https://www.tauronliga.pl/strona-glowna/nocookies/1.html",
+   "stored_as": "raw/volleyball_plusliga.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:46:10Z",
+   "captured_at": "2026-10-23T19:51:40Z",
    "ok": true,
    "truncated": true,
    "chars": 7899
@@ -3735,34 +3775,37 @@
    "key": "rugby_union_urc_matchcentre",
    "sport": "Rugby Union",
    "label": "URC match centre",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
+   "url": "https://stats.unitedrugby.com/match-centre/2025-26/1/$",
+   "stored_as": "raw/rugby_union_urc_matchcentre.txt",
+   "status": 200,
+   "captured_at": "2026-10-23T19:52:16Z",
    "ok": false,
    "truncated": false,
-   "chars": 0
+   "chars": 9
   },
   {
    "key": "greyhounds_gbgb_results",
    "sport": "Greyhounds",
    "label": "GBGB results",
-   "url": "",
-   "status": 0,
-   "captured_at": "",
-   "ok": false,
+   "url": "https://www.gbgb.org.uk/racing/results/",
+   "stored_as": "raw/greyhounds_gbgb_results.txt",
+   "status": 200,
+   "captured_at": "2026-10-23T19:52:14Z",
+   "ok": true,
    "truncated": false,
-   "chars": 0
+   "chars": 2178
   },
   {
    "key": "cricket_icc_rankings",
    "sport": "Cricket",
    "label": "ICC rankings",
    "url": "https://www.icc-cricket.com/rankings/team-rankings/mens/odi",
+   "stored_as": "raw/cricket_icc_rankings.txt",
    "status": 200,
-   "captured_at": "2026-10-23T19:43:28Z",
+   "captured_at": "2026-10-23T19:48:41Z",
    "ok": true,
    "truncated": true,
-   "chars": 17741
+   "chars": 17738
   }
  ]
 }

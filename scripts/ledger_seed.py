@@ -23,7 +23,14 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+import sys as _sys
+_sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from ledger_common import anchor  # noqa: E402
 DATA = ROOT / "data" / "ledger"
+ANCHOR = anchor()
+import datetime as _dtmod
+ANCHOR_DT = _dtmod.datetime.strptime(ANCHOR, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=_dtmod.timezone.utc)
 RAW = DATA / "raw"
 MANIFEST = DATA / "manifest.json"
 
@@ -158,7 +165,7 @@ def main() -> int:
     rows = sorted(tips.values(), key=lambda r: (r["start"], r["sport"], r["event"]))
     out = {
         "meta": {
-            "generated_at": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "generated_at": ANCHOR,
             "source": "OLBG.com sport hub pages captured by scripts/ledger_capture.py",
             "note": "One row per OLBG tip. The tip is OLBG's published selection; the price is OLBG's quoted bookmaker price and is NOT our line.",
             "pages": pages,

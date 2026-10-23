@@ -1,0 +1,144 @@
+{
+ "meta": {
+  "generated_at": "2026-10-23T19:52:16Z",
+  "items": 15,
+  "high": 3
+ },
+ "items": [
+  {
+   "code": "L-01",
+   "severity": "high",
+   "sport": "Several",
+   "title": "Eleven sports carry no written preview today",
+   "detail": "The brief asks for five previews per sport. Previews were published for Baseball (5), Basketball (5), Cricket (4), Ice Hockey (5). No preview is published for Golf, Volleyball, Rugby Union, Snooker, Darts, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Rugby League because no official current-form, table or result input for those fixtures could be captured today. A preview written without one would be invention.",
+   "source": "",
+   "impact": "Shortfall against the five-per-sport target; disclosed rather than filled."
+  },
+  {
+   "code": "L-02",
+   "severity": "high",
+   "sport": "Multiple",
+   "title": "133 of 143 OLBG-listed events could not be matched to an official source",
+   "detail": "Per sport: Basketball 15, Cricket 9, Darts 9, Gaelic Sports 7, Greyhounds 22, Handball 30, Motor Racing 2, Rugby League 3, Rugby Union 12, Tennis 5, Volleyball 19. The OLBG event is still listed and its quoted price is shown, but no official fixture page was found in today's captures, so no line was originated and no preview was written for those rows.",
+   "source": "https://www.olbg.com/betting-tips",
+   "impact": "Those rows are published as unverified listings."
+  },
+  {
+   "code": "L-03",
+   "severity": "high",
+   "sport": "Basketball",
+   "title": "Every NBA endpoint refused the capture",
+   "detail": "cdn.nba.com returned 403 for both the scoreboard and the league schedule, nba.com/games returned 403 and stats.nba.com timed out. The eleven NBA fixtures OLBG lists therefore have no official verification and no originated line. EuroLeague responded normally and carries the basketball pricing.",
+   "source": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
+   "impact": "11 NBA rows unverified; basketball previews use EuroLeague fixtures only."
+  },
+  {
+   "code": "L-04",
+   "severity": "medium",
+   "sport": "Golf",
+   "title": "OLBG's golf hub rendered no tip objects",
+   "detail": "The golf hub was fetched successfully (HTTP 200, 183 KB) but contained no market or event objects, so no golf fixture was listed by the source the brief is built on. The DP World Tour schedule and leaderboard pages also render client-side, so no golf market was originated.",
+   "source": "https://www.olbg.com/betting-tips/Golf/5",
+   "impact": "Zero golf rows today."
+  },
+  {
+   "code": "L-05",
+   "severity": "medium",
+   "sport": "Snooker",
+   "title": "All four OLBG snooker tips had already expired at capture time",
+   "detail": "The hub returned four tips, all flagged expired by OLBG itself and all dated before the capture. Nothing upcoming was listed, so snooker has no rows today. world table pages on wst.tv render client-side.",
+   "source": "https://www.olbg.com/betting-tips/Snooker/8",
+   "impact": "Zero snooker rows today."
+  },
+  {
+   "code": "L-06",
+   "severity": "medium",
+   "sport": "Rugby League",
+   "title": "OLBG lists only outright markets for rugby league",
+   "detail": "The three rugby league entries are 2027 futures (State of Origin, Super League, NRL), not matches. Outright futures are outside the match-winner, handicap and total markets this desk prices.",
+   "source": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "impact": "No rugby league match priced."
+  },
+  {
+   "code": "L-07",
+   "severity": "medium",
+   "sport": "OLBG",
+   "title": "OLBG's JSON tip endpoint returns 404 when called directly",
+   "detail": "The hub pages call /sports/<Sport>/top_tips?paginate=1-100&... and the path is visible in the page payload, but a direct request without the page's own headers returns OLBG's 404 page (98 KB) for all sixteen sports. The desk therefore parses the server-rendered hub payload instead.",
+   "source": "https://www.olbg.com/sports/Darts/top_tips?paginate=1-100",
+   "impact": "Capture falls back to hub HTML."
+  },
+  {
+   "code": "L-08",
+   "severity": "medium",
+   "sport": "Basketball",
+   "title": "EuroLeague tip times are served in venue-local time",
+   "detail": "api-live.euroleague.net returns a date and a start time without an offset. The desk publishes the time exactly as served and marks the column, rather than converting it to UTC and implying a precision the feed does not give.",
+   "source": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "impact": "Times marked 'as served'."
+  },
+  {
+   "code": "L-09",
+   "severity": "medium",
+   "sport": "Multiple",
+   "title": "Official-page matches are evidence of a fixture row, not of a kick-off time",
+   "detail": "For seven fixtures the two participants sit either side of a versus marker on an official competition page. That confirms the pairing appears on an official page; it does not confirm the start time OLBG publishes. Those rows are labelled official-page, not official-fixture.",
+   "source": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "impact": "Verification strength is stated per row."
+  },
+  {
+   "code": "L-10",
+   "severity": "medium",
+   "sport": "Multiple",
+   "title": "No official injury feed could be read",
+   "detail": "None of the captured official pages carried a team-news or injury list for these fixtures. No preview asserts an injury, a return date or a suspension. Where a reader expects an injury line, the honest answer is that it could not be confirmed today.",
+   "source": "",
+   "impact": "Injury field omitted rather than guessed."
+  },
+  {
+   "code": "L-11",
+   "severity": "info",
+   "sport": "Multiple",
+   "title": "The 70% rule and the -250 to +10000 band only overlap between 70.0% and 71.4%",
+   "detail": "Any selection above 70% is shorter than -233, so it falls outside a band that starts at -250. Today 155 selections are graded high and 10 of those are also inside the price band. The desk publishes both counts rather than moving the thresholds.",
+   "source": "",
+   "impact": "Both counts are shown on every summary."
+  },
+  {
+   "code": "L-12",
+   "severity": "info",
+   "sport": "Multiple",
+   "title": "OLBG quotes one side of each market, so implied probabilities are not margin-free",
+   "detail": "Each OLBG tip carries a single price. 1/price therefore overstates the chance slightly because the bookmaker margin has not been removed. Market-implied rows say so, and they are never mixed into the originated totals.",
+   "source": "https://www.olbg.com/betting-tips",
+   "impact": "Labelled 'market-implied'."
+  },
+  {
+   "code": "L-13",
+   "severity": "info",
+   "sport": "Baseball",
+   "title": "Probable pitchers are published for two of the seven World Series games",
+   "detail": "statsapi.mlb.com lists Nick Martinez against Jacob Misiorowski for game one and Drew Rasmussen against Logan Henderson for game two. Games three to seven carry no probable pitcher at capture time, and the previews for those games say so.",
+   "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31",
+   "impact": "Two of five baseball previews cite a starting pitcher."
+  },
+  {
+   "code": "L-14",
+   "severity": "info",
+   "sport": "Greyhounds / Tennis / Darts / Handball / Volleyball",
+   "title": "Five sports publish fixtures but no readable form line",
+   "detail": "GBGB publishes meetings and race times without runners; WTA, PDC and WST render their draw and ranking pages client-side; the domestic handball and volleyball league sites publish tables that did not parse into a form line. Those fixtures are listed and priced only where OLBG quotes a price, and none carries a preview.",
+   "source": "https://www.gbgb.org.uk/racing/",
+   "impact": "No originated line in these sports."
+  },
+  {
+   "code": "L-15",
+   "severity": "info",
+   "sport": "Multiple",
+   "title": "Two sources were only stored in part",
+   "detail": "33 responses exceeded the 300 KB storage cap and were stored truncated. The cap is recorded in the register next to the row, and no parsed figure depends on the part that was cut.",
+   "source": "/ledger/sources.html",
+   "impact": "Truncation disclosed per capture."
+  }
+ ]
+}

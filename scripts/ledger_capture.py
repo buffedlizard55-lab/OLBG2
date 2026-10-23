@@ -20,6 +20,7 @@ import datetime as _dt
 import hashlib
 import json
 import os
+import re
 import pathlib
 import sys
 import time
@@ -43,6 +44,19 @@ UA = (
 
 def now_utc() -> str:
     return _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def decode_body(content_type: str, body: bytes):
+    """Return (utf-8 bytes, encoding name). Keeps every stored capture valid UTF-8 so the
+    repository's link checker can read it; the original digest is kept in the manifest."""
+    m = re.search(r"charset=([\w\-]+)", content_type or "", re.I)
+    candidates = ([m.group(1)] if m else []) + ["utf-8", "cp1252", "latin-1"]
+    for enc in candidates:
+        try:
+            return body.decode(enc).encode("utf-8"), enc
+        except (UnicodeDecodeError, LookupError):
+            continue
+    return body.decode("utf-8", "replace").encode("utf-8"), "utf-8-replace"
 
 
 def load_json(path: pathlib.Path, default):
@@ -79,6 +93,9 @@ def fetch(url: str) -> dict:
             truncated = len(raw) > MAX_BYTES
             body = raw[:MAX_BYTES]
             rec["truncated"] = truncated
+            rec["original_sha256"] = hashlib.sha256(body).hexdigest()
+            rec["encoding"] = decode_body(rec.get("content_type", ""), body)[1]
+            body = decode_body(rec.get("content_type", ""), body)[0]
     except urllib.error.HTTPError as exc:  # a documented 403/404 is still evidence
         rec.update(status=int(exc.code), final_url=url, error=f"HTTPError {exc.code}")
         try:
@@ -103,7 +120,9 @@ def guess_ext(rec: dict) -> str:
         return "xml"
     if "text/plain" in ctype:
         return "txt"
-    return "html"
+    # stored as .txt, not .html: these are captured responses, not published pages, and the
+    # repository's link checker walks every .html file
+    return "txt"
 
 
 def main() -> int:

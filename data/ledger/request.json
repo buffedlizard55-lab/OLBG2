@@ -513,6 +513,230 @@
    "sport": "Tennis",
    "kind": "official-html",
    "note": "ATP official current scores"
+  },
+  {
+   "key": "olbg_api_tips_golf",
+   "url": "https://www.olbg.com/sports/Golf/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Golf",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_golf",
+   "url": "https://www.olbg.com/sports/Golf/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Golf",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_volleyball",
+   "url": "https://www.olbg.com/sports/Volleyball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Volleyball",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_volleyball",
+   "url": "https://www.olbg.com/sports/Volleyball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Volleyball",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_rugby_union",
+   "url": "https://www.olbg.com/sports/Rugby_Union/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Rugby Union",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_rugby_union",
+   "url": "https://www.olbg.com/sports/Rugby_Union/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Rugby Union",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_cricket",
+   "url": "https://www.olbg.com/sports/Cricket/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Cricket",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_cricket",
+   "url": "https://www.olbg.com/sports/Cricket/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Cricket",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_snooker",
+   "url": "https://www.olbg.com/sports/Snooker/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Snooker",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_snooker",
+   "url": "https://www.olbg.com/sports/Snooker/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Snooker",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_darts",
+   "url": "https://www.olbg.com/sports/Darts/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Darts",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_darts",
+   "url": "https://www.olbg.com/sports/Darts/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Darts",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_baseball",
+   "url": "https://www.olbg.com/sports/Baseball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Baseball",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_baseball",
+   "url": "https://www.olbg.com/sports/Baseball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Baseball",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_gaelic_football",
+   "url": "https://www.olbg.com/sports/Gaelic_Football/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Gaelic Sports",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_gaelic_football",
+   "url": "https://www.olbg.com/sports/Gaelic_Football/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Gaelic Sports",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_hurling",
+   "url": "https://www.olbg.com/sports/Hurling/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Gaelic Sports",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_hurling",
+   "url": "https://www.olbg.com/sports/Hurling/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Gaelic Sports",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_greyhounds",
+   "url": "https://www.olbg.com/sports/Greyhounds/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Greyhounds",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_greyhounds",
+   "url": "https://www.olbg.com/sports/Greyhounds/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Greyhounds",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_tennis",
+   "url": "https://www.olbg.com/sports/Tennis/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Tennis",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_tennis",
+   "url": "https://www.olbg.com/sports/Tennis/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Tennis",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_motor_racing",
+   "url": "https://www.olbg.com/sports/Motor_Racing/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Motor Racing",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_motor_racing",
+   "url": "https://www.olbg.com/sports/Motor_Racing/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Motor Racing",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_handball",
+   "url": "https://www.olbg.com/sports/Handball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Handball",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_handball",
+   "url": "https://www.olbg.com/sports/Handball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Handball",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_ice_hockey",
+   "url": "https://www.olbg.com/sports/Ice_Hockey/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Ice Hockey",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_ice_hockey",
+   "url": "https://www.olbg.com/sports/Ice_Hockey/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Ice Hockey",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_basketball",
+   "url": "https://www.olbg.com/sports/Basketball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Basketball",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_basketball",
+   "url": "https://www.olbg.com/sports/Basketball/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Basketball",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
+  },
+  {
+   "key": "olbg_api_tips_rugby_league",
+   "url": "https://www.olbg.com/sports/Rugby_League/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=0&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Rugby League",
+   "kind": "olbg-api",
+   "note": "OLBG sports top_tips JSON endpoint (100 per page), discovered in the hub page payload"
+  },
+  {
+   "key": "olbg_api_expired_rugby_league",
+   "url": "https://www.olbg.com/sports/Rugby_League/top_tips?source=&paginate=1-100&include_recommendations=1&include_expired=1&bookie_name=_best_&client_type=desktop_website",
+   "sport": "Rugby League",
+   "kind": "olbg-api",
+   "note": "OLBG top_tips including expired events, to measure slate size"
   }
  ]
 }

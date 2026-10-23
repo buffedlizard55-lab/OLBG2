@@ -4768,3 +4768,17 @@ The same final visual audit found two remaining outright-label concatenations in
 | HZ6 | Static `/horizon/` GitHub Pages site + verifier + unit tests | done | `scripts/horizon_build.py`, `scripts/horizon_verify.py`, `horizon/index.html`, `horizon/flagged.html`, `horizon/olbg-audit.html`, `horizon/repo-audit.html`, `horizon/sports/*.html` (15 sport pages), `tests/test_horizon_9c5af337.py` (19 HTML files, 376 linked table rows, 0 unlinked rows, 672 local links checked, 0 broken links) |
 | HZ7 | Rebase, test suite, PR #182 merge & GitHub Pages verification | done | PR [#182](https://github.com/buffedlizard55-lab/OLBG2/pull/182) merged to `main` at `2026-10-23T21:51:48Z` as `68a58d6ce57902b9ca96127b56ad2b5bd91a0d12`; `Validate Pages content` passed on both PR ([40029598977](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029598977)) and `main` ([40029785603](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029785603)) |
 
+---
+
+### FI5 publication record — final integration live (2026-10-23 21:52Z)
+
+| Item | Result |
+|---|---|
+| Integration PR | [#178](https://github.com/buffedlizard55-lab/OLBG2/pull/178) — merged 21:47:26Z; merge commit `2dbc3ee3d7756ac2c05b0035104a804d46965cf1` |
+| PR validation | Runs [40029061523](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029061523) and [40029083168](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029083168) — both success at head `6979063`; merge state CLEAN |
+| Main validation | [40029293389](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293389) — success on merge `2dbc3ee` |
+| Pages deployment | Explicit [Deploy Pages run 40029293264](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029293264) and dynamic [pages-build-deployment run 40029292238](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40029292238) — both success; Pages API `built`, source `main:/` |
+| Live root | <https://buffedlizard55-lab.github.io/OLBG2/> fetched after deployment with a merge-specific cache buster; title `15-sport executive dashboard`, 93 records, 728 prices, 33 write-ups, 15 sport cards, 0 natural / 8 alternate in-band highs, 48 blank venues and 61 publisher-time rows all present |
+| Live review and linked pages | `/integration.html` fetched with all nine integration findings, FI-09 and both independent additions; `/cadence/index.html`, `/cadence/sports/index.html`, `/cadence/predictions.html` and `/research/integration-f0ee1b4a.md` also fetched successfully and matched the published counts/disclosures |
+
+FI5 is complete for merge and deployment. This publication record is a documentation-only follow-up; the implementation and evidence above are already merged and live. Open evidence items remain open by design and are not represented as resolved by the successful deployment.

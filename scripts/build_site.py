@@ -254,8 +254,10 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
-    ("brief/index.html", "Today's 15-sport brief (23 Oct)"),
-    ("monitor/index.html", "Latest 15-sport research desk"),
+    ("olbg/index.html", "Latest: OLBG daily desk (23 Oct)"),
+    ("brief/index.html", "Daily brief (15 sports, 23 Oct)"),
+    ("ledger/index.html", "Ledger desk (15 sports, 23 Oct)"),
+    ("monitor/index.html", "Evidence-first 15-sport monitor"),
     ("focus/index.html", "Focus desk (15 sports, 23 Oct)"),
     ("liveboard/index.html", "Live board (15 sports, 23 Oct)"),
     ("daily-picks/index.html", "Picks desk (23–25 Oct)"),
@@ -289,13 +291,13 @@ def page(title: str, active: str, body: str, prefix: str = "") -> str:
     nav = "".join(links)
     if active == "index.html":
         body = '''<section class="hero"><p class="eyebrow">Latest research · exact 15-sport scope</p>
-<h1>Start with the evidence-first dashboard.</h1>
-<p class="lede">The latest desk separates official fixture facts, independent fair prices, actual bookmaker odds and missing evidence.
+<h1>Start with the OLBG daily desk.</h1>
+<p class="lede">The latest desk separates official fixture facts, OLBG discovery provenance, independent fair prices and missing evidence.
 It covers only the 15 requested sports, with Gaelic Football and Hurling together under Gaelic Sports.</p>
-<div class="cta"><a class="button primary" href="brief/index.html">Open today's 15-sport brief →</a>
-<a class="button" href="brief/predictions.html">39 sourced predictions</a>
-<a class="button" href="monitor/flagged.html">Flagged for Review</a></div>
-<p><strong>Partial coverage, not a complete live slate.</strong> No high-confidence picks are asserted without the required evidence.
+<div class="cta"><a class="button primary" href="olbg/index.html">Open the OLBG daily desk →</a>
+<a class="button" href="olbg/picks.html">3 high-confidence predictions</a>
+<a class="button" href="olbg/flagged.html">Flagged for Review</a></div>
+<p><strong>89 upcoming rows · 54 priced matches · 58 originated markets.</strong> No active OLBG offer or current bookmaker price is claimed.
 Earlier overlapping research is retained below for audit only.</p></section>
 <details><summary><strong>Open historical 22 October dashboard (not newly verified)</strong></summary>''' + body + '</details>'
     return f"""<!DOCTYPE html>
@@ -317,7 +319,7 @@ Earlier overlapping research is retained below for audit only.</p></section>
 <div class="stripe"><div class="wrap"><strong>Snapshot {AS_OF_CLOCK}</strong> · {SNAPSHOT["rows"]} stored rows · {SNAPSHOT["originated"]} originated lines · {SNAPSHOT["band"]} price-band picks · every row carries its official source link · <a href="{prefix}flagged.html">{SNAPSHOT["flags"]} open review items</a></div></div>
 <main class="wrap">
 <div class="notice warn"><strong>Historical snapshot.</strong> The dates and counts below belong to an older desk, not the current clock.
-<a href="{prefix}monitor/index.html">Use the latest 15-sport dashboard</a> for the new evidence gate, capture ages and review queue.</div>
+<a href="{prefix}olbg/index.html">Use the latest OLBG daily dashboard</a> for current research provenance, fair prices and the review queue.</div>
 {body}
 </main>
 <footer class="footer"><div class="wrap">

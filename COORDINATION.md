@@ -4266,3 +4266,21 @@ Tasks L1–L6 are **done** and the `/ledger/` scope is released. Note for integr
 | O7 | Final integration only after O2–O6: re-check active claims, full suite/link audit, PR→merge, Pages confirmation and publication ledger | pending | `arena/758c0623-olbg2` | shared outputs only if unclaimed at integration; `COORDINATION.md` |
 
 **Integrity rule:** OLBG is discovery provenance, not an official sporting body. Fixture facts and narrative statistics require an official league, governing-body, club or tour source read in this session. Unconfirmed values remain blank and are linked from the review queue. No bookmaker price, injury, player status or market availability will be invented. Historical layer counts will not be summed or presented as a fresh deduplicated slate.
+
+---
+
+## Session `arena/758c0623-olbg2` — O2–O6 LOCAL COMPLETE; O7 INTEGRATION (${stamp})
+
+| Item | Result |
+| --- | --- |
+| Evidence | 89 upcoming rows across 11 sports; all 15 categories represented; 0 active, 24 last-seen, 65 official-context-only |
+| Origination | 54 priced matches; 58 market rows including four NHL totals/puck lines; 35 blank matches with reasons |
+| High-confidence output | 3 — Boston Celtics 70.197044% / fair −236; Los Angeles Lakers 71.378911% / fair −249; Montréal Canadiens 71.428571% / fair −250 |
+| Predictions | 3 unique paragraphs, 52/51/57 words; explicit selections and official links; prohibited terminology absent |
+| Review | 58 source-linked items, including every blank and arithmetic-only high-cap row |
+| Build | 22 HTML pages plus CSS/JS under `/olbg/`; dedicated sources, methodology, markets and Flagged for Review pages |
+| Local checks | `olbg_verify.py` 1,825 checks; 12 dedicated unit tests; byte-identical offline rebuild; repository integration audit 0 local-link errors |
+| Rebase | `origin/main` advanced to `63ca1a4` with `/brief/`, `/ledger/` and monitor work. Rebased; only `COORDINATION.md` conflicted. Both other-session records and this claim were preserved verbatim; only new conflict markers were removed. |
+| Integration in progress | CI rebuild/drift entries for `olbg data/olbg`; root navigation/README now identify `/olbg/` as latest while preserving other desks. PR 161 was open and documentation-only at this check. |
+
+O2–O6 are locally done. O7 remains open until the full suite, PR CI, merge, Pages deployment and live-content checks are recorded. No active offer, current bookmaker quote, complete global OLBG inventory or five-per-sport quota is claimed.

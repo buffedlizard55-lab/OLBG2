@@ -4571,3 +4571,14 @@ root-generated pages (`index.html`, `integration.html`, `archive.html`, `matches
 `flagged.html`, `methodology.html`, `sources.html`, `verification.html`, `sports/**`), and a new isolated
 integration test `tests/test_root_cadence_integration_deb1cb6e.py`, in addition to the original research report
 and append-only coordination log. No source data or other desk layers are in scope.
+
+### Independent validation and integration result — 2026-10-23
+
+**Status: done locally; PR and Pages confirmation pending.**
+
+- Added a discoverable link to the exact-15-sport `/cadence/` desk from root navigation and the root landing CTA. The root remains anchored on `/ledger/`; `/cadence/` is a dated supporting desk.
+- Published audit findings `AUDIT-GREY-01` (the 2026 greyhound finals are linked to a GBGB URL containing `2025-category-one-schedule`; source-to-claim support was not confirmed) and `AUDIT-ODDS-02` (cadence `offered_*` fields are calculated using code margins, not captured OLBG/bookmaker quotes) in the root Flagged for Review page. Both are explicitly unresolved; neither is represented as a confirmed false fact.
+- Independent audit: `research/deb1cb6e-independent-audit.md`. Manual source review links are included for all 15 sports; external official pages were not freshly fetched in this environment.
+- Commands: `python3 scripts/cadence_verify.py` — 11 groups pass, 0 errors (93 fixtures, 728 prices, 33 predictions); `python3 scripts/integration_audit.py` — 0 local-link errors; `python3 -m unittest discover -s tests -v` — **664 tests pass**; root rebuild completed; `git diff --check` clean.
+- Repository evidence URLs: `https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/`; OLBG hub `https://www.olbg.com/betting-tips`; price formula `scripts/cadence_model.py` (`offered_decimal = dec(p)/(1-margin)`, `offered_american = american(p*(1-margin))`). Full source ledger: [`cadence/sources.html`](cadence/sources.html).
+- Coverage target remains unmet in the checked-in snapshot: 33 predictions total; only Basketball, Cricket and Rugby League have five each; Golf, Greyhounds and Gaelic Sports have none. The report details per-sport fixture/pick/prediction counts. This is disclosed, not padded.

@@ -3960,3 +3960,10 @@ fifteen sports had no reachable official current-form input, and inventing one w
 `COORDINATION.md` and one in `METHODOLOGY.md`, left by an earlier merge. They are plain text and do not
 break rendering, but they are not content. They were left untouched here because neither file is in this
 session's scope.
+
+**Publication record.** PR [#143](https://github.com/buffedlizard55-lab/OLBG2/pull/143) — merged
+23 Oct 2026 16:38Z as `d312e56`. Follow-up PR [#151](https://github.com/buffedlizard55-lab/OLBG2/pull/151)
+— merged 16:40Z, aligning the dashboard's in-band count with the coverage table. Both PRs passed
+"Validate Pages content" and "Deploy Pages"; GitHub Pages reports `status: built` for
+https://buffedlizard55-lab.github.io/OLBG2/, and `/liveboard/` was fetched live after the deploy and
+rendered the board (15 sports, 133 fixtures, 10 high grades, 2 in band, 14 predictions, 20 flags).

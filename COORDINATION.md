@@ -4462,3 +4462,17 @@ Repository suite on this branch: **606 tests OK**; `integration_audit.py` → 0 
 **Shared root files — request only, not edited.** `README.md`, `scripts/build_site.py`, the root generated
 pages and `.github/workflows/**` remain untouched (other sessions claimed them). `/cadence/` deploys
 automatically because Pages serves the repository root; a root navigation entry is still the integrator's call.
+
+### Cross-scope regeneration required by this desk (logged, not hand-edited)
+
+Adding `cadence/` changes two files that belong to the `/ledger/` scope, because the ledger's own
+repository review counts the directories that publish an index page:
+
+| File | Change | How it was produced |
+|---|---|---|
+| `data/ledger/repo_review.json` | `layers` 37 → 38, the directory list gains `cadence`, the test-module count 44 → 45 | `python3 scripts/ledger_build.py` — the owning session's builder, run unmodified. No hand edit. |
+| `ledger/repo-review.html` | the same two numbers on the rendered page | same builder run |
+
+This is not an editorial change to another session's data: nothing was rewritten by hand and no finding was
+removed. It is committed so the hosted drift gate (`git diff --exit-code` over the ledger paths) stays green.
+The `/ledger/` owner may regenerate again at any time; the numbers will follow the directory count.

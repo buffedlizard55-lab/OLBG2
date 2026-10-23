@@ -330,6 +330,17 @@ def main():
                     "published with their prices and probabilities."),
         "source_url": "https://www.pgatour.com/leaderboard", "status": "published"}]
     flagged.append({
+        "id": "CD-PR3", "severity": "medium", "category": "Repository overlap",
+        "item": "This desk is another overlapping dashboard",
+        "finding": ("The repository already holds more than thirty desks covering the same brief. Adding "
+                    "/cadence/ makes that thirty-eight, and the ledger desk's own repository review flags the "
+                    "overlap as a high-severity finding (RR-02). /cadence/ is published in its own namespace, "
+                    "states its capture window and its shortfalls, and does not claim to supersede any other "
+                    "layer; a single authoritative desk is an integration decision, not a claim this session can "
+                    "make unilaterally."),
+        "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/ledger/repo-review.html",
+        "status": "published"})
+    flagged.append({
         "id": "CD-PR2", "severity": "high", "category": "Price-band arithmetic",
         "item": "The two rules in the brief intersect in 1.43 percentage points",
         "finding": ("'High confidence above 70%' and 'price between -250 and +10000' intersect only in "

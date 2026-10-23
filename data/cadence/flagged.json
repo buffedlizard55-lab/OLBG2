@@ -1,6 +1,6 @@
 {
  "generated_utc": "2026-10-23T20:20:00Z",
- "count": 2,
+ "count": 3,
  "flags": [
   {
    "id": "CD-PR1",
@@ -9,6 +9,15 @@
    "item": "Written predictions by sport",
    "finding": "Written predictions exist for the graded selections listed on /cadence/predictions.html. Three sports carry no prediction because no selection in them reached medium confidence: golf (best outright 9.1%), greyhounds (best runner 50.4% off semi-final times alone) and Gaelic sports (no numeric strength input for both sides). Their strongest selections are still published with their prices and probabilities.",
    "source_url": "https://www.pgatour.com/leaderboard",
+   "status": "published"
+  },
+  {
+   "id": "CD-PR3",
+   "severity": "medium",
+   "category": "Repository overlap",
+   "item": "This desk is another overlapping dashboard",
+   "finding": "The repository already holds more than thirty desks covering the same brief. Adding /cadence/ makes that thirty-eight, and the ledger desk's own repository review flags the overlap as a high-severity finding (RR-02). /cadence/ is published in its own namespace, states its capture window and its shortfalls, and does not claim to supersede any other layer; a single authoritative desk is an integration decision, not a claim this session can make unilaterally.",
+   "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/ledger/repo-review.html",
    "status": "published"
   },
   {

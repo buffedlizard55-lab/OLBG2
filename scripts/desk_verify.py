@@ -120,6 +120,24 @@ def main():
             target = os.path.normpath(os.path.join(os.path.dirname(page), href.split("#")[0]))
             check(os.path.exists(target), f"{page}: broken local link {href}")
 
+    # --- every table row has the same number of cells as its header ---
+    for base, _, files in os.walk(OUT):
+        for fn in sorted(files):
+            if not fn.endswith(".html"):
+                continue
+            body = open(os.path.join(base, fn), encoding="utf-8").read()
+            for tbl in re.findall(r"<table>(.*?)</table>", body, re.S):
+                head = re.search(r"<thead>(.*?)</thead>", tbl, re.S)
+                if not head:
+                    continue
+                want = len(re.findall(r"<th[ >]", head.group(1)))
+                body_part = re.search(r"<tbody>(.*?)</tbody>", tbl, re.S)
+                if not body_part:
+                    continue
+                for r in re.findall(r"<tr>(.*?)</tr>", body_part.group(1), re.S):
+                    got = len(re.findall(r"<td[ >]", r))
+                    check(got == want, f"{fn}: row has {got} cells, header has {want}")
+
     # --- every data table row carries a source ---
     for name in ("matches.html", "lines.html", "olbg.html"):
         body = open(os.path.join(OUT, name), encoding="utf-8").read()

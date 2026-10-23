@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-10-23T19:41:36Z",
+  "generated_at": "2026-10-23T19:42:37Z",
   "note": "OLBG-listed upcoming events in the fifteen requested sports, each matched against an official source captured today.",
   "events": 135,
   "states": {
@@ -1057,6 +1057,100 @@
     "official_start_utc": "2026-10-24T00:00:00Z",
     "official_venue": "United Center",
     "time_basis": "UTC as published by the feed"
+   },
+   "our_markets": {
+    "win": [
+     {
+      "selection": "Blackhawks",
+      "market": "Win match (2-way)",
+      "prob": 0.3861,
+      "decimal": 2.59,
+      "american": "+159",
+      "in_band": true
+     },
+     {
+      "selection": "Canadiens",
+      "market": "Win match (2-way)",
+      "prob": 0.6139,
+      "decimal": 1.63,
+      "american": "-159",
+      "in_band": true
+     }
+    ],
+    "handicap": [
+     {
+      "selection": "Blackhawks -1.5",
+      "market": "Handicap",
+      "prob": 0.1294,
+      "decimal": 7.73,
+      "american": "+673",
+      "in_band": true
+     },
+     {
+      "selection": "Canadiens +1.5",
+      "market": "Handicap",
+      "prob": 0.8706,
+      "decimal": 1.15,
+      "american": "-673",
+      "in_band": false
+     }
+    ],
+    "total": [
+     {
+      "selection": "Over 5.5",
+      "market": "Match total",
+      "prob": 0.7141,
+      "decimal": 1.4,
+      "american": "-250",
+      "in_band": true
+     },
+     {
+      "selection": "Under 5.5",
+      "market": "Match total",
+      "prob": 0.2859,
+      "decimal": 3.5,
+      "american": "+250",
+      "in_band": true
+     },
+     {
+      "selection": "Over 6.5",
+      "market": "Match total",
+      "prob": 0.5677,
+      "decimal": 1.76,
+      "american": "-131",
+      "in_band": true
+     },
+     {
+      "selection": "Under 6.5",
+      "market": "Match total",
+      "prob": 0.4323,
+      "decimal": 2.31,
+      "american": "+131",
+      "in_band": true
+     }
+    ],
+    "_expected": {
+     "home": 2.83,
+     "away": 4.29,
+     "total": 7.12
+    },
+    "_regulation": {
+     "home": 0.2292,
+     "draw": 0.1327,
+     "away": 0.638
+    }
+   },
+   "our_inputs": {
+    "home": {
+     "record": "Chicago Blackhawks",
+     "rating": 1383.3
+    },
+    "away": {
+     "record": "Montr\u00e9al Canadiens",
+     "rating": 1508.9
+    },
+    "league_average": 3.11,
+    "home_edge": 45.0
    }
   },
   {
@@ -1148,6 +1242,100 @@
     "official_start_utc": "2026-10-24T01:00:00Z",
     "official_venue": "Ball Arena",
     "time_basis": "UTC as published by the feed"
+   },
+   "our_markets": {
+    "win": [
+     {
+      "selection": "Avalanche",
+      "market": "Win match (2-way)",
+      "prob": 0.4387,
+      "decimal": 2.28,
+      "american": "+128",
+      "in_band": true
+     },
+     {
+      "selection": "Lightning",
+      "market": "Win match (2-way)",
+      "prob": 0.5613,
+      "decimal": 1.78,
+      "american": "-128",
+      "in_band": true
+     }
+    ],
+    "handicap": [
+     {
+      "selection": "Avalanche -1.5",
+      "market": "Handicap",
+      "prob": 0.2696,
+      "decimal": 3.71,
+      "american": "+271",
+      "in_band": true
+     },
+     {
+      "selection": "Lightning +1.5",
+      "market": "Handicap",
+      "prob": 0.7304,
+      "decimal": 1.37,
+      "american": "-271",
+      "in_band": false
+     }
+    ],
+    "total": [
+     {
+      "selection": "Over 5.5",
+      "market": "Match total",
+      "prob": 0.6729,
+      "decimal": 1.49,
+      "american": "-206",
+      "in_band": true
+     },
+     {
+      "selection": "Under 5.5",
+      "market": "Match total",
+      "prob": 0.3271,
+      "decimal": 3.06,
+      "american": "+206",
+      "in_band": true
+     },
+     {
+      "selection": "Over 6.5",
+      "market": "Match total",
+      "prob": 0.52,
+      "decimal": 1.92,
+      "american": "-108",
+      "in_band": true
+     },
+     {
+      "selection": "Under 6.5",
+      "market": "Match total",
+      "prob": 0.48,
+      "decimal": 2.08,
+      "american": "+108",
+      "in_band": true
+     }
+    ],
+    "_expected": {
+     "home": 3.37,
+     "away": 3.43,
+     "total": 6.8
+    },
+    "_regulation": {
+     "home": 0.4123,
+     "draw": 0.156,
+     "away": 0.4316
+    }
+   },
+   "our_inputs": {
+    "home": {
+     "record": "Colorado Avalanche",
+     "rating": 1550.0
+    },
+    "away": {
+     "record": "Tampa Bay Lightning",
+     "rating": 1637.8
+    },
+    "league_average": 3.11,
+    "home_edge": 45.0
    }
   },
   {

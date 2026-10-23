@@ -1,0 +1,218 @@
+{
+ "meta": {
+  "generated_for": "2026-10-23",
+  "desk": "signal (session 6b10ecda)",
+  "matches": 101,
+  "priced": 48
+ },
+ "flags": [
+  {
+   "id": "SG-MLB1",
+   "sport": "Baseball",
+   "subject": "Run distribution",
+   "detail": "Run totals are priced from a Poisson distribution; real baseball run scoring is slightly over-dispersed, so totals and run-line prices are marginally conservative at the extremes.",
+   "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-28",
+   "severity": "low"
+  },
+  {
+   "id": "SG-BK1",
+   "sport": "Basketball",
+   "subject": "NBA fixtures unavailable",
+   "detail": "Three official NBA endpoints were attempted (cdn.nba.com todaysScoreboard, stats.nba.com scoreboardv3, core-api.nba.com gamecardfeed); all returned HTTP 500 or were refused through the fetch proxy, so no NBA fixture is published today. Basketball coverage is EuroLeague only.",
+   "source_url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-BK2",
+   "sport": "Basketball",
+   "subject": "Round 8 kick-off times",
+   "detail": "EuroLeague's feed serves two clock fields per fixture without a timezone label; the calendar date is published and the raw time is shown as served, not converted to UTC.",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "severity": "low"
+  },
+  {
+   "id": "SG-RL1",
+   "sport": "Rugby League",
+   "subject": "One- and two-match samples drive every price",
+   "detail": "The Rugby League World Cup is two rounds old, so each nation has one or two official results. Differentials are capped at +/-30 points and shrunk towards zero, but Australia v Fiji still prices Fiji as the side with the stronger published differential. No world ranking or squad list was readable to temper that, so the row carries this flag.",
+   "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+   "severity": "high"
+  },
+  {
+   "id": "SG-RU1",
+   "sport": "Rugby Union",
+   "subject": "PREM standings not readable",
+   "detail": "https://www.premrugby.com/standings renders its league table client-side and served no table rows, so league points, points for and points against could not be used. Rugby union prices rest on published last-three form plus a flat home edge and are deliberately close to even money.",
+   "source_url": "https://www.premrugby.com/standings",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-TZ1",
+   "sport": "Rugby Union / Rugby League / Darts",
+   "subject": "Kick-off times rendered in the viewer's timezone",
+   "detail": "premrugby.com, nrl.com and olbg.com all render kick-off times in the viewer's local zone. The fetch proxy resolved to US Eastern (UTC-4), so every time on this desk was converted with UTC = served time + 4h. UK readers should treat the UTC column as authoritative.",
+   "source_url": "https://www.premrugby.com/fixtures-results?competition=gallagher-prem&round=4",
+   "severity": "low"
+  },
+  {
+   "id": "SG-RU2",
+   "sport": "Rugby Union",
+   "subject": "Sixth Round 4 fixture",
+   "detail": "The PREM Round 4 page listed six fixtures; five were captured first-hand with form strings. The sixth row was truncated in the captured chunk and is therefore not published rather than being reconstructed.",
+   "source_url": "https://www.premrugby.com/fixtures-results?competition=gallagher-prem&round=4",
+   "severity": "low"
+  },
+  {
+   "id": "SG-HB1",
+   "sport": "Handball",
+   "subject": "No club ratings published",
+   "detail": "The EHF match calendar lists fixtures but no club standings, ratings or head-to-head records. Only the one tie with an official first-leg result (Kur 26-38 MRK Sloga Doboj) carries a numeric input; the other sixteen fixtures are published with blank selections.",
+   "source_url": "https://www.eurohandball.com/en/",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-SN1",
+   "sport": "Snooker",
+   "subject": "Undetermined participants",
+   "detail": "Several Northern Ireland Open and International Championship ties still list 'Winner of match n' or 'Wildcard n'. Those rows are published as fixtures with blank selections.",
+   "source_url": "https://www.wst.tv/",
+   "severity": "low"
+  },
+  {
+   "id": "SG-SN2",
+   "sport": "Snooker",
+   "subject": "Ranking table truncated at 36th place",
+   "detail": "The captured table runs to 36th place (Jackson Page, GBP 198,500). Any player outside the top 36 therefore has no captured ranking figure; where such a player appears in a priced match, GBP 198,500 is used as a published upper bound on their ranking money and the row is flagged SG-SN2.",
+   "source_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-SN3",
+   "sport": "Snooker",
+   "subject": "Ranking money as the only strength input",
+   "detail": "Ranking prize money is a two-year rolling figure, not a form measure, and match length (best of 11 in the Belfast semi-finals) is not priced in separately. Snooker prices are therefore shaded towards the middle.",
+   "source_url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+   "severity": "low"
+  },
+  {
+   "id": "SG-CR1",
+   "sport": "Cricket",
+   "subject": "Unlabelled start times",
+   "detail": "cricket.com.au prints start times as 'your time' in the viewer's zone; the served zone could not be confirmed, so start times are left blank and only the published calendar date is used. Flagged SG-CR1.",
+   "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "severity": "low"
+  },
+  {
+   "id": "SG-CR2",
+   "sport": "Cricket",
+   "subject": "Truncated date for India Women v Zimbabwe Women 2nd ODI",
+   "detail": "The calendar date for the second women's ODI was cut off in the captured chunk; the fixture is published without a confirmed date rather than with an assumed one.",
+   "source_url": "https://www.cricket.com.au/matches/CA:40394/india-women-zimbabwe-women-india-v-zimbabwe-odis-2026-women",
+   "severity": "low"
+  },
+  {
+   "id": "SG-CR3",
+   "sport": "Cricket",
+   "subject": "No published strength inputs for four fixtures",
+   "detail": "Cricket Australia's match list publishes fixtures but no standings or net run rate, and the ICC fixtures page is client-side rendered. Only the women's ODI series, where an official first-match result exists, carries a price.",
+   "source_url": "https://www.icc-cricket.com/fixtures-results",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-GO1",
+   "sport": "Golf",
+   "subject": "Conditional outright field",
+   "detail": "Only the top 25 after 36 holes were captured from the official leaderboard. Rather than invent a probability for the rest of the field, golf prices are published as conditional on the winner coming from those 25 players and are labelled as such on every row.",
+   "source_url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-GO2",
+   "sport": "Golf",
+   "subject": "No two-way match market",
+   "detail": "There is no head-to-head golf market this week on the official schedule, so golf contributes one outright market rather than five match previews.",
+   "source_url": "https://www.europeantour.com/dpworld-tour/schedule/",
+   "severity": "low"
+  },
+  {
+   "id": "SG-MR1",
+   "sport": "Motor Racing",
+   "subject": "Standings table truncated at P8",
+   "detail": "The official drivers' standings chunk that was read first-hand ends at Isack Hadjar in eighth. Drivers below that have no captured points total, so the race-winner market is published as conditional on the top eight.",
+   "source_url": "https://www.formula1.com/en/results/2026/drivers",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-MR2",
+   "sport": "Motor Racing",
+   "subject": "No grid or practice data",
+   "detail": "Free practice and qualifying results for round 18 were not published at capture time, so the price uses season-long championship points only and cannot react to weekend pace.",
+   "source_url": "https://www.formula1.com/en/racing/2026",
+   "severity": "low"
+  },
+  {
+   "id": "SG-GA1",
+   "sport": "Gaelic Sports",
+   "subject": "Single fixture, no numeric inputs",
+   "detail": "The GAA national fixtures page listed exactly one fixture in the window - the Shinty-Hurling International final - and publishes no form, table or head-to-head data for it. The fixture is listed with a blank selection.",
+   "source_url": "https://www.gaa.ie/fixtures-results",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-DA1",
+   "sport": "Darts",
+   "subject": "PDC site unreadable through the fetch proxy",
+   "detail": "www.pdc.tv/tournaments, www.pdc.tv/live-scores and www.pdc.tv/calendar all return cookie-consent markup only through the fetch proxy (8, 7 and 7 chunks inspected). No PDC-published draw, averages or Order of Merit figures could be read, so these darts rows carry an operator source rather than a governing-body source and no originated price is published.",
+   "source_url": "https://www.pdc.tv/calendar/",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-GH1",
+   "sport": "Greyhounds",
+   "subject": "No runners published",
+   "detail": "The GBGB open-race calendar publishes track, distance, category and grade but no runner names, trap numbers or race times in the served HTML, and the GBGB homepage module carries completed results only. With no runners there is no two-runner or field market to price, so greyhound rows are published as fixtures with blank selections.",
+   "source_url": "https://www.gbgb.org.uk/racing/open-races/",
+   "severity": "medium"
+  },
+  {
+   "id": "SG-VB1",
+   "sport": "Volleyball",
+   "subject": "No readable fixture list",
+   "detail": "No forward volleyball fixture list could be read from an official source: https://championsleague.cev.eu/en/calendar/ returns Page Not Found, https://www.plusliga.pl/games.html redirects to a different league's completed results, and the CEV home page exposes news articles only. Volleyball therefore has zero published matches today and zero selections rather than an inferred list.",
+   "source_url": "https://www.cev.eu/",
+   "severity": "high"
+  },
+  {
+   "id": "SG-TE1",
+   "sport": "Tennis",
+   "subject": "No semi-final line-up was confirmable",
+   "detail": "The ATP scoreboard published two quarter-finals per event at capture time: Medvedev, Cerundolo, Griekspoor and Paul had qualified, Bublik v Khachanov and Fritz v Altmaier were still on court. The bracket positions that pair those winners are only shown in the deeper draw chunks, which were not read first-hand, so no semi-final pairing is asserted and no tennis price is published today. Completed quarter-final results are published as results, not as selections.",
+   "source_url": "https://www.atptour.com/en/scores/current",
+   "severity": "high"
+  },
+  {
+   "id": "SG-TE2",
+   "sport": "Tennis",
+   "subject": "Seeds captured but not used as a price input",
+   "detail": "Tournament seedings were read (Medvedev 1, Lehecka 2, Bublik 3, Cerundolo 3, Paul 4, Fritz 2, Khachanov 5). Seeds on their own are an ordinal, not a strength measure, and no ATP ranking-points table was captured, so no tennis price is originated from them.",
+   "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/top-seeds",
+   "severity": "low"
+  },
+  {
+   "id": "SG-INJ1",
+   "sport": "All sports",
+   "subject": "No official injury feed was readable",
+   "detail": "None of the official sources captured today publish a machine-readable injury or availability list for the fixtures covered here. Write-ups therefore state only what the official source published about availability, and never assert an injury that has not been read first-hand.",
+   "source_url": "https://www.olbg.com/",
+   "severity": "medium"
+  },
+  {
+   "id": "CR-01",
+   "sport": "Repository",
+   "subject": "Unresolved merge-conflict markers in COORDINATION.md",
+   "detail": "COORDINATION.md on main contains three unresolved conflict regions (around lines 3216-3307, 3437-3549 and 3609-3628, the last tagged '>>>>>>> 140baf3'). The file is append-only and shared by concurrent sessions, so this desk logged the defect rather than rewriting another session's text.",
+   "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md",
+   "severity": "high"
+  }
+ ]
+}

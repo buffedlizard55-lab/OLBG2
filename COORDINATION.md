@@ -3973,3 +3973,77 @@ session's scope.
 "Validate Pages content" and "Deploy Pages"; GitHub Pages reports `status: built` for
 https://buffedlizard55-lab.github.io/OLBG2/, and `/liveboard/` was fetched live after the deploy and
 rendered the board (15 sports, 133 fixtures, 10 high grades, 2 in band, 14 predictions, 20 flags).
+## Session `arena/6b10ecda-olbg2` — CLAIM: `/signal/` 2026-10-23 15-sport desk (OLBG reverse-engineering, first-hand official capture, multi-market origination, in-band high-confidence predictions, repo review)
+
+- **Session ID:** `arena/6b10ecda-olbg2` · **Branch:** `arena/6b10ecda-olbg2` (branch name fixed by the Arena harness; the `session-<id>/<task>` convention in the brief cannot be honoured — recorded here as a protocol deviation).
+- **Claimed:** 2026-10-23 16:20 UTC, before any implementation edit.
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, `origin/main` = `2999cc0`, PR #139):
+  - `arena/0006d3c3-olbg2` — claimed 16:17Z — owns `meridian/**`, `data/meridian/**`, `scripts/meridian_*.py`, `tests/test_meridian_0006d3c3.py`, `research/meridian-0006d3c3.md`.
+  - `arena/8226c94a-olbg2` — claimed 16:16Z — owns `monitor/**`, `data/monitor/**`, `scripts/monitor_*.py`, `research/monitor-8226c94a.md`, `tests/test_monitor.py` **and the shared root integration scope** (`scripts/build_site.py`, generated root pages, `sports/**`, `.github/workflows/*.yml`, `README.md`).
+  - `arena/33e9eee7-olbg2` — claimed 16:15Z — owns `focus/**`, `data/focus/**`, `scripts/focus_*.py`, `tests/test_focus_33e9eee7.py`, `research/focus-33e9eee7.md`.
+- **Strict non-overlapping file scope for this session (nothing else is touched):**
+  `signal/**`, `data/signal/**`, `scripts/signal_*.py`, `tests/test_signal_6b10ecda.py`, `research/signal-6b10ecda.md`, and append-only additions to `COORDINATION.md`.
+  Shared root files are claimed by `8226c94a`; every change this session would like there is **logged below as a request, not actioned**.
+- **Sport scope (exactly the 15 named in the brief):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League. Soccer/Football, American Football, Horse Racing, Boxing/UFC/MMA, Aussie Rules, eSports, Hurling-only specials and Specials markets are out of scope.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| S1 | Board read, live concurrent-branch scan, claim, immediate commit + push | in progress | `arena/6b10ecda-olbg2` | `COORDINATION.md` (append-only) |
+| S2 | OLBG.com reverse-engineering (taxonomy, URL schema, market types, tip structure) for 2026-10-23 + line-by-line review of the merged repo | unclaimed→this session | `research/signal-6b10ecda.md`, `data/signal/olbg_taxonomy.json`, `data/signal/repo_review.json` |
+| S3 | First-hand official governing-body capture for 2026-10-23 and upcoming fixtures across the 15 sports | unclaimed→this session | `scripts/signal_seed.py`, `data/signal/inputs.json`, `data/signal/sources.json` |
+| S4 | Multi-market origination (match winner, handicap/spread, totals, outrights), confidence labels, strict in-band high gate (p ≥ 0.70 AND fair American odds within −250…+10000) | unclaimed→this session | `scripts/signal_model.py`, `data/signal/matches.json`, `data/signal/lines.json` |
+| S5 | Unique ≥30-word human predictions for the top picks (target 5 per sport where in-band picks exist), sourced only from official pages | unclaimed→this session | `scripts/signal_predictions.py`, `data/signal/predictions.json`, `data/signal/flagged.json` |
+| S6 | `/signal/` dashboard: executive summary, all-matches table, lines, picks, 15 sport subpages, flagged-for-review, sources, methodology, repo review | unclaimed→this session | `scripts/signal_build.py`, `scripts/signal_verify.py`, `signal/**`, `tests/test_signal_6b10ecda.py` |
+| S7 | Rebase on `origin/main`, full repo test suite + link audit, PR → merge, confirm Pages deploy, log result | unclaimed→this session | `COORDINATION.md` (append-only) |
+
+**Rule this session follows:** no value is published without a first-hand read of an official page in this session; anything that cannot be read is left blank and listed on `/signal/flagged.html` with the endpoint that failed.
+
+---
+
+## Session `6b10ecda` — `/signal/` 15-sport desk — STATUS UPDATE (2026-10-23 ~16:50Z)
+
+| Task | Status | Owner | Files touched |
+| --- | --- | --- | --- |
+| S1 capture official data for the 15 in-scope sports | done | `6b10ecda` | `data/signal/captures/*.json` (19 files) |
+| S2 originate own prices for every available market | done | `6b10ecda` | `scripts/signal_model.py`, `scripts/signal_predictions.py` |
+| S3 write 30+ word previews for the strongest picks | done (34 write-ups) | `6b10ecda` | `data/signal/prose.json` |
+| S4 build the dashboard, 15 sport pages and support pages | done | `6b10ecda` | `signal/**` |
+| S5 self-audit + automated tests | done (750 checks, 14 tests) | `6b10ecda` | `scripts/signal_verify.py`, `tests/test_signal_6b10ecda.py` |
+| S6 research / reverse-engineering notes | done | `6b10ecda` | `research/signal-6b10ecda.md` |
+| S7 PR, merge, Pages confirmation | in progress | `6b10ecda` | this file |
+
+**Published:** `https://buffedlizard55-lab.github.io/OLBG2/signal/index.html`
+(dashboard, picks, write-ups, all matches, flagged, sources, verification, method, 15 sport pages).
+
+**Numbers:** 101 fixtures published, 48 priced selections, 34 written previews (min 59 words),
+26 flags, 25 official sources. 481/481 repository tests pass; `scripts/integration_audit.py`
+reports 0 cross-layer link errors.
+
+**Sources used** (all read first-hand this session): NHL stats + web API; MLB Stats API;
+EuroLeague `api-live.euroleague.net` schedules/standings; NRL.com RLWC draw rounds 1–2;
+premrugby.com Round 4; wst.tv fixtures + full world ranking; eurohandball.com calendar;
+europeantour.com schedule + Genesis Championship leaderboard; formula1.com calendar + drivers'
+standings; cricket.com.au `/matches?isCompleted=0`; gaa.ie fixtures; gbgb.org.uk open races;
+atptour.com current scores + draw index; cev.eu; olbg.com (taxonomy + darts fixtures, labelled as
+an operator source). Full table: `/signal/sources.html`.
+
+**Irregularities raised** (all on `/signal/flagged.html` with source links):
+`CR-01` unresolved git conflict markers in this file on `main` (≈ lines 3216–3307, 3437–3549,
+3609–3628, last tagged `>>>>>>> 140baf3`) — logged, not repaired, because the file is append-only
+and shared; `SG-BK1` three NBA endpoints refused/HTTP 500; `SG-DA1` pdc.tv serves cookie markup only;
+`SG-VB1` no readable CEV fixture list; `SG-GH1` GBGB publishes no runners; `SG-TE1` no ATP
+semi-final line-up was confirmable; `SG-RU1` premrugby standings render client-side; `SG-SN2`
+ranking table truncated at 36th place (bounded figures used, prices stated as floors); `SG-RL1`
+one-match World Cup samples put Fiji above Australia — published as the data reads, flagged;
+`SG-TZ1` three official sites render kick-offs in the viewer's timezone (converted at UTC = served
++ 4h); `SG-INJ1` no official injury feed was readable, so no write-up asserts an injury.
+
+**Interpretation note:** "high confidence (>70%)" and "price between -250 and +10000" intersect at
+70.0%–71.43%. The dashboard publishes Tier A (inside that window — empty today and said so),
+Tier B (above 70%, shorter than -250) and Tier C (strongest in-band selections), with an
+in-band marker on every row.
+
+**Request to the root integration owner (session `8226c94a`, no action taken by this session):**
+please add a link to `/signal/index.html` from the root dashboard navigation when convenient.
+This session did not edit `index.html`, `scripts/build_site.py`, `sports/**`, `README.md` or any
+workflow, per the disjoint-scope rule.

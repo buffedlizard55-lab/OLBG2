@@ -1,0 +1,185 @@
+{
+ "meta": {
+  "generated_for": "2026-10-23",
+  "desk": "signal (session 6b10ecda)",
+  "matches": 101,
+  "priced": 48
+ },
+ "sources": [
+  {
+   "key": "mlb-schedule",
+   "name": "MLB Stats API - schedule",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-28",
+   "sport": "Baseball",
+   "used_for": "World Series schedule and 2026 regular-season run totals"
+  },
+  {
+   "key": "mlb-standings_al",
+   "name": "MLB Stats API - standings_al",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "sport": "Baseball",
+   "used_for": "World Series schedule and 2026 regular-season run totals"
+  },
+  {
+   "key": "mlb-standings_nl",
+   "name": "MLB Stats API - standings_nl",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+   "sport": "Baseball",
+   "used_for": "World Series schedule and 2026 regular-season run totals"
+  },
+  {
+   "key": "el-schedule",
+   "name": "EuroLeague official feed - Round 8 schedule",
+   "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "sport": "Basketball",
+   "used_for": "fixtures, venues"
+  },
+  {
+   "key": "el-standings",
+   "name": "EuroLeague official feed - standings after Round 7",
+   "url": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026&gameNumber=7",
+   "sport": "Basketball",
+   "used_for": "games played, wins, points for, points against"
+  },
+  {
+   "key": "ca-matches",
+   "name": "Cricket Australia official live & upcoming matches",
+   "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "sport": "Cricket",
+   "used_for": "fixture list, venues, official results"
+  },
+  {
+   "key": "olbg-darts",
+   "name": "OLBG darts event index (operator source, not a governing body)",
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "sport": "Darts",
+   "used_for": "fixture list and event ids"
+  },
+  {
+   "key": "gaa-fixtures",
+   "name": "GAA official fixtures & results",
+   "url": "https://www.gaa.ie/fixtures-results",
+   "sport": "Gaelic Sports",
+   "used_for": "fixture list"
+  },
+  {
+   "key": "dpwt-leaderboard",
+   "name": "DP World Tour official leaderboard - Genesis Championship",
+   "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "sport": "Golf",
+   "used_for": "36-hole scores for the captured top 25"
+  },
+  {
+   "key": "dpwt-schedule",
+   "name": "DP World Tour official schedule",
+   "url": "https://www.europeantour.com/dpworld-tour/schedule/",
+   "sport": "Golf",
+   "used_for": "event status, week 40 of 42"
+  },
+  {
+   "key": "gbgb-open",
+   "name": "GBGB official open races calendar",
+   "url": "https://www.gbgb.org.uk/racing/open-races/",
+   "sport": "Greyhounds",
+   "used_for": "open race meetings for 23 October 2026"
+  },
+  {
+   "key": "ehf-calendar",
+   "name": "European Handball Federation official calendar",
+   "url": "https://www.eurohandball.com/en/",
+   "sport": "Handball",
+   "used_for": "fixtures, first-leg results"
+  },
+  {
+   "key": "nhl-sched-2026-10-23",
+   "name": "NHL Web API - schedule 2026-10-23",
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "sport": "Ice Hockey",
+   "used_for": "fixture list, start times, venues"
+  },
+  {
+   "key": "nhl-sched-2026-10-24",
+   "name": "NHL Web API - schedule 2026-10-24",
+   "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "sport": "Ice Hockey",
+   "used_for": "fixture list, start times, venues"
+  },
+  {
+   "key": "nhl-summary",
+   "name": "NHL Stats API - team summary 2026-27",
+   "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+   "sport": "Ice Hockey",
+   "used_for": "goals for / goals against / points% per team"
+  },
+  {
+   "key": "f1-calendar",
+   "name": "Formula 1 official race calendar 2026",
+   "url": "https://www.formula1.com/en/racing/2026",
+   "sport": "Motor Racing",
+   "used_for": "round order and dates"
+  },
+  {
+   "key": "f1-standings",
+   "name": "Formula 1 official drivers' standings 2026",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "sport": "Motor Racing",
+   "used_for": "championship points after round 17"
+  },
+  {
+   "key": "rlwc-r1",
+   "name": "NRL.com official RLWC 2026 draw - Round 1",
+   "url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+   "sport": "Rugby League",
+   "used_for": "Round 1 results"
+  },
+  {
+   "key": "rlwc-r2",
+   "name": "NRL.com official RLWC 2026 draw - Round 2",
+   "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "sport": "Rugby League",
+   "used_for": "Round 2 fixtures and results"
+  },
+  {
+   "key": "prem-r4",
+   "name": "PREM Rugby official fixtures & results, Round 4",
+   "url": "https://www.premrugby.com/fixtures-results?competition=gallagher-prem&round=4",
+   "sport": "Rugby Union",
+   "used_for": "fixtures, venues, last-three form"
+  },
+  {
+   "key": "wst-fixtures",
+   "name": "World Snooker Tour official live & upcoming matches",
+   "url": "https://www.wst.tv/",
+   "sport": "Snooker",
+   "used_for": "fixtures, rounds, match centres"
+  },
+  {
+   "key": "wst-rankings",
+   "name": "World Snooker Tour official world ranking list",
+   "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+   "sport": "Snooker",
+   "used_for": "ranking prize money per player"
+  },
+  {
+   "key": "atp-draw",
+   "name": "ATP Tour official tournament draw index",
+   "url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+   "sport": "Tennis",
+   "used_for": "event list and draw structure"
+  },
+  {
+   "key": "atp-scores",
+   "name": "ATP Tour official scoreboard",
+   "url": "https://www.atptour.com/en/scores/current",
+   "sport": "Tennis",
+   "used_for": "quarter-final results and live states"
+  },
+  {
+   "key": "cev-home",
+   "name": "European Volleyball Confederation official site",
+   "url": "https://www.cev.eu/",
+   "sport": "Volleyball",
+   "used_for": "confirmation that CEV Champions League qualification is under way"
+  }
+ ]
+}

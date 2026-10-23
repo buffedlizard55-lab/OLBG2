@@ -1,0 +1,44 @@
+{
+  "source_urls": {
+    "schedule_round8": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+    "standings_after_round7": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026&gameNumber=7"
+  },
+  "source_name": "EuroLeague Basketball official feed (api-live.euroleague.net)",
+  "captured_utc": "2026-10-23T17:08:00Z",
+  "nba_note": "cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json returned HTTP 500 twice, stats.nba.com/stats/scoreboardv3 and core-api.nba.com/cp/api/v1.9/feeds/gamecardfeed also failed through the proxy, so no NBA fixtures are published. Flag SG-BK1.",
+  "flag_id": "SG-BK1",
+  "fixtures_round8": [
+    {"game_code": "E2026_72", "date": "2026-10-27", "time_as_served": "17:00", "home": "Dubai Basketball", "away": "Paris Basketball", "venue": "Coca-Cola Arena"},
+    {"game_code": "E2026_71", "date": "2026-10-27", "time_as_served": "20:00", "home": "Crvena Zvezda Meridianbet Belgrade", "away": "Maccabi Rapyd Tel Aviv", "venue": "Belgrade Arena"},
+    {"game_code": "E2026_74", "date": "2026-10-27", "time_as_served": "20:00", "home": "FC Bayern Munich", "away": "FC Barcelona", "venue": "SAP Garden"},
+    {"game_code": "E2026_76", "date": "2026-10-27", "time_as_served": "20:15", "home": "Panathinaikos AKTOR Athens", "away": "Armani Olimpia Milan", "venue": "Telekom Center Athens"},
+    {"game_code": "E2026_75", "date": "2026-10-27", "time_as_served": "20:30", "home": "Valencia Basket", "away": "Fenerbahce Tarfin Istanbul", "venue": "Roig Arena"},
+    {"game_code": "E2026_73", "date": "2026-10-27", "time_as_served": "21:00", "home": "Kosner Baskonia Vitoria-Gasteiz", "away": "Real Madrid", "venue": "Buesa Arena"},
+    {"game_code": "E2026_77", "date": "2026-10-28", "time_as_served": "19:00", "home": "Hapoel IBI Tel Aviv", "away": "Anadolu Efes Istanbul", "venue": "Arena Botevgrad"},
+    {"game_code": "E2026_79", "date": "2026-10-28", "time_as_served": "18:30", "home": "Besiktas Istanbul", "away": "Olympiacos Piraeus", "venue": "Turkcell Basketball Development Center"},
+    {"game_code": "E2026_78", "date": "2026-10-28", "time_as_served": "20:00", "home": "LDLC ASVEL Villeurbanne", "away": "Partizan Mozzart Bet Belgrade", "venue": "LDLC Arena"},
+    {"game_code": "E2026_80", "date": "2026-10-28", "time_as_served": "20:30", "home": "Virtus Bologna", "away": "Zalgiris Kaunas", "venue": "PalaDozza"}
+  ],
+  "standings_after_round7": [
+    {"rank": 1, "team": "Panathinaikos AKTOR Athens", "gp": 7, "w": 6, "l": 1, "pf": 613, "pa": 517, "diff": 96},
+    {"rank": 2, "team": "Fenerbahce Tarfin Istanbul", "gp": 6, "w": 5, "l": 1, "pf": 501, "pa": 447, "diff": 54},
+    {"rank": 3, "team": "Olympiacos Piraeus", "gp": 6, "w": 5, "l": 1, "pf": 564, "pa": 524, "diff": 40},
+    {"rank": 4, "team": "Hapoel IBI Tel Aviv", "gp": 7, "w": 5, "l": 2, "pf": 630, "pa": 601, "diff": 29},
+    {"rank": 5, "team": "Dubai Basketball", "gp": 7, "w": 5, "l": 2, "pf": 597, "pa": 584, "diff": 13},
+    {"rank": 6, "team": "Valencia Basket", "gp": 6, "w": 4, "l": 2, "pf": 583, "pa": 537, "diff": 46},
+    {"rank": 7, "team": "Real Madrid", "gp": 7, "w": 4, "l": 3, "pf": 667, "pa": 630, "diff": 37},
+    {"rank": 8, "team": "Crvena Zvezda Meridianbet Belgrade", "gp": 7, "w": 4, "l": 3, "pf": 560, "pa": 532, "diff": 28},
+    {"rank": 9, "team": "FC Barcelona", "gp": 7, "w": 4, "l": 3, "pf": 623, "pa": 606, "diff": 17},
+    {"rank": 10, "team": "Virtus Bologna", "gp": 7, "w": 4, "l": 3, "pf": 606, "pa": 608, "diff": -2},
+    {"rank": 11, "team": "Partizan Mozzart Bet Belgrade", "gp": 7, "w": 4, "l": 3, "pf": 541, "pa": 546, "diff": -5},
+    {"rank": 12, "team": "Anadolu Efes Istanbul", "gp": 7, "w": 3, "l": 4, "pf": 581, "pa": 590, "diff": -9},
+    {"rank": 13, "team": "Besiktas Istanbul", "gp": 7, "w": 3, "l": 4, "pf": 634, "pa": 644, "diff": -10},
+    {"rank": 14, "team": "Zalgiris Kaunas", "gp": 6, "w": 2, "l": 4, "pf": 490, "pa": 517, "diff": -27},
+    {"rank": 15, "team": "LDLC ASVEL Villeurbanne", "gp": 6, "w": 2, "l": 4, "pf": 527, "pa": 572, "diff": -45},
+    {"rank": 16, "team": "Maccabi Rapyd Tel Aviv", "gp": 7, "w": 2, "l": 5, "pf": 608, "pa": 653, "diff": -45},
+    {"rank": 17, "team": "FC Bayern Munich", "gp": 7, "w": 2, "l": 5, "pf": 612, "pa": 659, "diff": -47},
+    {"rank": 18, "team": "Paris Basketball", "gp": 6, "w": 1, "l": 5, "pf": 504, "pa": 545, "diff": -41},
+    {"rank": 19, "team": "Armani Olimpia Milan", "gp": 7, "w": 1, "l": 6, "pf": 585, "pa": 648, "diff": -63},
+    {"rank": 20, "team": "Kosner Baskonia Vitoria-Gasteiz", "gp": 7, "w": 1, "l": 6, "pf": 583, "pa": 649, "diff": -66}
+  ]
+}

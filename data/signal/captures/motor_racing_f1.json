@@ -1,0 +1,23 @@
+{
+  "source_urls": {
+    "calendar": "https://www.formula1.com/en/racing/2026",
+    "standings": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  "source_name": "Formula 1 official site",
+  "captured_utc": "2026-10-23T16:58:00Z",
+  "events": [
+    {"round": 18, "name": "United States Grand Prix", "dates": "23 - 25 OCT 2026", "status": "Next / race weekend in progress", "url": "https://www.formula1.com/en/racing/2026/united-states"},
+    {"round": 19, "name": "Mexico Grand Prix", "dates": "30 OCT - 01 NOV 2026", "status": "Upcoming", "url": "https://www.formula1.com/en/racing/2026/mexico"},
+    {"round": 20, "name": "Brazil Grand Prix", "dates": "06 - 08 NOV 2026", "status": "Upcoming", "url": "https://www.formula1.com/en/racing/2026/brazil"}
+  ],
+  "drivers_standings_after_round_17": [
+    ["Kimi Antonelli", "Mercedes", 340], ["George Russell", "Mercedes", 238], ["Lewis Hamilton", "Ferrari", 229],
+    ["Max Verstappen", "Red Bull Racing", 221], ["Charles Leclerc", "Ferrari", 215], ["Lando Norris", "McLaren", 201],
+    ["Oscar Piastri", "McLaren", 138], ["Isack Hadjar", "Red Bull Racing", 97]
+  ],
+  "race_winners_2026_from_calendar_page": {
+    "R1 Australia": "Russell", "R2 China": "Antonelli", "R3 Japan": "Antonelli", "R4 Miami": "Antonelli",
+    "R5 Canada": "Antonelli", "R6 Monaco": "Antonelli", "R7 Barcelona-Catalunya": "Hamilton"
+  },
+  "note": "Standings list truncated at P8 in the captured chunk; drivers below P8 are not published with points."
+}

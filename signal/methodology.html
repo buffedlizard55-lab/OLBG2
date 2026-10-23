@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method | Signal desk</title>
+<link rel="stylesheet" href="assets/signal.css">
+</head><body>
+<header class="top"><h1>Signal desk &mdash; Method</h1>
+<p>Own prices for 15 sports, built only from official sources. Generated 23 October 2026 &middot; session <code>arena/6b10ecda-olbg2</code></p></header>
+<nav><a href="index.html">Dashboard</a><a href="picks.html">Picks</a><a href="predictions.html">Write-ups</a><a href="matches.html">All matches</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="verification.html">Verification</a><a class="here" href="methodology.html">Method</a><a href="../index.html">OLBG2 home</a></nav>
+<main>
+<h2>How these prices are made</h2>
+<p class="note">Three rules sit above everything else on this desk. Official sources only. No value is
+ever filled in by assumption - if the governing body did not publish it, the cell stays blank and the
+row gets flagged. And no bookmaker price is ever an input, so every number here is ours.</p>
+<h3>The -250 to +10000 band</h3>
+<p class="note">The brief gives two instructions that overlap: treat a high-confidence selection as one
+implying better than a 70% chance, and focus on prices between -250 and +10000. A fair price of -250 is
+exactly 71.43%, so the intersection is the narrow window 70.0% to 71.43%. Rather than quietly widen it,
+the dashboard publishes three tiers: Tier A for selections inside the window, Tier B for selections
+above 70% that price shorter than -250, and Tier C for the strongest selections that satisfy the price
+band. Every table carries an "in band" marker so the distinction is never hidden.</p>
+<h3>Per-sport method</h3>
+<table><tr><th>Sport</th><th>Official input</th><th>How it becomes a price</th></tr>
+<tr><td>Ice Hockey</td><td>NHL team summary: goals for, goals against, games played</td>
+<td>Scoring rates shrunk towards the league mean, 5% home scoring edge, independent Poisson scorelines;
+a regulation tie is split 50/50 for the money line and resolved as a one-goal win for the puck line.</td></tr>
+<tr><td>Baseball</td><td>Official 2026 runs scored and allowed, final standings</td>
+<td>Pythagorean win rates at exponent 1.83, combined with log5 and an 8% home-odds edge; run totals from
+a Poisson approximation of each club's run environment.</td></tr>
+<tr><td>Basketball</td><td>EuroLeague standings after round 7: points for, against, games</td>
+<td>Per-game offence and defence averaged across the pairing, three points of home edge, normal margin
+with sigma 11.5 and totals with sigma 15.</td></tr>
+<tr><td>Rugby League</td><td>Official World Cup results, rounds 1 and 2</td>
+<td>Points differential per match, capped at 30 and shrunk by games/(games+2) because each nation has
+played once or twice; four points of home edge for a true home venue, none in Perth; sigma 16.</td></tr>
+<tr><td>Rugby Union</td><td>PREM fixtures page: last-three form strings</td>
+<td>3.5 points per win of form difference plus a flat five-point home edge, sigma 13. Deliberately
+cautious because the league table would not render.</td></tr>
+<tr><td>Handball</td><td>Official first-leg score of the only tie with a result</td>
+<td>First-leg margin, plus three goals for losing the away disadvantage and three for the home edge in
+leg two, sigma 7.</td></tr>
+<tr><td>Snooker</td><td>Official world ranking prize money</td>
+<td>Logistic comparison of the natural logarithms of ranking money, k = 1.1. Players outside the
+captured top 36 are bounded at the 36th-placed figure, so the favourite's number is a floor.</td></tr>
+<tr><td>Cricket</td><td>Official result of the first match of the series</td>
+<td>Unused overs converted at 5.3 runs each into a dominance figure, scaled at 0.0025 per run and
+capped at 0.80.</td></tr>
+<tr><td>Golf</td><td>Official 36-hole leaderboard</td>
+<td>Win weight = exp(-0.55 x strokes behind the lead) across the captured top 25, normalised. Published
+as conditional on the winner coming from that group.</td></tr>
+<tr><td>Motor Racing</td><td>Official drivers' standings after round 17</td>
+<td>Win weight = points^1.6 across the eight drivers published in the captured chunk, normalised and
+labelled conditional.</td></tr>
+<tr><td>Tennis, Darts, Greyhounds, Gaelic Sports, Volleyball</td><td>see the flagged page</td>
+<td>No official numeric input was obtainable today, so fixtures are published with blank selections
+rather than invented prices.</td></tr></table>
+<h3>Caps and guard rails</h3>
+<p class="note">Published probabilities are clamped to the range 5% to 95%: a single fixture always keeps
+variance that a season-long rate cannot see. Markets are published as fair prices with no overround, so
+the two sides of every two-way market add to 100%. Confidence is high at 70% or better, medium from 60%,
+low below that.</p>
+<h3>What we do not do</h3>
+<p class="note">We do not use community tip percentages, pundit opinion or bookmaker prices as inputs; we
+do not reconstruct a value that was truncated in a captured page; and we do not assert an injury or a
+team-sheet change that was not published by an official source. Where no availability information
+exists, the write-up says so.</p>
+</main>
+<footer>Every value on this desk comes from the official source linked in its row. Where an official
+source published nothing, the cell is left blank and the row is listed on the
+<a href="flagged.html">Flagged for review</a> page. Prices are our own fair prices with no
+overround and are published for analysis, not as advice. 18+.</footer>
+</body></html>

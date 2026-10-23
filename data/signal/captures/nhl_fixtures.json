@@ -1,0 +1,51 @@
+{
+  "source_urls": {
+    "2026-10-23": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+    "2026-10-24": "https://api-web.nhle.com/v1/score/2026-10-24"
+  },
+  "source_name": "NHL official web API (api-web.nhle.com)",
+  "captured_utc": "2026-10-23T16:30:00Z",
+  "games": [
+    {"id": 2026020166, "date": "2026-10-23", "startUTC": "2026-10-24T00:00:00Z", "away": "Montreal Canadiens", "home": "Chicago Blackhawks", "venue": "United Center", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026/10/23/2026020166"},
+    {"id": 2026020167, "date": "2026-10-23", "startUTC": "2026-10-24T01:00:00Z", "away": "Tampa Bay Lightning", "home": "Colorado Avalanche", "venue": "Ball Arena", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/tbl-vs-col/2026/10/23/2026020167"},
+    {"id": 2026020168, "date": "2026-10-24", "startUTC": "2026-10-24T17:00:00Z", "away": "Anaheim Ducks", "home": "Philadelphia Flyers", "venue": "Xfinity Mobile Arena", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168"},
+    {"id": 2026020169, "date": "2026-10-24", "startUTC": "2026-10-24T19:30:00Z", "away": "Los Angeles Kings", "home": "New Jersey Devils", "venue": "Prudential Center", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169"},
+    {"id": 2026020170, "date": "2026-10-24", "startUTC": "2026-10-24T23:00:00Z", "away": "San Jose Sharks", "home": "Boston Bruins", "venue": "TD Garden", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170"},
+    {"id": 2026020171, "date": "2026-10-24", "startUTC": "2026-10-24T23:00:00Z", "away": "New York Rangers", "home": "Ottawa Senators", "venue": "Canadian Tire Centre", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171"},
+    {"id": 2026020172, "date": "2026-10-24", "startUTC": "2026-10-24T23:00:00Z", "away": "Nashville Predators", "home": "Pittsburgh Penguins", "venue": "PPG Paints Arena", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172"},
+    {"id": 2026020173, "date": "2026-10-24", "startUTC": "2026-10-24T23:00:00Z", "away": "Buffalo Sabres", "home": "Washington Capitals", "venue": "Capital One Arena", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173"},
+    {"id": 2026020174, "date": "2026-10-24", "startUTC": "2026-10-24T23:00:00Z", "away": "Vegas Golden Knights", "home": "Columbus Blue Jackets", "venue": "Nationwide Arena", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174"},
+    {"id": 2026020175, "date": "2026-10-24", "startUTC": "2026-10-24T23:00:00Z", "away": "Carolina Hurricanes", "home": "St. Louis Blues", "venue": "Enterprise Center", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175"},
+    {"id": 2026020176, "date": "2026-10-24", "startUTC": "2026-10-24T23:00:00Z", "away": "Toronto Maple Leafs", "home": "Edmonton Oilers", "venue": "Rogers Place", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176"},
+    {"id": 2026020177, "date": "2026-10-24", "startUTC": "2026-10-25T01:00:00Z", "away": "Tampa Bay Lightning", "home": "Utah Mammoth", "venue": "Delta Center", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/24/2026020177"},
+    {"id": 2026020178, "date": "2026-10-24", "startUTC": "2026-10-25T02:00:00Z", "away": "Detroit Red Wings", "home": "Calgary Flames", "venue": "Scotiabank Saddledome", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/24/2026020178"},
+    {"id": 2026020179, "date": "2026-10-24", "startUTC": "2026-10-25T02:00:00Z", "away": "Minnesota Wild", "home": "Seattle Kraken", "venue": "Climate Pledge Arena", "state": "FUT", "gamecenter": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/24/2026020179"}
+  ],
+  "team_leaders_2026_10_24_feed": {
+    "ANA": {"goals": ["Beckett Sennecke", 5], "assists": ["Leo Carlsson", 9], "wins": ["Lukas Dostal", 3]},
+    "PHI": {"goals": ["Matvei Michkov", 6], "assists": ["Trevor Zegras", 5], "wins": ["Dan Vladar", 2]},
+    "LAK": {"goals": ["Artemi Panarin", 6], "assists": ["Brandt Clarke", 5], "wins": ["Darcy Kuemper", 2]},
+    "NJD": {"goals": ["Arseny Gritsyuk", 5], "assists": ["Jack Hughes", 8], "wins": ["Jake Allen", 4]},
+    "SJS": {"goals": ["Macklin Celebrini", 5], "assists": ["Macklin Celebrini", 9], "wins": ["Alex Nedeljkovic", 3]},
+    "BOS": {"goals": ["David Pastrnak", 6], "assists": ["David Pastrnak", 10], "wins": ["Jeremy Swayman", 6]},
+    "NYR": {"goals": ["Alexis Lafreniere", 8], "assists": ["Adam Fox", 14], "wins": ["Dylan Garand", 4]},
+    "OTT": {"goals": ["Tim Stutzle", 7], "assists": ["Tim Stutzle", 8], "wins": ["Linus Ullmark", 7]},
+    "NSH": {"goals": ["Ryan O'Reilly", 4], "assists": ["Roman Josi", 8], "wins": ["Juuse Saros", 3]},
+    "PIT": {"goals": ["Evgeni Malkin", 6], "assists": ["Erik Karlsson", 10], "wins": ["Arturs Silovs", 4]},
+    "BUF": {"goals": ["Tage Thompson", 5], "assists": ["Zach Benson", 6], "wins": ["Ukko-Pekka Luukkonen", 3]},
+    "WSH": {"goals": ["Alex Tuch", 5], "assists": ["Dylan Strome", 5], "wins": ["Logan Thompson", 4]},
+    "VGK": {"goals": ["Mark Stone", 8], "assists": ["Jack Eichel", 13], "wins": ["Carter Hart", 4]},
+    "CBJ": {"goals": ["Kent Johnson", 4], "assists": ["Zach Werenski", 6], "wins": ["Jet Greaves", 2]},
+    "CAR": {"goals": ["Sebastian Aho", 7], "assists": ["Jackson Blake", 10], "wins": ["Pyotr Kochetkov", 6]},
+    "STL": {"goals": ["Mason McTavish", 6], "assists": ["Dylan Holloway", 7], "wins": ["Joel Hofer", 4]},
+    "TOR": {"goals": ["Auston Matthews", 8], "assists": ["Auston Matthews", 10], "wins": ["Sergei Bobrovsky", 3]},
+    "EDM": {"goals": ["Leon Draisaitl", 10], "assists": ["Connor McDavid", 23], "wins": ["Devon Levi", 6]},
+    "TBL": {"goals": ["Brandon Hagel", 7], "assists": ["Nikita Kucherov", 9], "wins": ["Andrei Vasilevskiy", 5]},
+    "UTA": {"goals": ["Nick Schmaltz", 7], "assists": ["Mikhail Sergachev", 10], "wins": ["Karel Vejmelka", 5]},
+    "DET": {"goals": ["Alex DeBrincat", 6], "assists": ["Alex DeBrincat", 6], "wins": ["John Gibson", 3]},
+    "CGY": {"goals": ["Morgan Frost", 3], "assists": ["Joel Farabee", 5], "wins": ["Devin Cooley", 2]},
+    "MIN": {"goals": ["Kirill Kaprizov", 11], "assists": ["Quinn Hughes", 11], "wins": ["Jesper Wallstedt", 6]},
+    "SEA": {"goals": ["Frederick Gaudreau", 6], "assists": ["Chandler Stephenson", 8], "wins": ["Philipp Grubauer", 4]}
+  },
+  "records_from_feed_2026_10_24": {"ANA":"4-6-0","PHI":"3-6-3","LAK":"2-4-2","NJD":"6-4-0","SJS":"6-4-1","BOS":"8-2-1","NYR":"7-4-1","OTT":"7-4-0","NSH":"3-3-3","PIT":"4-6-1","BUF":"4-4-2","WSH":"5-4-0","VGK":"8-4-0","CBJ":"3-5-0","CAR":"8-2-2","STL":"5-4-1","TOR":"6-4-2","EDM":"8-1-1","TBL":"7-2-0","UTA":"7-4-0","DET":"4-3-3","CGY":"3-6-0","MIN":"6-3-2","SEA":"7-3-1"}
+}

@@ -4582,3 +4582,13 @@ and append-only coordination log. No source data or other desk layers are in sco
 - Commands: `python3 scripts/cadence_verify.py` — 11 groups pass, 0 errors (93 fixtures, 728 prices, 33 predictions); `python3 scripts/integration_audit.py` — 0 local-link errors; `python3 -m unittest discover -s tests -v` — **664 tests pass**; root rebuild completed; `git diff --check` clean.
 - Repository evidence URLs: `https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/`; OLBG hub `https://www.olbg.com/betting-tips`; price formula `scripts/cadence_model.py` (`offered_decimal = dec(p)/(1-margin)`, `offered_american = american(p*(1-margin))`). Full source ledger: [`cadence/sources.html`](cadence/sources.html).
 - Coverage target remains unmet in the checked-in snapshot: 33 predictions total; only Basketball, Cricket and Rugby League have five each; Golf, Greyhounds and Gaelic Sports have none. The report details per-sport fixture/pick/prediction counts. This is disclosed, not padded.
+
+### CI follow-up — regenerated repository-inventory artifacts
+
+PR #175's first `Validate Pages content` run reached the final drift gate and failed only because the new
+integration test increases the ledger repository-review test-module count from 45 to 46. As with the earlier
+Cadence integration note above, this is generated inventory, not an editorial change to ledger evidence. Ran the
+ledger owner's full unmodified pipeline (`ledger_seed.py` → `ledger_verify.py`); the only tracked deltas are
+`data/ledger/repo_review.json` and `ledger/repo-review.html`, both changing that count to 46. No ledger source,
+fixture, price, pick, prediction or finding was changed. These generated outputs are included so the required
+repository-wide drift gate can pass; recorded as a cross-scope regeneration for the ledger owner.

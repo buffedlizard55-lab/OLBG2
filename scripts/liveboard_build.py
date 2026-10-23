@@ -66,6 +66,10 @@ def page(title: str, body: str, active: str, depth: int = 0) -> str:
   Where an official number was not obtained, the value is blank and the row appears on
   <a href="{prefix}flagged.html">Flagged for review</a>.</p>
   <details><summary>Sports</summary><div class="sports">{sport_links}</div></details>
+  <p class="small muted" style="margin-top:1.2rem">Part of the wider research desk:
+  <a href="{prefix}../index.html">root dashboard</a> ·
+  <a href="{prefix}../integration.html">cross-layer review</a> ·
+  <a href="{prefix}../archive.html">earlier layers</a>.</p>
 </footer>
 </body>
 </html>

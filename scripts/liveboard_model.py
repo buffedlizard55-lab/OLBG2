@@ -213,7 +213,7 @@ def build():
             "events": len(sp["events"]), "priced": len(mine),
             "official_model_rows": sum(1 for r in mine if r["basis"] == "official-model"),
             "high": sum(1 for r in mine if r["confidence"] == "high"),
-            "high_in_band": sum(1 for r in mine if r["confidence"] == "high" and r["in_band"] and r["is_match"]),
+            "high_in_band": sum(1 for r in mine if r["confidence"] == "high" and r["in_band"]),
             "status": sp["status"],
         }
 
@@ -271,7 +271,7 @@ def build():
     (DATA / "lines.json").write_text(json.dumps(out, indent=1) + "\n")
     print(f"rows {len(rows)}  fair lines {len(fair_lines)}  unlined {len(unlined)}")
     print(f"high {sum(1 for r in rows if r['confidence']=='high')}  "
-          f"high+in-band(matches) {sum(1 for r in rows if r['confidence']=='high' and r['in_band'] and r['is_match'])}")
+          f"high+in-band {sum(1 for r in rows if r['confidence']=='high' and r['in_band'])}")
     for s in SPORTS:
         c = coverage[s]
         print(f"  {s:15} events {c['events']:3} priced {c['priced']:3} official {c['official_model_rows']:2} "

@@ -559,7 +559,7 @@ and its <a href="olbg/flagged.html">review queue</a> for that provenance. Do not
     <li>{blank_venues} venue values are blank; no venue was inferred.</li>
     <li>{publisher_time} rows retain publisher time strings without an invented UTC conversion.</li>
     <li>{matches['blank']} fixtures have blank prices with stated reasons.</li>
-    <li>{review_count} current-desk review items plus the final integration findings remain published.</li>
+    <li>{review_count} current-desk review items plus the final integration and independent audit findings remain published.</li>
   </ul></div>
 </div>
 <div class="cta"><a class="button" href="integration.html">Open final integration findings</a>
@@ -567,6 +567,12 @@ and its <a href="olbg/flagged.html">review queue</a> for that provenance. Do not
 <a class="button" href="research/integration-f0ee1b4a.md">Read the 93-row audit</a></div>
 """
     return page("15-sport executive dashboard", "cadence/index.html", body)
+
+
+INDEPENDENT_AUDIT_ROWS = """
+<tr id="AUDIT-GREY-01"><td class="nowrap">AUDIT-GREY-01</td><td><span class="badge medium">medium</span></td><td><strong>Source/year mismatch.</strong> The stored capture identifies the Scurry Gold Cup and Oaks finals as 24 October 2026 fixtures, but cites a GBGB URL whose path is explicitly <code>2025-category-one-schedule</code>. This checkout contains a summary capture, not the official page response, so the source-to-claim match was not confirmed. Treat the dates and event details as unverified until a current official 2026 schedule is checked.</td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener">GBGB page cited</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/cadence/captures/gbgb_schedule.json">Stored capture</a></td></tr>
+<tr id="AUDIT-ODDS-02"><td class="nowrap">AUDIT-ODDS-02</td><td><span class="badge medium">medium</span></td><td><strong>Displayed offered prices are constructed, not captured market quotes.</strong> The cadence generator sets <code>offered_decimal</code> and <code>offered_american</code> by applying a code-defined margin to its own probability. The repository has no saved OLBG odds response for these lines. Use the desk's probabilities and fair prices as originated estimates only; do not read the offered column or odds-window label as current bookmaker availability. Capture and link the actual OLBG market price if that is required for selection eligibility.</td><td><a href="https://www.olbg.com/betting-tips" rel="noopener">OLBG betting-tips hub</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/cadence_model.py">Price-generation code</a></td></tr>
+"""
 
 
 def build_current_integration_findings() -> str:
@@ -597,6 +603,10 @@ Zero currently readable active OLBG listings were established in the integration
 </div>
 <div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Status</th><th>Finding</th><th>Evidence / review</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>
+<h2>Independent audit additions <span class="pill">2 open items · 23 Oct 2026</span></h2>
+<p class="sub">These current-desk findings arrived during final integration. They remain open and are preserved here as well as on the <a href="flagged.html">root review archive</a>; neither is represented as a confirmed false fact.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Severity</th><th>Finding and review action</th><th>Sources</th></tr></thead>
+<tbody>{INDEPENDENT_AUDIT_ROWS}</tbody></table></div>
 <p><a class="button" href="research/integration-f0ee1b4a.md">Read all 93 row checks and external spot-check notes</a>
 <a class="button" href="cadence/flagged.html">Current desk review</a></p>
 <details><summary><strong>Open the older cross-layer audit (historical snapshots)</strong></summary>
@@ -1013,8 +1023,7 @@ depends on a source that does not fully support it. <em>medium</em> means a valu
 {sections[4]}
 <h2>Independent audit additions <span class="pill">2 items · 23 Oct 2026</span></h2>
 <div class="table-wrap"><table class="data"><thead><tr><th>ID</th><th>Severity</th><th>Finding and review action</th><th>Sources</th></tr></thead><tbody>
-<tr id="AUDIT-GREY-01"><td class="nowrap">AUDIT-GREY-01</td><td><span class="badge medium">medium</span></td><td><strong>Source/year mismatch.</strong> The stored capture identifies the Scurry Gold Cup and Oaks finals as 24 October 2026 fixtures, but cites a GBGB URL whose path is explicitly <code>2025-category-one-schedule</code>. This checkout contains a summary capture, not the official page response, so the source-to-claim match was not confirmed. Treat the dates and event details as unverified until a current official 2026 schedule is checked.</td><td><a href="https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/" rel="noopener">GBGB page cited</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/cadence/captures/gbgb_schedule.json">Stored capture</a></td></tr>
-<tr id="AUDIT-ODDS-02"><td class="nowrap">AUDIT-ODDS-02</td><td><span class="badge medium">medium</span></td><td><strong>Displayed offered prices are constructed, not captured market quotes.</strong> The cadence generator sets <code>offered_decimal</code> and <code>offered_american</code> by applying a code-defined margin to its own probability. The repository has no saved OLBG odds response for these lines. Use the desk's probabilities and fair prices as originated estimates only; do not read the offered column or odds-window label as current bookmaker availability. Capture and link the actual OLBG market price if that is required for selection eligibility.</td><td><a href="https://www.olbg.com/betting-tips" rel="noopener">OLBG betting-tips hub</a><br><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/cadence_model.py">Price-generation code</a></td></tr>
+{INDEPENDENT_AUDIT_ROWS}
 </tbody></table></div>
 """
     return page("Flagged for Review", "flagged.html", body)

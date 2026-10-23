@@ -135,6 +135,8 @@ class RootIntegrationTests(unittest.TestCase):
             self.assertIn(finding["id"], self.review)
             self.assertIn(finding["item"], self.review)
         self.assertIn("Open the older cross-layer audit", self.review)
+        self.assertIn("AUDIT-GREY-01", self.review)
+        self.assertIn("AUDIT-ODDS-02", self.review)
         self.assertEqual(self.audit["summary"]["row_internal_fail"], 0)
         self.assertEqual(len(self.audit["row_checks"]), 93)
         self.assertEqual(self.audit["summary"]["errors"], [])

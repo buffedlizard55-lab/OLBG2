@@ -194,6 +194,9 @@ def build_index():
     highs = [p for p in P["picks"] if p["confidence"] == "high" and p.get("sport_rank")]
     in_band = [p for p in highs if p["in_band"]]
     today_highs = [p for p in highs if (p.get("start_utc") or "").startswith(TODAY)]
+    natural_in = [p for p in highs if p["in_band"] and not p.get("band_board")]
+    alt_in = [p for p in highs if p.get("band_board") and p["in_band"]]
+    outside_in = [p for p in highs if p["in_band"] is False]
     total_lines = L["count"]
     body = f"""
 <h1>Executive summary — 23 October 2026</h1>
@@ -224,9 +227,10 @@ page it came from; nothing is filled in from memory or from a bookmaker.</p>
   “above 70%” and “priced −250 to +10000” overlap only between 70.00% and 71.43%. The desk does not widen
   either rule silently. It publishes every selection's own price and band status, and on the
   <a href="band.html">band board</a> it quotes the alternate line at the band ceiling for every fixture whose
-  line ladder allows one. Today {len(in_band)} of {len(highs)} high-confidence top-five selections are inside
-  the band without an alternate line, and {sum(1 for p in P['picks'] if p.get('band_board') and p['confidence']=='high')}
-  more clear it on an alternate line.
+  line ladder allows one. Today {len(natural_in)} of the {len(highs)} high-confidence top-five selections are
+  inside the band on their natural line, {len(alt_in)} more clear it on an alternate line, and
+  {len(outside_in)} are genuinely outside it because their probability is above 71.43% — those are listed with
+  their real prices rather than shortened.
 </div>
 
 <h2>Today's matches — 23 October 2026</h2>
@@ -367,6 +371,7 @@ groups honestly rather than moving a line and calling it something else.</p>
 
 <h2>Already inside the band on the natural selection ({len(natural_in)})</h2>
 {band_table(natural_in)}
+{band_note(len(natural_in), len(highs), len(alt), len(outside))}
 
 <h2>Inside the band on an alternate line ({len(alt)})</h2>
 <p class="lede">Each row is a handicap or total set at the band ceiling. The probability beside it is the
@@ -379,6 +384,16 @@ probability is above 71.43%. They are listed with their actual prices so the sho
 {band_table(outside)}
 """
     write("band.html", page("Band board", "band.html", body))
+
+
+def band_note(natural, high, alt, outside):
+    if natural:
+        return ""
+    return (f'<div class="note warn"><b>None today, and that is the point.</b> All {high} selections that '
+            f'grade high have a probability above 71.43%, so their natural price is shorter than −250 and the '
+            f'band excludes them by definition. {alt} of them can be re-quoted at an alternate line set to the '
+            f'ceiling; the remaining {outside} — outright markets and moneylines with no ladder — cannot, and are '
+            f'listed below with their real prices rather than being dressed up as band picks.</div>')
 
 
 def band_table(rows):

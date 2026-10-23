@@ -4476,3 +4476,12 @@ repository review counts the directories that publish an index page:
 This is not an editorial change to another session's data: nothing was rewritten by hand and no finding was
 removed. It is committed so the hosted drift gate (`git diff --exit-code` over the ledger paths) stays green.
 The `/ledger/` owner may regenerate again at any time; the numbers will follow the directory count.
+
+### Follow-up: band-board wording corrected after the first deploy
+
+Reading the live page exposed one arithmetic sentence that could mislead: the summary said “8 of 22 … inside
+the band without an alternate line, and 8 more clear it on an alternate line”, but all eight in-band high
+selections are alternate-line quotes and **none** of the 22 high selections is inside the band on its natural
+price. The summary now states 0 natural / 8 alternate / 14 genuinely outside, and the band page explains why.
+No probability, price, grade or pick changed; only the sentence describing them. Fixed in the follow-up PR
+below, verified with `cadence_verify.py` (11 check groups, 0 errors) and 24 desk tests.

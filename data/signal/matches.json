@@ -1,0 +1,5270 @@
+{
+ "meta": {
+  "generated_for": "2026-10-23",
+  "desk": "signal (session 6b10ecda)",
+  "matches": 101,
+  "priced": 48
+ },
+ "matches": [
+  {
+   "id": "nhl-2026020166",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Montreal Canadiens @ Chicago Blackhawks",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "venue": "United Center",
+   "source_url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026/10/23/2026020166",
+   "inputs": "Chicago Blackhawks 3-6-0, 2.33 GF/game, 4.00 GA/game; Montreal Canadiens 4-3-2, 3.11 GF/game, 3.78 GA/game (official season summary, 9 and 9 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Chicago Blackhawks",
+     "note": "",
+     "prob": 0.4717,
+     "american": "+112",
+     "decimal": 2.12,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Montreal Canadiens",
+     "note": "",
+     "prob": 0.5283,
+     "american": "-112",
+     "decimal": 1.89,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Chicago Blackhawks in 60 minutes",
+     "note": "",
+     "prob": 0.3921,
+     "american": "+155",
+     "decimal": 2.55,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Montreal Canadiens in 60 minutes",
+     "note": "",
+     "prob": 0.4488,
+     "american": "+123",
+     "decimal": 2.23,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1591,
+     "american": "+529",
+     "decimal": 6.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Chicago Blackhawks",
+     "note": "",
+     "prob": 0.2499,
+     "american": "+300",
+     "decimal": 4.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Montreal Canadiens",
+     "note": "",
+     "prob": 0.7501,
+     "american": "-300",
+     "decimal": 1.33,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4776,
+     "american": "+109",
+     "decimal": 2.09,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5224,
+     "american": "-109",
+     "decimal": 1.91,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5283,
+    "american": "-112",
+    "decimal": 1.89,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Montreal Canadiens",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Chicago Blackhawks",
+   "away": "Montreal Canadiens",
+   "exp_score": "3.17 - 3.36"
+  },
+  {
+   "id": "nhl-2026020167",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Tampa Bay Lightning @ Colorado Avalanche",
+   "start_utc": "2026-10-24T01:00:00Z",
+   "venue": "Ball Arena",
+   "source_url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026/10/23/2026020167",
+   "inputs": "Colorado Avalanche 5-4-1, 4.10 GF/game, 3.00 GA/game; Tampa Bay Lightning 7-2-0, 3.44 GF/game, 2.56 GA/game (official season summary, 10 and 9 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Colorado Avalanche",
+     "note": "",
+     "prob": 0.5634,
+     "american": "-129",
+     "decimal": 1.77,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Tampa Bay Lightning",
+     "note": "",
+     "prob": 0.4366,
+     "american": "+129",
+     "decimal": 2.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Colorado Avalanche in 60 minutes",
+     "note": "",
+     "prob": 0.4846,
+     "american": "+106",
+     "decimal": 2.06,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tampa Bay Lightning in 60 minutes",
+     "note": "",
+     "prob": 0.3577,
+     "american": "+180",
+     "decimal": 2.8,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1577,
+     "american": "+534",
+     "decimal": 6.34,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Colorado Avalanche",
+     "note": "",
+     "prob": 0.33,
+     "american": "+203",
+     "decimal": 3.03,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Tampa Bay Lightning",
+     "note": "",
+     "prob": 0.67,
+     "american": "-203",
+     "decimal": 1.49,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4759,
+     "american": "+110",
+     "decimal": 2.1,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5241,
+     "american": "-110",
+     "decimal": 1.91,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5634,
+    "american": "-129",
+    "decimal": 1.77,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Colorado Avalanche",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Colorado Avalanche",
+   "away": "Tampa Bay Lightning",
+   "exp_score": "3.47 - 3.05"
+  },
+  {
+   "id": "nhl-2026020168",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Anaheim Ducks @ Philadelphia Flyers",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "venue": "Xfinity Mobile Arena",
+   "source_url": "https://www.nhl.com/gamecenter/ana-vs-phi/2026/10/24/2026020168",
+   "inputs": "Philadelphia Flyers 3-6-3, 1.67 GF/game, 3.00 GA/game; Anaheim Ducks 4-6-0, 2.70 GF/game, 3.30 GA/game (official season summary, 12 and 10 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Philadelphia Flyers",
+     "note": "",
+     "prob": 0.4669,
+     "american": "+114",
+     "decimal": 2.14,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Anaheim Ducks",
+     "note": "",
+     "prob": 0.5331,
+     "american": "-114",
+     "decimal": 1.88,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Philadelphia Flyers in 60 minutes",
+     "note": "",
+     "prob": 0.3775,
+     "american": "+165",
+     "decimal": 2.65,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Anaheim Ducks in 60 minutes",
+     "note": "",
+     "prob": 0.4437,
+     "american": "+125",
+     "decimal": 2.25,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1788,
+     "american": "+459",
+     "decimal": 5.59,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Philadelphia Flyers",
+     "note": "",
+     "prob": 0.2228,
+     "american": "+349",
+     "decimal": 4.49,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Anaheim Ducks",
+     "note": "",
+     "prob": 0.7772,
+     "american": "-349",
+     "decimal": 1.29,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 5.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4223,
+     "american": "+137",
+     "decimal": 2.37,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 5.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5777,
+     "american": "-137",
+     "decimal": 1.73,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5331,
+    "american": "-114",
+    "decimal": 1.88,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Anaheim Ducks",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Philadelphia Flyers",
+   "away": "Anaheim Ducks",
+   "exp_score": "2.51 - 2.71"
+  },
+  {
+   "id": "nhl-2026020169",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Los Angeles Kings @ New Jersey Devils",
+   "start_utc": "2026-10-24T19:30:00Z",
+   "venue": "Prudential Center",
+   "source_url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+   "inputs": "New Jersey Devils 6-4-0, 3.30 GF/game, 3.10 GA/game; Los Angeles Kings 2-4-2, 2.50 GF/game, 3.62 GA/game (official season summary, 10 and 8 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "New Jersey Devils",
+     "note": "",
+     "prob": 0.6408,
+     "american": "-178",
+     "decimal": 1.56,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Los Angeles Kings",
+     "note": "",
+     "prob": 0.3592,
+     "american": "+178",
+     "decimal": 2.78,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "New Jersey Devils in 60 minutes",
+     "note": "",
+     "prob": 0.5645,
+     "american": "-130",
+     "decimal": 1.77,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Los Angeles Kings in 60 minutes",
+     "note": "",
+     "prob": 0.2829,
+     "american": "+254",
+     "decimal": 3.54,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1526,
+     "american": "+555",
+     "decimal": 6.55,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "New Jersey Devils",
+     "note": "",
+     "prob": 0.4026,
+     "american": "+148",
+     "decimal": 2.48,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Los Angeles Kings",
+     "note": "",
+     "prob": 0.5974,
+     "american": "-148",
+     "decimal": 1.67,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4424,
+     "american": "+126",
+     "decimal": 2.26,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5576,
+     "american": "-126",
+     "decimal": 1.79,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6408,
+    "american": "-178",
+    "decimal": 1.56,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "New Jersey Devils",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "New Jersey Devils",
+   "away": "Los Angeles Kings",
+   "exp_score": "3.61 - 2.69"
+  },
+  {
+   "id": "nhl-2026020170",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "San Jose Sharks @ Boston Bruins",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "TD Garden",
+   "source_url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+   "inputs": "Boston Bruins 8-2-1, 3.82 GF/game, 2.00 GA/game; San Jose Sharks 6-4-1, 2.91 GF/game, 3.27 GA/game (official season summary, 11 and 11 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Boston Bruins",
+     "note": "",
+     "prob": 0.7173,
+     "american": "-254",
+     "decimal": 1.39,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "San Jose Sharks",
+     "note": "",
+     "prob": 0.2827,
+     "american": "+254",
+     "decimal": 3.54,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Boston Bruins in 60 minutes",
+     "note": "",
+     "prob": 0.6465,
+     "american": "-183",
+     "decimal": 1.55,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "San Jose Sharks in 60 minutes",
+     "note": "",
+     "prob": 0.212,
+     "american": "+372",
+     "decimal": 4.72,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1414,
+     "american": "+607",
+     "decimal": 7.07,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Boston Bruins",
+     "note": "",
+     "prob": 0.4826,
+     "american": "+107",
+     "decimal": 2.07,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "San Jose Sharks",
+     "note": "",
+     "prob": 0.5174,
+     "american": "-107",
+     "decimal": 1.93,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4061,
+     "american": "+146",
+     "decimal": 2.46,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5939,
+     "american": "-146",
+     "decimal": 1.68,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.7173,
+    "american": "-254",
+    "decimal": 1.39,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Boston Bruins",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Boston Bruins",
+   "away": "San Jose Sharks",
+   "exp_score": "3.76 - 2.32"
+  },
+  {
+   "id": "nhl-2026020171",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "New York Rangers @ Ottawa Senators",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Canadian Tire Centre",
+   "source_url": "https://www.nhl.com/gamecenter/nyr-vs-ott/2026/10/24/2026020171",
+   "inputs": "Ottawa Senators 7-4-0, 2.64 GF/game, 2.73 GA/game; New York Rangers 7-4-1, 3.08 GF/game, 2.42 GA/game (official season summary, 11 and 12 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Ottawa Senators",
+     "note": "",
+     "prob": 0.4811,
+     "american": "+108",
+     "decimal": 2.08,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "New York Rangers",
+     "note": "",
+     "prob": 0.5189,
+     "american": "-108",
+     "decimal": 1.93,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Ottawa Senators in 60 minutes",
+     "note": "",
+     "prob": 0.393,
+     "american": "+154",
+     "decimal": 2.54,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "New York Rangers in 60 minutes",
+     "note": "",
+     "prob": 0.4308,
+     "american": "+132",
+     "decimal": 2.32,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1762,
+     "american": "+468",
+     "decimal": 5.68,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Ottawa Senators",
+     "note": "",
+     "prob": 0.2375,
+     "american": "+321",
+     "decimal": 4.21,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "New York Rangers",
+     "note": "",
+     "prob": 0.7625,
+     "american": "-321",
+     "decimal": 1.31,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4523,
+     "american": "+121",
+     "decimal": 2.21,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5477,
+     "american": "-121",
+     "decimal": 1.83,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5189,
+    "american": "-108",
+    "decimal": 1.93,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "New York Rangers",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Ottawa Senators",
+   "away": "New York Rangers",
+   "exp_score": "2.64 - 2.75"
+  },
+  {
+   "id": "nhl-2026020172",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Nashville Predators @ Pittsburgh Penguins",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "PPG Paints Arena",
+   "source_url": "https://www.nhl.com/gamecenter/nsh-vs-pit/2026/10/24/2026020172",
+   "inputs": "Pittsburgh Penguins 4-6-1, 3.27 GF/game, 3.36 GA/game; Nashville Predators 3-3-3, 2.56 GF/game, 3.11 GA/game (official season summary, 11 and 9 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Pittsburgh Penguins",
+     "note": "",
+     "prob": 0.5837,
+     "american": "-140",
+     "decimal": 1.71,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Nashville Predators",
+     "note": "",
+     "prob": 0.4163,
+     "american": "+140",
+     "decimal": 2.4,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Pittsburgh Penguins in 60 minutes",
+     "note": "",
+     "prob": 0.5033,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Nashville Predators in 60 minutes",
+     "note": "",
+     "prob": 0.336,
+     "american": "+198",
+     "decimal": 2.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1607,
+     "american": "+522",
+     "decimal": 6.22,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Pittsburgh Penguins",
+     "note": "",
+     "prob": 0.343,
+     "american": "+192",
+     "decimal": 2.92,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Nashville Predators",
+     "note": "",
+     "prob": 0.657,
+     "american": "-192",
+     "decimal": 1.52,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4219,
+     "american": "+137",
+     "decimal": 2.37,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5781,
+     "american": "-137",
+     "decimal": 1.73,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5837,
+    "american": "-140",
+    "decimal": 1.71,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Pittsburgh Penguins",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Pittsburgh Penguins",
+   "away": "Nashville Predators",
+   "exp_score": "3.36 - 2.82"
+  },
+  {
+   "id": "nhl-2026020173",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Buffalo Sabres @ Washington Capitals",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Capital One Arena",
+   "source_url": "https://www.nhl.com/gamecenter/buf-vs-wsh/2026/10/24/2026020173",
+   "inputs": "Washington Capitals 5-4-0, 3.33 GF/game, 3.22 GA/game; Buffalo Sabres 4-4-2, 2.80 GF/game, 3.60 GA/game (official season summary, 9 and 10 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Washington Capitals",
+     "note": "",
+     "prob": 0.6194,
+     "american": "-163",
+     "decimal": 1.61,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Buffalo Sabres",
+     "note": "",
+     "prob": 0.3806,
+     "american": "+163",
+     "decimal": 2.63,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Washington Capitals in 60 minutes",
+     "note": "",
+     "prob": 0.5429,
+     "american": "-119",
+     "decimal": 1.84,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Buffalo Sabres in 60 minutes",
+     "note": "",
+     "prob": 0.3042,
+     "american": "+229",
+     "decimal": 3.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1529,
+     "american": "+554",
+     "decimal": 6.54,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Washington Capitals",
+     "note": "",
+     "prob": 0.3842,
+     "american": "+160",
+     "decimal": 2.6,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Buffalo Sabres",
+     "note": "",
+     "prob": 0.6158,
+     "american": "-160",
+     "decimal": 1.62,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4731,
+     "american": "+111",
+     "decimal": 2.11,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5269,
+     "american": "-111",
+     "decimal": 1.9,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6194,
+    "american": "-163",
+    "decimal": 1.61,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Washington Capitals",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Washington Capitals",
+   "away": "Buffalo Sabres",
+   "exp_score": "3.64 - 2.85"
+  },
+  {
+   "id": "nhl-2026020174",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Vegas Golden Knights @ Columbus Blue Jackets",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Nationwide Arena",
+   "source_url": "https://www.nhl.com/gamecenter/vgk-vs-cbj/2026/10/24/2026020174",
+   "inputs": "Columbus Blue Jackets 3-5-0, 2.38 GF/game, 3.62 GA/game; Vegas Golden Knights 8-4-0, 3.75 GF/game, 3.00 GA/game (official season summary, 8 and 12 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Columbus Blue Jackets",
+     "note": "",
+     "prob": 0.3982,
+     "american": "+151",
+     "decimal": 2.51,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Vegas Golden Knights",
+     "note": "",
+     "prob": 0.6018,
+     "american": "-151",
+     "decimal": 1.66,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Columbus Blue Jackets in 60 minutes",
+     "note": "",
+     "prob": 0.3201,
+     "american": "+212",
+     "decimal": 3.12,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Vegas Golden Knights in 60 minutes",
+     "note": "",
+     "prob": 0.5237,
+     "american": "-110",
+     "decimal": 1.91,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1561,
+     "american": "+540",
+     "decimal": 6.4,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Columbus Blue Jackets",
+     "note": "",
+     "prob": 0.1911,
+     "american": "+423",
+     "decimal": 5.23,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Vegas Golden Knights",
+     "note": "",
+     "prob": 0.8089,
+     "american": "-423",
+     "decimal": 1.24,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4568,
+     "american": "+119",
+     "decimal": 2.19,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5432,
+     "american": "-119",
+     "decimal": 1.84,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6018,
+    "american": "-151",
+    "decimal": 1.66,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Vegas Golden Knights",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Columbus Blue Jackets",
+   "away": "Vegas Golden Knights",
+   "exp_score": "2.86 - 3.53"
+  },
+  {
+   "id": "nhl-2026020175",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Carolina Hurricanes @ St. Louis Blues",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Enterprise Center",
+   "source_url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+   "inputs": "St. Louis Blues 5-4-1, 3.50 GF/game, 3.10 GA/game; Carolina Hurricanes 8-2-2, 3.92 GF/game, 2.67 GA/game (official season summary, 10 and 12 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "St. Louis Blues",
+     "note": "",
+     "prob": 0.4744,
+     "american": "+111",
+     "decimal": 2.11,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Carolina Hurricanes",
+     "note": "",
+     "prob": 0.5256,
+     "american": "-111",
+     "decimal": 1.9,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "St. Louis Blues in 60 minutes",
+     "note": "",
+     "prob": 0.3951,
+     "american": "+153",
+     "decimal": 2.53,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Carolina Hurricanes in 60 minutes",
+     "note": "",
+     "prob": 0.4463,
+     "american": "+124",
+     "decimal": 2.24,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1586,
+     "american": "+531",
+     "decimal": 6.31,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "St. Louis Blues",
+     "note": "",
+     "prob": 0.2528,
+     "american": "+296",
+     "decimal": 3.96,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Carolina Hurricanes",
+     "note": "",
+     "prob": 0.7472,
+     "american": "-296",
+     "decimal": 1.34,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4845,
+     "american": "+106",
+     "decimal": 2.06,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5155,
+     "american": "-106",
+     "decimal": 1.94,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5256,
+    "american": "-111",
+    "decimal": 1.9,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Carolina Hurricanes",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "St. Louis Blues",
+   "away": "Carolina Hurricanes",
+   "exp_score": "3.20 - 3.37"
+  },
+  {
+   "id": "nhl-2026020176",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Toronto Maple Leafs @ Edmonton Oilers",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Rogers Place",
+   "source_url": "https://www.nhl.com/gamecenter/tor-vs-edm/2026/10/24/2026020176",
+   "inputs": "Edmonton Oilers 8-1-1, 4.60 GF/game, 3.20 GA/game; Toronto Maple Leafs 6-4-2, 3.58 GF/game, 3.17 GA/game (official season summary, 10 and 12 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Edmonton Oilers",
+     "note": "",
+     "prob": 0.6204,
+     "american": "-163",
+     "decimal": 1.61,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Toronto Maple Leafs",
+     "note": "",
+     "prob": 0.3796,
+     "american": "+163",
+     "decimal": 2.63,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Edmonton Oilers in 60 minutes",
+     "note": "",
+     "prob": 0.5487,
+     "american": "-122",
+     "decimal": 1.82,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Toronto Maple Leafs in 60 minutes",
+     "note": "",
+     "prob": 0.3079,
+     "american": "+225",
+     "decimal": 3.25,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1434,
+     "american": "+598",
+     "decimal": 6.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Edmonton Oilers",
+     "note": "",
+     "prob": 0.3993,
+     "american": "+150",
+     "decimal": 2.5,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Toronto Maple Leafs",
+     "note": "",
+     "prob": 0.6007,
+     "american": "-150",
+     "decimal": 1.66,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Match total 7.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4517,
+     "american": "+121",
+     "decimal": 2.21,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 7.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5483,
+     "american": "-121",
+     "decimal": 1.82,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6204,
+    "american": "-163",
+    "decimal": 1.61,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Edmonton Oilers",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Edmonton Oilers",
+   "away": "Toronto Maple Leafs",
+   "exp_score": "4.09 - 3.25"
+  },
+  {
+   "id": "nhl-2026020177",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Tampa Bay Lightning @ Utah Mammoth",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "venue": "Delta Center",
+   "source_url": "https://www.nhl.com/gamecenter/tbl-vs-uta/2026/10/24/2026020177",
+   "inputs": "Utah Mammoth 7-4-0, 3.73 GF/game, 3.27 GA/game; Tampa Bay Lightning 7-2-0, 3.44 GF/game, 2.56 GA/game (official season summary, 11 and 9 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Utah Mammoth",
+     "note": "",
+     "prob": 0.5168,
+     "american": "-107",
+     "decimal": 1.93,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Tampa Bay Lightning",
+     "note": "",
+     "prob": 0.4832,
+     "american": "+107",
+     "decimal": 2.07,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Utah Mammoth in 60 minutes",
+     "note": "",
+     "prob": 0.4369,
+     "american": "+129",
+     "decimal": 2.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tampa Bay Lightning in 60 minutes",
+     "note": "",
+     "prob": 0.4033,
+     "american": "+148",
+     "decimal": 2.48,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1598,
+     "american": "+526",
+     "decimal": 6.26,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Utah Mammoth",
+     "note": "",
+     "prob": 0.2875,
+     "american": "+248",
+     "decimal": 3.48,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Tampa Bay Lightning",
+     "note": "",
+     "prob": 0.7125,
+     "american": "-248",
+     "decimal": 1.4,
+     "in_band": true,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4721,
+     "american": "+112",
+     "decimal": 2.12,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5279,
+     "american": "-112",
+     "decimal": 1.89,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5168,
+    "american": "-107",
+    "decimal": 1.93,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Utah Mammoth",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Utah Mammoth",
+   "away": "Tampa Bay Lightning",
+   "exp_score": "3.30 - 3.19"
+  },
+  {
+   "id": "nhl-2026020178",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Detroit Red Wings @ Calgary Flames",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": "Scotiabank Saddledome",
+   "source_url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/24/2026020178",
+   "inputs": "Calgary Flames 3-6-0, 2.11 GF/game, 4.22 GA/game; Detroit Red Wings 4-3-3, 2.70 GF/game, 2.80 GA/game (official season summary, 9 and 10 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Calgary Flames",
+     "note": "",
+     "prob": 0.4042,
+     "american": "+147",
+     "decimal": 2.47,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Detroit Red Wings",
+     "note": "",
+     "prob": 0.5958,
+     "american": "-147",
+     "decimal": 1.68,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Calgary Flames in 60 minutes",
+     "note": "",
+     "prob": 0.3221,
+     "american": "+210",
+     "decimal": 3.1,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Detroit Red Wings in 60 minutes",
+     "note": "",
+     "prob": 0.5137,
+     "american": "-106",
+     "decimal": 1.95,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1641,
+     "american": "+509",
+     "decimal": 6.09,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Calgary Flames",
+     "note": "",
+     "prob": 0.1874,
+     "american": "+434",
+     "decimal": 5.34,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Detroit Red Wings",
+     "note": "",
+     "prob": 0.8126,
+     "american": "-434",
+     "decimal": 1.23,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.3706,
+     "american": "+170",
+     "decimal": 2.7,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.6294,
+     "american": "-170",
+     "decimal": 1.59,
+     "in_band": true,
+     "confidence": "medium"
+    }
+   ],
+   "pick": {
+    "prob": 0.5958,
+    "american": "-147",
+    "decimal": 1.68,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Detroit Red Wings",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Calgary Flames",
+   "away": "Detroit Red Wings",
+   "exp_score": "2.63 - 3.23"
+  },
+  {
+   "id": "nhl-2026020179",
+   "sport": "Ice Hockey",
+   "competition": "NHL regular season",
+   "event": "Minnesota Wild @ Seattle Kraken",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": "Climate Pledge Arena",
+   "source_url": "https://www.nhl.com/gamecenter/min-vs-sea/2026/10/24/2026020179",
+   "inputs": "Seattle Kraken 7-3-1, 3.82 GF/game, 3.36 GA/game; Minnesota Wild 6-3-2, 2.91 GF/game, 2.45 GA/game (official season summary, 11 and 11 games played)",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Seattle Kraken",
+     "note": "",
+     "prob": 0.543,
+     "american": "-119",
+     "decimal": 1.84,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Minnesota Wild",
+     "note": "",
+     "prob": 0.457,
+     "american": "+119",
+     "decimal": 2.19,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Seattle Kraken in 60 minutes",
+     "note": "",
+     "prob": 0.4617,
+     "american": "+117",
+     "decimal": 2.17,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Minnesota Wild in 60 minutes",
+     "note": "",
+     "prob": 0.3758,
+     "american": "+166",
+     "decimal": 2.66,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Regulation result",
+     "selection": "Tie after 60 minutes",
+     "note": "",
+     "prob": 0.1625,
+     "american": "+515",
+     "decimal": 6.15,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line -1.5",
+     "selection": "Seattle Kraken",
+     "note": "",
+     "prob": 0.3062,
+     "american": "+227",
+     "decimal": 3.27,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Puck line +1.5",
+     "selection": "Minnesota Wild",
+     "note": "",
+     "prob": 0.6938,
+     "american": "-227",
+     "decimal": 1.44,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4305,
+     "american": "+132",
+     "decimal": 2.32,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 6.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5695,
+     "american": "-132",
+     "decimal": 1.76,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.543,
+    "american": "-119",
+    "decimal": 1.84,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Seattle Kraken",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Seattle Kraken",
+   "away": "Minnesota Wild",
+   "exp_score": "3.25 - 2.98"
+  },
+  {
+   "id": "mlb-849805",
+   "sport": "Baseball",
+   "competition": "MLB World Series 2026",
+   "event": "Tampa Bay Rays @ Milwaukee Brewers (World Series Game 1)",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "venue": "American Family Field",
+   "source_url": "https://www.mlb.com/scores/2026-10-23",
+   "inputs": "Milwaukee 103-59, 832 runs scored / 618 allowed; Tampa Bay 98-64, 736 scored / 650 allowed (official 2026 regular-season standings). Pythagorean win rates 0.633 and 0.557 combined with log5 and an 8% home-odds edge.",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.5972,
+     "american": "-148",
+     "decimal": 1.67,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.4028,
+     "american": "+148",
+     "decimal": 2.48,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line -1.5",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.3956,
+     "american": "+153",
+     "decimal": 2.53,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line +1.5",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.6044,
+     "american": "-153",
+     "decimal": 1.65,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Match total 9.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.3821,
+     "american": "+162",
+     "decimal": 2.62,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 9.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.6179,
+     "american": "-162",
+     "decimal": 1.62,
+     "in_band": true,
+     "confidence": "medium"
+    }
+   ],
+   "pick": {
+    "prob": 0.5972,
+    "american": "-148",
+    "decimal": 1.67,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Milwaukee Brewers",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "exp_score": "4.76 - 4.01"
+  },
+  {
+   "id": "mlb-849802",
+   "sport": "Baseball",
+   "competition": "MLB World Series 2026",
+   "event": "Tampa Bay Rays @ Milwaukee Brewers (World Series Game 2)",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "venue": "American Family Field",
+   "source_url": "https://www.mlb.com/scores/2026-10-24",
+   "inputs": "Milwaukee 103-59, 832 runs scored / 618 allowed; Tampa Bay 98-64, 736 scored / 650 allowed (official 2026 regular-season standings). Pythagorean win rates 0.633 and 0.557 combined with log5 and an 8% home-odds edge.",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.5972,
+     "american": "-148",
+     "decimal": 1.67,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.4028,
+     "american": "+148",
+     "decimal": 2.48,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line -1.5",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.3956,
+     "american": "+153",
+     "decimal": 2.53,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line +1.5",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.6044,
+     "american": "-153",
+     "decimal": 1.65,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Match total 9.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.3821,
+     "american": "+162",
+     "decimal": 2.62,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 9.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.6179,
+     "american": "-162",
+     "decimal": 1.62,
+     "in_band": true,
+     "confidence": "medium"
+    }
+   ],
+   "pick": {
+    "prob": 0.5972,
+    "american": "-148",
+    "decimal": 1.67,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Milwaukee Brewers",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "exp_score": "4.76 - 4.01"
+  },
+  {
+   "id": "mlb-849804",
+   "sport": "Baseball",
+   "competition": "MLB World Series 2026",
+   "event": "Milwaukee Brewers @ Tampa Bay Rays (World Series Game 3)",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": "Tropicana Field",
+   "source_url": "https://www.mlb.com/scores/2026-10-26",
+   "inputs": "Milwaukee 103-59, 832 runs scored / 618 allowed; Tampa Bay 98-64, 736 scored / 650 allowed (official 2026 regular-season standings). Pythagorean win rates 0.633 and 0.557 combined with log5 and an 8% home-odds edge.",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.4403,
+     "american": "+127",
+     "decimal": 2.27,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.5597,
+     "american": "-127",
+     "decimal": 1.79,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line -1.5",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.2972,
+     "american": "+236",
+     "decimal": 3.36,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line +1.5",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.7028,
+     "american": "-236",
+     "decimal": 1.42,
+     "in_band": true,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 8.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5092,
+     "american": "-104",
+     "decimal": 1.96,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 8.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4908,
+     "american": "+104",
+     "decimal": 2.04,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5597,
+    "american": "-127",
+    "decimal": 1.79,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Milwaukee Brewers",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "exp_score": "4.35 - 4.39"
+  },
+  {
+   "id": "mlb-849803",
+   "sport": "Baseball",
+   "competition": "MLB World Series 2026",
+   "event": "Milwaukee Brewers @ Tampa Bay Rays (World Series Game 4)",
+   "start_utc": "2026-10-28T00:00:00Z",
+   "venue": "Tropicana Field",
+   "source_url": "https://www.mlb.com/scores/2026-10-27",
+   "inputs": "Milwaukee 103-59, 832 runs scored / 618 allowed; Tampa Bay 98-64, 736 scored / 650 allowed (official 2026 regular-season standings). Pythagorean win rates 0.633 and 0.557 combined with log5 and an 8% home-odds edge.",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.4403,
+     "american": "+127",
+     "decimal": 2.27,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.5597,
+     "american": "-127",
+     "decimal": 1.79,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line -1.5",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.2972,
+     "american": "+236",
+     "decimal": 3.36,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line +1.5",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.7028,
+     "american": "-236",
+     "decimal": 1.42,
+     "in_band": true,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 8.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5092,
+     "american": "-104",
+     "decimal": 1.96,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 8.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4908,
+     "american": "+104",
+     "decimal": 2.04,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5597,
+    "american": "-127",
+    "decimal": 1.79,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Milwaukee Brewers",
+    "market": "Win match (money line)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "exp_score": "4.35 - 4.39"
+  },
+  {
+   "id": "mlb-849799",
+   "sport": "Baseball",
+   "competition": "MLB World Series 2026",
+   "event": "Milwaukee Brewers @ Tampa Bay Rays (World Series Game 5)",
+   "start_utc": "2026-10-29T00:00:00Z",
+   "venue": "Tropicana Field",
+   "source_url": "https://www.mlb.com/scores/2026-10-28",
+   "inputs": "Milwaukee 103-59, 832 runs scored / 618 allowed; Tampa Bay 98-64, 736 scored / 650 allowed (official 2026 regular-season standings). Pythagorean win rates 0.633 and 0.557 combined with log5 and an 8% home-odds edge.",
+   "markets": [
+    {
+     "market": "Win match (money line)",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.4403,
+     "american": "+127",
+     "decimal": 2.27,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (money line)",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.5597,
+     "american": "-127",
+     "decimal": 1.79,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line -1.5",
+     "selection": "Tampa Bay Rays",
+     "note": "",
+     "prob": 0.2972,
+     "american": "+236",
+     "decimal": 3.36,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Run line +1.5",
+     "selection": "Milwaukee Brewers",
+     "note": "",
+     "prob": 0.7028,
+     "american": "-236",
+     "decimal": 1.42,
+     "in_band": true,
+     "confidence": "high"
+    },
+    {
+     "market": "Match total 8.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5092,
+     "american": "-104",
+     "decimal": 1.96,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 8.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4908,
+     "american": "+104",
+     "decimal": 2.04,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5597,
+    "american": "-127",
+    "decimal": 1.79,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Milwaukee Brewers",
+    "market": "Win match (money line)"
+   },
+   "flags": [
+    "Game is listed by MLB as 'if necessary' - it may never be played."
+   ],
+   "status": "upcoming",
+   "home": "Tampa Bay Rays",
+   "away": "Milwaukee Brewers",
+   "exp_score": "4.35 - 4.39"
+  },
+  {
+   "id": "el-E2026_72",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Dubai Basketball v Paris Basketball",
+   "start_utc": "2026-10-27 (time as served: 17:00)",
+   "venue": "Coca-Cola Arena",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Dubai Basketball 5-2 after 7 games, 85.3 points for / 83.4 against per game; Paris Basketball 1-5 after 6 games, 84.0 for / 90.8 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Dubai Basketball",
+     "note": "",
+     "prob": 0.7385,
+     "american": "-282",
+     "decimal": 1.35,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Paris Basketball",
+     "note": "",
+     "prob": 0.2615,
+     "american": "+282",
+     "decimal": 3.82,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -7.5",
+     "selection": "Dubai Basketball",
+     "note": "",
+     "prob": 0.4946,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +7.5",
+     "selection": "Paris Basketball",
+     "note": "",
+     "prob": 0.5054,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 172.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.494,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 172.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.506,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.7385,
+    "american": "-282",
+    "decimal": 1.35,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Dubai Basketball",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Dubai Basketball",
+   "away": "Paris Basketball",
+   "exp_score": "89.6 - 82.2"
+  },
+  {
+   "id": "el-E2026_71",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Crvena Zvezda Meridianbet Belgrade v Maccabi Rapyd Tel Aviv",
+   "start_utc": "2026-10-27 (time as served: 20:00)",
+   "venue": "Belgrade Arena",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Crvena Zvezda Meridianbet Belgrade 4-3 after 7 games, 80.0 points for / 76.0 against per game; Maccabi Rapyd Tel Aviv 2-5 after 7 games, 86.9 for / 93.3 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Crvena Zvezda Meridianbet Belgrade",
+     "note": "",
+     "prob": 0.7625,
+     "american": "-321",
+     "decimal": 1.31,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Maccabi Rapyd Tel Aviv",
+     "note": "",
+     "prob": 0.2375,
+     "american": "+321",
+     "decimal": 4.21,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -8.0",
+     "selection": "Crvena Zvezda Meridianbet Belgrade",
+     "note": "",
+     "prob": 0.5074,
+     "american": "-103",
+     "decimal": 1.97,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +8.0",
+     "selection": "Maccabi Rapyd Tel Aviv",
+     "note": "",
+     "prob": 0.4926,
+     "american": "+103",
+     "decimal": 2.03,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 168.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5019,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 168.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4981,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.7625,
+    "american": "-321",
+    "decimal": 1.31,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Crvena Zvezda Meridianbet Belgrade",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Crvena Zvezda Meridianbet Belgrade",
+   "away": "Maccabi Rapyd Tel Aviv",
+   "exp_score": "88.1 - 79.9"
+  },
+  {
+   "id": "el-E2026_74",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "FC Bayern Munich v FC Barcelona",
+   "start_utc": "2026-10-27 (time as served: 20:00)",
+   "venue": "SAP Garden",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "FC Bayern Munich 2-5 after 7 games, 87.4 points for / 94.1 against per game; FC Barcelona 4-3 after 7 games, 89.0 for / 86.6 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "FC Bayern Munich",
+     "note": "",
+     "prob": 0.4457,
+     "american": "+124",
+     "decimal": 2.24,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "FC Barcelona",
+     "note": "",
+     "prob": 0.5543,
+     "american": "-124",
+     "decimal": 1.8,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +1.5",
+     "selection": "FC Bayern Munich",
+     "note": "",
+     "prob": 0.4975,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -1.5",
+     "selection": "FC Barcelona",
+     "note": "",
+     "prob": 0.5025,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 178.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5019,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 178.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4981,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5543,
+    "american": "-124",
+    "decimal": 1.8,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "FC Barcelona",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "FC Bayern Munich",
+   "away": "FC Barcelona",
+   "exp_score": "88.5 - 90.1"
+  },
+  {
+   "id": "el-E2026_76",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Panathinaikos AKTOR Athens v Armani Olimpia Milan",
+   "start_utc": "2026-10-27 (time as served: 20:15)",
+   "venue": "Telekom Center Athens",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Panathinaikos AKTOR Athens 6-1 after 7 games, 87.6 points for / 73.9 against per game; Armani Olimpia Milan 1-6 after 7 games, 83.6 for / 92.6 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Panathinaikos AKTOR Athens",
+     "note": "",
+     "prob": 0.8941,
+     "american": "-844",
+     "decimal": 1.12,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Armani Olimpia Milan",
+     "note": "",
+     "prob": 0.1059,
+     "american": "+844",
+     "decimal": 9.44,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -14.5",
+     "selection": "Panathinaikos AKTOR Athens",
+     "note": "",
+     "prob": 0.495,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +14.5",
+     "selection": "Armani Olimpia Milan",
+     "note": "",
+     "prob": 0.505,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 169.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4943,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 169.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5057,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.8941,
+    "american": "-844",
+    "decimal": 1.12,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Panathinaikos AKTOR Athens",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Panathinaikos AKTOR Athens",
+   "away": "Armani Olimpia Milan",
+   "exp_score": "91.6 - 77.2"
+  },
+  {
+   "id": "el-E2026_75",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Valencia Basket v Fenerbahce Tarfin Istanbul",
+   "start_utc": "2026-10-27 (time as served: 20:30)",
+   "venue": "Roig Arena",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Valencia Basket 4-2 after 6 games, 97.2 points for / 89.5 against per game; Fenerbahce Tarfin Istanbul 5-1 after 6 games, 83.5 for / 74.5 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Valencia Basket",
+     "note": "",
+     "prob": 0.5804,
+     "american": "-138",
+     "decimal": 1.72,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Fenerbahce Tarfin Istanbul",
+     "note": "",
+     "prob": 0.4196,
+     "american": "+138",
+     "decimal": 2.38,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -2.5",
+     "selection": "Valencia Basket",
+     "note": "",
+     "prob": 0.4942,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +2.5",
+     "selection": "Fenerbahce Tarfin Istanbul",
+     "note": "",
+     "prob": 0.5058,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 172.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4956,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 172.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5044,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5804,
+    "american": "-138",
+    "decimal": 1.72,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Valencia Basket",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Valencia Basket",
+   "away": "Fenerbahce Tarfin Istanbul",
+   "exp_score": "87.3 - 85.0"
+  },
+  {
+   "id": "el-E2026_73",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Kosner Baskonia Vitoria-Gasteiz v Real Madrid",
+   "start_utc": "2026-10-27 (time as served: 21:00)",
+   "venue": "Buesa Arena",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Kosner Baskonia Vitoria-Gasteiz 1-6 after 7 games, 83.3 points for / 92.7 against per game; Real Madrid 4-3 after 7 games, 95.3 for / 90.0 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Kosner Baskonia Vitoria-Gasteiz",
+     "note": "",
+     "prob": 0.3524,
+     "american": "+184",
+     "decimal": 2.84,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Real Madrid",
+     "note": "",
+     "prob": 0.6476,
+     "american": "-184",
+     "decimal": 1.54,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Handicap +4.5",
+     "selection": "Kosner Baskonia Vitoria-Gasteiz",
+     "note": "",
+     "prob": 0.505,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -4.5",
+     "selection": "Real Madrid",
+     "note": "",
+     "prob": 0.495,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 180.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5038,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 180.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4962,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6476,
+    "american": "-184",
+    "decimal": 1.54,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Real Madrid",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Kosner Baskonia Vitoria-Gasteiz",
+   "away": "Real Madrid",
+   "exp_score": "88.1 - 92.5"
+  },
+  {
+   "id": "el-E2026_77",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Hapoel IBI Tel Aviv v Anadolu Efes Istanbul",
+   "start_utc": "2026-10-28 (time as served: 19:00)",
+   "venue": "Arena Botevgrad",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Hapoel IBI Tel Aviv 5-2 after 7 games, 90.0 points for / 85.9 against per game; Anadolu Efes Istanbul 3-4 after 7 games, 83.0 for / 84.3 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Hapoel IBI Tel Aviv",
+     "note": "",
+     "prob": 0.6904,
+     "american": "-223",
+     "decimal": 1.45,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Anadolu Efes Istanbul",
+     "note": "",
+     "prob": 0.3096,
+     "american": "+223",
+     "decimal": 3.23,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -5.5",
+     "selection": "Hapoel IBI Tel Aviv",
+     "note": "",
+     "prob": 0.5074,
+     "american": "-103",
+     "decimal": 1.97,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +5.5",
+     "selection": "Anadolu Efes Istanbul",
+     "note": "",
+     "prob": 0.4926,
+     "american": "+103",
+     "decimal": 2.03,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 171.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5019,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 171.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4981,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6904,
+    "american": "-223",
+    "decimal": 1.45,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Hapoel IBI Tel Aviv",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Hapoel IBI Tel Aviv",
+   "away": "Anadolu Efes Istanbul",
+   "exp_score": "88.6 - 82.9"
+  },
+  {
+   "id": "el-E2026_79",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Besiktas Istanbul v Olympiacos Piraeus",
+   "start_utc": "2026-10-28 (time as served: 18:30)",
+   "venue": "Turkcell Basketball Development Center",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Besiktas Istanbul 3-4 after 7 games, 90.6 points for / 92.0 against per game; Olympiacos Piraeus 5-1 after 6 games, 94.0 for / 87.3 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Besiktas Istanbul",
+     "note": "",
+     "prob": 0.4637,
+     "american": "+116",
+     "decimal": 2.16,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Olympiacos Piraeus",
+     "note": "",
+     "prob": 0.5363,
+     "american": "-116",
+     "decimal": 1.86,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +1.0",
+     "selection": "Besiktas Istanbul",
+     "note": "",
+     "prob": 0.4983,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -1.0",
+     "selection": "Olympiacos Piraeus",
+     "note": "",
+     "prob": 0.5017,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 182.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4987,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 182.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5013,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5363,
+    "american": "-116",
+    "decimal": 1.86,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Olympiacos Piraeus",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Besiktas Istanbul",
+   "away": "Olympiacos Piraeus",
+   "exp_score": "90.5 - 91.5"
+  },
+  {
+   "id": "el-E2026_78",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "LDLC ASVEL Villeurbanne v Partizan Mozzart Bet Belgrade",
+   "start_utc": "2026-10-28 (time as served: 20:00)",
+   "venue": "LDLC Arena",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "LDLC ASVEL Villeurbanne 2-4 after 6 games, 87.8 points for / 95.3 against per game; Partizan Mozzart Bet Belgrade 4-3 after 7 games, 77.3 for / 78.0 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "LDLC ASVEL Villeurbanne",
+     "note": "",
+     "prob": 0.4864,
+     "american": "+106",
+     "decimal": 2.06,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Partizan Mozzart Bet Belgrade",
+     "note": "",
+     "prob": 0.5136,
+     "american": "-106",
+     "decimal": 1.95,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +0.5",
+     "selection": "LDLC ASVEL Villeurbanne",
+     "note": "",
+     "prob": 0.5037,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -0.5",
+     "selection": "Partizan Mozzart Bet Belgrade",
+     "note": "",
+     "prob": 0.4963,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 169.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.506,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 169.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.494,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5136,
+    "american": "-106",
+    "decimal": 1.95,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Partizan Mozzart Bet Belgrade",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "LDLC ASVEL Villeurbanne",
+   "away": "Partizan Mozzart Bet Belgrade",
+   "exp_score": "84.4 - 84.8"
+  },
+  {
+   "id": "el-E2026_80",
+   "sport": "Basketball",
+   "competition": "EuroLeague Round 8",
+   "event": "Virtus Bologna v Zalgiris Kaunas",
+   "start_utc": "2026-10-28 (time as served: 20:30)",
+   "venue": "PalaDozza",
+   "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "inputs": "Virtus Bologna 4-3 after 7 games, 86.6 points for / 86.9 against per game; Zalgiris Kaunas 2-4 after 6 games, 81.7 for / 86.2 against (official standings after Round 7). Home edge 3.0 points, margin sigma 11.5.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Virtus Bologna",
+     "note": "",
+     "prob": 0.6715,
+     "american": "-204",
+     "decimal": 1.49,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Zalgiris Kaunas",
+     "note": "",
+     "prob": 0.3285,
+     "american": "+204",
+     "decimal": 3.04,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -5.0",
+     "selection": "Virtus Bologna",
+     "note": "",
+     "prob": 0.5037,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +5.0",
+     "selection": "Zalgiris Kaunas",
+     "note": "",
+     "prob": 0.4963,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 170.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5035,
+     "american": "-101",
+     "decimal": 1.99,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 170.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.4965,
+     "american": "+101",
+     "decimal": 2.01,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6715,
+    "american": "-204",
+    "decimal": 1.49,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Virtus Bologna",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Virtus Bologna",
+   "away": "Zalgiris Kaunas",
+   "exp_score": "87.9 - 82.8"
+  },
+  {
+   "id": "rlwc-papua-new-guinea-v-samoa",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026, Round 2",
+   "event": "Papua New Guinea v Samoa",
+   "start_utc": "2026-10-24T04:25:00Z",
+   "venue": "Santos National Football Stadium, Port Moresby",
+   "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/papua-new-guinea-v-samoa/",
+   "inputs": "Papua New Guinea 42 points for / 18 against in 1 World Cup match(es); Samoa 78 for / 4 against in 1. Venue Santos National Football Stadium, Port Moresby. Per-game differential capped at +/-30 and shrunk by games/(games+2) because the sample is one or two matches; margin sigma 16.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Papua New Guinea",
+     "note": "",
+     "prob": 0.5497,
+     "american": "-122",
+     "decimal": 1.82,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Samoa",
+     "note": "",
+     "prob": 0.4503,
+     "american": "+122",
+     "decimal": 2.22,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -2.0",
+     "selection": "Papua New Guinea",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +2.0",
+     "selection": "Samoa",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 71.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 71.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5497,
+    "american": "-122",
+    "decimal": 1.82,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Papua New Guinea",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "Papua New Guinea",
+   "away": "Samoa",
+   "exp_score": "36.5 - 34.5"
+  },
+  {
+   "id": "rlwc-england-v-france",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026, Round 2",
+   "event": "England v France",
+   "start_utc": "2026-10-24T06:35:00Z",
+   "venue": "HBF Park, Perth",
+   "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/england-v-france/",
+   "inputs": "England 12 points for / 30 against in 1 World Cup match(es); France 4 for / 78 against in 1. Venue HBF Park, Perth (neutral for both nations, no home edge applied). Per-game differential capped at +/-30 and shrunk by games/(games+2) because the sample is one or two matches; margin sigma 16.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "England",
+     "note": "",
+     "prob": 0.5987,
+     "american": "-149",
+     "decimal": 1.67,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "France",
+     "note": "",
+     "prob": 0.4013,
+     "american": "+149",
+     "decimal": 2.49,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -4.0",
+     "selection": "England",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +4.0",
+     "selection": "France",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 62.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 62.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5987,
+    "american": "-149",
+    "decimal": 1.67,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "England",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "France's only data point is a 78-4 defeat to Samoa; the per-game differential is capped at -30 so the price is deliberately conservative."
+   ],
+   "status": "upcoming",
+   "home": "England",
+   "away": "France",
+   "exp_score": "33.0 - 29.0"
+  },
+  {
+   "id": "rlwc-new-zealand-v-cook-islands",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026, Round 2",
+   "event": "New Zealand v Cook Islands",
+   "start_utc": "2026-10-25T05:05:00Z",
+   "venue": "One NZ Stadium, Christchurch",
+   "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/new-zealand-v-cook-islands/",
+   "inputs": "New Zealand 22 points for / 24 against in 1 World Cup match(es); Cook Islands 12 for / 40 against in 1. Venue One NZ Stadium, Christchurch. Per-game differential capped at +/-30 and shrunk by games/(games+2) because the sample is one or two matches; margin sigma 16.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "New Zealand",
+     "note": "",
+     "prob": 0.7857,
+     "american": "-367",
+     "decimal": 1.27,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Cook Islands",
+     "note": "",
+     "prob": 0.2143,
+     "american": "+367",
+     "decimal": 4.67,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -12.5",
+     "selection": "New Zealand",
+     "note": "",
+     "prob": 0.5042,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +12.5",
+     "selection": "Cook Islands",
+     "note": "",
+     "prob": 0.4958,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 49.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 49.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.7857,
+    "american": "-367",
+    "decimal": 1.27,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "New Zealand",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "New Zealand",
+   "away": "Cook Islands",
+   "exp_score": "30.8 - 18.2"
+  },
+  {
+   "id": "rlwc-australia-v-fiji",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026, Round 2",
+   "event": "Australia v Fiji",
+   "start_utc": "2026-10-25T09:05:00Z",
+   "venue": "Suncorp Stadium, Brisbane",
+   "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+   "inputs": "Australia 24 points for / 22 against in 1 World Cup match(es); Fiji 40 for / 12 against in 1. Venue Suncorp Stadium, Brisbane. Per-game differential capped at +/-30 and shrunk by games/(games+2) because the sample is one or two matches; margin sigma 16.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Australia",
+     "note": "",
+     "prob": 0.3853,
+     "american": "+160",
+     "decimal": 2.6,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Fiji",
+     "note": "",
+     "prob": 0.6147,
+     "american": "-160",
+     "decimal": 1.63,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Handicap +4.5",
+     "selection": "Australia",
+     "note": "",
+     "prob": 0.4958,
+     "american": "+102",
+     "decimal": 2.02,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -4.5",
+     "selection": "Fiji",
+     "note": "",
+     "prob": 0.5042,
+     "american": "-102",
+     "decimal": 1.98,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 49.0",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 49.0",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6147,
+    "american": "-160",
+    "decimal": 1.63,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Fiji",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "The only official inputs are one World Cup match each: Australia beat New Zealand 24-22 while Fiji beat the Cook Islands 40-12. On those two results alone the margin calculation makes Fiji the side with the better published differential, which runs against conventional expectation for this fixture. The row is published as the data reads and flagged (SG-RL1)."
+   ],
+   "status": "upcoming",
+   "home": "Australia",
+   "away": "Fiji",
+   "exp_score": "22.2 - 26.8"
+  },
+  {
+   "id": "prem-294923",
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM Round 4",
+   "event": "Gloucester Rugby v Bath Rugby",
+   "start_utc": "2026-10-23T18:45:00Z",
+   "venue": "Kingsholm Stadium",
+   "source_url": "https://www.premrugby.com/match-centre/294923/news",
+   "inputs": "Gloucester Rugby last three W,W,L, Bath Rugby last three W,W,L (official PREM fixtures page). Flat home edge 5.0 points, 3.5 points per win of form difference, margin sigma 13.0.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Gloucester Rugby",
+     "note": "",
+     "prob": 0.6497,
+     "american": "-186",
+     "decimal": 1.54,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Bath Rugby",
+     "note": "",
+     "prob": 0.3503,
+     "american": "+186",
+     "decimal": 2.86,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -5.0",
+     "selection": "Gloucester Rugby",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +5.0",
+     "selection": "Bath Rugby",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6497,
+    "american": "-186",
+    "decimal": 1.54,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Gloucester Rugby",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "No league table was readable (SG-RU1), so form and venue are the only inputs; no match total is published."
+   ],
+   "status": "upcoming",
+   "home": "Gloucester Rugby",
+   "away": "Bath Rugby"
+  },
+  {
+   "id": "prem-294924",
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM Round 4",
+   "event": "Newcastle Red Bulls v Sale Sharks",
+   "start_utc": "2026-10-23T18:45:00Z",
+   "venue": "Kingston Park",
+   "source_url": "https://www.premrugby.com/match-centre/294924/news",
+   "inputs": "Newcastle Red Bulls last three L,L,L, Sale Sharks last three L,W,W (official PREM fixtures page). Flat home edge 5.0 points, 3.5 points per win of form difference, margin sigma 13.0.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Newcastle Red Bulls",
+     "note": "",
+     "prob": 0.4389,
+     "american": "+128",
+     "decimal": 2.28,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Sale Sharks",
+     "note": "",
+     "prob": 0.5611,
+     "american": "-128",
+     "decimal": 1.78,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +2.0",
+     "selection": "Newcastle Red Bulls",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -2.0",
+     "selection": "Sale Sharks",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5611,
+    "american": "-128",
+    "decimal": 1.78,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Sale Sharks",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "No league table was readable (SG-RU1), so form and venue are the only inputs; no match total is published."
+   ],
+   "status": "upcoming",
+   "home": "Newcastle Red Bulls",
+   "away": "Sale Sharks"
+  },
+  {
+   "id": "prem-294925",
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM Round 4",
+   "event": "Leicester Tigers v Northampton Saints",
+   "start_utc": "2026-10-24T14:05:00Z",
+   "venue": "Mattioli Woods Welford Road",
+   "source_url": "https://www.premrugby.com/match-centre/294925/news",
+   "inputs": "Leicester Tigers last three L,W,W, Northampton Saints last three W,L,W (official PREM fixtures page). Flat home edge 5.0 points, 3.5 points per win of form difference, margin sigma 13.0.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Leicester Tigers",
+     "note": "",
+     "prob": 0.6497,
+     "american": "-186",
+     "decimal": 1.54,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Northampton Saints",
+     "note": "",
+     "prob": 0.3503,
+     "american": "+186",
+     "decimal": 2.86,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -5.0",
+     "selection": "Leicester Tigers",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +5.0",
+     "selection": "Northampton Saints",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6497,
+    "american": "-186",
+    "decimal": 1.54,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Leicester Tigers",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "No league table was readable (SG-RU1), so form and venue are the only inputs; no match total is published."
+   ],
+   "status": "upcoming",
+   "home": "Leicester Tigers",
+   "away": "Northampton Saints"
+  },
+  {
+   "id": "prem-294926",
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM Round 4",
+   "event": "Bristol Bears v Exeter Chiefs",
+   "start_utc": "2026-10-24T16:30:00Z",
+   "venue": "Ashton Gate",
+   "source_url": "https://www.premrugby.com/match-centre/294926/news",
+   "inputs": "Bristol Bears last three W,W,L, Exeter Chiefs last three L,L,W (official PREM fixtures page). Flat home edge 5.0 points, 3.5 points per win of form difference, margin sigma 13.0.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Bristol Bears",
+     "note": "",
+     "prob": 0.7434,
+     "american": "-290",
+     "decimal": 1.35,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Exeter Chiefs",
+     "note": "",
+     "prob": 0.2566,
+     "american": "+290",
+     "decimal": 3.9,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -8.5",
+     "selection": "Bristol Bears",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +8.5",
+     "selection": "Exeter Chiefs",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.7434,
+    "american": "-290",
+    "decimal": 1.35,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Bristol Bears",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "No league table was readable (SG-RU1), so form and venue are the only inputs; no match total is published."
+   ],
+   "status": "upcoming",
+   "home": "Bristol Bears",
+   "away": "Exeter Chiefs"
+  },
+  {
+   "id": "prem-294927",
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM Round 4",
+   "event": "Harlequins v Saracens",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "venue": "Twickenham Stoop",
+   "source_url": "https://www.premrugby.com/match-centre/294927/news",
+   "inputs": "Harlequins last three L,L,L, Saracens last three W,L,W (official PREM fixtures page). Flat home edge 5.0 points, 3.5 points per win of form difference, margin sigma 13.0.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Harlequins",
+     "note": "",
+     "prob": 0.4389,
+     "american": "+128",
+     "decimal": 2.28,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Saracens",
+     "note": "",
+     "prob": 0.5611,
+     "american": "-128",
+     "decimal": 1.78,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +2.0",
+     "selection": "Harlequins",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -2.0",
+     "selection": "Saracens",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.5611,
+    "american": "-128",
+    "decimal": 1.78,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Saracens",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "No league table was readable (SG-RU1), so form and venue are the only inputs; no match total is published."
+   ],
+   "status": "upcoming",
+   "home": "Harlequins",
+   "away": "Saracens"
+  },
+  {
+   "id": "ehf-202711020702003",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "GRK Ohrid v Spor Toto SK",
+   "start_utc": "2026-10-23",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702003/GRKOhrid-SporTotoSK/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202712030103001",
+   "sport": "Handball",
+   "competition": "Women's World Championship 2027 qualification",
+   "event": "Estonia v Kosovo",
+   "start_utc": "2026-10-23 20:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202712030103001/Estonia-Kosovo/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702022",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "Istanbul GSK v Rebud KPR Ostrovia Ostrow Wielkopolski",
+   "start_utc": "2026-10-24 13:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702022/IstanbulGSK-RebudKPROstroviaOstr%C3%B3wWielkopolski/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702020",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "Tallinna Mistra v BK-46",
+   "start_utc": "2026-10-24 13:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702020/TallinnaMistra-BK46/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702029",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "Dragunas Klaipeda v HC Robe Zubri",
+   "start_utc": "2026-10-24 14:30",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702029/DragunasKlaipeda-HCRobeZubri/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702050",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "MRK Sloga Doboj v Kur",
+   "start_utc": "2026-10-24 15:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702050/MRKSlogaDoboj-Kur/",
+   "inputs": "Official first leg: Kur 26-38 MRK Sloga Doboj - a 12-goal away win, 64 total goals. Leg two reverses venue: +3 goals for losing the away disadvantage, +3 for the home edge, margin sigma 7.0.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "MRK Sloga Doboj",
+     "note": "",
+     "prob": 0.95,
+     "american": "-1900",
+     "decimal": 1.05,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Kur",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap -18.0",
+     "selection": "MRK Sloga Doboj",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Handicap +18.0",
+     "selection": "Kur",
+     "note": "",
+     "prob": 0.5,
+     "american": "-100",
+     "decimal": 2.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 64.5",
+     "selection": "Over",
+     "note": "",
+     "prob": 0.4778,
+     "american": "+109",
+     "decimal": 2.09,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Match total 64.5",
+     "selection": "Under",
+     "note": "",
+     "prob": 0.5222,
+     "american": "-109",
+     "decimal": 1.92,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Tie winner (aggregate)",
+     "selection": "MRK Sloga Doboj",
+     "note": "",
+     "prob": 0.95,
+     "american": "-1900",
+     "decimal": 1.05,
+     "in_band": false,
+     "confidence": "high"
+    }
+   ],
+   "pick": {
+    "prob": 0.95,
+    "american": "-1900",
+    "decimal": 1.05,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "MRK Sloga Doboj",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "MRK Sloga Doboj",
+   "away": "Kur",
+   "exp_score": "41.0 - 23.0"
+  },
+  {
+   "id": "ehf-202711020702041",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "Ionikos A.C. N.F. v AS SGS Ramhat Hashron",
+   "start_utc": "2026-10-24 15:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702041/IonikosACNF-ASSGSRamhatHashron/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702013",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "PLER-Budapest v Islington HC",
+   "start_utc": "2026-10-24 16:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702013/PLERBudapest-IslingtonHC/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202712030103002",
+   "sport": "Handball",
+   "competition": "Women's World Championship 2027 qualification",
+   "event": "Kosovo v Estonia",
+   "start_utc": "2026-10-24 17:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202712030103002/Kosovo-Estonia/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702034",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "Naerbo IL v HC Dukla Praha",
+   "start_utc": "2026-10-24 17:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702034/N%C3%A6rb%C3%B8IL-HCDuklaPraha/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702051",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "Polva Serviti v Holon Yuvalim HC",
+   "start_utc": "2026-10-24 17:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702051/P%C3%B5lvaServiti-HolonYuvalimHC/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702005",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "AHC Potaissa Turda v Derdaele Sporting Pelt",
+   "start_utc": "2026-10-24 17:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702005/AHCPotaissaTurda-DerdaeleSportingPelt/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702026",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "HC Butel Skopje v HRK Gorica",
+   "start_utc": "2026-10-24 17:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702026/HCButelSkopje-HRKGorica/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702010",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "MSK Povazska Bystrica v GS Drama 1986",
+   "start_utc": "2026-10-24 18:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702010/MSKPovazskaBystrica-GSDrama1986/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702008",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "MRK Trogir v H71",
+   "start_utc": "2026-10-24 18:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702008/MRKTrogir-H71/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "ehf-202711020702012",
+   "sport": "Handball",
+   "competition": "EHF European Cup Men",
+   "event": "HC Dinamo Pancevo v RK Trimo Trebnje",
+   "start_utc": "2026-10-24 18:00",
+   "venue": "",
+   "source_url": "https://www.eurohandball.com/en/matches/202711020702012/HCDinamoPancevo-RKTrimoTrebnje/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official rating, table or previous result was published for either club on the EHF calendar, so no price is originated (SG-HB1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "wst-19048b0d",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026 - Quarter Finals",
+   "event": "David Gilbert v Mark Williams",
+   "start_utc": "2026-10-23 14:00",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/19048b0d-aaf4-4691-ad10-15b1b707f622",
+   "inputs": "Ranking prize money: David Gilbert GBP 221,200, Mark Williams GBP 747,400 (official world ranking list). Logistic comparison of the natural logarithms, k = 1.1.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "David Gilbert",
+     "note": "",
+     "prob": 0.2076,
+     "american": "+382",
+     "decimal": 4.82,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Mark Williams",
+     "note": "",
+     "prob": 0.7924,
+     "american": "-382",
+     "decimal": 1.26,
+     "in_band": false,
+     "confidence": "high"
+    }
+   ],
+   "pick": {
+    "prob": 0.7924,
+    "american": "-382",
+    "decimal": 1.26,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Mark Williams",
+    "market": "Win match (2-way)"
+   },
+   "flags": [],
+   "status": "upcoming",
+   "home": "David Gilbert",
+   "away": "Mark Williams"
+  },
+  {
+   "id": "wst-3d9c9656",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026 - Quarter Finals",
+   "event": "Jak Jones v Scott Donaldson",
+   "start_utc": "2026-10-23 14:00",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/3d9c9656-9688-4709-adc6-ad60dcb9fbf4",
+   "inputs": "Ranking prize money: Jak Jones GBP 319,300, Scott Donaldson GBP 198,500 (official world ranking list). Logistic comparison of the natural logarithms, k = 1.1.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Jak Jones",
+     "note": "",
+     "prob": 0.6278,
+     "american": "-169",
+     "decimal": 1.59,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Scott Donaldson",
+     "note": "",
+     "prob": 0.3722,
+     "american": "+169",
+     "decimal": 2.69,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6278,
+    "american": "-169",
+    "decimal": 1.59,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Jak Jones",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "Scott Donaldson sits outside the captured top 36, so GBP 198,500 - the 36th placed figure - is used as an upper bound on their ranking money; the favourite's probability is therefore a lower bound (SG-SN2)."
+   ],
+   "status": "upcoming",
+   "home": "Jak Jones",
+   "away": "Scott Donaldson"
+  },
+  {
+   "id": "wst-e6719e69",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026 - Semi Finals",
+   "event": "Kyren Wilson v Sam Craigie",
+   "start_utc": "2026-10-24 08:00",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/e6719e69-c712-476e-8081-8e30790868f5",
+   "inputs": "Ranking prize money: Kyren Wilson GBP 716,800, Sam Craigie GBP 198,500 (official world ranking list). Logistic comparison of the natural logarithms, k = 1.1.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Kyren Wilson",
+     "note": "",
+     "prob": 0.8041,
+     "american": "-411",
+     "decimal": 1.24,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Sam Craigie",
+     "note": "",
+     "prob": 0.1959,
+     "american": "+411",
+     "decimal": 5.11,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.8041,
+    "american": "-411",
+    "decimal": 1.24,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Kyren Wilson",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "Sam Craigie sits outside the captured top 36, so GBP 198,500 - the 36th placed figure - is used as an upper bound on their ranking money; the favourite's probability is therefore a lower bound (SG-SN2)."
+   ],
+   "status": "upcoming",
+   "home": "Kyren Wilson",
+   "away": "Sam Craigie"
+  },
+  {
+   "id": "wst-52c4eaec",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026 - Semi Finals",
+   "event": "Winner of match 59 v Winner of match 60",
+   "start_utc": "2026-10-24 14:00",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "At least one participant is undetermined, so no selection is published (SG-SN1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "wst-9352b949",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026 - Final",
+   "event": "Winner of match 61 v Winner of match 62",
+   "start_utc": "2026-10-25 08:00",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/9352b949-a3e7-46b6-9d47-74d7f44cce49",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "At least one participant is undetermined, so no selection is published (SG-SN1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "wst-a7bc5bdd",
+   "sport": "Snooker",
+   "competition": "International Championship 2026 - Round 2",
+   "event": "Liu Hongyu v Louis Heathcote",
+   "start_utc": "2026-10-30 21:30",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/a7bc5bdd-2d78-442b-88f6-c761355ac271",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "Neither player appears in the captured top-36 ranking table, so there is no official numeric input and no selection is published (SG-SN2)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "wst-87883228",
+   "sport": "Snooker",
+   "competition": "International Championship 2026 - Round 2",
+   "event": "Jimmy White v Mark Selby",
+   "start_utc": "2026-10-30 21:30",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/87883228-05c6-4e19-9092-2d63acba3bbf",
+   "inputs": "Ranking prize money: Jimmy White GBP 198,500, Mark Selby GBP 1,070,500 (official world ranking list). Logistic comparison of the natural logarithms, k = 1.1.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Jimmy White",
+     "note": "",
+     "prob": 0.1355,
+     "american": "+638",
+     "decimal": 7.38,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Mark Selby",
+     "note": "",
+     "prob": 0.8645,
+     "american": "-638",
+     "decimal": 1.16,
+     "in_band": false,
+     "confidence": "high"
+    }
+   ],
+   "pick": {
+    "prob": 0.8645,
+    "american": "-638",
+    "decimal": 1.16,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Mark Selby",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "Jimmy White sits outside the captured top 36, so GBP 198,500 - the 36th placed figure - is used as an upper bound on their ranking money; the favourite's probability is therefore a lower bound (SG-SN2)."
+   ],
+   "status": "upcoming",
+   "home": "Jimmy White",
+   "away": "Mark Selby"
+  },
+  {
+   "id": "wst-9b7fcc94",
+   "sport": "Snooker",
+   "competition": "International Championship 2026 - Round 2",
+   "event": "Shaun Murphy v Mitchell Mann",
+   "start_utc": "2026-10-30 21:30",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/9b7fcc94-a356-4b21-a8e3-49e9beb6c315",
+   "inputs": "Ranking prize money: Shaun Murphy GBP 897,350, Mitchell Mann GBP 198,500 (official world ranking list). Logistic comparison of the natural logarithms, k = 1.1.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Shaun Murphy",
+     "note": "",
+     "prob": 0.8402,
+     "american": "-526",
+     "decimal": 1.19,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Mitchell Mann",
+     "note": "",
+     "prob": 0.1598,
+     "american": "+526",
+     "decimal": 6.26,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.8402,
+    "american": "-526",
+    "decimal": 1.19,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "Shaun Murphy",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "Mitchell Mann sits outside the captured top 36, so GBP 198,500 - the 36th placed figure - is used as an upper bound on their ranking money; the favourite's probability is therefore a lower bound (SG-SN2)."
+   ],
+   "status": "upcoming",
+   "home": "Shaun Murphy",
+   "away": "Mitchell Mann"
+  },
+  {
+   "id": "wst-41c153a5",
+   "sport": "Snooker",
+   "competition": "International Championship 2026 - Round 2",
+   "event": "Zhou Yuelong v Liam Davies",
+   "start_utc": "2026-10-30 21:30",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/41c153a5-4a98-4b53-9b92-ccc028bf6999",
+   "inputs": "Ranking prize money: Zhou Yuelong GBP 359,100, Liam Davies GBP 198,500 (official world ranking list). Logistic comparison of the natural logarithms, k = 1.1.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "Zhou Yuelong",
+     "note": "",
+     "prob": 0.6575,
+     "american": "-192",
+     "decimal": 1.52,
+     "in_band": true,
+     "confidence": "medium"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Liam Davies",
+     "note": "",
+     "prob": 0.3425,
+     "american": "+192",
+     "decimal": 2.92,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.6575,
+    "american": "-192",
+    "decimal": 1.52,
+    "in_band": true,
+    "confidence": "medium",
+    "selection": "Zhou Yuelong",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "Liam Davies sits outside the captured top 36, so GBP 198,500 - the 36th placed figure - is used as an upper bound on their ranking money; the favourite's probability is therefore a lower bound (SG-SN2)."
+   ],
+   "status": "upcoming",
+   "home": "Zhou Yuelong",
+   "away": "Liam Davies"
+  },
+  {
+   "id": "wst-7fce4be0",
+   "sport": "Snooker",
+   "competition": "International Championship 2026 - Pre-Qualifier",
+   "event": "Michal Szubarczyk v Wildcard 1",
+   "start_utc": "2026-10-30 21:30",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/7fce4be0-3ea1-48aa-a505-ca079e308ebf",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "At least one participant is undetermined, so no selection is published (SG-SN1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "wst-8a0b4b07",
+   "sport": "Snooker",
+   "competition": "International Championship 2026 - Pre-Qualifier",
+   "event": "Steven Hallworth v Wildcard 3",
+   "start_utc": "2026-10-30 21:30",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/8a0b4b07-f566-41a6-9fa6-7aca19fddb3c",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "At least one participant is undetermined, so no selection is published (SG-SN1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "wst-e1caa5b5",
+   "sport": "Snooker",
+   "competition": "International Championship 2026 - Pre-Qualifier",
+   "event": "Liu Wenwei v Wildcard 4",
+   "start_utc": "2026-10-30 21:30",
+   "venue": "",
+   "source_url": "https://www.wst.tv/match-centre/e1caa5b5-4eac-4fb3-8029-1fd36b956b3b",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "At least one participant is undetermined, so no selection is published (SG-SN1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "cri-tasmanian-tigers-men-victo",
+   "sport": "Cricket",
+   "competition": "One-Day Cup 2026-27",
+   "event": "Tasmanian Tigers v Victoria",
+   "start_utc": "2026-10-23",
+   "venue": "Bellerive Oval, Hobart",
+   "source_url": "https://www.cricket.com.au/matches/CA:40681/tasmanian-tigers-men-victoria-men-one-day-cup-2026-27",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official team-strength figures (standings, net run rate or head-to-head) were published on the captured source for this fixture, so no selection is originated (SG-CR3)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "cri-western-australia-men-nsw-",
+   "sport": "Cricket",
+   "competition": "One-Day Cup 2026-27",
+   "event": "Western Australia v New South Wales",
+   "start_utc": "2026-10-24",
+   "venue": "WACA Ground, Perth",
+   "source_url": "https://www.cricket.com.au/matches/CA:40683/western-australia-men-nsw-men-one-day-cup-2026-27",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official team-strength figures (standings, net run rate or head-to-head) were published on the captured source for this fixture, so no selection is originated (SG-CR3)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "cri-new-zealand-men-india-men-",
+   "sport": "Cricket",
+   "competition": "New Zealand v India T20Is 2026 - Men - 2nd T20I",
+   "event": "New Zealand v India",
+   "start_utc": "2026-10-24",
+   "venue": "Hagley Oval, Christchurch",
+   "source_url": "https://www.cricket.com.au/matches/CA:41095/new-zealand-men-india-men-new-zealand-v-india-t20is-2026-men",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official team-strength figures (standings, net run rate or head-to-head) were published on the captured source for this fixture, so no selection is originated (SG-CR3)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "cri-pakistan-men-england-men-p",
+   "sport": "Cricket",
+   "competition": "Pakistan ODI Tri-Series 2026 - Men",
+   "event": "Pakistan v England",
+   "start_utc": "2026-10-25",
+   "venue": "Gaddafi Stadium, Lahore",
+   "source_url": "https://www.cricket.com.au/matches/CA:40981/pakistan-men-england-men-pakistan-odi-tri-series-2026-men",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No official team-strength figures (standings, net run rate or head-to-head) were published on the captured source for this fixture, so no selection is originated (SG-CR3)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "cri-india-women-zimbabwe-women",
+   "sport": "Cricket",
+   "competition": "India v Zimbabwe ODIs 2026 - Women - 2nd ODI",
+   "event": "India Women v Zimbabwe Women",
+   "start_utc": "2026-10-25",
+   "venue": "not captured",
+   "source_url": "https://www.cricket.com.au/matches/CA:40394/india-women-zimbabwe-women-india-v-zimbabwe-odis-2026-women",
+   "inputs": "Official 1st ODI: Zimbabwe Women 197 all out in 49.5 overs, India Women 1-200 in 27.1 overs - a nine-wicket win with 22.5 overs unused. Converted at 5.3 runs per unused over to 119 runs of dominance, scaled at 0.0025 per run and capped at 0.80.",
+   "markets": [
+    {
+     "market": "Win match (2-way)",
+     "selection": "India Women",
+     "note": "",
+     "prob": 0.7981,
+     "american": "-395",
+     "decimal": 1.25,
+     "in_band": false,
+     "confidence": "high"
+    },
+    {
+     "market": "Win match (2-way)",
+     "selection": "Zimbabwe Women",
+     "note": "",
+     "prob": 0.2019,
+     "american": "+395",
+     "decimal": 4.95,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.7981,
+    "american": "-395",
+    "decimal": 1.25,
+    "in_band": false,
+    "confidence": "high",
+    "selection": "India Women",
+    "market": "Win match (2-way)"
+   },
+   "flags": [
+    "Start time not published in a labelled timezone (SG-CR1).",
+    "Calendar date truncated in the captured chunk (SG-CR2)."
+   ],
+   "status": "upcoming",
+   "home": "India Women",
+   "away": "Zimbabwe Women"
+  },
+  {
+   "id": "golf-genesis-2026",
+   "sport": "Golf",
+   "competition": "DP World Tour - Genesis Championship 2026",
+   "event": "Genesis Championship, Rounds 3-4",
+   "start_utc": "2026-10-24",
+   "venue": "Korea",
+   "source_url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "inputs": "36-hole scores from the official leaderboard; win weight = exp(-0.55 x strokes behind the lead) over the 25 captured players, normalised so the prices are conditional on the winner coming from that group.",
+   "markets": [
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Antoine Rozner",
+     "note": "",
+     "prob": 0.2699,
+     "american": "+271",
+     "decimal": 3.71,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Casey Jarvis",
+     "note": "",
+     "prob": 0.2699,
+     "american": "+271",
+     "decimal": 3.71,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Martin Couvra",
+     "note": "",
+     "prob": 0.0518,
+     "american": "+1829",
+     "decimal": 19.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Filippo Celli",
+     "note": "",
+     "prob": 0.0518,
+     "american": "+1829",
+     "decimal": 19.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Ryan Fox",
+     "note": "",
+     "prob": 0.0518,
+     "american": "+1829",
+     "decimal": 19.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Sanghun Shin",
+     "note": "",
+     "prob": 0.0518,
+     "american": "+1829",
+     "decimal": 19.29,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Si Woo Kim",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Daihan Lee",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Frederic Lacroix",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Marcus Kinhult",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Rikuya Hoshino",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Yongjun Bae",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Yuto Katsuragawa",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Jorge Campillo",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Doyeob Mun",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Adrian Otaegui",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Johannes Veerman",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Eugenio Chacarra",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Eunshin Park",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Dan Bradbury",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Sanghee Lee",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Francesco Laporta",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Alejandro Del Rey",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Sangyeop Lee",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Outright winner (conditional on the captured top 25)",
+     "selection": "Jaewoong Eom",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.2699,
+    "american": "+271",
+    "decimal": 3.71,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Antoine Rozner",
+    "market": "Outright winner (conditional)"
+   },
+   "flags": [
+    "Prices are conditional on the winner coming from the captured top 25 after 36 holes; players outside that group are not priced (SG-GO1)."
+   ],
+   "status": "upcoming",
+   "kind": "outright"
+  },
+  {
+   "id": "f1-usgp-2026",
+   "sport": "Motor Racing",
+   "competition": "Formula 1 - United States Grand Prix (round 18)",
+   "event": "United States Grand Prix",
+   "start_utc": "2026-10-25",
+   "venue": "Circuit of the Americas",
+   "source_url": "https://www.formula1.com/en/results/2026/drivers",
+   "inputs": "Championship points after round 17 (Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138, Hadjar 97). Win weight = points^1.6, normalised across the eight drivers published in the captured chunk.",
+   "markets": [
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "Kimi Antonelli",
+     "note": "",
+     "prob": 0.2577,
+     "american": "+288",
+     "decimal": 3.88,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "George Russell",
+     "note": "",
+     "prob": 0.1456,
+     "american": "+587",
+     "decimal": 6.87,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "Lewis Hamilton",
+     "note": "",
+     "prob": 0.1369,
+     "american": "+630",
+     "decimal": 7.3,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "Max Verstappen",
+     "note": "",
+     "prob": 0.1293,
+     "american": "+673",
+     "decimal": 7.73,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "Charles Leclerc",
+     "note": "",
+     "prob": 0.1238,
+     "american": "+708",
+     "decimal": 8.08,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "Lando Norris",
+     "note": "",
+     "prob": 0.1111,
+     "american": "+800",
+     "decimal": 9.0,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "Oscar Piastri",
+     "note": "",
+     "prob": 0.0609,
+     "american": "+1542",
+     "decimal": 16.42,
+     "in_band": true,
+     "confidence": "low"
+    },
+    {
+     "market": "Race winner (conditional on the captured top 8)",
+     "selection": "Isack Hadjar",
+     "note": "",
+     "prob": 0.05,
+     "american": "+1900",
+     "decimal": 20.0,
+     "in_band": true,
+     "confidence": "low"
+    }
+   ],
+   "pick": {
+    "prob": 0.2577,
+    "american": "+288",
+    "decimal": 3.88,
+    "in_band": true,
+    "confidence": "low",
+    "selection": "Kimi Antonelli",
+    "market": "Race winner (conditional)"
+   },
+   "flags": [
+    "Prices are conditional on a winner from the eight drivers whose points were captured; drivers from P9 down are not priced (SG-MR1).",
+    "Qualifying had not taken place at capture time, so grid position is not an input (SG-MR2)."
+   ],
+   "status": "upcoming",
+   "kind": "outright"
+  },
+  {
+   "id": "gaa-9abfb6e4",
+   "sport": "Gaelic Sports",
+   "competition": "Shinty-Hurling International - Final",
+   "event": "Ireland v Scotland",
+   "start_utc": "2026-10-24 18:00",
+   "venue": "SuperValu Pairc Ui Chaoimh, Cork",
+   "source_url": "https://www.gaa.ie/hurling/shinty-hurling-international/ireland-scotland/9abfb6e4-6223-44b7-8d25-57510681e49e",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "The GAA publishes no rating, table or previous result for this one-off international, so no price is originated (SG-GA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32332",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Ryan Joyce v Jermaine Wattimena",
+   "start_utc": "2026-10-23T17:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ryan_Joyce_vs_Jermaine_Wattimena/15?event_id=32332",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32333",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Krzysztof Ratajski v Dave Chisnall",
+   "start_utc": "2026-10-23T17:45:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Dave_Chisnall/15?event_id=32333",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32327",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Nathan Aspinall v Cristo Reyes",
+   "start_utc": "2026-10-23T18:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Cristo_Reyes/15?event_id=32327",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32335",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Jonny Clayton v Niko Springer",
+   "start_utc": "2026-10-23T18:45:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Niko_Springer/15?event_id=32335",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32328",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Luke Littler v William O'Connor",
+   "start_utc": "2026-10-23T19:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32326",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Wessel Nijman v Martin Schindler",
+   "start_utc": "2026-10-23T19:45:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Wessel_Nijman_vs_Martin_Schindler/15?event_id=32326",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32331",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Kevin Doets v Michael van Gerwen",
+   "start_utc": "2026-10-23T20:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Kevin_Doets_vs_Michael_van_Gerwen/15?event_id=32331",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32336",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Josh Rock v Chris Dobey",
+   "start_utc": "2026-10-23T20:45:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Josh_Rock_vs_Chris_Dobey/15?event_id=32336",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32384",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Stephen Bunting v Kim Huybrechts",
+   "start_utc": "2026-10-24T17:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Stephen_Bunting_vs_Kim_Huybrechts/15?event_id=32384",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32385",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Gian van Veen v Luke Woodhouse",
+   "start_utc": "2026-10-24T17:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Luke_Woodhouse/15?event_id=32385",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32386",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Ross Smith v Damon Heta",
+   "start_utc": "2026-10-24T17:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Damon_Heta/15?event_id=32386",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "darts-32383",
+   "sport": "Darts",
+   "competition": "PDC European Championship week (competition name not confirmed by the governing body)",
+   "event": "Cameron Menzies v Gerwyn Price",
+   "start_utc": "2026-10-24T17:15:00Z",
+   "venue": "",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "No PDC-published draw, average or Order of Merit figure could be read, so this row has an operator source and no originated price (SG-DA1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "gbgb-1",
+   "sport": "Greyhounds",
+   "competition": "GBGB open race - 1 (Category One)",
+   "event": "Romford 575m (Greyhounds)",
+   "start_utc": "2026-10-23",
+   "venue": "Romford",
+   "source_url": "https://www.gbgb.org.uk/racing/open-races/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "GBGB publishes no runners, trap numbers or race time for this heat in the served page, so there is no field to price (SG-GH1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "gbgb-2",
+   "sport": "Greyhounds",
+   "competition": "GBGB open race - 3 (Category Three)",
+   "event": "Romford 750m (Greyhounds)",
+   "start_utc": "2026-10-23",
+   "venue": "Romford",
+   "source_url": "https://www.gbgb.org.uk/racing/open-races/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "GBGB publishes no runners, trap numbers or race time for this heat in the served page, so there is no field to price (SG-GH1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "gbgb-3",
+   "sport": "Greyhounds",
+   "competition": "GBGB open race - 3 (Category Three)",
+   "event": "Sunderland 450m (Puppies)",
+   "start_utc": "2026-10-23",
+   "venue": "Sunderland",
+   "source_url": "https://www.gbgb.org.uk/racing/open-races/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "GBGB publishes no runners, trap numbers or race time for this heat in the served page, so there is no field to price (SG-GH1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "gbgb-4",
+   "sport": "Greyhounds",
+   "competition": "GBGB open race - 3 (Category Three)",
+   "event": "Sunderland 261m (Greyhounds)",
+   "start_utc": "2026-10-23",
+   "venue": "Sunderland",
+   "source_url": "https://www.gbgb.org.uk/racing/open-races/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "GBGB publishes no runners, trap numbers or race time for this heat in the served page, so there is no field to price (SG-GH1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "gbgb-5",
+   "sport": "Greyhounds",
+   "competition": "GBGB open race - 3 (Category Three)",
+   "event": "Sunderland 261m (Greyhounds)",
+   "start_utc": "2026-10-23",
+   "venue": "Sunderland",
+   "source_url": "https://www.gbgb.org.uk/racing/open-races/",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "GBGB publishes no runners, trap numbers or race time for this heat in the served page, so there is no field to price (SG-GH1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "atp-qf-1",
+   "sport": "Tennis",
+   "competition": "ATP Almaty - Quarterfinals",
+   "event": "Daniil Medvedev v Terence Atmane",
+   "start_utc": "2026-10-23",
+   "venue": "Almaty",
+   "source_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS004",
+   "inputs": "Daniil Medvedev seeded 1",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "Published as an official result, not as a selection: the match was completed when the scoreboard was read (Daniil Medvedev won 6-4 6-4)."
+   ],
+   "status": "result",
+   "result": "Daniil Medvedev won 6-4 6-4"
+  },
+  {
+   "id": "atp-qf-2",
+   "sport": "Tennis",
+   "competition": "ATP Almaty - Quarterfinals",
+   "event": "Alexander Bublik v Karen Khachanov",
+   "start_utc": "2026-10-23",
+   "venue": "Almaty",
+   "source_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS005",
+   "inputs": "Alexander Bublik seeded 3; Karen Khachanov seeded 5",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "Published as an official result, not as a selection: the match was live when the scoreboard was read (4-6 7-6(5) 3-3 at capture)."
+   ],
+   "status": "result",
+   "result": "4-6 7-6(5) 3-3 at capture"
+  },
+  {
+   "id": "atp-qf-3",
+   "sport": "Tennis",
+   "competition": "ATP Brussels - Quarterfinals",
+   "event": "Francisco Cerundolo v Clement Chidekh",
+   "start_utc": "2026-10-23",
+   "venue": "Brussels",
+   "source_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS006",
+   "inputs": "Francisco Cerundolo seeded 3",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "Published as an official result, not as a selection: the match was completed when the scoreboard was read (Francisco Cerundolo won 6-2 6-4)."
+   ],
+   "status": "result",
+   "result": "Francisco Cerundolo won 6-2 6-4"
+  },
+  {
+   "id": "atp-qf-4",
+   "sport": "Tennis",
+   "competition": "ATP Brussels - Quarterfinals",
+   "event": "Tallon Griekspoor v Jiri Lehecka",
+   "start_utc": "2026-10-23",
+   "venue": "Brussels",
+   "source_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS007",
+   "inputs": "Jiri Lehecka seeded 2",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "Published as an official result, not as a selection: the match was completed when the scoreboard was read (Tallon Griekspoor won 4-6 6-4 6-3)."
+   ],
+   "status": "result",
+   "result": "Tallon Griekspoor won 4-6 6-4 6-3"
+  },
+  {
+   "id": "atp-qf-5",
+   "sport": "Tennis",
+   "competition": "ATP Lyon - Quarterfinals",
+   "event": "Tommy Paul v Corentin Moutet",
+   "start_utc": "2026-10-23",
+   "venue": "Lyon",
+   "source_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/496/MS006",
+   "inputs": "Tommy Paul seeded 4",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "Published as an official result, not as a selection: the match was completed when the scoreboard was read (Tommy Paul won 6-4 3-6 6-3)."
+   ],
+   "status": "result",
+   "result": "Tommy Paul won 6-4 3-6 6-3"
+  },
+  {
+   "id": "atp-qf-6",
+   "sport": "Tennis",
+   "competition": "ATP Lyon - Quarterfinals",
+   "event": "Taylor Fritz v Daniel Altmaier",
+   "start_utc": "2026-10-23",
+   "venue": "Lyon",
+   "source_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/496/MS007",
+   "inputs": "Taylor Fritz seeded 2",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "Published as an official result, not as a selection: the match was live when the scoreboard was read (7-6(5) 3-2 to Fritz at capture)."
+   ],
+   "status": "result",
+   "result": "7-6(5) 3-2 to Fritz at capture"
+  },
+  {
+   "id": "atp-sf-1",
+   "sport": "Tennis",
+   "competition": "ATP Almaty - Semi-finals",
+   "event": "Daniil Medvedev v Winner of Bublik v Khachanov",
+   "start_utc": "2026-10-24",
+   "venue": "Almaty",
+   "source_url": "https://www.atptour.com/en/scores/current",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "The opponent is not published on the official scoreboard yet, so no selection is originated (SG-TE1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "atp-sf-2",
+   "sport": "Tennis",
+   "competition": "ATP Brussels - Semi-finals",
+   "event": "Francisco Cerundolo v Semi-final opponent not published",
+   "start_utc": "2026-10-24",
+   "venue": "Brussels",
+   "source_url": "https://www.atptour.com/en/scores/current",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "The opponent is not published on the official scoreboard yet, so no selection is originated (SG-TE1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "atp-sf-3",
+   "sport": "Tennis",
+   "competition": "ATP Brussels - Semi-finals",
+   "event": "Tallon Griekspoor v Semi-final opponent not published",
+   "start_utc": "2026-10-24",
+   "venue": "Brussels",
+   "source_url": "https://www.atptour.com/en/scores/current",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "The opponent is not published on the official scoreboard yet, so no selection is originated (SG-TE1)."
+   ],
+   "status": "upcoming"
+  },
+  {
+   "id": "atp-sf-4",
+   "sport": "Tennis",
+   "competition": "ATP Lyon - Semi-finals",
+   "event": "Tommy Paul v Semi-final opponent not published",
+   "start_utc": "2026-10-24",
+   "venue": "Lyon",
+   "source_url": "https://www.atptour.com/en/scores/current",
+   "inputs": "",
+   "markets": [],
+   "pick": null,
+   "flags": [
+    "The opponent is not published on the official scoreboard yet, so no selection is originated (SG-TE1)."
+   ],
+   "status": "upcoming"
+  }
+ ]
+}

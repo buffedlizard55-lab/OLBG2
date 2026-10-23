@@ -1,0 +1,33 @@
+{
+  "source_url": "https://www.atptour.com/en/scores/current",
+  "draw_source_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws",
+  "source_name": "ATP Tour official scoreboard (Tour Scores) and tournament draw index",
+  "captured_utc": "2026-10-23T16:47:00Z",
+  "events": [
+    {"id": "9410", "city": "Almaty", "draw_url": "https://www.atptour.com/en/scores/current/almaty/9410/draws"},
+    {"id": "7485", "city": "Brussels", "name": "BNP Paribas Fortis European Open", "draw_url": "https://www.atptour.com/en/scores/current/brussels/7485/draws"},
+    {"id": "496", "city": "Lyon", "draw_url": "https://www.atptour.com/en/scores/current/lyon/496/draws"}
+  ],
+  "quarter_finals": [
+    {"event": "Almaty", "round": "Quarterfinals", "p1": "Daniil Medvedev", "p1_seed": 1, "p2": "Terence Atmane", "p2_seed": null, "state": "completed", "result": "Daniil Medvedev won 6-4 6-4", "stats_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS004"},
+    {"event": "Almaty", "round": "Quarterfinals", "p1": "Alexander Bublik", "p1_seed": 3, "p2": "Karen Khachanov", "p2_seed": 5, "state": "live", "result": "4-6 7-6(5) 3-3 at capture", "stats_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/9410/MS005"},
+    {"event": "Brussels", "round": "Quarterfinals", "p1": "Francisco Cerundolo", "p1_seed": 3, "p2": "Clement Chidekh", "p2_seed": null, "state": "completed", "result": "Francisco Cerundolo won 6-2 6-4", "stats_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS006"},
+    {"event": "Brussels", "round": "Quarterfinals", "p1": "Tallon Griekspoor", "p1_seed": null, "p2": "Jiri Lehecka", "p2_seed": 2, "state": "completed", "result": "Tallon Griekspoor won 4-6 6-4 6-3", "stats_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/7485/MS007"},
+    {"event": "Lyon", "round": "Quarterfinals", "p1": "Tommy Paul", "p1_seed": 4, "p2": "Corentin Moutet", "p2_seed": null, "state": "completed", "result": "Tommy Paul won 6-4 3-6 6-3", "stats_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/496/MS006"},
+    {"event": "Lyon", "round": "Quarterfinals", "p1": "Taylor Fritz", "p1_seed": 2, "p2": "Daniel Altmaier", "p2_seed": null, "state": "live", "result": "7-6(5) 3-2 to Fritz at capture", "stats_url": "https://www.atptour.com/en/scores/stats-centre/live/2026/496/MS007"}
+  ],
+  "semi_finals": [
+    {"event": "Almaty", "round": "Semi-finals", "date": "2026-10-24", "p1": "Daniil Medvedev", "p2": "Winner of Bublik v Khachanov", "determined": false},
+    {"event": "Brussels", "round": "Semi-finals", "date": "2026-10-24", "p1": "Francisco Cerundolo", "p2": "Semi-final opponent not published", "determined": false},
+    {"event": "Brussels", "round": "Semi-finals", "date": "2026-10-24", "p1": "Tallon Griekspoor", "p2": "Semi-final opponent not published", "determined": false},
+    {"event": "Lyon", "round": "Semi-finals", "date": "2026-10-24", "p1": "Tommy Paul", "p2": "Semi-final opponent not published", "determined": false}
+  ],
+  "flags": [
+    {"id": "SG-TE1", "subject": "No semi-final line-up was confirmable", "severity": "high",
+     "detail": "The ATP scoreboard published two quarter-finals per event at capture time: Medvedev, Cerundolo, Griekspoor and Paul had qualified, Bublik v Khachanov and Fritz v Altmaier were still on court. The bracket positions that pair those winners are only shown in the deeper draw chunks, which were not read first-hand, so no semi-final pairing is asserted and no tennis price is published today. Completed quarter-final results are published as results, not as selections.",
+     "source_url": "https://www.atptour.com/en/scores/current"},
+    {"id": "SG-TE2", "subject": "Seeds captured but not used as a price input", "severity": "low",
+     "detail": "Tournament seedings were read (Medvedev 1, Lehecka 2, Bublik 3, Cerundolo 3, Paul 4, Fritz 2, Khachanov 5). Seeds on their own are an ordinal, not a strength measure, and no ATP ranking-points table was captured, so no tennis price is originated from them.",
+     "source_url": "https://www.atptour.com/en/scores/current/brussels/7485/top-seeds"}
+  ]
+}

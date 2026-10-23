@@ -49,6 +49,35 @@ jobs:
             sleep 5
           done
 
+      # New captures move the snapshot anchor, so the published pages have to be rebuilt
+      # in the same run. Without this the desk would be committed one capture out of date
+      # and the drift gate in pages.yml would fail on the next push.
+      - name: Rebuild the desk on the new captures
+        run: |
+          python scripts/ledger_seed.py
+          python scripts/ledger_official.py
+          python scripts/ledger_merge.py
+          python scripts/ledger_model.py
+          python scripts/ledger_picks.py
+          python scripts/ledger_inherit.py
+          python scripts/ledger_predictions.py
+          python scripts/ledger_report.py
+          python scripts/ledger_build.py
+          python scripts/ledger_verify.py
+
+      - name: Commit the rebuilt desk
+        run: |
+          git add data/ledger ledger
+          if git diff --cached --quiet; then
+            echo "no page changes"
+            exit 0
+          fi
+          git commit -m "ledger: rebuild the desk on the $(date -u +%Y-%m-%dT%H:%M:%SZ) capture"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            sleep 5
+          done
+
       - name: Summarise the run
         if: always()
         run: python scripts/ledger_capture_summary.py

@@ -4377,3 +4377,19 @@ claims anywhere; OLBG lists only tipped events, not full slates; Golf and Snooke
 
 **PR:** #165 → `main`. Merge result and Pages confirmation are appended to this board once the
 deploy finishes.
+
+### `arena/41b3bae5-olbg2` — L9 merge result, Pages confirmation, and the capture-commit fix (2026-10-23 20:25Z)
+
+* **PR #165 → `main`: merged** (`ed4582a`), `Validate Pages content` green on the PR and on the merge
+  commit, `Deploy Pages` green, and `https://buffedlizard55-lab.github.io/OLBG2/ledger/` served the
+  overview with the executive summary, 15 sport pages and the flagged page.
+* **Follow-on capture run:** merging `data/ledger/request.json` to `main` legitimately fired
+  `Ledger capture`, which committed fresh bodies (`f458680`). That moves the snapshot anchor, so the
+  published pages were one capture behind and the drift gate would have failed on the next push.
+  `ledger-capture.yml` now rebuilds the desk (`ledger_seed` → `ledger_verify`) and commits
+  `data/ledger` **and** `ledger/` in the same run, so this cannot recur.
+* **Rebuild after that capture:** 144 OLBG events (10 matched), 744 originated selections on 93
+  official fixtures, 885 selections in total, 153 high, **10 high and inside −250…+10000**, 19 written
+  previews + 26 carried, `ledger_verify.py` 18/18, `integration_audit.py` 0 link errors, 638 tests OK.
+* Figures in the earlier L1–L8 entry (143 events, 884 selections, 155 high) were correct for the
+  19:52Z anchor; the 20:12Z capture moved them to the numbers above.

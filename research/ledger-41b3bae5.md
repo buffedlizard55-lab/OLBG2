@@ -67,7 +67,7 @@ the payload — then collapses duplicate tips for the same event with
   quote`, and is never presented as our line.
 
 Counts at capture: 295 tip rows over 44 OLBG pages, collapsing to 260 distinct events, of which
-**143 are upcoming in the fifteen requested sports**.
+**144 are upcoming in the fifteen requested sports**.
 
 ---
 
@@ -101,8 +101,8 @@ numbers were not there to read, which is why those sports carry no originated pr
 
 A row is only marked verified when an official capture says the same two sides meet within a day of
 the OLBG start time. North-American feeds are matched on the team nickname (`Oilers`, `Brewers`),
-EuroLeague on the full club name. Result at capture: **10 of 143** rows matched (3 against a
-fixture feed, 7 against an official page); 133 remain `unmatched` and are published as OLBG
+EuroLeague on the full club name. Result at capture: **10 of 144** rows matched (3 against a
+fixture feed, 7 against an official page); 134 remain `unmatched` and are published as OLBG
 listings only, with no line and no preview.
 
 The low match rate is a property of the slate, not of the parser: OLBG's upcoming list is dominated
@@ -136,8 +136,8 @@ the band's −250 floor. High confidence and the band can therefore only overlap
 The desk lists the intersection first, then the rest of the high-confidence rows, rather than
 quietly widening either rule.
 
-Across the whole table: 884 selections, 744 originated, 140 market-implied (OLBG's price converted,
-labelled as such), 155 high, 10 high-and-in-band.
+Across the whole table: 885 selections, 744 originated, 141 market-implied (OLBG's price converted,
+labelled as such), 153 high, 10 high-and-in-band.
 
 ---
 
@@ -176,7 +176,7 @@ and a minimum page length.
 
 Reproducibility: every generator takes its clock from `ledger_common.anchor()`, the newest capture
 timestamp, so a rebuild is byte-identical. Two consecutive full rebuilds produce an empty
-`git diff`.
+`git diff`, and the figure set below is the one produced by the 20:12Z capture run.
 
 ---
 

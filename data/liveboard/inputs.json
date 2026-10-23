@@ -1,0 +1,142 @@
+{
+  "fetched_utc": "2026-10-23T16:35:00Z",
+  "rule": "Only numbers read directly from a governing body or official league page are stored here. Each block carries one URL. Nothing is estimated, interpolated or carried over from another desk.",
+  "blocks": [
+    {
+      "id": "MLB-MIL-2026",
+      "sport": "Baseball",
+      "subject": "Milwaukee Brewers",
+      "url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings",
+      "values": {
+        "wins": 103, "losses": 59, "pct": 0.636,
+        "runs_scored": 832, "runs_allowed": 618, "run_differential": 214,
+        "home": "55-26", "away": "48-33", "last_ten": "8-2", "streak": "W5",
+        "one_run": "27-20", "extra_innings": "11-5", "day": "35-24", "night": "68-35",
+        "division_rank": 1, "clinch": "z", "venue": "American Family Field"
+      }
+    },
+    {
+      "id": "MLB-TB-2026",
+      "sport": "Baseball",
+      "subject": "Tampa Bay Rays",
+      "url": "https://statsapi.mlb.com/api/v1/teams/139?hydrate=standings",
+      "values": {
+        "wins": 98, "losses": 64, "pct": 0.605,
+        "runs_scored": 736, "runs_allowed": 650, "run_differential": 86,
+        "home": "55-26", "away": "43-38", "last_ten": "5-5", "streak": "L1",
+        "one_run": "25-14", "extra_innings": "8-6", "day": "35-29", "night": "63-35",
+        "division_rank": 1, "clinch": "z", "venue": "Tropicana Field"
+      }
+    },
+    {
+      "id": "EUROLEAGUE-2026-27",
+      "sport": "Basketball",
+      "subject": "EuroLeague regular season table",
+      "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+      "values": {
+        "PAO": {"club": "Panathinaikos AKTOR Athens", "gp": 7, "w": 6, "l": 1, "pf": 613, "pa": 517},
+        "FBT": {"club": "Fenerbahce Tarfin Istanbul", "gp": 6, "w": 5, "l": 1, "pf": 501, "pa": 447},
+        "OLY": {"club": "Olympiacos Piraeus", "gp": 6, "w": 5, "l": 1, "pf": 564, "pa": 524},
+        "HTA": {"club": "Hapoel IBI Tel Aviv", "gp": 7, "w": 5, "l": 2, "pf": 630, "pa": 601},
+        "DUB": {"club": "Dubai Basketball", "gp": 7, "w": 5, "l": 2, "pf": 597, "pa": 584},
+        "VBC": {"club": "Valencia Basket", "gp": 6, "w": 4, "l": 2, "pf": 583, "pa": 537},
+        "RMB": {"club": "Real Madrid", "gp": 7, "w": 4, "l": 3, "pf": 667, "pa": 630},
+        "CZV": {"club": "Crvena Zvezda Meridianbet Belgrade", "gp": 7, "w": 4, "l": 3, "pf": 560, "pa": 532},
+        "BAR": {"club": "FC Barcelona", "gp": 7, "w": 4, "l": 3, "pf": 623, "pa": 606},
+        "VIR": {"club": "Virtus Bologna", "gp": 7, "w": 4, "l": 3, "pf": 606, "pa": 608},
+        "PAR": {"club": "Partizan Mozzart Bet Belgrade", "gp": 7, "w": 4, "l": 3, "pf": 541, "pa": 546},
+        "EFS": {"club": "Anadolu Efes Istanbul", "gp": 7, "w": 3, "l": 4, "pf": 581, "pa": 590},
+        "BJK": {"club": "Besiktas Istanbul", "gp": 7, "w": 3, "l": 4, "pf": 634, "pa": 644},
+        "ZAL": {"club": "Zalgiris Kaunas", "gp": 6, "w": 2, "l": 4, "pf": 490, "pa": 517},
+        "ASV": {"club": "LDLC ASVEL Villeurbanne", "gp": 6, "w": 2, "l": 4, "pf": 527, "pa": 572},
+        "MTA": {"club": "Maccabi Rapyd Tel Aviv", "gp": 7, "w": 2, "l": 5, "pf": 608, "pa": 653},
+        "BAY": {"club": "FC Bayern Munich", "gp": 7, "w": 2, "l": 5, "pf": 612, "pa": 659},
+        "PBB": {"club": "Paris Basketball", "gp": 6, "w": 1, "l": 5, "pf": 504, "pa": 545},
+        "MIL": {"club": "Armani Olimpia Milan", "gp": 7, "w": 1, "l": 6, "pf": 585, "pa": 648},
+        "KBA": {"club": "Kosner Baskonia Vitoria-Gasteiz", "gp": 7, "w": 1, "l": 6, "pf": 583, "pa": 649}
+      }
+    },
+    {
+      "id": "WST-WORLD-RANKING",
+      "sport": "Snooker",
+      "subject": "Johnstone's Paint World Rankings",
+      "url": "https://www.wst.tv/rankings/",
+      "values": [
+        {"rank": 1, "player": "Zhao Xintong", "money": 1265550},
+        {"rank": 2, "player": "Wu Yize", "money": 1238900},
+        {"rank": 3, "player": "Judd Trump", "money": 1114050},
+        {"rank": 4, "player": "Neil Robertson", "money": 1100200},
+        {"rank": 5, "player": "Mark Selby", "money": 1070500},
+        {"rank": 6, "player": "John Higgins", "money": 905000},
+        {"rank": 7, "player": "Shaun Murphy", "money": 897350},
+        {"rank": 8, "player": "Mark Williams", "money": 747400},
+        {"rank": 9, "player": "Kyren Wilson", "money": 716800},
+        {"rank": 10, "player": "Barry Hawkins", "money": 670050},
+        {"rank": 11, "player": "Chris Wakelin", "money": 576550}
+      ]
+    },
+    {
+      "id": "WST-ONE-YEAR",
+      "sport": "Snooker",
+      "subject": "One Year List",
+      "url": "https://www.wst.tv/rankings/",
+      "values": [
+        {"rank": 1, "player": "Mark Selby", "money": 348350},
+        {"rank": 2, "player": "Chang Bingyu", "money": 207100},
+        {"rank": 3, "player": "Wu Yize", "money": 204000},
+        {"rank": 4, "player": "Jak Jones", "money": 141000},
+        {"rank": 5, "player": "Ali Carter", "money": 134750},
+        {"rank": 6, "player": "Noppon Saengkham", "money": 118500},
+        {"rank": 7, "player": "Yuan Sijun", "money": 102500},
+        {"rank": 8, "player": "Judd Trump", "money": 89700},
+        {"rank": 9, "player": "Zhao Xintong", "money": 89000},
+        {"rank": 10, "player": "Shaun Murphy", "money": 79350},
+        {"rank": 11, "player": "David Gilbert", "money": 73250}
+      ]
+    },
+    {
+      "id": "WST-CENTURIES",
+      "sport": "Snooker",
+      "subject": "Centuries Count (season)",
+      "url": "https://www.wst.tv/rankings/",
+      "values": [
+        {"rank": 1, "player": "Zhao Xintong", "centuries": 25},
+        {"rank": 2, "player": "Wu Yize", "centuries": 20},
+        {"rank": 3, "player": "David Gilbert", "centuries": 20},
+        {"rank": 4, "player": "Chang Bingyu", "centuries": 20},
+        {"rank": 5, "player": "Mark Selby", "centuries": 19},
+        {"rank": 6, "player": "Judd Trump", "centuries": 17},
+        {"rank": 7, "player": "Jak Jones", "centuries": 16},
+        {"rank": 8, "player": "Liam Highfield", "centuries": 16},
+        {"rank": 9, "player": "Zhang Anda", "centuries": 15}
+      ]
+    },
+    {
+      "id": "URC-R3-RESULTS",
+      "sport": "Rugby Union",
+      "subject": "United Rugby Championship Round 3 results",
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "values": [
+        {"home": "Glasgow Warriors", "away": "Connacht", "score": "36-19", "venue": "Scotstoun Stadium", "date": "2026-10-09"},
+        {"home": "Dragons", "away": "Ospreys", "score": "31-38", "venue": "Rodney Parade", "date": "2026-10-09"},
+        {"home": "Vodacom Bulls", "away": "Lions", "score": "57-15", "venue": "Loftus Versfeld", "date": "2026-10-10"},
+        {"home": "Stormers", "away": "Sharks", "score": "39-22", "venue": "DHL Stadium", "date": "2026-10-10"},
+        {"home": "Zebre Parma", "away": "Edinburgh", "score": "12-29", "venue": "Stadio Sergio Lanfranchi", "date": "2026-10-10"},
+        {"home": "Scarlets", "away": "Benetton", "score": "27-26", "venue": "Parc y Scarlets", "date": "2026-10-10"},
+        {"home": "Ulster", "away": "Munster", "score": "26-26", "venue": "Affidea Stadium", "date": "2026-10-10"},
+        {"home": "Leinster", "away": "Cardiff", "score": "29-5", "venue": "Laya Arena", "date": "2026-10-10"}
+      ]
+    },
+    {
+      "id": "URC-R4-FIXTURES",
+      "sport": "Rugby Union",
+      "subject": "United Rugby Championship Round 4 fixtures",
+      "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+      "values": [
+        {"fixture": "Cardiff v Sharks", "local": "2026-10-23 14:45", "venue": "Cardiff Arms Park", "match_id": 292608},
+        {"fixture": "Connacht v Zebre Parma", "local": "2026-10-23 14:45", "venue": "Dexcom Stadium", "match_id": 292609},
+        {"fixture": "Edinburgh v Lions", "local": "2026-10-23 14:45", "venue": "Hive Stadium", "match_id": 292610}
+      ]
+    }
+  ]
+}

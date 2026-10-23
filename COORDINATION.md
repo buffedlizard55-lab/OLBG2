@@ -3920,4 +3920,48 @@ The repository's Pages settings are legacy mode; an API attempt to change build_
 
 Final local suite on the combined PR #145 tree: **525 tests passed**, zero local link errors. Publication-ledger PR #148 encountered another append-only board conflict after main advanced to c80b8db; resolved by retaining the entire newer main board and appending only this final record. No data/site changes.
 
+---
+
+## Session `arena/cfa67ee2-olbg2` — `/liveboard/` 15-sport desk (claimed 16:20Z, closed 18:10Z)
+
+**Scope claimed:** `liveboard/`, `data/liveboard/`, `scripts/liveboard_model.py`,
+`scripts/liveboard_build.py`, `tests/test_liveboard_cfa67ee2.py`, `research/liveboard-cfa67ee2.md`.
+No other session's files touched.
+
+**Delivered.** 133 fixtures captured first-hand from all fifteen OLBG sport hubs (Golf returned
+"No tips found." and is published empty rather than backfilled; Rugby League carries 2027 outrights
+only). 133 originated prices, 5 handicap/total lines derived from governing-body numbers, 14 written
+predictions across seven sports, 20 review flags, a 24-page static site with zero broken internal
+links, and 36 acceptance tests. Repository suite: **503 tests OK**; `integration_audit.py`: 0 link
+errors across every published layer.
+
+**Official inputs read this session.** MLB Stats API (both World Series clubs), EuroLeague 2026-27
+standings, World Snooker Tour rankings (world, one-year, centuries), URC Round 3 results and Round 4
+fixtures, GAA fixtures, EHF Champions League calendar. Nine further pages were blocked and are
+published with their URLs rather than worked around: PDC (cookie wall), Opel HBL (reCAPTCHA), ATP
+rankings (table absent), two `cdn.nba.com` feeds (HTTP 500), Polish league (wrong competition),
+URC table (empty widget), ICC schedule (404).
+
+**Gates, stated plainly.** Ten selections reach 70%. Exactly two also sit inside −250 to +10000 —
+Aurillac and New South Wales, both at 71.4%. The brief's two conditions intersect in roughly 1.4
+percentage points because −250 *is* 71.4%, so "five per sport inside the band" cannot be met from this
+card without dropping a gate. That is published as F-14 with the arithmetic, not hidden. The five
+strongest selections that fall outside the band are shown with their prices.
+
+**Shared files touched, as this session's own integrator:** one nav entry in `scripts/build_site.py`,
+one rebuild step plus drift paths in `.github/workflows/pages.yml`.
+
+**Honest summary.** Complete inventory of what OLBG was publishing across the fifteen named sports on
+23 October 2026, an independently originated price on every fixture, and fourteen predictions where a
+sourced fact existed to write around. It does not deliver five predictions per sport: eleven of the
+fifteen sports had no reachable official current-form input, and inventing one was not an option.
+
+**Note for the next integrator.** `main` currently contains three stray `>>>>>>> origin/main` lines in
+`COORDINATION.md` and one in `METHODOLOGY.md`, left by an earlier merge. They are plain text and do not
+break rendering, but they are not content. They were left untouched here because neither file is in this
+session's scope.
+
+
 Post-publication final field-attribution check (`8226c94a`): split the Gaelic Football and Hurling selected OLBG extracts by their individual source URLs rather than repeating a combined category extract under both. No fixture, probability or status changed. Added a regression check; 27 monitor tests pass and local links remain valid. PR #148 merged successfully; final Pages run [39988146536](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/39988146536) SUCCESS. This small evidence-attribution correction is in the same claimed scope.
+
+PR #150: append-only board conflict after main advanced to d312e56 resolved by keeping the full newer main board and this attribution note. Other sessions’ records preserved.

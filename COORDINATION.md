@@ -4547,3 +4547,15 @@ without an alternate line”, the phrasing corrected on the summary in #169. It 
 / 14 genuinely outside, matching the summary and the band board. This was the last place the old wording
 survived; the desk's own verifier did not catch it because the sentence is free text, so the correction was
 made by re-reading the rendered page rather than by the gate.
+
+## Session `arena/deb1cb6e-olbg2` — independent repository and publication audit (2026-10-23)
+
+| Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|
+| Independent offline validation of the merged 15-sport desk, cross-layer navigation/link integration, reproducibility, and publication limitations; document only checked findings | in progress | `arena/deb1cb6e-olbg2` | `research/deb1cb6e-independent-audit.md`, append-only `COORDINATION.md` |
+
+Claimed after reading this board and confirming the checkout is clean at `main`/PR #174 merge `8b4435f`.
+This is an independent validation/documentation task, not a second data collection or prediction desk. It does
+not edit generated pages, any other desk's files, source data, or shared build configuration. Official-source
+facts will be treated as repository evidence only; external hosts outside this environment's outbound allowlist
+cannot be freshly fetched here. Cross-scope integration requests will be logged rather than edited.

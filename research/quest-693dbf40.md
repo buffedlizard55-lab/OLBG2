@@ -147,3 +147,14 @@ needs a browser-grade OLBG capture, the Saturday NBA slate and post-weekend stan
 ## Publication record
 
 (Appended after merge/deploy below this line by the same session.)
+
+| Item | Value |
+|---|---|
+| Pull request | [#181](https://github.com/buffedlizard55-lab/OLBG2/pull/181) — merged 2026-10-23T21:55:22Z as `b8368d1` (no approval wait) |
+| CI | `Validate Pages content` **success** on the PR head and on `main` (run 40030186477) |
+| Pages deploy | Several deploys cancelled each other while parallel sessions merged (#179/#182/#185); `pages-build-deployment` run [40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) completed build+deploy **success** on a `main` containing this desk |
+| Live check | `/quest/today.html`, `/quest/top5.html`, `/quest/flagged.html`, `/quest/sports/ice-hockey.html` fetched after deploy and read: KPIs 113 fixtures / 99 priced / 856 prices / 23 high / 9 in-window / 34 predictions / 13 flags; Boston −236 write-up live. (`/quest/index.html` returned a stale cached 404 to the fetching tool immediately after deploy; the file is on `main` and sibling pages serve — re-check on next visit.) |
+| Live entry | https://buffedlizard55-lab.github.io/OLBG2/quest/ |
+
+Open flags remain published at `/quest/flagged.html` and do not block anything. Root navigation and
+CI drift-wiring requests for `/quest/` stand in COORDINATION.md for the integrator.

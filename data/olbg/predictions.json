@@ -1,0 +1,134 @@
+{
+  "research_cutoff": "2026-10-23T19:40:38Z",
+  "predictions": [
+    {
+      "event_id": "nba-0022600008",
+      "sport": "basketball",
+      "match": "New York Knicks @ Boston Celtics",
+      "selection": "Boston Celtics",
+      "probability": 0.7019704433497537,
+      "fair_american": -236,
+      "confidence": "high",
+      "text": "Bet the Boston Celtics on the moneyline. Boston’s official 30–11 home record from last season supplies the venue-specific baseline against New York’s 22–19 away mark. Both teams lost their openers, but Paul George’s 38-point Boston debut provides a concrete offensive reference. Devin Carter was listed out with illness at 3:15 PM ET.",
+      "word_count": 52,
+      "provenance": "last_seen",
+      "official_sources": [
+        {
+          "label": "NBA game page and preview",
+          "url": "https://www.nba.com/game/nyk-vs-bos-0022600008",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Official participants, ET clock, venue and game information.",
+          "kind": "official"
+        },
+        {
+          "label": "NBA official schedule",
+          "url": "https://www.nba.com/games?date=2026-10-23",
+          "captured": "2026-10-23T16:19:00Z",
+          "note": "Twelve-game Friday slate; both rendered chunks read.",
+          "kind": "official"
+        },
+        {
+          "label": "NBA official 2025-26 standings",
+          "url": "https://www.nba.com/standings?Season=2025-26",
+          "captured": "2026-10-21T05:25:00Z",
+          "note": "Prior-season overall and venue-split records.",
+          "kind": "official"
+        },
+        {
+          "label": "NBA official injury report — 3:15 PM ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Availability only as of the report timestamp; no numerical injury adjustment.",
+          "kind": "official"
+        }
+      ],
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NY_Knicks_@_BOS_Celtics/4?event_id=534842"
+    },
+    {
+      "event_id": "nba-0022600102",
+      "sport": "basketball",
+      "match": "LA Clippers @ Los Angeles Lakers",
+      "selection": "Los Angeles Lakers",
+      "probability": 0.7137891077636153,
+      "fair_american": -249,
+      "confidence": "high",
+      "text": "Bet the Los Angeles Lakers on the moneyline. They opened with a 127–105 win, shooting 56.8%, while Luka Doncic posted 28 points and Walker Kessler made all 12 shots. The 3:15 PM ET report also listed Bradley Beal and Brandon Ingram out for the Clippers, although later availability changes remain possible.",
+      "word_count": 51,
+      "provenance": "last_seen",
+      "official_sources": [
+        {
+          "label": "NBA game page and preview",
+          "url": "https://www.nba.com/game/lac-vs-lal-0022600102",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Official participants, ET clock, venue and game information.",
+          "kind": "official"
+        },
+        {
+          "label": "NBA official schedule",
+          "url": "https://www.nba.com/games?date=2026-10-23",
+          "captured": "2026-10-23T16:19:00Z",
+          "note": "Twelve-game Friday slate; both rendered chunks read.",
+          "kind": "official"
+        },
+        {
+          "label": "NBA official 2025-26 standings",
+          "url": "https://www.nba.com/standings?Season=2025-26",
+          "captured": "2026-10-21T05:25:00Z",
+          "note": "Prior-season overall and venue-split records.",
+          "kind": "official"
+        },
+        {
+          "label": "NBA official injury report — 3:15 PM ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Availability only as of the report timestamp; no numerical injury adjustment.",
+          "kind": "official"
+        }
+      ],
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/LA_Clippers_@_LA_Lakers/4?event_id=536042"
+    },
+    {
+      "event_id": "nhl-2026020166",
+      "sport": "ice-hockey",
+      "match": "Montréal Canadiens @ Chicago Blackhawks",
+      "selection": "Montréal Canadiens",
+      "probability": 0.7142857142857143,
+      "fair_american": -250,
+      "confidence": "high",
+      "text": "Bet the Montréal Canadiens on the two-way moneyline. Montréal has 10 points through nine games compared with Chicago’s six, while Cole Caufield has eight season points and Nick Suzuki has 12. The early sample remains small, and no game-specific official availability bulletin was found in the checked NHL pages, so the selection is price-sensitive rather than certain.",
+      "word_count": 57,
+      "provenance": "last_seen",
+      "official_sources": [
+        {
+          "label": "NHL official game centre",
+          "url": "https://www.nhl.com/gamecenter/mtl-vs-chi/2026/10/23/2026020166",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Game 2026020166; FUT at capture.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official schedule",
+          "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Official participants, UTC start, venue and state.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official team summary API",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+          "captured": "2026-10-23T16:25:00Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official gamecenter landing feed",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020166/landing",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "FUT state, records and matchup statistics read again in the detailed review window.",
+          "kind": "official"
+        }
+      ],
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MTL_Canadiens_@_CHI_Blackhawks/13?event_id=199984"
+    }
+  ]
+}

@@ -1,0 +1,1114 @@
+{
+  "research_cutoff": "2026-10-23T19:40:38Z",
+  "items": [
+    {
+      "id": "OLBG-ACTIVE-01",
+      "severity": "review",
+      "title": "No active tips were visible on the checked OLBG hubs",
+      "detail": "All 16 main hub renders checked in this session showed no active tip set, and league-specific NHL/NBA/MLB/EuroLeague/cricket/ATP pages said ‘No tips found.’ This is a checked-page result, not proof that every OLBG market is empty. Zero rows are labelled active.",
+      "links": [
+        {
+          "label": "OLBG tips index",
+          "url": "https://www.olbg.com/betting-tips",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Checked hub family.",
+          "kind": "olbg"
+        }
+      ]
+    },
+    {
+      "id": "OLBG-EXPIRED-02",
+      "severity": "review",
+      "title": "Expired OLBG pages can still describe officially upcoming events",
+      "detail": "Direct event pages for Boston–New York, Lakers–Clippers, Montréal–Chicago, Tampa Bay–Colorado, Rays–Brewers, the US Grand Prix and four PDC matches showed Expired while official schedules still listed the events ahead. Both states are preserved; no Expired page is called an active offer.",
+      "links": [
+        {
+          "label": "Expired OLBG Celtics event",
+          "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NY_Knicks_@_BOS_Celtics/4?event_id=534842",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Expired.",
+          "kind": "olbg"
+        },
+        {
+          "label": "NBA official Celtics game page",
+          "url": "https://www.nba.com/game/nyk-vs-bos-0022600008",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Friday 7:00 PM ET.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "OLBG-NBA-03",
+      "severity": "irregularity",
+      "title": "Celtics total differs between the OLBG selection and comment",
+      "detail": "The expired page displays Under/Over 221.5 while a comment beside the selection quotes 223.5. Neither is used as an official statistic or an originated line.",
+      "links": [
+        {
+          "label": "OLBG Celtics event — inspect total",
+          "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NY_Knicks_@_BOS_Celtics/4?event_id=534842",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "221.5 selection versus 223.5 comment.",
+          "kind": "olbg"
+        }
+      ]
+    },
+    {
+      "id": "OLBG-NBA-04",
+      "severity": "irregularity",
+      "title": "Lakers spread differs between the OLBG selection and comment",
+      "detail": "The expired page displays Lakers −8.5 / Clippers +8.5 while the quoted comment says −9.5. The comment is not evidence for the originated price.",
+      "links": [
+        {
+          "label": "OLBG Lakers event — inspect spread",
+          "url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/LA_Clippers_@_LA_Lakers/4?event_id=536042",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "8.5 selection versus 9.5 comment.",
+          "kind": "olbg"
+        }
+      ]
+    },
+    {
+      "id": "OLBG-F1-05",
+      "severity": "irregularity",
+      "title": "Malformed OLBG tip-count rendering on the Formula 1 page",
+      "detail": "The expired US Grand Prix render concatenates counts into strings such as ‘14 / 014644…’. Those fields are not parsed as meaningful totals, and tipster shares are never used as probabilities.",
+      "links": [
+        {
+          "label": "OLBG US Grand Prix event",
+          "url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Malformed count rendering.",
+          "kind": "olbg"
+        }
+      ]
+    },
+    {
+      "id": "NBA-INJ-06",
+      "severity": "limitation",
+      "title": "NBA availability is timestamped and one rendered Lakers row is garbled",
+      "detail": "The official injury report is valid only as of 3:15 PM ET on 23 October. Clearly parsed Celtics and Clippers absences are quoted in prose; the malformed Lakers row is not interpreted. Later updates can change availability.",
+      "links": [
+        {
+          "label": "NBA official injury report",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "10/23/26 03:15 PM.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "NHL-INJ-07",
+      "severity": "limitation",
+      "title": "No game-specific official NHL availability bulletin was captured",
+      "detail": "The official gamecentre and team-summary pages support fixtures, records and statistics but did not supply a dated game-specific availability report in the checked content. No NHL injury claim or injury adjustment is made; this limitation remains attached to the Montréal high-confidence row.",
+      "links": [
+        {
+          "label": "NHL Montréal–Chicago landing feed",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020166/landing",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Detailed matchup read; no availability bulletin promoted.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "PDC-TIME-08",
+      "severity": "irregularity",
+      "title": "PDC and OLBG darts clocks do not agree",
+      "detail": "The official PDC hub displays staggered 07:15, 08:15, 09:15 and 10:15 clocks, while the 16:20 OLBG inventory showed 13:15 for all four. Neither zone is silently inferred; official pairings and ranking inputs remain usable.",
+      "links": [
+        {
+          "label": "PDC official tournament hub",
+          "url": "https://www.pdc.tv/tournament-hub/10870",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Staggered last-16 clocks.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "ATP-RANK-09",
+      "severity": "limitation",
+      "title": "Incomplete ATP ranking fields stay blank",
+      "detail": "Seven of the 15 named qualifiers lack an exact captured ranking value for at least one participant. The Bertola–‘Player Competing’ row is incomplete and excluded. No wildcard ranking or secondary-site figure is substituted.",
+      "links": [
+        {
+          "label": "ATP Basel official order of play",
+          "url": "https://www.protennislive.com/posting/2026/328/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Qualifying list.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official rankings",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "19 October rankings.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "CRICKET-TZ-10",
+      "severity": "limitation",
+      "title": "Cricket clocks and one women’s fixture date are not promoted",
+      "detail": "Cricket Australia labels clocks ‘your time’; only calendar dates are published. The India Women–Zimbabwe Women second ODI is excluded because its captured date was not clean. ICC women’s ODI ratings rendered empty, and men’s ODI ratings are not used for T20Is.",
+      "links": [
+        {
+          "label": "Cricket Australia upcoming list",
+          "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+          "captured": "2026-10-23T17:18:00Z",
+          "note": "cricket.com.au prints start times as 'your time' in the viewer's zone; the served zone could not be confirmed, so start times are left blank and only the published calendar date is used. Flagged SG-CR1.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "GAA-CONFLICT-11",
+      "severity": "irregularity",
+      "title": "GAA Ireland–Scotland status conflicts between captures",
+      "detail": "A dated capture listed Ireland–Scotland as a future 24 October final, but the fresher official fixtures-results render placed it under Previous results with ambiguous Final text. It is not presented as certainly upcoming and no selection is published.",
+      "links": [
+        {
+          "label": "GAA official fixtures and results",
+          "url": "https://www.gaa.ie/fixtures-results",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Fresh placement under Previous results.",
+          "kind": "official"
+        },
+        {
+          "label": "GAA match page",
+          "url": "https://www.gaa.ie/hurling/shinty-hurling-international/ireland-scotland/9abfb6e4-6223-44b7-8d25-57510681e49e",
+          "captured": "2026-10-23T16:45:00Z",
+          "note": "Earlier future-listing capture.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "VOLLEYBALL-12",
+      "severity": "limitation",
+      "title": "No readable official forward volleyball card",
+      "detail": "The checked Volleyball World schedule returned Page Not Found, PlusLiga redirected to a different league, and CEV exposed news rather than a usable forward list. Volleyball therefore has zero published matches and zero selections rather than an inferred schedule.",
+      "links": [
+        {
+          "label": "CEV official site",
+          "url": "https://www.cev.eu/",
+          "captured": "2026-10-23T17:20:00Z",
+          "note": "Official context and access limitation.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "GREYHOUNDS-13",
+      "severity": "limitation",
+      "title": "GBGB open-race data lacks runners, traps and race times",
+      "detail": "Track, distance, category and grade alone cannot identify a betting field. The GBGB homepage showed results rather than a readable future card, so no greyhound race or selection is published.",
+      "links": [
+        {
+          "label": "GBGB official open-race calendar",
+          "url": "https://www.gbgb.org.uk/racing/open-races/",
+          "captured": "2026-10-23T17:20:00Z",
+          "note": "No runner-level card in served HTML.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "GOLF-14",
+      "severity": "limitation",
+      "title": "Golf tournament is in progress, not an upcoming match",
+      "detail": "The checked PGA Tour schedule showed the Butterfield Bermuda Championship in Round 2, while the dated DP World Tour capture had completed two rounds. In-progress leaderboards are not converted into upcoming match prices; golf has zero upcoming rows in this snapshot.",
+      "links": [
+        {
+          "label": "PGA Tour official schedule",
+          "url": "https://www.pgatour.com/schedule",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "R2 In Progress at check.",
+          "kind": "official"
+        },
+        {
+          "label": "DP World Tour official leaderboard",
+          "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+          "captured": "2026-10-23T17:10:00Z",
+          "note": "Post-round-two context.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "MLB-MARKETS-15",
+      "severity": "limitation",
+      "title": "MLB run line and total are not priced without explicit pitching inputs",
+      "detail": "The expired Game 1 page exposes run line ±1.5 and total 6.5, but probable pitchers were not explicitly extracted and extra innings complicate a regulation-only calculation. Only match winner from official season records is published.",
+      "links": [
+        {
+          "label": "MLB official Game 1 feed",
+          "url": "https://statsapi.mlb.com/api/v1.1/game/849805/feed/live",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Preview/Scheduled; no probable-pitcher claim promoted.",
+          "kind": "official"
+        },
+        {
+          "label": "Expired OLBG Game 1 page",
+          "url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Market inventory only.",
+          "kind": "olbg"
+        }
+      ]
+    },
+    {
+      "id": "REPO-16",
+      "severity": "repository",
+      "title": "Historical repository contains conflict-marker text and overlapping desks",
+      "detail": "Review found leftover conflict-marker lines in COORDINATION.md and METHODOLOGY.md plus many overlapping dashboards with different dates and counts. Shared historical content is preserved; this desk has a separate /olbg/ namespace and does not add counts across layers.",
+      "links": [
+        {
+          "label": "Repository methodology at main",
+          "url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/METHODOLOGY.md#L125",
+          "captured": "2026-10-23T19:40:38Z",
+          "note": "Manual repository review link.",
+          "kind": "repository"
+        },
+        {
+          "label": "Repository coordination ledger at main",
+          "url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md",
+          "captured": "2026-10-23T19:40:38Z",
+          "note": "Append-only shared ledger; marker text retained for owner review.",
+          "kind": "repository"
+        }
+      ]
+    },
+    {
+      "id": "PRICE-17",
+      "severity": "limitation",
+      "title": "No current bookmaker odds were captured",
+      "detail": "All odds on this desk are originated fair American prices derived from the displayed estimate, not bookmaker offers. A selection is not a claim that a current wager is available at that price.",
+      "links": [
+        {
+          "label": "Expired OLBG moneyline example",
+          "url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MTL_Canadiens_@_CHI_Blackhawks/13?event_id=199984",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Expired; no current quote used.",
+          "kind": "olbg"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-atp-basel-faria-brunold",
+      "severity": "blank",
+      "title": "No supportable price: Faria v Brunold",
+      "detail": "At least one player’s official singles ranking points were not captured; no price is filled from a name, wildcard or secondary ranking. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "ATP Basel official order of play PDF",
+          "url": "https://www.protennislive.com/posting/2026/328/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "24 October 2026 qualifying match list. The separate incomplete Bertola–Player Competing row is excluded and flagged.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official singles rankings — 19 October",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Ranking points used only where both exact player values were captured.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-atp-basel-bernet-altmaier",
+      "severity": "blank",
+      "title": "No supportable price: Bernet v Altmaier",
+      "detail": "At least one player’s official singles ranking points were not captured; no price is filled from a name, wildcard or secondary ranking. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "ATP Basel official order of play PDF",
+          "url": "https://www.protennislive.com/posting/2026/328/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "24 October 2026 qualifying match list. The separate incomplete Bertola–Player Competing row is excluded and flagged.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official singles rankings — 19 October",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Ranking points used only where both exact player values were captured.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-atp-basel-baez-mpetshi-perricard",
+      "severity": "blank",
+      "title": "No supportable price: Baez v Mpetshi Perricard",
+      "detail": "At least one player’s official singles ranking points were not captured; no price is filled from a name, wildcard or secondary ranking. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "ATP Basel official order of play PDF",
+          "url": "https://www.protennislive.com/posting/2026/328/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "24 October 2026 qualifying match list. The separate incomplete Bertola–Player Competing row is excluded and flagged.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official singles rankings — 19 October",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Ranking points used only where both exact player values were captured.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-atp-vienna-kopriva-neumayer",
+      "severity": "blank",
+      "title": "No supportable price: Kopriva v Neumayer",
+      "detail": "At least one player’s official singles ranking points were not captured; no price is filled from a name, wildcard or secondary ranking. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "ATP Vienna official order of play PDF",
+          "url": "https://www.protennislive.com/posting/2026/337/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "24 October 2026 qualifying match list. The separate incomplete Bertola–Player Competing row is excluded and flagged.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official singles rankings — 19 October",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Ranking points used only where both exact player values were captured.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-atp-vienna-schwaerzler-droguet",
+      "severity": "blank",
+      "title": "No supportable price: Schwaerzler v Droguet",
+      "detail": "At least one player’s official singles ranking points were not captured; no price is filled from a name, wildcard or secondary ranking. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "ATP Vienna official order of play PDF",
+          "url": "https://www.protennislive.com/posting/2026/337/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "24 October 2026 qualifying match list. The separate incomplete Bertola–Player Competing row is excluded and flagged.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official singles rankings — 19 October",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Ranking points used only where both exact player values were captured.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-atp-vienna-marozsan-sorger",
+      "severity": "blank",
+      "title": "No supportable price: Marozsan v Sorger",
+      "detail": "At least one player’s official singles ranking points were not captured; no price is filled from a name, wildcard or secondary ranking. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "ATP Vienna official order of play PDF",
+          "url": "https://www.protennislive.com/posting/2026/337/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "24 October 2026 qualifying match list. The separate incomplete Bertola–Player Competing row is excluded and flagged.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official singles rankings — 19 October",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Ranking points used only where both exact player values were captured.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-atp-vienna-moutet-machac",
+      "severity": "blank",
+      "title": "No supportable price: Moutet v Machac",
+      "detail": "At least one player’s official singles ranking points were not captured; no price is filled from a name, wildcard or secondary ranking. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "ATP Vienna official order of play PDF",
+          "url": "https://www.protennislive.com/posting/2026/337/op.pdf",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "24 October 2026 qualifying match list. The separate incomplete Bertola–Player Competing row is excluded and flagged.",
+          "kind": "official"
+        },
+        {
+          "label": "ATP official singles rankings — 19 October",
+          "url": "https://www.atptour.com/en/rankings/singles?rankRange=0-100",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Ranking points used only where both exact player values were captured.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-cricket-188839",
+      "severity": "blank",
+      "title": "No supportable price: Tasmanian Tigers v Victoria",
+      "detail": "No compatible official team rating was captured for this fixture/format; no price is inferred. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "Cricket Australia official match centre",
+          "url": "https://www.cricket.com.au/matches/CA:40681/tasmanian-tigers-men-victoria-men-one-day-cup-2026-27",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Upcoming; One-Day Cup 2026-27; Bellerive Oval, Hobart. Clock labels say ‘your time’, so no UTC conversion is published.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-cricket-188840",
+      "severity": "blank",
+      "title": "No supportable price: Western Australia v New South Wales",
+      "detail": "No compatible official team rating was captured for this fixture/format; no price is inferred. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "Cricket Australia official match centre",
+          "url": "https://www.cricket.com.au/matches/CA:40683/western-australia-men-nsw-men-one-day-cup-2026-27",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Upcoming; One-Day Cup 2026-27; WACA Ground, Perth. Clock labels say ‘your time’, so no UTC conversion is published.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-cricket-188832",
+      "severity": "blank",
+      "title": "No supportable price: New Zealand v India",
+      "detail": "No compatible official team rating was captured for this fixture/format; no price is inferred. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "Cricket Australia official match centre",
+          "url": "https://www.cricket.com.au/matches/CA:41095/new-zealand-men-india-men-new-zealand-v-india-t20is-2026-men",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Upcoming; New Zealand v India T20Is 2026 - Men; Hagley Oval, Christchurch. Clock labels say ‘your time’, so no UTC conversion is published.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-urc-bulls-ulster-2026-10-24",
+      "severity": "blank",
+      "title": "No supportable price: Bulls v Ulster",
+      "detail": "The official page supports the fixture and three-match context but not a draw-inclusive win distribution; no 1X2 price is invented. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "URC official match centre",
+          "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Bulls–Ulster on Saturday at displayed 07:45, Loftus Versfeld. Round 3 context: Bulls 2-0-1, 126/54 PF/PA; Ulster 0-2-1, 88/93.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-wst-e6719e69-c712-476e-8081-8e30790868f5",
+      "severity": "blank",
+      "title": "No supportable price: Kyren Wilson v Sam Craigie",
+      "detail": "At least one player lacks an exact captured WST ranking value; using the top-36 cutoff as an exact rating would be an inferred value, so the price is blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "WST official match centre",
+          "url": "https://www.wst.tv/match-centre/e6719e69-c712-476e-8081-8e30790868f5",
+          "captured": "2026-10-23T16:45:00Z",
+          "note": "Semi Finals; scheduled, both players known.",
+          "kind": "official"
+        },
+        {
+          "label": "WST official world rankings",
+          "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+          "captured": "2026-10-23T17:05:00Z",
+          "note": "Captured table ends at 36th place, Jackson Page £198,500. No missing value is treated as exact.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-wst-a7bc5bdd-2d78-442b-88f6-c761355ac271",
+      "severity": "blank",
+      "title": "No supportable price: Liu Hongyu v Louis Heathcote",
+      "detail": "At least one player lacks an exact captured WST ranking value; using the top-36 cutoff as an exact rating would be an inferred value, so the price is blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "WST official match centre",
+          "url": "https://www.wst.tv/match-centre/a7bc5bdd-2d78-442b-88f6-c761355ac271",
+          "captured": "2026-10-23T16:45:00Z",
+          "note": "Round 2; scheduled.",
+          "kind": "official"
+        },
+        {
+          "label": "WST official world rankings",
+          "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+          "captured": "2026-10-23T17:05:00Z",
+          "note": "Captured table ends at 36th place, Jackson Page £198,500. No missing value is treated as exact.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-wst-87883228-05c6-4e19-9092-2d63acba3bbf",
+      "severity": "blank",
+      "title": "No supportable price: Jimmy White v Mark Selby",
+      "detail": "At least one player lacks an exact captured WST ranking value; using the top-36 cutoff as an exact rating would be an inferred value, so the price is blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "WST official match centre",
+          "url": "https://www.wst.tv/match-centre/87883228-05c6-4e19-9092-2d63acba3bbf",
+          "captured": "2026-10-23T16:45:00Z",
+          "note": "Round 2; scheduled.",
+          "kind": "official"
+        },
+        {
+          "label": "WST official world rankings",
+          "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+          "captured": "2026-10-23T17:05:00Z",
+          "note": "Captured table ends at 36th place, Jackson Page £198,500. No missing value is treated as exact.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-wst-9b7fcc94-a356-4b21-a8e3-49e9beb6c315",
+      "severity": "blank",
+      "title": "No supportable price: Shaun Murphy v Mitchell Mann",
+      "detail": "At least one player lacks an exact captured WST ranking value; using the top-36 cutoff as an exact rating would be an inferred value, so the price is blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "WST official match centre",
+          "url": "https://www.wst.tv/match-centre/9b7fcc94-a356-4b21-a8e3-49e9beb6c315",
+          "captured": "2026-10-23T16:45:00Z",
+          "note": "Round 2; scheduled.",
+          "kind": "official"
+        },
+        {
+          "label": "WST official world rankings",
+          "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+          "captured": "2026-10-23T17:05:00Z",
+          "note": "Captured table ends at 36th place, Jackson Page £198,500. No missing value is treated as exact.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-wst-41c153a5-4a98-4b53-9b92-ccc028bf6999",
+      "severity": "blank",
+      "title": "No supportable price: Zhou Yuelong v Liam Davies",
+      "detail": "At least one player lacks an exact captured WST ranking value; using the top-36 cutoff as an exact rating would be an inferred value, so the price is blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "WST official match centre",
+          "url": "https://www.wst.tv/match-centre/41c153a5-4a98-4b53-9b92-ccc028bf6999",
+          "captured": "2026-10-23T16:45:00Z",
+          "note": "Round 2; scheduled.",
+          "kind": "official"
+        },
+        {
+          "label": "WST official world rankings",
+          "url": "https://www.wst.tv/rankings/abfba8fe-1423-5a2a-a96b-d77e8b413ca8?showLive=false",
+          "captured": "2026-10-23T17:05:00Z",
+          "note": "Captured table ends at 36th place, Jackson Page £198,500. No missing value is treated as exact.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-f1-913",
+      "severity": "blank",
+      "title": "No supportable price: United States Grand Prix 2026 — race",
+      "detail": "Qualifying had not supplied a final grid and a complete official field-performance distribution was not captured; no race-winner probability is invented. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "Formula 1 official United States event page",
+          "url": "https://www.formula1.com/en/racing/2026/united-states",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Practice 3 and qualifying Saturday; race Sunday 25 October at displayed 16:00.",
+          "kind": "official"
+        },
+        {
+          "label": "Formula 1 official drivers’ standings",
+          "url": "https://www.formula1.com/en/results/2026/drivers",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138, Hadjar 97; full table read but no outcome distribution inferred.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-f1-828",
+      "severity": "blank",
+      "title": "No supportable price: Formula 1 Drivers’ Championship 2026",
+      "detail": "Official standings alone do not supply a remaining-race outcome distribution; no championship probability is invented. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "Formula 1 official United States event page",
+          "url": "https://www.formula1.com/en/racing/2026/united-states",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Practice 3 and qualifying Saturday; race Sunday 25 October at displayed 16:00.",
+          "kind": "official"
+        },
+        {
+          "label": "Formula 1 official drivers’ standings",
+          "url": "https://www.formula1.com/en/results/2026/drivers",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138, Hadjar 97; full table read but no outcome distribution inferred.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702022",
+      "severity": "blank",
+      "title": "No supportable price: Istanbul GSK v Rebud KPR Ostrovia Ostrow Wielkopolski",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702022/IstanbulGSK-RebudKPROstroviaOstr%C3%B3wWielkopolski/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702020",
+      "severity": "blank",
+      "title": "No supportable price: Tallinna Mistra v BK-46",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702020/TallinnaMistra-BK46/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702029",
+      "severity": "blank",
+      "title": "No supportable price: Dragunas Klaipeda v HC Robe Zubri",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702029/DragunasKlaipeda-HCRobeZubri/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702050",
+      "severity": "blank",
+      "title": "No supportable price: MRK Sloga Doboj v Kur",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702050/MRKSlogaDoboj-Kur/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled (second leg; first leg Kur 26-38 MRK Sloga Doboj); 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702041",
+      "severity": "blank",
+      "title": "No supportable price: Ionikos A.C. N.F. v AS SGS Ramhat Hashron",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702041/IonikosACNF-ASSGSRamhatHashron/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702013",
+      "severity": "blank",
+      "title": "No supportable price: PLER-Budapest v Islington HC",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702013/PLERBudapest-IslingtonHC/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202712030103002",
+      "severity": "blank",
+      "title": "No supportable price: Kosovo v Estonia",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202712030103002/Kosovo-Estonia/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled (second leg); 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702034",
+      "severity": "blank",
+      "title": "No supportable price: Naerbo IL v HC Dukla Praha",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702034/N%C3%A6rb%C3%B8IL-HCDuklaPraha/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702051",
+      "severity": "blank",
+      "title": "No supportable price: Polva Serviti v Holon Yuvalim HC",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702051/P%C3%B5lvaServiti-HolonYuvalimHC/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702005",
+      "severity": "blank",
+      "title": "No supportable price: AHC Potaissa Turda v Derdaele Sporting Pelt",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702005/AHCPotaissaTurda-DerdaeleSportingPelt/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702026",
+      "severity": "blank",
+      "title": "No supportable price: HC Butel Skopje v HRK Gorica",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702026/HCButelSkopje-HRKGorica/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702010",
+      "severity": "blank",
+      "title": "No supportable price: MSK Povazska Bystrica v GS Drama 1986",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702010/MSKPovazskaBystrica-GSDrama1986/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702008",
+      "severity": "blank",
+      "title": "No supportable price: MRK Trogir v H71",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702008/MRKTrogir-H71/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-ehf-202711020702012",
+      "severity": "blank",
+      "title": "No supportable price: HC Dinamo Pancevo v RK Trimo Trebnje",
+      "detail": "No compatible club rating and draw-inclusive scoring distribution were captured; the match-winner price remains blank. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "EHF official match centre",
+          "url": "https://www.eurohandball.com/en/matches/202711020702012/HCDinamoPancevo-RKTrimoTrebnje/",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "scheduled; 24 October calendar corroborated in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-nrl-papua-new-guinea-v-samoa",
+      "severity": "blank",
+      "title": "No supportable price: Papua New Guinea v Samoa",
+      "detail": "Only one recent official match per team was captured, with no ratings or availability table; no independent price is manufactured from that sample. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "NRL official World Cup match page",
+          "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/papua-new-guinea-v-samoa/",
+          "captured": "2026-10-23T17:12:00Z",
+          "note": "Upcoming fixture and venue; earlier Round 1 results are context only.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-nrl-england-v-france",
+      "severity": "blank",
+      "title": "No supportable price: England v France",
+      "detail": "Only one recent official match per team was captured, with no ratings or availability table; no independent price is manufactured from that sample. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "NRL official World Cup match page",
+          "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/england-v-france/",
+          "captured": "2026-10-23T17:12:00Z",
+          "note": "Upcoming fixture and venue; earlier Round 1 results are context only.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-nrl-new-zealand-v-cook-islands",
+      "severity": "blank",
+      "title": "No supportable price: New Zealand v Cook Islands",
+      "detail": "Only one recent official match per team was captured, with no ratings or availability table; no independent price is manufactured from that sample. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "NRL official World Cup match page",
+          "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/new-zealand-v-cook-islands/",
+          "captured": "2026-10-23T17:12:00Z",
+          "note": "Upcoming fixture and venue; earlier Round 1 results are context only.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "BLANK-nrl-australia-v-fiji",
+      "severity": "blank",
+      "title": "No supportable price: Australia v Fiji",
+      "detail": "Only one recent official match per team was captured, with no ratings or availability table; no independent price is manufactured from that sample. The row remains in the fixture table with official links; no value is inferred.",
+      "links": [
+        {
+          "label": "NRL official World Cup match page",
+          "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+          "captured": "2026-10-23T17:12:00Z",
+          "note": "Upcoming fixture and venue; earlier Round 1 results are context only.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "CAP-euroleague-E2026-75-winner",
+      "severity": "limitation",
+      "title": "High-confidence cap: Fenerbahce Tarfin Istanbul",
+      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
+      "links": [
+        {
+          "label": "EuroLeague official Round 8 schedule",
+          "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+          "captured": "2026-10-23T17:08:00Z",
+          "note": "Ten fixtures and venues.",
+          "kind": "official"
+        },
+        {
+          "label": "EuroLeague official standings after Round 7",
+          "url": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026&gameNumber=7",
+          "captured": "2026-10-23T17:08:00Z",
+          "note": "Games, wins, losses, points for and against for all 20 teams.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "CAP-nhl-2026020167-puck-line",
+      "severity": "limitation",
+      "title": "High-confidence cap: Tampa Bay Lightning +1.5",
+      "detail": "The independent-Poisson market is deliberately low confidence because the early-season scoring sample and distribution assumptions do not pass the detailed high-confidence evidence gate.",
+      "links": [
+        {
+          "label": "NHL official game centre",
+          "url": "https://www.nhl.com/gamecenter/tbl-vs-col/2026/10/23/2026020167",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Game 2026020167; FUT at capture.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official schedule",
+          "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Official participants, UTC start, venue and state.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official team summary API",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+          "captured": "2026-10-23T16:25:00Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official gamecenter landing feed",
+          "url": "https://api-web.nhle.com/v1/gamecenter/2026020167/landing",
+          "captured": "2026-10-23 19:27–19:40 UTC",
+          "note": "FUT state, records and matchup statistics read again in the detailed review window.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "CAP-nhl-2026020169-winner",
+      "severity": "limitation",
+      "title": "High-confidence cap: New Jersey Devils",
+      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
+      "links": [
+        {
+          "label": "NHL official game centre",
+          "url": "https://www.nhl.com/gamecenter/lak-vs-njd/2026/10/24/2026020169",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Game 2026020169; FUT at capture.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Official participants, UTC start, venue and state.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official team summary API",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+          "captured": "2026-10-23T16:25:00Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "CAP-nhl-2026020170-winner",
+      "severity": "limitation",
+      "title": "High-confidence cap: Boston Bruins",
+      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
+      "links": [
+        {
+          "label": "NHL official game centre",
+          "url": "https://www.nhl.com/gamecenter/sjs-vs-bos/2026/10/24/2026020170",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Game 2026020170; FUT at capture.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Official participants, UTC start, venue and state.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official team summary API",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+          "captured": "2026-10-23T16:25:00Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "CAP-nhl-2026020175-winner",
+      "severity": "limitation",
+      "title": "High-confidence cap: Carolina Hurricanes",
+      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
+      "links": [
+        {
+          "label": "NHL official game centre",
+          "url": "https://www.nhl.com/gamecenter/car-vs-stl/2026/10/24/2026020175",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Game 2026020175; FUT at capture.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Official participants, UTC start, venue and state.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official team summary API",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+          "captured": "2026-10-23T16:25:00Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "CAP-nhl-2026020178-winner",
+      "severity": "limitation",
+      "title": "High-confidence cap: Detroit Red Wings",
+      "detail": "The number falls inside the requested window, but this row lacks the detailed official matchup/availability review required for high-confidence publication. It remains capped rather than being promoted by arithmetic alone.",
+      "links": [
+        {
+          "label": "NHL official game centre",
+          "url": "https://www.nhl.com/gamecenter/det-vs-cgy/2026/10/24/2026020178",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Game 2026020178; FUT at capture.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+          "captured": "2026-10-23T16:30:00Z",
+          "note": "Official participants, UTC start, venue and state.",
+          "kind": "official"
+        },
+        {
+          "label": "NHL official team summary API",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+          "captured": "2026-10-23T16:25:00Z",
+          "note": "Games, goals, wins, losses, overtime losses and points; exact integer inputs used.",
+          "kind": "official"
+        }
+      ]
+    }
+  ]
+}

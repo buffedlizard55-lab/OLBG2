@@ -1,0 +1,64 @@
+{
+ "source_key": "mlb_schedule",
+ "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02",
+ "captured_utc": "2026-10-23T20:05:00Z",
+ "session": "arena/a0c8b7f3-olbg2",
+ "readings": [
+  {
+   "fixture_id": "mlb-849805",
+   "sport": "Baseball",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "time_display": "World Series Game 1, 2026-10-24T00:00Z",
+   "venue": "American Family Field",
+   "facts": [
+    {
+     "item": "Milwaukee",
+     "text": "103-59, .636, 832 scored, 618 allowed, 55-26 at home, 68-35 at night, W5, 8-2 in ten"
+    },
+    {
+     "item": "Tampa Bay",
+     "text": "98-64, .605, 736 scored, 650 allowed, 43-38 on the road, 63-35 at night, L1, 5-5 in ten"
+    },
+    {
+     "item": "Jacob Misiorowski",
+     "text": "2026: 30 starts, 16-5, 1.80 ERA, 174.2 IP, 252 K, 44 BB, 0.80 WHIP, .157 opponents average"
+    },
+    {
+     "item": "Nick Martinez",
+     "text": "2026: 31 starts, 15-6, 3.10 ERA, 180.0 IP, 109 K, 26 BB, 1.09 WHIP, .249 opponents average"
+    },
+    {
+     "item": "Fixture",
+     "text": "World Series Game 1 at American Family Field, first pitch 2026-10-24T00:00Z"
+    }
+   ]
+  },
+  {
+   "fixture_id": "mlb-849802",
+   "sport": "Baseball",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "time_display": "World Series Game 2, 2026-10-25T00:00Z",
+   "venue": "American Family Field",
+   "facts": [
+    {
+     "item": "Milwaukee",
+     "text": "103-59, .636, 832 scored, 618 allowed, 55-26 at home, W5, 8-2 in ten"
+    },
+    {
+     "item": "Tampa Bay",
+     "text": "98-64, .605, 736 scored, 650 allowed, 43-38 on the road, L1"
+    },
+    {
+     "item": "Drew Rasmussen",
+     "text": "2026: 30 starts, 16-5, 2.67 ERA, 172.0 IP, 174 K, 32 BB, 0.91 WHIP, .199 opponents average"
+    },
+    {
+     "item": "Fixture",
+     "text": "World Series Game 2 at American Family Field, first pitch 2026-10-25T00:00Z"
+    }
+   ]
+  }
+ ]
+}

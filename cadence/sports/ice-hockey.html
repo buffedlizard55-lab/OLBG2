@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ice Hockey · Cadence desk</title>
+<style>
+:root{--bg:#0b1220;--card:#121c2e;--line:#22304a;--ink:#e8eef8;--dim:#93a4c0;--accent:#4da3ff;
+--good:#2fbf71;--warn:#f2b134;--bad:#ef5b5b;--chip:#1b2942}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:#0e1728;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.top .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{font-weight:700;font-size:17px;letter-spacing:.2px}
+.brand small{color:var(--dim);font-weight:400;font-size:12px;display:block}
+nav.links{display:flex;flex-wrap:wrap;gap:6px}
+nav.links a{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;color:var(--ink)}
+nav.links a.on{background:var(--accent);color:#04101f;border-color:var(--accent);font-weight:600}
+main{padding:26px 0 60px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:19px;margin:30px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:15px;margin:20px 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+p.lede{color:var(--dim);max-width:88ch;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 6px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi b{display:block;font-size:25px;line-height:1.1}
+.kpi span{color:var(--dim);font-size:12px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#16233a;color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.05em;position:sticky;top:0}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:#101a2b}
+.pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.high{background:rgba(47,191,113,.16);color:#5ee49b;border:1px solid rgba(47,191,113,.4)}
+.medium{background:rgba(242,177,52,.16);color:#f6c968;border:1px solid rgba(242,177,52,.4)}
+.low{background:rgba(147,164,192,.14);color:#a9b8d1;border:1px solid rgba(147,164,192,.35)}
+.in{background:rgba(77,163,255,.16);color:#8cc6ff;border:1px solid rgba(77,163,255,.4)}
+.out{background:rgba(239,91,91,.14);color:#ff9a9a;border:1px solid rgba(239,91,91,.35)}
+.blank{background:#1b2942;color:#93a4c0;border:1px dashed #3a4d6e}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:13px 15px;margin:14px 0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+.note b{color:var(--ink)}
+.mono{font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--dim)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h4{margin:0 0 6px;font-size:15px}
+.card .row{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--dim);margin:2px 0}
+.pred{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+.pred h4{margin:0 0 2px;font-size:16px}
+.pred .meta{color:var(--dim);font-size:12.5px;margin-bottom:8px}
+.pred .sel{font-weight:600;color:#9ed0ff;margin:6px 0}
+.pred p{margin:8px 0}
+.pred .facts{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}
+.pred .facts li{font-size:12.5px;color:var(--dim);margin:3px 0}
+ul{padding-left:20px}
+footer{border-top:1px solid var(--line);color:var(--dim);font-size:12.5px;padding:18px 0 40px}
+@media (max-width:640px){.top .wrap{gap:8px}h1{font-size:22px}}
+</style></head><body>
+<header class="top"><div class="wrap">
+  <div class="brand">Cadence · OLBG 15-sport desk<small>Captured 2026-10-23T20:10:00Z · research, not betting advice · 18+</small></div>
+  <nav class="links"><a href="../index.html">Overview</a><a href="../band.html">Band board</a><a href="../picks.html">Top five by sport</a><a href="../matches.html">All matches</a><a href="../lines.html">Originated lines</a><a href="../predictions.html">Predictions</a><a href="../sports/index.html">Sports</a><a href="../olbg.html">OLBG</a><a href="../audit.html">Repo audit</a><a href="../flagged.html">Flagged for review</a><a href="../sources.html">Sources</a><a href="../methodology.html">Method</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Ice Hockey</h1>
+<p class="lede">2 official fixtures, 15 originated prices,
+3 top-five selections (2 graded high) and 3
+written predictions.</p>
+<h2>Top five by confidence</h2>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Fixture</th><th>Selection</th><th>Prob</th><th>Fair</th><th>Band</th><th>Grade</th><th>Source</th></tr></thead><tbody><tr><td class="mono">1</td><td>Colorado Avalanche v Tampa Bay Lightning</td><td><strong>Tampa Bay Lightning</strong><div class="small">Money line</div></td><td class="mono">72.4%</td><td class="mono">-263</td><td><span class="pill out">outside band</span></td><td><span class="pill high">high</span></td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></td></tr><tr><td class="mono">2</td><td>Colorado Avalanche v Tampa Bay Lightning</td><td><strong>Over 5.5</strong><div class="small">Total goals</div></td><td class="mono">70.4%</td><td class="mono">-237</td><td><span class="pill in">in band</span></td><td><span class="pill high">high</span></td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></td></tr><tr><td class="mono">3</td><td>Chicago Blackhawks v Montréal Canadiens</td><td><strong>Montréal Canadiens</strong><div class="small">Money line</div></td><td class="mono">69.6%</td><td class="mono">-229</td><td><span class="pill in">in band</span></td><td><span class="pill medium">medium</span></td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></td></tr></tbody></table></div>
+<h2>Fixtures, prices and official sources</h2>
+<div class="table-wrap"><table><thead><tr><th>Fixture</th><th>Competition</th><th>Start</th><th>Status</th><th>Evidence</th><th>Official source</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Chicago Blackhawks</strong> v Montréal Canadiens<div class="small">United Center</div></td><td class="small">NHL</td><td class="small">2026-10-24T00:00:00Z (NHL feed)</td><td>priced</td><td class="small">NHL 2026-27, 9 and 9 games played</td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a><div class="small"><a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></div></td><td class="small">Montréal: 4-3-2 in 9 games, 30 goals for, 34 against, 10 points, OT1 streak — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a><br>Chicago: 3-6-0 in 9 games, 21 goals for, 36 against, 6 points, 0-4-0 on the road — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a><br>NHL feed price: Montréal -169 / Chicago +137 published by the NHL schedule feed — <a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></td></tr><tr><td><strong>Colorado Avalanche</strong> v Tampa Bay Lightning<div class="small">Ball Arena</div></td><td class="small">NHL</td><td class="small">2026-10-24T01:00:00Z (NHL feed)</td><td>priced</td><td class="small">NHL 2026-27, 10 and 9 games played</td><td><a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a><div class="small"><a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></div></td><td class="small">Tampa Bay: 7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3 — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a><br>Colorado: 5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2 — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a><br>NHL feed price: Tampa Bay +105 / Colorado -129 published by the NHL schedule feed — <a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></td></tr></tbody></table></div>
+<h2>Written predictions</h2>
+<div class="pred"><h4>Chicago&#x27;s blank road record meets a superior points percentage</h4><div class="meta">73 words · <span class="pill medium">medium</span> <span class="pill in">in band</span></div><div class="sel">Montréal Canadiens (Money line) at -229</div><p>Montréal Canadiens to win at the United Center. Montréal are 4-3-2 with 30 goals for and 34 against, and their nine games include a 3-2-1 home record; Chicago are 3-6-0 with only 21 goals scored and 36 conceded, and they have lost all four road games. The NHL feed had Montréal at -169, so this is a shorter -229 on the same side, with the away side&#x27;s superior points percentage doing the work.</p><div class="facts"><ul><li>4-3-2 in 9 games, 30 goals for, 34 against, 10 points, OT1 streak — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></li><li>3-6-0 in 9 games, 21 goals for, 36 against, 6 points, 0-4-0 on the road — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></li><li>Montréal -169 / Chicago +137 published by the NHL schedule feed — <a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></li></ul></div></div><div class="pred"><h4>Both blue lines point to six goals or more</h4><div class="meta">79 words · <span class="pill high">high</span> <span class="pill in">in band</span></div><div class="sel">Over 5.5 (Total goals) at -237</div><p>Over 5.5 goals in Colorado. The Avalanche have scored 41 goals in ten games and conceded 31, while Tampa Bay have 31 for and 23 against in nine. Combining both clubs&#x27; scoring and conceding rates gives an expected total near 6.7, which puts six or more goals on the board at roughly seventy per cent. The desk quotes that alternate line at a fair -237, and the reasoning is the two goal columns rather than any reported goaltending decision.</p><div class="facts"><ul><li>5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2 — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></li><li>7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3 — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></li></ul></div></div><div class="pred"><h4>Tampa Bay carry a three-game run into Denver</h4><div class="meta">88 words · <span class="pill high">high</span> <span class="pill out">outside band</span></div><div class="sel">Tampa Bay Lightning (Money line) at -263</div><p>Tampa Bay Lightning to win the money line in Denver. The Lightning are 7-2-0 through nine games with 31 goals scored and 23 conceded, and they arrive on a three-game winning run after a 5-0-0 start at home. Colorado are 5-4-1 and have lost two straight despite scoring 41 times, because they have allowed 31. The NHL&#x27;s own schedule feed had Tampa Bay at +105 and Colorado at -129, so the desk&#x27;s -263 quote is a genuine disagreement with the published price rather than a copy of it.</p><div class="facts"><ul><li>7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3 — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></li><li>5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2 — <a href="https://api-web.nhle.com/v1/standings/2026-10-23" rel="noopener">api-web.nhle.com</a></li><li>Tampa Bay +105 / Colorado -129 published by the NHL schedule feed — <a href="https://api-web.nhle.com/v1/schedule/2026-10-23" rel="noopener">api-web.nhle.com</a></li></ul></div></div>
+</div></main>
+<footer><div class="wrap">
+  Every published row links to the official governing-body page it came from. Values that an official
+  source did not publish are left blank and listed on <a href="../flagged.html">Flagged for review</a>.
+  Prices are the desk's own fair lines, never observed bookmaker quotes unless a row says so.
+</div></footer></body></html>

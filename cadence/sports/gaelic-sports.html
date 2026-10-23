@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gaelic Sports · Cadence desk</title>
+<style>
+:root{--bg:#0b1220;--card:#121c2e;--line:#22304a;--ink:#e8eef8;--dim:#93a4c0;--accent:#4da3ff;
+--good:#2fbf71;--warn:#f2b134;--bad:#ef5b5b;--chip:#1b2942}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:#0e1728;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.top .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{font-weight:700;font-size:17px;letter-spacing:.2px}
+.brand small{color:var(--dim);font-weight:400;font-size:12px;display:block}
+nav.links{display:flex;flex-wrap:wrap;gap:6px}
+nav.links a{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;color:var(--ink)}
+nav.links a.on{background:var(--accent);color:#04101f;border-color:var(--accent);font-weight:600}
+main{padding:26px 0 60px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:19px;margin:30px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:15px;margin:20px 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+p.lede{color:var(--dim);max-width:88ch;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 6px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi b{display:block;font-size:25px;line-height:1.1}
+.kpi span{color:var(--dim);font-size:12px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#16233a;color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.05em;position:sticky;top:0}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:#101a2b}
+.pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.high{background:rgba(47,191,113,.16);color:#5ee49b;border:1px solid rgba(47,191,113,.4)}
+.medium{background:rgba(242,177,52,.16);color:#f6c968;border:1px solid rgba(242,177,52,.4)}
+.low{background:rgba(147,164,192,.14);color:#a9b8d1;border:1px solid rgba(147,164,192,.35)}
+.in{background:rgba(77,163,255,.16);color:#8cc6ff;border:1px solid rgba(77,163,255,.4)}
+.out{background:rgba(239,91,91,.14);color:#ff9a9a;border:1px solid rgba(239,91,91,.35)}
+.blank{background:#1b2942;color:#93a4c0;border:1px dashed #3a4d6e}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:13px 15px;margin:14px 0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+.note b{color:var(--ink)}
+.mono{font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--dim)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h4{margin:0 0 6px;font-size:15px}
+.card .row{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--dim);margin:2px 0}
+.pred{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+.pred h4{margin:0 0 2px;font-size:16px}
+.pred .meta{color:var(--dim);font-size:12.5px;margin-bottom:8px}
+.pred .sel{font-weight:600;color:#9ed0ff;margin:6px 0}
+.pred p{margin:8px 0}
+.pred .facts{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}
+.pred .facts li{font-size:12.5px;color:var(--dim);margin:3px 0}
+ul{padding-left:20px}
+footer{border-top:1px solid var(--line);color:var(--dim);font-size:12.5px;padding:18px 0 40px}
+@media (max-width:640px){.top .wrap{gap:8px}h1{font-size:22px}}
+</style></head><body>
+<header class="top"><div class="wrap">
+  <div class="brand">Cadence · OLBG 15-sport desk<small>Captured 2026-10-23T20:10:00Z · research, not betting advice · 18+</small></div>
+  <nav class="links"><a href="../index.html">Overview</a><a href="../band.html">Band board</a><a href="../picks.html">Top five by sport</a><a href="../matches.html">All matches</a><a href="../lines.html">Originated lines</a><a href="../predictions.html">Predictions</a><a href="../sports/index.html">Sports</a><a href="../olbg.html">OLBG</a><a href="../audit.html">Repo audit</a><a href="../flagged.html">Flagged for review</a><a href="../sources.html">Sources</a><a href="../methodology.html">Method</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Gaelic Sports</h1>
+<p class="lede">5 official fixtures, 45 originated prices,
+5 top-five selections (0 graded high) and 0
+written predictions.</p>
+<h2>Top five by confidence</h2>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Fixture</th><th>Selection</th><th>Prob</th><th>Fair</th><th>Band</th><th>Grade</th><th>Source</th></tr></thead><tbody><tr><td class="mono">1</td><td>St Finbarr&#x27;s v Nemo Rangers</td><td><strong>St Finbarr&#x27;s</strong><div class="small">Match winner (three-way)</div></td><td class="mono">54.9%</td><td class="mono">-122</td><td><span class="pill in">in band</span></td><td><span class="pill low">low</span></td><td><a href="https://gaacork.ie/fixtures/" rel="noopener">gaacork.ie</a></td></tr><tr><td class="mono">2</td><td>Rathgormack v The Nire</td><td><strong>The Nire</strong><div class="small">Match winner (three-way)</div></td><td class="mono">53.8%</td><td class="mono">-116</td><td><span class="pill in">in band</span></td><td><span class="pill low">low</span></td><td><a href="https://www.waterfordgaa.ie/results/" rel="noopener">www.waterfordgaa.ie</a></td></tr><tr><td class="mono">3</td><td>Ireland v Scotland</td><td><strong>Ireland</strong><div class="small">Match winner (three-way)</div></td><td class="mono">49.9%</td><td class="mono">+100</td><td><span class="pill in">in band</span></td><td><span class="pill low">low</span></td><td><a href="https://www.gaa.ie/fixtures-results" rel="noopener">www.gaa.ie</a></td></tr><tr><td class="mono">4</td><td>Dr Crokes v Kenmare Shamrocks</td><td><strong>Dr Crokes</strong><div class="small">Match winner (three-way)</div></td><td class="mono">49.9%</td><td class="mono">+100</td><td><span class="pill in">in band</span></td><td><span class="pill low">low</span></td><td><a href="https://www.kerrygaa.ie/clubs/kenmare-shamrocks/" rel="noopener">www.kerrygaa.ie</a></td></tr><tr><td class="mono">5</td><td>Na Piarsaigh v Kilmallock</td><td><strong>Na Piarsaigh</strong><div class="small">Match winner (three-way)</div></td><td class="mono">49.9%</td><td class="mono">+100</td><td><span class="pill in">in band</span></td><td><span class="pill low">low</span></td><td><a href="https://limerickgaa.ie/na-piarsaigh-gaa-club-notes-213/" rel="noopener">limerickgaa.ie</a></td></tr></tbody></table></div>
+<h2>Fixtures, prices and official sources</h2>
+<div class="table-wrap"><table><thead><tr><th>Fixture</th><th>Competition</th><th>Start</th><th>Status</th><th>Evidence</th><th>Official source</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Ireland</strong> v Scotland<div class="small">SuperValu Páirc Uí Chaoimh, Cork</div></td><td class="small">Hurling-Shinty International</td><td class="small">24 October 2026, 18:00</td><td>priced</td><td class="small">no numeric strength input captured for both sides; league-average prior with a 2% home term; draw mass 4.0%, confidence capped at medium (single championship result)</td><td><a href="https://www.gaa.ie/fixtures-results" rel="noopener">www.gaa.ie</a><div class="small"><a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></div></td><td class="small">Fixture: Hurling-Shinty International, Ireland v Scotland, SuperValu Páirc Uí Chaoimh, 24 October 2026, 18:00, referee Eamonn Furlong — <a href="https://www.gaa.ie/fixtures-results" rel="noopener">www.gaa.ie</a></td></tr><tr><td><strong>St Finbarr&#x27;s</strong> v Nemo Rangers<div class="small">SuperValu Páirc Uí Chaoimh</div></td><td class="small">Cork Premier Senior Football Championship Final</td><td class="small">25 October 2026, 16:00</td><td>priced</td><td class="small">published semi-final winning margins +8 v +2 points, weighted 0.012 per point; draw mass 4.0%, confidence capped at medium (single championship result)</td><td><a href="https://gaacork.ie/fixtures/" rel="noopener">gaacork.ie</a><div class="small"><a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></div></td><td class="small">Semi-finals: Nemo Rangers beat Carrigaline 1-15 to 0-16; St Finbarr&#x27;s beat Clonakilty 2-12 to 0-16 — <a href="https://gaacork.ie/fixtures/" rel="noopener">gaacork.ie</a><br>Fixture: Cork Premier Senior Football Championship Final, St Finbarr&#x27;s v Nemo Rangers, 25 October 2026, 16:00, referee David Murnane — <a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></td></tr><tr><td><strong>Dr Crokes</strong> v Kenmare Shamrocks<div class="small">Fitzgerald Stadium, Killarney</div></td><td class="small">Kerry Senior Football Championship Final</td><td class="small">25 October 2026, 14:00</td><td>priced</td><td class="small">no numeric strength input captured for both sides; league-average prior with a 2% home term; draw mass 4.0%, confidence capped at medium (single championship result)</td><td><a href="https://www.kerrygaa.ie/clubs/kenmare-shamrocks/" rel="noopener">www.kerrygaa.ie</a><div class="small"><a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></div></td><td class="small">Fixture: Kerry Senior Football Championship Final, Dr Crokes v Kenmare Shamrocks, Fitzgerald Stadium, 25 October 2026, 14:00, referee Sean Joy — <a href="https://www.kerrygaa.ie/clubs/kenmare-shamrocks/" rel="noopener">www.kerrygaa.ie</a></td></tr><tr><td><strong>Rathgormack</strong> v The Nire<div class="small">Cappoquin Logistics Fraher Field, Dungarvan</div></td><td class="small">Waterford Senior Football Championship Final</td><td class="small">25 October 2026, 14:30</td><td>priced</td><td class="small">published semi-final winning margins +2 v +7 points, weighted 0.012 per point; draw mass 4.0%, confidence capped at medium (single championship result)</td><td><a href="https://www.waterfordgaa.ie/results/" rel="noopener">www.waterfordgaa.ie</a><div class="small"><a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></div></td><td class="small">Semi-finals: Rathgormack beat Gaultier 1-14 to 0-15; The Nire beat Abbeyside-Ballinacourty 0-12 to 0-5 — <a href="https://www.waterfordgaa.ie/results/" rel="noopener">www.waterfordgaa.ie</a><br>Fixture: Waterford Senior Football Championship Final, Rathgormack v The Nire, Fraher Field, 25 October 2026, 14:30, referee Killian O&#x27;Sullivan — <a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></td></tr><tr><td><strong>Na Piarsaigh</strong> v Kilmallock<div class="small">TUS Gaelic Grounds, Limerick</div></td><td class="small">Limerick Senior Hurling Championship Final</td><td class="small">25 October 2026, 15:45</td><td>priced</td><td class="small">no numeric strength input captured for both sides; league-average prior with a 2% home term; draw mass 4.0%, confidence capped at medium (single championship result)</td><td><a href="https://limerickgaa.ie/na-piarsaigh-gaa-club-notes-213/" rel="noopener">limerickgaa.ie</a><div class="small"><a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></div></td><td class="small">Semi-final: Na Piarsaigh beat Doon 2-24 to 3-16 to reach the final — <a href="https://limerickgaa.ie/na-piarsaigh-gaa-club-notes-213/" rel="noopener">limerickgaa.ie</a><br>Fixture: Limerick Senior Hurling Championship Final, Na Piarsaigh v Kilmallock, TUS Gaelic Grounds, 25 October 2026, 15:45, referee John O&#x27;Halloran — <a href="https://munster.gaa.ie/fixtures/events-calendar/" rel="noopener">munster.gaa.ie</a></td></tr></tbody></table></div>
+<h2>Written predictions</h2>
+<div class="note warn"><b>No prediction for this sport.</b> No selection on today’s card reached medium confidence, so a ≥30-word write-up would be inventing an edge. The prices and probabilities above are still published with their official sources.</div>
+</div></main>
+<footer><div class="wrap">
+  Every published row links to the official governing-body page it came from. Values that an official
+  source did not publish are left blank and listed on <a href="../flagged.html">Flagged for review</a>.
+  Prices are the desk's own fair lines, never observed bookmaker quotes unless a row says so.
+</div></footer></body></html>

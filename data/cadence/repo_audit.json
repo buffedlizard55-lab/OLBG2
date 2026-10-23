@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-10-23T19:45:00Z",
+  "session": "arena/a0c8b7f3-olbg2",
+  "desk": "cadence",
+  "summary": {
+    "files_scanned": 512,
+    "irregularities_logged": 16,
+    "out_of_scope_html_files": 43,
+    "predictions_with_forbidden_words": 204,
+    "html_files_with_unlinked_rows": 163
+  },
+  "findings": [
+    {
+      "id": "RA-01",
+      "severity": "high",
+      "category": "Git Hygiene",
+      "file_path": "COORDINATION.md",
+      "lines": "3216, 3307, 3437, 3549, 3609, 3628",
+      "issue": "Three unresolved git merge conflict marker blocks ('=======' and '>>>>>>>') remain committed inside COORDINATION.md from earlier concurrent rebases.",
+      "official_check": "Verified directly via line-by-line scan of COORDINATION.md on branch main; append-only protocol preserved.",
+      "manual_review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md",
+      "official_source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md"
+    },
+    {
+      "id": "RA-02",
+      "severity": "high",
+      "category": "Scope Violation",
+      "file_path": "sports/aussie-rules.html, sports/esports.html (+20 peer desks)",
+      "lines": "1-120 (43 HTML files across 22 desk directories)",
+      "issue": "43 published HTML subpages cover Aussie Rules and Esports, neither of which belongs to the 15-sport mandate.",
+      "official_check": "Cross-checked against OLBG /betting-tips taxonomy and the 15 mandated sports list; Cadence publishes strictly the 15 covered sports.",
+      "manual_review_url": "https://buffedlizard55-lab.github.io/OLBG2/sports/aussie-rules.html",
+      "official_source_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "RA-03",
+      "severity": "high",
+      "category": "Prose Constraint Violation",
+      "file_path": "data/predictions.json",
+      "lines": "13, 45, 81, 117, 153, 189",
+      "issue": "All 6 of 6 root predictions contain the forbidden word 'model' in output prediction prose (e.g. 'The model makes the Islanders a 71.2% favourite'), and 4 of 6 are priced outside [-250, +10000] (-546, -366, -529).",
+      "official_check": "Regex word-boundary scan across data/predictions.json; also all 6 fixtures were played on Oct 21-22 (e.g. Barca defeated Montpellier 40-34 on Oct 22 per LNH/EHF).",
+      "manual_review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/predictions.json",
+      "official_source_url": "https://www.lnh.fr/autres-competitions/ligue-des-champions"
+    },
+    {
+      "id": "RA-04",
+      "severity": "high",
+      "category": "Prose Constraint Violation",
+      "file_path": "data/portal/predictions.json & data/update/predictions.json",
+      "lines": "data/portal/predictions.json:36 (34/34); data/update/predictions.json:18 (70/165)",
+      "issue": "204 prediction entries across 15 predictions.json files in the repository leak the forbidden words 'model' or 'verified' directly into reader-facing pick writeups.",
+      "official_check": "Automated audit across all 29 data/**/predictions*.json files; Cadence enforces zero matches on /\\b(model\\w*|verif\\w*)\\b/i in prediction prose.",
+      "manual_review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/portal/predictions.json",
+      "official_source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31"
+    },
+    {
+      "id": "RA-05",
+      "severity": "high",
+      "category": "Stale Root Dataset & Missing Sports",
+      "file_path": "data/matches.json & site/data/lines.json",
+      "lines": "data/matches.json:1-5256; site/data/lines.json:1-2029",
+      "issue": "Root data/matches.json (2026-10-22T07:41:28Z) covers only 5 of 15 sports (47 rows, 0 source_url fields populated on top-level match objects), while site/data/lines.json (2026-10-21T05:55:00Z) covers only 2 of 15 sports (Ice Hockey and Basketball).",
+      "official_check": "Compared against live 2026-10-23 official schedules across NHL, NBA, MLB, WST, PDC, ATP, PGA/DPWT, Cricket Australia, F1, LNH, LegaVolley/VBL, Prem/URC, RLWC, GAA, and GBGB.",
+      "manual_review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/site/data/lines.json",
+      "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    },
+    {
+      "id": "RA-06",
+      "severity": "medium",
+      "category": "Factual Outdatedness",
+      "file_path": "REPO_REVIEW.md",
+      "lines": "54, 63, 65",
+      "issue": "F-12 claims official WST rankings returned HTTP 500 (now HTTP 200 confirming #1 Zhao Xintong £1,265,550); F-03 excluded Greyhounds (28) and Gaelic Football (25) despite both being mandated; F-05 claimed OLBG lacks a Hurling node despite /betting-tips/Hurling/26 being active.",
+      "official_check": "Confirmed HTTP 200 on https://www.wst.tv/rankings/ and https://www.olbg.com/betting-tips on 2026-10-23.",
+      "manual_review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/REPO_REVIEW.md",
+      "official_source_url": "https://www.wst.tv/rankings/"
+    },
+    {
+      "id": "RA-07",
+      "severity": "high",
+      "category": "Temporal Hygiene & Coverage Gap",
+      "file_path": "data/signal/matches.json & research/signal-6b10ecda.md",
+      "lines": "data/signal/matches.json:3274, 3945; research/signal-6b10ecda.md:18-42",
+      "issue": "Signal desk retains 23 pre-19:30Z matches marked 'upcoming' after kickoff/start (including Gloucester v Bath 18:45Z, Gilbert v Williams 14:00Z, and Friday afternoon PDC R1 ties), prices 0 Volleyball matches, writes predictions for only 10 of 15 sports, and misreports 12 of 15 OLBG sportIds as unexposed.",
+      "official_check": "Verified live match statuses on premrugby.com/fixtures-results, wst.tv/matches/, legavolley.it, and olbg.com/betting-tips.",
+      "manual_review_url": "https://buffedlizard55-lab.github.io/OLBG2/signal/",
+      "official_source_url": "https://www.premrugby.com/fixtures-results"
+    },
+    {
+      "id": "RA-08",
+      "severity": "medium",
+      "category": "Incomplete Desk Deliverable",
+      "file_path": "data/covered/matches.json & data/covered/predictions.json",
+      "lines": "data/covered/matches.json:1-353; data/covered/predictions.json:1-6",
+      "issue": "Covered desk includes only 7 of 15 mandated sports (23 total matches) and publishes 0 human predictions in data/covered/predictions.json.",
+      "official_check": "Inspected data/covered/*.json and covered/predictions.html.",
+      "manual_review_url": "https://buffedlizard55-lab.github.io/OLBG2/covered/",
+      "official_source_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "RA-09",
+      "severity": "medium",
+      "category": "Missing Official Endpoint Discovery",
+      "file_path": "research/desk-olbg-b8a1ce4c.md & research/liveboard-cfa67ee2.md",
+      "lines": "1-95",
+      "issue": "Prior 2026-10-23 desks reported NBA official schedule/standings/injury endpoints unreachable after testing only cdn.nba.com/stats.nba.com, leaving Friday's 12 NBA games unpriced or without official injury designations.",
+      "official_check": "Verified www.nba.com/games?date=2026-10-23, www.nba.com/standings, and ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf all return clean 2026-10-23 data.",
+      "manual_review_url": "https://buffedlizard55-lab.github.io/OLBG2/liveboard/",
+      "official_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
+    },
+    {
+      "id": "RA-10",
+      "severity": "high",
+      "category": "Missing Row-Level Source Links",
+      "file_path": "current/lines.html, daily-audit/lines.html, atlas/sports/index.html (+160 HTML files)",
+      "lines": "tbody tr rows across 163 HTML files",
+      "issue": "163 HTML files in the repository render <tbody><tr> table rows with no https:// link to an official source (e.g. current/lines.html has 1,876 unlinked rows).",
+      "official_check": "Automated HTML DOM audit scanning every <tbody><tr> across the repository.",
+      "manual_review_url": "https://buffedlizard55-lab.github.io/OLBG2/current/lines.html",
+      "official_source_url": "https://www.nba.com/standings"
+    },
+    {
+      "id": "RA-11",
+      "severity": "medium",
+      "category": "Withdrawn Player / Illness Update",
+      "file_path": "data/canon/matches.json & data/portal/matches.json",
+      "lines": "PDC European Championship Round 1/2 entries",
+      "issue": "Earlier pre-tournament snapshots still list world #2 Luke Humphries in the Dortmund draw; PDC confirmed on 2026-10-22 that Humphries withdrew with gastroenteritis and replacement Kim Huybrechts defeated Ryan Searle 6-1 (103.81 avg) to set up Saturday's Round 2 clash with Stephen Bunting.",
+      "official_check": "Confirmed via PDC official withdrawal announcement and Day One report.",
+      "manual_review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/portal/matches.json",
+      "official_source_url": "https://www.pdc.tv/news/2026/october/22/humphries-withdraws-from-machineseeker-european-championship"
+    },
+    {
+      "id": "RA-12",
+      "severity": "medium",
+      "category": "Completed Fixture Status Drift",
+      "file_path": "data/olbgdesk/olbg_inventory.json",
+      "lines": "Rugby League & Handball Friday entries",
+      "issue": "Mid-afternoon OLBG hub snapshot captured Tonga v Lebanon (RLWC), French StarLigue J08 Friday fixtures (Aix v Toulouse, Chartres v Nimes, Limoges v Dunkerque, Selestat v Caen, Tremblay v Cesson-Rennes), and EuroLeague R7 Friday games as upcoming; by 19:30Z Tonga defeated Lebanon 36-0 and Friday evening European fixtures were live or finished.",
+      "official_check": "Verified against nrl.com/draw/?competition=131&round=2&season=2026, lnh.fr/daikin-starligue/calendrier, and euroleaguebasketball.net/en/euroleague/game-center/.",
+      "manual_review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/olbgdesk/olbg_inventory.json",
+      "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+    },
+    {
+      "id": "RA-13",
+      "severity": "medium",
+      "category": "External Source Defect (OLBG)",
+      "file_path": "olbg.com/?event_id=199984, 160789, 536036, 902163",
+      "lines": "Most Popular Tip header pill",
+      "issue": "OLBG concatenates tip counts as strings instead of summing integers in the Most Popular Tip denominator: 4 & 2 renders '4 / 042 | 95%', 6 & 2 renders '6 / 062 | 97%', 9 & 0 renders '9 / 090 | 100%', and 2 & 1 renders '2 / 021 | 95%'.",
+      "official_check": "Verified directly on live olbg.com event pages against the market breakdown table immediately below each header.",
+      "manual_review_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13?event_id=199984",
+      "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+    },
+    {
+      "id": "RA-14",
+      "severity": "medium",
+      "category": "External Source Defect (OLBG)",
+      "file_path": "olbg.com/?event_id=32384 & 902163",
+      "lines": "Market selection odds column & event status badge",
+      "issue": "From US egress IPs, OLBG suppresses UK affiliate bookmaker prices leaving blank 'WIN @' strings and displays false 'Expired' badges on unstarted Oct 24 fixtures (Bunting v Huybrechts event_id=32384 and Rybakina v Shnaider event_id=902163).",
+      "official_check": "Confirmed both fixtures are scheduled for Saturday 24 October 2026 via PDC.tv and WTA/OLBG event schedules.",
+      "manual_review_url": "https://www.olbg.com/betting-tips/Darts/15?event_id=32384",
+      "official_source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund"
+    },
+    {
+      "id": "RA-15",
+      "severity": "low",
+      "category": "External Source Calendar Defect (OLBG)",
+      "file_path": "REPO_REVIEW.md & olbg.com/betting-tips/Motor_Racing/14",
+      "lines": "REPO_REVIEW.md:55",
+      "issue": "OLBG's F1 calendar metadata previously conflated Round 16/Bahrain/Sepang, whereas FIA Formula 1's official 2026 calendar places Round 18 at Circuit of The Americas (United States GP, Oct 23-25, 2026).",
+      "official_check": "Verified 2026 F1 calendar and Round 18 COTA session schedule on formula1.com.",
+      "manual_review_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "official_source_url": "https://www.formula1.com/en/racing/2026/united-states"
+    },
+    {
+      "id": "RA-16",
+      "severity": "low",
+      "category": "Official Source Rendering Constraint",
+      "file_path": "wtatennis.com/scores & wst.tv wildcard slots",
+      "lines": "Client-rendered WTA live scores; WST Nanjing Wildcard 1/3/4",
+      "issue": "WTA live score pages render only a notification shell without headless JS execution, and WST International Championship Nanjing pre-qualifiers list 'Wildcard 1/3/4' rather than named Chinese wildcards.",
+      "official_check": "Left unconfirmed WTA live scores and WST wildcard opponent names strictly blank and flagged rather than inferred.",
+      "manual_review_url": "https://www.wst.tv/match-centre/7fce4be0-3ea1-48aa-a505-ca079e308ebf",
+      "official_source_url": "https://www.wst.tv/match-centre/7fce4be0-3ea1-48aa-a505-ca079e308ebf"
+    }
+  ]
+}

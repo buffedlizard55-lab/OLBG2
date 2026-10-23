@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OLBG reverse-engineering · Cadence desk</title>
+<style>
+:root{--bg:#0b1220;--card:#121c2e;--line:#22304a;--ink:#e8eef8;--dim:#93a4c0;--accent:#4da3ff;
+--good:#2fbf71;--warn:#f2b134;--bad:#ef5b5b;--chip:#1b2942}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:#0e1728;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.top .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{font-weight:700;font-size:17px;letter-spacing:.2px}
+.brand small{color:var(--dim);font-weight:400;font-size:12px;display:block}
+nav.links{display:flex;flex-wrap:wrap;gap:6px}
+nav.links a{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;color:var(--ink)}
+nav.links a.on{background:var(--accent);color:#04101f;border-color:var(--accent);font-weight:600}
+main{padding:26px 0 60px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:19px;margin:30px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:15px;margin:20px 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+p.lede{color:var(--dim);max-width:88ch;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 6px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi b{display:block;font-size:25px;line-height:1.1}
+.kpi span{color:var(--dim);font-size:12px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#16233a;color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.05em;position:sticky;top:0}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:#101a2b}
+.pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.high{background:rgba(47,191,113,.16);color:#5ee49b;border:1px solid rgba(47,191,113,.4)}
+.medium{background:rgba(242,177,52,.16);color:#f6c968;border:1px solid rgba(242,177,52,.4)}
+.low{background:rgba(147,164,192,.14);color:#a9b8d1;border:1px solid rgba(147,164,192,.35)}
+.in{background:rgba(77,163,255,.16);color:#8cc6ff;border:1px solid rgba(77,163,255,.4)}
+.out{background:rgba(239,91,91,.14);color:#ff9a9a;border:1px solid rgba(239,91,91,.35)}
+.blank{background:#1b2942;color:#93a4c0;border:1px dashed #3a4d6e}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:13px 15px;margin:14px 0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+.note b{color:var(--ink)}
+.mono{font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--dim)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h4{margin:0 0 6px;font-size:15px}
+.card .row{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--dim);margin:2px 0}
+.pred{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+.pred h4{margin:0 0 2px;font-size:16px}
+.pred .meta{color:var(--dim);font-size:12.5px;margin-bottom:8px}
+.pred .sel{font-weight:600;color:#9ed0ff;margin:6px 0}
+.pred p{margin:8px 0}
+.pred .facts{margin-top:10px;border-top:1px solid var(--line);padding-top:9px}
+.pred .facts li{font-size:12.5px;color:var(--dim);margin:3px 0}
+ul{padding-left:20px}
+footer{border-top:1px solid var(--line);color:var(--dim);font-size:12.5px;padding:18px 0 40px}
+@media (max-width:640px){.top .wrap{gap:8px}h1{font-size:22px}}
+</style></head><body>
+<header class="top"><div class="wrap">
+  <div class="brand">Cadence · OLBG 15-sport desk<small>Captured 2026-10-23T20:10:00Z · research, not betting advice · 18+</small></div>
+  <nav class="links"><a href="index.html">Overview</a><a href="band.html">Band board</a><a href="picks.html">Top five by sport</a><a href="matches.html">All matches</a><a href="lines.html">Originated lines</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="olbg.html" class="on">OLBG</a><a href="audit.html">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Method</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>OLBG: what the site actually serves</h1>
+<p class="lede">Read first-hand from olbg.com during the capture window across the sixteen sportIds that cover
+the fifteen mandated sports. OLBG is used for discovery and taxonomy only: it is not the source of a single
+fixture fact or price on this desk.</p>
+
+<h2>Sport index</h2>
+<p>Hub route: <code>/betting-tips/{Sport}/{id}</code>. Event route:
+<code>/betting-tips/{Sport}/{Group}/{Competition}/{Event_Name}/{id}?event_id={eventId}</code>.
+The sport name is case-sensitive in the path. The fifteen mandated sports map to sixteen ids because Gaelic
+Sports is split across Gaelic Football (25) and Hurling (26).</p>
+<div class="table-wrap"><table><thead><tr><th>Sport</th><th>OLBG id</th><th>Hub</th><th>Markets shown</th></tr></thead><tbody>
+<tr><td>Golf</td><td class="mono">5</td><td><a href="https://www.olbg.com/betting-tips/Golf/5" rel="noopener">www.olbg.com</a></td><td class="small">Win Tournament (hub returned no rows today)</td></tr><tr><td>Volleyball</td><td class="mono">21</td><td><a href="https://www.olbg.com/betting-tips/Volleyball/21" rel="noopener">www.olbg.com</a></td><td class="small">Win Match, Set Score</td></tr><tr><td>Rugby Union</td><td class="mono">9</td><td><a href="https://www.olbg.com/betting-tips/Rugby_Union/9" rel="noopener">www.olbg.com</a></td><td class="small">To Win</td></tr><tr><td>Cricket</td><td class="mono">7</td><td><a href="https://www.olbg.com/betting-tips/Cricket/7" rel="noopener">www.olbg.com</a></td><td class="small">Win Match</td></tr><tr><td>Snooker</td><td class="mono">8</td><td><a href="https://www.olbg.com/betting-tips/Snooker/8" rel="noopener">www.olbg.com</a></td><td class="small">Win Match</td></tr><tr><td>Darts</td><td class="mono">15</td><td><a href="https://www.olbg.com/betting-tips/Darts/15" rel="noopener">www.olbg.com</a></td><td class="small">Win Match 2-way, Handicap 2-way, Total Legs</td></tr><tr><td>Baseball</td><td class="mono">12</td><td><a href="https://www.olbg.com/betting-tips/Baseball/12" rel="noopener">www.olbg.com</a></td><td class="small">Money Line, Run Line, Game Totals</td></tr><tr><td>Gaelic Sports</td><td class="mono">25, 26</td><td><a href="https://www.olbg.com/betting-tips/Gaelic_Football/25, 26" rel="noopener">www.olbg.com</a></td><td class="small">Handicap, Win Match</td></tr><tr><td>Greyhounds</td><td class="mono">28</td><td><a href="https://www.olbg.com/betting-tips/Greyhounds/28" rel="noopener">www.olbg.com</a></td><td class="small">Daily Races</td></tr><tr><td>Tennis</td><td class="mono">3</td><td><a href="https://www.olbg.com/betting-tips/Tennis/3" rel="noopener">www.olbg.com</a></td><td class="small">Win Match, Set Betting, Total Games, Games Won</td></tr><tr><td>Motor Racing</td><td class="mono">14</td><td><a href="https://www.olbg.com/betting-tips/Motor_Racing/14" rel="noopener">www.olbg.com</a></td><td class="small">Win Race, Win Tournament</td></tr><tr><td>Handball</td><td class="mono">20</td><td><a href="https://www.olbg.com/betting-tips/Handball/20" rel="noopener">www.olbg.com</a></td><td class="small">Money Line (three-way, includes Tie)</td></tr><tr><td>Ice Hockey</td><td class="mono">13</td><td><a href="https://www.olbg.com/betting-tips/Ice_Hockey/13" rel="noopener">www.olbg.com</a></td><td class="small">Money Line, Puck Line, Game Totals</td></tr><tr><td>Basketball</td><td class="mono">4</td><td><a href="https://www.olbg.com/betting-tips/Basketball/4" rel="noopener">www.olbg.com</a></td><td class="small">Money Line, Pointspread, Game Totals</td></tr><tr><td>Rugby League</td><td class="mono">10</td><td><a href="https://www.olbg.com/betting-tips/Rugby_League/10" rel="noopener">www.olbg.com</a></td><td class="small">To Win, Grand Final Winner</td></tr>
+</tbody></table></div>
+
+<h2>Four defects found on the live site</h2>
+<div class="table-wrap"><table><thead><tr><th>Defect</th><th>Evidence</th><th>Consequence for a parser</th></tr></thead><tbody>
+<tr><td>US IPs see an empty hub</td><td>Every <code>/betting-tips/{Sport}/{id}</code> page renders “No tips found.”
+while the same events resolve normally through <code>?event_id=</code></td>
+<td>Discovery must follow event ids, not scrape the hub list</td></tr>
+<tr><td>Tip denominators are string-concatenated</td><td><code>event_id=199984</code> renders
+“4 / 042 | 95%” for a market whose own table says 4 of 42; <code>160789</code> renders “6 / 062”;
+<code>536036</code> renders “9 / 090”; <code>902163</code> renders “2 / 021”</td>
+<td>Never parse the header pill; parse the market table</td></tr>
+<tr><td>Odds cells are blank for a logged-out US visitor</td><td><code>event_id=32384</code> and
+<code>902163</code> render “WIN @” with nothing after it</td><td>OLBG cannot supply a price at all</td></tr>
+<tr><td>False “Expired” badges and a shifted clock</td><td>Unstarted 24 October fixtures carry an
+“Expired” badge and a US-Eastern time</td><td>Status must come from the governing body</td></tr>
+</tbody></table></div>
+
+<div class="note warn"><b>Why this matters for the brief.</b> OLBG's percentage is the share of community tips
+on a selection, not a probability and not a price. Using it as either would manufacture an edge that does not
+exist. The desk records the tip split only as a description of OLBG, never as an input.</div>
+</div></main>
+<footer><div class="wrap">
+  Every published row links to the official governing-body page it came from. Values that an official
+  source did not publish are left blank and listed on <a href="flagged.html">Flagged for review</a>.
+  Prices are the desk's own fair lines, never observed bookmaker quotes unless a row says so.
+</div></footer></body></html>

@@ -1,0 +1,479 @@
+{
+ "captured_utc": "2026-10-23T20:05:00Z",
+ "session": "arena/a0c8b7f3-olbg2",
+ "count": 59,
+ "sources": [
+  {
+   "key": "olbg_tips",
+   "publisher": "OLBG",
+   "url": "https://www.olbg.com/betting-tips",
+   "what": "Full sport index confirming the 16 canonical OLBG sportIds used by the desk",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "olbg_darts",
+   "publisher": "OLBG",
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "what": "Darts hub route /betting-tips/Darts/15 and market vocabulary",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "olbg_nhl_event",
+   "publisher": "OLBG",
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13?event_id=199984",
+   "what": "Event-page structure, Most Popular Tip string-concatenation defect",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "olbg_nba_event",
+   "publisher": "OLBG",
+   "url": "https://www.olbg.com/betting-tips/Basketball/4?event_id=536036",
+   "what": "Event-page markets (Money Line, Pointspread, Game Totals) and tie display",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "olbg_tennis_event",
+   "publisher": "OLBG",
+   "url": "https://www.olbg.com/betting-tips/Tennis/3?event_id=902163",
+   "what": "Blank WIN @ odds cells, false Expired badge, 2/021 denominator defect",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nhle_schedule",
+   "publisher": "NHL",
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+   "what": "Two NHL fixtures on 2026-10-23 with UTC start, venue and published moneylines",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nhle_standings",
+   "publisher": "NHL",
+   "url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+   "what": "2026-27 club records, goal totals, home/road splits, L10 and streaks",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nba_games",
+   "publisher": "NBA",
+   "url": "https://www.nba.com/games?date=2026-10-23",
+   "what": "Twelve NBA fixtures, tip times (ET), records and season leaders",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nba_standings",
+   "publisher": "NBA",
+   "url": "https://www.nba.com/standings",
+   "what": "2026-27 conference standings after 1-2 games",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nba_injury",
+   "publisher": "NBA Office of the Commissioner",
+   "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf",
+   "what": "Official game-day injury report 10/23/26 03:15 PM ET with player statuses",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nba_injury_index",
+   "publisher": "NBA",
+   "url": "https://official.nba.com/nba-injury-report-2026-27-season/",
+   "what": "Index page linking the 2026-10-23 injury-report PDFs",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "mlb_schedule",
+   "publisher": "MLB",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02",
+   "what": "World Series Games 1-7 with official date, venue and probable pitchers",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "mlb_standings",
+   "publisher": "MLB",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
+   "what": "Final 2026 regular-season records and splits for both World Series clubs",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "mlb_brewers",
+   "publisher": "MLB",
+   "url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings",
+   "what": "Milwaukee 103-59, 832/618, 55-26 home, 68-35 night, W5, 8-2 L10",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "mlb_pitchers",
+   "publisher": "MLB",
+   "url": "https://statsapi.mlb.com/api/v1/people?personIds=607259,694819,656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+   "what": "2026 season pitching lines for Martinez, Misiorowski, Rasmussen and Henderson",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "cricket_au",
+   "publisher": "Cricket Australia",
+   "url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026",
+   "what": "Upcoming Australian and international fixtures with venues and local start times",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "cricket_au_done",
+   "publisher": "Cricket Australia",
+   "url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
+   "what": "Completed 2026 fixtures with full scorecards (Afghanistan v Zimbabwe, SL v England, NZ v India)",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "wst_matches",
+   "publisher": "World Snooker Tour",
+   "url": "https://www.wst.tv/matches/",
+   "what": "Northern Ireland Open quarter-final, semi-final and final schedule with frame scores",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "wst_rankings",
+   "publisher": "World Snooker Tour",
+   "url": "https://www.wst.tv/rankings/",
+   "what": "Johnstone's Paint World Rankings and One Year List with prize money",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "wst_ic",
+   "publisher": "World Snooker Tour",
+   "url": "https://www.wst.tv/match-centre/77ee26cc-bb1d-417e-a522-c716cd390464",
+   "what": "International Championship 2026 Nanjing Round 2 match centres and dates",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "wst_ni_qf",
+   "publisher": "World Snooker Tour",
+   "url": "https://www.wst.tv/match-centre/19048b0d-aaf4-4691-ad10-15b1b707f622",
+   "what": "Live Northern Ireland Open quarter-final frame scores (Gilbert v Williams)",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "pdc_withdrawal",
+   "publisher": "PDC",
+   "url": "https://www.pdc.tv/news/2026/october/22/humphries-withdraws-from-machineseeker-european-championship",
+   "what": "Official withdrawal of Luke Humphries (gastroenteritis) and Kim Huybrechts replacement",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "pdc_day_one",
+   "publisher": "PDC",
+   "url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund",
+   "what": "Round One results, Woodhouse nine-darter, Bunting 6-5 Noppert, Huybrechts 6-1 Searle",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "pdc_schedule",
+   "publisher": "PDC",
+   "url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+   "what": "Saturday 24 October Round Two bracket and 2026 European Tour ranking order",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "pdc_rules",
+   "publisher": "PDC",
+   "url": "https://www.pdc.tv/rankings/pdc-rankings-rules",
+   "what": "2026 European Championship format, prize fund and cut-off",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "atp_scores",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current",
+   "what": "Live and completed ATP quarter-final scores across Almaty, Brussels and Lyon",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "atp_almaty",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+   "what": "Almaty Open semi-final order of play for 24 October 2026",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "atp_rankings",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/rankings/singles",
+   "what": "PIF ATP Rankings singles, week of 2026-10-19, official points",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "atp_vienna",
+   "publisher": "ATP Tour",
+   "url": "https://www.atptour.com/en/scores/current/vienna/337/daily-schedule",
+   "what": "Vienna qualifying order of play for 24 October 2026",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "pgatour",
+   "publisher": "PGA TOUR",
+   "url": "https://www.pgatour.com/leaderboard",
+   "what": "Butterfield Bermuda Championship R2 leaderboard, scores, cut line -4",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "dpwt",
+   "publisher": "DP World Tour",
+   "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "what": "Genesis Championship R2 scores and round-three tee times",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "gbgb_schedule",
+   "publisher": "GBGB",
+   "url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+   "what": "2026 Category One schedule: Scurry Gold Cup and PGR Oaks finals, Dunstall Park, 24 Oct",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "gbgb_scurry",
+   "publisher": "GBGB",
+   "url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+   "what": "Scurry Gold Cup semi-final winners and winning times",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "gbgb_oaks",
+   "publisher": "GBGB",
+   "url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+   "what": "PGR Oaks semi-final winners and winning times",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "gbgb_toty",
+   "publisher": "GBGB",
+   "url": "https://www.gbgb.org.uk/trainer-of-the-year-standings-up-to-and-including-sunday-18th-october/",
+   "what": "Trainer of the Year standings to 18 October 2026",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "lnh_table",
+   "publisher": "LNH",
+   "url": "https://www.lnh.fr/daikin-starligue/classement",
+   "what": "Daikin StarLigue 2026-27 table after seven rounds with goals for/against",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "lnh_cal",
+   "publisher": "LNH",
+   "url": "https://www.lnh.fr/daikin-starligue/calendrier",
+   "what": "StarLigue Round 8 fixtures and results",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "lnh_ehf",
+   "publisher": "LNH",
+   "url": "https://www.lnh.fr/autres-competitions/ligue-des-champions",
+   "what": "EHF Champions League Round 6 fixtures involving French clubs",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "legavolley_cal",
+   "publisher": "Lega Pallavolo Serie A",
+   "url": "https://www.legavolley.it/calendario/?idCampionato=999",
+   "what": "SuperLega 2026-27 Round 1 results and Round 2 fixtures with venues and officials",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "legavolley_table",
+   "publisher": "Lega Pallavolo Serie A",
+   "url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+   "what": "SuperLega table updated 18/10/2026 with sets and points ratios",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "vbl_schedule",
+   "publisher": "Volleyball Bundesliga",
+   "url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/hauptrunde.xhtml",
+   "what": "1. Bundesliga Männer match schedule for 22-25 October 2026",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "vbl_table",
+   "publisher": "Volleyball Bundesliga",
+   "url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/tabelle_hauptrunde.xhtml",
+   "what": "1. Bundesliga Männer table after Round 1",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "prem_fixtures",
+   "publisher": "Premiership Rugby",
+   "url": "https://www.premrugby.com/fixtures-results",
+   "what": "Gallagher PREM Round 4 fixtures with venues and form strings",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "prem_table",
+   "publisher": "Premiership Rugby",
+   "url": "https://www.premrugby.com/standings",
+   "what": "Gallagher PREM table after three rounds with points difference",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "urc_round4",
+   "publisher": "United Rugby Championship",
+   "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "what": "URC Round 4 fixtures, Round 3 results and venues",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nrl_r2",
+   "publisher": "NRL",
+   "url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026",
+   "what": "Rugby League World Cup 2026 Round 2 fixtures, venues and ladder positions",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nrl_r1",
+   "publisher": "NRL",
+   "url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+   "what": "Rugby League World Cup 2026 Round 1 results",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "nrl_r3",
+   "publisher": "NRL",
+   "url": "https://www.nrl.com/draw/?competition=131&round=3&season=2026",
+   "what": "Rugby League World Cup 2026 Round 3 fixtures",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "f1_calendar",
+   "publisher": "Formula 1",
+   "url": "https://www.formula1.com/en/racing/2026",
+   "what": "2026 FIA Formula One calendar; Round 18 United States 23-25 October",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "f1_usgp",
+   "publisher": "Formula 1",
+   "url": "https://www.formula1.com/en/racing/2026/united-states",
+   "what": "COTA session schedule, circuit length, laps and FP1 classification",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "f1_drivers",
+   "publisher": "Formula 1",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "what": "2026 Drivers' Championship points after Round 17",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "gaa_fixtures",
+   "publisher": "GAA",
+   "url": "https://www.gaa.ie/fixtures-results",
+   "what": "Hurling-Shinty International Ireland v Scotland, 24 October, Páirc Uí Chaoimh",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "munster_gaa",
+   "publisher": "Munster GAA",
+   "url": "https://munster.gaa.ie/fixtures/events-calendar/",
+   "what": "Cork, Kerry, Waterford and Limerick county finals 25 October with venues and referees",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "gaacork",
+   "publisher": "Cork GAA",
+   "url": "https://gaacork.ie/fixtures/",
+   "what": "Cork Premier SFC final St Finbarr's v Nemo Rangers and semi-final scorelines",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "kerrygaa",
+   "publisher": "Kerry GAA",
+   "url": "https://www.kerrygaa.ie/clubs/kenmare-shamrocks/",
+   "what": "Kerry SFC final Dr Crokes v Kenmare Shamrocks, Fitzgerald Stadium",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "waterfordgaa",
+   "publisher": "Waterford GAA",
+   "url": "https://www.waterfordgaa.ie/results/",
+   "what": "Waterford SFC semi-final results: Rathgormack 1-14 Gaultier 0-15; The Nire 0-12 Abbeyside 0-5",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "limerickgaa",
+   "publisher": "Limerick GAA",
+   "url": "https://limerickgaa.ie/na-piarsaigh-gaa-club-notes-213/",
+   "what": "Limerick SHC semi-final Na Piarsaigh 2-24 Doon 3-16; final v Kilmallock",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "el_standings",
+   "publisher": "EuroLeague Basketball",
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+   "what": "EuroLeague 2026-27 regular-season table after seven rounds with points for/against",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  },
+  {
+   "key": "el_game_center",
+   "publisher": "EuroLeague Basketball",
+   "url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026",
+   "what": "EuroLeague Round 8 fixtures, dates and venues",
+   "fetched_utc": "2026-10-23T20:05:00Z",
+   "session": "arena/a0c8b7f3-olbg2"
+  }
+ ]
+}

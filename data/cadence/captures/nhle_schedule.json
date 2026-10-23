@@ -1,0 +1,52 @@
+{
+ "source_key": "nhle_schedule",
+ "url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+ "captured_utc": "2026-10-23T20:05:00Z",
+ "session": "arena/a0c8b7f3-olbg2",
+ "readings": [
+  {
+   "fixture_id": "nhl-2026020166",
+   "sport": "Ice Hockey",
+   "home": "Chicago Blackhawks",
+   "away": "Montréal Canadiens",
+   "time_display": "2026-10-24T00:00:00Z (NHL feed)",
+   "venue": "United Center",
+   "facts": [
+    {
+     "item": "Montréal",
+     "text": "4-3-2 in 9 games, 30 goals for, 34 against, 10 points, OT1 streak"
+    },
+    {
+     "item": "Chicago",
+     "text": "3-6-0 in 9 games, 21 goals for, 36 against, 6 points, 0-4-0 on the road"
+    },
+    {
+     "item": "NHL feed price",
+     "text": "Montréal -169 / Chicago +137 published by the NHL schedule feed"
+    }
+   ]
+  },
+  {
+   "fixture_id": "nhl-2026020167",
+   "sport": "Ice Hockey",
+   "home": "Colorado Avalanche",
+   "away": "Tampa Bay Lightning",
+   "time_display": "2026-10-24T01:00:00Z (NHL feed)",
+   "venue": "Ball Arena",
+   "facts": [
+    {
+     "item": "Tampa Bay",
+     "text": "7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3"
+    },
+    {
+     "item": "Colorado",
+     "text": "5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2"
+    },
+    {
+     "item": "NHL feed price",
+     "text": "Tampa Bay +105 / Colorado -129 published by the NHL schedule feed"
+    }
+   ]
+  }
+ ]
+}

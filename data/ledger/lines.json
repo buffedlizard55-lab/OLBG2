@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-10-23T19:42:37Z",
+  "generated_at": "2026-10-23T19:52:26Z",
   "method": "see scripts/ledger_model.py header and the methodology page",
   "official_fixtures": 93,
   "fixtures_with_lines": 86,
@@ -52,20 +52,20 @@
     ],
     "handicap": [
      {
-      "selection": "Blackhawks -1.5",
+      "selection": "Canadiens -1.5",
       "market": "Handicap",
-      "prob": 0.1294,
-      "decimal": 7.73,
-      "american": "+673",
+      "prob": 0.4871,
+      "decimal": 2.05,
+      "american": "+105",
       "in_band": true
      },
      {
-      "selection": "Canadiens +1.5",
+      "selection": "Blackhawks +1.5",
       "market": "Handicap",
-      "prob": 0.8706,
-      "decimal": 1.15,
-      "american": "-673",
-      "in_band": false
+      "prob": 0.5129,
+      "decimal": 1.95,
+      "american": "-105",
+      "in_band": true
      }
     ],
     "total": [
@@ -166,20 +166,20 @@
     ],
     "handicap": [
      {
-      "selection": "Avalanche -1.5",
+      "selection": "Lightning -1.5",
       "market": "Handicap",
-      "prob": 0.2696,
-      "decimal": 3.71,
-      "american": "+271",
+      "prob": 0.2862,
+      "decimal": 3.49,
+      "american": "+249",
       "in_band": true
      },
      {
-      "selection": "Lightning +1.5",
+      "selection": "Avalanche +1.5",
       "market": "Handicap",
-      "prob": 0.7304,
-      "decimal": 1.37,
-      "american": "-271",
-      "in_band": false
+      "prob": 0.7138,
+      "decimal": 1.4,
+      "american": "-249",
+      "in_band": true
      }
     ],
     "total": [
@@ -964,20 +964,20 @@
     ],
     "handicap": [
      {
-      "selection": "Blue Jackets -1.5",
+      "selection": "Golden Knights -1.5",
       "market": "Handicap",
-      "prob": 0.0818,
-      "decimal": 12.22,
-      "american": "+1122",
+      "prob": 0.578,
+      "decimal": 1.73,
+      "american": "-137",
       "in_band": true
      },
      {
-      "selection": "Golden Knights +1.5",
+      "selection": "Blue Jackets +1.5",
       "market": "Handicap",
-      "prob": 0.9182,
-      "decimal": 1.09,
-      "american": "-1122",
-      "in_band": false
+      "prob": 0.422,
+      "decimal": 2.37,
+      "american": "+137",
+      "in_band": true
      }
     ],
     "total": [
@@ -1078,20 +1078,20 @@
     ],
     "handicap": [
      {
-      "selection": "Blues -1.5",
+      "selection": "Hurricanes -1.5",
       "market": "Handicap",
-      "prob": 0.1869,
-      "decimal": 5.35,
-      "american": "+435",
+      "prob": 0.3915,
+      "decimal": 2.55,
+      "american": "+155",
       "in_band": true
      },
      {
-      "selection": "Hurricanes +1.5",
+      "selection": "Blues +1.5",
       "market": "Handicap",
-      "prob": 0.8131,
-      "decimal": 1.23,
-      "american": "-435",
-      "in_band": false
+      "prob": 0.6085,
+      "decimal": 1.64,
+      "american": "-155",
+      "in_band": true
      }
     ],
     "total": [
@@ -1306,20 +1306,20 @@
     ],
     "handicap": [
      {
-      "selection": "Mammoth -1.5",
+      "selection": "Lightning -1.5",
       "market": "Handicap",
-      "prob": 0.208,
-      "decimal": 4.81,
-      "american": "+381",
+      "prob": 0.3529,
+      "decimal": 2.83,
+      "american": "+183",
       "in_band": true
      },
      {
-      "selection": "Lightning +1.5",
+      "selection": "Mammoth +1.5",
       "market": "Handicap",
-      "prob": 0.792,
-      "decimal": 1.26,
-      "american": "-381",
-      "in_band": false
+      "prob": 0.6471,
+      "decimal": 1.55,
+      "american": "-183",
+      "in_band": true
      }
     ],
     "total": [
@@ -1420,20 +1420,20 @@
     ],
     "handicap": [
      {
-      "selection": "Flames -1.5",
+      "selection": "Red Wings -1.5",
       "market": "Handicap",
-      "prob": 0.0817,
-      "decimal": 12.24,
-      "american": "+1124",
+      "prob": 0.5356,
+      "decimal": 1.87,
+      "american": "-115",
       "in_band": true
      },
      {
-      "selection": "Red Wings +1.5",
+      "selection": "Flames +1.5",
       "market": "Handicap",
-      "prob": 0.9183,
-      "decimal": 1.09,
-      "american": "-1124",
-      "in_band": false
+      "prob": 0.4644,
+      "decimal": 2.15,
+      "american": "+115",
+      "in_band": true
      }
     ],
     "total": [
@@ -1648,20 +1648,20 @@
     ],
     "handicap": [
      {
-      "selection": "Blackhawks -1.5",
+      "selection": "Panthers -1.5",
       "market": "Handicap",
-      "prob": 0.119,
-      "decimal": 8.4,
-      "american": "+740",
+      "prob": 0.4606,
+      "decimal": 2.17,
+      "american": "+117",
       "in_band": true
      },
      {
-      "selection": "Panthers +1.5",
+      "selection": "Blackhawks +1.5",
       "market": "Handicap",
-      "prob": 0.881,
-      "decimal": 1.14,
-      "american": "-740",
-      "in_band": false
+      "prob": 0.5394,
+      "decimal": 1.85,
+      "american": "-117",
+      "in_band": true
      }
     ],
     "total": [
@@ -1990,20 +1990,20 @@
     ],
     "handicap": [
      {
-      "selection": "Predators -1.5",
+      "selection": "Avalanche -1.5",
       "market": "Handicap",
-      "prob": 0.0966,
-      "decimal": 10.36,
-      "american": "+936",
+      "prob": 0.5463,
+      "decimal": 1.83,
+      "american": "-120",
       "in_band": true
      },
      {
-      "selection": "Avalanche +1.5",
+      "selection": "Predators +1.5",
       "market": "Handicap",
-      "prob": 0.9034,
-      "decimal": 1.11,
-      "american": "-936",
-      "in_band": false
+      "prob": 0.4537,
+      "decimal": 2.2,
+      "american": "+120",
+      "in_band": true
      }
     ],
     "total": [
@@ -2104,20 +2104,20 @@
     ],
     "handicap": [
      {
-      "selection": "Canucks -1.5",
+      "selection": "Wild -1.5",
       "market": "Handicap",
-      "prob": 0.0779,
-      "decimal": 12.85,
-      "american": "+1185",
+      "prob": 0.5801,
+      "decimal": 1.72,
+      "american": "-138",
       "in_band": true
      },
      {
-      "selection": "Wild +1.5",
+      "selection": "Canucks +1.5",
       "market": "Handicap",
-      "prob": 0.9221,
-      "decimal": 1.08,
-      "american": "-1185",
-      "in_band": false
+      "prob": 0.4199,
+      "decimal": 2.38,
+      "american": "+138",
+      "in_band": true
      }
     ],
     "total": [
@@ -2332,20 +2332,20 @@
     ],
     "handicap": [
      {
-      "selection": "Flames -1.5",
+      "selection": "Maple Leafs -1.5",
       "market": "Handicap",
-      "prob": 0.0528,
-      "decimal": 18.92,
-      "american": "+1792",
+      "prob": 0.664,
+      "decimal": 1.51,
+      "american": "-198",
       "in_band": true
      },
      {
-      "selection": "Maple Leafs +1.5",
+      "selection": "Flames +1.5",
       "market": "Handicap",
-      "prob": 0.9472,
-      "decimal": 1.06,
-      "american": "-1792",
-      "in_band": false
+      "prob": 0.336,
+      "decimal": 2.98,
+      "american": "+198",
+      "in_band": true
      }
     ],
     "total": [
@@ -3016,20 +3016,20 @@
     ],
     "handicap": [
      {
-      "selection": "Predators -1.5",
+      "selection": "Islanders -1.5",
       "market": "Handicap",
-      "prob": 0.1049,
-      "decimal": 9.53,
-      "american": "+853",
+      "prob": 0.44,
+      "decimal": 2.27,
+      "american": "+127",
       "in_band": true
      },
      {
-      "selection": "Islanders +1.5",
+      "selection": "Predators +1.5",
       "market": "Handicap",
-      "prob": 0.8951,
-      "decimal": 1.12,
-      "american": "-853",
-      "in_band": false
+      "prob": 0.56,
+      "decimal": 1.79,
+      "american": "-127",
+      "in_band": true
      }
     ],
     "total": [
@@ -4384,20 +4384,20 @@
     ],
     "handicap": [
      {
-      "selection": "Penguins -1.5",
+      "selection": "Mammoth -1.5",
       "market": "Handicap",
-      "prob": 0.2203,
-      "decimal": 4.54,
-      "american": "+354",
+      "prob": 0.3682,
+      "decimal": 2.72,
+      "american": "+172",
       "in_band": true
      },
      {
-      "selection": "Mammoth +1.5",
+      "selection": "Penguins +1.5",
       "market": "Handicap",
-      "prob": 0.7797,
-      "decimal": 1.28,
-      "american": "-354",
-      "in_band": false
+      "prob": 0.6318,
+      "decimal": 1.58,
+      "american": "-172",
+      "in_band": true
      }
     ],
     "total": [
@@ -4726,20 +4726,20 @@
     ],
     "handicap": [
      {
-      "selection": "Blues -1.5",
+      "selection": "Bruins -1.5",
       "market": "Handicap",
-      "prob": 0.1012,
-      "decimal": 9.88,
-      "american": "+888",
+      "prob": 0.5013,
+      "decimal": 1.99,
+      "american": "-101",
       "in_band": true
      },
      {
-      "selection": "Bruins +1.5",
+      "selection": "Blues +1.5",
       "market": "Handicap",
-      "prob": 0.8988,
-      "decimal": 1.11,
-      "american": "-888",
-      "in_band": false
+      "prob": 0.4987,
+      "decimal": 2.01,
+      "american": "+101",
+      "in_band": true
      }
     ],
     "total": [
@@ -4840,20 +4840,20 @@
     ],
     "handicap": [
      {
-      "selection": "Predators -1.5",
+      "selection": "Capitals -1.5",
       "market": "Handicap",
-      "prob": 0.1603,
-      "decimal": 6.24,
-      "american": "+524",
+      "prob": 0.4022,
+      "decimal": 2.49,
+      "american": "+149",
       "in_band": true
      },
      {
-      "selection": "Capitals +1.5",
+      "selection": "Predators +1.5",
       "market": "Handicap",
-      "prob": 0.8397,
-      "decimal": 1.19,
-      "american": "-524",
-      "in_band": false
+      "prob": 0.5978,
+      "decimal": 1.67,
+      "american": "-149",
+      "in_band": true
      }
     ],
     "total": [
@@ -5296,20 +5296,20 @@
     ],
     "handicap": [
      {
-      "selection": "Kings -1.5",
+      "selection": "Senators -1.5",
       "market": "Handicap",
-      "prob": 0.1278,
-      "decimal": 7.83,
-      "american": "+683",
+      "prob": 0.4225,
+      "decimal": 2.37,
+      "american": "+137",
       "in_band": true
      },
      {
-      "selection": "Senators +1.5",
+      "selection": "Kings +1.5",
       "market": "Handicap",
-      "prob": 0.8722,
-      "decimal": 1.15,
-      "american": "-683",
-      "in_band": false
+      "prob": 0.5775,
+      "decimal": 1.73,
+      "american": "-137",
+      "in_band": true
      }
     ],
     "total": [
@@ -5501,7 +5501,7 @@
    "official_url": "https://www.nhl.com/gamecenter/njd-vs-vgk/2026/10/30/2026020214",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020214",
    "markets": {
     "win": [
@@ -5615,7 +5615,7 @@
    "official_url": "https://www.nhl.com/gamecenter/wpg-vs-fla/2026/10/30/2026020215",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020215",
    "markets": {
     "win": [
@@ -5729,7 +5729,7 @@
    "official_url": "https://www.nhl.com/gamecenter/sea-vs-cgy/2026/10/31/2026020216",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020216",
    "markets": {
     "win": [
@@ -5752,20 +5752,20 @@
     ],
     "handicap": [
      {
-      "selection": "Flames -1.5",
+      "selection": "Kraken -1.5",
       "market": "Handicap",
-      "prob": 0.0414,
-      "decimal": 24.16,
-      "american": "+2316",
-      "in_band": true
+      "prob": 0.7208,
+      "decimal": 1.39,
+      "american": "-258",
+      "in_band": false
      },
      {
-      "selection": "Kraken +1.5",
+      "selection": "Flames +1.5",
       "market": "Handicap",
-      "prob": 0.9586,
-      "decimal": 1.04,
-      "american": "-2316",
-      "in_band": false
+      "prob": 0.2792,
+      "decimal": 3.58,
+      "american": "+258",
+      "in_band": true
      }
     ],
     "total": [
@@ -5843,7 +5843,7 @@
    "official_url": "https://www.nhl.com/gamecenter/chi-vs-bos/2026/10/31/2026020217",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020217",
    "markets": {
     "win": [
@@ -5957,7 +5957,7 @@
    "official_url": "https://www.nhl.com/gamecenter/stl-vs-det/2026/10/31/2026020218",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020218",
    "markets": {
     "win": [
@@ -6071,7 +6071,7 @@
    "official_url": "https://www.nhl.com/gamecenter/tbl-vs-nsh/2026/10/31/2026020219",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020219",
    "markets": {
     "win": [
@@ -6094,20 +6094,20 @@
     ],
     "handicap": [
      {
-      "selection": "Predators -1.5",
+      "selection": "Lightning -1.5",
       "market": "Handicap",
-      "prob": 0.093,
-      "decimal": 10.75,
-      "american": "+975",
+      "prob": 0.5071,
+      "decimal": 1.97,
+      "american": "-103",
       "in_band": true
      },
      {
-      "selection": "Lightning +1.5",
+      "selection": "Predators +1.5",
       "market": "Handicap",
-      "prob": 0.907,
-      "decimal": 1.1,
-      "american": "-975",
-      "in_band": false
+      "prob": 0.4929,
+      "decimal": 2.03,
+      "american": "+103",
+      "in_band": true
      }
     ],
     "total": [
@@ -6185,7 +6185,7 @@
    "official_url": "https://www.nhl.com/gamecenter/edm-vs-nyi/2026/10/31/2026020220",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020220",
    "markets": {
     "win": [
@@ -6208,20 +6208,20 @@
     ],
     "handicap": [
      {
-      "selection": "Islanders -1.5",
+      "selection": "Oilers -1.5",
       "market": "Handicap",
-      "prob": 0.2118,
-      "decimal": 4.72,
-      "american": "+372",
+      "prob": 0.3402,
+      "decimal": 2.94,
+      "american": "+194",
       "in_band": true
      },
      {
-      "selection": "Oilers +1.5",
+      "selection": "Islanders +1.5",
       "market": "Handicap",
-      "prob": 0.7882,
-      "decimal": 1.27,
-      "american": "-372",
-      "in_band": false
+      "prob": 0.6598,
+      "decimal": 1.52,
+      "american": "-194",
+      "in_band": true
      }
     ],
     "total": [
@@ -6299,7 +6299,7 @@
    "official_url": "https://www.nhl.com/gamecenter/buf-vs-lak/2026/10/31/2026020221",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020221",
    "markets": {
     "win": [
@@ -6322,20 +6322,20 @@
     ],
     "handicap": [
      {
-      "selection": "Kings -1.5",
+      "selection": "Sabres -1.5",
       "market": "Handicap",
-      "prob": 0.2318,
-      "decimal": 4.31,
-      "american": "+331",
+      "prob": 0.3083,
+      "decimal": 3.24,
+      "american": "+224",
       "in_band": true
      },
      {
-      "selection": "Sabres +1.5",
+      "selection": "Kings +1.5",
       "market": "Handicap",
-      "prob": 0.7682,
-      "decimal": 1.3,
-      "american": "-331",
-      "in_band": false
+      "prob": 0.6917,
+      "decimal": 1.45,
+      "american": "-224",
+      "in_band": true
      }
     ],
     "total": [
@@ -6413,7 +6413,7 @@
    "official_url": "https://www.nhl.com/gamecenter/ott-vs-sjs/2026/10/31/2026020222",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020222",
    "markets": {
     "win": [
@@ -6527,7 +6527,7 @@
    "official_url": "https://www.nhl.com/gamecenter/pit-vs-mtl/2026/10/31/2026020223",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020223",
    "markets": {
     "win": [
@@ -6641,7 +6641,7 @@
    "official_url": "https://www.nhl.com/gamecenter/tor-vs-van/2026/10/31/2026020224",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020224",
    "markets": {
     "win": [
@@ -6664,20 +6664,20 @@
     ],
     "handicap": [
      {
-      "selection": "Canucks -1.5",
+      "selection": "Maple Leafs -1.5",
       "market": "Handicap",
-      "prob": 0.0889,
-      "decimal": 11.25,
-      "american": "+1025",
+      "prob": 0.6079,
+      "decimal": 1.64,
+      "american": "-155",
       "in_band": true
      },
      {
-      "selection": "Maple Leafs +1.5",
+      "selection": "Canucks +1.5",
       "market": "Handicap",
-      "prob": 0.9111,
-      "decimal": 1.1,
-      "american": "-1025",
-      "in_band": false
+      "prob": 0.3921,
+      "decimal": 2.55,
+      "american": "+155",
+      "in_band": true
      }
     ],
     "total": [
@@ -6755,7 +6755,7 @@
    "official_url": "https://www.nhl.com/gamecenter/cbj-vs-dal/2026/11/01/2026020225",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020225",
    "markets": {
     "win": [
@@ -6869,7 +6869,7 @@
    "official_url": "https://www.nhl.com/gamecenter/cgy-vs-col/2026/11/01/2026020226",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020226",
    "markets": {
     "win": [
@@ -6983,7 +6983,7 @@
    "official_url": "https://www.nhl.com/gamecenter/wpg-vs-car/2026/11/01/2026020227",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020227",
    "markets": {
     "win": [
@@ -7097,7 +7097,7 @@
    "official_url": "https://www.nhl.com/gamecenter/min-vs-wsh/2026/11/01/2026020228",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020228",
    "markets": {
     "win": [
@@ -7211,7 +7211,7 @@
    "official_url": "https://www.nhl.com/gamecenter/uta-vs-phi/2026/11/01/2026020229",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020229",
    "markets": {
     "win": [
@@ -7234,20 +7234,20 @@
     ],
     "handicap": [
      {
-      "selection": "Flyers -1.5",
+      "selection": "Mammoth -1.5",
       "market": "Handicap",
-      "prob": 0.0629,
-      "decimal": 15.91,
-      "american": "+1491",
+      "prob": 0.5662,
+      "decimal": 1.77,
+      "american": "-131",
       "in_band": true
      },
      {
-      "selection": "Mammoth +1.5",
+      "selection": "Flyers +1.5",
       "market": "Handicap",
-      "prob": 0.9371,
-      "decimal": 1.07,
-      "american": "-1491",
-      "in_band": false
+      "prob": 0.4338,
+      "decimal": 2.31,
+      "american": "+131",
+      "in_band": true
      }
     ],
     "total": [
@@ -7325,7 +7325,7 @@
    "official_url": "https://www.nhl.com/gamecenter/edm-vs-nyr/2026/11/01/2026020230",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020230",
    "markets": {
     "win": [
@@ -7348,20 +7348,20 @@
     ],
     "handicap": [
      {
-      "selection": "Rangers -1.5",
+      "selection": "Oilers -1.5",
       "market": "Handicap",
-      "prob": 0.2198,
-      "decimal": 4.55,
-      "american": "+355",
+      "prob": 0.3428,
+      "decimal": 2.92,
+      "american": "+192",
       "in_band": true
      },
      {
-      "selection": "Oilers +1.5",
+      "selection": "Rangers +1.5",
       "market": "Handicap",
-      "prob": 0.7802,
-      "decimal": 1.28,
-      "american": "-355",
-      "in_band": false
+      "prob": 0.6572,
+      "decimal": 1.52,
+      "american": "-192",
+      "in_band": true
      }
     ],
     "total": [
@@ -7439,7 +7439,7 @@
    "official_url": "https://www.nhl.com/gamecenter/ott-vs-ana/2026/11/02/2026020231",
    "source_key": "ieh_sched_2026-10-26",
    "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
-   "captured_at": "2026-10-23T19:37:55Z",
+   "captured_at": "2026-10-23T19:43:18Z",
    "fixture_id": "nhl-2026020231",
    "markets": {
     "win": [
@@ -7462,20 +7462,20 @@
     ],
     "handicap": [
      {
-      "selection": "Ducks -1.5",
+      "selection": "Senators -1.5",
       "market": "Handicap",
-      "prob": 0.1735,
-      "decimal": 5.76,
-      "american": "+476",
+      "prob": 0.3447,
+      "decimal": 2.9,
+      "american": "+190",
       "in_band": true
      },
      {
-      "selection": "Senators +1.5",
+      "selection": "Ducks +1.5",
       "market": "Handicap",
-      "prob": 0.8265,
-      "decimal": 1.21,
-      "american": "-476",
-      "in_band": false
+      "prob": 0.6553,
+      "decimal": 1.53,
+      "american": "-190",
+      "in_band": true
      }
     ],
     "total": [
@@ -7555,7 +7555,7 @@
    "official_url": "https://www.mlb.com/gameday/849805",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:38:02Z",
+   "captured_at": "2026-10-23T19:43:24Z",
    "fixture_id": "mlb-849805",
    "markets": null,
    "note": "official record not found for one side: no line originated"
@@ -7579,7 +7579,7 @@
    "official_url": "https://www.mlb.com/gameday/849802",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:38:02Z",
+   "captured_at": "2026-10-23T19:43:24Z",
    "fixture_id": "mlb-849802",
    "markets": null,
    "note": "official record not found for one side: no line originated"
@@ -7603,7 +7603,7 @@
    "official_url": "https://www.mlb.com/gameday/849804",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:38:02Z",
+   "captured_at": "2026-10-23T19:43:24Z",
    "fixture_id": "mlb-849804",
    "markets": null,
    "note": "official record not found for one side: no line originated"
@@ -7627,7 +7627,7 @@
    "official_url": "https://www.mlb.com/gameday/849803",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:38:02Z",
+   "captured_at": "2026-10-23T19:43:24Z",
    "fixture_id": "mlb-849803",
    "markets": null,
    "note": "official record not found for one side: no line originated"
@@ -7651,7 +7651,7 @@
    "official_url": "https://www.mlb.com/gameday/849799",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:38:02Z",
+   "captured_at": "2026-10-23T19:43:24Z",
    "fixture_id": "mlb-849799",
    "markets": null,
    "note": "official record not found for one side: no line originated"
@@ -7675,7 +7675,7 @@
    "official_url": "https://www.mlb.com/gameday/849801",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:38:02Z",
+   "captured_at": "2026-10-23T19:43:24Z",
    "fixture_id": "mlb-849801",
    "markets": null,
    "note": "official record not found for one side: no line originated"
@@ -7699,7 +7699,7 @@
    "official_url": "https://www.mlb.com/gameday/849800",
    "source_key": "baseball_schedule2",
    "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-   "captured_at": "2026-10-23T19:38:02Z",
+   "captured_at": "2026-10-23T19:43:24Z",
    "fixture_id": "mlb-849800",
    "markets": null,
    "note": "official record not found for one side: no line originated"
@@ -7860,15 +7860,15 @@
     ],
     "handicap": [
      {
-      "selection": "FC BAYERN MUNICH -1.5",
+      "selection": "FC BARCELONA -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 2.1476461730527898e+48,
-      "american": "+214764617305279012896197868462734707526875689779200",
+      "decimal": 1.7266668696534842e+48,
+      "american": "+172666686965348428155818628308110704583978459856896",
       "in_band": false
      },
      {
-      "selection": "FC BARCELONA +1.5",
+      "selection": "FC BAYERN MUNICH +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -8205,15 +8205,15 @@
     ],
     "handicap": [
      {
-      "selection": "VALENCIA BASKET -1.5",
+      "selection": "FENERBAHCE TARFIN ISTANBUL -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 1.0280076144564497e+43,
-      "american": "+1028007614456449779510845248616449505058881536",
+      "decimal": 9.596547416033738e+42,
+      "american": "+959654741603373788673571667172916034805956608",
       "in_band": false
      },
      {
-      "selection": "FENERBAHCE TARFIN ISTANBUL +1.5",
+      "selection": "VALENCIA BASKET +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -8320,15 +8320,15 @@
     ],
     "handicap": [
      {
-      "selection": "KOSNER BASKONIA VITORIA-GASTEIZ -1.5",
+      "selection": "REAL MADRID -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 1.0752727062955857e+50,
-      "american": "+10752727062955857133242738773005481796542052081598464",
+      "decimal": 7.561353159636363e+49,
+      "american": "+7561353159636362515048314238492133662729636933533696",
       "in_band": false
      },
      {
-      "selection": "REAL MADRID +1.5",
+      "selection": "KOSNER BASKONIA VITORIA-GASTEIZ +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -8435,15 +8435,15 @@
     ],
     "handicap": [
      {
-      "selection": "BESIKTAS ISTANBUL -1.5",
+      "selection": "OLYMPIACOS PIRAEUS -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 8.997329225341034e+50,
-      "american": "+89973292253410340278709449742692924546778607998992384",
+      "decimal": 7.433501332563915e+50,
+      "american": "+74335013325639153125353055241408021891577665818722304",
       "in_band": false
      },
      {
-      "selection": "OLYMPIACOS PIRAEUS +1.5",
+      "selection": "BESIKTAS ISTANBUL +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -8665,15 +8665,15 @@
     ],
     "handicap": [
      {
-      "selection": "LDLC ASVEL VILLEURBANNE -1.5",
+      "selection": "PARTIZAN MOZZART BET BELGRADE -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 1.9160489083555046e+41,
-      "american": "+19160489083555046428871744748724294745325568",
+      "decimal": 1.5708748588678566e+41,
+      "american": "+15708748588678566519476848621257552121823232",
       "in_band": false
      },
      {
-      "selection": "PARTIZAN MOZZART BET BELGRADE +1.5",
+      "selection": "LDLC ASVEL VILLEURBANNE +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -8872,7 +8872,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_81/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_81",
    "markets": {
     "win": [
@@ -8987,7 +8987,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_82/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_82",
    "markets": {
     "win": [
@@ -9102,7 +9102,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_83/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_83",
    "markets": {
     "win": [
@@ -9125,15 +9125,15 @@
     ],
     "handicap": [
      {
-      "selection": "REAL MADRID -1.5",
+      "selection": "FENERBAHCE TARFIN ISTANBUL -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 4.074190820382226e+42,
-      "american": "+407419082038222581989334702860385103799910400",
+      "decimal": 3.6022050711378015e+42,
+      "american": "+360220507113780109785583866630829640710619136",
       "in_band": false
      },
      {
-      "selection": "FENERBAHCE TARFIN ISTANBUL +1.5",
+      "selection": "REAL MADRID +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -9217,7 +9217,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_84/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_84",
    "markets": {
     "win": [
@@ -9332,7 +9332,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_88/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_88",
    "markets": {
     "win": [
@@ -9355,15 +9355,15 @@
     ],
     "handicap": [
      {
-      "selection": "ANADOLU EFES ISTANBUL -1.5",
+      "selection": "PANATHINAIKOS AKTOR ATHENS -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 1.1978823120391513e+38,
-      "american": "+11978823120391512878004941774261606940672",
+      "decimal": 7.995627593940629e+37,
+      "american": "+7995627593940628606736902440363438899200",
       "in_band": false
      },
      {
-      "selection": "PANATHINAIKOS AKTOR ATHENS +1.5",
+      "selection": "ANADOLU EFES ISTANBUL +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -9447,7 +9447,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_86/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_86",
    "markets": {
     "win": [
@@ -9470,15 +9470,15 @@
     ],
     "handicap": [
      {
-      "selection": "ZALGIRIS KAUNAS -1.5",
+      "selection": "PARTIZAN MOZZART BET BELGRADE -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 9.264468134057062e+36,
-      "american": "+926446813405706247247265570358078472192",
+      "decimal": 9.214204983527717e+36,
+      "american": "+921420498352771733263390348399941255168",
       "in_band": false
      },
      {
-      "selection": "PARTIZAN MOZZART BET BELGRADE +1.5",
+      "selection": "ZALGIRIS KAUNAS +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -9562,7 +9562,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_85/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_85",
    "markets": {
     "win": [
@@ -9677,7 +9677,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_90/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_90",
    "markets": {
     "win": [
@@ -9792,7 +9792,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_87/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_87",
    "markets": {
     "win": [
@@ -9815,15 +9815,15 @@
     ],
     "handicap": [
      {
-      "selection": "FC BARCELONA -1.5",
+      "selection": "VALENCIA BASKET -1.5",
       "market": "Handicap",
       "prob": 0.0,
-      "decimal": 1.4160801405587167e+50,
-      "american": "+14160801405587168412472204308747771119266369923710976",
+      "decimal": 1.260008428093628e+50,
+      "american": "+12600084280936281166670733652258395396435138779807744",
       "in_band": false
      },
      {
-      "selection": "VALENCIA BASKET +1.5",
+      "selection": "FC BARCELONA +1.5",
       "market": "Handicap",
       "prob": 1.0,
       "decimal": 1.0,
@@ -9907,7 +9907,7 @@
    "official_url": "https://www.euroleaguebasketball.net/euroleague/game-center/E2026_89/",
    "source_key": "basketball_el_sched9",
    "source_url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
-   "captured_at": "2026-10-23T19:38:00Z",
+   "captured_at": "2026-10-23T19:43:23Z",
    "fixture_id": "el-E2026_89",
    "markets": {
     "win": [

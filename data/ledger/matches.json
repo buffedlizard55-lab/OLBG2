@@ -1,11 +1,11 @@
 {
  "meta": {
-  "generated_at": "2026-10-23T19:42:37Z",
+  "generated_at": "2026-10-23T19:52:26Z",
   "note": "OLBG-listed upcoming events in the fifteen requested sports, each matched against an official source captured today.",
   "events": 135,
   "states": {
-   "unmatched": 125,
-   "official-page": 7,
+   "unmatched": 109,
+   "official-page": 23,
    "official-fixture": 3
   },
   "by_sport": {
@@ -30,8 +30,8 @@
    "Volleyball": {
     "events": 22,
     "official-fixture": 0,
-    "official-page": 0,
-    "unmatched": 22
+    "official-page": 12,
+    "unmatched": 10
    },
    "Cricket": {
     "events": 13,
@@ -66,8 +66,8 @@
    "Handball": {
     "events": 30,
     "official-fixture": 0,
-    "official-page": 0,
-    "unmatched": 30
+    "official-page": 4,
+    "unmatched": 26
    },
    "Motor Racing": {
     "events": 2,
@@ -726,11 +726,11 @@
    "side_a": "Minas W",
    "side_b": "Paulistano-Barueri W",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
+    "source_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
+    "captured_at": "2026-10-23T19:46:12Z",
+    "detail": "both participants appear in the text of the official volleyball_superliga page"
    }
   },
   {
@@ -975,7 +975,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T19:38:06Z",
+    "captured_at": "2026-10-23T19:43:29Z",
     "detail": "both participants appear in the text of the official cricket_com_au2 page"
    }
   },
@@ -1018,7 +1018,7 @@
     "state": "official-fixture",
     "official_url": "https://www.mlb.com/gameday/849805",
     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=probablePitcher,linescore",
-    "captured_at": "2026-10-23T19:38:02Z",
+    "captured_at": "2026-10-23T19:43:24Z",
     "detail": "matched Tampa Bay Rays at Milwaukee Brewers (MLB) in the official schedule feed",
     "fixture_id": "mlb-849805",
     "official_start_utc": "2026-10-24T00:00:00Z",
@@ -1079,20 +1079,20 @@
     ],
     "handicap": [
      {
-      "selection": "Blackhawks -1.5",
+      "selection": "Canadiens -1.5",
       "market": "Handicap",
-      "prob": 0.1294,
-      "decimal": 7.73,
-      "american": "+673",
+      "prob": 0.4871,
+      "decimal": 2.05,
+      "american": "+105",
       "in_band": true
      },
      {
-      "selection": "Canadiens +1.5",
+      "selection": "Blackhawks +1.5",
       "market": "Handicap",
-      "prob": 0.8706,
-      "decimal": 1.15,
-      "american": "-673",
-      "in_band": false
+      "prob": 0.5129,
+      "decimal": 1.95,
+      "american": "-105",
+      "in_band": true
      }
     ],
     "total": [
@@ -1264,20 +1264,20 @@
     ],
     "handicap": [
      {
-      "selection": "Avalanche -1.5",
+      "selection": "Lightning -1.5",
       "market": "Handicap",
-      "prob": 0.2696,
-      "decimal": 3.71,
-      "american": "+271",
+      "prob": 0.2862,
+      "decimal": 3.49,
+      "american": "+249",
       "in_band": true
      },
      {
-      "selection": "Lightning +1.5",
+      "selection": "Avalanche +1.5",
       "market": "Handicap",
-      "prob": 0.7304,
-      "decimal": 1.37,
-      "american": "-271",
-      "in_band": false
+      "prob": 0.7138,
+      "decimal": 1.4,
+      "american": "-249",
+      "in_band": true
      }
     ],
     "total": [
@@ -1602,7 +1602,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T19:38:06Z",
+    "captured_at": "2026-10-23T19:43:29Z",
     "detail": "both participants appear in the text of the official cricket_com_au2 page"
    }
   },
@@ -1631,7 +1631,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T19:38:06Z",
+    "captured_at": "2026-10-23T19:43:29Z",
     "detail": "both participants appear in the text of the official cricket_com_au2 page"
    }
   },
@@ -1957,7 +1957,7 @@
     "state": "official-page",
     "official_url": "https://www.premrugby.com/fixtures",
     "source_url": "https://www.premrugby.com/fixtures",
-    "captured_at": "2026-10-23T19:38:23Z",
+    "captured_at": "2026-10-23T19:43:46Z",
     "detail": "both participants appear in the text of the official rugby_union_prem_fixtures2 page"
    }
   },
@@ -2193,11 +2193,11 @@
    "side_a": "PGE Skra Belchatow",
    "side_b": "Projekt Warszawa",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.tauronliga.pl/strona-glowna/nocookies/1.html",
+    "source_url": "https://www.tauronliga.pl/strona-glowna/nocookies/1.html",
+    "captured_at": "2026-10-23T19:46:10Z",
+    "detail": "both participants appear in the text of the official volleyball_plusliga page"
    }
   },
   {
@@ -2283,7 +2283,7 @@
     "state": "official-page",
     "official_url": "https://www.premrugby.com/fixtures",
     "source_url": "https://www.premrugby.com/fixtures",
-    "captured_at": "2026-10-23T19:38:23Z",
+    "captured_at": "2026-10-23T19:43:46Z",
     "detail": "both participants appear in the text of the official rugby_union_prem_fixtures2 page"
    }
   },
@@ -2309,11 +2309,11 @@
    "side_a": "VfB Friedrichshafen",
    "side_b": "SSC Karlsruhe",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.volleyball-bundesliga.de/",
+    "source_url": "https://www.volleyball-bundesliga.de/",
+    "captured_at": "2026-10-23T19:46:14Z",
+    "detail": "both participants appear in the text of the official volleyball_bundesliga page"
    }
   },
   {
@@ -2338,11 +2338,11 @@
    "side_a": "BM Nava",
    "side_b": "Atletico Valladolid",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.asobal.es/",
+    "source_url": "https://www.asobal.es/",
+    "captured_at": "2026-10-23T19:46:02Z",
+    "detail": "both participants appear in the text of the official handball_spain page"
    }
   },
   {
@@ -2396,11 +2396,11 @@
    "side_a": "Villa De Aranda",
    "side_b": "Puerto Sagunto",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.asobal.es/",
+    "source_url": "https://www.asobal.es/",
+    "captured_at": "2026-10-23T19:46:02Z",
+    "detail": "both participants appear in the text of the official handball_spain page"
    }
   },
   {
@@ -2715,11 +2715,11 @@
    "side_a": "Helios Grizzlys Giesen",
    "side_b": "Berlin Volleys",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.volleyball-bundesliga.de/",
+    "source_url": "https://www.volleyball-bundesliga.de/",
+    "captured_at": "2026-10-23T19:46:14Z",
+    "detail": "both participants appear in the text of the official volleyball_bundesliga page"
    }
   },
   {
@@ -2831,11 +2831,11 @@
    "side_a": "Mackenzie W",
    "side_b": "Osasco W",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
+    "source_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
+    "captured_at": "2026-10-23T19:46:12Z",
+    "detail": "both participants appear in the text of the official volleyball_superliga page"
    }
   },
   {
@@ -2889,11 +2889,11 @@
    "side_a": "Abel-Moda Brusque W",
    "side_b": "Praia Clube W",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
+    "source_url": "https://cbv.com.br/volei-de-quadra/superliga-a-feminina",
+    "captured_at": "2026-10-23T19:46:12Z",
+    "detail": "both participants appear in the text of the official volleyball_superliga page"
    }
   },
   {
@@ -2921,7 +2921,7 @@
     "state": "official-page",
     "official_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
     "source_url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
-    "captured_at": "2026-10-23T19:38:06Z",
+    "captured_at": "2026-10-23T19:43:29Z",
     "detail": "both participants appear in the text of the official cricket_com_au2 page"
    }
   },
@@ -2947,11 +2947,11 @@
    "side_a": "CBM Sporting Alicante",
    "side_b": "Ademar Leon",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.asobal.es/",
+    "source_url": "https://www.asobal.es/",
+    "captured_at": "2026-10-23T19:46:02Z",
+    "detail": "both participants appear in the text of the official handball_spain page"
    }
   },
   {
@@ -3160,7 +3160,7 @@
     "state": "official-page",
     "official_url": "https://www.premrugby.com/fixtures",
     "source_url": "https://www.premrugby.com/fixtures",
-    "captured_at": "2026-10-23T19:38:23Z",
+    "captured_at": "2026-10-23T19:43:46Z",
     "detail": "both participants appear in the text of the official rugby_union_prem_fixtures2 page"
    }
   },
@@ -3287,11 +3287,11 @@
    "side_a": "Barock Volleys Ludwigsburg",
    "side_b": "TV Rottenburg",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.volleyball-bundesliga.de/",
+    "source_url": "https://www.volleyball-bundesliga.de/",
+    "captured_at": "2026-10-23T19:46:14Z",
+    "detail": "both participants appear in the text of the official volleyball_bundesliga page"
    }
   },
   {
@@ -3316,11 +3316,11 @@
    "side_a": "Trentino",
    "side_b": "Cisterna",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.legavolley.it/",
+    "source_url": "https://www.legavolley.it/",
+    "captured_at": "2026-10-23T19:46:15Z",
+    "detail": "both participants appear in the text of the official volleyball_legavolley page"
    }
   },
   {
@@ -3345,11 +3345,11 @@
    "side_a": "BM Torrelavega",
    "side_b": "BM Proin",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.asobal.es/",
+    "source_url": "https://www.asobal.es/",
+    "captured_at": "2026-10-23T19:46:02Z",
+    "detail": "both participants appear in the text of the official handball_spain page"
    }
   },
   {
@@ -3374,11 +3374,11 @@
    "side_a": "CHKS Chelm",
    "side_b": "Resovia Rzeszow",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.tauronliga.pl/strona-glowna/nocookies/1.html",
+    "source_url": "https://www.tauronliga.pl/strona-glowna/nocookies/1.html",
+    "captured_at": "2026-10-23T19:46:10Z",
+    "detail": "both participants appear in the text of the official volleyball_plusliga page"
    }
   },
   {
@@ -3403,11 +3403,11 @@
    "side_a": "Civitanova",
    "side_b": "Padova",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.legavolley.it/",
+    "source_url": "https://www.legavolley.it/",
+    "captured_at": "2026-10-23T19:46:15Z",
+    "detail": "both participants appear in the text of the official volleyball_legavolley page"
    }
   },
   {
@@ -3432,11 +3432,11 @@
    "side_a": "Monza",
    "side_b": "Verona",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.legavolley.it/",
+    "source_url": "https://www.legavolley.it/",
+    "captured_at": "2026-10-23T19:46:15Z",
+    "detail": "both participants appear in the text of the official volleyball_legavolley page"
    }
   },
   {
@@ -3461,11 +3461,11 @@
    "side_a": "Perugia",
    "side_b": "Pordenone",
    "verify": {
-    "state": "unmatched",
-    "official_url": "",
-    "source_url": "",
-    "captured_at": "",
-    "detail": "no official counterpart found in today's captures"
+    "state": "official-page",
+    "official_url": "https://www.legavolley.it/",
+    "source_url": "https://www.legavolley.it/",
+    "captured_at": "2026-10-23T19:46:15Z",
+    "detail": "both participants appear in the text of the official volleyball_legavolley page"
    }
   },
   {

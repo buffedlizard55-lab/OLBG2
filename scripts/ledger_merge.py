@@ -96,7 +96,9 @@ def main() -> int:
             continue  # already under way or finished: not an upcoming match
         if str(tip.get("olbg_expired")) == "1":
             continue
-        key = (SCOPE[raw_sport], tip["event_id"] or tip["event"])
+        key = (SCOPE[raw_sport], tip["event_id"] or (norm(tip["event"]), tip["start"][:16]))
+        coalesce = (SCOPE[raw_sport], norm(tip["event"]), tip["start"][:16])
+        key = coalesce if coalesce in events else key
         ev = events.setdefault(key, {
             "sport": SCOPE[raw_sport],
             "olbg_sport": raw_sport,
@@ -170,9 +172,23 @@ def main() -> int:
             else:
                 # 2) text match against the sport's official pages
                 for key, url, text in text_by_sport.get(ev["sport"], []):
-                    ta_hit = any(t in text for t in ta)
-                    tb_hit = any(t in text for t in tb)
-                    if ta_hit and tb_hit:
+                    # require a distinctive token for each side, close enough together to be
+                    # a fixture row rather than two unrelated mentions in a navigation menu
+                    hit = False
+                    for a_tok in ta:
+                        for b_tok in tb:
+                            i = text.find(a_tok)
+                            while i >= 0:
+                                window = text[max(0, i - 200): i + 200]
+                                if b_tok in window:
+                                    hit = True
+                                    break
+                                i = text.find(a_tok, i + 1)
+                            if hit:
+                                break
+                        if hit:
+                            break
+                    if hit:
                         ev["verify"] = {
                             "state": "official-page",
                             "official_url": url,

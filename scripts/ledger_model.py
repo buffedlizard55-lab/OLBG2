@@ -168,11 +168,21 @@ def build_market_block(sport: str, home: str, away: str, rh: dict, ra: dict, lea
     if lam_h and lam_a:
         win, draw, loss, margin2, ph, pa = poisson_probs(lam_h, lam_a)
         p_reg_home = win + 0.5 * draw
-        # handicap -1.5 for the favourite side, +1.5 for the other
-        p_home_minus = margin2
-        p_away_plus = 1 - margin2
-        out["handicap"].append({"selection": f"{home} -1.5", "market": "Handicap", **fair(p_home_minus)})
-        out["handicap"].append({"selection": f"{away} +1.5", "market": "Handicap", **fair(p_away_plus)})
+        # the -1.5 line goes to the side we make favourite, +1.5 to the other
+        home_fav = p_home >= 0.5
+        if home_fav:
+            p_minus, p_plus = margin2, 1 - margin2
+            out["handicap"].append({"selection": f"{home} -1.5", "market": "Handicap", **fair(p_minus)})
+            out["handicap"].append({"selection": f"{away} +1.5", "market": "Handicap", **fair(p_plus)})
+        else:
+            # away -1.5 means the away side wins by two or more: probability of margin <= -2
+            p_away_minus = 0.0  # away wins by two or more, straight from the joint distribution
+            for i, a in enumerate(ph):
+                for j, b in enumerate(pa):
+                    if j - i >= 2:
+                        p_away_minus += a * b
+            out["handicap"].append({"selection": f"{away} -1.5", "market": "Handicap", **fair(p_away_minus)})
+            out["handicap"].append({"selection": f"{home} +1.5", "market": "Handicap", **fair(1 - p_away_minus)})
         dist = total_dist(ph, pa)
         for line in lines:
             p_over = over_prob(dist, line)

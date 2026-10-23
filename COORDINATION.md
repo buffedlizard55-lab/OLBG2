@@ -3687,6 +3687,13 @@ Status: DONE, publication in progress. F1-F6 complete.
 - Fresh this session: NHL 25-Oct slate + standings and MLB World Series schedule/standings re-read 2026-10-23 via official APIs (see research/focus-33e9eee7.md). Other priced rows disclose their 2026-10-22 official capture in-row.
 - Integration edits (F6 role): root NAV gains "Focus desk (15 sports, 23 Oct)" via scripts/build_site.py (30 root pages, nav-only diff); CI pages.yml rebuilds focus and drift-checks `focus data/focus` (appended at end to preserve other sessions' asserted substrings); README pointer added.
 - Flagged (non-blocking, on focus/flagged.html): five-per-sport aim met in no sport (band is 70.0-71.4% wide); Tennis/Darts/Snooker/Golf/Greyhounds/Cricket blank with named reasons; Gaelic blank (no numeric input); NBA net-proxy thin input; MLB G5/G6 if-necessary; no injury claims made (none stated by official pages read).
+
+### Session `arena/33e9eee7-olbg2` — PUBLICATION RECORD
+| Item | Value |
+|---|---|
+| PR | https://github.com/buffedlizard55-lab/OLBG2/pull/140 — MERGED 2026-10-23T16:21:13Z, merge commit e78d46d, validate PASS |
+| Pages | `pages build and deployment` SUCCESS; `gh api .../pages` status built; live https://buffedlizard55-lab.github.io/OLBG2/focus/index.html re-fetched after deploy and renders 40/31/236/32/11/26 KPIs |
+| Note | Custom `Deploy Pages` run 39986055576 failed at the deploy-pages id-token step (403 on re-dispatch also); the legacy pages-build-deployment that serves the site succeeded and the live page is updated. |
 ## Session `arena/b8a1ce4c-olbg2` — CLAIM: `/desk/` 15-sport OLBG event inventory, fresh 2026-10-23 official capture, origination, Top-5 predictions, and line-by-line repo audit
 
 - **Session ID:** `arena/b8a1ce4c-olbg2` · **Branch:** `arena/b8a1ce4c-olbg2` (fixed by the Arena harness)

@@ -145,3 +145,16 @@ python scripts/integration_audit.py
 ```
 
 The offline build performs no network request. CI rebuilds committed evidence and drift-checks generated outputs; it does not refresh fixtures, availability or OLBG status. The [`Sources & audit page`](../olbg/sources.html) contains the 16 hub checks, raw hashes, reconciliation record, complete source register and a row-by-row review state for all 94 events.
+
+## 10. Publication record — 2026-10-23
+
+| Item | Result |
+|---|---|
+| Implementation PR | [#179](https://github.com/buffedlizard55-lab/OLBG2/pull/179), merged at `2026-10-23T22:00:31Z`; head `67c58abab9f279a455c9d1f4f22388e2845b2151`, merge commit `716f64b86d9e85dee9599b3a8aee1e8ab2fab9a2`. |
+| Final PR checks | Runs [40030310495](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030310495) and [40030316363](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030316363) both passed on the merged head: 700 tests, 2,139 canonical checks and zero cross-layer local-link errors. |
+| Main validation | Run [40030754570](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030754570) passed on merge commit `716f64b`. |
+| Pages deployment | Native [pages-build-deployment run 40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) succeeded on `667e69d`, which contains PR #179. Its build, deploy and report-build-status jobs all succeeded. |
+| Live smoke test | <https://buffedlizard55-lab.github.io/OLBG2/olbg/> returned the refreshed overview with snapshot `2026-10-23T21:32:48Z`, 94 matches, 59 priced matches, 63 originated markets, seven high-confidence selections and 56 review items. Fact-level evidence links and the source/review navigation were present. |
+| Shared integration | PR #178's Cadence-owned root dashboard was preserved. This session retained only its README `/olbg/` documentation and canonical-desk changes; it did not take over the root builder or another session's desk. Ledger inventory was regenerated through the Ledger pipeline for 50 test modules and passed 18/18 checks. |
+
+The explicit `Deploy Pages` runs 40030754480 and 40031039860 were cancelled by workflow concurrency when newer `main` commits superseded them; their validation jobs had passed. The successful native Pages run above is the deployment authority for the first confirmed live publication. Later coordination-only commits do not change the canonical `/olbg/` evidence or generated pages.

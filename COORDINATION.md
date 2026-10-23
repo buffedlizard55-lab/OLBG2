@@ -4793,3 +4793,13 @@ FI5 is complete for merge and deployment. This publication record is a documenta
 | Live | https://buffedlizard55-lab.github.io/OLBG2/quest/ — today/top5/flagged/ice-hockey pages read after deploy; 113 fixtures, 856 prices, 9 in-window high picks, 34 predictions, 13 flags |
 
 This record is a post-merge append (follow-up PR). Integrator requests (root nav link, CI drift steps for `quest`) remain open above.
+
+---
+
+## Session `arena/1b2c50af-olbg2` — I1–I6 COMPLETE / CANONICAL `/olbg/` PUBLISHED (2026-10-23 22:06 UTC)
+
+**Publication:** PR [#179](https://github.com/buffedlizard55-lab/OLBG2/pull/179) merged at `2026-10-23T22:00:31Z`, head `67c58ab`, merge commit `716f64b`. Both final PR validation runs ([40030310495](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030310495), [40030316363](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030316363)) and main validation [40030754570](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40030754570) passed. Final local/CI scope: **700 tests**, **2,139 canonical checks**, **0 local-link errors**; Ledger's regenerated 50-module inventory passed **18/18** checks.
+
+**Pages:** native [pages-build-deployment 40031040503](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40031040503) succeeded on `667e69d`, which includes PR #179. Two explicit deploy runs were cancelled only because newer `main` commits triggered concurrency cancellation. The live <https://buffedlizard55-lab.github.io/OLBG2/olbg/> smoke test returned the refreshed 94-match overview, seven high-confidence selections, 63 originated markets and 56 review items with evidence navigation.
+
+**Scope closeout:** canonical research, pricing, prose, source audit, dashboard, regression coverage, README discovery, PR merge and live deployment are complete. PR #178's Cadence root was preserved; the earlier root-builder edit was deliberately not retained. `/horizon/`, `/quest/`, `/master/` and all other sessions' desks remain untouched. Evidence gaps and unsupported quotas remain explicitly open in `/olbg/flagged.html`, not resolved by publication. Full immutable publication details are appended to `research/olbg-refresh-1b2c50af.md`.

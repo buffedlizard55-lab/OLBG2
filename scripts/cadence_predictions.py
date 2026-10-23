@@ -347,8 +347,9 @@ def main():
                     "70.00%-71.43%, because a fair -250 is 71.43%. The desk therefore publishes each selection's "
                     "own fair price and marks whether it is in band, and additionally quotes an alternate line at "
                     "the band ceiling wherever a continuous line ladder exists. It never relabels a shorter price "
-                    "as in band. Today 8 of the 22 high-confidence selections fall inside the band without an "
-                    "alternate line."),
+                    "as in band. Today 0 of the 22 high-confidence selections are inside the band on their "
+                    "natural price (all 22 sit above 71.43%), 8 clear it on an alternate line set at the ceiling, "
+                    "and 14 are genuinely outside because they are outright or money-line markets with no ladder."),
         "source_url": "https://www.olbg.com/betting-tips", "status": "published"})
 
     json.dump({"generated_utc": GENERATED, "session": "arena/a0c8b7f3-olbg2",

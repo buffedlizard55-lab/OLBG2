@@ -4539,3 +4539,11 @@ now suppressed.
 
 No probability, price, grade, pick or prediction changed. `cadence_verify.py` → 11 check groups, 0 errors;
 24 desk tests.
+
+### Follow-up 5: the same arithmetic error on the review page
+
+`CD-PR2` on `/cadence/flagged.html` still said “8 of the 22 high-confidence selections fall inside the band
+without an alternate line”, the phrasing corrected on the summary in #169. It now reads 0 natural / 8 alternate
+/ 14 genuinely outside, matching the summary and the band board. This was the last place the old wording
+survived; the desk's own verifier did not catch it because the sentence is free text, so the correction was
+made by re-reading the rendered page rather than by the gate.

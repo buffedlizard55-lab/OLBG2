@@ -35,7 +35,7 @@
    "check": "Fixtures reconciled to the OLBG capture",
    "scope": "93 fixtures vs 216 OLBG events",
    "result": "pass",
-   "detail": "44 matched to an OLBG event; 49 have none and are published as such."
+   "detail": "42 matched to an OLBG event; 51 have none and are published as such."
   },
   {
    "id": "A5",
@@ -86,7 +86,7 @@
   "in_band": 631,
   "predictions": 33,
   "sources": 59,
-  "findings": 13
+  "findings": 15
  },
  "band": {
   "low": -250,
@@ -212,8 +212,8 @@
    "olbg_events_upcoming": 1,
    "our_fixtures": 2,
    "our_fixtures_priced": 2,
-   "our_fixtures_on_olbg": 2,
-   "our_fixtures_not_on_olbg": 0,
+   "our_fixtures_on_olbg": 1,
+   "our_fixtures_not_on_olbg": 1,
    "picks": {
     "all": 2,
     "high": 0,
@@ -284,8 +284,8 @@
    "olbg_events_upcoming": 2,
    "our_fixtures": 2,
    "our_fixtures_priced": 2,
-   "our_fixtures_on_olbg": 1,
-   "our_fixtures_not_on_olbg": 1,
+   "our_fixtures_on_olbg": 0,
+   "our_fixtures_not_on_olbg": 2,
    "picks": {
     "all": 7,
     "high": 1,
@@ -3845,7 +3845,8 @@
     "event_id": "199984",
     "event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MTL_Canadiens_@_CHI_Blackhawks/13?event_id=199984",
     "olbg_start_utc": "2026-10-24T00:07:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 7
    },
    "official": {
     "family": "nhl",
@@ -3924,7 +3925,8 @@
     "event_id": "199985",
     "event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TB_Lightning_@_COL_Avalanche/13?event_id=199985",
     "olbg_start_utc": "2026-10-24T01:07:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 7
    },
    "official": {
     "family": "nhl",
@@ -4009,7 +4011,8 @@
     "event_id": "536041",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/CHI_Bulls_@_MIL_Bucks/4?event_id=536041",
     "olbg_start_utc": "2026-10-23T20:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 230
    },
    "official": {
     "family": null
@@ -4092,7 +4095,8 @@
     "event_id": "534842",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NY_Knicks_@_BOS_Celtics/4?event_id=534842",
     "olbg_start_utc": "2026-10-23T23:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -4193,7 +4197,8 @@
     "event_id": "536034",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/TOR_Raptors_@_WAS_Wizards/4?event_id=536034",
     "olbg_start_utc": "2026-10-23T23:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -4318,7 +4323,8 @@
     "event_id": "536035",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/ATL_Hawks_@_CHA_Hornets/4?event_id=536035",
     "olbg_start_utc": "2026-10-23T23:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -4445,7 +4451,8 @@
     "event_id": "536036",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIN_Timberwolves_@_ORL_Magic/4?event_id=536036",
     "olbg_start_utc": "2026-10-23T23:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -4568,7 +4575,8 @@
     "event_id": "536037",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DAL_Mavericks_@_IND_Pacers/4?event_id=536037",
     "olbg_start_utc": "2026-10-23T23:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -4673,7 +4681,8 @@
     "event_id": "536038",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/DET_Pistons_@_MIA_Heat/4?event_id=536038",
     "olbg_start_utc": "2026-10-24T00:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -4790,7 +4799,8 @@
     "event_id": "534841",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_SA_Spurs/4?event_id=534841",
     "olbg_start_utc": "2026-10-24T01:40:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -4899,7 +4909,8 @@
     "event_id": "536040",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_UTA_Jazz/4?event_id=536040",
     "olbg_start_utc": "2026-10-24T01:40:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -5010,7 +5021,8 @@
     "event_id": "536039",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MEM_Grizzlies_@_GS_Warriors/4?event_id=536039",
     "olbg_start_utc": "2026-10-24T02:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -5127,7 +5139,8 @@
     "event_id": "536042",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/LA_Clippers_@_LA_Lakers/4?event_id=536042",
     "olbg_start_utc": "2026-10-24T02:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -5252,7 +5265,8 @@
     "event_id": "536043",
     "event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/POR_Trail_Blazers_@_SAC_Kings/4?event_id=536043",
     "olbg_start_utc": "2026-10-24T02:10:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 10
    },
    "official": {
     "family": null
@@ -5343,7 +5357,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": "euroleague",
@@ -5412,7 +5427,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": "euroleague",
@@ -5481,7 +5497,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": "euroleague",
@@ -5550,7 +5567,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": "euroleague",
@@ -5619,7 +5637,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": "euroleague",
@@ -5688,7 +5707,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": "euroleague",
@@ -5775,7 +5795,8 @@
     "event_id": "160789",
     "event_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789",
     "olbg_start_utc": "2026-10-24T00:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 0
    },
    "official": {
     "family": "mlb",
@@ -5863,12 +5884,13 @@
     }
    ],
    "olbg": {
-    "matched": true,
-    "event": "TB Rays @ MIL Brewers",
-    "event_id": "160789",
-    "event_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789",
-    "olbg_start_utc": "2026-10-24T00:00:00Z",
-    "candidate_count": 1
+    "matched": false,
+    "event": null,
+    "event_id": null,
+    "event_url": null,
+    "olbg_start_utc": null,
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": "mlb",
@@ -5939,7 +5961,8 @@
     "event_id": "188839",
     "event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Tasmania_vs_Victoria_One_Day_Match/7?event_id=188839",
     "olbg_start_utc": "2026-10-23T23:30:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -5992,7 +6015,8 @@
     "event_id": "188840",
     "event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Western_Australia_vs_New_South_Wales_One_Day_Match/7?event_id=188840",
     "olbg_start_utc": "2026-10-24T06:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6051,7 +6075,8 @@
     "event_id": "188832",
     "event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_2nd_T20_Match/7?event_id=188832",
     "olbg_start_utc": "2026-10-24T07:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6114,7 +6139,8 @@
     "event_id": "188838",
     "event_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Pakistan_vs_England_One_Day_Match/7?event_id=188838",
     "olbg_start_utc": "2026-10-25T08:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6177,7 +6203,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6234,7 +6261,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6299,7 +6327,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6372,7 +6401,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6445,7 +6475,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6506,7 +6537,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6565,7 +6597,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6622,7 +6655,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6675,7 +6709,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6728,7 +6763,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6787,7 +6823,8 @@
     "event_id": "32386",
     "event_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Damon_Heta/15?event_id=32386",
     "olbg_start_utc": "2026-10-24T17:15:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6850,7 +6887,8 @@
     "event_id": "32385",
     "event_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gian_van_Veen_vs_Luke_Woodhouse/15?event_id=32385",
     "olbg_start_utc": "2026-10-24T17:15:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6913,7 +6951,8 @@
     "event_id": "32383",
     "event_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Cameron_Menzies_vs_Gerwyn_Price/15?event_id=32383",
     "olbg_start_utc": "2026-10-24T17:15:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -6976,7 +7015,8 @@
     "event_id": "32384",
     "event_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Stephen_Bunting_vs_Kim_Huybrechts/15?event_id=32384",
     "olbg_start_utc": "2026-10-24T17:15:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7039,7 +7079,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7102,7 +7143,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7165,7 +7207,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7228,7 +7271,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7291,7 +7335,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7354,7 +7399,8 @@
     "event_id": "902159",
     "event_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Nikoloz_Basilashvili_vs_Stefanos_Tsitsipas/3?event_id=902159",
     "olbg_start_utc": "2026-10-24T10:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7411,7 +7457,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7464,7 +7511,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7517,7 +7565,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7582,7 +7631,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7649,7 +7699,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7724,7 +7775,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7807,7 +7859,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -7878,7 +7931,8 @@
     "event_id": "12082",
     "event_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Nantes_vs_Chambery_Savoie/20?event_id=12082",
     "olbg_start_utc": "2026-10-24T17:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 0
    },
    "official": {
     "family": null
@@ -7941,7 +7995,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8004,7 +8059,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8061,7 +8117,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8114,7 +8171,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8167,7 +8225,8 @@
     "event_id": "12138",
     "event_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Wisla_Plock_vs_Nantes/20?event_id=12138",
     "olbg_start_utc": "2026-10-28T17:45:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": 0
    },
    "official": {
     "family": null
@@ -8233,12 +8292,13 @@
     }
    ],
    "olbg": {
-    "matched": true,
-    "event": "USA Grand Prix",
-    "event_id": "911",
-    "event_url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=911",
-    "olbg_start_utc": "2026-10-24T21:00:00Z",
-    "candidate_count": 1
+    "matched": false,
+    "event": null,
+    "event_id": null,
+    "event_url": null,
+    "olbg_start_utc": null,
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8303,7 +8363,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8368,7 +8429,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8441,7 +8503,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8514,7 +8577,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8587,7 +8651,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8648,7 +8713,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8701,7 +8767,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8754,7 +8821,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8807,7 +8875,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8860,7 +8929,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8925,7 +8995,8 @@
     "event_id": "609572",
     "event_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Leicester_Tigers_v_Northampton_Saints/9?event_id=609572",
     "olbg_start_utc": "2026-10-24T14:05:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -8998,7 +9069,8 @@
     "event_id": "609569",
     "event_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Bristol_Bears_v_Exeter_Chiefs/9?event_id=609569",
     "olbg_start_utc": "2026-10-24T16:30:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9071,7 +9143,8 @@
     "event_id": "609571",
     "event_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Harlequins_v_Saracens/9?event_id=609571",
     "olbg_start_utc": "2026-10-25T15:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9132,7 +9205,8 @@
     "event_id": "609576",
     "event_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Bulls_v_Ulster/9?event_id=609576",
     "olbg_start_utc": "2026-10-24T11:45:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9185,7 +9259,8 @@
     "event_id": "609580",
     "event_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Stormers_v_Scarlets/9?event_id=609580",
     "olbg_start_utc": "2026-10-24T14:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9238,7 +9313,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9291,7 +9367,8 @@
     "event_id": "609578",
     "event_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Leinster_v_Munster/9?event_id=609578",
     "olbg_start_utc": "2026-10-24T17:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9344,7 +9421,8 @@
     "event_id": "609581",
     "event_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Ospreys_v_Dragons/9?event_id=609581",
     "olbg_start_utc": "2026-10-24T18:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9409,7 +9487,8 @@
     "event_id": "36997",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997",
     "olbg_start_utc": "2026-10-25T17:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9482,7 +9561,8 @@
     "event_id": "36994",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994",
     "olbg_start_utc": "2026-10-25T16:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9555,7 +9635,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9628,7 +9709,8 @@
     "event_id": "36995",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Civitanova_vs_Padova/21?event_id=36995",
     "olbg_start_utc": "2026-10-25T17:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9701,7 +9783,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9774,7 +9857,8 @@
     "event_id": "36996",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Monza_vs_Verona/21?event_id=36996",
     "olbg_start_utc": "2026-10-25T17:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9835,7 +9919,8 @@
     "event_id": "37010",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/VfB_Friedrichshafen_vs_SSC_Karlsruhe/21?event_id=37010",
     "olbg_start_utc": "2026-10-24T16:30:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9888,7 +9973,8 @@
     "event_id": "37011",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SVG_Luneburg_vs_SV_Warnemunde/21?event_id=37011",
     "olbg_start_utc": "2026-10-24T17:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9941,7 +10027,8 @@
     "event_id": "37013",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Helios_Grizzlys_Giesen_vs_Berlin_Volleys/21?event_id=37013",
     "olbg_start_utc": "2026-10-24T17:30:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -9994,7 +10081,8 @@
     "event_id": "37012",
     "event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SWD_Duren_vs_WWK_Volleys_Munchen/21?event_id=37012",
     "olbg_start_utc": "2026-10-24T17:30:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -10047,7 +10135,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -10106,7 +10195,8 @@
     "event_id": "3530",
     "event_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/St_Finbarrs_v_Nemo_Rangers/25?event_id=3530",
     "olbg_start_utc": "2026-10-25T16:00:00Z",
-    "candidate_count": 1
+    "candidate_count": 1,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -10163,7 +10253,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -10222,7 +10313,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -10285,7 +10377,8 @@
     "event_id": null,
     "event_url": null,
     "olbg_start_utc": null,
-    "candidate_count": 0
+    "candidate_count": 0,
+    "start_delta_minutes": null
    },
    "official": {
     "family": null
@@ -11474,7 +11567,7 @@
    "severity": "high",
    "category": "Coverage",
    "item": "OLBG-listed events against priced fixtures",
-   "finding": "The 20:32Z capture lists 127 events that start after the capture clock. The desk prices 83 fixtures across all sports, of which 44 were matched to an OLBG listing. Rows OLBG lists that the desk does not price are shown blank, not filled.",
+   "finding": "The 20:32Z capture lists 127 events that start after the capture clock. The desk prices 83 fixtures across all sports, of which 42 were matched to an OLBG listing. Rows OLBG lists that the desk does not price are shown blank, not filled.",
    "source_url": "https://www.olbg.com/betting-tips",
    "evidence": "data/unified/olbg_events.json"
   },
@@ -11492,7 +11585,7 @@
    "severity": "medium",
    "category": "Reconciliation",
    "item": "Fixtures with no OLBG listing in today's capture",
-   "finding": "49 of 93 fixtures have no OLBG event with the same two sides in the captured pages (Basketball 6, Cricket 2, Darts 4, Gaelic Sports 4, Golf 2, Greyhounds 2, Handball 4, Motor Racing 1, Rugby League 9, Rugby Union 1, Snooker 8, Tennis 4, Volleyball 2). They stay published with their official source link; none is claimed to be on OLBG.",
+   "finding": "51 of 93 fixtures have no OLBG event with the same two sides in the captured pages (Baseball 1, Basketball 6, Cricket 2, Darts 4, Gaelic Sports 4, Golf 2, Greyhounds 2, Handball 4, Motor Racing 2, Rugby League 9, Rugby Union 1, Snooker 8, Tennis 4, Volleyball 2). They stay published with their official source link; none is claimed to be on OLBG.",
    "source_url": "data/unified/olbg_events.json",
    "evidence": ""
   },
@@ -11534,12 +11627,30 @@
   },
   {
    "id": "U-11",
-   "severity": "low",
+   "severity": "medium",
    "category": "Presentation",
-   "item": "Mixed time bases",
-   "finding": "Start times are kept exactly as each source published them: UTC for NHL/MLB/football, 'local' for EuroLeague and the ATP schedule, 'viewer-local' for cricket.com.au. The desk does not convert between them, so two columns can show different clocks for the same match.",
-   "source_url": "https://www.euroleaguebasketball.net/euroleague/game-center/?round=8&season=E2026",
+   "item": "Mixed time bases in the stored data",
+   "finding": "The stored values are kept exactly as each source published them: a UTC instant for NHL, MLB and the NRL display, a bare 'local' or 'viewer-local' string for EuroLeague, the ATP schedule and cricket.com.au, and a date with no clock for 78 of the 122 graded picks. Where an instant exists the desk converts it once to the reader's zone and labels that conversion; where it does not, the source's own wording is shown and the row is left off the day-based summary rather than given a time it never had.",
+   "source_url": "data/cadence/fixtures.json",
    "evidence": ""
+  },
+  {
+   "id": "U-25",
+   "severity": "medium",
+   "category": "Contradiction",
+   "item": "OLBG's listed start disagrees with the official start",
+   "finding": "1 of the matched fixtures carry an OLBG start more than an hour away from the official one. Both values are published side by side and neither is adjusted: nba-0022600099 (Basketball) 230 min apart, OLBG lists CHI Bulls @ MIL Bucks. The largest is an NBA game that OLBG shows as already under way at the capture clock (`expired:1` in its own payload) while the NBA page carries an 8:00 PM ET tip, so the two sources genuinely disagree and the desk does not pick a winner between them.",
+   "source_url": "data/ledger/raw/olbg_basketball.txt",
+   "evidence": "data/unified/olbg_events.json"
+  },
+  {
+   "id": "U-26",
+   "severity": "high",
+   "category": "Reconciliation",
+   "item": "A match inherited from the previous layer was paired to the wrong game",
+   "finding": "OLBG event 160789 (TB Rays @ MIL Brewers) starts 2026-10-24T00:00Z, which is MLB game 849805. The earlier reconciliation attached it to 849802, the same two teams one day later, because it accepted any pairing within 36 hours. This session requires the start to agree within twelve hours and takes the closest, so 849805 now carries the OLBG listing and 849802 is published as having no OLBG counterpart. The same rule dropped the Motor Racing match: OLBG's 'USA Grand Prix 2026' is listed 23 hours before the official race start, which is too far apart to call the same session.",
+   "source_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789",
+   "evidence": "data/unified/audit.json"
   },
   {
    "id": "U-20",

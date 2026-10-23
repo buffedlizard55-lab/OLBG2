@@ -42,7 +42,7 @@ class Links(HTMLParser):
 PAGES = [
     "index.html", "olbg-events.html", "matches.html", "lines.html", "picks.html",
     "predictions.html", "band.html", "sources.html", "verification.html",
-    "repo-review.html", "flagged.html", "methodology.html", "archive.html",
+    "repo-review.html", "flagged.html", "methodology.html", "archive.html", "analysis.html",
     "sports/index.html",
 ]
 
@@ -168,6 +168,29 @@ class UnifiedLayerTests(unittest.TestCase):
         self.assertEqual(build.build_sources(inv, audit, sources),
                          build.build_sources(inv, audit, sources))
         self.assertTrue(lines)
+
+    def test_analysis_page_is_derived_from_the_data(self):
+        page = (ROOT / "analysis.html").read_text(encoding="utf-8")
+        counts = self.audit["counts"]
+        self.assertIn(f'<strong>{75 - counts["predictions"]} more predictions</strong>', page)
+        self.assertIn("upcoming OLBG events with no price", page)
+
+    def test_start_times_are_converted_once_and_labelled(self):
+        build = module("unified_build")
+        self.assertEqual(build.stamp("2026-10-24T01:00:00Z"), "Fri 23 Oct, 6:00 PM PDT")
+        # A source that published no clock time keeps its own wording.
+        self.assertEqual(build.stamp(None, "24 October, 2:35am ET (NRL display)"),
+                         "24 October, 2:35am ET (NRL display)")
+        self.assertEqual(build.stamp(None), "start not published")
+
+    def test_the_day_summary_uses_the_reader_zone(self):
+        today = module("unified_build").capture_day("2026-10-23T20:32:10Z")
+        self.assertEqual(str(today), "2026-10-23")
+        included = [p for p in self.picks
+                    if p.get("start_utc")
+                    and module("unified_build").local_dt(p["start_utc"]).date() == today]
+        page = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn(f"of today's {len(included)} priced selections", page)
 
     def test_workflow_rebuilds_and_drift_checks_the_layer(self):
         workflow = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")

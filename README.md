@@ -11,11 +11,11 @@ The repository root is now one desk rather than thirty-eight. It presents, for t
 | [`olbg-events.html`](olbg-events.html) | **every event OLBG was listing**, re-parsed from the stored page bodies |
 | [`matches.html`](matches.html) | our 93 fixtures with the evidence that corroborates each one |
 | [`lines.html`](lines.html) | 728 originated prices, with the arithmetic behind each |
-| [`picks.html`](picks.html) · [`band.html`](band.html) | 122 graded picks; the −250…+10000 analysis |
+| [`picks.html`](picks.html) · [`band.html`](band.html) · [`analysis.html`](analysis.html) | 122 graded picks; the −250…+10000 arithmetic; what the numbers say |
 | [`predictions.html`](predictions.html) | 33 written predictions, 51–88 words each |
 | [`sports/`](sports/index.html) | one page per sport |
 | [`sources.html`](sources.html) · [`verification.html`](verification.html) | source and capture registers; checks A1–A9 |
-| [`flagged.html`](flagged.html) · [`repo-review.html`](repo-review.html) | 13 open items and the repository audit |
+| [`flagged.html`](flagged.html) · [`repo-review.html`](repo-review.html) | 15 open items and the repository audit |
 | [`archive.html`](archive.html) | every earlier layer, kept and linked, never summed |
 
 ```sh
@@ -35,10 +35,11 @@ Three rules the desk will not break:
    claim about the result.
 
 **Current state, honestly.** 216 OLBG events were read (127 of them starting after the capture clock) and 93
-fixtures priced. 22 of 122 graded picks reach high confidence; 8 of those are also inside the brief's band, and
+fixtures priced, of which 42 are recognisably the same event OLBG was listing. 22 of 122 graded picks reach high confidence; 8 of those are also inside the brief's band, and
 all 8 are alternate lines quoted at the band ceiling because a price of −250 is already 71.43%. Twelve of the
 fifteen sports fall short of five written predictions; the shortfall is published per sport rather than filled
-with prose the evidence cannot support. No selection starting on 23 October reaches high confidence.
+with prose the evidence cannot support. Four selections starting on 23 October in the reader's own day reach
+high confidence; all 22 high-confidence picks carry a written prediction.
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 

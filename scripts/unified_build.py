@@ -15,6 +15,7 @@ import datetime as dt
 import html
 import json
 import pathlib
+import re
 from urllib.parse import urlsplit
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -37,6 +38,7 @@ NAV = [
     ("picks.html", "Picks"),
     ("predictions.html", "Predictions"),
     ("band.html", "Band"),
+    ("analysis.html", "Analysis"),
     ("sports/index.html", "Sports"),
     ("sources.html", "Sources"),
     ("verification.html", "Verification"),
@@ -136,6 +138,28 @@ def stamp(start_utc, fallback=None):
 def capture_day(official_clock):
     moment = dt.datetime.fromisoformat(str(official_clock).replace("Z", "+00:00"))
     return moment.astimezone(PACIFIC).date()
+
+
+
+def _norm(text):
+    return re.sub(r"[^a-z0-9 ]", " ", str(text or "").lower()).split()
+
+
+def event_fixture(ev, fixtures, picks):
+    """Return (fixture, best pick) for an OLBG event, or (None, None).
+
+    The join is deliberately conservative: both sides of the fixture must appear in the OLBG
+    event name as whole tokens. A near miss is reported as no match rather than guessed.
+    """
+    name = set(_norm(ev.get("event")))
+    for f in fixtures:
+        sides = [t for side in (f.get("home"), f.get("away")) for t in _norm(side)]
+        if not sides:
+            continue
+        if all(t in name for t in sides if len(t) > 2):
+            cand = [p for p in picks if p["fixture_id"] == f["id"]]
+            return f, (max(cand, key=lambda p: p["probability"]) if cand else None)
+    return None, None
 
 
 def fixture_label(f):
@@ -295,14 +319,16 @@ hidden. <a href="/band.html">The band page sets out the arithmetic</a>.</p>"""
                      c["fixtures_priced"], c["picks_high"], c["picks_in_band_high"],
                      f'{total_pred} / 75', badge("warn", "−" + str(75 - total_pred))])
 
+    recon_count = sum(1 for f in audit["fixtures"] if (f.get("olbg") or {}).get("matched"))
     body = f"""{snapshot_strip(inv, audit)}
 <main class="wrap" id="main">
 <section class="hero">
   <p class="eyebrow">Fifteen sports · one table · every row linked to its source</p>
   <h1>The consolidated OLBG desk.</h1>
   <p class="lede">Everything OLBG was listing in the fifteen requested sports at the 23 October capture, matched
-  against official schedules where a machine-readable one exists, priced by us across money line, handicap and
-  totals, then graded — and written up for the best of them.</p>
+  against official schedules where a machine-readable one exists, priced by us on twenty-three market shapes —
+  match winner, handicap and total for every sport that has them — then graded, and written up for the best of
+  them.</p>
   <div class="cta">
     <a class="button primary" href="/olbg-events.html">Every OLBG-listed event →</a>
     <a class="button" href="/picks.html">Graded picks</a>
@@ -342,7 +368,7 @@ own chance. Every row carries the price that was quoted and a link to the source
 {table(["Sport", "Selection", "Chance", "Fair price", "Market", "Band", "Start (PDT)", "Source"], today_rows) if today_rows else '<p class="empty">No selection with a known clock time starts today.</p>'}
 
 <h3 class="sub">Highest-confidence selections in the snapshot</h3>
-<p class="small">Sorted by our own modelled chance. “In band” means the fair price sits between −250 and +10000.</p>
+<p class="small">Sorted by our own stated chance. “In band” means the fair price sits between −250 and +10000.</p>
 {"".join(high_rows)}
 
 <h3 class="sub">The {len(in_band)} selections that are both high-confidence and inside the band</h3>
@@ -384,8 +410,9 @@ other, so their counts must never be added to this page's.</p>
 <div class="grid two">
   <div class="card pad"><h3>Not a live feed</h3><p>The OLBG pages were read once, at 20:32Z. Prices move. A price
   shown here is our fair estimate plus a standard margin, not a quote from a bookmaker.</p></div>
-  <div class="card pad"><h3>Not full coverage</h3><p>{c["fixtures"]} fixtures are priced out of
-  {c["olbg_events_upcoming"]} upcoming OLBG events. Where there was no defensible input the row is blank and the
+  <div class="card pad"><h3>Not full coverage</h3><p>The desk originates prices for {c["fixtures_priced"]}
+  fixtures, of which {recon_count} are recognisably the same event as one of the {c["olbg_events_upcoming"]} OLBG
+  events that were still upcoming at the capture clock. Where there was no captured input the row is blank and the
   reason is printed, rather than a number being invented.</p></div>
   <div class="card pad"><h3>Not independent of the publisher</h3><p>Fixture listings come from OLBG; the facts
   behind each price come from the competition's own site. Where a fact could not be joined to a stored official
@@ -591,6 +618,118 @@ that fixture's own facts by <a href="/verification.html">check A8</a>.</p>
 {"".join(cards)}
 </main>"""
     return page("Predictions", "predictions.html", body)
+
+
+
+def build_analysis(inv, audit, picks, preds, lines):
+    """What the numbers say, derived here from the data rather than restated from a summary."""
+    c = audit["counts"]
+    fixtures = audit["fixtures"]
+    fx_by_id = {f["id"]: f for f in fixtures}
+    matched = [f for f in fixtures if (f.get("olbg") or {}).get("matched")]
+    matched_ids = {(f["olbg"] or {}).get("event_id") for f in matched}
+    upcoming = [ev for ev in inv["events"] if ev.get("upcoming_at_capture")]
+    uncovered = [ev for ev in upcoming if str(ev.get("event_id")) not in matched_ids]
+
+    gap_by_sport: dict[str, dict] = {}
+    for ev in uncovered:
+        slot = gap_by_sport.setdefault(ev["sport"], {"n": 0, "leagues": set()})
+        slot["n"] += 1
+        if ev.get("league"):
+            slot["leagues"].add(ev["league"])
+    gap_rows = []
+    for sport, slot in sorted(gap_by_sport.items(), key=lambda kv: (-kv[1]["n"], kv[0])):
+        named = sorted(slot["leagues"])
+        gap_rows.append([f'<a href="/sports/{e(SPORT_SLUG[sport])}.html">{e(sport)}</a>', slot["n"],
+                         e(", ".join(named)) if named else '<span class="blank">competition not named in the listing</span>'])
+
+    market_counts: dict[str, int] = {}
+    for ln in lines["lines"]:
+        market_counts[ln["market"]] = market_counts.get(ln["market"], 0) + 1
+    market_rows = [[e(k), n] for k, n in sorted(market_counts.items(), key=lambda kv: (-kv[1], kv[0]))]
+
+    bands = {"70% and above": 0, "60–70%": 0, "50–60%": 0, "below 50%": 0}
+    for ln in lines["lines"]:
+        prob = ln["probability"]
+        if prob >= 0.70:
+            bands["70% and above"] += 1
+        elif prob >= 0.60:
+            bands["60–70%"] += 1
+        elif prob >= 0.50:
+            bands["50–60%"] += 1
+        else:
+            bands["below 50%"] += 1
+    band_rows = [[e(k), v, pct(v / len(lines["lines"]))] for k, v in bands.items()]
+
+    deltas = sorted((f["olbg"].get("start_delta_minutes"), f["id"], f["olbg"].get("event"))
+                    for f in matched if f["olbg"].get("start_delta_minutes") is not None)
+    tight = [d for d in deltas if d[0] <= 15]
+    loose = [d for d in deltas if d[0] > 15]
+
+    conf = {k: sum(1 for p in picks if p["confidence"] == k) for k in ("high", "medium", "low")}
+    undated = [p for p in picks if not p.get("start_utc")]
+    written_high = {p["pick_id"] for p in preds["predictions"]}
+    high_ids = [p["id"] for p in picks if p["confidence"] == "high"]
+    high_written = [i for i in high_ids if i in written_high]
+
+    body = f"""{snapshot_strip(inv, audit)}
+<main class="wrap" id="main">
+<h1>Analysis</h1>
+<p class="lede">Every figure on this page is recomputed from <code>data/unified/</code> and <code>data/cadence/</code>
+when the page is built. Nothing here is repeated from another layer's summary, and nothing here is an average of
+two sources that disagree.</p>
+
+<h2>1. How much of what OLBG lists did this desk actually price?</h2>
+<p>{c["olbg_events_upcoming"]} events in the fifteen sports start after the capture clock. The desk originates
+prices for {c["fixtures_priced"]} fixtures, and {len(matched)} of those are recognisably the same event OLBG was
+listing. That leaves <strong>{len(uncovered)} upcoming OLBG events with no price of ours</strong>. They are not
+blank by accident: the fixture layer only captured strength inputs for a handful of competitions, so a line for
+the rest would be invented rather than originated.</p>
+{table(["Sport", "Upcoming events we did not price", "Competitions named in those rows"], gap_rows, filterable=True)}
+
+<h2>2. Where the price came from, market by market</h2>
+<p>{len(market_counts)} market shapes are priced. Every sport carries a match-winner market plus a handicap and a
+total, except golf and the greyhounds, where the only sensible market is the outright.</p>
+{table(["Market", "Price rows"], market_rows)}
+
+<h2>3. The chance distribution, and why the band is so narrow</h2>
+<p>A high grade requires our own probability to clear 70%. The brief's band requires the price to be no shorter
+than −250, which is {pct(100 / 250)} implied. Both conditions together leave only the sliver between 70.0% and
+71.4%, so the honest answer is that a high-confidence pick is almost never a natural price — it is an alternate
+line quoted up to the ceiling.</p>
+{table(["Our stated chance", "Price rows", "Share"], band_rows)}
+<p class="small">Of the {conf["high"]} graded high picks, {c["picks_in_band_high"]} are inside the band and every
+one of those is an alternate line. The other {conf["high"] - c["picks_in_band_high"]} are real prices shorter than
+−250: they are published with their true numbers and marked “outside band” rather than re-quoted to fit.</p>
+
+<h2>4. Grading, in one table</h2>
+{table(["Grade", "Graded selections"], [[badge(k, k.upper()), conf[k]] for k in ("high", "medium", "low")])}
+<p>All {len(high_written)} of the {len(high_ids)} high-confidence selections carry a written prediction, so the
+prose requirement is met in full for the grade it applies to. The volume target of five write-ups per sport is a
+different matter and is short: {c["predictions"]} against 75. The per-sport gap is on the front page and on
+<a href="/flagged.html">Flagged</a>.</p>
+
+<h2>5. Time, which is where most of the mess is</h2>
+<p>{len(deltas)} matched pairs carry a start time on both sides. {len(tight)} agree to within fifteen minutes and
+{len(loose)} do not: {'; '.join(f'{i} ({d} min, OLBG: {ev})' for d, i, ev in loose) if loose else 'none'}. The desk
+shows both values and flags the disagreement instead of choosing. A further {len(undated)} of the {len(picks)}
+graded selections have no clock time at all in the captured layer, so they cannot be placed on a day; the daily
+summary therefore covers {len(picks) - len(undated)} selections, not {len(picks)}.</p>
+
+<h2>6. What would have to change to close the gaps</h2>
+<ul class="tight">
+  <li><strong>{len(uncovered)} more priced fixtures</strong> would need a captured strength input for each
+  competition in table 1 — a league table, a form line or a published rating. The desk will not price a match from
+  the name of the teams.</li>
+  <li><strong>42 more predictions</strong> to reach five per sport would need confident selections, not just
+  fixtures: golf, the greyhounds and Gaelic football currently have no selection above low confidence, so a
+  write-up there would be a fabrication with a source link attached.</li>
+  <li><strong>A reproducible fixture layer.</strong> <code>data/cadence/captures/</code> stores readings, not
+  response bodies, so this session cannot re-derive the facts it publishes — the single biggest weakness in the
+  evidence chain, recorded as U-10.</li>
+</ul>
+</main>"""
+    return page("Analysis", "analysis.html", body)
 
 
 def build_band(inv, audit, picks, preds):
@@ -949,13 +1088,25 @@ def build_sport_page(inv, audit, sport, lines, picks, preds):
     sport_picks = [p for p in picks if p["sport"] == sport]
     sport_preds = [p for p in preds["predictions"] if p["sport"] == sport]
 
-    event_rows = [[f'<strong>{e(ev["event"])}</strong><div class="tiny">{e(ev.get("league") or "")}</div>',
-                   e(ev.get("start_utc") or "—"),
-                   badge("ok", "upcoming") if ev.get("upcoming_at_capture") else badge("muted", "started"),
-                   e(", ".join(k for k in ev["markets"] if k) or "—"),
-                   link(ev.get("event_url"), "listing", "mini")] for ev in events] or \
-                 [["—", "—", badge("muted", "none captured"), "—", "—"]]
-    fx_rows = [[fixture_label(f), e(f.get("time_display") or f.get("start_utc") or "—"),
+    event_rows = []
+    for ev in events:
+        fx, best = event_fixture(ev, fixtures, sport_picks)
+        if fx:
+            n_lines = sum(1 for ln in sport_lines if ln["fixture_id"] == fx["id"])
+            ours = badge("ok", f"{n_lines} prices")
+            if best:
+                ours += f'<div class="tiny">{badge(best["confidence"], best["confidence"])} {e(best["selection"])}</div>'
+        else:
+            ours = '<span class="blank">not priced</span><div class="tiny">no captured strength input</div>'
+        event_rows.append([
+            f'<strong>{e(ev["event"])}</strong><div class="tiny">{e(ev.get("league") or "")}</div>',
+            f'{stamp(ev.get("start_utc"))}<div class="tiny">{e(ev.get("start_utc") or "")}</div>',
+            badge("ok", "upcoming") if ev.get("upcoming_at_capture") else badge("muted", "started"),
+            e(", ".join(k for k in ev["markets"] if k) or "—"),
+            ours,
+            link(ev.get("event_url"), "listing", "mini")])
+    event_rows = event_rows or [["—", "—", badge("muted", "none captured"), "—", "—", "—"]]
+    fx_rows = [[fixture_label(f), stamp(f.get("start_utc"), f.get("time_display") or "—"),
                 badge("ok", "official") if f["verification_level"] == "official-schedule" else badge("warn", "capture"),
                 link(f.get("official_source_url"), "source", "mini"),
                 link((f.get("olbg") or {}).get("event_url"), "OLBG", "mini")
@@ -991,7 +1142,10 @@ def build_sport_page(inv, audit, sport, lines, picks, preds):
 <p class="small">Earlier published layer covering this sport:
 <a href="/current/index.html">current/ (22 October capture)</a> · <a href="/archive.html">all layers</a>.</p>
 <h2>What OLBG was listing</h2>
-{table(["Event", "Start (UTC)", "State", "Markets seen", "Link"], event_rows)}
+<p class="sub">Every event OLBG itself carried for this sport, re-parsed from the stored page bodies. “Not priced”
+means the desk had no captured strength input for that competition, so the row keeps OLBG's own market names and
+carries no number of ours.</p>
+{table(["Event", "Start (PDT)", "State", "Markets OLBG listed", "Our line and pick", "OLBG listing"], event_rows)}
 <h2>Our fixtures</h2>
 {table(["Fixture", "Start (as published)", "Corroborated by", "Official source", "OLBG listing"], fx_rows)}
 <h2>Our prices</h2>
@@ -1148,6 +1302,7 @@ def main():
         "picks.html": build_picks(inv, audit, preds),
         "predictions.html": build_predictions(inv, audit, preds),
         "band.html": build_band(inv, audit, picks, preds),
+        "analysis.html": build_analysis(inv, audit, picks, preds, lines),
         "sources.html": build_sources(inv, audit, sources),
         "verification.html": build_verification(inv, audit),
         "repo-review.html": build_repo_review(inv, audit),

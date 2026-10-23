@@ -381,14 +381,25 @@ def match_fixtures_to_olbg(fixtures: list, events: list):
                     candidates.append(e)
                     break
         best = None
+        delta_min = None
         if candidates:
-            # Prefer an event whose recorded start agrees to the day, then the earliest start.
-            in_window = [c for c in candidates
-                         if c.get("start_utc") and fx.get("start_utc")
-                         and abs((dt.datetime.fromisoformat(c["start_utc"].replace("Z", "+00:00"))
-                                  - dt.datetime.fromisoformat(fx["start_utc"].replace("Z", "+00:00")))
-                                 .total_seconds()) <= 36 * 3600]
-            best = (in_window or candidates)[0]
+            # Two sides are not enough on their own: a baseball series puts the same pair on the
+            # field on consecutive days, so the start has to agree to within twelve hours and the
+            # closest one wins. Without a start on both sides the match is reported, not timed.
+            def gap(c):
+                if not (c.get("start_utc") and fx.get("start_utc")):
+                    return None
+                return abs((dt.datetime.fromisoformat(c["start_utc"].replace("Z", "+00:00"))
+                            - dt.datetime.fromisoformat(fx["start_utc"].replace("Z", "+00:00"))
+                            ).total_seconds())
+
+            timed = [(gap(c), c) for c in candidates if gap(c) is not None]
+            timed = [(g, c) for g, c in timed if g <= 12 * 3600]
+            if timed:
+                delta_min, best = min(timed, key=lambda gc: gc[0])
+                delta_min = int(delta_min / 60)
+            elif not timed and not any(gap(c) is not None for c in candidates):
+                best = candidates[0]
         result[fx["id"]] = {
             "matched": bool(best),
             "event": best["event"] if best else None,
@@ -396,6 +407,7 @@ def match_fixtures_to_olbg(fixtures: list, events: list):
             "event_url": best.get("event_url") if best else None,
             "olbg_start_utc": best.get("start_utc") if best else None,
             "candidate_count": len(candidates),
+            "start_delta_minutes": delta_min,
         }
     return result
 
@@ -740,11 +752,38 @@ def main() -> int:
          "official URL that a reader can open.",
          "data/cadence/captures/nba_games.json")
     # F-U11 time bases
-    flag("U-11", "low", "Presentation", "Mixed time bases",
-         "Start times are kept exactly as each source published them: UTC for NHL/MLB/football, 'local' for "
-         "EuroLeague and the ATP schedule, 'viewer-local' for cricket.com.au. The desk does not convert between "
-         "them, so two columns can show different clocks for the same match.",
-         "https://www.euroleaguebasketball.net/euroleague/game-center/?round=8&season=E2026")
+    flag("U-11", "medium", "Presentation", "Mixed time bases in the stored data",
+         "The stored values are kept exactly as each source published them: a UTC instant for NHL, MLB and the "
+         "NRL display, a bare 'local' or 'viewer-local' string for EuroLeague, the ATP schedule and "
+         "cricket.com.au, and a date with no clock for 78 of the 122 graded picks. Where an instant exists the "
+         "desk converts it once to the reader's zone and labels that conversion; where it does not, the source's "
+         "own wording is shown and the row is left off the day-based summary rather than given a time it never had.",
+         "data/cadence/fixtures.json")
+
+    # F-U25 OLBG start versus official start
+    drift = sorted([(f["olbg"]["start_delta_minutes"], f["id"], f["sport"], f["olbg"]["event"])
+                    for f in fx_rows
+                    if (f.get("olbg") or {}).get("matched") and (f["olbg"].get("start_delta_minutes") or 0) > 60])
+    if drift:
+        flag("U-25", "medium", "Contradiction", "OLBG's listed start disagrees with the official start",
+             f"{len(drift)} of the matched fixtures carry an OLBG start more than an hour away from the official "
+             "one. Both values are published side by side and neither is adjusted: "
+             + "; ".join(f"{fid} ({sport}) {mins} min apart, OLBG lists {ev}" for mins, fid, sport, ev in drift)
+             + ". The largest is an NBA game that OLBG shows as already under way at the capture clock "
+               "(`expired:1` in its own payload) while the NBA page carries an 8:00 PM ET tip, so the two sources "
+               "genuinely disagree and the desk does not pick a winner between them.",
+             "data/ledger/raw/olbg_basketball.txt", "data/unified/olbg_events.json")
+
+    # F-U26 the reconciliation this session corrected
+    flag("U-26", "high", "Reconciliation", "A match inherited from the previous layer was paired to the wrong game",
+         "OLBG event 160789 (TB Rays @ MIL Brewers) starts 2026-10-24T00:00Z, which is MLB game 849805. The earlier "
+         "reconciliation attached it to 849802, the same two teams one day later, because it accepted any pairing "
+         "within 36 hours. This session requires the start to agree within twelve hours and takes the closest, so "
+         "849805 now carries the OLBG listing and 849802 is published as having no OLBG counterpart. The same rule "
+         "dropped the Motor Racing match: OLBG's 'USA Grand Prix 2026' is listed 23 hours before the official race "
+         "start, which is too far apart to call the same session.",
+         "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160789",
+         "data/unified/audit.json")
     # F-U12 source hosts
     if unknown_hosts:
         flag("U-12", "low", "Sources", "Hosts outside the governing-body list",

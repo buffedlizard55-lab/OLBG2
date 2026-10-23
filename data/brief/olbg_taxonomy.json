@@ -1,0 +1,76 @@
+{
+ "index_url": "https://www.olbg.com/betting-tips",
+ "captured_utc": "2026-10-23T19:31:00Z",
+ "sport_ids_seen_in_index_links": {
+  "Football": 1,
+  "Horse Racing": 2,
+  "Tennis": 3,
+  "Basketball": 4,
+  "Golf": 5,
+  "Cricket": 7,
+  "Snooker": 8,
+  "Rugby Union": 9,
+  "Rugby League": 10,
+  "American Football": 11,
+  "Baseball": 12,
+  "Ice Hockey": 13,
+  "Motor Racing": 14,
+  "Darts": 15,
+  "Boxing": 16,
+  "Cycling": 17,
+  "Handball": 20,
+  "Volleyball": 21,
+  "Gaelic Football": 25,
+  "Hurling": 26,
+  "Greyhounds": 28
+ },
+ "markets_named_in_served_editorial_copy": {
+  "Ice Hockey": [
+   "Money Line (2-way, includes OT/SO)",
+   "Puck Line (spread +/-1.5)",
+   "Totals (e.g. 5.5)"
+  ],
+  "Tennis": [
+   "Tournament Winner",
+   "Win Match",
+   "Set Betting",
+   "Total Games",
+   "1st Set Winner",
+   "Games Won (games handicap)"
+  ],
+  "Darts": [
+   "Win Match 2-way",
+   "Win Tournament (outright)"
+  ],
+  "Baseball": [
+   "Money Line",
+   "Run Line",
+   "Totals"
+  ]
+ },
+ "url_patterns": {
+  "sport_index": "https://www.olbg.com/betting-tips/{Sport_With_Underscores}/{sportId}",
+  "event": "https://www.olbg.com/betting-tips/{Sport}/All_{Sport}/{All_Events|Competition}/{Event_Name}/{sportId}?event_id={eventId}"
+ },
+ "server_rendered_event_list": false,
+ "server_rendered_evidence": [
+  {
+   "url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "fetched_utc": "2026-10-23T19:29:00Z",
+   "rendered_marker": "No tips found.",
+   "conclusion": "The tips table is populated client-side; the served HTML contains the editorial copy but no event rows."
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "fetched_utc": "2026-10-23T19:30:00Z",
+   "rendered_marker": "No tips found.",
+   "conclusion": "Same behaviour on a second sport index page."
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+   "fetched_utc": "2026-10-23T19:44:00Z",
+   "rendered_marker": "No tips found for Luke Littler vs William OConnor but here is a list of current related events.",
+   "conclusion": "An individual event page resolves, but its market table and the 'related events' list are also client-side. No price, market or participant can be read from the response."
+  }
+ ]
+}

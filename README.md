@@ -2,7 +2,63 @@
 
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
-## Latest: evidence-first 15-sport monitor (23 October 2026)
+## Newest: OLBG daily desk — `/olbg/` (23 October 2026)
+
+**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/olbg/> ·
+[all matches](olbg/matches.html) · [picks and predictions](olbg/picks.html) ·
+[originated markets](olbg/markets.html) · [sources](olbg/sources.html) ·
+[Flagged for Review](olbg/flagged.html) · [methodology](olbg/methodology.html) ·
+[research record](research/olbg-758c0623.md).
+
+The 19:40:38 UTC snapshot contains **89 upcoming rows across 11 sports**, with all 15 requested categories represented. It keeps **0 active**, **24 last-seen on OLBG**, and **65 official-context-only** rows distinct. There are **54 priced matches**, **58 originated market rows**, and **3 high-confidence predictions**. No current bookmaker quote is claimed. The five-per-sport shortlist is a maximum, not a quota; 35 unpriced matches and the other limitations remain visible with official links.
+
+```sh
+python scripts/olbg_seed.py
+python scripts/olbg_model.py
+python scripts/olbg_predictions.py
+python scripts/olbg_build.py
+python scripts/olbg_verify.py
+python -m unittest tests.test_olbg_758c0623 -v
+```
+
+The offline rebuild is deterministic. CI runs the same pipeline and drift-checks `olbg/` and `data/olbg/`; it does not refresh the snapshot.
+
+## Earlier: 15-sport daily brief — `/brief/` (23 October 2026)
+
+**Start here:** <https://buffedlizard55-lab.github.io/OLBG2/brief/> ·
+[all matches](brief/matches.html) · [picks](brief/picks.html) · [39 predictions](brief/predictions.html) ·
+[OLBG reverse-engineering](brief/olbg.html) · [source ledger](brief/sources.html) ·
+[Flagged for review](brief/flagged.html) · [method](brief/methodology.html) · [repo review](brief/review.html).
+
+This desk is built from first-hand reads of 22 official sources and is deterministic from committed captures:
+
+| Item | Value |
+|---|---|
+| Sports | exactly the 15 named in the brief (Gaelic Football and Hurling under Gaelic Sports) |
+| Fixtures published | 113 (87 still upcoming at the 19:45Z cut-off) |
+| Fixtures with our own lines | 50, across 11 sports — money line / match winner, handicaps and totals per sport |
+| In-band selections (−250…+10000) | 39, one per priced fixture |
+| High-confidence picks | 1 inside the price window (Tier A), 6 inside 70% but shorter than −250 (Tier B) |
+| Written predictions | 39, minimum 84 words, each fact traceable to its capture |
+| Official sources | 22, every one linked on the row it supports |
+| Review queue | 10 items, including four sports with fixtures but no price |
+
+**What it will not do.** OLBG's public tips pages render their event tables client-side: three pages returned the literal
+text "No tips found" at 19:29Z, 19:30Z and 19:44Z today, so no complete OLBG event inventory can be read by a
+non-browser client. The desk reproduces OLBG's sport IDs, URL schema and market vocabulary (see
+`/brief/olbg.html`) and takes fixtures from each governing body instead. No OLBG price or tip percentage is used as a
+pricing input. Tennis, Cricket, Gaelic Sports, Greyhounds and Darts carry fixtures but no line today; each reason is on
+the review page. No prediction asserts an injury, because no official injury feed was readable.
+
+```sh
+python scripts/brief_model.py        # captures -> fixtures, inputs, originated markets
+python scripts/brief_predictions.py  # validates the 39 write-ups and assigns tiers
+python scripts/brief_build.py        # writes /brief/
+python scripts/brief_verify.py       # 1,547 structural checks
+python -m unittest tests.test_brief   # 18 tests
+```
+
+## Previous: evidence-first 15-sport monitor (23 October 2026)
 
 **Start here:** <https://buffedlizard55-lab.github.io/OLBG2/monitor/> ·
 [Flagged for Review](monitor/flagged.html) · [source ledger](monitor/sources.html) ·

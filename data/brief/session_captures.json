@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "session": "arena/7a073c9a-olbg2",
+    "window_utc": "2026-10-23T19:29:00Z/2026-10-23T20:05:00Z",
+    "rule": "Only values actually present in the served page text are recorded. A failed read is recorded as a failure, never as a blank guess."
+  },
+  "olbg": {
+    "captured_utc": "2026-10-23T19:31:00Z",
+    "index_url": "https://www.olbg.com/betting-tips",
+    "sport_ids_seen_in_index_links": {
+      "Football": 1,
+      "Horse Racing": 2,
+      "Tennis": 3,
+      "Basketball": 4,
+      "Golf": 5,
+      "Cricket": 7,
+      "Snooker": 8,
+      "Rugby Union": 9,
+      "Rugby League": 10,
+      "American Football": 11,
+      "Baseball": 12,
+      "Ice Hockey": 13,
+      "Motor Racing": 14,
+      "Darts": 15,
+      "Boxing": 16,
+      "Cycling": 17,
+      "Handball": 20,
+      "Volleyball": 21,
+      "Gaelic Football": 25,
+      "Hurling": 26,
+      "Greyhounds": 28
+    },
+    "in_scope_15": [
+      "Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts",
+      "Baseball", "Gaelic Sports", "Greyhounds", "Tennis", "Motor Racing",
+      "Handball", "Ice Hockey", "Basketball", "Rugby League"
+    ],
+    "index_url_pattern_observed": "https://www.olbg.com/betting-tips/{Sport_With_Underscores}/{sportId}",
+    "event_url_pattern_observed": "https://www.olbg.com/betting-tips/{Sport}/All_{Sport}/{All_Events|Competition}/{Event_Name}/{sportId}?event_id={eventId}",
+    "event_url_example": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+    "server_rendered_event_list": false,
+    "server_rendered_evidence": [
+      {
+        "url": "https://www.olbg.com/betting-tips/Tennis/3",
+        "fetched_utc": "2026-10-23T19:29:00Z",
+        "rendered_marker": "No tips found.",
+        "conclusion": "The tips table is populated client-side; the served HTML contains the editorial copy but no event rows."
+      },
+      {
+        "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+        "fetched_utc": "2026-10-23T19:30:00Z",
+        "rendered_marker": "No tips found.",
+        "conclusion": "Same behaviour on a second sport index page."
+      },
+      {
+        "url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328",
+        "fetched_utc": "2026-10-23T19:44:00Z",
+        "rendered_marker": "No tips found for Luke Littler vs William OConnor but here is a list of current related events.",
+        "conclusion": "An individual event page resolves, but its market table and the 'related events' list are also client-side. No price, market or participant can be read from the response."
+      }
+    ],
+    "markets_named_in_served_editorial_copy": {
+      "Ice Hockey": ["Money Line (2-way, includes OT/SO)", "Puck Line (spread +/-1.5)", "Totals (e.g. 5.5)"],
+      "Tennis": ["Tournament Winner", "Win Match", "Set Betting", "Total Games", "1st Set Winner", "Games Won (games handicap)"],
+      "Darts": ["Win Match 2-way", "Win Tournament (outright)"],
+      "Baseball": ["Money Line", "Run Line", "Totals"]
+    },
+    "note": "The market names above are quoted from OLBG's own explanatory copy, so our desk can mirror the market vocabulary. OLBG publishes no numeric price to a non-JS client, so no OLBG price is used anywhere in this desk."
+  },
+  "atp_refresh": {
+    "source_url": "https://www.atptour.com/en/scores/current",
+    "captured_utc": "2026-10-23T19:34:00Z",
+    "quarter_finals": [
+      {"event": "Almaty", "p1": "Daniil Medvedev", "p2": "Terence Atmane", "score": "6-4 6-4", "winner": "Daniil Medvedev"},
+      {"event": "Almaty", "p1": "Alexander Bublik", "p2": "Karen Khachanov", "score": "4-6 7-6(5) 7-6(5)", "winner": "Alexander Bublik"},
+      {"event": "Brussels", "p1": "Jan-Lennard Struff", "p2": "Zizou Bergs", "score": "in progress, 4-3 first set to Struff", "winner": null},
+      {"event": "Brussels", "p1": "Arthur Fils", "p2": "Alex Michelsen", "score": "6-4 7-6(12)", "winner": "Arthur Fils"},
+      {"event": "Lyon", "p1": "Flavio Cobolli", "p2": "Brandon Nakashima", "score": "4-6 6-4 6-4", "winner": "Flavio Cobolli"},
+      {"event": "Lyon", "p1": "Daniel Altmaier", "p2": "Taylor Fritz", "score": "6-7(5) 2-6", "winner": "Taylor Fritz"}
+    ],
+    "semi_finals_published_by_atp": [],
+    "conclusion": "At 19:34Z the ATP scoreboard showed no semi-final line-up, and every bracket pairing on the scores page is shown only after both quarter-finals in that section finish. No tennis pairing is asserted by this desk."
+  },
+  "wta_refresh": {
+    "source_url": "https://www.wtatennis.com/scores",
+    "captured_utc": "2026-10-23T19:36:00Z",
+    "tournaments_live": 0,
+    "conclusion": "The WTA scores page reported '0 TOURNAMENTS LIVE' and carried notification rows only, so no WTA fixture is published."
+  },
+  "pdc_rankings": {
+    "url": "https://www.pdc.tv/rankings",
+    "fetched_utc": "2026-10-23T19:52:00Z",
+    "result": "blocked",
+    "detail": "The response is a CookieYes consent wall (1,037 third-party vendors) plus a consent-preferences table. No Order of Merit figure is present in the served text."
+  },
+  "cev": {
+    "url": "https://www.cev.eu/matches/",
+    "fetched_utc": "2026-10-23T19:37:00Z",
+    "result": "404 Page Not Found"
+  },
+  "volleyball_world": {
+    "schedule_url": "https://en.volleyballworld.com/global-schedule#fromDate=2026-10-23&yearseason=2026",
+    "captured_utc": "2026-10-23T19:40:00Z",
+    "second_chunk_captured_utc": "2026-10-23T19:51:00Z",
+    "timezone_note": "The schedule page offers a 'Show local match time' control; the times served are venue-local. Only the published calendar date and the printed local clock time are recorded. No UTC conversion is asserted.",
+    "results_2026_10_23": [
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29724, "home": "Aleeza Aichi", "away": "Osaka Marvelous", "sets": "1-3", "set_scores_home": [19, 23, 29, 19], "set_scores_away": [25, 25, 27, 25], "venue_city": "Kariya", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29724?match=Aleeza+Aichi-vs-Osaka+Marvelous"},
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29723, "home": "Denso Airybees", "away": "Hisamitsu Springs", "sets": "1-3", "set_scores_home": [25, 30, 20, 19], "set_scores_away": [22, 32, 25, 25], "venue_city": "Koriyama", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29723?match=Denso+Airybees-vs+Saga+Hisamitsu+Springs"},
+      {"competition": "Tauron Liga 2026/27", "match_no": 30422, "home": "Slepsk Malow Suwalki", "away": "GKS Katowice", "sets": "2-3", "set_scores_home": [22, 25, 23, 25, 11], "set_scores_away": [25, 16, 25, 22, 15], "venue_city": "Suwalki", "country": "Poland", "url": "https://en.volleyballworld.com/volleyball/competitions/tauronliga/schedule/30422?match=%c5%9alepsk+Malow+Suwa%c5%82ki-vs-GKS+Katowice"},
+      {"competition": "Tauron Liga 2026/27", "match_no": 30423, "home": "Stilon Gorzow", "away": "Jastrzebie Barkom", "sets": "in progress at capture (0-1, 21-23 in set two)", "set_scores_home": [17, 21], "set_scores_away": [25, 23], "venue_city": "Gorzow Wielkopolski", "country": "Poland", "url": "https://en.volleyballworld.com/volleyball/competitions/tauronliga/schedule/30423?match=Stilon+Gorz%c3%b3w-vs-Jastrz%c4%99bie+Barkom"}
+    ],
+    "fixtures_2026_10_24": [
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29726, "home": "Gunma Greenwings", "away": "Aranmare Akita Shonai", "pool": "Pool E #118", "local_time": "00:05", "venue_city": "Maebashi", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29726?match=Gunma+Green+Wings-vs+Aranmare+Akita+Shonai"},
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29725, "home": "Astemo Rivale Ibaraki", "away": "NEC Red Rockets Kawasaki", "pool": "Pool E #117", "local_time": "01:05", "venue_city": "Hitachinaka", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29725?match=Astemo+Rivale+Ibaraki-vs+NEC+Red+Rockets+Kawasaki"},
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29727, "home": "Kurobe Aquafairies Toyama", "away": "Toray Arrows Shiga", "pool": "Pool I/C #119", "local_time": "01:05", "venue_city": "Kurobe", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29727?match=Kurobe+Aqua+Fairies+Toyama-vs+Toray+Arrows+Shiga"},
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29729, "home": "Okayama Seagulls", "away": "Ageo Medics", "pool": "Pool I/C #121", "local_time": "01:05", "venue_city": "Akaiwa", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29729?match=Okayama+Seagulls-vs+Saitama+Ageo+Medics"},
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29731, "home": "Aleeza Aichi", "away": "Osaka Marvelous", "pool": "Pool W #123", "local_time": "01:05", "venue_city": "Kariya", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29731?match=Aleeza+Aichi-vs+Osaka+Marvelous"},
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29730, "home": "Denso Airybees", "away": "Hisamitsu Springs", "pool": "Pool I/C #122", "local_time": "04:05", "venue_city": "Koriyama", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29730?match=Denso+Airybees-vs+Saga+Hisamitsu+Springs"},
+      {"competition": "SV-Women Japan League 2026/27", "match_no": 29735, "home": "Victorina Himeji", "away": "PFU BlueCats Ishikawa Kahoku", "pool": "Pool W #127", "local_time": "23:05", "venue_city": "Himeji", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/schedule/29735?match=Victorina+Himeji-vs+PFU+Blue+Cats+Ishikawa+Kahoku"},
+      {"competition": "SV-Men Japan League 2026/27", "match_no": 30132, "home": "Suntory Sunbirds Osaka", "away": "Voreas Hokkaido", "pool": "Round Robin #405", "local_time": "00:05", "venue_city": "Osaka", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-men/schedule/30132?match=SUNTORY+SUNBIRDS+OSAKA-vs+VOREAS+HOKKAIDO"},
+      {"competition": "SV-Men Japan League 2026/27", "match_no": 30128, "home": "Hokkaido Yellow Stars", "away": "Osaka Bluteon", "pool": "Round Robin #401", "local_time": "01:05", "venue_city": "Sapporo", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-men/schedule/30128?match=HOKKAIDO+YELLOW+STARS-vs+OSAKA+BLUTEON"},
+      {"competition": "SV-Men Japan League 2026/27", "match_no": 30130, "home": "JTEKT Stings Aichi", "away": "Toray Arrows Shizuoka", "pool": "Round Robin #403", "local_time": "01:05", "venue_city": "Kashihara", "country": "Japan", "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-men/schedule/30130?match=JTEKT+STINGS+AICHI-vs-TORAY+ARROWS+SHIZUOKA"}
+    ],
+    "standings_attempt": {
+      "url": "https://en.volleyballworld.com/volleyball/competitions/svleague-women/standings/",
+      "fetched_utc": "2026-10-23T20:04:00Z",
+      "result": "page title only; no table rows in the served text"
+    },
+    "irregularity": "The schedule's own filter labels the Tauron Liga block 'Men' while the same competition is presented elsewhere on the page without a gender label. Gender is therefore not asserted for any Polish volleyball row on this desk."
+  },
+  "flags": [
+    {"id": "BR-01", "subject": "OLBG publishes no server-rendered event list", "severity": "high", "detail": "Three OLBG pages (two sport indexes and one event page) returned 'No tips found' to a client that does not execute JavaScript. A complete OLBG event inventory therefore cannot be read first-hand, so this desk publishes OLBG's sport taxonomy and market vocabulary, and sources each fixture from the governing body instead.", "evidence": ["https://www.olbg.com/betting-tips/Tennis/3", "https://www.olbg.com/betting-tips/Ice_Hockey/13", "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Luke_Littler_vs_William_OConnor/15?event_id=32328"]},
+    {"id": "BR-02", "subject": "PDC rankings unreachable", "severity": "medium", "detail": "www.pdc.tv/rankings serves a cookie-consent wall only, so no Order of Merit figure exists for this desk. Darts prices therefore use OLBG's published tip-share as the only strength input, shrunk 30% toward an even chance, and are labelled operator-derived.", "evidence": ["https://www.pdc.tv/rankings"]},
+    {"id": "BR-03", "subject": "No tennis pairing published", "severity": "high", "detail": "The ATP scoreboard carried no semi-final line-up at 19:34Z; three of four semi-finals still had an undecided opponent, and a bracket pairing cannot be inferred from two results alone. Tennis is published as results plus unpaired scheduled slots, with no price and no selection.", "evidence": ["https://www.atptour.com/en/scores/current"]},
+    {"id": "BR-04", "subject": "Volleyball has no standings feed", "severity": "medium", "detail": "The SV-Women standings page returned a title with no rows. Only the two fixtures that are an immediate rematch of a match whose set scores were read on the same page can be priced.", "evidence": ["https://en.volleyballworld.com/volleyball/competitions/svleague-women/standings/"]},
+    {"id": "BR-05", "subject": "Volleyball schedule gender label conflict", "severity": "low", "detail": "The Tauron Liga block is labelled 'Men' in the page filter but carries no gender label in its own rows. No gender is asserted for those rows.", "evidence": ["https://en.volleyballworld.com/global-schedule#fromDate=2026-10-23&yearseason=2026"]},
+    {"id": "BR-06", "subject": "CEV match list absent", "severity": "low", "detail": "https://www.cev.eu/matches/ returns 404 and https://en.volleyballworld.com/volleyball/schedule/ returns Page Not Found. The global schedule endpoint is the only working volleyball fixture source found.", "evidence": ["https://www.cev.eu/matches/", "https://en.volleyballworld.com/volleyball/schedule/"]},
+    {"id": "BR-07", "subject": "WTA idle window", "severity": "low", "detail": "The WTA scores page reported zero live tournaments at 19:36Z, so no WTA fixture is published even though WTA 125 draws for next week exist.", "evidence": ["https://www.wtatennis.com/scores"]}
+  ]
+}

@@ -57,6 +57,7 @@ def main() -> int:
     matches = json.loads((DATA / "matches.json").read_text(encoding="utf-8"))
     picks = json.loads((DATA / "picks.json").read_text(encoding="utf-8"))
     preds = json.loads((DATA / "predictions.json").read_text(encoding="utf-8"))
+    inherited = json.loads((DATA / "inherited.json").read_text(encoding="utf-8"))
     sources = json.loads((DATA / "sources.json").read_text(encoding="utf-8"))
 
     # 1 hashes
@@ -108,6 +109,32 @@ def main() -> int:
             problems.append(f"{p['id']}: duplicate opening with {seen[opening]}")
         seen[opening] = p["id"]
     check("every preview passes the publication rules", not problems, "; ".join(problems[:6]))
+
+    # 5b previews carried in from the earlier ledger pass
+    iprob, iseen = [], {}
+    for p in inherited["previews"]:
+        t = p["text"].lower()
+        if p["words"] < 30 or p["words"] != len(p["text"].split()):
+            iprob.append(f"{p['event']}: word count")
+        for bad_word in ("model", "verified", "verification"):
+            if re.search(rf"\b{bad_word}\b", t):
+                iprob.append(f"{p['event']}: contains '{bad_word}'")
+        if not p.get("sources") or not all(sv["url"].startswith("https://") for sv in p["sources"]):
+            iprob.append(f"{p['event']}: source missing or not https")
+        opening = " ".join(p["text"].split()[:6]).lower()
+        if opening in iseen:
+            iprob.append(f"{p['event']}: duplicate opening with {iseen[opening]}")
+        iseen[opening] = p["event"]
+    check("carried previews obey the same prose rules", not iprob, "; ".join(iprob[:6]))
+    check("carried preview count matches the data",
+          inherited["meta"]["published"] == len(inherited["previews"]),
+          f"{inherited['meta']['published']} vs {len(inherited['previews'])}")
+    check("carried previews state their provenance",
+          all("carried" in p["provenance"] for p in inherited["previews"]), "")
+    preview_sports = set(preds["meta"]["by_sport"]) | set(inherited["meta"]["by_sport"])
+    check("preview coverage is stated for the union of both prose sets",
+          len(preview_sports) == len(set(inherited["meta"]["by_sport"]) | set(preds["meta"]["by_sport"])),
+          f"{len(preview_sports)} sports")
 
     # 6 links and fragments
     broken, checked = [], 0

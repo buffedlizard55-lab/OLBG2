@@ -122,6 +122,8 @@ def build():
     lines = load("lines.json")
     picks = load("picks.json")
     preds = load("predictions.json")
+    inh = load("inherited.json")
+    PREVIEW_SPORTS = sorted(set(preds["meta"]["by_sport"]) | set(inh["meta"]["by_sport"]))
     flags = load("flagged.json")
     sources = load("sources.json")
     review = load("repo_review.json")
@@ -190,7 +192,7 @@ def build():
 <p>OLBG listed <b>{len(events)}</b> upcoming events in the fifteen requested sports when the pages were captured.
 <b>{sum(1 for e in events if e["verify"]["state"] != "unmatched")}</b> of them were matched to an official source,
 <b>{sum(1 for e in events if e.get("our_markets"))}</b> carry our own price, and <b>{len(preds["predictions"])}</b> written previews
-were published. Alongside that, <b>{len(priced_fixtures)}</b> official schedule fixtures (NHL, MLB, EuroLeague) were priced from
+were published, with <b>{len(inh["previews"])}</b> more carried over from this desk's predecessor. Alongside that, <b>{len(priced_fixtures)}</b> official schedule fixtures (NHL, MLB, EuroLeague) were priced from
 official season records, producing <b>{picks["meta"]["selections"]}</b> selections.</p>
 <p class="note">Where a sport has no official numeric input today, the desk says so and leaves the market blank. It never borrows a
 price from a bookmaker and calls it ours, and it never writes a preview without a fact behind it.</p>
@@ -203,6 +205,7 @@ price from a bookmaker and calls it ours, and it never writes a preview without 
 {kpi(len(high), "high-confidence picks", "≥ 70% on our price")}
 {kpi(len(high_band), "high and inside −250…+10000", "the brief's two rules together")}
 {kpi(len(preds["predictions"]), "written previews", f"{preds['meta']['min_words']}–{preds['meta']['max_words']} words each")}
+{kpi(len(inh["previews"]), "previews carried in", f"prose rules re-checked; {len(PREVIEW_SPORTS)} of 15 sports covered in total")}
 {kpi(flags["meta"]["items"], "open review items", "see Flagged for review")}
 </div>
 
@@ -223,7 +226,8 @@ pairing. Priced means a line was originated for that row. Previews counted from 
 <h2>What this page does not claim</h2>
 <ul class="plain">
 <li>It is not a complete live slate. It is what OLBG listed at {E(CAPTURE_WINDOW.split(' to ')[-1])} plus the official schedules captured alongside it.</li>
-<li>Eleven sports have no preview today because no official form, table or result line for their fixtures could be captured. They are named individually on the flagged page.</li>
+<li>Previews exist for {len(PREVIEW_SPORTS)} of 15 sports. The rest are named individually on the flagged page rather than filled with words that no capture supports.</li>
+<li>{len(inh["previews"])} of the previews were written by this desk's predecessor in the same scope and are marked <em>carried</em>: their facts were not re-read today, only their wording rules re-checked.</li>
 <li>Injuries are absent by design: no official team-news feed was readable, so none is asserted.</li>
 </ul>
 <p><a class="button" href="flagged.html">Read the {flags["meta"]["items"]} review items</a>
@@ -357,12 +361,33 @@ about −233, which is shorter than the band's −250 floor, so only selections 
 <details><summary>The facts behind it</summary><ul class="facts">{facts}</ul>
 <p class="src">Official source: {link(p['prediction_source'], p['prediction_source'])}</p></details>
 </article>""")
+    inh_cards = []
+    for p in sorted(inh["previews"], key=lambda x: (SPORTS.index(x["sport"]) if x["sport"] in SPORTS else 99, -x["prob"])):
+        srcs = "".join(f'<li>{link(sv["url"], sv["name"] or sv["url"])} <span class="muted">{E(sv["used_for"])}</span></li>'
+                       for sv in p["sources"])
+        inh_cards.append(f"""
+<article class="preview">
+<div class="pv-head"><h3>{E(p['sport'])} · {E(p['event'])}</h3>
+<div class="pv-tags">{conf_tag(p['confidence'].lower())}{badge(p['selection'] + ' ' + str(p['american'] or ''), 'pick')}{badge('carried', 'neutral')}
+{badge(f"{p['words']} words", 'neutral')}</div></div>
+<p class="pv-pick"><b>Selection:</b> {E(p['selection'])} — {E(p['market'])} at <b>{E(str(p['american'] or '—'))}</b>
+<span class="muted">({E(p['date'])} · {E(p['competition'] or '')} · earlier fixture id {E(p['carried_fixture_id'])})</span></p>
+<p class="pv-text">{E(p['text'])}</p>
+<details><summary>Sources it was written from</summary><ul class="facts">{srcs}</ul></details>
+</article>""")
     body = f"""
 <h2>Written previews — {len(preds['predictions'])}</h2>
 <p class="note">Each preview is at least 30 words, unique, names the selection, and cites at least two facts taken from the official
 capture linked beneath it. Injury status is omitted everywhere: no official team-news feed was readable today, so no preview
-asserts one. Preview coverage is {len(preds['meta']['by_sport'])} of 15 sports; the shortfall is item L-01 on the flagged page.</p>
+asserts one. Preview coverage is {len(PREVIEW_SPORTS)} of 15 sports; the shortfall is item L-01 on the flagged page.</p>
 <div class="previews">{"".join(cards)}</div>
+<h2>Carried previews — {len(inh['previews'])}</h2>
+<p class="note">These were written against this desk's predecessor in the same <code>/ledger/</code> scope (session
+<code>{E(inh['meta']['source_layer'])}</code>) and are carried here rather than dropped. Their fixture ids belong to the earlier
+desk, so they are not joined to a row of this desk's price table and the facts behind them were not re-read today. What was
+re-checked here is the prose rule: length, uniqueness, no forbidden wording, and a live https source. They add coverage in
+{E(", ".join(sorted(set(inh['meta']['by_sport']) - set(preds['meta']['by_sport']))))}.</p>
+<div class="previews">{"".join(inh_cards)}</div>
 """
     pages["predictions.html"] = shell("predictions.html", "Previews", body)
 
@@ -519,9 +544,14 @@ python3 scripts/ledger_verify.py       # audit the result</pre>
                    E(f.get("venue") or "—"),
                    E(f'{f["markets"]["win"][0]["selection"]} {f["markets"]["win"][0]["american"]} / {f["markets"]["win"][1]["selection"]} {f["markets"]["win"][1]["american"]}'),
                    link(f["official_url"], "official")] for f in fxs]
+        inh_s = [p for p in inh["previews"] if p["sport"] == s]
         pv = "".join(f'<article class="preview"><h3>{E(p["event"])} — {E(p["selection"])}</h3><p>{E(p["text"])}</p>'
                      f'<p class="src">{link(p["prediction_source"], "official source")} · {p["words"]} words</p></article>'
                      for p in preds_s)
+        pv += "".join(f'<article class="preview"><h3>{E(p["event"])} — {E(p["selection"])}</h3><p>{E(p["text"])}</p>'
+                      f'<p class="src">carried from the earlier ledger pass · '
+                      + " ".join(link(sv["url"], "source") for sv in p["sources"])
+                      + f' · {p["words"]} words</p></article>' for p in inh_s)
         body = f"""
 <p class="crumb"><a href="../index.html">Overview</a> / <a href="../matches.html">OLBG matches</a> / {E(s)}</p>
 <h2>{E(s)}</h2>
@@ -529,7 +559,7 @@ python3 scripts/ledger_verify.py       # audit the result</pre>
 {kpi(len(evs), "OLBG events", "upcoming at capture")}
 {kpi(len([e for e in evs if e["verify"]["state"] != "unmatched"]), "verified", "official source found")}
 {kpi(len(fxs), "priced fixtures", "our own markets")}
-{kpi(len(preds_s), "previews", "written")}
+{kpi(len(preds_s) + len(inh_s), "previews", f"{len(preds_s)} written here, {len(inh_s)} carried")}
 </div>
 <h3>OLBG listings</h3>
 {table(["Start (UTC)", "Event", "Competition", "OLBG quote", "Official check", "Source"], mrows)}
@@ -542,6 +572,24 @@ python3 scripts/ledger_verify.py       # audit the result</pre>
 """
         pages[f"sports/{SLUG[s]}.html"] = shell(f"sports/{SLUG[s]}.html" if s == "Golf" else "",
                                                 s, body, prefix="../")
+
+    cards = []
+    for s in SPORTS:
+        evs = [e for e in events if e["sport"] == s]
+        n_ok = len([e for e in evs if e["verify"]["state"] != "unmatched"])
+        n_pv = len([p for p in preds["predictions"] if p["sport"] == s]) + len([p for p in inh["previews"] if p["sport"] == s])
+        n_hi = len([p for p in picks["picks"] if p["sport"] == s and p["confidence"] == "high"])
+        cards.append(f"""<a class="card" href="{SLUG[s]}.html">
+<h3>{E(s)}</h3>
+<p><b>{len(evs)}</b> OLBG events · <b>{n_ok}</b> matched to an official source</p>
+<p><b>{n_hi}</b> high-confidence picks · <b>{n_pv}</b> previews</p>
+<p class="muted">Open the sport page →</p></a>""")
+    pages["sports/index.html"] = shell("sports/index.html", "Sports",
+        f"""<h2>Fifteen sports</h2>
+<p class="note">Each sport page carries its OLBG listing, the official source check for every row, our own prices, the priced
+official fixtures and the previews. Sports with no readable official input today say so on the card and in detail on the
+<a href="../flagged.html">flagged page</a>.</p>
+<div class="cards">{"".join(cards)}</div>""", prefix="../")
 
     return pages
 

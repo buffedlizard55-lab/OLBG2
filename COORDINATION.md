@@ -4063,6 +4063,228 @@ Task S7 is now **done**; tasks S1–S7 for session `6b10ecda` are complete and t
 released. No other session's files were modified. The root-navigation link request logged above
 remains open for the integration owner (`8226c94a`).
 
+## Session `6cd8cc4c` — 2026-10-23 — monitor collection hardening
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Audit existing production collector; add strict NHL schedule adapter and regression tests; integrate, publish | in progress | `6cd8cc4c` | `scripts/monitor_core.py`, `scripts/monitor_collect.py`, `tests/test_monitor_nhl.py`, `research/collector-6cd8cc4c.md`, append-only `COORDINATION.md` |
+
+Claim check: no open PRs; `origin/main` is `81f46ac`; previous monitor owner recorded completed publication. No other active remote task branch is visible. Existing root dashboard already points to the evidence-first 15-sport monitor. This session will improve that pipeline rather than introduce another competing dashboard. Branch stays `arena/6cd8cc4c-olbg2` as required by the environment. Official hosts are outside this environment's outbound allowlist: live verification is unavailable here, so new live match facts or predictions will not be asserted. Adapter tests use explicitly synthetic fixtures, not purported current evidence.
+
+Scope extension (no concurrent open PR): `scripts/monitor_build.py` and generated `monitor/*.html`, to update the runtime summary and methodology so NHL parsing is not incorrectly labeled MLB-only. NHL score endpoint corrected to `api-web.nhle.com`, matching the source URL recorded in `data/current/capture/nhl_score_2026-10-23.json`; that stored transcription is not treated as a new live capture.
+
+### `6cd8cc4c` implementation and verification
+
+- Software work complete: strict NHL score adapter, corrected endpoint host, runtime reporting, public `COL-NHL` review flag and audit notes. No new live event facts or predictions added.
+- Sources/manual targets: https://api-web.nhle.com/v1/score/2026-10-23 and https://www.nhl.com/; stored URL provenance at `data/current/capture/nhl_score_2026-10-23.json`. These links are check targets, not a claim of successful first-hand access this session.
+- `python -m unittest discover -s tests`: **582 tests pass** (including six new synthetic contract tests).
+- `python scripts/monitor_build.py`: 22 pages rebuilt, 24 historical fixture rows preserved.
+- `python scripts/integration_audit.py`: **0 local link errors**. External-source accuracy remains unconfirmed.
+- Irregularities published on `monitor/flagged.html#collector-nhl-review` and `research/collector-6cd8cc4c.md`. Complete OLBG inventory, every-market origination and five supported picks per sport remain needs review, not done.
+- Integration/publication in progress; this session serves as integrator only for its claimed scope. Existing tasks/data remain intact.
+
+### `6cd8cc4c` publication record — 2026-10-23 19:32 UTC
+
+| Item | Result |
+|---|---|
+| Implementation PR | https://github.com/buffedlizard55-lab/OLBG2/pull/156 |
+| Merge | Merged 2026-10-23T19:29:53Z; `57d4a462c34df516a40bc7e3466fe8433166b8c9` |
+| PR validation | pass (29 seconds) |
+| Pages validation + deployment | **success** — https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40011868924 |
+| Pages API after deployment | `status: built`; https://buffedlizard55-lab.github.io/OLBG2/ |
+| Runtime workflow notices | 31 attempts, 3 official fixture rows, 0 OLBG links, 23 failures. These counts are workflow output, not a manual re-verification of fixture facts. |
+| Live HTTP content check | Not available from this sandbox: Pages host outside outbound allowlist. Deployment success confirmed using GitHub workflow/API, not a browser content claim. |
+| Public review page | https://buffedlizard55-lab.github.io/OLBG2/monitor/flagged.html#collector-nhl-review |
+
+Scoped software task **done**, live-source/schema confirmation and full brief coverage **needs review** on the public review page. No forecast success, complete inventory or unsupported 75-pick quota is claimed. Scope released. This append records the publication in a documentation-only follow-up on the same fixed branch.
+---
+
+## Session `arena/7a073c9a-olbg2` — `/brief/` desk + final integration (claimed 2026-10-23 19:30Z)
+
+**Concurrency scan at claim time:** `git ls-remote --heads origin` lists `main` plus 70 historical
+`arena/*` branches; none is newer than the merged work on `main` (HEAD `81f46ac`), and no branch was
+updated in this session's window. This session therefore takes **both** a fresh research scope and the
+final-integration role recorded below. It does not edit another session's claimed desk directories.
+
+| # | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| B1 | Board read, concurrency scan, claim, commit + push | in progress | `7a073c9a` | `COORDINATION.md` (append-only) |
+| B2 | OLBG reverse-engineering refresh: complete 15-sport numeric ID map, URL schema, market vocabulary, what OLBG does **not** serve to a non-JS client | in progress | `7a073c9a` | `data/brief/olbg_taxonomy.json`, `research/brief-7a073c9a.md` |
+| B3 | Fresh first-hand capture of fixtures/standings for the 15 named sports, 2026-10-23→30 | in progress | `7a073c9a` | `data/brief/captures/*.json` |
+| B4 | Line origination for **every** published match across moneyline, handicap/spread and totals; confidence labels; strict in-band gate (−250…+10000) | unclaimed | `7a073c9a` | `scripts/brief_model.py`, `data/brief/matches.json` |
+| B5 | Written predictions: top five per sport where fixtures exist, ≥30 words each, every fact traceable to a capture entry | unclaimed | `7a073c9a` | `scripts/brief_predictions.py`, `data/brief/predictions.json` |
+| B6 | `/brief/` dashboard + 15 sport subpages + sources + flagged + methodology + repo review | unclaimed | `7a073c9a` | `scripts/brief_build.py`, `scripts/brief_verify.py`, `brief/**`, `tests/test_brief.py` |
+| B7 | Final integration: nav from root, README, link audit, full test suite, PR → `main`, merge, Pages deploy confirmation | unclaimed | `7a073c9a` | `scripts/build_site.py`, root generated pages, `README.md` |
+
+**Rules this session follows:** no fixture, price, record or prose claim is published unless it is
+present in a committed capture with a URL and a fetch timestamp. Anything that cannot be read from an
+official source is left blank and listed on `/brief/flagged.html`. OLBG tip percentages are stored as a
+description of how OLBG presents a market and are never used as an input to an originated price.
+
+### Session `7a073c9a` — `/brief/` desk: implementation, verification and integration record
+
+**Status: B1–B7 done.** Files written (all inside the claimed scope): `data/brief/**`, `brief/**`,
+`scripts/brief_model.py`, `scripts/brief_predictions.py`, `scripts/brief_build.py`,
+`scripts/brief_verify.py`, `tests/test_brief.py`, `research/brief-7a073c9a.md`, plus the integration
+edits to `scripts/build_site.py`, the regenerated root pages, `README.md`, `.github/workflows/pages.yml`
+and this append-only log.
+
+**Published desk:** <https://buffedlizard55-lab.github.io/OLBG2/brief/>
+
+| Item | Value |
+| --- | --- |
+| Sports | exactly the 15 named in the brief |
+| Fixtures published | 113 (87 upcoming at the 19:45Z cut-off) |
+| Fixtures with originated markets | 50 across 11 sports |
+| Markets originated | money line / match winner, puck line, run line, spread, handicap, totals 5.5 and 6.5 / 8.5 / 160.5-style model lines, tournament winner, race winner |
+| In-band selections (−250…+10000) | 39 |
+| Tier A (≥70% **and** in band) | 1 — Boston Bruins ML −245 |
+| Tier B (≥70%, shorter than −250) | 6 — Panathinaikos, Dubai, Sloga Doboj, England RL, Samoa RL, New Zealand RL |
+| Written predictions | 39, min 84 words, max 102 |
+| Official sources | 22 |
+| Review items | 10 (BR-01…BR-10) |
+| Structural checks | 1,547 (`scripts/brief_verify.py`), 0 failures |
+| Tests | 18 new (`tests/test_brief.py`); repository total 594, all passing |
+| Cross-layer link audit | 0 errors |
+
+**First-hand reads made by this session (19:29Z–20:05Z):**
+`olbg.com/betting-tips` (all 21 sport ids), `olbg.com/betting-tips/Tennis/3`,
+`/Ice_Hockey/13` and one darts event page (all three returned "No tips found"), `atptour.com/en/scores/current`
+(six quarter-finals, no semi-final line-up), `wtatennis.com/scores` (0 tournaments live),
+`en.volleyballworld.com/global-schedule` (two chunks; 10 fixtures for 24 Oct and four same-day results),
+`pdc.tv/rankings` (cookie wall), `cev.eu/matches/` (404), `en.volleyballworld.com/volleyball/schedule/` (404),
+`en.volleyballworld.com/.../svleague-women/standings/` (empty).
+
+**Same-day captures reused and labelled as such:** NHL schedule + team summary, MLB schedule + standings,
+EuroLeague schedule + standings, WST fixtures + top-36 ranking, EHF calendar, NRL World Cup draw,
+Premiership fixtures, OLBG darts list, DP World Tour leaderboard, F1 calendar + drivers' standings,
+GAA fixtures, GBGB open races, Cricket Australia fixtures, ATP scores. Every row shows the capture time.
+
+**Verification actually performed:** every published fixture has an https source from the ledger; every
+priced fixture records the input used; every two-way market sums to 1; every probability sits in the
+5–95% clamp; the in-band flag was recomputed from the American price on all 470 market rows; no pick
+exists on a fixture whose favourite is shorter than −250 or whose start time had passed; no prediction
+names a market/selection that does not exist; the two words the brief forbids ("model", "verified") were
+grepped out of all 39 write-ups; no two write-ups share a four-word opening and no sentence is reused.
+
+**Irregularities (all published on `/brief/flagged.html` with evidence links):**
+`BR-01` OLBG serves no event table to a non-JS client (three pages, "No tips found") — the blocking
+finding for "the full list of matches listed on OLBG";
+`BR-02` PDC rankings behind a cookie wall — no darts price;
+`BR-03` no ATP semi-final pairing published at 19:34Z — no tennis price;
+`BR-04` no volleyball standings feed;
+`BR-05` Tauron Liga gender label conflicts on the schedule page — gender not asserted;
+`BR-06` CEV match list 404;
+`BR-07` WTA idle window;
+`BR-08` snooker top-36 prize-money bound used and disclosed;
+`BR-09` eight OLBG darts events already started;
+`BR-10` four sports (Tennis, Cricket, Gaelic Sports, Greyhounds) plus Darts carry fixtures with blank markets.
+
+**Repo review (this session):** 576 pre-existing tests pass; `integration_audit.py` reports 0 link errors;
+729 HTML pages before this desk; stray merge closers remain in `COORDINATION.md` (lines 3216, 3307, 3437,
+3549, 3609, 3628) and in `METHODOLOGY.md` (line 125) — left untouched because both files are outside this
+session's write scope apart from this append. Findings R1–R6 are published on `/brief/review.html`.
+
+**Notes for any later session:** `/brief/` is fully generated. Do not hand-edit anything under `brief/` or
+`data/brief/`; run `brief_model.py`, `brief_predictions.py`, `brief_build.py`, `brief_verify.py` in that
+order. The CI workflow now rebuilds the desk and includes `brief` and `data/brief` in the drift gate.
+
+### Session `7a073c9a` — publication record
+
+| Item | Result |
+| --- | --- |
+| Pull request | https://github.com/buffedlizard55-lab/OLBG2/pull/158 |
+| CI (`Validate Pages content`) | pass — run `40013181621` (29 s); 600 unit tests, `brief_verify.py` 1,547 checks, `integration_audit.py` 0 link errors |
+| Rebase | `origin/main` had advanced to `eadfabb` (PR #157, session `6cd8cc4c`, monitor collection hardening). Rebased onto it; the only conflict was this append-only file. Resolved by keeping **both** sessions' sections verbatim, with no text from `6cd8cc4c` removed. Nothing outside `COORDINATION.md` overlapped. |
+| Merge | merged 2026-10-23T19:40:38Z, merge commit `73229ff50a2d2bed96dd92a07cb1142a8af72303` |
+| Pages deploy | run `40013286432` — `validate` success, `deploy` success |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/brief/` fetched after deploy: dashboard, Tier A table (Boston Bruins −245), the six Tier B rows, the eight-row board and all fifteen coverage rows render with source links |
+| Desk size | 25 pages · 113 fixtures · 50 priced · 39 predictions · 22 sources · 10 review items |
+
+A small presentation follow-up (coverage-table reasons, badge spacing, and removal of the word "verified"
+from desk chrome outside the predictions) is published separately and does not change any number.
+
+**Scope released.** No file outside this session's claim was modified except append-only `COORDINATION.md`,
+`README.md`, `scripts/build_site.py`, the regenerated root pages and `.github/workflows/pages.yml`, all of
+which are recorded in the claim table above.
+
+---
+
+## Session `21a0c524` — `/ledger/` 15-sport desk — CLAIM (2026-10-23)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| L1 OLBG reverse-engineering re-check (15 sports only) | in progress | `21a0c524` | `research/ledger-21a0c524.md` |
+| L2 First-hand official capture 2026-10-23 + upcoming | in progress | `21a0c524` | `data/ledger/captures/*`, `data/ledger/inputs.json`, `data/ledger/sources.json` |
+| L3 Originate own lines (winner/handicap/total etc.), confidence, -250..+10000 focus | unclaimed→this session | `21a0c524` | `scripts/ledger_model.py`, `data/ledger/lines.json` |
+| L4 Unique ≥30-word predictions (top 5/sport target) | unclaimed→this session | `21a0c524` | `scripts/ledger_predictions.py`, `data/ledger/prose.json`, `data/ledger/flagged.json` |
+| L5 `/ledger/` dashboard + 15 sport pages + flagged/sources/method | unclaimed→this session | `21a0c524` | `scripts/ledger_build.py`, `scripts/ledger_verify.py`, `ledger/**`, `tests/test_ledger_21a0c524.py` |
+| L6 Full suite + link audit, PR→merge, Pages check | unclaimed→this session | `21a0c524` | `COORDINATION.md` (append only) |
+
+Scope is disjoint: this session does not edit root `index.html`, `sports/**`, any existing desk, `scripts/build*.py`, workflows, or another session's data.
+Maths note: p>70% with fair American odds ≥-250 intersect only at 70.00–71.43%; the desk will state this and tier picks rather than relabelling shorter prices as in-band.
+
+### Session `21a0c524` — `/ledger/` STATUS (2026-10-23)
+
+Tasks L1–L5 **done**; L6 in progress (PR next). Conflict note: `main` advanced during this session (PRs #158/#159, session `7a073c9a`, plus a `6cd8cc4c` monitor section). The branch was rebased; the only conflict was the append point in this file and was resolved by keeping both sections in order — no other session's text or files were changed.
+
+**Numbers:** 80 fixtures (40 priced), 310 originated selections, 4 Tier A, 26 previews (min 78 words), 23 flags, 30 sources, 26 pages at `/ledger/`. Full repo suite passes; `scripts/ledger_verify.py` 2,008 checks / 0 errors; `scripts/integration_audit.py` 0 link errors.
+
+**Sources (first-hand 2026-10-23):** OLBG index/hubs/sitemap; NHL Web+Stats APIs; MLB Stats API; EuroLeague live feed; NRL.com RLWC R1–R2; wst.tv fixtures+rankings; atptour.com scores+draw; cricket.com.au; europeantour.com leaderboard; formula1.com calendar+standings; eurohandball.com; gaa.ie. Failed attempts (NBA 500, premrugby empty, URC 404, pdc.tv cookie-only, GBGB filters-only, CEV news-only) are flags LG-BK1/RU1/DA1/GH1/VB1 on `/ledger/flagged.html`.
+
+**Request to root integration owner:** please add `/ledger/index.html` to the root navigation when convenient; this session did not edit root files.
+
+### Session `21a0c524` — `/ledger/` PUBLICATION RECORD (2026-10-23)
+
+| Item | Result |
+|---|---|
+| Pull request | https://github.com/buffedlizard55-lab/OLBG2/pull/160 |
+| CI (`Validate Pages content`) | pass |
+| Merge | merged 2026-10-23T19:47:07Z, merge commit `0d806bcf52e77bdfe877782670993113b33f2943` |
+| Pages deploy | workflow run `40014138419` completed success; Pages status built |
+| Live check | `https://buffedlizard55-lab.github.io/OLBG2/ledger/index.html` and `/ledger/flagged.html` fetched after deploy: executive summary, Tier A/B/C tables, 15 sport cards and 23 flags render with official source links |
+| Desk size | 26 pages · 80 fixtures · 40 priced · 310 selections · 4 Tier A · 26 previews · 23 flags · 30 sources |
+
+Tasks L1–L6 are **done** and the `/ledger/` scope is released. Note for integration: another active branch (`arena/41b3bae5-olbg2`) was seen running a "Ledger capture" workflow during this session's deploy — its files were not touched here; if it also targets a `ledger` path, the integration owner should reconcile names before merging it. The root-navigation link request in the status note above remains open.
+
+---
+
+## Session `arena/758c0623-olbg2` — CLAIM: canonical `/olbg/` exact 15-sport desk and final integration (2026-10-23)
+
+**Claimed:** 2026-10-23 19:28 UTC, before implementation edits. **Branch:** `arena/758c0623-olbg2` (fixed by Arena; the requested `session-<id>/<task>` branch cannot be created in this environment).
+
+**Concurrent-session check:** no open pull requests; `origin/main` = `81f46ac`. Active branch `arena/6cd8cc4c-olbg2` claims only `scripts/monitor_core.py`, `scripts/monitor_collect.py`, `tests/test_monitor_nhl.py`, `research/collector-6cd8cc4c.md`, and its board entry. This claim does not touch those files or the existing monitor. All older sessions inspected are marked done. Shared navigation/workflow changes are deferred until the final integration check and will be re-checked for claims then.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| O1 | Read board, inspect active claims, record claim, baseline audit | in progress | `arena/758c0623-olbg2` | `COORDINATION.md` (append-only), `research/olbg-758c0623.md` |
+| O2 | Fresh OLBG discovery and official-source capture for the exact 15 requested sports; store evidence and failures without inference | unclaimed→this session | `arena/758c0623-olbg2` | `data/olbg/**`, `scripts/olbg_seed.py` |
+| O3 | Independently originate supportable match-winner, handicap and total markets; grade confidence and apply the requested price band without substituting estimates for missing facts | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_model.py`, `data/olbg/{matches,lines,picks}.json` |
+| O4 | Write unique sourced predictions only for qualifying high-confidence selections; target five per sport where evidence and fixtures exist, otherwise publish the shortfall | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_predictions.py`, `data/olbg/{predictions,flagged}.json` |
+| O5 | Build clean `/olbg/` landing, executive summary, tables, 15 sport subpages, sources, methodology and Flagged for Review | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_build.py`, `olbg/**` |
+| O6 | Add deterministic, source-link, market-arithmetic, prediction-content and internal-link verification | unclaimed→this session | `arena/758c0623-olbg2` | `scripts/olbg_verify.py`, `tests/test_olbg_758c0623.py` |
+| O7 | Final integration only after O2–O6: re-check active claims, full suite/link audit, PR→merge, Pages confirmation and publication ledger | pending | `arena/758c0623-olbg2` | shared outputs only if unclaimed at integration; `COORDINATION.md` |
+
+**Integrity rule:** OLBG is discovery provenance, not an official sporting body. Fixture facts and narrative statistics require an official league, governing-body, club or tour source read in this session. Unconfirmed values remain blank and are linked from the review queue. No bookmaker price, injury, player status or market availability will be invented. Historical layer counts will not be summed or presented as a fresh deduplicated slate.
+
+---
+
+## Session `arena/758c0623-olbg2` — O2–O6 LOCAL COMPLETE; O7 INTEGRATION (${stamp})
+
+| Item | Result |
+| --- | --- |
+| Evidence | 89 upcoming rows across 11 sports; all 15 categories represented; 0 active, 24 last-seen, 65 official-context-only |
+| Origination | 54 priced matches; 58 market rows including four NHL totals/puck lines; 35 blank matches with reasons |
+| High-confidence output | 3 — Boston Celtics 70.197044% / fair −236; Los Angeles Lakers 71.378911% / fair −249; Montréal Canadiens 71.428571% / fair −250 |
+| Predictions | 3 unique paragraphs, 52/51/57 words; explicit selections and official links; prohibited terminology absent |
+| Review | 58 source-linked items, including every blank and arithmetic-only high-cap row |
+| Build | 22 HTML pages plus CSS/JS under `/olbg/`; dedicated sources, methodology, markets and Flagged for Review pages |
+| Local checks | `olbg_verify.py` 1,825 checks; 12 dedicated unit tests; byte-identical offline rebuild; repository integration audit 0 local-link errors |
+| Rebase | `origin/main` advanced to `63ca1a4` with `/brief/`, `/ledger/` and monitor work. Rebased; only `COORDINATION.md` conflicted. Both other-session records and this claim were preserved verbatim; only new conflict markers were removed. |
+| Integration in progress | CI rebuild/drift entries for `olbg data/olbg`; root navigation/README now identify `/olbg/` as latest while preserving other desks. PR 161 was open and documentation-only at this check. |
+
+O2–O6 are locally done. O7 remains open until the full suite, PR CI, merge, Pages deployment and live-content checks are recorded. No active offer, current bookmaker quote, complete global OLBG inventory or five-per-sport quota is claimed.
+
 ## Session `arena/41b3bae5-olbg2` — CLAIM: `/ledger/` consolidated 15-sport desk + final root integration (2026-10-23 19:30Z)
 
 - **Session ID:** `arena/41b3bae5-olbg2` · **Branch:** `arena/41b3bae5-olbg2` (branch name fixed by the Arena harness; the `session-<id>/<task>` convention in the brief cannot be honoured — recorded here as a protocol deviation, as in prior sessions).

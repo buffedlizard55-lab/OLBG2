@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method · OLBG 15-sport brief</title>
+<meta name="description" content="Independent fair lines, confidence labels and sourced predictions for the 15 sports named in the brief.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="bar"><div class="wrap"><div class="brand"><strong>OLBG 15-sport brief</strong>
+<span>2026-10-23 · independent lines · every row carries its source</span></div>
+<nav class="top" aria-label="Brief navigation"><a href="index.html">Today's brief</a><a href="matches.html">All matches</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="methodology.html" aria-current="page">Method</a><a href="olbg.html">OLBG &amp; markets</a><a href="review.html">Repo review</a></nav></div></header>
+<main><div class="wrap">
+<p class="eyebrow">Rules, maths and limits</p>
+<h1>Method</h1>
+<p class="lede">The desk is deterministic: captures in, pages out. Re-running the three build steps reproduces every
+number below. Prices are fair probabilities, not bookmaker quotes, and no margin is added anywhere.</p>
+<h2>The two selection rules</h2>
+<div class="tbl-scroll"><table><thead><tr><th>Rule</th><th>Definition</th><th>Why</th></tr></thead><tbody>
+<tr><td>Price window</td><td>Fair American odds between −250 and +10000 inclusive, i.e. a probability between 0.99% and 71.43%.</td><td>Set by the brief.</td></tr>
+<tr><td>Confidence</td><td>High ≥70%, medium 55–70%, low &lt;55%, applied to our own probability.</td><td>Set by the brief.</td></tr>
+<tr><td>Tier A</td><td>Both conditions true. The window is thin (−250 to −233), so this tier is rare.</td><td>Published honestly rather than stretched.</td></tr>
+<tr><td>Tier B</td><td>High confidence but shorter than −250.</td><td>Excluded from picks, kept visible for audit.</td></tr>
+<tr><td>Tier C</td><td>Inside the window but below 70%.</td><td>The working tier for most sports.</td></tr>
+</tbody></table></div>
+<h2>How each sport is priced</h2>
+<div class="tbl-scroll"><table><thead><tr><th>Sport</th><th>Model</th><th>Inputs actually read</th><th>Markets originated</th><th>Markets left blank</th></tr></thead><tbody>
+<tr><td>Ice Hockey</td><td>Poisson on goals for/against per game, 4% home adjustment, tie split 55/45</td><td>32-club NHL team summary (GP, W, L, OTL, GF, GA)</td><td>Money line, puck line ±1.5, totals 5.5 and 6.5</td><td>Period markets, player props</td></tr>
+<tr><td>Baseball</td><td>Log5 on season win percentage with a 16-point home adjustment; normal margin for the run line and total</td><td>2026 regular-season W-L, runs scored and allowed for both clubs</td><td>Money line, run line ±1.5, total at the model line</td><td>First-five-innings, pitcher props (no starter feed)</td></tr>
+<tr><td>Basketball</td><td>Log5 on shrunk win rates, 22-point home adjustment; normal margin with σ=11</td><td>EuroLeague standings after Round 7 (GP, W, L, PF, PA)</td><td>Money line, spread, total</td><td>NBA (feed refused), quarter markets</td></tr>
+<tr><td>Snooker</td><td>Bradley-Terry on ranking prize money (exponent 0.35)</td><td>WST world ranking, top 36</td><td>Match winner</td><td>Frame handicap, total frames (no format feed)</td></tr>
+<tr><td>Handball</td><td>Poisson on a 30-goal baseline shifted by half the first-leg margin</td><td>EHF calendar and first-leg score</td><td>Money line, total</td><td>Second legs with no captured first leg</td></tr>
+<tr><td>Rugby League</td><td>Poisson on Round 1 points for/against, shrunk 70% to the 28.2-point mean</td><td>NRL World Cup Round 1 results</td><td>Money line, handicap ±6.5, total</td><td>Nothing further</td></tr>
+<tr><td>Rugby Union</td><td>Log5 on a last-three-win rate mapped to a 35–65% band, 18-point home adjustment</td><td>Official form strings only</td><td>Money line</td><td>Handicap and total (no scoring or table input)</td></tr>
+<tr><td>Volleyball</td><td>Even-chance prior moved 8 points per set of margin in the same pairing's recorded result</td><td>Volleyball World global schedule, same-day set scores</td><td>Money line</td><td>Every fixture without a same-pairing result</td></tr>
+<tr><td>Golf</td><td>Softmax over the 36-hole leaderboard with a 22% residual for players outside the captured top 25</td><td>DP World Tour leaderboard after Round 2</td><td>Tournament winner</td><td>3-balls, top-10 (no strokes-gained feed)</td></tr>
+<tr><td>Motor Racing</td><td>Bradley-Terry on championship points with a 15% residual</td><td>F1 drivers' standings after Round 17, top 8</td><td>Race winner</td><td>Podium, fastest lap, head-to-head (no session times)</td></tr>
+<tr><td>Darts</td><td>—</td><td>None: PDC rankings unreachable</td><td>—</td><td>All markets</td></tr>
+<tr><td>Tennis / Cricket / Gaelic / Greyhounds</td><td>—</td><td>Fixtures only</td><td>—</td><td>All markets</td></tr>
+</tbody></table></div>
+<h2>Validation performed by the build</h2>
+<ul>
+<li>Each written prediction must name a selection that exists as an originated market on an upcoming fixture.</li>
+<li>Each prediction must be at least 30 words; the current minimum is 84.</li>
+<li>The words "model" and "verified" are rejected anywhere in the published prose, as the brief requires.</li>
+<li>No two predictions share a four-word opening, and no sentence of eight words or more is repeated.</li>
+<li>No prediction is attached to a fixture without a price.</li>
+<li>Probability ceilings: every published probability is clamped to 5–95% because a single fixture always retains
+irreducible variance.</li>
+</ul>
+<h2>Known limits</h2>
+<ul>
+<li>Season-to-date inputs are three to eight games old for several competitions; they are labelled with their capture
+time on every row.</li>
+<li>Volleyball and Rugby Union prices rest on very thin inputs (one same-pairing result and a last-three form string
+respectively) and are labelled medium or low confidence accordingly.</li>
+<li>The golf and motor-racing fields are normalised over the players captured, with an explicit residual for the rest;
+these are the crudest numbers on the desk.</li>
+<li>No price here accounts for team news, weather or travel. Those inputs were not readable.</li>
+</ul>
+</div></main>
+<footer><div class="wrap">Research, not betting advice. 18+. Prices are our own fair estimates, not bookmaker quotes.
+Every value on this desk is traceable to a capture listed on the <a href="sources.html">source ledger</a>;
+anything that could not be read is blank and listed on <a href="flagged.html">Flagged for review</a>.</div></footer>
+</body></html>

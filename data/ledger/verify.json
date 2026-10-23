@@ -1,7 +1,7 @@
 {
  "generated_at": "2026-10-23T19:52:16Z",
- "checks": 14,
- "passed": 14,
+ "checks": 18,
+ "passed": 18,
  "failed": 0,
  "failures": [],
  "detail": [
@@ -36,7 +36,27 @@
    "detail": ""
   },
   {
-   "check": "internal links resolve (397 checked)",
+   "check": "carried previews obey the same prose rules",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "carried preview count matches the data",
+   "ok": true,
+   "detail": "26 vs 26"
+  },
+  {
+   "check": "carried previews state their provenance",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "preview coverage is stated for the union of both prose sets",
+   "ok": true,
+   "detail": "9 sports"
+  },
+  {
+   "check": "internal links resolve (421 checked)",
    "ok": true,
    "detail": ""
   },

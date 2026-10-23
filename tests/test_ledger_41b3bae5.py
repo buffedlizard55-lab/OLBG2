@@ -115,10 +115,44 @@ class LedgerProse(unittest.TestCase):
             self.assertTrue(p["prediction_source"].startswith("http"), p["id"])
 
 
+class LedgerInherited(unittest.TestCase):
+    """Previews carried in from the superseded 21a0c524 ledger on the same scope."""
+
+    def test_counts_match_the_data(self):
+        inh = load("inherited.json")
+        self.assertEqual(inh["meta"]["published"], len(inh["previews"]))
+        self.assertGreater(len(inh["previews"]), 20)
+
+    def test_prose_rules_hold(self):
+        seen_text, seen_open = set(), set()
+        for p in load("inherited.json")["previews"]:
+            self.assertGreaterEqual(p["words"], 30, p["event"])
+            self.assertEqual(p["words"], len(p["text"].split()), p["event"])
+            for word in ("model", "verified", "verification"):
+                self.assertIsNone(re.search(rf"\b{word}\b", p["text"].lower()), p["event"])
+            self.assertNotIn(p["text"], seen_text)
+            seen_text.add(p["text"])
+            opening = " ".join(p["text"].split()[:6]).lower()
+            self.assertNotIn(opening, seen_open, p["event"])
+            seen_open.add(opening)
+
+    def test_every_carried_preview_links_https_sources(self):
+        for p in load("inherited.json")["previews"]:
+            self.assertTrue(p["sources"], p["event"])
+            for src in p["sources"]:
+                self.assertTrue(src["url"].startswith("https://"), p["event"])
+            self.assertIn("carried", p["provenance"])
+
+    def test_predictions_page_shows_them(self):
+        page = (OUT / "predictions.html").read_text(encoding="utf-8")
+        self.assertIn("Carried previews", page)
+        self.assertIn("carried", page)
+
+
 class LedgerSite(unittest.TestCase):
     def test_all_pages_exist_and_link_home(self):
         pages = sorted(OUT.rglob("*.html"))
-        self.assertGreaterEqual(len(pages), 25)
+        self.assertGreaterEqual(len(pages), 26)
         for page in pages:
             self.assertIn("OLBG2", page.read_text(encoding="utf-8"))
             self.assertIn("index.html", page.read_text(encoding="utf-8"), page.name)

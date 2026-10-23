@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repository Line-by-Line Audit — Horizon 15-Sport Desk (2026-10-23)</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-top">
+        <a class="brand" href="index.html">HORIZON // 15-Sport Line Origination &amp; Verification Desk</a>
+        <span class="stamp">Snapshot: 2026-10-23T21:40:00Z &middot; Session: arena/9c5af337-olbg2 &middot; Scope: Strictly 15 Sports</span>
+      </div>
+      <nav class="nav-strip" aria-label="Desk navigation">
+      <a href="index.html">Executive Summary</a>
+      <a href="flagged.html">Flagged for Review</a>
+      <a href="olbg-audit.html">OLBG Platform Audit</a>
+      <a href="repo-audit.html" class="active">Repository Audit</a>
+      <a href="sports/golf.html">Golf</a>
+      <a href="sports/volleyball.html">Volleyball</a>
+      <a href="sports/rugby-union.html">Rugby Union</a>
+      <a href="sports/cricket.html">Cricket</a>
+      <a href="sports/snooker.html">Snooker</a>
+      <a href="sports/darts.html">Darts</a>
+      <a href="sports/baseball.html">Baseball</a>
+      <a href="sports/gaelic-sports.html">Gaelic Sports</a>
+      <a href="sports/greyhounds.html">Greyhounds</a>
+      <a href="sports/tennis.html">Tennis</a>
+      <a href="sports/motor-racing.html">Motor Racing</a>
+      <a href="sports/handball.html">Handball</a>
+      <a href="sports/ice-hockey.html">Ice Hockey</a>
+      <a href="sports/basketball.html">Basketball</a>
+      <a href="sports/rugby-league.html">Rugby League</a>
+      <a href="../index.html">Repo Root Hub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Line-by-Line Repository Audit (19 Findings Logged)</h1>
+    <p class="lede">
+      Results of inspecting the repository's legacy data, scripts, and HTML surfaces against official governing-body sources and the 15-sport
+      operating rules on 23 October 2026. In accordance with <span class="mono">COORDINATION.md</span>, legacy directories owned by earlier sessions
+      are not overwritten; instead, every discrepancy is documented below with exact file paths, line numbers, and official verification links, and
+      corrected cleanly inside <span class="mono">/horizon/</span>.
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Irregularities Logged</div>
+        <div class="kpi-val">19</div>
+        <div class="kpi-sub">With file paths &amp; line ranges</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Legacy Out-of-Scope HTML</div>
+        <div class="kpi-val">4</div>
+        <div class="kpi-sub">verify/sports/{af,ar,box,esp}.html</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Legacy Forbidden-Word JSONs</div>
+        <div class="kpi-val">5</div>
+        <div class="kpi-sub">0 in data/horizon/predictions.json</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Legacy Unlinked-Row HTMLs</div>
+        <div class="kpi-val">26</div>
+        <div class="kpi-sub">0 in /horizon/ (100% row-linked)</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Audit ID</th>
+            <th>Severity</th>
+            <th>Category</th>
+            <th>File &amp; Lines</th>
+            <th>Finding</th>
+            <th>Official Cross-Check &amp; Horizon Remediation</th>
+            <th>Official Source</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-01</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>Out-of-scope sports in legacy layers</strong></td>
+          <td class="mono">data/fixtures.json:753-899</td>
+          <td>Legacy data/fixtures.json and verify/sports/{american-football,australian-rules,boxing,esports}.html retain 4 sports outside the 15-sport mandate.</td>
+          <td>Cross-checked against the 15-sport mandate on OLBG.com.</td>
+          <td><a href="https://www.olbg.com/betting-tips">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-02</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>Out-of-scope sport pages in /verify/</strong></td>
+          <td class="mono">verify/sports/american-football.html:1-48</td>
+          <td>Four HTML sport pages under verify/sports/ render American Football, Australian Rules, Boxing, and Esports.</td>
+          <td>Confirmed file presence on disk in verify/sports/.</td>
+          <td><a href="https://www.olbg.com/betting-tips">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-03</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>Prohibited words in legacy prediction JSON</strong></td>
+          <td class="mono">data/audit91/predictions.json:1-120</td>
+          <td>Five legacy prediction JSON files (data/audit91/predictions.json, data/canonical/predictions.json, data/clean_room/predictions_audit.json, data/final_audit/predictions_audit.json, data/next_step/predictions_audit.json) contain the words &#x27;model&#x27; or &#x27;verified&#x27;.</td>
+          <td>Scanned all data/**/predictions*.json files with regex \b(model|verified)\b.</td>
+          <td><a href="https://www.olbg.com/betting-tips">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-04</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>Unlinked table rows in earlier static layers</strong></td>
+          <td class="mono">audit/flagged.html:26-100</td>
+          <td>26 legacy HTML pages across audit/, verify/,board/, and pulse/ contain data-table rows without an anchor tag to an official source.</td>
+          <td>Parsed every &lt;tbody&gt;&lt;tr&gt; across all repository HTML files.</td>
+          <td><a href="https://www.olbg.com/betting-tips">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-05</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>Fabricated Oct 19-20 fixtures in legacy data/fixtures.json</strong></td>
+          <td class="mono">data/fixtures.json:16-1405</td>
+          <td>Legacy data/fixtures.json contains 75 fabricated Oct 19-20 fixtures (e.g., Ryder Cup, Presidents Cup, ATP Stockholm/Antwerp, fake PBA bowling/volleyball) with synthetic source_verified=True flags.</td>
+          <td>Verified against live PGA TOUR, ATP Tour, MLB, and NHL schedules for 2026-10-23.</td>
+          <td><a href="https://www.pgatour.com/leaderboard">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-06</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>Stale Northern Ireland Open QF3 status in earlier 2026-10-23 desks</strong></td>
+          <td class="mono">data/signal/matches.json:1-160</td>
+          <td>Earlier 2026-10-23 desks captured David Gilbert v Mark Williams while Gilbert led 4-2 in-play; WST now confirms Mark Williams won 6-4 to advance to Semi-Final 2.</td>
+          <td>Fetched https://www.wst.tv/matches/ at 21:40 UTC confirming Match 59 Completed: David Gilbert 4-6 Mark Williams.</td>
+          <td><a href="https://www.wst.tv/matches/">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-07</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>Missing Saturday ATP 250 Brussels &amp; Lyon Semifinals in earlier desks</strong></td>
+          <td class="mono">data/cadence/fixtures.json:1-420</td>
+          <td>Earlier 2026-10-23 desks captured only Almaty SFs and Vienna Q1s because Brussels and Lyon QFs were still in play; ATP Tour has now published Brussels SFs (Fils v Struff, Cerundolo v Griekspoor) and Lyon SF2 (Paul v Fritz).</td>
+          <td>Fetched https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule and lyon/496/daily-schedule at 21:35 UTC.</td>
+          <td><a href="https://www.atptour.com/en/scores/current/brussels/7485/daily-schedule">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-08</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>URC Round 4 Saturday fixtures lacked league-table inputs in earlier desks</strong></td>
+          <td class="mono">scripts/cadence_model.py:443-447</td>
+          <td>Earlier 2026-10-23 desks treated all 5 Saturday URC Round 4 fixtures as having no numeric strength input; the official URC table publishes 3-round W-D-L, PF, PA, DIFF, and PTS for all 10 Saturday clubs.</td>
+          <td>Fetched https://stats.unitedrugby.com/match-centre/table/2026-27 at 21:35 UTC.</td>
+          <td><a href="https://stats.unitedrugby.com/match-centre/table/2026-27">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-09</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>Completed Friday URC Round 4 and LNH StarLigue J08 fixtures</strong></td>
+          <td class="mono">data/signal/matches.json:1-220</td>
+          <td>Three Friday URC Round 4 matches (Cardiff 21-36 Sharks, Connacht 48-27 Zebre, Edinburgh 31-10 Lions) and five Friday LNH J08 matches (Aix 32-26 Toulouse, Chartres 32-33 Nîmes, Limoges 32-24 Dunkerque, Sélestat 24-26 Caen, Tremblay 34-29 Cesson-Rennes) are now Full Time.</td>
+          <td>Fetched URC Match Centre and LNH Calendrier at 21:34 UTC.</td>
+          <td><a href="https://stats.unitedrugby.com/match-centre/2026-27/4">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-10</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>PGA TOUR Butterfield Bermuda Championship R2 completion and -5 cut line</strong></td>
+          <td class="mono">data/cadence/fixtures.json:350-380</td>
+          <td>Earlier captures recorded Eric Cole through 17 holes and a -4 cut line; Cole has now finished R2 with 65-65 (-12, 130) in a five-way tie for T3 behind Hirata and Blanchet (-13), and the projected cut moved to -5.</td>
+          <td>Fetched https://www.pgatour.com/leaderboard at 21:34 UTC.</td>
+          <td><a href="https://www.pgatour.com/leaderboard">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-11</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>OLBG header tip-count string-concatenation defect</strong></td>
+          <td class="mono">research/horizon-9c5af337.md:18-32</td>
+          <td>OLBG event headers render &#x27;4 / 042&#x27; instead of &#x27;4 / 42&#x27; by concatenating selection tips with market totals; any naive scraper reading header pills corrupts tip denominators.</td>
+          <td>Verified on event_id=199984, 160789, 536036, and 902163.</td>
+          <td><a href="https://www.olbg.com/betting-tips">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-12</strong></td>
+          <td><span class="badge flag">high</span></td>
+          <td><strong>High-confidence (&gt;70%) vs -250..+10000 fair-odds band intersection</strong></td>
+          <td class="mono">research/horizon-9c5af337.md:75-88</td>
+          <td>Fair -250 equals 71.43% implied probability, so P &gt;= 70% and fair odds &gt;= -250 intersect only in [70.00%, 71.43%]. Desks that label -300 moneylines as in-band violate arithmetic.</td>
+          <td>Verified across all originated lines in scripts/horizon_verify.py.</td>
+          <td><a href="https://www.olbg.com/betting-tips">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-13</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>MLB Game 2 starter Logan Henderson has no 2026 regular-season MLB pitching split</strong></td>
+          <td class="mono">scripts/horizon_seed.py:210-228</td>
+          <td>MLB StatsAPI lists Logan Henderson (id 801403) as Milwaukee&#x27;s probable Game 2 starter, but his 2026 regular-season MLB pitching stats split is empty.</td>
+          <td>Verified on statsapi.mlb.com/api/v1/people?personIds=801403; left blank rather than inferred.</td>
+          <td><a href="https://statsapi.mlb.com/api/v1/people?personIds=694813,608379,801403,656876&amp;hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-14</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>Three WST International Championship pre-qualifiers list unconfirmed Wildcard opponents</strong></td>
+          <td class="mono">scripts/horizon_seed.py:325-336</td>
+          <td>WST match centre lists Michal Szubarczyk v Wildcard 1, Steven Hallworth v Wildcard 3, and Liu Wenwei v Wildcard 4 without naming the wildcard players.</td>
+          <td>Verified on https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890; left unpriced.</td>
+          <td><a href="https://www.wst.tv/match-centre/ee54f470-4821-4fd6-a5f4-db32dc475890">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-15</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>PDC European Championship Round Two unseeded entrants (Luke Littler &amp; Kim Huybrechts)</strong></td>
+          <td class="mono">scripts/horizon_seed.py:340-375</td>
+          <td>Kim Huybrechts entered Dortmund as a late replacement for Luke Humphries without a European Tour seeding, and Luke Littler&#x27;s European Tour prize money is outside the top-three table published in the PDC schedule release.</td>
+          <td>Verified on pdc.tv schedule and Day One reports; both fixtures are left unpriced rather than guessing European Tour earnings.</td>
+          <td><a href="https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-schedule-play">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-16</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>ATP Almaty SF1 (Basilashvili) and Lyon SF1 (Cobolli v Van Assche/Musetti) unconfirmed inputs</strong></td>
+          <td class="mono">scripts/horizon_seed.py:430-448</td>
+          <td>Qualifier Nikoloz Basilashvili sits outside the PIF ATP Top 100 table, and Flavio Cobolli&#x27;s Lyon semifinal opponent was still in play in Set 3 (Van Assche 3-2 Musetti) at capture time.</td>
+          <td>Verified on atptour.com rankings and live scores; both rows are left unpriced and flagged.</td>
+          <td><a href="https://www.atptour.com/en/scores/current/lyon/496/daily-schedule">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-17</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>GBGB Category One finals publish semi-final winning times only for heat winners</strong></td>
+          <td class="mono">scripts/horizon_seed.py:485-515</td>
+          <td>GBGB results pages publish winning clockings for the three semi-final winners in the Scurry Gold Cup and Oaks finals, but do not publish individual runner clockings for the three second-placed qualifiers.</td>
+          <td>Verified on gbgb.org.uk meetingId=435688; non-winning finalist times are left blank.</td>
+          <td><a href="https://www.gbgb.org.uk/racing-results/?meetingId=435688&amp;raceId=1198332">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-18</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>EHF Champions League Round 6 opponents outside French LNH table</strong></td>
+          <td class="mono">scripts/horizon_seed.py:540-560</td>
+          <td>Aalborg, Dinamo Bucarest, and Orlen Wisla Plock appear on LNH&#x27;s EHF Champions League calendar without domestic league tables on lnh.fr.</td>
+          <td>Verified on https://www.lnh.fr/autres-competitions/ligue-des-champions; left unpriced.</td>
+          <td><a href="https://www.lnh.fr/autres-competitions/ligue-des-champions">Official reference</a></td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>HZ-AUD-19</strong></td>
+          <td><span class="badge medium">medium</span></td>
+          <td><strong>Multi-session namespace proliferation across the repository</strong></td>
+          <td class="mono">COORDINATION.md:1-4600</td>
+          <td>More than thirty parallel session namespaces exist in the repository. Horizon publishes in its own disjoint /horizon/ scope to avoid overwriting concurrent sessions.</td>
+          <td>Inspected COORDINATION.md and git branches on origin.</td>
+          <td><a href="https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md">Official reference</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+  <footer>
+    <div class="masthead-inner">
+      Horizon research publication (<span class="mono">/horizon/</span>, session <span class="mono">arena/9c5af337-olbg2</span>).
+      Every table row links directly to the official governing-body feed fetched on 2026-10-23. Unconfirmed inputs are left blank and routed to
+      <a href="flagged.html">Flagged for Review</a>.
+    </div>
+  </footer>
+</body>
+</html>

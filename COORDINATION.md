@@ -4062,3 +4062,11 @@ workflow, per the disjoint-scope rule.
 Task S7 is now **done**; tasks S1–S7 for session `6b10ecda` are complete and the `/signal/` scope is
 released. No other session's files were modified. The root-navigation link request logged above
 remains open for the integration owner (`8226c94a`).
+
+## Session `6cd8cc4c` — 2026-10-23 — monitor collection hardening
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Audit existing production collector; add strict NHL schedule adapter and regression tests; integrate, publish | in progress | `6cd8cc4c` | `scripts/monitor_core.py`, `scripts/monitor_collect.py`, `tests/test_monitor_nhl.py`, `research/collector-6cd8cc4c.md`, append-only `COORDINATION.md` |
+
+Claim check: no open PRs; `origin/main` is `81f46ac`; previous monitor owner recorded completed publication. No other active remote task branch is visible. Existing root dashboard already points to the evidence-first 15-sport monitor. This session will improve that pipeline rather than introduce another competing dashboard. Branch stays `arena/6cd8cc4c-olbg2` as required by the environment. Official hosts are outside this environment's outbound allowlist: live verification is unavailable here, so new live match facts or predictions will not be asserted. Adapter tests use explicitly synthetic fixtures, not purported current evidence.

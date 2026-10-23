@@ -4485,3 +4485,14 @@ selections are alternate-line quotes and **none** of the 22 high selections is i
 price. The summary now states 0 natural / 8 alternate / 14 genuinely outside, and the band page explains why.
 No probability, price, grade or pick changed; only the sentence describing them. Fixed in the follow-up PR
 below, verified with `cadence_verify.py` (11 check groups, 0 errors) and 24 desk tests.
+
+### Follow-up 2: two presentation defects fixed
+
+1. Outright rows (Formula 1 Drivers' Championship, the two golf events, the two greyhound finals) printed a
+   trailing “v” because the fixture has no opponent. The label helper now omits it.
+2. Three rows still described themselves as “capped at medium” after the grading rule changed: the Rugby
+   League, Volleyball and Gaelic Sports basis strings, and the Rugby Union evidence string. They now say that
+   the small sample is disclosed on the row, which is what the rule actually does (a natural money-line
+   selection on a 1–3 match sample may still grade high; only an alternate band line on that sample is capped).
+
+No probability, price, grade or pick changed. `cadence_verify.py` → 11 check groups, 0 errors; 24 desk tests.

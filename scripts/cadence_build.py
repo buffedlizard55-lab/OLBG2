@@ -152,6 +152,10 @@ def bandpill(v):
     return '<span class="pill in">in band</span>' if v else '<span class="pill out">outside band</span>'
 
 
+def label(home, away):
+    return f"{escape(home)} v {escape(away)}" if away else escape(home)
+
+
 def fmt_p(p):
     return f"{p*100:.1f}%"
 
@@ -336,7 +340,7 @@ def top_table(rows, show_sport=False, show_date=False, matches_only=False):
         cells = []
         if show_sport:
             cells.append(f'<a href="sports/{SLUG[p["sport"]]}.html">{escape(p["sport"])}</a>')
-        cells.append(f'{escape(p["home"])} v {escape(p["away"] or "")}')
+        cells.append(label(p["home"], p["away"]))
         if show_date:
             cells.insert(1, f'<span class="mono">{escape(p.get("start_utc") or p.get("time_display") or "—")}</span>')
         cells += [f'<strong>{escape(p["selection"])}</strong>', escape(p["market"]),
@@ -405,7 +409,7 @@ def band_table(rows):
     for p in rows:
         out.append(
             f'<tr><td><a href="sports/{SLUG[p["sport"]]}.html">{escape(p["sport"])}</a></td>'
-            f'<td>{escape(p["home"])} v {escape(p["away"] or "")}</td>'
+            f'<td>{label(p["home"], p["away"])}</td>'
             f'<td><strong>{escape(p["selection"])}</strong></td>'
             f'<td class="mono">{escape(str(p["line"])) if p["line"] is not None else "—"}</td>'
             f'<td class="mono">{fmt_p(p["probability"])}</td>'

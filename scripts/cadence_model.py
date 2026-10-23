@@ -441,7 +441,7 @@ def model_rugby_union(f):
         lam = 47.0
         basis = (f"Gallagher PREM after 3 rounds: {h['w']}-{h['l']} v {a['w']}-{a['l']}, "
                  f"points difference {h['pd']:+d} v {a['pd']:+d}")
-        ev = basis + "; three rounds only, so confidence is capped at medium"
+        ev = basis + "; three rounds only, a small sample disclosed on the row"
     else:
         p2, mu, lam = 0.53, z(0.53) * 9.5, 48.0
         no_numeric = True
@@ -499,7 +499,7 @@ def model_rugby_league(f):
     p_fav = p_home3 if home_fav else p_away3
     mu_fav = abs(mu)
     basis = (f"RLWC 2026 Round 1 margins {mh:+d} v {ma:+d} points, weighted 0.006 per point; "
-             f"one match per side, so confidence is capped at medium")
+             f"one match per side, a small sample disclosed on the row")
     out = [market("Match winner", fav, None, p_fav, basis, 0.05),
            market("Handicap", f"{fav} -6.5", -6.5, p_gt(mu_fav, 13.5, 6.5) * (1 - draw), basis, 0.05),
            market("Handicap", f"{dog} +6.5", 6.5, (1 - p_gt(mu_fav, 13.5, 6.5)) * (1 - draw), basis, 0.05)]
@@ -538,7 +538,7 @@ def model_volleyball(f):
     p3 = p_set ** 3 + (1 - p_set) ** 3
     p4 = 3 * p_set ** 3 * (1 - p_set) + 3 * (1 - p_set) ** 3 * p_set
     p5 = max(0.0, 1 - p3 - p4)
-    base = basis + f"; per-set {p_set:.3f}, best of five, confidence capped at medium (one match per club)"
+    base = basis + f"; per-set {p_set:.3f}, best of five, one match per club disclosed on the row"
     out = [market("Match winner", fav, None, p_fav, base, 0.05),
            market("Set handicap", f"{fav} -1.5", -1.5, p3 if p_home >= 0.5 else 1 - p3, base, 0.05)]
     for line, p_over in ((3.5, p4 + p5), (4.5, p5)):
@@ -640,7 +640,7 @@ def model_gaelic(f):
     p_home3, p_away3 = p2 * (1 - draw), (1 - p2) * (1 - draw)
     p_fav = p_home3 if home_fav else p_away3
     mu_fav = abs(mu)
-    base = basis + "; draw mass 4.0%, confidence capped at medium (single championship result)"
+    base = basis + "; draw mass 4.0%, single championship result disclosed on the row"
     out = [market("Match winner (three-way)", fav, None, p_fav, base, 0.05, three_way=True, draw=draw),
            market("Match winner (three-way)", "Draw", None, draw, base, 0.05, three_way=True, draw=draw),
            market("Match winner (three-way)", dog, None, p_away3 if home_fav else p_home3, base, 0.05,

@@ -155,10 +155,8 @@ jobs:
           fi
           exit $status
 
+      - name: Report any drifted file as an annotation
+        run: git diff --name-only -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets daily data/daily daily-audit data/daily-audit focus data/focus monitor data/monitor liveboard data/liveboard brief data/brief olbg data/olbg ledger data/ledger/olbg.json data/ledger/official.json data/ledger/matches.json data/ledger/lines.json data/ledger/picks.json data/ledger/predictions.json data/ledger/flagged.json data/ledger/sources.json data/ledger/repo_review.json data/ledger/verify.json data/ledger/inherited.json master data/master | sed 's/^/::error::stale generated file: /' || true
+
       - name: Fail if any generated page or data file is stale
-        run: |
-          paths="current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets daily data/daily daily-audit data/daily-audit focus data/focus monitor data/monitor liveboard data/liveboard brief data/brief olbg data/olbg ledger data/ledger/olbg.json data/ledger/official.json data/ledger/matches.json data/ledger/lines.json data/ledger/picks.json data/ledger/predictions.json data/ledger/flagged.json data/ledger/sources.json data/ledger/repo_review.json data/ledger/verify.json data/ledger/inherited.json master data/master"
-          if git diff --quiet -- $paths; then echo "No drift"; exit 0; fi
-          git diff --stat -- $paths
-          git diff --name-only -- $paths | sed 's/^/::error::stale generated file: /'
-          exit 1
+        run: git diff --exit-code -- current data/current verified data/verified live data/live site survey data/survey final data/final canon data/canon atlas data/atlas integration.html index.html picks.html flagged.html methodology.html sources.html sports assets daily data/daily daily-audit data/daily-audit focus data/focus monitor data/monitor liveboard data/liveboard brief data/brief olbg data/olbg ledger data/ledger/olbg.json data/ledger/official.json data/ledger/matches.json data/ledger/lines.json data/ledger/picks.json data/ledger/predictions.json data/ledger/flagged.json data/ledger/sources.json data/ledger/repo_review.json data/ledger/verify.json data/ledger/inherited.json master data/master

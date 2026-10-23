@@ -3663,3 +3663,27 @@ link to the root navigation; add `vanguard data/vanguard` and the three `vanguar
 | Live | <https://buffedlizard55-lab.github.io/OLBG2/vanguard/index.html> · <https://buffedlizard55-lab.github.io/OLBG2/vanguard/flagged.html> — both re-fetched from the deployed site after the final deploy and checked line by line (KPI block reads 91 / 17 / 512 / 85 / 21 / 19; every sport-level flag resolves to its sport page) |
 | Scope | only `vanguard/**`, `data/vanguard/**`, `scripts/vanguard_*.py`, `tests/test_vanguard_ca03be92.py`, `research/vanguard-audit-ca03be92.md` were added; `COORDINATION.md` append-only. No root or shared file edited. |
 | Open requests for the root owner | add `vanguard/` to the root navigation; add the three `vanguard_*` scripts and `vanguard data/vanguard` to `.github/workflows/pages.yml` |
+
+---
+
+## Session `arena/33e9eee7-olbg2` — CLAIM (2026-10-23)
+
+**Task.** Fresh 15-sport desk for the exact brief list only: Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League. (Aussie Rules and Esports, present in older 17-sport layers, are OUT of scope here.) Executive summary, all-matches table, originated lines (winner/handicap/total where an official numeric input exists), low/medium/high confidence, strict high gate (p>=0.70 AND fair American in [-250,+10000]), Top-5 per sport, >=30-word unique predictions for high picks, Flagged for Review, official source per row. No manual input; no invented values — blank+flag where unverified.
+
+| # | Task | Status | File scope (exclusive) |
+|---|---|---|---|
+| F1 | Claim + OLBG reverse-engineering note | in progress | `COORDINATION.md` (append-only), `research/focus-33e9eee7.md` |
+| F2 | Fresh official capture 15 sports | unclaimed→this session | `data/focus/inputs.json`, `data/focus/sources.json`, `scripts/focus_seed.py` |
+| F3 | Line origination + confidence | unclaimed→this session | `scripts/focus_model.py`, `data/focus/{matches,lines}.json` |
+| F4 | Predictions >=30w for high picks | unclaimed→this session | `scripts/focus_predictions.py`, `data/focus/predictions.json`, `data/focus/flagged.json` |
+| F5 | `/focus/` dashboard + sport subpages + flagged/sources/methodology | unclaimed→this session | `scripts/focus_build.py`, `scripts/focus_verify.py`, `focus/**`, `tests/test_focus_33e9eee7.py` |
+| F6 | Final integration: root nav link, CI drift gate, README pointer, full tests, PR→merge, Pages live check | unclaimed→this session (integration role, after F2-F5 done) | `index.html` nav only via `scripts/build_site.py` if present else direct nav edit, `.github/workflows/pages.yml`, `README.md`, `COORDINATION.md` |
+
+Rule: never edit another layer's data/builders. If a shared file must change before F6, log it here instead.
+
+### Session `arena/33e9eee7-olbg2` — COMPLETION LOG (`/focus/`, 2026-10-23)
+Status: DONE, publication in progress. F1-F6 complete.
+- Built: 40 fixtures across exactly 15 sports, 236 originated lines, 32 in-band selections, 11 written predictions (Handball 4, Rugby Union 5, Ice Hockey 2; >=30 words, unique, selection named), 26 flags, 24 pages (`focus/**`), verifier ALL CHECKS PASS, 7 new tests (repo total 474 OK), integration_audit 0 errors.
+- Fresh this session: NHL 25-Oct slate + standings and MLB World Series schedule/standings re-read 2026-10-23 via official APIs (see research/focus-33e9eee7.md). Other priced rows disclose their 2026-10-22 official capture in-row.
+- Integration edits (F6 role): root NAV gains "Focus desk (15 sports, 23 Oct)" via scripts/build_site.py (30 root pages, nav-only diff); CI pages.yml rebuilds focus and drift-checks `focus data/focus` (appended at end to preserve other sessions' asserted substrings); README pointer added.
+- Flagged (non-blocking, on focus/flagged.html): five-per-sport aim met in no sport (band is 70.0-71.4% wide); Tennis/Darts/Snooker/Golf/Greyhounds/Cricket blank with named reasons; Gaelic blank (no numeric input); NBA net-proxy thin input; MLB G5/G6 if-necessary; no injury claims made (none stated by official pages read).

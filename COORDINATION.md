@@ -4572,3 +4572,53 @@ sha256 of the capture it came from; anything neither set can confirm is left bla
 
 **Not claimed.** No live re-fetch by this session. This session does not assert that a price is currently
 available at a bookmaker, and does not re-certify a page it could not read.
+
+### Session `arena/875d643b-olbg2` — INTEGRATION COMPLETE (evidence, verification, irregularities)
+
+| # | Task | Status | Files |
+|---|---|---|---|
+| U1 | Claim + repo recon | done | `COORDINATION.md`, `research/unified-875d643b.md` |
+| U2 | Independent parse of the stored OLBG bodies | done — **216 events from 46 verbatim pages, 127 upcoming**, every body re-hashed against the manifest | `scripts/unified_inventory.py`, `data/unified/olbg_events.json` |
+| U3 | Line-by-line audit + reconciliation | done — 9 check groups (A1–A9), 0 arithmetic errors, 93 fixtures reconciled, 14 findings | `scripts/unified_audit.py`, `data/unified/audit.json` |
+| U4 | Consolidated root site | done — 32 pages: landing, OLBG list, fixtures, prices, picks, predictions, band, 15 sport pages, sources, verification, repo review, flagged, method, archive | `scripts/unified_build.py`, `assets/unified.*`, root `*.html`, `sports/*.html` |
+| U5 | CI wiring, tests, PR, merge, deploy | done (PR/merge recorded below) | `.github/workflows/pages.yml`, `tests/test_unified_875d643b.py`, `README.md` |
+
+**What was verified, and how.** `python3 scripts/unified_audit.py` re-derives every number from committed files:
+
+| Check | Scope | Result |
+|---|---|---|
+| A1 prices recompute | 728 price rows (probability → fair US, fair decimal, offered pair, band flag, confidence) | 0 mismatches; 37 documented thin-sample caps and 4 ceiling sentinels counted separately |
+| A2 band rule | 631 rows inside −250…+10000; 22 of 122 graded picks high, 8 of those in band | consistent |
+| A3 prose rules | 33 predictions, min 51 words, 33 unique openings/texts, 0 banned words | pass |
+| A4 OLBG reconciliation | 93 fixtures vs 216 OLBG events | 44 matched; 49 published as “no listing found” |
+| A5 official-schedule join | MLB 5 games, NHL 48 games, EuroLeague 10 games parsed from stored API/XML bodies | 10 fixtures joined + confirmed on both sides |
+| A6 source links | every fixture | https official URL present |
+| A7 second reading | 15 sports vs the ledger's single-page parse | deltas published per sport (hub + all-events pages carry more events) |
+| A8 number traceability | every number in every prediction | present in that fixture's stored evidence |
+| A9 pick → price row | 122 picks | all joined; the band flag is taken from the join, not the pick file |
+
+**Evidence used.** `data/ledger/manifest.json` + `data/ledger/raw/` (181 captures, GitHub-hosted runner,
+2026-10-23T19:28:51Z → 20:32:10Z, status codes and sha256 published on `/sources.html`) and
+`data/cadence/` (fixture/price/prediction layer, 2026-10-23T20:05Z). **No live fetch by this session:** the
+sandbox cannot reach any sports host, which is stated on `/verification.html` and in the README.
+
+**Irregularities (published on `/flagged.html`, none of them hidden).**
+`U-01`–`U-11` desk findings, `U-20`–`U-24` repository findings. The material ones:
+
+* **U-05 — the five-a-sport target is not met.** 33 predictions against 75; shortfall per sport is printed
+  (Golf 5, Gaelic 5, Greyhounds 5, Rugby Union 4, Snooker 4, Baseball 4, Tennis 4, Motor Racing 4, Volleyball 2,
+  Darts 2, Ice Hockey 2, Handball 1). No low-confidence row was promoted to fill a quota.
+* **U-04/U-06 — coverage.** 127 upcoming OLBG events against 83 priced fixtures; 49 of the 93 fixtures have no
+  OLBG listing in today's capture (all 9 Rugby League World Cup rows, all 8 snooker rows among them).
+* **U-07 — golf.** The OLBG golf pages returned an empty tips payload, so no OLBG golf event could be read.
+* **U-10 — provenance of the fixture layer.** `data/cadence/captures/*` are transcribed readings without stored
+  bodies or hashes, so they cannot be re-derived here; only MLB/NHL/EuroLeague rows reach the stronger label.
+* **U-20 — COORDINATION.md carries 6 conflict-marker lines.** The bracketed regions are not byte-identical, so
+  automated de-duplication would risk deleting another session's log: left for manual resolution, line numbers published.
+* **U-23 — 22 published layers are not rebuilt by CI**, so their pages can drift from their data.
+* **U-24 — one match, four probabilities.** MLB game 849805 is published at 0.533, 0.594, 0.603 and 0.651 by four
+  layers. The desk publishes the 0.651 figure and records the rest; it does not average them.
+
+**Gate results on this branch.** `python -m unittest discover -s tests` → **679 tests OK** (17 new in
+`tests/test_unified_875d643b.py`); `integration_audit.py` → 0 cross-layer local link errors; the drift gate over
+`data/unified`, the root pages and `sports/` is clean immediately after a full local replay of every CI step.

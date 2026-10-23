@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-10-23T22:00:00Z",
+  "session": "arena/84013d5f-olbg2",
+  "desk": "summit",
+  "summary": {
+    "files_scanned": 829,
+    "irregularities_logged": 5,
+    "out_of_scope_html_files": 46,
+    "predictions_with_forbidden_words_in_other_layers": 112,
+    "html_files_with_unlinked_rows_in_other_layers": 51
+  },
+  "findings": [
+    {
+      "code": "RA-01",
+      "severity": "medium",
+      "title": "Out-of-scope sport pages are published in other desk trees",
+      "detail": "46 HTML files under desk directories publish aussie-rules.html or esports.html, neither of which is in the 15-sport scope. Example: sports/esports.html, atlas/sports/esports.html, beacon/sports/esports.html.",
+      "evidence": "Repository file listing under */sports/*.html",
+      "severity_note": "Does not affect /summit/, which publishes only the 15 requested sports."
+    },
+    {
+      "code": "RA-02",
+      "severity": "medium",
+      "title": "Other layers’ prediction data contains forbidden words",
+      "detail": "data/daily-picks/predictions.json, data/portal/predictions.json and data/update/predictions.json contain reader-facing occurrences of model or verified. /summit/ predictions exclude those words.",
+      "evidence": "data/*/predictions.json files in the repository",
+      "severity_note": "Historical layers are preserved; /summit/ is audited separately."
+    },
+    {
+      "code": "RA-03",
+      "severity": "low",
+      "title": "Unresolved merge-conflict markers remain in COORDINATION.md",
+      "detail": "COORDINATION.md carries six closing conflict markers (lines 3216, 3307, 3437, 3549, 3609, 3628). They are plain text and do not break builds, but they make the shared board harder to read.",
+      "evidence": "COORDINATION.md lines 3216-3628",
+      "severity_note": "Left for the owning sessions; not edited by /summit/."
+    },
+    {
+      "code": "RA-04",
+      "severity": "low",
+      "title": "Root dashboard points to a stale snapshot",
+      "detail": "The root dashboard still advertises a 2026-10-22 snapshot and its primary call to action opens /monitor/, which reports no high-confidence picks. /summit/ is a separate current desk and is not yet linked from root navigation.",
+      "evidence": "index.html and /monitor/ pages in the repository",
+      "severity_note": "Root integration is deferred to the integration session."
+    },
+    {
+      "code": "RA-05",
+      "severity": "medium",
+      "title": "51 HTML files in other layers have table rows without external official links",
+      "detail": "Verification requires every sourced data row to link to an official site. 51 published HTML files have table rows with no external http(s) link in other desk trees.",
+      "evidence": "scripts/integration_audit.py local scan",
+      "severity_note": "/summit/ flags unverified rows instead of hiding them."
+    }
+  ]
+}

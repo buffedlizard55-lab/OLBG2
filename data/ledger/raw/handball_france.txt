@@ -178,7 +178,7 @@ fbq('track', 'PageView');
                                             <a class="head-live-bt" href="https://www.lnh.fr/matchs/lives">
                             <div class="icon"><span class="material-icons">bolt</span></div>
                             <div class="label">
-                                9 matchs en direct                            </div>
+                                1 match en direct                            </div>
                         </a>
                                         </div>
                 <div class="shortcuts-center">
@@ -1158,7 +1158,7 @@ fbq('track', 'PageView');
                             <a class="head-live-bt" href="https://www.lnh.fr/matchs/lives">
                     <div class="icon"><span class="material-icons">bolt</span></div>
                     <div class="label">
-                        9 matchs en direct                    </div>
+                        1 match en direct                    </div>
                 </a>
                     </div>
     </div>
@@ -1404,7 +1404,7 @@ $(document).on('click', ".nav-close", function(){
                 </div>
                 <div class="row-infos">
                     <div class="logo"><img src="https://www.lnh.fr/medias/_site/header/logo-lnh.svg" alt="logo"></div>
-                    <div class="datetime">LNH - Publié il y a 6 heures</div>
+                    <div class="datetime">LNH - Publié il y a 7 heures</div>
                 </div>
             </a>
                     <div class="nav">
@@ -1619,6 +1619,67 @@ $(document).on('click', ".nav-close", function(){
                 </div>
 </div>
 <div class="calendars-listing-item listing-item finish  lmsl"
+    id="12060">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    Daikin StarLigue - J08                </span>
+                <br>
+                ven. 23 oct. 20h30            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/tremblay-handball"
+                                title="Tremblay">
+                                <img src="https://www.lnh.fr/medias/sports_teams/tremblay__logo__2023-2024.png"
+                                    alt="logo Tremblay" />
+                            </a>
+                                                <div class="team-name">
+                        Tremblay                    </div>
+                </div>
+                                        <div class="scores is-finish">
+                            34 - 29                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/cesson-rennes-metropole-hb"
+                                title="Cesson-Rennes">
+                                <img src="https://www.lnh.fr/medias/sports_teams/cesson-rennes__logo__2023-2024.png"
+                                    alt="logo Cesson-Rennes" />
+                            </a>
+                                                <div class="team-name">
+                        Cesson-Rennes                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by1">
+                        <div class="note-intensite">
+                    <div class="label">
+                        Suspense* :
+                    </div>
+                    <div class="stars">
+                                                        <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                    </div>
+                </div>
+                            <a class="icon-item" href="https://www.lnh.fr/daikin-starligue/calendriers/20262027/dsl/j08/tremblay/cesson-rennes">
+                Stats
+            </a>
+                </div>
+</div>
+<div class="calendars-listing-item listing-item finish  lmsl"
     id="12061">
     <div class="row">
                 <div class="col-infos">
@@ -1744,24 +1805,21 @@ $(document).on('click', ".nav-close", function(){
             </a>
                 </div>
 </div>
-<div class="calendars-listing-item listing-item finish  "
-    id="12323">
+<div class="calendars-listing-item listing-item finish  pl"
+    id="11819">
     <div class="row">
                 <div class="col-infos">
             <div class="col-competitions">
                 <span class="competition">
-                    Ligue des Champions - J05                </span>
+                    ProLigue - J08                </span>
                 <br>
-                jeu. 22 oct. 20h45            </div>
+                ven. 23 oct. 20h30            </div>
             <div class="col-tv">
                                     <div class="tv-icon">
-                        <a href="https://sabonner.beinsports.com/" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/hd1_1183658285.png" />
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
                         </a>
-                                                    <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                                <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                            </a>
-                                                </div>
+                                            </div>
                                 </div>
         </div>
     </div>
@@ -1770,24 +1828,85 @@ $(document).on('click', ".nav-close", function(){
                 <div class="col-teams">
             <div class="teams-logos">
                 <div class="team-logo">
-                                                <a href="https://www.lnh.fr/equipes/fc-barcelone"
-                                title="Barcelone">
-                                <img src="https://www.lnh.fr/medias/sports_teams/barcelone__logo__2017-2018.png"
-                                    alt="logo Barcelone" />
+                                                <a href="https://www.lnh.fr/proligue/equipes/pau-billere-handball"
+                                title="Pau Billère">
+                                <img src="https://www.lnh.fr/medias/sports_teams/pau-billere__logo__2024-2025.png"
+                                    alt="logo Pau Billère" />
                             </a>
                                                 <div class="team-name">
-                        Barcelone                    </div>
+                        Pau Billère                    </div>
                 </div>
                                         <div class="scores is-finish">
-                            40 - 34                        </div>
+                            38 - 37                        </div>
                                         <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/montpellier-handball"
-                                title="Montpellier">
-                                <img src="https://www.lnh.fr/medias/sports_teams/montpellier__logo__2024-2025.png"
-                                    alt="logo Montpellier" />
+                                                <a href="https://www.lnh.fr/proligue/equipes/js-cherbourg-manche-handball"
+                                title="Cherbourg">
+                                <img src="https://www.lnh.fr/medias/sports_teams/cherbourg__logo__2023-2024.png"
+                                    alt="logo Cherbourg" />
                             </a>
                                                 <div class="team-name">
-                        Montpellier                    </div>
+                        Cherbourg                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by1">
+                        <div class="note-intensite">
+                    <div class="label">
+                        Suspense* :
+                    </div>
+                    <div class="stars">
+                                                        <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                    </div>
+                </div>
+                            <a class="icon-item" href="https://www.lnh.fr/proligue/calendriers/20262027/pl/j08/pau-billere/cherbourg">
+                Stats
+            </a>
+                </div>
+</div>
+<div class="calendars-listing-item listing-item finish  pl"
+    id="11820">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    ProLigue - J08                </span>
+                <br>
+                ven. 23 oct. 20h30            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/us-saintes-handball"
+                                title="Saintes">
+                                <img src="https://www.lnh.fr/medias/sports_teams/saintes__logo__2025-2026.png"
+                                    alt="logo Saintes" />
+                            </a>
+                                                <div class="team-name">
+                        Saintes                    </div>
+                </div>
+                                        <div class="scores is-finish">
+                            33 - 31                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/frontignan-thau-hb"
+                                title="Frontignan">
+                                <img src="https://www.lnh.fr/medias/sports_teams/frontignan__logo__2023-2024.png"
+                                    alt="logo Frontignan" />
+                            </a>
+                                                <div class="team-name">
+                        Frontignan                    </div>
                 </div>
             </div>
         </div>
@@ -1805,371 +1924,12 @@ $(document).on('click', ".nav-close", function(){
                                                                 <i class="material-icons pleine">star</i>
                                                     </div>
                 </div>
-                            <a class="icon-item" href="https://www.lnh.fr/ligue-des-champions/calendriers/20262027/ehfcl/j05/barcelone/montpellier">
+                            <a class="icon-item" href="https://www.lnh.fr/proligue/calendriers/20262027/pl/j08/saintes/frontignan">
                 Stats
             </a>
                 </div>
 </div>
-<div class="calendars-listing-item listing-item finish  "
-    id="12419">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    Ligue des Champions - J05                </span>
-                <br>
-                jeu. 22 oct. 18h45            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/equipes/pick-szeged"
-                                title="Szeged">
-                                <img src="https://www.lnh.fr/medias/sports_teams/szeged__logo__2016-2017.png"
-                                    alt="logo Szeged" />
-                            </a>
-                                                <div class="team-name">
-                        Szeged                    </div>
-                </div>
-                                        <div class="scores is-finish">
-                            33 - 33                        </div>
-                                        <div class="team-logo">
-                                                <a href="https://www.lnh.fr/"
-                                title="Gudme">
-                                <img src="https://www.lnh.fr/medias/sports_teams/gog__logo__2016-2017.png"
-                                    alt="logo Gudme" />
-                            </a>
-                                                <div class="team-name">
-                        Gudme                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                    <a class="icon-item" href="https://www.lnh.fr/ligue-des-champions/calendriers/20262027/ehfcl/j05/szeged/gudme">
-                Stats
-            </a>
-                </div>
-</div>
-<div class="calendars-listing-item listing-item finish  "
-    id="12321">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    Ligue des Champions - J05                </span>
-                <br>
-                mer. 21 oct. 18h45            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://sabonner.beinsports.com/" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/hd1_1183658285.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/equipes/rk-dubrava-zagreb"
-                                title="Zagreb">
-                                <img src="https://www.lnh.fr/medias/sports_teams/zagreb__logo__2017-2018.png"
-                                    alt="logo Zagreb" />
-                            </a>
-                                                <div class="team-name">
-                        Zagreb                    </div>
-                </div>
-                                        <div class="scores is-finish">
-                            29 - 28                        </div>
-                                        <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/paris-saint-germain-handball"
-                                title="Paris">
-                                <img src="https://www.lnh.fr/medias/sports_teams/paris__logo__2026-2027.png"
-                                    alt="logo Paris" />
-                            </a>
-                                                <div class="team-name">
-                        Paris                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                    <a class="icon-item" href="https://www.lnh.fr/ligue-des-champions/calendriers/20262027/ehfcl/j05/zagreb/paris">
-                Stats
-            </a>
-                </div>
-</div>
-<div class="calendars-listing-item listing-item finish  "
-    id="12322">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    Ligue des Champions - J05                </span>
-                <br>
-                mer. 21 oct. 20h45            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/hbc-nantes"
-                                title="Nantes">
-                                <img src="https://www.lnh.fr/medias/sports_teams/nantes__logo__2026-2027.png"
-                                    alt="logo Nantes" />
-                            </a>
-                                                <div class="team-name">
-                        Nantes                    </div>
-                </div>
-                                        <div class="scores is-finish">
-                            27 - 33                        </div>
-                                        <div class="team-logo">
-                                                <a href="https://www.lnh.fr/equipes/hc-vardar-1961"
-                                title="Vardar">
-                                <img src="https://www.lnh.fr/medias/sports_teams/vardar__logo__2025-2026.jpg"
-                                    alt="logo Vardar" />
-                            </a>
-                                                <div class="team-name">
-                        Vardar                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                        <div class="note-intensite">
-                    <div class="label">
-                        Suspense* :
-                    </div>
-                    <div class="stars">
-                                                        <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                    </div>
-                </div>
-                            <a class="icon-item" href="https://www.lnh.fr/ligue-des-champions/calendriers/20262027/ehfcl/j05/nantes/vardar">
-                Stats
-            </a>
-                </div>
-</div>
-<div class="calendars-listing-item listing-item finish  "
-    id="12418">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    Ligue des Champions - J05                </span>
-                <br>
-                mer. 21 oct. 18h45            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/equipes/mkb-mvm-veszprem"
-                                title="Veszprem">
-                                <img src="https://www.lnh.fr/medias/sports_teams/veszprem__logo__2017-2018.png"
-                                    alt="logo Veszprem" />
-                            </a>
-                                                <div class="team-name">
-                        Veszprem                    </div>
-                </div>
-                                        <div class="scores is-finish">
-                            39 - 35                        </div>
-                                        <div class="team-logo">
-                                                <a href="https://www.lnh.fr/equipes/fuchse-berlin"
-                                title="Berlin">
-                                <img src="https://www.lnh.fr/medias/sports_teams/fuchse-berlin__logo__2016-2017.png"
-                                    alt="logo Berlin" />
-                            </a>
-                                                <div class="team-name">
-                        Berlin                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                    <a class="icon-item" href="https://www.lnh.fr/ligue-des-champions/calendriers/20262027/ehfcl/j05/veszprem/berlin">
-                Stats
-            </a>
-                </div>
-</div>
-<div class="calendars-listing-item listing-item finish is-starmatch lmsl"
-    id="12055">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    Daikin StarLigue - J07                </span>
-                <br>
-                dim. 18 oct. 17h00            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://sabonner.beinsports.com/" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/hd3_347692957.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-            <div class="label-starmatch">
-            STARMATCH
-        </div>
-            <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/montpellier-handball"
-                                title="Montpellier">
-                                <img src="https://www.lnh.fr/medias/sports_teams/montpellier__logo__2024-2025.png"
-                                    alt="logo Montpellier" />
-                            </a>
-                                                <div class="team-name">
-                        Montpellier                    </div>
-                </div>
-                                        <div class="scores is-finish">
-                            35 - 33                        </div>
-                                        <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/limoges-handball"
-                                title="Limoges">
-                                <img src="https://www.lnh.fr/medias/sports_teams/limoges__logo__2023-2024.png"
-                                    alt="logo Limoges" />
-                            </a>
-                                                <div class="team-name">
-                        Limoges                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                        <div class="note-intensite">
-                    <div class="label">
-                        Suspense* :
-                    </div>
-                    <div class="stars">
-                                                        <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                    </div>
-                </div>
-                            <a class="icon-item" href="https://www.lnh.fr/daikin-starligue/calendriers/20262027/dsl/j07/montpellier/limoges">
-                Stats
-            </a>
-                </div>
-</div>
-<div class="calendars-listing-item listing-item finish  lmsl"
-    id="12056">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    Daikin StarLigue - J07                </span>
-                <br>
-                dim. 18 oct. 17h00            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/chambery-savoie-mont-blanc-handball"
-                                title="Chambéry">
-                                <img src="https://www.lnh.fr/medias/sports_teams/chambery__logo__2024-2025.png"
-                                    alt="logo Chambéry" />
-                            </a>
-                                                <div class="team-name">
-                        Chambéry                    </div>
-                </div>
-                                        <div class="scores is-finish">
-                            34 - 33                        </div>
-                                        <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/provence-aix-universite-club"
-                                title="Aix">
-                                <img src="https://www.lnh.fr/medias/sports_teams/aix__logo__2025-2026.png"
-                                    alt="logo Aix" />
-                            </a>
-                                                <div class="team-name">
-                        Aix                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                        <div class="note-intensite">
-                    <div class="label">
-                        Suspense* :
-                    </div>
-                    <div class="stars">
-                                                        <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                                <i class="material-icons pleine">star</i>
-                                                    </div>
-                </div>
-                            <a class="icon-item" href="https://www.lnh.fr/daikin-starligue/calendriers/20262027/dsl/j07/chambery/aix">
-                Stats
-            </a>
-                </div>
-</div>
-			        </div>
-			    </div>
-
-			    <div class="nav-right owl-results-next">
-			        <i class="fa-solid fa-chevron-right"></i>
-			    </div>
-			</div>
-				</div>
-	<div class="tabs-content active" id="tabs-next">
-				
-			<div class="calendars-carousel">
-			    <div class="nav-left owl-coming-prev">
-			        <i class="fa-solid fa-chevron-left"></i>
-			    </div>
-
-			    <div class="carousel">
-			        <div class="owl-calendars-coming owl-carousel owl-loaded owl-drag">
-			            <div class="calendars-listing-item listing-item live  pl"
+<div class="calendars-listing-item listing-item finish  pl"
     id="11822">
     <div class="row">
                 <div class="col-infos">
@@ -2177,7 +1937,7 @@ $(document).on('click', ".nav-close", function(){
                 <span class="competition">
                     ProLigue - J08                </span>
                 <br>
-                2ème mi-temps&nbsp;&nbsp;23:02            </div>
+                ven. 23 oct. 20h30            </div>
             <div class="col-tv">
                                     <div class="tv-icon">
                         <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
@@ -2200,9 +1960,9 @@ $(document).on('click', ".nav-close", function(){
                                                 <div class="team-name">
                         Besançon                    </div>
                 </div>
-                                            <div class="scores is-live">
-                                22 - 25                            </div>
-                                            <div class="team-logo">
+                                        <div class="scores is-finish">
+                            26 - 27                        </div>
+                                        <div class="team-logo">
                                                 <a href="https://www.lnh.fr/proligue/equipes/pontault-combault-handball"
                                 title="Pontault">
                                 <img src="https://www.lnh.fr/medias/sports_teams/pontault__logo__2023-2024.png"
@@ -2215,13 +1975,146 @@ $(document).on('click', ".nav-close", function(){
         </div>
     </div>
             <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=149">
-                        Voir le Live
-                    </a>
-                        </div>
+                        <div class="note-intensite">
+                    <div class="label">
+                        Suspense* :
+                    </div>
+                    <div class="stars">
+                                                        <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                    </div>
+                </div>
+                            <a class="icon-item" href="https://www.lnh.fr/proligue/calendriers/20262027/pl/j08/besancon/pontault">
+                Stats
+            </a>
+                </div>
 </div>
-<div class="calendars-listing-item listing-item live  pl"
+<div class="calendars-listing-item listing-item finish  pl"
+    id="11823">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    ProLigue - J08                </span>
+                <br>
+                ven. 23 oct. 20h30            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/massy-essonne-handball"
+                                title="Massy">
+                                <img src="https://www.lnh.fr/medias/sports_teams/massy__logo__2023-2024.png"
+                                    alt="logo Massy" />
+                            </a>
+                                                <div class="team-name">
+                        Massy                    </div>
+                </div>
+                                        <div class="scores is-finish">
+                            33 - 44                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/valence-drome-handball"
+                                title="Valence">
+                                <img src="https://www.lnh.fr/medias/sports_teams/valence__logo__2024-2025.png"
+                                    alt="logo Valence" />
+                            </a>
+                                                <div class="team-name">
+                        Valence                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by1">
+                        <div class="note-intensite">
+                    <div class="label">
+                        Suspense* :
+                    </div>
+                    <div class="stars">
+                                                        <i class="material-icons pleine">star</i>
+                                                    </div>
+                </div>
+                            <a class="icon-item" href="https://www.lnh.fr/proligue/calendriers/20262027/pl/j08/massy/valence">
+                Stats
+            </a>
+                </div>
+</div>
+<div class="calendars-listing-item listing-item finish  pl"
+    id="11825">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    ProLigue - J08                </span>
+                <br>
+                ven. 23 oct. 20h30            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/elite-val-d-oise"
+                                title="Elite Val d Oise">
+                                <img src="https://www.lnh.fr/medias/sports_teams/elite-val-d-oise__logo__2026-2027.png"
+                                    alt="logo Elite Val d Oise" />
+                            </a>
+                                                <div class="team-name">
+                        Elite Val d Oise                    </div>
+                </div>
+                                        <div class="scores is-finish">
+                            29 - 34                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/dijon-metropole-handball"
+                                title="Dijon">
+                                <img src="https://www.lnh.fr/medias/sports_teams/dijon__logo__2023-2024.png"
+                                    alt="logo Dijon" />
+                            </a>
+                                                <div class="team-name">
+                        Dijon                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by1">
+                        <div class="note-intensite">
+                    <div class="label">
+                        Suspense* :
+                    </div>
+                    <div class="stars">
+                                                        <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                    </div>
+                </div>
+                            <a class="icon-item" href="https://www.lnh.fr/proligue/calendriers/20262027/pl/j08/elite-val-d-oise/dijon">
+                Stats
+            </a>
+                </div>
+</div>
+<div class="calendars-listing-item listing-item finish  pl"
     id="11826">
     <div class="row">
                 <div class="col-infos">
@@ -2229,7 +2122,7 @@ $(document).on('click', ".nav-close", function(){
                 <span class="competition">
                     ProLigue - J08                </span>
                 <br>
-                2ème mi-temps&nbsp;&nbsp;17:39            </div>
+                ven. 23 oct. 20h30            </div>
             <div class="col-tv">
                                     <div class="tv-icon">
                         <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
@@ -2252,9 +2145,9 @@ $(document).on('click', ".nav-close", function(){
                                                 <div class="team-name">
                         Cournon                    </div>
                 </div>
-                                            <div class="scores is-live">
-                                19 - 25                            </div>
-                                            <div class="team-logo">
+                                        <div class="scores is-finish">
+                            26 - 30                        </div>
+                                        <div class="team-logo">
                                                 <a href="https://www.lnh.fr/daikin-starligue/equipes/istres-provence-handball"
                                 title="Istres">
                                 <img src="https://www.lnh.fr/medias/sports_teams/istres__logo__2023-2024.png"
@@ -2267,13 +2160,38 @@ $(document).on('click', ".nav-close", function(){
         </div>
     </div>
             <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=346">
-                        Voir le Live
-                    </a>
-                        </div>
+                        <div class="note-intensite">
+                    <div class="label">
+                        Suspense* :
+                    </div>
+                    <div class="stars">
+                                                        <i class="material-icons pleine">star</i>
+                                                                <i class="material-icons pleine">star</i>
+                                                    </div>
+                </div>
+                            <a class="icon-item" href="https://www.lnh.fr/proligue/calendriers/20262027/pl/j08/cournon/istres">
+                Stats
+            </a>
+                </div>
 </div>
-<div class="calendars-listing-item listing-item live  pl"
+			        </div>
+			    </div>
+
+			    <div class="nav-right owl-results-next">
+			        <i class="fa-solid fa-chevron-right"></i>
+			    </div>
+			</div>
+				</div>
+	<div class="tabs-content active" id="tabs-next">
+				
+			<div class="calendars-carousel">
+			    <div class="nav-left owl-coming-prev">
+			        <i class="fa-solid fa-chevron-left"></i>
+			    </div>
+
+			    <div class="carousel">
+			        <div class="owl-calendars-coming owl-carousel owl-loaded owl-drag">
+			            <div class="calendars-listing-item listing-item live  pl"
     id="11824">
     <div class="row">
                 <div class="col-infos">
@@ -2281,7 +2199,7 @@ $(document).on('click', ".nav-close", function(){
                 <span class="competition">
                     ProLigue - J08                </span>
                 <br>
-                2ème mi-temps&nbsp;&nbsp;17:16            </div>
+                2ème mi-temps&nbsp;&nbsp;29:14            </div>
             <div class="col-tv">
                                     <div class="tv-icon">
                         <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
@@ -2305,7 +2223,7 @@ $(document).on('click', ".nav-close", function(){
                         Créteil                    </div>
                 </div>
                                             <div class="scores is-live">
-                                24 - 22                            </div>
+                                30 - 30                            </div>
                                             <div class="team-logo">
                                                 <a href="https://www.lnh.fr/proligue/equipes/us-ivry-handball"
                                 title="Ivry">
@@ -2325,215 +2243,7 @@ $(document).on('click', ".nav-close", function(){
                     </a>
                         </div>
 </div>
-<div class="calendars-listing-item listing-item live  pl"
-    id="11825">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    ProLigue - J08                </span>
-                <br>
-                2ème mi-temps&nbsp;&nbsp;21:25            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/proligue/equipes/elite-val-d-oise"
-                                title="Elite Val d Oise">
-                                <img src="https://www.lnh.fr/medias/sports_teams/elite-val-d-oise__logo__2026-2027.png"
-                                    alt="logo Elite Val d Oise" />
-                            </a>
-                                                <div class="team-name">
-                        Elite Val d Oise                    </div>
-                </div>
-                                            <div class="scores is-live">
-                                24 - 30                            </div>
-                                            <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/dijon-metropole-handball"
-                                title="Dijon">
-                                <img src="https://www.lnh.fr/medias/sports_teams/dijon__logo__2023-2024.png"
-                                    alt="logo Dijon" />
-                            </a>
-                                                <div class="team-name">
-                        Dijon                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=734">
-                        Voir le Live
-                    </a>
-                        </div>
-</div>
-<div class="calendars-listing-item listing-item live  pl"
-    id="11823">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    ProLigue - J08                </span>
-                <br>
-                2ème mi-temps&nbsp;&nbsp;22:32            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/proligue/equipes/massy-essonne-handball"
-                                title="Massy">
-                                <img src="https://www.lnh.fr/medias/sports_teams/massy__logo__2023-2024.png"
-                                    alt="logo Massy" />
-                            </a>
-                                                <div class="team-name">
-                        Massy                    </div>
-                </div>
-                                            <div class="scores is-live">
-                                30 - 40                            </div>
-                                            <div class="team-logo">
-                                                <a href="https://www.lnh.fr/proligue/equipes/valence-drome-handball"
-                                title="Valence">
-                                <img src="https://www.lnh.fr/medias/sports_teams/valence__logo__2024-2025.png"
-                                    alt="logo Valence" />
-                            </a>
-                                                <div class="team-name">
-                        Valence                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=135">
-                        Voir le Live
-                    </a>
-                        </div>
-</div>
-<div class="calendars-listing-item listing-item live  pl"
-    id="11819">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    ProLigue - J08                </span>
-                <br>
-                2ème mi-temps&nbsp;&nbsp;19:37            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/proligue/equipes/pau-billere-handball"
-                                title="Pau Billère">
-                                <img src="https://www.lnh.fr/medias/sports_teams/pau-billere__logo__2024-2025.png"
-                                    alt="logo Pau Billère" />
-                            </a>
-                                                <div class="team-name">
-                        Pau Billère                    </div>
-                </div>
-                                            <div class="scores is-live">
-                                29 - 30                            </div>
-                                            <div class="team-logo">
-                                                <a href="https://www.lnh.fr/proligue/equipes/js-cherbourg-manche-handball"
-                                title="Cherbourg">
-                                <img src="https://www.lnh.fr/medias/sports_teams/cherbourg__logo__2023-2024.png"
-                                    alt="logo Cherbourg" />
-                            </a>
-                                                <div class="team-name">
-                        Cherbourg                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=184">
-                        Voir le Live
-                    </a>
-                        </div>
-</div>
-<div class="calendars-listing-item listing-item live  pl"
-    id="11820">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    ProLigue - J08                </span>
-                <br>
-                2ème mi-temps&nbsp;&nbsp;20:18            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/proligue/equipes/us-saintes-handball"
-                                title="Saintes">
-                                <img src="https://www.lnh.fr/medias/sports_teams/saintes__logo__2025-2026.png"
-                                    alt="logo Saintes" />
-                            </a>
-                                                <div class="team-name">
-                        Saintes                    </div>
-                </div>
-                                            <div class="scores is-live">
-                                30 - 28                            </div>
-                                            <div class="team-logo">
-                                                <a href="https://www.lnh.fr/proligue/equipes/frontignan-thau-hb"
-                                title="Frontignan">
-                                <img src="https://www.lnh.fr/medias/sports_teams/frontignan__logo__2023-2024.png"
-                                    alt="logo Frontignan" />
-                            </a>
-                                                <div class="team-name">
-                        Frontignan                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=400">
-                        Voir le Live
-                    </a>
-                        </div>
-</div>
-<div class="calendars-listing-item listing-item live is-starmatch lmsl"
+<div class="calendars-listing-item listing-item waiting is-starmatch lmsl"
     id="12062">
     <div class="row">
                 <div class="col-infos">
@@ -2541,7 +2251,7 @@ $(document).on('click', ".nav-close", function(){
                 <span class="competition">
                     Daikin StarLigue - J08                </span>
                 <br>
-                2ème mi-temps&nbsp;&nbsp;16:52            </div>
+                ven. 23 oct. 20h30            </div>
             <div class="col-tv">
                                     <div class="tv-icon">
                         <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
@@ -2567,9 +2277,9 @@ $(document).on('click', ".nav-close", function(){
                                                 <div class="team-name">
                         Sélestat                    </div>
                 </div>
-                                            <div class="scores is-live">
-                                18 - 18                            </div>
-                                            <div class="team-logo">
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
                                                 <a href="https://www.lnh.fr/daikin-starligue/equipes/caen-handball"
                                 title="Caen">
                                 <img src="https://www.lnh.fr/medias/sports_teams/caen__logo__2024-2025.png"
@@ -2581,62 +2291,12 @@ $(document).on('click', ".nav-close", function(){
             </div>
         </div>
     </div>
-            <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=78">
-                        Voir le Live
-                    </a>
-                        </div>
-</div>
-<div class="calendars-listing-item listing-item live  lmsl"
-    id="12060">
-    <div class="row">
-                <div class="col-infos">
-            <div class="col-competitions">
-                <span class="competition">
-                    Daikin StarLigue - J08                </span>
-                <br>
-                2ème mi-temps&nbsp;&nbsp;22:09            </div>
-            <div class="col-tv">
-                                    <div class="tv-icon">
-                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
-                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
-                        </a>
-                                            </div>
-                                </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-        <div class="row">
-                <div class="col-teams">
-            <div class="teams-logos">
-                <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/tremblay-handball"
-                                title="Tremblay">
-                                <img src="https://www.lnh.fr/medias/sports_teams/tremblay__logo__2023-2024.png"
-                                    alt="logo Tremblay" />
-                            </a>
-                                                <div class="team-name">
-                        Tremblay                    </div>
-                </div>
-                                            <div class="scores is-live">
-                                29 - 25                            </div>
-                                            <div class="team-logo">
-                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/cesson-rennes-metropole-hb"
-                                title="Cesson-Rennes">
-                                <img src="https://www.lnh.fr/medias/sports_teams/cesson-rennes__logo__2023-2024.png"
-                                    alt="logo Cesson-Rennes" />
-                            </a>
-                                                <div class="team-name">
-                        Cesson-Rennes                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div class="row-icons by1">
-                            <a class="icon-item"
-                        href="https://www.lnh.fr/matchs/live/voir?channel=57">
-                        Voir le Live
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/daikin-starligue/calendriers/20262027/dsl/j08/selestat/caen">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://shop.sa-hb.com/billetterie" target="_blank">
+                        Billetterie
                     </a>
                         </div>
 </div>
@@ -2690,6 +2350,379 @@ $(document).on('click', ".nav-close", function(){
                     Infos
                 </a>
                                     <a class="icon-item by2-second" href="https://billetterie.hbcnantes.com/fr" target="_blank">
+                        Billetterie
+                    </a>
+                        </div>
+</div>
+<div class="calendars-listing-item listing-item waiting  pl"
+    id="11821">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    ProLigue - J08                </span>
+                <br>
+                sam. 24 oct. 20h30            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/sarrebourg-moselle-sud-handball"
+                                title="Sarrebourg">
+                                <img src="https://www.lnh.fr/medias/sports_teams/sarrebourg__logo__2023-2024.png"
+                                    alt="logo Sarrebourg" />
+                            </a>
+                                                <div class="team-name">
+                        Sarrebourg                    </div>
+                </div>
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/draguignan-var-handball"
+                                title="Draguignan">
+                                <img src="https://www.lnh.fr/medias/sports_teams/draguignan__logo__2026-2027.png"
+                                    alt="logo Draguignan" />
+                            </a>
+                                                <div class="team-name">
+                        Draguignan                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/proligue/calendriers/20262027/pl/j08/sarrebourg/draguignan">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://smshandball.billetterie-club.fr/home" target="_blank">
+                        Billetterie
+                    </a>
+                        </div>
+</div>
+<div class="calendars-listing-item listing-item waiting  lmsl"
+    id="12066">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    Daikin StarLigue - J08                </span>
+                <br>
+                dim. 25 oct. 16h00            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://sabonner.beinsports.com/" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/hd3_347692957.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/saint-raphael-var-handball"
+                                title="Saint-Raphaël">
+                                <img src="https://www.lnh.fr/medias/sports_teams/saint-raphael__logo__2024-2025.png"
+                                    alt="logo Saint-Raphaël" />
+                            </a>
+                                                <div class="team-name">
+                        Saint-Raphaël                    </div>
+                </div>
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/paris-saint-germain-handball"
+                                title="Paris">
+                                <img src="https://www.lnh.fr/medias/sports_teams/paris__logo__2026-2027.png"
+                                    alt="logo Paris" />
+                            </a>
+                                                <div class="team-name">
+                        Paris                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/daikin-starligue/calendriers/20262027/dsl/j08/saint-raphael/paris">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://srvhb.billetterie-club.fr/home" target="_blank">
+                        Billetterie
+                    </a>
+                        </div>
+</div>
+<div class="calendars-listing-item listing-item waiting  lmsl"
+    id="12065">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    Daikin StarLigue - J08                </span>
+                <br>
+                dim. 25 oct. 17h00            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/montpellier-handball"
+                                title="Montpellier">
+                                <img src="https://www.lnh.fr/medias/sports_teams/montpellier__logo__2024-2025.png"
+                                    alt="logo Montpellier" />
+                            </a>
+                                                <div class="team-name">
+                        Montpellier                    </div>
+                </div>
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/saran-loiret-handball"
+                                title="Saran">
+                                <img src="https://www.lnh.fr/medias/sports_teams/saran__logo__2024-2025.png"
+                                    alt="logo Saran" />
+                            </a>
+                                                <div class="team-name">
+                        Saran                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/daikin-starligue/calendriers/20262027/dsl/j08/montpellier/saran">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://billetterie.montpellierhandball.com/" target="_blank">
+                        Billetterie
+                    </a>
+                        </div>
+</div>
+<div class="calendars-listing-item listing-item waiting  "
+    id="12431">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    Coupe de France - 3ème tour                </span>
+                <br>
+                mar. 27 oct. 20h00            </div>
+            <div class="col-tv">
+                            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/pau-billere-handball"
+                                title="Pau Billère">
+                                <img src="https://www.lnh.fr/medias/sports_teams/pau-billere__logo__2024-2025.png"
+                                    alt="logo Pau Billère" />
+                            </a>
+                                                <div class="team-name">
+                        Pau Billère                    </div>
+                </div>
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/limoges-handball"
+                                title="Limoges">
+                                <img src="https://www.lnh.fr/medias/sports_teams/limoges__logo__2023-2024.png"
+                                    alt="logo Limoges" />
+                            </a>
+                                                <div class="team-name">
+                        Limoges                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/coupe-de-france/calendriers/20262027/cdf/3eme-tour/pau-billere/limoges">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://pbh64.billetterie-club.fr/home" target="_blank">
+                        Billetterie
+                    </a>
+                        </div>
+</div>
+<div class="calendars-listing-item listing-item waiting  "
+    id="12434">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    Coupe de France - 3ème tour                </span>
+                <br>
+                mar. 27 oct. 20h00            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/proligue/equipes/valence-drome-handball"
+                                title="Valence">
+                                <img src="https://www.lnh.fr/medias/sports_teams/valence__logo__2024-2025.png"
+                                    alt="logo Valence" />
+                            </a>
+                                                <div class="team-name">
+                        Valence                    </div>
+                </div>
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/c-chartres-metropole-handball"
+                                title="Chartres">
+                                <img src="https://www.lnh.fr/medias/sports_teams/chartres__logo__2023-2024.png"
+                                    alt="logo Chartres" />
+                            </a>
+                                                <div class="team-name">
+                        Chartres                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/coupe-de-france/calendriers/20262027/cdf/3eme-tour/valence/chartres">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://vhb.billetterie-club.fr/home" target="_blank">
+                        Billetterie
+                    </a>
+                        </div>
+</div>
+<div class="calendars-listing-item listing-item waiting  "
+    id="12437">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    Coupe de France - 3ème tour                </span>
+                <br>
+                mar. 27 oct. 20h30            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/fenix-toulouse-handball"
+                                title="Toulouse">
+                                <img src="https://www.lnh.fr/medias/sports_teams/toulouse__logo__2023-2024.png"
+                                    alt="logo Toulouse" />
+                            </a>
+                                                <div class="team-name">
+                        Toulouse                    </div>
+                </div>
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/chambery-savoie-mont-blanc-handball"
+                                title="Chambéry">
+                                <img src="https://www.lnh.fr/medias/sports_teams/chambery__logo__2024-2025.png"
+                                    alt="logo Chambéry" />
+                            </a>
+                                                <div class="team-name">
+                        Chambéry                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/coupe-de-france/calendriers/20262027/cdf/3eme-tour/toulouse/chambery">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://billetterie.fenix-toulouse.fr/" target="_blank">
+                        Billetterie
+                    </a>
+                        </div>
+</div>
+<div class="calendars-listing-item listing-item waiting  "
+    id="12438">
+    <div class="row">
+                <div class="col-infos">
+            <div class="col-competitions">
+                <span class="competition">
+                    Coupe de France - 3ème tour                </span>
+                <br>
+                mar. 27 oct. 20h30            </div>
+            <div class="col-tv">
+                                    <div class="tv-icon">
+                        <a href="https://www.handballtv.fr/calendar" target="_blank" class="tv-link">
+                            <img src="https://www.lnh.fr/medias/televisions/htvsmall_886758244.png" />
+                        </a>
+                                            </div>
+                                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div class="row">
+                <div class="col-teams">
+            <div class="teams-logos">
+                <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/tremblay-handball"
+                                title="Tremblay">
+                                <img src="https://www.lnh.fr/medias/sports_teams/tremblay__logo__2023-2024.png"
+                                    alt="logo Tremblay" />
+                            </a>
+                                                <div class="team-name">
+                        Tremblay                    </div>
+                </div>
+                                        <div class="scores is-coming">
+                            vs                        </div>
+                                        <div class="team-logo">
+                                                <a href="https://www.lnh.fr/daikin-starligue/equipes/cesson-rennes-metropole-hb"
+                                title="Cesson-Rennes">
+                                <img src="https://www.lnh.fr/medias/sports_teams/cesson-rennes__logo__2023-2024.png"
+                                    alt="logo Cesson-Rennes" />
+                            </a>
+                                                <div class="team-name">
+                        Cesson-Rennes                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row-icons by2">
+                        <a class="icon-item" href="https://www.lnh.fr/coupe-de-france/calendriers/20262027/cdf/3eme-tour/tremblay/cesson-rennes">
+                    Infos
+                </a>
+                                    <a class="icon-item by2-second" href="https://tremblayhandball.billetterie-club.com/home" target="_blank">
                         Billetterie
                     </a>
                         </div>
@@ -2818,7 +2851,7 @@ $(document).on('click', ".nav-close", function(){
         Un nouveau test à Nantes    </div>
     <div class="row-infos">
         <div class="logo"><img src="https://www.lnh.fr/medias/sports_teams/chambery__logo__2024-2025.png" alt="logo"></div>
-        <div class="datetime">Chambéry - Publié il y a 21 heures</div>
+        <div class="datetime">Chambéry - Publié il y a 22 heures</div>
     </div>
 </a>
 <a class="news-item listing-item small " href="https://www.lnh.fr/lnh/news/2026-10-23/montpellier-s-incline-catalogne" >
@@ -2846,7 +2879,7 @@ $(document).on('click', ".nav-close", function(){
         Infos &amp; Programme de match vs Nîmes    </div>
     <div class="row-infos">
         <div class="logo"><img src="https://www.lnh.fr/medias/sports_teams/chartres__logo__2023-2024.png" alt="logo"></div>
-        <div class="datetime">Chartres - Publié il y a 21 heures</div>
+        <div class="datetime">Chartres - Publié il y a 22 heures</div>
     </div>
 </a>
 <a class="news-item listing-item small " href="https://www.lnh.fr/lnh/news/cournon-istres-avant-match" >
@@ -2954,23 +2987,23 @@ $(document).on('click', ".nav-close", function(){
 	    	<div class="container">
 	    		<div class="col-title">top stats</div>
 		        <div class="col-top">
-	<a class="stats-home-player" href="daikin-starligue/joueurs/yoann-gibelin">
+	<a class="stats-home-player" href="proligue/joueurs/lucas-berchoux">
 	    <div class="col-picture">
-	        <img src="https://www.lnh.fr/medias/sports_players/gibelin-yoann__picture__2026-2027-3455-17866.png" alt="photo Gibelin Yoann">
+	        <img src="https://www.lnh.fr/medias/sports_players/berchoux-lucas__picture__2026-2027-7691-17511.png" alt="photo Berchoux Lucas">
 	    </div>
 	    <div class="col-infos">
 	    	<div class="title">
 	    		Top joueur	    	</div>
 	        <div class="team">
-	            <img src="https://www.lnh.fr/medias/sports_teams/nimes__logo__2025-2026.png">
+	            <img src="https://www.lnh.fr/medias/sports_teams/pau-billere__logo__2024-2025.png">
 	        </div>
 	        <div class="name">
-	            GIBELIN Yoann	        </div>
+	            BERCHOUX Lucas	        </div>
 	        <div class="stats">
-	            Score LNH <div>18.1</div>
+	            Score LNH <div>30.2</div>
 	        </div>
 	        		        <div class="more">
-		            Chartres-Nîmes<br>J08 - 23/10/2026		        </div>
+		            Pau Billère-Cherbourg<br>J08 - 23/10/2026		        </div>
 	        		        <div class="link">
 	        	voir sa fiche
 	        </div>
@@ -2978,23 +3011,23 @@ $(document).on('click', ".nav-close", function(){
 	</a>
 </div>
 <div class="col-top">
-	<a class="stats-home-player" href="daikin-starligue/joueurs/mehdi-harbaoui">
+	<a class="stats-home-player" href="proligue/joueurs/nathan-delerce">
 	    <div class="col-picture">
-	        <img src="https://www.lnh.fr/medias/sports_players/harbaoui-mehdi__picture__2026-2027-2259-17727.png" alt="photo Harbaoui Mehdi">
+	        <img src="https://www.lnh.fr/medias/sports_players/delerce-nathan__picture__2026-2027-7205-17281.png" alt="photo Delerce Nathan">
 	    </div>
 	    <div class="col-infos">
 	    	<div class="title">
 	    		Top gardien	    	</div>
 	        <div class="team">
-	            <img src="https://www.lnh.fr/medias/sports_teams/chartres__logo__2023-2024.png">
+	            <img src="https://www.lnh.fr/medias/sports_teams/besancon__logo__2025-2026.png">
 	        </div>
 	        <div class="name">
-	            HARBAOUI Mehdi	        </div>
+	            DELERCE Nathan	        </div>
 	        <div class="stats">
-	            Score LNH <div>14.7</div>
+	            Score LNH <div>20.9</div>
 	        </div>
 	        		        <div class="more">
-		            Chartres-Nîmes<br>J08 - 23/10/2026		        </div>
+		            Besançon-Pontault<br>J08 - 23/10/2026		        </div>
 	        		        <div class="link">
 	        	voir sa fiche
 	        </div>

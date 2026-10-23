@@ -53,7 +53,7 @@
 
     <script src='https://www.google.com/recaptcha/api.js?hl=pl'></script>
     
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" nonce='bac95f7871c0a1c27d339543c905838a'></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" nonce='00cc8241fa771cdaad10f275b216628b'></script>
 
 	
 	<meta name="twitter:card" content="summary_large_image">
@@ -64,8 +64,8 @@
 	<meta property="og:title" content="Strona główna">
 	<meta property="og:description" content="TAURON Liga">
 	<meta property="og:image" content="https://www.tauronliga.pl/_images/account/men/ogimage.jpg">
-	<script nonce='bac95f7871c0a1c27d339543c905838a'>$(document).on("cookieManager:consentChange", function(e, categoryData) {if(categoryData[3].enabled) {location.reload();}});</script>
-		<script type="module" nonce="bac95f7871c0a1c27d339543c905838a">
+	<script nonce='00cc8241fa771cdaad10f275b216628b'>$(document).on("cookieManager:consentChange", function(e, categoryData) {if(categoryData[3].enabled) {location.reload();}});</script>
+		<script type="module" nonce="00cc8241fa771cdaad10f275b216628b">
     import { Url } from '/js/modules/Url.module.js';
 
     // Niedestrukcyjnie tworzymy przestrzeń nazw;
@@ -141,7 +141,7 @@
             
 <ul class="top-menu profile-menu">
     <li><a rel="nofollow" href="https://profil.siatkarskaliga.pl/profile/action/register.html">Rejestracja</a></li>
-    <li><a rel="nofollow" href="https://www.tauronliga.pl/profile/action/preLogin/pageUrl/AkJwfHSMM8d3jDh7BJM1OIdrlt9gTA42DFitZuT277XtGZAMcixeqzZPYw2khQSUQhYntgLUULYQfZpnYnZcUatnuf5XEAotOhqElY5MkDtmdpMdg6ePR1IOxjtNeLn6XtKfyiGXs8NbrQuqGhAFvJvXrZfjLU045RmS7HGuVLUR.html">Logowanie</a></li>
+    <li><a rel="nofollow" href="https://www.tauronliga.pl/profile/action/preLogin/pageUrl/FZN9Ed63E4t5M4KsKmPXZKWyH1vPQCP0HZ8qR6TXKHycdKAWS48KKRL2GuiRk7owy7W0EMjGFEglWbmEo4hZMIuAlSpvyknPrsEvVtcwZpzCvPlzlhS7StNmssiOcNODyADc3PqzeLT3W11WBu0WBSvNX2WSIzg6QJE9umMKeVz2.html">Logowanie</a></li>
 </ul>
 
 
@@ -259,230 +259,6 @@
 		<div class="container">
 			<div class="dc-slider-container">
 				<div class="dc-slider-dock tabbable ui-widget-content games-stripe">
-										<div class="dc-slider-item gamesbox ajax-synced-games" tabindex="0" 
-						data-game-id="247" 
-						data-game-source="e">
-							<div class="gamesbox-content gamesbox-content-gpcup complete" data-synced-games-class="status" data-synced-games-class-list="planned,live,complete">
-    <div class="gamesbox-header">
-                <div class="date">niedziela, 9 sie, 16:00</div>
-                <div class="tv" style="display: none;" data-synced-games-show-if="live">Trwa</div>
-                    <div class="tv" data-synced-games-hide-if="live"><img src="/dl/620437/inline/scaley=32/5b2c7e/livePS1.png" alt="TV Polsat Sport 1" /></div>
-        
-        <div class="tv polsat-video" 
-             style="display: none;" 
-            data-synced-games-show-if="showMatchSummary">&nbsp;</div>
-
-    </div>
-    <div class="gamesbox-body">
-        
-        <div class="team" data-synced-games-class="teamAGSStatus" data-synced-games-class-list="win">
-                        <div class="logo">
-                                    <img loading="lazy" src="/dl/725060/inline/scalecrop=70x70/9124f4/pge_skra.png" alt="PGE GiEK SKRA Bełchatów" />
-                            </div>
-                        <div class="name notranslate">PGE GiEK SKRA Bełchatów</div>
-        </div>
-        <div class="score notranslate" data-synced-games-hide-if="mainGameOngoing">
-                        <span class="lost" 
-                data-synced-games-class="teamAStatus" data-synced-games-class-list="win,lost"
-                data-synced-games-content="setsTeamA" data-synced-games-content-default="···">1</span>
-            <span class="win" 
-                data-synced-games-class="teamBStatus" data-synced-games-class-list="win,lost"
-                data-synced-games-content="setsTeamB" data-synced-games-content-default="···">2</span>
-                        <span class="small"
-                 style="display: none;" 
-                data-synced-games-class="teamAGSStatus" data-synced-games-class-list="win,lost"
-                data-synced-games-show-if="hasGoldSet"
-                data-synced-games-content="setGSpointsTeamA" data-synced-games-content-default="0"></span>
-            <span class="small"
-                 style="display: none;" 
-                data-synced-games-class="teamBGSStatus" data-synced-games-class-list="win,lost"
-                data-synced-games-show-if="hasGoldSet"
-                data-synced-games-content="setGSpointsTeamB" data-synced-games-content-default="0"></span>
-        </div>
-        <div class="score notranslate small" style="display: none;" data-synced-games-show-if="mainGameOngoing">
-                        <span class="lost" 
-                data-synced-games-content="set1pointsTeamA" 
-                data-synced-games-class="teamASet1Status" data-synced-games-class-list="win,lost">16</span>
-            <span class="win" 
-                data-synced-games-content="set1pointsTeamB" 
-                data-synced-games-class="teamBSet1Status" data-synced-games-class-list="win,lost">25</span>
-            <span class="win" 
-                data-synced-games-content="set2pointsTeamA" 
-                data-synced-games-class="teamASet2Status" data-synced-games-class-list="win,lost">28</span>
-            <span class="lost" 
-                data-synced-games-content="set2pointsTeamB" 
-                data-synced-games-class="teamBSet2Status" data-synced-games-class-list="win,lost">26</span>
-            <span class="" 
-                data-synced-games-content="set3pointsTeamA" 
-                data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">15</span>
-            <span class="" 
-                data-synced-games-content="set3pointsTeamB" 
-                data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">17</span>
-            <span class="" 
-                data-synced-games-content="set4pointsTeamA" 
-                data-synced-games-class="teamASet4Status" data-synced-games-class-list="win,lost">0</span>
-            <span class="" 
-                data-synced-games-content="set4pointsTeamB" 
-                data-synced-games-class="teamBSet4Status" data-synced-games-class-list="win,lost">0</span>
-            <span class="" 
-                data-synced-games-content="set5pointsTeamA" 
-                data-synced-games-class="teamASet5Status" data-synced-games-class-list="win,lost">0</span>
-            <span class="" 
-                data-synced-games-content="set5pointsTeamB" 
-                data-synced-games-class="teamBSet5Status" data-synced-games-class-list="win,lost">0</span>
-        </div>
-                <div class="team" data-synced-games-class="teamBGSStatus" data-synced-games-class-list="win">
-                        <div class="logo">
-                                    <img loading="lazy" src="/dl/725058/inline/scalecrop=70x70/711f8f/cuk_anioly.png" alt="CUK Anioły Toruń" />
-                            </div>
-                        <div class="name notranslate">CUK Anioły Toruń</div>
-        </div>
-    </div>
-    <div class="gamesbox-panel">
-        <div>
-        
-                        <div class="date">
-
-                <div class="date-a">
-                 
-                                    Niedziela, 9 sie, 16:00
-                                </div>
-                
-                <div class="date-b">
-                    Grand Prix PGE Mężczyzn 2026                </div>                                          
-
-            </div>
-
-                        <div class="gamesbox-panel-teams gold" style="display: none;" data-synced-games-show-if="hasGoldSet">
-                <div class="title">Wyniki pierwszego meczu</div>
-                <div class="team">
-                    <div class="logo">
-                        <a href="/gpcup/id/17/gid/247.html">                                                    <img loading="lazy" src="/dl/725058/inline/scalecrop=60x60/541cd3/cuk_anioly.png" alt="CUK Anioły Toruń" />
-                                                </a>                    </div>
-                    <div class="name notranslate"><a href="/gpcup/id/17/gid/247.html">CUK Anioły Toruń</a></div>
-                </div>
-                <div class="score notranslate">
-                    <span class="" 
-                        data-synced-games-class="prevTeamBStatus" data-synced-games-class-list="win,lost" 
-                        data-synced-games-content="prevSetsTeamB" data-synced-games-content-default="···">0</span>
-                    <span class="" 
-                        data-synced-games-class="prevTeamAStatus" data-synced-games-class-list="win,lost"
-                        data-synced-games-content="prevSetsTeamA" data-synced-games-content-default="···">0</span>
-                </div>
-                <div class="team">
-                    <div class="logo">
-                        <a href="/gpcup/id/17/gid/247.html">                                                    <img loading="lazy" src="/dl/725060/inline/scalecrop=60x60/138126/pge_skra.png" alt="PGE GiEK SKRA Bełchatów" />
-                                                </a>                    </div>
-                    <div class="name notranslate"><a href="/gpcup/id/17/gid/247.html">PGE GiEK SKRA Bełchatów</a></div>
-                </div>
-            </div>
-                        <div class="gamesbox-panel-teams">
-                <div class="team">
-                    <div class="logo">
-                        <a href="/gpcup/id/17/gid/247.html">                                                    <img loading="lazy" src="/dl/725060/inline/scalecrop=100x100/f72050/pge_skra.png" alt="PGE GiEK SKRA Bełchatów" />
-                                                </a>                    </div>
-                    <div class="name notranslate"><a href="/gpcup/id/17/gid/247.html">PGE GiEK SKRA Bełchatów</a></div>
-                </div>
-                <div class="score notranslate">
-                    <span class="lost" 
-                        data-synced-games-class="teamAStatus" data-synced-games-class-list="win,lost"
-                        data-synced-games-content="setsTeamA" data-synced-games-content-default="···">1</span>
-                    <span class="win" 
-                        data-synced-games-class="teamBStatus" data-synced-games-class-list="win,lost"
-                        data-synced-games-content="setsTeamB" data-synced-games-content-default="···">2</span>
-                </div>
-                <div class="team">
-                    <div class="logo">
-                        <a href="/gpcup/id/17/gid/247.html">                                                    <img loading="lazy" src="/dl/725058/inline/scalecrop=100x100/8a2ec0/cuk_anioly.png" alt="CUK Anioły Toruń" />
-                                                </a>                    </div>
-                    <div class="name notranslate"><a href="/gpcup/id/17/gid/247.html">CUK Anioły Toruń</a></div>
-                </div>
-            </div>
-            <div class="points" data-synced-games-show-if="complete"> 
-                Małe punkty: 
-                <div class="score notranslate">
-                    <span class="lost" 
-                        data-synced-games-content="set1pointsTeamA" 
-                        data-synced-games-class="teamASet1Status" data-synced-games-class-list="win,lost">16</span>
-                    <span class="win" 
-                        data-synced-games-content="set1pointsTeamB" 
-                        data-synced-games-class="teamBSet1Status" data-synced-games-class-list="win,lost">25</span>
-                    <span class="win" 
-                        data-synced-games-show-if="set2Possible"
-                        data-synced-games-content="set2pointsTeamA" 
-                        data-synced-games-class="teamASet2Status" data-synced-games-class-list="win,lost">28</span>
-                    <span class="lost" 
-                        data-synced-games-show-if="set2Possible"
-                        data-synced-games-content="set2pointsTeamB" 
-                        data-synced-games-class="teamBSet2Status" data-synced-games-class-list="win,lost">26</span>
-                    <span class="" 
-                        data-synced-games-show-if="set3Possible"
-                        data-synced-games-content="set3pointsTeamA" 
-                        data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">15</span>
-                    <span class="" 
-                        data-synced-games-show-if="set3Possible"
-                        data-synced-games-content="set3pointsTeamB" 
-                        data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">17</span>
-                    <span class="" 
-                        data-synced-games-show-if="set4Possible"
-                        data-synced-games-content="set4pointsTeamA" 
-                        data-synced-games-class="teamASet4Status" data-synced-games-class-list="win,lost">0</span>
-                    <span class="" 
-                        data-synced-games-show-if="set4Possible"
-                        data-synced-games-content="set4pointsTeamB" 
-                        data-synced-games-class="teamBSet4Status" data-synced-games-class-list="win,lost">0</span>
-                    <span class="" 
-                        data-synced-games-show-if="set5Possible"
-                        data-synced-games-content="set5pointsTeamA" 
-                        data-synced-games-class="teamASet5Status" data-synced-games-class-list="win,lost">0</span>
-                    <span class="" 
-                        data-synced-games-show-if="set5Possible"
-                        data-synced-games-content="set5pointsTeamB" 
-                        data-synced-games-class="teamBSet5Status" data-synced-games-class-list="win,lost">0</span>
-                </div>
-            </div>
-            <div class="points notranslate gold" style="display: none;" data-synced-games-show-if="hasGoldSet">
-                Złoty set: 
-                <div class="score">
-                    <span class="" data-synced-games-content="setGSpointsTeamA" data-synced-games-class="teamAGSStatus" data-synced-games-class-list="win,lost"></span>
-                    <span class="" data-synced-games-content="setGSpointsTeamB" data-synced-games-class="teamBGSStatus" data-synced-games-class-list="win,lost"></span>
-                </div>
-            </div>
-                            <div class="tv">
-                                            <img loading="lazy" src="/dl/620437/inline/scaley=32/5b2c7e/livePS1.png" alt="TV Polsat Sport 1" />
-                                    </div>
-                        <div class="buttons">
-                <a class="btn btn-default btn-sm" 
-                    href="https://www.tauronliga.pl/gpcup/id/17/gid/247.html"
-                    >Więcej</a>
-                
-                <a class="btn btn-default btn-sm" 
-                    href="https://www.tauronliga.pl/gpcup/id/17/gid/247.html#pktvspkt"
-                     style="display: none;" 
-                    data-synced-games-show-if="live">pkt. vs pkt.</a>      
-                
-                
-                <a class="btn btn-default btn-sm btn-polsat-video" 
-                    data-synced-games-attr="href" data-synced-games-attr-field="urlMatchSummary"
-                    href="##"
-                     style="display: none;" 
-                    data-synced-games-show-if="showMatchSummary">Skrót meczu</a>        
-                
-                                                       
-                <a class="btn btn-default btn-sm" 
-                    href="https://www.tauronliga.pl/gpcup/id/17/gid/247.html#stats"
-                     style="display: none;" 
-                    data-synced-games-hide-if="planned">Statystyki</a>
-                                
-                   
-                
-                   
-            </div>
-        
-        
-        </div>
-    </div>
-</div>						</div>
 										<div class="dc-slider-item gamesbox ajax-synced-games" tabindex="0" 
 						data-game-id="1104812" 
 						data-game-source="g">
@@ -2574,11 +2350,11 @@
 										<div class="dc-slider-item gamesbox ajax-synced-games" tabindex="0" 
 						data-game-id="1104816" 
 						data-game-source="g">
-							<div class="gamesbox-content gamesbox-content-RS live" data-synced-games-class="status" data-synced-games-class-list="planned,live,complete">
+							<div class="gamesbox-content gamesbox-content-RS complete" data-synced-games-class="status" data-synced-games-class-list="planned,live,complete">
     <div class="gamesbox-header">
                 <div class="date">piątek, 23 paź, 20:30</div>
-                <div class="tv" data-synced-games-show-if="live">Trwa</div>
-                    <div class="tv" style="display: none;" data-synced-games-hide-if="live"><img src="/dl/620437/inline/scaley=32/5b2c7e/livePS1.png" alt="TV Polsat Sport 1" /></div>
+                <div class="tv" style="display: none;" data-synced-games-show-if="live">Trwa</div>
+                    <div class="tv" data-synced-games-hide-if="live"><img src="/dl/620437/inline/scaley=32/5b2c7e/livePS1.png" alt="TV Polsat Sport 1" /></div>
         
         <div class="tv polsat-video" 
              style="display: none;" 
@@ -2593,13 +2369,13 @@
                             </div>
                         <div class="name notranslate">Stilon Gorzów</div>
         </div>
-        <div class="score notranslate" style="display: none;" data-synced-games-hide-if="mainGameOngoing">
-                        <span class="" 
+        <div class="score notranslate" data-synced-games-hide-if="mainGameOngoing">
+                        <span class="lost" 
                 data-synced-games-class="teamAStatus" data-synced-games-class-list="win,lost"
                 data-synced-games-content="setsTeamA" data-synced-games-content-default="···">0</span>
-            <span class="" 
+            <span class="win" 
                 data-synced-games-class="teamBStatus" data-synced-games-class-list="win,lost"
-                data-synced-games-content="setsTeamB" data-synced-games-content-default="···">2</span>
+                data-synced-games-content="setsTeamB" data-synced-games-content-default="···">3</span>
                         <span class="small"
                  style="display: none;" 
                 data-synced-games-class="teamAGSStatus" data-synced-games-class-list="win,lost"
@@ -2611,7 +2387,7 @@
                 data-synced-games-show-if="hasGoldSet"
                 data-synced-games-content="setGSpointsTeamB" data-synced-games-content-default="0"></span>
         </div>
-        <div class="score notranslate small" data-synced-games-show-if="mainGameOngoing">
+        <div class="score notranslate small" style="display: none;" data-synced-games-show-if="mainGameOngoing">
                         <span class="lost" 
                 data-synced-games-content="set1pointsTeamA" 
                 data-synced-games-class="teamASet1Status" data-synced-games-class-list="win,lost">17</span>
@@ -2624,12 +2400,12 @@
             <span class="win" 
                 data-synced-games-content="set2pointsTeamB" 
                 data-synced-games-class="teamBSet2Status" data-synced-games-class-list="win,lost">25</span>
-            <span class="" 
+            <span class="lost" 
                 data-synced-games-content="set3pointsTeamA" 
-                data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">1</span>
-            <span class="" 
+                data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">21</span>
+            <span class="win" 
                 data-synced-games-content="set3pointsTeamB" 
-                data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">3</span>
+                data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">25</span>
             <span class="" 
                 data-synced-games-content="set4pointsTeamA" 
                 data-synced-games-class="teamASet4Status" data-synced-games-class-list="win,lost">0</span>
@@ -2696,12 +2472,12 @@
                     <div class="name notranslate"><a href="/teams/id/28.html">Stilon Gorzów</a></div>
                 </div>
                 <div class="score notranslate">
-                    <span class="" 
+                    <span class="lost" 
                         data-synced-games-class="teamAStatus" data-synced-games-class-list="win,lost"
                         data-synced-games-content="setsTeamA" data-synced-games-content-default="···">0</span>
-                    <span class="" 
+                    <span class="win" 
                         data-synced-games-class="teamBStatus" data-synced-games-class-list="win,lost"
-                        data-synced-games-content="setsTeamB" data-synced-games-content-default="···">2</span>
+                        data-synced-games-content="setsTeamB" data-synced-games-content-default="···">3</span>
                 </div>
                 <div class="team">
                     <div class="logo">
@@ -2710,7 +2486,7 @@
                     <div class="name notranslate"><a href="/teams/id/8.html">Jastrzębie Barkom</a></div>
                 </div>
             </div>
-            <div class="points" style="display: none;" data-synced-games-show-if="complete"> 
+            <div class="points" data-synced-games-show-if="complete"> 
                 Małe punkty: 
                 <div class="score notranslate">
                     <span class="lost" 
@@ -2727,14 +2503,14 @@
                         data-synced-games-show-if="set2Possible"
                         data-synced-games-content="set2pointsTeamB" 
                         data-synced-games-class="teamBSet2Status" data-synced-games-class-list="win,lost">25</span>
-                    <span class="" 
+                    <span class="lost" 
                         data-synced-games-show-if="set3Possible"
                         data-synced-games-content="set3pointsTeamA" 
-                        data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">1</span>
-                    <span class="" 
+                        data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">21</span>
+                    <span class="win" 
                         data-synced-games-show-if="set3Possible"
                         data-synced-games-content="set3pointsTeamB" 
-                        data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">3</span>
+                        data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">25</span>
                     <span class="" 
                         data-synced-games-show-if="set4Possible"
                         data-synced-games-content="set4pointsTeamA" 
@@ -2770,7 +2546,7 @@
                 
                 <a class="btn btn-default btn-sm" 
                     href="https://www.tauronliga.pl/games/action/show/id/1104816.html#pktvspkt"
-                     
+                     style="display: none;" 
                     data-synced-games-show-if="live">pkt. vs pkt.</a>      
                 
                 
@@ -4748,4 +4524,229 @@
                 <div class="title">Wyniki pierwszego meczu</div>
                 <div class="team">
                     <div class="logo">
-    
+                        <a href="/teams/id/62.html">                                                    <img loading="lazy" src="/dl/728192/inline/scalecrop=60x60/bea713/pge_projekt_warszawa-1.png" alt="PGE Projekt Warszawa" />
+                                                </a>                    </div>
+                    <div class="name notranslate"><a href="/teams/id/62.html">PGE Projekt Warszawa</a></div>
+                </div>
+                <div class="score notranslate">
+                    <span class="" 
+                        data-synced-games-class="prevTeamBStatus" data-synced-games-class-list="win,lost" 
+                        data-synced-games-content="prevSetsTeamB" data-synced-games-content-default="···">0</span>
+                    <span class="" 
+                        data-synced-games-class="prevTeamAStatus" data-synced-games-class-list="win,lost"
+                        data-synced-games-content="prevSetsTeamA" data-synced-games-content-default="···">0</span>
+                </div>
+                <div class="team">
+                    <div class="logo">
+                        <a href="/teams/id/28.html">                                                    <img loading="lazy" src="/dl/728510/inline/scalecrop=60x60/85a242/stilon_gorzow.png" alt="Stilon Gorzów" />
+                                                </a>                    </div>
+                    <div class="name notranslate"><a href="/teams/id/28.html">Stilon Gorzów</a></div>
+                </div>
+            </div>
+                        <div class="gamesbox-panel-teams">
+                <div class="team">
+                    <div class="logo">
+                        <a href="/teams/id/28.html">                                                    <img loading="lazy" src="/dl/728510/inline/scalecrop=100x100/16b98c/stilon_gorzow.png" alt="Stilon Gorzów" />
+                                                </a>                    </div>
+                    <div class="name notranslate"><a href="/teams/id/28.html">Stilon Gorzów</a></div>
+                </div>
+                <div class="score notranslate">
+                    <span class="" 
+                        data-synced-games-class="teamAStatus" data-synced-games-class-list="win,lost"
+                        data-synced-games-content="setsTeamA" data-synced-games-content-default="···">···</span>
+                    <span class="" 
+                        data-synced-games-class="teamBStatus" data-synced-games-class-list="win,lost"
+                        data-synced-games-content="setsTeamB" data-synced-games-content-default="···">···</span>
+                </div>
+                <div class="team">
+                    <div class="logo">
+                        <a href="/teams/id/62.html">                                                    <img loading="lazy" src="/dl/728192/inline/scalecrop=100x100/e8bac3/pge_projekt_warszawa-1.png" alt="PGE Projekt Warszawa" />
+                                                </a>                    </div>
+                    <div class="name notranslate"><a href="/teams/id/62.html">PGE Projekt Warszawa</a></div>
+                </div>
+            </div>
+            <div class="points" style="display: none;" data-synced-games-show-if="complete"> 
+                Małe punkty: 
+                <div class="score notranslate">
+                    <span class="" 
+                        data-synced-games-content="set1pointsTeamA" 
+                        data-synced-games-class="teamASet1Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-content="set1pointsTeamB" 
+                        data-synced-games-class="teamBSet1Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set2Possible"
+                        data-synced-games-content="set2pointsTeamA" 
+                        data-synced-games-class="teamASet2Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set2Possible"
+                        data-synced-games-content="set2pointsTeamB" 
+                        data-synced-games-class="teamBSet2Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set3Possible"
+                        data-synced-games-content="set3pointsTeamA" 
+                        data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set3Possible"
+                        data-synced-games-content="set3pointsTeamB" 
+                        data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set4Possible"
+                        data-synced-games-content="set4pointsTeamA" 
+                        data-synced-games-class="teamASet4Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set4Possible"
+                        data-synced-games-content="set4pointsTeamB" 
+                        data-synced-games-class="teamBSet4Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set5Possible"
+                        data-synced-games-content="set5pointsTeamA" 
+                        data-synced-games-class="teamASet5Status" data-synced-games-class-list="win,lost">0</span>
+                    <span class="" 
+                        data-synced-games-show-if="set5Possible"
+                        data-synced-games-content="set5pointsTeamB" 
+                        data-synced-games-class="teamBSet5Status" data-synced-games-class-list="win,lost">0</span>
+                </div>
+            </div>
+            <div class="points notranslate gold" style="display: none;" data-synced-games-show-if="hasGoldSet">
+                Złoty set: 
+                <div class="score">
+                    <span class="" data-synced-games-content="setGSpointsTeamA" data-synced-games-class="teamAGSStatus" data-synced-games-class-list="win,lost"></span>
+                    <span class="" data-synced-games-content="setGSpointsTeamB" data-synced-games-class="teamBGSStatus" data-synced-games-class-list="win,lost"></span>
+                </div>
+            </div>
+                        <div class="buttons">
+                <a class="btn btn-default btn-sm" 
+                    href="https://www.tauronliga.pl/games/action/show/id/1104826.html"
+                    >Więcej</a>
+                
+                <a class="btn btn-default btn-sm" 
+                    href="https://www.tauronliga.pl/games/action/show/id/1104826.html#pktvspkt"
+                     style="display: none;" 
+                    data-synced-games-show-if="live">pkt. vs pkt.</a>      
+                
+                
+                <a class="btn btn-default btn-sm btn-polsat-video" 
+                    data-synced-games-attr="href" data-synced-games-attr-field="urlMatchSummary"
+                    href="##"
+                     style="display: none;" 
+                    data-synced-games-show-if="showMatchSummary">Skrót meczu</a>        
+                
+                                                       
+                <a class="btn btn-default btn-sm" 
+                    href="https://www.tauronliga.pl/games/action/show/id/1104826.html#stats"
+                     style="display: none;" 
+                    data-synced-games-hide-if="planned">Statystyki</a>
+                                
+                                <a class="btn btn-default btn-sm" 
+                    href="https://www.tauronliga.pl/statsTeams/type/teamsComparator/teams_1/28/teams_2/62.html"
+                     
+                    data-synced-games-show-if="planned">Przed Meczem</a>
+                   
+                
+                                <a class="btn btn-default btn-sm" 
+                    href="https://bilety.sportcrm.pl/stilongorzow"
+                     
+                    data-synced-games-show-if="planned">Bilety</a>
+                   
+            </div>
+        
+        
+        </div>
+    </div>
+</div>						</div>
+										<div class="dc-slider-item gamesbox ajax-synced-games" tabindex="0" 
+						data-game-id="1104823" 
+						data-game-source="g">
+							<div class="gamesbox-content gamesbox-content-RS planned" data-synced-games-class="status" data-synced-games-class-list="planned,live,complete">
+    <div class="gamesbox-header">
+                <div class="date">sobota, 31 paź, 18:00</div>
+                <div class="tv" style="display: none;" data-synced-games-show-if="live">Trwa</div>
+        
+        <div class="tv polsat-video" 
+             style="display: none;" 
+            data-synced-games-show-if="showMatchSummary">&nbsp;</div>
+
+    </div>
+    <div class="gamesbox-body">
+        
+        <div class="team" data-synced-games-class="teamAGSStatus" data-synced-games-class-list="win">
+                        <div class="logo">
+                                    <img loading="lazy" src="/dl/724989/inline/scalecrop=70x70/71245d/pge_giek_skra.png" alt="PGE GiEK SKRA Bełchatów" />
+                            </div>
+                        <div class="name notranslate">PGE GiEK SKRA Bełchatów</div>
+        </div>
+        <div class="score notranslate" data-synced-games-hide-if="mainGameOngoing">
+                        <span class="" 
+                data-synced-games-class="teamAStatus" data-synced-games-class-list="win,lost"
+                data-synced-games-content="setsTeamA" data-synced-games-content-default="···">···</span>
+            <span class="" 
+                data-synced-games-class="teamBStatus" data-synced-games-class-list="win,lost"
+                data-synced-games-content="setsTeamB" data-synced-games-content-default="···">···</span>
+                        <span class="small"
+                 style="display: none;" 
+                data-synced-games-class="teamAGSStatus" data-synced-games-class-list="win,lost"
+                data-synced-games-show-if="hasGoldSet"
+                data-synced-games-content="setGSpointsTeamA" data-synced-games-content-default="0"></span>
+            <span class="small"
+                 style="display: none;" 
+                data-synced-games-class="teamBGSStatus" data-synced-games-class-list="win,lost"
+                data-synced-games-show-if="hasGoldSet"
+                data-synced-games-content="setGSpointsTeamB" data-synced-games-content-default="0"></span>
+        </div>
+        <div class="score notranslate small" style="display: none;" data-synced-games-show-if="mainGameOngoing">
+                        <span class="" 
+                data-synced-games-content="set1pointsTeamA" 
+                data-synced-games-class="teamASet1Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set1pointsTeamB" 
+                data-synced-games-class="teamBSet1Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set2pointsTeamA" 
+                data-synced-games-class="teamASet2Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set2pointsTeamB" 
+                data-synced-games-class="teamBSet2Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set3pointsTeamA" 
+                data-synced-games-class="teamASet3Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set3pointsTeamB" 
+                data-synced-games-class="teamBSet3Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set4pointsTeamA" 
+                data-synced-games-class="teamASet4Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set4pointsTeamB" 
+                data-synced-games-class="teamBSet4Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set5pointsTeamA" 
+                data-synced-games-class="teamASet5Status" data-synced-games-class-list="win,lost">0</span>
+            <span class="" 
+                data-synced-games-content="set5pointsTeamB" 
+                data-synced-games-class="teamBSet5Status" data-synced-games-class-list="win,lost">0</span>
+        </div>
+                <div class="team" data-synced-games-class="teamBGSStatus" data-synced-games-class-list="win">
+                        <div class="logo">
+                                    <img loading="lazy" src="/dl/724980/inline/scalecrop=70x70/3c35ec/aluron_cmc.png" alt="Aluron CMC Warta Zawiercie" />
+                            </div>
+                        <div class="name notranslate">Aluron CMC Warta Zawiercie</div>
+        </div>
+    </div>
+    <div class="gamesbox-panel">
+        <div>
+        
+                        <div class="date">
+
+                <div class="date-a">
+                 
+                                    Sobota, 31 paź, 18:00
+                                </div>
+                
+                <div class="date-b">
+                    Faza Zasadnicza                </div>                                          
+
+            </div>
+
+                        <div class="gamesbox-panel-teams gold" style="display: none;" data-synced-games-show-if="hasGoldSet">
+                <div class="title">Wyniki pierws

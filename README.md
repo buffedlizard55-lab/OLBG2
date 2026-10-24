@@ -1,6 +1,11 @@
 # OLBG2 — one desk: our own lines, confidence-graded picks, written predictions
 
-**Live:** <https://buffedlizard55-lab.github.io/OLBG2/> · the current desk is <https://buffedlizard55-lab.github.io/OLBG2/now/>
+**Live:** <https://buffedlizard55-lab.github.io/OLBG2/> · **the current desk is
+<https://buffedlizard55-lab.github.io/OLBG2/latest/>** (24 October 2026: 57 picks across 11 sports, all inside
+−250…+10000, 50 written previews, 866 originated prices, 26 pages)
+
+The root front door carries a banner into `/latest/` with the live counts. `/now/` remains published and
+unchanged as the previous desk.
 
 This repository publishes a daily research desk for the fifteen OLBG sports in scope: **Golf, Volleyball,
 Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball,

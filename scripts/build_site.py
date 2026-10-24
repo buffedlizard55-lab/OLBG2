@@ -537,33 +537,7 @@ def build_front_door() -> str:
         + ' <span class="chip-n">' + str(matches["by_sport"][s]["fixtures"]) + "</span></a>"
         for s in sports)
 
-    # The one line the owner asked for: the freshest desk is named at the top of the front door, with
-    # its own counts, so no reader has to guess which of the published layers is current. The banner is
-    # emitted by this build (not injected afterwards) so the drift gate cannot strip it.
-    banner = ""
-    latest_dir = DATA / "latest"
-    if (latest_dir / "picks.json").exists():
-        try:
-            _lp = json.loads((latest_dir / "picks.json").read_text(encoding="utf-8"))
-            _lpred = json.loads((latest_dir / "predictions.json").read_text(encoding="utf-8"))
-            _lfx = json.loads((latest_dir / "fixtures.json").read_text(encoding="utf-8"))
-            banner = (
-                '<div class="latest-banner">'
-                f'<b>Newest desk: <a href="latest/index.html">/latest/</a></b> — '
-                f'{_lfx["count"]} fixtures, {_lp["count"]} graded picks '
-                f'({_lp["high"]} high, {_lp["medium"]} medium, {_lp["low"]} low) and '
-                f'{_lpred["count"]} written previews across {len(_lpred["by_sport"])} sports, '
-                f'all inside the −250…+10000 band. '
-                '<a href="latest/picks.html">Picks</a> · '
-                '<a href="latest/predictions.html">Previews</a> · '
-                '<a href="latest/sports/index.html">By sport</a> · '
-                '<a href="latest/flagged.html">Flagged</a>'
-                '</div>')
-        except Exception:
-            banner = ""
-
     body = f"""
-{banner}
 <section class="front">
   <p class="eyebrow">Snapshot {esc('2026-10-24T18:10Z')} · 24 October 2026</p>
   <h1>Today's picks, our own prices, and the official source behind every row.</h1>
@@ -626,10 +600,6 @@ def build_front_door() -> str:
 """
 
     css_add = """
-.latest-banner{background:#0f766e;color:#fff;border-radius:12px;padding:13px 16px;margin:0 0 16px;
-  font-size:14px;line-height:1.5}
-.latest-banner a{color:#fff;text-decoration:underline}
-.latest-banner b{color:#fff}
 .front h1{font-size:38px;line-height:1.15;margin:6px 0 14px;max-width:24ch}
 .pickgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:14px 0}
 .pickcard{display:block;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #047857;

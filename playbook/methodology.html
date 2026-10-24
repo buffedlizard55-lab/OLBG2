@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method — OLBG Playbook</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">OLBG <span>Playbook</span></a>
+<nav class="top"><a class="" href="index.html">Overview</a><a class="" href="picks.html">Picks</a><a class="" href="predictions.html">Predictions</a><a class="" href="matches.html">All matches</a><a class="" href="lines.html">Our lines</a><a class="" href="sports/index.html">Sports</a><a class="" href="sources.html">Sources</a><a class="on" href="methodology.html">Method</a><a class="" href="flagged.html">Flagged</a></nav></div></header>
+<main><div class="wrap">
+
+<p class="eyebrow">Method</p>
+<h1>How a price and a grade get made here.</h1>
+<p class="lede">Two inputs, never mixed silently, and a rubric written down before the picks were graded.</p>
+
+<h2>1. Where the matches come from</h2>
+<p>Every match is a row OLBG itself listed on one of its sixteen sport hubs, read first-hand on 24 October 2026
+between 22:35 and 23:05 UTC. The hub in scope for each sport is listed on <a href="sources.html">Sources</a>. OLBG's
+hub is a tip feed, not a fixture list: it only shows an event once at least one tip has been placed on it. That is why
+Golf, Snooker, Motor Racing and Rugby League have no matches — those hubs returned "No tips found." or, for Rugby
+League, only 2027 outrights.</p>
+
+<h2>2. Where the prices come from</h2>
+<p><b>Tier A, 5 fixtures.</b> The five NHL games on 25 October. Each club's
+goals for and goals against per game are read from the NHL's own season summary, regressed toward the league mean with
+fifteen prior games because ten games is a small sample, adjusted for home ice (and not adjusted for the neutral-site
+Heritage Classic), and run through a bivariate Poisson. That produces a win price, a puck line and two totals.</p>
+<p><b>Tier B, 90 fixtures.</b> Everything else. OLBG publishes the share of
+its own tips on the highlighted selection. That share is already normalised across the market's outcomes, so it is read
+as the market's implied chance for that selection. A share built on a handful of tips is not a probability, so it is
+pulled toward 50% with six pseudo-tips before it is priced. Only the market OLBG printed can be originated this way: a
+handicap or a total needs scoring data that this capture does not contain for these sports.</p>
+<p>Both tiers then get the same margin: the fair decimal price from the chance, with 4% taken off the win part.</p>
+
+<h2>3. How confidence is graded</h2>
+<div class="tbl-wrap"><table>
+<tr><th>Grade</th><th>Rule</th></tr>
+<tr><td><span class="badge b-high">high</span></td><td>A governing-body input behind the price, a chance of 65% or
+better, and a price inside −250 to +10000. All three.</td></tr>
+<tr><td><span class="badge b-medium">medium</span></td><td>A price inside the band with a chance of 50% or better, or
+a chance of 70% or better whose price falls outside the band.</td></tr>
+<tr><td><span class="badge b-low">low</span></td><td>Everything else.</td></tr>
+</table></div>
+<p><b>Why the rule is not simply "over 70%".</b> A price of −250 is a 71.43% chance. A rule that calls anything above
+70% high, combined with a rule that anything shorter than −250 is out of scope, can only ever be satisfied inside a
+1.4-point window. On this slate 16 selections cleared 70%, 175 prices sat inside the band, and
+3 did both. The grade therefore asks for evidence as well as probability, and the band is shown as its own
+column on every table so the shortfall is visible rather than hidden.</p>
+
+<h2>4. What a written preview has to contain</h2>
+<ul class="tight">
+<li>At least 30 words, one author, no repeated opening across previews.</li>
+<li>The selection named in the heading, so the bet is never ambiguous.</li>
+<li>Team or player, competition, the situation, and the numbers the case rests on.</li>
+<li>A fact list under each preview, with a link to where each fact was read.</li>
+<li>No use of the words "model" or "verified" anywhere in the prose — those are internal terms.</li>
+</ul>
+
+<h2>5. What is deliberately absent</h2>
+<p>OLBG serves no bookmaker price to this location, so no market price is quoted anywhere on the desk. No injury list
+is published against any fixture, because no governing-body injury report was read. No tennis tournament name is given,
+because no official draw page returned to this reader. All of that is on <a href="flagged.html">Flagged</a>.</p>
+
+</div></main>
+<footer><div class="wrap">
+<p><b>What this desk is.</b> A read of the matches OLBG listed across fifteen sports on the evening of
+24 October 2026, with a price this desk originated for each match it could price, a confidence grade, and a written
+preview where the evidence carried one. Every row links to the page it came from, and every fact in a preview links
+to the page it was read from.</p>
+<p>Prices on this desk are ours, not OLBG's: OLBG does not serve bookmaker prices to this location. Nothing here is a
+tip to follow blindly. 18+. <a href="methodology.html">How the prices and grades are made</a> ·
+<a href="flagged.html">What we could not confirm</a> · <a href="../archive.html">Earlier desks</a></p>
+</div></footer></body></html>

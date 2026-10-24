@@ -1,0 +1,249 @@
+{
+  "_note": "First-hand official capture. Every value below was read from the URL recorded in its row's 'src' or in the section 'sources'. Values that could not be read from an official source are null and are listed on the Flagged for Review page. Nothing here is estimated or inferred.",
+  "captured_utc": "2026-10-24T23:20:00Z",
+  "session": "arena/3ef9031e-olbg2",
+  "nhl": {
+    "sources": {
+      "schedule": "https://api-web.nhle.com/v1/schedule/2026-10-25",
+      "score": "https://api-web.nhle.com/v1/score/2026-10-25",
+      "team_summary": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId%3D20262027%20and%20gameTypeId%3D2",
+      "standings": "https://api-web.nhle.com/v1/standings/2026-10-25"
+    },
+    "teams": {
+      "FLA": {
+        "name": "Florida Panthers",
+        "gp": 11,
+        "w": 5,
+        "l": 4,
+        "otl": 2,
+        "gf": 31,
+        "ga": 34,
+        "record": "5-4-2",
+        "sog_for_pg": 28.09,
+        "sog_against_pg": 24.36
+      },
+      "CHI": {
+        "name": "Chicago Blackhawks",
+        "gp": 10,
+        "w": 3,
+        "l": 7,
+        "otl": 0,
+        "gf": 22,
+        "ga": 40,
+        "record": "3-7-0",
+        "sog_for_pg": 21.4,
+        "sog_against_pg": 30.3
+      },
+      "NYI": {
+        "name": "New York Islanders",
+        "gp": 10,
+        "w": 5,
+        "l": 3,
+        "otl": 2,
+        "gf": 29,
+        "ga": 22,
+        "record": "5-3-2",
+        "sog_for_pg": 26.7,
+        "sog_against_pg": 25.5
+      },
+      "DAL": {
+        "name": "Dallas Stars",
+        "gp": 10,
+        "w": 6,
+        "l": 3,
+        "otl": 1,
+        "gf": 25,
+        "ga": 16,
+        "record": "6-3-1",
+        "sog_for_pg": 26.7,
+        "sog_against_pg": 22.0
+      },
+      "MTL": {
+        "name": "Montr\u00e9al Canadiens",
+        "gp": 10,
+        "w": 5,
+        "l": 3,
+        "otl": 2,
+        "gf": 32,
+        "ga": 35,
+        "record": "5-3-2",
+        "sog_for_pg": 29.5,
+        "sog_against_pg": 25.8
+      },
+      "WPG": {
+        "name": "Winnipeg Jets",
+        "gp": 10,
+        "w": 4,
+        "l": 3,
+        "otl": 3,
+        "gf": 26,
+        "ga": 29,
+        "record": "4-3-3",
+        "sog_for_pg": 26.5,
+        "sog_against_pg": 30.0
+      },
+      "COL": {
+        "name": "Colorado Avalanche",
+        "gp": 11,
+        "w": 6,
+        "l": 4,
+        "otl": 1,
+        "gf": 47,
+        "ga": 33,
+        "record": "6-4-1",
+        "sog_for_pg": 30.0,
+        "sog_against_pg": 27.91
+      },
+      "NSH": {
+        "name": "Nashville Predators",
+        "gp": 9,
+        "w": 3,
+        "l": 3,
+        "otl": 3,
+        "gf": 23,
+        "ga": 28,
+        "record": "3-3-3",
+        "sog_for_pg": 24.78,
+        "sog_against_pg": 29.33
+      },
+      "MIN": {
+        "name": "Minnesota Wild",
+        "gp": 11,
+        "w": 6,
+        "l": 3,
+        "otl": 2,
+        "gf": 32,
+        "ga": 27,
+        "record": "6-3-2",
+        "sog_for_pg": 30.64,
+        "sog_against_pg": 25.73
+      },
+      "VAN": {
+        "name": "Vancouver Canucks",
+        "gp": 12,
+        "w": 2,
+        "l": 9,
+        "otl": 1,
+        "gf": 35,
+        "ga": 56,
+        "record": "2-9-1",
+        "sog_for_pg": 20.08,
+        "sog_against_pg": 33.5
+      }
+    },
+    "leaders": {
+      "FLA": [
+        {
+          "player": "Brady Tkachuk",
+          "cat": "goals",
+          "value": 7
+        },
+        {
+          "player": "Matthew Tkachuk",
+          "cat": "assists",
+          "value": 12
+        },
+        {
+          "player": "Jacob Markstrom",
+          "cat": "wins",
+          "value": 3
+        }
+      ],
+      "CHI": [
+        {
+          "player": "Roman Kantserov",
+          "cat": "goals",
+          "value": 3
+        },
+        {
+          "player": "Patrick Kane",
+          "cat": "assists",
+          "value": 5
+        },
+        {
+          "player": "Spencer Knight",
+          "cat": "wins",
+          "value": 3
+        }
+      ],
+      "NYI": [
+        {
+          "player": "Bo Horvat",
+          "cat": "goals",
+          "value": 5
+        },
+        {
+          "player": "Matthew Schaefer",
+          "cat": "assists",
+          "value": 8
+        }
+      ],
+      "DAL": [
+        {
+          "player": "Mikko Rantanen",
+          "cat": "goals",
+          "value": 5
+        },
+        {
+          "player": "Jason Robertson",
+          "cat": "assists",
+          "value": 8
+        }
+      ]
+    },
+    "games": [
+      {
+        "nhl_id": "2026020180",
+        "olbg_id": null,
+        "date": "2026-10-25",
+        "utc": "2026-10-25T19:00:00Z",
+        "venue": "United Center",
+        "away": "FLA",
+        "home": "CHI",
+        "neutral": false
+      },
+      {
+        "nhl_id": "2026020181",
+        "olbg_id": "200076",
+        "date": "2026-10-25",
+        "utc": "2026-10-25T22:00:00Z",
+        "venue": "American Airlines Center",
+        "away": "NYI",
+        "home": "DAL",
+        "neutral": false
+      },
+      {
+        "nhl_id": "2026020182",
+        "olbg_id": "200074",
+        "date": "2026-10-25",
+        "utc": "2026-10-25T23:00:00Z",
+        "venue": "Princess Auto Stadium",
+        "away": "MTL",
+        "home": "WPG",
+        "neutral": true
+      },
+      {
+        "nhl_id": "2026020183",
+        "olbg_id": "200072",
+        "date": "2026-10-25",
+        "utc": "2026-10-26T00:00:00Z",
+        "venue": "Bridgestone Arena",
+        "away": "COL",
+        "home": "NSH",
+        "neutral": false
+      },
+      {
+        "nhl_id": "2026020184",
+        "olbg_id": "200075",
+        "date": "2026-10-25",
+        "utc": null,
+        "venue": "Rogers Arena",
+        "away": "MIN",
+        "home": "VAN",
+        "neutral": false,
+        "utc_note": "Start time not read from the official feed; OLBG renders the card as 'Tomorrow 22:07' in US Eastern. Left blank rather than inferred."
+      }
+    ],
+    "note": "FLA @ CHI is not listed on the OLBG NHL sub-hub at capture, so it has no OLBG event id. The other four are matched on team names: NYI @ DAL 200076, MTL @ WPG 200074, COL @ NSH 200072, MIN @ VAN 200075. No arithmetic rule links OLBG ids to NHL game ids, so each pair was matched by reading both pages. The 2026 Tim Hortons NHL Heritage Classic (MTL v WPG) is staged at Princess Auto Stadium per the NHL schedule feed and is flagged neutralSite true, so no home-ice edge is applied to it."
+  }
+}

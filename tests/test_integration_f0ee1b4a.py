@@ -101,14 +101,16 @@ class RootIntegrationTests(unittest.TestCase):
         cls.index = (ROOT / "index.html").read_text(encoding="utf-8")
         cls.review = (ROOT / "integration.html").read_text(encoding="utf-8")
         cls.audit = json.loads((ROOT / "data" / "integration-f0ee1b4a" / "audit.json").read_text(encoding="utf-8"))
-        cls.now = json.loads((ROOT / "data" / "now" / "matches.json").read_text(encoding="utf-8"))
-        cls.now_picks = json.loads((ROOT / "data" / "now" / "picks.json").read_text(encoding="utf-8"))
-        cls.now_preds = json.loads((ROOT / "data" / "now" / "predictions.json").read_text(encoding="utf-8"))
+        cls.now = json.loads((ROOT / "data" / "playbook" / "fixtures.json").read_text(encoding="utf-8"))
+        cls.now_picks = json.loads((ROOT / "data" / "playbook" / "picks.json").read_text(encoding="utf-8"))
+        cls.now_preds = json.loads((ROOT / "data" / "playbook" / "predictions.json").read_text(encoding="utf-8"))
+        cls.picks_page = (ROOT / "playbook" / "picks.html").read_text(encoding="utf-8")
+        cls.pred_page = (ROOT / "playbook" / "predictions.html").read_text(encoding="utf-8")
         cls.archive = (ROOT / "archive.html").read_text(encoding="utf-8")
 
     def test_root_uses_the_current_fifteen_sport_snapshot(self):
-        self.assertIn(str(self.now["count"]), self.index)
-        self.assertIn('href="now/matches.html"', self.index)
+        self.assertIn(str(self.now["match_count"]), self.index)
+        self.assertIn('href="playbook/matches.html"', self.index)
         self.assertNotIn("Every eligible OLBG sport, one verified table", self.index)
         self.assertEqual(self.index.count('class="chip"'), 15)
 
@@ -119,23 +121,23 @@ class RootIntegrationTests(unittest.TestCase):
         self.assertIn("now/index.html", self.archive)
 
     def test_band_counts_and_writeup_shortfall_are_data_derived(self):
-        self.assertIn(f'{self.now_picks["count"]}', self.index)
-        self.assertIn(f'{self.now_preds["count"]}', self.index)
-        self.assertIn("shortest " + str(self.now_preds["min_words"]) + " words", self.index)
+        self.assertIn(f'{self.now_picks["count"]} graded picks', self.index)
+        self.assertIn(f'{self.now_preds["count"]} written previews', self.index)
+        self.assertIn(str(self.now_preds["min_words"]) + " words at the shortest", self.index)
 
-    def test_every_root_data_row_has_an_external_source_link(self):
-        rows = re.findall(r"<tr>(.*?)</tr>", self.index, flags=re.S)
-        data_rows = [row for row in rows if "<td" in row]
-        self.assertGreaterEqual(len(data_rows), 8)
-        for row in data_rows:
-            self.assertIn('href="https://', row, row[:160])
+    def test_every_published_data_row_has_an_external_source_link(self):
+        # The front door is now a summary with no data rows of its own; the published data table
+        # is /playbook/picks.html and every row of it must carry a source link.
+        rows = re.findall(r"<tr><td>(.*?)</tr>", self.picks_page, flags=re.S)
+        self.assertGreaterEqual(len(rows), 8)
+        for row in rows:
+            self.assertIn("https://", row, row[:160])
 
     def test_prediction_anchors_resolve(self):
-        prediction_page = (ROOT / "now" / "predictions.html").read_text(encoding="utf-8")
-        anchors = re.findall(r'href="now/predictions\.html#([^"]+)"', self.index)
+        anchors = re.findall(r'href="predictions\.html#([^"]+)"', self.picks_page)
         self.assertGreaterEqual(len(anchors), 4)
         for anchor in anchors:
-            self.assertIn(f'id="{anchor}"', prediction_page, anchor)
+            self.assertIn(f'id="{anchor}"', self.pred_page, anchor)
 
     def test_review_publishes_corrections_and_open_findings(self):
         for finding in self.audit["findings"]:

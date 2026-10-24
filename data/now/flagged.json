@@ -1,0 +1,264 @@
+{
+ "as_of_utc": "2026-10-24T18:10:00Z",
+ "count": 32,
+ "open": 25,
+ "corrected": 2,
+ "flags": [
+  {
+   "id": "F-golf-genesis-r4",
+   "severity": "open",
+   "sport": "Golf",
+   "item": "Yuto Katsuragawa v Field carries no originated price",
+   "detail": "No bookmaker-independent rate is available: the captured official leaderboard gives a 54-hole position but no scoring distribution from which a win chance can be derived, and the only published prices are third-party market prices.",
+   "source": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard"
+  },
+  {
+   "id": "F-golf-bermuda-r4",
+   "severity": "open",
+   "sport": "Golf",
+   "item": "Austin Smotherman v Field carries no originated price",
+   "detail": "No bookmaker-independent rate is available: the captured official leaderboard gives a 54-hole position but no scoring distribution from which a win chance can be derived, and the only published prices are third-party market prices.",
+   "source": "https://www.pgatour.com/leaderboard"
+  },
+  {
+   "id": "F-ru-ausa-usa",
+   "severity": "open",
+   "sport": "Rugby Union",
+   "item": "USA Eagles v Australia A carries no originated price",
+   "detail": "The captured official record does not contain the rates this desk needs (for example a goals, points or legs rate for both sides).",
+   "source": "https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022"
+  },
+  {
+   "id": "F-snk-nio-final",
+   "severity": "open",
+   "sport": "Snooker",
+   "item": "Kyren Wilson v Winner of semi-final 2 carries no originated price",
+   "detail": "The opponent in the final was not yet decided at capture (semi-final two was still to be played), so no match price can be originated.",
+   "source": "https://www.wst.tv/matches/"
+  },
+  {
+   "id": "F-mlb-tb-mil-g3",
+   "severity": "open",
+   "sport": "Baseball",
+   "item": "Tampa Bay Rays v Milwaukee Brewers carries no originated price",
+   "detail": "The captured official record does not contain the rates this desk needs (for example a goals, points or legs rate for both sides).",
+   "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,probablePitcher,decisions,linescore"
+  },
+  {
+   "id": "F-gaa-cork-psfc-final",
+   "severity": "open",
+   "sport": "Gaelic Sports",
+   "item": "St Finbarr's v Nemo Rangers carries no originated price",
+   "detail": "The captured official record does not contain the rates this desk needs (for example a goals, points or legs rate for both sides).",
+   "source": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/"
+  },
+  {
+   "id": "F-grey-scurry-final",
+   "severity": "open",
+   "sport": "Greyhounds",
+   "item": "Shadow Storm v Field of six carries no originated price",
+   "detail": "The captured official racecard gives semi-final times for only part of the six-dog field, so no full-field speed rating can be built.",
+   "source": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/"
+  },
+  {
+   "id": "F-grey-oaks-final",
+   "severity": "open",
+   "sport": "Greyhounds",
+   "item": "Fahrenheit Jess v Field of six carries no originated price",
+   "detail": "The captured official racecard gives semi-final times for only part of the six-dog field, so no full-field speed rating can be built.",
+   "source": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/"
+  },
+  {
+   "id": "F-f1-usgp-race",
+   "severity": "open",
+   "sport": "Motor Racing",
+   "item": "Max Verstappen v Field carries no originated price",
+   "detail": "Qualifying had not taken place at capture, so no grid-based race rating can be built from official timing.",
+   "source": "https://www.formula1.com/en/racing/2026/united-states"
+  },
+  {
+   "id": "F-nhl-min-sea",
+   "severity": "open",
+   "sport": "Ice Hockey",
+   "item": "Seattle Kraken v Minnesota Wild carries no originated price",
+   "detail": "The captured official record does not contain the rates this desk needs (for example a goals, points or legs rate for both sides).",
+   "source": "https://api-web.nhle.com/v1/score/2026-10-24"
+  },
+  {
+   "id": "F-rlwc-eng-png",
+   "severity": "open",
+   "sport": "Rugby League",
+   "item": "England v Papua New Guinea carries no originated price",
+   "detail": "The captured official record does not contain the rates this desk needs (for example a goals, points or legs rate for both sides).",
+   "source": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-3/"
+  },
+  {
+   "id": "COV-golf",
+   "severity": "open",
+   "sport": "Golf",
+   "item": "0 written predictions for Golf, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/golf.html"
+  },
+  {
+   "id": "COV-volleyball",
+   "severity": "open",
+   "sport": "Volleyball",
+   "item": "3 written predictions for Volleyball, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/volleyball.html"
+  },
+  {
+   "id": "COV-rugby-union",
+   "severity": "open",
+   "sport": "Rugby Union",
+   "item": "4 written predictions for Rugby Union, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/rugby-union.html"
+  },
+  {
+   "id": "COV-cricket",
+   "severity": "open",
+   "sport": "Cricket",
+   "item": "1 written prediction for Cricket, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/cricket.html"
+  },
+  {
+   "id": "COV-snooker",
+   "severity": "open",
+   "sport": "Snooker",
+   "item": "0 written predictions for Snooker, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/snooker.html"
+  },
+  {
+   "id": "COV-darts",
+   "severity": "open",
+   "sport": "Darts",
+   "item": "1 written prediction for Darts, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/darts.html"
+  },
+  {
+   "id": "COV-baseball",
+   "severity": "open",
+   "sport": "Baseball",
+   "item": "1 written prediction for Baseball, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/baseball.html"
+  },
+  {
+   "id": "COV-gaelic-sports",
+   "severity": "open",
+   "sport": "Gaelic Sports",
+   "item": "2 written predictions for Gaelic Sports, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/gaelic-sports.html"
+  },
+  {
+   "id": "COV-greyhounds",
+   "severity": "open",
+   "sport": "Greyhounds",
+   "item": "0 written predictions for Greyhounds, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/greyhounds.html"
+  },
+  {
+   "id": "COV-tennis",
+   "severity": "open",
+   "sport": "Tennis",
+   "item": "3 written predictions for Tennis, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/tennis.html"
+  },
+  {
+   "id": "COV-motor-racing",
+   "severity": "open",
+   "sport": "Motor Racing",
+   "item": "0 written predictions for Motor Racing, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/motor-racing.html"
+  },
+  {
+   "id": "COV-handball",
+   "severity": "open",
+   "sport": "Handball",
+   "item": "3 written predictions for Handball, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/handball.html"
+  },
+  {
+   "id": "COV-rugby-league",
+   "severity": "open",
+   "sport": "Rugby League",
+   "item": "1 written prediction for Rugby League, against a target of five",
+   "detail": "The five-a-day target could only be met where enough upcoming fixtures had an official record with the rates this desk needs. Rather than pad the card, the shortfall is published. See the sport page for what is missing.",
+   "source": "sports/rugby-league.html"
+  },
+  {
+   "id": "V-01",
+   "severity": "note",
+   "sport": "All",
+   "item": "Fixture facts are inherited from the official capture made at 17:35Z today",
+   "detail": "All 50 fixture records and their per-fact source links come from the official capture committed at 17:35Z on 24 October. This build did not re-read those pages; it re-used the capture and marks every row as inherited.",
+   "source": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/now/fixtures.json"
+  },
+  {
+   "id": "V-02",
+   "severity": "corrected",
+   "sport": "Gaelic Sports",
+   "item": "Stored Gaelic semi-final margin inputs disagreed with the official scorelines",
+   "detail": "The inherited record carried margins of 44 and -6 for the Galway final. The official scorelines give Maigh Cuilinn 4-26 to 0-8 (30 points) and Salthill-Knocknacarra 0-15 to 2-7 (2 points), so this desk recomputed the margins from the scores and ignored the stored values.",
+   "source": "https://gaa.ie/"
+  },
+  {
+   "id": "V-03",
+   "severity": "corrected",
+   "sport": "Rugby League",
+   "item": "Raw round-one margins were not used for Australia v Fiji",
+   "detail": "A two-point win over New Zealand and a 28-point win over Cook Islands cannot be compared without adjusting for the opponent, so the price comes from the evidence ladder instead and the fixture is capped at medium confidence.",
+   "source": "https://www.nrl.com/"
+  },
+  {
+   "id": "V-04",
+   "severity": "note",
+   "sport": "All",
+   "item": "OLBG display times are US Eastern strings and have not been converted",
+   "detail": "OLBG prints 'Today 14:05' style times in US Eastern. They are stored exactly as shown. Where an official start time exists it is used for the fixture, and the OLBG string is kept beside it rather than converted.",
+   "source": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "V-05",
+   "severity": "open",
+   "sport": "Golf",
+   "item": "The OLBG golf hub lists no events",
+   "detail": "Re-read at 18:06Z today, the golf hub returned HTTP 200 and rendered 'No tips found.' The two golf fixtures are on the card with official leaderboard facts but are not asserted to be active OLBG listings.",
+   "source": "https://www.olbg.com/betting-tips/Golf/5"
+  },
+  {
+   "id": "V-08",
+   "severity": "note",
+   "sport": "All",
+   "item": "Four picks are for matches that had already started when the snapshot was taken",
+   "detail": "Volleyball (Giesen v Berlin, 17:30Z), Rugby Union (Ospreys v Dragons, 18:00Z), Darts (Littler v Aspinall, 18:00Z) and Handball (Balingen v Melsungen, 18:00Z) began before the 18:10Z snapshot. They are published with their prices and write-ups but are marked as under way and kept out of the executive summary.",
+   "source": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+  },
+  {
+   "id": "V-07",
+   "severity": "note",
+   "sport": "All",
+   "item": "Some fixture source links point at a news or squad-announcement page rather than a fixture list",
+   "detail": "Where a governing body publishes a round preview rather than a stable fixture URL, the inherited record links the article that carries the fixture time and team news. The facts on the row are the ones that page supports; a per-fixture permalink is not claimed.",
+   "source": "https://www.legavolley.it/"
+  },
+  {
+   "id": "V-06",
+   "severity": "note",
+   "sport": "Basketball",
+   "item": "Four NBA clubs had not filed an injury report at the 1:00 PM ET deadline",
+   "detail": "Milwaukee, Washington, New Orleans and Golden State are recorded as NOT YET SUBMITTED. No absence is stated for those rosters, and the fields are blank rather than guessed.",
+   "source": "https://official.nba.com/nba-injury-report-2026-27-season/"
+  }
+ ]
+}

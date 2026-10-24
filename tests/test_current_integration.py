@@ -15,10 +15,11 @@ def module(name):
 
 
 class CurrentIntegrationTests(unittest.TestCase):
-    def test_root_and_sport_navigation_target_current_desk(self):
-        for page in [ROOT / 'index.html', *sorted((ROOT / 'sports').glob('*.html'))]:
-            prefix = '../' if page.parent.name == 'sports' else ''
-            self.assertIn(f'href="{prefix}current/index.html"', page.read_text())
+    def test_archive_index_targets_current_desk(self):
+        # The root landing page leads with the current /now/ desk; every earlier desk is indexed
+        # on archive.html so the layers stay one click away without crowding the front door.
+        self.assertIn('href="current/index.html"', (ROOT / 'archive.html').read_text())
+        self.assertIn('href="now/picks.html"', (ROOT / 'index.html').read_text())
 
     def test_unregistered_future_layer_is_audited(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -105,3 +105,50 @@ table.data.plain td{font-size:.85rem}
 .footer p{margin:.3rem 0}
 .nowrap{white-space:nowrap}
 @media(max-width:640px){h1{font-size:1.55rem}.bar{min-height:auto;padding:.5rem 0}.nav a{font-size:.75rem;padding:.32rem .4rem}.filters input{min-width:0;width:100%}}
+
+/* front door */
+
+.front h1{font-size:38px;line-height:1.15;margin:6px 0 14px;max-width:24ch}
+.pickgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:14px 0}
+.pickcard{display:block;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #047857;
+  border-radius:12px;padding:16px;color:#0f172a}
+.pickcard:hover{border-color:#0f766e;text-decoration:none}
+.pc-score{font-size:12px;color:#475569;margin-top:6px}
+.pc-score strong{color:#0f172a;font-size:14px}
+.pc-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#64748b;
+  text-transform:uppercase;letter-spacing:.06em}
+.pc-conf{font-weight:700;font-size:11px;padding:2px 8px;border-radius:999px;background:#e2e8f0;color:#475569}
+.pc-conf.high{background:#d1fae5;color:#047857}
+.pc-conf.medium{background:#fef3c7;color:#b45309}
+.pc-conf.low{background:#e2e8f0;color:#475569}
+.pc-match{font-weight:600;margin:8px 0 2px;font-size:15px}
+.pc-sel{font-size:20px;font-weight:750;color:#047857}
+.pc-meta{font-size:13px;color:#64748b;margin-top:4px}
+.pc-src{font-size:11px;color:#94a3b8;margin-top:8px}
+.where{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.wherecard{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;color:#0f172a}
+.wherecard b{display:block;font-size:15px;margin-bottom:4px;color:#115e59}
+.wherecard span{font-size:13px;color:#475569}
+.wherecard:hover{border-color:#0f766e;text-decoration:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;font-size:14px;color:#0f172a}
+.chip:hover{border-color:#0f766e;text-decoration:none}
+.chip-n{color:#64748b;font-size:12px}
+.mini{font-size:12px;color:#64748b}
+.num{color:#047857}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.btn{display:inline-block;border:1px solid #e2e8f0;background:#fff;border-radius:9px;
+  padding:10px 15px;font-weight:600;font-size:14px;color:#0f172a;text-decoration:none}
+.btn.primary{background:#0f766e;border-color:#0f766e;color:#fff}
+.btn:hover{border-color:#0f766e;text-decoration:none}
+
+/* front door nav */
+
+.topbar{background:#0f172a}
+.topbar .bar{display:flex;align-items:center;gap:18px;min-height:58px;flex-wrap:wrap;max-width:1160px;margin:0 auto;padding:0 20px}
+.brand{color:#fff;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:9px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:#2dd4bf;display:inline-block}
+.brand-sub{font-weight:400;color:#94a3b8;font-size:13px}
+.navline{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.navline a{color:#cbd5e1;font-size:14px;padding:6px 9px;border-radius:7px;text-decoration:none}
+.navline a:hover{background:#1e293b;color:#fff}

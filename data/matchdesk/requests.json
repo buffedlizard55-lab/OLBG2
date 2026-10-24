@@ -918,6 +918,69 @@
    "kind": "rankings",
    "note": "Golf rankings page, captured with a 2 MB cap",
    "max_bytes": 2000000
+  },
+  {
+   "key": "espn_atp_scores",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard",
+   "sport": "Tennis",
+   "kind": "probe",
+   "note": "ESPN ATP scoreboard probe"
+  },
+  {
+   "key": "espn_wta_scores",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/wta/scoreboard",
+   "sport": "Tennis",
+   "kind": "probe",
+   "note": "ESPN WTA scoreboard probe"
+  },
+  {
+   "key": "espn_atp_rankings",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/rankings",
+   "sport": "Tennis",
+   "kind": "probe",
+   "note": "ESPN ATP rankings probe"
+  },
+  {
+   "key": "espncric_odi",
+   "url": "https://hs-consumer-api.espncricinfo.com/v1/pages/rankings/team?lang=en&seriesType=odi",
+   "sport": "Cricket",
+   "kind": "probe",
+   "note": "ESPNcricinfo team rankings probe"
+  },
+  {
+   "key": "espn_cricket_scores",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/cricket/scoreboard",
+   "sport": "Cricket",
+   "kind": "probe",
+   "note": "ESPN cricket scoreboard probe"
+  },
+  {
+   "key": "espn_urc",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/rugby/270557/scoreboard",
+   "sport": "Rugby Union",
+   "kind": "probe",
+   "note": "ESPN URC scoreboard probe"
+  },
+  {
+   "key": "espn_prem_rugby",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/rugby/267979/scoreboard",
+   "sport": "Rugby Union",
+   "kind": "probe",
+   "note": "ESPN Premiership scoreboard probe"
+  },
+  {
+   "key": "espn_nrl",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/rugby-league/3/scoreboard",
+   "sport": "Rugby League",
+   "kind": "probe",
+   "note": "ESPN NRL scoreboard probe"
+  },
+  {
+   "key": "espn_volleyball",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/volleyball/scoreboard",
+   "sport": "Volleyball",
+   "kind": "probe",
+   "note": "ESPN volleyball probe"
   }
  ]
 }

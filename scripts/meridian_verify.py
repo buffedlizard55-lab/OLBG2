@@ -183,7 +183,12 @@ def main() -> int:
 
     # ---------------------------------------------------------------- flags and audit
     ok(flags["count"] >= 8, "flag list is implausibly short")
-    ok(audit["count"] >= 4, "repo audit is implausibly short")
+    ok(audit["count"] == len(audit["findings"]),
+       "repo audit count disagrees with the findings it lists")
+    ok({"MF-01", "MF-02", "MF-03"} <= {f["id"] for f in audit["findings"]},
+       "repo audit has lost one of its substantive findings")
+    ok(all(f.get("detail") and f.get("id") for f in audit["findings"]),
+       "repo audit finding without an id or a detail")
     blank = [m for m in matches["matches"] if m["status"] != "priced"]
     for m in blank:
         ok(m["blank_reason"], f"{m['id']}: blank row without a stated reason")

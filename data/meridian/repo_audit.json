@@ -1,7 +1,7 @@
 {
  "generated_utc": "2026-10-24T18:10:00Z",
- "count": 4,
- "layers": 47,
+ "count": 3,
+ "layers": 51,
  "findings": [
   {
    "id": "MF-01",
@@ -944,7 +944,7 @@
   {
    "id": "MF-03",
    "severity": "medium",
-   "title": "47 separate dashboards publish an overlapping 15-sport brief",
+   "title": "51 separate dashboards publish an overlapping 15-sport brief",
    "detail": "Each directory publishes its own dashboard with its own counts. A reader landing on any one of them sees a different total for the same day. This desk adds /meridian/ as an explicitly dated 2026-10-24 snapshot and states its counts on every page header rather than implying it supersedes the others.",
    "evidence": [
     {
@@ -973,12 +973,15 @@
       "fresh",
       "horizon",
       "hub",
+      "latest",
       "ledger",
       "live",
+      "live-desk",
       "liveboard",
       "master",
       "meridian",
       "monitor",
+      "now",
       "olbg",
       "portal",
       "pulse",
@@ -994,35 +997,14 @@
       "today",
       "update",
       "vanguard",
+      "vantage",
       "verified",
       "zenith"
      ],
-     "count": 47
+     "count": 51
     }
    ],
    "action": "Root integration request recorded in COORDINATION.md."
-  },
-  {
-   "id": "MF-04",
-   "severity": "medium",
-   "title": "Merge-conflict markers are still checked in to the shared task board",
-   "detail": "COORDINATION.md carries 8 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.",
-   "evidence": [
-    {
-     "file": "COORDINATION.md",
-     "lines": [
-      3216,
-      3307,
-      3437,
-      3549,
-      3609,
-      3628,
-      4895,
-      5193
-     ]
-    }
-   ],
-   "action": "Left in place; this session appends only."
   }
  ]
 }

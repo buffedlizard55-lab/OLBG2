@@ -5673,3 +5673,88 @@ All of it is on `/clarity/flagged.html` with the exact page that could not be re
 
 **Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
 
+
+## SESSION `arena/4dd1b17c-olbg2` — consolidated current desk at `/latest/` (2026-10-24, claimed 22:40Z)
+
+**Branch:** `arena/4dd1b17c-olbg2` · **Claim written and pushed before implementation work.** No other branch was
+active at the time of the claim (`git branch -a` listed only `main` and this branch; the newest merged layer is
+`/meridian/` from PR #219).
+
+Scope, deliberately non-overlapping with every earlier session: a **new** dated desk at `/latest/` with its own data
+directory (`data/latest/`), its own generators (`scripts/latest_*.py`) and its own tests. No earlier layer's data,
+pages or scripts are regenerated, and no earlier layer's numbers are restated as this desk's.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| LT1 | Claim + concurrency scan + fix the two red checks on `main` (`meridian_verify` / `test_meridian_1286444e` audit-floor gate) | in progress | `arena/4dd1b17c-olbg2` | `COORDINATION.md` (append), `scripts/meridian_verify.py`, `tests/test_meridian_1286444e.py` |
+| LT2 | Live re-read of the OLBG sport hubs after the 17:35Z capture; record what changed | in progress | `arena/4dd1b17c-olbg2` | `data/latest/rechecks.json` |
+| LT3 | Evidence inheritance with per-fact provenance + any newly verified official facts | in progress | `arena/4dd1b17c-olbg2` | `data/latest/fixtures.json`, `scripts/latest_seed.py` |
+| LT4 | 5–10 graded picks per sports with an originated line; confidence + −250…+10000 band test across match winner, handicap and total | in progress | `arena/4dd1b17c-olbg2` | `data/latest/{lines,picks}.json`, `scripts/latest_model.py` |
+| LT5 | Unique ≥30-word written predictions, five per sport where a priced fixture exists | in progress | `arena/4dd1b17c-olbg2` | `data/latest/predictions.json` |
+| LT6 | `/latest/` site: executive summary first, picks table, predictions, fixtures, lines, 15 sport pages, sources, flagged | in progress | `arena/4dd1b17c-olbg2` | `latest/**`, `scripts/latest_build.py`, `scripts/latest_verify.py`, `tests/test_latest_4dd1b17c.py` |
+| LT7 | Front door points at `/latest/`; CI drift paths; full suite; PR → `main`; merge; confirm the deploy | in progress | `arena/4dd1b17c-olbg2` | `scripts/build_site.py` (`build_index` only), `.github/workflows/pages.yml` (append-only), `README.md`, `COORDINATION.md` |
+
+### LT1 finding (logged before it was fixed)
+
+`main` is **red** at `67e7672`: `Validate Pages content` fails, and `Deploy Pages` fails because it consumes that
+workflow. The cause is not content. `scripts/meridian_verify.py:186` and `tests/test_meridian_1286444e.py:192`
+require `repo_audit["count"] >= 4`, but the scanner in `scripts/meridian_audit.py` now legitimately returns 3: its
+fourth finding (MF-04, merge-conflict markers in this file) stopped reproducing when those markers were removed. A
+gate that punishes a repair is a defect in the gate. Fix: assert the audit is *internally consistent and durable* —
+every finding it counts is present, each is rendered on the published page, and the three substantive findings
+(MF-01 banned vocabulary in other layers, MF-02 out-of-scope sport rows, MF-03 dashboard plurality) are still there —
+instead of a magic minimum that drops when a real problem is fixed.
+
+### LT1–LT7 COMPLETE — `/latest/` 24 October desk, fifty written previews, and the two red checks fixed
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| LT1 | Repair the `main` check failure | done | `scripts/meridian_verify.py` + `tests/test_meridian_1286444e.py`: the `count >= 4` floor is replaced by an internal-consistency check (count equals the findings listed, MF-01…MF-03 still present). `meridian_verify.py` now reports 2,591 assertions / 0 failures |
+| LT2 | Live re-read of OLBG and official pages after the 17:35Z capture | done | 5 first-hand reads in `data/latest/rechecks.json`, published on `latest/rechecks.html`. Golf and Snooker hubs returned "No tips found."; the F1 qualifying classification **did not exist at the earlier capture and does now** |
+| LT3 | Evidence inheritance with per-fact provenance | done | `scripts/latest_seed.py`; 50 fixtures, 246 sourced facts, 67 registered sources. Every inherited row keeps its 17:35Z capture time; only the F1 row is first-hand |
+| LT4 | 5–10 graded picks per sport, all markets, band test | done | `scripts/latest_model.py`; 737 eligible prices on unstarted fixtures → **57 picks, all inside −250…+10000** (3 high, 28 medium, 26 low). New market originated this session: F1 race winner from the published grid |
+| LT5 | Unique written previews | done | `scripts/latest_predictions.py`; **50 previews across 11 sports**, shortest 50 words, 42 different opening words, every one carrying ≥2 sourced facts copied from its fixture record |
+| LT6 | `/latest/` site + verifier + tests | done | 26 pages, `scripts/latest_verify.py` **6,542 assertions / 0 failures**, `tests/test_latest_4dd1b17c.py` 15 tests |
+| LT7 | Front door, CI, full suite, PR, merge, deploy | in progress | `scripts/build_site.py` emits a `/latest/` banner above the fold; `pages.yml` gained the `latest_*` rebuild step and `latest data/latest` in the drift paths |
+
+**What is on the desk.** 57 picks across 11 sports, every one inside the requested band: Ice Hockey 9,
+Basketball 7, Rugby Union 5, Rugby League 5, Handball 6, Tennis 5, Motor Racing 5, Baseball 4, Cricket 4,
+Volleyball 4, Gaelic Sports 3. 50 written previews (one per published pick up to five a sport). 866
+originated prices behind them.
+
+**Worked first hand this session.** The Formula 1 United States Grand Prix was unpriced at the 17:35Z
+capture because qualifying had not run. Qualifying was read from
+<https://www.formula1.com/en/results/2026/races/1297/united-states/qualifying> at 22:31Z: Antonelli took
+pole on 1:34.035, ahead of Verstappen 1:34.214 and Hadjar 1:34.250. The race-winner market is originated
+from that grid with one stated assumption (pole is worth a 40% share, chance decaying geometrically down
+the grid), recorded in `data/latest/f1_market.json`.
+
+**Irregularities found and published on `latest/flagged.html` (10 items), not smoothed over:**
+1. Golf and Snooker have **no OLBG listing** ("No tips found." re-read at 22:24Z and 22:27Z), both
+   Greyhound races had started, and the only Darts match started at 18:00Z: four sports carry **zero**
+   picks and say so.
+2. Nine fixtures had already started when the desk was cut; they keep their rows and sources but carry
+   no pick.
+3. **Two fixtures are withheld because our own input is broken**: `gaa-galway-sfc-final` prices at 99.9%
+   and `prem-har-sar` at 98.0%. No two-team market can support that, so the fixtures are excluded from
+   the pick list instead of being published as certainties.
+4. The inherited line file **mislabels several totals rows as `winner`**, which let a totals row occupy a
+   fixture's match-winner slot. The desk derives the market family from the published label instead and
+   treats the field as unreliable.
+5. The tennis handicap unit is not defined by the source, so the previews say "the 3.5 line" and claim
+   neither games nor sets.
+6. Preview shortfalls are stated, not padded: Baseball 4, Cricket 4, Volleyball 4, Gaelic Sports 3 —
+   the ceiling is the number of matches OLBG lists in those sports today.
+7. Only 3 picks clear the high bar; fair −250 is already 71.43%, so the window is narrow by construction.
+
+**Verification performed.** `latest_verify.py` 6,542 assertions / 0 failures (scope, https provenance and
+capture time on all 246 facts, price arithmetic on all 866 prices, the grade rule on all 57 picks, the
+band test, prose rules, and every local link and anchor on all 26 pages).
+`python -m unittest discover -s tests` → **865 tests, OK**. `integration_audit.py` → 0 broken cross-layer
+links. The full `pages.yml` step list was replayed locally and no generated file drifted.
+
+**Generated files owned by other sessions, regenerated with their own unmodified scripts** (same
+exception every previous session logged, required because a new layer moves their counts):
+`data/clarity/repo_audit.json` + `clarity/repo-review.html` (layers 50 → 51),
+`data/meridian/repo_audit.json` + `meridian/repo-review.html`,
+`data/ledger/repo_review.json` + `ledger/repo-review.html`, and `archive.html` (now 51 layer entries).

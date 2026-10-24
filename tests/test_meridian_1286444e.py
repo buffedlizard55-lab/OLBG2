@@ -189,7 +189,9 @@ class MeridianSite(unittest.TestCase):
 
     def test_flagged_and_audit_are_published(self):
         self.assertGreaterEqual(load("flagged.json")["count"], 8)
-        self.assertGreaterEqual(load("repo_audit.json")["count"], 4)
+        audit = load("repo_audit.json")
+        self.assertEqual(audit["count"], len(audit["findings"]))
+        self.assertLessEqual({"MF-01", "MF-02", "MF-03"}, {f["id"] for f in audit["findings"]})
         page = (OUT / "flagged.html").read_text(encoding="utf-8")
         for item in load("flagged.json")["items"]:
             self.assertIn(item["id"], page)

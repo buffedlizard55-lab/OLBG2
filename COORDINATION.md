@@ -5002,6 +5002,47 @@ Current state: PRs #191, #192 and #194 are merged and the filtered desk is live.
 
 ---
 
+## Session `arena/5dfa626b-olbg2` — CLAIM: `/executive/` fresh 2026-10-24 executive picks desk (15 sports, verified)
+
+- **Session ID:** `5dfa626b` · **Branch:** `arena/5dfa626b-olbg2` (branch name fixed by the Arena platform harness; the
+  `session-<id>/<task>` worktree convention cannot be used here and is recorded as a platform constraint).
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-24 17:10 UTC):
+  - `arena/03e61ed8-olbg2` (active 17:07:51Z) — claims the live consolidated desk `desk/**`, `data/desk/**`,
+    `scripts/desk_*`, `.github/workflows/desk*`, `research/desk*`, and shared root files if unclaimed.
+  - `arena/9f69ce85-olbg2` (active 17:06:45Z) — claims a fresh 2026-10-24 release scope; only `COORDINATION.md`
+    touched so far.
+  - All earlier desks (`cadence`, `ledger`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`,
+    `current`, `atlas`, `canon`, `final`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`,
+    `relay`, `vanguard`, `pulse`, `update`, `covered`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`,
+    `master`, `olbg`, `horizon`, `zenith`, `summit`, `quest`, `desk`) are historical/merged and untouched by this session.
+- **Exclusive, non-overlapping file scope for `arena/5dfa626b-olbg2`:**
+  - `executive/**` (clean executive-summary landing page, "where the picks are" navigation, all-matches table,
+    picks & confidence table, originated lines, written predictions, 15 sport category subpages, Flagged for Review,
+    sources & methodology)
+  - `data/executive/**` (current official-source fixture capture, sourced facts, originated lines, picks, confidence,
+    written predictions, flagged items, source registry)
+  - `scripts/executive_*.py` (`executive_seed.py`, `executive_model.py`, `executive_predictions.py`,
+    `executive_audit.py`, `executive_build.py`, `executive_verify.py`)
+  - `tests/test_executive_5dfa626b.py`
+  - `research/executive-5dfa626b.md`
+  - `COORDINATION.md` (append-only updates only)
+- **Sport scope (exact 15 sports requested):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball,
+  Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+- **Data-freshness commitment:** every fixture row in `data/executive/fixtures.json` is captured from an official
+  source read in this session (2026-10-24) and carries the source URL; no value is inferred. Unconfirmed values are
+  left blank and flagged.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| EX1 | Claim scope + concurrency scan | done | `arena/5dfa626b-olbg2` | `COORDINATION.md` |
+| EX2 | Collect current official-source fixtures + facts for the 15 sports (2026-10-24) | in progress | `arena/5dfa626b-olbg2` | `data/executive/fixtures.json`, `data/executive/sources.json` |
+| EX3 | Originate our own lines, pick winner, assign low/medium/high confidence, focus on −250…+10000 | pending | `arena/5dfa626b-olbg2` | `scripts/executive_model.py`, `data/executive/lines.json`, `data/executive/picks.json` |
+| EX4 | Write unique ≥30-word predictions (team/player, form, recent history, verified stats, injuries; obvious selection) | pending | `arena/5dfa626b-olbg2` | `scripts/executive_predictions.py`, `data/executive/predictions.json` |
+| EX5 | Build `/executive/` dashboard + 15 sport pages + flagged + verify + tests | pending | `arena/5dfa626b-olbg2` | `scripts/executive_*.py`, `executive/**`, `tests/test_executive_5dfa626b.py` |
+| EX6 | Rebase on `origin/main`, full test suite, open PR → `main`, merge, confirm Pages deploy | pending | `arena/5dfa626b-olbg2` | `COORDINATION.md` (append-only) |
+
+### Rebase / conflict log
+Recorded when the rebase onto `origin/main` is performed (see EX6).
 ## Session `arena/9f69ce85-olbg2` — fresh 2026-10-24 release, clean dashboard
 
 **Session ID:** `arena/9f69ce85-olbg2` · **Branch:** `arena/9f69ce85-olbg2` · **Started:** 2026-10-24 17:10 UTC

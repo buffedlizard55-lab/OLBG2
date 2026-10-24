@@ -5173,3 +5173,34 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
+
+## Session `arena/86498426-olbg2` — CLAIM: `/frontpage/` clean executive front door + full 15-sport OLBG desk (integration session)
+
+- **Session ID:** `86498426` · **Branch:** `arena/86498426-olbg2` (branch name fixed by the Arena platform harness; `session-<id>/<task>` branches cannot be created here — documented environment constraint, same as prior sessions).
+- **Claim timestamp:** 2026-10-24 ~17:57 UTC (pushed immediately with this entry).
+- **Concurrent-session scan at claim time** (`git fetch --prune` + `gh pr list`, 2026-10-24 17:52–17:57 UTC):
+  - `arena/9f69ce85-olbg2` — **active** (PR #198 open, last push 17:39:52Z): holds `today/**`, `data/today/**`, `scripts/today_*.py`, `research/today-9f69ce85.md`, plus shared root files `index.html`, `scripts/build_site.py`, `README.md`, `.github/workflows/pages.yml` (claim 17:06:45Z). This session will **not** edit those root files while that claim is <60 min old with recent commits; final root integration is scheduled after this session's desk is complete and will be re-checked against the then-current claim state.
+  - `arena/5dfa626b-olbg2` — merged PR #201 at 17:51:42Z (`executive/**` now on `main`; claim closed).
+  - Stale open PRs from 2026-10-23 with no activity >20 h: #190, #184, #180, #167, #161 — recorded as review item FP-RI-02, not merged, not touched.
+- **Environment irregularities found before work (see `research/frontpage-86498426.md`):**
+  1. The provided clone is object-pruned: `e0a6df4` (PR #200 merge, my base) carries two parent SHAs (`42c5423`, `c738ff3`) that are absent from the pack (2,199 objects total); `git log` therefore terminates at the PR #200 merge and `git merge-base` against `origin/main` fails. History prior to PR #200 exists server-side only as squashed trees. Recorded as FP-RI-01; does not block work.
+  2. While fetching at 17:53–17:54Z, `origin/main` was force-updated (PR #201 landed 17:51:42Z), producing a transient "unrelated histories" error mid-fetch. Resolved by fast-forward; no work lost.
+- **Exclusive, non-overlapping file scope for `arena/86498426-olbg2`:**
+  - `frontpage/**` (the clean dashboard the user asked for: executive-summary landing, obvious pick cards with selection + confidence + link to the full written prediction, all-matches table, multi-market lines table, −250…+10000 band page, 15 sport category subpages, full OLBG listing page, repo-review page, Flagged for Review, sources, methodology)
+  - `data/frontpage/**` (fresh 2026-10-24 OLBG captures, official-source fixtures & per-fact citations, originated lines, picks, predictions, flags, repo audit)
+  - `scripts/frontpage_*.py`
+  - `tests/test_frontpage_86498426.py`
+  - `research/frontpage-86498426.md`
+  - `COORDINATION.md` (append-only)
+  - **Integration step (last):** root `index.html`, `README.md`, `.github/workflows/pages.yml`, and `data/ledger/**` regeneration via the owner's own unmodified `ledger_report.py`/`ledger_build.py` — performed only once the root-file claims above are merged or stale (>60 min, no commits); otherwise the requests are logged here instead.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| FP1 | Claim + concurrency scan + environment irregularity log | done | `arena/86498426-olbg2` | `COORDINATION.md` (append-only) |
+| FP2 | Fresh live OLBG.com capture of the 15 covered sports (full updated match list with OLBG event URLs, displayed times, top tip, tip share) | unclaimed→this session | `arena/86498426-olbg2` | `scripts/frontpage_seed.py`, `data/frontpage/olbg_listings.json` |
+| FP3 | Official governing-body verification of every fixture (schedule, form, recent results, match stats, injuries; blank + flagged where not confirmable), re-checking every fact used in a high-confidence pick against the official page in this session | unclaimed→this session | `arena/86498426-olbg2` | `scripts/frontpage_seed.py`, `data/frontpage/fixtures.json`, `data/frontpage/sources.json` |
+| FP4 | Own multi-market line origination (winner/1X2/outright, handicap/spread/puck line, totals), winner pick + low/medium/high confidence per match, −250…+10000 band test | unclaimed→this session | `arena/86498426-olbg2` | `scripts/frontpage_model.py`, `data/frontpage/{lines,picks}.json` |
+| FP5 | Unique ≥30-word written predictions for the five highest-confidence upcoming picks per sport (target 5/sport; shortfall flagged, never padded), zero `model`/`verified` in prose, selection stated plainly, every fact cited to an official URL | unclaimed→this session | `arena/86498426-olbg2` | `scripts/frontpage_predictions.py`, `data/frontpage/{predictions,flagged}.json` |
+| FP6 | Clean `/frontpage/` build (landing, executive summary, picks, predictions, matches, lines, band, olbg, 15 sport pages, flagged, sources, methodology, repo-review) + line-by-line verifier + unit tests | unclaimed→this session | `arena/86498426-olbg2` | `scripts/frontpage_build.py`, `scripts/frontpage_verify.py`, `frontpage/**`, `tests/test_frontpage_86498426.py` |
+| FP7 | Line-by-line repo review with official-source links and flagged irregularities (incl. FP-RI-01 pruned history, FP-RI-02 stale PRs, CR-06 dashboard sprawl, CR-01 banned vocabulary) | unclaimed→this session | `arena/86498426-olbg2` | `data/frontpage/repo_audit.json`, `research/frontpage-86498426.md`, `frontpage/repo-review.html` |
+| FP8 | Final integration: root front door + README + CI wiring + full test suite + PR → `main` + merge + Pages deploy confirmation + record result here | unclaimed→this session | `arena/86498426-olbg2` | shared outputs (integration), `COORDINATION.md` (append-only) |

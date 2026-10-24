@@ -178,6 +178,17 @@ def main() -> int:
     ok("playbook/index.html" in (ROOT / "archive.html").read_text(),
        "the archive page does not list the playbook desk")
 
+    # ------------------------------------------------------------------ grammar
+    one_plural = re.compile(r"\b1 (matches|picks|previews|rows|fixtures|sources|prices|events|items|"
+                            r"outrights|teams|games)\b", re.I)
+    for name in expected:
+        path = OUT / name
+        if path.suffix != ".html" or not path.is_file():
+            continue
+        text = re.sub(r"<[^>]+>", " ", path.read_text())
+        text = re.sub(r"\s+", " ", text)
+        ok(not one_plural.search(text), f"{name} says '1 <plural>'")
+
     # ------------------------------------------------------------------- hygiene
     for name in expected:
         path = OUT / name

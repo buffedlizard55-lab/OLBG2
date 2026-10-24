@@ -1,0 +1,54 @@
+:root{--ink:#0f172a;--muted:#5b6779;--line:#e3e8ef;--bg:#f6f8fb;--card:#fff;--accent:#0f766e;
+--accent2:#0b5c56;--hi:#047857;--med:#b45309;--low:#64748b;--warn:#b91c1c;--chip:#eef2f7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent2)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+header.top{background:var(--ink);color:#fff}
+header.top .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{font-weight:700;color:#fff;text-decoration:none;font-size:17px}
+.brand span{color:#5eead4}
+nav.top a{color:#cbd5e1;text-decoration:none;margin-left:14px;font-size:14px}
+nav.top a.on,nav.top a:hover{color:#fff}
+main{padding:26px 0 70px}
+h1{font-size:30px;line-height:1.2;margin:0 0 8px}
+h2{font-size:21px;margin:34px 0 10px}
+h3{font-size:17px;margin:22px 0 8px}
+p.lede{font-size:17px;color:var(--muted);max-width:840px;margin:0 0 18px}
+.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:11.5px;color:var(--muted);font-weight:700;margin:0 0 6px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 6px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi .v{font-size:26px;font-weight:750;line-height:1}
+.kpi .k{font-size:12.5px;color:var(--muted);margin-top:5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.pickgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.pick{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff;border-left:5px solid var(--hi)}
+.pick.med{border-left-color:var(--med)}.pick.low{border-left-color:var(--low)}
+.pick .head{display:flex;justify-content:space-between;gap:8px;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.pick .match{font-weight:700;margin:7px 0 2px}
+.pick .sel{font-size:18px;font-weight:750;color:var(--accent2);margin:4px 0}
+.pick .meta{font-size:13.5px;color:var(--muted)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.03em}
+.b-high{background:#d1fae5;color:#065f46}.b-medium{background:#fef3c7;color:#92400e}.b-low{background:#e2e8f0;color:#475569}
+.b-band{background:#dbeafe;color:#1e40af}.b-out{background:#fee2e2;color:#991b1b}
+.b-A{background:#dcfce7;color:#166534}.b-B{background:#f1f5f9;color:#475569}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#475569}
+tr:last-child td{border-bottom:none}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl-wrap{overflow-x:auto;border-radius:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13.5px;text-decoration:none;color:var(--ink)}
+.chip b{color:var(--accent2)}
+.note{font-size:13.5px;color:var(--muted)}
+.warn{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:12px 14px;font-size:14px}
+ul.tight{margin:8px 0;padding-left:20px}ul.tight li{margin:4px 0}
+.pred{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.pred h3{margin:0 0 6px;font-size:17px}
+.pred .top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.pred .body{font-size:15.5px}
+.pred .facts{margin:12px 0 0;padding:10px 12px;background:#f8fafc;border:1px dashed var(--line);border-radius:8px;font-size:13px}
+.pred .facts li{margin:3px 0}
+footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--muted);font-size:13.5px}
+.src{font-size:12.5px;word-break:break-all}

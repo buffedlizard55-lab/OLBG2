@@ -15,7 +15,7 @@ Usage
 -----
     python scripts/desk_collect.py                    # request list below
     python scripts/desk_collect.py --only olbg_hub_golf,ieh_sched_2026-10-25
-    python scripts/desk_collect.py --request data/desk/requests.json
+    python scripts/desk_collect.py --request data/live_desk/requests.json
 
 A failed request is written to the manifest with its status.  The script exits 0 even when
 individual reads fail: an HTTP 403 is evidence and is published as such.
@@ -38,14 +38,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "data" / "desk" / "captures"
 RAW_DIR = OUT_DIR / "raw"
 MANIFEST = OUT_DIR / "manifest.json"
-DEFAULT_REQUEST = ROOT / "data" / "desk" / "requests.json"
+DEFAULT_REQUEST = ROOT / "data" / "live_desk" / "requests.json"
 
 MAX_BYTES = 500_000
 TIMEOUT = 30
 WORKERS = 6
 UA = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/124.0 Safari/537.36 OLBG2-desk-capture/1.0 "
+    "Chrome/124.0 Safari/537.36 OLBG2-livedesk-capture/1.0 "
     "(+https://github.com/buffedlizard55-lab/OLBG2)"
 )
 

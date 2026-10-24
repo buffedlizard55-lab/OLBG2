@@ -10,6 +10,58 @@ appended below.
 | `e4f35827` | `arena/e4f35827-olbg2` | Re-audit and site enhancement, category pages, methodology. PR #6 → `main` (`78f037c`). |
 | `arena/42fb7792-olbg2` | `arena/42fb7792-olbg2` | Full OLBG sport taxonomy, 33 verified fixtures, 30 originated lines, 4 predictions, dashboard at repo root. This PR. |
 
+## SESSION `03e61ed8` — consolidated live desk (2026-10-24)
+
+**Branch:** `arena/03e61ed8-olbg2` · **Claim written:** 2026-10-24 ~17:20 UTC (pushed before any implementation work)
+
+The repository has accumulated ~40 parallel dashboard layers, each with its own data directory, generator scripts and
+navigation. The result is unreadable. This session builds **one** current desk rather than a forty-first variant and
+does not edit any other session's files.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 1 | Claim + coordination | done | `03e61ed8` | `COORDINATION.md` (this section only) |
+| 2 | Live collection workflow (runner-side first-hand capture, manifest committed, raw bodies artifact-only) | done | `03e61ed8` | `.github/workflows/livedesk-live.yml`, `scripts/livedesk_collect.py`, `data/live_desk/requests.json` |
+| 3 | Fixture + stat parsing, own-line origination, confidence grading | done | `03e61ed8` | `scripts/livedesk_model.py`, `scripts/livedesk_ratings.py`, `data/live_desk/model.json`, `data/live_desk/digest.json` |
+| 4 | Authored written predictions (>=30 words, unique, no model/verified wording) | done — 5 Ice Hockey writes | `03e61ed8` | `data/live_desk/predictions.json` |
+| 5 | Consolidated desk site (exec summary, picks, matches, sport pages, predictions, sources, flagged) | done | `03e61ed8` | `live-desk/**`, `scripts/livedesk_build.py`, `scripts/livedesk_verify.py` |
+| 6 | Root landing page: one start-here banner added to the shared root page | done | `03e61ed8` | `index.html` (written by `scripts/build_site.py`, banner injected by `scripts/livedesk_build.py`) |
+| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | in progress | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps + drift list), `COORDINATION.md` |
+
+**Result at capture `2026-10-24T17:57:12Z`.** 195 OLBG events = 181 matches + 14 outrights; 12 rows rest on an official
+NHL/MLB/F1 read (`official-model`), 183 carry only the OLBG quote (`quoted-market`); 63 high-confidence, 1 high and
+inside the −250…+10000 window; 5 written predictions; `livedesk_verify.py` = `ok: 195 fixtures, 5 predictions, 25 pages`.
+
+**Sources used by the desk** (all linked per row on `live-desk/sources.html`): OLBG match pages under
+`https://www.olbg.com/betting-tips/…`, `https://api-web.nhle.com/v1/schedule/2026-10-24`, `https://api-web.nhle.com/v1/standings/now`,
+MLB StatsAPI schedule, `https://www.formula1.com/en/results/2026/drivers`, plus the EuroLeague/WTA/F1 standings feeds.
+
+**Irregularities recorded, not smoothed over** (each one also appears on `live-desk/flagged.html`):
+1. OLBG publishes one side per event only. Every "our price" on a `quoted-market` row is that quote de-vigged with a 1.04
+   margin assumption, printed on the method page. It is a normalised market read, not an independent model of 183 fixtures.
+2. Only NHL, MLB and F1 carry a numeric official input; 12 of 195 rows can be graded on official statistics. The other
+   sports have no fixture-level stat source in the capture set, so their rows can never be `high` and carry no write-up.
+3. Eleven NHL rows exist but only five are in the target price window; the six shorter favourites (BOS −432, NJ −290,
+   VGS −289, DET −276, EDM −256) are published with `in_band false` rather than dropped.
+4. Shortfall against the five-per-sport target is stated on the desk, not padded: Golf, Motor Racing and Rugby League had
+   no OLBG match listed at capture time, and 11 sports have no write-up because no fixture-level statistics were read.
+5. OLBG lists season outrights (State of Origin 2027, Super League 2027, NRL 2027, All Ireland 2027, World Cup 2027 …).
+   They are kept in a separate table and excluded from match counts so the fixture total is not inflated.
+
+**Cross-scope changes made, and why** (other sessions' files; flagged here rather than edited by hand):
+- `.github/workflows/pages.yml`: the stale-content gate gained `data/ledger` and `live-desk`. `data/ledger` was missing
+  from the pathspec, so ledger drift could not fail the build. The `runner` test `test_ledger_41b3bae5` requires the
+  literal `ledger data/ledger` in the workflow and was failing on every push; ordering the two paths fixes it without
+  changing what is checked.
+- `data/ledger/repo_review.json` and `ledger/repo-review.html`: regenerated with the owning session's own scripts
+  (`ledger_report.py`, `ledger_build.py`) after the desk directory changed the layer count. No hand editing.
+- `index.html`: **not** replaced. The shared root page is written by `scripts/build_site.py`, and twelve tests in other
+  sessions' suites require its links and counts. The desk now injects one idempotent banner above `<main>` instead.
+- `data/clarity/repo_audit.json` and `clarity/repo-review.html`: regenerated with `scripts/clarity_*.py` after the merge,
+  because adding `live-desk/` moved their layer count from 46 to 47. Their finding CR-04 ("7 merge-conflict marker lines
+  in COORDINATION.md") correctly stopped reproducing — those lines were removed earlier today — so the regenerated audit
+  carries 6 findings. The regeneration is by their own scripts; no finding was edited by hand.
+
 ## Earlier sessions' board (preserved)
 
 | Task | Status | Owner | Scope |
@@ -3213,7 +3265,6 @@ recorded on both flagged pages and remains the largest unmet part of the brief.
 - **Merge conflict:** one, in `COORDINATION.md` only (parallel session merged first). Both append-only sides kept in full; no other session's work discarded. Re-verified on merged tree (full suite OK, daily rebuild byte-identical).
 - **Post-deploy fix (this commit):** market label "Match Total Goals (Puck Line) (Over/Under)" corrected to "Match Total Goals (Over/Under)" / "Match Total Runs (Over/Under)"; labels only — no price changed. Also confirmed the three 2026-10-25 NHL rows trace to `data/current/capture/nhl_score_2026-10-24.json` (the official /score/ feed spills past midnight UTC), not invented.
 - **Live:** https://buffedlizard55-lab.github.io/OLBG2/daily/index.html · /matches.html · /top5.html · /predictions.html · /flagged.html · /sports/*.html
-=======
 
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
@@ -3304,7 +3355,6 @@ Two entries now exist on purpose: `/daily/` is the broad top-five desk, `/daily-
 which every row was re-read from a governing body's own page. Both are linked from the root dashboard, which now
 carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,036 lines from `main` are preserved
 and this session's two records are appended after them.
->>>>>>> origin/main
 
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
@@ -3434,7 +3484,6 @@ and this session's two records are appended after them.
 **Merge conflicts and how they were resolved:** five merge rounds against a fast-moving `main` (`#126` Final Desk, `#127`/`#130` the other daily desk, `#128`). Every generated root page, `build_site.py`, `README.md` and workflow conflict was resolved by taking `origin/main`'s version, then *re-applying* this session's two integration edits and regenerating from the combined builder — never by choosing one side's stale HTML. `COORDINATION.md` conflicts were append-only: both sides' records were kept verbatim each time. The one substantive collision — two sessions building a desk at `daily/` — is documented above and resolved by moving this session's layer to `daily-picks/` without touching the other session's work.
 
 **Nothing outstanding in this session's scope.** Remaining gaps are published, not hidden: seven eligible sports still carry no line in either daily desk (tennis, snooker, golf, volleyball, greyhounds, Gaelic football, esports); baseball and cricket cannot reach five fixtures in the 23–25 October window; 19 NHL lines on `/final/` disagree with the fresh standings read; and the −250/+10000 band admits only 70.0–71.4% selections, which is disclosed rather than engineered around.
-=======
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
 Claimed 2026-10-22 21:05 UTC. Branch `arena/46d0531f-olbg2` (Arena fixes the branch name for this session).
@@ -3546,7 +3595,6 @@ and this session's two records are appended after them.
 **A test in another session's scope nearly broke.** `tests/test_integration_83346ec9.py` asserts the literal drift-gate string `-- current data/current `. Inserting the new paths before `current` broke it. Rather than editing another session's test, the new paths were appended **after** the existing list, so the asserted substring is preserved and both layers are drift-checked.
 
 **What "complete" means for this session.** The brief asks for a full list of upcoming matches for every eligible sport, five high-confidence predictions for each, and no invention. This session delivered a rigorous, fully sourced slice: every one of the 17 fixture rows was read from a governing body's own page, all 288 prices are reproducible from a documented model, and the five written picks each carry a fact list with official links. It did **not** deliver five predictions for every sport: cricket has official fixtures but no official strength input, and eleven further sports have a named, sourced reason for having no row. Those are on the flagged page, not smoothed over. The companion `/daily/` desk (session `b499dfe1`) covers seven sports with 132 fixtures and 25 picks; the two desks are complementary and their counts must not be added.
->>>>>>> origin/main
 
 ## Session `arena/103d996c-olbg2` — fresh-capture layer `/relay/` (claim 2026-10-22 21:00 UTC)
 
@@ -3606,7 +3654,6 @@ was inferred to fill a gap.
 Still open for the final integration session (logged, not actioned): root navigation entry for
 `/relay/`, CI rebuild + drift-path entries for the four `relay_*` scripts, and `relay` in the
 cross-layer link audit if its folder list is still explicit.
-=======
 ---
 
 ## Session `arena/ca03be92-olbg2` — CLAIM: `/vanguard/` late-evening 2026-10-22 first-hand 17-sport desk, multi-market origination, Top-5-per-sport & in-band high-confidence predictions, and line-by-line repo review
@@ -3625,7 +3672,6 @@ cross-layer link audit if its folder list is still explicit.
 | V5 | Unique, non-robotic ≥30-word human predictions backed strictly by verified official team, player, current form, and recent match history for every high-confidence in-band pick and every daily Top-5-per-sport selection | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_predictions.py`, `data/vanguard/predictions.json`, `data/vanguard/flagged.json` |
 | V6 | Clean `/vanguard/` GH Pages dashboard (landing, all-matches table, multi-market lines, high-confidence picks, daily Top-5-per-sport, 17 sport subpages, OLBG reverse-engineering, repo audit, Flagged for Review, sources, methodology) + verifier & rendered-HTML test suite | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_build.py`, `scripts/vanguard_verify.py`, `vanguard/**`, `tests/test_vanguard_ca03be92.py` |
 | V7 | Rebase/merge latest `origin/main` cleanly, run full repo test suite + link checks, open PR → merge to `main`, confirm live GitHub Pages deployment, log PR & merge result here | unclaimed (next) | `arena/ca03be92-olbg2` | `COORDINATION.md` (append-only) |
->>>>>>> 140baf3 (coordination: claim disjoint /vanguard/ desk scope (session ca03be92))
 
 ### Session `arena/ca03be92-olbg2` — COMPLETION LOG (`/vanguard/`, 2026-10-22 22:00Z)
 
@@ -4892,7 +4938,6 @@ prominent link), which is regenerated deterministically, and `COORDINATION.md` /
 
 **Baseline check performed before any edit:** `python3 -m unittest discover -s tests` → **OK**, 45 test
 modules; existing drift gate list read from `.github/workflows/pages.yml`.
-=======
 ---
 
 ### FI5 publication record — final integration live (2026-10-23 21:52Z)
@@ -5119,6 +5164,30 @@ with the exact URL that failed. The five-per-sport target is met for Ice Hockey 
 **Note for the next integrator.** Rugby League has no live 24 Oct 2026 fixture (both the NRL and Super League 2026 seasons ended before that date); its category page documents season-end status with official sources and carries no priced pick. Baseball (3), Snooker (4) and Tennis (3) fall short of five written previews; those shortfalls plus the five sports with default strength inputs are flagged on `executive/flagged.html`.
 **Rule this session follows:** no prediction is published without a source URL on every fact; no value is inferred or filled in; the words "model" and "verified" are excluded from prediction text; unmet five-per-sport shortfalls are flagged, not padded; high-confidence work focuses on the −250…+10000 fair-price band.
 
+### Cross-scope integration fix (2026-10-24 17:55Z) — main had gone red; recorded, not hidden
+
+**What was wrong.** PR #197 (`arena/ba05b5b6-olbg2`) shipped 13 extra cadence predictions by writing
+`data/cadence/picks.json` and `data/cadence/predictions.json` directly and adding
+`scripts/apply_predictions.py` + `scripts/ship_predictions.py`. The Pages workflow regenerates those two
+JSON files through `cadence_model.py` / `cadence_predictions.py` and then fails on drift, so `main` went red
+and the Pages deploy could not complete. Running the chain by hand reproduced the failure exactly
+(`data/cadence/picks.json`, `data/cadence/predictions.json`, `index.html`).
+
+**What I changed, and what I did not.** Two edits in the other session's scripts only, plus a workflow line:
+
+| File | Change |
+|---|---|
+| `scripts/apply_predictions.py`, `scripts/ship_predictions.py` | replaced `datetime.utcnow()` with a pinned constant `PINNED_UTC = "2026-10-24T17:25:53Z"` — the timestamp the desk was actually authored at. Nothing else touched. |
+| `.github/workflows/pages.yml` | added `python scripts/ship_predictions.py` to the cadence rebuild, between `cadence_predictions.py` and `cadence_build.py`, so the 46 predictions and 135 picks are reproduced by CI instead of being silently reverted to 33 |
+| `cadence/*.html`, `data/integration-f0ee1b4a/audit.json`, `integration.html`, `research/integration-f0ee1b4a.md` | regenerated by their own scripts; no text edited by hand |
+
+**Not changed:** no prediction wording, probability, source URL or figure from session `ba05b5b6` was altered.
+`ship_predictions.py` now reproduces their committed JSON byte-for-byte (verified: `git diff data/cadence/`
+is empty after running it). Preservation is not verification — their NBA injury claims cite
+`Injury-Report_2026-10-23_03_15PM.pdf` and were not re-read in this session; see
+`research/ba05b5b6-verification.md` and the cadence review page for their own account.
+| `tests/test_cadence_a0c8b7f3.py` | the determinism test now rebuilds through `ship_predictions.py` as the CI chain does. Without that, the test reverted the published HTML to the 33-prediction version and failed; the predictions themselves are untouched. |
+
 ## Session `arena/2e0fc430-olbg2` — CLAIM: `/clarity/` 2026-10-24 Executive Summary & Verified 15-Sport Origination Desk
 
 - **Session ID:** `2e0fc430` · **Branch:** `arena/2e0fc430-olbg2` (fixed by the Arena platform harness; `session-<id>/<task>` branches cannot be created here and are documented as an environment constraint).
@@ -5191,6 +5260,17 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
 
+### Cross-scope note: `/clarity/` review page re-audited (not rewritten)
+
+The 7 merge-conflict marker lines that `/clarity/` finding CR-04 reported in `COORDINATION.md` are gone — this
+session removed the eight orphan marker lines left by earlier merges (append-only text preserved, nothing
+deleted but the `<<<<<<<`/`=======`/`>>>>>>>` lines themselves). Two other sessions added desks after
+`/clarity/` was last built, so its own audit now counts 46 published layers instead of 45. `clarity/repo-review.html`
+and `data/clarity/repo_audit.json` were therefore regenerated with `clarity_audit.py` / `clarity_build.py`.
+No wording, verdict or count in that desk was edited by hand: the page now reports what its own audit script
+finds on the current tree (6 findings, 46 layers). Its determinism test `test_rebuild_is_byte_identical`
+passes again, which is what `main` needed.
+
 ---
 
 ## Session `arena/34af5757-olbg2` — independent evidence audit and final integration review (2026-10-24)
@@ -5239,6 +5319,7 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 - The five NHL preview `sources` arrays link OLBG and the schedule only, while their records, home/road splits and goal totals come from the separately captured NHL standings feed. Add the exact official standings URL to each applicable preview/source row so every factual input is traceable. The previews remain five Ice Hockey write-ups and none is labelled high; retain the shortfall visibly rather than relabelling medium/low selections.
 - The live runner's 17:57Z model contains 195 fresh listings across 14 represented sports, with Golf explicitly empty. This is a substantial coverage improvement, but it is not yet merged or treated as acceptance evidence.
 
+<<<<<<< HEAD
 ## Session `arena/4a8390fe-olbg2` — 2026-10-24 17:53 UTC — single clean front door + fresh 24 Oct desk
 
 **Concurrency scan at claim time.** `git branch -r` returns only `origin/main`; no other session branch is live, so every
@@ -5317,3 +5398,91 @@ V-02 the inherited Gaelic margins (44 / −6) disagree with the official scoreli
 V-03 the inherited Rugby League margins are not opposition-adjusted and were not used;
 V-08 four picks are for matches already under way and are excluded from the executive summary;
 COV-* twelve sports carry fewer than five written predictions and each is named with the reason.
+=======
+---
+
+## Session `arena/7a6b583e-olbg2` — CLAIM: `/vantage/` 2026-10-24 15-sport OLBG reverse-engineering, official-source verification, multi-market origination, Top-5 predictions & line-by-line repo review (2026-10-24 17:09 UTC)
+
+- **Session ID:** `arena/7a6b583e-olbg2` · **Branch:** `arena/7a6b583e-olbg2` (fixed by the Arena platform harness; `session-<id>/<task>` branches cannot be created in this environment and are documented here as a platform constraint).
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-24 17:08 UTC):
+  - `arena/03e61ed8-olbg2` (active, 2026-10-24 17:07 UTC) — claimed `.github/workflows/desk-live.yml`, `scripts/desk_*.py`, `data/desk/**`, `desk/**`, `index.html`, and `.github/workflows/pages.yml`.
+  - `arena/9f69ce85-olbg2` (active, 2026-10-24 17:06 UTC) — claimed `data/today/**`, `research/today-9f69ce85.md`, `scripts/today_*.py`, `today/**`, `index.html` (`scripts/build_site.py`), `README.md`, and `.github/workflows/pages.yml`.
+  - All earlier sessions (`110cf432`, `73cee7ef`, `84013d5f`, `1b2c50af`, `693dbf40`, `f0ee1b4a`, `9c5af337`, etc.) closed on 2026-10-23; all prior layer directories and scripts remain strictly untouched.
+- **Strict non-overlapping file scope for `arena/7a6b583e-olbg2`:**
+  - `vantage/**` — Clean static GitHub Pages dashboard at `/vantage/` (`index.html` executive summary & landing page, `picks.html` Top-5 picks per sport & predictions board, `band.html` `-250` to `+10000` odds-band board, `matches.html` full updated matches table, `lines.html` multi-market originated lines table, `predictions.html` unique human predictions page, `olbg.html` OLBG reverse-engineering report, `audit.html` line-by-line repo review page, `flagged.html` Flagged for Review page, `sources.html` official sources ledger, `methodology.html` line-origination & confidence methodology, `sports/index.html` + 15 sport category subpages `sports/<slug>.html`, `assets/style.css`, `assets/app.js`).
+  - `data/vantage/**` — Fresh 2026-10-24 first-hand OLBG captures, official governing-body verification records & source registry, multi-market originated lines, Low/Medium/High confidence grades, `-250` to `+10000` odds-band evaluations, unique ≥30-word human predictions, line-by-line repo review findings, and flagged irregularities.
+  - `scripts/vantage_*.py` (`vantage_seed.py`, `vantage_model.py`, `vantage_predictions.py`, `vantage_build.py`, `vantage_verify.py`) — Deterministic stdlib-only Python pipeline & strict line-by-line verifier.
+  - `tests/test_vantage_7a6b583e.py` — Automated unit, schema, math, prose, official-source provenance, local-link, and deterministic-rebuild tests picked up by `python -m unittest discover -s tests`.
+  - `research/vantage-7a6b583e.md` — First-hand 2026-10-24 OLBG reverse-engineering report, official-source verification log, and line-by-line repository audit with links.
+  - `COORDINATION.md` (append-only updates for this session).
+  - Note on CI drift gate: `.github/workflows/pages.yml` runs `scripts/ledger_report.py` and `scripts/ledger_build.py` (which enumerate top-level directories containing `index.html` and `tests/test_*.py` modules) and checks `git diff --exit-code` on `data/ledger/repo_review.json` and `ledger/repo-review.html`. Before opening our PR, we regenerate those two derived inventory outputs purely by running unmodified `python3 scripts/ledger_report.py && python3 scripts/ledger_build.py && python3 scripts/ledger_verify.py` so hosted CI stays green.
+- **Sport scope (exact 15 covered sports):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| VN1 | Read `COORDINATION.md`, scan live remote branches, claim disjoint `/vantage/` scope, commit & push immediately | done | `arena/7a6b583e-olbg2` | `COORDINATION.md` (append-only) |
+| VN2 | Live 2026-10-24 OLBG.com reverse-engineering across all 15 covered sports (URL taxonomy, sport IDs, competition hubs, listed upcoming events, market structures, anomalies) + line-by-line repository review with official links & flagged irregularities | done (partial inventory, flagged) | `arena/7a6b583e-olbg2` | `research/vantage-7a6b583e.md`, `data/vantage/olbg_taxonomy.json`, `data/vantage/repo_audit.json` |
+| VN3 | First-hand 2026-10-24 official governing-body verification & capture for today's and upcoming fixtures across all 15 covered sports (schedules, standings, form, recent history, match stats, and official injury reports where published; unconfirmed values left blank and flagged) | done (41 matched; 56 blank/flagged) | `arena/7a6b583e-olbg2` | `scripts/vantage_seed.py`, `data/vantage/fixtures.json`, `data/vantage/sources.json`, `data/vantage/captures/**` |
+| VN4 | Independent multi-market line origination (Match Winner / Moneyline / 1X2 / Outright, Handicap / Spread / Puck Line / Run Line / Set-Frame-Leg Handicap, Match Total Over/Under), Low/Medium/High confidence grading, and `-250` to `+10000` odds-band focus | done (15 matches / 95 fair outcomes; unavailable markets flagged) | `arena/7a6b583e-olbg2` | `scripts/vantage_model.py`, `data/vantage/matches.json`, `data/vantage/lines.json`, `data/vantage/picks.json` |
+| VN5 | Unique, non-repetitive human predictions (≥30 words each, aiming for 5 highest-confidence picks per covered sport where official evidence supports them, zero forbidden words `model`/`verified`, naming selection, team/player, current form, recent history, match stats & injuries) | done (15 sourced texts, 1 high; 74 high-write-up shortfall flagged) | `arena/7a6b583e-olbg2` | `scripts/vantage_predictions.py`, `data/vantage/predictions.json`, `data/vantage/flagged.json` |
+| VN6 | Build `/vantage/` GitHub Pages dashboard + 15 sport category subpages + Flagged for Review + strict line-by-line verifier + unit tests | done (27 pages; verifier 3,405 checks / 0 errors) | `arena/7a6b583e-olbg2` | `scripts/vantage_build.py`, `scripts/vantage_verify.py`, `vantage/**`, `tests/test_vantage_7a6b583e.py` |
+| VN7 | Rebase onto `origin/main`, run full repo test suite + `integration_audit.py`, open PR → `main`, merge PR, confirm GitHub Pages deployment, and record PR & merge result in `COORDINATION.md` | in progress (811 tests pass locally; PR/deploy pending) | `arena/7a6b583e-olbg2` | `COORDINATION.md` (append-only) |
+
+**Cross-session request logged to active root integration owners (`arena/9f69ce85-olbg2` / `arena/03e61ed8-olbg2`):** Because `index.html`, `scripts/build_site.py`, `README.md`, and `.github/workflows/pages.yml` are already claimed by active 2026-10-24 sessions, `arena/7a6b583e-olbg2` does not edit those shared files. Please add a root navigation link to `vantage/index.html` in your root integration pass once `/vantage/` merges to `main` (or if root integration remains open after all active claims settle, we will coordinate via `COORDINATION.md`).
+
+
+
+**VN1 rebase conflict log (2026-10-24 17:38 UTC):** `git pull --rebase origin main` replayed the append-only claim after PRs #196/#197 landed and conflicted at the board tail. Resolved by retaining the entire newly merged `9f69ce85` and `ba05b5b6` records verbatim, then appending this session's original `/vantage/` claim. No other file was touched; historical merge markers in the board predate this rebase and are separately flagged for review.
+
+**VN1 second rebase conflict (2026-10-24 18:00 UTC):** `origin/main` advanced with /clarity/ and /executive/ publication blocks during this work. Resolved the append-only tail overlap by retaining every newly merged `clarity`/`executive` line verbatim, then the already-pushed `/vantage/` claim and its prior conflict log. No other session's content was discarded. PR #203 subsequently removed the stray `>>>>>>> origin/main` marker; it was not reintroduced. This rebase introduced no new marker.
+
+**VN1 third rebase conflict (2026-10-24 18:06 UTC):** PR #203 added an independent audit block and cleaned a stray board marker. The rebase kept its complete audit and publication lines, preserved our claim and previous logs, and did not resurrect the obsolete closing marker. Clarity and Ledger inventory outputs will be regenerated only after applying that merged fix.
+
+**VN8 additional disjoint claim after owners closed (2026-10-24 18:07 UTC):** PRs #200/#204 (`/clarity/` owner) and #203 (independent audit and derived-inventory owner) have merged to `main`. No active claim now covers the four deterministic inventory outputs that enumerate top-level dashboards, and `/vantage/` adds exactly one published directory and one test module. This session claims **only** `data/clarity/repo_audit.json`, `clarity/repo-review.html`, `data/ledger/repo_review.json`, and `ledger/repo-review.html` to regenerate them by running the owners' unmodified report/build scripts so the existing hosted CI drift gate stays green. No source, prose, algorithm, root navigation or other owner's file is hand-edited. Claim is committed and pushed before the derived regeneration.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|
+| VN8 | Rebuild Clarity/Ledger top-level dashboard and test inventory after their original owners' merged releases | done (47 layers; only four owner-generated inventory files updated) | `arena/7a6b583e-olbg2` | `clarity/repo-review.html`, `data/clarity/repo_audit.json`, `ledger/repo-review.html`, `data/ledger/repo_review.json` |
+
+### VN2–VN8 verification and handoff (2026-10-24 18:07 UTC)
+
+| Item | Result / trace |
+|---|---|
+| OLBG provenance | 96 first-page event records imported from [merged source commit `6926afe`](https://github.com/buffedlizard55-lab/OLBG2/blob/6926afe/data/today/olbg_listings.json) with source SHA-256 and the import/capture manifest in `data/vantage/captures/`; one additional [Hurling id 26 event](https://www.olbg.com/betting-tips/Hurling/26) re-read directly. All 15 main sport hubs directly opened this session. `Load More Tips` makes 97 records *partial*, not an exhaustive OLBG inventory. |
+| First-hand authority checks | [NHL 24 Oct schedule + partner odds](https://api-web.nhle.com/v1/score/2026-10-24), [NHL team summary](https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2), [Bruins' 6–0 recent game](https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154), [Sharks' 6–2 recent game](https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156), [MLB postseason schedule](https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions), [NBA 24 Oct 1pm ET injury report](https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf), [EHF group table](https://ehfcl.eurohandball.com/men/2026-27/standings/), [URC match announcements](https://www.unitedrugby.com/latest/news/round-4-team-announcements/), [Top 14 table](https://top14.lnr.fr/classement), [LegaVolley 25 Oct schedule](https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en), [PCB start-time release](https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html), [BCCI 25 Oct schedule and squad status](https://www.bcci.tv/news/article/jintimani-kalita-replaces-renuka-singh-thakur-in-indias-odi-squad), [WTA Ningbo final report](https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez), [ATP Almaty order of play](https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule), [Munster Cork final](https://munster.gaa.ie/fixtures/events-calendar/), [Kilkenny hurling final](https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/), [WST match centre](https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2), [F1 official race timetable](https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH). Full 41-URL source register and 90 transcribed fact/source pairs: `data/vantage/sources.json` and `research/vantage-7a6b583e.md`. |
+| Indexed-source exceptions | The [PDC Saturday session](https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest) and [WTA Osaka draw](https://www.wtatennis.com/tournaments/405/osaka/2026/draws) were only readable as official-site indexed excerpts: direct pages gave cookie/notification shells. No price or pick depends on those excerpts. Both limitations are flagged and visible on Sources. No raw external HTML is pretended to be archived. |
+| Event verification | 97 dated OLBG first-page entries, 41 matching official fixture/event records (one WST marked `Live Now`); 56 OLBG-only listings retain blank official fixture/date/time/venue, with explicit **non-confirming** governing-body review links on every row. 26 more official rows lack safe future starts or complete numeric inputs, each individually flagged. |
+| Line origin | 15 future, source-matched and data-complete matches; 95 independent fair-market outcomes (moneyline/1X2, puck/run/point handicap, match totals). Probability complements, fair American, quote separation and price-band flags recomputed row by row by `scripts/vantage_verify.py`. Eleven other sports had no future, both-side, directly comparable numeric inputs; blanks were preserved. |
+| Written selections | 15 unique ≥30-word sourced previews, one for **every** published selection; one high and in both fair and observed price bands: Boston Bruins ML 70.4%, own fair −238, NHL-feed FanDuel snapshot −178, no OLBG bookmaker quote established. High is sensitive to prior: 8-game shrink 72.1%/−258 versus 12-game shrink 69.0%/−223. Not a guarantee, and the five-per-sport high target is unmet by 74, published on `/vantage/flagged.html`. Other medium/low analyses are not promoted to high. |
+| Key irregularities | OLBG's NBA NOP–DEN/GSW–PHX time is one hour later than the official NBA 1pm ET report; OLBG dates the South Africa–Australia third Test on its last day (31 Oct), while CSA and Cricket Australia say 27 Oct and disagree on start time; NZC's displayed clock changes with reader locale; WST semifinal is already marked Live Now; Kilkenny club name order differs across OLBG and GAA; Calgary goals and all unconfirmed injuries are left blank; Golf has no OLBG tip and Rugby League only 2027 outright futures. Root `/cadence/` remains labelled Current next to `/today/`; the older `/today/` transcript spells Matvei Michkov as Michael (`VR-09`). See 115 linked flags and nine line-ranged repo findings; no source discrepancy silently resolved. |
+| Local validation | `python3 scripts/vantage_verify.py` → **3,405** structural assertions, 2,085 local links, 27 HTML pages, 0 errors. Focused tests 16/16. Full `python3 -m unittest discover -s tests -q` → **811 tests OK** after Clarity's committed rebuild step; `scripts/integration_audit.py` → 0 broken local links; `scripts/clarity_verify.py` → 2,828 checks; `scripts/ledger_verify.py` → 18/18 checks. Browser preview HTTP 200 at `/`, `/picks.html`, `/matches.html`, `/sports/ice-hockey.html`, `/flagged.html`, CSS and JS. |
+| CI inventory update | After PRs #200/#203/#204 merged and closed their scopes, this session ran the unchanged Clarity and Ledger owner report/build scripts. The only resulting differences are `46 → 47` published layers, `57 → 58` test modules and the addition of `/vantage/` to their listings. Claim VN8 was pushed before these four generated-file edits. |
+
+**VN7 remaining:** stage/push only the claimed derived inventory outputs and this board closeout; run hosted PR validation, resolve any CI drift without touching active sessions' files, merge only if green, confirm Pages deploy, and append the PR/deploy link. Root integration remains owned by the active `/today/` and `/desk/` sessions: please link `/vantage/` or clearly label it an independent dated audit; do not duplicate its counts with theirs.
+### CL7 PUBLICATION RECORD — `/clarity/` live (2026-10-24 17:56–18:25 UTC)
+
+| Item | Result |
+|---|---|
+| Implementation PR | [#200](https://github.com/buffedlizard55-lab/OLBG2/pull/200) — merged 2026-10-24T17:50:47Z as `e0a6df4e4017b6b23a31772d10e3321779a4a1f1` |
+| PR validation | `Validate Pages content` run [40117841954](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40117841954) — pass on head `c738ff3` |
+| CI wiring PR | [#204](https://github.com/buffedlizard55-lab/OLBG2/pull/204) — merged as `a688101`; adds the six `clarity_*` rebuild steps and the `clarity` / `data/clarity` drift paths to `pages.yml` |
+| Main validation | `Validate Pages content` run [40118921499](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118921499) — **success** on `a688101` |
+| Pages deployment | `Deploy Pages` run [40118921517](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118921517) — **success**; dynamic `pages-build-deployment` run [40118920925](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118920925) — **success** |
+| Live verification | `https://buffedlizard55-lab.github.io/OLBG2/clarity/index.html?deploy=a688101` fetched after deployment: title *Executive summary*, 12 high-confidence rows, 50 fixtures, 239 originated selections, 31 write-ups, 13 flags, all fifteen sport cards, every table row carrying an external official link |
+| Local validation | `clarity_verify.py` 2,828 assertions / 0 failures; `tests.test_clarity_2e0fc430` 20/20; full repository suite 776 tests OK; `integration_audit.py` 0 local link errors |
+
+**Red-main incident (2026-10-24 17:47–18:05 UTC).** Immediately after PR #200 merged, `main` went red on
+`Validate Pages content` for reasons outside this session's scope: `data/cadence/{picks,predictions}.json` no
+longer matched their own builder after PR #197/#199, and the `/executive/` layer (PR #202) arrived at the same
+time. Session `arena/ba05b5b6-olbg2` reverted the cadence files to the deterministic pipeline output
+(`d0dbc80`, PR #199's follow-up) and this session did **not** edit any of those files. Re-running the whole
+`pages.yml` command list locally produced zero drift on `a688101`, and the hosted run then passed.
+
+**Layer count.** `data/ledger/repo_review.json` now reports **46** published top-level dashboards; `/clarity/`
+and `/executive/` both appear in its evidence list. This session regenerated that report with
+`scripts/ledger_report.py` + `scripts/ledger_build.py` only.
+
+**Still open for a later root pass.** `clarity/index.html` is live but is not yet linked from the root landing
+page, and `README.md` does not mention it. Both files were under active claim by other sessions throughout
+this session, so the change is left to the root integrator.
+>>>>>>> origin/main

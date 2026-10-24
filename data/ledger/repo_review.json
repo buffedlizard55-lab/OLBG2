@@ -2,14 +2,14 @@
  "meta": {
   "generated_at": "2026-10-23T20:36:17Z",
   "findings": 6,
-  "layers": 51
+  "layers": 52
  },
  "findings": [
   {
    "code": "RR-02",
    "title": "Thirty-three published dashboards overlap the same brief",
    "detail": "Each of these directories publishes a full dashboard for the same 15-sport brief, with different counts and different levels of evidence. There is no marker of which one is authoritative, so a reader landing on any of them can be misled.",
-   "evidence": "51 directories with an index.html: atlas, audit65, beacon, board, brief, cadence, canon, clarity, command, covered, current, daily, daily-audit, daily-picks, desk, evidence, executive, final, final-desk, focus, forward, fresh, horizon, hub, latest, ledger, live, live-desk, liveboard, master, meridian, monitor, now, olbg, portal, pulse, quest, reconcile, relay, signal, site, slate, sports, summit, survey, today, update, vanguard, vantage, verified, zenith",
+   "evidence": "52 directories with an index.html: atlas, audit65, beacon, board, brief, cadence, canon, clarity, command, covered, current, daily, daily-audit, daily-picks, desk, evidence, executive, final, final-desk, focus, forward, fresh, horizon, hub, latest, ledger, live, live-desk, liveboard, master, meridian, monitor, now, olbg, portal, pulse, quest, recheck, reconcile, relay, signal, site, slate, sports, summit, survey, today, update, vanguard, vantage, verified, zenith",
    "severity": "high"
   },
   {
@@ -36,7 +36,7 @@
   {
    "code": "RR-06",
    "title": "CI rebuilds many layers and checks them for drift",
-   "detail": "The Pages workflow rebuilds 61 test modules' worth of layers and fails if generated HTML differs from what is committed. Any new layer has to be added to both the rebuild steps and the drift list or it will silently rot. This layer adds its own step and drift paths.",
+   "detail": "The Pages workflow rebuilds 62 test modules' worth of layers and fails if generated HTML differs from what is committed. Any new layer has to be added to both the rebuild steps and the drift list or it will silently rot. This layer adds its own step and drift paths.",
    "evidence": ".github/workflows/pages.yml \u2014 'Fail if any generated page or data file is stale'",
    "severity": "info"
   },

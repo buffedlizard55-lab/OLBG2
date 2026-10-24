@@ -5772,3 +5772,25 @@ the build rather than injected, so it survives that rebuild; if the front door i
 banner block and the counts it prints. The four sports with no pick (Golf, Snooker, Greyhounds, Darts) are
 a genuine market gap rather than a coverage choice: OLBG listed no golf or snooker event when both hubs
 were re-read at 22:24Z and 22:27Z.
+
+## SESSION `26707f98` — CI repair + independent offline re-verification (2026-10-24)
+
+**Branch:** `arena/26707f98-olbg2` (platform-fixed) · **Claim written:** 2026-10-24 ~21:00 UTC, pushed before implementation.
+
+**Environment constraint, tested not assumed.** This sandbox can only reach `github.com`, `api.github.com`,
+`codeload.github.com`, `registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org`. Live reads of OLBG, NHL/NBA/MLB
+and every other federation source fail with `SSL_ERROR_SYSCALL` (re-checked this session). Therefore this session
+does **not** capture new fixtures and does not claim any live re-verification of fixture facts. It works only from
+committed captures and states that limit on every page it publishes.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| R1 | Claim + concurrency scan | in progress | `26707f98` | `COORDINATION.md` (this section only) |
+| R2 | Diagnose red `main` CI after PR #219 (meridian verifier floor, stale audit artifacts, missing `pages.yml` wiring) | in progress | `26707f98` | diagnosis only, no edits yet |
+| R3 | Repair: regenerate stale artifacts with the owning sessions' unmodified scripts; correct the meridian audit floor to the true conditional count; wire meridian rebuild + drift paths into `pages.yml` | unclaimed→claimed | `26707f98` | `.github/workflows/pages.yml`, `scripts/meridian_verify.py`, `tests/test_meridian_1286444e.py`, regenerated `data/meridian/**`, `meridian/**`, `data/clarity/**`, `clarity/**`, `data/ledger/**`, `ledger/**`, `archive.html` (regeneration only, never hand-edited) |
+| R4 | Independent offline re-verification layer for the current front-door `/now/` desk: math re-derivation, source-link coverage, prose rules, internal links, counts reconciliation; explicit "live re-check blocked" register | unclaimed→claimed | `26707f98` | new `recheck/**`, `data/recheck/**`, `scripts/recheck_*.py`, `tests/test_recheck_26707f98.py` only |
+| R5 | Full-suite + full `pages.yml` local replay, PR, merge, Pages deploy confirmation, record here | unclaimed→claimed | `26707f98` | `COORDINATION.md`, PR thread |
+
+Non-overlap: no other session's source script is edited; generated files are rebuilt only with their owning scripts,
+the same exception logged by sessions `03e61ed8` and `4a8390fe`. Open PR #209 (branch `arena/7a6b583e-olbg2`) is
+not touched.

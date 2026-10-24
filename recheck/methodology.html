@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it was checked · OLBG2 independent re-check</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
+</head>
+<body>
+<header><div class="wrap">
+<h1>Independent re-check of the current OLBG2 desk</h1>
+<p>Session 26707f98 · snapshot 2026-10-24T21:05:00Z · audit of <a style="color:#7dd3fc" href="../now/index.html">/now/</a> from committed evidence only · no external page was opened</p>
+<nav class="main" aria-label="Sections"><a href="index.html">Executive summary</a><a href="picks.html">Picks re-checked</a><a href="predictions.html">Predictions re-checked</a><a href="lines.html">All 866 prices</a><a href="fixtures.html">Fixture provenance</a><a href="sources.html">Sources &amp; limits</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">How it was checked</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<h2>How the independent re-check works</h2>
+<p class="lede">Everything here is recomputed from the checked-in files by two short scripts. No external page is
+opened and no value is inferred: when a rule cannot be checked from the checkout, the limit is published instead.</p>
+<h3>The nine check classes</h3>
+<ul class="plain">
+<li><strong>C1 Scope and counts.</strong> The sport list must be exactly the fifteen requested sports, and every
+published count field must equal the length of its row list.</li>
+<li><strong>C2 Provenance.</strong> Every fixture carries an https official link and one or more sourced facts;
+each fact needs an https link, a source key that exists in the register, a non-empty value and a capture time.</li>
+<li><strong>C3 Price arithmetic.</strong> For a probability <code>p</code> the American price is
+<code>-100·p/(1-p)</code> when p ≥ 0.5 and <code>100·(1-p)/p</code> otherwise, rounded to whole cents with a
+100 floor. The decimal price must equal <code>round(1/p, 3)</code>. The band flag is true exactly when the
+American price is between −250 and +10000 inclusive.</li>
+<li><strong>C4 Grades and scores.</strong> A result selection grades high only at 62% or more on a goals-or-points
+pricing family with quality at least 0.85; 55% grades medium; total markets and the evidence-ladder family are
+capped at medium; anything out of band is low. The 0-10 score is ten times the probability, shaded 0.8 for
+ladder-built prices, rounded to one decimal. Each pick is joined back to its full price row before re-grading.</li>
+<li><strong>C5 Written predictions.</strong> Minimum 30 words with the stored word count matching the actual
+count; unique body text and unique five-word openings; the selection's longest words must appear in the prose;
+at least two sourced facts; the id derives from the fixture id; the two internal-only reserved words never appear;
+every pre-game high or medium pick must have a preview.</li>
+<li><strong>C6 Rendering.</strong> Primary tables render exactly as many rows as the data holds and every table
+row cites an https source; prediction cards match the preview count; the front door shows the headline totals;
+every internal link and anchor resolves.</li>
+<li><strong>C7 OLBG linkage.</strong> Each captured listing has a numeric event id and an https URL; fixtures
+that record an event URL must resolve to a captured listing. Fixtures marked listed without a URL become
+observations, not silent passes.</li>
+<li><strong>C8 Source register.</strong> Every (source key, URL) pair is unique and https-only with a capture
+time; the host census feeds the live re-read block register.</li>
+<li><strong>C9 Review flags.</strong> The underlying desk's flag list reconciles by severity and each item
+carries an id, detail and source link.</li>
+</ul>
+<h3>Reproduce it</h3>
+<ul class="plain">
+<li><code>python scripts/recheck_audit.py</code> — re-runs every check and writes
+<code>data/recheck/results.json</code>.</li>
+<li><code>python scripts/recheck_build.py</code> — renders these pages.</li>
+<li><code>python scripts/recheck_verify.py</code> — rebuilds both and fails on any byte change or failed rule.</li>
+<li><code>python -m unittest tests.test_recheck_26707f98</code> — the test module for this desk.</li>
+</ul>
+<h3>What is deliberately not claimed</h3>
+<ul class="plain">
+<li>That any external page currently shows the captured value — the environment cannot open those pages.</li>
+<li>That the originated prices are independent of OLBG on quoted-market rows — the underlying desk documents
+that one side per event is all OLBG exposes, and no second source is reachable here.</li>
+<li>Any news, injury or line-up change after the 17:35 UTC capture — none is available in the checkout.</li>
+</ul>
+
+</div></main>
+<footer><div class="wrap">
+<p>OLBG2 /recheck — every figure below is re-derived from the checked-in capture under
+<code>data/now/</code> and the rendered pages under <code>now/</code>. Source links show where
+values were read at capture time; this build environment could not re-open those pages.
+See <a href="methodology.html">how it was checked</a> and the <a href="flagged.html">review list</a>.</p>
+<p><a href="../index.html">← Back to the OLBG2 front door</a></p>
+</div></footer>
+</body></html>

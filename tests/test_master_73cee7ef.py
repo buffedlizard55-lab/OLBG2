@@ -141,10 +141,9 @@ class MasterDeskTests(unittest.TestCase):
             slug = sport.lower().replace(" ", "-")
             self.assertTrue((OUT / "sports" / f"{slug}.html").exists(), slug)
 
-    def test_root_landing_points_at_the_desk(self):
-        root = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("master/index.html", root)
-        self.assertIn("Consolidated desk", root)
+    def test_archive_landing_points_at_the_desk(self):
+        archive = (ROOT / "archive.html").read_text(encoding="utf-8")
+        self.assertIn("master/index.html", archive)
 
 
     def test_every_sport_has_at_least_one_row(self):
@@ -196,12 +195,14 @@ class MasterDeskTests(unittest.TestCase):
             self.assertEqual(p["basis"], "originated", p["id"])
             self.assertNotEqual(p["confidence"], "high", f'{p["id"]} claims a 70% floor it cannot support')
 
-    def test_root_landing_links_the_desk_without_merging_the_counts(self):
+    def test_archive_links_the_desk_without_merging_the_counts(self):
+        archive = (ROOT / "archive.html").read_text(encoding="utf-8")
+        self.assertIn("master/index.html", archive)
+        # the current desk is a different layer; the archive must say so rather than folding rows in
+        self.assertIn("no two layers are ever added together", archive)
         root = (ROOT / "index.html").read_text(encoding="utf-8")
-        for href in ("master/index.html", "master/top5.html"):
-            self.assertIn(href, root)
-        # the root desk is a different layer; it must say so rather than folding these rows in
-        self.assertIn("separate layer with its own counts", root)
+        self.assertNotIn("master/index.html", root,
+                         "earlier layers must not be mixed into the current front door")
 
     def test_methodology_states_the_five_per_sport_ceiling(self):
         page = (OUT / "methodology.html").read_text(encoding="utf-8")

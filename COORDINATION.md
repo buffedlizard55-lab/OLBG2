@@ -53,8 +53,19 @@ without waiting for review (merge commit `40311f9`), after three rounds of mergi
 regenerating the two repo-review audits each time the layer count moved. Branch checks at merge time: `Validate Pages
 content` success (run 40119983844 on the branch, 40119988043 on the pull request); locally 811 tests passed, the full
 `pages.yml` step list reproduced with **no drifted file**, and `integration_audit.py` reported 0 link errors. The Pages
-build that followed the merge (`8ac3a72`) completed with status `built`; `live-desk/` and the root banner are in the
-deployed tree, and `livedesk-live.yml` has since been running on `main` (capture `2026-10-24T18:20:41Z`).
+build that followed the merge completed with status `built` (commit `8ac3a72`, deployed 18:22:10Z); that tree carries
+`live-desk/` (25 files, including the summary, picks, matches, predictions and every sport page) and the root banner with
+its four links. `livedesk-live.yml` has since been running on `main` (capture `2026-10-24T18:20:41Z`, 157 matches at that
+hour, and its own page rebuild committed with the model).
+
+**Irregularity observed on the deployment, not caused by this desk.** From 18:20Z the repository's Pages source is the
+*legacy* builder (`build_type: legacy`, source `main/`) while `deploy-pages.yml` also publishes an Actions artifact, so
+every merge to `main` starts two builds at once. Between 18:20Z and 18:31Z the legacy builds for main alternated between
+`built` and a generic `Page build failed.` — including one success (`8ac3a72`) and three failures in the same five
+minutes, with no content difference to explain it. `.nojekyll` is present, so this is concurrency, not a Jekyll parse
+error. The deployed version does contain this desk; the failures leave the site untouched rather than broken. The fix is
+to pick one publisher (the Actions workflow) and stop the legacy builder, which is a repository setting outside this
+session's file scope.
 
 **Open item handed on.** OLBG still publishes one side per event, so 183 of 195 rows remain `quoted-market`. Lifting that
 needs a second independent numeric source per sport; until one is captured, those rows are labelled and capped, never

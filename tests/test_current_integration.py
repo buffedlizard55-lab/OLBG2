@@ -16,10 +16,14 @@ def module(name):
 
 class CurrentIntegrationTests(unittest.TestCase):
     def test_archive_index_targets_current_desk(self):
-        # The root landing page leads with the current /now/ desk; every earlier desk is indexed
-        # on archive.html so the layers stay one click away without crowding the front door.
-        self.assertIn('href="current/index.html"', (ROOT / 'archive.html').read_text())
-        self.assertIn('href="now/picks.html"', (ROOT / 'index.html').read_text())
+        # The root landing page leads with the current Playbook desk; every earlier desk,
+        # including /current/ and /now/, is indexed on archive.html so the layers stay one click
+        # away without crowding the front door.
+        archive = (ROOT / 'archive.html').read_text()
+        self.assertIn('href="current/index.html"', archive)
+        self.assertIn('href="now/index.html"', archive)
+        self.assertIn('href="playbook/index.html"', archive)
+        self.assertIn('href="playbook/picks.html"', (ROOT / 'index.html').read_text())
 
     def test_unregistered_future_layer_is_audited(self):
         with tempfile.TemporaryDirectory() as directory:

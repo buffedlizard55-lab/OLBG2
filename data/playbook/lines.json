@@ -1,0 +1,3295 @@
+{
+ "generated_utc": "2026-10-24T23:05:00Z",
+ "count": 83,
+ "margin": "4% of the win part of the fair decimal price",
+ "lines": [
+  {
+   "fid": "pb-b5637bdc85",
+   "sport": "Baseball",
+   "competition": "MLB",
+   "event": "TB Rays @ MIL Brewers",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 13,
+    "total": 22,
+    "shrunk_from": 0.5909090909090909
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "TB Rays",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "MIL Brewers",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160792",
+   "source_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160792",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-3e04adcf20",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "event": "BKN Nets @ CLE Cavaliers",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 7,
+    "total": 11,
+    "shrunk_from": 0.6363636363636364
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "CLE Cavaliers",
+     "probability": 0.5882,
+     "price": -149,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "BKN Nets",
+     "probability": 0.4118,
+     "price": 137,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/BKN_Nets_@_CLE_Cavaliers/4?event_id=536112",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/BKN_Nets_@_CLE_Cavaliers/4?event_id=536112",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:30:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-a145a158b5",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "event": "GS Warriors @ PHX Suns",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 5,
+    "shrunk_from": 0.6
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "GS Warriors",
+     "probability": 0.5455,
+     "price": -125,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "PHX Suns",
+     "probability": 0.4545,
+     "price": 115,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/GS_Warriors_@_PHX_Suns/4?event_id=536118",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/GS_Warriors_@_PHX_Suns/4?event_id=536118",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T03:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-0c8ae093e7",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "event": "HOU Rockets @ ATL Hawks",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 6,
+    "shrunk_from": 0.8333333333333334
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "ATL Hawks",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "HOU Rockets",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_ATL_Hawks/4?event_id=536115",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_ATL_Hawks/4?event_id=536115",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T00:30:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-80e8478a84",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "event": "MIL Bucks @ PHI 76ers",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 8,
+    "total": 14,
+    "shrunk_from": 0.5714285714285714
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "PHI 76ers",
+     "probability": 0.55,
+     "price": -127,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "MIL Bucks",
+     "probability": 0.45,
+     "price": 117,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_PHI_76ers/4?event_id=536111",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_PHI_76ers/4?event_id=536111",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:30:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-814cadb30e",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "event": "NO Pelicans @ DEN Nuggets",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 8,
+    "total": 10,
+    "shrunk_from": 0.8
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "DEN Nuggets",
+     "probability": 0.6875,
+     "price": -229,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "NO Pelicans",
+     "probability": 0.3125,
+     "price": 211,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_DEN_Nuggets/4?event_id=536116",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_DEN_Nuggets/4?event_id=536116",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-3ace6aa5c7",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "event": "SA Spurs @ DAL Mavericks",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 7,
+    "total": 10,
+    "shrunk_from": 0.7
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "SA Spurs",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "DAL Mavericks",
+     "probability": 0.375,
+     "price": 160,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/SA_Spurs_@_DAL_Mavericks/4?event_id=536114",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/SA_Spurs_@_DAL_Mavericks/4?event_id=536114",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-848e7876b2",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "event": "WAS Wizards @ CHI Bulls",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 3,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "WAS Wizards",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "CHI Bulls",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/WAS_Wizards_@_CHI_Bulls/4?event_id=536113",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/WAS_Wizards_@_CHI_Bulls/4?event_id=536113",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-35b9a19df4",
+   "sport": "Cricket",
+   "competition": "Global T20 Canada",
+   "event": "Toronto Kings vs Vancouver Guardians T20",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 9,
+    "total": 10,
+    "shrunk_from": 0.9
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Toronto Kings",
+     "probability": 0.75,
+     "price": -313,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "Vancouver Guardians T20",
+     "probability": 0.25,
+     "price": 288,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Toronto_Kings_vs_Vancouver_Guardians_T20/7?event_id=188845",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Toronto_Kings_vs_Vancouver_Guardians_T20/7?event_id=188845",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-5d6b0604a0",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "BUF Sabres @ WAS Capitals",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 7,
+    "shrunk_from": 0.7142857142857143
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "WAS Capitals",
+     "probability": 0.6154,
+     "price": -167,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "BUF Sabres",
+     "probability": 0.3846,
+     "price": 154,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/BUF_Sabres_@_WAS_Capitals/13?event_id=200003",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/BUF_Sabres_@_WAS_Capitals/13?event_id=200003",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-ffa808508c",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "CAR Hurricanes @ STL Blues",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 10,
+    "total": 11,
+    "shrunk_from": 0.9090909090909091
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "CAR Hurricanes",
+     "probability": 0.7647,
+     "price": -339,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "STL Blues",
+     "probability": 0.2353,
+     "price": 312,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/CAR_Hurricanes_@_STL_Blues/13?event_id=200002",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/CAR_Hurricanes_@_STL_Blues/13?event_id=200002",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-2d0d95b1a8",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "DET Red Wings @ CGY Flames",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 6,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "CGY Flames",
+     "probability": 0.5833,
+     "price": -146,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "DET Red Wings",
+     "probability": 0.4167,
+     "price": 134,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T03:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-1ef1660938",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "MIN Wild @ SEA Kraken",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 7,
+    "total": 12,
+    "shrunk_from": 0.5833333333333334
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "SEA Kraken",
+     "probability": 0.5556,
+     "price": -130,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "MIN Wild",
+     "probability": 0.4444,
+     "price": 120,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MIN_Wild_@_SEA_Kraken/13?event_id=200005",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MIN_Wild_@_SEA_Kraken/13?event_id=200005",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T03:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-e9d463d2e2",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "NSH Predators @ PIT Penguins",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 5,
+    "shrunk_from": 0.8
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "PIT Penguins",
+     "probability": 0.6364,
+     "price": -182,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "NSH Predators",
+     "probability": 0.3636,
+     "price": 168,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-4e0fb43136",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "NY Rangers @ OTT Senators",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 6,
+    "total": 7,
+    "shrunk_from": 0.8571428571428571
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "NY Rangers",
+     "probability": 0.6923,
+     "price": -234,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "OTT Senators",
+     "probability": 0.3077,
+     "price": 216,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-dc989b7648",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "SJ Sharks @ BOS Bruins",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 10,
+    "total": 12,
+    "shrunk_from": 0.8333333333333334
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "BOS Bruins",
+     "probability": 0.7222,
+     "price": -271,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "SJ Sharks",
+     "probability": 0.2778,
+     "price": 250,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-523ba922e9",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "TB Lightning @ UTA Mammoth",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 9,
+    "shrunk_from": 0.5555555555555556
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "UTA Mammoth",
+     "probability": 0.5333,
+     "price": -119,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "TB Lightning",
+     "probability": 0.4667,
+     "price": 110,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TB_Lightning_@_UTA_Mammoth/13?event_id=200009",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TB_Lightning_@_UTA_Mammoth/13?event_id=200009",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T02:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-92bacad074",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "TOR Maple Leafs @ EDM Oilers",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 11,
+    "total": 14,
+    "shrunk_from": 0.7857142857142857
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "EDM Oilers",
+     "probability": 0.7,
+     "price": -243,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "TOR Maple Leafs",
+     "probability": 0.3,
+     "price": 224,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TOR_Maple_Leafs_@_EDM_Oilers/13?event_id=200010",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TOR_Maple_Leafs_@_EDM_Oilers/13?event_id=200010",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-2aab8e739d",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "VGS Golden Knights @ CLB Blue Jackets",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 8,
+    "total": 12,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "VGS Golden Knights",
+     "probability": 0.6111,
+     "price": -164,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "CLB Blue Jackets",
+     "probability": 0.3889,
+     "price": 151,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:07:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-47be810e22",
+   "sport": "Rugby Union",
+   "competition": "International",
+   "event": "USA v Australia A",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 8,
+    "total": 12,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Australia A",
+     "probability": 0.6111,
+     "price": -164,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "USA",
+     "probability": 0.3889,
+     "price": 151,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/USA_v_Australia_A/9?event_id=609583",
+   "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/USA_v_Australia_A/9?event_id=609583",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-d1c84a543d",
+   "sport": "Volleyball",
+   "competition": "Brazil Superliga W",
+   "event": "Abel-Moda Brusque W vs Praia Clube W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 6,
+    "total": 8,
+    "shrunk_from": 0.75
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Abel/Moda Brusque W",
+     "probability": 0.6429,
+     "price": -188,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Abel-Moda Brusque W",
+     "probability": 0.3571,
+     "price": 173,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Abel-Moda_Brusque_W_vs_Praia_Clube_W/21?event_id=37003",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Abel-Moda_Brusque_W_vs_Praia_Clube_W/21?event_id=37003",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "day": "2026-10-24"
+  },
+  {
+   "fid": "pb-ca06102afe",
+   "sport": "Basketball",
+   "competition": "Korea KBL",
+   "event": "Anyang Red Boosters vs Wonju Promy",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Wonju Promy",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Anyang Red Boosters",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Anyang_Red_Boosters_vs_Wonju_Promy/4?event_id=536126",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Anyang_Red_Boosters_vs_Wonju_Promy/4?event_id=536126",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T05:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-4dce95c51c",
+   "sport": "Basketball",
+   "competition": "Korea KBL",
+   "event": "Korea Gas Corporation vs Seoul Thunders",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 2,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Korea Gas Corporation",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Seoul Thunders",
+     "probability": 0.375,
+     "price": 160,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Korea_Gas_Corporation_vs_Seoul_Thunders/4?event_id=536125",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Korea_Gas_Corporation_vs_Seoul_Thunders/4?event_id=536125",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T07:30:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-ec7c602f2f",
+   "sport": "Basketball",
+   "competition": "Korea KBL",
+   "event": "Seoul Knights vs Suwon Sonicboom",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Handicap (points spread)",
+     "selection": "Suwon Sonicboom +5.50",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Seoul_Knights_vs_Suwon_Sonicboom/4?event_id=536127",
+   "source_url": "https://www.olbg.com/betting-tips/Basketball/Other/Korea_KBL/Seoul_Knights_vs_Suwon_Sonicboom/4?event_id=536127",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T05:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-71306e4ee0",
+   "sport": "Cricket",
+   "competition": "CSA T20 Challenge",
+   "event": "Boland vs Titans T20",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 6,
+    "shrunk_from": 0.8333333333333334
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Titans",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Boland",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Boland_vs_Titans_T20/7?event_id=188849",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Boland_vs_Titans_T20/7?event_id=188849",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-3aed6fdb38",
+   "sport": "Cricket",
+   "competition": "CSA T20 Challenge",
+   "event": "Eastern Storm vs South Africa Emerging T20",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 6,
+    "shrunk_from": 0.8333333333333334
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Eastern Storm",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "South Africa Emerging T20",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Eastern_Storm_vs_South_Africa_Emerging_T20/7?event_id=188848",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Eastern_Storm_vs_South_Africa_Emerging_T20/7?event_id=188848",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-ecc2b9290e",
+   "sport": "Cricket",
+   "competition": "WODI",
+   "event": "India W vs Zimbabwe W 2nd ODI",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 5,
+    "shrunk_from": 0.6
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Top team-1 batsman",
+     "selection": "S Mandhana (India W)",
+     "probability": 0.5455,
+     "price": -125,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/India_W_vs_Zimbabwe_W_2nd_ODI/7?event_id=188847",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/India_W_vs_Zimbabwe_W_2nd_ODI/7?event_id=188847",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T08:30:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-26e420bfd6",
+   "sport": "Cricket",
+   "competition": "CSA T20 Challenge",
+   "event": "North West Dragons vs Northern Cape Heat T20",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 8,
+    "total": 9,
+    "shrunk_from": 0.8888888888888888
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "North West Dragons",
+     "probability": 0.7333,
+     "price": -286,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "Northern Cape Heat T20",
+     "probability": 0.2667,
+     "price": 264,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/North_West_Dragons_vs_Northern_Cape_Heat_T20/7?event_id=188851",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/North_West_Dragons_vs_Northern_Cape_Heat_T20/7?event_id=188851",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-14a02bbe0d",
+   "sport": "Cricket",
+   "competition": "ODI",
+   "event": "Pakistan vs England One Day Match",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 9,
+    "total": 15,
+    "shrunk_from": 0.6
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Pakistan",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "England One Day Match",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Pakistan_vs_England_One_Day_Match/7?event_id=188838",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Pakistan_vs_England_One_Day_Match/7?event_id=188838",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T08:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-78115d6d49",
+   "sport": "Cricket",
+   "competition": "CSA T20 Challenge",
+   "event": "Tuskers vs Western Province T20",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 8,
+    "total": 8,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Western Province",
+     "probability": 0.7857,
+     "price": -382,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "Tuskers",
+     "probability": 0.2143,
+     "price": 352,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Tuskers_vs_Western_Province_T20/7?event_id=188850",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Tuskers_vs_Western_Province_T20/7?event_id=188850",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-a2f15c334d",
+   "sport": "Darts",
+   "competition": "European Championship",
+   "event": "Ross Smith vs Luke Woodhouse",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 5,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Ross Smith",
+     "probability": 0.7273,
+     "price": -278,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "Luke Woodhouse",
+     "probability": 0.2727,
+     "price": 256,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Luke_Woodhouse/15?event_id=32408",
+   "source_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Ross_Smith_vs_Luke_Woodhouse/15?event_id=32408",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T12:15:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-9d5d769a1f",
+   "sport": "Gaelic Sports",
+   "competition": "Kilkenny SHC",
+   "event": "Ballyhale Shamrocks v Tullaroan",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 20,
+    "total": 27,
+    "shrunk_from": 0.7407407407407407
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Handicap",
+     "selection": "Tullaroan +3.50",
+     "probability": 0.697,
+     "price": -240,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Hurling/All_Events/Ballyhale_Shamrocks_v_Tullaroan/26?event_id=714",
+   "source_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Hurling/All_Events/Ballyhale_Shamrocks_v_Tullaroan/26?event_id=714",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:45:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-5880953ed1",
+   "sport": "Gaelic Sports",
+   "competition": "Galway SFC",
+   "event": "Moycullen v Salthill-Knocknacarra",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 28,
+    "total": 47,
+    "shrunk_from": 0.5957446808510638
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Handicap",
+     "selection": "SalthillKnocknacarra +3.50",
+     "probability": 0.5849,
+     "price": -147,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/Moycullen_v_Salthill-Knocknacarra/25?event_id=3532",
+   "source_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/Moycullen_v_Salthill-Knocknacarra/25?event_id=3532",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-4dd368c603",
+   "sport": "Gaelic Sports",
+   "competition": "Cork SFC",
+   "event": "St Finbarrs v Nemo Rangers",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 27,
+    "total": 31,
+    "shrunk_from": 0.8709677419354839
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Handicap",
+     "selection": "Nemo Rangers +1.50",
+     "probability": 0.8108,
+     "price": -446,
+     "in_band": false
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/St_Finbarrs_v_Nemo_Rangers/25?event_id=3530",
+   "source_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/St_Finbarrs_v_Nemo_Rangers/25?event_id=3530",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-6f316c4bda",
+   "sport": "Greyhounds",
+   "competition": "Doncaster",
+   "event": "11:04 Doncaster",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Race winner",
+     "selection": "Snowfall",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/11:04_Doncaster/28?event_id=690043",
+   "source_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/11:04_Doncaster/28?event_id=690043",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T11:04:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-90fb550dd2",
+   "sport": "Handball",
+   "competition": "International W",
+   "event": "Lithuania W vs Belgium W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 7,
+    "shrunk_from": 0.5714285714285714
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Belgium (W)",
+     "probability": 0.5385,
+     "price": -122,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Lithuania W",
+     "probability": 0.4615,
+     "price": 112,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Lithuania_W_vs_Belgium_W/20?event_id=12125",
+   "source_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Lithuania_W_vs_Belgium_W/20?event_id=12125",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T14:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-4a9af63885",
+   "sport": "Handball",
+   "competition": "International W",
+   "event": "Luxembourg W vs Great Britain W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 5,
+    "shrunk_from": 0.8
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Great Britain (W)",
+     "probability": 0.6364,
+     "price": -182,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Luxembourg W",
+     "probability": 0.3636,
+     "price": 168,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Luxembourg_W_vs_Great_Britain_W/20?event_id=12126",
+   "source_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Luxembourg_W_vs_Great_Britain_W/20?event_id=12126",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-f420f143ab",
+   "sport": "Handball",
+   "competition": "HBL",
+   "event": "Rhein Neckar Lowen vs SC Magdeburg",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 6,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Rhein Neckar Lowen",
+     "probability": 0.5833,
+     "price": -146,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "SC Magdeburg",
+     "probability": 0.4167,
+     "price": 134,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092",
+   "source_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T14:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-574c57078f",
+   "sport": "Handball",
+   "competition": "Herreligaen",
+   "event": "Skanderborg Handbold vs Team Tvis Holstebro",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 4,
+    "shrunk_from": 0.5
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Team Tvis Holstebro",
+     "probability": 0.5,
+     "price": -104,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Skanderborg Handbold",
+     "probability": 0.5,
+     "price": -104,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Skanderborg_Handbold_vs_Team_Tvis_Holstebro/20?event_id=12075",
+   "source_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Skanderborg_Handbold_vs_Team_Tvis_Holstebro/20?event_id=12075",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-078ca8f656",
+   "sport": "Ice Hockey",
+   "competition": "Switzerland NLA",
+   "event": "Bern vs Lugano",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Bern",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Lugano",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/Bern_vs_Lugano/13?event_id=200018",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/Bern_vs_Lugano/13?event_id=200018",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-e74a8f2835",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "COL Avalanche @ NSH Predators",
+   "tier": "A",
+   "input": "official NHL season totals + bivariate Poisson",
+   "lambda_home": 2.98,
+   "lambda_away": 3.36,
+   "tip_sample": null,
+   "observed_gf_home": 2.56,
+   "observed_gf_away": 4.27,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "NSH Predators",
+     "probability": 0.4414,
+     "price": 121,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "COL Avalanche",
+     "probability": 0.5586,
+     "price": -132,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "NSH Predators -1.5",
+     "probability": 0.3226,
+     "price": 202,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "NSH Predators +1.5",
+     "probability": 0.6774,
+     "price": -219,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Over 5.5",
+     "probability": 0.6084,
+     "price": -162,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Under 5.5",
+     "probability": 0.3916,
+     "price": 149,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over 6.5",
+     "probability": 0.4494,
+     "price": 118,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under 6.5",
+     "probability": 0.5506,
+     "price": -128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/COL_Avalanche_@_NSH_Predators/13?event_id=200072",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/COL_Avalanche_@_NSH_Predators/13?event_id=200072",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T00:07:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-nhl-2026020180",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "FLA Panthers @ CHI Blackhawks",
+   "tier": "A",
+   "input": "official NHL season totals + bivariate Poisson",
+   "lambda_home": 2.86,
+   "lambda_away": 3.1,
+   "tip_sample": null,
+   "observed_gf_home": 2.2,
+   "observed_gf_away": 2.82,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "CHI Blackhawks",
+     "probability": 0.4608,
+     "price": 112,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "FLA Panthers",
+     "probability": 0.5392,
+     "price": -122,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "CHI Blackhawks -1.5",
+     "probability": 0.2978,
+     "price": 226,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "CHI Blackhawks +1.5",
+     "probability": 0.7022,
+     "price": -246,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Over 5.5",
+     "probability": 0.5484,
+     "price": -126,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Under 5.5",
+     "probability": 0.4516,
+     "price": 117,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over 6.5",
+     "probability": 0.3878,
+     "price": 152,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under 6.5",
+     "probability": 0.6122,
+     "price": -164,
+     "in_band": true
+    }
+   ],
+   "olbg_url": null,
+   "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-25",
+   "source_label": "NHL schedule feed",
+   "start_utc": "2026-10-25T19:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-84385834d9",
+   "sport": "Ice Hockey",
+   "competition": "Germany Eishockey Liga",
+   "event": "Lowen Frankfurt vs Grizzlys Wolfsburg",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 2,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Grizzlys Wolfsburg",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Lowen Frankfurt",
+     "probability": 0.375,
+     "price": 160,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Germany_Eishockey_Liga/Lowen_Frankfurt_vs_Grizzlys_Wolfsburg/13?event_id=200037",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Germany_Eishockey_Liga/Lowen_Frankfurt_vs_Grizzlys_Wolfsburg/13?event_id=200037",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-e9c5139123",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "MIN Wild @ VAN Canucks",
+   "tier": "A",
+   "input": "official NHL season totals + bivariate Poisson",
+   "lambda_home": 2.88,
+   "lambda_away": 3.47,
+   "tip_sample": null,
+   "observed_gf_home": 2.92,
+   "observed_gf_away": 2.91,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "VAN Canucks",
+     "probability": 0.4101,
+     "price": 138,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "MIN Wild",
+     "probability": 0.5899,
+     "price": -150,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "VAN Canucks -1.5",
+     "probability": 0.3523,
+     "price": 176,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "VAN Canucks +1.5",
+     "probability": 0.6477,
+     "price": -192,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Over 5.5",
+     "probability": 0.6094,
+     "price": -163,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Under 5.5",
+     "probability": 0.3906,
+     "price": 150,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over 6.5",
+     "probability": 0.4504,
+     "price": 117,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under 6.5",
+     "probability": 0.5496,
+     "price": -127,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MIN_Wild_@_VAN_Canucks/13?event_id=200075",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MIN_Wild_@_VAN_Canucks/13?event_id=200075",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T02:07:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-434ae17e8d",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "MTL Canadiens @ WPG Jets",
+   "tier": "A",
+   "input": "official NHL season totals + bivariate Poisson",
+   "lambda_home": 3.01,
+   "lambda_away": 3.02,
+   "tip_sample": null,
+   "observed_gf_home": 2.6,
+   "observed_gf_away": 3.2,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "WPG Jets",
+     "probability": 0.4984,
+     "price": -104,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "MTL Canadiens",
+     "probability": 0.5016,
+     "price": -105,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "WPG Jets -1.5",
+     "probability": 0.2666,
+     "price": 264,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "WPG Jets +1.5",
+     "probability": 0.7334,
+     "price": -287,
+     "in_band": false
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Over 5.5",
+     "probability": 0.5603,
+     "price": -133,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Under 5.5",
+     "probability": 0.4397,
+     "price": 122,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over 6.5",
+     "probability": 0.3997,
+     "price": 144,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under 6.5",
+     "probability": 0.6003,
+     "price": -156,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MTL_Canadiens_@_WPG_Jets/13?event_id=200074",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MTL_Canadiens_@_WPG_Jets/13?event_id=200074",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T23:07:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-81eff40589",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "event": "NY Islanders @ DAL Stars",
+   "tier": "A",
+   "input": "official NHL season totals + bivariate Poisson",
+   "lambda_home": 2.63,
+   "lambda_away": 2.24,
+   "tip_sample": null,
+   "observed_gf_home": 2.5,
+   "observed_gf_away": 2.9,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "DAL Stars",
+     "probability": 0.5678,
+     "price": -137,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "NY Islanders",
+     "probability": 0.4322,
+     "price": 126,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "DAL Stars -1.5",
+     "probability": 0.2991,
+     "price": 225,
+     "in_band": true
+    },
+    {
+     "market": "Puck line 1.5 (favourite -1.5)",
+     "selection": "NY Islanders +1.5",
+     "probability": 0.7009,
+     "price": -244,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Over 5.5",
+     "probability": 0.3615,
+     "price": 170,
+     "in_band": true
+    },
+    {
+     "market": "Match total 5.5",
+     "selection": "Under 5.5",
+     "probability": 0.6385,
+     "price": -184,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Over 6.5",
+     "probability": 0.2193,
+     "price": 342,
+     "in_band": true
+    },
+    {
+     "market": "Match total 6.5",
+     "selection": "Under 6.5",
+     "probability": 0.7807,
+     "price": -371,
+     "in_band": false
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Islanders_@_DAL_Stars/13?event_id=200076",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Islanders_@_DAL_Stars/13?event_id=200076",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T22:07:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-e16c46172f",
+   "sport": "Ice Hockey",
+   "competition": "Germany Eishockey Liga",
+   "event": "Schwenninger Wild Wings vs Eisbaren Berlin",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 2,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Eisbaren Berlin",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Schwenninger Wild Wings",
+     "probability": 0.375,
+     "price": 160,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Germany_Eishockey_Liga/Schwenninger_Wild_Wings_vs_Eisbaren_Berlin/13?event_id=200041",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Germany_Eishockey_Liga/Schwenninger_Wild_Wings_vs_Eisbaren_Berlin/13?event_id=200041",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-00698ae40e",
+   "sport": "Ice Hockey",
+   "competition": "Switzerland NLA",
+   "event": "Servette GE vs ZSC Lions",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 2,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "ZSC Lions",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Servette GE",
+     "probability": 0.375,
+     "price": 160,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/Servette_GE_vs_ZSC_Lions/13?event_id=200021",
+   "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/Servette_GE_vs_ZSC_Lions/13?event_id=200021",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-9b4431cc78",
+   "sport": "Rugby Union",
+   "competition": "Premiership",
+   "event": "Harlequins v Saracens",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 5,
+    "shrunk_from": 0.8
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Harlequins",
+     "probability": 0.6364,
+     "price": -182,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Saracens",
+     "probability": 0.3636,
+     "price": 168,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Harlequins_v_Saracens/9?event_id=609571",
+   "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Harlequins_v_Saracens/9?event_id=609571",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-ac50f8714a",
+   "sport": "Rugby Union",
+   "competition": "Top 14",
+   "event": "La Rochelle v Bordeaux",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 5,
+    "shrunk_from": 0.6
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Bordeaux",
+     "probability": 0.5455,
+     "price": -125,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "La Rochelle",
+     "probability": 0.4545,
+     "price": 115,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/La_Rochelle_v_Bordeaux/9?event_id=609554",
+   "source_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/La_Rochelle_v_Bordeaux/9?event_id=609554",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T20:05:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-9f1c1be563",
+   "sport": "Tennis",
+   "competition": "WTA",
+   "event": "Ashlyn Krueger vs Katerina Siniakova",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 9,
+    "shrunk_from": 0.5555555555555556
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Katerina Siniakova",
+     "probability": 0.5333,
+     "price": -119,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Ashlyn Krueger",
+     "probability": 0.4667,
+     "price": 110,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ashlyn_Krueger_vs_Katerina_Siniakova/3?event_id=902171",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ashlyn_Krueger_vs_Katerina_Siniakova/3?event_id=902171",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T04:30:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-cfb64d7339",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Daniil Medvedev vs Nikoloz Basilashvili",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 7,
+    "total": 8,
+    "shrunk_from": 0.875
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Daniil Medvedev",
+     "probability": 0.7143,
+     "price": -260,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "Nikoloz Basilashvili",
+     "probability": 0.2857,
+     "price": 240,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T10:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-b3229e4033",
+   "sport": "Tennis",
+   "competition": "WTA",
+   "event": "Elena Rybakina vs Leylah Fernandez",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 7,
+    "total": 8,
+    "shrunk_from": 0.875
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Elena Rybakina",
+     "probability": 0.7143,
+     "price": -260,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "Leylah Fernandez",
+     "probability": 0.2857,
+     "price": 240,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Elena_Rybakina_vs_Leylah_Fernandez/3?event_id=902207",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Elena_Rybakina_vs_Leylah_Fernandez/3?event_id=902207",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T09:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-05d6fdd134",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Lorenzo Musetti vs Taylor Fritz",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 2,
+    "shrunk_from": 0.5
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Taylor Fritz",
+     "probability": 0.5,
+     "price": -104,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Lorenzo Musetti",
+     "probability": 0.5,
+     "price": -104,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Lorenzo_Musetti_vs_Taylor_Fritz/3?event_id=902253",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Lorenzo_Musetti_vs_Taylor_Fritz/3?event_id=902253",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:30:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-4d76e8c0cd",
+   "sport": "Volleyball",
+   "competition": "Turkey Sultanlar Ligi",
+   "event": "Aras Kargo W vs THY Spor Kulubu W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 2,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Aras Kargo W",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "THY Spor Kulubu W",
+     "probability": 0.375,
+     "price": 160,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Aras_Kargo_W_vs_THY_Spor_Kulubu_W/21?event_id=37111",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Aras_Kargo_W_vs_THY_Spor_Kulubu_W/21?event_id=37111",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-eae78aa0ba",
+   "sport": "Volleyball",
+   "competition": "Germany Bundesliga",
+   "event": "Barock Volleys Ludwigsburg vs TV Rottenburg",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 6,
+    "shrunk_from": 0.8333333333333334
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "TV Rottenburg",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Barock Volleys Ludwigsburg",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Barock_Volleys_Ludwigsburg_vs_TV_Rottenburg/21?event_id=37014",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Barock_Volleys_Ludwigsburg_vs_TV_Rottenburg/21?event_id=37014",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-e81dc6aa31",
+   "sport": "Volleyball",
+   "competition": "Turkey Sultanlar Ligi",
+   "event": "Besiktas W vs Goztepe W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 3,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Besiktas W",
+     "probability": 0.5556,
+     "price": -130,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Goztepe W",
+     "probability": 0.4444,
+     "price": 120,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Besiktas_W_vs_Goztepe_W/21?event_id=37108",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Besiktas_W_vs_Goztepe_W/21?event_id=37108",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T10:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-d0df6221ec",
+   "sport": "Volleyball",
+   "competition": "PlusLiga",
+   "event": "CHKS Chelm vs Resovia Rzeszow",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 5,
+    "shrunk_from": 0.6
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "CHKS Chelm",
+     "probability": 0.5455,
+     "price": -125,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Resovia Rzeszow",
+     "probability": 0.4545,
+     "price": 115,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/CHKS_Chelm_vs_Resovia_Rzeszow/21?event_id=36965",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/CHKS_Chelm_vs_Resovia_Rzeszow/21?event_id=36965",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-e0873d81a0",
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "event": "Civitanova vs Padova",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 5,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Padova",
+     "probability": 0.7273,
+     "price": -278,
+     "in_band": false
+    },
+    {
+     "market": "Match winner",
+     "selection": "Civitanova",
+     "probability": 0.2727,
+     "price": 256,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Civitanova_vs_Padova/21?event_id=36995",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Civitanova_vs_Padova/21?event_id=36995",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-09468e5add",
+   "sport": "Volleyball",
+   "competition": "Germany Bundesliga W",
+   "event": "ETV Hamburg W vs Munster W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 5,
+    "shrunk_from": 0.8
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "ETV Hamburg W",
+     "probability": 0.6364,
+     "price": -182,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Munster W",
+     "probability": 0.3636,
+     "price": 168,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/ETV_Hamburg_W_vs_Munster_W/21?event_id=37059",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/ETV_Hamburg_W_vs_Munster_W/21?event_id=37059",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T14:30:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-f2f9fcb3e9",
+   "sport": "Volleyball",
+   "competition": "Turkey Sultanlar Ligi",
+   "event": "Ilbank W vs Afyon Bld W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 3,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Ilbank W",
+     "probability": 0.5556,
+     "price": -130,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Afyon Bld W",
+     "probability": 0.4444,
+     "price": 120,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Ilbank_W_vs_Afyon_Bld_W/21?event_id=37112",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Ilbank_W_vs_Afyon_Bld_W/21?event_id=37112",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-e9d61914f1",
+   "sport": "Volleyball",
+   "competition": "Turkey Sultanlar Ligi",
+   "event": "Kuzeyboru W vs Nilufer Bld W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 2,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Kuzeyboru W",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Nilufer Bld W",
+     "probability": 0.375,
+     "price": 160,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Kuzeyboru_W_vs_Nilufer_Bld_W/21?event_id=37109",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Kuzeyboru_W_vs_Nilufer_Bld_W/21?event_id=37109",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-02ba3660f6",
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "event": "Monza vs Verona",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 3,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Monza",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Verona",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Monza_vs_Verona/21?event_id=36996",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Monza_vs_Verona/21?event_id=36996",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-99ba1d7adf",
+   "sport": "Volleyball",
+   "competition": "Finland Mestaruusliiga W",
+   "event": "Orpo W vs LP Kangasala W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 3,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Orpo W",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "LP Kangasala W",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Orpo_W_vs_LP_Kangasala_W/21?event_id=37107",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Orpo_W_vs_LP_Kangasala_W/21?event_id=37107",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-eae5c5a0e6",
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "event": "Perugia vs Pordenone",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 6,
+    "shrunk_from": 0.8333333333333334
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Pordenone",
+     "probability": 0.6667,
+     "price": -208,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Perugia",
+     "probability": 0.3333,
+     "price": 192,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-8ab118366f",
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "event": "Trentino vs Cisterna",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 6,
+    "total": 7,
+    "shrunk_from": 0.8571428571428571
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Cisterna",
+     "probability": 0.6923,
+     "price": -234,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Trentino",
+     "probability": 0.3077,
+     "price": 216,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-6d72431afd",
+   "sport": "Volleyball",
+   "competition": "Turkey Sultanlar Ligi",
+   "event": "Vakifbank W vs Galatasaray W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 7,
+    "shrunk_from": 0.5714285714285714
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Vakifbank W",
+     "probability": 0.5385,
+     "price": -122,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Galatasaray W",
+     "probability": 0.4615,
+     "price": 112,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Vakifbank_W_vs_Galatasaray_W/21?event_id=37110",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Vakifbank_W_vs_Galatasaray_W/21?event_id=37110",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "day": "2026-10-25"
+  },
+  {
+   "fid": "pb-19f64d9049",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Alejandro Davidovich Fokina vs Zizou Bergs",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Zizou Bergs",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Alejandro Davidovich Fokina",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alejandro_Davidovich_Fokina_vs_Zizou_Bergs/3?event_id=902235",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alejandro_Davidovich_Fokina_vs_Zizou_Bergs/3?event_id=902235",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-2b212ef6c2",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Alex Michelsen vs Botic Van De Zandschulp",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Botic Van De Zandschulp",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Alex Michelsen",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alex_Michelsen_vs_Botic_Van_De_Zandschulp/3?event_id=902240",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alex_Michelsen_vs_Botic_Van_De_Zandschulp/3?event_id=902240",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-3672e5cbfb",
+   "sport": "Tennis",
+   "competition": "WTA",
+   "event": "Alexandra Eala vs Mika Stojsavljevic",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 3,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Alexandra Eala",
+     "probability": 0.5556,
+     "price": -130,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Mika Stojsavljevic",
+     "probability": 0.4444,
+     "price": 120,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexandra_Eala_vs_Mika_Stojsavljevic/3?event_id=902175",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexandra_Eala_vs_Mika_Stojsavljevic/3?event_id=902175",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-27T02:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-0d43edab34",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Ben Shelton vs Casper Ruud",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Casper Ruud",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Ben Shelton",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ben_Shelton_vs_Casper_Ruud/3?event_id=902231",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ben_Shelton_vs_Casper_Ruud/3?event_id=902231",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-82b0182bad",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Holger Rune vs Quentin Halys",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Quentin Halys",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Holger Rune",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Holger_Rune_vs_Quentin_Halys/3?event_id=902236",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Holger_Rune_vs_Quentin_Halys/3?event_id=902236",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-86a0ebfe6d",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Jerome Kym vs Arthur Rinderknech",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Jerome Kym",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Arthur Rinderknech",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Jerome_Kym_vs_Arthur_Rinderknech/3?event_id=902234",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Jerome_Kym_vs_Arthur_Rinderknech/3?event_id=902234",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-604e1d24a7",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Novak Djokovic vs Ugo Humbert",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Ugo Humbert",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Novak Djokovic",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Novak_Djokovic_vs_Ugo_Humbert/3?event_id=902233",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Novak_Djokovic_vs_Ugo_Humbert/3?event_id=902233",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-1b60ca4be0",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Stan Wawrinka vs Jiri Lehecka",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 3,
+    "shrunk_from": 0.6666666666666666
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Stan Wawrinka",
+     "probability": 0.5556,
+     "price": -130,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Jiri Lehecka",
+     "probability": 0.4444,
+     "price": 120,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Jiri_Lehecka/3?event_id=902232",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Stan_Wawrinka_vs_Jiri_Lehecka/3?event_id=902232",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-34bb501c00",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Taylor Fritz vs Stefanos Tsitsipas",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Stefanos Tsitsipas",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Taylor Fritz",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Taylor_Fritz_vs_Stefanos_Tsitsipas/3?event_id=902239",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Taylor_Fritz_vs_Stefanos_Tsitsipas/3?event_id=902239",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-64ca53c9fe",
+   "sport": "Tennis",
+   "competition": "ATP",
+   "event": "Valentin Vacherot vs Mariano Navone",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Mariano Navone",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Valentin Vacherot",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Valentin_Vacherot_vs_Mariano_Navone/3?event_id=902237",
+   "source_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Valentin_Vacherot_vs_Mariano_Navone/3?event_id=902237",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "day": "2026-10-26"
+  },
+  {
+   "fid": "pb-4245560d6a",
+   "sport": "Cricket",
+   "competition": "ODI",
+   "event": "Namibia vs Ireland 3rd ODI",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 1,
+    "total": 1,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Ireland",
+     "probability": 0.5714,
+     "price": -139,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Namibia",
+     "probability": 0.4286,
+     "price": 128,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Namibia_vs_Ireland_3rd_ODI/7?event_id=188854",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Namibia_vs_Ireland_3rd_ODI/7?event_id=188854",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-27T07:30:00Z",
+   "day": "2026-10-27"
+  },
+  {
+   "fid": "pb-8007ee019f",
+   "sport": "Cricket",
+   "competition": "T20I",
+   "event": "New Zealand vs India 3rd T20 Match",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 3,
+    "total": 4,
+    "shrunk_from": 0.75
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "India",
+     "probability": 0.6,
+     "price": -156,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "New Zealand",
+     "probability": 0.4,
+     "price": 144,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_3rd_T20_Match/7?event_id=188852",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_3rd_T20_Match/7?event_id=188852",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-27T07:00:00Z",
+   "day": "2026-10-27"
+  },
+  {
+   "fid": "pb-5317975cc7",
+   "sport": "Volleyball",
+   "competition": "Serie A1 W",
+   "event": "Conegliano W vs Vallefoglia W",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 5,
+    "shrunk_from": 0.8
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Vallefoglia W",
+     "probability": 0.6364,
+     "price": -182,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Conegliano W",
+     "probability": 0.3636,
+     "price": 168,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Conegliano_W_vs_Vallefoglia_W/21?event_id=37076",
+   "source_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Conegliano_W_vs_Vallefoglia_W/21?event_id=37076",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-28T19:00:00Z",
+   "day": "2026-10-28"
+  },
+  {
+   "fid": "pb-7e733e2b75",
+   "sport": "Cricket",
+   "competition": "Test",
+   "event": "South Africa vs Australia",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 2,
+    "total": 2,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Man Of The Match",
+     "selection": "AK Markram",
+     "probability": 0.625,
+     "price": -174,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/South_Africa_vs_Australia/7?event_id=188835",
+   "source_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/South_Africa_vs_Australia/7?event_id=188835",
+   "source_label": "OLBG",
+   "start_utc": "2026-10-31T08:30:00Z",
+   "day": "2026-10-31"
+  },
+  {
+   "fid": "pb-171aea9df4",
+   "sport": "Gaelic Sports",
+   "competition": "Limerick SFC",
+   "event": "Fr Caseys v Kildimo Pallaskenry",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 4,
+    "total": 7,
+    "shrunk_from": 0.5714285714285714
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Match winner",
+     "selection": "Fr Caseys",
+     "probability": 0.5385,
+     "price": -122,
+     "in_band": true
+    },
+    {
+     "market": "Match winner",
+     "selection": "Kildimo Pallaskenry",
+     "probability": 0.4615,
+     "price": 112,
+     "in_band": true
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/Fr_Caseys_v_Kildimo_Pallaskenry/25?event_id=3537",
+   "source_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/Fr_Caseys_v_Kildimo_Pallaskenry/25?event_id=3537",
+   "source_label": "OLBG",
+   "start_utc": "2026-11-01T14:30:00Z",
+   "day": "2026-11-01"
+  },
+  {
+   "fid": "pb-7ecefbf96d",
+   "sport": "Gaelic Sports",
+   "competition": "Cork SFC",
+   "event": "Kanturk v Eire Og Cor",
+   "tier": "B",
+   "input": "OLBG published tip share",
+   "lambda_home": null,
+   "lambda_away": null,
+   "tip_sample": {
+    "won": 5,
+    "total": 5,
+    "shrunk_from": 1.0
+   },
+   "observed_gf_home": null,
+   "observed_gf_away": null,
+   "lines": [
+    {
+     "market": "Handicap",
+     "selection": "Eire Og Cor +0.50",
+     "probability": 0.7273,
+     "price": -278,
+     "in_band": false
+    }
+   ],
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/Kanturk_v_Eire_Og_Cor/25?event_id=3531",
+   "source_url": "https://www.olbg.com/betting-tips/Gaelic_Sports/All_Gaelic_Football/All_Events/Kanturk_v_Eire_Og_Cor/25?event_id=3531",
+   "source_label": "OLBG",
+   "start_utc": "2026-11-01T13:00:00Z",
+   "day": "2026-11-01"
+  }
+ ]
+}

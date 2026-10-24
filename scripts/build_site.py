@@ -1661,12 +1661,29 @@ table.data.plain td{font-size:.85rem}
 """
 
 
+
+def _write_playbook_front_door() -> None:
+    """Re-emit the root front door from the Playbook desk, if that desk is present."""
+    import importlib.util
+
+    script = ROOT / "scripts" / "playbook_build.py"
+    if not script.is_file() or not (ROOT / "data" / "playbook" / "picks.json").is_file():
+        return
+    spec = importlib.util.spec_from_file_location("playbook_build_for_root", script)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    mod.write_front_door()
+
+
 def main() -> None:
     rows, preds, flags, sports, band = dataset()
     (ROOT / "assets").mkdir(exist_ok=True)
     (ROOT / "assets" / "style.css").write_text(build_css(), encoding="utf-8")
 
     (ROOT / "index.html").write_text(build_current_index(), encoding="utf-8")
+    # The owner asked for one obvious front door. /playbook/ owns it, and this builder now emits
+    # the same bytes, so the order the layers are rebuilt in can no longer change the root page.
+    _write_playbook_front_door()
     (ROOT / "matches.html").write_text(build_matches(), encoding="utf-8")
     (ROOT / "verification.html").write_text(build_verification(), encoding="utf-8")
     (ROOT / "picks.html").write_text(build_picks(), encoding="utf-8")

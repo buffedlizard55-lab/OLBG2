@@ -1,0 +1,94 @@
+{
+ "generated_utc": "2026-10-24T23:05:00Z",
+ "count": 11,
+ "flags": [
+  {
+   "id": "NO-EVENTS-golf",
+   "sport": "Golf",
+   "severity": "open",
+   "title": "Golf: no match event on OLBG at capture time",
+   "detail": "No tips found.",
+   "source": "https://www.olbg.com/betting-tips/Golf/5"
+  },
+  {
+   "id": "NO-EVENTS-snooker",
+   "sport": "Snooker",
+   "severity": "open",
+   "title": "Snooker: no match event on OLBG at capture time",
+   "detail": "No tips found.",
+   "source": "https://www.olbg.com/betting-tips/Snooker/8"
+  },
+  {
+   "id": "NO-EVENTS-motor-racing",
+   "sport": "Motor Racing",
+   "severity": "open",
+   "title": "Motor Racing: no match event on OLBG at capture time",
+   "detail": "No tips found.",
+   "source": "https://www.olbg.com/betting-tips/Motor_Racing/14"
+  },
+  {
+   "id": "NO-EVENTS-rugby-league",
+   "sport": "Rugby League",
+   "severity": "open",
+   "title": "Rugby League: no match event on OLBG at capture time",
+   "detail": "0 match events; 3 season outrights only",
+   "source": "https://www.olbg.com/betting-tips/Rugby_League/10"
+  },
+  {
+   "id": "PRICE-SUPPRESSION",
+   "sport": "All",
+   "severity": "open",
+   "title": "OLBG does not show bookmaker prices to this location",
+   "detail": "Every event card rendered 'WIN @' with an empty price slot and every event page rendered the market without a decimal or fractional price. Tip counts, the tipped selection and the tip share did render. No OLBG price is therefore quoted anywhere on this desk; every price published here is one this desk originated and is labelled as such.",
+   "source": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+  },
+  {
+   "id": "CLOCK-QUIRK",
+   "sport": "All",
+   "severity": "open",
+   "title": "OLBG's rendered clock runs seven minutes ahead of the official UTC conversion",
+   "detail": "NHL game 2026020182 starts 2026-10-25T23:00:00Z, which is 19:00 US Eastern, and OLBG printed 'Tomorrow 19:07'. The same +7 minute offset appears on all twenty NHL rows checked. No OLBG clock string is used as a start time; the official feed is used where one was read.",
+   "source": "https://api-web.nhle.com/v1/schedule/2026-10-25"
+  },
+  {
+   "id": "HANDICAP-DEFAULT",
+   "sport": "Handball",
+   "severity": "open",
+   "title": "Nine handball rows show 'Tie' as the most-tipped selection",
+   "detail": "On the handball hub the modal selection is 'Tie' on nine rows, several at 100% of a small sample (7/7, 4/4, 3/3). A drawn handball match is uncommon, so a 'Tie' row carrying every tip is more likely a rendering of the draw leg of a three-way market than a genuine crowd position. Those rows are published as listed but are not used to originate a price.",
+   "source": "https://www.olbg.com/betting-tips/Handball/20"
+  },
+  {
+   "id": "TENNIS-DATES",
+   "sport": "Tennis",
+   "severity": "open",
+   "title": "Fourteen tennis rows carry an OLBG start time but no official confirmation",
+   "detail": "The ATP scores page returned only page chrome and no draw, and the WTA draw pages were not read. Fixture, players and OLBG's clock are recorded; the official start time and the tournament name are left blank on every tennis row rather than guessed.",
+   "source": "https://www.olbg.com/betting-tips/Tennis/3"
+  },
+  {
+   "id": "TIER-B-PRICING",
+   "sport": "All",
+   "severity": "note",
+   "title": "Thirteen sports carry no governing-body statistics in this capture",
+   "detail": "Only the five NHL fixtures have league totals read from an official feed. For every other fixture the win price is a normalised read of the tip share OLBG itself publishes, and only the win market is originated, because a handicap or a total cannot be derived without scoring data. Those rows are graded no higher than medium however short the price.",
+   "source": "https://www.olbg.com/betting-tips"
+  },
+  {
+   "id": "UNVERIFIED-FEEDS",
+   "sport": "All",
+   "severity": "open",
+   "title": "League sites that returned no table to this reader",
+   "detail": "Lega Pallavolo's classifica page returned navigation only (the table is rendered client-side), and the Handball-Bundesliga table URL redirected to a 404 page. Volleyball and handball therefore stay on tier B.",
+   "source": "https://www.legavolley.it/classifica/?IdCampionato=999"
+  },
+  {
+   "id": "MLB-NO-GAME",
+   "sport": "Baseball",
+   "severity": "note",
+   "title": "MLB lists no game on 25 October 2026",
+   "detail": "The MLB schedule feed returns totalGames 0 for 2026-10-25. The only baseball row OLBG lists is TB @ MIL, which starts 2026-10-25T00:00:00Z.",
+   "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-25"
+  }
+ ]
+}

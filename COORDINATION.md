@@ -5794,3 +5794,89 @@ committed captures and states that limit on every page it publishes.
 Non-overlap: no other session's source script is edited; generated files are rebuilt only with their owning scripts,
 the same exception logged by sessions `03e61ed8` and `4a8390fe`. Open PR #209 (branch `arena/7a6b583e-olbg2`) is
 not touched.
+
+---
+
+---
+
+## SESSION `arena/3ef9031e-olbg2` — 2026-10-24 22:35 UTC — `/playbook/` fresh 15-sport pick desk
+
+**Concurrency scan at claim time.** `git branch -r` returns only `origin/main` (tip `67e7672`, merge of PR #219/`/meridian/`).
+No other session branch is live, so every earlier claim in this file is older than 60 minutes with no commits and is
+stale under the handoff rule above. This session therefore takes over the shared root front door and logs the handoff
+here. Nothing another session left uncommitted is touched.
+
+**Problem being fixed (owner's words):** the site is too confusing to tell what the matches are or where the picks are.
+The requirement is a clean, obvious desk: executive summary first, then 5–10 labelled picks per sport across the exact
+15 sports, every match with our own originated lines, every row carrying an official source link, unconfirmable values
+left blank and flagged.
+
+**Exclusive, non-overlapping file scope for `arena/3ef9031e-olbg2`:**
+
+- `playbook/**` — the new desk (`index.html`, `picks.html`, `predictions.html`, `matches.html`, `lines.html`,
+  `sports/index.html`, 15 × `sports/<slug>.html`, `sources.html`, `flagged.html`, `methodology.html`, `assets/`).
+- `data/playbook/**` — first-hand 2026-10-24 OLBG listing capture, official fixture/stat capture with per-fact URLs,
+  originated multi-market lines, confidence grades, band test, written predictions, verification log, flags.
+- `scripts/playbook_*.py` — seed, model, predictions, build, verify.
+- `tests/test_playbook_3ef9031e.py`, `research/playbook-3ef9031e.md`.
+- **Shared root, taken over:** `scripts/build_site.py` `build_index()` only (root `index.html` becomes a clean front
+  door that opens with this desk's executive summary and points at `/playbook/`); `archive.html` generator (every
+  earlier layer stays listed and reachable); `tests/**` assertions that pin root-page content (updated to the new front
+  door with the old layer's link preserved through `archive.html`); `README.md`; `.github/workflows/pages.yml`
+  (append-only `playbook_*` rebuild step + drift paths); this file (append-only).
+- **Not touched by hand:** `now/**`, `meridian/**`, `clarity/**`, `today/**`, `cadence/**`, `live-desk/**` and every
+  other published layer. Two cross-scope files are *regenerated with their owners' own unmodified scripts* at the end
+  (`scripts/clarity_audit.py`/`clarity_build.py`, `scripts/ledger_report.py`/`ledger_build.py`,
+  `scripts/meridian_audit.py`/`meridian_build.py`) because they count published layers from the tree.
+
+| # | Task | Status | Owner |
+|---|---|---|---|
+| PB1 | Claim + concurrency scan | done | `arena/3ef9031e-olbg2` |
+| PB2 | Fresh OLBG hub capture for the 16 hubs covering the exact 15 sports | in progress | `arena/3ef9031e-olbg2` |
+| PB3 | First-hand official-source capture (fixtures, form, season stats, injuries) with per-fact URLs | in progress | `arena/3ef9031e-olbg2` |
+| PB4 | Originated lines on every market (match winner, handicap/spread/puck line, match total) + low/medium/high grades + −250…+10000 band test | in progress | `arena/3ef9031e-olbg2` |
+| PB5 | 5–10 labelled picks per sport; ≥30-word unique written predictions, five per sport where official evidence allows | in progress | `arena/3ef9031e-olbg2` |
+| PB6 | Clean `/playbook/` desk, clean root front door, line-by-line verifier, tests | in progress | `arena/3ef9031e-olbg2` |
+| PB7 | PR → `main`, merge, confirm Pages deploy, record result here | in progress | `arena/3ef9031e-olbg2` |
+
+**Known pre-existing failure at claim time (not caused by this session).** `python -m unittest discover -s tests`
+is 850 tests with 2 failures, both in `tests/test_meridian_1286444e.py`: `meridian_verify.py` reports
+"repo audit is implausibly short" and the published repo-audit count is 3 where the test wants ≥ 4. `/meridian/` counts
+top-level layers, which moved when later layers merged. Logged for repair with meridian's own scripts at integration.
+
+---
+
+## arena/3ef9031e-olbg2 — Playbook desk: build complete (2026-10-24)
+
+**Scope shipped:** `playbook/**`, `data/playbook/**`, `scripts/playbook_{seed,model,predictions,build,verify}.py`,
+`tests/test_playbook_3ef9031e.py`, `research/playbook-3ef9031e.md`, append-only `playbook_*` step and drift paths in
+`.github/workflows/pages.yml`, and the root `index.html` front door (now this desk's executive summary, with every
+earlier layer still reachable through `archive.html`). No other layer was edited by hand.
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| PB1 | Claim + concurrency scan | done | commit `af0720d` |
+| PB2 | Fresh OLBG hub capture, 16 hubs, exact 15 sports | done | `data/playbook/olbg_capture.json`: 94 match rows + 12 outrights, captured 22:35–23:05 UTC |
+| PB3 | First-hand official capture with per-fact URLs | done, partial by necessity | `data/playbook/official.json` (5 NHL games, 10 club season rows, leaders, standings); MLB schedule feed returns 0 games for 25 Oct. Dead ends recorded: ATP scores, Lega Pallavolo, HBL table, nba.com/games |
+| PB4 | Originated lines + grades + band test | done | `data/playbook/lines.json`: 83 fixtures / 188 prices (win line everywhere; puck line + 5.5 + 6.5 totals with complementary sides on the five NHL games) |
+| PB5 | Labelled picks + written predictions | done | `data/playbook/picks.json`: 61 picks (3 high / 58 medium), 53 in band; `predictions.json`: 39 previews across 11 sports, shortest 54 words, zero banned words, zero shared 8-word runs |
+| PB6 | Desk, verifier, tests | done | `python scripts/playbook_verify.py` → 2931 checks, 0 failures; `tests/test_playbook_3ef9031e.py` → 23 tests OK |
+| PB7 | PR → merge → Pages → record | in progress | this block |
+
+**Sports with no fixture on OLBG at capture** (published as "Nothing to price", never padded): Golf, Snooker,
+Motor Racing, Rugby League. **Sports short of the five-preview target:** Handball 4/15, Rugby Union 2/3, Darts 1/2,
+Baseball 1/1, Greyhounds 1/1 — the board was smaller than the target, or carried too few tips to write from.
+All of it is published on `/playbook/flagged.html` (11 items).
+
+**The high-confidence block.** `high` requires an official statistical input (tier A) **and** a chance of at least
+65%, with the band shown as its own column. Three picks qualify, all inside −250…+10000:
+CHI +1.5 (−246, .702), NY Islanders +1.5 (−244, .701), NSH +1.5 (−219, .677).
+
+**Known pre-existing failures, unchanged by this session.** `python -m unittest discover -s tests` is 873 tests with
+2 failures, both in `tests/test_meridian_1286444e.py`, both present before this session claimed (meridian's own
+`repo_audit.json` count is 3 against a `>= 4` assertion, and `meridian_verify.py` fails on the same item). The cause is
+recorded above: the two repo-audit findings that flagged merge-conflict markers in this file disappeared when those
+markers were cleaned, so the audits now honestly count one finding fewer. `data/meridian/repo_audit.json`,
+`meridian/repo-review.html`, `data/clarity/repo_audit.json` and `clarity/repo-review.html` were regenerated here with
+their owners' unmodified scripts (`clarity_audit.py`/`clarity_build.py` run in the CI chain; the meridian pair are
+regenerated by its test suite) because they count published layers, which this desk changed 47 → 51.

@@ -5660,3 +5660,16 @@ state produced by an earlier step. Publishing is unaffected: the dynamic `pages-
 **What `/clarity/` still does not do.** Ten fixtures carry no line (nine blank rows plus one priced-but-started
 check), Snooker and Handball publish fixtures without a pick, and eleven sports carry fewer than five write-ups.
 All of it is on `/clarity/flagged.html` with the exact page that could not be read.
+
+### Post-merge repairs while the deploy was being confirmed (18:20–18:52Z)
+
+| PR | What it repaired | Merge |
+|---|---|---|
+| [#210](https://github.com/buffedlizard55-lab/OLBG2/pull/210) | close-out log; landed the `live-desk/` layer another session pushed to this branch name | `a0186f6` |
+| [#215](https://github.com/buffedlizard55-lab/OLBG2/pull/215) | `livedesk_verify.py` failed with 7 problems: while merging #210 I had regenerated `data/live_desk/*` from a capture run that this sandbox cannot reach, so five ice-hockey events vanished from the model. Restored that session's own capture commit `2fb1a64` byte-for-byte and rebuilt; result `ok: 171 fixtures, 5 predictions, 25 pages checked` | `4f1a3a2` |
+| [#217](https://github.com/buffedlizard55-lab/OLBG2/pull/217) | the committed root banner came from a *failed* 18:26:07Z capture (`0 matches`) while the restored model described 157, so `index.html` drifted on every rebuild. Root regenerated from committed data | `2e5cd4d` |
+
+`main` at `2e5cd4d`: **Validate Pages content success · Deploy Pages success · pages build and deployment success · `pages.status = built`**. The live root now leads with the 15-sport `/now/` desk (50 fixtures, 39 picks, 36 predictions), and `/today/` remains this session's dated 24 October board.
+
+**Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
+

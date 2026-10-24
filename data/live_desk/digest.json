@@ -1,0 +1,88 @@
+{
+ "captured_at": "2026-10-24T17:57:12Z",
+ "events_per_sport": {
+  "Greyhounds": 68,
+  "Handball": 37,
+  "Rugby Union": 6,
+  "Volleyball": 16,
+  "Snooker": 1,
+  "Darts": 6,
+  "Ice Hockey": 20,
+  "Basketball": 9,
+  "Cricket": 14,
+  "Baseball": 1,
+  "Tennis": 6,
+  "Gaelic Sports": 7,
+  "Motor Racing": 1,
+  "Rugby League": 3
+ },
+ "picks_per_sport": {
+  "Greyhounds": 68,
+  "Handball": 37,
+  "Rugby Union": 6,
+  "Volleyball": 16,
+  "Snooker": 1,
+  "Darts": 6,
+  "Ice Hockey": 20,
+  "Basketball": 9,
+  "Cricket": 14,
+  "Baseball": 1,
+  "Tennis": 6,
+  "Gaelic Sports": 7,
+  "Motor Racing": 1,
+  "Rugby League": 3
+ },
+ "high_per_sport": {
+  "Handball": 28,
+  "Rugby Union": 3,
+  "Volleyball": 14,
+  "Darts": 1,
+  "Ice Hockey": 5,
+  "Greyhounds": 1,
+  "Basketball": 5,
+  "Tennis": 5,
+  "Cricket": 1
+ },
+ "verified": 13,
+ "total": 195,
+ "tiers": {
+  "official-model": 12,
+  "quoted-market": 183,
+  "crowd-consensus": 0,
+  "no-basis": 0
+ },
+ "wta_players_parsed": 17,
+ "f1_drivers_parsed": 23,
+ "failures": [
+  {
+   "key": "superleague",
+   "status": 500,
+   "url": "https://www.superleague.co.uk/fixtures",
+   "error": "HTTPError 500"
+  },
+  {
+   "key": "dpwt_leaderboard",
+   "status": 404,
+   "url": "https://www.europeantour.com/dpworld-tour/leaderboard",
+   "error": "HTTPError 404"
+  }
+ ],
+ "review_items": 182,
+ "top5_counts": {
+  "Golf": 0,
+  "Volleyball": 5,
+  "Rugby Union": 5,
+  "Cricket": 5,
+  "Snooker": 1,
+  "Darts": 4,
+  "Baseball": 1,
+  "Gaelic Sports": 5,
+  "Greyhounds": 5,
+  "Tennis": 5,
+  "Motor Racing": 0,
+  "Handball": 5,
+  "Ice Hockey": 5,
+  "Basketball": 5,
+  "Rugby League": 0
+ }
+}

@@ -5674,6 +5674,30 @@ All of it is on `/clarity/flagged.html` with the exact page that could not be re
 **Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
 
 
+## SESSION `9f424dec` — daily desk run: `/compass/` (2026-10-24, 22:30Z window)
+
+**Branch:** `arena/9f424dec-olbg2` · **Claim written:** 2026-10-24 ~22:30 UTC (this commit is pushed before any
+implementation work begins, per the board rules).
+
+Fresh daily run of the owner's brief: a first-hand OLBG listing capture for the exact 15 in-scope sports
+(Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis,
+Motor Racing, Handball, Ice Hockey, Basketball, Rugby League) made in this evening window, first-hand official
+source captures for every fixture found, our own multi-market lines (win, handicap, total, event-specific
+markets), low/medium/high confidence grading with the −250…+10000 band test, unique ≥30-word written
+predictions for the strongest picks (target five per sport where official evidence allows), and one clean,
+obvious front door. This session works only in the new `compass/` / `data/compass/` scope below plus the two
+documented shared-file takeovers; no other session's data, scripts or pages are edited.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| C1 | Claim + concurrency scan | done | `9f424dec` | `COORDINATION.md` (this section only) |
+| C2 | Fresh OLBG listing capture for the 15 sports (hubs, event ids, event URLs) | in progress | `9f424dec` | `data/compass/captures/**`, `data/compass/olbg.json` |
+| C3 | Official-source captures: fixtures, form, recent results, match stats, injury/news pages | in progress | `9f424dec` | `data/compass/captures/**`, `data/compass/fixtures.json`, `data/compass/sources.json` |
+| C4 | Originated multi-market lines + confidence grades + −250…+10000 band test | in progress | `9f424dec` | `scripts/compass_*.py`, `data/compass/lines.json`, `data/compass/picks.json` |
+| C5 | Unique ≥30-word written predictions, target five per covered sport | in progress | `9f424dec` | `data/compass/predictions.json` |
+| C6 | Clean `/compass/` desk + line-by-line verifier + tests | in progress | `9f424dec` | `compass/**`, `tests/test_compass_9f424dec.py` |
+| C7 | Front-door takeover (root `index.html` becomes this desk's executive summary) | in progress | `9f424dec` | `scripts/build_site.py` (`build_index()` only), `index.html` (generated), `.github/workflows/pages.yml` (drift list only) |
+| C8 | PR → `main`, merge, Pages deploy confirmation, close-out log | in progress | `9f424dec` | `COORDINATION.md` |
 ## SESSION `arena/4dd1b17c-olbg2` — consolidated current desk at `/latest/` (2026-10-24, claimed 22:40Z)
 
 **Branch:** `arena/4dd1b17c-olbg2` · **Claim written and pushed before implementation work.** No other branch was

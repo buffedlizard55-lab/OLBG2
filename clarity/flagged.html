@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flagged for review · OLBG2 /clarity/</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="index.html">OLBG2 <span>/clarity/ · 24 Oct 2026 snapshot</span></a>
+<nav class="main"><a href="index.html">Executive summary</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="matches.html">All matches</a><a href="lines.html">Originated lines</a><a href="band.html">Odds band</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html" class="on">Flagged</a><a href="methodology.html">Method</a><a href="olbg.html">OLBG</a><a href="repo-review.html">Repo review</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Flagged for review</h1>
+<p class="lede">Gaps, assumptions and unreadable pages, published rather than smoothed over.</p>
+
+<p class="lede">Nothing is hidden to make the numbers look better. This page lists every gap, every
+assumption and every fixture that carries no line.</p>
+<div class="kpis">
+  <div class="kpi"><b>13</b><span>review items</span></div>
+  <div class="kpi"><b>4</b><span>of them high severity</span></div>
+  <div class="kpi"><b>9</b><span>fixtures without a line</span></div>
+  <div class="kpi"><b>4</b><span>sports without a write-up</span></div>
+</div>
+<div class="card" style="margin:12px 0"><h3>CL-01 · Write-up shortfall against the five-per-sport target</h3>
+<p class="small"><span class="badge high">high</span>
+· Multiple</p><p>31 write-ups are published across 11 of the 15 sports. Sports with a pick but fewer than five write-ups: Golf (2), Volleyball (3), Rugby Union (2), Cricket (4), Darts (1), Baseball (1), Gaelic Sports (0), Greyhounds (2), Tennis (3), Motor Racing (1), Ice Hockey (7), Basketball (5), Rugby League (0). Sports with no write-up at all: Snooker, Gaelic Sports, Handball, Rugby League. A write-up is only published where a selection cleared the focus band with two or more officially sourced facts; the alternative is invention.</p>
+<p class="small"><a href="../data/clarity/predictions.json">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-02 · 9 fixtures are published without an originated line</h3>
+<p class="small"><span class="badge high">high</span>
+· Multiple</p><p>Each row states its own reason. Grouped: Baseball: 1; Gaelic Sports: 1; Handball: 3; Ice Hockey: 1; Rugby League: 1; Rugby Union: 1; Snooker: 1.</p>
+<p class="small"><a href="../data/clarity/matches.json">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-03 · Handball has three verified fixtures and zero lines</h3>
+<p class="small"><span class="badge high">high</span>
+· Handball</p><p>The HBL table page and the LNH standings page both render their numbers client-side, so neither side&#x27;s goals-for/against could be read. Only one side per fixture had published European goal totals, which is not a two-sided input.</p>
+<p class="small"><a href="https://www.opel-hbl.de/de/hbl/tabelle">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-04 · Snooker&#x27;s only upcoming fixture has an unresolved opponent</h3>
+<p class="small"><span class="badge high">high</span>
+· Snooker</p><p>The Northern Ireland Open final is Kyren Wilson against the winner of Mark Williams v Jak Jones. With the second finalist unknown at capture, no opponent-dependent market can be originated.</p>
+<p class="small"><a href="https://www.wst.tv/matches/">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-05 · Volleyball lines rest on a documented class prior, not on a table</h3>
+<p class="small"><span class="badge medium">medium</span>
+· Volleyball</p><p>Lega Pallavolo and the Volleyball Bundesliga both publish their standings client-side. The per-set probabilities are keyed to verified status facts (reigning champions, newly promoted, both won their opener) and are labelled as an assumption on the row.</p>
+<p class="small"><a href="https://www.legavolley.it/classifica/?IdCampionato=999&amp;lang=en">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-06 · No serve or return statistics were published for these matches</h3>
+<p class="small"><span class="badge medium">medium</span>
+· Tennis</p><p>The set-level edge is keyed to the official seed line and, for Almaty, to the published head-to-head. Where neither exists (Basel, Vienna) the class prior is stated on the row.</p>
+<p class="small"><a href="https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-07 · Four NBA teams had not filed an injury report at the 1:00 PM ET deadline</h3>
+<p class="small"><span class="badge medium">medium</span>
+· Basketball</p><p>Milwaukee, Washington, San Antonio, New Orleans and Golden State were listed NOT YET SUBMITTED. Their absences are unknown, not zero, and the rows say so.</p>
+<p class="small"><a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-08 · Nathan Aspinall&#x27;s Round 1 average was not published</h3>
+<p class="small"><span class="badge medium">medium</span>
+· Darts</p><p>The PDC published the result (6-3 over Cristo Reyes) but only Littler&#x27;s 105.05 average. The per-leg edge therefore uses a stated tournament-mean prior.</p>
+<p class="small"><a href="https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-09 · Two golf events, two different pricing bases</h3>
+<p class="small"><span class="badge medium">medium</span>
+· Golf</p><p>The PGA TOUR leaderboard embeds FanDuel win prices, which are published and labelled market-implied. The DP World Tour leaderboard carries no prices, so that outright field is originated from the leaderboard alone.</p>
+<p class="small"><a href="https://www.pgatour.com/leaderboard">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-10 · The F1 race line is originated before qualifying</h3>
+<p class="small"><span class="badge medium">medium</span>
+· Motor Racing</p><p>The grid was not set at capture. The race field is priced from the two published practice orders and the championship table, and the row states that qualifying was still to come.</p>
+<p class="small"><a href="https://www.formula1.com/en/racing/2026/united-states">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-11 · Two Scurry and two Oaks finalists had no published semi-final time</h3>
+<p class="small"><span class="badge medium">medium</span>
+· Greyhounds</p><p>Ballinakill Liam, Newinn Souly, Strike It Skye and Holding Hollie qualified without a time in the GBGB reports. Their shares use the remaining qualifiers&#x27; clock as the only official benchmark.</p>
+<p class="small"><a href="https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-12 · Cricket totals are competition-typical lines with no edge</h3>
+<p class="small"><span class="badge low">low</span>
+· Cricket</p><p>No innings-level par score for these venues was published in a readable form, so the Over/Under prices sit at 50/50 and are graded low rather than dressed up as a view.</p>
+<p class="small"><a href="https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka">source</a></p></div><div class="card" style="margin:12px 0"><h3>CL-13 · OLBG hub capture limits</h3>
+<p class="small"><span class="badge low">low</span>
+· Multiple</p><p>Every one of the 15 OLBG sport hubs was read on 2026-10-24. Golf returned &#x27;No tips found.&#x27; while a PGA TOUR event was in progress; Snooker returned a single fixture; Rugby League returned only 2027 outright futures. OLBG is used as a listing cross-check, never as a price source.</p>
+<p class="small"><a href="https://www.olbg.com/betting-tips">source</a></p></div>
+<h2>Fixtures published without a line</h2>
+<div class="table-wrap"><table><thead><tr><th>Sport</th><th>Fixture</th><th>Why no line</th><th>Source</th></tr></thead>
+<tbody><tr><td><a href="sports/handball.html">Handball</a></td><td>HBW Balingen-Weilstetten v MT Melsungen</td><td class="small">Only Melsungen&#x27;s EHF Champions League goals were published; Balingen&#x27;s official goals-for/against are not on a readable page, so no two-sided total exists.</td><td class="small"><a href="https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d">official</a></td></tr><tr><td><a href="sports/rugby-union.html">Rugby Union</a></td><td>USA Eagles v Australia A</td><td class="small">USA Eagles published no squad or form line for this fixture in the capture window; only the Australia A XXIII is official, so no two-sided input exists.</td><td class="small"><a href="https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022">official</a></td></tr><tr><td><a href="sports/ice-hockey.html">Ice Hockey</a></td><td>Seattle Kraken v Minnesota Wild</td><td class="small">Seattle&#x27;s 2026-27 goals-for and goals-against totals were not legible in the captured standings payload; no line originated.</td><td class="small"><a href="https://api-web.nhle.com/v1/score/2026-10-24">official</a></td></tr><tr><td><a href="sports/handball.html">Handball</a></td><td>Rhein-Neckar Löwen v SC Magdeburg</td><td class="small">Only Magdeburg&#x27;s EHF Champions League goals were published; the Lowen totals are not on a readable page, so no two-sided total exists.</td><td class="small"><a href="https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d">official</a></td></tr><tr><td><a href="sports/snooker.html">Snooker</a></td><td>Kyren Wilson v Winner of semi-final 2</td><td class="small">The final&#x27;s second finalist was unresolved at capture (winner of Williams v Jones), so the opponent-dependent market cannot be originated.</td><td class="small"><a href="https://www.wst.tv/matches/">official</a></td></tr><tr><td><a href="sports/handball.html">Handball</a></td><td>Saint-Raphaël v Paris Saint-Germain</td><td class="small">LNH publishes results but no lag-updated goals-for/against table on a readable page; Paris&#x27;s EHF group table also did not render. No two-sided input exists.</td><td class="small"><a href="https://www.lnh.fr/daikin-starligue/accueil">official</a></td></tr><tr><td><a href="sports/gaelic-sports.html">Gaelic Sports</a></td><td>St Finbarr&#x27;s v Nemo Rangers</td><td class="small">Munster GAA published the final&#x27;s date, venue and referee but no scoring or title baseline for either club, so no two-sided input exists.</td><td class="small"><a href="https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/">official</a></td></tr><tr><td><a href="sports/baseball.html">Baseball</a></td><td>Tampa Bay Rays v Milwaukee Brewers</td><td class="small">MLB StatsAPI listed no probable pitchers for Game 3 at capture, so no starting-pitcher input exists to originate a run expectancy.</td><td class="small"><a href="https://statsapi.mlb.com/api/v1/schedule?sportId=1&amp;startDate=2026-10-23&amp;endDate=2026-10-31&amp;hydrate=team,probablePitcher,decisions,linescore">official</a></td></tr><tr><td><a href="sports/rugby-league.html">Rugby League</a></td><td>England v Papua New Guinea</td><td class="small">Neither side&#x27;s Round 2 result had been published at capture, so no two-sided form input exists.</td><td class="small"><a href="https://www.nrl.com/draw/rugby-league-world-cup/2026/round-3/">official</a></td></tr></tbody></table></div>
+
+</div></main>
+<footer><div class="wrap">
+Snapshot captured 2026-10-24 17:35 UTC · every row carries the official page it came from ·
+<a href="index.html">Executive summary</a> · <a href="picks.html">Picks</a> · <a href="predictions.html">Predictions</a> · <a href="matches.html">All matches</a> · <a href="lines.html">Originated lines</a> · <a href="band.html">Odds band</a> · <a href="flagged.html">Flagged for review</a>
+</div></footer>
+</body></html>

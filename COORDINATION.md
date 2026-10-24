@@ -5002,6 +5002,47 @@ Current state: PRs #191, #192 and #194 are merged and the filtered desk is live.
 
 ---
 
+## Session `arena/5dfa626b-olbg2` — CLAIM: `/executive/` fresh 2026-10-24 executive picks desk (15 sports, verified)
+
+- **Session ID:** `5dfa626b` · **Branch:** `arena/5dfa626b-olbg2` (branch name fixed by the Arena platform harness; the
+  `session-<id>/<task>` worktree convention cannot be used here and is recorded as a platform constraint).
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-24 17:10 UTC):
+  - `arena/03e61ed8-olbg2` (active 17:07:51Z) — claims the live consolidated desk `desk/**`, `data/desk/**`,
+    `scripts/desk_*`, `.github/workflows/desk*`, `research/desk*`, and shared root files if unclaimed.
+  - `arena/9f69ce85-olbg2` (active 17:06:45Z) — claims a fresh 2026-10-24 release scope; only `COORDINATION.md`
+    touched so far.
+  - All earlier desks (`cadence`, `ledger`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`,
+    `current`, `atlas`, `canon`, `final`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`,
+    `relay`, `vanguard`, `pulse`, `update`, `covered`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`,
+    `master`, `olbg`, `horizon`, `zenith`, `summit`, `quest`, `desk`) are historical/merged and untouched by this session.
+- **Exclusive, non-overlapping file scope for `arena/5dfa626b-olbg2`:**
+  - `executive/**` (clean executive-summary landing page, "where the picks are" navigation, all-matches table,
+    picks & confidence table, originated lines, written predictions, 15 sport category subpages, Flagged for Review,
+    sources & methodology)
+  - `data/executive/**` (current official-source fixture capture, sourced facts, originated lines, picks, confidence,
+    written predictions, flagged items, source registry)
+  - `scripts/executive_*.py` (`executive_seed.py`, `executive_model.py`, `executive_predictions.py`,
+    `executive_audit.py`, `executive_build.py`, `executive_verify.py`)
+  - `tests/test_executive_5dfa626b.py`
+  - `research/executive-5dfa626b.md`
+  - `COORDINATION.md` (append-only updates only)
+- **Sport scope (exact 15 sports requested):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball,
+  Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+- **Data-freshness commitment:** every fixture row in `data/executive/fixtures.json` is captured from an official
+  source read in this session (2026-10-24) and carries the source URL; no value is inferred. Unconfirmed values are
+  left blank and flagged.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| EX1 | Claim scope + concurrency scan | done | `arena/5dfa626b-olbg2` | `COORDINATION.md` |
+| EX2 | Collect current official-source fixtures + facts for the 15 sports (2026-10-24) | in progress | `arena/5dfa626b-olbg2` | `data/executive/fixtures.json`, `data/executive/sources.json` |
+| EX3 | Originate our own lines, pick winner, assign low/medium/high confidence, focus on −250…+10000 | pending | `arena/5dfa626b-olbg2` | `scripts/executive_model.py`, `data/executive/lines.json`, `data/executive/picks.json` |
+| EX4 | Write unique ≥30-word predictions (team/player, form, recent history, verified stats, injuries; obvious selection) | pending | `arena/5dfa626b-olbg2` | `scripts/executive_predictions.py`, `data/executive/predictions.json` |
+| EX5 | Build `/executive/` dashboard + 15 sport pages + flagged + verify + tests | pending | `arena/5dfa626b-olbg2` | `scripts/executive_*.py`, `executive/**`, `tests/test_executive_5dfa626b.py` |
+| EX6 | Rebase on `origin/main`, full test suite, open PR → `main`, merge, confirm Pages deploy | pending | `arena/5dfa626b-olbg2` | `COORDINATION.md` (append-only) |
+
+### Rebase / conflict log
+Recorded when the rebase onto `origin/main` is performed (see EX6).
 ## Session `arena/9f69ce85-olbg2` — fresh 2026-10-24 release, clean dashboard
 
 **Session ID:** `arena/9f69ce85-olbg2` · **Branch:** `arena/9f69ce85-olbg2` · **Started:** 2026-10-24 17:10 UTC
@@ -5056,8 +5097,26 @@ with the exact URL that failed. The five-per-sport target is met for Ice Hockey 
 | I3 | Verify prediction facts against official governing-body pages (NBA.com standings/injury report, Premiership Rugby standings, NHL schedule/standings) | done | `arena/ba05b5b6-olbg2` | `research/ba05b5b6-verification.md` |
 | I4 | Rebuild root landing page as a clean executive dashboard: executive summary, obvious picks table, per-sport category navigation, table format with source links on every row | done | `arena/ba05b5b6-olbg2` | `index.html` (regenerated via scripts/build_site.py) |
 | I5 | Publish Flagged for Review page with open items and the five-per-sport shortfalls (Golf, Greyhounds, Gaelic Sports have no high-confidence pick supported by official facts) | done | `arena/ba05b5b6-olbg2` | `data/cadence/flagged.json` (CD-PR1 lists all three shortfalls), `integration.html` |
-| I6 | Rebuild checks, full test suite, link audit, PR → `main`, merge on green, confirm Pages deploy, record result | in progress | `arena/ba05b5b6-olbg2` | shared outputs (integration), `COORDINATION.md` |
+| I6 | Rebuild checks, full test suite, link audit, PR → `main`, merge on green, confirm Pages deploy, record result | done | `arena/ba05b5b6-olbg2` | shared outputs (integration), `COORDINATION.md` |
 
+**Integration result:** PR [#197](https://github.com/buffedlizard55-lab/OLBG2/pull/197) merged to `main` on 2026-10-24T17:33:40Z (merge commit `6926afe07808ef5b6ebb6540d181dadee4b1a76f`). Full suite 747 tests OK; integration link audit 0 cross-layer errors; root `index.html` regenerated (46 write-ups, 35 high). `main` now holds 46 predictions / 135 picks. Pages deploy to be confirmed after merge.
+
+---
+
+### EX6 publication record — executive desk live (2026-10-24 17:51Z)
+
+| Item | Result |
+|---|---|
+| EX1 | Capture 71 fixtures across 14 sports from official governing-body sources read live on 2026-10-24, each row carrying per-side strength inputs, their basis, and per-fact source URLs; 33-entry official source registry | done | `arena/5dfa626b-olbg2` | `data/executive/fixtures.json`, `data/executive/sources.json`, `scripts/executive_seed.py` |
+| EX2 | Originate own lines per fixture (two-way sigmoid K=3.0 / home_edge 0.15; event-position outright probabilities) and price them as fair American + decimal | done | `arena/5dfa626b-olbg2` | `scripts/executive_model.py`, `data/executive/lines.json` |
+| EX3 | Pick one winner per fixture, low/medium/high conviction; a default strength input can never claim high | done | `arena/5dfa626b-olbg2` | `data/executive/picks.json` (71 picks: 12 high / 7 medium / 52 low) |
+| EX4 | Write unique >=30-word previews; 12 high-conviction previews hand-written at 53-66 words, none using "model"/"verified" | done | `arena/5dfa626b-olbg2` | `scripts/executive_predictions.py`, `data/executive/predictions.json` (71 previews, min 37 words) |
+| EX5 | Build `/executive/` (executive-summary landing, 15 sport pages, matches, lines, picks, predictions, sources, methodology, flagged) + verify + tests | done | `arena/5dfa626b-olbg2` | `executive/**` (24 pages), `scripts/executive_build.py`, `scripts/executive_verify.py`, `tests/test_executive_5dfa626b.py` |
+| EX6 | Rebase on origin/main, full suite, PR -> main, merge | done | `arena/5dfa626b-olbg2` | PR [#201](https://github.com/buffedlizard55-lab/OLBG2/pull/201) merged as `2d2420b` on 2026-10-24T17:51:42Z |
+
+**Integration result:** PR [#201](https://github.com/buffedlizard55-lab/OLBG2/pull/201) merged to `main` on 2026-10-24T17:51:42Z (merge commit `2d2420bfe3b6e11d980bfc6c3f21ea03aa9059f0`). Full suite 766 tests OK; `executive_verify` 0 errors / 0 warnings. Merge required one rebase: `COORDINATION.md` conflicted (append-only board) and was resolved by keeping `origin/main`'s blocks and retaining this session's claim block. Pre-existing stray `=======` / `>>>>>>>` markers already on `main` (lines 3216-3628) were left untouched, as logged in FL-20.
+
+**Note for the next integrator.** Rugby League has no live 24 Oct 2026 fixture (both the NRL and Super League 2026 seasons ended before that date); its category page documents season-end status with official sources and carries no priced pick. Baseball (3), Snooker (4) and Tennis (3) fall short of five written previews; those shortfalls plus the five sports with default strength inputs are flagged on `executive/flagged.html`.
 **Rule this session follows:** no prediction is published without a source URL on every fact; no value is inferred or filled in; the words "model" and "verified" are excluded from prediction text; unmet five-per-sport shortfalls are flagged, not padded; high-confidence work focuses on the −250…+10000 fair-price band.
 
 ### Cross-scope integration fix (2026-10-24 17:55Z) — main had gone red; recorded, not hidden
@@ -5084,3 +5143,75 @@ is empty after running it). Preservation is not verification — their NBA injur
 `research/ba05b5b6-verification.md` and the cadence review page for their own account.
 | `tests/test_cadence_a0c8b7f3.py` | the determinism test now rebuilds through `ship_predictions.py` as the CI chain does. Without that, the test reverted the published HTML to the 33-prediction version and failed; the predictions themselves are untouched. |
 
+## Session `arena/2e0fc430-olbg2` — CLAIM: `/clarity/` 2026-10-24 Executive Summary & Verified 15-Sport Origination Desk
+
+- **Session ID:** `2e0fc430` · **Branch:** `arena/2e0fc430-olbg2` (fixed by the Arena platform harness; `session-<id>/<task>` branches cannot be created here and are documented as an environment constraint).
+- **Claim timestamp:** `2026-10-24 17:12 UTC` (pushed immediately before starting implementation).
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-24 17:11 UTC):
+  - `arena/03e61ed8-olbg2` (active 17:07:51Z) — claims `desk/**`, `data/desk/**`, `scripts/desk_*.py`, `.github/workflows/desk-live.yml`, plus shared root files (`index.html`, `.github/workflows/pages.yml`).
+  - `arena/9f69ce85-olbg2` (active 17:06:45Z) — claims `today/**`, `data/today/**`, `scripts/today_*.py`, `research/today-9f69ce85.md`, plus shared root files (`index.html`, `scripts/build_site.py`, `README.md`, `.github/workflows/pages.yml`).
+  - `arena/5dfa626b-olbg2` (active 17:08:39Z) — claims `executive/**`, `data/executive/**`, `scripts/executive_*.py`, `tests/test_executive_5dfa626b.py`, `research/executive-5dfa626b.md`.
+  - All previously merged desks (`cadence`, `ledger`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`, `daily-picks`, `current`, `atlas`, `canon`, `final`, `final-desk`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`, `relay`, `vanguard`, `pulse`, `update`, `covered`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`, `master`, `olbg`, `horizon`, `zenith`, `summit`, `quest`) remain untouched.
+- **Exclusive, non-overlapping file scope for `arena/2e0fc430-olbg2`:**
+  - `clarity/**` (clean, simple dashboard with prominent Executive Summary, obvious pick-locator navigation, written-predictions-first cards, full matches table, multi-market originated lines table, `-250` to `+10000` odds-band focus board, 15 sport category subpages, OLBG reverse-engineering & line-by-line repo review page, Flagged for Review page, official sources & methodology page)
+  - `data/clarity/**` (fresh 2026-10-24 OLBG.com reverse-engineering records, first-hand official governing-body fixtures & stats, multi-market originated lines, confidence & `-250` to `+10000` band grading, unique ≥30-word human predictions, line-by-line repo audit findings, and flagged irregularities)
+  - `scripts/clarity_*.py` (`clarity_seed.py`, `clarity_model.py`, `clarity_predictions.py`, `clarity_audit.py`, `clarity_build.py`, `clarity_verify.py`)
+  - `tests/test_clarity_2e0fc430.py` (unit, schema, math, prose, official-source, link, and deterministic rebuild tests picked up by `unittest discover`)
+  - `research/clarity-2e0fc430.md` (first-hand 2026-10-24 OLBG reverse-engineering report, line-by-line repo review, and official-source verification log)
+  - `COORDINATION.md` (append-only updates)
+  - *CI inventory note:* `.github/workflows/pages.yml` executes `scripts/ledger_report.py` and `scripts/ledger_build.py` (unowned/closed session `41b3bae5`, >20h old), which enumerate top-level published `index.html` directories and `tests/test_*.py` modules and fail on drift in `data/ledger/repo_review.json` / `ledger/repo-review.html`. Before opening our PR (and only if no active session holds `ledger`), we will run those unmodified owner scripts so the hosted CI drift gate remains green.
+- **Cross-session request to active root integrators (`arena/9f69ce85-olbg2` / `arena/03e61ed8-olbg2`):** Because active claims (<60 minutes old) cover `index.html`, `scripts/build_site.py`, `README.md`, and `.github/workflows/pages.yml`, this session will not edit those shared root files unless those claims become stale (>60 min with no commits) or have already merged when final integration runs. Please link `clarity/index.html` from root navigation and add `clarity_*` rebuild/drift steps to `.github/workflows/pages.yml` during root integration.
+- **Exact 15 covered sports:** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| CL1 | Read `COORDINATION.md`, scan live remote branches, claim disjoint `/clarity/` scope, commit & push immediately | done | `arena/2e0fc430-olbg2` | `COORDINATION.md` (append-only) |
+| CL2 | Live 2026-10-24 OLBG.com reverse-engineering across the 15 covered sports + line-by-line repo review with official source links & flagged irregularities | in progress | `arena/2e0fc430-olbg2` | `research/clarity-2e0fc430.md`, `data/clarity/olbg_inventory.json`, `data/clarity/repo_audit.json` |
+| CL3 | Fresh 2026-10-24 official governing-body verification & capture for today's and upcoming fixtures across all 15 covered sports (schedules, form, recent match history, match stats, and official injury reports; unconfirmed fields left blank and flagged) | unclaimed→this session | `arena/2e0fc430-olbg2` | `scripts/clarity_seed.py`, `data/clarity/fixtures.json`, `data/clarity/sources.json` |
+| CL4 | Independent multi-market line origination (win match / moneyline / 1X2 / outright, handicap / spread / puck line / run line / set-frame-leg handicap, match totals), Low/Medium/High confidence grading, and `-250` to `+10000` odds-band focus | unclaimed→this session | `arena/2e0fc430-olbg2` | `scripts/clarity_model.py`, `data/clarity/matches.json`, `data/clarity/lines.json`, `data/clarity/picks.json` |
+| CL5 | Unique ≥30-word human predictions (targeting 5 highest-confidence upcoming picks per covered sport where official evidence supports them; zero forbidden words `model`/`verified`; obvious betting selection; shortfalls disclosed on Flagged for Review) | unclaimed→this session | `arena/2e0fc430-olbg2` | `scripts/clarity_predictions.py`, `data/clarity/predictions.json`, `data/clarity/flagged.json` |
+| CL6 | Clean `/clarity/` GitHub Pages dashboard (`index.html`, `picks.html`, `predictions.html`, `matches.html`, `lines.html`, `band.html`, `olbg.html`, `repo-review.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/index.html`, 15 `sports/<slug>.html`, `assets/style.css`, `assets/app.js`) + strict line-by-line verifier + unit tests | unclaimed→this session | `arena/2e0fc430-olbg2` | `scripts/clarity_build.py`, `scripts/clarity_verify.py`, `clarity/**`, `tests/test_clarity_2e0fc430.py` |
+| CL7 | Rebase onto `origin/main`, run full repo test suite + `integration_audit.py`, open PR → `main`, merge PR, confirm GitHub Pages deployment, and record PR & merge result in `COORDINATION.md` | unclaimed→this session | `arena/2e0fc430-olbg2` | `COORDINATION.md` (append-only) |
+
+
+### CL1–CL6 COMPLETE — `/clarity/` 2026-10-24 fifteen-sport desk (session `arena/2e0fc430-olbg2`)
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| CL1 | Claim + concurrency scan | done | this file, commit `1066e7e` |
+| CL2 | OLBG reverse engineering + repo review | done | `research/clarity-2e0fc430.md`, `data/clarity/repo_audit.json` (7 findings), `clarity/olbg.html`, `clarity/repo-review.html` |
+| CL3 | Official verification capture | done | `scripts/clarity_seed.py`, `data/clarity/fixtures.json` (50 fixtures, 245 per-fact citations), `data/clarity/sources.json` (52 official endpoints) |
+| CL4 | Multi-market origination + confidence + odds band | done | `scripts/clarity_model.py`, `scripts/clarity_models.py`, `data/clarity/{matches,lines,picks}.json` — 239 originated selections, 41 graded picks, 12 high, all picks inside −250…+10000 |
+| CL5 | Written predictions | done | `scripts/clarity_predictions.py`, `data/clarity/predictions.json` — 31 write-ups across 11 sports, minimum 63 words, zero occurrences of `model`/`verified`, every high-confidence pick covered |
+| CL6 | Dashboard + verifier + tests | done | `scripts/clarity_build.py` (27 pages), `scripts/clarity_verify.py` (2,828 assertions, 0 failures), `tests/test_clarity_2e0fc430.py` (20 tests, byte-identical rebuild) |
+
+**Scope discipline.** Only `clarity/**`, `data/clarity/**`, `scripts/clarity_*.py`, `tests/test_clarity_2e0fc430.py`,
+`research/clarity-2e0fc430.md` and append-only edits to this file were touched. Two exceptions, both required
+to keep hosted CI green and both produced by another session's own unmodified scripts:
+
+1. `data/ledger/repo_review.json` and `ledger/repo-review.html` were regenerated with
+   `scripts/ledger_report.py` + `scripts/ledger_build.py` because that report counts top-level directories
+   containing an `index.html`; adding `/clarity/` moves the count from 43 to 44. No ledger prose was edited.
+2. Nothing else outside the claim list was modified.
+
+**Cross-session requests still open.**
+- Root navigation: `clarity/index.html` is live at its direct Pages URL but is not yet linked from the root
+  landing page. The root is owned by the active sessions `arena/9f69ce85-olbg2` and `arena/03e61ed8-olbg2`;
+  their claims were under 60 minutes old throughout this session, so this session did not edit `index.html`,
+  `scripts/build_site.py`, `README.md` or `.github/workflows/pages.yml`.
+- CI wiring: `pages.yml` does not yet rebuild `/clarity/`. The layer is deterministic and its test module
+  reproduces and compares it byte for byte on every run, so drift is caught by the test suite; adding the
+  six rebuild steps plus the drift paths would make it explicit.
+
+**Findings handed back to owning sessions (published on `/clarity/flagged.html` and `/clarity/repo-review.html`).**
+
+| ID | Finding | Owner |
+|---|---|---|
+| CR-01 | 95 reader-facing prediction texts in 12 `data/**/predictions*.json` files use the brief's banned vocabulary (`model`, `verified`) | atlas, board, daily, daily-audit, final, forward, hub, root `data/predictions.json`, relay, vanguard, verified |
+| CR-02 | Aussie Rules and eSports rows inside exact-15-sport desks (`data/atlas`, `data/beacon`, `data/canon`, `data/command`, `data/portal`, `data/slate`, `data/vanguard`) | those sessions |
+| CR-03 | The "future-only" desk still prices started fixtures: 17 fixtures with a past start carry 212 selections and 20 picks (`data/zenith`) | `arena/110cf432-olbg2` |
+| CR-04 | 4 merge-conflict marker lines in `COORDINATION.md` | board owners |
+| CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
+| CR-06 | 44 overlapping dashboards for the same brief | root integrators |
+| CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
+>>>>>>> origin/main

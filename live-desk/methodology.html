@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method · OLBG2 live desk</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="site"><div class="wrap"><div class="top">
+<div class="brand">OLBG2 live desk<span>Fifteen sports · own lines · dated evidence</span></div>
+<nav class="main"><a href="index.html">Summary</a><a href="picks.html">Picks</a><a href="matches.html">Matches</a><a href="predictions.html">Predictions</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="methodology.html" class="on">Method</a><a href="archive.html">Archive</a></nav>
+</div></div></header>
+<main class="wrap">
+<div class='hero'><h1>Method</h1>
+<p class='lead'>How a match gets on this desk, how a price is originated, and what the desk does not claim.</p></div>
+<h2>1. The fixture list is OLBG's</h2>
+<p>The desk reads the sixteen OLBG sport hub pages that cover the fifteen requested sports (Gaelic Football and
+Hurling are the two OLBG pages behind Gaelic Sports) and keeps every upcoming event with a quoted selection.
+An event is dropped only if OLBG itself marks it expired. Nothing is added from a governing body that OLBG
+did not list.</p>
+<h2>2. Verification</h2>
+<p>For ice hockey, baseball, basketball, tennis and motor racing the desk also reads the official feed and
+matches the participants. Those rows are marked <span class='pill ok'>official</span>. Every other row keeps
+its OLBG link, is marked <span class='pill warn'>OLBG only</span>, and is listed on the review page. The
+official pages that were consulted are named on the sources page with the size of the text read from each.</p>
+<h2>3. Our price, not OLBG's</h2>
+<p>OLBG quotes one price for the selection it tips. That number is shown as <em>OLBG quote</em> and is never
+reused as our line. Our number is produced as follows.</p>
+<table><thead><tr><th>Sport</th><th>Formula</th><th>Parameter</th></tr></thead><tbody>
+<tr><td>Ice Hockey</td><td>logistic(scale × (goal difference per game, home − away) + home edge)</td><td>1.3 · 0.15</td></tr>
+<tr><td>Baseball</td><td>logistic(scale × (run difference per game) + home edge + era weight × (ERA_away − ERA_home)/9)</td><td>0.28 · 0.11 · 0.35</td></tr>
+<tr><td>Basketball</td><td>normal CDF((scale × point-difference edge + home edge) / sigma)</td><td>1.9 · 2.6 · 9.5</td></tr>
+<tr><td>Tennis</td><td>logistic(scale × (ln points − ln opponent points)), WTA singles ranking points</td><td>0.55</td></tr>
+<tr><td>Motor racing</td><td>softmax over entered drivers of championship points / scale</td><td>55.0</td></tr>
+</tbody></table>
+<p>Where none of those inputs exists, the desk falls back to OLBG's published tip share, shrunk halfway to an
+even split, and labels the row <code>crowd-consensus</code>. Where even that is absent the fixture is
+published with no price at all.</p>
+<h2>4. Confidence and the price window</h2>
+<p><strong>High</strong> requires a probability of at least 70% <em>and</em> an official numeric input.
+<strong>Medium</strong> is 60–70% (or any consensus row at 60%+). Everything else is <strong>low</strong>. The
+price window is shown separately: a fair price inside −250 to +10000 is marked <em>in window</em>. A 75%
+favourite is priced near −300, which is outside the window while still being a high-confidence pick — both
+facts are printed rather than one replacing the other.</p>
+<h2>5. What this desk does not claim</h2>
+<ul><li>It is not a bookmaker feed and it does not place bets.</li>
+<li>It does not claim to hold every market OLBG offers; it prices the selection OLBG publishes for each event.</li>
+<li>It does not claim injuries, team news or line-ups unless an official page in the sources table carried them.</li>
+<li>It does not convert venue-local tip times to UTC; where the league serves local time, the row says so.</li></ul>
+
+</main>
+<footer class="site"><div class="wrap">
+Every row links to the page it was read from. Nothing on this site is a bookmaker quote presented as
+our own number, and no value is filled in when the source did not carry it.
+</div></footer>
+</body></html>

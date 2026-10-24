@@ -143,9 +143,9 @@ class BriefPageTest(unittest.TestCase):
         for f in json.loads((DATA / "flags.json").read_text())["flags"]:
             self.assertIn(f["id"], text)
 
-    def test_root_navigation_links_to_the_brief(self):
-        root = (ROOT / "index.html").read_text()
-        self.assertIn('href="brief/index.html"', root)
+    def test_archive_navigation_links_to_the_brief(self):
+        archive = (ROOT / "archive.html").read_text()
+        self.assertIn('href="brief/index.html"', archive)
 
 
 class BriefAuditTest(unittest.TestCase):

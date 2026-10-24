@@ -1,0 +1,17 @@
+{
+  "evidence_date": "2026-10-24",
+  "raw_http_bodies_archived": false,
+  "note": "Hashes cover structured extracts only. The 96-row input traces to a pinned repository commit; the extra Hurling record is first-hand.",
+  "captures": [
+    {
+      "path": "captures/olbg_first_page.json",
+      "sha256": "7c075516cd3dd8a5c63ad284200baef618feeeb678865cf2e6335ba0af95528e",
+      "record_type": "structured extract (not raw HTTP)"
+    },
+    {
+      "path": "captures/olbg_hurling_first_page.json",
+      "sha256": "1b64506206bf0ef6509790bac6684760e96ca474fc5ab1318900b68e98884290",
+      "record_type": "structured extract (not raw HTTP)"
+    }
+  ]
+}

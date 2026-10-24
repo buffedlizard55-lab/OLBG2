@@ -1,0 +1,363 @@
+{
+  "recorded_at_utc": "2026-10-24T17:51:06Z",
+  "status": "needs review",
+  "scope": "Published /today/ board and root navigation; historical archive desks are outside this audit's external-fact scope.",
+  "source_reads": [
+    {
+      "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "result": "The response reported 12 games on 24 October. Games 2026020168 through 2026020179 were read, including start times, venues, records and teamLeaders. The response also identifies odds providerId 3 as Tipsport in oddsPartners."
+    },
+    {
+      "url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+      "result": "The standings response directly showed Boston with 17 points, a .772727 point percentage, 42 goals for and 22 against; Vegas had 16 points, a .666667 point percentage, 46 goals for and 36 against."
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
+      "result": "Game 849802 was World Series Game 2, Tampa Bay at Milwaukee, scheduled for 2026-10-25T00:00:00Z at American Family Field. Drew Rasmussen and Logan Henderson were listed as probable pitchers."
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings&season=2026",
+      "result": "Milwaukee's official record was 103-59 with 832 runs scored, 618 allowed, a 55-26 home split and an 8-2 last-ten split."
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
+      "result": "Tampa Bay's official record was 98-64 with 736 runs scored, 650 allowed, a 43-38 away split and a 5-5 last-ten split."
+    },
+    {
+      "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "result": "A fresh read displayed BUF Sabres @ WAS Capitals as event 200003. It also displayed changed tip totals/selections for other events, demonstrating that hub content changes after a snapshot."
+    }
+  ],
+  "summary": {
+    "checks": 1512,
+    "findings": 18,
+    "by_severity": {
+      "high": 7,
+      "low": 1,
+      "medium": 10
+    },
+    "fixtures": 8,
+    "official_fixture_index": 13,
+    "published_nhl_fixtures": 7,
+    "official_nhl_games": 12,
+    "missing_nhl_fixture_ids": [
+      2026020175,
+      2026020176,
+      2026020177,
+      2026020178,
+      2026020179
+    ],
+    "olbg_listings": 96,
+    "lines": 20,
+    "picks": 6,
+    "predictions": 6,
+    "high_at_stored_65_rule": 3,
+    "high_at_requested_70_rule": 2,
+    "qualified_high_in_band_with_olbg": 1,
+    "html_table_rows_checked": 315,
+    "html_rows_without_external_link": 0,
+    "local_link_errors": 0,
+    "root_nav_links": 37
+  },
+  "qualified_by_sport": {
+    "Golf": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Volleyball": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Rugby Union": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Cricket": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Snooker": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Darts": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Baseball": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Gaelic Sports": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Greyhounds": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Tennis": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Motor Racing": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Handball": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Ice Hockey": {
+      "count": 1,
+      "shortfall": 4,
+      "fixture_ids": [
+        "nhl-2026020174"
+      ]
+    },
+    "Basketball": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    },
+    "Rugby League": {
+      "count": 0,
+      "shortfall": 5,
+      "fixture_ids": []
+    }
+  },
+  "findings": [
+    {
+      "code": "EXECUTIVE-OUT-OF-BAND",
+      "severity": "high",
+      "affected_ids": [
+        "nhl-2026020169"
+      ],
+      "detail": "The three-card executive summary leads with a selection explicitly outside the requested −250…+10000 focus band. Keep out-of-band analysis in a separate review section rather than the primary executive card.",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/today_build.py",
+      "origin": "automated"
+    },
+    {
+      "code": "HIGH-THRESHOLD-NOT-70",
+      "severity": "high",
+      "affected_ids": [
+        "nhl-2026020170"
+      ],
+      "detail": "The configured high threshold is 65.00%, not the requested 70.00%. Boston Bruins is 69.95%. Boston displays as 70.0% only after one-decimal rounding; its stored probability is 69.95%.",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/scripts/today_model.py",
+      "origin": "automated"
+    },
+    {
+      "code": "NHL-OFFICIAL-COVERAGE-GAP",
+      "severity": "high",
+      "affected_ids": [
+        2026020175,
+        2026020176,
+        2026020177,
+        2026020178,
+        2026020179
+      ],
+      "detail": "The official response reported 12 NHL games but the board has only 7 NHL fixtures. Missing game ids: 2026020175, 2026020176, 2026020177, 2026020178, 2026020179. Five corresponding OLBG event ids already exist in the stored hub capture; these are coverage omissions, not blank values to infer away.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/olbg_listings.json",
+      "origin": "automated"
+    },
+    {
+      "code": "NHL-OLBG-JOIN-GAP",
+      "severity": "high",
+      "affected_ids": [
+        "200002",
+        "200009",
+        "200010",
+        "200005",
+        "200004"
+      ],
+      "detail": "Stored NHL OLBG listings without a joined official fixture: 200002 (CAR Hurricanes @ STL Blues), 200009 (TB Lightning @ UTA Mammoth), 200010 (TOR Maple Leafs @ EDM Oilers), 200005 (MIN Wild @ SEA Kraken), 200004 (DET Red Wings @ CGY Flames). The official audit index contains all five corresponding games.",
+      "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/olbg_listings.json",
+      "origin": "automated"
+    },
+    {
+      "code": "PICK-WITHOUT-OLBG-LISTING",
+      "severity": "high",
+      "affected_ids": [
+        "nhl-2026020173"
+      ],
+      "detail": "An actionable pick is published without an OLBG event URL in the stored snapshot.",
+      "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/picks.json",
+      "origin": "automated"
+    },
+    {
+      "code": "PROSE-SUPERLATIVE-CONTRADICTED",
+      "severity": "high",
+      "affected_ids": [
+        "pred-nhl-2026020174",
+        "nhl-2026020174"
+      ],
+      "detail": "The Vegas preview calls its 16-point return the strongest record of any club priced on the card, and the headline calls Vegas the best record on the priced card. Boston is also priced on that card and the official standings show 17 points and a higher point percentage (.772727 versus .666667). Remove the superlative; the underlying Vegas and Boston numbers themselves are supported.",
+      "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/predictions.json",
+      "origin": "first-hand source read"
+    },
+    {
+      "code": "ROOT-STALE-EXECUTIVE-BODY",
+      "severity": "high",
+      "affected_ids": [
+        "index.html"
+      ],
+      "detail": "The root notice points to the 24 October board, but the main executive body still labels 23 October matches as today's and its primary button opens the older cadence dashboard. That is the navigation ambiguity the consolidation must remove.",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/index.html",
+      "origin": "automated"
+    },
+    {
+      "code": "MARKET-INVESTIGATION-INCOMPLETE",
+      "severity": "medium",
+      "affected_ids": [
+        "data/today/lines.json"
+      ],
+      "detail": "Published NHL markets are ['Money line']; the complete board has ['Game total', 'Money line']. No handicap market is originated anywhere, and no NHL total is originated despite game-total listings in the OLBG capture. Unavailable or unpriced markets should be enumerated with a reason rather than omitted silently.",
+      "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/lines.json",
+      "origin": "automated"
+    },
+    {
+      "code": "MLB-TOTAL-INPUT-LINK-GAP",
+      "severity": "medium",
+      "affected_ids": [
+        "mlb-849802-total-75-over",
+        "mlb-849802-total-75-under",
+        "mlb-849802-total-85-over",
+        "mlb-849802-total-85-under"
+      ],
+      "detail": "All four MLB total rows say schedule + season standings but link only the schedule. The run inputs come from two standings responses, so each total row needs those input links as well.",
+      "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings&season=2026",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/lines.json",
+      "origin": "automated"
+    },
+    {
+      "code": "OLBG-SNAPSHOT-DYNAMIC",
+      "severity": "medium",
+      "affected_ids": [
+        "NO-OLBG-LISTING",
+        "nhl-2026020173",
+        "pred-nhl-2026020169",
+        "pred-nhl-2026020171"
+      ],
+      "detail": "At the audit read, OLBG displayed Buffalo at Washington as event 200003, although the stored snapshot says no listing was found. New Jersey and Ottawa tip data also differed from the stored snapshot. This does not prove the historical capture was wrong; it shows that the absence flag and tip claims are time-sensitive and need a raw capture or a fresh snapshot before publication.",
+      "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/flagged.json",
+      "origin": "first-hand source read"
+    },
+    {
+      "code": "PROSE-FACT-INDEX-GAP",
+      "severity": "low",
+      "affected_ids": [
+        "pred-nhl-2026020169",
+        "pred-nhl-2026020173"
+      ],
+      "detail": "The New Jersey text includes Arseny Gritsyuk's five goals and the Washington text includes Dylan Strome's five assists, but those player figures are absent from each prediction's own facts array. The official score response supports both figures; add the missing fact entries so the displayed evidence index matches the prose.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/predictions.json",
+      "origin": "first-hand source read"
+    },
+    {
+      "code": "QUALIFIED-FIVE-PER-SPORT-SHORTFALL",
+      "severity": "medium",
+      "affected_ids": [
+        "Baseball"
+      ],
+      "detail": "Baseball has 0 written high-confidence picks that also meet the 70% rule, band rule and stored OLBG-link rule; the target is five. Existing top-five counts include medium or otherwise unqualified rows.",
+      "source_url": "https://www.olbg.com/betting-tips",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/picks.json",
+      "origin": "automated"
+    },
+    {
+      "code": "QUALIFIED-FIVE-PER-SPORT-SHORTFALL",
+      "severity": "medium",
+      "affected_ids": [
+        "nhl-2026020174"
+      ],
+      "detail": "Ice Hockey has 1 written high-confidence picks that also meet the 70% rule, band rule and stored OLBG-link rule; the target is five. Existing top-five counts include medium or otherwise unqualified rows.",
+      "source_url": "https://www.olbg.com/betting-tips",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/picks.json",
+      "origin": "automated"
+    },
+    {
+      "code": "RAW-SNAPSHOT-NOT-COMMITTED",
+      "severity": "medium",
+      "affected_ids": [
+        "data/today/sources.json"
+      ],
+      "detail": "The /today/ source register describes first-hand reads but no raw official or OLBG response body is committed. Later readers can recheck the live URL but cannot independently reconstruct the historical response or changing prices/tip totals from the derived JSON alone.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/sources.json",
+      "origin": "automated"
+    },
+    {
+      "code": "ROOT-NAVIGATION-OVERLOAD",
+      "severity": "medium",
+      "affected_ids": [
+        "index.html"
+      ],
+      "detail": "The root navigation contains 37 links mixing current and historical desks. The current landing page should expose the executive summary, picks, matches, predictions, 15 sport pages and review queue first; historical material belongs in one archive link.",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/index.html",
+      "origin": "automated"
+    },
+    {
+      "code": "STANDINGS-CITATION-MISSING",
+      "severity": "medium",
+      "affected_ids": [
+        "pred-nhl-2026020174",
+        "pred-nhl-2026020170"
+      ],
+      "detail": "Goal-for/goal-against facts cite the score endpoint; those direct standings fields belong to the official standings endpoint. The audit re-read confirmed Boston 42/22 and Vegas 46/36 at the standings URL.",
+      "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/predictions.json",
+      "origin": "automated"
+    },
+    {
+      "code": "THIRD-PARTY-PRICE-LABEL",
+      "severity": "medium",
+      "affected_ids": [
+        "pred-nhl-2026020169",
+        "pred-nhl-2026020170",
+        "pred-nhl-2026020171",
+        "pred-nhl-2026020173",
+        "pred-nhl-2026020174"
+      ],
+      "detail": "The previews describe a league's own quote. The official NHL response labels providerId 3 as Tipsport; it is a third-party price carried by the league feed, not a price originated by the league. Keep the own-line and market-comparison concepts distinct.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/olbg_listings.json",
+      "origin": "first-hand source read"
+    },
+    {
+      "code": "WASHINGTON-SOURCE-ENDPOINT",
+      "severity": "medium",
+      "affected_ids": [
+        "pred-nhl-2026020173",
+        "nhl-2026020173"
+      ],
+      "detail": "Washington's record and player-leader facts link to the schedule endpoint, while the source register assigns records and team leaders to the score endpoint. A first-hand score-endpoint read supports the values, including Alex Tuch as a WSH leader with five goals, so the appropriate correction is the citation endpoint rather than inventing a roster change.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/sources.json",
+      "origin": "first-hand source read"
+    }
+  ]
+}

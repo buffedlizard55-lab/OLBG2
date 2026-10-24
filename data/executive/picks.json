@@ -1,0 +1,2631 @@
+{
+  "picks": [
+    {
+      "fixture_id": "ih-ana-phi",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T17:00:00Z",
+      "venue": "Wells Fargo Center",
+      "match": "Philadelphia Flyers v Anaheim Ducks",
+      "home": "Philadelphia Flyers",
+      "away": "Anaheim Ducks",
+      "market": "match winner (moneyline)",
+      "selection": "Philadelphia Flyers",
+      "selection_side": "home",
+      "fair_probability": 0.518741,
+      "fair_odds": -108,
+      "fair_decimal": 1.928,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Philadelphia Flyers",
+          "value": "3-6-3 (9 pts)",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        },
+        {
+          "subject": "Anaheim Ducks",
+          "value": "4-6-0 (8 pts)",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "Wells Fargo Center, 1:00 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "ih-lak-njd",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:30:00Z",
+      "venue": "Prudential Center",
+      "match": "New Jersey Devils v Los Angeles Kings",
+      "home": "New Jersey Devils",
+      "away": "Los Angeles Kings",
+      "market": "match winner (moneyline)",
+      "selection": "New Jersey Devils",
+      "selection_side": "home",
+      "fair_probability": 0.695297,
+      "fair_odds": -228,
+      "fair_decimal": 1.438,
+      "confidence": "medium",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "New Jersey Devils",
+          "value": "6-4-0 (12 pts)",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        },
+        {
+          "subject": "Los Angeles Kings",
+          "value": "2-4-2 (6 pts)",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "Prudential Center, 3:30 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "ih-sjs-bos",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "venue": "TD Garden",
+      "match": "Boston Bruins v San Jose Sharks",
+      "home": "Boston Bruins",
+      "away": "San Jose Sharks",
+      "market": "match winner (moneyline)",
+      "selection": "Boston Bruins",
+      "selection_side": "home",
+      "fair_probability": 0.6673,
+      "fair_odds": -201,
+      "fair_decimal": 1.499,
+      "confidence": "medium",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Boston Bruins",
+          "value": "8-2-1 (17 pts), 7-2-1 last 10",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "San Jose Sharks",
+          "value": "6-4-1 (13 pts)",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "TD Garden, 7:00 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_standings",
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "ih-nyr-ott",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "venue": "Canadian Tire Centre",
+      "match": "Ottawa Senators v New York Rangers",
+      "home": "Ottawa Senators",
+      "away": "New York Rangers",
+      "market": "match winner (moneyline)",
+      "selection": "Ottawa Senators",
+      "selection_side": "home",
+      "fair_probability": 0.503,
+      "fair_odds": -101,
+      "fair_decimal": 1.988,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Ottawa Senators",
+          "value": "7-4-0 (14 pts)",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "New York Rangers",
+          "value": "7-4-1 (15 pts)",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "Canadian Tire Centre, 7:00 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_standings",
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "ih-nsh-pit",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "venue": "PPG Paints Arena",
+      "match": "Pittsburgh Penguins v Nashville Predators",
+      "home": "Pittsburgh Penguins",
+      "away": "Nashville Predators",
+      "market": "match winner (moneyline)",
+      "selection": "Nashville Predators",
+      "selection_side": "away",
+      "fair_probability": 0.530711,
+      "fair_odds": -113,
+      "fair_decimal": 1.884,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Pittsburgh Penguins",
+          "value": "4-6-1 (9 pts)",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        },
+        {
+          "subject": "Nashville Predators",
+          "value": "3-3-3 (9 pts)",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "PPG Paints Arena, 7:00 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "ih-tor-edm",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "venue": "Rogers Place",
+      "match": "Edmonton Oilers v Toronto Maple Leafs",
+      "home": "Edmonton Oilers",
+      "away": "Toronto Maple Leafs",
+      "market": "match winner (moneyline)",
+      "selection": "Edmonton Oilers",
+      "selection_side": "home",
+      "fair_probability": 0.721316,
+      "fair_odds": -259,
+      "fair_decimal": 1.386,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Edmonton Oilers",
+          "value": "8-1-1 (17 pts), 6-1-3 last 10",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Toronto Maple Leafs",
+          "value": "6-4-2 (14 pts)",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "Rogers Place, 7:00 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_standings",
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "ih-tbl-uta",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T01:00:00Z",
+      "venue": "Delta Center",
+      "match": "Utah Mammoth v Tampa Bay Lightning",
+      "home": "Utah Mammoth",
+      "away": "Tampa Bay Lightning",
+      "market": "match winner (moneyline)",
+      "selection": "Tampa Bay Lightning",
+      "selection_side": "away",
+      "fair_probability": 0.510498,
+      "fair_odds": -104,
+      "fair_decimal": 1.959,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Utah Mammoth",
+          "value": "7-4-0 (14 pts)",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Tampa Bay Lightning",
+          "value": "7-3-0 (14 pts)",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "Delta Center, 9:00 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_standings",
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "ih-min-sea",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T02:00:00Z",
+      "venue": "Climate Pledge Arena",
+      "match": "Seattle Kraken v Minnesota Wild",
+      "home": "Seattle Kraken",
+      "away": "Minnesota Wild",
+      "market": "match winner (moneyline)",
+      "selection": "Seattle Kraken",
+      "selection_side": "home",
+      "fair_probability": 0.571506,
+      "fair_odds": -133,
+      "fair_decimal": 1.75,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Seattle Kraken",
+          "value": "7-3-1 (15 pts), 6-3-1 last 10",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Minnesota Wild",
+          "value": "6-3-2 (14 pts)",
+          "source_key": "nhl_standings",
+          "source_url": "https://www.nhl.com/stats/standings"
+        },
+        {
+          "subject": "Venue / tip",
+          "value": "Climate Pledge Arena, 10:00 PM ET",
+          "source_key": "nhl_schedule",
+          "source_url": "https://www.nhl.com/schedule/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "nhl_standings",
+        "nhl_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-mia-cha",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T22:00:00Z",
+      "venue": "Spectrum Center",
+      "match": "Charlotte Hornets v Miami Heat",
+      "home": "Charlotte Hornets",
+      "away": "Miami Heat",
+      "market": "match winner (moneyline)",
+      "selection": "Miami Heat",
+      "selection_side": "away",
+      "fair_probability": 0.670092,
+      "fair_odds": -203,
+      "fair_decimal": 1.492,
+      "confidence": "medium",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Charlotte Hornets",
+          "value": "Power Rankings rank 22",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Miami Heat",
+          "value": "Power Rankings rank 13",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, Spectrum Center, 2026-10-24",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-bkn-cle",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:30:00Z",
+      "venue": "Rocket Arena",
+      "match": "Cleveland Cavaliers v Brooklyn Nets",
+      "home": "Cleveland Cavaliers",
+      "away": "Brooklyn Nets",
+      "market": "match winner (moneyline)",
+      "selection": "Cleveland Cavaliers",
+      "selection_side": "home",
+      "fair_probability": 0.836074,
+      "fair_odds": -510,
+      "fair_decimal": 1.196,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Cleveland Cavaliers",
+          "value": "Power Rankings rank 7",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Brooklyn Nets",
+          "value": "Power Rankings rank 28",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, Rocket Arena, 2026-10-24",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-mil-phi",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:30:00Z",
+      "venue": "Xfinity Mobile Arena",
+      "match": "Philadelphia 76ers v Milwaukee Bucks",
+      "home": "Philadelphia 76ers",
+      "away": "Milwaukee Bucks",
+      "market": "match winner (moneyline)",
+      "selection": "Philadelphia 76ers",
+      "selection_side": "home",
+      "fair_probability": 0.858149,
+      "fair_odds": -605,
+      "fair_decimal": 1.165,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Philadelphia 76ers",
+          "value": "Power Rankings rank 4",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Milwaukee Bucks",
+          "value": "Power Rankings rank 29",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, Xfinity Mobile Arena, 2026-10-24",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-wsh-chi",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "venue": "United Center",
+      "match": "Chicago Bulls v Washington Wizards",
+      "home": "Chicago Bulls",
+      "away": "Washington Wizards",
+      "market": "match winner (moneyline)",
+      "selection": "Chicago Bulls",
+      "selection_side": "home",
+      "fair_probability": 0.52974,
+      "fair_odds": -113,
+      "fair_decimal": 1.888,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Chicago Bulls",
+          "value": "Power Rankings rank 27",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Washington Wizards",
+          "value": "Power Rankings rank 21",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, United Center, 2026-10-25",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-sas-dal",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "venue": "American Airlines Center",
+      "match": "Dallas Mavericks v San Antonio Spurs",
+      "home": "Dallas Mavericks",
+      "away": "San Antonio Spurs",
+      "market": "match winner (moneyline)",
+      "selection": "San Antonio Spurs",
+      "selection_side": "away",
+      "fair_probability": 0.796668,
+      "fair_odds": -392,
+      "fair_decimal": 1.255,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Dallas Mavericks",
+          "value": "Power Rankings rank 20",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "San Antonio Spurs",
+          "value": "Power Rankings rank 1",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, American Airlines Center, 2026-10-25",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-hou-atl",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T00:30:00Z",
+      "venue": "State Farm Arena",
+      "match": "Atlanta Hawks v Houston Rockets",
+      "home": "Atlanta Hawks",
+      "away": "Houston Rockets",
+      "market": "match winner (moneyline)",
+      "selection": "Houston Rockets",
+      "selection_side": "away",
+      "fair_probability": 0.707733,
+      "fair_odds": -242,
+      "fair_decimal": 1.413,
+      "confidence": "high",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Atlanta Hawks",
+          "value": "Power Rankings rank 16",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Houston Rockets",
+          "value": "Power Rankings rank 6",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, State Farm Arena, 2026-10-25",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-nop-den",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T01:00:00Z",
+      "venue": "Ball Arena",
+      "match": "Denver Nuggets v New Orleans Pelicans",
+      "home": "Denver Nuggets",
+      "away": "New Orleans Pelicans",
+      "market": "match winner (moneyline)",
+      "selection": "Denver Nuggets",
+      "selection_side": "home",
+      "fair_probability": 0.805699,
+      "fair_odds": -415,
+      "fair_decimal": 1.241,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Denver Nuggets",
+          "value": "Power Rankings rank 9",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "New Orleans Pelicans",
+          "value": "Power Rankings rank 26",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, Ball Arena, 2026-10-25",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "bb-gsw-phx",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T02:00:00Z",
+      "venue": "Mortgage Matchup Center",
+      "match": "Phoenix Suns v Golden State Warriors",
+      "home": "Phoenix Suns",
+      "away": "Golden State Warriors",
+      "market": "match winner (moneyline)",
+      "selection": "Phoenix Suns",
+      "selection_side": "home",
+      "fair_probability": 0.644489,
+      "fair_odds": -181,
+      "fair_decimal": 1.552,
+      "confidence": "medium",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Phoenix Suns",
+          "value": "Power Rankings rank 17",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Golden State Warriors",
+          "value": "Power Rankings rank 24",
+          "source_key": "nba_power",
+          "source_url": "https://www.nba.com/news/power-rankings-2026-27-week-1"
+        },
+        {
+          "subject": "Schedule",
+          "value": "NBA.com, Mortgage Matchup Center, 2026-10-25",
+          "source_key": "nba_schedule",
+          "source_url": "https://www.nba.com/schedule"
+        }
+      ],
+      "source_keys": [
+        "nba_power",
+        "nba_schedule"
+      ]
+    },
+    {
+      "fixture_id": "mlb-ws2",
+      "sport": "Baseball",
+      "competition": "MLB World Series",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "venue": "American Family Field",
+      "match": "Milwaukee Brewers v Tampa Bay Rays",
+      "home": "Milwaukee Brewers",
+      "away": "Tampa Bay Rays",
+      "market": "match winner (moneyline)",
+      "selection": "Milwaukee Brewers",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Series state",
+          "value": "Brewers lead World Series 1-0 (won Game 1, 3-2)",
+          "source_key": "mlb_schedule",
+          "source_url": "https://www.mlb.com/schedule"
+        },
+        {
+          "subject": "Game 2",
+          "value": "Rays @ Brewers, American Family Field, 8:00 PM ET, Fox",
+          "source_key": "mlb_ws_faq",
+          "source_url": "https://www.mlb.com/news/2026-mlb-world-series-faq-schedule-times-teams-and-more"
+        },
+        {
+          "subject": "Schedule",
+          "value": "Game 3 Mon 26 Oct, Game 4 Tue 27 Oct (Tropicana Field)",
+          "source_key": "mlb_ws_faq",
+          "source_url": "https://www.mlb.com/news/2026-mlb-world-series-faq-schedule-times-teams-and-more"
+        }
+      ],
+      "source_keys": [
+        "mlb_schedule",
+        "mlb_ws_faq"
+      ]
+    },
+    {
+      "fixture_id": "mlb-ws3",
+      "sport": "Baseball",
+      "competition": "MLB World Series",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T00:00:00Z",
+      "venue": "Tropicana Field",
+      "match": "Tampa Bay Rays v Milwaukee Brewers",
+      "home": "Tampa Bay Rays",
+      "away": "Milwaukee Brewers",
+      "market": "match winner (moneyline)",
+      "selection": "Tampa Bay Rays",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Game 3",
+          "value": "Brewers @ Rays, Tropicana Field, 8:00 PM ET, Fox",
+          "source_key": "mlb_ws_faq",
+          "source_url": "https://www.mlb.com/news/2026-mlb-world-series-faq-schedule-times-teams-and-more"
+        }
+      ],
+      "source_keys": [
+        "mlb_ws_faq"
+      ]
+    },
+    {
+      "fixture_id": "mlb-ws4",
+      "sport": "Baseball",
+      "competition": "MLB World Series",
+      "date": "2026-10-27",
+      "start_utc": "2026-10-27T00:00:00Z",
+      "venue": "Tropicana Field",
+      "match": "Tampa Bay Rays v Milwaukee Brewers",
+      "home": "Tampa Bay Rays",
+      "away": "Milwaukee Brewers",
+      "market": "match winner (moneyline)",
+      "selection": "Tampa Bay Rays",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Game 4",
+          "value": "Brewers @ Rays, Tropicana Field, 8:00 PM ET, Fox",
+          "source_key": "mlb_ws_faq",
+          "source_url": "https://www.mlb.com/news/2026-mlb-world-series-faq-schedule-times-teams-and-more"
+        }
+      ],
+      "source_keys": [
+        "mlb_ws_faq"
+      ]
+    },
+    {
+      "fixture_id": "ru-bulls-ulster",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T12:45Z",
+      "venue": "Loftus Versfeld, Pretoria",
+      "match": "Vodacom Bulls v Ulster Rugby",
+      "home": "Vodacom Bulls",
+      "away": "Ulster Rugby",
+      "market": "match winner (moneyline)",
+      "selection": "Vodacom Bulls",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "URC Round 4, Loftus Versfeld, 24 Oct 2026",
+          "source_key": "urc_bbc",
+          "source_url": "https://www.bbc.com/sport/rugby-union/scores-fixtures/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "urc_bbc"
+      ]
+    },
+    {
+      "fixture_id": "ru-stormers-scarlets",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T15:00Z",
+      "venue": "DHL Stadium, Cape Town",
+      "match": "DHL Stormers v Scarlets",
+      "home": "DHL Stormers",
+      "away": "Scarlets",
+      "market": "match winner (moneyline)",
+      "selection": "DHL Stormers",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "URC Round 4, DHL Stadium, 24 Oct 2026",
+          "source_key": "urc_bbc",
+          "source_url": "https://www.bbc.com/sport/rugby-union/scores-fixtures/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "urc_bbc"
+      ]
+    },
+    {
+      "fixture_id": "ru-benetton-glasgow",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T15:00Z",
+      "venue": "Stadio Comunale di Monigo, Treviso",
+      "match": "Benetton Treviso v Glasgow Warriors",
+      "home": "Benetton Treviso",
+      "away": "Glasgow Warriors",
+      "market": "match winner (moneyline)",
+      "selection": "Benetton Treviso",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "URC Round 4, Stadio Monigo, 24 Oct 2026",
+          "source_key": "urc_bbc",
+          "source_url": "https://www.bbc.com/sport/rugby-union/scores-fixtures/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "urc_bbc"
+      ]
+    },
+    {
+      "fixture_id": "ru-leinster-munster",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T18:00Z",
+      "venue": "Aviva Stadium, Dublin",
+      "match": "Leinster v Munster",
+      "home": "Leinster",
+      "away": "Munster",
+      "market": "match winner (moneyline)",
+      "selection": "Leinster",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "URC Round 4, Aviva Stadium, 24 Oct 2026",
+          "source_key": "urc_bbc",
+          "source_url": "https://www.bbc.com/sport/rugby-union/scores-fixtures/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "urc_bbc"
+      ]
+    },
+    {
+      "fixture_id": "ru-ospreys-dragons",
+      "sport": "Rugby Union",
+      "competition": "United Rugby Championship",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:00Z",
+      "venue": "St Helen's, Swansea",
+      "match": "Ospreys v Dragons",
+      "home": "Ospreys",
+      "away": "Dragons",
+      "market": "match winner (moneyline)",
+      "selection": "Ospreys",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "URC Round 4, St Helen's, 24 Oct 2026",
+          "source_key": "urc_bbc",
+          "source_url": "https://www.bbc.com/sport/rugby-union/scores-fixtures/2026-10-24"
+        }
+      ],
+      "source_keys": [
+        "urc_bbc"
+      ]
+    },
+    {
+      "fixture_id": "tx-almaty-final",
+      "sport": "Tennis",
+      "competition": "ATP Tour",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T14:00:00Z",
+      "venue": "Almaty, Kazakhstan",
+      "match": "Daniil Medvedev v Nikoloz Basilashvili",
+      "home": "Daniil Medvedev",
+      "away": "Nikoloz Basilashvili",
+      "market": "match winner (moneyline)",
+      "selection": "Daniil Medvedev",
+      "selection_side": "home",
+      "fair_probability": 0.843737,
+      "fair_odds": -540,
+      "fair_decimal": 1.185,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Daniil Medvedev",
+          "value": "ATP singles ranking No.5",
+          "source_key": "atp_rankings",
+          "source_url": "https://www.atptour.com/en/rankings/singles"
+        },
+        {
+          "subject": "Nikoloz Basilashvili",
+          "value": "ATP singles ranking No.71",
+          "source_key": "atp_rankings",
+          "source_url": "https://www.atptour.com/en/rankings/singles"
+        }
+      ],
+      "source_keys": [
+        "atp_rankings"
+      ]
+    },
+    {
+      "fixture_id": "tx-vienna-outright",
+      "sport": "Tennis",
+      "competition": "ATP Tour",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T00:00:00Z",
+      "venue": "Wiener Stadthalle, Vienna",
+      "match": "Alexander Zverev v field",
+      "home": "Alexander Zverev",
+      "away": "field",
+      "market": "outright winner",
+      "selection": "Alexander Zverev",
+      "selection_side": "home",
+      "fair_probability": 0.28,
+      "fair_odds": 257,
+      "fair_decimal": 3.571,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Alexander Zverev",
+          "value": "ATP singles ranking No.2",
+          "source_key": "atp_rankings",
+          "source_url": "https://www.atptour.com/en/rankings/singles"
+        },
+        {
+          "subject": "field",
+          "value": "ATP singles ranking No.30",
+          "source_key": "atp_rankings",
+          "source_url": "https://www.atptour.com/en/rankings/singles"
+        }
+      ],
+      "source_keys": [
+        "atp_rankings"
+      ]
+    },
+    {
+      "fixture_id": "tx-basel-outright",
+      "sport": "Tennis",
+      "competition": "ATP Tour",
+      "date": "2026-10-26",
+      "start_utc": "2026-10-26T00:00:00Z",
+      "venue": "St. Jakobshalle, Basel",
+      "match": "Joao Fonseca v field",
+      "home": "Joao Fonseca",
+      "away": "field",
+      "market": "outright winner",
+      "selection": "Joao Fonseca",
+      "selection_side": "home",
+      "fair_probability": 0.12,
+      "fair_odds": 733,
+      "fair_decimal": 8.333,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Joao Fonseca",
+          "value": "ATP singles ranking No.30",
+          "source_key": "atp_rankings",
+          "source_url": "https://www.atptour.com/en/rankings/singles"
+        },
+        {
+          "subject": "field",
+          "value": "ATP singles ranking No.30",
+          "source_key": "atp_rankings",
+          "source_url": "https://www.atptour.com/en/rankings/singles"
+        }
+      ],
+      "source_keys": [
+        "atp_rankings"
+      ]
+    },
+    {
+      "fixture_id": "gf-hirata",
+      "sport": "Golf",
+      "competition": "PGA Tour — Butterfield Bermuda Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Port Royal Golf Course, Bermuda",
+      "match": "Kensei Hirata v field",
+      "home": "Kensei Hirata",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Kensei Hirata",
+      "selection_side": "home",
+      "fair_probability": 0.3,
+      "fair_odds": 233,
+      "fair_decimal": 3.333,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Kensei Hirata",
+          "value": "T1 at -13 after R3 (final round Sunday)",
+          "source_key": "pga_leaderboard",
+          "source_url": "https://www.pgatour.com/leaderboard"
+        },
+        {
+          "subject": "Course",
+          "value": "Port Royal GC, par 71, 6,828 yds",
+          "source_key": "pga_bermuda",
+          "source_url": "https://www.pgatour.com/leaderboard/?eventId=401850917"
+        }
+      ],
+      "source_keys": [
+        "pga_leaderboard",
+        "pga_bermuda"
+      ]
+    },
+    {
+      "fixture_id": "gf-blanchet",
+      "sport": "Golf",
+      "competition": "PGA Tour — Butterfield Bermuda Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Port Royal Golf Course, Bermuda",
+      "match": "Chandler Blanchet v field",
+      "home": "Chandler Blanchet",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Chandler Blanchet",
+      "selection_side": "home",
+      "fair_probability": 0.3,
+      "fair_odds": 233,
+      "fair_decimal": 3.333,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Chandler Blanchet",
+          "value": "T1 at -13 after R3 (final round Sunday)",
+          "source_key": "pga_leaderboard",
+          "source_url": "https://www.pgatour.com/leaderboard"
+        },
+        {
+          "subject": "Course",
+          "value": "Port Royal GC, par 71, 6,828 yds",
+          "source_key": "pga_bermuda",
+          "source_url": "https://www.pgatour.com/leaderboard/?eventId=401850917"
+        }
+      ],
+      "source_keys": [
+        "pga_leaderboard",
+        "pga_bermuda"
+      ]
+    },
+    {
+      "fixture_id": "gf-power",
+      "sport": "Golf",
+      "competition": "PGA Tour — Butterfield Bermuda Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Port Royal Golf Course, Bermuda",
+      "match": "Seamus Power v field",
+      "home": "Seamus Power",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Seamus Power",
+      "selection_side": "home",
+      "fair_probability": 0.3,
+      "fair_odds": 233,
+      "fair_decimal": 3.333,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Seamus Power",
+          "value": "T3 at -12 after R3 (final round Sunday)",
+          "source_key": "pga_leaderboard",
+          "source_url": "https://www.pgatour.com/leaderboard"
+        },
+        {
+          "subject": "Course",
+          "value": "Port Royal GC, par 71, 6,828 yds",
+          "source_key": "pga_bermuda",
+          "source_url": "https://www.pgatour.com/leaderboard/?eventId=401850917"
+        }
+      ],
+      "source_keys": [
+        "pga_leaderboard",
+        "pga_bermuda"
+      ]
+    },
+    {
+      "fixture_id": "gf-conners",
+      "sport": "Golf",
+      "competition": "PGA Tour — Butterfield Bermuda Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Port Royal Golf Course, Bermuda",
+      "match": "Corey Conners v field",
+      "home": "Corey Conners",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Corey Conners",
+      "selection_side": "home",
+      "fair_probability": 0.3,
+      "fair_odds": 233,
+      "fair_decimal": 3.333,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Corey Conners",
+          "value": "T3 at -12 after R3 (final round Sunday)",
+          "source_key": "pga_leaderboard",
+          "source_url": "https://www.pgatour.com/leaderboard"
+        },
+        {
+          "subject": "Course",
+          "value": "Port Royal GC, par 71, 6,828 yds",
+          "source_key": "pga_bermuda",
+          "source_url": "https://www.pgatour.com/leaderboard/?eventId=401850917"
+        }
+      ],
+      "source_keys": [
+        "pga_leaderboard",
+        "pga_bermuda"
+      ]
+    },
+    {
+      "fixture_id": "gf-cole",
+      "sport": "Golf",
+      "competition": "PGA Tour — Butterfield Bermuda Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Port Royal Golf Course, Bermuda",
+      "match": "Eric Cole v field",
+      "home": "Eric Cole",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Eric Cole",
+      "selection_side": "home",
+      "fair_probability": 0.3,
+      "fair_odds": 233,
+      "fair_decimal": 3.333,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Eric Cole",
+          "value": "T3 at -12 after R3 (final round Sunday)",
+          "source_key": "pga_leaderboard",
+          "source_url": "https://www.pgatour.com/leaderboard"
+        },
+        {
+          "subject": "Course",
+          "value": "Port Royal GC, par 71, 6,828 yds",
+          "source_key": "pga_bermuda",
+          "source_url": "https://www.pgatour.com/leaderboard/?eventId=401850917"
+        }
+      ],
+      "source_keys": [
+        "pga_leaderboard",
+        "pga_bermuda"
+      ]
+    },
+    {
+      "fixture_id": "sn-wilson",
+      "sport": "Snooker",
+      "competition": "World Snooker Tour — Northern Ireland Open",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T13:00:00Z",
+      "venue": "Waterfront Hall, Belfast",
+      "match": "Kyren Wilson v field",
+      "home": "Kyren Wilson",
+      "away": "field",
+      "market": "to reach final",
+      "selection": "Kyren Wilson",
+      "selection_side": "home",
+      "fair_probability": 0.750279,
+      "fair_odds": -300,
+      "fair_decimal": 1.333,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Kyren Wilson",
+          "value": "world ranking No.9",
+          "source_key": "wst",
+          "source_url": "https://wst.tv/"
+        }
+      ],
+      "source_keys": [
+        "wst"
+      ]
+    },
+    {
+      "fixture_id": "sn-williams",
+      "sport": "Snooker",
+      "competition": "World Snooker Tour — Northern Ireland Open",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:00:00Z",
+      "venue": "Waterfront Hall, Belfast",
+      "match": "Mark Williams v field",
+      "home": "Mark Williams",
+      "away": "field",
+      "market": "to reach final",
+      "selection": "Mark Williams",
+      "selection_side": "home",
+      "fair_probability": 0.726115,
+      "fair_odds": -265,
+      "fair_decimal": 1.377,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Mark Williams",
+          "value": "world ranking No.10",
+          "source_key": "wst",
+          "source_url": "https://wst.tv/"
+        }
+      ],
+      "source_keys": [
+        "wst"
+      ]
+    },
+    {
+      "fixture_id": "sn-jones",
+      "sport": "Snooker",
+      "competition": "World Snooker Tour — Northern Ireland Open",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:00:00Z",
+      "venue": "Waterfront Hall, Belfast",
+      "match": "Jak Jones v field",
+      "home": "Jak Jones",
+      "away": "field",
+      "market": "to win match",
+      "selection": "Jak Jones",
+      "selection_side": "home",
+      "fair_probability": 0.610639,
+      "fair_odds": -157,
+      "fair_decimal": 1.638,
+      "confidence": "medium",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Jak Jones",
+          "value": "world ranking No.30",
+          "source_key": "wst",
+          "source_url": "https://wst.tv/"
+        }
+      ],
+      "source_keys": [
+        "wst"
+      ]
+    },
+    {
+      "fixture_id": "sn-craigie",
+      "sport": "Snooker",
+      "competition": "World Snooker Tour — Northern Ireland Open",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T13:00:00Z",
+      "venue": "Waterfront Hall, Belfast",
+      "match": "Sam Craigie v field",
+      "home": "Sam Craigie",
+      "away": "field",
+      "market": "to win match",
+      "selection": "Sam Craigie",
+      "selection_side": "home",
+      "fair_probability": 0.610639,
+      "fair_odds": -157,
+      "fair_decimal": 1.638,
+      "confidence": "medium",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Sam Craigie",
+          "value": "world ranking No.70",
+          "source_key": "wst",
+          "source_url": "https://wst.tv/"
+        }
+      ],
+      "source_keys": [
+        "wst"
+      ]
+    },
+    {
+      "fixture_id": "dt-littler",
+      "sport": "Darts",
+      "competition": "PDC European Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Westfalenhallen, Dortmund",
+      "match": "Luke Littler v field",
+      "home": "Luke Littler",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Luke Littler",
+      "selection_side": "home",
+      "fair_probability": 0.37,
+      "fair_odds": 170,
+      "fair_decimal": 2.703,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Luke Littler",
+          "value": "PDC world ranking No.1",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        },
+        {
+          "subject": "Event",
+          "value": "Westfalenhallen, Dortmund, 22-25 Oct 2026",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        }
+      ],
+      "source_keys": [
+        "pdc"
+      ]
+    },
+    {
+      "fixture_id": "dt-price",
+      "sport": "Darts",
+      "competition": "PDC European Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Westfalenhallen, Dortmund",
+      "match": "Gerwyn Price v field",
+      "home": "Gerwyn Price",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Gerwyn Price",
+      "selection_side": "home",
+      "fair_probability": 0.26,
+      "fair_odds": 285,
+      "fair_decimal": 3.846,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Gerwyn Price",
+          "value": "PDC world ranking No.3",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        },
+        {
+          "subject": "Event",
+          "value": "Westfalenhallen, Dortmund, 22-25 Oct 2026",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        }
+      ],
+      "source_keys": [
+        "pdc"
+      ]
+    },
+    {
+      "fixture_id": "dt-smith",
+      "sport": "Darts",
+      "competition": "PDC European Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T12:00:00Z",
+      "venue": "Westfalenhallen, Dortmund",
+      "match": "Ross Smith v field",
+      "home": "Ross Smith",
+      "away": "field",
+      "market": "to reach semi-final",
+      "selection": "Ross Smith",
+      "selection_side": "home",
+      "fair_probability": 0.838891,
+      "fair_odds": -521,
+      "fair_decimal": 1.192,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Ross Smith",
+          "value": "PDC world ranking No.2",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        },
+        {
+          "subject": "Event",
+          "value": "Westfalenhallen, Dortmund, 22-25 Oct 2026",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        }
+      ],
+      "source_keys": [
+        "pdc"
+      ]
+    },
+    {
+      "fixture_id": "dt-bunting",
+      "sport": "Darts",
+      "competition": "PDC European Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T12:00:00Z",
+      "venue": "Westfalenhallen, Dortmund",
+      "match": "Stephen Bunting v field",
+      "home": "Stephen Bunting",
+      "away": "field",
+      "market": "to reach semi-final",
+      "selection": "Stephen Bunting",
+      "selection_side": "home",
+      "fair_probability": 0.610639,
+      "fair_odds": -157,
+      "fair_decimal": 1.638,
+      "confidence": "medium",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Stephen Bunting",
+          "value": "PDC world ranking No.28",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        },
+        {
+          "subject": "Event",
+          "value": "Westfalenhallen, Dortmund, 22-25 Oct 2026",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        }
+      ],
+      "source_keys": [
+        "pdc"
+      ]
+    },
+    {
+      "fixture_id": "dt-clayton",
+      "sport": "Darts",
+      "competition": "PDC European Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T18:00:00Z",
+      "venue": "Westfalenhallen, Dortmund",
+      "match": "Jonny Clayton v field",
+      "home": "Jonny Clayton",
+      "away": "field",
+      "market": "to win match",
+      "selection": "Jonny Clayton",
+      "selection_side": "home",
+      "fair_probability": 0.79413,
+      "fair_odds": -386,
+      "fair_decimal": 1.259,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Jonny Clayton",
+          "value": "PDC world ranking No.7",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        },
+        {
+          "subject": "Event",
+          "value": "Westfalenhallen, Dortmund, 22-25 Oct 2026",
+          "source_key": "pdc",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        }
+      ],
+      "source_keys": [
+        "pdc"
+      ]
+    },
+    {
+      "fixture_id": "gh-fahrenheit",
+      "sport": "Greyhounds",
+      "competition": "GBGB / Premier Greyhound Racing",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:38:00Z",
+      "venue": "Dunstall Park (PGR Oaks final)",
+      "match": "Fahrenheit Jess v field",
+      "home": "Fahrenheit Jess",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Fahrenheit Jess",
+      "selection_side": "home",
+      "fair_probability": 0.4462,
+      "fair_odds": 124,
+      "fair_decimal": 2.241,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Fahrenheit Jess",
+          "value": "trap 1, SP 1.875",
+          "source_key": "racingpost_oaks",
+          "source_url": "https://www.racingpost.com/greyhounds/fairbairn-confident-poppy-can-overcome-draw-aSYHO2F4ENLk/"
+        },
+        {
+          "subject": "Event",
+          "value": "Dunstall Park (PGR Oaks final)",
+          "source_key": "dunstall",
+          "source_url": "https://www.dunstallpark-greyhounds.co.uk/"
+        }
+      ],
+      "source_keys": [
+        "racingpost_oaks",
+        "dunstall"
+      ]
+    },
+    {
+      "fixture_id": "gh-strike",
+      "sport": "Greyhounds",
+      "competition": "GBGB / Premier Greyhound Racing",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:38:00Z",
+      "venue": "Dunstall Park (PGR Oaks final)",
+      "match": "Strike It Skye v field",
+      "home": "Strike It Skye",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Strike It Skye",
+      "selection_side": "home",
+      "fair_probability": 0.3733,
+      "fair_odds": 168,
+      "fair_decimal": 2.679,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Strike It Skye",
+          "value": "trap 3, SP 4.5",
+          "source_key": "racingpost_oaks",
+          "source_url": "https://www.racingpost.com/greyhounds/fairbairn-confident-poppy-can-overcome-draw-aSYHO2F4ENLk/"
+        },
+        {
+          "subject": "Event",
+          "value": "Dunstall Park (PGR Oaks final)",
+          "source_key": "dunstall",
+          "source_url": "https://www.dunstallpark-greyhounds.co.uk/"
+        }
+      ],
+      "source_keys": [
+        "racingpost_oaks",
+        "dunstall"
+      ]
+    },
+    {
+      "fixture_id": "gh-tina",
+      "sport": "Greyhounds",
+      "competition": "GBGB / Premier Greyhound Racing",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:38:00Z",
+      "venue": "Dunstall Park (PGR Oaks final)",
+      "match": "Ballydoyle Tina v field",
+      "home": "Ballydoyle Tina",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Ballydoyle Tina",
+      "selection_side": "home",
+      "fair_probability": 0.3733,
+      "fair_odds": 168,
+      "fair_decimal": 2.679,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Ballydoyle Tina",
+          "value": "trap 4, SP 4.5",
+          "source_key": "racingpost_oaks",
+          "source_url": "https://www.racingpost.com/greyhounds/fairbairn-confident-poppy-can-overcome-draw-aSYHO2F4ENLk/"
+        },
+        {
+          "subject": "Event",
+          "value": "Dunstall Park (PGR Oaks final)",
+          "source_key": "dunstall",
+          "source_url": "https://www.dunstallpark-greyhounds.co.uk/"
+        }
+      ],
+      "source_keys": [
+        "racingpost_oaks",
+        "dunstall"
+      ]
+    },
+    {
+      "fixture_id": "gh-poppy",
+      "sport": "Greyhounds",
+      "competition": "GBGB / Premier Greyhound Racing",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:38:00Z",
+      "venue": "Dunstall Park (PGR Oaks final)",
+      "match": "Slingshot Poppy v field",
+      "home": "Slingshot Poppy",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Slingshot Poppy",
+      "selection_side": "home",
+      "fair_probability": 0.3733,
+      "fair_odds": 168,
+      "fair_decimal": 2.679,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Slingshot Poppy",
+          "value": "trap 5, SP 4.5",
+          "source_key": "racingpost_oaks",
+          "source_url": "https://www.racingpost.com/greyhounds/fairbairn-confident-poppy-can-overcome-draw-aSYHO2F4ENLk/"
+        },
+        {
+          "subject": "Event",
+          "value": "Dunstall Park (PGR Oaks final)",
+          "source_key": "dunstall",
+          "source_url": "https://www.dunstallpark-greyhounds.co.uk/"
+        }
+      ],
+      "source_keys": [
+        "racingpost_oaks",
+        "dunstall"
+      ]
+    },
+    {
+      "fixture_id": "gh-avarua",
+      "sport": "Greyhounds",
+      "competition": "GBGB / Premier Greyhound Racing",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T18:20:00Z",
+      "venue": "Dunstall Park (ARC Scurry Gold Cup final)",
+      "match": "Avarua Lake v field",
+      "home": "Avarua Lake",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Avarua Lake",
+      "selection_side": "home",
+      "fair_probability": 0.4427,
+      "fair_odds": 126,
+      "fair_decimal": 2.259,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Avarua Lake",
+          "value": "trap 1, SP 2.0",
+          "source_key": "racingpost_oaks",
+          "source_url": "https://www.racingpost.com/greyhounds/fairbairn-confident-poppy-can-overcome-draw-aSYHO2F4ENLk/"
+        },
+        {
+          "subject": "Event",
+          "value": "Dunstall Park (ARC Scurry Gold Cup final)",
+          "source_key": "dunstall",
+          "source_url": "https://www.dunstallpark-greyhounds.co.uk/"
+        }
+      ],
+      "source_keys": [
+        "racingpost_oaks",
+        "dunstall"
+      ]
+    },
+    {
+      "fixture_id": "ga-dublin-shc",
+      "sport": "Gaelic Sports",
+      "competition": "Dublin senior hurling final",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:15:00Z",
+      "venue": "Parnell Park, Dublin",
+      "match": "Cuala v Kilmacud Crokes",
+      "home": "Cuala",
+      "away": "Kilmacud Crokes",
+      "market": "match winner (moneyline)",
+      "selection": "Cuala",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "Dublin SHC final, Parnell Park, 7:15pm, RTÉ 2",
+          "source_key": "gaa_the42",
+          "source_url": "https://www.the42.ie/gaa-fixtures-tv-coverage-7202218-Oct2026/"
+        }
+      ],
+      "source_keys": [
+        "gaa_the42"
+      ]
+    },
+    {
+      "fixture_id": "ga-galway-sfc",
+      "sport": "Gaelic Sports",
+      "competition": "Galway senior football final",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:00:00Z",
+      "venue": "Pearse Stadium, Galway",
+      "match": "Salthill Knocknacarra v Maigh Cuilinn",
+      "home": "Salthill Knocknacarra",
+      "away": "Maigh Cuilinn",
+      "market": "match winner (moneyline)",
+      "selection": "Salthill Knocknacarra",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "Galway SFC final, Pearse Stadium, 7pm",
+          "source_key": "gaa_the42",
+          "source_url": "https://www.the42.ie/gaa-fixtures-tv-coverage-7202218-Oct2026/"
+        }
+      ],
+      "source_keys": [
+        "gaa_the42"
+      ]
+    },
+    {
+      "fixture_id": "ga-kerry-sfc",
+      "sport": "Gaelic Sports",
+      "competition": "Kerry senior football final",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T14:00:00Z",
+      "venue": "Fitzgerald Stadium, Killarney",
+      "match": "Dr Crokes v Kenmare Shamrocks",
+      "home": "Dr Crokes",
+      "away": "Kenmare Shamrocks",
+      "market": "match winner (moneyline)",
+      "selection": "Dr Crokes",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "Kerry SFC final, Fitzgerald Stadium, 2pm",
+          "source_key": "gaa_the42",
+          "source_url": "https://www.the42.ie/gaa-fixtures-tv-coverage-7202218-Oct2026/"
+        }
+      ],
+      "source_keys": [
+        "gaa_the42"
+      ]
+    },
+    {
+      "fixture_id": "ga-kilkenny-shc",
+      "sport": "Gaelic Sports",
+      "competition": "Kilkenny senior hurling final",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T13:45:00Z",
+      "venue": "UPMC Nowlan Park, Kilkenny",
+      "match": "Ballyhale Shamrocks v Tullaroan",
+      "home": "Ballyhale Shamrocks",
+      "away": "Tullaroan",
+      "market": "match winner (moneyline)",
+      "selection": "Ballyhale Shamrocks",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "Kilkenny SHC final, Nowlan Park, 1:45pm, TG4",
+          "source_key": "gaa_the42",
+          "source_url": "https://www.the42.ie/gaa-fixtures-tv-coverage-7202218-Oct2026/"
+        }
+      ],
+      "source_keys": [
+        "gaa_the42"
+      ]
+    },
+    {
+      "fixture_id": "ga-limerick-shc",
+      "sport": "Gaelic Sports",
+      "competition": "Limerick senior hurling final",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T15:45:00Z",
+      "venue": "TUS Gaelic Grounds, Limerick",
+      "match": "Kilmallock v Na Piarsaigh",
+      "home": "Kilmallock",
+      "away": "Na Piarsaigh",
+      "market": "match winner (moneyline)",
+      "selection": "Kilmallock",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "Limerick SHC final, TUS Gaelic Grounds, 3:45pm, TG4",
+          "source_key": "gaa_the42",
+          "source_url": "https://www.the42.ie/gaa-fixtures-tv-coverage-7202218-Oct2026/"
+        }
+      ],
+      "source_keys": [
+        "gaa_the42"
+      ]
+    },
+    {
+      "fixture_id": "hb-mistra-bk46",
+      "sport": "Handball",
+      "competition": "EHF European Cup",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T11:00:00Z",
+      "venue": "Tallinn (EST)",
+      "match": "Tallinna Mistra v BK-46",
+      "home": "Tallinna Mistra",
+      "away": "BK-46",
+      "market": "match winner (moneyline)",
+      "selection": "Tallinna Mistra",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "EHF European Cup round 2, 2nd leg, Tallinn, 13:00 CEST",
+          "source_key": "ehf_tv",
+          "source_url": "https://www.eurohandball.com/en/tv-guide/"
+        },
+        {
+          "subject": "First leg",
+          "value": "BK-46 28-22 Tallinna Mistra (17 Oct)",
+          "source_key": "ehf_ec",
+          "source_url": "https://www.eurohandball.com/en/news/en/pairings-for-european-cup-men-round-2-drawn"
+        }
+      ],
+      "source_keys": [
+        "ehf_tv",
+        "ehf_ec"
+      ]
+    },
+    {
+      "fixture_id": "hb-istanbul-ostrow",
+      "sport": "Handball",
+      "competition": "EHF European Cup",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T12:00:00Z",
+      "venue": "Istanbul (TUR)",
+      "match": "Istanbul GSK v Rebud KPR Ostrovia Ostrów",
+      "home": "Istanbul GSK",
+      "away": "Rebud KPR Ostrovia Ostrów",
+      "market": "match winner (moneyline)",
+      "selection": "Istanbul GSK",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "EHF European Cup round 2, 2nd leg, Istanbul, 14:00 CEST",
+          "source_key": "ehf_tv",
+          "source_url": "https://www.eurohandball.com/en/tv-guide/"
+        },
+        {
+          "subject": "First leg",
+          "value": "Ostrovia 43-27 Istanbul GSK (17 Oct)",
+          "source_key": "ehf_ec",
+          "source_url": "https://www.eurohandball.com/en/news/en/pairings-for-european-cup-men-round-2-drawn"
+        }
+      ],
+      "source_keys": [
+        "ehf_tv",
+        "ehf_ec"
+      ]
+    },
+    {
+      "fixture_id": "hb-narbo-dukla",
+      "sport": "Handball",
+      "competition": "EHF European Cup",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T15:00:00Z",
+      "venue": "Nærbø (NOR)",
+      "match": "Nærbø IL v HC Dukla Praha",
+      "home": "Nærbø IL",
+      "away": "HC Dukla Praha",
+      "market": "match winner (moneyline)",
+      "selection": "Nærbø IL",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "EHF European Cup, Nærbø, 17:00 CEST",
+          "source_key": "ehf_tv",
+          "source_url": "https://www.eurohandball.com/en/tv-guide/"
+        }
+      ],
+      "source_keys": [
+        "ehf_tv"
+      ]
+    },
+    {
+      "fixture_id": "hb-sloga-kur",
+      "sport": "Handball",
+      "competition": "EHF European Cup",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T13:00:00Z",
+      "venue": "Mingechevir (AZE)",
+      "match": "MRK Sloga Doboj v Kur",
+      "home": "MRK Sloga Doboj",
+      "away": "Kur",
+      "market": "match winner (moneyline)",
+      "selection": "MRK Sloga Doboj",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "EHF European Cup, Mingechevir, 15:00 CEST",
+          "source_key": "ehf_tv",
+          "source_url": "https://www.eurohandball.com/en/tv-guide/"
+        }
+      ],
+      "source_keys": [
+        "ehf_tv"
+      ]
+    },
+    {
+      "fixture_id": "hb-kosovo-estonia",
+      "sport": "Handball",
+      "competition": "EHF European Cup",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T15:00:00Z",
+      "venue": "Prishtina (KOS)",
+      "match": "Kosovo v Estonia",
+      "home": "Kosovo",
+      "away": "Estonia",
+      "market": "match winner (moneyline)",
+      "selection": "Kosovo",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "EHF European Cup, Prishtina, 17:00 CEST",
+          "source_key": "ehf_tv",
+          "source_url": "https://www.eurohandball.com/en/tv-guide/"
+        }
+      ],
+      "source_keys": [
+        "ehf_tv"
+      ]
+    },
+    {
+      "fixture_id": "vb-trentino-cisterna",
+      "sport": "Volleyball",
+      "competition": "SuperLega Credem Banca",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T15:00:00Z",
+      "venue": "BTS Arena, Trento",
+      "match": "Itas Trentino v Cisterna Volley",
+      "home": "Itas Trentino",
+      "away": "Cisterna Volley",
+      "market": "match winner (moneyline)",
+      "selection": "Itas Trentino",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Round 1",
+          "value": "SuperLega matchday 1 results (18 Oct 2026)",
+          "source_key": "legavolley",
+          "source_url": "https://www.legavolley.it/?lang=en"
+        },
+        {
+          "subject": "Fixture",
+          "value": "Itas Trentino v Cisterna Volley, BTS Arena, Trento",
+          "source_key": "legavolley_round2",
+          "source_url": "https://www.legavolley.it/2026/cuneo-facing-milano/?lang=en"
+        }
+      ],
+      "source_keys": [
+        "legavolley",
+        "legavolley_round2"
+      ]
+    },
+    {
+      "fixture_id": "vb-lube-padova",
+      "sport": "Volleyball",
+      "competition": "SuperLega Credem Banca",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T16:00:00Z",
+      "venue": "Palacore, Civitanova",
+      "match": "Cucine Lube Civitanova v Pallavolo Padova",
+      "home": "Cucine Lube Civitanova",
+      "away": "Pallavolo Padova",
+      "market": "match winner (moneyline)",
+      "selection": "Cucine Lube Civitanova",
+      "selection_side": "home",
+      "fair_probability": 0.858149,
+      "fair_odds": -605,
+      "fair_decimal": 1.165,
+      "confidence": "high",
+      "in_band": false,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Round 1",
+          "value": "SuperLega matchday 1 results (18 Oct 2026)",
+          "source_key": "legavolley",
+          "source_url": "https://www.legavolley.it/?lang=en"
+        },
+        {
+          "subject": "Fixture",
+          "value": "Cucine Lube Civitanova v Pallavolo Padova, Palacore, Civitanova",
+          "source_key": "legavolley_round2",
+          "source_url": "https://www.legavolley.it/2026/cuneo-facing-milano/?lang=en"
+        }
+      ],
+      "source_keys": [
+        "legavolley",
+        "legavolley_round2"
+      ]
+    },
+    {
+      "fixture_id": "vb-milano-cuneo",
+      "sport": "Volleyball",
+      "competition": "SuperLega Credem Banca",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T17:00:00Z",
+      "venue": "Allianz Cloud, Milan",
+      "match": "Allianz Milano v Acqua Sant'Anna Cuneo",
+      "home": "Allianz Milano",
+      "away": "Acqua Sant'Anna Cuneo",
+      "market": "match winner (moneyline)",
+      "selection": "Allianz Milano",
+      "selection_side": "home",
+      "fair_probability": 0.512522,
+      "fair_odds": -105,
+      "fair_decimal": 1.951,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Round 1",
+          "value": "SuperLega matchday 1 results (18 Oct 2026)",
+          "source_key": "legavolley",
+          "source_url": "https://www.legavolley.it/?lang=en"
+        },
+        {
+          "subject": "Fixture",
+          "value": "Allianz Milano v Acqua Sant'Anna Cuneo, Allianz Cloud, Milan",
+          "source_key": "legavolley_round2",
+          "source_url": "https://www.legavolley.it/2026/cuneo-facing-milano/?lang=en"
+        }
+      ],
+      "source_keys": [
+        "legavolley",
+        "legavolley_round2"
+      ]
+    },
+    {
+      "fixture_id": "vb-monza-verona",
+      "sport": "Volleyball",
+      "competition": "SuperLega Credem Banca",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T16:00:00Z",
+      "venue": "Olympic Park, Monza",
+      "match": "Vero Volley Monza v Rana Verona",
+      "home": "Vero Volley Monza",
+      "away": "Rana Verona",
+      "market": "match winner (moneyline)",
+      "selection": "Vero Volley Monza",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Round 1",
+          "value": "SuperLega matchday 1 results (18 Oct 2026)",
+          "source_key": "legavolley",
+          "source_url": "https://www.legavolley.it/?lang=en"
+        },
+        {
+          "subject": "Fixture",
+          "value": "Vero Volley Monza v Rana Verona, Olympic Park, Monza",
+          "source_key": "legavolley_round2",
+          "source_url": "https://www.legavolley.it/2026/cuneo-facing-milano/?lang=en"
+        }
+      ],
+      "source_keys": [
+        "legavolley",
+        "legavolley_round2"
+      ]
+    },
+    {
+      "fixture_id": "vb-perugia-prata",
+      "sport": "Volleyball",
+      "competition": "SuperLega Credem Banca",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T16:00:00Z",
+      "venue": "PalaEvangelisti, Perugia",
+      "match": "Sir Susa Scai Perugia v Tinet Prata di Pordenone",
+      "home": "Sir Susa Scai Perugia",
+      "away": "Tinet Prata di Pordenone",
+      "market": "match winner (moneyline)",
+      "selection": "Tinet Prata di Pordenone",
+      "selection_side": "away",
+      "fair_probability": 0.598664,
+      "fair_odds": -149,
+      "fair_decimal": 1.67,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Round 1",
+          "value": "SuperLega matchday 1 results (18 Oct 2026)",
+          "source_key": "legavolley",
+          "source_url": "https://www.legavolley.it/?lang=en"
+        },
+        {
+          "subject": "Fixture",
+          "value": "Sir Susa Scai Perugia v Tinet Prata di Pordenone, PalaEvangelisti, Perugia",
+          "source_key": "legavolley_round2",
+          "source_url": "https://www.legavolley.it/2026/cuneo-facing-milano/?lang=en"
+        }
+      ],
+      "source_keys": [
+        "legavolley",
+        "legavolley_round2"
+      ]
+    },
+    {
+      "fixture_id": "mr-antonelli",
+      "sport": "Motor Racing",
+      "competition": "FIA Formula One World Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Circuit of the Americas, Austin",
+      "match": "Andrea Kimi Antonelli v field",
+      "home": "Andrea Kimi Antonelli",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Andrea Kimi Antonelli",
+      "selection_side": "home",
+      "fair_probability": 0.35,
+      "fair_odds": 186,
+      "fair_decimal": 2.857,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Andrea Kimi Antonelli",
+          "value": "2026 drivers' championship points: 340",
+          "source_key": "f1_fp",
+          "source_url": "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx"
+        },
+        {
+          "subject": "Event",
+          "value": "United States GP, Circuit of the Americas, race 25 Oct 2026",
+          "source_key": "f1_usgp",
+          "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+        }
+      ],
+      "source_keys": [
+        "f1_fp",
+        "f1_usgp"
+      ]
+    },
+    {
+      "fixture_id": "mr-russell",
+      "sport": "Motor Racing",
+      "competition": "FIA Formula One World Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Circuit of the Americas, Austin",
+      "match": "George Russell v field",
+      "home": "George Russell",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "George Russell",
+      "selection_side": "home",
+      "fair_probability": 0.14,
+      "fair_odds": 614,
+      "fair_decimal": 7.143,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "George Russell",
+          "value": "2026 drivers' championship points: 238",
+          "source_key": "f1_fp",
+          "source_url": "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx"
+        },
+        {
+          "subject": "Event",
+          "value": "United States GP, Circuit of the Americas, race 25 Oct 2026",
+          "source_key": "f1_usgp",
+          "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+        }
+      ],
+      "source_keys": [
+        "f1_fp",
+        "f1_usgp"
+      ]
+    },
+    {
+      "fixture_id": "mr-leclerc",
+      "sport": "Motor Racing",
+      "competition": "FIA Formula One World Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Circuit of the Americas, Austin",
+      "match": "Charles Leclerc v field",
+      "home": "Charles Leclerc",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Charles Leclerc",
+      "selection_side": "home",
+      "fair_probability": 0.11,
+      "fair_odds": 809,
+      "fair_decimal": 9.091,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Charles Leclerc",
+          "value": "2026 drivers' championship points: 200",
+          "source_key": "f1_fp",
+          "source_url": "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx"
+        },
+        {
+          "subject": "Event",
+          "value": "United States GP, Circuit of the Americas, race 25 Oct 2026",
+          "source_key": "f1_usgp",
+          "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+        }
+      ],
+      "source_keys": [
+        "f1_fp",
+        "f1_usgp"
+      ]
+    },
+    {
+      "fixture_id": "mr-verstappen",
+      "sport": "Motor Racing",
+      "competition": "FIA Formula One World Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Circuit of the Americas, Austin",
+      "match": "Max Verstappen v field",
+      "home": "Max Verstappen",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Max Verstappen",
+      "selection_side": "home",
+      "fair_probability": 0.14,
+      "fair_odds": 614,
+      "fair_decimal": 7.143,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Max Verstappen",
+          "value": "2026 drivers' championship points: 180",
+          "source_key": "f1_fp",
+          "source_url": "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx"
+        },
+        {
+          "subject": "Event",
+          "value": "United States GP, Circuit of the Americas, race 25 Oct 2026",
+          "source_key": "f1_usgp",
+          "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+        }
+      ],
+      "source_keys": [
+        "f1_fp",
+        "f1_usgp"
+      ]
+    },
+    {
+      "fixture_id": "mr-norris",
+      "sport": "Motor Racing",
+      "competition": "FIA Formula One World Championship",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T19:00:00Z",
+      "venue": "Circuit of the Americas, Austin",
+      "match": "Lando Norris v field",
+      "home": "Lando Norris",
+      "away": "field",
+      "market": "to win (outright)",
+      "selection": "Lando Norris",
+      "selection_side": "home",
+      "fair_probability": 0.1,
+      "fair_odds": 900,
+      "fair_decimal": 10.0,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": true,
+      "key_facts": [
+        {
+          "subject": "Lando Norris",
+          "value": "2026 drivers' championship points: 160",
+          "source_key": "f1_fp",
+          "source_url": "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx"
+        },
+        {
+          "subject": "Event",
+          "value": "United States GP, Circuit of the Americas, race 25 Oct 2026",
+          "source_key": "f1_usgp",
+          "source_url": "https://www.formula1.com/en/racing/2026/united-states"
+        }
+      ],
+      "source_keys": [
+        "f1_fp",
+        "f1_usgp"
+      ]
+    },
+    {
+      "fixture_id": "cr-nz-ind-t20i3",
+      "sport": "Cricket",
+      "competition": "India in New Zealand T20I Series, 3rd T20I",
+      "date": "2026-10-27",
+      "start_utc": "2026-10-27T04:30:00Z",
+      "venue": "Wellington",
+      "match": "New Zealand v India",
+      "home": "New Zealand",
+      "away": "India",
+      "market": "match winner (moneyline)",
+      "selection": "New Zealand",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "3rd T20I, Wellington, Tue 27 Oct, 12:30pm local",
+          "source_key": "cricinfo",
+          "source_url": "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/match-schedule-fixtures-and-results"
+        },
+        {
+          "subject": "Series",
+          "value": "India lead 2-0 after winning the 2nd T20I by 4 wickets",
+          "source_key": "cricinfo",
+          "source_url": "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/match-schedule-fixtures-and-results"
+        }
+      ],
+      "source_keys": [
+        "cricinfo"
+      ]
+    },
+    {
+      "fixture_id": "cr-nam-irl-odi2",
+      "sport": "Cricket",
+      "competition": "Ireland in Namibia ODI Series, 2nd ODI",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T07:30:00Z",
+      "venue": "Windhoek",
+      "match": "Namibia v Ireland",
+      "home": "Namibia",
+      "away": "Ireland",
+      "market": "match winner (moneyline)",
+      "selection": "Namibia",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "2nd ODI, FNB Namibia Cricket Ground, Windhoek, 08:30 local",
+          "source_key": "icc",
+          "source_url": "https://www.icc-cricket.com/ci/engine/match/index.html?view=calendar"
+        }
+      ],
+      "source_keys": [
+        "icc"
+      ]
+    },
+    {
+      "fixture_id": "cr-moz-uga",
+      "sport": "Cricket",
+      "competition": "ICC T20 World Cup Africa Sub Regional Qualifier C, 10th Match",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T08:00:00Z",
+      "venue": "Abuja",
+      "match": "Mozambique v Uganda",
+      "home": "Mozambique",
+      "away": "Uganda",
+      "market": "match winner (moneyline)",
+      "selection": "Mozambique",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "10th Match, Abuja, 24 Oct",
+          "source_key": "icc",
+          "source_url": "https://www.icc-cricket.com/ci/engine/match/index.html?view=calendar"
+        }
+      ],
+      "source_keys": [
+        "icc"
+      ]
+    },
+    {
+      "fixture_id": "cr-gam-zam",
+      "sport": "Cricket",
+      "competition": "ICC T20 World Cup Africa Sub Regional Qualifier C, 11th Match",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T11:00:00Z",
+      "venue": "Abuja",
+      "match": "Gambia v Zambia",
+      "home": "Gambia",
+      "away": "Zambia",
+      "market": "match winner (moneyline)",
+      "selection": "Gambia",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "11th Match, Abuja, 24 Oct",
+          "source_key": "icc",
+          "source_url": "https://www.icc-cricket.com/ci/engine/match/index.html?view=calendar"
+        }
+      ],
+      "source_keys": [
+        "icc"
+      ]
+    },
+    {
+      "fixture_id": "cr-nig-les",
+      "sport": "Cricket",
+      "competition": "ICC T20 World Cup Africa Sub Regional Qualifier C, 12th Match",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T12:00:00Z",
+      "venue": "Abuja",
+      "match": "Nigeria v Lesotho",
+      "home": "Nigeria",
+      "away": "Lesotho",
+      "market": "match winner (moneyline)",
+      "selection": "Nigeria",
+      "selection_side": "home",
+      "fair_probability": 0.53743,
+      "fair_odds": -116,
+      "fair_decimal": 1.861,
+      "confidence": "low",
+      "in_band": true,
+      "input_verified": false,
+      "key_facts": [
+        {
+          "subject": "Fixture",
+          "value": "12th Match, Abuja, 24 Oct",
+          "source_key": "icc",
+          "source_url": "https://www.icc-cricket.com/ci/engine/match/index.html?view=calendar"
+        }
+      ],
+      "source_keys": [
+        "icc"
+      ]
+    }
+  ]
+}

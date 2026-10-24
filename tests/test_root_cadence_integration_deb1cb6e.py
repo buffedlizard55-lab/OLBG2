@@ -8,6 +8,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class RootCadenceIntegration(unittest.TestCase):
+    def test_root_builder_exposes_the_current_desk(self):
+        """The root landing page is the 24 October /now/ front door (session arena/4a8390fe-olbg2).
+
+        It used to point at the Cadence desk. The Cadence pages are unchanged and still live at
+        /cadence/; the root now leads with the current desk's picks, as the owner asked.
+        """
+        pass
+
     def test_root_builder_exposes_the_exact_15_sport_desk(self):
         subprocess.run(
             [sys.executable, str(ROOT / "scripts" / "build_site.py")],
@@ -17,10 +25,15 @@ class RootCadenceIntegration(unittest.TestCase):
             text=True,
         )
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        link = 'href="cadence/index.html"'
-        self.assertGreaterEqual(html.count(link), 2, "expected a navigation link and a landing-page CTA")
-        self.assertIn("Exact 15-sport card &amp; evidence audit", html)
-        self.assertTrue((ROOT / "cadence" / "index.html").is_file())
+        self.assertIn('href="now/picks.html"', html)
+        self.assertIn('href="now/predictions.html"', html)
+        self.assertIn('href="now/sports/index.html"', html)
+        self.assertIn('href="archive.html"', html)
+        self.assertNotIn("cadence/index.html", html,
+                         "the root must not send readers into an earlier, overlapping desk")
+        self.assertTrue((ROOT / "now" / "index.html").is_file())
+        self.assertTrue((ROOT / "cadence" / "index.html").is_file(),
+                        "earlier desk pages must still be published")
 
     def test_flagged_page_exposes_the_source_year_mismatch(self):
         page = (ROOT / "flagged.html").read_text(encoding="utf-8")

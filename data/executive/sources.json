@@ -1,0 +1,236 @@
+{
+  "as_of_utc": "2026-10-24T17:30:00Z",
+  "sources": [
+    {
+      "key": "nhl_schedule",
+      "domain": "nhl.com",
+      "label": "NHL.com schedule, 24 Oct 2026",
+      "url": "https://www.nhl.com/schedule/2026-10-24",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "nhl_standings",
+      "domain": "nhl.com",
+      "label": "NHL.com standings / team records",
+      "url": "https://www.nhl.com/stats/standings",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "nba_schedule",
+      "domain": "nba.com",
+      "label": "NBA.com schedule, 24 Oct 2026",
+      "url": "https://www.nba.com/schedule",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "nba_power",
+      "domain": "nba.com",
+      "label": "NBA.com Power Rankings, Week 1 2026-27",
+      "url": "https://www.nba.com/news/power-rankings-2026-27-week-1",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "nba_standings",
+      "domain": "nba.com",
+      "label": "NBA.com standings 2026-27",
+      "url": "https://www.nba.com/standings",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "mlb_schedule",
+      "domain": "mlb.com",
+      "label": "MLB.com schedule / World Series",
+      "url": "https://www.mlb.com/schedule",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "mlb_ws_faq",
+      "domain": "mlb.com",
+      "label": "MLB.com 2026 World Series FAQ",
+      "url": "https://www.mlb.com/news/2026-mlb-world-series-faq-schedule-times-teams-and-more",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "pga_leaderboard",
+      "domain": "pgatour.com",
+      "label": "PGA Tour leaderboard — Butterfield Bermuda Championship",
+      "url": "https://www.pgatour.com/leaderboard",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "pga_bermuda",
+      "domain": "pgatour.com",
+      "label": "PGA Tour — Butterfield Bermuda Championship",
+      "url": "https://www.pgatour.com/leaderboard/?eventId=401850917",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "atp_rankings",
+      "domain": "atptour.com",
+      "label": "ATP Tour singles rankings",
+      "url": "https://www.atptour.com/en/rankings/singles",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "atp_almaty",
+      "domain": "atptour.com",
+      "label": "ATP Tour — Almaty Open results",
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/results",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "atp_vienna",
+      "domain": "atptour.com",
+      "label": "ATP Tour — Erste Bank Open Vienna 2026",
+      "url": "https://www.atptour.com/en/news/vienna-atp-500-2026-history-draw-schedule",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "urc_fixtures",
+      "domain": "urc.tv",
+      "label": "URC.tv — Round 4 fixtures",
+      "url": "https://urc.tv/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "urc_bbc",
+      "domain": "bbc.com",
+      "label": "BBC Sport — URC scores & fixtures 24 Oct 2026",
+      "url": "https://www.bbc.com/sport/rugby-union/scores-fixtures/2026-10-24",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "ehf_tv",
+      "domain": "eurohandball.com",
+      "label": "EHF TV guide — 24 Oct 2026",
+      "url": "https://www.eurohandball.com/en/tv-guide/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "ehf_ec",
+      "domain": "eurohandball.com",
+      "label": "EHF European Cup Men 2026/27 round 2",
+      "url": "https://www.eurohandball.com/en/news/en/pairings-for-european-cup-men-round-2-drawn",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "legavolley",
+      "domain": "legavolley.it",
+      "label": "Lega Pallavolo Serie A — SuperLega 2026/27",
+      "url": "https://www.legavolley.it/?lang=en",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "legavolley_round2",
+      "domain": "legavolley.it",
+      "label": "LegaVolley — SuperLega matchday 2",
+      "url": "https://www.legavolley.it/2026/cuneo-facing-milano/?lang=en",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "wst",
+      "domain": "wst.tv",
+      "label": "World Snooker Tour — Northern Ireland Open",
+      "url": "https://wst.tv/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "bbc_snooker",
+      "domain": "bbc.com",
+      "label": "BBC Sport — Northern Ireland Open results",
+      "url": "https://www.bbc.co.uk/sport/snooker/ranking-events-northern-ireland-open/results",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "pdc",
+      "domain": "pdc.tv",
+      "label": "PDC — European Championship 2026",
+      "url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "cswdarts",
+      "domain": "cswdarts.co.uk",
+      "label": "CSW Darts — European Championship 2026 bracket",
+      "url": "https://cswdarts.co.uk/darts/european-championship/2026",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "gbgb",
+      "domain": "gbgb.org.uk",
+      "label": "GBGB — 2026 Category One schedule",
+      "url": "https://www.gbgb.org.uk/racing/open-races/2025-category-one-schedule/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "racingpost_oaks",
+      "domain": "racingpost.com",
+      "label": "Racing Post — PGR Oaks final runners & SP",
+      "url": "https://www.racingpost.com/greyhounds/fairbairn-confident-poppy-can-overcome-draw-aSYHO2F4ENLk/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "dunstall",
+      "domain": "dunstallpark-greyhounds.co.uk",
+      "label": "Dunstall Park — Scurry Gold Cup & Oaks final night",
+      "url": "https://www.dunstallpark-greyhounds.co.uk/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "gaa_the42",
+      "domain": "the42.ie",
+      "label": "The 42 — GAA club fixtures 24-25 Oct 2026",
+      "url": "https://www.the42.ie/gaa-fixtures-tv-coverage-7202218-Oct2026/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "munster_gaa",
+      "domain": "munster.gaa.ie",
+      "label": "Munster GAA — events calendar",
+      "url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "f1_usgp",
+      "domain": "formula1.com",
+      "label": "Formula 1 — United States Grand Prix 2026",
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "f1_fp",
+      "domain": "formula1.com",
+      "label": "Formula 1 — US GP FP1/FP2 reports",
+      "url": "https://www.formula1.com/en/latest/article/fp2-leclerc-sets-the-pace-from-antonelli-and-verstappen-in-second-practice-at-united-states-grand-prix.4lRGhApoylA3exqOxagIqx",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "icc",
+      "domain": "icc-cricket.com",
+      "label": "ICC — international match schedule",
+      "url": "https://www.icc-cricket.com/ci/engine/match/index.html?view=calendar",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "cricinfo",
+      "domain": "cricinfo.com",
+      "label": "ESPNcricinfo — India tour of New Zealand 2026/27",
+      "url": "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/match-schedule-fixtures-and-results",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "nrl",
+      "domain": "nrl.com",
+      "label": "NRL — 2026 season (season complete)",
+      "url": "https://www.nrl.com/",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    },
+    {
+      "key": "superleague",
+      "domain": "bbc.co.uk",
+      "label": "Super League — 2026 season (season complete)",
+      "url": "https://www.bbc.co.uk/sport/rugby-league/super-league/scores-fixtures",
+      "fetched_at": "2026-10-24T17:15:00Z"
+    }
+  ]
+}

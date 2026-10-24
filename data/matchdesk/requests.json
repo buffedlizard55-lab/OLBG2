@@ -806,6 +806,118 @@
    "sport": "Tennis",
    "kind": "probe",
    "note": "WTA ranking page probe"
+  },
+  {
+   "key": "wta_rankings_full",
+   "url": "https://www.wtatennis.com/rankings/singles",
+   "sport": "Tennis",
+   "kind": "rankings",
+   "note": "Tennis rankings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "atp_rankings_full",
+   "url": "https://www.atptour.com/en/rankings/singles",
+   "sport": "Tennis",
+   "kind": "rankings",
+   "note": "Tennis rankings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "icc_odi_full",
+   "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/odi",
+   "sport": "Cricket",
+   "kind": "rankings",
+   "note": "Cricket rankings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "icc_t20_full",
+   "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/t20i",
+   "sport": "Cricket",
+   "kind": "rankings",
+   "note": "Cricket rankings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "pdc_oom_full",
+   "url": "https://www.pdc.tv/order-of-merit",
+   "sport": "Darts",
+   "kind": "rankings",
+   "note": "Darts rankings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "wst_rankings_full",
+   "url": "https://www.wst.tv/rankings/",
+   "sport": "Snooker",
+   "kind": "rankings",
+   "note": "Snooker rankings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "gaa_fixtures_full",
+   "url": "https://www.gaa.ie/fixtures-results",
+   "sport": "Gaelic Sports",
+   "kind": "schedule",
+   "note": "Gaelic Sports schedule page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "prem_table_full",
+   "url": "https://www.premrugby.com/table",
+   "sport": "Rugby Union",
+   "kind": "standings",
+   "note": "Rugby Union standings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "plusliga_full",
+   "url": "https://www.plusliga.pl/table.html",
+   "sport": "Volleyball",
+   "kind": "standings",
+   "note": "Volleyball standings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "gbgb_racing_full",
+   "url": "https://www.gbgb.org.uk/racing/",
+   "sport": "Greyhounds",
+   "kind": "schedule",
+   "note": "Greyhounds schedule page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "shl_full",
+   "url": "https://www.shl.se/schedule",
+   "sport": "Ice Hockey",
+   "kind": "schedule",
+   "note": "Ice Hockey schedule page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "liiga_full",
+   "url": "https://liiga.fi/en/schedule",
+   "sport": "Ice Hockey",
+   "kind": "schedule",
+   "note": "Ice Hockey schedule page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "f1_full",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "sport": "Motor Racing",
+   "kind": "standings",
+   "note": "Motor Racing standings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
+  },
+  {
+   "key": "owgr_full",
+   "url": "https://www.owgr.com/current-world-ranking",
+   "sport": "Golf",
+   "kind": "rankings",
+   "note": "Golf rankings page, captured with a 2 MB cap",
+   "max_bytes": 2000000
   }
  ]
 }

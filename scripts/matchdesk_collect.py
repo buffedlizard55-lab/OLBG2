@@ -41,6 +41,9 @@ MANIFEST = DATA / "manifest.json"
 DEFAULT_REQUEST = DATA / "requests.json"
 
 MAX_BYTES = 400_000
+# A handful of ranking tables are server-rendered deep inside a very large page.  They
+# declare their own cap in the request list; everything else is capped at MAX_BYTES.
+DEFAULT_CAP = MAX_BYTES
 TIMEOUT = 40
 WORKERS = 6
 UA = (
@@ -77,6 +80,7 @@ def fetch(item: dict) -> dict:
         "content_type": "",
         "truncated": False,
     }
+    cap_bytes = int(item.get("max_bytes") or DEFAULT_CAP)
     req = urllib.request.Request(
         url,
         headers={
@@ -87,12 +91,12 @@ def fetch(item: dict) -> dict:
     )
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-            body = resp.read(MAX_BYTES + 1)
+            body = resp.read(cap_bytes + 1)
             rec["http_status"] = resp.status
             rec["final_url"] = resp.geturl()
             ctype = resp.headers.get("Content-Type", "")
     except urllib.error.HTTPError as exc:
-        body = exc.read(MAX_BYTES + 1)
+        body = exc.read(cap_bytes + 1)
         rec["http_status"] = exc.code
         ctype = (exc.headers.get("Content-Type", "") if exc.headers else "")
         rec["error"] = f"HTTPError {exc.code}"
@@ -102,8 +106,8 @@ def fetch(item: dict) -> dict:
 
     rec["content_type"] = ctype
     rec["bytes"] = len(body)
-    rec["truncated"] = len(body) > MAX_BYTES
-    body = body[:MAX_BYTES]
+    rec["truncated"] = len(body) > cap_bytes
+    body = body[:cap_bytes]
     rec["sha256"] = hashlib.sha256(body).hexdigest()
     suffix = ".json" if "json" in ctype else (".xml" if "xml" in ctype else ".txt")
     name = safe_name(key) + suffix

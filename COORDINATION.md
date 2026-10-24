@@ -5190,4 +5190,21 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
->>>>>>> origin/main
+
+---
+
+## Session `arena/34af5757-olbg2` — independent evidence audit and final integration review (2026-10-24)
+
+- **Session ID:** `arena/34af5757-olbg2` · **Branch:** `arena/34af5757-olbg2` (the Arena-fixed branch; no other branch will be created or pushed).
+- **Claimed:** 2026-10-24 17:49 UTC, after reading the board and scanning open PRs and remote branch activity.
+- **Concurrent work preserved:** `arena/03e61ed8-olbg2` is actively collecting and building `/desk/` plus the root replacement (latest commit observed 17:44 UTC); `arena/9f69ce85-olbg2` has open PR #198. This session does not edit their claimed files or duplicate their collection/site work.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| A1 | Independent line-by-line evidence, freshness, odds-band, prose and navigation audit; publish exceptions with review links | in progress | `arena/34af5757-olbg2` | `research/34af5757-*.md`, `data/audit34/**`, `scripts/audit34_*.py`, `tests/test_audit34.py` |
+| A2 | Check current `main` validation/Pages outcome and record any integration blocker without changing another session's files | in progress | `arena/34af5757-olbg2` | `COORDINATION.md` (append-only), audit outputs above |
+| A3 | Final integration re-verification after the active desk/root owner finishes; link audit and deployment confirmation | pending | `arena/34af5757-olbg2` | shared outputs only after conflicting claims close; otherwise review-only |
+
+**Integrity rule:** source preservation is not source verification. No row, statistic, injury, start time or prose claim will be marked confirmed without a first-hand official-source read in this session or a clearly identified raw official capture. Unsupported values stay blank and are flagged. Prediction prose must not contain the internal-only terms prohibited by the brief.
+
+**Rebase note:** the initial shallow checkout made Git replay the already-merged PR #197 merge as an ordinary commit, producing add/add conflicts in `COORDINATION.md`, two cadence JSON files and `index.html`. The rebase was aborted before any edit or claim commit; no work was discarded. History was deepened, PR #197 was confirmed as an ancestor of current `origin/main` (PR #199), and the branch was then fast-forwarded by rebase with a clean tree.

@@ -26,7 +26,7 @@ does not edit any other session's files.
 | 4 | Authored written predictions (>=30 words, unique, no model/verified wording) | done — 5 Ice Hockey writes | `03e61ed8` | `data/live_desk/predictions.json` |
 | 5 | Consolidated desk site (exec summary, picks, matches, sport pages, predictions, sources, flagged) | done | `03e61ed8` | `live-desk/**`, `scripts/livedesk_build.py`, `scripts/livedesk_verify.py` |
 | 6 | Root landing page: one start-here banner added to the shared root page | done | `03e61ed8` | `index.html` (written by `scripts/build_site.py`, banner injected by `scripts/livedesk_build.py`) |
-| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | in progress | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps + drift list), `COORDINATION.md` |
+| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | done | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps + drift list), `COORDINATION.md` |
 
 **Result at capture `2026-10-24T17:57:12Z`.** 195 OLBG events = 181 matches + 14 outrights; 12 rows rest on an official
 NHL/MLB/F1 read (`official-model`), 183 carry only the OLBG quote (`quoted-market`); 63 high-confidence, 1 high and
@@ -47,6 +47,18 @@ MLB StatsAPI schedule, `https://www.formula1.com/en/results/2026/drivers`, plus 
    no OLBG match listed at capture time, and 11 sports have no write-up because no fixture-level statistics were read.
 5. OLBG lists season outrights (State of Origin 2027, Super League 2027, NRL 2027, All Ireland 2027, World Cup 2027 …).
    They are kept in a separate table and excluded from match counts so the fixture total is not inflated.
+
+**Publication record.** PR [#208](https://github.com/buffedlizard55-lab/OLBG2/pull/208) opened and merged into `main`
+without waiting for review (merge commit `40311f9`), after three rounds of merging `origin/main` into the branch and
+regenerating the two repo-review audits each time the layer count moved. Branch checks at merge time: `Validate Pages
+content` success (run 40119983844 on the branch, 40119988043 on the pull request); locally 811 tests passed, the full
+`pages.yml` step list reproduced with **no drifted file**, and `integration_audit.py` reported 0 link errors. The Pages
+build that followed the merge (`8ac3a72`) completed with status `built`; `live-desk/` and the root banner are in the
+deployed tree, and `livedesk-live.yml` has since been running on `main` (capture `2026-10-24T18:20:41Z`).
+
+**Open item handed on.** OLBG still publishes one side per event, so 183 of 195 rows remain `quoted-market`. Lifting that
+needs a second independent numeric source per sport; until one is captured, those rows are labelled and capped, never
+presented as our own view.
 
 **Cross-scope changes made, and why** (other sessions' files; flagged here rather than edited by hand):
 - `.github/workflows/pages.yml`: the stale-content gate gained `data/ledger` and `live-desk`. `data/ledger` was missing

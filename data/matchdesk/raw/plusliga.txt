@@ -53,7 +53,7 @@
 
     <script src='https://www.google.com/recaptcha/api.js?hl=pl'></script>
     
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" nonce='2901c4b1f24f002563e1019e1235ea11'></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" nonce='a508df146036f4a723c96eb9f2c07eaf'></script>
 
 	
 	<meta name="twitter:card" content="summary_large_image">
@@ -64,8 +64,8 @@
 	<meta property="og:title" content="Strona główna">
 	<meta property="og:description" content="TAURON Liga">
 	<meta property="og:image" content="https://www.tauronliga.pl/_images/account/men/ogimage.jpg">
-	<script nonce='2901c4b1f24f002563e1019e1235ea11'>$(document).on("cookieManager:consentChange", function(e, categoryData) {if(categoryData[3].enabled) {location.reload();}});</script>
-		<script type="module" nonce="2901c4b1f24f002563e1019e1235ea11">
+	<script nonce='a508df146036f4a723c96eb9f2c07eaf'>$(document).on("cookieManager:consentChange", function(e, categoryData) {if(categoryData[3].enabled) {location.reload();}});</script>
+		<script type="module" nonce="a508df146036f4a723c96eb9f2c07eaf">
     import { Url } from '/js/modules/Url.module.js';
 
     // Niedestrukcyjnie tworzymy przestrzeń nazw;
@@ -141,7 +141,7 @@
             
 <ul class="top-menu profile-menu">
     <li><a rel="nofollow" href="https://profil.siatkarskaliga.pl/profile/action/register.html">Rejestracja</a></li>
-    <li><a rel="nofollow" href="https://www.tauronliga.pl/profile/action/preLogin/pageUrl/R6NkfMzbOlVruUbyiFc5Tp2BMl4XPGhjbxIhmldnBBP7QOl5KaHVkcUDP29Ken15YVDX7xAAYU52q7EBqIdiC2zj5ylC4zL33zHLgDqOrhnHxpb9X9f3ufpPk08xzjKziq5FwMUHBU0Mj9tBDqWiFpKmp4CPdExHoAhkfk7W7Ya1.html">Logowanie</a></li>
+    <li><a rel="nofollow" href="https://www.tauronliga.pl/profile/action/preLogin/pageUrl/nH5YLJlASagtjclcGqd9u4OL16RvmNVFAqu6pUWaQz5J4iXl4xrt1UQ1s9WHuNybPYhWmQQ6T0se11MJNMxO4lC04JLJsSSJDe0o48bOiXYr1mZfa6xOkOWx6O4lCK1fUpXW8hgXs7cJe8zJzpUCwqZoDyf9ZRLt21ndL2a5ZCON.html">Logowanie</a></li>
 </ul>
 
 
@@ -6032,7 +6032,7 @@
 	</section>
 
 	
-	<script nonce='2901c4b1f24f002563e1019e1235ea11'>
+	<script nonce='a508df146036f4a723c96eb9f2c07eaf'>
 		(function() {
 			let gamesListAjaxUrl = "/ajax/gameList";
 

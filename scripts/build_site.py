@@ -578,6 +578,7 @@ def build_front_door() -> str:
     <a class="btn" href="now/predictions.html">Read the {preds['count']} predictions</a>
     <a class="btn" href="now/matches.html">All {matches['count']} matches</a>
     <a class="btn" href="now/sports/index.html">By sport</a>
+    <a class="btn" href="recheck/index.html">Independent re-check (1,246 checks)</a>
   </div>
 
   <h2>The four strongest calls</h2>

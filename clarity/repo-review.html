@@ -13,7 +13,7 @@
 <p class="lede">The repo audited with the same standard as the data.</p>
 
 <p class="lede">A line-by-line scan of the checkout this desk was built into, produced by a script so it can
-be re-run. 7 findings across 47 published dashboards.</p>
+be re-run. 6 findings across 47 published dashboards.</p>
 <div class="notice info"><strong>Scope.</strong> This session owns only <code>/clarity/</code>,
 <code>data/clarity/</code>, <code>scripts/clarity_*.py</code>, one test module, one research note and
 append-only edits to COORDINATION.md. Every finding below is in another session's files and is reported,
@@ -214,24 +214,7 @@ not edited.</div>
   ]
  }
 ]</pre></details>
-<p class="small"><strong>Action:</strong> Reported for the Zenith owner; this desk filters on start time instead.</p></div><div class="card" style="margin:12px 0"><h3>CR-04 · Merge-conflict markers are still checked in to the shared task board</h3>
-<p class="small"><span class="badge medium">medium</span></p>
-<p>COORDINATION.md carries 7 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.</p>
-<details><summary>Evidence</summary><pre class="small" style="white-space:pre-wrap">[
- {
-  &quot;file&quot;: &quot;COORDINATION.md&quot;,
-  &quot;lines&quot;: [
-   3216,
-   3307,
-   3437,
-   3549,
-   3609,
-   3628,
-   4895
-  ]
- }
-]</pre></details>
-<p class="small"><strong>Action:</strong> Left in place; this session appends only.</p></div><div class="card" style="margin:12px 0"><h3>CR-05 · A published audit finding describes a root page that has since changed</h3>
+<p class="small"><strong>Action:</strong> Reported for the Zenith owner; this desk filters on start time instead.</p></div><div class="card" style="margin:12px 0"><h3>CR-05 · A published audit finding describes a root page that has since changed</h3>
 <p class="small"><span class="badge medium">medium</span></p>
 <p>The /ledger/ audit&#x27;s RR-03 states the root status stripe reads 2026-10-22 08:15 UTC. The committed root page now reads 2026-10-23T20:10:00Z. The finding is stale in its own text even though the page it criticises has been rewritten.</p>
 <details><summary>Evidence</summary><pre class="small" style="white-space:pre-wrap">[

@@ -677,6 +677,66 @@ def build_archive() -> str:
     return page("Archive", body, "archive.html")
 
 
+BANNER_START = "<!-- livedesk-banner:start -->"
+BANNER_END = "<!-- livedesk-banner:end -->"
+
+
+def banner_html(root: str = "") -> str:
+    evs = [e for e in MODEL["events"] if e.get("kind") == "match"]
+    picks = [e for e in evs if e.get("pick")]
+    highs = [e for e in picks if e["pick"]["confidence"] == "high"]
+    banded = [e for e in picks if e["pick"]["in_band"]]
+    bets = [e for e in picks if e.get("tier") == "official-model"
+            and float(e["pick"]["fair_decimal"]) < float(e["pick"].get("quoted_decimal") or 0 or 99)]
+    n_pred = len(PREDICTIONS.get("items", []))
+    cap = (MODEL.get("meta") or {}).get("captured_at", "")
+    style = ("margin:0;padding:18px 0;background:#0f172a;color:#e8eefb;"
+             "font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif")
+    btn = ("display:inline-block;margin:10px 10px 0 0;padding:10px 16px;border-radius:8px;"
+           "background:#14b8a6;color:#04211d;font-weight:700;text-decoration:none")
+    alt = btn.replace("background:#14b8a6;color:#04211d", "background:#1e293b;color:#e8eefb")
+    return (
+        f"{BANNER_START}\n<section id='livedesk-banner' style='{style}'>"
+        "<div style='max-width:1100px;margin:0 auto;padding:0 18px'>"
+        "<div style='font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#7dd3fc'>"
+        "Start here · today's picks</div>"
+        "<h2 style='margin:6px 0 4px;font-size:26px;line-height:1.25;color:#fff'>"
+        "Every match OLBG lists in our fifteen sports, priced our way</h2>"
+        f"<p style='margin:0 0 4px;max-width:70ch'>Capture {e(cap)}: <strong>{len(evs)} matches</strong>, "
+        f"<strong>{len(picks)} graded selections</strong>, <strong>{len(highs)} high confidence</strong>, "
+        f"<strong>{len(banded)} inside the -250 to +10000 window</strong> and "
+        f"<strong>{n_pred} written predictions</strong>. "
+        f"{len(bets)} selections are worth backing at the quoted price right now.</p>"
+        f"<a style='{btn}' href='{e(root)}live-desk/index.html'>Executive summary</a>"
+        f"<a style='{alt}' href='{e(root)}live-desk/picks.html'>All the picks</a>"
+        f"<a style='{alt}' href='{e(root)}live-desk/predictions.html'>Written predictions</a>"
+        f"<a style='{alt}' href='{e(root)}live-desk/matches.html'>Every match</a>"
+        "<p style='margin:8px 0 0;font-size:13px;color:#94a3b8'>"
+        "The full research layers below are unchanged; the desk above is the short answer.</p>"
+        "</div></section>\n"
+        f"{BANNER_END}"
+    )
+
+
+def inject_banner(path: pathlib.Path) -> bool:
+    if not path.exists():
+        return False
+    html = path.read_text(encoding="utf-8")
+    if BANNER_START in html:
+        return False
+    block = banner_html()
+    for anchor in ("<main", "<body"):
+        i = html.find(anchor)
+        if i != -1:
+            open_end = html.find(">", i)
+            if open_end != -1:
+                cut = open_end + 1
+                path.write_text(html[:cut] + "\n" + block + html[cut:], encoding="utf-8")
+                return True
+    path.write_text(block + "\n" + html, encoding="utf-8")
+    return True
+
+
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     write(OUT / "assets" / "style.css", CSS)
@@ -692,12 +752,13 @@ def main() -> int:
     write(OUT / "methodology.html", build_methodology())
     write(OUT / "archive.html", build_archive())
 
-    # The repository root is the landing page. It repeats the executive summary and links into
-    # the desk, so a visitor who lands on the Pages URL sees the answer first.
-    root_html = build_index(root="live-desk/").replace('href="live-desk/assets/style.css"',
-                                                       'href="live-desk/assets/style.css"')
-    write(ROOT / "index.html", root_html.replace("live-desk/index.html", "index.html"))
-    print(f"built {len(list(OUT.rglob('*.html')))} desk pages + root index.html")
+    # The repository root belongs to every layer, so the desk does not replace it.  It prepends
+    # one banner: what is on, how many picks, and the three links that answer the two questions a
+    # reader arrives with.  The injection is idempotent and additive, so no other layer's page is
+    # overwritten and a rebuild never stacks two banners.
+    added = inject_banner(ROOT / "index.html")
+    print(f"built {len(list(OUT.rglob('*.html')))} desk pages" +
+          (" + root banner" if added else " (root banner already in place)"))
     return 0
 
 

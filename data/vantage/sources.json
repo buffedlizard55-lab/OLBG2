@@ -1,0 +1,286 @@
+{
+  "as_of_utc": "2026-10-24T17:45:00Z",
+  "count": 40,
+  "sources": [
+    {
+      "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "scope": "NHL",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct schedule IDs, states, time, venue, records, leaders; FanDuel partnerId 7 odds",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+      "scope": "NHL",
+      "checked_on": "2026-10-24",
+      "what_checked": "2026-27 team summary GP, goals for/against (API excludes shootout deciding goals)",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+      "scope": "NHL",
+      "checked_on": "2026-10-24",
+      "what_checked": "22 Oct Bruins 6-0 Predators; DiPietro 28 saves and Pastrnak two goals, two assists",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156",
+      "scope": "NHL",
+      "checked_on": "2026-10-24",
+      "what_checked": "22 Oct Sharks 6-2 Senators; Askarov 41 saves",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions",
+      "scope": "MLB",
+      "checked_on": "2026-10-24",
+      "what_checked": "World Series Game 2 gamePk, teams, pitchers, date, time, status",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+      "scope": "MLB",
+      "checked_on": "2026-10-24",
+      "what_checked": "Rays and Brewers regular-season W/L, scored/allowed, home/road splits",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656,688107,642547&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)",
+      "scope": "MLB",
+      "checked_on": "2026-10-24",
+      "what_checked": "Rasmussen and Henderson 2026 season pitching ERA and innings",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "scope": "NBA",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct 1:00 pm ET report: matchup, scheduled time, teams, listed absences",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.nba.com/standings",
+      "scope": "NBA",
+      "checked_on": "2026-10-24",
+      "what_checked": "2026-27 standings W/L; sample size one or two games",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "scope": "URC",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct Ospreys–Dragons pairing, 19:00 UK kickoff, named squads",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+      "scope": "URC",
+      "checked_on": "2026-10-24",
+      "what_checked": "Ospreys and Dragons 2026-27 GP/W/PF/PA, pre-match",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://top14.lnr.fr/classement",
+      "scope": "Top 14",
+      "checked_on": "2026-10-24",
+      "what_checked": "2026-27 teams' GP, W, PF and PA",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "scope": "Volleyball",
+      "checked_on": "2026-10-24",
+      "what_checked": "25 Oct SuperLega pairings and local starts; round-one context",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "ODI tri-series 25/27/29 Oct pairings and venues",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "Pakistan 87-run win against England on 20 Oct; Arafat Minhas 6-40 and 59",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://scoring.nzc.nz/fixtures",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "India vs New Zealand 3rd T20I date and pairing; displayed clock varies by reader timezone, so no UTC start transcribed",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "25 Oct India W vs Zimbabwe W second ODI, 14:00 IST, venue",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.bcci.tv/matches/023cf7d3-6571-4932-997b-cac801ed0b4a/india-women-vs-zimbabwe-women",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "India W won first ODI by nine wickets on 23 Oct",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.bcci.tv/news/article/jintimani-kalita-replaces-renuka-singh-thakur-in-indias-odi-squad",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "Renuka Singh Thakur replaced by Jintimani Kalita for ODI squad",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "scope": "Tennis",
+      "checked_on": "2026-10-24",
+      "what_checked": "Rybakina vs Fernandez final on Sunday, semi-final results and H2H 3-2",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.wtatennis.com/tournaments/405/osaka/2026/draws",
+      "scope": "Tennis",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct Osaka draw still displayed semi-final slots; cannot confirm Krueger–Siniakova final",
+      "capture": "Official-site indexed draw excerpt only; direct WTA page rendered notifications, not draw cells"
+    },
+    {
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "scope": "Tennis",
+      "checked_on": "2026-10-24",
+      "what_checked": "Sunday final: Medvedev vs Basilashvili, not before 15:00 local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+      "scope": "Tennis",
+      "checked_on": "2026-10-24",
+      "what_checked": "Saturday results, Medvedev 37 hard-court wins, Basilashvili over Tsitsipas",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "scope": "Darts",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct evening session pairings; exact match starts not published",
+      "capture": "Official-site indexed excerpt only; direct page body was blocked by a cookie wall; manual re-read needed"
+    },
+    {
+      "url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "scope": "Gaelic Football",
+      "checked_on": "2026-10-24",
+      "what_checked": "25 Oct St Finbarrs–Nemo Rangers Cork final, 16:00 local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+      "scope": "Hurling",
+      "checked_on": "2026-10-24",
+      "what_checked": "25 Oct Ballyhale Shamrocks–Tullaroan Kilkenny senior final, venue; no official throw-in time on this article",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "scope": "Greyhounds",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct Scurry Gold Cup final and Shadow Storm 15.66sec semi; not a race-card source",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH",
+      "scope": "Formula 1",
+      "checked_on": "2026-10-24",
+      "what_checked": "Austin race 25 Oct 15:00 track local, 24 Oct qualifying 16:00 local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/",
+      "scope": "Rugby League",
+      "checked_on": "2026-10-24",
+      "what_checked": "2026 RLWC fixtures, but no matching OLBG match tips in the captured first page",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "scope": "Handball",
+      "checked_on": "2026-10-24",
+      "what_checked": "EHF 2026-27 group standings and Oct 28–29 upcoming fixture links",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.pgatour.com/leaderboard",
+      "scope": "Golf",
+      "checked_on": "2026-10-24",
+      "what_checked": "Bermuda event underway 22–25 Oct, while OLBG golf hub shows no tips",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2",
+      "scope": "Snooker",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct Mark Williams v Jak Jones Northern Ireland Open semifinal; WST labels it Live Now",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau",
+      "scope": "Top 14",
+      "checked_on": "2026-10-24",
+      "what_checked": "named 2026-27 fixture, local kickoff, team sheets, venue",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles",
+      "scope": "Top 14",
+      "checked_on": "2026-10-24",
+      "what_checked": "named 2026-27 fixture, local kickoff, team sheets, venue",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://cricket.co.za/csa-announces-unmissable-2026-27-home-season-for-the-proteas-men/",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "3rd South Africa–Australia Test begins 27 Oct and runs to 31 Oct",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.cricket.com.au/news/4597818/south-africa-v-australia-third-test-match-preview-guide-cape-town-newlands-broadcast-details-how-to-watch-team-news-session-start-times-2026",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "24 Oct Cricket Australia preview reports 10:30 South Africa local for the 27 Oct start, conflicting with earlier CSA 10:00",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/",
+      "scope": "EHF",
+      "checked_on": "2026-10-24",
+      "what_checked": "SC Magdeburg vs HC Kriens-Luzern in group-phase Round 6 at 20:45 league local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+      "scope": "EHF",
+      "checked_on": "2026-10-24",
+      "what_checked": "HC Vardar 1961 vs MT Melsungen in group-phase Round 6 at 18:45 league local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/",
+      "scope": "EHF",
+      "checked_on": "2026-10-24",
+      "what_checked": "Industria Kielce vs Kolstad Håndball in group-phase Round 6 at 20:45 league local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/",
+      "scope": "EHF",
+      "checked_on": "2026-10-24",
+      "what_checked": "GOG vs Sporting Clube de Portugal in group-phase Round 6 at 18:45 league local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    }
+  ]
+}

@@ -1,0 +1,1884 @@
+{
+  "as_of_utc": "2026-10-24T17:45:00Z",
+  "count": 114,
+  "by_category": {
+    "five-per-sport shortfall": 15,
+    "unpriced official match": 26,
+    "unverified listing": 56,
+    "cross-source irregularity": 17
+  },
+  "flags": [
+    {
+      "id": "V-GAP-golf",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Golf",
+      "summary": "Golf: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "0 OLBG first-page event rows; 0 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.pgatour.com/leaderboard",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/5"
+    },
+    {
+      "id": "V-GAP-volleyball",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Volleyball",
+      "summary": "Volleyball: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "12 OLBG first-page event rows; 2 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "V-GAP-rugby-union",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Rugby Union",
+      "summary": "Rugby Union: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "6 OLBG first-page event rows; 3 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/9"
+    },
+    {
+      "id": "V-GAP-cricket",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Cricket",
+      "summary": "Cricket: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "11 OLBG first-page event rows; 4 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/7"
+    },
+    {
+      "id": "V-GAP-snooker",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Snooker",
+      "summary": "Snooker: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "1 OLBG first-page event rows; 1 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/8"
+    },
+    {
+      "id": "V-GAP-darts",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Darts",
+      "summary": "Darts: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "6 OLBG first-page event rows; 2 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15"
+    },
+    {
+      "id": "V-GAP-baseball",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Baseball",
+      "summary": "Baseball: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "1 OLBG first-page event rows; 1 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Baseball/12"
+    },
+    {
+      "id": "V-GAP-gaelic-sports",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Gaelic Sports",
+      "summary": "Gaelic Sports: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "5 OLBG first-page event rows; 2 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+    },
+    {
+      "id": "V-GAP-greyhounds",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Greyhounds",
+      "summary": "Greyhounds: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "9 OLBG first-page event rows; 0 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+    },
+    {
+      "id": "V-GAP-tennis",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Tennis",
+      "summary": "Tennis: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "6 OLBG first-page event rows; 2 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
+    },
+    {
+      "id": "V-GAP-motor-racing",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Motor Racing",
+      "summary": "Motor Racing: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "1 OLBG first-page event rows; 1 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/14"
+    },
+    {
+      "id": "V-GAP-handball",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Handball",
+      "summary": "Handball: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "10 OLBG first-page event rows; 4 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/20"
+    },
+    {
+      "id": "V-GAP-ice-hockey",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Ice Hockey",
+      "summary": "Ice Hockey: 1 / 5 high-confidence 30+ word write-ups",
+      "detail": "16 OLBG first-page event rows; 11 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "V-GAP-basketball",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Basketball",
+      "summary": "Basketball: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "10 OLBG first-page event rows; 8 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "id": "V-GAP-rugby-league",
+      "severity": "high",
+      "category": "five-per-sport shortfall",
+      "sport": "Rugby League",
+      "summary": "Rugby League: 0 / 5 high-confidence 30+ word write-ups",
+      "detail": "3 OLBG first-page event rows; 0 first-hand official matches. No additional high-confidence, quoted, verified-future match met the evidence gate. Do not manufacture missing predictions to reach five.",
+      "missing_fields": [
+        "remaining high-confidence predictions"
+      ],
+      "official_url": "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/",
+      "official_link_role": "review target; not proof of unconfirmed events",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    },
+    {
+      "id": "V-ROW-199999",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Ice Hockey",
+      "summary": "ANA Ducks @ PHI Flyers",
+      "detail": "OLBG says Today 13:07. started before capture. PRE on league feed at collection Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/ANA_Ducks_@_PHI_Flyers/13?event_id=199999"
+    },
+    {
+      "id": "V-ROW-200024",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Ice Hockey",
+      "summary": "EHC Kloten vs Rapperswil Jona Lakers",
+      "detail": "OLBG says Today 13:45. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/EHC_Kloten_vs_Rapperswil_Jona_Lakers/13?event_id=200024"
+    },
+    {
+      "id": "V-ROW-200019",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Ice Hockey",
+      "summary": "EHC Biel vs Zug",
+      "detail": "OLBG says Today 13:45. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/EHC_Biel_vs_Zug/13?event_id=200019"
+    },
+    {
+      "id": "V-ROW-200022",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Ice Hockey",
+      "summary": "SCL Tigers vs Davos",
+      "detail": "OLBG says Today 13:45. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/SCL_Tigers_vs_Davos/13?event_id=200022"
+    },
+    {
+      "id": "V-ROW-200020",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Ice Hockey",
+      "summary": "Ambri Piotta vs HC Ajoie",
+      "detail": "OLBG says Today 13:45. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/Ambri_Piotta_vs_HC_Ajoie/13?event_id=200020"
+    },
+    {
+      "id": "V-ROW-200004",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Ice Hockey",
+      "summary": "DET Red Wings @ CGY Flames",
+      "detail": "OLBG says Today 23:07. confirmed future at capture.  Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004"
+    },
+    {
+      "id": "V-ROW-200023",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Ice Hockey",
+      "summary": "Lausanne HC vs Fribourg Gotteron",
+      "detail": "OLBG says Today 13:45. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/Other/Switzerland_NLA/Lausanne_HC_vs_Fribourg_Gotteron/13?event_id=200023"
+    },
+    {
+      "id": "V-ROW-536075",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Basketball",
+      "summary": "Slask Wroclaw vs Astoria Bydgoszcz",
+      "detail": "OLBG says Today 13:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/European/Poland_PLK/Slask_Wroclaw_vs_Astoria_Bydgoszcz/4?event_id=536075"
+    },
+    {
+      "id": "V-ROW-536087",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Basketball",
+      "summary": "Pato Basquete vs Botafogo",
+      "detail": "OLBG says Today 18:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/Other/Brazil_NBB/Pato_Basquete_vs_Botafogo/4?event_id=536087"
+    },
+    {
+      "id": "V-ROW-536115",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "HOU Rockets @ ATL Hawks",
+      "detail": "OLBG says Today 20:30. confirmed future at capture. Only 1–2 official season games; price withheld Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_ATL_Hawks/4?event_id=536115"
+    },
+    {
+      "id": "V-ROW-536117",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "MIA Heat @ CHA Hornets",
+      "detail": "OLBG says Today 18:00. confirmed future at capture. Only 1–2 official season games; price withheld Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIA_Heat_@_CHA_Hornets/4?event_id=536117"
+    },
+    {
+      "id": "V-ROW-536112",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "BKN Nets @ CLE Cavaliers",
+      "detail": "OLBG says Today 19:30. confirmed future at capture. Only 1–2 official season games; price withheld Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/BKN_Nets_@_CLE_Cavaliers/4?event_id=536112"
+    },
+    {
+      "id": "V-ROW-536111",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "MIL Bucks @ PHI 76ers",
+      "detail": "OLBG says Today 19:30. confirmed future at capture. Milwaukee report NOT YET SUBMITTED at 1:00pm ET Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_PHI_76ers/4?event_id=536111"
+    },
+    {
+      "id": "V-ROW-536114",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "SA Spurs @ DAL Mavericks",
+      "detail": "OLBG says Today 20:00. confirmed future at capture. Only 1–2 official season games; price withheld Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/SA_Spurs_@_DAL_Mavericks/4?event_id=536114"
+    },
+    {
+      "id": "V-ROW-536113",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "WAS Wizards @ CHI Bulls",
+      "detail": "OLBG says Today 20:00. confirmed future at capture. Only 1–2 official season games; price withheld Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/WAS_Wizards_@_CHI_Bulls/4?event_id=536113"
+    },
+    {
+      "id": "V-ROW-536116",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "NO Pelicans @ DEN Nuggets",
+      "detail": "OLBG says Today 22:00. confirmed future at capture. OLBG hour differs from official ET report; use report time Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_DEN_Nuggets/4?event_id=536116"
+    },
+    {
+      "id": "V-ROW-536118",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Basketball",
+      "summary": "GS Warriors @ PHX Suns",
+      "detail": "OLBG says Today 23:00. confirmed future at capture. OLBG hour differs from official ET report; use report time Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/GS_Warriors_@_PHX_Suns/4?event_id=536118"
+    },
+    {
+      "id": "V-ROW-902171",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Tennis",
+      "summary": "Ashlyn Krueger vs Katerina Siniakova",
+      "detail": "OLBG says Tomorrow 00:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.wtatennis.com/tournaments/405/osaka/2026/draws",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ashlyn_Krueger_vs_Katerina_Siniakova/3?event_id=902171"
+    },
+    {
+      "id": "V-ROW-902207",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Tennis",
+      "summary": "Elena Rybakina vs Leylah Fernandez",
+      "detail": "OLBG says Tomorrow 05:00. start time unconfirmed. Sunday date confirmed; official start time not recovered; no priced pick Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Elena_Rybakina_vs_Leylah_Fernandez/3?event_id=902207"
+    },
+    {
+      "id": "V-ROW-902251",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Tennis",
+      "summary": "Daniil Medvedev vs Nikoloz Basilashvili",
+      "detail": "OLBG says Tomorrow 06:00. confirmed future at capture. ATP player overview records are not current to this semifinal; no strength price Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251"
+    },
+    {
+      "id": "V-ROW-902175",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Tennis",
+      "summary": "Alexandra Eala vs Mika Stojsavljevic",
+      "detail": "OLBG says 26 Oct 22:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Alexandra_Eala_vs_Mika_Stojsavljevic/3?event_id=902175"
+    },
+    {
+      "id": "V-ROW-902173",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Tennis",
+      "summary": "Moyuka Uchijima vs Elise Mertens",
+      "detail": "OLBG says 26 Oct 22:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Moyuka_Uchijima_vs_Elise_Mertens/3?event_id=902173"
+    },
+    {
+      "id": "V-ROW-902172",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Tennis",
+      "summary": "Leylah Fernandez vs Himeno Sakatsume",
+      "detail": "OLBG says 26 Oct 22:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Leylah_Fernandez_vs_Himeno_Sakatsume/3?event_id=902172"
+    },
+    {
+      "id": "V-ROW-188845",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Cricket",
+      "summary": "Toronto Kings vs Vancouver Guardians T20",
+      "detail": "OLBG says Today 19:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Toronto_Kings_vs_Vancouver_Guardians_T20/7?event_id=188845"
+    },
+    {
+      "id": "V-ROW-188838",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Cricket",
+      "summary": "Pakistan vs England One Day Match",
+      "detail": "OLBG says Tomorrow 04:00. confirmed future at capture.  Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Pakistan_vs_England_One_Day_Match/7?event_id=188838"
+    },
+    {
+      "id": "V-ROW-188851",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Cricket",
+      "summary": "North West Dragons vs Northern Cape Heat T20",
+      "detail": "OLBG says Tomorrow 07:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/North_West_Dragons_vs_Northern_Cape_Heat_T20/7?event_id=188851"
+    },
+    {
+      "id": "V-ROW-188850",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Cricket",
+      "summary": "Tuskers vs Western Province T20",
+      "detail": "OLBG says Tomorrow 07:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Tuskers_vs_Western_Province_T20/7?event_id=188850"
+    },
+    {
+      "id": "V-ROW-188852",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Cricket",
+      "summary": "New Zealand vs India 3rd T20 Match",
+      "detail": "OLBG says 27 Oct 03:00. start time unconfirmed. NZC page shows a reader-local time with no zone and changes with the capture locale. UTC start withheld Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://scoring.nzc.nz/fixtures",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_3rd_T20_Match/7?event_id=188852"
+    },
+    {
+      "id": "V-ROW-188847",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Cricket",
+      "summary": "India W vs Zimbabwe W 2nd ODI",
+      "detail": "OLBG says Tomorrow 04:30. confirmed future at capture. OLBG lists a top-batsman prop, not a match-winner; no batter-specific rate captured Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/India_W_vs_Zimbabwe_W_2nd_ODI/7?event_id=188847"
+    },
+    {
+      "id": "V-ROW-188848",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Cricket",
+      "summary": "Eastern Storm vs South Africa Emerging T20",
+      "detail": "OLBG says Tomorrow 07:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Eastern_Storm_vs_South_Africa_Emerging_T20/7?event_id=188848"
+    },
+    {
+      "id": "V-ROW-188849",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Cricket",
+      "summary": "Boland vs Titans T20",
+      "detail": "OLBG says Tomorrow 07:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Boland_vs_Titans_T20/7?event_id=188849"
+    },
+    {
+      "id": "V-ROW-188835",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Cricket",
+      "summary": "South Africa vs Australia",
+      "detail": "OLBG says 31 Oct 04:30. timing / name conflict. Two official sources disagree on start time and OLBG displays 31 October (last scheduled day). Leave time and price blank Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://cricket.co.za/csa-announces-unmissable-2026-27-home-season-for-the-proteas-men/",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/South_Africa_vs_Australia/7?event_id=188835"
+    },
+    {
+      "id": "V-ROW-182606",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Cricket",
+      "summary": "World Cup 2027",
+      "detail": "OLBG says 21 Nov 2027 05:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/World_Cup_2027/7?event_id=182606"
+    },
+    {
+      "id": "V-ROW-187503",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Cricket",
+      "summary": "T20 Big Bash 2026-27",
+      "detail": "OLBG says 12 Dec 03:15. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/T20_Big_Bash_2026-27/7?event_id=187503"
+    },
+    {
+      "id": "V-ROW-609581",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Rugby Union",
+      "summary": "Ospreys v Dragons",
+      "detail": "OLBG says Today 14:00. starts within 90 minutes; withheld.  Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Ospreys_v_Dragons/9?event_id=609581"
+    },
+    {
+      "id": "V-ROW-609555",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Rugby Union",
+      "summary": "Toulon v Pau",
+      "detail": "OLBG says Today 15:00. starts within 90 minutes; withheld.  Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Toulon_v_Pau/9?event_id=609555"
+    },
+    {
+      "id": "V-ROW-609583",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Rugby Union",
+      "summary": "USA v Australia A",
+      "detail": "OLBG says Today 19:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/USA_v_Australia_A/9?event_id=609583"
+    },
+    {
+      "id": "V-ROW-609571",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Rugby Union",
+      "summary": "Harlequins v Saracens",
+      "detail": "OLBG says Tomorrow 11:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Harlequins_v_Saracens/9?event_id=609571"
+    },
+    {
+      "id": "V-ROW-609013",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Rugby Union",
+      "summary": "Six Nations 2027",
+      "detail": "OLBG says 14 Mar 2027 16:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Six_Nations_2027/9?event_id=609013"
+    },
+    {
+      "id": "V-ROW-37019",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "UVC Graz W vs Sportunion St Polten W",
+      "detail": "OLBG says Today 14:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/UVC_Graz_W_vs_Sportunion_St_Polten_W/21?event_id=37019"
+    },
+    {
+      "id": "V-ROW-37012",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "SWD Duren vs WWK Volleys Munchen",
+      "detail": "OLBG says Today 13:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/SWD_Duren_vs_WWK_Volleys_Munchen/21?event_id=37012"
+    },
+    {
+      "id": "V-ROW-37078",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "Mogilno W vs Chemik Police W",
+      "detail": "OLBG says Today 14:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Mogilno_W_vs_Chemik_Police_W/21?event_id=37078"
+    },
+    {
+      "id": "V-ROW-37013",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "Helios Grizzlys Giesen vs Berlin Volleys",
+      "detail": "OLBG says Today 13:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Helios_Grizzlys_Giesen_vs_Berlin_Volleys/21?event_id=37013"
+    },
+    {
+      "id": "V-ROW-37067",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "Beziers W vs Le Cannet W",
+      "detail": "OLBG says Today 13:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Beziers_W_vs_Le_Cannet_W/21?event_id=37067"
+    },
+    {
+      "id": "V-ROW-37002",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "Mackenzie W vs Osasco W",
+      "detail": "OLBG says Today 15:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Mackenzie_W_vs_Osasco_W/21?event_id=37002"
+    },
+    {
+      "id": "V-ROW-37003",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "Abel-Moda Brusque W vs Praia Clube W",
+      "detail": "OLBG says Today 20:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Abel-Moda_Brusque_W_vs_Praia_Clube_W/21?event_id=37003"
+    },
+    {
+      "id": "V-ROW-36994",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Volleyball",
+      "summary": "Trentino vs Cisterna",
+      "detail": "OLBG says Tomorrow 12:00. confirmed future at capture.  Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994"
+    },
+    {
+      "id": "V-ROW-36965",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "CHKS Chelm vs Resovia Rzeszow",
+      "detail": "OLBG says Tomorrow 13:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/CHKS_Chelm_vs_Resovia_Rzeszow/21?event_id=36965"
+    },
+    {
+      "id": "V-ROW-36997",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Volleyball",
+      "summary": "Perugia vs Pordenone",
+      "detail": "OLBG says Tomorrow 13:00. timing / name conflict. OLBG shortens 'Tinet Prata di Pordenone' to 'Pordenone'; alias requires review Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997"
+    },
+    {
+      "id": "V-ROW-37060",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "Activia VB W vs VC Sneek W",
+      "detail": "OLBG says Today 13:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Activia_VB_W_vs_VC_Sneek_W/21?event_id=37060"
+    },
+    {
+      "id": "V-ROW-37061",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Volleyball",
+      "summary": "Sliedrecht W vs Apollo 8 W",
+      "detail": "OLBG says Today 14:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Sliedrecht_W_vs_Apollo_8_W/21?event_id=37061"
+    },
+    {
+      "id": "V-ROW-12090",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Handball",
+      "summary": "HBW Balingen Weilstetten vs MT Melsungen",
+      "detail": "OLBG says Today 14:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/HBW_Balingen_Weilstetten_vs_MT_Melsungen/20?event_id=12090"
+    },
+    {
+      "id": "V-ROW-12103",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Handball",
+      "summary": "BM Logrono La Rioja vs BM Cangas",
+      "detail": "OLBG says Today 13:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Logrono_La_Rioja_vs_BM_Cangas/20?event_id=12103"
+    },
+    {
+      "id": "V-ROW-12102",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Handball",
+      "summary": "BM Granollers vs Angel Ximenez Puente Genil",
+      "detail": "OLBG says Tomorrow 07:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Granollers_vs_Angel_Ximenez_Puente_Genil/20?event_id=12102"
+    },
+    {
+      "id": "V-ROW-12092",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Handball",
+      "summary": "Rhein Neckar Lowen vs SC Magdeburg",
+      "detail": "OLBG says Tomorrow 10:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092"
+    },
+    {
+      "id": "V-ROW-12126",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Handball",
+      "summary": "Luxembourg W vs Great Britain W",
+      "detail": "OLBG says Tomorrow 11:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Luxembourg_W_vs_Great_Britain_W/20?event_id=12126"
+    },
+    {
+      "id": "V-ROW-12105",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Handball",
+      "summary": "BM Torrelavega vs BM Proin",
+      "detail": "OLBG says Tomorrow 13:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/BM_Torrelavega_vs_BM_Proin/20?event_id=12105"
+    },
+    {
+      "id": "V-ROW-32399",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Darts",
+      "summary": "Krzysztof Ratajski vs Kevin Doets",
+      "detail": "OLBG says Today 13:15. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Kevin_Doets/15?event_id=32399"
+    },
+    {
+      "id": "V-ROW-32400",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Darts",
+      "summary": "Jonny Clayton vs Josh Rock",
+      "detail": "OLBG says Today 16:15. start time unconfirmed. Official-site indexed excerpt only; direct PDC page returned cookie wall. Exact start missing and match may be underway. No price Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Josh_Rock/15?event_id=32400"
+    },
+    {
+      "id": "V-ROW-32397",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Darts",
+      "summary": "Nathan Aspinall vs Luke Littler",
+      "detail": "OLBG says Today 15:15. start time unconfirmed. Official-site indexed excerpt only; direct PDC page returned cookie wall. Exact start missing and match may be underway. No price Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Luke_Littler/15?event_id=32397"
+    },
+    {
+      "id": "V-ROW-32398",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Darts",
+      "summary": "Martin Schindler vs Jermaine Wattimena",
+      "detail": "OLBG says Today 14:15. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Martin_Schindler_vs_Jermaine_Wattimena/15?event_id=32398"
+    },
+    {
+      "id": "V-ROW-32407",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Darts",
+      "summary": "Gerwyn Price vs Stephen Bunting",
+      "detail": "OLBG says Tomorrow 07:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Stephen_Bunting/15?event_id=32407"
+    },
+    {
+      "id": "V-ROW-32338",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Darts",
+      "summary": "European Championship",
+      "detail": "OLBG says Tomorrow 14:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338"
+    },
+    {
+      "id": "V-ROW-9952",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Snooker",
+      "summary": "Mark Williams v Jak Jones",
+      "detail": "OLBG says Today 14:05. official page labels this live; withheld. WST marked Live Now at read time; do not publish a pre-match selection Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Snooker/All_Snooker/All_Events/Mark_Williams_v_Jak_Jones/8?event_id=9952"
+    },
+    {
+      "id": "V-ROW-3532",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Gaelic Sports",
+      "summary": "Moycullen v Salthill-Knocknacarra",
+      "detail": "OLBG says Tomorrow 12:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Moycullen_v_Salthill-Knocknacarra/25?event_id=3532"
+    },
+    {
+      "id": "V-ROW-3530",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Gaelic Sports",
+      "summary": "St Finbarrs v Nemo Rangers",
+      "detail": "OLBG says Tomorrow 12:00. confirmed future at capture. OLBG handicap +1.5 has no independent current-form margin input; no price Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/St_Finbarrs_v_Nemo_Rangers/25?event_id=3530"
+    },
+    {
+      "id": "V-ROW-3531",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Gaelic Sports",
+      "summary": "Kanturk v Eire Og Cor",
+      "detail": "OLBG says 01 Nov 09:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Kanturk_v_Eire_Og_Cor/25?event_id=3531"
+    },
+    {
+      "id": "V-ROW-3537",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Gaelic Sports",
+      "summary": "Fr Caseys v Kildimo Pallaskenry",
+      "detail": "OLBG says 01 Nov 10:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Fr_Caseys_v_Kildimo_Pallaskenry/25?event_id=3537"
+    },
+    {
+      "id": "V-ROW-690013",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "8:54 Monmore",
+      "detail": "OLBG says Today 15:54. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/8:54_Monmore/28?event_id=690013"
+    },
+    {
+      "id": "V-ROW-690017",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "9:14 Monmore",
+      "detail": "OLBG says Today 16:14. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:14_Monmore/28?event_id=690017"
+    },
+    {
+      "id": "V-ROW-689890",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "7:58 Doncaster",
+      "detail": "OLBG says Today 14:58. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/7:58_Doncaster/28?event_id=689890"
+    },
+    {
+      "id": "V-ROW-689892",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "9:18 Dunstall Park",
+      "detail": "OLBG says Today 16:18. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:18_Dunstall_Park/28?event_id=689892"
+    },
+    {
+      "id": "V-ROW-690035",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "10:14 Dunstall Park",
+      "detail": "OLBG says Today 17:14. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/10:14_Dunstall_Park/28?event_id=690035"
+    },
+    {
+      "id": "V-ROW-689951",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "6:10 Central Park",
+      "detail": "OLBG says Today 13:10. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/6:10_Central_Park/28?event_id=689951"
+    },
+    {
+      "id": "V-ROW-689953",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "6:11 Doncaster",
+      "detail": "OLBG says Today 13:11. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/6:11_Doncaster/28?event_id=689953"
+    },
+    {
+      "id": "V-ROW-689954",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "6:14 Monmore",
+      "detail": "OLBG says Today 13:14. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/6:14_Monmore/28?event_id=689954"
+    },
+    {
+      "id": "V-ROW-689956",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Greyhounds",
+      "summary": "6:29 Doncaster",
+      "detail": "OLBG says Today 13:29. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/6:29_Doncaster/28?event_id=689956"
+    },
+    {
+      "id": "V-ROW-913",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Motor Racing",
+      "summary": "USA Grand Prix",
+      "detail": "OLBG says Tomorrow 16:00. confirmed future at capture. Race winner is an outright, not a team-versus-team match; no probabilistic price Both sides' matched, dated numeric performance inputs unavailable",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913"
+    },
+    {
+      "id": "V-ROW-2695857",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Rugby League",
+      "summary": "State of Origin 2027",
+      "detail": "OLBG says 27 May 2027 06:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/All_Rugby_League/All_Events/State_of_Origin_2027/10?event_id=2695857"
+    },
+    {
+      "id": "V-ROW-2801554",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Rugby League",
+      "summary": "Super League 2027",
+      "detail": "OLBG says 02 Oct 2027 13:00. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/All_Rugby_League/All_Events/Super_League_2027/10?event_id=2801554"
+    },
+    {
+      "id": "V-ROW-2801600",
+      "severity": "medium",
+      "category": "unverified listing",
+      "sport": "Rugby League",
+      "summary": "NRL 2027",
+      "detail": "OLBG says 03 Oct 2027 04:30. unverified listing. No same-event official confirmation in this research window Official matching fixture, start and both sides' numeric strength inputs required",
+      "missing_fields": [
+        "confirmed fixture",
+        "official kickoff",
+        "numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/",
+      "official_link_role": "review target only; not evidence for OLBG claim",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/All_Rugby_League/All_Events/NRL_2027/10?event_id=2801600"
+    },
+    {
+      "id": "V-ROW-714",
+      "severity": "medium",
+      "category": "unpriced official match",
+      "sport": "Gaelic Sports",
+      "summary": "Ballyhale Shamrocks v Tullaroan",
+      "detail": "OLBG says Tomorrow 09:45. start time unconfirmed. OLBG says Ballyhale Shamrocks, Kilkenny GAA says Shamrocks Ballyhale (name order not independently reconciled). Official article gives no throw-in time; start and fair line remain blank Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
+      "missing_fields": [
+        "safe future start or sufficient aligned numeric inputs",
+        "originated line",
+        "prediction"
+      ],
+      "official_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+      "official_link_role": "fixture confirmed",
+      "olbg_url": "https://www.olbg.com/betting-tips/Hurling/All_Hurling/All_Events/Ballyhale_Shamrocks_v_Tullaroan/26?event_id=714"
+    },
+    {
+      "id": "V-SCOPE",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "All",
+      "summary": "OLBG inventory incomplete",
+      "detail": "The imported 96 rows are the first visible hub page only. Load More Tips and inline promotional cards mean the complete active slate and all markets were not captured.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "official_link_role": "OLBG discovery source, not official governing body",
+      "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "id": "V-PRICE",
+      "severity": "high",
+      "category": "cross-source irregularity",
+      "sport": "All",
+      "summary": "No current OLBG bookmaker price",
+      "detail": "OLBG pages surfaced no numeric offered odds. A fair price inside -250 to +10000 does not prove an actual bet is offered; NHL game data separately supplied league-served FanDuel snapshots, which may expire before reading.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "V-NHL-SENSITIVITY",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Ice Hockey",
+      "summary": "High grade is sensitive to prior/home edge",
+      "detail": "Boston's 70.4% (fair -238) is an uncalibrated Poisson estimate from 11-game team goals. Repeating the calculation with eight prior games yields 72.1% (fair -258), outside the band; twelve prior games yields 69.0% (fair -223), below high. No injury/starting-goalie adjustment was applied.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007"
+    },
+    {
+      "id": "V-UNCONFIRMED-INJURIES",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "All",
+      "summary": "No official injury claim attached to predictions",
+      "detail": "The NHL league summary, EHF table, MLB stats and Top 14 table do not constitute game-specific injury reports. Blank injury cells mean unknown, not injury-free.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips"
+    },
+    {
+      "id": "V-NBA-TIMES",
+      "severity": "high",
+      "category": "cross-source irregularity",
+      "sport": "Basketball",
+      "summary": "Two OLBG NBA times disagree with official report",
+      "detail": "OLBG listed NOP@DEN at 22:00 and GSW@PHX at 23:00. The NBA 1:00 pm ET injury report lists NOP@DEN at 21:00 and GSW@PHX at 22:00 ET. Only the official reported times are used, and no basketball price was originated from 1-2 games.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Basketball/4"
+    },
+    {
+      "id": "V-CRICKET-DATE",
+      "severity": "high",
+      "category": "cross-source irregularity",
+      "sport": "Cricket",
+      "summary": "OLBG uses last Test day as displayed start",
+      "detail": "OLBG dates South Africa v Australia as 31 October, while Cricket South Africa and Cricket Australia schedule the third Test to begin 27 October. The start time also differs across the two official sources, so it remains blank.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://cricket.co.za/csa-announces-unmissable-2026-27-home-season-for-the-proteas-men/",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/South_Africa_vs_Australia/7?event_id=188835"
+    },
+    {
+      "id": "V-WTA-DRAW",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Tennis",
+      "summary": "Osaka final participants unconfirmed at cut",
+      "detail": "OLBG has Krueger v Siniakova as a final. WTA Osaka draw at the reading point still displayed semifinals, so this listing is not treated as a confirmed final or assigned a price.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.wtatennis.com/tournaments/405/osaka/2026/draws",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ashlyn_Krueger_vs_Katerina_Siniakova/3?event_id=902171"
+    },
+    {
+      "id": "V-HANDBALL-TIPS",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Handball",
+      "summary": "75% Tie is tip share, not true draw chance",
+      "detail": "OLBG Magdeburg–Kriens event page shows 3 of 4 tipsters backing Tie. EHF table shows Magdeburg 5-0 and Kriens 2-3. Neither figure alone estimates the other; our 1X2 remains an expressly uncalibrated fair estimate.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/SC_Magdeburg_vs_HC_Kriens_Luzern/20?event_id=12136"
+    },
+    {
+      "id": "V-SWISS",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Ice Hockey",
+      "summary": "Swiss National League listings not matched",
+      "detail": "The Switzerland NLA rows on OLBG appear in the first page but no game-specific fixture, start and season scoring pair was confirmed from an official Swiss league source in this pass. They remain entirely blank on the official side.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.nationalleague.ch/",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+    },
+    {
+      "id": "V-GBGB",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Greyhounds",
+      "summary": "Final and generic daily race cannot be equated",
+      "detail": "GBGB confirms a Saturday Scurry Gold Cup final and Avarua Lake among its entrants, but not the 9:18 Dunstall Park OLBG daily race name, trap or price. The GBGB article is a review target, not confirmation of the individual OLBG race.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/28"
+    },
+    {
+      "id": "V-GOLF",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Golf",
+      "summary": "Golf hub has zero tips while PGA event is in progress",
+      "detail": "PGA Tour identifies the Butterfield Bermuda Championship on 22–25 October, but the OLBG Golf hub answered No tips found. No golf pick is created from a third-party market or inferred event.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.pgatour.com/leaderboard",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Golf/5"
+    },
+    {
+      "id": "V-RUGBY-LEAGUE",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Rugby League",
+      "summary": "Only 2027 futures, no OLBG match",
+      "detail": "The three captured OLBG entries are 2027 outright futures. The NRL's 2026 World Cup fixtures are official context, not evidence that OLBG offers match markets for those games.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Rugby_League/10"
+    },
+    {
+      "id": "V-NZC-TIME",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Cricket",
+      "summary": "NZC reader-local time varies across reads",
+      "detail": "NZ Cricket's 27 October third T20I match page showed different reader-local clocks on separate reads without a timezone label. The fixture and venue are confirmed, but its start UTC is blank in this desk.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://scoring.nzc.nz/match/35de7c5e-f734-4003-89db-59d7081e9d29",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_3rd_T20_Match/7?event_id=188852"
+    },
+    {
+      "id": "V-BCCI-TIME",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Cricket",
+      "summary": "BCCI event clock and dated squad schedule differ",
+      "detail": "The BCCI squad announcement explicitly lists 25 October 14:00 IST for India W v Zimbabwe W, while the rendered first-ODI match-centre time appeared as 04:30 without a zone. We converted only the explicitly labelled 14:00 IST value to UTC; player-prop price remains blank.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/India_W_vs_Zimbabwe_W_2nd_ODI/7?event_id=188847"
+    },
+    {
+      "id": "V-NHL-CGY",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Ice Hockey",
+      "summary": "Calgary goals input not independently recovered",
+      "detail": "The Calgary entry straddled a truncated tool-output boundary. Its complete goals-for/goals-against pair was not independently checked for this pass, so Detroit–Calgary retains an official fixture but blank fair lines.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004"
+    },
+    {
+      "id": "V-PDC-INDEX",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Darts",
+      "summary": "PDC direct page is a cookie wall",
+      "detail": "The PDC article URL exposed only a cookie-consent page on direct read. The official-site indexed excerpt supplied the two evening pairings, but no exact start could be independently recovered; no darts price or selection is published.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Darts/15"
+    },
+    {
+      "id": "V-WTA-INDEX",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Tennis",
+      "summary": "Osaka draw not exposed on direct read",
+      "detail": "The official WTA draw page returned notifications instead of draw cells. An official-site search-indexed excerpt still showed semifinals; the OLBG Krueger–Siniakova final was not treated as confirmed, and no price was originated.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.wtatennis.com/tournaments/405/osaka/2026/draws",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
+    }
+  ]
+}

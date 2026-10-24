@@ -1,0 +1,78 @@
+{
+  "as_of_utc": "2026-10-24T17:45:00Z",
+  "reviewed_main_sha": "6926afe",
+  "findings": [
+    {
+      "code": "VR-01",
+      "severity": "high",
+      "path": "index.html:10-35; scripts/build_site.py:443-530",
+      "status": "open",
+      "finding": "The root nav opens /today/ as the new 24 October board but still labels /cadence/ 'Current' and keeps a 23 October stripe and a 23 October hero. Readers can mistake the older picks for today's. The two scopes should be clearly labelled without editing an active integration owner's files.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+    },
+    {
+      "code": "VR-02",
+      "severity": "high",
+      "path": "data/today/olbg_listings.json:1-14; data/vantage/captures/olbg_hurling_first_page.json",
+      "status": "open",
+      "finding": "The 96 imported OLBG records plus one first-hand Hurling record are first-page extracts, not a complete sport inventory. Interleaved promo cards and Load More Tips prevent an exhaustive list without pagination capture.",
+      "source_url": "https://www.olbg.com/betting-tips/Volleyball/21"
+    },
+    {
+      "code": "VR-03",
+      "severity": "high",
+      "path": "data/today/olbg_listings.json:90-150; scripts/today_seed.py:119-150",
+      "status": "open",
+      "finding": "NBA games page failed but the 1pm ET official injury report names eight NBA matchups and tip times. Treat its player-status extract cautiously: row spans and NOT YET SUBMITTED are not a clean injury feed.",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+    },
+    {
+      "code": "VR-04",
+      "severity": "high",
+      "path": "data/today/lines.json:1-60; scripts/today_model.py",
+      "status": "open",
+      "finding": "A fair -250…+10000 calculation is not an observed OLBG price. The NHL league feed does supply a distinct FanDuel partnerId=7 quote for some moneylines; show both separately and never substitute tip support percentages for a probability.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+    },
+    {
+      "code": "VR-05",
+      "severity": "high",
+      "path": "data/cadence/matches.json:1-8; index.html",
+      "status": "open",
+      "finding": "A dated desk stays on GitHub Pages after events start. A clean root needs a visible as-of timestamp and browser-time expiry warning; a successful build or deploy does not refresh the evidence.",
+      "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24"
+    },
+    {
+      "code": "VR-06",
+      "severity": "medium",
+      "path": "COORDINATION.md:3216-3628,4895-4896",
+      "status": "open",
+      "finding": "Historical merge separators and conflict markers remain in the shared task board; they are prior records, not introduced by this session.",
+      "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/COORDINATION.md"
+    },
+    {
+      "code": "VR-07",
+      "severity": "medium",
+      "path": "REPO_REVIEW.md:51-56",
+      "status": "open",
+      "finding": "Legacy scope note says Greyhounds and Gaelic Football are excluded despite the current explicit 15-sport request including both. Older 17-sport desks additionally show eSports/Aussie Rules; keep them historical and out of the current shortlist.",
+      "source_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25"
+    },
+    {
+      "code": "VR-08",
+      "severity": "high",
+      "path": "data/today/olbg_listings.json: first-page NBA & cricket rows",
+      "status": "open",
+      "finding": "OLBG NOP@DEN and GSW@PHX displayed times are one hour later than the NBA's 1pm ET report; its South Africa v Australia row is dated the third Test's final day, not the CSA-confirmed 27 Oct start. Times cannot be silently used as official UTC.",
+      "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+    },
+    {
+      "code": "VR-09",
+      "severity": "medium",
+      "path": "scripts/today_seed.py:169; data/today/olbg_listings.json:1239",
+      "status": "open",
+      "finding": "The separate /today/ source transcript spells Flyers leader 'Michael Michkov'. The NHL 24 Oct game leader object identifies Matvei Michkov with six goals. Vantage uses Matvei and records the older transcript as a typo, without changing another session's files.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+    }
+  ]
+}

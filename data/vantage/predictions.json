@@ -1,0 +1,520 @@
+{
+  "as_of_utc": "2026-10-24T17:45:00Z",
+  "count": 15,
+  "high": 1,
+  "by_sport": {
+    "Baseball": 1,
+    "Handball": 4,
+    "Ice Hockey": 9,
+    "Rugby Union": 1
+  },
+  "predictions": [
+    {
+      "id": "preview-nhl-2026020170",
+      "pick_id": "pick-nhl-2026020170",
+      "fixture_id": "nhl-2026020170",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "headline": "Boston Bruins · Money line (incl. OT/SO)",
+      "selection": "Boston Bruins",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "high",
+      "word_count": 86,
+      "text": "Boston Bruins money line is the single high-confidence, in-band selection in this snapshot. Boston shut out Nashville 6-0 on Thursday; Michael DiPietro stopped 28 shots and David Pastrnak scored twice with two assists. San Jose also arrives with momentum after beating Ottawa 6-2 behind Yaroslav Askarov's 41 saves. Across eleven league games Boston has scored 42 and conceded 22, compared with San Jose's 32 for and 36 against. That defensive gap makes Boston the lean, but the captured FanDuel -178 is not a current OLBG quote.",
+      "evidence_note": "The NHL score feed, team summary and the two October 22 game reports supply the scores, player output and current form. A fixture-specific injury list was not available, so no absence is asserted.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+        "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+        "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "San Jose Sharks: 6-4-1; Macklin Celebrini 5 goals, 9 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Boston Bruins: 8-2-1; David Pastrnak 6 goals, 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "San Jose Sharks GP/GF/GA (11, 32, 36); Boston Bruins GP/GF/GA (11, 42, 22)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Boston defeated Nashville 6-0 on 22 October; Michael DiPietro stopped 28 shots and David Pastrnak scored twice with two assists",
+          "url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154"
+        },
+        {
+          "claim": "San Jose defeated Ottawa 6-2 on 22 October; Yaroslav Askarov made 41 saves",
+          "url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020169",
+      "pick_id": "pick-nhl-2026020169",
+      "fixture_id": "nhl-2026020169",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-24T19:30:00Z",
+      "headline": "New Jersey Devils · Money line (incl. OT/SO)",
+      "selection": "New Jersey Devils",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "medium",
+      "word_count": 86,
+      "text": "New Jersey Devils money line gets a medium, price-sensitive lean against Los Angeles. The Devils show a 6-4-0 record in the NHL game listing, with Jack Hughes on eight assists and Arseny Gritsyuk on five goals. Los Angeles is 2-4-2 and has allowed 29 goals in eight games; Artemi Panarin has six for the Kings. The fair line here is shorter for New Jersey than for Los Angeles, but the league-served FanDuel -194 is shorter still, so this is analysis rather than a claim of value.",
+      "evidence_note": "League matchup listing and 2026-27 NHL team summary supply the team/player numbers. No confirmed game-specific injury fact is used.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Los Angeles Kings: 2-4-2; Artemi Panarin 6 goals; Brandt Clarke 5 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "New Jersey Devils: 6-4-0; Arseny Gritsyuk 5 goals; Jack Hughes 8 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Los Angeles Kings GP/GF/GA (8, 20, 29); New Jersey Devils GP/GF/GA (10, 33, 31)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020174",
+      "pick_id": "pick-nhl-2026020174",
+      "fixture_id": "nhl-2026020174",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "headline": "Vegas Golden Knights · Money line (incl. OT/SO)",
+      "selection": "Vegas Golden Knights",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "medium",
+      "word_count": 76,
+      "text": "Vegas Golden Knights money line is the calculated side at Columbus, graded medium rather than automatic chalk. Vegas comes in 8-4-0, with 45 goals scored across twelve games; Mark Stone has eight goals and Jack Eichel thirteen assists. Columbus is 3-5-0, and its 19 goals in eight outings trail its 29 conceded. That difference supports an away lean, though an eight-game Blue Jackets sample is small and the quoted league partner price can move before faceoff.",
+      "evidence_note": "The matchup and leader numbers are in the NHL 24 October game listing; goal totals come from the NHL team summary.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Vegas Golden Knights: 8-4-0; Mark Stone 8 goals; Jack Eichel 13 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Columbus Blue Jackets: 3-5-0; Kent Johnson 4 goals; Zach Werenski 6 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Vegas Golden Knights GP/GF/GA (12, 45, 36); Columbus Blue Jackets GP/GF/GA (8, 19, 29)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020176",
+      "pick_id": "pick-nhl-2026020176",
+      "fixture_id": "nhl-2026020176",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "headline": "Edmonton Oilers · Money line (incl. OT/SO)",
+      "selection": "Edmonton Oilers",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "medium",
+      "word_count": 75,
+      "text": "Edmonton Oilers money line edges the Toronto matchup on scoring evidence, but the recommendation is only medium. Edmonton's ten-game NHL record is 8-1-1 with 46 goals scored, while Toronto's twelve-game return is 43 scored and 38 conceded. Leon Draisaitl has ten goals and Connor McDavid twenty-three assists; Auston Matthews has eight goals for the Leafs. A lively total is plausible, yet neither a predicted goal count nor the league-served -182 quote guarantees this particular winner.",
+      "evidence_note": "The official score feed names the participants, records and leaders; NHL team summary provides the goals-for/against inputs.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Toronto Maple Leafs: 6-4-2; Auston Matthews 8 goals, 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Edmonton Oilers: 8-1-1; Leon Draisaitl 10 goals; Connor McDavid 23 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Toronto Maple Leafs GP/GF/GA (12, 43, 38); Edmonton Oilers GP/GF/GA (10, 46, 32)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-ehf-magdeburg-kriens",
+      "pick_id": "pick-ehf-magdeburg-kriens",
+      "fixture_id": "ehf-magdeburg-kriens",
+      "sport": "Handball",
+      "start_utc": "2026-10-28T19:45:00Z",
+      "headline": "SC Magdeburg · 1X2 (regular time)",
+      "selection": "SC Magdeburg",
+      "market": "1X2 (regular time)",
+      "confidence": "medium",
+      "word_count": 77,
+      "text": "SC Magdeburg in the three-way, regular-time match winner market is the measured lean against HC Kriens-Luzern. The EHF lists Magdeburg at five wins from five, 176 goals for and 140 against; Kriens has two wins from five and 158 for against 161. That scoring gap is meaningful, but the home three-way estimate still leaves room for a draw. OLBG's most-tipped Tie is a count of opinions, not evidence that a draw occurs in three quarters of games.",
+      "evidence_note": "Both clubs' group figures are published on the EHF standings; the EHF calendar confirms this specific fixture. No player availability is assumed.",
+      "sources": [
+        "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/",
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "SC Magdeburg GP 5 GF 176 GA 140; HC Kriens-Luzern GP 5 GF 158 GA 161",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "SC Magdeburg vs HC Kriens-Luzern, 2026-10-28 20:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-mlb-849802",
+      "pick_id": "pick-mlb-849802",
+      "fixture_id": "mlb-849802",
+      "sport": "Baseball",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "headline": "Milwaukee Brewers · Money line (incl. extras)",
+      "selection": "Milwaukee Brewers",
+      "market": "Money line (incl. extras)",
+      "confidence": "medium",
+      "word_count": 82,
+      "text": "Milwaukee Brewers money line is the medium research selection for World Series Game 2, not an inferred available bet. Milwaukee's official regular-season totals are 103-59 and 832 runs scored against 618 allowed, compared with Tampa Bay's 98-64 and 736 against 650. The MLB schedule lists Logan Henderson opposite Drew Rasmussen as probable starters; their season ERAs are 2.47 and 2.67 respectively. Milwaukee won Game 1 by a run, but neither that result nor a regular-season run rate determines the next postseason game.",
+      "evidence_note": "The MLB schedule confirms matchup, probable pitchers and prior game; the league standings and pitcher endpoint supply the season statistics. OLBG shows no usable numeric quote.",
+      "sources": [
+        "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions",
+        "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+        "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656,688107,642547&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "MLB gamePk 849802 is listed as scheduled, 2026-10-25T00:00Z; Rays at Brewers; Drew Rasmussen and Logan Henderson are probable starters",
+          "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions"
+        },
+        {
+          "claim": "Milwaukee 103-59, 832 RS, 618 RA; Tampa Bay 98-64, 736 RS, 650 RA over 162 regular-season games",
+          "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+        },
+        {
+          "claim": "Rasmussen 2.67 ERA in 172.0 IP; Henderson 2.47 ERA in 98.1 IP",
+          "url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656,688107,642547&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-ehf-kielce-kolstad",
+      "pick_id": "pick-ehf-kielce-kolstad",
+      "fixture_id": "ehf-kielce-kolstad",
+      "sport": "Handball",
+      "start_utc": "2026-10-28T19:45:00Z",
+      "headline": "Industria Kielce · 1X2 (regular time)",
+      "selection": "Industria Kielce",
+      "market": "1X2 (regular time)",
+      "confidence": "medium",
+      "word_count": 78,
+      "text": "Industria Kielce to win in regulation is the small medium edge in its EHF Champions League meeting with Kolstad Håndball. Kielce has 155 goals scored and 153 conceded over five group games; Kolstad's 143 for and 178 against leaves a wider defensive deficit. The fixture is on the EHF's October 28 slate. With only five results on either side, a draw still matters in this three-outcome market and the projected price cannot stand in for a bookmaker offer.",
+      "evidence_note": "The official EHF match page and group table identify the fixture and both teams' complete five-game scoring records.",
+      "sources": [
+        "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/",
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Industria Kielce GP 5 GF 155 GA 153; Kolstad Håndball GP 5 GF 143 GA 178",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Industria Kielce vs Kolstad Håndball, 2026-10-28 20:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020172",
+      "pick_id": "pick-nhl-2026020172",
+      "fixture_id": "nhl-2026020172",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "headline": "Pittsburgh Penguins · Money line (incl. OT/SO)",
+      "selection": "Pittsburgh Penguins",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "low",
+      "word_count": 73,
+      "text": "Pittsburgh Penguins money line is a low-confidence lean, not a must-back favorite. Their NHL listing records 4-6-1 through eleven games, and the team summary shows 36 goals scored against 37 allowed. Nashville is 3-3-3 with 23 for and 28 against in nine; Ryan O'Reilly has four goals and Roman Josi eight assists. Pittsburgh's Evgeni Malkin has six goals, but these clubs' patchy records and the unconfirmed goalie assignments make a strong call difficult.",
+      "evidence_note": "Records and named leaders are in the NHL game listing; official team scoring rates come from the 2026-27 summary. No starting goalie is asserted.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+        "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Nashville Predators: 3-3-3; Ryan O'Reilly 4 goals; Roman Josi 8 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Pittsburgh Penguins: 4-6-1; Evgeni Malkin 6 goals; Erik Karlsson 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Nashville Predators GP/GF/GA (9, 23, 28); Pittsburgh Penguins GP/GF/GA (11, 36, 37)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020175",
+      "pick_id": "pick-nhl-2026020175",
+      "fixture_id": "nhl-2026020175",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "headline": "Carolina Hurricanes · Money line (incl. OT/SO)",
+      "selection": "Carolina Hurricanes",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "low",
+      "word_count": 79,
+      "text": "Carolina Hurricanes money line is only a narrow away lean against St. Louis in our fair prices. Carolina's 8-2-2 record and 47 goals in twelve games are eye-catching, with Sebastian Aho on seven goals and Jackson Blake on ten assists. Yet the Blues have scored 35 in ten, Mason McTavish has six goals, and home ice matters in a close projection. The recorded partner -154 on Carolina is not an OLBG offer and could be gone by puck drop.",
+      "evidence_note": "NHL 24 October score feed supplies records, leaders and the partner quote; team goals were read from the NHL summary.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Carolina Hurricanes: 8-2-2; Sebastian Aho 7 goals; Jackson Blake 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "St. Louis Blues: 5-4-1; Mason McTavish 6 goals; Dylan Holloway 7 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Carolina Hurricanes GP/GF/GA (12, 47, 32); St. Louis Blues GP/GF/GA (10, 35, 31)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020171",
+      "pick_id": "pick-nhl-2026020171",
+      "fixture_id": "nhl-2026020171",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "headline": "New York Rangers · Money line (incl. OT/SO)",
+      "selection": "New York Rangers",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "low",
+      "word_count": 75,
+      "text": "New York Rangers money line has a modest statistical edge in Ottawa, graded low. The Rangers' 7-4-1 is accompanied by 37 goals scored and 29 conceded in twelve games; Adam Fox is listed with fourteen assists. Ottawa is 7-4-0 over eleven and Tim Stützle has seven goals and eight assists. The Senators were beaten 6-2 by San Jose in their previous documented game, though one setback alone is not enough to upgrade an away pick.",
+      "evidence_note": "NHL game listing and summary provide this season's records and scoring; the Sharks–Senators game centre confirms the recent score.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+        "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "New York Rangers: 7-4-1; Alexis Lafrenière 8 goals; Adam Fox 14 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Ottawa Senators: 7-4-0; Tim Stützle 7 goals, 8 assists; Linus Ullmark 7 wins",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "New York Rangers GP/GF/GA (12, 37, 29); Ottawa Senators GP/GF/GA (11, 29, 30)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020177",
+      "pick_id": "pick-nhl-2026020177",
+      "fixture_id": "nhl-2026020177",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-25T01:00:00Z",
+      "headline": "Utah Mammoth · Money line (incl. OT/SO)",
+      "selection": "Utah Mammoth",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "low",
+      "word_count": 81,
+      "text": "Utah Mammoth money line is a tentative home lean over Tampa Bay rather than a strong selection. Utah is 7-4-0, with 41 goals for and 36 against over eleven games; Nick Schmaltz has seven goals and Mikhail Sergachev ten assists. Tampa Bay is 7-3-0, with 34 for and 29 against in ten and Brandon Hagel on seven goals. Those profiles are competitive enough that a small calculated edge should not be mistaken for certainty or for the league partner's posted -144.",
+      "evidence_note": "The NHL score feed lists both teams and leaders and contains the partner quote; team summary provides the two scoring splits.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Tampa Bay Lightning: 7-3-0; Brandon Hagel 7 goals; Nikita Kucherov 9 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Utah Mammoth: 7-4-0; Nick Schmaltz 7 goals; Mikhail Sergachev 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Tampa Bay Lightning GP/GF/GA (10, 34, 29); Utah Mammoth GP/GF/GA (11, 41, 36)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-nhl-2026020179",
+      "pick_id": "pick-nhl-2026020179",
+      "fixture_id": "nhl-2026020179",
+      "sport": "Ice Hockey",
+      "start_utc": "2026-10-25T02:00:00Z",
+      "headline": "Seattle Kraken · Money line (incl. OT/SO)",
+      "selection": "Seattle Kraken",
+      "market": "Money line (incl. OT/SO)",
+      "confidence": "low",
+      "word_count": 73,
+      "text": "Seattle Kraken money line is a low-grade home angle against Minnesota, despite the Wild being the shorter side in the NHL feed's partner quote. Seattle is 7-3-1 through eleven games with 42 goals scored and 37 allowed; Minnesota is 6-3-2 with 32 for and 27 against. Kirill Kaprizov's eleven goals give the visitors obvious danger, so the narrow fair-price tilt toward Seattle is a judgment with plenty of uncertainty, not a market consensus.",
+      "evidence_note": "NHL schedule records the fixture, partner quote and Kaprizov total; team summary supplies goals and games played.",
+      "sources": [
+        "https://api-web.nhle.com/v1/score/2026-10-24",
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "Minnesota Wild: 6-3-2; Kirill Kaprizov 11 goals; Quinn Hughes 11 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Seattle Kraken: 7-3-1; Frederick Gaudreau 6 goals; Chandler Stephenson 8 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Minnesota Wild GP/GF/GA (11, 32, 27); Seattle Kraken GP/GF/GA (11, 42, 37)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-ehf-vardar-melsungen",
+      "pick_id": "pick-ehf-vardar-melsungen",
+      "fixture_id": "ehf-vardar-melsungen",
+      "sport": "Handball",
+      "start_utc": "2026-10-28T17:45:00Z",
+      "headline": "HC Vardar 1961 · 1X2 (regular time)",
+      "selection": "HC Vardar 1961",
+      "market": "1X2 (regular time)",
+      "confidence": "low",
+      "word_count": 78,
+      "text": "HC Vardar 1961 for the regulation-time result is a fragile home lean against MT Melsungen. In the EHF's first five group games Vardar scored 154 and allowed 158, whereas Melsungen scored and conceded 138. The different scoring profiles narrow substantially after accounting for the small sample; a level score is also a distinct outcome. This is low confidence because an assumed home edge and those five games do not establish future player availability or a real offered price.",
+      "evidence_note": "EHF official group table and match page provide the five-game numbers, date and opposing clubs.",
+      "sources": [
+        "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "HC Vardar 1961 GP 5 GF 154 GA 158; MT Melsungen GP 5 GF 138 GA 138",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "HC Vardar 1961 vs MT Melsungen, 2026-10-28 18:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-top14-rochelle-bordeaux",
+      "pick_id": "pick-top14-rochelle-bordeaux",
+      "fixture_id": "top14-rochelle-bordeaux",
+      "sport": "Rugby Union",
+      "start_utc": "2026-10-25T20:05:00Z",
+      "headline": "Union Bordeaux-Bègles · 1X2 (regular time)",
+      "selection": "Union Bordeaux-Bègles",
+      "market": "1X2 (regular time)",
+      "confidence": "low",
+      "word_count": 82,
+      "text": "Union Bordeaux-Bègles to win in regular time is an exceptionally close, low-confidence alternative at Stade Rochelais. The league table has Bordeaux at four wins from six with 215 points for and 151 against; La Rochelle also has four wins, scoring 144 and allowing 135. Louis Bielle-Biarrey is named in Bordeaux's starting side and Grégory Alldritt in La Rochelle's. Home ground and the possible draw stop that larger attack tally from being a sure away victory; the published selection is purely an estimate.",
+      "evidence_note": "Top 14 standings supplies the scoring; the official match sheet names both starting players, fixture and venue.",
+      "sources": [
+        "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles",
+        "https://top14.lnr.fr/classement"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "La Rochelle 4 wins in 6, 144 scored/135 allowed",
+          "url": "https://top14.lnr.fr/classement"
+        },
+        {
+          "claim": "Bordeaux 4 wins in 6, 215 scored/151 allowed",
+          "url": "https://top14.lnr.fr/classement"
+        },
+        {
+          "claim": "Stade Rochelais vs Union Bordeaux-Bègles, 2026-10-25 at 21:05 France local",
+          "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    },
+    {
+      "id": "preview-ehf-gog-sporting",
+      "pick_id": "pick-ehf-gog-sporting",
+      "fixture_id": "ehf-gog-sporting",
+      "sport": "Handball",
+      "start_utc": "2026-10-29T17:45:00Z",
+      "headline": "GOG · 1X2 (regular time)",
+      "selection": "GOG",
+      "market": "1X2 (regular time)",
+      "confidence": "low",
+      "word_count": 79,
+      "text": "GOG in the three-way regular-time market is the thinnest home lean on this card. Its five EHF group matches produced 178 goals for and 172 against, while Sporting Clube de Portugal posted 191 for and 165 against and remains unbeaten with four wins and one draw. Sporting's stronger raw scoring should make a reader pause: GOG's side of this calculation relies on the stated home allowance, not on an injury report or any bookmaker quote. Low confidence is warranted.",
+      "evidence_note": "The EHF official table supports the scoring and record, and its dated match link identifies GOG against Sporting.",
+      "sources": [
+        "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/",
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "sourced_facts": [
+        {
+          "claim": "GOG GP 5 GF 178 GA 172; Sporting Clube de Portugal GP 5 GF 191 GA 165",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "GOG vs Sporting Clube de Portugal, 2026-10-29 18:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/"
+        }
+      ],
+      "injury_status": null,
+      "injury_note": "No official pregame injury/availability information captured for this specific selection; left blank."
+    }
+  ]
+}

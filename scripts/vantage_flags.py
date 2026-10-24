@@ -29,7 +29,7 @@ def generate():
         flags.append(dict(id=f"V-GAP-{sport.lower().replace(' ', '-')}", severity="high",
                           category="five-per-sport shortfall", sport=sport,
                           summary=f"{sport}: {highs[sport]} / 5 high-confidence 30+ word write-ups",
-                          detail=(f"{hub['listings']} OLBG first-page event rows; {hub['official_matches']} first-hand official matches. "
+                          detail=(f"{hub['listings']} OLBG first-page event rows; {hub['official_matches']} authority-matched event records (including disclosed indexed-only reads). "
                                   "No additional high-confidence, quoted, verified-future match met the evidence gate. "
                                   "Do not manufacture missing predictions to reach five."),
                           missing_fields=["remaining high-confidence predictions"],
@@ -77,8 +77,6 @@ def generate():
          "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/", "https://www.olbg.com/betting-tips/Rugby_League/10"),
         ("V-NZC-TIME", "Cricket", "NZC reader-local time varies across reads", "NZ Cricket's 27 October third T20I match page showed different reader-local clocks on separate reads without a timezone label. The fixture and venue are confirmed, but its start UTC is blank in this desk.",
          "https://scoring.nzc.nz/match/35de7c5e-f734-4003-89db-59d7081e9d29", "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_3rd_T20_Match/7?event_id=188852"),
-        ("V-BCCI-TIME", "Cricket", "BCCI event clock and dated squad schedule differ", "The BCCI squad announcement explicitly lists 25 October 14:00 IST for India W v Zimbabwe W, while the rendered first-ODI match-centre time appeared as 04:30 without a zone. We converted only the explicitly labelled 14:00 IST value to UTC; player-prop price remains blank.",
-         "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced", "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/India_W_vs_Zimbabwe_W_2nd_ODI/7?event_id=188847"),
         ("V-NHL-CGY", "Ice Hockey", "Calgary goals input not independently recovered", "The Calgary entry straddled a truncated tool-output boundary. Its complete goals-for/goals-against pair was not independently checked for this pass, so Detroit–Calgary retains an official fixture but blank fair lines.",
          "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2", "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004"),
         ("V-PDC-INDEX", "Darts", "PDC direct page is a cookie wall", "The PDC article URL exposed only a cookie-consent page on direct read. The official-site indexed excerpt supplied the two evening pairings, but no exact start could be independently recovered; no darts price or selection is published.",

@@ -85,7 +85,7 @@ def shell(title: str, current: str, body: str, *, prefix="", subtitle="") -> str
 <a class="brand" href="{prefix}index.html"><span class="brand-mark">V</span><span><b>Vantage</b><small>OLBG2 · 15-sport desk</small></span></a>
 <nav class="nav" aria-label="Primary navigation">{nav}</nav>
 </div></header>
-<div class="ribbon"><div class="shell">Evidence snapshot · <b>24 Oct 2026, 17:50 UTC</b> <span>· First visible OLBG page only · Never a live odds feed</span></div></div>
+<div class="ribbon"><div class="shell">OLBG extract ended · <b>24 Oct 2026, 17:50 UTC</b> <span>· Fixed pricing cutoff 17:50 UTC · Official link checks continued later · Not a live odds feed</span></div></div>
 <main id="content" class="shell"><div class="page-eyebrow">{e(subtitle or title)}</div>
 {body}</main>
 <footer class="footer"><div class="shell footer-inner"><span><b>Vantage</b> · evidence-led match research</span>
@@ -217,7 +217,7 @@ def index_page(matches, lines, picks, predictions, flags, taxonomy):
 <h1>Know the match.<br><span>See the pick.</span></h1>
 <p>Executive summary for the 24 October capture. Only a fully written, officially sourced match prediction with a confirmed future start and a separately captured in-band quote earns the lead spot.</p>
 <div class="hero-actions"><a class="button prime" href="picks.html">Read the picks & analysis →</a><a class="button ghost" href="matches.html">Browse all {matches['listings']} OLBG listings</a></div></div>
-<div class="hero-card"><div>At capture · {e(matches['as_of_utc'])}</div>
+<div class="hero-card"><div>Pricing cutoff · {e(matches['as_of_utc'])}</div>
 <strong>{len(featured)} qualified</strong><span>high-confidence in-band analysis</span><hr>
 <p><b>{today_count}</b> priced records start on 24 Oct UTC · <b>{len(preds)}</b> unique 30+ word analyses in this desk</p></div></section>'''
     body = f'''{hero}

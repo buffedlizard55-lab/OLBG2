@@ -992,6 +992,7 @@
       "venue": "BCA Stadium, Vadodara",
       "official_url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced",
       "extra_official_urls": [
+        "https://www.bcci.tv/matches/88d47fe3-ead4-4b91-b0cc-4bda908fb8d7/india-women-vs-zimbabwe-women",
         "https://www.bcci.tv/matches/023cf7d3-6571-4932-997b-cac801ed0b4a/india-women-vs-zimbabwe-women",
         "https://www.bcci.tv/news/article/jintimani-kalita-replaces-renuka-singh-thakur-in-indias-odi-squad"
       ],
@@ -1002,6 +1003,10 @@
         {
           "claim": "Second ODI scheduled 25 October at 14:00 IST, Vadodara",
           "url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced"
+        },
+        {
+          "claim": "BCCI second ODI match page shows BCA Stadium, Vadodara, and 04:30 EDT (the same instant as 14:00 IST)",
+          "url": "https://www.bcci.tv/matches/88d47fe3-ead4-4b91-b0cc-4bda908fb8d7/india-women-vs-zimbabwe-women"
         },
         {
           "claim": "India Women won the first ODI by nine wickets",
@@ -1278,14 +1283,20 @@
       "start_rule": "calculated from explicitly zoned league time",
       "venue": "Circuit of The Americas",
       "official_url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH",
-      "extra_official_urls": [],
+      "extra_official_urls": [
+        "https://www.formula1.com/en/racing/2026/united-states"
+      ],
       "competition": "Formula 1",
       "kind": "race",
       "status_note": "Race winner is an outright, not a team-versus-team match; no probabilistic price",
       "facts": [
         {
-          "claim": "The Grand Prix is on 25 Oct at 15:00 Austin local; Friday practice led by Charles Leclerc",
+          "claim": "The Grand Prix is on 25 Oct at 15:00 Austin local",
           "url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH"
+        },
+        {
+          "claim": "The Formula 1 United States GP hub lists Charles Leclerc fastest in FP2 at 1:35.291",
+          "url": "https://www.formula1.com/en/racing/2026/united-states"
         }
       ],
       "stats": null

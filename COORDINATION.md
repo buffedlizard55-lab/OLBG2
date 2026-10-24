@@ -5996,3 +5996,10 @@ total (53 of 61) instead of the length of a capped list. `playbook_verify` now a
 **Verification after the merge:** `playbook_verify` 2955 checks / 0 failures; full suite 888 tests OK; a clean clone of
 this branch run through every step in `.github/workflows/pages.yml` finishes with `git diff` empty, so the drift gate
 is green end to end.
+
+**Session close-out (2026-10-24 23:15Z).** PR [#225](https://github.com/buffedlizard55-lab/OLBG2/pull/225)
+merged at 23:09:51Z, carrying the flagged-page count fix, the README pointer and the removal of the banner that
+`/playbook/` now overwrites; `Validate Pages content` passed on it (run 40141272490). Final state: Pages
+`status: built`, and `/latest/` was fetched back from the live site after the deploy — summary, picks, all
+fifteen sport pages and the flagged page render, with the desk's own counts and a source link on every row.
+Open request on the board: one `/latest/` line in the `/playbook/`-owned front door.

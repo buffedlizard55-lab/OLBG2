@@ -5207,3 +5207,14 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
+
+### Cross-scope note: `/clarity/` review page re-audited (not rewritten)
+
+The 7 merge-conflict marker lines that `/clarity/` finding CR-04 reported in `COORDINATION.md` are gone — this
+session removed the eight orphan marker lines left by earlier merges (append-only text preserved, nothing
+deleted but the `<<<<<<<`/`=======`/`>>>>>>>` lines themselves). Two other sessions added desks after
+`/clarity/` was last built, so its own audit now counts 46 published layers instead of 45. `clarity/repo-review.html`
+and `data/clarity/repo_audit.json` were therefore regenerated with `clarity_audit.py` / `clarity_build.py`.
+No wording, verdict or count in that desk was edited by hand: the page now reports what its own audit script
+finds on the current tree (6 findings, 46 layers). Its determinism test `test_rebuild_is_byte_identical`
+passes again, which is what `main` needed.

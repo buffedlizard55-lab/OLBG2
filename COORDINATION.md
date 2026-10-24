@@ -5405,3 +5405,37 @@ and `/executive/` both appear in its evidence list. This session regenerated tha
 **Still open for a later root pass.** `clarity/index.html` is live but is not yet linked from the root landing
 page, and `README.md` does not mention it. Both files were under active claim by other sessions throughout
 this session, so the change is left to the root integrator.
+
+## Session `arena/9f69ce85-olbg2` — release closed: T1–T7 done, deployed 2026-10-24 18:25Z
+
+| Task | Scope | Result |
+|---|---|---|
+| T1 | OLBG inventory, 15 sports | 96 listing rows captured 17:15–17:50Z, 14 sports with events; Golf hub returned "No tips found" |
+| T2 | Official fixture confirmation | 8 fixtures (7 NHL, 1 MLB) from league feeds, each carrying its own source URL |
+| T3 | Originated lines | 20 prices (money line, puck line, match total) from official inputs, plus the fair-price arithmetic |
+| T4 | Picks + confidence | 6 picks: 3 high (2 inside −250…+10000), 3 medium; band failures labelled, never relabelled |
+| T5 | Written previews | 6 previews, ≥30 words each, team form + recent results + stats + injury status, selection named |
+| T6 | Review page | 18 review items, every unverified value left blank and flagged with the source that was tried |
+| T7 | Integration, PR, merge, deploy | **PR #196** merged 17:23:50Z; **PR #198** merged 18:21:23Z; `pages.status = built` 18:25:30Z |
+
+### PR #198 — the fix that unblocked `main` and the deploy
+
+`main` had gone red and Pages was stuck at `errored`, so nothing this release produced was reachable. Root causes, in the order they appeared:
+
+1. `scripts/apply_predictions.py` / `ship_predictions.py` (PR #197) stamped `generated_utc` with `datetime.utcnow()`, so every rebuild rewrote `data/cadence/{picks,predictions}.json` and `index.html` → drift gate failed. **Fixed** by pinning `PINNED_UTC = "2026-10-24T17:25:53Z"`, the authored time already stored in the committed JSON.
+2. `ship_predictions.py` was not part of the CI rebuild chain, so CI silently reverted the 46 predictions to 33. **Fixed** by adding the step to `.github/workflows/pages.yml` between `cadence_predictions.py` and `cadence_build.py`, and by adding it to the cadence determinism test so the test rebuilds the same chain CI does.
+3. `/clarity/` and `/ledger/` repo-review pages are regenerated from the whole tree (dashboard count, conflict markers), so every new desk invalidates them and `main` fails its own drift gate. **Fixed** by regenerating both with their own scripts — no wording edited by hand.
+4. Eight orphan `<<<<<<<` / `=======` / `>>>>>>>` lines left in `COORDINATION.md` by earlier merges, plus one in `METHODOLOGY.md`, were removed. No prose was deleted; both sides of every earlier merge are still present. The `/ledger/` RR-01 finding therefore now reports 0 markers, which is the truth.
+
+**Not claimed:** merging a green build does not verify anyone's facts. The 46 cadence predictions and 46 `/clarity/` fixtures belong to other sessions and were preserved byte-for-byte, not re-checked. This session's own numbers are the 6 picks and 8 fixtures on `/today/`.
+
+### Live
+
+- https://buffedlizard55-lab.github.io/OLBG2/ (root, "Start here · today's picks")
+- https://buffedlizard55-lab.github.io/OLBG2/today/ (executive summary, 15-sport status table, picks first)
+- https://buffedlizard55-lab.github.io/OLBG2/today/picks.html · /today/predictions.html · /today/flagged.html
+
+### Honest gap at close
+
+13 of the 15 sports still publish **no pick**: only ice hockey and baseball had an official feed this session could read. Every one of those rows says why in plain language (blocked feed, no match event listed, no form source) and links the OLBG hub that *does* list the events. That is a shortfall against the five-per-sport target, recorded rather than papered over.
+

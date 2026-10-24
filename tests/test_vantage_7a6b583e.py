@@ -73,6 +73,15 @@ class SourceBoundaryTests(unittest.TestCase):
                 self.assertTrue(r["review_target_url"].startswith("https://"))
                 self.assertEqual(r["official_status"], "unverified listing")
 
+    def test_indexed_exceptions_are_not_mislabelled_as_first_hand_body_reads(self):
+        sources = {s["url"]: s for s in load("sources.json")["sources"]}
+        pdc = sources["https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest"]
+        wta = sources["https://www.wtatennis.com/tournaments/405/osaka/2026/draws"]
+        self.assertIn("indexed excerpt", pdc["capture"])
+        self.assertIn("indexed draw excerpt", wta["capture"])
+        self.assertNotIn("first-hand", pdc["capture"])
+        self.assertEqual(self.picks["focused"], 1)
+
     def test_no_unconfirmed_start_or_expired_fixture_is_priced(self):
         cutoff = datetime.fromisoformat(self.matches["as_of_utc"].replace("Z", "+00:00"))
         self.assertEqual(self.matches["priced"], 15)
@@ -189,16 +198,17 @@ class OriginalLineTests(unittest.TestCase):
         page = (OUT / "index.html").read_text(encoding="utf-8")
         self.assertIn("Know the match.", page)
         self.assertIn("Boston Bruins", page)
-        self.assertIn("17:45 UTC", page)
+        self.assertIn("17:50 UTC", page)
         self.assertIn("fair -238", (OUT / "band.html").read_text(encoding="utf-8").replace("<td>", "fair "))
         js = (OUT / "assets/app.js").read_text(encoding="utf-8")
         self.assertIn("Started / archived", js)
         self.assertIn("card.hidden = true", js)
 
     def test_site_rebuild_is_byte_for_byte_deterministic(self):
-        files = sorted([*OUT.rglob("*.html"), *OUT.rglob("*.css"), *OUT.rglob("*.js")])
+        files = sorted([*OUT.rglob("*.html"), *OUT.rglob("*.css"), *OUT.rglob("*.js"),
+                        ROOT / "research" / "vantage-7a6b583e.md"])
         before = {str(f.relative_to(ROOT)): f.read_bytes() for f in files}
-        for script in ("vantage_seed", "vantage_model", "vantage_predictions", "vantage_flags", "vantage_build"):
+        for script in ("vantage_seed", "vantage_model", "vantage_predictions", "vantage_flags", "vantage_build", "vantage_report"):
             subprocess.run([sys.executable, str(ROOT / "scripts" / (script + ".py"))], cwd=ROOT,
                            check=True, capture_output=True)
         after = {str(f.relative_to(ROOT)): f.read_bytes() for f in files}

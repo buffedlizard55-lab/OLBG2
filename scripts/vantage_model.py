@@ -19,7 +19,7 @@ DATA = ROOT / "data" / "vantage"
 SPORTS = ["Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts", "Baseball",
           "Gaelic Sports", "Greyhounds", "Tennis", "Motor Racing", "Handball", "Ice Hockey",
           "Basketball", "Rugby League"]
-AS_OF = "2026-10-24T17:45:00Z"
+AS_OF = "2026-10-24T17:50:00Z"
 # Own assumptions, NOT official match statistics. See /vantage/methodology.html.
 NHL_PRIOR_GOALS = 3.1
 NHL_SHRINK_GAMES = 10

@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "vantage"
 CAPTURE = DATA / "captures" / "olbg_first_page.json"
 HURLING_CAPTURE = DATA / "captures" / "olbg_hurling_first_page.json"
-STAMP = "2026-10-24T17:45:00Z"  # Freeze the first-hand 24 Oct research window, never runtime now().
+STAMP = "2026-10-24T17:50:00Z"  # Freeze the first-hand 24 Oct research window, never runtime now().
 SPORTS = [
     "Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts", "Baseball",
     "Gaelic Sports", "Greyhounds", "Tennis", "Motor Racing", "Handball", "Ice Hockey",
@@ -42,6 +42,7 @@ URC_TABLE = "https://stats.unitedrugby.com/match-centre/table/2026-27"
 TOP14_TABLE = "https://top14.lnr.fr/classement"
 LEGAVOLLEY = "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en"
 PCB_FIXTURES = "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html"
+PCB_TIMING = "https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html"
 PCB_FORM = "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html"
 NZC_FIXTURES = "https://scoring.nzc.nz/fixtures"
 BCCI_FIXTURES = "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced"
@@ -172,6 +173,7 @@ def assemble() -> tuple[list[dict], list[dict]]:
         (TOP14_TABLE, "Top 14", "2026-27 teams' GP, W, PF and PA"),
         (LEGAVOLLEY, "Volleyball", "25 Oct SuperLega pairings and local starts; round-one context"),
         (PCB_FIXTURES, "Cricket", "ODI tri-series 25/27/29 Oct pairings and venues"),
+        (PCB_TIMING, "Cricket", "PCB press release explicitly says all tri-series matches begin at 1pm PKT"),
         (PCB_FORM, "Cricket", "Pakistan 87-run win against England on 20 Oct; Arafat Minhas 6-40 and 59"),
         (NZC_FIXTURES, "Cricket", "India vs New Zealand 3rd T20I date and pairing; displayed clock varies by reader timezone, so no UTC start transcribed"),
         (BCCI_FIXTURES, "Cricket", "25 Oct India W vs Zimbabwe W second ODI, 14:00 IST, venue"),
@@ -261,9 +263,10 @@ def assemble() -> tuple[list[dict], list[dict]]:
     official.append(fixture("cricket-pak-eng-odi4", "Cricket", "188838", "Pakistan", "England",
                             "2026-10-25", PCB_FIXTURES, competition="Pakistan ODI tri-series",
                             local="13:00", zone="Asia/Karachi", venue="Gaddafi Stadium, Lahore",
-                            timing_note="PCB confirms 1pm PKT", extra_sources=(PCB_FORM,),
+                            timing_note="PCB confirms all tri-series matches at 1pm PKT", extra_sources=(PCB_FORM, PCB_TIMING),
                             facts=[("Pakistan beat England by 87 runs on 20 Oct; Arafat Minhas took 6-40 and scored 59", PCB_FORM),
-                                   ("Pakistan vs England fourth ODI is in Lahore on 25 Oct", PCB_FIXTURES)]))
+                                   ("Pakistan vs England fourth ODI is in Lahore on 25 Oct", PCB_FIXTURES),
+                                   ("PCB announces all matches begin at 13:00 PKT", PCB_TIMING)]))
     official.append(fixture("cricket-nz-ind-t20i3", "Cricket", "188852", "New Zealand", "India",
                             "2026-10-27", NZC_FIXTURES, competition="India in New Zealand T20I",
                             venue="Hnry Stadium, Wellington",
@@ -310,7 +313,7 @@ def assemble() -> tuple[list[dict], list[dict]]:
                             status_note="Sunday date confirmed; official start time not recovered; no priced pick"))
     official.append(fixture("tennis-almaty-final", "Tennis", "902251", "Daniil Medvedev", "Nikoloz Basilashvili",
                             "2026-10-25", ATP_ALMATY, competition="ATP Almaty Open Final",
-                            local="15:00", zone="Asia/Almaty", timing_note="not before 15:00 Almaty local; lower bound, not exact start",
+                            timing_note="not before 15:00 Almaty local; lower bound only; UTC start deliberately blank",
                             extra_sources=(ATP_REPORT,),
                             facts=[("ATP order of play names Medvedev and Basilashvili in Sunday's singles final, not before 15:00 local", ATP_ALMATY),
                                    ("Medvedev led Bublik 6-3 when Bublik retired; Basilashvili beat Tsitsipas 6-4, 6-7(5), 6-3", ATP_REPORT)],

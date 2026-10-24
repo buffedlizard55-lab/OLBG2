@@ -1,6 +1,6 @@
 {
-  "as_of_utc": "2026-10-24T17:45:00Z",
-  "count": 40,
+  "as_of_utc": "2026-10-24T17:50:00Z",
+  "count": 41,
   "sources": [
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-24",
@@ -98,6 +98,13 @@
       "scope": "Cricket",
       "checked_on": "2026-10-24",
       "what_checked": "ODI tri-series 25/27/29 Oct pairings and venues",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "PCB press release explicitly says all tri-series matches begin at 1pm PKT",
       "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
     },
     {

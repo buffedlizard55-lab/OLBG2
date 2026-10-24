@@ -85,6 +85,8 @@ def generate():
          "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest", "https://www.olbg.com/betting-tips/Darts/15"),
         ("V-WTA-INDEX", "Tennis", "Osaka draw not exposed on direct read", "The official WTA draw page returned notifications instead of draw cells. An official-site search-indexed excerpt still showed semifinals; the OLBG Krueger–Siniakova final was not treated as confirmed, and no price was originated.",
          "https://www.wtatennis.com/tournaments/405/osaka/2026/draws", "https://www.olbg.com/betting-tips/Tennis/3"),
+        ("V-ATP-TIME", "Tennis", "Not-before time is a lower bound, not a kickoff", "ATP's Almaty daily schedule says the Medvedev–Basilashvili final is not before 15:00 local, following another match and concert. The exact start is unconfirmed, so this desk leaves official start UTC blank and publishes no pre-match pick.",
+         "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule", "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251"),
     ]:
         flags.append(dict(id=code, severity="high" if code in ("V-PRICE", "V-CRICKET-DATE", "V-NBA-TIMES") else "medium",
                           category="cross-source irregularity", sport=sport, summary=title, detail=detail,

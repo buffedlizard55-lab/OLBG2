@@ -1,11 +1,11 @@
 {
-  "as_of_utc": "2026-10-24T17:45:00Z",
-  "count": 114,
+  "as_of_utc": "2026-10-24T17:50:00Z",
+  "count": 115,
   "by_category": {
     "five-per-sport shortfall": 15,
     "unpriced official match": 26,
     "unverified listing": 56,
-    "cross-source irregularity": 17
+    "cross-source irregularity": 18
   },
   "flags": [
     {
@@ -544,7 +544,7 @@
       "category": "unpriced official match",
       "sport": "Tennis",
       "summary": "Daniil Medvedev vs Nikoloz Basilashvili",
-      "detail": "OLBG says Tomorrow 06:00. confirmed future at capture. ATP player overview records are not current to this semifinal; no strength price Both sides' matched, dated numeric performance inputs unavailable",
+      "detail": "OLBG says Tomorrow 06:00. start time unconfirmed. ATP player overview records are not current to this semifinal; no strength price Started, within 90 minutes of capture, time unconfirmed, or conflicting official details",
       "missing_fields": [
         "safe future start or sufficient aligned numeric inputs",
         "originated line",
@@ -1879,6 +1879,20 @@
       "official_url": "https://www.wtatennis.com/tournaments/405/osaka/2026/draws",
       "official_link_role": "official check source",
       "olbg_url": "https://www.olbg.com/betting-tips/Tennis/3"
+    },
+    {
+      "id": "V-ATP-TIME",
+      "severity": "medium",
+      "category": "cross-source irregularity",
+      "sport": "Tennis",
+      "summary": "Not-before time is a lower bound, not a kickoff",
+      "detail": "ATP's Almaty daily schedule says the Medvedev–Basilashvili final is not before 15:00 local, following another match and concert. The exact start is unconfirmed, so this desk leaves official start UTC blank and publishes no pre-match pick.",
+      "missing_fields": [
+        "source resolution or independently confirmed bookmaker availability"
+      ],
+      "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "official_link_role": "official check source",
+      "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251"
     }
   ]
 }

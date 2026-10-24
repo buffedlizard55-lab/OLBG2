@@ -85,7 +85,7 @@ def shell(title: str, current: str, body: str, *, prefix="", subtitle="") -> str
 <a class="brand" href="{prefix}index.html"><span class="brand-mark">V</span><span><b>Vantage</b><small>OLBG2 · 15-sport desk</small></span></a>
 <nav class="nav" aria-label="Primary navigation">{nav}</nav>
 </div></header>
-<div class="ribbon"><div class="shell">Evidence snapshot · <b>24 Oct 2026, 17:45 UTC</b> <span>· First visible OLBG page only · Never a live odds feed</span></div></div>
+<div class="ribbon"><div class="shell">Evidence snapshot · <b>24 Oct 2026, 17:50 UTC</b> <span>· First visible OLBG page only · Never a live odds feed</span></div></div>
 <main id="content" class="shell"><div class="page-eyebrow">{e(subtitle or title)}</div>
 {body}</main>
 <footer class="footer"><div class="shell footer-inner"><span><b>Vantage</b> · evidence-led match research</span>
@@ -252,7 +252,7 @@ def picks_page(picks, preds):
     rest = [x for x in previews if x["confidence"] != "high"]
     head = f'''<h1>Picks with analysis, not one-word picks</h1>
 <p class="lead">{len(previews)} independently written, source-linked 30+ word analyses. One is high and fits the fair -250…+10000 window with a separate league-served quote also in that band. A quote on the OLBG site itself was not captured. Other estimates are clearly graded medium or low.</p>
-{notice('<b>Temporal gate:</b> all listed selections had official starts at least 90 minutes after the 17:45 UTC cutoff. The browser labels those that have since started. Unverified, started, and unpriced events do not appear on this page.','important')}
+{notice('<b>Temporal gate:</b> all listed selections had official starts at least 90 minutes after the 17:50 UTC cutoff. The browser labels those that have since started. Unverified, started, and unpriced events do not appear on this page.','important')}
 <div class="tabs-line"><a href="#high">High · {len(high)}</a><a href="#other">Medium / low · {len(rest)}</a><a href="band.html">Odds-band board</a></div>'''
     section_high = f'<section id="high"><div class="section-title"><div><div class="eyebrow">Top line</div><h2>High-confidence pick</h2></div></div>{cards_from_predictions(high, all_picks)}</section>'
     section_rest = f'<section id="other"><div class="section-title"><div><div class="eyebrow">Second look</div><h2>Medium and low research</h2><p>Published for transparency; neither grade is promoted to high to reach a daily quota.</p></div></div><div class="prediction-grid">{cards_from_predictions(rest, all_picks)}</div></section>'
@@ -403,7 +403,7 @@ def audit_page(audit):
 def methodology_page(lines, picks, matches):
     a = lines["assumptions"]
     body = f'''<h1>How a row becomes a written selection</h1>
-<p class="lead">The first OLBG page is a discovery list, not a complete fixture feed or an odds provider. An individual match only gets our own fair line after its league confirms the exact participants and a future official start, and both sides have comparable numerical input. At 17:45 UTC we withheld starts under 90 minutes away to allow for static-site publishing latency.</p>
+<p class="lead">The first OLBG page is a discovery list, not a complete fixture feed or an odds provider. An individual match only gets our own fair line after its league confirms the exact participants and a future official start, and both sides have comparable numerical input. At 17:50 UTC we withheld starts under 90 minutes away to allow for static-site publishing latency.</p>
 <div class="steps"><div><span>01</span><b>Discover</b><p>Keep the OLBG event URL, single most-tipped outcome and original displayed time. Do not convert the unspecific publisher clock to UTC.</p></div>
 <div><span>02</span><b>Confirm</b><p>Check the pairing and start against a sporting governing body; dates and time zones are displayed as published. Unknown or conflicting fields are blank and reviewed.</p></div>
 <div><span>03</span><b>Originate</b><p>Use goals or runs for both clubs from a dated league table. Calculations below produce independent, no-vig estimates for win, handicap, total where those inputs exist.</p></div>

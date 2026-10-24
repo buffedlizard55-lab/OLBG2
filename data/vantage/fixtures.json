@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-10-24T17:45:00Z",
+  "as_of_utc": "2026-10-24T17:50:00Z",
   "count": 41,
   "capture_note": "24 Oct official reads transcribed; PDC/WTA Osaka comparisons use indexed excerpts where page body was unavailable. Full raw HTTP bodies not archived",
   "fixtures": [
@@ -929,11 +929,12 @@
       "date": "2026-10-25",
       "start_utc": "2026-10-25T08:00:00Z",
       "published_start": "2026-10-25 13:00 (Asia/Karachi)",
-      "start_rule": "PCB confirms 1pm PKT",
+      "start_rule": "PCB confirms all tri-series matches at 1pm PKT",
       "venue": "Gaddafi Stadium, Lahore",
       "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
       "extra_official_urls": [
-        "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html"
+        "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html",
+        "https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html"
       ],
       "competition": "Pakistan ODI tri-series",
       "kind": "match",
@@ -946,6 +947,10 @@
         {
           "claim": "Pakistan vs England fourth ODI is in Lahore on 25 Oct",
           "url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html"
+        },
+        {
+          "claim": "PCB announces all matches begin at 13:00 PKT",
+          "url": "https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html"
         }
       ],
       "stats": null
@@ -1142,9 +1147,9 @@
       "home": "Daniil Medvedev",
       "away": "Nikoloz Basilashvili",
       "date": "2026-10-25",
-      "start_utc": "2026-10-25T10:00:00Z",
-      "published_start": "2026-10-25 15:00 (Asia/Almaty)",
-      "start_rule": "not before 15:00 Almaty local; lower bound, not exact start",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not before 15:00 Almaty local; lower bound only; UTC start deliberately blank",
       "venue": null,
       "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
       "extra_official_urls": [

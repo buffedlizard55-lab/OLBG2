@@ -57,6 +57,10 @@ MLB StatsAPI schedule, `https://www.formula1.com/en/results/2026/drivers`, plus 
   (`ledger_report.py`, `ledger_build.py`) after the desk directory changed the layer count. No hand editing.
 - `index.html`: **not** replaced. The shared root page is written by `scripts/build_site.py`, and twelve tests in other
   sessions' suites require its links and counts. The desk now injects one idempotent banner above `<main>` instead.
+- `data/clarity/repo_audit.json` and `clarity/repo-review.html`: regenerated with `scripts/clarity_*.py` after the merge,
+  because adding `live-desk/` moved their layer count from 46 to 47. Their finding CR-04 ("7 merge-conflict marker lines
+  in COORDINATION.md") correctly stopped reproducing — those lines were removed earlier today — so the regenerated audit
+  carries 6 findings. The regeneration is by their own scripts; no finding was edited by hand.
 
 ## Earlier sessions' board (preserved)
 

@@ -6089,5 +6089,4 @@ from the published site.
   1-4-1 on the road tipped 86%, Italy-club underdogs tipped 83-100%); WTA/26-Oct ATP event names not
   confirmable from the JS-gated official pages; GBGB publishes no online racecard for the 11:04
   Doncaster (OLBG runner list flagged, possibly incomplete).
-- **C8:** PR created from `arena/9f424dec-olbg2` after this record; merge without approval, Pages
-  deploy confirmed, PR link appended below.
+- **C8:** PR [#231](https://github.com/buffedlizard55-lab/OLBG2/pull/231) opened from `arena/9f424dec-olbg2`; merge without approval, Pages deploy confirmed, result appended below.

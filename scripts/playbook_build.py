@@ -181,6 +181,106 @@ tip to follow blindly. 18+. <a href="{root}methodology.html">How the prices and 
 </div></footer></body></html>"""
 
 
+def pick_card(p, root="") -> str:
+    cls = {"high": "", "medium": " med", "low": " low"}[p["confidence"]]
+    anchor = p["pick_id"]
+    return (f'<div class="pick{cls}" id="{esc(anchor)}"><div class="head"><span>{esc(p["sport"])} · '
+            f'{esc(p["competition"])}</span>{badge(p["confidence"])}</div>'
+            f'<div class="match">{esc(p["event"])}</div>'
+            f'<div class="sel">{esc(p["selection"])}</div>'
+            f'<div class="meta">{esc(p["market"])} · our price <b>{money(p["price"])}</b> · chance {pct(p["probability"])}'
+            f' · {band_badge(p["in_band"])} · {esc(p["day"])}</div></div>')
+
+
+def write_front_door() -> str:
+    """Write the root index.html.
+
+    The owner asked for one obvious front door, so this desk owns it. build_site.py calls this
+    as well, which means every builder that touches the root writes the same bytes and the
+    order the layers are rebuilt in cannot change the published page.
+    """
+    fixtures_doc = json.loads((DATA / "fixtures.json").read_text())
+    picks_doc = json.loads((DATA / "picks.json").read_text())
+    preds_doc = json.loads((DATA / "predictions.json").read_text())
+    lines_doc = json.loads((DATA / "lines.json").read_text())
+    sources_doc = json.loads((DATA / "sources.json").read_text())
+    flags = json.loads((DATA / "flagged.json").read_text())["flags"]
+    picks = picks_doc["picks"]
+    all_sel = [s for l in lines_doc["lines"] for s in l["lines"]]
+    short = [s for s in all_sel if s["probability"] >= 0.70]
+    short_in = [s for s in short if s["in_band"]]
+    in_band_all = [s for s in all_sel if s["in_band"]]
+    big = picks_doc["count"]
+    hi = picks_doc["by_confidence"]["high"]
+    by_sport_fx = {}
+    for f in fixtures_doc["fixtures"]:
+        by_sport_fx.setdefault(f["sport"], []).append(f)
+    banded = sorted([p for p in picks if p["in_band"]], key=lambda x: -x["probability"])[:8]
+    root_picks = [p for p in picks if p["confidence"] == "high"][:3] or banded[:3]
+
+    root_picks = [p for p in picks if p["confidence"] == "high"][:3] or banded[:3]
+    front = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OLBG Playbook — 15 sports, our own prices, {big} graded picks</title>
+<meta name="description" content="Sunday 25 October 2026: {fixtures_doc['match_count']} OLBG matches across 15 sports, {len(all_sel)} prices originated here, {big} graded picks and {preds_doc['count']} written previews.">
+<link rel="stylesheet" href="playbook/assets/style.css">
+</head><body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">OLBG <span>Playbook</span></a>
+<nav class="top"><a class="on" href="index.html">Overview</a><a href="playbook/picks.html">Picks</a>
+<a href="playbook/predictions.html">Predictions</a><a href="playbook/matches.html">All matches</a>
+<a href="playbook/sports/index.html">Sports</a><a href="playbook/flagged.html">Flagged</a></nav></div></header>
+<main><div class="wrap">
+<p class="eyebrow">Desk snapshot 24 October 2026, 22:50 UTC · fifteen sports</p>
+<h1>{fixtures_doc['match_count']} OLBG matches, {len(all_sel)} prices of our own, {big} graded picks.</h1>
+<p class="lede">This is the only page you need to start from. Everything below is a link into the desk:
+<a href="playbook/picks.html"><b>Picks</b></a> is the full table of graded selections,
+<a href="playbook/predictions.html"><b>Predictions</b></a> holds the {preds_doc['count']} written previews, and
+<a href="playbook/sports/index.html"><b>Sports</b></a> splits it fifteen ways.</p>
+
+<div class="kpis">
+  <div class="kpi"><div class="v">{fixtures_doc['match_count']}</div><div class="k">matches on OLBG</div></div>
+  <div class="kpi"><div class="v">{big}</div><div class="k">graded picks</div></div>
+  <div class="kpi"><div class="v">{hi}</div><div class="k">high confidence</div></div>
+  <div class="kpi"><div class="v">{preds_doc['count']}</div><div class="k">written previews</div></div>
+  <div class="kpi"><div class="v">{sources_doc['count']}</div><div class="k">sources linked</div></div>
+</div>
+
+<h2>Today's strongest calls</h2>
+<div class="pickgrid">{''.join(pick_card(p) for p in root_picks)}</div>
+<p class="note"><a href="playbook/picks.html">All {big} picks, with price, chance, band and source on every row →</a></p>
+
+<h2>What is on the desk</h2>
+<div class="tbl-wrap"><table>
+<tr><th>Page</th><th>What is on it</th></tr>
+<tr><td><a href="playbook/picks.html"><b>Picks</b></a></td><td>{big} graded selections, one row each, with the band test and the source.</td></tr>
+<tr><td><a href="playbook/predictions.html"><b>Predictions</b></a></td><td>{preds_doc['count']} written previews, {preds_doc['min_words']} words at the shortest, each with its facts and links.</td></tr>
+<tr><td><a href="playbook/matches.html"><b>All matches</b></a></td><td>Every event OLBG listed across the fifteen sports, plus the outrights kept separately.</td></tr>
+<tr><td><a href="playbook/lines.html"><b>Our lines</b></a></td><td>{len(all_sel)} prices, match by match, with the chance behind each one.</td></tr>
+<tr><td><a href="playbook/sports/index.html"><b>Sports</b></a></td><td>One page per sport: matches, picks, prices and previews together.</td></tr>
+<tr><td><a href="playbook/sources.html"><b>Sources</b></a></td><td>{sources_doc['count']} links: governing bodies, OLBG hubs, OLBG event pages.</td></tr>
+<tr><td><a href="playbook/methodology.html"><b>Method</b></a></td><td>How each price and each grade was made, including the band problem.</td></tr>
+<tr><td><a href="playbook/flagged.html"><b>Flagged</b></a></td><td>{len(flags)} open items and every blank value, with the reason.</td></tr>
+</table></div>
+
+<h2>Where the confidence sits</h2>
+<p class="note">{hi} high, {picks_doc['by_confidence']['medium']} medium and {picks_doc['by_confidence']['low']} low.
+A price of −250 is a 71.4% chance, so a "70% or better" rule and a "−250 or longer" rule overlap only inside a
+1.4-point window: {len(short)} of {len(all_sel)} prices cleared 70%, {len(in_band_all)} sat in the band, and
+{len(short_in)} did both. The full explanation is on <a href="playbook/methodology.html">Method</a>.</p>
+
+<div class="chips">{''.join(f'<a class="chip" href="playbook/sports/{SPORT_SLUG[s]}.html"><b>{esc(s)}</b> · {len(by_sport_fx.get(s, []))}</a>' for s in SPORT_ORDER)}</div>
+
+{previous_desk_cards()}
+<p class="note" style="margin-top:26px">Earlier desks are preserved exactly as they were published and listed on
+<a href="archive.html">the archive page</a>. Nothing on them was deleted or rewritten.</p>
+</div></main>
+<footer><div class="wrap"><p>Prices are ours, not OLBG's, and are published for study rather than as advice. 18+.
+<a href="playbook/flagged.html">Flagged for review</a> · <a href="archive.html">Archive</a></p></div></footer>
+</body></html>"""
+    (ROOT / "index.html").write_text(front)
+    return front
+
 def main() -> None:
     fixtures_doc = json.loads((DATA / "fixtures.json").read_text())
     picks_doc = json.loads((DATA / "picks.json").read_text())
@@ -219,16 +319,6 @@ def main() -> None:
     by_sport_fx = {}
     for f in fixtures:
         by_sport_fx.setdefault(f["sport"], []).append(f)
-
-    def pick_card(p, root="") -> str:
-        cls = {"high": "", "medium": " med", "low": " low"}[p["confidence"]]
-        anchor = p["pick_id"]
-        return (f'<div class="pick{cls}" id="{esc(anchor)}"><div class="head"><span>{esc(p["sport"])} · '
-                f'{esc(p["competition"])}</span>{badge(p["confidence"])}</div>'
-                f'<div class="match">{esc(p["event"])}</div>'
-                f'<div class="sel">{esc(p["selection"])}</div>'
-                f'<div class="meta">{esc(p["market"])} · our price <b>{money(p["price"])}</b> · chance {pct(p["probability"])}'
-                f' · {band_badge(p["in_band"])} · {esc(p["day"])}</div></div>')
 
     # ------------------------------------------------------------------- overview
     highs = [p for p in picks if p["confidence"] == "high"]
@@ -624,68 +714,7 @@ because no official draw page returned to this reader. All of that is on <a href
 """
     (OUT / "methodology.html").write_text(page("Method — OLBG Playbook", "methodology.html", method_body))
 
-    # ------------------------------------------------------------- root front door
-    root_picks = [p for p in picks if p["confidence"] == "high"][:3] or banded[:3]
-    front = f"""<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OLBG Playbook — 15 sports, our own prices, {big} graded picks</title>
-<meta name="description" content="Sunday 25 October 2026: {fixtures_doc['match_count']} OLBG matches across 15 sports, {len(all_sel)} prices originated here, {big} graded picks and {preds_doc['count']} written previews.">
-<link rel="stylesheet" href="playbook/assets/style.css">
-</head><body>
-<header class="top"><div class="wrap"><a class="brand" href="index.html">OLBG <span>Playbook</span></a>
-<nav class="top"><a class="on" href="index.html">Overview</a><a href="playbook/picks.html">Picks</a>
-<a href="playbook/predictions.html">Predictions</a><a href="playbook/matches.html">All matches</a>
-<a href="playbook/sports/index.html">Sports</a><a href="playbook/flagged.html">Flagged</a></nav></div></header>
-<main><div class="wrap">
-<p class="eyebrow">Desk snapshot 24 October 2026, 22:50 UTC · fifteen sports</p>
-<h1>{fixtures_doc['match_count']} OLBG matches, {len(all_sel)} prices of our own, {big} graded picks.</h1>
-<p class="lede">This is the only page you need to start from. Everything below is a link into the desk:
-<a href="playbook/picks.html"><b>Picks</b></a> is the full table of graded selections,
-<a href="playbook/predictions.html"><b>Predictions</b></a> holds the {preds_doc['count']} written previews, and
-<a href="playbook/sports/index.html"><b>Sports</b></a> splits it fifteen ways.</p>
-
-<div class="kpis">
-  <div class="kpi"><div class="v">{fixtures_doc['match_count']}</div><div class="k">matches on OLBG</div></div>
-  <div class="kpi"><div class="v">{big}</div><div class="k">graded picks</div></div>
-  <div class="kpi"><div class="v">{hi}</div><div class="k">high confidence</div></div>
-  <div class="kpi"><div class="v">{preds_doc['count']}</div><div class="k">written previews</div></div>
-  <div class="kpi"><div class="v">{sources_doc['count']}</div><div class="k">sources linked</div></div>
-</div>
-
-<h2>Today's strongest calls</h2>
-<div class="pickgrid">{''.join(pick_card(p) for p in root_picks)}</div>
-<p class="note"><a href="playbook/picks.html">All {big} picks, with price, chance, band and source on every row →</a></p>
-
-<h2>What is on the desk</h2>
-<div class="tbl-wrap"><table>
-<tr><th>Page</th><th>What is on it</th></tr>
-<tr><td><a href="playbook/picks.html"><b>Picks</b></a></td><td>{big} graded selections, one row each, with the band test and the source.</td></tr>
-<tr><td><a href="playbook/predictions.html"><b>Predictions</b></a></td><td>{preds_doc['count']} written previews, {preds_doc['min_words']} words at the shortest, each with its facts and links.</td></tr>
-<tr><td><a href="playbook/matches.html"><b>All matches</b></a></td><td>Every event OLBG listed across the fifteen sports, plus the outrights kept separately.</td></tr>
-<tr><td><a href="playbook/lines.html"><b>Our lines</b></a></td><td>{len(all_sel)} prices, match by match, with the chance behind each one.</td></tr>
-<tr><td><a href="playbook/sports/index.html"><b>Sports</b></a></td><td>One page per sport: matches, picks, prices and previews together.</td></tr>
-<tr><td><a href="playbook/sources.html"><b>Sources</b></a></td><td>{sources_doc['count']} links: governing bodies, OLBG hubs, OLBG event pages.</td></tr>
-<tr><td><a href="playbook/methodology.html"><b>Method</b></a></td><td>How each price and each grade was made, including the band problem.</td></tr>
-<tr><td><a href="playbook/flagged.html"><b>Flagged</b></a></td><td>{len(flags)} open items and every blank value, with the reason.</td></tr>
-</table></div>
-
-<h2>Where the confidence sits</h2>
-<p class="note">{hi} high, {picks_doc['by_confidence']['medium']} medium and {picks_doc['by_confidence']['low']} low.
-A price of −250 is a 71.4% chance, so a "70% or better" rule and a "−250 or longer" rule overlap only inside a
-1.4-point window: {len(short)} of {len(all_sel)} prices cleared 70%, {len(in_band_all)} sat in the band, and
-{len(short_in)} did both. The full explanation is on <a href="playbook/methodology.html">Method</a>.</p>
-
-<div class="chips">{''.join(f'<a class="chip" href="playbook/sports/{SPORT_SLUG[s]}.html"><b>{esc(s)}</b> · {len(by_sport_fx.get(s, []))}</a>' for s in SPORT_ORDER)}</div>
-
-{previous_desk_cards()}
-<p class="note" style="margin-top:26px">Earlier desks are preserved exactly as they were published and listed on
-<a href="archive.html">the archive page</a>. Nothing on them was deleted or rewritten.</p>
-</div></main>
-<footer><div class="wrap"><p>Prices are ours, not OLBG's, and are published for study rather than as advice. 18+.
-<a href="playbook/flagged.html">Flagged for review</a> · <a href="archive.html">Archive</a></p></div></footer>
-</body></html>"""
-    (ROOT / "index.html").write_text(front)
+    write_front_door()
 
     print(f"playbook_build: {9 + 1 + 15} pages, {len(fixtures)} fixtures, {big} picks, "
           f"{preds_doc['count']} predictions, root front door rebuilt")

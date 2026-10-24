@@ -1,28 +1,28 @@
 {
-  "captured_utc": "2026-10-24T17:50:00Z",
+  "captured_utc": "2026-10-24T18:25:00Z",
   "sources": [
     {
       "label": "NHL scores feed, 2026-10-24",
       "url": "https://api-web.nhle.com/v1/score/2026-10-24",
-      "read": "Read in full across the paged response: 12 games, start times, 2026-27 records, per-team leaders, league odds array.",
+      "read": "Read in full: all 12 games, UTC starts, records, venues, team leaders and the league odds array.",
       "outcome": "used"
     },
     {
       "label": "NHL schedule feed, 2026-10-24",
       "url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
-      "read": "Read: game states, startTimeUTC, venues, broadcast lists, odds arrays. Used to confirm starts for the two games whose score-feed chunk was truncated.",
+      "read": "Read for game states, startTimeUTC, venues and schedule confirmation.",
       "outcome": "used"
     },
     {
-      "label": "NHL standings, 2026-10-24",
-      "url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-      "read": "Partially read (first page). Standings timestamp 2026-10-24T17:06:30Z confirmed; goal totals seen for Carolina, Edmonton, Boston and Vegas.",
-      "outcome": "partial"
+      "label": "NHL official team summary, 2026-27",
+      "url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+      "read": "Read in full: 32 teams with games, wins, goals for/against, shots and special-teams rates. GF/GA inputs use this feed consistently.",
+      "outcome": "used"
     },
     {
       "label": "MLB Stats API schedule, 2026-10-24",
       "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
-      "read": "One game returned: Tampa Bay Rays at Milwaukee Brewers, first pitch 2026-10-25T00:00:00Z, probable pitchers Drew Rasmussen and Logan Henderson.",
+      "read": "One game: Tampa Bay at Milwaukee at 2026-10-25T00:00:00Z; Drew Rasmussen and Logan Henderson listed as probable pitchers.",
       "outcome": "used"
     },
     {
@@ -34,45 +34,267 @@
     {
       "label": "MLB Stats API league standings",
       "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
-      "read": "First page read: Tampa Bay 98-64, 736 scored, 650 allowed, 43-38 away, 5-5 last ten.",
+      "read": "Tampa Bay 98-64, 736 scored, 650 allowed, 43-38 away, 5-5 last ten.",
       "outcome": "partial"
     },
     {
       "label": "NBA games page, 2026-10-24",
       "url": "https://www.nba.com/games?date=2026-10-24",
-      "read": "Calendar rendered (8 games on 24 October) but the game payload failed with \"Sorry, something went wrong\"; no per-game data.",
-      "outcome": "blocked"
+      "read": "Read: all eight games, official game IDs, UTC starts, current records and team leaders.",
+      "outcome": "used"
     },
     {
-      "label": "NBA CDN today's scoreboard",
-      "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
-      "read": "HTTP 500 on two attempts.",
-      "outcome": "blocked"
+      "label": "NBA current standings",
+      "url": "https://www.nba.com/standings",
+      "read": "Read: current 2026-27 records used alongside the completed-season prior.",
+      "outcome": "used"
     },
     {
-      "label": "NBA stats scoreboard v3",
-      "url": "https://stats.nba.com/stats/scoreboardv3?GameDate=2026-10-24&LeagueID=00",
-      "read": "Request failed (no response body).",
-      "outcome": "blocked"
+      "label": "NBA completed 2025-26 standings",
+      "url": "https://www.nba.com/standings?Season=2025-26",
+      "read": "Read: 82-game records for all teams on today's schedule.",
+      "outcome": "used"
+    },
+    {
+      "label": "NBA traditional team statistics, 2026-27",
+      "url": "https://www.nba.com/stats/teams/traditional",
+      "read": "Read in full: games, records, points per game and average point differential. One- and two-game samples are shrunk, not described as established form.",
+      "outcome": "used"
+    },
+    {
+      "label": "NBA official injury report, 1:30 PM ET",
+      "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+      "read": "Read in full. Official designations are attached to fixtures; NOT YET SUBMITTED remains pending and the ambiguous page-break row is excluded.",
+      "outcome": "used"
+    },
+    {
+      "label": "ATP current scores",
+      "url": "https://www.atptour.com/en/scores/current",
+      "read": "Read: semifinal results include Medvedev over Bublik and Basilashvili over Tsitsipas. A final start time was not established from the portion read.",
+      "outcome": "partial"
+    },
+    {
+      "label": "WTA scores",
+      "url": "https://www.wtatennis.com/scores",
+      "read": "Read: notifications and zero tournaments live; no usable upcoming-match schedule was returned.",
+      "outcome": "partial"
     },
     {
       "label": "United Rugby Championship match centre",
       "url": "https://www.unitedrugby.com/match-centre",
-      "read": "Read: Round 3 and Round 4 results with scores and venues; Round 4 games dated 23 October. No 24 October fixture detail reached within the page portion read.",
+      "read": "Read: Round 3 and Round 4 results with scores and venues; no upcoming fixture detail reached in the portion read.",
       "outcome": "partial"
     },
     {
       "label": "Handball-Bundesliga fixture page",
       "url": "https://www.daikin-hbl.de/de/spielplan/",
-      "read": "HTTP 404; the site redirected to a not-found page that links to https://www.opel-hbl.de/de/hbl/spielplan.",
+      "read": "HTTP 404; the site redirected to a not-found page.",
       "outcome": "blocked"
     },
     {
       "label": "World Snooker Tour match centre",
       "url": "https://wst.tv/matches/",
-      "read": "Read: BetVictor Northern Ireland Open 2026 match list from Round 1 (18-19 October). Today's match not reached within the page portion read.",
+      "read": "Read: Wilson beat Craigie 6-5; Williams–Jones was live and the other finalist was not yet known, so no future final was priced.",
+      "outcome": "partial"
+    },
+    {
+      "label": "ATP Almaty daily schedule",
+      "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "read": "Read: Sunday singles final follows doubles and ceremonies, not before 15:00 local.",
+      "outcome": "used"
+    },
+    {
+      "label": "ATP official head-to-head",
+      "url": "https://www.atptour.com/en/players/atp-head-2-head/daniil-medvedev-vs-nikoloz-basilashvili/mm58/bg23",
+      "read": "Read: Medvedev 45-18 and rank 5, Basilashvili 7-10 and rank 128; Medvedev leads 1-0.",
+      "outcome": "used"
+    },
+    {
+      "label": "ATP Almaty semifinal report",
+      "url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+      "read": "Read: 37 Medvedev hard-court wins, 10-1 Almaty record and Basilashvili's first tour final since Doha 2022.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA Ningbo tournament page",
+      "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
+      "read": "Read: the tournament runs 19-25 October and Day 7 is the final; used to resolve the preview's contradictory Saturday label.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA Ningbo final preview",
+      "url": "https://www.wtatennis.com/news/4598107/elena-rybakina-vs-leylah-fernandez-everything-to-know-about-the-ningbo-final",
+      "read": "Read: not before 17:00 local/05:00 ET, Rybakina leads 3-2, both semifinals ended 6-3 7-5 and Fernandez is 11-2 in the Asian Swing. Its Saturday 24 October label conflicts with the tournament date.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA Asian Swing schedule",
+      "url": "https://www.wtatennis.com/news/4576359/asian-swing-2026-preview-dates-draws-prize-money-and-everything-you-need-to-know",
+      "read": "Read: Osaka singles final on Sunday 25 October, not before 13:30 Japan time.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA Osaka main-draw PDF",
+      "url": "https://wtafiles.wtatennis.com/pdf/draws/2026/405/MDS.pdf",
+      "read": "Read in full: both finalists are 4-0; completed-set records exclude the unfinished third set in Siniakova's opening retirement win.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA Osaka semifinal report",
+      "url": "https://www.wtatennis.com/videos/4598182/siniakova-defeats-boulter-in-osaka-semis-to-reach-first-wta-singles-final-since-2023",
+      "read": "Read: Siniakova beat Boulter 6-1 6-4 to reach her first singles final since 2023.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA official player profiles",
+      "url": "https://www.wtatennis.com/players/324166/elena-rybakina",
+      "read": "Read with the linked Fernandez and Krueger profiles: current ranks, season records and titles used only where the profile supplied them.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA Fernandez player profile",
+      "url": "https://www.wtatennis.com/players/326735/leylah-fernandez",
+      "read": "Read: rank 30, 24-25 season record and one title.",
+      "outcome": "used"
+    },
+    {
+      "label": "WTA Krueger player profile",
+      "url": "https://www.wtatennis.com/players/329409/ashlyn-krueger",
+      "read": "Read: current singles rank 55 and 2023 Osaka champion; conflicting search snippets for her season record were not used.",
+      "outcome": "partial"
+    },
+    {
+      "label": "Lega Volley official calendar",
+      "url": "https://www.legavolley.it/calendario/?idCampionato=999",
+      "read": "Read: six Sunday Serie A fixtures with local start times and venues.",
+      "outcome": "used"
+    },
+    {
+      "label": "Lega Volley official standings",
+      "url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+      "read": "Read in full: one-round match, set and point records. These are treated as a tiny sample, not established form.",
+      "outcome": "used"
+    },
+    {
+      "label": "LNH official calendar",
+      "url": "https://www.lnh.fr/daikin-starligue/calendrier",
+      "read": "Read: Saint-Raphaël–Paris at 16:00 and Montpellier–Saran at 17:00 local on Sunday.",
+      "outcome": "used"
+    },
+    {
+      "label": "LNH official standings",
+      "url": "https://www.lnh.fr/daikin-starligue/classement",
+      "read": "Read: seven-match W-L-D and goals records for Saint-Raphaël, Paris, Montpellier and Saran.",
+      "outcome": "used"
+    },
+    {
+      "label": "Opel HBL official homepage",
+      "url": "https://www.opel-hbl.de/en/hbl",
+      "read": "Read: three Sunday Bundesliga fixtures with local starts; official team pages supplied venues.",
+      "outcome": "used"
+    },
+    {
+      "label": "Opel HBL official standings",
+      "url": "https://www.opel-hbl.de/de/hbl/tabelle",
+      "read": "Officially indexed table rows supplied complete W-D-L and goals records for all six Sunday teams. The direct table route presented reCAPTCHA, which is disclosed rather than bypassed.",
+      "outcome": "partial"
+    },
+    {
+      "label": "Opel HBL matchday 10 preview",
+      "url": "https://www.opel-hbl.de/de/hbl/content/vorschau-spieltag-10-abts-heimdeb%C3%BCt-gegen-den-meister-torj%C3%A4gertreffen-in-gummersbach-und-schw%C3%A4bisches-derby",
+      "read": "Read in full: Sunday recent results, scoring leaders and head-to-head records for Löwen–Magdeburg, Bergischer–Hamburg and Füchse–Wetzlar.",
+      "outcome": "used"
+    },
+    {
+      "label": "Formula 1 United States Grand Prix",
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "read": "Read: weekend schedule, circuit detail and Practice 2 top five; structured event data gives 2026-10-25T20:00:00Z. Qualifying had not produced a grid.",
+      "outcome": "used"
+    },
+    {
+      "label": "Formula 1 official Austin timetable",
+      "url": "https://www.formula1.com/en/latest/article/formula-1-msc-cruises-united-states-grand-prix-2026.2u6li2pzNhPzL3TSYaagrm",
+      "read": "Read: Sunday race 15:00-17:00 Austin over 56 laps or 120 minutes; the article states Austin is five hours behind UTC, reconciling to 20:00Z.",
+      "outcome": "used"
+    },
+    {
+      "label": "Formula 1 official driver standings",
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "read": "Read in full: points for every current Practice 2 starter; Tsunoda has standings points but no current Practice 2 time and is excluded from this race field.",
+      "outcome": "used"
+    },
+    {
+      "label": "Formula 1 official race results",
+      "url": "https://www.formula1.com/en/results/2026/races",
+      "read": "Read: 17 completed races and all winners; Antonelli eight, Russell three, Verstappen two, Norris two, Hamilton one and Leclerc one.",
+      "outcome": "used"
+    },
+    {
+      "label": "Formula 1 official Practice 2 results",
+      "url": "https://www.formula1.com/en/results/2026/races/1297/united-states/practice/2",
+      "read": "Read in full: 22 current starters, all gaps and lap counts; Leclerc led in 1:35.291.",
+      "outcome": "used"
+    },
+    {
+      "label": "PDC European Championship Day Three",
+      "url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "read": "Read through official indexing: Saturday Round 2 order and best-of-19 format, including Aspinall–Littler and Clayton–Rock. The directly rendered route returned cookie-policy text before the article.",
+      "outcome": "used"
+    },
+    {
+      "label": "PDC Friday European Championship report",
+      "url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+      "read": "Read: Aspinall 6-3 Reyes, Littler 6-3 O'Connor, Clayton 6-3 Springer and Rock 6-1 Dobey; Littler averaged 105.05 and Rock won six straight legs.",
+      "outcome": "used"
+    },
+    {
+      "label": "PDC opening-night European Championship report",
+      "url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund/",
+      "read": "Read: Price beat Cross 6-2 with a 99.26 average and Bunting beat Noppert 6-5 after a 160 checkout.",
+      "outcome": "used"
+    },
+    {
+      "label": "PDC official world rankings",
+      "url": "https://www.pdc.tv/rankings",
+      "read": "Read through official indexing: two-year ranking earnings for all six selected players; kept separate from current European Tour earnings.",
+      "outcome": "used"
+    },
+    {
+      "label": "PDC European Championship event page",
+      "url": "https://www.pdc.tv/tournaments/machineseeker-european-championship",
+      "read": "Read through official indexing: current European Tour earnings for Aspinall, Littler, Clayton, Rock, Price and Bunting.",
+      "outcome": "used"
+    },
+    {
+      "label": "PDC European Championship tournament hub",
+      "url": "https://www.pdc.tv/tournament-hub/10870",
+      "read": "Read through official indexing for the event and bracket. Its exposed later-round index remained TBC, so it was not treated as confirmation of a completed result.",
+      "outcome": "partial"
+    },
+    {
+      "label": "PDC official Sunday schedule",
+      "url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+      "read": "Read: Sunday quarterfinal session begins 13:00 CET/12:00 GMT after the clock change; evening semifinals and final follow.",
+      "outcome": "used"
+    },
+    {
+      "label": "ESPN European Championship results",
+      "url": "https://www.espn.com/darts/story/_/id/49948004/pdc-european-championship-darts-2026-schedule-results-how-watch-prize-money-dates-more-dortmund",
+      "read": "Trusted corroboration: Price 10-4 Menzies and Bunting 10-3 Huybrechts in Saturday Round 2. Used only for the Sunday fixture where the directly readable PDC report remained pre-match.",
+      "outcome": "used"
+    },
+    {
+      "label": "Independent Price–Bunting quarterfinal report",
+      "url": "https://www.independent.co.uk/sport/stephen-bunting-borussia-dortmund-gerwyn-price-bundesliga-eintracht-frankfurt-b3072710.html",
+      "read": "Trusted corroboration: the two Saturday results created Sunday's Price–Bunting quarterfinal; Bunting fired four 100-plus checkouts.",
+      "outcome": "used"
+    },
+    {
+      "label": "PREM Rugby fixtures",
+      "url": "https://www.premrugby.com/fixtures-results?competition=gallagher-prem&round=4",
+      "read": "Read: current-round matches were full-time or live, so they were not promoted as upcoming selections.",
       "outcome": "partial"
     }
   ],
-  "count": 12
+  "count": 49
 }

@@ -20,25 +20,28 @@
 <p>Each of the 15 sport hubs is read directly. The event, its displayed time, the most-tipped selection, the tip count and the tip share are copied verbatim into
 <a href="olbg.html">the OLBG list</a>. OLBG publishes no odds on hub pages, so nothing here is copied from an OLBG price.</p>
 <h2>2 · Official confirmation</h2>
-<p>A fixture is only publishable once a governing body or league feed confirmed the teams and the start time. That is why 10 of the 15 sports show listings but no pick:
-their official page either would not return data or was not reached in this capture. The evidence is on <a href="flagged.html">Flagged for review</a>.</p>
+<p>A fixture is only publishable once a governing body or league feed confirmed the teams and the start time. A pick additionally requires a corresponding event in the captured OLBG board; an official-only fixture may have research prices but is not promoted to the pick card.
+Tennis not-before times are labelled as earliest starts, not exact beginnings. The sport-specific evidence is on <a href="flagged.html">Flagged for review</a>.</p>
 <h2>3 · Our line</h2>
-<p>Strength comes from the official record: points percentage for the NHL, winning percentage for MLB. The home edge is a fixed 4.5 points (NHL) or 4.0 (MLB).
-Probability = 0.5 + home edge + 0.85 × (home strength − away strength), clamped to 12–88%. The fair American price is the reciprocal of that probability.
-For the baseball total, expected runs are the average of each side's season runs scored plus the opponent's runs allowed per game, and the over/under is a Poisson tail on that expectation.</p>
+<p>NHL and MLB moneylines use official record strength: probability = 0.5 + home edge + 0.85 × (home strength − away strength), clamped to 12–88%. Home edge is 4.5 points for the NHL and 4.0 for MLB.
+NBA moneylines combine the completed 2025-26 record with current results and ten pseudo-games of .500 shrinkage, then use the same 0.85 strength scale and a four-point home edge. ATP and Ningbo use comparable official season records with ten pseudo-matches; Osaka uses only current-tournament match and completed-set records because comparable season records were not available.</p>
+<p>Volleyball blends one-round match, set and point strengths with four matches, twelve sets and 600 points of shrinkage. Handball uses W-L-D strength to calibrate a seven-goal-standard-deviation margin and shrunken scoring rates for a regular-time Poisson matrix, so the tie remains a separate outcome.</p>
+<p>Darts leg probability combines 0.08 times the world-earnings log ratio, 0.06 times the European Tour earnings log ratio and 0.035 times the difference in tournament leg differential. Exact first-to-ten outcomes produce match winner, both 2.5-leg handicaps and the 16.5 total. Saturday match times are OLBG display values inside the official PDC session window.</p>
+<p>Formula 1 uses each current starter's points base (0.15 + points / maximum points), season-win factor (1 + wins / maximum wins) and Practice 2 factor (1 / (1 + gap seconds)). Weights normalize across all 22 starters for race-winner prices. Every ordered top-three outcome is enumerated exactly for podium prices. Qualifying and grid position are not inputs.</p>
+<p>NHL and MLB scoring markets use independent Poisson score matrices from official goals/runs for and against; NHL rates receive five league-average games of shrinkage and a 0.15-goal home adjustment. NBA scoring rates receive ten 114-point games of shrinkage. Spread margin is calibrated to the same moneyline probability with a 12-point standard deviation, so early scoring cannot reverse the favourite; totals use an 18-point standard deviation. All NBA lines are half-points. Every fair American price is calculated from its stated probability, not copied from OLBG or a bookmaker.</p>
 <h2>4 · Confidence and the band</h2>
-<p>High is 65% or better, medium 55–65%, low below 55%. The band test checks only our own fair price against −250…+10000.
-Because −250 is 71.43%, a "70% or better" rule and that band overlap only between 70.00% and 71.43%; the one pick above that overlap is published with its real price and marked outside the band.</p>
+<p>High is 70% or better, medium 55–69.95%, low below 55%. The band test checks only our own fair price against −250…+10000.
+Because −250 is 71.43%, a "70% or better" rule and that band overlap only between 70.00% and 71.43%. Every price outside the overlap keeps its calculated number and an explicit outside-band label.</p>
 <h2>5 · The writing</h2>
-<p>Every preview states the selection first, then form, numbers and price. Every figure in the prose appears in the fact list under that preview with its official link.
-Injuries are stated only when an official report was read. None was available for this slate, so the injury line says so instead of guessing.</p>
+<p>Every preview states the selection first, then gives match-specific form, numbers and caveats. Figures in the prose appear in the fact list under that preview with official links.
+NBA injuries come only from the league's 1:30 PM ET report. NOT YET SUBMITTED stays unresolved. In every other sport without an official injury or availability report read in this session, the field remains blank and says so.</p>
 <h2>6 · What is deliberately absent</h2>
 <p>No price is labelled as available at a bookmaker. No fixture is invented to fill a five-per-sport quota. No value is inferred where a source was silent.</p>
 </section>
 
 </main>
 <footer class="foot"><div class="wrap">
-<p><strong>Dated snapshot, not a live feed and not betting advice.</strong> OLBG listings were read on 24 October 2026 between 17:15 and 17:50 UTC.
+<p><strong>Dated snapshot, not a live feed and not betting advice.</strong> OLBG listings were read on 24 October 2026; the exact capture window appears on the executive board.
 Prices are originated here from official league inputs; they are not bookmaker quotes. Anything that could not be confirmed from an official source is left blank and listed on
 <a href="flagged.html">Flagged for review</a>. 18+.</p>
 <p><a href="../index.html">Repository home</a> · <a href="https://www.olbg.com/betting-tips">OLBG sport hubs</a></p>

@@ -34,7 +34,25 @@ def src(url, label="source"):
             if str(url).startswith("http") else '<span class="muted">no link</span>')
 
 
-def table(headers, rows, cls=""):
+def start_text(row):
+    return row.get("start_display") or row["start_utc"].replace("T", " ").replace("Z", " UTC")
+
+
+def match_name(row, bold=False):
+    if row.get("event_name"):
+        name = esc(row["event_name"])
+        return f"<strong>{name}</strong>" if bold else name
+    home = f"<strong>{esc(row['home'])}</strong>" if bold else esc(row["home"])
+    return f"{home} <span class=\"vs\">vs</span> {esc(row['away'])}"
+
+
+def input_links(line):
+    urls = list(dict.fromkeys([line["source_url"]] + line.get("source_urls", [])))
+    return " · ".join(src(url, "input" if index == 0 else f"input {index + 1}")
+                       for index, url in enumerate(urls))
+
+
+def table(headers, rows, cls=""): 
     head = "".join(f"<th>{esc(h)}</th>" for h in headers)
     body = "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows)
     return (f'<div class="tw"><table class="{cls}"><thead><tr>{head}</tr></thead>'
@@ -76,7 +94,7 @@ def shell(title, active, body, sub=False):
 {body}
 </main>
 <footer class="foot"><div class="wrap">
-<p><strong>Dated snapshot, not a live feed and not betting advice.</strong> OLBG listings were read on 24 October 2026 between 17:15 and 17:50 UTC.
+<p><strong>Dated snapshot, not a live feed and not betting advice.</strong> OLBG listings were read on 24 October 2026; the exact capture window appears on the executive board.
 Prices are originated here from official league inputs; they are not bookmaker quotes. Anything that could not be confirmed from an official source is left blank and listed on
 <a href="{prefix}flagged.html">Flagged for review</a>. 18+.</p>
 <p><a href="../index.html">Repository home</a> · <a href="https://www.olbg.com/betting-tips">OLBG sport hubs</a></p>
@@ -103,6 +121,7 @@ def build():
     status = {s["sport"]: s for s in by_sport}
     highs = [p for p in pk if p["confidence"] == "high"]
     in_band_high = [p for p in highs if p["in_band"]]
+    high_outside = [p for p in highs if not p["in_band"]]
     capture = listings["capture_end_utc"]
 
     def pick_card(p, big=False):
@@ -110,7 +129,7 @@ def build():
         headline = pred.get("headline", "")
         return f"""<article class="pickcard{' hero-pick' if big else ''}">
   <div class="pc-top"><span class="sport">{esc(p['sport'])}</span>{pill(p['confidence'], p['in_band'])}</div>
-  <p class="match">{esc(p['home'])} <span class="vs">vs</span> {esc(p['away'])}</p>
+  <p class="match">{match_name(p)}</p>
   <p class="call"><span class="sel-label">PICK</span><span class="sel">{esc(p['selection'])}</span> <span class="mkt">{esc(p['market'])}</span></p>
   <p class="price">fair {esc(usd(p['fair_american']))} · {pct(p['probability'])}</p>
   {f'<p class="why">{esc(headline)}</p>' if headline else ''}
@@ -120,7 +139,7 @@ def build():
     # ---------------------------------------------------------------- board
     hero_cards = "".join(pick_card(p, big=True) for p in pk[:3])
     pick_rows = [[
-        esc(p["sport"]), f"{esc(p['home'])} <span class=\"vs\">vs</span> {esc(p['away'])}",
+        esc(p["sport"]), match_name(p),
         f'<strong class="sel">{esc(p["selection"])}</strong>', esc(p["market"]),
         usd(p["fair_american"]), pct(p["probability"]), pill(p["confidence"], p["in_band"]),
         f'<a href="predictions.html#{esc(p["fixture_id"])}">read the preview</a>',
@@ -151,7 +170,7 @@ def build():
 
 <section class="block">
   <div class="sechead"><h2>Executive summary — today's strongest calls</h2><a href="picks.html">all picks →</a></div>
-  <p class="sub">{len(highs)} picks grade high, {len(in_band_high)} of them inside the −250…+10000 band. The rest are graded medium and shown exactly as graded.</p>
+  <p class="sub">{len(highs)} picks grade high, {len(in_band_high)} of them inside the −250…+10000 band. Every other selection keeps its calculated medium or low grade.</p>
   <div class="grid3">{hero_cards}</div>
 </section>
 
@@ -164,7 +183,7 @@ def build():
 <section class="block">
   <div class="sechead"><h2>How this site is organised</h2></div>
   <div class="grid3">
-    <a class="navcard" href="picks.html"><strong>1 · Picks</strong><span>The selection, the price we made, the confidence grade and the band test — one row per match.</span></a>
+    <a class="navcard" href="picks.html"><strong>1 · Picks</strong><span>The selection, the price we made, the confidence grade and the band test — one row per published pick.</span></a>
     <a class="navcard" href="predictions.html"><strong>2 · Predictions</strong><span>The full written preview for each pick, with the official facts listed underneath it.</span></a>
     <a class="navcard" href="matches.html"><strong>3 · Matches</strong><span>Every officially confirmed fixture with start time, venue and source link.</span></a>
     <a class="navcard" href="lines.html"><strong>4 · Our lines</strong><span>All {len(lines['lines'])} prices originated from official inputs, including totals.</span></a>
@@ -189,8 +208,8 @@ def build():
 <section class="block">
   <h2>Why some picks are marked outside the band</h2>
   <p>−250 is an implied 71.43%, so a "70% or better" rule and a "−250 to +10000" rule only overlap between 70.00% and 71.43%.
-  The New Jersey call is 73.6%, a fair −279. It is published as high confidence and marked outside the floor rather than repriced to fit.
-  See <a href="flagged.html">Flagged for review</a>, item R1.</p>
+  {len(high_outside)} High picks sit outside the floor: {esc(', '.join(p['selection'] for p in high_outside))}. Their calculated prices are published unchanged.
+  See <a href="flagged.html">Flagged for review</a> for the band and source caveats.</p>
 </section>
 """
     (SITE / "picks.html").write_text(shell("Picks", "Picks", picks_body), encoding="utf-8")
@@ -200,10 +219,12 @@ def build():
     picked = {p["fixture_id"]: p for p in pk}
     for f in sorted(fixtures, key=lambda r: (r["start_utc"], r["sport"])):
         p = picked.get(f["id"])
-        state = ("pick published" if p else "fixture only — outside the selection cut-off")
+        state = ("pick published" if p else
+                 ("started before the selection cut-off" if f["start_utc"] <= lines["selection_cutoff_utc"]
+                  else "fixture only — outside the sport's five-pick card"))
         fix_rows.append([
-            esc(f["sport"]), f"<strong>{esc(f['home'])}</strong> <span class=\"vs\">vs</span> {esc(f['away'])}",
-            esc(f["competition"]), esc(f["venue"]), f["start_utc"].replace("T", " ").replace("Z", " UTC"),
+            esc(f["sport"]), match_name(f, bold=True),
+            esc(f["competition"]), esc(f["venue"]), esc(start_text(f)),
             f"{esc(f['home_record'])} / {esc(f['away_record'])}",
             (f'<strong class="sel">{esc(p["selection"])}</strong>' if p else '<span class="muted">—</span>'),
             esc(state),
@@ -215,11 +236,11 @@ def build():
 <section class="hero small">
   <p class="eyebrow">Matches · {len(fixtures)} confirmed by the league itself</p>
   <h1>Fixtures with a start time and a source.</h1>
-  <p class="lede">Record strings are shown home / away exactly as the league feed published them. Anaheim at Philadelphia began before the selection cut-off, so it appears here without a pick.</p>
+  <p class="lede">Record strings are shown home / away exactly as the official source published them. Confirmed fixtures without a captured OLBG event, and events that began before the selection cut-off, remain visible but do not receive picks.</p>
 </section>
 <section class="block">{table(["Sport", "Match", "Competition", "Venue", "Start (UTC)", "Record H / A", "Our pick", "State", "Official fixture", "OLBG"], fix_rows)}</section>
 <section class="block"><h2>What is not here</h2>
-<p>Ten of the fifteen sports have no confirmed fixture on this page because their official page could not be read or listed nothing. Each one is named, with the link that shows it, on <a href="flagged.html">Flagged for review</a>.</p></section>
+<p>{sum(1 for s in SPORTS if not any(f['sport'] == s for f in fixtures))} of the fifteen sports have no confirmed fixture on this page. Each one is named, with the source or listing that explains the gap, on <a href="flagged.html">Flagged for review</a>.</p></section>
 """
     (SITE / "matches.html").write_text(shell("Matches", "Matches", matches_body), encoding="utf-8")
 
@@ -230,23 +251,23 @@ def build():
         f = fix_by_id[l["fixture_id"]]
         market_implied = (f"{l['market_implied_home'] * 100:.1f}% home" if l.get("market_implied_home") is not None else "—")
         line_rows.append([
-            esc(l["sport"]), f"{esc(f['home'])} <span class=\"vs\">vs</span> {esc(f['away'])}",
+            esc(l["sport"]), match_name(f),
             esc(l["market"]), (f'<strong class="sel">{esc(l["selection"])}</strong>'),
             esc(l.get("line") if l.get("line") is not None else "—"),
             pct(l["probability"]), usd(l["fair_american"]), f"{l['fair_decimal']:.3f}",
-            market_implied, src(l["source_url"], "input"),
+            market_implied, input_links(l),
         ])
     lines_body = f"""
 <section class="hero small">
   <p class="eyebrow">Our lines · {len(lines['lines'])} prices</p>
   <h1>Prices we made, not prices we found.</h1>
-  <p class="lede">Money lines are derived from the official record and a fixed home edge; the baseball totals come from each club's season runs per game.
-  The market column is the league feed's own two-way price, de-vigged, and is shown only so you can see where we disagree.</p>
+  <p class="lede">Moneylines use official records with shrinkage and a fixed home edge where applicable. NHL, MLB and handball scoring markets use independent Poisson distributions; NBA totals use shrunken official scoring rates and spreads share the moneyline calibration. Tennis and volleyball set markets come from exact best-of-three or best-of-five distributions; handball moneylines retain the regular-time tie. Darts uses official ranking earnings and tournament leg differential inside an exact best-of-19 distribution. Formula 1 winner and podium prices use all 22 Practice 2 starters, official season evidence and exact ordered-podium enumeration.
+  Where a league feed supplies a two-way price, its de-vigged home implication is shown for comparison only. It is never used as our price.</p>
 </section>
 <section class="block">{table(["Sport", "Match", "Market", "Selection", "Line", "Probability", "Fair US", "Fair decimal", "League-feed implied", "Input"], line_rows)}</section>
-<section class="block"><h2>Markets we did not price</h2>
-<p>Handicaps and game totals were investigated for every confirmed fixture. NHL totals and puck lines need a goal distribution we did not capture in this window, so they are left blank rather than approximated.
-The baseball total below is priced because both clubs' season runs scored and allowed were read from the league's own standings.</p></section>
+<section class="block"><h2>How the market families were investigated</h2>
+<p>Every confirmed NHL game has both moneylines, both sides of each ±1.5 puck line, and 5.5/6.5 totals. Every NBA game has moneylines, a points spread and a total. The World Series game has moneylines, run lines and totals. Tennis adds both set handicaps and a total; volleyball adds set handicaps and two totals; handball adds a three-way result, half-goal handicaps and a total.
+The Formula 1 race has 22 winner prices and podium Yes/No prices for every current starter. Officially confirmed fixtures without a corresponding captured OLBG row can have research prices but cannot enter the pick card. Alternate prices are visible here and are not presented as bookmaker availability.</p></section>
 """
     (SITE / "lines.html").write_text(shell("Our lines", "Our lines", lines_body), encoding="utf-8")
 
@@ -255,11 +276,11 @@ The baseball total below is priced because both clubs' season runs scored and al
     for p in preds["predictions"]:
         facts = "".join(f'<li>{esc(f["claim"])} {src(f["source_url"], "source")}</li>' for f in p["facts"])
         cards.append(f"""<article class="pred" id="{esc(p['fixture_id'])}">
-  <p class="eyebrow">{esc(p['sport'])} · {esc(p['competition'])} · starts {esc(p['start_utc'].replace('T', ' ').replace('Z', ' UTC'))}</p>
+  <p class="eyebrow">{esc(p['sport'])} · {esc(p['competition'])} · starts {esc(start_text(p))}</p>
   <h3>{esc(p['headline'])}</h3>
   <p class="callbar"><span class="sel-label">PICK</span><span class="sel">{esc(p['selection'])}</span>
      <span class="mkt">{esc(p['market'])} · fair {usd(p['fair_american'])} · {pct(p['probability'])} · {esc(p['confidence'])}</span></p>
-  <p class="match">{esc(p['home'])} <span class="vs">vs</span> {esc(p['away'])}</p>
+  <p class="match">{match_name(p)}</p>
   <p class="body">{esc(p['text'])}</p>
   <p class="muted">{p['word_count']} words · injuries: {esc(p['injuries_note'])}</p>
   <details><summary>The {len(p['facts'])} official facts behind this preview</summary><ul class="facts">{facts}</ul></details>
@@ -269,7 +290,7 @@ The baseball total below is priced because both clubs' season runs scored and al
 <section class="hero small">
   <p class="eyebrow">Predictions · {len(preds['predictions'])} write-ups, shortest {preds['min_words']} words</p>
   <h1>The reasoning, written per match.</h1>
-  <p class="lede">Each preview states the selection in the green bar first, then the form, the numbers and the price. Every figure used in the prose appears in the fact list underneath, with its official link.</p>
+  <p class="lede">Each preview states the selection in the green bar first, then gives match-specific form, numbers and availability caveats. The fair price sits beside the selection; figures used in the prose appear in the linked fact list underneath.</p>
 </section>
 <section class="block">{''.join(cards)}</section>
 """
@@ -333,8 +354,8 @@ The baseball total below is priced because both clubs' season runs scored and al
                              f'<p class="body">{esc(p["text"])}</p></article>' for p in sp_preds)
         flag_block = table(["Code", "What happened", "Evidence"], [[esc(x["code"]), esc(x["detail"]), src(x["source"], "link")] for x in sp_flags]) if sp_flags else '<p class="muted">No review item for this sport.</p>'
         fix_block = table(["Match", "Venue", "Start (UTC)", "Record H / A", "Official source"],
-                          [[f"{esc(f['home'])} <span class=\"vs\">vs</span> {esc(f['away'])}", esc(f["venue"]),
-                            f["start_utc"].replace("T", " ").replace("Z", ""), f"{esc(f['home_record'])} / {esc(f['away_record'])}",
+                          [[match_name(f), esc(f["venue"]),
+                            esc(start_text(f)), f"{esc(f['home_record'])} / {esc(f['away_record'])}",
                             src(f["source_url"], "fixture")] for f in sp_fix]) if sp_fix else '<p class="muted">No officially confirmed fixture for this sport today.</p>'
         line_block = table(["Market", "Selection", "Line", "Probability", "Fair US", "Input"],
                            [[esc(l["market"]), esc(l["selection"]), esc(l.get("line") if l.get("line") is not None else "—"),
@@ -395,18 +416,21 @@ The baseball total below is priced because both clubs' season runs scored and al
 <p>Each of the 15 sport hubs is read directly. The event, its displayed time, the most-tipped selection, the tip count and the tip share are copied verbatim into
 <a href="olbg.html">the OLBG list</a>. OLBG publishes no odds on hub pages, so nothing here is copied from an OLBG price.</p>
 <h2>2 · Official confirmation</h2>
-<p>A fixture is only publishable once a governing body or league feed confirmed the teams and the start time. That is why 10 of the 15 sports show listings but no pick:
-their official page either would not return data or was not reached in this capture. The evidence is on <a href="flagged.html">Flagged for review</a>.</p>
+<p>A fixture is only publishable once a governing body or league feed confirmed the teams and the start time. A pick additionally requires a corresponding event in the captured OLBG board; an official-only fixture may have research prices but is not promoted to the pick card.
+Tennis not-before times are labelled as earliest starts, not exact beginnings. The sport-specific evidence is on <a href="flagged.html">Flagged for review</a>.</p>
 <h2>3 · Our line</h2>
-<p>Strength comes from the official record: points percentage for the NHL, winning percentage for MLB. The home edge is a fixed 4.5 points (NHL) or 4.0 (MLB).
-Probability = 0.5 + home edge + 0.85 × (home strength − away strength), clamped to 12–88%. The fair American price is the reciprocal of that probability.
-For the baseball total, expected runs are the average of each side's season runs scored plus the opponent's runs allowed per game, and the over/under is a Poisson tail on that expectation.</p>
+<p>NHL and MLB moneylines use official record strength: probability = 0.5 + home edge + 0.85 × (home strength − away strength), clamped to 12–88%. Home edge is 4.5 points for the NHL and 4.0 for MLB.
+NBA moneylines combine the completed 2025-26 record with current results and ten pseudo-games of .500 shrinkage, then use the same 0.85 strength scale and a four-point home edge. ATP and Ningbo use comparable official season records with ten pseudo-matches; Osaka uses only current-tournament match and completed-set records because comparable season records were not available.</p>
+<p>Volleyball blends one-round match, set and point strengths with four matches, twelve sets and 600 points of shrinkage. Handball uses W-L-D strength to calibrate a seven-goal-standard-deviation margin and shrunken scoring rates for a regular-time Poisson matrix, so the tie remains a separate outcome.</p>
+<p>Darts leg probability combines 0.08 times the world-earnings log ratio, 0.06 times the European Tour earnings log ratio and 0.035 times the difference in tournament leg differential. Exact first-to-ten outcomes produce match winner, both 2.5-leg handicaps and the 16.5 total. Saturday match times are OLBG display values inside the official PDC session window.</p>
+<p>Formula 1 uses each current starter's points base (0.15 + points / maximum points), season-win factor (1 + wins / maximum wins) and Practice 2 factor (1 / (1 + gap seconds)). Weights normalize across all 22 starters for race-winner prices. Every ordered top-three outcome is enumerated exactly for podium prices. Qualifying and grid position are not inputs.</p>
+<p>NHL and MLB scoring markets use independent Poisson score matrices from official goals/runs for and against; NHL rates receive five league-average games of shrinkage and a 0.15-goal home adjustment. NBA scoring rates receive ten 114-point games of shrinkage. Spread margin is calibrated to the same moneyline probability with a 12-point standard deviation, so early scoring cannot reverse the favourite; totals use an 18-point standard deviation. All NBA lines are half-points. Every fair American price is calculated from its stated probability, not copied from OLBG or a bookmaker.</p>
 <h2>4 · Confidence and the band</h2>
-<p>High is 65% or better, medium 55–65%, low below 55%. The band test checks only our own fair price against −250…+10000.
-Because −250 is 71.43%, a "70% or better" rule and that band overlap only between 70.00% and 71.43%; the one pick above that overlap is published with its real price and marked outside the band.</p>
+<p>High is 70% or better, medium 55–69.95%, low below 55%. The band test checks only our own fair price against −250…+10000.
+Because −250 is 71.43%, a "70% or better" rule and that band overlap only between 70.00% and 71.43%. Every price outside the overlap keeps its calculated number and an explicit outside-band label.</p>
 <h2>5 · The writing</h2>
-<p>Every preview states the selection first, then form, numbers and price. Every figure in the prose appears in the fact list under that preview with its official link.
-Injuries are stated only when an official report was read. None was available for this slate, so the injury line says so instead of guessing.</p>
+<p>Every preview states the selection first, then gives match-specific form, numbers and caveats. Figures in the prose appear in the fact list under that preview with official links.
+NBA injuries come only from the league's 1:30 PM ET report. NOT YET SUBMITTED stays unresolved. In every other sport without an official injury or availability report read in this session, the field remains blank and says so.</p>
 <h2>6 · What is deliberately absent</h2>
 <p>No price is labelled as available at a bookmaker. No fixture is invented to fill a five-per-sport quota. No value is inferred where a source was silent.</p>
 </section>

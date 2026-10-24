@@ -9,13 +9,14 @@ is `None` and is reported as blank/unverified downstream.
 from __future__ import annotations
 import json
 from pathlib import Path
+from today_official_data import expand_fixtures
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "today"
 OUT.mkdir(parents=True, exist_ok=True)
 
 CAPTURE_UTC = "2026-10-24T17:15:00Z"
-CAPTURE_END_UTC = "2026-10-24T17:50:00Z"
+CAPTURE_END_UTC = "2026-10-24T18:25:00Z"
 SESSION = "arena/9f69ce85-olbg2"
 
 HUB = {
@@ -40,38 +41,41 @@ B = "https://www.olbg.com/betting-tips"
 
 # (sport, competition, event as displayed, displayed time, market, most-tipped selection, tips, pct, event_id, url)
 OLBG = [
-    # Ice Hockey ---------------------------------------------------------------
-    ("Ice Hockey", "NHL", "ANA Ducks @ PHI Flyers", "Today 13:07", "Money Line", "ANA Ducks", "5/9", 56, "199999", f"{B}/Ice_Hockey/NHL/NHL/ANA_Ducks_@_PHI_Flyers/13?event_id=199999"),
-    ("Ice Hockey", "NHL", "CAR Hurricanes @ STL Blues", "Today 19:07", "Money Line", "CAR Hurricanes", "4/4", 100, "200002", f"{B}/Ice_Hockey/NHL/NHL/CAR_Hurricanes_@_STL_Blues/13?event_id=200002"),
-    ("Ice Hockey", "Switzerland NLA", "EHC Kloten vs Rapperswil Jona Lakers", "Today 13:45", "Money Line", "Rapperswil Jona Lakers", "3/4", 75, "200024", f"{B}/Ice_Hockey/Other/Switzerland_NLA/EHC_Kloten_vs_Rapperswil_Jona_Lakers/13?event_id=200024"),
-    ("Ice Hockey", "Switzerland NLA", "EHC Biel vs Zug", "Today 13:45", "Money Line", "Zug", "3/3", 100, "200019", f"{B}/Ice_Hockey/Other/Switzerland_NLA/EHC_Biel_vs_Zug/13?event_id=200019"),
-    ("Ice Hockey", "Switzerland NLA", "SCL Tigers vs Davos", "Today 13:45", "Money Line", "Davos", "3/3", 100, "200022", f"{B}/Ice_Hockey/Other/Switzerland_NLA/SCL_Tigers_vs_Davos/13?event_id=200022"),
-    ("Ice Hockey", "NHL", "NY Rangers @ OTT Senators", "Today 19:07", "Money Line", "NY Rangers", "3/3", 100, "200008", f"{B}/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008"),
-    ("Ice Hockey", "NHL", "TB Lightning @ UTA Mammoth", "Today 22:07", "Money Line", "UTA Mammoth", "3/4", 75, "200009", f"{B}/Ice_Hockey/NHL/NHL/TB_Lightning_@_UTA_Mammoth/13?event_id=200009"),
-    ("Ice Hockey", "Switzerland NLA", "Ambri Piotta vs HC Ajoie", "Today 13:45", "Money Line", "Ambri Piotta", "2/2", 100, "200020", f"{B}/Ice_Hockey/Other/Switzerland_NLA/Ambri_Piotta_vs_HC_Ajoie/13?event_id=200020"),
-    ("Ice Hockey", "NHL", "LA Kings @ NJ Devils", "Today 15:37", "Game Totals", "Over 5.50", "2/2", 100, "200000", f"{B}/Ice_Hockey/NHL/NHL/LA_Kings_@_NJ_Devils/13?event_id=200000"),
-    ("Ice Hockey", "NHL", "NSH Predators @ PIT Penguins", "Today 19:07", "Money Line", "PIT Penguins", "2/2", 100, "200006", f"{B}/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006"),
-    ("Ice Hockey", "NHL", "SJ Sharks @ BOS Bruins", "Today 19:07", "Money Line", "BOS Bruins", "2/2", 100, "200007", f"{B}/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007"),
-    ("Ice Hockey", "NHL", "TOR Maple Leafs @ EDM Oilers", "Today 19:07", "Game Totals", "Over 6.50", "2/2", 100, "200010", f"{B}/Ice_Hockey/NHL/NHL/TOR_Maple_Leafs_@_EDM_Oilers/13?event_id=200010"),
-    ("Ice Hockey", "NHL", "VGS Golden Knights @ CLB Blue Jackets", "Today 19:07", "Money Line", "VGS Golden Knights", "2/2", 100, "200001", f"{B}/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001"),
-    ("Ice Hockey", "NHL", "MIN Wild @ SEA Kraken", "Today 23:07", "Money Line", "MIN Wild", "2/3", 67, "200005", f"{B}/Ice_Hockey/NHL/NHL/MIN_Wild_@_SEA_Kraken/13?event_id=200005"),
-    ("Ice Hockey", "NHL", "DET Red Wings @ CGY Flames", "Today 23:07", "Money Line", "DET Red Wings", "2/2", 100, "200004", f"{B}/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004"),
-    ("Ice Hockey", "Switzerland NLA", "Lausanne HC vs Fribourg Gotteron", "Today 13:45", "Money Line", "Lausanne HC", "1/2", 50, "200023", f"{B}/Ice_Hockey/Other/Switzerland_NLA/Lausanne_HC_vs_Fribourg_Gotteron/13?event_id=200023"),
-    # Basketball --------------------------------------------------------------
-    ("Basketball", "Poland PLK", "Slask Wroclaw vs Astoria Bydgoszcz", "Today 13:30", "Money Line", "Astoria Bydgoszcz", "6/6", 100, "536075", f"{B}/Basketball/European/Poland_PLK/Slask_Wroclaw_vs_Astoria_Bydgoszcz/4?event_id=536075"),
+    # Ice Hockey — refreshed from the live hub after the initial capture --------
+    ("Ice Hockey", "NHL", "CAR Hurricanes @ STL Blues", "Today 19:07", "Money Line", "CAR Hurricanes", "5/5", 100, "200002", f"{B}/Ice_Hockey/NHL/NHL/CAR_Hurricanes_@_STL_Blues/13?event_id=200002"),
+    ("Ice Hockey", "NHL", "NY Rangers @ OTT Senators", "Today 19:07", "Money Line", "NY Rangers", "4/4", 100, "200008", f"{B}/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008"),
+    ("Ice Hockey", "NHL", "MIN Wild @ SEA Kraken", "Today 23:07", "Money Line", "MIN Wild", "4/5", 80, "200005", f"{B}/Ice_Hockey/NHL/NHL/MIN_Wild_@_SEA_Kraken/13?event_id=200005"),
+    ("Ice Hockey", "NHL", "LA Kings @ NJ Devils", "Today 15:37", "Money Line", "NJ Devils", "3/5", 60, "200000", f"{B}/Ice_Hockey/NHL/NHL/LA_Kings_@_NJ_Devils/13?event_id=200000"),
+    ("Ice Hockey", "NHL", "SJ Sharks @ BOS Bruins", "Today 19:07", "Money Line", "BOS Bruins", "3/3", 100, "200007", f"{B}/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007"),
+    ("Ice Hockey", "NHL", "TOR Maple Leafs @ EDM Oilers", "Today 19:07", "Money Line", "EDM Oilers", "3/5", 60, "200010", f"{B}/Ice_Hockey/NHL/NHL/TOR_Maple_Leafs_@_EDM_Oilers/13?event_id=200010"),
+    ("Ice Hockey", "NHL", "TB Lightning @ UTA Mammoth", "Today 22:07", "Money Line", "UTA Mammoth", "3/5", 60, "200009", f"{B}/Ice_Hockey/NHL/NHL/TB_Lightning_@_UTA_Mammoth/13?event_id=200009"),
+    ("Ice Hockey", "NHL", "DET Red Wings @ CGY Flames", "Today 23:07", "Money Line", "DET Red Wings", "3/4", 75, "200004", f"{B}/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004"),
+    ("Ice Hockey", "NHL", "VGS Golden Knights @ CLB Blue Jackets", "Today 19:07", "Money Line", "VGS Golden Knights", "2/3", 67, "200001", f"{B}/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001"),
+    ("Ice Hockey", "NHL", "BUF Sabres @ WAS Capitals", "Today 19:07", "Money Line", "BUF Sabres", "2/3", 67, "200003", f"{B}/Ice_Hockey/NHL/NHL/BUF_Sabres_@_WAS_Capitals/13?event_id=200003"),
+    ("Ice Hockey", "NHL", "NSH Predators @ PIT Penguins", "Today 19:07", "Money Line", "PIT Penguins", "2/3", 67, "200006", f"{B}/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006"),
+    ("Ice Hockey", "Germany Eishockey Liga", "Lowen Frankfurt vs Grizzlys Wolfsburg", "Tomorrow 09:00", "Money Line", "Grizzlys Wolfsburg", "2/2", 100, "200037", f"{B}/Ice_Hockey/Other/Germany_Eishockey_Liga/Lowen_Frankfurt_vs_Grizzlys_Wolfsburg/13?event_id=200037"),
+    ("Ice Hockey", "Switzerland NLA", "Servette GE vs ZSC Lions", "Tomorrow 09:00", "Money Line", "ZSC Lions", "2/2", 100, "200021", f"{B}/Ice_Hockey/Other/Switzerland_NLA/Servette_GE_vs_ZSC_Lions/13?event_id=200021"),
+    ("Ice Hockey", "Germany Eishockey Liga", "Schwenninger Wild Wings vs Eisbaren Berlin", "Tomorrow 09:00", "Money Line", "Eisbaren Berlin", "2/2", 100, "200041", f"{B}/Ice_Hockey/Other/Germany_Eishockey_Liga/Schwenninger_Wild_Wings_vs_Eisbaren_Berlin/13?event_id=200041"),
+    ("Ice Hockey", "Switzerland NLA", "Bern vs Lugano", "Tomorrow 09:00", "Money Line", "Bern", "1/1", 100, "200018", f"{B}/Ice_Hockey/Other/Switzerland_NLA/Bern_vs_Lugano/13?event_id=200018"),
+    ("Ice Hockey", "Austria EHL", "Vienna Capitals vs Graz 99ers", "Tomorrow 09:45", "Money Line", "Vienna Capitals", "1/1", 100, "200043", f"{B}/Ice_Hockey/Other/Austria_EHL/Vienna_Capitals_vs_Graz_99ers/13?event_id=200043"),
+    ("Ice Hockey", "Germany Eishockey Liga", "Iserlohn Roosters vs Nurnberg Ice Tigers", "Tomorrow 11:30", "Money Line", "Iserlohn Roosters", "1/1", 100, "200038", f"{B}/Ice_Hockey/Other/Germany_Eishockey_Liga/Iserlohn_Roosters_vs_Nurnberg_Ice_Tigers/13?event_id=200038"),
+    ("Ice Hockey", "Germany Eishockey Liga", "Augsburger Panther vs Straubing Tigers", "Tomorrow 11:30", "Money Line", "Straubing Tigers", "1/1", 100, "200036", f"{B}/Ice_Hockey/Other/Germany_Eishockey_Liga/Augsburger_Panther_vs_Straubing_Tigers/13?event_id=200036"),
+    ("Ice Hockey", "Germany Eishockey Liga", "Krefeld Pinguine vs EHC Munchen", "Tomorrow 11:30", "Money Line", "EHC Munchen", "1/1", 100, "200039", f"{B}/Ice_Hockey/Other/Germany_Eishockey_Liga/Krefeld_Pinguine_vs_EHC_Munchen/13?event_id=200039"),
+    ("Ice Hockey", "Germany Eishockey Liga", "Fischtown Pinguins Bremerhaven vs ERC Ingolstadt", "Tomorrow 14:00", "Money Line", "Fischtown Pinguins Bremerhaven", "1/1", 100, "200040", f"{B}/Ice_Hockey/Other/Germany_Eishockey_Liga/Fischtown_Pinguins_Bremerhaven_vs_ERC_Ingolstadt/13?event_id=200040"),
+    # Basketball — refreshed from the live hub after the initial capture ---------
     ("Basketball", "Brazil NBB", "Pato Basquete vs Botafogo", "Today 18:00", "Money Line", "Pato Basquete", "3/3", 100, "536087", f"{B}/Basketball/Other/Brazil_NBB/Pato_Basquete_vs_Botafogo/4?event_id=536087"),
+    ("Basketball", "NBA", "BKN Nets @ CLE Cavaliers", "Today 19:30", "Money Line", "CLE Cavaliers", "3/4", 75, "536112", f"{B}/Basketball/NBA/NBA/BKN_Nets_@_CLE_Cavaliers/4?event_id=536112"),
+    ("Basketball", "NBA", "MIL Bucks @ PHI 76ers", "Today 19:30", "Money Line", "PHI 76ers", "3/4", 75, "536111", f"{B}/Basketball/NBA/NBA/MIL_Bucks_@_PHI_76ers/4?event_id=536111"),
     ("Basketball", "NBA", "HOU Rockets @ ATL Hawks", "Today 20:30", "Pointspread", "ATL Hawks -1.50", "3/3", 100, "536115", f"{B}/Basketball/NBA/NBA/HOU_Rockets_@_ATL_Hawks/4?event_id=536115"),
     ("Basketball", "NBA", "MIA Heat @ CHA Hornets", "Today 18:00", "Money Line", "CHA Hornets", "2/2", 100, "536117", f"{B}/Basketball/NBA/NBA/MIA_Heat_@_CHA_Hornets/4?event_id=536117"),
-    ("Basketball", "NBA", "BKN Nets @ CLE Cavaliers", "Today 19:30", "Money Line", "CLE Cavaliers", "2/3", 67, "536112", f"{B}/Basketball/NBA/NBA/BKN_Nets_@_CLE_Cavaliers/4?event_id=536112"),
-    ("Basketball", "NBA", "MIL Bucks @ PHI 76ers", "Today 19:30", "Money Line", "PHI 76ers", "2/3", 67, "536111", f"{B}/Basketball/NBA/NBA/MIL_Bucks_@_PHI_76ers/4?event_id=536111"),
+    ("Basketball", "NBA", "NO Pelicans @ DEN Nuggets", "Today 22:00", "Money Line", "DEN Nuggets", "2/3", 67, "536116", f"{B}/Basketball/NBA/NBA/NO_Pelicans_@_DEN_Nuggets/4?event_id=536116"),
     ("Basketball", "NBA", "SA Spurs @ DAL Mavericks", "Today 20:00", "Money Line", "SA Spurs", "1/2", 50, "536114", f"{B}/Basketball/NBA/NBA/SA_Spurs_@_DAL_Mavericks/4?event_id=536114"),
     ("Basketball", "NBA", "WAS Wizards @ CHI Bulls", "Today 20:00", "Money Line", "CHI Bulls", "1/2", 50, "536113", f"{B}/Basketball/NBA/NBA/WAS_Wizards_@_CHI_Bulls/4?event_id=536113"),
-    ("Basketball", "NBA", "NO Pelicans @ DEN Nuggets", "Today 22:00", "Money Line", "NO Pelicans", "1/2", 50, "536116", f"{B}/Basketball/NBA/NBA/NO_Pelicans_@_DEN_Nuggets/4?event_id=536116"),
-    ("Basketball", "NBA", "GS Warriors @ PHX Suns", "Today 23:00", "Pointspread", "PHX Suns -9.50", "1/1", 100, "536118", f"{B}/Basketball/NBA/NBA/GS_Warriors_@_PHX_Suns/4?event_id=536118"),
+    ("Basketball", "NBA", "GS Warriors @ PHX Suns", "Today 23:00", "Money Line", "PHX Suns", "1/2", 50, "536118", f"{B}/Basketball/NBA/NBA/GS_Warriors_@_PHX_Suns/4?event_id=536118"),
     # Tennis ------------------------------------------------------------------
-    ("Tennis", None, "Ashlyn Krueger vs Katerina Siniakova", "Tomorrow 00:30", "Win Match", "Katerina Siniakova", "1/1", 100, "902171", f"{B}/Tennis/All_Tennis/All_Events/Ashlyn_Krueger_vs_Katerina_Siniakova/3?event_id=902171"),
-    ("Tennis", None, "Elena Rybakina vs Leylah Fernandez", "Tomorrow 05:00", "Win Match", "Elena Rybakina", "1/1", 100, "902207", f"{B}/Tennis/All_Tennis/All_Events/Elena_Rybakina_vs_Leylah_Fernandez/3?event_id=902207"),
-    ("Tennis", None, "Daniil Medvedev vs Nikoloz Basilashvili", "Tomorrow 06:00", "Win Match", "Daniil Medvedev", "1/1", 100, "902251", f"{B}/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251"),
+    ("Tennis", None, "Ashlyn Krueger vs Katerina Siniakova", "Tomorrow 00:30", "Win Match", "Katerina Siniakova", "3/4", 75, "902171", f"{B}/Tennis/All_Tennis/All_Events/Ashlyn_Krueger_vs_Katerina_Siniakova/3?event_id=902171"),
+    ("Tennis", None, "Elena Rybakina vs Leylah Fernandez", "Tomorrow 05:00", "Win Match", "Elena Rybakina", "4/4", 100, "902207", f"{B}/Tennis/All_Tennis/All_Events/Elena_Rybakina_vs_Leylah_Fernandez/3?event_id=902207"),
+    ("Tennis", None, "Daniil Medvedev vs Nikoloz Basilashvili", "Tomorrow 06:00", "Win Match", "Daniil Medvedev", "3/3", 100, "902251", f"{B}/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251"),
     ("Tennis", None, "Alexandra Eala vs Mika Stojsavljevic", "26 Oct 22:00", "Win Match", "Alexandra Eala", "1/1", 100, "902175", f"{B}/Tennis/All_Tennis/All_Events/Alexandra_Eala_vs_Mika_Stojsavljevic/3?event_id=902175"),
     ("Tennis", None, "Moyuka Uchijima vs Elise Mertens", "26 Oct 22:00", "Win Match", "Elise Mertens", "1/1", 100, "902173", f"{B}/Tennis/All_Tennis/All_Events/Moyuka_Uchijima_vs_Elise_Mertens/3?event_id=902173"),
     ("Tennis", None, "Leylah Fernandez vs Himeno Sakatsume", "26 Oct 22:00", "Win Match", "Leylah Fernandez", "1/1", 100, "902172", f"{B}/Tennis/All_Tennis/All_Events/Leylah_Fernandez_vs_Himeno_Sakatsume/3?event_id=902172"),
@@ -94,36 +98,44 @@ OLBG = [
     ("Rugby Union", "Premiership", "Harlequins v Saracens", "Tomorrow 11:00", "To Win", "Harlequins", "1/1", 100, "609571", f"{B}/Rugby_Union/All_Rugby_Union/All_Events/Harlequins_v_Saracens/9?event_id=609571"),
     ("Rugby Union", "Top 14", "La Rochelle v Bordeaux", "Tomorrow 16:05", "To Win", "Bordeaux", "1/2", 50, "609554", f"{B}/Rugby_Union/All_Rugby_Union/All_Events/La_Rochelle_v_Bordeaux/9?event_id=609554"),
     ("Rugby Union", "Outright", "Six Nations 2027", "14 Mar 2027 16:00", "Win Tournament", "Ireland", "3/9", 33, "609013", f"{B}/Rugby_Union/All_Rugby_Union/All_Events/Six_Nations_2027/9?event_id=609013"),
-    # Volleyball --------------------------------------------------------------
-    ("Volleyball", "Austria W", "UVC Graz W vs Sportunion St Polten W", "Today 14:00", "Win Match", "UVC Graz W", "5/6", 83, "37019", f"{B}/Volleyball/All_Volleyball/All_Events/UVC_Graz_W_vs_Sportunion_St_Polten_W/21?event_id=37019"),
-    ("Volleyball", "Germany Bundesliga", "SWD Duren vs WWK Volleys Munchen", "Today 13:30", "Win Match", "SWD Duren", "4/5", 80, "37012", f"{B}/Volleyball/All_Volleyball/All_Events/SWD_Duren_vs_WWK_Volleys_Munchen/21?event_id=37012"),
-    ("Volleyball", "Poland TAURON Liga W", "Mogilno W vs Chemik Police W", "Today 14:30", "Win Match", "Chemik Police W", "3/3", 100, "37078", f"{B}/Volleyball/All_Volleyball/All_Events/Mogilno_W_vs_Chemik_Police_W/21?event_id=37078"),
-    ("Volleyball", "Germany Bundesliga", "Helios Grizzlys Giesen vs Berlin Volleys", "Today 13:30", "Win Match", "Helios Grizzlys Giesen", "2/4", 50, "37013", f"{B}/Volleyball/All_Volleyball/All_Events/Helios_Grizzlys_Giesen_vs_Berlin_Volleys/21?event_id=37013"),
-    ("Volleyball", "France Ligue A W", "Beziers W vs Le Cannet W", "Today 13:30", "Win Match", "Beziers W", "2/4", 50, "37067", f"{B}/Volleyball/All_Volleyball/All_Events/Beziers_W_vs_Le_Cannet_W/21?event_id=37067"),
-    ("Volleyball", "Brazil Superliga W", "Mackenzie W vs Osasco W", "Today 15:00", "Win Match", "Mackenzie W", "2/4", 50, "37002", f"{B}/Volleyball/All_Volleyball/All_Events/Mackenzie_W_vs_Osasco_W/21?event_id=37002"),
-    ("Volleyball", "Brazil Superliga W", "Abel-Moda Brusque W vs Praia Clube W", "Today 20:00", "Win Match", "Abel/Moda Brusque W", "2/3", 67, "37003", f"{B}/Volleyball/All_Volleyball/All_Events/Abel-Moda_Brusque_W_vs_Praia_Clube_W/21?event_id=37003"),
-    ("Volleyball", "Italy SuperLega", "Trentino vs Cisterna", "Tomorrow 12:00", "Win Match", "Cisterna", "2/2", 100, "36994", f"{B}/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994"),
-    ("Volleyball", "Poland PlusLiga", "CHKS Chelm vs Resovia Rzeszow", "Tomorrow 13:00", "Win Match", "Resovia Rzeszow", "2/3", 67, "36965", f"{B}/Volleyball/All_Volleyball/All_Events/CHKS_Chelm_vs_Resovia_Rzeszow/21?event_id=36965"),
-    ("Volleyball", "Italy SuperLega", "Perugia vs Pordenone", "Tomorrow 13:00", "Win Match", "Pordenone", "2/2", 100, "36997", f"{B}/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997"),
-    ("Volleyball", "Netherlands W", "Activia VB W vs VC Sneek W", "Today 13:30", "Win Match", "Activia VB W", "1/2", 50, "37060", f"{B}/Volleyball/All_Volleyball/All_Events/Activia_VB_W_vs_VC_Sneek_W/21?event_id=37060"),
-    ("Volleyball", "Netherlands W", "Sliedrecht W vs Apollo 8 W", "Today 14:00", "Win Match", "Sliedrecht W", "1/2", 50, "37061", f"{B}/Volleyball/All_Volleyball/All_Events/Sliedrecht_W_vs_Apollo_8_W/21?event_id=37061"),
-    # Handball ----------------------------------------------------------------
-    ("Handball", "Germany HBL", "HBW Balingen Weilstetten vs MT Melsungen", "Today 14:00", "Money Line", "Tie", "6/11", 55, "12090", f"{B}/Handball/All_Handball/All_Events/HBW_Balingen_Weilstetten_vs_MT_Melsungen/20?event_id=12090"),
-    ("Handball", "Spain ASOBAL", "BM Logrono La Rioja vs BM Cangas", "Today 13:30", "Money Line", "BM Logrono La Rioja", "4/9", 44, "12103", f"{B}/Handball/All_Handball/All_Events/BM_Logrono_La_Rioja_vs_BM_Cangas/20?event_id=12103"),
-    ("Handball", "EHF Champions League", "SC Magdeburg vs HC Kriens Luzern", "28 Oct 15:45", "Money Line", "Tie", "3/4", 75, "12136", f"{B}/Handball/All_Handball/All_Events/SC_Magdeburg_vs_HC_Kriens_Luzern/20?event_id=12136"),
-    ("Handball", "Spain ASOBAL", "BM Granollers vs Angel Ximenez Puente Genil", "Tomorrow 07:30", "Money Line", "Angel Ximenez-Puente Genil", "2/4", 50, "12102", f"{B}/Handball/All_Handball/All_Events/BM_Granollers_vs_Angel_Ximenez_Puente_Genil/20?event_id=12102"),
-    ("Handball", "Germany HBL", "Rhein Neckar Lowen vs SC Magdeburg", "Tomorrow 10:00", "Money Line", "Rhein Neckar Lowen", "2/3", 67, "12092", f"{B}/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092"),
-    ("Handball", "Women", "Luxembourg W vs Great Britain W", "Tomorrow 11:00", "Money Line", "Great Britain (W)", "2/2", 100, "12126", f"{B}/Handball/All_Handball/All_Events/Luxembourg_W_vs_Great_Britain_W/20?event_id=12126"),
-    ("Handball", "Spain ASOBAL", "BM Torrelavega vs BM Proin", "Tomorrow 13:00", "Money Line", "BM Proin", "2/3", 67, "12105", f"{B}/Handball/All_Handball/All_Events/BM_Torrelavega_vs_BM_Proin/20?event_id=12105"),
-    ("Handball", "EHF Champions League", "HC Vardar vs MT Melsungen", "28 Oct 13:45", "Money Line", "HC Vardar", "2/3", 67, "12130", f"{B}/Handball/All_Handball/All_Events/HC_Vardar_vs_MT_Melsungen/20?event_id=12130"),
-    ("Handball", "EHF Champions League", "KS Kielce vs Kolstad", "28 Oct 15:45", "Money Line", "Tie", "2/3", 67, "12132", f"{B}/Handball/All_Handball/All_Events/KS_Kielce_vs_Kolstad/20?event_id=12132"),
-    ("Handball", "EHF Champions League", "GOG vs Sporting CP", "29 Oct 13:45", "Money Line", "GOG", "2/2", 100, "12129", f"{B}/Handball/All_Handball/All_Events/GOG_vs_Sporting_CP/20?event_id=12129"),
-    # Darts -------------------------------------------------------------------
-    ("Darts", None, "Krzysztof Ratajski vs Kevin Doets", "Today 13:15", "Win Match 2-way", "Kevin Doets", "16/22", 73, "32399", f"{B}/Darts/All_Darts/All_Events/Krzysztof_Ratajski_vs_Kevin_Doets/15?event_id=32399"),
-    ("Darts", None, "Jonny Clayton vs Josh Rock", "Today 16:15", "Win Match 2-way", "Jonny Clayton", "13/18", 72, "32400", f"{B}/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Josh_Rock/15?event_id=32400"),
-    ("Darts", None, "Nathan Aspinall vs Luke Littler", "Today 15:15", "Win Match 2-way", "Luke Littler", "11/17", 65, "32397", f"{B}/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Luke_Littler/15?event_id=32397"),
-    ("Darts", None, "Martin Schindler vs Jermaine Wattimena", "Today 14:15", "Win Match 2-way", "Jermaine Wattimena", "10/18", 56, "32398", f"{B}/Darts/All_Darts/All_Events/Martin_Schindler_vs_Jermaine_Wattimena/15?event_id=32398"),
+    # Volleyball — all rows exposed by the captured current hub ---------------
+    ("Volleyball", 'Poland TAURON Liga W', 'Mogilno W vs Chemik Police W', 'Today 14:30', 'Win Match', 'Chemik Police W', '3/3', 100, '37078', f"{B}/Volleyball/All_Volleyball/All_Events/Mogilno_W_vs_Chemik_Police_W/21?event_id=37078"),
+    ("Volleyball", 'Brazil Superliga W', 'Mackenzie W vs Osasco W', 'Today 15:00', 'Win Match', 'Mackenzie W', '2/4', 50, '37002', f"{B}/Volleyball/All_Volleyball/All_Events/Mackenzie_W_vs_Osasco_W/21?event_id=37002"),
+    ("Volleyball", 'Brazil Superliga W', 'Abel-Moda Brusque W vs Praia Clube W', 'Today 20:00', 'Win Match', 'Abel/Moda Brusque W', '2/3', 67, '37003', f"{B}/Volleyball/All_Volleyball/All_Events/Abel-Moda_Brusque_W_vs_Praia_Clube_W/21?event_id=37003"),
+    ("Volleyball", 'Italy SuperLega', 'Trentino vs Cisterna', 'Tomorrow 12:00', 'Win Match', 'Cisterna', '2/2', 100, '36994', f"{B}/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994"),
+    ("Volleyball", 'Poland PlusLiga', 'CHKS Chelm vs Resovia Rzeszow', 'Tomorrow 13:00', 'Win Match', 'Resovia Rzeszow', '2/3', 67, '36965', f"{B}/Volleyball/All_Volleyball/All_Events/CHKS_Chelm_vs_Resovia_Rzeszow/21?event_id=36965"),
+    ("Volleyball", 'Italy SuperLega', 'Perugia vs Pordenone', 'Tomorrow 13:00', 'Win Match', 'Pordenone', '2/2', 100, '36997', f"{B}/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997"),
+    ("Volleyball", None, 'Talmassons W vs Chieri W', 'Today 14:45', 'Win Match', 'Chieri W', '1/1', 100, '37072', f"{B}/Volleyball/All_Volleyball/All_Events/Talmassons_W_vs_Chieri_W/21?event_id=37072"),
+    ("Volleyball", None, 'ETV Hamburg W vs Munster W', 'Tomorrow 10:30', 'Set Score', 'Munster W to win 3-2', '1/1', 100, '37059', f"{B}/Volleyball/All_Volleyball/All_Events/ETV_Hamburg_W_vs_Munster_W/21?event_id=37059"),
+    ("Volleyball", None, 'Barock Volleys Ludwigsburg vs TV Rottenburg', 'Tomorrow 12:00', 'Set Score', 'TV Rottenburg to win 3-1', '1/1', 100, '37014', f"{B}/Volleyball/All_Volleyball/All_Events/Barock_Volleys_Ludwigsburg_vs_TV_Rottenburg/21?event_id=37014"),
+    ("Volleyball", 'Italy SuperLega', 'Civitanova vs Padova', 'Tomorrow 13:00', 'Set Score', 'Civitanova to win 3-1', '1/1', 100, '36995', f"{B}/Volleyball/All_Volleyball/All_Events/Civitanova_vs_Padova/21?event_id=36995"),
+    ("Volleyball", 'Italy SuperLega', 'Monza vs Verona', 'Tomorrow 13:00', 'Win Match', 'Monza', '1/1', 100, '36996', f"{B}/Volleyball/All_Volleyball/All_Events/Monza_vs_Verona/21?event_id=36996"),
+    # Handball — all upcoming rows exposed by the captured hub chunks --------
+    ("Handball", 'EHF Champions League', 'SC Magdeburg vs HC Kriens Luzern', '28 Oct 15:45', "Money Line", 'Tie', '3/4', 75, '12136', f"{B}/Handball/All_Handball/All_Events/SC_Magdeburg_vs_HC_Kriens_Luzern/20?event_id=12136"),
+    ("Handball", 'Spain ASOBAL', 'BM Granollers vs Angel Ximenez Puente Genil', 'Tomorrow 07:30', "Money Line", 'BM Granollers', '2/5', 40, '12102', f"{B}/Handball/All_Handball/All_Events/BM_Granollers_vs_Angel_Ximenez_Puente_Genil/20?event_id=12102"),
+    ("Handball", 'Germany HBL', 'Rhein Neckar Lowen vs SC Magdeburg', 'Tomorrow 10:00', "Money Line", 'Rhein Neckar Lowen', '2/3', 67, '12092', f"{B}/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092"),
+    ("Handball", 'France StarLigue', 'Saint Raphael vs PSG Handball', 'Tomorrow 11:00', "Money Line", 'PSG Handball', '2/3', 67, '12084', f"{B}/Handball/All_Handball/All_Events/Saint_Raphael_vs_PSG_Handball/20?event_id=12084"),
+    ("Handball", 'Women', 'Luxembourg W vs Great Britain W', 'Tomorrow 11:00', "Money Line", 'Great Britain (W)', '2/2', 100, '12126', f"{B}/Handball/All_Handball/All_Events/Luxembourg_W_vs_Great_Britain_W/20?event_id=12126"),
+    ("Handball", 'Spain ASOBAL', 'BM Torrelavega vs BM Proin', 'Tomorrow 13:00', "Money Line", 'BM Proin', '2/3', 67, '12105', f"{B}/Handball/All_Handball/All_Events/BM_Torrelavega_vs_BM_Proin/20?event_id=12105"),
+    ("Handball", 'EHF Champions League', 'HC Vardar vs MT Melsungen', '28 Oct 13:45', "Money Line", 'HC Vardar', '2/3', 67, '12130', f"{B}/Handball/All_Handball/All_Events/HC_Vardar_vs_MT_Melsungen/20?event_id=12130"),
+    ("Handball", 'EHF Champions League', 'KS Kielce vs Kolstad', '28 Oct 15:45', "Money Line", 'Tie', '2/3', 67, '12132', f"{B}/Handball/All_Handball/All_Events/KS_Kielce_vs_Kolstad/20?event_id=12132"),
+    ("Handball", 'EHF Champions League', 'GOG vs Sporting CP', '29 Oct 13:45', "Money Line", 'GOG', '2/2', 100, '12129', f"{B}/Handball/All_Handball/All_Events/GOG_vs_Sporting_CP/20?event_id=12129"),
+    ("Handball", None, 'Fuchse Berlin vs RK Partizan', '29 Oct 13:45', "Money Line", 'RK Partizan', '2/4', 50, '12128', f"{B}/Handball/All_Handball/All_Events/Fuchse_Berlin_vs_RK_Partizan/20?event_id=12128"),
+    ("Handball", None, 'CBM Sporting Alicante vs Ademar Leon', 'Tomorrow 07:00', "Money Line", 'Ademar Leon', '1/2', 50, '12106', f"{B}/Handball/All_Handball/All_Events/CBM_Sporting_Alicante_vs_Ademar_Leon/20?event_id=12106"),
+    ("Handball", None, 'Ystads IF HF vs Hammarby IF HF', 'Tomorrow 09:00', "Money Line", 'Hammarby IF HF', '1/2', 50, '12152', f"{B}/Handball/All_Handball/All_Events/Ystads_IF_HF_vs_Hammarby_IF_HF/20?event_id=12152"),
+    ("Handball", 'Women', 'Lithuania W vs Belgium W', 'Tomorrow 10:00', "Money Line", 'Lithuania (W)', '1/3', 33, '12125', f"{B}/Handball/All_Handball/All_Events/Lithuania_W_vs_Belgium_W/20?event_id=12125"),
+    ("Handball", None, 'Skanderborg Handbold vs Team Tvis Holstebro', 'Tomorrow 11:00', "Money Line", 'Team Tvis Holstebro', '1/2', 50, '12075', f"{B}/Handball/All_Handball/All_Events/Skanderborg_Handbold_vs_Team_Tvis_Holstebro/20?event_id=12075"),
+    ("Handball", None, 'HIF Karlskrona vs IFK Kristianstad', 'Tomorrow 11:00', "Money Line", 'HIF Karlskrona', '1/2', 50, '12148', f"{B}/Handball/All_Handball/All_Events/HIF_Karlskrona_vs_IFK_Kristianstad/20?event_id=12148"),
+    ("Handball", None, 'Amo HK vs HK Malmo', 'Tomorrow 11:15', "Money Line", 'HK Malmo', '1/2', 50, '12144', f"{B}/Handball/All_Handball/All_Events/Amo_HK_vs_HK_Malmo/20?event_id=12144"),
+    ("Handball", 'Germany HBL', 'Fuchse Berlin vs HSG Wetzlar', 'Tomorrow 11:30', "Money Line", 'Fuchse Berlin', '1/3', 33, '12089', f"{B}/Handball/All_Handball/All_Events/Fuchse_Berlin_vs_HSG_Wetzlar/20?event_id=12089"),
+    ("Handball", 'Germany HBL', 'Bergischer HC vs HC Hamburg', 'Tomorrow 11:30', "Money Line", 'Tie', '1/1', 100, '12087', f"{B}/Handball/All_Handball/All_Events/Bergischer_HC_vs_HC_Hamburg/20?event_id=12087"),
+    ("Handball", None, 'Skanela IF vs IK Savehof', 'Tomorrow 11:30', "Money Line", 'Skanela IF', '1/2', 50, '12151', f"{B}/Handball/All_Handball/All_Events/Skanela_IF_vs_IK_Savehof/20?event_id=12151"),
+    ("Handball", 'France StarLigue', 'Montpellier vs Saran Loiret', 'Tomorrow 12:00', "Money Line", 'Tie', '1/1', 100, '12081', f"{B}/Handball/All_Handball/All_Events/Montpellier_vs_Saran_Loiret/20?event_id=12081"),
+    # Darts — current hub after the first two Saturday evening matches began ---
+    ("Darts", None, "Nathan Aspinall vs Luke Littler", "Today 15:15", "Win Match 2-way", "Luke Littler", "15/21", 71, "32397", f"{B}/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Luke_Littler/15?event_id=32397"),
+    ("Darts", None, "Jonny Clayton vs Josh Rock", "Today 16:15", "Win Match 2-way", "Jonny Clayton", "15/21", 71, "32400", f"{B}/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Josh_Rock/15?event_id=32400"),
     ("Darts", None, "Gerwyn Price vs Stephen Bunting", "Tomorrow 07:00", "Win Match 2-way", "Gerwyn Price", "2/2", 100, "32407", f"{B}/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Stephen_Bunting/15?event_id=32407"),
+    ("Darts", "Outright", "PDC World Championship 2027", "03 Jan 2027 12:00", "Win Tournament", "Luke Littler", "22/36", 61, "26023", f"{B}/Darts/All_Darts/All_Events/PDC_World_Championship_2027/15?event_id=26023"),
     ("Darts", "Outright", "European Championship", "Tomorrow 14:00", "Win Tournament", "Luke Littler", "9/19", 47, "32338", f"{B}/Darts/All_Darts/All_Events/European_Championship/15?event_id=32338"),
     # Snooker -----------------------------------------------------------------
     ("Snooker", "Northern Ireland Open", "Mark Williams v Jak Jones", "Today 14:05", "Win Match", "Jak Jones", "15/26", 58, "9952", f"{B}/Snooker/All_Snooker/All_Events/Mark_Williams_v_Jak_Jones/8?event_id=9952"),
@@ -173,7 +185,7 @@ FIXTURES = [
          away="Los Angeles Kings", venue="Prudential Center", start_utc="2026-10-24T19:30:00Z",
          start_source="NHL schedule feed startTimeUTC", home_record="6-4-0", away_record="2-4-2",
          market_decimal_home=1.53, market_decimal_away=2.55, market_source="NHL schedule feed odds array (providerId 3, Tipsport)",
-         olbg_event_id="200000", olbg_listed_selection="Over 5.50", olbg_market="Game Totals",
+         olbg_event_id="200000", olbg_listed_selection="NJ Devils", olbg_market="Money Line",
          fact_home="6-4-0 in 10 games (12 points); Jack Hughes has 8 assists, Arseny Gritsyuk 5 goals, Jake Allen 4 wins",
          fact_away="2-4-2 in 8 games (6 points); Artemi Panarin has 6 goals, Brandt Clarke 5 assists",
          source_url=NHLE_SCORE, source_label="NHL scores feed"),
@@ -182,7 +194,7 @@ FIXTURES = [
          start_source="NHL schedule feed startTimeUTC", home_record="8-2-1", away_record="6-4-1",
          market_decimal_home=1.54, market_decimal_away=2.52, market_source="NHL schedule feed odds array (providerId 3, Tipsport)",
          olbg_event_id="200007", olbg_listed_selection="BOS Bruins", olbg_market="Money Line",
-         fact_home="8-2-1 in 11 games (17 points), 42 goals for and 22 against; David Pastrnak 6 goals and 10 assists, Jeremy Swayman 6 wins",
+         fact_home="8-2-1 in 11 games; David Pastrnak has 6 goals and 10 assists, Jeremy Swayman 6 wins",
          fact_away="6-4-1 in 11 games (13 points); Macklin Celebrini 5 goals and 9 assists",
          source_url=NHLE_SCORE, source_label="NHL scores feed"),
     dict(id="nhl-2026020171", sport="Ice Hockey", competition="NHL", home="Ottawa Senators",
@@ -205,7 +217,7 @@ FIXTURES = [
          away="Buffalo Sabres", venue="Capital One Arena", start_utc="2026-10-24T23:00:00Z",
          start_source="NHL schedule feed startTimeUTC", home_record="5-4-0", away_record="4-4-2",
          market_decimal_home=1.84, market_decimal_away=2.01, market_source="NHL schedule feed odds array (providerId 3, Tipsport)",
-         olbg_event_id=None, olbg_listed_selection=None, olbg_market=None,
+         olbg_event_id="200003", olbg_listed_selection="BUF Sabres", olbg_market="Money Line",
          fact_home="5-4-0 in 9 games (10 points); Alex Tuch 5 goals, Dylan Strome 5 assists, Logan Thompson 4 wins",
          fact_away="4-4-2 in 10 games (10 points); Tage Thompson 5 goals, Zach Benson 6 assists",
          source_url=NHLE_SCHED, source_label="NHL schedule feed"),
@@ -214,8 +226,8 @@ FIXTURES = [
          start_source="NHL schedule feed startTimeUTC", home_record="3-5-0", away_record="8-4-0",
          market_decimal_home=2.11, market_decimal_away=1.76, market_source="NHL schedule feed odds array (providerId 3, Tipsport)",
          olbg_event_id="200001", olbg_listed_selection="VGS Golden Knights", olbg_market="Money Line",
-         fact_home="3-5-0 in 8 games (6 points)",
-         fact_away="8-4-0 in 12 games (16 points), 46 goals for and 36 against",
+         fact_home="3-5-0 in 8 games; Kent Johnson has 4 goals, Zach Werenski 6 assists and Jet Greaves 2 wins",
+         fact_away="8-4-0 in 12 games; Mark Stone has 8 goals, Jack Eichel 13 assists and Carter Hart 4 wins",
          source_url=NHLE_SCORE, source_label="NHL scores feed"),
     dict(id="mlb-849802", sport="Baseball", competition="MLB World Series", home="Milwaukee Brewers",
          away="Tampa Bay Rays", venue="American Family Field", start_utc="2026-10-25T00:00:00Z",
@@ -228,11 +240,13 @@ FIXTURES = [
          source_url=MLB_SCHED, source_label="MLB Stats API schedule (probable pitchers)"),
 ]
 
+expand_fixtures(FIXTURES)
+
 SPORT_STATUS = {
     "Golf": dict(listings=0, verified=0, note="The Golf hub returned \"No tips found.\" at 17:16 UTC, so OLBG listed no golf event to attach a pick to."),
     "Rugby League": dict(listings=3, verified=0, note="Only 2027 outright futures were listed; no Rugby League match event was listed on the hub at capture."),
     "Greyhounds": dict(listings=9, verified=0, note="Race-by-race dog form is not published by GBGB in a form reachable from this environment, so no greyhound pick is published."),
-    "Basketball": dict(listings=10, verified=0, note="NBA.com returned its games shell but no per-game data (\"Sorry, something went wrong\"), and the NBA CDN scoreboard returned HTTP 500 twice, so no NBA fixture could be officially confirmed."),
+    "Basketball": dict(listings=10, verified=8, note="All eight NBA fixtures are confirmed on the official games page. Availability is limited to the 1:30 PM ET injury report; teams marked NOT YET SUBMITTED remain flagged."),
 }
 
 payload = dict(

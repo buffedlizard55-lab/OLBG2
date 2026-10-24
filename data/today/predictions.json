@@ -1,241 +1,1407 @@
 {
-  "generated_utc": "2026-10-24T17:50:00Z",
-  "count": 6,
-  "min_words": 79,
+  "generated_utc": "2026-10-24T18:25:00Z",
+  "count": 27,
+  "min_words": 87,
+  "unique_texts": 27,
   "predictions": [
     {
-      "id": "pred-nhl-2026020169",
-      "fixture_id": "nhl-2026020169",
-      "sport": "Ice Hockey",
-      "competition": "NHL",
-      "home": "New Jersey Devils",
-      "away": "Los Angeles Kings",
-      "start_utc": "2026-10-24T19:30:00Z",
-      "selection": "New Jersey Devils",
-      "market": "Money line",
-      "probability": 0.7362,
-      "fair_american": -279,
+      "id": "preview-tennis-wta-ningbo-2026-final",
+      "fixture_id": "tennis-wta-ningbo-2026-final",
+      "sport": "Tennis",
+      "competition": "WTA 500 Ningbo — final",
+      "event_name": null,
+      "home": "Elena Rybakina",
+      "away": "Leylah Fernandez",
+      "start_utc": "2026-10-25T09:00:00Z",
+      "start_display": "Not before 2026-10-25 09:00 UTC (17:00 Ningbo)",
+      "headline": "Rybakina’s season record and title defence lead the Ningbo call",
+      "selection": "Elena Rybakina",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.711,
+      "fair_american": -246,
       "confidence": "high",
-      "in_band": false,
-      "headline": "New Jersey's form is the stronger side of this game, but -279 is outside the band",
-      "text": "New Jersey Devils to win at the Prudential Center. New Jersey are 6-4-0 for twelve points, with Jack Hughes already on eight assists, Arseny Gritsyuk on five goals and Jake Allen on four wins. Los Angeles are 2-4-2, six points from eight games, and their output runs through Artemi Panarin's six goals and Brandt Clarke's five assists. We price the Devils at 73.6%, a fair -279, so this pick is flagged as being outside the -250 floor rather than trimmed to fit.",
-      "word_count": 82,
+      "in_band": true,
+      "text": "Elena Rybakina is the match-winner selection in the Ningbo final. Her 49-14 season record, World No. 1 ranking and three titles give her the strongest baseline against Leylah Fernandez’s 24-25 and one title. Rybakina also leads their head-to-head 3-2 and is defending the Ningbo championship. Fernandez’s 11-2 run since the Asian Swing began and her second final of the season make her a live opponent, not a passive underdog. Both won their semifinals 6-3 7-5, but Rybakina has lost only one set this week and has spent less time on court. The pick rests on season-long superiority and the defending champion’s repeat-final experience.",
+      "word_count": 103,
+      "official_fixture_url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Elena_Rybakina_vs_Leylah_Fernandez/3?event_id=902207",
       "facts": [
         {
-          "claim": "New Jersey 6-4-0 in 10 games, 12 points; Jack Hughes 8 assists; Jake Allen 4 wins",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Official order of play: Not before 2026-10-25 09:00 UTC (17:00 Ningbo)",
+          "source_url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026"
         },
         {
-          "claim": "Los Angeles 2-4-2 in 8 games, 6 points; Artemi Panarin 6 goals; Brandt Clarke 5 assists",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Elena Rybakina: World No. 1 with a 49-14 season record and three titles; defending Ningbo champion",
+          "source_url": "https://www.wtatennis.com/players/324166/elena-rybakina"
         },
         {
-          "claim": "League quote: New Jersey 1.53, Los Angeles 2.55",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Leylah Fernandez: World No. 30 with a 24-25 season record and one title; 11-2 since the start of the Asian Swing",
+          "source_url": "https://www.wtatennis.com/players/326735/leylah-fernandez"
+        },
+        {
+          "claim": "WTA final preview: Rybakina leads the head-to-head 3-2 and beat Fernandez in Stuttgart in 2026",
+          "source_url": "https://www.wtatennis.com/news/4598107/elena-rybakina-vs-leylah-fernandez-everything-to-know-about-the-ningbo-final"
+        },
+        {
+          "claim": "WTA final preview: both players won their semifinals 6-3 7-5; Fernandez is 11-2 since the start of the Asian Swing",
+          "source_url": "https://www.wtatennis.com/news/4598107/elena-rybakina-vs-leylah-fernandez-everything-to-know-about-the-ningbo-final"
+        },
+        {
+          "claim": "WTA player profiles: Rybakina is rank 1 with a 49-14 record and three titles; Fernandez is rank 30 with a 24-25 record and one title",
+          "source_url": "https://www.wtatennis.com/players/324166/elena-rybakina"
+        },
+        {
+          "claim": "Fernandez player profile corroborates rank 30, the 24-25 season record and one 2026 title",
+          "source_url": "https://www.wtatennis.com/players/326735/leylah-fernandez"
         }
       ],
       "injuries": null,
-      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
-      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/LA_Kings_@_NJ_Devils/13?event_id=200000",
-      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
     },
     {
-      "id": "pred-nhl-2026020174",
+      "id": "preview-tennis-atp-almaty-2026-final",
+      "fixture_id": "tennis-atp-almaty-2026-final",
+      "sport": "Tennis",
+      "competition": "ATP 250 Almaty — final",
+      "event_name": null,
+      "home": "Daniil Medvedev",
+      "away": "Nikoloz Basilashvili",
+      "start_utc": "2026-10-25T09:00:00Z",
+      "start_display": "Not before 2026-10-25 09:00 UTC (15:00 Almaty)",
+      "headline": "Medvedev’s season-long baseline carries the Almaty final",
+      "selection": "Daniil Medvedev",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.7044,
+      "fair_american": -238,
+      "confidence": "high",
+      "in_band": true,
+      "text": "Daniil Medvedev is the match-winner selection against Nikoloz Basilashvili. The official head-to-head page lists Medvedev at 45-18 this season and Basilashvili at 7-10, a much broader basis than one week’s results. Medvedev also owns 37 hard-court wins and a 10-1 Almaty record, while Basilashvili has reached his first tour final since Doha 2022 and climbed to live rank 97. The Georgian’s three-set semifinal win over Stefanos Tsitsipas shows why this is not a certainty, but Medvedev leads their head-to-head 1-0 and won their Vienna meeting 6-2 6-2. His season-long consistency and defending-champion record justify the pick.",
+      "word_count": 96,
+      "official_fixture_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251",
+      "facts": [
+        {
+          "claim": "Official order of play: Not before 2026-10-25 09:00 UTC (15:00 Almaty)",
+          "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+        },
+        {
+          "claim": "Daniil Medvedev: Rank 5 with a 45-18 season record; 37 hard-court wins and a 10-1 Almaty record",
+          "source_url": "https://www.atptour.com/en/players/atp-head-2-head/daniil-medvedev-vs-nikoloz-basilashvili/mm58/bg23"
+        },
+        {
+          "claim": "Nikoloz Basilashvili: Rank 128 with a 7-10 season record; first tour final since Doha 2022 and live rank 97",
+          "source_url": "https://www.atptour.com/en/players/atp-head-2-head/daniil-medvedev-vs-nikoloz-basilashvili/mm58/bg23"
+        },
+        {
+          "claim": "ATP final report: Medvedev has 37 hard-court wins in 2026 and is 10-1 at Almaty; Basilashvili reached his first tour final since Doha 2022 and is live-ranked 97",
+          "source_url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday"
+        },
+        {
+          "claim": "ATP head-to-head: Medvedev leads 1-0 after winning their 2022 Vienna meeting 6-2 6-2",
+          "source_url": "https://www.atptour.com/en/players/atp-head-2-head/daniil-medvedev-vs-nikoloz-basilashvili/mm58/bg23"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-nhl-2026020174",
       "fixture_id": "nhl-2026020174",
       "sport": "Ice Hockey",
       "competition": "NHL",
+      "event_name": null,
       "home": "Columbus Blue Jackets",
       "away": "Vegas Golden Knights",
       "start_utc": "2026-10-24T23:00:00Z",
+      "start_display": null,
+      "headline": "Vegas has the stronger two-way route through Columbus",
       "selection": "Vegas Golden Knights",
-      "market": "Money line",
+      "market": "Moneyline",
+      "line": null,
       "probability": 0.7029,
       "fair_american": -237,
       "confidence": "high",
       "in_band": true,
-      "headline": "Vegas take the best record of the priced card into Columbus",
-      "text": "Vegas Golden Knights to win on the money line. Vegas are 8-4-0 through twelve games with 46 goals for and 36 against, a 16-point return that is the strongest record of any club priced here tonight. Columbus are 3-5-0 from eight starts and sit on six points. Our fair price for the visitors is -237 and the league's own two-way quote has them at 1.76, so the road side is where the edge sits. Selection: Vegas Golden Knights, money line.",
-      "word_count": 80,
+      "text": "Vegas Golden Knights are the moneyline selection in Columbus. Their 8-4-0 record is supported by 45 goals in 12 official team-summary games, while Columbus is 3-5-0 with 19 goals and 29 allowed in eight. Mark Stone’s eight goals and Jack Eichel’s 13 assists give Vegas multiple finishing and creation routes; Kent Johnson’s four goals lead the listed Blue Jackets. The pick respects Columbus’s home ice, but Vegas’s stronger record and scoring depth make the away win the clearest position. Columbus’s 3.625 goals allowed per game further supports the call without assuming a particular final score.",
+      "word_count": 95,
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
       "facts": [
         {
-          "claim": "Vegas 8-4-0 in 12 games, 46 goals for, 36 against, 16 points",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Columbus Blue Jackets: 3-5-0 in 8 games; Kent Johnson has 4 goals, Zach Werenski 6 assists and Jet Greaves 2 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
         },
         {
-          "claim": "Columbus 3-5-0 in 8 games, 6 points",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Vegas Golden Knights: 8-4-0 in 12 games; Mark Stone has 8 goals, Jack Eichel 13 assists and Carter Hart 4 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
         },
         {
-          "claim": "League quote: Vegas 1.76, Columbus 2.11",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Columbus Blue Jackets team summary: 8 games, 19 goals for, 29 against; 2.375 GF/game and 3.625 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Vegas Golden Knights team summary: 12 games, 45 goals for, 36 against; 3.750 GF/game and 3.000 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
         }
       ],
       "injuries": null,
-      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
-      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
-      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
     },
     {
-      "id": "pred-nhl-2026020170",
+      "id": "preview-nba-0022600105",
+      "fixture_id": "nba-0022600105",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "event_name": null,
+      "home": "Cleveland Cavaliers",
+      "away": "Brooklyn Nets",
+      "start_utc": "2026-10-24T23:30:00Z",
+      "start_display": null,
+      "headline": "Cleveland’s full-season baseline separates a pair of 0-1 teams",
+      "selection": "Cleveland Cavaliers",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.8325,
+      "fair_american": -497,
+      "confidence": "high",
+      "in_band": false,
+      "text": "Cleveland Cavaliers are the moneyline selection against Brooklyn. The completed 2025-26 standings provide the strongest sample: Cleveland finished 52-30, Brooklyn 20-62. Both clubs are 0-1 this season, so their opening results do not outweigh that prior. Donovan Mitchell’s 32 points and 10 rebounds and Julius Randle’s 33 points and eight boards establish the main offensive references rather than a claim about current form. The official injury report lists Tyler Bilodeau out for Brooklyn and Khalifa Diop, Nae’Qwan Tomlin and Ernest Udeh Jr. out for Cleveland. Those absences narrow the certainty, but the long-run record gap still drives the home selection.",
+      "word_count": 100,
+      "official_fixture_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/BKN_Nets_@_CLE_Cavaliers/4?event_id=536112",
+      "facts": [
+        {
+          "claim": "Cleveland Cavaliers: 0-1; Donovan Mitchell posted 32 points, 10 rebounds and 3 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Brooklyn Nets: 0-1; Julius Randle posted 33 points, 8 rebounds and 7 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Completed 2025-26 records: Cleveland Cavaliers 52-30; Brooklyn Nets 20-62",
+          "source_url": "https://www.nba.com/standings?Season=2025-26"
+        },
+        {
+          "claim": "Cleveland Cavaliers current traditional statistics: 1 games, 106.0 points per game, -8.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "Brooklyn Nets current traditional statistics: 1 games, 103.0 points per game, -7.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "Brooklyn Nets: Tyler Bilodeau — Out (right shoulder labral tear)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Cleveland Cavaliers: Khalifa Diop — Out (left knee injury management)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Cleveland Cavaliers: Nae'Qwan Tomlin — Out (low back stress reaction)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Cleveland Cavaliers: Ernest Udeh Jr. — Out (G League two-way)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries": [
+        {
+          "team": "Brooklyn Nets",
+          "player": "Tyler Bilodeau",
+          "status": "Out",
+          "reason": "right shoulder labral tear",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Cleveland Cavaliers",
+          "player": "Khalifa Diop",
+          "status": "Out",
+          "reason": "left knee injury management",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Cleveland Cavaliers",
+          "player": "Nae'Qwan Tomlin",
+          "status": "Out",
+          "reason": "low back stress reaction",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Cleveland Cavaliers",
+          "player": "Ernest Udeh Jr.",
+          "status": "Out",
+          "reason": "G League two-way",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries_note": "NBA 1:30 PM ET injury report read; captured designations are listed in the official facts below."
+    },
+    {
+      "id": "preview-nba-0022600110",
+      "fixture_id": "nba-0022600110",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "event_name": null,
+      "home": "Denver Nuggets",
+      "away": "New Orleans Pelicans",
+      "start_utc": "2026-10-25T01:00:00Z",
+      "start_display": null,
+      "headline": "Denver’s prior-season strength outweighs a noisy opening week",
+      "selection": "Denver Nuggets",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.7989,
+      "fair_american": -397,
+      "confidence": "high",
+      "in_band": false,
+      "text": "Denver Nuggets are the moneyline selection at home to New Orleans. Denver’s 54-28 record last season is the principal anchor against the Pelicans’ 26-56; this year’s 0-1 and 0-2 starts are explicitly treated as tiny samples. Aaron Gordon’s 20-point opener and Dejounte Murray’s 19.5-point average identify the current contributors without overstating their significance. Denver’s 84 points in one game are not presented as an established scoring level. Cameron Johnson, Spencer Jones and Julian Strawther are officially out, Alpha Diallo is questionable, and New Orleans had not submitted its report, keeping the availability caveat substantial.",
+      "word_count": 94,
+      "official_fixture_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_DEN_Nuggets/4?event_id=536116",
+      "facts": [
+        {
+          "claim": "Denver Nuggets: 0-1; Aaron Gordon posted 20 points, 6 rebounds and 1 assist",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "New Orleans Pelicans: 0-2; Dejounte Murray averages 19.5 points, 4.5 rebounds and 6.5 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Completed 2025-26 records: Denver Nuggets 54-28; New Orleans Pelicans 26-56",
+          "source_url": "https://www.nba.com/standings?Season=2025-26"
+        },
+        {
+          "claim": "Denver Nuggets current traditional statistics: 1 games, 84.0 points per game, -12.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "New Orleans Pelicans current traditional statistics: 2 games, 119.5 points per game, -2.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "Denver Nuggets: Alpha Diallo — Questionable (right wrist sprain)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Denver Nuggets: Cameron Johnson — Out (right ankle sprain)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Denver Nuggets: Spencer Jones — Out (bilateral hamstring injury management)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Denver Nuggets: Julian Strawther — Out (left knee injury management)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries": [
+        {
+          "team": "Denver Nuggets",
+          "player": "Alpha Diallo",
+          "status": "Questionable",
+          "reason": "right wrist sprain",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Denver Nuggets",
+          "player": "Cameron Johnson",
+          "status": "Out",
+          "reason": "right ankle sprain",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Denver Nuggets",
+          "player": "Spencer Jones",
+          "status": "Out",
+          "reason": "bilateral hamstring injury management",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Denver Nuggets",
+          "player": "Julian Strawther",
+          "status": "Out",
+          "reason": "left knee injury management",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries_note": "NBA 1:30 PM ET report: New Orleans Pelicans NOT YET SUBMITTED; no availability claim is made for an unsubmitted team."
+    },
+    {
+      "id": "preview-nba-0022600109",
+      "fixture_id": "nba-0022600109",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "event_name": null,
+      "home": "Dallas Mavericks",
+      "away": "San Antonio Spurs",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "start_display": null,
+      "headline": "San Antonio’s 62-win prior carries the road call",
+      "selection": "San Antonio Spurs",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.7765,
+      "fair_american": -347,
+      "confidence": "high",
+      "in_band": false,
+      "text": "San Antonio Spurs are the away moneyline selection in Dallas. Last season’s 62-20 record gives San Antonio a much stronger long-run baseline than Dallas’s 26-56, even though the Spurs have opened 0-2 and the Mavericks 1-1. Victor Wembanyama’s 18.5 points and 13 rebounds per game contrast with Cooper Flagg’s 23 points, five rebounds and four assists; those figures describe two-game samples, not settled form. The selection therefore leans on the full-season record rather than the early table. Both teams were marked NOT YET SUBMITTED on the official injury report, so no availability advantage is claimed.",
+      "word_count": 95,
+      "official_fixture_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/SA_Spurs_@_DAL_Mavericks/4?event_id=536114",
+      "facts": [
+        {
+          "claim": "Dallas Mavericks: 1-1; Cooper Flagg averages 23.0 points, 5.0 rebounds and 4.0 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "San Antonio Spurs: 0-2; Victor Wembanyama averages 18.5 points, 13.0 rebounds and 2.5 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Completed 2025-26 records: Dallas Mavericks 26-56; San Antonio Spurs 62-20",
+          "source_url": "https://www.nba.com/standings?Season=2025-26"
+        },
+        {
+          "claim": "Dallas Mavericks current traditional statistics: 2 games, 115.5 points per game, -1.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "San Antonio Spurs current traditional statistics: 2 games, 107.0 points per game, -8.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        }
+      ],
+      "injuries": [],
+      "injuries_note": "NBA 1:30 PM ET report: San Antonio Spurs and Dallas Mavericks NOT YET SUBMITTED; no availability claim is made for an unsubmitted team."
+    },
+    {
+      "id": "preview-nhl-2026020176",
+      "fixture_id": "nhl-2026020176",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "event_name": null,
+      "home": "Edmonton Oilers",
+      "away": "Toronto Maple Leafs",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "start_display": null,
+      "headline": "McDavid and Draisaitl headline Edmonton’s home case",
+      "selection": "Edmonton Oilers",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.7717,
+      "fair_american": -338,
+      "confidence": "high",
+      "in_band": false,
+      "text": "Edmonton Oilers are the home moneyline selection against Toronto. The Oilers’ 8-1-1 record and 46 goals in ten team-summary games supply the decisive early-season case, while Toronto stands 6-4-2 with 43 goals in twelve. Connor McDavid’s 23 assists and Leon Draisaitl’s ten goals give Edmonton elite production at both ends of a scoring sequence; Auston Matthews’s eight goals and ten assists keep the opponent’s threat explicit. Edmonton’s 32 goals allowed show this is not a defensive lock, so the pick is about overall strength rather than expecting a shutout. Toronto’s twelve-game sample also gives the visitors enough substance to keep the price from being treated as certain.",
+      "word_count": 107,
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TOR_Maple_Leafs_@_EDM_Oilers/13?event_id=200010",
+      "facts": [
+        {
+          "claim": "Edmonton Oilers: 8-1-1 in 10 games; Leon Draisaitl has 10 goals, Connor McDavid 23 assists and Devon Levi 6 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Toronto Maple Leafs: 6-4-2 in 12 games; Auston Matthews has 8 goals and 10 assists, Sergei Bobrovsky 3 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Edmonton Oilers team summary: 10 games, 46 goals for, 32 against; 4.600 GF/game and 3.200 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Toronto Maple Leafs team summary: 12 games, 43 goals for, 38 against; 3.583 GF/game and 3.167 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-hb-20261025-saint-raphael-paris",
+      "fixture_id": "hb-20261025-saint-raphael-paris",
+      "sport": "Handball",
+      "competition": "France Daikin StarLigue — Round 8",
+      "event_name": null,
+      "home": "Saint-Raphaël",
+      "away": "Paris Saint-Germain Handball",
+      "start_utc": "2026-10-25T15:00:00Z",
+      "start_display": null,
+      "headline": "Paris pair an unbeaten record with the stronger defensive return",
+      "selection": "Paris Saint-Germain Handball",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.7698,
+      "fair_american": -334,
+      "confidence": "high",
+      "in_band": false,
+      "text": "Paris Saint-Germain Handball are the away moneyline selection against Saint-Raphaël. Paris are 7-0-0 with 239 goals for and 190 against, while Saint-Raphaël are 2-5-0 with 207 and 225 through seven matches. That gives Paris both the unbeaten record and the stronger scoring differential, yet the three-way price still includes a meaningful draw and home-win path. Saint-Raphaël’s 207 goals show enough attacking production to resist a certainty claim, especially at home. The selection is based on Paris’s superior seven-game evidence and strong defensive comparison, with regular-time settlement explicitly retained rather than treating the match as a two-way contest.",
+      "word_count": 97,
+      "official_fixture_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Saint_Raphael_vs_PSG_Handball/20?event_id=12084",
+      "facts": [
+        {
+          "claim": "Saint-Raphaël: 2-5-0 in seven games with 207 goals for and 225 against",
+          "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+        },
+        {
+          "claim": "Paris Saint-Germain Handball: 7-0-0 in seven games with 239 goals for and 190 against",
+          "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+        },
+        {
+          "claim": "Official standings records: Saint-Raphaël 2-5-0; Paris Saint-Germain Handball 7-0-0",
+          "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-hb-20261025-fuchse-wetzlar",
+      "fixture_id": "hb-20261025-fuchse-wetzlar",
+      "sport": "Handball",
+      "competition": "Germany Opel HBL — Round 10",
+      "event_name": null,
+      "home": "Füchse Berlin",
+      "away": "HSG Wetzlar",
+      "start_utc": "2026-10-25T15:30:00Z",
+      "start_display": null,
+      "headline": "Füchse’s scoring ceiling meets a winless opponent, with recent caveats",
+      "selection": "Füchse Berlin",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.7697,
+      "fair_american": -334,
+      "confidence": "high",
+      "in_band": false,
+      "text": "Füchse Berlin are the home moneyline selection against HSG Wetzlar. Berlin’s 5-3-0 record and 270 goals for meet Wetzlar’s 0-7-2 and 303 allowed, but the recent story is less comfortable: Füchse lost 36-37 to Lemgo and 33-34 at Flensburg on last-second goals. Wetzlar also lost 30-34 to Erlangen and still seeks its first win. Mathias Gidsel’s 70 goals in eight games give Berlin an elite scoring reference, while Niklas Theiß has 54 for the visitors. Ten consecutive head-to-head wins and a 29-6 overall series support Füchse, with the recent narrow defeats tempering the grade.",
+      "word_count": 94,
+      "official_fixture_url": "https://www.opel-hbl.de/en/hbl",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Fuchse_Berlin_vs_HSG_Wetzlar/20?event_id=12089",
+      "facts": [
+        {
+          "claim": "Füchse Berlin: 5-3-0 in eight games with 270 goals for and 256 against",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        },
+        {
+          "claim": "HSG Wetzlar: 0-7-2 in nine games with 272 goals for and 303 against",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        },
+        {
+          "claim": "HBL matchday preview: Füchse lost 36-37 to Lemgo and 33-34 at Flensburg on last-second goals; Wetzlar lost 30-34 to Erlangen and still seeks its first win; Mathias Gidsel has 70 goals in eight games and Niklas Theiß 54; Füchse won the last ten head-to-heads and leads the overall series 29-6",
+          "source_url": "https://www.opel-hbl.de/de/hbl/content/vorschau-spieltag-10-abts-heimdeb%C3%BCt-gegen-den-meister-torj%C3%A4gertreffen-in-gummersbach-und-schw%C3%A4bisches-derby"
+        },
+        {
+          "claim": "Official team page confirms Füchse Berlin–HSG Wetzlar, Max-Schmeling-Halle and the Sunday local start",
+          "source_url": "https://www.opel-hbl.de/de/team/fe7bdd16-3952-11ef-b585-af5c55c3771d"
+        },
+        {
+          "claim": "Official standings records: Füchse Berlin 5-3-0; HSG Wetzlar 0-7-2",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-nhl-2026020169",
+      "fixture_id": "nhl-2026020169",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "event_name": null,
+      "home": "New Jersey Devils",
+      "away": "Los Angeles Kings",
+      "start_utc": "2026-10-24T19:30:00Z",
+      "start_display": null,
+      "headline": "New Jersey’s scoring gap supports a home win, not a price adjustment",
+      "selection": "New Jersey Devils",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.7363,
+      "fair_american": -279,
+      "confidence": "high",
+      "in_band": false,
+      "text": "New Jersey Devils are the home moneyline selection against Los Angeles. New Jersey has 33 goals and 31 allowed through ten team-summary games, compared with the Kings’ 20 and 29 through eight, while the records are 6-4-0 and 2-4-2. Jack Hughes’s eight assists and Arseny Gritsyuk’s five goals support the Devils’ attack; Artemi Panarin’s six goals make Los Angeles the dangerous underdog rather than a passive opponent. The official scoring gap and home ice justify New Jersey, but the price remains outside the requested floor and is not adjusted to fit it. Los Angeles’s 3.625 goals allowed per game is the relevant early-season defensive comparison.",
+      "word_count": 105,
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/LA_Kings_@_NJ_Devils/13?event_id=200000",
+      "facts": [
+        {
+          "claim": "New Jersey Devils: 6-4-0 in 10 games (12 points); Jack Hughes has 8 assists, Arseny Gritsyuk 5 goals, Jake Allen 4 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Los Angeles Kings: 2-4-2 in 8 games (6 points); Artemi Panarin has 6 goals, Brandt Clarke 5 assists",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "New Jersey Devils team summary: 10 games, 33 goals for, 31 against; 3.300 GF/game and 3.100 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Los Angeles Kings team summary: 8 games, 20 goals for, 29 against; 2.500 GF/game and 3.625 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-nhl-2026020170",
       "fixture_id": "nhl-2026020170",
       "sport": "Ice Hockey",
       "competition": "NHL",
+      "event_name": null,
       "home": "Boston Bruins",
       "away": "San Jose Sharks",
       "start_utc": "2026-10-24T23:00:00Z",
+      "start_display": null,
+      "headline": "Boston’s two-way numbers just miss the High threshold",
       "selection": "Boston Bruins",
-      "market": "Money line",
+      "market": "Moneyline",
+      "line": null,
       "probability": 0.6995,
       "fair_american": -233,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Boston's 17-point start meets a San Jose side four points back",
-      "text": "Boston Bruins to win at TD Garden. Boston are 8-2-1 over eleven games for 17 points, with 42 goals scored and 22 conceded, and the individual numbers match the team ones: David Pastrnak has six goals and ten assists while Jeremy Swayman has six wins in net. San Jose are 6-4-1 and on 13 points from the same eleven games, four points adrift. We make Boston -233, inside the requested range, and the league quote of 1.54 is close to that.",
-      "word_count": 81,
-      "facts": [
-        {
-          "claim": "Boston 8-2-1 in 11 games, 17 points, 42 goals for, 22 against",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
-        },
-        {
-          "claim": "David Pastrnak: 6 goals, 10 assists. Jeremy Swayman: 6 wins",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
-        },
-        {
-          "claim": "San Jose 6-4-1 in 11 games, 13 points; Macklin Celebrini 5 goals, 9 assists",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
-        },
-        {
-          "claim": "League quote: Boston 1.54, San Jose 2.52",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
-        }
-      ],
-      "injuries": null,
-      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
-      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007",
-      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
-    },
-    {
-      "id": "pred-nhl-2026020173",
-      "fixture_id": "nhl-2026020173",
-      "sport": "Ice Hockey",
-      "competition": "NHL",
-      "home": "Washington Capitals",
-      "away": "Buffalo Sabres",
-      "start_utc": "2026-10-24T23:00:00Z",
-      "selection": "Washington Capitals",
-      "market": "Money line",
-      "probability": 0.5922,
-      "fair_american": -145,
       "confidence": "medium",
       "in_band": true,
-      "headline": "Washington hold the same points as Buffalo from one fewer game",
-      "text": "Washington Capitals on the money line. Washington are 5-4-0 for ten points, with Alex Tuch on five goals, Dylan Strome on five assists and Logan Thompson on four wins. Buffalo are 4-4-2, also on ten points, but they have needed one more game to get there. That extra fixture without an extra point is the whole of the case for the home side, and it is why the fair price is -145 while the league has Washington at 1.84. Selection: Capitals to win.",
-      "word_count": 83,
+      "text": "Boston Bruins are the home moneyline selection, graded just below the High threshold. Boston’s 42 goals for and 22 against in eleven games are stronger two-way figures than San Jose’s 32 and 36 over the same number, and the Bruins’ 8-2-1 record leads the Sharks’ 6-4-1. David Pastrnak’s six goals and ten assists plus Jeremy Swayman’s six wins supply concrete support; Macklin Celebrini’s five goals and nine assists show why San Jose cannot be dismissed. The 3.818 goals per game attached to Boston is an early-season scoring rate, not a guarantee. San Jose’s 3.273 goals allowed per game offers a narrower matchup comparison than simply reading the standings.",
+      "word_count": 108,
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007",
       "facts": [
         {
-          "claim": "Washington 5-4-0 in 9 games, 10 points; Alex Tuch 5 goals; Logan Thompson 4 wins",
-          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+          "claim": "Boston Bruins: 8-2-1 in 11 games; David Pastrnak has 6 goals and 10 assists, Jeremy Swayman 6 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
         },
         {
-          "claim": "Buffalo 4-4-2 in 10 games, 10 points; Tage Thompson 5 goals; Zach Benson 6 assists",
-          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+          "claim": "San Jose Sharks: 6-4-1 in 11 games (13 points); Macklin Celebrini 5 goals and 9 assists",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
         },
         {
-          "claim": "League quote: Washington 1.84, Buffalo 2.01",
-          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+          "claim": "Boston Bruins team summary: 11 games, 42 goals for, 22 against; 3.818 GF/game and 2.000 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
         },
         {
-          "claim": "No OLBG event id was listed for this fixture at capture",
-          "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+          "claim": "San Jose Sharks team summary: 11 games, 32 goals for, 36 against; 2.909 GF/game and 3.273 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
         }
       ],
       "injuries": null,
-      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
-      "official_fixture_url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
-      "olbg_event_url": "",
-      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
     },
     {
-      "id": "pred-mlb-849802",
+      "id": "preview-hb-20261025-rhein-neckar-magdeburg",
+      "fixture_id": "hb-20261025-rhein-neckar-magdeburg",
+      "sport": "Handball",
+      "competition": "Germany Opel HBL — Round 10",
+      "event_name": null,
+      "home": "Rhein-Neckar Löwen",
+      "away": "SC Magdeburg",
+      "start_utc": "2026-10-25T14:00:00Z",
+      "start_display": null,
+      "headline": "Magdeburg’s response and head-to-head record outweigh Löwen’s home edge",
+      "selection": "SC Magdeburg",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6895,
+      "fair_american": -222,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "SC Magdeburg are the away moneyline selection against Rhein-Neckar Löwen. Magdeburg’s 8-1-0 record and 301 goals for compare with Löwen’s 3-5-1 and 266, while the defensive figures are 266 against and 273. The champion has responded to its 30-34 defeat with four wins, although the latest 29-28 at Stuttgart was narrow. Löwen lost 36-37 at Kiel and took one point from the last three, but David Späth’s 118 saves and home court keep an upset plausible. Magdeburg’s ten wins and one draw across the last 11 head-to-heads strengthen the call without making it certain.",
+      "word_count": 94,
+      "official_fixture_url": "https://www.opel-hbl.de/en/hbl",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092",
+      "facts": [
+        {
+          "claim": "Rhein-Neckar Löwen: 3-5-1 in nine games with 266 goals for and 273 against",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        },
+        {
+          "claim": "SC Magdeburg: 8-1-0 in nine games with 301 goals for and 266 against",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        },
+        {
+          "claim": "HBL matchday preview: Löwen lost 36-37 at Kiel and took one point from the last three; Magdeburg won four after its 30-34 defeat and latest won 29-28 at Stuttgart; Magdeburg is unbeaten in the last 11 head-to-heads with ten wins and one draw; Felix Claar has 53 goals, Haukur Thrastarson 48 and David Späth 118 saves",
+          "source_url": "https://www.opel-hbl.de/de/hbl/content/vorschau-spieltag-10-abts-heimdeb%C3%BCt-gegen-den-meister-torj%C3%A4gertreffen-in-gummersbach-und-schw%C3%A4bisches-derby"
+        },
+        {
+          "claim": "Official team page confirms Rhein-Neckar Löwen–SC Magdeburg, SAP Arena and the Sunday local start",
+          "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d"
+        },
+        {
+          "claim": "Official standings records: Rhein-Neckar Löwen 3-5-1; SC Magdeburg 8-1-0",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-vol-20261025-civitanova-padova",
+      "fixture_id": "vol-20261025-civitanova-padova",
+      "sport": "Volleyball",
+      "competition": "Italy SuperLega — Round 2",
+      "event_name": null,
+      "home": "Cucine Lube Civitanova",
+      "away": "Pallavolo Padova",
+      "start_utc": "2026-10-25T17:00:00Z",
+      "start_display": null,
+      "headline": "Civitanova’s cleaner opener supplies the volleyball card’s strongest edge",
+      "selection": "Cucine Lube Civitanova",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6823,
+      "fair_american": -215,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "Cucine Lube Civitanova are the match-winner selection against Pallavolo Padova. Civitanova opened with a 3-0 win at Verona, scoring 78 points and conceding 65, while Padova lost 0-3 at home to Piacenza with 56 points for and 75 against. That gives the home side the better opening result, set return and point differential, although one round cannot establish a reliable season hierarchy. Padova’s home defeat also came against a strong opening opponent, so the price keeps meaningful upset room rather than treating the sweep comparison as decisive. The pick is supported by every available first-round indicator, with home court providing only a modest additional edge.",
+      "word_count": 105,
+      "official_fixture_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Civitanova_vs_Padova/21?event_id=36995",
+      "facts": [
+        {
+          "claim": "Cucine Lube Civitanova: Won 3-0 at Verona with 78 points for and 65 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Pallavolo Padova: Lost 0-3 at home to Piacenza with 56 points for and 75 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Official standings records: Cucine Lube Civitanova 1-0; Pallavolo Padova 0-1",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-nba-0022600106",
+      "fixture_id": "nba-0022600106",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "event_name": null,
+      "home": "Philadelphia 76ers",
+      "away": "Milwaukee Bucks",
+      "start_utc": "2026-10-24T23:30:00Z",
+      "start_display": null,
+      "headline": "Philadelphia’s start and prior record outweigh Milwaukee’s scoring average",
+      "selection": "Philadelphia 76ers",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6756,
+      "fair_american": -208,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "Philadelphia 76ers are the home moneyline selection against Milwaukee. The 45-37 prior-season record and a 2-0 start give Philadelphia a better combined baseline than Milwaukee’s 32-50 and 0-2, although the current sample remains only two games per club. Tyrese Maxey averages 30 points and Tyler Herro 29, so both primary scoring references are acknowledged. Philadelphia’s 110 points per game and plus-seven differential support the pick without treating them as settled form. Dominick Barlow, Tacko Fall, Ariel Hukporti and LeBron James are officially out for Philadelphia; that confirmed absence list tempers the selection rather than being ignored.",
+      "word_count": 96,
+      "official_fixture_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_PHI_76ers/4?event_id=536111",
+      "facts": [
+        {
+          "claim": "Philadelphia 76ers: 2-0; Tyrese Maxey averages 30.0 points, 3.5 rebounds and 5.5 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Milwaukee Bucks: 0-2; Tyler Herro averages 29.0 points, 3.5 rebounds and 6.5 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Completed 2025-26 records: Philadelphia 76ers 45-37; Milwaukee Bucks 32-50",
+          "source_url": "https://www.nba.com/standings?Season=2025-26"
+        },
+        {
+          "claim": "Philadelphia 76ers current traditional statistics: 2 games, 110.0 points per game, 7.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "Milwaukee Bucks current traditional statistics: 2 games, 120.5 points per game, -9.5 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "Philadelphia 76ers: Dominick Barlow — Out (low back contusion)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Philadelphia 76ers: Tacko Fall — Out (left quad contusion)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Philadelphia 76ers: Ariel Hukporti — Out (right Achilles surgery)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Philadelphia 76ers: LeBron James — Out (low back sciatica)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries": [
+        {
+          "team": "Philadelphia 76ers",
+          "player": "Dominick Barlow",
+          "status": "Out",
+          "reason": "low back contusion",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Philadelphia 76ers",
+          "player": "Tacko Fall",
+          "status": "Out",
+          "reason": "left quad contusion",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Philadelphia 76ers",
+          "player": "Ariel Hukporti",
+          "status": "Out",
+          "reason": "right Achilles surgery",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Philadelphia 76ers",
+          "player": "LeBron James",
+          "status": "Out",
+          "reason": "low back sciatica",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries_note": "NBA 1:30 PM ET injury report read; captured designations are listed in the official facts below."
+    },
+    {
+      "id": "preview-nba-0022600108",
+      "fixture_id": "nba-0022600108",
+      "sport": "Basketball",
+      "competition": "NBA",
+      "event_name": null,
+      "home": "Chicago Bulls",
+      "away": "Washington Wizards",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "start_display": null,
+      "headline": "Chicago gets the home nod while Washington’s report remains pending",
+      "selection": "Chicago Bulls",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6666,
+      "fair_american": -200,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "Chicago Bulls are the home moneyline selection against Washington. Chicago’s 31-51 prior-season record was stronger than Washington’s 17-65, and both teams now stand 1-1, so the longer sample carries the decision. Jalen Smith’s 14.5 points and 10.5 rebounds and Anthony Davis’s 21.5 points and 10.5 rebounds are the listed current leaders, not evidence of a long-term trend. Washington’s 115 points per game and plus-one differential keep this from reading like a mismatch. Nic Claxton is officially out and Noa Essengue probable for Chicago; Washington had not submitted its report, leaving a material uncertainty.",
+      "word_count": 93,
+      "official_fixture_url": "https://www.nba.com/games?date=2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/WAS_Wizards_@_CHI_Bulls/4?event_id=536113",
+      "facts": [
+        {
+          "claim": "Chicago Bulls: 1-1; Jalen Smith averages 14.5 points, 10.5 rebounds and 1.0 assist",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Washington Wizards: 1-1; Anthony Davis averages 21.5 points, 10.5 rebounds and 2.0 assists",
+          "source_url": "https://www.nba.com/games?date=2026-10-24"
+        },
+        {
+          "claim": "Completed 2025-26 records: Chicago Bulls 31-51; Washington Wizards 17-65",
+          "source_url": "https://www.nba.com/standings?Season=2025-26"
+        },
+        {
+          "claim": "Chicago Bulls current traditional statistics: 2 games, 112.0 points per game, -18.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "Washington Wizards current traditional statistics: 2 games, 115.0 points per game, 1.0 average point differential",
+          "source_url": "https://www.nba.com/stats/teams/traditional"
+        },
+        {
+          "claim": "Chicago Bulls: Nic Claxton — Out (left hamstring strain)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "claim": "Chicago Bulls: Noa Essengue — Probable (right head contusion)",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries": [
+        {
+          "team": "Chicago Bulls",
+          "player": "Nic Claxton",
+          "status": "Out",
+          "reason": "left hamstring strain",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        },
+        {
+          "team": "Chicago Bulls",
+          "player": "Noa Essengue",
+          "status": "Probable",
+          "reason": "right head contusion",
+          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+        }
+      ],
+      "injuries_note": "NBA 1:30 PM ET report: Washington Wizards NOT YET SUBMITTED; no availability claim is made for an unsubmitted team."
+    },
+    {
+      "id": "preview-hb-20261025-montpellier-saran",
+      "fixture_id": "hb-20261025-montpellier-saran",
+      "sport": "Handball",
+      "competition": "France Daikin StarLigue — Round 8",
+      "event_name": null,
+      "home": "Montpellier Handball",
+      "away": "Saran Loiret Handball",
+      "start_utc": "2026-10-25T16:00:00Z",
+      "start_display": null,
+      "headline": "Montpellier’s positive scoring differential leads a three-way home call",
+      "selection": "Montpellier Handball",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6406,
+      "fair_american": -178,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "Montpellier Handball are the home moneyline selection against Saran Loiret Handball. Montpellier’s 4-1-2 record includes two draws and comes with 234 goals for and 205 against; Saran are 3-4-0 with 202 and 216. That gives the hosts the better return across seven matches and a positive scoring differential, while Saran’s negative differential points the other way. The regular-time tie remains a genuine alternative and is priced separately, not folded into either team. With no official availability report read and only the current standings as comparable form evidence, Montpellier’s edge supports a medium grade rather than a stronger claim.",
+      "word_count": 98,
+      "official_fixture_url": "https://www.lnh.fr/daikin-starligue/calendrier",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Montpellier_vs_Saran_Loiret/20?event_id=12081",
+      "facts": [
+        {
+          "claim": "Montpellier Handball: 4-1-2 in seven games with 234 goals for and 205 against",
+          "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+        },
+        {
+          "claim": "Saran Loiret Handball: 3-4-0 in seven games with 202 goals for and 216 against",
+          "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+        },
+        {
+          "claim": "Official standings records: Montpellier Handball 4-1-2; Saran Loiret Handball 3-4-0",
+          "source_url": "https://www.lnh.fr/daikin-starligue/classement"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-nhl-2026020178",
+      "fixture_id": "nhl-2026020178",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "event_name": null,
+      "home": "Calgary Flames",
+      "away": "Detroit Red Wings",
+      "start_utc": "2026-10-25T02:00:00Z",
+      "start_display": null,
+      "headline": "Detroit’s defensive comparison supports the road selection",
+      "selection": "Detroit Red Wings",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6392,
+      "fair_american": -177,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "Detroit Red Wings are the away moneyline selection in Calgary. Detroit’s 27 goals for and 28 against across ten games compare favourably with Calgary’s 19 and 38 across nine, while the records are 4-3-3 and 3-6-0. Alex DeBrincat’s six goals and six assists provide the clearest individual attacking support; Morgan Frost’s three goals and Joel Farabee’s five assists are Calgary’s listed counters. Calgary’s 4.222 goals allowed per game is a small-sample figure, but the nine-game defensive gap still supports Detroit. Home ice and Detroit’s three overtime losses prevent a stronger grade, while Calgary’s nine-game sample still leaves room for regression.",
+      "word_count": 100,
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
+      "facts": [
+        {
+          "claim": "Calgary Flames: 3-6-0 in 9 games; Morgan Frost has 3 goals, Joel Farabee 5 assists and Devin Cooley 2 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Detroit Red Wings: 4-3-3 in 10 games; Alex DeBrincat has 6 goals and 6 assists, John Gibson 3 wins",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Calgary Flames team summary: 9 games, 19 goals for, 38 against; 2.111 GF/game and 4.222 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Detroit Red Wings team summary: 10 games, 27 goals for, 28 against; 2.700 GF/game and 2.800 GA/game",
+          "source_url": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-darts-ec-aspinall-littler",
+      "fixture_id": "darts-ec-aspinall-littler",
+      "sport": "Darts",
+      "competition": "PDC European Championship — Round 2",
+      "event_name": null,
+      "home": "Nathan Aspinall",
+      "away": "Luke Littler",
+      "start_utc": "2026-10-24T19:15:00Z",
+      "start_display": "OLBG listed 19:15 UTC; PDC evening session 17:00–21:00 UTC",
+      "headline": "Littler’s ranking base edges a balanced opener comparison",
+      "selection": "Luke Littler",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6093,
+      "fair_american": -156,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "Luke Littler is the match-winner selection against Nathan Aspinall. Both won their openers 6-3, so the tournament leg records do not justify a runaway position. Littler’s 105.05 average against William O’Connor was the tournament’s best at that point, while Aspinall’s 6-3 win over Cristo Reyes keeps the opposition firmly live. The longer ranking evidence separates them more clearly: Littler has £3,106,000 in two-year world-ranking earnings against Aspinall’s £577,000, although Aspinall leads current European Tour earnings £87,000 to £75,000. The best-of-19 format and identical opening scorelines support a medium rather than high grade.",
+      "word_count": 92,
+      "official_fixture_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Luke_Littler/15?event_id=32397",
+      "facts": [
+        {
+          "claim": "Nathan Aspinall: Beat Cristo Reyes 6-3 in Round 1; £577,000 world-ranking earnings and £87,000 European Tour earnings",
+          "source_url": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Luke Littler: Beat William O'Connor 6-3 with a 105.05 average; £3,106,000 world-ranking earnings and £75,000 European Tour earnings",
+          "source_url": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "PDC Day Three schedule: Saturday evening Round 2, best of 19 legs; Nathan Aspinall v Luke Littler and Jonny Clayton v Josh Rock",
+          "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest"
+        },
+        {
+          "claim": "PDC Friday results: Aspinall 6-3 Reyes, Littler 6-3 O'Connor, Clayton 6-3 Springer and Rock 6-1 Dobey",
+          "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
+        },
+        {
+          "claim": "PDC rankings: two-year world-ranking earnings and current European Tour earnings are separate official fields",
+          "source_url": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "PDC Friday report: Littler's 105.05 average was the best of the tournament at that point",
+          "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
+        },
+        {
+          "claim": "Tournament leg records: Nathan Aspinall 6-3; Luke Littler 6-3",
+          "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-darts-ec-price-bunting",
+      "fixture_id": "darts-ec-price-bunting",
+      "sport": "Darts",
+      "competition": "PDC European Championship — Quarter-final",
+      "event_name": null,
+      "home": "Gerwyn Price",
+      "away": "Stephen Bunting",
+      "start_utc": "2026-10-25T12:00:00Z",
+      "start_display": "OLBG listed 12:00 UTC; PDC quarterfinal session begins 12:00 UTC",
+      "headline": "Price’s small ranking and leg-record edges meet Bunting’s finishing threat",
+      "selection": "Gerwyn Price",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.6082,
+      "fair_american": -155,
+      "confidence": "medium",
+      "in_band": true,
+      "text": "Gerwyn Price is the match-winner selection against Stephen Bunting in Sunday’s quarterfinal. Price beat Rob Cross 6-2 with a 99.26 average and Cameron Menzies 10-4, while Bunting edged Danny Noppert 6-5 before beating Kim Huybrechts 10-3 with four 100-plus checkouts. Their tournament leg records are 16-6 and 16-8, so both arrive with strong returns rather than a one-sided form gap. Price’s £779,500 world-ranking earnings and £70,000 European Tour total exceed Bunting’s £568,750 and £43,000, providing a modest additional edge. Bunting’s finishing display keeps this at medium confidence.",
+      "word_count": 87,
+      "official_fixture_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Gerwyn_Price_vs_Stephen_Bunting/15?event_id=32407",
+      "facts": [
+        {
+          "claim": "Gerwyn Price: Beat Rob Cross 6-2 with a 99.26 average and Cameron Menzies 10-4; £779,500 world-ranking and £70,000 European Tour earnings",
+          "source_url": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Stephen Bunting: Beat Danny Noppert 6-5 and Kim Huybrechts 10-3 with four 100-plus checkouts; £568,750 world-ranking and £43,000 European Tour earnings",
+          "source_url": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "PDC Sunday schedule: afternoon quarterfinals begin 13:00 CET/12:00 GMT after the clocks go back; best of 19 legs",
+          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+        },
+        {
+          "claim": "PDC opening report: Price beat Cross 6-2 with a 99.26 average; Bunting beat Noppert 6-5 with a 160 checkout in the decider",
+          "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund/"
+        },
+        {
+          "claim": "ESPN current results: Price beat Menzies 10-4 and Bunting beat Huybrechts 10-3 in Saturday Round 2",
+          "source_url": "https://www.espn.com/darts/story/_/id/49948004/pdc-european-championship-darts-2026-schedule-results-how-watch-prize-money-dates-more-dortmund"
+        },
+        {
+          "claim": "Independent report: those results established Price v Bunting as Sunday's quarterfinal; Bunting fired four 100-plus checkouts",
+          "source_url": "https://www.independent.co.uk/sport/stephen-bunting-borussia-dortmund-gerwyn-price-bundesliga-eintracht-frankfurt-b3072710.html"
+        },
+        {
+          "claim": "PDC rankings: Price £779,500 world-ranking and £70,000 European Tour earnings; Bunting £568,750 and £43,000",
+          "source_url": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "Tournament leg records: Gerwyn Price 16-6; Stephen Bunting 16-8",
+          "source_url": "https://www.espn.com/darts/story/_/id/49948004/pdc-european-championship-darts-2026-schedule-results-how-watch-prize-money-dates-more-dortmund"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-mlb-849802",
       "fixture_id": "mlb-849802",
       "sport": "Baseball",
       "competition": "MLB World Series",
+      "event_name": null,
       "home": "Milwaukee Brewers",
       "away": "Tampa Bay Rays",
       "start_utc": "2026-10-25T00:00:00Z",
+      "start_display": null,
+      "headline": "Milwaukee’s season-long run differential earns the Game 2 call",
       "selection": "Milwaukee Brewers",
-      "market": "Money line",
+      "market": "Moneyline",
+      "line": null,
       "probability": 0.5662,
       "fair_american": -131,
       "confidence": "medium",
       "in_band": true,
-      "headline": "A 103-win Milwaukee side hosts a Tampa Bay team that travelled badly",
-      "text": "Milwaukee Brewers to win the World Series game at American Family Field. Milwaukee went 103-59 with 832 runs scored and 618 allowed, were 55-26 at home, and won eight of their last ten. Tampa Bay finished 98-64 with 736 runs and 650 allowed, but were 43-38 on the road and 5-5 across their last ten. Logan Henderson is listed as Milwaukee's probable starter and Drew Rasmussen for the Rays. We make the Brewers -131, a slender home edge rather than a strong one.",
-      "word_count": 83,
+      "text": "Milwaukee Brewers are the home moneyline selection for World Series Game 2. Their 103-59 record, 832 runs scored and 618 allowed establish the stronger season-long run differential against Tampa Bay’s 98-64, 736 and 650. Milwaukee also went 55-26 at home and 8-2 over the last ten, while the Rays were 43-38 away and 5-5. Logan Henderson and Drew Rasmussen are the officially listed probable starters, but no handedness or unconfirmed availability is added. Tampa Bay’s quality keeps this below High confidence; the selection rests on Milwaukee’s season record and home split.",
+      "word_count": 91,
+      "official_fixture_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160792",
       "facts": [
         {
-          "claim": "Milwaukee 103-59, 832 runs scored, 618 allowed, 55-26 home, 8-2 last ten",
+          "claim": "MLB schedule: World Series Game 2, Tampa Bay at Milwaukee, 2026-10-25T00:00:00Z; probable pitchers Drew Rasmussen and Logan Henderson",
+          "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team"
+        },
+        {
+          "claim": "Milwaukee: 103-59, 832 runs scored, 618 allowed, 55-26 at home, 8-2 over the last ten",
           "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings&season=2026"
         },
         {
-          "claim": "Tampa Bay 98-64, 736 scored, 650 allowed, 43-38 away, 5-5 last ten",
+          "claim": "Tampa Bay: 98-64, 736 runs scored, 650 allowed, 43-38 away, 5-5 over the last ten",
           "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026"
-        },
-        {
-          "claim": "Probable pitchers: Logan Henderson (MIL), Drew Rasmussen (TB) - first pitch 2026-10-25T00:00:00Z at American Family Field",
-          "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team"
         }
       ],
       "injuries": null,
-      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
-      "official_fixture_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
-      "olbg_event_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160792",
-      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
     },
     {
-      "id": "pred-nhl-2026020171",
-      "fixture_id": "nhl-2026020171",
-      "sport": "Ice Hockey",
-      "competition": "NHL",
-      "home": "Ottawa Senators",
-      "away": "New York Rangers",
-      "start_utc": "2026-10-24T23:00:00Z",
-      "selection": "Ottawa Senators",
-      "market": "Money line",
-      "probability": 0.5547,
-      "fair_american": -125,
-      "confidence": "medium",
+      "id": "preview-darts-ec-clayton-rock",
+      "fixture_id": "darts-ec-clayton-rock",
+      "sport": "Darts",
+      "competition": "PDC European Championship — Round 2",
+      "event_name": null,
+      "home": "Jonny Clayton",
+      "away": "Josh Rock",
+      "start_utc": "2026-10-24T20:15:00Z",
+      "start_display": "OLBG listed 20:15 UTC; PDC evening session 17:00–21:00 UTC",
+      "headline": "Rock’s six-leg finish narrowly outweighs Clayton’s ranking edge",
+      "selection": "Josh Rock",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.545,
+      "fair_american": -120,
+      "confidence": "low",
       "in_band": true,
-      "headline": "Ottawa at home against the crowd on a coin-flip record",
-      "text": "Ottawa Senators to win at the Canadian Tire Centre, which goes against the crowd: OLBG's most-tipped selection on this game was the New York Rangers. Ottawa are 7-4-0 for 14 points, Tim Stutzle has seven goals and eight assists and Linus Ullmark has seven wins. New York are 7-4-1 for 15 points, one point better over one extra game, with Alexis Lafreniere on eight goals and Adam Fox on fourteen assists. We price Ottawa at -125 on home ice.",
-      "word_count": 79,
+      "text": "Josh Rock is the match-winner selection against Jonny Clayton. Rock’s 6-1 defeat of Chris Dobey included six consecutive legs, compared with Clayton’s 6-3 win over Niko Springer, giving Rock the better opening-round leg differential. Their official ranking profiles are much closer: Clayton has £691,000 in world-ranking earnings and £86,000 on the European Tour, while Rock has £599,000 and £76,000. Clayton’s slightly stronger earnings base prevents a high grade, but Rock’s six-leg finishing run is the decisive current-tournament evidence. The selection is for the match, not an assumption that another 6-1 score is likely.",
+      "word_count": 93,
+      "official_fixture_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Jonny_Clayton_vs_Josh_Rock/15?event_id=32400",
       "facts": [
         {
-          "claim": "Ottawa 7-4-0 in 11 games, 14 points; Tim Stutzle 7 goals, 8 assists; Linus Ullmark 7 wins",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Jonny Clayton: Beat Niko Springer 6-3 in Round 1; £691,000 world-ranking earnings and £86,000 European Tour earnings",
+          "source_url": "https://www.pdc.tv/rankings"
         },
         {
-          "claim": "New York 7-4-1 in 12 games, 15 points; Alexis Lafreniere 8 goals; Adam Fox 14 assists",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "Josh Rock: Won six consecutive legs to beat Chris Dobey 6-1; £599,000 world-ranking earnings and £76,000 European Tour earnings",
+          "source_url": "https://www.pdc.tv/rankings"
         },
         {
-          "claim": "League quote: Ottawa 1.80, New York 2.05",
-          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+          "claim": "PDC Day Three schedule: Saturday evening Round 2, best of 19 legs; Nathan Aspinall v Luke Littler and Jonny Clayton v Josh Rock",
+          "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest"
         },
         {
-          "claim": "OLBG most-tipped selection on event 200008 was NY Rangers (3/3 tips, 100%)",
-          "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008"
+          "claim": "PDC Friday results: Aspinall 6-3 Reyes, Littler 6-3 O'Connor, Clayton 6-3 Springer and Rock 6-1 Dobey",
+          "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
+        },
+        {
+          "claim": "PDC rankings: two-year world-ranking earnings and current European Tour earnings are separate official fields",
+          "source_url": "https://www.pdc.tv/rankings"
+        },
+        {
+          "claim": "PDC Friday report: Rock reeled off six legs straight against Dobey; Clayton scored impressively against Springer",
+          "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
+        },
+        {
+          "claim": "Tournament leg records: Jonny Clayton 6-3; Josh Rock 6-1",
+          "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
         }
       ],
       "injuries": null,
-      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
-      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008",
-      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-vol-20261025-monza-verona",
+      "fixture_id": "vol-20261025-monza-verona",
+      "sport": "Volleyball",
+      "competition": "Italy SuperLega — Round 2",
+      "event_name": null,
+      "home": "Vero Volley Monza",
+      "away": "Rana Verona",
+      "start_utc": "2026-10-25T17:00:00Z",
+      "start_display": null,
+      "headline": "Monza’s resistance at Pordenone earns a cautious home lean",
+      "selection": "Vero Volley Monza",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.5438,
+      "fair_american": -119,
+      "confidence": "low",
+      "in_band": true,
+      "text": "Vero Volley Monza are the match-winner selection against Rana Verona in a cautious call between two opening-round losers. Monza took a set at Pordenone before falling 1-3, finishing with 91 points for and 94 against; Verona lost 0-3 at home to Civitanova with 65 and 78. Monza’s ability to extend their opener and nearly match Pordenone’s scoring is the main reason for the home lean. Verona’s 65 points came against a Civitanova side that swept every set, which limits how harshly that result should be read. With both teams 0-1 and only one official round available, the low grade is more appropriate than presenting Monza’s small statistical edge as settled form.",
+      "word_count": 111,
+      "official_fixture_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Monza_vs_Verona/21?event_id=36996",
+      "facts": [
+        {
+          "claim": "Vero Volley Monza: Lost 1-3 at Pordenone with 91 points for and 94 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Rana Verona: Lost 0-3 at home to Civitanova with 65 points for and 78 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Official standings records: Vero Volley Monza 0-1; Rana Verona 0-1",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-vol-20261025-trentino-cisterna",
+      "fixture_id": "vol-20261025-trentino-cisterna",
+      "sport": "Volleyball",
+      "competition": "Italy SuperLega — Round 2",
+      "event_name": null,
+      "home": "Itas Trentino",
+      "away": "Cisterna Volley",
+      "start_utc": "2026-10-25T16:00:00Z",
+      "start_display": null,
+      "headline": "Home court barely separates two opening-round sweep winners",
+      "selection": "Itas Trentino",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.5342,
+      "fair_american": -115,
+      "confidence": "low",
+      "in_band": true,
+      "text": "Itas Trentino are the match-winner selection against Cisterna Volley, but the margin is deliberately small. Trentino won 3-0 at Modena with 75 points for and 61 against, while Cisterna won 3-0 at home to Milano with 79 and 56. Both teams are 1-0 and neither dropped a set, so the opening round offers no meaningful separation in wins or set record. Cisterna’s slightly stronger point differential is acknowledged rather than hidden; the selection comes only from the fixed home-court component after heavy shrinkage. With identical results and just one match per club, this remains low confidence and should not be read as a claim that Trentino have demonstrated superior form.",
+      "word_count": 110,
+      "official_fixture_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994",
+      "facts": [
+        {
+          "claim": "Itas Trentino: Won 3-0 at Modena with 75 points for and 61 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Cisterna Volley: Won 3-0 at home to Milano with 79 points for and 56 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Official standings records: Itas Trentino 1-0; Cisterna Volley 1-0",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-vol-20261025-perugia-pordenone",
+      "fixture_id": "vol-20261025-perugia-pordenone",
+      "sport": "Volleyball",
+      "competition": "Italy SuperLega — Round 2",
+      "event_name": null,
+      "home": "Sir Susa Scai Perugia",
+      "away": "Tinet Prata di Pordenone",
+      "start_utc": "2026-10-25T17:00:00Z",
+      "start_display": null,
+      "headline": "Perugia’s home edge narrowly outweighs Pordenone’s efficient opener",
+      "selection": "Sir Susa Scai Perugia",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.5292,
+      "fair_american": -112,
+      "confidence": "low",
+      "in_band": true,
+      "text": "Sir Susa Scai Perugia are the match-winner selection against Tinet Prata di Pordenone in the closest call on the volleyball card. Perugia won 3-2 at Cuneo with 114 points for and 95 against, while Pordenone won 3-1 at home to Monza with 94 and 91. Both are 1-0, and Pordenone’s fewer sets lost balance Perugia’s stronger point differential. Home court creates the narrow lean, not a claim of proven superiority after one round. Pordenone’s four-set win shows they can close a match efficiently, while Perugia’s five-set opener demonstrates resilience but also leaves greater uncertainty. The low grade reflects those competing indicators.",
+      "word_count": 101,
+      "official_fixture_url": "https://www.legavolley.it/calendario/?idCampionato=999",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997",
+      "facts": [
+        {
+          "claim": "Sir Susa Scai Perugia: Won 3-2 at Cuneo with 114 points for and 95 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Tinet Prata di Pordenone: Won 3-1 at home to Monza with 94 points for and 91 against",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        },
+        {
+          "claim": "Official standings records: Sir Susa Scai Perugia 1-0; Tinet Prata di Pordenone 1-0",
+          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-hb-20261025-bergischer-hamburg",
+      "fixture_id": "hb-20261025-bergischer-hamburg",
+      "sport": "Handball",
+      "competition": "Germany Opel HBL — Round 10",
+      "event_name": null,
+      "home": "Bergischer HC",
+      "away": "Handball Club Hamburg",
+      "start_utc": "2026-10-25T15:30:00Z",
+      "start_display": null,
+      "headline": "Hamburg receives only a narrow lean despite Bergischer’s home struggles",
+      "selection": "Handball Club Hamburg",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.5056,
+      "fair_american": -102,
+      "confidence": "low",
+      "in_band": true,
+      "text": "Handball Club Hamburg are the away moneyline selection against Bergischer HC in a near-even call. Hamburg’s 2-6-1 record and 274 goals for sit against Bergischer’s 1-7-0 and 223, although the hosts have conceded fewer goals, 256 compared with 285. Hamburg’s 35-30 win at Bietigheim was its second of the season, while Bergischer followed a 29-28 win at Balingen with a 26-33 defeat at Melsungen and still has no home point. Bergischer won both meetings last season and leads the overall series 8-6, so Hamburg receives only a narrow lean from current season evidence.",
+      "word_count": 93,
+      "official_fixture_url": "https://www.opel-hbl.de/en/hbl",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Bergischer_HC_vs_HC_Hamburg/20?event_id=12087",
+      "facts": [
+        {
+          "claim": "Bergischer HC: 1-7-0 in eight games with 223 goals for and 256 against",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        },
+        {
+          "claim": "Handball Club Hamburg: 2-6-1 in nine games with 274 goals for and 285 against",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        },
+        {
+          "claim": "HBL matchday preview: Bergischer won 29-28 at Balingen then lost 26-33 at Melsungen and has no home point; Hamburg won 35-30 at Bietigheim for its second win; Nicolaj Jørgensen has 59 goals and Fynn Hangstein 54; Bergischer won both meetings last season and leads the overall series 8-6",
+          "source_url": "https://www.opel-hbl.de/de/hbl/content/vorschau-spieltag-10-abts-heimdeb%C3%BCt-gegen-den-meister-torj%C3%A4gertreffen-in-gummersbach-und-schw%C3%A4bisches-derby"
+        },
+        {
+          "claim": "Official team page confirms Bergischer HC–Handball Club Hamburg, Mitsubishi Electric Halle and the Sunday local start",
+          "source_url": "https://www.opel-hbl.de/de/team/Handball%20Sport%20Verein%20Hamburg/0045fbc4-3953-11ef-a217-af5c55c3771d"
+        },
+        {
+          "claim": "Official standings records: Bergischer HC 1-7-0; Handball Club Hamburg 2-6-1",
+          "source_url": "https://www.opel-hbl.de/de/hbl/tabelle"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-tennis-wta-osaka-2026-final",
+      "fixture_id": "tennis-wta-osaka-2026-final",
+      "sport": "Tennis",
+      "competition": "WTA 250 Osaka — final",
+      "event_name": null,
+      "home": "Ashlyn Krueger",
+      "away": "Katerina Siniakova",
+      "start_utc": "2026-10-25T04:30:00Z",
+      "start_display": "Not before 2026-10-25 04:30 UTC (13:30 Japan)",
+      "headline": "Krueger gets only a marginal lean in a finely balanced Osaka final",
+      "selection": "Ashlyn Krueger",
+      "market": "Moneyline",
+      "line": null,
+      "probability": 0.505,
+      "fair_american": -102,
+      "confidence": "low",
+      "in_band": true,
+      "text": "Ashlyn Krueger is a narrow match-winner selection against Katerina Siniakova. Krueger’s 8-1 completed-set record at Osaka includes wins over sixth seed Janice Tjen, fourth seed Talia Gibson and top seed Ann Li; Siniakova’s 7-1 completed-set record includes an opening match that ended by retirement, so it is not treated as eight completed sets. Siniakova beat Katie Boulter 6-1 6-4 to reach her first singles final since 2023, while Krueger is the 2023 Osaka champion and current rank 55. The near-even grading reflects Siniakova’s strong week, with Krueger’s slightly larger completed-set sample and demanding route providing only a marginal lean.",
+      "word_count": 99,
+      "official_fixture_url": "https://www.wtatennis.com/news/4576359/asian-swing-2026-preview-dates-draws-prize-money-and-everything-you-need-to-know",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Ashlyn_Krueger_vs_Katerina_Siniakova/3?event_id=902171",
+      "facts": [
+        {
+          "claim": "Official order of play: Not before 2026-10-25 04:30 UTC (13:30 Japan)",
+          "source_url": "https://www.wtatennis.com/news/4576359/asian-swing-2026-preview-dates-draws-prize-money-and-everything-you-need-to-know"
+        },
+        {
+          "claim": "Ashlyn Krueger: 4-0 at Osaka with an 8-1 completed-set record; 2023 champion and current singles rank 55",
+          "source_url": "https://wtafiles.wtatennis.com/pdf/draws/2026/405/MDS.pdf"
+        },
+        {
+          "claim": "Katerina Siniakova: 4-0 at Osaka with a 7-1 completed-set record; beat Katie Boulter 6-1 6-4 in the semifinal after an opening-round retirement",
+          "source_url": "https://wtafiles.wtatennis.com/pdf/draws/2026/405/MDS.pdf"
+        },
+        {
+          "claim": "WTA Osaka draw: Krueger beat Tjen 6-4 6-4, Tararudee 6-3 6-1, Gibson 6-1 6-3 and top seed Ann Li 6-4 6-7(4) 6-3",
+          "source_url": "https://wtafiles.wtatennis.com/pdf/draws/2026/405/MDS.pdf"
+        },
+        {
+          "claim": "WTA Osaka draw: Siniakova beat Stearns 6-4 6-0 4-0 RET, Linette 6-4 6-1 and Stoiana 6-1 6-2",
+          "source_url": "https://wtafiles.wtatennis.com/pdf/draws/2026/405/MDS.pdf"
+        },
+        {
+          "claim": "WTA semifinal report: Siniakova beat Boulter 6-1 6-4 to reach her first singles final since 2023",
+          "source_url": "https://www.wtatennis.com/videos/4598182/siniakova-defeats-boulter-in-osaka-semis-to-reach-first-wta-singles-final-since-2023"
+        },
+        {
+          "claim": "WTA player profile: Krueger is current singles rank 55 and the 2023 Osaka champion",
+          "source_url": "https://www.wtatennis.com/players/329409/ashlyn-krueger"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
+    },
+    {
+      "id": "preview-f1-2026-united-states",
+      "fixture_id": "f1-2026-united-states",
+      "sport": "Motor Racing",
+      "competition": "Formula 1 — United States Grand Prix",
+      "event_name": "United States Grand Prix",
+      "home": "Race",
+      "away": "22-starter field",
+      "start_utc": "2026-10-25T20:00:00Z",
+      "start_display": null,
+      "headline": "Antonelli’s season lead and close Practice 2 pace earn a restrained race call",
+      "selection": "Kimi Antonelli",
+      "market": "Race winner",
+      "line": null,
+      "probability": 0.3119,
+      "fair_american": 221,
+      "confidence": "low",
+      "in_band": true,
+      "text": "Kimi Antonelli is the race-winner selection for the United States Grand Prix. His 340 championship points and eight wins lead the field, and his Practice 2 lap was only 0.042 seconds behind Charles Leclerc’s 1:35.291. Max Verstappen brings consecutive victories in Bahrain and Singapore and was third in Practice 2, 0.189 seconds off Leclerc, so this remains a low-confidence race call rather than a season-title assumption. George Russell has three wins and 238 points, while Lewis Hamilton has 229 and one win. Qualifying had not produced an official grid when researched, so no starting-position advantage is claimed.",
+      "word_count": 97,
+      "official_fixture_url": "https://www.formula1.com/en/latest/article/formula-1-msc-cruises-united-states-grand-prix-2026.2u6li2pzNhPzL3TSYaagrm",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913",
+      "facts": [
+        {
+          "claim": "Official timetable: the Grand Prix is 15:00-17:00 Austin on Sunday 25 October over 56 laps or 120 minutes; Austin is five hours behind UTC",
+          "source_url": "https://www.formula1.com/en/latest/article/formula-1-msc-cruises-united-states-grand-prix-2026.2u6li2pzNhPzL3TSYaagrm"
+        },
+        {
+          "claim": "Official standings: Antonelli 340 points, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215 and Norris 201",
+          "source_url": "https://www.formula1.com/en/results/2026/drivers"
+        },
+        {
+          "claim": "Official race results: 17 completed 2026 races; Antonelli has eight wins, Russell three, Verstappen two, Norris two, Hamilton one and Leclerc one",
+          "source_url": "https://www.formula1.com/en/results/2026/races"
+        },
+        {
+          "claim": "Official recent results: Verstappen won in Bahrain and Singapore, the two most recent completed Grands Prix",
+          "source_url": "https://www.formula1.com/en/results/2026/races"
+        },
+        {
+          "claim": "Official Practice 2: Leclerc 1:35.291; Antonelli +0.042s, Verstappen +0.189s, Hamilton +0.615s and Russell +0.744s",
+          "source_url": "https://www.formula1.com/en/results/2026/races/1297/united-states/practice/2"
+        },
+        {
+          "claim": "Official Practice 2 entry list contains 22 starters; Tsunoda has a standings row but no current Practice 2 time and is not included in this race field",
+          "source_url": "https://www.formula1.com/en/results/2026/races/1297/united-states/practice/2"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No official injury or availability report was read; injury status remains blank."
     }
   ]
 }

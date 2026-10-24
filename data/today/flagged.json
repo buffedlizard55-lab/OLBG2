@@ -1,132 +1,195 @@
 {
-  "as_of_utc": "2026-10-24T17:50:00Z",
-  "count": 18,
+  "as_of_utc": "2026-10-24T18:25:00Z",
+  "count": 27,
   "items": [
     {
       "code": "NO-LISTING",
       "sport": "Golf",
-      "detail": "The Golf hub returned \"No tips found.\" at 17:16 UTC. OLBG listed no golf event, so there was nothing to attach a pick to.",
+      "detail": "The Golf hub returned 'No tips found.' OLBG listed no golf event to attach a pick to.",
       "source": "https://www.olbg.com/betting-tips/Golf/5",
-      "needs": "A golf event to be listed on OLBG before a golf pick can exist."
+      "needs": "A golf event listed on OLBG."
     },
     {
       "code": "NO-MATCH-EVENTS",
       "sport": "Rugby League",
-      "detail": "The Rugby League hub listed only 2027 outright futures (State of Origin, Super League, NRL). No Rugby League match event was listed.",
+      "detail": "The hub listed only 2027 outright futures, not a Rugby League match event.",
       "source": "https://www.olbg.com/betting-tips/Rugby_League/10",
       "needs": "A listed Rugby League match event."
     },
     {
-      "code": "OFFICIAL-FEED-BLOCKED",
-      "sport": "Basketball",
-      "detail": "Ten basketball events were listed, including nine NBA games, but no official NBA fixture data could be read: the games page returned its shell with an error message, and the scoreboard endpoints returned HTTP 500 or failed.",
-      "source": "https://www.nba.com/games?date=2026-10-24",
-      "needs": "An NBA fixture feed that returns per-game data."
-    },
-    {
       "code": "NO-OFFICIAL-FORM-SOURCE",
       "sport": "Greyhounds",
-      "detail": "Nine race listings were captured, but GBGB does not publish per-race dog form or trap data at a URL reachable here, so no greyhound pick is published.",
+      "detail": "Nine race listings were captured, but no official racecard with per-dog form and trap data was read.",
       "source": "https://www.gbgb.org.uk/",
       "needs": "A reachable official racecard source."
     },
     {
-      "code": "NOT-CONFIRMED",
+      "code": "WTA-DATE-CONFLICT",
       "sport": "Tennis",
-      "detail": "Six tennis matches were listed for 25-26 October. No ATP or WTA page was read in this capture window, so no fixture, ranking or form fact is asserted.",
-      "source": "https://www.olbg.com/betting-tips/Tennis/3",
-      "needs": "An ATP/WTA match page for each listed match."
+      "detail": "The WTA Ningbo final preview labels the start Saturday 24 October while also giving 17:00 local/05:00 ET; the official tournament page dates the final Sunday 25 October. The fixture uses Sunday and preserves the not-before time; the contradiction is not hidden.",
+      "source": "https://www.wtatennis.com/news/4598107/elena-rybakina-vs-leylah-fernandez-everything-to-know-about-the-ningbo-final",
+      "needs": "A corrected WTA article or order of play with an internally consistent day and date."
+    },
+    {
+      "code": "TENNIS-QUOTA-AND-STARTS",
+      "sport": "Tennis",
+      "detail": "Three finals have comparable official evidence and OLBG rows, so only three picks qualify rather than five. All start labels are not-before times following doubles or ceremonies, not exact beginning times.",
+      "source": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "needs": "Two more officially confirmed, OLBG-backed matches and final orders of play for exact starts."
     },
     {
       "code": "NOT-CONFIRMED",
       "sport": "Cricket",
-      "detail": "Eleven cricket events were listed, including a Pakistan v England ODI and four CSA T20 games. No governing-body page was read in this capture, so no cricket pick is published.",
+      "detail": "Eleven cricket events were listed, but no governing-body fixture and form page was read for them.",
       "source": "https://www.olbg.com/betting-tips/Cricket/7",
       "needs": "A board or ICC fixture page for each listed match."
     },
     {
-      "code": "NOT-CONFIRMED",
+      "code": "OFFICIAL-WITHOUT-OLBG",
       "sport": "Volleyball",
-      "detail": "Twelve volleyball matches were listed across Austrian, German, Polish, French, Dutch, Brazilian and Italian leagues. No league page was read in this capture.",
+      "detail": "Piacenza–Modena and Milano–Cuneo are official Lega Volley fixtures but were absent from the captured OLBG board. Their research lines remain on the lines page without picks; the other four Italian fixtures supply four OLBG-backed selections, not a padded five.",
+      "source": "https://www.legavolley.it/calendario/?idCampionato=999",
+      "needs": "Corresponding OLBG event rows before either official-only fixture can receive a pick; a fifth supported match for the target."
+    },
+    {
+      "code": "PARTIAL-LEAGUE-COVERAGE",
+      "sport": "Volleyball",
+      "detail": "Italian fixtures now have official calendar and one-round standings support. Listings from other countries remain unpriced until their own league fixture and statistics pages are read.",
       "source": "https://www.olbg.com/betting-tips/Volleyball/21",
-      "needs": "A league fixture/standings page per competition."
+      "needs": "Official sources for the remaining listed leagues."
     },
     {
-      "code": "OFFICIAL-FEED-BLOCKED",
+      "code": "PARTIAL-LEAGUE-COVERAGE",
       "sport": "Handball",
-      "detail": "Ten handball matches were listed. The Bundesliga fixture URL tried returned HTTP 404, so no handball fixture could be confirmed.",
-      "source": "https://www.daikin-hbl.de/de/spielplan/",
-      "needs": "A working HBL and ASOBAL fixture/standings page."
+      "detail": "Five Sunday fixtures across the LNH and HBL have official statistics and matching OLBG rows, meeting the five-pick target. The other captured handball listings remain unpriced until their own league or federation sources are read.",
+      "source": "https://www.opel-hbl.de/de/hbl/content/vorschau-spieltag-10-abts-heimdeb%C3%BCt-gegen-den-meister-torj%C3%A4gertreffen-in-gummersbach-und-schw%C3%A4bisches-derby",
+      "needs": "Official sources for ASOBAL, EHF, Swedish, Danish and international listings."
     },
     {
-      "code": "NOT-CONFIRMED",
+      "code": "HBL-TABLE-ACCESS",
+      "sport": "Handball",
+      "detail": "Complete current records for the six Sunday HBL teams came from officially indexed standings rows and the official matchday preview. The direct standings route presented reCAPTCHA; no challenge was bypassed and the official link remains available for manual review.",
+      "source": "https://www.opel-hbl.de/de/hbl/tabelle",
+      "needs": "Nothing for these six teams; the access limitation is recorded for reviewers."
+    },
+    {
+      "code": "QUOTA-SHORTFALL",
       "sport": "Darts",
-      "detail": "Five PDC matches were listed. Four of them had displayed start times before the capture window and no PDC page was read, so none is published.",
-      "source": "https://www.olbg.com/betting-tips/Darts/15",
-      "needs": "A PDC match schedule page."
+      "detail": "Three current or upcoming PDC match listings have official schedule, ranking and tournament-leg support, producing three picks. The two outright listings are not matches, and the two Saturday evening matches already underway at the refreshed capture were removed rather than used to pad the target.",
+      "source": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "needs": "Two more supported, OLBG-backed match events for the five-match target."
     },
     {
-      "code": "NOT-CONFIRMED",
+      "code": "LISTED-MATCH-TIMES",
+      "sport": "Darts",
+      "detail": "PDC confirms the Saturday evening session and match order, while the exact 19:15Z and 20:15Z starts come from OLBG's display and are labelled as such. Sunday's 12:00Z value agrees with the official quarterfinal session start after the clock change.",
+      "source": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "needs": "Official per-match scheduled times if exact rather than session-level chronology is required."
+    },
+    {
+      "code": "SUNDAY-RESULT-CORROBORATION",
+      "sport": "Darts",
+      "detail": "The official PDC bracket and Sunday session are linked, but its directly readable Saturday report and hub index still exposed pre-match/TBC content. ESPN and The Independent independently confirm Price 10-4 Menzies, Bunting 10-3 Huybrechts and the resulting Sunday quarterfinal. The pairing is not inferred from an unfinished bracket.",
+      "source": "https://www.espn.com/darts/story/_/id/49948004/pdc-european-championship-darts-2026-schedule-results-how-watch-prize-money-dates-more-dortmund",
+      "needs": "An updated PDC result report carrying the same afternoon scores for a single-source official audit."
+    },
+    {
+      "code": "LIVE-OR-UNKNOWN-FINALIST",
       "sport": "Snooker",
-      "detail": "One snooker match was listed (Mark Williams v Jak Jones). The WST match centre was read only as far as the Round 1 results, so the match could not be confirmed from the governing body.",
+      "detail": "Wilson beat Craigie 6-5, but Williams–Jones was live and the other finalist was unknown when read. No future final matchup or price is invented from a live bracket.",
       "source": "https://wst.tv/matches/",
-      "needs": "The WST page section covering 24 October."
+      "needs": "A completed semifinal and an official final schedule."
     },
     {
       "code": "NOT-CONFIRMED",
       "sport": "Gaelic Sports",
-      "detail": "Four club matches were listed (Galway, Cork and Limerick championships). No county-board page was read, so no Gaelic pick is published.",
+      "detail": "Four club matches were listed, but no county-board fixture page was read.",
       "source": "https://www.gaa.ie/",
-      "needs": "County board fixture pages with throw-in times."
+      "needs": "County-board fixture pages with throw-in times."
     },
     {
-      "code": "NOT-CONFIRMED",
+      "code": "NO-QUALIFYING-GRID",
       "sport": "Motor Racing",
-      "detail": "The United States Grand Prix was listed for 25 October with Max Verstappen the most-tipped driver. No Formula 1 page was read in this capture, so no motor-racing pick is published.",
-      "source": "https://www.olbg.com/betting-tips/Motor_Racing/14",
-      "needs": "The Formula 1 event page and grid/qualifying result."
+      "detail": "Official timetable, 17 race results, season standings and all 22 Practice 2 starters support winner and podium prices. Qualifying had not produced a grid, so no starting-position advantage is used. One race supplies one pick, not a padded five.",
+      "source": "https://www.formula1.com/en/latest/article/formula-1-msc-cruises-united-states-grand-prix-2026.2u6li2pzNhPzL3TSYaagrm",
+      "needs": "The official qualifying result and grid before any grid-dependent claim; four more supported events for the five-event target."
     },
     {
       "code": "QUOTA-SHORTFALL",
       "sport": "Baseball",
-      "detail": "One officially sourced baseball fixture exists (the World Series game). The five-per-sport target cannot be met from a single scheduled game.",
-      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24",
-      "needs": "More than one scheduled game."
+      "detail": "One official baseball fixture exists. The five-per-sport target cannot be met from one scheduled game without inventing matches.",
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
+      "needs": "More officially scheduled games."
     },
     {
       "code": "STARTED-AT-CAPTURE",
       "sport": "Ice Hockey",
-      "detail": "Anaheim at Philadelphia was scheduled for 17:00Z, before the 17:45Z selection cut-off, so it is shown as a fixture but carries no pick.",
+      "detail": "Anaheim at Philadelphia started at 17:00Z, before the 18:25Z selection cut-off. It remains in the match list without a pick; its live score is not used.",
       "source": "https://api-web.nhle.com/v1/score/2026-10-24",
       "needs": "Nothing; recorded for completeness."
     },
     {
-      "code": "NO-OLBG-LISTING",
-      "sport": "Ice Hockey",
-      "detail": "Buffalo at Washington was confirmed by the NHL feed but no OLBG event id for it appeared on the Ice Hockey hub page read, so a bet could not be placed on it from the listing we captured.",
-      "source": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
-      "needs": "The OLBG listing to appear on a later page of the hub."
+      "code": "NBA-REPORT-PENDING",
+      "sport": "Basketball",
+      "detail": "The 1:30 PM ET report marked San Antonio, Dallas, Washington, New Orleans and Golden State NOT YET SUBMITTED. No availability claim is made for those teams.",
+      "source": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+      "needs": "A later official NBA injury report containing those teams."
     },
     {
-      "code": "REQUIREMENT-CONFLICT",
-      "sport": null,
-      "detail": "\"High confidence means 70% or better\" and \"the price must sit between -250 and +10000\" can only both hold between 70.00% and 71.43%, because -250 is 71.43%. The New Jersey pick is a 73.6% (-279) call and is therefore published as high confidence but marked outside the band rather than repriced to fit.",
-      "source": "https://www.olbg.com/betting-tips",
-      "needs": "A decision on which rule wins."
+      "code": "NBA-PDF-PAGEBREAK",
+      "sport": "Basketball",
+      "detail": "The Dean Wade row crosses a PDF page break with ambiguous team attribution. It is excluded from every preview and availability input.",
+      "source": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+      "needs": "A later report or cleanly aligned official row."
+    },
+    {
+      "code": "NBA-VENUE-BLANK",
+      "sport": "Basketball",
+      "detail": "The official games-page portion used for the eight NBA fixtures did not supply arenas. Venue cells are blank rather than filled from team names or prior knowledge.",
+      "source": "https://www.nba.com/games?date=2026-10-24",
+      "needs": "Official fixture pages with arena fields."
+    },
+    {
+      "code": "NBA-SMALL-SAMPLE",
+      "sport": "Basketball",
+      "detail": "Current NBA scoring samples contain only one or two games per team. They receive ten league-average games of shrinkage and are not described as established scoring form.",
+      "source": "https://www.nba.com/stats/teams/traditional",
+      "needs": "A larger current-season sample; the limitation remains explicit today."
+    },
+    {
+      "code": "NHL-SHOOTOUT-COUNT",
+      "sport": "Ice Hockey",
+      "detail": "NHL standings and team-summary goal-against totals can differ because of shootout accounting. All scoring prices use the team-summary feed consistently instead of mixing conventions.",
+      "source": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+      "needs": "Nothing; the convention is documented."
     },
     {
       "code": "OLBG-DISPLAY-TIME",
       "sport": "Ice Hockey",
-      "detail": "OLBG's displayed times for NHL games are US Eastern clock times plus about seven minutes (for example \"Today 19:07\" for a 23:00Z start). They are stored verbatim and never used as kick-off times.",
+      "detail": "OLBG displayed times are stored verbatim and never treated as UTC. Official league startTimeUTC controls the fixture chronology.",
       "source": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
       "needs": "Nothing; recorded so the column is not misread."
     },
     {
       "code": "INVENTORY-DEPTH",
       "sport": null,
-      "detail": "96 listing rows were read from the first page of each of the 15 sport hubs. Each hub is paginated with a \"Load More Tips\" control, so this is not a complete OLBG inventory.",
+      "detail": "107 listing rows are published across the 15 hubs. Hubs have a Load More Tips control, so this is not a complete inventory of every OLBG event.",
       "source": "https://www.olbg.com/betting-tips",
       "needs": "Paged reads of every hub to complete the inventory."
+    },
+    {
+      "code": "MARKET-COVERAGE",
+      "sport": null,
+      "detail": "387 prices cover moneylines plus NHL puck lines/totals, NBA spreads/totals, MLB run lines/totals, tennis and volleyball set markets, three-way handball result/handicap/total markets, darts match/leg-handicap/total-legs markets, and Formula 1 winner/podium markets. Official-only fixtures may be priced but are not picked without an OLBG row.",
+      "source": "https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&sort=%5B%7B%22property%22:%22points%22,%22direction%22:%22DESC%22%7D%5D&start=0&limit=50&cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+      "needs": "Official inputs for the remaining sports; no blank is backfilled from OLBG consensus."
+    },
+    {
+      "code": "HIGH-OUTSIDE-BAND",
+      "sport": null,
+      "detail": "High is 70% or better. −250 implies 71.43%, so the overlap is only 70.00–71.43%. Cleveland Cavaliers, Denver Nuggets, San Antonio Spurs, Edmonton Oilers, Paris Saint-Germain Handball, Füchse Berlin, New Jersey Devils grade High but price outside the floor; their fair prices are unchanged.",
+      "source": "https://www.olbg.com/betting-tips",
+      "needs": "No repricing; readers should use the band label alongside the grade."
     }
   ],
   "sports": [
@@ -144,11 +207,11 @@
       "sport": "Volleyball",
       "hub_url": "https://www.olbg.com/betting-tips/Volleyball/21",
       "sport_id": 21,
-      "listings": 12,
-      "fixtures": 0,
-      "picks": 0,
-      "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "listings": 11,
+      "fixtures": 6,
+      "picks": 4,
+      "previews": 4,
+      "status": "Official fixtures, independent prices and written picks are linked on each row."
     },
     {
       "sport": "Rugby Union",
@@ -158,7 +221,7 @@
       "fixtures": 0,
       "picks": 0,
       "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "status": "No official fixture was confirmed in this capture. The reason and evidence link are in the review queue."
     },
     {
       "sport": "Cricket",
@@ -168,7 +231,7 @@
       "fixtures": 0,
       "picks": 0,
       "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "status": "No official fixture was confirmed in this capture. The reason and evidence link are in the review queue."
     },
     {
       "sport": "Snooker",
@@ -178,17 +241,17 @@
       "fixtures": 0,
       "picks": 0,
       "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "status": "No official fixture was confirmed in this capture. The reason and evidence link are in the review queue."
     },
     {
       "sport": "Darts",
       "hub_url": "https://www.olbg.com/betting-tips/Darts/15",
       "sport_id": 15,
-      "listings": 6,
-      "fixtures": 0,
-      "picks": 0,
-      "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "listings": 5,
+      "fixtures": 3,
+      "picks": 3,
+      "previews": 3,
+      "status": "Official fixtures, independent prices and written picks are linked on each row."
     },
     {
       "sport": "Baseball",
@@ -198,7 +261,7 @@
       "fixtures": 1,
       "picks": 1,
       "previews": 1,
-      "status": "Fixtures and picks for this sport come from the official league feed linked on each row."
+      "status": "Official fixtures, independent prices and written picks are linked on each row."
     },
     {
       "sport": "Gaelic Sports",
@@ -208,7 +271,7 @@
       "fixtures": 0,
       "picks": 0,
       "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "status": "No official fixture was confirmed in this capture. The reason and evidence link are in the review queue."
     },
     {
       "sport": "Greyhounds",
@@ -225,50 +288,50 @@
       "hub_url": "https://www.olbg.com/betting-tips/Tennis/3",
       "sport_id": 3,
       "listings": 6,
-      "fixtures": 0,
-      "picks": 0,
-      "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "fixtures": 3,
+      "picks": 3,
+      "previews": 3,
+      "status": "Official fixtures, independent prices and written picks are linked on each row."
     },
     {
       "sport": "Motor Racing",
       "hub_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
       "sport_id": 14,
       "listings": 1,
-      "fixtures": 0,
-      "picks": 0,
-      "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "fixtures": 1,
+      "picks": 1,
+      "previews": 1,
+      "status": "Official fixtures, independent prices and written picks are linked on each row."
     },
     {
       "sport": "Handball",
       "hub_url": "https://www.olbg.com/betting-tips/Handball/20",
       "sport_id": 20,
-      "listings": 10,
-      "fixtures": 0,
-      "picks": 0,
-      "previews": 0,
-      "status": "No officially confirmed fixture in this capture: the official source for this sport was blocked or was not reached in the capture window. See the review items for this sport."
+      "listings": 20,
+      "fixtures": 5,
+      "picks": 5,
+      "previews": 5,
+      "status": "Official fixtures, independent prices and written picks are linked on each row."
     },
     {
       "sport": "Ice Hockey",
       "hub_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
       "sport_id": 13,
-      "listings": 16,
-      "fixtures": 7,
+      "listings": 20,
+      "fixtures": 12,
       "picks": 5,
       "previews": 5,
-      "status": "Fixtures and picks for this sport come from the official league feed linked on each row."
+      "status": "Official fixtures, independent prices and written picks are linked on each row."
     },
     {
       "sport": "Basketball",
       "hub_url": "https://www.olbg.com/betting-tips/Basketball/4",
       "sport_id": 4,
-      "listings": 10,
-      "fixtures": 0,
-      "picks": 0,
-      "previews": 0,
-      "status": "NBA.com returned its games shell but no per-game data (\"Sorry, something went wrong\"), and the NBA CDN scoreboard returned HTTP 500 twice, so no NBA fixture could be officially confirmed."
+      "listings": 9,
+      "fixtures": 8,
+      "picks": 5,
+      "previews": 5,
+      "status": "All eight NBA fixtures are confirmed on the official games page. Availability is limited to the 1:30 PM ET injury report; teams marked NOT YET SUBMITTED remain flagged."
     },
     {
       "sport": "Rugby League",

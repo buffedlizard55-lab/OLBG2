@@ -40,7 +40,7 @@ class TodayBoardTests(unittest.TestCase):
 
     def test_confidence_and_band_flags(self):
         for pick in load("picks")["picks"]:
-            want = "high" if pick["probability"] >= 0.65 else ("medium" if pick["probability"] >= 0.55 else "low")
+            want = "high" if pick["probability"] >= 0.70 else ("medium" if pick["probability"] >= 0.55 else "low")
             self.assertEqual(pick["confidence"], want, pick["fixture_id"])
             self.assertEqual(pick["in_band"], -250 <= pick["fair_american"] <= 10000, pick["fixture_id"])
 
@@ -67,7 +67,12 @@ class TodayBoardTests(unittest.TestCase):
             self.assertTrue(p["source_url"].startswith("https://"))
 
     def test_fixtures_only_from_official_feeds(self):
-        allowed = ("https://api-web.nhle.com/", "https://statsapi.mlb.com/")
+        allowed = (
+            "https://api-web.nhle.com/", "https://statsapi.mlb.com/", "https://www.nba.com/",
+            "https://www.atptour.com/", "https://www.wtatennis.com/", "https://wtafiles.wtatennis.com/",
+            "https://www.legavolley.it/", "https://www.lnh.fr/", "https://www.opel-hbl.de/",
+            "https://www.formula1.com/", "https://www.pdc.tv/",
+        )
         for f in load("olbg_listings")["fixtures"]:
             self.assertTrue(f["source_url"].startswith(allowed), f["id"])
 

@@ -1,0 +1,141 @@
+{
+  "as_of_utc": "2026-10-24T17:50:00Z",
+  "first_page_source": "data/today/olbg_listings.json",
+  "first_page_source_sha256": "e876d6027634bb22113694f0eeef686f65b80f6ad36a90e1fe7567e985a85535",
+  "added_hurling_source": "olbg_hurling_first_page.json",
+  "first_page_only": true,
+  "hubs": [
+    {
+      "sport": "Golf",
+      "url": "https://www.olbg.com/betting-tips/Golf/5",
+      "sport_id": 5,
+      "official_check_target": "https://www.pgatour.com/leaderboard",
+      "listings": 0,
+      "official_matches": 0
+    },
+    {
+      "sport": "Volleyball",
+      "url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "sport_id": 21,
+      "official_check_target": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "listings": 12,
+      "official_matches": 2
+    },
+    {
+      "sport": "Rugby Union",
+      "url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "sport_id": 9,
+      "official_check_target": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "listings": 6,
+      "official_matches": 3
+    },
+    {
+      "sport": "Cricket",
+      "url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "sport_id": 7,
+      "official_check_target": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "listings": 11,
+      "official_matches": 4
+    },
+    {
+      "sport": "Snooker",
+      "url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "sport_id": 8,
+      "official_check_target": "https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2",
+      "listings": 1,
+      "official_matches": 1
+    },
+    {
+      "sport": "Darts",
+      "url": "https://www.olbg.com/betting-tips/Darts/15",
+      "sport_id": 15,
+      "official_check_target": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "listings": 6,
+      "official_matches": 2
+    },
+    {
+      "sport": "Baseball",
+      "url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "sport_id": 12,
+      "official_check_target": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions",
+      "listings": 1,
+      "official_matches": 1
+    },
+    {
+      "sport": "Gaelic Sports",
+      "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "sport_id": 25,
+      "subhub_url": "https://www.olbg.com/betting-tips/Hurling/26",
+      "sport_ids": [
+        25,
+        26
+      ],
+      "official_check_target": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "listings": 5,
+      "official_matches": 2
+    },
+    {
+      "sport": "Greyhounds",
+      "url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "sport_id": 28,
+      "official_check_target": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "listings": 9,
+      "official_matches": 0
+    },
+    {
+      "sport": "Tennis",
+      "url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "sport_id": 3,
+      "official_check_target": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "listings": 6,
+      "official_matches": 2
+    },
+    {
+      "sport": "Motor Racing",
+      "url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "sport_id": 14,
+      "official_check_target": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH",
+      "listings": 1,
+      "official_matches": 1
+    },
+    {
+      "sport": "Handball",
+      "url": "https://www.olbg.com/betting-tips/Handball/20",
+      "sport_id": 20,
+      "official_check_target": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "listings": 10,
+      "official_matches": 4
+    },
+    {
+      "sport": "Ice Hockey",
+      "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "sport_id": 13,
+      "official_check_target": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "listings": 16,
+      "official_matches": 11
+    },
+    {
+      "sport": "Basketball",
+      "url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "sport_id": 4,
+      "official_check_target": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "listings": 10,
+      "official_matches": 8
+    },
+    {
+      "sport": "Rugby League",
+      "url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "sport_id": 10,
+      "official_check_target": "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/",
+      "listings": 3,
+      "official_matches": 0
+    }
+  ],
+  "reverse_engineering": [
+    "Hub route: /betting-tips/{Sport_Slug}/{numericSportId}; event route: /betting-tips/{Sport}/{group}/{competition}/{event}/{sportId}?event_id={id}.",
+    "Hub surfaces only the most-tipped selection per event. Event pages can show more markets, but neither a full active inventory nor offered odds were recovered from hub HTML.",
+    "Ice Hockey event pages expose Money Line, Puck Line and Game Totals; Handball Magdeburg–Kriens page exposed Money Line only. Market coverage is not implied for uninspected events.",
+    "Promotional cards interrupt tip rows; 'Load More Tips' means the 96 imported listings and one separately checked Hurling match are first-page records only. Gaelic Sports includes Gaelic Football id 25 plus Hurling id 26; Golf hub returned 'No tips found' and Rugby League displayed 2027 outrights rather than matches.",
+    "The listed time string is copied verbatim and not used as a UTC start. It disagrees with the NBA injury report for NOP@DEN and GSW@PHX, and with the CSA third Test start for South Africa v Australia."
+  ]
+}

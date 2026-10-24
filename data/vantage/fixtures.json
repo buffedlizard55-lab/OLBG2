@@ -1,0 +1,1710 @@
+{
+  "as_of_utc": "2026-10-24T17:50:00Z",
+  "count": 41,
+  "capture_note": "24 Oct official reads transcribed; PDC/WTA Osaka comparisons use indexed excerpts where page body was unavailable. Full raw HTTP bodies not archived",
+  "fixtures": [
+    {
+      "id": "nhl-2026020168",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "199999",
+      "home": "Philadelphia Flyers",
+      "away": "Anaheim Ducks",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T17:00:00Z",
+      "published_start": "2026-10-24T17:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Xfinity Mobile Arena",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": "PRE on league feed at collection",
+      "facts": [
+        {
+          "claim": "Anaheim Ducks: 4-6-0; Beckett Sennecke 5 goals; Leo Carlsson 9 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Philadelphia Flyers: 3-6-3; Matvei Michkov 6 goals",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Anaheim Ducks GP/GF/GA (10, 27, 33); Philadelphia Flyers GP/GF/GA (12, 20, 36)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 10,
+          "gf": 27,
+          "ga": 33
+        },
+        "home": {
+          "gp": 12,
+          "gf": 20,
+          "ga": 36
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020168,
+      "nhl_abbrevs": {
+        "away": "ANA",
+        "home": "PHI"
+      },
+      "team_records": {
+        "away": "4-6-0",
+        "home": "3-6-3"
+      },
+      "leaders": {
+        "away": "Beckett Sennecke 5 goals; Leo Carlsson 9 assists",
+        "home": "Matvei Michkov 6 goals"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": 100,
+        "home_american": -120,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020169",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200000",
+      "home": "New Jersey Devils",
+      "away": "Los Angeles Kings",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:30:00Z",
+      "published_start": "2026-10-24T19:30:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Prudential Center",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Los Angeles Kings: 2-4-2; Artemi Panarin 6 goals; Brandt Clarke 5 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "New Jersey Devils: 6-4-0; Arseny Gritsyuk 5 goals; Jack Hughes 8 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Los Angeles Kings GP/GF/GA (8, 20, 29); New Jersey Devils GP/GF/GA (10, 33, 31)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 8,
+          "gf": 20,
+          "ga": 29
+        },
+        "home": {
+          "gp": 10,
+          "gf": 33,
+          "ga": 31
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020169,
+      "nhl_abbrevs": {
+        "away": "LAK",
+        "home": "NJD"
+      },
+      "team_records": {
+        "away": "2-4-2",
+        "home": "6-4-0"
+      },
+      "leaders": {
+        "away": "Artemi Panarin 6 goals; Brandt Clarke 5 assists",
+        "home": "Arseny Gritsyuk 5 goals; Jack Hughes 8 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": 162,
+        "home_american": -194,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020170",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200007",
+      "home": "Boston Bruins",
+      "away": "San Jose Sharks",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "published_start": "2026-10-24T23:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "TD Garden",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2",
+        "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154",
+        "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "San Jose Sharks: 6-4-1; Macklin Celebrini 5 goals, 9 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Boston Bruins: 8-2-1; David Pastrnak 6 goals, 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "San Jose Sharks GP/GF/GA (11, 32, 36); Boston Bruins GP/GF/GA (11, 42, 22)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        },
+        {
+          "claim": "Boston defeated Nashville 6-0 on 22 October; Michael DiPietro stopped 28 shots and David Pastrnak scored twice with two assists",
+          "url": "https://www.nhl.com/gamecenter/nsh-vs-bos/2026/10/22/2026020154"
+        },
+        {
+          "claim": "San Jose defeated Ottawa 6-2 on 22 October; Yaroslav Askarov made 41 saves",
+          "url": "https://www.nhl.com/gamecenter/sjs-vs-ott/2026/10/22/2026020156"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 11,
+          "gf": 32,
+          "ga": 36
+        },
+        "home": {
+          "gp": 11,
+          "gf": 42,
+          "ga": 22
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020170,
+      "nhl_abbrevs": {
+        "away": "SJS",
+        "home": "BOS"
+      },
+      "team_records": {
+        "away": "6-4-1",
+        "home": "8-2-1"
+      },
+      "leaders": {
+        "away": "Macklin Celebrini 5 goals, 9 assists",
+        "home": "David Pastrnak 6 goals, 10 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": 146,
+        "home_american": -178,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020171",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200008",
+      "home": "Ottawa Senators",
+      "away": "New York Rangers",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "published_start": "2026-10-24T23:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Canadian Tire Centre",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "New York Rangers: 7-4-1; Alexis Lafrenière 8 goals; Adam Fox 14 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Ottawa Senators: 7-4-0; Tim Stützle 7 goals, 8 assists; Linus Ullmark 7 wins",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "New York Rangers GP/GF/GA (12, 37, 29); Ottawa Senators GP/GF/GA (11, 29, 30)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 12,
+          "gf": 37,
+          "ga": 29
+        },
+        "home": {
+          "gp": 11,
+          "gf": 29,
+          "ga": 30
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020171,
+      "nhl_abbrevs": {
+        "away": "NYR",
+        "home": "OTT"
+      },
+      "team_records": {
+        "away": "7-4-1",
+        "home": "7-4-0"
+      },
+      "leaders": {
+        "away": "Alexis Lafrenière 8 goals; Adam Fox 14 assists",
+        "home": "Tim Stützle 7 goals, 8 assists; Linus Ullmark 7 wins"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": 106,
+        "home_american": -128,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020172",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200006",
+      "home": "Pittsburgh Penguins",
+      "away": "Nashville Predators",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "published_start": "2026-10-24T23:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "PPG Paints Arena",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Nashville Predators: 3-3-3; Ryan O'Reilly 4 goals; Roman Josi 8 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Pittsburgh Penguins: 4-6-1; Evgeni Malkin 6 goals; Erik Karlsson 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Nashville Predators GP/GF/GA (9, 23, 28); Pittsburgh Penguins GP/GF/GA (11, 36, 37)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 9,
+          "gf": 23,
+          "ga": 28
+        },
+        "home": {
+          "gp": 11,
+          "gf": 36,
+          "ga": 37
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020172,
+      "nhl_abbrevs": {
+        "away": "NSH",
+        "home": "PIT"
+      },
+      "team_records": {
+        "away": "3-3-3",
+        "home": "4-6-1"
+      },
+      "leaders": {
+        "away": "Ryan O'Reilly 4 goals; Roman Josi 8 assists",
+        "home": "Evgeni Malkin 6 goals; Erik Karlsson 10 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": 106,
+        "home_american": -128,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020174",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200001",
+      "home": "Columbus Blue Jackets",
+      "away": "Vegas Golden Knights",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "published_start": "2026-10-24T23:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Nationwide Arena",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Vegas Golden Knights: 8-4-0; Mark Stone 8 goals; Jack Eichel 13 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Columbus Blue Jackets: 3-5-0; Kent Johnson 4 goals; Zach Werenski 6 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Vegas Golden Knights GP/GF/GA (12, 45, 36); Columbus Blue Jackets GP/GF/GA (8, 19, 29)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 12,
+          "gf": 45,
+          "ga": 36
+        },
+        "home": {
+          "gp": 8,
+          "gf": 19,
+          "ga": 29
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020174,
+      "nhl_abbrevs": {
+        "away": "VGK",
+        "home": "CBJ"
+      },
+      "team_records": {
+        "away": "8-4-0",
+        "home": "3-5-0"
+      },
+      "leaders": {
+        "away": "Mark Stone 8 goals; Jack Eichel 13 assists",
+        "home": "Kent Johnson 4 goals; Zach Werenski 6 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": -138,
+        "home_american": 116,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020175",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200002",
+      "home": "St. Louis Blues",
+      "away": "Carolina Hurricanes",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "published_start": "2026-10-24T23:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Enterprise Center",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Carolina Hurricanes: 8-2-2; Sebastian Aho 7 goals; Jackson Blake 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "St. Louis Blues: 5-4-1; Mason McTavish 6 goals; Dylan Holloway 7 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Carolina Hurricanes GP/GF/GA (12, 47, 32); St. Louis Blues GP/GF/GA (10, 35, 31)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 12,
+          "gf": 47,
+          "ga": 32
+        },
+        "home": {
+          "gp": 10,
+          "gf": 35,
+          "ga": 31
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020175,
+      "nhl_abbrevs": {
+        "away": "CAR",
+        "home": "STL"
+      },
+      "team_records": {
+        "away": "8-2-2",
+        "home": "5-4-1"
+      },
+      "leaders": {
+        "away": "Sebastian Aho 7 goals; Jackson Blake 10 assists",
+        "home": "Mason McTavish 6 goals; Dylan Holloway 7 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": -154,
+        "home_american": 128,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020176",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200010",
+      "home": "Edmonton Oilers",
+      "away": "Toronto Maple Leafs",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "published_start": "2026-10-24T23:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Rogers Place",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Toronto Maple Leafs: 6-4-2; Auston Matthews 8 goals, 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Edmonton Oilers: 8-1-1; Leon Draisaitl 10 goals; Connor McDavid 23 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Toronto Maple Leafs GP/GF/GA (12, 43, 38); Edmonton Oilers GP/GF/GA (10, 46, 32)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 12,
+          "gf": 43,
+          "ga": 38
+        },
+        "home": {
+          "gp": 10,
+          "gf": 46,
+          "ga": 32
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020176,
+      "nhl_abbrevs": {
+        "away": "TOR",
+        "home": "EDM"
+      },
+      "team_records": {
+        "away": "6-4-2",
+        "home": "8-1-1"
+      },
+      "leaders": {
+        "away": "Auston Matthews 8 goals, 10 assists",
+        "home": "Leon Draisaitl 10 goals; Connor McDavid 23 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": 150,
+        "home_american": -182,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020177",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200009",
+      "home": "Utah Mammoth",
+      "away": "Tampa Bay Lightning",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T01:00:00Z",
+      "published_start": "2026-10-25T01:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Delta Center",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Tampa Bay Lightning: 7-3-0; Brandon Hagel 7 goals; Nikita Kucherov 9 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Utah Mammoth: 7-4-0; Nick Schmaltz 7 goals; Mikhail Sergachev 10 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Tampa Bay Lightning GP/GF/GA (10, 34, 29); Utah Mammoth GP/GF/GA (11, 41, 36)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 10,
+          "gf": 34,
+          "ga": 29
+        },
+        "home": {
+          "gp": 11,
+          "gf": 41,
+          "ga": 36
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020177,
+      "nhl_abbrevs": {
+        "away": "TBL",
+        "home": "UTA"
+      },
+      "team_records": {
+        "away": "7-3-0",
+        "home": "7-4-0"
+      },
+      "leaders": {
+        "away": "Brandon Hagel 7 goals; Nikita Kucherov 9 assists",
+        "home": "Nick Schmaltz 7 goals; Mikhail Sergachev 10 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": 120,
+        "home_american": -144,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020178",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200004",
+      "home": "Calgary Flames",
+      "away": "Detroit Red Wings",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T02:00:00Z",
+      "published_start": "2026-10-25T02:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Scotiabank Saddledome",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Detroit Red Wings: 4-3-3; Alex DeBrincat 6 goals, 6 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Calgary Flames: 3-6-0; Morgan Frost 3 goals; Joel Farabee 5 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "stats": null,
+      "official_game_id": 2026020178,
+      "nhl_abbrevs": {
+        "away": "DET",
+        "home": "CGY"
+      },
+      "team_records": {
+        "away": "4-3-3",
+        "home": "3-6-0"
+      },
+      "leaders": {
+        "away": "Alex DeBrincat 6 goals, 6 assists",
+        "home": "Morgan Frost 3 goals; Joel Farabee 5 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": -130,
+        "home_american": 108,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "nhl-2026020179",
+      "sport": "Ice Hockey",
+      "olbg_event_id": "200005",
+      "home": "Seattle Kraken",
+      "away": "Minnesota Wild",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T02:00:00Z",
+      "published_start": "2026-10-25T02:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "Climate Pledge Arena",
+      "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "extra_official_urls": [
+        "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      ],
+      "competition": "NHL 2026-27",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Minnesota Wild: 6-3-2; Kirill Kaprizov 11 goals; Quinn Hughes 11 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Seattle Kraken: 7-3-1; Frederick Gaudreau 6 goals; Chandler Stephenson 8 assists",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Minnesota Wild GP/GF/GA (11, 32, 27); Seattle Kraken GP/GF/GA (11, 42, 37)",
+          "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+        }
+      ],
+      "stats": {
+        "kind": "nhl",
+        "away": {
+          "gp": 11,
+          "gf": 32,
+          "ga": 27
+        },
+        "home": {
+          "gp": 11,
+          "gf": 42,
+          "ga": 37
+        },
+        "input_url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027%20and%20gameTypeId=2"
+      },
+      "official_game_id": 2026020179,
+      "nhl_abbrevs": {
+        "away": "MIN",
+        "home": "SEA"
+      },
+      "team_records": {
+        "away": "6-3-2",
+        "home": "7-3-1"
+      },
+      "leaders": {
+        "away": "Kirill Kaprizov 11 goals; Quinn Hughes 11 assists",
+        "home": "Frederick Gaudreau 6 goals; Chandler Stephenson 8 assists"
+      },
+      "offered_quote": {
+        "provider": "FanDuel via NHL score feed",
+        "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+        "away_american": -160,
+        "home_american": 132,
+        "note": "league-served quote at capture, not an OLBG or currently available price"
+      }
+    },
+    {
+      "id": "mlb-849802",
+      "sport": "Baseball",
+      "olbg_event_id": "160792",
+      "home": "Milwaukee Brewers",
+      "away": "Tampa Bay Rays",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "published_start": "2026-10-25T00:00:00Z",
+      "start_rule": "league UTC time",
+      "venue": "American Family Field",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions",
+      "extra_official_urls": [
+        "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason",
+        "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656,688107,642547&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+      ],
+      "competition": "MLB World Series Game 2",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "MLB gamePk 849802 is listed as scheduled, 2026-10-25T00:00Z; Rays at Brewers; Drew Rasmussen and Logan Henderson are probable starters",
+          "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,linescore,probablePitcher,decisions"
+        },
+        {
+          "claim": "Milwaukee 103-59, 832 RS, 618 RA; Tampa Bay 98-64, 736 RS, 650 RA over 162 regular-season games",
+          "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+        },
+        {
+          "claim": "Rasmussen 2.67 ERA in 172.0 IP; Henderson 2.47 ERA in 98.1 IP",
+          "url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656,688107,642547&hydrate=stats(group=%5Bpitching%5D,type=%5Bseason%5D,season=2026)"
+        }
+      ],
+      "stats": {
+        "kind": "mlb",
+        "home": {
+          "gp": 162,
+          "rs": 832,
+          "ra": 618,
+          "w": 103
+        },
+        "away": {
+          "gp": 162,
+          "rs": 736,
+          "ra": 650,
+          "w": 98
+        },
+        "input_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026&standingsTypes=regularSeason"
+      }
+    },
+    {
+      "id": "urc-osp-dra",
+      "sport": "Rugby Union",
+      "olbg_event_id": "609581",
+      "home": "Ospreys",
+      "away": "Dragons RFC",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T18:00:00Z",
+      "published_start": "2026-10-24 19:00 (Europe/London)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": "St. Helen's, Swansea",
+      "official_url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+      "extra_official_urls": [
+        "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      ],
+      "competition": "United Rugby Championship R4",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "URC lists Ospreys–Dragons on 24 Oct, 19:00 UK, and names Tom Rogers and Rio Dyer in the starting sides",
+          "url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/"
+        },
+        {
+          "claim": "Ospreys PL3 W1 PF81 PA107; Dragons PL3 W1 D1 PF88 PA83",
+          "url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+        }
+      ],
+      "stats": {
+        "kind": "rugby",
+        "home": {
+          "gp": 3,
+          "pf": 81,
+          "pa": 107
+        },
+        "away": {
+          "gp": 3,
+          "pf": 88,
+          "pa": 83
+        },
+        "input_url": "https://stats.unitedrugby.com/match-centre/table/2026-27"
+      }
+    },
+    {
+      "id": "top14-toulon-pau",
+      "sport": "Rugby Union",
+      "olbg_event_id": "609555",
+      "home": "RC Toulon",
+      "away": "Section Paloise",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T19:00:00Z",
+      "published_start": "2026-10-24 21:00 (Europe/Paris)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau",
+      "extra_official_urls": [
+        "https://top14.lnr.fr/classement"
+      ],
+      "competition": "Top 14 J7",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Toulon 2 wins in 6, 130 scored/130 allowed",
+          "url": "https://top14.lnr.fr/classement"
+        },
+        {
+          "claim": "Pau 5 wins in 6, 239 scored/181 allowed",
+          "url": "https://top14.lnr.fr/classement"
+        },
+        {
+          "claim": "RC Toulon vs Section Paloise, 2026-10-24 at 21:00 France local",
+          "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11866-toulon-pau"
+        }
+      ],
+      "stats": {
+        "kind": "rugby",
+        "home": {
+          "gp": 6,
+          "pf": 130,
+          "pa": 130
+        },
+        "away": {
+          "gp": 6,
+          "pf": 239,
+          "pa": 181
+        },
+        "input_url": "https://top14.lnr.fr/classement"
+      }
+    },
+    {
+      "id": "top14-rochelle-bordeaux",
+      "sport": "Rugby Union",
+      "olbg_event_id": "609554",
+      "home": "Stade Rochelais",
+      "away": "Union Bordeaux-Bègles",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T20:05:00Z",
+      "published_start": "2026-10-25 21:05 (Europe/Paris)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles",
+      "extra_official_urls": [
+        "https://top14.lnr.fr/classement"
+      ],
+      "competition": "Top 14 J7",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "La Rochelle 4 wins in 6, 144 scored/135 allowed",
+          "url": "https://top14.lnr.fr/classement"
+        },
+        {
+          "claim": "Bordeaux 4 wins in 6, 215 scored/151 allowed",
+          "url": "https://top14.lnr.fr/classement"
+        },
+        {
+          "claim": "Stade Rochelais vs Union Bordeaux-Bègles, 2026-10-25 at 21:05 France local",
+          "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11864-la-rochelle-bordeaux-begles"
+        }
+      ],
+      "stats": {
+        "kind": "rugby",
+        "home": {
+          "gp": 6,
+          "pf": 144,
+          "pa": 135
+        },
+        "away": {
+          "gp": 6,
+          "pf": 215,
+          "pa": 151
+        },
+        "input_url": "https://top14.lnr.fr/classement"
+      }
+    },
+    {
+      "id": "cricket-pak-eng-odi4",
+      "sport": "Cricket",
+      "olbg_event_id": "188838",
+      "home": "Pakistan",
+      "away": "England",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T08:00:00Z",
+      "published_start": "2026-10-25 13:00 (Asia/Karachi)",
+      "start_rule": "PCB confirms all tri-series matches at 1pm PKT",
+      "venue": "Gaddafi Stadium, Lahore",
+      "official_url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html",
+      "extra_official_urls": [
+        "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html",
+        "https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html"
+      ],
+      "competition": "Pakistan ODI tri-series",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Pakistan beat England by 87 runs on 20 Oct; Arafat Minhas took 6-40 and scored 59",
+          "url": "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html"
+        },
+        {
+          "claim": "Pakistan vs England fourth ODI is in Lahore on 25 Oct",
+          "url": "https://www.pcb.com.pk/pakistan-england-and-sri-lanka-trination-odi-series-202627/tournament/1465.html"
+        },
+        {
+          "claim": "PCB announces all matches begin at 13:00 PKT",
+          "url": "https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "cricket-nz-ind-t20i3",
+      "sport": "Cricket",
+      "olbg_event_id": "188852",
+      "home": "New Zealand",
+      "away": "India",
+      "date": "2026-10-27",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not published by source",
+      "venue": "Hnry Stadium, Wellington",
+      "official_url": "https://scoring.nzc.nz/fixtures",
+      "extra_official_urls": [],
+      "competition": "India in New Zealand T20I",
+      "kind": "match",
+      "status_note": "NZC page shows a reader-local time with no zone and changes with the capture locale. UTC start withheld",
+      "facts": [
+        {
+          "claim": "BLACKCAPS vs India 3rd T20I shown on 27 Oct at Hnry Stadium, Wellington",
+          "url": "https://scoring.nzc.nz/fixtures"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "cricket-ind-zim-w-odi2",
+      "sport": "Cricket",
+      "olbg_event_id": "188847",
+      "home": "India Women",
+      "away": "Zimbabwe Women",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T08:30:00Z",
+      "published_start": "2026-10-25 14:00 (Asia/Kolkata)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": "BCA Stadium, Vadodara",
+      "official_url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced",
+      "extra_official_urls": [
+        "https://www.bcci.tv/matches/023cf7d3-6571-4932-997b-cac801ed0b4a/india-women-vs-zimbabwe-women",
+        "https://www.bcci.tv/news/article/jintimani-kalita-replaces-renuka-singh-thakur-in-indias-odi-squad"
+      ],
+      "competition": "Women's ODI 2nd",
+      "kind": "match",
+      "status_note": "OLBG lists a top-batsman prop, not a match-winner; no batter-specific rate captured",
+      "facts": [
+        {
+          "claim": "Second ODI scheduled 25 October at 14:00 IST, Vadodara",
+          "url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced"
+        },
+        {
+          "claim": "India Women won the first ODI by nine wickets",
+          "url": "https://www.bcci.tv/matches/023cf7d3-6571-4932-997b-cac801ed0b4a/india-women-vs-zimbabwe-women"
+        },
+        {
+          "claim": "Renuka Singh Thakur ruled out of ODI series and replaced by Jintimani Kalita",
+          "url": "https://www.bcci.tv/news/article/jintimani-kalita-replaces-renuka-singh-thakur-in-indias-odi-squad"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "cricket-sa-aus-3rd-test",
+      "sport": "Cricket",
+      "olbg_event_id": "188835",
+      "home": "South Africa",
+      "away": "Australia",
+      "date": "2026-10-27",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not published by source",
+      "venue": "Newlands Cricket Ground, Cape Town",
+      "official_url": "https://cricket.co.za/csa-announces-unmissable-2026-27-home-season-for-the-proteas-men/",
+      "extra_official_urls": [
+        "https://www.cricket.com.au/news/4597818/south-africa-v-australia-third-test-match-preview-guide-cape-town-newlands-broadcast-details-how-to-watch-team-news-session-start-times-2026"
+      ],
+      "competition": "3rd Test",
+      "kind": "match",
+      "status_note": "Two official sources disagree on start time and OLBG displays 31 October (last scheduled day). Leave time and price blank",
+      "facts": [
+        {
+          "claim": "CSA puts the third Test at 27–31 October in Cape Town, 10:00 local",
+          "url": "https://cricket.co.za/csa-announces-unmissable-2026-27-home-season-for-the-proteas-men/"
+        },
+        {
+          "claim": "Cricket Australia newer preview says 10:30 local",
+          "url": "https://www.cricket.com.au/news/4597818/south-africa-v-australia-third-test-match-preview-guide-cape-town-newlands-broadcast-details-how-to-watch-team-news-session-start-times-2026"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "volley-trentino-cisterna",
+      "sport": "Volleyball",
+      "olbg_event_id": "36994",
+      "home": "Itas Trentino",
+      "away": "Cisterna Volley",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T16:00:00Z",
+      "published_start": "2026-10-25 17:00 (Europe/Rome)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "extra_official_urls": [],
+      "competition": "SuperLega R2",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Itas Trentino vs Cisterna Volley scheduled Sunday 25 Oct 17:00 Italy local",
+          "url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "volley-perugia-prata",
+      "sport": "Volleyball",
+      "olbg_event_id": "36997",
+      "home": "Sir Susa Scai Perugia",
+      "away": "Tinet Prata di Pordenone",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T17:00:00Z",
+      "published_start": "2026-10-25 18:00 (Europe/Rome)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en",
+      "extra_official_urls": [],
+      "competition": "SuperLega R2",
+      "kind": "match",
+      "status_note": "OLBG shortens 'Tinet Prata di Pordenone' to 'Pordenone'; alias requires review",
+      "facts": [
+        {
+          "claim": "Sir Susa Scai Perugia vs Tinet Prata di Pordenone scheduled Sunday 25 Oct 18:00 Italy local",
+          "url": "https://www.legavolley.it/2026/credem-banca-superleague-weekends-games-45/?lang=en"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "wst-williams-jones",
+      "sport": "Snooker",
+      "olbg_event_id": "9952",
+      "home": "Mark Williams",
+      "away": "Jak Jones",
+      "date": "2026-10-24",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not published by source",
+      "venue": "Belfast, Northern Ireland",
+      "official_url": "https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2",
+      "extra_official_urls": [],
+      "competition": "Northern Ireland Open semifinal",
+      "kind": "match",
+      "status_note": "WST marked Live Now at read time; do not publish a pre-match selection",
+      "facts": [
+        {
+          "claim": "WST match centre lists semifinal No. 62, Williams v Jones, 24 October and labels it 'Live Now'",
+          "url": "https://www.wst.tv/match-centre/52c4eaec-9056-44dc-a984-e8bb6f8db3d2"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "tennis-ningbo-final",
+      "sport": "Tennis",
+      "olbg_event_id": "902207",
+      "home": "Elena Rybakina",
+      "away": "Leylah Fernandez",
+      "date": "2026-10-25",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not published by source",
+      "venue": null,
+      "official_url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez",
+      "extra_official_urls": [],
+      "competition": "BNB Ningbo Open Final",
+      "kind": "match",
+      "status_note": "Sunday date confirmed; official start time not recovered; no priced pick",
+      "facts": [
+        {
+          "claim": "Rybakina beat Shnaider 6-3, 7-5; Fernandez beat Bouzkova 6-3, 7-5; Rybakina leads their H2H 3-2",
+          "url": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "tennis-almaty-final",
+      "sport": "Tennis",
+      "olbg_event_id": "902251",
+      "home": "Daniil Medvedev",
+      "away": "Nikoloz Basilashvili",
+      "date": "2026-10-25",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not before 15:00 Almaty local; lower bound only; UTC start deliberately blank",
+      "venue": null,
+      "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule",
+      "extra_official_urls": [
+        "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday"
+      ],
+      "competition": "ATP Almaty Open Final",
+      "kind": "match",
+      "status_note": "ATP player overview records are not current to this semifinal; no strength price",
+      "facts": [
+        {
+          "claim": "ATP order of play names Medvedev and Basilashvili in Sunday's singles final, not before 15:00 local",
+          "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+        },
+        {
+          "claim": "Medvedev led Bublik 6-3 when Bublik retired; Basilashvili beat Tsitsipas 6-4, 6-7(5), 6-3",
+          "url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "darts-aspinall-littler",
+      "sport": "Darts",
+      "olbg_event_id": "32397",
+      "home": "Nathan Aspinall",
+      "away": "Luke Littler",
+      "date": "2026-10-24",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not published by source",
+      "venue": null,
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "extra_official_urls": [],
+      "competition": "PDC European Championship R2",
+      "kind": "match",
+      "status_note": "Official-site indexed excerpt only; direct PDC page returned cookie wall. Exact start missing and match may be underway. No price",
+      "facts": [
+        {
+          "claim": "Nathan Aspinall vs Luke Littler in Saturday evening session 19:00–23:00 CEST; best of 19 legs",
+          "url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "darts-clayton-rock",
+      "sport": "Darts",
+      "olbg_event_id": "32400",
+      "home": "Jonny Clayton",
+      "away": "Josh Rock",
+      "date": "2026-10-24",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not published by source",
+      "venue": null,
+      "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "extra_official_urls": [],
+      "competition": "PDC European Championship R2",
+      "kind": "match",
+      "status_note": "Official-site indexed excerpt only; direct PDC page returned cookie wall. Exact start missing and match may be underway. No price",
+      "facts": [
+        {
+          "claim": "Jonny Clayton vs Josh Rock in Saturday evening session 19:00–23:00 CEST; best of 19 legs",
+          "url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "gaa-cork-final",
+      "sport": "Gaelic Sports",
+      "olbg_event_id": "3530",
+      "home": "St Finbarrs",
+      "away": "Nemo Rangers",
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T16:00:00Z",
+      "published_start": "2026-10-25 16:00 (Europe/Dublin)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": "SuperValu Páirc Uí Chaoimh",
+      "official_url": "https://munster.gaa.ie/fixtures/events-calendar/",
+      "extra_official_urls": [],
+      "competition": "Cork Premier SFC Final",
+      "kind": "match",
+      "status_note": "OLBG handicap +1.5 has no independent current-form margin input; no price",
+      "facts": [
+        {
+          "claim": "Munster GAA calendar names St Finbarrs vs Nemo Rangers on 25 Oct at 16:00 in Cork",
+          "url": "https://munster.gaa.ie/fixtures/events-calendar/"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "gaa-kilkenny-hurling-final",
+      "sport": "Gaelic Sports",
+      "olbg_event_id": "714",
+      "home": "Shamrocks Ballyhale",
+      "away": "Tullaroan",
+      "date": "2026-10-25",
+      "start_utc": null,
+      "published_start": null,
+      "start_rule": "not published by source",
+      "venue": "UPMC Nowlan Park",
+      "official_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+      "extra_official_urls": [],
+      "competition": "Kilkenny Senior Hurling Final",
+      "kind": "match",
+      "status_note": "OLBG says Ballyhale Shamrocks, Kilkenny GAA says Shamrocks Ballyhale (name order not independently reconciled). Official article gives no throw-in time; start and fair line remain blank",
+      "facts": [
+        {
+          "claim": "Kilkenny GAA confirms Shamrocks Ballyhale v Tullaroan on Sunday 25 October at Nowlan Park",
+          "url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "f1-usa-gp",
+      "sport": "Motor Racing",
+      "olbg_event_id": "913",
+      "home": "United States Grand Prix",
+      "away": null,
+      "date": "2026-10-25",
+      "start_utc": "2026-10-25T20:00:00Z",
+      "published_start": "2026-10-25 15:00 (America/Chicago)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": "Circuit of The Americas",
+      "official_url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH",
+      "extra_official_urls": [],
+      "competition": "Formula 1",
+      "kind": "race",
+      "status_note": "Race winner is an outright, not a team-versus-team match; no probabilistic price",
+      "facts": [
+        {
+          "claim": "The Grand Prix is on 25 Oct at 15:00 Austin local; Friday practice led by Charles Leclerc",
+          "url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536117",
+      "sport": "Basketball",
+      "olbg_event_id": "536117",
+      "home": "Charlotte Hornets",
+      "away": "Miami Heat",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T22:00:00Z",
+      "published_start": "2026-10-24 18:00 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "Only 1–2 official season games; price withheld",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists MIA@CHA on 24 Oct at 18:00 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Charlotte Hornets / Miami Heat 1-1 / 0-2 after one or two games",
+          "url": "https://www.nba.com/standings"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536112",
+      "sport": "Basketball",
+      "olbg_event_id": "536112",
+      "home": "Cleveland Cavaliers",
+      "away": "Brooklyn Nets",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:30:00Z",
+      "published_start": "2026-10-24 19:30 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "Only 1–2 official season games; price withheld",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists BKN@CLE on 24 Oct at 19:30 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Cleveland Cavaliers / Brooklyn Nets 0-1 / 0-1 after one or two games",
+          "url": "https://www.nba.com/standings"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536111",
+      "sport": "Basketball",
+      "olbg_event_id": "536111",
+      "home": "Philadelphia 76ers",
+      "away": "Milwaukee Bucks",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-24T23:30:00Z",
+      "published_start": "2026-10-24 19:30 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "Milwaukee report NOT YET SUBMITTED at 1:00pm ET",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists MIL@PHI on 24 Oct at 19:30 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Philadelphia 76ers / Milwaukee Bucks 2-0 / 0-2 after one or two games",
+          "url": "https://www.nba.com/standings"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536114",
+      "sport": "Basketball",
+      "olbg_event_id": "536114",
+      "home": "Dallas Mavericks",
+      "away": "San Antonio Spurs",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "published_start": "2026-10-24 20:00 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "Only 1–2 official season games; price withheld",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists SAS@DAL on 24 Oct at 20:00 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Dallas Mavericks / San Antonio Spurs 1-1 / 0-2 after one or two games",
+          "url": "https://www.nba.com/standings"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536113",
+      "sport": "Basketball",
+      "olbg_event_id": "536113",
+      "home": "Chicago Bulls",
+      "away": "Washington Wizards",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "published_start": "2026-10-24 20:00 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "Only 1–2 official season games; price withheld",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists WAS@CHI on 24 Oct at 20:00 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Chicago Bulls / Washington Wizards 1-1 / 1-1 after one or two games",
+          "url": "https://www.nba.com/standings"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536115",
+      "sport": "Basketball",
+      "olbg_event_id": "536115",
+      "home": "Atlanta Hawks",
+      "away": "Houston Rockets",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T00:30:00Z",
+      "published_start": "2026-10-24 20:30 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "Only 1–2 official season games; price withheld",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists HOU@ATL on 24 Oct at 20:30 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Atlanta Hawks / Houston Rockets 2-0 / 2-0 after one or two games",
+          "url": "https://www.nba.com/standings"
+        },
+        {
+          "claim": "Houston: Steven Adams Out (ankle management), Fred VanVleet Out (knee management), Reed Sheppard Questionable (knee contusion); Atlanta: Mouhamed Gueye Out (foot fracture)",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536116",
+      "sport": "Basketball",
+      "olbg_event_id": "536116",
+      "home": "Denver Nuggets",
+      "away": "New Orleans Pelicans",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T01:00:00Z",
+      "published_start": "2026-10-24 21:00 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "OLBG hour differs from official ET report; use report time",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists NOP@DEN on 24 Oct at 21:00 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Denver Nuggets / New Orleans Pelicans 0-1 / 0-2 after one or two games",
+          "url": "https://www.nba.com/standings"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "nba-536118",
+      "sport": "Basketball",
+      "olbg_event_id": "536118",
+      "home": "Phoenix Suns",
+      "away": "Golden State Warriors",
+      "date": "2026-10-24",
+      "start_utc": "2026-10-25T02:00:00Z",
+      "published_start": "2026-10-24 22:00 (America/New_York)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+      "extra_official_urls": [
+        "https://www.nba.com/standings"
+      ],
+      "competition": "NBA 2026-27",
+      "kind": "match",
+      "status_note": "OLBG hour differs from official ET report; use report time",
+      "facts": [
+        {
+          "claim": "NBA 1:00pm ET injury report lists GSW@PHX on 24 Oct at 22:00 ET",
+          "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+        },
+        {
+          "claim": "NBA standings: Phoenix Suns / Golden State Warriors 0-1 / 0-2 after one or two games",
+          "url": "https://www.nba.com/standings"
+        }
+      ],
+      "stats": null
+    },
+    {
+      "id": "ehf-magdeburg-kriens",
+      "sport": "Handball",
+      "olbg_event_id": "12136",
+      "home": "SC Magdeburg",
+      "away": "HC Kriens-Luzern",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T19:45:00Z",
+      "published_start": "2026-10-28 20:45 (Europe/Berlin)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/",
+      "extra_official_urls": [
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "competition": "EHF Champions League Men",
+      "kind": "match",
+      "status_note": "OLBG's top pick is Tie; its tip share is not a win probability. Only the three-way Money Line was observed on the event page",
+      "facts": [
+        {
+          "claim": "SC Magdeburg GP 5 GF 176 GA 140; HC Kriens-Luzern GP 5 GF 158 GA 161",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "SC Magdeburg vs HC Kriens-Luzern, 2026-10-28 20:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101065/SCMagdeburg-HCKriensLuzern/"
+        }
+      ],
+      "stats": {
+        "kind": "handball",
+        "home": {
+          "gp": 5,
+          "pf": 176,
+          "pa": 140
+        },
+        "away": {
+          "gp": 5,
+          "pf": 158,
+          "pa": 161
+        },
+        "input_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      }
+    },
+    {
+      "id": "ehf-vardar-melsungen",
+      "sport": "Handball",
+      "olbg_event_id": "12130",
+      "home": "HC Vardar 1961",
+      "away": "MT Melsungen",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T17:45:00Z",
+      "published_start": "2026-10-28 18:45 (Europe/Berlin)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/",
+      "extra_official_urls": [
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "competition": "EHF Champions League Men",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "HC Vardar 1961 GP 5 GF 154 GA 158; MT Melsungen GP 5 GF 138 GA 138",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "HC Vardar 1961 vs MT Melsungen, 2026-10-28 18:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101022/HCVardar1961-MTMelsungen/"
+        }
+      ],
+      "stats": {
+        "kind": "handball",
+        "home": {
+          "gp": 5,
+          "pf": 154,
+          "pa": 158
+        },
+        "away": {
+          "gp": 5,
+          "pf": 138,
+          "pa": 138
+        },
+        "input_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      }
+    },
+    {
+      "id": "ehf-kielce-kolstad",
+      "sport": "Handball",
+      "olbg_event_id": "12132",
+      "home": "Industria Kielce",
+      "away": "Kolstad Håndball",
+      "date": "2026-10-28",
+      "start_utc": "2026-10-28T19:45:00Z",
+      "published_start": "2026-10-28 20:45 (Europe/Berlin)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/",
+      "extra_official_urls": [
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "competition": "EHF Champions League Men",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "Industria Kielce GP 5 GF 155 GA 153; Kolstad Håndball GP 5 GF 143 GA 178",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "Industria Kielce vs Kolstad Håndball, 2026-10-28 20:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101067/IndustriaKielce-KolstadH%C3%A5ndball/"
+        }
+      ],
+      "stats": {
+        "kind": "handball",
+        "home": {
+          "gp": 5,
+          "pf": 155,
+          "pa": 153
+        },
+        "away": {
+          "gp": 5,
+          "pf": 143,
+          "pa": 178
+        },
+        "input_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      }
+    },
+    {
+      "id": "ehf-gog-sporting",
+      "sport": "Handball",
+      "olbg_event_id": "12129",
+      "home": "GOG",
+      "away": "Sporting Clube de Portugal",
+      "date": "2026-10-29",
+      "start_utc": "2026-10-29T17:45:00Z",
+      "published_start": "2026-10-29 18:45 (Europe/Berlin)",
+      "start_rule": "calculated from explicitly zoned league time",
+      "venue": null,
+      "official_url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/",
+      "extra_official_urls": [
+        "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      ],
+      "competition": "EHF Champions League Men",
+      "kind": "match",
+      "status_note": null,
+      "facts": [
+        {
+          "claim": "GOG GP 5 GF 178 GA 172; Sporting Clube de Portugal GP 5 GF 191 GA 165",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+        },
+        {
+          "claim": "GOG vs Sporting Clube de Portugal, 2026-10-29 18:45 European local",
+          "url": "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101040/GOG-SportingClubedePortugal/"
+        }
+      ],
+      "stats": {
+        "kind": "handball",
+        "home": {
+          "gp": 5,
+          "pf": 178,
+          "pa": 172
+        },
+        "away": {
+          "gp": 5,
+          "pf": 191,
+          "pa": 165
+        },
+        "input_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/"
+      }
+    }
+  ]
+}

@@ -5485,4 +5485,15 @@ and `/executive/` both appear in its evidence list. This session regenerated tha
 **Still open for a later root pass.** `clarity/index.html` is live but is not yet linked from the root landing
 page, and `README.md` does not mention it. Both files were under active claim by other sessions throughout
 this session, so the change is left to the root integrator.
->>>>>>> origin/main
+### `arena/34af5757-olbg2` A1/A2 complete — merged, deployed and fetched (2026-10-24 18:12 UTC)
+
+- **Merged:** PR [#203](https://github.com/buffedlizard55-lab/OLBG2/pull/203) at 18:04:20Z; merge commit `4c7c89f1fc58e4a560e013dc09124034557a33c0`.
+- **Main validation:** run [40119012883](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40119012883) succeeded with the combined PR #204 Clarity workflow present. **Deploy Pages:** run [40119012886](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40119012886) succeeded; dynamic Pages run `40119012667` succeeded. The Pages API reports `built`, no error, at commit `4c7c89f`.
+- **First-hand deployed reads:** `/`, `/today/`, `/clarity/repo-review.html`, `/executive/`, and `/research/34af5757-evidence-audit.md` all returned the new content. Clarity now reports 46 dashboards. This confirms the hotfix and audit publication, **not** final root/live-desk consolidation.
+- **Scope release:** the independent audit and four-file generated inventory hotfix are complete. No further edits to those Clarity/Ledger files are claimed by this session; any later inventory change belongs to the integrating layer/owner.
+
+### Integration blocker handoff to `arena/03e61ed8-olbg2` at `a8cfa07` (2026-10-24 18:12 UTC)
+
+Its latest hosted validation `40119408270` fails only at the drift gate. GitHub check annotations name exactly `clarity/repo-review.html` and `data/clarity/repo_audit.json`: adding `/live-desk/` raises the published inventory from 46 to 47. Please regenerate those two files with the unmodified Clarity scripts after the new layer is present, then rerun the full hosted check before its PR is merged. The earlier official-start and NHL-standings-citation findings above remain part of the handoff.
+
+**Concurrent-main update:** PR #205 merged during this rebase and already regenerated the main inventories for `/vantage/` at 47 layers. After rebasing the live-desk branch onto that new main, `/live-desk/` makes **48** layers; all four derived Clarity/Ledger inventory files must be refreshed together by their owner scripts. The 46→47 annotation above is retained as the exact historical diagnosis for run `40119408270`, not as the new final count.

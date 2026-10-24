@@ -1,0 +1,284 @@
+{
+  "as_of_utc": "2026-10-24T17:50:00Z",
+  "count": 18,
+  "items": [
+    {
+      "code": "NO-LISTING",
+      "sport": "Golf",
+      "detail": "The Golf hub returned \"No tips found.\" at 17:16 UTC. OLBG listed no golf event, so there was nothing to attach a pick to.",
+      "source": "https://www.olbg.com/betting-tips/Golf/5",
+      "needs": "A golf event to be listed on OLBG before a golf pick can exist."
+    },
+    {
+      "code": "NO-MATCH-EVENTS",
+      "sport": "Rugby League",
+      "detail": "The Rugby League hub listed only 2027 outright futures (State of Origin, Super League, NRL). No Rugby League match event was listed.",
+      "source": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "needs": "A listed Rugby League match event."
+    },
+    {
+      "code": "OFFICIAL-FEED-BLOCKED",
+      "sport": "Basketball",
+      "detail": "Ten basketball events were listed, including nine NBA games, but no official NBA fixture data could be read: the games page returned its shell with an error message, and the scoreboard endpoints returned HTTP 500 or failed.",
+      "source": "https://www.nba.com/games?date=2026-10-24",
+      "needs": "An NBA fixture feed that returns per-game data."
+    },
+    {
+      "code": "NO-OFFICIAL-FORM-SOURCE",
+      "sport": "Greyhounds",
+      "detail": "Nine race listings were captured, but GBGB does not publish per-race dog form or trap data at a URL reachable here, so no greyhound pick is published.",
+      "source": "https://www.gbgb.org.uk/",
+      "needs": "A reachable official racecard source."
+    },
+    {
+      "code": "NOT-CONFIRMED",
+      "sport": "Tennis",
+      "detail": "Six tennis matches were listed for 25-26 October. No ATP or WTA page was read in this capture window, so no fixture, ranking or form fact is asserted.",
+      "source": "https://www.olbg.com/betting-tips/Tennis/3",
+      "needs": "An ATP/WTA match page for each listed match."
+    },
+    {
+      "code": "NOT-CONFIRMED",
+      "sport": "Cricket",
+      "detail": "Eleven cricket events were listed, including a Pakistan v England ODI and four CSA T20 games. No governing-body page was read in this capture, so no cricket pick is published.",
+      "source": "https://www.olbg.com/betting-tips/Cricket/7",
+      "needs": "A board or ICC fixture page for each listed match."
+    },
+    {
+      "code": "NOT-CONFIRMED",
+      "sport": "Volleyball",
+      "detail": "Twelve volleyball matches were listed across Austrian, German, Polish, French, Dutch, Brazilian and Italian leagues. No league page was read in this capture.",
+      "source": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "needs": "A league fixture/standings page per competition."
+    },
+    {
+      "code": "OFFICIAL-FEED-BLOCKED",
+      "sport": "Handball",
+      "detail": "Ten handball matches were listed. The Bundesliga fixture URL tried returned HTTP 404, so no handball fixture could be confirmed.",
+      "source": "https://www.daikin-hbl.de/de/spielplan/",
+      "needs": "A working HBL and ASOBAL fixture/standings page."
+    },
+    {
+      "code": "NOT-CONFIRMED",
+      "sport": "Darts",
+      "detail": "Five PDC matches were listed. Four of them had displayed start times before the capture window and no PDC page was read, so none is published.",
+      "source": "https://www.olbg.com/betting-tips/Darts/15",
+      "needs": "A PDC match schedule page."
+    },
+    {
+      "code": "NOT-CONFIRMED",
+      "sport": "Snooker",
+      "detail": "One snooker match was listed (Mark Williams v Jak Jones). The WST match centre was read only as far as the Round 1 results, so the match could not be confirmed from the governing body.",
+      "source": "https://wst.tv/matches/",
+      "needs": "The WST page section covering 24 October."
+    },
+    {
+      "code": "NOT-CONFIRMED",
+      "sport": "Gaelic Sports",
+      "detail": "Four club matches were listed (Galway, Cork and Limerick championships). No county-board page was read, so no Gaelic pick is published.",
+      "source": "https://www.gaa.ie/",
+      "needs": "County board fixture pages with throw-in times."
+    },
+    {
+      "code": "NOT-CONFIRMED",
+      "sport": "Motor Racing",
+      "detail": "The United States Grand Prix was listed for 25 October with Max Verstappen the most-tipped driver. No Formula 1 page was read in this capture, so no motor-racing pick is published.",
+      "source": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "needs": "The Formula 1 event page and grid/qualifying result."
+    },
+    {
+      "code": "QUOTA-SHORTFALL",
+      "sport": "Baseball",
+      "detail": "One officially sourced baseball fixture exists (the World Series game). The five-per-sport target cannot be met from a single scheduled game.",
+      "source": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24",
+      "needs": "More than one scheduled game."
+    },
+    {
+      "code": "STARTED-AT-CAPTURE",
+      "sport": "Ice Hockey",
+      "detail": "Anaheim at Philadelphia was scheduled for 17:00Z, before the 17:45Z selection cut-off, so it is shown as a fixture but carries no pick.",
+      "source": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "needs": "Nothing; recorded for completeness."
+    },
+    {
+      "code": "NO-OLBG-LISTING",
+      "sport": "Ice Hockey",
+      "detail": "Buffalo at Washington was confirmed by the NHL feed but no OLBG event id for it appeared on the Ice Hockey hub page read, so a bet could not be placed on it from the listing we captured.",
+      "source": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "needs": "The OLBG listing to appear on a later page of the hub."
+    },
+    {
+      "code": "REQUIREMENT-CONFLICT",
+      "sport": null,
+      "detail": "\"High confidence means 70% or better\" and \"the price must sit between -250 and +10000\" can only both hold between 70.00% and 71.43%, because -250 is 71.43%. The New Jersey pick is a 73.6% (-279) call and is therefore published as high confidence but marked outside the band rather than repriced to fit.",
+      "source": "https://www.olbg.com/betting-tips",
+      "needs": "A decision on which rule wins."
+    },
+    {
+      "code": "OLBG-DISPLAY-TIME",
+      "sport": "Ice Hockey",
+      "detail": "OLBG's displayed times for NHL games are US Eastern clock times plus about seven minutes (for example \"Today 19:07\" for a 23:00Z start). They are stored verbatim and never used as kick-off times.",
+      "source": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "needs": "Nothing; recorded so the column is not misread."
+    },
+    {
+      "code": "INVENTORY-DEPTH",
+      "sport": null,
+      "detail": "96 listing rows were read from the first page of each of the 15 sport hubs. Each hub is paginated with a \"Load More Tips\" control, so this is not a complete OLBG inventory.",
+      "source": "https://www.olbg.com/betting-tips",
+      "needs": "Paged reads of every hub to complete the inventory."
+    }
+  ],
+  "sports": [
+    {
+      "sport": "Golf",
+      "hub_url": "https://www.olbg.com/betting-tips/Golf/5",
+      "sport_id": 5,
+      "listings": 0,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": "The Golf hub returned \"No tips found.\" at 17:16 UTC, so OLBG listed no golf event to attach a pick to."
+    },
+    {
+      "sport": "Volleyball",
+      "hub_url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "sport_id": 21,
+      "listings": 12,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Rugby Union",
+      "hub_url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "sport_id": 9,
+      "listings": 6,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Cricket",
+      "hub_url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "sport_id": 7,
+      "listings": 11,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Snooker",
+      "hub_url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "sport_id": 8,
+      "listings": 1,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Darts",
+      "hub_url": "https://www.olbg.com/betting-tips/Darts/15",
+      "sport_id": 15,
+      "listings": 6,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Baseball",
+      "hub_url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "sport_id": 12,
+      "listings": 1,
+      "fixtures": 1,
+      "picks": 1,
+      "previews": 1,
+      "status": ""
+    },
+    {
+      "sport": "Gaelic Sports",
+      "hub_url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "sport_id": 25,
+      "listings": 4,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Greyhounds",
+      "hub_url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "sport_id": 28,
+      "listings": 9,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": "Race-by-race dog form is not published by GBGB in a form reachable from this environment, so no greyhound pick is published."
+    },
+    {
+      "sport": "Tennis",
+      "hub_url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "sport_id": 3,
+      "listings": 6,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Motor Racing",
+      "hub_url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "sport_id": 14,
+      "listings": 1,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Handball",
+      "hub_url": "https://www.olbg.com/betting-tips/Handball/20",
+      "sport_id": 20,
+      "listings": 10,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": ""
+    },
+    {
+      "sport": "Ice Hockey",
+      "hub_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "sport_id": 13,
+      "listings": 16,
+      "fixtures": 7,
+      "picks": 5,
+      "previews": 5,
+      "status": ""
+    },
+    {
+      "sport": "Basketball",
+      "hub_url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "sport_id": 4,
+      "listings": 10,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": "NBA.com returned its games shell but no per-game data (\"Sorry, something went wrong\"), and the NBA CDN scoreboard returned HTTP 500 twice, so no NBA fixture could be officially confirmed."
+    },
+    {
+      "sport": "Rugby League",
+      "hub_url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "sport_id": 10,
+      "listings": 3,
+      "fixtures": 0,
+      "picks": 0,
+      "previews": 0,
+      "status": "Only 2027 outright futures were listed; no Rugby League match event was listed on the hub at capture."
+    }
+  ]
+}

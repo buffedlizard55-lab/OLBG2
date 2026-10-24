@@ -5021,3 +5021,23 @@ other session is active and no scope collides. This session takes the integratio
 | T7 | Root landing/navigation point at the new dashboard; PR -> `main`; confirm Pages | pending | `arena/9f69ce85-olbg2` | `index.html` (via `scripts/build_site.py`), `README.md`, `.github/workflows/pages.yml` |
 
 No other session's files are edited. `site/**`, `/zenith/` and every earlier desk are left byte-identical.
+
+### Session `arena/9f69ce85-olbg2` — status log
+
+| Task | Status | Evidence |
+|---|---|---|
+| T1 Board read, concurrency check, claim, push | done | commit `a1bc2ca` on `arena/9f69ce85-olbg2`; no live competing branch |
+| T2 Fresh OLBG capture, 15 hubs, 2026-10-24 17:15–17:50Z | done | `data/today/olbg_listings.json` (96 rows, event ids, most-tipped selection, tip share) |
+| T3 First-hand official verification | done for 2 sports, blocked for 2, not reached for 11 | `data/today/sources.json` (12 pages, outcome per page), `research/today-9f69ce85.md` |
+| T4 Line origination, confidence grading, band test | done | `scripts/today_model.py`, `data/today/lines.json` (20 prices), `data/today/picks.json` (6 picks) |
+| T5 Unique written predictions | done (6; five-per-sport met for Ice Hockey, shortfall flagged for Baseball and for every sport whose official source was blocked) | `data/today/predictions.json`, shortest 79 words |
+| T6 `/today/` dashboard, 15 sport pages, review page, verifier | done | `scripts/today_build.py` (25 pages), `scripts/today_verify.py` (1,370 assertions, 0 errors), `tests/test_today_9f69ce85.py` (9 tests) |
+| T7 Root pointer, PR, merge, Pages | in progress | root index now leads with the 24 October board |
+
+**What this release does not do.** Ten sports carry OLBG listings but no pick, because the official source for that
+sport was blocked or was not reached inside the capture window. That is disclosed per sport on `today/flagged.html`
+with the exact URL that failed. The five-per-sport target is met for Ice Hockey only.
+
+**Requirement conflict recorded as R1.** "High confidence means 70% or better" and "the price must sit between
+−250 and +10000" only overlap between 70.00% and 71.43%, because −250 implies 71.43%. The New Jersey pick is 73.6%
+(fair −279) and is published as high confidence, marked outside the band, and left unrepriced.

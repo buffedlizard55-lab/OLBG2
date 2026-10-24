@@ -274,8 +274,11 @@ document.addEventListener('DOMContentLoaded', function () {{
 
 # --------------------------------------------------------------------------- shell
 NAV = [
+    ("today/index.html", "TODAY'S BOARD (24 Oct) — picks, matches, previews"),
+    ("today/picks.html", "Today's picks"),
+    ("today/predictions.html", "Today's written predictions"),
     ("master/index.html", "Consolidated desk (my own lines, 23 Oct 22:00)"),
-    ("cadence/index.html", "Current: Exact 15-sport card & evidence audit"),
+    ("cadence/index.html", "Earlier: exact 15-sport card & evidence audit"),
     ("cadence/matches.html", "Current matches"),
     ("cadence/picks.html", "Current top-five picks"),
     ("cadence/lines.html", "Current originated lines"),
@@ -446,6 +449,20 @@ def current_match_table(rows: list[dict]) -> str:
     )
 
 
+def _today_counts() -> str:
+    """Counts for the /today/ pointer, read from the committed data so the text cannot drift."""
+    try:
+        picks = json.loads((ROOT / "data" / "today" / "picks.json").read_text(encoding="utf-8"))
+        listings = json.loads((ROOT / "data" / "today" / "olbg_listings.json").read_text(encoding="utf-8"))
+        lines = json.loads((ROOT / "data" / "today" / "lines.json").read_text(encoding="utf-8"))
+        preds = json.loads((ROOT / "data" / "today" / "predictions.json").read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return ""
+    return (f"{len(picks['picks'])} picks, {len(listings['fixtures'])} confirmed fixtures, "
+            f"{len(lines['lines'])} originated prices, {len(preds['predictions'])} written previews and "
+            f"{len(listings['listings'])} OLBG listing rows across 15 sports.")
+
+
 def build_current_index() -> str:
     matches, lines, picks, predictions, sources, flagged, audit = current_dataset()
     rows = matches["matches"]
@@ -500,8 +517,15 @@ def build_current_index() -> str:
                          'the actual low/medium grades rather than promoting a row to fill a quota.')
     review_count = flagged["count"] + audit["summary"]["irregularities_logged"]
     body = f"""
+<div class="notice blue" style="border-color:#0f766e">
+<strong>Start here: the 24 October board.</strong>
+<a href="today/index.html"><b>/today/</b></a> is the working desk for this release: {_today_counts()} Six picks with written previews,
+eight fixtures confirmed straight from the NHL and MLB feeds, 20 prices originated here, and the 96-row OLBG capture across all
+15 covered sports. It has its own picks, matches, lines, predictions, sport and review pages, and every row carries an official link.
+The layer below is the earlier cadence snapshot and is kept for audit only — do not add its counts to the board.
+</div>
 <section class="hero">
-  <p class="eyebrow">Final integration · exact 15-sport scope · stored {esc(matches['generated_utc'])}</p>
+  <p class="eyebrow">Earlier snapshot · exact 15-sport scope · stored {esc(matches['generated_utc'])}</p>
   <h1>OLBG research with the evidence and the gaps in plain sight.</h1>
   <p class="lede">{matches['count']} official-source fixture records, {lines['count']} independently originated prices and
   {predictions['count']} unique write-ups across the 15 requested sports. This is a dated research snapshot, not a live feed or a claim of complete OLBG coverage.</p>

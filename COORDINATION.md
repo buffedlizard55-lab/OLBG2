@@ -5673,3 +5673,34 @@ All of it is on `/clarity/flagged.html` with the exact page that could not be re
 
 **Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
 
+
+## SESSION `arena/4dd1b17c-olbg2` — consolidated current desk at `/latest/` (2026-10-24, claimed 22:40Z)
+
+**Branch:** `arena/4dd1b17c-olbg2` · **Claim written and pushed before implementation work.** No other branch was
+active at the time of the claim (`git branch -a` listed only `main` and this branch; the newest merged layer is
+`/meridian/` from PR #219).
+
+Scope, deliberately non-overlapping with every earlier session: a **new** dated desk at `/latest/` with its own data
+directory (`data/latest/`), its own generators (`scripts/latest_*.py`) and its own tests. No earlier layer's data,
+pages or scripts are regenerated, and no earlier layer's numbers are restated as this desk's.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| LT1 | Claim + concurrency scan + fix the two red checks on `main` (`meridian_verify` / `test_meridian_1286444e` audit-floor gate) | in progress | `arena/4dd1b17c-olbg2` | `COORDINATION.md` (append), `scripts/meridian_verify.py`, `tests/test_meridian_1286444e.py` |
+| LT2 | Live re-read of the OLBG sport hubs after the 17:35Z capture; record what changed | in progress | `arena/4dd1b17c-olbg2` | `data/latest/rechecks.json` |
+| LT3 | Evidence inheritance with per-fact provenance + any newly verified official facts | in progress | `arena/4dd1b17c-olbg2` | `data/latest/fixtures.json`, `scripts/latest_seed.py` |
+| LT4 | 5–10 graded picks per sports with an originated line; confidence + −250…+10000 band test across match winner, handicap and total | in progress | `arena/4dd1b17c-olbg2` | `data/latest/{lines,picks}.json`, `scripts/latest_model.py` |
+| LT5 | Unique ≥30-word written predictions, five per sport where a priced fixture exists | in progress | `arena/4dd1b17c-olbg2` | `data/latest/predictions.json` |
+| LT6 | `/latest/` site: executive summary first, picks table, predictions, fixtures, lines, 15 sport pages, sources, flagged | in progress | `arena/4dd1b17c-olbg2` | `latest/**`, `scripts/latest_build.py`, `scripts/latest_verify.py`, `tests/test_latest_4dd1b17c.py` |
+| LT7 | Front door points at `/latest/`; CI drift paths; full suite; PR → `main`; merge; confirm the deploy | in progress | `arena/4dd1b17c-olbg2` | `scripts/build_site.py` (`build_index` only), `.github/workflows/pages.yml` (append-only), `README.md`, `COORDINATION.md` |
+
+### LT1 finding (logged before it was fixed)
+
+`main` is **red** at `67e7672`: `Validate Pages content` fails, and `Deploy Pages` fails because it consumes that
+workflow. The cause is not content. `scripts/meridian_verify.py:186` and `tests/test_meridian_1286444e.py:192`
+require `repo_audit["count"] >= 4`, but the scanner in `scripts/meridian_audit.py` now legitimately returns 3: its
+fourth finding (MF-04, merge-conflict markers in this file) stopped reproducing when those markers were removed. A
+gate that punishes a repair is a defect in the gate. Fix: assert the audit is *internally consistent and durable* —
+every finding it counts is present, each is rendered on the published page, and the three substantive findings
+(MF-01 banned vocabulary in other layers, MF-02 out-of-scope sport rows, MF-03 dashboard plurality) are still there —
+instead of a magic minimum that drops when a real problem is fixed.

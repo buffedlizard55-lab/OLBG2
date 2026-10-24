@@ -106,7 +106,7 @@ NAV = [
 
 def page(title: str, body: str, here: str, root: str = "") -> str:
     links = "".join(
-        f'<a href="{root}{href}"{" class=\'on\'" if href == here else ""}>{e(label)}</a>'
+        '<a href="' + root + href + '"' + (' class="on"' if href == here else "") + '>' + e(label) + '</a>'
         for href, label in NAV
     )
     return f"""<!doctype html>
@@ -167,6 +167,20 @@ def by_sport() -> dict[str, list[dict]]:
     return out
 
 
+def olbg_link(ev: dict) -> str:
+    url = ev.get("olbg_url")
+    return '<a href="%s">OLBG</a>' % e(url) if url else "-"
+
+
+def official_link(ev: dict) -> str:
+    url = (ev.get("official") or {}).get("source_url")
+    return ' · <a href="%s">official</a>' % e(url) if url else ""
+
+
+def link(url: str, label: str = "") -> str:
+    return '<a href="%s">%s</a>' % (e(url), e(label or url))
+
+
 def when(ev: dict) -> str:
     if ev.get("start_utc"):
         return e(ev["start_utc"].replace("T", " ").replace("Z", " UTC"))
@@ -177,6 +191,9 @@ def when(ev: dict) -> str:
 
 def pick_row(ev: dict, root: str = "") -> str:
     p = ev.get("pick") or {}
+    olbg = '<a href="%s">OLBG</a>' % e(ev["olbg_url"]) if ev.get("olbg_url") else "-"
+    off = (ev.get("official") or {}).get("source_url")
+    official = ' · <a href="%s">official</a>' % e(off) if off else ""
     return (
         "<tr>"
         f"<td>{when(ev)}</td>"
@@ -188,8 +205,7 @@ def pick_row(ev: dict, root: str = "") -> str:
         f"<td>{pill(p.get('confidence'))}</td>"
         f"<td>{band(p.get('in_band'))}</td>"
         f"<td>{e(ev.get('tier',''))}</td>"
-        f"<td>{'<a href=\"%s\">OLBG</a>' % e(ev['olbg_url']) if ev.get('olbg_url') else '—'}"
-        f" {(('<a href=\"%s\">official</a>' % e((ev.get('official') or {}).get('source_url'))) if (ev.get('official') or {}).get('source_url') else '')}</td>"
+        f"<td>{olbg}{official}</td>"
         "</tr>"
     )
 
@@ -222,7 +238,7 @@ def summary_stats() -> dict:
     }
 
 
-def coverage_rows() -> str:
+def coverage_rows(root: str = "") -> str:
     groups = by_sport()
     preds = PREDICTIONS.get("items", [])
     pred_counts: dict[str, int] = {}
@@ -236,7 +252,7 @@ def coverage_rows() -> str:
         tiers = sorted({x["tier"] for x in picks}) or ["no-basis"]
         rows.append(
             "<tr>"
-            f"<td><a href=\"sports/{slug(sport)}.html\">{e(sport)}</a></td>"
+            f"<td><a href=\"{root}sports/{slug(sport)}.html\">{e(sport)}</a></td>"
             f"<td class='num'>{len(evs)}</td>"
             f"<td class='num'>{len(picks)}</td>"
             f"<td class='num'>{len(high)}</td>"
@@ -292,7 +308,7 @@ labelled high, and says so in the basis column.</p>
 <div class="scroll"><table>
 <thead><tr><th>Sport</th><th class="num">Fixtures</th><th class="num">Priced</th><th class="num">High</th>
 <th class="num">Predictions</th><th>Probability sources used</th></tr></thead>
-<tbody>{coverage_rows()}</tbody></table></div>
+<tbody>{coverage_rows(root)}</tbody></table></div>
 <p class="small">A prediction count below five is a shortfall that is explained on
 <a href="{root}flagged.html">Flagged for review</a>, not hidden.</p>
 {shortfall_note(root)}
@@ -341,7 +357,7 @@ def build_picks() -> str:
             f"<td class='num'>{e(ev['pick'].get('quoted_american') or '—')}</td>"
             f"<td>{pill(ev['pick']['confidence'])}</td><td>{band(ev['pick']['in_band'])}</td>"
             f"<td class='small'>{e(ev.get('tier',''))}<br>{e(ev.get('basis_detail') or '')}</td>"
-            f"<td>{'<a href=\"%s\">OLBG</a>' % e(ev['olbg_url']) if ev.get('olbg_url') else '—'}</td>"
+            f"<td>{olbg_link(ev)}</td>"
             "</tr>"
             for ev in sorted(evs, key=lambda x: x["start_utc"] or "")
         )
@@ -371,8 +387,7 @@ def build_matches() -> str:
             f"@ {e(ev['primary_tip']['decimal'] or '—')}</div></td>"
             f"<td>{verified(ev['official_verified'])}</td>"
             f"<td class='small'>{e(ev.get('tier',''))}</td>"
-            f"<td>{'<a href=\"%s\">OLBG</a>' % e(ev['olbg_url']) if ev.get('olbg_url') else '—'}"
-            f"{' · <a href=\"%s\">official</a>' % e((ev.get('official') or {}).get('source_url')) if (ev.get('official') or {}).get('source_url') else ''}</td>"
+            f"<td>{olbg_link(ev)}{official_link(ev)}</td>"
             "</tr>"
             for ev in sorted(evs, key=lambda x: x["start_utc"] or "")
         )
@@ -396,7 +411,7 @@ def build_predictions() -> str:
     cards = []
     for p in items:
         facts = "".join(f"<li>{e(f)}</li>" for f in p.get("facts", []))
-        srcs = " · ".join(f'<a href="{e(u)}">{e(u)}</a>' for u in p.get("sources", []))
+        srcs = " · ".join(link(u) for u in p.get("sources", []))
         cards.append(
             f"<div class='pred'><h3>{e(p['headline'])}</h3>"
             f"<div class='meta'>{e(p['sport'])} · {e(p.get('competition',''))} · {e(p.get('start',''))} · "
@@ -414,9 +429,9 @@ def build_predictions() -> str:
     return page("Predictions", "".join(body), "predictions.html")
 
 
-def build_sports_index() -> str:
+def build_sports_index(root: str = "../") -> str:
     rows = "".join(
-        f"<tr><td><a href=\"{slug(sport)}.html\">{e(sport)}</a></td>"
+        f"<tr><td><a href=\"{root}sports/{slug(sport)}.html\">{e(sport)}</a></td>"
         f"<td class='num'>{len(by_sport().get(sport, []))}</td>"
         f"<td class='num'>{len([x for x in by_sport().get(sport, []) if x.get('pick')])}</td>"
         f"<td class='num'>{len([x for x in by_sport().get(sport, []) if x.get('official_verified')])}</td></tr>"
@@ -427,7 +442,7 @@ def build_sports_index() -> str:
             "together under Gaelic Sports, as OLBG lists them.</p></div>"
             "<div class='scroll'><table><thead><tr><th>Sport</th><th class='num'>Fixtures</th>"
             f"<th class='num'>Priced</th><th class='num'>Officially confirmed</th></tr></thead><tbody>{rows}</tbody></table></div>")
-    return page("Sports", body, "sports/index.html")
+    return page("Sports", body, "sports/index.html", root="../")
 
 
 def build_sport(sport: str) -> str:
@@ -449,7 +464,7 @@ def build_sport(sport: str) -> str:
             f"<td>{am((ev.get('pick') or {}).get('fair_american'))}</td>"
             f"<td>{pill((ev.get('pick') or {}).get('confidence'))}</td>"
             f"<td>{verified(ev['official_verified'])}</td>"
-            f"<td>{'<a href=\"%s\">OLBG</a>' % e(ev['olbg_url']) if ev.get('olbg_url') else '—'}</td>"
+            f"<td>{olbg_link(ev)}</td>"
             "</tr>" for ev in evs
         )
         parts.append("<div class='scroll'><table><thead><tr><th>Start</th><th>Match</th><th>OLBG tip</th>"
@@ -461,7 +476,7 @@ def build_sport(sport: str) -> str:
             f"{pill(p.get('confidence'))} · {am(p.get('fair_american'))}</div>"
             f"<p><strong>{e(p['selection'])}</strong> — {e(p['body'])}</p>"
             f"<ul class='facts'>{''.join('<li>%s</li>' % e(f) for f in p.get('facts', []))}</ul>"
-            f"<div class='src'>Sources: {' · '.join('<a href=\"%s\">%s</a>' % (e(u), e(u)) for u in p.get('sources', []))}</div></div>"
+            f"<div class='src'>Sources: {' · '.join(link(u) for u in p.get('sources', []))}</div></div>"
             for p in preds
         )
         parts.append(f"<h2>Written predictions</h2><div class='grid'>{cards}</div>")
@@ -516,13 +531,19 @@ runner at {e(MODEL['meta']['captured_at'])}; the raw bodies are kept as a workfl
 def build_flagged() -> str:
     review = MODEL.get("review", [])
     fails = [c for c in MODEL["meta"]["olbg_pages"].items() if c[1].get("status") != 200]
-    rows = "".join(
-        f"<tr><td>{e(r['sport'])}</td><td>{e(r['event'])}</td><td class='small'>{e(r['start_utc'] or '')}</td>"
-        f"<td>{e(r['issue'])}</td>"
-        f"<td>{'<a href=\"%s\">OLBG</a>' % e(r['olbg_url']) if r.get('olbg_url') else '—'}"
-        f"{''.join('<br><a href=\"%s\">official page</a>' % e(u) for u in (r.get('sources') or [])[:2])}</td></tr>"
-        for r in review
-    )
+    def review_row(r: dict) -> str:
+        olbg = '<a href="%s">OLBG</a>' % e(r["olbg_url"]) if r.get("olbg_url") else "-"
+        offs = "".join('<br><a href="%s">official page</a>' % e(u) for u in (r.get("sources") or [])[:2])
+        return (
+            "<tr>"
+            f"<td>{e(r['sport'])}</td><td>{e(r['event'])}</td>"
+            f"<td class='small'>{e(r.get('start_utc') or '')}</td>"
+            f"<td>{e(r['issue'])}</td>"
+            f"<td>{olbg}{offs}</td>"
+            "</tr>"
+        )
+
+    rows = "".join(review_row(r) for r in review)
     body = f"""<div class='hero'><h1>Flagged for review</h1>
 <p class='lead'>Anything that could not be confirmed from an official page is listed here with the link that
 was checked. A row on this page is published, not deleted, and it never carries an invented value.</p></div>

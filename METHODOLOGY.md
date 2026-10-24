@@ -122,7 +122,6 @@ sits inside −250..+10000 — ultra-short chalk is capped at **medium**, so eve
 prediction (14 featured band + 16 research write-ups) and the picks page never presents unbackable −5000
 favourites as high-confidence tips. Unifying the four earlier layers onto this strict form is the one open
 cross-layer item (recorded in COORDINATION.md for the legacy-layer owner). **medium** ≥ 60%; **low**
->>>>>>> origin/main
 below 60%. NBA picks are capped at medium because only prior-season records exist. Handicap and total picks are
 graded by the same rule; alternate lines only become featured when the moneyline pick already clears 70%.
 

@@ -143,7 +143,7 @@ def main() -> int:
         if re.search(r"\bNone\b|\bnan\b", text):
             fail(f"{page.name}: rendered None/nan")
         for href in re.findall(r'href="([^"#]+)"', text):
-            if href.startswith(("http://", "https://", "mailto:")):
+            if href.startswith(("http://", "https://", "mailto:", "data:", "#")):
                 continue
             target = (page.parent / href).resolve()
             if not target.exists():

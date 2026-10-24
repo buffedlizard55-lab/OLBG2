@@ -5785,15 +5785,79 @@ committed captures and states that limit on every page it publishes.
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| R1 | Claim + concurrency scan | in progress | `26707f98` | `COORDINATION.md` (this section only) |
-| R2 | Diagnose red `main` CI after PR #219 (meridian verifier floor, stale audit artifacts, missing `pages.yml` wiring) | in progress | `26707f98` | diagnosis only, no edits yet |
-| R3 | Repair: regenerate stale artifacts with the owning sessions' unmodified scripts; correct the meridian audit floor to the true conditional count; wire meridian rebuild + drift paths into `pages.yml` | unclaimed→claimed | `26707f98` | `.github/workflows/pages.yml`, `scripts/meridian_verify.py`, `tests/test_meridian_1286444e.py`, regenerated `data/meridian/**`, `meridian/**`, `data/clarity/**`, `clarity/**`, `data/ledger/**`, `ledger/**`, `archive.html` (regeneration only, never hand-edited) |
-| R4 | Independent offline re-verification layer for the current front-door `/now/` desk: math re-derivation, source-link coverage, prose rules, internal links, counts reconciliation; explicit "live re-check blocked" register | unclaimed→claimed | `26707f98` | new `recheck/**`, `data/recheck/**`, `scripts/recheck_*.py`, `tests/test_recheck_26707f98.py` only |
-| R5 | Full-suite + full `pages.yml` local replay, PR, merge, Pages deploy confirmation, record here | unclaimed→claimed | `26707f98` | `COORDINATION.md`, PR thread |
+| R1 | Claim + concurrency scan | done | `26707f98` | `COORDINATION.md` (this section only) |
+| R2 | Diagnose red `main` CI after PR #219 (meridian verifier floor, stale audit artifacts, missing `pages.yml` wiring) | done — root cause recorded below | `26707f98` | diagnosis only, no edits yet |
+| R3 | Repair: regenerate stale artifacts with the owning sessions' unmodified scripts; correct the meridian audit floor to the true conditional count; wire meridian rebuild + drift paths into `pages.yml` | done — superseded in part by PR #220's stronger consistency gate; both coexist on `main` | `26707f98` | `.github/workflows/pages.yml`, regenerated `data/meridian/**`, `meridian/**`, `data/clarity/**`, `clarity/**`, `data/ledger/**`, `ledger/**`, `archive.html` (regeneration only, never hand-edited) |
+| R4 | Independent offline re-verification layer for the current front-door `/now/` desk: math re-derivation, source-link coverage, prose rules, internal links, counts reconciliation; explicit "live re-check blocked" register | done — 1,246 checks, 0 failures, 3 observations | `26707f98` | new `recheck/**`, `data/recheck/**`, `scripts/recheck_*.py`, `tests/test_recheck_26707f98.py` only |
+| R5 | Full-suite + full `pages.yml` local replay, PR, merge, Pages deploy confirmation, record here | done — PR [#222](https://github.com/buffedlizard55-lab/OLBG2/pull/222) merged `83c2512`, deploy green | `26707f98` | `COORDINATION.md`, PR thread |
 
 Non-overlap: no other session's source script is edited; generated files are rebuilt only with their owning scripts,
 the same exception logged by sessions `03e61ed8` and `4a8390fe`. Open PR #209 (branch `arena/7a6b583e-olbg2`) is
 not touched.
+
+### R1–R5 COMPLETE — green CI restored and an independent `/recheck/` audit desk shipped (session `26707f98`)
+
+**The defect found on `main` at `67e7672`.** Both Pages workflows were red after PR #219. Two independent causes:
+(1) `pages.yml` never rebuilt the new `/meridian/` layer and did not gate its paths, so its generated audit
+drifted the moment later merges changed the layer count; (2) the meridian gate hard-floored the repo audit at
+four findings, while its fourth finding (MF-04, conflict markers in this board) was *conditional* and had stopped
+reproducing when earlier merges removed the markers. A gate that fails when a real problem is fixed is a defect
+in the gate, not the data.
+
+**Overlap with session `4dd1b17c` (PR #220), resolved without discarding either side.** That session fixed the
+same meridian gate in a stronger way — replacing the magic minimum with an internal-consistency check
+(`count == len(findings)` plus the MF-01…MF-03 substance check). During the rebase their version was kept and
+mine (a lowered numeric floor) was dropped. My session's distinct contribution — wiring the missing meridian
+rebuild step and drift paths into `pages.yml`, plus the whole `/recheck/` layer — is merged unchanged. Both
+desks' verifiers pass on `main`: `meridian_verify.py` 2,591 assertions, `latest_verify.py` 6,542,
+`recheck_verify.py` 52.
+
+**The `/recheck/` desk (new, owned by this session).** An independent offline re-derivation of every rule the
+current `/now/` front-door desk is built on, from committed evidence only — no socket is opened to any sport or
+betting host because the environment's egress allowlist makes them unreachable (probes recorded on
+`recheck/sources.html`). Result: **1,246 checks across nine classes, 0 failures** — scope/counts 15/15,
+provenance 50/50, price arithmetic on all 866 prices, grade and 0-10 score on all 39 picks, prose rules on all
+36 previews plus coverage, rendered tables and links 38/38, OLBG listing linkage 132/132, source register and
+30-host census, flags 34/34. Eight pages under `/recheck/`, each entity row carrying an https official link,
+its own stylesheet, deterministic generators (`recheck_audit.py`, `recheck_build.py`, `recheck_verify.py`) and
+nine unittest cases. The drift gate now covers `recheck data/recheck` and the workflow rebuilds the desk on
+every push.
+
+**Observations published, not hidden** (`recheck/flagged.html`, all severity `note`, none changes a number):
+fixtures `mlb-tb-mil-g3`, `cri-bol-tit`, `cri-tus-cob` are marked OLBG-listed but carry no captured event URL,
+so their listings cannot be cross-checked to an event id. The desk's own flag file already covers the pricing
+gap on at least the MLB fixture.
+
+**Sources used.** Only the committed capture under `data/now/` (facts stamped 2026-10-24T17:35Z, OLBG hub
+re-reads to 18:06Z by the owning session) and the rendered `now/` pages. Every row links the original official
+URL; the distinction between "link present and well-formed" and "page re-read today" is stated explicitly
+because the second action was impossible here. No value was inferred and no blank was filled.
+
+**Verification performed.** Full `pages.yml` step sequence replayed locally to a fixed point (zero drift across
+every gated path); `python -m unittest discover -s tests` → 897 tests OK at the final tree; the three desk
+verifiers above and `integration_audit.py` → 0 cross-layer link errors; YAML validity checked after every
+workflow edit.
+
+**Merge and deploy record.** PR [#222](https://github.com/buffedlizard55-lab/OLBG2/pull/222) merged to `main`
+as commit `83c2512`. Branch run `Validate Pages content` [40139937082](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40139937082)
+and the post-merge run [40140789057](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40140789057) both
+succeeded. One `Deploy Pages` run was cancelled by the `pages` concurrency group while an earlier deploy was
+still running; the next push-triggered run [40141067649](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40141067649)
+completed **success** (validate + deploy), and the legacy `pages build and deployment` succeeded with
+`pages.status = built`. The dual-publisher concurrency remains a repository-settings issue outside file scope,
+as earlier sessions logged.
+
+**Rebase and conflict log.** The branch was rebased twice while other sessions merged PRs #220, #221 and #223.
+Every conflict was append-only-board or generated-artifact drift: `COORDINATION.md` conflicts were resolved as
+the union of both sessions' blocks with all marker lines removed; generated audits were regenerated with their
+own unmodified scripts at the true layer count (52, then 53); a malformed drift-gate line left by an automated
+conflict resolution was rebuilt by hand and YAML-validated. No other session's prose, data or findings were
+discarded. Open PR #209 was never touched.
+
+**Open items handed on.** (1) Live re-reading of federation sources remains impossible from this sandbox class;
+a runner or sandbox with full egress should re-run the desks' collectors and reconcile any changed values.
+(2) The three no-event-URL fixtures need a follow-up OLBG capture. (3) The legacy/Actions dual Pages publisher
+should be reduced to one in repository settings.
 
 ---
 

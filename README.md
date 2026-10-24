@@ -31,6 +31,7 @@ desk's.
 | [Sources](now/sources.html) | Every page a value was read from |
 | [Method](now/methodology.html) | The four pricing families, the confidence rules, the 0-10 score and what is never done |
 | [Flagged for review](now/flagged.html) | 32 items: what is blank, what was corrected, and where the five-a-day target was not met |
+| [Independent re-check](recheck/index.html) | A separate audit desk that re-derives every price, grade, score and prose rule of the `/now/` desk from committed evidence: 1,246 checks, 0 failures, with the live-reread limits stated on every page |
 
 ## The 24 October 2026 snapshot
 

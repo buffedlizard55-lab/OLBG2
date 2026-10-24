@@ -1,6 +1,6 @@
 {
  "generated_utc": "2026-10-24T17:35:00Z",
- "count": 6,
+ "count": 7,
  "layers": 46,
  "findings": [
   {
@@ -241,6 +241,27 @@
     }
    ],
    "action": "Reported for the Zenith owner; this desk filters on start time instead."
+  },
+  {
+   "id": "CR-04",
+   "severity": "medium",
+   "title": "Merge-conflict markers are still checked in to the shared task board",
+   "detail": "COORDINATION.md carries 7 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.",
+   "evidence": [
+    {
+     "file": "COORDINATION.md",
+     "lines": [
+      3216,
+      3307,
+      3437,
+      3549,
+      3609,
+      3628,
+      4895
+     ]
+    }
+   ],
+   "action": "Left in place; this session appends only."
   },
   {
    "id": "CR-05",

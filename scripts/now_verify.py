@@ -125,6 +125,26 @@ def main() -> int:
         if row["confidence"] == "medium":
             ok(row["probability"] >= 0.55, f"{row['fixture_id']}: medium under 55%")
 
+    # 5b ----------------------------------------------------------------- the 0-10 score
+    shade = {"poisson": 1.0, "normal_margin": 1.0, "class_ladder": 0.8}
+    picks_html = (OUT / "picks.html").read_text(encoding="utf-8")
+    preds_html = (OUT / "predictions.html").read_text(encoding="utf-8")
+    for p in picks["picks"]:
+        score = p.get("score")
+        ok(isinstance(score, (int, float)), f"{p['id']}: no 0-10 score")
+        expect = round(min(10.0, 10.0 * p["probability"] * shade[p["basis"]]), 1)
+        ok(abs(score - expect) < 1e-9, f"{p['id']}: score {score} is not 10 x chance x basis")
+        ok(0.0 <= score <= 10.0, f"{p['id']}: score outside 0-10")
+        ok(f'>{score:.1f}<span class="den">/10' in picks_html,
+           f"{p['id']}: score missing from picks.html")
+    for p in preds["predictions"]:
+        ok(p.get("score") is not None, f"{p['id']}: preview carries no score")
+        ok(f'>{p["score"]:.1f}<span class="den">/10' in preds_html,
+           f"{p['id']}: score missing from predictions.html")
+    for p in picks["picks"]:
+        if p["confidence"] == "high":
+            ok(p["score"] >= 6.0, f"{p['id']}: a high grade scores under 6.0")
+
     # 6 ------------------------------------------------------------------ prose
     ok(preds["min_words"] >= 30, "shortest prediction under 30 words")
     openings, texts = {}, set()

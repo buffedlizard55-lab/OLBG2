@@ -1,0 +1,72 @@
+{
+  "recorded_at_utc": "2026-10-24T17:51:06Z",
+  "scope": "First-hand spot checks of the published 24 October /today/ dataset. These findings supplement, rather than replace, the automated row checks.",
+  "source_reads": [
+    {
+      "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "result": "The response reported 12 games on 24 October. Games 2026020168 through 2026020179 were read, including start times, venues, records and teamLeaders. The response also identifies odds providerId 3 as Tipsport in oddsPartners."
+    },
+    {
+      "url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+      "result": "The standings response directly showed Boston with 17 points, a .772727 point percentage, 42 goals for and 22 against; Vegas had 16 points, a .666667 point percentage, 46 goals for and 36 against."
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
+      "result": "Game 849802 was World Series Game 2, Tampa Bay at Milwaukee, scheduled for 2026-10-25T00:00:00Z at American Family Field. Drew Rasmussen and Logan Henderson were listed as probable pitchers."
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings&season=2026",
+      "result": "Milwaukee's official record was 103-59 with 832 runs scored, 618 allowed, a 55-26 home split and an 8-2 last-ten split."
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
+      "result": "Tampa Bay's official record was 98-64 with 736 runs scored, 650 allowed, a 43-38 away split and a 5-5 last-ten split."
+    },
+    {
+      "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "result": "A fresh read displayed BUF Sabres @ WAS Capitals as event 200003. It also displayed changed tip totals/selections for other events, demonstrating that hub content changes after a snapshot."
+    }
+  ],
+  "findings": [
+    {
+      "code": "PROSE-SUPERLATIVE-CONTRADICTED",
+      "severity": "high",
+      "affected_ids": ["pred-nhl-2026020174", "nhl-2026020174"],
+      "detail": "The Vegas preview calls its 16-point return the strongest record of any club priced on the card, and the headline calls Vegas the best record on the priced card. Boston is also priced on that card and the official standings show 17 points and a higher point percentage (.772727 versus .666667). Remove the superlative; the underlying Vegas and Boston numbers themselves are supported.",
+      "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/predictions.json"
+    },
+    {
+      "code": "WASHINGTON-SOURCE-ENDPOINT",
+      "severity": "medium",
+      "affected_ids": ["pred-nhl-2026020173", "nhl-2026020173"],
+      "detail": "Washington's record and player-leader facts link to the schedule endpoint, while the source register assigns records and team leaders to the score endpoint. A first-hand score-endpoint read supports the values, including Alex Tuch as a WSH leader with five goals, so the appropriate correction is the citation endpoint rather than inventing a roster change.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/sources.json"
+    },
+    {
+      "code": "THIRD-PARTY-PRICE-LABEL",
+      "severity": "medium",
+      "affected_ids": ["pred-nhl-2026020169", "pred-nhl-2026020170", "pred-nhl-2026020171", "pred-nhl-2026020173", "pred-nhl-2026020174"],
+      "detail": "The previews describe a league's own quote. The official NHL response labels providerId 3 as Tipsport; it is a third-party price carried by the league feed, not a price originated by the league. Keep the own-line and market-comparison concepts distinct.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/olbg_listings.json"
+    },
+    {
+      "code": "PROSE-FACT-INDEX-GAP",
+      "severity": "low",
+      "affected_ids": ["pred-nhl-2026020169", "pred-nhl-2026020173"],
+      "detail": "The New Jersey text includes Arseny Gritsyuk's five goals and the Washington text includes Dylan Strome's five assists, but those player figures are absent from each prediction's own facts array. The official score response supports both figures; add the missing fact entries so the displayed evidence index matches the prose.",
+      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/predictions.json"
+    },
+    {
+      "code": "OLBG-SNAPSHOT-DYNAMIC",
+      "severity": "medium",
+      "affected_ids": ["NO-OLBG-LISTING", "nhl-2026020173", "pred-nhl-2026020169", "pred-nhl-2026020171"],
+      "detail": "At the audit read, OLBG displayed Buffalo at Washington as event 200003, although the stored snapshot says no listing was found. New Jersey and Ottawa tip data also differed from the stored snapshot. This does not prove the historical capture was wrong; it shows that the absence flag and tip claims are time-sensitive and need a raw capture or a fresh snapshot before publication.",
+      "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "review_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/today/flagged.json"
+    }
+  ]
+}

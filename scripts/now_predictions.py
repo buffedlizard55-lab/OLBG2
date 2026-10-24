@@ -363,7 +363,7 @@ def main() -> int:
             "start_display": pick["start_display"],
             "market": pick["market"],
             "selection": pick["selection"],
-            "confidence": pick["confidence"],
+            "confidence": pick["confidence"], "score": pick.get("score"),
             "probability": pick["probability"],
             "american_display": pick["american_display"],
             "headline": headline,

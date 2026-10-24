@@ -5002,6 +5002,47 @@ Current state: PRs #191, #192 and #194 are merged and the filtered desk is live.
 
 ---
 
+## Session `arena/5dfa626b-olbg2` — CLAIM: `/executive/` fresh 2026-10-24 executive picks desk (15 sports, verified)
+
+- **Session ID:** `5dfa626b` · **Branch:** `arena/5dfa626b-olbg2` (branch name fixed by the Arena platform harness; the
+  `session-<id>/<task>` worktree convention cannot be used here and is recorded as a platform constraint).
+- **Concurrent-session scan at claim time** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`, 2026-10-24 17:10 UTC):
+  - `arena/03e61ed8-olbg2` (active 17:07:51Z) — claims the live consolidated desk `desk/**`, `data/desk/**`,
+    `scripts/desk_*`, `.github/workflows/desk*`, `research/desk*`, and shared root files if unclaimed.
+  - `arena/9f69ce85-olbg2` (active 17:06:45Z) — claims a fresh 2026-10-24 release scope; only `COORDINATION.md`
+    touched so far.
+  - All earlier desks (`cadence`, `ledger`, `brief`, `monitor`, `signal`, `liveboard`, `focus`, `daily`, `daily-audit`,
+    `current`, `atlas`, `canon`, `final`, `survey`, `verified`, `site`, `live`, `portal`, `beacon`, `slate`, `board`,
+    `relay`, `vanguard`, `pulse`, `update`, `covered`, `command`, `reconcile`, `fresh`, `forward`, `audit65`, `hub`,
+    `master`, `olbg`, `horizon`, `zenith`, `summit`, `quest`, `desk`) are historical/merged and untouched by this session.
+- **Exclusive, non-overlapping file scope for `arena/5dfa626b-olbg2`:**
+  - `executive/**` (clean executive-summary landing page, "where the picks are" navigation, all-matches table,
+    picks & confidence table, originated lines, written predictions, 15 sport category subpages, Flagged for Review,
+    sources & methodology)
+  - `data/executive/**` (current official-source fixture capture, sourced facts, originated lines, picks, confidence,
+    written predictions, flagged items, source registry)
+  - `scripts/executive_*.py` (`executive_seed.py`, `executive_model.py`, `executive_predictions.py`,
+    `executive_audit.py`, `executive_build.py`, `executive_verify.py`)
+  - `tests/test_executive_5dfa626b.py`
+  - `research/executive-5dfa626b.md`
+  - `COORDINATION.md` (append-only updates only)
+- **Sport scope (exact 15 sports requested):** Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball,
+  Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey, Basketball, Rugby League.
+- **Data-freshness commitment:** every fixture row in `data/executive/fixtures.json` is captured from an official
+  source read in this session (2026-10-24) and carries the source URL; no value is inferred. Unconfirmed values are
+  left blank and flagged.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| EX1 | Claim scope + concurrency scan | done | `arena/5dfa626b-olbg2` | `COORDINATION.md` |
+| EX2 | Collect current official-source fixtures + facts for the 15 sports (2026-10-24) | in progress | `arena/5dfa626b-olbg2` | `data/executive/fixtures.json`, `data/executive/sources.json` |
+| EX3 | Originate our own lines, pick winner, assign low/medium/high confidence, focus on −250…+10000 | pending | `arena/5dfa626b-olbg2` | `scripts/executive_model.py`, `data/executive/lines.json`, `data/executive/picks.json` |
+| EX4 | Write unique ≥30-word predictions (team/player, form, recent history, verified stats, injuries; obvious selection) | pending | `arena/5dfa626b-olbg2` | `scripts/executive_predictions.py`, `data/executive/predictions.json` |
+| EX5 | Build `/executive/` dashboard + 15 sport pages + flagged + verify + tests | pending | `arena/5dfa626b-olbg2` | `scripts/executive_*.py`, `executive/**`, `tests/test_executive_5dfa626b.py` |
+| EX6 | Rebase on `origin/main`, full test suite, open PR → `main`, merge, confirm Pages deploy | pending | `arena/5dfa626b-olbg2` | `COORDINATION.md` (append-only) |
+
+### Rebase / conflict log
+Recorded when the rebase onto `origin/main` is performed (see EX6).
 ## Session `arena/9f69ce85-olbg2` — fresh 2026-10-24 release, clean dashboard
 
 **Session ID:** `arena/9f69ce85-olbg2` · **Branch:** `arena/9f69ce85-olbg2` · **Started:** 2026-10-24 17:10 UTC
@@ -5059,6 +5100,23 @@ with the exact URL that failed. The five-per-sport target is met for Ice Hockey 
 | I6 | Rebuild checks, full test suite, link audit, PR → `main`, merge on green, confirm Pages deploy, record result | done | `arena/ba05b5b6-olbg2` | shared outputs (integration), `COORDINATION.md` |
 
 **Integration result:** PR [#197](https://github.com/buffedlizard55-lab/OLBG2/pull/197) merged to `main` on 2026-10-24T17:33:40Z (merge commit `6926afe07808ef5b6ebb6540d181dadee4b1a76f`). Full suite 747 tests OK; integration link audit 0 cross-layer errors; root `index.html` regenerated (46 write-ups, 35 high). `main` now holds 46 predictions / 135 picks. Pages deploy to be confirmed after merge.
+
+---
+
+### EX6 publication record — executive desk live (2026-10-24 17:51Z)
+
+| Item | Result |
+|---|---|
+| EX1 | Capture 71 fixtures across 14 sports from official governing-body sources read live on 2026-10-24, each row carrying per-side strength inputs, their basis, and per-fact source URLs; 33-entry official source registry | done | `arena/5dfa626b-olbg2` | `data/executive/fixtures.json`, `data/executive/sources.json`, `scripts/executive_seed.py` |
+| EX2 | Originate own lines per fixture (two-way sigmoid K=3.0 / home_edge 0.15; event-position outright probabilities) and price them as fair American + decimal | done | `arena/5dfa626b-olbg2` | `scripts/executive_model.py`, `data/executive/lines.json` |
+| EX3 | Pick one winner per fixture, low/medium/high conviction; a default strength input can never claim high | done | `arena/5dfa626b-olbg2` | `data/executive/picks.json` (71 picks: 12 high / 7 medium / 52 low) |
+| EX4 | Write unique >=30-word previews; 12 high-conviction previews hand-written at 53-66 words, none using "model"/"verified" | done | `arena/5dfa626b-olbg2` | `scripts/executive_predictions.py`, `data/executive/predictions.json` (71 previews, min 37 words) |
+| EX5 | Build `/executive/` (executive-summary landing, 15 sport pages, matches, lines, picks, predictions, sources, methodology, flagged) + verify + tests | done | `arena/5dfa626b-olbg2` | `executive/**` (24 pages), `scripts/executive_build.py`, `scripts/executive_verify.py`, `tests/test_executive_5dfa626b.py` |
+| EX6 | Rebase on origin/main, full suite, PR -> main, merge | done | `arena/5dfa626b-olbg2` | PR [#201](https://github.com/buffedlizard55-lab/OLBG2/pull/201) merged as `2d2420b` on 2026-10-24T17:51:42Z |
+
+**Integration result:** PR [#201](https://github.com/buffedlizard55-lab/OLBG2/pull/201) merged to `main` on 2026-10-24T17:51:42Z (merge commit `2d2420bfe3b6e11d980bfc6c3f21ea03aa9059f0`). Full suite 766 tests OK; `executive_verify` 0 errors / 0 warnings. Merge required one rebase: `COORDINATION.md` conflicted (append-only board) and was resolved by keeping `origin/main`'s blocks and retaining this session's claim block. Pre-existing stray `=======` / `>>>>>>>` markers already on `main` (lines 3216-3628) were left untouched, as logged in FL-20.
+
+**Note for the next integrator.** Rugby League has no live 24 Oct 2026 fixture (both the NRL and Super League 2026 seasons ended before that date); its category page documents season-end status with official sources and carries no priced pick. Baseball (3), Snooker (4) and Tennis (3) fall short of five written previews; those shortfalls plus the five sports with default strength inputs are flagged on `executive/flagged.html`.
 **Rule this session follows:** no prediction is published without a source URL on every fact; no value is inferred or filled in; the words "model" and "verified" are excluded from prediction text; unmet five-per-sport shortfalls are flagged, not padded; high-confidence work focuses on the −250…+10000 fair-price band.
 
 ## Session `arena/2e0fc430-olbg2` — CLAIM: `/clarity/` 2026-10-24 Executive Summary & Verified 15-Sport Origination Desk
@@ -5134,6 +5192,52 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
 
 ---
+
+## Session `arena/34af5757-olbg2` — independent evidence audit and final integration review (2026-10-24)
+
+- **Session ID:** `arena/34af5757-olbg2` · **Branch:** `arena/34af5757-olbg2` (the Arena-fixed branch; no other branch will be created or pushed).
+- **Claimed:** 2026-10-24 17:49 UTC, after reading the board and scanning open PRs and remote branch activity.
+- **Concurrent work preserved:** `arena/03e61ed8-olbg2` is actively collecting and building `/desk/` plus the root replacement (latest commit observed 17:44 UTC); `arena/9f69ce85-olbg2` has open PR #198. This session does not edit their claimed files or duplicate their collection/site work.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| A1 | Independent line-by-line evidence, freshness, odds-band, prose and navigation audit; publish exceptions with review links | in progress | `arena/34af5757-olbg2` | `research/34af5757-*.md`, `data/audit34/**`, `scripts/audit34_*.py`, `tests/test_audit34.py` |
+| A2 | Check current `main` validation/Pages outcome and record any integration blocker without changing another session's files | in progress | `arena/34af5757-olbg2` | `COORDINATION.md` (append-only), audit outputs above |
+| A3 | Final integration re-verification after the active desk/root owner finishes; link audit and deployment confirmation | pending | `arena/34af5757-olbg2` | shared outputs only after conflicting claims close; otherwise review-only |
+
+**Integrity rule:** source preservation is not source verification. No row, statistic, injury, start time or prose claim will be marked confirmed without a first-hand official-source read in this session or a clearly identified raw official capture. Unsupported values stay blank and are flagged. Prediction prose must not contain the internal-only terms prohibited by the brief.
+
+**Rebase note:** the initial shallow checkout made Git replay the already-merged PR #197 merge as an ordinary commit, producing add/add conflicts in `COORDINATION.md`, two cadence JSON files and `index.html`. The rebase was aborted before any edit or claim commit; no work was discarded. History was deepened, PR #197 was confirmed as an ancestor of current `origin/main` (PR #199), and the branch was then fast-forwarded by rebase with a clean tree.
+
+### `arena/34af5757-olbg2` A1 audit result and cross-scope handoff (2026-10-24 17:56 UTC)
+
+- **Published audit:** [`research/34af5757-evidence-audit.md`](research/34af5757-evidence-audit.md) and [`data/audit34/report.json`](data/audit34/report.json). Scope is the current `/today/` board plus root navigation; no historical desk is represented as freshly fact-checked.
+- **Checks:** 1,512 field/row/arithmetic/prose/link assertions; 18 findings; 315 `/today/` table-body rows all have external review links; zero local link/anchor errors; focused tests 9/9; repository link audit zero errors.
+- **First-hand official reads:** NHL score and standings feeds for 2026-10-24; MLB schedule and 2026 standings; OLBG Ice Hockey hub for time-sensitive listing drift. Exact URLs and the fields each response supported are in the report.
+- **High-priority irregularities:** official NHL coverage is 7 of 12 games (missing 2026020175–2026020179 even though five corresponding OLBG ids are stored); Boston is 69.95% but labelled high under a 65% configuration; New Jersey leads the executive cards while outside the requested band; Washington has no stored OLBG event link; the Vegas “best record” superlative is contradicted by Boston's official 17 points versus 16.
+- **Citation/prose irregularities:** Washington leader facts cite the schedule endpoint rather than the score endpoint; Boston/Vegas goal totals need the standings endpoint; MLB total rows omit their standings input links; NHL third-party Tipsport prices are described as the league's own quote; two player figures are missing from the displayed fact arrays.
+- **Coverage limits:** no NHL totals and no handicap lines anywhere in `/today/`; raw historical source responses are not committed; only one published pick meets the combined ≥70%, in-band, stored-OLBG-link and written-preview rules.
+
+**Cross-scope request (no other session's files edited):** the active `/today/`, root and live-desk owners should resolve or explicitly carry these findings into their Flagged for Review page before final integration. In particular, do not call the current seven-NHL-row set a full list or its five rows five qualified high-confidence picks.
+
+**Rebase conflict resolution:** rebasing onto PR #202 produced an append-only `COORDINATION.md` conflict. The resolution retained the complete EX6 and Clarity blocks from `main` followed by this session's claim, removing only conflict-marker lines at that tail. Other pre-existing marker lines elsewhere in the board were left untouched and remain a known repository irregularity.
+
+**A2 deployment watch:** after PR #201, `Validate Pages content` run `40118054738` failed and the Pages API reported `errored`; PR #202 validation/deployment was queued at the last check. No workflow or another owner's generated file was changed by this session.
+
+### `arena/34af5757-olbg2` A2 hotfix claim — red `main` inventory drift (2026-10-24 17:58 UTC)
+
+**New, non-overlapping task:** regenerate `data/clarity/repo_audit.json` and `clarity/repo-review.html` with the Clarity owner's unmodified scripts, plus append this record. PR #200 completed and merged the Clarity implementation; this is a new integration hotfix, not a takeover of an active task. No root, workflow, prediction, pick, price or fixture file is in scope.
+
+**Reproduced cause:** the full suite's `test_clarity_2e0fc430.ClarityDeterminism.test_rebuild_is_byte_identical` fails because the committed Clarity repository audit counts 45 published dashboards, while PR #201 added `/executive/` and the rebuild correctly counts 46. This explains the red validation after PRs #201/#202. Only those two generated files differ after the rebuild.
+
+**A2 hotfix scope addendum:** the closed Ledger owner's unmodified `ledger_report.py` also enumerates top-level dashboards and test modules, and CI rebuilds it before the drift gate. The same narrow hotfix therefore includes generated `data/ledger/repo_review.json` and `ledger/repo-review.html`. These will be regenerated, not hand-authored; expected changes are the 45→46 dashboard inventory, the new independent audit test-module count, and conflict-marker line positions caused by the preserved board appends.
+
+### `arena/34af5757-olbg2` A2 handoff — CI hotfix PR and live-desk pre-integration findings (2026-10-24 18:03 UTC)
+
+- **PR:** [#203](https://github.com/buffedlizard55-lab/OLBG2/pull/203) carries the reproducible audit and the generated Clarity/Ledger inventory hotfix. Locally all **795 tests pass**, Ledger is **18/18**, and the cross-layer link audit is **0 errors**. Wait for its green check before merging; no broken build will be merged.
+- **Read-only review of `arena/03e61ed8-olbg2` at `fd56881` (owner request; no owner files edited):** `livedesk_build.when()` prioritizes the OLBG-derived `event.start_utc` over `event.official.start_utc`. For NHL event `200002`, the former is `2026-10-24T23:07:00Z` while the linked official schedule says `23:00:00Z`; event `200009` similarly says `02:07Z` versus official `01:00Z`. Use the official start for confirmed fixtures or label the listing value separately, rather than presenting it as official UTC.
+- The five NHL preview `sources` arrays link OLBG and the schedule only, while their records, home/road splits and goal totals come from the separately captured NHL standings feed. Add the exact official standings URL to each applicable preview/source row so every factual input is traceable. The previews remain five Ice Hockey write-ups and none is labelled high; retain the shortfall visibly rather than relabelling medium/low selections.
+- The live runner's 17:57Z model contains 195 fresh listings across 14 represented sports, with Golf explicitly empty. This is a substantial coverage improvement, but it is not yet merged or treated as acceptance evidence.
 
 ## Session `arena/4a8390fe-olbg2` — 2026-10-24 17:53 UTC — single clean front door + fresh 24 Oct desk
 

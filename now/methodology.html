@@ -53,7 +53,24 @@ total (totals carry more variance and are capped at medium).</td>
 <td><a href="../scripts/now_model.py">scripts/now_model.py</a></td></tr>
 </tbody></table></div>
 
-<h2>4. What is never done</h2>
+<h2>4. The 0-10 score</h2>
+<p>Every pick carries one number so that picks from different sports can be compared without reading the price. It is
+our chance of the selection winning, read on a 0-10 scale where <strong>5.0 is a coin flip</strong> and 10.0 would be
+a certainty, shaded by how strong the basis is: a price built from a goals or points rate counts at face value, a
+price built on the evidence ladder counts at 0.8 of its face value. The formula is
+<code>score = 10 × chance × basis shade</code>, so two picks with the same chance and the same basis always carry the
+same score, and no pick can score above 7.5 while the band stops at 71.4%.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Example</th><th>Our chance</th><th>Basis</th><th>Score</th><th>Where it is implemented</th></tr></thead><tbody>
+<tr><td>Rugby union handicap at −249</td><td>71.4%</td><td>normal margin (full)</td><td><span class="score high">7.1<span class="den">/10</span></span></td>
+<td><a href="../scripts/now_model.py">score_for() in scripts/now_model.py</a></td></tr>
+<tr><td>Volleyball on the evidence ladder</td><td>70.0%</td><td>class ladder (0.8)</td><td><span class="score medium">5.6<span class="den">/10</span></span></td>
+<td><a href="../data/now/picks.json">data/now/picks.json</a></td></tr>
+<tr><td>Anything at 50%</td><td>50.0%</td><td>any</td><td><span class="score low">5.0<span class="den">/10</span></span></td>
+<td><a href="../scripts/now_verify.py">scripts/now_verify.py</a> checks the arithmetic</td></tr>
+</tbody></table></div>
+
+<h2>5. What is never done</h2>
 <ul class="clean">
   <li>No bookmaker or exchange price is read, and no OLBG tip share is turned into a price.</li>
   <li>No value is inferred. If a field is not on an official page it stays blank and is published on
@@ -62,7 +79,7 @@ total (totals carry more variance and are capped at medium).</td>
   <li>Displayed times are not converted from one timezone to another.</li>
 </ul>
 
-<h2>5. Rebuilding</h2>
+<h2>6. Rebuilding</h2>
 <pre class="tiny">python scripts/now_seed.py
 python scripts/now_model.py
 python scripts/now_predictions.py

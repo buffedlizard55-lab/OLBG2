@@ -16,7 +16,7 @@ desk's.
 | Page | What is on it |
 |---|---|
 | [Executive summary](now/index.html) | The strongest calls in large type, the counts, and a plain map of where everything lives |
-| [Picks](now/picks.html) | One row per pick: **selection**, market, our chance, our price, the confidence grade and the official source |
+| [Picks](now/picks.html) | One row per pick: **selection**, market, our chance, a **0-10 score**, our price, the confidence grade and the official source |
 | [Written predictions](now/predictions.html) | One unique preview per high and medium pick, each ≥30 words, with the official facts and links beneath it |
 | [All matches](now/matches.html) | Every fixture, priced or blank, with the reason for any blank |
 | [Our lines](now/lines.html) | The full market book: match winner, handicap and total for each fixture we can price |
@@ -24,7 +24,7 @@ desk's.
 | [By sport](now/sports/index.html) | Fifteen category pages, same sections in the same order |
 | [OLBG list](now/olbg.html) | The 96 rows captured off OLBG's own event list, with event ids, URLs and the hubs re-read live |
 | [Sources](now/sources.html) | Every page a value was read from |
-| [Method](now/methodology.html) | The four pricing families, the confidence rules and what is never done |
+| [Method](now/methodology.html) | The four pricing families, the confidence rules, the 0-10 score and what is never done |
 | [Flagged for review](now/flagged.html) | 32 items: what is blank, what was corrected, and where the five-a-day target was not met |
 
 ## The 24 October 2026 snapshot
@@ -56,12 +56,17 @@ Confidence: **high** needs a numeric family, 62% or better and a price inside th
 medium because they carry more variance). **Medium** needs 55%. Everything else is **low** and is published only for
 completeness.
 
+The **0-10 score** puts that on one scale so sports can be compared without reading a price:
+`score = 10 × our chance × basis shade`, with the shade at 1.0 for a goals or points rate and 0.8 for the evidence
+ladder. 5.0 is a coin flip and no pick can score above 7.5 while the band stops at 71.4%. Every pick on the site
+carries its score, and `scripts/now_verify.py` re-derives it from the probability.
+
 ```sh
 python scripts/now_seed.py         # OLBG inventory + official fixture records with provenance
 python scripts/now_model.py        # originate every market, grade it, apply the band test
 python scripts/now_predictions.py  # write the previews
 python scripts/now_build.py        # render the site (27 pages)
-python scripts/now_verify.py       # 7,809 line-by-line assertions
+python scripts/now_verify.py       # 8,063 line-by-line assertions
 python scripts/build_site.py       # regenerate the root front door and the archive index
 python -m unittest discover -s tests
 ```

@@ -508,6 +508,7 @@ def build_front_door() -> str:
             '<div class="pc-sel">' + esc(p["selection"]) + "</div>"
             '<div class="pc-meta">' + esc(p["market"]) + " · " + f'{p["probability"] * 100:.1f}%'
             + " · " + esc(p["american_display"]) + "</div>"
+            '<div class="pc-score">Score <strong>' + f'{p.get("score", 0):.1f}' + "</strong>/10</div>"
             '<div class="pc-src">Source: ' + esc(p["official_url"].split("//")[-1].split("/")[0])
             + "</div></a>")
 
@@ -602,6 +603,8 @@ def build_front_door() -> str:
 .pickcard{display:block;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #047857;
   border-radius:12px;padding:16px;color:#0f172a}
 .pickcard:hover{border-color:#0f766e;text-decoration:none}
+.pc-score{font-size:12px;color:#475569;margin-top:6px}
+.pc-score strong{color:#0f172a;font-size:14px}
 .pc-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#64748b;
   text-transform:uppercase;letter-spacing:.06em}
 .pc-conf{font-weight:700;font-size:11px;padding:2px 8px;border-radius:999px;background:#e2e8f0;color:#475569}

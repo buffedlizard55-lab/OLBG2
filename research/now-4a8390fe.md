@@ -109,6 +109,23 @@ band; match totals are capped at medium; the evidence ladder is capped at medium
 capture and are marked `facts_inherited` on every row. This session did not re-open those pages; it re-used the
 committed capture and says so on the site.
 
+## 5b. The 0-10 score (added after the first build)
+
+The owner asked for a 0-10 confidence number on every pick so sports can be compared without reading a price. The rule is `score_for()` in `scripts/now_model.py`:
+
+```
+score = round(min(10, 10 × probability × shade), 1)
+shade = 1.0 for poisson / normal_margin, 0.8 for class_ladder
+```
+
+Consequences, all of them checked: 5.0 is a coin flip, 7.1 is the highest score on the desk (a 71.4% rugby union
+handicap, the strongest chance the band allows), the evidence ladder can never exceed 8.0 and in practice tops out at
+5.6 because those prices are capped near 70%. The score is published on the dashboard cards, on every row of
+`now/picks.html`, on each sport page and on each preview in `now/predictions.html`, and it is re-derived line by line
+by `scripts/now_verify.py` (8,063 assertions). Three cricket fixtures at 50–55% appear on the picks page under
+"priced but not backed" — they are shown so the book is complete, and their score of 4.8–5.5 is the reason they are
+not offered.
+
 ## 6. Open items handed back
 
 | ID | Item |

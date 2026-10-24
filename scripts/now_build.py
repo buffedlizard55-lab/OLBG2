@@ -73,6 +73,14 @@ def badge(conf: str) -> str:
     return f'<span class="badge {esc(conf)}">{esc(conf)}</span>'
 
 
+def score_chip(score) -> str:
+    """The 0-10 number, coloured like the grade it belongs to."""
+    if score is None:
+        return '<span class="tiny">—</span>'
+    tone = "high" if score >= 7 else ("medium" if score >= 5.5 else "low")
+    return f'<span class="score {tone}">{score:.1f}<span class="den">/10</span></span>'
+
+
 def money(am: int, display: str) -> str:
     return f'<span class="price">{esc(display)}</span>'
 
@@ -92,6 +100,7 @@ def pick_line(p: dict, show_fixture: bool = True, prefix: str = "", with_pred=No
         + '<td><strong class="selection">' + esc(p["selection"]) + "</strong>"
         + '<div class="tiny">' + esc(p["market"]) + "</div></td>"
         + '<td class="nowrap">' + f"{p['probability'] * 100:.1f}%" + "</td>"
+        + '<td class="nowrap">' + score_chip(p.get("score")) + "</td>"
         + '<td class="nowrap">' + money(p["american"], p["american_display"]) + "</td>"
         + "<td>" + src(p["official_url"]) + "</td>"
         + "</tr>"
@@ -100,7 +109,7 @@ def pick_line(p: dict, show_fixture: bool = True, prefix: str = "", with_pred=No
 
 def pick_table(picks, show_fixture=True, link_predictions=True, prefix="", with_pred=None) -> str:
     head = ("<thead><tr><th>Confidence</th><th>Sport</th><th>Match</th><th>Selection</th>"
-            "<th>Our chance</th><th>Our price</th><th>Official source</th></tr></thead>")
+            "<th>Our chance</th><th>Score</th><th>Our price</th><th>Official source</th></tr></thead>")
     rows = []
     for p in picks:
         row = pick_line(p, show_fixture, prefix, with_pred)
@@ -156,6 +165,12 @@ p{margin:0 0 12px;color:var(--ink-2)}
 .toppick .price{font-weight:700;color:var(--ink)}
 .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;
   font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.score{font-variant-numeric:tabular-nums;font-weight:750;font-size:14px;padding:1px 7px;
+  border-radius:7px;background:#f1f5f9;color:var(--low);display:inline-block}
+.score .den{font-weight:500;font-size:11px;color:var(--muted)}
+.score.high{background:#d1fae5;color:var(--high)}
+.score.medium{background:#fef3c7;color:var(--med)}
+.score.low{background:#f1f5f9;color:var(--low)}
 .badge.high{background:#d1fae5;color:var(--high)}
 .badge.medium{background:#fef3c7;color:var(--med)}
 .badge.low{background:#e2e8f0;color:var(--low)}
@@ -410,7 +425,8 @@ def main() -> int:
             f'<div class="teams" style="margin-top:6px">{esc(p["home"])} <span>v</span> {esc(p["away"])}</div>'
             f'<a class="sel" href="predictions.html#pred-{esc(p["fixture_id"])}">{esc(p["selection"])}</a>'
             f'<div class="meta">{esc(p["market"])} · our chance {p["probability"] * 100:.1f}% · '
-            f'<span class="price">{esc(p["american_display"])}</span> {badge(p["confidence"])}</div>'
+            f'<span class="price">{esc(p["american_display"])}</span> {badge(p["confidence"])}'
+            f' {score_chip(p.get("score"))}</div>'
             + (f'<div class="tiny" style="margin-top:8px">{esc(pred.get("headline", ""))}</div>' if pred else "")
             + f'<div class="srcnote">Source: {src(p["official_url"])} · '
               f'<a href="predictions.html#pred-{esc(p["fixture_id"])}">read the prediction</a></div>'
@@ -511,13 +527,21 @@ implies. {picks['pregame_count']} picks are for matches that had not started whe
 
 <h2>Available now — {len(pregame_hm)} picks on matches still to start</h2>
 <p class="sub">High confidence first, then medium. A dash of confidence still means what it says: high needs a 62%
-chance from a numeric official input and a price inside the band.</p>
+chance from a numeric official input and a price inside the band. The <strong>score</strong> column puts that on a
+0-10 scale so sports can be compared at a glance: 5.0 is a coin flip, and every pick above is shaded down when its
+price rests on the evidence ladder rather than on a scoring rate (<a href="methodology.html">method</a>).</p>
 {pick_table(pregame_hm, with_pred=pred_ids)}
 
 <h2>Already under way at the snapshot ({len(started_rows)})</h2>
 <p class="sub">These four matches started before {esc(AS_OF)}. They stay on the desk with their prices and their
 write-ups so the record is complete, but they cannot be backed before kick-off any more.</p>
 {pick_table(started_rows, with_pred=pred_ids)}
+
+<h2>Priced but not backed ({len(ls)})</h2>
+<p class="sub">Three cricket fixtures where our own number is close enough to a coin flip that it is not worth
+backing. They stay in the table so the price book is complete and so nobody has to guess why they are missing from
+the two tables above. A low grade is not a prediction against; it is the desk saying it has no edge.</p>
+{pick_table(ls, with_pred=pred_ids)}
 
 <div class="notice info"><strong>How the price was made.</strong> Each price is the reciprocal of our own probability,
 so −250 always means exactly 71.4%. The method behind the probability differs by sport and is written out on the
@@ -536,7 +560,7 @@ so −250 always means exactly 71.4%. The method behind the probability differs 
   <div class="teams" style="font-size:15px">{esc(p['home'])} <span>v</span> {esc(p['away'])}</div>
   <p style="margin-top:8px"><span class="selection">{esc(p['selection'])}</span>
      <span class="tiny">· {esc(p['market'])} · our chance {p['probability'] * 100:.1f}% ·
-     {esc(p['american_display'])} · {p['words']} words</span> {badge(p['confidence'])}</p>
+     {esc(p['american_display'])} · {p['words']} words</span> {badge(p['confidence'])} {score_chip(p.get('score'))}</p>
   <p>{esc(p['text'])}</p>
   <div class="facts"><div class="tiny"><strong>Official facts behind this prediction</strong></div>
   {facts_list(p['facts'])}</div>
@@ -776,7 +800,24 @@ total (totals carry more variance and are capped at medium).</td>
 <td><a href="../scripts/now_model.py">scripts/now_model.py</a></td></tr>
 </tbody></table></div>
 
-<h2>4. What is never done</h2>
+<h2>4. The 0-10 score</h2>
+<p>Every pick carries one number so that picks from different sports can be compared without reading the price. It is
+our chance of the selection winning, read on a 0-10 scale where <strong>5.0 is a coin flip</strong> and 10.0 would be
+a certainty, shaded by how strong the basis is: a price built from a goals or points rate counts at face value, a
+price built on the evidence ladder counts at 0.8 of its face value. The formula is
+<code>score = 10 × chance × basis shade</code>, so two picks with the same chance and the same basis always carry the
+same score, and no pick can score above 7.5 while the band stops at 71.4%.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Example</th><th>Our chance</th><th>Basis</th><th>Score</th><th>Where it is implemented</th></tr></thead><tbody>
+<tr><td>Rugby union handicap at −249</td><td>71.4%</td><td>normal margin (full)</td><td>{score_chip(7.1)}</td>
+<td><a href="../scripts/now_model.py">score_for() in scripts/now_model.py</a></td></tr>
+<tr><td>Volleyball on the evidence ladder</td><td>70.0%</td><td>class ladder (0.8)</td><td>{score_chip(5.6)}</td>
+<td><a href="../data/now/picks.json">data/now/picks.json</a></td></tr>
+<tr><td>Anything at 50%</td><td>50.0%</td><td>any</td><td>{score_chip(5.0)}</td>
+<td><a href="../scripts/now_verify.py">scripts/now_verify.py</a> checks the arithmetic</td></tr>
+</tbody></table></div>
+
+<h2>5. What is never done</h2>
 <ul class="clean">
   <li>No bookmaker or exchange price is read, and no OLBG tip share is turned into a price.</li>
   <li>No value is inferred. If a field is not on an official page it stays blank and is published on
@@ -785,7 +826,7 @@ total (totals carry more variance and are capped at medium).</td>
   <li>Displayed times are not converted from one timezone to another.</li>
 </ul>
 
-<h2>5. Rebuilding</h2>
+<h2>6. Rebuilding</h2>
 <pre class="tiny">python scripts/now_seed.py
 python scripts/now_model.py
 python scripts/now_predictions.py

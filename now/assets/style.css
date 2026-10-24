@@ -44,6 +44,12 @@ p{margin:0 0 12px;color:var(--ink-2)}
 .toppick .price{font-weight:700;color:var(--ink)}
 .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;
   font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.score{font-variant-numeric:tabular-nums;font-weight:750;font-size:14px;padding:1px 7px;
+  border-radius:7px;background:#f1f5f9;color:var(--low);display:inline-block}
+.score .den{font-weight:500;font-size:11px;color:var(--muted)}
+.score.high{background:#d1fae5;color:var(--high)}
+.score.medium{background:#fef3c7;color:var(--med)}
+.score.low{background:#f1f5f9;color:var(--low)}
 .badge.high{background:#d1fae5;color:var(--high)}
 .badge.medium{background:#fef3c7;color:var(--med)}
 .badge.low{background:#e2e8f0;color:var(--low)}

@@ -484,6 +484,20 @@ def grade(row) -> str:
     return "low"
 
 
+# --- the 0-10 confidence score -------------------------------------------------------------
+# One number a reader can compare across sports. It is our chance of the selection winning, read on
+# a 0-10 scale where 5.0 is a coin flip and 10.0 would be a certainty, shaded by how strong the
+# basis is: a price built from a goals or points rate counts in full, a price built on the evidence
+# ladder counts at 0.8 of its face value. Nothing else moves it, so two picks with the same chance
+# and the same basis always carry the same score.
+BASIS_SHADE = {"poisson": 1.0, "normal_margin": 1.0, "class_ladder": 0.8}
+
+
+def score_for(row):
+    shaded = 10.0 * row["probability"] * BASIS_SHADE.get(row["basis"], 0.8)
+    return round(min(10.0, max(0.0, shaded)), 1)
+
+
 def main() -> int:
     fixtures = json.loads((NOW / "fixtures.json").read_text(encoding="utf-8"))["fixtures"]
     matches, all_lines, picks, coverage = [], [], [], {}
@@ -537,7 +551,8 @@ def main() -> int:
                 "probability": best["probability"], "decimal": best["decimal"],
                 "american": best["american"], "american_display": best["american_display"],
                 "in_band": best["in_band"], "confidence": best["confidence"],
-                "basis": best["basis"], "assumption": best["assumption"],
+                "score": score_for(best), "basis": best["basis"],
+                "assumption": best["assumption"],
                 "official_url": fx["official_url"], "olbg_url": fx.get("olbg_url", ""),
                 "facts": fx["facts"], "started": entry["started"],
             })

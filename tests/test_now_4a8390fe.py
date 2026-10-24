@@ -143,6 +143,28 @@ class NowPages(unittest.TestCase):
                 if anchor and path in ids:
                     self.assertIn(anchor, ids[path], f"{page}: {href}")
 
+    def test_every_pick_carries_a_zero_to_ten_score(self):
+        """The owner asked for a 0-10 confidence number so picks can be compared across sports."""
+        shade = {"poisson": 1.0, "normal_margin": 1.0, "class_ladder": 0.8}
+        picks = load("picks.json")["picks"]
+        self.assertTrue(picks)
+        for p in picks:
+            self.assertIn("score", p, p["id"])
+            self.assertGreaterEqual(p["score"], 0.0)
+            self.assertLessEqual(p["score"], 10.0)
+            expect = round(min(10.0, 10.0 * p["probability"] * shade[p["basis"]]), 1)
+            self.assertAlmostEqual(p["score"], expect, places=6, msg=p["id"])
+        page = (OUT / "picks.html").read_text(encoding="utf-8")
+        for p in picks:
+            self.assertIn(f'>{p["score"]:.1f}<span class="den">/10', page, p["id"])
+
+    def test_every_preview_shows_the_score(self):
+        preds = load("predictions.json")["predictions"]
+        page = (OUT / "predictions.html").read_text(encoding="utf-8")
+        for p in preds:
+            self.assertIsNotNone(p["score"], p["id"])
+            self.assertIn(f'>{p["score"]:.1f}<span class="den">/10', page, p["id"])
+
     def test_executive_summary_leads_the_landing_page(self):
         html = (OUT / "index.html").read_text(encoding="utf-8")
         self.assertLess(html.index("Executive summary"), html.index("The strongest calls"))

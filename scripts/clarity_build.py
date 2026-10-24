@@ -53,6 +53,17 @@ def day(ts):
         return ""
 
 
+def n_(count, word):
+    return f"{count} {word}{'' if count == 1 else 's'}"
+
+
+def matchup(row):
+    """Outright markets have no two-sided fixture, so name the event instead."""
+    if row.get("market") in ("Outright winner", "Race winner"):
+        return row.get("competition", "")
+    return f"{row['home']} v {row['away']}"
+
+
 def badge(conf):
     return f'<span class="badge {conf}">{conf}</span>'
 
@@ -174,7 +185,7 @@ def build_index(fx, matches, picks, preds, flags):
         f"<td><a href=\"{sport_href(p['sport'])}\">{e(p['sport'])}</a></td>"
         f"<td><strong>{e(p['selection'])}</strong><div class=\"small muted\">{e(p['market'])}</div></td>"
         f"<td>{price(p['american_display'])}<div class=\"small muted\">{p['probability'] * 100:.1f}%</div></td>"
-        f"<td class=\"small\">{e(p['home'])} v {e(p['away'])}</td>"
+        f"<td class=\"small\">{e(matchup(p))}</td>"
         f"<td class=\"small\"><a href=\"{e(p['official_url'])}\">official</a></td></tr>"
         for p in high)
     sport_cards = ""
@@ -185,14 +196,14 @@ def build_index(fx, matches, picks, preds, flags):
         hi = [p for p in ps if p["confidence"] == "high"]
         sport_cards += (
             f'<div class="card"><h3><a href="{sport_href(name)}">{e(name)}</a></h3>'
-            f'<p>{len(ms)} fixtures · {len(ps)} priced picks · <strong>{len(hi)} high</strong> · '
-            f'{len(ws)} write-ups</p>'
+            f'<p>{n_(len(ms), "fixture")} · {n_(len(ps), "priced pick")} · <strong>{len(hi)} high</strong> · '
+            f'{n_(len(ws), "write-up")}</p>'
             f'<a class="more" href="{sport_href(name)}">Open {e(name)} →</a></div>')
     body = f"""
 <div class="jump">
 <a href="predictions.html"><b>Read the write-ups</b><span>{preds['count']} full predictions with sourced facts</span></a>
 <a href="picks.html"><b>See every pick</b><span>{picks['count']} graded selections, confidence first</span></a>
-<a href="band.html"><b>−250 to +10000 board</b><span>{sum(1 for p in picks['picks'] if p['in_band'])} selections inside the focus band</span></a>
+<a href="band.html"><b>−250 to +10000 board</b><span>{picks['high_in_band']} high-confidence picks inside the band</span></a>
 <a href="matches.html"><b>All {matches['count'] if isinstance(matches, dict) else len(matches)} matches</b><span>every fixture with its official source</span></a>
 </div>
 
@@ -250,7 +261,7 @@ def build_picks(picks, preds):
                  f"<td><a href=\"{sport_href(p['sport'])}\">{e(p['sport'])}</a></td>"
                  f"<td><strong>{e(p['selection'])}</strong><div class=\"small muted\">{e(p['market'])}</div></td>"
                  f"<td>{price(p['american_display'])}</td><td class=\"small\">{p['probability']*100:.1f}%</td>"
-                 f"<td class=\"small\">{e(p['home'])} v {e(p['away'])}</td><td>{link}</td>"
+                 f"<td class=\"small\">{e(matchup(p))}</td><td>{link}</td>"
                  f"<td class=\"small\"><a href=\"{e(p['official_url'])}\">official page</a></td></tr>")
     by = picks["by_sport"]
     body = f"""
@@ -373,10 +384,10 @@ def build_band(picks):
     high_in = [p for p in inband if p["confidence"] == "high"]
     rows = "".join(
         "<tr><td>%s</td><td>%s</td><td><strong>%s</strong><div class=\"small muted\">%s</div></td>"
-        "<td>%s</td><td class=\"small\">%.1f%%</td><td class=\"small\">%s v %s</td>"
+        "<td>%s</td><td class=\"small\">%.1f%%</td><td class=\"small\">%s</td>"
         "<td class=\"small\"><a href=\"%s\">official</a></td></tr>" % (
             badge(p["confidence"]), e(p["sport"]), e(p["selection"]), e(p["market"]),
-            price(p["american_display"]), p["probability"] * 100, e(p["home"]), e(p["away"]),
+            price(p["american_display"]), p["probability"] * 100, e(matchup(p)),
             e(p["official_url"])) for p in inband)
     body = f"""
 <p class="lede">The brief asks for high-confidence picks in the −250 to +10000 window. Those two rules pull in
@@ -413,7 +424,7 @@ def build_sports_index(picks, preds, matches):
         ps = [p for p in picks["picks"] if p["sport"] == name]
         ws = [p for p in preds["predictions"] if p["sport"] == name]
         cards += (f'<div class="card"><h3><a href="{slug}.html">{e(name)}</a></h3>'
-                  f'<p>{len(ms)} fixtures · {len(ps)} picks · {len(ws)} write-ups</p></div>')
+                  f'<p>{n_(len(ms), "fixture")} · {n_(len(ps), "pick")} · {n_(len(ws), "write-up")}</p></div>')
     body = f'<p class="lede">Fifteen categories, one page each, with that sport\'s fixtures, picks and write-ups.</p><div class="cards">{cards}</div>'
     return page("Sports", body, "sports", "Every covered sport, in the order the brief lists them.")
 
@@ -453,8 +464,8 @@ def build_sport(name, matches, picks, preds, lines, flags):
                     f"<td>{'in band' if l['in_band'] else 'outside'}</td></tr>" for l in ls)
     flags_html = "".join(f"<li><strong>{e(f['id'])}</strong> — {e(f['title'])}</li>" for f in fl[:6])
     body = f"""
-<p class="lede">{len(ms)} fixtures, {len(ps)} graded picks, {len(ws)} full write-ups and {len(ls)} originated
-selections.</p>
+<p class="lede">{n_(len(ms), "fixture")}, {n_(len(ps), "graded pick")}, {n_(len(ws), "full write-up")} and
+{n_(len(ls), "originated selection")}.</p>
 <div class="notice info"><strong>Confidence ceiling for {e(name)}:</strong> {e(cap)}.</div>
 <h2>Fixtures and picks</h2>
 <div class="table-wrap"><table><thead><tr><th>Starts</th><th>Fixture</th><th>Competition and venue</th><th>Pick</th><th>Source</th></tr></thead>

@@ -476,7 +476,7 @@ from that same decimal so the two always agree.</p>
          "Darts: the only match listed, Luke Littler v Nathan Aspinall, started at 18:00Z. Nothing is "
          "invented to fill the gap.",
          "https://www.olbg.com/betting-tips/Golf/5"),
-        ("Eight fixtures had already started when the desk was cut",
+        (f"{len(started)} fixtures had already started when the desk was cut",
          "They keep their rows and their sources but carry no pick, because the price could no longer be "
          "taken: " + ", ".join(f["home"] + " v " + f["away"] for f in sorted(started, key=lambda r: r["start_utc"]))
          + ". They are listed on the fixtures page with their status.",

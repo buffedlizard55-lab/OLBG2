@@ -56,6 +56,10 @@ jobs:
           } > data/live_desk/model-debug.txt
           exit 0
 
+      - name: Rebuild the desk pages from the fresh model
+        continue-on-error: true
+        run: python scripts/livedesk_build.py
+
       - name: Upload the raw bodies for offline parsing
         uses: actions/upload-artifact@v4
         with:
@@ -68,7 +72,7 @@ jobs:
         run: |
           git config user.name "livedesk-capture"
           git config user.email "livedesk-capture@users.noreply.github.com"
-          git add data/live_desk/captures/manifest.json data/live_desk/model.json data/live_desk/digest.json data/live_desk/model-debug.txt || true
+          git add data/live_desk/captures/manifest.json data/live_desk/model.json data/live_desk/digest.json data/live_desk/model-debug.txt live-desk index.html || true
           if git diff --cached --quiet; then
             echo "no change"
             exit 0

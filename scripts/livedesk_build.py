@@ -150,6 +150,22 @@ def pill(conf) -> str:
     return f'<span class="pill {conf}">{conf}</span>'
 
 
+def take(ev) -> str:
+    """Our price against the OLBG quote: shorter means the desk rates the side likelier than
+    the market does, which is the only case where the selection is a bet."""
+    if ev.get("tier") != "official-model":
+        return '<span class="pill">market only</span>'
+    q = ev["pick"].get("quoted_decimal") if ev.get("pick") else None
+    try:
+        q = float(q)
+    except (TypeError, ValueError):
+        return '<span class="pill">no quote</span>'
+    fair = float(ev["pick"]["fair_decimal"])
+    if fair < q:
+        return '<span class="pill band">back</span>'
+    return '<span class="pill out">no bet</span>'
+
+
 def band(v) -> str:
     if v is None:
         return "—"
@@ -373,7 +389,9 @@ def build_picks() -> str:
     groups = by_sport()
     parts = ["<div class='hero'><h1>Every graded selection</h1>"
              "<p class='lead'>One row per fixture. The selection is the OLBG-listed market we price; the "
-             "price is ours, from the basis named. Quoted OLBG prices are shown beside it for comparison only."
+             "price is ours, from the basis named. Quoted OLBG prices are shown beside it, and the At that "
+             "price column says whether the selection is worth backing: it reads back only when our price "
+             "is shorter than the quote, and no bet when the market is the shorter side."
              "</p></div>"]
     for sport in SPORTS:
         evs = [x for x in groups.get(sport, []) if x.get("pick")]
@@ -386,6 +404,7 @@ def build_picks() -> str:
             f"<td class='num'>{pct(ev['pick']['probability'])}</td>"
             f"<td class='num'>{am(ev['pick']['fair_american'])}<div class='small'>dec {ev['pick']['fair_decimal']}</div></td>"
             f"<td class='num'>{e(ev['pick'].get('quoted_american') or '—')}</td>"
+            f"<td>{take(ev)}</td>"
             f"<td>{pill(ev['pick']['confidence'])}</td><td>{band(ev['pick']['in_band'])}</td>"
             f"<td class='small'>{e(ev.get('tier',''))}<br>{e(ev.get('basis_detail') or '')}</td>"
             f"<td>{olbg_link(ev)}</td>"

@@ -1,1766 +1,1157 @@
 {
-  "generated_utc": "2026-10-24T17:25:53Z",
-  "session": "arena/ba05b5b6-olbg2",
-  "count": 46,
-  "min_words": 51,
-  "sports": [
-    "Baseball",
-    "Basketball",
-    "Cricket",
-    "Darts",
-    "Handball",
-    "Ice Hockey",
-    "Motor Racing",
-    "Rugby League",
-    "Rugby Union",
-    "Snooker",
-    "Tennis",
-    "Volleyball"
-  ],
-  "unpaid_graded": [],
-  "graded_not_shortlisted": [
-    "nba-0022600095-pick",
-    "el-E2026_73-pick",
-    "el-E2026_79-pick",
-    "el-E2026_77-pick",
-    "rlwc-png-samoa-band",
-    "rlwc-eng-fra-band",
-    "rlwc-nz-cook-pick",
-    "rlwc-nz-cook-band",
-    "rlwc-aus-fiji-pick",
-    "rlwc-aus-fiji-band",
-    "rlwc-r3-nz-fiji-pick",
-    "rlwc-r3-nz-fiji-band",
-    "rlwc-r3-aus-cook-pick",
-    "rlwc-r3-aus-cook-band",
-    "rlwc-r3-leb-fra-band"
-  ],
-  "predictions": [
+ "generated_utc": "2026-10-23T20:20:00Z",
+ "session": "arena/a0c8b7f3-olbg2",
+ "count": 33,
+ "min_words": 51,
+ "sports": [
+  "Baseball",
+  "Basketball",
+  "Cricket",
+  "Darts",
+  "Handball",
+  "Ice Hockey",
+  "Motor Racing",
+  "Rugby League",
+  "Rugby Union",
+  "Snooker",
+  "Tennis",
+  "Volleyball"
+ ],
+ "unpaid_graded": [],
+ "graded_not_shortlisted": [
+  "nba-0022600095-pick",
+  "el-E2026_73-pick",
+  "el-E2026_79-pick",
+  "el-E2026_77-pick",
+  "rlwc-png-samoa-band",
+  "rlwc-eng-fra-band",
+  "rlwc-nz-cook-pick",
+  "rlwc-nz-cook-band",
+  "rlwc-aus-fiji-pick",
+  "rlwc-aus-fiji-band",
+  "rlwc-r3-nz-fiji-pick",
+  "rlwc-r3-nz-fiji-band",
+  "rlwc-r3-aus-cook-pick",
+  "rlwc-r3-aus-cook-band",
+  "rlwc-r3-leb-fra-band"
+ ],
+ "predictions": [
+  {
+   "id": "pred-mlb-849805-pick",
+   "pick_id": "mlb-849805-pick",
+   "fixture_id": "mlb-849805",
+   "sport": "Baseball",
+   "competition": "MLB World Series",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_display": "World Series Game 1, 2026-10-24T00:00Z",
+   "selection": "Milwaukee Brewers",
+   "market": "Money line",
+   "line": null,
+   "probability": 0.651171,
+   "fair_american": -187,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "Milwaukee's home record and a 1.80 ERA meet the Rays",
+   "text": "Milwaukee Brewers to win World Series Game 1 at American Family Field. Milwaukee finished 103-59 with 832 runs scored and 618 allowed, went 55-26 at home and 68-35 at night, and closed the regular season on a five-game winning streak with eight wins in ten. Tampa Bay were 98-64 but 43-38 on the road. Jacob Misiorowski starts for Milwaukee after a 1.80 earned run average with 252 strikeouts in 174.2 innings; Nick Martinez, on a 3.10 ERA, starts for Tampa Bay.",
+   "word_count": 81,
+   "facts": [
     {
-      "id": "pred-mlb-849805-pick",
-      "pick_id": "mlb-849805-pick",
-      "fixture_id": "mlb-849805",
-      "sport": "Baseball",
-      "competition": "MLB World Series",
-      "home": "Milwaukee Brewers",
-      "away": "Tampa Bay Rays",
-      "start_utc": "2026-10-24T00:00:00Z",
-      "time_display": "World Series Game 1, 2026-10-24T00:00Z",
-      "selection": "Milwaukee Brewers",
-      "market": "Money line",
-      "line": null,
-      "probability": 0.651171,
-      "fair_american": -187,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "Milwaukee's home record and a 1.80 ERA meet the Rays",
-      "text": "Milwaukee Brewers to win World Series Game 1 at American Family Field. Milwaukee finished 103-59 with 832 runs scored and 618 allowed, went 55-26 at home and 68-35 at night, and closed the regular season on a five-game winning streak with eight wins in ten. Tampa Bay were 98-64 but 43-38 on the road. Jacob Misiorowski starts for Milwaukee after a 1.80 earned run average with 252 strikeouts in 174.2 innings; Nick Martinez, on a 3.10 ERA, starts for Tampa Bay.",
-      "word_count": 81,
-      "facts": [
-        {
-          "claim": "103-59, .636, 832 scored, 618 allowed, 55-26 at home, 68-35 at night, W5, 8-2 in ten",
-          "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings",
-          "source_key": "mlb_brewers"
-        },
-        {
-          "claim": "2026: 30 starts, 16-5, 1.80 ERA, 174.2 IP, 252 K, 44 BB, 0.80 WHIP, .157 opponents average",
-          "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=607259,694819,656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
-          "source_key": "mlb_pitchers"
-        },
-        {
-          "claim": "2026: 31 starts, 15-6, 3.10 ERA, 180.0 IP, 109 K, 26 BB, 1.09 WHIP, .249 opponents average",
-          "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=607259,694819,656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
-          "source_key": "mlb_pitchers"
-        }
-      ],
-      "official_source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02"
+     "claim": "103-59, .636, 832 scored, 618 allowed, 55-26 at home, 68-35 at night, W5, 8-2 in ten",
+     "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings",
+     "source_key": "mlb_brewers"
     },
     {
-      "id": "pred-el-E2026_73-band",
-      "pick_id": "el-E2026_73-band",
-      "fixture_id": "el-E2026_73",
-      "sport": "Basketball",
-      "competition": "EuroLeague",
-      "home": "Kosner Baskonia Vitoria-Gasteiz",
-      "away": "Real Madrid",
-      "start_utc": null,
-      "time_display": "2026-10-27 16:00 local",
-      "selection": "Over 171.5",
-      "market": "Game total",
-      "line": 171.5,
-      "probability": 0.712865,
-      "fair_american": -248,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Two of Europe's fastest teams meet in Vitoria",
-      "text": "Over 171.5 points in the Real Madrid visit to Baskonia. Real Madrid have scored 667 points in seven EuroLeague games and conceded 630, the highest-scoring record in the competition; Baskonia have conceded 649 in seven, the second-worst defensive record. Adding both clubs' scoring and conceding rates puts the expected total above 171, which is why the desk quotes this alternate line at a fair -248.",
-      "word_count": 65,
-      "facts": [
-        {
-          "claim": "4-3 in 7 EuroLeague games, 667 points for, 630 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        }
-      ],
-      "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
+     "claim": "2026: 30 starts, 16-5, 1.80 ERA, 174.2 IP, 252 K, 44 BB, 0.80 WHIP, .157 opponents average",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=607259,694819,656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "source_key": "mlb_pitchers"
     },
     {
-      "id": "pred-el-E2026_75-band",
-      "pick_id": "el-E2026_75-band",
-      "fixture_id": "el-E2026_75",
-      "sport": "Basketball",
-      "competition": "EuroLeague",
-      "home": "Valencia Basket",
-      "away": "Fenerbahce Tarfin Istanbul",
-      "start_utc": null,
-      "time_display": "2026-10-27 15:30 local",
-      "selection": "Over 163.5",
-      "market": "Game total",
-      "line": 163.5,
-      "probability": 0.706351,
-      "fair_american": -241,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Valencia's scoring rate holds up the total in Spain",
-      "text": "Over 163.5 points in Valencia against Fenerbahce. Fenerbahce have the second-best defensive record in the EuroLeague at 447 conceded in six games, but Valencia have scored 583 in six and conceded 537, so both ends of the floor produce points. The combined rate lands just above this line, which the desk prices at a fair -241, a touch shorter than the 0.700 floor.",
-      "word_count": 63,
-      "facts": [
-        {
-          "claim": "4-2 in 6 EuroLeague games, 583 points for, 537 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        },
-        {
-          "claim": "5-1 in 6 EuroLeague games, 501 points for, 447 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        }
-      ],
-      "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
-    },
-    {
-      "id": "pred-el-E2026_76-pick",
-      "pick_id": "el-E2026_76-pick",
-      "fixture_id": "el-E2026_76",
-      "sport": "Basketball",
-      "competition": "EuroLeague",
-      "home": "Panathinaikos AKTOR Athens",
-      "away": "Armani Olimpia Milan",
-      "start_utc": null,
-      "time_display": "2026-10-27 15:15 local",
-      "selection": "Panathinaikos AKTOR Athens",
-      "market": "Money line",
-      "line": null,
-      "probability": 0.8331,
-      "fair_american": -499,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Panathinaikos' defence has separated the field",
-      "text": "Panathinaikos AKTOR Athens to win at home against Armani Olimpia Milan. Panathinaikos are 6-1 through seven EuroLeague rounds with 613 points scored and 517 conceded, a +96 differential that leads the competition, and they are 5-1 at home and 1-0 away. Milan are 1-6 and have been outscored by 63, with one win in seven. The desk quotes -499 on the Greek side to win outright.",
-      "word_count": 66,
-      "facts": [
-        {
-          "claim": "6-1 in 7 EuroLeague games, 613 points for, 517 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        },
-        {
-          "claim": "1-6 in 7 EuroLeague games, 585 points for, 648 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        }
-      ],
-      "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
-    },
-    {
-      "id": "pred-el-E2026_77-band",
-      "pick_id": "el-E2026_77-band",
-      "fixture_id": "el-E2026_77",
-      "sport": "Basketball",
-      "competition": "EuroLeague",
-      "home": "Hapoel IBI Tel Aviv",
-      "away": "Anadolu Efes Istanbul",
-      "start_utc": null,
-      "time_display": "2026-10-28 14:00 local",
-      "selection": "Over 162.5",
-      "market": "Game total",
-      "line": 162.5,
-      "probability": 0.711368,
-      "fair_american": -246,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Neither defence suppresses a total in Belgrade",
-      "text": "Over 162.5 points when Hapoel IBI Tel Aviv host Anadolu Efes. Hapoel have scored 630 points in seven EuroLeague games and conceded 601; Efes have 581 for and 590 against across the same number of rounds. Both defences sit in the bottom half of the table, so the combined scoring rate supports a total above 162, and the desk quotes this band line at a fair -246.",
-      "word_count": 67,
-      "facts": [
-        {
-          "claim": "5-2 in 7 EuroLeague games, 630 points for, 601 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        },
-        {
-          "claim": "3-4 in 7 EuroLeague games, 581 points for, 590 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        }
-      ],
-      "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
-    },
-    {
-      "id": "pred-el-E2026_80-band",
-      "pick_id": "el-E2026_80-band",
-      "fixture_id": "el-E2026_80",
-      "sport": "Basketball",
-      "competition": "EuroLeague",
-      "home": "Virtus Bologna",
-      "away": "Zalgiris Kaunas",
-      "start_utc": null,
-      "time_display": "2026-10-28 local TBC",
-      "selection": "Over 163.5",
-      "market": "Game total",
-      "line": 163.5,
-      "probability": 0.703827,
-      "fair_american": -238,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Bologna and Kaunas both leak enough to clear this line",
-      "text": "Bologna is the venue for this 163.5-point over. Virtus have scored 606 and conceded 608 across seven EuroLeague rounds, and Zalgiris have 595 for and 602 against in the same number of games, so neither side arrives with a defensive record that suppresses a total. The combined rate sits comfortably above this line, which the desk quotes at a fair -238.",
-      "word_count": 61,
-      "facts": [
-        {
-          "claim": "4-3 in 7 EuroLeague games, 606 points for, 608 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        },
-        {
-          "claim": "3-4 in 7 EuroLeague games, 595 points for, 602 against",
-          "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
-          "source_key": "el_standings"
-        }
-      ],
-      "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
-    },
-    {
-      "id": "pred-cri-40394-band",
-      "pick_id": "cri-40394-band",
-      "fixture_id": "cri-40394",
-      "sport": "Cricket",
-      "competition": "India v Zimbabwe ODIs 2026 (Women)",
-      "home": "India Women",
-      "away": "Zimbabwe Women",
-      "start_utc": null,
-      "time_display": "25 October 2026, 4:30 am viewer-local",
-      "selection": "India Women -14.5",
-      "market": "Handicap",
-      "line": -14.5,
-      "probability": 0.70713,
-      "fair_american": -241,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "Zimbabwe's 197 was passed in 27.1 overs",
-      "text": "A 14.5-run handicap for India Women in the second ODI. Zimbabwe were dismissed for 197 in 49.5 overs in the opener and India knocked off the runs in 27.1 overs for the loss of one wicket, a winning margin far beyond this line. The desk's 14.5-run handicap is the widest that keeps the price near the band ceiling, quoted at -241.",
-      "word_count": 61,
-      "facts": [
-        {
-          "claim": "India Women won by 9 wickets: Zimbabwe Women 197 (49.5), India Women 1-200 (27.1), Vadodara, 23 October 2026",
-          "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
-          "source_key": "cricket_au_done"
-        },
-        {
-          "claim": "2nd ODI, Vadodara International Cricket Stadium, 25 October 2026",
-          "source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026",
-          "source_key": "cricket_au"
-        }
-      ],
-      "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
-    },
-    {
-      "id": "pred-cri-40394-pick",
-      "pick_id": "cri-40394-pick",
-      "fixture_id": "cri-40394",
-      "sport": "Cricket",
-      "competition": "India v Zimbabwe ODIs 2026 (Women)",
-      "home": "India Women",
-      "away": "Zimbabwe Women",
-      "start_utc": null,
-      "time_display": "25 October 2026, 4:30 am viewer-local",
-      "selection": "India Women",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.63,
-      "fair_american": -170,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "India finished the first ODI with 22 overs unused",
-      "text": "India Women to win the second ODI against Zimbabwe Women in Vadodara. The first match finished inside 28 overs of the chase: Zimbabwe were bowled out for 197 in 49.5 overs and India reached 1-200 in 27.1 overs, a nine-wicket win with more than 22 overs unused. The same venue stages the second game, and the desk prices India at -170.",
-      "word_count": 61,
-      "facts": [
-        {
-          "claim": "India Women won by 9 wickets: Zimbabwe Women 197 (49.5), India Women 1-200 (27.1), Vadodara, 23 October 2026",
-          "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
-          "source_key": "cricket_au_done"
-        }
-      ],
-      "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
-    },
-    {
-      "id": "pred-cri-40981-band",
-      "pick_id": "cri-40981-band",
-      "fixture_id": "cri-40981",
-      "sport": "Cricket",
-      "competition": "Pakistan ODI Tri-Series 2026",
-      "home": "Pakistan",
-      "away": "England",
-      "start_utc": null,
-      "time_display": "25 October 2026, 4:00 am viewer-local",
-      "selection": "Pakistan -15.5",
-      "market": "Handicap",
-      "line": -15.5,
-      "probability": 0.709377,
-      "fair_american": -244,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "A 15.5-run cushion sits inside the expected margin",
-      "text": "Pakistan to cover a 15.5-run handicap against England in Lahore. The line sits well below the 42-run margin that the desk derives from the only completed result available, England's two-wicket defeat at Rawalpindi after conceding 430 in 49.5 overs. A 15.5-run cushion is the widest that keeps the selection at roughly seventy per cent, and it is quoted at a fair -244.",
-      "word_count": 62,
-      "facts": [
-        {
-          "claim": "Pakistan v England, Pakistan ODI Tri-Series, Gaddafi Stadium, Lahore, 25 October 2026",
-          "source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026",
-          "source_key": "cricket_au"
-        },
-        {
-          "claim": "Sri Lanka won by 2 wickets: England 4-429 (50.0), Sri Lanka 8-430 (49.5), Rawalpindi, 22 October 2026",
-          "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
-          "source_key": "cricket_au_done"
-        }
-      ],
-      "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
-    },
-    {
-      "id": "pred-cri-40981-pick",
-      "pick_id": "cri-40981-pick",
-      "fixture_id": "cri-40981",
-      "sport": "Cricket",
-      "competition": "Pakistan ODI Tri-Series 2026",
-      "home": "Pakistan",
-      "away": "England",
-      "start_utc": null,
-      "time_display": "25 October 2026, 4:00 am viewer-local",
-      "selection": "Pakistan",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.63,
-      "fair_american": -170,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "England arrive in Lahore after conceding 430",
-      "text": "Pakistan to win the Pakistan ODI Tri-Series match against England at the Gaddafi Stadium. England arrive after conceding 8-430 in 49.5 overs at Rawalpindi, where Sri Lanka chased down 430 with two wickets and one ball in hand. Home conditions in Lahore and England's expensive bowling in that game are the basis of a 63 per cent price, which the desk quotes at -170.",
-      "word_count": 64,
-      "facts": [
-        {
-          "claim": "Sri Lanka won by 2 wickets: England 4-429 (50.0), Sri Lanka 8-430 (49.5), Rawalpindi, 22 October 2026",
-          "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
-          "source_key": "cricket_au_done"
-        }
-      ],
-      "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
-    },
-    {
-      "id": "pred-cri-41095-band",
-      "pick_id": "cri-41095-band",
-      "fixture_id": "cri-41095",
-      "sport": "Cricket",
-      "competition": "New Zealand v India T20Is 2026",
-      "home": "New Zealand",
-      "away": "India",
-      "start_utc": null,
-      "time_display": "24 October 2026, 3:00 am viewer-local",
-      "selection": "India -13.5",
-      "market": "Handicap",
-      "line": -13.5,
-      "probability": 0.707813,
-      "fair_american": -242,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "India chased 226 with two balls to spare at this ground",
-      "text": "India to cover a 13.5-run handicap in the second Twenty20 international at Hagley Oval. India chased 226 with two balls to spare in the first match at the same ground, finishing 6-230 in 19.4 overs after New Zealand made 4-225. A 13.5-run handicap is the widest line that holds the selection near seventy per cent, and the desk quotes -242.",
-      "word_count": 60,
-      "facts": [
-        {
-          "claim": "India won by 4 wickets: New Zealand 4-225 (20.0), India 6-230 (19.4), Hagley Oval, 22 October 2026",
-          "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
-          "source_key": "cricket_au_done"
-        }
-      ],
-      "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
-    },
-    {
-      "id": "pred-drt-r2-1-pick",
-      "pick_id": "drt-r2-1-pick",
-      "fixture_id": "drt-r2-1",
-      "sport": "Darts",
-      "competition": "Machineseeker European Championship",
-      "home": "Ross Smith",
-      "away": "Damon Heta",
-      "start_utc": null,
-      "time_display": "24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)",
-      "selection": "Ross Smith",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.719988,
-      "fair_american": -257,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Top seed against a deciding-leg survivor",
-      "text": "Ross Smith to beat Damon Heta in the second round in Dortmund. Smith is the top seed on the 2026 European Tour Rankings with \u00a3158,000 banked and opened with a 6-4 win over Karel Sedlacek. Heta needed a deciding leg to get past James Wade 6-5 in round one. The seeding and the cleaner opening round put Smith at about 72 per cent, priced at -257 on the money line.",
-      "word_count": 70,
-      "facts": [
-        {
-          "claim": "top seed on the 2026 European Tour Rankings with \u00a3158,000; beat Karel Sedlacek 6-4 in Round One",
-          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
-          "source_key": "pdc_schedule"
-        },
-        {
-          "claim": "17th seed; beat James Wade 6-5 in Round One",
-          "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund",
-          "source_key": "pdc_day_one"
-        }
-      ],
-      "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
-    },
-    {
-      "id": "pred-drt-r2-5-pick",
-      "pick_id": "drt-r2-5-pick",
-      "fixture_id": "drt-r2-5",
-      "sport": "Darts",
-      "competition": "Machineseeker European Championship",
-      "home": "Wessel Nijman",
-      "away": "Ryan Joyce",
-      "start_utc": null,
-      "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
-      "selection": "Wessel Nijman",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.661869,
-      "fair_american": -196,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "Second seed meets the fifteenth",
-      "text": "Wessel Nijman to beat Ryan Joyce in round two. Nijman is the second seed on the 2026 European Tour Rankings with \u00a3124,000, having won two European Tour titles this season; Joyce qualified fifteenth. The gap in the one-year ranking list is the whole basis of the price, and it supports a 66 per cent quote at -196.",
-      "word_count": 57,
-      "facts": [
-        {
-          "claim": "second seed with \u00a3124,000 on the 2026 European Tour Rankings",
-          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
-          "source_key": "pdc_schedule"
-        },
-        {
-          "claim": "15th seed",
-          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
-          "source_key": "pdc_schedule"
-        }
-      ],
-      "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
-    },
-    {
-      "id": "pred-drt-r2-7-pick",
-      "pick_id": "drt-r2-7-pick",
-      "fixture_id": "drt-r2-7",
-      "sport": "Darts",
-      "competition": "Machineseeker European Championship",
-      "home": "Krzysztof Ratajski",
-      "away": "Michael van Gerwen",
-      "start_utc": null,
-      "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
-      "selection": "Krzysztof Ratajski",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.649143,
-      "fair_american": -185,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "A three-time seed takes on the four-time champion",
-      "text": "Krzysztof Ratajski to beat Michael van Gerwen. Ratajski is third on the 2026 European Tour Rankings with \u00a389,500 and arrives as the higher seed, while Van Gerwen is seeded 19th despite his four European Championship titles. Seeding on the one-year list is the only comparative input used here, and it produces a 65 per cent price at -185.",
-      "word_count": 58,
-      "facts": [
-        {
-          "claim": "third seed with \u00a389,500 on the 2026 European Tour Rankings",
-          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
-          "source_key": "pdc_schedule"
-        },
-        {
-          "claim": "four-time European Championship winner; 19th seed",
-          "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
-          "source_key": "pdc_schedule"
-        }
-      ],
-      "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
-    },
-    {
-      "id": "pred-hb-montpellier-saran-band",
-      "pick_id": "hb-montpellier-saran-band",
-      "fixture_id": "hb-montpellier-saran",
-      "sport": "Handball",
-      "competition": "Daikin StarLigue",
-      "home": "Montpellier",
-      "away": "Saran",
-      "start_utc": "2026-10-25T17:00:00+01:00",
-      "time_display": "Sun 25 October, 17:00 local",
-      "selection": "Montpellier -2.5",
-      "market": "Goal handicap",
-      "line": -2.5,
-      "probability": 0.709515,
-      "fair_american": -244,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Nearly six goals a game separate these two",
-      "text": "Montpellier to cover a 2.5-goal handicap against Saran. Montpellier have scored 234 and conceded 205 across seven rounds with only one defeat, while Saran have 202 for and 216 against. The gap in goal difference per game is nearly six, so a 2.5-goal line is well inside the expected margin, and it is quoted at a fair -244 to keep the selection near the band ceiling.",
-      "word_count": 66,
-      "facts": [
-        {
-          "claim": "4-1-2 after 7 rounds, 234 goals for, 205 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        },
-        {
-          "claim": "3-4-0 after 7 rounds, 202 goals for, 216 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        }
-      ],
-      "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
-    },
-    {
-      "id": "pred-hb-nantes-chambery-band",
-      "pick_id": "hb-nantes-chambery-band",
-      "fixture_id": "hb-nantes-chambery",
-      "sport": "Handball",
-      "competition": "Daikin StarLigue",
-      "home": "Nantes",
-      "away": "Chamb\u00e9ry",
-      "start_utc": "2026-10-24T19:00:00+02:00",
-      "time_display": "Sat 24 October, 19:00 local",
-      "selection": "Nantes +2.5",
-      "market": "Goal handicap",
-      "line": 2.5,
-      "probability": 0.703915,
-      "fair_american": -238,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "A plus line on the league's second-best side",
-      "text": "Nantes with a +2.5 start at Chamb\u00e9ry. The plus line collects if Nantes avoid defeat by three goals or more, and their 41-goal positive differential against Chamb\u00e9ry's -7 makes that the strongest available quote near the band ceiling. Nantes have lost once in seven rounds; the desk prices this alternate line at a fair -238.",
-      "word_count": 55,
-      "facts": [
-        {
-          "claim": "6-1-0 after 7 rounds, 244 goals for, 203 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        },
-        {
-          "claim": "2-3-2 after 7 rounds, 224 goals for, 231 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        }
-      ],
-      "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
-    },
-    {
-      "id": "pred-hb-nantes-chambery-pick",
-      "pick_id": "hb-nantes-chambery-pick",
-      "fixture_id": "hb-nantes-chambery",
-      "sport": "Handball",
-      "competition": "Daikin StarLigue",
-      "home": "Nantes",
-      "away": "Chamb\u00e9ry",
-      "start_utc": "2026-10-24T19:00:00+02:00",
-      "time_display": "Sat 24 October, 19:00 local",
-      "selection": "Nantes",
-      "market": "Match winner (three-way)",
-      "line": null,
-      "probability": 0.7396,
-      "fair_american": -284,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Nantes own the division's best scoring rate",
-      "text": "HBC Nantes to beat Chamb\u00e9ry. Nantes are 6-1 after seven rounds with 244 goals scored and 203 conceded, the second-best record in the division; Chamb\u00e9ry have won twice, drawn twice and lost three, and their goal difference is -7. Nantes' scoring rate is the highest in StarLigue, and the desk prices them at -284.",
-      "word_count": 54,
-      "facts": [
-        {
-          "claim": "6-1-0 after 7 rounds, 244 goals for, 203 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        },
-        {
-          "claim": "2-3-2 after 7 rounds, 224 goals for, 231 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        }
-      ],
-      "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
-    },
-    {
-      "id": "pred-hb-sr-paris-pick",
-      "pick_id": "hb-sr-paris-pick",
-      "fixture_id": "hb-sr-paris",
-      "sport": "Handball",
-      "competition": "Daikin StarLigue",
-      "home": "Saint-Rapha\u00ebl",
-      "away": "Paris",
-      "start_utc": "2026-10-25T16:00:00+01:00",
-      "time_display": "Sun 25 October, 16:00 local",
-      "selection": "Paris",
-      "market": "Match winner (three-way)",
-      "line": null,
-      "probability": 0.758718,
-      "fair_american": -314,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "The unbeaten leaders visit the Var",
-      "text": "Paris Saint-Germain Handball to win at Saint-Rapha\u00ebl. Paris have won all seven StarLigue rounds, scoring 239 goals and conceding 190 for a +49 differential that tops the table; Saint-Rapha\u00ebl are 2-5 with 207 scored and 225 conceded. The unbeaten start and the 22-goal gap in goal difference underpin a 76 per cent price at -314.",
-      "word_count": 55,
-      "facts": [
-        {
-          "claim": "7-0-0 after 7 rounds, 239 goals for, 190 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        },
-        {
-          "claim": "2-5-0 after 7 rounds, 207 goals for, 225 against",
-          "source_url": "https://www.lnh.fr/daikin-starligue/classement",
-          "source_key": "lnh_table"
-        }
-      ],
-      "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
-    },
-    {
-      "id": "pred-nhl-2026020166-pick",
-      "pick_id": "nhl-2026020166-pick",
-      "fixture_id": "nhl-2026020166",
-      "sport": "Ice Hockey",
-      "competition": "NHL",
-      "home": "Chicago Blackhawks",
-      "away": "Montr\u00e9al Canadiens",
-      "start_utc": "2026-10-24T00:00:00Z",
-      "time_display": "2026-10-24T00:00:00Z (NHL feed)",
-      "selection": "Montr\u00e9al Canadiens",
-      "market": "Money line",
-      "line": null,
-      "probability": 0.696379,
-      "fair_american": -229,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "Chicago's blank road record meets a superior points percentage",
-      "text": "Montr\u00e9al Canadiens to win at the United Center. Montr\u00e9al are 4-3-2 with 30 goals for and 34 against, and their nine games include a 3-2-1 home record; Chicago are 3-6-0 with only 21 goals scored and 36 conceded, and they have lost all four road games. The NHL feed had Montr\u00e9al at -169, so this is a shorter -229 on the same side, with the away side's superior points percentage doing the work.",
-      "word_count": 73,
-      "facts": [
-        {
-          "claim": "4-3-2 in 9 games, 30 goals for, 34 against, 10 points, OT1 streak",
-          "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
-          "source_key": "nhle_standings"
-        },
-        {
-          "claim": "3-6-0 in 9 games, 21 goals for, 36 against, 6 points, 0-4-0 on the road",
-          "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
-          "source_key": "nhle_standings"
-        },
-        {
-          "claim": "Montr\u00e9al -169 / Chicago +137 published by the NHL schedule feed",
-          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
-          "source_key": "nhle_schedule"
-        }
-      ],
-      "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
-    },
-    {
-      "id": "pred-nhl-2026020167-band",
-      "pick_id": "nhl-2026020167-band",
-      "fixture_id": "nhl-2026020167",
-      "sport": "Ice Hockey",
-      "competition": "NHL",
-      "home": "Colorado Avalanche",
-      "away": "Tampa Bay Lightning",
-      "start_utc": "2026-10-24T01:00:00Z",
-      "time_display": "2026-10-24T01:00:00Z (NHL feed)",
-      "selection": "Over 5.5",
-      "market": "Total goals",
-      "line": 5.5,
-      "probability": 0.703604,
-      "fair_american": -237,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Both blue lines point to six goals or more",
-      "text": "Over 5.5 goals in Colorado. The Avalanche have scored 41 goals in ten games and conceded 31, while Tampa Bay have 31 for and 23 against in nine. Combining both clubs' scoring and conceding rates gives an expected total near 6.7, which puts six or more goals on the board at roughly seventy per cent. The desk quotes that alternate line at a fair -237, and the reasoning is the two goal columns rather than any reported goaltending decision.",
-      "word_count": 79,
-      "facts": [
-        {
-          "claim": "5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2",
-          "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
-          "source_key": "nhle_standings"
-        },
-        {
-          "claim": "7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3",
-          "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
-          "source_key": "nhle_standings"
-        }
-      ],
-      "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
-    },
-    {
-      "id": "pred-nhl-2026020167-pick",
-      "pick_id": "nhl-2026020167-pick",
-      "fixture_id": "nhl-2026020167",
-      "sport": "Ice Hockey",
-      "competition": "NHL",
-      "home": "Colorado Avalanche",
-      "away": "Tampa Bay Lightning",
-      "start_utc": "2026-10-24T01:00:00Z",
-      "time_display": "2026-10-24T01:00:00Z (NHL feed)",
-      "selection": "Tampa Bay Lightning",
-      "market": "Money line",
-      "line": null,
-      "probability": 0.724304,
-      "fair_american": -263,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Tampa Bay carry a three-game run into Denver",
-      "text": "Tampa Bay Lightning to win the money line in Denver. The Lightning are 7-2-0 through nine games with 31 goals scored and 23 conceded, and they arrive on a three-game winning run after a 5-0-0 start at home. Colorado are 5-4-1 and have lost two straight despite scoring 41 times, because they have allowed 31. The NHL's own schedule feed had Tampa Bay at +105 and Colorado at -129, so the desk's -263 quote is a genuine disagreement with the published price rather than a copy of it.",
-      "word_count": 88,
-      "facts": [
-        {
-          "claim": "7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3",
-          "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
-          "source_key": "nhle_standings"
-        },
-        {
-          "claim": "5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2",
-          "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
-          "source_key": "nhle_standings"
-        },
-        {
-          "claim": "Tampa Bay +105 / Colorado -129 published by the NHL schedule feed",
-          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
-          "source_key": "nhle_schedule"
-        }
-      ],
-      "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
-    },
-    {
-      "id": "pred-f1-wdc-pick",
-      "pick_id": "f1-wdc-pick",
-      "fixture_id": "f1-wdc",
-      "sport": "Motor Racing",
-      "competition": "Formula 1",
-      "home": "Formula 1 Drivers' Championship 2026",
-      "away": null,
-      "start_utc": null,
-      "time_display": "Season ends 6 December 2026",
-      "selection": "Kimi Antonelli",
-      "market": "Drivers' Championship",
-      "line": null,
-      "probability": 0.858956,
-      "fair_american": -609,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "A 102-point cushion with five rounds left",
-      "text": "Kimi Antonelli to win the 2026 Drivers' Championship. Antonelli leads on 340 points to George Russell's 238 with five rounds and 130 points still available after Austin, a 102-point cushion, and he won five consecutive rounds from China through Monaco earlier in the season. Only Russell can realistically catch him. The desk prices the title at -609.",
-      "word_count": 57,
-      "facts": [
-        {
-          "claim": "After 17 rounds: Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138",
-          "source_url": "https://www.formula1.com/en/results/2026/drivers",
-          "source_key": "f1_drivers"
-        }
-      ],
-      "official_source_url": "https://www.formula1.com/en/results/2026/drivers"
-    },
-    {
-      "id": "pred-rlwc-eng-fra-pick",
-      "pick_id": "rlwc-eng-fra-pick",
-      "fixture_id": "rlwc-eng-fra",
-      "sport": "Rugby League",
-      "competition": "Rugby League World Cup 2026",
-      "home": "England",
-      "away": "France",
-      "start_utc": "2026-10-24T06:35:00Z",
-      "time_display": "24 October, 2:35am ET (NRL display)",
-      "selection": "England",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.783707,
-      "fair_american": -362,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "France conceded 78 in the opening round",
-      "text": "England to beat France in Perth. France conceded 78 points to Samoa in round one while scoring four, the heaviest defeat of the opening round; England lost 12-30 to Tonga but scored twelve more than France managed. On round-one margins the desk rates England about 78 per cent, which is quoted at -362 with the thin sample stated plainly.",
-      "word_count": 59,
-      "facts": [
-        {
-          "claim": "England lost 12-30 to Tonga at HBF Park",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        },
-        {
-          "claim": "France lost 4-78 to Samoa",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        }
-      ],
-      "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
-    },
-    {
-      "id": "pred-rlwc-png-samoa-pick",
-      "pick_id": "rlwc-png-samoa-pick",
-      "fixture_id": "rlwc-png-samoa",
-      "sport": "Rugby League",
-      "competition": "Rugby League World Cup 2026",
-      "home": "Papua New Guinea",
-      "away": "Samoa",
-      "start_utc": "2026-10-24T04:25:00Z",
-      "time_display": "24 October, 12:25am ET (NRL display)",
-      "selection": "Samoa",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.739967,
-      "fair_american": -285,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Port Moresby hosts the round's two biggest scorers",
-      "text": "Papua New Guinea's home fixture against Samoa leans to the visitors. Samoa beat France 78-4 in round one; Papua New Guinea beat Lebanon 42-18. Samoa's winning margin is fifty points the larger, and they sit second on the ladder to Papua New Guinea's third. The desk quotes -285, while noting that one match per side is a thin basis for any price.",
-      "word_count": 62,
-      "facts": [
-        {
-          "claim": "Samoa beat France 78-4 at CommBank Stadium",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        },
-        {
-          "claim": "Papua New Guinea beat Lebanon 42-18 in Port Moresby",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        }
-      ],
-      "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
-    },
-    {
-      "id": "pred-rlwc-r3-eng-png-pick",
-      "pick_id": "rlwc-r3-eng-png-pick",
-      "fixture_id": "rlwc-r3-eng-png",
-      "sport": "Rugby League",
-      "competition": "Rugby League World Cup 2026",
-      "home": "England",
-      "away": "Papua New Guinea",
-      "start_utc": "2026-10-30T09:05:00Z",
-      "time_display": "30 October, 5:05am ET (NRL display)",
-      "selection": "Papua New Guinea",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.718949,
-      "fair_american": -256,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "A 42-point swing in round-one margins",
-      "text": "Papua New Guinea to beat England in Wollongong on 30 October. Papua New Guinea beat Lebanon 42-18 for a 24-point margin, while England lost 12-30 to Tonga for an 18-point deficit, a 42-point swing in round-one margins. The desk prices Papua New Guinea at -256 and states on the row that a single match per side underpins the number.",
-      "word_count": 59,
-      "facts": [
-        {
-          "claim": "England lost 12-30 to Tonga; Papua New Guinea beat Lebanon 42-18",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        },
-        {
-          "claim": "England lost 12-30 to Tonga; Papua New Guinea beat Lebanon 42-18",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        }
-      ],
-      "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
-    },
-    {
-      "id": "pred-rlwc-r3-leb-fra-pick",
-      "pick_id": "rlwc-r3-leb-fra-pick",
-      "fixture_id": "rlwc-r3-leb-fra",
-      "sport": "Rugby League",
-      "competition": "Rugby League World Cup 2026",
-      "home": "Lebanon",
-      "away": "France",
-      "start_utc": "2026-11-01T05:40:00Z",
-      "time_display": "1 November, 1:40am ET (NRL display)",
-      "selection": "Lebanon",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.75765,
-      "fair_american": -313,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Lebanon scored eighteen; France scored four",
-      "text": "Lebanon to beat France on 1 November. Lebanon lost 18-42 to Papua New Guinea but scored eighteen points; France managed four against Samoa and conceded 78. The margin comparison is the only numeric input available for this fixture, and it puts Lebanon at about 76 per cent, quoted at -313 with the small sample flagged on the row.",
-      "word_count": 58,
-      "facts": [
-        {
-          "claim": "Lebanon lost 18-42 to Papua New Guinea; France lost 4-78 to Samoa",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        },
-        {
-          "claim": "Lebanon lost 18-42 to Papua New Guinea; France lost 4-78 to Samoa",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        }
-      ],
-      "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
-    },
-    {
-      "id": "pred-rlwc-r3-ton-sam-pick",
-      "pick_id": "rlwc-r3-ton-sam-pick",
-      "fixture_id": "rlwc-r3-ton-sam",
-      "sport": "Rugby League",
-      "competition": "Rugby League World Cup 2026",
-      "home": "Tonga",
-      "away": "Samoa",
-      "start_utc": "2026-11-01T08:05:00Z",
-      "time_display": "1 November, 4:05am ET (NRL display)",
-      "selection": "Samoa",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.767441,
-      "fair_american": -330,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Samoa's 74-point margin dwarfs Tonga's 18",
-      "text": "Samoa to beat Tonga in Sydney on 1 November. Samoa opened with a 78-4 win over France, a 74-point margin, while Tonga beat England 30-12 for an 18-point margin. Both are one-match samples, but Samoa's scoring rate is more than double Tonga's and their defensive record is 74 points better, so the desk quotes -330.",
-      "word_count": 55,
-      "facts": [
-        {
-          "claim": "Tonga beat England 30-12; Samoa beat France 78-4",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        },
-        {
-          "claim": "Tonga beat England 30-12; Samoa beat France 78-4",
-          "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
-          "source_key": "nrl_r1"
-        }
-      ],
-      "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
-    },
-    {
-      "id": "pred-ru-quins-saracens-pick",
-      "pick_id": "ru-quins-saracens-pick",
-      "fixture_id": "ru-quins-saracens",
-      "sport": "Rugby Union",
-      "competition": "Gallagher PREM",
-      "home": "Harlequins",
-      "away": "Saracens",
-      "start_utc": null,
-      "time_display": "Sun 25 Oct, 11:00 viewer-local",
-      "selection": "Saracens",
-      "market": "Match winner (three-way)",
-      "line": null,
-      "probability": 0.609079,
-      "fair_american": -156,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "The division's worst defence hosts the second-best",
-      "text": "Saracens to win at Harlequins. Saracens are 2-1 after three Gallagher PREM rounds with a +21 points difference and eleven league points; Harlequins have lost all three with a -68 difference and two points, the worst defensive record in the division. The desk prices Saracens at -156 as a medium-confidence selection, because three rounds is a small sample.",
-      "word_count": 58,
-      "facts": [
-        {
-          "claim": "2-0-1 after three rounds, points difference +21, 11 league points",
-          "source_url": "https://www.premrugby.com/standings",
-          "source_key": "prem_table"
-        },
-        {
-          "claim": "0-0-3 after three rounds, points difference -68, 2 league points",
-          "source_url": "https://www.premrugby.com/standings",
-          "source_key": "prem_table"
-        }
-      ],
-      "official_source_url": "https://www.premrugby.com/fixtures-results"
-    },
-    {
-      "id": "pred-snk-ni-sf1-pick",
-      "pick_id": "snk-ni-sf1-pick",
-      "fixture_id": "snk-ni-sf1",
-      "sport": "Snooker",
-      "competition": "BetVictor Northern Ireland Open 2026",
-      "home": "Kyren Wilson",
-      "away": "Sam Craigie",
-      "start_utc": null,
-      "time_display": "24 October 2026, 08:00 (WST site clock)",
-      "selection": "Kyren Wilson",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.742212,
-      "fair_american": -288,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Five times the ranking money, one frame dropped",
-      "text": "Kyren Wilson to beat Sam Craigie in the Northern Ireland Open semi-final. Wilson is world number nine with \u00a3716,800 on the Johnstone's Paint World Rankings and reached the last four with a 6-1 win over Anthony McGill. Craigie beat Elliot Slessor 6-2. The ranking-money gap is more than five times in Wilson's favour and he has dropped one frame in the quarter-final, so the desk quotes -288.",
-      "word_count": 67,
-      "facts": [
-        {
-          "claim": "world no.9 with \u00a3716,800 on the Johnstone's Paint World Rankings; beat Anthony McGill 6-1 in the quarter-final",
-          "source_url": "https://www.wst.tv/rankings/",
-          "source_key": "wst_rankings"
-        },
-        {
-          "claim": "world no.9 with \u00a3716,800 on the Johnstone's Paint World Rankings; beat Anthony McGill 6-1 in the quarter-final",
-          "source_url": "https://www.wst.tv/rankings/",
-          "source_key": "wst_rankings"
-        },
-        {
-          "claim": "beat Elliot Slessor 6-2 in the quarter-final to reach the semi-final",
-          "source_url": "https://www.wst.tv/matches/",
-          "source_key": "wst_matches"
-        }
-      ],
-      "official_source_url": "https://www.wst.tv/matches/"
-    },
-    {
-      "id": "pred-ten-almaty-sf1-band",
-      "pick_id": "ten-almaty-sf1-band",
-      "fixture_id": "ten-almaty-sf1",
-      "sport": "Tennis",
-      "competition": "ATP Tour",
-      "home": "Daniil Medvedev",
-      "away": "Alexander Bublik",
-      "start_utc": null,
-      "time_display": "2026-10-24 Not before 18:00 local",
-      "selection": "Daniil Medvedev -1.5",
-      "market": "Games handicap",
-      "line": -1.5,
-      "probability": 0.707575,
-      "fair_american": -242,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "A 1.5-game cushion on the world number five",
-      "text": "Daniil Medvedev to cover a 1.5-game handicap in the Almaty semi-final. Medvedev is world number five on 3,660 ATP points and won his quarter-final 6-4 6-4; Bublik is nineteenth on 2,275 and needed three sets, two of them tiebreaks, to beat Karen Khachanov. The ranking gap gives Medvedev a 59 per cent match price, and a 1.5-game cushion lifts the selection to about 71 per cent at -242.",
-      "word_count": 68,
-      "facts": [
-        {
-          "claim": "world no.5 with 3,660 ATP points; beat Terence Atmane 6-4 6-4 in the quarter-final",
-          "source_url": "https://www.atptour.com/en/rankings/singles",
-          "source_key": "atp_rankings"
-        },
-        {
-          "claim": "world no.19 with 2,275 ATP points; beat Karen Khachanov 4-6 7-6(5) 7-6(5)",
-          "source_url": "https://www.atptour.com/en/rankings/singles",
-          "source_key": "atp_rankings"
-        }
-      ],
-      "official_source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
-    },
-    {
-      "id": "pred-vb-civitanova-padova-pick",
-      "pick_id": "vb-civitanova-padova-pick",
-      "fixture_id": "vb-civitanova-padova",
-      "sport": "Volleyball",
-      "competition": "SuperLega",
-      "home": "Cucine Lube Civitanova",
-      "away": "Pallavolo Padova",
-      "start_utc": null,
-      "time_display": "Sun 25 Oct, 18:00 local",
-      "selection": "Cucine Lube Civitanova",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.717254,
-      "fair_american": -254,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Straight sets and a 19-point swing",
-      "text": "Cucine Lube Civitanova to beat Pallavolo Padova. Civitanova won their opener 3-0 with 78 points scored and 65 conceded; Padova lost 0-3, scoring 56 and conceding 75. Both the set count and the point ratio point the same way, a nineteen-point swing across the two openers, and the desk prices the home side at -254 with one round of evidence.",
-      "word_count": 60,
-      "facts": [
-        {
-          "claim": "1 match played, 3-0 sets, 78 points for and 65 against in Round 1",
-          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
-          "source_key": "legavolley_table"
-        },
-        {
-          "claim": "1 match played, 0-3 sets, 56 points for and 75 against in Round 1",
-          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
-          "source_key": "legavolley_table"
-        }
-      ],
-      "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
-    },
-    {
-      "id": "pred-vb-milano-cuneo-pick",
-      "pick_id": "vb-milano-cuneo-pick",
-      "fixture_id": "vb-milano-cuneo",
-      "sport": "Volleyball",
-      "competition": "SuperLega",
-      "home": "Allianz Milano",
-      "away": "Acqua Sant'Anna Cuneo",
-      "start_utc": null,
-      "time_display": "Sun 25 Oct, 19:00 local",
-      "selection": "Acqua Sant'Anna Cuneo",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.627065,
-      "fair_american": -168,
-      "confidence": "medium",
-      "in_band": true,
-      "headline": "Cuneo took two sets and 95 points in defeat",
-      "text": "Acqua Sant'Anna Cuneo to win at Allianz Milano. Cuneo lost their opener 2-3 but took two sets and scored 95 points; Milano lost 0-3 scoring 56 and conceding 79. Cuneo's point ratio is markedly better even in defeat, and the desk quotes -168 as a medium-confidence selection with one round played.",
-      "word_count": 51,
-      "facts": [
-        {
-          "claim": "1 match played, 2-3 sets, 95 points for and 114 against in Round 1",
-          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
-          "source_key": "legavolley_table"
-        },
-        {
-          "claim": "1 match played, 0-3 sets, 56 points for and 79 against in Round 1",
-          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
-          "source_key": "legavolley_table"
-        }
-      ],
-      "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
-    },
-    {
-      "id": "pred-vb-piacenza-modena-pick",
-      "pick_id": "vb-piacenza-modena-pick",
-      "fixture_id": "vb-piacenza-modena",
-      "sport": "Volleyball",
-      "competition": "SuperLega",
-      "home": "Gas Sales Bluenergy Piacenza",
-      "away": "Valsa Group Modena",
-      "start_utc": null,
-      "time_display": "Sun 25 Oct, 18:00 local",
-      "selection": "Gas Sales Bluenergy Piacenza",
-      "market": "Match winner",
-      "line": null,
-      "probability": 0.717254,
-      "fair_american": -254,
-      "confidence": "high",
-      "in_band": false,
-      "headline": "Fifty-six points conceded in a straight-set opener",
-      "text": "Gas Sales Bluenergy Piacenza to beat Valsa Group Modena. Piacenza opened SuperLega with a 3-0 win, scoring 75 points and conceding 56; Modena lost 0-3 and managed 61 points while conceding 75. Set and point ratios both favour the home side, and the desk quotes -254, with the caveat that only one round has been played.",
-      "word_count": 56,
-      "facts": [
-        {
-          "claim": "1 match played, 3-0 sets, 75 points for and 56 against in Round 1",
-          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
-          "source_key": "legavolley_table"
-        },
-        {
-          "claim": "1 match played, 0-3 sets, 61 points for and 75 against in Round 1",
-          "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
-          "source_key": "legavolley_table"
-        }
-      ],
-      "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
-    },
-    {
-      "id": "pred-nba-0022600008-total",
-      "pick_id": "nba-0022600008-total",
-      "fixture_id": "nba-0022600008",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Boston Celtics",
-      "away": "New York Knicks",
-      "start_utc": null,
-      "time_display": "7:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Under 234.5 is the play for Celtics v Knicks",
-      "text": "Under 234.5 is the play for Boston Celtics against the New York Knicks. Boston is 0-1 after the opening games and Devin Carter is out with illness, while New York is also 0-1 after the opening games. With both teams still finding their offence and Carter unavailable, expect a tighter contest that stays under 234.5. Tip time is 7:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 66,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "7:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        },
-        {
-          "claim": "Devin Carter Out \u2014 Illness",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        }
-      ],
-      "official_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-    },
-    {
-      "id": "pred-nba-0022600009-total",
-      "pick_id": "nba-0022600009-total",
-      "fixture_id": "nba-0022600009",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "San Antonio Spurs",
-      "away": "Houston Rockets",
-      "start_utc": null,
-      "time_display": "9:30 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Back the Under 234.5 total for Spurs v Rockets",
-      "text": "Back the Under 234.5 total for San Antonio Spurs against Houston Rockets. San Antonio is 0-1 after the opening games while Houston is 1-0 after the opening games. Tobias Harris is out with a left calf strain and De'Aaron Fox is questionable with a right wrist sprain for the Spurs. With Houston on form and San Antonio depleted, back the Under 234.5 total. Tip time is 9:30 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 74,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Tobias Harris Out \u2014 Left calf strain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "De'Aaron Fox Questionable \u2014 Right wrist sprain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "9:30 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600094-total",
-      "pick_id": "nba-0022600094-total",
-      "fixture_id": "nba-0022600094",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Charlotte Hornets",
-      "away": "Atlanta Hawks",
-      "start_utc": null,
-      "time_display": "7:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "The Under 234.5 total looks right for Hornets v Hawks",
-      "text": "The Under 234.5 total looks right for Charlotte Hornets against Atlanta Hawks. Both sides are 1-0 after the opening games, but Charlotte is missing Kon Knueppel with a left hamstring strain, Coby White with a left calf strain, Grant Williams with a right hamstring strain and Kylan Boswell after right knee surgery. Atlanta is without Mouhamed Gueye and Henri Veesaar. Expect a lower-scoring game under 234.5. Tip time is 7:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 77,
-      "facts": [
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Kon Knueppel Out \u2014 Left hamstring strain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Coby White Out \u2014 Left calf strain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Grant Williams Out \u2014 Right hamstring strain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Kylan Boswell Out \u2014 Right knee surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Mouhamed Gueye Out \u2014 Left foot fracture",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Henri Veesaar Out \u2014 Right ACL tear",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "7:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600095-total",
-      "pick_id": "nba-0022600095-total",
-      "fixture_id": "nba-0022600095",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Indiana Pacers",
-      "away": "Dallas Mavericks",
-      "start_utc": null,
-      "time_display": "7:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "We back Under 234.5 here for Pacers v Mavericks",
-      "text": "We back Under 234.5 here for Indiana Pacers against Dallas Mavericks. Indiana is 1-0 after the opening games and Dallas is 0-1 after the opening games. Dallas is without Dereck Lively II after right foot surgery, Caleb Martin with a right thumb sprain and Santi Aldama after right knee surgery, while Indiana loses T.J. McConnell and Johnny Furphy. A depleted offence on both sides keeps this under 234.5. Tip time is 7:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 79,
-      "facts": [
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Dereck Lively II Out \u2014 Right foot surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Caleb Martin Out \u2014 Right thumb sprain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Santi Aldama Out \u2014 Right knee surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "T.J. McConnell Out \u2014 Right hamstring strain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Johnny Furphy Out \u2014 Right ACL repair/surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "7:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600096-total",
-      "pick_id": "nba-0022600096-total",
-      "fixture_id": "nba-0022600096",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Orlando Magic",
-      "away": "Minnesota Timberwolves",
-      "start_utc": null,
-      "time_display": "7:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Under 234.5 fits this matchup for Magic v Timberwolves",
-      "text": "Under 234.5 fits this matchup for Orlando Magic against Minnesota Timberwolves. Orlando is 0-1 after the opening games and Minnesota is 1-0 after the opening games. Orlando is without Anthony Black, Jonathan Isaac, Izaiyah Nelson and Noah Penda, while Minnesota loses Donte DiVincenzo after right Achilles repair or surgery. A weakened Orlando attack should keep this under 234.5. Tip time is 7:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 69,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Anthony Black Out \u2014 Right ankle sprain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Jonathan Isaac Out \u2014 Left knee injury management",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Izaiyah Nelson Out \u2014 Left ankle injury recovery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Noah Penda Out \u2014 Right partially torn hamstring",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Donte DiVincenzo Out \u2014 Right Achilles repair/surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "7:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600097-total",
-      "pick_id": "nba-0022600097-total",
-      "fixture_id": "nba-0022600097",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Washington Wizards",
-      "away": "Toronto Raptors",
-      "start_utc": null,
-      "time_display": "7:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Selection: Under 234.5 for Wizards v Raptors",
-      "text": "Selection: Under 234.5 \u2014 Washington Wizards against Toronto Raptors. Washington is 1-0 after the opening games and Toronto is 1-0 after the opening games. Washington is missing AJ Dybantsa after a left ankle sprain, Tristan Vukcevic with a left hip impingement and Jamir Watkins after left ACL repair or surgery, while Toronto loses Nate Bittle with a right foot avulsion fracture. Both attacks are depleted, favouring the Under 234.5 total. Tip time is 7:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 81,
-      "facts": [
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "AJ Dybantsa Out \u2014 Left ankle sprain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Tristan Vukcevic Out \u2014 Left hip impingement",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Jamir Watkins Out \u2014 Left ACL repair/surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Nate Bittle Out \u2014 Right foot avulsion fracture",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "7:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600098-total",
-      "pick_id": "nba-0022600098-total",
-      "fixture_id": "nba-0022600098",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Miami Heat",
-      "away": "Detroit Pistons",
-      "start_utc": null,
-      "time_display": "8:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Under 234.5 suits the pace for Heat v Pistons",
-      "text": "Under 234.5 suits the pace for Miami Heat against Detroit Pistons. Miami is 0-1 after the opening games while Detroit is 1-0 after the opening games. Detroit's Taurean Prince is available for personal reasons and Miami's Vladislav Goldin is available despite a right ankle sprain. With Miami winless and both attacks measured early, back the Under 234.5 total. Tip time is 8:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 69,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Taurean Prince Available \u2014 Personal reasons",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Vladislav Goldin Available \u2014 Right ankle sprain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "8:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600099-total",
-      "pick_id": "nba-0022600099-total",
-      "fixture_id": "nba-0022600099",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Milwaukee Bucks",
-      "away": "Chicago Bulls",
-      "start_utc": null,
-      "time_display": "8:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Take the Under 234.5 line for Bucks v Bulls",
-      "text": "Take the Under 234.5 line for Milwaukee Bucks against Chicago Bulls. Both teams are winless after the opening games and Chicago is without Nic Claxton after a left hamstring strain. Two teams still searching for offence should keep this game under 234.5. Tip time is 8:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 53,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Nic Claxton Out \u2014 Left hamstring strain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "8:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600100-total",
-      "pick_id": "nba-0022600100-total",
-      "fixture_id": "nba-0022600100",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Utah Jazz",
-      "away": "New Orleans Pelicans",
-      "start_utc": null,
-      "time_display": "9:30 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "The game total is Under 234.5 for Jazz v Pelicans",
-      "text": "The game total is Under 234.5 for Utah Jazz against New Orleans Pelicans. Utah is 0-1 after the opening games and New Orleans is also 0-1 after the opening games. Utah is missing Jusuf Nurkic after a right second plantar plate tear. New Orleans has not scored freely and both sides are winless, so back the Under 234.5 total. Tip time is 9:30 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 70,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Jusuf Nurkic Out \u2014 Right 2nd plantar plate tear",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "9:30 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600101-total",
-      "pick_id": "nba-0022600101-total",
-      "fixture_id": "nba-0022600101",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Golden State Warriors",
-      "away": "Memphis Grizzlies",
-      "start_utc": null,
-      "time_display": "10:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "We rate Under 234.5 here for Warriors v Grizzlies",
-      "text": "We rate Under 234.5 here for Golden State Warriors against Memphis Grizzlies. Golden State is 0-1 after the opening games while Memphis is 1-0 after the opening games. Golden State is without Jimmy Butler III after right ACL repair or surgery, Moses Moody after left patellar tendon repair or surgery and Kristaps Porzingis, who is not with the team. A depleted Golden State attack points to the Under 234.5 total. Tip time is 10:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 81,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Jimmy Butler III Out \u2014 Right ACL repair/surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Moses Moody Out \u2014 Left patellar tendon repair/surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Kristaps Porzingis Out \u2014 Not with team",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "10:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600102-total",
-      "pick_id": "nba-0022600102-total",
-      "fixture_id": "nba-0022600102",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Los Angeles Lakers",
-      "away": "LA Clippers",
-      "start_utc": null,
-      "time_display": "10:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Under 234.5 looks the play for Lakers v Clippers",
-      "text": "Under 234.5 looks the play for Los Angeles Lakers against LA Clippers. Both sides are 1-0 after the opening games. The Clippers are without Bradley Beal after right knee injury management, Brandon Ingram after right heel surgery, Jordan Miller after left rotator cuff surgery and Max Strus with right plantar fascia. A depleted Clippers offence against a home Lakers side should stay under 234.5. Tip time is 10:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 75,
-      "facts": [
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Bradley Beal Out \u2014 Right knee injury management",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Brandon Ingram Out \u2014 Right heel surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Jordan Miller Out \u2014 Left rotator cuff surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Max Strus Out \u2014 Right plantar fascia",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "10:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-nba-0022600103-total",
-      "pick_id": "nba-0022600103-total",
-      "fixture_id": "nba-0022600103",
-      "sport": "Basketball",
-      "competition": "NBA",
-      "home": "Sacramento Kings",
-      "away": "Portland Trail Blazers",
-      "start_utc": null,
-      "time_display": "10:00 PM ET",
-      "selection": "Under 234.5",
-      "market": "Game total",
-      "line": 234.5,
-      "probability": 0.714,
-      "fair_american": -249,
-      "fair_decimal": 1.401,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Backing Under 234.5 here for Kings v Trail Blazers",
-      "text": "Backing Under 234.5 here for Sacramento Kings against Portland Trail Blazers. Sacramento is 0-1 after the opening games and Portland is 1-0 after the opening games. Portland is without Shaedon Sharpe after right meniscus surgery, Chris Youngblood with left ankle soreness and Branden Carlson in concussion protocol, while Sacramento loses Dylan Cardwell after a left calf strain and Ben Simmons after right Achilles repair or surgery. Two depleted attacks favour the Under 234.5 total. Tip time is 10:00 PM ET. Selection: Under 234.5 total points.",
-      "word_count": 85,
-      "facts": [
-        {
-          "claim": "0-1 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "1-0 after the opening games",
-          "source_url": "https://www.nba.com/standings"
-        },
-        {
-          "claim": "Shaedon Sharpe Out \u2014 Right meniscus surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Chris Youngblood Out \u2014 Left ankle soreness",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Dylan Cardwell Out \u2014 Left calf strain",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "Ben Simmons Out \u2014 Right Achilles repair/surgery",
-          "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-23_03_15PM.pdf"
-        },
-        {
-          "claim": "10:00 PM ET",
-          "source_url": "https://www.nba.com/games?date=2026-10-23"
-        }
-      ],
-      "official_source_url": "https://www.nba.com/games?date=2026-10-23"
-    },
-    {
-      "id": "pred-ru-leicester-northampton-handicap",
-      "pick_id": "ru-leicester-northampton-handicap",
-      "fixture_id": "ru-leicester-northampton",
-      "sport": "Rugby Union",
-      "competition": "Gallagher PREM",
-      "home": "Leicester Tigers",
-      "away": "Northampton Saints",
-      "start_utc": null,
-      "time_display": "Gallagher PREM Round 4, Sat 24 Oct",
-      "selection": "Leicester Tigers -3.5",
-      "market": "Handicap",
-      "line": -3.5,
-      "probability": 0.701,
-      "fair_american": -235,
-      "fair_decimal": 1.427,
-      "confidence": "high",
-      "in_band": true,
-      "headline": "Leicester Tigers -3.5 is the pick in Gallagher PREM Round 4",
-      "text": "Leicester Tigers -3.5 is the pick in Gallagher PREM Round 4. Leicester is 2-0-1 after three rounds with points difference +10 and 11 league points, while Northampton Saints is 2-0-1 after three rounds with points difference +41 and 11 league points. Leicester's edge in this tight Gallagher PREM Round 4 meeting makes the home side the pick to cover -3.5. Selection: Leicester Tigers -3.5 handicap.",
-      "word_count": 65,
-      "facts": [
-        {
-          "claim": "2-0-1 after three rounds, points difference +10, 11 league points",
-          "source_url": "https://www.premrugby.com/standings"
-        },
-        {
-          "claim": "2-0-1 after three rounds, points difference +41, 11 league points",
-          "source_url": "https://www.premrugby.com/standings"
-        },
-        {
-          "claim": "Leicester Tigers v Northampton Saints, Gallagher PREM Round 4, Sat 24 Oct, 10:05 viewer-local",
-          "source_url": "https://www.premrugby.com/fixtures-results"
-        }
-      ],
-      "official_source_url": "https://www.premrugby.com/fixtures-results"
+     "claim": "2026: 31 starts, 15-6, 3.10 ERA, 180.0 IP, 109 K, 26 BB, 1.09 WHIP, .249 opponents average",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=607259,694819,656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "source_key": "mlb_pitchers"
     }
-  ]
+   ],
+   "official_source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-11-02"
+  },
+  {
+   "id": "pred-el-E2026_73-band",
+   "pick_id": "el-E2026_73-band",
+   "fixture_id": "el-E2026_73",
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "home": "Kosner Baskonia Vitoria-Gasteiz",
+   "away": "Real Madrid",
+   "start_utc": null,
+   "time_display": "2026-10-27 16:00 local",
+   "selection": "Over 171.5",
+   "market": "Game total",
+   "line": 171.5,
+   "probability": 0.712865,
+   "fair_american": -248,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "Two of Europe's fastest teams meet in Vitoria",
+   "text": "Over 171.5 points in the Real Madrid visit to Baskonia. Real Madrid have scored 667 points in seven EuroLeague games and conceded 630, the highest-scoring record in the competition; Baskonia have conceded 649 in seven, the second-worst defensive record. Adding both clubs' scoring and conceding rates puts the expected total above 171, which is why the desk quotes this alternate line at a fair -248.",
+   "word_count": 65,
+   "facts": [
+    {
+     "claim": "4-3 in 7 EuroLeague games, 667 points for, 630 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
+  },
+  {
+   "id": "pred-el-E2026_75-band",
+   "pick_id": "el-E2026_75-band",
+   "fixture_id": "el-E2026_75",
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "home": "Valencia Basket",
+   "away": "Fenerbahce Tarfin Istanbul",
+   "start_utc": null,
+   "time_display": "2026-10-27 15:30 local",
+   "selection": "Over 163.5",
+   "market": "Game total",
+   "line": 163.5,
+   "probability": 0.706351,
+   "fair_american": -241,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "Valencia's scoring rate holds up the total in Spain",
+   "text": "Over 163.5 points in Valencia against Fenerbahce. Fenerbahce have the second-best defensive record in the EuroLeague at 447 conceded in six games, but Valencia have scored 583 in six and conceded 537, so both ends of the floor produce points. The combined rate lands just above this line, which the desk prices at a fair -241, a touch shorter than the 0.700 floor.",
+   "word_count": 63,
+   "facts": [
+    {
+     "claim": "4-2 in 6 EuroLeague games, 583 points for, 537 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    },
+    {
+     "claim": "5-1 in 6 EuroLeague games, 501 points for, 447 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
+  },
+  {
+   "id": "pred-el-E2026_76-pick",
+   "pick_id": "el-E2026_76-pick",
+   "fixture_id": "el-E2026_76",
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "home": "Panathinaikos AKTOR Athens",
+   "away": "Armani Olimpia Milan",
+   "start_utc": null,
+   "time_display": "2026-10-27 15:15 local",
+   "selection": "Panathinaikos AKTOR Athens",
+   "market": "Money line",
+   "line": null,
+   "probability": 0.8331,
+   "fair_american": -499,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Panathinaikos' defence has separated the field",
+   "text": "Panathinaikos AKTOR Athens to win at home against Armani Olimpia Milan. Panathinaikos are 6-1 through seven EuroLeague rounds with 613 points scored and 517 conceded, a +96 differential that leads the competition, and they are 5-1 at home and 1-0 away. Milan are 1-6 and have been outscored by 63, with one win in seven. The desk quotes -499 on the Greek side to win outright.",
+   "word_count": 66,
+   "facts": [
+    {
+     "claim": "6-1 in 7 EuroLeague games, 613 points for, 517 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    },
+    {
+     "claim": "1-6 in 7 EuroLeague games, 585 points for, 648 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
+  },
+  {
+   "id": "pred-el-E2026_77-band",
+   "pick_id": "el-E2026_77-band",
+   "fixture_id": "el-E2026_77",
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "home": "Hapoel IBI Tel Aviv",
+   "away": "Anadolu Efes Istanbul",
+   "start_utc": null,
+   "time_display": "2026-10-28 14:00 local",
+   "selection": "Over 162.5",
+   "market": "Game total",
+   "line": 162.5,
+   "probability": 0.711368,
+   "fair_american": -246,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "Neither defence suppresses a total in Belgrade",
+   "text": "Over 162.5 points when Hapoel IBI Tel Aviv host Anadolu Efes. Hapoel have scored 630 points in seven EuroLeague games and conceded 601; Efes have 581 for and 590 against across the same number of rounds. Both defences sit in the bottom half of the table, so the combined scoring rate supports a total above 162, and the desk quotes this band line at a fair -246.",
+   "word_count": 67,
+   "facts": [
+    {
+     "claim": "5-2 in 7 EuroLeague games, 630 points for, 601 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    },
+    {
+     "claim": "3-4 in 7 EuroLeague games, 581 points for, 590 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
+  },
+  {
+   "id": "pred-el-E2026_80-band",
+   "pick_id": "el-E2026_80-band",
+   "fixture_id": "el-E2026_80",
+   "sport": "Basketball",
+   "competition": "EuroLeague",
+   "home": "Virtus Bologna",
+   "away": "Zalgiris Kaunas",
+   "start_utc": null,
+   "time_display": "2026-10-28 local TBC",
+   "selection": "Over 163.5",
+   "market": "Game total",
+   "line": 163.5,
+   "probability": 0.703827,
+   "fair_american": -238,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "Bologna and Kaunas both leak enough to clear this line",
+   "text": "Bologna is the venue for this 163.5-point over. Virtus have scored 606 and conceded 608 across seven EuroLeague rounds, and Zalgiris have 595 for and 602 against in the same number of games, so neither side arrives with a defensive record that suppresses a total. The combined rate sits comfortably above this line, which the desk quotes at a fair -238.",
+   "word_count": 61,
+   "facts": [
+    {
+     "claim": "4-3 in 7 EuroLeague games, 606 points for, 608 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    },
+    {
+     "claim": "3-4 in 7 EuroLeague games, 595 points for, 602 against",
+     "source_url": "https://www.euroleaguebasketball.net/en/euroleague/standings/",
+     "source_key": "el_standings"
+    }
+   ],
+   "official_source_url": "https://www.euroleaguebasketball.net/en/euroleague/game-center/?round=8&season=E2026"
+  },
+  {
+   "id": "pred-cri-40394-band",
+   "pick_id": "cri-40394-band",
+   "fixture_id": "cri-40394",
+   "sport": "Cricket",
+   "competition": "India v Zimbabwe ODIs 2026 (Women)",
+   "home": "India Women",
+   "away": "Zimbabwe Women",
+   "start_utc": null,
+   "time_display": "25 October 2026, 4:30 am viewer-local",
+   "selection": "India Women -14.5",
+   "market": "Handicap",
+   "line": -14.5,
+   "probability": 0.70713,
+   "fair_american": -241,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "Zimbabwe's 197 was passed in 27.1 overs",
+   "text": "A 14.5-run handicap for India Women in the second ODI. Zimbabwe were dismissed for 197 in 49.5 overs in the opener and India knocked off the runs in 27.1 overs for the loss of one wicket, a winning margin far beyond this line. The desk's 14.5-run handicap is the widest that keeps the price near the band ceiling, quoted at -241.",
+   "word_count": 61,
+   "facts": [
+    {
+     "claim": "India Women won by 9 wickets: Zimbabwe Women 197 (49.5), India Women 1-200 (27.1), Vadodara, 23 October 2026",
+     "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
+     "source_key": "cricket_au_done"
+    },
+    {
+     "claim": "2nd ODI, Vadodara International Cricket Stadium, 25 October 2026",
+     "source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026",
+     "source_key": "cricket_au"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
+  },
+  {
+   "id": "pred-cri-40394-pick",
+   "pick_id": "cri-40394-pick",
+   "fixture_id": "cri-40394",
+   "sport": "Cricket",
+   "competition": "India v Zimbabwe ODIs 2026 (Women)",
+   "home": "India Women",
+   "away": "Zimbabwe Women",
+   "start_utc": null,
+   "time_display": "25 October 2026, 4:30 am viewer-local",
+   "selection": "India Women",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.63,
+   "fair_american": -170,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "India finished the first ODI with 22 overs unused",
+   "text": "India Women to win the second ODI against Zimbabwe Women in Vadodara. The first match finished inside 28 overs of the chase: Zimbabwe were bowled out for 197 in 49.5 overs and India reached 1-200 in 27.1 overs, a nine-wicket win with more than 22 overs unused. The same venue stages the second game, and the desk prices India at -170.",
+   "word_count": 61,
+   "facts": [
+    {
+     "claim": "India Women won by 9 wickets: Zimbabwe Women 197 (49.5), India Women 1-200 (27.1), Vadodara, 23 October 2026",
+     "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
+     "source_key": "cricket_au_done"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
+  },
+  {
+   "id": "pred-cri-40981-band",
+   "pick_id": "cri-40981-band",
+   "fixture_id": "cri-40981",
+   "sport": "Cricket",
+   "competition": "Pakistan ODI Tri-Series 2026",
+   "home": "Pakistan",
+   "away": "England",
+   "start_utc": null,
+   "time_display": "25 October 2026, 4:00 am viewer-local",
+   "selection": "Pakistan -15.5",
+   "market": "Handicap",
+   "line": -15.5,
+   "probability": 0.709377,
+   "fair_american": -244,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "A 15.5-run cushion sits inside the expected margin",
+   "text": "Pakistan to cover a 15.5-run handicap against England in Lahore. The line sits well below the 42-run margin that the desk derives from the only completed result available, England's two-wicket defeat at Rawalpindi after conceding 430 in 49.5 overs. A 15.5-run cushion is the widest that keeps the selection at roughly seventy per cent, and it is quoted at a fair -244.",
+   "word_count": 62,
+   "facts": [
+    {
+     "claim": "Pakistan v England, Pakistan ODI Tri-Series, Gaddafi Stadium, Lahore, 25 October 2026",
+     "source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026",
+     "source_key": "cricket_au"
+    },
+    {
+     "claim": "Sri Lanka won by 2 wickets: England 4-429 (50.0), Sri Lanka 8-430 (49.5), Rawalpindi, 22 October 2026",
+     "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
+     "source_key": "cricket_au_done"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
+  },
+  {
+   "id": "pred-cri-40981-pick",
+   "pick_id": "cri-40981-pick",
+   "fixture_id": "cri-40981",
+   "sport": "Cricket",
+   "competition": "Pakistan ODI Tri-Series 2026",
+   "home": "Pakistan",
+   "away": "England",
+   "start_utc": null,
+   "time_display": "25 October 2026, 4:00 am viewer-local",
+   "selection": "Pakistan",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.63,
+   "fair_american": -170,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "England arrive in Lahore after conceding 430",
+   "text": "Pakistan to win the Pakistan ODI Tri-Series match against England at the Gaddafi Stadium. England arrive after conceding 8-430 in 49.5 overs at Rawalpindi, where Sri Lanka chased down 430 with two wickets and one ball in hand. Home conditions in Lahore and England's expensive bowling in that game are the basis of a 63 per cent price, which the desk quotes at -170.",
+   "word_count": 64,
+   "facts": [
+    {
+     "claim": "Sri Lanka won by 2 wickets: England 4-429 (50.0), Sri Lanka 8-430 (49.5), Rawalpindi, 22 October 2026",
+     "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
+     "source_key": "cricket_au_done"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
+  },
+  {
+   "id": "pred-cri-41095-band",
+   "pick_id": "cri-41095-band",
+   "fixture_id": "cri-41095",
+   "sport": "Cricket",
+   "competition": "New Zealand v India T20Is 2026",
+   "home": "New Zealand",
+   "away": "India",
+   "start_utc": null,
+   "time_display": "24 October 2026, 3:00 am viewer-local",
+   "selection": "India -13.5",
+   "market": "Handicap",
+   "line": -13.5,
+   "probability": 0.707813,
+   "fair_american": -242,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "India chased 226 with two balls to spare at this ground",
+   "text": "India to cover a 13.5-run handicap in the second Twenty20 international at Hagley Oval. India chased 226 with two balls to spare in the first match at the same ground, finishing 6-230 in 19.4 overs after New Zealand made 4-225. A 13.5-run handicap is the widest line that holds the selection near seventy per cent, and the desk quotes -242.",
+   "word_count": 60,
+   "facts": [
+    {
+     "claim": "India won by 4 wickets: New Zealand 4-225 (20.0), India 6-230 (19.4), Hagley Oval, 22 October 2026",
+     "source_url": "https://www.cricket.com.au/matches?isCompleted=1&year=2026",
+     "source_key": "cricket_au_done"
+    }
+   ],
+   "official_source_url": "https://www.cricket.com.au/matches?isCompleted=0&year=2026"
+  },
+  {
+   "id": "pred-drt-r2-1-pick",
+   "pick_id": "drt-r2-1-pick",
+   "fixture_id": "drt-r2-1",
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "home": "Ross Smith",
+   "away": "Damon Heta",
+   "start_utc": null,
+   "time_display": "24 October 2026, Round Two Saturday afternoon (13:00-17:00 / 19:00-23:00 CEST)",
+   "selection": "Ross Smith",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.719988,
+   "fair_american": -257,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Top seed against a deciding-leg survivor",
+   "text": "Ross Smith to beat Damon Heta in the second round in Dortmund. Smith is the top seed on the 2026 European Tour Rankings with £158,000 banked and opened with a 6-4 win over Karel Sedlacek. Heta needed a deciding leg to get past James Wade 6-5 in round one. The seeding and the cleaner opening round put Smith at about 72 per cent, priced at -257 on the money line.",
+   "word_count": 70,
+   "facts": [
+    {
+     "claim": "top seed on the 2026 European Tour Rankings with £158,000; beat Karel Sedlacek 6-4 in Round One",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+     "source_key": "pdc_schedule"
+    },
+    {
+     "claim": "17th seed; beat James Wade 6-5 in Round One",
+     "source_url": "https://www.pdc.tv/news/2026/october/22/nine-dart-star-woodhouse-sets-up-van-veen-clash-dortmund",
+     "source_key": "pdc_day_one"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+  },
+  {
+   "id": "pred-drt-r2-5-pick",
+   "pick_id": "drt-r2-5-pick",
+   "fixture_id": "drt-r2-5",
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "home": "Wessel Nijman",
+   "away": "Ryan Joyce",
+   "start_utc": null,
+   "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
+   "selection": "Wessel Nijman",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.661869,
+   "fair_american": -196,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "Second seed meets the fifteenth",
+   "text": "Wessel Nijman to beat Ryan Joyce in round two. Nijman is the second seed on the 2026 European Tour Rankings with £124,000, having won two European Tour titles this season; Joyce qualified fifteenth. The gap in the one-year ranking list is the whole basis of the price, and it supports a 66 per cent quote at -196.",
+   "word_count": 57,
+   "facts": [
+    {
+     "claim": "second seed with £124,000 on the 2026 European Tour Rankings",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+     "source_key": "pdc_schedule"
+    },
+    {
+     "claim": "15th seed",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+     "source_key": "pdc_schedule"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+  },
+  {
+   "id": "pred-drt-r2-7-pick",
+   "pick_id": "drt-r2-7-pick",
+   "fixture_id": "drt-r2-7",
+   "sport": "Darts",
+   "competition": "Machineseeker European Championship",
+   "home": "Krzysztof Ratajski",
+   "away": "Michael van Gerwen",
+   "start_utc": null,
+   "time_display": "24 October 2026, Round Two Saturday evening (13:00-17:00 / 19:00-23:00 CEST)",
+   "selection": "Krzysztof Ratajski",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.649143,
+   "fair_american": -185,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "A three-time seed takes on the four-time champion",
+   "text": "Krzysztof Ratajski to beat Michael van Gerwen. Ratajski is third on the 2026 European Tour Rankings with £89,500 and arrives as the higher seed, while Van Gerwen is seeded 19th despite his four European Championship titles. Seeding on the one-year list is the only comparative input used here, and it produces a 65 per cent price at -185.",
+   "word_count": 58,
+   "facts": [
+    {
+     "claim": "third seed with £89,500 on the 2026 European Tour Rankings",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+     "source_key": "pdc_schedule"
+    },
+    {
+     "claim": "four-time European Championship winner; 19th seed",
+     "source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/",
+     "source_key": "pdc_schedule"
+    }
+   ],
+   "official_source_url": "https://www.pdc.tv/news/2026/october/21/2026-machineseeker-european-championship-preview/"
+  },
+  {
+   "id": "pred-hb-montpellier-saran-band",
+   "pick_id": "hb-montpellier-saran-band",
+   "fixture_id": "hb-montpellier-saran",
+   "sport": "Handball",
+   "competition": "Daikin StarLigue",
+   "home": "Montpellier",
+   "away": "Saran",
+   "start_utc": "2026-10-25T17:00:00+01:00",
+   "time_display": "Sun 25 October, 17:00 local",
+   "selection": "Montpellier -2.5",
+   "market": "Goal handicap",
+   "line": -2.5,
+   "probability": 0.709515,
+   "fair_american": -244,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "Nearly six goals a game separate these two",
+   "text": "Montpellier to cover a 2.5-goal handicap against Saran. Montpellier have scored 234 and conceded 205 across seven rounds with only one defeat, while Saran have 202 for and 216 against. The gap in goal difference per game is nearly six, so a 2.5-goal line is well inside the expected margin, and it is quoted at a fair -244 to keep the selection near the band ceiling.",
+   "word_count": 66,
+   "facts": [
+    {
+     "claim": "4-1-2 after 7 rounds, 234 goals for, 205 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    },
+    {
+     "claim": "3-4-0 after 7 rounds, 202 goals for, 216 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "id": "pred-hb-nantes-chambery-band",
+   "pick_id": "hb-nantes-chambery-band",
+   "fixture_id": "hb-nantes-chambery",
+   "sport": "Handball",
+   "competition": "Daikin StarLigue",
+   "home": "Nantes",
+   "away": "Chambéry",
+   "start_utc": "2026-10-24T19:00:00+02:00",
+   "time_display": "Sat 24 October, 19:00 local",
+   "selection": "Nantes +2.5",
+   "market": "Goal handicap",
+   "line": 2.5,
+   "probability": 0.703915,
+   "fair_american": -238,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "A plus line on the league's second-best side",
+   "text": "Nantes with a +2.5 start at Chambéry. The plus line collects if Nantes avoid defeat by three goals or more, and their 41-goal positive differential against Chambéry's -7 makes that the strongest available quote near the band ceiling. Nantes have lost once in seven rounds; the desk prices this alternate line at a fair -238.",
+   "word_count": 55,
+   "facts": [
+    {
+     "claim": "6-1-0 after 7 rounds, 244 goals for, 203 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    },
+    {
+     "claim": "2-3-2 after 7 rounds, 224 goals for, 231 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "id": "pred-hb-nantes-chambery-pick",
+   "pick_id": "hb-nantes-chambery-pick",
+   "fixture_id": "hb-nantes-chambery",
+   "sport": "Handball",
+   "competition": "Daikin StarLigue",
+   "home": "Nantes",
+   "away": "Chambéry",
+   "start_utc": "2026-10-24T19:00:00+02:00",
+   "time_display": "Sat 24 October, 19:00 local",
+   "selection": "Nantes",
+   "market": "Match winner (three-way)",
+   "line": null,
+   "probability": 0.7396,
+   "fair_american": -284,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Nantes own the division's best scoring rate",
+   "text": "HBC Nantes to beat Chambéry. Nantes are 6-1 after seven rounds with 244 goals scored and 203 conceded, the second-best record in the division; Chambéry have won twice, drawn twice and lost three, and their goal difference is -7. Nantes' scoring rate is the highest in StarLigue, and the desk prices them at -284.",
+   "word_count": 54,
+   "facts": [
+    {
+     "claim": "6-1-0 after 7 rounds, 244 goals for, 203 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    },
+    {
+     "claim": "2-3-2 after 7 rounds, 224 goals for, 231 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "id": "pred-hb-sr-paris-pick",
+   "pick_id": "hb-sr-paris-pick",
+   "fixture_id": "hb-sr-paris",
+   "sport": "Handball",
+   "competition": "Daikin StarLigue",
+   "home": "Saint-Raphaël",
+   "away": "Paris",
+   "start_utc": "2026-10-25T16:00:00+01:00",
+   "time_display": "Sun 25 October, 16:00 local",
+   "selection": "Paris",
+   "market": "Match winner (three-way)",
+   "line": null,
+   "probability": 0.758718,
+   "fair_american": -314,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "The unbeaten leaders visit the Var",
+   "text": "Paris Saint-Germain Handball to win at Saint-Raphaël. Paris have won all seven StarLigue rounds, scoring 239 goals and conceding 190 for a +49 differential that tops the table; Saint-Raphaël are 2-5 with 207 scored and 225 conceded. The unbeaten start and the 22-goal gap in goal difference underpin a 76 per cent price at -314.",
+   "word_count": 55,
+   "facts": [
+    {
+     "claim": "7-0-0 after 7 rounds, 239 goals for, 190 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    },
+    {
+     "claim": "2-5-0 after 7 rounds, 207 goals for, 225 against",
+     "source_url": "https://www.lnh.fr/daikin-starligue/classement",
+     "source_key": "lnh_table"
+    }
+   ],
+   "official_source_url": "https://www.lnh.fr/daikin-starligue/calendrier"
+  },
+  {
+   "id": "pred-nhl-2026020166-pick",
+   "pick_id": "nhl-2026020166-pick",
+   "fixture_id": "nhl-2026020166",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Chicago Blackhawks",
+   "away": "Montréal Canadiens",
+   "start_utc": "2026-10-24T00:00:00Z",
+   "time_display": "2026-10-24T00:00:00Z (NHL feed)",
+   "selection": "Montréal Canadiens",
+   "market": "Money line",
+   "line": null,
+   "probability": 0.696379,
+   "fair_american": -229,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "Chicago's blank road record meets a superior points percentage",
+   "text": "Montréal Canadiens to win at the United Center. Montréal are 4-3-2 with 30 goals for and 34 against, and their nine games include a 3-2-1 home record; Chicago are 3-6-0 with only 21 goals scored and 36 conceded, and they have lost all four road games. The NHL feed had Montréal at -169, so this is a shorter -229 on the same side, with the away side's superior points percentage doing the work.",
+   "word_count": 73,
+   "facts": [
+    {
+     "claim": "4-3-2 in 9 games, 30 goals for, 34 against, 10 points, OT1 streak",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+     "source_key": "nhle_standings"
+    },
+    {
+     "claim": "3-6-0 in 9 games, 21 goals for, 36 against, 6 points, 0-4-0 on the road",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+     "source_key": "nhle_standings"
+    },
+    {
+     "claim": "Montréal -169 / Chicago +137 published by the NHL schedule feed",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+     "source_key": "nhle_schedule"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+  },
+  {
+   "id": "pred-nhl-2026020167-band",
+   "pick_id": "nhl-2026020167-band",
+   "fixture_id": "nhl-2026020167",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Colorado Avalanche",
+   "away": "Tampa Bay Lightning",
+   "start_utc": "2026-10-24T01:00:00Z",
+   "time_display": "2026-10-24T01:00:00Z (NHL feed)",
+   "selection": "Over 5.5",
+   "market": "Total goals",
+   "line": 5.5,
+   "probability": 0.703604,
+   "fair_american": -237,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "Both blue lines point to six goals or more",
+   "text": "Over 5.5 goals in Colorado. The Avalanche have scored 41 goals in ten games and conceded 31, while Tampa Bay have 31 for and 23 against in nine. Combining both clubs' scoring and conceding rates gives an expected total near 6.7, which puts six or more goals on the board at roughly seventy per cent. The desk quotes that alternate line at a fair -237, and the reasoning is the two goal columns rather than any reported goaltending decision.",
+   "word_count": 79,
+   "facts": [
+    {
+     "claim": "5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+     "source_key": "nhle_standings"
+    },
+    {
+     "claim": "7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+     "source_key": "nhle_standings"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+  },
+  {
+   "id": "pred-nhl-2026020167-pick",
+   "pick_id": "nhl-2026020167-pick",
+   "fixture_id": "nhl-2026020167",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Colorado Avalanche",
+   "away": "Tampa Bay Lightning",
+   "start_utc": "2026-10-24T01:00:00Z",
+   "time_display": "2026-10-24T01:00:00Z (NHL feed)",
+   "selection": "Tampa Bay Lightning",
+   "market": "Money line",
+   "line": null,
+   "probability": 0.724304,
+   "fair_american": -263,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Tampa Bay carry a three-game run into Denver",
+   "text": "Tampa Bay Lightning to win the money line in Denver. The Lightning are 7-2-0 through nine games with 31 goals scored and 23 conceded, and they arrive on a three-game winning run after a 5-0-0 start at home. Colorado are 5-4-1 and have lost two straight despite scoring 41 times, because they have allowed 31. The NHL's own schedule feed had Tampa Bay at +105 and Colorado at -129, so the desk's -263 quote is a genuine disagreement with the published price rather than a copy of it.",
+   "word_count": 88,
+   "facts": [
+    {
+     "claim": "7-2-0 in 9 games, 31 goals for, 23 against, 14 points, W3",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+     "source_key": "nhle_standings"
+    },
+    {
+     "claim": "5-4-1 in 10 games, 41 goals for, 31 against, 11 points, L2",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-23",
+     "source_key": "nhle_standings"
+    },
+    {
+     "claim": "Tampa Bay +105 / Colorado -129 published by the NHL schedule feed",
+     "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23",
+     "source_key": "nhle_schedule"
+    }
+   ],
+   "official_source_url": "https://api-web.nhle.com/v1/schedule/2026-10-23"
+  },
+  {
+   "id": "pred-f1-wdc-pick",
+   "pick_id": "f1-wdc-pick",
+   "fixture_id": "f1-wdc",
+   "sport": "Motor Racing",
+   "competition": "Formula 1",
+   "home": "Formula 1 Drivers' Championship 2026",
+   "away": null,
+   "start_utc": null,
+   "time_display": "Season ends 6 December 2026",
+   "selection": "Kimi Antonelli",
+   "market": "Drivers' Championship",
+   "line": null,
+   "probability": 0.858956,
+   "fair_american": -609,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "A 102-point cushion with five rounds left",
+   "text": "Kimi Antonelli to win the 2026 Drivers' Championship. Antonelli leads on 340 points to George Russell's 238 with five rounds and 130 points still available after Austin, a 102-point cushion, and he won five consecutive rounds from China through Monaco earlier in the season. Only Russell can realistically catch him. The desk prices the title at -609.",
+   "word_count": 57,
+   "facts": [
+    {
+     "claim": "After 17 rounds: Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "source_key": "f1_drivers"
+    }
+   ],
+   "official_source_url": "https://www.formula1.com/en/results/2026/drivers"
+  },
+  {
+   "id": "pred-rlwc-eng-fra-pick",
+   "pick_id": "rlwc-eng-fra-pick",
+   "fixture_id": "rlwc-eng-fra",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "home": "England",
+   "away": "France",
+   "start_utc": "2026-10-24T06:35:00Z",
+   "time_display": "24 October, 2:35am ET (NRL display)",
+   "selection": "England",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.783707,
+   "fair_american": -362,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "France conceded 78 in the opening round",
+   "text": "England to beat France in Perth. France conceded 78 points to Samoa in round one while scoring four, the heaviest defeat of the opening round; England lost 12-30 to Tonga but scored twelve more than France managed. On round-one margins the desk rates England about 78 per cent, which is quoted at -362 with the thin sample stated plainly.",
+   "word_count": 59,
+   "facts": [
+    {
+     "claim": "England lost 12-30 to Tonga at HBF Park",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    },
+    {
+     "claim": "France lost 4-78 to Samoa",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+  },
+  {
+   "id": "pred-rlwc-png-samoa-pick",
+   "pick_id": "rlwc-png-samoa-pick",
+   "fixture_id": "rlwc-png-samoa",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "home": "Papua New Guinea",
+   "away": "Samoa",
+   "start_utc": "2026-10-24T04:25:00Z",
+   "time_display": "24 October, 12:25am ET (NRL display)",
+   "selection": "Samoa",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.739967,
+   "fair_american": -285,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Port Moresby hosts the round's two biggest scorers",
+   "text": "Papua New Guinea's home fixture against Samoa leans to the visitors. Samoa beat France 78-4 in round one; Papua New Guinea beat Lebanon 42-18. Samoa's winning margin is fifty points the larger, and they sit second on the ladder to Papua New Guinea's third. The desk quotes -285, while noting that one match per side is a thin basis for any price.",
+   "word_count": 62,
+   "facts": [
+    {
+     "claim": "Samoa beat France 78-4 at CommBank Stadium",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    },
+    {
+     "claim": "Papua New Guinea beat Lebanon 42-18 in Port Moresby",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+  },
+  {
+   "id": "pred-rlwc-r3-eng-png-pick",
+   "pick_id": "rlwc-r3-eng-png-pick",
+   "fixture_id": "rlwc-r3-eng-png",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "home": "England",
+   "away": "Papua New Guinea",
+   "start_utc": "2026-10-30T09:05:00Z",
+   "time_display": "30 October, 5:05am ET (NRL display)",
+   "selection": "Papua New Guinea",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.718949,
+   "fair_american": -256,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "A 42-point swing in round-one margins",
+   "text": "Papua New Guinea to beat England in Wollongong on 30 October. Papua New Guinea beat Lebanon 42-18 for a 24-point margin, while England lost 12-30 to Tonga for an 18-point deficit, a 42-point swing in round-one margins. The desk prices Papua New Guinea at -256 and states on the row that a single match per side underpins the number.",
+   "word_count": 59,
+   "facts": [
+    {
+     "claim": "England lost 12-30 to Tonga; Papua New Guinea beat Lebanon 42-18",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    },
+    {
+     "claim": "England lost 12-30 to Tonga; Papua New Guinea beat Lebanon 42-18",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+  },
+  {
+   "id": "pred-rlwc-r3-leb-fra-pick",
+   "pick_id": "rlwc-r3-leb-fra-pick",
+   "fixture_id": "rlwc-r3-leb-fra",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "home": "Lebanon",
+   "away": "France",
+   "start_utc": "2026-11-01T05:40:00Z",
+   "time_display": "1 November, 1:40am ET (NRL display)",
+   "selection": "Lebanon",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.75765,
+   "fair_american": -313,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Lebanon scored eighteen; France scored four",
+   "text": "Lebanon to beat France on 1 November. Lebanon lost 18-42 to Papua New Guinea but scored eighteen points; France managed four against Samoa and conceded 78. The margin comparison is the only numeric input available for this fixture, and it puts Lebanon at about 76 per cent, quoted at -313 with the small sample flagged on the row.",
+   "word_count": 58,
+   "facts": [
+    {
+     "claim": "Lebanon lost 18-42 to Papua New Guinea; France lost 4-78 to Samoa",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    },
+    {
+     "claim": "Lebanon lost 18-42 to Papua New Guinea; France lost 4-78 to Samoa",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+  },
+  {
+   "id": "pred-rlwc-r3-ton-sam-pick",
+   "pick_id": "rlwc-r3-ton-sam-pick",
+   "fixture_id": "rlwc-r3-ton-sam",
+   "sport": "Rugby League",
+   "competition": "Rugby League World Cup 2026",
+   "home": "Tonga",
+   "away": "Samoa",
+   "start_utc": "2026-11-01T08:05:00Z",
+   "time_display": "1 November, 4:05am ET (NRL display)",
+   "selection": "Samoa",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.767441,
+   "fair_american": -330,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Samoa's 74-point margin dwarfs Tonga's 18",
+   "text": "Samoa to beat Tonga in Sydney on 1 November. Samoa opened with a 78-4 win over France, a 74-point margin, while Tonga beat England 30-12 for an 18-point margin. Both are one-match samples, but Samoa's scoring rate is more than double Tonga's and their defensive record is 74 points better, so the desk quotes -330.",
+   "word_count": 55,
+   "facts": [
+    {
+     "claim": "Tonga beat England 30-12; Samoa beat France 78-4",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    },
+    {
+     "claim": "Tonga beat England 30-12; Samoa beat France 78-4",
+     "source_url": "https://www.nrl.com/draw/?competition=131&round=1&season=2026",
+     "source_key": "nrl_r1"
+    }
+   ],
+   "official_source_url": "https://www.nrl.com/draw/?competition=131&round=2&season=2026"
+  },
+  {
+   "id": "pred-ru-quins-saracens-pick",
+   "pick_id": "ru-quins-saracens-pick",
+   "fixture_id": "ru-quins-saracens",
+   "sport": "Rugby Union",
+   "competition": "Gallagher PREM",
+   "home": "Harlequins",
+   "away": "Saracens",
+   "start_utc": null,
+   "time_display": "Sun 25 Oct, 11:00 viewer-local",
+   "selection": "Saracens",
+   "market": "Match winner (three-way)",
+   "line": null,
+   "probability": 0.609079,
+   "fair_american": -156,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "The division's worst defence hosts the second-best",
+   "text": "Saracens to win at Harlequins. Saracens are 2-1 after three Gallagher PREM rounds with a +21 points difference and eleven league points; Harlequins have lost all three with a -68 difference and two points, the worst defensive record in the division. The desk prices Saracens at -156 as a medium-confidence selection, because three rounds is a small sample.",
+   "word_count": 58,
+   "facts": [
+    {
+     "claim": "2-0-1 after three rounds, points difference +21, 11 league points",
+     "source_url": "https://www.premrugby.com/standings",
+     "source_key": "prem_table"
+    },
+    {
+     "claim": "0-0-3 after three rounds, points difference -68, 2 league points",
+     "source_url": "https://www.premrugby.com/standings",
+     "source_key": "prem_table"
+    }
+   ],
+   "official_source_url": "https://www.premrugby.com/fixtures-results"
+  },
+  {
+   "id": "pred-snk-ni-sf1-pick",
+   "pick_id": "snk-ni-sf1-pick",
+   "fixture_id": "snk-ni-sf1",
+   "sport": "Snooker",
+   "competition": "BetVictor Northern Ireland Open 2026",
+   "home": "Kyren Wilson",
+   "away": "Sam Craigie",
+   "start_utc": null,
+   "time_display": "24 October 2026, 08:00 (WST site clock)",
+   "selection": "Kyren Wilson",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.742212,
+   "fair_american": -288,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Five times the ranking money, one frame dropped",
+   "text": "Kyren Wilson to beat Sam Craigie in the Northern Ireland Open semi-final. Wilson is world number nine with £716,800 on the Johnstone's Paint World Rankings and reached the last four with a 6-1 win over Anthony McGill. Craigie beat Elliot Slessor 6-2. The ranking-money gap is more than five times in Wilson's favour and he has dropped one frame in the quarter-final, so the desk quotes -288.",
+   "word_count": 67,
+   "facts": [
+    {
+     "claim": "world no.9 with £716,800 on the Johnstone's Paint World Rankings; beat Anthony McGill 6-1 in the quarter-final",
+     "source_url": "https://www.wst.tv/rankings/",
+     "source_key": "wst_rankings"
+    },
+    {
+     "claim": "world no.9 with £716,800 on the Johnstone's Paint World Rankings; beat Anthony McGill 6-1 in the quarter-final",
+     "source_url": "https://www.wst.tv/rankings/",
+     "source_key": "wst_rankings"
+    },
+    {
+     "claim": "beat Elliot Slessor 6-2 in the quarter-final to reach the semi-final",
+     "source_url": "https://www.wst.tv/matches/",
+     "source_key": "wst_matches"
+    }
+   ],
+   "official_source_url": "https://www.wst.tv/matches/"
+  },
+  {
+   "id": "pred-ten-almaty-sf1-band",
+   "pick_id": "ten-almaty-sf1-band",
+   "fixture_id": "ten-almaty-sf1",
+   "sport": "Tennis",
+   "competition": "ATP Tour",
+   "home": "Daniil Medvedev",
+   "away": "Alexander Bublik",
+   "start_utc": null,
+   "time_display": "2026-10-24 Not before 18:00 local",
+   "selection": "Daniil Medvedev -1.5",
+   "market": "Games handicap",
+   "line": -1.5,
+   "probability": 0.707575,
+   "fair_american": -242,
+   "confidence": "high",
+   "in_band": true,
+   "headline": "A 1.5-game cushion on the world number five",
+   "text": "Daniil Medvedev to cover a 1.5-game handicap in the Almaty semi-final. Medvedev is world number five on 3,660 ATP points and won his quarter-final 6-4 6-4; Bublik is nineteenth on 2,275 and needed three sets, two of them tiebreaks, to beat Karen Khachanov. The ranking gap gives Medvedev a 59 per cent match price, and a 1.5-game cushion lifts the selection to about 71 per cent at -242.",
+   "word_count": 68,
+   "facts": [
+    {
+     "claim": "world no.5 with 3,660 ATP points; beat Terence Atmane 6-4 6-4 in the quarter-final",
+     "source_url": "https://www.atptour.com/en/rankings/singles",
+     "source_key": "atp_rankings"
+    },
+    {
+     "claim": "world no.19 with 2,275 ATP points; beat Karen Khachanov 4-6 7-6(5) 7-6(5)",
+     "source_url": "https://www.atptour.com/en/rankings/singles",
+     "source_key": "atp_rankings"
+    }
+   ],
+   "official_source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule"
+  },
+  {
+   "id": "pred-vb-civitanova-padova-pick",
+   "pick_id": "vb-civitanova-padova-pick",
+   "fixture_id": "vb-civitanova-padova",
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "home": "Cucine Lube Civitanova",
+   "away": "Pallavolo Padova",
+   "start_utc": null,
+   "time_display": "Sun 25 Oct, 18:00 local",
+   "selection": "Cucine Lube Civitanova",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.717254,
+   "fair_american": -254,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Straight sets and a 19-point swing",
+   "text": "Cucine Lube Civitanova to beat Pallavolo Padova. Civitanova won their opener 3-0 with 78 points scored and 65 conceded; Padova lost 0-3, scoring 56 and conceding 75. Both the set count and the point ratio point the same way, a nineteen-point swing across the two openers, and the desk prices the home side at -254 with one round of evidence.",
+   "word_count": 60,
+   "facts": [
+    {
+     "claim": "1 match played, 3-0 sets, 78 points for and 65 against in Round 1",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+     "source_key": "legavolley_table"
+    },
+    {
+     "claim": "1 match played, 0-3 sets, 56 points for and 75 against in Round 1",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+     "source_key": "legavolley_table"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+  },
+  {
+   "id": "pred-vb-milano-cuneo-pick",
+   "pick_id": "vb-milano-cuneo-pick",
+   "fixture_id": "vb-milano-cuneo",
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "home": "Allianz Milano",
+   "away": "Acqua Sant'Anna Cuneo",
+   "start_utc": null,
+   "time_display": "Sun 25 Oct, 19:00 local",
+   "selection": "Acqua Sant'Anna Cuneo",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.627065,
+   "fair_american": -168,
+   "confidence": "medium",
+   "in_band": true,
+   "headline": "Cuneo took two sets and 95 points in defeat",
+   "text": "Acqua Sant'Anna Cuneo to win at Allianz Milano. Cuneo lost their opener 2-3 but took two sets and scored 95 points; Milano lost 0-3 scoring 56 and conceding 79. Cuneo's point ratio is markedly better even in defeat, and the desk quotes -168 as a medium-confidence selection with one round played.",
+   "word_count": 51,
+   "facts": [
+    {
+     "claim": "1 match played, 2-3 sets, 95 points for and 114 against in Round 1",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+     "source_key": "legavolley_table"
+    },
+    {
+     "claim": "1 match played, 0-3 sets, 56 points for and 79 against in Round 1",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+     "source_key": "legavolley_table"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+  },
+  {
+   "id": "pred-vb-piacenza-modena-pick",
+   "pick_id": "vb-piacenza-modena-pick",
+   "fixture_id": "vb-piacenza-modena",
+   "sport": "Volleyball",
+   "competition": "SuperLega",
+   "home": "Gas Sales Bluenergy Piacenza",
+   "away": "Valsa Group Modena",
+   "start_utc": null,
+   "time_display": "Sun 25 Oct, 18:00 local",
+   "selection": "Gas Sales Bluenergy Piacenza",
+   "market": "Match winner",
+   "line": null,
+   "probability": 0.717254,
+   "fair_american": -254,
+   "confidence": "high",
+   "in_band": false,
+   "headline": "Fifty-six points conceded in a straight-set opener",
+   "text": "Gas Sales Bluenergy Piacenza to beat Valsa Group Modena. Piacenza opened SuperLega with a 3-0 win, scoring 75 points and conceding 56; Modena lost 0-3 and managed 61 points while conceding 75. Set and point ratios both favour the home side, and the desk quotes -254, with the caveat that only one round has been played.",
+   "word_count": 56,
+   "facts": [
+    {
+     "claim": "1 match played, 3-0 sets, 75 points for and 56 against in Round 1",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+     "source_key": "legavolley_table"
+    },
+    {
+     "claim": "1 match played, 0-3 sets, 61 points for and 75 against in Round 1",
+     "source_url": "https://www.legavolley.it/classifica/?IdCampionato=999",
+     "source_key": "legavolley_table"
+    }
+   ],
+   "official_source_url": "https://www.legavolley.it/calendario/?idCampionato=999"
+  }
+ ]
 }

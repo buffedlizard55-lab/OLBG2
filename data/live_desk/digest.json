@@ -1,86 +1,414 @@
 {
- "captured_at": "2026-10-24T18:25:18Z",
- "events_per_sport": {
-  "Greyhounds": 53,
-  "Volleyball": 11,
-  "Rugby Union": 5,
-  "Darts": 5,
-  "Ice Hockey": 20,
-  "Basketball": 9,
-  "Cricket": 14,
-  "Baseball": 1,
-  "Tennis": 6,
-  "Handball": 36,
-  "Gaelic Sports": 7,
-  "Motor Racing": 1,
-  "Rugby League": 3
- },
- "picks_per_sport": {
-  "Greyhounds": 53,
-  "Volleyball": 11,
-  "Rugby Union": 5,
-  "Darts": 5,
-  "Ice Hockey": 20,
-  "Basketball": 9,
-  "Cricket": 14,
-  "Baseball": 1,
-  "Tennis": 6,
-  "Handball": 36,
-  "Gaelic Sports": 7,
-  "Motor Racing": 1,
-  "Rugby League": 3
- },
- "high_per_sport": {
-  "Volleyball": 10,
-  "Darts": 1,
-  "Ice Hockey": 5,
-  "Greyhounds": 1,
-  "Rugby Union": 2,
-  "Basketball": 5,
-  "Tennis": 5,
-  "Cricket": 2,
-  "Handball": 27
- },
- "verified": 13,
- "total": 171,
+ "captured_at": "2026-10-24T18:26:07Z",
+ "events_per_sport": {},
+ "picks_per_sport": {},
+ "high_per_sport": {},
+ "verified": 0,
+ "total": 0,
  "tiers": {
-  "official-model": 12,
-  "quoted-market": 159,
+  "official-model": 0,
+  "quoted-market": 0,
   "crowd-consensus": 0,
   "no-basis": 0
  },
- "wta_players_parsed": 17,
- "f1_drivers_parsed": 23,
+ "wta_players_parsed": 0,
+ "f1_drivers_parsed": 0,
  "failures": [
   {
+   "key": "olbg_hub_golf",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Golf/5",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_volleyball",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Volleyball/21",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_rugby_union",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_cricket",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Cricket/7",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_snooker",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Snooker/8",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_darts",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_baseball",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Baseball/12",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_gaelic_football",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_hurling",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Hurling/26",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_greyhounds",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_tennis",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_motor_racing",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_handball",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Handball/20",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_ice_hockey",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_basketball",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Basketball/4",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "olbg_hub_rugby_league",
+   "status": null,
+   "url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "ieh_sched_2026-10-24",
+   "status": null,
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "ieh_sched_2026-10-25",
+   "status": null,
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-25",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "ieh_sched_2026-10-26",
+   "status": null,
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-26",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "ieh_standings",
+   "status": null,
+   "url": "https://api-web.nhle.com/v1/standings/now",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "ieh_club_stats",
+   "status": null,
+   "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "mlb_sched",
+   "status": null,
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-11-03&hydrate=probablePitcher",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "mlb_hitting",
+   "status": null,
+   "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2026&group=hitting&stats=season&sportIds=1",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "mlb_pitching",
+   "status": null,
+   "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2026&group=pitching&stats=season&sportIds=1",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "mlb_standings",
+   "status": null,
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "el_sched8",
+   "status": null,
+   "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=8",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "el_sched9",
+   "status": null,
+   "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=9",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "el_standings",
+   "status": null,
+   "url": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "wta_scores",
+   "status": null,
+   "url": "https://www.wtatennis.com/scores",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "wta_rankings",
+   "status": null,
+   "url": "https://www.wtatennis.com/rankings/singles",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "wta_tournaments",
+   "status": null,
+   "url": "https://www.wtatennis.com/tournaments",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "ca_upcoming",
+   "status": null,
+   "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "icc_odi",
+   "status": null,
+   "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/odi",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "icc_t20",
+   "status": null,
+   "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/t20i",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "urc_matchcentre",
+   "status": null,
+   "url": "https://www.unitedrugby.com/match-centre",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "prem_fixtures",
+   "status": null,
+   "url": "https://www.premrugby.com/fixtures",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "prem_table",
+   "status": null,
+   "url": "https://www.premrugby.com/table",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "rlwc_fixtures",
+   "status": null,
+   "url": "https://www.rlwc2026.com/fixtures",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "nrl_draw",
+   "status": null,
+   "url": "https://www.nrl.com/draw/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
    "key": "superleague",
-   "status": 500,
+   "status": null,
    "url": "https://www.superleague.co.uk/fixtures",
-   "error": "HTTPError 500"
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "ehf_calendar",
+   "status": null,
+   "url": "https://www.eurohandball.com/en/calendar/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "lnh",
+   "status": null,
+   "url": "https://www.lnh.fr/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "asobal",
+   "status": null,
+   "url": "https://www.asobal.es/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "cev_club",
+   "status": null,
+   "url": "https://www.cev.eu/club/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "volleyballworld",
+   "status": null,
+   "url": "https://en.volleyballworld.com/volleyball/competitions/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "plusliga",
+   "status": null,
+   "url": "https://www.plusliga.pl/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "dpwt_schedule",
+   "status": null,
+   "url": "https://www.europeantour.com/dpworld-tour/schedule/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
   },
   {
    "key": "dpwt_leaderboard",
-   "status": 404,
+   "status": null,
    "url": "https://www.europeantour.com/dpworld-tour/leaderboard",
-   "error": "HTTPError 404"
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "pga_schedule",
+   "status": null,
+   "url": "https://www.pgatour.com/schedule",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "wst_matches",
+   "status": null,
+   "url": "https://www.wst.tv/matches",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "wst_rankings",
+   "status": null,
+   "url": "https://www.wst.tv/rankings/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "wst_tournaments",
+   "status": null,
+   "url": "https://www.wst.tv/tournaments",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "pdc_tournaments",
+   "status": null,
+   "url": "https://www.pdc.tv/tournaments",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "pdc_oom",
+   "status": null,
+   "url": "https://www.pdc.tv/order-of-merit",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "pdc_euro",
+   "status": null,
+   "url": "https://www.pdc.tv/tournament/european-championship",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "gbgb_racing",
+   "status": null,
+   "url": "https://www.gbgb.org.uk/racing/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "gbgb_results",
+   "status": null,
+   "url": "https://www.gbgb.org.uk/racing/results/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "gbgb_open",
+   "status": null,
+   "url": "https://www.gbgb.org.uk/racing/open-races/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "gaa_fixtures",
+   "status": null,
+   "url": "https://www.gaa.ie/fixtures-results",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "gaa_club",
+   "status": null,
+   "url": "https://www.gaa.ie/fixtures-results?type=club",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "gaa_hurling",
+   "status": null,
+   "url": "https://www.gaa.ie/hurling/",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "f1_calendar",
+   "status": null,
+   "url": "https://www.formula1.com/en/racing/2026",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
+  },
+  {
+   "key": "f1_standings",
+   "status": null,
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "error": "URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>"
   }
  ],
- "review_items": 158,
+ "review_items": 0,
  "top5_counts": {
   "Golf": 0,
-  "Volleyball": 5,
-  "Rugby Union": 4,
-  "Cricket": 5,
+  "Volleyball": 0,
+  "Rugby Union": 0,
+  "Cricket": 0,
   "Snooker": 0,
-  "Darts": 3,
-  "Baseball": 1,
-  "Gaelic Sports": 5,
-  "Greyhounds": 5,
-  "Tennis": 5,
+  "Darts": 0,
+  "Baseball": 0,
+  "Gaelic Sports": 0,
+  "Greyhounds": 0,
+  "Tennis": 0,
   "Motor Racing": 0,
-  "Handball": 5,
-  "Ice Hockey": 5,
-  "Basketball": 5,
+  "Handball": 0,
+  "Ice Hockey": 0,
+  "Basketball": 0,
   "Rugby League": 0
  }
 }

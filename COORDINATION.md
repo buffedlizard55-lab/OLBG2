@@ -5208,3 +5208,18 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 **Integrity rule:** source preservation is not source verification. No row, statistic, injury, start time or prose claim will be marked confirmed without a first-hand official-source read in this session or a clearly identified raw official capture. Unsupported values stay blank and are flagged. Prediction prose must not contain the internal-only terms prohibited by the brief.
 
 **Rebase note:** the initial shallow checkout made Git replay the already-merged PR #197 merge as an ordinary commit, producing add/add conflicts in `COORDINATION.md`, two cadence JSON files and `index.html`. The rebase was aborted before any edit or claim commit; no work was discarded. History was deepened, PR #197 was confirmed as an ancestor of current `origin/main` (PR #199), and the branch was then fast-forwarded by rebase with a clean tree.
+
+### `arena/34af5757-olbg2` A1 audit result and cross-scope handoff (2026-10-24 17:56 UTC)
+
+- **Published audit:** [`research/34af5757-evidence-audit.md`](research/34af5757-evidence-audit.md) and [`data/audit34/report.json`](data/audit34/report.json). Scope is the current `/today/` board plus root navigation; no historical desk is represented as freshly fact-checked.
+- **Checks:** 1,512 field/row/arithmetic/prose/link assertions; 18 findings; 315 `/today/` table-body rows all have external review links; zero local link/anchor errors; focused tests 9/9; repository link audit zero errors.
+- **First-hand official reads:** NHL score and standings feeds for 2026-10-24; MLB schedule and 2026 standings; OLBG Ice Hockey hub for time-sensitive listing drift. Exact URLs and the fields each response supported are in the report.
+- **High-priority irregularities:** official NHL coverage is 7 of 12 games (missing 2026020175–2026020179 even though five corresponding OLBG ids are stored); Boston is 69.95% but labelled high under a 65% configuration; New Jersey leads the executive cards while outside the requested band; Washington has no stored OLBG event link; the Vegas “best record” superlative is contradicted by Boston's official 17 points versus 16.
+- **Citation/prose irregularities:** Washington leader facts cite the schedule endpoint rather than the score endpoint; Boston/Vegas goal totals need the standings endpoint; MLB total rows omit their standings input links; NHL third-party Tipsport prices are described as the league's own quote; two player figures are missing from the displayed fact arrays.
+- **Coverage limits:** no NHL totals and no handicap lines anywhere in `/today/`; raw historical source responses are not committed; only one published pick meets the combined ≥70%, in-band, stored-OLBG-link and written-preview rules.
+
+**Cross-scope request (no other session's files edited):** the active `/today/`, root and live-desk owners should resolve or explicitly carry these findings into their Flagged for Review page before final integration. In particular, do not call the current seven-NHL-row set a full list or its five rows five qualified high-confidence picks.
+
+**Rebase conflict resolution:** rebasing onto PR #202 produced an append-only `COORDINATION.md` conflict. The resolution retained the complete EX6 and Clarity blocks from `main` followed by this session's claim, removing only conflict-marker lines at that tail. Other pre-existing marker lines elsewhere in the board were left untouched and remain a known repository irregularity.
+
+**A2 deployment watch:** after PR #201, `Validate Pages content` run `40118054738` failed and the Pages API reported `errored`; PR #202 validation/deployment was queued at the last check. No workflow or another owner's generated file was changed by this session.

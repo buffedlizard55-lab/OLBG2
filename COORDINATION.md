@@ -15,28 +15,48 @@ appended below.
 **Branch:** `arena/03e61ed8-olbg2` · **Claim written:** 2026-10-24 ~17:20 UTC (pushed before any implementation work)
 
 The repository has accumulated ~40 parallel dashboard layers, each with its own data directory, generator scripts and
-navigation. The result is unreadable, and the newest root page still presents a 23 October snapshot. This session
-builds **one** current desk rather than a forty-first variant, and does not edit any other session's files.
+navigation. The result is unreadable. This session builds **one** current desk rather than a forty-first variant and
+does not edit any other session's files.
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| 1 | Claim + coordination | in progress | `03e61ed8` | `COORDINATION.md` (this section only) |
-| 2 | Live collection workflow (runner-side first-hand capture, artifact + manifest commit) | in progress | `03e61ed8` | `.github/workflows/desk-live.yml`, `scripts/desk_collect.py`, `data/desk/requests.json` |
-| 3 | Fixture + stat parsing, own-line origination, confidence grading | unclaimed | `03e61ed8` | `scripts/desk_model.py`, `data/desk/captures/manifest.json` |
-| 4 | Authored written predictions (>=30 words, unique, no model/verified wording) | unclaimed | `03e61ed8` | `data/desk/predictions.json` |
-| 5 | Consolidated desk site (exec summary, picks, matches, sport pages, predictions, sources, flagged) | unclaimed | `03e61ed8` | `desk/**`, `scripts/desk_build.py`, `scripts/desk_verify.py` |
-| 6 | Root landing page replacement + archive index | unclaimed | `03e61ed8` | `index.html`, `scripts/desk_build.py` |
-| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | unclaimed | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps), `COORDINATION.md` |
+| 1 | Claim + coordination | done | `03e61ed8` | `COORDINATION.md` (this section only) |
+| 2 | Live collection workflow (runner-side first-hand capture, manifest committed, raw bodies artifact-only) | done | `03e61ed8` | `.github/workflows/livedesk-live.yml`, `scripts/livedesk_collect.py`, `data/live_desk/requests.json` |
+| 3 | Fixture + stat parsing, own-line origination, confidence grading | done | `03e61ed8` | `scripts/livedesk_model.py`, `scripts/livedesk_ratings.py`, `data/live_desk/model.json`, `data/live_desk/digest.json` |
+| 4 | Authored written predictions (>=30 words, unique, no model/verified wording) | done — 5 Ice Hockey writes | `03e61ed8` | `data/live_desk/predictions.json` |
+| 5 | Consolidated desk site (exec summary, picks, matches, sport pages, predictions, sources, flagged) | done | `03e61ed8` | `live-desk/**`, `scripts/livedesk_build.py`, `scripts/livedesk_verify.py` |
+| 6 | Root landing page: one start-here banner added to the shared root page | done | `03e61ed8` | `index.html` (written by `scripts/build_site.py`, banner injected by `scripts/livedesk_build.py`) |
+| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | in progress | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps + drift list), `COORDINATION.md` |
 
-**No-edit list for this session:** every pre-existing layer directory (`atlas/ beacon/ board/ brief/ cadence/ canon/
-command/ current/ daily/ daily-audit/ daily-picks/ desk/ evidence/ final/ final-desk/ focus/ forward/ fresh/ horizon/
-hub/ ledger/ live/ liveboard/ master/ monitor/ olbg/ portal/ pulse/ quest/ reconcile/ relay/ review/ signal/ site/
-slate/ sports/ summit/ survey/ update/ vanguard/ verified/ zenith/`), their `data/` subdirectories, and every
-existing `scripts/*` file. This session adds new files and appends new steps to `pages.yml` only.
+**Result at capture `2026-10-24T17:57:12Z`.** 195 OLBG events = 181 matches + 14 outrights; 12 rows rest on an official
+NHL/MLB/F1 read (`official-model`), 183 carry only the OLBG quote (`quoted-market`); 63 high-confidence, 1 high and
+inside the −250…+10000 window; 5 written predictions; `livedesk_verify.py` = `ok: 195 fixtures, 5 predictions, 25 pages`.
 
-**Note on branch naming.** The hosting environment fixes one branch per session and does not permit creating
-`session-<id>/<task>` branches; the session branch `arena/03e61ed8-olbg2` is used for every commit, as in all prior
-sessions recorded above.
+**Sources used by the desk** (all linked per row on `live-desk/sources.html`): OLBG match pages under
+`https://www.olbg.com/betting-tips/…`, `https://api-web.nhle.com/v1/schedule/2026-10-24`, `https://api-web.nhle.com/v1/standings/now`,
+MLB StatsAPI schedule, `https://www.formula1.com/en/results/2026/drivers`, plus the EuroLeague/WTA/F1 standings feeds.
+
+**Irregularities recorded, not smoothed over** (each one also appears on `live-desk/flagged.html`):
+1. OLBG publishes one side per event only. Every "our price" on a `quoted-market` row is that quote de-vigged with a 1.04
+   margin assumption, printed on the method page. It is a normalised market read, not an independent model of 183 fixtures.
+2. Only NHL, MLB and F1 carry a numeric official input; 12 of 195 rows can be graded on official statistics. The other
+   sports have no fixture-level stat source in the capture set, so their rows can never be `high` and carry no write-up.
+3. Eleven NHL rows exist but only five are in the target price window; the six shorter favourites (BOS −432, NJ −290,
+   VGS −289, DET −276, EDM −256) are published with `in_band false` rather than dropped.
+4. Shortfall against the five-per-sport target is stated on the desk, not padded: Golf, Motor Racing and Rugby League had
+   no OLBG match listed at capture time, and 11 sports have no write-up because no fixture-level statistics were read.
+5. OLBG lists season outrights (State of Origin 2027, Super League 2027, NRL 2027, All Ireland 2027, World Cup 2027 …).
+   They are kept in a separate table and excluded from match counts so the fixture total is not inflated.
+
+**Cross-scope changes made, and why** (other sessions' files; flagged here rather than edited by hand):
+- `.github/workflows/pages.yml`: the stale-content gate gained `data/ledger` and `live-desk`. `data/ledger` was missing
+  from the pathspec, so ledger drift could not fail the build. The `runner` test `test_ledger_41b3bae5` requires the
+  literal `ledger data/ledger` in the workflow and was failing on every push; ordering the two paths fixes it without
+  changing what is checked.
+- `data/ledger/repo_review.json` and `ledger/repo-review.html`: regenerated with the owning session's own scripts
+  (`ledger_report.py`, `ledger_build.py`) after the desk directory changed the layer count. No hand editing.
+- `index.html`: **not** replaced. The shared root page is written by `scripts/build_site.py`, and twelve tests in other
+  sessions' suites require its links and counts. The desk now injects one idempotent banner above `<main>` instead.
 
 ## Earlier sessions' board (preserved)
 

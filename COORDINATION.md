@@ -5745,3 +5745,14 @@ IN6 is substantively done: `pages.yml` parses (30 steps), `final_recheck.py` pas
 `/now/`, `/clarity/` and `/meridian/` layers passes. The `/now/` step in CI was reordered so `build_site.py`
 regenerates the root front door before `now_verify.py` checks that its executive cards exclude started fixtures.
 The full workflow reproduction and the PR/merge/deploy chain are the remaining IN6/IN7 gates.
+
+### IN6 full-workflow reproduction repair — 2026-10-24 22:46 UTC
+
+The first local reproduction of all 28 `Validate Pages content` run steps succeeded through every build, verifier,
+link audit and the full unit-test step. The final drift gate then found exactly two stale generated files:
+`data/ledger/repo_review.json` and `ledger/repo-review.html`. They had been committed at the earlier repository state
+of 47 dashboard directories and 7 findings; the reproducible generator now sees 50 directories and 6 findings because
+the shared board's conflict markers were cleaned up in the meantime. The owner scripts `ledger_report.py` and
+`ledger_build.py` were used to regenerate both files. `ledger_verify.py` passes 18/18 checks and
+`integration_audit.py` again reports 0 broken cross-layer links. No other generated file drifted in that run. These
+two artifacts are committed with their owner scripts rather than hand-edited.

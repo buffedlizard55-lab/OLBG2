@@ -206,7 +206,10 @@ class CadenceSite(unittest.TestCase):
 
     def test_rebuild_is_deterministic(self):
         before = {p.relative_to(ROOT): p.read_bytes() for p in SITE.rglob("*.html")}
-        for script in ("cadence_seed.py", "cadence_model.py", "cadence_predictions.py", "cadence_build.py"):
+        # ship_predictions.py is part of the rebuild chain in .github/workflows/pages.yml: it re-applies the
+        # desk-authored predictions with a pinned timestamp, so the determinism check must include it.
+        for script in ("cadence_seed.py", "cadence_model.py", "cadence_predictions.py",
+                       "ship_predictions.py", "cadence_build.py"):
             subprocess.run([sys.executable, str(ROOT / "scripts" / script)], check=True,
                            capture_output=True)
         after = {p.relative_to(ROOT): p.read_bytes() for p in SITE.rglob("*.html")}

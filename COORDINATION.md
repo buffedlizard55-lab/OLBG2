@@ -5082,3 +5082,5 @@ and the Pages deploy could not complete. Running the chain by hand reproduced th
 is empty after running it). Preservation is not verification — their NBA injury claims cite
 `Injury-Report_2026-10-23_03_15PM.pdf` and were not re-read in this session; see
 `research/ba05b5b6-verification.md` and the cadence review page for their own account.
+| `tests/test_cadence_a0c8b7f3.py` | the determinism test now rebuilds through `ship_predictions.py` as the CI chain does. Without that, the test reverted the published HTML to the 33-prediction version and failed; the predictions themselves are untouched. |
+

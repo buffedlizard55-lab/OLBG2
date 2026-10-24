@@ -103,6 +103,7 @@ jobs:
           python scripts/cadence_seed.py
           python scripts/cadence_model.py
           python scripts/cadence_predictions.py
+          python scripts/ship_predictions.py
           python scripts/cadence_build.py
           python scripts/cadence_verify.py
           python scripts/integration_f0ee1b4a_audit.py

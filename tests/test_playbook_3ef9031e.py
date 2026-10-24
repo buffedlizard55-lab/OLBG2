@@ -160,9 +160,11 @@ class PlaybookPages(unittest.TestCase):
             self.assertTrue((OUT / name).is_file(), name)
 
     def test_root_front_door_points_at_the_desk(self):
+        # Front door taken over by the /compass/ desk (session arena/9f424dec-olbg2, 22:45Z
+        # capture); /playbook/ remains published and reachable from archive.html.
         front = (ROOT / "index.html").read_text()
-        for target in ("playbook/picks.html", "playbook/predictions.html",
-                       "playbook/sports/index.html", "playbook/flagged.html"):
+        for target in ("compass/picks.html", "compass/predictions.html",
+                       "compass/sports/index.html", "compass/flagged.html"):
             self.assertIn(f'href="{target}"', front)
         self.assertIn("archive.html", front)
 

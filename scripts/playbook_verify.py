@@ -170,11 +170,16 @@ def main() -> int:
     for name in ("matches.html", "lines.html", "flagged.html", "sources.html"):
         ok('href="https://' in (OUT / name).read_text(), f"{name} carries no external source links")
 
-    ok('href="playbook/picks.html"' in (ROOT / "index.html").read_text(),
-       "the root front door does not link the picks page")
-    ok('href="playbook/predictions.html"' in (ROOT / "index.html").read_text(),
-       "the root front door does not link the predictions page")
-    ok("archive.html" in (ROOT / "index.html").read_text(), "the root front door lost its archive link")
+    # The /compass/ desk (session arena/9f424dec-olbg2, 22:45Z capture) took over the root
+    # front door after this session per the board, so the front-door link checks only apply
+    # while the playbook desk is the newest. /playbook/ stays reachable from archive.html.
+    compass_present = (ROOT / "data" / "compass" / "fixtures.json").is_file()
+    if not compass_present:
+        ok('href="playbook/picks.html"' in (ROOT / "index.html").read_text(),
+           "the root front door does not link the picks page")
+        ok('href="playbook/predictions.html"' in (ROOT / "index.html").read_text(),
+           "the root front door does not link the predictions page")
+        ok("archive.html" in (ROOT / "index.html").read_text(), "the root front door lost its archive link")
     ok("playbook/index.html" in (ROOT / "archive.html").read_text(),
        "the archive page does not list the playbook desk")
 

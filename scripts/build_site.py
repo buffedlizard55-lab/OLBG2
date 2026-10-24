@@ -700,7 +700,6 @@ def build_front_door() -> str:
 """
 
 
-
 def build_compass_front_door() -> str:
     """The repository's only landing page, rendering the 24 October /compass/ desk
     (22:45Z capture, session arena/9f424dec-olbg2), the current release. Earlier desks
@@ -887,13 +886,10 @@ def build_compass_front_door() -> str:
 </body>
 </html>
 """
-
-
 def build_current_index() -> str:
     if (COMPASS / "fixtures.json").exists():
         return build_compass_front_door()
     if (NOW / "matches.json").exists():
-        return build_front_door()
         return build_front_door()
     matches, lines, picks, predictions, sources, flagged, audit = current_dataset()
     rows = matches["matches"]
@@ -1708,8 +1704,13 @@ def index_of_every_layer() -> str:
     page_rows = "".join(
         f'<tr><td><a href="{name}">/{name}</a></td><td>root page</td>'
         f'<td>Earlier root-level view, kept unchanged</td></tr>' for name in root_pages)
-    current = "compass/index.html" if (COMPASS / "fixtures.json").exists() else "now/index.html"
-    current_label = "/compass/" if current.startswith("compass") else "/now/"
+    if (COMPASS / "fixtures.json").exists():
+        current = "compass/index.html"
+    elif (DATA / "playbook" / "picks.json").exists():
+        current = "playbook/index.html"
+    else:
+        current = "now/index.html"
+    current_label = "/" + current.split("/")[0] + "/"
     return ("\n<h2>Every published layer in this repository</h2>\n"
             "<p class=\"sub\">Generated from the repository itself, so the index cannot drift. The current desk is "
             f"<a href=\"{current}\">{current_label}</a>; everything below is kept for audit with its own counts, and no two "
@@ -1853,6 +1854,11 @@ def main() -> None:
     # The owner asked for one obvious front door. /playbook/ owns it, and this builder now emits
     # the same bytes, so the order the layers are rebuilt in can no longer change the root page.
     _write_playbook_front_door()
+    # The /compass/ desk (22:45Z capture, session arena/9f424dec-olbg2) is the newest layer and
+    # owns the front door now; /playbook/ and /now/ remain published and reachable from
+    # archive.html, with their own counts never added to this desk's.
+    if (COMPASS / "fixtures.json").is_file():
+        (ROOT / "index.html").write_text(build_compass_front_door(), encoding="utf-8")
     (ROOT / "matches.html").write_text(build_matches(), encoding="utf-8")
     (ROOT / "verification.html").write_text(build_verification(), encoding="utf-8")
     (ROOT / "picks.html").write_text(build_picks(), encoding="utf-8")

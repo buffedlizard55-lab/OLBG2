@@ -2,7 +2,7 @@
 """First-hand capture of OLBG listings and governing-body pages for the consolidated desk.
 
 This script records responses and nothing else.  It does not interpret a body, choose a
-fixture, price a market or write prose: parsing happens later in ``desk_model.py`` and the
+fixture, price a market or write prose: parsing happens later in ``livedesk_model.py`` and the
 prose is authored separately.  The reason for the split is that the authoring sandbox
 cannot reach most public hosts, so a GitHub-hosted runner takes the reads and commits a
 manifest; the raw bodies travel as a workflow artifact, never as repository content.
@@ -13,9 +13,9 @@ it can be traced back to this exact response.
 
 Usage
 -----
-    python scripts/desk_collect.py                    # request list below
-    python scripts/desk_collect.py --only olbg_hub_golf,ieh_sched_2026-10-25
-    python scripts/desk_collect.py --request data/live_desk/requests.json
+    python scripts/livedesk_collect.py                    # request list below
+    python scripts/livedesk_collect.py --only olbg_hub_golf,ieh_sched_2026-10-25
+    python scripts/livedesk_collect.py --request data/live_desk/requests.json
 
 A failed request is written to the manifest with its status.  The script exits 0 even when
 individual reads fail: an HTTP 403 is evidence and is published as such.
@@ -35,7 +35,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUT_DIR = ROOT / "data" / "desk" / "captures"
+OUT_DIR = ROOT / "data" / "live_desk" / "captures"
 RAW_DIR = OUT_DIR / "raw"
 MANIFEST = OUT_DIR / "manifest.json"
 DEFAULT_REQUEST = ROOT / "data" / "live_desk" / "requests.json"

@@ -558,7 +558,8 @@ def build_front_door() -> str:
   <p class="sub">Selection in bold green, then the market, our chance and the price that chance implies.
   Every one sits inside the requested −250 to +10000 band.</p>
   <div class="pickgrid">{''.join(cards)}</div>
-  <p class="sub"><a href="now/picks.html">All {picks['count']} picks, including medium and low →</a></p>
+  <p class="sub"><a href="now/picks.html">All {picks['count']} picks — {picks['high']} high, {picks['medium']} medium,
+  {picks['low']} low →</a></p>
 
   <div class="kpis">
     <div class="kpi"><div class="v">{matches['count']}</div><div class="k">upcoming matches</div><div class="s">{matches['priced']} priced · {matches['unpriced']} blank with a reason</div></div>

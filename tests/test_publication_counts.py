@@ -37,7 +37,12 @@ class PublicationCountTests(unittest.TestCase):
         categories = builder.build_sports_index()
         archive = builder.build_archive()
 
-        self.assertIn(f">{now_matches['count']}</div><div class=\"k\">upcoming matches", index)
+        started = sum(bool(m["started"]) for m in now_matches["matches"])
+        not_started = now_matches["count"] - started
+        self.assertIn(f">{now_matches['count']}</div><div class=\"k\">fixture records", index)
+        self.assertIn(f"{not_started} still to start", index)
+        self.assertIn(f"{started} started at snapshot", index)
+        self.assertNotIn("50 upcoming matches", index)
         self.assertIn(f">{now_picks['pregame_count']}</div><div class=\"k\">picks still to start", index)
         self.assertNotIn("118-row verified layer", index)
         self.assertIn(f"{len(eligible)} eligible OLBG sports. {active_sports} carry rows", categories)
@@ -59,10 +64,37 @@ class PublicationCountTests(unittest.TestCase):
         lines = json.loads((ROOT / "data/now/lines.json").read_text())
         readme = (ROOT / "README.md").read_text()
 
-        self.assertIn(f"Upcoming fixtures on the desk | **{matches['count']}**", readme)
+        self.assertIn(f"Fixture records on the desk | **{matches['count']}**", readme)
+        started = sum(bool(m["started"]) for m in matches["matches"])
+        self.assertIn(f"{matches['count'] - started} still to start", readme)
+        self.assertIn(f"{started} started at 18:10Z", readme)
         self.assertIn(f"Prices originated here | **{lines['count']}**", readme)
         self.assertIn(f"Graded picks | **{picks['count']}**", readme)
         self.assertIn(f"Written predictions | **{preds['count']}**", readme)
         self.assertIn("now/picks.html", readme)
         self.assertNotIn("178 rows", readme)
         self.assertNotIn("80 tests", readme)
+
+    def test_reproducibility_review_page_discloses_pending_findings_and_links_sources(self):
+        page = (ROOT / "review/reproducibility.html").read_text()
+        self.assertIn("Flagged for Review", page)
+        self.assertIn("not externally verified", page)
+        self.assertIn("expected 207; rebuild produced 277", page)
+        self.assertIn("https://www.nba.com/schedule?date=2026-10-24", page)
+        self.assertIn("https://www.nba.com/game/mia-vs-cha-0022600104", page)
+        self.assertIn("did not fetch their page contents", page)
+
+        parser = Hrefs()
+        parser.feed(page)
+        page_path = ROOT / "review/reproducibility.html"
+        for href in parser.values:
+            url = urlsplit(href)
+            if url.scheme or url.netloc or not url.path:
+                continue
+            target = (page_path.parent / unquote(url.path)).resolve()
+            self.assertTrue(target.is_relative_to(ROOT.resolve()), href)
+            self.assertTrue(target.is_file(), href)
+
+
+if __name__ == "__main__":
+    unittest.main()

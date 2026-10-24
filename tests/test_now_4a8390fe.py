@@ -75,11 +75,24 @@ class NowPricing(unittest.TestCase):
     def test_confidence_rules_are_applied(self):
         for row in load("lines.json")["lines"]:
             if row["confidence"] == "high":
-                self.assertGreaterEqual(row["probability"], 0.62, row["fixture_id"])
+                self.assertGreaterEqual(row["probability"], 0.70, row["fixture_id"])
                 self.assertNotEqual(row["basis"], "class_ladder", row["fixture_id"])
                 self.assertNotEqual(row["kind"], "total", row["fixture_id"])
             if row["confidence"] == "medium":
                 self.assertGreaterEqual(row["probability"], 0.55, row["fixture_id"])
+
+    def test_high_boundary_is_seventy_percent(self):
+        model = module("now_model")
+        row = {
+            "probability": 0.6999,
+            "quality": 1.0,
+            "in_band": True,
+            "basis": "poisson",
+            "kind": "winner",
+        }
+        self.assertEqual(model.grade(row), "medium")
+        row["probability"] = 0.70
+        self.assertEqual(model.grade(row), "high")
 
     def test_blank_rows_state_a_reason(self):
         for m in load("matches.json")["matches"]:
@@ -189,6 +202,30 @@ class NowPages(unittest.TestCase):
     def test_started_fixtures_are_flagged(self):
         flagged = load("flagged.json")
         self.assertTrue(any(f["id"] == "V-08" for f in flagged["flags"]))
+
+    def test_fixture_record_count_does_not_call_started_matches_upcoming(self):
+        matches = load("matches.json")["matches"]
+        started = sum(bool(m["started"]) for m in matches)
+        self.assertEqual(len(matches), 50)
+        self.assertEqual(started, 5)
+        index = (OUT / "index.html").read_text(encoding="utf-8")
+        root = (ROOT / "index.html").read_text(encoding="utf-8")
+        for page in (index, root):
+            self.assertIn('>50</div><div class="k">fixture records', page)
+            self.assertIn("45 still to start", page)
+            self.assertIn("5 started at snapshot", page)
+            self.assertNotIn("50 upcoming matches", page)
+
+    def test_nhl_omission_has_an_official_source_flag(self):
+        flagged = load("flagged.json")["flags"]
+        flag = next(f for f in flagged if f["id"] == "V-09")
+        self.assertEqual(flag["sport"], "Ice Hockey")
+        self.assertIn("Los Angeles", flag["item"])
+        self.assertIn("New Jersey", flag["item"])
+        self.assertEqual(
+            flag["source"],
+            "https://api-web.nhle.com/v1/schedule/2026-10-24",
+        )
 
     def test_coverage_shortfall_is_disclosed(self):
         flagged = load("flagged.json")

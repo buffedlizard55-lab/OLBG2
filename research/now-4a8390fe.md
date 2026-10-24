@@ -5,6 +5,8 @@ Session `arena/4a8390fe-olbg2` · snapshot `2026-10-24T18:10:00Z` · branch `are
 This file records what was read, what was produced, what was checked, and what is still open. Nothing here
 turns a link into proof: a link says where a value was read, and each fact carries the time it was read.
 
+**Post-merge evidence correction (A5, 24 October):** PR #207 merged before its last CI/evidence fixes. The integrated desk now enforces 70% rather than 62%, regrading seven sub-70% highs to medium while retaining their previews. Three highs remain overall, but Dragons–Ospreys had started, so only Boston ML and St. Louis +1.5 are pregame highs. The root now says 50 fixture records / 45 still to start / 5 started, the unrelated reproducibility-disclosure test is restored, and V-09 flags the LA–New Jersey omission. The earlier 10-high and “upcoming” wording below is retained only where it describes the original build history.
+
 ---
 
 ## 1. The problem this session was asked to fix
@@ -49,15 +51,15 @@ Live re-reads in this session (all recorded in `data/now/olbg.json`):
 
 | Item | Count | Where |
 |---|---|---|
-| Fixtures | 50 across all 15 sports (39 priced, 11 blank with a reason) | `data/now/fixtures.json`, `now/matches.html` |
+| Fixture records | 50 across all 15 sports (45 still to start, 5 started at 18:10Z; 39 priced, 11 blank with a reason) | `data/now/fixtures.json`, `now/matches.html` |
 | Originated prices | 866 (match winner, handicap ladder, total ladder) | `data/now/lines.json`, `now/lines.html` |
-| Graded picks | 39 — 10 high, 26 medium, 3 low; all inside −250…+10000 | `data/now/picks.json`, `now/picks.html` |
+| Graded picks | 39 — 3 high, 33 medium, 3 low; all inside −250…+10000; only two highs are pregame | `data/now/picks.json`, `now/picks.html` |
 | Picks still to start | 35 (4 had started by 18:10Z and are marked as under way) | `now/picks.html` |
 | Written predictions | 36 across 11 sports, shortest 65 words, no repeated opening | `data/now/predictions.json`, `now/predictions.html` |
 | OLBG rows | 96 | `data/now/olbg.json`, `now/olbg.html` |
 | Sources | 66 registered, 50 official | `data/now/sources.json`, `now/sources.html` |
-| Review items | 32 — 25 open, 2 corrected, 5 notes | `data/now/flagged.json`, `now/flagged.html` |
-| Assertions | 7,809, zero failures | `scripts/now_verify.py` |
+| Review items | 33 — 26 open, 2 corrected, 5 notes | `data/now/flagged.json`, `now/flagged.html` |
+| Assertions | 8,069, zero failures | `scripts/now_verify.py` |
 
 ### Coverage against the five-per-sport target
 
@@ -91,12 +93,12 @@ Four families, each documented on the method page and in `scripts/now_model.py`:
 4. **Evidence ladder** — volleyball, handball, cricket and the two rugby league / Gaelic cards: five rungs from the
    verified facts on the record, one rung = ten probability points from 50%. Never graded higher than medium.
 
-Every price is 1 / probability. High confidence requires a numeric family, ≥62%, quality ≥0.85 and a price inside the
+Every price is 1 / probability. High confidence requires a numeric family, ≥70%, quality ≥0.85 and a price inside the
 band; match totals are capped at medium; the evidence ladder is capped at medium.
 
 ## 5. Verification performed
 
-- 7,809 assertions in `scripts/now_verify.py`, including: every price equals 1/probability; the band test matches
+- 8,069 assertions in `scripts/now_verify.py`, including: every price equals 1/probability; the band test matches
   −250…+10000 exactly; no total or evidence-ladder price is graded high; every high and medium pick has a ≥30-word
   preview that names its selection, does not repeat another opening and contains neither “model” nor “verified”;
   every table row on every page carries a link; every internal link and anchor resolves; the pipeline reproduces byte
@@ -122,7 +124,7 @@ Consequences, all of them checked: 5.0 is a coin flip, 7.1 is the highest score 
 handicap, the strongest chance the band allows), the evidence ladder can never exceed 8.0 and in practice tops out at
 5.6 because those prices are capped near 70%. The score is published on the dashboard cards, on every row of
 `now/picks.html`, on each sport page and on each preview in `now/predictions.html`, and it is re-derived line by line
-by `scripts/now_verify.py` (8,063 assertions). Three cricket fixtures at 50–55% appear on the picks page under
+by `scripts/now_verify.py` (8,069 assertions after the 70% and temporal corrections). Three cricket fixtures at 50–55% appear on the picks page under
 "priced but not backed" — they are shown so the book is complete, and their score of 4.8–5.5 is the reason they are
 not offered.
 
@@ -131,6 +133,7 @@ not offered.
 | ID | Item |
 |---|---|
 | V-08 | Four picks are for matches already under way at 18:10Z; kept for the record, excluded from the executive summary |
+| V-09 | The inherited ten-NHL-record set omits Los Angeles at New Jersey (19:30Z) from the official 12-game schedule; flagged with the official schedule link rather than filled with unconfirmed data |
 | COV-* | Twelve sports carry fewer than five written predictions; each is named on the flagged page |
 | F-* | Eleven fixtures carry no price, each with its stated reason |
 | V-05 | OLBG's golf hub lists no events today |
@@ -143,7 +146,7 @@ python scripts/now_seed.py
 python scripts/now_model.py
 python scripts/now_predictions.py
 python scripts/now_build.py
-python scripts/now_verify.py
 python scripts/build_site.py            # root front door + archive index
+python scripts/now_verify.py            # verifies the fresh root as well as /now/
 python -m unittest discover -s tests
 ```

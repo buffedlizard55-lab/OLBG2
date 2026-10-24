@@ -312,6 +312,10 @@ def main() -> int:
     by_fixture = {m["id"]: m for m in matches["matches"]}
     pred_by_fixture = {p["fixture_id"]: p for p in preds["predictions"]}
     pred_ids = set(pred_by_fixture)
+    started_fixture_count = sum(bool(m["started"]) for m in matches["matches"])
+    not_started_fixture_count = matches["count"] - started_fixture_count
+    coverage_shortfalls = sum(preds["by_sport"].get(s, 0) < 5 for s in SPORTS)
+    nhl_fixture_records = sum(m["sport"] == "Ice Hockey" for m in matches["matches"])
 
     # ------------------------------------------------------------------ flags
     flags = []
@@ -378,12 +382,13 @@ def main() -> int:
         },
         {
             "id": "V-08", "severity": "note", "sport": "All",
-            "item": "Four picks are for matches that had already started when the snapshot was taken",
-            "detail": ("Volleyball (Giesen v Berlin, 17:30Z), Rugby Union (Ospreys v Dragons, 18:00Z), Darts (Littler v "
-                       "Aspinall, 18:00Z) and Handball (Balingen v Melsungen, 18:00Z) began before the 18:10Z snapshot. "
-                       "They are published with their prices and write-ups but are marked as under way and kept out "
-                       "of the executive summary."),
-            "source": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+            "item": (f"{picks['started_count']} picks are for matches that had already started "
+                     "when the snapshot was taken"),
+            "detail": (f"{started_fixture_count} of the {matches['count']} fixture records had started by "
+                       f"{AS_OF}, including one unpriced greyhound race. Started rows retain their prices "
+                       "and write-ups where present, but are marked as under way and kept out of the "
+                       "executive summary. Each row's own official link supplies its start time."),
+            "source": "matches.html",
         },
         {
             "id": "V-07", "severity": "note", "sport": "All",
@@ -400,6 +405,16 @@ def main() -> int:
                        "SUBMITTED. No absence is stated for those rosters, and the fields are blank "
                        "rather than guessed."),
             "source": "https://official.nba.com/nba-injury-report-2026-27-season/",
+        },
+        {
+            "id": "V-09", "severity": "open", "sport": "Ice Hockey",
+            "item": "Los Angeles at New Jersey is omitted from the inherited NHL records",
+            "detail": ("The official 24 October schedule lists 12 NHL games, including Los Angeles at "
+                       f"New Jersey at 19:30Z. This desk inherited {nhl_fixture_records} NHL records and "
+                       "did not add that still-upcoming fixture at the 18:10Z snapshot. The omission is "
+                       "flagged rather than filled with unconfirmed teams, prices or analysis; do not call "
+                       "the inherited set a complete league schedule."),
+            "source": "https://api-web.nhle.com/v1/schedule/2026-10-24",
         },
     ]
 
@@ -463,7 +478,8 @@ def main() -> int:
 <p class="eyebrow">Executive summary · snapshot {esc(AS_OF)}</p>
 <h1>{picks['pregame_high']} high-confidence picks still to start, and {picks['count']} graded picks in total</h1>
 <p class="lede">This is the whole desk on one screen: what we are backing, at what price, and the official page behind
-every number. {matches['count']} upcoming fixtures were read from {sources['official_count']} official sources,
+every number. {matches['count']} fixture records carry inherited facts from {sources['official_count']} official sources:
+{not_started_fixture_count} had not started and {started_fixture_count} had started at the snapshot.
 {lines['count']} prices were originated here, and {preds['count']} of the picks carry a full written preview.</p>
 
 <div class="cta">
@@ -479,7 +495,7 @@ every number. {matches['count']} upcoming fixtures were read from {sources['offi
 <p class="sub"><a href="picks.html">All {picks['count']} picks, including {len(ms)} medium and {len(ls)} low →</a></p>
 
 <div class="kpis">
-  <div class="kpi"><div class="v">{matches['count']}</div><div class="k">upcoming matches</div><div class="s">{matches['priced']} priced · {matches['unpriced']} blank with a reason</div></div>
+  <div class="kpi"><div class="v">{matches['count']}</div><div class="k">fixture records</div><div class="s">{not_started_fixture_count} still to start · {started_fixture_count} started at snapshot · {matches['unpriced']} blank</div></div>
   <div class="kpi"><div class="v">{lines['count']}</div><div class="k">originated prices</div><div class="s">match winner, handicap and total</div></div>
   <div class="kpi"><div class="v">{picks['pregame_count']}</div><div class="k">picks still to start</div><div class="s">{len(hs)} high · {len(ms)} medium · {len(ls)} low overall</div></div>
   <div class="kpi"><div class="v">{preds['count']}</div><div class="k">written predictions</div><div class="s">shortest {preds['min_words']} words</div></div>
@@ -507,7 +523,7 @@ price, and the reason is on <a href="flagged.html">Flagged for review</a>.</p>
 
 <div class="notice info" style="margin-top:26px">
 <strong>What this desk does not claim.</strong> These are our own numbers, not bookmaker odds, and a pick is a research
-opinion rather than advice. Five sports carry fewer than five written predictions because only fixtures with a real
+opinion rather than advice. {coverage_shortfalls} sports carry fewer than five written predictions because only fixtures with a real
 official record were written up; the gap is listed on <a href="flagged.html">Flagged for review</a> rather than filled
 with filler. Where OLBG does not list an event, the row says so instead of implying a market exists.
 </div>
@@ -528,19 +544,19 @@ to a coin flip. A further {picks['started_count']} matches had already started, 
 not offered as pre-match calls.</p>
 
 <h2>Available now — {len(pregame_hm)} picks on matches still to start</h2>
-<p class="sub">High confidence first, then medium. A dash of confidence still means what it says: high needs a 62%
+<p class="sub">High confidence first, then medium. A dash of confidence still means what it says: high needs a 70%
 chance from a numeric official input and a price inside the band. The <strong>score</strong> column puts that on a
 0-10 scale so sports can be compared at a glance: 5.0 is a coin flip, and every pick above is shaded down when its
 price rests on the evidence ladder rather than on a scoring rate (<a href="methodology.html">method</a>).</p>
 {pick_table(pregame_hm, with_pred=pred_ids)}
 
 <h2>Already under way at the snapshot ({len(started_rows)})</h2>
-<p class="sub">These four matches started before {esc(AS_OF)}. They stay on the desk with their prices and their
+<p class="sub">These {len(started_rows)} matches started before {esc(AS_OF)}. They stay on the desk with their prices and their
 write-ups so the record is complete, but they cannot be backed before kick-off any more.</p>
 {pick_table(started_rows, with_pred=pred_ids)}
 
 <h2>Priced but not backed ({len(ls)})</h2>
-<p class="sub">Three cricket fixtures where our own number is close enough to a coin flip that it is not worth
+<p class="sub">Each of these {len(ls)} fixtures has a price close enough to a coin flip that it is not worth
 backing. They stay in the table so the price book is complete and so nobody has to guess why they are missing from
 the two tables above. A low grade is not a prediction against; it is the desk saying it has no edge.</p>
 {pick_table(ls, with_pred=pred_ids)}
@@ -793,7 +809,7 @@ pick inside the band.</p>
 <h2>3. Confidence</h2>
 <div class="table-wrap"><table class="data">
 <thead><tr><th>Grade</th><th>Rule</th><th>Where it is implemented</th></tr></thead><tbody>
-<tr><td>{badge('high')}</td><td>Numeric family, 62% or better, quality 0.85+, price inside the band, and not a match
+<tr><td>{badge('high')}</td><td>Numeric family, 70% or better, quality 0.85+, price inside the band, and not a match
 total (totals carry more variance and are capped at medium).</td>
 <td><a href="../scripts/now_model.py">scripts/now_model.py</a> · <a href="../data/now/lines.json">lines.json</a></td></tr>
 <tr><td>{badge('medium')}</td><td>55% or better inside the band, or a strong price built on a weaker input class.</td>

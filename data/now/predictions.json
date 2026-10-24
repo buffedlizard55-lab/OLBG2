@@ -265,7 +265,7 @@
    "start_display": "2026-10-24 21:00 CEST (LNR official)",
    "market": "Match winner (draw removed)",
    "selection": "Section Paloise",
-   "confidence": "high",
+   "confidence": "medium",
    "score": 7.0,
    "probability": 0.696,
    "american_display": "-229",
@@ -324,7 +324,7 @@
    "start_display": "2026-10-25 21:05 CEST (LNR official)",
    "market": "Match winner (draw removed)",
    "selection": "Union Bordeaux-B\u00e8gles",
-   "confidence": "high",
+   "confidence": "medium",
    "score": 6.8,
    "probability": 0.6824,
    "american_display": "-215",
@@ -574,7 +574,7 @@
    "start_display": "2026-10-24 20:00 ET (MLB StatsAPI gameDate)",
    "market": "Handicap 1.5",
    "selection": "Tampa Bay Rays +1.5",
-   "confidence": "high",
+   "confidence": "medium",
    "score": 6.5,
    "probability": 0.6545,
    "american_display": "-189",
@@ -1237,7 +1237,7 @@
    "start_display": "2026-10-25 01:00 UTC (NHL feed)",
    "market": "Handicap 1.5",
    "selection": "Tampa Bay Lightning +1.5",
-   "confidence": "high",
+   "confidence": "medium",
    "score": 6.9,
    "probability": 0.6943,
    "american_display": "-227",
@@ -1278,183 +1278,6 @@
     {
      "claim": "Team leaders",
      "value": "Brandon Hagel 7 goals (TBL); Nikita Kucherov 9 assists; Nick Schmaltz 7 goals (UTA)",
-     "source_key": "nhle_score_24",
-     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    }
-   ]
-  },
-  {
-   "id": "pred-nhl-nsh-pit",
-   "pick_id": "pick-nhl-nsh-pit",
-   "fixture_id": "nhl-nsh-pit",
-   "sport": "Ice Hockey",
-   "competition": "NHL",
-   "home": "Pittsburgh Penguins",
-   "away": "Nashville Predators",
-   "start_utc": "2026-10-24T23:00:00Z",
-   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
-   "market": "Handicap 1.5",
-   "selection": "Nashville Predators +1.5",
-   "confidence": "high",
-   "score": 6.4,
-   "probability": 0.6386,
-   "american_display": "-177",
-   "headline": "Nashville's low-scoring games give them value with a 1.5-goal head start",
-   "text": "Nashville Predators +1.5 is the call at PPG Paints Arena. Nashville have scored only 23 goals in nine games and conceded 30, and four of those games have been on the road where they have 11 goals for and 16 against. Pittsburgh are 4-6-1 and have lost six of eleven, though they are 3-1-0 at home with 14 goals in four games. Evgeni Malkin has six goals and Erik Karlsson ten assists, but nothing in Pittsburgh's record suggests a blowout against a tight-checking opponent.",
-   "words": 84,
-   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006",
-   "facts": [
-    {
-     "claim": "Pittsburgh 2026-27 record",
-     "value": "4-6-1, 11 GP, 37 goals for, 38 against, 9 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Nashville 2026-27 record",
-     "value": "3-3-3, 9 GP, 23 goals for, 30 against, 9 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Nashville road split",
-     "value": "4 road games, 11 goals for, 16 against",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Pittsburgh home split",
-     "value": "4 home games, 14 goals for, 9 against (3-1-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Team leaders",
-     "value": "Evgeni Malkin 6 goals (PIT); Erik Karlsson 10 assists; Ryan O'Reilly 4 goals (NSH)",
-     "source_key": "nhle_score_24",
-     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    }
-   ]
-  },
-  {
-   "id": "pred-nhl-det-cgy",
-   "pick_id": "pick-nhl-det-cgy",
-   "fixture_id": "nhl-det-cgy",
-   "sport": "Ice Hockey",
-   "competition": "NHL",
-   "home": "Calgary Flames",
-   "away": "Detroit Red Wings",
-   "start_utc": "2026-10-25T02:00:00Z",
-   "start_display": "2026-10-25 02:00 UTC (NHL feed)",
-   "market": "Handicap 1.5",
-   "selection": "Calgary Flames +1.5",
-   "confidence": "high",
-   "score": 6.3,
-   "probability": 0.6338,
-   "american_display": "-173",
-   "headline": "Calgary's 19 goals in nine games make plus 1.5 the sensible way in against Detroit",
-   "text": "Calgary Flames +1.5 is the selection at the Scotiabank Saddledome. Calgary have scored 19 goals in nine games and conceded 38, the worst defensive record on the slate, and they are 2-3-0 at home with 11 goals in five games there. Detroit are 4-3-3 with a plus one goal difference and are unbeaten in three road games at 1-0-2 and have Alex DeBrincat on six goals and six assists. Low-scoring home games and a Detroit side that has not won away in regulation both point to a one-goal margin.",
-   "words": 89,
-   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
-   "facts": [
-    {
-     "claim": "Calgary 2026-27 record",
-     "value": "3-6-0, 9 GP, 19 goals for, 38 against, 6 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Detroit 2026-27 record",
-     "value": "4-3-3, 10 GP, 28 goals for, 30 against, 11 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Detroit road split",
-     "value": "3 road games, 8 goals for, 7 against (1-0-2)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Calgary home split",
-     "value": "5 home games, 11 goals for, 20 against (2-3-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Team leaders",
-     "value": "Alex DeBrincat 6 goals, 6 assists (DET); Morgan Frost 3 goals (CGY)",
-     "source_key": "nhle_score_24",
-     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    }
-   ]
-  },
-  {
-   "id": "pred-nhl-vgk-cbj",
-   "pick_id": "pick-nhl-vgk-cbj",
-   "fixture_id": "nhl-vgk-cbj",
-   "sport": "Ice Hockey",
-   "competition": "NHL",
-   "home": "Columbus Blue Jackets",
-   "away": "Vegas Golden Knights",
-   "start_utc": "2026-10-24T23:00:00Z",
-   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
-   "market": "Handicap 1.5",
-   "selection": "Columbus Blue Jackets +1.5",
-   "confidence": "high",
-   "score": 6.2,
-   "probability": 0.621,
-   "american_display": "-164",
-   "headline": "Columbus have scored 20 goals in eight games, so a 1.5-goal start holds up",
-   "text": "Columbus Blue Jackets +1.5 is the play at Nationwide Arena. Vegas are 8-4-0 with 46 goals scored, the second-best attack on tonight's card, and Mark Stone has eight goals with Jack Eichel on 13 assists. Columbus are 3-5-0 and have scored only 20 goals in eight games, 16 of them at home in six. Kent Johnson has four. The Blue Jackets have lost four games by two or more, which is exactly the risk in taking the extra goal.",
-   "words": 79,
-   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
-   "facts": [
-    {
-     "claim": "Columbus 2026-27 record",
-     "value": "3-5-0, 8 GP, 20 goals for, 29 against, 6 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Vegas 2026-27 record",
-     "value": "8-4-0, 12 GP, 46 goals for, 36 against, 16 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Columbus home split",
-     "value": "6 home games, 16 goals for, 22 against (3-3-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Columbus road split",
-     "value": "2 road games, 4 goals for, 7 against (0-2-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Team leaders",
-     "value": "Mark Stone 8 goals (VGK); Jack Eichel 13 assists; Kent Johnson 4 goals (CBJ)",
      "source_key": "nhle_score_24",
      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
      "captured_utc": "2026-10-24T17:35:00Z"
@@ -1632,6 +1455,183 @@
     {
      "claim": "Team leaders",
      "value": "Tage Thompson 5 goals (BUF); Alex Tuch 5 goals (WSH); Logan Thompson 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-vgk-cbj",
+   "pick_id": "pick-nhl-vgk-cbj",
+   "fixture_id": "nhl-vgk-cbj",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Columbus Blue Jackets",
+   "away": "Vegas Golden Knights",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "market": "Match winner (money line)",
+   "selection": "Vegas Golden Knights",
+   "confidence": "medium",
+   "score": 6.1,
+   "probability": 0.6132,
+   "american_display": "-159",
+   "headline": "Columbus have scored 20 goals in eight games, so a 1.5-goal start holds up",
+   "text": "Columbus Blue Jackets +1.5 is the play at Nationwide Arena. Vegas are 8-4-0 with 46 goals scored, the second-best attack on tonight's card, and Mark Stone has eight goals with Jack Eichel on 13 assists. Columbus are 3-5-0 and have scored only 20 goals in eight games, 16 of them at home in six. Kent Johnson has four. The Blue Jackets have lost four games by two or more, which is exactly the risk in taking the extra goal.",
+   "words": 79,
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
+   "facts": [
+    {
+     "claim": "Columbus 2026-27 record",
+     "value": "3-5-0, 8 GP, 20 goals for, 29 against, 6 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Vegas 2026-27 record",
+     "value": "8-4-0, 12 GP, 46 goals for, 36 against, 16 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Columbus home split",
+     "value": "6 home games, 16 goals for, 22 against (3-3-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Columbus road split",
+     "value": "2 road games, 4 goals for, 7 against (0-2-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Team leaders",
+     "value": "Mark Stone 8 goals (VGK); Jack Eichel 13 assists; Kent Johnson 4 goals (CBJ)",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-det-cgy",
+   "pick_id": "pick-nhl-det-cgy",
+   "fixture_id": "nhl-det-cgy",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Calgary Flames",
+   "away": "Detroit Red Wings",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "start_display": "2026-10-25 02:00 UTC (NHL feed)",
+   "market": "Match winner (money line)",
+   "selection": "Detroit Red Wings",
+   "confidence": "medium",
+   "score": 6.1,
+   "probability": 0.6103,
+   "american_display": "-157",
+   "headline": "Calgary's 19 goals in nine games make plus 1.5 the sensible way in against Detroit",
+   "text": "Calgary Flames +1.5 is the selection at the Scotiabank Saddledome. Calgary have scored 19 goals in nine games and conceded 38, the worst defensive record on the slate, and they are 2-3-0 at home with 11 goals in five games there. Detroit are 4-3-3 with a plus one goal difference and are unbeaten in three road games at 1-0-2 and have Alex DeBrincat on six goals and six assists. Low-scoring home games and a Detroit side that has not won away in regulation both point to a one-goal margin.",
+   "words": 89,
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
+   "facts": [
+    {
+     "claim": "Calgary 2026-27 record",
+     "value": "3-6-0, 9 GP, 19 goals for, 38 against, 6 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Detroit 2026-27 record",
+     "value": "4-3-3, 10 GP, 28 goals for, 30 against, 11 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Detroit road split",
+     "value": "3 road games, 8 goals for, 7 against (1-0-2)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Calgary home split",
+     "value": "5 home games, 11 goals for, 20 against (2-3-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Team leaders",
+     "value": "Alex DeBrincat 6 goals, 6 assists (DET); Morgan Frost 3 goals (CGY)",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ]
+  },
+  {
+   "id": "pred-nhl-nsh-pit",
+   "pick_id": "pick-nhl-nsh-pit",
+   "fixture_id": "nhl-nsh-pit",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Pittsburgh Penguins",
+   "away": "Nashville Predators",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "market": "Match winner (money line)",
+   "selection": "Pittsburgh Penguins",
+   "confidence": "medium",
+   "score": 6.0,
+   "probability": 0.5972,
+   "american_display": "-148",
+   "headline": "Nashville's low-scoring games give them value with a 1.5-goal head start",
+   "text": "Nashville Predators +1.5 is the call at PPG Paints Arena. Nashville have scored only 23 goals in nine games and conceded 30, and four of those games have been on the road where they have 11 goals for and 16 against. Pittsburgh are 4-6-1 and have lost six of eleven, though they are 3-1-0 at home with 14 goals in four games. Evgeni Malkin has six goals and Erik Karlsson ten assists, but nothing in Pittsburgh's record suggests a blowout against a tight-checking opponent.",
+   "words": 84,
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006",
+   "facts": [
+    {
+     "claim": "Pittsburgh 2026-27 record",
+     "value": "4-6-1, 11 GP, 37 goals for, 38 against, 9 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Nashville 2026-27 record",
+     "value": "3-3-3, 9 GP, 23 goals for, 30 against, 9 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Nashville road split",
+     "value": "4 road games, 11 goals for, 16 against",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Pittsburgh home split",
+     "value": "4 home games, 14 goals for, 9 against (3-1-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Team leaders",
+     "value": "Evgeni Malkin 6 goals (PIT); Erik Karlsson 10 assists; Ryan O'Reilly 4 goals (NSH)",
      "source_key": "nhle_score_24",
      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
      "captured_utc": "2026-10-24T17:35:00Z"

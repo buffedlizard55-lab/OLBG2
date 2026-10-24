@@ -32,8 +32,8 @@
    "unpriced": 1,
    "markets": 152,
    "picks": 4,
-   "high": 3,
-   "medium": 1,
+   "high": 1,
+   "medium": 3,
    "low": 0,
    "olbg_listed": 5
   },
@@ -76,8 +76,8 @@
    "unpriced": 1,
    "markets": 20,
    "picks": 1,
-   "high": 1,
-   "medium": 0,
+   "high": 0,
+   "medium": 1,
    "low": 0,
    "olbg_listed": 2
   },
@@ -142,8 +142,8 @@
    "unpriced": 1,
    "markets": 252,
    "picks": 9,
-   "high": 6,
-   "medium": 3,
+   "high": 2,
+   "medium": 7,
    "low": 0,
    "olbg_listed": 9
   },
@@ -597,7 +597,7 @@
     "probability": 0.696,
     "american": -229,
     "american_display": "-229",
-    "confidence": "high",
+    "confidence": "medium",
     "assumption": "Mean margin is the difference in points scored minus conceded per match with three points of home advantage; the standard deviation is 13 points. The total is the sum of both clubs' scoring and conceding averages divided by two. Draw removed by renormalising the two win tails."
    }
   },
@@ -773,7 +773,7 @@
     "probability": 0.6824,
     "american": -215,
     "american_display": "-215",
-    "confidence": "high",
+    "confidence": "medium",
     "assumption": "Mean margin is the difference in points scored minus conceded per match with three points of home advantage; the standard deviation is 13 points. The total is the sum of both clubs' scoring and conceding averages divided by two. Draw removed by renormalising the two win tails."
    }
   },
@@ -1212,7 +1212,7 @@
     "probability": 0.6545,
     "american": -189,
     "american_display": "-189",
-    "confidence": "high",
+    "confidence": "medium",
     "assumption": "Expected runs use the season run rates of both clubs; the starting-pitcher ERA gap is reflected in those rates and is listed on the fixture. Extra innings are treated as a coin flip for the money line."
    }
   },
@@ -2172,12 +2172,12 @@
    "priced": true,
    "status": "priced",
    "primary": {
-    "market": "Handicap 1.5",
-    "selection": "Nashville Predators +1.5",
-    "probability": 0.6386,
-    "american": -177,
-    "american_display": "-177",
-    "confidence": "high",
+    "market": "Match winner (money line)",
+    "selection": "Pittsburgh Penguins",
+    "probability": 0.5972,
+    "american": -148,
+    "american_display": "-148",
+    "confidence": "medium",
     "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime."
    }
   },
@@ -2300,12 +2300,12 @@
    "priced": true,
    "status": "priced",
    "primary": {
-    "market": "Handicap 1.5",
-    "selection": "Columbus Blue Jackets +1.5",
-    "probability": 0.621,
-    "american": -164,
-    "american_display": "-164",
-    "confidence": "high",
+    "market": "Match winner (money line)",
+    "selection": "Vegas Golden Knights",
+    "probability": 0.6132,
+    "american": -159,
+    "american_display": "-159",
+    "confidence": "medium",
     "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime."
    }
   },
@@ -2497,7 +2497,7 @@
     "probability": 0.6943,
     "american": -227,
     "american_display": "-227",
-    "confidence": "high",
+    "confidence": "medium",
     "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime."
    }
   },
@@ -2556,12 +2556,12 @@
    "priced": true,
    "status": "priced",
    "primary": {
-    "market": "Handicap 1.5",
-    "selection": "Calgary Flames +1.5",
-    "probability": 0.6338,
-    "american": -173,
-    "american_display": "-173",
-    "confidence": "high",
+    "market": "Match winner (money line)",
+    "selection": "Detroit Red Wings",
+    "probability": 0.6103,
+    "american": -157,
+    "american_display": "-157",
+    "confidence": "medium",
     "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime."
    }
   },

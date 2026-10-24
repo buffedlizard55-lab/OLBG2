@@ -25,7 +25,7 @@ ladder of match totals, because a favourite above 71.4% sits outside the request
 that opinion that is actually actionable.
 
 Selection rule: among the in-band markets, take the highest confidence grade, breaking
-ties by closeness to 68%. Confidence: high needs a numeric family, at least 62% and a
+ties by closeness to 68%. Confidence: high needs a numeric family, at least 70% and a
 quality score of 0.85; medium needs 55%.
 
 Outputs: data/now/matches.json, data/now/lines.json, data/now/picks.json,
@@ -477,7 +477,7 @@ def grade(row) -> str:
     if row.get("kind") == "total":
         # a total carries more variance than a result, so it is never graded high
         return "medium" if p >= 0.55 else "low"
-    if row["basis"] != "class_ladder" and p >= 0.62 and q >= 0.85:
+    if row["basis"] != "class_ladder" and p >= 0.70 and q >= 0.85:
         return "high"
     if p >= 0.55:
         return "medium"

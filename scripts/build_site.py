@@ -485,6 +485,8 @@ def build_front_door() -> str:
     olbg = _now("olbg.json")
     sources = _now("sources.json")
     flagged = _now("flagged.json")
+    started_fixture_count = sum(bool(m["started"]) for m in matches["matches"])
+    not_started_fixture_count = matches["count"] - started_fixture_count
 
     sports = ["Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts", "Baseball",
               "Gaelic Sports", "Greyhounds", "Tennis", "Motor Racing", "Handball", "Ice Hockey",
@@ -562,7 +564,7 @@ def build_front_door() -> str:
   {picks['low']} low →</a></p>
 
   <div class="kpis">
-    <div class="kpi"><div class="v">{matches['count']}</div><div class="k">upcoming matches</div><div class="s">{matches['priced']} priced · {matches['unpriced']} blank with a reason</div></div>
+    <div class="kpi"><div class="v">{matches['count']}</div><div class="k">fixture records</div><div class="s">{not_started_fixture_count} still to start · {started_fixture_count} started at snapshot · {matches['unpriced']} blank</div></div>
     <div class="kpi"><div class="v">{picks['pregame_count']}</div><div class="k">picks still to start</div><div class="s">{picks['started_count']} already under way · {len(hs)} high overall</div></div>
     <div class="kpi"><div class="v">{preds['count']}</div><div class="k">written predictions</div><div class="s">shortest {preds['min_words']} words</div></div>
     <div class="kpi"><div class="v">{sources['official_count']}</div><div class="k">official sources</div><div class="s">linked on every row</div></div>

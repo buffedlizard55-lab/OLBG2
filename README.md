@@ -25,19 +25,19 @@ desk's.
 | [OLBG list](now/olbg.html) | The 96 rows captured off OLBG's own event list, with event ids, URLs and the hubs re-read live |
 | [Sources](now/sources.html) | Every page a value was read from |
 | [Method](now/methodology.html) | The four pricing families, the confidence rules, the 0-10 score and what is never done |
-| [Flagged for review](now/flagged.html) | 32 items: what is blank, what was corrected, and where the five-a-day target was not met |
+| [Flagged for review](now/flagged.html) | 33 items: what is blank, what was corrected, and where the five-a-day target was not met |
 
 ## The 24 October 2026 snapshot
 
 | Item | Value |
 |---|---|
-| Upcoming fixtures on the desk | **50** across all 15 sports — 39 priced, 11 blank with a stated reason |
+| Fixture records on the desk | **50** across all 15 sports — 45 still to start and 5 started at 18:10Z; 39 priced, 11 blank with a stated reason |
 | Prices originated here | **866** (match winner, handicap ladder and total ladder) |
-| Graded picks | **39** — 10 high, 26 medium, 3 low, every one inside −250…+10000 |
+| Graded picks | **39** — 3 high, 33 medium, 3 low, every one inside −250…+10000 |
 | Written predictions | **36** across 11 sports, shortest 65 words, no two openings alike |
 | OLBG listing rows captured | **96** across 14 of the 15 sports |
 | Official sources linked | 50 |
-| Review items | 32 — 25 open, 2 corrected, 5 notes |
+| Review items | 33 — 26 open, 2 corrected, 5 notes |
 
 Five written predictions per sport is the target, not a quota. It is met in Basketball (8) and Ice Hockey (9) and
 missed elsewhere, because a preview is only written when the official record carries the form, the recent results and
@@ -52,7 +52,7 @@ Gaelic games, basketball, tennis), a negative-binomial race to legs (darts), or 
 85% cannot be backed inside the requested band at all; the desk therefore publishes a handicap ladder and puts the
 pick on the line where its number lands nearest 68%.
 
-Confidence: **high** needs a numeric family, 62% or better and a price inside the band (match totals are capped at
+Confidence: **high** needs a numeric family, 70% or better and a price inside the band (match totals are capped at
 medium because they carry more variance). **Medium** needs 55%. Everything else is **low** and is published only for
 completeness.
 
@@ -66,8 +66,8 @@ python scripts/now_seed.py         # OLBG inventory + official fixture records w
 python scripts/now_model.py        # originate every market, grade it, apply the band test
 python scripts/now_predictions.py  # write the previews
 python scripts/now_build.py        # render the site (27 pages)
-python scripts/now_verify.py       # 8,063 line-by-line assertions
 python scripts/build_site.py       # regenerate the root front door and the archive index
+python scripts/now_verify.py       # line-by-line assertions, including the fresh root
 python -m unittest discover -s tests
 ```
 

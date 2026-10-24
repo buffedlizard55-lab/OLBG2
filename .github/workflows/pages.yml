@@ -123,10 +123,11 @@ jobs:
           python scripts/now_model.py
           python scripts/now_predictions.py
           python scripts/now_build.py
-          python scripts/now_verify.py
 
-      - name: Regenerate the root dashboard & integration layer
-        run: python scripts/build_site.py
+      - name: Regenerate the root dashboard and verify the /now/ desk
+        run: |
+          python scripts/build_site.py
+          python scripts/now_verify.py
 
       - name: Rebuild the 15-sport daily brief desk
         run: |

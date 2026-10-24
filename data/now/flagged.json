@@ -1,7 +1,7 @@
 {
  "as_of_utc": "2026-10-24T18:10:00Z",
- "count": 32,
- "open": 25,
+ "count": 33,
+ "open": 26,
  "corrected": 2,
  "flags": [
   {
@@ -240,9 +240,9 @@
    "id": "V-08",
    "severity": "note",
    "sport": "All",
-   "item": "Four picks are for matches that had already started when the snapshot was taken",
-   "detail": "Volleyball (Giesen v Berlin, 17:30Z), Rugby Union (Ospreys v Dragons, 18:00Z), Darts (Littler v Aspinall, 18:00Z) and Handball (Balingen v Melsungen, 18:00Z) began before the 18:10Z snapshot. They are published with their prices and write-ups but are marked as under way and kept out of the executive summary.",
-   "source": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+   "item": "4 picks are for matches that had already started when the snapshot was taken",
+   "detail": "5 of the 50 fixture records had started by 2026-10-24T18:10:00Z, including one unpriced greyhound race. Started rows retain their prices and write-ups where present, but are marked as under way and kept out of the executive summary. Each row's own official link supplies its start time.",
+   "source": "matches.html"
   },
   {
    "id": "V-07",
@@ -259,6 +259,14 @@
    "item": "Four NBA clubs had not filed an injury report at the 1:00 PM ET deadline",
    "detail": "Milwaukee, Washington, New Orleans and Golden State are recorded as NOT YET SUBMITTED. No absence is stated for those rosters, and the fields are blank rather than guessed.",
    "source": "https://official.nba.com/nba-injury-report-2026-27-season/"
+  },
+  {
+   "id": "V-09",
+   "severity": "open",
+   "sport": "Ice Hockey",
+   "item": "Los Angeles at New Jersey is omitted from the inherited NHL records",
+   "detail": "The official 24 October schedule lists 12 NHL games, including Los Angeles at New Jersey at 19:30Z. This desk inherited 10 NHL records and did not add that still-upcoming fixture at the 18:10Z snapshot. The omission is flagged rather than filled with unconfirmed teams, prices or analysis; do not call the inherited set a complete league schedule.",
+   "source": "https://api-web.nhle.com/v1/schedule/2026-10-24"
   }
  ]
 }

@@ -2,11 +2,11 @@
  "as_of_utc": "2026-10-24T18:10:00Z",
  "count": 39,
  "pregame_count": 35,
- "pregame_high": 9,
- "pregame_medium": 23,
+ "pregame_high": 2,
+ "pregame_medium": 30,
  "started_count": 4,
- "high": 10,
- "medium": 26,
+ "high": 3,
+ "medium": 33,
  "low": 3,
  "in_band": 39,
  "by_sport": {
@@ -40,8 +40,8 @@
    "unpriced": 1,
    "markets": 152,
    "picks": 4,
-   "high": 3,
-   "medium": 1,
+   "high": 1,
+   "medium": 3,
    "low": 0,
    "olbg_listed": 5,
    "pregame": 3
@@ -88,8 +88,8 @@
    "unpriced": 1,
    "markets": 20,
    "picks": 1,
-   "high": 1,
-   "medium": 0,
+   "high": 0,
+   "medium": 1,
    "low": 0,
    "olbg_listed": 2,
    "pregame": 1
@@ -160,8 +160,8 @@
    "unpriced": 1,
    "markets": 252,
    "picks": 9,
-   "high": 6,
-   "medium": 3,
+   "high": 2,
+   "medium": 7,
    "low": 0,
    "olbg_listed": 9,
    "pregame": 9
@@ -452,7 +452,7 @@
    "american": -229,
    "american_display": "-229",
    "in_band": true,
-   "confidence": "high",
+   "confidence": "medium",
    "score": 7.0,
    "basis": "normal_margin",
    "assumption": "Mean margin is the difference in points scored minus conceded per match with three points of home advantage; the standard deviation is 13 points. The total is the sum of both clubs' scoring and conceding averages divided by two. Draw removed by renormalising the two win tails.",
@@ -513,7 +513,7 @@
    "american": -215,
    "american_display": "-215",
    "in_band": true,
-   "confidence": "high",
+   "confidence": "medium",
    "score": 6.8,
    "basis": "normal_margin",
    "assumption": "Mean margin is the difference in points scored minus conceded per match with three points of home advantage; the standard deviation is 13 points. The total is the sum of both clubs' scoring and conceding averages divided by two. Draw removed by renormalising the two win tails.",
@@ -940,7 +940,7 @@
    "american": -189,
    "american_display": "-189",
    "in_band": true,
-   "confidence": "high",
+   "confidence": "medium",
    "score": 6.5,
    "basis": "poisson",
    "assumption": "Expected runs use the season run rates of both clubs; the starting-pitcher ERA gap is reflected in those rates and is listed on the fixture. Extra innings are treated as a coin flip for the money line.",
@@ -1625,7 +1625,7 @@
    "american": -227,
    "american_display": "-227",
    "in_band": true,
-   "confidence": "high",
+   "confidence": "medium",
    "score": 6.9,
    "basis": "poisson",
    "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime.",
@@ -1663,189 +1663,6 @@
     {
      "claim": "Team leaders",
      "value": "Brandon Hagel 7 goals (TBL); Nikita Kucherov 9 assists; Nick Schmaltz 7 goals (UTA)",
-     "source_key": "nhle_score_24",
-     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    }
-   ],
-   "started": false
-  },
-  {
-   "id": "pick-nhl-nsh-pit",
-   "fixture_id": "nhl-nsh-pit",
-   "sport": "Ice Hockey",
-   "competition": "NHL",
-   "home": "Pittsburgh Penguins",
-   "away": "Nashville Predators",
-   "start_utc": "2026-10-24T23:00:00Z",
-   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
-   "market": "Handicap 1.5",
-   "selection": "Nashville Predators +1.5",
-   "probability": 0.6386,
-   "decimal": 1.566,
-   "american": -177,
-   "american_display": "-177",
-   "in_band": true,
-   "confidence": "high",
-   "score": 6.4,
-   "basis": "poisson",
-   "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime.",
-   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006",
-   "facts": [
-    {
-     "claim": "Pittsburgh 2026-27 record",
-     "value": "4-6-1, 11 GP, 37 goals for, 38 against, 9 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Nashville 2026-27 record",
-     "value": "3-3-3, 9 GP, 23 goals for, 30 against, 9 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Nashville road split",
-     "value": "4 road games, 11 goals for, 16 against",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Pittsburgh home split",
-     "value": "4 home games, 14 goals for, 9 against (3-1-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Team leaders",
-     "value": "Evgeni Malkin 6 goals (PIT); Erik Karlsson 10 assists; Ryan O'Reilly 4 goals (NSH)",
-     "source_key": "nhle_score_24",
-     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    }
-   ],
-   "started": false
-  },
-  {
-   "id": "pick-nhl-det-cgy",
-   "fixture_id": "nhl-det-cgy",
-   "sport": "Ice Hockey",
-   "competition": "NHL",
-   "home": "Calgary Flames",
-   "away": "Detroit Red Wings",
-   "start_utc": "2026-10-25T02:00:00Z",
-   "start_display": "2026-10-25 02:00 UTC (NHL feed)",
-   "market": "Handicap 1.5",
-   "selection": "Calgary Flames +1.5",
-   "probability": 0.6338,
-   "decimal": 1.578,
-   "american": -173,
-   "american_display": "-173",
-   "in_band": true,
-   "confidence": "high",
-   "score": 6.3,
-   "basis": "poisson",
-   "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime.",
-   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
-   "facts": [
-    {
-     "claim": "Calgary 2026-27 record",
-     "value": "3-6-0, 9 GP, 19 goals for, 38 against, 6 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Detroit 2026-27 record",
-     "value": "4-3-3, 10 GP, 28 goals for, 30 against, 11 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Detroit road split",
-     "value": "3 road games, 8 goals for, 7 against (1-0-2)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Calgary home split",
-     "value": "5 home games, 11 goals for, 20 against (2-3-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Team leaders",
-     "value": "Alex DeBrincat 6 goals, 6 assists (DET); Morgan Frost 3 goals (CGY)",
-     "source_key": "nhle_score_24",
-     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    }
-   ],
-   "started": false
-  },
-  {
-   "id": "pick-nhl-vgk-cbj",
-   "fixture_id": "nhl-vgk-cbj",
-   "sport": "Ice Hockey",
-   "competition": "NHL",
-   "home": "Columbus Blue Jackets",
-   "away": "Vegas Golden Knights",
-   "start_utc": "2026-10-24T23:00:00Z",
-   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
-   "market": "Handicap 1.5",
-   "selection": "Columbus Blue Jackets +1.5",
-   "probability": 0.621,
-   "decimal": 1.61,
-   "american": -164,
-   "american_display": "-164",
-   "in_band": true,
-   "confidence": "high",
-   "score": 6.2,
-   "basis": "poisson",
-   "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime.",
-   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
-   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
-   "facts": [
-    {
-     "claim": "Columbus 2026-27 record",
-     "value": "3-5-0, 8 GP, 20 goals for, 29 against, 6 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Vegas 2026-27 record",
-     "value": "8-4-0, 12 GP, 46 goals for, 36 against, 16 points",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Columbus home split",
-     "value": "6 home games, 16 goals for, 22 against (3-3-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Columbus road split",
-     "value": "2 road games, 4 goals for, 7 against (0-2-0)",
-     "source_key": "nhle_standings_24",
-     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
-     "captured_utc": "2026-10-24T17:35:00Z"
-    },
-    {
-     "claim": "Team leaders",
-     "value": "Mark Stone 8 goals (VGK); Jack Eichel 13 assists; Kent Johnson 4 goals (CBJ)",
      "source_key": "nhle_score_24",
      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
      "captured_utc": "2026-10-24T17:35:00Z"
@@ -2029,6 +1846,189 @@
     {
      "claim": "Team leaders",
      "value": "Tage Thompson 5 goals (BUF); Alex Tuch 5 goals (WSH); Logan Thompson 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ],
+   "started": false
+  },
+  {
+   "id": "pick-nhl-vgk-cbj",
+   "fixture_id": "nhl-vgk-cbj",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Columbus Blue Jackets",
+   "away": "Vegas Golden Knights",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "market": "Match winner (money line)",
+   "selection": "Vegas Golden Knights",
+   "probability": 0.6132,
+   "decimal": 1.631,
+   "american": -159,
+   "american_display": "-159",
+   "in_band": true,
+   "confidence": "medium",
+   "score": 6.1,
+   "basis": "poisson",
+   "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime.",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
+   "facts": [
+    {
+     "claim": "Columbus 2026-27 record",
+     "value": "3-5-0, 8 GP, 20 goals for, 29 against, 6 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Vegas 2026-27 record",
+     "value": "8-4-0, 12 GP, 46 goals for, 36 against, 16 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Columbus home split",
+     "value": "6 home games, 16 goals for, 22 against (3-3-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Columbus road split",
+     "value": "2 road games, 4 goals for, 7 against (0-2-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Team leaders",
+     "value": "Mark Stone 8 goals (VGK); Jack Eichel 13 assists; Kent Johnson 4 goals (CBJ)",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ],
+   "started": false
+  },
+  {
+   "id": "pick-nhl-det-cgy",
+   "fixture_id": "nhl-det-cgy",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Calgary Flames",
+   "away": "Detroit Red Wings",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "start_display": "2026-10-25 02:00 UTC (NHL feed)",
+   "market": "Match winner (money line)",
+   "selection": "Detroit Red Wings",
+   "probability": 0.6103,
+   "decimal": 1.639,
+   "american": -157,
+   "american_display": "-157",
+   "in_band": true,
+   "confidence": "medium",
+   "score": 6.1,
+   "basis": "poisson",
+   "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime.",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
+   "facts": [
+    {
+     "claim": "Calgary 2026-27 record",
+     "value": "3-6-0, 9 GP, 19 goals for, 38 against, 6 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Detroit 2026-27 record",
+     "value": "4-3-3, 10 GP, 28 goals for, 30 against, 11 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Detroit road split",
+     "value": "3 road games, 8 goals for, 7 against (1-0-2)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Calgary home split",
+     "value": "5 home games, 11 goals for, 20 against (2-3-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Team leaders",
+     "value": "Alex DeBrincat 6 goals, 6 assists (DET); Morgan Frost 3 goals (CGY)",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ],
+   "started": false
+  },
+  {
+   "id": "pick-nhl-nsh-pit",
+   "fixture_id": "nhl-nsh-pit",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Pittsburgh Penguins",
+   "away": "Nashville Predators",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "market": "Match winner (money line)",
+   "selection": "Pittsburgh Penguins",
+   "probability": 0.5972,
+   "decimal": 1.674,
+   "american": -148,
+   "american_display": "-148",
+   "in_band": true,
+   "confidence": "medium",
+   "score": 6.0,
+   "basis": "poisson",
+   "assumption": "Expected goals are the geometric mean of each side's scoring rate and the opponent's conceding rate, with home multipliers 1.06 / 0.98. Tied regulation score is treated as a coin flip because the money line includes overtime.",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006",
+   "facts": [
+    {
+     "claim": "Pittsburgh 2026-27 record",
+     "value": "4-6-1, 11 GP, 37 goals for, 38 against, 9 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Nashville 2026-27 record",
+     "value": "3-3-3, 9 GP, 23 goals for, 30 against, 9 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Nashville road split",
+     "value": "4 road games, 11 goals for, 16 against",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Pittsburgh home split",
+     "value": "4 home games, 14 goals for, 9 against (3-1-0)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Team leaders",
+     "value": "Evgeni Malkin 6 goals (PIT); Erik Karlsson 10 assists; Ryan O'Reilly 4 goals (NSH)",
      "source_key": "nhle_score_24",
      "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
      "captured_utc": "2026-10-24T17:35:00Z"

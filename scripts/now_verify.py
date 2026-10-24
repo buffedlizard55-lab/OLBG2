@@ -77,6 +77,13 @@ def main() -> int:
     ok(olbg["listings_count"] == len(olbg["listings"]), "OLBG row count mismatch")
     ok(sources["count"] == len(sources["sources"]), "source count mismatch")
     ok(flagged["count"] == len(flagged["flags"]), "flag count mismatch")
+    omission = next((f for f in flagged["flags"] if f["id"] == "V-09"), None)
+    ok(omission is not None, "LA-New Jersey omission is not flagged")
+    if omission:
+        ok(omission["source"] == "https://api-web.nhle.com/v1/schedule/2026-10-24",
+           "NHL omission flag does not link the official schedule")
+        ok("Los Angeles" in omission["item"] and "New Jersey" in omission["item"],
+           "NHL omission flag does not name the fixture")
 
     # 2 ------------------------------------------------------------------ sources
     for f in fixtures["fixtures"]:
@@ -121,7 +128,7 @@ def main() -> int:
             ok(row["confidence"] != "high",
                f"{row['fixture_id']}: an evidence-ladder price was graded high")
         if row["confidence"] == "high":
-            ok(row["probability"] >= 0.62, f"{row['fixture_id']}: high under 62%")
+            ok(row["probability"] >= 0.70, f"{row['fixture_id']}: high under 70%")
         if row["confidence"] == "medium":
             ok(row["probability"] >= 0.55, f"{row['fixture_id']}: medium under 55%")
 
@@ -178,12 +185,25 @@ def main() -> int:
         ok(m is not None, f"{p['id']}: no matching fixture")
         ok(p["started"] == (bool(m["start_utc"]) and m["start_utc"] <= "2026-10-24T18:10:00Z"),
            f"{p['id']}: started flag disagrees with the start time")
+    started_fixtures = sum(bool(m["started"]) for m in matches["matches"])
+    ok(started_fixtures == 5, "expected five started fixture records at the pinned snapshot")
+    ok(matches["count"] - started_fixtures == 45, "expected 45 fixture records still to start")
     index_html = (OUT / "index.html").read_text(encoding="utf-8")
+    ok(">50</div><div class=\"k\">fixture records" in index_html,
+       "desk index does not distinguish fixture records from upcoming matches")
+    ok("45 still to start" in index_html and "5 started at snapshot" in index_html,
+       "desk index temporal counts are missing")
+    ok("50 upcoming matches" not in index_html, "desk index still calls every record upcoming")
     cards = re.findall(r'class="sel" href="predictions\.html#pred-([^"]+)"', index_html)
     ok(len(cards) >= 3, "executive summary shows too few calls")
     for fid in cards:
         ok(fid not in started, f"executive summary promotes a started fixture: {fid}")
     root_html = (ROOT / "index.html").read_text(encoding="utf-8")
+    ok(">50</div><div class=\"k\">fixture records" in root_html,
+       "root does not distinguish fixture records from upcoming matches")
+    ok("45 still to start" in root_html and "5 started at snapshot" in root_html,
+       "root temporal counts are missing")
+    ok("50 upcoming matches" not in root_html, "root still calls every record upcoming")
     root_cards = re.findall(r'class="pickcard" href="now/predictions\.html#pred-([^"]+)"', root_html)
     ok(len(root_cards) >= 3, "root front door shows too few calls")
     for fid in root_cards:

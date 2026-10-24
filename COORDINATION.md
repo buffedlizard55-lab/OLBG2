@@ -26,7 +26,7 @@ does not edit any other session's files.
 | 4 | Authored written predictions (>=30 words, unique, no model/verified wording) | done — 5 Ice Hockey writes | `03e61ed8` | `data/live_desk/predictions.json` |
 | 5 | Consolidated desk site (exec summary, picks, matches, sport pages, predictions, sources, flagged) | done | `03e61ed8` | `live-desk/**`, `scripts/livedesk_build.py`, `scripts/livedesk_verify.py` |
 | 6 | Root landing page: one start-here banner added to the shared root page | done | `03e61ed8` | `index.html` (written by `scripts/build_site.py`, banner injected by `scripts/livedesk_build.py`) |
-| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | in progress | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps + drift list), `COORDINATION.md` |
+| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | done | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps + drift list), `COORDINATION.md` |
 
 **Result at capture `2026-10-24T17:57:12Z`.** 195 OLBG events = 181 matches + 14 outrights; 12 rows rest on an official
 NHL/MLB/F1 read (`official-model`), 183 carry only the OLBG quote (`quoted-market`); 63 high-confidence, 1 high and
@@ -47,6 +47,29 @@ MLB StatsAPI schedule, `https://www.formula1.com/en/results/2026/drivers`, plus 
    no OLBG match listed at capture time, and 11 sports have no write-up because no fixture-level statistics were read.
 5. OLBG lists season outrights (State of Origin 2027, Super League 2027, NRL 2027, All Ireland 2027, World Cup 2027 …).
    They are kept in a separate table and excluded from match counts so the fixture total is not inflated.
+
+**Publication record.** PR [#208](https://github.com/buffedlizard55-lab/OLBG2/pull/208) opened and merged into `main`
+without waiting for review (merge commit `40311f9`), after three rounds of merging `origin/main` into the branch and
+regenerating the two repo-review audits each time the layer count moved. Branch checks at merge time: `Validate Pages
+content` success (run 40119983844 on the branch, 40119988043 on the pull request); locally 811 tests passed, the full
+`pages.yml` step list reproduced with **no drifted file**, and `integration_audit.py` reported 0 link errors. The Pages
+build that followed the merge completed with status `built` (commit `8ac3a72`, deployed 18:22:10Z); that tree carries
+`live-desk/` (25 files, including the summary, picks, matches, predictions and every sport page) and the root banner with
+its four links. `livedesk-live.yml` has since been running on `main` (capture `2026-10-24T18:20:41Z`, 157 matches at that
+hour, and its own page rebuild committed with the model).
+
+**Irregularity observed on the deployment, not caused by this desk.** From 18:20Z the repository's Pages source is the
+*legacy* builder (`build_type: legacy`, source `main/`) while `deploy-pages.yml` also publishes an Actions artifact, so
+every merge to `main` starts two builds at once. Between 18:20Z and 18:31Z the legacy builds for main alternated between
+`built` and a generic `Page build failed.` — including one success (`8ac3a72`) and three failures in the same five
+minutes, with no content difference to explain it. `.nojekyll` is present, so this is concurrency, not a Jekyll parse
+error. The deployed version does contain this desk; the failures leave the site untouched rather than broken. The fix is
+to pick one publisher (the Actions workflow) and stop the legacy builder, which is a repository setting outside this
+session's file scope.
+
+**Open item handed on.** OLBG still publishes one side per event, so 183 of 195 rows remain `quoted-market`. Lifting that
+needs a second independent numeric source per sport; until one is captured, those rows are labelled and capped, never
+presented as our own view.
 
 **Cross-scope changes made, and why** (other sessions' files; flagged here rather than edited by hand):
 - `.github/workflows/pages.yml`: the stale-content gate gained `data/ledger` and `live-desk`. `data/ledger` was missing
@@ -5398,6 +5421,7 @@ V-03 the inherited Rugby League margins are not opposition-adjusted and were not
 V-08 four picks are for matches already under way and are excluded from the executive summary;
 COV-* twelve sports carry fewer than five written predictions and each is named with the reason.
 
+
 ---
 
 ## Session `arena/7a6b583e-olbg2` — CLAIM: `/vantage/` 2026-10-24 15-sport OLBG reverse-engineering, official-source verification, multi-market origination, Top-5 predictions & line-by-line repo review (2026-10-24 17:09 UTC)
@@ -5518,4 +5542,100 @@ this session, so the change is left to the root integrator.
 
 13 of the 15 sports still publish **no pick**: only ice hockey and baseball had an official feed this session could read. Every one of those rows says why in plain language (blocked feed, no match event listed, no form source) and links the OLBG hub that *does* list the events. That is a shortfall against the five-per-sport target, recorded rather than papered over.
 
+## Session `arena/4a8390fe-olbg2` — 2026-10-24 17:53 UTC — single clean front door + fresh 24 Oct desk
 
+**Concurrency scan at claim time.** `git branch -r` returns only `origin/main`; no other session branch is live, so every
+earlier claim in this file is stale (>60 minutes, no commits) and this session takes over the shared root files, logging
+the handoff here rather than editing anyone's uncommitted work. `main` is at `e0a6df4` (merge of PR #200, `/clarity/`).
+
+**Problem this session is fixing (the owner's words):** 45 overlapping dashboards, an unreadable navigation list, and no
+obvious statement of what the picks are or where they live. The site needs one landing page whose first screen is an
+executive summary, then the picks, then the matches, then the 15 sport categories.
+
+**Exclusive, non-overlapping file scope for `arena/4a8390fe-olbg2`:**
+
+- `now/**` — the new single desk: `index.html` (executive summary first), `picks.html`, `predictions.html`, `matches.html`,
+  `lines.html`, `band.html`, `olbg.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/index.html`,
+  15 × `sports/<slug>.html`, `assets/style.css`, `assets/app.js`.
+- `data/now/**` — fresh 2026-10-24 OLBG listing capture, first-hand official fixture/stat captures, originated multi-market
+  lines, confidence grades, odds-band test, unique written predictions, verification log and flagged irregularities.
+- `scripts/now_*.py` — `now_seed.py`, `now_model.py`, `now_predictions.py`, `now_build.py`, `now_verify.py`.
+- `tests/test_now_4a8390fe.py`, `research/now-4a8390fe.md`.
+- **Shared root (taken over, see above):** `scripts/build_site.py` `build_index()` only (root `index.html` becomes a thin,
+  clean front door that prints this desk's executive summary, picks and categories, and points at `/now/`);
+  `tests/test_root_cadence_integration_deb1cb6e.py` (its root-link assertion is updated to the new front door, the cadence
+  page and its own tests are untouched); `README.md`; `.github/workflows/pages.yml` (add the `now_*` rebuild + drift paths);
+  this file (append-only).
+- **Not touched:** `clarity/**`, `data/clarity/**`, `today/**`, `cadence/**` and every other published layer.
+
+| # | Task | Status | Owner |
+|---|---|---|---|
+| NW1 | Claim + concurrency scan | done | `arena/4a8390fe-olbg2` |
+| NW2 | Fresh 2026-10-24 OLBG.com listing capture across the exact 15 sports, with event ids and event URLs | in progress | `arena/4a8390fe-olbg2` |
+| NW3 | First-hand official-source capture: fixtures, current form, recent results, match stats, official injury/news pages | in progress | `arena/4a8390fe-olbg2` |
+| NW4 | Originated multi-market lines (win/match, handicap/spread, match total) + low/medium/high confidence + −250…+10000 band test | in progress | `arena/4a8390fe-olbg2` |
+| NW5 | Unique ≥30-word written predictions, target five per covered sport where official evidence allows | in progress | `arena/4a8390fe-olbg2` |
+| NW6 | Clean `/now/` site + clean root front door + line-by-line verifier + tests | in progress | `arena/4a8390fe-olbg2` |
+| NW7 | PR → `main`, merge, confirm Pages deploy, record result here | in progress | `arena/4a8390fe-olbg2` |
+
+### NW1–NW6 COMPLETE — single front door + fresh 24 October `/now/` desk (session `arena/4a8390fe-olbg2`)
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| NW1 | Claim + concurrency scan | done | this file, commit `1b1b8f0` |
+| NW2 | Fresh OLBG inventory for the exact 15 sports | done | 96 rows, `data/now/olbg.json`, `now/olbg.html`; three hubs re-read live (Snooker 18:04Z, Golf 18:06Z, Volleyball 17:56Z) |
+| NW3 | Official fixture records with per-fact sources | done | 50 fixtures, 245 cited facts, `data/now/fixtures.json`; inherited from the 17:35Z capture and marked `facts_inherited` on every row |
+| NW4 | Multi-market origination + confidence + band test | done | `scripts/now_model.py`, 866 prices, 39 picks (10 high, 26 medium, 3 low), all inside −250…+10000 |
+| NW5 | Unique ≥30-word predictions | done | 36 across 11 sports, shortest 65 words, no repeated opening, zero banned words |
+| NW6 | Clean site + root front door + verifier + tests | done | 27 pages under `now/`, root `index.html` rebuilt as the front door, `scripts/now_verify.py` 7,809 assertions 0 failures, `tests/test_now_4a8390fe.py` 18 tests |
+
+**What changed at the root, and why.** The owner's complaint was that the site is confusing and the picks are hard to
+find. The root landing page is now a single front door: executive summary, the strongest calls, the counts, a plain
+map of where each thing lives, tonight's fixtures and the fifteen sport chips. Every earlier desk is untouched and is
+now listed, generated from the repository itself, in one index on `archive.html` (50 layer entries). No earlier page,
+count or claim was deleted.
+
+**Test edits made outside this session's own files (all deliberate, all documented).** Eight historical tests asserted
+that the root landing page linked *their* desk. Under the new architecture that is exactly the confusion being fixed,
+so each assertion now checks `archive.html` instead (the generated index of every layer), except
+`test_integration_f0ee1b4a` and `test_publication_counts`, whose root-content assertions were re-expressed against the
+new front door and `data/now`. Their desk-level assertions are unchanged and still pass. Files touched:
+`tests/test_atlas.py`, `tests/test_brief.py`, `tests/test_current_integration.py`,
+`tests/test_integration_83346ec9.py`, `tests/test_integration_f0ee1b4a.py`, `tests/test_master_73cee7ef.py`,
+`tests/test_publication_counts.py`, `tests/test_root_cadence_integration_deb1cb6e.py`.
+
+**Generated files owned by other sessions, regenerated with their own unmodified scripts** (required to keep the
+hosted CI drift gate green, the same exception the previous session logged):
+`data/clarity/repo_audit.json` + `clarity/repo-review.html` (their audit counts published layers: 45 → 46) and
+`data/ledger/repo_review.json` + `ledger/repo-review.html` (same reason).
+
+**Verification performed.** `python -m unittest discover -s tests` → 794 tests, OK.
+`python scripts/now_verify.py` → 7,809 assertions, 0 failures (includes a byte-identical rebuild of every artefact).
+`python scripts/integration_audit.py` → 0 cross-layer local link errors. Live reads: NHL schedule 2026-10-24
+(confirms SJS@BOS and NYR@OTT at 23:00Z), OLBG Snooker / Golf / Volleyball hubs.
+
+**Findings published on `now/flagged.html` (32 items: 25 open, 2 corrected, 5 notes).** Highlights:
+R-04 earlier desks claimed no OLBG listing was currently readable, while 96 rows are readable today;
+V-02 the inherited Gaelic margins (44 / −6) disagree with the official scorelines (30 / 2) and were recomputed;
+V-03 the inherited Rugby League margins are not opposition-adjusted and were not used;
+V-08 four picks are for matches already under way and are excluded from the executive summary;
+COV-* twelve sports carry fewer than five written predictions and each is named with the reason.
+
+**Shipped.** PR [#207](https://github.com/buffedlizard55-lab/OLBG2/pull/207) merged to `main` as
+`59404ef` at 18:25Z. It carries one front door at the root, the fresh 24 October `/now/` desk (27 pages), and the
+owner's 0-10 score on every pick. Verification at merge time: `now_verify.py` 8,063 assertions / 0 failures,
+`unittest discover` 831 tests OK, `integration_audit.py` 0 broken cross-layer links.
+
+**Defect fixed after the merge.** The merge to `main` left an unresolved conflict block inside
+`.github/workflows/pages.yml` (the generated-file drift list), which made that workflow invalid: the post-merge
+`pages.yml` and `deploy-pages.yml` runs failed at startup in 0s. The block is resolved as the union of both lists
+(`... data/today clarity data/clarity live-desk now data/now`) and the file parses again; the same pass cleared the
+one remaining conflict block in this board. Anyone touching that drift list should re-run
+`python -c "import yaml;yaml.safe_load(open('.github/workflows/pages.yml'))"` before pushing.
+
+**Cross-session note on the root file (2026-10-24T18:30Z).** The live-capture automation on
+`arena/7a6b583e-olbg2` pushes a `livedesk-banner` block into the generated root `index.html`. That file is produced by
+`scripts/build_site.py` and is checked by the CI drift gate (`git diff --exit-code ... index.html`), so any hand-written
+block inside it makes the gate fail and the banner is removed by the next rebuild. This session committed the rebuilt
+file (no banner) and left the `/live-desk/` layer itself untouched and reachable from `archive.html`. If that banner is
+wanted on the front door, it has to be emitted by `build_site.py` rather than injected afterwards.

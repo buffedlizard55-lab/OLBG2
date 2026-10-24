@@ -1,7 +1,7 @@
 {
  "generated_utc": "2026-10-24T17:35:00Z",
  "count": 7,
- "layers": 45,
+ "layers": 47,
  "findings": [
   {
    "id": "CR-01",
@@ -246,7 +246,7 @@
    "id": "CR-04",
    "severity": "medium",
    "title": "Merge-conflict markers are still checked in to the shared task board",
-   "detail": "COORDINATION.md carries 7 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.",
+   "detail": "COORDINATION.md carries 8 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.",
    "evidence": [
     {
      "file": "COORDINATION.md",
@@ -257,7 +257,8 @@
       3549,
       3609,
       3628,
-      4895
+      4895,
+      5193
      ]
     }
    ],
@@ -283,7 +284,7 @@
   {
    "id": "CR-06",
    "severity": "medium",
-   "title": "45 separate dashboards publish an overlapping 15-sport brief",
+   "title": "47 separate dashboards publish an overlapping 15-sport brief",
    "detail": "Each directory publishes its own dashboard with its own counts. A reader landing on any one of them sees a different total for the same day. This desk adds /clarity/ as an explicitly dated 2026-10-24 snapshot and states its counts on every page header rather than implying it supersedes the others.",
    "evidence": [
     {
@@ -304,6 +305,7 @@
       "daily-picks",
       "desk",
       "evidence",
+      "executive",
       "final",
       "final-desk",
       "focus",
@@ -315,6 +317,7 @@
       "live",
       "liveboard",
       "master",
+      "meridian",
       "monitor",
       "olbg",
       "portal",
@@ -334,7 +337,7 @@
       "verified",
       "zenith"
      ],
-     "count": 45
+     "count": 47
     }
    ],
    "action": "Root integration request recorded in COORDINATION.md."

@@ -1,0 +1,2688 @@
+{
+ "captured_utc": "2026-10-24T18:10:00Z",
+ "session": "arena/1286444e-olbg2",
+ "sports": [
+  "Golf",
+  "Volleyball",
+  "Rugby Union",
+  "Cricket",
+  "Snooker",
+  "Darts",
+  "Baseball",
+  "Gaelic Sports",
+  "Greyhounds",
+  "Tennis",
+  "Motor Racing",
+  "Handball",
+  "Ice Hockey",
+  "Basketball",
+  "Rugby League"
+ ],
+ "olbg_hubs": {
+  "Golf": {
+   "url": "https://www.olbg.com/betting-tips/Golf/5",
+   "sport_id": 5,
+   "listed_events": 0,
+   "note": "Hub returned HTTP 200 but rendered 'No tips found.' while a PGA TOUR event was in progress"
+  },
+  "Volleyball": {
+   "url": "https://www.olbg.com/betting-tips/Volleyball/21",
+   "sport_id": 21,
+   "listed_events": 20
+  },
+  "Rugby Union": {
+   "url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+   "sport_id": 9,
+   "listed_events": 6
+  },
+  "Cricket": {
+   "url": "https://www.olbg.com/betting-tips/Cricket/7",
+   "sport_id": 7,
+   "listed_events": 14
+  },
+  "Snooker": {
+   "url": "https://www.olbg.com/betting-tips/Snooker/8",
+   "sport_id": 8,
+   "listed_events": 1
+  },
+  "Darts": {
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "sport_id": 15,
+   "listed_events": 6
+  },
+  "Baseball": {
+   "url": "https://www.olbg.com/betting-tips/Baseball/12",
+   "sport_id": 12,
+   "listed_events": 1
+  },
+  "Gaelic Sports": {
+   "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+   "sport_id": 25,
+   "listed_events": 5,
+   "note": "Gaelic Football hub; Hurling is a separate route at /Hurling/26 (event_id 714 listed)."
+  },
+  "Greyhounds": {
+   "url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+   "sport_id": 28,
+   "listed_events": 20
+  },
+  "Tennis": {
+   "url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "sport_id": 3,
+   "listed_events": 6
+  },
+  "Motor Racing": {
+   "url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+   "sport_id": 14,
+   "listed_events": 1
+  },
+  "Handball": {
+   "url": "https://www.olbg.com/betting-tips/Handball/20",
+   "sport_id": 20,
+   "listed_events": 20
+  },
+  "Ice Hockey": {
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "sport_id": 13,
+   "listed_events": 20
+  },
+  "Basketball": {
+   "url": "https://www.olbg.com/betting-tips/Basketball/4",
+   "sport_id": 4,
+   "listed_events": 20
+  },
+  "Rugby League": {
+   "url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "sport_id": 10,
+   "listed_events": 3
+  }
+ },
+ "olbg_route_probe": {
+  "checked": [
+   "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "https://www.olbg.com/betting-tips/American_Football/11",
+   "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+   "https://www.olbg.com/betting-tips/Hurling/26"
+  ],
+  "finding": "Ice Hockey is OLBG sport id 13; id 11 is American Football. Gaelic sports are split across Gaelic Football (25) and Hurling (26). Both were confirmed from the OLBG sitemap dated 2026-10-24."
+ },
+ "fixtures": [
+  {
+   "id": "nhl-lak-njd",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "New Jersey Devils",
+   "away": "Los Angeles Kings",
+   "start_utc": "2026-10-24T19:30:00Z",
+   "start_display": "2026-10-24 19:30 UTC (NHL feed)",
+   "venue": "Prudential Center, Newark",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/LA_Kings_@_NJ_Devils/13?event_id=200000",
+   "inputs": {},
+   "blank_reason": "Los Angeles goals-for and goals-against totals were not legible in the captured NHL standings payload, so no two-sided input exists.",
+   "facts": [
+    {
+     "claim": "New Jersey record",
+     "value": "6-4-0, 12 games, 47 goals for, 33 against, 12 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "New Jersey team leaders",
+     "value": "Jack Hughes 8 assists; Arseny Gritsyuk 5 goals; Jake Allen 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Los Angeles record",
+     "value": "2-4-2, 8 games, 6 points",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "League quote",
+     "value": "New Jersey 1.52, Los Angeles 2.55",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "nhl-sjs-bos",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Boston Bruins",
+   "away": "San Jose Sharks",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "venue": "TD Garden, Boston",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007",
+   "inputs": {
+    "home_gf": 42,
+    "home_ga": 22,
+    "home_gp": 11,
+    "away_gf": 33,
+    "away_ga": 37,
+    "away_gp": 11
+   },
+   "facts": [
+    {
+     "claim": "Boston record",
+     "value": "8-2-1, 11 games, 42 goals for, 22 against, 17 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Boston team leaders",
+     "value": "David Pastrnak 6 goals, 10 assists; Jeremy Swayman 6 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "San Jose record",
+     "value": "6-4-1, 11 games, 33 goals for, 37 against, 13 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "San Jose team leaders",
+     "value": "Macklin Celebrini 5 goals, 9 assists; Vitek Vanacek 3 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-nyr-ott",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Ottawa Senators",
+   "away": "New York Rangers",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "venue": "Canadian Tire Centre, Ottawa",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008",
+   "inputs": {
+    "home_gf": 31,
+    "home_ga": 30,
+    "home_gp": 11,
+    "away_gf": 37,
+    "away_ga": 29,
+    "away_gp": 12
+   },
+   "facts": [
+    {
+     "claim": "Ottawa record",
+     "value": "7-4-0, 11 games, 31 goals for, 30 against, 14 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Ottawa team leaders",
+     "value": "Tim Stutzle 7 goals, 8 assists; Linus Ullmark 7 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "New York Rangers record",
+     "value": "7-4-1, 12 games, 37 goals for, 29 against, 15 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Rangers team leaders",
+     "value": "Alexis Lafrenière 8 goals; Adam Fox 14 assists; Jonathan Garand 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-nsh-pit",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Pittsburgh Penguins",
+   "away": "Nashville Predators",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "venue": "PPG Paints Arena, Pittsburgh",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NSH_Predators_@_PIT_Penguins/13?event_id=200006",
+   "inputs": {
+    "home_gf": 37,
+    "home_ga": 38,
+    "home_gp": 11,
+    "away_gf": 23,
+    "away_ga": 30,
+    "away_gp": 9
+   },
+   "facts": [
+    {
+     "claim": "Pittsburgh record",
+     "value": "4-6-1, 11 games, 37 goals for, 38 against, 9 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Pittsburgh team leaders",
+     "value": "Evgeni Malkin 6 goals; Erik Karlsson 10 assists; Alex Silovs 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Nashville record",
+     "value": "3-3-3, 9 games, 23 goals for, 30 against, 9 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Nashville team leaders",
+     "value": "Ryan O'Reilly 4 goals; Roman Josi 8 assists; Juuse Saros 3 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-buf-wsh",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Washington Capitals",
+   "away": "Buffalo Sabres",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "venue": "Capital One Arena, Washington",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/BUF_Sabres_@_WAS_Capitals/13?event_id=200003",
+   "inputs": {
+    "home_gf": 30,
+    "home_ga": 29,
+    "home_gp": 9,
+    "away_gf": 28,
+    "away_ga": 37,
+    "away_gp": 10
+   },
+   "facts": [
+    {
+     "claim": "Washington record",
+     "value": "5-4-0, 9 games, 30 goals for, 29 against, 10 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Washington team leaders",
+     "value": "Alex Tuch 5 goals; Dylan Strome 5 assists; Logan Thompson 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Buffalo record",
+     "value": "4-4-2, 10 games, 28 goals for, 37 against, 10 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Buffalo team leaders",
+     "value": "Tage Thompson 5 goals; Zach Benson 6 assists; Ukko-Pekka Luukkonen 3 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-vgk-cbj",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Columbus Blue Jackets",
+   "away": "Vegas Golden Knights",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "venue": "Nationwide Arena, Columbus",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
+   "inputs": {
+    "home_gf": 20,
+    "home_ga": 29,
+    "home_gp": 8,
+    "away_gf": 46,
+    "away_ga": 36,
+    "away_gp": 12
+   },
+   "facts": [
+    {
+     "claim": "Columbus record",
+     "value": "3-5-0, 8 games, 20 goals for, 29 against, 6 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Columbus team leaders",
+     "value": "Kent Johnson 4 goals; Zach Werenski 6 assists; Jet Greaves 2 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Vegas record",
+     "value": "8-4-0, 12 games, 46 goals for, 36 against, 16 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Vegas team leaders",
+     "value": "Mark Stone 8 goals; Jack Eichel 13 assists; Carter Hart 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-car-stl",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "St. Louis Blues",
+   "away": "Carolina Hurricanes",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "venue": "Enterprise Center, St. Louis",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/CAR_Hurricanes_@_STL_Blues/13?event_id=200002",
+   "inputs": {
+    "home_gf": 35,
+    "home_ga": 31,
+    "home_gp": 10,
+    "away_gf": 47,
+    "away_ga": 33,
+    "away_gp": 12
+   },
+   "facts": [
+    {
+     "claim": "Carolina record",
+     "value": "8-2-2, 12 games, 47 goals for, 33 against, 18 points (league-best points)",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Carolina team leaders",
+     "value": "Sebastian Aho 7 goals; Jackson Blake 10 assists; Pyotr Kochetkov 6 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "St. Louis record",
+     "value": "5-4-1, 10 games, 35 goals for, 31 against, 11 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "St. Louis team leaders",
+     "value": "Mason McTavish 6 goals; Dylan Holloway 7 assists; Joel Hofer 4 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-tor-edm",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Edmonton Oilers",
+   "away": "Toronto Maple Leafs",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "start_display": "2026-10-24 23:00 UTC (NHL feed)",
+   "venue": "Rogers Place, Edmonton",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TOR_Maple_Leafs_@_EDM_Oilers/13?event_id=200010",
+   "inputs": {
+    "home_gf": 47,
+    "home_ga": 32,
+    "home_gp": 10,
+    "away_gf": 43,
+    "away_ga": 39,
+    "away_gp": 12
+   },
+   "facts": [
+    {
+     "claim": "Edmonton record",
+     "value": "8-1-1, 10 games, 47 goals for, 32 against, 17 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Edmonton team leaders",
+     "value": "Leon Draisaitl 10 goals; Connor McDavid 23 assists; Devon Levi 6 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Toronto record",
+     "value": "6-4-2, 12 games, 43 goals for, 39 against, 14 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Toronto team leaders",
+     "value": "Auston Matthews 8 goals, 10 assists; Joseph Woll 3 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-tbl-uta",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Utah Mammoth",
+   "away": "Tampa Bay Lightning",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "start_display": "2026-10-25 01:00 UTC (NHL feed)",
+   "venue": "Delta Center, Salt Lake City",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/TB_Lightning_@_UTA_Mammoth/13?event_id=200009",
+   "inputs": {
+    "home_gf": 41,
+    "home_ga": 36,
+    "home_gp": 11,
+    "away_gf": 34,
+    "away_ga": 29,
+    "away_gp": 10
+   },
+   "facts": [
+    {
+     "claim": "Utah record",
+     "value": "7-4-0, 11 games, 41 goals for, 36 against, 14 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Utah team leaders",
+     "value": "Nick Schmaltz 7 goals; Mario Sergachev 10 assists; Karel Vejmelka 5 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Tampa Bay record",
+     "value": "7-3-0, 10 games, 34 goals for, 29 against, 14 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Tampa Bay team leaders",
+     "value": "Brandon Hagel 7 goals; Nikita Kucherov 9 assists; Andrei Vasilevskiy 5 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-det-cgy",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Calgary Flames",
+   "away": "Detroit Red Wings",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "start_display": "2026-10-25 02:00 UTC (NHL feed)",
+   "venue": "Scotiabank Saddledome, Calgary",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/DET_Red_Wings_@_CGY_Flames/13?event_id=200004",
+   "inputs": {
+    "home_gf": 19,
+    "home_ga": 38,
+    "home_gp": 9,
+    "away_gf": 28,
+    "away_ga": 30,
+    "away_gp": 10
+   },
+   "facts": [
+    {
+     "claim": "Calgary record",
+     "value": "3-6-0, 9 games, 19 goals for, 38 against, 6 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Calgary team leaders",
+     "value": "Morgan Frost 3 goals; Joel Farabee 5 assists; Devin Cooley 2 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Detroit record",
+     "value": "4-3-3, 10 games, 28 goals for, 30 against, 11 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Detroit team leaders",
+     "value": "Alex DeBrincat 6 goals, 6 assists; John Gibson 3 wins",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nhl-min-sea",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Seattle Kraken",
+   "away": "Minnesota Wild",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "start_display": "2026-10-25 02:00 UTC (NHL feed)",
+   "venue": "Climate Pledge Arena, Seattle",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/MIN_Wild_@_SEA_Kraken/13?event_id=200005",
+   "inputs": {
+    "home_gf": null,
+    "home_ga": null,
+    "home_gp": null,
+    "away_gf": 32,
+    "away_ga": 27,
+    "away_gp": 11
+   },
+   "blank_reason": "Seattle's goals-for and goals-against totals were not legible in the captured NHL standings payload, so no two-sided input exists.",
+   "facts": [
+    {
+     "claim": "Minnesota record",
+     "value": "6-3-2, 11 games, 32 goals for, 27 against, 14 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Seattle record",
+     "value": "7-3-1, 11 games, 14 points",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Seattle road split",
+     "value": "7 road games, 27 goals for, 24 against",
+     "source_key": "nhle_standings_24",
+     "source_url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Minnesota team leader",
+     "value": "Kirill Kaprizov 11 goals",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "nhl-ana-phi",
+   "sport": "Ice Hockey",
+   "competition": "NHL",
+   "home": "Philadelphia Flyers",
+   "away": "Anaheim Ducks",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "start_display": "2026-10-24 17:00 UTC (NHL feed)",
+   "venue": "Prudential Center, Newark",
+   "official_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/ANA_Ducks_@_PHI_Flyers/13?event_id=200001",
+   "inputs": {},
+   "blank_reason": "The game was LIVE at capture (Philadelphia leading 2-0 in the first period, goals from Matvei Michkov and Porter Martone), i.e. started before the selection cut-off.",
+   "facts": [
+    {
+     "claim": "Philadelphia record",
+     "value": "3-6-3 entering the game",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Anaheim record",
+     "value": "2-4-2 entering the game",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "In-play goals",
+     "value": "Matvei Michkov (assists J. Drysdale, T. Zegras) and Porter Martone (assists T. Sanheim, T. Zegras)",
+     "source_key": "nhle_score_24",
+     "source_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "nba-mia-cha",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Charlotte Hornets",
+   "away": "Miami Heat",
+   "start_utc": "2026-10-24T22:00:00Z",
+   "start_display": "2026-10-24 22:00 UTC (6:00 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIA_Heat_@_CHA_Hornets/4?event_id=536117",
+   "inputs": {
+    "home_w": 1,
+    "home_l": 1,
+    "away_w": 0,
+    "away_l": 2,
+    "home_outs": 4,
+    "away_outs": 0
+   },
+   "facts": [
+    {
+     "claim": "Charlotte record",
+     "value": "1-1, .500 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Miami record",
+     "value": "0-2, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Charlotte unavailable",
+     "value": "Boswell (right knee surgery), Knueppel (left hamstring strain), White (left calf strain) and Williams (right hamstring strain) all Out",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Miami availability",
+     "value": "Larsson listed Probable (left finger sprain); no Miami player listed Out",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Charlotte home split",
+     "value": "0-1 at home",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nba-mil-phi",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Philadelphia 76ers",
+   "away": "Milwaukee Bucks",
+   "start_utc": "2026-10-24T23:30:00Z",
+   "start_display": "2026-10-24 23:30 UTC (7:30 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/MIL_Bucks_@_PHI_76ers/4?event_id=536111",
+   "inputs": {
+    "home_w": 2,
+    "home_l": 0,
+    "away_w": 0,
+    "away_l": 2,
+    "home_outs": 4,
+    "away_outs": 0
+   },
+   "facts": [
+    {
+     "claim": "Philadelphia record",
+     "value": "2-0, 1.000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Milwaukee record",
+     "value": "0-2, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Philadelphia unavailable",
+     "value": "James (low back/sciatica), Barlow (low back stress reaction), Fall (left quadriceps strain) and Hukporti (right Achilles tendon rupture/tear) all Out",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Milwaukee report status",
+     "value": "Milwaukee had not submitted an injury report at the 1:30 PM ET filing",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Philadelphia home split",
+     "value": "1-0 at home",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nba-bkn-cle",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Cleveland Cavaliers",
+   "away": "Brooklyn Nets",
+   "start_utc": "2026-10-24T23:30:00Z",
+   "start_display": "2026-10-24 23:30 UTC (7:30 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/BKN_Nets_@_CLE_Cavaliers/4?event_id=536112",
+   "inputs": {
+    "home_w": 0,
+    "home_l": 1,
+    "away_w": 0,
+    "away_l": 1,
+    "home_outs": 3,
+    "away_outs": 1
+   },
+   "facts": [
+    {
+     "claim": "Cleveland record",
+     "value": "0-1, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Brooklyn record",
+     "value": "0-1, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Cleveland unavailable",
+     "value": "Diop (left knee injury management), Tomlin (low back stress reaction) and Udeh (G League two-way) all Out",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Brooklyn unavailable",
+     "value": "Bilodeau Out (right shoulder sprain)",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Cleveland road split",
+     "value": "0-1 on the road before this home opener",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nba-sas-dal",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Dallas Mavericks",
+   "away": "San Antonio Spurs",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "start_display": "2026-10-25 00:00 UTC (8:00 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/SA_Spurs_@_DAL_Mavericks/4?event_id=536114",
+   "inputs": {
+    "home_w": 1,
+    "home_l": 1,
+    "away_w": 0,
+    "away_l": 2,
+    "home_outs": 0,
+    "away_outs": 0
+   },
+   "facts": [
+    {
+     "claim": "Dallas record",
+     "value": "1-1, .500 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "San Antonio record",
+     "value": "0-2, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Injury report status",
+     "value": "Both Dallas and San Antonio were listed NOT YET SUBMITTED at the 1:30 PM ET filing",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Dallas road split",
+     "value": "1-1 on the road; no home game played yet",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "San Antonio split",
+     "value": "0-0 on the road; 0-2 at home",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nba-was-chi",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Chicago Bulls",
+   "away": "Washington Wizards",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "start_display": "2026-10-25 00:00 UTC (8:00 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/WAS_Wizards_@_CHI_Bulls/4?event_id=536113",
+   "inputs": {
+    "home_w": 1,
+    "home_l": 1,
+    "away_w": 1,
+    "away_l": 1,
+    "home_outs": 1,
+    "away_outs": 0
+   },
+   "facts": [
+    {
+     "claim": "Chicago record",
+     "value": "1-1, .500 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Washington record",
+     "value": "1-1, .500 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Chicago unavailable",
+     "value": "Claxton Out (left hamstring strain); Essengue Probable (right head contusion)",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Washington report status",
+     "value": "Washington had not submitted an injury report at the 1:30 PM ET filing",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Washington road split",
+     "value": "0-0 on the road; 1-1 at home",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nba-hou-atl",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Atlanta Hawks",
+   "away": "Houston Rockets",
+   "start_utc": "2026-10-25T00:30:00Z",
+   "start_display": "2026-10-25 00:30 UTC (8:30 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/HOU_Rockets_@_ATL_Hawks/4?event_id=536115",
+   "inputs": {
+    "home_w": 2,
+    "home_l": 0,
+    "away_w": 2,
+    "away_l": 0,
+    "home_outs": 2,
+    "away_outs": 2
+   },
+   "facts": [
+    {
+     "claim": "Atlanta record",
+     "value": "2-0, 1.000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Houston record",
+     "value": "2-0, 1.000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Houston unavailable",
+     "value": "Adams Out (left ankle injury management), VanVleet Out (right knee injury management) and Sheppard Questionable (left knee contusion/bone bruise)",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Atlanta unavailable",
+     "value": "Gueye Out (left foot fracture), Veesaar Out (right ACL tear); Dennis, Gilbert and Wilson Questionable on G League two-way status",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Atlanta home split",
+     "value": "0-0 at home; 2-0 on the road",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nba-nop-den",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Denver Nuggets",
+   "away": "New Orleans Pelicans",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "start_display": "2026-10-25 01:00 UTC (9:00 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/NO_Pelicans_@_DEN_Nuggets/4?event_id=536116",
+   "inputs": {
+    "home_w": 0,
+    "home_l": 1,
+    "away_w": 0,
+    "away_l": 2,
+    "home_outs": 3,
+    "away_outs": 0
+   },
+   "facts": [
+    {
+     "claim": "Denver record",
+     "value": "0-1, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "New Orleans record",
+     "value": "0-2, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Denver unavailable",
+     "value": "Johnson Out (right ankle sprain), Jones Out (bilateral hamstring injury management), Strawther Out (left knee sprain); Diallo Questionable (right wrist sprain)",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "New Orleans report status",
+     "value": "New Orleans had not submitted an injury report at the 1:30 PM ET filing",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Denver home split",
+     "value": "no home game played yet; 0-1 on the road",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "nba-gsw-phx",
+   "sport": "Basketball",
+   "competition": "NBA",
+   "home": "Phoenix Suns",
+   "away": "Golden State Warriors",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "start_display": "2026-10-25 02:00 UTC (10:00 PM ET, NBA)",
+   "venue": "",
+   "official_url": "https://www.nba.com/games?date=2026-10-24",
+   "olbg_url": "https://www.olbg.com/betting-tips/Basketball/NBA/NBA/GS_Warriors_@_PHX_Suns/4?event_id=536118",
+   "inputs": {
+    "home_w": 0,
+    "home_l": 1,
+    "away_w": 0,
+    "away_l": 2,
+    "home_outs": 1,
+    "away_outs": 0
+   },
+   "facts": [
+    {
+     "claim": "Phoenix record",
+     "value": "0-1, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Golden State record",
+     "value": "0-2, .000 (2026-27)",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Phoenix unavailable",
+     "value": "Williams Out (left shoulder surgery), Ighodaro Doubtful (right oblique strain), Kennard Questionable (left knee tendinopathy)",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Golden State report status",
+     "value": "Golden State had not submitted an injury report at the 1:30 PM ET filing",
+     "source_key": "nba_injury_24",
+     "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Golden State road split",
+     "value": "0-1 on the road",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "mlb-tb-mil-g2",
+   "sport": "Baseball",
+   "competition": "MLB World Series (Game 2)",
+   "home": "Milwaukee Brewers",
+   "away": "Tampa Bay Rays",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "start_display": "2026-10-25 00:00 UTC (8:00 PM ET, MLB StatsAPI gameDate)",
+   "venue": "American Family Field, Milwaukee",
+   "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,probablePitcher,decisions,linescore",
+   "olbg_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160792",
+   "inputs": {
+    "home_rs_pg": 5.136,
+    "home_ra_pg": 3.815,
+    "away_rs_pg": 4.543,
+    "away_ra_pg": 4.012,
+    "home_sp_era": 2.47,
+    "away_sp_era": 2.67,
+    "home_sp_whip": 0.84,
+    "away_sp_whip": 0.91
+   },
+   "facts": [
+    {
+     "claim": "Brewers regular season",
+     "value": "103-59, .636, 832 runs scored, 618 allowed",
+     "source_key": "mlb_standings_nl",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Rays regular season",
+     "value": "98-64, .605, 736 runs scored, 650 allowed",
+     "source_key": "mlb_standings_al",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "World Series Game 1 result",
+     "value": "Brewers 3, Rays 2 (23 October); Misiorowski win, Martinez loss, Megill save",
+     "source_key": "mlb_schedule",
+     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,probablePitcher,decisions,linescore",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Game 2 probable pitchers",
+     "value": "Drew Rasmussen (TB) vs Logan Henderson (MIL)",
+     "source_key": "mlb_schedule",
+     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,probablePitcher,decisions,linescore",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Rasmussen 2026",
+     "value": "30 starts, 16-5, 2.67 ERA, 172.0 IP, 174 strikeouts, 32 walks, 0.91 WHIP",
+     "source_key": "mlb_pitchers_ws",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Henderson 2026",
+     "value": "18 starts, 11-3, 2.47 ERA, 98.1 IP, 110 strikeouts, 19 walks, 0.84 WHIP",
+     "source_key": "mlb_pitchers_ws",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Brewers home record",
+     "value": "55-26 at home; 68-35 at night",
+     "source_key": "mlb_standings_nl",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "ru-tou-pau",
+   "sport": "Rugby Union",
+   "competition": "TOP 14, Journée 7",
+   "home": "RC Toulon",
+   "away": "Section Paloise",
+   "start_utc": "2026-10-24T19:00:00Z",
+   "start_display": "2026-10-24 21:00 CEST (LNR official)",
+   "venue": "Stade Mayol, Toulon",
+   "official_url": "https://top14.lnr.fr/calendrier-et-resultats",
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Toulon_v_Pau/9?event_id=609555",
+   "inputs": {
+    "home_pf": 130,
+    "home_pa": 130,
+    "home_pl": 6,
+    "away_pf": 239,
+    "away_pa": 181,
+    "away_pl": 6
+   },
+   "facts": [
+    {
+     "claim": "Toulon league record",
+     "value": "2 wins, 0 draws, 4 losses, 130 points for, 130 against, 12 league points (11th)",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Pau league record",
+     "value": "5 wins, 0 draws, 1 loss, 239 points for, 181 against, 22 league points (2nd)",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Pau recent form",
+     "value": "win v Bayonne, draw at Lyon, win v La Rochelle, win at Vannes, win v Castres",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Toulon recent form",
+     "value": "draw v La Rochelle, draw at Castres, win v Vannes, draw at Montpellier, win v Racing 92",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Fixture",
+     "value": "Toulon v Pau, journée 7, 24 October 21:00, live on Canal+",
+     "source_key": "top14_j7",
+     "source_url": "https://top14.lnr.fr/calendrier-et-resultats",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "ru-lar-ubb",
+   "sport": "Rugby Union",
+   "competition": "TOP 14, Journée 7",
+   "home": "Stade Rochelais",
+   "away": "Union Bordeaux-Bègles",
+   "start_utc": "2026-10-25T19:05:00Z",
+   "start_display": "2026-10-25 21:05 CET (LNR official)",
+   "venue": "Stade Marcel-Deflandre, La Rochelle",
+   "official_url": "https://top14.lnr.fr/calendrier-et-resultats",
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/La_Rochelle_v_Bordeaux/9?event_id=609554",
+   "inputs": {
+    "home_pf": 144,
+    "home_pa": 135,
+    "home_pl": 6,
+    "away_pf": 215,
+    "away_pa": 151,
+    "away_pl": 6
+   },
+   "facts": [
+    {
+     "claim": "La Rochelle league record",
+     "value": "4 wins, 0 draws, 2 losses, 144 points for, 135 against, 18 league points (4th)",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Bordeaux league record",
+     "value": "4 wins, 0 draws, 2 losses, 215 points for, 151 against, 19 league points (3rd)",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Bordeaux recent form",
+     "value": "draw v Toulouse, win v Paris, draw at Perpignan, win v Lyon, win at Clermont",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "La Rochelle recent form",
+     "value": "win at Toulon, draw v Racing 92, draw at Pau, win v Clermont, win at Lyon",
+     "source_key": "top14_table",
+     "source_url": "https://top14.lnr.fr/classement",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Fixture",
+     "value": "La Rochelle v Bordeaux-Bègles, journée 7, 25 October 21:05, live on Canal+",
+     "source_key": "top14_j7",
+     "source_url": "https://top14.lnr.fr/calendrier-et-resultats",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "ru-har-sar",
+   "sport": "Rugby Union",
+   "competition": "Gallagher Premiership, Round 4",
+   "home": "Harlequins",
+   "away": "Saracens",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "start_display": "2026-10-25 11:00 UK (Premiership fixture list)",
+   "venue": "Twickenham Stoop, London",
+   "official_url": "https://www.premrugby.com/fixtures-results",
+   "olbg_url": "https://www.olbg.com/betting-tips/Rugby_Union/All_Rugby_Union/All_Events/Harlequins_v_Saracens/9?event_id=609571",
+   "inputs": {},
+   "blank_reason": "The Premiership standings page renders client-side and returned no usable points table; no verified two-sided strength input exists.",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Harlequins v Saracens, Round 4, Sunday 25 October 15:00, Twickenham Stoop",
+     "source_key": "prem_r4",
+     "source_url": "https://www.premrugby.com/fixtures-results",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Earlier Round 4 results",
+     "value": "Gloucester 23-5 Bath; Newcastle Red Bulls 17-3 Sale Sharks (23 Oct); Leicester 28-7 Northampton (24 Oct)",
+     "source_key": "prem_r4",
+     "source_url": "https://www.premrugby.com/fixtures-results",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Saracens team news",
+     "value": "Maro Itoje captains; nine changes, with Marcus Street, Itoje, Ben Earl, Tomos Williams, Segun and Tompkins retained",
+     "source_key": "saracens_tn",
+     "source_url": "https://saracens.com/team-news-harlequins-vs-saracens-men-prem-r4/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "cri-pak-eng-odi4",
+   "sport": "Cricket",
+   "competition": "Pakistan ODI Tri-Series, 4th ODI",
+   "home": "Pakistan",
+   "away": "England",
+   "start_utc": "2026-10-25T08:00:00Z",
+   "start_display": "2026-10-25 08:00 GMT (ECB)",
+   "venue": "Gaddafi Stadium, Lahore",
+   "official_url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/Pakistan_vs_England_One_Day_Match/7?event_id=188838",
+   "inputs": {
+    "home_wins": 2,
+    "home_losses": 0,
+    "away_wins": 0,
+    "away_losses": 3
+   },
+   "facts": [
+    {
+     "claim": "Match 1",
+     "value": "Pakistan beat Sri Lanka by 37 runs at Rawalpindi on 18 October",
+     "source_key": "icc_pak_eng",
+     "source_url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Match 2",
+     "value": "Pakistan beat England by 87 runs at Rawalpindi on 20 October; Arafat Minhas took five wickets and made a half-century",
+     "source_key": "icc_pak_eng",
+     "source_url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Match 3",
+     "value": "Sri Lanka chased 430 to beat England by two wickets at Rawalpindi on 22 October",
+     "source_key": "icc_sl_chase",
+     "source_url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "England innings",
+     "value": "429/4; Harry Brook 202, the fastest ODI double century; Joe Root 69, Will Jacks 66 not out",
+     "source_key": "icc_sl_chase",
+     "source_url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "England series position",
+     "value": "no win in three matches",
+     "source_key": "icc_sl_chase",
+     "source_url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Fixture",
+     "value": "Pakistan v England, 4th ODI, Gaddafi Stadium Lahore, 25 October 08:00 GMT",
+     "source_key": "icc_pak_eng",
+     "source_url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "cri-nz-ind-t20i3",
+   "sport": "Cricket",
+   "competition": "India tour of New Zealand, 3rd T20I",
+   "home": "New Zealand",
+   "away": "India",
+   "start_utc": "2026-10-27T07:00:00Z",
+   "start_display": "2026-10-27 07:00 UTC (ICC fixtures)",
+   "venue": "Hagley Oval, Wellington",
+   "official_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_3rd_T20_Match/7?event_id=188852",
+   "inputs": {
+    "home_wins": 0,
+    "home_losses": 2,
+    "away_wins": 2,
+    "away_losses": 0
+   },
+   "facts": [
+    {
+     "claim": "First T20I",
+     "value": "India won by four wickets at Hagley Oval; New Zealand made 225/4, Finn Allen 45 off 24 balls",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Second T20I",
+     "value": "India won by four wickets at Hagley Oval on 24 October; Nitish Kumar Reddy 26 not out off 13 balls",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Series position",
+     "value": "India lead 2-0 with three to play",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "India availability",
+     "value": "Ishan Kishan missed the second T20I with a low-grade right adductor strain",
+     "source_key": "icc_kishan",
+     "source_url": "https://www.icc-cricket.com/news/injury-blow-for-india-ahead-of-second-t20i-with-new-zealand",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Fixture",
+     "value": "third T20I at Hagley Oval, Wellington on 27 October",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "cri-bol-tit",
+   "sport": "Cricket",
+   "competition": "CSA YesPlay Pro20 Cup",
+   "home": "Goldrush Boland",
+   "away": "Momentum Multiply Titans",
+   "start_utc": "2026-10-25T09:00:00Z",
+   "start_display": "2026-10-25 13:00 SAST (Cricket South Africa)",
+   "venue": "Boland Park, Paarl",
+   "official_url": "https://cricket.co.za/upcoming/8/",
+   "olbg_url": "",
+   "inputs": {
+    "home_wins": 1,
+    "home_losses": 2,
+    "away_wins": 3,
+    "away_losses": 0
+   },
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Boland v Titans, Boland Park, 25/10/26 13:00",
+     "source_key": "csa_pro20",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Titans form",
+     "value": "unbeaten run extended after beating Tuskers",
+     "source_key": "csa_titans",
+     "source_url": "https://www.cricket.co.za/laycock-makes-history-with-record-breaking-five-wicket-over/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Boland result",
+     "value": "beat Kaneez Tuskers by 63 runs after posting 187; Lehan Botha 54, Gavin Kaplan 38",
+     "source_key": "csa_boland",
+     "source_url": "https://www.cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Tuskers collapse",
+     "value": "bowled out for 124 chasing 187",
+     "source_key": "csa_boland",
+     "source_url": "https://www.cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "cri-tus-cob",
+   "sport": "Cricket",
+   "competition": "CSA YesPlay Pro20 Cup",
+   "home": "Kaneez Tuskers",
+   "away": "YesPlay Cobras",
+   "start_utc": "2026-10-25T09:00:00Z",
+   "start_display": "2026-10-25 13:00 SAST (Cricket South Africa)",
+   "venue": "Pietermaritzburg Oval",
+   "official_url": "https://cricket.co.za/upcoming/8/",
+   "olbg_url": "",
+   "inputs": {
+    "home_wins": 1,
+    "home_losses": 3,
+    "away_wins": 2,
+    "away_losses": 1
+   },
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Tuskers v Cobras, Pietermaritzburg Oval, 25/10/26 13:00",
+     "source_key": "csa_pro20",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Tuskers recent result",
+     "value": "lost to Boland by 63 runs, bowled out for 124",
+     "source_key": "csa_boland",
+     "source_url": "https://www.cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Tuskers individual",
+     "value": "Chad Laycock took 6/26 against Titans, a record bowling performance",
+     "source_key": "csa_titans",
+     "source_url": "https://www.cricket.co.za/laycock-makes-history-with-record-breaking-five-wicket-over/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Cobras recent result",
+     "value": "beat Boland by six wickets with one ball remaining at Newlands",
+     "source_key": "csa_boland",
+     "source_url": "https://www.cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "darts-rkd-kdv",
+   "sport": "Darts",
+   "competition": "PDC Machineseeker European Championship, Round 2",
+   "home": "Krzysztof Ratajski",
+   "away": "Kevin Doets",
+   "start_utc": "2026-10-24T17:00:00Z",
+   "start_display": "2026-10-24 evening session, 19:00-23:00 CEST (PDC)",
+   "venue": "Westfalenhalle, Dortmund",
+   "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "olbg_url": "",
+   "inputs": {},
+   "blank_reason": "The evening session started at 19:00 CEST (17:00 UTC) before the selection cut-off, so this match had started by capture time.",
+   "facts": [
+    {
+     "claim": "Round 1",
+     "value": "Ratajski beat Dave Chisnall 6-2; Doets beat Michael van Gerwen 6-3 on debut",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Session",
+     "value": "Round Two best of 19 legs; Saturday evening session 19:00-23:00 CEST",
+     "source_key": "pdc_d3",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "darts-sbu-khy",
+   "sport": "Darts",
+   "competition": "PDC Machineseeker European Championship, Round 2",
+   "home": "Stephen Bunting",
+   "away": "Kim Huybrechts",
+   "start_utc": "2026-10-24T18:00:00Z",
+   "start_display": "2026-10-24 evening session, 19:00-23:00 CEST (PDC)",
+   "venue": "Westfalenhalle, Dortmund",
+   "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "olbg_url": "",
+   "inputs": {
+    "home_legs": 6,
+    "home_legs_against": 5,
+    "home_avg": null,
+    "away_legs": 6,
+    "away_legs_against": 1,
+    "away_avg": null,
+    "target": 10
+   },
+   "facts": [
+    {
+     "claim": "Bunting Round 1",
+     "value": "beat Danny Noppert 6-5 after a late call-up for the event",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Huybrechts Round 1",
+     "value": "demolished Ryan Searle 6-1, averaging 103.81",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Format",
+     "value": "Round Two best of 19 legs; Saturday evening session 19:00-23:00 CEST",
+     "source_key": "pdc_d3",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "darts-rsv-dhe",
+   "sport": "Darts",
+   "competition": "PDC Machineseeker European Championship, Round 2",
+   "home": "Ross Smith",
+   "away": "Damon Heta",
+   "start_utc": "2026-10-24T18:00:00Z",
+   "start_display": "2026-10-24 evening session, 19:00-23:00 CEST (PDC)",
+   "venue": "Westfalenhalle, Dortmund",
+   "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "olbg_url": "",
+   "inputs": {
+    "home_legs": 6,
+    "home_legs_against": 0,
+    "home_avg": null,
+    "away_legs": 6,
+    "away_legs_against": 5,
+    "away_avg": null,
+    "target": 10
+   },
+   "facts": [
+    {
+     "claim": "Smith Round 1",
+     "value": "beat Karel Sedlacek 6-0 as top seed",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Heta Round 1",
+     "value": "beat James Wade 6-5",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Format",
+     "value": "Round Two best of 19 legs; Saturday evening session 19:00-23:00 CEST",
+     "source_key": "pdc_d3",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "darts-gvw-lwo",
+   "sport": "Darts",
+   "competition": "PDC Machineseeker European Championship, Round 2",
+   "home": "Gian van Veen",
+   "away": "Luke Woodhouse",
+   "start_utc": "2026-10-24T18:00:00Z",
+   "start_display": "2026-10-24 evening session, 19:00-23:00 CEST (PDC)",
+   "venue": "Westfalenhalle, Dortmund",
+   "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "olbg_url": "",
+   "inputs": {
+    "home_legs": 6,
+    "home_legs_against": 4,
+    "home_avg": null,
+    "away_legs": 6,
+    "away_legs_against": 3,
+    "away_avg": null,
+    "target": 10
+   },
+   "facts": [
+    {
+     "claim": "van Veen Round 1",
+     "value": "beat Andrew Gilding 6-4 as defending champion",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Woodhouse Round 1",
+     "value": "beat Dirk van Duijvenbode 6-3, including a nine-dart finish",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Format",
+     "value": "Round Two best of 19 legs; Saturday evening session 19:00-23:00 CEST",
+     "source_key": "pdc_d3",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "darts-nav-llt",
+   "sport": "Darts",
+   "competition": "PDC Machineseeker European Championship, Round 2",
+   "home": "Nathan Aspinall",
+   "away": "Luke Littler",
+   "start_utc": "2026-10-24T18:00:00Z",
+   "start_display": "2026-10-24 evening session, 19:00-23:00 CEST (PDC)",
+   "venue": "Westfalenhalle, Dortmund",
+   "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "olbg_url": "https://www.olbg.com/betting-tips/Darts/All_Darts/All_Events/Nathan_Aspinall_vs_Luke_Littler/15?event_id=32397",
+   "inputs": {
+    "home_legs": 6,
+    "home_legs_against": 3,
+    "home_avg": null,
+    "away_legs": 6,
+    "away_legs_against": 3,
+    "away_avg": 105.05,
+    "target": 10
+   },
+   "facts": [
+    {
+     "claim": "Aspinall Round 1",
+     "value": "beat Cristo Reyes 6-3",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Littler Round 1",
+     "value": "beat William O'Connor 6-3 with a 105.05 average, the best of the tournament at that point",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Format",
+     "value": "Round Two best of 19 legs; Saturday evening session 19:00-23:00 CEST",
+     "source_key": "pdc_d3",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "darts-jcv-jro",
+   "sport": "Darts",
+   "competition": "PDC Machineseeker European Championship, Round 2",
+   "home": "Jonny Clayton",
+   "away": "Josh Rock",
+   "start_utc": "2026-10-24T18:00:00Z",
+   "start_display": "2026-10-24 evening session, 19:00-23:00 CEST (PDC)",
+   "venue": "Westfalenhalle, Dortmund",
+   "official_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "olbg_url": "",
+   "inputs": {
+    "home_legs": 6,
+    "home_legs_against": 3,
+    "home_avg": null,
+    "away_legs": 6,
+    "away_legs_against": 1,
+    "away_avg": null,
+    "target": 10
+   },
+   "facts": [
+    {
+     "claim": "Clayton Round 1",
+     "value": "beat Niko Springer 6-3",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Rock Round 1",
+     "value": "beat Chris Dobey 6-1",
+     "source_key": "pdc_d2",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Format",
+     "value": "Round Two best of 19 legs; Saturday evening session 19:00-23:00 CEST",
+     "source_key": "pdc_d3",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "ten-almaty-final",
+   "sport": "Tennis",
+   "competition": "ATP Tour — Almaty Open, Final",
+   "home": "Daniil Medvedev",
+   "away": "Nikoloz Basilashvili",
+   "start_utc": "2026-10-25T10:00:00Z",
+   "start_display": "2026-10-25 not before 15:00 local (ATP order of play)",
+   "venue": "Almaty Arena, Almaty (indoor hard)",
+   "official_url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+   "olbg_url": "https://www.olbg.com/betting-tips/Tennis/All_Tennis/All_Events/Daniil_Medvedev_vs_Nikoloz_Basilashvili/3?event_id=902251",
+   "inputs": {
+    "home_seed": 1,
+    "away_seed": 0,
+    "h2h_home": 1,
+    "h2h_away": 0,
+    "target_sets": 2
+   },
+   "facts": [
+    {
+     "claim": "Semi-final 1",
+     "value": "Medvedev led Alexander Bublik 6-3 when the Kazakh retired injured",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Medvedev hard-court season",
+     "value": "Tour-leading 37 hard-court wins in 2026; 10-1 at the Almaty Open",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Medvedev titles",
+     "value": "three titles in 2026, all on hard courts (Brisbane, Dubai, Hangzhou)",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Basilashvili route",
+     "value": "qualified, then beat Adrian Mannarino 6-3 6-1 in the quarter-finals; chasing a sixth ATP Tour title",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Head-to-head",
+     "value": "Medvedev won the pair's only previous meeting, in Vienna in 2022",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "ten-basel-djo-hum",
+   "sport": "Tennis",
+   "competition": "ATP Tour — Swiss Indoors Basel, Round 1",
+   "home": "Novak Djokovic",
+   "away": "Ugo Humbert",
+   "start_utc": "2026-10-26T13:00:00Z",
+   "start_display": "2026-10-26 main draw begins (provisional)",
+   "venue": "St. Jakobshalle, Basel",
+   "official_url": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview",
+   "olbg_url": "",
+   "inputs": {
+    "home_seed": 0,
+    "away_seed": 0,
+    "home_class": true,
+    "target_sets": 2
+   },
+   "facts": [
+    {
+     "claim": "Draw",
+     "value": "Djokovic drawn against Ugo Humbert in the first round; could meet top seed Ben Shelton in the semi-finals",
+     "source_key": "atp_basel",
+     "source_url": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Djokovic 2026",
+     "value": "19-8 record; won his 102nd tour title in Beijing this month; 11th in the PIF ATP Live Race to Turin",
+     "source_key": "atp_basel",
+     "source_url": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Djokovic history",
+     "value": "first appearance at the Swiss Indoors since 2011; Basel champion in 2009",
+     "source_key": "atp_basel",
+     "source_url": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Humbert profile",
+     "value": "French left-hander, a former Top-20 player; four of his seven ATP Tour titles indoors",
+     "source_key": "atp_basel",
+     "source_url": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "ten-vienna-alc-kha",
+   "sport": "Tennis",
+   "competition": "ATP Tour — Erste Bank Open, Round 1",
+   "home": "Carlos Alcaraz",
+   "away": "Karen Khachanov",
+   "start_utc": "2026-10-26T13:00:00Z",
+   "start_display": "2026-10-26 main draw begins (provisional)",
+   "venue": "Wiener Stadthalle, Vienna",
+   "official_url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+   "olbg_url": "",
+   "inputs": {
+    "home_seed": 2,
+    "away_seed": 0,
+    "away_class": true,
+    "target_sets": 2
+   },
+   "facts": [
+    {
+     "claim": "Draw",
+     "value": "Alcaraz drawn against Karen Khachanov; Zverev meets Martin Landaluce",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Alcaraz ranking",
+     "value": "No. 3 in the PIF ATP Rankings; chasing a fourth tour-level title of 2026",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Alcaraz recent form",
+     "value": "third-round exit to Zizou Bergs at the Rolex Shanghai Masters",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Vienna history",
+     "value": "first appearance since 2021, when he reached the semi-finals as an 18-year-old",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Khachanov profile",
+     "value": "former Top-10 player and recent US Open semi-finalist",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Head-to-head",
+     "value": "Alcaraz leads the pair's Lexus ATP Head-to-Head series 6-0",
+     "source_key": "atp_vienna",
+     "source_url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "grey-scurry",
+   "sport": "Greyhounds",
+   "competition": "GBGB — Arena Racing Company Scurry Gold Cup Final (Category One, 270m)",
+   "home": "Shadow Storm",
+   "away": "Field of six",
+   "start_utc": "2026-10-24T20:38:00Z",
+   "start_display": "2026-10-24 evening meeting, 9:38 PM BST (Dunstall Park)",
+   "venue": "Dunstall Park, Wolverhampton",
+   "official_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+   "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/9:38_Dunstall_Park/28?event_id=689893",
+   "inputs": {
+    "outright": true
+   },
+   "blank_reason": "GBGB publishes no public market prices or trap ratings, so no outright prices can be originated.",
+   "facts": [
+    {
+     "claim": "Event",
+     "value": "Scurry Gold Cup final, £12,500 to the winner, Category One status restored this year",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Shadow Storm",
+     "value": "reigning GBGB Sprinter of the Year; Richard Rees-trained; track record holder at Dunstall Park",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Semi-final",
+     "value": "Shadow Storm won his semi in 15.66 seconds (-5), the fastest qualifying run over 270 metres",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Stablemate",
+     "value": "Avarua Lake also trained by Rees; won his semi in 15.86 seconds (-5)",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "History",
+     "value": "Shadow Storm is chasing back-to-back Scurry Gold Cups; only three greyhounds have ever defended the trophy",
+     "source_key": "gbgb_scurry",
+     "source_url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "grey-oaks",
+   "sport": "Greyhounds",
+   "competition": "GBGB — Premier Greyhound Racing Oaks Final (£20,000)",
+   "home": "Signet Nayla",
+   "away": "Field of six",
+   "start_utc": "2026-10-24T20:00:00Z",
+   "start_display": "2026-10-24 evening meeting (Dunstall Park)",
+   "venue": "Dunstall Park, Wolverhampton",
+   "official_url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+   "olbg_url": "https://www.olbg.com/betting-tips/Greyhounds/All_Greyhounds/All_Events/10:14_Dunstall_Park/28?event_id=690035",
+   "inputs": {
+    "outright": true
+   },
+   "blank_reason": "GBGB publishes no public market prices or trap ratings, so no outright prices can be originated.",
+   "facts": [
+    {
+     "claim": "Event",
+     "value": "Oaks final, £20,000 to the winner, major double-header with the Scurry Gold Cup at Dunstall Park",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Signet Nayla",
+     "value": "Kevin Hutton-trained British-bred; Birmingham Cup runner-up last month",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Semi-final",
+     "value": "Nayla won her Oaks semi in 28.35 seconds (-10), beating Strike It Skye by a length and a quarter",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Rival form",
+     "value": "Fahrenheit Jess (Graham Holland) clocked the fastest semi-final, 27.87 seconds (-10); Slingshot Poppy 27.90 (-10)",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Kennel angle",
+     "value": "Holland also saddles Ballydoyle Tina in the final",
+     "source_key": "gbgb_oaks",
+     "source_url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "f1-usgp-race",
+   "sport": "Motor Racing",
+   "competition": "FIA Formula One World Championship, Round 18 — United States Grand Prix",
+   "home": "Max Verstappen",
+   "away": "Field",
+   "start_utc": "2026-10-25T20:00:00Z",
+   "start_display": "2026-10-25 16:00 track time (Formula 1 schedule)",
+   "venue": "Circuit of The Americas, Austin",
+   "official_url": "https://www.formula1.com/en/racing/2026/united-states",
+   "olbg_url": "https://www.olbg.com/betting-tips/Motor_Racing/All_Motor_Racing/All_Events/USA_Grand_Prix/14?event_id=913",
+   "inputs": {
+    "outright": true
+   },
+   "facts": [
+    {
+     "claim": "Practice 2",
+     "value": "Leclerc 1:35.291, Antonelli +0.042, Verstappen +0.189, Hamilton +0.615, Russell +0.744",
+     "source_key": "f1_usgp",
+     "source_url": "https://www.formula1.com/en/racing/2026/united-states",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Practice 1",
+     "value": "Leclerc fastest ahead of Verstappen and Norris",
+     "source_key": "f1_usgp",
+     "source_url": "https://www.formula1.com/en/racing/2026/united-states",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Drivers' championship",
+     "value": "Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215",
+     "source_key": "f1_standings",
+     "source_url": "https://www.formula1.com/en/results/2026/drivers",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Session schedule",
+     "value": "Practice 3 on 24 Oct 13:30; Qualifying on 24 Oct 17:00; Race on 25 Oct 16:00 track time",
+     "source_key": "f1_usgp",
+     "source_url": "https://www.formula1.com/en/racing/2026/united-states",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Circuit",
+     "value": "5.513 km, 56 laps, race distance 308.432 km",
+     "source_key": "f1_usgp",
+     "source_url": "https://www.formula1.com/en/racing/2026/united-states",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "hb-bal-mel",
+   "sport": "Handball",
+   "competition": "DAIKIN Handball-Bundesliga",
+   "home": "HBW Balingen-Weilstetten",
+   "away": "MT Melsungen",
+   "start_utc": "2026-10-24T18:00:00Z",
+   "start_display": "2026-10-24 20:00 CEST (HBL fixture list)",
+   "venue": "Sparkassen-Arena, Balingen",
+   "official_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/HBW_Balingen_Weilstetten_vs_MT_Melsungen/20?event_id=12090",
+   "inputs": {},
+   "blank_reason": "Only Melsungen's EHF Champions League goals were published; Balingen's goals-for/against are not on a readable page, so no two-sided input exists.",
+   "facts": [
+    {
+     "claim": "Melsungen EHF",
+     "value": "3 wins, 2 losses in five group-phase games, 138 goals for, 138 against, 6 points",
+     "source_key": "ehf_standings",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Melsungen result",
+     "value": "beat Orlen Wisla Plock 28-26 in Kassel on 22 October",
+     "source_key": "ehf_r5",
+     "source_url": "https://www.eurohandball.com/en/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Melsungen title",
+     "value": "won the 2025/26 EHF European League, the club's first major title",
+     "source_key": "ehf_standings",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Balingen status",
+     "value": "promoted this season as 2. Bundesliga champions",
+     "source_key": "hbl_loven",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Fixture",
+     "value": "Balingen-Weilstetten v MT Melsungen, Saturday 24 October 20:00",
+     "source_key": "hbl_loven",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "hb-rnl-scm",
+   "sport": "Handball",
+   "competition": "DAIKIN Handball-Bundesliga",
+   "home": "Rhein-Neckar Löwen",
+   "away": "SC Magdeburg",
+   "start_utc": "2026-10-25T12:00:00Z",
+   "start_display": "2026-10-25 13:00 CET (HBL fixture list)",
+   "venue": "SAP Arena, Mannheim",
+   "official_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Rhein_Neckar_Lowen_vs_SC_Magdeburg/20?event_id=12092",
+   "inputs": {},
+   "blank_reason": "Only Magdeburg's EHF Champions League goals were published; Löwen's totals are not on a readable page, so no two-sided input exists.",
+   "facts": [
+    {
+     "claim": "Magdeburg EHF",
+     "value": "5 wins from 5 in group F, 176 goals for, 140 against, 10 points",
+     "source_key": "ehf_standings",
+     "source_url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Magdeburg domestic",
+     "value": "reigning German champions after a 31-2-1 season in 2025/26",
+     "source_key": "hbl_loven",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Magdeburg result",
+     "value": "beat TVB Stuttgart 29-28 on 18 October",
+     "source_key": "hbl_loven",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Löwen coaching",
+     "value": "the club parted company with head coach Maik Machulla on 15 October",
+     "source_key": "hbl_loven",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Fixture",
+     "value": "Rhein-Neckar Löwen v SC Magdeburg, Sunday 25 October 13:00",
+     "source_key": "hbl_loven",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "hb-sr-paris",
+   "sport": "Handball",
+   "competition": "Daikin StarLigue, Journée 8",
+   "home": "Saint-Raphaël",
+   "away": "Paris Saint-Germain",
+   "start_utc": "2026-10-25T14:00:00Z",
+   "start_display": "2026-10-25 16:00 CET (LNH)",
+   "venue": "Palais des Sports, Saint-Raphaël",
+   "official_url": "https://www.lnh.fr/daikin-starligue/accueil",
+   "olbg_url": "https://www.olbg.com/betting-tips/Handball/All_Handball/All_Events/Saint_Raphael_vs_PSG_Handball/20?event_id=12084",
+   "inputs": {},
+   "blank_reason": "LNH publishes results but no readable goals-for/against table; Paris's EHF group table did not render. No two-sided input exists.",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Saint-Raphaël v Paris, J8, Sunday 25 October 16:00",
+     "source_key": "lnh_j8",
+     "source_url": "https://www.lnh.fr/daikin-starligue/accueil",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Paris Europe",
+     "value": "qualified for the EHF Champions League main round with a win in Celje",
+     "source_key": "ehf_r5",
+     "source_url": "https://www.eurohandball.com/en/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "LNH mediators",
+     "value": "Elohim Prandi (Paris) 153 goals; Drevy Paschal (Saint-Raphaël) 174 goals",
+     "source_key": "lnh_j8",
+     "source_url": "https://www.lnh.fr/daikin-starligue/accueil",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "LNH awards",
+     "value": "Prandi and Paschal nominated in the 2026 LNH awards lists",
+     "source_key": "lnh_j8",
+     "source_url": "https://www.lnh.fr/daikin-starligue/accueil",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "vb-tre-cis",
+   "sport": "Volleyball",
+   "competition": "SuperLega Credem Banca, Round 2",
+   "home": "Itas Trentino",
+   "away": "Cisterna Volley",
+   "start_utc": "2026-10-25T14:00:00Z",
+   "start_display": "2026-10-25 16:00 CET (Lega Pallavolo)",
+   "venue": "BTS Arena, Trento",
+   "official_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Trentino_vs_Cisterna/21?event_id=36994",
+   "inputs": {},
+   "blank_reason": "Lega Pallavolo standings render client-side; set ratios and points totals could not be read, so no two-sided strength input exists.",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Itas Trentino v Cisterna Volley, Sunday 25 October 16:00, BTS Arena",
+     "source_key": "legavolley_r2",
+     "source_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Trentino Round 1",
+     "value": "won their opening league match at Modena",
+     "source_key": "legavolley_r2",
+     "source_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Cisterna Round 1",
+     "value": "beat Allianz Milano 3-1 in their SuperLega debut",
+     "source_key": "legavolley_r2",
+     "source_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Trentino squad",
+     "value": "full fourteen-player roster available, including Theo Faure, best opposite of the 2026 European Championship",
+     "source_key": "legavolley_r2",
+     "source_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "History",
+     "value": "56 official meetings between Trentino and Cisterna/Latina",
+     "source_key": "legavolley_r2",
+     "source_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "vb-per-pra",
+   "sport": "Volleyball",
+   "competition": "SuperLega Credem Banca, Round 2",
+   "home": "Sir Susa Scai Perugia",
+   "away": "Tinet Prata di Pordenone",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "start_display": "2026-10-25 17:00 CET (Lega Pallavolo)",
+   "venue": "PalaBarton, Perugia",
+   "official_url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Perugia_vs_Pordenone/21?event_id=36997",
+   "inputs": {},
+   "blank_reason": "No readable official set-ratio or points table was available, so no two-sided strength input exists.",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Sir Susa Scai Perugia v Tinet Prata di Pordenone, Sunday 25 October 17:00",
+     "source_key": "legavolley_perugia",
+     "source_url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Perugia status",
+     "value": "reigning Italian champions",
+     "source_key": "legavolley_perugia",
+     "source_url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Prata Round 1",
+     "value": "beat Vero Volley Monza 3-1 in their SuperLega debut",
+     "source_key": "legavolley_perugia",
+     "source_url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Prata status",
+     "value": "newly promoted after winning the Serie A2 title",
+     "source_key": "legavolley_perugia",
+     "source_url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Broadcast",
+     "value": "live on VBTV",
+     "source_key": "legavolley_perugia",
+     "source_url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "vb-gie-ber",
+   "sport": "Volleyball",
+   "competition": "Volleyball Bundesliga, 1. Bundesliga Männer",
+   "home": "Helios GRIZZLYS Giesen",
+   "away": "BERLIN RECYCLING Volleys",
+   "start_utc": "2026-10-24T16:30:00Z",
+   "start_display": "2026-10-24 18:30 CEST (VBL fixture list)",
+   "venue": "Sparkassen-Arena, Hildesheim",
+   "official_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/zuschauer.xhtml",
+   "olbg_url": "https://www.olbg.com/betting-tips/Volleyball/All_Volleyball/All_Events/Helios_Grizzlys_Giesen_vs_Berlin_Volleys/21?event_id=37013",
+   "inputs": {},
+   "blank_reason": "The match started at 18:30 CEST before the selection cut-off; VBL publishes fixtures and attendance only, with no readable set-level table.",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "GRIZZLYS Giesen v BERLIN RECYCLING Volleys, Saturday 24 October 18:30, Sparkassen-Arena",
+     "source_key": "vbl_ligacup",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/zuschauer.xhtml",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Berlin status",
+     "value": "reigning Bundesliga champions and record champions",
+     "source_key": "vbl_ligacup",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/zuschauer.xhtml",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Giesen 2026",
+     "value": "hosted the season-opening Ligacup, reaching a first national final in club history",
+     "source_key": "vbl_ligacup",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/zuschauer.xhtml",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Attendance",
+     "value": "2,040 spectators at the Ligacup final day",
+     "source_key": "vbl_ligacup",
+     "source_url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/zuschauer.xhtml",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "gaa-kilkenny",
+   "sport": "Gaelic Sports",
+   "competition": "Kilkenny Senior Hurling Championship Final",
+   "home": "Shamrocks Ballyhale",
+   "away": "Tullaroan",
+   "start_utc": "2026-10-25T13:45:00Z",
+   "start_display": "2026-10-25 13:45 (Kilkenny GAA fixture list)",
+   "venue": "UPMC Nowlan Park, Kilkenny",
+   "official_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+   "olbg_url": "https://www.olbg.com/betting-tips/Hurling/All_Hurling/All_Events/Ballyhale_Shamrocks_v_Tullaroan/26?event_id=714",
+   "inputs": {
+    "home_titles": 21,
+    "away_titles": 20,
+    "home_sf_margin": 2,
+    "away_sf_margin": 2
+   },
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Shamrocks Ballyhale v Tullaroan, Sunday 25 October 13:45, UPMC Nowlan Park",
+     "source_key": "kilkenny_final",
+     "source_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Historic first",
+     "value": "first time the two clubs at the top of the Kilkenny roll of honour contest the county final",
+     "source_key": "kilkenny_final",
+     "source_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Titles",
+     "value": "Ballyhale 21 Kilkenny senior hurling titles; Tullaroan 20",
+     "source_key": "kilkenny_final",
+     "source_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Ballyhale semi-final",
+     "value": "beat Thomastown 1-18 to 1-16 on 11 October",
+     "source_key": "kilkenny_final",
+     "source_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Tullaroan semi-final",
+     "value": "beat Bennettsbridge to reach a first decider since 1994",
+     "source_key": "kilkenny_final",
+     "source_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Referee",
+     "value": "Owen Beehan",
+     "source_key": "kilkenny_final",
+     "source_url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  },
+  {
+   "id": "gaa-cork",
+   "sport": "Gaelic Sports",
+   "competition": "Cork Premier Senior Football Championship Final",
+   "home": "St Finbarr's",
+   "away": "Nemo Rangers",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "start_display": "2026-10-25 16:00 IST (Munster GAA calendar)",
+   "venue": "SuperValu Páirc Uí Chaoimh, Cork",
+   "official_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/St_Finbarrs_v_Nemo_Rangers/25?event_id=3530",
+   "inputs": {},
+   "blank_reason": "Munster GAA published the final's date, venue and referee but no scoring or title baseline for either club, so no two-sided input exists.",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "St Finbarr's v Nemo Rangers, Sunday 25 October 16:00, SuperValu Páirc Uí Chaoimh",
+     "source_key": "munster_cork",
+     "source_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Referee",
+     "value": "David Murnane (Macroom)",
+     "source_key": "munster_cork",
+     "source_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Path",
+     "value": "St Finbarr's reached the final directly; Nemo Rangers came through the other semi-final",
+     "source_key": "munster_cork",
+     "source_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Next round",
+     "value": "the winners enter the AIB Munster club SFC quarter-final on 8 November",
+     "source_key": "munster_cork",
+     "source_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "market_implied": false
+  },
+  {
+   "id": "gaa-galway",
+   "sport": "Gaelic Sports",
+   "competition": "Galway Senior Football Championship Final",
+   "home": "Moycullen",
+   "away": "Salthill-Knocknacarra",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "start_display": "2026-10-25 16:00 IST (Galway GAA revised schedule)",
+   "venue": "Pearse Stadium, Salthill",
+   "official_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+   "olbg_url": "https://www.olbg.com/betting-tips/Gaelic_Football/All_Gaelic_Football/All_Events/Moycullen_v_Salthill-Knocknacarra/25?event_id=3532",
+   "inputs": {
+    "home_sf_margin": 44,
+    "away_sf_margin": -6
+   },
+   "facts": [
+    {
+     "claim": "Fixture moved",
+     "value": "the Galway SFC final moved to Sunday 25 October 16:00 at Pearse Stadium after a severe weather warning",
+     "source_key": "galway_sfc",
+     "source_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Moycullen semi-final",
+     "value": "beat Annaghdown 4-26 to 0-8 on 11 October",
+     "source_key": "galway_sfc",
+     "source_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "Salthill semi-final",
+     "value": "beat Corofin 0-15 to 2-7 on 11 October",
+     "source_key": "galway_sfc",
+     "source_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    },
+    {
+     "claim": "History",
+     "value": "repeat of last year's decider, which Moycullen won 1-17 to 1-15",
+     "source_key": "galway_sfc",
+     "source_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+     "captured_utc": "2026-10-24T18:10:00Z"
+    }
+   ],
+   "blank_reason": "",
+   "market_implied": false
+  }
+ ]
+}

@@ -1,0 +1,258 @@
+{
+ "captured_utc": "2026-10-24T18:10:00Z",
+ "count": 42,
+ "sources": [
+  {
+   "key": "nhle_score_24",
+   "label": "NHL official score feed, 2026-10-24",
+   "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "kind": "governing-body"
+  },
+  {
+   "key": "nhle_standings_24",
+   "label": "NHL official standings, 2026-10-24",
+   "url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+   "kind": "governing-body"
+  },
+  {
+   "key": "nba_games_24",
+   "label": "NBA official games calendar, 2026-10-24",
+   "url": "https://www.nba.com/games?date=2026-10-24",
+   "kind": "governing-body"
+  },
+  {
+   "key": "nba_standings",
+   "label": "NBA 2026-27 regular-season standings",
+   "url": "https://www.nba.com/standings",
+   "kind": "governing-body"
+  },
+  {
+   "key": "nba_injury_24",
+   "label": "NBA official injury report, 2026-10-24 1:30 PM ET",
+   "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf",
+   "kind": "governing-body"
+  },
+  {
+   "key": "mlb_schedule",
+   "label": "MLB StatsAPI World Series schedule (probable pitchers)",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,probablePitcher,decisions,linescore",
+   "kind": "governing-body"
+  },
+  {
+   "key": "mlb_standings_al",
+   "label": "MLB StatsAPI 2026 American League regular-season standings",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "kind": "governing-body"
+  },
+  {
+   "key": "mlb_standings_nl",
+   "label": "MLB StatsAPI 2026 National League regular-season standings",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+   "kind": "governing-body"
+  },
+  {
+   "key": "mlb_pitchers_ws",
+   "label": "MLB StatsAPI 2026 season pitching lines for the World Series probables",
+   "url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+   "kind": "governing-body"
+  },
+  {
+   "key": "urc_r4",
+   "label": "BKT United Rugby Championship 2026/27 Round 4 match centre",
+   "url": "https://stats.unitedrugby.com/match-centre/2026-27/4",
+   "kind": "governing-body"
+  },
+  {
+   "key": "urc_table",
+   "label": "BKT United Rugby Championship 2026/27 league table",
+   "url": "https://stats.unitedrugby.com/match-centre/table/2026-27",
+   "kind": "governing-body"
+  },
+  {
+   "key": "top14_j7",
+   "label": "TOP 14 2026-27 official calendar, journée 7",
+   "url": "https://top14.lnr.fr/calendrier-et-resultats",
+   "kind": "governing-body"
+  },
+  {
+   "key": "top14_table",
+   "label": "TOP 14 2026-27 official standings (J6)",
+   "url": "https://top14.lnr.fr/classement",
+   "kind": "governing-body"
+  },
+  {
+   "key": "prem_r4",
+   "label": "Gallagher Premiership 2026/27 fixtures & results, Round 4",
+   "url": "https://www.premrugby.com/fixtures-results",
+   "kind": "governing-body"
+  },
+  {
+   "key": "saracens_tn",
+   "label": "Saracens official team news, Harlequins v Saracens (23.10.26)",
+   "url": "https://saracens.com/team-news-harlequins-vs-saracens-men-prem-r4/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "icc_pak_eng",
+   "label": "ICC: Pakistan v England ODI tri-series, Rawalpindi (20 October 2026)",
+   "url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+   "kind": "governing-body"
+  },
+  {
+   "key": "icc_sl_chase",
+   "label": "ICC: Sri Lanka chase 430 to beat England, Rawalpindi (22 October 2026)",
+   "url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+   "kind": "governing-body"
+  },
+  {
+   "key": "icc_nz_ind",
+   "label": "ICC: India lead New Zealand 2-0 in the T20I series",
+   "url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+   "kind": "governing-body"
+  },
+  {
+   "key": "icc_kishan",
+   "label": "ICC: Ishan Kishan ruled out of the second T20I (23 October 2026)",
+   "url": "https://www.icc-cricket.com/news/injury-blow-for-india-ahead-of-second-t20i-with-new-zealand",
+   "kind": "governing-body"
+  },
+  {
+   "key": "csa_pro20",
+   "label": "Cricket South Africa: YesPlay Pro20 Cup upcoming fixtures",
+   "url": "https://cricket.co.za/upcoming/8/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "csa_titans",
+   "label": "CSA: Laycock's six-wicket haul, Titans extend unbeaten run",
+   "url": "https://www.cricket.co.za/laycock-makes-history-with-record-breaking-five-wicket-over/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "csa_boland",
+   "label": "CSA: Boland beat Tuskers by 63 runs (Pro20 Cup)",
+   "url": "https://www.cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "pdc_d2",
+   "label": "PDC: European Championship Day Two report (Round One results)",
+   "url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "pdc_d3",
+   "label": "PDC: European Championship Day Three schedule (Round Two)",
+   "url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "kind": "governing-body"
+  },
+  {
+   "key": "atp_almaty",
+   "label": "ATP Tour: Medvedev into Almaty final, faces Basilashvili",
+   "url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+   "kind": "governing-body"
+  },
+  {
+   "key": "atp_basel",
+   "label": "ATP Tour: Basel draw preview, Djokovic v Humbert",
+   "url": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview",
+   "kind": "governing-body"
+  },
+  {
+   "key": "atp_vienna",
+   "label": "ATP Tour: Vienna draw preview, Alcaraz v Khachanov",
+   "url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+   "kind": "governing-body"
+  },
+  {
+   "key": "f1_usgp",
+   "label": "Formula 1 official United States Grand Prix 2026 race hub",
+   "url": "https://www.formula1.com/en/racing/2026/united-states",
+   "kind": "governing-body"
+  },
+  {
+   "key": "f1_standings",
+   "label": "Formula 1 official 2026 Drivers' Standings",
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "kind": "governing-body"
+  },
+  {
+   "key": "gbgb_scurry",
+   "label": "GBGB: Shadow Storm chases Scurry Gold Cup history at Dunstall Park",
+   "url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "gbgb_oaks",
+   "label": "GBGB: Signet Nayla chases Oaks glory at Dunstall Park",
+   "url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "ehf_standings",
+   "label": "EHF Champions League Men 2026/27 group standings",
+   "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "ehf_r5",
+   "label": "EHF Champions League round 5 preview (fixtures and head-to-head)",
+   "url": "https://www.eurohandball.com/en/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins",
+   "kind": "governing-body"
+  },
+  {
+   "key": "hbl_loven",
+   "label": "DAIKIN Handball-Bundesliga: Rhein-Neckar Löwen fixture list",
+   "url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+   "kind": "governing-body"
+  },
+  {
+   "key": "lnh_j8",
+   "label": "LNH: Daikin StarLigue J8 fixtures (Saint-Raphaël v Paris)",
+   "url": "https://www.lnh.fr/daikin-starligue/accueil",
+   "kind": "governing-body"
+  },
+  {
+   "key": "legavolley_r2",
+   "label": "Lega Pallavolo Serie A: SuperLega round 2 schedule",
+   "url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+   "kind": "governing-body"
+  },
+  {
+   "key": "legavolley_perugia",
+   "label": "Lega Pallavolo Serie A: Perugia v Prata round 2 confirmation",
+   "url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+   "kind": "governing-body"
+  },
+  {
+   "key": "vbl_ligacup",
+   "label": "Volleyball Bundesliga: attendance fixture record (Ligacup final day)",
+   "url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/zuschauer.xhtml",
+   "kind": "governing-body"
+  },
+  {
+   "key": "kilkenny_final",
+   "label": "Kilkenny GAA: county final weekend at UPMC Nowlan Park",
+   "url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "munster_cork",
+   "label": "Munster GAA: 2026 Cork Premier Senior Football Championship Final",
+   "url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "galway_sfc",
+   "label": "Galway GAA: revised football fixture schedule (SFC final 25 October)",
+   "url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+   "kind": "governing-body"
+  },
+  {
+   "key": "olbg_hubs",
+   "label": "OLBG sport hub index (listing source for the OLBG-listed rows)",
+   "url": "https://www.olbg.com/betting-tips",
+   "kind": "listing"
+  }
+ ]
+}

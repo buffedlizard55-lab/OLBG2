@@ -5190,4 +5190,51 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
->>>>>>> origin/main
+
+---
+
+## Session `arena/34af5757-olbg2` — independent evidence audit and final integration review (2026-10-24)
+
+- **Session ID:** `arena/34af5757-olbg2` · **Branch:** `arena/34af5757-olbg2` (the Arena-fixed branch; no other branch will be created or pushed).
+- **Claimed:** 2026-10-24 17:49 UTC, after reading the board and scanning open PRs and remote branch activity.
+- **Concurrent work preserved:** `arena/03e61ed8-olbg2` is actively collecting and building `/desk/` plus the root replacement (latest commit observed 17:44 UTC); `arena/9f69ce85-olbg2` has open PR #198. This session does not edit their claimed files or duplicate their collection/site work.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| A1 | Independent line-by-line evidence, freshness, odds-band, prose and navigation audit; publish exceptions with review links | in progress | `arena/34af5757-olbg2` | `research/34af5757-*.md`, `data/audit34/**`, `scripts/audit34_*.py`, `tests/test_audit34.py` |
+| A2 | Check current `main` validation/Pages outcome and record any integration blocker without changing another session's files | in progress | `arena/34af5757-olbg2` | `COORDINATION.md` (append-only), audit outputs above |
+| A3 | Final integration re-verification after the active desk/root owner finishes; link audit and deployment confirmation | pending | `arena/34af5757-olbg2` | shared outputs only after conflicting claims close; otherwise review-only |
+
+**Integrity rule:** source preservation is not source verification. No row, statistic, injury, start time or prose claim will be marked confirmed without a first-hand official-source read in this session or a clearly identified raw official capture. Unsupported values stay blank and are flagged. Prediction prose must not contain the internal-only terms prohibited by the brief.
+
+**Rebase note:** the initial shallow checkout made Git replay the already-merged PR #197 merge as an ordinary commit, producing add/add conflicts in `COORDINATION.md`, two cadence JSON files and `index.html`. The rebase was aborted before any edit or claim commit; no work was discarded. History was deepened, PR #197 was confirmed as an ancestor of current `origin/main` (PR #199), and the branch was then fast-forwarded by rebase with a clean tree.
+
+### `arena/34af5757-olbg2` A1 audit result and cross-scope handoff (2026-10-24 17:56 UTC)
+
+- **Published audit:** [`research/34af5757-evidence-audit.md`](research/34af5757-evidence-audit.md) and [`data/audit34/report.json`](data/audit34/report.json). Scope is the current `/today/` board plus root navigation; no historical desk is represented as freshly fact-checked.
+- **Checks:** 1,512 field/row/arithmetic/prose/link assertions; 18 findings; 315 `/today/` table-body rows all have external review links; zero local link/anchor errors; focused tests 9/9; repository link audit zero errors.
+- **First-hand official reads:** NHL score and standings feeds for 2026-10-24; MLB schedule and 2026 standings; OLBG Ice Hockey hub for time-sensitive listing drift. Exact URLs and the fields each response supported are in the report.
+- **High-priority irregularities:** official NHL coverage is 7 of 12 games (missing 2026020175–2026020179 even though five corresponding OLBG ids are stored); Boston is 69.95% but labelled high under a 65% configuration; New Jersey leads the executive cards while outside the requested band; Washington has no stored OLBG event link; the Vegas “best record” superlative is contradicted by Boston's official 17 points versus 16.
+- **Citation/prose irregularities:** Washington leader facts cite the schedule endpoint rather than the score endpoint; Boston/Vegas goal totals need the standings endpoint; MLB total rows omit their standings input links; NHL third-party Tipsport prices are described as the league's own quote; two player figures are missing from the displayed fact arrays.
+- **Coverage limits:** no NHL totals and no handicap lines anywhere in `/today/`; raw historical source responses are not committed; only one published pick meets the combined ≥70%, in-band, stored-OLBG-link and written-preview rules.
+
+**Cross-scope request (no other session's files edited):** the active `/today/`, root and live-desk owners should resolve or explicitly carry these findings into their Flagged for Review page before final integration. In particular, do not call the current seven-NHL-row set a full list or its five rows five qualified high-confidence picks.
+
+**Rebase conflict resolution:** rebasing onto PR #202 produced an append-only `COORDINATION.md` conflict. The resolution retained the complete EX6 and Clarity blocks from `main` followed by this session's claim, removing only conflict-marker lines at that tail. Other pre-existing marker lines elsewhere in the board were left untouched and remain a known repository irregularity.
+
+**A2 deployment watch:** after PR #201, `Validate Pages content` run `40118054738` failed and the Pages API reported `errored`; PR #202 validation/deployment was queued at the last check. No workflow or another owner's generated file was changed by this session.
+
+### `arena/34af5757-olbg2` A2 hotfix claim — red `main` inventory drift (2026-10-24 17:58 UTC)
+
+**New, non-overlapping task:** regenerate `data/clarity/repo_audit.json` and `clarity/repo-review.html` with the Clarity owner's unmodified scripts, plus append this record. PR #200 completed and merged the Clarity implementation; this is a new integration hotfix, not a takeover of an active task. No root, workflow, prediction, pick, price or fixture file is in scope.
+
+**Reproduced cause:** the full suite's `test_clarity_2e0fc430.ClarityDeterminism.test_rebuild_is_byte_identical` fails because the committed Clarity repository audit counts 45 published dashboards, while PR #201 added `/executive/` and the rebuild correctly counts 46. This explains the red validation after PRs #201/#202. Only those two generated files differ after the rebuild.
+
+**A2 hotfix scope addendum:** the closed Ledger owner's unmodified `ledger_report.py` also enumerates top-level dashboards and test modules, and CI rebuilds it before the drift gate. The same narrow hotfix therefore includes generated `data/ledger/repo_review.json` and `ledger/repo-review.html`. These will be regenerated, not hand-authored; expected changes are the 45→46 dashboard inventory, the new independent audit test-module count, and conflict-marker line positions caused by the preserved board appends.
+
+### `arena/34af5757-olbg2` A2 handoff — CI hotfix PR and live-desk pre-integration findings (2026-10-24 18:03 UTC)
+
+- **PR:** [#203](https://github.com/buffedlizard55-lab/OLBG2/pull/203) carries the reproducible audit and the generated Clarity/Ledger inventory hotfix. Locally all **795 tests pass**, Ledger is **18/18**, and the cross-layer link audit is **0 errors**. Wait for its green check before merging; no broken build will be merged.
+- **Read-only review of `arena/03e61ed8-olbg2` at `fd56881` (owner request; no owner files edited):** `livedesk_build.when()` prioritizes the OLBG-derived `event.start_utc` over `event.official.start_utc`. For NHL event `200002`, the former is `2026-10-24T23:07:00Z` while the linked official schedule says `23:00:00Z`; event `200009` similarly says `02:07Z` versus official `01:00Z`. Use the official start for confirmed fixtures or label the listing value separately, rather than presenting it as official UTC.
+- The five NHL preview `sources` arrays link OLBG and the schedule only, while their records, home/road splits and goal totals come from the separately captured NHL standings feed. Add the exact official standings URL to each applicable preview/source row so every factual input is traceable. The previews remain five Ice Hockey write-ups and none is labelled high; retain the shortfall visibly rather than relabelling medium/low selections.
+- The live runner's 17:57Z model contains 195 fresh listings across 14 represented sports, with Golf explicitly empty. This is a substantial coverage improvement, but it is not yet merged or treated as acceptance evidence.

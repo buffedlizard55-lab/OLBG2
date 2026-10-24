@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · OLBG2 independent re-check</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
+</head>
+<body>
+<header><div class="wrap">
+<h1>Independent re-check of the current OLBG2 desk</h1>
+<p>Session 26707f98 · snapshot 2026-10-24T21:05:00Z · audit of <a style="color:#7dd3fc" href="../now/index.html">/now/</a> from committed evidence only · no external page was opened</p>
+<nav class="main" aria-label="Sections"><a href="index.html">Executive summary</a><a href="picks.html">Picks re-checked</a><a href="predictions.html">Predictions re-checked</a><a href="lines.html">All 866 prices</a><a href="fixtures.html">Fixture provenance</a><a href="sources.html">Sources &amp; limits</a><a href="flagged.html">Flagged for review</a><a href="methodology.html">How it was checked</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<div class="banner pass">
+<h2>Verdict: PASS — 1254 independent checks, 0 failures</h2>
+<p class="sub">Every price, grade, score, written preview and source link on the current <a href="../now/index.html">/now/</a>
+desk was re-derived from the committed capture and checked against the brief's rules.
+3 observations are published for manual follow-up; none changes a published number.</p>
+</div>
+<div class="banner limit">
+<h2>What this environment could and could not do</h2>
+<p class="sub">No socket to any sport or betting site is available in this build environment; egress is limited to
+GitHub, PyPI and npm hosts (probe details on <a href="sources.html">sources &amp; limits</a>). The audit therefore proves
+internal consistency and provenance from the committed evidence. It cannot confirm that a federated page still shows
+the captured value, and it says so on every row rather than implying a fresh read.</p>
+</div>
+<div class="grid">
+<div class="stat"><div class="n">50</div><div class="l">fixtures</div></div><div class="stat"><div class="n">50</div><div class="l">match rows</div></div><div class="stat"><div class="n">866</div><div class="l">prices originated</div></div>
+<div class="stat"><div class="n">39</div><div class="l">graded picks</div></div><div class="stat"><div class="n">10 / 26 / 3</div><div class="l">high / medium / low</div></div>
+<div class="stat"><div class="n">39</div><div class="l">written predictions</div></div><div class="stat"><div class="n">96</div><div class="l">OLBG listing rows</div></div>
+<div class="stat"><div class="n">67</div><div class="l">registered sources</div></div><div class="stat"><div class="n">30</div><div class="l">external hosts cited</div></div>
+<div class="stat"><div class="n">578</div><div class="l">prices inside the band</div></div><div class="stat"><div class="n">39</div><div class="l">picks inside the band</div></div>
+</div>
+<h2>The nine check classes</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Ref</th><th>Check</th><th>Passed / total</th><th>Verdict</th><th>Any discrepancies</th></tr></thead>
+<tbody><tr><td>C1</td><td>Scope and published counts</td><td class='nowrap'>15 / 15</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C2</td><td>Fixture and fact provenance</td><td class='nowrap'>50 / 50</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C3</td><td>Price arithmetic and odds band</td><td class='nowrap'>866 / 866</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C4</td><td>Pick grading and 0-10 score</td><td class='nowrap'>39 / 39</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C5</td><td>Written-prediction rules</td><td class='nowrap'>69 / 69</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C6</td><td>Rendered pages, tables and links</td><td class='nowrap'>38 / 38</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C7</td><td>OLBG listing linkage</td><td class='nowrap'>132 / 132</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C8</td><td>Source register and host census</td><td class='nowrap'>4 / 4</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr><tr><td>C9</td><td>Flagged-for-review file</td><td class='nowrap'>41 / 41</td><td><span class="badge pass">pass</span></td><td class='tiny'>no discrepancies</td></tr></tbody></table></div>
+<h2>Scope limits of this re-check</h2>
+<ul class="plain"><li>No external page was opened. Every result below is derived from the committed capture (fixture facts stamped 2026-10-24T17:35Z; OLBG hubs re-read by the owning session up to 18:06Z); a source link proves where a value was read at capture, not what the page shows now.</li><li>Fixtures that the underlying desk left blank (no originated line) are outside price and prose checks; their reasons are published on now/flagged.html.</li><li>OLBG publishes one side per event, so the desk&#x27;s prices on quoted-market rows are a normalised read of the OLBG quote, not an independent second-source price. This session cannot add a second source because those hosts are unreachable here.</li><li>Injury and line-up news after the 17:35Z capture is not reflected anywhere in the committed data and cannot be retrieved from this environment.</li></ul>
+<p class="sub">Underlying desk's own review list (32 items) remains published at
+<a href="../now/flagged.html">/now/flagged.html</a>; this session's additions are on
+<a href="flagged.html">/recheck/flagged.html</a>.</p>
+
+</div></main>
+<footer><div class="wrap">
+<p>OLBG2 /recheck — every figure below is re-derived from the checked-in capture under
+<code>data/now/</code> and the rendered pages under <code>now/</code>. Source links show where
+values were read at capture time; this build environment could not re-open those pages.
+See <a href="methodology.html">how it was checked</a> and the <a href="flagged.html">review list</a>.</p>
+<p><a href="../index.html">← Back to the OLBG2 front door</a></p>
+</div></footer>
+</body></html>

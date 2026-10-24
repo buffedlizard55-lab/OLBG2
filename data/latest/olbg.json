@@ -1,0 +1,119 @@
+{
+ "capture_utc": "2026-10-24T17:15:00Z",
+ "rechecked_utc": "2026-10-24T22:32:00Z",
+ "hubs": {
+  "Golf": {
+   "url": "https://www.olbg.com/betting-tips/Golf/5",
+   "sport_id": 5,
+   "listed_events": 0
+  },
+  "Volleyball": {
+   "url": "https://www.olbg.com/betting-tips/Volleyball/21",
+   "sport_id": 21,
+   "listed_events": 12
+  },
+  "Rugby Union": {
+   "url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+   "sport_id": 9,
+   "listed_events": 6
+  },
+  "Cricket": {
+   "url": "https://www.olbg.com/betting-tips/Cricket/7",
+   "sport_id": 7,
+   "listed_events": 11
+  },
+  "Snooker": {
+   "url": "https://www.olbg.com/betting-tips/Snooker/8",
+   "sport_id": 8,
+   "listed_events": 1
+  },
+  "Darts": {
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "sport_id": 15,
+   "listed_events": 6
+  },
+  "Baseball": {
+   "url": "https://www.olbg.com/betting-tips/Baseball/12",
+   "sport_id": 12,
+   "listed_events": 1
+  },
+  "Gaelic Sports": {
+   "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+   "sport_id": 25,
+   "listed_events": 4,
+   "note": "OLBG splits Gaelic games across Gaelic Football (25) and Hurling (26); the Hurling hub URL is recorded separately below."
+  },
+  "Greyhounds": {
+   "url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+   "sport_id": 28,
+   "listed_events": 9
+  },
+  "Tennis": {
+   "url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "sport_id": 3,
+   "listed_events": 6
+  },
+  "Motor Racing": {
+   "url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+   "sport_id": 14,
+   "listed_events": 1
+  },
+  "Handball": {
+   "url": "https://www.olbg.com/betting-tips/Handball/20",
+   "sport_id": 20,
+   "listed_events": 10
+  },
+  "Ice Hockey": {
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "sport_id": 13,
+   "listed_events": 16
+  },
+  "Basketball": {
+   "url": "https://www.olbg.com/betting-tips/Basketball/4",
+   "sport_id": 4,
+   "listed_events": 10
+  },
+  "Rugby League": {
+   "url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "sport_id": 10,
+   "listed_events": 3
+  }
+ },
+ "rechecks": [
+  {
+   "sport": "Snooker",
+   "url": "https://www.olbg.com/betting-tips/Snooker/8",
+   "read_utc": "2026-10-24T22:24:00Z",
+   "result": "The hub returned 'No tips found.' - OLBG is listing no snooker event, so there is no OLBG match to attach a pick to. The requested /Snooker/12 path redirected to /Snooker/8.",
+   "changed_since_capture": false
+  },
+  {
+   "sport": "Golf",
+   "url": "https://www.olbg.com/betting-tips/Golf/5",
+   "read_utc": "2026-10-24T22:27:00Z",
+   "result": "The hub returned 'No tips found.' while the Genesis Championship and the Bermuda Championship were both being played, so OLBG lists no golf event to price.",
+   "changed_since_capture": false
+  },
+  {
+   "sport": "Motor Racing",
+   "url": "https://www.formula1.com/en/results/2026/races",
+   "read_utc": "2026-10-24T22:28:00Z",
+   "result": "The official 2026 results index lists 24 rounds with the United States Grand Prix (round id 1297) active; no race classification is published yet, which is correct for a race that has not run.",
+   "changed_since_capture": true
+  },
+  {
+   "sport": "Motor Racing",
+   "url": "https://www.formula1.com/en/results/2026/races/1297/united-states/qualifying",
+   "read_utc": "2026-10-24T22:31:00Z",
+   "result": "Qualifying classification published: Kimi Antonelli took pole on 1:34.035 ahead of Max Verstappen 1:34.214 and Isack Hadjar 1:34.250. This is new since the 17:35Z capture, which recorded that qualifying had not taken place, and it is what lets the race be priced.",
+   "changed_since_capture": true
+  },
+  {
+   "sport": "Snooker",
+   "url": "https://www.wst.tv/matches/",
+   "read_utc": "2026-10-24T22:30:00Z",
+   "result": "The World Snooker Tour match list renders the BetVictor Northern Ireland Open 2026 match by match; the first view returns completed early-round matches, so the identity of the second finalist could not be read from the page without paging through every round.",
+   "changed_since_capture": false
+  }
+ ]
+}

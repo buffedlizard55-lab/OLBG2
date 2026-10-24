@@ -1,0 +1,791 @@
+{
+ "build_utc": "2026-10-24T22:45:00Z",
+ "count": 68,
+ "official_count": 52,
+ "sources": [
+  {
+   "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf",
+   "source_key": "nba_injury",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 15,
+   "sports": [
+    "Basketball"
+   ],
+   "fixtures": 8,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/schedule/2026-10-25",
+   "source_key": "official_recheck_2232",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [
+    "Ice Hockey"
+   ],
+   "fixtures": 0,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+   "source_key": "nhle_score_24",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 11,
+   "sports": [
+    "Ice Hockey"
+   ],
+   "fixtures": 10,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+   "source_key": "nhle_standings_24",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 38,
+   "sports": [
+    "Ice Hockey"
+   ],
+   "fixtures": 10,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://cricket.co.za/laycock-makes-history-with-record-breaking-five-wicket-over/",
+   "source_key": "csa_titans",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+   "source_key": "csa_boland",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://cricket.co.za/upcoming/8/",
+   "source_key": "csa_upcoming",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+   "source_key": "ehf_standings",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Handball"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+   "source_key": "kilkenny_final",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Gaelic Sports"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://kilkennygaa.ie/clubs/ballyhale-shamrocks/",
+   "source_key": "kilkenny_club",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 1,
+   "sports": [
+    "Gaelic Sports"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+   "source_key": "munster_sfc_final",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Gaelic Sports"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://stats.unitedrugby.com/match-centre/table/",
+   "source_key": "urc_table",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656,688107,642547&hydrate=stats(group=[pitching],type=[season],season=2026)",
+   "source_key": "mlb_pitchers",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Baseball"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,probablePitcher,decisions,linescore",
+   "source_key": "mlb_schedule",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Baseball"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+   "source_key": "mlb_standings_al",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Baseball"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+   "source_key": "mlb_standings_nl",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Baseball"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://top14.lnr.fr/calendrier-et-resultats",
+   "source_key": "top14_calendar",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://top14.lnr.fr/classement",
+   "source_key": "top14_table",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 8,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.atptour.com/en/news/alcaraz-vienna-2026-draw-preview",
+   "source_key": "atp_vienna_seed",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Tennis"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview",
+   "source_key": "atp_basel_seed",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Tennis"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+   "source_key": "atp_almaty",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 6,
+   "sports": [
+    "Tennis"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka",
+   "source_key": "ecb_triseries",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 1,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.eurohandball.com/en/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins",
+   "source_key": "ehf_r5_preview",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Handball"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+   "source_key": "dpwt_leaderboard",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Golf"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.formula1.com/en/racing/2026/united-states",
+   "source_key": "f1_usgp",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Motor Racing"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.formula1.com/en/results/2026/drivers",
+   "source_key": "f1_standings",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 1,
+   "sports": [
+    "Motor Racing"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.formula1.com/en/results/2026/races/1297/united-states/qualifying",
+   "source_key": "f1_usgp_quali",
+   "captured_utc": "2026-10-24T22:31:00Z",
+   "claims": 6,
+   "sports": [
+    "Motor Racing"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / championship results"
+  },
+  {
+   "url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+   "source_key": "galway_sfc_final",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Gaelic Sports"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+   "source_key": "gbgb_scurry",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Greyhounds"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.gbgb.org.uk/signet-nayla-chases-oaks-glory-as-hutton-targets-dunstall-park-double/",
+   "source_key": "gbgb_oaks",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Greyhounds"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.icc-cricket.com/news/injury-blow-for-india-ahead-of-second-t20i-with-new-zealand",
+   "source_key": "icc_kishan",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 1,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+   "source_key": "icc_pak_eng_g2",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+   "source_key": "icc_sl_chase",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+   "source_key": "icc_nz_ind",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Cricket"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+   "source_key": "legavolley_perugia",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Volleyball"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+   "source_key": "legavolley_r2",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Volleyball"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.lnh.fr/daikin-starligue/accueil",
+   "source_key": "lnh_starligue",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Handball"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.nba.com/standings",
+   "source_key": "nba_standings",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 25,
+   "sports": [
+    "Basketball"
+   ],
+   "fixtures": 8,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+   "source_key": "nrl_r2_aus_fiji",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Rugby League"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-3/",
+   "source_key": "nrl_r3_draw",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Rugby League"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.nrl.com/news/2026/10/19/the-wrap-world-cup-mens-round-1/",
+   "source_key": "nrl_r1_wrap",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Rugby League"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Baseball/12",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Basketball/4",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Cricket/7",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Darts/15",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Golf/5",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Handball/20",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Hurling/26",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Snooker/8",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Tennis/3",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.olbg.com/betting-tips/Volleyball/21",
+   "source_key": "olbg_hub",
+   "captured_utc": "2026-10-24T22:32:00Z",
+   "claims": 0,
+   "sports": [],
+   "fixtures": 0,
+   "official": false,
+   "kind": "OLBG listing hub"
+  },
+  {
+   "url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+   "source_key": "hbl_fixtures",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 6,
+   "sports": [
+    "Handball"
+   ],
+   "fixtures": 2,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+   "source_key": "pdc_day2",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Darts"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+   "source_key": "pdc_day3",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Darts"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.pgatour.com/leaderboard",
+   "source_key": "pga_leaderboard",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 5,
+   "sports": [
+    "Golf"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  },
+  {
+   "url": "https://www.premrugby.com/competitions/gallagher-prem/fixtures-results?competition=gallagher-prem&round=4",
+   "source_key": "prem_fixtures",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 2,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.premrugby.com/competitions/gallagher-prem/standings",
+   "source_key": "prem_table",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022",
+   "source_key": "rugbyau_australia_a",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.unitedrugby.com/latest/news/adjustments-to-2026-27-bkt-united-rugby-championship-fixture-broadcast-for-rounds-2-4-6-15/",
+   "source_key": "urc_kickoff",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 1,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.unitedrugby.com/latest/news/round-4-team-announcements/",
+   "source_key": "urc_r4",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Rugby Union"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/statistik/tabelle/zuschauer.xhtml",
+   "source_key": "vbl_fixture",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 4,
+   "sports": [
+    "Volleyball"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official governing body / league feed"
+  },
+  {
+   "url": "https://www.wst.tv/matches/",
+   "source_key": "wst_matches",
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "claims": 3,
+   "sports": [
+    "Snooker"
+   ],
+   "fixtures": 1,
+   "official": true,
+   "kind": "official page re-read at 22:32Z"
+  }
+ ]
+}

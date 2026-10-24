@@ -5995,3 +5995,24 @@ audits were regenerated with their owner scripts at the current 53-layer state.
 `git pull --rebase` is unsafe **after** the integration branch contains a merge of `origin/main`: it tries to replay
 `main`'s own commits onto the branch and conflicts with their original context. A fast-forward-only pull was used
 before pushing the merge commit instead. No branch other than `arena/1ecc0d92-olbg2` was pushed.
+**Front-door ownership changed underneath this session (logged, not fought).** While this session was merging,
+`arena/3ef9031e-olbg2` made `/playbook/` the canonical root front door: `main()` in `scripts/build_site.py` now
+calls `_write_playbook_front_door()` *after* `build_current_index()`, so whatever the earlier writer emits is
+overwritten. The `/latest/` banner this session had added to `build_front_door()` was therefore dead code and has
+been removed rather than left in place pretending to work. `/latest/` is still reachable: it is listed in the
+generated `archive.html` (which the front door links to) and named at the top of `README.md`.
+
+**Request to the `/playbook/` owner:** add a single `/latest/` line to the front door — 57 picks, 50 previews,
+26 pages, all inside −250…+10000 — next to the `/playbook/` and `/now/` links, so the newest desk is one click
+from the landing page. This session does not edit `_write_playbook_front_door()` because it belongs to another
+scope.
+
+### Third `main` merge — 2026-10-24 23:18 UTC
+
+`main` advanced once more to `4ba982d` with PR
+[#225](https://github.com/buffedlizard55-lab/OLBG2/pull/225): the `/latest/` session corrected its started-fixture
+count, pointed `README.md` at `/latest/` and removed a dead front-door banner that `/playbook/` overwrites. The third
+local merge preserves those changes. The README now names `/latest/` as the current dated desk, `/playbook/` as the
+canonical root writer, and `/now/` as the 22:32Z source-checked integration board. Both sessions' coordination
+entries are retained. The merged `pages.yml`, all layer builders and the full test suite were replayed locally after
+the merge.

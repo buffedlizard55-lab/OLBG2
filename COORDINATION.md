@@ -5059,3 +5059,25 @@ with the exact URL that failed. The five-per-sport target is met for Ice Hockey 
 | I6 | Rebuild checks, full test suite, link audit, PR → `main`, merge on green, confirm Pages deploy, record result | done | `arena/ba05b5b6-olbg2` | shared outputs (integration), `COORDINATION.md` |
 
 **Integration result:** PR [#197](https://github.com/buffedlizard55-lab/OLBG2/pull/197) merged to `main` on 2026-10-24T17:33:40Z (merge commit `6926afe07808ef5b6ebb6540d181dadee4b1a76f`). Full suite 747 tests OK; integration link audit 0 cross-layer errors; root `index.html` regenerated (46 write-ups, 35 high). `main` now holds 46 predictions / 135 picks. Pages deploy to be confirmed after merge.
+
+---
+
+## Session `arena/0d1eb9b5-olbg2` — CLAIM: current `/today/` evidence expansion and picks-first integration (2026-10-24 17:50 UTC)
+
+- **Session ID / fixed branch:** `arena/0d1eb9b5-olbg2`. Arena fixes this branch, so the requested `session-<id>/<task>` branch convention cannot be used.
+- **Concurrency check:** `origin/main` was `42c5423` after PR #199. Open PR #198 (`arena/9f69ce85-olbg2`) owns an active Cadence/CI repair and touches `.github/workflows/pages.yml`, `data/cadence/**`, root `index.html`, `integration.html`, and related prediction-shipping scripts. This claim does not touch those paths. Older open coordination-only PRs are left alone. The `/today/` implementation tasks T2–T6 are marked complete in the prior board; this is a new evidence-expansion task, not a takeover of PR #198.
+- **Exclusive implementation scope:** `data/today/**`, `scripts/today_*.py`, `today/**`, `tests/test_today_*.py`, `research/today-0d1eb9b5.md`, and append-only `COORDINATION.md`.
+- **Deferred shared integration:** root builder/pages, README and workflow files are **not claimed now**. They may be claimed only after PR #198 is closed/merged and a fresh board/PR scan shows no active conflicting owner; otherwise an integration request will be logged here.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A1 | Claim, baseline audit and reproducibility check | in progress | `arena/0d1eb9b5-olbg2` | `COORDINATION.md`, research note |
+| A2 | Re-read OLBG discovery and official sources; add only source-confirmed upcoming fixtures/facts for the exact 15 sports | unclaimed→this session | `arena/0d1eb9b5-olbg2` | `data/today/**`, `scripts/today_seed.py`, research note |
+| A3 | Originate supportable winner/handicap/total markets; grade low/medium/high; apply the −250…+10000 fair-price band without distorting prices | unclaimed→this session | `arena/0d1eb9b5-olbg2` | `scripts/today_model.py`, `data/today/{lines,picks}.json` |
+| A4 | Write unique ≥30-word analyses for qualifying high picks, targeting five per sport but publishing shortfalls rather than fabricating evidence | unclaimed→this session | `arena/0d1eb9b5-olbg2` | `scripts/today_predictions.py`, `data/today/predictions.json` |
+| A5 | Make `/today/` a clear executive dashboard with obvious pick locations, source-linked tables, sport pages and Flagged for Review; add strict verification/tests | unclaimed→this session | `arena/0d1eb9b5-olbg2` | `scripts/today_{build,verify,flags}.py`, `today/**`, `tests/test_today_*.py` |
+| A6 | Full repository verification; integration/PR/merge/Pages only after a fresh concurrency check | pending | `arena/0d1eb9b5-olbg2` | shared outputs only if later claimed; `COORDINATION.md` |
+
+**Integrity boundary:** OLBG is discovery provenance, not an official sporting body. No fixture, statistic, injury, player status, price or start time will be inferred. Unconfirmed values stay blank and source-linked review items remain non-blocking. No five-per-sport quota, complete worldwide inventory, current bookmaker availability or forecast accuracy will be claimed without evidence.
+
+**Sync note:** the first `git pull --rebase origin main` could not replay the shallow base merge and conflicted in four files. The rebase was aborted before any claim or implementation edit; `git fetch --deepen=30 origin main` restored the ancestry, and the branch fast-forwarded cleanly from `6926afe` to `42c5423`. No work was discarded.

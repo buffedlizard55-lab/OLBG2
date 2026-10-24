@@ -1,5 +1,40 @@
 # OLBG2 — multi-sport schedule research and line origination
 
+## START HERE — the 24 October board (`/today/`)
+
+**Live:** <https://buffedlizard55-lab.github.io/OLBG2/today/>
+
+This is the working desk for the current release and the only page you need to open. It is laid out so that the picks are
+the first thing on the page and the gaps are the second.
+
+| Page | What is on it |
+|---|---|
+| [Executive board](today/index.html) | The three strongest calls in large type, the 15-sport status table, and the map of the site |
+| [Picks](today/picks.html) | One row per pick: **selection in bold green**, market, the price we made, our probability, the confidence grade and the band test |
+| [Matches](today/matches.html) | Every fixture confirmed by the NHL or MLB feed, with start time, venue, records and the official link |
+| [Our lines](today/lines.html) | All 20 prices originated here, plus the league feed's own de-vigged price for comparison |
+| [Predictions](today/predictions.html) | The written previews, each ≥30 unique words, with the official facts listed underneath |
+| [By sport](today/sports/index.html) | 15 sport pages, same sections in the same order on every one |
+| [OLBG list](today/olbg.html) | The raw 96-row capture: event, displayed time, most-tipped selection, tip share, event id |
+| [Flagged for review](today/flagged.html) | 18 items — what is missing, what was blocked, and the exact link that shows it |
+
+**Snapshot, 24 October 2026, 17:15–17:50 UTC:** 96 OLBG listing rows across all 15 covered sports · 8 fixtures confirmed from
+official league feeds · 20 prices originated here · 6 picks (3 high confidence, 5 of the 6 inside −250…+10000) · 6 written
+previews, shortest 79 words.
+
+Ten of the fifteen sports carry listings but no pick. That is deliberate and it is stated per sport: an official source was
+either blocked (NBA.com returned its shell with an error; `cdn.nba.com` returned HTTP 500; the Bundesliga fixture URL 404'd)
+or was not reached inside the capture window. Those are on the review page rather than quietly guessed.
+
+```sh
+python scripts/today_seed.py        # the OLBG capture + the official fixture facts
+python scripts/today_model.py       # originate prices, grade confidence, test the band
+python scripts/today_predictions.py # write the previews
+python scripts/today_flags.py       # source register + review queue
+python scripts/today_build.py       # render /today/ (25 pages)
+python scripts/today_verify.py      # 1,370 assertions, 0 errors
+```
+
 OLBG2 records OLBG's published sports taxonomy, collects dated event listings, and independently models fair lines from stored inputs. It publishes static research dashboards and source links. It is **not** a live bookmaker feed, betting advice, or an exhaustive schedule of every event in the world. A linked official page records provenance; it is not, by itself, proof that the page supports every value beside it.
 
 ## Consolidated desk — `/master/` (23 October 2026, 22:30 UTC)

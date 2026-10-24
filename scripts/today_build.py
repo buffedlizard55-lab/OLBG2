@@ -180,7 +180,7 @@ def build():
 <section class="hero small">
   <p class="eyebrow">Picks · ranked by our own probability</p>
   <h1>Every pick, one row each.</h1>
-  <p class="lede">The green box is the selection. "Fair" is the price we originated from official league inputs; the confidence grade and the band test sit beside it.
+  <p class="lede">The bold green text is the selection. "Fair" is the price we originated from official league inputs; the confidence grade and the band test sit beside it.
   None of these prices is a bookmaker quote.</p>
 </section>
 <section class="block">

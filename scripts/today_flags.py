@@ -113,13 +113,24 @@ sports = []
 fixtures = json.loads((DATA / "picks.json").read_text(encoding="utf-8"))["picks"]
 preds = json.loads((DATA / "predictions.json").read_text(encoding="utf-8"))["predictions"]
 for sport in payload["hubs"]:
+    confirmed = sum(1 for x in payload["fixtures"] if x["sport"] == sport)
+    got_pick = sum(1 for x in fixtures if x["sport"] == sport)
+    note = payload["sport_status"].get(sport, {}).get("note", "")
+    if not note:
+        if confirmed and got_pick:
+            note = "Fixtures and picks for this sport come from the official league feed linked on each row."
+        elif confirmed and not got_pick:
+            note = "Fixtures were confirmed, but every one of them had started before the selection cut-off, so no pick is published."
+        else:
+            note = ("No officially confirmed fixture in this capture: the official source for this sport was blocked or was "
+                    "not reached in the capture window. See the review items for this sport.")
     sports.append(dict(
         sport=sport, hub_url=payload["hubs"][sport]["url"], sport_id=payload["hubs"][sport]["sport_id"],
         listings=by_sport.get(sport, 0),
         fixtures=sum(1 for f in payload["fixtures"] if f["sport"] == sport),
         picks=sum(1 for p in fixtures if p["sport"] == sport),
         previews=sum(1 for p in preds if p["sport"] == sport),
-        status=payload["sport_status"].get(sport, {}).get("note", ""),
+        status=note,
     ))
 
 (DATA / "sources.json").write_text(json.dumps(dict(

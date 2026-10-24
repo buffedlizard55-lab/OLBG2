@@ -49,7 +49,7 @@ COPY = {
         ],
     ),
     "nhl-2026020169": dict(
-        headline="New Jersey's twelve points and Hughes' eight assists look short at -279",
+        headline="New Jersey's form is the stronger side of this game, but -279 is outside the band",
         text=("New Jersey Devils to win at the Prudential Center. New Jersey are 6-4-0 for twelve points, "
               "with Jack Hughes already on eight assists, Arseny Gritsyuk on five goals and Jake Allen on "
               "four wins. Los Angeles are 2-4-2, six points from eight games, and their output runs through "

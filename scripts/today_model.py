@@ -53,6 +53,7 @@ def main() -> None:
     fixtures = payload["fixtures"]
     league = {"Ice Hockey": "NHL", "Baseball": "MLB"}
     lines, picks = [], []
+    olbg_urls = {row["event_id"]: row["url"] for row in payload["listings"]}
 
     for f in fixtures:
         lg = league[f["sport"]]
@@ -94,6 +95,7 @@ def main() -> None:
             in_band=BAND_LOW <= american(p) <= BAND_HIGH,
             market_implied=(market_home if best_side == "home" else (None if market_home is None else round(1 - market_home, 4))),
             olbg_event_id=f.get("olbg_event_id"), olbg_listed_selection=f.get("olbg_listed_selection"),
+            olbg_event_url=olbg_urls.get(str(f.get("olbg_event_id") or ""), ""),
             source_url=f["source_url"], source_label=f["source_label"], start_source=f["start_source"],
         )
         picks.append(line)

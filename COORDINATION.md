@@ -5859,6 +5859,14 @@ a runner or sandbox with full egress should re-run the desks' collectors and rec
 (2) The three no-event-URL fixtures need a follow-up OLBG capture. (3) The legacy/Actions dual Pages publisher
 should be reduced to one in repository settings.
 
+**Cross-scope edit after the `/playbook/` front-door change (documented, additive only).** PR #221 made
+`scripts/playbook_build.py::write_front_door` the single owner of the root `index.html`, which overwrites the
+re-check button this session had added through `build_site.py`. To keep the audit desk reachable from the actual
+front door rather than only from the archive and README, one row was appended to the playbook desk table in
+`playbook_build.py` (link to `recheck/index.html`); no existing row, count or style was changed.
+`playbook_verify.py` still reports 2,931 checks / 0 failures and the full suite stays at 897 tests OK. This
+follows the logged convention of small, documented integration edits to shared root builders.
+
 ---
 
 ---

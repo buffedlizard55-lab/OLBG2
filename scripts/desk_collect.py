@@ -113,6 +113,43 @@ def fetch(item: dict) -> dict:
     return rec
 
 
+def discover_events(records: list[dict], per_sport: int = 3) -> list[dict]:
+    """From the OLBG hub captures, pick a few event pages per sport to fetch next.
+
+    The point is to find out, from first-hand evidence, whether an event page carries a
+    full market board (both sides of match winner, handicap, total) or only the community
+    tips.  Three events per sport is enough to answer that and keeps the run small.
+    """
+    seen: dict[str, int] = {}
+    extra: list[dict] = []
+    for rec in records:
+        if not rec.get("key", "").startswith("olbg_hub_") or rec.get("http_status") != 200:
+            continue
+        path = RAW_DIR / rec.get("stored", "")
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        sport = rec.get("sport", "")
+        if seen.get(sport, 0) >= per_sport:
+            continue
+        for m in re.finditer(r'eventUrl:"(/betting-tips/[^"]+event_id=(\d+))"', text):
+            if seen.get(sport, 0) >= per_sport:
+                break
+            rel, eid = m.group(1), m.group(2)
+            key = f"olbg_event_{sport.lower().replace(' ', '_')}_{eid}"
+            if any(e["key"] == key for e in extra):
+                continue
+            extra.append({"key": key, "url": "https://www.olbg.com" + rel,
+                          "sport": sport, "kind": "olbg-event",
+                          "note": "OLBG event page: checks for a full market board"})
+            extra.append({"key": key + "_data",
+                          "url": "https://www.olbg.com" + rel + "/__data.json",
+                          "sport": sport, "kind": "olbg-event-data",
+                          "note": "SvelteKit data route for the same event page"})
+            seen[sport] = seen.get(sport, 0) + 1
+    return extra
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--request", default=str(DEFAULT_REQUEST))
@@ -129,6 +166,13 @@ def main() -> int:
     started = now_utc()
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         records = list(pool.map(fetch, items))
+        if not args.only and request.get("discover_events", True):
+            extra = discover_events(records)
+            already = {i["key"] for i in items}
+            extra = [e for e in extra if e["key"] not in already]
+            if extra:
+                print(f"discovered {len(extra)} event-page requests")
+                records += list(pool.map(fetch, extra))
 
     manifest = {
         "captured_at": now_utc(),

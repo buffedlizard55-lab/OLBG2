@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Seite nicht gefunden &ndash; PENNY DEL</title>
+    <style>
+        :root {
+            --del-red: #d50920;
+            --del-text: #2a2233;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: #ffffff;
+            color: var(--del-text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .error {
+            background: #ffffff;
+            width: 100%;
+            max-width: 760px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+        .error__image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .error__body {
+            padding: 40px 32px 44px;
+            text-align: center;
+        }
+        .error__title {
+            margin: 0 0 12px;
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--del-red);
+        }
+        .error__text {
+            margin: 0 auto 28px;
+            max-width: 46ch;
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--del-text);
+        }
+        .error__button {
+            display: inline-block;
+            padding: 15px 34px;
+            background: var(--del-red);
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 999px;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+        .error__button:hover,
+        .error__button:focus {
+            background: #a80718;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 480px) {
+            .error__body { padding: 28px 20px 32px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="error">
+        <img class="error__image" src="/_assets/e4ccd237e60ebadf8c55c336e47a814f/images/404.jpg" alt="Error 404 &ndash; Der Puck ist spurlos verschwunden!">
+        <div class="error__body">
+            <h1 class="error__title">Seite nicht gefunden</h1>
+            <p class="error__text">
+                Diese Seite konnte leider nicht gefunden werden. Vielleicht ist der Puck
+                zusammen mit der Seite spurlos verschwunden &ndash; oder der Link ist nicht mehr aktuell.
+            </p>
+            <a class="error__button" href="/">Zur&uuml;ck zur Startseite</a>
+        </div>
+    </main>
+</body>
+</html>

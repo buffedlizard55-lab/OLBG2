@@ -112,7 +112,14 @@ def main() -> int:
             fail(f"{key}: prediction sport does not match the fixture")
         if not item.get("selection"):
             fail(f"{key}: prediction does not name a selection")
-        facts_text = " ".join(item.get("facts", [])) + " " + " ".join(str(v) for v in (ev.get("facts") or {}).values())
+        # A write-up is authored against one capture.  While that capture is still the current
+        # one every number must also appear in the fixture's own facts; once a fresher capture
+        # lands, the prose keeps its own dated fact list and the page says which capture it
+        # describes, so the numbers are never silently re-attributed.
+        same_capture = item.get("capture") == MODEL["meta"].get("captured_at")
+        facts_text = " ".join(item.get("facts", []))
+        if same_capture:
+            facts_text += " " + " ".join(str(v) for v in (ev.get("facts") or {}).values())
         for num in set(re.findall(r"\d+(?:\.\d+)?", body)):
             if num not in facts_text:
                 fail(f"{key}: number {num!r} appears in the prose but not in the fact list")

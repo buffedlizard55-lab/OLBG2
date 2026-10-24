@@ -467,7 +467,8 @@ def build_predictions() -> str:
             f"<div class='meta'>{e(p['sport'])} · {e(p.get('competition',''))} · {e(p.get('start',''))} · "
             f"{pill(p.get('confidence'))} · our price {am(p.get('fair_american'))} · {pct(p.get('probability'))}</div>"
             f"<p><strong>{e(p['selection'])}</strong> — {e(p['body'])}</p>"
-            f"<ul class='facts'>{facts}</ul><div class='src'>Sources: {srcs}</div></div>"
+            + (f"<div class='small'>Written against the {e(p['capture'])} capture.</div>" if p.get('capture') else "")
+            + f"<ul class='facts'>{facts}</ul><div class='src'>Sources: {srcs}</div></div>"
         )
     grouped: dict[str, list[str]] = {}
     for p, card in zip(items, cards):
@@ -525,7 +526,8 @@ def build_sport(sport: str) -> str:
             f"<div class='pred'><h3>{e(p['headline'])}</h3><div class='meta'>"
             f"{pill(p.get('confidence'))} · {am(p.get('fair_american'))}</div>"
             f"<p><strong>{e(p['selection'])}</strong> — {e(p['body'])}</p>"
-            f"<ul class='facts'>{''.join('<li>%s</li>' % e(f) for f in p.get('facts', []))}</ul>"
+            + (f"<div class='small'>Written against the {e(p['capture'])} capture.</div>" if p.get('capture') else "")
+            + f"<ul class='facts'>{''.join('<li>%s</li>' % e(f) for f in p.get('facts', []))}</ul>"
             f"<div class='src'>Sources: {' · '.join(link(u) for u in p.get('sources', []))}</div></div>"
             for p in preds
         )

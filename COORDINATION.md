@@ -4999,3 +4999,25 @@ A final temporal-integrity pass found the first snapshot's separate lines/picks 
 | Validation | Local verifier 5,144 assertions / 0 errors; focused Zenith tests 8/8; full suite 747 tests; integration link audit 0 errors. |
 
 Current state: PRs #191, #192 and #194 are merged and the filtered desk is live. The official source snapshot and missing five-per-sport quotas remain disclosed limitations; no sportsbook availability or continuously current fixture feed is claimed.
+
+---
+
+## Session `arena/9f69ce85-olbg2` — fresh 2026-10-24 release, clean dashboard
+
+**Session ID:** `arena/9f69ce85-olbg2` · **Branch:** `arena/9f69ce85-olbg2` · **Started:** 2026-10-24 17:10 UTC
+
+**Stale-claim check:** every earlier claim block is closed by a publication record (PRs #191/#192/#194 merged).
+Live remote branches were checked with `git branch -r`; only `origin/main` and this session's branch exist, so no
+other session is active and no scope collides. This session takes the integration role.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| T1 | Board read, concurrency check, claim, commit + push | in progress | `arena/9f69ce85-olbg2` | `COORDINATION.md` (append-only) |
+| T2 | Fresh OLBG.com capture of listed events for the exact 15 covered sports (2026-10-24) | in progress | `arena/9f69ce85-olbg2` | `data/today/olbg_listings.json`, `research/today-9f69ce85.md` |
+| T3 | First-hand official-source verification of fixtures, form and match facts | in progress | `arena/9f69ce85-olbg2` | `data/today/fixtures.json`, `data/today/sources.json` |
+| T4 | Independent multi-market line origination + confidence grading + odds-band test | in progress | `arena/9f69ce85-olbg2` | `scripts/today_model.py`, `data/today/lines.json`, `data/today/picks.json` |
+| T5 | Unique >=30-word written predictions (target 5 per sport) | in progress | `arena/9f69ce85-olbg2` | `scripts/today_predictions.py`, `data/today/predictions.json` |
+| T6 | Clean `/today/` dashboard + 15 sport subpages + Flagged for Review + verifier | in progress | `arena/9f69ce85-olbg2` | `scripts/today_build.py`, `scripts/today_verify.py`, `today/**` |
+| T7 | Root landing/navigation point at the new dashboard; PR -> `main`; confirm Pages | pending | `arena/9f69ce85-olbg2` | `index.html` (via `scripts/build_site.py`), `README.md`, `.github/workflows/pages.yml` |
+
+No other session's files are edited. `site/**`, `/zenith/` and every earlier desk are left byte-identical.

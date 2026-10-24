@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		 <title>Lega Pallavolo Serie A | Italian Volleyball League &#8211; National Championships</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+		<meta name="description" content="Italian Volleyball League - Championships of Serie A Teams">
+		<meta name="google-site-verification" content="adhbzs7BuZS1BMpsLoMmzKuyoF84-YEna0Vki94XuxY" />
+		<meta http-equiv="content-language" content="it">
+		<meta name="keywords" content="Legavolley, Italian, volleyball, volley, Supercup, Champions, League, CEV, Serie A, Supercoppa, Supercup, All Star Game, Coppa Italia, Italian Cup, pallavolo">
+
+		<link href="css/LegaM.css" rel="stylesheet">
+		<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+		<link href="assets/css/owl.carousel.css" rel="stylesheet">
+		<link href="assets/css/styles.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	 
+		<style>
+		#tab-cont {
+			background: #f7f7f7;
+		}
+		.navbar.navbar-inverse.navbar_mast{
+			margin-bottom: 0;
+			border-radius: 0;
+			border: none;
+		}
+		header.header_masthead.jumbotron.header-player{
+			margin: 0;
+		}
+		@media(min-width: 992px){
+			.container.container_mast{
+				width: 1004px;
+			}
+		}
+		TABLE#GareGiornata Td
+		{
+			border:1px solid #e5e5e5;
+				padding:0 3px
+				
+		}
+		
+		#contentRis .col-md-12 {padding:0}
+		
+		@media (max-width: 767px) {
+			.container { padding-right:5px;padding-left:5px; }
+			  .col-md-12{ padding-right:0;padding-left:0; }
+		}
+		</style>
+		<script>
+		function gotohome()
+		{        
+			var a = window.opener;
+			// if (a!=null) {	a.focus(); return false;}  
+			return true;
+		}
+		
+		</script>
+	</head>
+	<body> 
+		<div id="body-wrap">	
+		  <div class="container boxed-container" id="boxed-container">
+			<div id="wrap">
+			  <nav class="navbar navbar-inverse" id="top-nav">
+				<div>
+
+					<div class="navbar-brand navbar-brand-centered" id="logonavbar">
+						
+						<a href="https://www.legavolley.it/?h=1" id="back768" class="backhome" onclick="return gotohome();"><i class="fa fa-chevron-left"></i> home</a>
+						
+						<a href="https://www.legavolley.it/?h=1 ">
+							 <img src="https://ww2.legavolley.it/lvc/images/logo_trans.png">
+					  	</a>
+					</div>
+ 
+					
+				  	<ul class="nav navbar-nav">
+		        		<li>
+			       			<a href="https://www.legavolley.it/?h=1 " class="backhome" target="_blank" onclick="return gotohome();"><i class="fa fa-chevron-left" ></i> home</a>
+			       		</li>
+			       	</ul>
+
+				</div>
+			  </nav><!-- /.navbar -->
+			  <!-- HEADER 
+			  =================================-->  
+			  <!--
+	<div style="width:100%"> 
+			<a href="http://www.raisport.rai.it/dl/raiSport/dirette/ContentItem-bd5dc98a-e9b8-452b-a80d-8288b470d955.html" target="_self"><img src="http://ww2.legavolley.it/images/ChePlayoff2019_WEB.jpg" class="vc_single_image-img attachment-full" alt="#cheplayoff" style="width:100%"></a> 
+	</div>		-->	  
+			 
+			  
+			  <!-- /header container-->
+
+			  <!-- CONTENT
+			  =================================-->
+			<div class="container" id="tab-cont">
+			  	
+			  	<div class="col-md-12 col-xs-12 accordion-btn text-right">
+			        <a data-toggle="collapse" data-parent="#contentRis" href="#contentRis">
+			            <button class="">Aggiornamenti live</button>
+			        </a>
+			    </div>
+					<!-- collapse -->
+				<div id="contentRis" class="col-md-12 panel-collapse ">
+					<script src="assets/js/table.js?v=2"></script>
+				</div>
+  
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="legavolleytv">
+							<a href="https://vb.tv" target="newpage">
+								<img src="/lvc/images/home.jpg" style="width: 100%;" />
+							</a>
+							</div>
+						</div>
+					</div>
+					<br> 
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="legavolleytv">
+							<a href="https://www.youtube.com/@DAZNIT" target="newpage">
+								<img src="https://www.legavolley.it/wp-content/uploads/2025/10/5.png" style="width: 100%;" />
+							</a>
+							</div>
+						</div>
+					</div>
+					<br> 
+				   
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="legavolleytv">
+							<a href="https://www.youtube.com/c/legavolley" target="newpage">
+								<img src="https://www.legavolley.it/wp-content/uploads/2025/10/6.png" style="width: 100%;" />
+							</a>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="lattemiele">
+							<a href="http://lattemiele.com/web-radio/" target="newpage">
+								<div id="logo-image"></div> 
+	    						<!-- <div id="playerarea"></div> -->
+	    							<div id="playerareatext">Clicca qui per ascoltare in diretta LatteMiele (Radio Ufficiale)</div>
+							</a>
+							</div>
+						</div>
+					</div>
+			</div>
+
+ 
+			</div>
+		  </div>
+		</div>    
+      <!-- /CONTENT ============-->
+
+	  
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-01Z9FFFZTV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-01Z9FFFZTV', { 'anonymize_ip': true });
+</script>
+
+	</body> 
+ 
+</html>

@@ -1,13 +1,13 @@
 {
- "captured_at": "2026-10-24T17:42:36Z",
+ "captured_at": "2026-10-24T17:50:43Z",
  "events_per_sport": {
-  "Greyhounds": 18,
-  "Ice Hockey": 25,
+  "Greyhounds": 68,
   "Handball": 37,
   "Rugby Union": 6,
   "Volleyball": 16,
   "Snooker": 1,
   "Darts": 6,
+  "Ice Hockey": 20,
   "Basketball": 9,
   "Cricket": 14,
   "Baseball": 1,
@@ -17,13 +17,13 @@
   "Rugby League": 3
  },
  "picks_per_sport": {
-  "Greyhounds": 18,
-  "Ice Hockey": 25,
+  "Greyhounds": 68,
   "Handball": 37,
   "Rugby Union": 6,
   "Volleyball": 16,
   "Snooker": 1,
   "Darts": 6,
+  "Ice Hockey": 20,
   "Basketball": 9,
   "Cricket": 14,
   "Baseball": 1,
@@ -33,25 +33,25 @@
   "Rugby League": 3
  },
  "high_per_sport": {
-  "Volleyball": 4,
+  "Handball": 28,
+  "Rugby Union": 3,
+  "Volleyball": 14,
   "Darts": 1,
   "Ice Hockey": 5,
   "Greyhounds": 1,
-  "Rugby Union": 1,
   "Basketball": 5,
   "Tennis": 5,
-  "Cricket": 1,
-  "Handball": 4
+  "Cricket": 1
  },
  "verified": 13,
- "total": 150,
+ "total": 195,
  "tiers": {
   "official-model": 12,
-  "quoted-market": 138,
+  "quoted-market": 183,
   "crowd-consensus": 0,
   "no-basis": 0
  },
- "wta_players_parsed": 11,
+ "wta_players_parsed": 17,
  "f1_drivers_parsed": 23,
  "failures": [
   {
@@ -67,7 +67,7 @@
    "error": "HTTPError 404"
   }
  ],
- "review_items": 137,
+ "review_items": 182,
  "top5_counts": {
   "Golf": 0,
   "Volleyball": 5,
@@ -77,7 +77,7 @@
   "Darts": 4,
   "Baseball": 1,
   "Gaelic Sports": 5,
-  "Greyhounds": 0,
+  "Greyhounds": 5,
   "Tennis": 5,
   "Motor Racing": 0,
   "Handball": 5,

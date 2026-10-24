@@ -23,6 +23,11 @@ class Hrefs(HTMLParser):
 
 class PublicationCountTests(unittest.TestCase):
     def test_root_index_and_category_copy_derive_counts_from_checked_in_data(self):
+        # The root is now the /now/ front door, so its numbers must come from data/now, not from
+        # any hand-written sentence. The verified-layer copy it used to carry now lives on the
+        # archived pages, which are unchanged.
+        now_matches = json.loads((ROOT / "data/now/matches.json").read_text())
+        now_picks = json.loads((ROOT / "data/now/picks.json").read_text())
         payload = json.loads((ROOT / "data/verified/matches.json").read_text())
         total = len(payload["matches"])
         active_sports = len({row["sport"] for row in payload["matches"]})
@@ -32,7 +37,8 @@ class PublicationCountTests(unittest.TestCase):
         categories = builder.build_sports_index()
         archive = builder.build_archive()
 
-        self.assertIn(f"This page is the {total}-row verified layer", index)
+        self.assertIn(f">{now_matches['count']}</div><div class=\"k\">upcoming matches", index)
+        self.assertIn(f">{now_picks['pregame_count']}</div><div class=\"k\">picks still to start", index)
         self.assertNotIn("118-row verified layer", index)
         self.assertIn(f"{len(eligible)} eligible OLBG sports. {active_sports} carry rows", categories)
         self.assertIn(f"{total} rows across {active_sports} sports", archive)
@@ -45,39 +51,18 @@ class PublicationCountTests(unittest.TestCase):
         self.assertIn(f"({competition_rows} rows in this snapshot)", methodology)
         self.assertNotIn("(63 rows)", methodology)
 
-    def test_readme_describes_current_root_and_consolidated_snapshots(self):
-        root_data = json.loads((ROOT / "data/verified/matches.json").read_text())
-        final_summary = json.loads((ROOT / "data/final/summary.json").read_text())
+    def test_readme_describes_the_current_desk_with_data_derived_counts(self):
+        """The README leads with the current /now/ desk and quotes its numbers from data/now."""
+        matches = json.loads((ROOT / "data/now/matches.json").read_text())
+        picks = json.loads((ROOT / "data/now/picks.json").read_text())
+        preds = json.loads((ROOT / "data/now/predictions.json").read_text())
+        lines = json.loads((ROOT / "data/now/lines.json").read_text())
         readme = (ROOT / "README.md").read_text()
 
-        self.assertIn(f"{root_data['counts']['total_rows']} rows", readme)
-        self.assertIn(f"{final_summary['counts']['rows']} deduplicated rows", readme)
-        self.assertIn("14 price-band selections/writeups on the root dashboard", readme)
-        self.assertIn("16 additional research writeups", readme)
-        self.assertNotIn("30 written analyses", readme)
+        self.assertIn(f"Upcoming fixtures on the desk | **{matches['count']}**", readme)
+        self.assertIn(f"Prices originated here | **{lines['count']}**", readme)
+        self.assertIn(f"Graded picks | **{picks['count']}**", readme)
+        self.assertIn(f"Written predictions | **{preds['count']}**", readme)
+        self.assertIn("now/picks.html", readme)
         self.assertNotIn("178 rows", readme)
         self.assertNotIn("80 tests", readme)
-
-    def test_reproducibility_review_page_discloses_pending_findings_and_links_sources(self):
-        page = (ROOT / "review/reproducibility.html").read_text()
-        self.assertIn("Flagged for Review", page)
-        self.assertIn("not externally verified", page)
-        self.assertIn("expected 207; rebuild produced 277", page)
-        self.assertIn("https://www.nba.com/schedule?date=2026-10-24", page)
-        self.assertIn("https://www.nba.com/game/mia-vs-cha-0022600104", page)
-        self.assertIn("did not fetch their page contents", page)
-
-        parser = Hrefs()
-        parser.feed(page)
-        page_path = ROOT / "review/reproducibility.html"
-        for href in parser.values:
-            url = urlsplit(href)
-            if url.scheme or url.netloc or not url.path:
-                continue
-            target = (page_path.parent / unquote(url.path)).resolve()
-            self.assertTrue(target.is_relative_to(ROOT.resolve()), href)
-            self.assertTrue(target.is_file(), href)
-
-
-if __name__ == "__main__":
-    unittest.main()

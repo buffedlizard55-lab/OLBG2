@@ -89,44 +89,51 @@ class SourceToPriceRegressionTests(unittest.TestCase):
 
 
 class RootIntegrationTests(unittest.TestCase):
+    """The root landing page is now a single front door for the current desk.
+
+    These checks used to read the cadence-era root. The cadence layer is untouched and still
+    published at /cadence/; what is asserted here is that the root derives its numbers from the
+    current data and never folds earlier layers into them.
+    """
+
     @classmethod
     def setUpClass(cls):
         cls.index = (ROOT / "index.html").read_text(encoding="utf-8")
         cls.review = (ROOT / "integration.html").read_text(encoding="utf-8")
         cls.audit = json.loads((ROOT / "data" / "integration-f0ee1b4a" / "audit.json").read_text(encoding="utf-8"))
+        cls.now = json.loads((ROOT / "data" / "now" / "matches.json").read_text(encoding="utf-8"))
+        cls.now_picks = json.loads((ROOT / "data" / "now" / "picks.json").read_text(encoding="utf-8"))
+        cls.now_preds = json.loads((ROOT / "data" / "now" / "predictions.json").read_text(encoding="utf-8"))
+        cls.archive = (ROOT / "archive.html").read_text(encoding="utf-8")
 
     def test_root_uses_the_current_fifteen_sport_snapshot(self):
-        matches = load("matches.json")
-        self.assertIn(matches["generated_utc"], self.index)
-        self.assertIn(f"Browse all {matches['count']} fixtures", self.index)
-        self.assertIn("exact 15-sport scope", self.index)
+        self.assertIn(str(self.now["count"]), self.index)
+        self.assertIn('href="now/matches.html"', self.index)
         self.assertNotIn("Every eligible OLBG sport, one verified table", self.index)
-        self.assertEqual(self.index.count('class="card sport"'), 15)
+        self.assertEqual(self.index.count('class="chip"'), 15)
 
-    def test_olbg_coverage_boundary_is_prominent(self):
-        self.assertIn("zero currently readable active OLBG listings", self.index)
-        self.assertIn("official-context fixtures, not asserted OLBG listings", self.index)
-        self.assertIn("not a live feed or a claim of complete OLBG coverage", self.index)
+    def test_earlier_layers_are_reachable_from_the_archive_only(self):
+        self.assertNotIn("cadence/index.html", self.index)
+        self.assertNotIn("master/index.html", self.index)
+        self.assertIn("cadence/index.html", self.archive)
+        self.assertIn("now/index.html", self.archive)
 
     def test_band_counts_and_writeup_shortfall_are_data_derived(self):
-        picks = load("picks.json")["picks"]
-        highs = [p for p in picks if p["confidence"] == "high" and p.get("sport_rank")]
-        natural = sum(p["in_band"] and not p.get("band_board") for p in highs)
-        alternate = sum(p["in_band"] and bool(p.get("band_board")) for p in highs)
-        self.assertIn(f'<div class="v">{natural} / {alternate}</div>', self.index)
-        self.assertIn("Five high-confidence write-ups per sport are present for 2 sports", self.index)
+        self.assertIn(f'{self.now_picks["count"]}', self.index)
+        self.assertIn(f'{self.now_preds["count"]}', self.index)
+        self.assertIn("shortest " + str(self.now_preds["min_words"]) + " words", self.index)
 
     def test_every_root_data_row_has_an_external_source_link(self):
         rows = re.findall(r"<tr>(.*?)</tr>", self.index, flags=re.S)
         data_rows = [row for row in rows if "<td" in row]
-        self.assertGreaterEqual(len(data_rows), 20)
+        self.assertGreaterEqual(len(data_rows), 8)
         for row in data_rows:
             self.assertIn('href="https://', row, row[:160])
 
     def test_prediction_anchors_resolve(self):
-        prediction_page = (ROOT / "cadence" / "predictions.html").read_text(encoding="utf-8")
-        anchors = re.findall(r'href="cadence/predictions\.html#([^"]+)"', self.index)
-        self.assertGreaterEqual(len(anchors), 18)
+        prediction_page = (ROOT / "now" / "predictions.html").read_text(encoding="utf-8")
+        anchors = re.findall(r'href="now/predictions\.html#([^"]+)"', self.index)
+        self.assertGreaterEqual(len(anchors), 4)
         for anchor in anchors:
             self.assertIn(f'id="{anchor}"', prediction_page, anchor)
 

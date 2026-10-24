@@ -5000,6 +5000,49 @@ A final temporal-integrity pass found the first snapshot's separate lines/picks 
 
 Current state: PRs #191, #192 and #194 are merged and the filtered desk is live. The official source snapshot and missing five-per-sport quotas remain disclosed limitations; no sportsbook availability or continuously current fixture feed is claimed.
 
+---
+
+## Session `arena/9f69ce85-olbg2` — fresh 2026-10-24 release, clean dashboard
+
+**Session ID:** `arena/9f69ce85-olbg2` · **Branch:** `arena/9f69ce85-olbg2` · **Started:** 2026-10-24 17:10 UTC
+
+**Stale-claim check:** every earlier claim block is closed by a publication record (PRs #191/#192/#194 merged).
+Live remote branches were checked with `git branch -r`; only `origin/main` and this session's branch exist, so no
+other session is active and no scope collides. This session takes the integration role.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| T1 | Board read, concurrency check, claim, commit + push | in progress | `arena/9f69ce85-olbg2` | `COORDINATION.md` (append-only) |
+| T2 | Fresh OLBG.com capture of listed events for the exact 15 covered sports (2026-10-24) | in progress | `arena/9f69ce85-olbg2` | `data/today/olbg_listings.json`, `research/today-9f69ce85.md` |
+| T3 | First-hand official-source verification of fixtures, form and match facts | in progress | `arena/9f69ce85-olbg2` | `data/today/fixtures.json`, `data/today/sources.json` |
+| T4 | Independent multi-market line origination + confidence grading + odds-band test | in progress | `arena/9f69ce85-olbg2` | `scripts/today_model.py`, `data/today/lines.json`, `data/today/picks.json` |
+| T5 | Unique >=30-word written predictions (target 5 per sport) | in progress | `arena/9f69ce85-olbg2` | `scripts/today_predictions.py`, `data/today/predictions.json` |
+| T6 | Clean `/today/` dashboard + 15 sport subpages + Flagged for Review + verifier | in progress | `arena/9f69ce85-olbg2` | `scripts/today_build.py`, `scripts/today_verify.py`, `today/**` |
+| T7 | Root landing/navigation point at the new dashboard; PR -> `main`; confirm Pages | pending | `arena/9f69ce85-olbg2` | `index.html` (via `scripts/build_site.py`), `README.md`, `.github/workflows/pages.yml` |
+
+No other session's files are edited. `site/**`, `/zenith/` and every earlier desk are left byte-identical.
+
+### Session `arena/9f69ce85-olbg2` — status log
+
+| Task | Status | Evidence |
+|---|---|---|
+| T1 Board read, concurrency check, claim, push | done | commit `a1bc2ca` on `arena/9f69ce85-olbg2`; no live competing branch |
+| T2 Fresh OLBG capture, 15 hubs, 2026-10-24 17:15–17:50Z | done | `data/today/olbg_listings.json` (96 rows, event ids, most-tipped selection, tip share) |
+| T3 First-hand official verification | done for 2 sports, blocked for 2, not reached for 11 | `data/today/sources.json` (12 pages, outcome per page), `research/today-9f69ce85.md` |
+| T4 Line origination, confidence grading, band test | done | `scripts/today_model.py`, `data/today/lines.json` (20 prices), `data/today/picks.json` (6 picks) |
+| T5 Unique written predictions | done (6; five-per-sport met for Ice Hockey, shortfall flagged for Baseball and for every sport whose official source was blocked) | `data/today/predictions.json`, shortest 79 words |
+| T6 `/today/` dashboard, 15 sport pages, review page, verifier | done | `scripts/today_build.py` (25 pages), `scripts/today_verify.py` (1,370 assertions, 0 errors), `tests/test_today_9f69ce85.py` (9 tests) |
+| T7 Root pointer, PR, merge, Pages | in progress | root index now leads with the 24 October board |
+
+**What this release does not do.** Ten sports carry OLBG listings but no pick, because the official source for that
+sport was blocked or was not reached inside the capture window. That is disclosed per sport on `today/flagged.html`
+with the exact URL that failed. The five-per-sport target is met for Ice Hockey only.
+
+**Requirement conflict recorded as R1.** "High confidence means 70% or better" and "the price must sit between
+−250 and +10000" only overlap between 70.00% and 71.43%, because −250 implies 71.43%. The New Jersey pick is 73.6%
+(fair −279) and is published as high confidence, marked outside the band, and left unrepriced.
+
+
 ## Session `arena/ba05b5b6-olbg2` — final integration and completion (2026-10-24)
 
 - **Session ID:** `arena/ba05b5b6-olbg2` · **Branch:** `arena/ba05b5b6-olbg2` (fixed by the Arena harness; `session-<id>/<task>` cannot be created here, recorded as a platform constraint).

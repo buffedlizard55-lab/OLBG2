@@ -1,0 +1,241 @@
+{
+  "generated_utc": "2026-10-24T17:50:00Z",
+  "count": 6,
+  "min_words": 79,
+  "predictions": [
+    {
+      "id": "pred-nhl-2026020169",
+      "fixture_id": "nhl-2026020169",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": "New Jersey Devils",
+      "away": "Los Angeles Kings",
+      "start_utc": "2026-10-24T19:30:00Z",
+      "selection": "New Jersey Devils",
+      "market": "Money line",
+      "probability": 0.7362,
+      "fair_american": -279,
+      "confidence": "high",
+      "in_band": false,
+      "headline": "New Jersey's form is the stronger side of this game, but -279 is outside the band",
+      "text": "New Jersey Devils to win at the Prudential Center. New Jersey are 6-4-0 for twelve points, with Jack Hughes already on eight assists, Arseny Gritsyuk on five goals and Jake Allen on four wins. Los Angeles are 2-4-2, six points from eight games, and their output runs through Artemi Panarin's six goals and Brandt Clarke's five assists. We price the Devils at 73.6%, a fair -279, so this pick is flagged as being outside the -250 floor rather than trimmed to fit.",
+      "word_count": 82,
+      "facts": [
+        {
+          "claim": "New Jersey 6-4-0 in 10 games, 12 points; Jack Hughes 8 assists; Jake Allen 4 wins",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Los Angeles 2-4-2 in 8 games, 6 points; Artemi Panarin 6 goals; Brandt Clarke 5 assists",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "League quote: New Jersey 1.53, Los Angeles 2.55",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/LA_Kings_@_NJ_Devils/13?event_id=200000",
+      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+    },
+    {
+      "id": "pred-nhl-2026020174",
+      "fixture_id": "nhl-2026020174",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": "Columbus Blue Jackets",
+      "away": "Vegas Golden Knights",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "selection": "Vegas Golden Knights",
+      "market": "Money line",
+      "probability": 0.7029,
+      "fair_american": -237,
+      "confidence": "high",
+      "in_band": true,
+      "headline": "Vegas take the best record of the priced card into Columbus",
+      "text": "Vegas Golden Knights to win on the money line. Vegas are 8-4-0 through twelve games with 46 goals for and 36 against, a 16-point return that is the strongest record of any club priced here tonight. Columbus are 3-5-0 from eight starts and sit on six points. Our fair price for the visitors is -237 and the league's own two-way quote has them at 1.76, so the road side is where the edge sits. Selection: Vegas Golden Knights, money line.",
+      "word_count": 80,
+      "facts": [
+        {
+          "claim": "Vegas 8-4-0 in 12 games, 46 goals for, 36 against, 16 points",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "Columbus 3-5-0 in 8 games, 6 points",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "League quote: Vegas 1.76, Columbus 2.11",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/VGS_Golden_Knights_@_CLB_Blue_Jackets/13?event_id=200001",
+      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+    },
+    {
+      "id": "pred-nhl-2026020170",
+      "fixture_id": "nhl-2026020170",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": "Boston Bruins",
+      "away": "San Jose Sharks",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "selection": "Boston Bruins",
+      "market": "Money line",
+      "probability": 0.6995,
+      "fair_american": -233,
+      "confidence": "high",
+      "in_band": true,
+      "headline": "Boston's 17-point start meets a San Jose side four points back",
+      "text": "Boston Bruins to win at TD Garden. Boston are 8-2-1 over eleven games for 17 points, with 42 goals scored and 22 conceded, and the individual numbers match the team ones: David Pastrnak has six goals and ten assists while Jeremy Swayman has six wins in net. San Jose are 6-4-1 and on 13 points from the same eleven games, four points adrift. We make Boston -233, inside the requested range, and the league quote of 1.54 is close to that.",
+      "word_count": 81,
+      "facts": [
+        {
+          "claim": "Boston 8-2-1 in 11 games, 17 points, 42 goals for, 22 against",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "David Pastrnak: 6 goals, 10 assists. Jeremy Swayman: 6 wins",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "San Jose 6-4-1 in 11 games, 13 points; Macklin Celebrini 5 goals, 9 assists",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "League quote: Boston 1.54, San Jose 2.52",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/SJ_Sharks_@_BOS_Bruins/13?event_id=200007",
+      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+    },
+    {
+      "id": "pred-nhl-2026020173",
+      "fixture_id": "nhl-2026020173",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": "Washington Capitals",
+      "away": "Buffalo Sabres",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "selection": "Washington Capitals",
+      "market": "Money line",
+      "probability": 0.5922,
+      "fair_american": -145,
+      "confidence": "medium",
+      "in_band": true,
+      "headline": "Washington hold the same points as Buffalo from one fewer game",
+      "text": "Washington Capitals on the money line. Washington are 5-4-0 for ten points, with Alex Tuch on five goals, Dylan Strome on five assists and Logan Thompson on four wins. Buffalo are 4-4-2, also on ten points, but they have needed one more game to get there. That extra fixture without an extra point is the whole of the case for the home side, and it is why the fair price is -145 while the league has Washington at 1.84. Selection: Capitals to win.",
+      "word_count": 83,
+      "facts": [
+        {
+          "claim": "Washington 5-4-0 in 9 games, 10 points; Alex Tuch 5 goals; Logan Thompson 4 wins",
+          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+        },
+        {
+          "claim": "Buffalo 4-4-2 in 10 games, 10 points; Tage Thompson 5 goals; Zach Benson 6 assists",
+          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+        },
+        {
+          "claim": "League quote: Washington 1.84, Buffalo 2.01",
+          "source_url": "https://api-web.nhle.com/v1/schedule/2026-10-24"
+        },
+        {
+          "claim": "No OLBG event id was listed for this fixture at capture",
+          "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
+      "official_fixture_url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+      "olbg_event_url": "",
+      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+    },
+    {
+      "id": "pred-mlb-849802",
+      "fixture_id": "mlb-849802",
+      "sport": "Baseball",
+      "competition": "MLB World Series",
+      "home": "Milwaukee Brewers",
+      "away": "Tampa Bay Rays",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "selection": "Milwaukee Brewers",
+      "market": "Money line",
+      "probability": 0.5662,
+      "fair_american": -131,
+      "confidence": "medium",
+      "in_band": true,
+      "headline": "A 103-win Milwaukee side hosts a Tampa Bay team that travelled badly",
+      "text": "Milwaukee Brewers to win the World Series game at American Family Field. Milwaukee went 103-59 with 832 runs scored and 618 allowed, were 55-26 at home, and won eight of their last ten. Tampa Bay finished 98-64 with 736 runs and 650 allowed, but were 43-38 on the road and 5-5 across their last ten. Logan Henderson is listed as Milwaukee's probable starter and Drew Rasmussen for the Rays. We make the Brewers -131, a slender home edge rather than a strong one.",
+      "word_count": 83,
+      "facts": [
+        {
+          "claim": "Milwaukee 103-59, 832 runs scored, 618 allowed, 55-26 home, 8-2 last ten",
+          "source_url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings&season=2026"
+        },
+        {
+          "claim": "Tampa Bay 98-64, 736 scored, 650 allowed, 43-38 away, 5-5 last ten",
+          "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026"
+        },
+        {
+          "claim": "Probable pitchers: Logan Henderson (MIL), Drew Rasmussen (TB) - first pitch 2026-10-25T00:00:00Z at American Family Field",
+          "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
+      "official_fixture_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Baseball/MLB/MLB/TB_Rays_@_MIL_Brewers/12?event_id=160792",
+      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+    },
+    {
+      "id": "pred-nhl-2026020171",
+      "fixture_id": "nhl-2026020171",
+      "sport": "Ice Hockey",
+      "competition": "NHL",
+      "home": "Ottawa Senators",
+      "away": "New York Rangers",
+      "start_utc": "2026-10-24T23:00:00Z",
+      "selection": "Ottawa Senators",
+      "market": "Money line",
+      "probability": 0.5547,
+      "fair_american": -125,
+      "confidence": "medium",
+      "in_band": true,
+      "headline": "Ottawa at home against the crowd on a coin-flip record",
+      "text": "Ottawa Senators to win at the Canadian Tire Centre, which goes against the crowd: OLBG's most-tipped selection on this game was the New York Rangers. Ottawa are 7-4-0 for 14 points, Tim Stutzle has seven goals and eight assists and Linus Ullmark has seven wins. New York are 7-4-1 for 15 points, one point better over one extra game, with Alexis Lafreniere on eight goals and Adam Fox on fourteen assists. We price Ottawa at -125 on home ice.",
+      "word_count": 79,
+      "facts": [
+        {
+          "claim": "Ottawa 7-4-0 in 11 games, 14 points; Tim Stutzle 7 goals, 8 assists; Linus Ullmark 7 wins",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "New York 7-4-1 in 12 games, 15 points; Alexis Lafreniere 8 goals; Adam Fox 14 assists",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "League quote: Ottawa 1.80, New York 2.05",
+          "source_url": "https://api-web.nhle.com/v1/score/2026-10-24"
+        },
+        {
+          "claim": "OLBG most-tipped selection on event 200008 was NY Rangers (3/3 tips, 100%)",
+          "source_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008"
+        }
+      ],
+      "injuries": null,
+      "injuries_note": "No injury or suspension list was published by the league feed used for this fixture, so no availability claim is made.",
+      "official_fixture_url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "olbg_event_url": "https://www.olbg.com/betting-tips/Ice_Hockey/NHL/NHL/NY_Rangers_@_OTT_Senators/13?event_id=200008",
+      "provenance_note": "Written from the facts stored against this fixture at capture; every figure in the copy appears in the facts list below it."
+    }
+  ]
+}

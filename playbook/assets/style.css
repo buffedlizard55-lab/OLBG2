@@ -39,6 +39,8 @@ tr:last-child td{border-bottom:none}
 td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .tbl-wrap{overflow-x:auto;border-radius:10px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips a.pickcard{border:1px solid var(--border);background:#fff;border-radius:999px;padding:.3rem .7rem;font-size:.82rem;color:var(--ink);text-decoration:none;display:inline-block}
+.chips a.pickcard:hover{border-color:var(--accent);color:var(--accent)}
 .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13.5px;text-decoration:none;color:var(--ink)}
 .chip b{color:var(--accent2)}
 .note{font-size:13.5px;color:var(--muted)}

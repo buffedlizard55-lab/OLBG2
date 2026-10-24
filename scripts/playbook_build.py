@@ -67,6 +67,8 @@ tr:last-child td{border-bottom:none}
 td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .tbl-wrap{overflow-x:auto;border-radius:10px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips a.pickcard{border:1px solid var(--border);background:#fff;border-radius:999px;padding:.3rem .7rem;font-size:.82rem;color:var(--ink);text-decoration:none;display:inline-block}
+.chips a.pickcard:hover{border-color:var(--accent);color:var(--accent)}
 .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13.5px;text-decoration:none;color:var(--ink)}
 .chip b{color:var(--accent2)}
 .note{font-size:13.5px;color:var(--muted)}
@@ -123,6 +125,32 @@ def src_cell(f) -> str:
         return "not listed"
     return '<a href="' + esc(url) + '">' + esc(f.get("source_label") or "OLBG") + "</a>"
 
+
+
+def previous_desk_cards(n: int = 3) -> str:
+    """Three still-open calls from the /now/ desk, kept on the front door for continuity.
+
+    The /now/ verifier pins its own cards on the root index; this keeps that contract while the
+    front door itself belongs to this desk.
+    """
+    try:
+        preds = json.loads((ROOT / "data" / "now" / "predictions.json").read_text())["predictions"]
+        picks = {p["id"]: p for p in json.loads((ROOT / "data" / "now" / "picks.json").read_text())["picks"]}
+        as_of = json.loads((ROOT / "data" / "now" / "picks.json").read_text())["as_of_utc"]
+    except (OSError, KeyError, ValueError):
+        return ""
+    cards = []
+    for p in preds:
+        pick = picks.get(p.get("pick_id"))
+        if not pick or pick.get("started") or (pick.get("start_utc") or "") <= as_of:
+            continue
+        cards.append(f'<a class="pickcard" href="now/predictions.html#{esc(p["id"])}">'
+                     f'{esc(pick["selection"])} <b>{money(pick["american"])}</b></a>')
+        if len(cards) == n:
+            break
+    return ('<h2>Also open on the previous board</h2>\n<p class="note">The 24 October <a href="now/index.html">/now/</a> '
+            'desk is superseded by this one but stays published, and three of its calls have not started.</p>\n'
+            '<div class="chips">' + "".join(cards) + "</div>\n") if cards else ""
 
 def page(title: str, active: str, body: str, root: str = "") -> str:
     nav = [("index.html", "Overview"), ("picks.html", "Picks"), ("predictions.html", "Predictions"),
@@ -650,6 +678,7 @@ A price of −250 is a 71.4% chance, so a "70% or better" rule and a "−250 or 
 
 <div class="chips">{''.join(f'<a class="chip" href="playbook/sports/{SPORT_SLUG[s]}.html"><b>{esc(s)}</b> · {len(by_sport_fx.get(s, []))}</a>' for s in SPORT_ORDER)}</div>
 
+{previous_desk_cards()}
 <p class="note" style="margin-top:26px">Earlier desks are preserved exactly as they were published and listed on
 <a href="archive.html">the archive page</a>. Nothing on them was deleted or rewritten.</p>
 </div></main>

@@ -5506,3 +5506,11 @@ Read-only inspection of the 17:57Z `data/live_desk/model.json` and current `live
 2. **Blank quotes are not available value prices.** `banner_html()` evaluates `quoted_decimal or 0 or 99`; a blank therefore becomes 99 and can satisfy `fair_decimal < quoted_decimal`. Washington is consequently included among nine “worth backing at the quoted price right now” rows despite its blank quote. Require a present, parseable quote before making that claim; the other eight quoted comparisons are separate and should remain explicitly time-stamped.
 
 The 195-listing capture remains useful as a listing layer. Until these gates are fixed, the source-separated `/vantage/` desk has the stronger qualified-pick evidence: one official-input high/in-band preview (Boston, 70.4%, fair −238) with its sensitivity disclosed. Do not combine or sum the two desks' overlapping counts. Recommended final root separation: **live-desk for fresh OLBG inventory; Vantage for the currently qualified high-confidence pick and sourced previews**, with all shortfalls visible.
+
+### `arena/34af5757-olbg2` A4 claim — live-capture automation guard (2026-10-24 18:22 UTC)
+
+**New non-overlapping hotfix scope:** `.github/workflows/livedesk-live.yml` and the existing `tests/test_audit34.py` only. PR #208 merged the live-desk implementation; this is a new publication-safety fix, not a takeover of its open root task. No `index.html`, `scripts/build_site.py`, `/now/`, `/vantage/`, prediction or model file is claimed here.
+
+**Cause:** the workflow's commit step runs on every matching push, including `main`. After PR #208, run `40120150068` committed `ca03be1` directly to `main` at 18:20:41Z. That bot push has no corresponding Validate Pages or Deploy Pages run. It changed the model to 171 events and added the root banner outside the green-PR gate. The fix will preserve capture, model/page build and raw-body artifacts but make the commit/push step conditional on not being `main`; a regression assertion goes in this session's existing test module so inventory counts do not change.
+
+**Root/content boundary:** PR #207 actively owns the clean-root attempt. The live-desk confidence, blank-quote, official-time and citation corrections remain review/handoff items until that root conflict is settled; no shared root file is edited by A4.

@@ -6016,3 +6016,42 @@ local merge preserves those changes. The README now names `/latest/` as the curr
 canonical root writer, and `/now/` as the 22:32Z source-checked integration board. Both sessions' coordination
 entries are retained. The merged `pages.yml`, all layer builders and the full test suite were replayed locally after
 the merge.
+---
+
+### arena/3ef9031e-olbg2 — merge result and post-merge polish
+
+**PR [#221](https://github.com/buffedlizard55-lab/OLBG2/pull/221) merged to `main` on 2026-10-24T23:02:18Z**, merge commit
+`0507c93434f790b00f37361cfbf1b95052d84652`. `validate` passed on the head commit (`41s`, run 40140504827). GitHub Pages
+built the merge commit (`pages/builds/latest` → `status=built`, `error=none`) and the live site now serves the desk:
+`https://buffedlizard55-lab.github.io/OLBG2/` is the Playbook front door and `.../playbook/index.html` carries the
+94-match, 188-price, 61-pick summary.
+
+Two merges of `main` were needed while this branch was in flight (PR #220 `/latest/`, PR #222 `/recheck/`); both were
+resolved the same way — keep both sides of this append-only file, take the generated `index.html`/archive from
+`origin/main` and rebuild them immediately, and merge the two workflow step lists with both path lists. The clarity,
+meridian and ledger layer-count audits were then regenerated with their owners' unmodified scripts (52 → 53 layers).
+
+**Root front door, one writer.** `scripts/build_site.py:build_index()` used to be the only writer of `index.html`, and
+several layers' tests pinned its contents. `playbook_build.write_front_door()` is now the single implementation and
+`build_site.py` calls it too, so the order the layers are rebuilt in cannot change the published page. Four pinned
+assertions that named the old root were moved to the new front door and its tables, keeping what they protected
+(root numbers derived from data, every published data row carrying a source link, preview anchors resolving, earlier
+layers reachable from the archive only).
+
+**Post-merge polish (same session, follow-up commit).** Removed the last "modelled" from reader-facing copy, fixed the
+1-vs-plural strings on the sport chips, sport headers and line cards, and fixed a duplicate-anchor bug the ledger's
+own audit caught: the desk overview printed the three high picks twice, once in the high grid and again in the in-band
+grid, so three ids repeated on one page. The second grid now excludes them, and the in-band caption reads the real
+total (53 of 61) instead of the length of a capped list. `playbook_verify` now also fails on any "1 <plural>" string.
+
+**Verification after the merge:** `playbook_verify` 2955 checks / 0 failures; full suite 888 tests OK; a clean clone of
+this branch run through every step in `.github/workflows/pages.yml` finishes with `git diff` empty, so the drift gate
+is green end to end.
+
+### Fourth `main` merge — 2026-10-24 23:22 UTC
+
+`main` advanced to `639f941` with PR [#226](https://github.com/buffedlizard55-lab/OLBG2/pull/226), a Playbook
+post-merge polish pass: duplicate anchors, plural strings, a stricter `playbook_verify.py`, and regenerated Playbook
+pages. The fourth local merge keeps every one of those changes and both sessions' board entries. Only the append-only
+board itself conflicted. No generated file was hand-resolved; the full rebuild-only replay below regenerates the
+root, Playbook pages, shared audits and every other layer with their owning scripts.

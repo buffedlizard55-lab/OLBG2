@@ -21,7 +21,7 @@ DATA = ROOT / "data" / "vantage"
 TEXT = {
     "nhl-2026020170": (
         "Boston Bruins money line is the single high-confidence, in-band selection in this snapshot. Boston shut out Nashville 6-0 on Thursday; Michael DiPietro stopped 28 shots and David Pastrnak scored twice with two assists. San Jose also arrives with momentum after beating Ottawa 6-2 behind Yaroslav Askarov's 41 saves. Across eleven league games Boston has scored 42 and conceded 22, compared with San Jose's 32 for and 36 against. That defensive gap makes Boston the lean, but the captured FanDuel -178 is not a current OLBG quote.",
-        "The NHL score feed, team summary and the two October 22 game reports supply the scores, player output and current form. A fixture-specific injury list was not available, so no absence is asserted.",
+        "The NHL score feed, team summary and the two October 22 game reports supply the scores, player output and current form. This 70.4% estimate is sensitive to the chosen prior: 72.1% with eight prior games or 69.0% with twelve. A fixture-specific injury list was not available, so no absence is asserted.",
     ),
     "nhl-2026020169": (
         "New Jersey Devils money line gets a medium, price-sensitive lean against Los Angeles. The Devils show a 6-4-0 record in the NHL game listing, with Jack Hughes on eight assists and Arseny Gritsyuk on five goals. Los Angeles is 2-4-2 and has allowed 29 goals in eight games; Artemi Panarin has six for the Kings. The fair line here is shorter for New Jersey than for Los Angeles, but the league-served FanDuel -194 is shorter still, so this is analysis rather than a claim of value.",

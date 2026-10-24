@@ -199,6 +199,7 @@ def index_page(matches, lines, picks, predictions, flags, taxonomy):
     featured_previews = [x for x in preds if x["pick_id"] in featured_ids]
     today_count = sum((r["official_start_utc"] or "").startswith("2026-10-24") and r["primary_selection"] is not None for r in m)
     missing_high = 5 * len(SPORTS) - sum(p["confidence"] == "high" for p in all_picks)
+    qualified_label = "selection" if len(featured) == 1 else "selections"
     feature_area = cards_from_predictions(featured_previews, all_picks, compact=True) if featured else '<div class="empty">No high-confidence, in-band pick cleared all gates in this snapshot. The board is intentionally blank rather than padded.</div>'
     for p in featured:
         assert any(x["pick_id"] == p["id"] for x in featured_previews)
@@ -220,11 +221,11 @@ def index_page(matches, lines, picks, predictions, flags, taxonomy):
 <strong>{len(featured)} qualified</strong><span>high-confidence in-band analysis</span><hr>
 <p><b>{today_count}</b> priced records start on 24 Oct UTC · <b>{len(preds)}</b> unique 30+ word analyses in this desk</p></div></section>'''
     body = f'''{hero}
-{notice(f'<b>Executive read:</b> this is a first-page OLBG discovery extract, not an exhaustive match inventory. {matches["listings"] - 1} OLBG listings were copied from a documented 24 October source session, one Hurling listing was read directly here, and the fifteen primary hubs were spot-checked again; only {matches["confirmed"]} events were matched to official records. {len(featured)} high in-band analytical selection(s) met the evidence gate. The other {missing_high} high write-ups needed for a five-per-sport target do not exist and were not invented. <a href="flagged.html">See every gap and irregularity</a>.', 'important')}
+{notice(f'<b>Executive read:</b> this is a first-page OLBG discovery extract, not an exhaustive match inventory. {matches["listings"] - 1} OLBG listings were copied from a documented 24 October source session, one Hurling listing was read directly here, and the fifteen primary hubs were spot-checked again; only {matches["confirmed"]} events were matched to official records. {len(featured)} high in-band analytical {qualified_label} met the evidence gate. The other {missing_high} high write-ups needed for a five-per-sport target do not exist and were not invented. <a href="flagged.html">See every gap and irregularity</a>.', 'important')}
 {stats_grid([(len(featured), 'High + band shortlist', 'with a written prediction'), (matches['listings'], 'OLBG first-page listings', 'not the entire active slate'), (matches['confirmed'], 'Officially matched', 'fixture, date or session sourced'), (matches['priced'], 'Priced match records', f'{lines["count"]} fair market selections'), (len(preds), 'Written analyses', 'one for every displayed pick'), (flags['count'], 'Flagged for Review', 'row-level blanks included')])}
 <section class="section-title"><div><div class="eyebrow">01 / Executive pick</div><h2>Highest confidence, no guessing</h2><p>Only selections with separate observable odds and a 30+ word official-source analysis appear here. Our price is not an OLBG offer.</p></div><a class="text-link" href="band.html">Price-band details →</a></section>
 <div data-expire-group class="feature-board">{feature_area}</div><div class="after-expiry" hidden role="status">The highlighted fixture has started since this snapshot. It remains available in <a href="predictions.html">the dated analysis archive</a>, not as a current pick.</div>
-<section class="section-title"><div><div class="eyebrow">02 / Find a match</div><h2>Every captured listing, one table</h2><p>OLBG discovery and official confirmation are separate columns. Unconfirmed values are blank, with an official site supplied as a review target only.</p></div><a class="text-link" href="matches.html">All 96 rows →</a></section>
+<section class="section-title"><div><div class="eyebrow">02 / Find a match</div><h2>Every captured listing, one table</h2><p>OLBG discovery and official confirmation are separate columns. Unconfirmed values are blank, with an official site supplied as a review target only.</p></div><a class="text-link" href="matches.html">All {matches['listings']} rows →</a></section>
 {matches_table(sorted([r for r in m if r['primary_selection']], key=lambda r: (r['official_start_utc'] or '', r['sport']))[:8])}
 <section class="section-title"><div><div class="eyebrow">03 / By category</div><h2>Exactly the 15 covered sports</h2><p>No football, racing horses, eSports or Aussie Rules in this current board. A zero is a disclosed gap, not a synthetic prediction.</p></div><a class="text-link" href="sports/index.html">Full sport index →</a></section>
 <div class="sport-grid">{''.join(cards)}</div>
@@ -395,7 +396,7 @@ def audit_page(audit):
                    f'<td><code>{e(x["path"])}</code></td><td>{e(x["finding"])}</td><td>{link(x["source_url"], "Review source")}</td></tr>'
                    for x in audit["findings"])
     body = f'''<h1>Line-by-line repo & evidence audit</h1><p class="lead">{len(audit['findings'])} specific file-range findings against repository commit <code>{e(audit['reviewed_main_sha'])}</code>. Each has a link to a first-hand league/OLBG source or to the official repository record. Structural tests pass only schema, mathematics and local links; they do not magically recheck a changing external website.</p>
-{notice('<b>Important:</b> flagged irregularities are published, not marked resolved. Existing historical research layers are not aggregated here; their dated counts cannot be added to these 96 first-page rows.','important')}
+{notice('<b>Important:</b> flagged irregularities are published, not marked resolved. Existing historical research layers are not aggregated here; their dated counts cannot be added to this first-page catalogue.','important')}
 <div class="table-scroller"><table class="table"><thead><tr><th>Finding</th><th>Path / lines</th><th>Assessment</th><th>Manual source</th></tr></thead><tbody>{rows}</tbody></table></div>'''
     return shell("Repository audit", "audit.html", body, subtitle="STRUCTURAL REVIEW / EXTERNAL LIMITS")
 

@@ -49,7 +49,7 @@
 
 ## 2. Dated row-by-row event verification (OLBG discovery is never proof)
 
-The **official fixture** column stays `—` when no specific sporting-body pairing was found. A link labelled **review target** is an authority to check manually, **not proof** for that row. Selection without 30+ written words is prohibited; the table links to the actual prediction card instead. Rows with no match price show blanks and the reason on `/vantage/matches.html` and in the 114-item review queue.
+The **official fixture** column stays `—` when no specific sporting-body pairing was found. A link labelled **review target** is an authority to check manually, **not proof** for that row. Selection without 30+ written words is prohibited; the table links to the actual prediction card instead. Rows with no match price show blanks and the reason on `/vantage/matches.html` and in the 115-item review queue.
 
 | OLBG sport/event (separate listing URL) | Official fixture | League start (UTC, if explicit or zoned) | Status at cutoff | Written selection | Sporting-body source or NON-CONFIRMING review target |
 |---|---|---|---|---|---|

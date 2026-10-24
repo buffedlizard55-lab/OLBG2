@@ -242,8 +242,10 @@ class TestBuild(unittest.TestCase):
             self.assertIn(script, wf)
         self.assertIn("atlas data/atlas", wf)
 
-    def test_root_nav_links_to_the_desk(self):
-        self.assertIn('href="atlas/index.html"', (ROOT / "index.html").read_text())
+    def test_archive_index_links_to_the_desk(self):
+        # The root landing page is now one clean front door for the current desk. Every earlier
+        # layer, including this one, is indexed on archive.html so it stays reachable.
+        self.assertIn('href="atlas/index.html"', (ROOT / "archive.html").read_text())
 
 
 if __name__ == "__main__":

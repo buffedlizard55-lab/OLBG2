@@ -5170,3 +5170,46 @@ executive summary, then the picks, then the matches, then the 15 sport categorie
 | NW5 | Unique ≥30-word written predictions, target five per covered sport where official evidence allows | in progress | `arena/4a8390fe-olbg2` |
 | NW6 | Clean `/now/` site + clean root front door + line-by-line verifier + tests | in progress | `arena/4a8390fe-olbg2` |
 | NW7 | PR → `main`, merge, confirm Pages deploy, record result here | in progress | `arena/4a8390fe-olbg2` |
+
+### NW1–NW6 COMPLETE — single front door + fresh 24 October `/now/` desk (session `arena/4a8390fe-olbg2`)
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| NW1 | Claim + concurrency scan | done | this file, commit `1b1b8f0` |
+| NW2 | Fresh OLBG inventory for the exact 15 sports | done | 96 rows, `data/now/olbg.json`, `now/olbg.html`; three hubs re-read live (Snooker 18:04Z, Golf 18:06Z, Volleyball 17:56Z) |
+| NW3 | Official fixture records with per-fact sources | done | 50 fixtures, 245 cited facts, `data/now/fixtures.json`; inherited from the 17:35Z capture and marked `facts_inherited` on every row |
+| NW4 | Multi-market origination + confidence + band test | done | `scripts/now_model.py`, 866 prices, 39 picks (10 high, 26 medium, 3 low), all inside −250…+10000 |
+| NW5 | Unique ≥30-word predictions | done | 36 across 11 sports, shortest 65 words, no repeated opening, zero banned words |
+| NW6 | Clean site + root front door + verifier + tests | done | 27 pages under `now/`, root `index.html` rebuilt as the front door, `scripts/now_verify.py` 7,809 assertions 0 failures, `tests/test_now_4a8390fe.py` 18 tests |
+
+**What changed at the root, and why.** The owner's complaint was that the site is confusing and the picks are hard to
+find. The root landing page is now a single front door: executive summary, the strongest calls, the counts, a plain
+map of where each thing lives, tonight's fixtures and the fifteen sport chips. Every earlier desk is untouched and is
+now listed, generated from the repository itself, in one index on `archive.html` (50 layer entries). No earlier page,
+count or claim was deleted.
+
+**Test edits made outside this session's own files (all deliberate, all documented).** Eight historical tests asserted
+that the root landing page linked *their* desk. Under the new architecture that is exactly the confusion being fixed,
+so each assertion now checks `archive.html` instead (the generated index of every layer), except
+`test_integration_f0ee1b4a` and `test_publication_counts`, whose root-content assertions were re-expressed against the
+new front door and `data/now`. Their desk-level assertions are unchanged and still pass. Files touched:
+`tests/test_atlas.py`, `tests/test_brief.py`, `tests/test_current_integration.py`,
+`tests/test_integration_83346ec9.py`, `tests/test_integration_f0ee1b4a.py`, `tests/test_master_73cee7ef.py`,
+`tests/test_publication_counts.py`, `tests/test_root_cadence_integration_deb1cb6e.py`.
+
+**Generated files owned by other sessions, regenerated with their own unmodified scripts** (required to keep the
+hosted CI drift gate green, the same exception the previous session logged):
+`data/clarity/repo_audit.json` + `clarity/repo-review.html` (their audit counts published layers: 45 → 46) and
+`data/ledger/repo_review.json` + `ledger/repo-review.html` (same reason).
+
+**Verification performed.** `python -m unittest discover -s tests` → 794 tests, OK.
+`python scripts/now_verify.py` → 7,809 assertions, 0 failures (includes a byte-identical rebuild of every artefact).
+`python scripts/integration_audit.py` → 0 cross-layer local link errors. Live reads: NHL schedule 2026-10-24
+(confirms SJS@BOS and NYR@OTT at 23:00Z), OLBG Snooker / Golf / Volleyball hubs.
+
+**Findings published on `now/flagged.html` (32 items: 25 open, 2 corrected, 5 notes).** Highlights:
+R-04 earlier desks claimed no OLBG listing was currently readable, while 96 rows are readable today;
+V-02 the inherited Gaelic margins (44 / −6) disagree with the official scorelines (30 / 2) and were recomputed;
+V-03 the inherited Rugby League margins are not opposition-adjusted and were not used;
+V-08 four picks are for matches already under way and are excluded from the executive summary;
+COV-* twelve sports carry fewer than five written predictions and each is named with the reason.

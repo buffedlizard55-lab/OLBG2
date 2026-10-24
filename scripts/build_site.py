@@ -463,7 +463,236 @@ def _today_counts() -> str:
             f"{len(listings['listings'])} OLBG listing rows across 15 sports.")
 
 
+# --------------------------------------------------------------------------- /now/ front door
+NOW = DATA / "now"
+
+
+def _now(name):
+    return json.loads((NOW / name).read_text(encoding="utf-8"))
+
+
+def build_front_door() -> str:
+    """The repository's only landing page: executive summary, picks, matches, categories.
+
+    It renders the 24 October /now/ desk, which is the current release. Earlier desks stay
+    published under their own paths and are reachable from archive.html; their counts are
+    never added to these numbers.
+    """
+    matches = _now("matches.json")
+    picks = _now("picks.json")
+    preds = _now("predictions.json")
+    lines = _now("lines.json")
+    olbg = _now("olbg.json")
+    sources = _now("sources.json")
+    flagged = _now("flagged.json")
+
+    sports = ["Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts", "Baseball",
+              "Gaelic Sports", "Greyhounds", "Tennis", "Motor Racing", "Handball", "Ice Hockey",
+              "Basketball", "Rugby League"]
+    slug = {"Golf": "golf", "Volleyball": "volleyball", "Rugby Union": "rugby-union",
+            "Cricket": "cricket", "Snooker": "snooker", "Darts": "darts", "Baseball": "baseball",
+            "Gaelic Sports": "gaelic-sports", "Greyhounds": "greyhounds", "Tennis": "tennis",
+            "Motor Racing": "motor-racing", "Handball": "handball", "Ice Hockey": "ice-hockey",
+            "Basketball": "basketball", "Rugby League": "rugby-league"}
+
+    hs = [p for p in picks["picks"] if p["confidence"] == "high"]
+    ms = [p for p in picks["picks"] if p["confidence"] == "medium"]
+    top = [p for p in (hs + ms) if not p["started"]][:4]
+    cards = []
+    for p in top:
+        cards.append(
+            '<a class="pickcard" href="now/predictions.html#pred-' + esc(p["fixture_id"]) + '">'
+            '<div class="pc-top"><span class="pc-sport">' + esc(p["sport"]) + "</span>"
+            '<span class="pc-conf ' + esc(p["confidence"]) + '">' + esc(p["confidence"]) + "</span></div>"
+            '<div class="pc-match">' + esc(p["home"]) + " v " + esc(p["away"]) + "</div>"
+            '<div class="pc-sel">' + esc(p["selection"]) + "</div>"
+            '<div class="pc-meta">' + esc(p["market"]) + " · " + f'{p["probability"] * 100:.1f}%'
+            + " · " + esc(p["american_display"]) + "</div>"
+            '<div class="pc-src">Source: ' + esc(p["official_url"].split("//")[-1].split("/")[0])
+            + "</div></a>")
+
+    fixtures_rows = []
+    for m in matches["matches"][:10]:
+        pr = m.get("primary")
+        if pr:
+            cell = ('<strong class="num">' + esc(pr["selection"]) + "</strong>"
+                    + '<div class="mini">' + esc(pr["market"]) + " · "
+                    + f'{pr["probability"] * 100:.1f}% · ' + esc(pr["american_display"]) + "</div>")
+        else:
+            cell = '<span class="mini">no price originated</span>'
+        fixtures_rows.append(
+            "<tr><td><a href=\"now/sports/" + slug[m["sport"]] + '.html">' + esc(m["sport"]) + "</a></td>"
+            + "<td>" + esc(m["home"]) + " v " + esc(m["away"]) + '<div class="mini">'
+            + esc(m["competition"]) + "</div></td>"
+            + '<td class="mini">' + esc(m.get("start_display") or m["start_utc"]) + "</td>"
+            + "<td>" + cell + "</td>"
+            + "<td><span class=\"pc-conf " + (esc(pr["confidence"]) if pr else "none") + '">'
+            + (esc(pr["confidence"]) if pr else "—") + "</span></td>"
+            + '<td class="mini"><a href="' + esc(m["official_url"]) + '" target="_blank" rel="noopener">'
+            + esc(m["official_url"].split("//")[-1].split("/")[0]) + "</a></td></tr>")
+
+    chips = "".join(
+        '<a class="chip" href="now/sports/' + slug[s] + '.html">' + esc(s)
+        + ' <span class="chip-n">' + str(matches["by_sport"][s]["fixtures"]) + "</span></a>"
+        for s in sports)
+
+    body = f"""
+<section class="front">
+  <p class="eyebrow">Snapshot {esc('2026-10-24T18:10Z')} · 24 October 2026</p>
+  <h1>Today's picks, our own prices, and the official source behind every row.</h1>
+  <p class="lede">{picks['pregame_high']} high-confidence picks on matches still to start, plus
+  {picks['pregame_medium']} medium ones, across {len({p['sport'] for p in picks['picks']})} sports,
+  drawn from {matches['count']} fixtures,
+  {lines['count']} prices originated on this desk, {preds['count']} written predictions and
+  {olbg['listings_count']} rows read straight off OLBG's own event list.</p>
+
+  <div class="cta">
+    <a class="btn primary" href="now/picks.html">See the picks →</a>
+    <a class="btn" href="now/predictions.html">Read the {preds['count']} predictions</a>
+    <a class="btn" href="now/matches.html">All {matches['count']} matches</a>
+    <a class="btn" href="now/sports/index.html">By sport</a>
+  </div>
+
+  <h2>The four strongest calls</h2>
+  <p class="sub">Selection in bold green, then the market, our chance and the price that chance implies.
+  Every one sits inside the requested −250 to +10000 band.</p>
+  <div class="pickgrid">{''.join(cards)}</div>
+  <p class="sub"><a href="now/picks.html">All {picks['count']} picks, including medium and low →</a></p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">{matches['count']}</div><div class="k">upcoming matches</div><div class="s">{matches['priced']} priced · {matches['unpriced']} blank with a reason</div></div>
+    <div class="kpi"><div class="v">{picks['pregame_count']}</div><div class="k">picks still to start</div><div class="s">{picks['started_count']} already under way · {len(hs)} high overall</div></div>
+    <div class="kpi"><div class="v">{preds['count']}</div><div class="k">written predictions</div><div class="s">shortest {preds['min_words']} words</div></div>
+    <div class="kpi"><div class="v">{sources['official_count']}</div><div class="k">official sources</div><div class="s">linked on every row</div></div>
+    <div class="kpi"><div class="v">{flagged['count']}</div><div class="k">review items</div><div class="s">{flagged['open']} open · {flagged['corrected']} corrected · {flagged['count'] - flagged['open'] - flagged['corrected']} notes</div></div>
+  </div>
+
+  <h2>Where everything is</h2>
+  <div class="where">
+    <a class="wherecard" href="now/picks.html"><b>Picks</b><span>Every selection, its price and its confidence grade.</span></a>
+    <a class="wherecard" href="now/predictions.html"><b>Written predictions</b><span>One unique preview per high and medium pick, with the official facts underneath.</span></a>
+    <a class="wherecard" href="now/matches.html"><b>All matches</b><span>Every fixture, priced or not, with the reason for any blank.</span></a>
+    <a class="wherecard" href="now/lines.html"><b>Our lines</b><span>The full market book: winner, handicap and total for each fixture.</span></a>
+    <a class="wherecard" href="now/band.html"><b>Odds band</b><span>The −250 to +10000 test on every price we made.</span></a>
+    <a class="wherecard" href="now/flagged.html"><b>Flagged for review</b><span>What is missing, blank or corrected, with the source that was checked.</span></a>
+  </div>
+
+  <h2>Tonight's fixtures</h2>
+  <p class="sub">The first ten on the card. <a href="now/matches.html">All {matches['count']} →</a></p>
+  <div class="table-wrap"><table class="data">
+    <thead><tr><th>Sport</th><th>Match</th><th>Start</th><th>Selection</th><th>Confidence</th><th>Official source</th></tr></thead>
+    <tbody>{''.join(fixtures_rows)}</tbody></table></div>
+
+  <h2>Fifteen sports</h2>
+  <div class="chips">{chips}</div>
+
+  <div class="notice">
+    <strong>What this is.</strong> A dated, partial research snapshot produced from first-hand reads of official
+    league and governing-body pages. The links are provenance: they show where each value came from, and they do not mean every fixture or input was independently re-checked for this build. Prices are originated here from official
+    inputs, never copied from a bookmaker, and a pick is research output rather than betting advice.
+  </div>
+  <p class="sub">Earlier desks are kept, unmodified and with their own counts, behind
+  <a href="archive.html">the archive</a>. Their numbers are never added to the numbers above.</p>
+</section>
+"""
+
+    css_add = """
+.front h1{font-size:38px;line-height:1.15;margin:6px 0 14px;max-width:24ch}
+.pickgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:14px 0}
+.pickcard{display:block;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #047857;
+  border-radius:12px;padding:16px;color:#0f172a}
+.pickcard:hover{border-color:#0f766e;text-decoration:none}
+.pc-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#64748b;
+  text-transform:uppercase;letter-spacing:.06em}
+.pc-conf{font-weight:700;font-size:11px;padding:2px 8px;border-radius:999px;background:#e2e8f0;color:#475569}
+.pc-conf.high{background:#d1fae5;color:#047857}
+.pc-conf.medium{background:#fef3c7;color:#b45309}
+.pc-conf.low{background:#e2e8f0;color:#475569}
+.pc-match{font-weight:600;margin:8px 0 2px;font-size:15px}
+.pc-sel{font-size:20px;font-weight:750;color:#047857}
+.pc-meta{font-size:13px;color:#64748b;margin-top:4px}
+.pc-src{font-size:11px;color:#94a3b8;margin-top:8px}
+.where{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.wherecard{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;color:#0f172a}
+.wherecard b{display:block;font-size:15px;margin-bottom:4px;color:#115e59}
+.wherecard span{font-size:13px;color:#475569}
+.wherecard:hover{border-color:#0f766e;text-decoration:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:#fff;border:1px solid #e2e8f0;border-radius:999px;padding:7px 13px;font-size:14px;color:#0f172a}
+.chip:hover{border-color:#0f766e;text-decoration:none}
+.chip-n{color:#64748b;font-size:12px}
+.mini{font-size:12px;color:#64748b}
+.num{color:#047857}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.btn{display:inline-block;border:1px solid #e2e8f0;background:#fff;border-radius:9px;
+  padding:10px 15px;font-weight:600;font-size:14px;color:#0f172a;text-decoration:none}
+.btn.primary{background:#0f766e;border-color:#0f766e;color:#fff}
+.btn:hover{border-color:#0f766e;text-decoration:none}
+"""
+    (ROOT / "assets").mkdir(exist_ok=True)
+    style = ROOT / "assets" / "style.css"
+    base_css = style.read_text(encoding="utf-8") if style.exists() else ""
+    if "/* front door */" not in base_css:
+        base_css += "\n/* front door */\n" + css_add
+    style.write_text(base_css, encoding="utf-8")
+
+    nav = """
+<header class="topbar"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">picks desk · 24 October 2026</span></a>
+  <nav class="navline">
+    <a href="now/picks.html">Picks</a>
+    <a href="now/predictions.html">Predictions</a>
+    <a href="now/matches.html">Matches</a>
+    <a href="now/lines.html">Our lines</a>
+    <a href="now/sports/index.html">Sports</a>
+    <a href="now/olbg.html">OLBG list</a>
+    <a href="now/sources.html">Sources</a>
+    <a href="now/methodology.html">Method</a>
+    <a href="now/flagged.html">Flagged</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+</div></header>"""
+    nav_css = """
+.topbar{background:#0f172a}
+.topbar .bar{display:flex;align-items:center;gap:18px;min-height:58px;flex-wrap:wrap;max-width:1160px;margin:0 auto;padding:0 20px}
+.brand{color:#fff;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:9px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:#2dd4bf;display:inline-block}
+.brand-sub{font-weight:400;color:#94a3b8;font-size:13px}
+.navline{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.navline a{color:#cbd5e1;font-size:14px;padding:6px 9px;border-radius:7px;text-decoration:none}
+.navline a:hover{background:#1e293b;color:#fff}
+"""
+    if "/* front door nav */" not in base_css:
+        style.write_text(style.read_text(encoding="utf-8") + "\n/* front door nav */\n" + nav_css,
+                         encoding="utf-8")
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OLBG2 — today's picks, our own prices, official sources</title>
+<meta name="description" content="One desk for 24 October 2026: confidence-graded picks across 15 sports, prices originated from official inputs, written predictions, and the official source behind every row.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
+</head>
+<body>
+{nav}
+<main class="wrap" style="max-width:1160px;margin:0 auto;padding:26px 20px 60px">
+{body}
+</main>
+<footer class="wrap" style="max-width:1160px;margin:0 auto;padding:20px 20px 50px;color:#64748b;font-size:13px;border-top:1px solid #e2e8f0">
+  <p>OLBG2 · research snapshot 2026-10-24T18:10Z · <a href="now/flagged.html">flag anything that needs review</a> ·
+  <a href="now/methodology.html">method</a> · <a href="archive.html">every earlier desk</a></p>
+</footer>
+</body>
+</html>
+"""
+
+
 def build_current_index() -> str:
+    if (NOW / "matches.json").exists():
+        return build_front_door()
     matches, lines, picks, predictions, sources, flagged, audit = current_dataset()
     rows = matches["matches"]
     all_picks = picks["picks"]
@@ -646,6 +875,8 @@ Zero currently readable active OLBG listings were established in the integration
 
 # --------------------------------------------------------------------------- historical pages
 def build_index(matches, preds=None, flagged=None) -> str:
+    if (NOW / "matches.json").exists():
+        return build_front_door()
     rows, predictions, flags, sports, band = dataset()
     counts = Counter(m["sport"] for m in rows)
     originated = sum(1 for m in rows if m["line_status"] == "originated")
@@ -1244,7 +1475,44 @@ officially verified. Preserved at <a href="survey/index.html">/survey/</a>.</p>
 <div class="table-wrap"><table class="data"><thead><tr><th>Sport</th><th>Listed</th><th>Match</th><th>Market</th><th>Official fixture source</th></tr></thead>
 <tbody>{survey_rows}</tbody></table></div>
 """
+    body = body.replace('<h2>', '<h2>', 1)
+    body = index_of_every_layer() + body
     return page("Archive of earlier layers", "archive.html", body)
+
+
+
+def index_of_every_layer() -> str:
+    """A complete, generated index of every published layer.
+
+    The root landing page is deliberately a single front door; this is the page that keeps all
+    earlier desks reachable, so nothing is lost and nothing is mixed into the current counts.
+    """
+    import re as _re
+    rows = []
+    for entry in sorted(ROOT.iterdir()):
+        if not entry.is_dir() or entry.name.startswith((".", "_")):
+            continue
+        index = entry / "index.html"
+        if not index.is_file():
+            continue
+        html_text = index.read_text(encoding="utf-8", errors="ignore")
+        title = _re.search(r"<title>(.*?)</title>", html_text, _re.S)
+        label = re.sub(r"\s+", " ", title.group(1)).strip() if title else entry.name
+        label = label.split(" · ")[0][:90]
+        rows.append(f'<tr><td><a href="{entry.name}/index.html">/{entry.name}/</a></td>'
+                    f"<td>published layer</td><td>{label}</td></tr>")
+    root_pages = ["matches.html", "picks.html", "verification.html", "integration.html",
+                  "flagged.html", "sources.html", "methodology.html"]
+    page_rows = "".join(
+        f'<tr><td><a href="{name}">/{name}</a></td><td>root page</td>'
+        f'<td>Earlier root-level view, kept unchanged</td></tr>' for name in root_pages)
+    return ("\n<h2>Every published layer in this repository</h2>\n"
+            "<p class=\"sub\">Generated from the repository itself, so the index cannot drift. The current desk is "
+            "<a href=\"now/index.html\">/now/</a>; everything below is kept for audit with its own counts, and no two "
+            "layers are ever added together.</p>\n"
+            "<div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>Layer</th><th>Kind</th>"
+            "<th>Page title as published</th></tr></thead><tbody>"
+            + "".join(rows) + page_rows + "</tbody></table></div>\n")
 
 
 def build_css() -> str:

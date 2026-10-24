@@ -10,6 +10,34 @@ appended below.
 | `e4f35827` | `arena/e4f35827-olbg2` | Re-audit and site enhancement, category pages, methodology. PR #6 → `main` (`78f037c`). |
 | `arena/42fb7792-olbg2` | `arena/42fb7792-olbg2` | Full OLBG sport taxonomy, 33 verified fixtures, 30 originated lines, 4 predictions, dashboard at repo root. This PR. |
 
+## SESSION `03e61ed8` — consolidated live desk (2026-10-24)
+
+**Branch:** `arena/03e61ed8-olbg2` · **Claim written:** 2026-10-24 ~17:20 UTC (pushed before any implementation work)
+
+The repository has accumulated ~40 parallel dashboard layers, each with its own data directory, generator scripts and
+navigation. The result is unreadable, and the newest root page still presents a 23 October snapshot. This session
+builds **one** current desk rather than a forty-first variant, and does not edit any other session's files.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 1 | Claim + coordination | in progress | `03e61ed8` | `COORDINATION.md` (this section only) |
+| 2 | Live collection workflow (runner-side first-hand capture, artifact + manifest commit) | in progress | `03e61ed8` | `.github/workflows/desk-live.yml`, `scripts/desk_collect.py`, `data/desk/requests.json` |
+| 3 | Fixture + stat parsing, own-line origination, confidence grading | unclaimed | `03e61ed8` | `scripts/desk_model.py`, `data/desk/captures/manifest.json` |
+| 4 | Authored written predictions (>=30 words, unique, no model/verified wording) | unclaimed | `03e61ed8` | `data/desk/predictions.json` |
+| 5 | Consolidated desk site (exec summary, picks, matches, sport pages, predictions, sources, flagged) | unclaimed | `03e61ed8` | `desk/**`, `scripts/desk_build.py`, `scripts/desk_verify.py` |
+| 6 | Root landing page replacement + archive index | unclaimed | `03e61ed8` | `index.html`, `scripts/desk_build.py` |
+| 7 | Final integration: CI wiring, tests, PR, merge, Pages verification | unclaimed | `03e61ed8` | `.github/workflows/pages.yml` (append-only steps), `COORDINATION.md` |
+
+**No-edit list for this session:** every pre-existing layer directory (`atlas/ beacon/ board/ brief/ cadence/ canon/
+command/ current/ daily/ daily-audit/ daily-picks/ desk/ evidence/ final/ final-desk/ focus/ forward/ fresh/ horizon/
+hub/ ledger/ live/ liveboard/ master/ monitor/ olbg/ portal/ pulse/ quest/ reconcile/ relay/ review/ signal/ site/
+slate/ sports/ summit/ survey/ update/ vanguard/ verified/ zenith/`), their `data/` subdirectories, and every
+existing `scripts/*` file. This session adds new files and appends new steps to `pages.yml` only.
+
+**Note on branch naming.** The hosting environment fixes one branch per session and does not permit creating
+`session-<id>/<task>` branches; the session branch `arena/03e61ed8-olbg2` is used for every commit, as in all prior
+sessions recorded above.
+
 ## Earlier sessions' board (preserved)
 
 | Task | Status | Owner | Scope |

@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Apply corrected high-confidence in-band predictions to cadence data (idempotent)."""
 import json, re
-from datetime import datetime
+
+# Pinned so the CI rebuild is byte-identical. This is the timestamp the desk was authored at.
+PINNED_UTC = "2026-10-24T17:25:53Z"
 
 PRED_PATH = "data/cadence/predictions.json"
 PICKS_PATH = "data/cadence/picks.json"
@@ -156,7 +158,7 @@ with open(PRED_PATH) as fh: pdata = json.load(fh)
 pdata["predictions"] = [p for p in pdata["predictions"] if p["fixture_id"] not in NEW_FIXTURES]
 pdata["predictions"].extend(preds)
 pdata["count"] = len(pdata["predictions"])
-pdata["generated_utc"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+pdata["generated_utc"] = PINNED_UTC
 pdata["session"] = "arena/ba05b5b6-olbg2"
 with open(PRED_PATH, "w") as fh:
     json.dump(pdata, fh, indent=2); fh.write("\n")
@@ -182,7 +184,7 @@ for p in preds:
     })
 pickdata["picks"].extend(new_picks)
 pickdata["count"] = len(pickdata["picks"])
-pickdata["generated_utc"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+pickdata["generated_utc"] = PINNED_UTC
 pickdata["session"] = "arena/ba05b5b6-olbg2"
 with open(PICKS_PATH, "w") as fh:
     json.dump(pickdata, fh, indent=2); fh.write("\n")

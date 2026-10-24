@@ -421,7 +421,14 @@ def main() -> int:
 
     for key, ev in events.items():
         ev["home"], ev["away"] = split_event(ev["name"])
-        ev["kind"] = "match" if ev["away"] else "outright"
+        # An OLBG event is a match unless its name is a season or tournament outright.
+        # Races (greyhounds) and single-fixture events have no " v " separator but are not
+        # outrights, so the test is the year/tournament wording rather than the separator.
+        name_l = ev["name"].lower()
+        looks_like_outright = bool(re.search(r"\b20\d\d\b", ev["name"])) or any(
+            k in name_l for k in ("grand prix", "championship", "super league", "state of origin", "nrl", "series winner")
+        )
+        ev["kind"] = "outright" if looks_like_outright else "match"
         sport = ev["sport"]
         tip = max(ev["tips"], key=lambda t: (int(t.get("win_tips") or 0)))
         ev["primary_tip"] = {k: tip[k] for k in

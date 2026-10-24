@@ -40,7 +40,7 @@ RAW_DIR = OUT_DIR / "raw"
 MANIFEST = OUT_DIR / "manifest.json"
 DEFAULT_REQUEST = ROOT / "data" / "live_desk" / "requests.json"
 
-MAX_BYTES = 500_000
+MAX_BYTES = 1_200_000
 TIMEOUT = 30
 WORKERS = 6
 UA = (

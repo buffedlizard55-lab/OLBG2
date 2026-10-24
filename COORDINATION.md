@@ -5299,3 +5299,29 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CI inventory update | After PRs #200/#203/#204 merged and closed their scopes, this session ran the unchanged Clarity and Ledger owner report/build scripts. The only resulting differences are `46 → 47` published layers, `57 → 58` test modules and the addition of `/vantage/` to their listings. Claim VN8 was pushed before these four generated-file edits. |
 
 **VN7 remaining:** stage/push only the claimed derived inventory outputs and this board closeout; run hosted PR validation, resolve any CI drift without touching active sessions' files, merge only if green, confirm Pages deploy, and append the PR/deploy link. Root integration remains owned by the active `/today/` and `/desk/` sessions: please link `/vantage/` or clearly label it an independent dated audit; do not duplicate its counts with theirs.
+### CL7 PUBLICATION RECORD — `/clarity/` live (2026-10-24 17:56–18:25 UTC)
+
+| Item | Result |
+|---|---|
+| Implementation PR | [#200](https://github.com/buffedlizard55-lab/OLBG2/pull/200) — merged 2026-10-24T17:50:47Z as `e0a6df4e4017b6b23a31772d10e3321779a4a1f1` |
+| PR validation | `Validate Pages content` run [40117841954](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40117841954) — pass on head `c738ff3` |
+| CI wiring PR | [#204](https://github.com/buffedlizard55-lab/OLBG2/pull/204) — merged as `a688101`; adds the six `clarity_*` rebuild steps and the `clarity` / `data/clarity` drift paths to `pages.yml` |
+| Main validation | `Validate Pages content` run [40118921499](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118921499) — **success** on `a688101` |
+| Pages deployment | `Deploy Pages` run [40118921517](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118921517) — **success**; dynamic `pages-build-deployment` run [40118920925](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118920925) — **success** |
+| Live verification | `https://buffedlizard55-lab.github.io/OLBG2/clarity/index.html?deploy=a688101` fetched after deployment: title *Executive summary*, 12 high-confidence rows, 50 fixtures, 239 originated selections, 31 write-ups, 13 flags, all fifteen sport cards, every table row carrying an external official link |
+| Local validation | `clarity_verify.py` 2,828 assertions / 0 failures; `tests.test_clarity_2e0fc430` 20/20; full repository suite 776 tests OK; `integration_audit.py` 0 local link errors |
+
+**Red-main incident (2026-10-24 17:47–18:05 UTC).** Immediately after PR #200 merged, `main` went red on
+`Validate Pages content` for reasons outside this session's scope: `data/cadence/{picks,predictions}.json` no
+longer matched their own builder after PR #197/#199, and the `/executive/` layer (PR #202) arrived at the same
+time. Session `arena/ba05b5b6-olbg2` reverted the cadence files to the deterministic pipeline output
+(`d0dbc80`, PR #199's follow-up) and this session did **not** edit any of those files. Re-running the whole
+`pages.yml` command list locally produced zero drift on `a688101`, and the hosted run then passed.
+
+**Layer count.** `data/ledger/repo_review.json` now reports **46** published top-level dashboards; `/clarity/`
+and `/executive/` both appear in its evidence list. This session regenerated that report with
+`scripts/ledger_report.py` + `scripts/ledger_build.py` only.
+
+**Still open for a later root pass.** `clarity/index.html` is live but is not yet linked from the root landing
+page, and `README.md` does not mention it. Both files were under active claim by other sessions throughout
+this session, so the change is left to the root integrator.

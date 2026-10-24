@@ -3213,7 +3213,6 @@ recorded on both flagged pages and remains the largest unmet part of the brief.
 - **Merge conflict:** one, in `COORDINATION.md` only (parallel session merged first). Both append-only sides kept in full; no other session's work discarded. Re-verified on merged tree (full suite OK, daily rebuild byte-identical).
 - **Post-deploy fix (this commit):** market label "Match Total Goals (Puck Line) (Over/Under)" corrected to "Match Total Goals (Over/Under)" / "Match Total Runs (Over/Under)"; labels only — no price changed. Also confirmed the three 2026-10-25 NHL rows trace to `data/current/capture/nhl_score_2026-10-24.json` (the official /score/ feed spills past midnight UTC), not invented.
 - **Live:** https://buffedlizard55-lab.github.io/OLBG2/daily/index.html · /matches.html · /top5.html · /predictions.html · /flagged.html · /sports/*.html
-=======
 
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
@@ -3304,7 +3303,6 @@ Two entries now exist on purpose: `/daily/` is the broad top-five desk, `/daily-
 which every row was re-read from a governing body's own page. Both are linked from the root dashboard, which now
 carries both in its navigation. `COORDINATION.md` was merged append-only: all 3,036 lines from `main` are preserved
 and this session's two records are appended after them.
->>>>>>> origin/main
 
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
@@ -3434,7 +3432,6 @@ and this session's two records are appended after them.
 **Merge conflicts and how they were resolved:** five merge rounds against a fast-moving `main` (`#126` Final Desk, `#127`/`#130` the other daily desk, `#128`). Every generated root page, `build_site.py`, `README.md` and workflow conflict was resolved by taking `origin/main`'s version, then *re-applying* this session's two integration edits and regenerating from the combined builder — never by choosing one side's stale HTML. `COORDINATION.md` conflicts were append-only: both sides' records were kept verbatim each time. The one substantive collision — two sessions building a desk at `daily/` — is documented above and resolved by moving this session's layer to `daily-picks/` without touching the other session's work.
 
 **Nothing outstanding in this session's scope.** Remaining gaps are published, not hidden: seven eligible sports still carry no line in either daily desk (tennis, snooker, golf, volleyball, greyhounds, Gaelic football, esports); baseball and cricket cannot reach five fixtures in the 23–25 October window; 19 NHL lines on `/final/` disagree with the fresh standings read; and the −250/+10000 band admits only 70.0–71.4% selections, which is disclosed rather than engineered around.
-=======
 ## Session `arena/46d0531f-olbg2` — live 22–25 October 2026 daily slate with five picks per sport
 
 Claimed 2026-10-22 21:05 UTC. Branch `arena/46d0531f-olbg2` (Arena fixes the branch name for this session).
@@ -3546,7 +3543,6 @@ and this session's two records are appended after them.
 **A test in another session's scope nearly broke.** `tests/test_integration_83346ec9.py` asserts the literal drift-gate string `-- current data/current `. Inserting the new paths before `current` broke it. Rather than editing another session's test, the new paths were appended **after** the existing list, so the asserted substring is preserved and both layers are drift-checked.
 
 **What "complete" means for this session.** The brief asks for a full list of upcoming matches for every eligible sport, five high-confidence predictions for each, and no invention. This session delivered a rigorous, fully sourced slice: every one of the 17 fixture rows was read from a governing body's own page, all 288 prices are reproducible from a documented model, and the five written picks each carry a fact list with official links. It did **not** deliver five predictions for every sport: cricket has official fixtures but no official strength input, and eleven further sports have a named, sourced reason for having no row. Those are on the flagged page, not smoothed over. The companion `/daily/` desk (session `b499dfe1`) covers seven sports with 132 fixtures and 25 picks; the two desks are complementary and their counts must not be added.
->>>>>>> origin/main
 
 ## Session `arena/103d996c-olbg2` — fresh-capture layer `/relay/` (claim 2026-10-22 21:00 UTC)
 
@@ -3606,7 +3602,6 @@ was inferred to fill a gap.
 Still open for the final integration session (logged, not actioned): root navigation entry for
 `/relay/`, CI rebuild + drift-path entries for the four `relay_*` scripts, and `relay` in the
 cross-layer link audit if its folder list is still explicit.
-=======
 ---
 
 ## Session `arena/ca03be92-olbg2` — CLAIM: `/vanguard/` late-evening 2026-10-22 first-hand 17-sport desk, multi-market origination, Top-5-per-sport & in-band high-confidence predictions, and line-by-line repo review
@@ -3625,7 +3620,6 @@ cross-layer link audit if its folder list is still explicit.
 | V5 | Unique, non-robotic ≥30-word human predictions backed strictly by verified official team, player, current form, and recent match history for every high-confidence in-band pick and every daily Top-5-per-sport selection | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_predictions.py`, `data/vanguard/predictions.json`, `data/vanguard/flagged.json` |
 | V6 | Clean `/vanguard/` GH Pages dashboard (landing, all-matches table, multi-market lines, high-confidence picks, daily Top-5-per-sport, 17 sport subpages, OLBG reverse-engineering, repo audit, Flagged for Review, sources, methodology) + verifier & rendered-HTML test suite | unclaimed (next) | `arena/ca03be92-olbg2` | `scripts/vanguard_build.py`, `scripts/vanguard_verify.py`, `vanguard/**`, `tests/test_vanguard_ca03be92.py` |
 | V7 | Rebase/merge latest `origin/main` cleanly, run full repo test suite + link checks, open PR → merge to `main`, confirm live GitHub Pages deployment, log PR & merge result here | unclaimed (next) | `arena/ca03be92-olbg2` | `COORDINATION.md` (append-only) |
->>>>>>> 140baf3 (coordination: claim disjoint /vanguard/ desk scope (session ca03be92))
 
 ### Session `arena/ca03be92-olbg2` — COMPLETION LOG (`/vanguard/`, 2026-10-22 22:00Z)
 
@@ -4892,7 +4886,6 @@ prominent link), which is regenerated deterministically, and `COORDINATION.md` /
 
 **Baseline check performed before any edit:** `python3 -m unittest discover -s tests` → **OK**, 45 test
 modules; existing drift gate list read from `.github/workflows/pages.yml`.
-=======
 ---
 
 ### FI5 publication record — final integration live (2026-10-23 21:52Z)
@@ -5214,4 +5207,3 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
->>>>>>> origin/main

@@ -8,12 +8,14 @@
 
 | Release need | Best current evidence | Integration decision |
 | --- | --- | --- |
-| Fresh OLBG inventory | `arena/03e61ed8-olbg2` live-desk capture at 17:57Z: 195 events, 181 matches and 14 outrights across 14 represented sports; Golf is explicitly empty | Useful as a **listing candidate only** until its confidence and blank-quote gates are corrected. Do not describe it as 195 officially confirmed fixtures. |
+| Fresh OLBG inventory | Merged `/live-desk/`, latest preserved runner capture at 18:21:50Z: 171 events, 157 matches and 14 outrights across 14 represented sports; Golf is explicitly empty | Useful as a **merged listing layer only** until its confidence and blank-quote gates are corrected. Do not describe the 171 events as officially confirmed fixtures. |
 | Qualified high/in-band written selection | Merged `/vantage/`: Boston Bruins money line, 70.4%, fair −238, 86-word preview, official-input and sensitivity disclosure. PR #207's `/now/` also has Boston ML and St. Louis +1.5 above 70% with previews | Vantage is the strongest **merged** selection evidence. `/now/` is a candidate only after its other seven sub-70% highs are regraded. Keep price-window and sensitivity caveats beside the pick. |
 | Honest multi-market/pricing coverage | Merged `/vantage/`: 15 priced matches, 95 fair outcomes, 15 previews; 41 official fixture/event records and 97 first-page OLBG entries | Use without adding counts from `/today/`, Clarity, Executive, `/now/` or live-desk. Its 115 review items and 74-pick shortfall must stay visible. |
 | Root landing page | PR #207's single front door and generated archive is the best layout candidate; the old root and unfiltered live-desk banner are not | Use `/now/` only after its 70% gate, temporal label, PR band claim and deleted disclosure test are corrected. Do not call every stored layer “current.” |
 
-## Live-desk candidate: exact screen
+## Live-desk merged layer: exact screen
+
+PR [#208](https://github.com/buffedlizard55-lab/OLBG2/pull/208) merged at 18:19:11Z as `40311f9`. The detailed checks below remain a reproducible review of its pre-merge `3558a0f` snapshot. The latest preserved runner capture on this integration branch is `2026-10-24T18:21:50Z`: **171 events, 157 matches, 14 outrights and 158 review entries**. It still has **58 rows labelled high, 53 of them quote-only; zero official-input high rows are in-band**. Those current totals supersede the older snapshot totals, not the code and evidence findings below.
 
 Reviewed data: [`data/live_desk/model.json` at `3558a0f`](https://github.com/buffedlizard55-lab/OLBG2/blob/3558a0fadff88568ff8c36ab2504a222dd76fe73/data/live_desk/model.json), capture `2026-10-24T17:57:12Z`; [`predictions.json`](https://github.com/buffedlizard55-lab/OLBG2/blob/3558a0fadff88568ff8c36ab2504a222dd76fe73/data/live_desk/predictions.json); [`livedesk_model.py`](https://github.com/buffedlizard55-lab/OLBG2/blob/3558a0fadff88568ff8c36ab2504a222dd76fe73/scripts/livedesk_model.py); [`livedesk_ratings.py`](https://github.com/buffedlizard55-lab/OLBG2/blob/3558a0fadff88568ff8c36ab2504a222dd76fe73/scripts/livedesk_ratings.py); and [`livedesk_build.py`](https://github.com/buffedlizard55-lab/OLBG2/blob/3558a0fadff88568ff8c36ab2504a222dd76fe73/scripts/livedesk_build.py).
 
@@ -57,6 +59,12 @@ For confirmed NHL events, the builder prefers the OLBG-derived `event.start_utc`
 
 The five previews cite OLBG and the schedule while using standings records, venue splits and goal totals. Add the captured [official NHL standings](https://api-web.nhle.com/v1/standings/now) source to those claims and use the official start for confirmed fixtures.
 
+### LD-04 — capture workflow bypasses integration gates (high)
+
+After PR #208 merged, Live desk capture run `40120150068` committed `ca03be1` directly to `main`; that bot push has no corresponding Validate Pages or Deploy Pages run. The same workflow also auto-committed to this audit branch because the workflow file appeared in its push diff. A data/page/root update therefore bypassed the required green-PR path and could leave published content behind the repository head.
+
+**Resolution in A4:** restrict automatic pushes to `arena/03e61ed8-olbg2`, make the commit condition match that exact ref, and leave `main`/other branch or manual runs artifact-only. `tests/test_audit34.py` now guards both conditions. Existing runner output was preserved and will still pass the ordinary full validation before publication.
+
 ## Vantage: merged evidence-checked candidate
 
 Reviewed on `main` at `80409d3` after PR [#205](https://github.com/buffedlizard55-lab/OLBG2/pull/205). The unmodified verifier reports **3,405 assertions, 2,085 links, 41 official matches, 95 originated selections, 27 pages, 15 previews and zero structural errors**.
@@ -94,7 +102,7 @@ Reviewed an isolated archive of `arena/4a8390fe-olbg2` at `1e89cf5`; no branch f
 | NW-04 · removed disclosure test | PR deletes `test_reproducibility_review_page_discloses_pending_findings_and_links_sources` | Restore this unrelated review-page disclosure/link test. Root-specific tests may change; unrelated audit coverage must not be deleted. |
 | NW-05 · NHL inventory | Ten late NHL games are present; LA–New Jersey at 19:30Z is absent although still upcoming at 18:10Z | Add the official/OLBG NJ row or flag the omission. Anaheim–Philadelphia had started and may be archived rather than called upcoming. |
 
-The candidate's ten NHL rows are not a complete official 12-game index. Its 50 records must remain an inherited, bounded snapshot, not a claim of worldwide coverage. After NW-01 through NW-05, `/now/` can supply the clean root without adding its counts to Vantage or live-desk. Its generated inventory must account for the final number of top-level layers after rebasing: 48 if it follows Vantage alone, 49 if live-desk merges first.
+The candidate's ten NHL rows are not a complete official 12-game index. Its 50 records must remain an inherited, bounded snapshot, not a claim of worldwide coverage. After NW-01 through NW-05, `/now/` can supply the clean root without adding its counts to Vantage or live-desk. Current `main` already has 48 top-level layers after Vantage, live-desk and the Clarity publication record; adding `/now/` therefore requires 49-layer deterministic inventories.
 
 ## Other merged candidates
 
@@ -109,6 +117,6 @@ A final root may be published with visible shortfalls; it may not hide them. Bef
 1. Show the exact 15-sport scope and separate listing counts from officially confirmed counts.
 2. Put qualified high/in-band analysis ahead of unqualified quote-only, sub-70% or out-of-band highs. Use Vantage's Boston caveats or the corrected `/now/` Boston/St. Louis evidence; never present overlapping alternatives as additional independent picks.
 3. Link all picks, matches, lines, predictions, sport pages and Flagged for Review from the chosen desk.
-4. If live-desk is merged, do not repeat its current 63-high or nine-value-row claims until LD-01 and LD-02 are fixed. If `/now/` is merged, require NW-01 through NW-05 first.
+4. Live-desk is merged as inventory, but do not repeat its current 58-high or nine-value-row claims until LD-01 and LD-02 are fixed; require LD-03 for official displays and LD-04 before any further automatic capture publication. If `/now/` is merged, require NW-01 through NW-05 first.
 5. Rebuild every deterministic inventory after the final layer count is known; run the entire suite and link audit sequentially.
 6. Merge only a green PR, wait for both validation and Pages deployment, and fetch the deployed root, pick, prediction, sport and review pages.

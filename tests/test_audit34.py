@@ -74,6 +74,17 @@ class Audit34IntegrityTests(unittest.TestCase):
             self.assertTrue(row["review_url"].startswith("https://"))
             self.assertTrue(row["affected_ids"])
 
+    def test_live_capture_cannot_auto_commit_to_main_or_integration_branches(self):
+        workflow = Path(".github/workflows/livedesk-live.yml").read_text()
+        self.assertIn(
+            'branches:\n      - "arena/03e61ed8-olbg2"',
+            workflow,
+        )
+        self.assertIn(
+            "if: always() && github.ref == 'refs/heads/arena/03e61ed8-olbg2'",
+            workflow,
+        )
+
     def test_report_is_deterministic(self):
         self.assertEqual(self.report, audit34.audit())
 

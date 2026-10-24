@@ -2,7 +2,9 @@ name: Live desk capture
 
 # The authoring sandbox cannot reach OLBG or most governing-body hosts. This job performs the
 # first-hand reads on a GitHub-hosted runner, builds the compact desk model from the bodies,
-# and commits the manifest + model + digest back to the branch that asked for them.
+# and commits the manifest + model + digest back only on the live-desk authoring branch.
+# Main and other integration branches receive artifacts only: their content must pass the
+# ordinary PR, validation and deployment gates rather than accepting an unreviewed bot push.
 #
 # A failed read never fails this job: a 403 or a timeout is evidence and is published on the
 # desk's review page.
@@ -10,6 +12,8 @@ name: Live desk capture
 on:
   workflow_dispatch:
   push:
+    branches:
+      - "arena/03e61ed8-olbg2"
     paths:
       - "data/live_desk/requests.json"
       - "scripts/livedesk_collect.py"
@@ -67,8 +71,8 @@ jobs:
           path: data/live_desk/captures/
           retention-days: 30
 
-      - name: Commit the manifest and model back to this branch
-        if: always()
+      - name: Commit the manifest and model back to the authoring branch
+        if: always() && github.ref == 'refs/heads/arena/03e61ed8-olbg2'
         run: |
           git config user.name "livedesk-capture"
           git config user.email "livedesk-capture@users.noreply.github.com"

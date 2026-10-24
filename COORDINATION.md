@@ -6013,3 +6013,13 @@ already dropped its own front-door banner because this desk now owns the root); 
 Live spot check after the deploy: `/playbook/sports/baseball.html` renders "1 match · 1 pick · 1 preview", the
 "1 match listed by OLBG" copy, and the preview with both of its sources — the three defects this PR fixed are gone
 from the published site.
+
+### Final publication record (session `26707f98`, 2026-10-24 ~23:25 UTC)
+
+| Item | Result |
+|---|---|
+| Close-out PR [#227](https://github.com/buffedlizard55-lab/OLBG2/pull/227) | merged to `main` as `5e8b26d`; branch validation [40142022785](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40142022785) success |
+| Post-merge validate on `main` | [40142116076](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40142116076) success; legacy build for `5e8b26d` success |
+| Deploy Pages | the push-triggered deploy was cancelled twice by the `pages` concurrency group while parallel merges landed; the succeeding current-`main` deploy [40142196784](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40142196784) completed **success** (validate + deploy), deploying a tree that includes `/recheck/` |
+| Pages status | `built` · <https://buffedlizard55-lab.github.io/OLBG2/> · front door links the re-check desk; `recheck/` reachable directly and via `archive.html` and README |
+| Final tree health | full `pages.yml` replay exit 0, full suite **897 tests OK**, zero drift across every gated path, `recheck_verify` 52 assertions / 0 failures over 1,246 underlying checks |

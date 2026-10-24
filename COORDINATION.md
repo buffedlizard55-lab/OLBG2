@@ -5041,3 +5041,21 @@ with the exact URL that failed. The five-per-sport target is met for Ice Hockey 
 **Requirement conflict recorded as R1.** "High confidence means 70% or better" and "the price must sit between
 −250 and +10000" only overlap between 70.00% and 71.43%, because −250 implies 71.43%. The New Jersey pick is 73.6%
 (fair −279) and is published as high confidence, marked outside the band, and left unrepriced.
+
+
+## Session `arena/ba05b5b6-olbg2` — final integration and completion (2026-10-24)
+
+- **Session ID:** `arena/ba05b5b6-olbg2` · **Branch:** `arena/ba05b5b6-olbg2` (fixed by the Arena harness; `session-<id>/<task>` cannot be created here, recorded as a platform constraint).
+- **Claimed:** 2026-10-24, before any implementation edit.
+- **Concurrent-session scan:** `origin/main` = `b53f5d2` (PR #195 zenith merged); my branch is exactly at `main` tip. `gh pr list --state open` returned no open PRs at claim time. All earlier session boards read complete; no active conflicting claim on shared root files (`scripts/build_site.py`, root HTML, `sports/**`, `assets/**`, `.github/workflows/pages.yml`) was found.
+
+| # | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| I1 | Read board, scan remotes, claim, commit + push immediately | done | `arena/ba05b5b6-olbg2` | `COORDINATION.md` (append-only) |
+| I2 | Write unique ≥30-word predictions for high-confidence in-band picks lacking them (12 NBA game totals + Leicester Tigers -3.5), each fact carrying an official source URL | done | `arena/ba05b5b6-olbg2` | `data/cadence/predictions.json` |
+| I3 | Verify prediction facts against official governing-body pages (NBA.com standings/injury report, Premiership Rugby standings, NHL schedule/standings) | done | `arena/ba05b5b6-olbg2` | `research/ba05b5b6-verification.md` |
+| I4 | Rebuild root landing page as a clean executive dashboard: executive summary, obvious picks table, per-sport category navigation, table format with source links on every row | done | `arena/ba05b5b6-olbg2` | `index.html` (regenerated via scripts/build_site.py) |
+| I5 | Publish Flagged for Review page with open items and the five-per-sport shortfalls (Golf, Greyhounds, Gaelic Sports have no high-confidence pick supported by official facts) | done | `arena/ba05b5b6-olbg2` | `data/cadence/flagged.json` (CD-PR1 lists all three shortfalls), `integration.html` |
+| I6 | Rebuild checks, full test suite, link audit, PR → `main`, merge on green, confirm Pages deploy, record result | in progress | `arena/ba05b5b6-olbg2` | shared outputs (integration), `COORDINATION.md` |
+
+**Rule this session follows:** no prediction is published without a source URL on every fact; no value is inferred or filled in; the words "model" and "verified" are excluded from prediction text; unmet five-per-sport shortfalls are flagged, not padded; high-confidence work focuses on the −250…+10000 fair-price band.

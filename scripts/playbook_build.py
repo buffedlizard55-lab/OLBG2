@@ -323,6 +323,9 @@ def main() -> None:
     # ------------------------------------------------------------------- overview
     highs = [p for p in picks if p["confidence"] == "high"]
     banded = sorted([p for p in picks if p["in_band"]], key=lambda x: -x["probability"])[:8]
+    next_in_band = [p for p in picks if p["in_band"] and p["confidence"] != "high"]
+    next_in_band = sorted(next_in_band, key=lambda x: -x["probability"])[:8]
+    in_band_total = sum(1 for p in picks if p["in_band"])
     nxt = sorted([p for p in picks if p["day"] == "2026-10-25"], key=lambda x: -x["probability"])[:6]
 
     overview = f"""
@@ -356,8 +359,8 @@ chance of 65% or better, and a price inside the requested −250 to +10000 band.
 
 <h2>The best in-band picks</h2>
 <p class="note">Ranked by our chance of winning, showing only prices that sit inside −250 to +10000.
-{len(banded)} of {big} picks are inside the band. Read the preview on each one before you treat it as a bet.</p>
-<div class="pickgrid">{''.join(pick_card(p) for p in banded)}</div>
+{in_band_total} of {big} picks are inside the band. Read the preview on each one before you treat it as a bet.</p>
+<div class="pickgrid">{''.join(pick_card(p) for p in next_in_band)}</div>
 
 <h2>Sunday 25 October at a glance</h2>
 <div class="tbl-wrap"><table>

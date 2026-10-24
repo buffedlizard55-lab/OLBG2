@@ -26,9 +26,9 @@ TEXTS = {
     "nhl-tbl-uta": (
         "Tampa Bay +1.5 covers the travel and the back-half of a road trip",
         "Take Tampa Bay Lightning +1.5 on the puck line. The Lightning are 7-3-0 with 34 goals for and 29 "
-        "against, and they have lost only once by more than one goal all season. Utah are 7-4-0 at home-ice "
-        "strength, 18 goals scored and 14 conceded in four games in Salt Lake City, but Lightning goaltending "
-        "and a 16-goal road total keep this inside one strike of the puck line."),
+        "against, and on the road they have been outscored only 20-16 across five games even after a 3-6 "
+        "defeat in Colorado on 23 October. Utah are 7-4-0 with 41 goals for and 36 against, and at the Delta "
+        "Center they have scored 18 and conceded 14 in four games, so a one-goal finish is the likeliest shape."),
     "nhl-tor-edm": (
         "Over 6.5 goals is the play when McDavid and Matthews share a rink",
         "Take Over 6.5 goals in Toronto at Edmonton. Edmonton have scored 47 goals in ten games and are 5-0-0 "
@@ -44,9 +44,9 @@ TEXTS = {
     "nhl-nsh-pit": (
         "Nashville +1.5 fits a Penguins team that leaks goals at home",
         "Back Nashville Predators +1.5 on the puck line. Pittsburgh are 4-6-1, have conceded 38 goals in "
-        "eleven games and only once in their last six home games have they won by two or more. Nashville "
-        "are 3-3-3 with 23 goals against 30, Juuse Saros has three wins and Ryan O'Reilly four goals, and "
-        "their four road games have produced 11 goals for and 16 against, all one-goal territory."),
+        "eleven games, and at home they have scored 14 and conceded nine in four games. Nashville are 3-3-3 "
+        "with 23 goals for and 30 against, Juuse Saros has three wins and Ryan O'Reilly four goals, and their "
+        "four road games have produced 11 goals for and 16 against, which is one-goal territory."),
     "nhl-buf-wsh": (
         "Washington's home record should be too much for Buffalo",
         "Back Washington Capitals on the money line. Washington are 5-4-0 with 30 goals for and 29 against, "
@@ -62,15 +62,16 @@ TEXTS = {
     "nhl-vgk-cbj": (
         "Vegas have the depth to see off a Columbus side short on goals",
         "Back Vegas Golden Knights on the money line. Vegas are 8-4-0 with 46 goals for and 36 against, Mark "
-        "Stone has eight goals and Jack Eichel 13 assists, and only two of their four defeats came by more "
-        "than a goal. Columbus are 3-5-0 and have scored just 20 goals in eight games, with 16 scored and 22 "
-        "conceded across six home dates, so the road favourite holds the cleaner route to the result."),
+        "Stone has eight goals and Jack Eichel has 13 assists, and they average 3.8 goals a game. Columbus "
+        "are 3-5-0 and have scored just 20 goals in eight games, with 16 scored and 22 conceded across six "
+        "home dates, so the road favourite holds the cleaner route to the result."),
     "golf-genesis-r4": (
         "Katsuragawa's 63 gives him the outright lead to defend on Sunday",
         "Back Yuto Katsuragawa to win the Genesis Championship outright. He leads at 13 under after rounds of "
         "69, 68 and a third-round 63, three shots clear of Casey Jarvis on 11 under and four ahead of Kim Si "
-        "Woo, Antoine Rozner and Sanghun Shin. He is 27th in the Race to Dubai standings and the final round "
-        "closes on the Jack Nicklaus Golf Club Korea layout where he made seven birdies on Saturday."),
+        "Woo, Antoine Rozner and Sanghun Shin. He is 27th in the Race to Dubai standings, and the final round "
+        "closes on the Jack Nicklaus Golf Club Korea layout where his third-round 63 was the lowest round of "
+        "the leading group."),
     "grey-scurry-final": (
         "Shadow Storm can join the four-timer club in the Scurry Gold Cup",
         "Back Shadow Storm to win the Arena Racing Company Scurry Gold Cup final at Dunstall Park. Richard "
@@ -207,9 +208,9 @@ TEXTS = {
     "nhl-nyr-ott": (
         "Under 5.5 goals fits two teams whose road and home splits diverge",
         "Take Under 5.5 goals in Ottawa against the Rangers. New York have scored 37 and conceded 29 in twelve "
-        "games, but on the road that becomes eight goals for and 19 against in six, a 1-4-1 record built on "
-        "low-scoring games. Ottawa are 7-4-0 with 31 scored and 30 conceded, Tim Stutzle has seven goals and "
-        "eight assists, and three of their last five have finished inside five goals."),
+        "games, but on the road that becomes eight goals for and 19 against in six, a 1-4-1 record. Ottawa "
+        "are 7-4-0 with 31 scored and 30 conceded, Tim Stutzle has seven goals and eight assists, and the "
+        "Senators' 31 goals in eleven games is a 2.8-a-game attack that rarely blows a game open."),
     "ten-almaty-final": (
         "Basilashvili +1.5 sets covers a final where Medvedev's edge is one break",
         "Back Nikoloz Basilashvili +1.5 on the set handicap, which pays if he wins a set or loses in three. "
@@ -222,7 +223,7 @@ TEXTS = {
         "Back Chicago Bulls on the money line. Chicago are 1-1 and Washington are 1-1, but the Wizards have "
         "not played a road game yet and had not submitted an injury report at the 1:00 PM ET filing. Chicago "
         "list Nic Claxton out with a left hamstring strain and Noa Essengue probable with a right head "
-        "contusion, and the 20:00 ET tip at United Center is the Bulls' second home date of the campaign."),
+        "contusion, and the 20:00 ET tip at United Center opens Chicago's home schedule after two road games."),
     "nhl-sjs-bos": (
         "Under 6.5 goals is the shape at TD Garden",
         "Take Under 6.5 goals in Boston against San Jose. Boston are 8-2-1 with 42 goals for and only 22 "

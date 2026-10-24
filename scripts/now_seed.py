@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Seed the /now/ desk (session arena/4a8390fe-olbg2, 2026-10-24).
+"""Seed the /now/ desk (24 October 2026; final integration arena/1ecc0d92-olbg2).
 
 Three separate provenance layers are kept apart and never mixed silently:
 
 1. ``olbg``      - what OLBG itself lists. The 96-row listing capture committed at
                    17:15-17:50Z today (``data/today/olbg_listings.json``) is the base
-                   inventory; every hub route was re-read today, and the Snooker, Golf and
-                   Volleyball hubs were re-read a second time in this session. Each row
-                   carries OLBG's own event id and event URL so it can be checked by hand.
+                   inventory. Three hubs were re-read at 17:56-18:06Z and all fifteen
+                   were re-read again at 22:32Z. Each row carries OLBG's own event id
+                   and event URL so it can be checked by hand.
 2. ``fixtures``  - official governing-body fixture records with per-fact source URLs.
                    These come from the 17:35Z official capture committed in
                    ``data/clarity/fixtures.json``. They are inherited, not re-read here,
@@ -16,11 +16,14 @@ Three separate provenance layers are kept apart and never mixed silently:
 3. ``own``       - everything this desk originates: markets, prices, confidence grades,
                    the odds-band test and the written previews.
 
-Nothing is inferred: a value that is not in an official capture stays blank and is
-listed on the Flagged for Review page.
+A fourth, read-only provenance layer in ``data/final-desk/rechecks.json`` records the
+22:32Z first-hand hub and official page reads. It is copied to ``data/now/checks.json``
+and published on the Source checks page. Nothing is inferred: a value that is not in an
+official capture stays blank and is listed on the Flagged for Review page.
 
 Outputs (deterministic):
-    data/now/olbg.json, data/now/fixtures.json, data/now/sources.json
+    data/now/olbg.json, data/now/fixtures.json, data/now/checks.json,
+    data/now/sources.json
 """
 from __future__ import annotations
 
@@ -33,9 +36,10 @@ DATA = ROOT / "data"
 NOW = DATA / "now"
 CLARITY = DATA / "clarity"
 TODAY = DATA / "today"
+FINAL_DESK = DATA / "final-desk" / "rechecks.json"
 
-SESSION = "arena/4a8390fe-olbg2"
-AS_OF_UTC = "2026-10-24T18:10:00Z"
+SESSION = "arena/1ecc0d92-olbg2"
+AS_OF_UTC = "2026-10-24T22:32:00Z"
 BUILD_DATE = "2026-10-24"
 
 SPORTS = [
@@ -71,7 +75,7 @@ HUBS = {
 }
 HURLING_HUB = ("https://www.olbg.com/betting-tips/Hurling/26", 26)
 
-# Live re-reads performed in this session (fetch tool, timestamps are UTC).
+# Earlier live re-reads performed for the 18:10Z snapshot (fetch tool, UTC).
 RECHECKS = [
     {
         "hub": "Snooker",
@@ -105,6 +109,36 @@ RECHECKS = [
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def fresh_rechecks() -> list[dict]:
+    """Map the committed 22:32Z dossier into the OLBG recheck-table schema."""
+    dossier = load(FINAL_DESK)
+    return [{
+        "hub": row["sport"],
+        "sport": row["sport"],
+        "url": row["url"],
+        "checked_utc": dossier["checked_utc"],
+        "result": row["result"],
+        "status": row["status"],
+        "flag": row["flag"],
+    } for row in dossier["hub_checks"]]
+
+
+def build_checks() -> dict:
+    dossier = load(FINAL_DESK)
+    hubs = dossier["hub_checks"]
+    officials = dossier["official_checks"]
+    return {
+        "as_of_utc": dossier["checked_utc"],
+        "session": dossier["session"],
+        "method": dossier["method"],
+        "hub_count": len(hubs),
+        "official_count": len(officials),
+        "flagged_count": sum(1 for r in hubs + officials if r["flag"]),
+        "hub_checks": hubs,
+        "official_checks": officials,
+    }
 
 
 def norm(text: str) -> str:
@@ -164,6 +198,7 @@ def build_olbg() -> dict:
         "OLBG splits Gaelic games across Gaelic Football (25) and Hurling (26); the Hurling hub "
         "URL is recorded separately below."
     )
+    rechecks = RECHECKS + fresh_rechecks()
     return {
         "capture_utc": base["capture_utc"],
         "capture_end_utc": base["capture_end_utc"],
@@ -172,7 +207,9 @@ def build_olbg() -> dict:
         "rechecked_utc": AS_OF_UTC,
         "hubs": hubs,
         "hurling_hub": {"url": HURLING_HUB[0], "sport_id": HURLING_HUB[1]},
-        "rechecks": RECHECKS,
+        "rechecks": rechecks,
+        "recheck_count": len(rechecks),
+        "fresh_recheck_count": len(rechecks) - len(RECHECKS),
         "listings": listings,
         "listings_count": len(listings),
         "sports_listed": sorted({r["sport"] for r in listings}),
@@ -184,7 +221,8 @@ def build_olbg() -> dict:
             "OLBG publishes no odds on these hub pages, so every price on this site is originated "
             "on this desk from official inputs.",
             "The 96-row base capture was made at 17:15-17:50Z today by the /today/ desk and is "
-            "inherited unchanged; this session re-read three hubs (recorded in 'rechecks').",
+            "inherited unchanged. Three hubs were re-read at 17:56-18:06Z and all fifteen were "
+            "re-read again at 22:32Z; every observation is recorded in 'rechecks'.",
         ],
     }
 
@@ -220,9 +258,10 @@ def build_fixtures() -> dict:
         "source_layer": "data/clarity/fixtures.json (official captures 2026-10-24T17:35Z)",
         "inheritance_note": (
             "Every fixture record below is an official governing-body capture made at 17:35Z today. "
-            "This build does not re-read those pages; it re-uses the committed capture and says so "
-            "on every row. Three OLBG hubs were re-read live in this session and the result is on "
-            "the OLBG page."
+            "The prices re-use that committed capture and say so on every row. All fifteen OLBG "
+            "hubs and nineteen official pages were re-read first-hand at 22:32Z; changed or "
+            "incomplete observations are published on the OLBG, Source checks and Flagged pages "
+            "instead of silently replacing the dated facts."
         ),
         "fixtures": fixtures,
         "count": len(fixtures),
@@ -252,8 +291,21 @@ def build_sources() -> dict:
             "claims": 0, "sports": set(), "fixtures": set(),
         })
         rec["olbg_hub"] = True
+    for row in load(FINAL_DESK)["official_checks"]:
+        rec = reg.setdefault(row["url"], {
+            "url": row["url"], "source_key": "official_recheck_2232",
+            "captured_utc": AS_OF_UTC, "claims": 0, "sports": set(), "fixtures": set(),
+        })
+        rec["recheck"] = True
+        rec["sports"].update(row["sports"])
     rows = []
     for url, rec in sorted(reg.items()):
+        if "olbg.com" in url:
+            kind = "OLBG listing hub"
+        elif rec.get("recheck"):
+            kind = "official page re-read at 22:32Z"
+        else:
+            kind = "official governing body / league feed"
         rows.append({
             "url": url,
             "source_key": rec["source_key"],
@@ -262,7 +314,7 @@ def build_sources() -> dict:
             "sports": sorted(rec["sports"]),
             "fixtures": len(rec["fixtures"]),
             "official": url.startswith("https://") and "olbg.com" not in url,
-            "kind": "OLBG listing hub" if "olbg.com" in url else "official governing body / league feed",
+            "kind": kind,
         })
     return {
         "as_of_utc": AS_OF_UTC,
@@ -276,13 +328,16 @@ def main() -> int:
     NOW.mkdir(parents=True, exist_ok=True)
     olbg = build_olbg()
     (NOW / "olbg.json").write_text(json.dumps(olbg, indent=1) + "\n", encoding="utf-8")
+    checks = build_checks()
+    (NOW / "checks.json").write_text(json.dumps(checks, indent=1) + "\n", encoding="utf-8")
     fixtures = build_fixtures()
     (NOW / "fixtures.json").write_text(json.dumps(fixtures, indent=1) + "\n", encoding="utf-8")
     sources = build_sources()
     (NOW / "sources.json").write_text(json.dumps(sources, indent=1) + "\n", encoding="utf-8")
     listed = sum(1 for f in fixtures["fixtures"] if f["olbg_listed"])
     print(f"now_seed: {fixtures['count']} fixtures, {listed} matched to an OLBG listing, "
-          f"{olbg['listings_count']} OLBG rows, {sources['count']} sources")
+          f"{olbg['listings_count']} OLBG rows, {checks['hub_count']} hub rechecks, "
+          f"{checks['official_count']} official rechecks, {sources['count']} sources")
     return 0
 
 

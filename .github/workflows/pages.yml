@@ -117,13 +117,13 @@ jobs:
           python scripts/cadence_verify.py
           python scripts/integration_f0ee1b4a_audit.py
 
-      - name: Rebuild the 24 October /now/ desk and verify it line by line
+      - name: Rebuild the 24 October /now/ desk
         run: |
+          python scripts/final_recheck.py
           python scripts/now_seed.py
           python scripts/now_model.py
           python scripts/now_predictions.py
           python scripts/now_build.py
-          python scripts/now_verify.py
 
       - name: Rebuild the 24 October /meridian/ desk and verify it line by line
         run: |
@@ -134,8 +134,10 @@ jobs:
           python scripts/meridian_build.py
           python scripts/meridian_verify.py
 
-      - name: Regenerate the root dashboard & integration layer
-        run: python scripts/build_site.py
+      - name: Regenerate the root dashboard & integration layer, then verify /now/ line by line
+        run: |
+          python scripts/build_site.py
+          python scripts/now_verify.py
 
       - name: Rebuild the 15-sport daily brief desk
         run: |

@@ -2,10 +2,12 @@
 """Render the /now/ desk: one clean dashboard, an executive summary first, and one page
 per sport. Every data row carries a link to the official page it came from.
 
-Pages: index, picks, predictions, matches, lines, band, olbg, sources, methodology,
-flagged, sports/index + 15 sport pages, assets/style.css, assets/app.js.
+Pages: index, picks, predictions, matches, lines, band, top5, olbg, checks, sources,
+methodology, flagged, sports/index + 15 sport pages, assets/style.css, assets/app.js.
 
-Output is deterministic: same data in, byte-identical pages out.
+The 22:32Z first-hand hub and official page rechecks are committed in
+``data/final-desk/rechecks.json``, copied to ``data/now/checks.json`` by now_seed.py and
+published here. Output is deterministic: same data in, byte-identical pages out.
 """
 from __future__ import annotations
 
@@ -17,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "now"
 OUT = ROOT / "now"
-AS_OF = "2026-10-24T18:10:00Z"
+AS_OF = "2026-10-24T22:32:00Z"
 SHOWN_DATE = "24 October 2026"
 
 SPORTS = [
@@ -36,11 +38,13 @@ NAV = [
     ("index.html", "Executive summary"),
     ("picks.html", "Picks"),
     ("predictions.html", "Written predictions"),
+    ("top5.html", "Top 5 by sport"),
     ("matches.html", "All matches"),
     ("lines.html", "Our lines"),
     ("band.html", "Odds band"),
     ("sports/index.html", "By sport"),
     ("olbg.html", "OLBG list"),
+    ("checks.html", "Source checks"),
     ("sources.html", "Sources"),
     ("methodology.html", "Method"),
     ("flagged.html", "Flagged for review"),
@@ -299,6 +303,7 @@ def main() -> int:
     preds = load("predictions.json")
     olbg = load("olbg.json")
     sources = load("sources.json")
+    checks = load("checks.json")
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "assets").mkdir(exist_ok=True)
@@ -312,6 +317,48 @@ def main() -> int:
     by_fixture = {m["id"]: m for m in matches["matches"]}
     pred_by_fixture = {p["fixture_id"]: p for p in preds["predictions"]}
     pred_ids = set(pred_by_fixture)
+
+    # ------------------------------------------------------------------ top five by sport
+    grade_order = {"high": 0, "medium": 1, "low": 2}
+    kind_order = {"winner": 0, "handicap": 1, "total": 2}
+    top5_by_sport = {}
+    for s in SPORTS:
+        candidates = [r for r in lines["lines"] if r["sport"] == s and r["in_band"]]
+        candidates.sort(key=lambda r: (grade_order[r["confidence"]], -r["probability"],
+                                       kind_order.get(r["kind"], 3), r["fixture_id"],
+                                       r["market"], r["selection"]))
+        chosen, seen = [], set()
+        for r in candidates:
+            key = (r["fixture_id"], r["market"], r["selection"])
+            if key in seen:
+                continue
+            seen.add(key)
+            row = dict(r)
+            m = by_fixture.get(r["fixture_id"], {})
+            row["competition"] = m.get("competition", "")
+            row["start_display"] = m.get("start_display", "")
+            row["olbg_url"] = m.get("olbg_url", "")
+            chosen.append(row)
+            if len(chosen) == 5:
+                break
+        if len(chosen) == 5:
+            reason = ""
+        elif chosen:
+            reason = (f"Only {len(chosen)} in-band originated lines are available for this sport; "
+                      "the published blank rows explain the missing inputs.")
+        else:
+            reason = next((m["blank_reason"] for m in matches["matches"]
+                           if m["sport"] == s and not m["priced"]),
+                          "No in-band originated line is available for this sport.")
+        top5_by_sport[s] = {"count": len(chosen), "reason": reason, "lines": chosen}
+    payload_top5 = {
+        "as_of_utc": AS_OF,
+        "target_per_sport": 5,
+        "count": sum(v["count"] for v in top5_by_sport.values()),
+        "by_sport": top5_by_sport,
+    }
+    (DATA / "top5.json").write_text(json.dumps(payload_top5, indent=1) + "\n",
+                                    encoding="utf-8")
 
     # ------------------------------------------------------------------ flags
     flags = []
@@ -339,9 +386,11 @@ def main() -> int:
             "id": "V-01", "severity": "note", "sport": "All",
             "item": "Fixture facts are inherited from the official capture made at 17:35Z today",
             "detail": ("All 50 fixture records and their per-fact source links come from the official "
-                       "capture committed at 17:35Z on 24 October. This build did not re-read those "
-                       "pages; it re-used the capture and marks every row as inherited."),
-            "source": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/now/fixtures.json",
+                       "capture committed at 17:35Z on 24 October. At 22:32Z all fifteen OLBG hubs "
+                       "and nineteen official pages were re-read first-hand. The inherited numbers "
+                       "still drive the prices; a changed or incomplete recheck is published below "
+                       "rather than silently blended into the dated capture."),
+            "source": "checks.html",
         },
         {
             "id": "V-02", "severity": "corrected", "sport": "Gaelic Sports",
@@ -370,20 +419,21 @@ def main() -> int:
         },
         {
             "id": "V-05", "severity": "open", "sport": "Golf",
-            "item": "The OLBG golf hub lists no events",
-            "detail": ("Re-read at 18:06Z today, the golf hub returned HTTP 200 and rendered 'No tips "
-                       "found.' The two golf fixtures are on the card with official leaderboard facts "
-                       "but are not asserted to be active OLBG listings."),
+            "item": "The OLBG golf hub still lists no events at 22:32Z",
+            "detail": ("The golf hub returned 'No tips found.' both at 18:06Z and on the 22:32Z "
+                       "re-read. The two golf fixtures remain on the card with official leaderboard "
+                       "facts, but neither is asserted to be an active OLBG listing."),
             "source": "https://www.olbg.com/betting-tips/Golf/5",
         },
         {
             "id": "V-08", "severity": "note", "sport": "All",
-            "item": "Four picks are for matches that had already started when the snapshot was taken",
-            "detail": ("Volleyball (Giesen v Berlin, 17:30Z), Rugby Union (Ospreys v Dragons, 18:00Z), Darts (Littler v "
-                       "Aspinall, 18:00Z) and Handball (Balingen v Melsungen, 18:00Z) began before the 18:10Z snapshot. "
-                       "They are published with their prices and write-ups but are marked as under way and kept out "
-                       "of the executive summary."),
-            "source": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+            "item": "Six picks are for matches that had already started when the snapshot was taken",
+            "detail": ("Volleyball (Giesen v Berlin, 17:30Z), Rugby Union (Ospreys v Dragons and "
+                       "Toulon v Pau), Darts (Littler v Aspinall), Handball (Balingen v Melsungen) "
+                       "and Basketball (Miami v Charlotte, 22:00Z) began before the 22:32Z snapshot. "
+                       "They keep their prices and write-ups for the record, are marked as under way "
+                       "and are excluded from the executive summary."),
+            "source": "https://www.nba.com/standings",
         },
         {
             "id": "V-07", "severity": "note", "sport": "All",
@@ -400,6 +450,73 @@ def main() -> int:
                        "SUBMITTED. No absence is stated for those rosters, and the fields are blank "
                        "rather than guessed."),
             "source": "https://official.nba.com/nba-injury-report-2026-27-season/",
+        },
+        {
+            "id": "V-09", "severity": "open", "sport": "Golf",
+            "item": "PGA Tour leaderboard moved on after the 17:35Z capture",
+            "detail": ("At 22:32Z the official leaderboard showed round three as Official and a tie "
+                       "at -16 between Austin Smotherman and Seamus Power on +210. The inherited "
+                       "record described Smotherman at -16 through ten holes and Chandler Blanchet "
+                       "second at -15. The newer state is flagged, not blended into the dated price "
+                       "inputs, and no golf win price is originated."),
+            "source": "https://www.pgatour.com/leaderboard",
+        },
+        {
+            "id": "V-10", "severity": "open", "sport": "Snooker",
+            "item": "The snooker hub has no tips and the final opponent is still undecided",
+            "detail": ("OLBG rendered 'No tips found.' at 22:32Z. World Snooker Tour showed Mark "
+                       "Williams and Jak Jones level at 5-5 in the live semi-final, with Sunday's "
+                       "final listed as Kyren Wilson against the winner of that match. No opposing "
+                       "player or match-winner price is inferred."),
+            "source": "https://www.wst.tv/matches/",
+        },
+        {
+            "id": "V-11", "severity": "open", "sport": "Rugby League",
+            "item": "The OLBG rugby league hub shows only 2027 futures",
+            "detail": ("The 22:32Z first page listed State of Origin 2027, Super League 2027 and "
+                       "NRL 2027, but no Australia v Fiji match row. The official NRL match centre "
+                       "still schedules that round-two game for 25 October at Suncorp Stadium, so "
+                       "the official event is retained without claiming an OLBG match listing."),
+            "source": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+        },
+        {
+            "id": "V-12", "severity": "open", "sport": "Greyhounds",
+            "item": "The two inherited greyhound finals have expired from the OLBG hub",
+            "detail": ("At 22:32Z the first OLBG greyhound page showed only the 11:04 Doncaster "
+                       "race for tomorrow. The Scurry Gold Cup and Oaks final facts remain sourced "
+                       "from GBGB, but their starts were 18:00Z and 18:15Z and they are no longer "
+                       "offered as current pre-race listings."),
+            "source": "https://www.olbg.com/betting-tips/Greyhounds/28",
+        },
+        {
+            "id": "V-13", "severity": "open", "sport": "Motor Racing",
+            "item": "The OLBG motor racing hub lists no events",
+            "detail": ("The 22:32Z hub read returned 'No tips found.' The Formula 1 United States "
+                       "Grand Prix event page and 2026 standings were reachable, but qualifying had "
+                       "not been captured in a usable grid, so no race-winner number is originated "
+                       "and no active OLBG listing is claimed."),
+            "source": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+        },
+        {
+            "id": "V-14", "severity": "open", "sport": "Darts",
+            "item": "The darts hub has rotated to Sunday's later round",
+            "detail": ("The Littler v Aspinall row from the earlier capture is no longer visible. "
+                       "At 22:32Z OLBG showed Ross Smith v Luke Woodhouse, Gerwyn Price v Stephen "
+                       "Bunting and European Championship outrights. The inherited PDC facts are "
+                       "kept with their 18:00Z start marked as under way rather than refreshed "
+                       "from a different match."),
+            "source": "https://www.olbg.com/betting-tips/Darts/15",
+        },
+        {
+            "id": "V-15", "severity": "open", "sport": "All",
+            "item": "Five written predictions per sport remain an unmet target on this slate",
+            "detail": (f"This desk publishes {preds['count']} written predictions across "
+                       f"{len(preds['by_sport'])} sports, and "
+                       f"{sum(1 for s in SPORTS if preds['by_sport'].get(s, 0) < 5)} sports are "
+                       "below five. The top-five page shows every in-band line that can be "
+                       "originated from the captured official inputs; blank rows are not padded "
+                       "with invented rates, prices or injuries."),
+            "source": "top5.html",
         },
     ]
 
@@ -469,6 +586,8 @@ every number. {matches['count']} upcoming fixtures were read from {sources['offi
 <div class="cta">
   <a class="btn primary" href="picks.html">See every pick →</a>
   <a class="btn" href="predictions.html">Read the {preds['count']} predictions</a>
+  <a class="btn" href="top5.html">Top 5 by sport</a>
+  <a class="btn" href="checks.html">Source checks</a>
   <a class="btn" href="matches.html">All {matches['count']} matches</a>
   <a class="btn" href="sports/index.html">Sport by sport</a>
 </div>
@@ -489,9 +608,10 @@ every number. {matches['count']} upcoming fixtures were read from {sources['offi
 
 <div class="notice">
 <strong>Where the picks are.</strong> <a href="picks.html">Picks</a> lists every selection with the price we made and
-the confidence grade. <a href="predictions.html">Written predictions</a> holds the prose for each high and medium pick,
-with the official facts underneath. <a href="lines.html">Our lines</a> is the full market book. Each sport page repeats
-that sport's matches, picks and previews in the same order, so nothing has to be hunted for.
+the confidence grade. <a href="predictions.html">Written predictions</a> holds a full preview for every published pick,
+with the official facts underneath. <a href="top5.html">Top 5 by sport</a> gathers the strongest in-band lines, and
+<a href="checks.html">Source checks</a> records the 22:32Z first-hand re-reads. Each sport page repeats that sport's
+matches, picks and previews in the same order, so nothing has to be hunted for.
 </div>
 
 <h2>Today and tonight — every fixture on the desk</h2>
@@ -507,7 +627,7 @@ price, and the reason is on <a href="flagged.html">Flagged for review</a>.</p>
 
 <div class="notice info" style="margin-top:26px">
 <strong>What this desk does not claim.</strong> These are our own numbers, not bookmaker odds, and a pick is a research
-opinion rather than advice. Five sports carry fewer than five written predictions because only fixtures with a real
+opinion rather than advice. {sum(1 for s in SPORTS if preds['by_sport'].get(s, 0) < 5)} sports carry fewer than five written predictions because only fixtures with a real
 official record were written up; the gap is listed on <a href="flagged.html">Flagged for review</a> rather than filled
 with filler. Where OLBG does not list an event, the row says so instead of implying a market exists.
 </div>
@@ -535,14 +655,15 @@ price rests on the evidence ladder rather than on a scoring rate (<a href="metho
 {pick_table(pregame_hm, with_pred=pred_ids)}
 
 <h2>Already under way at the snapshot ({len(started_rows)})</h2>
-<p class="sub">These four matches started before {esc(AS_OF)}. They stay on the desk with their prices and their
+<p class="sub">These {len(started_rows)} matches started before {esc(AS_OF)}. They stay on the desk with their prices and their
 write-ups so the record is complete, but they cannot be backed before kick-off any more.</p>
 {pick_table(started_rows, with_pred=pred_ids)}
 
 <h2>Priced but not backed ({len(ls)})</h2>
-<p class="sub">Three cricket fixtures where our own number is close enough to a coin flip that it is not worth
-backing. They stay in the table so the price book is complete and so nobody has to guess why they are missing from
-the two tables above. A low grade is not a prediction against; it is the desk saying it has no edge.</p>
+<p class="sub">{len(ls)} cricket fixtures where our own number is close enough to a coin flip that it is not worth
+backing. They stay in the table and now carry their own full previews, so the price book is complete and nobody has
+to guess why they are missing from the two tables above. A low grade is not a prediction against; it is the desk
+saying it has no edge.</p>
 {pick_table(ls, with_pred=pred_ids)}
 
 <div class="notice info"><strong>How the price was made.</strong> Each price is the reciprocal of our own probability,
@@ -554,7 +675,7 @@ so −250 always means exactly 71.4%. The method behind the probability differs 
     # ------------------------------------------------------------------ predictions
     blocks = []
     for p in sorted(preds["predictions"], key=lambda x: (SPORTS.index(x["sport"]),
-                                                          {"high": 0, "medium": 1}[x["confidence"]])):
+                                                          {"high": 0, "medium": 1, "low": 2}[x["confidence"]])):
         blocks.append(f"""
 <article class="pred" id="pred-{esc(p['fixture_id'])}">
   <div class="sub">{esc(p['sport'])} · {esc(p['competition'])} · {esc(p.get('start_display') or p['start_utc'])}</div>
@@ -572,7 +693,7 @@ so −250 always means exactly 71.4%. The method behind the probability differs 
     preds_body = f"""
 <p class="eyebrow">Written predictions</p>
 <h1>{preds['count']} predictions, each one written for its own match</h1>
-<p class="lede">Every high and medium pick has its own preview: the selection, the teams, the current form and the
+<p class="lede">Every published pick has its own preview: the selection, the teams, the current form and the
 official facts that support it. The shortest is {preds['min_words']} words. The official facts are listed under each
 write-up with the page they came from, so any line can be checked.</p>
 <div class="notice"><strong>Coverage.</strong> {', '.join(f'{k} {v}' for k, v in preds['by_sport'].items())}.
@@ -709,10 +830,14 @@ what a handicap is for, and it is why most high-confidence picks above are handi
         f'<td class="tiny">{esc(h.get("note", ""))}</td></tr>'
         for s, h in olbg["hubs"].items()
     )
+    def recheck_badge(status: str) -> str:
+        tone = "high" if status == "confirmed" else ("medium" if status in ("changed", "partial") else "low")
+        return badge(tone) + f' <span class="tiny">{esc(status)}</span>'
+
     recheck_rows = "".join(
         f'<tr><td>{esc(r["hub"])}</td><td>{src(r["url"])}</td>'
         f'<td class="tiny">{esc(r["checked_utc"])}</td><td>{esc(r["result"])}</td>'
-        f'<td>{badge("high" if r["status"] == "confirmed" else "low")}</td></tr>'
+        f'<td>{recheck_badge(r["status"])}</td></tr>'
         for r in olbg["rechecks"]
     )
     olbg_body = f"""
@@ -722,8 +847,9 @@ what a handicap is for, and it is why most high-confidence picks above are handi
 each with OLBG's own event id and the URL of the event page. The site publishes one most-tipped selection per event,
 which is a community vote and not a price, so no OLBG figure is copied into our lines.</p>
 <div class="notice"><strong>Capture.</strong> Base listing capture {esc(olbg['capture_utc'])} to
-{esc(olbg['capture_end_utc'])} (inherited unchanged). Three hubs were re-read live in this session; the results are
-in the table below.</div>
+{esc(olbg['capture_end_utc'])} (inherited unchanged). {olbg['recheck_count']} hub reads are recorded below: three at
+17:56-18:06Z and all fifteen again at 22:32Z. Rotated, empty and futures-only hubs are also on the
+<a href="checks.html">Source checks</a> and <a href="flagged.html">Flagged for review</a> pages.</div>
 <h2>Hubs re-read live</h2>
 <div class="table-wrap"><table class="data">
 <thead><tr><th>Hub</th><th>URL</th><th>Checked</th><th>Result</th><th>State</th></tr></thead>
@@ -745,6 +871,7 @@ They are kept exactly as shown and are never converted here; the official start 
     srows = "".join(
         f'<tr><td>{src(r["url"])}</td><td class="tiny">{esc(r["source_key"])}</td>'
         f'<td>{"official" if r["official"] else "OLBG"}</td>'
+        f'<td class="tiny">{esc(r.get("kind", ""))}</td>'
         f'<td>{esc(", ".join(r["sports"]))}</td>'
         f'<td class="nowrap">{r["claims"]}</td><td class="tiny">{esc(r["captured_utc"])}</td></tr>'
         for r in sources["sources"]
@@ -753,14 +880,111 @@ They are kept exactly as shown and are never converted here; the official start 
 <p class="eyebrow">Sources</p>
 <h1>{sources['count']} sources, {sources['official_count']} of them official</h1>
 <p class="lede">Every value on this site points back to one of these pages. The fixture captures were made at 17:35Z
-today and are inherited; the OLBG hub reads were made during this session.</p>
+today and are inherited. All fifteen OLBG hubs and {checks['official_count']} official pages were re-read first-hand at
+22:32Z; see <a href="checks.html">Source checks</a> for each observation.</p>
 <div class="table-wrap"><table class="data">
-<thead><tr><th>Source</th><th>Key</th><th>Type</th><th>Sports covered</th><th>Claims used</th><th>Captured</th></tr></thead>
+<thead><tr><th>Source</th><th>Key</th><th>Type</th><th>Role</th><th>Sports covered</th><th>Claims used</th><th>Captured</th></tr></thead>
 <tbody>{srows}</tbody></table></div>
 <div class="notice"><strong>What a link proves.</strong> A link shows where a value was read. It is not a claim that the
 page still shows the same number now, and the capture time on each fact is the moment it was read.</div>
 """
     (OUT / "sources.html").write_text(page("Sources", "sources.html", sources_body), encoding="utf-8")
+
+    # ------------------------------------------------------------------ source checks
+    def check_tone(status: str) -> str:
+        if status == "confirmed":
+            return "high"
+        if status in ("changed", "partial"):
+            return "medium"
+        return "low"
+
+    hub_check_rows = "".join(
+        f'<tr id="hub-{SLUG[r["sport"]]}"><td>{esc(r["sport"])}</td>'
+        f'<td>{src(r["url"], r["hub"])}</td><td>{esc(r["status"])}</td>'
+        f'<td>{esc(r["result"])}</td>'
+        f'<td>{badge(check_tone(r["status"]))} '
+        f'{"needs review" if r["flag"] else "clear"}</td></tr>'
+        for r in checks["hub_checks"]
+    )
+    official_check_rows = "".join(
+        f'<tr><td>{esc(", ".join(r["sports"]))}</td><td>{esc(r["publisher"])}</td>'
+        f'<td>{src(r["url"])}</td><td>{esc(r["status"])}</td>'
+        f'<td>{esc(r["result"])}</td>'
+        f'<td>{badge(check_tone(r["status"]))} '
+        f'{"needs review" if r["flag"] else "clear"}</td></tr>'
+        for r in checks["official_checks"]
+    )
+    checks_body = f"""
+<p class="eyebrow">Source checks</p>
+<h1>First-hand reads at 22:32Z, kept separate from the price capture</h1>
+<p class="lede">{checks['hub_count']} OLBG hubs and {checks['official_count']} official pages were opened at
+{esc(checks['as_of_utc'])}. {checks['flagged_count']} observations need manual review. The dated 17:35Z fixture facts
+still drive the prices; a changed page is flagged instead of silently replacing the older number.</p>
+<div class="notice"><strong>How to read this.</strong> {esc(checks['method'])} A green state means the page returned
+the expected fixture or statistic; an amber state means the page changed or only part of its text could be read; a
+grey state means no usable listing remained. Each row links the exact page that was opened.</div>
+
+<h2>The fifteen OLBG hubs</h2>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Sport</th><th>Hub</th><th>State</th><th>First-hand observation</th><th>Review</th></tr></thead>
+<tbody>{hub_check_rows}</tbody></table></div>
+
+<h2>Official pages re-read</h2>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Sport</th><th>Publisher</th><th>Source</th><th>State</th><th>First-hand observation</th><th>Review</th></tr></thead>
+<tbody>{official_check_rows}</tbody></table></div>
+<p class="sub">The same dossier is committed in <code>data/final-desk/rechecks.json</code> and summarised in
+<code>research/final-desk-1ecc0d92.md</code>. Changed events are also on
+<a href="flagged.html">Flagged for review</a>.</p>
+"""
+    (OUT / "checks.html").write_text(page("Source checks", "checks.html", checks_body),
+                                     encoding="utf-8")
+
+    # ------------------------------------------------------------------ top five by sport
+    sections = []
+    for s in SPORTS:
+        group = top5_by_sport[s]
+        rows5 = "".join(
+            f'<tr><td>{esc(r["home"])} <span class="tiny">v</span> {esc(r["away"])}</td>'
+            f'<td class="tiny">{esc(r.get("start_display") or r["start_utc"])}</td>'
+            f'<td><strong class="selection">{esc(r["selection"])}</strong>'
+            f'<div class="tiny">{esc(r["market"])}</div></td>'
+            f'<td>{badge(r["confidence"])}</td>'
+            f'<td class="nowrap">{r["probability"] * 100:.1f}%</td>'
+            f'<td class="nowrap">{money(r["american"], r["american_display"])}</td>'
+            f'<td class="tiny">{esc(r["basis"])}</td>'
+            f'<td>{src(r["official_url"])}</td></tr>'
+            for r in group["lines"]
+        )
+        if rows5:
+            table = ('<div class="table-wrap"><table class="data"><thead><tr>'
+                     '<th>Event</th><th>Start</th><th>Selection and market</th><th>Confidence</th>'
+                     '<th>Our chance</th><th>Our price</th><th>Basis</th><th>Sources</th>'
+                     '</tr></thead><tbody>' + rows5 + '</tbody></table></div>')
+        else:
+            table = '<p class="sub">No in-band originated line is available for this sport.</p>'
+        short = (f'<div class="notice warn"><strong>{group["count"]} of five selections available.</strong> '
+                 f'{esc(group["reason"])}</div>' if group["reason"] else "")
+        sections.append(f"""
+<section id="{SLUG[s]}">
+  <h2>{esc(s)} <span class="tiny">· {group['count']}/5</span></h2>
+  {short}
+  {table}
+  <p class="sub"><a href="sports/{SLUG[s]}.html#top5">Open the full {esc(s)} page →</a></p>
+</section>""")
+    top5_body = f"""
+<p class="eyebrow">Top 5 by sport</p>
+<h1>The five strongest in-band lines for each requested sport</h1>
+<p class="lede">These are selections from our own full market book, ordered by confidence and then by chance. They are
+not copied bookmaker prices. Several can come from the same match when that is the only event with a complete official
+input set; where fewer than five exist, the shortfall and its official reason are shown instead of inventing lines.</p>
+<div class="cta"><a class="btn primary" href="picks.html">Published picks →</a>
+<a class="btn" href="lines.html">Full {lines['count']}-line book</a>
+<a class="btn" href="flagged.html">Coverage gaps</a></div>
+{''.join(sections)}
+"""
+    (OUT / "top5.html").write_text(page("Top 5 by sport", "top5.html", top5_body),
+                                   encoding="utf-8")
 
     # ------------------------------------------------------------------ methodology
     method_body = f"""
@@ -868,13 +1092,16 @@ corrected, and where the five-a-day target was not met, each with the source tha
                 f'<a class="sportcard" href="{SLUG[s]}.html"><div class="head"><h3>{esc(s)}</h3>'
                 f'<span class="pill">{st["fixtures"]} fixtures</span></div>'
                 f'<p class="sub">{st["priced"]} priced · {st["picks"]} picks · '
-                f'{preds["by_sport"].get(s, 0)} written · {st["high"]} high</p></a>'
+                f'{preds["by_sport"].get(s, 0)} written · {top5_by_sport[s]["count"]}/5 top lines · '
+                f'{st["high"]} high</p></a>'
             )
         body = f"""
 <p class="eyebrow">By sport</p>
 <h1>Fifteen sports, same layout on every page</h1>
-<p class="lede">Each sport page shows the fixtures, the picks, the written predictions and the lines in the same order,
-so once you have read one you know where everything is on the others.</p>
+<p class="lede">Each sport page shows the fixtures, the picks, the five strongest in-band lines and the written
+predictions in the same order, so once you have read one you know where everything is on the others.</p>
+<div class="cta"><a class="btn primary" href="../top5.html">See all 15 top-fives →</a>
+<a class="btn" href="../checks.html">Source checks</a></div>
 <div class="sportgrid">{''.join(rows)}</div>
 """
         (OUT / "sports" / "index.html").write_text(
@@ -885,6 +1112,30 @@ so once you have read one you know where everything is on the others.</p>
             sp_matches = [m for m in matches["matches"] if m["sport"] == s]
             sp_picks = [p for p in picks["picks"] if p["sport"] == s]
             sp_preds = [p for p in preds["predictions"] if p["sport"] == s]
+            sp_top5 = top5_by_sport[s]
+            top5_rows = "".join(
+                f'<tr><td><strong class="selection">{esc(r["selection"])}</strong>'
+                f'<div class="tiny">{esc(r["market"])}</div></td>'
+                f'<td>{badge(r["confidence"])}</td>'
+                f'<td class="nowrap">{r["probability"] * 100:.1f}%</td>'
+                f'<td class="nowrap">{money(r["american"], r["american_display"])}</td>'
+                f'<td class="tiny">{esc(r["basis"])}</td>'
+                f'<td>{src(r["official_url"])}</td></tr>'
+                for r in sp_top5["lines"]
+            )
+            top5_table = (
+                '<div class="table-wrap"><table class="data"><thead><tr>'
+                '<th>Selection and market</th><th>Confidence</th><th>Our chance</th><th>Our price</th>'
+                '<th>Basis</th><th>Official source</th></tr></thead><tbody>' + top5_rows +
+                '</tbody></table></div>'
+                if top5_rows else
+                '<p class="sub">No in-band originated line is available for this sport.</p>'
+            )
+            top5_note = (
+                f'<div class="notice warn"><strong>{sp_top5["count"]} of five selections available.</strong> '
+                f'{esc(sp_top5["reason"])}</div>'
+                if sp_top5["reason"] else ""
+            )
             mrows = "".join(
                 f'<tr id="{esc(m["id"])}"><td><div class="teams">{esc(m["home"])} <span>v</span> {esc(m["away"])}</div>'
                 f'<div class="tiny">{esc(m["competition"])}</div></td>'
@@ -926,17 +1177,23 @@ so once you have read one you know where everything is on the others.</p>
 <p class="eyebrow">Sport</p>
 <h1>{esc(s)}</h1>
 <p class="lede">{st['fixtures']} fixtures, {st['priced']} priced, {st['markets']} originated prices,
-{st['picks']} picks ({st['high']} high, {st['medium']} medium, {st['low']} low) and {len(sp_preds)} written
-predictions. {st['olbg_listed']} of the fixtures were listed by OLBG at capture.</p>
+{st['picks']} picks ({st['high']} high, {st['medium']} medium, {st['low']} low), {sp_top5['count']} of five
+top lines and {len(sp_preds)} written predictions. {st['olbg_listed']} of the fixtures were listed by OLBG at capture.</p>
 <div class="cta"><a class="btn" href="../picks.html">All picks</a>
 <a class="btn" href="../predictions.html">All predictions</a>
-<a class="btn" href="../lines.html">All lines</a></div>
+<a class="btn" href="../lines.html">All lines</a>
+<a class="btn" href="../top5.html#{SLUG[s]}">All top fives</a></div>
 <h2 id="fixtures">Fixtures</h2>
 <div class="table-wrap"><table class="data">
 <thead><tr><th>Match</th><th>Start</th><th>Selection or reason for a blank</th><th>Confidence</th><th>Official source</th></tr></thead>
 <tbody>{mrows}</tbody></table></div>
 <h2 id="picks">Picks</h2>
 {sport_pick_table}
+<h2 id="top5">Top 5 in-band lines</h2>
+<p class="sub">The strongest selections from this sport's full market book. These can be on different markets within
+one match when the official evidence supports only one fixture. <a href="../top5.html#{SLUG[s]}">See all sports →</a></p>
+{top5_note}
+{top5_table}
 <h2 id="predictions">Written predictions</h2>
 {gap_note}
 {''.join(pblocks) if pblocks else '<p class="sub">No written prediction for this sport, and the reason is published on the flagged page.</p>'}
@@ -946,8 +1203,10 @@ predictions. {st['olbg_listed']} of the fixtures were listed by OLBG at capture.
 
     sport_pages()
 
-    print(f"now_build: {2 + 3 + 1 + 4 + 1 + 16} pages, {matches['count']} fixtures, "
-          f"{picks['count']} picks, {preds['count']} predictions")
+    pages_written = len(list(OUT.rglob("*.html")))
+    print(f"now_build: {pages_written} pages, {matches['count']} fixtures, "
+          f"{picks['count']} picks, {preds['count']} predictions, "
+          f"{payload_top5['count']} top-five selections")
     return 0
 
 

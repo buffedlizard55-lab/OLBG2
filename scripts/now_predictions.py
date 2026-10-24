@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write one unique human preview per high- or medium-confidence pick on the /now/ desk.
+"""Write one unique human preview for every published pick on the /now/ desk.
 
 Rules enforced by ``now_verify.py`` and the unit tests:
 
@@ -9,6 +9,7 @@ Rules enforced by ``now_verify.py`` and the unit tests:
   preview and rendered underneath it;
 * the words ``model`` and ``verified`` never appear in reader-facing copy.
 
+Low-confidence picks get a preview too, so a reader never has to follow a bare line.
 Output: data/now/predictions.json
 """
 from __future__ import annotations
@@ -19,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NOW = ROOT / "data" / "now"
-AS_OF_UTC = "2026-10-24T18:10:00Z"
+AS_OF_UTC = "2026-10-24T22:32:00Z"
 
 # fixture_id -> (headline, text)
 TEXTS = {
@@ -337,18 +338,46 @@ TEXTS = {
         "unchanged side. Beating New Zealand by two is a stronger form line than beating Cook "
         "Islands by 28.",
     ),
+    "cri-nz-ind-t20i3": (
+        "India's two chase wins make them a narrow call in Wellington",
+        "India to win the third T20I at Hnry Stadium is a low-confidence selection rather than a "
+        "strong stance. The tourists have taken both completed matches by four wickets: they "
+        "chased a New Zealand total of 225/4 in the opener and needed 26 not out from 13 balls "
+        "by Nitish Kumar Reddy in the second. India lead 2-0, but Ishan Kishan missed that "
+        "second match with a low-grade right adductor strain, and Finn Allen's 45 off 24 in the "
+        "opening game shows the hosts still carry serious power at the top of the order.",
+    ),
+    "cri-tus-cob": (
+        "Laycock's record spell gives Tuskers a route back against Cobras",
+        "Kaneez Tuskers to win at Pietermaritzburg Oval is a low-confidence play on a bowler in "
+        "exceptional form. Chad Laycock took 6/26 against the Titans, the record bowling "
+        "performance in the captured official report, even though the Tuskers were then bowled "
+        "out for 124 in a 63-run defeat to Boland. YesPlay Cobras edged Boland by six wickets "
+        "with one ball remaining at Newlands, so they arrive with a recent win of their own. "
+        "The case for the "
+        "Tuskers rests on their strike bowler disrupting a similarly tight contest at home.",
+    ),
+    "cri-bol-tit": (
+        "An unbeaten six-match run keeps the Titans narrowly ahead at Boland Park",
+        "Momentum Multiply Titans to win at Boland Park is a low-confidence selection because "
+        "their six-match unbeaten run meets a home side coming off an emphatic 63-run victory. "
+        "Boland posted 187 in 20 overs against the Tuskers, with Lehan Botha making 54 and "
+        "Gavin Kaplan 38, before bowling the visitors out for 124. The Titans extended their "
+        "own sequence by beating those same Tuskers, and that sustained run across six matches "
+        "is the main reason to prefer them by the smallest of margins in this domestic T20.",
+    ),
 }
 
 
 def main() -> int:
     picks = json.loads((NOW / "picks.json").read_text(encoding="utf-8"))
-    preds, missing = [], []
+    preds, missing, missing_high_medium = [], [], []
     for pick in picks["picks"]:
-        if pick["confidence"] == "low":
-            continue
         entry = TEXTS.get(pick["fixture_id"])
         if not entry:
             missing.append(pick["fixture_id"])
+            if pick["confidence"] in {"high", "medium"}:
+                missing_high_medium.append(pick["fixture_id"])
             continue
         headline, text = entry
         preds.append({
@@ -381,7 +410,8 @@ def main() -> int:
         "count": len(preds),
         "min_words": min((p["words"] for p in preds), default=0),
         "by_sport": dict(sorted(by_sport.items())),
-        "missing_for_high_or_medium_pick": missing,
+        "missing_for_published_pick": missing,
+        "missing_for_high_or_medium_pick": missing_high_medium,
         "predictions": preds,
     }
     (NOW / "predictions.json").write_text(json.dumps(payload, indent=1) + "\n",

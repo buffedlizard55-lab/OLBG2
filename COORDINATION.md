@@ -5713,3 +5713,35 @@ published starts had passed still carry originated selections and picks. Its evi
 The `/meridian/` layer was added to the CI rebuild and drift gate so a later merge cannot silently repeat the stale
 audit failure. Clarity's 6 findings and the /now/ desk were unchanged. Focused tests: 59/59 pass; `meridian_verify`
 2,589 assertions / 0 failures; `clarity_verify` 2,828 / 0.
+
+### IN3–IN6 checkpoint — 2026-10-24 22:42 UTC
+
+IN3 is done. All fifteen OLBG hub routes were opened first-hand at 22:32Z and nineteen official governing-body,
+league or official feed pages were re-read. The committed dossier is
+`data/final-desk/rechecks.json`; `research/final-desk-1ecc0d92.md` is the human-readable source log;
+`scripts/final_recheck.py` validates it; `/now/checks.html` publishes every exact link and observation. Eight
+observations need review. The inherited 17:35Z numeric fixture facts were **not** silently refreshed: where a page
+moved on (most clearly the PGA Tour leaderboard, the snooker semi-final and several rolled-over OLBG hubs), the change
+is on `/now/flagged.html` and the dated capture still drives the prices.
+
+IN4 is done to the limit of the official evidence. The `/now/` desk was refreshed to 22:32Z: 50 fixtures,
+866 originated lines, 39 graded picks (10 high / 26 medium / 3 low), all inside −250…+10000; **39 written
+predictions**, one for every published pick, shortest 65 words, across 11 sports. The three low-confidence cricket
+picks now have unique, sourced previews rather than bare lines. Six picks whose starts had passed are marked as under
+way and excluded from the executive summary. A new `/now/top5.html` board publishes 55 in-band lines across 11 sports
+and discloses the four sports where no usable line can be built. No unsupported rate, price, injury or fifth pick was
+invented to fill a quota.
+
+IN5 is done. The root front door and `/now/` navigation now lead to the executive summary, picks, written
+predictions, top fives by sport, source checks, OLBG list, sources, method and Flagged for Review. Every table row
+carries an official or exact OLBG source link. The flagged page has 39 items (32 open, 2 corrected, 5 notes),
+including the 22:32Z hub rollovers, the changed PGA Tour leaderboard, the still-undecided snooker final opponent,
+the six started picks and the explicit five-a-day shortfall. The root generator, `/now/` builder, `/now/` seed,
+`/now/` verifier and README were updated together; no banner was hand-injected into a generated page.
+
+IN6 is substantively done: `pages.yml` parses (30 steps), `final_recheck.py` passes, `now_verify.py` passes with
+8,564 assertions / 0 failures, the full `python -m unittest discover -s tests` suite passes (854 tests),
+`integration_audit.py` reports 0 broken cross-layer links, and a focused 63-test set covering the new recheck,
+`/now/`, `/clarity/` and `/meridian/` layers passes. The `/now/` step in CI was reordered so `build_site.py`
+regenerates the root front door before `now_verify.py` checks that its executive cards exclude started fixtures.
+The full workflow reproduction and the PR/merge/deploy chain are the remaining IN6/IN7 gates.

@@ -539,7 +539,7 @@ def build_front_door() -> str:
 
     body = f"""
 <section class="front">
-  <p class="eyebrow">Snapshot {esc('2026-10-24T18:10Z')} · 24 October 2026</p>
+  <p class="eyebrow">Snapshot {esc('2026-10-24T22:32Z')} · 24 October 2026 · all 15 OLBG hubs re-read</p>
   <h1>Today's picks, our own prices, and the official source behind every row.</h1>
   <p class="lede">{picks['pregame_high']} high-confidence picks on matches still to start, plus
   {picks['pregame_medium']} medium ones, across {len({p['sport'] for p in picks['picks']})} sports,
@@ -572,10 +572,12 @@ def build_front_door() -> str:
   <h2>Where everything is</h2>
   <div class="where">
     <a class="wherecard" href="now/picks.html"><b>Picks</b><span>Every selection, its price and its confidence grade.</span></a>
-    <a class="wherecard" href="now/predictions.html"><b>Written predictions</b><span>One unique preview per high and medium pick, with the official facts underneath.</span></a>
+    <a class="wherecard" href="now/predictions.html"><b>Written predictions</b><span>One unique preview for every published pick, with the official facts underneath.</span></a>
+    <a class="wherecard" href="now/top5.html"><b>Top 5 by sport</b><span>The five strongest in-band lines for each of the fifteen sports, with shortfalls disclosed.</span></a>
     <a class="wherecard" href="now/matches.html"><b>All matches</b><span>Every fixture, priced or not, with the reason for any blank.</span></a>
     <a class="wherecard" href="now/lines.html"><b>Our lines</b><span>The full market book: winner, handicap and total for each fixture.</span></a>
     <a class="wherecard" href="now/band.html"><b>Odds band</b><span>The −250 to +10000 test on every price we made.</span></a>
+    <a class="wherecard" href="now/checks.html"><b>Source checks</b><span>All 15 OLBG hubs and 19 official pages re-read at 22:32Z, with exact links and changes.</span></a>
     <a class="wherecard" href="now/flagged.html"><b>Flagged for review</b><span>What is missing, blank or corrected, with the source that was checked.</span></a>
   </div>
 
@@ -590,8 +592,11 @@ def build_front_door() -> str:
 
   <div class="notice">
     <strong>What this is.</strong> A dated, partial research snapshot produced from first-hand reads of official
-    league and governing-body pages. The links are provenance: they show where each value came from, and they do not mean every fixture or input was independently re-checked for this build. Prices are originated here from official
-    inputs, never copied from a bookmaker, and a pick is research output rather than betting advice.
+    league and governing-body pages. The links are provenance: they show where each value came from, and they do not mean every fixture or input was independently re-checked for this build. All fifteen OLBG
+    hubs and nineteen official pages were re-read at 22:32Z on the <a href="now/checks.html">Source checks</a> page,
+    but that does not mean every numeric input was refreshed; the 17:35Z official capture still drives the prices.
+    Prices are originated here from official inputs, never copied from a bookmaker, and a pick is research output
+    rather than betting advice.
   </div>
   <p class="sub">Earlier desks are kept, unmodified and with their own counts, behind
   <a href="archive.html">the archive</a>. Their numbers are never added to the numbers above.</p>
@@ -646,10 +651,12 @@ def build_front_door() -> str:
   <nav class="navline">
     <a href="now/picks.html">Picks</a>
     <a href="now/predictions.html">Predictions</a>
+    <a href="now/top5.html">Top 5 by sport</a>
     <a href="now/matches.html">Matches</a>
     <a href="now/lines.html">Our lines</a>
     <a href="now/sports/index.html">Sports</a>
     <a href="now/olbg.html">OLBG list</a>
+    <a href="now/checks.html">Source checks</a>
     <a href="now/sources.html">Sources</a>
     <a href="now/methodology.html">Method</a>
     <a href="now/flagged.html">Flagged</a>
@@ -686,7 +693,7 @@ def build_front_door() -> str:
 {body}
 </main>
 <footer class="wrap" style="max-width:1160px;margin:0 auto;padding:20px 20px 50px;color:#64748b;font-size:13px;border-top:1px solid #e2e8f0">
-  <p>OLBG2 · research snapshot 2026-10-24T18:10Z · <a href="now/flagged.html">flag anything that needs review</a> ·
+  <p>OLBG2 · research snapshot 2026-10-24T22:32Z · <a href="now/flagged.html">flag anything that needs review</a> ·
   <a href="now/methodology.html">method</a> · <a href="archive.html">every earlier desk</a></p>
 </footer>
 </body>

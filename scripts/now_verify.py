@@ -6,12 +6,12 @@ reader can re-run this file and get the same answer. It fails closed: an unexpec
 a missing source link, a banned word in reader-facing copy or a drifted count is an error.
 
 Checks
-  1  schema and counts of the five data files
+  1  schema and counts of the seven data files, including the 22:32Z rechecks and top-five board
   2  every fixture carries an https official source, at least one sourced fact and a capture time
   3  every price equals the reciprocal of its probability, and the band test is applied exactly
   4  every published pick is inside the band, has a grade and names its source
   5  confidence rules are applied as documented (totals capped, evidence ladder capped at medium)
-  6  every high and medium pick has a written prediction, >= 30 words, unique opening, no banned words
+  6  every published pick has a written prediction, >= 30 words, unique opening, no banned words
   7  every table row on every page carries a link
   8  every internal link and anchor resolves
   9  no reader-facing page contains the words model / verified
@@ -30,6 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "now"
 OUT = ROOT / "now"
+AS_OF = "2026-10-24T22:32:00Z"
 SPORTS = ["Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts", "Baseball",
           "Gaelic Sports", "Greyhounds", "Tennis", "Motor Racing", "Handball", "Ice Hockey",
           "Basketball", "Rugby League"]
@@ -65,6 +66,8 @@ def main() -> int:
     olbg = load("olbg.json")
     sources = load("sources.json")
     flagged = load("flagged.json")
+    source_checks = load("checks.json")
+    top5 = load("top5.json")
 
     # 1 ------------------------------------------------------------------ schema
     ok(fixtures["count"] == len(fixtures["fixtures"]) == 50, "fixture count mismatch")
@@ -77,6 +80,24 @@ def main() -> int:
     ok(olbg["listings_count"] == len(olbg["listings"]), "OLBG row count mismatch")
     ok(sources["count"] == len(sources["sources"]), "source count mismatch")
     ok(flagged["count"] == len(flagged["flags"]), "flag count mismatch")
+    ok(source_checks["hub_count"] == len(source_checks["hub_checks"]) == 15,
+       "hub recheck count is not 15")
+    ok([h["sport"] for h in source_checks["hub_checks"]] == SPORTS,
+       "hub recheck sport order is not the exact fifteen requested")
+    ok(source_checks["official_count"] == len(source_checks["official_checks"]) >= 15,
+       "official recheck count is short")
+    ok(set(SPORTS) <= {s for r in source_checks["official_checks"] for s in r["sports"]},
+       "official rechecks do not cover all fifteen sports")
+    ok(top5["target_per_sport"] == 5 and len(top5["by_sport"]) == 15,
+       "top-five board does not cover all fifteen sports")
+    ok(top5["count"] == sum(v["count"] for v in top5["by_sport"].values()),
+       "top-five selection count mismatch")
+    for sport, group in top5["by_sport"].items():
+        ok(0 <= group["count"] <= 5, f"{sport}: too many top-five rows")
+        ok(len(group["lines"]) == group["count"], f"{sport}: top-five row count mismatch")
+        for row in group["lines"]:
+            ok(row["in_band"] and row["official_url"].startswith("https://"),
+               f"{sport}: top-five row is outside the band or lacks an official source")
 
     # 2 ------------------------------------------------------------------ sources
     for f in fixtures["fixtures"]:
@@ -146,6 +167,8 @@ def main() -> int:
             ok(p["score"] >= 6.0, f"{p['id']}: a high grade scores under 6.0")
 
     # 6 ------------------------------------------------------------------ prose
+    ok(preds.get("missing_for_published_pick") == [], "a published pick has no preview")
+    ok(preds.get("missing_for_high_or_medium_pick") == [], "a high/medium pick has no preview")
     ok(preds["min_words"] >= 30, "shortest prediction under 30 words")
     openings, texts = {}, set()
     for p in preds["predictions"]:
@@ -165,8 +188,7 @@ def main() -> int:
            f"{p['id']}: selection not named in the text")
     written = {p["fixture_id"] for p in preds["predictions"]}
     for p in picks["picks"]:
-        if p["confidence"] in {"high", "medium"}:
-            ok(p["fixture_id"] in written, f"{p['id']}: no written prediction")
+        ok(p["fixture_id"] in written, f"{p['id']}: no written prediction")
 
     # 6b ----------------------------------------------------------------- temporal integrity
     started = {p["fixture_id"] for p in picks["picks"] if p["started"]}
@@ -176,7 +198,7 @@ def main() -> int:
     for p in picks["picks"]:
         m = next((x for x in matches["matches"] if x["id"] == p["fixture_id"]), None)
         ok(m is not None, f"{p['id']}: no matching fixture")
-        ok(p["started"] == (bool(m["start_utc"]) and m["start_utc"] <= "2026-10-24T18:10:00Z"),
+        ok(p["started"] == (bool(m["start_utc"]) and m["start_utc"] <= AS_OF),
            f"{p['id']}: started flag disagrees with the start time")
     index_html = (OUT / "index.html").read_text(encoding="utf-8")
     cards = re.findall(r'class="sel" href="predictions\.html#pred-([^"]+)"', index_html)
@@ -199,6 +221,8 @@ def main() -> int:
                f"{page.relative_to(ROOT)}: table row without a link")
 
     # 8 ------------------------------------------------------------------ internal links
+    ok((OUT / "checks.html").exists(), "Source checks page is missing")
+    ok((OUT / "top5.html").exists(), "Top 5 by sport page is missing")
     ids = {p.resolve(): set(re.findall(r'id="([^"]+)"', p.read_text(encoding="utf-8")))
            for p in OUT.rglob("*.html")}
     for page in OUT.rglob("*.html"):

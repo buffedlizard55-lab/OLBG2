@@ -1,5 +1,5 @@
 {
- "as_of_utc": "2026-10-24T18:10:00Z",
+ "as_of_utc": "2026-10-24T22:32:00Z",
  "count": 50,
  "priced": 39,
  "unpriced": 11,
@@ -586,7 +586,7 @@
      "captured_utc": "2026-10-24T17:35:00Z"
     }
    ],
-   "started": false,
+   "started": true,
    "blank_reason": "",
    "markets": 38,
    "priced": true,
@@ -643,7 +643,7 @@
      "captured_utc": "2026-10-24T17:35:00Z"
     }
    ],
-   "started": false,
+   "started": true,
    "blank_reason": "The captured official record does not contain the rates this desk needs (for example a goals, points or legs rate for both sides).",
    "markets": 0,
    "priced": false,
@@ -1544,7 +1544,7 @@
      "captured_utc": "2026-10-24T17:35:00Z"
     }
    ],
-   "started": false,
+   "started": true,
    "blank_reason": "The captured official racecard gives semi-final times for only part of the six-dog field, so no full-field speed rating can be built.",
    "markets": 0,
    "priced": false,
@@ -2662,7 +2662,7 @@
      "captured_utc": "2026-10-24T17:35:00Z"
     }
    ],
-   "started": false,
+   "started": true,
    "blank_reason": "",
    "markets": 26,
    "priced": true,

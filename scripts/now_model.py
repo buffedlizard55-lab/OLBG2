@@ -39,7 +39,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NOW = ROOT / "data" / "now"
-AS_OF_UTC = "2026-10-24T18:10:00Z"
+AS_OF_UTC = "2026-10-24T22:32:00Z"
 
 SPORTS = [
     "Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts", "Baseball",

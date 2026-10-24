@@ -1,11 +1,11 @@
 {
- "as_of_utc": "2026-10-24T18:10:00Z",
- "count": 36,
+ "as_of_utc": "2026-10-24T22:32:00Z",
+ "count": 39,
  "min_words": 65,
  "by_sport": {
   "Baseball": 1,
   "Basketball": 8,
-  "Cricket": 1,
+  "Cricket": 4,
   "Darts": 1,
   "Gaelic Sports": 2,
   "Handball": 3,
@@ -15,6 +15,7 @@
   "Tennis": 3,
   "Volleyball": 3
  },
+ "missing_for_published_pick": [],
  "missing_for_high_or_medium_pick": [],
  "predictions": [
   {
@@ -492,6 +493,169 @@
      "value": "Pakistan v England, 4th ODI, Gaddafi Stadium Lahore, 25 October 08:00 GMT",
      "source_key": "ecb_triseries",
      "source_url": "https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ]
+  },
+  {
+   "id": "pred-cri-nz-ind-t20i3",
+   "pick_id": "pick-cri-nz-ind-t20i3",
+   "fixture_id": "cri-nz-ind-t20i3",
+   "sport": "Cricket",
+   "competition": "India tour of New Zealand, 3rd T20I",
+   "home": "New Zealand",
+   "away": "India",
+   "start_utc": "2026-10-27T07:00:00Z",
+   "start_display": "2026-10-27 07:00 UTC (ICC fixtures)",
+   "market": "Match winner",
+   "selection": "India",
+   "confidence": "low",
+   "score": 5.3,
+   "probability": 0.53,
+   "american_display": "-113",
+   "headline": "India's two chase wins make them a narrow call in Wellington",
+   "text": "India to win the third T20I at Hnry Stadium is a low-confidence selection rather than a strong stance. The tourists have taken both completed matches by four wickets: they chased a New Zealand total of 225/4 in the opener and needed 26 not out from 13 balls by Nitish Kumar Reddy in the second. India lead 2-0, but Ishan Kishan missed that second match with a low-grade right adductor strain, and Finn Allen's 45 off 24 in the opening game shows the hosts still carry serious power at the top of the order.",
+   "words": 93,
+   "official_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+   "olbg_url": "https://www.olbg.com/betting-tips/Cricket/All_Cricket/All_Events/New_Zealand_vs_India_3rd_T20_Match/7?event_id=188852",
+   "facts": [
+    {
+     "claim": "First T20I",
+     "value": "India won by four wickets at Hagley Oval; New Zealand made 225/4, Finn Allen 45 off 24",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Second T20I",
+     "value": "India won by four wickets at Hagley Oval on 24 October; Nitish Kumar Reddy 26 not out off 13",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Series position",
+     "value": "India lead 2-0 with three to play",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "India availability",
+     "value": "Ishan Kishan missed the second T20I with a low-grade right adductor strain",
+     "source_key": "icc_kishan",
+     "source_url": "https://www.icc-cricket.com/news/injury-blow-for-india-ahead-of-second-t20i-with-new-zealand",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Venue",
+     "value": "third T20I at Hnry Stadium, Wellington on 27 October",
+     "source_key": "icc_nz_ind",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ]
+  },
+  {
+   "id": "pred-cri-tus-cob",
+   "pick_id": "pick-cri-tus-cob",
+   "fixture_id": "cri-tus-cob",
+   "sport": "Cricket",
+   "competition": "CSA YesPlay Pro20 Cup",
+   "home": "Kaneez Tuskers",
+   "away": "YesPlay Cobras",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "start_display": "2026-10-25 13:00 SAST (Cricket South Africa)",
+   "market": "Match winner",
+   "selection": "Kaneez Tuskers",
+   "confidence": "low",
+   "score": 5.2,
+   "probability": 0.5167,
+   "american_display": "-107",
+   "headline": "Laycock's record spell gives Tuskers a route back against Cobras",
+   "text": "Kaneez Tuskers to win at Pietermaritzburg Oval is a low-confidence play on a bowler in exceptional form. Chad Laycock took 6/26 against the Titans, the record bowling performance in the captured official report, even though the Tuskers were then bowled out for 124 in a 63-run defeat to Boland. YesPlay Cobras edged Boland by six wickets with one ball remaining at Newlands, so they arrive with a recent win of their own. The case for the Tuskers rests on their strike bowler disrupting a similarly tight contest at home.",
+   "words": 89,
+   "official_url": "https://cricket.co.za/upcoming/8/",
+   "olbg_url": "",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Tuskers v Cobras, Pietermaritzburg Oval 25/10/26 13:00",
+     "source_key": "csa_upcoming",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Tuskers recent result",
+     "value": "lost to Boland by 63 runs, bowled out for 124",
+     "source_key": "csa_boland",
+     "source_url": "https://cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Tuskers individual",
+     "value": "Chad Laycock took 6/26 against Titans, the record bowling performance",
+     "source_key": "csa_titans",
+     "source_url": "https://cricket.co.za/laycock-makes-history-with-record-breaking-five-wicket-over/",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Cobras recent result",
+     "value": "beat Boland by six wickets with one ball remaining at Newlands",
+     "source_key": "csa_boland",
+     "source_url": "https://cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    }
+   ]
+  },
+  {
+   "id": "pred-cri-bol-tit",
+   "pick_id": "pick-cri-bol-tit",
+   "fixture_id": "cri-bol-tit",
+   "sport": "Cricket",
+   "competition": "CSA YesPlay Pro20 Cup",
+   "home": "Goldrush Boland",
+   "away": "Momentum Multiply Titans",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "start_display": "2026-10-25 13:00 SAST (Cricket South Africa)",
+   "market": "Match winner",
+   "selection": "Momentum Multiply Titans",
+   "confidence": "low",
+   "score": 5.0,
+   "probability": 0.5033,
+   "american_display": "-101",
+   "headline": "An unbeaten six-match run keeps the Titans narrowly ahead at Boland Park",
+   "text": "Momentum Multiply Titans to win at Boland Park is a low-confidence selection because their six-match unbeaten run meets a home side coming off an emphatic 63-run victory. Boland posted 187 in 20 overs against the Tuskers, with Lehan Botha making 54 and Gavin Kaplan 38, before bowling the visitors out for 124. The Titans extended their own sequence by beating those same Tuskers, and that sustained run across six matches is the main reason to prefer them by the smallest of margins in this domestic T20.",
+   "words": 86,
+   "official_url": "https://cricket.co.za/upcoming/8/",
+   "olbg_url": "",
+   "facts": [
+    {
+     "claim": "Fixture",
+     "value": "Boland v Titans, Boland Park 25/10/26 13:00",
+     "source_key": "csa_upcoming",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Titans form",
+     "value": "unbeaten run extended to six matches after beating Tuskers",
+     "source_key": "csa_titans",
+     "source_url": "https://cricket.co.za/laycock-makes-history-with-record-breaking-five-wicket-over/",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Boland form",
+     "value": "beat Kaneez Tuskers by 63 runs after posting 187 in 20 overs; Lehan Botha 54, Gavin Kaplan 38",
+     "source_key": "csa_boland",
+     "source_url": "https://cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
+     "captured_utc": "2026-10-24T17:35:00Z"
+    },
+    {
+     "claim": "Boland collapse of note",
+     "value": "Tuskers were bowled out for 124 chasing 187",
+     "source_key": "csa_boland",
+     "source_url": "https://cricket.co.za/subrayen-five-wicket-haul-guides-dolphins-to-top-of-the-table/",
      "captured_utc": "2026-10-24T17:35:00Z"
     }
    ]

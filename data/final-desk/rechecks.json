@@ -1,0 +1,281 @@
+{
+  "session": "arena/1ecc0d92-olbg2",
+  "checked_utc": "2026-10-24T22:32:00Z",
+  "method": "Each OLBG hub route and each chosen official page was opened first-hand at the stated UTC time. The result column records only what the page displayed in that read; inherited numerical facts were not silently overwritten.",
+  "hub_checks": [
+    {
+      "sport": "Golf",
+      "hub": "Golf/5",
+      "url": "https://www.olbg.com/betting-tips/Golf/5",
+      "status": "no-listings",
+      "flag": true,
+      "result": "Rendered 'No tips found.' The official PGA Tour and DP World Tour leaderboards still show final rounds, so the two golf events are official but cannot be claimed as active OLBG listings."
+    },
+    {
+      "sport": "Volleyball",
+      "hub": "Volleyball/21",
+      "url": "https://www.olbg.com/betting-tips/Volleyball/21",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page shows Abel-Moda Brusque W v Praia Clube W today and many Sunday matches including Trentino v Cisterna, Perugia v Pordenone and Vakifbank W v Galatasaray W."
+    },
+    {
+      "sport": "Rugby Union",
+      "hub": "Rugby_Union/9",
+      "url": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page lists USA v Australia A today plus Harlequins v Saracens and La Rochelle v Bordeaux tomorrow, and the Six Nations 2027 outright."
+    },
+    {
+      "sport": "Cricket",
+      "hub": "Cricket/7",
+      "url": "https://www.olbg.com/betting-tips/Cricket/7",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page lists Toronto Kings v Vancouver Guardians T20 today, Pakistan v England ODI tomorrow, four South African T20 rows and New Zealand v India on 27 October."
+    },
+    {
+      "sport": "Snooker",
+      "hub": "Snooker/8",
+      "url": "https://www.olbg.com/betting-tips/Snooker/8",
+      "status": "no-listings",
+      "flag": true,
+      "result": "Rendered 'No tips found.' The WST match page still shows the Northern Ireland Open final on 25 October with Kyren Wilson awaiting the winner of the live second semi-final."
+    },
+    {
+      "sport": "Darts",
+      "hub": "Darts/15",
+      "url": "https://www.olbg.com/betting-tips/Darts/15",
+      "status": "changed",
+      "flag": true,
+      "result": "The earlier Littler v Aspinall row is gone. The first page now shows Ross Smith v Luke Woodhouse, Gerwyn Price v Stephen Bunting and European Championship outrights."
+    },
+    {
+      "sport": "Baseball",
+      "hub": "Baseball/12",
+      "url": "https://www.olbg.com/betting-tips/Baseball/12",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page lists TB Rays @ MIL Brewers today with a Money Line selection; MLB schedule feed still marks World Series game two as Pre-Game."
+    },
+    {
+      "sport": "Gaelic Sports",
+      "hub": "Gaelic_Football/25",
+      "url": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page lists Moycullen v Salthill-Knocknacarra and St Finbarrs v Nemo Rangers tomorrow, plus November club and 2027 championship rows. Hurling/26 is a separate hub."
+    },
+    {
+      "sport": "Greyhounds",
+      "hub": "Greyhounds/28",
+      "url": "https://www.olbg.com/betting-tips/Greyhounds/28",
+      "status": "changed",
+      "flag": true,
+      "result": "Only 11:04 Doncaster tomorrow is shown on the first page; the two Dunstall Park finals inherited from the earlier capture are no longer visible on the hub."
+    },
+    {
+      "sport": "Tennis",
+      "hub": "Tennis/3",
+      "url": "https://www.olbg.com/betting-tips/Tennis/3",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page lists Rybakina v Fernandez and Medvedev v Basilashvili tomorrow, plus many 26 October match rows; ATP confirms Medvedev v Basilashvili for the Almaty final."
+    },
+    {
+      "sport": "Motor Racing",
+      "hub": "Motor_Racing/14",
+      "url": "https://www.olbg.com/betting-tips/Motor_Racing/14",
+      "status": "no-listings",
+      "flag": true,
+      "result": "Rendered 'No tips found.' The official Formula 1 United States Grand Prix page and 2026 drivers' standings were reachable, but no OLBG race row can be claimed."
+    },
+    {
+      "sport": "Handball",
+      "hub": "Handball/20",
+      "url": "https://www.olbg.com/betting-tips/Handball/20",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page lists many Sunday and 28-29 October matches, including Saint Raphael v PSG Handball, Rhein Neckar Lowen v SC Magdeburg and Fuchse Berlin v RK Partizan."
+    },
+    {
+      "sport": "Ice Hockey",
+      "hub": "Ice_Hockey/13",
+      "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page shows the ten NHL rows from today's card plus Sunday and European league rows; NHL schedule feed confirms five NHL games on 25 October."
+    },
+    {
+      "sport": "Basketball",
+      "hub": "Basketball/4",
+      "url": "https://www.olbg.com/betting-tips/Basketball/4",
+      "status": "confirmed",
+      "flag": false,
+      "result": "First page lists the NBA card plus Sunday Korea KBL games; official NBA standings page returned the 2026-27 conference tables."
+    },
+    {
+      "sport": "Rugby League",
+      "hub": "Rugby_League/10",
+      "url": "https://www.olbg.com/betting-tips/Rugby_League/10",
+      "status": "futures-only",
+      "flag": true,
+      "result": "First page shows only 2027 State of Origin, Super League and NRL outrights. The official NRL match centre still lists Australia v Fiji for round two on 25 October."
+    }
+  ],
+  "official_checks": [
+    {
+      "sports": ["Ice Hockey"],
+      "publisher": "NHL",
+      "url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Feed timestamp 2026-10-24T22:26:45Z; Carolina 18 points, Edmonton 17 and Boston 17 appear in the standings array."
+    },
+    {
+      "sports": ["Ice Hockey"],
+      "publisher": "NHL",
+      "url": "https://api-web.nhle.com/v1/schedule/2026-10-25",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Five FUT games on 25 October, including Florida at Chicago 19:00Z and Montreal at Winnipeg 23:00Z."
+    },
+    {
+      "sports": ["Basketball"],
+      "publisher": "NBA",
+      "url": "https://www.nba.com/standings",
+      "status": "confirmed",
+      "flag": false,
+      "result": "2026-27 Eastern and Western Conference standings table returned; Atlanta, Detroit, Philadelphia and Toronto are shown at 2-0 in the East."
+    },
+    {
+      "sports": ["Golf"],
+      "publisher": "PGA Tour",
+      "url": "https://www.pgatour.com/leaderboard",
+      "status": "changed",
+      "flag": true,
+      "result": "Round three is Official. Austin Smotherman and Seamus Power share first at -16 on +210; the inherited record described Smotherman at -16 through ten holes and Chandler Blanchet second at -15."
+    },
+    {
+      "sports": ["Golf"],
+      "publisher": "DP World Tour",
+      "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Yuto Katsuragawa leads at -13 with rounds 69-68-63; Casey Jarvis is second at -11 and Kim Si Woo third at -10."
+    },
+    {
+      "sports": ["Motor Racing"],
+      "publisher": "Formula 1",
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "status": "confirmed",
+      "flag": false,
+      "result": "2026 drivers' standings table returned: Antonelli 340, Russell 238, Hamilton 229, Verstappen 221, Leclerc 215, Norris 201, Piastri 138."
+    },
+    {
+      "sports": ["Motor Racing"],
+      "publisher": "Formula 1",
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "status": "partial",
+      "flag": false,
+      "result": "Official event page reachable from the fixture record; practice and race schedule values remain those captured at 17:35Z and were not silently refreshed."
+    },
+    {
+      "sports": ["Snooker"],
+      "publisher": "World Snooker Tour",
+      "url": "https://www.wst.tv/matches/",
+      "status": "changed",
+      "flag": true,
+      "result": "Mark Williams v Jak Jones is live at 5-5 in semi-final two; match 63 on Sunday 25 October is Kyren Wilson v winner of match 62, so the final opponent is still undecided."
+    },
+    {
+      "sports": ["Cricket"],
+      "publisher": "ICC",
+      "url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+      "status": "confirmed",
+      "flag": false,
+      "result": "India won the second T20I by four wickets and lead New Zealand 2-0; the article links the official scorecard and the third T20I."
+    },
+    {
+      "sports": ["Cricket"],
+      "publisher": "ECB",
+      "url": "https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Fixture list confirms England Men v Pakistan in Lahore on 25 October at 08:00 GMT, followed by Sri Lanka on 29 October and the final on 31 October."
+    },
+    {
+      "sports": ["Tennis"],
+      "publisher": "ATP Tour",
+      "url": "https://www.atptour.com/en/news/medvedev-bublik-almaty-2026-saturday",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Medvedev reached the Almaty final after Bublik retired at 6-3 and will face qualifier Nikoloz Basilashvili; Medvedev has 37 hard-court wins in 2026."
+    },
+    {
+      "sports": ["Baseball"],
+      "publisher": "MLB Advanced Media",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-23&endDate=2026-10-31&hydrate=team,probablePitcher,decisions,linescore",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Game one is Final, Milwaukee 3-2 Tampa Bay; game two on 2026-10-25T00:00Z is still Pre-Game with Rasmussen and Henderson listed as probables."
+    },
+    {
+      "sports": ["Volleyball"],
+      "publisher": "Lega Pallavolo Serie A",
+      "url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+      "status": "partial",
+      "flag": false,
+      "result": "Official league page reachable; first chunk contains navigation and the full SuperLega team list. The article's form facts remain those captured at 17:35Z."
+    },
+    {
+      "sports": ["Rugby Union"],
+      "publisher": "LNR Top 14",
+      "url": "https://top14.lnr.fr/classement",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Classement page shows Pau second on 22 points with 259 for and 222 against, Bordeaux third on 19 with 215 for and 151 against, and La Rochelle fourth on 18."
+    },
+    {
+      "sports": ["Gaelic Sports"],
+      "publisher": "Kilkenny GAA",
+      "url": "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/",
+      "status": "partial",
+      "flag": false,
+      "result": "Official county final article reachable; first chunk is dominated by cookie and navigation text. The final time and title facts remain those captured at 17:35Z."
+    },
+    {
+      "sports": ["Greyhounds"],
+      "publisher": "GBGB",
+      "url": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Race report confirms Shadow Storm's 15.66 semi-final, Roanna Mamba 15.73, Avarua Lake 15.86 and the £12,500 Scurry Gold Cup final."
+    },
+    {
+      "sports": ["Rugby League"],
+      "publisher": "NRL",
+      "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+      "status": "confirmed",
+      "flag": false,
+      "result": "Match centre lists Australia v Fiji, round two, Sunday 25 October, Suncorp Stadium; Australia's outs are Liam Martin, Mitchell Moses and Reece Walsh."
+    },
+    {
+      "sports": ["Handball"],
+      "publisher": "EHF",
+      "url": "https://ehfcl.eurohandball.com/men/2026-27/standings/",
+      "status": "partial",
+      "flag": false,
+      "result": "Official Champions League page reachable and shows 28-29 October fixtures including Magdeburg v Kriens-Luzern and Fuchse Berlin v Partizan; standings values remain those captured at 17:35Z."
+    },
+    {
+      "sports": ["Darts"],
+      "publisher": "PDC",
+      "url": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest",
+      "status": "partial",
+      "flag": false,
+      "result": "Official European Championship day-three URL reachable but the returned text is dominated by cookie-consent markup; the inherited round-one and format facts were not silently refreshed."
+    }
+  ]
+}

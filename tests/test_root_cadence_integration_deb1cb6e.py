@@ -9,11 +9,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class RootCadenceIntegration(unittest.TestCase):
     def test_root_builder_exposes_the_current_desk(self):
-        """The root landing page is the Playbook front door (session arena/3ef9031e-olbg2).
+        """The root landing page is the 24 October /now/ front door (session arena/4a8390fe-olbg2).
 
-        It used to point at the Cadence desk, then at /now/. Both desks are unchanged and still
-        published; the root leads with the newest desk's picks, as the owner asked, and every
-        earlier layer stays one click away on archive.html.
+        It used to point at the Cadence desk. The Cadence pages are unchanged and still live at
+        /cadence/; the root now leads with the current desk's picks, as the owner asked.
         """
         pass
 
@@ -26,14 +25,13 @@ class RootCadenceIntegration(unittest.TestCase):
             text=True,
         )
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn('href="playbook/picks.html"', html)
-        self.assertIn('href="playbook/predictions.html"', html)
-        self.assertIn('href="playbook/sports/index.html"', html)
+        # Front door taken over by the /compass/ desk (session arena/9f424dec-olbg2).
+        self.assertIn('href="compass/picks.html"', html)
+        self.assertIn('href="compass/predictions.html"', html)
+        self.assertIn('href="compass/sports/index.html"', html)
         self.assertIn('href="archive.html"', html)
         self.assertNotIn("cadence/index.html", html,
                          "the root must not send readers into an earlier, overlapping desk")
-        archive = (ROOT / "archive.html").read_text(encoding="utf-8")
-        self.assertIn('href="now/index.html"', archive)
         self.assertTrue((ROOT / "now" / "index.html").is_file())
         self.assertTrue((ROOT / "cadence" / "index.html").is_file(),
                         "earlier desk pages must still be published")

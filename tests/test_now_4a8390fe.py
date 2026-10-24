@@ -183,8 +183,9 @@ class NowPages(unittest.TestCase):
         for fid in cards:
             self.assertNotIn(fid, started)
         root = (ROOT / "index.html").read_text(encoding="utf-8")
-        for fid in re.findall(r'class="pickcard" href="now/predictions\.html#pred-([^"]+)"', root):
-            self.assertNotIn(fid, started)
+        # Front door taken over by the /compass/ desk (session arena/9f424dec-olbg2).
+        for fid in re.findall(r'class="pickcard" href="compass/predictions\.html#([^"]+)"', root):
+            self.assertNotIn(fid.replace("pred-", ""), started)
 
     def test_started_fixtures_are_flagged(self):
         flagged = load("flagged.json")

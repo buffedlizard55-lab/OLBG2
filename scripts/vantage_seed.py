@@ -46,6 +46,7 @@ PCB_TIMING = "https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-l
 PCB_FORM = "https://www.pcb.com.pk/news-detail/arafat-minhas-6-40-and-59-sink-england-as-pakistan-win-consecutive-games-in-odi-tri-series.html"
 NZC_FIXTURES = "https://scoring.nzc.nz/fixtures"
 BCCI_FIXTURES = "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced"
+BCCI_MATCH2 = "https://www.bcci.tv/matches/88d47fe3-ead4-4b91-b0cc-4bda908fb8d7/india-women-vs-zimbabwe-women"
 BCCI_INJURY = "https://www.bcci.tv/news/article/jintimani-kalita-replaces-renuka-singh-thakur-in-indias-odi-squad"
 BCCI_FORM = "https://www.bcci.tv/matches/023cf7d3-6571-4932-997b-cac801ed0b4a/india-women-vs-zimbabwe-women"
 WTA_NINGBO = "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez"
@@ -57,6 +58,7 @@ MUNSTER = "https://munster.gaa.ie/fixtures/events-calendar/"
 KILKENNY = "https://kilkennygaa.ie/2026/10/county-final-weekend-at-upmc-nowlan-park-senior-junior-titles-on-the-line/"
 GBGB = "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/"
 F1 = "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-united-states-grand-prix-and-how-can-i-watch-it.5jZFEoK96n4tpbRzEJjRoH"
+F1_RACE_HUB = "https://www.formula1.com/en/racing/2026/united-states"
 NRL = "https://www.nrl.com/news/2026/10/20/world-cup-team-lists-mens-round-2/"
 EHF_TABLE = "https://ehfcl.eurohandball.com/men/2026-27/standings/"
 PGA = "https://www.pgatour.com/leaderboard"
@@ -176,7 +178,8 @@ def assemble() -> tuple[list[dict], list[dict]]:
         (PCB_TIMING, "Cricket", "PCB press release explicitly says all tri-series matches begin at 1pm PKT"),
         (PCB_FORM, "Cricket", "Pakistan 87-run win against England on 20 Oct; Arafat Minhas 6-40 and 59"),
         (NZC_FIXTURES, "Cricket", "India vs New Zealand 3rd T20I date and pairing; displayed clock varies by reader timezone, so no UTC start transcribed"),
-        (BCCI_FIXTURES, "Cricket", "25 Oct India W vs Zimbabwe W second ODI, 14:00 IST, venue"),
+        (BCCI_FIXTURES, "Cricket", "25 Oct India W vs Zimbabwe W second ODI, 14:00 IST, Vadodara"),
+        (BCCI_MATCH2, "Cricket", "25 Oct second ODI match page: 04:30 EDT start and BCA Stadium, Vadodara; matches 14:00 IST"),
         (BCCI_FORM, "Cricket", "India W won first ODI by nine wickets on 23 Oct"),
         (BCCI_INJURY, "Cricket", "Renuka Singh Thakur replaced by Jintimani Kalita for ODI squad"),
         (WTA_NINGBO, "Tennis", "Rybakina vs Fernandez final on Sunday, semi-final results and H2H 3-2"),
@@ -188,6 +191,7 @@ def assemble() -> tuple[list[dict], list[dict]]:
         (KILKENNY, "Hurling", "25 Oct Ballyhale Shamrocks–Tullaroan Kilkenny senior final, venue; no official throw-in time on this article"),
         (GBGB, "Greyhounds", "24 Oct Scurry Gold Cup final and Shadow Storm 15.66sec semi; not a race-card source"),
         (F1, "Formula 1", "Austin race 25 Oct 15:00 track local, 24 Oct qualifying 16:00 local"),
+        (F1_RACE_HUB, "Formula 1", "Official USA Grand Prix hub: Charles Leclerc topped FP2 in 1:35.291; circuit and lap count"),
         (NRL, "Rugby League", "2026 RLWC fixtures, but no matching OLBG match tips in the captured first page"),
         (EHF_TABLE, "Handball", "EHF 2026-27 group standings and Oct 28–29 upcoming fixture links"),
         (PGA, "Golf", "Bermuda event underway 22–25 Oct, while OLBG golf hub shows no tips"),
@@ -274,8 +278,9 @@ def assemble() -> tuple[list[dict], list[dict]]:
                             status_note="NZC page shows a reader-local time with no zone and changes with the capture locale. UTC start withheld"))
     official.append(fixture("cricket-ind-zim-w-odi2", "Cricket", "188847", "India Women", "Zimbabwe Women",
                             "2026-10-25", BCCI_FIXTURES, competition="Women's ODI 2nd", local="14:00", zone="Asia/Kolkata",
-                            venue="BCA Stadium, Vadodara", extra_sources=(BCCI_FORM, BCCI_INJURY),
+                            venue="BCA Stadium, Vadodara", extra_sources=(BCCI_MATCH2, BCCI_FORM, BCCI_INJURY),
                             facts=[("Second ODI scheduled 25 October at 14:00 IST, Vadodara", BCCI_FIXTURES),
+                                   ("BCCI second ODI match page shows BCA Stadium, Vadodara, and 04:30 EDT (the same instant as 14:00 IST)", BCCI_MATCH2),
                                    ("India Women won the first ODI by nine wickets", BCCI_FORM),
                                    ("Renuka Singh Thakur ruled out of ODI series and replaced by Jintimani Kalita", BCCI_INJURY)],
                             status_note="OLBG lists a top-batsman prop, not a match-winner; no batter-specific rate captured"))
@@ -343,7 +348,9 @@ def assemble() -> tuple[list[dict], list[dict]]:
     official.append(fixture("f1-usa-gp", "Motor Racing", "913", "United States Grand Prix", None,
                             "2026-10-25", F1, category="race", competition="Formula 1",
                             local="15:00", zone="America/Chicago", venue="Circuit of The Americas",
-                            facts=[("The Grand Prix is on 25 Oct at 15:00 Austin local; Friday practice led by Charles Leclerc", F1)],
+                            extra_sources=(F1_RACE_HUB,),
+                            facts=[("The Grand Prix is on 25 Oct at 15:00 Austin local", F1),
+                                   ("The Formula 1 United States GP hub lists Charles Leclerc fastest in FP2 at 1:35.291", F1_RACE_HUB)],
                             status_note="Race winner is an outright, not a team-versus-team match; no probabilistic price"))
 
     # NBA injury PDF *does* contain matchup/date/tip; games shell by itself failed.

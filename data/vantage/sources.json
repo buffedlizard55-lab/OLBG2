@@ -1,6 +1,6 @@
 {
   "as_of_utc": "2026-10-24T17:50:00Z",
-  "count": 41,
+  "count": 43,
   "sources": [
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-24",
@@ -125,7 +125,14 @@
       "url": "https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced",
       "scope": "Cricket",
       "checked_on": "2026-10-24",
-      "what_checked": "25 Oct India W vs Zimbabwe W second ODI, 14:00 IST, venue",
+      "what_checked": "25 Oct India W vs Zimbabwe W second ODI, 14:00 IST, Vadodara",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.bcci.tv/matches/88d47fe3-ead4-4b91-b0cc-4bda908fb8d7/india-women-vs-zimbabwe-women",
+      "scope": "Cricket",
+      "checked_on": "2026-10-24",
+      "what_checked": "25 Oct second ODI match page: 04:30 EDT start and BCA Stadium, Vadodara; matches 14:00 IST",
       "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
     },
     {
@@ -203,6 +210,13 @@
       "scope": "Formula 1",
       "checked_on": "2026-10-24",
       "what_checked": "Austin race 25 Oct 15:00 track local, 24 Oct qualifying 16:00 local",
+      "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
+    },
+    {
+      "url": "https://www.formula1.com/en/racing/2026/united-states",
+      "scope": "Formula 1",
+      "checked_on": "2026-10-24",
+      "what_checked": "Official USA Grand Prix hub: Charles Leclerc topped FP2 in 1:35.291; circuit and lap count",
       "capture": "First-hand official page/API read by web tool; structured fact transcription only, full raw body not persisted"
     },
     {

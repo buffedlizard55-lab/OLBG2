@@ -111,6 +111,19 @@ class SourceBoundaryTests(unittest.TestCase):
         for p in self.predictions["predictions"]:
             self.assertIsNone(p["injury_status"])
 
+    def test_cricket_and_formula_one_fields_use_the_specific_official_pages(self):
+        bcci = self.fixtures["cricket-ind-zim-w-odi2"]
+        self.assertEqual(bcci["start_utc"], "2026-10-25T08:30:00Z")
+        self.assertEqual(bcci["venue"], "BCA Stadium, Vadodara")
+        self.assertTrue(any("bcci.tv/matches/88d47" in fact["url"] for fact in bcci["facts"]))
+        self.assertEqual(self.fixtures["tennis-almaty-final"]["start_utc"], None)
+        f1 = self.fixtures["f1-usa-gp"]
+        self.assertTrue(any("formula1.com/en/racing/2026/united-states" in fact["url"]
+                            for fact in f1["facts"]))
+        self.assertTrue(any("15:00 Austin local" in fact["claim"]
+                            and "latest/article/what-time" in fact["url"] for fact in f1["facts"]))
+        self.assertEqual(f1["start_utc"], "2026-10-25T20:00:00Z")
+
     def test_tennis_darts_golf_rugby_league_unsupported_gates_are_blank(self):
         by_id = {r["olbg_event_id"]: r for r in self.matches["matches"]}
         for eid in ("902207", "902251", "32397", "32400", "2695857", "2801554"):
@@ -136,7 +149,7 @@ class SourceBoundaryTests(unittest.TestCase):
         self.assertEqual({f["sport"] for f in gaps}, set(SPORTS))
         self.assertEqual(len([f for f in self.flags["flags"] if f["category"] == "unverified listing"]), 56)
         codes = {f["id"] for f in self.flags["flags"]}
-        for code in ("V-CRICKET-DATE", "V-NBA-TIMES", "V-NZC-TIME", "V-BCCI-TIME", "V-WTA-DRAW", "V-NHL-CGY"):
+        for code in ("V-CRICKET-DATE", "V-NBA-TIMES", "V-NZC-TIME", "V-WTA-DRAW", "V-NHL-CGY"):
             self.assertIn(code, codes)
         self.assertTrue(all(f["official_url"].startswith("https://") for f in self.flags["flags"]))
 
@@ -199,6 +212,7 @@ class OriginalLineTests(unittest.TestCase):
         self.assertIn("Know the match.", page)
         self.assertIn("Boston Bruins", page)
         self.assertIn("17:50 UTC", page)
+        self.assertIn("Official link checks continued later", page)
         self.assertIn("fair -238", (OUT / "band.html").read_text(encoding="utf-8").replace("<td>", "fair "))
         js = (OUT / "assets/app.js").read_text(encoding="utf-8")
         self.assertIn("Started / archived", js)

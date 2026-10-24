@@ -1,0 +1,5041 @@
+{
+ "as_of_utc": "2026-10-24T22:45:00Z",
+ "count": 122,
+ "fixtures": [
+  {
+   "away": "Toronto Maple Leafs",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Edmonton record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "8-1-1, 17 pts, 47 GF 32 GA in 10 GP; road 5-0-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Edmonton streak",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "W3"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Toronto record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "6-4-2, 14 pts, 43 GF 39 GA in 12 GP; home 4-3-1"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "TOR @ EDM, 7:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Edmonton Oilers",
+   "id": "nhl-tor-edm",
+   "inputs": {
+    "away": "TOR",
+    "home": "EDM",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:07",
+    "event": "TOR Maple Leafs @ EDM Oilers",
+    "event_id": "200010",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 79,
+    "selection": "EDM Oilers",
+    "sport": "Ice Hockey",
+    "tips": "11/14",
+    "url": "https://www.olbg.com/betting-tips/event/200010"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 23:00 UTC (NHL schedule)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Rogers Place, Edmonton"
+  },
+  {
+   "away": "San Jose Sharks",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Boston record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "8-2-1, 17 pts, 42 GF 22 GA in 11 GP; home 4-1-0 (21 GF 6 GA in 5)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Boston home defence",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "6 goals against in 5 home games"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "San Jose record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "6-4-1, 13 pts, 33 GF 37 GA in 11 GP; road 4-2-1"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "San Jose regulation",
+     "source_key": "now_4a8390fe",
+     "source_url": "data/now/fixtures.json",
+     "value": "1 regulation win in 11 (inherited, 17:35Z capture)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "SJS @ BOS, 7:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Boston Bruins",
+   "id": "nhl-sjs-bos",
+   "inputs": {
+    "away": "SJS",
+    "home": "BOS",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:07",
+    "event": "SJS Sharks @ BOS Bruins",
+    "event_id": "200007",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 83,
+    "selection": "BOS Bruins",
+    "sport": "Ice Hockey",
+    "tips": "10/12",
+    "url": "https://www.olbg.com/betting-tips/event/200007"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 23:00 UTC (NHL schedule)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "TD Garden, Boston"
+  },
+  {
+   "away": "Carolina Hurricanes",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Carolina record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "8-2-2, 18 pts (league lead), 47 GF 33 GA in 12 GP; road 6-1-1 (34 GF 23 GA)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "St. Louis record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "5-4-1, 11 pts, 35 GF 31 GA in 10 GP; home 3-0-1"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "St. Louis streak",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "W2"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "CAR @ STL, 7:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "St. Louis Blues",
+   "id": "nhl-car-stl",
+   "inputs": {
+    "away": "CAR",
+    "home": "STL",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:07",
+    "event": "CAR Hurricanes @ STL Blues",
+    "event_id": "200002",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 91,
+    "selection": "CAR Hurricanes",
+    "sport": "Ice Hockey",
+    "tips": "10/11",
+    "url": "https://www.olbg.com/betting-tips/event/200002"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 23:00 UTC (NHL schedule)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Enterprise Center, St. Louis"
+  },
+  {
+   "away": "Vegas Golden Knights",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Vegas record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "8-4-0, 16 pts, 46 GF 36 GA in 12 GP; road 3-2-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Columbus record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "3-5-0, 6 pts, 20 GF 29 GA in 8 GP; home 3-3-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Columbus streak",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "L2"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "VGS @ CLB, 7:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Columbus Blue Jackets",
+   "id": "nhl-vgk-clb",
+   "inputs": {
+    "away": "VGK",
+    "home": "CBJ",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:07",
+    "event": "VGS Golden Knights @ CLB Blue Jackets",
+    "event_id": "200001",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 67,
+    "selection": "VGS Golden Knights",
+    "sport": "Ice Hockey",
+    "tips": "8/12",
+    "url": "https://www.olbg.com/betting-tips/event/200001"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 23:00 UTC (NHL schedule)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Nationwide Arena, Columbus"
+  },
+  {
+   "away": "New York Rangers",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Ottawa record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "7-4-0, 14 pts, 31 GF 30 GA in 11 GP; home 4-2-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "New York record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "7-4-1, 15 pts, 37 GF 29 GA in 12 GP; home 6-0-0, road 1-4-1"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "New York home/road split",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "Perfect 6-0-0 at home; 1-4-1 on the road"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "NYR @ OTT, 7:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Ottawa Senators",
+   "id": "nhl-nyr-ott",
+   "inputs": {
+    "away": "NYR",
+    "home": "OTT",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:07",
+    "event": "NYR Rangers @ OTT Senators",
+    "event_id": "200008",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 86,
+    "selection": "NYR Rangers",
+    "sport": "Ice Hockey",
+    "tips": "6/7",
+    "url": "https://www.olbg.com/betting-tips/event/200008"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 23:00 UTC (NHL schedule)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Canadian Tire Centre, Ottawa"
+  },
+  {
+   "away": "Buffalo Sabres",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Washington record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "5-4-0, 10 pts, 30 GF 29 GA in 9 GP; home 4-2-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Buffalo record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "4-4-2, 10 pts, 28 GF 37 GA in 10 GP; road 1-1-2"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "BUF @ WAS, 7:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Washington Capitals",
+   "id": "nhl-buf-was",
+   "inputs": {
+    "away": "BUF",
+    "home": "WSH",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:07",
+    "event": "BUF Sabres @ WAS Capitals",
+    "event_id": "200003",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 71,
+    "selection": "WAS Capitals",
+    "sport": "Ice Hockey",
+    "tips": "5/7",
+    "url": "https://www.olbg.com/betting-tips/event/200003"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 23:00 UTC (NHL schedule)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "Capital One Arena, Washington"
+  },
+  {
+   "away": "Nashville Predators",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Pittsburgh record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "4-6-1, 9 pts, 37 GF 38 GA in 11 GP; home 3-1-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Nashville record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "3-3-3, 9 pts, 23 GF 30 GA in 9 GP; road 1-1-2"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "NSH @ PIT, 7:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Pittsburgh Penguins",
+   "id": "nhl-nsh-pit",
+   "inputs": {
+    "away": "NSH",
+    "home": "PIT",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:07",
+    "event": "NSH Predators @ PIT Penguins",
+    "event_id": "200006",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 80,
+    "selection": "PIT Penguins",
+    "sport": "Ice Hockey",
+    "tips": "4/5",
+    "url": "https://www.olbg.com/betting-tips/event/200006"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 23:00 UTC (NHL schedule)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "PPG Paints Arena, Pittsburgh"
+  },
+  {
+   "away": "Tampa Bay Lightning",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Utah record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "7-4-0, 14 pts, 41 GF 36 GA in 11 GP; home 3-1-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Tampa Bay record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "7-3-0, 14 pts, 34 GF 29 GA in 10 GP; road 2-3-0"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "TBL @ UTA, 9:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Utah Mammoth",
+   "id": "nhl-tbl-uta",
+   "inputs": {
+    "away": "TBL",
+    "home": "UTA",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 22:07",
+    "event": "TBL Lightning @ UTA Mammoth",
+    "event_id": "200009",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 56,
+    "selection": "UTA Mammoth",
+    "sport": "Ice Hockey",
+    "tips": "5/9",
+    "url": "https://www.olbg.com/betting-tips/event/200009"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 21:00 EDT / 01:00Z (NHL schedule)",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "venue": "Delta Center, Salt Lake City"
+  },
+  {
+   "away": "Detroit Red Wings",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Calgary record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "3-6-0, 6 pts, 19 GF 38 GA in 9 GP (league-worst goal differential -19)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Detroit record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "4-3-3, 11 pts, 28 GF 30 GA in 10 GP; W1"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "DET @ CGY, 10:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Calgary Flames",
+   "id": "nhl-det-cgy",
+   "inputs": {
+    "away": "DET",
+    "home": "CGY",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 23:07",
+    "event": "DET Red Wings @ CGY Flames",
+    "event_id": "200004",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 67,
+    "selection": "CGY Flames",
+    "sport": "Ice Hockey",
+    "tips": "4/6",
+    "url": "https://www.olbg.com/betting-tips/event/200004"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 22:00 EDT / 02:00Z (NHL schedule)",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": "Scotiabank Saddledome, Calgary"
+  },
+  {
+   "away": "Minnesota Wild",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Seattle record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "7-3-1, 15 pts, 44 GF 37 GA in 11 GP; home 3-1-0, W2"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Minnesota record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "6-3-2, 14 pts, 32 GF 27 GA in 11 GP; road 2-3-2"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_24",
+     "source_url": "https://www.nhl.com/schedule/2026-10-24",
+     "value": "MIN @ SEA, 10:00 PM EDT Saturday 24 Oct (official)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Seattle Kraken",
+   "id": "nhl-min-sea",
+   "inputs": {
+    "away": "MIN",
+    "home": "SEA",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-24",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 23:07",
+    "event": "MIN Wild @ SEA Kraken",
+    "event_id": "200005",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 58,
+    "selection": "SEA Kraken",
+    "sport": "Ice Hockey",
+    "tips": "7/12",
+    "url": "https://www.olbg.com/betting-tips/event/200005"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-24 22:00 EDT / 02:00Z (NHL schedule)",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": "Climate Pledge Arena, Seattle"
+  },
+  {
+   "away": "Montréal Canadiens",
+   "blank_reason": "",
+   "competition": "NHL, 2026-27 regular season (special event, neutral site)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "nhl_sched_25",
+     "source_url": "https://www.nhl.com/schedule/2026-10-25",
+     "value": "Canadiens vs Jets at a neutral site, 7:00 PM EDT Sunday 25 Oct (official; NHL marks it a special-event-season game)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Montreal record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "5-3-2, 12 pts, 34 GF 35 GA in 10 GP; W1"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Winnipeg record",
+     "source_key": "nhl_standings",
+     "source_url": "https://www.nhl.com/standings",
+     "value": "4-3-3, 11 pts, 26 GF 29 GA in 10 GP"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Winnipeg Jets",
+   "id": "nhl-mtl-wpg",
+   "inputs": {
+    "away": "MTL",
+    "home": "WPG",
+    "kind": "nhl"
+   },
+   "official_url": "https://www.nhl.com/schedule/2026-10-25",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 19:07",
+    "event": "MTL Canadiens @ WPG Jets (neutral site)",
+    "event_id": "200074",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Game Totals",
+    "pct": 100,
+    "selection": "Over 5.50",
+    "sport": "Ice Hockey",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/200074"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "2026-10-25 19:00 EDT / 23:00Z, neutral site (NHL schedule)",
+   "start_utc": "2026-10-25T23:00:00Z",
+   "venue": "Neutral site (NHL special event)"
+  },
+  {
+   "away": "Servette Genf",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Swiss National League",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "ZSC Lions",
+   "id": "ice-serv-zsc",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "Servette GE vs ZSC Lions (Swiss NL)",
+    "event_id": "200021",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "ZSC Lions",
+    "sport": "Ice Hockey",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/200021"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (13:00Z)",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Lowen Frankfurt",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Deutsche Eishockey Liga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Grizzlys Wolfsburg",
+   "id": "ice-fra-wol",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "Lowen Frankfurt vs Grizzlys Wolfsburg (DEL)",
+    "event_id": "200037",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Grizzlys Wolfsburg",
+    "sport": "Ice Hockey",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/200037"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (13:00Z)",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Schwenninger Wild Wings",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Deutsche Eishockey Liga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Eisbaren Berlin",
+   "id": "ice-schw-ber",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "Schwenninger Wild Wings vs Eisbaren Berlin (DEL)",
+    "event_id": "200041",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Eisbaren Berlin",
+    "sport": "Ice Hockey",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/200041"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (13:00Z)",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "SC Bern",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Swiss National League",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "HC Lugano",
+   "id": "ice-bern-lug",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "SC Bern vs HC Lugano (Swiss NL)",
+    "event_id": "200018",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "SC Bern",
+    "sport": "Ice Hockey",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/200018"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (13:00Z)",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Vienna Capitals",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Austrian ICE Hockey League",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Graz 99ers",
+   "id": "ice-vie-grz",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:45",
+    "event": "Vienna Capitals vs Graz 99ers (Austria EHL)",
+    "event_id": "200043",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Vienna Capitals",
+    "sport": "Ice Hockey",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/200043"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (13:45Z)",
+   "start_utc": "2026-10-25T13:45:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Krefeld Pinguine",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Deutsche Eishockey Liga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "EHC Munchen",
+   "id": "ice-kre-muc",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:30",
+    "event": "Krefeld Pinguine vs EHC Munchen (DEL)",
+    "event_id": "200039",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "EHC Munchen",
+    "sport": "Ice Hockey",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/200039"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (15:30Z)",
+   "start_utc": "2026-10-25T15:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Iserlohn Roosters",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Deutsche Eishockey Liga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Nurnberg Ice Tigers",
+   "id": "ice-ise-nur",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:30",
+    "event": "Iserlohn Roosters vs Nurnberg Ice Tigers (DEL)",
+    "event_id": "200038",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Iserlohn Roosters",
+    "sport": "Ice Hockey",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/200038"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (15:30Z)",
+   "start_utc": "2026-10-25T15:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Augsburger Panther",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Deutsche Eishockey Liga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Straubing Tigers",
+   "id": "ice-aug-str",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:30",
+    "event": "Augsburger Panther vs Straubing Tigers (DEL)",
+    "event_id": "200036",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Straubing Tigers",
+    "sport": "Ice Hockey",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/200036"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (15:30Z)",
+   "start_utc": "2026-10-25T15:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Fischtown Pinguins Bremerhaven",
+   "blank_reason": "No official league fixture page captured for this European-league game; start time is OLBG-derived.",
+   "competition": "Deutsche Eishockey Liga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "ERC Ingolstadt",
+   "id": "ice-bre-erc",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 14:00",
+    "event": "Fischtown Pinguins Bremerhaven vs ERC Ingolstadt (DEL)",
+    "event_id": "200040",
+    "hub": "https://www.olbg.com/betting-tips/Ice_Hockey/13",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Fischtown Pinguins Bremerhaven",
+    "sport": "Ice Hockey",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/200040"
+   },
+   "sport": "Ice Hockey",
+   "start_display": "per OLBG display (18:00Z)",
+   "start_utc": "2026-10-25T18:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Tampa Bay Rays",
+   "blank_reason": "",
+   "competition": "MLB World Series 2026, Game 2 (Tampa Bay AL vs Milwaukee NL)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Brewers regular season",
+     "source_key": "mlb_nl",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason",
+     "value": "103-59 (.636), NL Central champions; 832 runs scored 618 allowed; home 55-26; night 68-35; W5 streak, last ten 8-2"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Rays regular season",
+     "source_key": "mlb_al",
+     "source_url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason",
+     "value": "98-64 (.605), AL East champions; 736 runs scored 650 allowed; road 43-38; night 63-35"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "World Series Game 1 result",
+     "source_key": "now_4a8390fe",
+     "source_url": "data/now/fixtures.json",
+     "value": "Brewers 3, Rays 2 (23 October); Misiorowski win, Martinez loss, Megill save (inherited, corroborated by series record 1-0 in this session's schedule fetch)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Game 2 probable pitchers",
+     "source_key": "mlb_sched_ws",
+     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-31&hydrate=team,probablePitcher,decisions",
+     "value": "Drew Rasmussen (TB) vs Logan Henderson (MIL) (official)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Rasmussen 2026",
+     "source_key": "mlb_pitchers",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "value": "30 GS, 16-5, 2.67 ERA, 172.0 IP, 174 K, 32 BB, 0.91 WHIP, 9.10 K/9"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Henderson 2026",
+     "source_key": "mlb_pitchers",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "value": "18 GS, 11-3, 2.47 ERA, 98.1 IP, 110 K, 19 BB, 0.84 WHIP, 10.07 K/9"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Milwaukee Brewers",
+   "id": "mlb-g2",
+   "inputs": {
+    "away": "TB",
+    "away_ra_pg": 4.012,
+    "away_rs_pg": 4.543,
+    "away_sp_era": 2.67,
+    "away_sp_whip": 0.91,
+    "home": "MIL",
+    "home_ra_pg": 3.815,
+    "home_rs_pg": 5.136,
+    "home_sp_era": 2.47,
+    "home_sp_whip": 0.84,
+    "kind": "mlb"
+   },
+   "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-31&hydrate=team,probablePitcher,decisions",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 20:00",
+    "event": "TB Rays @ MIL Brewers",
+    "event_id": "160792",
+    "hub": "https://www.olbg.com/betting-tips/Baseball/12",
+    "market": "Money Line",
+    "pct": 59,
+    "selection": "TB Rays",
+    "sport": "Baseball",
+    "tips": "13/22",
+    "url": "https://www.olbg.com/betting-tips/event/160792"
+   },
+   "sport": "Baseball",
+   "start_display": "2026-10-24 20:00 EDT / 00:00Z (MLB StatsAPI)",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "venue": "American Family Field, Milwaukee"
+  },
+  {
+   "away": "Milwaukee Brewers",
+   "blank_reason": "",
+   "competition": "MLB World Series 2026, Game 3 (official schedule; not on the OLBG hub at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Game 3 identity",
+     "source_key": "now_4a8390fe",
+     "source_url": "data/now/fixtures.json",
+     "value": "officialDate 2026-10-26 (gamePk 849804), Tropicana Field (inherited)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Game 3 probable pitchers",
+     "source_key": "mlb_sched_ws",
+     "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-31&hydrate=team,probablePitcher,decisions",
+     "value": "Robert Gasser (MIL) vs Freddy Peralta (TB) (official)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Gasser 2026",
+     "source_key": "mlb_pitchers_g3",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=688107,642547&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "value": "20 GS, 5-5, 3.87 ERA, 109.1 IP, WHIP 1.19, 8.48 K/9, 2.88 BB/9 (LHP)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Peralta 2026 with TB",
+     "source_key": "mlb_pitchers_g3",
+     "source_url": "https://statsapi.mlb.com/api/v1/people?personIds=688107,642547&hydrate=stats(group=[pitching],type=[season],season=2026)",
+     "value": "10 GS, 5-2, 3.25 ERA, 55.1 IP, WHIP 1.01 (RHP; traded from New York mid-season)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Tampa Bay Rays",
+   "id": "mlb-g3",
+   "inputs": {
+    "away": "MIL",
+    "away_ra_pg": 3.815,
+    "away_rs_pg": 5.136,
+    "away_sp_era": 3.87,
+    "away_sp_whip": 1.19,
+    "home": "TB",
+    "home_ra_pg": 4.012,
+    "home_rs_pg": 4.543,
+    "home_sp_era": 3.25,
+    "home_sp_whip": 1.01,
+    "kind": "mlb"
+   },
+   "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-31&hydrate=team,probablePitcher,decisions",
+   "olbg_listed": false,
+   "olbg_listing": null,
+   "sport": "Baseball",
+   "start_display": "2026-10-26 20:00 EDT / 00:00Z (MLB StatsAPI)",
+   "start_utc": "2026-10-27T00:00:00Z",
+   "venue": "Tropicana Field, St. Petersburg"
+  },
+  {
+   "away": "Milwaukee Bucks",
+   "blank_reason": "Prior-season (2025-26) records unavailable from the official static page (JS-gated); current 2-game records only, so confidence is capped at medium.",
+   "competition": "NBA 2026-27 regular season (2 games played each side at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Philadelphia 76ers 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "2-0 (home 1-0, road 1-0)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Milwaukee Bucks 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-2 (home 0-1, road 0-1)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Philadelphia 76ers",
+   "id": "nba-mil-phi",
+   "inputs": {
+    "away": "MIL",
+    "home": "PHI",
+    "kind": "nba"
+   },
+   "official_url": "https://www.nba.com/standings",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:30",
+    "event": "MIL Bucks @ PHI 76ers",
+    "event_id": "536111",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 57,
+    "selection": "PHI 76ers",
+    "sport": "Basketball",
+    "tips": "8/14",
+    "url": "https://www.olbg.com/betting-tips/event/536111"
+   },
+   "sport": "Basketball",
+   "start_display": "official UTC (2025-26 priors unavailable; nba.com standings page is JS-gated — flagged)",
+   "start_utc": "2026-10-24T23:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Brooklyn Nets",
+   "blank_reason": "Prior-season (2025-26) records unavailable from the official static page (JS-gated); current 2-game records only, so confidence is capped at medium.",
+   "competition": "NBA 2026-27 regular season (2 games played each side at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Cleveland Cavaliers 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-1 (home 0-0, road 0-1)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Brooklyn Nets 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-1 (home 0-1, road 0-0)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Cleveland Cavaliers",
+   "id": "nba-bkn-cle",
+   "inputs": {
+    "away": "BKN",
+    "home": "CLE",
+    "kind": "nba"
+   },
+   "official_url": "https://www.nba.com/standings",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:30",
+    "event": "BKN Nets @ CLE Cavaliers",
+    "event_id": "536112",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 64,
+    "selection": "CLE Cavaliers",
+    "sport": "Basketball",
+    "tips": "7/11",
+    "url": "https://www.olbg.com/betting-tips/event/536112"
+   },
+   "sport": "Basketball",
+   "start_display": "official UTC (2025-26 priors unavailable; nba.com standings page is JS-gated — flagged)",
+   "start_utc": "2026-10-24T23:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "San Antonio Spurs",
+   "blank_reason": "Prior-season (2025-26) records unavailable from the official static page (JS-gated); current 2-game records only, so confidence is capped at medium.",
+   "competition": "NBA 2026-27 regular season (2 games played each side at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Dallas Mavericks 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "1-1 (home 0-0, road 1-1)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "San Antonio Spurs 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-2 (home 0-0, road 0-2)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Dallas Mavericks",
+   "id": "nba-sa-dal",
+   "inputs": {
+    "away": "SA",
+    "home": "DAL",
+    "kind": "nba"
+   },
+   "official_url": "https://www.nba.com/standings",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 20:00",
+    "event": "SA Spurs @ DAL Mavericks",
+    "event_id": "536114",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 70,
+    "selection": "SA Spurs",
+    "sport": "Basketball",
+    "tips": "7/10",
+    "url": "https://www.olbg.com/betting-tips/event/536114"
+   },
+   "sport": "Basketball",
+   "start_display": "official UTC (2025-26 priors unavailable; nba.com standings page is JS-gated — flagged)",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Washington Wizards",
+   "blank_reason": "Prior-season (2025-26) records unavailable from the official static page (JS-gated); current 2-game records only, so confidence is capped at medium.",
+   "competition": "NBA 2026-27 regular season (2 games played each side at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Chicago Bulls 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "1-1 (home 0-0, road 1-1)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Washington Wizards 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "1-1 (home 1-1, road 0-0)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Chicago Bulls",
+   "id": "nba-was-chi",
+   "inputs": {
+    "away": "WAS",
+    "home": "CHI",
+    "kind": "nba"
+   },
+   "official_url": "https://www.nba.com/standings",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 20:00",
+    "event": "WAS Wizards @ CHI Bulls",
+    "event_id": "536113",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "WAS Wizards",
+    "sport": "Basketball",
+    "tips": "3/3",
+    "url": "https://www.olbg.com/betting-tips/event/536113"
+   },
+   "sport": "Basketball",
+   "start_display": "official UTC (2025-26 priors unavailable; nba.com standings page is JS-gated — flagged)",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Houston Rockets",
+   "blank_reason": "Prior-season (2025-26) records unavailable from the official static page (JS-gated); current 2-game records only, so confidence is capped at medium.",
+   "competition": "NBA 2026-27 regular season (2 games played each side at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Atlanta Hawks 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "2-0 (home 0-0, road 2-0)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Houston Rockets 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "2-0 (home 1-0, road 1-0)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Atlanta Hawks",
+   "id": "nba-hou-atl",
+   "inputs": {
+    "away": "HOU",
+    "home": "ATL",
+    "kind": "nba"
+   },
+   "official_url": "https://www.nba.com/standings",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 20:30",
+    "event": "HOU Rockets @ ATL Hawks",
+    "event_id": "536115",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 83,
+    "selection": "ATL Hawks",
+    "sport": "Basketball",
+    "tips": "5/6",
+    "url": "https://www.olbg.com/betting-tips/event/536115"
+   },
+   "sport": "Basketball",
+   "start_display": "official UTC (2025-26 priors unavailable; nba.com standings page is JS-gated — flagged)",
+   "start_utc": "2026-10-25T00:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "New Orleans Pelicans",
+   "blank_reason": "Prior-season (2025-26) records unavailable from the official static page (JS-gated); current 2-game records only, so confidence is capped at medium.",
+   "competition": "NBA 2026-27 regular season (2 games played each side at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Denver Nuggets 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-1 (home 0-0, road 0-1)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "New Orleans Pelicans 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-2 (home 0-1, road 0-1)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Denver Nuggets",
+   "id": "nba-no-den",
+   "inputs": {
+    "away": "NO",
+    "home": "DEN",
+    "kind": "nba"
+   },
+   "official_url": "https://www.nba.com/standings",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 22:00",
+    "event": "NO Pelicans @ DEN Nuggets",
+    "event_id": "536116",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 80,
+    "selection": "DEN Nuggets",
+    "sport": "Basketball",
+    "tips": "8/10",
+    "url": "https://www.olbg.com/betting-tips/event/536116"
+   },
+   "sport": "Basketball",
+   "start_display": "official UTC (2025-26 priors unavailable; nba.com standings page is JS-gated — flagged)",
+   "start_utc": "2026-10-25T01:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Golden State Warriors",
+   "blank_reason": "Prior-season (2025-26) records unavailable from the official static page (JS-gated); current 2-game records only, so confidence is capped at medium.",
+   "competition": "NBA 2026-27 regular season (2 games played each side at capture)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Phoenix Suns 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-1 (home 0-0, road 0-1)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Golden State Warriors 2026-27 record",
+     "source_key": "nba_standings",
+     "source_url": "https://www.nba.com/standings",
+     "value": "0-2 (home 0-1, road 0-1)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Phoenix Suns",
+   "id": "nba-gs-phx",
+   "inputs": {
+    "away": "GS",
+    "home": "PHX",
+    "kind": "nba"
+   },
+   "official_url": "https://www.nba.com/standings",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 23:00",
+    "event": "GS Warriors @ PHX Suns",
+    "event_id": "536118",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 60,
+    "selection": "GS Warriors",
+    "sport": "Basketball",
+    "tips": "3/5",
+    "url": "https://www.olbg.com/betting-tips/event/536118"
+   },
+   "sport": "Basketball",
+   "start_display": "official UTC (2025-26 priors unavailable; nba.com standings page is JS-gated — flagged)",
+   "start_utc": "2026-10-25T02:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Korea Gas",
+   "blank_reason": "No official KBL fixture page captured; OLBG listing only.",
+   "competition": "Korean Basketball League (KBL)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Seoul Thunders",
+   "id": "kbl-gas-thr",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 03:30",
+    "event": "Korea Gas vs Seoul Thunders (KBL)",
+    "event_id": "536125",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Korea Gas",
+    "sport": "Basketball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/536125"
+   },
+   "sport": "Basketball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T07:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Anyang",
+   "blank_reason": "No official KBL fixture page captured; OLBG listing only.",
+   "competition": "Korean Basketball League (KBL)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Wonju",
+   "id": "kbl-any-won",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 01:00",
+    "event": "Anyang vs Wonju (KBL)",
+    "event_id": "536126",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Wonju",
+    "sport": "Basketball",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/536126"
+   },
+   "sport": "Basketball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T05:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Seoul Knights",
+   "blank_reason": "No official KBL fixture page captured; OLBG listing only.",
+   "competition": "Korean Basketball League (KBL)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Suwon Sonicboom",
+   "id": "kbl-seo-suw",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 01:00",
+    "event": "Seoul Knights vs Suwon Sonicboom (KBL)",
+    "event_id": "536127",
+    "hub": "https://www.olbg.com/betting-tips/Basketball/4",
+    "market": "Pointspread",
+    "pct": 100,
+    "selection": "Suwon +5.50",
+    "sport": "Basketball",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/536127"
+   },
+   "sport": "Basketball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T05:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "England",
+   "blank_reason": "",
+   "competition": "Pakistan ODI Tri-Series (Pakistan, England, Sri Lanka), 4th ODI",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Match 1 (tri-series)",
+     "source_key": "icc_pak_87",
+     "source_url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+     "value": "Pakistan beat Sri Lanka by 37 runs at Rawalpindi on 18 October (inherited)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Match 2",
+     "source_key": "icc_pak_87",
+     "source_url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul",
+     "value": "Pakistan beat England by 87 runs at Rawalpindi on 20 October; Arafat Minhas took five wickets and made a half-century (inherited)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Match 3",
+     "source_key": "icc_sl_chase",
+     "source_url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+     "value": "Sri Lanka chased 430 to beat England by two wickets at Rawalpindi on 22 October (inherited)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "England innings vs SL",
+     "source_key": "icc_sl_chase",
+     "source_url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+     "value": "429/4; Harry Brook 202, the fastest ODI double century; Joe Root 69, Will Jacks 66 not out (inherited)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "England series position",
+     "source_key": "icc_sl_chase",
+     "source_url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england",
+     "value": "No win in three matches of the tri-series (inherited)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Fixture",
+     "source_key": "ecb_triseries",
+     "source_url": "https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka",
+     "value": "Pakistan v England, 4th ODI, Gaddafi Stadium Lahore, 25 October 08:00 GMT (ECB, inherited)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Pakistan",
+   "id": "cri-pak-eng-odi4",
+   "inputs": {
+    "away": "ENG",
+    "away_edge": -0.1,
+    "home": "PAK",
+    "home_edge": 0.28,
+    "kind": "cricket"
+   },
+   "official_url": "https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 04:00",
+    "event": "Pakistan vs England (ODI)",
+    "event_id": "188838",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 60,
+    "selection": "Pakistan",
+    "sport": "Cricket",
+    "tips": "9/15",
+    "url": "https://www.olbg.com/betting-tips/event/188838"
+   },
+   "sport": "Cricket",
+   "start_display": "2026-10-25 08:00 GMT (ECB)",
+   "start_utc": "2026-10-25T08:00:00Z",
+   "venue": "Gaddafi Stadium, Lahore"
+  },
+  {
+   "away": "Toronto Kings",
+   "blank_reason": "No official fixture page found for this Canadian T20 fixture; OLBG listing only (flagged).",
+   "competition": "Canadian T20 league (OLBG listing; league not on CSA/ICC schedules captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Vancouver Guardians",
+   "id": "cri-tor-van",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:00",
+    "event": "Toronto Kings vs Vancouver Guardians (T20)",
+    "event_id": "188845",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 90,
+    "selection": "Toronto Kings",
+    "sport": "Cricket",
+    "tips": "9/10",
+    "url": "https://www.olbg.com/betting-tips/event/188845"
+   },
+   "sport": "Cricket",
+   "start_display": "per OLBG display (Today 19:00 ET)",
+   "start_utc": "2026-10-24T23:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "North West Dragons",
+   "blank_reason": "",
+   "competition": "CSA Pro20 Cup 2026/27, Pool B",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "csa_pro20",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "value": "North West Dragons vs Northern Cape Heat, 25 Oct 13:00 SAST, Senwes Park/NWC Oval Potchefstroom (CSA official page)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Northern Cape Heat",
+   "id": "cri-nwd-nch",
+   "inputs": {
+    "away": "NCH",
+    "away_edge": 0.05,
+    "home": "NWD",
+    "home_edge": 0.05,
+    "kind": "cricket"
+   },
+   "official_url": "https://cricket.co.za/upcoming/8/",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:00",
+    "event": "North West Dragons vs Northern Cape Heat (T20)",
+    "event_id": "188851",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 89,
+    "selection": "North West Dragons",
+    "sport": "Cricket",
+    "tips": "8/9",
+    "url": "https://www.olbg.com/betting-tips/event/188851"
+   },
+   "sport": "Cricket",
+   "start_display": "2026-10-25 13:00 SAST (CSA)",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "Senwes Park, Potchefstroom"
+  },
+  {
+   "away": "Tuskers",
+   "blank_reason": "",
+   "competition": "CSA Pro20 Cup 2026/27, Pool B",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "csa_pro20",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "value": "Tuskers vs Western Province (YesPlay WP Cobras), 25 Oct 13:00 SAST, City Oval Pietermaritzburg (CSA official page; Western Province's own fixture list confirms the pairing)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "OLBG vs CSA naming",
+     "source_key": "csa_pro20",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "value": "OLBG lists 'Tuskers vs Western Province'; CSA lists the home side as 'YesPlay WP Cobras' (Western Province's sponsored name) — same fixture"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Western Province",
+   "id": "cri-tus-wp",
+   "inputs": {
+    "away": "TUS",
+    "away_edge": 0.0,
+    "home": "WP",
+    "home_edge": 0.1,
+    "kind": "cricket"
+   },
+   "official_url": "https://cricket.co.za/upcoming/8/",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:00",
+    "event": "Tuskers vs Western Province (T20)",
+    "event_id": "188850",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Western Province",
+    "sport": "Cricket",
+    "tips": "8/8",
+    "url": "https://www.olbg.com/betting-tips/event/188850"
+   },
+   "sport": "Cricket",
+   "start_display": "2026-10-25 13:00 SAST (CSA)",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "City Oval, Pietermaritzburg"
+  },
+  {
+   "away": "SA Emerging",
+   "blank_reason": "Eastern Storm vs CSA Emerging appears on schedule aggregators (ESPN/SA fixture lists) but no CSA official match-centre page was captured (flagged).",
+   "competition": "CSA Pro20 Cup 2026/27, Pool B",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Eastern Storm",
+   "id": "cri-es-sae",
+   "inputs": {
+    "away": "SAE",
+    "away_edge": -0.05,
+    "home": "ES",
+    "home_edge": 0.05,
+    "kind": "cricket"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:00",
+    "event": "Eastern Storm vs SA Emerging (T20)",
+    "event_id": "188848",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 83,
+    "selection": "Eastern Storm",
+    "sport": "Cricket",
+    "tips": "5/6",
+    "url": "https://www.olbg.com/betting-tips/event/188848"
+   },
+   "sport": "Cricket",
+   "start_display": "2026-10-25 13:00 SAST (per schedule listings)",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "Willowmoore Park, Benoni"
+  },
+  {
+   "away": "Boland",
+   "blank_reason": "",
+   "competition": "CSA Pro20 Cup 2026/27, Pool A",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture",
+     "source_key": "csa_pro20",
+     "source_url": "https://cricket.co.za/upcoming/8/",
+     "value": "Boland vs Momentum Multiply Titans, 25 Oct 13:00 SAST, Boland Park Paarl (CSA official page)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Momentum Multiply Titans",
+   "id": "cri-bol-tit",
+   "inputs": {
+    "away": "BOL",
+    "away_edge": -0.05,
+    "home": "TIT",
+    "home_edge": 0.05,
+    "kind": "cricket"
+   },
+   "official_url": "https://cricket.co.za/upcoming/8/",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:00",
+    "event": "Boland vs Titans (T20)",
+    "event_id": "188849",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 83,
+    "selection": "Titans",
+    "sport": "Cricket",
+    "tips": "5/6",
+    "url": "https://www.olbg.com/betting-tips/event/188849"
+   },
+   "sport": "Cricket",
+   "start_display": "2026-10-25 13:00 SAST (CSA)",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "Boland Park, Paarl"
+  },
+  {
+   "away": "India Women",
+   "blank_reason": "No official ICC fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "India Women tour of Zimbabwe, 2nd ODI",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Zimbabwe Women",
+   "id": "cri-indw-zimbw",
+   "inputs": {
+    "kind": "olbg_only",
+    "prop_market": "Top Team 1 Batter",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 04:30",
+    "event": "India Women vs Zimbabwe Women (2nd ODI)",
+    "event_id": "188847",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Top Team 1 Batter",
+    "pct": 60,
+    "selection": "S Mandhana",
+    "sport": "Cricket",
+    "tips": "3/5",
+    "url": "https://www.olbg.com/betting-tips/event/188847"
+   },
+   "sport": "Cricket",
+   "start_display": "per OLBG display (Tomorrow 04:30 ET)",
+   "start_utc": "2026-10-25T08:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "India",
+   "blank_reason": "",
+   "competition": "India tour of New Zealand, 3rd T20I",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Series position",
+     "source_key": "icc_nz_india",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "value": "India lead the series 2-0 after the first two T20Is (inherited, ICC news 24 Oct)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Injury note",
+     "source_key": "icc_nz_india",
+     "source_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+     "value": "India took an injury blow ahead of the 2nd T20I (inherited, ICC news)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "New Zealand",
+   "id": "cri-nz-ind-t20i3",
+   "inputs": {
+    "away": "IND",
+    "away_edge": 0.35,
+    "home": "NZ",
+    "home_edge": 0.05,
+    "kind": "cricket"
+   },
+   "official_url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "27 Oct 03:00",
+    "event": "New Zealand vs India (3rd T20I)",
+    "event_id": "188852",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 75,
+    "selection": "India",
+    "sport": "Cricket",
+    "tips": "3/4",
+    "url": "https://www.olbg.com/betting-tips/event/188852"
+   },
+   "sport": "Cricket",
+   "start_display": "2026-10-27 (ICC match list, inherited)",
+   "start_utc": "2026-10-27T07:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Ireland",
+   "blank_reason": "No official ICC fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Ireland tour of Namibia, 3rd ODI",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Namibia",
+   "id": "cri-nam-irl-odi3",
+   "inputs": {
+    "kind": "olbg_only",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "27 Oct 03:30",
+    "event": "Namibia vs Ireland (3rd ODI)",
+    "event_id": "188854",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Ireland",
+    "sport": "Cricket",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/188854"
+   },
+   "sport": "Cricket",
+   "start_display": "per OLBG display (27 Oct 03:30 ET)",
+   "start_utc": "2026-10-27T07:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Australia",
+   "blank_reason": "No official fixture page captured for this Test at session time; OLBG listing only (flagged).",
+   "competition": "Australia tour of South Africa (OLBG listing; series context not captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "South Africa",
+   "id": "cri-sa-aus",
+   "inputs": {
+    "kind": "olbg_only",
+    "prop_market": "Man of the Match",
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "31 Oct 04:30",
+    "event": "South Africa vs Australia",
+    "event_id": "188835",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Man of the Match",
+    "pct": 100,
+    "selection": "AK Markram",
+    "sport": "Cricket",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/188835"
+   },
+   "sport": "Cricket",
+   "start_display": "per OLBG display (31 Oct 04:30 ET)",
+   "start_utc": "2026-10-31T08:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "India",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged).",
+   "competition": "ICC Men's Cricket World Cup 2027",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "cri-out-wc27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "India",
+    "tips": 6,
+    "total_tips": 12
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "2027",
+    "event": "ICC Men's Cricket World Cup 2027",
+    "event_id": "182606",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Tournament",
+    "pct": 50,
+    "selection": "India",
+    "sport": "Cricket",
+    "tips": "6/12",
+    "url": "https://www.olbg.com/betting-tips/event/182606"
+   },
+   "sport": "Cricket",
+   "start_display": "ante-post (2027-11-21)",
+   "start_utc": "2027-11-21T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Sydney Sixers Women",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged).",
+   "competition": "Big Bash Women 2026",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "cri-out-bblw26",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Sydney Sixers Women",
+    "tips": 2,
+    "total_tips": 3
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "2026",
+    "event": "Big Bash Women 2026",
+    "event_id": "187184",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Tournament",
+    "pct": 67,
+    "selection": "Sydney Sixers Women",
+    "sport": "Cricket",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/187184"
+   },
+   "sport": "Cricket",
+   "start_display": "ante-post (2026-12-05)",
+   "start_utc": "2026-12-05T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Adelaide Strikers",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged).",
+   "competition": "T20 Big Bash 2026-27",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "cri-out-bbl26",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Adelaide Strikers",
+    "tips": 1,
+    "total_tips": 2
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "2026",
+    "event": "T20 Big Bash 2026-27",
+    "event_id": "187503",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Tournament",
+    "pct": 50,
+    "selection": "Adelaide Strikers",
+    "sport": "Cricket",
+    "tips": "1/2",
+    "url": "https://www.olbg.com/betting-tips/event/187503"
+   },
+   "sport": "Cricket",
+   "start_display": "ante-post (2026-12-12)",
+   "start_utc": "2026-12-12T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Pretoria Capitals",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged).",
+   "competition": "SA20 2026-27",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "cri-out-sa20",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Pretoria Capitals",
+    "tips": 1,
+    "total_tips": 1
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "2027",
+    "event": "SA20 2026-27",
+    "event_id": "187504",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Tournament",
+    "pct": 100,
+    "selection": "Pretoria Capitals",
+    "sport": "Cricket",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/187504"
+   },
+   "sport": "Cricket",
+   "start_display": "ante-post (2027-01-24)",
+   "start_utc": "2027-01-24T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Sussex",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged).",
+   "competition": "T20 Blast 2027",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "cri-out-blast27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Sussex",
+    "tips": 1,
+    "total_tips": 2
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "2027",
+    "event": "T20 Blast 2027",
+    "event_id": "188350",
+    "hub": "https://www.olbg.com/betting-tips/Cricket/7",
+    "market": "Win Tournament",
+    "pct": 50,
+    "selection": "Sussex",
+    "sport": "Cricket",
+    "tips": "1/2",
+    "url": "https://www.olbg.com/betting-tips/event/188350"
+   },
+   "sport": "Cricket",
+   "start_display": "ante-post (2027-07-18)",
+   "start_utc": "2027-07-18T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Australia A",
+   "blank_reason": "",
+   "competition": "Australia A tour of the USA, match 1 of 2",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Kickoff",
+     "source_key": "rugby_au_a",
+     "source_url": "https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022",
+     "value": "Sunday 25 October 9:00am AEDT at Geodis Park Stadium, Nashville (official; = 22:00Z Saturday 24 Oct UTC)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Squad",
+     "source_key": "rugby_au_a",
+     "source_url": "https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022",
+     "value": "Nine Wallabies in the matchday 23; captain Matt Faessler; Kadin Pritchard's first senior start at outside centre; head coach Stephen Larkham"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "OLBG time discrepancy",
+     "source_key": "rugby_au_a",
+     "source_url": "https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022",
+     "value": "OLBG displayed 'Today 19:00' (23:00Z) — one hour off the official 22:00Z kickoff; official time used (flagged)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "USA Eagles",
+   "id": "rug-usa-ausa",
+   "inputs": {
+    "away": "AUS_A",
+    "away_edge": 0.25,
+    "home": "USA",
+    "home_edge": -0.25,
+    "kind": "rugby"
+   },
+   "official_url": "https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 19:00",
+    "event": "USA Eagles vs Australia A",
+    "event_id": "609583",
+    "hub": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+    "market": "To Win",
+    "pct": 67,
+    "selection": "Australia A",
+    "sport": "Rugby Union",
+    "tips": "8/12",
+    "url": "https://www.olbg.com/betting-tips/event/609583"
+   },
+   "sport": "Rugby Union",
+   "start_display": "2026-10-24 22:00 UTC = 9:00 AEDT Sunday 25 Oct (Rugby Australia)",
+   "start_utc": "2026-10-24T22:00:00Z",
+   "venue": "Geodis Park Stadium, Nashville"
+  },
+  {
+   "away": "Saracens",
+   "blank_reason": "",
+   "competition": "Gallagher Premiership, Round 4",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Fixture",
+     "source_key": "prem_r4",
+     "source_url": "https://www.premrugby.com/competitions/gallagher-prem/fixtures-results?competition=gallagher-prem&round=4",
+     "value": "Harlequins v Saracens, Gallagher Premiership Round 4 (inherited official capture 17:35Z)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "OLBG time discrepancy",
+     "source_key": "prem_r4",
+     "source_url": "https://www.premrugby.com/competitions/gallagher-prem/fixtures-results?competition=gallagher-prem&round=4",
+     "value": "OLBG displayed 'Tomorrow 11:00' (15:00Z in the OLBG Eastern view); the Premiership fixture page lists 11:00 UTC — official used (flagged)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Harlequins",
+   "id": "rug-har-sar",
+   "inputs": {
+    "away": "SAR",
+    "away_edge": 0.0,
+    "home": "HAR",
+    "home_edge": 0.15,
+    "kind": "rugby"
+   },
+   "official_url": "https://www.premrugby.com/competitions/gallagher-prem/fixtures-results?competition=gallagher-prem&round=4",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:00",
+    "event": "Harlequins v Saracens",
+    "event_id": "609571",
+    "hub": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+    "market": "To Win",
+    "pct": 80,
+    "selection": "Harlequins",
+    "sport": "Rugby Union",
+    "tips": "4/5",
+    "url": "https://www.olbg.com/betting-tips/event/609571"
+   },
+   "sport": "Rugby Union",
+   "start_display": "2026-10-25 11:00 UTC (Premiership fixture, inherited)",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Union Bordeaux-Begles",
+   "blank_reason": "",
+   "competition": "Top 14 2026-27, J7",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Kickoff",
+     "source_key": "top14_cal",
+     "source_url": "https://top14.lnr.fr/calendrier-et-resultats",
+     "value": "dimanche 25 octobre 21h05 local, Canal+ (LNR official calendar)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Standings after J6",
+     "source_key": "top14_class",
+     "source_url": "https://top14.lnr.fr/classement",
+     "value": "La Rochelle 4th, 18 pts (4W-2L, PF 144 PA 135, +9); Bordeaux-Begles 3rd, 19 pts (4W-2L, +64) (LNR official)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "J7 Saturday results",
+     "source_key": "top14_cal",
+     "source_url": "https://top14.lnr.fr/calendrier-et-resultats",
+     "value": "Toulouse 38-33 Perpignan; Toulon 41-20 Pau; Vannes 27-26 Clermont; Lyon 31-27 Bayonne; Castres 16-8 Paris; Montpellier 20-17 Racing 92 (LNR official)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "La Rochelle form",
+     "source_key": "top14_class",
+     "source_url": "https://top14.lnr.fr/classement",
+     "value": "V-D-D-V-V over J2-J6; UBB D-V-D-V-V (LNR form column)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Stade Rochelais",
+   "id": "rug-lar-ubb",
+   "inputs": {
+    "away": "UBB",
+    "away_edge": 0.15,
+    "home": "LAR",
+    "home_edge": 0.1,
+    "kind": "rugby"
+   },
+   "official_url": "https://top14.lnr.fr/calendrier-et-resultats",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 16:05",
+    "event": "Stade Rochelais vs Union Bordeaux-Begles",
+    "event_id": "609554",
+    "hub": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+    "market": "To Win",
+    "pct": 60,
+    "selection": "Union Bordeaux-Begles",
+    "sport": "Rugby Union",
+    "tips": "3/5",
+    "url": "https://www.olbg.com/betting-tips/event/609554"
+   },
+   "sport": "Rugby Union",
+   "start_display": "2026-10-25 21:05 Paris local (LNR; France on CET after the Oct 25 changeover) = 20:05Z",
+   "start_utc": "2026-10-25T20:05:00Z",
+   "venue": "Stade de la Rochelle"
+  },
+  {
+   "away": "Ireland",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged).",
+   "competition": "Six Nations 2027 (ante-post)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "rug-out-six27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Ireland",
+    "tips": 3,
+    "total_tips": 10
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "2027",
+    "event": "Six Nations 2027",
+    "event_id": "609013",
+    "hub": "https://www.olbg.com/betting-tips/Rugby_Union/9",
+    "market": "Win Tournament",
+    "pct": 30,
+    "selection": "Ireland",
+    "sport": "Rugby Union",
+    "tips": "3/10",
+    "url": "https://www.olbg.com/betting-tips/event/609013"
+   },
+   "sport": "Rugby Union",
+   "start_display": "ante-post (OLBG lists event date 14 Mar 2027)",
+   "start_utc": "2027-03-14T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Salthill-Knocknacarra",
+   "blank_reason": "",
+   "competition": "Galway Senior Football Championship Final (Pearse Stadium)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fixture (official)",
+     "source_key": "galway_gaa",
+     "source_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+     "value": "Bon Secours Hospital Senior Football Championship County Final, Maigh Cuilinn vs Salthill-Knocknacarra, 4:00pm Sunday 25 Oct, Pearse Stadium (Galway GAA official, published 23 Oct after weather-related rescheduling)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "OLBG data error",
+     "source_key": "galway_gaa",
+     "source_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+     "value": "OLBG lists this event as 'Moycullen v Salthill-Knocknacarra' — the official Galway GAA schedule shows Maigh Cuilinn as Salthill-Knocknacarra's opponent; official used (flagged)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Maigh Cuilinn",
+   "id": "gae-sal-mcg",
+   "inputs": {
+    "away": "MC",
+    "away_edge": 0.0,
+    "handicap": 3.5,
+    "home": "SAL",
+    "home_edge": 0.05,
+    "kind": "gaelic",
+    "underdog_side": "Salthill-Knocknacarra"
+   },
+   "official_url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "Moycullen v Salthill-Knocknacarra",
+    "event_id": "3532",
+    "hub": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+    "market": "3-Way Handicap",
+    "pct": 60,
+    "selection": "Salthill-Knocknacarra +3.50",
+    "sport": "Gaelic Sports",
+    "tips": "28/47",
+    "url": "https://www.olbg.com/betting-tips/event/3532"
+   },
+   "sport": "Gaelic Sports",
+   "start_display": "2026-10-25 4:00pm (Galway GAA)",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "Pearse Stadium, Galway"
+  },
+  {
+   "away": "Nemo Rangers",
+   "blank_reason": "",
+   "competition": "Cork Premier Senior Football Championship Final",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Fixture (official)",
+     "source_key": "munster_gaa",
+     "source_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+     "value": "2026 Cork Premier Senior Football Championship Final, St Finbarrs v Nemo Rangers (Munster GAA event page, inherited)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "St Finbarrs",
+   "id": "gae-stf-nem",
+   "inputs": {
+    "away": "NEM",
+    "away_edge": 0.0,
+    "handicap": 1.5,
+    "home": "STF",
+    "home_edge": 0.05,
+    "kind": "gaelic",
+    "underdog_side": "Nemo Rangers"
+   },
+   "official_url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "St Finbarrs v Nemo Rangers",
+    "event_id": "3530",
+    "hub": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+    "market": "3-Way Handicap",
+    "pct": 87,
+    "selection": "Nemo Rangers +1.50",
+    "sport": "Gaelic Sports",
+    "tips": "27/31",
+    "url": "https://www.olbg.com/betting-tips/event/3530"
+   },
+   "sport": "Gaelic Sports",
+   "start_display": "2026-10-25 16:00 UTC (Munster GAA event page, inherited)",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Eire Og Cor",
+   "blank_reason": "No official fixture page captured for this Cork club fixture; OLBG listing only (flagged).",
+   "competition": "Cork club football (OLBG listing; fixture page not captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Kanturk",
+   "id": "gae-kan-eoc",
+   "inputs": {
+    "away": "EIREOG",
+    "away_edge": 0.0,
+    "handicap": 0.5,
+    "home": "KANT",
+    "home_edge": 0.0,
+    "kind": "gaelic",
+    "underdog_side": "Eire Og Cor"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "01 Nov 09:00",
+    "event": "Kanturk v Eire Og Cor",
+    "event_id": "3531",
+    "hub": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+    "market": "3-Way Handicap",
+    "pct": 100,
+    "selection": "Eire Og Cor +0.50",
+    "sport": "Gaelic Sports",
+    "tips": "5/5",
+    "url": "https://www.olbg.com/betting-tips/event/3531"
+   },
+   "sport": "Gaelic Sports",
+   "start_display": "per OLBG display (01 Nov 09:00 ET)",
+   "start_utc": "2026-11-01T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Fr Caseys",
+   "blank_reason": "No official fixture page captured for this Limerick club fixture; OLBG listing only (flagged).",
+   "competition": "Limerick club football (OLBG listing; fixture page not captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Kildimo Pallaskenry",
+   "id": "gae-frc-kil",
+   "inputs": {
+    "away": "FRC",
+    "away_edge": 0.05,
+    "home": "KILD",
+    "home_edge": -0.05,
+    "kind": "gaelic"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "01 Nov 10:30",
+    "event": "Fr Caseys v Kildimo Pallaskenry",
+    "event_id": "3537",
+    "hub": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+    "market": "Full-Time Result",
+    "pct": 57,
+    "selection": "Fr Caseys",
+    "sport": "Gaelic Sports",
+    "tips": "4/7",
+    "url": "https://www.olbg.com/betting-tips/event/3537"
+   },
+   "sport": "Gaelic Sports",
+   "start_display": "per OLBG display (01 Nov 10:30 ET)",
+   "start_utc": "2026-11-01T14:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Kerry",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged).",
+   "competition": "All-Ireland Football Championship 2027 (ante-post)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "gae-out-aic27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Kerry",
+    "tips": 5,
+    "total_tips": 7
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "2027",
+    "event": "All Ireland Football Championship 2027",
+    "event_id": "3327",
+    "hub": "https://www.olbg.com/betting-tips/Gaelic_Football/25",
+    "market": "Win",
+    "pct": 71,
+    "selection": "Kerry",
+    "sport": "Gaelic Sports",
+    "tips": "5/7",
+    "url": "https://www.olbg.com/betting-tips/event/3327"
+   },
+   "sport": "Gaelic Sports",
+   "start_display": "ante-post (OLBG event date 25 Jul 2027)",
+   "start_utc": "2027-07-25T10:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Snowfall",
+   "blank_reason": "GBGB does not publish a public online racecard; the OLBG event page is the only runner list captured (flagged). OLBG shows five named selections (Grouchos Badger, Heathmill Barron, Luminous Dream, Shots Fired, Snowfall); a British card normally carries six.",
+   "competition": "Doncaster, 11:04 race (OLBG 'Daily Races' card)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field (5 listed runners)",
+   "id": "gry-don-1104",
+   "inputs": {
+    "kind": "olbg_only",
+    "runners": 5,
+    "two_way": true
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:04",
+    "event": "11:04 Doncaster",
+    "event_id": "690043",
+    "hub": "https://www.olbg.com/betting-tips/Greyhounds/28",
+    "market": "Daily Races (Win)",
+    "pct": 100,
+    "selection": "Snowfall",
+    "sport": "Greyhounds",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/690043"
+   },
+   "sport": "Greyhounds",
+   "start_display": "2026-10-25 11:04 BST/GMT (UK; clock change applies that day)",
+   "start_utc": "2026-10-25T11:04:00Z",
+   "venue": "Doncaster"
+  },
+  {
+   "away": "Ross Smith",
+   "blank_reason": "",
+   "competition": "PDC Machineseeker European Championship, quarter-final (Finals Day)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Woodhouse Round 2",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "beat defending champion Gian van Veen 10-6 (official PDC result, Saturday 24 Oct)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Ross Smith Round 2",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "beat Damon Heta 10-7 (official PDC result, Saturday 24 Oct)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Venue/format",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "Machineseeker European Championship, Westfalenhalle Dortmund; quarter-finals on Finals Day Sunday 25 October, top prize £150,000 (official PDC)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Luke Woodhouse",
+   "id": "dar-rsm-lwk",
+   "inputs": {
+    "away": "RSM",
+    "away_edge": 0.025,
+    "home": "WOO",
+    "home_edge": -0.025,
+    "kind": "darts"
+   },
+   "official_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 08:15",
+    "event": "Ross Smith vs Luke Woodhouse",
+    "event_id": "32408",
+    "hub": "https://www.olbg.com/betting-tips/Darts/15",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Ross Smith",
+    "sport": "Darts",
+    "tips": "5/5",
+    "url": "https://www.olbg.com/betting-tips/event/32408"
+   },
+   "sport": "Darts",
+   "start_display": "2026-10-25 morning session (OLBG 08:15 ET = 12:15Z)",
+   "start_utc": "2026-10-25T12:15:00Z",
+   "venue": "Westfalenhalle, Dortmund"
+  },
+  {
+   "away": "Gerwyn Price",
+   "blank_reason": "",
+   "competition": "PDC Machineseeker European Championship, quarter-final (Finals Day)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Price Round 2",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "beat Cameron Menzies 10-4; hat-trick of ton-plus checkouts; won seven of the last eight legs (official PDC)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Bunting Round 2",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "beat Kim Huybrechts 10-3; converted 100, 108, 116 and 121 finishes; his first European Championship quarter-final since 2014 (official PDC)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Littler context",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "Littler reached Finals Day averaging 114.47 in a 10-5 win over Aspinall after 105.05 in round 1 (official PDC)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Stephen Bunting",
+   "id": "dar-prc-bun",
+   "inputs": {
+    "away": "PRC",
+    "away_edge": 0.05,
+    "home": "BUN",
+    "home_edge": -0.05,
+    "kind": "darts"
+   },
+   "official_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:15",
+    "event": "Gerwyn Price vs Stephen Bunting",
+    "event_id": "32407",
+    "hub": "https://www.olbg.com/betting-tips/Darts/15",
+    "market": "Total 180s",
+    "pct": null,
+    "selection": "Over 10.50",
+    "sport": "Darts",
+    "tips": "",
+    "url": "https://www.olbg.com/betting-tips/event/32407"
+   },
+   "sport": "Darts",
+   "start_display": "2026-10-25 afternoon session (OLBG 09:15 ET = 13:15Z)",
+   "start_utc": "2026-10-25T13:15:00Z",
+   "venue": "Westfalenhalle, Dortmund"
+  },
+  {
+   "away": "Luke Littler",
+   "blank_reason": "",
+   "competition": "PDC Machineseeker European Championship, winner (Finals Day)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Littler run",
+     "source_key": "pdc_ec_r1",
+     "source_url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/",
+     "value": "Round 1: 6-3 over William O'Connor, avg 105.05, six 180s; Round 2: 10-5 over Aspinall, avg 114.47, four-leg flurry of 11/11/12/11-dart legs (official PDC)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Other Finals Day players",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "Quarter-finalists include Price, Bunting, Ross Smith, Woodhouse (official PDC results)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Prize",
+     "source_key": "pdc_ec",
+     "source_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+     "value": "£750,000 event; £150,000 to the winner (inherited, official PDC day-3 note)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field (8 remaining)",
+   "id": "dar-out-ec26",
+   "inputs": {
+    "kind": "darts_outright",
+    "selection": "Luke Littler",
+    "tips": 13,
+    "total_tips": 21
+   },
+   "official_url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 14:00",
+    "event": "Machineseeker European Championship (Finals Day)",
+    "event_id": "32338",
+    "hub": "https://www.olbg.com/betting-tips/Darts/15",
+    "market": "Win Tournament",
+    "pct": 62,
+    "selection": "Luke Littler",
+    "sport": "Darts",
+    "tips": "13/21",
+    "url": "https://www.olbg.com/betting-tips/event/32338"
+   },
+   "sport": "Darts",
+   "start_display": "Finals Day Sunday 25 Oct (OLBG 14:00 ET = 18:00Z; PDC evening session)",
+   "start_utc": "2026-10-25T18:00:00Z",
+   "venue": "Westfalenhalle, Dortmund"
+  },
+  {
+   "away": "Luke Littler",
+   "blank_reason": "Ante-post outright; OLBG tip-share only (flagged).",
+   "competition": "PDC World Championship 2027 (ante-post)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Field",
+   "id": "dar-out-pdc27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Luke Littler",
+    "tips": 22,
+    "total_tips": 36
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "03 Jan 2027",
+    "event": "PDC World Championship 2027",
+    "event_id": "26023",
+    "hub": "https://www.olbg.com/betting-tips/Darts/15",
+    "market": "Win Tournament",
+    "pct": 61,
+    "selection": "Luke Littler",
+    "sport": "Darts",
+    "tips": "22/36",
+    "url": "https://www.olbg.com/betting-tips/event/26023"
+   },
+   "sport": "Darts",
+   "start_display": "ante-post (OLBG event date 03 Jan 2027)",
+   "start_utc": "2027-01-03T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Daniil Medvedev",
+   "blank_reason": "",
+   "competition": "ATP Almaty, men's singles final",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Final pairing",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule?day=7",
+     "value": "Medvedev (1) v Basilashvili (Q), day 9 (finals) of the Almaty event; not before 14:00 local (ATP official daily schedule)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Medvedev semi-final",
+     "source_key": "atp_current",
+     "source_url": "https://www.atptour.com/en/scores/current",
+     "value": "beat Alexander Bublik (3) 6-3 with Bublik retiring in set 2 (ATP live score)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Basilashvili semi-final",
+     "source_key": "atp_current",
+     "source_url": "https://www.atptour.com/en/scores/current",
+     "value": "beat Stefanos Tsitsipas (7) 6-4 6-7(5) 6-3 (ATP live score)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "OLBG time discrepancy",
+     "source_key": "atp_almaty",
+     "source_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule?day=7",
+     "value": "OLBG displayed 'Tomorrow 06:00' (10:00Z in the Eastern view); the ATP schedule says not before 14:00 local = 09:00Z (flagged)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Nikoloz Basilashvili",
+   "id": "ten-med-bas",
+   "inputs": {
+    "away": "BAS",
+    "away_edge": 0.2,
+    "home": "MED",
+    "home_edge": -0.05,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule?day=7",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 06:00",
+    "event": "Daniil Medvedev vs Nikoloz Basilashvili",
+    "event_id": "902251",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 88,
+    "selection": "Daniil Medvedev",
+    "sport": "Tennis",
+    "tips": "7/8",
+    "url": "https://www.olbg.com/betting-tips/event/902251"
+   },
+   "sport": "Tennis",
+   "start_display": "2026-10-25, not before 14:00 Almaty local (UTC+5) = 09:00Z (ATP daily schedule)",
+   "start_utc": "2026-10-25T09:00:00Z",
+   "venue": "Center Court, Almaty"
+  },
+  {
+   "away": "Lorenzo Musetti",
+   "blank_reason": "",
+   "competition": "ATP Lyon, men's singles final",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Final pairing",
+     "source_key": "atp_current",
+     "source_url": "https://www.atptour.com/en/scores/current",
+     "value": "Musetti (6) v Fritz (2), Lyon finals day (ATP live score page)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Musetti semi-final",
+     "source_key": "atp_current",
+     "source_url": "https://www.atptour.com/en/scores/current",
+     "value": "beat Flavio Cobolli (1) 4-6 6-2 7-5 (ATP live score)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "Fritz semi-final",
+     "source_key": "atp_current",
+     "source_url": "https://www.atptour.com/en/scores/current",
+     "value": "beat Tommy Paul (4) 6-3 7-5 (ATP live score)"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Taylor Fritz",
+   "id": "ten-mus-fri",
+   "inputs": {
+    "away": "MUS",
+    "away_edge": 0.1,
+    "home": "FRI",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:30",
+    "event": "Lorenzo Musetti vs Taylor Fritz",
+    "event_id": "902253",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 50,
+    "selection": "Taylor Fritz",
+    "sport": "Tennis",
+    "tips": "1/2",
+    "url": "https://www.olbg.com/betting-tips/event/902253"
+   },
+   "sport": "Tennis",
+   "start_display": "2026-10-25 13:30Z (OLBG display; ATP finals day)",
+   "start_utc": "2026-10-25T13:30:00Z",
+   "venue": "Court Central, Lyon"
+  },
+  {
+   "away": "Elena Rybakina",
+   "blank_reason": "WTA official draw/schedule pages render client-side; the tournament hosting this match could not be named from the official site (flagged).",
+   "competition": "WTA Tour event (name not confirmed on the official site — WTA draw pages are JS-gated; Osaka and Tokyo are the live Asia events)",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "WTA events active",
+     "source_key": "wta_tournaments",
+     "source_url": "https://www.wtatennis.com/tournaments",
+     "value": "WTA update feed shows Kinoshita Group Japan Open (Osaka, draw 8 days old) and Toray Pan Pacific Open (Tokyo, draw released ~16h before capture) as the current Asia events"
+    }
+   ],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Leylah Fernandez",
+   "id": "ten-ryb-fer",
+   "inputs": {
+    "away": "RYB",
+    "away_edge": 0.3,
+    "home": "FER",
+    "home_edge": -0.1,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.wtatennis.com/tournaments",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 05:00",
+    "event": "Elena Rybakina vs Leylah Fernandez",
+    "event_id": "902207",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 88,
+    "selection": "Elena Rybakina",
+    "sport": "Tennis",
+    "tips": "7/8",
+    "url": "https://www.olbg.com/betting-tips/event/902207"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (Tomorrow 05:00 ET = 09:00Z)",
+   "start_utc": "2026-10-25T09:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Ashlyn Krueger",
+   "blank_reason": "WTA official draw/schedule pages render client-side; the tournament hosting this match could not be named from the official site (flagged).",
+   "competition": "WTA Tour event (name not confirmed on the official site — WTA draw pages are JS-gated)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Katerina Siniakova",
+   "id": "ten-krueg-sin",
+   "inputs": {
+    "away": "KRUE",
+    "away_edge": 0.0,
+    "home": "SIN",
+    "home_edge": 0.05,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.wtatennis.com/tournaments",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 00:30",
+    "event": "Ashlyn Krueger vs Katerina Siniakova",
+    "event_id": "902171",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 56,
+    "selection": "Katerina Siniakova",
+    "sport": "Tennis",
+    "tips": "5/9",
+    "url": "https://www.olbg.com/betting-tips/event/902171"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (Tomorrow 00:30 ET = 04:30Z)",
+   "start_utc": "2026-10-25T04:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Alexandra Eala",
+   "blank_reason": "WTA official draw/schedule pages render client-side; the tournament hosting this match could not be named from the official site (flagged).",
+   "competition": "WTA Tour event (name not confirmed on the official site — WTA draw pages are JS-gated)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Mika Stojsavljevic",
+   "id": "ten-eal-sto",
+   "inputs": {
+    "away": "ALE",
+    "away_edge": 0.05,
+    "home": "MIK",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.wtatennis.com/tournaments",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 22:00",
+    "event": "Alexandra Eala vs Mika Stojsavljevic",
+    "event_id": "902175",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 67,
+    "selection": "Alexandra Eala",
+    "sport": "Tennis",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/902175"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-27T02:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Moyuka Uchijima",
+   "blank_reason": "WTA official draw/schedule pages render client-side; the tournament hosting this match could not be named from the official site (flagged).",
+   "competition": "WTA Tour event (name not confirmed on the official site — WTA draw pages are JS-gated)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Elise Mertens",
+   "id": "ten-uch-mer",
+   "inputs": {
+    "away": "MOY",
+    "away_edge": 0.05,
+    "home": "ELI",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.wtatennis.com/tournaments",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 22:00",
+    "event": "Moyuka Uchijima vs Elise Mertens",
+    "event_id": "902173",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 50,
+    "selection": "Elise Mertens",
+    "sport": "Tennis",
+    "tips": "1/2",
+    "url": "https://www.olbg.com/betting-tips/event/902173"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-27T02:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Leylah Fernandez",
+   "blank_reason": "WTA official draw/schedule pages render client-side; the tournament hosting this match could not be named from the official site (flagged).",
+   "competition": "WTA Tour event (name not confirmed on the official site — WTA draw pages are JS-gated)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Himeno Sakatsume",
+   "id": "ten-fer-sak",
+   "inputs": {
+    "away": "LEY",
+    "away_edge": 0.05,
+    "home": "HIM",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.wtatennis.com/tournaments",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 22:00",
+    "event": "Leylah Fernandez vs Himeno Sakatsume",
+    "event_id": "902172",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 50,
+    "selection": "Leylah Fernandez",
+    "sport": "Tennis",
+    "tips": "1/2",
+    "url": "https://www.olbg.com/betting-tips/event/902172"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-27T02:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Stan Wawrinka",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Jiri Lehecka",
+   "id": "ten-waw-leh",
+   "inputs": {
+    "away": "STA",
+    "away_edge": 0.0,
+    "home": "JIR",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Stan Wawrinka vs Jiri Lehecka",
+    "event_id": "902232",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 67,
+    "selection": "Stan Wawrinka",
+    "sport": "Tennis",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/902232"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Alex Michelsen",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Botic Van De Zandschulp",
+   "id": "ten-mic-vdz",
+   "inputs": {
+    "away": "ALE",
+    "away_edge": 0.0,
+    "home": "BOT",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Alex Michelsen vs Botic Van De Zandschulp",
+    "event_id": "902240",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Botic Van De Zandschulp",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902240"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Valentin Vacherot",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Mariano Navone",
+   "id": "ten-vac-nav",
+   "inputs": {
+    "away": "VAL",
+    "away_edge": 0.0,
+    "home": "MAR",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Valentin Vacherot vs Mariano Navone",
+    "event_id": "902237",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Mariano Navone",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902237"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Ben Shelton",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Casper Ruud",
+   "id": "ten-she-ruu",
+   "inputs": {
+    "away": "BEN",
+    "away_edge": 0.0,
+    "home": "CAS",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Ben Shelton vs Casper Ruud",
+    "event_id": "902231",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Casper Ruud",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902231"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Jerome Kym",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Arthur Rinderknech",
+   "id": "ten-kym-rin",
+   "inputs": {
+    "away": "JER",
+    "away_edge": 0.0,
+    "home": "ART",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Jerome Kym vs Arthur Rinderknech",
+    "event_id": "902234",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Jerome Kym",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902234"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Novak Djokovic",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Ugo Humbert",
+   "id": "ten-djo-hum",
+   "inputs": {
+    "away": "NOV",
+    "away_edge": 0.0,
+    "home": "UGO",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Novak Djokovic vs Ugo Humbert",
+    "event_id": "902233",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Ugo Humbert",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902233"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Taylor Fritz",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Stefanos Tsitsipas",
+   "id": "ten-fri-tsi",
+   "inputs": {
+    "away": "TAY",
+    "away_edge": 0.0,
+    "home": "STE",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Taylor Fritz vs Stefanos Tsitsipas",
+    "event_id": "902239",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Stefanos Tsitsipas",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902239"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Holger Rune",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Quentin Halys",
+   "id": "ten-run-hal",
+   "inputs": {
+    "away": "HOL",
+    "away_edge": 0.0,
+    "home": "QUE",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Holger Rune vs Quentin Halys",
+    "event_id": "902236",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Quentin Halys",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902236"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Alejandro Davidovich Fokina",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Zizou Bergs",
+   "id": "ten-fok-ber",
+   "inputs": {
+    "away": "ALE",
+    "away_edge": 0.0,
+    "home": "ZIZ",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Alejandro Davidovich Fokina vs Zizou Bergs",
+    "event_id": "902235",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Zizou Bergs",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902235"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Alejandro Tabilo",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Rafael Jodar",
+   "id": "ten-tab-jod",
+   "inputs": {
+    "away": "ALE",
+    "away_edge": 0.0,
+    "home": "RAF",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Alejandro Tabilo vs Rafael Jodar",
+    "event_id": "902238",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Alejandro Tabilo",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902238"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Hubert Hurkacz",
+   "blank_reason": "First-round pairings listed on OLBG with a single tipper each; the hosting ATP event could not be named from the static ATP pages captured this session (flagged).",
+   "competition": "ATP Tour event starting 26 Oct (event name not confirmed from the ATP static pages captured)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Arthur Fils",
+   "id": "ten-hur-fil",
+   "inputs": {
+    "away": "HUB",
+    "away_edge": 0.0,
+    "home": "ART",
+    "home_edge": 0.0,
+    "kind": "tennis"
+   },
+   "official_url": "https://www.atptour.com/en/scores/current",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 06:00",
+    "event": "Hubert Hurkacz vs Arthur Fils",
+    "event_id": "902247",
+    "hub": "https://www.olbg.com/betting-tips/Tennis/3",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Hubert Hurkacz",
+    "sport": "Tennis",
+    "tips": "1/1",
+    "url": "https://www.olbg.com/betting-tips/event/902247"
+   },
+   "sport": "Tennis",
+   "start_display": "per OLBG display (26 Oct 06:00 ET = 10:00Z)",
+   "start_utc": "2026-10-26T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Rhein-Neckar Lowen",
+   "blank_reason": "",
+   "competition": "DAIKIN Handball-Bundesliga, Matchday 10",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Fixture (official)",
+     "source_key": "opel_hbl",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "value": "SC Magdeburg v Rhein-Neckar Lowen, DAIKIN Handball-Bundesliga Matchday 10 (opel-hbl.de, inherited 17:35Z)"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "RNL form context",
+     "source_key": "opel_hbl",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "value": "Rhein-Neckar Lowen team page (inherited): top-of-table Bundesliga side"
+    },
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "OLBG time discrepancy",
+     "source_key": "opel_hbl",
+     "source_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+     "value": "OLBG displayed 'Tomorrow 10:00' (14:00Z in the Eastern view); the official league page lists 13:00 UTC — official used (flagged)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "SC Magdeburg",
+   "id": "han-rnl-mag",
+   "inputs": {
+    "away": "RNL",
+    "away_edge": 0.3,
+    "home": "MAG",
+    "home_edge": -0.15,
+    "kind": "handball"
+   },
+   "official_url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 10:00",
+    "event": "Rhein Neckar Lowen vs SC Magdeburg",
+    "event_id": "12092",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 67,
+    "selection": "Rhein Neckar Lowen",
+    "sport": "Handball",
+    "tips": "4/6",
+    "url": "https://www.olbg.com/betting-tips/event/12092"
+   },
+   "sport": "Handball",
+   "start_display": "2026-10-25 13:00 UTC (opel-hbl.de, inherited)",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Saint-Raphael",
+   "blank_reason": "",
+   "competition": "Daikin StarLigue (LNH), Journée 8",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Fixture (official)",
+     "source_key": "lnh_starligue",
+     "source_url": "https://www.lnh.fr/daikin-starligue/accueil",
+     "value": "PSG v Saint-Raphael, Daikin StarLigue Journée 8 (lnh.fr, inherited 17:35Z)"
+    },
+    {
+     "captured_utc": "2026-10-24T22:45:00Z",
+     "claim": "OLBG tip pattern",
+     "source_key": "olbg_capture",
+     "source_url": "https://www.olbg.com/betting-tips (hub capture, this session)",
+     "value": "OLBG's most-tipped selection on this event is 'Tie' 5/7 (71%) despite PSG being top-of-league hosts — community tip distribution flagged for review"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "PSG Handball",
+   "id": "han-psg-sra",
+   "inputs": {
+    "away": "SRA",
+    "away_edge": -0.3,
+    "home": "PSG",
+    "home_edge": 0.35,
+    "kind": "handball"
+   },
+   "official_url": "https://www.lnh.fr/daikin-starligue/accueil",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:00",
+    "event": "Saint Raphael vs PSG Handball",
+    "event_id": "12084",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 71,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "5/7",
+    "url": "https://www.olbg.com/betting-tips/event/12084"
+   },
+   "sport": "Handball",
+   "start_display": "2026-10-25 15:00 UTC (lnh.fr, inherited)",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "venue": "Paris"
+  },
+  {
+   "away": "Hammarby IF HF",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Swedish Handball",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Ystads IF HF",
+   "id": "han-yis-ham",
+   "inputs": {
+    "away": "HAM",
+    "away_edge": 0.0,
+    "home": "YST",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "Ystads IF HF vs Hammarby IF HF",
+    "event_id": "12152",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "7/7",
+    "url": "https://www.olbg.com/betting-tips/event/12152"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Ademar Leon",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "ASOBAL (Spain)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "CBM Sporting Alicante",
+   "id": "han-ali-adl",
+   "inputs": {
+    "away": "ADE",
+    "away_edge": 0.0,
+    "home": "CBM",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:00",
+    "event": "CBM Sporting Alicante vs Ademar Leon",
+    "event_id": "12106",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 71,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "5/7",
+    "url": "https://www.olbg.com/betting-tips/event/12106"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "HC Kriens Luzern",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "EHF Champions League qualifying",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "SC Magdeburg",
+   "id": "han-mag-kri",
+   "inputs": {
+    "away": "HC ",
+    "away_edge": 0.0,
+    "home": "SC ",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "28 Oct 15:45",
+    "event": "SC Magdeburg vs HC Kriens Luzern",
+    "event_id": "12136",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 71,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "5/7",
+    "url": "https://www.olbg.com/betting-tips/event/12136"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-28T19:45:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Angel Ximenez Puente Genil",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "ASOBAL (Spain)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "BM Granollers",
+   "id": "han-gra-pug",
+   "inputs": {
+    "away": "ANG",
+    "away_edge": 0.0,
+    "home": "BM ",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:30",
+    "event": "BM Granollers vs Angel Ximenez Puente Genil",
+    "event_id": "12102",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 40,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "4/10",
+    "url": "https://www.olbg.com/betting-tips/event/12102"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T11:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Lithuania W",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "International (women)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Belgium W",
+   "id": "han-lit-bel",
+   "inputs": {
+    "away": "LIT",
+    "away_edge": 0.0,
+    "home": "BEL",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 10:00",
+    "event": "Lithuania W vs Belgium W",
+    "event_id": "12125",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 57,
+    "selection": "Belgium (W)",
+    "sport": "Handball",
+    "tips": "4/7",
+    "url": "https://www.olbg.com/betting-tips/event/12125"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T14:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Luxembourg W",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "International (women)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Great Britain W",
+   "id": "han-lux-gbr",
+   "inputs": {
+    "away": "LUX",
+    "away_edge": 0.0,
+    "home": "GRE",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:00",
+    "event": "Luxembourg W vs Great Britain W",
+    "event_id": "12126",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 80,
+    "selection": "Great Britain (W)",
+    "sport": "Handball",
+    "tips": "4/5",
+    "url": "https://www.olbg.com/betting-tips/event/12126"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "HK Malmo",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Swedish Handball",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Amo HK",
+   "id": "han-amo-mal",
+   "inputs": {
+    "away": "HK ",
+    "away_edge": 0.0,
+    "home": "AMO",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:15",
+    "event": "Amo HK vs HK Malmo",
+    "event_id": "12144",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 80,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "4/5",
+    "url": "https://www.olbg.com/betting-tips/event/12144"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T15:15:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "HC Hamburg",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Deutsche Handball-Bundesliga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Bergischer HC",
+   "id": "han-ber-ham",
+   "inputs": {
+    "away": "HC ",
+    "away_edge": 0.0,
+    "home": "BER",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:30",
+    "event": "Bergischer HC vs HC Hamburg",
+    "event_id": "12087",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "4/4",
+    "url": "https://www.olbg.com/betting-tips/event/12087"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T15:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "RK Partizan",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "EHF Champions League qualifying",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Fuchse Berlin",
+   "id": "han-fuc-par",
+   "inputs": {
+    "away": "RK ",
+    "away_edge": 0.0,
+    "home": "FUC",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "29 Oct 13:45",
+    "event": "Fuchse Berlin vs RK Partizan",
+    "event_id": "12128",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 57,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "4/7",
+    "url": "https://www.olbg.com/betting-tips/event/12128"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-29T17:45:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "HSG Wetzlar",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Deutsche Handball-Bundesliga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Fuchse Berlin",
+   "id": "han-fuc-wet",
+   "inputs": {
+    "away": "HSG",
+    "away_edge": 0.0,
+    "home": "FUC",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:30",
+    "event": "Fuchse Berlin vs HSG Wetzlar",
+    "event_id": "12089",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 50,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "3/6",
+    "url": "https://www.olbg.com/betting-tips/event/12089"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T15:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Kristiansand",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Norwegian Handball",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Follo",
+   "id": "han-fol-kri",
+   "inputs": {
+    "away": "KRI",
+    "away_edge": 0.0,
+    "home": "FOL",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 13:00",
+    "event": "Follo vs Kristiansand",
+    "event_id": "12154",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "3/3",
+    "url": "https://www.olbg.com/betting-tips/event/12154"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Kolstad",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "EHF Champions League qualifying",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "KS Kielce",
+   "id": "han-ksk-kol",
+   "inputs": {
+    "away": "KOL",
+    "away_edge": 0.0,
+    "home": "KS ",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "28 Oct 15:45",
+    "event": "KS Kielce vs Kolstad",
+    "event_id": "12132",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 75,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "3/4",
+    "url": "https://www.olbg.com/betting-tips/event/12132"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-28T19:45:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Skanderborg Handbold",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Danish Handball",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Team Tvis Holstebro",
+   "id": "han-ska-tth",
+   "inputs": {
+    "away": "SKA",
+    "away_edge": 0.0,
+    "home": "TEA",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:00",
+    "event": "Skanderborg Handbold vs Team Tvis Holstebro",
+    "event_id": "12075",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 50,
+    "selection": "Team Tvis Holstebro",
+    "sport": "Handball",
+    "tips": "2/4",
+    "url": "https://www.olbg.com/betting-tips/event/12075"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "IFK Kristianstad",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Swedish Handball",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "HIF Karlskrona",
+   "id": "han-hif-ikc",
+   "inputs": {
+    "away": "IFK",
+    "away_edge": 0.0,
+    "home": "HIF",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:00",
+    "event": "HIF Karlskrona vs IFK Kristianstad",
+    "event_id": "12148",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 50,
+    "selection": "HIF Karlskrona",
+    "sport": "Handball",
+    "tips": "2/4",
+    "url": "https://www.olbg.com/betting-tips/event/12148"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Saran Loiret",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "LNH (France)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Montpellier",
+   "id": "han-mon-sar",
+   "inputs": {
+    "away": "SAR",
+    "away_edge": 0.0,
+    "home": "MON",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "Montpellier vs Saran Loiret",
+    "event_id": "12081",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/12081"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "IFK Skovde HK",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Swedish Handball",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Lugi HF",
+   "id": "han-lug-sko",
+   "inputs": {
+    "away": "IFK",
+    "away_edge": 0.0,
+    "home": "LUG",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "Lugi HF vs IFK Skovde HK",
+    "event_id": "12149",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 67,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/12149"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Onnereds HK",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Swedish Handball",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Alingsas HK",
+   "id": "han-ali-onn",
+   "inputs": {
+    "away": "ONN",
+    "away_edge": 0.0,
+    "home": "ALI",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:30",
+    "event": "Alingsas HK vs Onnereds HK",
+    "event_id": "12147",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 67,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/12147"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T16:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "SG Flensburg Handewitt",
+   "blank_reason": "No official league/EHF fixture page captured for this match at session time; OLBG listing only (flagged). EHF CL qualifiers additionally carry the note that OLBG's most-tipped selections are 'Tie', which is unusual for top-tier European fixtures.",
+   "competition": "Deutsche Handball-Bundesliga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Vfl Gummersbach",
+   "id": "han-gum-fln",
+   "inputs": {
+    "away": "SG ",
+    "away_edge": 0.0,
+    "home": "VFL",
+    "home_edge": 0.0,
+    "kind": "handball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 13:00",
+    "event": "Vfl Gummersbach vs SG Flensburg Handewitt",
+    "event_id": "12095",
+    "hub": "https://www.olbg.com/betting-tips/Handball/20",
+    "market": "Money Line",
+    "pct": 100,
+    "selection": "Tie",
+    "sport": "Handball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/12095"
+   },
+   "sport": "Handball",
+   "start_display": "per OLBG display",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Abel-Moda Brusque W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Brazil (Superliga)",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Praia Clube W",
+   "id": "vol-bru-pra",
+   "inputs": {
+    "away": "Abel-Moda Brusque W",
+    "away_edge": 0.0,
+    "home": "Praia Clube W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Today 20:00",
+    "event": "Abel-Moda Brusque W vs Praia Clube W",
+    "event_id": "37003",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 75,
+    "selection": "Abel-Moda Brusque W",
+    "sport": "Volleyball",
+    "tips": "6/8",
+    "url": "https://www.olbg.com/betting-tips/event/37003"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Cisterna Volley",
+   "blank_reason": "",
+   "competition": "SuperLega Credem Banca, Round 2",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Fixture (official)",
+     "source_key": "legavolley_tre",
+     "source_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+     "value": "Cisterna v Trentino, SuperLega Round 2, 25 Oct (legavolley.it, inherited 17:35Z)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Itas Trentino",
+   "id": "vol-cis-tre",
+   "inputs": {
+    "away": "Cisterna Volley",
+    "away_edge": 0.0,
+    "elite": true,
+    "home": "Itas Trentino",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "Itas Trentino vs Cisterna Volley",
+    "event_id": "36994",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 86,
+    "selection": "Cisterna Volley",
+    "sport": "Volleyball",
+    "tips": "6/7",
+    "url": "https://www.olbg.com/betting-tips/event/36994"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Barock Volleys Ludwigsburg",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "German Volleyball Bundesliga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "TV Rottenburg",
+   "id": "vol-lud-rot",
+   "inputs": {
+    "away": "Barock Volleys Ludwigsburg",
+    "away_edge": 0.0,
+    "home": "TV Rottenburg",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "Barock Volleys Ludwigsburg vs TV Rottenburg",
+    "event_id": "37014",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 83,
+    "selection": "TV Rottenburg",
+    "sport": "Volleyball",
+    "tips": "5/6",
+    "url": "https://www.olbg.com/betting-tips/event/37014"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Kioene Padova",
+   "blank_reason": "",
+   "competition": "SuperLega Credem Banca, Round 2",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Context (official)",
+     "source_key": "legavolley_tre",
+     "source_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+     "value": "Lega Pallavolo site live at capture; Civitanova/Padova listed in OLBG SuperLega Round 2 block (fixture page not individually captured)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Lube Civitanova",
+   "id": "vol-pad-civ",
+   "inputs": {
+    "away": "Kioene Padova",
+    "away_edge": 0.0,
+    "elite": true,
+    "home": "Lube Civitanova",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 13:00",
+    "event": "Kioene Padova vs Lube Civitanova",
+    "event_id": "36995",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Kioene Padova",
+    "sport": "Volleyball",
+    "tips": "5/5",
+    "url": "https://www.olbg.com/betting-tips/event/36995"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Tinet Prata di Pordenone",
+   "blank_reason": "",
+   "competition": "SuperLega Credem Banca, Round 2",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "Fixture (official)",
+     "source_key": "legavolley_per",
+     "source_url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en",
+     "value": "Perugia v Pordenone, SuperLega Round 2, 25 Oct (legavolley.it, inherited 17:35Z)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Sir Susa Scai Perugia",
+   "id": "vol-per-por",
+   "inputs": {
+    "away": "Tinet Prata di Pordenone",
+    "away_edge": 0.0,
+    "elite": true,
+    "home": "Sir Susa Scai Perugia",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 13:00",
+    "event": "Sir Susa Scai Perugia vs Tinet Prata di Pordenone",
+    "event_id": "36997",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 83,
+    "selection": "Tinet Prata di Pordenone",
+    "sport": "Volleyball",
+    "tips": "5/6",
+    "url": "https://www.olbg.com/betting-tips/event/36997"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Galatasaray W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Turkish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Vakifbank W",
+   "id": "vol-vak-gal",
+   "inputs": {
+    "away": "Galatasaray W",
+    "away_edge": 0.0,
+    "home": "Vakifbank W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:00",
+    "event": "Vakifbank W vs Galatasaray W",
+    "event_id": "37110",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 57,
+    "selection": "Vakifbank W",
+    "sport": "Volleyball",
+    "tips": "4/7",
+    "url": "https://www.olbg.com/betting-tips/event/37110"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "ETV Hamburg W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "German women's Bundesliga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Munster W",
+   "id": "vol-ham-mun",
+   "inputs": {
+    "away": "ETV Hamburg W",
+    "away_edge": 0.0,
+    "home": "Munster W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 10:30",
+    "event": "ETV Hamburg W vs Munster W",
+    "event_id": "37059",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 80,
+    "selection": "ETV Hamburg W",
+    "sport": "Volleyball",
+    "tips": "4/5",
+    "url": "https://www.olbg.com/betting-tips/event/37059"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T14:30:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Vallefoglia W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Italian women's Serie A1",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Imoco Volley Conegliano W",
+   "id": "vol-con-val",
+   "inputs": {
+    "away": "Vallefoglia W",
+    "away_edge": 0.0,
+    "home": "Imoco Volley Conegliano W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "28 Oct 15:00",
+    "event": "Imoco Volley Conegliano W vs Vallefoglia W",
+    "event_id": "37076",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 80,
+    "selection": "Vallefoglia W",
+    "sport": "Volleyball",
+    "tips": "4/5",
+    "url": "https://www.olbg.com/betting-tips/event/37076"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-28T19:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Orpo W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Finnish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "LP Kangasala W",
+   "id": "vol-orp-kng",
+   "inputs": {
+    "away": "Orpo W",
+    "away_edge": 0.0,
+    "home": "LP Kangasala W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 11:00",
+    "event": "Orpo W vs LP Kangasala W",
+    "event_id": "37107",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Orpo W",
+    "sport": "Volleyball",
+    "tips": "3/3",
+    "url": "https://www.olbg.com/betting-tips/event/37107"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T15:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "CHKS Chelm",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Polish PlusLiga",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Resovia Rzeszow",
+   "id": "vol-chl-res",
+   "inputs": {
+    "away": "CHKS Chelm",
+    "away_edge": 0.0,
+    "home": "Resovia Rzeszow",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 13:00",
+    "event": "CHKS Chelm vs Resovia Rzeszow",
+    "event_id": "36965",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 60,
+    "selection": "CHKS Chelm",
+    "sport": "Volleyball",
+    "tips": "3/5",
+    "url": "https://www.olbg.com/betting-tips/event/36965"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Vero Volley Monza",
+   "blank_reason": "",
+   "competition": "SuperLega Credem Banca, Round 2",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Verona Volley",
+   "id": "vol-mnz-ver",
+   "inputs": {
+    "away": "Vero Volley Monza",
+    "away_edge": 0.0,
+    "home": "Verona Volley",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 13:00",
+    "event": "Vero Volley Monza vs Verona Volley",
+    "event_id": "36996",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Vero Volley Monza",
+    "sport": "Volleyball",
+    "tips": "3/3",
+    "url": "https://www.olbg.com/betting-tips/event/36996"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T17:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Besiktas W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Turkish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Goztepe W",
+   "id": "vol-bes-goz",
+   "inputs": {
+    "away": "Besiktas W",
+    "away_edge": 0.0,
+    "home": "Goztepe W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 06:00",
+    "event": "Besiktas W vs Goztepe W",
+    "event_id": "37108",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 67,
+    "selection": "Besiktas W",
+    "sport": "Volleyball",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/37108"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T10:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Kuzeyboru W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Turkish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Nilufer Bld W",
+   "id": "vol-kuz-nil",
+   "inputs": {
+    "away": "Kuzeyboru W",
+    "away_edge": 0.0,
+    "home": "Nilufer Bld W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 07:00",
+    "event": "Kuzeyboru W vs Nilufer Bld W",
+    "event_id": "37109",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Kuzeyboru W",
+    "sport": "Volleyball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/37109"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T11:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Aras Kargo W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Turkish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "THY Spor Kulubu W",
+   "id": "vol-ara-thy",
+   "inputs": {
+    "away": "Aras Kargo W",
+    "away_edge": 0.0,
+    "home": "THY Spor Kulubu W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "Aras Kargo W vs THY Spor Kulubu W",
+    "event_id": "37111",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Aras Kargo W",
+    "sport": "Volleyball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/37111"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Ilbank W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Turkish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Afyon Bld W",
+   "id": "vol-ilb-afy",
+   "inputs": {
+    "away": "Ilbank W",
+    "away_edge": 0.0,
+    "home": "Afyon Bld W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "Ilbank W vs Afyon Bld W",
+    "event_id": "37112",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 67,
+    "selection": "Ilbank W",
+    "sport": "Volleyball",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/37112"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Manisa BBSK W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Turkish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Zeren Spor W",
+   "id": "vol-man-zer",
+   "inputs": {
+    "away": "Manisa BBSK W",
+    "away_edge": 0.0,
+    "home": "Zeren Spor W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 09:00",
+    "event": "Manisa BBSK W vs Zeren Spor W",
+    "event_id": "37113",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Set Score",
+    "pct": 100,
+    "selection": "Manisa BBSK W to win 3-1",
+    "sport": "Volleyball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/37113"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T13:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Nice",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "French Ligue A",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Tourcoing",
+   "id": "vol-tou-nic",
+   "inputs": {
+    "away": "Nice",
+    "away_edge": 0.0,
+    "home": "Tourcoing",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "Tourcoing vs Nice",
+    "event_id": "37054",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Nice",
+    "sport": "Volleyball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/37054"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Eczacibasi W",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Turkish women's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Fenerbahce W",
+   "id": "vol-fen-ecz",
+   "inputs": {
+    "away": "Eczacibasi W",
+    "away_edge": 0.0,
+    "home": "Fenerbahce W",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "Tomorrow 12:00",
+    "event": "Fenerbahce W vs Eczacibasi W",
+    "event_id": "37114",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 100,
+    "selection": "Eczacibasi W",
+    "sport": "Volleyball",
+    "tips": "2/2",
+    "url": "https://www.olbg.com/betting-tips/event/37114"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-25T16:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Montes Claros",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Brazilian men's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Sada Cruzeiro",
+   "id": "vol-mon-cru",
+   "inputs": {
+    "away": "Montes Claros",
+    "away_edge": 0.0,
+    "home": "Sada Cruzeiro",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 19:00",
+    "event": "Montes Claros vs Sada Cruzeiro",
+    "event_id": "37101",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 67,
+    "selection": "Montes Claros",
+    "sport": "Volleyball",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/37101"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-26T23:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Norde Volei",
+   "blank_reason": "No official league fixture page captured for this match at session time; OLBG listing only (flagged).",
+   "competition": "Brazilian men's league",
+   "facts": [],
+   "facts_capture": "2026-10-24T22:30Z (this session)",
+   "facts_inherited": false,
+   "home": "Volei Renata",
+   "id": "vol-nor-ren",
+   "inputs": {
+    "away": "Norde Volei",
+    "away_edge": 0.0,
+    "home": "Volei Renata",
+    "home_edge": 0.05,
+    "kind": "volleyball"
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "26 Oct 21:00",
+    "event": "Norde Volei vs Volei Renata",
+    "event_id": "37102",
+    "hub": "https://www.olbg.com/betting-tips/Volleyball/21",
+    "market": "Win Match",
+    "pct": 67,
+    "selection": "Norde Volei",
+    "sport": "Volleyball",
+    "tips": "2/3",
+    "url": "https://www.olbg.com/betting-tips/event/37102"
+   },
+   "sport": "Volleyball",
+   "start_display": "per OLBG display / league schedule",
+   "start_utc": "2026-10-27T01:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "New South Wales",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged). The hub listed no current RLWC 2026 match tips at capture even though the tournament is in progress (nrl.com context noted on the sport page).",
+   "competition": "State of Origin 2027",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "RLWC context (official)",
+     "source_key": "nrl_rlwc",
+     "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+     "value": "Rugby League World Cup 2026 in progress; Round 2: Australia v Fiji 25 Oct (inherited, nrl.com draw)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Field",
+   "id": "rl-out-soo27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "New South Wales",
+    "tips": 9,
+    "total_tips": 12
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "27 May 2027",
+    "event": "State of Origin 2027",
+    "event_id": "2695857",
+    "hub": "https://www.olbg.com/betting-tips/Rugby_League/10",
+    "market": "Win Tournament",
+    "pct": 75,
+    "selection": "New South Wales",
+    "sport": "Rugby League",
+    "tips": "9/12",
+    "url": "https://www.olbg.com/betting-tips/event/2695857"
+   },
+   "sport": "Rugby League",
+   "start_display": "ante-post (2027-05-27)",
+   "start_utc": "2027-05-27T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Leeds Rhinos",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged). The hub listed no current RLWC 2026 match tips at capture even though the tournament is in progress (nrl.com context noted on the sport page).",
+   "competition": "Super League 2027 Grand Final",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "RLWC context (official)",
+     "source_key": "nrl_rlwc",
+     "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+     "value": "Rugby League World Cup 2026 in progress; Round 2: Australia v Fiji 25 Oct (inherited, nrl.com draw)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Field",
+   "id": "rl-out-sl27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Leeds Rhinos",
+    "tips": 1,
+    "total_tips": 3
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "02 Oct 2027",
+    "event": "Super League 2027",
+    "event_id": "2801554",
+    "hub": "https://www.olbg.com/betting-tips/Rugby_League/10",
+    "market": "Grand Final Winner",
+    "pct": 33,
+    "selection": "Leeds Rhinos",
+    "sport": "Rugby League",
+    "tips": "1/3",
+    "url": "https://www.olbg.com/betting-tips/event/2801554"
+   },
+   "sport": "Rugby League",
+   "start_display": "ante-post (2027-10-02)",
+   "start_utc": "2027-10-02T00:00:00Z",
+   "venue": "—"
+  },
+  {
+   "away": "Penrith Panthers",
+   "blank_reason": "Ante-post outright; no official market page captured; OLBG tip-share only (flagged). The hub listed no current RLWC 2026 match tips at capture even though the tournament is in progress (nrl.com context noted on the sport page).",
+   "competition": "NRL 2027 Grand Final",
+   "facts": [
+    {
+     "captured_utc": "2026-10-24T17:35:00Z",
+     "claim": "RLWC context (official)",
+     "source_key": "nrl_rlwc",
+     "source_url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+     "value": "Rugby League World Cup 2026 in progress; Round 2: Australia v Fiji 25 Oct (inherited, nrl.com draw)"
+    }
+   ],
+   "facts_capture": "2026-10-24T17:35Z (data/now)",
+   "facts_inherited": true,
+   "home": "Field",
+   "id": "rl-out-nrl27",
+   "inputs": {
+    "kind": "outright",
+    "selection": "Penrith Panthers",
+    "tips": 1,
+    "total_tips": 2
+   },
+   "official_url": "",
+   "olbg_listed": true,
+   "olbg_listing": {
+    "displayed_time": "03 Oct 2027",
+    "event": "NRL 2027",
+    "event_id": "2801600",
+    "hub": "https://www.olbg.com/betting-tips/Rugby_League/10",
+    "market": "Grand Final Winner",
+    "pct": 50,
+    "selection": "Penrith Panthers",
+    "sport": "Rugby League",
+    "tips": "1/2",
+    "url": "https://www.olbg.com/betting-tips/event/2801600"
+   },
+   "sport": "Rugby League",
+   "start_display": "ante-post (2027-10-03)",
+   "start_utc": "2027-10-03T00:00:00Z",
+   "venue": "—"
+  }
+ ],
+ "session": "arena/9f424dec-olbg2",
+ "shown_date": "24 October 2026"
+}

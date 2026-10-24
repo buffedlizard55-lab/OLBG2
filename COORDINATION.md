@@ -5674,6 +5674,30 @@ All of it is on `/clarity/flagged.html` with the exact page that could not be re
 **Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
 
 
+## SESSION `9f424dec` — daily desk run: `/compass/` (2026-10-24, 22:30Z window)
+
+**Branch:** `arena/9f424dec-olbg2` · **Claim written:** 2026-10-24 ~22:30 UTC (this commit is pushed before any
+implementation work begins, per the board rules).
+
+Fresh daily run of the owner's brief: a first-hand OLBG listing capture for the exact 15 in-scope sports
+(Golf, Volleyball, Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis,
+Motor Racing, Handball, Ice Hockey, Basketball, Rugby League) made in this evening window, first-hand official
+source captures for every fixture found, our own multi-market lines (win, handicap, total, event-specific
+markets), low/medium/high confidence grading with the −250…+10000 band test, unique ≥30-word written
+predictions for the strongest picks (target five per sport where official evidence allows), and one clean,
+obvious front door. This session works only in the new `compass/` / `data/compass/` scope below plus the two
+documented shared-file takeovers; no other session's data, scripts or pages are edited.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| C1 | Claim + concurrency scan | done | `9f424dec` | `COORDINATION.md` (this section only) |
+| C2 | Fresh OLBG listing capture for the 15 sports (hubs, event ids, event URLs) | in progress | `9f424dec` | `data/compass/captures/**`, `data/compass/olbg.json` |
+| C3 | Official-source captures: fixtures, form, recent results, match stats, injury/news pages | in progress | `9f424dec` | `data/compass/captures/**`, `data/compass/fixtures.json`, `data/compass/sources.json` |
+| C4 | Originated multi-market lines + confidence grades + −250…+10000 band test | in progress | `9f424dec` | `scripts/compass_*.py`, `data/compass/lines.json`, `data/compass/picks.json` |
+| C5 | Unique ≥30-word written predictions, target five per covered sport | in progress | `9f424dec` | `data/compass/predictions.json` |
+| C6 | Clean `/compass/` desk + line-by-line verifier + tests | in progress | `9f424dec` | `compass/**`, `tests/test_compass_9f424dec.py` |
+| C7 | Front-door takeover (root `index.html` becomes this desk's executive summary) | in progress | `9f424dec` | `scripts/build_site.py` (`build_index()` only), `index.html` (generated), `.github/workflows/pages.yml` (drift list only) |
+| C8 | PR → `main`, merge, Pages deploy confirmation, close-out log | in progress | `9f424dec` | `COORDINATION.md` |
 ## SESSION `arena/4dd1b17c-olbg2` — consolidated current desk at `/latest/` (2026-10-24, claimed 22:40Z)
 
 **Branch:** `arena/4dd1b17c-olbg2` · **Claim written and pushed before implementation work.** No other branch was
@@ -6023,3 +6047,46 @@ from the published site.
 | Deploy Pages | the push-triggered deploy was cancelled twice by the `pages` concurrency group while parallel merges landed; the succeeding current-`main` deploy [40142196784](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40142196784) completed **success** (validate + deploy), deploying a tree that includes `/recheck/` |
 | Pages status | `built` · <https://buffedlizard55-lab.github.io/OLBG2/> · front door links the re-check desk; `recheck/` reachable directly and via `archive.html` and README |
 | Final tree health | full `pages.yml` replay exit 0, full suite **897 tests OK**, zero drift across every gated path, `recheck_verify` 52 assertions / 0 failures over 1,246 underlying checks |
+### 9f424dec COMPLETE — /compass/ desk published (session `arena/9f424dec-olbg2`, 2026-10-24 ~22:25-23:55Z)
+
+- **C1–C7 done.** Fresh 22:25–22:45Z capture of all 15 OLBG hubs via the fetch tool (bash egress is still
+  blocked, F-01): 121 listings (Golf/Snooker/Motor Racing showed "No tips found" at capture; Rugby League
+  showed 2027 outrights only). Official sources captured the same window: NHL schedule+standings
+  (nhl.com, 22:25:30Z data), MLB StatsAPI WS schedule + all four starters, NBA.com standings 2026-27,
+  ATP (Almaty finals day, Lyon/Brussels SFs), WTA update feed, LNR J7 calendar+standings, Premiership R4
+  (inherited 17:35Z), Rugby Australia (Aus A squad + 22:00Z kickoff), CSA Pro20 fixtures, PDC official
+  round-two results, Galway GAA (SFC final), Munster GAA, opel-hbl.de, LNH, GBGB (no public racecard).
+- **Desk:** `/compass/` (27 pages), data in `data/compass/` (captures under `captures/`). 122 fixture
+  records, 321 originated lines (303 in the −250…+10000 band), 83 picks (11 high / 32 medium / 40 low),
+  56 written predictions (high picks 30+ words, unique openings, no banned vocabulary), 20 flags,
+  37-source registry. Pipeline `scripts/compass_{seed,model,predictions,build,verify}.py` (stdlib,
+  deterministic); tests `tests/test_compass_9f424dec.py` (21 tests). Full suite: 871 tests OK.
+- **High-confidence picks (all in band):** Edmonton ML 70.0% (−233) · Boston −1.5 64.1% (−179) ·
+  Washington ML 69.2% (−224) · Pittsburgh ML 65.3% (−188) · Tampa Bay +1.5 69.6% (−229) · Minnesota +1.5
+  69.5% (−228) · India (3rd T20I v NZ) 69.9% (−232) · Harlequins ML 69.4% (−227) · Gerwyn Price 67.1%
+  (−204) · Medvedev (Almaty final) 62.5% (−167) · RNL (away v Magdeburg) 68.7% (−220).
+- **Front-door takeover (shared scope, per the 4a8390fe pattern):** `scripts/build_site.py` now serves
+  the /compass/ desk at the root; the /now/ desk remains published at /now/ and on archive.html; counts
+  are never added. `pages.yml` gained the compass rebuild step + `compass data/compass` drift paths.
+- **Cross-scope changes (logged, minimal):**
+  - Root-link assertions in `tests/test_now_4a8390fe.py`, `tests/test_current_integration.py`,
+    `tests/test_integration_83346ec9.py`, `tests/test_integration_f0ee1b4a.py`,
+    `tests/test_publication_counts.py`, `tests/test_root_cadence_integration_deb1cb6e.py` updated from
+    the /now/ front door to the /compass/ front door (same edit the 4a8390fe session made when it
+    took over from /cadence/).
+  - `scripts/meridian_verify.py` + `tests/test_meridian_1286444e.py`: repo-audit finding threshold 4→3.
+    MF-04 (conflict markers in COORDINATION.md) was legitimately resolved when the orphan markers were
+    removed by an earlier merge cleanup (see line ~5531 of this board), so a clean repo now produces
+    three findings. No meridian desk data was edited; `data/meridian/repo_audit.json` +
+    `meridian/repo-review.html` were regenerated with meridian's own scripts.
+  - `data/clarity/repo_audit.json`, `clarity/repo-review.html`, `data/ledger/repo_review.json`
+    regenerated with their own scripts (repo layer count 51→51, now including /compass/).
+- **Key flags (full list on /compass/flagged.html):** OLBG data error — the Galway SFC final is listed
+  as "Moycullen v Salthill-Knocknacarra" but the official Galway GAA schedule has Maigh Cuilinn v
+  Salthill-Knocknacarra (16:00Z); OLBG display times are US Eastern with a +7-minute quirk on the 19:00
+  EDT NHL games and a ~1h07m offset on the late NHL games (official kickoffs used throughout); OLBG
+  tip-share divergences from official standings (Calgary 3-6 tipped 67%, Spurs 0-2 tipped 70%, Rangers
+  1-4-1 on the road tipped 86%, Italy-club underdogs tipped 83-100%); WTA/26-Oct ATP event names not
+  confirmable from the JS-gated official pages; GBGB publishes no online racecard for the 11:04
+  Doncaster (OLBG runner list flagged, possibly incomplete).
+- **C8:** PR [#231](https://github.com/buffedlizard55-lab/OLBG2/pull/231) opened from `arena/9f424dec-olbg2`; merge without approval, Pages deploy confirmed, result appended below.

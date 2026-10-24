@@ -1,7 +1,7 @@
 {
  "generated_utc": "2026-10-24T18:10:00Z",
  "count": 3,
- "layers": 53,
+ "layers": 54,
  "findings": [
   {
    "id": "MF-01",
@@ -944,7 +944,7 @@
   {
    "id": "MF-03",
    "severity": "medium",
-   "title": "53 separate dashboards publish an overlapping 15-sport brief",
+   "title": "54 separate dashboards publish an overlapping 15-sport brief",
    "detail": "Each directory publishes its own dashboard with its own counts. A reader landing on any one of them sees a different total for the same day. This desk adds /meridian/ as an explicitly dated 2026-10-24 snapshot and states its counts on every page header rather than implying it supersedes the others.",
    "evidence": [
     {
@@ -958,6 +958,7 @@
       "canon",
       "clarity",
       "command",
+      "compass",
       "covered",
       "current",
       "daily",
@@ -1003,7 +1004,7 @@
       "verified",
       "zenith"
      ],
-     "count": 53
+     "count": 54
     }
    ],
    "action": "Root integration request recorded in COORDINATION.md."

@@ -183,11 +183,15 @@ def main() -> int:
     ok(len(cards) >= 3, "executive summary shows too few calls")
     for fid in cards:
         ok(fid not in started, f"executive summary promotes a started fixture: {fid}")
-    root_html = (ROOT / "index.html").read_text(encoding="utf-8")
-    root_cards = re.findall(r'class="pickcard" href="now/predictions\.html#pred-([^"]+)"', root_html)
-    ok(len(root_cards) >= 3, "root front door shows too few calls")
-    for fid in root_cards:
-        ok(fid not in started, f"root front door promotes a started fixture: {fid}")
+    # The /compass/ desk (session arena/9f424dec-olbg2, 22:45Z capture) took over the root
+    # front door after this desk per the board, so the front-door card checks only apply while
+    # the /now/ desk is the newest. /now/ stays published and reachable from archive.html.
+    if not (ROOT / "data" / "compass" / "fixtures.json").is_file():
+        root_html = (ROOT / "index.html").read_text(encoding="utf-8")
+        root_cards = re.findall(r'class="pickcard" href="now/predictions\.html#pred-([^"]+)"', root_html)
+        ok(len(root_cards) >= 3, "root front door shows too few calls")
+        for fid in root_cards:
+            ok(fid not in started, f"root front door promotes a started fixture: {fid}")
 
     # 7 ------------------------------------------------------------------ links in tables
     for page in sorted(OUT.rglob("*.html")):

@@ -199,10 +199,17 @@ def pick_card(p, root="") -> str:
 def write_front_door() -> str:
     """Write the root index.html.
 
-    The owner asked for one obvious front door, so this desk owns it. build_site.py calls this
+    The owner asked for one obvious front door, so this desk owned it. build_site.py calls this
     as well, which means every builder that touches the root writes the same bytes and the
     order the layers are rebuilt in cannot change the published page.
+
+    The /compass/ desk (session arena/9f424dec-olbg2, 22:45Z capture, taken over after this
+    session per the board) is newer and owns the front door now; when it is present this
+    function is a no-op so no builder order can restore the playbook page. /playbook/ stays
+    published and reachable from archive.html.
     """
+    if (ROOT / "data" / "compass" / "fixtures.json").is_file():
+        return ""
     fixtures_doc = json.loads((DATA / "fixtures.json").read_text())
     picks_doc = json.loads((DATA / "picks.json").read_text())
     preds_doc = json.loads((DATA / "predictions.json").read_text())

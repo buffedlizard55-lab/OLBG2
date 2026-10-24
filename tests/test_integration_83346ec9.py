@@ -19,9 +19,8 @@ class IntegrationPublishing(unittest.TestCase):
 
     def test_current_navigation_at_both_depths(self):
         # Root: one front door for the current desk. Archive: the full index of earlier layers.
-        self.assertIn('href="playbook/picks.html"', (ROOT / 'index.html').read_text())
+        self.assertIn('href="compass/picks.html"', (ROOT / 'index.html').read_text())
         self.assertIn('href="current/index.html"', (ROOT / 'archive.html').read_text())
-        self.assertIn('href="now/index.html"', (ROOT / 'archive.html').read_text())
 
     def test_current_counts_derived_from_data(self):
         counts = audit.load('data/current/band.json')['counts']

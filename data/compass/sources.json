@@ -1,0 +1,265 @@
+{
+ "as_of_utc": "2026-10-24T22:45:00Z",
+ "count": 37,
+ "sources": [
+  {
+   "captured_utc": "2026-10-24T22:45:00Z",
+   "key": "olbg_capture",
+   "name": "OLBG hub capture (this session)",
+   "note": "All 15 sport hubs fetched 22:25-22:45Z via the fetch tool; displayed times are US Eastern (verified against the NHL schedule).",
+   "url": "https://www.olbg.com/betting-tips/Ice_Hockey/13"
+  },
+  {
+   "captured_utc": "2026-10-24T22:40:00Z",
+   "key": "nhl_standings",
+   "name": "NHL.com standings",
+   "note": "2026-27 season standings at 22:25:30Z: records, GF/GA, home/road splits for 30 of 32 teams (Chicago, Vancouver not captured — flagged).",
+   "url": "https://www.nhl.com/standings"
+  },
+  {
+   "captured_utc": "2026-10-24T22:42:00Z",
+   "key": "nhl_sched_24",
+   "name": "NHL.com schedule Sat 24 Oct",
+   "note": "Official 12-game slate with 7:00/9:00/10:00 PM EDT starts; two completed results (ANA 5-4 PHI; NJD 3-1 LAK). Bookmaker odds shown on the page were NOT used for our lines.",
+   "url": "https://www.nhl.com/schedule/2026-10-24"
+  },
+  {
+   "captured_utc": "2026-10-24T22:38:00Z",
+   "key": "nhl_sched_25",
+   "name": "NHL.com schedule Sun 25 Oct",
+   "note": "MTL vs WPG listed at a neutral site, 7:00 PM EDT (special-event-season game).",
+   "url": "https://www.nhl.com/schedule/2026-10-25"
+  },
+  {
+   "captured_utc": "2026-10-24T22:33:00Z",
+   "key": "mlb_sched_ws",
+   "name": "MLB StatsAPI World Series schedule",
+   "note": "2026 World Series: Game 2 (24 Oct, American Family Field) and Games 3-4 at Tropicana Field with probable pitchers.",
+   "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-24&endDate=2026-10-31&hydrate=team,probablePitcher,decisions"
+  },
+  {
+   "captured_utc": "2026-10-24T22:36:00Z",
+   "key": "mlb_al",
+   "name": "MLB StatsAPI AL standings 2026",
+   "note": "Regular-season records and splits: Tampa Bay 98-64 (home 55-26, road 43-38).",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason"
+  },
+  {
+   "captured_utc": "2026-10-24T22:45:00Z",
+   "key": "mlb_nl",
+   "name": "MLB StatsAPI NL standings 2026",
+   "note": "Regular-season records and splits: Milwaukee 103-59 (home 55-26, night 68-35, W5).",
+   "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason"
+  },
+  {
+   "captured_utc": "2026-10-24T22:36:00Z",
+   "key": "mlb_pitchers",
+   "name": "MLB StatsAPI Game 2 starters",
+   "note": "Rasmussen (TB) 2.67 ERA / 0.91 WHIP; Henderson (MIL) 2.47 ERA / 0.84 WHIP, 2026 season.",
+   "url": "https://statsapi.mlb.com/api/v1/people?personIds=656876,701656&hydrate=stats(group=[pitching],type=[season],season=2026)"
+  },
+  {
+   "captured_utc": "2026-10-24T22:50:00Z",
+   "key": "mlb_pitchers_g3",
+   "name": "MLB StatsAPI Game 3 starters",
+   "note": "Gasser (MIL) 3.87 ERA / 1.19 WHIP; Peralta (TB) 3.25 ERA / 1.01 WHIP with Tampa Bay in 2026.",
+   "url": "https://statsapi.mlb.com/api/v1/people?personIds=688107,642547&hydrate=stats(group=[pitching],type=[season],season=2026)"
+  },
+  {
+   "captured_utc": "2026-10-24T22:35:00Z",
+   "key": "nba_standings",
+   "name": "NBA.com standings 2026-27",
+   "note": "New-season standings (1-2 games played each). 2025-26 prior-season records are behind a JS selector and could not be captured — flagged; NBA confidence capped at medium.",
+   "url": "https://www.nba.com/standings"
+  },
+  {
+   "captured_utc": "2026-10-24T22:39:00Z",
+   "key": "atp_almaty",
+   "name": "ATP Almaty daily schedule (day 9, finals)",
+   "note": "Medvedev (1) v Basilashvili (Q) final, not before 14:00 local.",
+   "url": "https://www.atptour.com/en/scores/current/almaty/9410/daily-schedule?day=7"
+  },
+  {
+   "captured_utc": "2026-10-24T22:39:00Z",
+   "key": "atp_current",
+   "name": "ATP Tour live scores",
+   "note": "Almaty SFs (Medvedev def. Bublik 6-3 ret.; Basilashvili def. Tsitsipas 6-4 6-7 6-3), Lyon SFs (Musetti def. Cobolli 4-6 6-2 7-5; Fritz def. Paul 6-3 7-5), Brussels SFs.",
+   "url": "https://www.atptour.com/en/scores/current"
+  },
+  {
+   "captured_utc": "2026-10-24T22:41:00Z",
+   "key": "wta_tournaments",
+   "name": "WTA official tournament update feed",
+   "note": "Draw/schedule pages are client-side rendered; the feed confirms Osaka (Kinoshita Group Japan Open) and Tokyo (Toray Pan Pacific Open) as the current WTA Asia events. Individual WTA match pairings therefore unverified — flagged.",
+   "url": "https://www.wtatennis.com/tournaments"
+  },
+  {
+   "captured_utc": "2026-10-24T22:39:00Z",
+   "key": "top14_cal",
+   "name": "LNR Top 14 calendar J7",
+   "note": "Saturday J7 results; La Rochelle v Bordeaux-Begles dimanche 25 octobre 21h05 local.",
+   "url": "https://top14.lnr.fr/calendrier-et-resultats"
+  },
+  {
+   "captured_utc": "2026-10-24T22:45:00Z",
+   "key": "top14_class",
+   "name": "LNR Top 14 standings (after J6)",
+   "note": "La Rochelle 4th 18 pts +9; Bordeaux-Begles 3rd 19 pts +64; Toulouse 1st 28 pts.",
+   "url": "https://top14.lnr.fr/classement"
+  },
+  {
+   "captured_utc": "2026-10-24T22:45:00Z",
+   "key": "galway_gaa",
+   "name": "Galway GAA official fixture changes",
+   "note": "SFC County Final Sunday 25 Oct 16:00: Maigh Cuilinn vs Salthill-Knocknacarra (Pearse Stadium). OLBG lists 'Moycullen' — data error flagged.",
+   "url": "https://www.galwaygaa.ie/changes-weekend-football-fixture-schedule/"
+  },
+  {
+   "captured_utc": "2026-10-24T22:50:00Z",
+   "key": "pdc_ec",
+   "name": "PDC official news: Finals Day recap",
+   "note": "Round Two results (Price 10-4 Menzies; Bunting 10-3 Huybrechts; Ross Smith 10-7 Heta; Woodhouse 10-6 van Veen; Littler 10-5 Aspinall, avg 114.47); quarter-finals on Finals Day Sunday 25 Oct.",
+   "url": "https://www.pdc.tv/news/2026/october/24/astonishing-littler-powers-through-to-finals-day-in-dortmund"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "pdc_ec_r1",
+   "name": "PDC official news: round one",
+   "note": "Littler 6-3 O'Connor (avg 105.05, six 180s); Aspinall 6-3 Reyes (inherited 17:35Z capture).",
+   "url": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
+  },
+  {
+   "captured_utc": "2026-10-24T22:48:00Z",
+   "key": "csa_pro20",
+   "name": "Cricket South Africa upcoming fixtures (official)",
+   "note": "Pro20 Cup 25 Oct: Boland v Titans (Boland Park), NWD v NC Heat (Senwes Park), Tuskers v WP (City Oval Pietermaritzburg), 13:00 SAST each.",
+   "url": "https://cricket.co.za/upcoming/8/"
+  },
+  {
+   "captured_utc": "2026-10-24T23:00:00Z",
+   "key": "rugby_au_a",
+   "name": "Rugby Australia: Australia A team confirmed",
+   "note": "Australia A v USA Eagles, Geodis Park Nashville, Sunday 25 Oct 9:00am AEDT (= 22:00Z 24 Oct); nine Wallabies in the 23.",
+   "url": "https://www.rugby.com.au/news/australia-a-team-confirmed-to-play-usa-in-nashville-20261022"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "ecb_triseries",
+   "name": "ECB: how to watch England v Pakistan/Sri Lanka tri-series",
+   "note": "Pakistan v England 4th ODI, Gaddafi Stadium Lahore, 25 Oct 08:00 GMT (inherited).",
+   "url": "https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "icc_sl_chase",
+   "name": "ICC: Sri Lanka's 430 chase",
+   "note": "England 429/4 (Brook 202, fastest ODI double century); England winless in three (inherited).",
+   "url": "https://www.icc-cricket.com/news/sri-lanka-pull-off-a-monumental-odi-chase-against-england"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "icc_pak_87",
+   "name": "ICC: Pakistan's 87-run win over England",
+   "note": "Match 2 of the tri-series; Arafat Minhas five-forty (inherited).",
+   "url": "https://www.icc-cricket.com/news/pakistan-youngster-joins-elite-odi-group-with-superb-haul"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "icc_nz_india",
+   "name": "ICC: India take 2-0 lead over New Zealand",
+   "note": "Series position ahead of the 3rd T20I (inherited).",
+   "url": "https://www.icc-cricket.com/news/tilak-nitish-hold-their-nerve-as-india-take-2-0-lead"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "opel_hbl",
+   "name": "opel-hbl.de Rhein-Neckar Lowen team page",
+   "note": "Bundesliga Matchday 10: SC Magdeburg v RNL 13:00 UTC (inherited).",
+   "url": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "lnh_starligue",
+   "name": "LNH Daikin StarLigue",
+   "note": "PSG v Saint-Raphael, J8 (inherited).",
+   "url": "https://www.lnh.fr/daikin-starligue/accueil"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "legavolley_tre",
+   "name": "Lega Pallavolo (SuperLega)",
+   "note": "Round 2 fixtures (inherited).",
+   "url": "https://www.legavolley.it/2026/ready-for-piacenza-2/?lang=en"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "legavolley_per",
+   "name": "Lega Pallavolo (Perugia round)",
+   "note": "Perugia v Pordenone (inherited).",
+   "url": "https://www.legavolley.it/2026/brand-new-administration-council-4/?lang=en"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "prem_r4",
+   "name": "Premiership Rugby Round 4 fixtures",
+   "note": "Harlequins v Saracens (inherited).",
+   "url": "https://www.premrugby.com/competitions/gallagher-prem/fixtures-results?competition=gallagher-prem&round=4"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "munster_gaa",
+   "name": "Munster GAA Cork Premier SFC Final",
+   "note": "St Finbarrs v Nemo Rangers final (inherited).",
+   "url": "https://munster.gaa.ie/event/2026-cork-premier-senior-football-championship-final/"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "nrl_rlwc",
+   "name": "NRL.com RLWC 2026 draw",
+   "note": "Round 2: Australia v Fiji 25 Oct (inherited; context only — not on the OLBG hub at capture).",
+   "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "pgatour",
+   "name": "PGA TOUR leaderboard",
+   "note": "Bermuda Championship round 4 in play (context; no OLBG golf tips at capture).",
+   "url": "https://www.pgatour.com/leaderboard"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "europeantour",
+   "name": "DP World Tour Genesis Championship",
+   "note": "Round 4 in play (context; no OLBG golf tips at capture).",
+   "url": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/leaderboard"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "f1_us",
+   "name": "Formula 1 United States Grand Prix page",
+   "note": "Round 18, 25 Oct 20:00Z (context; no OLBG motor racing tips at capture).",
+   "url": "https://www.formula1.com/en/racing/2026/united-states"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "wst_ni",
+   "name": "World Snooker Tour matches",
+   "note": "Northern Ireland Open final 25 Oct 13:00Z, Kyren Wilson (context; no OLBG snooker tips at capture).",
+   "url": "https://www.wst.tv/matches/"
+  },
+  {
+   "captured_utc": "2026-10-24T22:48:00Z",
+   "key": "gbgb",
+   "name": "Greyhound Board of Great Britain",
+   "note": "No public online racecard for the 11:04 Doncaster; OLBG runner list used (flagged).",
+   "url": "https://www.gbgb.org.uk/"
+  },
+  {
+   "captured_utc": "2026-10-24T17:35:00Z",
+   "key": "now_4a8390fe",
+   "name": "Inherited official capture (session arena/4a8390fe-olbg2, 17:35Z)",
+   "note": "Same-day official capture committed earlier by the /now/ desk; facts inherited and re-corroborated where this session re-fetched the same source.",
+   "url": "data/now/fixtures.json"
+  }
+ ]
+}

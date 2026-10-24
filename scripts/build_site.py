@@ -465,10 +465,15 @@ def _today_counts() -> str:
 
 # --------------------------------------------------------------------------- /now/ front door
 NOW = DATA / "now"
+COMPASS = DATA / "compass"
 
 
 def _now(name):
     return json.loads((NOW / name).read_text(encoding="utf-8"))
+
+
+def _compass(name):
+    return json.loads((COMPASS / name).read_text(encoding="utf-8"))
 
 
 def build_front_door() -> str:
@@ -695,7 +700,195 @@ def build_front_door() -> str:
 """
 
 
+def build_compass_front_door() -> str:
+    """The repository's only landing page, rendering the 24 October /compass/ desk
+    (22:45Z capture, session arena/9f424dec-olbg2), the current release. Earlier desks
+    (including /now/) stay published under their own paths and are reachable from
+    archive.html; their counts are never added to these numbers.
+    """
+    matches = _compass("fixtures.json")
+    picks = _compass("picks.json")
+    preds = _compass("predictions.json")
+    lines = _compass("lines.json")
+    olbg = _compass("olbg.json")
+    sources = _compass("sources.json")
+    flagged = _compass("flagged.json")
+
+    sports = ["Golf", "Volleyball", "Rugby Union", "Cricket", "Snooker", "Darts", "Baseball",
+              "Gaelic Sports", "Greyhounds", "Tennis", "Motor Racing", "Handball", "Ice Hockey",
+              "Basketball", "Rugby League"]
+    slug = {"Golf": "golf", "Volleyball": "volleyball", "Rugby Union": "rugby-union",
+            "Cricket": "cricket", "Snooker": "snooker", "Darts": "darts", "Baseball": "baseball",
+            "Gaelic Sports": "gaelic-sports", "Greyhounds": "greyhounds", "Tennis": "tennis",
+            "Motor Racing": "motor-racing", "Handball": "handball", "Ice Hockey": "ice-hockey",
+            "Basketball": "basketball", "Rugby League": "rugby-league"}
+
+    pred_by_pick = {t["pick_id"]: t["id"] for t in preds["predictions"]}
+    hs = [p for p in picks["picks"] if p["confidence"] == "high"]
+    ms = [p for p in picks["picks"] if p["confidence"] == "medium"]
+    top = (hs + ms)[:6]
+    cards = []
+    for p in top:
+        anchor = pred_by_pick.get(p["id"], "pred-" + p["id"][len("pick-"):])
+        cards.append(
+            '<a class="pickcard" href="compass/predictions.html#' + esc(anchor) + '">'
+            '<div class="pc-top"><span class="pc-sport">' + esc(p["sport"]) + "</span>"
+            '<span class="pc-conf ' + esc(p["confidence"]) + '">' + esc(p["confidence"]) + "</span></div>"
+            '<div class="pc-match">' + esc(p["home"]) + " v " + esc(p["away"]) + "</div>"
+            '<div class="pc-sel">' + esc(p["selection"]) + "</div>"
+            '<div class="pc-meta">' + esc(p["market"]) + " · " + f'{p["probability"] * 100:.1f}%'
+            + " · " + esc(p["american_display"]) + (" <em>(outside band)</em>" if not p["in_band"] else "") + "</div>"
+            '<div class="pc-score">Score <strong>' + f'{p.get("score", 0):.1f}' + "</strong>/10</div>"
+            '<div class="pc-src">Source: '
+            + (esc(p["official_url"].split("//")[-1].split("/")[0]) if p["official_url"] else "OLBG only — flagged")
+            + "</div></a>")
+
+    pick_by_fix = {}
+    for p in picks["picks"]:
+        pick_by_fix.setdefault(p["fixture_id"], p)
+    fixtures_rows = []
+    for m in matches["fixtures"][:10]:
+        pr = pick_by_fix.get(m["id"])
+        if pr:
+            cell = ('<strong class="num">' + esc(pr["selection"]) + "</strong>"
+                    + '<div class="mini">' + esc(pr["market"]) + " · "
+                    + f'{pr["probability"] * 100:.1f}% · ' + esc(pr["american_display"]) + "</div>")
+            grade = esc(pr["confidence"])
+        else:
+            cell = '<span class="mini">no pick — lines only</span>'
+            grade = "none"
+        if m["official_url"]:
+            src = ('<a href="' + esc(m["official_url"]) + '" target="_blank" rel="noopener">'
+                   + esc(m["official_url"].split("//")[-1].split("/")[0]) + "</a>")
+        else:
+            src = '<span class="mini">— flagged</span>'
+        fixtures_rows.append(
+            '<tr><td><a href="compass/sports/' + slug[m["sport"]] + '.html">' + esc(m["sport"]) + "</a></td>"
+            + "<td>" + esc(m["home"]) + " v " + esc(m["away"]) + '<div class="mini">'
+            + esc(m["competition"]) + "</div></td>"
+            + '<td class="mini">' + esc(m["start_utc"][:16].replace("T", " ")) + "Z</td>"
+            + "<td>" + cell + "</td>"
+            + '<td><span class="pc-conf ' + grade + '">' + grade + "</span></td>"
+            + '<td class="mini">' + src + "</td></tr>")
+
+    fx_by_sport = {}
+    for m in matches["fixtures"]:
+        fx_by_sport[m["sport"]] = fx_by_sport.get(m["sport"], 0) + 1
+    chips = "".join(
+        '<a class="chip" href="compass/sports/' + slug[s] + '.html">' + esc(s)
+        + ' <span class="chip-n">' + str(fx_by_sport.get(s, 0)) + " fixtures</span></a>"
+        for s in sports)
+
+    official_sources = sum(1 for x in sources["sources"] if x["key"] != "olbg_capture")
+    body = f"""
+<section class="front">
+  <p class="eyebrow">Snapshot 2026-10-24T22:45Z · 24 October 2026</p>
+  <h1>Today's picks, our own prices, and the official source behind every row.</h1>
+  <p class="lede">{picks['high']} high-confidence picks across {len(picks['by_sport'])} sports, plus
+  {picks['medium']} medium and {picks['low']} low, drawn from {matches['count']} fixture records,
+  {lines['count']} prices originated on this desk ({lines['in_band']} inside the −250 to +10000 band),
+  {preds['count']} written predictions and {olbg['count']} rows read straight off OLBG's own event list.</p>
+
+  <div class="cta">
+    <a class="btn primary" href="compass/picks.html">See the picks →</a>
+    <a class="btn" href="compass/predictions.html">Read the {preds['count']} predictions</a>
+    <a class="btn" href="compass/matches.html">All {matches['count']} matches</a>
+    <a class="btn" href="compass/sports/index.html">By sport</a>
+  </div>
+
+  <h2>The strongest calls</h2>
+  <p class="sub">Selection in bold green, then the market, our chance and the price that chance implies.
+  High-confidence prices sit inside the requested −250 to +10000 band; the few medium picks outside it are marked.</p>
+  <div class="pickgrid">{''.join(cards)}</div>
+  <p class="sub"><a href="compass/picks.html">All {picks['count']} picks — {picks['high']} high, {picks['medium']} medium,
+  {picks['low']} low →</a></p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">{matches['count']}</div><div class="k">upcoming matches</div><div class="s">{olbg['count']} OLBG-listed + 1 official-only (WS Game 3)</div></div>
+    <div class="kpi"><div class="v">{picks['count']}</div><div class="k">picks still to start</div><div class="s">{picks['high']} high overall · {picks['in_band']} in band</div></div>
+    <div class="kpi"><div class="v">{preds['count']}</div><div class="k">written predictions</div><div class="s">shortest {preds['min_words']} words (high picks)</div></div>
+    <div class="kpi"><div class="v">{official_sources}</div><div class="k">official sources</div><div class="s">linked on every row</div></div>
+    <div class="kpi"><div class="v">{flagged['count']}</div><div class="k">review items</div><div class="s">data errors, times, unverified — all sourced</div></div>
+  </div>
+
+  <h2>Where everything is</h2>
+  <div class="where">
+    <a class="wherecard" href="compass/picks.html"><b>Picks</b><span>Every selection, its price and its confidence grade.</span></a>
+    <a class="wherecard" href="compass/predictions.html"><b>Written predictions</b><span>One unique preview per high and medium pick, with the official facts underneath.</span></a>
+    <a class="wherecard" href="compass/matches.html"><b>All matches</b><span>Every OLBG-listed fixture with the official facts and source links.</span></a>
+    <a class="wherecard" href="compass/lines.html"><b>Our lines</b><span>The full market book: winner, handicap and total for each fixture.</span></a>
+    <a class="wherecard" href="compass/band.html"><b>Odds band</b><span>The −250 to +10000 test on every price we made.</span></a>
+    <a class="wherecard" href="compass/flagged.html"><b>Flagged for review</b><span>What is blank, corrected or unconfirmed, with the source that was checked.</span></a>
+  </div>
+
+  <h2>Tonight's fixtures</h2>
+  <p class="sub">The first ten on the card. <a href="compass/matches.html">All {matches['count']} →</a></p>
+  <div class="table-wrap"><table class="data">
+    <thead><tr><th>Sport</th><th>Match</th><th>Start</th><th>Selection</th><th>Confidence</th><th>Official source</th></tr></thead>
+    <tbody>{''.join(fixtures_rows)}</tbody></table></div>
+
+  <h2>Fifteen sports</h2>
+  <div class="chips">{chips}</div>
+
+  <div class="notice">
+    <strong>What this is.</strong> A dated research snapshot produced from first-hand reads of official
+    league, federation and governing-body pages at 22:25–23:00 UTC, plus the same-day 17:35Z official
+    capture inherited from the /now/ desk (re-corroborated where re-fetched). The links are provenance:
+    they show where each value came from. Prices are originated here from official inputs, never copied
+    from a bookmaker, and a pick is research output rather than betting advice.
+  </div>
+  <p class="sub">Earlier desks — including <a href="now/index.html">/now/</a> (18:10Z capture) — are kept,
+  unmodified and with their own counts, behind <a href="archive.html">the archive</a>. Their numbers are
+  never added to the numbers above.</p>
+</section>
+"""
+    nav = """
+<header class="topbar"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span>OLBG2 <span class="brand-sub">picks desk · 24 October 2026 · 22:45Z</span></a>
+  <nav class="navline">
+    <a href="compass/picks.html">Picks</a>
+    <a href="compass/predictions.html">Predictions</a>
+    <a href="compass/matches.html">Matches</a>
+    <a href="compass/lines.html">Our lines</a>
+    <a href="compass/sports/index.html">Sports</a>
+    <a href="compass/olbg.html">OLBG list</a>
+    <a href="compass/sources.html">Sources</a>
+    <a href="compass/methodology.html">Method</a>
+    <a href="compass/flagged.html">Flagged</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+</div></header>"""
+    (ROOT / "assets").mkdir(exist_ok=True)
+    style = ROOT / "assets" / "style.css"
+    base_css = style.read_text(encoding="utf-8") if style.exists() else ""
+    if "/* front door nav */" not in base_css:
+        build_front_door()  # idempotent: appends the shared front-door css + nav css
+        base_css = style.read_text(encoding="utf-8")
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OLBG2 — today's picks, our own prices, official sources</title>
+<meta name="description" content="One desk for 24 October 2026 (22:45Z capture): confidence-graded picks across 15 sports, prices originated from official inputs, written predictions, and the official source behind every row.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314b8a6'/%3E%3C/svg%3E">
+</head>
+<body>
+{nav}
+<main class="wrap" style="max-width:1160px;margin:0 auto;padding:26px 20px 60px">
+{body}
+</main>
+<footer class="wrap" style="max-width:1160px;margin:0 auto;padding:20px 20px 50px;color:#64748b;font-size:13px;border-top:1px solid #e2e8f0">
+  <p>OLBG2 · research snapshot 2026-10-24T22:45Z · <a href="compass/flagged.html">flag anything that needs review</a> ·
+  <a href="compass/methodology.html">method</a> · <a href="archive.html">every earlier desk</a></p>
+</footer>
+</body>
+</html>
+"""
 def build_current_index() -> str:
+    if (COMPASS / "fixtures.json").exists():
+        return build_compass_front_door()
     if (NOW / "matches.json").exists():
         return build_front_door()
     matches, lines, picks, predictions, sources, flagged, audit = current_dataset()
@@ -1511,9 +1704,16 @@ def index_of_every_layer() -> str:
     page_rows = "".join(
         f'<tr><td><a href="{name}">/{name}</a></td><td>root page</td>'
         f'<td>Earlier root-level view, kept unchanged</td></tr>' for name in root_pages)
+    if (COMPASS / "fixtures.json").exists():
+        current = "compass/index.html"
+    elif (DATA / "playbook" / "picks.json").exists():
+        current = "playbook/index.html"
+    else:
+        current = "now/index.html"
+    current_label = "/" + current.split("/")[0] + "/"
     return ("\n<h2>Every published layer in this repository</h2>\n"
             "<p class=\"sub\">Generated from the repository itself, so the index cannot drift. The current desk is "
-            "<a href=\"now/index.html\">/now/</a>; everything below is kept for audit with its own counts, and no two "
+            f"<a href=\"{current}\">{current_label}</a>; everything below is kept for audit with its own counts, and no two "
             "layers are ever added together.</p>\n"
             "<div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>Layer</th><th>Kind</th>"
             "<th>Page title as published</th></tr></thead><tbody>"
@@ -1654,6 +1854,11 @@ def main() -> None:
     # The owner asked for one obvious front door. /playbook/ owns it, and this builder now emits
     # the same bytes, so the order the layers are rebuilt in can no longer change the root page.
     _write_playbook_front_door()
+    # The /compass/ desk (22:45Z capture, session arena/9f424dec-olbg2) is the newest layer and
+    # owns the front door now; /playbook/ and /now/ remain published and reachable from
+    # archive.html, with their own counts never added to this desk's.
+    if (COMPASS / "fixtures.json").is_file():
+        (ROOT / "index.html").write_text(build_compass_front_door(), encoding="utf-8")
     (ROOT / "matches.html").write_text(build_matches(), encoding="utf-8")
     (ROOT / "verification.html").write_text(build_verification(), encoding="utf-8")
     (ROOT / "picks.html").write_text(build_picks(), encoding="utf-8")

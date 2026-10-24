@@ -1,0 +1,42 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Method — OLBG2 /compass/ desk</title><link rel='stylesheet' href='assets/style.css'></head><body><div class='bar'><div class='wrap'><a class='brand' href='index.html'>OLBG2 <span>/compass/ desk</span></a><nav><a class="" href="index.html">Executive summary</a><a class="" href="picks.html">Picks</a><a class="" href="predictions.html">Written predictions</a><a class="" href="matches.html">All matches</a><a class="" href="lines.html">Our lines</a><a class="" href="band.html">Odds band</a><a class="" href="sports/index.html">By sport</a><a class="" href="olbg.html">OLBG list</a><a class="" href="sources.html">Sources</a><a class="active" href="methodology.html">Method</a><a class="" href="flagged.html">Flagged for review</a></nav></div></div><main class='wrap'>
+<h1>Method</h1>
+<p class='sub'>Same house methodology as the rest of the repository (see METHODOLOGY.md at the repo root),
+applied to the 22:45Z capture.</p>
+<h2>Pricing families</h2>
+<ul class='steps'>
+<li><b>Poisson (NHL)</b> — expected goals = geometric mean of each team's goals-for rate and the
+opponent's goals-against rate, against the league average (30 captured teams, flag cmp-15), with home
+multipliers 1.06/0.98; regulation ties split evenly because the money line settles with overtime.
+Puck line −1.5/+1.5 and a half-goal game total are priced from the same matrix.</li>
+<li><b>Poisson runs (MLB)</b> — expected runs from each club's 2026 run rate vs the opponent's
+conceded rate (baseline 4.5 runs/team/game; no official league-average source was captured), scaled
+for both starters' season ERA/WHIP (official StatsAPI); extra innings settle the money line so ties
+split evenly. Run line ±1.5 and a half-run total are priced from the same matrix.</li>
+<li><b>Normal margin (rugby, Gaelic, cricket, basketball, handball, tennis)</b> — a margin
+distribution (sigma 12 rugby / 8 Gaelic / 25 cricket runs / 8.0 NBA points / 6.5 handball goals)
+centred on a home advantage (2.5 / 1.5 / 2.0 / +4 points / 1.5 goals) shifted by edge terms set from
+the sourced facts on each record (form, series position, venue, squad quality). Handball adds the
+3-way draw as the mass inside ±1 goal.</li>
+<li><b>Binomial legs (darts)</b> — leg win rate from the sourced round results and match averages;
+match probability is the binomial tail to 10 legs (best of 19, official format).</li>
+<li><b>Class ladder (volleyball)</b> — 62% (70% for top-two vs clearly weaker) for the better
+established club; no set-level statistics were captured.</li>
+<li><b>OLBG community line</b> — where no official fixture-level statistic exists, the price is the
+tip share shrunk toward 50% (weight 0.85 / 0.70 / 0.50 by sample size, clamped 30–72%, 30–60% for
+three-or-fewer tips) and flagged as unverified. Ante-post outrights are capped at low.</li>
+</ul>
+<h2>Confidence</h2>
+<ul class='steps'>
+<li><b>High</b> — numeric family, our chance ≥ 62%, price inside −250…+10000. Totals capped at medium.
+Unverified-event fixtures and the two-game NBA sample are capped at medium (flags cmp-07, cmp-16).</li>
+<li><b>Medium</b> — numeric ≥ 55%, or community/ladder ≥ 70%.</li>
+<li><b>Low</b> — everything else.</li>
+<li><b>Score</b> = 10 × chance × basis shade (1.0 numeric, 0.8 community/ladder), capped at 7.5 in band.</li>
+</ul>
+<h2>Honesty rules</h2>
+<ul class='steps'>
+<li>No bookmaker price is read, scraped or compared — the odds shown on nhl.com schedule rows are ignored.</li>
+<li>Unconfirmable values are left blank and carried to <a href='flagged.html'>Flagged for review</a>.</li>
+<li>OLBG display times (US Eastern) are never used as the official time; official kickoffs win.</li>
+</ul>
+<footer class='footer'><p>Captured 24 October 2026 22:25–22:45 UTC by session arena/9f424dec-olbg2. All lines originated from official captured statistics or the OLBG community tip share (flagged where so). No bookmaker prices were read. <a href='flagged.html'>Flagged for review →</a></p></footer></main></body></html>

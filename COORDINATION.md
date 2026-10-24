@@ -6003,3 +6003,13 @@ merged at 23:09:51Z, carrying the flagged-page count fix, the README pointer and
 `status: built`, and `/latest/` was fetched back from the live site after the deploy — summary, picks, all
 fifteen sport pages and the flagged page render, with the desk's own counts and a source link on every row.
 Open request on the board: one `/latest/` line in the `/playbook/`-owned front door.
+
+---
+
+**Follow-up PR [#226](https://github.com/buffedlizard55-lab/OLBG2/pull/226) merged on 2026-10-24T23:14:00Z**, merge commit
+`639f941ad2a82217223ae83307a7ee07b14caf2b`, `validate` passed (`37s`, run 40141675142), and Pages built that commit
+(`status=built`, `error=none`). One more `main` merge was needed first (PR #225 from the `/latest/` session, which had
+already dropped its own front-door banner because this desk now owns the root); resolved exactly as the earlier ones.
+Live spot check after the deploy: `/playbook/sports/baseball.html` renders "1 match · 1 pick · 1 preview", the
+"1 match listed by OLBG" copy, and the preview with both of its sources — the three defects this PR fixed are gone
+from the published site.

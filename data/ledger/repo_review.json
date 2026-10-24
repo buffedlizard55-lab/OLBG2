@@ -1,17 +1,10 @@
 {
  "meta": {
   "generated_at": "2026-10-23T20:36:17Z",
-  "findings": 7,
+  "findings": 6,
   "layers": 53
  },
  "findings": [
-  {
-   "code": "RR-01",
-   "title": "Unresolved merge-conflict markers are checked in",
-   "detail": "`COORDINATION.md` carries 1 closing conflict markers and `METHODOLOGY.md` carries 0. They are plain text, so nothing breaks, but they are not content and they make the shared board hard to read.",
-   "evidence": "COORDINATION.md lines 5882; METHODOLOGY.md line ",
-   "severity": "medium"
-  },
   {
    "code": "RR-02",
    "title": "Thirty-three published dashboards overlap the same brief",

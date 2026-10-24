@@ -5673,3 +5673,26 @@ All of it is on `/clarity/flagged.html` with the exact page that could not be re
 
 **Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
 
+
+## Session `arena/1ecc0d92-olbg2` — FINAL INTEGRATION CLAIM (2026-10-24 22:25 UTC)
+
+**Branch constraint.** Arena binds this session to `arena/1ecc0d92-olbg2`; a separate `session-<id>/<task>` branch is
+not available here. That single branch is therefore the integration branch for this session, and all work is kept on it.
+A scan of the board found no claim by this session and no active claim with a fresh commit from the last hour; the last
+merge to `main` was PR #219 at 19:39Z. PR #209 remains open from an older session and is not touched.
+
+| # | Task | Status | Owner | File scope (non-overlapping with other sessions) |
+|---|---|---|---|---|
+| IN1 | Concurrency scan, claim and immediate push | in progress | `arena/1ecc0d92-olbg2` | append-only section of `COORDINATION.md` |
+| IN2 | Reproduce and repair the failing `Validate Pages content` check on `main` | unclaimed | `arena/1ecc0d92-olbg2` | `.github/workflows/pages.yml`, one narrow repair script if required |
+| IN3 | Fresh OLBG 15-sport hub read; re-check official fixture / stat sources line by line; record what was and was not re-readable | unclaimed | `arena/1ecc0d92-olbg2` | `data/final-desk/**`, `research/final-desk-1ecc0d92.md` |
+| IN4 | Update the current `/now/` desk: full match inventory, originated markets, confidence, −250…+10000 band, and as many fully sourced unique ≥30-word predictions as the official record supports (target 5 per sport) | unclaimed | `arena/1ecc0d92-olbg2` | `data/now/**`, `scripts/now_*.py` (additive), `now/**` regenerated |
+| IN5 | Clean root front door / category pages / executive summary, Flagged for Review, source links on every row; link audit and line-by-line verifier | unclaimed | `arena/1ecc0d92-olbg2` | `index.html`, `README.md`, `scripts/build_site.py` (root output), `tests/test_integration_1ecc0d92.py` |
+| IN6 | Full local CI reproduction, unit tests, source-link and broken-link audits; resolve regressions without deleting other sessions' layers | unclaimed | `arena/1ecc0d92-olbg2` | generated artefacts in claimed scope, documented regenerations of other layers via their own scripts |
+| IN7 | PR → `main`, merge without waiting, confirm Pages deploy and live URLs; record PR / merge / irregularities | unclaimed | `arena/1ecc0d92-olbg2` | `COORDINATION.md` append |
+
+**Verification policy for this session.** OLBG is the source for event existence, event ids, market labels and community
+tip counts; governing-body and league pages are the sources for fixture facts and performance data. Every data row
+published by the current desk links its exact source URL. A value whose official page could not be re-read during this
+session is marked as inherited, with its original capture time, or left blank and placed on the Flagged for Review page.
+No reader-facing prediction uses the words "model" or "verified". No bookmaker odds are copied.

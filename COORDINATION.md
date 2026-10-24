@@ -5758,3 +5758,17 @@ exception every previous session logged, required because a new layer moves thei
 `data/clarity/repo_audit.json` + `clarity/repo-review.html` (layers 50 → 51),
 `data/meridian/repo_audit.json` + `meridian/repo-review.html`,
 `data/ledger/repo_review.json` + `ledger/repo-review.html`, and `archive.html` (now 51 layer entries).
+
+**Published.** PR [#220](https://github.com/buffedlizard55-lab/OLBG2/pull/220) merged into `main` as
+`0b929eb` at 22:42:04Z. Checks at merge time: `Validate Pages content` **success** on the pull request
+(run 40139124287) and again on `main` (run 40139677013); `pages build and deployment` success; the Pages
+site reports `status: built`. The desk was fetched back from the live site after the deploy and shows the
+executive summary, 57 picks, 50 previews and all fifteen sport pages, and the root front door carries the
+`/latest/` banner with the live counts (41 fixtures still to start, 57 picks, 50 previews, 11 sports).
+
+**Handed on.** Another session (`arena/3ef9031e-olbg2`) is publishing a further desk at the same time and
+has a commit touching the root front door. The `/latest/` banner in `scripts/build_site.py` is emitted by
+the build rather than injected, so it survives that rebuild; if the front door is rewritten, keep the
+banner block and the counts it prints. The four sports with no pick (Golf, Snooker, Greyhounds, Darts) are
+a genuine market gap rather than a coverage choice: OLBG listed no golf or snooker event when both hubs
+were re-read at 22:24Z and 22:27Z.

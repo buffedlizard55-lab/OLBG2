@@ -1,0 +1,78 @@
+{
+  "captured_utc": "2026-10-24T17:50:00Z",
+  "sources": [
+    {
+      "label": "NHL scores feed, 2026-10-24",
+      "url": "https://api-web.nhle.com/v1/score/2026-10-24",
+      "read": "Read in full across the paged response: 12 games, start times, 2026-27 records, per-team leaders, league odds array.",
+      "outcome": "used"
+    },
+    {
+      "label": "NHL schedule feed, 2026-10-24",
+      "url": "https://api-web.nhle.com/v1/schedule/2026-10-24",
+      "read": "Read: game states, startTimeUTC, venues, broadcast lists, odds arrays. Used to confirm starts for the two games whose score-feed chunk was truncated.",
+      "outcome": "used"
+    },
+    {
+      "label": "NHL standings, 2026-10-24",
+      "url": "https://api-web.nhle.com/v1/standings/2026-10-24",
+      "read": "Partially read (first page). Standings timestamp 2026-10-24T17:06:30Z confirmed; goal totals seen for Carolina, Edmonton, Boston and Vegas.",
+      "outcome": "partial"
+    },
+    {
+      "label": "MLB Stats API schedule, 2026-10-24",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
+      "read": "One game returned: Tampa Bay Rays at Milwaukee Brewers, first pitch 2026-10-25T00:00:00Z, probable pitchers Drew Rasmussen and Logan Henderson.",
+      "outcome": "used"
+    },
+    {
+      "label": "MLB Stats API team standings, Brewers",
+      "url": "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings&season=2026",
+      "read": "Milwaukee 103-59, 832 runs scored, 618 allowed, 55-26 home, 8-2 last ten.",
+      "outcome": "used"
+    },
+    {
+      "label": "MLB Stats API league standings",
+      "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026",
+      "read": "First page read: Tampa Bay 98-64, 736 scored, 650 allowed, 43-38 away, 5-5 last ten.",
+      "outcome": "partial"
+    },
+    {
+      "label": "NBA games page, 2026-10-24",
+      "url": "https://www.nba.com/games?date=2026-10-24",
+      "read": "Calendar rendered (8 games on 24 October) but the game payload failed with \"Sorry, something went wrong\"; no per-game data.",
+      "outcome": "blocked"
+    },
+    {
+      "label": "NBA CDN today's scoreboard",
+      "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json",
+      "read": "HTTP 500 on two attempts.",
+      "outcome": "blocked"
+    },
+    {
+      "label": "NBA stats scoreboard v3",
+      "url": "https://stats.nba.com/stats/scoreboardv3?GameDate=2026-10-24&LeagueID=00",
+      "read": "Request failed (no response body).",
+      "outcome": "blocked"
+    },
+    {
+      "label": "United Rugby Championship match centre",
+      "url": "https://www.unitedrugby.com/match-centre",
+      "read": "Read: Round 3 and Round 4 results with scores and venues; Round 4 games dated 23 October. No 24 October fixture detail reached within the page portion read.",
+      "outcome": "partial"
+    },
+    {
+      "label": "Handball-Bundesliga fixture page",
+      "url": "https://www.daikin-hbl.de/de/spielplan/",
+      "read": "HTTP 404; the site redirected to a not-found page that links to https://www.opel-hbl.de/de/hbl/spielplan.",
+      "outcome": "blocked"
+    },
+    {
+      "label": "World Snooker Tour match centre",
+      "url": "https://wst.tv/matches/",
+      "read": "Read: BetVictor Northern Ireland Open 2026 match list from Round 1 (18-19 October). Today's match not reached within the page portion read.",
+      "outcome": "partial"
+    }
+  ],
+  "count": 12
+}

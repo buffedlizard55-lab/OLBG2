@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-10-24T17:51:06Z",
+  "read_window_utc": "2026-10-24T17:47:16Z/2026-10-24T17:51:06Z",
+  "capture_kind": "Fields transcribed from first-hand reads of official MLB responses; this is an audit index, not a raw response capture.",
+  "schedule_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team",
+  "standings_urls": [
+    "https://statsapi.mlb.com/api/v1/teams/158?hydrate=standings&season=2026",
+    "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026"
+  ],
+  "games": [
+    {
+      "game_id": 849802,
+      "description": "World Series Game 2",
+      "away": "Tampa Bay Rays",
+      "away_record": "98-64",
+      "away_probable_pitcher": "Drew Rasmussen",
+      "away_runs_scored": 736,
+      "away_runs_allowed": 650,
+      "away_split": "43-38",
+      "away_last_ten": "5-5",
+      "home": "Milwaukee Brewers",
+      "home_record": "103-59",
+      "home_probable_pitcher": "Logan Henderson",
+      "home_runs_scored": 832,
+      "home_runs_allowed": 618,
+      "home_split": "55-26",
+      "home_last_ten": "8-2",
+      "start_utc": "2026-10-25T00:00:00Z",
+      "venue": "American Family Field",
+      "official_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-24&hydrate=probablePitcher,team"
+    }
+  ]
+}

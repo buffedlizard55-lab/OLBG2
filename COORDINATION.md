@@ -5132,3 +5132,41 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
+
+---
+
+## Session `arena/4a8390fe-olbg2` — 2026-10-24 17:53 UTC — single clean front door + fresh 24 Oct desk
+
+**Concurrency scan at claim time.** `git branch -r` returns only `origin/main`; no other session branch is live, so every
+earlier claim in this file is stale (>60 minutes, no commits) and this session takes over the shared root files, logging
+the handoff here rather than editing anyone's uncommitted work. `main` is at `e0a6df4` (merge of PR #200, `/clarity/`).
+
+**Problem this session is fixing (the owner's words):** 45 overlapping dashboards, an unreadable navigation list, and no
+obvious statement of what the picks are or where they live. The site needs one landing page whose first screen is an
+executive summary, then the picks, then the matches, then the 15 sport categories.
+
+**Exclusive, non-overlapping file scope for `arena/4a8390fe-olbg2`:**
+
+- `now/**` — the new single desk: `index.html` (executive summary first), `picks.html`, `predictions.html`, `matches.html`,
+  `lines.html`, `band.html`, `olbg.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/index.html`,
+  15 × `sports/<slug>.html`, `assets/style.css`, `assets/app.js`.
+- `data/now/**` — fresh 2026-10-24 OLBG listing capture, first-hand official fixture/stat captures, originated multi-market
+  lines, confidence grades, odds-band test, unique written predictions, verification log and flagged irregularities.
+- `scripts/now_*.py` — `now_seed.py`, `now_model.py`, `now_predictions.py`, `now_build.py`, `now_verify.py`.
+- `tests/test_now_4a8390fe.py`, `research/now-4a8390fe.md`.
+- **Shared root (taken over, see above):** `scripts/build_site.py` `build_index()` only (root `index.html` becomes a thin,
+  clean front door that prints this desk's executive summary, picks and categories, and points at `/now/`);
+  `tests/test_root_cadence_integration_deb1cb6e.py` (its root-link assertion is updated to the new front door, the cadence
+  page and its own tests are untouched); `README.md`; `.github/workflows/pages.yml` (add the `now_*` rebuild + drift paths);
+  this file (append-only).
+- **Not touched:** `clarity/**`, `data/clarity/**`, `today/**`, `cadence/**` and every other published layer.
+
+| # | Task | Status | Owner |
+|---|---|---|---|
+| NW1 | Claim + concurrency scan | done | `arena/4a8390fe-olbg2` |
+| NW2 | Fresh 2026-10-24 OLBG.com listing capture across the exact 15 sports, with event ids and event URLs | in progress | `arena/4a8390fe-olbg2` |
+| NW3 | First-hand official-source capture: fixtures, current form, recent results, match stats, official injury/news pages | in progress | `arena/4a8390fe-olbg2` |
+| NW4 | Originated multi-market lines (win/match, handicap/spread, match total) + low/medium/high confidence + −250…+10000 band test | in progress | `arena/4a8390fe-olbg2` |
+| NW5 | Unique ≥30-word written predictions, target five per covered sport where official evidence allows | in progress | `arena/4a8390fe-olbg2` |
+| NW6 | Clean `/now/` site + clean root front door + line-by-line verifier + tests | in progress | `arena/4a8390fe-olbg2` |
+| NW7 | PR → `main`, merge, confirm Pages deploy, record result here | in progress | `arena/4a8390fe-olbg2` |
